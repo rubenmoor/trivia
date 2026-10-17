@@ -39709,8 +39709,65 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 Check: `npm run check`, `trivia-steam vdf --demo --dry-run`; `rg -n ''\b480\b'' app authoring README.md`.
 Done when: no demo 480 left outside `--dry-run`.', '2026-10-17T13:40:00Z', NULL, 1564, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1569, 179, 'create tasks for plan 179: Close-out: play the demo', 'split', 'open', 1000, NULL, 'Split plan 179 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T13:40:23Z', NULL, 1531, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1569, 179, 'create tasks for plan 179: Close-out: play the demo', 'split', 'done', 1000, '2026-10-17, tasks.sql: tasks 1570–1572 for plan 179; playtest decision raised by task 1571, none needed now', 'Split plan 179 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T13:40:23Z', '2026-10-17T13:41:13Z', 1531, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1570, 179, 'Headless: every demo mode × age group to an end, twice; release-check step matrix', 'work', 'open', NULL, NULL, 'Part of `plan 179: Close-out: play the demo`; implements `decision 347: Demo close-out: the mode × age group run stays in the demo release check`.
+
+## Wait first
+- `task 1559: Demo smoke game and determinism trace (smoke.mjs --demo, --trace)` and `task 1560: trivia-release-check --demo` done, and plan 174''s demo list approved (`authoring/data/demo.json` has `approved` set, `decision 339: Demo bundle format: an id list of base questions, exported to app/data/demo/ pools, questions stay in base`)
+- Any missing: stop without closing and say which
+
+## What
+- `smoke.mjs --demo --matrix`: the packaged demo build, launched as `--demo` launches it (dev Steam user)
+- Per `BUILT_MODES` mode (`engine/game.ts`, as it stands; unbuilt modes not in the demo, `decision 293: Unbuilt multiplayer modes: on the mode row in dev mode only`) × age group (read from `app/data/age-groups.json`; `kids`, `young_teens`, `young_adults`, `adults` today): one game from Choice to an end
+- Multiplayer modes: fake pads as the `--multiplayer` smoke injects them (reuse, decision 199), at the demo list''s `seats`; rr-competitive seats in mixed age groups once
+- Answers from `app/data/demo/pool.json` as the solo smoke picks them, mixing correct and wrong so wins and losses both occur; jokers used where the mode has them (so fills/replacements are drawn too)
+- Ends checked: a win at level 12 in each mode at least once per age group (the list''s supply reaches the top); no `supply_short` / `no_questions`; every shown question id in `app/data/demo/pool.json`
+- `--trace` per game in plan 177''s trace format
+
+## Release check
+- `release_check.py --demo`: step `matrix` after `determinism`: the matrix run twice, traces compared; ✗ names the first differing game/question, or the game that ran short
+- Full build''s steps unchanged
+- Docs: header comments of `smoke.mjs` and `release_check.py`; `AGENTS.md` `trivia-release-check` row; `plans/11-steam.md` release checklist
+
+## Done when
+- `trivia-release-check --demo` step `matrix` ✓ (the step lands only green)
+- A failure found by the run → follow-up task per plan 179''s routing (flag/names/save/feature gates → plan 173; missing questions, too few for a mode or group, translation → plan 174; runs differ, seen counts, running-out notice → plan 175; screens → plan 176; build/release check/upload → plan 177; Steamworks → plan 178; a done plan → `pm plan add 18 …` named after the failure); stop without closing until fixed
+- Per-commit checks: `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-10-17T13:41:00Z', NULL, 1569, 0, 'opus', 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1571, 179, 'The developer plays the demo from Steam''s beta', 'work', 'open', 110, NULL, 'Part of `plan 179: Close-out: play the demo`. Workers never play the Steam build or answer for the developer.
+
+## Wait first
+- `task 1570: Headless: every demo mode × age group to an end, twice; release-check step matrix` and `task 1563: First demo beta upload` done; else stop without closing and say which
+
+## What
+- `pm decision add --once "Demo: played from Steam''s beta branch?"` with an intro; body written against what was built (`rg` names, keys, commands, screen titles):
+  - setup: the demo app''s `beta` branch under Steam (BuildID from task 1563''s decision); demo keys on the developer''s account per `plan 178: Steamworks demo app and store`; full game installed beside it or not (note which)
+  - rows: start screen (demo line, wording in the UI language, window title); language picker (only demo locales); Bundles (one tile, demo name and count per `decision 341: Demo bundle tile: its name and question count`); each mode in `BUILT_MODES` once, any age group, to an end; one mode a second time with the same choices: same questions (`decision 340: Demo selection: every shuffle seeded from its site and the items it shuffles`); Esc menu and ☰ menu without the screens decision 337 turns off; save per decision 336''s answer (full game''s save untouched, if installed); Steam features per the answers of decisions 337, 345, 346 (Cloud, achievements, reports, telemetry consent); text fits on the TV; one UI language other than es
+  - answer: date, BuildID, ✓/✗ per row + note
+  - options: "passed" (recommended) | "failed (list: row, screen, what happened)"
+- `pm task-pending-decision 1571 <decision>` and stop without closing
+
+## After the answer
+- ✗: follow-up tasks per plan 179''s routing (flag, names, window title, save location, Steam feature gates → plan 173; a question missing, too few for a mode or group, a translation → plan 174; questions differ between runs, seen counts showing, running-out notice → plan 175; start line, bundle tile, a hidden screen showing, PLACEHOLDER, text fit → plan 176; build contents, media, credits, release check, upload → plan 177; Steamworks app, store, Cloud, achievements in Steam → plan 178; a done plan → `pm plan add 18 …` named after the failure), plus one task in plan 179 "Demo playtest again" that raises a new decision of the same shape once they''re done (as decision 155 followed decision 50); then close
+- ✓: close', '2026-10-17T13:41:00Z', NULL, 1569, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1572, 179, 'Demo close-out: docs sweep and milestone 18 Done', 'work', 'open', 100, NULL, 'Part of `plan 179: Close-out: play the demo`.
+
+## Wait first
+- `task 1571: The developer plays the demo from Steam''s beta` closed with its decision answered «passed», or its "Demo playtest again" task passed; else stop without closing and say which
+
+## What
+- `plans/11-steam.md`: demo app, its release check (`trivia-release-check --demo`, steps incl. `matrix`) and upload next to the full game''s
+- `plans/17-publishing.md`: the demo (Valve''s demo rules from plan 178, store presence per decision 343, release per decision 344)
+- `plans/22-bundles.md`: demo section (`decision 339: Demo bundle format: an id list of base questions, exported to app/data/demo/ pools, questions stay in base`, tile per `decision 341: Demo bundle tile: its name and question count`, replacement rule) complete and true
+- `rg -i demo` over `plans/`, `README.md`, `AGENTS.md`, `directory.md` (decision 200): every hit true for the built demo
+  - "demo save(s)" of the gallery and trailer (synthetic saves) kept apart from the demo build in wording; rename where a reader could confuse them (e.g. «sample save»), with the code names they point to checked by `rg` (rename code only if the docs rename needs it; else a follow-up task)
+- `plans/project.md`: `[x] Playable demo (<date>, pm milestone 18, plans 154, 173–179; decisions 335–347)` with the real ids at that time
+- Milestone 18 text checked against tasks 1570 and 1571''s results (all base features, only the demo list, fixed selection, seen counts disregarded, start line); a gap → follow-up task
+- `pm decision consequences` on decisions whose built result differs (from tasks 1570 and 1571''s notes)
+
+## Done when
+- `rg -i demo` over plans, README, AGENTS.md, directory.md finds nothing stale; `plans/project.md` marks milestone 18 done
+- Per-commit checks: `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-10-17T13:41:08Z', NULL, 1569, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -46160,7 +46217,9 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1590, 1556, '2026-10-17T13:35:37Z', '2026-10-17T13:37:14Z', 'done', NULL, 0, '8f837e71071cb9dd458282bd36a7788e85885afe', NULL, 'claude-opus-5-5', '8b6016ea-4446-4f59-bd84-543dbd7d532c', NULL, 12, 24, 8677, 584342, 51376, 0.70151239999999993, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1591, 1530, '2026-10-17T13:35:51Z', '2026-10-17T13:39:22Z', 'done', NULL, 0, '8f837e71071cb9dd458282bd36a7788e85885afe', 'app', 'claude-opus-5-5', '506a3cd3-83db-4d9b-b807-7dbc4f42ecef', NULL, 15, 26, 12600, 785615, 76638, 1.6470636, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1592, 1564, '2026-10-17T13:39:06Z', '2026-10-17T13:40:14Z', 'done', NULL, 0, '71df85c12fc7b1e8494058469d3c3686a110c6db', NULL, 'claude-opus-5-5', '700cea37-06b9-4f6a-a33c-367df836fe05', NULL, 8, 16, 6409, 342414, 45723, 0.5625108, 192091);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1593, 1531, '2026-10-17T13:39:22Z', NULL, 'running', NULL, NULL, '71df85c12fc7b1e8494058469d3c3686a110c6db', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1593, 1531, '2026-10-17T13:39:22Z', '2026-10-17T13:40:33Z', 'done', NULL, 0, '71df85c12fc7b1e8494058469d3c3686a110c6db', 'app', 'claude-opus-5-5', '076dba2c-1da4-4f65-bbaa-6d7b75e18682', NULL, 9, 18, 6379, 455172, 59223, 0.6924704, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1594, 1569, '2026-10-17T13:40:26Z', '2026-10-17T13:41:18Z', 'done', NULL, 0, '35a60f221a4c201dd9c25d2b5b2cdcec12bf958f', NULL, 'claude-opus-5-5', '4f4c6bec-d720-454c-8651-cca623e646ac', NULL, 8, 16, 4607, 291327, 37724, 0.45226140000000004, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1595, 1534, '2026-10-17T13:40:33Z', NULL, 'running', NULL, NULL, '35a60f221a4c201dd9c25d2b5b2cdcec12bf958f', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
