@@ -779,6 +779,61 @@ def in_session(r):
     r.shot("menu-session")
 
 
+def rr_question(r, save):
+    """The session's question on screen; the turn seat is keyboard and mouse, the others hold pads."""
+    r.scene(save, pads=3, bound=True)
+    r.click('[data-focus-id="main"]')
+    r.wait(".answers .answer")
+    r.settle(2.5)
+
+
+def round_robin(r):
+    for mode, save in (("rr-coop", "coop"), ("rr-competitive", "comp")):
+        r.scene(save, pads=3, bound=True)
+        r.click('[data-focus-id="main"]')
+        r.wait(".level .hint")
+        r.settle(2)
+        r.shot(f"level-{mode}")
+        if mode == "rr-coop":
+            r.click(".level .hint")
+            r.wait(".cards .card")
+            r.settle(2)
+            r.shot("select-rr-coop")
+    rr_question(r, "coop-q")
+    r.answer(r.meta["coop-q"]["right"])
+    r.wait("main .result", 30000)
+    r.settle(2.5)
+    r.shot("correct-rr-coop")
+    rr_question(r, "coop-q")
+    r.answer((r.meta["coop-q"]["right"] + 1) % 4)
+    r.wait("main .result.wrong", 30000)
+    r.settle(2.5)
+    r.shot("wrong-rr-coop")
+    rr_question(r, "coop-q12")
+    r.answer(r.meta["coop-q12"]["right"])
+    r.wait("main .result.victory", 40000)
+    r.settle(3.5)
+    r.shot("victory-rr-coop")
+    rr_question(r, "comp-q")
+    r.answer((r.meta["comp-q"]["right"] + 1) % 4)
+    r.wait("main .result.wrong", 30000)
+    r.settle(2.5)
+    r.shot("wrong-rr-competitive")
+    rr_question(r, "comp-q12")
+    r.answer(r.meta["comp-q12"]["right"])
+    r.wait("main .result.victory", 40000)
+    r.settle(3.5)
+    r.shot("victory-rr-competitive")
+    rr_question(r, "comp-last")
+    r.answer((r.meta["comp-last"]["right"] + 1) % 4)
+    r.wait("main .result.wrong", 30000)  # «Fuera», then «Seguir» to the winner
+    r.settle(1.5)
+    r.click('main [data-focus-default]')
+    r.wait("main .result.victory", 40000)
+    r.settle(3.5)
+    r.shot("victory-last-standing")
+
+
 STEPS = [
     (["language", "consent"], first_start),
     (["start", "language-from-start", "start-resume", "start-save-notice"], start),
@@ -795,6 +850,8 @@ STEPS = [
     (["choice-multiplayer", "join-empty", "join-name-picker", "join-5", "greeting-session", "join-8", "join-keyboard-timed",
       "join-age-groups", "bundles-session"], multiplayer),
     (["start-resume-session", "menu-session"], in_session),
+    (["level-rr-coop", "select-rr-coop", "correct-rr-coop", "wrong-rr-coop", "victory-rr-coop", "level-rr-competitive",
+      "wrong-rr-competitive", "victory-rr-competitive", "victory-last-standing"], round_robin),
 ]
 
 
