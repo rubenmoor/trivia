@@ -67,7 +67,7 @@ Batch health (plan 15): this batch and the two before it (batch-8, batch-9; acro
 | calls |  | 1861 | 1927 | 1754 |
 | calls per approved |  | 1.97 | 2.20 | 2.03 |
 | wall time h |  | 4.81 | 5.79 | 5.13 |
-| days |  | 5 | 1 | n/a |
+| days |  | 5 | 1 | 1 |
 | **health** | | ✗ fail, acked | ✗ fail, acked | ✗ fail |
 
 Deficit to the targets (base, approved now): 1: 120, 2: 98, 3: 156, 4: 145, 5: 122, 6: 70, 7: 99, 8: 119, 9: 56, 10: 43, 11: 74, 12: 11, 13: 15, 14: 0, 15: 79
