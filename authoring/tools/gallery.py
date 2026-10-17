@@ -785,6 +785,12 @@ def in_session(r):
     r.settle(2)
     r.menu()
     r.shot("menu-session")
+    # No binding: the turn seat's pad is gone, so its seat waits (decision 289).
+    r.scene("session", pads=2)
+    r.click('[data-focus-id="main"]')
+    r.wait(".dialog[aria-labelledby='seat-lost-title']")
+    r.settle(1.5)
+    r.shot("seat-lost")
 
 
 def rr_question(r, save):
@@ -909,7 +915,7 @@ STEPS = [
     (["mods", "mods-notice", "mods-crashed", "mods-empty"], mods),
     (["choice-multiplayer", "join-empty", "join-name-picker", "join-5", "greeting-session", "join-8", "join-keyboard-timed",
       "join-age-groups", "bundles-session"], multiplayer),
-    (["start-resume-session", "menu-session"], in_session),
+    (["start-resume-session", "menu-session", "seat-lost"], in_session),
     (["level-rr-coop", "select-rr-coop", "correct-rr-coop", "wrong-rr-coop", "victory-rr-coop", "level-rr-competitive",
       "wrong-rr-competitive", "victory-rr-competitive", "victory-last-standing"], round_robin),
     (["timed-question", "timed-claimed", "timed-claim-last", "timed-paused", "timed-time-up", "timed-round",
