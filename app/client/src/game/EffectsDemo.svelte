@@ -3,7 +3,7 @@
   import { effects, music, sfx, sound, unlock, type Cue, type Track } from "./sound.svelte.ts";
 
   const list = effects();
-  const loops: Track[] = ["normal", "question", "submitted"];
+  const loops: Track[] = ["normal", "question", "submitted", "timed"];
   let synth = $state(false);
 
   function play(cue: Cue, synthesized: boolean) {

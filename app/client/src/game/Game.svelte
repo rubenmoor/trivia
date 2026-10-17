@@ -69,7 +69,7 @@
     level: "normal",
     select: "normal",
     question: "question",
-    timed: "question", // PLACEHOLDER(1451): the timed track
+    timed: "timed",
     correct: "normal", // the fanfare plays at the reveal, then this comes back
     wrong: null,
     victory: "victory", // «Pomp and Circumstance», over the cheers

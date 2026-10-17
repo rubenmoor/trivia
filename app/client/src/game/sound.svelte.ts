@@ -8,8 +8,8 @@ import { desktop } from "../lib/desktop.ts";
 
 /** normal: Start/Level/Select; question: a question on screen; submitted: an answer locked in;
  * roll: the drum roll from «Respuesta final» until the reveal; victory: «Pomp and Circumstance»
- * on the Victory screen, once (04, "Music"). */
-export type Track = "normal" | "question" | "submitted" | "roll" | "victory";
+ * on the Victory screen, once (04, "Music"); timed: a question of Competitive (timed), faster than `question`. */
+export type Track = "normal" | "question" | "submitted" | "roll" | "victory" | "timed";
 
 export type Volumes = { music: number; effects: number; media: number; muted: boolean };
 
@@ -206,7 +206,7 @@ const CHORDS = [
   [55, 60, 64],
   [52, 56, 59],
 ];
-const TEMPO: Record<LoopTrack, number> = { normal: 76, question: 96, submitted: 120 };
+const TEMPO: Record<LoopTrack, number> = { normal: 76, question: 96, submitted: 120, timed: 132 };
 /** The drum roll: hits per second, and how long it takes to build to full strength. */
 const ROLL_HZ = 22;
 const ROLL_BUILD_S = 6;
@@ -215,7 +215,8 @@ const hz = (midi: number) => 440 * 2 ** ((midi - 69) / 12);
 /** The recorded loops (OpenGameArt «Music loop variations», CC0): 8 bars at 100 bpm, 19.2 s each,
  * so a cut between `question` and `submitted` keeps the beat. */
 const MUSIC_FILE = { normal: "musica-normal", question: "musica-pregunta", submitted: "musica-enviada" } as const;
-type LoopTrack = keyof typeof MUSIC_FILE;
+/** The loops; `timed` has no recording yet (plan 33), only the generated one. */
+type LoopTrack = keyof typeof MUSIC_FILE | "timed";
 const LOOP_END = 19.2; // AAC pads the end: loop on the bars, not the file length
 const MUSIC_LEVEL = 1.6; // the music bus is set for the soft generated loops
 
@@ -295,7 +296,7 @@ function startTrack(track: Track, fadeIn: number, opts: { synth?: boolean; offse
       stopLoop = () => clearInterval(timer);
       return;
     }
-    const buffer = !opts.synth && samples[MUSIC_FILE[track]];
+    const buffer = !opts.synth && track !== "timed" && samples[MUSIC_FILE[track]];
     if (!buffer) return void (stopLoop = generate(c, gain, track, keep));
     const src = c.createBufferSource();
     src.buffer = buffer;
@@ -331,6 +332,11 @@ function generate(c: AudioContext, gain: GainNode, track: LoopTrack, keep: Keep)
         pluck(c, gain, chord[0] - 12, next, 0.22, keep);
         tick(c, gain, next, step % 2 ? 0.05 : 0.09, keep);
       }
+      if (track === "timed") {
+        pluck(c, gain, chord[0] - 12, next, 0.2, keep);
+        if (step % 2 === 0) thump(c, gain, next, 0.5, keep);
+        tick(c, gain, next, step % 2 ? 0.05 : 0.08, keep);
+      }
       if (track === "submitted") {
         if (step % 4 === 0) thump(c, gain, next, 0.9, keep);
         if (step % 4 === 1) thump(c, gain, next + beat * 0.1, 0.6, keep);
@@ -349,7 +355,7 @@ type Keep = (n: AudioScheduledSourceNode) => void;
 function pad(c: AudioContext, out: AudioNode, chord: number[], t: number, len: number, track: LoopTrack, keep: Keep) {
   const filter = c.createBiquadFilter();
   filter.type = "lowpass";
-  filter.frequency.value = track === "normal" ? 700 : track === "question" ? 1100 : 1600;
+  filter.frequency.value = track === "normal" ? 700 : track === "question" || track === "timed" ? 1100 : 1600;
   const g = c.createGain();
   g.gain.setValueAtTime(0, t);
   g.gain.linearRampToValueAtTime(0.06, t + len * 0.25);
@@ -448,7 +454,7 @@ export type Cue =
   | "whoosh" | "swoosh-up" | "swoosh" | "tear" | "paper" | "ready" | "boom" | "block" | "cork-pop" | "pop"
   | "padlock-close" | "padlock-open" | "fanfare" | "sad-trombone" | "rewind" | "menu-open" | "menu-close"
   | "unlocked" | "joker-armed" | "joker-open" | "joker-activate" | "whistle-down" | "stamp" | "shredder"
-  | "heartbeat" | "tick" | "glass-break" | "rustle" | "token-back";
+  | "heartbeat" | "tick" | "glass-break" | "rustle" | "token-back" | "claim" | "countdown";
 
 /** Play a short effect; `level` sets the pitch of "block" (the tower's height); `synth` skips the recording. */
 export function sfx(cue: Cue, level = 1, opts: { synth?: boolean } = {}) {
@@ -635,6 +641,14 @@ const RECIPES: Record<Cue, Recipe> = {
   tick: (c, o, t) => noise(c, o, t, { type: "highpass", from: 6000, len: 0.03, level: 0.3 }), // «mira: tic»
   rustle: (c, o, t) => noise(c, o, t, { from: 4000, to: 2500, len: 0.3, q: 1.5, level: 0.15, attack: 0.08 }), // Soplo's note
   "token-back": (c, o, t) => tone(c, o, t, { from: 1400, to: 900, len: 0.08, level: 0.15 }), // a fresh token in its slot
+  claim: (c, o, t) => { // a claim: a short buzzer sting
+    tone(c, o, t, { type: "square", from: 220, len: 0.18, level: 0.22 });
+    tone(c, o, t + 0.1, { type: "square", from: 330, len: 0.22, level: 0.22 });
+  },
+  countdown: (c, o, t, level) => { // the claim's last seconds: `level` 1–3, louder and higher each
+    tone(c, o, t, { from: 600 + level * 180, len: 0.12, level: 0.2 + level * 0.15 });
+    noise(c, o, t, { type: "highpass", from: 5000, len: 0.03, level: 0.1 + level * 0.08 });
+  },
   "glass-break": (c, o, t) => { // «vidrio roto»
     for (let i = 0; i < 7; i++) {
       tone(c, o, t + i * 0.035, { from: 2200 + Math.random() * 3000, len: 0.18, level: 0.1 });
