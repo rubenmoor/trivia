@@ -111,24 +111,42 @@ STUB = """
     get: () => stub,
     set: (shim) => Object.assign(stub, { loadSave: shim.loadSave, writeSave: shim.writeSave, backupSave: shim.backupSave }),
   });
-  // A fake standard pad: `__press(button)` presses and releases it (letter pickers open from the pad only).
-  const pad = {
-    id: "Xbox 360 Controller (STANDARD GAMEPAD)", index: 0, mapping: "standard", connected: true, timestamp: 0,
+  // Fake standard pads: `__pads(n, ids)` connects n (mixed Xbox/PlayStation ids), `__press(button, pad = 0)` presses and
+  // releases one (letter pickers open from the pad only); `__padOff(pad)` unplugs it. The first press connects one pad.
+  const IDS = [
+    "Xbox 360 Controller (STANDARD GAMEPAD)",
+    "Wireless Controller (STANDARD GAMEPAD Vendor: 054c Product: 09cc)",
+  ];
+  const made = (index, id) => ({
+    id, index, mapping: "standard", connected: true, timestamp: 0,
     axes: [0, 0, 0, 0], buttons: Array.from({ length: 17 }, () => ({ pressed: false, touched: false, value: 0 })),
-  };
+  });
   let pads = [];
   navigator.getGamepads = () => pads;
-  window.__press = async (b) => {
+  const plug = (n, ids) => {
+    pads = Array.from({ length: n }, (_, i) => made(i, ids?.[i] ?? IDS[i % IDS.length]));
+    for (const g of pads) window.dispatchEvent(Object.assign(new Event("gamepadconnected"), { gamepad: g }));
+  };
+  if (cfg.pads) pads = cfg.pads.map((id, i) => made(i, id ?? IDS[i % IDS.length]));
+  window.__pads = (n, ids) => plug(n, ids);
+  window.__padOff = (i) => {
+    const g = pads[i];
+    pads[i] = null;
+    window.dispatchEvent(Object.assign(new Event("gamepaddisconnected"), { gamepad: g }));
+  };
+  window.__press = async (b, i = 0) => {
     if (!pads.length) {
-      pads = [pad];
-      window.dispatchEvent(Object.assign(new Event("gamepadconnected"), { gamepad: pad }));
+      plug(1);
       await new Promise((r) => setTimeout(r, 100));
     }
+    const pad = pads[i];
     pad.buttons[b] = { pressed: true, touched: true, value: 1 };
     await new Promise((r) => setTimeout(r, 120));
     pad.buttons[b] = { pressed: false, touched: false, value: 0 };
     await new Promise((r) => setTimeout(r, 120));
   };
+  // A running session's seats bound (lib/seats.svelte.ts `trivia.seats.<game id>`), so the game doesn't ask for pads.
+  if (cfg.bound) sessionStorage.setItem(`trivia.seats.${cfg.bound.id}`, JSON.stringify(cfg.bound.binding));
 })();
 """
 
@@ -234,7 +252,7 @@ def match(items, keys, data):
             it["keys"] = index[text]
         elif it.pop("kbd", False) or len(text) == 1:
             it["glyph"] = True
-        elif text in data:
+        elif text in data or re.fullmatch(r"PLACEHOLDER\(\d+\)", text):  # a PLACEHOLDER mark isn't catalog text
             it["data"] = True
         else:
             rest = text
@@ -312,8 +330,9 @@ class Run:
         self.context = self.page = None
         (OUT / self.name).mkdir(parents=True, exist_ok=True)
 
-    def scene(self, save="base", *, raw=None, consent=False, mods="held", ready="main .start"):
-        """A fresh page on `save` (None: no save file). `mods`: a list config, or None (no mods bridge)."""
+    def scene(self, save="base", *, raw=None, consent=False, mods="held", ready="main .start", pads=None, bound=False):
+        """A fresh page on `save` (None: no save file). `mods`: a list config, or None (no mods bridge). `pads`: the
+        connected pads' count (ids alternate Xbox, PlayStation); `bound`: the save's session seats bound to their devices."""
         if self.context:
             self.context.close()
         if raw is not None:
@@ -328,7 +347,9 @@ class Run:
                         "safeStart": {"reason": "crashed", "mods": ["mod-0", "mod-2"]}},
             "empty": {"mods": [], "notice": True, "noMods": True, "safeStart": {"reason": "flag"}, "validUser": True},
         }
-        cfg = {"consent": consent, "mods": lists[mods] if mods else None}
+        cfg = {"consent": consent, "mods": lists[mods] if mods else None,
+               "pads": [None] * pads if pads else None,
+               "bound": {"id": self.meta[save]["id"], "binding": self.meta[save]["bound"]} if bound else None}
         self.context = self.browser.new_context(viewport={"width": self.size[0], "height": self.size[1]}, device_scale_factor=1, locale=self.ui)
         self.context.add_init_script(STUB.replace("__CFG__", json.dumps(cfg)))
         self.page = self.context.new_page()
@@ -362,8 +383,8 @@ class Run:
     def key(self, name):
         self.page.keyboard.press(name)
 
-    def pad(self, button):
-        self.page.evaluate(f"window.__press({button})")
+    def pad(self, button, pad=0):
+        self.page.evaluate(f"window.__press({button}, {pad})")
 
     def menu(self):
         self.key("Escape")
@@ -647,6 +668,117 @@ def mods(r):
     r.shot("mods-empty")
 
 
+def to_choice(r, save="base", pads=0):
+    r.scene(save, pads=pads)
+    r.click('[data-focus-id="main"]')
+    r.wait(".name-button")
+    r.settle(0.8)
+    r.click(".name-button")
+    r.wait('[data-focus-id="mode-solo"]:enabled')
+
+
+def to_join(r, mode, save="base", pads=0):
+    to_choice(r, save, pads)
+    r.click(f'[data-focus-id="mode-{mode}"]')
+    r.settle(1.2)
+    r.click('[data-focus-id="next"]')
+    r.wait(".join .seat.open")
+    r.settle(0.8)
+
+
+def join_pads(r, n):
+    """Pads 0..n-1 press A, one seat each."""
+    for i in range(n):
+        r.pad(0, i)
+        r.wait(f'[data-focus-id="seat-name-{i}"]')
+
+
+def name_seat(r, i):
+    """Seat `i` takes the first known name still free."""
+    r.click(f'[data-focus-id="seat-name-{i}"]')
+    r.wait(".join-name, .backdrop .name-button")
+    r.settle(0.5)
+    r.click(".backdrop .name-button")
+    r.settle(0.4)
+
+
+def type_key(r, key):
+    r.wait(".key-field")
+    r.page.keyboard.type(key)
+    r.settle(0.4)
+
+
+def multiplayer(r):
+    # Five seats: four pads (Xbox and PlayStation ids alternate) and keyboard and mouse.
+    to_choice(r, pads=4)
+    r.click('[data-focus-id="mode-rr-coop"]')
+    r.settle(1.5)
+    r.shot("choice-multiplayer")
+    r.click('[data-focus-id="next"]')
+    r.wait(".join .seat.open")
+    r.settle(0.8)
+    r.shot("join-empty")
+    join_pads(r, 4)
+    r.click('[data-focus-id="join-keyboard"]')
+    r.wait('[data-focus-id="seat-name-4"]')
+    for i in range(1, 4):
+        name_seat(r, i)
+    r.click('[data-focus-id="seat-name-4"]')
+    r.wait(".backdrop .name-button")
+    r.settle(0.8)
+    r.shot("join-name-picker")
+    r.click(".backdrop .name-button")
+    r.settle(0.6)
+    r.shot("join-5")
+    r.click('[data-focus-id="next"]')
+    r.wait('[data-focus-id="start"]:enabled')
+    r.settle(1)
+    r.click('[data-focus-id="start"]')
+    r.wait(".bundles-screen .title.hello", 5000)
+    r.settle(0.2)
+    r.shot("greeting-session")
+    # Eight seats: the list scrolls.
+    to_join(r, "rr-coop", "crowd", pads=8)
+    join_pads(r, 8)
+    for i in range(1, 8):
+        name_seat(r, i)
+    r.shot("join-8")
+    # Keyboard-only timed: three claim keys, a fourth refused.
+    to_join(r, "timed")
+    for i, key in enumerate("jqx"):  # letters no catalog binds on the Question screen
+        r.click('[data-focus-id="join-keyboard"]')
+        type_key(r, key)
+        r.wait(f'[data-focus-id="seat-name-{i}"]')
+    for i in (1, 2):
+        name_seat(r, i)
+    r.click('[data-focus-id="join-keyboard"]')
+    type_key(r, "a")  # an answer letter: refused
+    r.shot("join-keyboard-timed")
+    # Round-robin competitive: each seat its own age group; a short supply naming a seat.
+    to_join(r, "rr-competitive", "short", pads=2)
+    join_pads(r, 2)
+    name_seat(r, 1)
+    r.click('[data-focus-id="seat-group-1"] .step:last-child')
+    r.click('[data-focus-id="seat-group-1"] .step:last-child')
+    r.settle(0.6)
+    r.shot("join-age-groups")
+    r.click('[data-focus-id="next"]')
+    r.wait(".bundles-screen")
+    r.settle(1.5)
+    r.shot("bundles-session")
+
+
+def in_session(r):
+    r.scene("session", pads=2)
+    r.shot("start-resume-session")
+    r.scene("session", pads=2, bound=True)
+    r.click('[data-focus-id="main"]')
+    r.wait("main .level, main .select, main .question")
+    r.settle(2)
+    r.menu()
+    r.shot("menu-session")
+
+
 STEPS = [
     (["language", "consent"], first_start),
     (["start", "language-from-start", "start-resume", "start-save-notice"], start),
@@ -660,6 +792,9 @@ STEPS = [
     (["menu-start", "menu-solo", "menu-gamemaster", "menu-confirm", "goto", "goto-letter-picker", "credits"], overlay),
     (["flag-dialog", "flag-list"], flags),
     (["mods", "mods-notice", "mods-crashed", "mods-empty"], mods),
+    (["choice-multiplayer", "join-empty", "join-name-picker", "join-5", "greeting-session", "join-8", "join-keyboard-timed",
+      "join-age-groups", "bundles-session"], multiplayer),
+    (["start-resume-session", "menu-session"], in_session),
 ]
 
 

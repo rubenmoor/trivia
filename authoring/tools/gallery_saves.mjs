@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 // trivia-gallery's demo saves (plan 100): built with the engine on the es pool, made-up players.
 // Usage: node authoring/tools/gallery_saves.mjs <ui locale> → JSON {saves: {name: save}, meta: {name: {...}}} on stdout.
-import { answer, pick, view } from "../../app/client/src/engine/game.ts";
-import { baseSave, checkVersion, io, latestState, PLAYERS, playTo, rightOf } from "./demo_saves.mjs";
+import { answer, newSession, pick, view } from "../../app/client/src/engine/game.ts";
+import { baseSave, EXTRA_PLAYERS, checkVersion, io, latestState, PLAYERS, playTo, rightOf, withExtraPlayers } from "./demo_saves.mjs";
 import { loadData } from "./engine_data.mjs";
 
 const ui = process.argv[2];
@@ -81,5 +81,12 @@ saves.blocked.blocked = data.pool.map((q) => q.id);
 saves.short = structuredClone(done);
 saves.short.blocked = data.pool.slice(40).map((q) => q.id);
 
+// Eight known names: the Join screen with up to eight seats.
+saves.crowd = withExtraPlayers(structuredClone(done));
+// A running round-robin co-op session of three: Start's resume line, the Esc menu. `bound`: the seats' devices
+// (pad 0, pad 1, keyboard and mouse), written to sessionStorage by the page (plan 161).
+saves.session = newSession(structuredClone(done), data, io(), PLAYERS.slice(0, 3), { mode: "rr-coop" }).save;
+meta.session = { id: saves.session.games.at(-1).id, bound: [{ pad: 0 }, { pad: 1 }, "kbm"] };
+
 for (const s of Object.values(saves)) checkVersion(s);
-process.stdout.write(JSON.stringify({ saves, meta, players: PLAYERS }));
+process.stdout.write(JSON.stringify({ saves, meta, players: [...PLAYERS, ...EXTRA_PLAYERS] }));

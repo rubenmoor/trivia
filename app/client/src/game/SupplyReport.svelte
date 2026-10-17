@@ -12,7 +12,7 @@
   <div class="supply glass">
     <p>{t("supply.short", { n: supply.available })}</p>
     <ul class:many={short.length > 4}>
-      {#each short as l (l.level)}
+      {#each short as l (`${l.seat ?? ""}:${l.level}`)}
         <li>{t(l.seat === undefined ? "supply.level" : "supply.levelSeat", { name: names[l.seat ?? 0] ?? "", level: l.level, lo: l.range[0], hi: l.range[1], missing: l.missing })}</li>
       {/each}
     </ul>
