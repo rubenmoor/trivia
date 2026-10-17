@@ -38860,6 +38860,39 @@ Check: `qgen batch` resumes at `fix` and the step passes (each failed call costs
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1514, 17, 'Finish batch-9 after task 1513: Fix qgen fix: revise_in_pool crashes with unbound old_bg for non-audio media', 'work', 'open', -99, NULL, 'Follow `authoring/RUNBOOK.md` (including "Under `pm run`"); plain `qgen batch` resumes batch-9 at step `fix`. Same Done-when as `task 1185: run batch-9`: `authoring/reports/batch-9.md` exists, the printed `git add` paths staged; note the "Done:" line and report path. Then QC: `task 1186: QC batch-9`.
 
 Earlier runs (`task 1503: Finish batch-9 after task 1369: Fix qgen rate: the model returns no rating for inventions-16 in revised-01-19`) got through rate to fix; their partial output is already committed.', '2026-10-17T02:45:36Z', NULL, 1503, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1515, 166, 'investigate the failure of task 1467: Ship timed (Competitive timed)', 'investigate', 'open', 342, NULL, '`task 1467: Ship timed (Competitive timed)` failed in `pm run`; its summary is below. Find out why, don''t redo its work:
+* read its log, `pm show 1467`, and the stashes it left (`git stash show -p --include-untracked <sha>`); don''t apply or drop them, task 1467''s next run gets them
+* rerun the failing command or script to see the error yourself; find the cause in the code, not only the symptom
+Then, by what you find:
+* a bug in a script, test, tool or config of the project: add a task that fixes it, `pm task add 166 "<subject>" --priority 341`, with the cause, where it is and how to check the fix; it runs before task 1467 does again
+* task 1467 itself is wrong or out of date: change it (`pm task set 1467 --body …`) or drop it (`pm task drop 1467 "<reason>"`)
+* it needs the human: `pm decision add` with what you found and the options, then `pm task-pending-decision 1467 <decision>`
+* nothing to fix (a passing outage): say so; task 1467 runs again as it is
+If earlier investigations of this task are listed below, don''t repeat their fix: raise a decision instead.
+Your note on `pm task done`: the cause and what you queued.
+
+# The failure
+
+    exit 0, but the task is still open and not blocked, after 0m16s, 4 turns
+    last tool call: Bash: for t in 1445 1449 1450 1451 1452 1453 1432 1434 1458 1433; do echo "$t: $(pm show $t | grep -m1 -E ''^# Task'')"; done
+    likely cause: the worker ended without `pm task done|drop 1467` or a pending decision; its last message: `task 1453: Timed visuals polish: hearts, red frame, claim banner` is still open and has the same priority (340) in this work tree. Once it''s done, `pm run` can take 1467 again. If you want the hook s
+    log: /home/ruben/code/trivia/.git/pm-logs/task-1467-run-1535.log
+    last output:
+      Task 1453 is still open, so the gate isn''t met. The instructions say to change nothing in pm and stop without closing.
+      
+      Task 1467 (Ship timed) is blocked, and I changed nothing.
+      
+      - **Gate:** `task 1453: Timed visuals polish: hearts, red frame, claim banner` is still open. Its priority is 340, the same as this task.
+      - **Done:** the other gate tasks are done: 1445, 1449 to 1452, 1432, 1433, 1434 and 1458.
+      - **Next step:** this task should run again once `task 1453` is done. I didn''t touch pm, the code or the plans, and I didn''t close the task.
+      I''m leaving task 1467 open on purpose. Its own instructions say that if a gate task isn''t done, I should change nothing in pm and stop without closing, so the task stays queued behind the gate.
+      
+      - **Why not `pm task done`:** nothing was shipped, so that would be false.
+      - **Why not `pm task drop`:** the gate task isn''t dropped, only unfinished, and dropping would remove the ship work for good.
+      - **Why not make it pending on a decision:** there is no question only the developer can answer yet. A decision created just to satisfy the hook would put noise in their queue.
+      
+      `task 1453: Timed visuals polish: hearts, red frame, claim banner` is still open and has the same priority (340) in this work tree. Once it''s done, `pm run` can take 1467 again. If you want the hook satisfied now, tell me which of the three outcomes you prefer.
+      [success: 4 turns, $0.15]', '2026-10-17T03:11:26Z', NULL, NULL, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -45152,6 +45185,10 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1532, 1510, '2026-10-17T02:49:11Z', '2026-10-17T02:51:51Z', 'done', NULL, 0, '9654c27d13a4355bbc9068fc2cf0f0cdca7e7725', 'app', 'claude-sonnet-5-5', '2ce8061f-8bae-4a4a-8824-a157e9bbe644', 1526, 11, 16, 2902, 600327, 27125, 0.61221019999999993, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1533, 1465, '2026-10-17T02:51:51Z', '2026-10-17T03:05:54Z', 'blocked', NULL, 0, '3b2bb0d02565ca4967b1d7dd72b6408982c6a2c9', 'app', 'claude-sonnet-5-5', 'c49e2a16-46d8-4c81-99c8-d6aa01319744', NULL, 28, 54, 11880, 1440256, 61266, 0.6520232, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1534, 1466, '2026-10-17T03:05:54Z', '2026-10-17T03:11:09Z', 'blocked', NULL, 0, '6e65405ddfcfed83a644cf25ccdf6188d4d5cb96', 'app', 'claude-sonnet-5-5', '5748869c-9627-4a96-8a58-2a3a01599904', NULL, 24, 48, 9473, 1345780, 63144, 0.61655799999999994, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1535, 1467, '2026-10-17T03:11:10Z', '2026-10-17T03:11:26Z', 'failed', 'exit 0, but the task is still open and not blocked, after 0m16s, 4 turns
+last tool call: Bash: for t in 1445 1449 1450 1451 1452 1453 1432 1434 1458 1433; do echo "$t: $(pm show $t | grep -m1 -E ''^# Task'')"; done
+likely cause: the worker ended without `pm task done|drop 1467` or a pending decision; its last message: `task 1453: Timed visuals polish: hearts, red frame, claim banner` is still open and has the same priority (340) in this work tree. Once it''s done, `pm run` can take 1467 again. If you want the hook s
+log: /home/ruben/code/trivia/.git/pm-logs/task-1467-run-1535.log', 0, 'bc9a754050761ed25f7374e8979a4736a7b21ca9', 'app', 'claude-sonnet-5-5', '3d60bcc1-2bad-46f2-bf68-053a3db7ff8a', NULL, 4, 10, 946, 126941, 29800, 0.15406820000000002, 192091);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
