@@ -330,7 +330,7 @@
       // The card flip (JK-7): the transitions in screens/Question.svelte only run while this is set.
       swap.active = true;
       swappedBy = event;
-      sfx(event.joker === "easier" ? "whistle-down" : "swoosh-up");
+      sfx(event.joker === "easier" ? "wand" : "swoosh-up");
       setTimeout(() => (swap.active = false), FLIP_MS * 2 + 100);
     }
     if (event.joker === "skip") {

@@ -308,13 +308,16 @@
       if (purged) await new Promise<void>((done) => (shredding = { name: purged, done }));
       shredding = null;
       sweeping = true;
-      sfx("swoosh");
+      sfx("broom");
       await sleep(SWEEP_MS);
     }
     jokerBusy = false;
     target = null;
     duck(false);
-    if (res.event.joker === "hint") sfx("rustle"); // the new note slides in
+    if (res.event.joker === "hint") {
+      sfx("bing");
+      setTimeout(() => sfx("rustle"), 300); // the new note slides in, after the bell
+    }
     onplayed(res.game, res.event);
   }
 

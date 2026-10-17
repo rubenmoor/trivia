@@ -52,3 +52,6 @@ Everything not listed here is synthesized in `app/client/src/game/sound.svelte.t
 | `pajaros.m4a` | Category splash: letters scatter like birds | `pepSound5.ogg`, [Digital Audio](https://kenney.nl/assets/digital-audio) | Kenney | CC0 |
 | `gelatina.m4a` | Category splash: jelly wobble | `phaseJump4.ogg`, [Digital Audio](https://kenney.nl/assets/digital-audio) | Kenney | CC0 |
 | `maquina-escribir.m4a` | Category splash: typewriter backspace (nine clicks, 70 ms apart) | `click_003.ogg`, [Interface Sounds](https://kenney.nl/assets/interface-sounds) | Kenney | CC0 |
+| `barrido.m4a` | Paso y fuera: a straw broom sweeping (first 1.6 s) | [Straw Broom Sweeping Gentle.wav](https://freesound.org/people/esperri/sounds/118975/) (Freesound) | esperri | CC0 |
+| `microondas.m4a` | Soplo: the microwave bell «bing» (first 0.75 s) | [Bell_Microwave Oven Bell](https://freesound.org/people/CAT-FOX_ALEX/sounds/872984/) (Freesound) | CAT-FOX_ALEX | CC0 |
+| `varita.m4a` | Hada madrina: a magic wand sprinkling fairy dust (first 1.8 s) | [Magic Spell Fairy Dust](https://freesound.org/people/zazz.sound.design/sounds/683323/) (Freesound) | zazz.sound.design | CC0 |

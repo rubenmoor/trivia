@@ -53,7 +53,7 @@ const SAMPLE_NAMES = [
   "menu-abre", "menu-cierra", "desbloqueado", "hola", "comodin", "comodin-preparado", "comodin-abre", "silbato",
   "trituradora", "latido", "rebobinar", "mira-tic", "corcho", "rasgado", "susurro-papel", "ficha", "cohete",
   "canon-confeti", "bengalas", "estrellas", "disolver", "derretir", "agujero-negro", "pajaros", "gelatina",
-  "maquina-escribir", "musica-normal", "musica-pregunta", "musica-enviada",
+  "maquina-escribir", "barrido", "microondas", "varita", "musica-normal", "musica-pregunta", "musica-enviada",
 ] as const;
 type Sample = (typeof SAMPLE_NAMES)[number];
 const samples: Partial<Record<Sample, AudioBuffer>> = {};
@@ -116,6 +116,9 @@ const SAMPLE_FOR: Partial<Record<Cue, [Sample, ((level: number) => number)?]>> =
   "cork-pop": ["corcho"],
   tear: ["rasgado"],
   rustle: ["susurro-papel"],
+  broom: ["barrido"],
+  bing: ["microondas"],
+  wand: ["varita"],
   "token-back": ["ficha", () => 0.95 + Math.random() * 0.15],
 };
 
@@ -475,7 +478,7 @@ export type Cue =
   | "whoosh" | "swoosh-up" | "swoosh" | "tear" | "paper" | "ready" | "boom" | "block" | "cork-pop" | "pop"
   | "padlock-close" | "padlock-open" | "fanfare" | "sad-trombone" | "rewind" | "menu-open" | "menu-close"
   | "unlocked" | "joker-armed" | "joker-open" | "joker-activate" | "whistle-down" | "stamp" | "shredder"
-  | "heartbeat" | "tick" | "glass-break" | "rustle" | "token-back" | "claim" | "countdown"
+  | "heartbeat" | "tick" | "glass-break" | "rustle" | "broom" | "bing" | "wand" | "token-back" | "claim" | "countdown"
   | "splash-left" | "splash-right" | "splash-fade" | "splash-spin"
   | "splash-dissolve" | "splash-explode" | "splash-rocket" | "splash-drop" | "splash-wind" | "splash-blind" | "splash-drain" | "splash-pop"
   | "splash-zoom" | "splash-shatter" | "splash-melt" | "splash-blackhole" | "splash-birds" | "splash-typewriter" | "splash-plane" | "splash-jelly";
@@ -727,6 +730,12 @@ const RECIPES: Record<Cue, Recipe> = {
   },
   tick: (c, o, t) => noise(c, o, t, { type: "highpass", from: 6000, len: 0.03, level: 0.3 }), // «mira: tic»
   rustle: (c, o, t) => noise(c, o, t, { from: 4000, to: 2500, len: 0.3, q: 1.5, level: 0.15, attack: 0.08 }), // Soplo's note
+  broom: (c, o, t) => { // Paso y fuera: two brush strokes
+    noise(c, o, t, { from: 2500, to: 1500, len: 0.35, q: 0.8, level: 0.3, attack: 0.1 });
+    noise(c, o, t + 0.5, { from: 2500, to: 1500, len: 0.35, q: 0.8, level: 0.3, attack: 0.1 });
+  },
+  bing: (c, o, t) => tone(c, o, t, { from: 2600, len: 0.6, level: 0.2 }), // Soplo: a microwave bell
+  wand: (c, o, t) => [88, 91, 95, 98, 100, 103].forEach((m, i) => tone(c, o, t + i * 0.07, { from: hz(m), len: 0.4, level: 0.08 })), // Hada madrina: fairy dust
   "token-back": (c, o, t) => tone(c, o, t, { from: 1400, to: 900, len: 0.08, level: 0.15 }), // a fresh token in its slot
   claim: (c, o, t) => { // a claim: a short buzzer sting
     tone(c, o, t, { type: "square", from: 220, len: 0.18, level: 0.22 });
