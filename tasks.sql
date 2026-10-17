@@ -37690,16 +37690,19 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm task-pending-decision` `task 1463: Multiplayer gallery review fixes` on that decision
 
 Done when: all shots in four locales at both sizes pass with no `failed/`; the decision exists and task 1463 waits on it; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-16T21:17:34Z', '2026-10-17T02:49:06Z', 1457, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1463, 165, 'Multiplayer gallery review fixes', 'work', 'open', NULL, NULL, 'Part 6 of `plan 165: Multiplayer UI strings and gallery`. Waits for the review decision of `task 1462: Multiplayer gallery: full run, overflow fixes, review decision`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1463, 165, 'Mode and age screens: build, gallery review loop until approved', 'work', 'open', NULL, NULL, 'Part 6 of `plan 165: Multiplayer UI strings and gallery`. Design: `decision 314: Multiplayer screens reviewed in /gallery?` and the review decisions that follow it in this task.
 
-- Read `app/client/src/locales/style/<locale>.md` first
-- Open flags of the multiplayer shots in `authoring/data/ui-flags.json`: fix per the guides in the catalogs; bigger → follow-up task in the plan of that screen; `fixed_on` per fixed flag
-- New bad patterns into the guides
-- `plans/15a-ui-translation.md` "Mode names": no longer proposals, the reviewed names
-- Re-run `trivia-gallery --only <affected shots>` per locale at both sizes
-- `pm decision consequences <decision> "<date, task, what changed>"`
+## Loop
+- Build or revise the mode screens (single/multi, then standard/Gamemaster or the multiplayer mode groups) and the age screen (per player in round-robin competitive), flow Player → Mode → … → Age → Bundles → Level; Choice loses its mode and age rows
+- Strings per `app/client/src/locales/style/<locale>.md` (es, es-ES, en, de); walkers (gallery, smoke, screenshots, trailer) follow the new flow
+- `trivia-gallery --only <affected shots>` per locale at 1920×1080 and 1280×800; look at every shot yourself
+- `pm decision add --once "Mode and age screens reviewed in /gallery?"`: shots, what changed since the last answer; options "approved", "changes (listed in the answer)"; `pm task-pending-decision 1463 <id>`; stage, stop
+- On "changes": apply them here (no fix tasks), next round
 
-Done when: no open multiplayer flag left without a fix or follow-up task; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-16T21:17:34Z', NULL, 1457, 0, NULL, 'app');
+## On "approved"
+- `pm decision record "Mode and age screens: design"` with the final design (a rule for later tasks)
+- `plans/13-game-modes.md`, `plans/15a-ui-translation.md` "Mode names" (reviewed, not proposals)
+- `pm decision consequences 314 "…"`; checks pass; done', '2026-10-16T21:17:34Z', NULL, 1457, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1464, 166, 'create tasks for plan 166: Shipping the multiplayer modes and docs', 'split', 'done', 1000, '2026-10-16, tasks.sql: tasks 1465–1468 for plan 166; task 1437 body names the ship tasks', 'Split plan 166 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T21:18:44Z', '2026-10-16T21:19:36Z', 1401, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1465, 166, 'Ship rr-coop (Round-robin co-op)', 'work', 'open', NULL, NULL, 'Part of `plan 166: Shipping the multiplayer modes and docs`, section "Shipping a mode": turns `rr-coop` (Round-robin co-op) on for players. Two runs: the first drafts and asks the developer, the second ships after the answer.
