@@ -3875,10 +3875,18 @@ def spread(qs, offset=0.0):
     return out
 
 
+def demo_listed():
+    """The demo list's ids (authoring/data/demo.json, else work/demo/proposal.json), or []."""
+    for p in (layout.DEMO_LIST, layout.DEMO_WORK / "proposal.json"):
+        if p.exists():
+            return load_json(p)["ids"]
+    return []
+
+
 def translate_selection(locale, n, bundle="base"):
     """(ids, stale ids) for the next run (plan 66, D-36): approved, translatable sources of the bundle in another
     locale (decision 235) without an approved non-stale translation and not rejected in the locale; stale ones
-    first, then one at a time from the subcategory with the fewest approved translations (picks count), spread
+    first, then the demo list's ids (plan 174; base only), then one at a time from the subcategory with the fewest approved translations (picks count), spread
     over difficulty;
     ties in categories.json order. Within a subcategory, the source whose level has the most locale
     deficit per pick so far (D-84, D'Hondt); levels without deficit last."""
@@ -3902,6 +3910,14 @@ def translate_selection(locale, n, bundle="base"):
               for k, sub in enumerate(order)}
     deficit, per_level = targets.deficits(pool, bundle, locale) or {}, Counter()
     picked = list(stale)
+    listed = demo_listed() if bundle == "base" else []
+    for q in sorted((q for q in open_ if q["id"] in listed), key=lambda q: listed.index(q["id"])):
+        if len(picked) >= n:
+            break
+        picked.append(q["id"])
+        queues[q["subcategory"]].remove(q)
+        done[q["subcategory"]] += 1
+        per_level[q["difficulty"]] += 1
     while len(picked) < n and any(queues.values()):
         sub = min((s for s in order if queues[s]), key=lambda s: (done[s], order.index(s)))
         q = max(queues[sub], key=lambda q: deficit.get(q["difficulty"], 0) / (per_level[q["difficulty"]] + 1))

@@ -23,7 +23,7 @@ Decided: D-87 (pm plan 66). One command, `qgen batch --translate <locale>` (`aut
 
 - Run `tr-<locale>-<n>`: 300 sources (`TRANSLATE_SIZE`); the locale's first run is the 50-question pilot (QT-5), no stop: only a run failing a threshold makes the next exit 2, until `qgen health ack <run>`.
 - Locales: `es`, `es-ES`, `en`, `de`; sources in any locale but the target; `{source_language}` in the prompts; rate and factcheck for the target's market (`es`: Latin America, `es-ES`: Spain).
-- Selection: approved, translatable sources of one bundle (`base`, or `--bundle <id>`, plan 98) not in the target locale; stale translations first, then subcategories with the fewest approved translations, levels by the locale's deficit (D-84).
+- Selection: approved, translatable sources of one bundle (`base`, or `--bundle <id>`, plan 98) not in the target locale; stale translations first, then the `base` demo list's ids (`authoring/data/demo.json`, else `work/demo/proposal.json`; plan 174), then subcategories with the fewest approved translations, levels by the locale's deficit (D-84).
 - Steps: translate → rate → factcheck (changed facts only) → merge → review 1 → fix → review 2 → record → audit → export → report.
 - Prompts: `translate.md`, `translate-review.md`, `locale-<locale>.md` (spelling and usage: `en` US spelling, words US and UK share; `es` idiomatic Latin American; `es-ES` Spain; `de` as in Germany; no player location, decision 35, decision 167); a regional bundle adds `translate-region.md` (players with a link to the region, decision 167).
 - Health: decision 45's subset of the batch thresholds; the LLM translation review is the only review, no spot check per run (milestone 9, 2026-10-16; `authoring/QC.md`).
