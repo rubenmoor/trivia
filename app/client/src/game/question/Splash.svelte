@@ -1,5 +1,5 @@
 <script lang="ts">
-  // The category splash (plan 181): category big and centred, subcategory small below; after a hold both leave with
+  // The category splash (plan 181): subcategory big and centred (the category alone without one), category small below; after a hold both leave with
   // one of the exits in splash.ts and its sound. Over the whole screen, never in the way of play.
   import { untrack } from "svelte";
   import { displayName, questionLocale } from "../../lib/names.svelte.ts";
@@ -32,12 +32,15 @@
   let phase = $state<"wait" | "hold" | "exit" | "gone">("wait");
   const catName = $derived(displayName("category", category));
   const subName = $derived(subcategory ? displayName("subcategory", subcategory) : null);
-  const long = $derived(catName.length > 24);
+  /** The subcategory is the big line; the category sits small below it (decision 353), alone when there is no subcategory. */
+  const bigName = $derived(subName ?? catName);
+  const smallName = $derived(subName ? catName : null);
+  const long = $derived(bigName.length > 24);
   /** Per-letter vectors for the exits that split the name (the words stay whole, so wrapping works). */
   const words = $derived.by(() => {
     const spec = reduced ? undefined : picked.letters;
     if (!spec) return null;
-    const parts = catName.split(" ");
+    const parts = bigName.split(" ");
     const total = parts.join("").length;
     let i = 0;
     return parts.map((w) =>
@@ -88,17 +91,17 @@
             <span class="w" style:--lms="{letterMs}ms">{#each word as { ch, vars }, k (k)}<span class="l" style={vars}>{ch}</span>{/each}</span>{" "}
           {/each}
         {:else}
-          {catName}
+          {bigName}
         {/if}
       </p>
-      {#if subName}
+      {#if smallName}
         <p
           class="sub {reduced ? 'fade' : `sub-${picked.sub}`}"
           class:go={phase === "exit"}
           style:--delay="{Math.max(0, subShift)}ms"
           lang={questionLocale()}
         >
-          {subName}
+          {smallName}
         </p>
       {/if}
     </div>

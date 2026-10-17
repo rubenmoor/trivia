@@ -1,7 +1,7 @@
 // Category splash exits (plan 181): a table of category exit, subcategory exit and sound cue; the keyframes are in Splash.svelte.
 import type { Cue } from "../sound.svelte.ts";
 
-/** A light move of the small subcategory line, with its offset against the category's (ms, negative = earlier). */
+/** A light move of the small line (the category since decision 353), with its offset against the category's (ms, negative = earlier). */
 export type SubExit = "fade" | "down" | "shrink" | "blur" | "drift-left" | "drift-right";
 
 export type SplashExit = {
