@@ -339,6 +339,8 @@ export interface EngineData {
   bundles: Bundle[];
   ageGroups: AgeGroup[];
   groupById: Map<string, AgeGroup>;
+  /** Demo build (decision 338): the only place engine code learns it. */
+  demo: boolean;
 }
 
 const NO_NAMES: Names = { bundles: {}, categories: {}, subcategories: {}, age_groups: {} };
@@ -364,11 +366,11 @@ export function mergeNames(files: (readonly [string, unknown])[]): Names {
 
 export function engineData(
   pool: PoolQuestion[], categories: Category[], bundles: Bundle[], ageGroups: AgeGroup[],
-  locale = "es", names: Names = NO_NAMES, poolHash: string | null = null,
+  locale = "es", names: Names = NO_NAMES, poolHash: string | null = null, demo = false,
 ): EngineData {
   return {
     locale, names, uiNames: names, pool, poolHash, byId: byId(pool), categories, broad: broadOf(categories),
-    bundles, ageGroups, groupById: new Map(ageGroups.map((g) => [g.id, g])),
+    bundles, ageGroups, groupById: new Map(ageGroups.map((g) => [g.id, g])), demo,
   };
 }
 

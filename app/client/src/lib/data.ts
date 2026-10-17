@@ -4,6 +4,7 @@ import {
 } from "../engine/pool.ts";
 import type { OldKeys } from "../engine/save.ts";
 import { engineData, mergeNames, namesFiles, type EngineData, type Names } from "../engine/state.ts";
+import { buildInfo } from "./build.ts";
 import { call } from "./http.ts";
 import { runDataHooks } from "./mods.ts";
 
@@ -130,7 +131,7 @@ async function load(locale: string): Promise<Loaded> {
     locale, questions: packed.pool, bundles: packed.bundles, ageGroups: parseAgeGroups(ageGroups),
   });
   const named = parsed.filter((b) => b.source !== "mod" || byBundle[b.id]);
-  const data = engineData(questions, loadCategories(bundles, byBundle), parsed, groups, locale, await namesOf(named, locale), poolHash(pool));
+  const data = engineData(questions, loadCategories(bundles, byBundle), parsed, groups, locale, await namesOf(named, locale), poolHash(pool), buildInfo().demo);
   return { data, named };
 }
 

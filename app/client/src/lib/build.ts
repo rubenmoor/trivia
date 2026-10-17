@@ -4,8 +4,9 @@ import { poolHash } from "./names.svelte.ts";
 export interface BuildInfo {
   version: string;
   pool: string | null;
+  demo: boolean;
 }
 
 export function buildInfo(): BuildInfo {
-  return { version: __APP_VERSION__, pool: poolHash() };
+  return { version: __APP_VERSION__, pool: poolHash(), demo: __DEMO__ };
 }

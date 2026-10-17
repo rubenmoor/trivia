@@ -7,3 +7,6 @@ interface ImportMetaEnv {
 
 /** app/desktop/package.json `version` (D-91), from vite.config.ts. */
 declare const __APP_VERSION__: string;
+
+/** `TRIVIA_DEMO=1` at build or dev time (decision 338), from vite.config.ts. */
+declare const __DEMO__: boolean;

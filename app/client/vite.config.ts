@@ -3,7 +3,7 @@ import { svelte } from "@sveltejs/vite-plugin-svelte";
 import { globSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { credits } from "./credits.ts";
-import { devServer } from "./devserver.ts";
+import { demo, devServer } from "./devserver.ts";
 
 // The game version's single source (D-91).
 const version = (JSON.parse(readFileSync(fileURLToPath(new URL("../desktop/package.json", import.meta.url)), "utf8")) as { version: string }).version;
@@ -74,16 +74,19 @@ function svelteRuntime(): Plugin {
   };
 }
 
+const outDir = demo ? "dist-demo" : "dist";
+
 /** Readable build; `--mode optimized`: Vite's defaults (hashed, minified), to measure the readable build's cost (decision 143). */
 export default defineConfig(({ mode }) => ({
-  define: { __APP_VERSION__: JSON.stringify(version) },
+  define: { __APP_VERSION__: JSON.stringify(version), __DEMO__: demo },
   plugins: [
     ...(mode === "optimized" ? [] : [{ ...svelteRuntime(), apply: "build" as const }, oneEntryScript()]),
     svelte(),
     credits(),
     devServer(),
   ],
-  build: mode === "optimized" ? {} : {
+  build: mode === "optimized" ? { outDir } : {
+    outDir,
     minify: false,
     sourcemap: true,
     cssCodeSplit: true,
