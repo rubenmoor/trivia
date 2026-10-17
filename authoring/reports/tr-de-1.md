@@ -2,6 +2,8 @@
 
 Made by `qgen batch --translate de` on 2026-10-16 (plan 66, D-81): `base` questions translated into German. Generated file: don't edit by hand.
 
+- Note (task 1492): audit findings saying the media title is null or no file was picked are false; the audit ran in a pm work tree without the media-candidates cache. Fixed in `media_title`; not re-audited.
+
 - Sources: 50 (0 stale re-translated)
 - Translated: 50
 - Approved: 50

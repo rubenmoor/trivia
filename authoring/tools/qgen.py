@@ -51,7 +51,7 @@ Revising questions that are already in the pool (07, QG-13):
     qgen import --run <run> --batch <batch> [--assign-unbatched]
     qgen rate | factcheck | revise | apply --run <run>
 """
-import argparse, atexit, concurrent.futures, contextlib, datetime, difflib, hashlib, json, os, random, re, subprocess, sys, threading, time, unicodedata
+import argparse, atexit, concurrent.futures, contextlib, datetime, difflib, hashlib, json, os, random, re, subprocess, sys, threading, time, unicodedata, urllib.parse
 from pathlib import Path
 from collections import Counter
 
@@ -1061,10 +1061,13 @@ def translated_drafts(d):
 
 
 def media_title(q, slot="media"):
-    """The picked file's title from its candidates, if they are still cached."""
+    """The picked file's title from its candidates; without the cache (a pm work tree) its file name."""
     found = media_tool.load_candidates(q["id"], slot) or {"candidates": []}
     url = q[slot].get("source_url")
-    return next((c["title"] for c in found["candidates"] if url and c.get("page_url") == url), None)
+    if title := next((c["title"] for c in found["candidates"] if url and c.get("page_url") == url), None):
+        return title
+    picked = url or q[slot].get("file_url")
+    return urllib.parse.unquote(picked.split("?")[0].rsplit("/", 1)[-1]) if q[slot].get("file_url") and picked else None
 
 
 def translate_chunks(ids, src):
