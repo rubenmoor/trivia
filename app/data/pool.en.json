@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "03564a4a",
+  "hash": "f99cbe5f",
   "questions": [
     {
       "id": "q-0019",
@@ -40599,6 +40599,40 @@
         "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
         "author": "CeeKay",
         "author_url": "https://commons.wikimedia.org/wiki/User:CeeKay"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3410",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "football-history",
+      "bundle": "base",
+      "description": "After years of near-misses, one little genius finally got a trophy for his country.",
+      "question": "Messi won his first big trophy with Argentina at a Copa América that was meant to be held in Colombia and Argentina, but moved to Brazil. In which year?",
+      "answer": "2021",
+      "wrong_answers": [
+        "2016",
+        "2019",
+        "2024"
+      ],
+      "hints": [
+        "It was played during the years of the COVID-19 pandemic.",
+        "It was played one year after it was first planned.",
+        "The year before the 2022 World Cup."
+      ],
+      "fun_fact": "Argentina beat Brazil 1–0 in that final at the Maracanã, with a goal by Ángel Di María.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Maracana_Stadium_June_2013.jpg/3840px-Maracana_Stadium_June_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMaracana_Stadium_June_2013.jpg",
+        "credit": "Brazilian Government · CC BY 3.0 br · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0 br",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/br/deed.en",
+        "author": "Brazilian Government",
+        "author_url": null
       },
       "background": null
     },
