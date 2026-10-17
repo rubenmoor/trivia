@@ -39891,8 +39891,15 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `/gallery?set=task-1340` shows those 4 shots × 8 entries; a set made after a one-line CSS change shows the shots it touched under "also changed"; `/gallery` unchanged
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass', '2026-10-17T16:25:11Z', NULL, NULL, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1582, 165, 'investigate the failure of task 1581: Gallery review sets: /gallery?set=<name>, picked shots and also changed, linked from the review decision', 'investigate', 'open', 622, NULL, '`task 1581: Gallery review sets: /gallery?set=<name>, picked shots and also changed, linked from the review decision` failed in `pm run`; its summary is below. Find out why, don''t redo its work:
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass
+
+
+## Run time (task 1582)
+- Run 1615 was killed from outside after 20 min (not OOM, not pm, gallery healthy: en, es, es-ES shot in 20.5 min, ≈7 min per entry); its `gallery.py` `--set` work is in stash 1b32ad8b
+- One full run of 8 entries ≈ 55 min, at the 1-hour cap of a foreground Bash call; the noise check needs two
+- So: shooting and writing a set are separate steps: plain runs per size (`trivia-gallery`, `trivia-gallery --size 1280x800`, each < 1 h; `--locale` to split further), then `trivia-gallery --set <name> --pick … [--note …]` shoots nothing, only checks that `manifest.json` has every shot for the set''s entries from one commit (HEAD, clean tree) and refuses otherwise
+- Every gallery call in the foreground with `timeout` 3600000 and output to a file, never a background job', '2026-10-17T16:25:11Z', NULL, NULL, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1582, 165, 'investigate the failure of task 1581: Gallery review sets: /gallery?set=<name>, picked shots and also changed, linked from the review decision', 'investigate', 'done', 622, '2026-10-17, no files: run 1615 was SIGTERMed from outside after 20 min (no OOM in the journal, pm and its other worker kept running, the gallery was healthy at ≈7 min per entry); the real risk is the run time: a --set run of 8 entries ≈ 55 min, at the 1-hour Bash cap, ×2 for the noise check. Changed task 1581''s body: ''Run time'' section, shoot per size first, --set only checks the manifest covers its entries at HEAD and writes the set; stash 1b32ad8b left for its next run', '`task 1581: Gallery review sets: /gallery?set=<name>, picked shots and also changed, linked from the review decision` failed in `pm run`; its summary is below. Find out why, don''t redo its work:
 * read its log, `pm show 1581`, and the stashes it left (`git stash show -p --include-untracked <sha>`); don''t apply or drop them, task 1581''s next run gets them
 * rerun the failing command or script to see the error yourself; find the cause in the code, not only the symptom
 Then, by what you find:
@@ -39925,7 +39932,45 @@ Your note on `pm task done`: the cause and what you queued.
         → Bash: python3 - <<''EOF''
         → Bash: python3 - <<''EOF''
         → Bash: python3 - <<''EOF''
-        → Bash: which trivia-gallery; time trivia-gallery --set task-1340 --pick bundles,bundles-supply-report,choice-solo,choice-gamemaster --note "Decision 328: bun', '2026-10-17T16:47:14Z', NULL, NULL, 0, NULL, 'app');
+        → Bash: which trivia-gallery; time trivia-gallery --set task-1340 --pick bundles,bundles-supply-report,choice-solo,choice-gamemaster --note "Decision 328: bun', '2026-10-17T16:47:14Z', '2026-10-17T16:49:18Z', NULL, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1583, 165, 'investigate the failure of task 1581: Gallery review sets: /gallery?set=<name>, picked shots and also changed, linked from the review decision', 'investigate', 'open', 622, NULL, '`task 1581: Gallery review sets: /gallery?set=<name>, picked shots and also changed, linked from the review decision` failed in `pm run`; its summary is below. Find out why, don''t redo its work:
+* read its log, `pm show 1581`, and the stashes it left (`git stash show -p --include-untracked <sha>`); don''t apply or drop them, task 1581''s next run gets them
+* rerun the failing command or script to see the error yourself; find the cause in the code, not only the symptom
+Then, by what you find:
+* a bug in a script, test, tool or config of the project: add a task that fixes it, `pm task add 165 "<subject>" --priority 621`, with the cause, where it is and how to check the fix; it runs before task 1581 does again
+* task 1581 itself is wrong or out of date: change it (`pm task set 1581 --body …`) or drop it (`pm task drop 1581 "<reason>"`)
+* it needs the human: `pm decision add` with what you found and the options, then `pm task-pending-decision 1581 <decision>`
+* nothing to fix (a passing outage): say so; task 1581 runs again as it is
+If earlier investigations of this task are listed below, don''t repeat their fix: raise a decision instead.
+Your note on `pm task done`: the cause and what you queued.
+
+# The failure
+
+    killed by SIGTERM (exit 143), after 2m18s, no result
+    last tool call: Bash: for n in 1 2; do TRIVIA_WORK=/tmp/gnoise$n TRIVIA_MUTE=1 trivia-gallery --locale en > /tmp/gnoise$n.log 2>&1; echo "run $n exit $?"; tail -2 /tmp/gnoise$n.log; done
+    likely cause: killed from outside (out of memory, Ctrl-C, another process)
+    left behind: 6 files, stashed as ae59292d (pm: task 1581 run 1618 failed); get them back with `git stash apply ae59292d`
+    log: /home/ruben/code/trivia/.git/pm-logs/task-1581-run-1618.log
+    last output:
+        → Bash: grep -n "TRIVIA_WORK\|GALLERY" authoring/tools/layout.py; grep -n "layout\.\|clock\|animation\|reduced" authoring/tools/gallery.py | head -40; ls work
+      Restored the earlier run''s stash; now reworking `gallery.py` so `--set` shoots nothing and only checks the manifest (per task 1582''s note).
+        → Bash: sed -n 290,300p authoring/tools/gallery.py && grep -n "build_if_stale\|def data_strings" authoring/tools/gallery.py | head
+      Now edit the docstring, Run, and main.
+        → Bash: python3 - <<''EOF''
+        → Bash: python3 - <<''EOF''
+        → Bash: python3 - <<''EOF''
+        → Bash: sed -i ''s|print(f"gallery: {OUT.relative_to(REPO)}/ (|print(f"gallery: {OUT}/ (|'' authoring/tools/gallery.py && sed -n 1,14p authoring/server/ui_flags
+        → Bash: grep -n "ValueError\|GET_API" authoring/server/main.py | head; grep -n "gallery" authoring/server/main.py | head
+        → Bash: sed -n 418,436p authoring/server/main.py; sed -n 64,70p authoring/server/main.py
+      Server and page code from the stash look right; tidying the doc line and the page''s locale switch, then type-check.
+        → Bash: python3 - <<''EOF''
+        → Bash: cat $(which trivia-gallery) | tail -5
+      Running the noise check: two `en` runs into temporary work dirs, then comparing the pictures.
+        → Bash: for n in 1 2; do TRIVIA_WORK=/tmp/gnoise$n TRIVIA_MUTE=1 trivia-gallery --locale en > /tmp/gnoise$n.log 2>&1; echo "run $n exit $?"; tail -2 /tmp/gnoi
+
+# Earlier investigations of this task
+
+- task 1582 (done): 2026-10-17, no files: run 1615 was SIGTERMed from outside after 20 min (no OOM in the journal, pm and its other worker kept running, the gallery was healthy at ≈7 min per entry); the real risk is the run time: a --set run of 8 entries ≈ 55 min, at the 1-hour Bash cap, ×2 for the noise check. Changed task 1581''s body: ''Run time'' section, shoot per size first, --set only checks the manifest covers its entries at HEAD and writes the set; stash 1b32ad8b left for its next run', '2026-10-17T16:51:46Z', NULL, NULL, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -46489,6 +46534,16 @@ last tool call: Bash: which trivia-gallery; time trivia-gallery --set task-1340 
 likely cause: killed from outside (out of memory, Ctrl-C, another process)
 left behind: 6 files, stashed as 1b32ad8b (pm: task 1581 run 1615 failed); get them back with `git stash apply 1b32ad8b`
 log: /home/ruben/code/trivia/.git/pm-logs/task-1581-run-1615.log', 143, 'd2be638c3cdd4a72f8d31158d7c9631ea95ccf49', 'app', 'claude-sonnet-5-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1616, 1582, '2026-10-17T16:47:14Z', '2026-10-17T16:47:29Z', 'failed', 'Claude: usage limit without a readable reset time: {"type":"user","message":{"role":"user","content":[{"tool_use_id":"toolu_01HWUrSfZXb8kNs2pcawjXxP","type":"tool_result","content":"14:# Minutes to wait after a usage limit resets before retrying the task.\n15:limit_margin_minutes = 5\n\"command\":\"which trivia-gallery; time trivia-gallery --set task-1340 --pick bundles,bundles-supply-report,choice-solo,choice-gamemaster --note \\\"Decision 328: bundle tiles in the Choice look.\\\" --set task-1463 --pick mode-kind,mode-single,mode-multi,choice-solo,choice-gamemaster,choice-rr-competitive,join-5,join-8,bundles,bundles-session --note \\\"Decision 329: mode and age screens.\\\" > /tmp/g1.log 2>&1; tail -15 /tmp/g1.log\",\"timeout\":3600000\n\"command\":\"cd /home/ruben/code/trivia-worktrees/app && which trivia-gallery; time trivia-gallery --set task-1340 --pick bundles,bundles-supply-report,choice-solo,choice-gamemaster --note \\\"Decision 328: bundle tiles in the Choice look.\\\" --set task-1463 --pick mode-kind,mode-single,mode-multi,choice-solo,choice-gamemaster,choice-rr-competitive,join-5,join-8,bundles,bundles-session --note \\\"Decision 329: mode and age screens.\\\" > /tmp/g1.log 2>&1; tail -15 /tmp/g1.log\",\"timeout\":3600000\n109\nShell cwd was reset to /home/ruben/code/trivia-worktrees/app","is_error":false}]},"parent_tool_use_id":null,"session_id":"9526d455-4f9c-41c4-9efe-7cc59d97be82","uuid":"75d24a3d-9f69-4269-a746-f8534eb3e0c6","timestamp":"2026-10-17T16:47:27.235Z","tool_use_result":{"stdout":"14:# Minutes to wait after a usage limit resets before retrying the task.\n15:limit_margin_minutes = 5\n\"command\":\"which trivia-gallery; time trivia-gallery --set task-1340 --pick bundles,bundles-supply-report,choice-solo,choice-gamemaster --note \\\"Decision 328: bundle tiles in the Choice look.\\\" --set task-1463 --pick mode-kind,mode-single,mode-multi,choice-solo,choice-gamemaster,choice-rr-competitive,join-5,join-8,bundles,bundles-session --note \\\"Decision 329: mode and age screens.\\\" > /tmp/g1.log 2>&1; tail -15 /tmp/g1.log\",\"timeout\":3600000\n\"command\":\"cd /home/ruben/code/trivia-worktrees/app && which trivia-gallery; time trivia-gallery --set task-1340 --pick bundles,bundles-supply-report,choice-solo,choice-gamemaster --note \\\"Decision 328: bundle tiles in the Choice look.\\\" --set task-1463 --pick mode-kind,mode-single,mode-multi,choice-solo,choice-gamemaster,choice-rr-competitive,join-5,join-8,bundles,bundles-session --note \\\"Decision 329: mode and age screens.\\\" > /tmp/g1.log 2>&1; tail -15 /tmp/g1.log\",\"timeout\":3600000\n109","stderr":"\nShell cwd was reset to /home/ruben/code/trivia-worktrees/app","interrupted":false,"isImage":false,"noOutputExpected":false}}, after 0m15s, no result
+last tool call: Bash: cd /home/ruben/code/trivia; grep -n -i "timeout\|minutes\|limit" project-manager.toml | head; grep -o ''"command":"[^"]*trivia-gallery[^"]*"[^}]*"timeout":[0-9]*'' .git/pm-logs/task-1581-run-1615.log | head -3; grep -c . .git/pm-logs/task-1581-run-1615.log
+likely cause: killed from outside (out of memory, Ctrl-C, another process)
+log: /home/ruben/code/trivia/.git/pm-logs/task-1582-run-1616.log', 143, '4d9ca2015e5c1cd447bdf35b3ec514ed59e238c2', 'app', 'claude-opus-5-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1617, 1582, '2026-10-17T16:47:29Z', '2026-10-17T16:49:27Z', 'done', NULL, 0, '4d9ca2015e5c1cd447bdf35b3ec514ed59e238c2', 'app', 'claude-opus-5-5', 'e7266d8b-6cdf-4539-a286-16b417395483', NULL, 18, 36, 7429, 1008088, 33185, 0.6158216, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1618, 1581, '2026-10-17T16:49:28Z', '2026-10-17T16:51:46Z', 'failed', 'killed by SIGTERM (exit 143), after 2m18s, no result
+last tool call: Bash: for n in 1 2; do TRIVIA_WORK=/tmp/gnoise$n TRIVIA_MUTE=1 trivia-gallery --locale en > /tmp/gnoise$n.log 2>&1; echo "run $n exit $?"; tail -2 /tmp/gnoise$n.log; done
+likely cause: killed from outside (out of memory, Ctrl-C, another process)
+left behind: 6 files, stashed as ae59292d (pm: task 1581 run 1618 failed); get them back with `git stash apply ae59292d`
+log: /home/ruben/code/trivia/.git/pm-logs/task-1581-run-1618.log', 143, '4d9ca2015e5c1cd447bdf35b3ec514ed59e238c2', 'app', 'claude-opus-5-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
