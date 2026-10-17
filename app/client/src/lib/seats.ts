@@ -58,8 +58,12 @@ export function joinKeyboard(binding: readonly Binding[], key: string | null): B
   return [...binding, key === null ? "shared" : { key: key.toLowerCase() }];
 }
 
-/** A binding's device kind for the save (plan 172). */
-export const deviceOf = (b: Binding): SeatDevice => (padOf(b) !== null ? "pad" : (b as Exclude<Binding, { pad: number }>));
+/** A binding's device kind for the save (plan 172); a key is copied, the binding may be a state proxy (not cloneable). */
+export const deviceOf = (b: Binding): SeatDevice => {
+  if (padOf(b) !== null) return "pad";
+  const d = b as Exclude<Binding, { pad: number }>;
+  return typeof d === "string" ? d : { key: d.key };
+};
 
 /** A restart's binding from the saved device kinds: keyboard seats at once, pad seats (and seats of older sessions
  * without a kind) null until a pad takes them (decision 289). */

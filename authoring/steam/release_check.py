@@ -21,7 +21,8 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
             network off; save and resume, no «progress needs Steam» notice (with packs: again without them)
   multiplayer  node authoring/steam/smoke.mjs --multiplayer: rr-coop, rr-competitive, timed × 3 pads, 3 keyboard seats,
             4 pads + keyboard and mouse (fake pads), each through Join to an end; seats act only for themselves, a
-            restart rebinds the pads, one games[] row with its seats, the win achievement (decision 299); always
+            mid-session restart (timed pads, both keyboard-only, timed 4 pads + kbm): pads rebind, keyboard seats
+            never ask for a pad, one games[] row with its seats, the win achievement (decision 299); always
   mods      node authoring/steam/smoke.mjs --mods: the build's modding/ examples as local mods: loaded, theme applied,
             player bundle played, rules tweak's extra hint, no crash marker; conversion on top; --no-mods; always
             (data changes can break the merged bundles.json, decision 128)

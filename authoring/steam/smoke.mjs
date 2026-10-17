@@ -10,7 +10,8 @@
 // --multiplayer (plan 167, decision 299) instead: rr-coop, rr-competitive, timed × 3 pads, 3 keyboard seats, 4 pads +
 // keyboard and mouse; each Choice → Join → Bundles → an end, fake pads (fake_pads.js) and trusted CDP keys and clicks.
 // The middle of a session is played by the engine on the save (as the solo run swaps cards), the rest on screen; a
-// seat that may not act changes nothing; one quit and restart rebinds each pad (decision 289); after each: one games[]
+// seat that may not act changes nothing; the timed pads, keyboard-only rr-coop, keyboard-only timed (claim keys) and 4 pads + keyboard and mouse timed sessions
+// quit and restart mid-session: pads rebind (decision 289), keyboard seats never ask for a pad (decision 321); after each: one games[]
 // row with its seats (decision 277), the mode's win achievement derived for a win (decision 285).
 import { spawn, spawnSync } from "node:child_process";
 import { accessSync, constants, existsSync, readdirSync, readFileSync } from "node:fs";
@@ -649,6 +650,22 @@ async function ended(r, end) {
   console.log(`  ${r.label}: ${end}, ${g.result}${win ? `, ${WINS[r.mode]}` : ""}`);
 }
 
+/** Quit, start again, resume: pad seats wait for a pad and take it (decision 289), the others never ask
+ * (decision 321). */
+async function restarted(r) {
+  at(`${r.label}: quit`);
+  await quit(r.shell);
+  at(`${r.label}: restart`);
+  const pads = r.seats.flatMap((b, i) => (typeof b === "number" ? [i] : []));
+  r.shell = await launchPads(pads.length);
+  await resume(r);
+  if (pads.length) {
+    await h.waitFor(visibleEl(LOST), "lost-seat dialog", 20000);
+    for (const seat of pads) if (!(await rebind(r, seat))) throw new Error(`no lost-seat dialog for seat ${seat}`);
+  } else await sleep(2000);
+  if (await h.evaluate(visibleEl(LOST))) throw new Error("lost-seat dialog after the restart");
+}
+
 const levelOf = (s, seat) => stateOf(row(s), seat).level;
 const at12 = (seat) => (s) => row(s).turn === seat && levelOf(s, seat) === 12 && stateOf(row(s), seat).phase === "select";
 
@@ -665,6 +682,7 @@ const RUNS = [
   {
     mode: "rr-coop", seats: SHARED3, async play(r) {
       await turn(r, true);
+      await restarted(r);
       await turn(r, true);
       await turn(r, false);
       await ended(r, "team loss");
@@ -738,6 +756,7 @@ const RUNS = [
   {
     mode: "timed", seats: ["j", "q", "x"], async play(r) {
       await claims(r, 0, "wrong", 1);
+      await restarted(r);
       await claims(r, 1, "wrong", 2);
       await ended(r, "last standing");
     },
@@ -745,6 +764,8 @@ const RUNS = [
   {
     mode: "timed", seats: FIVE, async play(r) {
       await claims(r, 4, "right", 0);
+      await restarted(r); // pads rebind, keyboard and mouse needs no pad
+      await claims(r, 4, "right");
       for (let i = 0; i < 4; i++) await claims(r, i, "wrong", i ? undefined : 4);
       await ended(r, "last standing");
     },
