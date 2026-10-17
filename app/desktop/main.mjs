@@ -40,6 +40,25 @@ const BACKGROUND = "#0b1120"; // --night-900
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const STEAM_APP_ID = 480; // Spacewar until the real App ID (plan 85)
+const STEAM_DEMO_APP_ID = 480; // Spacewar until the demo app exists (plan 178)
+
+/** Demo build (decision 338): packaged `"demo": true` in package.json, unpackaged `TRIVIA_DEMO=1`; read once. */
+let demo;
+function isDemo() {
+  if (demo !== undefined) return demo;
+  demo = process.env.TRIVIA_DEMO === "1";
+  if (app.isPackaged) {
+    try {
+      demo = JSON.parse(readFileSync(path.join(app.getAppPath(), "package.json"), "utf8")).demo === true;
+    } catch (err) {
+      console.error(`trivia: demo: package.json: ${err.message}`);
+      demo = false;
+    }
+  }
+  return demo;
+}
+
+const windowTitle = () => (isDemo() ? "¡Trivia! Demo" : "¡Trivia!");
 
 function roots() {
   if (app.isPackaged) {
@@ -52,7 +71,7 @@ function roots() {
     };
   }
   return {
-    dist: path.join(REPO, "app", "client", "dist"),
+    dist: path.join(REPO, "app", "client", isDemo() ? "dist-demo" : "dist"),
     data: path.join(REPO, "app", "data"),
     media: process.env.TRIVIA_MEDIA || path.join(REPO, "media"),
   };
@@ -266,7 +285,7 @@ async function startSteam({ input = true } = {}) {
 
 /** A Steam launch sets SteamAppId; dev may override the constant. */
 function steamAppId() {
-  return Number(process.env.SteamAppId || process.env.TRIVIA_STEAM_APPID || STEAM_APP_ID);
+  return Number(process.env.SteamAppId || process.env.TRIVIA_STEAM_APPID || (isDemo() ? STEAM_DEMO_APP_ID : STEAM_APP_ID));
 }
 
 function hasSteamId() {
@@ -646,6 +665,7 @@ function lagProbe() {
     webPreferences: { contextIsolation: true, sandbox: true, nodeIntegration: false },
   });
   win.once("ready-to-show", () => win.show());
+  if (isDemo()) win.on("page-title-updated", (e) => e.preventDefault()); // index.html's <title> would win
   win.on("closed", () => (win = null));
   const wc = win.webContents;
   wc.setAudioMuted(true);
@@ -686,7 +706,12 @@ async function start() {
 
   const dirs = roots();
   if (!existsSync(path.join(dirs.dist, "index.html"))) {
-    dialog.showErrorBox("¡Trivia!", "client not built: run `npm run build -w app/client`");
+    dialog.showErrorBox(
+      windowTitle(),
+      isDemo() && !app.isPackaged
+        ? "demo client not built: run `TRIVIA_DEMO=1 npm run build -w app/client`"
+        : "client not built: run `npm run build -w app/client`",
+    );
     app.quit();
     return;
   }
@@ -708,7 +733,7 @@ async function start() {
     fullscreen: true,
     show: false,
     backgroundColor: BACKGROUND,
-    title: "¡Trivia!",
+    title: windowTitle(),
     webPreferences: {
       contextIsolation: true,
       sandbox: true,
@@ -728,7 +753,7 @@ async function start() {
   // After the load: a frame subscription made before it gets no frames.
   if (steam && process.platform === "win32")
     win.webContents.once("did-finish-load", () => {
-      overlay = steam.addElectronSteamOverlay(win, { title: "¡Trivia!" });
+      overlay = steam.addElectronSteamOverlay(win, { title: windowTitle() });
     });
   win.on("closed", () => (win = null));
 
