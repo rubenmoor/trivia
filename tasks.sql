@@ -39864,41 +39864,30 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Missing tooling: do what exists, list the rest in the note. No prompt or `qgen.py` changes here.
 
 Done when: phase 6 done; note lists decisions, change tasks, numbers.', '2026-10-17T15:48:11Z', NULL, 1521, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1581, 165, 'Gallery review sets: /gallery?set=<name>, picked shots and also changed, linked from the review decision', 'work', 'open', 620, NULL, 'The developer reviews only the shots a change touched, not the whole gallery. A review decision gives the URL path of a set; `/gallery?set=<name>` shows the shots the task picked, then below them the shots whose picture changed anyway ("also changed").
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1581, 165, 'Gallery review sets: /gallery?set=<name>, picked shots and also changed, linked from the review decision', 'work', 'open', 620, NULL, 'The developer reviews only the shots a change touched. A task that wants feedback on gallery changes re-renders just those shots, in a minute or two, and hands them over as a set.
 
 ## Set
-- `trivia-gallery --set <name> --pick <shot,…>` (with `--locale`, `--size`, `--note`): writes `work/gallery/sets/<name>.json`: picked shots, also-changed shots, locale entries (incl. `@<W>x<H>`), run date, git commit, note; same name again overwrites
-- Name: `task-<id>` of the task that raises the review (the decision id doesn''t exist yet)
+- `trivia-gallery --set <name> --only <shot,…>` (with `--locale`, `--size`, `--note`): shoots only those shots → `work/gallery/sets/<name>/<entry>/<shot>.png` + `work/gallery/sets/<name>.json` (shots, entries, run date, git commit, note); same name again overwrites; the full gallery in `work/gallery/` untouched
+- Entries: es, es-ES, en, de at 1920x1080 unless `--locale` / `--size` say otherwise
+- Name: `task-<id>` of the task that asks for the review
+- No baseline, no comparison, no "also changed" (developer, 2026-10-17: quick feedback cycles); drop that code from the work tree''s earlier attempt
 - Plain `/gallery` stays the full gallery
 
-## Also changed
-- Baseline: `work/gallery/baseline/<entry>/<shot>.png`, the pictures as of the last set made; `--set` compares every shot of the run with it, after writing the set moves the baseline to the current shots
-- Also changed: every shot not picked whose picture differs from the baseline in any entry; a shot that''s new or has no baseline counts as changed
-- Only a full run (all shots, the set''s locales and sizes) can say what else changed: `--set` shoots all of them, or refuses when the run doesn''t cover them
-- Noise: two runs of the same commit must give no also-changed shots; a throw-away check on two runs, fix the cause (clock, animation, fonts), a pixel tolerance only as a last resort
-- No baseline yet: the first `--set` writes it, with "also changed" empty and the set''s note saying so
-
 ## Page
-- `/gallery?set=<name>` (`authoring/ui/src/gallery/Gallery.svelte`, `authoring/server/main.py` `/api/gallery`): set name and note in the header; the shot list as two groups: picked, then "also changed"; only the set''s locale entries; arrows step through both groups; flags work as now; a missing set is an error, not the full gallery
+- `/gallery?set=<name>` (`authoring/ui/src/gallery/Gallery.svelte`, `authoring/server/main.py` `/api/gallery`): set name and note in the header; only the set''s shots and entries; arrows step through them; flags work as now; a missing set is an error, not the full gallery
 
 ## Rule for review decisions
-- `pm decision record` (rule): every gallery review decision gives `/gallery?set=<name>` as the place to review; listing the shots in the body is optional
-- Docs: `plans/15a-ui-translation.md` "Wording and review", README "Check the UI wording", AGENTS.md `trivia-gallery` line; `rg` "/gallery" in open plans (165, 176) and in open task bodies'' wording that you''re allowed to change, and update them
+- `pm decision record` (rule): a task wanting gallery feedback makes a set of the affected shots and its review decision gives `/gallery?set=<name>`; never a full gallery run for a review
+- Docs: `plans/15a-ui-translation.md` "Wording and review", README "Check the UI wording", AGENTS.md `trivia-gallery` line; `rg` "/gallery" in open plans (165, 176) and open task bodies you may change, update them
 
 ## Pending reviews
-- Sets `task-1340` (decision 328: bundles, bundles-supply-report, choice-solo, choice-gamemaster) and `task-1463` (decision 329: its shot list), es, es-ES, en, de at 1920x1080 and 1280x800; these write the first baseline (no also-changed)
+- Sets `task-1340` (decision 328: bundles, bundles-supply-report, choice-solo, choice-gamemaster) and `task-1463` (decision 329: mode-kind, mode-single, mode-multi, choice-solo, choice-gamemaster, choice-rr-competitive, join-5, join-8, bundles, bundles-session), es, es-ES, en, de at 1920x1080 and 1280x800
 - Both URL paths in the task note (pm can''t edit pending decisions)
 
 ## Done when
-- `/gallery?set=task-1340` shows those 4 shots × 8 entries; a set made after a one-line CSS change shows the shots it touched under "also changed"; `/gallery` unchanged
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass
-
-
-## Run time (task 1582)
-- Run 1615 was killed from outside after 20 min (not OOM, not pm, gallery healthy: en, es, es-ES shot in 20.5 min, ≈7 min per entry); its `gallery.py` `--set` work is in stash 1b32ad8b
-- One full run of 8 entries ≈ 55 min, at the 1-hour cap of a foreground Bash call; the noise check needs two
-- So: shooting and writing a set are separate steps: plain runs per size (`trivia-gallery`, `trivia-gallery --size 1280x800`, each < 1 h; `--locale` to split further), then `trivia-gallery --set <name> --pick … [--note …]` shoots nothing, only checks that `manifest.json` has every shot for the set''s entries from one commit (HEAD, clean tree) and refuses otherwise
-- Every gallery call in the foreground with `timeout` 3600000 and output to a file, never a background job', '2026-10-17T16:25:11Z', NULL, NULL, 0, NULL, 'app');
+- `/gallery?set=task-1340` shows those 4 shots × 8 entries; making it takes minutes, not a full run; `/gallery` unchanged
+- Never run the full gallery for this task
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass', '2026-10-17T16:25:11Z', NULL, NULL, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1582, 165, 'investigate the failure of task 1581: Gallery review sets: /gallery?set=<name>, picked shots and also changed, linked from the review decision', 'investigate', 'done', 622, '2026-10-17, no files: run 1615 was SIGTERMed from outside after 20 min (no OOM in the journal, pm and its other worker kept running, the gallery was healthy at ≈7 min per entry); the real risk is the run time: a --set run of 8 entries ≈ 55 min, at the 1-hour Bash cap, ×2 for the noise check. Changed task 1581''s body: ''Run time'' section, shoot per size first, --set only checks the manifest covers its entries at HEAD and writes the set; stash 1b32ad8b left for its next run', '`task 1581: Gallery review sets: /gallery?set=<name>, picked shots and also changed, linked from the review decision` failed in `pm run`; its summary is below. Find out why, don''t redo its work:
 * read its log, `pm show 1581`, and the stashes it left (`git stash show -p --include-untracked <sha>`); don''t apply or drop them, task 1581''s next run gets them
 * rerun the failing command or script to see the error yourself; find the cause in the code, not only the symptom
@@ -46544,6 +46533,7 @@ last tool call: Bash: for n in 1 2; do TRIVIA_WORK=/tmp/gnoise$n TRIVIA_MUTE=1 t
 likely cause: killed from outside (out of memory, Ctrl-C, another process)
 left behind: 6 files, stashed as ae59292d (pm: task 1581 run 1618 failed); get them back with `git stash apply ae59292d`
 log: /home/ruben/code/trivia/.git/pm-logs/task-1581-run-1618.log', 143, '4d9ca2015e5c1cd447bdf35b3ec514ed59e238c2', 'app', 'claude-opus-5-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1619, 1583, '2026-10-17T16:51:46Z', NULL, 'running', NULL, NULL, 'a0753c39569f336a459df2aabfab0524bd30b8f4', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
