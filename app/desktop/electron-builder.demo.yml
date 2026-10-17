@@ -9,5 +9,12 @@ extraMetadata:
 artifactName: LivingRoomTriviaDemo-${version}-${os}-${arch}.${ext}
 directories:
   output: release/demo
+# Data and media: the full config's env-driven extraResources (extends appends arrays, so no list here; decision 342).
+# The default exclusion covers release/demo only, not the full build's outputs in release/: excluded per platform (the global `files` is not applied).
 win:
   executableName: LivingRoomTriviaDemo
+  files:
+    - "!release{,/**/*}"
+linux:
+  files:
+    - "!release{,/**/*}"

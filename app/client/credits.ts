@@ -2,13 +2,14 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import type { Plugin } from "vite";
+import { demo } from "./devserver.ts";
 import type { Credits, CreditKind as Kind, AssetCredit, MediaCredit } from "./src/lib/types.ts";
 
 const client = fileURLToPath(new URL(".", import.meta.url));
 const repo = `${client}../../`;
 const dataDir = `${client}../data/`;
-/** es pool files: base's and every pack's (decision 66). */
-const pools = (): string[] => [
+/** es pool files: base's and every pack's (decision 66); the demo build's only the demo's (decision 342). */
+const pools = (): string[] => demo ? [`${dataDir}demo/pool.json`] : [
   `${dataDir}pool.json`,
   ...readdirSync(`${dataDir}bundles`).map((b) => `${dataDir}bundles/${b}/pool.json`).filter((f) => existsSync(f)),
 ];

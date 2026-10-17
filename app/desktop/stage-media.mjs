@@ -2,6 +2,8 @@
 // hard links (or copies) from the encode cache work/ship-media/.
 // build/pack-media.json: per shipped bundle folder, the media only it uses (its DLC depot carries them, decision 66; [] without a pool).
 // --check: no encoding; build/media against the pools and media-budget.json, exit 1 on ✗.
+// --demo (or TRIVIA_DEMO=1, as the dist:*:demo scripts set it; decision 342): only app/data/demo/ pools (all locales) → build/media-demo/,
+// no packs, no pack-media.json; budget `demo.content`. Also build/data-demo/: app/data/ without bundles/ and the full pools, with demo/.
 import { execFile, execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { copyFileSync, existsSync, linkSync, mkdirSync, readdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
@@ -15,8 +17,9 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(HERE, "..", "..");
 const allowMissing = process.argv.includes("--allow-missing");
 const check = process.argv.includes("--check");
+const demo = process.argv.includes("--demo") || process.env.TRIVIA_DEMO === "1";
 const cache = process.env.TRIVIA_MEDIA || path.join(REPO, "media");
-const out = path.join(HERE, "build", "media");
+const out = path.join(HERE, "build", demo ? "media-demo" : "media");
 const encoded = path.join(process.env.TRIVIA_WORK || path.join(REPO, "work"), "ship-media");
 const run = promisify(execFile);
 const MB = 1e6;
@@ -91,28 +94,35 @@ async function encode(src, name) {
 
 const DATA = path.join(REPO, "app", "data");
 const read = (file) => poolUrls(JSON.parse(readFileSync(file, "utf8")));
-const packs = readdirSync(path.join(DATA, "bundles"))
-  .filter((b) => statSync(path.join(DATA, "bundles", b), { throwIfNoEntry: false })?.isDirectory())
-  .map((b) => [b, existsSync(path.join(DATA, "bundles", b, "pool.json")) ? read(path.join(DATA, "bundles", b, "pool.json")) : new Set()]); // no pool yet: a pack without media
-const urls = read(path.join(DATA, "pool.json"));
-const owners = new Map();
-for (const [b, own] of packs) for (const u of own) owners.set(u, urls.has(u) || owners.has(u) ? null : b);
-const packMedia = Object.fromEntries(packs.map(([b]) => [b, []]));
-for (const [u, b] of [...owners].sort()) {
-  urls.add(u);
-  if (b) packMedia[b].push(shippedName(u));
+const urls = new Set();
+const packMedia = {};
+if (demo) {
+  const dir = path.join(DATA, "demo");
+  for (const f of readdirSync(dir).filter((f) => /^pool(\.[\w-]+)?\.json$/.test(f))) for (const u of read(path.join(dir, f))) urls.add(u);
+} else {
+  const packs = readdirSync(path.join(DATA, "bundles"))
+    .filter((b) => statSync(path.join(DATA, "bundles", b), { throwIfNoEntry: false })?.isDirectory())
+    .map((b) => [b, existsSync(path.join(DATA, "bundles", b, "pool.json")) ? read(path.join(DATA, "bundles", b, "pool.json")) : new Set()]); // no pool yet: a pack without media
+  for (const u of read(path.join(DATA, "pool.json"))) urls.add(u);
+  const owners = new Map();
+  for (const [b, own] of packs) for (const u of own) owners.set(u, urls.has(u) || owners.has(u) ? null : b);
+  for (const [b] of packs) packMedia[b] = [];
+  for (const [u, b] of [...owners].sort()) {
+    urls.add(u);
+    if (b) packMedia[b].push(shippedName(u));
+  }
 }
 
 // Budgets in MB (media-budget.json): per depot, per file (videos `video`).
 if (check) {
   const budget = JSON.parse(readFileSync(path.join(HERE, "media-budget.json"), "utf8"));
-  const shipped = JSON.parse(readFileSync(path.join(HERE, "build", "pack-media.json"), "utf8"));
+  const shipped = demo ? {} : JSON.parse(readFileSync(path.join(HERE, "build", "pack-media.json"), "utf8"));
   const size = new Map(readdirSync(out).map((f) => [f, statSync(path.join(out, f)).size]));
   const fails = [];
   const absent = [...urls].filter((u) => !size.has(shippedName(u))).sort();
   for (const u of absent) fails.push(`missing ${shippedName(u)}  ${u}`);
   const inPack = new Set(Object.values(shipped).flat());
-  const depots = [["content", [...size.keys()].filter((f) => !inPack.has(f)), budget.content]];
+  const depots = [["content", [...size.keys()].filter((f) => !inPack.has(f)), (demo ? budget.demo : budget).content]];
   for (const [b, files] of Object.entries(shipped)) depots.push([`dlc ${b}`, files, budget.dlc[b] ?? budget.default_dlc]);
   for (const [name, files, max] of depots) {
     const mb = files.reduce((n, f) => n + (size.get(f) ?? 0), 0) / MB;
@@ -139,8 +149,16 @@ if (check) {
 }
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
+if (demo) {
+  const data = path.join(HERE, "build", "data-demo");
+  rmSync(data, { recursive: true, force: true });
+  mkdirSync(path.join(data, "demo"), { recursive: true });
+  for (const f of readdirSync(DATA, { withFileTypes: true }))
+    if (f.isFile() && !/^pool(\.[\w-]+)?\.json$/.test(f.name)) copyFileSync(path.join(DATA, f.name), path.join(data, f.name));
+  for (const f of readdirSync(path.join(DATA, "demo"))) copyFileSync(path.join(DATA, "demo", f), path.join(data, "demo", f));
+}
 mkdirSync(encoded, { recursive: true });
-writeFileSync(path.join(HERE, "build", "pack-media.json"), JSON.stringify(packMedia, null, 2) + "\n");
+if (!demo) writeFileSync(path.join(HERE, "build", "pack-media.json"), JSON.stringify(packMedia, null, 2) + "\n");
 
 const missing = [];
 const jobs = [];
@@ -178,7 +196,8 @@ async function worker() {
 }
 await Promise.all(Array.from({ length: availableParallelism() }, worker));
 
-for (const f of readdirSync(encoded)) if (!kept.has(f)) rmSync(path.join(encoded, f));  // stale encodes, .part files
+// Stale encodes, .part files; not in the demo, whose files are a subset of the full build's cache.
+if (!demo) for (const f of readdirSync(encoded)) if (!kept.has(f)) rmSync(path.join(encoded, f));
 
 const ok = jobs.filter((j) => j.after !== undefined);
 const sum = (k) => (ok.reduce((n, j) => n + j[k], 0) / MB).toFixed(0);
