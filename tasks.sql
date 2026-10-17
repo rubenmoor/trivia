@@ -39864,7 +39864,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Missing tooling: do what exists, list the rest in the note. No prompt or `qgen.py` changes here.
 
 Done when: phase 6 done; note lists decisions, change tasks, numbers.', '2026-10-17T15:48:11Z', NULL, 1521, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1581, 165, 'Gallery review sets: /gallery?set=<name>, picked shots and also changed, linked from the review decision', 'work', 'open', 620, NULL, 'The developer reviews only the shots a change touched. A task that wants feedback on gallery changes re-renders just those shots, in a minute or two, and hands them over as a set.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1581, 165, 'Gallery review sets: /gallery?set=<name>, only the shots a change touched, linked from the review decision', 'work', 'open', 620, NULL, 'The developer reviews only the shots a change touched. A task that wants feedback on gallery changes re-renders just those shots, in a minute or two, and hands them over as a set.
 
 ## Set
 - `trivia-gallery --set <name> --only <shot,…>` (with `--locale`, `--size`, `--note`): shoots only those shots → `work/gallery/sets/<name>/<entry>/<shot>.png` + `work/gallery/sets/<name>.json` (shots, entries, run date, git commit, note); same name again overwrites; the full gallery in `work/gallery/` untouched
