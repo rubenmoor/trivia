@@ -17,10 +17,11 @@ const SEAT_COLORS = ["var(--amber)", "var(--sky)", "var(--mint)", "var(--pink)",
 /** The colour of the seat at `index` (join order); the round-robin and timed screens too (plans 163, 164). */
 export const seatColor = (index: number): string => SEAT_COLORS[index % SEAT_COLORS.length];
 
-/** The tower of `seat` in its own game (rr-competitive): the levels behind it, all of them once it won. */
-export function seatBlocks(session: SessionView, seat: number, levels: number): number {
+/** The tower of `seat` in its own game (rr-competitive): the levels behind it, all of them once it climbed to the
+ * top (`climbed` false: it won as the last one standing, decision 278). */
+export function seatBlocks(session: SessionView, seat: number, levels: number, climbed = true): number {
   const s = session.seats[seat];
-  return s.status === "won" ? levels : s.level - 1;
+  return s.status === "won" && climbed ? levels : s.level - 1;
 }
 
 /** The session's names, the first `max` of them and «y n más» (Victory's team line, Start's resume line). */

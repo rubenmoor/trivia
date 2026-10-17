@@ -1,5 +1,5 @@
 <script lang="ts">
-  // Level (UI-14): the tower, «Nivel n de 12» and the milestone line; the new block drops after Correct.
+  // Level (UI-14): the tower (rr-competitive: every seat's), «Nivel n de 12» and the milestone line; the new block drops after Correct.
   // In a round-robin session also the turn handover: «Turno de» and the turn seat's tag (decision 279).
   import { seatDevice } from "../../lib/gamepad.svelte.ts";
   import { t } from "../../lib/i18n.ts";
@@ -8,6 +8,7 @@
   import Prompt from "../Prompt.svelte";
   import SeatTag from "../SeatTag.svelte";
   import Tower from "../Tower.svelte";
+  import Tracks from "../Tracks.svelte";
 
   let {
     game,
@@ -22,7 +23,11 @@
 </script>
 
 <section class="screen level">
-  <Tower filled={blocks} {levels} {drop} />
+  {#if session?.mode === "rr-competitive"}
+    <Tracks {session} {levels} drop={drop ? (game.last?.seat ?? null) : null} />
+  {:else}
+    <Tower filled={blocks} {levels} {drop} />
+  {/if}
   <div class="level-text">
     {#if session}
       <div class="turn">

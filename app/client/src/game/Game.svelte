@@ -26,6 +26,7 @@
   import { levelsOf, onTwelve } from "./levels.ts";
   import Overlay from "./Overlay.svelte";
   import SeatLost from "./SeatLost.svelte";
+  import SeatTag from "./SeatTag.svelte";
   import { music, sfx, unlock, type Cue, type Track } from "./sound.svelte.ts";
   import Stage from "./Stage.svelte";
   import { swap } from "./swap.ts";
@@ -678,7 +679,8 @@
 
 {#snippet tray(g: Game)}
   <aside class="side-tray">
-    {#if g.session?.mode === "rr-coop"}<p class="tray-label">{t("seat.team")}</p>{/if}
+    {#if g.session?.mode === "rr-coop"}<p class="tray-label">{t("seat.team")}</p>
+    {:else if g.session?.mode === "rr-competitive"}<div class="tray-label">{t("seat.jokers")}<br /><SeatTag session={g.session} seat={g.session.turn} small /></div>{/if}
     <JokerTray readonly left={g.jokers_left} />
   </aside>
 {/snippet}

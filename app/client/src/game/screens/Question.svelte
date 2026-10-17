@@ -16,6 +16,7 @@
   import Hud from "../Hud.svelte";
   import JokerFlight from "../JokerFlight.svelte";
   import JokerTray from "../JokerTray.svelte";
+  import SeatTag from "../SeatTag.svelte";
   import Prompt from "../Prompt.svelte";
   import { jokerIcon } from "../jokers.ts";
   import { DEFAULT_LEVELS, onTwelve } from "../levels.ts";
@@ -434,6 +435,7 @@
   <Card {question} {swappedBy} {mediaFailed} {sweeping} replayOff={mode !== null} onreplay={replay} />
 
   <aside class="tray">
+    {#if session?.mode === "rr-competitive"}<div class="tray-label">{t("seat.jokers")}<br /><SeatTag {session} seat={session.turn} small /></div>{/if}
     <JokerTray
       jokers={submitted ? null : jokers}
       left={jokersLeft}
@@ -519,6 +521,14 @@
     top: var(--safe-y);
     right: var(--safe-x);
     z-index: 2;
+  }
+  .tray-label {
+    margin: 0 0 calc(0.5 * var(--u));
+    font-family: var(--font-display);
+    font-size: calc(1 * var(--u));
+    font-weight: 700;
+    color: var(--slate-200);
+    text-align: center;
   }
   .tray {
     position: absolute;
