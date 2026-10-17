@@ -302,13 +302,10 @@ def translation_failures(run, h=None):
 
 
 def translate_stop_reason(locale):
-    """Why the next `qgen batch --translate <locale>` must stop, or None: the pilot tr-<locale>-1 until the
-    developer's go (plan 66, QT-5), or the last done run fails a threshold, both until `qgen health ack`."""
+    """Why the next `qgen batch --translate <locale>` must stop, or None: the last done run fails a
+    threshold, until `qgen health ack`."""
     run = last_done(translation_runs(locale))
     if run is None or run in acks(): return None
-    if run == f"tr-{locale}-1":
-        return (f"{run} was the pilot of {locale} (QT-5). The developer decides on it (report: "
-                f"authoring/reports/{run}.md) and gives the go with: qgen health ack {run} \"<note>\"")
     bad = translation_failures(run)
     if not bad: return None
     return (f"{run} fails the health thresholds: {', '.join(bad)} (authoring/reports/{run}.md). The developer looks "
@@ -325,7 +322,7 @@ def translation_health_section(run):
     return ["## Health", "",
             "Translation run health (plan 66): this run and the two before it of the same locale, ✓/✗ against the "
             "thresholds that apply to translations (`health.py`); audit/review agreement only counts from "
-            "the spot-check size on. The pilot (`-1`) and a ✗ stop the next `qgen batch --translate` until "
+            "the spot-check size on. A ✗ stops the next `qgen batch --translate` until "
             "`qgen health ack` (D-55).", "", *lines, ""]
 
 
