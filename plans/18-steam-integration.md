@@ -205,6 +205,11 @@ Free DLC per shipped pack (decision 66: Price model (OQ-33); decision 110: Regio
 - [ ] `app/desktop/main.mjs` `STEAM_APP_ID` 480 → the real App ID; `TRIVIA_STEAM_APPID` / `SteamAppId` overrides stay; `--dry-run` keeps 480.
 - [ ] No `steam_appid.txt` in the repo or in builds (`steam.py` `EXCLUDE`); a dev run that needs one writes it gitignored.
 
+### Demo app
+- Own App ID tied to the base app, own depots and builds, own checklist (plan 178: Steamworks demo app and store); not part of the SW-7 rows above.
+- Valve's rules: `17-publishing.md` "Valve's rules: Demos (read 2026-10-17)"; the demo build: "Demo" below (plan 173: Demo build switch, identity and save).
+- Pending/settled: decisions 343 (button only), 344 (with launch), 345 (shared cloud), 346 (achievements off) as answered in "Demo" below.
+
 ## Remote Play Together setup (SW-13)
 The developer's one-time setup for every live Remote Play run of `milestone 17: Remote Play Together`: the feature on for the real App ID, a `beta` build with the code under test, two machines, two Steam accounts. Workers never log in to Steamworks; the developer ticks the rows and answers `decision 303: Remote Play Together test setup ready? Switch on, beta build, two machines, second account`. Steam only (decision 111).
 - Valve's page and field names are from memory: recheck at entry.
