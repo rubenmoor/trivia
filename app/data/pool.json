@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "ad37fb0b",
+  "hash": "edfb37b1",
   "questions": [
     {
       "id": "q-0001",
@@ -68671,6 +68671,1715 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Reinthal",
         "author_url": "https://commons.wikimedia.org/wiki/User:Reinthal"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2214",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "amazon-history-and-exploration",
+      "bundle": "base",
+      "description": "Entran tres países a un pueblo a orillas del río y...",
+      "question": "En el río Amazonas hay un punto donde se juntan tres países. ¿Cuál de estos países NO es uno de ellos?",
+      "answer": "Ecuador",
+      "wrong_answers": [
+        "Brasil",
+        "Perú",
+        "Colombia"
+      ],
+      "hints": [
+        "El intruso tiene selva amazónica, pero no toca el cauce principal del río.",
+        "El punto está cerca de la ciudad colombiana de Leticia.",
+        "El intruso se llama igual que la línea imaginaria que divide la Tierra en hemisferio norte y hemisferio sur."
+      ],
+      "fun_fact": "En esta triple frontera puedes pasar de Colombia a Brasil con solo cruzar una calle.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Amazon_river_scene.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmazon_river_scene.jpg",
+        "credit": "Xlanu · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Xlanu",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Xlanu&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2226",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "animal-records",
+      "bundle": "base",
+      "description": "Un elefante que se abrigó bien para la Era de Hielo.",
+      "question": "Estás en un museo junto al esqueleto de un mamut lanudo. ¿Más o menos cuánto mide de alto hasta el hombro?",
+      "answer": "Cerca de 3 metros",
+      "wrong_answers": [
+        "Cerca de 30 centímetros",
+        "Cerca de 1 metro",
+        "Cerca de 30 metros"
+      ],
+      "hints": [
+        "Era más o menos del tamaño de un elefante.",
+        "Era más alto que una persona adulta.",
+        "Apenas cabría en una habitación de techo alto."
+      ],
+      "fun_fact": "Los últimos mamuts lanudos vivieron en una pequeña isla del Ártico hasta hace unos 4000 años, cuando las pirámides de Egipto ya existían.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/The_Woolly_Mammoth_and_Native_American_Gallery_at_Discovery_Park_of_America.jpg/3840px-The_Woolly_Mammoth_and_Native_American_Gallery_at_Discovery_Park_of_America.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Woolly_Mammoth_and_Native_American_Gallery_at_Discovery_Park_of_America.jpg",
+        "credit": "Nattnewl · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Nattnewl",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Nattnewl&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2295",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "calendars-and-new-year",
+      "bundle": "base",
+      "description": "Todo el planeta va en un juego mecánico que da vueltas, y nadie compró boleto.",
+      "question": "¿Cuánto tarda más o menos la Tierra en dar una vuelta completa sobre sí misma?",
+      "answer": "Unas 24 horas",
+      "wrong_answers": [
+        "Una hora",
+        "Unos 7 días",
+        "Unos 365 días"
+      ],
+      "hints": [
+        "Mientras gira, en una mitad de la Tierra es de día y en la otra es de noche.",
+        "Una vuelta completa te da una mañana y una noche.",
+        "Es lo que dura un día entero."
+      ],
+      "fun_fact": "En el ecuador, el giro de la Tierra te lleva a unos 1670 km/h, y no sientes nada.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Clouds_at_Day-Night_Terminator_-_ISS_-_July_7%2C_2026_%2855400202099%29.jpg/3840px-Clouds_at_Day-Night_Terminator_-_ISS_-_July_7%2C_2026_%2855400202099%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClouds_at_Day-Night_Terminator_-_ISS_-_July_7%2C_2026_%2855400202099%29.jpg",
+        "credit": "Kevin M. Gill · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Kevin M. Gill",
+        "author_url": "https://www.flickr.com/people/kevinmgill/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2324",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "cheese",
+      "bundle": "base",
+      "description": "El secreto dulce escondido en tu vaso de leche, sin necesidad de cuchara.",
+      "question": "La fructosa es el azúcar de la fruta. ¿Cuál es el azúcar de la leche?",
+      "answer": "Lactosa",
+      "wrong_answers": [
+        "Sacarosa",
+        "Maltosa",
+        "Glucosa"
+      ],
+      "hints": [
+        "A muchos adultos en el mundo les cuesta digerirlo.",
+        "Hay leches especiales que lo eliminan o lo descomponen.",
+        "Su nombre viene de «lac», la palabra latina para la leche."
+      ],
+      "fun_fact": "Los quesos duros muy madurados, como el parmesano, casi no tienen lactosa, porque se consume mientras maduran.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Oat_milk_glass.jpg/3840px-Oat_milk_glass.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOat_milk_glass.jpg",
+        "credit": "Shisma · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Shisma",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shisma"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2386",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "cricket",
+      "bundle": "base",
+      "description": "Un estadio donde todo un país gritó tan fuerte que despertó al mar.",
+      "question": "En este estadio, India ganó la final de la Copa Mundial de Críquet de 2011. ¿Cómo se llama?",
+      "answer": "Estadio Wankhede",
+      "wrong_answers": [
+        "Eden Gardens",
+        "Estadio M. Chinnaswamy",
+        "Estadio Arun Jaitley"
+      ],
+      "hints": [
+        "Está muy cerca del mar Arábigo.",
+        "Está en Mumbai, la ciudad más grande de la India.",
+        "Después de «Estadio», su nombre empieza con W."
+      ],
+      "fun_fact": "Sachin Tendulkar, que creció en Mumbai, jugó aquí en 2013 su último partido de Test, el formato más largo del críquet.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Wankhede_Stadium_as_seen_from_Marine_Lines%2C_Mumbai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWankhede_Stadium_as_seen_from_Marine_Lines%2C_Mumbai.jpg",
+        "credit": "DesiBoy101 · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "DesiBoy101",
+        "author_url": "https://commons.wikimedia.org/wiki/User:DesiBoy101"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2483",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "food-history",
+      "bundle": "base",
+      "description": "La venganza más crujiente de la historia.",
+      "question": "Una famosa leyenda dice que las papitas fritas de bolsa se inventaron en 1853 porque alguien hizo enojar a un cocinero. ¿Quién?",
+      "answer": "Un cliente quisquilloso",
+      "wrong_answers": [
+        "Un rey hambriento",
+        "Un capitán de barco",
+        "Un científico famoso"
+      ],
+      "hints": [
+        "La historia ocurre en un restaurante.",
+        "Esta persona devolvía las papas fritas a la cocina una y otra vez.",
+        "Se quejaba de que las papas estaban cortadas demasiado gruesas."
+      ],
+      "fun_fact": "Los historiadores creen que la historia es más leyenda que realidad: años antes de 1853 ya se publicaban recetas de rodajas finas de papa frita.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Tayto_cheese_and_onion_crisps.jpg/3840px-Tayto_cheese_and_onion_crisps.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATayto_cheese_and_onion_crisps.jpg",
+        "credit": "Samuel Wiki · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Samuel Wiki",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Samuel_Wiki"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2485",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "football-history",
+      "bundle": "base",
+      "description": "Un pedacito de cartón que le puede arruinar toda la tarde a un futbolista.",
+      "question": "“El árbitro me muestra para advertir a un jugador. Si te muestran dos como yo en un partido, tienes que salir de la cancha.” ¿Qué soy?",
+      "answer": "La tarjeta amarilla",
+      "wrong_answers": [
+        "La tarjeta roja",
+        "La tarjeta verde",
+        "La tarjeta azul"
+      ],
+      "hints": [
+        "El árbitro me guarda en el bolsillo, junto a mi compañera más estricta.",
+        "Soy una advertencia, no el castigo final.",
+        "Soy del color que está en medio del semáforo."
+      ],
+      "fun_fact": "Al árbitro inglés Ken Aston se le ocurrió la idea de las tarjetas amarilla y roja mientras esperaba en un semáforo, y se usaron por primera vez en el Mundial de 1970.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/86th_MDG_wins_flag_football_championship_%287531676%29.jpg/3840px-86th_MDG_wins_flag_football_championship_%287531676%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A86th_MDG_wins_flag_football_championship_%287531676%29.jpg",
+        "credit": "U.S. Air Force photo by Airman 1st Class Regan Enriquez · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Air Force photo by Airman 1st Class Regan Enriquez",
+        "author_url": "https://www.dvidshub.net/portfolio/1734692"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2738",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "insects",
+      "bundle": "base",
+      "description": "Un vampiro diminuto que anda en calcetines a rayas.",
+      "question": "Este mosquito rayado transmite una enfermedad también llamada “fiebre quebrantahuesos”. ¿Cuál es?",
+      "answer": "Dengue",
+      "wrong_answers": [
+        "Malaria",
+        "Fiebre del Nilo Occidental",
+        "Enfermedad del sueño"
+      ],
+      "hints": [
+        "La causa un virus.",
+        "Es común en las zonas cálidas y lluviosas del mundo.",
+        "Su nombre empieza con D."
+      ],
+      "fun_fact": "Este mosquito pica sobre todo de día, a diferencia del mosquito de la malaria, que pica sobre todo de noche.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Aedes_aegypti_on_leaf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAedes_aegypti_on_leaf.jpg",
+        "credit": "Wee Hong · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Wee Hong",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-2873",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "stars-and-galaxies",
+      "bundle": "base",
+      "description": "El rincón del periódico que conoce tu futuro… o eso dice.",
+      "question": "¿Cuántos signos del zodiaco tiene el horóscopo occidental de siempre?",
+      "answer": "12",
+      "wrong_answers": [
+        "7",
+        "10",
+        "24"
+      ],
+      "hints": [
+        "Hay uno para cada parte del año.",
+        "El Sol pasa más o menos un mes en cada signo.",
+        "Son una docena."
+      ],
+      "fun_fact": "El Sol también pasa por una decimotercera constelación, Ofiuco, pero los horóscopos la ignoran.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Starry_night_%28175371483%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStarry_night_%28175371483%29.jpg",
+        "credit": "Chad Ajamian · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Chad Ajamian",
+        "author_url": "https://500px.com/cajamian"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2932",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "capital-cities",
+      "bundle": "base",
+      "description": "Una ciudad que tuvo la corona, la perdió y nunca dejó de vestirse como reina.",
+      "question": "Pedro el Grande trasladó la capital de Rusia a San Petersburgo. ¿Qué ciudad perdió entonces el título y lo recuperó en 1918?",
+      "answer": "Moscú",
+      "wrong_answers": [
+        "Kazán",
+        "Nóvgorod",
+        "Vladímir"
+      ],
+      "hints": [
+        "Es una ciudad muy antigua a orillas de un río con el mismo nombre.",
+        "Su fortaleza tiene murallas rojas y torres coronadas con estrellas rojas.",
+        "Allí está la Catedral de San Basilio, con sus coloridas cúpulas en forma de cebolla."
+      ],
+      "fun_fact": "San Petersburgo cambió de nombre tres veces: primero Petrogrado, luego Leningrado y de nuevo San Petersburgo en 1991.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Winter_Palace_Panorama_4.jpg/3840px-Winter_Palace_Panorama_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWinter_Palace_Panorama_4.jpg",
+        "credit": "Florstein (Telegram:WikiPhoto.Space) · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Florstein (Telegram:WikiPhoto.Space)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Florstein"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2956",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "continents",
+      "bundle": "base",
+      "description": "Su primo de caricatura gira como un tornado, pero el de verdad prefiere solo gritar.",
+      "question": "Hoy en día, este animal vive en libertad sobre todo en una isla al sur de Australia. ¿Qué tipo de animal es?",
+      "answer": "Un marsupial",
+      "wrong_answers": [
+        "Un roedor",
+        "Un perro salvaje",
+        "Un oso pequeño"
+      ],
+      "hints": [
+        "Sus crías nacen diminutas.",
+        "La mayoría de sus parientes viven en Australia y en islas cercanas.",
+        "Sus crías crecen dentro de una bolsa en la panza de su mamá."
+      ],
+      "fun_fact": "Para su tamaño, el demonio de Tasmania tiene una de las mordidas más fuertes de todos los mamíferos.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Sarcophilus_harrisii_taranna.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASarcophilus_harrisii_taranna.jpg",
+        "credit": "JJ Harrison (https://www.jjharrison.com.au/) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "JJ Harrison (https://www.jjharrison.com.au/)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:JJ_Harrison"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2972",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "rocks-and-minerals",
+      "bundle": "base",
+      "description": "Una sopa gris que se convierte en acera si esperas lo suficiente.",
+      "question": "Los obreros mezclan cemento gris en polvo con agua, arena y grava, lo vierten en un molde y a los pocos días queda duro como piedra. ¿Qué hicieron?",
+      "answer": "Concreto",
+      "wrong_answers": [
+        "Vidrio",
+        "Yeso",
+        "Ladrillo"
+      ],
+      "hints": [
+        "Con él se hacen puentes, represas y aceras.",
+        "Un camión con un tambor que gira lo lleva a las obras.",
+        "Es el material de construcción más usado del mundo, y los rascacielos se levantan con enormes cantidades de él."
+      ],
+      "fun_fact": "La cúpula del Panteón de Roma, construida hace unos 1900 años, sigue siendo la cúpula de concreto sin varillas de acero más grande del mundo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Jiangsu_Provincial_Highway_262_construction_site_%2820240315%29_P2.jpg/3840px-Jiangsu_Provincial_Highway_262_construction_site_%2820240315%29_P2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJiangsu_Provincial_Highway_262_construction_site_%2820240315%29_P2.jpg",
+        "credit": "Fumikas Sagisavas · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Fumikas Sagisavas",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Fumikas_Sagisavas"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3018",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "solar-system",
+      "bundle": "base",
+      "description": "Kepler pasó años persiguiendo planetas alrededor del Sol sin levantarse de su escritorio.",
+      "question": "«Kepler demostró que soy la trayectoria de todo planeta alrededor del Sol, y el Sol está en uno de mis dos focos». ¿Qué forma soy?",
+      "answer": "Elipse",
+      "wrong_answers": [
+        "Círculo",
+        "Parábola",
+        "Espiral"
+      ],
+      "hints": [
+        "Un círculo tiene un solo centro, así que no es eso.",
+        "Parece un círculo un poco aplastado.",
+        "Se puede dibujar con un lazo de hilo alrededor de dos alfileres."
+      ],
+      "fun_fact": "La órbita de la Tierra se parece tanto a un círculo que, si la dibujaras en papel, no notarías que es una elipse.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Solar_System_Illustration_%28rubin-20220314-Solar-System-hero%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASolar_System_Illustration_%28rubin-20220314-Solar-System-hero%29.jpg",
+        "credit": "Rubin Observatory/NSF/AURA · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Rubin Observatory/NSF/AURA",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-3145",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "world-cuisines",
+      "bundle": "base",
+      "description": "Una fiesta donde el invitado de honor es un montón de brasas encendidas.",
+      "question": "Unos vaqueros llamados gauchos me hicieron popular: carne cocinada despacio sobre brasas en Argentina y Uruguay. ¿Cómo me llamo?",
+      "answer": "Asado",
+      "wrong_answers": [
+        "Ceviche",
+        "Feijoada",
+        "Mole"
+      ],
+      "hints": [
+        "Suelo ser una larga reunión de domingo con familia y amigos.",
+        "Quien me prepara cuida el fuego durante horas.",
+        "Me suelen servir con chimichurri, una salsa verde de perejil, ajo y aceite."
+      ],
+      "fun_fact": "Uruguay y Argentina están entre los países que más carne de vaca comen por persona en el mundo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Argentina_Gaucho_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArgentina_Gaucho_01.jpg",
+        "credit": "https://www.flickr.com/people/jmage/ · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "https://www.flickr.com/people/jmage/",
+        "author_url": "https://www.flickr.com/people/jmage/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3158",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "amazon-animals",
+      "bundle": "base",
+      "description": "Un bichito que salió de casa y se le olvidó apagar la luz.",
+      "question": "Mira esta luciérnaga que brilla. ¿Para qué usa su luz?",
+      "answer": "Para enviar señales a otras luciérnagas",
+      "wrong_answers": [
+        "Para cocinar su comida",
+        "Para mantenerse caliente de noche",
+        "Para ver debajo del agua"
+      ],
+      "hints": [
+        "Las luciérnagas se encienden y se apagan.",
+        "Otras luciérnagas miran esos destellos.",
+        "Es su forma de decir «¡aquí estoy!»."
+      ],
+      "fun_fact": "La luz de la luciérnaga se llama «luz fría» porque casi no da calor, a diferencia de una lámpara común.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/F2019-07-02_1982.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AF2019-07-02_1982.jpg",
+        "credit": "Terry Priest · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Terry Priest",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Art_turner_14"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3170",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "amazon-plants",
+      "bundle": "base",
+      "description": "El barrio más poblado de la Tierra, y nadie paga por vivir ahí.",
+      "question": "Cubro solo una pequeña parte de la tierra firme del planeta, pero en mí vive cerca de la mitad de las especies terrestres de plantas y animales. ¿Qué soy?",
+      "answer": "Selva tropical",
+      "wrong_answers": [
+        "Desierto",
+        "Sabana",
+        "Taiga"
+      ],
+      "hints": [
+        "Hace calor en mí todo el año.",
+        "En mí llueve casi todos los días.",
+        "En mí viven jaguares, tucanes y perezosos."
+      ],
+      "fun_fact": "Un científico encontró en un solo árbol de la selva de Perú casi tantas especies de hormigas como las que viven en todo el Reino Unido.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Leaves_in_Kota_Kinabalu.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALeaves_in_Kota_Kinabalu.JPG",
+        "credit": "Montse.ferrer · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Montse.ferrer",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Montse.ferrer?action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3201",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "bible-stories",
+      "bundle": "base",
+      "description": "Dos dedos a punto de tocarse y muchísima presión para el primer día de vida.",
+      "question": "Este famoso detalle de Miguel Ángel muestra a Dios dando vida al primer hombre. Según la Biblia, ¿quiénes fueron las dos primeras personas?",
+      "answer": "Adán y Eva",
+      "wrong_answers": [
+        "Noé y su esposa",
+        "María y José",
+        "Abraham y Sara"
+      ],
+      "hints": [
+        "Vivían en un jardín precioso.",
+        "Una serpiente convenció a uno de ellos de comer una fruta prohibida.",
+        "Sus nombres empiezan con A y con E."
+      ],
+      "fun_fact": "En la pintura de Miguel Ángel, los dos dedos en realidad nunca se tocan: queda un pequeñísimo espacio entre ellos.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Creation_of_Adam_%28Michelangelo%29_Detail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACreation_of_Adam_%28Michelangelo%29_Detail.jpg",
+        "credit": "Michelangelo · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Michelangelo",
+        "author_url": "https://en.wikipedia.org/wiki/en:Michelangelo"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3276",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "deserts",
+      "bundle": "base",
+      "description": "La única planta que se va de viaje sin boleto ni maleta.",
+      "question": "En las tierras secas, plantas como esta se quiebran por la base y ruedan con el viento. ¿Por qué lo hacen?",
+      "answer": "Para esparcir sus semillas",
+      "wrong_answers": [
+        "Para buscar agua",
+        "Para escapar de los incendios",
+        "Para mantenerse frescas"
+      ],
+      "hints": [
+        "La planta ya está muerta y seca cuando rueda.",
+        "Tiene que ver con que nazcan nuevas plantas.",
+        "En cada rebote va soltando algo muy pequeño por el camino."
+      ],
+      "fun_fact": "La planta rodadora, famosa por las películas del Viejo Oeste, no es originaria de Estados Unidos: llegó desde Rusia en la década de 1870, escondida entre semillas importadas.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Salsola_tragus_%28Chenopodiaceae%29_in_Mexico_II.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASalsola_tragus_%28Chenopodiaceae%29_in_Mexico_II.jpg",
+        "credit": "Juan Carlos Fonseca Mata · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Juan Carlos Fonseca Mata",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Juan_Carlos_Fonseca_Mata"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3291",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "drinks",
+      "bundle": "base",
+      "description": "La única máquina de la cocina que sabe exactamente cuándo dejar de hablar.",
+      "question": "Estoy en la cocina, zumbo y retumbo, y luego me apago solo con un clic. ¿Qué hace que me apague?",
+      "answer": "El agua empieza a hervir",
+      "wrong_answers": [
+        "Se acaba un temporizador de un minuto",
+        "Alguien abre la tapa",
+        "El asa se enfría"
+      ],
+      "hints": [
+        "Algo le pasa al agua que tengo adentro.",
+        "Ves salir mucho vapor por mi pico.",
+        "El agua hace esto a 100 °C."
+      ],
+      "fun_fact": "En la mayoría de los hervidores eléctricos, el vapor calienta un pequeño disco de metal que se dobla y apaga el interruptor.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Woman_wearing_pajamas_talking_on_phone_in_kitchen_during_morning.jpg/3840px-Woman_wearing_pajamas_talking_on_phone_in_kitchen_during_morning.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWoman_wearing_pajamas_talking_on_phone_in_kitchen_during_morning.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3317",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "environment",
+      "bundle": "base",
+      "description": "Una adivinanza en la que el culpable está más cerca de lo que crees.",
+      "question": "Acabé con el dodo, con ayuda de las ratas y los cerdos que traje, y talé los bosques que muchos animales necesitan. ¿Quién soy?",
+      "answer": "Los seres humanos",
+      "wrong_answers": [
+        "Los dinosaurios",
+        "Los lobos",
+        "Las águilas"
+      ],
+      "hints": [
+        "Vivo en todos los continentes.",
+        "Construyo ciudades, granjas y carreteras.",
+        "Mírate en el espejo."
+      ],
+      "fun_fact": "El dodo vivía solo en la isla Mauricio y desapareció menos de 100 años después de que llegaran los primeros marineros.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Skeleton_of_a_Dodo_Bird_%2840205294732%29.jpg/3840px-Skeleton_of_a_Dodo_Bird_%2840205294732%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASkeleton_of_a_Dodo_Bird_%2840205294732%29.jpg",
+        "credit": "Thomas Quine · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Thomas Quine",
+        "author_url": "https://www.flickr.com/people/91994044@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3398",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "flags",
+      "bundle": "base",
+      "description": "Una banderita en un palo larguísimo que saluda a cada vehículo que pasa.",
+      "question": "Algunas bicicletas y remolques para niños llevan una banderita en un palo alto y delgado. ¿Para qué sirve?",
+      "answer": "Para que los conductores vean la bici",
+      "wrong_answers": [
+        "Para medir el viento",
+        "Para mostrar el país del ciclista",
+        "Para espantar a los pájaros"
+      ],
+      "hints": [
+        "Tiene que ver con la seguridad.",
+        "Sobresale bien alto, por encima de la cabeza del ciclista.",
+        "Las bicis bajitas pueden ser difíciles de ver desde un vehículo."
+      ],
+      "fun_fact": "Las banderas de seguridad se usan sobre todo en bicicletas bajas y remolques para niños, que son difíciles de ver desde un vehículo.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Cycling%2C_Gatineau_Park_%2810105786046%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACycling%2C_Gatineau_Park_%2810105786046%29.jpg",
+        "credit": "cjuneau · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "cjuneau",
+        "author_url": "https://www.flickr.com/people/15558406@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3450",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "indigenous-peoples-of-the-amazon",
+      "bundle": "base",
+      "description": "Una caña de pescar para gente con cero paciencia.",
+      "question": "En el Amazonas lanzan una herramienta como esta para pescar el gigantesco arapaima. ¿Para qué sirve su punta con púas?",
+      "answer": "Para que quede clavada en el pez",
+      "wrong_answers": [
+        "Para cortar la red de pesca",
+        "Para desenterrar gusanos del río",
+        "Para que la herramienta vuele más lejos"
+      ],
+      "hints": [
+        "Las púas apuntan hacia atrás.",
+        "Hacen que la punta sea muy difícil de sacar.",
+        "Por más que se sacuda, el pez no se la puede quitar."
+      ],
+      "fun_fact": "El arapaima puede medir unos 3 metros de largo y tiene que subir a la superficie a respirar aire: justo ahí es cuando los pescadores lo ven.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Harpon_2010.0.3.5._Global.JPG/3840px-Harpon_2010.0.3.5._Global.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHarpon_2010.0.3.5._Global.JPG",
+        "credit": "Didier Descouens · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Didier Descouens",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Archaeodontosaurus"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3479",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "italian-food",
+      "bundle": "base",
+      "description": "Una salsa que presume de ser más vieja que la abuela... o eso cree.",
+      "question": "La salsa de tomate italiana parece antiquísima, pero el tomate no llegó a Italia hasta el siglo XVI. ¿De dónde venía?",
+      "answer": "América",
+      "wrong_answers": [
+        "China",
+        "India",
+        "Egipto"
+      ],
+      "hints": [
+        "Cruzó un océano para llegar.",
+        "Llegó a Europa en barcos españoles.",
+        "Los aztecas ya lo cultivaban en México."
+      ],
+      "fun_fact": "Durante mucho tiempo, muchos europeos cultivaban tomates solo como adorno, porque creían que podían ser venenosos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Tomato_plant_100.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATomato_plant_100.jpg",
+        "credit": "MavisLee · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "MavisLee",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:MavisLee&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3525",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "manners-and-customs",
+      "bundle": "base",
+      "description": "Una palabra que viajó desde Tokio hasta la sala de cada fan del anime.",
+      "question": "Soy la forma japonesa de decir “hola” o “buenas tardes”, y se usa desde media mañana hasta la noche. ¿Qué palabra soy?",
+      "answer": "Konnichiwa",
+      "wrong_answers": [
+        "Ohayō",
+        "Sayōnara",
+        "Arigatō"
+      ],
+      "hints": [
+        "Me dices cuando te encuentras con alguien, no cuando te despides.",
+        "Para decir “buenos días” hay otra palabra.",
+        "Empiezo con “Kon…”."
+      ],
+      "fun_fact": "Konnichiwa viene de una frase más larga que significa más o menos “hoy es…”, el comienzo de un saludo cortés.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Wooden_gate_with_open_double_door_leading_to_the_garden_of_Isshinin_Buddhist_temple_in_the_compounds_of_Chion-in_Kyoto_Japan.jpg/3840px-Wooden_gate_with_open_double_door_leading_to_the_garden_of_Isshinin_Buddhist_temple_in_the_compounds_of_Chion-in_Kyoto_Japan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWooden_gate_with_open_double_door_leading_to_the_garden_of_Isshinin_Buddhist_temple_in_the_compounds_of_Chion-in_Kyoto_Japan.jpg",
+        "credit": "Basile Morin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Basile Morin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Basile_Morin"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3536",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "mexican-food",
+      "bundle": "base",
+      "description": "Un guiso tan rico que la gente moja sus tacos en él como galletas en la leche.",
+      "question": "La birria es un guiso picante, a menudo de carne de cabra. Viene del mismo estado mexicano que el tequila y el mariachi. ¿Qué estado?",
+      "answer": "Jalisco",
+      "wrong_answers": [
+        "Oaxaca",
+        "Yucatán",
+        "Veracruz"
+      ],
+      "hints": [
+        "El estado está en el oeste de México.",
+        "Su capital es Guadalajara.",
+        "Su nombre empieza con J."
+      ],
+      "fun_fact": "Los tacos de birria suelen mojarse en el propio caldo rojo del guiso antes de cada mordida.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Birria_consomme.jpg/3840px-Birria_consomme.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABirria_consomme.jpg",
+        "credit": "T.Tseng · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "T.Tseng",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-3550",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "mountains",
+      "bundle": "base",
+      "description": "La manera que tiene el invierno de castigar a quien olvidó los guantes.",
+      "question": "Los montañistas le temen: se forman cristales de hielo en dedos, nariz y orejas, y nunca hay que frotar la piel. ¿Cómo se llama?",
+      "answer": "Congelación",
+      "wrong_answers": [
+        "Hipotermia",
+        "Ceguera de la nieve",
+        "Mal de altura"
+      ],
+      "hints": [
+        "Daña solo algunas partes del cuerpo, no el cuerpo entero.",
+        "Afecta primero a las partes del cuerpo más alejadas del corazón.",
+        "Es lo que pasa cuando la piel misma se convierte en hielo."
+      ],
+      "fun_fact": "La forma más leve y temprana, llamada congelación superficial, sana sin dejar daños permanentes.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Mais_Alhajri_sitting_on_a_snowy_mountain.jpg/3840px-Mais_Alhajri_sitting_on_a_snowy_mountain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMais_Alhajri_sitting_on_a_snowy_mountain.jpg",
+        "credit": "MaisAlhajri.athlete · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "MaisAlhajri.athlete",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:MaisAlhajri.athlete&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3565",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "natural-phenomena",
+      "bundle": "base",
+      "description": "Un volcán que no se conforma con escurrir: él baja corriendo a toda velocidad.",
+      "question": "¿Cómo se llama esta avalancha rápida de gas caliente, ceniza y rocas que baja a toda velocidad por la ladera de un volcán?",
+      "answer": "Un flujo piroclástico",
+      "wrong_answers": [
+        "Un lahar",
+        "Un flujo de lava",
+        "Un jökulhlaup"
+      ],
+      "hints": [
+        "No es roca líquida ni un flujo de lodo.",
+        "Puede ir más rápido que un Fórmula 1 y está más caliente que un horno.",
+        "Su nombre viene de las palabras griegas para «fuego» y «pedazos rotos»."
+      ],
+      "fun_fact": "Un flujo piroclástico del monte Vesubio sepultó la ciudad romana de Herculano en el año 79.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Pyroclastic_flows_at_Mayon_Volcano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APyroclastic_flows_at_Mayon_Volcano.jpg",
+        "credit": "C.G. Newhall · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "C.G. Newhall",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-3577",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "natures-records",
+      "bundle": "base",
+      "description": "Siempre en segundo lugar, pero un segundo lugar altísimo.",
+      "question": "Soy la segunda montaña más alta de la Tierra, con 8611 metros, en la frontera entre Pakistán y China. ¿Cómo me llamo?",
+      "answer": "K2",
+      "wrong_answers": [
+        "Kangchenjunga",
+        "Lhotse",
+        "Makalu"
+      ],
+      "hints": [
+        "No estoy en el Himalaya, sino en la cordillera del Karakórum.",
+        "Los alpinistas me llaman la “montaña salvaje”.",
+        "Mi nombre es solo una letra y un número."
+      ],
+      "fun_fact": "Su nombre viene de una etiqueta de un estudio topográfico del siglo XIX: K por Karakórum y 2 porque fue el segundo pico de la lista.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Ultar_peak_Karimabad_Hunza.jpg/3840px-Ultar_peak_Karimabad_Hunza.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUltar_peak_Karimabad_Hunza.jpg",
+        "credit": "Jamalhunzokuz · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jamalhunzokuz",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jamalhunzokuz&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3649",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "recycling",
+      "bundle": "base",
+      "description": "Los árboles las tiran cada otoño y nunca recogen su desorden.",
+      "question": "Estas cayeron de un árbol del patio. ¿Qué tipo de residuo son?",
+      "answer": "Residuos orgánicos",
+      "wrong_answers": [
+        "Residuos plásticos",
+        "Residuos de vidrio",
+        "Residuos electrónicos"
+      ],
+      "hints": [
+        "Vienen de algo que estaba vivo.",
+        "A las lombrices les encanta comérselas.",
+        "Se pueden convertir en abono para las plantas."
+      ],
+      "fun_fact": "En una compostera, las hojas secas se llaman «materiales marrones» y equilibran los restos húmedos de la cocina.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Autumn_leaves_in_Vienna.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAutumn_leaves_in_Vienna.jpg",
+        "credit": "Florian Prischl · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Florian Prischl",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Florian_Prischl"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3714",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "islands",
+      "bundle": "base",
+      "description": "Un ave que parece que pisó un balde de pintura azul y está orgullosísima de ello.",
+      "question": "Esta ave vive en unas islas cuya fauna inspiró las ideas sobre la evolución de un científico. ¿De quién?",
+      "answer": "Charles Darwin",
+      "wrong_answers": [
+        "Gregor Mendel",
+        "Louis Pasteur",
+        "Jean-Baptiste Lamarck"
+      ],
+      "hints": [
+        "Las islas están en el Pacífico, frente a la costa de Ecuador.",
+        "Viajó hasta allí en un barco llamado Beagle.",
+        "Escribió «El origen de las especies»."
+      ],
+      "fun_fact": "Los machos de piquero de patas azules presumen sus patas con un pequeño baile, y las hembras prefieren las patas más azules.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Sula_nebouxii_-Santa_Cruz%2C_Galapagos_Islands%2C_Ecuador-8_%281%29.jpg/3840px-Sula_nebouxii_-Santa_Cruz%2C_Galapagos_Islands%2C_Ecuador-8_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASula_nebouxii_-Santa_Cruz%2C_Galapagos_Islands%2C_Ecuador-8_%281%29.jpg",
+        "credit": "Ndecam from London, UK · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Ndecam from London, UK",
+        "author_url": "https://www.flickr.com/people/37035967@N07"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3765",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "oceans",
+      "bundle": "base",
+      "description": "Una bolsa del supermercado que flota como un fantasma y engaña a un nadador hambriento del mar.",
+      "question": "“Nado en todos los océanos, me encanta comer medusas y a menudo confundo con ellas las bolsas de plástico que flotan.” ¿Quién soy?",
+      "answer": "Tortuga marina",
+      "wrong_answers": [
+        "Pulpo",
+        "Cangrejo",
+        "Delfín"
+      ],
+      "hints": [
+        "Existo desde la época de los dinosaurios.",
+        "Voy a la playa a poner mis huevos.",
+        "Llevo un caparazón duro sobre la espalda."
+      ],
+      "fun_fact": "Las tortugas laúd comen tantas medusas que en un solo día pueden devorar cerca de tres cuartas partes de su propio peso.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Moon_jellyfish_at_Gota_Sagher.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMoon_jellyfish_at_Gota_Sagher.JPG",
+        "credit": "Alexander Vasenin · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Alexander Vasenin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Alex.vasenin"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3885",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "earthquakes",
+      "bundle": "base",
+      "description": "A tres de estos lugares el susto les llegó desde bajo tierra; el otro tuvo un mal día de una clase muy distinta.",
+      "question": "¿Cuál de estos lugares NO sufrió un desastre que empezó con un terremoto?",
+      "answer": "Chernóbil",
+      "wrong_answers": [
+        "Fukushima",
+        "Kobe",
+        "Lisboa"
+      ],
+      "hints": [
+        "Uno de estos lugares está lejos de donde se juntan las placas de la Tierra.",
+        "Su desastre ocurrió en 1986.",
+        "Empezó durante una prueba dentro de una central nuclear."
+      ],
+      "fun_fact": "En Fukushima, en 2011, el tsunami que siguió al terremoto inundó los generadores de respaldo que mantenían fríos los reactores.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Seismogram_at_Weston_Observatory.JPG/3840px-Seismogram_at_Weston_Observatory.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASeismogram_at_Weston_Observatory.JPG",
+        "credit": "Z22 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Z22",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Z22"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3903",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "rivers",
+      "bundle": "base",
+      "description": "El lugar donde un río por fin puede saludar al mar.",
+      "question": "¿Cómo se llama el lugar de esta foto, donde un río llega al mar?",
+      "answer": "La desembocadura",
+      "wrong_answers": [
+        "El nacimiento",
+        "El meandro",
+        "Los rápidos"
+      ],
+      "hints": [
+        "Su nombre esconde una parte del cuerpo.",
+        "Está al final del viaje del río.",
+        "Dentro de la palabra está la parte de la cara con la que comes."
+      ],
+      "fun_fact": "Muchos idiomas usan la misma idea: en inglés se dice «mouth», que significa «boca», y en alemán «Mündung», que viene de «Mund», también «boca».",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Guadiana_Mouth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGuadiana_Mouth.jpg",
+        "credit": "Toksave · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Toksave",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Toksave"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3994",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "sweets-and-chocolate",
+      "bundle": "base",
+      "description": "Dulces que ponen tu cara a hacer gimnasia.",
+      "question": "La capa ácida de dulces como estos suele llevar el mismo ácido que hace agria a una fruta. ¿Cuál es esa fruta?",
+      "answer": "El limón",
+      "wrong_answers": [
+        "El higo",
+        "El coco",
+        "El melón"
+      ],
+      "hints": [
+        "Es una fruta amarilla.",
+        "Crece en árboles en lugares cálidos y soleados, como el Mediterráneo.",
+        "Su ácido se llama ácido cítrico."
+      ],
+      "fun_fact": "El ácido cítrico debe su nombre a los cítricos, y hoy casi todo se fabrica con un moho que se alimenta de azúcar.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://live.staticflickr.com/838/41535371651_f21da9f64f_b.jpg",
+        "source_url": "https://www.flickr.com/photos/147875007@N03/41535371651",
+        "credit": "Rawpixel Ltd · CC BY 2.0 · Flickr via Openverse",
+        "provider": "openverse",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "author": "Rawpixel Ltd",
+        "author_url": "https://www.flickr.com/photos/147875007@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4039",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "vegetables",
+      "bundle": "base",
+      "description": "Una salsa que se llama como una parte de un ave, pero no tiene ni una pluma.",
+      "question": "El pico de gallo es una salsa fresca de tomate, cebolla, chile y cilantro picados. ¿De qué país es originario?",
+      "answer": "México",
+      "wrong_answers": [
+        "España",
+        "Perú",
+        "Argentina"
+      ],
+      "hints": [
+        "Sus colores son los mismos que los de la bandera de ese país.",
+        "Se suele servir con tacos y nachos.",
+        "En ese país están las ruinas de los aztecas."
+      ],
+      "fun_fact": "El pico de gallo no lleva nada de gallo, y nadie sabe con certeza por qué se llama así.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Chopping_tomatoes%2C_onions_and_green_peppers_for_kapana_salsa_sauce.jpg/3840px-Chopping_tomatoes%2C_onions_and_green_peppers_for_kapana_salsa_sauce.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChopping_tomatoes%2C_onions_and_green_peppers_for_kapana_salsa_sauce.jpg",
+        "credit": "Martin Hipangwa · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Martin Hipangwa",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Martin_Hipangwa"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4120",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "amphibians",
+      "bundle": "base",
+      "description": "Un cantante diminuto que se pasa la noche entera diciendo su propio nombre.",
+      "question": "Escucha: este canto nocturno de dos notas es un sonido famoso de Puerto Rico. ¿Qué animal lo hace?",
+      "answer": "Una rana diminuta",
+      "wrong_answers": [
+        "Un grillo",
+        "Un búho pequeño",
+        "Un murciélago"
+      ],
+      "hints": [
+        "Miles de ellos cantan juntos después de la lluvia.",
+        "Su nombre imita su canto: «co-quí».",
+        "No tiene cola y tiene almohadillas pegajosas en los dedos para trepar."
+      ],
+      "fun_fact": "Los coquíes son un símbolo de Puerto Rico, pero en Hawái, adonde llegaron por accidente, la gente se queja de que hacen demasiado ruido.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Coqu%C3%AD.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoqu%C3%AD.flac",
+        "credit": "Caballero1967 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Caballero1967",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Caballero1967"
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Taman_Negara%2C_Malaysia%2C_Tropical_sunset_2.jpg/3840px-Taman_Negara%2C_Malaysia%2C_Tropical_sunset_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATaman_Negara%2C_Malaysia%2C_Tropical_sunset_2.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
+      }
+    },
+    {
+      "id": "q-4155",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Un ave que se mudó al extranjero y no para de hablar de eso.",
+      "question": "El miná común es un ave marrón con piel amarilla alrededor de los ojos que imita el habla humana y es una plaga en Australia. ¿De dónde es?",
+      "answer": "Asia del Sur",
+      "wrong_answers": [
+        "América del Sur",
+        "África Occidental",
+        "Europa del Sur"
+      ],
+      "hints": [
+        "Es pariente de los estorninos.",
+        "Su región de origen también es el hogar del tigre de Bengala.",
+        "Es muy común en las calles de la India."
+      ],
+      "fun_fact": "El miná común es una de las solo tres aves en la lista de la UICN de las 100 peores especies invasoras del mundo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Common_Myna_in_Rabindra_Sarobar_February_2025_by_Tisha_Mukherjee_01.jpg/3840px-Common_Myna_in_Rabindra_Sarobar_February_2025_by_Tisha_Mukherjee_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACommon_Myna_in_Rabindra_Sarobar_February_2025_by_Tisha_Mukherjee_01.jpg",
+        "credit": "Tisha Mukherjee · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Tisha Mukherjee",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tisha_Mukherjee"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4231",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "christmas",
+      "bundle": "base",
+      "description": "Tres viajeros, una estrella y cero mapas.",
+      "question": "¿Cuál de estos NO fue uno de los Reyes Magos que visitaron al niño Jesús?",
+      "answer": "José",
+      "wrong_answers": [
+        "Melchor",
+        "Gaspar",
+        "Baltasar"
+      ],
+      "hints": [
+        "Los nombres de los Reyes Magos vienen de una antigua tradición de la Iglesia, no de la Biblia.",
+        "El intruso aparece en la historia de Navidad desde el principio.",
+        "Era carpintero y el esposo de María."
+      ],
+      "fun_fact": "La Biblia nunca dice que fueran tres ni da sus nombres; el número probablemente viene de sus tres regalos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Rum_valley.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARum_valley.JPG",
+        "credit": "Belal alnaimi · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Belal alnaimi",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Belal_alnaimi&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4261",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Una rata en París le demuestra a un crítico muy exigente que las verduras también pueden ser deliciosas.",
+      "question": "El ratatouille también es un plato de verdad de Francia. ¿Cuál de estos ingredientes NO lleva?",
+      "answer": "Banana",
+      "wrong_answers": [
+        "Tomate",
+        "Calabacín",
+        "Berenjena"
+      ],
+      "hints": [
+        "El plato de verdad es un guiso de verduras.",
+        "Tres de estos crecen en una huerta en verano.",
+        "Busca la fruta dulce y amarilla."
+      ],
+      "fun_fact": "El elegante ratatouille en capas de la película se diseñó con ayuda del famoso chef Thomas Keller.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Modern_cooking_pot_with_glass_cover_and_vegetable-beef_stew.jpg/3840px-Modern_cooking_pot_with_glass_cover_and_vegetable-beef_stew.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AModern_cooking_pot_with_glass_cover_and_vegetable-beef_stew.jpg",
+        "credit": "Marc-Lautenbacher · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Marc-Lautenbacher",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Marc-Lautenbacher"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4355",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "fast-food",
+      "bundle": "base",
+      "description": "Una comida con un nombre un poquito mentiroso.",
+      "question": "Las alitas Buffalo son picantes, se suelen mojar en salsa y llevan el nombre de una ciudad de Estados Unidos. ¿De qué animal son?",
+      "answer": "Pollo",
+      "wrong_answers": [
+        "Búfalo",
+        "Vaca",
+        "Pato"
+      ],
+      "hints": [
+        "El nombre es una trampa: el animal no aparece en él.",
+        "Esta ave pone los huevos que comes en el desayuno.",
+        "En la granja hace «coc, coc, coc»."
+      ],
+      "fun_fact": "Las alitas Buffalo deben su nombre a la ciudad de Búfalo, en Nueva York, donde se hicieron famosas en los años sesenta.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Snack-bar_%22La_Cabane_%C3%A0_Titus%22.jpg/3840px-Snack-bar_%22La_Cabane_%C3%A0_Titus%22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASnack-bar_%22La_Cabane_%C3%A0_Titus%22.jpg",
+        "credit": "Augustin Cléchet · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Augustin Cléchet",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Augustin_Cl%C3%A9chet"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4364",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "fish",
+      "bundle": "base",
+      "description": "Algunos peces vienen con pilas incluidas y ni siquiera necesitan cargador.",
+      "question": "Estás buceando con snorkel y te topas con una raya eléctrica grande. ¿Más o menos qué tan fuerte sería su descarga?",
+      "answer": "Unos 200 voltios",
+      "wrong_answers": [
+        "Unos 2 voltios",
+        "Unos 20 voltios",
+        "Unos 20 000 voltios"
+      ],
+      "hints": [
+        "Es mucho más fuerte que una pila pequeña.",
+        "Alcanza para tumbar a un adulto, pero no para iluminar una ciudad entera.",
+        "Es parecida a la electricidad de un enchufe de la pared en muchos países."
+      ],
+      "fun_fact": "En la antigua Roma, los médicos ponían rayas eléctricas sobre la cabeza de los pacientes para intentar curarles el dolor de cabeza.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Torpille_marbr%C3%A9e_%28Torpedo_marmorata%29_%28Ifremer_00561-67318%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATorpille_marbr%C3%A9e_%28Torpedo_marmorata%29_%28Ifremer_00561-67318%29.jpg",
+        "credit": "Marie-Noelle De Casamajor · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Marie-Noelle De Casamajor",
+        "author_url": "https://www.wikidata.org/wiki/Q77298464"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4428",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "japanese-food",
+      "bundle": "base",
+      "description": "Cada tazón de ramen tiene su tierra natal, y este se crió en la gran ciudad.",
+      "question": "El ramen de miso viene de Sapporo y el tonkotsu, de Fukuoka. ¿En qué ciudad nació el ramen de shoyu (salsa de soya)?",
+      "answer": "Tokio",
+      "wrong_answers": [
+        "Osaka",
+        "Kioto",
+        "Nagoya"
+      ],
+      "hints": [
+        "Su primer local de ramen famoso abrió a comienzos del siglo XX, con cocineros chinos en la cocina.",
+        "Está en la región de Kanto, en el este de Japón.",
+        "En 1910 abrió un famoso local de ramen en su barrio de Asakusa."
+      ],
+      "fun_fact": "Rairaiken, abierto en 1910 en el barrio de Asakusa, en Tokio, suele considerarse el primer local popular de ramen de Japón, y su caldo era a base de salsa de soya.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Shoyu_Ramen_with_Sushi_and_Tempura.jpg/3840px-Shoyu_Ramen_with_Sushi_and_Tempura.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AShoyu_Ramen_with_Sushi_and_Tempura.jpg",
+        "credit": "Miscellaneous contributor · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Miscellaneous contributor",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Miscellaneous_contributor"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4522",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "planet-earth",
+      "bundle": "base",
+      "description": "Alguien necesitaba urgentemente ir al dentista hace unos 66 millones de años.",
+      "question": "Mira este cráneo enorme, con dientes grandes como plátanos. ¿De qué dinosaurio era?",
+      "answer": "Tiranosaurio rex",
+      "wrong_answers": [
+        "Estegosaurio",
+        "Triceratops",
+        "Braquiosaurio"
+      ],
+      "hints": [
+        "Comía carne.",
+        "Tenía unos brazos diminutos.",
+        "Su nombre significa «rey lagarto tirano»."
+      ],
+      "fun_fact": "Un tiranosaurio mordía con más fuerza que cualquier animal terrestre de hoy.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Tyrannosaurus_rex_skull_-_Cleveland_Museum_of_Natural_History_-_2014-12-26_%2821137593551%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATyrannosaurus_rex_skull_-_Cleveland_Museum_of_Natural_History_-_2014-12-26_%2821137593551%29.jpg",
+        "credit": "Tim Evanson from Cleveland Heights, Ohio, USA · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Tim Evanson from Cleveland Heights, Ohio, USA",
+        "author_url": "https://www.flickr.com/people/23165290@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4636",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "mammals",
+      "bundle": "base",
+      "description": "Un antílope que convierte cada arbusto en una carrera de obstáculos.",
+      "question": "Estás de safari y un impala asustado sale saltando. ¿Más o menos qué distancia puede recorrer de un solo salto?",
+      "answer": "10 metros",
+      "wrong_answers": [
+        "2 metros",
+        "40 metros",
+        "100 metros"
+      ],
+      "hints": [
+        "Es más que el mejor salto de longitud humano, de unos 9 metros.",
+        "Es más largo que la altura de una jirafa.",
+        "Es más o menos el largo de dos automóviles, uno detrás del otro."
+      ],
+      "fun_fact": "Los impalas también pueden saltar unos 3 metros de altura, y pasan volando por encima de otros impalas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Savanna_Elephants_%28Loxodonta_africana%29_female_and_young_..._%2852731073161%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASavanna_Elephants_%28Loxodonta_africana%29_female_and_young_..._%2852731073161%29.jpg",
+        "credit": "Bernard DUPONT from FRANCE · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Bernard DUPONT from FRANCE",
+        "author_url": "https://www.flickr.com/people/65695019@N07"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4671",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "plants",
+      "bundle": "base",
+      "description": "Huele al ropero de la abuela, pero en el buen sentido.",
+      "question": "El nombre de la lavanda probablemente viene de “lavare”, una antigua palabra que significa “lavar”. ¿Qué pueblo antiguo hablaba esa lengua?",
+      "answer": "Los romanos",
+      "wrong_answers": [
+        "Los antiguos griegos",
+        "Los antiguos egipcios",
+        "Los persas"
+      ],
+      "hints": [
+        "Construyeron caminos largos y rectos por toda Europa.",
+        "También construyeron acueductos para llevar agua a sus ciudades.",
+        "Su lengua, el latín, es la antepasada del italiano, el español y el francés."
+      ],
+      "fun_fact": "La lavanda pertenece a la familia de la menta, igual que la albahaca, el romero y la salvia.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Lavender_fields%2C_Lullingstone%2C_England.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALavender_fields%2C_Lullingstone%2C_England.jpg",
+        "credit": "Linda Cronin from Farningham, Kent, UK · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Linda Cronin from Farningham, Kent, UK",
+        "author_url": "https://www.flickr.com/people/62033724@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4754",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "the-sea",
+      "bundle": "base",
+      "description": "Una ciudad flotante tan grande que hasta tiene su propia oficina de correos y su peluquería.",
+      "question": "Los buques de guerra más grandes jamás construidos son de este tipo. Algunos llevan unas 5000 personas y funcionan con energía nuclear más de 20 años sin recargar combustible. ¿Qué son?",
+      "answer": "Portaaviones",
+      "wrong_answers": [
+        "Acorazados",
+        "Destructores",
+        "Submarinos"
+      ],
+      "hints": [
+        "La parte de arriba del barco es plana y muy larga.",
+        "Muchas de las personas a bordo son pilotos y personal de aviación, no marineros.",
+        "Los aviones despegan y aterrizan sobre él."
+      ],
+      "fun_fact": "La cubierta es tan corta para ser una pista que los aviones salen lanzados por catapultas y se detienen con ganchos que atrapan cables.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Breaking_waves%2C_S%C3%A8te_cf03.jpg/3840px-Breaking_waves%2C_S%C3%A8te_cf03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABreaking_waves%2C_S%C3%A8te_cf03.jpg",
+        "credit": "Christian Ferrer · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Christian Ferrer",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Christian_Ferrer"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4766",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "volcanoes",
+      "bundle": "base",
+      "description": "La playa bajo tu toalla se va de viaje, pero muy, muy despacito.",
+      "question": "Estás en una playa de Hawái, que viaja sobre la placa del Pacífico. ¿Más o menos cuánto se mueve esta placa en un año?",
+      "answer": "Unos 7 cm",
+      "wrong_answers": [
+        "Unos 7 mm",
+        "Unos 70 cm",
+        "Unos 7 m"
+      ],
+      "hints": [
+        "Nunca podrías sentirlo, pero en millones de años se nota.",
+        "Es una de las placas más rápidas de la Tierra.",
+        "Es como el doble de lo que crecen tus uñas."
+      ],
+      "fun_fact": "Como la placa se desliza sobre un punto caliente fijo, los volcanes de Hawái forman una cadena, y las islas más antiguas quedan más al noroeste.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Kihei_coast.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKihei_coast.jpg",
+        "credit": "Michael Oswald · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Michael Oswald",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mikeo"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4874",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "strange-creatures",
+      "bundle": "base",
+      "description": "Un rollo de canela de piedra que nadie quiere para el desayuno.",
+      "question": "Este fósil en espiral es un amonites. ¿Dónde vivían estos animales?",
+      "answer": "En el mar",
+      "wrong_answers": [
+        "En los bosques",
+        "En los desiertos",
+        "En las cuevas"
+      ],
+      "hints": [
+        "El animal vivía dentro de su concha en espiral.",
+        "Los amonites vivieron en la época de los dinosaurios, y sus fósiles suelen aparecer en rocas formadas por capas de lodo.",
+        "Para conocer uno, tendrías que mojarte."
+      ],
+      "fun_fact": "Los parientes vivos más cercanos de los amonites son los calamares y los pulpos.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Ammonite-fossil-25-45mm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmmonite-fossil-25-45mm.jpg",
+        "credit": "Linas Juozėnas · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Linas Juozėnas",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-4941",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "trees",
+      "bundle": "base",
+      "description": "Un árbol tan apurado que se salta la infancia y pasa directo al postre.",
+      "question": "Siembras una semilla de papaya. ¿Más o menos cuánto tarda la plantita en dar su primer fruto?",
+      "answer": "Menos de un año",
+      "wrong_answers": [
+        "Unos 10 años",
+        "Unos 30 años",
+        "Unos 100 años"
+      ],
+      "hints": [
+        "Las plantas de papaya crecen sorprendentemente rápido.",
+        "No tienes que esperar muchos cumpleaños.",
+        "Podrías sembrarla en primavera y comer papaya antes de la siguiente primavera."
+      ],
+      "fun_fact": "El “árbol” de papaya no es un árbol de verdad: su tronco blando y hueco lo hace parecerse más a una hierba gigante.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Carica_papaya_26zz.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACarica_papaya_26zz.jpg",
+        "credit": "Photo by David J. Stang · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Photo by David J. Stang",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-4983",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "weather-and-climate",
+      "bundle": "base",
+      "description": "Cuando el clima se va a la guerra, por lo menos lleva su propio paraguas.",
+      "question": "Unos científicos noruegos llamaron «frente» a la línea donde el aire frío empuja al aire cálido, por las líneas de batalla de una guerra reciente. ¿Más o menos cuándo?",
+      "answer": "Hacia 1920",
+      "wrong_answers": [
+        "Hacia 1820",
+        "Hacia 1870",
+        "Hacia 1970"
+      ],
+      "hints": [
+        "Los globos meteorológicos y la radio todavía eran muy nuevos.",
+        "La guerra en la que pensaban se peleó sobre todo en trincheras.",
+        "Fue justo después de la Primera Guerra Mundial."
+      ],
+      "fun_fact": "En los mapas meteorológicos, un frente frío se dibuja como una línea azul con triángulos, y un frente cálido como una línea roja con semicírculos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/GOES-13_2_Jan_2014_1745z_satellite.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGOES-13_2_Jan_2014_1745z_satellite.png",
+        "credit": "National Oceanic and Atmospheric Administration · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "National Oceanic and Atmospheric Administration",
+        "author_url": null
       },
       "background": null
     }
