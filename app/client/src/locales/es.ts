@@ -280,8 +280,8 @@ const es = {
   },
   bundles: {
     /** A tile's question count (decision 267): shipped bundles 5000+ / 2000+, a mod bundle's rounded-down count. */
-    count: "{n}",
-    countPlus: "{n}+",
+    count: { one: "1 pregunta", other: "{n} preguntas" },
+    countPlus: "{n}+ preguntas",
     /** The base tile's name in a demo build (decision 341). */
     demoName: "Paquete de demostración",
     /** Start disabled: the chosen bundles have no question for the game (plan 151). */
