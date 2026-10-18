@@ -271,6 +271,7 @@ qgen patch-notes                                   # draft: newest v* tag → wo
 # bump version in app/desktop/package.json (patch; minor on a save change), per-commit checks, commit
 git tag v<x> && qgen patch-notes v<prev> v<x>      # → work/steam/v<x>/patch-notes.md
 trivia-steam upload --branch beta                  # then the manual rows on beta, then default by hand in Steamworks
+trivia-steam upload --demo --branch beta           # the demo app, same commit and tag: its release check, steam.json `demo` IDs, work/steam/<tag>/demo/
 ```
 
 ### Mod the game
