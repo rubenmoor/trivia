@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Steam uploads (plan 89, SW-10, D-93).
 
-    trivia-steam vdf [--out DIR] [--appid N --depots W,L,C[,DLC...]] [--tag T] [--preview]
-    trivia-steam stage
+    trivia-steam vdf [--demo] [--out DIR] [--appid N --depots W,L,C[,DLC...]] [--tag T] [--preview]
+    trivia-steam stage [--demo]
     trivia-steam upload --branch beta [--preview | --dry-run] [--checked] [--skip STEP]... [--manual FILE]
 
 `stage` checks the depot folders (`trivia-desktop-build --dir`) against the archives: per OS,
@@ -17,6 +17,10 @@ bundle needs a `dlc` entry.
 {win,linux}-unpacked/ without resources/media, the content depot from app/desktop/build/media/
 installed at resources/media, one depot per pack from app/desktop/build/dlc/<id>/. IDs from steam.json
 unless given (--depots: windows, linux, content, then the packs in steam.json order). SetLive is always `beta`.
+
+`--demo` (plan 177, decision 342) is the same on the demo build: folders release/demo/{win,linux}-unpacked/ and
+build/media-demo/, archives LivingRoomTriviaDemo-<v>-…, steam.json `demo` IDs, three depots, no DLC, output under
+work/steam/<tag>/demo/. `stage --demo` also fails if resources/data/ holds bundles/ or a full base pool.
 
 `upload` (SW-10): gates (branch `beta` only; clean tree; tag v<version> on HEAD unless --preview/--dry-run;
 steam.json IDs, placeholders with --dry-run) → trivia-release-check (--skip tag with --preview/--dry-run; or --checked: its passing
@@ -37,6 +41,11 @@ DEPOTS = {
     "linux": (DESKTOP / "release" / "linux-unpacked", ".", True),
     "content": (DESKTOP / "build" / "media", "resources/media", False),
 }
+DEMO_DEPOTS = {
+    "windows": (DESKTOP / "release" / "demo" / "win-unpacked", ".", True),
+    "linux": (DESKTOP / "release" / "demo" / "linux-unpacked", ".", True),
+    "content": (DESKTOP / "build" / "media-demo", "resources/media", False),
+}
 EXCLUDE = ["*.pdb", "steam_appid.txt"]
 EXCLUDE_OS = ["resources/media/*"]
 DLC = DESKTOP / "build" / "dlc"
@@ -47,9 +56,9 @@ def conf() -> dict:
     return json.loads((HERE / "steam.json").read_text())
 
 
-def packs() -> list[str]:
-    """Bundles shipped as DLC (decision 66), steam.json order."""
-    return list(conf()["dlc"])
+def packs(demo: bool = False) -> list[str]:
+    """Bundles shipped as DLC (decision 66), steam.json order; none in the demo."""
+    return [] if demo else list(conf()["dlc"])
 
 
 def pack_media() -> dict[str, list[str]]:
@@ -75,30 +84,31 @@ def head_tag() -> str:
 
 def ids(args) -> tuple[int, dict[str, int]]:
     """App ID and {depot name: ID}: windows, linux, content, then one per pack."""
-    c = conf()
-    names = [*DEPOTS, *packs()]
+    demo = getattr(args, "demo", False)
+    c = conf()["demo"] if demo else conf()
+    names = [*DEPOTS, *packs(demo)]
     appid = args.appid or c["appid"]
     if args.depots:
         depots = dict(zip(names, (int(d) for d in args.depots.split(","))))
     else:
-        depots = c["depots"] | {p: d["depot"] for p, d in c["dlc"].items()}
+        depots = c["depots"] | ({} if demo else {p: d["depot"] for p, d in c["dlc"].items()})
     missing = [k for k, v in [("appid", appid), *depots.items()] if not v]
     if missing or len(depots) != len(names):
         sys.exit(f"trivia-steam: no ID for {', '.join(missing) or 'all depots'} (steam.json or --appid/--depots {','.join(names)})")
     return int(appid), {k: int(v) for k, v in depots.items()}
 
 
-def render(out: Path, appid: int, depots: dict[str, int], tag: str, desc: str, preview: bool) -> Path:
+def render(out: Path, appid: int, depots: dict[str, int], tag: str, desc: str, preview: bool, demo: bool = False) -> Path:
     """Write the app VDF and one depot VDF per depot into out; returns the app VDF."""
     out.mkdir(parents=True, exist_ok=True)
     depot_t = Template((HERE / "depot_build.vdf.in").read_text())
     lines = []
-    media = pack_media() if packs() else {}
-    roots = DEPOTS | {p: (DLC / p, ".", False) for p in packs()}
+    media = pack_media() if packs(demo) else {}
+    roots = (DEMO_DEPOTS if demo else DEPOTS) | {p: (DLC / p, ".", False) for p in packs(demo)}
     for name, (root, path, is_os) in roots.items():
-        excl = EXCLUDE + ([*EXCLUDE_OS, *(pack_data(p) + "*" for p in packs())] if is_os else [])
+        excl = EXCLUDE + ([*EXCLUDE_OS, *(pack_data(p) + "*" for p in packs(demo))] if is_os else [])
         if name == "content":
-            excl += [f for p in packs() for f in media.get(p, [])]
+            excl += [f for p in packs(demo) for f in media.get(p, [])]
         vdf = out / f"depot_build_{name}.vdf"
         vdf.write_text(depot_t.substitute(
             depotid=depots[name], content_root=root, depot_path=path,
@@ -107,16 +117,17 @@ def render(out: Path, appid: int, depots: dict[str, int], tag: str, desc: str, p
     app = out / "app_build.vdf"
     app.write_text(Template((HERE / "app_build.vdf.in").read_text()).substitute(
         appid=appid, desc=desc.replace('"', "'"), preview=int(preview), content_root=DESKTOP,
-        build_output=REPO / "work" / "steam" / tag / "output", depots="\n".join(lines)))
+        build_output=REPO / "work" / "steam" / tag / ("demo" if demo else "") / "output", depots="\n".join(lines)))
     return app
 
 
 def cmd_vdf(args) -> None:
     appid, depots = ids(args)
     tag = args.tag or head_tag()
-    out = Path(args.out).resolve() if args.out else REPO / "work" / "steam" / tag / "vdf"
+    out = Path(args.out).resolve() if args.out else REPO / "work" / "steam" / tag / ("demo" if args.demo else "") / "vdf"
     sha = git("rev-parse", "--short", "HEAD")
-    app = render(out, appid, depots, tag, tag if tag == sha else f"{tag} {sha}", args.preview)
+    desc = (tag if tag == sha else f"{tag} {sha}") + (" demo" if args.demo else "")
+    app = render(out, appid, depots, tag, desc, args.preview, args.demo)
     print(app)
 
 
@@ -167,25 +178,40 @@ def stage_dlc(linux: Path, media_root: Path) -> dict[str, dict[str, int]]:
     return trees
 
 
-def stage() -> bool:
-    release = DESKTOP / "release"
-    content_root, content_path, _ = DEPOTS["content"]
-    bad = [str(d) for d in (DEPOTS["windows"][0], DEPOTS["linux"][0], content_root) if not d.is_dir()]
+def check_demo_data(unpacked: Path) -> None:
+    """The demo ships no bundles/ and no full base pool (decision 342)."""
+    data = unpacked / "resources" / "data"
+    bad = [p.name for p in data.iterdir() if p.name == "bundles" or re.fullmatch(r"pool(\.[\w-]+)?\.json", p.name)]
     if bad:
-        sys.exit(f"trivia-steam stage: missing {', '.join(bad)} (run trivia-desktop-build --dir)")
-    dlc = stage_dlc(DEPOTS["linux"][0], content_root)
-    pack_files = {f"{content_path}/{f}" for p in packs() for f in pack_media()[p]}
+        sys.exit(f"trivia-steam stage --demo: {data} holds {', '.join(sorted(bad))}: the demo ships only demo/ pools")
+
+
+def stage(demo: bool = False) -> bool:
+    depots = DEMO_DEPOTS if demo else DEPOTS
+    release = DESKTOP / "release" / ("demo" if demo else "")
+    arc_name = "LivingRoomTriviaDemo" if demo else "LivingRoomTrivia"
+    content_root, content_path, _ = depots["content"]
+    bad = [str(d) for d in (depots["windows"][0], depots["linux"][0], content_root) if not d.is_dir()]
+    if bad:
+        sys.exit(f"trivia-steam stage: missing {', '.join(bad)} (run trivia-desktop-build{' --demo' if demo else ''} --dir)")
+    if demo:
+        check_demo_data(depots["linux"][0])
+        check_demo_data(depots["windows"][0])
+        dlc = {}
+    else:
+        dlc = stage_dlc(depots["linux"][0], content_root)
+    pack_files = {f"{content_path}/{f}" for p in packs(demo) for f in pack_media()[p]}
     content = {k: v for k, v in tree(content_root, content_path + "/").items() if k not in pack_files}
     dlc_all = {k: v for t in dlc.values() for k, v in t.items()}
     for p, t in dlc.items():
         print(f"  {p}: DLC depot {len(t)} files")
     ok = True
     for name, ext in [("windows", "win-x64.zip"), ("linux", "linux-x64.tar.gz")]:
-        arc = release / f"LivingRoomTrivia-{version()}-{ext}"
+        arc = release / f"{arc_name}-{version()}-{ext}"
         if not arc.is_file():
-            sys.exit(f"trivia-steam stage: missing {arc} (run trivia-desktop-build --dir)")
-        own = (content_path + "/", *(pack_data(p) for p in packs()))
-        depot = {k: v for k, v in tree(DEPOTS[name][0]).items() if not k.startswith(own)}
+            sys.exit(f"trivia-steam stage: missing {arc} (run trivia-desktop-build{' --demo' if demo else ''} --dir)")
+        own = (content_path + "/", *(pack_data(p) for p in packs(demo)))
+        depot = {k: v for k, v in tree(depots[name][0]).items() if not k.startswith(own)}
         want, got = archive(arc), depot | content | dlc_all
         diff = sorted(set(want) ^ set(got)) + sorted(k for k in set(want) & set(got) if want[k] != got[k])
         for k in diff[:20]:
@@ -197,7 +223,7 @@ def stage() -> bool:
 
 
 def cmd_stage(args) -> None:
-    sys.exit(0 if stage() else 1)
+    sys.exit(0 if stage(args.demo) else 1)
 
 
 def checked(commit: str, tag: str) -> dict:
@@ -269,13 +295,16 @@ def main() -> None:
     p = argparse.ArgumentParser(prog="trivia-steam", description=__doc__.split("\n")[0])
     sub = p.add_subparsers(dest="cmd", required=True)
     v = sub.add_parser("vdf", help="render the build VDFs")
+    v.add_argument("--demo", action="store_true", help="the demo app: steam.json demo, release/demo/, build/media-demo/, no DLC")
     v.add_argument("--out", help="output dir (default work/steam/<tag>/vdf)")
     v.add_argument("--appid", type=int, help="App ID (default steam.json)")
     v.add_argument("--depots", help="depot IDs windows,linux,content,<packs> (default steam.json)")
     v.add_argument("--tag", help="default: v<version> on HEAD, else the short sha")
     v.add_argument("--preview", action="store_true", help="Preview 1: manifests only, no upload")
     v.set_defaults(fn=cmd_vdf)
-    sub.add_parser("stage", help="check the depot folders against the archives").set_defaults(fn=cmd_stage)
+    st = sub.add_parser("stage", help="check the depot folders against the archives")
+    st.add_argument("--demo", action="store_true", help="the demo build (release/demo/, build/media-demo/, no DLC)")
+    st.set_defaults(fn=cmd_stage)
     u = sub.add_parser("upload", help="release check, stage, VDFs, steamcmd run_app_build")
     u.add_argument("--branch", required=True, help="beta (the only branch set from here)")
     m = u.add_mutually_exclusive_group()
