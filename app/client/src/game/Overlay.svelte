@@ -20,7 +20,7 @@
   import Prompt from "./Prompt.svelte";
   import type { Game, GameMode, JokerBudget, JokerName } from "../lib/types.ts";
   import { stepUses, TOKENS } from "./jokers.ts";
-  import { setVolumes, sfx, sound, type Volumes } from "./sound.svelte.ts";
+  import { setSoundtrack, setVolumes, sfx, sound, soundtrackIds, type Volumes } from "./sound.svelte.ts";
 
   type Item = {
     label: string;
@@ -41,6 +41,8 @@
     replace?: boolean;
     /** «Saltar a nivel»: ←/→ picks the level. */
     level?: boolean;
+    /** «Banda sonora»: ←/→ picks the soundtrack. */
+    soundtrack?: boolean;
     /** Read-only: the running game's choice (plan 29); ↑/↓ skip it. */
     info?: boolean;
   };
@@ -59,6 +61,12 @@
   const shell = desktop?.devServer ? null : desktop;
   const env = import.meta.env.VITE_AUTHORING_URL;
   const authoring = shell ? "" : (env ?? `${location.protocol}//${location.hostname}:8001`);
+
+  function stepSoundtrack(by: number) {
+    const n = soundtrackIds.length;
+    setSoundtrack(soundtrackIds[(soundtrackIds.indexOf(sound.soundtrack) + by + n) % n]);
+    sfx("tick");
+  }
 
   function change(key: Channel, by: number) {
     const v = Math.round(Math.min(1, Math.max(0, sound.volumes[key] + by)) * 10) / 10;
@@ -255,6 +263,7 @@
     ...(onmods ? [{ label: t("mods.open"), enabled: true, run: onmods, col: 0 as const }] : []),
     { label: t("overlay.restart"), enabled: canRestart, run: onrestart, confirm: true, col: 0 },
     ...(shell ? [{ label: t("overlay.quit"), enabled: true, run: quit, col: 0 as const, quit: true }] : []),
+    { label: t("overlay.soundtrack"), enabled: true, run: () => stepSoundtrack(1), soundtrack: true, col: 0 as const, sound: true },
     ...CHANNELS.map((c) => ({ label: c.label, enabled: true, run: () => {}, volume: c.key, col: 0 as const, sound: true })),
     {
       label: t(sound.volumes.muted ? "overlay.muted" : "overlay.unmuted"),
@@ -329,6 +338,7 @@
     else if (by && item.joker) stepJoker(item.joker, by);
     else if (by && item.replace && item.enabled) flipSeen();
     else if (by && item.level && item.enabled) stepLevel(by);
+    else if (by && item.soundtrack) stepSoundtrack(by);
     else if (by) across(by);
     else if (a.type === "confirm") activate(selected);
     else if (a.type === "menu") onclose();
@@ -381,12 +391,13 @@
       <button class="step" onclick={() => stepJoker(name, 1)} disabled={!item.enabled} tabindex="-1" aria-label={t("overlay.more")}>+</button>
       <span class="left">{used ? t("overlay.used", { n: used[name] }) : ""}</span>
     </div>
-  {:else if item.level || item.replace}
+  {:else if item.level || item.replace || item.soundtrack}
+    {@const stepBy = (by: number) => (item.soundtrack ? stepSoundtrack(by) : item.level ? stepLevel(by) : flipSeen())}
     <div class="row pick" class:selected={i === selected} class:off={!item.enabled} data-item={i} role="group" onmouseenter={() => item.enabled && (selected = i)}>
       <button class="run" onclick={() => activate(i)} disabled={!item.enabled} tabindex="-1">{item.label}</button>
-      <button class="step" onclick={() => (item.level ? stepLevel(-1) : flipSeen())} disabled={!item.enabled} tabindex="-1" aria-label={t("overlay.less")}>‹</button>
-      <span class="value">{item.level ? target : t(seen ? "overlay.seen" : "overlay.unseen")}</span>
-      <button class="step" onclick={() => (item.level ? stepLevel(1) : flipSeen())} disabled={!item.enabled} tabindex="-1" aria-label={t("overlay.more")}>›</button>
+      <button class="step" onclick={() => stepBy(-1)} disabled={!item.enabled} tabindex="-1" aria-label={t("overlay.less")}>‹</button>
+      <span class="value">{item.soundtrack ? t(`soundtrack.${sound.soundtrack}`) : item.level ? target : t(seen ? "overlay.seen" : "overlay.unseen")}</span>
+      <button class="step" onclick={() => stepBy(1)} disabled={!item.enabled} tabindex="-1" aria-label={t("overlay.more")}>›</button>
     </div>
   {:else if item.info}
     <p class="row readonly info">{item.label}</p>

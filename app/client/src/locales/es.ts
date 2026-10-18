@@ -75,6 +75,7 @@ const es = {
     confirm: "¿Seguro? Presiona otra vez",
     sound: "Sonido",
     music: "Música",
+    soundtrack: "Banda sonora",
     effects: "Efectos",
     media: "Audio y video de las preguntas",
     muted: "Sonido: apagado",
@@ -115,6 +116,11 @@ const es = {
     apply: "Aplicar",
     /** Joker uses so far; the row's number is the uses left. */
     used: "{n} usados",
+  },
+  /** Soundtrack names in the overlay, by mood (plan 182). */
+  soundtrack: {
+    sintetizada: "Sintetizada",
+    variaciones: "Variaciones",
   },
   /** First-start language picker and the Start screen's language button (plan 126); language names are endonyms in lib/i18n.ts. */
   language: {
