@@ -126,7 +126,7 @@ export async function fetchChoiceOptions(scope: DataScope = "next"): Promise<Cho
       const n = data.uiNames.bundles[b.id];
       return {
         id: b.id, base: b.kind === "base", region: b.kind === "region", ...(b.country && { country: b.country }),
-        ...(b.source === "mod" && { count: data.pool.filter((q) => q.bundle === b.id && q.status === "approved").length }),
+        ...((b.source === "mod" || data.demo) && { count: data.pool.filter((q) => q.bundle === b.id && q.status === "approved").length }),
         name: bundleName(data, b), description: n?.description ?? b.description,
         ...(b.source === "mod" && { source: b.source, modName: b.modName ?? b.mod ?? b.id }),
       };
