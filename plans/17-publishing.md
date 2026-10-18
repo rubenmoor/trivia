@@ -82,6 +82,22 @@ Base price, regional prices, launch discount and the free DLC setup, drafted 202
 - [DLC](https://partner.steamgames.com/doc/store/application/dlc): own app ID per DLC (base app → "All Associated Packages, DLC, Demos And Tools" → "Add New DLC"); DLC depots live in the base app; price page silent on free DLC
 - [Free to Play](https://partner.steamgames.com/doc/store/freetoplay): a free product is set at creation ("This is a free product" under Options) and shows "free" in its store package, no pricing entered; every DLC goes through its own store page, review and release; DLC needs no app credit (D-98)
 
+### Valve's rules: Demos (read 2026-10-17)
+The demo app is plan 178: Steamworks demo app and store. The demo app's store and library wording came from a page summary: recheck at entry. Workers never log into Steamworks.
+- [Demos](https://partner.steamgames.com/doc/store/application/demos):
+  - own App ID tied to the base app: base app landing page → "All associated packages, DLC, demos and tools" → "Add Demo"; own depots, own builds "just like a full app" (upload with the demo's App ID, [uploading](https://partner.steamgames.com/doc/sdk/uploading)); own release checklist and configuration
+  - no app fee named (as free DLC); recheck at creation
+  - store: either a "Download demo" button on the base game's page, or an own demo store page (user reviews, no community hub, link back to the full game); an own page needs demo-only description, features, languages, modes, ≥ 5 demo screenshots and a trailer, capsules and library assets marked as demo, own content survey; base-only features not listed
+  - after the demo's release: re-publish the base game's store page by hand, else no "Download demo" button
+  - before launch: possible from the coming-soon page, Valve "generally recommend[s] waiting until launch"; wishlist notification once, within two weeks of the demo's first release
+  - achievements: "We recommend that you disable achievements in demos"
+  - no full-game ↔ demo matchmaking (moot: local multiplayer only); `ActivateGameOverlayToStore` links the demo to the full game's store page
+  - testing before release: demo keys requested in Steamworks, activated on the developer's account
+  - Workshop, stats, rich presence, Steam Input, DLC: not mentioned
+- [Steam Cloud](https://partner.steamgames.com/doc/features/cloud): "Shared cloud APP ID" in the demo's Cloud settings, 0 = off; unreleased base app → no sync
+- [Steam Next Fest](https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest): base page public, demo public by the start, game unreleased until the end, registration from the base game, review ≥ 3 (≥ 5 for press preview) weeks ahead; review checks that it runs and has the promised features, later updates unreviewed
+- Decisions: `decision 343: Demo store presence: own store page, or only the Download demo button on the full game's page?` → button only (no own page, so the own-page items above don't apply); `decision 344: Demo release: with the full game's launch, or earlier from the coming-soon page?` → with the launch (so no Next Fest); `decision 345: Demo save and Steam's shared cloud: keep the demo's save apart, or share it with the full game's cloud?` → shared cloud, only after the full game's release; `decision 346: Achievements in the demo: off, as Valve recommends?` → off
+
 ### Comparables (store API, 2026-10-14, US prices, list price)
 | Title | Price | Reviews | DLC |
 |---|---|---|---|
