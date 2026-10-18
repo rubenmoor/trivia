@@ -74,7 +74,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 | Mode | «¿Cómo se juega?»: «Solo o en grupo» or «Multijugador», then «Modo de juego»: Estándar or Modo anfitrión, or the multiplayer modes in two groups (decision 314) | «Seguir» / `Enter`; «Atrás» / `Backspace` | Normal |
 | Choice | «¿Cómo juega …?», the age screen: gamemaster mode: the configure game screen (MD-11: difficulty, levels, cards, video, audio, answers (D-105), jokers); the other modes: age group (rr-competitive: one per seat), «Personalizar partida»; no bundles, no supply | «Seguir» / `Enter`; «Atrás» / `Backspace` | Normal |
 | Join | Multiplayer modes only: «press A to join» per pad, keyboard card, seat cards (colour, device, name, rr-competitive: age group) | «Seguir» (≥ 2 seats, all named) / `Enter`; «Atrás» / `Backspace` | Normal |
-| Bundles | «¿Qué preguntas juega …?»: the question bundles (plan 151); the supply report | «¡A jugar!» / `Enter`; «Atrás» / `Backspace` | Normal |
+| Bundles | «¿Qué preguntas juega …?»: the question bundles (plan 151); demo build: one tile, «Paquete de demostración» with the demo pool's rounded count (decision 341); the supply report | «¡A jugar!» / `Enter`; «Atrás» / `Backspace` | Normal |
 | Level | The tower, «Nivel N de 12» | Click / `Enter` / `Space` | Normal |
 | Select | 4 description cards | Click a card / `1`–`4` | Normal |
 | Question | Question, 4 answers, media, lock, final button, joker tray | Final answer; jokers Paso y fuera / Tiro mágico hit | Intense (off while question media plays); after submitting: most intense |

@@ -17,11 +17,12 @@
   }
 
   /** The count a tile shows (decision 267): shipped bundles fixed 5000+ (base) / 2000+, a mod's own count rounded
-   * down (hundreds from 100, tens from 10), capped at the fixed string of its kind. */
+   * down (hundreds from 100, tens from 10), capped at the fixed string of its kind; the demo's base tile is counted
+   * like a mod's, uncapped (decision 341). */
   export function countShown(b: Bundle): { n: number; plus: boolean } {
     const cap = b.base ? 5000 : 2000;
     const n = b.count;
-    if (n === undefined || n >= cap) return { n: cap, plus: true };
+    if (n === undefined || (n >= cap && !buildInfo().demo)) return { n: cap, plus: true };
     const n10 = n >= 100 ? Math.floor(n / 100) * 100 : n >= 10 ? Math.floor(n / 10) * 10 : n;
     return { n: n10, plus: n10 !== n };
   }
@@ -44,6 +45,7 @@
   // Shared bundle selector (D-88): every bundle a toggle, base ones apart from the others; any combination
   // (plan 151). Bundles screen in every mode (plan 151): narrow base column, ruler, flowing optional
   // tiles (names, counts) that scroll with focus; «Ajustes de la partida» (MD-12): compact, with descriptions.
+  import { buildInfo } from "../lib/build.ts";
   import { playerRegion } from "../lib/desktop.ts";
   import { t } from "../lib/i18n.ts";
   import Flags from "./Flags.svelte";
@@ -167,7 +169,7 @@
     {#if key}<Prompt action={{ type: "letter", key }} hold />{/if}
     <span class="name-text">
       {#if b.region}<Flags country={b.country} />{:else}<Icon name={b.source === "mod" ? "puzzle" : b.base ? "book" : "pin"} />{/if}
-      {b.name}
+      {b.base && buildInfo().demo ? t("bundles.demoName") : b.name}
     </span>
     {#if large}
       {@const c = countShown(b)}
