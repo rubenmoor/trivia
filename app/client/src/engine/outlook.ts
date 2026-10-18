@@ -126,7 +126,7 @@ function merge(ranges: [number, number][]): [number, number][] {
  * questions in the window (custom: start–end), some seen and at most 1 unseen. */
 function runningOutBundles(save: SaveData, data: EngineData, choice: Choice): string[] {
   const [lo, hi] = choice.difficulty ? [choice.difficulty.start, choice.difficulty.end] : data.groupById.get(choice.age_group!)!.window;
-  const count = countOf(save);
+  const count = countOf(save, data);
   return choice.bundles.filter((b) => {
     const qs = availableFor(save, data, choice, [b]).filter((q) => q.difficulty >= lo && q.difficulty <= hi);
     const fresh = qs.filter((q) => count(q) === 0).length;
@@ -140,7 +140,7 @@ export function outlook(save: SaveData, data: EngineData, choice: OutlookChoice)
   const b = seenPerLevel(choice.mode, choice.players, choice.levels);
   // timed: no cards, N questions per level (the session's supply check)
   const per = choice.mode === "timed" ? choice.players ?? 1 : Math.max(choice.cards, 1);
-  const count = countOf(save);
+  const count = countOf(save, data);
   const freshIn = (bundles: Iterable<string>) =>
     freshCounts(availableFor(save, data, choice, bundles).filter((q) => count(q) === 0));
   const fresh = freshIn(choice.bundles);

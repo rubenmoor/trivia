@@ -463,7 +463,7 @@ Template:
 - Date: 2026-10-11
 - Context: PORT-1 fixtures must make the Python referee's randomness replayable in the TS engine (plan 12, plan 18). Reproducing Python's Mersenne Twister in TS is work with no value for the game.
 - Decision: No shared PRNG. All referee randomness is `random.shuffle`; the recorder logs each call as `{site, n, perm}` (`perm[j]` = old index now at j). The TS engine takes an injected `Rng` with `shuffle(xs, site?)` (in place); tests use `tapeRng(tape)`, which fails on a wrong `n`, a site mismatch or a missing/leftover entry. Production `rng.ts` is any seedable PRNG.
-- Consequences: PORT-2/3 shuffle at the same points, in the same order, on arrays of the same length (also inside `view`). Format: `app/client/src/engine/fixtures/README.md`.
+- Consequences: PORT-2/3 shuffle at the same points, in the same order, on arrays of the same length (also inside `view`). Format: `app/client/src/engine/fixtures/README.md`. Demo builds: `demoRng()`, seeded per shuffle (pm decision 340).
 - Supersedes / related: plan 12 (PORT-1–3), plan 18
 
 ## D-59: No family mode; the Python server is a bridge to the Steam build
