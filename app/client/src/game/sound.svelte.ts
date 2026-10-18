@@ -60,6 +60,14 @@ export const SOUNDTRACKS = {
     level: 1.6,
     sameBeat: true,
   },
+  // OpenGameArt «Adaptive layers pack» by 3xBlast, CC BY 3.0: 16 bars at ~157 bpm, music box → + bass drum and synth → full synth
+  caja: {
+    files: { normal: "musica-caja-normal", question: "musica-caja-pregunta", submitted: "musica-caja-enviada" },
+    loopStart: 0,
+    loopEnd: 24.4586,
+    level: 1.6,
+    sameBeat: true,
+  },
 } as const satisfies Record<string, Soundtrack>;
 
 export type SoundtrackId = keyof typeof SOUNDTRACKS;
