@@ -2,6 +2,7 @@
   // Start (04, "Start"): wordmark, resume or new game, the save notice (plan 55), the Mods button
   // in the shell (plan 118), the language button top right (plan 126), the horizon along the bottom (plan 150).
   import type { takeSaveNotice } from "../../lib/engine.ts";
+  import { buildInfo } from "../../lib/build.ts";
   import { endonym, lang, t } from "../../lib/i18n.ts";
   import type { Game } from "../../lib/types.ts";
   import EffectsDemo from "../EffectsDemo.svelte";
@@ -58,6 +59,7 @@
   {/if}
   <h1 class="wordmark"><span class="bang">{t("screen.start.open")}</span>{t("screen.start.name")}<span class="bang">{t("screen.start.close")}</span></h1>
   <p class="subtitle">{t("screen.start.subtitle", { n: levels })}</p>
+  {#if buildInfo().demo}<p class="demo">{t("screen.start.demo")}</p>{/if}
   <div class="buttons">
     {#if notice}
       <div class="notice glass">
@@ -92,6 +94,7 @@
 <style>
   .wordmark,
   .subtitle,
+  .demo,
   .buttons,
   .held {
     position: relative; /* above the horizon */
@@ -131,6 +134,11 @@
   .subtitle {
     font-size: calc(1.6 * var(--u));
     color: var(--slate-200);
+  }
+  .demo {
+    font-size: calc(1.2 * var(--u));
+    color: var(--slate-200);
+    opacity: 0.8;
   }
   .buttons {
     display: flex;

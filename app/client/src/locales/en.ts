@@ -363,6 +363,8 @@ export const en = {
       name: "Trivia",
       close: "!",
       subtitle: { one: "1 question to reach the top", other: "{n} questions in a row to reach the top" },
+      /** Demo build only: a quiet line under the subtitle. */
+      demo: "Free demo version",
       resume: "Continue, level {level}",
       resumePlayer: "Continue: {name}, level {level}",
       /** A multiplayer session: {names} cut short after two; the mode's name below. */

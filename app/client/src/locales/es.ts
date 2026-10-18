@@ -412,6 +412,8 @@ const es = {
       name: "Trivia",
       close: "!",
       subtitle: { one: "1 pregunta para llegar a la cima", other: "{n} preguntas seguidas para llegar a la cima" },
+      /** Demo build only: a quiet line under the subtitle. */
+      demo: "Versión de demostración gratuita",
       resume: "Continuar, nivel {level}",
       resumePlayer: "Continuar: {name}, nivel {level}",
       /** A multiplayer session: {names} cut short after two; the mode's name below. */
