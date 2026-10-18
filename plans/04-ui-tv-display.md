@@ -108,6 +108,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 - Top lines: crashed safe start («The last start with mods didn't finish…», names the mods, «All off» focused); `--no-mods`; no valid Steam user (decision 111, rows still toggle); empty list (where mods go, the guide explains; no link).
 - One-time notice (`game/ModsNotice.svelte`, decision 151: Mods notice per install in mods.json; new mods held off until it): on the first turn-on or «Restart to apply» with any on while not accepted; mods are made by other players and run code with the game's access; «Allow mods» → `mods.notice()`, then the action; «Cancel» (focus default, `Esc`/B) changes nothing.
 - Screen gallery: steps in task 802 (stubbed `mods` list).
+- Demo gallery (plan 176): `trivia-gallery --demo` shoots language, start, start-resume, start-save-notice, menu-start, bundles, game-settings, level from demo-pool saves into `work/gallery-demo/`; the manifest lists PLACEHOLDER texts seen on those shots (the timed round screen's `PLACEHOLDER(1453)` is outside the set); `/gallery?demo`, review sets `/gallery?demo&set=<name>`.
 
 ### Player (D-28)
 - «¿Quién juega?»: the known player names as big buttons (most recent first, keys `1`–`9`), plus «Nuevo jugador» with a text field (the TV machine's keyboard, OQ-11).

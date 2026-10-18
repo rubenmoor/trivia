@@ -21,6 +21,7 @@
 
   const params = new URLSearchParams(location.search);
   const set = params.get("set");
+  const demo = params.has("demo");
   let locale = $state(params.get("locale") ?? "");
   const [W, H] = $derived(sizeOf(locale));
   let shot = $state(params.get("shot") ?? "");
@@ -32,7 +33,7 @@
 
   onMount(async () => {
     try {
-      ({ manifest, flags } = await fetchGallery(set));
+      ({ manifest, flags } = await fetchGallery(set, demo));
       const locales = Object.keys(manifest?.locales ?? {});
       if (!locales.includes(locale)) locale = locales[0] ?? "";
       if (!shots.includes(shot)) shot = shots[0] ?? "";
@@ -47,11 +48,11 @@
   // Biggest first, so smaller boxes on top stay clickable.
   const boxes = $derived((current?.items ?? []).filter((it) => !it.attr).sort((a, b) => b.box[2] * b.box[3] - a.box[2] * a.box[3]));
   // A review set: only its shots' flags.
-  const inSet = (f: UiFlag) => !manifest?.shots || manifest.shots.includes(f.shot);
+  const inSet = (f: UiFlag) => !!f.demo === demo && (!manifest?.shots || manifest.shots.includes(f.shot));
   const visible = $derived(flags.filter((f) => f.locale === locale && inSet(f) && (showFixed || !f.fixed_on)));
   const openCount = (l: string, s?: string) =>
     flags.filter((f) => f.locale === l && inSet(f) && !f.fixed_on && (!s || f.shot === s)).length;
-  const link = (l: string, s: string) => `/gallery?${new URLSearchParams({ ...(set ? { set } : {}), locale: l, shot: s })}`;
+  const link = (l: string, s: string) => `/gallery?${new URLSearchParams({ ...(demo ? { demo: "" } : {}), ...(set ? { set } : {}), locale: l, shot: s })}`;
   const flagsOf = (it: GalleryItem) => visible.filter((f) => f.shot === shot && f.text === it.text);
 
   function go(l: string, s: string) {
@@ -95,7 +96,7 @@
 
   async function add(e: SubmitEvent) {
     e.preventDefault();
-    if (selected && (await save({ flag: { locale, key, text: selected.text, shot, note } }))) note = "";
+    if (selected && (await save({ flag: { locale, key, text: selected.text, shot, note, ...(demo ? { demo } : {}) } }))) note = "";
   }
 
   async function saveEdit(id: number) {
@@ -114,7 +115,7 @@
 
 <main>
   <Nav current="gallery" />
-  <h1>Screen gallery</h1>
+  <h1>Screen gallery{demo ? " (demo)" : ""}</h1>
 
   {#if error}<p class="error">{error}</p>{/if}
   {#if !loaded}
@@ -122,12 +123,18 @@
   {:else if set && !manifest}
     <!-- a missing set: the error above, not the full gallery -->
   {:else if !manifest}
-    <p>No gallery yet: run <code>trivia-gallery</code> (every screen in every UI language, ~15 min), then reload.</p>
+    <p>No gallery yet: run <code>trivia-gallery{demo ? " --demo" : ""}</code> ({demo ? "the demo's screens" : "every screen"} in every UI language{demo ? "" : ", ~15 min"}), then reload.</p>
   {:else}
     {#if manifest.name}
       <h2>Review set {manifest.name}</h2>
       {#if manifest.note}<p>{manifest.note}</p>{/if}
-      <p class="muted small">{manifest.shots?.length} shots × {Object.keys(manifest.locales).length} entries. <a href="/gallery">Full gallery</a></p>
+      <p class="muted small">{manifest.shots?.length} shots × {Object.keys(manifest.locales).length} entries. <a href={demo ? "/gallery?demo" : "/gallery"}>{demo ? "Demo" : "Full"} gallery</a></p>
+    {/if}
+    {#if manifest.placeholders?.length}
+      <p class="small">
+        PLACEHOLDER on demo shots:
+        {#each manifest.placeholders as p (p.text)}<code>{p.text}</code> ({p.shots.join(", ")}){" "}{/each}
+      </p>
     {/if}
     <p class="muted small">
       Run {manifest.run.replace("T", " ")} at {manifest.commit}. Click a text to see its catalog key and flag it; a fix pass
@@ -155,7 +162,7 @@
       {#if current}
         <section class="view">
           <div class="shot">
-            <img src="/gallery/{current.file}" alt={shot} />
+            <img src="/gallery/{demo ? 'demo/' : ''}{current.file}" alt={shot} />
             {#each boxes as it, i (i)}
               <button
                 class="box"

@@ -132,14 +132,15 @@ export async function removeSpotCheck(batch: string, id: string): Promise<null> 
   return send(`/api/spot-checks/${encodeURIComponent(batch)}/${encodeURIComponent(id)}`, { undo: true });
 }
 
-/** trivia-gallery's manifest (null before its first run) or a review set's, and the UI string flags (plan 100). */
-export async function fetchGallery(set: string | null): Promise<{ manifest: GalleryManifest | null; flags: UiFlag[] }> {
-  return get(set ? `/api/gallery?${new URLSearchParams({ set })}` : "/api/gallery");
+/** trivia-gallery's manifest (null before its first run) or a review set's, and the UI string flags (plan 100); demo: `--demo`'s (plan 176). */
+export async function fetchGallery(set: string | null, demo = false): Promise<{ manifest: GalleryManifest | null; flags: UiFlag[] }> {
+  const query = new URLSearchParams({ ...(demo ? { demo: "1" } : {}), ...(set ? { set } : {}) });
+  return get(query.size ? `/api/gallery?${query}` : "/api/gallery");
 }
 
 /** Add a flag, edit its note or remove it; returns every flag. */
 export async function changeUiFlag(
-  body: { flag: Pick<UiFlag, "locale" | "key" | "text" | "shot" | "note"> } | { id: number; note: string } | { id: number; remove: true },
+  body: { flag: Pick<UiFlag, "locale" | "key" | "text" | "shot" | "note" | "demo"> } | { id: number; note: string } | { id: number; remove: true },
 ): Promise<UiFlag[]> {
   return send("/api/gallery/flags", body);
 }

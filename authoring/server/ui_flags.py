@@ -7,20 +7,25 @@ import layout  # authoring/tools/layout.py
 import atomic  # authoring/tools/atomic.py
 
 FILE = layout.UI_FLAGS
-MANIFEST = layout.GALLERY / "manifest.json"
-FIELDS = ("locale", "key", "text", "shot")
+FIELDS = ("locale", "key", "text", "shot")  # plus demo: true on a flag from /gallery?demo (plan 176)
 
 
 def load_flags():
     return json.loads(FILE.read_text(encoding="utf-8")) if FILE.exists() else []
 
 
+def root(demo):
+    return layout.GALLERY_DEMO if demo else layout.GALLERY
+
+
 def build(query):
-    """GET /api/gallery[?set=<name>]: {"manifest": … or null before the first trivia-gallery run, "flags": [...]};
-    with set, the manifest is the review set work/gallery/sets/<name>.json (task 1581), an unknown set an error."""
-    path, name = MANIFEST, query.get("set")
+    """GET /api/gallery[?demo=1][&set=<name>]: {"manifest": … or null before the first trivia-gallery run, "flags": [...]};
+    with set, the manifest is the review set work/gallery/sets/<name>.json (task 1581), an unknown set an error;
+    with demo, work/gallery-demo/ instead of work/gallery/ (plan 176)."""
+    base, name = root("demo" in query), query.get("set")
+    path = base / "manifest.json"
     if name is not None:
-        path = layout.GALLERY / "sets" / f"{name}.json"
+        path = base / "sets" / f"{name}.json"
         if not re.fullmatch(r"[\w-]+", name) or not path.is_file():
             raise ValueError(f"no review set {name!r}: trivia-gallery --set {name} --only <shot>,… makes it")
     manifest = json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
@@ -28,10 +33,12 @@ def build(query):
 
 
 def shot_path(file):
-    """work/gallery/[sets/<name>/]<locale>[@<W>x<H>]/<shot>.png, or None for a bad name or a missing file."""
-    if not re.fullmatch(r"(sets/[\w-]+/)?[\w-]+(@\d+x\d+)?/[\w-]+\.png", file):
+    """work/gallery[-demo]/[sets/<name>/]<locale>[@<W>x<H>]/<shot>.png (demo/ in front for the demo's), or None for a bad
+    name or a missing file."""
+    if not re.fullmatch(r"(demo/)?(sets/[\w-]+/)?[\w-]+(@\d+x\d+)?/[\w-]+\.png", file):
         return None
-    path = layout.GALLERY / file
+    demo = file.startswith("demo/")
+    path = root(demo) / file.removeprefix("demo/")
     return path if path.is_file() else None
 
 
@@ -47,7 +54,7 @@ def change(body):
             if f.get("key") is not None and not isinstance(f["key"], str):
                 raise ValueError("key must be a string or null")
             flags.append({"id": max((x["id"] for x in flags), default=0) + 1, **{k: f.get(k) for k in FIELDS},
-                          "note": note_of(f), "flagged_on": datetime.date.today().isoformat()})
+                          "note": note_of(f), **({"demo": True} if f.get("demo") is True else {}), "flagged_on": datetime.date.today().isoformat()})
         else:
             i = next((i for i, x in enumerate(flags) if x["id"] == body.get("id")), None)
             if i is None:

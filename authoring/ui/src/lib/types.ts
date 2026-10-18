@@ -315,12 +315,14 @@ export interface GalleryShot {
   unmatched: string[];
 }
 
-/** work/gallery/manifest.json. */
+/** work/gallery/manifest.json (work/gallery-demo/ for `trivia-gallery --demo`). */
 export interface GalleryManifest {
   run: string;
   commit: string;
   /** Shots per UI locale, in step order. */
   locales: Record<string, Record<string, GalleryShot>>;
+  /** PLACEHOLDER texts seen on a demo shot (`trivia-gallery --demo`, plan 176): text and the `<locale>/<shot>`s. */
+  placeholders?: { text: string; shots: string[] }[];
   /** A review set, work/gallery/sets/<name>.json (task 1581). */
   name?: string;
   note?: string;
@@ -336,6 +338,8 @@ export interface UiFlag {
   shot: string;
   note: string;
   flagged_on: string;
+  /** From /gallery?demo: the demo gallery's shots share names with the full gallery's. */
+  demo?: boolean;
   /** Set by the fix pass. */
   fixed_on?: string;
 }

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// trivia-gallery's demo saves (plan 100): built with the engine on the es pool, made-up players.
+// trivia-gallery's demo saves (plan 100): built with the engine on the es pool, made-up players. TRIVIA_DEMO=1: the demo's
+// pool (plan 176), only the saves its shots need.
 // Usage: node authoring/tools/gallery_saves.mjs <ui locale> → JSON {saves: {name: save}, meta: {name: {...}}} on stdout.
 import { QUESTION_MS } from "../../app/client/src/engine/choice.ts";
 import { answer, claim, expire, newSession, pick, show, view } from "../../app/client/src/engine/game.ts";
@@ -8,7 +9,8 @@ import { loadData } from "./engine_data.mjs";
 
 const ui = process.argv[2];
 if (!ui) throw new Error("usage: gallery_saves.mjs <ui locale>");
-const data = loadData("es");
+const DEMO = process.env.TRIVIA_DEMO === "1";
+const data = loadData("es", undefined, DEMO);
 
 /** Image questions with hints first: no video or audio waiting on the screen, Soplo has something to show. */
 function best(ids) {
@@ -68,6 +70,13 @@ saves.final = play(structuredClone(done), PLAYERS[0], 12, { mode: "solo" }, true
 meta.final = { right: rightOf(data, saves.final) };
 // A table at level 3, gamemaster mode: «Difficulty and bundles».
 saves.table = play(structuredClone(done), PLAYERS[0], 3, { mode: "gamemaster" });
+if (DEMO) {
+  checkVersion(saves.base);
+  checkVersion(saves.table);
+  const out = JSON.stringify({ saves: { base: saves.base, table: saves.table }, meta, players: PLAYERS });
+  process.stdout.write(out, () => process.exit(0)); // flushed first: a pipe truncates at exit
+  await new Promise(() => {});
+}
 // Flags for the flag list.
 saves.flags = flagged(structuredClone(saves.question), data.pool.slice(0, 2).map((q) => q.id));
 // A UI language with a pool of its own plays it (engine.ts localeOf), so these three also mark and block from it.

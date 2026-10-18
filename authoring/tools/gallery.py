@@ -5,12 +5,14 @@ The built client on the Node dev server (`npm run serve -w app/client`, a temp s
 nixpkgs Playwright (1920×1080, `--size WxH`) with the desktop bridge stubbed (valid Steam user, mods, telemetry, reports).
 `?gallery` makes `t()` record rendered text → key (lib/i18n.ts); each shot's visible texts are matched against it.
 Output: <locale>/<shot>.png and manifest.json in work/gallery/ ($TRIVIA_WORK/gallery/ if set; merged on --locale/--only runs);
-with `TRIVIA_DEMO=1` the demo client (dist-demo) is shot into work/gallery-demo/;
+`--demo` (or `TRIVIA_DEMO=1`, plan 176): the demo client (dist-demo), the demo's own shot set (`--list --demo`) in the locales
+with a demo pool, into work/gallery-demo/ (sets/ and manifest.json there; PLACEHOLDER texts seen on its shots are listed
+in the manifest);
 another size writes <locale>@<W>x<H>/ and a manifest entry of that name.
 Review set (task 1581): `--set task-<id> --only …` shoots into sets/<name>/<entry>/ and sets/<name>.json (the manifest's
 shape plus name, note, shots; overwritten), for /gallery?set=<name>; the full gallery stays untouched.
 
-Usage: trivia-gallery [--locale en,es,es-ES,de] [--only <shot>[,<shot>…]] [--size WxH[,WxH…]] [--list] [--visible]
+Usage: trivia-gallery [--demo] [--locale en,es,es-ES,de] [--only <shot>[,<shot>…]] [--size WxH[,WxH…]] [--list] [--visible]
        trivia-gallery --set task-<id> --only <shot>[,<shot>…] [--note <text>] [--locale …] [--size …]
 """
 import argparse
@@ -33,10 +35,13 @@ import layout  # authoring/tools/layout.py
 REPO = Path(__file__).resolve().parent.parent.parent
 CLIENT = REPO / "app" / "client"
 DATA = REPO / "app" / "data"
-DEMO = os.environ.get("TRIVIA_DEMO") == "1"  # plan 173: the demo client, dist-demo
+DEMO = os.environ.get("TRIVIA_DEMO") == "1" or "--demo" in sys.argv  # plan 173: the demo client, dist-demo
+if DEMO:
+    os.environ["TRIVIA_DEMO"] = "1"  # the build, the server and the saves script read it
 DIST = "dist-demo" if DEMO else "dist"
-OUT = layout.GALLERY.with_name("gallery-demo") if DEMO else layout.GALLERY  # honours TRIVIA_WORK
+OUT = layout.GALLERY_DEMO if DEMO else layout.GALLERY  # honours TRIVIA_WORK
 LOCALES = ["en", "es", "es-ES", "de"]
+DEMO_LOCALES = [x for x in LOCALES if layout.DEMO_POOL(x).exists()]  # decision 339: the demo's pools
 DEFAULT_SIZE = (1920, 1080)
 
 # Sample mods (plan 118): every kind, state and warning the Mods screen shows; ~20 rows.
@@ -298,7 +303,7 @@ class Run:
         self.browser, self.server, self.save, self.ui = browser, server, server.save_dir / "game.json", ui
         self.size = size
         self.name = ui if size == DEFAULT_SIZE else f"{ui}@{size[0]}x{size[1]}"  # directory and manifest key
-        self.saves, self.meta, self.data, self.only = demo["saves"], demo["meta"], data, only
+        self.saves, self.meta, self.data, self.only, self.manifest = demo["saves"], demo["meta"], data, only, manifest
         self.shots = manifest.setdefault("locales", {}).setdefault(self.name, {})
         self.context = self.page = None
         self.dir = dest / self.name
@@ -390,6 +395,11 @@ class Run:
         items = match(found["items"], found["keys"], self.data)
         self.shots[name] = {"file": str(path.relative_to(OUT)), "items": items,
                             "unmatched": sorted({i["unmatched"] for i in items if "unmatched" in i})}
+        if DEMO:  # no PLACEHOLDER on a demo screen (plan 176)
+            for text in sorted({i["text"] for i in items if "PLACEHOLDER(" in i["text"]}):
+                rows = self.manifest.setdefault("placeholders", [])
+                row = next((x for x in rows if x["text"] == text), None) or rows.append({"text": text, "shots": []}) or rows[-1]
+                row["shots"] = sorted({*row["shots"], f"{self.name}/{name}"})
         print(f"  {self.name}/{name}: {sum(1 for i in items if 'keys' in i)} keyed, {len(self.shots[name]['unmatched'])} unmatched",
               flush=True)
 
@@ -926,6 +936,38 @@ def timed(r):
     r.shot("victory-timed")
 
 
+def demo_language(r):
+    r.scene(None, consent=None, ready="main .language .option")  # no consent screen in the demo (decision 337)
+    r.shot("language")
+
+
+def demo_menu(r):
+    r.scene("base")
+    r.menu()
+    r.shot("menu-start")
+
+
+def demo_bundles(r):
+    r.scene("base")
+    r.click('[data-focus-id="main"]')
+    r.wait(".name-button")
+    r.settle(0.8)
+    r.click(".name-button")
+    to_bundles(r)
+    r.wait('[data-focus-id="start"]:enabled')
+    r.settle(1.5)
+    r.shot("bundles")
+
+
+# plan 176: the screens the demo changes, in the saves of gallery_saves.mjs's demo branch (no pack bundles).
+DEMO_STEPS = [
+    (["language"], demo_language),
+    (["start", "start-resume", "start-save-notice"], start),
+    (["menu-start"], demo_menu),
+    (["bundles"], demo_bundles),
+    (["game-settings", "level"], table),
+]
+
 STEPS = [
     (["language", "consent"], first_start),
     (["start", "language-from-start", "start-resume", "start-save-notice"], start),
@@ -952,7 +994,8 @@ STEPS = [
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    ap.add_argument("--locale", help="comma-separated UI languages (default: all)")
+    ap.add_argument("--demo", action="store_true", help="the demo client and its shot set, into work/gallery-demo/")
+    ap.add_argument("--locale", help="comma-separated UI languages (default: all, with --demo those with a demo pool)")
     ap.add_argument("--only", help="comma-separated shot names")
     ap.add_argument("--size", default="1920x1080", help="comma-separated viewports WxH (default 1920x1080)")
     ap.add_argument("--list", action="store_true", help="list the shot names")
@@ -960,7 +1003,8 @@ def main():
     ap.add_argument("--note", default="", help="the review set's note")
     ap.add_argument("--visible", action="store_true", help="a visible browser window")
     a = ap.parse_args()
-    names = [n for shots, _ in STEPS for n in shots]
+    steps, all_locales = (DEMO_STEPS, DEMO_LOCALES) if DEMO else (STEPS, LOCALES)
+    names = [n for shots, _ in steps for n in shots]
     if a.list:
         print("\n".join(names))
         return
@@ -971,10 +1015,10 @@ def main():
         sizes.append((int(m[1]), int(m[2])))
     if a.set and not (re.fullmatch(r"task-\d+", a.set) and a.only):
         sys.exit("gallery: --set task-<id> needs --only <shot>,…")
-    locales = a.locale.split(",") if a.locale else LOCALES
-    only = set(a.only.split(",")) if a.only else None
-    if bad := [x for x in locales if x not in LOCALES] + sorted((only or set()) - set(names)):
-        sys.exit(f"gallery: unknown {', '.join(bad)} (locales {', '.join(LOCALES)}; --list for shots)")
+    locales = a.locale.split(",") if a.locale else all_locales
+    only = set(a.only.split(",")) if a.only else set(names) if DEMO else None
+    if bad := [x for x in locales if x not in all_locales] + sorted((only or set()) - set(names)):
+        sys.exit(f"gallery: unknown {', '.join(bad)} (locales {', '.join(all_locales)}; --list for shots)")
     from playwright.sync_api import sync_playwright  # nixpkgs Playwright from the flake wrapper
 
     build_if_stale()
@@ -989,6 +1033,11 @@ def main():
     commit = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=REPO, capture_output=True, text=True).stdout.strip()
     dirty = subprocess.run(["git", "status", "--porcelain"], cwd=REPO, capture_output=True, text=True).stdout.strip()
     manifest.update(run=datetime.datetime.now().isoformat(timespec="seconds"), commit=commit + ("-dirty" if dirty else ""))
+    redone = {f"{ui if z == DEFAULT_SIZE else f'{ui}@{z[0]}x{z[1]}'}/{n}" for z in sizes for ui in locales for n in only or names}
+    for row in manifest.get("placeholders", []):  # shots about to be shot again are seen anew
+        row["shots"] = [s for s in row["shots"] if s not in redone]
+    if "placeholders" in manifest:
+        manifest["placeholders"] = [row for row in manifest["placeholders"] if row["shots"]]
     shutil.rmtree(dest / "failed", ignore_errors=True)
     server = Server()
     failed = []
@@ -1001,7 +1050,7 @@ def main():
                 demo = json.loads(subprocess.run(["node", str(REPO / "authoring/tools/gallery_saves.mjs"), ui],
                                                  cwd=REPO, check=True, capture_output=True, text=True).stdout)
                 r = Run(browser, server, ui, size, demo, data_strings(demo["players"]), only, manifest, dest)
-                for shots, step in STEPS:
+                for shots, step in steps:
                     if only and not only.intersection(shots):
                         continue
                     try:
@@ -1019,7 +1068,7 @@ def main():
     finally:
         server.stop()
         manifest_file.write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    print(f"gallery: {dest}/ ({', '.join(locales)})" + (f"; /gallery?set={a.set}" if a.set else ""))
+    print(f"gallery: {dest}/ ({', '.join(locales)})" + (f"; /gallery?{'demo&' if DEMO else ''}set={a.set}" if a.set else ""))
     if failed:
         sys.exit("gallery: failed steps:\n  " + "\n  ".join(failed))
 
