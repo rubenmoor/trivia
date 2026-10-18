@@ -71,6 +71,7 @@ export const de = {
     confirm: "Sicher? Nochmal drücken",
     sound: "Ton",
     music: "Musik",
+    soundtrack: "Soundtrack",
     effects: "Effekte",
     media: "Audio und Video der Fragen",
     muted: "Ton: aus",
@@ -102,6 +103,11 @@ export const de = {
     settingsNote: "Neue Karten auf dem Tisch; Stufe und Gespieltes bleiben.",
     apply: "Übernehmen",
     used: "{n} benutzt",
+  },
+  /** Soundtrack names in the overlay, by mood (plan 182). */
+  soundtrack: {
+    sintetizada: "Synthetisch",
+    variaciones: "Variationen",
   },
   language: {
     choose: "Sprache wählen",

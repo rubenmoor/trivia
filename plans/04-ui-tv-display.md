@@ -285,6 +285,7 @@ Three loops of the same suspenseful theme, getting more intense. It's best if al
 Menu items (keyboard-navigable, large enough for the TV), the gamemaster menu (MD-12, D-88): a general part (every mode) and, in gamemaster mode, the cheats in a dashed amber panel «Trucos del anfitrión» beside it (shown while a game runs or can be undone). Fits without scrolling at 1920 × 1080 and 1280 × 800 (`es`, `xx`).
 - **General, left column:** Continuar; «Preguntas marcadas»; Pantalla completa; Créditos; Mods (desktop shell only: the Mods screen, «Back» returns to the menu; "Mods (plan 118)"); «Volver al menú principal» (confirm; `abandon`, then Start; milestone 9 replaces D-88's configure screen); «Salir del juego» (desktop; own colour `--quit` / `--quit-line`, apart from every other button, selected too); under «Sonido»: volumes, mute (no language rows, D-96).
 - **Continuar** (close).
+- **Banda sonora** (plan 182), first row under «Sonido»: ‹ name › of the soundtrack; ←/→ steps through `SOUNDTRACKS`, wrapping, Enter or ‹ › likewise forward/back, `tick`; switches live (the music keeps playing under the menu), stored like the volumes.
 - **Volumen:** music, effects and media sliders, plus mute all.
 - **Cheats, first column** (`overlay.cheats`; each enabled only in the phase its engine action accepts):
   - **Saltar pregunta:** back to Select with a new card replacing the current question, without using a joker. The skipped question counts as seen (D-82).
