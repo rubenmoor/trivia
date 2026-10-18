@@ -97,8 +97,9 @@ function playerId(work: SaveData, name: string): number | null {
   return [...work.players].sort((a, b) => a.id - b.id).find((p) => casefold(p.name) === key)?.id ?? null;
 }
 
-/** Seen count per question: rows in the whole save, every player and mode (plan 65). */
-export function countOf(save: SaveData): (q: PoolQuestion) => number {
+/** Seen count per question: rows in the whole save, every player and mode (plan 65); 0 in the demo (plan 175). */
+export function countOf(save: SaveData, data: EngineData): (q: PoolQuestion) => number {
+  if (data.demo) return () => 0;
   const counts = new Map<string, number>();
   for (const s of save.seen) counts.set(s.question_id, (counts.get(s.question_id) ?? 0) + 1);
   return (q) => counts.get(q.id) ?? 0;
@@ -217,7 +218,7 @@ function draw(
   const ranges = rangesOf(state, data);
   const opts = {
     ranges, n, perLevel: perLevel(cardsOf(state)), keep, avoidCategories: askedCategories(state, data), categoryOf: categoryOf(data.broad),
-    countOf: countOf(work), rng: io.rng,
+    countOf: countOf(work, data), rng: io.rng,
   };
   let drawn = selection.draw(state.level, availableNow(work, state, data), opts);
   // rr-competitive: other seats' past questions rather than none
@@ -674,7 +675,7 @@ const playEasier: Play = (work, gid, state, data, io) => {
   const cur = question(data, state.current);
   const avail = availableNow(work, state, data);
   const cands = avail.filter((q) => subOf(q) === subOf(cur) && q.difficulty < cur.difficulty);
-  const fresh = replacement(avail, state.level, rangesOf(state, data), cands, (q) => -q.difficulty, countOf(work), io, undefined, cardsOf(state));
+  const fresh = replacement(avail, state.level, rangesOf(state, data), cands, (q) => -q.difficulty, countOf(work, data), io, undefined, cardsOf(state));
   if (!fresh) throw new GameError("easier_none");
   state.jokers.push("easier");
   swapIn(work, gid, state, fresh, "easier", io);
@@ -689,7 +690,7 @@ const playCategory: Play = (work, gid, state, data, io, { subcategory }) => {
   const avail = availableNow(work, state, data);
   const ranges = rangesOf(state, data);
   const fresh = replacement(avail, state.level, ranges, categoryCandidates(avail, state.level, ranges, subcategory),
-    (q) => Math.abs(q.difficulty - cur.difficulty), countOf(work), io, undefined, cardsOf(state));
+    (q) => Math.abs(q.difficulty - cur.difficulty), countOf(work, data), io, undefined, cardsOf(state));
   if (!fresh) throw new GameError("category_empty");
   state.jokers.push("category");
   swapIn(work, gid, state, fresh, "category", io);
@@ -767,7 +768,7 @@ function jokersView(work: SaveData, row: GameRow, state: GameState, data: Engine
   const avail = availableNow(work, state, data);
   const ranges = rangesOf(state, data);
   const fill = laterFill(avail, state.level, ranges, cardsOf(state));
-  const count = countOf(work);
+  const count = countOf(work, data);
   const active = new Set(gameChoice(state, data).bundles);
   const groups = data.categories.filter((c) => active.has(c.bundle)).map((c) => {
     const subs = c.subcategories.map((sub) => {
@@ -865,7 +866,7 @@ function timedDraw(c: Timed): string | null {
   const avail = availableNow(work, state, data);
   const opts = {
     n: 1, perLevel: t.round_size, avoidCategories: askedCategories(state, data), categoryOf: categoryOf(data.broad),
-    countOf: countOf(work), rng: io.rng,
+    countOf: countOf(work, data), rng: io.rng,
   };
   const whole: LevelRanges = [[Math.min(...ranges.map((r) => r[0])), Math.max(...ranges.map((r) => r[1]))]];
   const drawn = selection.draw(state.level, avail, { ...opts, ranges }) ?? selection.draw(1, avail, { ...opts, ranges: whole });
@@ -1052,7 +1053,7 @@ function replaceCurrent(work: SaveData, gid: number, state: GameState, data: Eng
   const ranges = rangesOf(state, data);
   const fill = laterFill(avail, state.level, ranges, cardsOf(state));
   const pickFrom = (cands: PoolQuestion[]) => replacement(avail, state.level, ranges, cands,
-    (q) => Math.abs(q.difficulty - cur.difficulty), countOf(work), io, fill, cardsOf(state));
+    (q) => Math.abs(q.difficulty - cur.difficulty), countOf(work, data), io, fill, cardsOf(state));
   const fresh = pickFrom(categoryCandidates(avail, state.level, ranges, subOf(cur)!))
     ?? pickFrom(avail.filter((q) => subOf(q) !== subOf(cur) && selection.inRange(q, state.level, ranges)));
   if (!fresh) throw new GameError("replace_empty");

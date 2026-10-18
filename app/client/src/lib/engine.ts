@@ -1,6 +1,6 @@
 // The TS referee in the browser (plan 50, PORT-7): data and save loaded once per page, one action at a time.
 import type { ErrorBody, Reply } from "../engine/api.ts";
-import { randomSeed, seededRng } from "../engine/rng.ts";
+import { actionRng } from "../engine/rng.ts";
 import { repair, supply } from "../engine/game.ts";
 import { defaultLanguage, mapOldKeys } from "../engine/save.ts";
 import { gameLocale, newest, type EngineData, type Io, type Language, type SaveData } from "../engine/state.ts";
@@ -65,7 +65,7 @@ async function load(): Promise<Loaded> {
   const fresh = !save.language;
   const loaded = { save: { ...save, language }, locales, fresh };
   const data = await dataFor(loaded, "game"); // a missing data file fails here, not on the first action
-  loaded.save = { ...repair(loaded.save, data, io()), language }; // dropped questions (plan 91); written with the next action
+  loaded.save = { ...repair(loaded.save, data, io(data)), language }; // dropped questions (plan 91); written with the next action
   telemetryLoad(loaded.save);
   achievementsLoad(loaded.save, data);
   return loaded;
@@ -94,8 +94,8 @@ function localIsoSeconds(d = new Date()): string {
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}`;
 }
 
-function io(): Io {
-  return { rng: seededRng(randomSeed()), now: localIsoSeconds(), ms: Date.now() };
+function io(data: EngineData): Io {
+  return { rng: actionRng(data), now: localIsoSeconds(), ms: Date.now() };
 }
 
 /** Promise-chain mutex: one call at a time (was the server's _lock). */
@@ -141,7 +141,7 @@ async function exec<T>(route: Route<T>, write: boolean, scope: DataScope): Promi
   useNames(data);
   let reply: Reply<T>;
   try {
-    reply = route(loaded.save, data, io());
+    reply = route(loaded.save, data, io(data));
   } catch (e) {
     throw new GameError("server_error", {}, `engine error: ${messageOf(e)}`, null);
   }
