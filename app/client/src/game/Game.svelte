@@ -7,6 +7,7 @@
   import { fetchFlags, fetchGame, gameAction, noteRunningOut, playJoker, setFlag, type GameActionBody } from "../lib/api.ts";
   import { isOurs } from "../engine/pool.ts";
   import { GameError } from "../lib/http.ts";
+  import { buildInfo } from "../lib/build.ts";
   import { steam, validUser, type ModList } from "../lib/desktop.ts";
   import { language, saveError, takeSaveNotice } from "../lib/engine.ts";
   import { errorText } from "../lib/errors.ts";
@@ -137,6 +138,8 @@
   let flags = $state<Flagged[]>([]);
   const flagged = $derived(new Set(flags.map((f) => f.question_id)));
   /** The flag dialog is open (flag icon, M). */
+  /** Question reports and flags: a valid Steam user, not in the demo (decision 337). */
+  const flagsOn = validUser && !buildInfo().demo;
   let flagOpen = $state(false);
   let flagBusy = $state(false);
   /** «Preguntas marcadas» opens over the overlay, so the screen below stays mounted. */
@@ -156,7 +159,7 @@
       : ["correct", "wrong", "victory", "next", "completed"].includes(screen)
         ? (game?.last?.question_id ?? null)
         : null;
-    return validUser && id && isOurs(id) ? id : null; // mod questions: no flags, no reports (plan 93)
+    return flagsOn && id && isOurs(id) ? id : null; // mod questions: no flags, no reports (plan 93)
   });
   const mode = $derived(game?.settings.mode ?? "gamemaster");
   const levels = $derived(levelsOf(game));
@@ -856,7 +859,7 @@
       canUndo={!!game?.can_undo && !questionBusy()}
       canRestart={(running || screen !== "start") && !questionBusy()}
       canBudget={!questionBusy()}
-      onflags={validUser ? openFlagList : null}
+      onflags={flagsOn ? openFlagList : null}
       onmods={modList ? () => (modsOpen = true) : null}
       onclose={closeOverlay}
       onskip={() => skip(false)}
@@ -870,7 +873,7 @@
       onbudget={setBudget}
     />
   {/if}
-  {#if overlayOpen && flagListOpen && validUser}
+  {#if overlayOpen && flagListOpen && flagsOn}
     <FlagList bind:flags onclose={() => (flagListOpen = false)} />
   {/if}
   {#if modsOpen}

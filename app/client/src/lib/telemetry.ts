@@ -3,6 +3,7 @@
 import { buildTelemetry, sessionRows, telemetryStart, type Telemetry, type TelemetryGame, type TelemetryStart } from "../engine/telemetry.ts";
 import { gameLocale, type EngineData, type SaveData } from "../engine/state.ts";
 import { loadEngineData } from "./data.ts";
+import { buildInfo } from "./build.ts";
 import { telemetry, type TelemetryState } from "./desktop.ts";
 import { modsOn } from "./mods.ts";
 
@@ -23,7 +24,7 @@ function queued(fn: () => Promise<void>): void {
 
 /** Consent and availability, read once per page load (plan 108 asks when `available && consent === null`). */
 export function telemetryState(): Promise<TelemetryState> {
-  state ??= telemetry
+  state ??= telemetry && !buildInfo().demo // the demo has none (decision 337)
     ? telemetry.state().catch((e) => {
         warn(e);
         return OFF;

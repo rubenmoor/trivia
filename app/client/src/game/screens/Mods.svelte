@@ -1,12 +1,13 @@
 <script module lang="ts">
+  import { buildInfo } from "../../lib/build.ts";
   import { mods as bridge, type ModEntry, type ModList } from "../../lib/desktop.ts";
 
   /** Ids in this run's overlay, top first: from the first list (Game.svelte at mount), before any change. */
   let runOrder: string[] | null = null;
 
-  /** `mods:list`; null outside the shell. */
+  /** `mods:list`; null outside the shell and in the demo (decision 337). */
   export async function fetchModList(): Promise<ModList | null> {
-    if (!bridge) return null;
+    if (!bridge || buildInfo().demo) return null;
     const list = await bridge.list();
     runOrder ??= byPosition(list.mods.filter((m) => m.active)).map((m) => m.id ?? "");
     return list;
