@@ -11,10 +11,10 @@
   "scripts": {
     "stage-media": "node stage-media.mjs",
     "prepare-dist": "(cd ../.. && npm run build -w app/client) && node stage-media.mjs && node steam-libs.mjs",
-    "dist": "export TRIVIA_CLIENT_DIST=dist TRIVIA_DATA_DIR=../data TRIVIA_MEDIA_DIR=build/media && npm run prepare-dist && electron-builder --x64 --linux tar.gz --win zip",
-    "dist:dir": "export TRIVIA_CLIENT_DIST=dist TRIVIA_DATA_DIR=../data TRIVIA_MEDIA_DIR=build/media && npm run prepare-dist && electron-builder --x64 --linux tar.gz dir --win zip dir",
-    "dist:demo": "export TRIVIA_CLIENT_DIST=dist-demo TRIVIA_DATA_DIR=build/data-demo TRIVIA_MEDIA_DIR=build/media-demo TRIVIA_DEMO=1 && npm run prepare-dist && electron-builder --config electron-builder.demo.yml --x64 --linux tar.gz --win zip",
-    "dist:dir:demo": "export TRIVIA_CLIENT_DIST=dist-demo TRIVIA_DATA_DIR=build/data-demo TRIVIA_MEDIA_DIR=build/media-demo TRIVIA_DEMO=1 && npm run prepare-dist && electron-builder --config electron-builder.demo.yml --x64 --linux tar.gz dir --win zip dir"
+    "dist": "export TRIVIA_MODDING_FILTER='**/*' TRIVIA_CLIENT_DIST=dist TRIVIA_DATA_DIR=../data TRIVIA_MEDIA_DIR=build/media && npm run prepare-dist && electron-builder --x64 --linux tar.gz --win zip",
+    "dist:dir": "export TRIVIA_MODDING_FILTER='**/*' TRIVIA_CLIENT_DIST=dist TRIVIA_DATA_DIR=../data TRIVIA_MEDIA_DIR=build/media && npm run prepare-dist && electron-builder --x64 --linux tar.gz dir --win zip dir",
+    "dist:demo": "export TRIVIA_MODDING_FILTER='!**/*' TRIVIA_CLIENT_DIST=dist-demo TRIVIA_DATA_DIR=build/data-demo TRIVIA_MEDIA_DIR=build/media-demo TRIVIA_DEMO=1 && npm run prepare-dist && electron-builder --config electron-builder.demo.yml --x64 --linux tar.gz --win zip",
+    "dist:dir:demo": "export TRIVIA_MODDING_FILTER='!**/*' TRIVIA_CLIENT_DIST=dist-demo TRIVIA_DATA_DIR=build/data-demo TRIVIA_MEDIA_DIR=build/media-demo TRIVIA_DEMO=1 && npm run prepare-dist && electron-builder --config electron-builder.demo.yml --x64 --linux tar.gz dir --win zip dir"
   },
   "devDependencies": {
     "electron": "43.7.7",
