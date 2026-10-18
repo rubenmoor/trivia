@@ -223,7 +223,7 @@ trivia-gallery --locale es --only start --size 1280x800   # another window size
 trivia-gallery --set task-1463 --only join-5,join-8 --size 1920x1080,1280x800 --note "…"   # review set
 ```
 
-Shots go to `work/gallery/<locale>/<shot>.png` (another `--size`: `<locale>@<W>x<H>/`, its own entry in `/gallery`); `work/gallery/manifest.json` has each visible text with its catalog key, and text without one (a literal) as unmatched. The game runs from demo saves in a temp folder, never your save. `TRIVIA_DEMO=1 trivia-gallery` shoots the demo client (`dist-demo/`, built if stale) into `work/gallery-demo/`.
+Shots go to `work/gallery/<locale>/<shot>.png` (another `--size`: `<locale>@<W>x<H>/`, its own entry in `/gallery`); `work/gallery/manifest.json` has each visible text with its catalog key, and text without one (a literal) as unmatched. The game runs from demo saves in a temp folder, never your save. `trivia-gallery --demo` (or `TRIVIA_DEMO=1`) shoots the demo client (`dist-demo/`, built if stale) into `work/gallery-demo/`: only the demo's own shots (`--list --demo`: start screens, Esc menu on Start, bundles, level, game settings; saves built from the demo pool; PLACEHOLDER texts it sees are listed in the manifest and on the page). Review at `/gallery?demo`, a review set at `/gallery?demo&set=<name>`; flags there are marked demo and kept apart from the full gallery's.
 
 Review them in `trivia-authoring` → `/gallery`: per language every shot; click a text for its catalog key, flag it with a note. Flags go to `authoring/data/ui-flags.json` for the next fix pass.
 
