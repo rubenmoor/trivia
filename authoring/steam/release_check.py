@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Release check before every Steam upload (SW-6, pm decision 14; plan 89).
 
-    trivia-release-check [--skip STEP]... [--manual FILE]
+    trivia-release-check [--demo] [--skip STEP]... [--manual FILE]
 
 Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
   tag       clean tree, HEAD tagged v<version> (app/desktop/package.json, pm decision 91); never tags
@@ -30,6 +30,12 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
             "n…" fails, "y…" passes (deck: also "no Deck…", decision 125), anything else is a note and
             counts as skipped; on a content-only patch full-only rows are answered "skipped: content-only since <tag>"; beta-save only when
             SAVE_VERSION changed (plans/11-steam.md "Release checklist (ST-4)")
+
+--demo (plan 177, decision 342): the demo build. Steps tag, checks, licenses, desktop (trivia-desktop-build --dir --demo, trivia-steam
+stage --demo), media-budget (stage-media.mjs --check --demo), credits (on release/demo/*-unpacked), smoke (smoke.mjs --demo --trace a),
+determinism (the smoke again, trace b; ✗ names the first difference), multiplayer (--demo --multiplayer); no quality, nix, report,
+modkit, mods (decision 337 decides the mods rows later). Manual rows: offline, windows, sound, signoff, start-line. Report:
+work/steam/<tag>/demo/release-check.{md,json}, header: version, demo list hash (authoring/data/demo.json), demo pool count per locale.
 
 Report header: version, every shipped pool's hash (app/data/pool.json = es, pool.<locale>.json, a pack's as <locale>/<bundle>), previous tag (newest v* reachable from HEAD, not HEAD's own), kind
 (`full`, or `content-only` when nothing shipped but app/data/ changed since it) SAVE_VERSION change and the shipped Steamworks SDK libs' version (information only).
@@ -61,6 +67,23 @@ STEPS = {
     "multiplayer": [["node", "authoring/steam/smoke.mjs", "--multiplayer", UNPACKED]],
     "mods": [["node", "authoring/steam/smoke.mjs", "--mods", UNPACKED]],
 }
+UNPACKED_DEMO = "app/desktop/release/demo/linux-unpacked"
+UNPACKED_DEMO_WIN = "app/desktop/release/demo/win-unpacked"
+
+
+def demo_steps(out: Path) -> dict[str, list[list[str]]]:
+    """The demo's steps in order (tag runs apart); trace files in `out`."""
+    smoke = ["node", "authoring/steam/smoke.mjs", "--demo"]
+    return {
+        "checks": STEPS["checks"],
+        "licenses": STEPS["licenses"],
+        "desktop": [["trivia-desktop-build", "--dir", "--demo"], ["trivia-steam", "stage", "--demo"]],
+        "media-budget": [["node", "app/desktop/stage-media.mjs", "--check", "--demo"]],
+        "credits": [["node", "authoring/steam/credits_check.mjs", UNPACKED_DEMO, UNPACKED_DEMO_WIN]],
+        "smoke": [[*smoke, "--trace", str(out / "trace-a.json"), UNPACKED_DEMO]],
+        "determinism": [[*smoke, "--trace", str(out / "trace-b.json"), UNPACKED_DEMO]],
+        "multiplayer": [[*smoke, "--multiplayer", UNPACKED_DEMO]],
+    }
 SHIPPED = ("app/", "flake.nix", "flake.lock", "package.json", "package-lock.json")
 STATE_TS = "app/client/src/engine/state.ts"
 OFFLINE = ("beta install from Steam, network off (Steam offline mode: Steam → Go Offline while online, then network off), "
@@ -95,6 +118,14 @@ MANUAL = {
                          "acts only for its seat", None),
     "beta-save": ("save", "save version changed: testers stay on beta until this build is on default", None),
     "signoff": ("always", "the family plays the candidate from beta", "the developer's OK"),
+}
+# The demo's rows (plan 177); decision 337 adds report, telemetry, workshop, cloud later.
+DEMO_MANUAL = {
+    "offline": ("always", f"{OFFLINE}, the demo app: a game to level 3; quit and restart: the save is there", None),
+    "windows": ("always", "start test on a clean Windows machine from Steam (the demo's beta)", None),
+    "sound": ("always", "sound: music, effects, video questions", None),
+    "start-line": ("always", "the Start screen's demo line («Versión de demostración gratuita») and the bundle screen's one tile", None),
+    "signoff": ("always", "the developer plays the demo from the demo app's beta", None),
 }
 # Row → answer prefix that passes (best effort, decision 125).
 PASS = {"deck": "no deck"}
@@ -180,13 +211,29 @@ def report_health(log) -> str | None:
     return None if ok else f"GET {health}: unexpected answer {body[:200]!r}"
 
 
-def run(name: str, logs: Path) -> str | None:
+def first_difference(a: object, b: object, where: str = "trace") -> str | None:
+    """Where two smoke traces first differ (path through scenes and questions), None if equal."""
+    if isinstance(a, list) and isinstance(b, list):
+        for i, (x, y) in enumerate(zip(a, b)):
+            name = x.get("scene") if isinstance(x, dict) and "scene" in x else i
+            if d := first_difference(x, y, f"{where}[{name}]"):
+                return d
+        return None if len(a) == len(b) else f"{where}: {len(a)} vs {len(b)} entries"
+    if isinstance(a, dict) and isinstance(b, dict):
+        for k in a.keys() | b.keys():
+            if d := first_difference(a.get(k), b.get(k), f"{where}.{k}"):
+                return d
+        return None
+    return None if a == b else f"{where}: {a!r} vs {b!r}"
+
+
+def run(name: str, logs: Path, steps: dict[str, list[list[str]]]) -> str | None:
     """Run a step's commands, output to logs/<name>.log; the failure or None."""
     log = logs / f"{name}.log"
     with log.open("w") as f:
         if name == "report":
             return report_health(f)
-        for cmd in STEPS[name]:
+        for cmd in steps[name]:
             f.write(f"$ {' '.join(cmd)}\n")
             f.flush()
             try:
@@ -198,13 +245,19 @@ def run(name: str, logs: Path) -> str | None:
                 return f"`{' '.join(cmd)}` exit {p.returncode}"
             if name == "quality":
                 return quality(p.stdout)
+    if name == "determinism":
+        files = [logs.parent / f"trace-{x}.json" for x in "ab"]
+        if not all(x.exists() for x in files):
+            return "no trace to compare (smoke failed or skipped)"
+        diff = first_difference(*(json.loads(x.read_text()) for x in files))
+        return f"traces a and b differ: {diff}" if diff else None
     return None
 
 
-def checklist(kd: str, prev: str | None, save_changed: bool) -> dict[str, tuple[str, str | None]]:
+def checklist(kd: str, prev: str | None, save_changed: bool, table: dict = MANUAL) -> dict[str, tuple[str, str | None]]:
     """Manual rows for this candidate: row → (check, automatic answer or None)."""
     rows = {}
-    for k, (scope, text, patch) in MANUAL.items():
+    for k, (scope, text, patch) in table.items():
         if scope == "save" and not save_changed:
             continue
         auto = f"skipped: content-only since {prev}" if scope == "full" and kd == "content-only" else None
@@ -212,13 +265,13 @@ def checklist(kd: str, prev: str | None, save_changed: bool) -> dict[str, tuple[
     return rows
 
 
-def manual(rows: dict[str, tuple[str, str | None]], path: str | None, ask: bool) -> dict[str, str]:
+def manual(rows: dict[str, tuple[str, str | None]], path: str | None, ask: bool, known: dict = MANUAL) -> dict[str, str]:
     """Answers per manual row: automatic, from FILE, else asked on the terminal (only if ask)."""
     open_rows = {k: text for k, (text, auto) in rows.items() if auto is None}
     if path:
         lines = [l.split(":", 1) for l in Path(path).read_text(encoding="utf-8").splitlines() if ":" in l]
         given = {k.strip(): v.strip() for k, v in lines}
-        for k in given.keys() - MANUAL.keys():
+        for k in given.keys() - known.keys():
             print(f"  {path}: unknown row {k!r}", file=sys.stderr)
         answers = {k: given.get(k, "") for k in open_rows}
     elif not ask:
@@ -240,6 +293,18 @@ def pools() -> dict[str, str | None]:
     return out
 
 
+def demo_list_hash() -> str:
+    """sha256 (12 hex) of authoring/data/demo.json."""
+    return hashlib.sha256((REPO / "authoring" / "data" / "demo.json").read_bytes()).hexdigest()[:12]
+
+
+def demo_pools() -> dict[str, int]:
+    """{locale: question count} of the demo pools in app/data/demo/, es first."""
+    files = sorted((REPO / "app" / "data" / "demo").glob("pool*.json"), key=lambda f: (f.name != "pool.json", f.name))
+    return {"es" if f.name == "pool.json" else f.name.removeprefix("pool.").removesuffix(".json"): len(json.loads(f.read_text())["questions"])
+            for f in files}
+
+
 def sdk_libs() -> str:
     """Version of the shipped Steamworks libs by the Linux lib's sha256 (app/desktop/steam-sdk-versions.json)."""
     lib = REPO / "app" / "desktop" / "steamworks_sdk" / "redistributable_bin" / "linux64" / "libsteam_api.so"
@@ -252,7 +317,8 @@ def sdk_libs() -> str:
 
 def main() -> None:
     p = argparse.ArgumentParser(prog="trivia-release-check", description=__doc__.split("\n")[0])
-    p.add_argument("--skip", action="append", default=[], choices=["tag", *STEPS, "manual"], help="known-broken step")
+    p.add_argument("--demo", action="store_true", help="the demo build (plan 177): its steps, rows and report")
+    p.add_argument("--skip", action="append", default=[], choices=["tag", *STEPS, "determinism", "manual"], help="known-broken step")
     p.add_argument("--manual", metavar="FILE", help="manual answers, `<row>: <answer>` per line")
     args = p.parse_args()
 
@@ -267,13 +333,23 @@ def main() -> None:
     kind_text = f"content-only patch since {prev}" if kd == "content-only" else "full"
     save_text = (f"changed ({save['previous']} → {save['head']})" if save["changed"]
                  else f"unchanged ({save['head']})" if prev else f"{save['head']} (no earlier tag)")
-    out = REPO / "work" / "steam" / tag
+    demo = args.demo
+    out = REPO / "work" / "steam" / tag / ("demo" if demo else "")
+    plan = demo_steps(out) if demo else STEPS
+    manual_rows = DEMO_MANUAL if demo else MANUAL
     logs = out / "logs"
     logs.mkdir(parents=True, exist_ok=True)
     started = datetime.now().astimezone()
-    print(f"release check {tag} ({commit[:7]}{'' if clean else ', uncommitted changes'})")
-    print(f"  version {version()}, pools {pools_text}, previous tag {prev or 'none'}, {kind_text}, save version {save_text}, Steamworks SDK libs {sdk_libs()}")
+    if demo:
+        pools_text = ", ".join(f"{loc} {n}" for loc, n in demo_pools().items())
+    print(f"release check{' --demo' if demo else ''} {tag} ({commit[:7]}{'' if clean else ', uncommitted changes'})")
+    if demo:
+        print(f"  version {version()}, demo list {demo_list_hash()}, demo pools {pools_text}, Steamworks SDK libs {sdk_libs()}")
+    else:
+        print(f"  version {version()}, pools {pools_text}, previous tag {prev or 'none'}, {kind_text}, save version {save_text}, Steamworks SDK libs {sdk_libs()}")
 
+    for old in out.glob("trace-*.json"):
+        old.unlink()
     steps = []  # (name, status ✓/✗/skipped, seconds, note)
     if "tag" in args.skip:
         steps.append(("tag", "skipped", 0, "--skip"))
@@ -282,13 +358,13 @@ def main() -> None:
         fail = tag_gate()
         steps.append(("tag", "✗" if fail else "✓", 0, fail or ""))
         print(f"{'✗' if fail else '✓'} tag{': ' + fail if fail else ''}")
-    for name in STEPS:
+    for name in plan:
         if name in args.skip:
             steps.append((name, "skipped", 0, "--skip"))
             print(f"– {name}: skipped")
             continue
         t = time.monotonic()
-        fail = run(name, logs)
+        fail = run(name, logs, plan)
         dt = time.monotonic() - t
         steps.append((name, "✗" if fail else "✓", dt, fail or ""))
         print(f"{'✗' if fail else '✓'} {name} ({dt:.0f} s){': ' + fail + f' (log {logs / name}.log)' if fail else ''}")
@@ -297,8 +373,8 @@ def main() -> None:
     if "manual" in args.skip:
         steps.append(("manual", "skipped", 0, "--skip"))
     else:
-        todo = checklist(kd, prev, save["changed"])
-        answers = manual(todo, args.manual, all(s != "✗" for _, s, _, _ in steps))
+        todo = checklist(kd, prev, save["changed"], manual_rows)
+        answers = manual(todo, args.manual, all(s != "✗" for _, s, _, _ in steps), manual_rows)
         for k, a in answers.items():
             ok_prefix = k in PASS and a.lower().startswith(PASS[k])
             st = "✓" if ok_prefix or a[:1].lower() == "y" else "✗" if a[:1].lower() == "n" else "skipped"
@@ -315,15 +391,16 @@ def main() -> None:
               "ok": ok, "skipped": skipped,
               "steps": [{"name": n, "status": s, "seconds": round(dt), "note": note} for n, s, dt, note in steps],
               "manual": [{"row": k, "status": s, "answer": a} for k, _, s, a in rows]}
+    if demo:
+        report |= {"demo": True, "demo_list_hash": demo_list_hash(), "demo_pools": demo_pools()}
     (out / "release-check.json").write_text(json.dumps(report, ensure_ascii=False, indent=1) + "\n")
-    md = [f"# Release check {tag}", "",
+    md = [f"# Release check {tag}{' (demo)' if demo else ''}", "",
           f"- Result: {'✓ pass' if ok else '✗ fail'}",
           f"- Commit: {commit}{'' if clean else ' (uncommitted changes)'}",
           f"- Date: {report['date']}",
-          f"- Version: {version()}, pools {pools_text}",
-          f"- Previous tag: {prev or 'none'}",
-          f"- Kind: {kind_text}",
-          f"- Save version: {save_text}",
+          *([f"- Demo: yes, list {demo_list_hash()}, pools {pools_text}", f"- Version: {version()}"] if demo else
+            [f"- Version: {version()}, pools {pools_text}", f"- Previous tag: {prev or 'none'}", f"- Kind: {kind_text}",
+             f"- Save version: {save_text}"]),
           f"- Steamworks SDK libs: {sdk_libs()}",
           f"- Skipped: {', '.join(skipped) or 'none'}", "",
           "| step | | time | note |", "|---|---|---:|---|",
