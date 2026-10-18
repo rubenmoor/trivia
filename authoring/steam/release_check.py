@@ -33,7 +33,9 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
 
 --demo (plan 177, decision 342): the demo build. Steps tag, checks, licenses, desktop (trivia-desktop-build --dir --demo, trivia-steam
 stage --demo), media-budget (stage-media.mjs --check --demo), credits (on release/demo/*-unpacked), smoke (smoke.mjs --demo --trace a),
-determinism (the smoke again, trace b; ✗ names the first difference), multiplayer (--demo --multiplayer); no quality, nix, report,
+determinism (the smoke again, trace b; ✗ names the first difference), multiplayer (--demo --multiplayer), matrix (plan 179, decision 347:
+smoke.mjs --demo --matrix twice side by side, every built mode × age group to a win and a loss; ✗ names the run's failed game and step,
+or the first difference of traces trace-matrix-{a,b}.json); no quality, nix, report,
 modkit, mods (mods off, decision 337). Manual rows: offline, windows, sound, cloud, signoff, start-line. Report:
 work/steam/<tag>/demo/release-check.{md,json}, header: version, demo list hash (authoring/data/demo.json), demo pool count per locale.
 
@@ -83,6 +85,7 @@ def demo_steps(out: Path) -> dict[str, list[list[str]]]:
         "smoke": [[*smoke, "--trace", str(out / "trace-a.json"), UNPACKED_DEMO]],
         "determinism": [[*smoke, "--trace", str(out / "trace-b.json"), UNPACKED_DEMO]],
         "multiplayer": [[*smoke, "--multiplayer", UNPACKED_DEMO]],
+        "matrix": [[*smoke, "--matrix", "--trace", str(out / f"trace-matrix-{x}.json"), UNPACKED_DEMO] for x in "ab"],
     }
 SHIPPED = ("app/", "flake.nix", "flake.lock", "package.json", "package-lock.json")
 STATE_TS = "app/client/src/engine/state.ts"
@@ -235,6 +238,8 @@ def run(name: str, logs: Path, steps: dict[str, list[list[str]]]) -> str | None:
     with log.open("w") as f:
         if name == "report":
             return report_health(f)
+        if name == "matrix":
+            return matrix(f, steps[name], logs.parent)
         for cmd in steps[name]:
             f.write(f"$ {' '.join(cmd)}\n")
             f.flush()
@@ -254,6 +259,20 @@ def run(name: str, logs: Path, steps: dict[str, list[list[str]]]) -> str | None:
         diff = first_difference(*(json.loads(x.read_text()) for x in files))
         return f"traces a and b differ: {diff}" if diff else None
     return None
+
+
+def matrix(log, cmds: list[list[str]], out: Path) -> str | None:
+    """The demo matrix runs side by side (each ~40 min, mostly the game's reveal waits), then their traces compared."""
+    procs = [subprocess.Popen(c, cwd=REPO, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True) for c in cmds]
+    outs = [p.communicate()[0] for p in procs]
+    for cmd, p, text in zip(cmds, procs, outs):
+        log.write(f"$ {' '.join(cmd)}\n{text}")
+    for x, p, text in zip("ab", procs, outs):
+        if p.returncode:
+            last = next((l for l in reversed(text.splitlines()) if l.startswith("smoke:")), "")
+            return f"run {x} exit {p.returncode}: {last}"
+    diff = first_difference(*(json.loads((out / f"trace-matrix-{x}.json").read_text()) for x in "ab"))
+    return f"runs a and b differ: {diff}" if diff else None
 
 
 def checklist(kd: str, prev: str | None, save_changed: bool, table: dict = MANUAL) -> dict[str, tuple[str, str | None]]:
@@ -320,7 +339,7 @@ def sdk_libs() -> str:
 def main() -> None:
     p = argparse.ArgumentParser(prog="trivia-release-check", description=__doc__.split("\n")[0])
     p.add_argument("--demo", action="store_true", help="the demo build (plan 177): its steps, rows and report")
-    p.add_argument("--skip", action="append", default=[], choices=["tag", *STEPS, "determinism", "manual"], help="known-broken step")
+    p.add_argument("--skip", action="append", default=[], choices=["tag", *STEPS, "determinism", "matrix", "manual"], help="known-broken step")
     p.add_argument("--manual", metavar="FILE", help="manual answers, `<row>: <answer>` per line")
     args = p.parse_args()
 
