@@ -40424,6 +40424,15 @@ Answered:
 Done when: default set and changes applied; `node app/desktop/stage-media.mjs --check`, `node authoring/steam/credits_check.mjs`; `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-17T23:55:32Z', NULL, 1600, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1606, 183, 'create tasks for plan 183: Demo list translations', 'split', 'open', 1000, NULL, 'Split plan 183 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-18T01:11:04Z', NULL, NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1607, 183, 'Demo list: the 79 ids missing translations fail qgen validate', 'work', 'open', 600, NULL, 'Since `task 1547: Pick and approve the demo question list` set `approved` in `authoring/data/demo.json`, `qgen validate` exits 1 on main: 79 listed ids lack an approved translation in at least one launch locale (es, es-ES, en, de). This blocks the pre-commit checks (D-73) for every commit, review commits included.
+
+- Investigate: per id and locale, what is missing (no translation yet, translation `needs_work`/rejected, source `translatable: false`); counts per locale
+- Fix per cause:
+  - not translated yet: `qgen batch --translate <locale>` per locale with missing ids (RUNBOOK; listed ids go first, `task 1545: Translation runs take demo-listed ids first`), until each locale covers its ids
+  - won''t travel or rejected: `qgen demo --replace`, then the developer''s `--once` approval decision (`plan 174: The demo base bundle` replacement rule)
+- If the runs can''t close the gap soon, raise a decision on making pending ids a warning in `qgen validate` until the translations land, rather than changing the rule silently
+
+Done when: `qgen demo --check` and `qgen validate` pass on main.', '2026-10-18T01:11:05Z', NULL, NULL, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
