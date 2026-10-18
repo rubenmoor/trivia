@@ -3,7 +3,7 @@
 
     trivia-steam vdf [--demo] [--out DIR] [--appid N --depots W,L,C[,DLC...]] [--tag T] [--preview]
     trivia-steam stage [--demo]
-    trivia-steam upload --branch beta [--preview | --dry-run] [--checked] [--skip STEP]... [--manual FILE]
+    trivia-steam upload [--demo] --branch beta [--preview | --dry-run] [--checked] [--skip STEP]... [--manual FILE]
 
 `stage` checks the depot folders (`trivia-desktop-build --dir`) against the archives: per OS,
 OS depot without resources/media plus the content depot at resources/media = the zip/tar.gz
@@ -27,6 +27,9 @@ steam.json IDs, placeholders with --dry-run) → trivia-release-check (--skip ta
 release-check.json of this commit) → stage → VDFs in work/steam/<tag>/vdf → steamcmd +login
 $TRIVIA_STEAM_ACCOUNT +run_app_build. --dry-run stops before SteamCMD. The password and Steam Guard
 code are only typed into SteamCMD. Desc: `<tag> <sha>` plus `skipped: <steps>`.
+`upload --demo` (plan 177, decision 342): the same on the demo app: steam.json `demo` IDs (placeholders 480, 481… with
+--dry-run), `trivia-release-check --demo` (or --checked: work/steam/<tag>/demo/release-check.json), `stage --demo`, VDFs and
+output in work/steam/<tag>/demo/; Desc `<tag> <sha> demo` plus skips. Same tag as the full build.
 """
 import argparse, json, os, re, shutil, subprocess, sys, tarfile, zipfile
 from pathlib import Path
@@ -226,9 +229,9 @@ def cmd_stage(args) -> None:
     sys.exit(0 if stage(args.demo) else 1)
 
 
-def checked(commit: str, tag: str) -> dict:
+def checked(commit: str, tag: str, demo: bool = False) -> dict:
     """The release check's report of this commit, if it passed on a clean tree."""
-    f = REPO / "work" / "steam" / tag / "release-check.json"
+    f = REPO / "work" / "steam" / tag / ("demo" if demo else "") / "release-check.json"
     r = json.loads(f.read_text()) if f.is_file() else {}
     if r.get("commit") != commit or not r.get("ok") or not r.get("clean"):
         sys.exit(f"trivia-steam upload: no passing release check of {commit[:7]} on a clean tree in {f.relative_to(REPO)}")
@@ -240,6 +243,7 @@ def cmd_upload(args) -> None:
         if not ok:
             sys.exit(f"trivia-steam upload: {why}")
 
+    demo = args.demo
     gate(args.branch == "beta", f"branch {args.branch!r} refused: only beta; default is set in the Steamworks web UI (D-93)")
     gate(not git("status", "--porcelain"), "uncommitted changes (git status --porcelain)")
     commit, sha, tag = git("rev-parse", "HEAD"), git("rev-parse", "--short", "HEAD"), head_tag()
@@ -247,28 +251,28 @@ def cmd_upload(args) -> None:
     if not (args.preview or args.dry_run):
         gate(tag == want, f"HEAD has no tag {want} (tag it yourself; this command never tags)")
     if args.dry_run and not args.appid and not args.depots:
-        c = conf()
-        if not c["appid"] or not all(c["depots"].values()) or not all(d["depot"] for d in c["dlc"].values()):
+        c = conf()["demo"] if demo else conf()
+        if not c["appid"] or not all(c["depots"].values()) or (not demo and not all(d["depot"] for d in c["dlc"].values())):
             args.appid = DRY_RUN_APPID
-            args.depots = ",".join(str(DRY_RUN_APPID + 1 + i) for i in range(len(DEPOTS) + len(packs())))
+            args.depots = ",".join(str(DRY_RUN_APPID + 1 + i) for i in range(len(DEPOTS) + len(packs(demo))))
             print(f"dry run: placeholder IDs {args.appid}, {args.depots}")
     appid, depots = ids(args)
 
     if args.checked:
-        report = checked(commit, tag)
+        report = checked(commit, tag, demo)
     else:
         skip = [*args.skip, *(["tag"] if args.preview or args.dry_run else [])]
-        cmd = [sys.executable, str(HERE / "release_check.py"), *(a for s in dict.fromkeys(skip) for a in ("--skip", s))]
+        cmd = [sys.executable, str(HERE / "release_check.py"), *(["--demo"] if demo else []), *(a for s in dict.fromkeys(skip) for a in ("--skip", s))]
         if args.manual:
             cmd += ["--manual", args.manual]
         gate(subprocess.run(cmd, cwd=REPO).returncode == 0, "release check failed")
         gate(not git("status", "--porcelain"), "the release check changed tracked files (git status --porcelain)")
-        report = checked(commit, tag)
-    gate(stage(), "depot folders differ from the archives")
+        report = checked(commit, tag, demo)
+    gate(stage(demo), "depot folders differ from the archives")
 
-    out = REPO / "work" / "steam" / tag
-    desc = (tag if tag == sha else f"{tag} {sha}") + (f" skipped: {', '.join(report['skipped'])}" if report["skipped"] else "")
-    app = render(out / "vdf", appid, depots, tag, desc, args.preview)
+    out = REPO / "work" / "steam" / tag / ("demo" if demo else "")
+    desc = (tag if tag == sha else f"{tag} {sha}") + (" demo" if demo else "") + (f" skipped: {', '.join(report['skipped'])}" if report["skipped"] else "")
+    app = render(out / "vdf", appid, depots, tag, desc, args.preview, demo)
     print(f"VDFs: {app.parent}\nDesc: {desc}")
     if args.dry_run:
         print("dry run: SteamCMD not started")
@@ -306,6 +310,7 @@ def main() -> None:
     st.add_argument("--demo", action="store_true", help="the demo build (release/demo/, build/media-demo/, no DLC)")
     st.set_defaults(fn=cmd_stage)
     u = sub.add_parser("upload", help="release check, stage, VDFs, steamcmd run_app_build")
+    u.add_argument("--demo", action="store_true", help="the demo app and build (steam.json demo, release check --demo)")
     u.add_argument("--branch", required=True, help="beta (the only branch set from here)")
     m = u.add_mutually_exclusive_group()
     m.add_argument("--preview", action="store_true", help="Preview 1: manifests only, no upload")
