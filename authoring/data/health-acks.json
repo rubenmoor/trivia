@@ -10,5 +10,17 @@
   "batch-10": {
     "date": "2026-10-17",
     "note": "spot check 29/30 agreement, 30 checked; drop/overlap/top clue accepted for now (task 1573, task 1574)"
+  },
+  "tr-en-1": {
+    "date": "2026-10-17",
+    "note": "audit/review agreement below 90 % only from false media-title findings (task 1492: audit without media-candidates cache); real findings ≈0–1, decision 364"
+  },
+  "tr-es-ES-1": {
+    "date": "2026-10-17",
+    "note": "audit/review agreement below 90 % only from false media-title findings (task 1492: audit without media-candidates cache); real findings ≈0–1, decision 364"
+  },
+  "tr-de-1": {
+    "date": "2026-10-17",
+    "note": "audit/review agreement below 90 % only from false media-title findings (task 1492: audit without media-candidates cache); real findings ≈0–1, decision 364"
   }
 }
