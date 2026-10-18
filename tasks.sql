@@ -40439,6 +40439,24 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `rg` "analogy" over `plans/20-pipeline-efficiency.md` and the prompts: fix any text that states its share or weight
 
 Done when: `qgen validate` and the pre-commit checks pass (the demo-list failure tracked by `task 1607: Demo list: the 79 ids missing translations fail qgen validate` excepted).', '2026-10-18T01:18:27Z', '2026-10-18T01:18:36Z', NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1609, NULL, 'write an executive summary', 'exec', 'open', 10000, NULL, 'Write an executive summary for the owner of this project: a busy person who doesn''t read code, tasks or plans. Write
+it for an interested outsider who knows nothing about the project: plain, good English in full sentences, no jargon.
+Change nothing in the project; stage nothing.
+
+Read first: the previous summary (`pm summary show`), the milestones (`pm milestone list`, `pm show m<id>`), and what
+was done since the previous summary (`git log --stat <its commit>..HEAD`, `pm show <id>` where you need more).
+
+Write, in this order:
+1. **What the project is**, in one or two sentences: what it makes, for whom, and why. Every summary starts this way.
+2. **Where it stands**, in one sentence: how far along it is toward the current goal (the open milestone), and
+   whether that is on track, in terms of what the product can do.
+3. **What''s new** since the previous summary (for the first one: everything so far): what the product can do now
+   that it couldn''t before, and why that matters. Explain it to the outsider; don''t go into detail.
+4. **What comes next**, plus a risk only if it could change the outcome or the timing.
+
+Leave out everything about how the work is managed: decisions, sign-offs, tasks, plans, runs, failures, cost, tests
+and pm itself; never ids, file names or counts of these. One screen at most, about 250 words, few headings.
+Store it: `pm summary add < summary.md`, delete summary.md, then close your task.', '2026-10-18T01:24:14Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -47161,6 +47179,8 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1680, 1608, '2026-10-18T01:18:27Z', '2026-10-18T01:18:39Z', 'done', NULL, 0, '6c45e8d1b59399bf1e09277a7c9113929b7f6b3c', NULL, 'claude-sonnet-5-5', '76139823-33c9-4bdc-98d4-f5d8401f3a45', NULL, 4, 8, 769, 101998, 21625, 0.11460559999999999, 1197781);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1681, 1565, '2026-10-18T01:18:37Z', '2026-10-18T01:19:01Z', 'done', NULL, 0, '6c45e8d1b59399bf1e09277a7c9113929b7f6b3c', 'app', 'claude-sonnet-5-5', '8118f78c-a8e5-4892-9a46-d7535eaf6020', NULL, 9, 12, 3096, 220550, 36519, 0.22116999999999998, 1197781);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1682, 1566, '2026-10-18T01:19:01Z', '2026-10-18T01:19:30Z', 'blocked', NULL, 0, '65d18836705272ea2ec30b40cf0cea2dde2d4793', 'app', 'claude-sonnet-5-5', '8118f78c-a8e5-4892-9a46-d7535eaf6020', 1681, 7, 14, 3112, 450308, 26564, 0.44863559999999991, 1197781);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1683, 1563, '2026-10-18T01:19:31Z', '2026-10-18T01:19:52Z', 'blocked', NULL, 0, '09c1075a5cef8c576e4ef86e53104240f78a70d1', 'app', 'claude-sonnet-5-5', '00944ed9-7653-4210-b73c-4481116c7aae', NULL, 8, 18, 1491, 327892, 39844, 0.23990039999999999, 1197781);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1684, 1570, '2026-10-18T01:19:52Z', NULL, 'running', NULL, NULL, '09c1075a5cef8c576e4ef86e53104240f78a70d1', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1197781);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -47724,6 +47744,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1550, 337);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1554, 337);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1555, 337);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1562, 337);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1563, 89);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1566, 343);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1566, 344);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1566, 363);
