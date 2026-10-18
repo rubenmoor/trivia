@@ -39913,7 +39913,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1572, 179, 'Demo close-out: docs sweep and milestone 18 Done', 'work', 'open', 100, NULL, 'Part of `plan 179: Close-out: play the demo`.
 
 ## Wait first
-- `task 1571: The developer plays the demo from Steam''s beta` closed with its decision answered «passed», or its "Demo playtest again" task passed; else stop without closing and say which
+- `task 1571: The developer plays the demo from Steam''s beta` closed with its decision answered «passed», or its "Demo playtest again" task passed
+- Not yet: never just stop (pm counts an open, unblocked task as failed); block on what holds it up: `pm task-pending-decision 1572 <id>` with the pending playtest decision ("Demo: played from Steam''s beta branch?" or its "again" one, `pm decision list`), else the decision task 1571 or task 1563 waits on (`pm show 1571`), then stop
 
 ## What
 - `plans/11-steam.md`: demo app, its release check (`trivia-release-check --demo`, steps incl. `matrix`) and upload next to the full game''s
@@ -40478,7 +40479,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - What a short supply means under decision 348: if a session''s start is refused for supply, either the matrix expects and records that refusal (traced, not ✗) or the developer raises the demo''s seats (`qgen demo --propose --seats S`); ask with `pm decision add` if not obvious
 - Docs: `smoke.mjs` header, `release_check.py` docstring, `plans/11-steam.md` "Demo `matrix` step"
 - Done when `trivia-release-check --demo` step `matrix` ✓ with the mode in', '2026-10-18T03:00:25Z', NULL, 1570, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1612, 179, 'investigate the failure of task 1572: Demo close-out: docs sweep and milestone 18 Done', 'investigate', 'open', 102, NULL, '`task 1572: Demo close-out: docs sweep and milestone 18 Done` failed in `pm run`; its summary is below. Find out why, don''t redo its work:
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1612, 179, 'investigate the failure of task 1572: Demo close-out: docs sweep and milestone 18 Done', 'investigate', 'done', 102, '2026-10-17, no files. Cause: task 1572''s wait said ''stop without closing'', but task 1571 and task 1563 are blocked on decision 89 (Steamworks IDs), so 1572 stayed open and unblocked and pm counted that as a failure; no bug in code, no stash. Fix: 1572 is now pending on decision 89, and its body says to block on the playtest decision (or whatever 1571 waits on) instead of just stopping', '`task 1572: Demo close-out: docs sweep and milestone 18 Done` failed in `pm run`; its summary is below. Find out why, don''t redo its work:
 * read its log, `pm show 1572`, and the stashes it left (`git stash show -p --include-untracked <sha>`); don''t apply or drop them, task 1572''s next run gets them
 * rerun the failing command or script to see the error yourself; find the cause in the code, not only the symptom
 Then, by what you find:
@@ -40510,7 +40511,35 @@ Your note on `pm task done`: the cause and what you queued.
       - **Making it pending on a decision:** the playtest decision doesn''t exist yet. Task 1571 creates it. Raising a stand-in decision myself would be a pm change nobody asked for.
       
       Task 1572 should stay in the queue until task 1571 is closed and its decision is answered «passed». I changed and staged nothing. If you want it dropped or parked another way, tell me and I''ll do that.
-      [success: 5 turns, $0.16]', '2026-10-18T03:01:53Z', NULL, NULL, 0, NULL, 'app');
+      [success: 5 turns, $0.16]', '2026-10-18T03:01:53Z', '2026-10-18T03:02:25Z', NULL, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1613, 179, 'investigate the failure of task 1611: Demo matrix: multiplayer modes once one is built', 'investigate', 'open', 92, NULL, '`task 1611: Demo matrix: multiplayer modes once one is built` failed in `pm run`; its summary is below. Find out why, don''t redo its work:
+* read its log, `pm show 1611`, and the stashes it left (`git stash show -p --include-untracked <sha>`); don''t apply or drop them, task 1611''s next run gets them
+* rerun the failing command or script to see the error yourself; find the cause in the code, not only the symptom
+Then, by what you find:
+* a bug in a script, test, tool or config of the project: add a task that fixes it, `pm task add 179 "<subject>" --priority 91`, with the cause, where it is and how to check the fix; it runs before task 1611 does again
+* task 1611 itself is wrong or out of date: change it (`pm task set 1611 --body …`) or drop it (`pm task drop 1611 "<reason>"`)
+* it needs the human: `pm decision add` with what you found and the options, then `pm task-pending-decision 1611 <decision>`
+* nothing to fix (a passing outage): say so; task 1611 runs again as it is
+If earlier investigations of this task are listed below, don''t repeat their fix: raise a decision instead.
+Your note on `pm task done`: the cause and what you queued.
+
+# The failure
+
+    exit 0, but the task is still open and not blocked, after 0m10s, 3 turns
+    last tool call: Grep: BUILT_MODES\s*[:=]
+    likely cause: the worker ended without `pm task done|drop 1611` or a pending decision; its last message: The stop hook will keep flagging it as open. If you''d rather clear it from the queue, drop it with the reason "no multiplayer mode built yet" and have `plan 166: Shipping the multiplayer modes and doc
+    log: /home/ruben/code/trivia/.git/pm-logs/task-1611-run-1692.log
+    last output:
+        → Grep: BUILT_MODES\s*[:=]
+      Task 1611 is still waiting, so I made no changes and left it open. `BUILT_MODES` in `app/client/src/engine/game.ts:21` has only `gamemaster` and `solo`. Neither is a multiplayer mode.
+      
+      The task starts once a multiplayer mode is added to `BUILT_MODES`, which `plan 166: Shipping the multiplayer modes and docs` is meant to do. I did not call `pm task done` or `pm task drop`.
+      I''m leaving task 1611 open. It says not to close it until a multiplayer mode is in `BUILT_MODES`, and `BUILT_MODES` still has only `gamemaster` and `solo`. `pm task done` would claim work that doesn''t exist. `pm task drop` would remove the follow-up that `trivia-release-check --demo` step `matrix` needs once `plan 166: Shipping the multiplayer modes and docs` builds a multiplayer mode.
+      
+      Making it pending on a decision doesn''t fit either, because nothing needs a human answer yet.
+      
+      The stop hook will keep flagging it as open. If you''d rather clear it from the queue, drop it with the reason "no multiplayer mode built yet" and have `plan 166: Shipping the multiplayer modes and docs` re-add it when its first mode lands. Tell me and I''ll run the drop.
+      [success: 3 turns, $0.11]', '2026-10-18T03:02:43Z', NULL, NULL, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -47250,6 +47279,11 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 last tool call: Bash: pm show 1571 2>&1 | grep -n -i -E "^# Task 1571" ; pm decision list --answered --grep "Steam''s beta" 2>&1 | head -5
 likely cause: the worker ended without `pm task done|drop 1572` or a pending decision; its last message: Task 1572 should stay in the queue until task 1571 is closed and its decision is answered «passed». I changed and staged nothing. If you want it dropped or parked another way, tell me and I''ll do that
 log: /home/ruben/code/trivia/.git/pm-logs/task-1572-run-1690.log', 0, 'fbd995d1ddda3df17ddc3357a135bf2921aa4af5', 'app', 'claude-sonnet-5-5', '3b9d5cd1-d300-4818-8216-71211a964e63', NULL, 5, 12, 1033, 159070, 28483, 0.1561, 1197781);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1691, 1612, '2026-10-18T03:01:53Z', '2026-10-18T03:02:32Z', 'done', NULL, 0, '06abba8ead1a75375c5db6fb81c77b8d34a0a9d8', 'app', 'claude-opus-5-5', '9c520ec3-f65c-4f8f-99d1-c2196735f8cd', NULL, 8, 16, 2372, 290836, 32682, 0.36712720000000004, 1197781);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1692, 1611, '2026-10-18T03:02:32Z', '2026-10-18T03:02:42Z', 'failed', 'exit 0, but the task is still open and not blocked, after 0m10s, 3 turns
+last tool call: Grep: BUILT_MODES\s*[:=]
+likely cause: the worker ended without `pm task done|drop 1611` or a pending decision; its last message: The stop hook will keep flagging it as open. If you''d rather clear it from the queue, drop it with the reason "no multiplayer mode built yet" and have `plan 166: Shipping the multiplayer modes and doc
+log: /home/ruben/code/trivia/.git/pm-logs/task-1611-run-1692.log', 0, '06abba8ead1a75375c5db6fb81c77b8d34a0a9d8', 'app', 'claude-sonnet-5-5', '8ec964f5-bd7e-445f-8875-c5226d966bcc', NULL, 3, 8, 880, 76071, 21615, 0.1104902, 1197781);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -47820,6 +47854,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1566, 363);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1567, 179);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1568, 179);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1571, 89);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1572, 89);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1580, 358);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1590, 353);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1604, 361);
