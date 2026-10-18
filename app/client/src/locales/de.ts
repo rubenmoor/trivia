@@ -108,6 +108,7 @@ export const de = {
   soundtrack: {
     sintetizada: "Synthetisch",
     variaciones: "Variationen",
+    caja: "Spieluhr",
   },
   language: {
     choose: "Sprache wählen",

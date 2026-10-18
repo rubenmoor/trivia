@@ -108,6 +108,7 @@ export const en = {
   soundtrack: {
     sintetizada: "Synthesized",
     variaciones: "Variations",
+    caja: "Music box",
   },
   language: {
     choose: "Choose your language",
