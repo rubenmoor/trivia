@@ -1,0 +1,1506 @@
+{
+  "version": 1,
+  "locale": "es",
+  "questions": [
+    {
+      "id": "q-2214",
+      "question": "En el río Amazonas hay un punto donde se juntan tres países. ¿Cuál de estos países NO es uno de ellos?",
+      "answer": "Ecuador",
+      "wrong_answers": [
+        "Brasil",
+        "Perú",
+        "Colombia"
+      ],
+      "hints": [
+        "El intruso tiene selva amazónica, pero no toca el cauce principal del río.",
+        "El punto está cerca de la ciudad colombiana de Leticia.",
+        "El intruso se llama igual que la línea imaginaria que divide la Tierra en hemisferio norte y hemisferio sur."
+      ],
+      "description": "Entran tres países a un pueblo a orillas del río y...",
+      "fun_fact": "En esta triple frontera puedes pasar de Colombia a Brasil con solo cruzar una calle.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "a5c4db7249cf"
+    },
+    {
+      "id": "q-2226",
+      "question": "Estás en un museo junto al esqueleto de un mamut lanudo. ¿Más o menos cuánto mide de alto hasta el hombro?",
+      "answer": "Cerca de 3 metros",
+      "wrong_answers": [
+        "Cerca de 30 centímetros",
+        "Cerca de 1 metro",
+        "Cerca de 30 metros"
+      ],
+      "hints": [
+        "Era más o menos del tamaño de un elefante.",
+        "Era más alto que una persona adulta.",
+        "Apenas cabría en una habitación de techo alto."
+      ],
+      "description": "Un elefante que se abrigó bien para la Era de Hielo.",
+      "fun_fact": "Los últimos mamuts lanudos vivieron en una pequeña isla del Ártico hasta hace unos 4000 años, cuando las pirámides de Egipto ya existían.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "78943d3df76d"
+    },
+    {
+      "id": "q-2295",
+      "question": "¿Cuánto tarda más o menos la Tierra en dar una vuelta completa sobre sí misma?",
+      "answer": "Unas 24 horas",
+      "wrong_answers": [
+        "Una hora",
+        "Unos 7 días",
+        "Unos 365 días"
+      ],
+      "hints": [
+        "Mientras gira, en una mitad de la Tierra es de día y en la otra es de noche.",
+        "Una vuelta completa te da una mañana y una noche.",
+        "Es lo que dura un día entero."
+      ],
+      "description": "Todo el planeta va en un juego mecánico que da vueltas, y nadie compró boleto.",
+      "fun_fact": "En el ecuador, el giro de la Tierra te lleva a unos 1670 km/h, y no sientes nada.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "76036271eb59"
+    },
+    {
+      "id": "q-2324",
+      "question": "La fructosa es el azúcar de la fruta. ¿Cuál es el azúcar de la leche?",
+      "answer": "Lactosa",
+      "wrong_answers": [
+        "Sacarosa",
+        "Maltosa",
+        "Glucosa"
+      ],
+      "hints": [
+        "A muchos adultos en el mundo les cuesta digerirlo.",
+        "Hay leches especiales que lo eliminan o lo descomponen.",
+        "Su nombre viene de «lac», la palabra latina para la leche."
+      ],
+      "description": "El secreto dulce escondido en tu vaso de leche, sin necesidad de cuchara.",
+      "fun_fact": "Los quesos duros muy madurados, como el parmesano, casi no tienen lactosa, porque se consume mientras maduran.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "07c075b766ba"
+    },
+    {
+      "id": "q-2386",
+      "question": "En este estadio, India ganó la final de la Copa Mundial de Críquet de 2011. ¿Cómo se llama?",
+      "answer": "Estadio Wankhede",
+      "wrong_answers": [
+        "Eden Gardens",
+        "Estadio M. Chinnaswamy",
+        "Estadio Arun Jaitley"
+      ],
+      "hints": [
+        "Está muy cerca del mar Arábigo.",
+        "Está en Mumbai, la ciudad más grande de la India.",
+        "Después de «Estadio», su nombre empieza con W."
+      ],
+      "description": "Un estadio donde todo un país gritó tan fuerte que despertó al mar.",
+      "fun_fact": "Sachin Tendulkar, que creció en Mumbai, jugó aquí en 2013 su último partido de Test, el formato más largo del críquet.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "748638d932e0"
+    },
+    {
+      "id": "q-2483",
+      "question": "Una famosa leyenda dice que las papitas fritas de bolsa se inventaron en 1853 porque alguien hizo enojar a un cocinero. ¿Quién?",
+      "answer": "Un cliente quisquilloso",
+      "wrong_answers": [
+        "Un rey hambriento",
+        "Un capitán de barco",
+        "Un científico famoso"
+      ],
+      "hints": [
+        "La historia ocurre en un restaurante.",
+        "Esta persona devolvía las papas fritas a la cocina una y otra vez.",
+        "Se quejaba de que las papas estaban cortadas demasiado gruesas."
+      ],
+      "description": "La venganza más crujiente de la historia.",
+      "fun_fact": "Los historiadores creen que la historia es más leyenda que realidad: años antes de 1853 ya se publicaban recetas de rodajas finas de papa frita.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "72e6073351ec"
+    },
+    {
+      "id": "q-2485",
+      "question": "“El árbitro me muestra para advertir a un jugador. Si te muestran dos como yo en un partido, tienes que salir de la cancha.” ¿Qué soy?",
+      "answer": "La tarjeta amarilla",
+      "wrong_answers": [
+        "La tarjeta roja",
+        "La tarjeta verde",
+        "La tarjeta azul"
+      ],
+      "hints": [
+        "El árbitro me guarda en el bolsillo, junto a mi compañera más estricta.",
+        "Soy una advertencia, no el castigo final.",
+        "Soy del color que está en medio del semáforo."
+      ],
+      "description": "Un pedacito de cartón que le puede arruinar toda la tarde a un futbolista.",
+      "fun_fact": "Al árbitro inglés Ken Aston se le ocurrió la idea de las tarjetas amarilla y roja mientras esperaba en un semáforo, y se usaron por primera vez en el Mundial de 1970.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "35e2c9c288c4"
+    },
+    {
+      "id": "q-2738",
+      "question": "Este mosquito rayado transmite una enfermedad también llamada “fiebre quebrantahuesos”. ¿Cuál es?",
+      "answer": "Dengue",
+      "wrong_answers": [
+        "Malaria",
+        "Fiebre del Nilo Occidental",
+        "Enfermedad del sueño"
+      ],
+      "hints": [
+        "La causa un virus.",
+        "Es común en las zonas cálidas y lluviosas del mundo.",
+        "Su nombre empieza con D."
+      ],
+      "description": "Un vampiro diminuto que anda en calcetines a rayas.",
+      "fun_fact": "Este mosquito pica sobre todo de día, a diferencia del mosquito de la malaria, que pica sobre todo de noche.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "b9162fed029a"
+    },
+    {
+      "id": "q-2873",
+      "question": "¿Cuántos signos del zodiaco tiene el horóscopo occidental de siempre?",
+      "answer": "12",
+      "wrong_answers": [
+        "7",
+        "10",
+        "24"
+      ],
+      "hints": [
+        "Hay uno para cada parte del año.",
+        "El Sol pasa más o menos un mes en cada signo.",
+        "Son una docena."
+      ],
+      "description": "El rincón del periódico que conoce tu futuro… o eso dice.",
+      "fun_fact": "El Sol también pasa por una decimotercera constelación, Ofiuco, pero los horóscopos la ignoran.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "a029add8d678"
+    },
+    {
+      "id": "q-2932",
+      "question": "Pedro el Grande trasladó la capital de Rusia a San Petersburgo. ¿Qué ciudad perdió entonces el título y lo recuperó en 1918?",
+      "answer": "Moscú",
+      "wrong_answers": [
+        "Kazán",
+        "Nóvgorod",
+        "Vladímir"
+      ],
+      "hints": [
+        "Es una ciudad muy antigua a orillas de un río con el mismo nombre.",
+        "Su fortaleza tiene murallas rojas y torres coronadas con estrellas rojas.",
+        "Allí está la Catedral de San Basilio, con sus coloridas cúpulas en forma de cebolla."
+      ],
+      "description": "Una ciudad que tuvo la corona, la perdió y nunca dejó de vestirse como reina.",
+      "fun_fact": "San Petersburgo cambió de nombre tres veces: primero Petrogrado, luego Leningrado y de nuevo San Petersburgo en 1991.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "7435315e314c"
+    },
+    {
+      "id": "q-2956",
+      "question": "Hoy en día, este animal vive en libertad sobre todo en una isla al sur de Australia. ¿Qué tipo de animal es?",
+      "answer": "Un marsupial",
+      "wrong_answers": [
+        "Un roedor",
+        "Un perro salvaje",
+        "Un oso pequeño"
+      ],
+      "hints": [
+        "Sus crías nacen diminutas.",
+        "La mayoría de sus parientes viven en Australia y en islas cercanas.",
+        "Sus crías crecen dentro de una bolsa en la panza de su mamá."
+      ],
+      "description": "Su primo de caricatura gira como un tornado, pero el de verdad prefiere solo gritar.",
+      "fun_fact": "Para su tamaño, el demonio de Tasmania tiene una de las mordidas más fuertes de todos los mamíferos.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "491ac36d6af9"
+    },
+    {
+      "id": "q-2972",
+      "question": "Los obreros mezclan cemento gris en polvo con agua, arena y grava, lo vierten en un molde y a los pocos días queda duro como piedra. ¿Qué hicieron?",
+      "answer": "Concreto",
+      "wrong_answers": [
+        "Vidrio",
+        "Yeso",
+        "Ladrillo"
+      ],
+      "hints": [
+        "Con él se hacen puentes, represas y aceras.",
+        "Un camión con un tambor que gira lo lleva a las obras.",
+        "Es el material de construcción más usado del mundo, y los rascacielos se levantan con enormes cantidades de él."
+      ],
+      "description": "Una sopa gris que se convierte en acera si esperas lo suficiente.",
+      "fun_fact": "La cúpula del Panteón de Roma, construida hace unos 1900 años, sigue siendo la cúpula de concreto sin varillas de acero más grande del mundo.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "f22be6eb207f"
+    },
+    {
+      "id": "q-3018",
+      "question": "«Kepler demostró que soy la trayectoria de todo planeta alrededor del Sol, y el Sol está en uno de mis dos focos». ¿Qué forma soy?",
+      "answer": "Elipse",
+      "wrong_answers": [
+        "Círculo",
+        "Parábola",
+        "Espiral"
+      ],
+      "hints": [
+        "Un círculo tiene un solo centro, así que no es eso.",
+        "Parece un círculo un poco aplastado.",
+        "Se puede dibujar con un lazo de hilo alrededor de dos alfileres."
+      ],
+      "description": "Kepler pasó años persiguiendo planetas alrededor del Sol sin levantarse de su escritorio.",
+      "fun_fact": "La órbita de la Tierra se parece tanto a un círculo que, si la dibujaras en papel, no notarías que es una elipse.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "438a302d501b"
+    },
+    {
+      "id": "q-3145",
+      "question": "Unos vaqueros llamados gauchos me hicieron popular: carne cocinada despacio sobre brasas en Argentina y Uruguay. ¿Cómo me llamo?",
+      "answer": "Asado",
+      "wrong_answers": [
+        "Ceviche",
+        "Feijoada",
+        "Mole"
+      ],
+      "hints": [
+        "Suelo ser una larga reunión de domingo con familia y amigos.",
+        "Quien me prepara cuida el fuego durante horas.",
+        "Me suelen servir con chimichurri, una salsa verde de perejil, ajo y aceite."
+      ],
+      "description": "Una fiesta donde el invitado de honor es un montón de brasas encendidas.",
+      "fun_fact": "Uruguay y Argentina están entre los países que más carne de vaca comen por persona en el mundo.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "64803b07e036"
+    },
+    {
+      "id": "q-3158",
+      "question": "Mira esta luciérnaga que brilla. ¿Para qué usa su luz?",
+      "answer": "Para enviar señales a otras luciérnagas",
+      "wrong_answers": [
+        "Para cocinar su comida",
+        "Para mantenerse caliente de noche",
+        "Para ver debajo del agua"
+      ],
+      "hints": [
+        "Las luciérnagas se encienden y se apagan.",
+        "Otras luciérnagas miran esos destellos.",
+        "Es su forma de decir «¡aquí estoy!»."
+      ],
+      "description": "Un bichito que salió de casa y se le olvidó apagar la luz.",
+      "fun_fact": "La luz de la luciérnaga se llama «luz fría» porque casi no da calor, a diferencia de una lámpara común.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "3e69e8a4a09b"
+    },
+    {
+      "id": "q-3170",
+      "question": "Cubro solo una pequeña parte de la tierra firme del planeta, pero en mí vive cerca de la mitad de las especies terrestres de plantas y animales. ¿Qué soy?",
+      "answer": "Selva tropical",
+      "wrong_answers": [
+        "Desierto",
+        "Sabana",
+        "Taiga"
+      ],
+      "hints": [
+        "Hace calor en mí todo el año.",
+        "En mí llueve casi todos los días.",
+        "En mí viven jaguares, tucanes y perezosos."
+      ],
+      "description": "El barrio más poblado de la Tierra, y nadie paga por vivir ahí.",
+      "fun_fact": "Un científico encontró en un solo árbol de la selva de Perú casi tantas especies de hormigas como las que viven en todo el Reino Unido.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "a80bfbf5c0fc"
+    },
+    {
+      "id": "q-3201",
+      "question": "Este famoso detalle de Miguel Ángel muestra a Dios dando vida al primer hombre. Según la Biblia, ¿quiénes fueron las dos primeras personas?",
+      "answer": "Adán y Eva",
+      "wrong_answers": [
+        "Noé y su esposa",
+        "María y José",
+        "Abraham y Sara"
+      ],
+      "hints": [
+        "Vivían en un jardín precioso.",
+        "Una serpiente convenció a uno de ellos de comer una fruta prohibida.",
+        "Sus nombres empiezan con A y con E."
+      ],
+      "description": "Dos dedos a punto de tocarse y muchísima presión para el primer día de vida.",
+      "fun_fact": "En la pintura de Miguel Ángel, los dos dedos en realidad nunca se tocan: queda un pequeñísimo espacio entre ellos.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "47964bb7cb61"
+    },
+    {
+      "id": "q-3276",
+      "question": "En las tierras secas, plantas como esta se quiebran por la base y ruedan con el viento. ¿Por qué lo hacen?",
+      "answer": "Para esparcir sus semillas",
+      "wrong_answers": [
+        "Para buscar agua",
+        "Para escapar de los incendios",
+        "Para mantenerse frescas"
+      ],
+      "hints": [
+        "La planta ya está muerta y seca cuando rueda.",
+        "Tiene que ver con que nazcan nuevas plantas.",
+        "En cada rebote va soltando algo muy pequeño por el camino."
+      ],
+      "description": "La única planta que se va de viaje sin boleto ni maleta.",
+      "fun_fact": "La planta rodadora, famosa por las películas del Viejo Oeste, no es originaria de Estados Unidos: llegó desde Rusia en la década de 1870, escondida entre semillas importadas.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "8009febdc638"
+    },
+    {
+      "id": "q-3291",
+      "question": "Estoy en la cocina, zumbo y retumbo, y luego me apago solo con un clic. ¿Qué hace que me apague?",
+      "answer": "El agua empieza a hervir",
+      "wrong_answers": [
+        "Se acaba un temporizador de un minuto",
+        "Alguien abre la tapa",
+        "El asa se enfría"
+      ],
+      "hints": [
+        "Algo le pasa al agua que tengo adentro.",
+        "Ves salir mucho vapor por mi pico.",
+        "El agua hace esto a 100 °C."
+      ],
+      "description": "La única máquina de la cocina que sabe exactamente cuándo dejar de hablar.",
+      "fun_fact": "En la mayoría de los hervidores eléctricos, el vapor calienta un pequeño disco de metal que se dobla y apaga el interruptor.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "3ec4701a8651"
+    },
+    {
+      "id": "q-3317",
+      "question": "Acabé con el dodo, con ayuda de las ratas y los cerdos que traje, y talé los bosques que muchos animales necesitan. ¿Quién soy?",
+      "answer": "Los seres humanos",
+      "wrong_answers": [
+        "Los dinosaurios",
+        "Los lobos",
+        "Las águilas"
+      ],
+      "hints": [
+        "Vivo en todos los continentes.",
+        "Construyo ciudades, granjas y carreteras.",
+        "Mírate en el espejo."
+      ],
+      "description": "Una adivinanza en la que el culpable está más cerca de lo que crees.",
+      "fun_fact": "El dodo vivía solo en la isla Mauricio y desapareció menos de 100 años después de que llegaran los primeros marineros.",
+      "difficulty": 2,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "17f612dcb2b6"
+    },
+    {
+      "id": "q-3398",
+      "question": "Algunas bicicletas y remolques para niños llevan una banderita en un palo alto y delgado. ¿Para qué sirve?",
+      "answer": "Para que los conductores vean la bici",
+      "wrong_answers": [
+        "Para medir el viento",
+        "Para mostrar el país del ciclista",
+        "Para espantar a los pájaros"
+      ],
+      "hints": [
+        "Tiene que ver con la seguridad.",
+        "Sobresale bien alto, por encima de la cabeza del ciclista.",
+        "Las bicis bajitas pueden ser difíciles de ver desde un vehículo."
+      ],
+      "description": "Una banderita en un palo larguísimo que saluda a cada vehículo que pasa.",
+      "fun_fact": "Las banderas de seguridad se usan sobre todo en bicicletas bajas y remolques para niños, que son difíciles de ver desde un vehículo.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "05597728f686"
+    },
+    {
+      "id": "q-3450",
+      "question": "En el Amazonas lanzan una herramienta como esta para pescar el gigantesco arapaima. ¿Para qué sirve su punta con púas?",
+      "answer": "Para que quede clavada en el pez",
+      "wrong_answers": [
+        "Para cortar la red de pesca",
+        "Para desenterrar gusanos del río",
+        "Para que la herramienta vuele más lejos"
+      ],
+      "hints": [
+        "Las púas apuntan hacia atrás.",
+        "Hacen que la punta sea muy difícil de sacar.",
+        "Por más que se sacuda, el pez no se la puede quitar."
+      ],
+      "description": "Una caña de pescar para gente con cero paciencia.",
+      "fun_fact": "El arapaima puede medir unos 3 metros de largo y tiene que subir a la superficie a respirar aire: justo ahí es cuando los pescadores lo ven.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "93a8165f6fa5"
+    },
+    {
+      "id": "q-3479",
+      "question": "La salsa de tomate italiana parece antiquísima, pero el tomate no llegó a Italia hasta el siglo XVI. ¿De dónde venía?",
+      "answer": "América",
+      "wrong_answers": [
+        "China",
+        "India",
+        "Egipto"
+      ],
+      "hints": [
+        "Cruzó un océano para llegar.",
+        "Llegó a Europa en barcos españoles.",
+        "Los aztecas ya lo cultivaban en México."
+      ],
+      "description": "Una salsa que presume de ser más vieja que la abuela... o eso cree.",
+      "fun_fact": "Durante mucho tiempo, muchos europeos cultivaban tomates solo como adorno, porque creían que podían ser venenosos.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "1abbdd5b9479"
+    },
+    {
+      "id": "q-3525",
+      "question": "Soy la forma japonesa de decir “hola” o “buenas tardes”, y se usa desde media mañana hasta la noche. ¿Qué palabra soy?",
+      "answer": "Konnichiwa",
+      "wrong_answers": [
+        "Ohayō",
+        "Sayōnara",
+        "Arigatō"
+      ],
+      "hints": [
+        "Me dices cuando te encuentras con alguien, no cuando te despides.",
+        "Para decir “buenos días” hay otra palabra.",
+        "Empiezo con “Kon…”."
+      ],
+      "description": "Una palabra que viajó desde Tokio hasta la sala de cada fan del anime.",
+      "fun_fact": "Konnichiwa viene de una frase más larga que significa más o menos “hoy es…”, el comienzo de un saludo cortés.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "6393843dd6d8"
+    },
+    {
+      "id": "q-3536",
+      "question": "La birria es un guiso picante, a menudo de carne de cabra. Viene del mismo estado mexicano que el tequila y el mariachi. ¿Qué estado?",
+      "answer": "Jalisco",
+      "wrong_answers": [
+        "Oaxaca",
+        "Yucatán",
+        "Veracruz"
+      ],
+      "hints": [
+        "El estado está en el oeste de México.",
+        "Su capital es Guadalajara.",
+        "Su nombre empieza con J."
+      ],
+      "description": "Un guiso tan rico que la gente moja sus tacos en él como galletas en la leche.",
+      "fun_fact": "Los tacos de birria suelen mojarse en el propio caldo rojo del guiso antes de cada mordida.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5a12997ed1a3"
+    },
+    {
+      "id": "q-3550",
+      "question": "Los montañistas le temen: se forman cristales de hielo en dedos, nariz y orejas, y nunca hay que frotar la piel. ¿Cómo se llama?",
+      "answer": "Congelación",
+      "wrong_answers": [
+        "Hipotermia",
+        "Ceguera de la nieve",
+        "Mal de altura"
+      ],
+      "hints": [
+        "Daña solo algunas partes del cuerpo, no el cuerpo entero.",
+        "Afecta primero a las partes del cuerpo más alejadas del corazón.",
+        "Es lo que pasa cuando la piel misma se convierte en hielo."
+      ],
+      "description": "La manera que tiene el invierno de castigar a quien olvidó los guantes.",
+      "fun_fact": "La forma más leve y temprana, llamada congelación superficial, sana sin dejar daños permanentes.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "dfc80e2ad0b4"
+    },
+    {
+      "id": "q-3565",
+      "question": "¿Cómo se llama esta avalancha rápida de gas caliente, ceniza y rocas que baja a toda velocidad por la ladera de un volcán?",
+      "answer": "Un flujo piroclástico",
+      "wrong_answers": [
+        "Un lahar",
+        "Un flujo de lava",
+        "Un jökulhlaup"
+      ],
+      "hints": [
+        "No es roca líquida ni un flujo de lodo.",
+        "Puede ir más rápido que un Fórmula 1 y está más caliente que un horno.",
+        "Su nombre viene de las palabras griegas para «fuego» y «pedazos rotos»."
+      ],
+      "description": "Un volcán que no se conforma con escurrir: él baja corriendo a toda velocidad.",
+      "fun_fact": "Un flujo piroclástico del monte Vesubio sepultó la ciudad romana de Herculano en el año 79.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "75150fa6e682"
+    },
+    {
+      "id": "q-3577",
+      "question": "Soy la segunda montaña más alta de la Tierra, con 8611 metros, en la frontera entre Pakistán y China. ¿Cómo me llamo?",
+      "answer": "K2",
+      "wrong_answers": [
+        "Kangchenjunga",
+        "Lhotse",
+        "Makalu"
+      ],
+      "hints": [
+        "No estoy en el Himalaya, sino en la cordillera del Karakórum.",
+        "Los alpinistas me llaman la “montaña salvaje”.",
+        "Mi nombre es solo una letra y un número."
+      ],
+      "description": "Siempre en segundo lugar, pero un segundo lugar altísimo.",
+      "fun_fact": "Su nombre viene de una etiqueta de un estudio topográfico del siglo XIX: K por Karakórum y 2 porque fue el segundo pico de la lista.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "3c77185bdd1f"
+    },
+    {
+      "id": "q-3649",
+      "question": "Estas cayeron de un árbol del patio. ¿Qué tipo de residuo son?",
+      "answer": "Residuos orgánicos",
+      "wrong_answers": [
+        "Residuos plásticos",
+        "Residuos de vidrio",
+        "Residuos electrónicos"
+      ],
+      "hints": [
+        "Vienen de algo que estaba vivo.",
+        "A las lombrices les encanta comérselas.",
+        "Se pueden convertir en abono para las plantas."
+      ],
+      "description": "Los árboles las tiran cada otoño y nunca recogen su desorden.",
+      "fun_fact": "En una compostera, las hojas secas se llaman «materiales marrones» y equilibran los restos húmedos de la cocina.",
+      "difficulty": 1,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "b406d6af8b6e"
+    },
+    {
+      "id": "q-3714",
+      "question": "Esta ave vive en unas islas cuya fauna inspiró las ideas sobre la evolución de un científico. ¿De quién?",
+      "answer": "Charles Darwin",
+      "wrong_answers": [
+        "Gregor Mendel",
+        "Louis Pasteur",
+        "Jean-Baptiste Lamarck"
+      ],
+      "hints": [
+        "Las islas están en el Pacífico, frente a la costa de Ecuador.",
+        "Viajó hasta allí en un barco llamado Beagle.",
+        "Escribió «El origen de las especies»."
+      ],
+      "description": "Un ave que parece que pisó un balde de pintura azul y está orgullosísima de ello.",
+      "fun_fact": "Los machos de piquero de patas azules presumen sus patas con un pequeño baile, y las hembras prefieren las patas más azules.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "7cd6083073c8"
+    },
+    {
+      "id": "q-3765",
+      "question": "“Nado en todos los océanos, me encanta comer medusas y a menudo confundo con ellas las bolsas de plástico que flotan.” ¿Quién soy?",
+      "answer": "Tortuga marina",
+      "wrong_answers": [
+        "Pulpo",
+        "Cangrejo",
+        "Delfín"
+      ],
+      "hints": [
+        "Existo desde la época de los dinosaurios.",
+        "Voy a la playa a poner mis huevos.",
+        "Llevo un caparazón duro sobre la espalda."
+      ],
+      "description": "Una bolsa del supermercado que flota como un fantasma y engaña a un nadador hambriento del mar.",
+      "fun_fact": "Las tortugas laúd comen tantas medusas que en un solo día pueden devorar cerca de tres cuartas partes de su propio peso.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "79fa4f241ad5"
+    },
+    {
+      "id": "q-3885",
+      "question": "¿Cuál de estos lugares NO sufrió un desastre que empezó con un terremoto?",
+      "answer": "Chernóbil",
+      "wrong_answers": [
+        "Fukushima",
+        "Kobe",
+        "Lisboa"
+      ],
+      "hints": [
+        "Uno de estos lugares está lejos de donde se juntan las placas de la Tierra.",
+        "Su desastre ocurrió en 1986.",
+        "Empezó durante una prueba dentro de una central nuclear."
+      ],
+      "description": "A tres de estos lugares el susto les llegó desde bajo tierra; el otro tuvo un mal día de una clase muy distinta.",
+      "fun_fact": "En Fukushima, en 2011, el tsunami que siguió al terremoto inundó los generadores de respaldo que mantenían fríos los reactores.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "8bfd3fe0e9f1"
+    },
+    {
+      "id": "q-3903",
+      "question": "¿Cómo se llama el lugar de esta foto, donde un río llega al mar?",
+      "answer": "La desembocadura",
+      "wrong_answers": [
+        "El nacimiento",
+        "El meandro",
+        "Los rápidos"
+      ],
+      "hints": [
+        "Su nombre esconde una parte del cuerpo.",
+        "Está al final del viaje del río.",
+        "Dentro de la palabra está la parte de la cara con la que comes."
+      ],
+      "description": "El lugar donde un río por fin puede saludar al mar.",
+      "fun_fact": "Muchos idiomas usan la misma idea: en inglés se dice «mouth», que significa «boca», y en alemán «Mündung», que viene de «Mund», también «boca».",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "3ba05950f5ae"
+    },
+    {
+      "id": "q-3994",
+      "question": "La capa ácida de dulces como estos suele llevar el mismo ácido que hace agria a una fruta. ¿Cuál es esa fruta?",
+      "answer": "El limón",
+      "wrong_answers": [
+        "El higo",
+        "El coco",
+        "El melón"
+      ],
+      "hints": [
+        "Es una fruta amarilla.",
+        "Crece en árboles en lugares cálidos y soleados, como el Mediterráneo.",
+        "Su ácido se llama ácido cítrico."
+      ],
+      "description": "Dulces que ponen tu cara a hacer gimnasia.",
+      "fun_fact": "El ácido cítrico debe su nombre a los cítricos, y hoy casi todo se fabrica con un moho que se alimenta de azúcar.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "4bdb8d280fc3"
+    },
+    {
+      "id": "q-4039",
+      "question": "El pico de gallo es una salsa fresca de tomate, cebolla, chile y cilantro picados. ¿De qué país es originario?",
+      "answer": "México",
+      "wrong_answers": [
+        "España",
+        "Perú",
+        "Argentina"
+      ],
+      "hints": [
+        "Sus colores son los mismos que los de la bandera de ese país.",
+        "Se suele servir con tacos y nachos.",
+        "En ese país están las ruinas de los aztecas."
+      ],
+      "description": "Una salsa que se llama como una parte de un ave, pero no tiene ni una pluma.",
+      "fun_fact": "El pico de gallo no lleva nada de gallo, y nadie sabe con certeza por qué se llama así.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "75ea97a14e88"
+    },
+    {
+      "id": "q-4120",
+      "question": "Escucha: este canto nocturno de dos notas es un sonido famoso de Puerto Rico. ¿Qué animal lo hace?",
+      "answer": "Una rana diminuta",
+      "wrong_answers": [
+        "Un grillo",
+        "Un búho pequeño",
+        "Un murciélago"
+      ],
+      "hints": [
+        "Miles de ellos cantan juntos después de la lluvia.",
+        "Su nombre imita su canto: «co-quí».",
+        "No tiene cola y tiene almohadillas pegajosas en los dedos para trepar."
+      ],
+      "description": "Un cantante diminuto que se pasa la noche entera diciendo su propio nombre.",
+      "fun_fact": "Los coquíes son un símbolo de Puerto Rico, pero en Hawái, adonde llegaron por accidente, la gente se queja de que hacen demasiado ruido.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5095b4eb6ec1"
+    },
+    {
+      "id": "q-4155",
+      "question": "El miná común es un ave marrón con piel amarilla alrededor de los ojos que imita el habla humana y es una plaga en Australia. ¿De dónde es?",
+      "answer": "Asia del Sur",
+      "wrong_answers": [
+        "América del Sur",
+        "África Occidental",
+        "Europa del Sur"
+      ],
+      "hints": [
+        "Es pariente de los estorninos.",
+        "Su región de origen también es el hogar del tigre de Bengala.",
+        "Es muy común en las calles de la India."
+      ],
+      "description": "Un ave que se mudó al extranjero y no para de hablar de eso.",
+      "fun_fact": "El miná común es una de las solo tres aves en la lista de la UICN de las 100 peores especies invasoras del mundo.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "68b0fecbaee5"
+    },
+    {
+      "id": "q-4231",
+      "question": "¿Cuál de estos NO fue uno de los Reyes Magos que visitaron al niño Jesús?",
+      "answer": "José",
+      "wrong_answers": [
+        "Melchor",
+        "Gaspar",
+        "Baltasar"
+      ],
+      "hints": [
+        "Los nombres de los Reyes Magos vienen de una antigua tradición de la Iglesia, no de la Biblia.",
+        "El intruso aparece en la historia de Navidad desde el principio.",
+        "Era carpintero y el esposo de María."
+      ],
+      "description": "Tres viajeros, una estrella y cero mapas.",
+      "fun_fact": "La Biblia nunca dice que fueran tres ni da sus nombres; el número probablemente viene de sus tres regalos.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "46d28d2813db"
+    },
+    {
+      "id": "q-4261",
+      "question": "El ratatouille también es un plato de verdad de Francia. ¿Cuál de estos ingredientes NO lleva?",
+      "answer": "Banana",
+      "wrong_answers": [
+        "Tomate",
+        "Calabacín",
+        "Berenjena"
+      ],
+      "hints": [
+        "El plato de verdad es un guiso de verduras.",
+        "Tres de estos crecen en una huerta en verano.",
+        "Busca la fruta dulce y amarilla."
+      ],
+      "description": "Una rata en París le demuestra a un crítico muy exigente que las verduras también pueden ser deliciosas.",
+      "fun_fact": "El elegante ratatouille en capas de la película se diseñó con ayuda del famoso chef Thomas Keller.",
+      "difficulty": 1,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "896abdefef3e"
+    },
+    {
+      "id": "q-4355",
+      "question": "Las alitas Buffalo son picantes, se suelen mojar en salsa y llevan el nombre de una ciudad de Estados Unidos. ¿De qué animal son?",
+      "answer": "Pollo",
+      "wrong_answers": [
+        "Búfalo",
+        "Vaca",
+        "Pato"
+      ],
+      "hints": [
+        "El nombre es una trampa: el animal no aparece en él.",
+        "Esta ave pone los huevos que comes en el desayuno.",
+        "En la granja hace «coc, coc, coc»."
+      ],
+      "description": "Una comida con un nombre un poquito mentiroso.",
+      "fun_fact": "Las alitas Buffalo deben su nombre a la ciudad de Búfalo, en Nueva York, donde se hicieron famosas en los años sesenta.",
+      "difficulty": 2,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "9dc3ce9f7447"
+    },
+    {
+      "id": "q-4364",
+      "question": "Estás buceando con snorkel y te topas con una raya eléctrica grande. ¿Más o menos qué tan fuerte sería su descarga?",
+      "answer": "Unos 200 voltios",
+      "wrong_answers": [
+        "Unos 2 voltios",
+        "Unos 20 voltios",
+        "Unos 20 000 voltios"
+      ],
+      "hints": [
+        "Es mucho más fuerte que una pila pequeña.",
+        "Alcanza para tumbar a un adulto, pero no para iluminar una ciudad entera.",
+        "Es parecida a la electricidad de un enchufe de la pared en muchos países."
+      ],
+      "description": "Algunos peces vienen con pilas incluidas y ni siquiera necesitan cargador.",
+      "fun_fact": "En la antigua Roma, los médicos ponían rayas eléctricas sobre la cabeza de los pacientes para intentar curarles el dolor de cabeza.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "ab0d56324e99"
+    },
+    {
+      "id": "q-4428",
+      "question": "El ramen de miso viene de Sapporo y el tonkotsu, de Fukuoka. ¿En qué ciudad nació el ramen de shoyu (salsa de soya)?",
+      "answer": "Tokio",
+      "wrong_answers": [
+        "Osaka",
+        "Kioto",
+        "Nagoya"
+      ],
+      "hints": [
+        "Su primer local de ramen famoso abrió a comienzos del siglo XX, con cocineros chinos en la cocina.",
+        "Está en la región de Kanto, en el este de Japón.",
+        "En 1910 abrió un famoso local de ramen en su barrio de Asakusa."
+      ],
+      "description": "Cada tazón de ramen tiene su tierra natal, y este se crió en la gran ciudad.",
+      "fun_fact": "Rairaiken, abierto en 1910 en el barrio de Asakusa, en Tokio, suele considerarse el primer local popular de ramen de Japón, y su caldo era a base de salsa de soya.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "a0580c6ec566"
+    },
+    {
+      "id": "q-4522",
+      "question": "Mira este cráneo enorme, con dientes grandes como plátanos. ¿De qué dinosaurio era?",
+      "answer": "Tiranosaurio rex",
+      "wrong_answers": [
+        "Estegosaurio",
+        "Triceratops",
+        "Braquiosaurio"
+      ],
+      "hints": [
+        "Comía carne.",
+        "Tenía unos brazos diminutos.",
+        "Su nombre significa «rey lagarto tirano»."
+      ],
+      "description": "Alguien necesitaba urgentemente ir al dentista hace unos 66 millones de años.",
+      "fun_fact": "Un tiranosaurio mordía con más fuerza que cualquier animal terrestre de hoy.",
+      "difficulty": 2,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "c7e5845f2f85"
+    },
+    {
+      "id": "q-4636",
+      "question": "Estás de safari y un impala asustado sale saltando. ¿Más o menos qué distancia puede recorrer de un solo salto?",
+      "answer": "10 metros",
+      "wrong_answers": [
+        "2 metros",
+        "40 metros",
+        "100 metros"
+      ],
+      "hints": [
+        "Es más que el mejor salto de longitud humano, de unos 9 metros.",
+        "Es más largo que la altura de una jirafa.",
+        "Es más o menos el largo de dos automóviles, uno detrás del otro."
+      ],
+      "description": "Un antílope que convierte cada arbusto en una carrera de obstáculos.",
+      "fun_fact": "Los impalas también pueden saltar unos 3 metros de altura, y pasan volando por encima de otros impalas.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "8e51b27c2054"
+    },
+    {
+      "id": "q-4671",
+      "question": "El nombre de la lavanda probablemente viene de “lavare”, una antigua palabra que significa “lavar”. ¿Qué pueblo antiguo hablaba esa lengua?",
+      "answer": "Los romanos",
+      "wrong_answers": [
+        "Los antiguos griegos",
+        "Los antiguos egipcios",
+        "Los persas"
+      ],
+      "hints": [
+        "Construyeron caminos largos y rectos por toda Europa.",
+        "También construyeron acueductos para llevar agua a sus ciudades.",
+        "Su lengua, el latín, es la antepasada del italiano, el español y el francés."
+      ],
+      "description": "Huele al ropero de la abuela, pero en el buen sentido.",
+      "fun_fact": "La lavanda pertenece a la familia de la menta, igual que la albahaca, el romero y la salvia.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "cf566ced49c2"
+    },
+    {
+      "id": "q-4754",
+      "question": "Los buques de guerra más grandes jamás construidos son de este tipo. Algunos llevan unas 5000 personas y funcionan con energía nuclear más de 20 años sin recargar combustible. ¿Qué son?",
+      "answer": "Portaaviones",
+      "wrong_answers": [
+        "Acorazados",
+        "Destructores",
+        "Submarinos"
+      ],
+      "hints": [
+        "La parte de arriba del barco es plana y muy larga.",
+        "Muchas de las personas a bordo son pilotos y personal de aviación, no marineros.",
+        "Los aviones despegan y aterrizan sobre él."
+      ],
+      "description": "Una ciudad flotante tan grande que hasta tiene su propia oficina de correos y su peluquería.",
+      "fun_fact": "La cubierta es tan corta para ser una pista que los aviones salen lanzados por catapultas y se detienen con ganchos que atrapan cables.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "de45f0da81fe"
+    },
+    {
+      "id": "q-4766",
+      "question": "Estás en una playa de Hawái, que viaja sobre la placa del Pacífico. ¿Más o menos cuánto se mueve esta placa en un año?",
+      "answer": "Unos 7 cm",
+      "wrong_answers": [
+        "Unos 7 mm",
+        "Unos 70 cm",
+        "Unos 7 m"
+      ],
+      "hints": [
+        "Nunca podrías sentirlo, pero en millones de años se nota.",
+        "Es una de las placas más rápidas de la Tierra.",
+        "Es como el doble de lo que crecen tus uñas."
+      ],
+      "description": "La playa bajo tu toalla se va de viaje, pero muy, muy despacito.",
+      "fun_fact": "Como la placa se desliza sobre un punto caliente fijo, los volcanes de Hawái forman una cadena, y las islas más antiguas quedan más al noroeste.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d59fb9a1ced8"
+    },
+    {
+      "id": "q-4874",
+      "question": "Este fósil en espiral es un amonites. ¿Dónde vivían estos animales?",
+      "answer": "En el mar",
+      "wrong_answers": [
+        "En los bosques",
+        "En los desiertos",
+        "En las cuevas"
+      ],
+      "hints": [
+        "El animal vivía dentro de su concha en espiral.",
+        "Los amonites vivieron en la época de los dinosaurios, y sus fósiles suelen aparecer en rocas formadas por capas de lodo.",
+        "Para conocer uno, tendrías que mojarte."
+      ],
+      "description": "Un rollo de canela de piedra que nadie quiere para el desayuno.",
+      "fun_fact": "Los parientes vivos más cercanos de los amonites son los calamares y los pulpos.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "c0b95ecacdc9"
+    },
+    {
+      "id": "q-4941",
+      "question": "Siembras una semilla de papaya. ¿Más o menos cuánto tarda la plantita en dar su primer fruto?",
+      "answer": "Menos de un año",
+      "wrong_answers": [
+        "Unos 10 años",
+        "Unos 30 años",
+        "Unos 100 años"
+      ],
+      "hints": [
+        "Las plantas de papaya crecen sorprendentemente rápido.",
+        "No tienes que esperar muchos cumpleaños.",
+        "Podrías sembrarla en primavera y comer papaya antes de la siguiente primavera."
+      ],
+      "description": "Un árbol tan apurado que se salta la infancia y pasa directo al postre.",
+      "fun_fact": "El “árbol” de papaya no es un árbol de verdad: su tronco blando y hueco lo hace parecerse más a una hierba gigante.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "bea143f07fb3"
+    },
+    {
+      "id": "q-4983",
+      "question": "Unos científicos noruegos llamaron «frente» a la línea donde el aire frío empuja al aire cálido, por las líneas de batalla de una guerra reciente. ¿Más o menos cuándo?",
+      "answer": "Hacia 1920",
+      "wrong_answers": [
+        "Hacia 1820",
+        "Hacia 1870",
+        "Hacia 1970"
+      ],
+      "hints": [
+        "Los globos meteorológicos y la radio todavía eran muy nuevos.",
+        "La guerra en la que pensaban se peleó sobre todo en trincheras.",
+        "Fue justo después de la Primera Guerra Mundial."
+      ],
+      "description": "Cuando el clima se va a la guerra, por lo menos lleva su propio paraguas.",
+      "fun_fact": "En los mapas meteorológicos, un frente frío se dibuja como una línea azul con triángulos, y un frente cálido como una línea roja con semicírculos.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-es-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "fdbbcca25d11"
+    }
+  ]
+}

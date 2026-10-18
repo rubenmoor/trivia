@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "844876a2",
+  "hash": "b1be46c6",
   "questions": [
     {
       "id": "q-0016",
@@ -4079,6 +4079,176 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Mx. Granger",
         "author_url": "https://commons.wikimedia.org/wiki/User:Mx._Granger"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2386",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "cricket",
+      "bundle": "base",
+      "description": "Un estadio donde todo un país gritó tan fuerte que despertó al mar.",
+      "question": "En este estadio, India ganó la final de la Copa Mundial de Críquet de 2011. ¿Cómo se llama?",
+      "answer": "Estadio Wankhede",
+      "wrong_answers": [
+        "Eden Gardens",
+        "Estadio M. Chinnaswamy",
+        "Estadio Arun Jaitley"
+      ],
+      "hints": [
+        "Está muy cerca del mar Arábigo.",
+        "Está en Mumbai, la ciudad más grande de la India.",
+        "Después de «Estadio», su nombre empieza con W."
+      ],
+      "fun_fact": "Sachin Tendulkar, que creció en Mumbai, jugó aquí en 2013 su último partido de Test, el formato más largo del críquet.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Wankhede_Stadium_as_seen_from_Marine_Lines%2C_Mumbai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWankhede_Stadium_as_seen_from_Marine_Lines%2C_Mumbai.jpg",
+        "credit": "DesiBoy101 · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "DesiBoy101",
+        "author_url": "https://commons.wikimedia.org/wiki/User:DesiBoy101"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2485",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "football-history",
+      "bundle": "base",
+      "description": "Un pedacito de cartón que le puede arruinar toda la tarde a un futbolista.",
+      "question": "“El árbitro me muestra para advertir a un jugador. Si te muestran dos como yo en un partido, tienes que salir de la cancha.” ¿Qué soy?",
+      "answer": "La tarjeta amarilla",
+      "wrong_answers": [
+        "La tarjeta roja",
+        "La tarjeta verde",
+        "La tarjeta azul"
+      ],
+      "hints": [
+        "El árbitro me guarda en el bolsillo, junto a mi compañera más estricta.",
+        "Soy una advertencia, no el castigo final.",
+        "Soy del color que está en medio del semáforo."
+      ],
+      "fun_fact": "Al árbitro inglés Ken Aston se le ocurrió la idea de las tarjetas amarilla y roja mientras esperaba en un semáforo, y se usaron por primera vez en el Mundial de 1970.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/86th_MDG_wins_flag_football_championship_%287531676%29.jpg/3840px-86th_MDG_wins_flag_football_championship_%287531676%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A86th_MDG_wins_flag_football_championship_%287531676%29.jpg",
+        "credit": "U.S. Air Force photo by Airman 1st Class Regan Enriquez · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Air Force photo by Airman 1st Class Regan Enriquez",
+        "author_url": "https://www.dvidshub.net/portfolio/1734692"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2873",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "stars-and-galaxies",
+      "bundle": "base",
+      "description": "El rincón del periódico que conoce tu futuro… o eso dice.",
+      "question": "¿Cuántos signos del zodiaco tiene el horóscopo occidental de siempre?",
+      "answer": "12",
+      "wrong_answers": [
+        "7",
+        "10",
+        "24"
+      ],
+      "hints": [
+        "Hay uno para cada parte del año.",
+        "El Sol pasa más o menos un mes en cada signo.",
+        "Son una docena."
+      ],
+      "fun_fact": "El Sol también pasa por una decimotercera constelación, Ofiuco, pero los horóscopos la ignoran.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Starry_night_%28175371483%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStarry_night_%28175371483%29.jpg",
+        "credit": "Chad Ajamian · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Chad Ajamian",
+        "author_url": "https://500px.com/cajamian"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3018",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "solar-system",
+      "bundle": "base",
+      "description": "Kepler pasó años persiguiendo planetas alrededor del Sol sin levantarse de su escritorio.",
+      "question": "«Kepler demostró que soy la trayectoria de todo planeta alrededor del Sol, y el Sol está en uno de mis dos focos». ¿Qué forma soy?",
+      "answer": "Elipse",
+      "wrong_answers": [
+        "Círculo",
+        "Parábola",
+        "Espiral"
+      ],
+      "hints": [
+        "Un círculo tiene un solo centro, así que no es eso.",
+        "Parece un círculo un poco aplastado.",
+        "Se puede dibujar con un lazo de hilo alrededor de dos alfileres."
+      ],
+      "fun_fact": "La órbita de la Tierra se parece tanto a un círculo que, si la dibujaras en papel, no notarías que es una elipse.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Solar_System_Illustration_%28rubin-20220314-Solar-System-hero%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASolar_System_Illustration_%28rubin-20220314-Solar-System-hero%29.jpg",
+        "credit": "Rubin Observatory/NSF/AURA · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Rubin Observatory/NSF/AURA",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-3201",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "bible-stories",
+      "bundle": "base",
+      "description": "Dos dedos a punto de tocarse y muchísima presión para el primer día de vida.",
+      "question": "Este famoso detalle de Miguel Ángel muestra a Dios dando vida al primer hombre. Según la Biblia, ¿quiénes fueron las dos primeras personas?",
+      "answer": "Adán y Eva",
+      "wrong_answers": [
+        "Noé y su esposa",
+        "María y José",
+        "Abraham y Sara"
+      ],
+      "hints": [
+        "Vivían en un jardín precioso.",
+        "Una serpiente convenció a uno de ellos de comer una fruta prohibida.",
+        "Sus nombres empiezan con A y con E."
+      ],
+      "fun_fact": "En la pintura de Miguel Ángel, los dos dedos en realidad nunca se tocan: queda un pequeñísimo espacio entre ellos.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Creation_of_Adam_%28Michelangelo%29_Detail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACreation_of_Adam_%28Michelangelo%29_Detail.jpg",
+        "credit": "Michelangelo · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Michelangelo",
+        "author_url": "https://en.wikipedia.org/wiki/en:Michelangelo"
       },
       "background": null
     }
