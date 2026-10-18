@@ -186,6 +186,15 @@ Only the fields that differ from `es`: «vosotros», «vídeo», «ordenador», 
   > Die Oberfläche ist auf Deutsch; die Fragen sind vorerst auf Spanisch. Deutsche Fragen folgen mit einem Update.
 - **At launch** (not on the beta page; 17a "Modding", decision 175): the Modding section's `de` feature bullet before the Steam-Erfolge bullet, its link line before Datenschutz
 
+## Free demo
+Decision 343: Demo store presence: own store page, or only the Download demo button on the full game's page? → button only: the demo appears as Steam's «Download demo» button on the full game's page; no own demo page, no demo-specific store media (no demo screenshots, trailer or capsules; the demo's Library art, if Steamworks asks for it, is open in the approval decision "Demo store material approved?"). Decision 344: the demo is released with the full game, so the line below is an "At launch" item, not on the beta page. Drafted 2026-10-17 (`task 1566`) against the style guides (`locales/style/<locale>.md`).
+- One feature bullet in About This Game, after the offline bullet; no demo name, no content claims (the demo's content is plan 174's list)
+- **en:** `[*]Free demo to try before you buy`
+- **es:** `[*]Demostración gratuita para probar el juego antes de comprarlo`
+- **es-ES:** as `es` (no address, no override)
+- **de:** `[*]Kostenlose Demo zum Ausprobieren vor dem Kauf`
+- Rule: the demo is free (decision 66: Price model (OQ-33): how is the game sold on Steam?); no price or store link in the text
+
 ## Free DLC
 Store texts for each shipped question bundle, one free DLC app each (decision 66: price model, decision 110: regional packs at launch: `colombia` es + en, off by default; `usa` en only). Entered on the DLC app's own store page (Steamworks → DLC app → Edit Store Page), same fields as the base game. Drafted 2026-10-14 (`task 783`); approved through pm decision "DLC store texts approved? (colombia)".
 
