@@ -40457,6 +40457,13 @@ Write, in this order:
 Leave out everything about how the work is managed: decisions, sign-offs, tasks, plans, runs, failures, cost, tests
 and pm itself; never ids, file names or counts of these. One screen at most, about 250 words, few headings.
 Store it: `pm summary add < summary.md`, delete summary.md, then close your task.', '2026-10-18T01:24:14Z', '2026-10-18T01:24:28Z', NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1610, NULL, 'Bundle tiles: «5000+ questions», not a bare number', 'exec', 'open', NULL, NULL, 'The developer: every bundle tile names the unit: «5000+ questions», «2000+ questions», «100+ questions» (demo), not a bare «5000+». Today `bundles.count` is "{n}" and `bundles.countPlus` "{n}+" in every catalog (`app/client/src/game/BundleSelector.svelte:176`).
+
+- `app/client/src/locales/{es,es-ES,en,de}.ts` (+ `xx.ts`): `bundles.countPlus` → "{n}+ questions" in each language; `bundles.count` (a mod bundle''s exact small count) → plural forms ("1 question" / "{n} questions"); read `locales/style/<locale>.md` first
+- Rules of `decision 267: Bundle tiles: question count strings` unchanged (which number, rounding); add a consequence line: the strings carry the noun
+- Check the tile layout at 1920x1080 and 1280x800 (longest: de) with a gallery set: `trivia-gallery --set task-<id> --only bundles` and `--demo --set task-<id> --only bundles`, then `pm decision add --once` for the developer''s look at `/gallery?set=task-<id>` and `/gallery?demo&set=task-<id>`
+
+Done when: every bundle tile, demo included, reads «N+ questions» in all four UI languages, the gallery sets are linked in a decision, the pre-commit checks pass.', '2026-10-18T01:47:19Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
