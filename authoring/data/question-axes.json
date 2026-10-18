@@ -75,7 +75,7 @@
     }
   },
   "weights": {
-    "move": {"connection": 0},
+    "move": {"analogy": 0.3, "connection": 0},
     "clue": {"scenario": 0.4, "three_facts": 2},
     "stimulus": {"none": 5, "photo": 1.5, "detail": 0.8, "silhouette": 0.4, "map_outline": 0.4, "sound": 0.8, "video": 0.3}
   },
