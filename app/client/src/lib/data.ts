@@ -16,6 +16,9 @@ async function get(file: string, optional = false): Promise<unknown> {
   return res.json();
 }
 
+/** base's pool file of a locale: the demo's own list in a demo build (plan 174), no packs there. */
+const basePoolFile = (locale: string): string => (buildInfo().demo ? `demo/${poolFile(locale)}` : poolFile(locale));
+
 /** Question locales a pool may exist for (D-78); es always has one. */
 export const LOCALES = ["es", "es-ES", "en", "de"] as const;
 
@@ -47,7 +50,7 @@ export function loadEngineData(locale = "es", ui = locale): Promise<EngineData> 
 export async function availableLocales(): Promise<string[]> {
   const found = await Promise.all(LOCALES.map(async (l) => {
     if (l === "es") return true;
-    const res = await call(`/data/${poolFile(l)}`);
+    const res = await call(`/data/${basePoolFile(l)}`);
     await res.body?.cancel();
     return res.ok;
   }));
@@ -90,9 +93,9 @@ interface Loaded {
  * a broken one is left out like a pack without a file, its issues in modIssues(). Then the mods' data hooks (plan 117). */
 async function load(locale: string): Promise<Loaded> {
   const [pool, bundles, ageGroups] = await Promise.all(
-    [poolFile(locale), "bundles.json", "age-groups.json"].map((f) => get(f)),
+    [basePoolFile(locale), "bundles.json", "age-groups.json"].map((f) => get(f)),
   );
-  const all = parseBundles(bundles).map((b) => {
+  const all = parseBundles(bundles).filter((b) => !buildInfo().demo || b.id === "base").map((b) => {
     if (b.source !== "mod") return b;
     const languages = b.languages.filter((l) => (LOCALES as readonly string[]).includes(l));
     issue(b, "bundle_language", b.languages.length - languages.length);
