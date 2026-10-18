@@ -34,7 +34,7 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
 --demo (plan 177, decision 342): the demo build. Steps tag, checks, licenses, desktop (trivia-desktop-build --dir --demo, trivia-steam
 stage --demo), media-budget (stage-media.mjs --check --demo), credits (on release/demo/*-unpacked), smoke (smoke.mjs --demo --trace a),
 determinism (the smoke again, trace b; ✗ names the first difference), multiplayer (--demo --multiplayer); no quality, nix, report,
-modkit, mods (decision 337 decides the mods rows later). Manual rows: offline, windows, sound, signoff, start-line. Report:
+modkit, mods (mods off, decision 337). Manual rows: offline, windows, sound, cloud, signoff, start-line. Report:
 work/steam/<tag>/demo/release-check.{md,json}, header: version, demo list hash (authoring/data/demo.json), demo pool count per locale.
 
 Report header: version, every shipped pool's hash (app/data/pool.json = es, pool.<locale>.json, a pack's as <locale>/<bundle>), previous tag (newest v* reachable from HEAD, not HEAD's own), kind
@@ -119,11 +119,13 @@ MANUAL = {
     "beta-save": ("save", "save version changed: testers stay on beta until this build is on default", None),
     "signoff": ("always", "the family plays the candidate from beta", "the developer's OK"),
 }
-# The demo's rows (plan 177); decision 337 adds report, telemetry, workshop, cloud later.
+# The demo's rows (plan 177). Decision 337 (minimal): Cloud on; mods, Workshop, telemetry, reports, achievements off, so no modkit/mods steps and no
+# report, telemetry, workshop rows.
 DEMO_MANUAL = {
     "offline": ("always", f"{OFFLINE}, the demo app: a game to level 3; quit and restart: the save is there", None),
     "windows": ("always", "start test on a clean Windows machine from Steam (the demo's beta)", None),
     "sound": ("always", "sound: music, effects, video questions", None),
+    "cloud": ("full", "Cloud A→B (plan 87), the demo app's App ID (steam.json demo.appid): play on A, quit, B shows the same players and seen counts", None),
     "start-line": ("always", "the Start screen's demo line («Versión de demostración gratuita») and the bundle screen's one tile", None),
     "signoff": ("always", "the developer plays the demo from the demo app's beta", None),
 }

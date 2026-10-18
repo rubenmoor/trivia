@@ -42,6 +42,8 @@ extraFiles:
     to: LICENSE-content.md
   - from: ../../modding  # player kit and guide (decisions 133, 134)
     to: modding
+    filter:
+      - "${env.TRIVIA_MODDING_FILTER}"  # **/*, or !**/* in the demo (decision 337: mods off)
 npmRebuild: false
 # Pinned (from v43.7.7's SHASUMS256.txt): cached zips verify offline; update with electron's version.
 electronDownload:
