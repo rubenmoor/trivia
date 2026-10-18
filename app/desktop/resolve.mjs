@@ -168,10 +168,14 @@ export function shippedName(url) {
 export const poolUrls = ({ questions }) =>
   new Set(questions.flatMap((q) => [q.media?.file_url, q.background?.file_url]).filter(Boolean));
 
-// es pool files in data/: base's and every installed pack's (decision 66).
+// es pool files in data/: base's, the demo's (demo/; the demo build has no full pool) and every installed pack's (decision 66).
 async function poolFiles(data) {
   const packs = await readdir(path.join(data, "bundles")).catch(() => []);
-  return [path.join(data, "pool.json"), ...packs.map((b) => path.join(data, "bundles", b, "pool.json"))];
+  const has = (file) => stat(file).then(() => true, () => false);
+  const base = path.join(data, "pool.json");
+  const demo = path.join(data, "demo", "pool.json");
+  const demoOnly = !(await has(base)) && (await has(demo));
+  return [...(demoOnly ? [] : [base]), ...((await has(demo)) ? [demo] : []), ...packs.map((b) => path.join(data, "bundles", b, "pool.json"))];
 }
 
 // The pool's URLs, re-read when a pool file changes (qgen export in dev); a broken one: skipped, one stderr line.

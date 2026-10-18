@@ -1,9 +1,14 @@
 #!/usr/bin/env node
 // Packaged smoke game (plan 89, release check step 6): the unpacked Linux build offline, clean env, temp HOME,
 // TRIVIA_DEV_STEAM_USER=1 (decision 111: saves need a valid Steam user; the switch stands in for one).
-// Usage (dev shell): node authoring/steam/smoke.mjs [--mods | --multiplayer] [app/desktop/release/linux-unpacked]; DEBUG=1 shows the shell's stderr
+// Usage (dev shell): node authoring/steam/smoke.mjs [--demo] [--mods | --multiplayer] [--trace <file>] [app/desktop/release/linux-unpacked];
+// DEBUG=1 shows the shell's stderr
 // New player → levels 1–3 with an image, audio and video question → quit → restart resumes; no «progress needs Steam»
-// notice. Exit 1 names the step.
+// notice; then a Gamemaster-mode game, a few levels. Exit 1 names the step.
+// --demo (plan 177): the demo build (release/demo/linux-unpacked): the solo and Gamemaster games, the multiplayer sessions
+// of the built modes (BUILT_MODES) with --multiplayer; on the way the Start screen's demo line, one bundle tile and no pack,
+// no PLACEHOLDER in the visible text, every question in app/data/demo/pool.json.
+// --trace <file>: per scene the offered and shown question ids and the answer orders, as JSON (the release check compares two).
 // With packs (DLC depots, decision 66): once as built (packs offered), once without their files (not offered).
 // --mods (plan 104, task 942) instead: the shipped modding/ examples in <userData>/mods/: loaded, theme applied, player
 // bundle offered and played, rules tweak's extra hint, no crash marker; then the conversion on top, then --no-mods.
@@ -19,7 +24,7 @@ import { cp, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { earned } from "../../app/client/src/engine/achievements.ts";
-import { answer, claim, pick, show } from "../../app/client/src/engine/game.ts";
+import { BUILT_MODES, answer, claim, pick, show } from "../../app/client/src/engine/game.ts";
 import { seededRng } from "../../app/client/src/engine/rng.ts";
 import { cacheName, shippedName } from "../../app/desktop/resolve.mjs";
 import { connectPipe, pageHelpers, sleep, startXvfb, visibleEl } from "../tools/cdp.mjs";
@@ -29,10 +34,40 @@ const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", ".
 const ARGS = process.argv.slice(2);
 const MODS = ARGS.includes("--mods");
 const MULTI = ARGS.includes("--multiplayer");
-const BUILD = path.resolve(ARGS.find((a) => !a.startsWith("--")) ?? path.join(REPO, "app", "desktop", "release", "linux-unpacked"));
+const DEMO = ARGS.includes("--demo");
+const TRACE = ARGS.includes("--trace") ? ARGS[ARGS.indexOf("--trace") + 1] : null;
+if (ARGS.includes("--trace") && !TRACE) throw new Error("--trace needs a file");
+const EXE = DEMO ? "living-room-trivia-demo" : "living-room-trivia";
+const BUILD = path.resolve(
+  ARGS.find((a, i) => !a.startsWith("--") && ARGS[i - 1] !== "--trace") ??
+    path.join(REPO, "app", "desktop", "release", ...(DEMO ? ["demo"] : []), "linux-unpacked"),
+);
 const BUNDLES = path.join("resources", "data", "bundles");
 const TYPES = ["image", "audio", "video"]; // levels 1–3
 const PLAYER = "Smoke";
+
+// The demo's question list (--demo): every question on screen is one of these.
+const DEMO_IDS = DEMO
+  ? new Set(JSON.parse(readFileSync(path.join(REPO, "app", "data", "demo", "pool.json"), "utf8")).questions.map((q) => q.id))
+  : null;
+// What --trace writes: per scene the questions offered and shown, with their answer orders.
+const trace = [];
+let scene;
+const begin = (name) => trace.push((scene = { scene: name, questions: [] }));
+/** A question on screen: `offered` the cards before the pick (none: a timed question), `st` the state with `current`. */
+function seen(offered, st) {
+  for (const id of [...offered, st.current]) if (DEMO_IDS && !DEMO_IDS.has(id)) throw new Error(`question ${id} is not in the demo list`);
+  scene.questions.push({ level: st.level, offered, shown: st.current, answers: st.answers });
+}
+// Any visible PLACEHOLDER text, kept across reloads (sessionStorage) and read before a quit.
+const WATCH = `(() => { if (window.__ph) return; window.__ph = setInterval(() => {
+  const m = document.body?.innerText.match(/PLACEHOLDER\\S*/);
+  if (m) sessionStorage.setItem("smoke.placeholder", m[0]);
+}, 150); })()`;
+async function noPlaceholder() {
+  const hit = await h.evaluate(`sessionStorage.getItem("smoke.placeholder")`).catch(() => null);
+  if (hit) throw new Error(`visible text ${hit}`);
+}
 
 let step = "prepare";
 const at = (name) => console.log(`  ${(step = name)}`);
@@ -57,12 +92,13 @@ const packs = () => (existsSync(path.join(DIR, BUNDLES)) ? readdirSync(path.join
 /** The first question per media type in the shipped pool of `locale` (as data.ts poolFile); their media files. */
 function pickQuestions(locale) {
   const file = locale === "es" ? "pool.json" : `pool.${locale}.json`;
-  const pool = JSON.parse(readFileSync(path.join(DIR, "resources", "data", file), "utf8"));
-  return TYPES.map((type) => {
+  const pool = JSON.parse(readFileSync(path.join(DIR, "resources", "data", DEMO ? "demo" : "", file), "utf8"));
+  return TYPES.flatMap((type) => {
     const q = pool.questions.find((x) => x.media?.type === type && x.media.file_url);
+    if (!q && DEMO) return []; // the demo list may lack a type (levels 1–n then)
     if (!q) throw new Error(`no ${type} question in the pool`);
     const urls = [q.media.file_url, q.background?.file_url].filter(Boolean);
-    return { type, q, files: urls.map((u) => mediaFile(u)) };
+    return [{ type, q, files: urls.map((u) => mediaFile(u)) }];
   });
 }
 
@@ -94,17 +130,23 @@ async function launch(...args) {
   // Muted: checks media load, not audio; sound is a manual row.
   const env = [`HOME=${home}`, `DISPLAY=${display}`, "TRIVIA_DEVTOOLS=1", "TRIVIA_MUTE=1", "TRIVIA_DEV_STEAM_USER=1"];
   // unshare -rn: no network; env -i + steam-run: no Nix shell env, an FHS runtime like a Steam Linux machine.
-  const shell = spawn("unshare", ["-rn", "env", "-i", ...env, steamRun, path.join(DIR, "living-room-trivia"), "--lang=es", ...args, "--remote-debugging-pipe"], {
+  const shell = spawn("unshare", ["-rn", "env", "-i", ...env, steamRun, path.join(DIR, EXE), "--lang=es", ...args, "--remote-debugging-pipe"], {
     stdio: ["ignore", "ignore", "pipe", "pipe", "pipe"],
   });
   shell.stderr.on("data", (d) => process.env.DEBUG && process.stderr.write(d));
   procs.push(shell);
   page = await connectPipe(shell);
   h = pageHelpers(page);
+  if (DEMO) {
+    await page.send("Page.enable");
+    await page.send("Page.addScriptToEvaluateOnNewDocument", { source: WATCH });
+    await h.evaluate(WATCH);
+  }
   return shell;
 }
 
 async function quit(shell) {
+  if (DEMO) await noPlaceholder();
   const exited = new Promise((r) => shell.once("exit", r));
   await h.evaluate("window.triviaShell.quit()").catch(() => {}); // the page goes away mid-call
   let timer;
@@ -139,6 +181,7 @@ async function playLevel(level, { type, q }) {
   at(`level ${level} (${type}, ${q.id})`);
   await h.waitFor(visibleEl(".cards .card"), "cards");
   const save = await saved((s) => running(s).phase === "select" && running(s).level === level, `level ${level} cards`);
+  const offered = [...running(save).options];
   running(save).options[0] = q.id;
   await writeFile(saveFile(), JSON.stringify(save));
   await page.send("Page.reload", { ignoreCache: true });
@@ -150,6 +193,7 @@ async function playLevel(level, { type, q }) {
   await h.waitFor(visibleEl(".answers .answer"), "question screen");
   await checkMedia(type);
   const st = running(await saved((s) => running(s).current === q.id, "picked question"));
+  seen(offered, st);
   await h.click(`.answers .answer:nth-child(${st.answers.indexOf(q.answer) + 1})`);
   await h.click(".final-button.ready");
   await h.waitFor(visibleEl(".result .title.good"), "correct screen", 30000);
@@ -171,7 +215,7 @@ function withoutPacks(tmp) {
 }
 
 async function main() {
-  if (!existsSync(path.join(BUILD, "living-room-trivia-bin"))) throw new Error(`${BUILD}: no unpacked Linux build (trivia-desktop-build --dir)`);
+  if (!existsSync(path.join(BUILD, `${EXE}-bin`))) throw new Error(`${BUILD}: no unpacked Linux build (trivia-desktop-build${DEMO ? " --demo" : ""} --dir)`);
   DIR = BUILD;
   pickQuestions("es"); // fail early on a pool without media questions
 
@@ -185,26 +229,37 @@ async function main() {
     procs.push(x.proc);
     const built = packs();
     if (MULTI) {
-      for (const [i, run] of RUNS.entries()) await multiplayer(path.join(tmp, `home-mp-${i}`), run);
-      console.log("smoke --multiplayer: ok");
+      const runs = RUNS.filter((r) => !DEMO || BUILT_MODES.includes(r.mode));
+      if (!runs.length) console.log("no built multiplayer mode");
+      for (const [i, run] of runs.entries()) await multiplayer(path.join(tmp, `home-mp-${i}`), run);
+      await finish("smoke --multiplayer: ok");
       return;
     }
     if (!MODS) console.log(built.length ? `with packs ${built.join(", ")}` : "no packs");
     if (MODS) await modsGame(path.join(tmp, "home-mods"));
-    else await game(path.join(tmp, "home"));
+    else {
+      await game(path.join(tmp, "home"));
+      await gamemasterGame(path.join(tmp, "home-gamemaster"));
+    }
     if (!MODS && built.length) {
       at("without packs");
       DIR = withoutPacks(tmp);
       if (packs().length) throw new Error(`packs left: ${packs().join(", ")}`);
       await game(path.join(tmp, "home-nopacks"));
     }
-    console.log(`smoke${MODS ? " --mods" : ""}: ok`);
+    await finish(`smoke${MODS ? " --mods" : ""}: ok`);
   } finally {
     page?.close();
     for (const p of procs.reverse()) if (p.exitCode === null) p.kill();
     await sleep(500);
     await rm(tmp, { recursive: true, force: true });
   }
+}
+
+/** `--trace`'s file, then the verdict. */
+async function finish(verdict) {
+  if (TRACE) await writeFile(path.resolve(TRACE), JSON.stringify(trace, null, 1) + "\n");
+  console.log(`${verdict}${DEMO ? " (demo)" : ""}`);
 }
 
 /** The memory-only notice (no valid Steam user) fails. */
@@ -230,6 +285,10 @@ async function toStart() {
   at("start screen");
   await h.waitFor(start, "start screen");
   await noNotice();
+  if (DEMO) {
+    const line = await h.evaluate(`document.querySelector(".start .demo")?.textContent.trim() ?? ""`);
+    if (!line) throw new Error("no demo line on the Start screen");
+  }
 }
 
 /** Start screen → a new player → the Mode screen. */
@@ -245,6 +304,24 @@ async function newPlayer() {
   await h.click('.new button[type="submit"]');
 }
 
+/** Mode screens → age → the Bundles screen (packs show there; in the demo one tile, no pack) → Start: the bundles offered. */
+async function chooseSingle(mode) {
+  at(`mode ${mode}`);
+  await h.click('[data-focus-id="kind-single"]');
+  await h.click('[data-focus-id="next"]');
+  await h.click(`[data-focus-id="mode-${mode}"]`);
+  await h.click('[data-focus-id="next"]');
+  if (mode === "solo") await h.click('[data-focus-id="group-young_teens"]'); // gamemaster: the settings screen, as defaulted
+  await h.click('[data-focus-id="next"]');
+  at("bundles");
+  await h.waitFor(visibleEl('[data-focus-id="start"]'), "bundles screen");
+  const offered = await h.evaluate(`JSON.stringify([...document.querySelectorAll(".bundles [data-focus-id^='bundle-']")]
+    .map((b) => b.dataset.focusId.slice(7)))`);
+  if (DEMO && offered !== '["base"]') throw new Error(`demo bundles offered: ${offered}, want base only`);
+  await h.click('[data-focus-id="start"]');
+  return offered;
+}
+
 /** One game in DIR with a fresh HOME: new player, levels 1–3, quit, restart resumes. */
 async function game(dir) {
   home = dir;
@@ -253,19 +330,8 @@ async function game(dir) {
   let shell = await launch();
   await toStart();
   await newPlayer();
-  at("mode");
-  await h.click('[data-focus-id="kind-single"]');
-  await h.click('[data-focus-id="next"]');
-  await h.click('[data-focus-id="mode-solo"]');
-  await h.click('[data-focus-id="next"]');
-  await h.click('[data-focus-id="group-young_teens"]');
-  await h.click('[data-focus-id="next"]');
-  at("bundles");
-  // Packs show on the Bundles screen.
-  await h.waitFor(visibleEl('[data-focus-id="start"]'), "bundles screen");
-  const offered = await h.evaluate(`JSON.stringify([...document.querySelectorAll(".bundles [data-focus-id^='bundle-']")]
-    .map((b) => b.dataset.focusId.slice(7)))`);
-  await h.click('[data-focus-id="start"]');
+  begin("solo");
+  const offered = await chooseSingle("solo");
   await h.click(".level .hint");
   // The new game's question locale (plan 126: es unless the language has its own pool).
   const locale = (await saved((s) => s.games?.length, "new game")).games.at(-1).locale ?? "es";
@@ -279,9 +345,10 @@ async function game(dir) {
   const picks = pickQuestions(locale);
   for (const p of picks) console.log(`  ${locale} ${p.type}: ${p.q.id} ${p.files.join(" ")}`);
   for (const [i, p] of picks.entries()) await playLevel(i + 1, p);
+  const next = picks.length + 1;
 
   at("quit");
-  await saved((s) => running(s).level === 4 && running(s).phase === "select", "level 4");
+  await saved((s) => running(s).level === next && running(s).phase === "select", `level ${next}`);
   await quit(shell);
   if (!existsSync(saveFile())) throw new Error(`no save at ${saveFile()}`);
 
@@ -293,10 +360,43 @@ async function game(dir) {
   if (!label.includes(PLAYER)) throw new Error(`no resume for ${PLAYER}: "${label.trim()}"`);
   at("resume");
   await h.click('[data-focus-id="main"]');
-  await h.waitFor(`${visibleEl(".level .hint")} || ${visibleEl(".cards .card")}`, "level 4");
+  await h.waitFor(`${visibleEl(".level .hint")} || ${visibleEl(".cards .card")}`, `level ${next}`);
   // Level screen's number, else the HUD's level chip (cards).
   const level = await h.evaluate(`document.querySelector(".level .title.big, .hud .level")?.textContent ?? ""`);
-  if (!/4/.test(level)) throw new Error(`resumed at "${level.trim()}", not level 4`);
+  if (!new RegExp(`\\b${next}\\b`).test(level)) throw new Error(`resumed at "${level.trim()}", not level ${next}`);
+  await quit(shell);
+  page.close();
+  page = null;
+}
+
+/** The Gamemaster mode (every build): a fresh HOME, three levels on the first card, each answered right. */
+async function gamemasterGame(dir) {
+  home = dir;
+  await mkdir(home);
+  begin("gamemaster");
+  at("gamemaster start");
+  const shell = await launch();
+  await toStart();
+  await newPlayer();
+  await chooseSingle("gamemaster");
+  await h.click(".level .hint");
+  const locale = (await saved((s) => s.games?.length, "new game")).games.at(-1).locale ?? "es";
+  data = loadData(locale, path.join(DIR, "resources", "data"), DEMO);
+  for (let level = 1; level <= 3; level++) {
+    at(`gamemaster level ${level}`);
+    await h.waitFor(visibleEl(".cards .card"), "cards");
+    const offered = [...running(await saved((s) => running(s).phase === "select" && running(s).level === level, `level ${level} cards`)).options];
+    await h.click(".cards .card");
+    await h.waitFor(visibleEl(".answers .answer"), "question screen");
+    if (await h.evaluate(visibleEl(".media-missing"))) throw new Error("missing-media notice on screen");
+    const st = running(await saved((s) => running(s).phase === "question", "picked question"));
+    seen(offered, st);
+    await h.click(`.answers .answer:nth-child(${rightOf(st) + 1})`);
+    await h.click(".final-button.ready");
+    await h.waitFor(visibleEl(".result .title.good"), "correct screen", 30000);
+    await h.click(".result .hint");
+    await h.click(".level .hint");
+  }
   await quit(shell);
   page.close();
   page = null;
@@ -505,7 +605,7 @@ async function setup(r) {
   await h.click('[data-focus-id="next"]');
   await h.click(`[data-focus-id="mode-${r.mode}"]`);
   await h.click('[data-focus-id="next"]');
-  await h.waitFor(visibleEl(".join .seat.open"), "join screen");
+  await ready(visibleEl(".join .seat.open"), "join screen"); // a pad press right on arrival is lost
   for (const [i, b] of r.seats.entries()) {
     at(`${r.label}: join seat ${i} (${b})`);
     if (typeof b === "number") await padPress(BTN.A, b);
@@ -525,7 +625,7 @@ async function setup(r) {
   await h.click('[data-focus-id="next"]');
   await h.click('[data-focus-id="start"]');
   const save = await saved((s) => s.games?.length && row(s).seats, "session started");
-  data = loadData(row(save).locale ?? "es", path.join(DIR, "resources", "data"));
+  data = loadData(row(save).locale ?? "es", path.join(DIR, "resources", "data"), DEMO);
   const want = r.seats.map((b) => (typeof b === "number" ? { pad: b } : b === "kbm" || b === "shared" ? b : { key: b }));
   const bound = await h.evaluate(`sessionStorage.getItem("trivia.seats.${row(save).id}")`);
   if (bound !== JSON.stringify(want)) throw new Error(`seats bound ${bound}, want ${JSON.stringify(want)}`);
@@ -551,6 +651,7 @@ async function turn(r, right, off) {
   if (off !== undefined) await refused(r, off, "card");
   await press(r, seat, "card");
   const st = stateOf(row(await saved((s) => stateOf(row(s), seat).phase === "question", "card picked")), seat);
+  seen(stateOf(row(before), seat).options, st);
   await ready(visibleEl(".answers .answer:not(:disabled)"), "question screen");
   const i = rightOf(st);
   await press(r, seat, "answer", right ? i : (i + 1) % st.answers.length);
@@ -614,6 +715,7 @@ async function claims(r, seat, how, off) {
     // a key seat's answer keys act for the claimer (decision 290)
     if (typeof r.seats[off] === "number" || r.seats[off] === "kbm") await refused(r, off, "answer", 0);
   }
+  seen([], row(save).state);
   const i = rightOf(row(save).state);
   if (how !== "timeout") await press(r, seat, "answer", how === "right" ? i : (i + 1) % row(save).state.answers.length);
   const after = await saved((s) => row(s).state.history.length > n, "question ended", 15000);
@@ -785,6 +887,7 @@ const RUNS = [
 async function multiplayer(dir, r) {
   r.label = `${r.mode} ${r.seats.map((b) => (typeof b === "number" ? "pad" : b)).join("+")}`;
   console.log(r.label);
+  begin(r.label);
   home = dir;
   await mkdir(home);
   seed = 1;
