@@ -69,7 +69,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 | State | Shows | Leaves via | Music |
 |---|---|---|---|
 | Language | First start (D-86) or Start's language button (D-96): «Elige el idioma», languages by flags + endonym (decision 186), guess preselected | Click / `Enter` / pad A / `1`–`n`; from Start: «Atrás» / `Backspace` / pad B | Normal |
-| Start | Title, «¡Jugar!», "continue game" if one is running; along the bottom third a horizon of Commons cut-outs (`Horizon.svelte`, `public/horizon/`, plan 150), same in every language, behind the content | Click / `Enter` | Normal |
+| Start | Title, «¡Jugar!», "continue game" if one is running; along the bottom third a horizon of Commons cut-outs (`Horizon.svelte`, `public/horizon/`, plan 150), same in every language, behind the content; demo build: a quiet line «Versión de demostración gratuita» (`screen.start.demo`) under the subtitle in every state, not focusable (plan 176) | Click / `Enter` | Normal |
 | Player | «¿Quién juega?»: known names, new name | Click a name / `1`–`9` / `Enter` (most recent name, nothing focused) / type + `Enter` | Normal |
 | Mode | «¿Cómo se juega?»: «Solo o en grupo» or «Multijugador», then «Modo de juego»: Estándar or Modo anfitrión, or the multiplayer modes in two groups (decision 314) | «Seguir» / `Enter`; «Atrás» / `Backspace` | Normal |
 | Choice | «¿Cómo juega …?», the age screen: gamemaster mode: the configure game screen (MD-11: difficulty, levels, cards, video, audio, answers (D-105), jokers); the other modes: age group (rr-competitive: one per seat), «Personalizar partida»; no bundles, no supply | «Seguir» / `Enter`; «Atrás» / `Backspace` | Normal |

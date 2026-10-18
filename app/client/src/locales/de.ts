@@ -362,6 +362,8 @@ export const de = {
       name: "Trivia",
       close: "!",
       subtitle: { one: "1 Frage bis zum Gipfel", other: "{n} Fragen bis zum Gipfel" },
+      /** Demo build only: a quiet line under the subtitle. */
+      demo: "Kostenlose Demoversion",
       resume: "Weiterspielen, Stufe {level}",
       resumePlayer: "Weiterspielen: {name}, Stufe {level}",
       /** A multiplayer session: {names} cut short after two; the mode's name below. */
