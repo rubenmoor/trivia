@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "0de26323",
+  "hash": "bf49a4da",
   "questions": [
     {
       "id": "q-0016",
@@ -611,6 +611,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Shixart1985",
         "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0110",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "language",
+      "bundle": "base",
+      "description": "Ein Buchstabe, den Touristen aus Deutschland auf ihrer Tastatur vergeblich suchen.",
+      "question": "Welchen Buchstaben hat das spanische Alphabet, den das deutsche nicht hat?",
+      "answer": "Ñ",
+      "wrong_answers": [
+        "K",
+        "W",
+        "X"
+      ],
+      "hints": [
+        "Er ist so beliebt, dass er zum Symbol der spanischen Sprache wurde.",
+        "Im Deutschen schreibt man seinen Laut mit zwei Buchstaben, wie das „gn“ in „Champagner“.",
+        "Er trägt eine kleine Wellenlinie obendrauf."
+      ],
+      "fun_fact": "Die kleine Wellenlinie auf dem Ñ heißt Tilde.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Blocks%2C_alphabet_%28AM_1990.255-2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlocks%2C_alphabet_%28AM_1990.255-2%29.jpg",
+        "credit": "CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": null,
+        "author_url": null
       },
       "background": null
     },

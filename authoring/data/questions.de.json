@@ -633,6 +633,36 @@
       "source_hash": "24239651a465"
     },
     {
+      "id": "q-0110",
+      "question": "Welchen Buchstaben hat das spanische Alphabet, den das deutsche nicht hat?",
+      "answer": "Ñ",
+      "wrong_answers": [
+        "K",
+        "W",
+        "X"
+      ],
+      "hints": [
+        "Er ist so beliebt, dass er zum Symbol der spanischen Sprache wurde.",
+        "Im Deutschen schreibt man seinen Laut mit zwei Buchstaben, wie das „gn“ in „Champagner“.",
+        "Er trägt eine kleine Wellenlinie obendrauf."
+      ],
+      "description": "Ein Buchstabe, den Touristen aus Deutschland auf ihrer Tastatur vergeblich suchen.",
+      "fun_fact": "Die kleine Wellenlinie auf dem Ñ heißt Tilde.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-de-2",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-21",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
+      },
+      "source_hash": "2224dab45fc7"
+    },
+    {
       "id": "q-0116",
       "question": "Wer schrieb „Don Quijote“?",
       "answer": "Miguel de Cervantes",
