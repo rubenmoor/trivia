@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "bf49a4da",
+  "hash": "9c46c1d0",
   "questions": [
     {
       "id": "q-0016",
@@ -1023,40 +1023,6 @@
       "background": null
     },
     {
-      "id": "q-0236",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "pharaohs",
-      "bundle": "base",
-      "description": "Pharaonen wollten Tausende Jahre lang gut aussehen – und Antifaltencreme gab es noch nicht.",
-      "question": "Was machten die alten Ägypter mit dem Körper eines toten Pharaos, damit er Tausende Jahre erhalten blieb?",
-      "answer": "Sie mumifizierten ihn",
-      "wrong_answers": [
-        "Sie froren ihn in Eis ein",
-        "Sie badeten ihn in Gold",
-        "Sie überzogen ihn mit Wachs"
-      ],
-      "hints": [
-        "Sie trockneten ihn mit Salzen, Ölen und Harzen.",
-        "Zum Schluss wickelten sie ihn in jede Menge Stoffbinden.",
-        "In Gruselfilmen steigt dieser bandagierte Körper aus seinem Sarkophag."
-      ],
-      "fun_fact": "Die Vorbereitung des Körpers eines Pharaos konnte etwa 70 Tage dauern.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Thebes%2C_Luxor%2C_Egypt%2C_Valley_of_the_Kings_from_above.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AThebes%2C_Luxor%2C_Egypt%2C_Valley_of_the_Kings_from_above.jpg",
-        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 4.0",
-        "license_url": "https://creativecommons.org/licenses/by/4.0",
-        "author": "Vyacheslav Argenberg",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
-      },
-      "background": null
-    },
-    {
       "id": "q-0248",
       "status": "approved",
       "difficulty": 1,
@@ -1257,40 +1223,6 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Shixart1985",
         "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
-      },
-      "background": null
-    },
-    {
-      "id": "q-0335",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "artificial-intelligence",
-      "bundle": "base",
-      "description": "Er ist weiß, weich, wird aufgeblasen wie ein Luftballon und fragt dich, wie weh es tut, auf einer Skala von 1 bis 10.",
-      "question": "Welcher aufblasbare Disney-Roboter kümmert sich um die Gesundheit der Menschen und ist Hiros bester Freund?",
-      "answer": "Baymax",
-      "wrong_answers": [
-        "R2-D2",
-        "Bumblebee",
-        "Der Gigant aus dem All"
-      ],
-      "hints": [
-        "Der Film spielt in einer Stadt, die San Francisco und Tokio vermischt.",
-        "Am Ende wird er mit einer roten Rüstung zum Superhelden.",
-        "Sein Name beginnt mit „Bay“ und endet wie die Kurzform von „Maximum“."
-      ],
-      "fun_fact": "Die Filmemacher ließen sich von einem echten aufblasbaren Roboterarm inspirieren, den sie an einer Universität in den USA gesehen hatten.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Erste_Hilfe_003_2026_02_17.jpg/3840px-Erste_Hilfe_003_2026_02_17.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AErste_Hilfe_003_2026_02_17.jpg",
-        "credit": "Friedrich Haag · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Friedrich Haag",
-        "author_url": "https://commons.wikimedia.org/wiki/User:F._Riedelio"
       },
       "background": null
     },
@@ -1563,6 +1495,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Dr. Raju Kasambe",
         "author_url": "https://commons.wikimedia.org/wiki/User:Dr._Raju_Kasambe"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0490",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "plants",
+      "bundle": "base",
+      "description": "Eine Pflanze, die sich Essen bestellt hat – und das Mittagessen kam direkt angeflogen.",
+      "question": "Sieh dir das Foto an: Wie heißt diese fleischfressende Pflanze?",
+      "answer": "Venusfliegenfalle",
+      "wrong_answers": [
+        "Kannenpflanze",
+        "Sonnentau",
+        "Fettkraut"
+      ],
+      "hints": [
+        "In der Natur wächst sie nur in einigen Sümpfen in den USA.",
+        "Ihre Blätter sehen aus wie ein Maul mit Zähnen und klappen zu, sobald ein Insekt sie berührt.",
+        "In ihrem Namen stecken ein Planet und das, was sie fängt."
+      ],
+      "fun_fact": "Damit sie keine Energie für Fehlalarme verschwendet, schnappt die Falle nur zu, wenn ein Insekt ihre Fühlhaare innerhalb weniger Sekunden zweimal berührt.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Dionaea_muscipula_PT_20240516_063394.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADionaea_muscipula_PT_20240516_063394.jpg",
+        "credit": "Philiptdotcom · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Philiptdotcom",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Philiptdotcom&action=edit&redlink=1"
       },
       "background": null
     },
@@ -1869,40 +1835,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "IrenicRhonda",
         "author_url": "https://www.geograph.org.uk/profile/44001"
-      },
-      "background": null
-    },
-    {
-      "id": "q-0596",
-      "status": "approved",
-      "difficulty": 7,
-      "subcategory": "amphibians",
-      "bundle": "base",
-      "description": "Ein Frosch mit dem Appetit eines Ochsen und den Manieren eines Gastes, den niemand eingeladen hat.",
-      "question": "Rate mal: Ich bin ein riesiger Frosch aus Nordamerika, wurde anderswo gezüchtet, bin entkommen und fresse dort die Frösche. Was für eine Art bin ich?",
-      "answer": "Invasive Art",
-      "wrong_answers": [
-        "Endemische Art",
-        "Wandernde Art",
-        "Domestizierte Art"
-      ],
-      "hints": [
-        "Für die Natur dort, wo sie angekommen ist, ist sie ein Problem.",
-        "Sie ist das Gegenteil einer heimischen Art.",
-        "Wie jemand, der in ein fremdes Haus eindringt und sich alles unter den Nagel reißt."
-      ],
-      "fun_fact": "Der Ochsenfrosch frisst fast alles, was in sein Maul passt: Insekten, Fische, andere Frösche – und sogar kleine Vögel!",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Lithobates_catesbeianus_PP.jpg/3840px-Lithobates_catesbeianus_PP.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALithobates_catesbeianus_PP.jpg",
-        "credit": "Cephas · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Cephas",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Cephas"
       },
       "background": null
     },
@@ -2587,40 +2519,6 @@
       "background": null
     },
     {
-      "id": "q-0885",
-      "status": "approved",
-      "difficulty": 4,
-      "subcategory": "planet-earth",
-      "bundle": "base",
-      "description": "Ein Rätsel, in dem mehr Land steckt als auf jedem Bauernhof.",
-      "question": "„Kolumbien verhält sich zu Land wie Südamerika zu …“. Welches Wort ergänzt den Satz?",
-      "answer": "Kontinent",
-      "wrong_answers": [
-        "Ozean",
-        "Insel",
-        "Stadt"
-      ],
-      "hints": [
-        "Südamerika ist viel größer als Kolumbien.",
-        "In Südamerika haben viele Länder Platz.",
-        "Afrika, Europa und Asien sind auch welche."
-      ],
-      "fun_fact": "Je nach Zählweise gibt es 5, 6 oder 7 Kontinente: In Kolumbien lernt man meist, dass Amerika ein einziger ist.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Globe_with_yellow_background_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGlobe_with_yellow_background_1.jpg",
-        "credit": "Wendy Cope · CC BY 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "Wendy Cope",
-        "author_url": null
-      },
-      "background": null
-    },
-    {
       "id": "q-0919",
       "status": "approved",
       "difficulty": 10,
@@ -2689,6 +2587,40 @@
       "background": null
     },
     {
+      "id": "q-0982",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "magic",
+      "bundle": "base",
+      "description": "Ein Möbelstück, das mehr liest als du – und dabei hat es nicht mal Augen.",
+      "question": "Ich bin der Zaubertisch aus Minecraft: Auf mir schwebt ein Buch, das sich öffnet, wenn du näher kommst. Was bringen Bücherregale um mich herum?",
+      "answer": "Die Verzauberungen werden stärker",
+      "wrong_answers": [
+        "Man verzaubert mehrere Dinge auf einmal",
+        "Man braucht kein Lapislazuli mehr",
+        "Die Verzauberungen gehen schneller"
+      ],
+      "hints": [
+        "Die Regale müssen in der Nähe stehen, aber mit einem freien Block zwischen ihnen und dem Tisch.",
+        "Achte auf die Zahlen neben jeder Verzauberung, die angeboten wird.",
+        "Mehr Bücher ringsum, mehr magisches Wissen für den Tisch."
+      ],
+      "fun_fact": "Mit genug Bücherregalen drumherum bietet der Zaubertisch in Minecraft Verzauberungen bis Stufe 30 an.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Oldbooks-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOldbooks-02.jpg",
+        "credit": "Liam Quin · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Liam Quin",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-1032",
       "status": "approved",
       "difficulty": 11,
@@ -2753,40 +2685,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Xlanu",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Xlanu&action=edit&redlink=1"
-      },
-      "background": null
-    },
-    {
-      "id": "q-1051",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "indigenous-peoples-of-the-amazon",
-      "bundle": "base",
-      "description": "Ein Baum, dem man den Bauch ausgeräumt hat, damit er einen neuen Job antreten kann.",
-      "question": "Ein riesiger Baumstamm wird mit Feuer und Axt ausgehöhlt und an beiden Enden spitz zugeschnitten. Wofür wird er benutzt?",
-      "answer": "Zum Fahren auf dem Fluss",
-      "wrong_answers": [
-        "Zum Auffangen von Regenwasser",
-        "Zum Lagern der Maniokernte",
-        "Zum Musikmachen"
-      ],
-      "hints": [
-        "Die Spitzen helfen dabei, etwas zu durchschneiden, das sich bewegt.",
-        "Im Regenwald sind die Flüsse so etwas wie die Straßen.",
-        "Ein paar Paddel werden auch noch gebraucht."
-      ],
-      "fun_fact": "Manche aus einem einzigen Stamm geschnitzten Kanus bieten Platz für mehr als zehn Menschen.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Brazil-00336_-_Kapok_Tree_%2848964056527%29.jpg/3840px-Brazil-00336_-_Kapok_Tree_%2848964056527%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABrazil-00336_-_Kapok_Tree_%2848964056527%29.jpg",
-        "credit": "Dennis G. Jarvis · CC BY-SA 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "Dennis G. Jarvis",
-        "author_url": "https://www.wikidata.org/wiki/Q122977591"
       },
       "background": null
     },
@@ -3505,40 +3403,6 @@
       "background": null
     },
     {
-      "id": "q-1468",
-      "status": "approved",
-      "difficulty": 6,
-      "subcategory": "african-wildlife",
-      "bundle": "base",
-      "description": "Das Flusspferd hat eine eigene Kosmetiklinie – und verkauft sie nicht.",
-      "question": "Es ist rötlich, kommt aus der Haut des Flusspferds und ist kein Blut. Welchem Produkt der Menschen ähnelt es in seiner Funktion?",
-      "answer": "Sonnenschutzmittel",
-      "wrong_answers": [
-        "Parfüms",
-        "Haarfärbemittel",
-        "Klebstoffe"
-      ],
-      "hints": [
-        "Das Flusspferd verbringt viele Stunden unter der afrikanischen Sonne.",
-        "Seine Haut ist empfindlich und bekommt leicht Risse.",
-        "Das cremt man sich am Strand ein, damit man keinen Sonnenbrand bekommt."
-      ],
-      "fun_fact": "Dieser „rote Schweiß“ hilft auch dabei, Entzündungen in den Wunden des Flusspferds zu verhindern.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Hippo_%28Hippopotamus_amphibius%29_going_out_of_the_water.jpg/3840px-Hippo_%28Hippopotamus_amphibius%29_going_out_of_the_water.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHippo_%28Hippopotamus_amphibius%29_going_out_of_the_water.jpg",
-        "credit": "Bernard DUPONT · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Bernard DUPONT",
-        "author_url": null
-      },
-      "background": null
-    },
-    {
       "id": "q-1475",
       "status": "approved",
       "difficulty": 13,
@@ -3641,6 +3505,40 @@
       "background": null
     },
     {
+      "id": "q-1579",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "accidental-inventions",
+      "bundle": "base",
+      "description": "Ein missglücktes Experiment, das hüpft, sich dehnt und nie seinen Zweck erfüllte, aber Millionen Menschen Spaß macht.",
+      "question": "Die Knetmasse, die hüpft, sich dehnt und Bilder aus der Zeitung abdruckt, entstand zufällig bei der Suche nach Kautschuk-Ersatz. In welchem Jahrzehnt?",
+      "answer": "1940er-Jahre",
+      "wrong_answers": [
+        "1900er-Jahre",
+        "1970er-Jahre",
+        "1990er-Jahre"
+      ],
+      "hints": [
+        "Ihr Erfinder arbeitete im Labor eines großen US-Elektrokonzerns.",
+        "Von der Entdeckung bis zum Verkauf als Spielzeug vergingen nur wenige Jahre.",
+        "Wegen des Krieges war Kautschuk knapp, und ab 1950 wurde sie in Plastikeiern verkauft."
+      ],
+      "fun_fact": "Kein Ingenieur fand eine ernsthafte Verwendung dafür, bis ein Verkäufer sie in Plastikeier steckte und zum Spielzeug machte.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/UFV_Science_Rocks_%2814534714507%29.jpg/3840px-UFV_Science_Rocks_%2814534714507%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUFV_Science_Rocks_%2814534714507%29.jpg",
+        "credit": "University of the Fraser Valley · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "University of the Fraser Valley",
+        "author_url": "https://www.flickr.com/people/21187388@N06"
+      },
+      "background": null
+    },
+    {
       "id": "q-1614",
       "status": "approved",
       "difficulty": 3,
@@ -3671,6 +3569,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Dietmar Rabich",
         "author_url": "https://www.wikidata.org/wiki/Q34788025"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1642",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "british-royals",
+      "bundle": "base",
+      "description": "Elegante Wasservögel mit einem sehr vornehmen Besitzer.",
+      "question": "Auf der Themse schwimmen weiße Schwäne ohne Markierung. Wem gehören sie nach einer alten Tradition?",
+      "answer": "Dem König",
+      "wrong_answers": [
+        "Dem Bürgermeister von London",
+        "Den Fischern",
+        "Dem Premierminister"
+      ],
+      "hints": [
+        "Ihr Besitzer trägt eine Krone.",
+        "Jedes Jahr werden sie bei einer offiziellen Zeremonie gezählt.",
+        "Früher gehörten sie Elisabeth II., heute ihrem Sohn."
+      ],
+      "fun_fact": "Jeden Sommer findet das „Swan Upping“ statt: Bei dieser Zeremonie werden die Schwäne der Themse von Booten aus gezählt und untersucht.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Swan_on_the_River_Thames_at_Twickenham_%28March_2010%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASwan_on_the_River_Thames_at_Twickenham_%28March_2010%29.jpg",
+        "credit": "Carcharoth (Commons) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Carcharoth (Commons)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Carcharoth_(Commons)"
       },
       "background": null
     },
@@ -3845,6 +3777,40 @@
       "background": null
     },
     {
+      "id": "q-1782",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "cheese",
+      "bundle": "base",
+      "description": "Zwei berühmte Käse mit derselben Milch-Mama.",
+      "question": "Von welchem Tier stammt die Milch für den französischen Roquefort und den italienischen Pecorino Romano?",
+      "answer": "Schaf",
+      "wrong_answers": [
+        "Kuh",
+        "Ziege",
+        "Büffel"
+      ],
+      "hints": [
+        "Es ist ein Bauernhoftier.",
+        "Es lebt in Herden, die oft von Hütehunden bewacht werden.",
+        "Aus seinem Fell wird Wolle gemacht."
+      ],
+      "fun_fact": "Schafmilch hat fast doppelt so viel Fett wie Kuhmilch, deshalb wird Käse daraus so cremig.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Some_French_Cheese_on_the_Market_Place.jpg/3840px-Some_French_Cheese_on_the_Market_Place.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASome_French_Cheese_on_the_Market_Place.jpg",
+        "credit": "Peachyeung316 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Peachyeung316",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Peachyeung316"
+      },
+      "background": null
+    },
+    {
       "id": "q-1791",
       "status": "approved",
       "difficulty": 1,
@@ -3977,6 +3943,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Charles J. Sharp",
         "author_url": "https://www.wikidata.org/wiki/Q54800218"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2025",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "oscars",
+      "bundle": "base",
+      "description": "Gotham City hat jede Menge Schurken, aber nur einer hat goldene Statuetten in der Vitrine.",
+      "question": "Ich bin ein Batman-Schurke. Heath Ledger bekam 2009 einen Oscar dafür, dass er mich in „The Dark Knight“ spielte. Wer bin ich?",
+      "answer": "Joker",
+      "wrong_answers": [
+        "Pinguin",
+        "Riddler",
+        "Two-Face"
+      ],
+      "hints": [
+        "Mein Gesicht ist sehr blass.",
+        "Ich habe grüne Haare und ein riesiges aufgemaltes Grinsen.",
+        "Ich frage immer: „Warum so ernst?“"
+      ],
+      "fun_fact": "Jahre später gewann auch Joaquin Phoenix einen Oscar für die Rolle desselben Schurken.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Gotham_City_%28128878277%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGotham_City_%28128878277%29.jpeg",
+        "credit": "Hakan Albağ · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Hakan Albağ",
+        "author_url": "https://500px.com/halbag"
       },
       "background": null
     },

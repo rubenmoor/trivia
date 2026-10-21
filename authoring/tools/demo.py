@@ -160,7 +160,7 @@ def propose(seats):
 
 
 def problems(doc, pool=None):
-    """(errors, warnings, report lines) for a list: ids that aren't candidates, pending ones, failing configurations."""
+    """(errors, warnings, report lines) for a list: ids that aren't candidates (error); pending ones, failing configurations (warnings until the list is complete, decision 394)."""
     cands, shares = candidates(pool)
     known = {c["id"]: c for c in cands}
     gone = [i for i in doc["ids"] if i not in known]
@@ -168,19 +168,18 @@ def problems(doc, pool=None):
     seats = doc.get("seats") or 1
     res = run("check", cands, shares, seats=seats, ids=doc["ids"])
     failing = [r for r in res["rows"] if not r["reserve"]]
-    errors, lines = [], [f"{res['size']} listed candidate(s), {len(pending)} pending, up to {seats} seat(s)"]
+    errors, warnings, lines = [], [], [f"{res['size']} listed candidate(s), {len(pending)} pending, up to {seats} seat(s)"]
     if gone:
         errors.append(f"no longer candidates: {', '.join(gone)}")
     for r in failing:
-        errors.append(f"fails: {r['config']} ({r['locale']}): engine {mark(r['engine'])}, reserve {r['reserve_short']} short")
-    note = f"{len(pending)} listed id(s) with missing translations: {', '.join(pending)}"
-    if pending and doc.get("approved"):
-        errors.append(note)
-    return errors, ([note] if pending and not doc.get("approved") else []), lines
+        warnings.append(f"fails: {r['config']} ({r['locale']}): engine {mark(r['engine'])}, reserve {r['reserve_short']} short")
+    if pending:
+        warnings.append(f"{len(pending)} listed id(s) with missing translations: {', '.join(pending)}")
+    return errors, warnings, lines
 
 
 def check(path):
-    """Exit 1 when an id is no candidate any more or a configuration fails at the list's seats."""
+    """Exit 1 when an id is no candidate any more; failing configurations and pending ids only warn (decision 394)."""
     doc = load(path)
     if doc is None:
         print(f"{path}: no demo list")
