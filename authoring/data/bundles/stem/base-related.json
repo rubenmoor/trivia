@@ -1,0 +1,222 @@
+{
+  "about": "A theme bundle's subcategory → the base subcategories it goes beyond (plan 184); its concept lists and drafts keep away from their questions. Authoring only, never exported.",
+  "subcategories": {
+    "microbes-and-fungi": [
+      "science",
+      "plants"
+    ],
+    "cells-and-genetics": [
+      "science",
+      "human-body"
+    ],
+    "evolution-and-fossils": [
+      "dinosaurs",
+      "prehistory"
+    ],
+    "animal-behaviour": [
+      "mammals",
+      "birds",
+      "animal-records"
+    ],
+    "animal-adaptations": [
+      "strange-creatures",
+      "reptiles",
+      "amphibians"
+    ],
+    "invertebrates": [
+      "insects"
+    ],
+    "ocean-life": [
+      "fish",
+      "the-sea",
+      "strange-creatures"
+    ],
+    "plant-science": [
+      "plants",
+      "trees"
+    ],
+    "ecosystems-and-food-webs": [
+      "environment"
+    ],
+    "conservation": [
+      "environment",
+      "african-wildlife"
+    ],
+    "heart-blood-and-breathing": [
+      "human-body"
+    ],
+    "digestion-and-nutrition": [
+      "human-body",
+      "medicine-and-health"
+    ],
+    "bones-muscles-and-skin": [
+      "human-body",
+      "body-oddities"
+    ],
+    "senses-and-nerves": [
+      "brain-and-mind",
+      "human-body"
+    ],
+    "immune-system-and-disease": [
+      "medicine-and-health"
+    ],
+    "history-of-medicine": [
+      "medicine-and-health",
+      "famous-scientists"
+    ],
+    "forces-and-motion": [
+      "physics"
+    ],
+    "energy-and-heat": [
+      "physics",
+      "science"
+    ],
+    "light-and-optics": [
+      "physics",
+      "colours",
+      "optical-illusions"
+    ],
+    "sound-and-waves": [
+      "physics",
+      "musical-instruments"
+    ],
+    "electricity-and-magnetism": [
+      "physics"
+    ],
+    "atoms-and-modern-physics": [
+      "physics",
+      "nobel-prizes",
+      "famous-scientists"
+    ],
+    "units-and-measurement": [
+      "maths",
+      "numbers"
+    ],
+    "chemical-elements": [
+      "chemistry"
+    ],
+    "chemical-reactions": [
+      "chemistry"
+    ],
+    "everyday-chemistry": [
+      "chemistry",
+      "science"
+    ],
+    "materials-and-metals": [
+      "chemistry",
+      "recycling"
+    ],
+    "moons-comets-and-asteroids": [
+      "solar-system"
+    ],
+    "night-sky": [
+      "stars-and-galaxies",
+      "space"
+    ],
+    "telescopes-and-observatories": [
+      "stars-and-galaxies",
+      "space"
+    ],
+    "space-probes-and-rovers": [
+      "space-race-and-astronauts",
+      "solar-system"
+    ],
+    "space-stations-and-living-in-space": [
+      "space-race-and-astronauts"
+    ],
+    "cosmology": [
+      "stars-and-galaxies",
+      "big-questions"
+    ],
+    "plate-tectonics": [
+      "planet-earth",
+      "volcanoes",
+      "earthquakes"
+    ],
+    "crystals-and-gemstones": [
+      "rocks-and-minerals"
+    ],
+    "weather-science": [
+      "weather-and-climate",
+      "natural-phenomena"
+    ],
+    "ocean-science": [
+      "oceans",
+      "the-sea"
+    ],
+    "climate-and-atmosphere": [
+      "weather-and-climate",
+      "environment"
+    ],
+    "special-numbers": [
+      "numbers",
+      "maths"
+    ],
+    "geometry-and-solids": [
+      "shapes"
+    ],
+    "probability-and-statistics": [
+      "maths"
+    ],
+    "number-systems-and-maths-history": [
+      "numbers",
+      "maths"
+    ],
+    "mathematicians": [
+      "famous-scientists",
+      "maths"
+    ],
+    "logic-and-maths-puzzles": [
+      "tricks",
+      "board-games"
+    ],
+    "simple-machines-and-tools": [
+      "inventions"
+    ],
+    "how-vehicles-work": [
+      "cars",
+      "planes",
+      "trains",
+      "ships-and-boats"
+    ],
+    "computing-history": [
+      "technology",
+      "famous-inventors"
+    ],
+    "programming-and-code": [
+      "artificial-intelligence",
+      "internet"
+    ],
+    "electronics-and-gadgets": [
+      "technology",
+      "robots"
+    ],
+    "communications": [
+      "internet",
+      "technology"
+    ],
+    "power-and-energy-sources": [
+      "environment"
+    ],
+    "structural-engineering": [
+      "famous-bridges",
+      "skyscrapers",
+      "wonders-of-the-world"
+    ],
+    "ancient-and-medieval-science": [
+      "famous-scientists",
+      "history"
+    ],
+    "scientific-revolution": [
+      "famous-scientists"
+    ],
+    "famous-experiments": [
+      "science",
+      "famous-scientists"
+    ],
+    "women-in-science": [
+      "famous-scientists",
+      "nobel-prizes"
+    ]
+  }
+}
