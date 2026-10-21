@@ -5175,9 +5175,9 @@ def cmd_taxonomy(args):
     save_json(d / "proposal.json", p)
     subs = {s["slug"] for c in p["categories"] for s in c["subcategories"]}
     (d / "proposal.md").write_text(taxonomy_md(p, off_list(args.bundle, subs)), encoding="utf-8")
-    print(f"{len(p['categories'])} categories, {len(subs)} subcategories → {(d / 'proposal.md').relative_to(ROOT)}; "
+    print(f"{len(p['categories'])} categories, {len(subs)} subcategories → {rekey.rel(d / 'proposal.md')}; "
           f"edit proposal.json to the developer's answer, then `qgen taxonomy --bundle {args.bundle} --apply "
-          f"{(d / 'proposal.json').relative_to(ROOT)}`")
+          f"{rekey.rel(d / 'proposal.json')}`")
 
 
 def cat_name(c, locale):
@@ -5389,8 +5389,8 @@ def cmd_remap(args):
     save_json(d / "proposal.json", p)
     errors, new, cats = remap_errors(p, args.bundle)
     (d / "proposal.md").write_text(remap_md(p, new, cats, {q["id"]: q for q in qs}), encoding="utf-8")
-    print(f"{(d / 'proposal.md').relative_to(ROOT)}: {len(new)} new subcategories; then `qgen remap --bundle "
-          f"{args.bundle} --apply {(d / 'proposal.json').relative_to(ROOT)}`")
+    print(f"{rekey.rel(d / 'proposal.md')}: {len(new)} new subcategories; then `qgen remap --bundle "
+          f"{args.bundle} --apply {rekey.rel(d / 'proposal.json')}`")
     if errors:
         sys.exit("proposal has problems (edit proposal.json or rerun):\n" + "\n".join(f"  {e}" for e in errors))
 
