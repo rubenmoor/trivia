@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "9fad1604",
+  "hash": "2eb839ab",
   "questions": [
     {
       "id": "q-0016",
@@ -5822,6 +5822,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "PHGCOM",
         "author_url": "https://commons.wikimedia.org/wiki/User:PHGCOM"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1692",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "brand-origins",
+      "bundle": "base",
+      "description": "El secreto de unas pestañas que parecen de jirafa.",
+      "question": "Me pongo en las pestañas para que se vean largas y oscuras, y mi nombre viene de un perfumista del siglo XIX. ¿Qué soy?",
+      "answer": "El rímel",
+      "wrong_answers": [
+        "El pintalabios",
+        "El esmalte",
+        "El colorete"
+      ],
+      "hints": [
+        "Es un maquillaje.",
+        "Viene en un tubito con un cepillito.",
+        "Su nombre empieza por la letra R."
+      ],
+      "fun_fact": "El perfumista Eugène Rimmel hizo tan famosa su máscara de pestañas que su apellido se convirtió en palabra.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Hands_of_a_makeup_artist_are_shown_holding_a_brush_while_colorful_makeup_palettes_are_arranged_neatly_on_a_clean_table_in_a_well-lit_studio%2C_highlighting_creativity_and_artistry.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHands_of_a_makeup_artist_are_shown_holding_a_brush_while_colorful_makeup_palettes_are_arranged_neatly_on_a_clean_table_in_a_well-lit_studio%2C_highlighting_creativity_and_artistry.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
       },
       "background": null
     },

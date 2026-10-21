@@ -1,0 +1,1167 @@
+{
+  "subcategory": "sayings",
+  "facets": [
+    "Refranes del tiempo y los meses",
+    "Dichos con animales",
+    "Frases hechas de comida",
+    "Expresiones con partes del cuerpo",
+    "Comparaciones y exageraciones populares",
+    "Expresiones con números y colores",
+    "Origen histórico de expresiones",
+    "Lugares y nombres en los dichos",
+    "Refranes de consejos y sabiduría",
+    "Refranes en el Quijote y la literatura",
+    "Coletillas de la tele y el humor",
+    "Expresiones de toros, juegos y deporte"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 2,
+      "name_concept": 2,
+      "word_meaning": 5,
+      "count": 3,
+      "estimate": 1,
+      "record": 1,
+      "origin": 4,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 3,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "«Hasta el cuarenta de mayo no te quites el sayo»",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 6
+    },
+    {
+      "name": "«En abril, aguas mil»",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 4
+    },
+    {
+      "name": "«Marzo ventoso y abril lluvioso sacan a mayo florido y hermoso»",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 9
+    },
+    {
+      "name": "«Como agua de mayo»",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 8
+    },
+    {
+      "name": "«Año de nieves, año de bienes»",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 7
+    },
+    {
+      "name": "«Cielo empedrado, suelo mojado»",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 11
+    },
+    {
+      "name": "«Cuando marzo mayea, mayo marcea»",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 12
+    },
+    {
+      "name": "«Por San Blas, la cigüeña verás»",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 11
+    },
+    {
+      "name": "«Febrerillo el loco»",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 10
+    },
+    {
+      "name": "Veranillo de San Martín",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 10
+    },
+    {
+      "name": "Veranillo del membrillo",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 13
+    },
+    {
+      "name": "«Nueve meses de invierno y tres de infierno»",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 11
+    },
+    {
+      "name": "«Hasta San Antón, Pascuas son»",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 13
+    },
+    {
+      "name": "«Agosto, frío en rostro»",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 13
+    },
+    {
+      "name": "«En martes, ni te cases ni te embarques»",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 9
+    },
+    {
+      "name": "«Mayo hortelano, mucha paja y poco grano»",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 14
+    },
+    {
+      "name": "Las cabañuelas",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 13
+    },
+    {
+      "name": "«Por Santa Lucía mengua la noche y crece el día»",
+      "facet": "Refranes del tiempo y los meses",
+      "known_at": 12
+    },
+    {
+      "name": "«Hacer un tiempo de perros»",
+      "facet": "Dichos con animales",
+      "known_at": 4
+    },
+    {
+      "name": "«Perro ladrador, poco mordedor»",
+      "facet": "Dichos con animales",
+      "known_at": 5
+    },
+    {
+      "name": "«A caballo regalado no le mires el diente»",
+      "facet": "Dichos con animales",
+      "known_at": 7
+    },
+    {
+      "name": "«Más vale pájaro en mano que ciento volando»",
+      "facet": "Dichos con animales",
+      "known_at": 5
+    },
+    {
+      "name": "«Dar gato por liebre»",
+      "facet": "Dichos con animales",
+      "known_at": 8
+    },
+    {
+      "name": "«Cría cuervos y te sacarán los ojos»",
+      "facet": "Dichos con animales",
+      "known_at": 10
+    },
+    {
+      "name": "«Estar como una cabra»",
+      "facet": "Dichos con animales",
+      "known_at": 4
+    },
+    {
+      "name": "«Ser la oveja negra»",
+      "facet": "Dichos con animales",
+      "known_at": 5
+    },
+    {
+      "name": "«Lágrimas de cocodrilo»",
+      "facet": "Dichos con animales",
+      "known_at": 7
+    },
+    {
+      "name": "«Aunque la mona se vista de seda, mona se queda»",
+      "facet": "Dichos con animales",
+      "known_at": 7
+    },
+    {
+      "name": "«Cuatro gatos»",
+      "facet": "Dichos con animales",
+      "known_at": 5
+    },
+    {
+      "name": "«Matar dos pájaros de un tiro»",
+      "facet": "Dichos con animales",
+      "known_at": 5
+    },
+    {
+      "name": "«Camarón que se duerme, se lo lleva la corriente»",
+      "facet": "Dichos con animales",
+      "known_at": 7
+    },
+    {
+      "name": "«A cada cerdo le llega su San Martín»",
+      "facet": "Dichos con animales",
+      "known_at": 10
+    },
+    {
+      "name": "«Buscarle tres pies al gato»",
+      "facet": "Dichos con animales",
+      "known_at": 10
+    },
+    {
+      "name": "«Ser un gallina»",
+      "facet": "Dichos con animales",
+      "known_at": 4
+    },
+    {
+      "name": "«Hacer el ganso»",
+      "facet": "Dichos con animales",
+      "known_at": 7
+    },
+    {
+      "name": "«Pagar el pato»",
+      "facet": "Dichos con animales",
+      "known_at": 8
+    },
+    {
+      "name": "«Estar en la edad del pavo»",
+      "facet": "Dichos con animales",
+      "known_at": 6
+    },
+    {
+      "name": "«Ser el último mono»",
+      "facet": "Dichos con animales",
+      "known_at": 9
+    },
+    {
+      "name": "«Ser pan comido»",
+      "facet": "Frases hechas de comida",
+      "known_at": 4
+    },
+    {
+      "name": "«Contigo, pan y cebolla»",
+      "facet": "Frases hechas de comida",
+      "known_at": 10
+    },
+    {
+      "name": "«Importar un pimiento»",
+      "facet": "Frases hechas de comida",
+      "known_at": 5
+    },
+    {
+      "name": "«Ponerse como un tomate»",
+      "facet": "Frases hechas de comida",
+      "known_at": 4
+    },
+    {
+      "name": "«Estar como un fideo»",
+      "facet": "Frases hechas de comida",
+      "known_at": 5
+    },
+    {
+      "name": "«Dar calabazas»",
+      "facet": "Frases hechas de comida",
+      "known_at": 8
+    },
+    {
+      "name": "«Ser del año de la pera»",
+      "facet": "Frases hechas de comida",
+      "known_at": 8
+    },
+    {
+      "name": "«Ser la leche»",
+      "facet": "Frases hechas de comida",
+      "known_at": 6
+    },
+    {
+      "name": "«Estar en el ajo»",
+      "facet": "Frases hechas de comida",
+      "known_at": 11
+    },
+    {
+      "name": "«Ir al grano»",
+      "facet": "Frases hechas de comida",
+      "known_at": 6
+    },
+    {
+      "name": "«Las cuentas claras y el chocolate espeso»",
+      "facet": "Frases hechas de comida",
+      "known_at": 9
+    },
+    {
+      "name": "«Al pan, pan, y al vino, vino»",
+      "facet": "Frases hechas de comida",
+      "known_at": 9
+    },
+    {
+      "name": "«Ser más bueno que el pan»",
+      "facet": "Frases hechas de comida",
+      "known_at": 6
+    },
+    {
+      "name": "«Tener mala leche»",
+      "facet": "Frases hechas de comida",
+      "known_at": 6
+    },
+    {
+      "name": "«Sacar las castañas del fuego»",
+      "facet": "Frases hechas de comida",
+      "known_at": 11
+    },
+    {
+      "name": "«Estar de mala uva»",
+      "facet": "Frases hechas de comida",
+      "known_at": 7
+    },
+    {
+      "name": "«Dame pan y llámame tonto»",
+      "facet": "Frases hechas de comida",
+      "known_at": 11
+    },
+    {
+      "name": "«Pedir peras al olmo»",
+      "facet": "Frases hechas de comida",
+      "known_at": 10
+    },
+    {
+      "name": "«Ser un chorizo»",
+      "facet": "Frases hechas de comida",
+      "known_at": 8
+    },
+    {
+      "name": "«Cortar el bacalao»",
+      "facet": "Frases hechas de comida",
+      "known_at": 10
+    },
+    {
+      "name": "«Costar un ojo de la cara»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 4
+    },
+    {
+      "name": "«Tomar el pelo»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 4
+    },
+    {
+      "name": "«Echar una mano»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 3
+    },
+    {
+      "name": "«Meter la pata»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 4
+    },
+    {
+      "name": "«Ser uña y carne»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 7
+    },
+    {
+      "name": "«Hablar por los codos»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 5
+    },
+    {
+      "name": "«No tener pelos en la lengua»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 7
+    },
+    {
+      "name": "«Estar hasta las narices»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 5
+    },
+    {
+      "name": "«Poner los dientes largos»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 9
+    },
+    {
+      "name": "«Tener mano izquierda»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 10
+    },
+    {
+      "name": "«Ojos que no ven, corazón que no siente»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 6
+    },
+    {
+      "name": "«Con el corazón en un puño»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 9
+    },
+    {
+      "name": "«Lavarse las manos»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 8
+    },
+    {
+      "name": "«Empinar el codo»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 10
+    },
+    {
+      "name": "«Estar en las nubes»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 5
+    },
+    {
+      "name": "«Hincar los codos»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 8
+    },
+    {
+      "name": "«Estar con el agua al cuello»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 7
+    },
+    {
+      "name": "«Ponerse los pelos de punta»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 4
+    },
+    {
+      "name": "«Tener mucha cara»",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 6
+    },
+    {
+      "name": "«Más feo que Picio»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 10
+    },
+    {
+      "name": "«Más listo que el hambre»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 9
+    },
+    {
+      "name": "«Dormir como un tronco»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 4
+    },
+    {
+      "name": "«Más viejo que Matusalén»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 10
+    },
+    {
+      "name": "«Más largo que un día sin pan»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 7
+    },
+    {
+      "name": "«Más contento que unas castañuelas»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 8
+    },
+    {
+      "name": "«Más sordo que una tapia»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 7
+    },
+    {
+      "name": "«Más tonto que Abundio»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 12
+    },
+    {
+      "name": "«Más fresco que una lechuga»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 6
+    },
+    {
+      "name": "«Fuerte como un roble»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 5
+    },
+    {
+      "name": "«Más claro que el agua»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 4
+    },
+    {
+      "name": "«Más lento que el caballo del malo»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 11
+    },
+    {
+      "name": "«Más perdido que un pulpo en un garaje»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 9
+    },
+    {
+      "name": "«Más chulo que un ocho»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 9
+    },
+    {
+      "name": "«Más pesado que una vaca en brazos»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 9
+    },
+    {
+      "name": "«Más raro que un perro verde»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 7
+    },
+    {
+      "name": "«Te lo he dicho mil veces»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 3
+    },
+    {
+      "name": "«Llover a cántaros»",
+      "facet": "Comparaciones y exageraciones populares",
+      "known_at": 6
+    },
+    {
+      "name": "«Ponerse morado»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 6
+    },
+    {
+      "name": "«Estar sin blanca»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 9
+    },
+    {
+      "name": "«Poner verde a alguien»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 9
+    },
+    {
+      "name": "«Verlo todo de color de rosa»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 5
+    },
+    {
+      "name": "«Quedarse en blanco»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 5
+    },
+    {
+      "name": "Prensa rosa",
+      "facet": "Expresiones con números y colores",
+      "known_at": 10
+    },
+    {
+      "name": "«Estar en el quinto pino»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 8
+    },
+    {
+      "name": "«A la tercera va la vencida»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 6
+    },
+    {
+      "name": "«Ni a la de tres»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 7
+    },
+    {
+      "name": "«Ser un cero a la izquierda»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 7
+    },
+    {
+      "name": "«Estar en el séptimo cielo»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 9
+    },
+    {
+      "name": "«De tres al cuarto»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 12
+    },
+    {
+      "name": "«En un dos por tres»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 6
+    },
+    {
+      "name": "«Verlo todo negro»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 6
+    },
+    {
+      "name": "«Tener la negra»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 10
+    },
+    {
+      "name": "«Ser un viejo verde»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 10
+    },
+    {
+      "name": "«Sacar los colores»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 8
+    },
+    {
+      "name": "«Tener sangre azul»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 8
+    },
+    {
+      "name": "«Dar en el blanco»",
+      "facet": "Expresiones con números y colores",
+      "known_at": 8
+    },
+    {
+      "name": "«Poner una pica en Flandes»",
+      "facet": "Origen histórico de expresiones",
+      "known_at": 13
+    },
+    {
+      "name": "«Más se perdió en Cuba»",
+      "facet": "Origen histórico de expresiones",
+      "known_at": 11
+    },
+    {
+      "name": "«Armarse la de San Quintín»",
+      "facet": "Origen histórico de expresiones",
+      "known_at": 12
+    },
+    {
+      "name": "«Hacer el agosto»",
+      "facet": "Origen histórico de expresiones",
+      "known_at": 9
+    },
+    {
+      "name": "«Pasar la noche en blanco»",
+      "facet": "Origen histórico de expresiones",
+      "known_at": 7
+    },
+    {
+      "name": "«Tirar la casa por la ventana»",
+      "facet": "Origen histórico de expresiones",
+      "known_at": 8
+    },
+    {
+      "name": "«Quedarse compuesto y sin novia»",
+      "facet": "Origen histórico de expresiones",
+      "known_at": 10
+    },
+    {
+      "name": "«Hacerse el sueco»",
+      "facet": "Origen histórico de expresiones",
+      "known_at": 10
+    },
+    {
+      "name": "«Ir de punta en blanco»",
+      "facet": "Origen histórico de expresiones",
+      "known_at": 11
+    },
+    {
+      "name": "«Sostenella y no enmendalla»",
+      "facet": "Origen histórico de expresiones",
+      "known_at": 13
+    },
+    {
+      "name": "«Írsele a alguien el santo al cielo»",
+      "facet": "Origen histórico de expresiones",
+      "known_at": 10
+    },
+    {
+      "name": "«Quemarse las pestañas»",
+      "facet": "Origen histórico de expresiones",
+      "known_at": 11
+    },
+    {
+      "name": "«Meterse en camisa de once varas»",
+      "facet": "Origen histórico de expresiones",
+      "known_at": 12
+    },
+    {
+      "name": "«A buenas horas, mangas verdes»",
+      "facet": "Origen histórico de expresiones",
+      "known_at": 13
+    },
+    {
+      "name": "«Poner las peras a cuarto»",
+      "facet": "Origen histórico de expresiones",
+      "known_at": 12
+    },
+    {
+      "name": "«Irse por los cerros de Úbeda»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 11
+    },
+    {
+      "name": "«Estar en Babia»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 9
+    },
+    {
+      "name": "«Quedarse a la luna de Valencia»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 12
+    },
+    {
+      "name": "«No se ganó Zamora en una hora»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 12
+    },
+    {
+      "name": "«Quien se fue a Sevilla perdió su silla»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 7
+    },
+    {
+      "name": "«Ancha es Castilla»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 12
+    },
+    {
+      "name": "«Donde Cristo dio las tres voces»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 11
+    },
+    {
+      "name": "«Armarse el belén»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 8
+    },
+    {
+      "name": "«Todos los caminos llevan a Roma»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 6
+    },
+    {
+      "name": "«Como Pedro por su casa»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 8
+    },
+    {
+      "name": "«Juan Palomo, yo me lo guiso, yo me lo como»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 11
+    },
+    {
+      "name": "«Llamarse Andana»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 14
+    },
+    {
+      "name": "«Que si quieres arroz, Catalina»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 11
+    },
+    {
+      "name": "«Ser más antiguo que el tío Paco con las rebajas»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 11
+    },
+    {
+      "name": "«Ir de Herodes a Pilatos»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 12
+    },
+    {
+      "name": "«París bien vale una misa»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 13
+    },
+    {
+      "name": "«Estar en las Batuecas»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 13
+    },
+    {
+      "name": "«Esto es Jauja»",
+      "facet": "Lugares y nombres en los dichos",
+      "known_at": 10
+    },
+    {
+      "name": "«No dejes para mañana lo que puedas hacer hoy»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 4
+    },
+    {
+      "name": "«A quien madruga, Dios le ayuda»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 4
+    },
+    {
+      "name": "«Más vale tarde que nunca»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 4
+    },
+    {
+      "name": "«Dime con quién andas y te diré quién eres»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 6
+    },
+    {
+      "name": "«En boca cerrada no entran moscas»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 5
+    },
+    {
+      "name": "«Quien mucho abarca, poco aprieta»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 9
+    },
+    {
+      "name": "«No hay mal que por bien no venga»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 7
+    },
+    {
+      "name": "«Cuando el río suena, agua lleva»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 8
+    },
+    {
+      "name": "«A buen entendedor, pocas palabras bastan»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 9
+    },
+    {
+      "name": "«El que avisa no es traidor»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 8
+    },
+    {
+      "name": "«Más vale prevenir que curar»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 5
+    },
+    {
+      "name": "«Poco a poco se va lejos»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 5
+    },
+    {
+      "name": "«Donde fueres, haz lo que vieres»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 10
+    },
+    {
+      "name": "«No por mucho madrugar amanece más temprano»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 8
+    },
+    {
+      "name": "«Quien siembra vientos recoge tempestades»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 10
+    },
+    {
+      "name": "«Más sabe el diablo por viejo que por diablo»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 10
+    },
+    {
+      "name": "«Quien bien te quiere te hará llorar»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 9
+    },
+    {
+      "name": "«Agua que no has de beber, déjala correr»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 9
+    },
+    {
+      "name": "«El hábito no hace al monje»",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 9
+    },
+    {
+      "name": "«Con la Iglesia hemos topado»",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 12
+    },
+    {
+      "name": "«Luchar contra molinos de viento»",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 8
+    },
+    {
+      "name": "«Ladran, luego cabalgamos»",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 12
+    },
+    {
+      "name": "«Ser un quijote»",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 10
+    },
+    {
+      "name": "Dulcinea",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 9
+    },
+    {
+      "name": "«En un lugar de la Mancha»",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 7
+    },
+    {
+      "name": "«Cada uno es hijo de sus obras»",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 14
+    },
+    {
+      "name": "«Donde una puerta se cierra, otra se abre»",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 7
+    },
+    {
+      "name": "«Del dicho al hecho hay mucho trecho»",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 7
+    },
+    {
+      "name": "Sancho Panza",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 6
+    },
+    {
+      "name": "«Ser una celestina»",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 12
+    },
+    {
+      "name": "«Ser un donjuán»",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 9
+    },
+    {
+      "name": "«Ser un lazarillo»",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 11
+    },
+    {
+      "name": "«Ser como el perro del hortelano»",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 11
+    },
+    {
+      "name": "«Fuenteovejuna, todos a una»",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 12
+    },
+    {
+      "name": "«La vida es sueño»",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 11
+    },
+    {
+      "name": "Rocinante",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 9
+    },
+    {
+      "name": "Ínsula Barataria",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 14
+    },
+    {
+      "name": "Bálsamo de Fierabrás",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 14
+    },
+    {
+      "name": "«Desfacer entuertos»",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 13
+    },
+    {
+      "name": "«Volverán las oscuras golondrinas»",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 13
+    },
+    {
+      "name": "«Verde que te quiero verde»",
+      "facet": "Refranes en el Quijote y la literatura",
+      "known_at": 11
+    },
+    {
+      "name": "«Fistro pecador de la pradera»",
+      "facet": "Coletillas de la tele y el humor",
+      "known_at": 9
+    },
+    {
+      "name": "«¡Hasta luego, Lucas!»",
+      "facet": "Coletillas de la tele y el humor",
+      "known_at": 8
+    },
+    {
+      "name": "«Ojo al dato»",
+      "facet": "Coletillas de la tele y el humor",
+      "known_at": 12
+    },
+    {
+      "name": "«Y yo con estos pelos»",
+      "facet": "Coletillas de la tele y el humor",
+      "known_at": 11
+    },
+    {
+      "name": "La empanadilla de Móstoles",
+      "facet": "Coletillas de la tele y el humor",
+      "known_at": 12
+    },
+    {
+      "name": "«Un, dos, tres, responda otra vez»",
+      "facet": "Coletillas de la tele y el humor",
+      "known_at": 11
+    },
+    {
+      "name": "La Ruperta",
+      "facet": "Coletillas de la tele y el humor",
+      "known_at": 12
+    },
+    {
+      "name": "«Calabaza, calabaza, todo el mundo a su casa»",
+      "facet": "Coletillas de la tele y el humor",
+      "known_at": 12
+    },
+    {
+      "name": "«¡A mí, plin!»",
+      "facet": "Coletillas de la tele y el humor",
+      "known_at": 12
+    },
+    {
+      "name": "«¡Qué pasa, neng!»",
+      "facet": "Coletillas de la tele y el humor",
+      "known_at": 12
+    },
+    {
+      "name": "«¡Chimpún!»",
+      "facet": "Coletillas de la tele y el humor",
+      "known_at": 9
+    },
+    {
+      "name": "«¡Para chula, mi pirula!»",
+      "facet": "Coletillas de la tele y el humor",
+      "known_at": 9
+    },
+    {
+      "name": "«Equilicuá»",
+      "facet": "Coletillas de la tele y el humor",
+      "known_at": 10
+    },
+    {
+      "name": "«Hola, caracola»",
+      "facet": "Coletillas de la tele y el humor",
+      "known_at": 4
+    },
+    {
+      "name": "«Coger el toro por los cuernos»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 6
+    },
+    {
+      "name": "«Ver los toros desde la barrera»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 9
+    },
+    {
+      "name": "«Echar un capote»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 10
+    },
+    {
+      "name": "«Cortarse la coleta»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 11
+    },
+    {
+      "name": "«Estar al quite»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 12
+    },
+    {
+      "name": "«Cantar las cuarenta»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 10
+    },
+    {
+      "name": "«Tener más moral que el Alcoyano»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 11
+    },
+    {
+      "name": "«Echar balones fuera»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 8
+    },
+    {
+      "name": "«Tirar la toalla»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 5
+    },
+    {
+      "name": "«Casarse de penalti»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 10
+    },
+    {
+      "name": "«Salvado por la campana»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 6
+    },
+    {
+      "name": "«Ser un as»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 6
+    },
+    {
+      "name": "«Tener un as en la manga»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 7
+    },
+    {
+      "name": "«Quedarse en fuera de juego»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 7
+    },
+    {
+      "name": "«Salir por la puerta grande»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 10
+    },
+    {
+      "name": "«Lo que no puede ser no puede ser, y además es imposible»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 13
+    },
+    {
+      "name": "«Dar la vuelta al ruedo»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 12
+    },
+    {
+      "name": "«Ir de farol»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 9
+    },
+    {
+      "name": "«Hacer un brindis al sol»",
+      "facet": "Expresiones de toros, juegos y deporte",
+      "known_at": 13
+    }
+  ]
+}

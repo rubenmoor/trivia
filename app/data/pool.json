@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "edfb37b1",
+  "hash": "718b8b1b",
   "questions": [
     {
       "id": "q-0001",
@@ -19305,40 +19305,6 @@
       "background": null
     },
     {
-      "id": "q-0711",
-      "status": "approved",
-      "difficulty": 5,
-      "subcategory": "fairy-tales",
-      "bundle": "base",
-      "description": "Una canción que te pone a hacer sentadillas sin que te des cuenta.",
-      "question": "Adivina: soy una ronda infantil. Hablo de un patio que se moja cuando llueve, pongo a todos a agacharse y, al final, canto una lista. ¿De qué es esa lista?",
-      "answer": "Letras del abecedario",
-      "wrong_answers": [
-        "Números del 1 al 10",
-        "Días de la semana",
-        "Colores del arcoíris"
-      ],
-      "hints": [
-        "Después de la lista viene: 'que si tú no me quieres, otro amigo me querrá'.",
-        "Es algo que aprendes en el colegio para leer y escribir.",
-        "Empieza con 'H, I, J, K…'."
-      ],
-      "fun_fact": "'El patio de mi casa' se canta en rondas desde España hasta la Patagonia, con pequeñas diferencias en cada país.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Greymouth_Intermediate_School_Courtyard_during_break_time%2C_Tainui_Street%2C_Greymouth%2C_1987._CC165.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGreymouth_Intermediate_School_Courtyard_during_break_time%2C_Tainui_Street%2C_Greymouth%2C_1987._CC165.jpg",
-        "credit": "John Charlton · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "John Charlton",
-        "author_url": "https://www.wikidata.org/wiki/Q99000064"
-      },
-      "background": null
-    },
-    {
       "id": "q-0712",
       "status": "approved",
       "difficulty": 2,
@@ -25604,40 +25570,6 @@
       "background": null
     },
     {
-      "id": "q-0905",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "plants",
-      "bundle": "base",
-      "description": "Una fruta que se reparte entre dos y nadie pelea.",
-      "question": "En una boda, la novia dice emocionada: '¡Por fin encontré a mi media naranja!'. ¿Qué quiere decir?",
-      "answer": "Su pareja ideal",
-      "wrong_answers": [
-        "Su fruta favorita",
-        "Su mejor amiga",
-        "Su trabajo soñado"
-      ],
-      "hints": [
-        "No está hablando de comida.",
-        "Se refiere a una persona.",
-        "Es con quien se está casando."
-      ],
-      "fun_fact": "La expresión viene de una vieja idea de que cada persona es una mitad que busca a otra para estar completa.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Cara_cara_orange_cut_in_half.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ACara_cara_orange_cut_in_half.JPG",
-        "credit": "user:WLU · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "user:WLU",
-        "author_url": null
-      },
-      "background": null
-    },
-    {
       "id": "q-0906",
       "status": "approved",
       "difficulty": 8,
@@ -27236,40 +27168,6 @@
       "background": null
     },
     {
-      "id": "q-0958",
-      "status": "approved",
-      "difficulty": 5,
-      "subcategory": "insects",
-      "bundle": "base",
-      "description": "Una expresión con más pólvora que un diciembre en Colombia.",
-      "question": "Si alguien dice que estás \"matando moscas a cañonazos\", ¿qué quiere decir?",
-      "answer": "Usar algo exagerado para un problema pequeño",
-      "wrong_answers": [
-        "Hacer algo difícil con muchísima paciencia",
-        "Perder el tiempo en cosas sin importancia",
-        "Atacar a alguien por sorpresa y sin avisar"
-      ],
-      "hints": [
-        "Piensa en el tamaño de una mosca y el de un cañón.",
-        "Para eso bastaría con un matamoscas.",
-        "Es gastar demasiada fuerza en algo que no la necesita."
-      ],
-      "fun_fact": "El matamoscas tiene agujeros para no empujar el aire antes del golpe, porque las moscas sienten ese viento y escapan.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/An_old_cannon_in_Vard%C3%B6_fortress_Norway%2C_july_2005_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAn_old_cannon_in_Vard%C3%B6_fortress_Norway%2C_july_2005_-_panoramio.jpg",
-        "credit": "Risto Varhe · CC BY 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 3.0",
-        "license_url": "https://creativecommons.org/licenses/by/3.0",
-        "author": "Risto Varhe",
-        "author_url": "https://web.archive.org/web/20161013110034/http://www.panoramio.com/user/693204?with_photo_id=7532179"
-      },
-      "background": null
-    },
-    {
       "id": "q-0959",
       "status": "approved",
       "difficulty": 13,
@@ -27810,40 +27708,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Tobias Gärtner",
         "author_url": "https://500px.com/TobiasGrtner"
-      },
-      "background": null
-    },
-    {
-      "id": "q-0975",
-      "status": "approved",
-      "difficulty": 11,
-      "subcategory": "childrens-books",
-      "bundle": "base",
-      "description": "Una vaca con más fama que cualquier cantante de moda.",
-      "question": "Soy una canción infantil de los años cuarenta. Hablo de una vaca que no es una vaca cualquiera, porque da leche merengada. ¿En qué país nací?",
-      "answer": "España",
-      "wrong_answers": [
-        "México",
-        "Argentina",
-        "Colombia"
-      ],
-      "hints": [
-        "Nací en un país donde se habla español.",
-        "La música es de Fernando García Morcillo.",
-        "Mi país tiene la misma lengua que Colombia, pero queda al otro lado del Atlántico."
-      ],
-      "fun_fact": "La canción tiene más de 80 años y se sigue cantando en casi todos los países de habla hispana.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/SK_10-22-2024_Historic_Area_dairy_cow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASK_10-22-2024_Historic_Area_dairy_cow.jpg",
-        "credit": "vastateparksstaff · CC BY 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "vastateparksstaff",
-        "author_url": null
       },
       "background": null
     },
@@ -33866,40 +33730,6 @@
       "background": null
     },
     {
-      "id": "q-1163",
-      "status": "approved",
-      "difficulty": 12,
-      "subcategory": "tv-series",
-      "bundle": "base",
-      "description": "Diez personas, un solo baño y cero paciencia: la receta perfecta para reírse.",
-      "question": "Su protagonista es Plácido López, se estrenó en 2007 y trata de una familia numerosa apretada en un apartamento pequeño. ¿De qué país es la comedia «Una familia de diez»?",
-      "answer": "México",
-      "wrong_answers": [
-        "Colombia",
-        "Argentina",
-        "Venezuela"
-      ],
-      "hints": [
-        "Es un país latinoamericano con una enorme industria de televisión.",
-        "Su creador y protagonista es Jorge Ortiz de Pinedo, actor de ese país.",
-        "Se transmitió por el Canal de las Estrellas de Televisa."
-      ],
-      "fun_fact": "Después de más de diez años fuera del aire, la serie volvió con temporadas nuevas en 2019.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/TV_camera_operator%2C_Canon_UHD_DIGISUPER_90.jpg/3840px-TV_camera_operator%2C_Canon_UHD_DIGISUPER_90.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ATV_camera_operator%2C_Canon_UHD_DIGISUPER_90.jpg",
-        "credit": "Zalasem1 · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Zalasem1",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Zalasem1"
-      },
-      "background": null
-    },
-    {
       "id": "q-1164",
       "status": "approved",
       "difficulty": 11,
@@ -36586,40 +36416,6 @@
       "background": null
     },
     {
-      "id": "q-1248",
-      "status": "approved",
-      "difficulty": 2,
-      "subcategory": "childrens-songs",
-      "bundle": "base",
-      "description": "El hechizo médico más antiguo de la casa, y ni siquiera necesita una curita.",
-      "question": "Completa: 'Sana, sana, colita de rana, si no sana hoy, sanará…'",
-      "answer": "Mañana",
-      "wrong_answers": [
-        "El lunes",
-        "En un rato",
-        "Pasado mañana"
-      ],
-      "hints": [
-        "Es una palabra que rima con 'rana'.",
-        "Habla del día siguiente.",
-        "Es el día que viene después de hoy."
-      ],
-      "fun_fact": "Esta frase para curar raspones se dice en casi todos los países donde se habla español.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Child_gets_a_bandage_on_their_knee_after_a_small_injury_closeup.jpg/3840px-Child_gets_a_bandage_on_their_knee_after_a_small_injury_closeup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AChild_gets_a_bandage_on_their_knee_after_a_small_injury_closeup.jpg",
-        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "Shixart1985",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
-      },
-      "background": null
-    },
-    {
       "id": "q-1249",
       "status": "approved",
       "difficulty": 4,
@@ -36718,40 +36514,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Jules Verne Times Two",
         "author_url": "https://commons.wikimedia.org/wiki/User:Julesvernex2"
-      },
-      "background": null
-    },
-    {
-      "id": "q-1252",
-      "status": "approved",
-      "difficulty": 12,
-      "subcategory": "childrens-songs",
-      "bundle": "base",
-      "description": "Una pregunta con narices rojas y zapatos gigantes.",
-      "question": "¿Cuál de estos payasos NO formó parte de 'Los Payasos de la Tele' junto con Miliki?",
-      "answer": "Cepillín",
-      "wrong_answers": [
-        "Gaby",
-        "Fofó",
-        "Fofito"
-      ],
-      "hints": [
-        "Los Payasos de la Tele eran casi todos de la misma familia española.",
-        "El que sobra tenía su propio programa en México.",
-        "Es un payaso mexicano de Monterrey."
-      ],
-      "fun_fact": "Gaby, Fofó y Miliki triunfaron en la televisión de Cuba, Venezuela y Argentina antes de volverse famosos en España.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Circus_Ronaldo_door_Dirk_Annemans.jpg/3840px-Circus_Ronaldo_door_Dirk_Annemans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ACircus_Ronaldo_door_Dirk_Annemans.jpg",
-        "credit": "Dirk Annemans · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Dirk Annemans",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Dirk_Annemans"
       },
       "background": null
     },
@@ -44980,40 +44742,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Fabio Alessandro Locati",
         "author_url": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-1498",
-      "status": "approved",
-      "difficulty": 10,
-      "subcategory": "formula-1-and-motorsport",
-      "bundle": "base",
-      "description": "Un piloto de dibujos animados con más velocidad que líneas de diálogo.",
-      "question": "El 'Lightning McQueen' de 'Cars' es 'Rayo McQueen' en español. Del mismo modo, 'Speed Racer' es…",
-      "answer": "Meteoro",
-      "wrong_answers": [
-        "Relámpago",
-        "Centella",
-        "Cohete"
-      ],
-      "hints": [
-        "Es una serie animada japonesa de los años 60 que se vio en toda Latinoamérica.",
-        "Su bólido blanco de carreras se llamaba Mach 5.",
-        "Su nombre es el de una roca que cae del espacio y brilla al entrar a la atmósfera."
-      ],
-      "fun_fact": "En 2008 se estrenó una película con actores, 'Meteoro: la película', hecha por las creadoras de 'Matrix'.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Ford_GT40_%281965%29_-_Chevrolet_Corvette_%281960%29_%2818243362094%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AFord_GT40_%281965%29_-_Chevrolet_Corvette_%281960%29_%2818243362094%29.jpg",
-        "credit": "Kevin Decherf from Nantes, France · CC BY-SA 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "Kevin Decherf from Nantes, France",
-        "author_url": "https://www.flickr.com/people/44133767@N06"
       },
       "background": null
     },
@@ -61739,40 +61467,6 @@
       "background": null
     },
     {
-      "id": "q-1998",
-      "status": "approved",
-      "difficulty": 7,
-      "subcategory": "dogs",
-      "bundle": "base",
-      "description": "Una expresión que ningún perro aprobaría si pudiera opinar.",
-      "question": "Soy una expresión: si alguien dice «hace un tiempo de perros», ¿de qué está hablando?",
-      "answer": "De un clima muy malo",
-      "wrong_answers": [
-        "De mucho tiempo libre",
-        "De una tarde aburrida",
-        "De un día de buena suerte"
-      ],
-      "hints": [
-        "La palabra 'tiempo' aquí no habla del reloj.",
-        "Es un día para quedarse en casa.",
-        "Piensa en lluvia, viento y frío."
-      ],
-      "fun_fact": "En inglés dicen que llueve «gatos y perros» cuando cae un aguacero.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Beagle_Puppy_lying_on_the_sofa_05.jpg/3840px-Beagle_Puppy_lying_on_the_sofa_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeagle_Puppy_lying_on_the_sofa_05.jpg",
-        "credit": "Slyronit · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Slyronit",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Slyronit"
-      },
-      "background": null
-    },
-    {
       "id": "q-1999",
       "status": "approved",
       "difficulty": 12,
@@ -64828,40 +64522,6 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Jorge Royan",
-        "author_url": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-2091",
-      "status": "approved",
-      "difficulty": 8,
-      "subcategory": "circus",
-      "bundle": "base",
-      "description": "Una palabra que suena a brinco y a mueble al mismo tiempo.",
-      "question": "¿Qué es un saltimbanqui?",
-      "answer": "Un acróbata que actúa en la calle",
-      "wrong_answers": [
-        "Un banco para hacer gimnasia",
-        "Un pájaro que salta entre ramas",
-        "Un carpintero que fabrica bancos"
-      ],
-      "hints": [
-        "La palabra viene del italiano.",
-        "Es un oficio, no un objeto ni un animal.",
-        "Es un artista que hace volteretas y piruetas para el público."
-      ],
-      "fun_fact": "Picasso pintó en 1905 un famoso cuadro llamado «Familia de saltimbanquis».",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Voyage17%2C_Prague%2C_Old_Town_Square.jpg/3840px-Voyage17%2C_Prague%2C_Old_Town_Square.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AVoyage17%2C_Prague%2C_Old_Town_Square.jpg",
-        "credit": "Shuying YU · FAL · Wikimedia Commons",
-        "provider": "commons",
-        "license": "FAL",
-        "license_url": "http://artlibre.org/licence/lal/en",
-        "author": "Shuying YU",
         "author_url": null
       },
       "background": null

@@ -1,0 +1,1132 @@
+{
+  "subcategory": "slang",
+  "facets": [
+    "Saludos y formas de llamarse",
+    "Exclamaciones de sorpresa y entusiasmo",
+    "Verbos coloquiales del día a día",
+    "Palabras para describir a la gente",
+    "Dinero, compras y gangas",
+    "Comida, bebida y bares en coloquial",
+    "Jerga del colegio y el instituto",
+    "Trabajo, chapuzas y vida de calle",
+    "Acortamientos de palabras",
+    "Jerga juvenil y de internet",
+    "Jerga de otras épocas",
+    "Palabras típicas de cada región"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 3,
+      "name_concept": 3,
+      "word_meaning": 5,
+      "count": 1,
+      "estimate": 1,
+      "record": 1,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 1,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 1,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Tío",
+      "facet": "Saludos y formas de llamarse",
+      "known_at": 3
+    },
+    {
+      "name": "Colega",
+      "facet": "Saludos y formas de llamarse",
+      "known_at": 4
+    },
+    {
+      "name": "Tronco",
+      "facet": "Saludos y formas de llamarse",
+      "known_at": 9
+    },
+    {
+      "name": "Macho",
+      "facet": "Saludos y formas de llamarse",
+      "known_at": 7
+    },
+    {
+      "name": "Chaval",
+      "facet": "Saludos y formas de llamarse",
+      "known_at": 4
+    },
+    {
+      "name": "Nene",
+      "facet": "Saludos y formas de llamarse",
+      "known_at": 3
+    },
+    {
+      "name": "Majo",
+      "facet": "Saludos y formas de llamarse",
+      "known_at": 5
+    },
+    {
+      "name": "¿Qué pasa?",
+      "facet": "Saludos y formas de llamarse",
+      "known_at": 3
+    },
+    {
+      "name": "Hola, buenas",
+      "facet": "Saludos y formas de llamarse",
+      "known_at": 5
+    },
+    {
+      "name": "Hasta luego",
+      "facet": "Saludos y formas de llamarse",
+      "known_at": 2
+    },
+    {
+      "name": "Chao",
+      "facet": "Saludos y formas de llamarse",
+      "known_at": 3
+    },
+    {
+      "name": "Venga, adiós",
+      "facet": "Saludos y formas de llamarse",
+      "known_at": 5
+    },
+    {
+      "name": "Cariño",
+      "facet": "Saludos y formas de llamarse",
+      "known_at": 2
+    },
+    {
+      "name": "Jefe",
+      "facet": "Saludos y formas de llamarse",
+      "known_at": 6
+    },
+    {
+      "name": "Maestro",
+      "facet": "Saludos y formas de llamarse",
+      "known_at": 8
+    },
+    {
+      "name": "Hijo mío",
+      "facet": "Saludos y formas de llamarse",
+      "known_at": 4
+    },
+    {
+      "name": "¡Hala!",
+      "facet": "Exclamaciones de sorpresa y entusiasmo",
+      "known_at": 2
+    },
+    {
+      "name": "¡Qué guay!",
+      "facet": "Exclamaciones de sorpresa y entusiasmo",
+      "known_at": 2
+    },
+    {
+      "name": "¡Ostras!",
+      "facet": "Exclamaciones de sorpresa y entusiasmo",
+      "known_at": 4
+    },
+    {
+      "name": "¡Madre mía!",
+      "facet": "Exclamaciones de sorpresa y entusiasmo",
+      "known_at": 3
+    },
+    {
+      "name": "¡Anda!",
+      "facet": "Exclamaciones de sorpresa y entusiasmo",
+      "known_at": 3
+    },
+    {
+      "name": "¡Toma ya!",
+      "facet": "Exclamaciones de sorpresa y entusiasmo",
+      "known_at": 4
+    },
+    {
+      "name": "¡Olé!",
+      "facet": "Exclamaciones de sorpresa y entusiasmo",
+      "known_at": 3
+    },
+    {
+      "name": "¡Qué fuerte!",
+      "facet": "Exclamaciones de sorpresa y entusiasmo",
+      "known_at": 5
+    },
+    {
+      "name": "¡Qué pasada!",
+      "facet": "Exclamaciones de sorpresa y entusiasmo",
+      "known_at": 5
+    },
+    {
+      "name": "¡Vaya!",
+      "facet": "Exclamaciones de sorpresa y entusiasmo",
+      "known_at": 3
+    },
+    {
+      "name": "¡Caramba!",
+      "facet": "Exclamaciones de sorpresa y entusiasmo",
+      "known_at": 5
+    },
+    {
+      "name": "¡Jo!",
+      "facet": "Exclamaciones de sorpresa y entusiasmo",
+      "known_at": 2
+    },
+    {
+      "name": "¡Qué chulo!",
+      "facet": "Exclamaciones de sorpresa y entusiasmo",
+      "known_at": 3
+    },
+    {
+      "name": "¡Qué bestia!",
+      "facet": "Exclamaciones de sorpresa y entusiasmo",
+      "known_at": 6
+    },
+    {
+      "name": "¡Toma castaña!",
+      "facet": "Exclamaciones de sorpresa y entusiasmo",
+      "known_at": 9
+    },
+    {
+      "name": "¡Ojo!",
+      "facet": "Exclamaciones de sorpresa y entusiasmo",
+      "known_at": 4
+    },
+    {
+      "name": "¡Flipante!",
+      "facet": "Exclamaciones de sorpresa y entusiasmo",
+      "known_at": 6
+    },
+    {
+      "name": "Molar",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 4
+    },
+    {
+      "name": "Flipar",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 5
+    },
+    {
+      "name": "Currar",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 6
+    },
+    {
+      "name": "Pillar",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 5
+    },
+    {
+      "name": "Mangar",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 7
+    },
+    {
+      "name": "Pirarse",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 8
+    },
+    {
+      "name": "Mosquearse",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 7
+    },
+    {
+      "name": "Rayarse",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 7
+    },
+    {
+      "name": "Liarla",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 6
+    },
+    {
+      "name": "Petar",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 8
+    },
+    {
+      "name": "Sobar",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 8
+    },
+    {
+      "name": "Escaquearse",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 9
+    },
+    {
+      "name": "Cotillear",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 6
+    },
+    {
+      "name": "Vacilar",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 7
+    },
+    {
+      "name": "Chinchar",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 5
+    },
+    {
+      "name": "Achuchar",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 6
+    },
+    {
+      "name": "Apalancarse",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 10
+    },
+    {
+      "name": "Dar la brasa",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 8
+    },
+    {
+      "name": "Enrollarse",
+      "facet": "Verbos coloquiales del día a día",
+      "known_at": 8
+    },
+    {
+      "name": "Pijo",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 6
+    },
+    {
+      "name": "Pesado",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 3
+    },
+    {
+      "name": "Plasta",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 7
+    },
+    {
+      "name": "Cotilla",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 5
+    },
+    {
+      "name": "Pringado",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 8
+    },
+    {
+      "name": "Friki",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 5
+    },
+    {
+      "name": "Hortera",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 9
+    },
+    {
+      "name": "Pardillo",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 8
+    },
+    {
+      "name": "Gafe",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 10
+    },
+    {
+      "name": "Guiri",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 7
+    },
+    {
+      "name": "Cachas",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 5
+    },
+    {
+      "name": "Borde",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 7
+    },
+    {
+      "name": "Bocazas",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 6
+    },
+    {
+      "name": "Tiquismiquis",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 8
+    },
+    {
+      "name": "Canijo",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 8
+    },
+    {
+      "name": "Lumbreras",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 9
+    },
+    {
+      "name": "Maruja",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 9
+    },
+    {
+      "name": "Chulo",
+      "facet": "Palabras para describir a la gente",
+      "known_at": 6
+    },
+    {
+      "name": "Pasta",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 5
+    },
+    {
+      "name": "Pelas",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 9
+    },
+    {
+      "name": "Duro",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 11
+    },
+    {
+      "name": "Chollo",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 7
+    },
+    {
+      "name": "Ganga",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 6
+    },
+    {
+      "name": "Pastizal",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 8
+    },
+    {
+      "name": "Estar tieso",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 10
+    },
+    {
+      "name": "A tocateja",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 12
+    },
+    {
+      "name": "Clavada",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 10
+    },
+    {
+      "name": "Timo",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 8
+    },
+    {
+      "name": "Rácano",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 8
+    },
+    {
+      "name": "Agarrado",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 8
+    },
+    {
+      "name": "Pagar a escote",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 12
+    },
+    {
+      "name": "A pachas",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 10
+    },
+    {
+      "name": "Calderilla",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 9
+    },
+    {
+      "name": "Gorrón",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 9
+    },
+    {
+      "name": "Sablazo",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 12
+    },
+    {
+      "name": "Rebajas",
+      "facet": "Dinero, compras y gangas",
+      "known_at": 5
+    },
+    {
+      "name": "Caña",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 9
+    },
+    {
+      "name": "Tapa",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 5
+    },
+    {
+      "name": "Pincho",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 6
+    },
+    {
+      "name": "Vermú",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 11
+    },
+    {
+      "name": "Bocata",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 4
+    },
+    {
+      "name": "Papeo",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 9
+    },
+    {
+      "name": "Zampar",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 5
+    },
+    {
+      "name": "Picoteo",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 7
+    },
+    {
+      "name": "Clara",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 11
+    },
+    {
+      "name": "Chato",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 12
+    },
+    {
+      "name": "Tinto de verano",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 10
+    },
+    {
+      "name": "Garito",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 11
+    },
+    {
+      "name": "Chiringuito",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 6
+    },
+    {
+      "name": "Chuche",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 2
+    },
+    {
+      "name": "Gusa",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 9
+    },
+    {
+      "name": "Sobremesa",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 8
+    },
+    {
+      "name": "Ir de tapas",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 6
+    },
+    {
+      "name": "La espuela",
+      "facet": "Comida, bebida y bares en coloquial",
+      "known_at": 14
+    },
+    {
+      "name": "Empollón",
+      "facet": "Jerga del colegio y el instituto",
+      "known_at": 5
+    },
+    {
+      "name": "Pelota",
+      "facet": "Jerga del colegio y el instituto",
+      "known_at": 5
+    },
+    {
+      "name": "Chuleta",
+      "facet": "Jerga del colegio y el instituto",
+      "known_at": 7
+    },
+    {
+      "name": "Hacer pellas",
+      "facet": "Jerga del colegio y el instituto",
+      "known_at": 9
+    },
+    {
+      "name": "Hacer novillos",
+      "facet": "Jerga del colegio y el instituto",
+      "known_at": 10
+    },
+    {
+      "name": "Catear",
+      "facet": "Jerga del colegio y el instituto",
+      "known_at": 8
+    },
+    {
+      "name": "Chivato",
+      "facet": "Jerga del colegio y el instituto",
+      "known_at": 4
+    },
+    {
+      "name": "Recreo",
+      "facet": "Jerga del colegio y el instituto",
+      "known_at": 1
+    },
+    {
+      "name": "Selectividad",
+      "facet": "Jerga del colegio y el instituto",
+      "known_at": 10
+    },
+    {
+      "name": "Repetidor",
+      "facet": "Jerga del colegio y el instituto",
+      "known_at": 7
+    },
+    {
+      "name": "Pasar lista",
+      "facet": "Jerga del colegio y el instituto",
+      "known_at": 4
+    },
+    {
+      "name": "Gamberro",
+      "facet": "Jerga del colegio y el instituto",
+      "known_at": 6
+    },
+    {
+      "name": "Castigado",
+      "facet": "Jerga del colegio y el instituto",
+      "known_at": 2
+    },
+    {
+      "name": "Novato",
+      "facet": "Jerga del colegio y el instituto",
+      "known_at": 5
+    },
+    {
+      "name": "Las notas",
+      "facet": "Jerga del colegio y el instituto",
+      "known_at": 3
+    },
+    {
+      "name": "Sobresaliente",
+      "facet": "Jerga del colegio y el instituto",
+      "known_at": 5
+    },
+    {
+      "name": "Copiar",
+      "facet": "Jerga del colegio y el instituto",
+      "known_at": 2
+    },
+    {
+      "name": "Chapuza",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 6
+    },
+    {
+      "name": "Chapucero",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 8
+    },
+    {
+      "name": "Curro",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 7
+    },
+    {
+      "name": "Currito",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 10
+    },
+    {
+      "name": "Enchufe",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 9
+    },
+    {
+      "name": "Saltimbanqui",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 9
+    },
+    {
+      "name": "Buscavidas",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 10
+    },
+    {
+      "name": "Chorizo",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 9
+    },
+    {
+      "name": "Trilero",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 12
+    },
+    {
+      "name": "Paleta",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 11
+    },
+    {
+      "name": "Manitas",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 6
+    },
+    {
+      "name": "Pluriempleo",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 12
+    },
+    {
+      "name": "Pelotazo",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 12
+    },
+    {
+      "name": "Mileurista",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 11
+    },
+    {
+      "name": "Hacer puente",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 7
+    },
+    {
+      "name": "Moscoso",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 14
+    },
+    {
+      "name": "Marrón",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 10
+    },
+    {
+      "name": "Mono de trabajo",
+      "facet": "Trabajo, chapuzas y vida de calle",
+      "known_at": 8
+    },
+    {
+      "name": "Boli",
+      "facet": "Acortamientos de palabras",
+      "known_at": 2
+    },
+    {
+      "name": "Cole",
+      "facet": "Acortamientos de palabras",
+      "known_at": 1
+    },
+    {
+      "name": "Profe",
+      "facet": "Acortamientos de palabras",
+      "known_at": 1
+    },
+    {
+      "name": "Tele",
+      "facet": "Acortamientos de palabras",
+      "known_at": 1
+    },
+    {
+      "name": "Bici",
+      "facet": "Acortamientos de palabras",
+      "known_at": 1
+    },
+    {
+      "name": "Peli",
+      "facet": "Acortamientos de palabras",
+      "known_at": 1
+    },
+    {
+      "name": "Finde",
+      "facet": "Acortamientos de palabras",
+      "known_at": 4
+    },
+    {
+      "name": "Insti",
+      "facet": "Acortamientos de palabras",
+      "known_at": 4
+    },
+    {
+      "name": "Mates",
+      "facet": "Acortamientos de palabras",
+      "known_at": 2
+    },
+    {
+      "name": "Seño",
+      "facet": "Acortamientos de palabras",
+      "known_at": 3
+    },
+    {
+      "name": "Cumple",
+      "facet": "Acortamientos de palabras",
+      "known_at": 1
+    },
+    {
+      "name": "Porfa",
+      "facet": "Acortamientos de palabras",
+      "known_at": 1
+    },
+    {
+      "name": "Compi",
+      "facet": "Acortamientos de palabras",
+      "known_at": 3
+    },
+    {
+      "name": "Depre",
+      "facet": "Acortamientos de palabras",
+      "known_at": 7
+    },
+    {
+      "name": "Uni",
+      "facet": "Acortamientos de palabras",
+      "known_at": 6
+    },
+    {
+      "name": "Poli",
+      "facet": "Acortamientos de palabras",
+      "known_at": 3
+    },
+    {
+      "name": "Súper",
+      "facet": "Acortamientos de palabras",
+      "known_at": 3
+    },
+    {
+      "name": "Frigo",
+      "facet": "Acortamientos de palabras",
+      "known_at": 5
+    },
+    {
+      "name": "Micro",
+      "facet": "Acortamientos de palabras",
+      "known_at": 4
+    },
+    {
+      "name": "Moto",
+      "facet": "Acortamientos de palabras",
+      "known_at": 5
+    },
+    {
+      "name": "Bro",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 5
+    },
+    {
+      "name": "Cringe",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 6
+    },
+    {
+      "name": "Random",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 6
+    },
+    {
+      "name": "Crush",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 6
+    },
+    {
+      "name": "Postureo",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 8
+    },
+    {
+      "name": "Hater",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 7
+    },
+    {
+      "name": "Stalkear",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 8
+    },
+    {
+      "name": "Ghostear",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 9
+    },
+    {
+      "name": "Salseo",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 8
+    },
+    {
+      "name": "Mazo",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 7
+    },
+    {
+      "name": "Renta",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 9
+    },
+    {
+      "name": "Shippear",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 9
+    },
+    {
+      "name": "Spoiler",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 5
+    },
+    {
+      "name": "Funar",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 10
+    },
+    {
+      "name": "Basado",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 10
+    },
+    {
+      "name": "Chetado",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 8
+    },
+    {
+      "name": "Noob",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 6
+    },
+    {
+      "name": "Troll",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 7
+    },
+    {
+      "name": "Meme",
+      "facet": "Jerga juvenil y de internet",
+      "known_at": 4
+    },
+    {
+      "name": "Guateque",
+      "facet": "Jerga de otras épocas",
+      "known_at": 12
+    },
+    {
+      "name": "Carroza",
+      "facet": "Jerga de otras épocas",
+      "known_at": 11
+    },
+    {
+      "name": "Chachi",
+      "facet": "Jerga de otras épocas",
+      "known_at": 8
+    },
+    {
+      "name": "Dabuti",
+      "facet": "Jerga de otras épocas",
+      "known_at": 11
+    },
+    {
+      "name": "Guay del Paraguay",
+      "facet": "Jerga de otras épocas",
+      "known_at": 8
+    },
+    {
+      "name": "Movida madrileña",
+      "facet": "Jerga de otras épocas",
+      "known_at": 12
+    },
+    {
+      "name": "Pasota",
+      "facet": "Jerga de otras épocas",
+      "known_at": 10
+    },
+    {
+      "name": "Cheli",
+      "facet": "Jerga de otras épocas",
+      "known_at": 14
+    },
+    {
+      "name": "Fetén",
+      "facet": "Jerga de otras épocas",
+      "known_at": 13
+    },
+    {
+      "name": "Pollo pera",
+      "facet": "Jerga de otras épocas",
+      "known_at": 14
+    },
+    {
+      "name": "Lechuguino",
+      "facet": "Jerga de otras épocas",
+      "known_at": 14
+    },
+    {
+      "name": "Sereno",
+      "facet": "Jerga de otras épocas",
+      "known_at": 12
+    },
+    {
+      "name": "Chipén",
+      "facet": "Jerga de otras épocas",
+      "known_at": 15
+    },
+    {
+      "name": "Repera",
+      "facet": "Jerga de otras épocas",
+      "known_at": 11
+    },
+    {
+      "name": "Yeyé",
+      "facet": "Jerga de otras épocas",
+      "known_at": 13
+    },
+    {
+      "name": "Chupa",
+      "facet": "Jerga de otras épocas",
+      "known_at": 10
+    },
+    {
+      "name": "Petardo",
+      "facet": "Jerga de otras épocas",
+      "known_at": 9
+    },
+    {
+      "name": "Quillo",
+      "facet": "Palabras típicas de cada región",
+      "known_at": 8
+    },
+    {
+      "name": "Chacho",
+      "facet": "Palabras típicas de cada región",
+      "known_at": 10
+    },
+    {
+      "name": "Guagua",
+      "facet": "Palabras típicas de cada región",
+      "known_at": 9
+    },
+    {
+      "name": "Pisha",
+      "facet": "Palabras típicas de cada región",
+      "known_at": 10
+    },
+    {
+      "name": "Ojú",
+      "facet": "Palabras típicas de cada región",
+      "known_at": 9
+    },
+    {
+      "name": "Maño",
+      "facet": "Palabras típicas de cada región",
+      "known_at": 10
+    },
+    {
+      "name": "Morriña",
+      "facet": "Palabras típicas de cada región",
+      "known_at": 11
+    },
+    {
+      "name": "Nen",
+      "facet": "Palabras típicas de cada región",
+      "known_at": 10
+    },
+    {
+      "name": "Agur",
+      "facet": "Palabras típicas de cada región",
+      "known_at": 8
+    },
+    {
+      "name": "Aupa",
+      "facet": "Palabras típicas de cada región",
+      "known_at": 8
+    },
+    {
+      "name": "Bocho",
+      "facet": "Palabras típicas de cada región",
+      "known_at": 13
+    },
+    {
+      "name": "Acho",
+      "facet": "Palabras típicas de cada región",
+      "known_at": 11
+    },
+    {
+      "name": "Cotufas",
+      "facet": "Palabras típicas de cada región",
+      "known_at": 12
+    },
+    {
+      "name": "Guaje",
+      "facet": "Palabras típicas de cada región",
+      "known_at": 12
+    },
+    {
+      "name": "Xiquet",
+      "facet": "Palabras típicas de cada región",
+      "known_at": 12
+    },
+    {
+      "name": "Neno",
+      "facet": "Palabras típicas de cada región",
+      "known_at": 11
+    },
+    {
+      "name": "Papas",
+      "facet": "Palabras típicas de cada región",
+      "known_at": 7
+    }
+  ]
+}

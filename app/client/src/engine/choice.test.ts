@@ -98,10 +98,12 @@ test("bundles are normalized: bundles.json order, no duplicates, nothing added",
   assert.deepEqual(game.resolveChoice(twoBases, { bundles: ["base2"] }).bundles, ["base2"]);
 });
 
+const others = (d: typeof data) => d.bundles.filter((b) => b.kind !== "base" && b.languages.includes(d.locale)).map((b) => b.id);
+
 test("defaults per locale: the first base bundle and the locale's other bundles", () => {
-  assert.deepEqual(game.defaultChoice(data).bundles, ["base", "colombia"]);
+  assert.deepEqual(game.defaultChoice(data).bundles, ["base", ...others(data)]);
   assert.deepEqual(game.defaultChoice(enData).bundles, ["base", "usa", "uk"]);
-  assert.deepEqual(game.defaultChoice(twoBases).bundles, ["base", "colombia"]);
+  assert.deepEqual(game.defaultChoice(twoBases).bundles, ["base", ...others(data)]);
 });
 
 test("an empty selection or a bundle not offered → 409, save unchanged; base off is fine", () => {
@@ -123,7 +125,7 @@ test("an empty selection or a bundle not offered → 409, save unchanged; base o
 test("stored bundles that don't resolve play with the defaults, never written back", () => {
   let save = game.newGame(emptySave(), data, io(13), "ana", { bundles: ["base"] }).save;
   stateOf(save).settings.bundles = ["colombia", "mars"];
-  assert.deepEqual(game.gameChoice(stateOf(save), data).bundles, ["base", "colombia"]);
+  assert.deepEqual(game.gameChoice(stateOf(save), data).bundles, ["base", ...others(data)]);
   save = game.pick(save, data, io(14), 0).save;
   assert.equal(stateOf(save).phase, "question");
   assert.deepEqual(stateOf(save).settings.bundles, ["colombia", "mars"]);
