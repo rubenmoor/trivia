@@ -12,7 +12,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen concepts [--subcategories "Volcanes,Piratas"] [--top-up] [--fill]   # concept lists (D-37)
     qgen bundles                    # sort the pool into bundles (D-39)
     qgen bundle new <id> --name … --description … --kind region|theme --language <L> --country <CC> --rule … --voice …   # an empty bundle (D-41)
-    qgen taxonomy --bundle <id> [--apply work/taxonomy/<id>/proposal.json]   # a regional bundle's categories (plan 138)
+    qgen taxonomy --bundle <id> [--apply work/taxonomy/<id>/proposal.json]   # a regional or theme bundle's categories (plans 138, 184)
     qgen remap --bundle <id> [--apply work/remap/<id>/proposal.json]   # its questions onto a new taxonomy (plan 138)
     qgen rekey --map work/slugs/proposal.json [--apply]   # category and subcategory keys → English slugs (plan 149); dry run by default
     qgen draft --run <run> --subcategories "Volcanes,Piratas" [--bundle <id>]
@@ -4867,7 +4867,8 @@ def spot_check_problems(questions, scale):
 
 
 def taxonomy_problems():
-    """Every bundle's categories file belongs to a bundle; names and slugs are unique within a bundle (D-43, D-99)."""
+    """Every bundle's categories file belongs to a bundle; names and slugs are unique within a bundle (D-43, D-99);
+    a theme's base-related.json names its own and base's subcategories (plan 184)."""
     errors, ids = [], categories.bundle_ids()
     if ids[:1] != ["base"]:
         errors.append("app/data/bundles.json: base must come first")
@@ -4890,6 +4891,13 @@ def taxonomy_problems():
     if slugs and (len(slugs) < len(regional) or len(set(slugs)) < len(slugs)
                   or not all(isinstance(s, str) and categories.SLUG.fullmatch(s) for s in slugs)):
         errors.append(f"{rel}: every category needs its own slug (decision 259)")
+    base = set(categories.subcategories("base"))
+    for b in ids:
+        f, own = layout.base_related(b), set(categories.subcategories(b))
+        for s, rs in ((load_json(f, {}) or {}).get("subcategories") or {}).items():
+            if s not in own:
+                errors.append(f"{f.relative_to(ROOT)}: {s!r} is not a {b} subcategory")
+            errors += [f"{f.relative_to(ROOT)}: {s}: {r!r} is not a base subcategory" for r in rs if r not in base]
     return errors
 
 
@@ -5001,6 +5009,19 @@ TAXONOMY_SCHEMA = {"type": "object", "required": ["region", "categories", "left_
                                                            "properties": {"name": STR, "known_at": INT}}}}}}}}},
     "left_out": {"type": "array", "items": {"type": "object", "required": ["name", "reason"],
                                             "properties": {"name": STR, "reason": STR}}}}}
+SAMPLES = TAXONOMY_SCHEMA["properties"]["categories"]["items"]["properties"]["subcategories"]["items"]["properties"]["samples"]
+THEME_TAXONOMY_SCHEMA = {"type": "object", "required": ["categories"], "properties": {
+    "categories": {"type": "array", "items": {
+        "type": "object", "required": [*KEYED, "origin", "scope", "reason", "subcategories"], "properties": {
+            **KEYED, "origin": {"type": "string", "enum": ["base_extends", "new"]}, "scope": STR, "reason": STR,
+            "subcategories": {"type": "array", "items": {
+                "type": "object", "required": [*KEYED, "scope", "reason", "base_related", "samples"], "properties": {
+                    **KEYED, "scope": STR, "reason": STR, "base_related": {"type": "array", "items": STR},
+                    "samples": SAMPLES}}}}}}}}
+BASE_RELATED_ABOUT = ("A theme bundle's subcategory → the base subcategories it goes beyond (plan 184); its concept lists "
+                      "and drafts keep away from their questions. Authoring only, never exported.")
+THEME_DRAFT = ("taxonomy-theme.md is a draft (decision 370: Theme taxonomy prompt: apply?); "
+               "`task 1625: Theme taxonomy prompt: apply per the developer's answer` applies it")
 
 
 def names_locale(locale):
@@ -5033,39 +5054,53 @@ def keyed(x):
     return f"`{x['slug']}` {x['en']}" + (f" ({x['name']})" if x["name"] != x["en"] else "")
 
 
+ORIGIN = {"region": " (region)", "new": " (new)", "base_extends": " (extends base)"}
+
+
 def taxonomy_md(p, found):
     """proposal.md: what goes into the pm decision (decision 18's format)."""
     cats = p["categories"]
     n = sum(len(c["subcategories"]) for c in cats)
+    theme = "left_out" not in p
     lines = [f"# Taxonomy proposal: `{p['bundle']}`", "",
              f"{len(cats)} categories, {n} subcategories; target {p['target']} approved, "
              f"≈ {round(p['target'] / max(n, 1))} per subcategory. Each: `slug` English name (name in the bundle's "
              "language). Sample concepts: name (known_at).", "",
              "## Counts per category"]
-    lines += [f"- {keyed(c)}{' (region)' if c['origin'] == 'region' else ''}: {len(c['subcategories'])}" for c in cats]
-    if p["left_out"]:
+    lines += [f"- {keyed(c)}{ORIGIN.get(c['origin'], '')}: {len(c['subcategories'])}" for c in cats]
+    if theme:
+        rel = [s for c in cats for s in c["subcategories"] if s["base_related"]]
+        lines += ["", f"Categories: {sum(c['origin'] == 'base_extends' for c in cats)} base_extends, "
+                  f"{sum(c['origin'] == 'new' for c in cats)} new; subcategories: {len(rel)} with base_related, "
+                  f"{n - len(rel)} without."]
+    if p.get("left_out"):
         lines += ["", "## Left out of the general list"] + [f"- {c['name']}: {c['reason']}" for c in p["left_out"]]
     i = 0
     for c in cats:
-        lines += ["", f"## {keyed(c)}{' (region)' if c['origin'] == 'region' else ''}", f"{c['scope']}"
+        lines += ["", f"## {keyed(c)}{ORIGIN.get(c['origin'], '')}", f"{c['scope']}"
                   + (f" Reason: {c['reason']}" if c["reason"] else "")]
         for s in c["subcategories"]:
             i += 1
             samples = ", ".join(f"{x['name']} ({x['known_at']})" for x in sorted(s["samples"], key=lambda x: x["known_at"]))
-            lines.append(f"{i}. **{keyed(s)}**. {s['scope']} Reason: {s['reason']} Samples: {samples}.")
+            base = f" Beyond base: {', '.join(s['base_related']) or 'none'}." if theme else ""
+            lines.append(f"{i}. **{keyed(s)}**. {s['scope']} Reason: {s['reason']}{base} Samples: {samples}.")
     if found:
         lines += ["", "## Questions on subcategories not in the proposal (moved by the remap)"] + off_list_lines(found)
     return "\n".join(lines) + "\n"
 
 
 def cmd_taxonomy(args):
-    """A regional bundle's taxonomy (plan 138, decision 259): one opus call proposes categories and subcategories
-    (slug, English name, name in the bundle's language) from the general list (decision 213), the bundle's rule and
-    voice and its target → work/taxonomy/<id>/proposal.{json,md}; `--apply <proposal.json>` writes categories.json
-    and names.<locale>.json, touching no question or concept list."""
+    """A regional or theme bundle's taxonomy (plans 138, 184; decision 259): one opus call proposes categories and
+    subcategories (slug, English name, name in the bundle's language) from the bundle's rule and voice and its target,
+    a region's from the general list (decision 213), a theme's deeper than base's subcategories (with their approved
+    counts and `base_related`) → work/taxonomy/<id>/proposal.{json,md}; `--apply <proposal.json>` writes
+    categories.json and names.<locale>.json (a theme's base-related.json too), touching no question or concept list."""
     b = next((x for x in load_bundles() if x["id"] == args.bundle), None)
-    if not b or b["kind"] != "region":
-        sys.exit(f"{args.bundle!r} is not a regional bundle in app/data/bundles.json")
+    if not b or b["kind"] not in ("region", "theme"):
+        sys.exit(f"{args.bundle!r} is not a regional or theme bundle in app/data/bundles.json")
+    theme = b["kind"] == "theme"
+    if theme:
+        sys.exit(THEME_DRAFT)
     d = WORK / "taxonomy" / args.bundle
     d.mkdir(parents=True, exist_ok=True)
     if args.apply:
@@ -5073,26 +5108,34 @@ def cmd_taxonomy(args):
     total = targets.load_targets(args.bundle)["total"]
     per = PER_SUBCATEGORY
     loc = translations.draft_locale(b)
-    system = (PROMPTS / "taxonomy.md").read_text(encoding="utf-8").replace("{per_sub}", str(per)).replace(
-        "{subs}", str(round(total / per))).replace("{language}", LANGUAGES[loc])
-    approved = Counter(q["subcategory"] for q in load_json(POOL)["questions"]
-                       if q.get("bundle") == args.bundle and q["status"] == "approved")
-    general = load_json(layout.REGIONAL_CATEGORIES)
+    system = (PROMPTS / ("taxonomy-theme.md" if theme else "taxonomy.md")).read_text(encoding="utf-8").replace(
+        "{per_sub}", str(per)).replace("{subs}", str(round(total / per))).replace("{language}", LANGUAGES[loc])
+    approved = {x: Counter(q["subcategory"] for q in load_json(POOL)["questions"]
+                           if (q.get("bundle") or "base") == x and q["status"] == "approved") for x in (args.bundle, "base")}
     def own(x, kind):
         en, name = (categories.display(args.bundle, x, l, kind) for l in ("en", loc))
         return keyed({"slug": x, "en": en, "name": name})
+    if theme:
+        base = ("## base's subcategories (`slug` English name: approved questions)\n" + "\n".join(
+            f"- {cat_name(c, 'en')}: " + ", ".join(f"`{s}` {categories.display('base', s, 'en')}: {approved['base'][s]}"
+                                                   for s in c["subcategories"]) for c in categories.load("base")))
+    else:
+        general = load_json(layout.REGIONAL_CATEGORIES)
+        base = (f"## General list\n{general['about']}\n" + json.dumps(general["categories"], ensure_ascii=False, indent=1)
+                + "\n\n## base's subcategories\n" + "\n".join(
+                    f"- {cat_name(c, 'en')}: {', '.join(categories.display('base', s, 'en') for s in c['subcategories'])}"
+                    for c in categories.load("base")))
     user = "\n\n".join([
         f"## Bundle\n`{args.bundle}`: {b['name']}\nLanguage: {LANGUAGES[loc]}\n{bundle_text(args.bundle, loc)}",
-        f"## Target\n{total} approved questions: ≈ {round(total / per)} subcategories of ≈ {per}.",
-        f"## General list\n{general['about']}\n" + json.dumps(general["categories"], ensure_ascii=False, indent=1),
-        "## base's subcategories\n" + "\n".join(f"- {cat_name(c, 'en')}: {', '.join(categories.display('base', s, 'en') for s in c['subcategories'])}"
-                                                 for c in categories.load("base")),
+        f"## Target\n{total} approved questions: ≈ {round(total / per)} subcategories of ≈ {per}.", base,
         "## Existing taxonomy (context only; `slug` English name (own name): approved questions)\n" + ("\n".join(
-            f"- {own(c['slug'], 'categories')}: " + ", ".join(f"{own(s, 'subcategories')}: {approved[s]}" for s in c["subcategories"])
+            f"- {own(c['slug'], 'categories')}: " + ", ".join(f"{own(s, 'subcategories')}: {approved[args.bundle][s]}" for s in c["subcategories"])
             for c in categories.load(args.bundle)) or "none")])
-    out = claude(system, user, TAXONOMY_SCHEMA, args.model, d)
+    out = claude(system, user, THEME_TAXONOMY_SCHEMA if theme else TAXONOMY_SCHEMA, args.model, d)
     for x in [c for c in out["categories"]] + [s for c in out["categories"] for s in c["subcategories"]]:
         x["slug"] = slug(x["slug"])
+        if "base_related" in x:
+            x["base_related"] = [r for r in dict.fromkeys(x["base_related"]) if r in categories.subcategories("base")]
     p = {"bundle": args.bundle, "target": total, **out}
     save_json(d / "proposal.json", p)
     subs = {s["slug"] for c in p["categories"] for s in c["subcategories"]}
@@ -5120,6 +5163,9 @@ def taxonomy_errors(p, bundle):
         if bad := [x["slug"] for x in items if isinstance(x.get("slug"), str) and not categories.SLUG.fullmatch(x["slug"])]:
             errors.append(f"not a slug (decision 259): {', '.join(bad)}")
     errors += [f"{c.get('slug')}: no subcategories" for c in cats if not c.get("subcategories")]
+    base = set(categories.subcategories("base"))
+    errors += [f"{s.get('slug')}: base_related {r!r} is not a base subcategory" for c in cats
+               for s in c.get("subcategories") or [] for r in s.get("base_related") or [] if r not in base]
     return errors + ([] if cats else ["no categories"])
 
 
@@ -5131,6 +5177,11 @@ def apply_taxonomy(bundle, src, d):
     if errors := taxonomy_errors(p, bundle):
         sys.exit(f"{src}: " + "; ".join(errors))
     subs = write_taxonomy(bundle, p, d)
+    if bundle_row(bundle)["kind"] == "theme":
+        rel = {s["slug"]: s.get("base_related") or [] for c in p["categories"] for s in c["subcategories"]}
+        save_json(layout.base_related(bundle), {"about": BASE_RELATED_ABOUT, "subcategories": rel})
+        print(f"{layout.base_related(bundle).relative_to(ROOT)}: {sum(map(bool, rel.values()))} of {len(rel)} "
+              "subcategories go beyond base's")
     if found := off_list(bundle, set(subs)):
         print(f"{sum(sum(c.values()) for c in found.values())} {bundle} question(s) on subcategories not in the list "
               f"(`qgen remap --bundle {bundle}` moves them):\n" + "\n".join(off_list_lines(found)))
@@ -5434,7 +5485,7 @@ def main():
     bnew.add_argument("--voice", help="English: the language variety of its own text in prompts, e.g. \"British English: …\" "
                       f"(region: required; theme: its es text, default: {VOICE})")
     tx = add("taxonomy", cmd_taxonomy, "opus", run=False)
-    tx.add_argument("--bundle", required=True, help="a regional bundle")
+    tx.add_argument("--bundle", required=True, help="a regional or theme bundle")
     tx.add_argument("--apply", metavar="PROPOSAL", help="write categories.json and names from this proposal.json "
                     "(edited to the developer's answer); no LLM call but the names")
     rk = sub.add_parser("rekey", help="category and subcategory keys → English slugs (plan 149); dry run by default")
