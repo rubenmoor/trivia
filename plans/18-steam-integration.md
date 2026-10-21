@@ -170,18 +170,28 @@ Split per decision 84: SteamCMD source and depot split for Steam uploads; build 
 - [ ] `uk`: OS all, language all, tied to the uk DLC app (next block); only if `app/data/bundles/uk/` ships at upload time.
 - [ ] `spain`: OS all, language all, tied to the spain DLC app (next block); only if `app/data/bundles/spain/` ships at upload time.
 - [ ] `mexico`: OS all, language all, tied to the mexico DLC app (next block); only if `app/data/bundles/mexico/` ships at upload time.
+- [ ] `stem`: OS all, language all, tied to the stem DLC app (next block); only if `app/data/bundles/stem/` ships at upload time.
+- [ ] `sports`: OS all, language all, tied to the sports DLC app (next block); only if `app/data/bundles/sports/` ships at upload time.
+- [ ] `history`: OS all, language all, tied to the history DLC app (next block); only if `app/data/bundles/history/` ships at upload time.
+- [ ] `movies`: OS all, language all, tied to the movies DLC app (next block); only if `app/data/bundles/movies/` ships at upload time.
+- [ ] `geography`: OS all, language all, tied to the geography DLC app (next block); only if `app/data/bundles/geography/` ships at upload time.
 - [ ] IDs → `authoring/steam/steam.json` (task 1045 / task 681), via the decision.
 
 ### DLC (All Associated Packages, DLC, Demos And Tools → Add New DLC)
-Free DLC per shipped pack (decision 66: Price model (OQ-33); decision 110: Regional packs at launch (RG-5, OQ-46)); only packs in `app/data/bundles/` at upload time.
+Free DLC per shipped pack (decision 66: Price model (OQ-33); decision 110: Regional packs at launch (RG-5, OQ-46); topic bundles: plan 187: Steam DLC and store for the topic bundles); only packs in `app/data/bundles/` at upload time.
 - [ ] `colombia`: name «Regional: Colombia» (es, es-ES, en); de «Regional: Kolumbien» only once a de pack pool ships.
 - [ ] `usa`: name «Regional: United States» (en); de «Regional: USA» (`names.<locale>.json` `bundles.usa`); en only (`languages: ["en"]`).
 - [ ] `germany`: name «Regional: Germany» (en); de «Regional: Deutschland»; es/es-ES «Regional: Alemania» (`names.<locale>.json` `bundles.germany`); `languages: ["de"]`, en joins once en translations exist.
 - [ ] `uk`: name «Regional: United Kingdom» (en); de «Regional: Vereinigtes Königreich»; es/es-ES «Regional: Reino Unido» (`names.<locale>.json` `bundles.uk`); en only (`languages: ["en"]`).
 - [ ] `spain`: name «Regional: Spain» (en); de «Regional: Spanien»; es/es-ES «Regional: España» (`names.<locale>.json` `bundles.spain`); `languages: ["es-ES"]`, en joins once en translations exist.
 - [ ] `mexico`: name «Regional: Mexico» (en); de «Regional: Mexiko»; es «Regional: México» (`names.<locale>.json` `bundles.mexico`); `languages: ["es"]`, en joins once en translations exist.
+- [ ] `stem`: name «Science questions bundle» (en); es/es-ES «Paquete de preguntas de ciencia»; de «Wissenschafts-Fragenpaket» (`bundles.json` `name`, `names.<locale>.json` `bundles.stem`); `languages: ["en"]` (theme bundles draft in en), the others join with their translations.
+- [ ] `sports`: name «Sports questions bundle» (en); es/es-ES «Paquete de preguntas de deportes»; de «Sport-Fragenpaket» (`bundles.json` `name`, `names.<locale>.json` `bundles.sports`); `languages: ["en"]` (theme bundles draft in en), the others join with their translations.
+- [ ] `history`: name «History questions bundle» (en); es/es-ES «Paquete de preguntas de historia»; de «Geschichts-Fragenpaket» (`bundles.json` `name`, `names.<locale>.json` `bundles.history`); `languages: ["en"]` (theme bundles draft in en), the others join with their translations.
+- [ ] `movies`: name «Movies & Series questions bundle» (en); es/es-ES «Paquete de preguntas de cine y series»; de «Film- und Serien-Fragenpaket» (`bundles.json` `name`, `names.<locale>.json` `bundles.movies`); `languages: ["en"]` (theme bundles draft in en), the others join with their translations.
+- [ ] `geography`: name «Geography questions bundle» (en); es/es-ES «Paquete de preguntas de geografía»; de «Erdkunde-Fragenpaket» (`bundles.json` `name`, `names.<locale>.json` `bundles.geography`); `languages: ["en"]` (theme bundles draft in en), the others join with their translations.
 - [ ] Price free; optional (installed when owned and ticked in Properties → DLC).
-- [ ] Depot `colombia` linked to it; the base app lists it. Same for `usa` (depot `usa`), `germany` (depot `germany`), `uk` (depot `uk`), `spain` (depot `spain`) and `mexico` (depot `mexico`); their app IDs and depot IDs go into decision 179: Steamworks app configured (SW-7)? IDs? like colombia's.
+- [ ] Depot `colombia` linked to it; the base app lists it. Same for `usa` (depot `usa`), `germany` (depot `germany`), `uk` (depot `uk`), `spain` (depot `spain`) and `mexico` (depot `mexico`); their app IDs and depot IDs go into decision 179: Steamworks app configured (SW-7)? IDs? like colombia's. Topic bundles likewise: `stem`, `sports`, `history`, `movies`, `geography` (depots of the same names); their IDs go into the topic DLC checklist decision (`plan 187: Steam DLC and store for the topic bundles`, "Topic DLCs entered in Steamworks? (checklist decision)"), not decision 179.
 - [ ] Store texts: `plans/17a-store-page.md` "Free DLC" (decision 173).
 
 ### SteamPipe → Builds (branches)
