@@ -1,15 +1,21 @@
 <script lang="ts">
   // «Cambiazo»'s two-step picker (plans/09-jokers.md, "Cambiazo", JK-7): every bundle's broad categories
   // (D-43), then the subcategories of the chosen one (D-19), by key (bundle + slug, decision 259). Tiles without a fitting question are disabled
-  // (the engine decides, 09 "Availability"). Click, or arrows + Enter; Backspace goes back.
+  // (the engine decides, 09 "Availability"). Click, or arrows + Enter; Backspace goes back. Several bundles: a header
+  // per bundle in the Bundles screen's order (plan 185); the categories scroll with focus.
   import { tick } from "svelte";
   import type { Jokers } from "../lib/types.ts";
-  import { t } from "../lib/i18n.ts";
+  import { fetchChoiceOptions } from "../lib/api.ts";
+  import { playerRegion } from "../lib/desktop.ts";
+  import { lang, t } from "../lib/i18n.ts";
   import { displayName, questionLocale } from "../lib/names.svelte.ts";
   import { focusControl, pushScope } from "../lib/input.svelte.ts";
+  import { bundleIcon, orderBundles, type Bundle } from "./BundleSelector.svelte";
+  import Flags from "./Flags.svelte";
   import Icon from "./Icon.svelte";
   import { jokerIcon } from "./jokers.ts";
   import Prompt from "./Prompt.svelte";
+  import { scrollBox } from "./scrollBox.ts";
 
   type Group = Jokers["category"]["categories"][number];
 
@@ -26,12 +32,34 @@
   let group = $state<Group | null>(null);
   let grid = $state<HTMLDivElement>();
   let picker = $state<HTMLDivElement>();
+  let bundles = $state<Bundle[] | null>(null);
+
+  /** Per bundle its categories and the index of its first tile; one section without `id` if only one bundle. */
+  const sections = $derived.by(() => {
+    if (!bundles) return [];
+    const ids = new Set(categories.map((g) => g.bundle));
+    if (ids.size < 2) return [{ id: null, bundle: null, categories, first: 0 }];
+    const order = [...orderBundles(bundles, playerRegion).map((b) => b.id), ...ids];
+    let first = 0;
+    return [...new Set(order)].filter((id) => ids.has(id)).map((id) => {
+      const own = categories.filter((g) => g.bundle === id);
+      const s = { bundle: bundles!.find((b) => b.id === id) ?? null, id, categories: own, first };
+      first += own.length;
+      return s;
+    });
+  });
 
   async function focusFirst() {
     await tick();
     focusControl(grid?.querySelector<HTMLButtonElement>("button:not(:disabled)"));
   }
-  focusFirst();
+  fetchChoiceOptions("game").then(
+    (o) => o.bundles,
+    () => [],
+  ).then((b) => {
+    bundles = b;
+    focusFirst();
+  });
 
   async function open(g: Group) {
     group = g;
@@ -66,19 +94,29 @@
   <div class="picker glass-strong" bind:this={picker}>
     <h2 lang={group ? questionLocale() : undefined}><Icon name={jokerIcon("category")} /> {group ? displayName("category", group.key) : t("joker.category.title")}</h2>
     {#key group}
-      <div class="grid" class:subs={group} bind:this={grid} lang={questionLocale()}>
-        {#if group}
+      {#if group}
+        <div class="grid subs" bind:this={grid} lang={questionLocale()}>
           {#each group.subcategories as s, i (s.key)}
             <button class="tile" disabled={!s.available} onclick={() => onpick(s.key)} style:--i={i}>{displayName("subcategory", s.key)}</button>
           {/each}
-        {:else}
-          {#each categories as g, i (g.key)}
-            <button class="tile" data-key={g.key} disabled={!g.available} onclick={() => open(g)} style:--i={i}>
-              {displayName("category", g.key)}
-            </button>
+        </div>
+      {:else}
+        <div class="grid" bind:this={grid} lang={questionLocale()} {@attach scrollBox}>
+          {#each sections as sec (sec.id)}
+            {#if sec.id}
+              <h3 class="head label" {lang} style:--i={sec.first}>
+                {#if sec.bundle?.region}<Flags country={sec.bundle.country} />{:else if sec.bundle}<Icon name={bundleIcon(sec.bundle)} />{/if}
+                {displayName("bundle", sec.id)}
+              </h3>
+            {/if}
+            {#each sec.categories as g, i (g.key)}
+              <button class="tile" data-key={g.key} disabled={!g.available} onclick={() => open(g)} style:--i={sec.first + i}>
+                {displayName("category", g.key)}
+              </button>
+            {/each}
           {/each}
-        {/if}
-      </div>
+        </div>
+      {/if}
     {/key}
     <div class="actions label">
       {#if group}<button class="secondary" onclick={back}>{t("action.back")} <Prompt action="back" /></button>{/if}
@@ -92,12 +130,14 @@
     position: absolute;
     inset: 0;
     z-index: 5;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: rgba(5, 8, 16, 0.55);
   }
   .picker {
     width: min(92%, calc(100 * var(--u)));
+    max-height: 92%;
     padding: calc(1.6 * var(--u)) calc(2 * var(--u));
     display: flex;
     flex-direction: column;
@@ -115,6 +155,22 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: calc(0.7 * var(--u));
+    padding: calc(0.5 * var(--u));
+  }
+  .head {
+    grid-column: 1 / -1;
+    margin: calc(0.6 * var(--u)) 0 0;
+    color: var(--slate-400);
+    font-size: calc(1.3 * var(--u));
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    animation: deal 0.35s calc(var(--i) * 0.015s) var(--spring) backwards;
+  }
+  .head:first-child {
+    margin-top: 0;
+  }
+  .head > :global(.flags) {
+    vertical-align: -0.15em;
   }
   .grid.subs {
     grid-template-columns: repeat(4, 1fr);
