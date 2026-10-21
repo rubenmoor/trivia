@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "b46f8e74",
+  "hash": "76d6f8ec",
   "questions": [
     {
       "id": "q-0016",
@@ -3195,6 +3195,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Pentachlorphenol",
         "author_url": "https://commons.wikimedia.org/wiki/User:Pentachlorphenol"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1254",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "childrens-songs",
+      "bundle": "base",
+      "description": "Una canción que convierte la alegría en ejercicio.",
+      "question": "Se hace con las dos manos, hace ruido y la canción 'Si estás feliz y lo sabes' te pide hacerlo. ¿Qué es?",
+      "answer": "Aplaudir",
+      "wrong_answers": [
+        "Saludar",
+        "Silbar",
+        "Saltar"
+      ],
+      "hints": [
+        "Lo hace el público al final de un show.",
+        "Las manos se chocan una contra otra.",
+        "También se dice 'dar palmas'."
+      ],
+      "fun_fact": "La canción es originalmente en inglés y se llama 'If You're Happy and You Know It'.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Happy_group_of_children_playing_race.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHappy_group_of_children_playing_race.jpg",
+        "credit": "Jackson Elizabeth, U.S. Fish and Wildlife Service · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jackson Elizabeth, U.S. Fish and Wildlife Service",
+        "author_url": null
       },
       "background": null
     },
