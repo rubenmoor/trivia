@@ -27,6 +27,12 @@ A **bundle** is a named set of questions that players can switch on or off befor
 - **Existing pool:** every question gets `bundle: "base"`; then `qgen bundles` (an LLM pass, about 20 questions per call) proposes `colombia` where the rule fits and writes it into the pool. The developer checks the proposals in the review tool (`/review?bundle=colombia`) and changes any that are wrong there.
 - **New questions:** until BN-8 the drafter picked the bundle by the rules. Since BN-8 the batch's bundle is set by the command (see "Batches per bundle"); the developer can still change it in the review tool.
 - **Checks and output:** `validate` (bundle must exist), `export` (the game needs `bundle`), `report` (questions and supply per bundle).
+- **Theme bundles** (plan 184, `kind: theme`: `stem`, `sports`, `history`, `movies`, `geography`; 2000 approved per question locale each, free DLC like the regional packs):
+  - Setup: `qgen bundle new <id> --kind theme` writes the 2000 target (`targets.json`, base's mix scaled; `qgen validate` requires it for every non-base bundle) and `languages: ["en"]`; `qgen taxonomy --bundle <id>` proposes ≈ 50 subcategories from the bundle's `rule`, its target and base's subcategories on the topic with their approved counts, so it goes deeper than base, not beside it; `--apply` also writes `base-related.json`.
+  - Drafting: English (`translations.draft_locale`); sources must be `en` (`qgen validate`). The draft gap aims like base's: the largest over en, es, es-ES, de of `locale_gap` (decision 236); regions keep their own deficit. `qgen report --bundle <id>` shows the supply block.
+  - Overlap with base: per subcategory `base-related.json` lists the base subcategories it goes beyond; `qgen concepts` shows the concept call their approved and pending questions ("already in the game") and the drafter's avoid list gets their answers; `draw_slots` and `rate` already see the whole pool (decision 350). Without the file, as for any bundle.
+  - Cost: `qgen report --cost` rows per theme × en (drafting) and es, es-ES, de (translations), base's rates until its own runs exist.
+  - Media: see "Media for theme bundles" below.
 - **House style:** base questions follow its "International angle" (well-known facts about any country, Colombia's included); anything more goes into `colombia`.
 
 ## Batches per bundle (D-41)
@@ -50,6 +56,7 @@ The developer's direction (2026-10-07): a batch writes for **one bundle, chosen 
 | Names (ship) | `app/data/names.<locale>.json` | `app/data/bundles/<id>/names.<locale>.json` |
 | Media | content depot | `build/pack-media.json` lists the media only it uses (`stage-media.mjs`) |
 | Concept lists | `authoring/data/concepts/` | `authoring/data/bundles/<id>/concepts/` |
+| Base-related subcategories (authoring only, never shipped) | none | `authoring/data/bundles/<id>/base-related.json`, a theme's: subcategory → the base subcategories it goes beyond (`qgen taxonomy --apply`; optional) |
 | Question axes | `authoring/data/question-axes.json` | `authoring/data/bundles/<id>/question-axes.json`, if present; otherwise `base`'s |
 
 - Category and subcategory slugs are unique within a bundle per kind (`validate`); identity = bundle + slug (D-99, D-110), may repeat across bundles. Code keys: `(bundle, slug)` in Python, `subKey` (`base`'s bare slug, else `<bundle>/<slug>`) in the engine and names (D-100, D-110). Question ids are global; concept names are unique within a bundle.
