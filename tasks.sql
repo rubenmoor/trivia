@@ -49446,6 +49446,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1673, 385);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1673, 386);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1673, 387);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1673, 388);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1673, 389);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
