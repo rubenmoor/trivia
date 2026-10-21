@@ -57,6 +57,16 @@
 			"NEW_ACHIEVEMENT_1_23_DESC"	"Ganar una partida después de medianoche."
 			"NEW_ACHIEVEMENT_1_24_NAME"	"Ojo crítico"
 			"NEW_ACHIEVEMENT_1_24_DESC"	"Marcar una pregunta."
+			"NEW_ACHIEVEMENT_1_25_NAME"	"Mente brillante"
+			"NEW_ACHIEVEMENT_1_25_DESC"	"Acertar 50 preguntas del paquete Ciencia y técnica."
+			"NEW_ACHIEVEMENT_1_26_NAME"	"¡Gooool!"
+			"NEW_ACHIEVEMENT_1_26_DESC"	"Acertar 50 preguntas del paquete Deportes."
+			"NEW_ACHIEVEMENT_1_27_NAME"	"Cuestión de tiempo"
+			"NEW_ACHIEVEMENT_1_27_DESC"	"Acertar 50 preguntas del paquete Historia."
+			"NEW_ACHIEVEMENT_1_28_NAME"	"¡Corten!"
+			"NEW_ACHIEVEMENT_1_28_DESC"	"Acertar 50 preguntas del paquete Cine."
+			"NEW_ACHIEVEMENT_1_29_NAME"	"Rumbo al mundo"
+			"NEW_ACHIEVEMENT_1_29_DESC"	"Acertar 50 preguntas del paquete Geografía."
 		}
 	}
 	"spanish"
@@ -113,6 +123,16 @@
 			"NEW_ACHIEVEMENT_1_23_DESC"	"Ganar una partida después de medianoche."
 			"NEW_ACHIEVEMENT_1_24_NAME"	"Ojo crítico"
 			"NEW_ACHIEVEMENT_1_24_DESC"	"Marcar una pregunta."
+			"NEW_ACHIEVEMENT_1_25_NAME"	"Mente brillante"
+			"NEW_ACHIEVEMENT_1_25_DESC"	"Acertar 50 preguntas del paquete Ciencia y técnica."
+			"NEW_ACHIEVEMENT_1_26_NAME"	"¡Gooool!"
+			"NEW_ACHIEVEMENT_1_26_DESC"	"Acertar 50 preguntas del paquete Deportes."
+			"NEW_ACHIEVEMENT_1_27_NAME"	"Cuestión de tiempo"
+			"NEW_ACHIEVEMENT_1_27_DESC"	"Acertar 50 preguntas del paquete Historia."
+			"NEW_ACHIEVEMENT_1_28_NAME"	"¡Corten!"
+			"NEW_ACHIEVEMENT_1_28_DESC"	"Acertar 50 preguntas del paquete Cine."
+			"NEW_ACHIEVEMENT_1_29_NAME"	"Rumbo al mundo"
+			"NEW_ACHIEVEMENT_1_29_DESC"	"Acertar 50 preguntas del paquete Geografía."
 		}
 	}
 	"english"
@@ -169,6 +189,16 @@
 			"NEW_ACHIEVEMENT_1_23_DESC"	"Win a game after midnight."
 			"NEW_ACHIEVEMENT_1_24_NAME"	"Sharp Eye"
 			"NEW_ACHIEVEMENT_1_24_DESC"	"Flag a question."
+			"NEW_ACHIEVEMENT_1_25_NAME"	"Lab Rat"
+			"NEW_ACHIEVEMENT_1_25_DESC"	"Answer 50 questions right from the Science and tech bundle."
+			"NEW_ACHIEVEMENT_1_26_NAME"	"Game On"
+			"NEW_ACHIEVEMENT_1_26_DESC"	"Answer 50 questions right from the Sports bundle."
+			"NEW_ACHIEVEMENT_1_27_NAME"	"Time Traveller"
+			"NEW_ACHIEVEMENT_1_27_DESC"	"Answer 50 questions right from the History bundle."
+			"NEW_ACHIEVEMENT_1_28_NAME"	"That's a Wrap"
+			"NEW_ACHIEVEMENT_1_28_DESC"	"Answer 50 questions right from the Movies bundle."
+			"NEW_ACHIEVEMENT_1_29_NAME"	"Globetrotter"
+			"NEW_ACHIEVEMENT_1_29_DESC"	"Answer 50 questions right from the Geography bundle."
 		}
 	}
 	"german"
@@ -225,6 +255,16 @@
 			"NEW_ACHIEVEMENT_1_23_DESC"	"Nach Mitternacht ein Spiel gewinnen."
 			"NEW_ACHIEVEMENT_1_24_NAME"	"Adlerauge"
 			"NEW_ACHIEVEMENT_1_24_DESC"	"Eine Frage melden."
+			"NEW_ACHIEVEMENT_1_25_NAME"	"Forscherdrang"
+			"NEW_ACHIEVEMENT_1_25_DESC"	"50 Fragen aus dem Fragenpaket Wissenschaft und Technik richtig beantworten."
+			"NEW_ACHIEVEMENT_1_26_NAME"	"Sportskanone"
+			"NEW_ACHIEVEMENT_1_26_DESC"	"50 Fragen aus dem Fragenpaket Sport richtig beantworten."
+			"NEW_ACHIEVEMENT_1_27_NAME"	"Zeitreisender"
+			"NEW_ACHIEVEMENT_1_27_DESC"	"50 Fragen aus dem Fragenpaket Geschichte richtig beantworten."
+			"NEW_ACHIEVEMENT_1_28_NAME"	"Cineast"
+			"NEW_ACHIEVEMENT_1_28_DESC"	"50 Fragen aus dem Fragenpaket Film richtig beantworten."
+			"NEW_ACHIEVEMENT_1_29_NAME"	"Weltenbummler"
+			"NEW_ACHIEVEMENT_1_29_DESC"	"50 Fragen aus dem Fragenpaket Geografie richtig beantworten."
 		}
 	}
 }
