@@ -29,6 +29,26 @@
     "mexico": {
       "name": "Regional: Mexiko",
       "description": "Für alle mit Bezug zu Mexiko: Orte, Essen, Bräuche, Menschen, Musik, Sport und Wörter von dort."
+    },
+    "stem": {
+      "name": "Wissenschafts-Fragenpaket",
+      "description": "Mehr Fragen zu Natur, Weltall, Erfindungen, Technik und Mathe."
+    },
+    "sports": {
+      "name": "Sport-Fragenpaket",
+      "description": "Mehr Fragen zum Sport: Stars, Wettkämpfe, Mannschaften, Rekorde."
+    },
+    "history": {
+      "name": "Geschichts-Fragenpaket",
+      "description": "Mehr Fragen zur Geschichte: Epochen, Reiche, Menschen und Ereignisse aus aller Welt."
+    },
+    "movies": {
+      "name": "Film- und Serien-Fragenpaket",
+      "description": "Mehr Fragen zu Filmen und Serien: Lieblingsfilme und -serien, Figuren und Geschichten."
+    },
+    "geography": {
+      "name": "Erdkunde-Fragenpaket",
+      "description": "Mehr Fragen zur Erdkunde: Länder, Städte, Karten, Flaggen, Berge, Flüsse und Meere."
     }
   },
   "age_groups": {

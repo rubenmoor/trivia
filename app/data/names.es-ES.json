@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "locale": "es-ES",
+  "bundles": {
+    "movies": {
+      "description": "Más preguntas sobre cine y series: vuestras películas y series favoritas, personajes e historias."
+    }
+  }
+}

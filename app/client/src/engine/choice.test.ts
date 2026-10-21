@@ -102,7 +102,7 @@ const others = (d: typeof data) => d.bundles.filter((b) => b.kind !== "base" && 
 
 test("defaults per locale: the first base bundle and the locale's other bundles", () => {
   assert.deepEqual(game.defaultChoice(data).bundles, ["base", ...others(data)]);
-  assert.deepEqual(game.defaultChoice(enData).bundles, ["base", "usa", "uk"]);
+  assert.deepEqual(game.defaultChoice(enData).bundles, ["base", ...others(enData)]);
   assert.deepEqual(game.defaultChoice(twoBases).bundles, ["base", ...others(data)]);
 });
 
