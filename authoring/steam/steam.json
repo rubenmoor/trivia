@@ -2,5 +2,5 @@
   "appid": null,
   "depots": {"windows": null, "linux": null, "content": null},
   "demo": {"appid": null, "depots": {"windows": null, "linux": null, "content": null}},
-  "dlc": {"colombia": {"appid": null, "depot": null}, "usa": {"appid": null, "depot": null}, "germany": {"appid": null, "depot": null}, "uk": {"appid": null, "depot": null}, "spain": {"appid": null, "depot": null}, "mexico": {"appid": null, "depot": null}}
+  "dlc": {"colombia": {"appid": null, "depot": null}, "usa": {"appid": null, "depot": null}, "germany": {"appid": null, "depot": null}, "uk": {"appid": null, "depot": null}, "spain": {"appid": null, "depot": null}, "mexico": {"appid": null, "depot": null}, "stem": {"appid": null, "depot": null}, "sports": {"appid": null, "depot": null}, "history": {"appid": null, "depot": null}, "movies": {"appid": null, "depot": null}, "geography": {"appid": null, "depot": null}}
 }

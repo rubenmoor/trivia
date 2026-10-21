@@ -41263,7 +41263,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-21T20:27:06Z', '2026-10-21T20:29:37Z', 1617, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1651, 189, 'create tasks for plan 189: Topic bundles close-out', 'split', 'done', 1000, '2026-10-21, tasks.sql: plan 189 split into tasks 1665 (what ships, raises the ship-or-hold decision), 1666 (family playtest decision per wave), 1667 (docs sweep, milestone 19 done); decisions raised by 1665/1666 once facts exist', 'Split plan 189 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-21T20:27:45Z', '2026-10-21T20:30:31Z', 1620, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1652, 187, 'Steamworks rows and steam.json entries for the five topic DLCs', 'work', 'open', NULL, NULL, '`plan 187: Steam DLC and store for the topic bundles` task 1: Steamworks checklist rows and `steam.json` `dlc` entries for `stem`, `sports`, `history`, `movies`, `geography` (`kind: theme`), so `trivia-steam stage` keeps passing once their folders land in `app/data/bundles/`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1652, 187, 'Steamworks rows and steam.json entries for the five topic DLCs', 'work', 'done', NULL, '2026-10-21, plans/18-steam-integration.md (SW-7 depot + DLC rows for stem, sports, history, movies, geography; depot-linked row points to plan 187''s checklist decision), authoring/steam/steam.json (five dlc entries, null IDs). Checks: build --dir (qgen validate skipped: demo list fails, decision 394) + trivia-steam stage pass with the five folders; VDFs via trivia-steam vdf with placeholders render 14 depots (upload --dry-run needs a clean tree and a release check). Follow-up task 1675 (plan 89): bundles without a pool or IDs stay out of the build.', '`plan 187: Steam DLC and store for the topic bundles` task 1: Steamworks checklist rows and `steam.json` `dlc` entries for `stem`, `sports`, `history`, `movies`, `geography` (`kind: theme`), so `trivia-steam stage` keeps passing once their folders land in `app/data/bundles/`.
 
 Gate first: the five rows must be in `app/data/bundles.json` (written by `task 1644: Create the five topic bundles`, same work tree, runs first by priority). If not: `pm task-pending-decision <this task> <id>` on the pending decision `task 1644: Create the five topic bundles` waits on (`pm show 1644`, `pm decision list`); if there is none (task 1644 done or dropped, rows still missing), `pm decision add` what you found and wait on it. Never stop with the task open and not pending: pm counts that as a failed run (`task 1671: investigate the failure of task 1652: Steamworks rows and steam.json entries for the five topic DLCs`).
 
@@ -41278,7 +41278,7 @@ Do:
   - The "Depot … linked" row lists them; IDs are reported through the topic DLC checklist decision (task 6 of the plan, "Topic DLCs entered in Steamworks? (checklist decision)"), not decision 179.
 - `authoring/steam/steam.json` `dlc`: `stem`, `sports`, `history`, `movies`, `geography` with `null` IDs, in row order.
 
-Check: `trivia-desktop-build --dir` + `trivia-steam stage` pass with the five folders; `trivia-steam upload --dry-run` renders five more DLC depots with placeholder IDs. If a bundle folder without a pool, or a shipped bundle with null IDs, blocks a real upload: that''s generic, add a follow-up task to `plan 89: Builds, depots and upload (SW-10, SW-6)` (e.g. leave unentered bundles out of the build), don''t fix it here.', '2026-10-21T20:28:11Z', NULL, 1642, 0, NULL, 'questions');
+Check: `trivia-desktop-build --dir` + `trivia-steam stage` pass with the five folders; `trivia-steam upload --dry-run` renders five more DLC depots with placeholder IDs. If a bundle folder without a pool, or a shipped bundle with null IDs, blocks a real upload: that''s generic, add a follow-up task to `plan 89: Builds, depots and upload (SW-10, SW-6)` (e.g. leave unentered bundles out of the build), don''t fix it here.', '2026-10-21T20:28:11Z', '2026-10-21T23:00:20Z', 1642, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1653, 187, 'Store texts for the five topic DLCs', 'work', 'open', NULL, NULL, '`plan 187: Steam DLC and store for the topic bundles` task 2: Steam store texts (name, short description, About This Content) for the five topic DLCs, and their approval decision.
 
 Gate: needs the rows in `app/data/bundles.json` and the names in `app/data/names.<locale>.json` (after `task 1644: Create the five topic bundles` and `task 1652: Steamworks rows and steam.json entries for the five topic DLCs`, same work tree). Missing: pending on the pending decision task 1644 or task 1652 waits on, as task 1652''s gate says, and stop; never stop open and not pending.
@@ -41677,6 +41677,17 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Theme bundles go deeper into one topic with many photo questions, so short generic answers (Rock, Gold, Ice, Iron, Water …) will hit this more often than in base.
 - Fix idea: the `both_essential` branch also needs some textual tie (question similarity above a floor, or the same/stem-equal `concept`), e.g. reuse `overlap_candidates`'' concept stems; rate''s overlap check still catches real overlaps.
 - Check: a throw-away script running `duplicates()` over the two questions above (none) and over a real duplicate pair from earlier `dropped.json` files under `work/batch-*/` (still a duplicate); count how many past drops would change.', '2026-10-21T22:16:25Z', '2026-10-21T22:36:41Z', 1630, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1675, 89, 'Real upload: bundles without a pool or without Steam IDs stay out of the build', 'work', 'open', NULL, NULL, '`plan 89: Builds, depots and upload (SW-10, SW-6)`; found by `task 1652: Steamworks rows and steam.json entries for the five topic DLCs`.
+
+Now (2026-10-21): every folder in `app/data/bundles/` ships, with or without a pool. `usa`, `germany`, `uk` and the five topic bundles (`stem`, `sports`, `history`, `movies`, `geography`) have only `categories.json` / `names.*.json`; `trivia-steam stage` stages each as a DLC depot (1–4 files), and `steam.py` `ids()` exits unless every `steam.json` `dlc` entry has `appid` + `depot`. So a real `trivia-steam upload` is blocked until the developer has created a DLC app for bundles that offer nothing yet, and an unentered bundle with a pool blocks it too.
+
+Do:
+- A bundle ships as DLC only if it has a pool (`pool[.<locale>].json`, decision 112: missing = not offered) and real IDs in `steam.json`; the others are left out of the build (data excluded from OS depots and from `build/dlc/`, no depot VDF), with one line each in stage/upload output (`<id>: not shipped (no pool | no Steam IDs)`).
+- `--dry-run` keeps placeholder IDs for all of them, so the VDFs stay checkable.
+- Keep the stage check (packs in the build = `pack-media.json` = shipped `dlc` entries) and the smoke''s with/without packs runs consistent with the same rule; one shared function, not two lists.
+- Update plan 18 "Builds and depots" (DLC depots bullet) and the SW-7 "Installation → Depots" note.
+
+Check: `trivia-desktop-build --dir`, `trivia-steam stage`, `trivia-steam upload --dry-run` (all depots), and `ids()` with only colombia''s IDs filled (temporary edit) accepts a real-upload ID set.', '2026-10-21T22:59:58Z', NULL, 1652, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -47028,6 +47039,88 @@ answer: «Ñ»; wrong: «K», «W», «X»
 hints: «Er ist so beliebt, dass er zum Symbol der spanischen Sprache wurde.» / «Im Deutschen schreibt man seinen Laut mit zwei Buchstaben, wie das „gn“ in „Champagner“.» / «Er trägt eine kleine Wellenlinie obendrauf.»
 fun_fact: «Die kleine Wellenlinie auf dem Ñ heißt Tilde.»', NULL, '2026-10-21T22:35:50Z', '2026-10-21T22:39:22Z', 1607, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (394, 'Demo list: grow it to 138 and let listed ids'' missing translations warn instead of fail?', 'pending', '["Approve the 138-id proposal as the demo list, and make the demo list''s missing-translation and reserve findings warnings in qgen validate until the list is complete", "Approve the 138-id proposal only; keep the findings as errors and the developer acks/finishes the three unfinished translation runs by hand", "Keep the 125 ids; only make the findings warnings"]', 'State: authoring/data/demo.json lists 125 ids (q-1248 removed, q-1254 added per decision 392). All other listed ids have approved en/es-ES/de translations (q-0110 de set by hand per decision 393). qgen demo --check and qgen validate still exit 1: ''reserve N short'' (1–4 cards) in 20-odd configurations, and q-1254 has no en/es-ES/de translation. qgen demo --sizes: 1 seat needs 138 ids; work/demo/proposal.md (from qgen demo --propose) is a 138-id list: 124 full + 14 pending translations. Deadlock: qgen batch --translate resumes the unfinished tr-en-2/tr-es-ES-2/tr-de-2, whose last step (validate) fails, so no new run can start and translate q-1254 or the pending ids. Option 1 needs a follow-up task: qgen validate prints the missing-translation and reserve findings of the demo list as warnings while the list is ''approved'' but incomplete, errors again once qgen demo --check passes.', 'The free demo is built from a fixed list of questions. That list is too short by about a dozen questions to guarantee that every game mode and age group can be played in every language, and the one question added last (the clapping song) has no translations yet. The checks that guard the list currently fail on both counts, and that failure also stops the translation runs that would fix the second problem, so the work is stuck in a loop.', NULL, NULL, '2026-10-21T22:44:48Z', NULL, 1607, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (395, 'stem taxonomy: categories and subcategories', 'pending', '["apply as proposed (10 categories, 56 subcategories)", "apply with changes: say which (e.g. the merges to 50 above, women-in-science)", "redo the proposal"]', 'Bundle `stem` (Science questions bundle, `kind: theme`, `languages: ["en"]`, target 2000 ≈ 36 per subcategory at 56; `task 1644: Create the five topic bundles`).
+
+Rule (`app/data/bundles.json`): More and deeper questions on natural sciences, technology, engineering and maths: living things, the human body, physics, chemistry, space, geology, weather and ecology, inventions and machines, numbers and shapes, and their history (scientists, inventions, the space race) at every difficulty, from kids to adults, answerable by families anywhere in the world whatever their language; fan-level detail is welcome, while the famous core base already asks stays in `base`, and things only one country''s players know stay in that country''s regional bundle; present-day places, maps and climate zones are `geography`''s, sport `sports`'', film and TV `movies`'', history outside science `history`''s.
+
+No voice: base''s voice holds (`plan 184: Pipeline for topic bundles`).
+
+Proposal (`qgen taxonomy --bundle stem`, theme prompt of `decision 370: Theme taxonomy prompt: apply?`; opus 1 call, $0.48): 10 categories (all `base_extends`, 0 `new`), 56 subcategories (all with `base_related`). Slug, English name, then `base_related` (base subcategories it goes beyond; drafting keeps off their questions, `decision 350: Overlap rate in drafting: which changes?`). es/de names drafted on apply. Full proposal with scopes, reasons and samples (`known_at`): `work/taxonomy/stem/proposal.md`.
+
+Checks:
+- Base overlap: every subcategory goes beyond named base subcategories; scopes say what stays in base (the eight planets, dinosaurs, fish species, Moon race astronauts, internet and AI, famous landmarks as sights).
+- Other topic bundles: climate zones on maps → `geography` (scopes of `ecosystems-and-food-webs`, `weather-science`); no sport, film or general history subcategory; history of science and medicine is `stem`''s by the rules.
+- Kids level: 50 of 56 have a sample at `known_at` ≤ 4; `atoms-and-modern-physics`, `programming-and-code`, `scientific-revolution` start at 5, `mathematicians`, `famous-experiments` at 6, `women-in-science` at 7.
+- Slugs unique; no subcategory name equals a base name; the categories Physics and Chemistry share base''s subcategory names (part 4''s «Cambiazo» display).
+- Size: 56, not 50: ≈ 36 per subcategory; merges for "apply with changes" if you want 50: `famous-experiments` into `scientific-revolution`, `telescopes-and-observatories` into `night-sky`, `crystals-and-gemstones` into `plate-tectonics`, `communications` into `electronics-and-gadgets`, `programming-and-code` into `computing-history`, `units-and-measurement` into `forces-and-motion`.
+- Overlap risk: `women-in-science` cuts across the others (Rosalind Franklin, Katherine Johnson, Ada Lovelace also fit their field); its scope would need "people not asked in their field''s subcategory", or drop it and let its people go to their fields.
+
+- `living-things` Living things (8, base_extends)
+  - `microbes-and-fungi` Microbes and fungi: `science`, `plants`
+  - `cells-and-genetics` Cells and genetics: `science`, `human-body`
+  - `evolution-and-fossils` Evolution and fossils: `dinosaurs`, `prehistory`
+  - `animal-behaviour` Animal behaviour: `mammals`, `birds`, `animal-records`
+  - `animal-adaptations` Animal adaptations: `strange-creatures`, `reptiles`, `amphibians`
+  - `invertebrates` Bugs, spiders and other invertebrates: `insects`
+  - `ocean-life` Ocean life: `fish`, `the-sea`, `strange-creatures`
+  - `plant-science` How plants work: `plants`, `trees`
+- `ecology` Ecology and conservation (2, base_extends)
+  - `ecosystems-and-food-webs` Ecosystems and food webs: `environment`
+  - `conservation` Endangered species and conservation: `environment`, `african-wildlife`
+- `human-body` The human body (6, base_extends)
+  - `heart-blood-and-breathing` Heart, blood and breathing: `human-body`
+  - `digestion-and-nutrition` Digestion and nutrition: `human-body`, `medicine-and-health`
+  - `bones-muscles-and-skin` Bones, muscles and skin: `human-body`, `body-oddities`
+  - `senses-and-nerves` Senses and nerves: `brain-and-mind`, `human-body`
+  - `immune-system-and-disease` Immune system and disease: `medicine-and-health`
+  - `history-of-medicine` History of medicine: `medicine-and-health`, `famous-scientists`
+- `physics` Physics (7, base_extends)
+  - `forces-and-motion` Forces and motion: `physics`
+  - `energy-and-heat` Energy and heat: `physics`, `science`
+  - `light-and-optics` Light and optics: `physics`, `colours`, `optical-illusions`
+  - `sound-and-waves` Sound and waves: `physics`, `musical-instruments`
+  - `electricity-and-magnetism` Electricity and magnetism: `physics`
+  - `atoms-and-modern-physics` Atoms and modern physics: `physics`, `nobel-prizes`, `famous-scientists`
+  - `units-and-measurement` Units and measurement: `maths`, `numbers`
+- `chemistry` Chemistry (4, base_extends)
+  - `chemical-elements` Chemical elements: `chemistry`
+  - `chemical-reactions` Chemical reactions: `chemistry`
+  - `everyday-chemistry` Everyday chemistry: `chemistry`, `science`
+  - `materials-and-metals` Materials and metals: `chemistry`, `recycling`
+- `space` Space and astronomy (6, base_extends)
+  - `moons-comets-and-asteroids` Moons, comets and asteroids: `solar-system`
+  - `night-sky` Constellations and the night sky: `stars-and-galaxies`, `space`
+  - `telescopes-and-observatories` Telescopes and observatories: `stars-and-galaxies`, `space`
+  - `space-probes-and-rovers` Space probes and rovers: `space-race-and-astronauts`, `solar-system`
+  - `space-stations-and-living-in-space` Living in space: `space-race-and-astronauts`
+  - `cosmology` Black holes and the universe: `stars-and-galaxies`, `big-questions`
+- `earth-science` Earth science (5, base_extends)
+  - `plate-tectonics` Plate tectonics and Earth''s interior: `planet-earth`, `volcanoes`, `earthquakes`
+  - `crystals-and-gemstones` Crystals and gemstones: `rocks-and-minerals`
+  - `weather-science` Weather science: `weather-and-climate`, `natural-phenomena`
+  - `ocean-science` Ocean science: `oceans`, `the-sea`
+  - `climate-and-atmosphere` Climate and atmosphere: `weather-and-climate`, `environment`
+- `mathematics` Mathematics (6, base_extends)
+  - `special-numbers` Primes and special numbers: `numbers`, `maths`
+  - `geometry-and-solids` Geometry and solids: `shapes`
+  - `probability-and-statistics` Probability and statistics: `maths`
+  - `number-systems-and-maths-history` Number systems and maths history: `numbers`, `maths`
+  - `mathematicians` Mathematicians and famous problems: `famous-scientists`, `maths`
+  - `logic-and-maths-puzzles` Logic and maths puzzles: `tricks`, `board-games`
+- `technology-and-engineering` Technology and engineering (8, base_extends)
+  - `simple-machines-and-tools` Simple machines and tools: `inventions`
+  - `how-vehicles-work` How vehicles work: `cars`, `planes`, `trains`, `ships-and-boats`
+  - `computing-history` Computer history: `technology`, `famous-inventors`
+  - `programming-and-code` Programming and code: `artificial-intelligence`, `internet`
+  - `electronics-and-gadgets` Electronics and gadgets: `technology`, `robots`
+  - `communications` Telephone, radio and signals: `internet`, `technology`
+  - `power-and-energy-sources` Power and energy sources: `environment`
+  - `structural-engineering` Engineering marvels: `famous-bridges`, `skyscrapers`, `wonders-of-the-world`
+- `history-of-science` History of science (4, base_extends)
+  - `ancient-and-medieval-science` Ancient and medieval science: `famous-scientists`, `history`
+  - `scientific-revolution` Scientific revolution: `famous-scientists`
+  - `famous-experiments` Famous experiments: `science`, `famous-scientists`
+  - `women-in-science` Women in science: `famous-scientists`, `nobel-prizes`', 'The new science question pack needs its own list of topics, so its questions go deeper than the main pool on nature, the body, physics, chemistry, space, the Earth, maths, technology and the history of science, without repeating what the main pool already asks. The proposal splits the pack into 10 topics and 56 subtopics, about 36 questions each at 2000 questions. The choice is to apply it as proposed, apply it with changes (for example merging subtopics down to 50), or have it redone; applying fixes the pack''s structure and drafts the Spanish and German topic names.', NULL, NULL, '2026-10-21T22:49:13Z', NULL, 1645, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -48841,7 +48934,14 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1756, 1674, '2026-10-21T22:35:58Z', '2026-10-21T22:36:47Z', 'done', NULL, 0, 'c9a75307e707d2f4f08c37eeea8303d35236f8fd', 'questions', 'claude-sonnet-5-5', 'dffc9e5e-7b9d-4735-9ea0-1f48d7a199fe', NULL, 10, 20, 3806, 400320, 38977, 0.274072, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1757, 1644, '2026-10-21T22:36:48Z', '2026-10-21T22:39:44Z', 'done', NULL, 0, '26c277aedefed48c66c8b42c75a4733ac636576e', 'questions', 'claude-sonnet-5-5', 'c66e114d-a3c7-4e71-a86a-2648b638fb38', NULL, 20, 40, 7118, 1039590, 53139, 0.49173400000000006, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1758, 1607, '2026-10-21T22:39:44Z', '2026-10-21T22:45:02Z', 'blocked', NULL, 0, 'aae7b1c249cda840554a6bd1313d960398e25c82', 'questions', 'claude-sonnet-5-5', 'f40c136c-f8a4-4cd9-973a-311a0aae7830', NULL, 32, 64, 13044, 1788789, 66453, 0.75413780000000008, 344501);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1759, 1666, '2026-10-21T22:44:56Z', NULL, 'running', NULL, NULL, 'aae7b1c249cda840554a6bd1313d960398e25c82', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1759, 1666, '2026-10-21T22:44:56Z', '2026-10-21T22:45:26Z', 'blocked', NULL, 0, 'aae7b1c249cda840554a6bd1313d960398e25c82', 'app', 'claude-sonnet-5-5', '2bb35386-6adf-448e-beec-f942301b44bc', NULL, 9, 20, 1585, 344060, 34216, 0.221566, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1760, 1645, '2026-10-21T22:45:02Z', '2026-10-21T22:49:25Z', 'blocked', NULL, 0, 'caf4fd371f15af3220ac5ec0c011cc2496a61346', 'questions', 'claude-opus-5-5', 'bb17aa68-e3b6-4c0a-9295-f5defb924a5a', NULL, 16, 32, 7042, 793742, 56208, 0.7493804, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1761, 1667, '2026-10-21T22:45:26Z', '2026-10-21T22:45:42Z', 'blocked', NULL, 0, 'caf4fd371f15af3220ac5ec0c011cc2496a61346', 'app', 'claude-sonnet-5-5', '165478d4-d772-441b-b679-aec112edca03', NULL, 6, 14, 926, 195807, 27885, 0.1599894, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1762, 1647, '2026-10-21T22:49:25Z', '2026-10-21T22:49:42Z', 'blocked', NULL, 0, 'caf4fd371f15af3220ac5ec0c011cc2496a61346', 'questions', 'claude-opus-5-5', '6ce251d1-ffe5-4cde-aea9-3a7589876d25', NULL, 5, 10, 1255, 147034, 25293, 0.2568908, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1763, 1648, '2026-10-21T22:49:43Z', '2026-10-21T22:50:01Z', 'blocked', NULL, 0, 'caf4fd371f15af3220ac5ec0c011cc2496a61346', 'questions', 'claude-opus-5-5', 'ee66b0a7-2087-4670-92c8-084233681280', NULL, 6, 12, 1264, 196855, 28876, 0.295707, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1764, 1649, '2026-10-21T22:50:01Z', '2026-10-21T22:50:33Z', 'blocked', NULL, 0, 'caf4fd371f15af3220ac5ec0c011cc2496a61346', 'questions', 'claude-opus-5-5', '99f810a5-be0b-43e4-8f73-9cc76219daa1', NULL, 7, 14, 1343, 223969, 28106, 0.29655780000000004, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1765, 1652, '2026-10-21T22:50:33Z', '2026-10-21T23:00:30Z', 'done', NULL, 0, 'caf4fd371f15af3220ac5ec0c011cc2496a61346', 'questions', 'claude-opus-5-5', 'b3288f69-4c04-465f-8146-a3b3b4e6cddb', NULL, 25, 50, 8278, 1250648, 49519, 0.81204159999999992, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1766, 1675, '2026-10-21T23:00:00Z', NULL, 'running', NULL, NULL, 'caf4fd371f15af3220ac5ec0c011cc2496a61346', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 344501);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -49437,14 +49537,19 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1643, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1644, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1645, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1645, 370);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1645, 395);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1646, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1646, 370);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1646, 395);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1647, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1647, 370);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1647, 395);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1648, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1648, 370);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1648, 395);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 370);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 395);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1652, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1653, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1654, 369);
@@ -49458,7 +49563,9 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1661, 371);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1662, 371);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1663, 371);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1664, 371);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1666, 372);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1666, 373);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1667, 372);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1667, 373);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1673, 377);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1673, 378);
