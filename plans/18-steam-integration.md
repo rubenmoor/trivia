@@ -49,7 +49,7 @@ Values for Steamworks → Stats & Achievements → Achievements (plan 86, SW-11;
 - Order: enter them in the table's order (= `ACHIEVEMENTS` in `engine/achievements.ts`); the edit form takes the English name and description.
 - Localization: upload `app/desktop/steam-achievements.vdf` (latam, spanish, english, german). Its tokens `NEW_ACHIEVEMENT_1_<n>_NAME/_DESC` assume Steamworks' ids for that order on a fresh app; compare with Steamworks' localization download first and rename tokens if they differ.
 - Then publish (Steamworks → Publish).
-- Mods: achievements stay allowed with mods on (decision 123: Achievements in games with mods on: allowed or off?; decision 146: Achievements, mods screen and rich presence with mods on); no mods gate in `earned()` or the unlock gate, no save field; player questions count like ours except `BUNDLE_*` (our regional bundles only) and `ALL_CATEGORIES` (our `base` only).
+- Mods: achievements stay allowed with mods on (decision 123: Achievements in games with mods on: allowed or off?; decision 146: Achievements, mods screen and rich presence with mods on); no mods gate in `earned()` or the unlock gate, no save field; player questions count like ours except `BUNDLE_*` (our regional and topic bundles only) and `ALL_CATEGORIES` (our `base` only).
 - Wording: infinitive, no address, so latam/spanish and German need no plural form; joker names from the catalogs (D-108: es Soplo/Paso y fuera/Hada madrina/Doña Exigente/Tiro mágico, en Hint/Pass & Purge/Fairy/Ms Picky/Trick Shot, de Wink/Näxt & Weg/Glücksfee/Wunschzeit/Finte).
 - `SUPER_PICKY` in English isn't «Super Picky»: Ms Picky is a different joker.
 
@@ -93,6 +93,11 @@ Not entered now: Steam shows every defined achievement, unreachable ones look br
 | `WIN_RR_COMPETITIVE` | milestone 16 | «El último en pie» / «Ganar una partida Por turnos, todos contra todos.» | = latam | «Last One Standing» / «Win a round-robin game, everyone against everyone.» | «Wer zuletzt lacht» / «Ein Spiel reihum, jeder gegen jeden, gewinnen.» |
 | `WIN_TIMED` | milestone 16 | «Contra el reloj» / «Ganar una partida Contrarreloj.» | = latam | «Beat the Clock» / «Win a timed game.» | «Gegen die Uhr» / «Ein Spiel auf Zeit gewinnen.» |
 | `BUNDLE_COLOMBIA` | colombia DLC | «¡Qué chévere!» / «Acertar 50 preguntas del paquete Regional: Colombia.» | = latam | «Colombia, Mi Amor» / «Answer 50 questions right from the Regional: Colombia bundle.» | «Kolumbien-Kenner» / «50 Fragen aus dem Fragenpaket Regional: Kolumbien richtig beantworten.» |
+| `BUNDLE_STEM` | stem DLC | «Mente brillante» / «Acertar 50 preguntas del paquete Ciencia y técnica.» | = latam | «Lab Rat» / «Answer 50 questions right from the Science and tech bundle.» | «Forscherdrang» / «50 Fragen aus dem Fragenpaket Wissenschaft und Technik richtig beantworten.» |
+| `BUNDLE_SPORTS` | sports DLC | «¡Gooool!» / «Acertar 50 preguntas del paquete Deportes.» | = latam | «Game On» / «Answer 50 questions right from the Sports bundle.» | «Sportskanone» / «50 Fragen aus dem Fragenpaket Sport richtig beantworten.» |
+| `BUNDLE_HISTORY` | history DLC | «Cuestión de tiempo» / «Acertar 50 preguntas del paquete Historia.» | = latam | «Time Traveller» / «Answer 50 questions right from the History bundle.» | «Zeitreisender» / «50 Fragen aus dem Fragenpaket Geschichte richtig beantworten.» |
+| `BUNDLE_MOVIES` | movies DLC | «¡Corten!» / «Acertar 50 preguntas del paquete Cine.» | = latam | «That's a Wrap» / «Answer 50 questions right from the Movies bundle.» | «Cineast» / «50 Fragen aus dem Fragenpaket Film richtig beantworten.» |
+| `BUNDLE_GEOGRAPHY` | geography DLC | «Rumbo al mundo» / «Acertar 50 preguntas del paquete Geografía.» | = latam | «Globetrotter» / «Answer 50 questions right from the Geography bundle.» | «Weltenbummler» / «50 Fragen aus dem Fragenpaket Geografie richtig beantworten.» |
 
 ## Platforms and display
 - **Windows** (x64) and **Linux** (x64) native builds; the **Deck** runs the Linux build. macOS later (needs a $99/year developer account and notarization).

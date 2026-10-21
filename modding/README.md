@@ -199,7 +199,7 @@ export default async function setup(trivia) {
 
 ## Achievements, flags and telemetry with mods
 - Steam achievements: unlock with mods on, as without
-  - Player questions count like ours, except the bundle achievements (our regional bundles) and «all categories» (our base bundle)
+  - Player questions count like ours, except the bundle achievements (our regional and topic bundles) and «all categories» (our base bundle)
 - Flags and question reports: our questions only; hidden on player questions
 - Telemetry (opt-in): answers to our questions only; a game notes that mods were on
 
