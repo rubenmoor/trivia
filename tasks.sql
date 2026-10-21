@@ -41650,6 +41650,15 @@ Your note on `pm task done`: the cause and what you queued.
       
       Check whether task 1652 now shows as pending. If it doesn''t, it will pick up again once task 1644 has added the rows.
       [success: 5 turns, $0.14]', '2026-10-21T21:51:50Z', '2026-10-21T21:52:31Z', NULL, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1672, NULL, '''In common'' style: no new drafts, existing questions not rejected', 'exec', 'open', NULL, NULL, 'The developer''s rule (2026-10-21): no new question in the "what do these have in common?" style (move `connection`); existing approved questions in that style are fine and are never rejected or sent to `needs_work` for it, in any locale. Replaces the full retirement from commit `7cef782c` (2026-10-11, never a developer decision); context: `decision 366: Demo list: 6 listed questions can''t be translated cleanly: replace them, fix their sources, or warn?` (q-0872, q-1032).
+
+- Drafting: keep `connection` at weight 0 in `authoring/data/question-axes.json` (never drawn); its description says "no new drafts", not "retired"
+- Review of a new draft (no `translated_from`, not yet approved): may still reject the style
+- Review of translations, audit (`audit.md` reason 7), rework, tighten: the style is not a finding; reword `review.md` reasons 7 and the `style` problem list, `audit.md` 7 accordingly; check `translate-review.md` and whatever composes it
+- Existing `needs_work` translations whose only finding is this style (`problems: ["style"]`, feedback names "in common" / "en común" / "gemeinsam"): set to approved (reviewer human, this task); others stay
+- `plans/20-pipeline-efficiency.md` PE-7 note and any other "retired" mention (`rg -i "in common|en común|retired style"`): follow the new rule
+- Record the rule: `pm decision record` as the developer''s 2026-10-21 rule, citing this task
+- Checks: `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-10-21T22:05:48Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
