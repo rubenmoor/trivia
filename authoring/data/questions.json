@@ -8612,7 +8612,8 @@
         "answer_kind": "word",
         "lens": "language"
       },
-      "concept": "Ñ"
+      "concept": "Ñ",
+      "translatable": false
     },
     {
       "id": "q-0111",
@@ -54187,7 +54188,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-0712",
@@ -73214,7 +73216,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-0959",
@@ -74499,7 +74502,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-0976",
@@ -88836,7 +88840,8 @@
         }
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-1164",
@@ -95397,7 +95402,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-1249",
@@ -95693,7 +95699,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-1253",
@@ -114735,7 +114742,8 @@
           ]
         },
         "revised_on": "2026-10-15"
-      }
+      },
+      "translatable": false
     },
     {
       "id": "q-1499",
@@ -129954,7 +129962,8 @@
         "reviewed_at": "2026-10-15T17:47:05"
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-1693",
@@ -153191,7 +153200,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-1999",
@@ -160143,7 +160153,8 @@
           ]
         },
         "revised_on": "2026-10-15"
-      }
+      },
+      "translatable": false
     },
     {
       "id": "q-2092",
@@ -168142,7 +168153,8 @@
         "reviewed_at": "2026-10-15T17:50:55"
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-2197",
