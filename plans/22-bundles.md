@@ -59,6 +59,17 @@ The developer's direction (2026-10-07): a batch writes for **one bundle, chosen 
 - `colombia`'s list (D-109, pm decision 249): 14 categories, 53 subcategories, from the general regional list (`authoring/data/regional-categories.json`) by `qgen taxonomy --bundle colombia`; all its questions moved onto it by `qgen remap --bundle colombia`. Was: the 27 Colombian subcategories from `base` in 6 categories (D-43).
 - A `base` batch keeps Colombia-only content out through the prompt alone (OQ-43); the developer moves the rest with `n`.
 
+### Media for theme bundles (plan 184, task 1631)
+Licences are the same for every bundle (`plans/23-media-providers.md`: allowlist, never NC/ND/editorial). A bundle's media share comes from its axes: `concepts.load_axes` reads `authoring/data/bundles/<id>/question-axes.json` (a complete file, not an overlay), else `base`'s; the draft's media hint is the `stimulus` axis, so no new prompt.
+
+- **`sports`:** `base`'s axes, no file. Athletes, stadiums, equipment and events are well covered on Commons.
+- **`movies`:** film stills, posters, trailers and soundtracks are out, so the free media are people (actors and directors at events, Commons portraits), places (filming locations, studios, cinemas) and objects (awards, props in museums, cameras). A lower but non-zero media share (decision 227: Media share below 15 %: lower the none weight, and which residual-miss fixes?; bound 15 %, decision 13: Batch health thresholds and stop rule?).
+- **File, written by part 2 with `qgen bundle new movies`:** a copy of `base`'s `question-axes.json` with these changes:
+  - `weights.stimulus`: `{"none": 4, "photo": 2, "detail": 0.4, "silhouette": 0.2, "map_outline": 0, "sound": 0, "video": 0}`; weights of media ≈ 39 % (base ≈ 46 %), merged share expected ≈ 19 %, a guide, not a forecast.
+  - `axes.stimulus.values.photo`: `"a clear photo of a person (actor, director, at an event or a Commons portrait), a place (filming location, studio, cinema) or an object (award, prop in a museum, camera); never a film still, poster or trailer frame; the player names or judges what they see"`.
+  - `axes.stimulus.values.detail` and `silhouette`: same free kinds, `"…of one of the free kinds of photo"`.
+- **Below 15 % media share in the first `movies` batches:** a decision then (per-bundle health minimum vs. more `photo` weight), not before.
+
 - **One house style for every bundle** (D-44): a session mixes questions from all active bundles, so a bundle's own axes may change *what* is asked, never *how* it is written.
 
 ## Demo (plan 174, decision 339)

@@ -41043,7 +41043,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Remove every trace of <x> afterwards (`git status` clean apart from fixes).
 
 Done when: chain passes, traces gone, fixes staged; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-21T20:23:37Z', NULL, 1621, 0, 'opus', 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1631, 184, 'Media for movies and sports: axes template and docs', 'work', 'open', NULL, NULL, 'Item 7 of `plan 184: Pipeline for topic bundles`. Licence rules: `plans/23-media-providers.md` (allowlist; never NC/ND/editorial: film stills, posters, trailers, soundtracks are out). Health: decision 227: Media share below 15 %: lower the none weight, and which residual-miss fixes?, decision 13: Batch health thresholds and stop rule?
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1631, 184, 'Media for movies and sports: axes template and docs', 'work', 'done', NULL, '2026-10-21, plans/22-bundles.md', 'Item 7 of `plan 184: Pipeline for topic bundles`. Licence rules: `plans/23-media-providers.md` (allowlist; never NC/ND/editorial: film stills, posters, trailers, soundtracks are out). Health: decision 227: Media share below 15 %: lower the none weight, and which residual-miss fixes?, decision 13: Batch health thresholds and stop rule?
 
 - `movies`: a lower, non-zero media share from free kinds: people (actors, directors at events, Commons portraits), places (filming locations, studios, cinemas), objects (awards, props in museums, cameras).
 - Mechanism: per-bundle `authoring/data/bundles/<id>/question-axes.json`; check the code reads it (add if missing, small). Movies weights: `stimulus` `photo` kept, `video` and `sound` 0, `detail`/`silhouette` low; the draft prompt''s media hint names the free kinds via the bundle''s axes, not a new prompt.
@@ -41051,7 +41051,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `sports`: base''s axes, no change; say so in the doc.
 - Below 15 % media share in the first `movies` batches: a decision then, not now.
 
-Done when: doc section and template written; mechanism present; `npm run check`, `qgen validate` pass.', '2026-10-21T20:23:37Z', NULL, 1621, 0, NULL, 'questions');
+Done when: doc section and template written; mechanism present; `npm run check`, `qgen validate` pass.', '2026-10-21T20:23:37Z', '2026-10-21T20:43:33Z', 1621, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1632, 184, 'Docs: theme bundles in plans/22-bundles.md and plans/16-content-target.md', 'work', 'open', NULL, NULL, 'Item 8 of `plan 184: Pipeline for topic bundles`; last task of the plan.
 
 - `plans/22-bundles.md`: "In the pipeline": theme bundles (taxonomy from base''s subcategories, en drafting, per-locale gap, cross-bundle overlap via `base-related.json`); Layout table: `base-related.json` row; media for movies (from the media task of this plan, link don''t repeat).
@@ -41612,6 +41612,12 @@ work tree holds the work of `task 1624: Theme taxonomy: qgen taxonomy for kind t
 Your note on `pm task done`: what conflicted and how you resolved it.
 
 Conflicting files: authoring/tools/qgen.py', '2026-10-21T20:38:47Z', '2026-10-21T20:39:02Z', NULL, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1670, 186, 'Write movies question-axes.json (free media kinds)', 'work', 'open', NULL, NULL, 'Follow-up of `task 1631: Media for movies and sports: axes template and docs` (plan 184).
+
+- After `task 1644: Create the five topic bundles` (and before the `movies` taxonomy, `task 1648: movies taxonomy`, if it can): write `authoring/data/bundles/movies/question-axes.json`.
+- Recipe and weights: `plans/22-bundles.md` "Media for theme bundles": copy `authoring/data/question-axes.json`, set `weights.stimulus` (none 4, photo 2, detail 0.4, silhouette 0.2, map_outline/sound/video 0) and reword the `stimulus` values `photo`, `detail`, `silhouette` to the free kinds (people, places, objects; never stills, posters, trailers).
+- `sports` gets no file (base''s axes).
+- Check: `qgen validate`, `npm run check`; `concepts.load_axes("movies")` reads the file.', '2026-10-21T20:43:19Z', NULL, 1631, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -48499,6 +48505,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1717, 1627, '2026-10-21T20:40:27Z', '2026-10-21T20:41:10Z', 'done', NULL, 0, 'ce3716747fdf5cc89d5a2c0e0408d819bbaea634', 'questions', 'claude-sonnet-5-5', '5c596ee5-6a4b-4dab-b0f0-f4dc89a72db7', 1716, 7, 14, 2712, 449525, 19758, 0.48357380000000005, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1718, 1628, '2026-10-21T20:41:11Z', '2026-10-21T20:42:08Z', 'done', NULL, 0, '152afd5c06dcff49c41a039cdf0fdda4402e0928', 'questions', 'claude-sonnet-5-5', '5c596ee5-6a4b-4dab-b0f0-f4dc89a72db7', 1717, 8, 16, 3991, 679369, 20731, 0.7423136, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1719, 1629, '2026-10-21T20:42:08Z', '2026-10-21T20:42:55Z', 'done', NULL, 0, 'ce3d4ca97096a357bfafd4aee2a6384a75b184b0', 'questions', 'claude-sonnet-5-5', 'a0e3dc26-1f10-45dd-bac1-e7a9325455ad', NULL, 12, 22, 3837, 450036, 40867, 0.2918892, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1720, 1631, '2026-10-21T20:42:55Z', '2026-10-21T20:43:38Z', 'done', NULL, 0, '81fbc25b375586786efebc1e0bc4d3999dab6517', 'questions', 'claude-sonnet-5-5', 'a0e3dc26-1f10-45dd-bac1-e7a9325455ad', 1719, 8, 16, 3529, 540237, 23059, 0.52749459999999993, 344501);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
