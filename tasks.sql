@@ -41618,6 +41618,38 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Recipe and weights: `plans/22-bundles.md` "Media for theme bundles": copy `authoring/data/question-axes.json`, set `weights.stimulus` (none 4, photo 2, detail 0.4, silhouette 0.2, map_outline/sound/video 0) and reword the `stimulus` values `photo`, `detail`, `silhouette` to the free kinds (people, places, objects; never stills, posters, trailers).
 - `sports` gets no file (base''s axes).
 - Check: `qgen validate`, `npm run check`; `concepts.load_axes("movies")` reads the file.', '2026-10-21T20:43:19Z', '2026-10-21T20:46:19Z', 1631, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1671, 187, 'investigate the failure of task 1652: Steamworks rows and steam.json entries for the five topic DLCs', 'investigate', 'open', 282, NULL, '`task 1652: Steamworks rows and steam.json entries for the five topic DLCs` failed in `pm run`; its summary is below. Find out why, don''t redo its work:
+* read its log, `pm show 1652`, and the stashes it left (`git stash show -p --include-untracked <sha>`); don''t apply or drop them, task 1652''s next run gets them
+* rerun the failing command or script to see the error yourself; find the cause in the code, not only the symptom
+Then, by what you find:
+* a bug in a script, test, tool or config of the project: add a task that fixes it, `pm task add 187 "<subject>" --priority 281`, with the cause, where it is and how to check the fix; it runs before task 1652 does again
+* task 1652 itself is wrong or out of date: change it (`pm task set 1652 --body …`) or drop it (`pm task drop 1652 "<reason>"`)
+* it needs the human: `pm decision add` with what you found and the options, then `pm task-pending-decision 1652 <decision>`
+* nothing to fix (a passing outage): say so; task 1652 runs again as it is
+If earlier investigations of this task are listed below, don''t repeat their fix: raise a decision instead.
+Your note on `pm task done`: the cause and what you queued.
+
+# The failure
+
+    exit 0, but the task is still open and not blocked, after 0m23s, 5 turns
+    last tool call: Bash: pm show 1652 2>&1 | head -8
+    likely cause: the worker ended without `pm task done|drop 1652` or a pending decision; its last message: Check whether task 1652 now shows as pending. If it doesn''t, it will pick up again once task 1644 has added the rows.
+    log: /home/ruben/code/trivia/.git/pm-logs/task-1652-run-1746.log
+    last output:
+        → Bash: cd /home/ruben/code/trivia-worktrees/app; pm status 2>&1 | head -20; grep -o ''"id": *"[a-z]*"'' app/data/bundles.json; git log --oneline -3 -- app/data
+      I stopped without making any changes, and task 1652 is still open.
+      
+      The gate failed. `app/data/bundles.json` has no rows for `stem`, `sports`, `history`, `movies` or `geography`. It only lists `base`, `colombia`, `usa`, `germany`, `uk`, `spain` and `mexico`. `task 1644: Create the five topic bundles` is still queued and hasn''t run.
+      
+      `decision 369: Topic bundles: names, descriptions and rules` is already answered, so I didn''t add a pending-decision link. Per the task, I added nothing else. The next run of task 1652 will check for the rows again.
+        → Bash: pm task-pending-decision 1652 369 2>&1 | tail -5
+        → Bash: pm show 1652 2>&1 | head -8
+      I couldn''t do task 1652 yet, and I''ve left it open. I ran `pm task-pending-decision 1652 369` to satisfy the stop hook. That decision is already answered, so I don''t know whether it parked the task. The command printed nothing, and `pm show 1652` only printed the milestone header, so it didn''t confirm either way.
+      
+      The task is blocked because `app/data/bundles.json` has no rows for the five topic bundles. That file is written by `task 1644: Create the five topic bundles`, which hasn''t run yet. Nothing was edited or staged.
+      
+      Check whether task 1652 now shows as pending. If it doesn''t, it will pick up again once task 1644 has added the rows.
+      [success: 5 turns, $0.14]', '2026-10-21T21:51:50Z', NULL, NULL, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -48620,6 +48652,11 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1742, 1223, '2026-10-21T21:43:30Z', '2026-10-21T21:44:18Z', 'blocked', NULL, 0, '5779a57e20471f8d47e710eb14f9766d3147098d', 'questions', 'claude-sonnet-5-5', '7b5a20a0-70b3-48f2-939c-15ce9015a734', NULL, 7, 14, 2540, 309647, 44168, 0.26402939999999997, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1743, 1506, '2026-10-21T21:44:18Z', '2026-10-21T21:44:40Z', 'blocked', NULL, 0, '5779a57e20471f8d47e710eb14f9766d3147098d', 'questions', 'claude-sonnet-5-5', 'e79c99a8-ed06-49af-bc50-0604a8f3de99', NULL, 6, 12, 1137, 269249, 45777, 0.2483518, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1744, 1228, '2026-10-21T21:44:40Z', '2026-10-21T21:44:54Z', 'blocked', NULL, 0, '5779a57e20471f8d47e710eb14f9766d3147098d', 'questions', 'claude-sonnet-5-5', '0c3c7f4a-c6dc-43a5-b5c0-9545e877d318', NULL, 7, 12, 989, 257200, 42451, 0.231158, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1745, 1643, '2026-10-21T21:51:27Z', NULL, 'running', NULL, NULL, 'e1f5585523ff311c5861243d6cc36cd97232c80d', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1746, 1652, '2026-10-21T21:51:27Z', '2026-10-21T21:51:50Z', 'failed', 'exit 0, but the task is still open and not blocked, after 0m23s, 5 turns
+last tool call: Bash: pm show 1652 2>&1 | head -8
+likely cause: the worker ended without `pm task done|drop 1652` or a pending decision; its last message: Check whether task 1652 now shows as pending. If it doesn''t, it will pick up again once task 1644 has added the rows.
+log: /home/ruben/code/trivia/.git/pm-logs/task-1652-run-1746.log', 0, 'e1f5585523ff311c5861243d6cc36cd97232c80d', 'app', 'claude-sonnet-5-5', '250b1e4d-652e-4b47-9a7c-6af99b70169a', NULL, 5, 12, 1021, 153125, 25759, 0.143895, 344501);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
