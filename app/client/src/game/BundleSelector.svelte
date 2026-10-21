@@ -17,7 +17,7 @@
   }
 
   /** A non-region bundle's symbol (decision 367): its `icon`, else `puzzle` (mods), `book` (base), `pin`. */
-  export const bundleIcon = (b: Bundle) => b.icon ?? (b.source === "mod" ? "puzzle" : b.base ? "book" : "pin");
+  export const bundleIcon = (b: Pick<Bundle, "base" | "icon" | "source">) => b.icon ?? (b.source === "mod" ? "puzzle" : b.base ? "book" : "pin");
 
   /** The count a tile shows (decision 267): shipped bundles fixed 5000+ (base) / 2000+, a mod's own count rounded
    * down (hundreds from 100, tens from 10), capped at the fixed string of its kind; the demo's base tile is counted
@@ -51,7 +51,7 @@
   import { buildInfo } from "../lib/build.ts";
   import { playerRegion } from "../lib/desktop.ts";
   import { t } from "../lib/i18n.ts";
-  import Flags from "./Flags.svelte";
+  import BundleMark from "./BundleMark.svelte";
   import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
   import { scrollBox } from "./scrollBox.ts";
@@ -143,7 +143,7 @@
   >
     {#if key}<Prompt action={{ type: "letter", key }} hold />{/if}
     <span class="name-text">
-      {#if b.region}<Flags country={b.country} />{:else}<Icon name={bundleIcon(b)} />{/if}
+      <BundleMark bundle={b} />
       {b.base && buildInfo().demo ? t("bundles.demoName") : b.name}
     </span>
     {#if large}

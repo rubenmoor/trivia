@@ -3,6 +3,8 @@
   // one of the exits in splash.ts and its sound. Over the whole screen, never in the way of play.
   import { untrack } from "svelte";
   import { displayName, questionLocale } from "../../lib/names.svelte.ts";
+  import BundleMark_ from "../BundleMark.svelte";
+  import type { BundleMark } from "../BundleMark.svelte";
   import { sfx } from "../sound.svelte.ts";
   import { SPLASH_EXIT_MS, SPLASH_HOLD_MS, SPLASH_SUB_MAX_MS, reducedMotion } from "../timing.ts";
   import { galleryHold, pickExit, type SplashExit } from "./splash.ts";
@@ -10,12 +12,15 @@
   let {
     category: ownCategory,
     subcategory: ownSub,
+    bundle = null,
     start,
     delay = 0,
     exit: forced,
   }: {
     category: string;
     subcategory: string | null;
+    /** A non-base question's bundle: its mark shows above the name. */
+    bundle?: BundleMark | null;
     /** The question has faded in (or flipped in): the hold begins. */
     start: boolean;
     /** Extra wait after `start` (ms). */
@@ -80,6 +85,7 @@
 {#if phase === "hold" || phase === "exit"}
   <div class="splash" aria-hidden="true" style:--exit="{SPLASH_EXIT_MS}ms">
     <div class="box" class:long>
+      {#if bundle}<span class="mark fade" class:go={phase === "exit"} style:--delay="0ms"><BundleMark_ {bundle} /></span>{/if}
       <p
         class="category {reduced ? 'fade' : picked.category}"
         class:go={phase === "exit"}
@@ -144,6 +150,22 @@
   }
   .go {
     animation-play-state: running;
+  }
+  .mark {
+    font-size: calc(5 * var(--u));
+    line-height: 1;
+    color: white;
+    filter: drop-shadow(0 calc(0.3 * var(--u)) calc(1 * var(--u)) rgb(0 0 0 / 0.7));
+    animation-duration: var(--exit);
+    animation-fill-mode: both;
+    animation-play-state: paused;
+  }
+  .mark :global(svg) {
+    width: 1em;
+    height: 1em;
+  }
+  .mark :global(.flags) {
+    font-size: 0.7em;
   }
   .category {
     font-size: calc(9 * var(--u));

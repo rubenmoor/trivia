@@ -10,8 +10,8 @@
   import { lang, t } from "../lib/i18n.ts";
   import { displayName, questionLocale } from "../lib/names.svelte.ts";
   import { focusControl, pushScope } from "../lib/input.svelte.ts";
-  import { bundleIcon, orderBundles, type Bundle } from "./BundleSelector.svelte";
-  import Flags from "./Flags.svelte";
+  import { orderBundles, type Bundle } from "./BundleSelector.svelte";
+  import BundleMark from "./BundleMark.svelte";
   import Icon from "./Icon.svelte";
   import { jokerIcon } from "./jokers.ts";
   import Prompt from "./Prompt.svelte";
@@ -105,7 +105,7 @@
           {#each sections as sec (sec.id)}
             {#if sec.id}
               <h3 class="head label" {lang} style:--i={sec.first}>
-                {#if sec.bundle?.region}<Flags country={sec.bundle.country} />{:else if sec.bundle}<Icon name={bundleIcon(sec.bundle)} />{/if}
+                {#if sec.bundle}<BundleMark bundle={sec.bundle} />{/if}
                 {displayName("bundle", sec.id)}
               </h3>
             {/if}
