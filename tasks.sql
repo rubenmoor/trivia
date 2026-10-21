@@ -41592,7 +41592,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/project.md`: `[x] Topic bundles: stem, sports, history, movies, geography (<date>, pm milestone 19, plans 155, 184–189; decisions …)` with the real decision ids (`pm decision list --answered --grep topic`)
 - Milestone 19''s text against the ship table and the playtest: five bundles created; a bundle below the bar is "ships in a content patch", not a gap; another gap → follow-up task in the owning plan; `pm decision consequences` where the built result differs from a decision
 - Per-commit checks (AGENTS.md)', '2026-10-21T20:30:28Z', NULL, 1651, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1668, 184, 'merge the trunk and work tree questions', 'merge', 'open', 702, NULL, 'The trunk and work tree questions (this checkout, branch `pm/wt/questions`) conflict: merging one into the other fails. The
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1668, 184, 'merge the trunk and work tree questions', 'merge', 'done', 702, '2026-10-21, authoring/tools/qgen.py: one docstring conflict (bundle new line gained --icon on main; taxonomy line gained theme/plan 184 here); kept both, py_compile ok', 'The trunk and work tree questions (this checkout, branch `pm/wt/questions`) conflict: merging one into the other fails. The
 work tree holds the work of `task 1624: Theme taxonomy: qgen taxonomy for kind theme, prompt draft and apply decision`.
 * `git merge --no-commit main` (the trunk''s HEAD), then resolve every conflict so both sides'' intent survives;
   read the tasks involved (`pm show <id>`) and the commits (`git log -p HEAD...main`) where it isn''t obvious
@@ -41601,7 +41601,17 @@ work tree holds the work of `task 1624: Theme taxonomy: qgen taxonomy for kind t
   `git merge --abort`
 Your note on `pm task done`: what conflicted and how you resolved it.
 
-Conflicting files: authoring/tools/qgen.py', '2026-10-21T20:38:32Z', NULL, NULL, 0, NULL, 'questions');
+Conflicting files: authoring/tools/qgen.py', '2026-10-21T20:38:32Z', '2026-10-21T20:38:47Z', NULL, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1669, 184, 'merge the trunk and work tree questions', 'merge', 'open', 704, NULL, 'The trunk and work tree questions (this checkout, branch `pm/wt/questions`) conflict: merging one into the other fails. The
+work tree holds the work of `task 1624: Theme taxonomy: qgen taxonomy for kind theme, prompt draft and apply decision`.
+* `git merge --no-commit main` (the trunk''s HEAD), then resolve every conflict so both sides'' intent survives;
+  read the tasks involved (`pm show <id>`) and the commits (`git log -p HEAD...main`) where it isn''t obvious
+* run the checks the project has for the files involved
+* stage the result (`git add`); pm commits the merge and merges this work tree into the trunk. Don''t
+  `git merge --abort`
+Your note on `pm task done`: what conflicted and how you resolved it.
+
+Conflicting files: authoring/tools/qgen.py', '2026-10-21T20:38:47Z', NULL, NULL, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -48483,6 +48493,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1711, 1651, '2026-10-21T20:29:45Z', '2026-10-21T20:30:39Z', 'done', NULL, 0, '6b864086c26be1bd63bdfe2bc1602f63610d06de', NULL, 'claude-opus-5-5', '99d6f2d9-305d-4878-8afa-1a3e47aebd71', NULL, 7, 14, 5805, 268336, 40382, 0.49287919999999996, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1712, 1635, '2026-10-21T20:32:49Z', '2026-10-21T20:33:37Z', 'done', NULL, 0, 'c8f431875b4e77684865ae9543d21de38b331b79', 'app', 'claude-sonnet-5-5', '33462cbc-92e2-4d46-94e3-571b722c6ff6', 1708, 7, 14, 2719, 567198, 16588, 0.6850048, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1713, 1636, '2026-10-21T20:33:37Z', NULL, 'running', NULL, NULL, 'c8f431875b4e77684865ae9543d21de38b331b79', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1714, 1668, '2026-10-21T20:38:32Z', NULL, 'running', NULL, NULL, 'f3b783667fc733e333a32868e83c522177e32206', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 344501);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
