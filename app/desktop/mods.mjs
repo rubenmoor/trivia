@@ -122,6 +122,8 @@ export async function readManifest(dir, gameVersion) {
 
 const BUNDLE_BYTES = 256 * 1024;
 const SLUG = /^[a-z0-9][a-z0-9-]{0,63}$/;
+// BUNDLE_ICONS in app/client/src/engine/pool.ts (decision 367).
+export const BUNDLE_ICONS = ["book", "pin", "puzzle", "flask", "ball", "scroll", "reel", "globe", "film", "heart", "mic", "headphones"];
 // countryOk in app/client/src/engine/pool.ts (plan 151).
 const countryOk = (row) => (row.kind === "region" ? typeof row.country === "string" && /^[A-Z]{2}$/.test(row.country) : row.country === undefined);
 
@@ -158,6 +160,10 @@ export async function bundleRows(dir) {
       continue;
     }
     ids.add(row.id);
+    if ("icon" in row && (row.kind === "region" || !BUNDLE_ICONS.includes(row.icon))) {
+      warnings.push({ code: "bad_icon", id: row.id });
+      delete row.icon;
+    }
     rows.push(row);
   }
   return { rows, warnings };

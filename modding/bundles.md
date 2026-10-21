@@ -25,11 +25,12 @@ A question bundle is a set of questions the family can switch on before a game, 
 ## `data/bundles.json`
 - `{ "bundles": [ … ] }`, one row per bundle:
   - `id`: lowercase letters, digits and `-`; the folder name under `data/bundles/`
-  - `kind`: `base` or anything else (e.g. `topic`)
+  - `kind`: `base` or anything else (e.g. `topic`); this is the bundle `kind` (our rows use `base`, `region`, `theme`), not the mod `kind` in `mod.json` (where `theme` means a CSS mod)
     - anything else: an add-on next to our questions; off by default, the players switch it on before the game
     - `base`: a full replacement for our base bundle, a tile that toggles like any other beside ours (the tile shows your bundle's own question count, rounded down: 120 questions → «120», 1234 → «1200+», capped at «5000+» for a base bundle and «2000+» otherwise) (off by default, ours stays the preset); only for a large, all-round set (a few hundred questions over the whole difficulty range); pick add-on when in doubt
     - `region`: an add-on for people with a connection to one country; needs `country`
   - `country`: only with `kind: "region"`, required there: the country's two-letter ISO 3166-1 code in capitals, e.g. `"CO"`; the bundle shows its flag (a globe if the game has no drawing of it); a row without it is skipped
+  - `icon`: optional, not with `kind: "region"`: the tile's symbol, one of `book`, `pin`, `puzzle`, `flask`, `ball`, `scroll`, `reel`, `globe`, `film`, `heart`, `mic`, `headphones`; left out or unknown → the puzzle (`--check-mod` warns on an unknown one)
   - `languages`: question languages, from `es`, `es-ES`, `en`, `de`; a language without its pool file isn't offered
   - `name`, `description`: plain text in your main language, shown in the bundle selector; translations in `names.<locale>.json`
 - In the game your ids become `<mod id>:<id>`, e.g. `template-bundle:solar-system`; your bundle is marked player-made.

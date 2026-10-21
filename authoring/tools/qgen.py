@@ -11,7 +11,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
 
     qgen concepts [--subcategories "Volcanes,Piratas"] [--top-up] [--fill]   # concept lists (D-37)
     qgen bundles                    # sort the pool into bundles (D-39)
-    qgen bundle new <id> --name … --description … --kind region|theme --language <L> --country <CC> --rule … --voice …   # an empty bundle (D-41)
+    qgen bundle new <id> --name … --description … --kind region|theme --language <L> --country <CC> --icon <name> --rule … --voice …   # an empty bundle (D-41)
     qgen taxonomy --bundle <id> [--apply work/taxonomy/<id>/proposal.json]   # a regional or theme bundle's categories (plans 138, 184)
     qgen remap --bundle <id> [--apply work/remap/<id>/proposal.json]   # its questions onto a new taxonomy (plan 138)
     qgen rekey --map work/slugs/proposal.json [--apply]   # category and subcategory keys → English slugs (plan 149); dry run by default
@@ -4925,6 +4925,7 @@ def slug_problems():
 
 
 COUNTRY = r"[A-Z]{2}"  # a regional bundle's country (plan 151); COUNTRY in app/client/src/engine/pool.ts
+BUNDLE_ICONS = ["book", "pin", "puzzle", "flask", "ball", "scroll", "reel", "globe", "film", "heart", "mic", "headphones"]  # BUNDLE_ICONS in app/client/src/engine/pool.ts (decision 367)
 
 
 def bundle_problems(bundles):
@@ -4942,6 +4943,10 @@ def bundle_problems(bundles):
             errors.append(f"{rel}: {bid}: a regional bundle needs country, ISO 3166-1 alpha-2 in capitals (e.g. CO)")
         if b.get("kind") != "region" and "country" in b:
             errors.append(f"{rel}: {bid}: country only on a regional bundle")
+        if "icon" in b and b.get("kind") == "region":
+            errors.append(f"{rel}: {bid}: icon not on a regional bundle (its flag is the icon)")
+        elif "icon" in b and b["icon"] not in BUNDLE_ICONS:
+            errors.append(f"{rel}: {bid}: icon must be one of {', '.join(BUNDLE_ICONS)}")
     listed = {l: {b["id"] for b in bundles if l in (b.get("languages") or [])} for l in translations.LOCALES}
     for l in translations.LOCALES:
         path = layout.POOL_FILE(l, "base")
@@ -4977,7 +4982,10 @@ def cmd_bundle_new(args):
         sys.exit("A regional bundle needs --language (the region's), --voice (its language variety) and --country.")
     if args.country and (args.kind != "region" or not re.fullmatch(COUNTRY, args.country)):
         sys.exit("--country: a regional bundle's ISO 3166-1 alpha-2 code in capitals, e.g. CO.")
+    if args.icon and (args.kind == "region" or args.icon not in BUNDLE_ICONS):
+        sys.exit(f"--icon: not on a regional bundle, else one of {', '.join(BUNDLE_ICONS)}.")
     data["bundles"].append({"id": args.id, "kind": args.kind, **({"country": args.country} if args.country else {}),
+                            **({"icon": args.icon} if args.icon else {}),
                             "languages": [args.language or "es"], "name": args.name,
                             "description": args.description, "rule": args.rule,
                             **({"voice": args.voice} if args.voice else {})})
@@ -5480,6 +5488,7 @@ def main():
     bnew.add_argument("--kind", required=True, choices=["region", "theme"])
     bnew.add_argument("--language", choices=translations.LOCALES,
                       help="region: the locale it drafts in, its only `languages` entry until en joins (decision 110); theme: default es")
+    bnew.add_argument("--icon", help="not region: the tile's symbol, one of BUNDLE_ICONS (default pin)")
     bnew.add_argument("--country", help="region: its ISO 3166-1 alpha-2 code in capitals, e.g. CO; the game shows its flag")
     bnew.add_argument("--rule", required=True, help="one English sentence: when a question belongs in it")
     bnew.add_argument("--voice", help="English: the language variety of its own text in prompts, e.g. \"British English: …\" "

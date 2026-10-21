@@ -168,7 +168,7 @@
   >
     {#if key}<Prompt action={{ type: "letter", key }} hold />{/if}
     <span class="name-text">
-      {#if b.region}<Flags country={b.country} />{:else}<Icon name={b.source === "mod" ? "puzzle" : b.base ? "book" : "pin"} />{/if}
+      {#if b.region}<Flags country={b.country} />{:else}<Icon name={b.icon ?? (b.source === "mod" ? "puzzle" : b.base ? "book" : "pin")} />{/if}
       {b.base && buildInfo().demo ? t("bundles.demoName") : b.name}
     </span>
     {#if large}
