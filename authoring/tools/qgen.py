@@ -5569,7 +5569,7 @@ def main():
     rp.add_argument("--players", type=int, help="with --simulate: players in rr-coop, rr-competitive and timed (default 4)")
     rp.add_argument("--seeds", type=int, default=40, help="with --simulate: runs per cell")
     rp.add_argument("--cost", action="store_true",
-                    help="$ per run and per approved by run kind, projection per launch language and per regional bundle "
+                    help="$ per run and per approved by run kind, projection per launch language and per regional and theme bundle "
                     "(plan 70, CT-3; plan 98)")
     rp.add_argument("--json", action="store_true", help="with --simulate, --cost, --review-time or --played: JSON on stdout")
     rp.add_argument("--played", action="store_true",
