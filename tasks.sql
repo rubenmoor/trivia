@@ -41659,6 +41659,15 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/20-pipeline-efficiency.md` PE-7 note and any other "retired" mention (`rg -i "in common|en común|retired style"`): follow the new rule
 - Record the rule: `pm decision record` as the developer''s 2026-10-21 rule, citing this task
 - Checks: `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-10-21T22:05:48Z', '2026-10-21T22:07:00Z', NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1673, 84, 'Apply the translatability checks of the 12 flagged sources', 'work', 'open', 600, NULL, 'The developer checked every `base` source with `translatable: false` (except q-0110, settled by `decision 366: Demo list: 6 listed questions can''t be translated cleanly: replace them, fix their sources, or warn?`): decisions 377–388, one per source (q-0711, q-0905, q-0958, q-0975, q-1163, q-1248, q-1252, q-1498, q-1692, q-1998, q-2091, q-2196). Apply each answer:
+
+- **translatable**: drop `translatable: false`; the next `tr-*` runs pick it up (no run here)
+- **Spanish only (es, es-ES)**: today `translatable: false` also blocks es-ES (`qgen validate` rejects es-ES translations of such sources). If any answer picks this, add the smallest way to say "Spanish varieties only" (e.g. a value or field read by `qgen batch --translate`, `qgen validate`, the demo picker); `rg translatable` for every reader; `pm decision record` the format; keep existing approved es-ES translations
+- **es only**: `translatable: false` stays; reject any existing es-ES translation
+- **move to a regional bundle**: move the source to that bundle with a fitting subcategory of its taxonomy (`app/data/bundles/<id>/categories.json`); `concept`, `axes` kept; translations of it dropped
+- **retire**: as `qgen` retires a question elsewhere (status, not deletion)
+- Afterwards: `qgen export`, `qgen validate`, `qgen demo --check` pass; if a moved or retired id is in `authoring/data/demo.json`, raise a decision with replacement candidates
+- Checks: `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-10-21T22:08:13Z', NULL, NULL, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
