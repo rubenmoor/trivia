@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "bb190a80",
+  "hash": "b46f8e74",
   "questions": [
     {
       "id": "q-0016",
@@ -667,7 +667,7 @@
         "Perdió el movimiento de una mano en una batalla.",
         "Lo llaman 'el Manco de Lepanto'."
       ],
-      "fun_fact": "El Día del Idioma, el 23 de abril, recuerda la muerte de Cervantes.",
+      "fun_fact": "El Día del Idioma, el 23 de abril, recuerda a Cervantes: murió el 22 y lo enterraron el 23.",
       "media": {
         "type": "image",
         "role": "illustrative",
@@ -3451,7 +3451,7 @@
         "Zoroastro"
       ],
       "hints": [
-        "Es un maestro espiritual nacido hace unos 2.500 años en el norte de la India.",
+        "Es un maestro espiritual nacido hace unos 2500 años en lo que hoy es Nepal.",
         "Sus seguidores rezan con monjes de túnicas naranjas.",
         "Muchas de sus estatuas lo muestran sentado y meditando con una sonrisa."
       ],

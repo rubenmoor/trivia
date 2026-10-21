@@ -643,11 +643,11 @@
       ],
       "hints": [
         "Er war Spanier.",
-        "Nach einer Schlacht konnte er eine Hand nicht mehr bewegen.",
-        "Man nennt ihn „den Einarmigen von Lepanto“."
+        "In einer Schlacht verlor er die Beweglichkeit einer Hand.",
+        "Man nennt ihn „den Einhändigen von Lepanto“."
       ],
-      "description": "Ein Ritter kämpfte gegen Windmühlen – und verlor.",
-      "fun_fact": "In vielen spanischsprachigen Ländern ist der 23. April der „Tag der Sprache“, zur Erinnerung an den Tod von Cervantes.",
+      "description": "Ein Ritter kämpfte gegen Windmühlen, und die Windmühlen gewannen.",
+      "fun_fact": "Der Welttag des Buches am 23. April erinnert auch an Cervantes: Er starb am 22. April 1616 und wurde am 23. beerdigt.",
       "difficulty": 9,
       "status": "approved",
       "batch": "tr-de-2",
@@ -660,7 +660,7 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "source_hash": "d82c965632a5"
+      "source_hash": "8ffa5282cce0"
     },
     {
       "id": "q-0124",
@@ -4916,7 +4916,7 @@
     },
     {
       "id": "q-1412",
-      "question": "Ich bin eine massive Kuppel, niemand betritt mich, und Pilger umrunden mich. Die ersten bewahrten die Asche eines Lehrers auf. Wessen?",
+      "question": "Ich bin eine massive Kuppel, niemand kann mich betreten, und Pilger gehen um mich herum. Die ersten bewahrten die Asche eines Lehrers auf. Wessen Asche?",
       "answer": "Buddha",
       "wrong_answers": [
         "Konfuzius",
@@ -4924,27 +4924,25 @@
         "Zarathustra"
       ],
       "hints": [
-        "Ein spiritueller Lehrer, geboren vor etwa 2500 Jahren im Norden Indiens.",
-        "Seine Anhänger beten gemeinsam mit Mönchen in orangefarbenen Gewändern.",
-        "Viele seiner Statuen zeigen ihn im Sitzen, meditierend und lächelnd."
+        "Er ist ein spiritueller Lehrer, der vor etwa 2500 Jahren im heutigen Nepal geboren wurde.",
+        "Seine Anhänger beten mit Mönchen in orangefarbenen Gewändern.",
+        "Viele seiner Statuen zeigen ihn sitzend und lächelnd beim Meditieren."
       ],
-      "description": "Eine Kuppel, so verschlossen, dass selbst der beste Schlüsseldienst draußen bleibt.",
+      "description": "Eine Kuppel, so dicht verschlossen, dass selbst der beste Schlüsseldienst nicht hineinkommt.",
       "fun_fact": "Der Große Stupa von Sanchi in Indien wurde im 3. Jahrhundert v. Chr. begonnen und gehört zu den ältesten Steinbauten des Landes.",
       "difficulty": 10,
-      "status": "needs_work",
+      "status": "approved",
       "batch": "tr-de-2",
       "review": {
-        "decision": "needs_work",
-        "feedback": "source: Hint 1 says the Buddha was born \"in northern India\", but he was born in Lumbini, in present-day Nepal (the fact check marks it wrong). The source hint should say something like \"born about 2500 years ago in today's Nepal, taught in northern India\", and the translation should follow. Also minor: \"Die ersten bewahrten…\" is unclear in German after \"Ich bin eine massive Kuppel\"; \"Die ersten von uns bewahrten…\" reads better. Fact check: wrong. Answer (Buddha) and distractors are right, and the Sanchi fun fact is accurate (begun under Ashoka, 3rd c. BCE). Hint 1 is inaccurate: the Buddha was born in Lumbini, which is in present-day Nepal, not northern India. He taught and died in northern India.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-21",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "source_hash": "b6fbfefcbbc3"
+      "source_hash": "e70093661ca0"
     },
     {
       "id": "q-1422",

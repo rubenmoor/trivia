@@ -990,25 +990,23 @@
       "hints": [
         "He was Spanish.",
         "He lost the use of one hand in a battle.",
-        "He is known as “the One-Handed Man of Lepanto”."
+        "He is nicknamed “the One-Handed Man of Lepanto”."
       ],
-      "description": "A knight picked a fight with some windmills, and the windmills won.",
-      "fun_fact": "Spanish Language Day, on April 23, marks the date Cervantes died.",
-      "difficulty": 7,
-      "status": "needs_work",
+      "description": "A knight once picked a fight with some windmills, and lost.",
+      "fun_fact": "Spanish Language Day on April 23 honors Cervantes: he died on the 22nd and was buried on the 23rd.",
+      "difficulty": 8,
+      "status": "approved",
       "batch": "tr-en-2",
       "review": {
-        "decision": "needs_work",
-        "feedback": "source: The fun fact says April 23 is the date Cervantes died. He died on April 22, 1616, and was buried on April 23; the day honors only the traditional date of his death. The Spanish source has the same error, so it should be fixed there first, for example: “Spanish Language Day, on April 23, honors the traditional date of Cervantes's death; he actually died the day before.” Fact check: wrong. The answer, wrong answers and hints are fine. The fun fact is slightly inaccurate. Cervantes died on April 22, 1616, and was buried on April 23. Spanish Language Day (April 23) is tied to his death only by tradition. I did not run a web search, so this comes from my own knowledge.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-21",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "source_hash": "d82c965632a5"
+      "source_hash": "8ffa5282cce0"
     },
     {
       "id": "q-0121",
@@ -7130,7 +7128,7 @@
     },
     {
       "id": "q-1412",
-      "question": "I'm a solid dome: nobody goes inside, and pilgrims walk around me. The first of my kind held a teacher's ashes. Whose?",
+      "question": "I'm a solid dome: no one can go inside me, and pilgrims walk around me. The first ones held the ashes of a great teacher. Whose?",
       "answer": "Buddha",
       "wrong_answers": [
         "Confucius",
@@ -7138,27 +7136,25 @@
         "Zoroaster"
       ],
       "hints": [
-        "He was a spiritual teacher born about 2,500 years ago in northern India.",
+        "He was a spiritual teacher born about 2,500 years ago in what is now Nepal.",
         "His followers pray alongside monks in orange robes.",
         "Many statues show him sitting cross-legged in meditation, with a calm smile."
       ],
-      "description": "A dome so tightly sealed that even the best locksmith can't get in.",
+      "description": "A dome so tightly sealed that even the world's best locksmith would give up.",
       "fun_fact": "The Great Stupa at Sanchi, in India, was begun in the 3rd century BC and is one of the oldest stone buildings in the country.",
       "difficulty": 9,
-      "status": "needs_work",
+      "status": "approved",
       "batch": "tr-en-2",
       "review": {
-        "decision": "needs_work",
-        "feedback": "source: Hint 1 says Buddha was born in northern India, but he was born in Lumbini, which is in present-day Nepal. The Spanish source has the same error, so it has to be fixed there first, e.g. \"He was a spiritual teacher born about 2,500 years ago in what is now Nepal, who taught in northern India.\" The translation itself is faithful and reads naturally. Fact check: wrong. The answer (Buddha) is right and the wrong answers are wrong. The Sanchi fun fact is true: Ashoka's 3rd-century BC Great Stupa is among India's oldest stone structures. Hint 1 is inaccurate: Buddha was born in Lumbini, which is in present-day Nepal, not India. He taught and died in northern India. This check is from memory; I ran no searches.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-21",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "source_hash": "b6fbfefcbbc3"
+      "source_hash": "e70093661ca0"
     },
     {
       "id": "q-1422",
