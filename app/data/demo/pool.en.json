@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "62030320",
+  "hash": "f024d84b",
   "questions": [
     {
       "id": "q-0016",
@@ -2485,6 +2485,40 @@
       "background": null
     },
     {
+      "id": "q-0872",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "video-game-characters",
+      "bundle": "base",
+      "description": "A tournament where nobody showed up to play checkers.",
+      "question": "At an arcade machine, you can pick Ryu, Chun-Li or Blanka to fight. What do these three characters have in common?",
+      "answer": "They're from Street Fighter",
+      "wrong_answers": [
+        "They're from Mortal Kombat",
+        "They're from Tekken",
+        "They're from Final Fantasy"
+      ],
+      "hints": [
+        "All three are characters from a very famous fighting game.",
+        "That game started out in Capcom's arcade machines.",
+        "Its name says the fights happen out on the road, not in a ring."
+      ],
+      "fun_fact": "In the game's story, Blanka, the green fighter who shoots out electricity, comes from Brazil.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Mazinger_Z_arcade_cabinet_2026-08-14.jpg/3840px-Mazinger_Z_arcade_cabinet_2026-08-14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMazinger_Z_arcade_cabinet_2026-08-14.jpg",
+        "credit": "GuiltyGearFan37 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "GuiltyGearFan37",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:GuiltyGearFan37&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-0885",
       "status": "approved",
       "difficulty": 3,
@@ -2583,6 +2617,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Ingo Mehling",
         "author_url": "https://commons.wikimedia.org/wiki/User:Imehling"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1032",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "pirates",
+      "bundle": "base",
+      "description": "Pirates with no parrot and no wooden leg, but with very fast boats.",
+      "question": "What links the film “Captain Phillips”, speedboats attacking cargo ships, and warships guarding oil tankers in the Indian Ocean?",
+      "answer": "Somali pirates",
+      "wrong_answers": [
+        "Barbary corsairs",
+        "Strait of Malacca pirates",
+        "Vikings"
+      ],
+      "hints": [
+        "It's modern piracy, from this century.",
+        "It happens near the entrance to the Red Sea.",
+        "These pirates come from the country whose capital is Mogadishu."
+      ],
+      "fun_fact": "“Captain Phillips” is based on the real hijacking of the cargo ship Maersk Alabama in 2009.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Container_ship_Reecon_Whale_on_Black_Sea_near_Constan%C8%9Ba_Romania.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AContainer_ship_Reecon_Whale_on_Black_Sea_near_Constan%C8%9Ba_Romania.jpg",
+        "credit": "HopsonRoad · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "HopsonRoad",
+        "author_url": "https://commons.wikimedia.org/wiki/User:HopsonRoad"
       },
       "background": null
     },

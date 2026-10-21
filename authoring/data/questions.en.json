@@ -1945,18 +1945,26 @@
       "description": "One runs, one swims and one is half robot: the strangest group chat in the universe.",
       "fun_fact": "A movie about this team came out in 2017, and in 2021 the same director released another version that ran about 4 hours!",
       "difficulty": 6,
-      "status": "needs_work",
+      "status": "approved",
       "batch": "tr-en-2",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question asks “what do they have in common?” about three given characters, and that question style is retired (reason 7). The translation itself is faithful and reads naturally, but the format can't stay.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question asks “what do they have in common?” about three given characters, and that question style is retired (reason 7). The translation itself is faithful and reads naturally, but the format can't stay.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "c8ccd144502e"
     },
@@ -2811,18 +2819,26 @@
       "description": "Three fancy names for something the rest of us call with just one word.",
       "fun_fact": "Centuries ago, carmine, a very fine red, was made from tiny insects called cochineal that live on cactus plants in the Americas.",
       "difficulty": 6,
-      "status": "needs_work",
+      "status": "approved",
       "batch": "tr-en-2",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question asks what three given things have in common (“what do they have in common?”). That format is retired (reason 7), in the translation just as in the source, so this question should be dropped or recast as a new question.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question asks what three given things have in common (“what do they have in common?”). That format is retired (reason 7), in the translation just as in the source, so this question should be dropped or recast as a new question.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "a7c948bc0b1d"
     },
@@ -4733,18 +4749,26 @@
       "description": "A tournament where nobody showed up to play checkers.",
       "fun_fact": "In the game's story, Blanka, the green fighter who shoots out electricity, comes from Brazil.",
       "difficulty": 7,
-      "status": "needs_work",
+      "status": "approved",
       "batch": "tr-en-2",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question uses the retired \"What do these three characters have in common?\" style, which the source also uses. Apart from that, the translation is faithful and natural. The rewritten hint 3 works, and the kept image of a Mazinger Z arcade cabinet fits the question without giving the answer away.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question uses the retired \"What do these three characters have in common?\" style, which the source also uses. Apart from that, the translation is faithful and natural. The rewritten hint 3 works, and the kept image of a Mazinger Z arcade cabinet fits the question without giving the answer away.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "2ebe722bb8db"
     },
@@ -5089,18 +5113,26 @@
       "description": "A day out in the country with three different dips and not a single wave.",
       "fun_fact": "Almost all the water on Earth is salty: fresh water is only about 3%, and most of it is frozen.",
       "difficulty": 3,
-      "status": "needs_work",
+      "status": "approved",
       "batch": "tr-en-2",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question asks what three given things have in common (“What do those three waters have in common?”). That style is retired (reason 7), and it applies to the source too. The translation itself is faithful, and the new hint 3 (fresh bread) works well in English.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question asks what three given things have in common (“What do those three waters have in common?”). That style is retired (reason 7), and it applies to the source too. The translation itself is faithful, and the new hint 3 (fresh bread) works well in English.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "4819eb371cca"
     },
@@ -5301,18 +5333,26 @@
       "description": "Pirates with no parrot and no wooden leg, but with very fast boats.",
       "fun_fact": "“Captain Phillips” is based on the real hijacking of the cargo ship Maersk Alabama in 2009.",
       "difficulty": 11,
-      "status": "needs_work",
+      "status": "approved",
       "batch": "tr-en-2",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question asks what several given things have in common (\"What links the film “Captain Phillips”, speedboats… and warships…?\"). That is the retired \"what do they have in common\" style. The source uses the same style (\"¿Qué tienen en común…?\"), so the source has the same problem.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question asks what several given things have in common (\"What links the film “Captain Phillips”, speedboats… and warships…?\"). That is the retired \"what do they have in common\" style. The source uses the same style (\"¿Qué tienen en común…?\"), so the source has the same problem.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "27ad16834d24"
     },

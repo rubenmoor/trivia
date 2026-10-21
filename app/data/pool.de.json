@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "09dc1fe9",
+  "hash": "12113a75",
   "questions": [
     {
       "id": "q-0016",
@@ -3607,6 +3607,40 @@
       "background": null
     },
     {
+      "id": "q-0872",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "video-game-characters",
+      "bundle": "base",
+      "description": "Ein Turnier, bei dem garantiert niemand zum Mensch-ärgere-dich-nicht kommt.",
+      "question": "Am Spielautomaten kannst du zum Kämpfen Ryu, Chun-Li oder Blanka wählen. Was haben diese drei Figuren gemeinsam?",
+      "answer": "Sie sind aus Street Fighter",
+      "wrong_answers": [
+        "Sie sind aus Mortal Kombat",
+        "Sie sind aus Tekken",
+        "Sie sind aus Final Fantasy"
+      ],
+      "hints": [
+        "Alle drei sind Figuren aus einem sehr berühmten Kampfspiel.",
+        "Das Spiel entstand an den Spielautomaten von Capcom.",
+        "Auf Deutsch hieße es ungefähr „Straßenkämpfer“."
+      ],
+      "fun_fact": "Laut der Geschichte des Spiels stammt Blanka, der grüne Kämpfer, der Strom verschießt, aus Brasilien.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Mazinger_Z_arcade_cabinet_2026-08-14.jpg/3840px-Mazinger_Z_arcade_cabinet_2026-08-14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMazinger_Z_arcade_cabinet_2026-08-14.jpg",
+        "credit": "GuiltyGearFan37 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "GuiltyGearFan37",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:GuiltyGearFan37&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-0873",
       "status": "approved",
       "difficulty": 4,
@@ -3777,6 +3811,40 @@
       "background": null
     },
     {
+      "id": "q-0951",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "cats",
+      "bundle": "base",
+      "description": "Eine Katze, eine Eule und ein Krokodil kommen zum Tierarzt … und nein, das ist nicht der Anfang eines Witzes.",
+      "question": "Was haben eine Katze, eine Eule und ein Krokodil gemeinsam?",
+      "answer": "Tiere mit drittem Augenlid",
+      "wrong_answers": [
+        "Tiere, die schwarz-weiß sehen",
+        "Tiere mit runden Pupillen",
+        "Tiere, die nicht blinzeln können"
+      ],
+      "hints": [
+        "Es geht darum, wie sie ihre Augen schützen.",
+        "Es ist ein dünnes Häutchen, das seitlich über das Auge gleitet.",
+        "Zusätzlich zu den zwei üblichen haben sie noch eins mehr."
+      ],
+      "fun_fact": "Manchmal sieht man das dritte Augenlid einer Katze, wenn sie im Halbschlaf oder krank ist: ein weißliches Häutchen im Augenwinkel.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/At_the_Vet_-_Flickr_-_darko149.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAt_the_Vet_-_Flickr_-_darko149.jpg",
+        "credit": "Darko B · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Darko B",
+        "author_url": "https://www.flickr.com/people/203346469@N03"
+      },
+      "background": null
+    },
+    {
       "id": "q-0968",
       "status": "approved",
       "difficulty": 10,
@@ -3909,6 +3977,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Codex",
         "author_url": "https://commons.wikimedia.org/wiki/User:Codex"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1032",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "pirates",
+      "bundle": "base",
+      "description": "Piraten ohne Papagei und Holzbein, dafür mit Schnellbooten.",
+      "question": "Was haben „Captain Phillips“, Schnellboote, die Frachter überfallen, und Kriegsschiffe, die Tanker im Indischen Ozean begleiten, gemeinsam?",
+      "answer": "Somalische Piraten",
+      "wrong_answers": [
+        "Barbaresken-Korsaren",
+        "Piraten der Malakkastraße",
+        "Wikinger"
+      ],
+      "hints": [
+        "Es geht um moderne Piraterie aus diesem Jahrhundert.",
+        "Es passiert in der Nähe des Eingangs zum Roten Meer.",
+        "Die Hauptstadt des Landes dieser Piraten ist Mogadischu."
+      ],
+      "fun_fact": "„Captain Phillips“ beruht auf der echten Entführung des Frachters Maersk Alabama im Jahr 2009.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Container_ship_Reecon_Whale_on_Black_Sea_near_Constan%C8%9Ba_Romania.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AContainer_ship_Reecon_Whale_on_Black_Sea_near_Constan%C8%9Ba_Romania.jpg",
+        "credit": "HopsonRoad · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "HopsonRoad",
+        "author_url": "https://commons.wikimedia.org/wiki/User:HopsonRoad"
       },
       "background": null
     },
@@ -4113,6 +4215,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "RetroEditor",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:RetroEditor&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1090",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "trains",
+      "bundle": "base",
+      "description": "Drei Züge, die sich kein bisschen ähneln, aber dasselbe Geheimnis haben.",
+      "question": "Die Metro von Medellín, Japans Hochgeschwindigkeitszug und die Spielzeugbahn, die um den Weihnachtsbaum fährt: Was haben sie gemeinsam?",
+      "answer": "Es sind Elektrozüge",
+      "wrong_answers": [
+        "Es sind Dampfzüge",
+        "Es sind Güterzüge",
+        "Es sind Dieselzüge"
+      ],
+      "hints": [
+        "Keiner von ihnen pustet Rauch aus einem Schornstein.",
+        "Denk daran, was die Spielzeugbahn antreibt.",
+        "Sie brauchen dasselbe wie eine Glühbirne zum Leuchten."
+      ],
+      "fun_fact": "Elektrische Spielzeugeisenbahnen wurden schon vor über 100 Jahren als Weihnachtsgeschenk berühmt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Christmas_Tree_and_Presents.jpg/3840px-Christmas_Tree_and_Presents.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChristmas_Tree_and_Presents.jpg",
+        "credit": "Alhill42 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Alhill42",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Alhill42"
       },
       "background": null
     },

@@ -3023,6 +3023,7 @@ def cmd_review(args):
             "can_search_again": False,
             "can_fix": args.round == 1,
             "only_shortened": False,
+            "existing": True,
         }
 
     def work(item):
@@ -3041,6 +3042,7 @@ def cmd_review(args):
             "can_search_again": args.round == 1 and "media" not in kept,
             "can_fix": args.round == 1 and not rework,
             "only_shortened": mode in SCANS,  # already in the game, only reworded
+            "existing": rework,
         }
         user = "## Question to review\n" + json.dumps(payload, ensure_ascii=False)
         system = prompt(*names, locale=locale or translations.source_locale(q), bundle=run_bundle(d),

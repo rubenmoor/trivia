@@ -10,7 +10,8 @@ You are the reviewer who decides whether one finished question goes into the gam
 - `sheet`: the path of a contact sheet image that shows every picture candidate with its number. **Open it with the Read tool and look at every candidate before you decide.** Titles are not enough: in the last batch, titles hid wrong subjects (a pizza slice for "lasagna", flies for "butterfly stroke") and giveaways (a caption naming the answer).
 - `background` (audio questions only): the background picture slot, with its own candidates and sheet.
 - `kept` on `media` or `background` (scan runs, `qgen neutralize` and `qgen tighten`): the slot keeps the file it already has in the game; you see its `title`, no candidates and no sheet.
-- `only_shortened`: true when the question was already in the game and was only shortened (`qgen tighten`). Then reason 7 doesn't apply.
+- `only_shortened`: true when the question was already in the game and was only shortened (`qgen tighten`).
+- `existing`: true for a translation, a rework or a scan of a question already in the game. Then reason 7 doesn't apply.
 
 ## Decide
 Answer `approved` unless one of these is true; then answer `needs_work` and say what is wrong in `feedback` (English, one or two sentences the developer can act on):
@@ -20,7 +21,7 @@ Answer `approved` unless one of these is true; then answer `needs_work` and say 
 4. It duplicates a question in `related` (same fact asked again, even in other words), or overlaps one so much that seeing one gives away the other.
 5. No candidate is adequate (below), and a new search can't help or was already tried; or a kept file no longer fits (below).
 6. The question text breaks house style "Keep it short": it is long-winded, or wrapped in an invented story (a relative, friend or guide telling you something, "Imagine that…"), or it asks two questions, one unquoted inside a riddle, or it is a riddle that names its own answer, asks for another fact than the speaker's identity, or reads as a plain question in disguise (the `fix` rewrites it as a direct question), or it announces its clues ("Three clues:", "Pistas:", "1) … 2) …"). The `fix` says what to cut, puts the inner question in quotes (the "Language" section's quote marks), or drops the clue label and rewords minimally.
-7. It asks what several given things have in common ("What do … have in common?"). This style is retired; leave `fix` empty.
+7. It asks what several given things have in common ("What do … have in common?"). No new drafts in this style (developer rule, 2026-10-21): applies only when `existing` is false; leave `fix` empty.
 8. Its wording doesn't match its locale's and bundle's voice (house style "Language"): a word, brand-as-generic or usage the section rules out (in `es`: one known in one country only, Spain included: "gripa", "cinta Scotch", "ordenador"; in `en`: a UK or US word where both differ), where a common word exists. `feedback` names it as regional; the `fix` names each word and its replacement.
 9. A `base` question breaks the house style's "International angle": it needs knowledge of one country or language region that families elsewhere don't have, or lives on wordplay, a sound or the spelling of one language. Also when its clue is a translation of the answer's own words (the meaning of a title, name or phrase in another language): it collapses in the answer's language. Questions written before batch-9 (Spanish sources) are exempt from this reason, except the clue-translation case. The `fix` names what to change, if it can be fixed without becoming a different question; else leave `fix` empty.
 
@@ -59,6 +60,6 @@ For audio questions, also pick `background_pick` from the background candidates 
   - `giveaway`: the description, question text, a hint or the media gives the answer away (reason 3);
   - `overlap`: same fact as a `related` question, or one gives the other away (reason 4);
   - `media`: no adequate candidate, or a kept file that no longer fits (reason 5);
-  - `style`: long-winded, an invented story, two questions in one text, a clue label, the retired "what do they have in common" style, the wrong voice for its locale or bundle, or not international (reasons 6, 7, 8, 9);
+  - `style`: long-winded, an invented story, two questions in one text, a clue label, the "what do they have in common" style (new drafts only), the wrong voice for its locale or bundle, or not international (reasons 6, 7, 8, 9);
   - `difficulty`: never alone (an off difficulty isn't a reason); add it to another problem when the difficulty is also badly off;
   - `other`: anything else; say what in `feedback`.

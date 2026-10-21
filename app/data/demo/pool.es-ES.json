@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "00205320",
+  "hash": "bf863522",
   "questions": [
     {
       "id": "q-0016",
@@ -2519,6 +2519,40 @@
       "background": null
     },
     {
+      "id": "q-0872",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "video-game-characters",
+      "bundle": "base",
+      "description": "Un torneo donde nadie viene a jugar al parchís.",
+      "question": "Estás en una máquina recreativa y para luchar puedes elegir a Ryu, a Chun-Li o a Blanka. ¿Qué tienen en común estos tres personajes?",
+      "answer": "Son de Street Fighter",
+      "wrong_answers": [
+        "Son de Mortal Kombat",
+        "Son de Tekken",
+        "Son de Final Fantasy"
+      ],
+      "hints": [
+        "Los tres son personajes de un juego de lucha muy famoso.",
+        "Ese juego nació en las máquinas recreativas de Capcom.",
+        "Su nombre en español sería algo como «Luchador callejero»."
+      ],
+      "fun_fact": "Blanka, el luchador verde que lanza electricidad, viene de Brasil según la historia del juego.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Mazinger_Z_arcade_cabinet_2026-08-14.jpg/3840px-Mazinger_Z_arcade_cabinet_2026-08-14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMazinger_Z_arcade_cabinet_2026-08-14.jpg",
+        "credit": "GuiltyGearFan37 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "GuiltyGearFan37",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:GuiltyGearFan37&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-0885",
       "status": "approved",
       "difficulty": 3,
@@ -2617,6 +2651,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Ingo Mehling",
         "author_url": "https://commons.wikimedia.org/wiki/User:Imehling"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1032",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "pirates",
+      "bundle": "base",
+      "description": "Piratas sin loro ni pata de palo, pero con lanchas rápidas.",
+      "question": "¿Qué tienen en común «Capitán Phillips», las lanchas rápidas que asaltan cargueros y los buques de guerra que escoltan petroleros en el océano Índico?",
+      "answer": "Los piratas somalíes",
+      "wrong_answers": [
+        "Los corsarios berberiscos",
+        "Los piratas del estrecho de Malaca",
+        "Los vikingos"
+      ],
+      "hints": [
+        "Es piratería moderna, de este siglo.",
+        "Pasa cerca de la entrada al mar Rojo.",
+        "El país de estos piratas tiene su capital en Mogadiscio."
+      ],
+      "fun_fact": "«Capitán Phillips» está basada en el secuestro real del carguero Maersk Alabama en 2009.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Container_ship_Reecon_Whale_on_Black_Sea_near_Constan%C8%9Ba_Romania.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AContainer_ship_Reecon_Whale_on_Black_Sea_near_Constan%C8%9Ba_Romania.jpg",
+        "credit": "HopsonRoad · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "HopsonRoad",
+        "author_url": "https://commons.wikimedia.org/wiki/User:HopsonRoad"
       },
       "background": null
     },

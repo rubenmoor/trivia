@@ -3395,18 +3395,26 @@
       "description": "Ein Turnier, bei dem garantiert niemand zum Mensch-ärgere-dich-nicht kommt.",
       "fun_fact": "Laut der Geschichte des Spiels stammt Blanka, der grüne Kämpfer, der Strom verschießt, aus Brasilien.",
       "difficulty": 7,
-      "status": "needs_work",
+      "status": "approved",
       "batch": "tr-de-2",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question asks what three given characters have in common (\"Was haben diese drei Figuren gemeinsam?\"). That style is retired, so this translation shouldn't be played in this form. The same problem is in the Spanish source.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question asks what three given characters have in common (\"Was haben diese drei Figuren gemeinsam?\"). That style is retired, so this translation shouldn't be played in this form. The same problem is in the Spanish source.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "2ebe722bb8db"
     },
@@ -3585,18 +3593,26 @@
       "description": "Eine Katze, eine Eule und ein Krokodil kommen zum Tierarzt … und nein, das ist nicht der Anfang eines Witzes.",
       "fun_fact": "Manchmal sieht man das dritte Augenlid einer Katze, wenn sie im Halbschlaf oder krank ist: ein weißliches Häutchen im Augenwinkel.",
       "difficulty": 10,
-      "status": "needs_work",
+      "status": "approved",
       "batch": "tr-de-2",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question asks what several animals have in common (\"Was haben … gemeinsam?\"), which is a retired question style (reason 7). The translation itself is accurate and reads naturally.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question asks what several animals have in common (\"Was haben … gemeinsam?\"), which is a retired question style (reason 7). The translation itself is accurate and reads naturally.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "c2f08a68e2f3"
     },
@@ -3745,18 +3761,26 @@
       "description": "Piraten ohne Papagei und Holzbein, dafür mit Schnellbooten.",
       "fun_fact": "„Captain Phillips“ beruht auf der echten Entführung des Frachters Maersk Alabama im Jahr 2009.",
       "difficulty": 11,
-      "status": "needs_work",
+      "status": "approved",
       "batch": "tr-de-2",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question uses the retired \"What do … have in common?\" format (\"Was haben … gemeinsam?\"), and it is also long at about 140 characters. The format comes from the source, so the source question needs to be reworked, not just this translation.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question uses the retired \"What do … have in common?\" format (\"Was haben … gemeinsam?\"), and it is also long at about 140 characters. The format comes from the source, so the source question needs to be reworked, not just this translation.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "27ad16834d24"
     },
@@ -3965,18 +3989,26 @@
       "description": "Drei Züge, die sich kein bisschen ähneln, aber dasselbe Geheimnis haben.",
       "fun_fact": "Elektrische Spielzeugeisenbahnen wurden schon vor über 100 Jahren als Weihnachtsgeschenk berühmt.",
       "difficulty": 4,
-      "status": "needs_work",
+      "status": "approved",
       "batch": "tr-de-2",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question asks what three given things have in common (\"Was haben sie gemeinsam?\"). That style is retired, so the question should be dropped or replaced instead of translated. The German translation itself is accurate.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question asks what three given things have in common (\"Was haben sie gemeinsam?\"). That style is retired, so the question should be dropped or replaced instead of translated. The German translation itself is accurate.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "ed6cf5ce7fb1"
     },

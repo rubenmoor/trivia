@@ -3141,18 +3141,26 @@
       "description": "Un torneo donde nadie viene a jugar al parchís.",
       "fun_fact": "Blanka, el luchador verde que lanza electricidad, viene de Brasil según la historia del juego.",
       "difficulty": 8,
-      "status": "needs_work",
+      "status": "approved",
       "batch": "tr-es-ES-2",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question uses the retired 'What do these three have in common?' format («¿Qué tienen en común estos tres personajes?»). It needs to be replaced or rewritten as a different question, for example asking which game a single named character comes from (without duplicating q-1104).",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question uses the retired 'What do these three have in common?' format («¿Qué tienen en común estos tres personajes?»). It needs to be replaced or rewritten as a different question, for example asking which game a single named character comes from (without duplicating q-1104).",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "2ebe722bb8db"
     },
@@ -3503,18 +3511,26 @@
       "description": "Piratas sin loro ni pata de palo, pero con lanchas rápidas.",
       "fun_fact": "«Capitán Phillips» está basada en el secuestro real del carguero Maersk Alabama en 2009.",
       "difficulty": 11,
-      "status": "needs_work",
+      "status": "approved",
       "batch": "tr-es-ES-2",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question uses the retired format \"¿Qué tienen en común…?\", asking what several things share. This style is no longer accepted, so the question has to be rewritten as a different kind of question, for example a direct question about the film or the region.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question uses the retired format \"¿Qué tienen en común…?\", asking what several things share. This style is no longer accepted, so the question has to be rewritten as a different kind of question, for example a direct question about the film or the region.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "27ad16834d24"
     },
