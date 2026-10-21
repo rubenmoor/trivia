@@ -40979,7 +40979,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-21T20:22:48Z', '2026-10-21T20:23:46Z', 1615, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1623, 185, 'create tasks for plan 185: Topic bundles in the game', 'split', 'done', 1000, '2026-10-21, tasks 1634-1641 for plan 185 (1640 pending on decision 368); no files', 'Split plan 185 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-21T20:23:08Z', '2026-10-21T20:25:15Z', 1618, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1624, 184, 'Theme taxonomy: qgen taxonomy for kind theme, prompt draft and apply decision', 'work', 'open', NULL, NULL, 'Part 1 of `plan 184: Pipeline for topic bundles`, its "Tasks" item 1. Read the plan''s "Builds on" and "Code today" first.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1624, 184, 'Theme taxonomy: qgen taxonomy for kind theme, prompt draft and apply decision', 'work', 'done', NULL, '2026-10-21, authoring/tools/qgen.py (taxonomy for kind theme, base-related.json on apply, validate check, guard until decision 370), authoring/tools/layout.py, authoring/tools/prompts/taxonomy-theme.md (draft); decision 370 raised, tasks 1625 and 1630 pending on it; scratch check: claude 2 calls (opus 1 $0.66, sonnet 1 $0.05), $0.71; npm run check: only knip''s electron-builder complaint, same at HEAD; qgen validate: only pool-data errors (q-0110, q-1692, demo list), same at HEAD', 'Part 1 of `plan 184: Pipeline for topic bundles`, its "Tasks" item 1. Read the plan''s "Builds on" and "Code today" first.
 
 - `qgen taxonomy --bundle <id>` (`cmd_taxonomy`, `apply_taxonomy` in `qgen.py`) accepts `kind: theme` (today: exits unless `kind == "region"`):
   - no general list (`regional-categories.json` is for regions only)
@@ -40990,7 +40990,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `decision 262: Taxonomy prompts on slug keys: apply?` pattern: `pm decision add "Theme taxonomy prompt: apply?"` with the prompt verbatim and the scratch proposal''s counts (categories, subcategories, base_extends/new), options apply / apply with changes / redraft. Until answered, `qgen taxonomy` refuses a theme proposal (a guard like the one task 1316 removed for regions).
 - Then `pm task-pending-decision` on that decision for: `task 1625: Theme taxonomy prompt: apply per the developer''s answer` and `task 1630: End-to-end check on a throw-away theme bundle` (both in this plan).
 
-Done when: code and prompt draft staged, guard in place, decision raised, both tasks pending on it; `npm run check`, `qgen validate` pass.', '2026-10-21T20:23:35Z', NULL, 1621, 0, 'opus', 'questions');
+Done when: code and prompt draft staged, guard in place, decision raised, both tasks pending on it; `npm run check`, `qgen validate` pass.', '2026-10-21T20:23:35Z', '2026-10-21T20:38:21Z', 1621, 0, 'opus', 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1625, 184, 'Theme taxonomy prompt: apply per the developer''s answer', 'work', 'open', NULL, NULL, 'Follow-up of item 1 of `plan 184: Pipeline for topic bundles` (theme taxonomy). Waits on the decision "Theme taxonomy prompt: apply?" raised by the theme taxonomy task of this plan.
 
 - Apply the answer: prompt as drafted or with the developer''s changes; on "redraft", redraft, re-check on a scratch theme bundle and raise a new decision (this task pending on it).
@@ -41074,7 +41074,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Until part 2''s rows are in `app/data/bundles.json`: test with a throw-away theme row + tiny pool (mod folder via `TRIVIA_MODS_DIR`, or an uncommitted local row); never committed.
 
 Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; `trivia-desktop --check-mod` warns on a folder with an unknown icon and is quiet with a known one; the Bundles screen (dev server) shows the throw-away row''s icon, and the puzzle for a mod bundle without or with an unknown icon.', '2026-10-21T20:24:40Z', '2026-10-21T20:32:36Z', 1623, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1635, 185, 'Bundles screen with topic bundles on: order, counts, keys, overlay line, base-off session', 'work', 'open', NULL, NULL, 'Item 2 of `plan 185: Topic bundles in the game`. Mostly checks; change code only where wrong. Uses part 2''s five rows if in `app/data/bundles.json`, else a throw-away theme row + tiny pool (mod folder via `TRIVIA_MODS_DIR`, or an uncommitted local row), never committed.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1635, 185, 'Bundles screen with topic bundles on: order, counts, keys, overlay line, base-off session', 'work', 'done', NULL, '2026-10-21, checks only, no files changed: orderBundles/countShown/bundleKeys/overlay line read and verified; real-number base-off check not possible (no theme rows or ≥2000 approved yet); no dev-server run', 'Item 2 of `plan 185: Topic bundles in the game`. Mostly checks; change code only where wrong. Uses part 2''s five rows if in `app/data/bundles.json`, else a throw-away theme row + tiny pool (mod folder via `TRIVIA_MODS_DIR`, or an uncommitted local row), never committed.
 
 - `orderBundles` (decision 263, `plan 151: Bundle selection on its own full screen`): theme bundles in the non-regional group, file order (`stem`, `sports`, `history`, `movies`, `geography`); mods'' theme bundles after ours.
 - Counts: ours «2000+» (`countShown`, `decision 267: Bundle tiles: question count strings`), mod theme bundles their own count.
@@ -41083,7 +41083,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Session with only a topic bundle on, base off: the engine plays 12 levels or the start check refuses (plan 151); with the throw-away pool a refusal is expected: check it names the bundle. The category joker offers enough categories for a single topic bundle.
 - Full check with real numbers needs ≥ 2000 approved in one bundle (part 3): say in the done note whether it was possible; no follow-up wait.
 
-Done when: the above checked on the dev server (`npm run dev -w app/client`, `TRIVIA_MUTE=1`), fixes (if any) pass `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-21T20:24:41Z', NULL, 1623, 0, NULL, 'app');
+Done when: the above checked on the dev server (`npm run dev -w app/client`, `TRIVIA_MUTE=1`), fixes (if any) pass `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-21T20:24:41Z', '2026-10-21T20:33:27Z', 1623, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1636, 185, 'Category joker: categories grouped by bundle with header rows', 'work', 'open', NULL, NULL, 'Item 3 of `plan 185: Topic bundles in the game` (picker part). The category joker («Doña Exigente» es, «Ms Picky» en, «Wunschzeit» de; the masterplan''s «Cambiazo», decisions 209/210) shows one flat grid of every active bundle''s broad categories (`CategoryPicker.svelte`, jokers in `game.ts`); with base + five topic bundles ≈ 90 tiles, and a topic sport category next to base''s reads as a duplicate.
 
 - More than one bundle active: a header row per bundle (its icon from `task 1634: Bundle icon field: five topic symbols, icon list, loader, selector, mod and qgen checks`, or flag for regions; name via `displayName("bundle", …)`), base first, then the Bundles screen''s order (`orderBundles`); categories of that bundle below. One bundle active: as today, no header.
@@ -41592,6 +41592,16 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/project.md`: `[x] Topic bundles: stem, sports, history, movies, geography (<date>, pm milestone 19, plans 155, 184–189; decisions …)` with the real decision ids (`pm decision list --answered --grep topic`)
 - Milestone 19''s text against the ship table and the playtest: five bundles created; a bundle below the bar is "ships in a content patch", not a gap; another gap → follow-up task in the owning plan; `pm decision consequences` where the built result differs from a decision
 - Per-commit checks (AGENTS.md)', '2026-10-21T20:30:28Z', NULL, 1651, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1668, 184, 'merge the trunk and work tree questions', 'merge', 'open', 702, NULL, 'The trunk and work tree questions (this checkout, branch `pm/wt/questions`) conflict: merging one into the other fails. The
+work tree holds the work of `task 1624: Theme taxonomy: qgen taxonomy for kind theme, prompt draft and apply decision`.
+* `git merge --no-commit main` (the trunk''s HEAD), then resolve every conflict so both sides'' intent survives;
+  read the tasks involved (`pm show <id>`) and the commits (`git log -p HEAD...main`) where it isn''t obvious
+* run the checks the project has for the files involved
+* stage the result (`git add`); pm commits the merge and merges this work tree into the trunk. Don''t
+  `git merge --abort`
+Your note on `pm task done`: what conflicted and how you resolved it.
+
+Conflicting files: authoring/tools/qgen.py', '2026-10-21T20:38:32Z', NULL, NULL, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -46653,6 +46663,61 @@ Every rule starts with the shared part, then its own topic and exclusions. Share
 ## Not here
 - `icon` per row: `plan 185: Topic bundles in the game` (decision 367); the category joker («Doña Exigente») showing a topic bundle next to base''s similar categories: same plan.
 - Store names (Steam): `plan 187: Steam DLC and store for the topic bundles` starts from these names.', 'The game is getting five new optional question packs, on science and technology, sports, history, film and geography, each adding many more and deeper questions on its topic than the general pack has. This decision fixes what players see (each pack''s name and short description in Spanish, English and German) and the one-line rule that tells the question writers what belongs in each pack and where the borders between the packs run. It also settles whether the film pack covers TV series too. The answer becomes the packs'' entries in the game and the starting point for their store names.', NULL, NULL, '2026-10-21T20:28:59Z', NULL, 1643, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (370, 'Theme taxonomy prompt: apply?', 'pending', '["apply as drafted", "apply with changes (say which)", "redraft (say what''s wrong)"]', '`task 1624: Theme taxonomy: qgen taxonomy for kind theme, prompt draft and apply decision` (`plan 184: Pipeline for topic bundles`, task 1). Pattern of `decision 262: Taxonomy prompts on slug keys: apply?`: a new prompt as a verbatim draft; nothing runs on a real bundle until applied.
+
+Already done in code (staged; `authoring/tools/qgen.py`, `layout.py`):
+- `qgen taxonomy --bundle <id>` takes `kind: theme`: no general list (`regional-categories.json` stays regions only); one opus call with the bundle''s rule, its target (2000 / 40 per subcategory → ≈ 50 subcategories) and all of base''s subcategories as `slug` English name: approved count, grouped by category; the model picks the ones on its topic.
+- Proposal: same format as regions (`slug`, `en`, `name` = `en`); category `origin`: `base_extends` | `new`; per subcategory `base_related`: base slugs it goes beyond (unknown slugs dropped). No `region`, no `left_out`. `proposal.md` adds the base_extends/new counts and "Beyond base: …" per subcategory.
+- `--apply`: as for regions (`categories.json`, `names.{en,es,de}.json`, es/de by `taxonomy-names.md`) plus `authoring/data/bundles/<id>/base-related.json` (subcategory → base slugs; authoring only, not exported). Refuses a `base_related` slug that isn''t a base subcategory.
+- `qgen validate`: a `base-related.json` names only its bundle''s and base''s subcategories.
+- Guard: `qgen taxonomy` exits for a theme bundle (propose and apply) with a pointer to `task 1625: Theme taxonomy prompt: apply per the developer''s answer`, which removes it.
+
+Scratch check (copy of the repo in /tmp, removed after): theme bundle `scratch-sports`, rule "Answering needs a love of sport: deeper questions on sports, athletes, teams, competitions, rules and records than the main pool has, known to fans worldwide."
+- Proposal: 10 categories (8 base_extends, 2 new: combat sports; sports culture and records), 50 subcategories (34 with base_related, 16 without, e.g. American football, baseball, golf, cycling, boxing). Football 9 (club competitions, rivalries, stadiums, legends, managers and tactics, continental tournaments, women''s football, World Cup stories, laws), basketball and American sports 5, racket/club/cue 6, athletics and Olympic sports 8, winter 3, combat 3, motorsport 3, team sports worldwide 4, water/horses/adventure 3, culture and records 6. Samples avoid base''s headline concepts ("World Cup stories: not the headline winners and hosts base asks").
+- `--apply`: 50 subcategories, 60 names per locale; `base-related.json` 34 of 50 with base slugs.
+- claude: opus 1 call $0.66 (4m26s), sonnet 1 call $0.05; total 2 calls, $0.71.
+
+---
+
+## `authoring/tools/prompts/taxonomy-theme.md` (new, whole file)
+```
+# Task: propose a topic bundle''s taxonomy
+
+A topic bundle is a pack of trivia questions for families who love one topic (the bundle''s rule below): they want more of it, and deeper, than the main pool, `base`, gives them. `base` stays as it is and keeps its own questions on the topic; its subcategories are listed below with their approved question counts. The bundle adds questions, it never repeats base''s: a family playing both gets new concepts, not the famous ones again.
+
+You propose the bundle''s broad categories and their subcategories. Drafting later picks concepts per subcategory (150–250 each) and writes questions about them, at every difficulty from 1 to 15, in English first, then translated for players in other languages and countries.
+
+## Keys and names
+Every category and every subcategory has:
+- `slug`: its key in code and files, never shown to players: English, lowercase ASCII words joined by dashes (`olympic-history`, `bridges-and-tunnels`); unique within the bundle among categories and among subcategories (a category and a subcategory may share one). No bundle name in it: `football-tactics`, not `sports-football-tactics`. It may equal a base slug only for the same topic seen deeper; prefer a slug of its own.
+- `en`: the English name players see, short, sentence case, as on a game''s category screen ("Football tactics", "Bridges and tunnels").
+- `name`: the same as `en`.
+
+Names in the game''s other languages are made from `en` later.
+
+## Steps
+1. **Base on the topic.** Find base''s subcategories on the bundle''s topic. Each is a starting point: the bundle goes beyond it (lesser-known concepts, a narrower angle, a part base only touches) without asking base''s concepts again.
+2. **Categories.** Group the bundle''s topic into broad categories, as a fan of the topic sees it. `origin`: `base_extends` when the category mainly goes deeper into topics base already has, `new` when base has next to nothing of it. Each with a `scope` and a `reason`.
+3. **Subcategories.** For every category, its subcategories. Size them for the target: about {per_sub} approved questions per subcategory, so about {subs} subcategories in total; more where a category has more to ask, at least 2 per category. A subcategory must hold 150 concepts that families who follow the topic know at some level; narrower topics go into a wider neighbour.
+
+## Each subcategory
+- `slug`, `en`, `name`: as above; `en` unique within the bundle and different from every base name (a base name only if the bundle''s angle is clear from it: "Football tactics", not "Football").
+- `scope`: one English line: what belongs in it, so two neighbours don''t overlap, and how it differs from base''s related subcategories.
+- `reason`: one English sentence: why the bundle needs it, what it adds next to base and its neighbours.
+- `base_related`: the slugs of base''s subcategories it goes beyond (the drafter keeps away from their questions), from the list below; empty when base has nothing close.
+- `samples`: about 10 concepts from easy to hard, each with `known_at`, named in English; none that base''s related subcategories already ask about.
+
+`known_at` (1–15): the lowest point on the difficulty scale at which families who follow the topic know the concept: 1 = a 6-year-old fan knows it, 5 = an 11-year-old, 10 = a 16-year-old with good school knowledge, 12 = most adult fans, 15 = trivia specialists. Spread the samples: a subcategory with only hard concepts or only easy ones is a bad split.
+
+## Rules
+- The bundle''s rule decides: every subcategory is on its topic.
+- Deeper, not beside: no subcategory that merely renames one of base''s; where base has a subcategory, the bundle''s go into what base leaves out.
+- Neighbours don''t overlap: a concept belongs to exactly one subcategory. Say in the scope where a borderline topic goes.
+- Players are families in many countries: no subcategory only one country''s families know; a country''s league, team or history only where fans worldwide follow it.
+- Mix across the families'' ages: something for children as well as for adults.
+- No current party politics, no armed conflict as entertainment, no crime figures as celebrities.
+- `scope` and `reason`: English.
+```', 'Topic packs (sports, history, movies and so on) need their own list of categories and subcategories, and a model proposes that list from written instructions. These new instructions ask it to go deeper than the main question pool already does on the topic, and to note which main-pool subcategories each new one goes beyond, so later questions don''t repeat the famous ones. The choice is whether to use the instructions as drafted, use them with changes, or have them redrafted; until then the tool refuses to propose a topic pack''s categories.', NULL, NULL, '2026-10-21T20:37:56Z', NULL, 1624, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -48414,8 +48479,10 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1707, 1643, '2026-10-21T20:27:20Z', '2026-10-21T20:29:10Z', 'blocked', NULL, 0, 'ee01ced7eefbb477bce4b575674e9550b43c8f31', 'questions', 'claude-opus-5-5', 'bfe6a440-bc57-4cb8-893e-3f1bc80e8b97', NULL, 16, 32, 11203, 795142, 55817, 0.82975239999999984, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1708, 1634, '2026-10-21T20:28:07Z', '2026-10-21T20:32:49Z', 'done', NULL, 0, 'ee01ced7eefbb477bce4b575674e9550b43c8f31', 'app', 'claude-sonnet-5-5', '33462cbc-92e2-4d46-94e3-571b722c6ff6', NULL, 15, 28, 9423, 750946, 58380, 0.47799519999999995, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1709, 1650, '2026-10-21T20:28:33Z', '2026-10-21T20:29:44Z', 'done', NULL, 0, '8046e5edae4bc3bd53002935cc2e37eb7dec7146', NULL, 'claude-opus-5-5', '70475c57-20f4-4148-852f-62e8cce069f1', NULL, 13, 24, 7146, 530187, 49700, 0.6466534, 344501);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1710, 1624, '2026-10-21T20:29:11Z', NULL, 'running', NULL, NULL, '8046e5edae4bc3bd53002935cc2e37eb7dec7146', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1710, 1624, '2026-10-21T20:29:11Z', '2026-10-21T20:38:32Z', 'done', NULL, 0, '8046e5edae4bc3bd53002935cc2e37eb7dec7146', 'questions', 'claude-opus-5-5', '59fe5dcc-141d-4c07-be25-21003a9b72a4', NULL, 38, 74, 20964, 2615059, 89052, 1.6550038, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1711, 1651, '2026-10-21T20:29:45Z', '2026-10-21T20:30:39Z', 'done', NULL, 0, '6b864086c26be1bd63bdfe2bc1602f63610d06de', NULL, 'claude-opus-5-5', '99d6f2d9-305d-4878-8afa-1a3e47aebd71', NULL, 7, 14, 5805, 268336, 40382, 0.49287919999999996, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1712, 1635, '2026-10-21T20:32:49Z', '2026-10-21T20:33:37Z', 'done', NULL, 0, 'c8f431875b4e77684865ae9543d21de38b331b79', 'app', 'claude-sonnet-5-5', '33462cbc-92e2-4d46-94e3-571b722c6ff6', 1708, 7, 14, 2719, 567198, 16588, 0.6850048, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1713, 1636, '2026-10-21T20:33:37Z', NULL, 'running', NULL, NULL, 'c8f431875b4e77684865ae9543d21de38b331b79', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 344501);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -48994,6 +49061,8 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1605, 361);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1607, 364);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1607, 366);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1610, 365);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1625, 370);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1630, 370);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1640, 368);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1643, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1644, 369);
