@@ -8892,7 +8892,65 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 
 ## Order
 - 1 first; 2 and 3 in parallel after 1 (2 in `questions`, 3 in `app`); 4 after 1–3 and plan 89; 5 after 1 and 2; 6''s reading early (its plan task), its checklist after plan 130; 7 last', 'The game gets a free demo: the full game with a small, fixed set of about two hundred questions, enough to play once in every game mode and for every age group. In the demo the questions never come out at random: every run of it shows the same questions in the same order, so what a player tries is exactly what we tested, and its start screen says it is the free demo. It lets families try the game before buying it.', '2026-10-16T17:38:48Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (155, 19, 'masterplan', 1000, 'tbd.', '', '2026-10-16T19:04:11Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (155, 19, 'masterplan', 1000, 'Milestone 19: five topic bundles (`kind: theme`), STEM (natural sciences, engineering, math), sports, history, movies, geography. **This masterplan''s own tasks are not implementation work: each writes the plan for one part** (`pm plan add 19 …`), which is then split into tasks.
+
+## Builds on (binding)
+- `plans/22-bundles.md`: every question in exactly one bundle; bundles **add** questions, they don''t own a topic: base''s sports, film, history, science and geography questions stay in `base`; base batches keep drafting them. Kind `theme` exists in `bundles.json` validation and `qgen bundle new --kind theme`; icon today the generic pin (`BundleSelector.svelte`).
+- `decision 66: Price model (OQ-33): how is the game sold on Steam?`: free DLC, own store entry, optional install, never paid.
+- `decision 112: Pack layout: a pool file per bundle (optional install)`: `app/data/bundles/<id>/pool[.<locale>].json`, missing = not offered.
+- `decision 267: Bundle tiles: question count strings`: every shipped non-base bundle shows «2000+» → target 2000 approved per bundle.
+- `decision 158: Bundle selection in every mode, apart from customization` / decision 33: non-base bundles off by default; any combination (milestone 8).
+- `decision 50: Play-test of age groups and bundles` item 2: the term is "question bundle", never «Temas».
+- `decision 18: Which new base subcategories?`: fan-level detail (e.g. football clubs, legendary players) is too specific for `base`: the room topic bundles fill.
+- `decision 236: English-first drafting for base: what drives drafting and which locales steer it`; `translations.draft_locale()`: theme bundles already draft in `en`; launch question locales `es`, `es-ES`, `en`, `de` (decision 235).
+- `decision 350: Overlap rate in drafting: which changes?`: overlap probe and avoid lists; topic bundles must not re-ask `base`.
+- `decision 339: Demo bundle format: an id list of base questions, exported to app/data/demo/ pools, questions stay in base`: the demo stays base-only; no topic bundle in the demo.
+- D-36 / AGENTS.md "Making questions": runs only through `qgen batch --bundle <id>` (`--translate <L>`), RUNBOOK unchanged.
+- Launch (milestone 11) doesn''t wait for this milestone; what''s ready ships, the rest in content patches (`plan 96: Content updates as patches (ST-5)`).
+
+## Gaps today
+- `qgen taxonomy` refuses non-regional bundles (`cmd_taxonomy`: `kind != "region"`); no general list for themes (`regional-categories.json` is regions only).
+- Targets: `targets.json` and `qgen bundle new` write a target for regional bundles only; `qgen validate` requires one only there; `qgen report --cost` projects per launch language and regional bundle, not theme.
+- Per-locale counting and gap aiming (decision 236) exist for `base`; a theme bundle offered in four locales needs the same (sources in `en` + translations into `es`, `es-ES`, `de`).
+- Achievements: `BUNDLE_*` only for `kind: region` (`achievements.ts`).
+- Icons: every theme bundle would show the same pin.
+- «Cambiazo» and category names: a topic bundle''s categories next to base''s same-topic category (e.g. two sport categories) may read as duplicates.
+- Movies: stills and posters are mostly non-free; media share for `movies` will be low under the existing licence rules (plan 23).
+
+## Parts
+Each part: one `--kind plan` task of this masterplan, in order; priorities for the part''s plan as given.
+
+1. **Pipeline for topic bundles** (questions, plan priority 700)
+   - `qgen taxonomy --bundle <id>` for `kind: theme`: no general list; one opus call from the bundle''s `rule` + target + `base`''s own subcategories on the same topic (to go beyond them, not repeat them); same proposal format and `--apply` (slugs, `names.{en,es,de}.json`).
+   - `targets.json` entry per theme bundle (2000, base''s difficulty mix scaled), written by `qgen bundle new --kind theme`, required by `qgen validate`; counted per question locale like `base`, English drafting aimed at the largest locale gap.
+   - `qgen batch --bundle <id>` and `--translate <L> --bundle <id>` work end to end for a theme bundle (en source, es/es-ES/de translations, export of all four pool files); `qgen report` and `--cost` projection per theme bundle.
+   - Overlap: drafting probes and avoid lists include `base`''s questions on the topic (cross-bundle), so a topic bundle never re-asks a base question; validate/QC unchanged otherwise.
+   - Media: how `movies` (and sports) handles scarce free media (accept low share vs. other kinds of media); the part''s plan proposes, a decision only if the developer''s choice is needed.
+   - Docs: `plans/22-bundles.md` ("In the pipeline", layout), `plans/16-content-target.md`.
+2. **The five bundles: rows and taxonomies** (questions, plan priority 600; after part 1)
+   - Ids `stem`, `sports`, `history`, `movies`, `geography`; per bundle the English `rule` (membership vs. `base`: more and deeper questions on the topic at every difficulty, still answerable by families anywhere, decision 18''s fan level allowed), `voice` (none beyond base''s), Spanish `name`/`description`, en/de names; `languages` all four launch question locales once each has a pool.
+   - One `pm decision add` with the five rows (names per UI language per `locales/style/<locale>.md`), then `qgen bundle new --kind theme` per bundle.
+   - Per bundle `qgen taxonomy` proposal → its own taxonomy decision (like `decision 287: usa taxonomy: categories and subcategories`) → `--apply`; ≈ 50 subcategories each at ≈ 40 approved per subcategory.
+3. **Content runs** (questions, plan priority −120, after `plan 84: Release content runs`''s chains)
+   - Start task per bundle in the plan 84 pattern (drafting pair `batch-<n>` + `QC batch-<n>`, translation runs `tr-<L>-<n>` with `--bundle`), until 2000 approved per question locale; pm-run rules of plan 84 repeated in every body.
+   - Pace and order of the five against base and regional runs: a decision with `qgen report --cost` projections (5 × 2000 × 4 locales), raised by the part''s plan before the first start task.
+4. **In the game** (app, plan priority 400)
+   - Own icon per topic bundle (e.g. flask, ball, scroll, film reel, globe) instead of the pin: how a row names its icon (`bundles.json` field vs. by id) and mods'' theme bundles'' fallback.
+   - Tile order (non-regional group, `orderBundles`), counts «2000+» (decision 267), overlay line, supply notice (decision 195) with topic bundles on; a session with only a topic bundle on (no base) plays and «Cambiazo» has enough categories.
+   - «Cambiazo» / category display when base and a topic bundle carry similar categories.
+   - Achievements: `BUNDLE_*` for theme bundles too or not (the part''s plan decides or raises a decision; Steamworks entries are part 5''s).
+   - Gallery review set (`trivia-gallery --set task-<id>`) of the Bundles screen with the five tiles, per UI language.
+5. **Steam DLC and store** (app, plan priority 280, after `plan 88: Store page and AI disclosure (PUB-8, LUI-6)`)
+   - Per bundle a free DLC app (`plan 130: Steamworks app configuration (SW-7)` checklist), depot (`plan 89: Builds, depots and upload (SW-10, SW-6)`, `build/pack-media.json`), store name, short/long description per store language and capsules (plan 88''s DLC pattern), achievements if part 4 adds them; values entered by the developer.
+   - Extend those plans'' generic per-bundle steps rather than copying them; only what is specific to the five.
+6. **Close-out** (plan priority 100)
+   - Play-test decision: a family session with each topic bundle on (alone and with base), per launch language with a pool.
+   - Docs: `plans/22-bundles.md` "The first bundles" table, `README.md`/`directory.md` where they list bundles; `rg` for "regional bundle" wording that should now say "non-base bundle".
+   - What ships: bundles with a pool at the release or the next content patch (`plan 96: Content updates as patches (ST-5)`).
+
+## Out of scope
+- Moving existing `base` questions into topic bundles (bundles add, they don''t own a topic).
+- More topic bundles than the five; topic bundles in the demo; milestone 12''s locales (zh-Hans, ru, pt-BR).', 'The game gets five new optional question packs, each about one subject: science and technology, sports, history, movies and geography. Families who love a subject switch its pack on and get many more, and deeper, questions about it than the general pack offers. This overview splits the work into the question-making tools, the five packs'' contents, the generation runs that fill them, how they look in the game, their Steam store entries, and a final play-test.', '2026-10-16T19:04:11Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (156, 8, 'Prompts follow the last input', 500, 'Part 12 of `plan 8: masterplan`. One player conceptually (possibly a whole group): every pad, the keyboard and the mouse drive that player and replace each other at any moment, no switching step (milestone 8, developer 2026-10-16; `decision 24: Multiplayer input and couch co-op (OQ-37)?`''s per-player pads are milestone 16: Local multiplayer: game modes and controls, out of scope). Prompts follow the last input, in every mode and on every screen.
 
 ## Rule
@@ -36623,9 +36681,9 @@ leave it as it is if it still fits. An edit queues the revision of the plans bel
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1367, 154, 'write the masterplan of milestone 18: Playable demo', 'masterplan', 'done', NULL, '2026-10-17, plan 154 body and intro, decision 335', 'Write plan 154, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-16T17:38:48Z', '2026-10-17T13:21:01Z', NULL, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1368, 155, 'write the masterplan of milestone 19: topic question bundles', 'masterplan', 'open', NULL, NULL, 'Write plan 155, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1368, 155, 'write the masterplan of milestone 19: topic question bundles', 'masterplan', 'done', NULL, '2026-10-21, tasks.sql (plan 155 body and intro)', 'Write plan 155, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
-plan for one part.', '2026-10-16T19:04:11Z', NULL, NULL, 0, NULL, NULL);
+plan for one part.', '2026-10-16T19:04:11Z', '2026-10-21T20:19:47Z', NULL, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1369, 17, 'Fix qgen rate: the model returns no rating for inventions-16 in revised-01-19', 'work', 'done', 0, '2026-10-16, authoring/tools/qgen.py: cmd_rate retries ids the model skipped once in a narrower call; the cause (model skips inventions-16 deterministically, input looks normal) is unconfirmed', '`qgen batch` (batch-9, first English base batch) fails at step `rate` (4/24), three times in a row on the same item (earlier once on weather-and-climate-16, which passed on retry):
 
 ```
@@ -40543,6 +40601,8 @@ Your note on `pm task done`: the cause and what you queued.
       
       The stop hook will keep flagging it as open. If you''d rather clear it from the queue, drop it with the reason "no multiplayer mode built yet" and have `plan 166: Shipping the multiplayer modes and docs` re-add it when its first mode lands. Tell me and I''ll run the drop.
       [success: 3 turns, $0.11]', '2026-10-18T03:02:43Z', '2026-10-18T03:03:31Z', NULL, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1614, 155, 'create tasks for plan 155: masterplan', 'split', 'open', 1000, NULL, 'Split plan 155 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-21T20:19:44Z', NULL, 1368, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -47296,7 +47356,8 @@ last tool call: Grep: BUILT_MODES\s*[:=]
 likely cause: the worker ended without `pm task done|drop 1611` or a pending decision; its last message: The stop hook will keep flagging it as open. If you''d rather clear it from the queue, drop it with the reason "no multiplayer mode built yet" and have `plan 166: Shipping the multiplayer modes and doc
 log: /home/ruben/code/trivia/.git/pm-logs/task-1611-run-1692.log', 0, '06abba8ead1a75375c5db6fb81c77b8d34a0a9d8', 'app', 'claude-sonnet-5-5', '8ec964f5-bd7e-445f-8875-c5226d966bcc', NULL, 3, 8, 880, 76071, 21615, 0.1104902, 1197781);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1693, 1613, '2026-10-18T03:02:43Z', '2026-10-18T03:03:38Z', 'done', NULL, 0, '6c6bbaddda5aad7afb7054ab730b4f9a5e87028a', 'app', 'claude-opus-5-5', '31f34f9f-02df-4a52-bfe8-47d11dbeb1cf', NULL, 8, 16, 3777, 338372, 43070, 0.4878384, 1197781);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1694, 1607, '2026-10-21T19:32:37Z', NULL, 'running', NULL, NULL, '6717cf351f6ace8535b87a660dddbb85010d8239', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1694, 1607, '2026-10-21T19:32:37Z', '2026-10-21T20:17:39Z', 'blocked', NULL, 0, '6717cf351f6ace8535b87a660dddbb85010d8239', 'questions', 'claude-sonnet-5-5', 'a39d876e-777b-4756-8105-4e29f8914fef', NULL, 30, 58, 9603, 1471591, 70254, 0.67148020000000008, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1695, 1368, '2026-10-21T20:17:34Z', '2026-10-21T20:19:59Z', 'done', NULL, 0, '0c9e073557e140ab3f6fbf4cc7852f89683b888f', NULL, 'claude-opus-5-5', 'a7b19e14-1261-4e87-b1c7-0b9080706ab2', NULL, 18, 34, 11251, 1003015, 90528, 1.1499829999999995, 344501);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
