@@ -41102,14 +41102,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Test data: part 2''s rows if present, else a throw-away theme row + tiny pool, never committed.
 
 Done when: a topic (or throw-away theme) question''s splash and card show the icon, a base question''s don''t (dev server, `?mute`); `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-21T20:24:53Z', '2026-10-21T20:45:45Z', 1623, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1638, 185, 'Gallery shots: bundles-topics, cambiazo-topics, splash-topic', 'work', 'open', NULL, NULL, 'Item 4 of `plan 185: Topic bundles in the game` (shots part); screen gallery `plan 100`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1638, 185, 'Gallery shots: bundles-topics, cambiazo-topics, splash-topic', 'work', 'done', NULL, '2026-10-21, authoring/tools/gallery.py (step topics: bundles-topics, cambiazo-topics, splash-topic; skipped shots listed under manifest ''skipped''), authoring/tools/gallery_saves.mjs (topics and topics-lost saves: every theme bundle with questions on, a theme question on screen). Checked: skips cleanly without theme rows; rendered es with three throw-away theme rows (icons, headers, splash mark OK), removed, never committed. npm run check passes; qgen validate fails only on demo.json missing de translations (known). Review set and decision are task 1639.', 'Item 4 of `plan 185: Topic bundles in the game` (shots part); screen gallery `plan 100`.
 
 - `authoring/tools/gallery.py`: a `topics` demo save/selection with every theme bundle in the data on (+ base); shots `bundles-topics` (Bundles screen), `cambiazo-topics` (category joker picker with bundle headers), `splash-topic` (a theme question''s splash with its bundle icon).
 - No theme bundle in `app/data/bundles.json`: the three shots skip, listed in `manifest.json` as skipped (not a failure).
 - Until part 2''s rows land, try them with a throw-away theme row + tiny pool (uncommitted); never committed.
 - `trivia-gallery --list` shows the new shots; `trivia-gallery --set task-<this id> --only bundles-topics,cambiazo-topics,splash-topic --locale es` as the check (never a full run).
 
-Done when: the set renders with the throw-away row and skips cleanly without it; `npm run check` (ruff), `qgen validate` pass.', '2026-10-21T20:24:53Z', NULL, 1623, 0, NULL, 'app');
+Done when: the set renders with the throw-away row and skips cleanly without it; `npm run check` (ruff), `qgen validate` pass.', '2026-10-21T20:24:53Z', '2026-10-21T20:47:58Z', 1623, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1639, 185, 'Gallery review set of the topic bundles in the game and review decision', 'work', 'open', NULL, NULL, 'Item 4 of `plan 185: Topic bundles in the game` (review part). Needs the five real rows (`stem`, `sports`, `history`, `movies`, `geography`, `kind: theme`) in `app/data/bundles.json`, written by part 2 (`task 1616: write plan: The five topic bundles: rows and taxonomies` writes that plan), and `task 1638: Gallery shots: bundles-topics, cambiazo-topics, splash-topic` done.
 
 - First: rows not there yet → find part 2''s decision on the rows (`pm decision list --grep bundle --grep row --grep taxonomy`, or its plan''s tasks via `pm plan list`); `pm task-pending-decision <this task> <that decision>`, or, if part 2''s rows task is still open with no decision, a once decision "Five topic bundle rows in bundles.json yet?" (option `rows landed, go on`) and wait on it; stop.
@@ -46734,6 +46734,37 @@ Names in the game''s other languages are made from `en` later.
 - No current party politics, no armed conflict as entertainment, no crime figures as celebrities.
 - `scope` and `reason`: English.
 ```', 'Topic packs (sports, history, movies and so on) need their own list of categories and subcategories, and a model proposes that list from written instructions. These new instructions ask it to go deeper than the main question pool already does on the topic, and to note which main-pool subcategories each new one goes beyond, so later questions don''t repeat the famous ones. The choice is whether to use the instructions as drafted, use them with changes, or have them redrafted; until then the tool refuses to propose a topic pack''s categories.', NULL, NULL, '2026-10-21T20:37:56Z', NULL, 1624, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (371, 'Topic bundles: pace and order of the content runs', 'pending', '["One topic bundle at a time below base and regional runs (−120), order stem, sports, history, geography, movies; the next starts when the previous one''s drafting ends; its translations keep running", "All five at once, one drafting pair each, −120", "Two at a time (stem and sports first), order as in option 1", "None until base''s exit check and plan 84''s regional chains are done", "Your own pace or order (state it)"]', '`plan 188: Content runs for the topic bundles` task 1. Binding: `decision 236: English-first drafting for base: what drives drafting and which locales steer it` (theme sources in en, the rest translated), `decision 267: Bundle tiles: question count strings` (2000 per bundle), `decision 110: Regional packs at launch (RG-5, OQ-46)` (regional chains, plan 84); cost is information only (milestone 9, 2026-10-15).
+
+## Cost (`qgen report --cost`, 2026-10-21)
+- No theme bundle exists yet (rows wait on `decision 369: Topic bundles: names, descriptions and rules`), so base''s rates, incl. 24 % overhead:
+  - en drafting $0.32 per approved (batches 9–11, $0.26 + overhead)
+  - translation es $0.14, es-ES $0.11, de $0.12 per approved
+- Per bundle (2000 × en, es, es-ES, de): en ≈ $650, es ≈ $280, es-ES ≈ $225, de ≈ $240 → ≈ $1,400
+- All five: ≈ $7,000 (a floor: questions that don''t travel need extra en drafts)
+- Same order and pace options cost the same in total; pace only changes when it''s spent
+
+## Drafting and spot checks
+- English base batches 9, 10, 11: 874, 866, 836 approved (≈ 860 per batch)
+- Per bundle: 2000 / 860 → 3 drafting pairs (run + QC), 3 blind spot checks of 30 questions (90 questions), 3 QC decisions
+- All five: 15 pairs, 15 spot checks (450 questions)
+- Translations: ≈ 290 approved per run (tr-de-2, tr-en-2, tr-es-ES-2) → ≈ 7 runs per locale per bundle, ≈ 100 runs for all five; no spot check, no QC task
+- Agreement so far: batch-9 93 %, batch-10 97 % (bar 90 %)
+
+## Your review time
+- Not measured yet: colombia''s QC hasn''t run, spot checks store a date only (`plans/15c-regional-questions.md`, plan 98 task 830)
+- Per bundle: 3 × 30-question spot checks + 3 QC decisions; all five: 15 of each
+
+## What''s open ahead of it
+- Base (`plan 17: Batch runs`), `qgen report --exit-check` fails: 4672 / 5000 approved, 10 difficulty levels short (level 1: 187/250, 15: 67/125), batch-10/11 drop rate, batch-11 no spot check yet (`task 1580: QC batch-11` open), `qgen validate` 31 errors; remaining base projection ≈ $1,850 (551 en drafts + translations)
+- Plan 84: translation runs `task 639: run tr-en-2`, `task 641: run tr-de-2`, `task 1223: run tr-es-1`, `task 1226: run tr-es-ES-2`, `task 1228: run tr-es-2` open; colombia pilot pair `task 1295` / `task 1296` open; start tasks for usa, germany, uk, spain, mexico (`task 1268`–`task 1272`) pending; regional projection ≈ $4,900 (colombia es ≈ $550 + en ≈ $250, the other five ≈ $830 each)
+- Plan 184 still open: `task 1625: Theme taxonomy prompt: apply per the developer''s answer`, `task 1630: End-to-end check on a throw-away theme bundle`; plan 186''s taxonomies not applied
+
+## Recommendation: option 1
+- Total cost and spot checks are the same for every pace; one at a time keeps your queue at one theme spot check at a time next to base''s and colombia''s
+- `stem` is the first real theme run of an untested chain (task 1630 open): what its QC finds fixes the other four before they start
+- Translations of a finished bundle keep running, so the machine side stays busy
+- Order: `stem`, `sports`, `history`, `geography`, `movies` (movies last: low media share, `task 1631: Media for movies and sports: axes template and docs`)', 'The game is getting five optional question packs (science and technology, sports, history, film, geography), each to be filled with 2000 questions in English, two kinds of Spanish and German. Each pack needs about three English writing runs, each checked by a person on a blind sample of 30 questions, then machine translation; they compete with the main pack and the country packs for machine cost (about $1,400 per pack) and the developer''s review time. The answer sets how many packs are worked on at once and in what order.', NULL, NULL, '2026-10-21T20:47:26Z', NULL, 1659, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -48514,7 +48545,8 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1726, 1648, '2026-10-21T20:45:06Z', '2026-10-21T20:45:24Z', 'blocked', NULL, 0, 'c4ed992131f3720e468f548a0c4396fba624c35f', 'questions', 'claude-opus-5-5', '440ec70a-b57c-4a13-949c-14b473f9432d', NULL, 5, 10, 1175, 153951, 27984, 0.2782022, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1727, 1649, '2026-10-21T20:45:24Z', '2026-10-21T20:45:39Z', 'blocked', NULL, 0, 'c4ed992131f3720e468f548a0c4396fba624c35f', 'questions', 'claude-opus-5-5', '943c28bd-cfc0-404e-8ac0-13789ad5b56b', NULL, 5, 10, 972, 151916, 26638, 0.2629672, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1728, 1670, '2026-10-21T20:45:39Z', '2026-10-21T20:46:23Z', 'done', NULL, 0, 'c4ed992131f3720e468f548a0c4396fba624c35f', 'questions', 'claude-sonnet-5-5', '11fcec7b-b84b-49cf-aaa2-81c5bb766c2f', NULL, 8, 16, 2125, 291468, 32260, 0.20861559999999998, 344501);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1729, 1638, '2026-10-21T20:45:49Z', NULL, 'running', NULL, NULL, 'cbf7f7ab80c7ed0ab35dbf8958fbdf2ffe0205db', 'app', NULL, NULL, 1723, NULL, NULL, NULL, NULL, NULL, NULL, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1729, 1638, '2026-10-21T20:45:49Z', '2026-10-21T20:48:03Z', 'done', NULL, 0, 'cbf7f7ab80c7ed0ab35dbf8958fbdf2ffe0205db', 'app', 'claude-sonnet-5-5', 'fc2c62be-cf3f-4e36-a1be-ce0a604b5228', 1723, 23, 42, 9394, 1963821, 47589, 1.0982932, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1730, 1659, '2026-10-21T20:46:24Z', '2026-10-21T20:47:38Z', 'blocked', NULL, 0, 'ddc5ca725241f4a59db7537e3badd2416d4203cc', 'questions', 'claude-opus-5-5', 'e49a92de-e26e-4483-94c3-e5733741d3aa', NULL, 11, 20, 5572, 409905, 40411, 0.51678899999999994, 344501);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -49109,6 +49141,12 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1648, 370);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 370);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1656, 368);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1659, 371);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1660, 371);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1661, 371);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1662, 371);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1663, 371);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1664, 371);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');

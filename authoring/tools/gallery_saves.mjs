@@ -94,6 +94,26 @@ saves.blocked.blocked = [...new Set([...data.pool, ...lpool].map((q) => q.id))];
 saves.short = structuredClone(done);
 saves.short.blocked = [...new Set([...data.pool.slice(40), ...lpool.slice(40)].map((q) => q.id))];
 
+// Every theme bundle on beside base, a theme question on screen (plan 185): Bundles, the category joker's headers, the
+// splash's mark. No theme bundle with questions in the data: no save, the shots skip.
+const themes = data.bundles.filter((b) => b.kind === "theme" && data.pool.some((q) => q.bundle === b.id)).map((b) => b.id);
+if (themes.length) {
+  const opts = { mode: "gamemaster", bundles: ["base", ...themes] };
+  // The first level (from 4 on) whose table offers a theme question.
+  let at, own = [];
+  for (let level = 4; level < 9 && !own.length; level++) {
+    at = playTo(data, structuredClone(done), PLAYERS[0], level, opts);
+    own = latestState(at).options.filter((id) => themes.includes(data.byId.get(id).bundle));
+  }
+  const { options } = latestState(at);
+  if (own.length) {
+    saves.topics = pick(structuredClone(at), data, io(), options.indexOf(best(own))).save;
+    meta.topics = { right: rightOf(data, saves.topics) };
+    // The game lost: Start offers a new one, Bundles opens with these bundles on.
+    ({ save: saves["topics-lost"] } = answer(structuredClone(saves.topics), data, io(), (meta.topics.right + 1) % latestState(saves.topics).answers.length));
+  }
+}
+
 // Eight known names: the Join screen with up to eight seats.
 saves.crowd = withExtraPlayers(structuredClone(done));
 // A running round-robin co-op session of three: Start's resume line, the Esc menu. `bound`: the seats' devices

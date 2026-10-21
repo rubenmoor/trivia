@@ -535,6 +535,44 @@ def supply(r):
         r.shot(name)
 
 
+def skip_topics(r, names):
+    """No theme bundle with questions in the data: the shots are listed as skipped, not failed (plan 185)."""
+    for name in names:
+        if not r.only or name in r.only:
+            skipped = r.manifest.setdefault("skipped", [])
+            if f"{r.name}/{name}" not in skipped:
+                skipped.append(f"{r.name}/{name}")
+            print(f"  {r.name}/{name}: skipped (no theme bundle)", flush=True)
+
+
+def topics(r):
+    names = ["bundles-topics", "cambiazo-topics", "splash-topic"]
+    if "topics" not in r.saves:
+        return skip_topics(r, names)
+    if not r.only or "bundles-topics" in r.only:
+        r.scene("topics-lost")
+        r.click('[data-focus-id="main"]')
+        r.wait(".name-button")
+        r.settle(0.8)
+        r.click(".name-button")
+        to_bundles(r)
+        r.settle(1)
+        r.shot("bundles-topics")
+    if not r.only or "cambiazo-topics" in r.only:
+        on_question(r, "topics")
+        r.click('.token[data-joker="category"]')
+        r.settle(1)
+        r.shot("cambiazo-topics")
+    if not r.only or "splash-topic" in r.only:
+        r.scene("topics")
+        r.page.evaluate("window.__gallerySplash = {}")
+        r.click('[data-focus-id="main"]')
+        r.wait(".answers .answer")
+        r.wait(".splash .category")
+        r.settle(0.8)
+        r.shot("splash-topic")
+
+
 def table(r):
     r.scene("table")
     r.click('[data-focus-id="main"]')
@@ -974,6 +1012,7 @@ STEPS = [
     (["player", "player-delete-confirm", "letter-picker"], player),
     (["mode-kind", "mode-single", "choice-gamemaster", "choice-solo", "customize", "bundles", "greeting"], choice),
     (["supply-notice", "bundles-supply-report", "bundles-no-questions"], supply),
+    (["bundles-topics", "cambiazo-topics", "splash-topic"], topics),
     (["level", "select", "game-settings"], table),
     (["question", "question-locked", "joker-hint-armed", "joker-hint", "joker-skip", "joker-category", "joker-snipe",
       "joker-easier"], question),
@@ -1038,6 +1077,10 @@ def main():
         row["shots"] = [s for s in row["shots"] if s not in redone]
     if "placeholders" in manifest:
         manifest["placeholders"] = [row for row in manifest["placeholders"] if row["shots"]]
+    if "skipped" in manifest:  # shots about to be shot again are skipped anew or not at all
+        manifest["skipped"] = [x for x in manifest["skipped"] if x not in redone]
+        if not manifest["skipped"]:
+            del manifest["skipped"]
     shutil.rmtree(dest / "failed", ignore_errors=True)
     server = Server()
     failed = []
