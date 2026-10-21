@@ -18,10 +18,10 @@ export const ACHIEVEMENTS = [
   { id: "WIN_RR_COOP", mode: "rr-coop" }, { id: "WIN_RR_COMPETITIVE", mode: "rr-competitive" }, { id: "WIN_TIMED", mode: "timed" },
 ] as const satisfies readonly { id: string; mode?: GameMode }[];
 
-/** One per regional bundle, entered with its DLC: `BUNDLE_COLOMBIA`. */
+/** One per regional or topic bundle, entered with its DLC: `BUNDLE_COLOMBIA`, `BUNDLE_STEM`. */
 export type AchievementId = (typeof ACHIEVEMENTS)[number]["id"] | `BUNDLE_${string}`;
 
-/** Regional bundles whose DLC (and achievement) is in Steamworks. */
+/** Regional and topic bundles whose DLC (and achievement) is in Steamworks. */
 const DLC_BUNDLES: readonly string[] = [];
 
 const bundleAchievement = (bundle: string): AchievementId => `BUNDLE_${bundle.toUpperCase()}`;
@@ -151,6 +151,6 @@ export function earned(save: SaveData, data: EngineData): AchievementId[] {
 
   const fromBundle = count(correct, (q) => q.bundle);
   for (const b of data.bundles)
-    if (b.kind === "region" && !isModId(b.id) && (fromBundle.get(b.id) ?? 0) >= MANY) out.add(bundleAchievement(b.id));
+    if ((b.kind === "region" || b.kind === "theme") && !isModId(b.id) && (fromBundle.get(b.id) ?? 0) >= MANY) out.add(bundleAchievement(b.id));
   return [...out];
 }
