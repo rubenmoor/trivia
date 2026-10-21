@@ -4652,8 +4652,9 @@ def source_locale_problems(q, bundle):
     m = re.fullmatch(r"batch-(\d+)", q.get("batch") or "")
     if bundle and bundle["kind"] == "base" and m and int(m.group(1)) >= translations.ENGLISH_FROM and loc != "en":
         out.append(f"locale must be en: base drafts in English from batch-{translations.ENGLISH_FROM} on (plan 148)")
-    if bundle and bundle["kind"] == "region" and loc != (want := translations.draft_locale(bundle)):
-        out.append(f"locale must be {want}, {bundle['id']}'s language (decision 110)")
+    if bundle and bundle["kind"] in {"region", "theme"} and loc != (want := translations.draft_locale(bundle)):
+        out.append(f"locale must be {want}, {bundle['id']}'s " + ("language (decision 110)" if bundle["kind"] == "region"
+                                                                else "draft language (decision 236)"))
     return out
 
 
@@ -4970,8 +4971,8 @@ CATEGORIES_ABOUT = ("Categories of the {bundle} bundle (D-41, D-43): structure o
 
 
 def cmd_bundle_new(args):
-    """An empty bundle (BN-9, D-41): its entry in app/data/bundles.json, a regional one's 2000 target
-    (D-101) and an empty categories.json, for a regional one filled by `qgen taxonomy` (plan 138), else by hand. Concept lists come from `qgen batch --bundle <id>`; axes stay base's until
+    """An empty bundle (BN-9, D-41): its entry in app/data/bundles.json, a non-base one's 2000 target
+    (D-101) and an empty categories.json, for a regional or theme one filled by `qgen taxonomy` (plan 138), else by hand. Concept lists come from `qgen batch --bundle <id>`; axes stay base's until
     authoring/data/bundles/<id>/question-axes.json exists."""
     if not re.fullmatch(r"[a-z0-9-]+", args.id):
         sys.exit("A bundle id is lowercase letters, digits and dashes.")
@@ -4986,18 +4987,18 @@ def cmd_bundle_new(args):
         sys.exit(f"--icon: not on a regional bundle, else one of {', '.join(BUNDLE_ICONS)}.")
     data["bundles"].append({"id": args.id, "kind": args.kind, **({"country": args.country} if args.country else {}),
                             **({"icon": args.icon} if args.icon else {}),
-                            "languages": [args.language or "es"], "name": args.name,
+                            "languages": [args.language or ("en" if args.kind == "theme" else "es")], "name": args.name,
                             "description": args.description, "rule": args.rule,
                             **({"voice": args.voice} if args.voice else {})})
     save_json(layout.BUNDLES, data)
-    if args.kind == "region":
+    if args.kind != "base":
         t = targets.load_all()
-        save_json(layout.TARGETS, {**t, args.id: targets.scaled(targets.REGION_TOTAL)})
+        save_json(layout.TARGETS, {**t, args.id: targets.scaled(targets.BUNDLE_TOTAL)})
     path = categories.path(args.id)
     if not path.exists():
         save_json(path, {"about": CATEGORIES_ABOUT.format(bundle=args.id), "categories": []})
     nxt = (f"`qgen taxonomy --bundle {args.id}` proposes its categories and subcategories (plan 138), "
-           f"`--apply` writes them" if args.kind == "region"
+           f"`--apply` writes them" if args.kind in {"region", "theme"}
            else f"fill {path.relative_to(ROOT)} with broad categories and subcategories")
     print(f"Created bundle {args.id}. Next: {nxt}, then `qgen batch --bundle {args.id}`.")
 
@@ -5487,7 +5488,7 @@ def main():
     bnew.add_argument("--description", required=True, help="description shown in the game, in Spanish like --name")
     bnew.add_argument("--kind", required=True, choices=["region", "theme"])
     bnew.add_argument("--language", choices=translations.LOCALES,
-                      help="region: the locale it drafts in, its only `languages` entry until en joins (decision 110); theme: default es")
+                      help="region: the locale it drafts in, its only `languages` entry until en joins (decision 110); theme: default en")
     bnew.add_argument("--icon", help="not region: the tile's symbol, one of BUNDLE_ICONS (default pin)")
     bnew.add_argument("--country", help="region: its ISO 3166-1 alpha-2 code in capitals, e.g. CO; the game shows its flag")
     bnew.add_argument("--rule", required=True, help="one English sentence: when a question belongs in it")

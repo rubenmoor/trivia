@@ -9,7 +9,7 @@ import translations  # authoring/tools/translations.py (D-81)
 NOT_BUNDLES = {"about", "batch_health", "quality"}  # top-level keys that aren't bundles (D-55, plan 16)
 REL = "authoring/data/targets.json"  # in messages
 MIN_YIELD = 0.1  # floor of a locale's yield: a 0 % pilot asks 10× its deficit, not ∞
-REGION_TOTAL = 2000  # every regional bundle (D-99)
+BUNDLE_TOTAL = 2000  # every non-base bundle (D-99, plan 184)
 
 
 def load_all():
@@ -147,12 +147,12 @@ def category_shares(bundle):
 
 
 def problems(scale, bundles):
-    """Errors in targets.json: bundles known, every regional bundle has an entry (D-99),
+    """Errors in targets.json: bundles known, every non-base bundle has an entry (D-99),
     levels = scale, values ≥ 0, sum = total."""
     bundle_ids = {b["id"] for b in bundles}
     all_ = load_all()
-    out = [f"{REL}: regional bundle {b['id']!r} has no targets (D-99: {REGION_TOTAL})"
-           for b in bundles if b.get("kind") == "region" and b["id"] not in all_]
+    out = [f"{REL}: {b.get('kind')} bundle {b['id']!r} has no targets (D-99: {BUNDLE_TOTAL})"
+           for b in bundles if b.get("kind") != "base" and b["id"] not in all_]
     lo, hi = scale
     for b, t in all_.items():
         if b in NOT_BUNDLES:
