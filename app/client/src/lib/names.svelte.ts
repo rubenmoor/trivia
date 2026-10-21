@@ -1,5 +1,6 @@
 // Category and subcategory names in the question locale, bundle names in the UI language, of the last engine call (plan 68, D-81).
 import { catKey, categoryOf, subName, subOf } from "../engine/pool.ts";
+import type { BundleMark } from "../game/BundleMark.svelte";
 import type { EngineData } from "../engine/state.ts";
 
 let data = $state.raw<EngineData | null>(null);
@@ -29,10 +30,14 @@ export function displayName(kind: "category" | "subcategory" | "bundle", key: st
   return d.uiNames.bundles[key]?.name ?? d.bundles.find((b) => b.id === key)?.name ?? key;
 }
 
-/** The category and subcategory keys of a question of the pool, or null (a mod without them, no data). */
-export function topicOf(id: string): { category: string; subcategory: string | null } | null {
+/** The category and subcategory keys of a question of the pool, or null (a mod without them, no data); `bundle`: its
+ * bundle's mark, null for a base question. */
+export function topicOf(id: string): { category: string; subcategory: string | null; bundle: BundleMark | null } | null {
   const q = data?.byId.get(id);
   if (!q) return null;
   const category = categoryOf(data!.broad)(q);
-  return category ? { category, subcategory: subOf(q) } : null;
+  if (!category) return null;
+  const b = data!.bundles.find((x) => x.id === q.bundle);
+  const bundle = !b || b.kind === "base" ? null : { base: false, region: b.kind === "region", country: b.country, icon: b.icon, source: b.source };
+  return { category, subcategory: subOf(q), bundle };
 }

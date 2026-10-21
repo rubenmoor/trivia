@@ -3,8 +3,9 @@
   // (09-jokers.md) and the missing-media line.
   import { isOurs } from "../../engine/pool.ts";
   import { t } from "../../lib/i18n.ts";
-  import { displayName, questionLocale } from "../../lib/names.svelte.ts";
+  import { displayName, questionLocale, topicOf } from "../../lib/names.svelte.ts";
   import type { Game, JokerEvent } from "../../lib/types.ts";
+  import BundleMark from "../BundleMark.svelte";
   import Icon from "../Icon.svelte";
   import { jokerIcon } from "../jokers.ts";
   import Prompt from "../Prompt.svelte";
@@ -31,11 +32,13 @@
   const media = $derived(question.media);
   /** Long questions shrink one step instead of growing to three lines (10, "Scale"). */
   const long = $derived(question.question.length > 110);
+  /** The swapped-in question's bundle mark, none for base. */
+  const bundle = $derived(topicOf(question.id)?.bundle);
 </script>
 
 <header class="card glass-strong" class:long class:sweeping in:cardFlip|global={{ side: "in" }} out:cardFlip|global={{ side: "out" }}>
   {#if question.swapped_to}
-    <p class="topic label" class:fresh={swappedBy?.joker === "category"}>{t("screen.question.topic", { name: displayName("subcategory", question.swapped_to) })}</p>
+    <p class="topic label" class:fresh={swappedBy?.joker === "category"}>{#if bundle}<BundleMark {bundle} /> {/if}{t("screen.question.topic", { name: displayName("subcategory", question.swapped_to) })}</p>
   {/if}
   <h1 lang={questionLocale()}>{question.question}</h1>
   {#if media.type !== "image"}
