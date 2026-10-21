@@ -16,6 +16,9 @@
     return [...bundles].sort((a, b) => rank(a) - rank(b));
   }
 
+  /** A non-region bundle's symbol (decision 367): its `icon`, else `puzzle` (mods), `book` (base), `pin`. */
+  export const bundleIcon = (b: Bundle) => b.icon ?? (b.source === "mod" ? "puzzle" : b.base ? "book" : "pin");
+
   /** The count a tile shows (decision 267): shipped bundles fixed 5000+ (base) / 2000+, a mod's own count rounded
    * down (hundreds from 100, tens from 10), capped at the fixed string of its kind; the demo's base tile is counted
    * like a mod's, uncapped (decision 341). */
@@ -51,6 +54,7 @@
   import Flags from "./Flags.svelte";
   import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
+  import { scrollBox } from "./scrollBox.ts";
   import { sfx } from "./sound.svelte.ts";
 
   let {
@@ -79,31 +83,11 @@
   const base = $derived(ordered.filter((b) => b.base));
   const others = $derived(ordered.filter((b) => !b.base));
 
-  let list = $state<HTMLElement>();
-  let cutTop = $state(false);
-  let cutBottom = $state(false);
-
-  function edges() {
-    if (!list) return;
-    cutTop = list.scrollTop > 1;
-    cutBottom = list.scrollTop + list.clientHeight < list.scrollHeight - 1;
-  }
-
-  $effect(() => {
-    if (!list) return;
-    const ro = new ResizeObserver(edges);
-    ro.observe(list);
-    return () => ro.disconnect();
-  });
-
   function toggle(b: Bundle) {
     if (busy) return;
     sfx("tick");
     onchange(toggled(bundles, selected, b));
   }
-
-  /** Focus follows (arrows, pad, letters, Tab): the focused tile stays in view. */
-  const follow = (e: FocusEvent) => (e.target as HTMLElement).scrollIntoView({ block: "nearest" });
 </script>
 
 {#if large}
@@ -118,16 +102,7 @@
     {#if others.length}
       <span class="ruler"></span>
       <div class="column">
-        <div
-          class="group grid scroll"
-          class:cut-top={cutTop}
-          class:cut-bottom={cutBottom}
-          bind:this={list}
-          data-nav-scroll
-          onscroll={edges}
-          onanimationend={edges}
-          onfocusin={follow}
-        >
+        <div class="group grid" {@attach scrollBox}>
           {#each others as b, i (b.id)}
             {@render tile(b, first + base.length + i)}
           {/each}
@@ -168,7 +143,7 @@
   >
     {#if key}<Prompt action={{ type: "letter", key }} hold />{/if}
     <span class="name-text">
-      {#if b.region}<Flags country={b.country} />{:else}<Icon name={b.icon ?? (b.source === "mod" ? "puzzle" : b.base ? "book" : "pin")} />{/if}
+      {#if b.region}<Flags country={b.country} />{:else}<Icon name={bundleIcon(b)} />{/if}
       {b.base && buildInfo().demo ? t("bundles.demoName") : b.name}
     </span>
     {#if large}
@@ -253,7 +228,7 @@
     color: var(--amber);
   }
   /* Bundles screen (plan 151): a narrow base column, a ruler, fixed-width optional tiles flowing in a grid that
-     scrolls with a fade at a cut edge. */
+     scrolls (scrollBox.ts). */
   .bundles.large {
     flex-wrap: nowrap;
     align-items: stretch;
@@ -287,21 +262,6 @@
     justify-content: start;
     align-content: start;
     gap: calc(1 * var(--u));
-  }
-  .scroll {
-    min-height: 0;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
-    --ft: 0px;
-    --fb: 0px;
-    mask-image: linear-gradient(to bottom, transparent, #000 var(--ft), #000 calc(100% - var(--fb)), transparent);
-  }
-  .scroll.cut-top {
-    --ft: calc(4 * var(--u));
-  }
-  .scroll.cut-bottom {
-    --fb: calc(4 * var(--u));
   }
   .large .tile {
     position: relative;

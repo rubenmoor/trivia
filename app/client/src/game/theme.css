@@ -273,6 +273,24 @@
   line-height: 1.1;
 }
 
+/* Scroll boxes (scrollBox.ts): a fade at a cut edge; the focused control scrolls clear of it. */
+.game [data-scroll-box] {
+  min-height: 0;
+  scroll-padding-block: calc(4 * var(--u));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  --ft: 0px;
+  --fb: 0px;
+  mask-image: linear-gradient(to bottom, transparent, #000 var(--ft), #000 calc(100% - var(--fb)), transparent);
+}
+.game [data-scroll-box][data-cut-top] {
+  --ft: calc(4 * var(--u));
+}
+.game [data-scroll-box][data-cut-bottom] {
+  --fb: calc(4 * var(--u));
+}
+
 /* Entrances shared by screens and dialogs; components keep their own variants. */
 @keyframes arrive {
   from {
