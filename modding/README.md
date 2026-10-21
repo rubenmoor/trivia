@@ -189,6 +189,8 @@ export default async function setup(trivia) {
 - Files: `data/bundles.json` (one row per bundle) and `data/bundles/<bundle>/` (`categories.json`, `pool.json`, `pool.<locale>.json`, pictures inside)
 - Add-on bundle (any `kind` but `base`): off by default, players switch it on before a game
 - Base bundle (`kind: "base"`): a second choice beside ours; ours stays the default
+- Optional `icon` on a non-regional bundle (e.g. `"flask"`, list in [`bundles.md`](bundles.md)); without it or unknown: the puzzle
+- Bundle `kind` values (`base`, `region`, anything else) are not the mod `kind` (`theme` there is a CSS mod)
 - Regional bundle (`kind: "region"`): needs `country` (ISO code, e.g. `"CO"`), shows that country's flag
 - Ids become `<mod id>:<id>` in the game (bundles and questions), so they never clash with ours
 - Shown as «Player-made · <mod name>» in the bundle selector; media credits from your questions' `credit` and `source_url` on the Credits screen

@@ -38,6 +38,8 @@ export interface Bundle {
   kind: string;
   /** `kind: "region"` only, required there: ISO 3166-1 alpha-2 (plan 151); its flag is the bundle's icon. */
   country?: string;
+  /** Non-region rows: a symbol of BUNDLE_ICONS (decision 367); missing or unknown → the fallback. */
+  icon?: BundleIcon;
   /** Question locales it's offered in. */
   languages: string[];
   name: string;
@@ -55,6 +57,11 @@ export const isOurs = (id: string): boolean => !isModId(id);
 /** A regional bundle's `country` (plan 151); COUNTRY in authoring/tools/qgen.py, countryOk in app/desktop/mods.mjs. */
 export const COUNTRY = /^[A-Z]{2}$/;
 
+/** The symbols a bundle row's `icon` may name (decision 367), all in Icon.svelte; copies in app/desktop/mods.mjs and authoring/tools/qgen.py. */
+export const BUNDLE_ICONS = ["book", "pin", "puzzle", "flask", "ball", "scroll", "reel", "globe", "film", "heart", "mic", "headphones"] as const;
+export type BundleIcon = (typeof BUNDLE_ICONS)[number];
+const iconOf = (icon: unknown): BundleIcon | undefined => BUNDLE_ICONS.find((n) => n === icon);
+
 /** `country` present and well-formed exactly on a regional bundle. */
 const countryOk = (kind: unknown, country: unknown): boolean =>
   kind === "region" ? typeof country === "string" && COUNTRY.test(country) : country === undefined;
@@ -63,14 +70,19 @@ const countryOk = (kind: unknown, country: unknown): boolean =>
 export function parseBundles(json: unknown): Bundle[] {
   const bundles = (json as { bundles?: unknown } | null)?.bundles;
   if (!Array.isArray(bundles) || bundles.length === 0) throw new Error("bundles.json: no bundles");
-  return bundles.flatMap(({ id, kind, country, languages, name, description, source, mod, modName }) => {
+  return bundles.flatMap(({ id, kind, country, icon, languages, name, description, source, mod, modName }) => {
     if (typeof kind !== "string" || !kind) throw new Error(`bundles.json: ${id}: no kind`);
     if (!Array.isArray(languages) || (languages.length === 0 && source !== "mod")) throw new Error(`bundles.json: ${id}: no languages`);
     if (!countryOk(kind, country)) {
       if (source === "mod") return [];
       throw new Error(`bundles.json: ${id}: country`);
     }
-    const c = country === undefined ? {} : { country };
+    if (kind === "region" && icon !== undefined) {
+      if (source === "mod") return [];
+      throw new Error(`bundles.json: ${id}: icon on a regional bundle`);
+    }
+    const known = iconOf(icon);
+    const c = { ...(country !== undefined && { country }), ...(known && { icon: known }) };
     return [source === "mod" ? { id, kind, ...c, languages, name, description, source, mod, modName } : { id, kind, ...c, languages, name, description }];
   });
 }
