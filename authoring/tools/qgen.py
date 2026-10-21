@@ -2066,22 +2066,22 @@ def report_progress(pool, bundle, locale="es"):
     print("  per broad category (derived share, guide only):")
     for slug, share in shares.items():
         line(f"  {slug:{w}}", by_cat[slug], round(share))
-    if bundle == "base":
-        report_supply(pool, locale)
+    if targets.kind_of(bundle) in {"base", "theme"}:
+        report_supply(pool, locale, bundle)
 
 
-def report_supply(pool, locale):
-    """English drafting for base (plan 70, decision 236): per question locale its deficit, yield, untranslated
+def report_supply(pool, locale, bundle="base"):
+    """English drafting for base or a theme (plan 70, decision 236): per question locale its deficit, yield, untranslated
     sources and the drafts it asks for, per level; the draft gap = the largest."""
-    supply = targets.source_supply(pool)
+    supply = targets.source_supply(pool, bundle)
     fmt = lambda d: ", ".join(f"{l}: {n}" for l, n in sorted(d.items()) if n) or "none"
-    print("en drafting for base (decision 236; per level; drafts = deficit / yield − untranslated, en 1:1):")
+    print(f"en drafting for {bundle} (decision 236; per level; drafts = deficit / yield − untranslated, en 1:1):")
     for l, x in supply.items():
         if locale in (l, "es"):
             gap = {lvl: targets.locale_gap(x, lvl) for lvl in x["deficit"]}
             print(f"  {l}: yield {x['yield']:.2f}; deficit {fmt(x['deficit'])}; untranslated {fmt(x['untranslated'])}; "
                   f"drafts {fmt(gap)}")
-    print(f"  draft gap (largest over {', '.join(supply)}): {fmt(targets.draft_gaps(pool, 'base', supply) or {})}")
+    print(f"  draft gap (largest over {', '.join(supply)}): {fmt(targets.draft_gaps(pool, bundle, supply) or {})}")
 
 
 def spot_agreement(batch, checks):

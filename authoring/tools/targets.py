@@ -2,7 +2,7 @@
 import json, math
 from collections import Counter
 
-from layout import TARGETS
+from layout import BUNDLES, TARGETS
 import categories  # authoring/tools/categories.py
 import translations  # authoring/tools/translations.py (D-81)
 
@@ -125,10 +125,15 @@ def locale_gap(s, lvl):
     return max(0, math.ceil(d - u * y) if s["draft"] else math.ceil(d / y) - u)
 
 
+def kind_of(bundle):
+    """The bundle's `kind` in bundles.json; unknown ids count as base's own."""
+    return next((b["kind"] for b in json.loads(BUNDLES.read_text())["bundles"] if b["id"] == bundle), "base")
+
+
 def draft_gaps(pool_questions, bundle, supply=None):
-    """What `draft` aims at (D-54): for base the largest over the question locales of locale_gap (decision 236),
-    else the bundle's own deficits (D-101); None: even weights (D-40)."""
-    if bundle != "base":
+    """What `draft` aims at (D-54): for base and a theme the largest over the question locales of locale_gap
+    (decision 236), for a region its own deficits (D-101); None: even weights (D-40)."""
+    if kind_of(bundle) not in {"base", "theme"}:
         return deficits(pool_questions, bundle)
     supply = supply or source_supply(pool_questions, bundle)
     levels = (load_targets(bundle) or {}).get("difficulty", {})
