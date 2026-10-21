@@ -10551,6 +10551,125 @@ Work tree `questions`, in this order.
 
 ## Out of scope
 - Moving base questions into topic bundles; base''s taxonomy; prompts (plan 184); content runs, game, Steam.', 'The game is getting five optional question packs, each on one topic: science and maths, sports, history, movies and geography. Before any questions are written, each pack needs its name in every language, a rule saying which questions belong to it and not to the main pack or to another of the five, and a list of about fifty subtopics, so its 2000 questions spread evenly. This work settles those with the developer, one pack at a time, and sets the packs up for writing.', '2026-10-21T20:24:24Z', 1616);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (187, 19, 'Steam DLC and store for the topic bundles', 280, 'Part 5 of `plan 155: masterplan` (milestone 19): Steam side of the five topic bundles (`stem`, `sports`, `history`, `movies`, `geography`, `kind: theme`): a free DLC app, depot, store page, capsules, content survey and (per decision 368) achievement each. Extends the generic per-bundle steps the regional bundles already use; only what is specific to the five. Docs, pm and `steam.json`; workers never log into Steamworks, the developer enters every value and reports through checklist decisions.
+
+## Builds on (binding)
+- `decision 66: Price model (OQ-33): how is the game sold on Steam?`: every non-base bundle a free DLC, own store entry, optional install, never paid.
+- `decision 112: Pack layout: a pool file per bundle (optional install)`: `app/data/bundles/<id>/pool[.<locale>].json`, missing = not offered; one DLC depot per bundle.
+- `decision 84: SteamCMD source and depot split for Steam uploads`: base depots `windows`, `linux`, `content`; DLC depots beside them, `SetLive` beta only.
+- `decision 50: Play-test of age groups and bundles` item 3: a bundle''s in-game name everywhere, Steam DLC included; term "question bundle".
+- `decision 77: Store capsule art`: typographic, rendered by `authoring/store/capsules.mjs`, no image generation.
+- `decision 73: Achievement list (SW-11)?` / `decision 146: Achievements, mods screen and rich presence with mods on`: `BUNDLE_<ID>` entered with its DLC; `decision 368: Achievements for the topic bundles: one per bundle like the regional ones?` (pending) decides whether the five get one (`plan 185: Topic bundles in the game` task 5 makes ids, icons, texts).
+- `decision 339: Demo bundle format: an id list of base questions, exported to app/data/demo/ pools, questions stay in base` / `decision 342: Demo packaging: own staging folders, three depots, own reports, no nix output`: no topic DLC for the demo app.
+- Launch doesn''t wait (masterplan): a topic DLC ships when its bundle has a pool, at a beta, the release or a content patch (`plan 96: Content updates as patches (ST-5)`).
+
+## Generic steps reused (point to them, don''t copy)
+- `plan 130: Steamworks app configuration (SW-7)`: `plans/18-steam-integration.md` "Steamworks app configuration (SW-7)", blocks "Installation → Depots" and "DLC"; regional pattern `task 1415: DLC app for regional bundle usa` (row + `steam.json` `dlc` entry with `null` IDs).
+- `plan 89: Builds, depots and upload (SW-10, SW-6)`: `task 748: DLC depots for packs (decision 66)` made depots generic (`trivia-steam stage` stages `build/dlc/<id>/` from `steam.json` `dlc` + `build/pack-media.json`; smoke with and without packs); no per-bundle depot task (the regional ones, e.g. `task 1416: DLC depot for regional bundle usa`, were dropped for that reason). `app/desktop/media-budget.json` `default_dlc` covers a bundle without its own row.
+- `plan 88: Store page and AI disclosure (PUB-8, LUI-6)`: `plans/17a-store-page.md` "Free DLC" (fields, limits, "After approval"), pattern `task 783: Free DLC store texts in 17a` / `task 1417: Store text and capsules for DLC usa`; entry via `task 672: Store page entry checklist and PUB-8 close-out`.
+- `plan 131: Content survey, rating and price (PUB-9, PUB-11)`: 17a "Content survey" → "DLC (`colombia`)" and "Content survey and pricing: entry" → `colombia` DLC blocks.
+- Achievements: plan 18 "Achievements in Steamworks", `app/desktop/steam-achievements.vdf`, `DLC_BUNDLES` in `app/client/src/engine/achievements.ts`.
+
+## Specific to the five
+- **Languages:** all four launch question locales (es, es-ES, en, de); en usually first (theme bundles draft in `en`, `translations.draft_locale()`). Store text per language entered only once that locale''s pool of the bundle ships (colombia''s en rule); es-ES block only where it differs from es (base''s rule in 17a).
+- **Names:** from plan 186''s rows decision and `app/data/names.<locale>.json` `bundles.<id>` (no «Regional:» prefix); the DLC store name = the in-game name.
+- **Stage coupling:** `trivia-steam stage` requires a `steam.json` `dlc` entry for every bundle folder in the build (`stage_dlc`), and a real upload needs every DLC depot ID: a topic bundle folder that lands in `app/data/bundles/` (plan 186''s `qgen bundle new` / taxonomy `--apply`) breaks `stage` until its entry exists; task 1 must follow part 2''s rows promptly.
+- **Content survey:** `history` (wars, violence, historical atrocities) and `movies` (film plots: violence, horror, adult themes) may need different answers than base; checked on the pool at ship time.
+- **Media:** `movies` and `sports` carry few free pictures (part 1''s media proposal): DLC depots small, `default_dlc` budget enough; no store screenshots for DLC (optional per Valve).
+
+## Tasks
+1. **Steamworks rows and `steam.json` entries for the five topic DLCs** (after `plan 186: The five topic bundles: rows and taxonomies` task 2 "Create the five bundles"; if the rows aren''t in `app/data/bundles.json` yet, `pm task-pending-decision` on plan 186''s rows decision "Topic bundles: names, descriptions and rules" and stop)
+   - `plans/18-steam-integration.md` SW-7 checklist: "Installation → Depots" a row per topic bundle (OS all, language all, tied to its DLC app; only if `app/data/bundles/<id>/` ships at upload time), "DLC" a row each with the names per language (en, es/es-ES, de from `names.<locale>.json`), `languages` as in `bundles.json`; the "Depot … linked" row lists them; IDs reported through task 6''s decision, not decision 179 (topic DLCs may come after it).
+   - `authoring/steam/steam.json` `dlc`: `stem`, `sports`, `history`, `movies`, `geography` with `null` IDs (row order).
+   - Check: `trivia-desktop-build --dir` + `trivia-steam stage` pass with the five folders; `trivia-steam upload --dry-run` renders five more DLC depots with placeholder IDs. If a bundle folder without a pool, or a shipped bundle whose DLC isn''t entered yet, blocks a real upload (null IDs), that is generic: follow-up task in `plan 89: Builds, depots and upload (SW-10, SW-6)` (e.g. leave unentered bundles out of the build), not a fix here.
+2. **Store texts for the five topic DLCs** (after task 1; style guides `locales/style/<locale>.md` first)
+   - `plans/17a-store-page.md` "Free DLC": one block per bundle (`### \`stem\` (<en name>)` …): name, short description (≤ 300), "About This Content" in en, es, de, es-ES where it differs; per 17a''s fields: free, needs the base game, optional install, off by default (switched on in the question bundle step), plays alone or with the base questions, grows with updates, its achievement only if decision 368 says yes; no question count; content facts from the bundle''s `rule`, `description` and `categories.json`; never claims the bundle owns its topic (base keeps its own sport, film, history, science, geography questions, `plans/22-bundles.md`).
+   - Each language block marked "enter once `pool.<locale>.json` of the bundle ships".
+   - 17a intro line of "Free DLC" mentions the topic bundles; "After approval" lines for the five (capsules task 3).
+   - `pm decision add "DLC store texts approved? (topic bundles)"`, pattern of `decision 173: DLC store texts approved? (colombia)`; options `Approved as drafted` (recommended), `Approved with fixes (list them)`; fixes go into a follow-up task of this plan.
+3. **Capsules for the five topic DLCs** (after task 2''s names)
+   - `authoring/store/capsules.mjs` `dlcs()` already renders every non-base bundle from `bundles.json` `languages` + `names.<locale>.json`: render `dlc-<id>/<lang>/` for the four languages (es and es-ES share, like base); check the long names (e.g. de) fit every size; change the script only if one doesn''t fit.
+   - Optional motif: plan 185''s bundle icon (decision 367) on the DLC capsules, so five DLC tiles in the Steam library differ beyond the text; render both variants for `stem`, the developer picks.
+   - `pm decision add "Topic DLC capsules approved?"` listing `authoring/store/out/capsules/dlc-<id>/`; options `Approved as rendered (text only)` (recommended), `Approved with the bundle icon`, `Fixes (say which)`.
+4. **Content survey and price rows for the topic DLCs** (plan 131''s DLC pattern; before task 6)
+   - 17a "Content survey": a "DLC (topic bundles)" block: answers as the base minus Workshop; per bundle a scan of its approved pool at the task''s date (`history`: war, violence, genocide; `movies`: plot violence, horror, sexual content; `sports`: injuries, doping) with the borderline items named; AI line: the base''s DLC line ("Free DLC (`colombia`)" in "AI disclosure") reused, not a new text.
+   - 17a "Content survey and pricing: entry": a block per topic DLC app (its own survey if Steamworks has one; free, no price rows), like the `colombia` blocks.
+   - A borderline that changes an answer (a descriptor) → `pm decision add "Topic DLC content survey: <bundle> descriptors?"`, else no decision (the answers follow decision 181''s approved base answers).
+   - Re-scan is part of task 6''s checklist for a bundle that ships later than this task.
+5. **Topic bundle achievements in Steamworks** (pending on decision 368; drop with the decision cited if "No")
+   - Plan 18 "Achievements in Steamworks": `BUNDLE_STEM`, `BUNDLE_SPORTS`, `BUNDLE_HISTORY`, `BUNDLE_MOVIES`, `BUNDLE_GEOGRAPHY` rows "with its DLC", like `BUNDLE_COLOMBIA`; texts and icons from plan 185 task 5 (waits for it); `steam-achievements.vdf` tokens in the same order rule.
+   - No code here: `DLC_BUNDLES` gets an id only in task 7, once entered.
+6. **Topic DLCs entered in Steamworks? (checklist decision)** (after tasks 1–5; raised when at least one topic bundle has a pool for the next upload)
+   - `did=$(pm decision add "Topic bundle DLCs entered in Steamworks? IDs?" …)`, body per bundle that ships: DLC app (plan 18 DLC row, free, optional), depot linked, store page per 17a (approved languages with a pool only), capsules (task 3''s answer), content survey (task 4''s block), achievement `BUNDLE_<ID>` + icons + VDF re-upload (if task 5 ran), published; report DLC app ID + depot ID per bundle; bundles without a pool: "not yet".
+   - Options: `entered: <id> app … depot …, …` (recommended), `not yet`, `issues (rows)`.
+   - `pm task-pending-decision <task 7> $did`.
+7. **Record the topic DLC IDs** (pending on task 6''s decision)
+   - `steam.json` IDs of the entered bundles; `DLC_BUNDLES` + the entered `BUNDLE_<ID>`s (if task 5 ran); SW-7 rows `[x]` for them; 17a entry rows ticked; `pm decision consequences`.
+   - Bundles not yet entered: a new decision like task 6''s for them and a new record task pending on it (repeat until all five).
+   - Check: `npm run check`, `trivia-steam upload --dry-run` with the real IDs.
+
+## Out of scope
+- Rows, taxonomies, pools, translations (parts 1–3); icons, achievement ids/texts/icons in the game (`plan 185: Topic bundles in the game`); play-test and docs close-out (part 6).
+- Generic depot, stage, upload, store-page and survey mechanics (plans 89, 88, 131, 130): only follow-ups there if the five expose a gap.
+- Store screenshots or trailers for the DLCs; the demo app (`plan 178: Steamworks demo app and store`).
+
+## Done when
+- Each topic bundle with a pool has a free, optional DLC app with its depot, approved store texts per shipped language, approved capsules, a content survey and (per decision 368) its achievement, entered by the developer; IDs in `steam.json`; `trivia-steam upload --dry-run` renders its depot; bundles without a pool wait in a "not yet" decision.', 'Each of the five coming question sets (science and engineering, sports, history, movies, geography) is offered on Steam as its own free add-on that families can install if they want it. This work prepares everything Steam needs for each add-on: its entry and download package, its store page texts in Spanish, English and German, its store pictures, the age-rating questionnaire and, if decided, its achievement. The developer enters these values in Steam''s back office; the prepared checklists make sure nothing is forgotten and each add-on can go live as soon as its questions are ready.', '2026-10-21T20:25:32Z', 1619);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (188, 19, 'Content runs for the topic bundles', -120, 'Part 3 of `plan 155: masterplan` (milestone 19: topic question bundles): the recurring `qgen` runs that fill `stem`, `sports`, `history`, `movies`, `geography` to 2000 approved per question locale (`en`, `es`, `es-ES`, `de`). English drafting pairs (`run batch-<n>` + `QC batch-<n>`) per bundle, translation runs `tr-<L>-<n>` with `--bundle <id>` into es, es-ES, de, in the pattern of `plan 84: Release content runs` (chains 4, 5). Priority −120: below plan 84''s chains (−110) and plan 17''s base batches (−100), so base and regional runs go first unless the pace decision says otherwise. Owners: `plans/22-bundles.md` ("The first bundles": progress per bundle and locale), `plans/16-content-target.md` (cost).
+
+## Builds on (binding)
+- `plan 155: masterplan` "Builds on": bundles add, base keeps its same-topic questions (`plans/22-bundles.md`); `decision 267: Bundle tiles: question count strings` (2000 per non-base bundle); `decision 339: Demo bundle format: an id list of base questions, exported to app/data/demo/ pools, questions stay in base` (no topic bundle in the demo); launch (milestone 11) doesn''t wait: what''s ready ships, the rest in content patches (`plan 96: Content updates as patches (ST-5)`; what ships is part 6''s).
+- D-36 / AGENTS.md "Making questions": workers run only `qgen batch --bundle <id>` and `qgen batch --translate <L> --bundle <id>` (RUNBOOK unchanged); no prompt, pool, media or `qgen.py` changes in a run or QC task. Only exception: a locale joins a bundle''s `languages` row (below), owned by this plan (`plan 186: The five topic bundles: rows and taxonomies` "Hands over to").
+- `decision 236: English-first drafting for base: what drives drafting and which locales steer it` / `decision 235: Source locale per question and translations from either source (English-first base)`: theme sources in `en`; a locale''s count = sources + playing translations; English drafting aims at the largest locale gap (plan 184 task 3).
+- `decision 350: Overlap rate in drafting: which changes?`: topic bundles never re-ask base (plan 184 task 4, `base-related.json`).
+- Plan 84 rules, unchanged here: decision 2 / D-56 / decision 15 (30-question blind spot check, ≥ 90 % agreement; below it only feeds QC step 4); decision 3 (`qgen rework` once after each drafting QC); `decision 221: How does an outside native reviewer reach the review tool?` (offline sheet when the reviewer isn''t the developer); translation runs: no spot check, no QC task, no `qgen health ack` unless decision 45''s thresholds stop a run (exit 2); cost is information only (milestone 9, developer 2026-10-15): notes carry `qgen report --cost`, no budget gates.
+- Needs before the first start: `plan 184: Pipeline for topic bundles` (theme targets, per-locale gap aiming, cross-bundle overlap, `--cost` theme rows, end-to-end check: `task 1626`–`task 1630`); per bundle, plan 186''s taxonomy task for it applied (`stem taxonomy` … `geography taxonomy`; subjects may change, `pm show p186`).
+- `movies` media: plan 184 task 7 (`task 1631: Media for movies and sports: axes template and docs`): a health stop for media share under 15 % in a `movies` batch is exit 2 → the "Continue …?" decision names that plan''s per-bundle-minimum vs. more-`photo` question.
+
+## Task shapes
+- **Drafting pair** per bundle: `run batch-<n> (<id>)`: `nix develop -c qgen batch --bundle <id>` (RUNBOOK steps 1–5; English); after the run rename both tasks to the real batch name `qgen` printed (shared counter with plans 17 and 84). `QC batch-<n> (<id>)`: `authoring/QC.md` steps 1–4: `pm decision add "Spot check batch-<n> (<id>) done?"` (native English speaker: the developer, or an outside reviewer via `qgen spotcheck export`; never an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n> (<id>): which changes?"`, change tasks (theme pipeline findings in plan 184 while it has open tasks, else a new plan in milestone 19; the rest in plan 17 at 650 like base''s QC); decision 3''s `qgen rework` once; note QC numbers and `qgen report --cost` (per bundle).
+- **Translation run** per bundle and locale (es, es-ES, de): `run tr-<L>-<n> (<id>)`: `nix develop -c qgen batch --translate <L> --bundle <id>`; rename to the real run name; note the "Done:" line, report path and the numbers of `authoring/reports/<run>.md` and `qgen report --cost` (selected, translated, approved, needs_work, rejected, not travelling, $ per approved translation, audit agreement). needs_work: nothing (picked again by the next run).
+- One open pair per bundle, one open translation run per bundle and locale.
+- Every body repeats the pm-run rules (below) and names its bundle and run.
+
+## Chain per bundle
+1. **Start task** `Topic runs <id>: start` (−120): checks the prerequisites above and the pace decision''s answer; any missing → `pm task-pending-decision` on the decision blocking it (the bundle''s taxonomy decision, plan 184''s or 186''s earliest open decision), stop. Then adds the first drafting pair.
+2. **Each drafting QC**, after its own steps, first that applies:
+   - Translations: per L in es, es-ES, de with no open `run tr-<L>-<n> (<id>)` and ≥ 50 approved en sources of the bundle not yet translated into L → adds that run.
+   - `qgen report --bundle <id>` supply block shows no English draft gap left (every locale''s deficit covered by sources and untranslated sources at yield) → no next pair: notes drafting done in `plans/22-bundles.md`; under a staggered pace (below), re-adds the next bundle''s start task.
+   - The pace decision''s numbers look far off (the developer''s review time or $ per approved well above its projection) → `pm decision add` asking the developer instead of the next pair.
+   - Else the next pair (same bodies, next batch number).
+3. **Each translation run**, after the run:
+   - The run''s export wrote `app/data/bundles/<id>/pool.<L>.json` and `<L>` isn''t in the bundle''s `languages` (`app/data/bundles.json`) → add it (row edit only), `qgen validate` clean (`bundle_problems`), stage the file.
+   - `qgen report --bundle <id> --locale <L>` at 2000 (every level at the bundle''s `targets.json`) → no next run; `plans/22-bundles.md` progress line; if all four locales are at 2000: the bundle is done there.
+   - Else, ≥ 50 approved en sources not yet in L left → adds `run tr-<L>-<n+1> (<id>)`; fewer → nothing (the next drafting QC re-adds it).
+   - Each run adds a progress line (approved per locale) for the bundle in `plans/22-bundles.md`.
+
+## Tasks (for the split)
+1. **Pace and order of the topic bundles: decision** (−120)
+   - Needs `task 1629: qgen report --cost: rows per theme bundle and locale` done; else pend on the decision blocking it, stop.
+   - `pm decision add "Topic bundles: pace and order of the content runs"` (intro for an outsider): `qgen report --cost` projections for 5 × 2000 × 4 locales (en drafting, es/es-ES/de translation; theme rows, else base''s rates), expected drafting pairs and spot checks per bundle (2000 / approved per English base batch, batches 9–11), the developer''s review time per 100 (`plans/15c-regional-questions.md`, colombia''s QC), against what''s still open: base (`qgen report --exit-check`, plan 17) and plan 84''s regional and translation chains.
+   - Options (recommended first, numbers decide the recommendation): (1) one topic bundle at a time below base and regional runs (−120), order `stem`, `sports`, `history`, `geography`, `movies` (movies last for its low media share), the next starts when the previous one''s drafting ends, its translations keep running; (2) all five at once, one pair each, −120; (3) two at a time; (4) none until base''s exit check and plan 84''s regional chains are done; your own pace or order.
+   - Pending on it; on the answer: record consequences; for a staggered answer, drop the start tasks that don''t start yet (note: "re-added by the closing drafting QC of <previous bundle>"), set start-task priorities if the answer moves them (`pm task set`); finish.
+2. **Topic runs `stem`: start** (−120)
+3. **Topic runs `sports`: start** (−120)
+4. **Topic runs `history`: start** (−120)
+5. **Topic runs `movies`: start** (−120)
+6. **Topic runs `geography`: start** (−120)
+- Start tasks 2–6: body per "Chain per bundle" step 1, with the full pair bodies and pm-run rules to copy; each `pm task-pending-decision` on task 1''s decision once it exists (the split adds task 1 first; a start task that runs before the decision exists pends on it the moment task 1 raises it: task 1 links every start task to its decision).
+- Later pairs, translation runs and re-added start tasks are added by the run and QC tasks, not the split.
+
+## pm-run rules (repeat in every body; plan 84, plan 17 "Batch tasks under pm run")
+- D-36: no prompt, pool, media or `qgen.py` changes; findings become decisions or tasks in their own plans (184 or new).
+- `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints (plus `app/data/bundles.json` after a `languages` edit); don''t commit (pm commits as "task N: …").
+- Exit 75, exit 2 (a health stop: the decision asks the developer for `qgen health ack`), any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> (<id>)…?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
+- Note on done: the "Done:" line and report path (run tasks), or the QC numbers (approved, rejected, needs_work, agreement, $ per approved, review time per 100).
+
+## Done when
+- Each of the five at 2000 approved in `en`, `es`, `es-ES`, `de` (`qgen report --bundle <id> --locale <L>`), its `languages` listing all four, progress and cost in `plans/22-bundles.md` and `plans/16-content-target.md`; may land after launch, in content patches.
+
+## Out of scope
+- Rows, taxonomies, `question-axes.json` (plan 186); pipeline and prompt changes (plan 184 or new plans); game, Steam DLC and store (parts 4, 5); what ships when, play-test (part 6); base and regional runs (plans 17, 84).', 'The five new optional question packs (science and maths, sports, history, movies, geography) each need 2000 checked questions in English, Latin American Spanish, Spain''s Spanish and German. This is the steady stream of writing runs that fills them: English questions written in batches and spot-checked by a person, then machine-translated into the other three languages. Because it competes with the main pack and the country packs for the same machine time and the developer''s review time, the developer first chooses how fast and in what order the five packs are filled.', '2026-10-21T20:27:06Z', 1617);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -40796,11 +40915,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Achievements for theme bundles: decide or raise a decision; Steamworks entries are part 5''s.
 - Tasks can use a throw-away theme bundle row until part 2''s rows land; the gallery review set (`trivia-gallery --set task-<id>`) of the Bundles screen with the five tiles waits for part 2''s rows.
 - Work tree `app`; strings per `locales/style/<locale>.md`, `PLACEHOLDER(<task id>)` for unfinished parts.', '2026-10-21T20:20:43Z', '2026-10-21T20:23:13Z', 1614, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1619, 155, 'write plan: Steam DLC and store for the topic bundles', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of `plan 155: masterplan` ("Steam DLC and store"): `pm plan list` first, then `pm plan add 19 "Steam DLC and store for the topic bundles" --priority 280 --intro "…"` with the full body, per part 5''s bullets. Priority 280: after `plan 88: Store page and AI disclosure (PUB-8, LUI-6)` (300).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1619, 155, 'write plan: Steam DLC and store for the topic bundles', 'plan', 'done', 1000, '2026-10-21, plan 187: Steam DLC and store for the topic bundles (pm only, no files)', 'Write the plan for part 5 of `plan 155: masterplan` ("Steam DLC and store"): `pm plan list` first, then `pm plan add 19 "Steam DLC and store for the topic bundles" --priority 280 --intro "…"` with the full body, per part 5''s bullets. Priority 280: after `plan 88: Store page and AI disclosure (PUB-8, LUI-6)` (300).
 
 - Extend the generic per-bundle steps of `plan 130: Steamworks app configuration (SW-7)`, `plan 89: Builds, depots and upload (SW-10, SW-6)` (`build/pack-media.json`) and plan 88''s DLC pattern; only what is specific to the five; free DLC per `decision 66: Price model (OQ-33): how is the game sold on Steam?`, pool per bundle per `decision 112: Pack layout: a pool file per bundle (optional install)`.
 - Values the developer enters in Steamworks (DLC app IDs, depots, store texts per store language, capsules, achievements if part 4 adds them): checklist decisions for the developer, tasks pending on them.
-- Work tree `app`.', '2026-10-21T20:20:43Z', NULL, 1614, 0, NULL, 'app');
+- Work tree `app`.', '2026-10-21T20:20:43Z', '2026-10-21T20:25:41Z', 1614, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1620, 155, 'write plan: Topic bundles close-out', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of `plan 155: masterplan` ("Close-out"): `pm plan list` first, then `pm plan add 19 "Topic bundles close-out" --priority 100 --intro "…"` with the full body, per part 6''s bullets.
 
 - Play-test decision (family session with each topic bundle on, alone and with base, per launch language with a pool), pending on parts 3 and 4.
@@ -40894,8 +41013,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - AGENTS.md / `directory.md` only if a listed command or top-level entry changed.
 
 Done when: docs match the code as merged; `npm run check`, `qgen validate` pass.', '2026-10-21T20:23:37Z', NULL, 1621, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1633, 186, 'create tasks for plan 186: The five topic bundles: rows and taxonomies', 'split', 'open', 1000, NULL, 'Split plan 186 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-21T20:24:24Z', NULL, 1616, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1633, 186, 'create tasks for plan 186: The five topic bundles: rows and taxonomies', 'split', 'done', 1000, '2026-10-21, tasks.sql only: tasks 1643–1649 for plan 186', 'Split plan 186 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-21T20:24:24Z', '2026-10-21T20:26:57Z', 1616, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1634, 185, 'Bundle icon field: five topic symbols, icon list, loader, selector, mod and qgen checks', 'work', 'open', NULL, NULL, 'Item 1 of `plan 185: Topic bundles in the game`; binding: `decision 367: Topic bundle icons: an optional icon field in bundles.json, pin as fallback`.
 
 - Symbols in `app/client/src/game/Icon.svelte`, house style of the joker symbols (`decision 209: Joker symbols for the kept names?`): flask (`stem`), ball (`sports`), scroll (`history`), film reel (`movies`: existing `film` if it reads as a reel at tile size, else new `reel`), globe with meridians (`geography`: existing `globe` is the language fallback icon (decision 186); a distinct variant, or reuse it; the gallery review of this plan judges).
@@ -40970,6 +41089,131 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `rg` old wording (flat category grid, "pin" as the only non-region icon, region-only `BUNDLE_*`) over `.md` and comments (decision 200).
 
 Done when: docs match the code; `npm run check`, `qgen validate` pass.', '2026-10-21T20:25:12Z', NULL, 1623, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1642, 187, 'create tasks for plan 187: Steam DLC and store for the topic bundles', 'split', 'open', 1000, NULL, 'Split plan 187 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-21T20:25:32Z', NULL, 1619, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1643, 186, 'Rows decision for the five topic bundles', 'work', 'open', 710, NULL, 'Raise the decision on the names, descriptions and membership rules of the five topic bundles `stem`, `sports`, `history`, `movies`, `geography` (`plan 186: The five topic bundles: rows and taxonomies`, task 1). No file writes: the rows are written by `task 1644: Create the five topic bundles`. Priority 710: needs nothing from `plan 184: Pipeline for topic bundles`, so the answer can come while that plan runs.
+
+Read first:
+- `app/client/src/locales/style/{es,es-ES,en,de}.md` (glossaries, bad patterns), `app/data/bundles.json`, `app/data/names.{en,de}.json` (how regional rows carry en/de names and descriptions), `plans/22-bundles.md`.
+- Base''s `categories.json`: its categories and subcategories on the five topics, with approved counts from `qgen report`, to avoid name clashes.
+- Binding: `decision 50: Play-test of age groups and bundles` item 2 ("question bundle", never «Temas»), `decision 261: Name of the base bundle per UI language (not «Basics»)`, `decision 18: Which new base subcategories?` (fan-level detail is the topic bundles'' room), `decision 236: English-first drafting for base: what drives drafting and which locales steer it` (theme sources in `en`).
+
+Decision: `pm decision add "Topic bundles: names, descriptions and rules" --intro … --body … --option …`, a table per bundle:
+- Spanish `name` and `description` (es; es-ES override only where the glossary differs), en and de names (and descriptions where the game shows them per UI language).
+- English `rule`, one sentence plus exclusions, like the regional rows: more and deeper questions on the topic at every difficulty, kids to adults, answerable by families anywhere whatever their language; fan-level detail allowed; the famous core (what base asks) stays in `base`; things only one country knows stay in that country''s regional bundle.
+- Boundaries, one question one bundle, by what it tests: history of science, inventions, space race → `stem`; of a sport, Olympics, World Cups → `sports`; of film → `movies`; historical borders, empires, old place names → `history`; present-day places, maps, flags, capitals, landforms, climate zones → `geography`; geology, weather physics, ecology → `stem`.
+- `movies` scope as a sub-question: film only (recommended; animated films included; TV stays base''s) / film plus TV series.
+- Names in the "question bundle" term family, no «Temas», no clash with base''s own category names on the same topic where the style guide offers an alternative (the game''s category joker display is `plan 185: Topic bundles in the game`''s).
+- Options: recommended table first, alternatives, "your own wording" last.
+
+Then:
+- `pm task-pending-decision 1643 <decision>` and `pm task-pending-decision 1644 <decision>`; stop.
+- On the answer (next run): `pm decision consequences <decision> "…"` (rows written by `task 1644: Create the five topic bundles`), then done.', '2026-10-21T20:26:02Z', NULL, 1633, 0, 'opus', 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1644, 186, 'Create the five topic bundles', 'work', 'open', NULL, NULL, 'Write the five `kind: theme` rows per the answer of the decision "Topic bundles: names, descriptions and rules" raised by `task 1643: Rows decision for the five topic bundles` (`plan 186: The five topic bundles: rows and taxonomies`, task 2). No questions, no taxonomy.
+
+Before starting:
+- `task 1643: Rows decision for the five topic bundles` done and its decision answered; `task 1626: Targets for theme bundles: bundle new --kind theme, validate rules` done (`pm show`). If not: `pm task-pending-decision <this task> <the decision it or its prerequisite waits on>` and stop without closing.
+
+Work:
+- `qgen bundle new <id> --kind theme --name … --description … --rule …` per bundle in the order `stem`, `sports`, `history`, `movies`, `geography`, texts exactly as answered (`movies` rule per the scope answered).
+- Check each `targets.json` entry: 2000 (`decision 267: Bundle tiles: question count strings`), base''s difficulty mix scaled; `languages: ["en"]` (es, es-ES, de join later with their pools, the content-runs plan''s step).
+- `icon` (`decision 367: Topic bundle icons: an optional icon field in bundles.json, pin as fallback`): only if `task 1634: Bundle icon field: five topic symbols, icon list, loader, selector, mod and qgen checks` is done; then the icons it lists. Else leave it out.
+- en/de names (and descriptions) into `app/data/names.en.json`, `names.de.json`, es-ES override where answered, the way the regional rows have them.
+- `plans/22-bundles.md` "The first bundles": a row per bundle (id, `theme`, names, rule, `languages`, target; taxonomy cell "pending", filled by the five taxonomy tasks of this plan).
+
+Done when: `qgen validate` clean (missing pools are warnings), `npm run check`, `npm test`, `npm run build` pass.', '2026-10-21T20:26:18Z', NULL, 1633, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1645, 186, 'stem taxonomy', 'work', 'open', NULL, NULL, 'Propose, get approved and apply the taxonomy of the topic bundle `stem` (`plan 186: The five topic bundles: rows and taxonomies`). No questions (`qgen batch` is the content-runs plan''s); `qgen taxonomy` and `--apply` are setup commands, not pipeline steps.
+
+Before starting (`pm show`):  `task 1644: Create the five topic bundles`, `task 1625: Theme taxonomy prompt: apply per the developer''s answer` (theme taxonomy applied) and `task 1628: Cross-bundle overlap: theme concepts and avoid lists see base''s related subcategories` (overlap wired) done. If one isn''t: `pm task-pending-decision <this task> <the decision it waits on>` and stop without closing.
+
+Propose:
+- `qgen taxonomy --bundle stem` → proposal in `work/taxonomy/stem/`; ≈ 50 subcategories at ≈ 40 approved each (target 2000); each subcategory''s `base_related` slugs.
+- Scope: natural sciences, engineering, math; also history of science, inventions, space race, geology, weather physics, ecology.
+- Check before raising: no subcategory that re-asks a base subcategory at the same depth (`decision 350: Overlap rate in drafting: which changes?`); none on another topic bundle''s ground, per the boundaries in the bundles'' rules (`app/data/bundles.json`); kids-level subcategories present at every difficulty; slugs unique, en names plain. Rerun or trim by hand in the proposal, as the regional taxonomy tasks did.
+
+Decision: `pm decision add "stem taxonomy: categories and subcategories"` in the pattern of `decision 287: usa taxonomy: categories and subcategories`: rule, target, counts, the list (category slug, en name, count, origin; subcategory slug, en name, `base_related`), path of the full proposal; options apply / apply with changes / redo. Make `task 1646: sports taxonomy` pending on it too, so it is checked against this applied list.
+`pm task-pending-decision <this task> <decision>`, stop.
+
+On the answer:
+- `qgen taxonomy --bundle stem --apply` (with the answered changes; es/de names drafted on apply), `base-related.json` written.
+- `plans/22-bundles.md` "The first bundles": `stem`''s taxonomy cell.
+- `pm decision consequences <decision> "…"`.
+
+Done when: `qgen validate` clean, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-21T20:26:28Z', NULL, 1633, 0, 'opus', 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1646, 186, 'sports taxonomy', 'work', 'open', NULL, NULL, 'Propose, get approved and apply the taxonomy of the topic bundle `sports` (`plan 186: The five topic bundles: rows and taxonomies`). No questions (`qgen batch` is the content-runs plan''s); `qgen taxonomy` and `--apply` are setup commands, not pipeline steps.
+
+Before starting (`pm show`): `task 1645: stem taxonomy`, `task 1644: Create the five topic bundles`, `task 1625: Theme taxonomy prompt: apply per the developer''s answer` (theme taxonomy applied) and `task 1628: Cross-bundle overlap: theme concepts and avoid lists see base''s related subcategories` (overlap wired) done. If one isn''t: `pm task-pending-decision <this task> <the decision it waits on>` and stop without closing.
+
+Propose:
+- `qgen taxonomy --bundle sports` → proposal in `work/taxonomy/sports/`; ≈ 50 subcategories at ≈ 40 approved each (target 2000); each subcategory''s `base_related` slugs.
+- Scope: football clubs, leagues, legendary players by sport (`decision 18: Which new base subcategories?`), rules and records, history of sports, Olympics, World Cups, across sports and world regions, not football-only.
+- Check before raising: no subcategory that re-asks a base subcategory at the same depth (`decision 350: Overlap rate in drafting: which changes?`); none on another topic bundle''s ground: against `stem`''s applied list, per the boundaries in the bundles'' rules (`app/data/bundles.json`); kids-level subcategories present at every difficulty; slugs unique, en names plain. Rerun or trim by hand in the proposal, as the regional taxonomy tasks did.
+
+Decision: `pm decision add "sports taxonomy: categories and subcategories"` in the pattern of `decision 287: usa taxonomy: categories and subcategories`: rule, target, counts, the list (category slug, en name, count, origin; subcategory slug, en name, `base_related`), path of the full proposal; options apply / apply with changes / redo. Make `task 1647: history taxonomy` pending on it too, so it is checked against this applied list.
+`pm task-pending-decision <this task> <decision>`, stop.
+
+On the answer:
+- `qgen taxonomy --bundle sports --apply` (with the answered changes; es/de names drafted on apply), `base-related.json` written.
+- `plans/22-bundles.md` "The first bundles": `sports`''s taxonomy cell.
+- `pm decision consequences <decision> "…"`.
+
+Done when: `qgen validate` clean, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-21T20:26:47Z', NULL, 1633, 0, 'opus', 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1647, 186, 'history taxonomy', 'work', 'open', NULL, NULL, 'Propose, get approved and apply the taxonomy of the topic bundle `history` (`plan 186: The five topic bundles: rows and taxonomies`). No questions (`qgen batch` is the content-runs plan''s); `qgen taxonomy` and `--apply` are setup commands, not pipeline steps.
+
+Before starting (`pm show`): `task 1646: sports taxonomy`, `task 1644: Create the five topic bundles`, `task 1625: Theme taxonomy prompt: apply per the developer''s answer` (theme taxonomy applied) and `task 1628: Cross-bundle overlap: theme concepts and avoid lists see base''s related subcategories` (overlap wired) done. If one isn''t: `pm task-pending-decision <this task> <the decision it waits on>` and stop without closing.
+
+Propose:
+- `qgen taxonomy --bundle history` → proposal in `work/taxonomy/history/`; ≈ 50 subcategories at ≈ 40 approved each (target 2000); each subcategory''s `base_related` slugs.
+- Scope: periods and regions of the world in balance, not Europe-only; historical borders, empires, old place names; not the history of science (`stem`), of sports or of film.
+- Check before raising: no subcategory that re-asks a base subcategory at the same depth (`decision 350: Overlap rate in drafting: which changes?`); none on another topic bundle''s ground: against the applied lists of `stem`, `sports`, per the boundaries in the bundles'' rules (`app/data/bundles.json`); kids-level subcategories present at every difficulty; slugs unique, en names plain. Rerun or trim by hand in the proposal, as the regional taxonomy tasks did.
+
+Decision: `pm decision add "history taxonomy: categories and subcategories"` in the pattern of `decision 287: usa taxonomy: categories and subcategories`: rule, target, counts, the list (category slug, en name, count, origin; subcategory slug, en name, `base_related`), path of the full proposal; options apply / apply with changes / redo. Make `task 1648: movies taxonomy` pending on it too, so it is checked against this applied list.
+`pm task-pending-decision <this task> <decision>`, stop.
+
+On the answer:
+- `qgen taxonomy --bundle history --apply` (with the answered changes; es/de names drafted on apply), `base-related.json` written.
+- `plans/22-bundles.md` "The first bundles": `history`''s taxonomy cell.
+- `pm decision consequences <decision> "…"`.
+
+Done when: `qgen validate` clean, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-21T20:26:47Z', NULL, 1633, 0, 'opus', 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1648, 186, 'movies taxonomy', 'work', 'open', NULL, NULL, 'Propose, get approved and apply the taxonomy of the topic bundle `movies` (`plan 186: The five topic bundles: rows and taxonomies`). No questions (`qgen batch` is the content-runs plan''s); `qgen taxonomy` and `--apply` are setup commands, not pipeline steps.
+
+Before starting (`pm show`): `task 1647: history taxonomy`, `task 1644: Create the five topic bundles`, `task 1625: Theme taxonomy prompt: apply per the developer''s answer` (theme taxonomy applied) and `task 1628: Cross-bundle overlap: theme concepts and avoid lists see base''s related subcategories` (overlap wired) done. If one isn''t: `pm task-pending-decision <this task> <the decision it waits on>` and stop without closing.
+
+Propose:
+- `qgen taxonomy --bundle movies` → proposal in `work/taxonomy/movies/`; ≈ 50 subcategories at ≈ 40 approved each (target 2000); each subcategory''s `base_related` slugs.
+- Scope per the answered `movies` scope of the decision "Topic bundles: names, descriptions and rules" (`task 1643: Rows decision for the five topic bundles`): genres, eras, film countries beyond Hollywood, animation, awards, people. The proposal says which subcategories have free media (people, places, objects; `task 1631: Media for movies and sports: axes template and docs`) and which are text-only. `movies`'' `question-axes.json` is the follow-up task that task 1631 adds to this plan; don''t write it here.
+- Check before raising: no subcategory that re-asks a base subcategory at the same depth (`decision 350: Overlap rate in drafting: which changes?`); none on another topic bundle''s ground: against the applied lists of `stem`, `sports`, `history`, per the boundaries in the bundles'' rules (`app/data/bundles.json`); kids-level subcategories present at every difficulty; slugs unique, en names plain. Rerun or trim by hand in the proposal, as the regional taxonomy tasks did.
+
+Decision: `pm decision add "movies taxonomy: categories and subcategories"` in the pattern of `decision 287: usa taxonomy: categories and subcategories`: rule, target, counts, the list (category slug, en name, count, origin; subcategory slug, en name, `base_related`), path of the full proposal; options apply / apply with changes / redo. Make `task 1649: geography taxonomy` pending on it too, so it is checked against this applied list.
+`pm task-pending-decision <this task> <decision>`, stop.
+
+On the answer:
+- `qgen taxonomy --bundle movies --apply` (with the answered changes; es/de names drafted on apply), `base-related.json` written.
+- `plans/22-bundles.md` "The first bundles": `movies`''s taxonomy cell.
+- `pm decision consequences <decision> "…"`.
+
+Done when: `qgen validate` clean, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-21T20:26:47Z', NULL, 1633, 0, 'opus', 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1649, 186, 'geography taxonomy', 'work', 'open', NULL, NULL, 'Propose, get approved and apply the taxonomy of the topic bundle `geography` (`plan 186: The five topic bundles: rows and taxonomies`). No questions (`qgen batch` is the content-runs plan''s); `qgen taxonomy` and `--apply` are setup commands, not pipeline steps.
+
+Before starting (`pm show`): `task 1648: movies taxonomy`, `task 1644: Create the five topic bundles`, `task 1625: Theme taxonomy prompt: apply per the developer''s answer` (theme taxonomy applied) and `task 1628: Cross-bundle overlap: theme concepts and avoid lists see base''s related subcategories` (overlap wired) done. If one isn''t: `pm task-pending-decision <this task> <the decision it waits on>` and stop without closing.
+
+Propose:
+- `qgen taxonomy --bundle geography` → proposal in `work/taxonomy/geography/`; ≈ 50 subcategories at ≈ 40 approved each (target 2000); each subcategory''s `base_related` slugs.
+- Scope: continents, landforms, waters, cities, flags and maps beyond base''s capitals; present-day places only (historical borders are `history`''s; geology, weather physics are `stem`''s).
+- Check before raising: no subcategory that re-asks a base subcategory at the same depth (`decision 350: Overlap rate in drafting: which changes?`); none on another topic bundle''s ground: against the applied lists of `stem`, `sports`, `history`, `movies`, per the boundaries in the bundles'' rules (`app/data/bundles.json`); kids-level subcategories present at every difficulty; slugs unique, en names plain. Rerun or trim by hand in the proposal, as the regional taxonomy tasks did.
+
+Decision: `pm decision add "geography taxonomy: categories and subcategories"` in the pattern of `decision 287: usa taxonomy: categories and subcategories`: rule, target, counts, the list (category slug, en name, count, origin; subcategory slug, en name, `base_related`), path of the full proposal; options apply / apply with changes / redo.
+`pm task-pending-decision <this task> <decision>`, stop.
+
+On the answer:
+- `qgen taxonomy --bundle geography --apply` (with the answered changes; es/de names drafted on apply), `base-related.json` written.
+- `plans/22-bundles.md` "The first bundles": `geography`''s taxonomy cell.
+- `pm decision consequences <decision> "…"`.
+
+Done when: `qgen validate` clean, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-21T20:26:48Z', NULL, 1633, 0, 'opus', 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1650, 188, 'create tasks for plan 188: Content runs for the topic bundles', 'split', 'open', 1000, NULL, 'Split plan 188 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-21T20:27:06Z', NULL, 1617, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -47732,9 +47976,11 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1698, 1618, '2026-10-21T20:20:47Z', '2026-10-21T20:23:22Z', 'done', NULL, 0, '19cb02bf7d4e76767cb8ab3efe3c2f859a865d3c', 'app', 'claude-opus-5-5', 'eb56a20f-3b2a-443f-b6eb-b5f053472905', NULL, 19, 38, 11375, 1056838, 65227, 0.9608355999999999, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1699, 1621, '2026-10-21T20:22:43Z', '2026-10-21T20:23:52Z', 'done', NULL, 0, 'c93567180987bedde1df8ceb360e3d50d521f718', NULL, 'claude-opus-5-5', '74a7e72e-d837-464a-9641-b5c7063a22b3', NULL, 7, 14, 7181, 269298, 38372, 0.50451160000000006, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1700, 1616, '2026-10-21T20:22:59Z', '2026-10-21T20:24:35Z', 'done', NULL, 0, 'c93567180987bedde1df8ceb360e3d50d521f718', 'questions', 'claude-opus-5-5', 'e72e91f7-c537-4be3-82f7-71bd6fa9f90a', NULL, 12, 24, 7783, 526743, 49338, 0.6558086, 344501);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1701, 1619, '2026-10-21T20:23:22Z', NULL, 'running', NULL, NULL, 'c93567180987bedde1df8ceb360e3d50d521f718', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1701, 1619, '2026-10-21T20:23:22Z', '2026-10-21T20:25:54Z', 'done', NULL, 0, 'c93567180987bedde1df8ceb360e3d50d521f718', 'app', 'claude-opus-5-5', 'cf4fb1b4-3d91-4a1f-8f44-bc711d9c9e1a', NULL, 15, 28, 12873, 995675, 93448, 1.2042910000000002, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1702, 1623, '2026-10-21T20:23:52Z', '2026-10-21T20:25:22Z', 'done', NULL, 0, '7c206b1d5b9a0f296904f92320dcd9912f4c6cd8', NULL, 'claude-opus-5-5', '1d7b35ee-3157-4033-b8f5-bb2fe9253290', NULL, 10, 20, 8970, 429349, 45127, 0.6263658, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1703, 1617, '2026-10-21T20:24:35Z', NULL, 'running', NULL, NULL, '7c206b1d5b9a0f296904f92320dcd9912f4c6cd8', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1704, 1633, '2026-10-21T20:25:22Z', '2026-10-21T20:27:07Z', 'done', NULL, 0, 'eb29456e695d39815ecb0842090cd7169f427540', NULL, 'claude-opus-5-5', 'b97beebb-16e5-4569-b3ee-e4b2116fe655', NULL, 13, 26, 10050, 584079, 44900, 0.67711979999999983, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1705, 1620, '2026-10-21T20:25:54Z', NULL, 'running', NULL, NULL, 'eb29456e695d39815ecb0842090cd7169f427540', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 344501);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
