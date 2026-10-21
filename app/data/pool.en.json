@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "4facd381",
+  "hash": "aac2de6a",
   "questions": [
     {
       "id": "q-0016",
@@ -1053,6 +1053,74 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Shixart1985",
         "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0110",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "language",
+      "bundle": "base",
+      "description": "A letter that American tourists hunt for on their keyboard and never find.",
+      "question": "Which letter does the Spanish alphabet have that the English alphabet doesn't?",
+      "answer": "Ñ",
+      "wrong_answers": [
+        "K",
+        "W",
+        "X"
+      ],
+      "hints": [
+        "People love it so much that it became a symbol of the Spanish language.",
+        "In English, its sound takes two letters, like the “ny” in “canyon”.",
+        "It wears a small wavy line on top."
+      ],
+      "fun_fact": "The little wavy line on top of the ñ is called a tilde.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Blocks%2C_alphabet_%28AM_1990.255-2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlocks%2C_alphabet_%28AM_1990.255-2%29.jpg",
+        "credit": "CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": null,
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-0116",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "literature",
+      "bundle": "base",
+      "description": "A knight once picked a fight with some windmills, and lost.",
+      "question": "Who wrote “Don Quixote”?",
+      "answer": "Miguel de Cervantes",
+      "wrong_answers": [
+        "Lope de Vega",
+        "Federico García Lorca",
+        "Gabriel García Márquez"
+      ],
+      "hints": [
+        "He was Spanish.",
+        "He lost the use of one hand in a battle.",
+        "He is nicknamed “the One-Handed Man of Lepanto”."
+      ],
+      "fun_fact": "Spanish Language Day on April 23 honors Cervantes: he died on the 22nd and was buried on the 23rd.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Moulins_La_Mancha.jpg/3840px-Moulins_La_Mancha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMoulins_La_Mancha.jpg",
+        "credit": "Jebulon · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jebulon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jebulon"
       },
       "background": null
     },
@@ -7581,6 +7649,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Sharon Hahn Darlin",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-1412",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "architectural-styles",
+      "bundle": "base",
+      "description": "A dome so tightly sealed that even the world's best locksmith would give up.",
+      "question": "I'm a solid dome: no one can go inside me, and pilgrims walk around me. The first ones held the ashes of a great teacher. Whose?",
+      "answer": "Buddha",
+      "wrong_answers": [
+        "Confucius",
+        "Laozi",
+        "Zoroaster"
+      ],
+      "hints": [
+        "He was a spiritual teacher born about 2,500 years ago in what is now Nepal.",
+        "His followers pray alongside monks in orange robes.",
+        "Many statues show him sitting cross-legged in meditation, with a calm smile."
+      ],
+      "fun_fact": "The Great Stupa at Sanchi, in India, was begun in the 3rd century BC and is one of the oldest stone buildings in the country.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Eastern_Gateway_of_The_Great_stupa%2C_Sanchi_02.jpg/3840px-Eastern_Gateway_of_The_Great_stupa%2C_Sanchi_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEastern_Gateway_of_The_Great_stupa%2C_Sanchi_02.jpg",
+        "credit": "Rohit Sharma · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rohit Sharma",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rohit14400"
       },
       "background": null
     },

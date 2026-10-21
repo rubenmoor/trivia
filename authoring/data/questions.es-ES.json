@@ -617,7 +617,7 @@
         "Lo llaman «el Manco de Lepanto»."
       ],
       "description": "Un caballero peleó contra unos molinos de viento y perdió.",
-      "fun_fact": "El Día del Libro, el 23 de abril, se celebra en esa fecha en recuerdo de la muerte de Cervantes.",
+      "fun_fact": "El Día del Idioma Español, el 23 de abril, recuerda a Cervantes: murió el 22 y lo enterraron el 23.",
       "difficulty": 6,
       "status": "approved",
       "batch": "tr-es-ES-2",
@@ -630,7 +630,7 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "source_hash": "d82c965632a5"
+      "source_hash": "8ffa5282cce0"
     },
     {
       "id": "q-0121",
@@ -4714,7 +4714,7 @@
         "Zoroastro"
       ],
       "hints": [
-        "Es un maestro espiritual nacido hace unos 2500 años en el norte de la India.",
+        "Es un maestro espiritual nacido hace unos 2500 años en lo que hoy es Nepal.",
         "Sus seguidores rezan con monjes de túnicas naranjas.",
         "Muchas de sus estatuas lo muestran sentado y meditando con una sonrisa."
       ],
@@ -4732,7 +4732,7 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "source_hash": "b6fbfefcbbc3"
+      "source_hash": "e70093661ca0"
     },
     {
       "id": "q-1420",
@@ -5291,16 +5291,26 @@
       "description": "El secreto de unas pestañas que parecen de jirafa.",
       "fun_fact": "El perfumista Eugène Rimmel hizo tan famosa su máscara de pestañas que su apellido se convirtió en palabra.",
       "difficulty": 3,
-      "status": "approved",
+      "status": "rejected",
       "batch": "tr-es-ES-2",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
+        "decision": "rejected",
+        "feedback": "Doesn't travel (about_language): the clue relies on «rímel» (Eugène Rimmel), tr-de-2 confirmed it; Spanish source flagged translatable: false.",
+        "problems": [
+          "other"
+        ],
         "reviewed_on": "2026-10-21",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "4b4fc6474ac5"
     },

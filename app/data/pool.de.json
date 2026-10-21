@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "12113a75",
+  "hash": "04926fe4",
   "questions": [
     {
       "id": "q-0016",
@@ -722,7 +722,7 @@
       "difficulty": 9,
       "subcategory": "literature",
       "bundle": "base",
-      "description": "Ein Ritter kämpfte gegen Windmühlen – und verlor.",
+      "description": "Ein Ritter kämpfte gegen Windmühlen, und die Windmühlen gewannen.",
       "question": "Wer schrieb „Don Quijote“?",
       "answer": "Miguel de Cervantes",
       "wrong_answers": [
@@ -732,10 +732,10 @@
       ],
       "hints": [
         "Er war Spanier.",
-        "Nach einer Schlacht konnte er eine Hand nicht mehr bewegen.",
-        "Man nennt ihn „den Einarmigen von Lepanto“."
+        "In einer Schlacht verlor er die Beweglichkeit einer Hand.",
+        "Man nennt ihn „den Einhändigen von Lepanto“."
       ],
-      "fun_fact": "In vielen spanischsprachigen Ländern ist der 23. April der „Tag der Sprache“, zur Erinnerung an den Tod von Cervantes.",
+      "fun_fact": "Der Welttag des Buches am 23. April erinnert auch an Cervantes: Er starb am 22. April 1616 und wurde am 23. beerdigt.",
       "media": {
         "type": "image",
         "role": "illustrative",
@@ -5235,6 +5235,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Joe Gratz",
         "author_url": "https://www.flickr.com/people/63126465@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1412",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "architectural-styles",
+      "bundle": "base",
+      "description": "Eine Kuppel, so dicht verschlossen, dass selbst der beste Schlüsseldienst nicht hineinkommt.",
+      "question": "Ich bin eine massive Kuppel, niemand kann mich betreten, und Pilger gehen um mich herum. Die ersten bewahrten die Asche eines Lehrers auf. Wessen Asche?",
+      "answer": "Buddha",
+      "wrong_answers": [
+        "Konfuzius",
+        "Laotse",
+        "Zarathustra"
+      ],
+      "hints": [
+        "Er ist ein spiritueller Lehrer, der vor etwa 2500 Jahren im heutigen Nepal geboren wurde.",
+        "Seine Anhänger beten mit Mönchen in orangefarbenen Gewändern.",
+        "Viele seiner Statuen zeigen ihn sitzend und lächelnd beim Meditieren."
+      ],
+      "fun_fact": "Der Große Stupa von Sanchi in Indien wurde im 3. Jahrhundert v. Chr. begonnen und gehört zu den ältesten Steinbauten des Landes.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Eastern_Gateway_of_The_Great_stupa%2C_Sanchi_02.jpg/3840px-Eastern_Gateway_of_The_Great_stupa%2C_Sanchi_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEastern_Gateway_of_The_Great_stupa%2C_Sanchi_02.jpg",
+        "credit": "Rohit Sharma · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rohit Sharma",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rohit14400"
       },
       "background": null
     },

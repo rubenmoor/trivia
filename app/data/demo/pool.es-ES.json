@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "bf863522",
+  "hash": "692458ba",
   "questions": [
     {
       "id": "q-0016",
@@ -615,6 +615,40 @@
       "background": null
     },
     {
+      "id": "q-0110",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "language",
+      "bundle": "base",
+      "description": "Una letra que los turistas estadounidenses buscan y buscan en su teclado y nunca encuentran.",
+      "question": "¿Qué letra tiene el español que no existe en el alfabeto inglés?",
+      "answer": "La ñ",
+      "wrong_answers": [
+        "La k",
+        "La w",
+        "La x"
+      ],
+      "hints": [
+        "Es tan querida que se ha convertido en un símbolo del idioma español.",
+        "En inglés, su sonido se escribe con dos letras, como en «canyon».",
+        "Lleva una rayita ondulada encima."
+      ],
+      "fun_fact": "La rayita de la ñ se llama virgulilla.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Blocks%2C_alphabet_%28AM_1990.255-2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlocks%2C_alphabet_%28AM_1990.255-2%29.jpg",
+        "credit": "CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": null,
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-0116",
       "status": "approved",
       "difficulty": 6,
@@ -633,7 +667,7 @@
         "Perdió el movimiento de una mano en una batalla.",
         "Lo llaman «el Manco de Lepanto»."
       ],
-      "fun_fact": "El Día del Libro, el 23 de abril, se celebra en esa fecha en recuerdo de la muerte de Cervantes.",
+      "fun_fact": "El Día del Idioma Español, el 23 de abril, recuerda a Cervantes: murió el 22 y lo enterraron el 23.",
       "media": {
         "type": "image",
         "role": "illustrative",
@@ -3417,7 +3451,7 @@
         "Zoroastro"
       ],
       "hints": [
-        "Es un maestro espiritual nacido hace unos 2500 años en el norte de la India.",
+        "Es un maestro espiritual nacido hace unos 2500 años en lo que hoy es Nepal.",
         "Sus seguidores rezan con monjes de túnicas naranjas.",
         "Muchas de sus estatuas lo muestran sentado y meditando con una sonrisa."
       ],

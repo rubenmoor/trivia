@@ -8612,8 +8612,7 @@
         "answer_kind": "word",
         "lens": "language"
       },
-      "concept": "Ñ",
-      "translatable": false
+      "concept": "Ñ"
     },
     {
       "id": "q-0111",
@@ -9008,7 +9007,7 @@
           "PD-self"
         ]
       },
-      "fun_fact": "El Día del Idioma, el 23 de abril, recuerda la muerte de Cervantes.",
+      "fun_fact": "El Día del Idioma, el 23 de abril, recuerda a Cervantes: murió el 22 y lo enterraron el 23.",
       "subcategory": "literature",
       "style": null,
       "quality": {
@@ -74503,7 +74502,8 @@
       },
       "bundle": "spain",
       "background": null,
-      "locale": "es-ES"
+      "locale": "es-ES",
+      "translatable": false
     },
     {
       "id": "q-0976",
@@ -88840,7 +88840,8 @@
         }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-1164",
@@ -95699,7 +95700,8 @@
       },
       "bundle": "spain",
       "background": null,
-      "locale": "es-ES"
+      "locale": "es-ES",
+      "translatable": false
     },
     {
       "id": "q-1253",
@@ -107986,7 +107988,7 @@
         "Zoroastro"
       ],
       "hints": [
-        "Es un maestro espiritual nacido hace unos 2.500 años en el norte de la India.",
+        "Es un maestro espiritual nacido hace unos 2500 años en lo que hoy es Nepal.",
         "Sus seguidores rezan con monjes de túnicas naranjas.",
         "Muchas de sus estatuas lo muestran sentado y meditando con una sonrisa."
       ],
@@ -129962,7 +129964,8 @@
         "reviewed_at": "2026-10-15T17:47:05"
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-1693",
@@ -168154,7 +168157,8 @@
         "reviewed_at": "2026-10-15T17:50:55"
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-2197",
