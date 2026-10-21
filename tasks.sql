@@ -41261,8 +41261,8 @@ On the answer:
 Done when: `qgen validate` clean, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-21T20:26:48Z', NULL, 1633, 0, 'opus', 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1650, 188, 'create tasks for plan 188: Content runs for the topic bundles', 'split', 'done', 1000, '2026-10-21, tasks.sql: tasks 1659 (pace decision), 1660–1664 (start tasks stem, sports, history, movies, geography); decisions: pace decision raised by 1659, spot check/QC/continue decisions by the run and QC tasks', 'Split plan 188 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-21T20:27:06Z', '2026-10-21T20:29:37Z', 1617, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1651, 189, 'create tasks for plan 189: Topic bundles close-out', 'split', 'open', 1000, NULL, 'Split plan 189 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-21T20:27:45Z', NULL, 1620, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1651, 189, 'create tasks for plan 189: Topic bundles close-out', 'split', 'done', 1000, '2026-10-21, tasks.sql: plan 189 split into tasks 1665 (what ships, raises the ship-or-hold decision), 1666 (family playtest decision per wave), 1667 (docs sweep, milestone 19 done); decisions raised by 1665/1666 once facts exist', 'Split plan 189 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-21T20:27:45Z', '2026-10-21T20:30:31Z', 1620, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1652, 187, 'Steamworks rows and steam.json entries for the five topic DLCs', 'work', 'open', NULL, NULL, '`plan 187: Steam DLC and store for the topic bundles` task 1: Steamworks checklist rows and `steam.json` `dlc` entries for `stem`, `sports`, `history`, `movies`, `geography` (`kind: theme`), so `trivia-steam stage` keeps passing once their folders land in `app/data/bundles/`.
 
 Gate first: the five rows must be in `app/data/bundles.json` (written by `task 1644: Create the five topic bundles`, questions work tree). If not: `pm task-pending-decision <this task> <id>` on the decision "Topic bundles: names, descriptions and rules" (raised by `task 1643: Rows decision for the five topic bundles`; `pm decision list --grep "Topic bundles: names"`); if that decision is answered but the rows are still missing, add nothing, just stop without closing (the next run checks again).
@@ -41528,6 +41528,70 @@ Done when: the first drafting pair is added (or this task pends on the blocking 
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints (plus `app/data/bundles.json` after a `languages` edit); don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2 (a health stop: the decision asks the developer for `qgen health ack`), any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> (geography)…?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
 - Note on done: the "Done:" line and report path (run tasks), or the QC numbers (approved, rejected, needs_work, agreement, $ per approved, review time per 100).', '2026-10-21T20:29:31Z', NULL, 1650, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1665, 189, 'What ships: topic bundles per release and content patch', 'work', 'open', NULL, NULL, 'Part 1 of `plan 189: Topic bundles close-out`. Settles which topic bundle × question locale ships at the release and which waits for a content patch, so the «2000+» tile (`decision 267: Bundle tiles: question count strings`) stays true. Workers never answer the decision.
+
+## Wait first
+- `plan 186: The five topic bundles: rows and taxonomies` rows `stem`, `sports`, `history`, `movies`, `geography` in `app/data/bundles.json` (`task 1644: Create the five topic bundles`), and at least one topic bundle with an exported pool `app/data/bundles/<id>/pool[.<locale>].json` in one locale; else stop without closing and say which is missing
+- Check first: `pm decision list --grep "ship or hold"` (don''t add it twice)
+
+## Facts (in the decision body, as a table)
+- Per bundle × question locale (es, es-ES, en, de): approved count (`qgen report --bundle <id>`, dev shell), pool file present (`decision 112: Pack layout: a pool file per bundle (optional install)`), locale in the row''s `languages`
+- Per bundle: DLC entered or not (`task 1657: Topic DLCs entered in Steamworks? (checklist decision)` answered or pending)
+- Newest `v*` tag (`git tag -l ''v*'' --sort=-v:refname | head -1`)
+- Whether the build or `trivia-steam stage` can already leave a pool file out (`rg` in `app/desktop/`, `authoring/tools/`, `plan 89: Builds, depots and upload (SW-10, SW-6)`)
+
+## Decision
+`pm decision add "Topic bundles below 2000 approved: ship or hold?" --intro … --body … --option …`
+- Intro (plain English): five optional topic packs promise "2000+" questions on their tile; some languages will be below that at release; choose whether a pack ships in a language only once it reaches 2000, from a lower floor with its real count shown, or with whatever it has
+- Body: the facts table; `decision 267` promises «2000+», "the release bar, not the tile, makes them true"; `decision 110: Regional packs at launch (RG-5, OQ-46)` shipped `colombia` with what it had, before 267; `decision 66: Price model (OQ-33): how is the game sold on Steam?` (free DLC); what a player sees per option; regional bundles follow the same answer unless the developer says otherwise
+- Options:
+  1. (recommended) A bundle × locale ships only from 2000 approved in that locale; below it its pool stays out of the build (the build or `stage` leaves the file out, not `qgen export`), it comes in a content patch when at the bar
+  2. Ship from a floor (developer names it, e.g. 500); our bundles below 2000 show the real rounded count on the tile (`decision 267` superseded in part)
+  3. Ship whatever exists, tile «2000+»
+- `pm task-pending-decision <this task> <decision>` and stop without closing
+
+## On the answer
+- `plans/22-bundles.md`: a "Shipping non-base bundles" bullet list (the rule, release vs. patch, per locale)
+- `plans/11-steam.md` "Content updates (ST-5)": one bullet "a non-base bundle × locale reaching the bar: its pool, its `languages` entry, its DLC store language block (`plan 187: Steam DLC and store for the topic bundles`) in the next content patch; the patch notes count it" (`plan 96: Content updates as patches (ST-5)`)
+- `plans/16-content-target.md`: topic bundles line (2000 per locale, shipping rule)
+- Follow-ups, only what the answer needs and doesn''t exist: option 1 without a switch to leave a pool out → task in `plan 89: Builds, depots and upload (SW-10, SW-6)`, work tree `app`; option 2 → task in `plan 185: Topic bundles in the game` (tile shows the real rounded count below 2000), work tree `app`
+- `pm decision consequences <decision> "…"`
+- Done note: ship table per bundle × locale: "release v<x>", "patch (when at bar)" or "not offered"
+- Per-commit checks (AGENTS.md)', '2026-10-21T20:30:28Z', NULL, 1651, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1666, 189, 'The developer plays the shipped topic bundles with the family', 'work', 'open', NULL, NULL, 'Part 2 of `plan 189: Topic bundles close-out`. The developer plays each topic bundle of the first shipping wave with the family on the TV, through one checklist decision. Workers never play the game or answer the decision.
+
+## Wait first
+- Part 1 done ("What ships: topic bundles per release and content patch" in `plan 189: Topic bundles close-out`, its decision "Topic bundles below 2000 approved: ship or hold?" answered)
+- `plan 185: Topic bundles in the game` tasks done: `task 1634: Bundle icon field: five topic symbols, icon list, loader, selector, mod and qgen checks`, `task 1635: Bundles screen with topic bundles on: order, counts, keys, overlay line, base-off session`, `task 1636: Category joker: categories grouped by bundle with header rows`, `task 1637: Splash and card: bundle icon on a non-base question''s category line`
+- Wave = the topic bundles at the bar of part 1''s answer now (per locale); none yet → stop without closing, say so
+- Any of the above missing → stop without closing and say which
+
+## Decision
+`pm decision add --once "Topic bundles: each played with the family?" --intro … --body … --option …`; body written against what was built (`rg` names, keys, commands, screen titles):
+- Setup: the `beta` build under Steam with the topic DLCs installed if `plan 187: Steam DLC and store for the topic bundles` entered them (`task 1657: Topic DLCs entered in Steamworks? (checklist decision)` answered) and a build is uploaded; else `trivia-desktop` with `TRIVIA_DEV_STEAM_USER=1`; the answer says which
+- Rows per wave bundle: (a) alone (base off), first locale with a pool (usually en), one age group; (b) with base, another age group (kids at least once across the wave); per further locale with a pool of any wave bundle: one session base + every wave bundle with a pool there (es, es-ES, de as they come)
+- Checks in each row: tile icon, name and «2000+» (or part 1''s count rule); category joker grouped by bundle, no category reads as a duplicate of base''s; splash shows the bundle icon; questions go beyond base''s (fan level allowed, `decision 18`) and never feel re-asked from base or another topic bundle; difficulty fits the age group; `movies` and `sports` with few pictures still play well; overlay line, no running-out notice; achievements as `decision 368: Achievements for the topic bundles: one per bundle like the regional ones?` answered; text fits on the TV
+- Answer: date, build, ✓/✗ per row + note
+- Options: "passed" (recommended) | "failed (list: bundle, locale, screen or question id, what happened)"
+- `pm task-pending-decision <this task> <decision>` and stop without closing
+
+## After the answer
+- ✗: follow-ups per plan 189''s routing: rule, names, boundaries, taxonomy → `plan 186: The five topic bundles: rows and taxonomies`; overlap with base in drafting, translation quality, media share or licences → `plan 184: Pipeline for topic bundles`; too few questions for an age group, a locale lagging → `plan 188: Content runs for the topic bundles`; a single bad question → the developer flags it (`qgen flag`, review in `../trivia-review`), no task; tile, icon, order, count, base-off session, joker, splash, achievements, PLACEHOLDER, text fit → plan 185; DLC install, store, library, depot → plan 187; a done plan → `pm plan add 19 …` named after the failure. Plus one task in plan 189 "Topic bundles family playtest again", same shape, waiting for those follow-ups (as `decision 155: Play-test of age groups and bundles (again, after the decision 50 fixes)` followed `decision 50: Play-test of age groups and bundles`)
+- ✓: `pm decision consequences <decision> "…"`
+- Both: topic bundles not in this wave → one task in plan 189 per later wave, "Topic bundles family playtest: <ids>", same shape, waits for those bundles at the bar (else stops without closing); work tree `app`
+- Then close', '2026-10-21T20:30:28Z', NULL, 1651, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1667, 189, 'Topic bundles close-out: docs sweep and milestone 19 Done', 'work', 'open', NULL, NULL, 'Part 3 of `plan 189: Topic bundles close-out`: docs name the topic bundles, "non-base bundle" where any optional bundle is meant, milestone 19 marked done.
+
+## Wait first
+- Part 2''s playtest decision ("Topic bundles: each played with the family?", or its "again" round) answered «passed»; else stop without closing and say which. Later waves ("Topic bundles family playtest: <ids>") don''t hold this task
+
+## What
+- `plans/22-bundles.md` "The first bundles": a row per topic bundle, complete and true: id, `theme`, names per UI language, rule, `languages`, target 2000, icon, taxonomy decision, ship status per part 1''s ship table ("shipped v<x>: en, …" / "content patch")
+- `README.md`: line "Age groups and bundles": "base and regional" → base, regional and topic bundles; `qgen bundle new` / `qgen taxonomy` lines name themes if `plan 184: Pipeline for topic bundles` didn''t; `directory.md`, `AGENTS.md` where they list bundles or kinds
+- `rg -i "regional bundle|regional pack|regional ones"` over `plans/`, `README.md`, `AGENTS.md`, `directory.md`, `modding/`, `authoring/*.md`, code comments, `about` texts of `app/data/*.json` (decision 200): a hit meaning any optional bundle → "non-base bundle"; a hit about the region kind stays; identifiers, catalog strings and `authoring/tools/prompts/` untouched. Prompt hits: one follow-up task in plan 184, work tree `questions`, listing them, using the verbatim-draft pattern of `decision 262: Taxonomy prompts on slug keys: apply?`
+- `plans/project.md`: `[x] Topic bundles: stem, sports, history, movies, geography (<date>, pm milestone 19, plans 155, 184–189; decisions …)` with the real decision ids (`pm decision list --answered --grep topic`)
+- Milestone 19''s text against the ship table and the playtest: five bundles created; a bundle below the bar is "ships in a content patch", not a gap; another gap → follow-up task in the owning plan; `pm decision consequences` where the built result differs from a decision
+- Per-commit checks (AGENTS.md)', '2026-10-21T20:30:28Z', NULL, 1651, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -48351,6 +48415,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1708, 1634, '2026-10-21T20:28:07Z', NULL, 'running', NULL, NULL, 'ee01ced7eefbb477bce4b575674e9550b43c8f31', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1709, 1650, '2026-10-21T20:28:33Z', '2026-10-21T20:29:44Z', 'done', NULL, 0, '8046e5edae4bc3bd53002935cc2e37eb7dec7146', NULL, 'claude-opus-5-5', '70475c57-20f4-4148-852f-62e8cce069f1', NULL, 13, 24, 7146, 530187, 49700, 0.6466534, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1710, 1624, '2026-10-21T20:29:11Z', NULL, 'running', NULL, NULL, '8046e5edae4bc3bd53002935cc2e37eb7dec7146', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1711, 1651, '2026-10-21T20:29:45Z', '2026-10-21T20:30:39Z', 'done', NULL, 0, '6b864086c26be1bd63bdfe2bc1602f63610d06de', NULL, 'claude-opus-5-5', '99d6f2d9-305d-4878-8afa-1a3e47aebd71', NULL, 7, 14, 5805, 268336, 40382, 0.49287919999999996, 344501);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
