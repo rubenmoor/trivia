@@ -49378,6 +49378,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1486, 307);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1487, 284);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1506, 256);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1506, 374);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1506, 389);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1521, 332);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1538, 336);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1538, 345);
