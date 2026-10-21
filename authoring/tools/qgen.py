@@ -579,6 +579,16 @@ def concept_file(bundle, sub):
     return f"{slug(sub)}.json" if bundle == "base" else f"{bundle}--{slug(sub)}.json"
 
 
+RELATED_CAP = 60  # base questions a theme subcategory's avoid list and concept calls show (like SAT_ASKED)
+
+
+def related_text(pool, bundle, sub):
+    """The concept calls' "already in the game" section for a theme subcategory; empty without base_related."""
+    qs = related_base({"questions": pool}, bundle, sub, "en")
+    return ("\n\n## Already in the game (base questions on the same topics: don't list these concepts)\n"
+            + "\n".join(f"- {q['answer']} ({q['question'][:80]})" for q in qs)) if qs else ""
+
+
 def subcategory_header(bundle, sub, locale):
     return (f"## Subcategory\n{categories.display(bundle, sub, locale)} "
             f"(broad category: {categories.category_name(bundle, sub, locale)})")
@@ -622,7 +632,8 @@ def cmd_concepts(args):
                          "media": f"{q['media']['type']}/{q['media']['role']}"}
                         for q in pool if categories.key(q) == bs]
             user = (intro + "\n\n## Facets\n" + "\n".join(f"- {f}" for f in r["facets"])
-                    + "\n\n## Existing questions\n" + (json.dumps(existing, ensure_ascii=False) if existing else "none"))
+                    + "\n\n## Existing questions\n" + (json.dumps(existing, ensure_ascii=False) if existing else "none")
+                    + related_text(pool, bundle, sub))
             out = claude(prompt("house-style", "concepts-list", locale=loc, bundle=bundle), user, list_schema(axes_def), args.model, d)
             missing = {q["id"] for q in existing} - {e["id"] for e in out["existing"]}
             if missing:  # untagged questions would make their concepts look unused
@@ -649,7 +660,8 @@ def cmd_concepts(args):
         loc = translations.draft_locale(bundle_row(bundle))
         user = (subcategory_header(*bs, loc) + "\n\n## Bundle\n" + bundle_text(bundle, loc) + f"\n\n## How many\nAdd about {wanted(bs)} new concepts."
                 + "\n\n## Facets\n" + "\n".join(f"- {f}" for f in lst["facets"])
-                + "\n\n## Concepts already in the list\n" + "\n".join(f"- {c['name']} ({c['facet']})" for c in lst["concepts"]))
+                + "\n\n## Concepts already in the list\n" + "\n".join(f"- {c['name']} ({c['facet']})" for c in lst["concepts"])
+                + related_text(pool, bundle, sub))
         out = claude(prompt("house-style", "concepts-topup", locale=loc, bundle=bundle),
                      user, TOPUP_SCHEMA, args.model, d)
         save_json(path, out)
@@ -927,11 +939,21 @@ def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base", locale="e
     return plan
 
 
+def related_base(pool, bundle, sub, locale):
+    """A theme subcategory's base_related questions (base-related.json, plan 184), not rejected, in `locale`
+    (as_locale), the first RELATED_CAP by id; none without the file or for another kind."""
+    rel = (load_json(layout.base_related(bundle), {}) or {}).get("subcategories", {}).get(sub) if bundle != "base" else None
+    keys = {("base", r) for r in rel or []}
+    qs = sorted((q for q in pool["questions"] if categories.key(q) in keys and q["status"] != "rejected"),
+                key=lambda q: q["id"])[:RELATED_CAP]
+    return as_locale(qs, locale)
+
+
 def existing_answers(pool, bundle, sub, locale="es"):
-    """The subcategory's own pool questions, all statuses (PE-4), in `locale` (as_locale); merge's
-    `duplicates()` and the review's `related` list still check the whole pool."""
-    return sorted({f"{q['answer']} ({q['question'][:60]})"
-                   for q in as_locale([q for q in pool["questions"] if categories.key(q) == (bundle, sub)], locale)})
+    """The subcategory's own pool questions, all statuses (PE-4), and a theme's base_related ones, in `locale`
+    (as_locale); merge's `duplicates()` and the review's `related` list still check the whole pool."""
+    own = as_locale([q for q in pool["questions"] if categories.key(q) == (bundle, sub)], locale)
+    return sorted({f"{q['answer']} ({q['question'][:60]})" for q in [*own, *related_base(pool, bundle, sub, locale)]})
 
 
 def cmd_draft(args):
