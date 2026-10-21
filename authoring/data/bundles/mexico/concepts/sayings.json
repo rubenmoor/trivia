@@ -1,0 +1,1127 @@
+{
+  "subcategory": "sayings",
+  "facets": [
+    "Refranes con animales",
+    "Dichos de comida y cocina",
+    "Consejos de la abuela",
+    "Dichos de dinero y trabajo",
+    "Dichos de amor y amistad",
+    "Dichos del clima y el campo",
+    "Comparaciones exageradas",
+    "Dichos con historia y personajes",
+    "Versos de la Lotería mexicana",
+    "Frases de la tele y el cine mexicano",
+    "Frases célebres de la historia de México",
+    "Frases hechas del día a día"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 3,
+      "name_concept": 3,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 1,
+      "record": 1,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 3,
+      "history": 3,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Camarón que se duerme se lo lleva la corriente",
+      "facet": "Refranes con animales",
+      "known_at": 4
+    },
+    {
+      "name": "Perro que ladra no muerde",
+      "facet": "Refranes con animales",
+      "known_at": 4
+    },
+    {
+      "name": "Más vale pájaro en mano que ciento volando",
+      "facet": "Refranes con animales",
+      "known_at": 5
+    },
+    {
+      "name": "A caballo regalado no se le ve el colmillo",
+      "facet": "Refranes con animales",
+      "known_at": 6
+    },
+    {
+      "name": "Cría cuervos y te sacarán los ojos",
+      "facet": "Refranes con animales",
+      "known_at": 9
+    },
+    {
+      "name": "El que con lobos anda, a aullar se enseña",
+      "facet": "Refranes con animales",
+      "known_at": 9
+    },
+    {
+      "name": "Al perro más flaco se le cargan las pulgas",
+      "facet": "Refranes con animales",
+      "known_at": 8
+    },
+    {
+      "name": "Gato con guantes no caza ratones",
+      "facet": "Refranes con animales",
+      "known_at": 9
+    },
+    {
+      "name": "En boca cerrada no entran moscas",
+      "facet": "Refranes con animales",
+      "known_at": 4
+    },
+    {
+      "name": "Aunque la mona se vista de seda, mona se queda",
+      "facet": "Refranes con animales",
+      "known_at": 6
+    },
+    {
+      "name": "Matar dos pájaros de un tiro",
+      "facet": "Refranes con animales",
+      "known_at": 5
+    },
+    {
+      "name": "Cada chango a su mecate",
+      "facet": "Refranes con animales",
+      "known_at": 7
+    },
+    {
+      "name": "De noche todos los gatos son pardos",
+      "facet": "Refranes con animales",
+      "known_at": 10
+    },
+    {
+      "name": "Muerto el perro, se acabó la rabia",
+      "facet": "Refranes con animales",
+      "known_at": 9
+    },
+    {
+      "name": "Buscarle tres pies al gato",
+      "facet": "Refranes con animales",
+      "known_at": 9
+    },
+    {
+      "name": "El burro hablando de orejas",
+      "facet": "Refranes con animales",
+      "known_at": 6
+    },
+    {
+      "name": "Hijo de tigre, pintito",
+      "facet": "Refranes con animales",
+      "known_at": 8
+    },
+    {
+      "name": "Gallina vieja hace buen caldo",
+      "facet": "Refranes con animales",
+      "known_at": 9
+    },
+    {
+      "name": "El que es buen gallo dondequiera canta",
+      "facet": "Refranes con animales",
+      "known_at": 9
+    },
+    {
+      "name": "Quedarse como el perro de las dos tortas",
+      "facet": "Refranes con animales",
+      "known_at": 9
+    },
+    {
+      "name": "El perro del hortelano",
+      "facet": "Refranes con animales",
+      "known_at": 12
+    },
+    {
+      "name": "Al que nace pa' tamal, del cielo le caen las hojas",
+      "facet": "Dichos de comida y cocina",
+      "known_at": 8
+    },
+    {
+      "name": "Panza llena, corazón contento",
+      "facet": "Dichos de comida y cocina",
+      "known_at": 4
+    },
+    {
+      "name": "Las penas con pan son menos",
+      "facet": "Dichos de comida y cocina",
+      "known_at": 8
+    },
+    {
+      "name": "Es pan comido",
+      "facet": "Dichos de comida y cocina",
+      "known_at": 5
+    },
+    {
+      "name": "Darle atole con el dedo",
+      "facet": "Dichos de comida y cocina",
+      "known_at": 7
+    },
+    {
+      "name": "Ser la última Coca-Cola del desierto",
+      "facet": "Dichos de comida y cocina",
+      "known_at": 7
+    },
+    {
+      "name": "Echarle mucha crema a sus tacos",
+      "facet": "Dichos de comida y cocina",
+      "known_at": 8
+    },
+    {
+      "name": "Ser el ajonjolí de todos los moles",
+      "facet": "Dichos de comida y cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Estar como agua para chocolate",
+      "facet": "Dichos de comida y cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Del plato a la boca se cae la sopa",
+      "facet": "Dichos de comida y cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Las cuentas claras y el chocolate espeso",
+      "facet": "Dichos de comida y cocina",
+      "known_at": 9
+    },
+    {
+      "name": "A falta de pan, tortillas",
+      "facet": "Dichos de comida y cocina",
+      "known_at": 6
+    },
+    {
+      "name": "El que se quema con leche, hasta al jocoque le sopla",
+      "facet": "Dichos de comida y cocina",
+      "known_at": 12
+    },
+    {
+      "name": "Pedirle peras al olmo",
+      "facet": "Dichos de comida y cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Darle una sopa de su propio chocolate",
+      "facet": "Dichos de comida y cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Importar un cacahuate",
+      "facet": "Dichos de comida y cocina",
+      "known_at": 6
+    },
+    {
+      "name": "Hacer de chivo los tamales",
+      "facet": "Dichos de comida y cocina",
+      "known_at": 10
+    },
+    {
+      "name": "Al que madruga, Dios lo ayuda",
+      "facet": "Consejos de la abuela",
+      "known_at": 4
+    },
+    {
+      "name": "Más vale prevenir que lamentar",
+      "facet": "Consejos de la abuela",
+      "known_at": 5
+    },
+    {
+      "name": "No dejes para mañana lo que puedes hacer hoy",
+      "facet": "Consejos de la abuela",
+      "known_at": 4
+    },
+    {
+      "name": "Dime con quién andas y te diré quién eres",
+      "facet": "Consejos de la abuela",
+      "known_at": 5
+    },
+    {
+      "name": "Más vale tarde que nunca",
+      "facet": "Consejos de la abuela",
+      "known_at": 4
+    },
+    {
+      "name": "Despacio que tengo prisa",
+      "facet": "Consejos de la abuela",
+      "known_at": 8
+    },
+    {
+      "name": "Caras vemos, corazones no sabemos",
+      "facet": "Consejos de la abuela",
+      "known_at": 8
+    },
+    {
+      "name": "Haz el bien sin mirar a quién",
+      "facet": "Consejos de la abuela",
+      "known_at": 7
+    },
+    {
+      "name": "En la mesa y en el juego se conoce al caballero",
+      "facet": "Consejos de la abuela",
+      "known_at": 10
+    },
+    {
+      "name": "No hay mal que por bien no venga",
+      "facet": "Consejos de la abuela",
+      "known_at": 6
+    },
+    {
+      "name": "Ojos que no ven, corazón que no siente",
+      "facet": "Consejos de la abuela",
+      "known_at": 7
+    },
+    {
+      "name": "Agua que no has de beber, déjala correr",
+      "facet": "Consejos de la abuela",
+      "known_at": 8
+    },
+    {
+      "name": "El que mucho abarca poco aprieta",
+      "facet": "Consejos de la abuela",
+      "known_at": 9
+    },
+    {
+      "name": "Árbol que crece torcido, jamás su tronco endereza",
+      "facet": "Consejos de la abuela",
+      "known_at": 8
+    },
+    {
+      "name": "Echándole a perder se aprende",
+      "facet": "Consejos de la abuela",
+      "known_at": 7
+    },
+    {
+      "name": "Al mal paso darle prisa",
+      "facet": "Consejos de la abuela",
+      "known_at": 9
+    },
+    {
+      "name": "El que se enoja pierde",
+      "facet": "Consejos de la abuela",
+      "known_at": 5
+    },
+    {
+      "name": "Con dinero baila el perro",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 8
+    },
+    {
+      "name": "El tiempo es oro",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 5
+    },
+    {
+      "name": "Poco a poco se anda lejos",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 7
+    },
+    {
+      "name": "El flojo trabaja doble",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 8
+    },
+    {
+      "name": "Chamba",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 5
+    },
+    {
+      "name": "Quincena",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 7
+    },
+    {
+      "name": "Costar un ojo de la cara",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 6
+    },
+    {
+      "name": "Dinero llama dinero",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 8
+    },
+    {
+      "name": "Hacer su agosto",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 11
+    },
+    {
+      "name": "Cuentas claras, amistades largas",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 8
+    },
+    {
+      "name": "Al que le van a dar, le guardan",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 10
+    },
+    {
+      "name": "A darle, que es mole de olla",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 9
+    },
+    {
+      "name": "Echarle ganas",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 4
+    },
+    {
+      "name": "No tener ni un quinto",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 8
+    },
+    {
+      "name": "Estar bruja",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 9
+    },
+    {
+      "name": "La cuesta de enero",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 9
+    },
+    {
+      "name": "Lana",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 5
+    },
+    {
+      "name": "Tanto peca el que mata la vaca como el que le agarra la pata",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 12
+    },
+    {
+      "name": "Media naranja",
+      "facet": "Dichos de amor y amistad",
+      "known_at": 4
+    },
+    {
+      "name": "Donde hubo fuego, cenizas quedan",
+      "facet": "Dichos de amor y amistad",
+      "known_at": 9
+    },
+    {
+      "name": "Contigo pan y cebolla",
+      "facet": "Dichos de amor y amistad",
+      "known_at": 9
+    },
+    {
+      "name": "Amor con amor se paga",
+      "facet": "Dichos de amor y amistad",
+      "known_at": 8
+    },
+    {
+      "name": "Más vale solo que mal acompañado",
+      "facet": "Dichos de amor y amistad",
+      "known_at": 6
+    },
+    {
+      "name": "Dar calabazas",
+      "facet": "Dichos de amor y amistad",
+      "known_at": 9
+    },
+    {
+      "name": "Echar los perros",
+      "facet": "Dichos de amor y amistad",
+      "known_at": 9
+    },
+    {
+      "name": "Amigo en la adversidad, amigo de verdad",
+      "facet": "Dichos de amor y amistad",
+      "known_at": 8
+    },
+    {
+      "name": "En el amor y en la guerra todo se vale",
+      "facet": "Dichos de amor y amistad",
+      "known_at": 8
+    },
+    {
+      "name": "Cuate",
+      "facet": "Dichos de amor y amistad",
+      "known_at": 5
+    },
+    {
+      "name": "Compadre",
+      "facet": "Dichos de amor y amistad",
+      "known_at": 7
+    },
+    {
+      "name": "Ser uña y mugre",
+      "facet": "Dichos de amor y amistad",
+      "known_at": 7
+    },
+    {
+      "name": "Quien bien te quiere te hará llorar",
+      "facet": "Dichos de amor y amistad",
+      "known_at": 9
+    },
+    {
+      "name": "El roce hace el cariño",
+      "facet": "Dichos de amor y amistad",
+      "known_at": 9
+    },
+    {
+      "name": "Tirar la onda",
+      "facet": "Dichos de amor y amistad",
+      "known_at": 10
+    },
+    {
+      "name": "Cuando el río suena, es que agua lleva",
+      "facet": "Dichos del clima y el campo",
+      "known_at": 7
+    },
+    {
+      "name": "En abril, aguas mil",
+      "facet": "Dichos del clima y el campo",
+      "known_at": 10
+    },
+    {
+      "name": "Febrero loco y marzo otro poco",
+      "facet": "Dichos del clima y el campo",
+      "known_at": 10
+    },
+    {
+      "name": "Al mal tiempo, buena cara",
+      "facet": "Dichos del clima y el campo",
+      "known_at": 5
+    },
+    {
+      "name": "Nunca llueve a gusto de todos",
+      "facet": "Dichos del clima y el campo",
+      "known_at": 8
+    },
+    {
+      "name": "Después de la tormenta viene la calma",
+      "facet": "Dichos del clima y el campo",
+      "known_at": 5
+    },
+    {
+      "name": "Más vale paso que dure y no trote que canse",
+      "facet": "Dichos del clima y el campo",
+      "known_at": 9
+    },
+    {
+      "name": "Llover sobre mojado",
+      "facet": "Dichos del clima y el campo",
+      "known_at": 9
+    },
+    {
+      "name": "Cielo aborregado, a los tres días mojado",
+      "facet": "Dichos del clima y el campo",
+      "known_at": 13
+    },
+    {
+      "name": "El que siembra vientos cosecha tempestades",
+      "facet": "Dichos del clima y el campo",
+      "known_at": 11
+    },
+    {
+      "name": "Una golondrina no hace verano",
+      "facet": "Dichos del clima y el campo",
+      "known_at": 10
+    },
+    {
+      "name": "Cada quien cosecha lo que siembra",
+      "facet": "Dichos del clima y el campo",
+      "known_at": 6
+    },
+    {
+      "name": "Arrieros somos y en el camino andamos",
+      "facet": "Dichos del clima y el campo",
+      "known_at": 10
+    },
+    {
+      "name": "Las cabañuelas",
+      "facet": "Dichos del clima y el campo",
+      "known_at": 12
+    },
+    {
+      "name": "Llover a cántaros",
+      "facet": "Dichos del clima y el campo",
+      "known_at": 5
+    },
+    {
+      "name": "Hace un frío que pela",
+      "facet": "Dichos del clima y el campo",
+      "known_at": 6
+    },
+    {
+      "name": "Matar moscas a cañonazos",
+      "facet": "Comparaciones exageradas",
+      "known_at": 7
+    },
+    {
+      "name": "Más lento que una tortuga",
+      "facet": "Comparaciones exageradas",
+      "known_at": 2
+    },
+    {
+      "name": "Estar como sardinas en lata",
+      "facet": "Comparaciones exageradas",
+      "known_at": 4
+    },
+    {
+      "name": "Más largo que la cuaresma",
+      "facet": "Comparaciones exageradas",
+      "known_at": 10
+    },
+    {
+      "name": "Dormir como un tronco",
+      "facet": "Comparaciones exageradas",
+      "known_at": 4
+    },
+    {
+      "name": "Más terco que una mula",
+      "facet": "Comparaciones exageradas",
+      "known_at": 4
+    },
+    {
+      "name": "Ponerse rojo como un jitomate",
+      "facet": "Comparaciones exageradas",
+      "known_at": 3
+    },
+    {
+      "name": "Más perdido que Adán en el Día de las Madres",
+      "facet": "Comparaciones exageradas",
+      "known_at": 9
+    },
+    {
+      "name": "Llorar a moco tendido",
+      "facet": "Comparaciones exageradas",
+      "known_at": 7
+    },
+    {
+      "name": "Estar hasta el gorro",
+      "facet": "Comparaciones exageradas",
+      "known_at": 7
+    },
+    {
+      "name": "Hacer una tormenta en un vaso de agua",
+      "facet": "Comparaciones exageradas",
+      "known_at": 8
+    },
+    {
+      "name": "Más claro, ni el agua",
+      "facet": "Comparaciones exageradas",
+      "known_at": 6
+    },
+    {
+      "name": "Echar la casa por la ventana",
+      "facet": "Comparaciones exageradas",
+      "known_at": 7
+    },
+    {
+      "name": "Tener más vidas que un gato",
+      "facet": "Comparaciones exageradas",
+      "known_at": 5
+    },
+    {
+      "name": "Quedarse de a seis",
+      "facet": "Comparaciones exageradas",
+      "known_at": 9
+    },
+    {
+      "name": "Donde el diablo dio las tres voces",
+      "facet": "Comparaciones exageradas",
+      "known_at": 12
+    },
+    {
+      "name": "Sudar la gota gorda",
+      "facet": "Comparaciones exageradas",
+      "known_at": 8
+    },
+    {
+      "name": "Más viejo que Matusalén",
+      "facet": "Dichos con historia y personajes",
+      "known_at": 10
+    },
+    {
+      "name": "Me cayó el veinte",
+      "facet": "Dichos con historia y personajes",
+      "known_at": 7
+    },
+    {
+      "name": "Cantinflear",
+      "facet": "Dichos con historia y personajes",
+      "known_at": 8
+    },
+    {
+      "name": "Hacerse el Juan Diego",
+      "facet": "Dichos con historia y personajes",
+      "known_at": 10
+    },
+    {
+      "name": "Malinchismo",
+      "facet": "Dichos con historia y personajes",
+      "known_at": 9
+    },
+    {
+      "name": "Juan Pirulero",
+      "facet": "Dichos con historia y personajes",
+      "known_at": 8
+    },
+    {
+      "name": "El que se fue a la villa perdió su silla",
+      "facet": "Dichos con historia y personajes",
+      "known_at": 6
+    },
+    {
+      "name": "Más sabe el diablo por viejo que por diablo",
+      "facet": "Dichos con historia y personajes",
+      "known_at": 8
+    },
+    {
+      "name": "Ojo por ojo, diente por diente",
+      "facet": "Dichos con historia y personajes",
+      "known_at": 9
+    },
+    {
+      "name": "Aquí fue Troya",
+      "facet": "Dichos con historia y personajes",
+      "known_at": 12
+    },
+    {
+      "name": "Ni tanto que queme al santo, ni tanto que no lo alumbre",
+      "facet": "Dichos con historia y personajes",
+      "known_at": 10
+    },
+    {
+      "name": "Como Juan por su casa",
+      "facet": "Dichos con historia y personajes",
+      "known_at": 7
+    },
+    {
+      "name": "Ser un Judas",
+      "facet": "Dichos con historia y personajes",
+      "known_at": 8
+    },
+    {
+      "name": "Irse en el carro de San Fernando",
+      "facet": "Dichos con historia y personajes",
+      "known_at": 11
+    },
+    {
+      "name": "Ser más papista que el papa",
+      "facet": "Dichos con historia y personajes",
+      "known_at": 12
+    },
+    {
+      "name": "El gallo (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 8
+    },
+    {
+      "name": "El diablito (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 8
+    },
+    {
+      "name": "La dama (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 9
+    },
+    {
+      "name": "El catrín (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 11
+    },
+    {
+      "name": "El paraguas (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 10
+    },
+    {
+      "name": "La sirena (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 9
+    },
+    {
+      "name": "La escalera (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 10
+    },
+    {
+      "name": "El barril (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 11
+    },
+    {
+      "name": "El árbol (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 7
+    },
+    {
+      "name": "El melón (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 11
+    },
+    {
+      "name": "El valiente (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 11
+    },
+    {
+      "name": "El gorrito (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 10
+    },
+    {
+      "name": "La muerte (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 9
+    },
+    {
+      "name": "La pera (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 8
+    },
+    {
+      "name": "La bandera (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 6
+    },
+    {
+      "name": "El violoncello (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 11
+    },
+    {
+      "name": "El pájaro (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 11
+    },
+    {
+      "name": "La luna (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 8
+    },
+    {
+      "name": "El cotorro (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 10
+    },
+    {
+      "name": "La rosa (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 10
+    },
+    {
+      "name": "El corazón (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 7
+    },
+    {
+      "name": "El tambor (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 9
+    },
+    {
+      "name": "La bota (Lotería)",
+      "facet": "Versos de la Lotería mexicana",
+      "known_at": 9
+    },
+    {
+      "name": "¡No contaban con mi astucia!",
+      "facet": "Frases de la tele y el cine mexicano",
+      "known_at": 4
+    },
+    {
+      "name": "Eso, eso, eso",
+      "facet": "Frases de la tele y el cine mexicano",
+      "known_at": 5
+    },
+    {
+      "name": "Ahí está el detalle",
+      "facet": "Frases de la tele y el cine mexicano",
+      "known_at": 9
+    },
+    {
+      "name": "¡Tenía que ser el Chavo del 8!",
+      "facet": "Frases de la tele y el cine mexicano",
+      "known_at": 5
+    },
+    {
+      "name": "¡Síganme los buenos!",
+      "facet": "Frases de la tele y el cine mexicano",
+      "known_at": 5
+    },
+    {
+      "name": "Lo sospeché desde un principio",
+      "facet": "Frases de la tele y el cine mexicano",
+      "known_at": 6
+    },
+    {
+      "name": "Bueno, pero no te enojes",
+      "facet": "Frases de la tele y el cine mexicano",
+      "known_at": 7
+    },
+    {
+      "name": "¿Y ahora quién podrá defenderme?",
+      "facet": "Frases de la tele y el cine mexicano",
+      "known_at": 4
+    },
+    {
+      "name": "¡Chusma, chusma!",
+      "facet": "Frases de la tele y el cine mexicano",
+      "known_at": 6
+    },
+    {
+      "name": "Es que no me tienen paciencia",
+      "facet": "Frases de la tele y el cine mexicano",
+      "known_at": 7
+    },
+    {
+      "name": "Cállate, cállate, que me desesperas",
+      "facet": "Frases de la tele y el cine mexicano",
+      "known_at": 6
+    },
+    {
+      "name": "La venganza nunca es buena, mata el alma y la envenena",
+      "facet": "Frases de la tele y el cine mexicano",
+      "known_at": 6
+    },
+    {
+      "name": "Se aprovechan de mi nobleza",
+      "facet": "Frases de la tele y el cine mexicano",
+      "known_at": 7
+    },
+    {
+      "name": "Lo que se ve no se juzga",
+      "facet": "Frases de la tele y el cine mexicano",
+      "known_at": 10
+    },
+    {
+      "name": "El respeto al derecho ajeno es la paz",
+      "facet": "Frases célebres de la historia de México",
+      "known_at": 7
+    },
+    {
+      "name": "La tierra es de quien la trabaja",
+      "facet": "Frases célebres de la historia de México",
+      "known_at": 9
+    },
+    {
+      "name": "Sufragio efectivo, no reelección",
+      "facet": "Frases célebres de la historia de México",
+      "known_at": 10
+    },
+    {
+      "name": "Es mejor morir de pie que vivir de rodillas",
+      "facet": "Frases célebres de la historia de México",
+      "known_at": 10
+    },
+    {
+      "name": "Las armas nacionales se han cubierto de gloria",
+      "facet": "Frases célebres de la historia de México",
+      "known_at": 11
+    },
+    {
+      "name": "Si hubiera parque, no estaría usted aquí",
+      "facet": "Frases célebres de la historia de México",
+      "known_at": 12
+    },
+    {
+      "name": "Grito de Dolores",
+      "facet": "Frases célebres de la historia de México",
+      "known_at": 6
+    },
+    {
+      "name": "Pobre México, tan lejos de Dios y tan cerca de Estados Unidos",
+      "facet": "Frases célebres de la historia de México",
+      "known_at": 11
+    },
+    {
+      "name": "Mexicanos, al grito de guerra",
+      "facet": "Frases célebres de la historia de México",
+      "known_at": 4
+    },
+    {
+      "name": "La patria es primero",
+      "facet": "Frases célebres de la historia de México",
+      "known_at": 11
+    },
+    {
+      "name": "Tierra y libertad",
+      "facet": "Frases célebres de la historia de México",
+      "known_at": 9
+    },
+    {
+      "name": "Defenderé el peso como un perro",
+      "facet": "Frases célebres de la historia de México",
+      "known_at": 13
+    },
+    {
+      "name": "Por mi raza hablará el espíritu",
+      "facet": "Frases célebres de la historia de México",
+      "known_at": 11
+    },
+    {
+      "name": "¿Y yo por qué?",
+      "facet": "Frases célebres de la historia de México",
+      "known_at": 12
+    },
+    {
+      "name": "No me dejen morir así, digan que dije algo",
+      "facet": "Frases célebres de la historia de México",
+      "known_at": 13
+    },
+    {
+      "name": "¡Viva México!",
+      "facet": "Frases célebres de la historia de México",
+      "known_at": 3
+    },
+    {
+      "name": "¡Qué padre!",
+      "facet": "Frases hechas del día a día",
+      "known_at": 3
+    },
+    {
+      "name": "Ahorita",
+      "facet": "Frases hechas del día a día",
+      "known_at": 3
+    },
+    {
+      "name": "¡Aguas!",
+      "facet": "Frases hechas del día a día",
+      "known_at": 4
+    },
+    {
+      "name": "¿Qué onda?",
+      "facet": "Frases hechas del día a día",
+      "known_at": 3
+    },
+    {
+      "name": "No manches",
+      "facet": "Frases hechas del día a día",
+      "known_at": 5
+    },
+    {
+      "name": "Me late",
+      "facet": "Frases hechas del día a día",
+      "known_at": 7
+    },
+    {
+      "name": "Estar en la luna",
+      "facet": "Frases hechas del día a día",
+      "known_at": 5
+    },
+    {
+      "name": "Ni modo",
+      "facet": "Frases hechas del día a día",
+      "known_at": 4
+    },
+    {
+      "name": "Hacerse pato",
+      "facet": "Frases hechas del día a día",
+      "known_at": 8
+    },
+    {
+      "name": "Estar de pelos",
+      "facet": "Frases hechas del día a día",
+      "known_at": 7
+    },
+    {
+      "name": "Echar la mano",
+      "facet": "Frases hechas del día a día",
+      "known_at": 4
+    },
+    {
+      "name": "Sale y vale",
+      "facet": "Frases hechas del día a día",
+      "known_at": 6
+    },
+    {
+      "name": "Chido",
+      "facet": "Frases hechas del día a día",
+      "known_at": 4
+    },
+    {
+      "name": "Ponerse las pilas",
+      "facet": "Frases hechas del día a día",
+      "known_at": 4
+    },
+    {
+      "name": "Dar el avión",
+      "facet": "Frases hechas del día a día",
+      "known_at": 8
+    },
+    {
+      "name": "Echar porras",
+      "facet": "Frases hechas del día a día",
+      "known_at": 6
+    },
+    {
+      "name": "¿Mande?",
+      "facet": "Frases hechas del día a día",
+      "known_at": 4
+    },
+    {
+      "name": "Estar cañón",
+      "facet": "Frases hechas del día a día",
+      "known_at": 7
+    },
+    {
+      "name": "Hacerse bolas",
+      "facet": "Frases hechas del día a día",
+      "known_at": 8
+    },
+    {
+      "name": "Valer gorro",
+      "facet": "Frases hechas del día a día",
+      "known_at": 8
+    },
+    {
+      "name": "Echar relajo",
+      "facet": "Frases hechas del día a día",
+      "known_at": 6
+    },
+    {
+      "name": "Irse de pinta",
+      "facet": "Frases hechas del día a día",
+      "known_at": 8
+    },
+    {
+      "name": "Agarrar la onda",
+      "facet": "Frases hechas del día a día",
+      "known_at": 6
+    },
+    {
+      "name": "Comerse las ansias",
+      "facet": "Frases hechas del día a día",
+      "known_at": 9
+    }
+  ]
+}

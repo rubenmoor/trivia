@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "b1be46c6",
+  "hash": "bb190a80",
   "questions": [
     {
       "id": "q-0016",
@@ -3195,40 +3195,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Pentachlorphenol",
         "author_url": "https://commons.wikimedia.org/wiki/User:Pentachlorphenol"
-      },
-      "background": null
-    },
-    {
-      "id": "q-1248",
-      "status": "approved",
-      "difficulty": 2,
-      "subcategory": "childrens-songs",
-      "bundle": "base",
-      "description": "El hechizo médico más antiguo de la casa, y ni siquiera necesita una curita.",
-      "question": "Completa: 'Sana, sana, colita de rana, si no sana hoy, sanará…'",
-      "answer": "Mañana",
-      "wrong_answers": [
-        "El lunes",
-        "En un rato",
-        "Pasado mañana"
-      ],
-      "hints": [
-        "Es una palabra que rima con 'rana'.",
-        "Habla del día siguiente.",
-        "Es el día que viene después de hoy."
-      ],
-      "fun_fact": "Esta frase para curar raspones se dice en casi todos los países donde se habla español.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Child_gets_a_bandage_on_their_knee_after_a_small_injury_closeup.jpg/3840px-Child_gets_a_bandage_on_their_knee_after_a_small_injury_closeup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AChild_gets_a_bandage_on_their_knee_after_a_small_injury_closeup.jpg",
-        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "Shixart1985",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
       },
       "background": null
     },

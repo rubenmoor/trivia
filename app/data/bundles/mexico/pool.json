@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "hash": "34f20d73",
+  "questions": [
+    {
+      "id": "q-0711",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "childrens-songs",
+      "bundle": "mexico",
+      "description": "Una canción que te pone a hacer sentadillas sin que te des cuenta.",
+      "question": "Adivina: soy una ronda infantil. Hablo de un patio que se moja cuando llueve, pongo a todos a agacharse y, al final, canto una lista. ¿De qué es esa lista?",
+      "answer": "Letras del abecedario",
+      "wrong_answers": [
+        "Números del 1 al 10",
+        "Días de la semana",
+        "Colores del arcoíris"
+      ],
+      "hints": [
+        "Después de la lista viene: 'que si tú no me quieres, otro amigo me querrá'.",
+        "Es algo que aprendes en el colegio para leer y escribir.",
+        "Empieza con 'H, I, J, K…'."
+      ],
+      "fun_fact": "'El patio de mi casa' se canta en rondas desde España hasta la Patagonia, con pequeñas diferencias en cada país.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Greymouth_Intermediate_School_Courtyard_during_break_time%2C_Tainui_Street%2C_Greymouth%2C_1987._CC165.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGreymouth_Intermediate_School_Courtyard_during_break_time%2C_Tainui_Street%2C_Greymouth%2C_1987._CC165.jpg",
+        "credit": "John Charlton · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "John Charlton",
+        "author_url": "https://www.wikidata.org/wiki/Q99000064"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0905",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "sayings",
+      "bundle": "mexico",
+      "description": "Una fruta que se reparte entre dos y nadie pelea.",
+      "question": "En una boda, la novia dice emocionada: '¡Por fin encontré a mi media naranja!'. ¿Qué quiere decir?",
+      "answer": "Su pareja ideal",
+      "wrong_answers": [
+        "Su fruta favorita",
+        "Su mejor amiga",
+        "Su trabajo soñado"
+      ],
+      "hints": [
+        "No está hablando de comida.",
+        "Se refiere a una persona.",
+        "Es con quien se está casando."
+      ],
+      "fun_fact": "La expresión viene de una vieja idea de que cada persona es una mitad que busca a otra para estar completa.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Cara_cara_orange_cut_in_half.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACara_cara_orange_cut_in_half.JPG",
+        "credit": "user:WLU · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "user:WLU",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-0958",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "sayings",
+      "bundle": "mexico",
+      "description": "Una expresión con más pólvora que un diciembre en Colombia.",
+      "question": "Si alguien dice que estás \"matando moscas a cañonazos\", ¿qué quiere decir?",
+      "answer": "Usar algo exagerado para un problema pequeño",
+      "wrong_answers": [
+        "Hacer algo difícil con muchísima paciencia",
+        "Perder el tiempo en cosas sin importancia",
+        "Atacar a alguien por sorpresa y sin avisar"
+      ],
+      "hints": [
+        "Piensa en el tamaño de una mosca y el de un cañón.",
+        "Para eso bastaría con un matamoscas.",
+        "Es gastar demasiada fuerza en algo que no la necesita."
+      ],
+      "fun_fact": "El matamoscas tiene agujeros para no empujar el aire antes del golpe, porque las moscas sienten ese viento y escapan.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/An_old_cannon_in_Vard%C3%B6_fortress_Norway%2C_july_2005_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAn_old_cannon_in_Vard%C3%B6_fortress_Norway%2C_july_2005_-_panoramio.jpg",
+        "credit": "Risto Varhe · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Risto Varhe",
+        "author_url": "https://web.archive.org/web/20161013110034/http://www.panoramio.com/user/693204?with_photo_id=7532179"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1163",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "tv-shows-and-hosts",
+      "bundle": "mexico",
+      "description": "Diez personas, un solo baño y cero paciencia: la receta perfecta para reírse.",
+      "question": "Su protagonista es Plácido López, se estrenó en 2007 y trata de una familia numerosa apretada en un apartamento pequeño. ¿De qué país es la comedia «Una familia de diez»?",
+      "answer": "México",
+      "wrong_answers": [
+        "Colombia",
+        "Argentina",
+        "Venezuela"
+      ],
+      "hints": [
+        "Es un país latinoamericano con una enorme industria de televisión.",
+        "Su creador y protagonista es Jorge Ortiz de Pinedo, actor de ese país.",
+        "Se transmitió por el Canal de las Estrellas de Televisa."
+      ],
+      "fun_fact": "Después de más de diez años fuera del aire, la serie volvió con temporadas nuevas en 2019.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/TV_camera_operator%2C_Canon_UHD_DIGISUPER_90.jpg/3840px-TV_camera_operator%2C_Canon_UHD_DIGISUPER_90.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATV_camera_operator%2C_Canon_UHD_DIGISUPER_90.jpg",
+        "credit": "Zalasem1 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Zalasem1",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Zalasem1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1248",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "childrens-songs",
+      "bundle": "mexico",
+      "description": "El hechizo médico más antiguo de la casa, y ni siquiera necesita una curita.",
+      "question": "Completa: 'Sana, sana, colita de rana, si no sana hoy, sanará…'",
+      "answer": "Mañana",
+      "wrong_answers": [
+        "El lunes",
+        "En un rato",
+        "Pasado mañana"
+      ],
+      "hints": [
+        "Es una palabra que rima con 'rana'.",
+        "Habla del día siguiente.",
+        "Es el día que viene después de hoy."
+      ],
+      "fun_fact": "Esta frase para curar raspones se dice en casi todos los países donde se habla español.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Child_gets_a_bandage_on_their_knee_after_a_small_injury_closeup.jpg/3840px-Child_gets_a_bandage_on_their_knee_after_a_small_injury_closeup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChild_gets_a_bandage_on_their_knee_after_a_small_injury_closeup.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      },
+      "background": null
+    }
+  ]
+}

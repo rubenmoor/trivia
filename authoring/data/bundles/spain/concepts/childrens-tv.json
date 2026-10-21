@@ -1,0 +1,1052 @@
+{
+  "subcategory": "childrens-tv",
+  "facets": [
+    "Barrio Sésamo en España",
+    "Los Payasos de la Tele",
+    "Marionetas y muñecos de la tele",
+    "Dibujos animados hechos en España",
+    "Anime en la tele española",
+    "Programas contenedor y magacines",
+    "Presentadores infantiles",
+    "Canales infantiles",
+    "Sintonías y canciones de series",
+    "Concursos y talent shows infantiles",
+    "Series juveniles de imagen real",
+    "Doblaje y títulos en España"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Barrio Sésamo",
+      "facet": "Barrio Sésamo en España",
+      "known_at": 4
+    },
+    {
+      "name": "Espinete",
+      "facet": "Barrio Sésamo en España",
+      "known_at": 9
+    },
+    {
+      "name": "Don Pimpón",
+      "facet": "Barrio Sésamo en España",
+      "known_at": 11
+    },
+    {
+      "name": "Chema el panadero",
+      "facet": "Barrio Sésamo en España",
+      "known_at": 12
+    },
+    {
+      "name": "Caponata",
+      "facet": "Barrio Sésamo en España",
+      "known_at": 14
+    },
+    {
+      "name": "Perezoso",
+      "facet": "Barrio Sésamo en España",
+      "known_at": 15
+    },
+    {
+      "name": "Epi",
+      "facet": "Barrio Sésamo en España",
+      "known_at": 5
+    },
+    {
+      "name": "Blas",
+      "facet": "Barrio Sésamo en España",
+      "known_at": 5
+    },
+    {
+      "name": "Coco",
+      "facet": "Barrio Sésamo en España",
+      "known_at": 7
+    },
+    {
+      "name": "Triki",
+      "facet": "Barrio Sésamo en España",
+      "known_at": 6
+    },
+    {
+      "name": "Gustavo",
+      "facet": "Barrio Sésamo en España",
+      "known_at": 8
+    },
+    {
+      "name": "Conde Draco",
+      "facet": "Barrio Sésamo en España",
+      "known_at": 10
+    },
+    {
+      "name": "Óscar el gruñón",
+      "facet": "Barrio Sésamo en España",
+      "known_at": 7
+    },
+    {
+      "name": "Elmo",
+      "facet": "Barrio Sésamo en España",
+      "known_at": 3
+    },
+    {
+      "name": "Erizo rosa",
+      "facet": "Barrio Sésamo en España",
+      "known_at": 10
+    },
+    {
+      "name": "Miliki",
+      "facet": "Los Payasos de la Tele",
+      "known_at": 5
+    },
+    {
+      "name": "Gaby",
+      "facet": "Los Payasos de la Tele",
+      "known_at": 8
+    },
+    {
+      "name": "Fofó",
+      "facet": "Los Payasos de la Tele",
+      "known_at": 8
+    },
+    {
+      "name": "Fofito",
+      "facet": "Los Payasos de la Tele",
+      "known_at": 9
+    },
+    {
+      "name": "Milikito",
+      "facet": "Los Payasos de la Tele",
+      "known_at": 11
+    },
+    {
+      "name": "Rody Aragón",
+      "facet": "Los Payasos de la Tele",
+      "known_at": 13
+    },
+    {
+      "name": "Cepillín",
+      "facet": "Los Payasos de la Tele",
+      "known_at": 12
+    },
+    {
+      "name": "¿Cómo están ustedes?",
+      "facet": "Los Payasos de la Tele",
+      "known_at": 5
+    },
+    {
+      "name": "Había una vez un circo",
+      "facet": "Los Payasos de la Tele",
+      "known_at": 7
+    },
+    {
+      "name": "La gallina Turuleca",
+      "facet": "Los Payasos de la Tele",
+      "known_at": 3
+    },
+    {
+      "name": "Susanita tiene un ratón",
+      "facet": "Los Payasos de la Tele",
+      "known_at": 3
+    },
+    {
+      "name": "En el auto de papá",
+      "facet": "Los Payasos de la Tele",
+      "known_at": 4
+    },
+    {
+      "name": "Mi barba tiene tres pelos",
+      "facet": "Los Payasos de la Tele",
+      "known_at": 3
+    },
+    {
+      "name": "Acordeón de Miliki",
+      "facet": "Los Payasos de la Tele",
+      "known_at": 9
+    },
+    {
+      "name": "Los Lunnis",
+      "facet": "Marionetas y muñecos de la tele",
+      "known_at": 3
+    },
+    {
+      "name": "Lucho",
+      "facet": "Marionetas y muñecos de la tele",
+      "known_at": 6
+    },
+    {
+      "name": "Lupita",
+      "facet": "Marionetas y muñecos de la tele",
+      "known_at": 6
+    },
+    {
+      "name": "Lublú",
+      "facet": "Marionetas y muñecos de la tele",
+      "known_at": 8
+    },
+    {
+      "name": "Lulila",
+      "facet": "Marionetas y muñecos de la tele",
+      "known_at": 8
+    },
+    {
+      "name": "Electroduendes",
+      "facet": "Marionetas y muñecos de la tele",
+      "known_at": 12
+    },
+    {
+      "name": "Bruja Avería",
+      "facet": "Marionetas y muñecos de la tele",
+      "known_at": 12
+    },
+    {
+      "name": "Los mundos de Yupi",
+      "facet": "Marionetas y muñecos de la tele",
+      "known_at": 11
+    },
+    {
+      "name": "Yupi",
+      "facet": "Marionetas y muñecos de la tele",
+      "known_at": 11
+    },
+    {
+      "name": "José Luis Moreno",
+      "facet": "Marionetas y muñecos de la tele",
+      "known_at": 10
+    },
+    {
+      "name": "Rockefeller",
+      "facet": "Marionetas y muñecos de la tele",
+      "known_at": 10
+    },
+    {
+      "name": "Monchito",
+      "facet": "Marionetas y muñecos de la tele",
+      "known_at": 11
+    },
+    {
+      "name": "Macario",
+      "facet": "Marionetas y muñecos de la tele",
+      "known_at": 12
+    },
+    {
+      "name": "Mari Carmen y sus muñecos",
+      "facet": "Marionetas y muñecos de la tele",
+      "known_at": 11
+    },
+    {
+      "name": "Doña Rogelia",
+      "facet": "Marionetas y muñecos de la tele",
+      "known_at": 11
+    },
+    {
+      "name": "Trancas y Barrancas",
+      "facet": "Marionetas y muñecos de la tele",
+      "known_at": 5
+    },
+    {
+      "name": "Los Teleñecos",
+      "facet": "Marionetas y muñecos de la tele",
+      "known_at": 11
+    },
+    {
+      "name": "D'Artacán y los tres mosqueperros",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 7
+    },
+    {
+      "name": "La vuelta al mundo de Willy Fog",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 7
+    },
+    {
+      "name": "David el Gnomo",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 8
+    },
+    {
+      "name": "Ruy, el pequeño Cid",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 11
+    },
+    {
+      "name": "Los Fruittis",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 11
+    },
+    {
+      "name": "Pocoyó",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 2
+    },
+    {
+      "name": "Las tres mellizas",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 7
+    },
+    {
+      "name": "Mortadelo y Filemón",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 4
+    },
+    {
+      "name": "Los Trotamúsicos",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 12
+    },
+    {
+      "name": "Bernard",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 6
+    },
+    {
+      "name": "Cálico Electrónico",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 11
+    },
+    {
+      "name": "Sandokán",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 12
+    },
+    {
+      "name": "Mofli, el último koala",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 14
+    },
+    {
+      "name": "Teo",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 6
+    },
+    {
+      "name": "Juanito Jones",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 12
+    },
+    {
+      "name": "Tadeo Jones",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 4
+    },
+    {
+      "name": "La familia Telerín",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 9
+    },
+    {
+      "name": "BRB Internacional",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 14
+    },
+    {
+      "name": "Claudio Biern Boyd",
+      "facet": "Dibujos animados hechos en España",
+      "known_at": 15
+    },
+    {
+      "name": "Mazinger Z",
+      "facet": "Anime en la tele española",
+      "known_at": 9
+    },
+    {
+      "name": "Heidi",
+      "facet": "Anime en la tele española",
+      "known_at": 4
+    },
+    {
+      "name": "Marco",
+      "facet": "Anime en la tele española",
+      "known_at": 9
+    },
+    {
+      "name": "Dragon Ball",
+      "facet": "Anime en la tele española",
+      "known_at": 4
+    },
+    {
+      "name": "Doraemon",
+      "facet": "Anime en la tele española",
+      "known_at": 2
+    },
+    {
+      "name": "Shin Chan",
+      "facet": "Anime en la tele española",
+      "known_at": 3
+    },
+    {
+      "name": "Oliver y Benji",
+      "facet": "Anime en la tele española",
+      "known_at": 6
+    },
+    {
+      "name": "Los Caballeros del Zodiaco",
+      "facet": "Anime en la tele española",
+      "known_at": 10
+    },
+    {
+      "name": "Sailor Moon",
+      "facet": "Anime en la tele española",
+      "known_at": 8
+    },
+    {
+      "name": "Chicho Terremoto",
+      "facet": "Anime en la tele española",
+      "known_at": 11
+    },
+    {
+      "name": "Pokémon",
+      "facet": "Anime en la tele española",
+      "known_at": 2
+    },
+    {
+      "name": "Detective Conan",
+      "facet": "Anime en la tele española",
+      "known_at": 6
+    },
+    {
+      "name": "Ranma ½",
+      "facet": "Anime en la tele española",
+      "known_at": 11
+    },
+    {
+      "name": "Doctor Slump",
+      "facet": "Anime en la tele española",
+      "known_at": 10
+    },
+    {
+      "name": "Comando G",
+      "facet": "Anime en la tele española",
+      "known_at": 13
+    },
+    {
+      "name": "Capitán Harlock",
+      "facet": "Anime en la tele española",
+      "known_at": 13
+    },
+    {
+      "name": "Vickie el vikingo",
+      "facet": "Anime en la tele española",
+      "known_at": 9
+    },
+    {
+      "name": "La abeja Maya",
+      "facet": "Anime en la tele española",
+      "known_at": 4
+    },
+    {
+      "name": "Musculman",
+      "facet": "Anime en la tele española",
+      "known_at": 13
+    },
+    {
+      "name": "Bateadores",
+      "facet": "Anime en la tele española",
+      "known_at": 13
+    },
+    {
+      "name": "Lupin III",
+      "facet": "Anime en la tele española",
+      "known_at": 12
+    },
+    {
+      "name": "Nils Holgersson",
+      "facet": "Anime en la tele española",
+      "known_at": 11
+    },
+    {
+      "name": "Naruto",
+      "facet": "Anime en la tele española",
+      "known_at": 5
+    },
+    {
+      "name": "La bola de cristal",
+      "facet": "Programas contenedor y magacines",
+      "known_at": 11
+    },
+    {
+      "name": "Los Chiripitifláuticos",
+      "facet": "Programas contenedor y magacines",
+      "known_at": 13
+    },
+    {
+      "name": "Un globo, dos globos, tres globos",
+      "facet": "Programas contenedor y magacines",
+      "known_at": 13
+    },
+    {
+      "name": "Cajón desastre",
+      "facet": "Programas contenedor y magacines",
+      "known_at": 13
+    },
+    {
+      "name": "Club Megatrix",
+      "facet": "Programas contenedor y magacines",
+      "known_at": 9
+    },
+    {
+      "name": "Club Disney",
+      "facet": "Programas contenedor y magacines",
+      "known_at": 9
+    },
+    {
+      "name": "Art Attack",
+      "facet": "Programas contenedor y magacines",
+      "known_at": 6
+    },
+    {
+      "name": "El planeta imaginario",
+      "facet": "Programas contenedor y magacines",
+      "known_at": 13
+    },
+    {
+      "name": "Sabadabadá",
+      "facet": "Programas contenedor y magacines",
+      "known_at": 13
+    },
+    {
+      "name": "La cometa blanca",
+      "facet": "Programas contenedor y magacines",
+      "known_at": 14
+    },
+    {
+      "name": "La casa del reloj",
+      "facet": "Programas contenedor y magacines",
+      "known_at": 14
+    },
+    {
+      "name": "Pista libre",
+      "facet": "Programas contenedor y magacines",
+      "known_at": 14
+    },
+    {
+      "name": "Zapping Zone",
+      "facet": "Programas contenedor y magacines",
+      "known_at": 8
+    },
+    {
+      "name": "El show de Xuxa",
+      "facet": "Programas contenedor y magacines",
+      "known_at": 13
+    },
+    {
+      "name": "Dabadabada",
+      "facet": "Programas contenedor y magacines",
+      "known_at": 14
+    },
+    {
+      "name": "Jordi Cruz",
+      "facet": "Presentadores infantiles",
+      "known_at": 7
+    },
+    {
+      "name": "Leticia Sabater",
+      "facet": "Presentadores infantiles",
+      "known_at": 10
+    },
+    {
+      "name": "Torrebruno",
+      "facet": "Presentadores infantiles",
+      "known_at": 13
+    },
+    {
+      "name": "Sonia Martínez",
+      "facet": "Presentadores infantiles",
+      "known_at": 14
+    },
+    {
+      "name": "Alaska",
+      "facet": "Presentadores infantiles",
+      "known_at": 11
+    },
+    {
+      "name": "María Luisa Seco",
+      "facet": "Presentadores infantiles",
+      "known_at": 14
+    },
+    {
+      "name": "Locomotoro",
+      "facet": "Presentadores infantiles",
+      "known_at": 13
+    },
+    {
+      "name": "Capitán Tan",
+      "facet": "Presentadores infantiles",
+      "known_at": 13
+    },
+    {
+      "name": "Valentina",
+      "facet": "Presentadores infantiles",
+      "known_at": 14
+    },
+    {
+      "name": "Lolo Rico",
+      "facet": "Presentadores infantiles",
+      "known_at": 14
+    },
+    {
+      "name": "Jesús Vázquez",
+      "facet": "Presentadores infantiles",
+      "known_at": 8
+    },
+    {
+      "name": "Lucía Gil",
+      "facet": "Presentadores infantiles",
+      "known_at": 9
+    },
+    {
+      "name": "Eva González",
+      "facet": "Presentadores infantiles",
+      "known_at": 9
+    },
+    {
+      "name": "Xuxa",
+      "facet": "Presentadores infantiles",
+      "known_at": 12
+    },
+    {
+      "name": "Pablo Motos",
+      "facet": "Presentadores infantiles",
+      "known_at": 6
+    },
+    {
+      "name": "Clan",
+      "facet": "Canales infantiles",
+      "known_at": 2
+    },
+    {
+      "name": "Boing",
+      "facet": "Canales infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "Disney Channel",
+      "facet": "Canales infantiles",
+      "known_at": 2
+    },
+    {
+      "name": "Disney Junior",
+      "facet": "Canales infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "Disney XD",
+      "facet": "Canales infantiles",
+      "known_at": 7
+    },
+    {
+      "name": "Nickelodeon",
+      "facet": "Canales infantiles",
+      "known_at": 4
+    },
+    {
+      "name": "Nick Jr.",
+      "facet": "Canales infantiles",
+      "known_at": 6
+    },
+    {
+      "name": "Cartoon Network",
+      "facet": "Canales infantiles",
+      "known_at": 5
+    },
+    {
+      "name": "Boomerang",
+      "facet": "Canales infantiles",
+      "known_at": 9
+    },
+    {
+      "name": "Canal Panda",
+      "facet": "Canales infantiles",
+      "known_at": 8
+    },
+    {
+      "name": "Jetix",
+      "facet": "Canales infantiles",
+      "known_at": 11
+    },
+    {
+      "name": "Fox Kids",
+      "facet": "Canales infantiles",
+      "known_at": 11
+    },
+    {
+      "name": "Neox Kidz",
+      "facet": "Canales infantiles",
+      "known_at": 8
+    },
+    {
+      "name": "Baby TV",
+      "facet": "Canales infantiles",
+      "known_at": 7
+    },
+    {
+      "name": "Super3",
+      "facet": "Canales infantiles",
+      "known_at": 11
+    },
+    {
+      "name": "La 2",
+      "facet": "Canales infantiles",
+      "known_at": 6
+    },
+    {
+      "name": "Cartoonito",
+      "facet": "Canales infantiles",
+      "known_at": 7
+    },
+    {
+      "name": "Vamos a la cama",
+      "facet": "Sintonías y canciones de series",
+      "known_at": 7
+    },
+    {
+      "name": "Abuelito, dime tú",
+      "facet": "Sintonías y canciones de series",
+      "known_at": 7
+    },
+    {
+      "name": "Mocedades",
+      "facet": "Sintonías y canciones de series",
+      "known_at": 12
+    },
+    {
+      "name": "Parchís",
+      "facet": "Sintonías y canciones de series",
+      "known_at": 11
+    },
+    {
+      "name": "Sintonía de Mazinger Z",
+      "facet": "Sintonías y canciones de series",
+      "known_at": 11
+    },
+    {
+      "name": "Cha-La Head-Cha-La",
+      "facet": "Sintonías y canciones de series",
+      "known_at": 10
+    },
+    {
+      "name": "Solo no puedes, con amigos sí",
+      "facet": "Sintonías y canciones de series",
+      "known_at": 13
+    },
+    {
+      "name": "Sintonía de Verano azul",
+      "facet": "Sintonías y canciones de series",
+      "known_at": 11
+    },
+    {
+      "name": "Carmelo Bernaola",
+      "facet": "Sintonías y canciones de series",
+      "known_at": 15
+    },
+    {
+      "name": "Teresa Rabal",
+      "facet": "Sintonías y canciones de series",
+      "known_at": 11
+    },
+    {
+      "name": "Veo, veo",
+      "facet": "Sintonías y canciones de series",
+      "known_at": 6
+    },
+    {
+      "name": "CantaJuego",
+      "facet": "Sintonías y canciones de series",
+      "known_at": 3
+    },
+    {
+      "name": "Ilarié",
+      "facet": "Sintonías y canciones de series",
+      "known_at": 12
+    },
+    {
+      "name": "Enrique y Ana",
+      "facet": "Sintonías y canciones de series",
+      "known_at": 12
+    },
+    {
+      "name": "El baile del gorila",
+      "facet": "Sintonías y canciones de series",
+      "known_at": 6
+    },
+    {
+      "name": "Uno para todos y todos para uno",
+      "facet": "Sintonías y canciones de series",
+      "known_at": 9
+    },
+    {
+      "name": "La Voz Kids",
+      "facet": "Concursos y talent shows infantiles",
+      "known_at": 4
+    },
+    {
+      "name": "MasterChef Junior",
+      "facet": "Concursos y talent shows infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "Juego de niños",
+      "facet": "Concursos y talent shows infantiles",
+      "known_at": 12
+    },
+    {
+      "name": "Menudas estrellas",
+      "facet": "Concursos y talent shows infantiles",
+      "known_at": 13
+    },
+    {
+      "name": "Eurovisión Junior",
+      "facet": "Concursos y talent shows infantiles",
+      "known_at": 6
+    },
+    {
+      "name": "María Isabel",
+      "facet": "Concursos y talent shows infantiles",
+      "known_at": 8
+    },
+    {
+      "name": "Antes muerta que sencilla",
+      "facet": "Concursos y talent shows infantiles",
+      "known_at": 7
+    },
+    {
+      "name": "Tu cara me suena Mini",
+      "facet": "Concursos y talent shows infantiles",
+      "known_at": 9
+    },
+    {
+      "name": "Pequeños gigantes",
+      "facet": "Concursos y talent shows infantiles",
+      "known_at": 10
+    },
+    {
+      "name": "Grand Prix del verano",
+      "facet": "Concursos y talent shows infantiles",
+      "known_at": 7
+    },
+    {
+      "name": "Waku Waku",
+      "facet": "Concursos y talent shows infantiles",
+      "known_at": 12
+    },
+    {
+      "name": "Levi Díaz",
+      "facet": "Concursos y talent shows infantiles",
+      "known_at": 11
+    },
+    {
+      "name": "Melani García",
+      "facet": "Concursos y talent shows infantiles",
+      "known_at": 11
+    },
+    {
+      "name": "Operación Triunfo",
+      "facet": "Concursos y talent shows infantiles",
+      "known_at": 5
+    },
+    {
+      "name": "Verano azul",
+      "facet": "Series juveniles de imagen real",
+      "known_at": 9
+    },
+    {
+      "name": "Chanquete",
+      "facet": "Series juveniles de imagen real",
+      "known_at": 11
+    },
+    {
+      "name": "Los Serrano",
+      "facet": "Series juveniles de imagen real",
+      "known_at": 8
+    },
+    {
+      "name": "Física o Química",
+      "facet": "Series juveniles de imagen real",
+      "known_at": 9
+    },
+    {
+      "name": "Compañeros",
+      "facet": "Series juveniles de imagen real",
+      "known_at": 12
+    },
+    {
+      "name": "Al salir de clase",
+      "facet": "Series juveniles de imagen real",
+      "known_at": 12
+    },
+    {
+      "name": "Un paso adelante",
+      "facet": "Series juveniles de imagen real",
+      "known_at": 11
+    },
+    {
+      "name": "El internado",
+      "facet": "Series juveniles de imagen real",
+      "known_at": 9
+    },
+    {
+      "name": "Los Protegidos",
+      "facet": "Series juveniles de imagen real",
+      "known_at": 9
+    },
+    {
+      "name": "Élite",
+      "facet": "Series juveniles de imagen real",
+      "known_at": 8
+    },
+    {
+      "name": "Merlí",
+      "facet": "Series juveniles de imagen real",
+      "known_at": 11
+    },
+    {
+      "name": "Skam España",
+      "facet": "Series juveniles de imagen real",
+      "known_at": 12
+    },
+    {
+      "name": "Nada es para siempre",
+      "facet": "Series juveniles de imagen real",
+      "known_at": 14
+    },
+    {
+      "name": "Médico de familia",
+      "facet": "Series juveniles de imagen real",
+      "known_at": 10
+    },
+    {
+      "name": "Ana y los siete",
+      "facet": "Series juveniles de imagen real",
+      "known_at": 10
+    },
+    {
+      "name": "Meteoro",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 11
+    },
+    {
+      "name": "Rayo McQueen",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 2
+    },
+    {
+      "name": "Del revés",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 3
+    },
+    {
+      "name": "Patricio",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 2
+    },
+    {
+      "name": "Calamardo",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 3
+    },
+    {
+      "name": "Don Cangrejo",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 3
+    },
+    {
+      "name": "Pato Lucas",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 6
+    },
+    {
+      "name": "Piolín",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 3
+    },
+    {
+      "name": "Pedro Picapiedra",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 6
+    },
+    {
+      "name": "Pablo Mármol",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 9
+    },
+    {
+      "name": "Carlos Ysbert",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 14
+    },
+    {
+      "name": "Constantino Romero",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 12
+    },
+    {
+      "name": "Gru, mi villano favorito",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 3
+    },
+    {
+      "name": "Vaiana",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 3
+    },
+    {
+      "name": "Enredados",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 4
+    },
+    {
+      "name": "Frozen: el reino del hielo",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 3
+    },
+    {
+      "name": "Los Simpson",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 4
+    },
+    {
+      "name": "Los Increíbles",
+      "facet": "Doblaje y títulos en España",
+      "known_at": 4
+    }
+  ]
+}

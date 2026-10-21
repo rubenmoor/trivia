@@ -1,0 +1,1152 @@
+{
+  "subcategory": "folk-music-and-dance",
+  "facets": [
+    "La jota y sus variantes",
+    "Sevillanas, fandangos y bailes andaluces",
+    "Muñeira, gaitas y folclore del norte",
+    "Sardana, cobla y bailes catalanes y baleares",
+    "Aurresku, txistu y danzas vascas",
+    "Chotis, pasodoble y bailes castizos",
+    "Isa, folía y folclore canario",
+    "Instrumentos populares españoles",
+    "Canciones populares, nanas y villancicos",
+    "Danzas rituales y de fiesta",
+    "Tunas, rondallas y bandas de música",
+    "Trajes y complementos del baile"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 1,
+      "record": 2,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 3,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Jota aragonesa",
+      "facet": "La jota y sus variantes",
+      "known_at": 5
+    },
+    {
+      "name": "Jota navarra",
+      "facet": "La jota y sus variantes",
+      "known_at": 10
+    },
+    {
+      "name": "Jota valenciana",
+      "facet": "La jota y sus variantes",
+      "known_at": 11
+    },
+    {
+      "name": "Jota castellana",
+      "facet": "La jota y sus variantes",
+      "known_at": 11
+    },
+    {
+      "name": "Jota manchega",
+      "facet": "La jota y sus variantes",
+      "known_at": 11
+    },
+    {
+      "name": "Jota extremeña",
+      "facet": "La jota y sus variantes",
+      "known_at": 12
+    },
+    {
+      "name": "Jota leonesa",
+      "facet": "La jota y sus variantes",
+      "known_at": 13
+    },
+    {
+      "name": "Jota riojana",
+      "facet": "La jota y sus variantes",
+      "known_at": 13
+    },
+    {
+      "name": "Jota murciana",
+      "facet": "La jota y sus variantes",
+      "known_at": 13
+    },
+    {
+      "name": "Jota menorquina",
+      "facet": "La jota y sus variantes",
+      "known_at": 14
+    },
+    {
+      "name": "La Dolores",
+      "facet": "La jota y sus variantes",
+      "known_at": 12
+    },
+    {
+      "name": "Fiestas del Pilar",
+      "facet": "La jota y sus variantes",
+      "known_at": 7
+    },
+    {
+      "name": "Ofrenda de Flores",
+      "facet": "La jota y sus variantes",
+      "known_at": 9
+    },
+    {
+      "name": "Certamen Oficial de Jota Aragonesa",
+      "facet": "La jota y sus variantes",
+      "known_at": 14
+    },
+    {
+      "name": "José Iranzo «El Pastor de Andorra»",
+      "facet": "La jota y sus variantes",
+      "known_at": 14
+    },
+    {
+      "name": "Jotero",
+      "facet": "La jota y sus variantes",
+      "known_at": 9
+    },
+    {
+      "name": "Baturro",
+      "facet": "La jota y sus variantes",
+      "known_at": 8
+    },
+    {
+      "name": "Gigantes y cabezudos (zarzuela)",
+      "facet": "La jota y sus variantes",
+      "known_at": 13
+    },
+    {
+      "name": "Sevillanas",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 3
+    },
+    {
+      "name": "Flamenco",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 2
+    },
+    {
+      "name": "Fandango de Huelva",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 10
+    },
+    {
+      "name": "Malagueña",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 9
+    },
+    {
+      "name": "Verdiales",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 13
+    },
+    {
+      "name": "Rumba flamenca",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 8
+    },
+    {
+      "name": "Bulerías",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 10
+    },
+    {
+      "name": "Alegrías",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 12
+    },
+    {
+      "name": "Soleá",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 12
+    },
+    {
+      "name": "Seguiriya",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 14
+    },
+    {
+      "name": "Tangos flamencos",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 13
+    },
+    {
+      "name": "Saeta",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 10
+    },
+    {
+      "name": "Cante jondo",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 12
+    },
+    {
+      "name": "Taconeo",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 6
+    },
+    {
+      "name": "Palmas",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 4
+    },
+    {
+      "name": "Feria de Abril",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 5
+    },
+    {
+      "name": "Romería del Rocío",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 8
+    },
+    {
+      "name": "Camarón de la Isla",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 9
+    },
+    {
+      "name": "Paco de Lucía",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 9
+    },
+    {
+      "name": "Lola Flores",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 9
+    },
+    {
+      "name": "Los del Río",
+      "facet": "Sevillanas, fandangos y bailes andaluces",
+      "known_at": 8
+    },
+    {
+      "name": "Muñeira",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 7
+    },
+    {
+      "name": "Gaita gallega",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 4
+    },
+    {
+      "name": "Gaita asturiana",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 7
+    },
+    {
+      "name": "Pandeireta",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 9
+    },
+    {
+      "name": "Alalá",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 13
+    },
+    {
+      "name": "Foliada",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos Núñez",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 11
+    },
+    {
+      "name": "Hevia",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 11
+    },
+    {
+      "name": "Danza prima",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 13
+    },
+    {
+      "name": "Pandero cuadrado",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 13
+    },
+    {
+      "name": "Festival de Ortigueira",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 12
+    },
+    {
+      "name": "Tonada asturiana",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 12
+    },
+    {
+      "name": "Vaqueiradas",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 14
+    },
+    {
+      "name": "Pericote",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 14
+    },
+    {
+      "name": "Picayos",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 14
+    },
+    {
+      "name": "Milladoiro",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 13
+    },
+    {
+      "name": "Luar na Lubre",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 13
+    },
+    {
+      "name": "Gaiteiro",
+      "facet": "Muñeira, gaitas y folclore del norte",
+      "known_at": 8
+    },
+    {
+      "name": "Sardana",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 6
+    },
+    {
+      "name": "Cobla",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 11
+    },
+    {
+      "name": "Tenora",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 13
+    },
+    {
+      "name": "Tible",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 14
+    },
+    {
+      "name": "Flabiol",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 13
+    },
+    {
+      "name": "Tamborí",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 13
+    },
+    {
+      "name": "Pep Ventura",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 14
+    },
+    {
+      "name": "La Santa Espina",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 13
+    },
+    {
+      "name": "Contrapàs",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 15
+    },
+    {
+      "name": "Ball de bastons",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 12
+    },
+    {
+      "name": "Ball de gitanes",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 14
+    },
+    {
+      "name": "Bolero mallorquín",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 13
+    },
+    {
+      "name": "Ball de bot",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 13
+    },
+    {
+      "name": "Xeremies",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 14
+    },
+    {
+      "name": "Jaleo menorquín",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 14
+    },
+    {
+      "name": "Habaneras de Calella de Palafrugell",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 13
+    },
+    {
+      "name": "Castellers",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 6
+    },
+    {
+      "name": "Gralla",
+      "facet": "Sardana, cobla y bailes catalanes y baleares",
+      "known_at": 13
+    },
+    {
+      "name": "Aurresku",
+      "facet": "Aurresku, txistu y danzas vascas",
+      "known_at": 11
+    },
+    {
+      "name": "Txistu",
+      "facet": "Aurresku, txistu y danzas vascas",
+      "known_at": 9
+    },
+    {
+      "name": "Txistulari",
+      "facet": "Aurresku, txistu y danzas vascas",
+      "known_at": 11
+    },
+    {
+      "name": "Txalaparta",
+      "facet": "Aurresku, txistu y danzas vascas",
+      "known_at": 11
+    },
+    {
+      "name": "Trikitixa",
+      "facet": "Aurresku, txistu y danzas vascas",
+      "known_at": 12
+    },
+    {
+      "name": "Alboka",
+      "facet": "Aurresku, txistu y danzas vascas",
+      "known_at": 14
+    },
+    {
+      "name": "Danbolin",
+      "facet": "Aurresku, txistu y danzas vascas",
+      "known_at": 14
+    },
+    {
+      "name": "Ezpatadantza",
+      "facet": "Aurresku, txistu y danzas vascas",
+      "known_at": 13
+    },
+    {
+      "name": "Arin-arin",
+      "facet": "Aurresku, txistu y danzas vascas",
+      "known_at": 13
+    },
+    {
+      "name": "Fandango vasco",
+      "facet": "Aurresku, txistu y danzas vascas",
+      "known_at": 13
+    },
+    {
+      "name": "Bertsolarismo",
+      "facet": "Aurresku, txistu y danzas vascas",
+      "known_at": 12
+    },
+    {
+      "name": "Irrintzi",
+      "facet": "Aurresku, txistu y danzas vascas",
+      "known_at": 13
+    },
+    {
+      "name": "Joaldunak",
+      "facet": "Aurresku, txistu y danzas vascas",
+      "known_at": 13
+    },
+    {
+      "name": "Dantzari",
+      "facet": "Aurresku, txistu y danzas vascas",
+      "known_at": 12
+    },
+    {
+      "name": "Kalejira",
+      "facet": "Aurresku, txistu y danzas vascas",
+      "known_at": 13
+    },
+    {
+      "name": "Kepa Junkera",
+      "facet": "Aurresku, txistu y danzas vascas",
+      "known_at": 13
+    },
+    {
+      "name": "Txoria txori",
+      "facet": "Aurresku, txistu y danzas vascas",
+      "known_at": 13
+    },
+    {
+      "name": "Chotis",
+      "facet": "Chotis, pasodoble y bailes castizos",
+      "known_at": 7
+    },
+    {
+      "name": "Pasodoble",
+      "facet": "Chotis, pasodoble y bailes castizos",
+      "known_at": 6
+    },
+    {
+      "name": "Verbena de la Paloma",
+      "facet": "Chotis, pasodoble y bailes castizos",
+      "known_at": 11
+    },
+    {
+      "name": "Fiestas de San Isidro",
+      "facet": "Chotis, pasodoble y bailes castizos",
+      "known_at": 8
+    },
+    {
+      "name": "Chulapo",
+      "facet": "Chotis, pasodoble y bailes castizos",
+      "known_at": 8
+    },
+    {
+      "name": "Organillo",
+      "facet": "Chotis, pasodoble y bailes castizos",
+      "known_at": 9
+    },
+    {
+      "name": "Organillero",
+      "facet": "Chotis, pasodoble y bailes castizos",
+      "known_at": 10
+    },
+    {
+      "name": "El Pichi",
+      "facet": "Chotis, pasodoble y bailes castizos",
+      "known_at": 13
+    },
+    {
+      "name": "Madrid (chotis de Agustín Lara)",
+      "facet": "Chotis, pasodoble y bailes castizos",
+      "known_at": 12
+    },
+    {
+      "name": "España cañí",
+      "facet": "Chotis, pasodoble y bailes castizos",
+      "known_at": 9
+    },
+    {
+      "name": "Paquito el chocolatero",
+      "facet": "Chotis, pasodoble y bailes castizos",
+      "known_at": 5
+    },
+    {
+      "name": "Amparito Roca",
+      "facet": "Chotis, pasodoble y bailes castizos",
+      "known_at": 13
+    },
+    {
+      "name": "Zarzuela",
+      "facet": "Chotis, pasodoble y bailes castizos",
+      "known_at": 9
+    },
+    {
+      "name": "Federico Chueca",
+      "facet": "Chotis, pasodoble y bailes castizos",
+      "known_at": 14
+    },
+    {
+      "name": "La Gran Vía (zarzuela)",
+      "facet": "Chotis, pasodoble y bailes castizos",
+      "known_at": 13
+    },
+    {
+      "name": "Mazurca",
+      "facet": "Chotis, pasodoble y bailes castizos",
+      "known_at": 11
+    },
+    {
+      "name": "Pradera de San Isidro",
+      "facet": "Chotis, pasodoble y bailes castizos",
+      "known_at": 11
+    },
+    {
+      "name": "Isa canaria",
+      "facet": "Isa, folía y folclore canario",
+      "known_at": 10
+    },
+    {
+      "name": "Folía canaria",
+      "facet": "Isa, folía y folclore canario",
+      "known_at": 11
+    },
+    {
+      "name": "Malagueña canaria",
+      "facet": "Isa, folía y folclore canario",
+      "known_at": 13
+    },
+    {
+      "name": "Seguidilla canaria",
+      "facet": "Isa, folía y folclore canario",
+      "known_at": 14
+    },
+    {
+      "name": "Timple",
+      "facet": "Isa, folía y folclore canario",
+      "known_at": 9
+    },
+    {
+      "name": "Silbo gomero",
+      "facet": "Isa, folía y folclore canario",
+      "known_at": 9
+    },
+    {
+      "name": "Tajaraste",
+      "facet": "Isa, folía y folclore canario",
+      "known_at": 14
+    },
+    {
+      "name": "Sorondongo",
+      "facet": "Isa, folía y folclore canario",
+      "known_at": 14
+    },
+    {
+      "name": "Tango herreño",
+      "facet": "Isa, folía y folclore canario",
+      "known_at": 15
+    },
+    {
+      "name": "Arrorró",
+      "facet": "Isa, folía y folclore canario",
+      "known_at": 12
+    },
+    {
+      "name": "Los Sabandeños",
+      "facet": "Isa, folía y folclore canario",
+      "known_at": 12
+    },
+    {
+      "name": "Bajada de la Rama de Agaete",
+      "facet": "Isa, folía y folclore canario",
+      "known_at": 13
+    },
+    {
+      "name": "Chácaras",
+      "facet": "Isa, folía y folclore canario",
+      "known_at": 14
+    },
+    {
+      "name": "Polka canaria",
+      "facet": "Isa, folía y folclore canario",
+      "known_at": 14
+    },
+    {
+      "name": "Romería de San Benito Abad",
+      "facet": "Isa, folía y folclore canario",
+      "known_at": 13
+    },
+    {
+      "name": "Valentina la de Sabinosa",
+      "facet": "Isa, folía y folclore canario",
+      "known_at": 15
+    },
+    {
+      "name": "Mary Sánchez",
+      "facet": "Isa, folía y folclore canario",
+      "known_at": 14
+    },
+    {
+      "name": "Castañuelas",
+      "facet": "Instrumentos populares españoles",
+      "known_at": 2
+    },
+    {
+      "name": "Guitarra española",
+      "facet": "Instrumentos populares españoles",
+      "known_at": 2
+    },
+    {
+      "name": "Bandurria",
+      "facet": "Instrumentos populares españoles",
+      "known_at": 9
+    },
+    {
+      "name": "Laúd español",
+      "facet": "Instrumentos populares españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Pandereta",
+      "facet": "Instrumentos populares españoles",
+      "known_at": 2
+    },
+    {
+      "name": "Zambomba",
+      "facet": "Instrumentos populares españoles",
+      "known_at": 4
+    },
+    {
+      "name": "Dulzaina",
+      "facet": "Instrumentos populares españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Botella de anís",
+      "facet": "Instrumentos populares españoles",
+      "known_at": 5
+    },
+    {
+      "name": "Almirez",
+      "facet": "Instrumentos populares españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Cajón flamenco",
+      "facet": "Instrumentos populares españoles",
+      "known_at": 7
+    },
+    {
+      "name": "Zanfona",
+      "facet": "Instrumentos populares españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Rabel",
+      "facet": "Instrumentos populares españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Carraca",
+      "facet": "Instrumentos populares españoles",
+      "known_at": 9
+    },
+    {
+      "name": "Bombo",
+      "facet": "Instrumentos populares españoles",
+      "known_at": 3
+    },
+    {
+      "name": "Tamboril",
+      "facet": "Instrumentos populares españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Gaita de fole",
+      "facet": "Instrumentos populares españoles",
+      "known_at": 14
+    },
+    {
+      "name": "La vaca lechera",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 3
+    },
+    {
+      "name": "Al corro de la patata",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 1
+    },
+    {
+      "name": "El patio de mi casa",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 2
+    },
+    {
+      "name": "Cinco lobitos",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 1
+    },
+    {
+      "name": "Debajo un botón",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 3
+    },
+    {
+      "name": "Tengo una muñeca vestida de azul",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 3
+    },
+    {
+      "name": "Estaba el señor don Gato",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 4
+    },
+    {
+      "name": "Antón Pirulero",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 5
+    },
+    {
+      "name": "Soy el farolero",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 6
+    },
+    {
+      "name": "El cocherito leré",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 6
+    },
+    {
+      "name": "Mambrú se fue a la guerra",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 7
+    },
+    {
+      "name": "Hola, don Pepito",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 3
+    },
+    {
+      "name": "Duérmete, niño",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 2
+    },
+    {
+      "name": "Los peces en el río",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 2
+    },
+    {
+      "name": "Campana sobre campana",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 3
+    },
+    {
+      "name": "La Marimorena",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 5
+    },
+    {
+      "name": "Hacia Belén va una burra",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 4
+    },
+    {
+      "name": "Arre, borriquito",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 4
+    },
+    {
+      "name": "El tamborilero",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 4
+    },
+    {
+      "name": "Asturias, patria querida",
+      "facet": "Canciones populares, nanas y villancicos",
+      "known_at": 9
+    },
+    {
+      "name": "Moros y Cristianos",
+      "facet": "Danzas rituales y de fiesta",
+      "known_at": 8
+    },
+    {
+      "name": "Misteri d'Elx",
+      "facet": "Danzas rituales y de fiesta",
+      "known_at": 13
+    },
+    {
+      "name": "Patum de Berga",
+      "facet": "Danzas rituales y de fiesta",
+      "known_at": 13
+    },
+    {
+      "name": "Seises de la catedral de Sevilla",
+      "facet": "Danzas rituales y de fiesta",
+      "known_at": 14
+    },
+    {
+      "name": "Danzantes del Corpus",
+      "facet": "Danzas rituales y de fiesta",
+      "known_at": 12
+    },
+    {
+      "name": "Paloteo",
+      "facet": "Danzas rituales y de fiesta",
+      "known_at": 13
+    },
+    {
+      "name": "Gigantes y cabezudos",
+      "facet": "Danzas rituales y de fiesta",
+      "known_at": 4
+    },
+    {
+      "name": "El Colacho",
+      "facet": "Danzas rituales y de fiesta",
+      "known_at": 12
+    },
+    {
+      "name": "Danza de los zancos de Anguiano",
+      "facet": "Danzas rituales y de fiesta",
+      "known_at": 13
+    },
+    {
+      "name": "Tamborrada de San Sebastián",
+      "facet": "Danzas rituales y de fiesta",
+      "known_at": 11
+    },
+    {
+      "name": "Rompida de la Hora",
+      "facet": "Danzas rituales y de fiesta",
+      "known_at": 13
+    },
+    {
+      "name": "La Tarasca",
+      "facet": "Danzas rituales y de fiesta",
+      "known_at": 13
+    },
+    {
+      "name": "Correfoc",
+      "facet": "Danzas rituales y de fiesta",
+      "known_at": 11
+    },
+    {
+      "name": "Riau-riau",
+      "facet": "Danzas rituales y de fiesta",
+      "known_at": 13
+    },
+    {
+      "name": "Entierro de la sardina",
+      "facet": "Danzas rituales y de fiesta",
+      "known_at": 9
+    },
+    {
+      "name": "Pobre de mí",
+      "facet": "Danzas rituales y de fiesta",
+      "known_at": 10
+    },
+    {
+      "name": "Tuna universitaria",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 7
+    },
+    {
+      "name": "Tuno",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 8
+    },
+    {
+      "name": "Beca de la tuna",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 12
+    },
+    {
+      "name": "Capa de tuno",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 9
+    },
+    {
+      "name": "Cintas de la capa",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 11
+    },
+    {
+      "name": "Clavelitos",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 9
+    },
+    {
+      "name": "Fonseca (canción de tuna)",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 13
+    },
+    {
+      "name": "Rondalla",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 10
+    },
+    {
+      "name": "Ronda",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 10
+    },
+    {
+      "name": "Serenata",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 8
+    },
+    {
+      "name": "Estudiantina",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 12
+    },
+    {
+      "name": "Banda municipal",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 6
+    },
+    {
+      "name": "Pasacalles",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 7
+    },
+    {
+      "name": "Charanga",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 7
+    },
+    {
+      "name": "Banda de cornetas y tambores",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 8
+    },
+    {
+      "name": "Sociedad musical valenciana",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 12
+    },
+    {
+      "name": "Certamen Internacional de Bandas de Música de Valencia",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 14
+    },
+    {
+      "name": "Llíria",
+      "facet": "Tunas, rondallas y bandas de música",
+      "known_at": 14
+    },
+    {
+      "name": "Traje de flamenca",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 3
+    },
+    {
+      "name": "Bata de cola",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 10
+    },
+    {
+      "name": "Volantes",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 5
+    },
+    {
+      "name": "Mantón de Manila",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 8
+    },
+    {
+      "name": "Peineta",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 5
+    },
+    {
+      "name": "Mantilla",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 8
+    },
+    {
+      "name": "Abanico",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 2
+    },
+    {
+      "name": "Clavel",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 5
+    },
+    {
+      "name": "Traje de chulapa",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 8
+    },
+    {
+      "name": "Parpusa",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 13
+    },
+    {
+      "name": "Cachirulo",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 10
+    },
+    {
+      "name": "Faja",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 7
+    },
+    {
+      "name": "Alpargatas",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 6
+    },
+    {
+      "name": "Traje de fallera",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 6
+    },
+    {
+      "name": "Traje corto",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 11
+    },
+    {
+      "name": "Sombrero cordobés",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 6
+    },
+    {
+      "name": "Zaragüelles",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 14
+    },
+    {
+      "name": "Txapela",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 8
+    },
+    {
+      "name": "Traje de mago",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 13
+    },
+    {
+      "name": "Traje charro",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 13
+    },
+    {
+      "name": "Traje de lagarterana",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 14
+    },
+    {
+      "name": "Pañuelo de lunares",
+      "facet": "Trajes y complementos del baile",
+      "known_at": 5
+    }
+  ]
+}

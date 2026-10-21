@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "hash": "a9a8da8f",
+  "questions": [
+    {
+      "id": "q-0975",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "folk-music-and-dance",
+      "bundle": "spain",
+      "description": "Una vaca con más fama que cualquier cantante de moda.",
+      "question": "Soy una canción infantil de los años cuarenta. Hablo de una vaca que no es una vaca cualquiera, porque da leche merengada. ¿En qué país nací?",
+      "answer": "España",
+      "wrong_answers": [
+        "México",
+        "Argentina",
+        "Colombia"
+      ],
+      "hints": [
+        "Nací en un país donde se habla español.",
+        "La música es de Fernando García Morcillo.",
+        "Mi país tiene la misma lengua que Colombia, pero queda al otro lado del Atlántico."
+      ],
+      "fun_fact": "La canción tiene más de 80 años y se sigue cantando en casi todos los países de habla hispana.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/SK_10-22-2024_Historic_Area_dairy_cow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASK_10-22-2024_Historic_Area_dairy_cow.jpg",
+        "credit": "vastateparksstaff · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "vastateparksstaff",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-1252",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "childrens-tv",
+      "bundle": "spain",
+      "description": "Una pregunta con narices rojas y zapatos gigantes.",
+      "question": "¿Cuál de estos payasos NO formó parte de 'Los Payasos de la Tele' junto con Miliki?",
+      "answer": "Cepillín",
+      "wrong_answers": [
+        "Gaby",
+        "Fofó",
+        "Fofito"
+      ],
+      "hints": [
+        "Los Payasos de la Tele eran casi todos de la misma familia española.",
+        "El que sobra tenía su propio programa en México.",
+        "Es un payaso mexicano de Monterrey."
+      ],
+      "fun_fact": "Gaby, Fofó y Miliki triunfaron en la televisión de Cuba, Venezuela y Argentina antes de volverse famosos en España.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Circus_Ronaldo_door_Dirk_Annemans.jpg/3840px-Circus_Ronaldo_door_Dirk_Annemans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACircus_Ronaldo_door_Dirk_Annemans.jpg",
+        "credit": "Dirk Annemans · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dirk Annemans",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Dirk_Annemans"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1498",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "childrens-tv",
+      "bundle": "spain",
+      "description": "Un piloto de dibujos animados con más velocidad que líneas de diálogo.",
+      "question": "El 'Lightning McQueen' de 'Cars' es 'Rayo McQueen' en español. Del mismo modo, 'Speed Racer' es…",
+      "answer": "Meteoro",
+      "wrong_answers": [
+        "Relámpago",
+        "Centella",
+        "Cohete"
+      ],
+      "hints": [
+        "Es una serie animada japonesa de los años 60 que se vio en España y en toda Latinoamérica.",
+        "Su bólido blanco de carreras se llamaba Mach 5.",
+        "Su nombre es el de una roca que cae del espacio y brilla al entrar a la atmósfera."
+      ],
+      "fun_fact": "En 2008 se estrenó una película con actores, 'Meteoro: la película', hecha por las creadoras de 'Matrix'.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Ford_GT40_%281965%29_-_Chevrolet_Corvette_%281960%29_%2818243362094%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFord_GT40_%281965%29_-_Chevrolet_Corvette_%281960%29_%2818243362094%29.jpg",
+        "credit": "Kevin Decherf from Nantes, France · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Kevin Decherf from Nantes, France",
+        "author_url": "https://www.flickr.com/people/44133767@N06"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1998",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "sayings",
+      "bundle": "spain",
+      "description": "Una expresión que ningún perro aprobaría si pudiera opinar.",
+      "question": "Soy una expresión: si alguien dice «hace un tiempo de perros», ¿de qué está hablando?",
+      "answer": "De un clima muy malo",
+      "wrong_answers": [
+        "De mucho tiempo libre",
+        "De una tarde aburrida",
+        "De un día de buena suerte"
+      ],
+      "hints": [
+        "La palabra 'tiempo' aquí no habla del reloj.",
+        "Es un día para quedarse en casa.",
+        "Piensa en lluvia, viento y frío."
+      ],
+      "fun_fact": "En inglés dicen que llueve «gatos y perros» cuando cae un aguacero.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Beagle_Puppy_lying_on_the_sofa_05.jpg/3840px-Beagle_Puppy_lying_on_the_sofa_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeagle_Puppy_lying_on_the_sofa_05.jpg",
+        "credit": "Slyronit · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Slyronit",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Slyronit"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2091",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "slang",
+      "bundle": "spain",
+      "description": "Una palabra que suena a brinco y a mueble al mismo tiempo.",
+      "question": "¿Qué es un saltimbanqui?",
+      "answer": "Un acróbata que actúa en la calle",
+      "wrong_answers": [
+        "Un banco para hacer gimnasia",
+        "Un pájaro que salta entre ramas",
+        "Un carpintero que fabrica bancos"
+      ],
+      "hints": [
+        "La palabra viene del italiano.",
+        "Es un oficio, no un objeto ni un animal.",
+        "Es un artista que hace volteretas y piruetas para el público."
+      ],
+      "fun_fact": "Picasso pintó en 1905 un famoso cuadro llamado «Familia de saltimbanquis».",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Voyage17%2C_Prague%2C_Old_Town_Square.jpg/3840px-Voyage17%2C_Prague%2C_Old_Town_Square.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVoyage17%2C_Prague%2C_Old_Town_Square.jpg",
+        "credit": "Shuying YU · FAL · Wikimedia Commons",
+        "provider": "commons",
+        "license": "FAL",
+        "license_url": "http://artlibre.org/licence/lal/en",
+        "author": "Shuying YU",
+        "author_url": null
+      },
+      "background": null
+    }
+  ]
+}
