@@ -1396,6 +1396,9 @@ def cmd_factcheck(args):
     return parallel(work, todo, args.jobs, "factcheck", "calls")
 
 
+ESSENTIAL_DUP_SIM = 0.4  # floor for the same-essential-media duplicate; below it only the answer matches
+
+
 def duplicates(q, pool_questions, locale="es"):
     """Return a reason if q duplicates a pool question, else None. pool_questions in q's language
     (`as_locale`).
@@ -1403,7 +1406,8 @@ def duplicates(q, pool_questions, locale="es"):
     Only questions with the same answer can be duplicates: similar wording with a
     different answer is just a shared template ("Escucha: ¿qué … suena?"). Same
     answer counts when the wording is similar too, or both need the same kind of
-    essential picture/sound (e.g. two "Mira la foto" questions about the Komodo dragon).
+    essential picture/sound and the wording is at least loosely alike (e.g. two "Mira la foto" questions about
+    the Komodo dragon); a short generic answer (Rock, Iron) with unrelated wording is no duplicate.
     """
     qa, qq = overlap_norm(q["answer"], locale), overlap_norm(q["question"], locale)
     if qa.replace(" ", "").isdigit():
@@ -1414,7 +1418,7 @@ def duplicates(q, pool_questions, locale="es"):
         sim = difflib.SequenceMatcher(None, qq, overlap_norm(p["question"], locale)).ratio()
         both_essential = (q["media"]["role"] == p["media"]["role"] == "essential"
                           and q["media"]["type"] == p["media"]["type"])
-        if sim > 0.6 or both_essential:
+        if sim > 0.6 or both_essential and sim > ESSENTIAL_DUP_SIM:
             p = p.get("of", p)
             return f"like {p.get('id') or p.get('tmp_id')}: {p['question']} → {p['answer']}"
     return None
