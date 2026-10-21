@@ -692,6 +692,17 @@ Steamworks content survey: general content (generates Steam's own age ratings), 
 - Answers: as the base, minus nudity (none in the pack), minus Workshop; AI: the DLC line in "Free DLC (`colombia`)" above
 - Without its own rating the DLC page may be hidden in Germany like an unrated game (Valve's Germany page names "games"; recheck in the healthcheck list `partner.steamgames.com/healthcheck/missingratingforgermany`)
 
+### DLC (topic bundles: `stem`, `sports`, `history`, `movies`, `geography`)
+- Drafted 2026-10-21 (`task 1655`), `plan 187: Steam DLC and store for the topic bundles`; same expectations as "DLC (`colombia`)": own survey per DLC app, recheck at entry
+- Answers: as the base (decision 181's approved answers, B2 variant), minus Workshop; nudity: none claimed until the scan says so; AI: the DLC line in "Free DLC (`colombia`)" above, reused (en variant for an `en` pool), no new text
+- Scan of each approved pool at ship time (keywords and a read of the borderline items, like "Scan" above); none of the five has a pool or an approved question yet (`app/data/bundles/` has no topic folder, 2026-10-21), so all are "not scanned yet (2026-10-21): re-scan in the entry checklist decision", no guessing
+  - `stem`: not scanned yet (2026-10-21); expect little (animal experiments, medicine, weapons engineering)
+  - `sports`: not scanned yet (2026-10-21); look for injuries, deaths in sport, doping
+  - `history`: not scanned yet (2026-10-21); look for war, violence, genocide, historical atrocities; the base's B2 answer ("no violence", war history as non-graphic reference) is the starting point, a pool going further changes it
+  - `movies`: not scanned yet (2026-10-21); look for plot violence, horror, sexual content, adult-rated films; posters and stills count as media
+  - `geography`: not scanned yet (2026-10-21); expect little (flags, borders, disputed territories)
+- A borderline that changes an answer (a descriptor) at ship time → pm decision "Topic DLC content survey: <bundle> descriptors?"; otherwise none
+
 ### IARC
 - Recommendation: none. Steam doesn't offer IARC; Germany and Indonesia accept Valve's survey rating; entering an IARC-generated USK rating from another store is forbidden; a real USK review costs money and is "rare" per Valve; Steam only (decision 111), so no other store's IARC either
 
@@ -726,6 +737,14 @@ Steamworks → the app's landing page → Content Survey (recheck the menu path)
 - [ ] answers per "DLC (`colombia`)" above: as the base, no nudity, no Workshop; AI line from "Free DLC (`colombia`)"
 - [ ] Submit; note the date
 
+### Content survey: topic DLC apps (`stem`, `sports`, `history`, `movies`, `geography`)
+A block per bundle that ships; one DLC app each (`plan 187: Steam DLC and store for the topic bundles`), entered only once the bundle has a pool.
+- [ ] `<id>` DLC app (its ID from the topic DLC checklist decision) → its own Content Survey, if Steamworks has one (else note "inherits from base")
+- [ ] answers per "DLC (topic bundles)" above: as the base, no Workshop; AI line from "Free DLC (`colombia`)"
+- [ ] re-scan the bundle's approved pool first (the "not scanned yet" line of the bundle); a descriptor-changing borderline → its pm decision answered before entry
+- [ ] Submit; note the date
+- Bundles: [ ] `stem`, [ ] `sports`, [ ] `history`, [ ] `movies`, [ ] `geography`
+
 ### Pricing: base package
 Steamworks → Store & release → Pricing → Propose Pricing (recheck).
 - [ ] base price USD $9.99 (or decision 182's value)
@@ -736,6 +755,10 @@ Steamworks → Store & release → Pricing → Propose Pricing (recheck).
 ### Pricing: `colombia` DLC
 - [ ] DLC app free ("This is a free product", set at creation, `17-publishing.md` "Free DLC"); no price rows, no discount
 - [ ] if the app wasn't created free: fix via the app's settings or Steam Support before review; note it
+
+### Pricing: topic DLCs
+- [ ] each topic DLC app free ("This is a free product", set at creation); no price rows, no discount; as for `colombia` above
+- Bundles: [ ] `stem`, [ ] `sports`, [ ] `history`, [ ] `movies`, [ ] `geography`
 
 ### Launch discount
 - [ ] not now: entered before release on the landing page, per `11-steam.md` "Launch-day checklist" row "Launch discount" (values from PUB-11, decision 182)
