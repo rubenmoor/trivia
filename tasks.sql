@@ -41023,7 +41023,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `draw_slots` probe and `rate`''s `overlap_candidates` already cover the whole pool: confirmed in the end-to-end task of this plan, not here.
 
 Done when: on a scratch theme with a hand-written `base-related.json` (not committed), the built concept prompt and avoid list contain base''s related answers (print the prompt, no claude call needed); `npm run check`, `qgen validate` pass.', '2026-10-21T20:23:36Z', '2026-10-21T20:42:02Z', 1621, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1629, 184, 'qgen report --cost: rows per theme bundle and locale', 'work', 'open', NULL, NULL, 'Item 5 of `plan 184: Pipeline for topic bundles`. After the per-locale gap task of this plan (uses its deficits).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1629, 184, 'qgen report --cost: rows per theme bundle and locale', 'work', 'done', NULL, '2026-10-21, authoring/tools/qgen.py', 'Item 5 of `plan 184: Pipeline for topic bundles`. After the per-locale gap task of this plan (uses its deficits).
 
 - `bundle_costs` (`qgen report --cost`): today rows only for `kind: region` × es, en. Add per theme bundle:
   - × en: drafting, from its `--bundle` batches; no own run yet → base''s en draft rate
@@ -41032,7 +41032,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Text and `--json` output.
 - Part 3''s pacing decision reads these numbers (5 bundles × 2000 × 4 locales).
 
-Done when: on a scratch theme row (not committed) `qgen report --cost` and `--cost --json` show its four rows with base''s fallback rates; region rows unchanged; `npm run check`, `qgen validate` pass.', '2026-10-21T20:23:36Z', NULL, 1621, 0, NULL, 'questions');
+Done when: on a scratch theme row (not committed) `qgen report --cost` and `--cost --json` show its four rows with base''s fallback rates; region rows unchanged; `npm run check`, `qgen validate` pass.', '2026-10-21T20:23:36Z', '2026-10-21T20:42:49Z', 1621, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1630, 184, 'End-to-end check on a throw-away theme bundle', 'work', 'open', NULL, NULL, 'Item 6 of `plan 184: Pipeline for topic bundles`; runs after every other code task of this plan (theme taxonomy and its apply, targets, gap aiming, overlap, cost). Waits on the decision "Theme taxonomy prompt: apply?".
 
 - Scratch copy of the repo data: no commit, no symlinked `work/` (`QGEN_WORK` or a temp checkout, whichever the code supports).
@@ -48498,6 +48498,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1716, 1626, '2026-10-21T20:39:10Z', '2026-10-21T20:40:26Z', 'done', NULL, 0, '713b090fdad2767546d7111cb19879d3ee089ffe', 'questions', 'claude-sonnet-5-5', '5c596ee5-6a4b-4dab-b0f0-f4dc89a72db7', NULL, 11, 20, 4723, 401614, 39974, 0.28748880000000004, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1717, 1627, '2026-10-21T20:40:27Z', '2026-10-21T20:41:10Z', 'done', NULL, 0, 'ce3716747fdf5cc89d5a2c0e0408d819bbaea634', 'questions', 'claude-sonnet-5-5', '5c596ee5-6a4b-4dab-b0f0-f4dc89a72db7', 1716, 7, 14, 2712, 449525, 19758, 0.48357380000000005, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1718, 1628, '2026-10-21T20:41:11Z', '2026-10-21T20:42:08Z', 'done', NULL, 0, '152afd5c06dcff49c41a039cdf0fdda4402e0928', 'questions', 'claude-sonnet-5-5', '5c596ee5-6a4b-4dab-b0f0-f4dc89a72db7', 1717, 8, 16, 3991, 679369, 20731, 0.7423136, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1719, 1629, '2026-10-21T20:42:08Z', '2026-10-21T20:42:55Z', 'done', NULL, 0, 'ce3d4ca97096a357bfafd4aee2a6384a75b184b0', 'questions', 'claude-sonnet-5-5', 'a0e3dc26-1f10-45dd-bac1-e7a9325455ad', NULL, 12, 22, 3837, 450036, 40867, 0.2918892, 344501);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

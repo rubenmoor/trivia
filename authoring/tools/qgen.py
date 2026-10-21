@@ -34,7 +34,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
                 [--overlaps] [--batches [<batch>…]] [--exit-check]
     qgen report --qc [<batch> [--changes "<task ids>"]]   # spot check vs. LLM review and audit (plan 16)
     qgen report --simulate [--locale …] [--mode …|all] [--json]   # games per new player; exit 1 below D-75's target (plan 62)
-    qgen report --cost [--json]     # $ per approved by run kind, projection per launch language and regional bundle (plan 70)
+    qgen report --cost [--json]     # $ per approved by run kind, projection per launch language and regional and theme bundle (plan 70)
     qgen report --review-time [--bundle <id>] [--run <run>] [--json]   # review minutes per 100 verdicts (plan 98)
     qgen report --played [--locale es|en|de|all] [--age-group …] [--mode …] [--since YYYY-MM-DD] [--all] [--json]
                                     # played vs. rated difficulty, outliers → /review?played=outliers (plan 109)
@@ -2494,20 +2494,26 @@ def cost_report(pool):
 
 
 def bundle_costs(pool, runs, rates, ratio):
-    """Rows per regional bundle × es, en (decision 110; base is the projection): $ per approved of its --bundle
-    and --translate --bundle runs, deficit to its target, projection; no own run yet → base's rate."""
+    """Rows per non-base bundle (decision 110; base is the projection): a region × es, en; a theme × en (its drafting,
+    deficit = the draft gap, decision 236) and es, es-ES, de (its translations). $ per approved of its --bundle and
+    --translate --bundle runs, deficit to its target, projection; no own run yet → base's rate."""
     rows = []
     for b in load_bundles():
-        if b.get("kind") != "region":
+        theme = b.get("kind") == "theme"
+        if b.get("kind") != "region" and not theme:
             continue
-        for l in ["es", "en"]:
+        gap = sum((targets.draft_gaps(pool, b["id"]) or {}).values()) if theme else None
+        for l in (translations.LOCALES if theme else ["es", "en"]):
+            drafting = l == "en" if theme else l == "es"
             own = [r for r in runs if r["bundle"] == b["id"] and r["merged"]
-                   and (r["kind"] == "batch" if l == "es" else r["locale"] == l)]
+                   and (r["kind"] == "batch" and (not theme or r["locale"] == l) if drafting else r["locale"] == l)]
             n = sum(r["approved"] or 0 for r in own)
             rate = sum(r["cost"] for r in own) / n if n else None
-            use = rate if rate is not None else rates["draft"].get("es") if l == "es" else rates["translation"].get(l)
-            deficit = sum((targets.deficits(pool, b["id"], l) or {}).values())
-            rows.append({"bundle": b["id"], "locale": l, "runs": [r["run"] for r in own], "approved": n,
+            fallback = (rates["draft"].get("en", rates["draft"].get("es")) if theme else rates["draft"].get("es")) \
+                if drafting else rates["translation"].get(l)
+            use = rate if rate is not None else fallback
+            deficit = gap if theme and drafting else sum((targets.deficits(pool, b["id"], l) or {}).values())
+            rows.append({"bundle": b["id"], "kind": b["kind"], "locale": l, "runs": [r["run"] for r in own], "approved": n,
                          "cost": sum(r["cost"] + r["audit"] for r in own), "per_approved": rate, "deficit": deficit,
                          "projection": deficit * use * (1 + (ratio or 0)) if use is not None else None,
                          "base_rate": rate is None and use is not None})
@@ -2547,8 +2553,8 @@ def report_cost(args):
         budget = f", budget {usd(p['budget'])}" if p["budget"] is not None else ""
         print(f"  {p['locale']}: {p['deficit']} to go, {p['translations']} translations × {usd(p['per_approved'])} → {cost}; "
               f"spent {usd(p['spent'])} (its drafts and translations){budget}")
-    print("per regional bundle (its --bundle and --translate --bundle runs; deficit to its target, decision 110; "
-          "projection as above, * = base's rate, no own run yet):")
+    print("per regional and theme bundle (its --bundle and --translate --bundle runs; deficit to its target, decision 110; "
+          "a theme's en row: drafts = its draft gap; projection as above, * = base's rate, no own run yet):")
     for x in r["bundles"]:
         proj = usd(x["projection"]) + ("*" if x["base_rate"] else "")
         print(f"  {x['bundle']} {x['locale']}: {len(x['runs'])} runs, {x['approved']} approved, spent {usd(x['cost'])}, "
