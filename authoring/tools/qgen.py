@@ -5057,8 +5057,6 @@ THEME_TAXONOMY_SCHEMA = {"type": "object", "required": ["categories"], "properti
                     "samples": SAMPLES}}}}}}}}
 BASE_RELATED_ABOUT = ("A theme bundle's subcategory → the base subcategories it goes beyond (plan 184); its concept lists "
                       "and drafts keep away from their questions. Authoring only, never exported.")
-THEME_DRAFT = ("taxonomy-theme.md is a draft (decision 370: Theme taxonomy prompt: apply?); "
-               "`task 1625: Theme taxonomy prompt: apply per the developer's answer` applies it")
 
 
 def names_locale(locale):
@@ -5136,8 +5134,6 @@ def cmd_taxonomy(args):
     if not b or b["kind"] not in ("region", "theme"):
         sys.exit(f"{args.bundle!r} is not a regional or theme bundle in app/data/bundles.json")
     theme = b["kind"] == "theme"
-    if theme:
-        sys.exit(THEME_DRAFT)
     d = WORK / "taxonomy" / args.bundle
     d.mkdir(parents=True, exist_ok=True)
     if args.apply:
