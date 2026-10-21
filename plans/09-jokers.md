@@ -46,7 +46,7 @@ Names per UI language (D-108; English first, one symbol per joker, same in every
 - No trip back to Select: the new question replaces the old one in place (see Animations).
 
 ### Doña Exigente (subcategory of choice)
-- Opens a **two-step picker**: first the 24 broad categories, then the subcategories of the chosen one (D-19). The players end up choosing a subcategory. Subcategories without a fitting question are disabled, and broad categories with none left are disabled too. The current subcategory is disabled.
+- Opens a **two-step picker**: first the broad categories of the active bundles, then the subcategories of the chosen one (D-19). With more than one bundle active the categories are grouped under one header row per bundle (its mark + name, the Bundles screen's order, base first) and scroll with the focus; with one, a flat grid without header (plan 185). The players end up choosing a subcategory. Subcategories without a fitting question are disabled, and broad categories with none left are disabled too. The current subcategory is disabled.
 - "Similar difficulty": the new question's difficulty is in the **level's range** (GF-2), preferring the current question's difficulty, then ±1.
 - The chosen subcategory is shown on screen; the question replaces the old one in place.
 - «Atrás» goes from the subcategories back to the broad categories; «Cancelar» closes the picker without playing the joker.
@@ -103,7 +103,7 @@ Input is ignored while a joker animation runs, as with transitions. Durations li
 - This is a transition inside the Question state, not a screen change: no fade to black, the `question` music keeps running (ducked), unless the new media is audio/video (then music goes off as in 04).
 
 ### Doña Exigente
-- The burst opens the **picker**: a grid of 24 broad-category tiles (name + icon, large enough for the TV), dealt in like cards, with disabled ones greyed. Picking a tile flips the grid over to that category's subcategories (smaller tiles, same style), with a paper flick. Navigation: click, arrow keys + `Enter`, `Backspace` = back.
+- The burst opens the **picker**: a grid of broad-category tiles (name + icon, large enough for the TV; grouped by bundle under header rows when several bundles are active), dealt in like cards, with disabled ones greyed. Picking a tile flips the grid over to that category's subcategories (smaller tiles, same style), with a paper flick. Navigation: click, arrow keys + `Enter`, `Backspace` = back.
 - The chosen subcategory tile pulses (pop), zooms towards the question band and turns into the new question with the same **card flip** as Hada madrina, accompanied by a rising "swoosh" instead of the slide whistle. The subcategory name stays on screen as a small label for this question.
 
 ### Tiro mágico
