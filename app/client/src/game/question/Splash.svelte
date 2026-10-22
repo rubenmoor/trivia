@@ -30,8 +30,8 @@
   } = $props();
 
   const hook = galleryHold();
-  const category = hook?.topic?.category ?? ownCategory;
-  const subcategory = hook?.topic ? hook.topic.subcategory : ownSub;
+  const category = hook?.topic?.category ?? untrack(() => ownCategory);
+  const subcategory = hook?.topic ? hook.topic.subcategory : untrack(() => ownSub);
   const picked = untrack(() => forced ?? pickExit());
   const reduced = reducedMotion();
   let phase = $state<"wait" | "hold" | "exit" | "gone">("wait");
