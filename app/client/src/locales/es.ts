@@ -122,6 +122,8 @@ const es = {
     sintetizada: "Sintetizada",
     variaciones: "Variaciones",
     caja: "Caja de música",
+    "sin-prisa": "Sin prisa",
+    reflejos: "Reflejos",
   },
   /** First-start language picker and the Start screen's language button (plan 126); language names are endonyms in lib/i18n.ts. */
   language: {
