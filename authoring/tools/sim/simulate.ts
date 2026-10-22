@@ -19,8 +19,8 @@ const NOW = "2026-01-01T00:00:00";
 const NAME = "Sim";
 /** Time between two engine actions: inside every timed deadline. */
 const STEP_MS = 1000;
-const SIM_MODES: readonly string[] = MODES.filter((m) => m !== "gamemaster"); // = qgen.SIM_MODES
-const MULTI = ["rr-coop", "rr-competitive", "timed"]; // = qgen.SIM_MULTI
+const SIM_MODES: readonly string[] = MODES.filter((m) => m !== "gamemaster"); // = report.SIM_MODES
+const MULTI = ["rr-coop", "rr-competitive", "timed"]; // = report.SIM_MULTI
 /** Runs stop here if no repeat came yet (`capped`). */
 const MAX_GAMES = 500;
 

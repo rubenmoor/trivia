@@ -26,7 +26,7 @@ def supply(pool):
 
 
 def unfinished_translate_runs():
-    """Unfinished `qgen batch --translate` runs (tr-<locale>-<n>, = qgen.next_translate_run), oldest first."""
+    """Unfinished `qgen batch --translate` runs (tr-<locale>-<n>, = translate.next_translate_run), oldest first."""
     return [r for r in qgen.work_runs(r"tr-[A-Za-z-]+-\d+", "run.json")
             if translations.run_locale(r) and not (qgen.load_json(layout.WORK / r / "run.json") or {}).get("done")]
 

@@ -7,6 +7,10 @@ from layout import HEALTH_ACKS, REPORTS, SOURCE_POOL as POOL, WORK
 import concepts  # authoring/tools/concepts.py
 import targets  # authoring/tools/targets.py
 import qgen  # authoring/tools/qgen.py: work files, calibration, problems
+import audit  # authoring/tools/audit.py
+import report  # authoring/tools/report.py
+import translate  # authoring/tools/translate.py
+import review_steps  # authoring/tools/review_steps.py
 
 HIGH = range(11, 16)  # the levels plan 13 aims at
 
@@ -30,7 +34,7 @@ def recorded(run, qs):
     if md.exists():
         out = {}
         for m in re.finditer(r"^- \*\*(q-\d+)\*\* .*? → [^:\n]*: (.*)$", md.read_text(encoding="utf-8"), re.M):
-            out[m.group(1)] = (qgen.guess_problems(m.group(2)), True)
+            out[m.group(1)] = (review_steps.guess_problems(m.group(2)), True)
         return out
     out = {}
     for q in qs:
@@ -39,7 +43,7 @@ def recorded(run, qs):
             first = r if r.get("reviewer") == "llm" else first
             r = r.get("previous")
         if first and first["decision"] == "needs_work":
-            out[q["id"]] = (first.get("problems") or qgen.guess_problems(first.get("feedback")),
+            out[q["id"]] = (first.get("problems") or review_steps.guess_problems(first.get("feedback")),
                             not first.get("problems"))
     return out
 
@@ -83,7 +87,7 @@ def media_funnel(d, qs):
     out = Counter()
     for q in qs:
         r = load(d / "reviews" / f"{q['id']}.json", {})
-        r1, final = r.get("round1") or {}, qgen.final_review(r)  # as cmd_research, cmd_record
+        r1, final = r.get("round1") or {}, review_steps.final_review(r)  # as cmd_research, cmd_record
         missed, none = r1.get("pick") is None and bool(r1.get("new_query")), bool(final) and final["pick"] is None
         out.update({keys[0]: missed, keys[1]: missed and bool(final) and not none, keys[2]: none})
     return {k: out[k] for k in keys}
@@ -102,9 +106,9 @@ def batch_health(run, pool=None):
     work = recorded(run, qs)
     approved = [q for q in qs if q["id"] not in work]
     n, m = len(drafted), len(qs)
-    loc = qgen.text_locale(d)
+    loc = translate.text_locale(d)
     earlier = [r for r in batch_runs() if qgen.natural_key(r) < qgen.natural_key(run)]
-    first = earlier and all(qgen.text_locale(WORK / r) != loc for r in earlier)
+    first = earlier and all(translate.text_locale(WORK / r) != loc for r in earlier)
     h = {"source locale": f"{loc} (first {loc} batch)" if first else loc, "drafts": n, "skipped slots": skipped, "dropped": len(dropped), "drop rate": rate(len(dropped), n)}
     kinds = Counter(k for x in dropped for k in drop_kind(x["reason"]))
     for k in [*(f"hard fail {c}" for c in qgen.HARD_CRITERIA if c != "no_overlap"), "overlap", "duplicate", "fact-check wrong"]:
@@ -119,7 +123,7 @@ def batch_health(run, pool=None):
     h["problems guessed"] = guessed if work else None
     h["overlap rate"] = rate(kinds["overlap"] + kinds["duplicate"] + by_problem["overlap"], n)
     if (d / "slots.json").exists():
-        cal = {lvl: r for lvl, r in qgen.calibration(run, pool).items() if lvl in HIGH}
+        cal = {lvl: r for lvl, r in report.calibration(run, pool).items() if lvl in HIGH}
         slots = sum(r["slots"] for r in cal.values())
         h["merged/slots 11–15"] = rate(sum(r["merged"] for r in cal.values()), slots)
         off = [abs(r["final"] - lvl) for lvl, r in cal.items() if r["final"] is not None]
@@ -272,10 +276,10 @@ def translation_health(run):
     by_problem = Counter(p for r in work.values() for p in r["problems"] or ["other"])
     for p in qgen.PROBLEMS:
         h[f"needs_work: {p}"] = rate(by_problem[p], m)
-    found, dec = qgen.audits(run), qgen.llm_decisions(run) if rec else {}
+    found, dec = audit.audits(run), audit.llm_decisions(run) if rec else {}
     both = [i for i in found if i in dec]
     h["audited"] = len(found)
-    h["audit/review agreement"] = rate(sum((dec[i] == "approved") == (not qgen.is_major(found[i])) for i in both), len(both))
+    h["audit/review agreement"] = rate(sum((dec[i] == "approved") == (not audit.is_major(found[i])) for i in both), len(both))
     dollars = sum(qgen.costs(d))
     h |= {"cost $": dollars, "$ per approved": rate(dollars, m - len(work))}
     return h
@@ -359,7 +363,7 @@ def write_batches_md(pool=None):
              *table(runs, pool), "", deficit_line(pool=pool), "", "## Acknowledgements", "",
              "Failing batches the developer has looked at (`qgen health ack`): the stop is cleared, the batch still fails.", "",
              *ack_lines(), ""]
-    qc = qgen.qc_trend(pool)
+    qc = report.qc_trend(pool)
     if qc:
         lines += ["## Quality control", "",
                   "Spot check and audit per batch (plan 16, `qgen report --qc`): human agreement with the LLM review "
