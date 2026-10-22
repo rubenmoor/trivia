@@ -1,5 +1,5 @@
 -- pm database. Change it with pm; after a hand edit run `pm validate`.
-PRAGMA user_version = 28;
+PRAGMA user_version = 29;
 
 CREATE TABLE milestone (
     id             INTEGER PRIMARY KEY,
@@ -99,6 +99,13 @@ CREATE TABLE task_decision (                               -- the task waits whi
     PRIMARY KEY (task_id, decision_id)
 ) STRICT;
 
+CREATE TABLE task_prerequisite_tasks (                     -- the task waits until the prerequisite task is done
+    task_id         INTEGER NOT NULL REFERENCES task (id),
+    prerequisite_id INTEGER NOT NULL REFERENCES task (id),
+    PRIMARY KEY (task_id, prerequisite_id),
+    CHECK (task_id <> prerequisite_id)
+) STRICT;
+
 CREATE TABLE decision_supersedes (                         -- decision_id's answer replaces superseded_id's
     decision_id   INTEGER NOT NULL REFERENCES decision (id),
     superseded_id INTEGER NOT NULL REFERENCES decision (id),
@@ -153,6 +160,8 @@ CREATE INDEX task_plan ON task (plan_id);
 
 CREATE INDEX task_decision_decision ON task_decision (decision_id);
 
+CREATE INDEX task_prerequisite ON task_prerequisite_tasks (prerequisite_id);
+
 CREATE INDEX decision_superseded ON decision_supersedes (superseded_id);
 
 CREATE INDEX run_task ON run (task_id);
@@ -168,6 +177,8 @@ LEFT JOIN milestone m ON m.id = p.milestone_id
 WHERE (m.status = 'open' OR t.kind = 'exec') AND t.status = 'open'
   AND NOT EXISTS (SELECT 1 FROM task_decision td JOIN decision d ON d.id = td.decision_id
                   WHERE td.task_id = t.id AND d.status = 'pending')
+  AND NOT EXISTS (SELECT 1 FROM task_prerequisite_tasks r JOIN task q ON q.id = r.prerequisite_id
+                  WHERE r.task_id = t.id AND q.status <> 'done')
 ORDER BY coalesce(m.queue_index, 0), priority DESC, m.id, p.id, t.id;
 
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (1, 'Enough content for game nights', 'open', 'we want 5000 questions in the base bundle. note the current difficulty scale (i think from 1 to 15). it''s okay to have fewer questions for higher difficulties, but currently there are way too few questions at high difficulties.
@@ -49090,6 +49101,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1785, 1677, '2026-10-21T23:32:12Z', '2026-10-21T23:32:27Z', 'blocked', NULL, 0, '3e809357d308474e35b58977adf9940dc84cc94f', 'questions', 'claude-sonnet-5-5', '5a43b252-599a-49a6-9073-d1387f36c8c7', NULL, 5, 10, 872, 164513, 30625, 0.16414260000000003, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1786, 1223, '2026-10-21T23:39:27Z', '2026-10-21T23:39:55Z', 'done', NULL, 0, '823dce7c5389e5b9d25fb40f4c68ea750b1af333', 'questions', 'claude-sonnet-5-5', '8afc9960-2ba5-4356-87e4-e9f132970405', NULL, 5, 10, 1120, 202233, 40811, 0.2149106, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1787, 1506, '2026-10-21T23:39:55Z', '2026-10-21T23:40:21Z', 'done', NULL, 0, '315093196ae8db702eae588621533f61bc40a971', 'questions', 'claude-sonnet-5-5', '8afc9960-2ba5-4356-87e4-e9f132970405', 1786, 5, 8, 2393, 274283, 26847, 0.40110120000000005, 344501);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1788, 1228, '2026-10-21T23:40:21Z', '2026-10-21T23:40:57Z', 'blocked', NULL, 0, '3a7681b9935e41ca9bee38698f3d9649c7554832', 'questions', 'claude-sonnet-5-5', '8afc9960-2ba5-4356-87e4-e9f132970405', 1787, 6, 12, 1138, 580461, 25616, 0.63106140000000011, 344501);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -49543,6 +49555,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1226, 332);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1226, 358);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1227, 255);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1228, 256);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1228, 358);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1228, 374);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1228, 389);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1229, 256);
@@ -49743,6 +49756,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1673, 388);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1673, 389);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1676, 401);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1677, 401);
+
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
