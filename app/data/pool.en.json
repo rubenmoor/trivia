@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "020c53b1",
+  "hash": "0b457fef",
   "questions": [
     {
       "id": "q-0016",
@@ -73925,6 +73925,40 @@
       "background": null
     },
     {
+      "id": "q-4111",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "amphibians",
+      "bundle": "base",
+      "description": "A snack that may jump out of your hand before you take a bite.",
+      "question": "In the Harry Potter books, where does Harry buy his very first Chocolate Frog?",
+      "answer": "On the Hogwarts Express",
+      "wrong_answers": [
+        "In Diagon Alley",
+        "In the Great Hall",
+        "At the Burrow"
+      ],
+      "hints": [
+        "It happens on his first trip to school.",
+        "He buys lots of treats from a trolley and shares them with Ron.",
+        "He is on his way to Hogwarts, sitting in a moving vehicle."
+      ],
+      "fun_fact": "Each Chocolate Frog in the books comes with a card of a famous witch or wizard, and Harry's first one shows Albus Dumbledore.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Night-open-door-english-matsunaga-2017-1433_%2833040919442%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANight-open-door-english-matsunaga-2017-1433_%2833040919442%29.jpg",
+        "credit": "ASU Department of English · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "ASU Department of English",
+        "author_url": "https://www.flickr.com/people/11934780@N07"
+      },
+      "background": null
+    },
+    {
       "id": "q-4112",
       "status": "approved",
       "difficulty": 1,
@@ -73955,6 +73989,74 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Acabashi",
         "author_url": "https://commons.wikimedia.org/wiki/User:Acabashi"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4113",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "amphibians",
+      "bundle": "base",
+      "description": "It wears its gills on the outside, like a fancy feather crown.",
+      "question": "An axolotl wears feathery gill branches on its head. How many does it have in total?",
+      "answer": "6",
+      "wrong_answers": [
+        "2",
+        "4",
+        "8"
+      ],
+      "hints": [
+        "They grow on both sides of its head.",
+        "They are the fluffy pink things sticking out behind its face.",
+        "There are 3 on each side."
+      ],
+      "fun_fact": "Most salamanders lose their gills when they grow up, but axolotls keep them their whole life.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Ambystoma_mexicanum_in_Ouwehands_Dierenpark_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmbystoma_mexicanum_in_Ouwehands_Dierenpark_01.jpg",
+        "credit": "FakirNL · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "FakirNL",
+        "author_url": "https://commons.wikimedia.org/wiki/User:FakirNL"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4114",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "amphibians",
+      "bundle": "base",
+      "description": "Halfway between a fish and a frog, and still growing the parts to prove it.",
+      "question": "A tadpole has just grown its two back legs. How many more legs must it grow to become a frog?",
+      "answer": "2",
+      "wrong_answers": [
+        "1",
+        "4",
+        "6"
+      ],
+      "hints": [
+        "A grown-up frog has the same number of legs as a dog.",
+        "Think about which legs the tadpole already has.",
+        "The back legs are done; the front ones are still missing."
+      ],
+      "fun_fact": "A tadpole's front legs grow hidden under its skin and pop out later, almost all at once.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Tadpole_at_Capitol_Reef_Waterpocket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATadpole_at_Capitol_Reef_Waterpocket.jpg",
+        "credit": "Wing-Chi Poon · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Wing-Chi Poon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Wingchi"
       },
       "background": null
     },
@@ -74950,6 +75052,74 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "WOWyerrr",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:WOWyerrr&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4144",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "basketball",
+      "bundle": "base",
+      "description": "Nothing in life is free, except this throw.",
+      "question": "In basketball, a free throw is taken from a line, with nobody allowed to block it. What is it for?",
+      "answer": "A penalty for the other team's foul",
+      "wrong_answers": [
+        "Starting the game",
+        "Breaking a tie at the end",
+        "Warming up at halftime"
+      ],
+      "hints": [
+        "The referee blows the whistle first.",
+        "Each one that goes in is worth one point, and the game clock stops.",
+        "Someone on the other team broke a rule against the shooter."
+      ],
+      "fun_fact": "The free-throw line is 4.6 m (15 ft) from the backboard.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/GT_vs_NC_A%26T_basketball_Dec_2016_-_Quinton_Stephens_at_free_throw_line.jpg/3840px-GT_vs_NC_A%26T_basketball_Dec_2016_-_Quinton_Stephens_at_free_throw_line.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGT_vs_NC_A%26T_basketball_Dec_2016_-_Quinton_Stephens_at_free_throw_line.jpg",
+        "credit": "Thomson200 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Thomson200",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Thomson200"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4145",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "big-questions",
+      "bundle": "base",
+      "description": "A promise is only as strong as the fingers you use to make it.",
+      "question": "Three of these are ways people show they really mean a promise. Which one secretly means you don't?",
+      "answer": "Crossing your fingers behind your back",
+      "wrong_answers": [
+        "Linking little fingers in a pinky promise",
+        "Shaking hands on it",
+        "Putting your hand on your heart"
+      ],
+      "hints": [
+        "The other three are done openly, where everyone can see.",
+        "This one is done in secret, so the other person doesn't notice.",
+        "Your hands are hidden behind you."
+      ],
+      "fun_fact": "In Japan, the pinky promise “yubikiri” comes with a playful song saying the promise-breaker must swallow a thousand needles.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/The_Joy_of_Playing_Together_by_Rasheedhrasheed.jpg/3840px-The_Joy_of_Playing_Together_by_Rasheedhrasheed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Joy_of_Playing_Together_by_Rasheedhrasheed.jpg",
+        "credit": "Rasheedhrasheed · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rasheedhrasheed",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rasheedhrasheed"
       },
       "background": null
     },
@@ -76484,6 +76654,40 @@
       "background": null
     },
     {
+      "id": "q-4194",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "cars",
+      "bundle": "base",
+      "description": "A car that winks at you is trying to tell you something.",
+      "question": "An orange light on one side of a car starts blinking. What is the driver telling everyone around?",
+      "answer": "“I'm about to turn or change lanes”",
+      "wrong_answers": [
+        "“I'm running out of fuel”",
+        "“I'm about to brake hard”",
+        "“My headlights are broken”"
+      ],
+      "hints": [
+        "Drivers often use it just before a crossroads.",
+        "It tells others which way the car will go next.",
+        "The driver flips a small lever next to the steering wheel to start it."
+      ],
+      "fun_fact": "The clicking sound you hear when the turn signal is on was once made by a real heat switch; today most cars just play a recorded click.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Tooting_Broadway%2C_A_busy_intersection_-_geograph.org.uk_-_3540661.jpg/3840px-Tooting_Broadway%2C_A_busy_intersection_-_geograph.org.uk_-_3540661.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATooting_Broadway%2C_A_busy_intersection_-_geograph.org.uk_-_3540661.jpg",
+        "credit": "Dr Neil Clifton · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Dr Neil Clifton",
+        "author_url": "https://www.geograph.org.uk/profile/796"
+      },
+      "background": null
+    },
+    {
       "id": "q-4195",
       "status": "approved",
       "difficulty": 7,
@@ -76786,6 +76990,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "David Reber from Kansas City, USA",
         "author_url": "https://www.flickr.com/people/9597476@N07"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4204",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "castles",
+      "bundle": "base",
+      "description": "Somewhere in the world, a princess castle is waiting for you to pay for the parking.",
+      "question": "Which European capital has a Disney theme park named after it?",
+      "answer": "Paris",
+      "wrong_answers": [
+        "London",
+        "Rome",
+        "Berlin"
+      ],
+      "hints": [
+        "This city is famous for art, fashion and croissants.",
+        "Its park opened in 1992 and is the only Disney resort in Europe.",
+        "The city also has a famous iron tower."
+      ],
+      "fun_fact": "Many Disney park castles are built so they look taller than they really are: the higher stones and windows get smaller and smaller.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Moritzburg_Castle-_A_fairy_tale_palace_near_Dresden_-_51521349475.jpg/3840px-Moritzburg_Castle-_A_fairy_tale_palace_near_Dresden_-_51521349475.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMoritzburg_Castle-_A_fairy_tale_palace_near_Dresden_-_51521349475.jpg",
+        "credit": "ftrc · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "ftrc",
+        "author_url": null
       },
       "background": null
     },
@@ -77819,6 +78057,40 @@
       "background": null
     },
     {
+      "id": "q-4236",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "One person waves a stick, and lots of people do exactly what it says.",
+      "question": "You're at a concert, watching the conductor of a big symphony orchestra. About how many musicians is the conductor leading?",
+      "answer": "About 100",
+      "wrong_answers": [
+        "About 10",
+        "About 1,000",
+        "About 5,000"
+      ],
+      "hints": [
+        "It's far more than a band, but they all fit on one stage.",
+        "Think of several rows of violins, plus winds, brass and drums.",
+        "It's roughly the number of kids in four or five school classes."
+      ],
+      "fun_fact": "Some conductors lead without a baton at all, shaping the music with just their hands.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/UofR_Symphony_Orchestra_112818-0108.jpg/3840px-UofR_Symphony_Orchestra_112818-0108.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUofR_Symphony_Orchestra_112818-0108.jpg",
+        "credit": "Alexander Kordzaia · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Alexander Kordzaia",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Alexander_Kordzaia&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-4237",
       "status": "approved",
       "difficulty": 1,
@@ -78576,6 +78848,40 @@
       "background": null
     },
     {
+      "id": "q-4259",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Two thousand years old and still the most famous sports venue in town.",
+      "question": "This photo shows a giant ancient arena in Rome where gladiators once fought. What is it called?",
+      "answer": "The Colosseum",
+      "wrong_answers": [
+        "The Parthenon",
+        "The Pantheon",
+        "The Acropolis"
+      ],
+      "hints": [
+        "It was built almost 2,000 years ago.",
+        "It's a huge oval, and part of its outer wall has fallen down.",
+        "Italy put it on its 5-cent euro coins."
+      ],
+      "fun_fact": "The Colosseum could hold around 50,000 spectators.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Rome_Colosseum_exterior_panorama.jpg/3840px-Rome_Colosseum_exterior_panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARome_Colosseum_exterior_panorama.jpg",
+        "credit": "Nicholas Hartmann · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Nicholas Hartmann",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Nhartmannphotos"
+      },
+      "background": null
+    },
+    {
       "id": "q-4260",
       "status": "approved",
       "difficulty": 4,
@@ -78810,6 +79116,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Acabashi",
         "author_url": "https://commons.wikimedia.org/wiki/User:Acabashi"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4267",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "cricket",
+      "bundle": "base",
+      "description": "Heads or tails: the most nervous moment of a captain's day.",
+      "question": "You're a cricket captain, walking to the middle with the other captain to toss a coin. When does this happen?",
+      "answer": "Before the match starts",
+      "wrong_answers": [
+        "During the lunch break",
+        "After the last over",
+        "Halfway through each innings"
+      ],
+      "hints": [
+        "The coin decides something important.",
+        "TV commentators report it live, together with a look at the pitch and the weather.",
+        "Nobody has bowled a ball yet."
+      ],
+      "fun_fact": "The captain who wins the toss chooses whether their team bats or bowls first.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Mary_Duggan_and_Rona_McKenzie%2C_tossing_a_coin%2C_1957.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMary_Duggan_and_Rona_McKenzie%2C_tossing_a_coin%2C_1957.jpg",
+        "credit": "Unknown (for the Evening Post of Wellington) · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unknown (for the Evening Post of Wellington)",
+        "author_url": null
       },
       "background": null
     },
@@ -81194,6 +81534,40 @@
       "background": null
     },
     {
+      "id": "q-4343",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "farm-animals",
+      "bundle": "base",
+      "description": "The cow's least favorite morning routine, now with extra suction.",
+      "question": "A cow gives milk from the teats on her udder. How many teats does a cow have?",
+      "answer": "4",
+      "wrong_answers": [
+        "2",
+        "6",
+        "8"
+      ],
+      "hints": [
+        "It's an even number.",
+        "A goat has only two.",
+        "A milking machine has one cup for each teat, and it matches the number of a cow's legs."
+      ],
+      "fun_fact": "On some farms, cows walk to a milking robot all by themselves whenever they feel like being milked.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Dairy_cows_grazing_with_visible_graze_line.jpg/3840px-Dairy_cows_grazing_with_visible_graze_line.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADairy_cows_grazing_with_visible_graze_line.jpg",
+        "credit": "Halter · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Halter",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-4344",
       "status": "approved",
       "difficulty": 4,
@@ -83234,6 +83608,40 @@
       "background": null
     },
     {
+      "id": "q-4406",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "human-body",
+      "bundle": "base",
+      "description": "Snap, crackle, and a few weeks with your arm in a cast.",
+      "question": "It shows up as a crack on an X-ray, it's often held still with a cast, and it means a bone has broken. What do doctors call it?",
+      "answer": "A fracture",
+      "wrong_answers": [
+        "A sprain",
+        "A dislocation",
+        "A bruise"
+      ],
+      "hints": [
+        "It's about bones, not muscles or skin.",
+        "A sprain is a hurt joint, not a broken bone.",
+        "The word comes from the Latin for “to break”."
+      ],
+      "fun_fact": "A broken bone heals by building new bone across the gap, and the repaired spot can end up a little thicker than before.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Bandaged_orthopedic_plaster_splint.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABandaged_orthopedic_plaster_splint.jpg",
+        "credit": "Acabashi · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Acabashi",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Acabashi"
+      },
+      "background": null
+    },
+    {
       "id": "q-4407",
       "status": "approved",
       "difficulty": 5,
@@ -83332,6 +83740,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Marie from Malang, East Java, Indonesia",
         "author_url": "https://www.flickr.com/people/14671121@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4410",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "human-body",
+      "bundle": "base",
+      "description": "The one thing on your knee that your fingers just can't leave alone.",
+      "question": "It's crusty and brown, it forms on a scraped knee, and grown-ups tell you not to pick it. What is it for?",
+      "answer": "Protecting the cut while it heals",
+      "wrong_answers": [
+        "Making your knee itch",
+        "Keeping your knee warm",
+        "Stopping your leg from bending"
+      ],
+      "hints": [
+        "It forms from dried blood.",
+        "It works like a little shield.",
+        "Under it, new skin is growing."
+      ],
+      "fun_fact": "A scab falls off by itself once the new skin underneath is ready.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/New_playgrounds_bring_joy_to_children_at_Tower_Barracks_%289934030%29.jpg/3840px-New_playgrounds_bring_joy_to_children_at_Tower_Barracks_%289934030%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANew_playgrounds_bring_joy_to_children_at_Tower_Barracks_%289934030%29.jpg",
+        "credit": "U.S. Army USA-GB by Ella Haendel · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Army USA-GB by Ella Haendel",
+        "author_url": "https://www.dvidshub.net/portfolio/1789667"
       },
       "background": null
     },
@@ -83502,6 +83944,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "https://pixabay.com/en/users/PublicDomainPictures-14/",
         "author_url": "https://pixabay.com/en/users/PublicDomainPictures-14/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4416",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "human-body",
+      "bundle": "base",
+      "description": "Laughter is the best medicine, but you can't give yourself this dose.",
+      "question": "You are very ticklish. Who can NOT make you laugh by tickling you?",
+      "answer": "You yourself",
+      "wrong_answers": [
+        "A parent",
+        "A friend",
+        "A doctor"
+      ],
+      "hints": [
+        "Surprise is part of tickling.",
+        "Your brain is very good at predicting touches it is expecting.",
+        "Try it on your own feet."
+      ],
+      "fun_fact": "Your brain guesses what your own fingers will feel, and it turns that feeling down, so you can't surprise yourself.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Flickr_-_Official_U.S._Navy_Imagery_-_US_Sailors_volunteer_at_Korean_orphanage..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFlickr_-_Official_U.S._Navy_Imagery_-_US_Sailors_volunteer_at_Korean_orphanage..jpg",
+        "credit": "Official Navy Page from United States of America · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Official Navy Page from United States of America\n\nMC2 Adrian T. White/U.S. Navy",
+        "author_url": "https://www.flickr.com/people/56594044@N06"
       },
       "background": null
     },
@@ -84832,6 +85308,40 @@
       "background": null
     },
     {
+      "id": "q-4460",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "maths",
+      "bundle": "base",
+      "description": "The die that always rolls under the sofa right when it's your turn.",
+      "question": "You roll a die and it shows 6 dots. What kind of number is 6?",
+      "answer": "An even number",
+      "wrong_answers": [
+        "An odd number",
+        "A negative number",
+        "A fraction"
+      ],
+      "hints": [
+        "Try putting the dots in pairs.",
+        "No dot is left alone.",
+        "2, 4, 6 and 8 all belong to this group."
+      ],
+      "fun_fact": "Every whole number ending in 0, 2, 4, 6 or 8 is even, however big it is.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Board_game_pieces.jpg/3840px-Board_game_pieces.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoard_game_pieces.jpg",
+        "credit": "Mshuang2 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Mshuang2",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mshuang2"
+      },
+      "background": null
+    },
+    {
       "id": "q-4461",
       "status": "approved",
       "difficulty": 4,
@@ -85274,6 +85784,40 @@
       "background": null
     },
     {
+      "id": "q-4474",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "nobel-prizes",
+      "bundle": "base",
+      "description": "An ancient cough that finally met its detective.",
+      "question": "Robert Koch won the 1905 Nobel Prize for finding the germ behind it. It mainly attacks the lungs, and the BCG vaccine protects against it. What disease is it?",
+      "answer": "Tuberculosis",
+      "wrong_answers": [
+        "Pneumonia",
+        "Malaria",
+        "Polio"
+      ],
+      "hints": [
+        "It has been found in Egyptian mummies.",
+        "In the 1800s, patients were sent to mountain sanatoriums to breathe fresh air.",
+        "Its old name was “consumption”, and a constant cough with blood was its classic sign."
+      ],
+      "fun_fact": "March 24, the day Koch announced his discovery in 1882, is now World Tuberculosis Day.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/1850-1880%2C_Nachet_small_brass_chest_microscope%2C_Nachet_%26_Son%2C_France%2C_compound_microscope_-_Golub_Collection_of_Antique_Microscopes_-_DSC04716.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A1850-1880%2C_Nachet_small_brass_chest_microscope%2C_Nachet_%26_Son%2C_France%2C_compound_microscope_-_Golub_Collection_of_Antique_Microscopes_-_DSC04716.JPG",
+        "credit": "Daderot · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Daderot",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Daderot"
+      },
+      "background": null
+    },
+    {
       "id": "q-4475",
       "status": "approved",
       "difficulty": 14,
@@ -85372,6 +85916,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Basil D Soufi",
         "author_url": "https://commons.wikimedia.org/wiki/User:BDS2006"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4478",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "oceans",
+      "bundle": "base",
+      "description": "A very long fishing trip, and the fish is not even the one telling the story.",
+      "question": "Ernest Hemingway's “The Old Man and the Sea” tells of a fisherman who sails out from this country. Which one is it?",
+      "answer": "Cuba",
+      "wrong_answers": [
+        "Jamaica",
+        "The Bahamas",
+        "Dominican Republic"
+      ],
+      "hints": [
+        "It's in the Caribbean Sea.",
+        "It's the largest island in the Caribbean.",
+        "Its capital is Havana."
+      ],
+      "fun_fact": "Hemingway lived near Havana for about 20 years, and the book helped him win the Nobel Prize in Literature in 1954.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Hut_with_lifebuoy_and_skiff_at_Loddebo.jpg/3840px-Hut_with_lifebuoy_and_skiff_at_Loddebo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHut_with_lifebuoy_and_skiff_at_Loddebo.jpg",
+        "credit": "W.carter · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "W.carter",
+        "author_url": "https://commons.wikimedia.org/wiki/User:W.carter"
       },
       "background": null
     },
@@ -86018,6 +86596,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "William Warby",
         "author_url": "https://www.flickr.com/photos/26782864@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4500",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "pharaohs",
+      "bundle": "base",
+      "description": "Ancient Egypt's answer to the question “Do my eyes look dramatic enough?”",
+      "question": "Ancient Egyptian men and women lined their eyes with a black makeup. What was this makeup called?",
+      "answer": "Kohl",
+      "wrong_answers": [
+        "Henna",
+        "Ochre",
+        "Rouge"
+      ],
+      "hints": [
+        "It was often made from ground minerals mixed with fat.",
+        "People in many countries still sell it today as eyeliner.",
+        "The same word is still used today for a soft black eye pencil, and it's especially common in the Middle East and South Asia."
+      ],
+      "fun_fact": "Scientists found that the lead in some ancient eye makeup may have helped the body fight eye infections.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Fetekti2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFetekti2.jpg",
+        "credit": "Karl Richard Lepsius · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Karl Richard Lepsius",
+        "author_url": null
       },
       "background": null
     },
@@ -87654,6 +88266,40 @@
       "background": null
     },
     {
+      "id": "q-4551",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "pyramids",
+      "bundle": "base",
+      "description": "The Great Pyramid's shape, taken apart like a cardboard box.",
+      "question": "This solid has a square base, five corners and the same shape as the Great Pyramid of Giza. Which flat faces make it up?",
+      "answer": "One square and four triangles",
+      "wrong_answers": [
+        "One square and three triangles",
+        "Two squares and four triangles",
+        "One triangle and four squares"
+      ],
+      "hints": [
+        "Count the faces: one at the bottom, the rest leaning together at the top.",
+        "The bottom face gives the solid its name.",
+        "Each side face meets the tip in a point, so it has three corners."
+      ],
+      "fun_fact": "Unfold a square pyramid flat and you get a shape that looks like a star with four points.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/The_Great_Pyramid_of_Giza_from_southeast_corner.JPG/3840px-The_Great_Pyramid_of_Giza_from_southeast_corner.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Great_Pyramid_of_Giza_from_southeast_corner.JPG",
+        "credit": "MusikAnimal · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "MusikAnimal",
+        "author_url": "https://commons.wikimedia.org/wiki/User:MusikAnimal"
+      },
+      "background": null
+    },
+    {
       "id": "q-4552",
       "status": "approved",
       "difficulty": 3,
@@ -88130,6 +88776,40 @@
       "background": null
     },
     {
+      "id": "q-4566",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "retro-games",
+      "bundle": "base",
+      "description": "A knight, a dragon and a cartoon you steer with a joystick.",
+      "question": "The 1983 arcade game Dragon's Lair played hand-drawn cartoons from a laserdisc. How did its price per play compare with most arcade games then?",
+      "answer": "Twice as much",
+      "wrong_answers": [
+        "The same",
+        "Half as much",
+        "Ten times as much"
+      ],
+      "hints": [
+        "Laserdisc machines were costly to build.",
+        "Players needed more coins than usual.",
+        "Two coins instead of one."
+      ],
+      "fun_fact": "Dragon's Lair was animated by Don Bluth, a former Disney animator who later made the film “The Land Before Time”.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Sagamihara_Vending_Machine_Park_%E2%80%93_waiting_room_arcade_games.jpg/3840px-Sagamihara_Vending_Machine_Park_%E2%80%93_waiting_room_arcade_games.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASagamihara_Vending_Machine_Park_%E2%80%93_waiting_room_arcade_games.jpg",
+        "credit": "Sean Kimmons, U.S. Army Garrison Japan Public Affairs · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Sean Kimmons, U.S. Army Garrison Japan Public Affairs",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-4567",
       "status": "approved",
       "difficulty": 3,
@@ -88330,6 +89010,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Vincent Mugaba",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Vmugaba&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4574",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "african-wildlife",
+      "bundle": "base",
+      "description": "Four friends broke out of a New York zoo, and this one had the biggest dreams.",
+      "question": "In the animated film Madagascar, what kind of animal is Marty?",
+      "answer": "Zebra",
+      "wrong_answers": [
+        "Giraffe",
+        "Hippo",
+        "Lion"
+      ],
+      "hints": [
+        "Marty dreams of running free in the wild.",
+        "Its call sounds like a dog's bark mixed with a donkey's bray.",
+        "It's black and white all over."
+      ],
+      "fun_fact": "No two zebras have the same stripes: each pattern is unique, like a fingerprint.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/All%C3%A9e_des_baobabs_Morondava_Madagascar.jpg/3840px-All%C3%A9e_des_baobabs_Morondava_Madagascar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAll%C3%A9e_des_baobabs_Morondava_Madagascar.jpg",
+        "credit": "Cactus0625 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Cactus0625",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Cactus0625"
       },
       "background": null
     },
@@ -89320,6 +90034,40 @@
       "background": null
     },
     {
+      "id": "q-4605",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "fashion-designers",
+      "bundle": "base",
+      "description": "A dress so wild the internet had to invent a new button for it.",
+      "question": "Jennifer Lopez wore Donatella Versace's green jungle-print dress to the Grammys, and searches for it helped create Google Images. In which year?",
+      "answer": "2000",
+      "wrong_answers": [
+        "2002",
+        "2004",
+        "2006"
+      ],
+      "hints": [
+        "Most phones back then had no camera at all.",
+        "Google Images launched the year after.",
+        "Think about the very first Grammys of the new century."
+      ],
+      "fun_fact": "In 2019, J.Lo walked a Versace runway in Milan wearing a new version of the same jungle dress.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/George_clooney_and_photographers_on_the_red_carpet_in_Venice_Film_Festival_-34.jpg/3840px-George_clooney_and_photographers_on_the_red_carpet_in_Venice_Film_Festival_-34.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGeorge_clooney_and_photographers_on_the_red_carpet_in_Venice_Film_Festival_-34.jpg",
+        "credit": "LucaFazPhoto · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "LucaFazPhoto",
+        "author_url": "https://commons.wikimedia.org/wiki/User:LucaFazPhoto"
+      },
+      "background": null
+    },
+    {
       "id": "q-4606",
       "status": "approved",
       "difficulty": 7,
@@ -89894,6 +90642,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Yann Forget",
         "author_url": "https://commons.wikimedia.org/wiki/User:Yann"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4623",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "greek-gods",
+      "bundle": "base",
+      "description": "A warning about trash-talking a goddess in her own specialty.",
+      "question": "A young weaver boasted she was better than Athena, wove a flawless tapestry in their contest, and was turned into a creature that weaves forever. Which animal group is named after her?",
+      "answer": "Arachnids",
+      "wrong_answers": [
+        "Insects",
+        "Crustaceans",
+        "Myriapods"
+      ],
+      "hints": [
+        "Scorpions and ticks belong to this group too.",
+        "Its members have eight legs.",
+        "The weaver's name was Arachne."
+      ],
+      "fun_fact": "For its weight, spider silk is stronger than steel.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Traditional_esino_lario_tapestry_01.jpg/3840px-Traditional_esino_lario_tapestry_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATraditional_esino_lario_tapestry_01.jpg",
+        "credit": "Reem Al-Kashif · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Reem Al-Kashif",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Reem_Al-Kashif"
       },
       "background": null
     },
@@ -90995,6 +91777,40 @@
       "background": null
     },
     {
+      "id": "q-4658",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "architectural-styles",
+      "bundle": "base",
+      "description": "Woodwork so fancy the carpenters probably needed a long nap afterwards.",
+      "question": "The Alhambra's Hall of the Ambassadors holds a famous work of art made of more than 8,000 pieces of cedar wood. Where in the room is it?",
+      "answer": "Up at the ceiling",
+      "wrong_answers": [
+        "Down at the floor",
+        "Around the main door",
+        "Along the lower walls"
+      ],
+      "hints": [
+        "It was made in the 1300s for the sultan's throne room.",
+        "Its pattern is full of stars.",
+        "Tip your head back."
+      ],
+      "fun_fact": "Its star pattern is said to show the seven heavens of Islam.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Toit_salle_Abencerrages_Alhambra_Espagne.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AToit_salle_Abencerrages_Alhambra_Espagne.jpg",
+        "credit": "Jebulon · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Jebulon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jebulon"
+      },
+      "background": null
+    },
+    {
       "id": "q-4659",
       "status": "approved",
       "difficulty": 10,
@@ -91301,6 +92117,49 @@
       "background": null
     },
     {
+      "id": "q-4668",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "planet-earth",
+      "bundle": "base",
+      "description": "The world's loudest concert, and nobody bought a ticket.",
+      "question": "Listen: in what kind of place was this sound recorded?",
+      "answer": "A rainforest",
+      "wrong_answers": [
+        "A desert",
+        "A coral reef",
+        "A snowy mountain"
+      ],
+      "hints": [
+        "It rains there a lot.",
+        "Monkeys, parrots and frogs live there.",
+        "It is full of tall green trees."
+      ],
+      "fun_fact": "The Amazon is home to about one in ten of all known kinds of animals and plants on Earth.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Walk_in_the_rainforest.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWalk_in_the_rainforest.ogg",
+        "credit": "ezwa · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "ezwa",
+        "author_url": null
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Headphones_and_smartphone_%28Unsplash%29.jpg/3840px-Headphones_and_smartphone_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHeadphones_and_smartphone_%28Unsplash%29.jpg",
+        "credit": "wu yi takeshi2 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "wu yi takeshi2",
+        "author_url": "https://unsplash.com/@takeshi2"
+      }
+    },
+    {
       "id": "q-4669",
       "status": "approved",
       "difficulty": 7,
@@ -91433,6 +92292,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Acabashi",
         "author_url": "https://commons.wikimedia.org/wiki/User:Acabashi"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4673",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "plants",
+      "bundle": "base",
+      "description": "Farmers grow it taller than your dad, then chop the whole field down.",
+      "question": "Look at the tall plant in this photo. What do farmers mainly grow it to make?",
+      "answer": "Sugar",
+      "wrong_answers": [
+        "Paper",
+        "Rope",
+        "Flour"
+      ],
+      "hints": [
+        "It ends up in many kitchens.",
+        "Bakers use a lot of it, and it comes in white and brown.",
+        "Chew a piece of the stem and it tastes very sweet."
+      ],
+      "fun_fact": "In Brazil, sugarcane is also turned into a fuel that many cars run on.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/CSIRO_ScienceImage_4538_Young_and_mature_sugarcane_crop_Atherton_QLD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACSIRO_ScienceImage_4538_Young_and_mature_sugarcane_crop_Atherton_QLD.jpg",
+        "credit": "Willem van Aken, CSIRO · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Willem van Aken, CSIRO",
+        "author_url": "https://en.wikipedia.org/wiki/Commonwealth_Scientific_and_Industrial_Research_Organisation"
       },
       "background": null
     },
@@ -94812,6 +95705,40 @@
       "background": null
     },
     {
+      "id": "q-4780",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "body-oddities",
+      "bundle": "base",
+      "description": "Your mouth's own built-in sauce, served with every meal.",
+      "question": "Which of these does spit NOT do?",
+      "answer": "Cool your body down when you're hot",
+      "wrong_answers": [
+        "Make food wet so you can swallow it",
+        "Help you taste your food",
+        "Start breaking down your food"
+      ],
+      "hints": [
+        "You make it all day long without even noticing.",
+        "Three of these jobs happen while you chew.",
+        "One of these is really the job of sweat."
+      ],
+      "fun_fact": "Your mouth makes about a liter of spit every day, enough to fill a big water bottle.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/20130308-FNS-LSC-0413_%288546053033%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A20130308-FNS-LSC-0413_%288546053033%29.jpg",
+        "credit": "U.S. Department of Agriculture · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Department of Agriculture\n\nLance Cheung/Visual Information Photographer/USDA photo by Lance Cheung",
+        "author_url": "https://www.flickr.com/people/41284017@N08"
+      },
+      "background": null
+    },
+    {
       "id": "q-4781",
       "status": "approved",
       "difficulty": 15,
@@ -95686,6 +96613,40 @@
         "role": "illustrative",
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bone_Dog_Treats_%2851049786016%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "source_url": "https://commons.wikimedia.org/wiki/File%3ABone_Dog_Treats_%2851049786016%29.jpg",
+        "credit": "Megan Marrs · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Megan Marrs",
+        "author_url": "https://www.flickr.com/people/192170778@N07"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4808",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "dogs",
+      "bundle": "base",
+      "description": "Every dog gets a spa day, whether it likes it or not.",
+      "question": "Look at this tool. What is it used for on a dog?",
+      "answer": "Trimming its claws",
+      "wrong_answers": [
+        "Cutting its fur",
+        "Cleaning its teeth",
+        "Removing ticks"
+      ],
+      "hints": [
+        "It's used on the dog's feet.",
+        "It works on something that keeps growing, like your own fingernails.",
+        "When this part is too long, you can hear the dog tap on the floor."
+      ],
+      "fun_fact": "A dog's claw has a blood vessel inside called the quick, so you only trim the tip.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Safari_Dog_Nail_Clippers_%2851049871272%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASafari_Dog_Nail_Clippers_%2851049871272%29.jpg",
         "credit": "Megan Marrs · CC BY 2.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY 2.0",
@@ -97328,6 +98289,40 @@
       "background": null
     },
     {
+      "id": "q-4858",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "space-race-and-astronauts",
+      "bundle": "base",
+      "description": "Some rocks get a whole lifetime off from bad weather.",
+      "question": "Watch this Apollo moonwalk. Why have rocks on the Moon never been worn down by wind or rain?",
+      "answer": "The Moon has no air",
+      "wrong_answers": [
+        "The Moon is too cold",
+        "The Moon spins too slowly",
+        "The Moon is too far from the Sun"
+      ],
+      "hints": [
+        "Wind and rain both need something the Moon is missing.",
+        "On the Moon, the sky looks black even in the middle of the day.",
+        "The Moon has no atmosphere around it."
+      ],
+      "fun_fact": "The six Apollo landings brought back 382 kg (842 lb) of Moon rocks and soil to Earth.",
+      "media": {
+        "type": "video",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c3/Apollo_11_Moonwalk_Montage.webm/Apollo_11_Moonwalk_Montage.webm.480p.vp9.webm",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AApollo_11_Moonwalk_Montage.webm",
+        "credit": "NASA Johnson · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA Johnson",
+        "author_url": "https://www.youtube.com/@ReelNASA"
+      },
+      "background": null
+    },
+    {
       "id": "q-4859",
       "status": "approved",
       "difficulty": 10,
@@ -97902,6 +98897,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Mosista Pambudi",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Mosista&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4877",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "strange-creatures",
+      "bundle": "base",
+      "description": "A question about who comes into the world with a shell, and who doesn't bother.",
+      "question": "Dolphins, bats, horses, penguins: which of them does NOT give birth to live babies?",
+      "answer": "Penguins",
+      "wrong_answers": [
+        "Dolphins",
+        "Bats",
+        "Horses"
+      ],
+      "hints": [
+        "Three of them are mammals.",
+        "Think about how each of these babies starts life.",
+        "Its babies hatch."
+      ],
+      "fun_fact": "Emperor penguin dads keep their egg warm on their feet for about two months, through the Antarctic winter.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Children_at_zoo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChildren_at_zoo.jpg",
+        "credit": "Tamara Karvajar · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Tamara Karvajar",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tamara_Karvajar"
       },
       "background": null
     },
@@ -99334,6 +100363,40 @@
       "background": null
     },
     {
+      "id": "q-4920",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "tennis",
+      "bundle": "base",
+      "description": "A tie in tennis can turn one little game into a never-ending tug of war.",
+      "question": "In tennis, when a game is tied at “deuce”, who wins the game from there?",
+      "answer": "The first to win two points in a row",
+      "wrong_answers": [
+        "The next player to win a point",
+        "The player who is serving",
+        "The first to win three more points"
+      ],
+      "hints": [
+        "One point is not enough.",
+        "After winning one point, a player has “advantage”.",
+        "You must be two points ahead."
+      ],
+      "fun_fact": "The word “deuce” probably comes from the French “à deux”, meaning a player still needs two points to win.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Tennis_courts_and_scorecards.jpg/3840px-Tennis_courts_and_scorecards.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATennis_courts_and_scorecards.jpg",
+        "credit": "MarkBuckawicki · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "MarkBuckawicki",
+        "author_url": "https://commons.wikimedia.org/wiki/User:MarkBuckawicki"
+      },
+      "background": null
+    },
+    {
       "id": "q-4921",
       "status": "approved",
       "difficulty": 2,
@@ -99790,6 +100853,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Andrew Coelho andrewcoelho",
         "author_url": "https://unsplash.com/@andrewcoelho"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4936",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "traditional-dress",
+      "bundle": "base",
+      "description": "A hat you can see straight through, which makes it terrible for hiding bad hair.",
+      "question": "The fez is to the Ottoman Empire as the gat, a tall black see-through hat, is to…",
+      "answer": "Joseon Korea",
+      "wrong_answers": [
+        "Ming China",
+        "Edo Japan",
+        "Mughal India"
+      ],
+      "hints": [
+        "It's an old kingdom in East Asia.",
+        "Men wore the gat over a knot of hair tied on top of the head.",
+        "Today this country is split into North and South."
+      ],
+      "fun_fact": "The gat was woven from horsehair and thin bamboo, and fine ones showed that the wearer was a respected grown man.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Fez_%28AM_1929.195%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFez_%28AM_1929.195%29.jpg",
+        "credit": "CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": null,
+        "author_url": null
       },
       "background": null
     },
@@ -100402,6 +101499,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Nenad Stojkovic",
         "author_url": "https://www.flickr.com/people/202846129@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4959",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "tricks",
+      "bundle": "base",
+      "description": "Is it a bird? Is it a bunny? Your brain can't pick both at once.",
+      "question": "The famous duck-rabbit drawing is called “ambiguous” because it…",
+      "answer": "can be seen in two different ways",
+      "wrong_answers": [
+        "seems to move when you stare",
+        "is drawn with one single line",
+        "changes color in bright light"
+      ],
+      "hints": [
+        "Nothing in the picture actually changes.",
+        "What changes is how your brain reads it.",
+        "The duck's beak can also be a pair of long ears."
+      ],
+      "fun_fact": "Around Easter, more people see the rabbit first; in October, more see the duck.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Duck-Rabbit.png/3840px-Duck-Rabbit.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADuck-Rabbit.png",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null
       },
       "background": null
     },
@@ -101154,6 +102285,40 @@
       "background": null
     },
     {
+      "id": "q-4984",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "weather-and-climate",
+      "bundle": "base",
+      "description": "Tiny sparkly jewels on the grass that vanish before lunch.",
+      "question": "Look at these drops of morning dew. When the Sun warms them up, they disappear. What do they turn into?",
+      "answer": "Water vapor",
+      "wrong_answers": [
+        "Ice",
+        "Salt",
+        "Dust"
+      ],
+      "hints": [
+        "They don't fall to the ground or soak away.",
+        "They go up into the air, where you can't see them.",
+        "It is the same thing that happens to a puddle on a hot day."
+      ],
+      "fun_fact": "Dew forms at night for the same reason a cold glass of juice gets wet on the outside: water vapor in the air turns back into drops on cool surfaces.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Dew_drops_on_blade_of_grass_in_the_morning.jpg/3840px-Dew_drops_on_blade_of_grass_in_the_morning.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADew_drops_on_blade_of_grass_in_the_morning.jpg",
+        "credit": "Massimo brizzi · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Massimo brizzi",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Massimo_brizzi&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-4985",
       "status": "approved",
       "difficulty": 2,
@@ -101558,6 +102723,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
         "author": "Unknown authorUnknown author",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-4998",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "world-war-ii",
+      "bundle": "base",
+      "description": "A symbol with a very long life and one very bad decade.",
+      "question": "You're visiting a Hindu temple in India and see swastikas painted as signs of good luck. Before the Nazis took it, about how long had people used this symbol?",
+      "answer": "Over 3,000 years",
+      "wrong_answers": [
+        "Under 100 years",
+        "200 to 300 years",
+        "500 to 700 years"
+      ],
+      "hints": [
+        "It is found in many cultures around the world, not just in India.",
+        "It appears in very old Asian religions.",
+        "It was used in ancient times, long before the Romans."
+      ],
+      "fun_fact": "The word “swastika” comes from Sanskrit and means something like “well-being”.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Manama_Sri_Krishna_Temple_Door.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AManama_Sri_Krishna_Temple_Door.jpg",
+        "credit": "Zairon · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Zairon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Zairon"
       },
       "background": null
     },

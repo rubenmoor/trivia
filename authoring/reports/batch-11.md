@@ -108,7 +108,7 @@ Disagreements with the LLM review, by the human's problems:
 - **q-4315** LLM approved → human needs_work, audit ok: i don't like it. the question is difficult only because of the question style. the subject matter is trivial. (http://127.0.0.1:8001/review/q-4315)
 - **q-4370** LLM needs_work → human approved, audit ok (http://127.0.0.1:8001/review/q-4370)
 
-Changes from this QC: none yet (QC step 4)
+Changes from this QC: 1682
 
 ## Needs work
 
