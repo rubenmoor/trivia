@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "aac2de6a",
+  "hash": "020c53b1",
   "questions": [
     {
       "id": "q-0016",
@@ -80344,40 +80344,6 @@
       "background": null
     },
     {
-      "id": "q-4315",
-      "status": "approved",
-      "difficulty": 4,
-      "subcategory": "famous-logos",
-      "bundle": "base",
-      "description": "A sign that tells you where to go without saying a single word.",
-      "question": "A crossed-out cigarette is to “no smoking” as a white wheelchair on a blue square is to…",
-      "answer": "Easy access for wheelchair users",
-      "wrong_answers": [
-        "Bicycle parking only",
-        "A hospital nearby",
-        "A children's play area"
-      ],
-      "hints": [
-        "You often see it on parking spaces, doors and toilets.",
-        "It helps people who can't use stairs.",
-        "It marks places with ramps, wide doors or lifts for people in wheelchairs."
-      ],
-      "fun_fact": "The wheelchair sign was designed in 1968 by Danish design student Susanne Koefoed.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Accesibilidad.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAccesibilidad.JPG",
-        "credit": "Lucía Chaer · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Lucía Chaer",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Luchaer&action=edit&redlink=1"
-      },
-      "background": null
-    },
-    {
       "id": "q-4316",
       "status": "approved",
       "difficulty": 9,
@@ -82040,6 +82006,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "林亭妏",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:%E6%9E%97%E4%BA%AD%E5%A6%8F&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4370",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "fish",
+      "bundle": "base",
+      "description": "A fish with fans across Europe, and one very smelly fan club in Sweden.",
+      "question": "I swim in huge schools in the North Atlantic. The Dutch eat me raw with onions, smoked I'm a kipper, and Swedes ferment me in smelly cans. What am I?",
+      "answer": "Herring",
+      "wrong_answers": [
+        "Sardine",
+        "Cod",
+        "Anchovy"
+      ],
+      "hints": [
+        "I'm a small, silvery, oily fish.",
+        "I'm often pickled and sold in jars in northern Europe.",
+        "Rollmops are made by rolling up pickled fillets of me."
+      ],
+      "fun_fact": "Swedish fermented fish, surströmming, smells so strong that people often open the cans outdoors.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Adriaen_van_Utrecht_-_Fishmonger%27s_Stall_-_WGA24196.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAdriaen_van_Utrecht_-_Fishmonger%27s_Stall_-_WGA24196.jpg",
+        "credit": "Adriaen van Utrecht · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Adriaen van Utrecht",
+        "author_url": "https://en.wikipedia.org/wiki/en:Adriaen_van_Utrecht"
       },
       "background": null
     },
