@@ -173,8 +173,8 @@ const SAMPLE_FOR: Partial<Record<Cue, [Sample, ((level: number) => number)?]>> =
   "splash-typewriter": ["maquina-escribir"],
   "splash-jelly": ["gelatina"],
   pop: ["pop", () => 0.9 + Math.random() * 0.25],
-  "menu-open": ["menu-abre", () => 0.85],
-  "menu-close": ["menu-cierra", () => 0.85],
+  "menu-open": ["menu-abre"],
+  "menu-close": ["menu-cierra"],
   unlocked: ["desbloqueado"],
   ready: ["hola"],
   "joker-activate": ["comodin"],
@@ -794,8 +794,8 @@ const RECIPES: Record<Cue, Recipe> = {
     tone(c, o, t, { type: "sawtooth", from: 1200, to: 150, len: 0.5, level: 0.12 });
     noise(c, o, t, { from: 2000, to: 600, len: 0.5, q: 0.7, level: 0.25 });
   },
-  "menu-open": (c, o, t) => tone(c, o, t, { from: 425, to: 765, len: 0.12, level: 0.2 }),
-  "menu-close": (c, o, t) => tone(c, o, t, { from: 765, to: 425, len: 0.12, level: 0.2 }),
+  "menu-open": (c, o, t) => tone(c, o, t, { from: 260, to: 390, len: 0.2, level: 0.2 }),
+  "menu-close": (c, o, t) => tone(c, o, t, { from: 430, to: 280, len: 0.2, level: 0.2 }),
   unlocked: (c, o, t) => tone(c, o, t, { from: 880, len: 0.15, level: 0.12 }), // «audio desbloqueado»
   "joker-armed": (c, o, t) => notes(c, o, t, [84, 88], 0.06, "sine", 0.25), // «comodín: preparado»
   "joker-open": (c, o, t) => notes(c, o, t, [76, 81], 0.07, "triangle", 0.3), // «comodín: abrir»

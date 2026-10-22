@@ -23,8 +23,8 @@ Everything not listed here is synthesized in `app/client/src/game/sound.svelte.t
 | `swoosh-sube.m4a` | Cambiazo: the card flip («swoosh que sube») | [Backwards Whoosh](https://freesound.org/people/SlavicMagic/sounds/446010/) (Freesound) | SlavicMagic | CC0 |
 | `escoba.m4a` | Paso: the broom sweeping the question away (first stroke) | [broom sweep.wav](https://freesound.org/people/semccab/sounds/154376/) (Freesound) | semccab | CC0 |
 | `pop.m4a` | Picking a card (pitch varied) | [Cartoon Pop (Clean)](https://freesound.org/people/unfa/sounds/245645/) (Freesound) | unfa | CC0 |
-| `menu-abre.m4a` | Opening the menu or a dialog | `maximize_001.ogg`, [Interface Sounds](https://kenney.nl/assets/interface-sounds) | Kenney | CC0 |
-| `menu-cierra.m4a` | Closing the menu or a dialog | `minimize_001.ogg`, [Interface Sounds](https://kenney.nl/assets/interface-sounds) | Kenney | CC0 |
+| `menu-abre.m4a` | Opening the menu or a dialog | `maximize_008.ogg`, [Interface Sounds](https://kenney.nl/assets/interface-sounds) | Kenney | CC0 |
+| `menu-cierra.m4a` | Closing the menu or a dialog | `minimize_008.ogg`, [Interface Sounds](https://kenney.nl/assets/interface-sounds) | Kenney | CC0 |
 | `desbloqueado.m4a` | The first click: audio unlocked | `glass_001.ogg`, [Interface Sounds](https://kenney.nl/assets/interface-sounds) | Kenney | CC0 |
 | `hola.m4a` | «¡Hola, …!» and «listo» into level 1 | `confirmation_001.ogg`, [Interface Sounds](https://kenney.nl/assets/interface-sounds) | Kenney | CC0 |
 | `comodin.m4a` | A joker played: the activate shimmer (first 1.5 s) | [Crystal Twinkle](https://freesound.org/people/LaurenPonder/sounds/639429/) (Freesound) | LaurenPonder | CC0 |
