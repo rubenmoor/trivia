@@ -41743,6 +41743,17 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `CREDITS.md` rows updated (CC BY: credit)
 - Done note: source, file, measured pitch old → new, `/?efectos` to audition («menú abierto» / «menú cerrado»)
 - Then `pm decision add --once` "New menu open/close sounds: OK on the TV?" (plain-English intro; how to listen: `TRIVIA_SOUND=1`, `/?efectos` or open/close the Esc menu in a game; options: approve / changes: …), with one alternative pair staged in `work/menu-sounds/` of the main checkout to compare', '2026-10-22T03:14:16Z', '2026-10-22T03:16:32Z', NULL, 1, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1679, NULL, 'Fullscreen only from the Esc menu; remembered window state', 'exec', 'open', NULL, NULL, 'Developer, 2026-10-22: F11 and F12 do nothing in the desktop shell; fullscreen ↔ windowed only via the Esc menu; fullscreen state and window size remembered between starts.
+- `app/desktop/main.mjs`: drop the F11 toggle in `before-input-event` (the `--rp-probe` F9–F11 keys stay); F12 stays inert (devTools only with `TRIVIA_DEVTOOLS=1`)
+- Esc menu (`Overlay.svelte` `items`): the one «Pantalla completa» item → two items, «Pantalla completa» and «Modo ventana» (all four catalogs; `locales/style/<locale>.md` first), the active one disabled (`enabled: false`); the shell tells the page the state (initial + `enter-full-screen`/`leave-full-screen`) over the bridge
+  - browser (no shell): same two items from `document.fullscreenElement` + `fullscreenchange`
+- Remembered: fullscreen yes/no, windowed bounds (x, y, width, height), in a small file in `userData` (not the game save; corrupt/missing → defaults); written on toggle, resize/move (debounced) and quit
+  - start: last state; first start: fullscreen
+  - windowed default: ~80 % of the display''s work area, centred (`screen.getDisplayMatching`); stored bounds off every current display (monitor unplugged) → default on the primary display; `minWidth`/`minHeight` 1024×600
+  - Steam Deck / `--rp-probe` / `--lag-probe`: unchanged behaviour where they force a mode
+- `rg -i "F11"` over plans/, README, `directory.md`, release checklist rows and pm bodies: "F11/menu toggles" → "Esc menu toggles"; fix every hit (decision 200)
+- Browser (`trivia`, dev server): F11/F12 stay the browser''s
+- Gallery: the Esc menu shot(s) change; `trivia-gallery --set task-<id> --only <menu shots>` for the done note', '2026-10-22T03:18:24Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
