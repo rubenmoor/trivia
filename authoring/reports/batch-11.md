@@ -88,6 +88,28 @@ Major findings on approved questions:
 - **q-4907**: giveaway, difficulty — The facts are right: the first call of the day is Fajr, at dawn, and noon (Dhuhr) and sunset (Maghrib) are later calls. The fun fact about the muezzin and the Süleymaniye media are also fine. The problem is the description: “The original alarm clock” points straight to waking up in the morning, so it rules out noon, sunset and midnight. Since “first call of the day” already suggests early morning, the question is closer to a 5 than a 9. (http://127.0.0.1:8001/review/q-4907)
 - **q-4925**: giveaway — The description ("always goes sideways") gives the answer away before the question is shown. Sideways walking is the crab's best-known trait, and it is also hint 3. It is also not strictly true, since some crabs, such as soldier crabs, walk forwards. The video (Carcinus maenas, the green shore crab, walking on land) fits the essential role. The wrong answers are really wrong, the fun fact is broadly correct, and q-2761 (Mr. Krabs) asks a different fact, so there is no overlap. (http://127.0.0.1:8001/review/q-4925)
 
+## Quality control
+
+The developer's blind spot check (`/review?batch=…&sample=1`) against the LLM review and the audit (plan 16, `qgen report --qc`). Agree = both accept or both don't.
+
+- Spot check: 30 decided of 30
+- Agreement with the LLM review: 28 of 30 (93 %) ✓ (bar: ≥ 30 questions, ≥ 90 %)
+- Release bar (D-79): ✓ release-ready
+- False approve (LLM approved, human not): 1 of 30 (3 %); the audit flagged 0
+- False needs work (LLM not approved, human approved): 1 of 30 (3 %)
+- Difficulty |Δ| ≥ 2: 0 of 30 (0 %)
+- Media changed: 1 of 30 (3 %)
+- Audit/human agreement: 28 of 30 (93 %)
+
+Disagreements with the LLM review, by the human's problems:
+
+### no problem given (2)
+
+- **q-4315** LLM approved → human needs_work, audit ok: i don't like it. the question is difficult only because of the question style. the subject matter is trivial. (http://127.0.0.1:8001/review/q-4315)
+- **q-4370** LLM needs_work → human approved, audit ok (http://127.0.0.1:8001/review/q-4370)
+
+Changes from this QC: none yet (QC step 4)
+
 ## Needs work
 
 - **q-4111** (amphibians) Look at this treat. In the Harry Potter books, where does Harry buy his very first Chocolate Frog? → On the Hogwarts Express: None of the candidates shows a plain chocolate frog. 1 is foil-wrapped chocolate animals, mostly mice; 2 and 3 are Australian frog cakes; 4 is a fondant cake scene; 5 is a carousel frog; 6 is Swiss cola gummy frogs, not chocolate. A new search isn't allowed here. The text is fine, so the question needs a different image: a real chocolate frog with no branding. Another option is to drop "Look at this treat" and use an illustrative image, such as a steam train. No suitable picture found for this question.

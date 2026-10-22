@@ -47429,6 +47429,95 @@ Checks and hand edits:
   - `old-place-names` Old place names: `countries`, `capital-cities`
   - `vanished-countries` Vanished countries: `countries`, `cold-war`
   - `maps-borders-and-treaties` Maps, borders and treaties: `cold-war`, `continents`', 'The new history question pack needs its own list of topics, so its questions go deeper than the main pool on every era and every part of the world, not only Europe, without repeating what the main pool, the country packs or the other topic packs already ask. The proposal splits the pack into 11 topics and 55 subtopics, about 36 questions each at 2000 questions. The choice is to apply it as proposed, apply it with changes, or have it redone; applying fixes the pack''s structure and drafts the Spanish and German topic names.', 'Apply as proposed (with the hand edits listed)', NULL, '2026-10-22T01:37:06Z', '2026-10-22T02:11:31Z', 1647, NULL, 'rule', NULL, '2026-10-22, task 1647: Applied 2026-10-22 with `qgen taxonomy --bundle history --apply work/taxonomy/history/proposal.json` (hand-edited proposal): `app/data/bundles/history/categories.json` 11 categories, 55 subcategories; names.{en,es,de}.json drafted (es hand fixes: early-modern-world «Edad Moderna», plagues «Epidemias, incendios y hambrunas», home-fronts «La retaguardia en las guerras mundiales»); `authoring/data/bundles/history/base-related.json` 55 of 55; `plans/22-bundles.md` history row taxonomy cell. `task 1648: movies taxonomy` checks against this list. Ready for `qgen batch --bundle history` (content-runs plan).');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (404, 'movies taxonomy: categories and subcategories', 'pending', '["Apply as proposed (with the hand edits listed)", "Apply with changes (name them: merges, drops, scopes)", "Redo the proposal (say what to change)"]', 'Bundle `movies` (Movies & Series questions bundle, `kind: theme`, `languages: ["en"]`, target 2000 ≈ 38 per subcategory at 53; `task 1644: Create the five topic bundles`). Scope film and TV series per `decision 369: Topic bundles: names, descriptions and rules` (name and description say "movies and series").
+
+Rule (`app/data/bundles.json`): More and deeper questions on film and TV series: films and series of every era and country, live action and animation, genres, directors, actors, characters, quotes, soundtracks, awards and screen history at every difficulty, from kids to adults, answerable by families anywhere in the world whatever their language; fan-level detail is welcome, while the famous core base already asks stays in `base`, and things only one country''s players know stay in that country''s regional bundle (`usa`, `spain`, …); reality TV and news stay in `base`.
+
+No voice: base''s voice holds (`plan 184: Pipeline for topic bundles`).
+
+Proposal (`qgen taxonomy --bundle movies`, theme prompt of `decision 370: Theme taxonomy prompt: apply?`; opus 1 call, $0.82): 11 categories (7 `base_extends`, 4 `new`: `screen-history`, `world-cinema`, `directors-and-stars`, `screen-music`), 53 subcategories, each with `base_related` (base subcategories it goes beyond; drafting keeps off their questions, `decision 350: Overlap rate in drafting: which changes?`). es/de names drafted on apply. Full proposal with scopes, reasons and samples (`known_at`): `work/taxonomy/movies/proposal.md` (before the hand edits); edited `proposal.json` (`proposal.orig.json` beside it is the unedited one).
+
+Checks and hand edits:
+- Base overlap: base''s `film-tv-and-superheroes` has 18 subcategories, 185 of 455 approved (`film` 26 and saturated, `tv-series` 20, `disney-films` 17, `pixar-films` 24, `anime` 26, `cartoons` 25, `james-bond` 31, `harry-potter` 32, `the-lord-of-the-rings` 25, `oscars` 20 …); the proposal''s subcategories go past that core ("deep cuts", "on screen", records) and name it in `base_related`. `reality-tv` and `telenovelas-and-soaps` stay base''s (scopes say so). Hand edit: the 6 subcategories without a related base subcategory (`european-cinema`, `east-asian-cinema`, `indian-cinema`, `westerns`, `child-stars`, `animal-stars`) get base''s general `film` (the last two `tv-series` too). All `base_related` slugs exist.
+- Slugs: unique; none equals a base slug. Hand edit: `tv-shows` → `series` and `sitcoms` → `comedy-series` (`usa` has `tv-shows`, `uk` has `sitcoms`).
+- Regional bundles (`usa` `tv-shows`, `kids-tv`, `movie-favorites`; `uk` `sitcoms`, `british-films`, `soaps-and-dramas`, `childrens-tv`; `spain` `spanish-cinema`, `tv-series`; `mexico` `golden-age-cinema`, `contemporary-cinema`; `germany` `series-and-crime`, `films-and-actors`; `colombia` `cinema`, `tv-shows-and-series`): drafting''s overlap wiring only sees base, so the boundary rests on the rule and scopes; hand edits: 10 scopes near regional ground (comedy, drama, detective, family and teen, international series, European and Spanish/Latin American cinema, golden-age Hollywood, 80s–90s hits, kids'' cartoons) say "one country''s detail its players alone know stays in that country''s regional bundle"; samples dropped: Fawlty Towers, Line of Duty, Midsomer Murders, I Love Lucy, Saved by the Bell, The West Wing, Cantinflas, Pinewood Studios. World-known films and series of one country stay here (Almodóvar, Money Heist, Dark, Mr. Bean, Wallace & Gromit).
+- `stem` (applied, `decision 395: stem taxonomy: categories and subcategories`; `light-and-optics`, `sound-and-waves`, `electronics-and-gadgets`): hand edit: `filmmaking` leaves the physics and engineering of cameras, screens and sound to `stem`.
+- `sports` (applied, `decision 399: sports taxonomy: categories and subcategories`): by its rule films about sport are `movies`'' (Rocky, Eye of the Tiger stay here); no sport subcategory.
+- `history` (applied, `decision 403: history taxonomy: categories and subcategories`): no film subcategory there; hand edit: `screen-history` says the real events a film shows are history''s, the question asks about the film.
+- `geography` (not yet applied): hand edit: `filming-locations` tests the screen link; the place itself is geography''s.
+- Kids level (lowest sample `known_at`): 19 of 53 at ≤ 4 (Peppa Pig, Bluey, Big Bird, Minions, E.T., Home Alone, Wizard of Oz, Chaplin, Frankenstein''s monster, Paddington, Jackie Chan, clapperboard …), 19 at 5–6, 9 at 7–8, 6 at 9+ (`crime-and-thrillers`, `bond-deep-cuts`, `drama-series`, `detective-series`, `oscar-records`, `filming-locations`): every difficulty has subcategories to draw from.
+- Free media (`authoring/data/bundles/movies/question-axes.json`: photos of people, places and objects from Commons; never stills, posters or footage): 22 subcategories marked "media" below have them as their subject (directors, actors, composers, authors, animal performers, locations, studios, festivals, statuettes, props and cars in museums, film equipment); the other 31 (characters, plots, animation, quotes, series, franchises) are text-only, with an actor''s or creator''s portrait now and then.
+- Size: 53, near the planned ≈ 50; merges if wanted: `star-trek` into `blockbuster-sagas`, `child-stars` into `modern-film-stars`, `classic-directors` and `modern-directors` into one, `new-hollywood` into `golden-age-hollywood`.
+
+- `screen-history` Screen history (4, new)
+  - `silent-cinema` Silent cinema: `film` — media
+  - `golden-age-hollywood` Hollywood''s golden age: `film`
+  - `new-hollywood` New Hollywood and the 1970s: `film`
+  - `eighties-and-nineties-hits` 80s and 90s hits: `film`
+- `world-cinema` World cinema (4, new)
+  - `european-cinema` European cinema: `film` — media
+  - `east-asian-cinema` Japanese, Korean and Chinese cinema: `film` — media
+  - `indian-cinema` Indian cinema: `film` — media
+  - `spanish-and-latin-american-cinema` Spanish and Latin American cinema: `telenovelas-and-soaps` — media
+- `film-genres` Film genres (5, base_extends)
+  - `action-and-martial-arts` Action and martial arts films: `film` — media
+  - `comedy-and-romcoms` Comedies and romcoms: `film`
+  - `westerns` Westerns: `film` — media
+  - `crime-and-thrillers` Crime films and thrillers: `crime-fiction`
+  - `movie-musicals-and-dance` Movie musicals and dance films: `musicals`
+- `fantastic-cinema` Fantastic cinema (3, base_extends)
+  - `sci-fi-films` Sci-fi film deep cuts: `science-fiction`
+  - `horror-and-monsters` Monsters and horror deep cuts: `horror-films`, `famous-villains`
+  - `fantasy-adventure-films` Fantasy adventure films: `fantasy`
+- `franchises` Franchises and sagas (8, base_extends)
+  - `star-wars` Star Wars galaxy: `science-fiction`
+  - `star-trek` Star Trek: `science-fiction`
+  - `marvel-cinematic-universe` Marvel Cinematic Universe: `marvel-superheroes`, `famous-villains`
+  - `dc-on-screen` DC on screen: `dc-superheroes`, `famous-villains`
+  - `wizarding-world` Wizarding World deep cuts: `harry-potter`
+  - `middle-earth-on-screen` Middle-earth on screen: `the-lord-of-the-rings` — media
+  - `bond-deep-cuts` Bond deep cuts: `james-bond` — media
+  - `blockbuster-sagas` Blockbuster sagas: `film`, `science-fiction`
+- `animation` Animation (8, base_extends)
+  - `disney-animation-deep-cuts` Disney animation deep cuts: `disney-films`
+  - `pixar-deep-cuts` Pixar deep cuts: `pixar-films`
+  - `other-animation-studios` DreamWorks, Aardman and more: `cartoons`
+  - `ghibli-and-anime-films` Studio Ghibli and anime films: `anime`
+  - `anime-series` Anime series: `anime`
+  - `classic-cartoons` Classic cartoons: `cartoons`
+  - `kids-tv-cartoons` Kids'' TV cartoons: `cartoons`
+  - `adult-animation` The Simpsons and adult animation: `cartoons`
+- `series` TV series (6, base_extends)
+  - `comedy-series` Sitcoms: `tv-series`
+  - `drama-series` Drama series: `tv-series`
+  - `fantasy-and-sci-fi-series` Fantasy and sci-fi series: `tv-series`, `science-fiction`, `fantasy`
+  - `detective-series` Detective series: `crime-fiction`, `tv-series`
+  - `family-and-teen-series` Family and teen series: `tv-series`
+  - `international-series` International series hits: `tv-series`, `telenovelas-and-soaps`
+- `directors-and-stars` Directors and stars (5, new)
+  - `classic-directors` Classic film directors: `film` — media
+  - `modern-directors` Today''s film directors: `film` — media
+  - `classic-film-stars` Classic film stars: `film` — media
+  - `modern-film-stars` Today''s film stars: `film` — media
+  - `child-stars` Child stars: `film`, `tv-series` — media
+- `screen-icons` Quotes and animal stars (2, base_extends)
+  - `movie-quotes` Movie quotes: `famous-quotes`
+  - `animal-stars` Animal stars: `film`, `tv-series` — media
+- `screen-music` Screen music (2, new)
+  - `film-scores` Film scores and composers: `classical-music` — media
+  - `screen-songs` Songs from films and TV: `pop-music`, `disney-films`
+- `awards-and-industry` Awards and filmmaking (6, base_extends)
+  - `oscar-records` Oscar records and trivia: `oscars` — media
+  - `festivals-and-awards` Festivals and other awards: `oscars` — media
+  - `filmmaking` How films are made: `technology` — media
+  - `studios-and-box-office` Studios and box office: `famous-companies`, `famous-logos` — media
+  - `book-to-screen` From book to screen: `literature`, `childrens-books` — media
+  - `filming-locations` Filming locations: `famous-landmarks` — media', 'The new movies and series question pack needs its own list of topics, so its questions go deeper than the main pool on films and TV of every era and country, without repeating what the main pool, the country packs or the other topic packs already ask. The proposal splits the pack into 11 topics and 53 subtopics, about 38 questions each at 2000 questions, and says which subtopics can use free photos. The choice is to apply it as proposed, apply it with changes, or have it redone; applying fixes the pack''s structure and drafts the Spanish and German topic names.', NULL, NULL, '2026-10-22T02:21:24Z', NULL, 1648, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (405, 'QC batch-11: which changes?', 'pending', '["recommended set: proposal 1", "all", "none"]', 'Batch-11 QC (`authoring/reports/batch-11.md`): agreement 28/30 (93 %; batch-9 28/30, batch-10 29/30), release bar ✓. The two disagreements are single, with no shared problem kind (q-4315 false approve: trivial subject, difficulty only from style; q-4370 false needs_work). Audit: 2 major findings on approved questions, both giveaway (q-4907 description ''original alarm clock'' points to morning; q-4925 description ''always goes sideways'' names the crab''s best-known trait), which meets the threshold of 2.
+
+Proposal 1 (`review.md` / `draft.md`): the description must not state the answer''s defining trait or the clue that rules out wrong options (check the description against the options alone, before the hints). Subject to `task 1251: Audit: hint giveaways are minor unless they name the answer (QC batch-8 120 D)`.
+
+Note: batch health is ✗ on drop rate (21.1 % vs 20 %), as batch-9 and batch-10 (both acked); the next `qgen batch` stops until `qgen health ack batch-11`.', 'After each batch of new trivia questions we compare the developer''s blind spot check with the automated reviewers and propose fixes for recurring problems. This time the spot check agreed 28 of 30 (93 %), and one problem kind came up often enough in the second reader''s audit to justify a proposal. The choice is whether to turn that proposal into work before the next batch, or to skip it.', NULL, NULL, '2026-10-22T02:21:58Z', NULL, 1580, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -49276,7 +49365,8 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1790, 1647, '2026-10-22T01:28:38Z', '2026-10-22T01:37:20Z', 'blocked', NULL, 0, '67ef8daf0c67175969026bf4d521eba057966b6d', 'questions', 'claude-opus-5-5', '665606a3-497a-4fe2-a9ef-7e0f6ae46cf1', 1789, 19, 38, 14434, 1878213, 51665, 1.9710208000000002, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1791, 1649, '2026-10-22T01:37:20Z', '2026-10-22T01:37:57Z', 'blocked', NULL, 0, '67ef8daf0c67175969026bf4d521eba057966b6d', 'questions', 'claude-opus-5-5', '9697217c-6725-4272-a784-1ead93b4f353', NULL, 7, 16, 1497, 229669, 27944, 0.29948980000000003, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1792, 1647, '2026-10-22T02:11:34Z', '2026-10-22T02:13:31Z', 'done', NULL, 0, '376e37ea61db9d19d85b868e23f05c97376087da', 'questions', 'claude-opus-5-5', '3d84d1f0-14fa-4dea-b5de-363d25567f73', NULL, 13, 24, 2954, 483053, 37120, 0.4527466, 494342);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1793, 1648, '2026-10-22T02:13:32Z', NULL, 'running', NULL, NULL, 'e9911da1ee13d197ccd19b7da5516deaf3a76b8c', 'questions', NULL, NULL, 1792, NULL, NULL, NULL, NULL, NULL, NULL, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1793, 1648, '2026-10-22T02:13:32Z', '2026-10-22T02:21:38Z', 'blocked', NULL, 0, 'e9911da1ee13d197ccd19b7da5516deaf3a76b8c', 'questions', 'claude-opus-5-5', '3d84d1f0-14fa-4dea-b5de-363d25567f73', 1792, 15, 30, 11427, 1128650, 45168, 1.2684806000000002, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1794, 1580, '2026-10-22T02:21:38Z', '2026-10-22T02:22:04Z', 'blocked', NULL, 0, 'f71654a4c5109302c0054575b54e953cfda9e37a', 'questions', 'claude-sonnet-5-5', 'cfa4a764-2a28-4ba6-9141-eefacd7e6f7e', NULL, 8, 14, 2097, 246065, 47837, 0.261559, 494342);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -49856,6 +49946,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1568, 179);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1571, 89);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1572, 89);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1580, 358);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1580, 405);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1590, 353);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1604, 361);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1605, 361);
@@ -49889,11 +49980,13 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1648, 370);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1648, 395);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1648, 399);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1648, 403);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1648, 404);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 370);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 395);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 399);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 403);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 404);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1652, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1653, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1653, 396);
