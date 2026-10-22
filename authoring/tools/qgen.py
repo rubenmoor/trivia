@@ -52,7 +52,7 @@ Revising questions that are already in the pool (07, QG-13):
     qgen import --run <run> --batch <batch> [--assign-unbatched]
     qgen rate | factcheck | revise | apply --run <run>
 """
-import argparse, atexit, concurrent.futures, contextlib, datetime, difflib, hashlib, json, os, random, re, subprocess, sys, threading, time, unicodedata, urllib.parse
+import argparse, atexit, concurrent.futures, contextlib, datetime, difflib, fcntl, hashlib, json, os, random, re, subprocess, sys, threading, time, unicodedata, urllib.parse
 from pathlib import Path
 from collections import Counter
 
@@ -3838,6 +3838,20 @@ def run_steps(steps, again, run=None, validate=True):
     return t0
 
 
+_run_lock = None
+
+
+def lock_run(d):
+    """Hold d/run.lock until the process ends; the OS frees it on a crash. Exits if another qgen holds it."""
+    global _run_lock
+    d.mkdir(parents=True, exist_ok=True)
+    _run_lock = open(d / "run.lock", "w", encoding="utf-8")
+    try:
+        fcntl.flock(_run_lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        sys.exit(f"{d.name} is in use by another qgen process")
+
+
 def cmd_batch(args):
     """The whole pipeline in a fixed order (D-36). Rerunning it continues where it stopped."""
     if args.translate:
@@ -3849,6 +3863,7 @@ def cmd_batch(args):
     else:
         run, resuming = next_batch()
     d = WORK / run
+    lock_run(d)
     if resuming:
         open_bundle = load_json(d / "run.json").get("bundle", "base")
         if open_bundle != args.bundle:
@@ -4019,6 +4034,8 @@ def cmd_translate_batch(args):
     else:
         run, resuming = next_translate_run(locale)
     d = WORK / run
+    if not args.dry_run:
+        lock_run(d)
     again = f"qgen batch --translate {locale}" + (f" --bundle {bundle}" if bundle != "base" else "")
     if resuming:
         if run_locale(d) != locale:
