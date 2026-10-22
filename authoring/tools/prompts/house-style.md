@@ -104,7 +104,7 @@ Anchors for 9–15, confirmed by the developer:
 - 15: tempura came to Japan about 450 years ago from which European country? → Portugal
 
 ## Description
-Every question has a `description`: one full, humorous sentence in the question's language, shown *before* the question, instead of the category, in the style of "You Don't Know Jack". It relates to the question's content, can be absurd, and must not give the answer away or rule out options (e.g. don't say "a volcano" when only two options are volcanoes). Examples from the pool, in English:
+Every question has a `description`: one full, humorous sentence in the question's language, shown *before* the question, instead of the category, in the style of "You Don't Know Jack". It relates to the question's content, can be absurd, and must not give the answer away or rule out options (e.g. don't say "a volcano" when only two options are volcanoes). It also must not state the answer's defining trait or the clue that rules out wrong options: test it against the four options alone, before any hint (a crab question must not say "always goes sideways"; a question about the first call to prayer must not say "the original alarm clock"). Playing on the topic's theme without naming its trait is fine. Examples from the pool, in English:
 - Coffee: "Parents don't start in the morning until you fill them up with this fuel."
 - Capybara: "A mouse that went a little overboard at lunch."
 - Light bulb: "An idea so good it's even shaped like one."
