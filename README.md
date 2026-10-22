@@ -27,6 +27,7 @@ git clone https://github.com/rubenmoor/trivia.git && cd trivia
 direnv allow             # once; the shell then loads whenever you cd in (without direnv: nix develop)
 npm install
 npm run build            # builds both web clients: the game and the authoring pages
+claude plugin marketplace add DietrichGebert/ponytail   # once; Ponytail for Claude Code and pm workers (.claude/settings.json)
 ```
 
 Without Nix, Python 3 and Node 22 are enough to play: run `python3 app/server/main.py` instead of `trivia`, and `python3 authoring/server/main.py` instead of `trivia-authoring`.

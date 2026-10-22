@@ -16,6 +16,7 @@ What the top-level `.md` files and directories are for (decision 196). It names 
 - `modding/`: modding guide and player kit, shipped in the install folder
 - `plans/`: plans, decisions, open questions; start at [`plans/README.md`](plans/README.md)
 - `report-server/`: question report and telemetry server (Cloudflare Worker), not shipped
+- `.claude/`: Claude Code project settings (Ponytail plugin)
 - Gitignored:
   - `media/`: media cache
   - `state/`: saves and local authoring state

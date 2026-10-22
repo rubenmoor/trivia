@@ -7,7 +7,7 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 - Start: `pm status`, `pm show <task>`.
 - Before a choice: `pm decision list --answered --grep <word>`; answers are binding.
 - Question only the human can answer: `pm decision add`, don't guess. Own lasting choice: `pm decision record`.
-- Follow-up work: `pm task add`.
+- Follow-up work: `pm task add`, never a `shortcut:` or TODO comment in code.
 - Cite milestones, plans, tasks by id and subject, in backticks: `task 437: Translation prompts and market per locale`.
 
 ## Outside pm workers
@@ -23,13 +23,13 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 - Before linking a new work tree: move its own `work/` runs into the main checkout's `work/`
 
 ## Rules
+- Ponytail plugin on (`.claude/settings.json`, level `lite`): it decides on tests; AGENTS.md wins everywhere else, e.g. deferred work and known limits go to `pm task add`, never `shortcut:` comments.
 - Push directly to `main`. No feature branches or pull requests.
 - Human review work (`trivia-authoring` reviews, spot checks, `qgen health ack`, the developer's hand edits to the pool): always in `../trivia-review`, then merge into `main` (README "Review in a separate worktree"); never in the main checkout, where `pm run` moves unstaged changes to a `pm/task-…-left` branch.
 - CI is local, no GitHub Actions (D-73): before every commit `npm run check`, `npm test`, `npm run build`, `qgen validate` and the task's own check pass.
 - Use comments sparingly and keep them ultra-short.
 - Import, don't copy (decision 199): before writing a helper, constant, type or CSS block, `rg` for an existing one and import it (`authoring/` may import from `app/`); where importing is impossible (Python ↔ TS, `app/desktop` `.mjs` ↔ client TS, `report-server/`), a comment names the source.
 - After moving, renaming or deleting a file, function, constant or decided behaviour, `rg` its old name or path over comments and `.md` files; fix every hit in the same commit (decision 200).
-- Don't write tests by default. Keep only the few, if any, that stay useful long-term; don't verify too much either, use throw-away scripts to verify genuinely complex issues only.
 - Style of `.md` files: bullet points, ultra-concise, no full sentences needed. Exception: an intro paragraph in full sentences at the top of the document and under each top-level heading.
 - Game is muted under `PM_WORKER`; outside pm, launch with `TRIVIA_MUTE=1` unless the work is about sound; `TRIVIA_SOUND=1` for sound checks.
 - Stop background processes by PID (`kill $!`), never `pkill -f`: the pattern can match your own `claude` process.
