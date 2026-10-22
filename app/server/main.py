@@ -23,6 +23,8 @@ API:
     POST /api/save/backup?kind=corrupt|newer      moves game.json to state/backup/game-<kind>-<stamp>.json
                                                    (decision 98, as the desktop): {"path": <absolute path>};
                                                    404 when there is no file, 400 "bad_request" for another kind
+PUT and POST with an Origin header other than http://<Host> (a cross-site page): 403 {"error": "forbidden"};
+requests without Origin keep working.
 Any other /api/ path or POST: 404 {"error": "not_found"}; other methods: 501 (http.server).
 Files are streamed; a single Range gets 206 (video seeking).
 """
@@ -62,7 +64,16 @@ class Handler(BaseHandler):
             return self.send_media(parse_qs(url.query).get("url", [""])[0])
         return self.send_static(url.path)
 
+    def cross_site(self):
+        origin = self.headers.get("Origin")
+        if origin is None or origin == f"http://{self.headers.get('Host')}":
+            return False
+        self.send_json(403, {"error": "forbidden", "message": "cross-site request refused"})
+        return True
+
     def do_POST(self):
+        if self.cross_site():
+            return
         url = urlparse(self.path)
         if url.path != "/api/save/backup":
             return self.send_json(404, NOT_FOUND)
@@ -77,6 +88,8 @@ class Handler(BaseHandler):
         return self.send_json(200, {"path": path})
 
     def do_PUT(self):
+        if self.cross_site():
+            return
         if urlparse(self.path).path != "/api/save":
             return self.send_json(404, NOT_FOUND)
         try:
