@@ -41772,6 +41772,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Prompt changes are the developer''s (RUNBOOK): draft the wording, show it in a pm decision (`pm decision add`), apply after the answer; make this task pending on it.
 - Subject to `task 1251: Audit: hint giveaways are minor unless they name the answer (QC batch-8 120 D)`: don''t contradict it; hints naming the answer stay the major case.
 - Done when: the answered wording is in both prompts, `qgen validate` passes; `rg` the old wording over comments and `.md` files.', '2026-10-22T04:54:47Z', NULL, 1580, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1683, NULL, 'Game server: refuse cross-site save requests', 'exec', 'open', NULL, NULL, 'Audit finding 1. Any web page open in the same browser can send a plain cross-site `POST http://127.0.0.1:8000/api/save/backup?kind=corrupt` (a "simple request", sent without a CORS preflight). It moves `state/game.json` into `backup/`, and the family''s next load starts fresh.
+
+- `app/server/main.py` `Handler.do_POST` and `do_PUT`: refuse with 403 `{"error": "forbidden"}` when an `Origin` header is present and isn''t `http://<Host header>`; requests without `Origin` (same-origin GET, curl) keep working
+- `PUT /api/save` is already preflighted (no OPTIONS handler → 501); the check also covers it
+- Desktop build unaffected (no HTTP server)
+- Update the API block of the `main.py` docstring
+- Done: a `curl -X POST -H ''Origin: http://evil.example'' …/api/save/backup?kind=corrupt` gets 403 and the save stays put; the game in the browser still saves and backs up', '2026-10-22T20:59:16Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -47572,6 +47579,92 @@ See `qgen report --batches` or authoring/reports/batches.md. The developer looks
 
 (no claude calls in this run: the stop came before any step)', 'The question generator refuses to start a new batch because the previous batch scored below the quality thresholds on several measures. Someone has to look at the results and either acknowledge them, so generation can continue, or decide what to change first. Acknowledging lets the next batch run; otherwise generation stays stopped.', NULL, NULL, '2026-10-22T05:11:13Z', NULL, 1680, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (409, 'Spot check batch-12 done?', 'pending', '["Done: agreement ≥ 90 %", "Done: agreement below 90 %"]', 'Colombia batch-12 (colombia bundle, Colombian Spanish). Open http://127.0.0.1:8001/review?batch=batch-12&sample=1 (run trivia-authoring), judge the 30 sampled questions blind, and answer with the agreement (≥ 90 % is the bar, decision 15). Batch numbers: approved 239, needs_work 14, dropped by pipeline 85, $69.26 at list price (about $0.29 per approved). Not to be answered by an LLM.', 'A new batch of 253 quiz questions about Colombia was written and 239 passed the automatic checks. Before they count as good, someone who speaks Colombian Spanish natively has to read a sample of 30 and say whether they hold up. The answer decides whether the batch is accepted or needs changes.', NULL, NULL, '2026-10-22T05:13:05Z', NULL, 1296, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (410, 'geography taxonomy: categories and subcategories', 'pending', '["Apply as proposed (with the hand edits listed)", "Apply with changes (name them: merges, drops, scopes)", "Redo the proposal (say what to change)"]', 'Bundle `geography` (Geography questions bundle, `kind: theme`, `languages: ["en"]`, target 2000 = 40 per subcategory at 50; `task 1644: Create the five topic bundles`). Names and description per `decision 369: Topic bundles: names, descriptions and rules`.
+
+Rule (`app/data/bundles.json`): present-day places: countries, cities, maps, flags, borders, landforms, waters, climate zones, more and deeper than base at every difficulty; historical borders, empires and old place names are `history`''s; geology, weather physics and ecology `stem`''s; one country''s detail its players alone know stays in that country''s regional bundle.
+
+No voice: base''s voice holds (`plan 184: Pipeline for topic bundles`).
+
+Proposal (`qgen taxonomy --bundle geography`, theme prompt of `decision 370: Theme taxonomy prompt: apply?`; opus 1 call, $0.45): 9 categories (7 `base_extends`, 2 `new`: `maps-and-borders`, `people-and-places`), 50 subcategories, each with `base_related` (base subcategories it goes beyond; drafting keeps off their questions, `decision 350: Overlap rate in drafting: which changes?`). es/de names drafted on apply. Full proposal with scopes, reasons and samples (`known_at`): `work/taxonomy/geography/proposal.md` (before the hand edits); edited `proposal.json` (`proposal.orig.json` beside it is the unedited one).
+
+Checks and hand edits:
+- Base overlap: base''s `world-geography` has 8 subcategories, 108 of 202 approved in en (`continents` 16, `countries` 22, `capital-cities` 31, `flags` 18, `rivers` 20, `mountains` 28, `deserts` 24, `islands` 21), plus `planet-earth`''s `the-sea`, `oceans`, `volcanoes`, `natures-records`, `weather-and-climate`; base asks the famous core (best-known countries, capitals, flags, rivers, peaks), the proposal splits it by region and goes to every country, capital, range, river, sea and island. Hand edit: the 12 subcategories without a related base subcategory get the nearest base one (`states-and-provinces`, `country-codes`, `enclaves-and-odd-borders`, `population-records`, `demonyms`, `place-name-meanings` → `countries`; `megacities`, `city-nicknames` → `capital-cities`; `national-emblems` → `flags`; `time-zones` → `planet-earth`; `map-reading` → `continents`; `peninsulas-and-capes` → `the-sea`). All `base_related` slugs exist.
+- Slugs: unique; none equals a base slug. Hand edit: `national-symbols` → `national-emblems` (`usa`, `spain`, `mexico`, `colombia` have `national-symbols`), `national-parks` → `world-national-parks` (`usa` has `national-parks`).
+- Regional bundles (`usa`, `uk`, `germany`, `spain`, `mexico`, `colombia` each have their own geography and symbols): drafting''s overlap wiring only sees base, so the boundary rests on the rule and scopes; hand edit: `states-and-provinces`, `national-emblems`, `world-national-parks`, `city-nicknames`, `famous-neighbourhoods` say "one country''s detail its players alone know stays in that country''s regional bundle".
+- `stem` (applied, `decision 395: stem taxonomy: categories and subcategories`; `plate-tectonics`, `weather-science`, `climate-and-atmosphere`, `ocean-science`, `ecosystems-and-food-webs`, `conservation`): the proposal''s scopes already leave eruption science, how weather works and desert ecology to `stem`; hand edits: `forests-and-grasslands` leaves ecosystems and ecology to `stem`, `world-national-parks` conservation science.
+- `history` (applied, `decision 403: history taxonomy: categories and subcategories`; `old-place-names`, `vanished-countries`, `maps-borders-and-treaties`, `travellers-and-expeditions`): `place-name-meanings` already leaves former names to `history`; hand edits: `borders-and-neighbours` and `enclaves-and-odd-borders` are today''s borders only, `map-reading` leaves the history of mapmaking, `polar-regions` polar expeditions to `history`.
+- `movies` (applied, `decision 404: movies taxonomy: categories and subcategories`; `filming-locations` tests the screen link): hand edit: `natural-wonders` says a place asked for a film shot there is `movies`''.
+- `sports` (applied, `decision 399: sports taxonomy: categories and subcategories`): no overlap; `country-codes` asks Olympic codes as country codes, not the Games.
+- Kids level (lowest sample `known_at`): 25 of 50 at ≤ 4 (Madagascar, Italy''s boot shape, Japan''s red circle, the Equator, a globe, Niagara Falls, the South Pole, rainforest …), 20 at 5–6, 5 at 7–8 (`capitals-of-the-americas`, `port-cities`, `high-peaks`, `plateaus-passes-and-valleys`, `rivers-of-africa-asia-and-oceania`), samples up to `known_at` 14: every difficulty has subcategories to draw from.
+- Size: 50, as planned.
+
+- `countries-by-region` Countries by region (7, base_extends)
+  - `countries-of-africa` Countries of Africa: `countries`, `continents`
+  - `countries-of-asia` Countries of Asia: `countries`, `continents`
+  - `countries-of-europe` Countries of Europe: `countries`, `continents`
+  - `countries-of-the-americas` Countries of the Americas: `countries`, `continents`
+  - `oceania-and-the-pacific` Oceania and the Pacific: `countries`, `continents`
+  - `microstates-and-territories` Microstates and territories: `countries`
+  - `states-and-provinces` States and provinces: `countries`
+- `capitals-and-cities` Capitals and cities (8, base_extends)
+  - `capitals-of-africa` Capitals of Africa: `capital-cities`
+  - `capitals-of-asia-and-oceania` Capitals of Asia and Oceania: `capital-cities`
+  - `capitals-of-europe` Capitals of Europe: `capital-cities`
+  - `capitals-of-the-americas` Capitals of the Americas: `capital-cities`
+  - `megacities` Megacities: `capital-cities`
+  - `city-nicknames` City nicknames: `capital-cities`
+  - `port-cities` Port cities: `the-sea`
+  - `famous-neighbourhoods` Famous neighbourhoods: `famous-landmarks`
+- `flags-and-symbols` Flags and symbols (5, base_extends)
+  - `flag-designs` Flag designs: `flags`
+  - `lookalike-flags` Lookalike flags: `flags`
+  - `regional-flags` Regional flags: `flags`
+  - `national-emblems` National emblems: `flags`
+  - `country-codes` Country codes: `countries`
+- `maps-and-borders` Maps and borders (6, new)
+  - `borders-and-neighbours` Borders and neighbours: `countries`
+  - `enclaves-and-odd-borders` Enclaves and odd borders: `countries`
+  - `latitude-and-longitude` Latitude and longitude: `planet-earth`
+  - `time-zones` Time zones: `planet-earth`
+  - `map-reading` Map reading: `continents`
+  - `extreme-points` Extreme points: `natures-records`
+- `mountains-and-highlands` Mountains and highlands (4, base_extends)
+  - `mountain-ranges` Mountain ranges: `mountains`
+  - `high-peaks` High peaks: `mountains`, `natures-records`
+  - `volcanic-peaks` Volcanic peaks: `volcanoes`
+  - `plateaus-passes-and-valleys` Plateaus, passes and valleys: `mountains`
+- `rivers-and-lakes` Rivers and lakes (4, base_extends)
+  - `rivers-of-europe-and-the-americas` Rivers of Europe and the Americas: `rivers`
+  - `rivers-of-africa-asia-and-oceania` Rivers of Africa, Asia and Oceania: `rivers`
+  - `lakes` Lakes of the world: `natures-records`
+  - `waterfalls-and-canyons` Waterfalls and canyons: `natures-records`
+- `seas-coasts-and-islands` Seas, coasts and islands (5, base_extends)
+  - `seas-and-gulfs` Seas and gulfs: `oceans`, `the-sea`
+  - `straits-and-canals` Straits and canals: `the-sea`
+  - `peninsulas-and-capes` Peninsulas and capes: `the-sea`
+  - `islands-of-the-pacific-and-indian-ocean` Islands of the Pacific and Indian Ocean: `islands`
+  - `islands-of-the-atlantic-and-europe` Islands of the Atlantic and Europe: `islands`
+- `landscapes-and-climate-zones` Landscapes and climate zones (7, base_extends)
+  - `deserts-of-the-world` Deserts of the world: `deserts`
+  - `climate-zones` Climate zones: `weather-and-climate`
+  - `polar-regions` Polar regions: `continents`
+  - `forests-and-grasslands` Forests and grasslands: `amazon-plants`
+  - `natural-wonders` Natural wonders: `natural-phenomena`, `natures-records`
+  - `world-national-parks` National parks of the world: `african-wildlife`
+  - `climate-extremes-by-place` Climate extremes by place: `natures-records`, `weather-and-climate`
+- `people-and-places` People and places (4, new)
+  - `population-records` Population records: `countries`
+  - `demonyms` Demonyms: `countries`
+  - `official-languages` Official languages: `languages-of-the-world`
+  - `place-name-meanings` Place name meanings: `countries`', 'The new geography question pack needs its own list of topics, so its questions go deeper than the main pool on today''s countries, cities, flags, maps, mountains, rivers, seas and climates, without repeating what the main pool, the country packs or the other topic packs already ask. The proposal splits the pack into 9 topics and 50 subtopics, about 40 questions each at 2000 questions. The choice is to apply it as proposed, apply it with changes, or have it redone; applying fixes the pack''s structure and drafts the Spanish and German topic names.', NULL, NULL, '2026-10-22T05:19:10Z', NULL, 1649, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (411, 'Continue run batch-<n> (stem): batch-12 health stop, ack?', 'pending', '["Ack batch-12 (qgen health ack batch-12 \"<note>\") and continue", "Do not ack; investigate batch-12 first"]', '`nix develop -c qgen batch --bundle stem` exited 2 at once (after acking batch-11 per `decision 401: batch-11: health stop, ack? (blocks run batch-<n> (stem))`). Last output:
+
+```
+batch-12 fails the batch health thresholds: drop rate, merged/slots 11–15, top lens, media share, mean fun.
+See `qgen report --batches` or authoring/reports/batches.md. The developer looks at it and clears the stop with: qgen health ack batch-12 "<note>"
+```
+
+The ack of batch-11 (`authoring/data/health-acks.json`, `authoring/reports/batches.md`) is left unstaged in the work tree.', 'The question-making tool again refuses to start a new set of questions, now because the latest batch (batch-12) missed several quality thresholds: too many drafts lost, uneven coverage, a low share of questions with media, and a low average fun rating. Only the developer can clear the stop after looking at the numbers. Until then, the first batch for the science, technology, engineering and maths pack cannot start.', NULL, NULL, '2026-10-22T05:19:55Z', NULL, 1676, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -49440,6 +49533,9 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1811, 1296, '2026-10-22T05:12:47Z', '2026-10-22T05:13:11Z', 'blocked', NULL, 0, '34ccb87aa5d910a6b8edcb48579433746b23706b', 'questions', 'claude-sonnet-5-5', '9f8452d1-3746-41fb-b08a-ceb053b89e49', NULL, 5, 10, 1491, 193524, 38251, 0.2066388, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1812, 1035, '2026-10-22T05:13:11Z', '2026-10-22T05:13:25Z', 'blocked', NULL, 0, '34ccb87aa5d910a6b8edcb48579433746b23706b', 'questions', 'claude-opus-5-5', 'bcceacdd-dfed-44cf-8090-d5572c54af46', NULL, 4, 8, 883, 128453, 45692, 0.4089186, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1813, 1648, '2026-10-22T05:13:25Z', '2026-10-22T05:15:02Z', 'done', NULL, 0, '34ccb87aa5d910a6b8edcb48579433746b23706b', 'questions', 'claude-opus-5-5', '9d8059c2-ef6a-4fc4-bc62-89a523a6da18', NULL, 11, 22, 2713, 432190, 36244, 0.430738, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1814, 1649, '2026-10-22T05:15:02Z', '2026-10-22T05:19:25Z', 'blocked', NULL, 0, '6cb48a0c5b676a2d4f46659f3707d5b42b23d986', 'questions', 'claude-opus-5-5', '9d8059c2-ef6a-4fc4-bc62-89a523a6da18', 1813, 14, 28, 9097, 940452, 30499, 1.0448724, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1815, 1676, '2026-10-22T05:19:26Z', '2026-10-22T05:19:59Z', 'blocked', 'left 2 files unstaged, stashed as 86890277 for the task''s next run', 0, '6cb48a0c5b676a2d4f46659f3707d5b42b23d986', 'questions', 'claude-sonnet-5-5', '7ee15e57-f7f4-4842-bd07-e76336e3fc99', NULL, 6, 12, 1742, 200890, 30775, 0.180722, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1816, 1677, '2026-10-22T05:19:59Z', '2026-10-22T05:20:16Z', 'blocked', NULL, 0, '6cb48a0c5b676a2d4f46659f3707d5b42b23d986', 'questions', 'claude-sonnet-5-5', '44e2ab90-52f4-4a5e-ad8e-a1691fbf574f', NULL, 6, 14, 1161, 223135, 35392, 0.197833, 494342);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -50070,6 +50166,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 395);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 399);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 403);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 404);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 410);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1652, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1653, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1653, 396);
@@ -50109,11 +50206,14 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1673, 387);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1673, 388);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1673, 389);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1676, 401);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1676, 411);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1677, 401);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1677, 411);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1680, 408);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1682, 407);
 
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1649, 1648);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1677, 1676);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1681, 1680);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
