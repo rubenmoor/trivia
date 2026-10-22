@@ -1,0 +1,177 @@
+{
+  "about": "A theme bundle's subcategory → the base subcategories it goes beyond (plan 184); its concept lists and drafts keep away from their questions. Authoring only, never exported.",
+  "subcategories": {
+    "silent-cinema": [
+      "film"
+    ],
+    "golden-age-hollywood": [
+      "film"
+    ],
+    "new-hollywood": [
+      "film"
+    ],
+    "eighties-and-nineties-hits": [
+      "film"
+    ],
+    "european-cinema": [
+      "film"
+    ],
+    "east-asian-cinema": [
+      "film"
+    ],
+    "indian-cinema": [
+      "film"
+    ],
+    "spanish-and-latin-american-cinema": [
+      "telenovelas-and-soaps"
+    ],
+    "action-and-martial-arts": [
+      "film"
+    ],
+    "comedy-and-romcoms": [
+      "film"
+    ],
+    "westerns": [
+      "film"
+    ],
+    "crime-and-thrillers": [
+      "crime-fiction"
+    ],
+    "movie-musicals-and-dance": [
+      "musicals"
+    ],
+    "sci-fi-films": [
+      "science-fiction"
+    ],
+    "horror-and-monsters": [
+      "horror-films",
+      "famous-villains"
+    ],
+    "fantasy-adventure-films": [
+      "fantasy"
+    ],
+    "star-wars": [
+      "science-fiction"
+    ],
+    "star-trek": [
+      "science-fiction"
+    ],
+    "marvel-cinematic-universe": [
+      "marvel-superheroes",
+      "famous-villains"
+    ],
+    "dc-on-screen": [
+      "dc-superheroes",
+      "famous-villains"
+    ],
+    "wizarding-world": [
+      "harry-potter"
+    ],
+    "middle-earth-on-screen": [
+      "the-lord-of-the-rings"
+    ],
+    "bond-deep-cuts": [
+      "james-bond"
+    ],
+    "blockbuster-sagas": [
+      "film",
+      "science-fiction"
+    ],
+    "disney-animation-deep-cuts": [
+      "disney-films"
+    ],
+    "pixar-deep-cuts": [
+      "pixar-films"
+    ],
+    "other-animation-studios": [
+      "cartoons"
+    ],
+    "ghibli-and-anime-films": [
+      "anime"
+    ],
+    "anime-series": [
+      "anime"
+    ],
+    "classic-cartoons": [
+      "cartoons"
+    ],
+    "kids-tv-cartoons": [
+      "cartoons"
+    ],
+    "adult-animation": [
+      "cartoons"
+    ],
+    "comedy-series": [
+      "tv-series"
+    ],
+    "drama-series": [
+      "tv-series"
+    ],
+    "fantasy-and-sci-fi-series": [
+      "tv-series",
+      "science-fiction",
+      "fantasy"
+    ],
+    "detective-series": [
+      "crime-fiction",
+      "tv-series"
+    ],
+    "family-and-teen-series": [
+      "tv-series"
+    ],
+    "international-series": [
+      "tv-series",
+      "telenovelas-and-soaps"
+    ],
+    "classic-directors": [
+      "film"
+    ],
+    "modern-directors": [
+      "film"
+    ],
+    "classic-film-stars": [
+      "film"
+    ],
+    "modern-film-stars": [
+      "film"
+    ],
+    "child-stars": [
+      "film",
+      "tv-series"
+    ],
+    "movie-quotes": [
+      "famous-quotes"
+    ],
+    "animal-stars": [
+      "film",
+      "tv-series"
+    ],
+    "film-scores": [
+      "classical-music"
+    ],
+    "screen-songs": [
+      "pop-music",
+      "disney-films"
+    ],
+    "oscar-records": [
+      "oscars"
+    ],
+    "festivals-and-awards": [
+      "oscars"
+    ],
+    "filmmaking": [
+      "technology"
+    ],
+    "studios-and-box-office": [
+      "famous-companies",
+      "famous-logos"
+    ],
+    "book-to-screen": [
+      "literature",
+      "childrens-books"
+    ],
+    "filming-locations": [
+      "famous-landmarks"
+    ]
+  }
+}

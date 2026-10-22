@@ -1,4 +1,113 @@
 {
   "about": "Categories of the movies bundle (D-41, D-43): structure only, keyed by English slugs unique within the bundle (decision 259); names in names.<locale>.json.",
-  "categories": []
+  "categories": [
+    {
+      "slug": "screen-history",
+      "subcategories": [
+        "silent-cinema",
+        "golden-age-hollywood",
+        "new-hollywood",
+        "eighties-and-nineties-hits"
+      ]
+    },
+    {
+      "slug": "world-cinema",
+      "subcategories": [
+        "european-cinema",
+        "east-asian-cinema",
+        "indian-cinema",
+        "spanish-and-latin-american-cinema"
+      ]
+    },
+    {
+      "slug": "film-genres",
+      "subcategories": [
+        "action-and-martial-arts",
+        "comedy-and-romcoms",
+        "westerns",
+        "crime-and-thrillers",
+        "movie-musicals-and-dance"
+      ]
+    },
+    {
+      "slug": "fantastic-cinema",
+      "subcategories": [
+        "sci-fi-films",
+        "horror-and-monsters",
+        "fantasy-adventure-films"
+      ]
+    },
+    {
+      "slug": "franchises",
+      "subcategories": [
+        "star-wars",
+        "star-trek",
+        "marvel-cinematic-universe",
+        "dc-on-screen",
+        "wizarding-world",
+        "middle-earth-on-screen",
+        "bond-deep-cuts",
+        "blockbuster-sagas"
+      ]
+    },
+    {
+      "slug": "animation",
+      "subcategories": [
+        "disney-animation-deep-cuts",
+        "pixar-deep-cuts",
+        "other-animation-studios",
+        "ghibli-and-anime-films",
+        "anime-series",
+        "classic-cartoons",
+        "kids-tv-cartoons",
+        "adult-animation"
+      ]
+    },
+    {
+      "slug": "series",
+      "subcategories": [
+        "comedy-series",
+        "drama-series",
+        "fantasy-and-sci-fi-series",
+        "detective-series",
+        "family-and-teen-series",
+        "international-series"
+      ]
+    },
+    {
+      "slug": "directors-and-stars",
+      "subcategories": [
+        "classic-directors",
+        "modern-directors",
+        "classic-film-stars",
+        "modern-film-stars",
+        "child-stars"
+      ]
+    },
+    {
+      "slug": "screen-icons",
+      "subcategories": [
+        "movie-quotes",
+        "animal-stars"
+      ]
+    },
+    {
+      "slug": "screen-music",
+      "subcategories": [
+        "film-scores",
+        "screen-songs"
+      ]
+    },
+    {
+      "slug": "awards-and-industry",
+      "subcategories": [
+        "oscar-records",
+        "festivals-and-awards",
+        "filmmaking",
+        "studios-and-box-office",
+        "book-to-screen",
+        "filming-locations"
+      ]
+    }
+  ]
 }
