@@ -66,6 +66,7 @@ export const de = {
     skipAll: "Frage sperren",
     undo: "Letzte Antwort zurücknehmen",
     fullscreen: "Vollbild",
+    windowed: "Fenstermodus",
     restart: "Zurück zum Hauptmenü",
     quit: "Spiel beenden",
     confirm: "Sicher? Nochmal drücken",

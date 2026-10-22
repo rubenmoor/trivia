@@ -269,7 +269,7 @@ Date: 2026-10-13 · Build commit: 06c39dc
 | Network off before unpacking | skipped (decision 39) | |
 | Unpack the zip, start `LivingRoomTrivia.exe` (SmartScreen «More info → Run anyway» expected: unsigned) | skipped (decision 39) | |
 | No console window | skipped (decision 39) | |
-| Starts fullscreen; F11 toggles | skipped (decision 39) | |
+| Starts fullscreen; Esc menu toggles | skipped (decision 39) | |
 | Keyboard-only game to level 3, with an image, an audio and a video question; sound plays | skipped (decision 39) | |
 | «Salir del juego», restart: the player is still there | skipped (decision 39) | |
 | Save at `%APPDATA%\trivia\save\<steamid64 or local>\game.json` | skipped (decision 39) | |
@@ -282,7 +282,7 @@ Date: 2026-10-13 · Build commit: 06c39dc
 |---|---|---|
 | Network off before unpacking | skipped (decision 39) | |
 | `tar xzf`, `cd LivingRoomTrivia-<version>-linux-x64`, `./living-room-trivia` | skipped (decision 39) | |
-| Starts fullscreen; F11 toggles | skipped (decision 39) | |
+| Starts fullscreen; Esc menu toggles | skipped (decision 39) | |
 | Keyboard-only game to level 3, with an image, an audio and a video question; sound plays | skipped (decision 39) | |
 | «Salir del juego», restart: the player is still there | skipped (decision 39) | |
 | Save at `~/.config/trivia/save/<steamid64 or local>/game.json` | skipped (decision 39) | |

@@ -66,6 +66,7 @@ export const en = {
     skipAll: "Block question",
     undo: "Undo last answer",
     fullscreen: "Full screen",
+    windowed: "Windowed mode",
     restart: "Back to main menu",
     quit: "Quit game",
     confirm: "Sure? Press again",

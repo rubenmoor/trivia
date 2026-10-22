@@ -146,9 +146,20 @@
   /** «Ajustes de la partida» is open over the menu. */
   let settingsOpen = $state(false);
   let goToOpen = $state(false);
-  function fullscreen() {
-    if (desktop) desktop.toggleFullscreen();
-    else if (document.fullscreenElement) document.exitFullscreen();
+  /** The shell's (or the browser's) full-screen state; the active mode's row is disabled. */
+  let full = $state(!desktop && !!document.fullscreenElement);
+  $effect(() => {
+    if (desktop) {
+      desktop.isFullscreen().then((yes) => (full = yes));
+      return desktop.onFullscreen((yes) => (full = yes));
+    }
+    const sync = () => (full = !!document.fullscreenElement);
+    document.addEventListener("fullscreenchange", sync);
+    return () => document.removeEventListener("fullscreenchange", sync);
+  });
+  function setFullscreen(yes: boolean) {
+    if (desktop) desktop.setFullscreen(yes);
+    else if (!yes) document.exitFullscreen().catch(() => {});
     else document.documentElement.requestFullscreen().catch(() => {});
     onclose();
   }
@@ -258,7 +269,8 @@
     { label: t("overlay.continue"), enabled: true, run: onclose, col: 0 },
     ...(onflags ? [{ label: t("flag.list"), enabled: true, run: onflags, col: 0 as const }] : []),
     ...(devMode && questionOn ? [{ label: t("overlay.goTo"), enabled: canSkip, run: () => (goToOpen = true), col: 0 as const }] : []),
-    { label: t("overlay.fullscreen"), enabled: true, run: fullscreen, col: 0 },
+    { label: t("overlay.fullscreen"), enabled: !full, run: () => setFullscreen(true), col: 0 },
+    { label: t("overlay.windowed"), enabled: full, run: () => setFullscreen(false), col: 0 },
     { label: t("credits.open"), enabled: true, run: () => (creditsOpen = true), col: 0 },
     ...(onmods ? [{ label: t("mods.open"), enabled: true, run: onmods, col: 0 as const }] : []),
     { label: t("overlay.restart"), enabled: canRestart, run: onrestart, confirm: true, col: 0 },

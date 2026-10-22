@@ -12,7 +12,7 @@ Fixed terms; use them as written, never a synonym.
 - Age group: «Age» (label), «age group»
 - Difficulty: «Difficulty», «From» / «To», «Custom»
 - Flag: «flag» / «Flag for review», «Flag this question», «Flagged questions», «report» (gallery review 2026-10-14; never «mark»)
-- Esc menu: «Paused»; «Back to main menu» (`overlay.restart`, to the start screen); «Quit game» (`overlay.quit`, desktop only); «Game settings» (`overlay.settings`, gamemaster dialog: difficulty, bundles, answers; task 1127)
+- Esc menu: «Paused»; «Back to main menu» (`overlay.restart`, to the start screen); «Quit game» (`overlay.quit`, desktop only); «Game settings» (`overlay.settings`, gamemaster dialog: difficulty, bundles, answers; task 1127); «Full screen» / «Windowed mode» (`overlay.fullscreen` / `overlay.windowed`, the active one disabled)
 - Start screen: «main menu» when named
 - Steam terms as Steam writes them: «Steam achievements» (never bare «achievements»), «Steam Cloud», «Steam Deck», «Steam Workshop»
 - Devices: «controller» (pad), «Keyboard and mouse»

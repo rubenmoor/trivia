@@ -90,7 +90,9 @@ STUB = """
   const stub = {
     desktop: true,
     muted: true,
-    toggleFullscreen: no(undefined),
+    isFullscreen: no(false),
+    setFullscreen: no(undefined),
+    onFullscreen: () => () => {},
     quit: no(undefined),
     loadSave: no(null),
     writeSave: no(undefined),

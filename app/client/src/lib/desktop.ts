@@ -4,7 +4,10 @@ import type { PadStyle } from "./gamepad.ts";
 
 export interface DesktopBridge {
   readonly desktop: true;
-  toggleFullscreen(): Promise<void>;
+  isFullscreen(): Promise<boolean>;
+  setFullscreen(yes: boolean): Promise<void>;
+  /** Fires on every change (task 1679); returns the unsubscribe. */
+  onFullscreen(cb: (yes: boolean) => void): () => void;
   quit(): Promise<void>;
   /** The save file's text, null when there is none (plan 55, SW-3). */
   loadSave(): Promise<string | null>;

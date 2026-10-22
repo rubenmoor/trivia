@@ -10,9 +10,15 @@
   window.triviaShell = {
     desktop: true,
     devServer: true,
-    toggleFullscreen: async () => {
-      if (document.fullscreenElement) await document.exitFullscreen();
+    isFullscreen: async () => !!document.fullscreenElement,
+    setFullscreen: async (yes) => {
+      if (!yes) await document.exitFullscreen().catch(() => {});
       else await document.documentElement.requestFullscreen().catch(() => {});
+    },
+    onFullscreen: (cb) => {
+      const on = () => cb(!!document.fullscreenElement);
+      document.addEventListener("fullscreenchange", on);
+      return () => document.removeEventListener("fullscreenchange", on);
     },
     quit: no(undefined),
     loadSave: async () => {

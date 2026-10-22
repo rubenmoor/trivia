@@ -3,7 +3,13 @@ const { contextBridge, ipcRenderer } = require("electron");
 
 contextBridge.exposeInMainWorld("triviaShell", {
   desktop: true,
-  toggleFullscreen: () => ipcRenderer.invoke("trivia:toggle-fullscreen"),
+  isFullscreen: () => ipcRenderer.invoke("trivia:fullscreen"),
+  setFullscreen: (yes) => ipcRenderer.invoke("trivia:set-fullscreen", yes),
+  onFullscreen: (cb) => {
+    const on = (_e, yes) => cb(yes === true);
+    ipcRenderer.on("trivia:fullscreen", on);
+    return () => ipcRenderer.removeListener("trivia:fullscreen", on);
+  },
   quit: () => ipcRenderer.invoke("trivia:quit"),
   loadSave: () => ipcRenderer.invoke("save:load"),
   writeSave: (text) => ipcRenderer.invoke("save:write", text),

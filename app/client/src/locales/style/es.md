@@ -12,7 +12,7 @@ Fixed terms; use them as written, never a synonym.
 - Age group: «Edad» (label), «grupo de edad»
 - Difficulty: «Dificultad», «Desde» / «Hasta», «A medida»
 - Flag: «marcar» / «Marcar para revisar», «Preguntas marcadas», «reporte»
-- Esc menu: «Pausa»; «Volver al menú principal» (`overlay.restart`, to the start screen); «Salir del juego» (`overlay.quit`, desktop only); «Ajustes de la partida» (`overlay.settings`, gamemaster dialog: difficulty, bundles, answers; task 1127)
+- Esc menu: «Pausa»; «Volver al menú principal» (`overlay.restart`, to the start screen); «Salir del juego» (`overlay.quit`, desktop only); «Ajustes de la partida» (`overlay.settings`, gamemaster dialog: difficulty, bundles, answers; task 1127); «Pantalla completa» / «Modo ventana» (`overlay.fullscreen` / `overlay.windowed`, el activo desactivado)
 - Start screen: «menú principal» when named
 - Steam terms as Steam writes them in Spanish: «logros de Steam» (never bare «logros»), «Steam Cloud», «Steam Deck», «Workshop de Steam»
 - Media: «video» (not «vídeo»), «audio», «imagen»

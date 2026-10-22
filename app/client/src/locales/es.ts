@@ -70,6 +70,7 @@ const es = {
     skipAll: "Bloquear pregunta",
     undo: "Deshacer última respuesta",
     fullscreen: "Pantalla completa",
+    windowed: "Modo ventana",
     restart: "Volver al menú principal",
     quit: "Salir del juego",
     confirm: "¿Seguro? Presiona otra vez",

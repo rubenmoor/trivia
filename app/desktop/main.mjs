@@ -1,5 +1,5 @@
 // Electron shell (plan 54, D-63): plays app/client/dist over app://trivia/, no Python, no network.
-import { app, BrowserWindow, dialog, ipcMain, Menu, protocol, session } from "electron";
+import { app, BrowserWindow, dialog, ipcMain, Menu, protocol, screen, session } from "electron";
 import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
@@ -32,6 +32,7 @@ import {
 } from "./report.mjs";
 import { makeResolver } from "./resolve.mjs";
 import { makeSaveFile } from "./save.mjs";
+import { loadWindowState, MIN_SIZE, startBounds, trackWindow } from "./window-state.mjs";
 import { makeTelemetry } from "./telemetry.mjs";
 import { fakeUgc, workshopItems } from "./workshop.mjs";
 
@@ -735,8 +736,13 @@ async function start() {
   // No dictionary download (task 1003).
   ses.setSpellCheckerLanguages([]);
 
+  const winFile = path.join(app.getPath("userData"), "window.json");
+  const winState = loadWindowState(winFile);
   win = new BrowserWindow({
-    fullscreen: true,
+    ...startBounds(winState, screen),
+    minWidth: MIN_SIZE.width,
+    minHeight: MIN_SIZE.height,
+    fullscreen: args.rpProbe || winState.fullscreen, // the probe forces fullscreen and keeps no state
     show: false,
     backgroundColor: BACKGROUND,
     title: windowTitle(),
@@ -762,6 +768,12 @@ async function start() {
       overlay = steam.addElectronSteamOverlay(win, { title: windowTitle() });
     });
   win.on("closed", () => (win = null));
+  if (!args.rpProbe) {
+    const tracker = trackWindow(win, winState, winFile);
+    app.on("before-quit", () => tracker.flush());
+  }
+  for (const e of ["enter-full-screen", "leave-full-screen"])
+    win.on(e, () => win.webContents.send("trivia:fullscreen", win.isFullScreen()));
 
   const wc = win.webContents;
   const muted = muteReason(process.env);
@@ -773,12 +785,6 @@ async function start() {
     if (!url.startsWith(ORIGIN)) event.preventDefault();
   });
   wc.setWindowOpenHandler(() => ({ action: "deny" }));
-  wc.on("before-input-event", (event, input) => {
-    if (input.type === "keyDown" && input.key === "F11" && !input.isAutoRepeat && !args.rpProbe) {
-      event.preventDefault();
-      win.setFullScreen(!win.isFullScreen());
-    }
-  });
 
   if (args.rpProbe) rpProbeWindow(wc);
   bridge();
@@ -1142,7 +1148,8 @@ function bridge() {
       if (!event.senderFrame?.url.startsWith(ORIGIN)) throw new Error("forbidden");
       return fn(...args);
     });
-  handle("trivia:toggle-fullscreen", () => win?.setFullScreen(!win.isFullScreen()));
+  handle("trivia:fullscreen", () => win?.isFullScreen() ?? false);
+  handle("trivia:set-fullscreen", (yes) => win?.setFullScreen(yes === true));
   handle("trivia:quit", () => app.quit());
   // Rejections carry the code as the message: bad_save, save_locked, no_user (decision 111: memory-only).
   const refused = () => Promise.reject(new Error("no_user"));

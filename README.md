@@ -41,7 +41,7 @@ trivia                   # http://127.0.0.1:8000/   (--port, --host)
 
 Open the page on the TV's browser and go fullscreen. Pick or type a player name, then the mode, the age group and the bundles, and play.
 
-- `Esc` (or the menu button) opens the admin menu: skip, undo, restart, fullscreen, volume, joker budget, «Ajustes de la partida» (difficulty, bundles). It links to the review tool and stats while the authoring server runs.
+- `Esc` (or the menu button) opens the admin menu: skip, undo, restart, full screen and windowed mode, volume, joker budget, «Ajustes de la partida» (difficulty, bundles). It links to the review tool and stats while the authoring server runs.
 - `M` (or the faint flag next to the menu button) flags the question for review: a dialog with an optional note, `Enter` flags, `Esc` cancels; on a flagged question it edits the note or unflags. The next start of `trivia-authoring` marks it «needs work» with the note; the menu's «Preguntas marcadas» lists the flags with «Copiar» for players without authoring tools.
 - Game saves, seen counters (which questions a player has already seen) and flags live in `state/game.json`. Delete it to reset everything. An old `state/game.sqlite` + `flags.json` is migrated into it once at start; both stay as backups. A broken or newer `game.json` moves to `state/backup/` and the game starts fresh with a notice naming the backup.
 - The game loads the pool once per page: reload the page (F5) after `qgen export` or a review session.
