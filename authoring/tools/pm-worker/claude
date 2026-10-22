@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """pm's worker command (project-manager.toml): the real `claude`, with Ponytail at `lite` for programming tasks
-(kind work, work tree app); everywhere else Ponytail stays off (.claude/settings.json). Named `claude` so pm still
+(kind work, any work tree); everywhere else Ponytail stays off (.claude/settings.json). Named `claude` so pm still
 picks models and reads usage."""
 import json
 import os
@@ -14,7 +14,7 @@ path = os.pathsep.join(p for p in os.environ.get("PATH", "").split(os.pathsep) i
 real = shutil.which("claude", path=path) or sys.exit("pm-worker: no claude on PATH")
 prompt = sys.stdin.read()
 head = re.search(rf"^# Task {os.environ.get('PM_TASK', '')}: .*$", prompt, re.M)
-coding = bool(head and ", kind work," in head[0] and ", work tree app," in head[0])
+coding = bool(head and ", kind work," in head[0])
 args = sys.argv[1:]
 if coding and "--settings" in args:
     i = args.index("--settings") + 1
