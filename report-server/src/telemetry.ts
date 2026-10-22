@@ -1,17 +1,10 @@
 // Opt-in telemetry (plan 105, decision 118): the shell posts one session, authoring pulls and acks.
 // Never logs bodies, tickets, SteamIDs, hashes, install or session ids.
 import type { Env } from "../env";
-import { day, error, json, rateLimited, readBody, rejected, ticketFailed } from "./http";
+import { bump, day, error, json, rateLimited, readBody, rejected, ticketFailed } from "./http";
 import { checkTicket, devTickets, userHash } from "./steam";
 import { checkLimit } from "./validate";
 import { checkTelemetry, checkTelemetryAck, MAX_TELEMETRY_BODY, TELEMETRY_PAGE } from "./validate-telemetry";
-
-const BUMP = "INSERT INTO telemetry_rate (user_hash, day, count) VALUES (?, ?, 1) ON CONFLICT (user_hash, day) DO UPDATE SET count = count + 1";
-
-async function count(env: Env, user: string, today: string): Promise<number> {
-  const row = await env.DB.prepare("SELECT count FROM telemetry_rate WHERE user_hash = ? AND day = ?").bind(user, today).first<{ count: number }>();
-  return row?.count ?? 0;
-}
 
 export async function postTelemetry(req: Request, env: Env, url: URL): Promise<Response> {
   if (env.TELEMETRY_OPEN === "0") return error(503, "closed");
@@ -33,18 +26,12 @@ export async function postTelemetry(req: Request, env: Env, url: URL): Promise<R
   const now = new Date();
   const today = day(now);
   const user = await userHash(env.HASH_SALT, ticket.steamid);
-  if ((await count(env, user, today)) >= Number(env.RATE_TELEMETRY_USER)) return rateLimited(now);
-  if ((await count(env, "*", today)) >= Number(env.RATE_TELEMETRY_TOTAL)) return rateLimited(now);
+  if ((await bump(env, "telemetry_rate", user, today)) > Number(env.RATE_TELEMETRY_USER)) return rateLimited(now);
+  if ((await bump(env, "telemetry_rate", "*", today)) > Number(env.RATE_TELEMETRY_TOTAL)) return rateLimited(now);
 
-  await env.DB.batch([
-    env.DB.prepare("INSERT INTO telemetry (session_id, received_day, body) VALUES (?, ?, ?) ON CONFLICT (session_id) DO NOTHING").bind(
-      s.session,
-      today,
-      JSON.stringify(s),
-    ),
-    env.DB.prepare(BUMP).bind(user, today),
-    env.DB.prepare(BUMP).bind("*", today),
-  ]);
+  await env.DB.prepare("INSERT INTO telemetry (session_id, received_day, body) VALUES (?, ?, ?) ON CONFLICT (session_id) DO NOTHING")
+    .bind(s.session, today, JSON.stringify(s))
+    .run();
   return json(201, { stored: true });
 }
 

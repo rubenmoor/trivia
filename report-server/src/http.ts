@@ -56,3 +56,13 @@ export async function authorized(req: Request, env: Env): Promise<boolean> {
   for (let i = 0; i < a.length; i++) diff |= a[i]! ^ b[i]!;
   return diff === 0;
 }
+
+/** Today's count of `user` in rate `table` after this one, atomically. */
+export async function bump(env: Env, table: "rate" | "telemetry_rate", user: string, today: string): Promise<number> {
+  const row = await env.DB.prepare(
+    `INSERT INTO ${table} (user_hash, day, count) VALUES (?, ?, 1) ON CONFLICT (user_hash, day) DO UPDATE SET count = count + 1 RETURNING count`,
+  )
+    .bind(user, today)
+    .first<{ count: number }>();
+  return row?.count ?? 0;
+}
