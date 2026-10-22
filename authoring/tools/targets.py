@@ -2,14 +2,14 @@
 import json, math
 from collections import Counter
 
-from layout import TARGETS
+from layout import BUNDLES, TARGETS
 import categories  # authoring/tools/categories.py
 import translations  # authoring/tools/translations.py (D-81)
 
 NOT_BUNDLES = {"about", "batch_health", "quality"}  # top-level keys that aren't bundles (D-55, plan 16)
 REL = "authoring/data/targets.json"  # in messages
 MIN_YIELD = 0.1  # floor of a locale's yield: a 0 % pilot asks 10× its deficit, not ∞
-REGION_TOTAL = 2000  # every regional bundle (D-99)
+BUNDLE_TOTAL = 2000  # every non-base bundle (D-99, plan 184)
 
 
 def load_all():
@@ -125,10 +125,15 @@ def locale_gap(s, lvl):
     return max(0, math.ceil(d - u * y) if s["draft"] else math.ceil(d / y) - u)
 
 
+def kind_of(bundle):
+    """The bundle's `kind` in bundles.json; unknown ids count as base's own."""
+    return next((b["kind"] for b in json.loads(BUNDLES.read_text())["bundles"] if b["id"] == bundle), "base")
+
+
 def draft_gaps(pool_questions, bundle, supply=None):
-    """What `draft` aims at (D-54): for base the largest over the question locales of locale_gap (decision 236),
-    else the bundle's own deficits (D-101); None: even weights (D-40)."""
-    if bundle != "base":
+    """What `draft` aims at (D-54): for base and a theme the largest over the question locales of locale_gap
+    (decision 236), for a region its own deficits (D-101); None: even weights (D-40)."""
+    if kind_of(bundle) not in {"base", "theme"}:
         return deficits(pool_questions, bundle)
     supply = supply or source_supply(pool_questions, bundle)
     levels = (load_targets(bundle) or {}).get("difficulty", {})
@@ -147,12 +152,12 @@ def category_shares(bundle):
 
 
 def problems(scale, bundles):
-    """Errors in targets.json: bundles known, every regional bundle has an entry (D-99),
+    """Errors in targets.json: bundles known, every non-base bundle has an entry (D-99),
     levels = scale, values ≥ 0, sum = total."""
     bundle_ids = {b["id"] for b in bundles}
     all_ = load_all()
-    out = [f"{REL}: regional bundle {b['id']!r} has no targets (D-99: {REGION_TOTAL})"
-           for b in bundles if b.get("kind") == "region" and b["id"] not in all_]
+    out = [f"{REL}: {b.get('kind')} bundle {b['id']!r} has no targets (D-99: {BUNDLE_TOTAL})"
+           for b in bundles if b.get("kind") != "base" and b["id"] not in all_]
     lo, hi = scale
     for b, t in all_.items():
         if b in NOT_BUNDLES:

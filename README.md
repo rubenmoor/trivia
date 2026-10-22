@@ -116,8 +116,8 @@ qgen health ack <batch> "<note>"  # after looking at a batch that failed the hea
 qgen rework              # every needs_work question with feedback once more: Claude fixes it, fact-checks, reviews (--batch <batch>)
 qgen audit --backlog     # audit the next 200 approved questions from before D-56 (--slice N, --dry-run)
 qgen tighten             # Claude reads the whole pool (approved too), shortens long-winded questions, fact-checks, reviews
-qgen bundle new <id> --name … --description … --kind region|theme --rule …   # an empty bundle; then fill app/data/bundles/<id>/categories.json (region: qgen taxonomy)
-qgen taxonomy --bundle <id>    # a regional bundle's categories and subcategories proposed (English slugs + en and own-language names) → work/taxonomy/<id>/proposal.md
+qgen bundle new <id> --name … --description … --kind region|theme --rule …   # an empty bundle; then fill app/data/bundles/<id>/categories.json (region, theme: qgen taxonomy)
+qgen taxonomy --bundle <id>    # a regional or theme bundle's categories and subcategories proposed (English slugs + en and own-language names; a theme's also `base_related`) → work/taxonomy/<id>/proposal.md
 qgen taxonomy --bundle <id> --apply work/taxonomy/<id>/proposal.json   # writes them (proposal edited to the developer's answer): slugs to categories.json, missing en/es/de names drafted into names.<locale>.json
 qgen remap --bundle <id> [--apply work/remap/<id>/proposal.json]   # its questions onto a new list: proposal → work/remap/<id>/proposal.md, then applied
 ```
@@ -257,7 +257,7 @@ trivia-steam stage                    # stages build/dlc/<pack>/; depot folders 
 ```
 
 Before every Steam upload, on a clean, tagged commit: `trivia-release-check` (~15 min; per-commit checks, licences, release quality bar, `nix build .#app`, both desktop builds, the report server's `/health` at the build's `reportUrl` (`--skip report` until it is set up), a smoke game in `linux-unpacked` and one with the shipped example mods, then asks the manual checklist). Exit 1 on any ✗; `--skip <step>` for a known-broken step, `--manual <file>` for answers (`<row>: y|n|note` per line). Report: `work/steam/<tag>/release-check.md`.
-The demo has its own check, `trivia-release-check --demo`, on the same tagged commit: `tag`, `checks`, `licenses`, `desktop` (`--dir --demo` build and `trivia-steam stage --demo`), `media-budget`, `credits`, `smoke` and `determinism` (two demo smoke runs whose `--trace` files must be identical; ✗ names the first difference), `multiplayer`; manual rows `offline`, `windows`, `sound`, `cloud`, `start-line`, `signoff`; report in `work/steam/<tag>/demo/release-check.{md,json}`; `--skip`, `--manual` as the full check (`trivia-steam upload --demo` comes with plan 177).
+The demo has its own check, `trivia-release-check --demo`, on the same tagged commit: `tag`, `checks`, `licenses`, `desktop` (`--dir --demo` build and `trivia-steam stage --demo`), `media-budget`, `credits`, `smoke` and `determinism` (two demo smoke runs whose `--trace` files must be identical; ✗ names the first difference), `multiplayer`, `matrix` (`smoke.mjs --demo --matrix` twice side by side: every built mode × age group to a win and a loss, traces equal; ~40 min); manual rows `offline`, `windows`, `sound`, `cloud`, `start-line`, `signoff`; report in `work/steam/<tag>/demo/release-check.{md,json}`; `--skip`, `--manual` as the full check (`trivia-steam upload --demo` comes with plan 177).
 
 Each artefact (~2.5 GB) holds the game, the data and the pool's media, and plays offline. Unpack it and start `LivingRoomTrivia.exe` (Windows; SmartScreen: «More info → Run anyway») or `./living-room-trivia` (Linux, Steam Deck). The first build downloads Electron for both platforms; later builds run offline. Outside Nix: `npm ci --prefix app/desktop && npm run dist --prefix app/desktop`.
 

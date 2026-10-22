@@ -1,13 +1,17 @@
 #!/usr/bin/env node
 // Packaged smoke game (plan 89, release check step 6): the unpacked Linux build offline, clean env, temp HOME,
 // TRIVIA_DEV_STEAM_USER=1 (decision 111: saves need a valid Steam user; the switch stands in for one).
-// Usage (dev shell): node authoring/steam/smoke.mjs [--demo] [--mods | --multiplayer] [--trace <file>] [app/desktop/release/linux-unpacked];
+// Usage (dev shell): node authoring/steam/smoke.mjs [--demo] [--mods | --multiplayer | --matrix] [--trace <file>] [app/desktop/release/linux-unpacked];
 // DEBUG=1 shows the shell's stderr
 // New player → levels 1–3 with an image, audio and video question → quit → restart resumes; no «progress needs Steam»
 // notice; then a Gamemaster-mode game, a few levels. Exit 1 names the step.
 // --demo (plan 177): the demo build (release/demo/linux-unpacked): the solo and Gamemaster games, the multiplayer sessions
 // of the built modes (BUILT_MODES) with --multiplayer; on the way the Start screen's demo line, one bundle tile and no pack,
 // no PLACEHOLDER in the visible text, every question in app/data/demo/pool.json.
+// --demo --matrix (plan 179, decision 347) instead: per single-player BUILT_MODES mode × age group (the build's age-groups.json) one
+// game on screen from Choice to a win at the last level, first card each level, Soplo, Bájale, Paso, Cambiazo and
+// Francotirador played on the way, then one to a loss (last card, a wrong answer); fresh HOME each; ✗ on a refused start
+// (supply_short, no_questions), a game that doesn't reach its end or a question outside the demo list.
 // --trace <file>: per scene the offered and shown question ids and the answer orders, as JSON (the release check compares two).
 // With packs (DLC depots, decision 66): once as built (packs offered), once without their files (not offered).
 // --mods (plan 104, task 942) instead: the shipped modding/ examples in <userData>/mods/: loaded, theme applied, player
@@ -24,7 +28,8 @@ import { cp, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { earned } from "../../app/client/src/engine/achievements.ts";
-import { BUILT_MODES, answer, claim, pick, show } from "../../app/client/src/engine/game.ts";
+import { BUILT_MODES, DEFAULT_AGE_GROUP, answer, claim, gameMode, jokersUsed, pick, show } from "../../app/client/src/engine/game.ts";
+import { LEVELS } from "../../app/client/src/engine/selection.ts";
 import { seededRng } from "../../app/client/src/engine/rng.ts";
 import { cacheName, shippedName } from "../../app/desktop/resolve.mjs";
 import { connectPipe, pageHelpers, sleep, startXvfb, visibleEl } from "../tools/cdp.mjs";
@@ -35,6 +40,8 @@ const ARGS = process.argv.slice(2);
 const MODS = ARGS.includes("--mods");
 const MULTI = ARGS.includes("--multiplayer");
 const DEMO = ARGS.includes("--demo");
+const MATRIX = ARGS.includes("--matrix");
+if (MATRIX && !DEMO) throw new Error("--matrix needs --demo");
 const TRACE = ARGS.includes("--trace") ? ARGS[ARGS.indexOf("--trace") + 1] : null;
 if (ARGS.includes("--trace") && !TRACE) throw new Error("--trace needs a file");
 const EXE = DEMO ? "living-room-trivia-demo" : "living-room-trivia";
@@ -228,6 +235,11 @@ async function main() {
     display = x.display;
     procs.push(x.proc);
     const built = packs();
+    if (MATRIX) {
+      await matrix(tmp);
+      await finish("smoke --matrix: ok");
+      return;
+    }
     if (MULTI) {
       const runs = RUNS.filter((r) => !DEMO || BUILT_MODES.includes(r.mode));
       if (!runs.length) console.log("no built multiplayer mode");
@@ -493,6 +505,142 @@ async function modsGame(dir) {
   await quit(shell);
   page.close();
   page = null;
+}
+
+// Demo matrix (--demo --matrix) --------------------------------------------------------------------------------------
+
+const SINGLE = ["solo", "gamemaster"];
+/** The joker a winning matrix game plays per level, where its token is playable. */
+const JOKER_AT = { 2: "hint", 4: "easier", 6: "skip", 8: "snipe", 10: "category" };
+
+/** Every built mode × age group: a win, then a loss at level 3, 5, 7, … by the group's place. */
+async function matrix(tmp) {
+  const groups = JSON.parse(readFileSync(path.join(DIR, "resources", "data", "age-groups.json"), "utf8")).groups.map((g) => g.id);
+  const multi = BUILT_MODES.filter((m) => !SINGLE.includes(m));
+  if (multi.length) throw new Error(`no matrix games for multiplayer modes yet: ${multi.join(", ")}`);
+  for (const mode of BUILT_MODES)
+    for (const [i, group] of groups.entries()) {
+      await matrixGame(path.join(tmp, `home-${mode}-${group}-win`), mode, group, groups, null);
+      await matrixGame(path.join(tmp, `home-${mode}-${group}-loss`), mode, group, groups, 3 + 2 * i);
+    }
+}
+
+/** The visible error lines (a refused start, a failed action). */
+const errors = () => h.evaluate(`[...document.querySelectorAll(".error")].filter((e) => e.getClientRects().length).map((e) => e.textContent.trim()).join("; ")`);
+
+/** One game in a fresh HOME: Choice (`group`) → Bundles → Start → every level on screen to a win (`wrongAt` null: first
+ * card, jokers per JOKER_AT) or to the wrong answer at level `wrongAt` (last card). */
+async function matrixGame(dir, mode, group, groups, wrongAt) {
+  const label = `${mode} ${group} ${wrongAt ? "loss" : "win"}`;
+  console.log(label);
+  begin(label);
+  home = dir;
+  await mkdir(home);
+  const shell = await launch();
+  try {
+    await toStart();
+    await newPlayer();
+    at(`${label}: choice`);
+    await h.click('[data-focus-id="kind-single"]');
+    await h.click('[data-focus-id="next"]');
+    await h.click(`[data-focus-id="mode-${mode}"]`);
+    await h.click('[data-focus-id="next"]');
+    if (mode === "solo") await h.click(`[data-focus-id="group-${group}"]`);
+    else {
+      // The configure screen's difficulty line: the groups in order, a new player at the default one.
+      const by = groups.indexOf(group) - groups.indexOf(DEFAULT_AGE_GROUP);
+      for (let i = 0; i < Math.abs(by); i++)
+        await h.click(`[data-focus-id="config-difficulty"] button.step:${by < 0 ? "first" : "last"}-of-type`);
+    }
+    await h.click('[data-focus-id="next"]');
+    at(`${label}: bundles`);
+    await h.waitFor(`${visibleEl('[data-focus-id="start"]')} || ${visibleEl(".bundles-screen .error")}`, "bundles screen");
+    if (!(await h.evaluate(visibleEl('[data-focus-id="start"]')))) throw new Error(`start refused: ${await errors()}`);
+    await h.click('[data-focus-id="start"]');
+    const st0 = running(await saved((s) => s.games?.length, "new game"));
+    if ((st0.settings.age_group ?? DEFAULT_AGE_GROUP) !== group || gameMode(st0) !== mode)
+      throw new Error(`game started as ${gameMode(st0)} ${st0.settings.age_group}`);
+    data = loadData(row(await saved(() => true, "save")).locale ?? "es", path.join(DIR, "resources", "data"), DEMO);
+    const levels = st0.settings.levels ?? LEVELS;
+    const which = wrongAt ? "last" : "first";
+    for (let level = 1; ; level++) {
+      at(`${label}: level ${level}`);
+      await h.waitFor(`${visibleEl(".level .hint")} || ${visibleEl(".cards .card")}`, "level or cards", 30000);
+      if (await h.evaluate(visibleEl(".level .hint"))) await h.click(".level .hint");
+      let st = await openCard(level, which);
+      if (!wrongAt && JOKER_AT[level]) st = await playJoker(JOKER_AT[level], st, level, which);
+      const right = level !== wrongAt;
+      const i = rightOf(st);
+      await h.click(`.answers .answer:nth-child(${(right ? i : (i + 1) % st.answers.length) + 1})`);
+      await h.click(".final-button.ready");
+      if (!right || level === levels) break;
+      await h.waitFor(visibleEl(".result .title.good"), "correct screen", 30000);
+      await h.click(".result .hint");
+    }
+    at(`${label}: end`);
+    await h.waitFor(visibleEl(wrongAt ? ".title.bad" : ".title.gold"), wrongAt ? "wrong screen" : "victory screen", 40000);
+    const g = row(await saved((s) => row(s).result !== null && row(s).finished_on, "game over"));
+    const want = wrongAt ? "lost" : "won";
+    if (g.result !== want || g.state.level !== (wrongAt ?? levels)) throw new Error(`${g.result} at level ${g.state.level}, want ${want} at ${wrongAt ?? levels}`);
+    console.log(`  ${label}: ${g.result} at level ${g.state.level}`);
+    await quit(shell);
+  } catch (e) {
+    const shown = await errors().catch(() => "");
+    throw new Error(`${e.message}${shown ? ` (on screen: ${shown})` : ""}`);
+  } finally {
+    if (shell.exitCode === null) shell.kill();
+    page.close();
+    page = null;
+  }
+}
+
+/** The table at `level`: the `which` card picked, its question on screen (traced). */
+async function openCard(level, which) {
+  await h.waitFor(visibleEl(".cards .card"), "cards", 30000);
+  const offered = [...running(await saved((s) => running(s).phase === "select" && running(s).level === level, `level ${level} cards`)).options];
+  await sleep(500); // the table's arrival
+  await h.evaluate(`[...document.querySelectorAll(".cards .card")].at(${which === "first" ? 0 : -1}).click()`);
+  await h.waitFor(visibleEl(".answers .answer"), "question screen");
+  if (await h.evaluate(visibleEl(".media-missing"))) throw new Error("missing-media notice on screen");
+  const st = running(await saved((s) => running(s).phase === "question", "picked question"));
+  seen(offered, st);
+  return st;
+}
+
+/** `name` on the question on screen, if its token is playable (traced either way); the state after it (Paso: the next card's). */
+async function playJoker(name, st, level, which) {
+  const token = `.question-screen .token[data-joker="${name}"]`;
+  await sleep(1000); // the screen's arrival
+  if (!(await h.evaluate(visibleEl(token)))) {
+    scene.questions.push({ level, joker: name, played: false });
+    console.log(`  level ${level}: ${name} not playable`);
+    return st;
+  }
+  at(`${scene.scene}: level ${level}: ${name}`);
+  const used = jokersUsed(st)[name];
+  await h.click(token);
+  if (name === "hint" || name === "easier") await h.click(token); // armed, then played
+  else if (name === "skip") await h.click(".dialog button.candy"); // «Paso», no purge
+  else if (name === "category") {
+    await h.click(".picker .grid .tile:not(:disabled)");
+    await h.click(".picker .grid.subs .tile:not(:disabled)");
+  } else {
+    // Francotirador on a wrong answer; the crosshair starts on the first, a click on the target shoots.
+    const wrong = st.answers.findIndex((_, i) => i !== rightOf(st));
+    for (let n = wrong ? 2 : 1; n; n--) {
+      await h.click(`.answers .answer:nth-child(${wrong + 1})`);
+      await sleep(300);
+    }
+  }
+  const after = running(await saved((s) => jokersUsed(running(s))[name] > used, `${name} played`));
+  await sleep(3500); // the joker's animation; input waits for it
+  if (name === "skip") {
+    scene.questions.push({ level, joker: name });
+    return openCard(level, which);
+  }
+  if (DEMO_IDS && !DEMO_IDS.has(after.current)) throw new Error(`question ${after.current} is not in the demo list`);
+  scene.questions.push({ level, joker: name, shown: after.current, answers: after.answers, struck: after.struck });
+  return after;
 }
 
 // Local multiplayer (--multiplayer) ----------------------------------------------------------------------------------

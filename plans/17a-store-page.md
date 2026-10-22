@@ -197,6 +197,7 @@ Decision 343: Demo store presence: own store page, or only the Download demo but
 
 ## Free DLC
 Store texts for each shipped question bundle, one free DLC app each (decision 66: price model, decision 110: regional packs at launch: `colombia` es + en, off by default; `usa` en only). Entered on the DLC app's own store page (Steamworks → DLC app → Edit Store Page), same fields as the base game. Drafted 2026-10-14 (`task 783`); approved through pm decision "DLC store texts approved? (colombia)".
+The five topic bundles (`stem`, `sports`, `history`, `movies`, `geography`, `kind: theme`) have their blocks below the regional ones: four languages each, entered per language once that locale's pool ships.
 
 ### Fields and limits
 - Same fields and limits as the base game (above, from memory; recheck in the DLC app's admin at entry): name, short description ≤ 300 characters plain text, "About This Content" in BBCode
@@ -522,6 +523,601 @@ Store texts for each shipped question bundle, one free DLC app each (decision 66
   [/list]
   ```
 
+### `stem` (Science questions bundle)
+- Languages: all four launch locales (es, es-ES, en, de); the bundle's `pool.<locale>.json` doesn't exist yet (`bundles.json` lists `en` only): **enter each language once its pool ships**, the DLC page lists only those
+- Names: decision 369 (en), `bundles.json` (es), `names.de.json` (de); content facts from the bundle's `rule` and `description` only (`categories.json` is empty until the taxonomy is applied; re-check the bullets against it at entry)
+- Does not claim the topic: base keeps its own science questions (`plans/22-bundles.md`); the text says "more questions"
+- Steam achievement `BUNDLE_STEM` (decision 368: 50 right answers from the bundle), mentioned in every language
+- Drafted 2026-10-21 (`task 1653`); approved through pm decision "DLC store texts approved? (topic bundles)", like colombia's (`task 783: Free DLC store texts in 17a`)
+
+#### English (`en`) — enter once `pool.en.json` of the bundle ships
+- **Name:** Science questions bundle
+- **Short description** (≤ 300):
+  > A free question bundle for Living Room Trivia with more questions on nature, space, inventions, engineering and maths. Installs separately and starts switched off: turn it on in the question bundle step whenever you want to play it.
+- **About This Content:**
+  ```
+  [h2]More science questions[/h2]
+  Science questions bundle is a free question bundle for Living Room Trivia. It adds more questions on nature, space, inventions, engineering and maths, on top of the science questions the base bundle already has.
+
+  [list]
+  [*][b]Living things and the human body:[/b] animals, plants, the body and how it works
+  [*][b]Physics and chemistry:[/b] matter, energy, light, sound and the elements
+  [*][b]Space, Earth and weather:[/b] planets, stars, geology, climate and ecology
+  [*][b]Inventions and machines:[/b] technology and engineering, from the wheel to the rocket
+  [*][b]Numbers and shapes:[/b] maths you can puzzle out together
+  [*][b]Science history:[/b] scientists, discoveries and the space race
+  [/list]
+
+  [h2]How it plays[/h2]
+  [list]
+  [*]Free; needs the base game Living Room Trivia
+  [*]Optional install: remove it and add it back in Steam any time
+  [*]Off by default: turn it on in the “Question bundles” step before a game; play it alone or mixed with the base bundle's questions
+  [*]Its own Steam achievement: 50 right answers from this bundle
+  [*]The bundle grows with updates
+  [/list]
+  ```
+
+#### Spanish – Latin America (`es`) — enter once `pool.es.json` of the bundle ships
+- **Name:** Paquete de preguntas de ciencia
+- **Short description** (≤ 300):
+  > Paquete de preguntas gratis para Trivia en Familia con más preguntas de naturaleza, espacio, inventos, ingeniería y matemáticas. Se instala aparte y viene apagado: lo encienden en el paso de paquetes de preguntas cuando quieran jugarlo.
+- **About This Content:**
+  ```
+  [h2]Más preguntas de ciencia[/h2]
+  Paquete de preguntas de ciencia es un paquete de preguntas gratis para Trivia en Familia. Suma más preguntas de naturaleza, espacio, inventos, ingeniería y matemáticas, además de las de ciencia que ya trae el paquete básico.
+
+  [list]
+  [*][b]Seres vivos y cuerpo humano:[/b] animales, plantas y cómo funciona el cuerpo
+  [*][b]Física y química:[/b] materia, energía, luz, sonido y elementos
+  [*][b]Espacio, Tierra y clima:[/b] planetas, estrellas, geología, clima y ecología
+  [*][b]Inventos y máquinas:[/b] tecnología e ingeniería, de la rueda al cohete
+  [*][b]Números y formas:[/b] matemáticas para pensar juntos
+  [*][b]Historia de la ciencia:[/b] científicos, descubrimientos y la carrera espacial
+  [/list]
+
+  [h2]Cómo se juega[/h2]
+  [list]
+  [*]Gratis; necesita el juego base Trivia en Familia
+  [*]Instalación opcional: se puede quitar y volver a poner en Steam
+  [*]Apagado por defecto: lo encienden en el paso «Paquetes de preguntas» antes de cada partida; se juega solo o mezclado con las preguntas del paquete básico
+  [*]Un logro de Steam propio: 50 respuestas correctas de este paquete
+  [*]El paquete crece con las actualizaciones
+  [/list]
+  ```
+
+#### Spanish – Spain (`es-ES`) — enter once `pool.es-ES.json` of the bundle ships
+- **Name:** Paquete de preguntas de ciencia
+- **Short description** (≤ 300):
+  > Paquete de preguntas gratis para Trivia en Familia con más preguntas de naturaleza, espacio, inventos, ingeniería y matemáticas. Se instala aparte y viene apagado: encendedlo en el paso de paquetes de preguntas cuando queráis jugarlo.
+- **About This Content:**
+  ```
+  [h2]Más preguntas de ciencia[/h2]
+  Paquete de preguntas de ciencia es un paquete de preguntas gratis para Trivia en Familia. Suma más preguntas de naturaleza, espacio, inventos, ingeniería y matemáticas, además de las de ciencia que ya trae el paquete básico.
+
+  [list]
+  [*][b]Seres vivos y cuerpo humano:[/b] animales, plantas y cómo funciona el cuerpo
+  [*][b]Física y química:[/b] materia, energía, luz, sonido y elementos
+  [*][b]Espacio, Tierra y clima:[/b] planetas, estrellas, geología, clima y ecología
+  [*][b]Inventos y máquinas:[/b] tecnología e ingeniería, de la rueda al cohete
+  [*][b]Números y formas:[/b] matemáticas para pensar juntos
+  [*][b]Historia de la ciencia:[/b] científicos, descubrimientos y la carrera espacial
+  [/list]
+
+  [h2]Cómo se juega[/h2]
+  [list]
+  [*]Gratis; necesita el juego base Trivia en Familia
+  [*]Instalación opcional: se puede quitar y volver a poner en Steam
+  [*]Apagado por defecto: encendedlo en el paso «Paquetes de preguntas» antes de cada partida; jugadlo solo o mezclado con las preguntas del paquete básico
+  [*]Un logro de Steam propio: 50 respuestas correctas de este paquete
+  [*]El paquete crece con las actualizaciones
+  [/list]
+  ```
+
+#### German (`de`) — enter once `pool.de.json` of the bundle ships
+- **Name:** Wissenschafts-Fragenpaket
+- **Short description** (≤ 300):
+  > Kostenloses Fragenpaket für Wohnzimmer-Quiz mit mehr Fragen zu Natur, Weltall, Erfindungen, Technik und Mathe. Wird separat installiert und ist anfangs aus: in der Fragenauswahl einschalten, wenn es gespielt werden soll.
+- **About This Content:**
+  ```
+  [h2]Mehr Wissenschaftsfragen[/h2]
+  Wissenschafts-Fragenpaket ist ein kostenloses Fragenpaket für Wohnzimmer-Quiz. Es bringt mehr Fragen zu Natur, Weltall, Erfindungen, Technik und Mathe, zusätzlich zu den Fragen zu Wissenschaft, die das Grundpaket schon hat.
+
+  [list]
+  [*][b]Lebewesen und menschlicher Körper:[/b] Tiere, Pflanzen und wie der Körper funktioniert
+  [*][b]Physik und Chemie:[/b] Stoffe, Energie, Licht, Schall und die Elemente
+  [*][b]Weltall, Erde und Wetter:[/b] Planeten, Sterne, Geologie, Klima und Ökologie
+  [*][b]Erfindungen und Maschinen:[/b] Technik, vom Rad bis zur Rakete
+  [*][b]Zahlen und Formen:[/b] Mathe zum gemeinsamen Knobeln
+  [*][b]Wissenschaftsgeschichte:[/b] Forschende, Entdeckungen und der Wettlauf ins All
+  [/list]
+
+  [h2]So wird gespielt[/h2]
+  [list]
+  [*]Kostenlos; braucht das Hauptspiel Wohnzimmer-Quiz
+  [*]Optionale Installation: in Steam jederzeit entfernen und wieder hinzufügen
+  [*]Standardmäßig aus: vor dem Spiel in der Fragenauswahl einschalten; allein oder gemischt mit den Fragen des Grundpakets spielbar
+  [*]Eigener Steam-Erfolg: 50 richtige Antworten aus diesem Paket
+  [*]Das Paket wächst mit Updates
+  [/list]
+  ```
+
+### `sports` (Sports questions bundle)
+- Languages: all four launch locales (es, es-ES, en, de); the bundle's `pool.<locale>.json` doesn't exist yet (`bundles.json` lists `en` only): **enter each language once its pool ships**, the DLC page lists only those
+- Names: decision 369 (en), `bundles.json` (es), `names.de.json` (de); content facts from the bundle's `rule` and `description` only (`categories.json` is empty until the taxonomy is applied; re-check the bullets against it at entry)
+- Does not claim the topic: base keeps its own sport questions (`plans/22-bundles.md`); the text says "more questions"
+- Steam achievement `BUNDLE_SPORTS` (decision 368: 50 right answers from the bundle), mentioned in every language
+- Drafted 2026-10-21 (`task 1653`); approved through pm decision "DLC store texts approved? (topic bundles)", like colombia's (`task 783: Free DLC store texts in 17a`)
+
+#### English (`en`) — enter once `pool.en.json` of the bundle ships
+- **Name:** Sports questions bundle
+- **Short description** (≤ 300):
+  > A free question bundle for Living Room Trivia with more questions on sports: athletes, events, teams and records. Installs separately and starts switched off: turn it on in the question bundle step whenever you want to play it.
+- **About This Content:**
+  ```
+  [h2]More sports questions[/h2]
+  Sports questions bundle is a free question bundle for Living Room Trivia. It adds more questions on sports: athletes, events, teams and records, on top of the sport questions the base bundle already has.
+
+  [list]
+  [*][b]Football and every other sport:[/b] team and individual sports, indoor and outdoor
+  [*][b]Clubs and leagues:[/b] teams, competitions and rivalries
+  [*][b]Legends:[/b] athletes and coaches who made history
+  [*][b]Records and rules:[/b] who ran, jumped or scored the most, and how the game works
+  [*][b]Olympics and World Cups:[/b] the big events, past and present
+  [*][b]Sport history:[/b] how each sport began and changed
+  [/list]
+
+  [h2]How it plays[/h2]
+  [list]
+  [*]Free; needs the base game Living Room Trivia
+  [*]Optional install: remove it and add it back in Steam any time
+  [*]Off by default: turn it on in the “Question bundles” step before a game; play it alone or mixed with the base bundle's questions
+  [*]Its own Steam achievement: 50 right answers from this bundle
+  [*]The bundle grows with updates
+  [/list]
+  ```
+
+#### Spanish – Latin America (`es`) — enter once `pool.es.json` of the bundle ships
+- **Name:** Paquete de preguntas de deportes
+- **Short description** (≤ 300):
+  > Paquete de preguntas gratis para Trivia en Familia con más preguntas de deportes: deportistas, competiciones, equipos y récords. Se instala aparte y viene apagado: lo encienden en el paso de paquetes de preguntas cuando quieran jugarlo.
+- **About This Content:**
+  ```
+  [h2]Más preguntas de deportes[/h2]
+  Paquete de preguntas de deportes es un paquete de preguntas gratis para Trivia en Familia. Suma más preguntas de deportes: deportistas, competiciones, equipos y récords, además de las de deporte que ya trae el paquete básico.
+
+  [list]
+  [*][b]Fútbol y todos los demás deportes:[/b] individuales y de equipo, bajo techo y al aire libre
+  [*][b]Clubes y ligas:[/b] equipos, competiciones y rivalidades
+  [*][b]Leyendas:[/b] deportistas y entrenadores que hicieron historia
+  [*][b]Récords y reglas:[/b] quién corrió, saltó o anotó más, y cómo se juega
+  [*][b]Olimpiadas y Mundiales:[/b] los grandes eventos, de antes y de ahora
+  [*][b]Historia del deporte:[/b] cómo empezó y cambió cada deporte
+  [/list]
+
+  [h2]Cómo se juega[/h2]
+  [list]
+  [*]Gratis; necesita el juego base Trivia en Familia
+  [*]Instalación opcional: se puede quitar y volver a poner en Steam
+  [*]Apagado por defecto: lo encienden en el paso «Paquetes de preguntas» antes de cada partida; se juega solo o mezclado con las preguntas del paquete básico
+  [*]Un logro de Steam propio: 50 respuestas correctas de este paquete
+  [*]El paquete crece con las actualizaciones
+  [/list]
+  ```
+
+#### Spanish – Spain (`es-ES`) — enter once `pool.es-ES.json` of the bundle ships
+- **Name:** Paquete de preguntas de deportes
+- **Short description** (≤ 300):
+  > Paquete de preguntas gratis para Trivia en Familia con más preguntas de deportes: deportistas, competiciones, equipos y récords. Se instala aparte y viene apagado: encendedlo en el paso de paquetes de preguntas cuando queráis jugarlo.
+- **About This Content:**
+  ```
+  [h2]Más preguntas de deportes[/h2]
+  Paquete de preguntas de deportes es un paquete de preguntas gratis para Trivia en Familia. Suma más preguntas de deportes: deportistas, competiciones, equipos y récords, además de las de deporte que ya trae el paquete básico.
+
+  [list]
+  [*][b]Fútbol y todos los demás deportes:[/b] individuales y de equipo, bajo techo y al aire libre
+  [*][b]Clubes y ligas:[/b] equipos, competiciones y rivalidades
+  [*][b]Leyendas:[/b] deportistas y entrenadores que hicieron historia
+  [*][b]Récords y reglas:[/b] quién corrió, saltó o anotó más, y cómo se juega
+  [*][b]Olimpiadas y Mundiales:[/b] los grandes eventos, de antes y de ahora
+  [*][b]Historia del deporte:[/b] cómo empezó y cambió cada deporte
+  [/list]
+
+  [h2]Cómo se juega[/h2]
+  [list]
+  [*]Gratis; necesita el juego base Trivia en Familia
+  [*]Instalación opcional: se puede quitar y volver a poner en Steam
+  [*]Apagado por defecto: encendedlo en el paso «Paquetes de preguntas» antes de cada partida; jugadlo solo o mezclado con las preguntas del paquete básico
+  [*]Un logro de Steam propio: 50 respuestas correctas de este paquete
+  [*]El paquete crece con las actualizaciones
+  [/list]
+  ```
+
+#### German (`de`) — enter once `pool.de.json` of the bundle ships
+- **Name:** Sport-Fragenpaket
+- **Short description** (≤ 300):
+  > Kostenloses Fragenpaket für Wohnzimmer-Quiz mit mehr Fragen zu Sport: Stars, Wettkämpfe, Mannschaften und Rekorde. Wird separat installiert und ist anfangs aus: in der Fragenauswahl einschalten, wenn es gespielt werden soll.
+- **About This Content:**
+  ```
+  [h2]Mehr Sportfragen[/h2]
+  Sport-Fragenpaket ist ein kostenloses Fragenpaket für Wohnzimmer-Quiz. Es bringt mehr Fragen zu Sport: Stars, Wettkämpfe, Mannschaften und Rekorde, zusätzlich zu den Fragen zu Sport, die das Grundpaket schon hat.
+
+  [list]
+  [*][b]Fußball und alle anderen Sportarten:[/b] Mannschafts- und Einzelsport, drinnen und draußen
+  [*][b]Vereine und Ligen:[/b] Teams, Wettbewerbe und Rivalitäten
+  [*][b]Legenden:[/b] Sportlerinnen, Sportler und Trainer, die Geschichte schrieben
+  [*][b]Rekorde und Regeln:[/b] wer am schnellsten lief, am weitesten sprang oder am meisten traf, und wie gespielt wird
+  [*][b]Olympia und Weltmeisterschaften:[/b] die großen Wettkämpfe, früher und heute
+  [*][b]Sportgeschichte:[/b] wie jede Sportart entstand und sich veränderte
+  [/list]
+
+  [h2]So wird gespielt[/h2]
+  [list]
+  [*]Kostenlos; braucht das Hauptspiel Wohnzimmer-Quiz
+  [*]Optionale Installation: in Steam jederzeit entfernen und wieder hinzufügen
+  [*]Standardmäßig aus: vor dem Spiel in der Fragenauswahl einschalten; allein oder gemischt mit den Fragen des Grundpakets spielbar
+  [*]Eigener Steam-Erfolg: 50 richtige Antworten aus diesem Paket
+  [*]Das Paket wächst mit Updates
+  [/list]
+  ```
+
+### `history` (History questions bundle)
+- Languages: all four launch locales (es, es-ES, en, de); the bundle's `pool.<locale>.json` doesn't exist yet (`bundles.json` lists `en` only): **enter each language once its pool ships**, the DLC page lists only those
+- Names: decision 369 (en), `bundles.json` (es), `names.de.json` (de); content facts from the bundle's `rule` and `description` only (`categories.json` is empty until the taxonomy is applied; re-check the bullets against it at entry)
+- Does not claim the topic: base keeps its own history questions (`plans/22-bundles.md`); the text says "more questions"
+- Steam achievement `BUNDLE_HISTORY` (decision 368: 50 right answers from the bundle), mentioned in every language
+- Drafted 2026-10-21 (`task 1653`); approved through pm decision "DLC store texts approved? (topic bundles)", like colombia's (`task 783: Free DLC store texts in 17a`)
+
+#### English (`en`) — enter once `pool.en.json` of the bundle ships
+- **Name:** History questions bundle
+- **Short description** (≤ 300):
+  > A free question bundle for Living Room Trivia with more questions on history: eras, empires, people and events from all over the world. Installs separately and starts switched off: turn it on in the question bundle step whenever you want to play it.
+- **About This Content:**
+  ```
+  [h2]More history questions[/h2]
+  History questions bundle is a free question bundle for Living Room Trivia. It adds more questions on history: eras, empires, people and events from all over the world, on top of the history questions the base bundle already has.
+
+  [list]
+  [*][b]Eras and civilisations:[/b] from the first societies to the modern age
+  [*][b]Empires and rulers:[/b] kings, emperors, pharaohs and presidents
+  [*][b]Wars and revolutions:[/b] the turning points that changed the world
+  [*][b]Explorers and discoveries:[/b] voyages, maps and meetings between peoples
+  [*][b]Everyday life in the past:[/b] how people lived, worked and ate
+  [*][b]Old borders and place names:[/b] countries and cities that changed or vanished
+  [/list]
+
+  [h2]How it plays[/h2]
+  [list]
+  [*]Free; needs the base game Living Room Trivia
+  [*]Optional install: remove it and add it back in Steam any time
+  [*]Off by default: turn it on in the “Question bundles” step before a game; play it alone or mixed with the base bundle's questions
+  [*]Its own Steam achievement: 50 right answers from this bundle
+  [*]The bundle grows with updates
+  [/list]
+  ```
+
+#### Spanish – Latin America (`es`) — enter once `pool.es.json` of the bundle ships
+- **Name:** Paquete de preguntas de historia
+- **Short description** (≤ 300):
+  > Paquete de preguntas gratis para Trivia en Familia con más preguntas de historia: épocas, imperios, personajes y sucesos de todo el mundo. Se instala aparte y viene apagado: lo encienden en el paso de paquetes de preguntas cuando quieran jugarlo.
+- **About This Content:**
+  ```
+  [h2]Más preguntas de historia[/h2]
+  Paquete de preguntas de historia es un paquete de preguntas gratis para Trivia en Familia. Suma más preguntas de historia: épocas, imperios, personajes y sucesos de todo el mundo, además de las de historia que ya trae el paquete básico.
+
+  [list]
+  [*][b]Épocas y civilizaciones:[/b] de las primeras sociedades a la edad moderna
+  [*][b]Imperios y gobernantes:[/b] reyes, emperadores, faraones y presidentes
+  [*][b]Guerras y revoluciones:[/b] los momentos que cambiaron el mundo
+  [*][b]Exploradores y descubrimientos:[/b] viajes, mapas y encuentros entre pueblos
+  [*][b]La vida cotidiana en el pasado:[/b] cómo se vivía, se trabajaba y se comía
+  [*][b]Fronteras y nombres antiguos:[/b] países y ciudades que cambiaron o desaparecieron
+  [/list]
+
+  [h2]Cómo se juega[/h2]
+  [list]
+  [*]Gratis; necesita el juego base Trivia en Familia
+  [*]Instalación opcional: se puede quitar y volver a poner en Steam
+  [*]Apagado por defecto: lo encienden en el paso «Paquetes de preguntas» antes de cada partida; se juega solo o mezclado con las preguntas del paquete básico
+  [*]Un logro de Steam propio: 50 respuestas correctas de este paquete
+  [*]El paquete crece con las actualizaciones
+  [/list]
+  ```
+
+#### Spanish – Spain (`es-ES`) — enter once `pool.es-ES.json` of the bundle ships
+- **Name:** Paquete de preguntas de historia
+- **Short description** (≤ 300):
+  > Paquete de preguntas gratis para Trivia en Familia con más preguntas de historia: épocas, imperios, personajes y sucesos de todo el mundo. Se instala aparte y viene apagado: encendedlo en el paso de paquetes de preguntas cuando queráis jugarlo.
+- **About This Content:**
+  ```
+  [h2]Más preguntas de historia[/h2]
+  Paquete de preguntas de historia es un paquete de preguntas gratis para Trivia en Familia. Suma más preguntas de historia: épocas, imperios, personajes y sucesos de todo el mundo, además de las de historia que ya trae el paquete básico.
+
+  [list]
+  [*][b]Épocas y civilizaciones:[/b] de las primeras sociedades a la edad moderna
+  [*][b]Imperios y gobernantes:[/b] reyes, emperadores, faraones y presidentes
+  [*][b]Guerras y revoluciones:[/b] los momentos que cambiaron el mundo
+  [*][b]Exploradores y descubrimientos:[/b] viajes, mapas y encuentros entre pueblos
+  [*][b]La vida cotidiana en el pasado:[/b] cómo se vivía, se trabajaba y se comía
+  [*][b]Fronteras y nombres antiguos:[/b] países y ciudades que cambiaron o desaparecieron
+  [/list]
+
+  [h2]Cómo se juega[/h2]
+  [list]
+  [*]Gratis; necesita el juego base Trivia en Familia
+  [*]Instalación opcional: se puede quitar y volver a poner en Steam
+  [*]Apagado por defecto: encendedlo en el paso «Paquetes de preguntas» antes de cada partida; jugadlo solo o mezclado con las preguntas del paquete básico
+  [*]Un logro de Steam propio: 50 respuestas correctas de este paquete
+  [*]El paquete crece con las actualizaciones
+  [/list]
+  ```
+
+#### German (`de`) — enter once `pool.de.json` of the bundle ships
+- **Name:** Geschichts-Fragenpaket
+- **Short description** (≤ 300):
+  > Kostenloses Fragenpaket für Wohnzimmer-Quiz mit mehr Fragen zu Geschichte: Epochen, Reiche, Menschen und Ereignisse aus aller Welt. Wird separat installiert und ist anfangs aus: in der Fragenauswahl einschalten, wenn es gespielt werden soll.
+- **About This Content:**
+  ```
+  [h2]Mehr Geschichtsfragen[/h2]
+  Geschichts-Fragenpaket ist ein kostenloses Fragenpaket für Wohnzimmer-Quiz. Es bringt mehr Fragen zu Geschichte: Epochen, Reiche, Menschen und Ereignisse aus aller Welt, zusätzlich zu den Fragen zu Geschichte, die das Grundpaket schon hat.
+
+  [list]
+  [*][b]Epochen und Hochkulturen:[/b] von den ersten Gesellschaften bis zur Neuzeit
+  [*][b]Reiche und Herrscher:[/b] Könige, Kaiser, Pharaonen und Präsidenten
+  [*][b]Kriege und Revolutionen:[/b] die Wendepunkte, die die Welt veränderten
+  [*][b]Entdecker und Entdeckungen:[/b] Reisen, Karten und Begegnungen zwischen Völkern
+  [*][b]Alltag in der Vergangenheit:[/b] wie man lebte, arbeitete und aß
+  [*][b]Alte Grenzen und Ortsnamen:[/b] Länder und Städte, die sich veränderten oder verschwanden
+  [/list]
+
+  [h2]So wird gespielt[/h2]
+  [list]
+  [*]Kostenlos; braucht das Hauptspiel Wohnzimmer-Quiz
+  [*]Optionale Installation: in Steam jederzeit entfernen und wieder hinzufügen
+  [*]Standardmäßig aus: vor dem Spiel in der Fragenauswahl einschalten; allein oder gemischt mit den Fragen des Grundpakets spielbar
+  [*]Eigener Steam-Erfolg: 50 richtige Antworten aus diesem Paket
+  [*]Das Paket wächst mit Updates
+  [/list]
+  ```
+
+### `movies` (Movies & Series questions bundle)
+- Languages: all four launch locales (es, es-ES, en, de); the bundle's `pool.<locale>.json` doesn't exist yet (`bundles.json` lists `en` only): **enter each language once its pool ships**, the DLC page lists only those
+- Names: decision 369 (en), `bundles.json` (es), `names.de.json` (de); content facts from the bundle's `rule` and `description` only (`categories.json` is empty until the taxonomy is applied; re-check the bullets against it at entry)
+- Does not claim the topic: base keeps its own film and TV questions (`plans/22-bundles.md`); the text says "more questions"
+- Steam achievement `BUNDLE_MOVIES` (decision 368: 50 right answers from the bundle), mentioned in every language
+- Drafted 2026-10-21 (`task 1653`); approved through pm decision "DLC store texts approved? (topic bundles)", like colombia's (`task 783: Free DLC store texts in 17a`)
+
+#### English (`en`) — enter once `pool.en.json` of the bundle ships
+- **Name:** Movies & Series questions bundle
+- **Short description** (≤ 300):
+  > A free question bundle for Living Room Trivia with more questions on movies and series: your favorite shows, characters and stories. Installs separately and starts switched off: turn it on in the question bundle step whenever you want to play it.
+- **About This Content:**
+  ```
+  [h2]More movie and series questions[/h2]
+  Movies & Series questions bundle is a free question bundle for Living Room Trivia. It adds more questions on movies and series: your favorite shows, characters and stories, on top of the film and TV questions the base bundle already has.
+
+  [list]
+  [*][b]Films and series of every era and country:[/b] classics, blockbusters and hidden gems
+  [*][b]Live action and animation:[/b] from cartoons to epics
+  [*][b]Genres:[/b] comedy, adventure, fantasy, sci-fi, mystery and more
+  [*][b]People:[/b] directors, actors and the characters they play
+  [*][b]Quotes and soundtracks:[/b] the lines and tunes everyone remembers
+  [*][b]Awards and screen history:[/b] from silent film to streaming
+  [/list]
+
+  [h2]How it plays[/h2]
+  [list]
+  [*]Free; needs the base game Living Room Trivia
+  [*]Optional install: remove it and add it back in Steam any time
+  [*]Off by default: turn it on in the “Question bundles” step before a game; play it alone or mixed with the base bundle's questions
+  [*]Its own Steam achievement: 50 right answers from this bundle
+  [*]The bundle grows with updates
+  [/list]
+  ```
+
+#### Spanish – Latin America (`es`) — enter once `pool.es.json` of the bundle ships
+- **Name:** Paquete de preguntas de cine y series
+- **Short description** (≤ 300):
+  > Paquete de preguntas gratis para Trivia en Familia con más preguntas de cine y series: sus películas y series favoritas, personajes e historias. Se instala aparte y viene apagado: lo encienden en el paso de paquetes de preguntas cuando quieran jugarlo.
+- **About This Content:**
+  ```
+  [h2]Más preguntas de cine y series[/h2]
+  Paquete de preguntas de cine y series es un paquete de preguntas gratis para Trivia en Familia. Suma más preguntas de cine y series: sus películas y series favoritas, personajes e historias, además de las de cine y series que ya trae el paquete básico.
+
+  [list]
+  [*][b]Películas y series de todas las épocas y países:[/b] clásicos, éxitos y joyas escondidas
+  [*][b]Imagen real y animación:[/b] de los dibujos animados a las grandes epopeyas
+  [*][b]Géneros:[/b] comedia, aventuras, fantasía, ciencia ficción, misterio y más
+  [*][b]Gente del cine:[/b] directores, actores y los personajes que interpretan
+  [*][b]Frases y bandas sonoras:[/b] las líneas y melodías que todos recuerdan
+  [*][b]Premios e historia del cine:[/b] del cine mudo al streaming
+  [/list]
+
+  [h2]Cómo se juega[/h2]
+  [list]
+  [*]Gratis; necesita el juego base Trivia en Familia
+  [*]Instalación opcional: se puede quitar y volver a poner en Steam
+  [*]Apagado por defecto: lo encienden en el paso «Paquetes de preguntas» antes de cada partida; se juega solo o mezclado con las preguntas del paquete básico
+  [*]Un logro de Steam propio: 50 respuestas correctas de este paquete
+  [*]El paquete crece con las actualizaciones
+  [/list]
+  ```
+
+#### Spanish – Spain (`es-ES`) — enter once `pool.es-ES.json` of the bundle ships
+- **Name:** Paquete de preguntas de cine y series
+- **Short description** (≤ 300):
+  > Paquete de preguntas gratis para Trivia en Familia con más preguntas de cine y series: vuestras películas y series favoritas, personajes e historias. Se instala aparte y viene apagado: encendedlo en el paso de paquetes de preguntas cuando queráis jugarlo.
+- **About This Content:**
+  ```
+  [h2]Más preguntas de cine y series[/h2]
+  Paquete de preguntas de cine y series es un paquete de preguntas gratis para Trivia en Familia. Suma más preguntas de cine y series: vuestras películas y series favoritas, personajes e historias, además de las de cine y series que ya trae el paquete básico.
+
+  [list]
+  [*][b]Películas y series de todas las épocas y países:[/b] clásicos, éxitos y joyas escondidas
+  [*][b]Imagen real y animación:[/b] de los dibujos animados a las grandes epopeyas
+  [*][b]Géneros:[/b] comedia, aventuras, fantasía, ciencia ficción, misterio y más
+  [*][b]Gente del cine:[/b] directores, actores y los personajes que interpretan
+  [*][b]Frases y bandas sonoras:[/b] las líneas y melodías que todos recuerdan
+  [*][b]Premios e historia del cine:[/b] del cine mudo al streaming
+  [/list]
+
+  [h2]Cómo se juega[/h2]
+  [list]
+  [*]Gratis; necesita el juego base Trivia en Familia
+  [*]Instalación opcional: se puede quitar y volver a poner en Steam
+  [*]Apagado por defecto: encendedlo en el paso «Paquetes de preguntas» antes de cada partida; jugadlo solo o mezclado con las preguntas del paquete básico
+  [*]Un logro de Steam propio: 50 respuestas correctas de este paquete
+  [*]El paquete crece con las actualizaciones
+  [/list]
+  ```
+
+#### German (`de`) — enter once `pool.de.json` of the bundle ships
+- **Name:** Film- und Serien-Fragenpaket
+- **Short description** (≤ 300):
+  > Kostenloses Fragenpaket für Wohnzimmer-Quiz mit mehr Fragen zu Filme und Serien: Lieblingsfilme und -serien, Figuren und Geschichten. Wird separat installiert und ist anfangs aus: in der Fragenauswahl einschalten, wenn es gespielt werden soll.
+- **About This Content:**
+  ```
+  [h2]Mehr Film- und Serienfragen[/h2]
+  Film- und Serien-Fragenpaket ist ein kostenloses Fragenpaket für Wohnzimmer-Quiz. Es bringt mehr Fragen zu Filme und Serien: Lieblingsfilme und -serien, Figuren und Geschichten, zusätzlich zu den Fragen zu Film und Fernsehen, die das Grundpaket schon hat.
+
+  [list]
+  [*][b]Filme und Serien aller Zeiten und Länder:[/b] Klassiker, Blockbuster und Geheimtipps
+  [*][b]Realfilm und Animation:[/b] vom Zeichentrick bis zum Epos
+  [*][b]Genres:[/b] Komödie, Abenteuer, Fantasy, Science-Fiction, Krimi und mehr
+  [*][b]Menschen:[/b] Regie, Schauspielende und ihre Figuren
+  [*][b]Zitate und Filmmusik:[/b] die Sätze und Melodien, die alle kennen
+  [*][b]Preise und Filmgeschichte:[/b] vom Stummfilm bis zum Streaming
+  [/list]
+
+  [h2]So wird gespielt[/h2]
+  [list]
+  [*]Kostenlos; braucht das Hauptspiel Wohnzimmer-Quiz
+  [*]Optionale Installation: in Steam jederzeit entfernen und wieder hinzufügen
+  [*]Standardmäßig aus: vor dem Spiel in der Fragenauswahl einschalten; allein oder gemischt mit den Fragen des Grundpakets spielbar
+  [*]Eigener Steam-Erfolg: 50 richtige Antworten aus diesem Paket
+  [*]Das Paket wächst mit Updates
+  [/list]
+  ```
+
+### `geography` (Geography questions bundle)
+- Languages: all four launch locales (es, es-ES, en, de); the bundle's `pool.<locale>.json` doesn't exist yet (`bundles.json` lists `en` only): **enter each language once its pool ships**, the DLC page lists only those
+- Names: decision 369 (en), `bundles.json` (es), `names.de.json` (de); content facts from the bundle's `rule` and `description` only (`categories.json` is empty until the taxonomy is applied; re-check the bullets against it at entry)
+- Does not claim the topic: base keeps its own geography questions (`plans/22-bundles.md`); the text says "more questions"
+- Steam achievement `BUNDLE_GEOGRAPHY` (decision 368: 50 right answers from the bundle), mentioned in every language
+- Drafted 2026-10-21 (`task 1653`); approved through pm decision "DLC store texts approved? (topic bundles)", like colombia's (`task 783: Free DLC store texts in 17a`)
+
+#### English (`en`) — enter once `pool.en.json` of the bundle ships
+- **Name:** Geography questions bundle
+- **Short description** (≤ 300):
+  > A free question bundle for Living Room Trivia with more questions on geography: countries, cities, maps, flags, mountains, rivers and seas. Installs separately and starts switched off: turn it on in the question bundle step whenever you want to play it.
+- **About This Content:**
+  ```
+  [h2]More geography questions[/h2]
+  Geography questions bundle is a free question bundle for Living Room Trivia. It adds more questions on geography: countries, cities, maps, flags, mountains, rivers and seas, on top of the geography questions the base bundle already has.
+
+  [list]
+  [*][b]Countries and regions:[/b] capitals, borders and populations
+  [*][b]Cities:[/b] famous places and where to find them
+  [*][b]Maps and flags:[/b] shapes, colors and symbols
+  [*][b]Mountains, rivers and lakes:[/b] the landforms and waters of the world
+  [*][b]Seas, islands and deserts:[/b] oceans, archipelagos and dry lands
+  [*][b]Climate zones:[/b] where it is hot, cold, wet or dry
+  [/list]
+
+  [h2]How it plays[/h2]
+  [list]
+  [*]Free; needs the base game Living Room Trivia
+  [*]Optional install: remove it and add it back in Steam any time
+  [*]Off by default: turn it on in the “Question bundles” step before a game; play it alone or mixed with the base bundle's questions
+  [*]Its own Steam achievement: 50 right answers from this bundle
+  [*]The bundle grows with updates
+  [/list]
+  ```
+
+#### Spanish – Latin America (`es`) — enter once `pool.es.json` of the bundle ships
+- **Name:** Paquete de preguntas de geografía
+- **Short description** (≤ 300):
+  > Paquete de preguntas gratis para Trivia en Familia con más preguntas de geografía: países, ciudades, mapas, banderas, montañas, ríos y mares. Se instala aparte y viene apagado: lo encienden en el paso de paquetes de preguntas cuando quieran jugarlo.
+- **About This Content:**
+  ```
+  [h2]Más preguntas de geografía[/h2]
+  Paquete de preguntas de geografía es un paquete de preguntas gratis para Trivia en Familia. Suma más preguntas de geografía: países, ciudades, mapas, banderas, montañas, ríos y mares, además de las de geografía que ya trae el paquete básico.
+
+  [list]
+  [*][b]Países y regiones:[/b] capitales, fronteras y poblaciones
+  [*][b]Ciudades:[/b] lugares famosos y dónde encontrarlos
+  [*][b]Mapas y banderas:[/b] formas, colores y símbolos
+  [*][b]Montañas, ríos y lagos:[/b] el relieve y las aguas del mundo
+  [*][b]Mares, islas y desiertos:[/b] océanos, archipiélagos y tierras secas
+  [*][b]Zonas climáticas:[/b] dónde hace calor, frío, llueve o es seco
+  [/list]
+
+  [h2]Cómo se juega[/h2]
+  [list]
+  [*]Gratis; necesita el juego base Trivia en Familia
+  [*]Instalación opcional: se puede quitar y volver a poner en Steam
+  [*]Apagado por defecto: lo encienden en el paso «Paquetes de preguntas» antes de cada partida; se juega solo o mezclado con las preguntas del paquete básico
+  [*]Un logro de Steam propio: 50 respuestas correctas de este paquete
+  [*]El paquete crece con las actualizaciones
+  [/list]
+  ```
+
+#### Spanish – Spain (`es-ES`) — enter once `pool.es-ES.json` of the bundle ships
+- **Name:** Paquete de preguntas de geografía
+- **Short description** (≤ 300):
+  > Paquete de preguntas gratis para Trivia en Familia con más preguntas de geografía: países, ciudades, mapas, banderas, montañas, ríos y mares. Se instala aparte y viene apagado: encendedlo en el paso de paquetes de preguntas cuando queráis jugarlo.
+- **About This Content:**
+  ```
+  [h2]Más preguntas de geografía[/h2]
+  Paquete de preguntas de geografía es un paquete de preguntas gratis para Trivia en Familia. Suma más preguntas de geografía: países, ciudades, mapas, banderas, montañas, ríos y mares, además de las de geografía que ya trae el paquete básico.
+
+  [list]
+  [*][b]Países y regiones:[/b] capitales, fronteras y poblaciones
+  [*][b]Ciudades:[/b] lugares famosos y dónde encontrarlos
+  [*][b]Mapas y banderas:[/b] formas, colores y símbolos
+  [*][b]Montañas, ríos y lagos:[/b] el relieve y las aguas del mundo
+  [*][b]Mares, islas y desiertos:[/b] océanos, archipiélagos y tierras secas
+  [*][b]Zonas climáticas:[/b] dónde hace calor, frío, llueve o es seco
+  [/list]
+
+  [h2]Cómo se juega[/h2]
+  [list]
+  [*]Gratis; necesita el juego base Trivia en Familia
+  [*]Instalación opcional: se puede quitar y volver a poner en Steam
+  [*]Apagado por defecto: encendedlo en el paso «Paquetes de preguntas» antes de cada partida; jugadlo solo o mezclado con las preguntas del paquete básico
+  [*]Un logro de Steam propio: 50 respuestas correctas de este paquete
+  [*]El paquete crece con las actualizaciones
+  [/list]
+  ```
+
+#### German (`de`) — enter once `pool.de.json` of the bundle ships
+- **Name:** Erdkunde-Fragenpaket
+- **Short description** (≤ 300):
+  > Kostenloses Fragenpaket für Wohnzimmer-Quiz mit mehr Fragen zu Erdkunde: Länder, Städte, Karten, Flaggen, Berge, Flüsse und Meere. Wird separat installiert und ist anfangs aus: in der Fragenauswahl einschalten, wenn es gespielt werden soll.
+- **About This Content:**
+  ```
+  [h2]Mehr Erdkundefragen[/h2]
+  Erdkunde-Fragenpaket ist ein kostenloses Fragenpaket für Wohnzimmer-Quiz. Es bringt mehr Fragen zu Erdkunde: Länder, Städte, Karten, Flaggen, Berge, Flüsse und Meere, zusätzlich zu den Fragen zu Erdkunde, die das Grundpaket schon hat.
+
+  [list]
+  [*][b]Länder und Regionen:[/b] Hauptstädte, Grenzen und Einwohnerzahlen
+  [*][b]Städte:[/b] berühmte Orte und wo man sie findet
+  [*][b]Karten und Flaggen:[/b] Formen, Farben und Symbole
+  [*][b]Berge, Flüsse und Seen:[/b] Landschaften und Gewässer der Welt
+  [*][b]Meere, Inseln und Wüsten:[/b] Ozeane, Inselgruppen und trockene Gebiete
+  [*][b]Klimazonen:[/b] wo es heiß, kalt, nass oder trocken ist
+  [/list]
+
+  [h2]So wird gespielt[/h2]
+  [list]
+  [*]Kostenlos; braucht das Hauptspiel Wohnzimmer-Quiz
+  [*]Optionale Installation: in Steam jederzeit entfernen und wieder hinzufügen
+  [*]Standardmäßig aus: vor dem Spiel in der Fragenauswahl einschalten; allein oder gemischt mit den Fragen des Grundpakets spielbar
+  [*]Eigener Steam-Erfolg: 50 richtige Antworten aus diesem Paket
+  [*]Das Paket wächst mit Updates
+  [/list]
+  ```
+
 ### After approval
 - Capsules: the DLC store name equals the in-game name, so `dlc-colombia/` capsules from `task 669` stay as rendered (no re-run)
 - `germany`: `capsules.mjs` renders `dlc-germany/de/` (bundle language) now; add `en` to its `langs` map in `dlcs()` once the en text is entered
@@ -529,6 +1125,7 @@ Store texts for each shipped question bundle, one free DLC app each (decision 66
 - `mexico`: `capsules.mjs` renders `dlc-mexico/es/` (bundle language) now; add `en` to its `langs` map in `dlcs()` once the en text is entered
 - `uk`: `capsules.mjs` renders `dlc-uk/en/` from the bundle language (en) and `names.en.json`; no script change
 - `usa`: `authoring/store/capsules.mjs` renders `dlc-usa/en/` from `bundles.json` languages (en) and the name in `names.en.json`; render with the other DLCs' capsules, approval with the capsule set
+- topic bundles (`stem`, `sports`, `history`, `movies`, `geography`): capsules in the next task of `plan 187: Steam DLC and store for the topic bundles` (`task 1654: Capsules for the five topic DLCs`); the store names above equal the in-game names, so `dlcs()` needs no name change
 
 ## Modding
 Store and Workshop texts for modding (milestone 15, plan 121): one feature bullet per store language, a link line to the modding guide, and the Workshop hub description. Drafted 2026-10-14 (`task 990`); approved as drafted 2026-10-16 (decision 175: Store texts: modding bullet and guide link?); entered at launch (milestone 11), once the Workshop works for players (`plan 122: Modding end-to-end check and close-out`), never on the beta page.
@@ -692,6 +1289,17 @@ Steamworks content survey: general content (generates Steam's own age ratings), 
 - Answers: as the base, minus nudity (none in the pack), minus Workshop; AI: the DLC line in "Free DLC (`colombia`)" above
 - Without its own rating the DLC page may be hidden in Germany like an unrated game (Valve's Germany page names "games"; recheck in the healthcheck list `partner.steamgames.com/healthcheck/missingratingforgermany`)
 
+### DLC (topic bundles: `stem`, `sports`, `history`, `movies`, `geography`)
+- Drafted 2026-10-21 (`task 1655`), `plan 187: Steam DLC and store for the topic bundles`; same expectations as "DLC (`colombia`)": own survey per DLC app, recheck at entry
+- Answers: as the base (decision 181's approved answers, B2 variant), minus Workshop; nudity: none claimed until the scan says so; AI: the DLC line in "Free DLC (`colombia`)" above, reused (en variant for an `en` pool), no new text
+- Scan of each approved pool at ship time (keywords and a read of the borderline items, like "Scan" above); none of the five has a pool or an approved question yet (`app/data/bundles/` has no topic folder, 2026-10-21), so all are "not scanned yet (2026-10-21): re-scan in the entry checklist decision", no guessing
+  - `stem`: not scanned yet (2026-10-21); expect little (animal experiments, medicine, weapons engineering)
+  - `sports`: not scanned yet (2026-10-21); look for injuries, deaths in sport, doping
+  - `history`: not scanned yet (2026-10-21); look for war, violence, genocide, historical atrocities; the base's B2 answer ("no violence", war history as non-graphic reference) is the starting point, a pool going further changes it
+  - `movies`: not scanned yet (2026-10-21); look for plot violence, horror, sexual content, adult-rated films; posters and stills count as media
+  - `geography`: not scanned yet (2026-10-21); expect little (flags, borders, disputed territories)
+- A borderline that changes an answer (a descriptor) at ship time → pm decision "Topic DLC content survey: <bundle> descriptors?"; otherwise none
+
 ### IARC
 - Recommendation: none. Steam doesn't offer IARC; Germany and Indonesia accept Valve's survey rating; entering an IARC-generated USK rating from another store is forbidden; a real USK review costs money and is "rare" per Valve; Steam only (decision 111), so no other store's IARC either
 
@@ -726,6 +1334,14 @@ Steamworks → the app's landing page → Content Survey (recheck the menu path)
 - [ ] answers per "DLC (`colombia`)" above: as the base, no nudity, no Workshop; AI line from "Free DLC (`colombia`)"
 - [ ] Submit; note the date
 
+### Content survey: topic DLC apps (`stem`, `sports`, `history`, `movies`, `geography`)
+A block per bundle that ships; one DLC app each (`plan 187: Steam DLC and store for the topic bundles`), entered only once the bundle has a pool.
+- [ ] `<id>` DLC app (its ID from the topic DLC checklist decision) → its own Content Survey, if Steamworks has one (else note "inherits from base")
+- [ ] answers per "DLC (topic bundles)" above: as the base, no Workshop; AI line from "Free DLC (`colombia`)"
+- [ ] re-scan the bundle's approved pool first (the "not scanned yet" line of the bundle); a descriptor-changing borderline → its pm decision answered before entry
+- [ ] Submit; note the date
+- Bundles: [ ] `stem`, [ ] `sports`, [ ] `history`, [ ] `movies`, [ ] `geography`
+
 ### Pricing: base package
 Steamworks → Store & release → Pricing → Propose Pricing (recheck).
 - [ ] base price USD $9.99 (or decision 182's value)
@@ -736,6 +1352,10 @@ Steamworks → Store & release → Pricing → Propose Pricing (recheck).
 ### Pricing: `colombia` DLC
 - [ ] DLC app free ("This is a free product", set at creation, `17-publishing.md` "Free DLC"); no price rows, no discount
 - [ ] if the app wasn't created free: fix via the app's settings or Steam Support before review; note it
+
+### Pricing: topic DLCs
+- [ ] each topic DLC app free ("This is a free product", set at creation); no price rows, no discount; as for `colombia` above
+- Bundles: [ ] `stem`, [ ] `sports`, [ ] `history`, [ ] `movies`, [ ] `geography`
 
 ### Launch discount
 - [ ] not now: entered before release on the landing page, per `11-steam.md` "Launch-day checklist" row "Launch discount" (values from PUB-11, decision 182)

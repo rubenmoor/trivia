@@ -1,7 +1,41 @@
 {
   "version": 1,
-  "hash": "f048c1b0",
+  "hash": "9c46c1d0",
   "questions": [
+    {
+      "id": "q-0016",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "pyramids",
+      "bundle": "base",
+      "description": "Ein paar riesige Dreiecke haben sich seit Jahrtausenden keinen Zentimeter bewegt.",
+      "question": "In welchem Land stehen die Pyramiden von Gizeh?",
+      "answer": "Ägypten",
+      "wrong_answers": [
+        "Mexiko",
+        "Peru",
+        "Indien"
+      ],
+      "hints": [
+        "Das Land liegt in Afrika.",
+        "Der Nil fließt hindurch.",
+        "Seine alten Könige hießen Pharaonen."
+      ],
+      "fun_fact": "Die Große Pyramide war fast 4000 Jahre lang das höchste Bauwerk der Welt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/All_Gizah_Pyramids.jpg/3840px-All_Gizah_Pyramids.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAll_Gizah_Pyramids.jpg",
+        "credit": "Ricardo Liberato · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Ricardo Liberato",
+        "author_url": "http://liberato.org"
+      },
+      "background": null
+    },
     {
       "id": "q-0019",
       "status": "approved",
@@ -71,6 +105,74 @@
       "background": null
     },
     {
+      "id": "q-0037",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "human-body",
+      "bundle": "base",
+      "description": "Eine Frage, die herrlich duftet oder fürchterlich stinkt, je nachdem, wer gerade die Schuhe ausgezogen hat.",
+      "question": "Mit welchem Körperteil riechen wir?",
+      "answer": "Nase",
+      "wrong_answers": [
+        "Ohren",
+        "Augen",
+        "Hände"
+      ],
+      "hints": [
+        "Er ist im Gesicht.",
+        "Er sitzt in der Mitte, zwischen den Augen und dem Mund.",
+        "Bei Schnupfen ist er verstopft."
+      ],
+      "fun_fact": "Deine Nase kann Tausende verschiedene Gerüche unterscheiden.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/DSC07729_Sommerblumenschau_Pavilion%2C_Flower_Gardens_Hirschstetten%2C_2025-07.jpg/3840px-DSC07729_Sommerblumenschau_Pavilion%2C_Flower_Gardens_Hirschstetten%2C_2025-07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADSC07729_Sommerblumenschau_Pavilion%2C_Flower_Gardens_Hirschstetten%2C_2025-07.jpg",
+        "credit": "Aciarium · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Aciarium",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Aciarium"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0045",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "human-body",
+      "bundle": "base",
+      "description": "Wer seine Knochen zählen will, braucht viele Finger und noch mehr Geduld.",
+      "question": "Wie viele Knochen hat ein erwachsener Mensch?",
+      "answer": "206",
+      "wrong_answers": [
+        "126",
+        "270",
+        "312"
+      ],
+      "hints": [
+        "Ein Baby kommt mit mehr Knochen auf die Welt, aber einige wachsen später zusammen.",
+        "Es sind weniger als 250.",
+        "Es sind ein kleines bisschen mehr als 200."
+      ],
+      "fun_fact": "Mehr als die Hälfte aller Knochen steckt in den Händen und Füßen.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Hand_X-ray_one.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHand_X-ray_one.jpg",
+        "credit": "SarahCartwright · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "SarahCartwright",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-0047",
       "status": "approved",
       "difficulty": 6,
@@ -101,6 +203,482 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Belikov Maxim",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:BelikovMaxim&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0056",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "Ein Planet, auf dem man für eine Pizza keinen Ofen braucht.",
+      "question": "Welches ist der heißeste Planet des Sonnensystems?",
+      "answer": "Venus",
+      "wrong_answers": [
+        "Merkur",
+        "Mars",
+        "Jupiter"
+      ],
+      "hints": [
+        "Er ist nicht der Planet, der der Sonne am nächsten ist.",
+        "Seine Wolken halten die Wärme fest wie ein Treibhaus.",
+        "Er ist der hellste Planet am Nachthimmel."
+      ],
+      "fun_fact": "Auf der Venus ist es über 460 °C heiß – heißer als in einem Backofen!",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/001_Volcano_eruption_of_Litli-Hr%C3%BAtur_in_Iceland_in_2023_Photo_by_Giles_Laurent.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A001_Volcano_eruption_of_Litli-Hr%C3%BAtur_in_Iceland_in_2023_Photo_by_Giles_Laurent.jpg",
+        "credit": "Giles Laurent · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Giles Laurent",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Giles_Laurent"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0061",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "musical-instruments",
+      "bundle": "base",
+      "description": "Eine Frage, die man am besten mit ganz viel Krach beantwortet.",
+      "question": "Welches Instrument spielt man, indem man mit den Händen oder mit Stöcken darauf schlägt?",
+      "answer": "Trommel",
+      "wrong_answers": [
+        "Geige",
+        "Flöte",
+        "Trompete"
+      ],
+      "hints": [
+        "Es macht „bumm, bumm“!",
+        "Es ist rund und hat ein gespanntes Fell.",
+        "Man hört es in jeder Marschkapelle und bei der Cumbia."
+      ],
+      "fun_fact": "An der Küste Kolumbiens gibt es berühmte Trommeln wie die „tambor alegre“ und den „llamador“.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Crowd%2C_Austin_City_Limits_Music_Festival_2015-3424_%2829723737325%29.jpg/3840px-Crowd%2C_Austin_City_Limits_Music_Festival_2015-3424_%2829723737325%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACrowd%2C_Austin_City_Limits_Music_Festival_2015-3424_%2829723737325%29.jpg",
+        "credit": "Anna Hanks from Austin, Texas, USA · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Anna Hanks from Austin, Texas, USA",
+        "author_url": "https://www.flickr.com/people/23349893@N08"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0073",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "cartoons",
+      "bundle": "base",
+      "description": "Eine Maus, die berühmter ist als alle Katzen der Welt zusammen.",
+      "question": "Wie heißt die berühmteste Zeichentrickmaus der Welt?",
+      "answer": "Micky Maus",
+      "wrong_answers": [
+        "Jerry",
+        "Pikachu",
+        "Speedy Gonzales"
+      ],
+      "hints": [
+        "Sie hat große, runde Ohren.",
+        "Sie trägt eine rote kurze Hose.",
+        "Ihre Freundin heißt Minnie."
+      ],
+      "fun_fact": "Micky Maus hatte ihren ersten Auftritt im Jahr 1928.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Fireworks_over_Ponte_Vecchio.JPG/3840px-Fireworks_over_Ponte_Vecchio.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFireworks_over_Ponte_Vecchio.JPG",
+        "credit": "Martin Falbisoner · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Martin Falbisoner",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-0074",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "disney-films",
+      "bundle": "base",
+      "description": "Eine Familie, deren Haus tanzt, sich bewegt und zu allem eine Meinung hat.",
+      "question": "Wie heißt die Familie, um die es im Film „Encanto“ geht?",
+      "answer": "Madrigal",
+      "wrong_answers": [
+        "Rivera",
+        "Buendía",
+        "Restrepo"
+      ],
+      "hints": [
+        "Die Hauptfigur heißt Mirabel.",
+        "Ihre Großmutter heißt Alma.",
+        "Der Familienname beginnt mit M."
+      ],
+      "fun_fact": "„Encanto“ spielt in Kolumbien und hat den Oscar als bester Animationsfilm gewonnen.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Calle_5%2C_Salento_01.jpg/3840px-Calle_5%2C_Salento_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACalle_5%2C_Salento_01.jpg",
+        "credit": "Bernard Gagnon · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bernard Gagnon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bgag"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0076",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "video-games",
+      "bundle": "base",
+      "description": "Hier baust du eine ganze Burg und musst niemanden um Erlaubnis fragen.",
+      "question": "In welchem Videospiel gibt es grüne Monster, die „Ssssss“ zischen und explodieren, wenn sie dir zu nahe kommen?",
+      "answer": "Minecraft",
+      "wrong_answers": [
+        "Fortnite",
+        "Roblox",
+        "Mario Kart"
+      ],
+      "hints": [
+        "Man kann alles bauen, was man will.",
+        "Man baut Steine und Erze ab, um an Diamanten zu kommen.",
+        "Steve ist die bekannteste Figur darin."
+      ],
+      "fun_fact": "Es ist das meistverkaufte Videospiel aller Zeiten.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Hands_holding_video_game_controller_%2850811892858%29.jpg/3840px-Hands_holding_video_game_controller_%2850811892858%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHands_holding_video_game_controller_%2850811892858%29.jpg",
+        "credit": "Vu Hoang · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Vu Hoang",
+        "author_url": "https://www.flickr.com/people/187794252@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0078",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "disney-films",
+      "bundle": "base",
+      "description": "Eine eiskalte Frage: Lieber erst mal eine Jacke anziehen.",
+      "question": "Wie heißt in „Die Eiskönigin“ das Königreich von Elsa und Anna?",
+      "answer": "Arendelle",
+      "wrong_answers": [
+        "Corona",
+        "Agrabah",
+        "Atlantis"
+      ],
+      "hints": [
+        "Es liegt an einem Fjord.",
+        "Norwegen war das Vorbild dafür.",
+        "Der Name endet auf „-delle“."
+      ],
+      "fun_fact": "Elsa singt „Lass jetzt los“, während sie ihren Eispalast baut.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Iluileq_Fjord_-_Greenland.jpg/3840px-Iluileq_Fjord_-_Greenland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIluileq_Fjord_-_Greenland.jpg",
+        "credit": "APK · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "APK",
+        "author_url": "https://commons.wikimedia.org/wiki/User:APK"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0083",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "film",
+      "bundle": "base",
+      "description": "Eine Schiffsreise, die nicht ganz nach Plan lief.",
+      "question": "Welcher Film von 1997 über ein sinkendes Schiff gewann 11 Oscars?",
+      "answer": "Titanic",
+      "wrong_answers": [
+        "Avatar",
+        "Jurassic Park",
+        "Der Herr der Ringe: Die Rückkehr des Königs"
+      ],
+      "hints": [
+        "Regie führte James Cameron.",
+        "Die Hauptrollen spielen Leonardo DiCaprio und Kate Winslet.",
+        "Das Schiff stößt mit einem Eisberg zusammen."
+      ],
+      "fun_fact": "Seine 11 Oscars sind ein Rekord, den er sich mit „Ben Hur“ und „Die Rückkehr des Königs“ teilt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Departure_of_the_passenger_liner_SS_ORAMA_%288262503245%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADeparture_of_the_passenger_liner_SS_ORAMA_%288262503245%29.jpg",
+        "credit": "Australian National Maritime Museum on The Commons · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Australian National Maritime Museum on The Commons",
+        "author_url": "https://www.flickr.com/people/33147718@N05"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0095",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "athletics",
+      "bundle": "base",
+      "description": "Diese Frage zieht sich. Und zieht sich. Und zieht sich …",
+      "question": "Wie lang ist ein Marathon?",
+      "answer": "42,195 km",
+      "wrong_answers": [
+        "21,097 km",
+        "10 km",
+        "50 km"
+      ],
+      "hints": [
+        "Die schnellsten Läuferinnen und Läufer der Welt brauchen dafür etwas mehr als zwei Stunden.",
+        "Es sind mehr als 40 km.",
+        "Es ist ein kleines bisschen mehr als 42 km."
+      ],
+      "fun_fact": "Der Legende nach lief ein Bote von Marathon bis nach Athen, um dort einen Sieg zu verkünden.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Runners_exiting_a_road_tunnel_during_the_2024_Sofia_Marathon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARunners_exiting_a_road_tunnel_during_the_2024_Sofia_Marathon.jpg",
+        "credit": "SPARKY358 · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "SPARKY358",
+        "author_url": "https://commons.wikimedia.org/wiki/User:SPARKY358"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0097",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "dinosaurs",
+      "bundle": "base",
+      "description": "Tiere, die nicht in dein Zimmer passen würden, nicht in dein Haus und nicht mal in deine Straße.",
+      "question": "Welche riesigen Tiere lebten vor Millionen von Jahren und sind dann ausgestorben?",
+      "answer": "Dinosaurier",
+      "wrong_answers": [
+        "Drachen",
+        "Einhörner",
+        "Elefanten"
+      ],
+      "hints": [
+        "Heute sieht man nur noch ihre Knochen im Museum.",
+        "Einer der berühmtesten ist der T. rex.",
+        "Ihr Name bedeutet „schreckliche Echse“."
+      ],
+      "fun_fact": "Die Vögel von heute stammen von den Dinosauriern ab.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Alsophila_sp._tree_ferns_-_Misamis_Oriental%2C_Philippines_02.jpg/3840px-Alsophila_sp._tree_ferns_-_Misamis_Oriental%2C_Philippines_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlsophila_sp._tree_ferns_-_Misamis_Oriental%2C_Philippines_02.jpg",
+        "credit": "Obsidian Soul · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Obsidian Soul",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Obsidian_Soul"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0100",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "history",
+      "bundle": "base",
+      "description": "Ein Herr mit so vielen Statuen, dass er selbst nicht mehr weiß, welche seine ist.",
+      "question": "Wer wird in Südamerika „El Libertador“, also „der Befreier“, genannt?",
+      "answer": "Simón Bolívar",
+      "wrong_answers": [
+        "Francisco de Paula Santander",
+        "Antonio Nariño",
+        "Policarpa Salavarrieta"
+      ],
+      "hints": [
+        "Er wurde in Caracas geboren.",
+        "Er führte fünf südamerikanische Länder in die Unabhängigkeit.",
+        "Der Hauptplatz von Bogotá trägt seinen Namen."
+      ],
+      "fun_fact": "Das Land Bolivien ist nach ihm benannt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Puente_de_Boyac%C3%A1%2C_vista_lateral..JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APuente_de_Boyac%C3%A1%2C_vista_lateral..JPG",
+        "credit": "Kamilokardona · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Kamilokardona",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kamilokardona&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0102",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "history",
+      "bundle": "base",
+      "description": "Diese Baumeister haben riesige Steine auf einen Berg geschafft – ganz ohne Kran.",
+      "question": "Welche Zivilisation hat Machu Picchu erbaut?",
+      "answer": "Die Inka",
+      "wrong_answers": [
+        "Die Maya",
+        "Die Azteken",
+        "Die Muisca"
+      ],
+      "hints": [
+        "Ihr Reich lag in den Anden.",
+        "Ihre Hauptstadt war Cusco.",
+        "Ihr Reich hieß Tawantinsuyu und reichte von Ecuador bis nach Chile."
+      ],
+      "fun_fact": "Machu Picchu wurde der Welt erst 1911 bekannt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Peru_-_Machu_Picchu_125_-_morning_shrouding_mist_%288297861906%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APeru_-_Machu_Picchu_125_-_morning_shrouding_mist_%288297861906%29.jpg",
+        "credit": "McKay Savage from London, UK · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "McKay Savage from London, UK",
+        "author_url": "https://www.flickr.com/people/56796376@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0109",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "colours",
+      "bundle": "base",
+      "description": "Eine Frage zum Fingermalen und zum Vollschmieren vom Sofa.",
+      "question": "Welche zwei Farben mischt man, um Grün zu bekommen?",
+      "answer": "Blau und Gelb",
+      "wrong_answers": [
+        "Rot und Weiß",
+        "Rot und Blau",
+        "Schwarz und Rot"
+      ],
+      "hints": [
+        "Eine ist die Farbe des Himmels.",
+        "Die andere ist die Farbe der Sonne.",
+        "Beide Farben sind in der Flagge der Ukraine!"
+      ],
+      "fun_fact": "Rot und Blau ergeben Lila, Rot und Gelb ergeben Orange.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Art_tools_and_paint_palette_set_up_for_a_creative_session.jpg/3840px-Art_tools_and_paint_palette_set_up_for_a_creative_session.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArt_tools_and_paint_palette_set_up_for_a_creative_session.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0110",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "language",
+      "bundle": "base",
+      "description": "Ein Buchstabe, den Touristen aus Deutschland auf ihrer Tastatur vergeblich suchen.",
+      "question": "Welchen Buchstaben hat das spanische Alphabet, den das deutsche nicht hat?",
+      "answer": "Ñ",
+      "wrong_answers": [
+        "K",
+        "W",
+        "X"
+      ],
+      "hints": [
+        "Er ist so beliebt, dass er zum Symbol der spanischen Sprache wurde.",
+        "Im Deutschen schreibt man seinen Laut mit zwei Buchstaben, wie das „gn“ in „Champagner“.",
+        "Er trägt eine kleine Wellenlinie obendrauf."
+      ],
+      "fun_fact": "Die kleine Wellenlinie auf dem Ñ heißt Tilde.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Blocks%2C_alphabet_%28AM_1990.255-2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlocks%2C_alphabet_%28AM_1990.255-2%29.jpg",
+        "credit": "CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": null,
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-0116",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "literature",
+      "bundle": "base",
+      "description": "Ein Ritter kämpfte gegen Windmühlen, und die Windmühlen gewannen.",
+      "question": "Wer schrieb „Don Quijote“?",
+      "answer": "Miguel de Cervantes",
+      "wrong_answers": [
+        "Lope de Vega",
+        "Federico García Lorca",
+        "Gabriel García Márquez"
+      ],
+      "hints": [
+        "Er war Spanier.",
+        "In einer Schlacht verlor er die Beweglichkeit einer Hand.",
+        "Man nennt ihn „den Einhändigen von Lepanto“."
+      ],
+      "fun_fact": "Der Welttag des Buches am 23. April erinnert auch an Cervantes: Er starb am 22. April 1616 und wurde am 23. beerdigt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Moulins_La_Mancha.jpg/3840px-Moulins_La_Mancha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMoulins_La_Mancha.jpg",
+        "credit": "Jebulon · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jebulon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jebulon"
       },
       "background": null
     },
@@ -139,6 +717,210 @@
       "background": null
     },
     {
+      "id": "q-0142",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "greek-gods",
+      "bundle": "base",
+      "description": "Die lauteste Nachbarschaft der Antike: jede Nacht Blitze, Streit und Festgelage.",
+      "question": "Auf welchem Berg wohnten nach dem Glauben der alten Griechen ihre Götter?",
+      "answer": "Olymp",
+      "wrong_answers": [
+        "Ätna",
+        "Fuji",
+        "Kilimandscharo"
+      ],
+      "hints": [
+        "Es ist ein echter Berg in Griechenland.",
+        "Sein Name klingt ähnlich wie ein sehr berühmtes Sportereignis.",
+        "Die zwölf wichtigsten Götter mit Zeus an der Spitze wurden nach diesem Berg benannt."
+      ],
+      "fun_fact": "Den Olymp gibt es wirklich: Er ist mit fast 2920 Metern der höchste Berg Griechenlands.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Artemis_Temple_Stoa_DSCN1977a-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArtemis_Temple_Stoa_DSCN1977a-1.jpg",
+        "credit": "Kritheus · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Kritheus",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kritheus"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0148",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "language",
+      "bundle": "base",
+      "description": "Ein Wort, das klingt wie ein Zauberspruch aus einer Zauberschule.",
+      "question": "Was bedeutet das Wort „ephemer“?",
+      "answer": "Dauert nur kurz",
+      "wrong_answers": [
+        "Ist sehr groß",
+        "Leuchtet hell",
+        "Ist uralt"
+      ],
+      "hints": [
+        "Damit kann man eine Seifenblase beschreiben oder ein Video, das viral geht und dann schnell vergessen ist.",
+        "Es kommt von einem griechischen Wort, das mit „einem einzigen Tag“ zu tun hat.",
+        "Das Gegenteil wäre „ewig“."
+      ],
+      "fun_fact": "Eintagsfliegen heißen wissenschaftlich Ephemeroptera: Als erwachsene Tiere leben manche nur einen Tag.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Reflection_in_a_soap_bubble_edit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AReflection_in_a_soap_bubble_edit.jpg",
+        "credit": "Brocken Inaglory. The image was edited by user:Alvesgaspar · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Brocken Inaglory. The image was edited by user:Alvesgaspar",
+        "author_url": "https://sites.google.com/site/thebrockeninglory/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0153",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "optical-illusions",
+      "bundle": "base",
+      "description": "Eine Frage für alle, die glauben, man könne alles mit bloßem Auge messen.",
+      "question": "Schau dir die beiden orangefarbenen Kreise in der Mitte an. Welcher ist größer?",
+      "answer": "Beide sind gleich groß",
+      "wrong_answers": [
+        "Der zwischen den kleinen Kreisen",
+        "Der zwischen den großen Kreisen",
+        "Das hängt vom Licht im Raum ab"
+      ],
+      "hints": [
+        "Denk daran, aus welcher Kategorie diese Frage stammt.",
+        "Die Kreise drumherum sind nur da, um dein Gehirn zu verwirren.",
+        "Mit einem Lineal auf dem Bildschirm gäbe es eine Überraschung: Es gibt keinen Gewinner."
+      ],
+      "fun_fact": "Die Täuschung ist nach dem deutschen Psychologen Hermann Ebbinghaus benannt, der auch erforscht hat, wie wir Gelerntes wieder vergessen.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Ebbinghaus_illusion_2021.jpg/3840px-Ebbinghaus_illusion_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEbbinghaus_illusion_2021.jpg",
+        "credit": "Hamaredha · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Hamaredha",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Hamaredha&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0176",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "pixar-films",
+      "bundle": "base",
+      "description": "Taucht so einer in der Restaurantküche auf, ruft man normalerweise den Kammerjäger und nicht den Restaurantkritiker.",
+      "question": "Eine Ratte mit unglaublich feiner Nase träumt davon, in Paris Koch zu werden, und kocht versteckt unter der Mütze eines Jungen. Welche Pixar-Figur ist das?",
+      "answer": "Remy",
+      "wrong_answers": [
+        "Dorie",
+        "Sulley",
+        "Lightning McQueen"
+      ],
+      "hints": [
+        "Der Film heißt wie ein französisches Gemüsegericht.",
+        "Das große Vorbild ist Chefkoch Gusteau, dessen Motto lautet: „Jeder kann kochen!“",
+        "Der Film heißt „Ratatouille“, und der Name beginnt mit R."
+      ],
+      "fun_fact": "Echtes Ratatouille ist ein Gemüseeintopf aus Südfrankreich mit Aubergine, Zucchini, Tomate und Paprika.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Soup_kitchen%2C_Rue_Cl%C3%A9ment%2C_Paris_6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASoup_kitchen%2C_Rue_Cl%C3%A9ment%2C_Paris_6.jpg",
+        "credit": "Wikimedia Commons / Mu · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Wikimedia Commons / Mu",
+        "author_url": "https://commons.wikimedia.org/wiki/Main_Page"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0177",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "pixar-films",
+      "bundle": "base",
+      "description": "Er räumt seit Jahrhunderten hinter anderen auf, so wie deine Mama in deinem Zimmer, nur ohne zu meckern.",
+      "question": "Wie heißt der Pixar-Roboter, der allein auf der Erde zurückbleibt und Müll zu Würfeln presst?",
+      "answer": "WALL·E",
+      "wrong_answers": [
+        "EVE",
+        "Baymax",
+        "R2-D2"
+      ],
+      "hints": [
+        "Sein einziger Freund ist eine Kakerlake.",
+        "Er verliebt sich in eine weiße, glänzende Roboterdame, die aus dem All kommt.",
+        "Sein Name ist auch der Filmtitel und klingt wie das englische Wort für „Wand“."
+      ],
+      "fun_fact": "In den ersten Minuten von „WALL·E“ wird fast kein Wort gesprochen: Die Geschichte erzählen Robotergeräusche und Blicke.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Waste_landfill_in_Derhachi.jpg/3840px-Waste_landfill_in_Derhachi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWaste_landfill_in_Derhachi.jpg",
+        "credit": "I.Shevtsov · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "I.Shevtsov",
+        "author_url": "https://commons.wikimedia.org/wiki/User:I.shevtsov"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0203",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "anime",
+      "bundle": "base",
+      "description": "Alle zusammenzukriegen ist schwerer, als das WM-Stickeralbum vollzumachen.",
+      "question": "Wie viele Dragonballs muss man in „Dragon Ball“ sammeln, um den Drachen Shenlong zu rufen und sich etwas zu wünschen?",
+      "answer": "7",
+      "wrong_answers": [
+        "5",
+        "9",
+        "3"
+      ],
+      "hints": [
+        "Es ist eine ungerade Zahl.",
+        "Es sind mehr, als eine Hand Finger hat.",
+        "Es sind so viele, wie die Woche Tage hat."
+      ],
+      "fun_fact": "Son Goku ist von Sun Wukong inspiriert, dem Affenkönig aus dem alten chinesischen Roman „Die Reise nach Westen“.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/2008-02-19_Chinese_sculpture_of_dragon_in_Tainan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2008-02-19_Chinese_sculpture_of_dragon_in_Tainan.jpg",
+        "credit": "Pascal Terjan · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Pascal Terjan",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-0205",
       "status": "approved",
       "difficulty": 8,
@@ -169,6 +951,142 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "John Robert McPherson",
         "author_url": "https://commons.wikimedia.org/wiki/User:John_Robert_McPherson"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0208",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "planes",
+      "bundle": "base",
+      "description": "Zwei Brüder, die sich nicht um die Fernbedienung stritten, sondern lieber Dinge erfanden, die fliegen.",
+      "question": "Wie hießen die Brüder, die 1903 den ersten Flug mit einem Motorflugzeug machten?",
+      "answer": "Die Brüder Wright",
+      "wrong_answers": [
+        "Die Brüder Montgolfier",
+        "Die Brüder Lumière",
+        "Die Brüder Grimm"
+      ],
+      "hints": [
+        "Sie waren Amerikaner und hießen Orville und Wilbur.",
+        "Bevor sie Flugzeuge bauten, hatten sie eine Werkstatt, in der sie Fahrräder reparierten und verkauften.",
+        "Ihr Nachname klingt fast wie das englische Wort „right“ (richtig)."
+      ],
+      "fun_fact": "Der erste Flug der Brüder Wright dauerte nur 12 Sekunden und ging etwa 37 Meter weit – weniger als die Länge eines modernen Passagierflugzeugs!",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/First_flight3.jpg/3840px-First_flight3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFirst_flight3.jpg",
+        "credit": "John T. Daniels · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "John T. Daniels",
+        "author_url": "https://en.wikipedia.org/wiki/en:John_T._Daniels"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0212",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "basketball",
+      "bundle": "base",
+      "description": "Ein Spielzug, nach dem der Korb noch zittert und die Gegner nur nach oben schauen.",
+      "question": "Wie heißt es im Basketball, wenn ein Spieler hochspringt und den Ball von oben in den Korb stopft?",
+      "answer": "Dunk",
+      "wrong_answers": [
+        "Korbleger",
+        "Dreier",
+        "Rebound"
+      ],
+      "hints": [
+        "Für diesen Spielzug gibt es ganze Wettbewerbe mit spektakulären Sprüngen.",
+        "Manchmal bleibt der Spieler danach kurz am Ring hängen.",
+        "Der Name kommt aus dem Englischen und bedeutet so viel wie „eintunken“, wie einen Keks in Milch."
+      ],
+      "fun_fact": "Manche Dunks waren so heftig, dass mitten im Spiel das gläserne Korbbrett zersprungen ist.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Open_net_%287190004572%29.jpg/3840px-Open_net_%287190004572%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOpen_net_%287190004572%29.jpg",
+        "credit": "Håkan Dahlström from Malmö, Sweden · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Håkan Dahlström from Malmö, Sweden",
+        "author_url": "https://www.flickr.com/people/93755244@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0248",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "childrens-books",
+      "bundle": "base",
+      "description": "Eine Holzpuppe mit eingebautem Lügendetektor mitten im Gesicht.",
+      "question": "Was passiert mit Pinocchio jedes Mal, wenn er lügt?",
+      "answer": "Seine Nase wird länger",
+      "wrong_answers": [
+        "Seine Ohren fallen ab",
+        "Ihm wachsen grüne Blätter",
+        "Seine Hände werden rot"
+      ],
+      "hints": [
+        "Es passiert in seinem Gesicht.",
+        "Man sieht es schon von Weitem, und es wird immer länger.",
+        "Mit diesem Körperteil riechen wir."
+      ],
+      "fun_fact": "Pinocchio stammt vom Italiener Carlo Collodi und erschien ab 1881 zuerst in Fortsetzungen in einer Kinderzeitung.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Push_puppet_giraffe_%28dkrb%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APush_puppet_giraffe_%28dkrb%29.jpg",
+        "credit": "CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Drahkrub. Attribution must include the URL http://de.wikipedia.org/wiki/Benutzer:Drahkrub.",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Drahkrub"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0263",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "prehistory",
+      "bundle": "base",
+      "description": "Das Geheimrezept der Vorzeit: Man nehme ein Metall, kippe ein zweites dazu und benenne gleich ein ganzes Zeitalter danach.",
+      "question": "Die Bronzezeit ist nach der Bronze benannt, einer Mischung aus Kupfer und einem anderen Metall. Welchem?",
+      "answer": "Zinn",
+      "wrong_answers": [
+        "Eisen",
+        "Silber",
+        "Gold"
+      ],
+      "hints": [
+        "Es ist kein Edelmetall: Für teuren Schmuck nahm man es nicht.",
+        "Eisen kann es nicht sein, denn das bekam später ein eigenes Zeitalter.",
+        "Ein weiches, graues Metall, mit dem man in der Elektronik Kabel lötet."
+      ],
+      "fun_fact": "Danach kam die Eisenzeit, denn um Eisen zu bearbeiten, brauchte man viel heißere Öfen als für Bronze.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/%28Toulouse%29_Mus%C3%A9e_Saint-Raymond_-_%C3%A9p%C3%A9e_en_bronze_inv.30090.jpg/3840px-%28Toulouse%29_Mus%C3%A9e_Saint-Raymond_-_%C3%A9p%C3%A9e_en_bronze_inv.30090.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%28Toulouse%29_Mus%C3%A9e_Saint-Raymond_-_%C3%A9p%C3%A9e_en_bronze_inv.30090.jpg",
+        "credit": "Didier Descouens · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Didier Descouens",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Archaeodontosaurus"
       },
       "background": null
     },
@@ -207,6 +1125,40 @@
       "background": null
     },
     {
+      "id": "q-0303",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "prehistory",
+      "bundle": "base",
+      "description": "Dieser Herr im Museum hat kein Gramm Fleisch mehr auf den Rippen, posiert aber immer noch für Fotos.",
+      "question": "Schau dir dieses Skelett aus dem Museum an: Von welchem Tier der Vorzeit stammt es?",
+      "answer": "Mammut",
+      "wrong_answers": [
+        "Säbelzahntiger",
+        "Riesenfaultier",
+        "Wollnashorn"
+      ],
+      "hints": [
+        "Es lebte in der Eiszeit, und die ersten Menschen jagten es.",
+        "Achte auf die riesigen, gebogenen Stoßzähne.",
+        "Manny aus „Ice Age“ ist eins davon."
+      ],
+      "fun_fact": "Die letzten Mammuts lebten bis vor etwa 4000 Jahren auf der Wrangelinsel im Nordpolarmeer – da standen die Pyramiden in Ägypten schon.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Mammouth_de_Choulans_-_Mus%C3%A9e_des_Confluences_-_Lyon_le_20_12_2014_-_1.JPG/3840px-Mammouth_de_Choulans_-_Mus%C3%A9e_des_Confluences_-_Lyon_le_20_12_2014_-_1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMammouth_de_Choulans_-_Mus%C3%A9e_des_Confluences_-_Lyon_le_20_12_2014_-_1.JPG",
+        "credit": "El pitareio · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "El pitareio",
+        "author_url": "https://commons.wikimedia.org/wiki/User:El_pitareio"
+      },
+      "background": null
+    },
+    {
       "id": "q-0324",
       "status": "approved",
       "difficulty": 6,
@@ -241,6 +1193,74 @@
       "background": null
     },
     {
+      "id": "q-0334",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "artificial-intelligence",
+      "bundle": "base",
+      "description": "Der Freund, der immer sofort antwortet, nie müde wird und nicht mal ein Gesicht hat.",
+      "question": "Wie heißt ein Programm, das schriftlich mit dir spricht, als wäre es ein Mensch?",
+      "answer": "Chatbot",
+      "wrong_answers": [
+        "Virenscanner",
+        "Browser",
+        "Emoticon"
+      ],
+      "hints": [
+        "Sein Name kommt aus dem Englischen und hat zwei Teile.",
+        "Viele Kundenservice-Seiten setzen ihn ein, um rund um die Uhr Fragen zu beantworten.",
+        "Sein Name verbindet „chatten“ mit einem Stück des Wortes „Roboter“."
+      ],
+      "fun_fact": "Einer der ersten Chatbots, ELIZA, entstand in den 1960er-Jahren und gab sich als Psychotherapeutin aus, die mit Gegenfragen antwortete.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Children%27s_learner_typing_on_the_laptop_keyboard_closeup.jpg/3840px-Children%27s_learner_typing_on_the_laptop_keyboard_closeup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChildren%27s_learner_typing_on_the_laptop_keyboard_closeup.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0339",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "internet",
+      "bundle": "base",
+      "description": "Drei Buchstaben, die du tippst, ohne nachzudenken – so wie man „Hallo“ sagt, ohne zu wissen, woher das Wort kommt.",
+      "question": "Wofür stehen die Buchstaben „www“ am Anfang vieler Internetadressen?",
+      "answer": "World Wide Web",
+      "wrong_answers": [
+        "World Wireless Window",
+        "Wide Wireless Web",
+        "World Web Works"
+      ],
+      "hints": [
+        "Es ist Englisch, und das erste Wort bedeutet „Welt“.",
+        "Gemeint ist ein riesiges Netz, das Seiten auf dem ganzen Planeten verbindet.",
+        "Das letzte Wort bedeutet auf Englisch „Spinnennetz“."
+      ],
+      "fun_fact": "Das World Wide Web erfand der britische Wissenschaftler Tim Berners-Lee 1989, als er am CERN arbeitete, einem Forschungszentrum in der Schweiz.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/RibbonCutout1.jpg/3840px-RibbonCutout1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARibbonCutout1.jpg",
+        "credit": "Infestor · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Infestor",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Infestor"
+      },
+      "background": null
+    },
+    {
       "id": "q-0359",
       "status": "approved",
       "difficulty": 7,
@@ -271,6 +1291,108 @@
         "license_url": null,
         "author": "Claude Lorrain",
         "author_url": "https://en.wikipedia.org/wiki/en:Claude_Lorrain"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0366",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "guinness-world-records",
+      "bundle": "base",
+      "description": "Eine Blume, für die es keine passende Vase gibt – und an der man besser nicht riecht.",
+      "question": "Welche Pflanze hat die größte einzelne Blüte der Welt?",
+      "answer": "Rafflesia",
+      "wrong_answers": [
+        "Sonnenblume",
+        "Riesenseerose",
+        "Magnolie"
+      ],
+      "hints": [
+        "Sie wächst in den Regenwäldern Indonesiens und Malaysias.",
+        "Sie hat keine Blätter, keinen Stängel und keine Wurzeln: Sie lebt als Schmarotzer auf einer Kletterpflanze.",
+        "Ihre Blüte wird fast einen Meter breit und stinkt nach verfaultem Fleisch, um Fliegen anzulocken."
+      ],
+      "fun_fact": "Die Rafflesia stinkt mit Absicht nach verfaultem Fleisch: So lockt sie die Fliegen an, die sie bestäuben.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Borneo_rainforest.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABorneo_rainforest.jpg",
+        "credit": "Dukeabruzzi · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dukeabruzzi",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dukeabruzzi&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0368",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "guinness-world-records",
+      "bundle": "base",
+      "description": "Dieser Herr musste nie jemanden bitten, ihm etwas vom obersten Regal zu holen.",
+      "question": "Robert Wadlow ist der größte Mensch der Geschichte. Wie groß war er ungefähr?",
+      "answer": "Etwa 2,72 Meter",
+      "wrong_answers": [
+        "Etwa 2,10 Meter",
+        "Etwa 3,50 Meter",
+        "Etwa 1,95 Meter"
+      ],
+      "hints": [
+        "Er war deutlich größer als jeder Basketballspieler.",
+        "Eine normale Tür ist etwa 2 Meter hoch, und er musste sich tief bücken, um hindurchzugehen.",
+        "Er war fast drei Meter groß, aber nicht ganz."
+      ],
+      "fun_fact": "Robert Wadlow wuchs sein ganzes Leben lang weiter, weil sein Körper zu viel Wachstumshormon bildete.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Robertwadlow.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARobertwadlow.JPG",
+        "credit": "User: (WT-shared) Ethajek at  wts wikivoyage · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "User: (WT-shared) Ethajek at  wts wikivoyage",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-0392",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "museums",
+      "bundle": "base",
+      "description": "Ein Königspalast, der heute mehr Besuch bekommt als jeder König in seinem ganzen Leben.",
+      "question": "Sieh dir das Foto an: Welches berühmte Pariser Museum hat diese Glaspyramide am Eingang?",
+      "answer": "Louvre",
+      "wrong_answers": [
+        "Musée d'Orsay",
+        "Musée Rodin",
+        "Centre Pompidou"
+      ],
+      "hints": [
+        "Bevor es ein Museum wurde, war dieses Gebäude ein Palast der französischen Könige.",
+        "Hier hängt das berühmteste Gemälde der Welt: die Mona Lisa.",
+        "Sein Name wird ungefähr „Luhwr“ ausgesprochen."
+      ],
+      "fun_fact": "Der Louvre ist das meistbesuchte Museum der Welt und hat so viele Werke, dass man Wochen bräuchte, um jedes nur eine Minute lang anzusehen.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/3840px-Louvre_Museum_Wikimedia_Commons.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALouvre_Museum_Wikimedia_Commons.jpg",
+        "credit": "Benh LIEU SONG (Flickr) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Benh LIEU SONG (Flickr)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Benh"
       },
       "background": null
     },
@@ -377,6 +1499,40 @@
       "background": null
     },
     {
+      "id": "q-0490",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "plants",
+      "bundle": "base",
+      "description": "Eine Pflanze, die sich Essen bestellt hat – und das Mittagessen kam direkt angeflogen.",
+      "question": "Sieh dir das Foto an: Wie heißt diese fleischfressende Pflanze?",
+      "answer": "Venusfliegenfalle",
+      "wrong_answers": [
+        "Kannenpflanze",
+        "Sonnentau",
+        "Fettkraut"
+      ],
+      "hints": [
+        "In der Natur wächst sie nur in einigen Sümpfen in den USA.",
+        "Ihre Blätter sehen aus wie ein Maul mit Zähnen und klappen zu, sobald ein Insekt sie berührt.",
+        "In ihrem Namen stecken ein Planet und das, was sie fängt."
+      ],
+      "fun_fact": "Damit sie keine Energie für Fehlalarme verschwendet, schnappt die Falle nur zu, wenn ein Insekt ihre Fühlhaare innerhalb weniger Sekunden zweimal berührt.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Dionaea_muscipula_PT_20240516_063394.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADionaea_muscipula_PT_20240516_063394.jpg",
+        "credit": "Philiptdotcom · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Philiptdotcom",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Philiptdotcom&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-0502",
       "status": "approved",
       "difficulty": 4,
@@ -445,6 +1601,40 @@
       "background": null
     },
     {
+      "id": "q-0531",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "board-games",
+      "bundle": "base",
+      "description": "Wenn das Geld alle ist und du deine Straßen bei der Bank versetzt wie ein altes Handy.",
+      "question": "Beim Monopoly nimmst du eine Hypothek auf ein Grundstück auf, das 200 € gekostet hat. Wie viel zahlt dir die Bank nach den klassischen Regeln?",
+      "answer": "100 €",
+      "wrong_answers": [
+        "200 €",
+        "50 €",
+        "150 €"
+      ],
+      "hints": [
+        "Die Bank gibt dir nicht alles zurück, was du bezahlt hast.",
+        "Der Hypothekenwert steht auf der Rückseite der Besitzrechtkarte.",
+        "Es ist genau die Hälfte des Kaufpreises."
+      ],
+      "fun_fact": "Solange ein Grundstück mit einer Hypothek belastet ist, bekommst du keine Miete dafür, und um es zurückzuholen, zahlst du der Bank die Hypothek plus 10 % Zinsen.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Monopoly_houses_and_poker_chips.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMonopoly_houses_and_poker_chips.jpg",
+        "credit": "Images Money · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Images Money",
+        "author_url": "https://www.flickr.com/photos/59937401@N07"
+      },
+      "background": null
+    },
+    {
       "id": "q-0537",
       "status": "approved",
       "difficulty": 2,
@@ -509,6 +1699,40 @@
         "license_url": null,
         "author": "NOAA Okeanos Explorer",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-0551",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "pirates",
+      "bundle": "base",
+      "description": "Vor Netflix vertrieben sich die Römer die Zeit mit Piratenjagd quer übers Mittelmeer.",
+      "question": "In welchem Jahrhundert befreite der römische Feldherr Pompeius das Mittelmeer von den Piraten?",
+      "answer": "1. Jahrhundert v. Chr.",
+      "wrong_answers": [
+        "5. Jahrhundert v. Chr.",
+        "3. Jahrhundert n. Chr.",
+        "8. Jahrhundert n. Chr."
+      ],
+      "hints": [
+        "Es war zur Zeit der Römischen Republik, also bevor es Kaiser gab.",
+        "Pompeius war ein Rivale von Julius Cäsar.",
+        "Es war nur wenige Jahrzehnte vor Christi Geburt."
+      ],
+      "fun_fact": "Ein paar Jahre vorher wurde der junge Julius Cäsar von Piraten entführt – und verlangte beleidigt, dass sie ein höheres Lösegeld für ihn fordern.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Pomp%C3%A9i_%28N%C3%AEmes%29_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APomp%C3%A9i_%28N%C3%AEmes%29_04.jpg",
+        "credit": "Finoskov · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Finoskov",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Finoskov"
       },
       "background": null
     },
@@ -615,40 +1839,6 @@
       "background": null
     },
     {
-      "id": "q-0596",
-      "status": "approved",
-      "difficulty": 7,
-      "subcategory": "amphibians",
-      "bundle": "base",
-      "description": "Ein Frosch mit dem Appetit eines Ochsen und den Manieren eines Gastes, den niemand eingeladen hat.",
-      "question": "Rate mal: Ich bin ein riesiger Frosch aus Nordamerika, wurde anderswo gezüchtet, bin entkommen und fresse dort die Frösche. Was für eine Art bin ich?",
-      "answer": "Invasive Art",
-      "wrong_answers": [
-        "Endemische Art",
-        "Wandernde Art",
-        "Domestizierte Art"
-      ],
-      "hints": [
-        "Für die Natur dort, wo sie angekommen ist, ist sie ein Problem.",
-        "Sie ist das Gegenteil einer heimischen Art.",
-        "Wie jemand, der in ein fremdes Haus eindringt und sich alles unter den Nagel reißt."
-      ],
-      "fun_fact": "Der Ochsenfrosch frisst fast alles, was in sein Maul passt: Insekten, Fische, andere Frösche – und sogar kleine Vögel!",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Lithobates_catesbeianus_PP.jpg/3840px-Lithobates_catesbeianus_PP.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALithobates_catesbeianus_PP.jpg",
-        "credit": "Cephas · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Cephas",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Cephas"
-      },
-      "background": null
-    },
-    {
       "id": "q-0604",
       "status": "approved",
       "difficulty": 15,
@@ -679,6 +1869,108 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Charles J. Sharp",
         "author_url": "https://www.wikidata.org/wiki/Q54800218"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0622",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "art",
+      "bundle": "base",
+      "description": "Eine Statue, die den Kopf verloren hat, aber nie ihren Stil.",
+      "question": "Diese kopflose griechische Statue mit großen Flügeln steht oben an einer Treppe im Louvre. Welche Göttin stellt sie dar?",
+      "answer": "Nike",
+      "wrong_answers": [
+        "Athene",
+        "Aphrodite",
+        "Artemis"
+      ],
+      "hints": [
+        "Diese Göttin erschien, wenn jemand eine Schlacht gewann.",
+        "Die Statue wurde auf den Bug eines steinernen Schiffes gestellt.",
+        "Eine berühmte Sportschuhmarke trägt ihren Namen."
+      ],
+      "fun_fact": "Die Statue wurde 1863 auf der griechischen Insel Samothrake gefunden, in mehr als hundert Stücke zerbrochen.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Nike_of_Samothrace%2C_Paris%2C_Louvre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANike_of_Samothrace%2C_Paris%2C_Louvre.jpg",
+        "credit": "Wilfredor · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Wilfredor",
+        "author_url": "https://www.wikidata.org/wiki/Q115464159"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0624",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "art",
+      "bundle": "base",
+      "description": "Ein Stil, der Pflanzen über alles liebte, aber nie eine gegossen hat.",
+      "question": "Welchen Stil haben die Pariser Metro-Eingänge mit eisernen Stängeln, die Plakate von Alfons Mucha und die geschwungenen Häuser von Victor Horta gemeinsam?",
+      "answer": "Jugendstil",
+      "wrong_answers": [
+        "Art déco",
+        "Barock",
+        "Kubismus"
+      ],
+      "hints": [
+        "Er war um das Jahr 1900 in Mode.",
+        "Er liebt geschwungene Linien nach dem Vorbild der Natur.",
+        "Auf Französisch heißt er wörtlich „neue Kunst“."
+      ],
+      "fun_fact": "In Spanien hieß dieser Stil Modernismo, und Gaudí ist sein berühmtester Architekt.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Wrought_iron_wall_packet%2C_V%26A_London.jpg/3840px-Wrought_iron_wall_packet%2C_V%26A_London.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWrought_iron_wall_packet%2C_V%26A_London.jpg",
+        "credit": "14GTR · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "14GTR",
+        "author_url": "https://commons.wikimedia.org/wiki/User:14GTR"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0635",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "ships-and-boats",
+      "bundle": "base",
+      "description": "Ein Schiff, dessen Name „Ausdauer“ bedeutet, und die hatte es auch bitter nötig.",
+      "question": "In welchem Jahr stach die Endurance, das Schiff von Ernest Shackleton, Richtung Antarktis in See?",
+      "answer": "1914",
+      "wrong_answers": [
+        "1905",
+        "1923",
+        "1931"
+      ],
+      "hints": [
+        "Es war zu Beginn des 20. Jahrhunderts.",
+        "Im selben Jahr brach in Europa ein großer Krieg aus.",
+        "Gerade begann der Erste Weltkrieg."
+      ],
+      "fun_fact": "Das Wrack der Endurance wurde 2022 in fast 3000 Metern Tiefe entdeckt, so gut erhalten, dass ihr Name am Heck noch zu lesen war.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Endurance_trapped_in_pack_ice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEndurance_trapped_in_pack_ice.jpg",
+        "credit": "Frank Hurley · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Frank Hurley",
+        "author_url": "https://en.wikipedia.org/wiki/en:Frank_Hurley"
       },
       "background": null
     },
@@ -717,6 +2009,40 @@
       "background": null
     },
     {
+      "id": "q-0655",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "cartoons",
+      "bundle": "base",
+      "description": "Der Computer grübelt so lange, dass du locker noch einen Kaffee trinken kannst.",
+      "question": "Wie heißt der letzte Schritt der 3D-Animation, bei dem der Computer Licht, Schatten und Texturen zum fertigen Bild berechnet?",
+      "answer": "Rendering",
+      "wrong_answers": [
+        "Rotoskopie",
+        "Modellierung",
+        "Stop-Motion"
+      ],
+      "hints": [
+        "Er kommt ganz am Schluss, nachdem die Figuren gebaut und bewegt wurden.",
+        "Für Pixar-Filme braucht man dafür ganze Hallen voller Computer.",
+        "Der Begriff kommt aus dem Englischen und bedeutet so viel wie „wiedergeben“ oder „umsetzen“."
+      ],
+      "fun_fact": "In den ersten Pixar-Filmen brauchten manche Einzelbilder Stunden, bis sie fertig berechnet waren – und ein Film hat über 100 000 Bilder.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/139_Server_Room_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A139_Server_Room_01.jpg",
+        "credit": "Indrajit Das · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Indrajit Das",
+        "author_url": "https://www.wikidata.org/wiki/Q56173187"
+      },
+      "background": null
+    },
+    {
       "id": "q-0693",
       "status": "approved",
       "difficulty": 7,
@@ -747,6 +2073,74 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Ocdp",
         "author_url": "https://commons.wikimedia.org/wiki/User:Ocdp"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0715",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "extreme-sports",
+      "bundle": "base",
+      "description": "Vier Rollen, null Motor und jede Menge aufgeschürfte Knie.",
+      "question": "„Fahrrad“ ist zu „Radfahrer“ wie „Skateboard“ zu …",
+      "answer": "Skateboarder",
+      "wrong_answers": [
+        "Schwimmer",
+        "Reiter",
+        "Pilot"
+      ],
+      "hints": [
+        "Überleg, wie die Person heißt, die das jeweilige Ding benutzt.",
+        "Das Wort klingt fast genauso wie das Brett mit Rollen.",
+        "Er saust gern durch die Halfpipe."
+      ],
+      "fun_fact": "Skateboarding war bei den Spielen in Tokio 2020 zum ersten Mal olympisch.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Skateboard_ramp_at_Sonoma_Surf_%26_Skate_-_2021_-_Sarah_Stierch.jpg/3840px-Skateboard_ramp_at_Sonoma_Surf_%26_Skate_-_2021_-_Sarah_Stierch.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASkateboard_ramp_at_Sonoma_Surf_%26_Skate_-_2021_-_Sarah_Stierch.jpg",
+        "credit": "Missvain · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Missvain",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Missvain"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0722",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "extreme-sports",
+      "bundle": "base",
+      "description": "Ein Job, bei dem das Büro auf dem Dach der Welt liegt.",
+      "question": "Das Volk von Tenzing Norgay, der mit Hillary den Everest bestieg, gab den Bergführern im Himalaya ihren Namen. Welches Volk?",
+      "answer": "Sherpa",
+      "wrong_answers": [
+        "Gurkha",
+        "Lama",
+        "Maharadscha"
+      ],
+      "hints": [
+        "Sie leben in den Bergen Nepals.",
+        "Heute stellen fast alle Everest-Expeditionen sie ein.",
+        "Ihr Name steht auch für ein flauschiges Futter in Jacken."
+      ],
+      "fun_fact": "Tenzing Norgay ließ auf dem Gipfel des Everest Süßigkeiten und Kekse als Opfergabe zurück, so wie es seine buddhistische Tradition vorsieht.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Everest%2C_Himalayas.jpg/3840px-Everest%2C_Himalayas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEverest%2C_Himalayas.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
       },
       "background": null
     },
@@ -921,6 +2315,108 @@
       "background": null
     },
     {
+      "id": "q-0824",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "norse-mythology",
+      "bundle": "base",
+      "description": "Eine Freundschaft, die mit einem Treffer begann – und zwar nicht mit Amors Pfeil.",
+      "question": "Rate mal: Ich bin ein schwarzer Nachtschatten-Drache und habe ein Stück meines Schwanzes verloren. Ein junger Wikinger baute mir ein neues. Wer ist er?",
+      "answer": "Hicks",
+      "wrong_answers": [
+        "Astrid",
+        "Haudrauf",
+        "Rotzbakke"
+      ],
+      "hints": [
+        "Er ist die Hauptfigur in „Drachenzähmen leicht gemacht“.",
+        "Er ist schmächtig, ein Tüftler, und sein Vater ist der Häuptling des Dorfes.",
+        "Sein Name klingt wie das Geräusch, das man bei Schluckauf macht."
+      ],
+      "fun_fact": "Ohnezahn heißt so, weil er seine Zähne einziehen kann – eigentlich hat er also welche.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/The_Viking_Ship_%27Hugin%27_%28Cliffs_End%29.JPG/3840px-The_Viking_Ship_%27Hugin%27_%28Cliffs_End%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Viking_Ship_%27Hugin%27_%28Cliffs_End%29.JPG",
+        "credit": "Quartettgeschwister · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Quartettgeschwister",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Quartettgeschwister&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0826",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "norse-mythology",
+      "bundle": "base",
+      "description": "Ein Wikinger, der Burgen plündert, aber vor seiner Frau mehr Angst hat.",
+      "question": "Dik Browne erfand 1973 einen Comicstrip über einen dickbäuchigen Wikinger mit Hörnerhelm und seine Frau Helga. Wie heißt der Comic auf Deutsch?",
+      "answer": "Hägar der Schreckliche",
+      "wrong_answers": [
+        "Prinz Eisenherz",
+        "Asterix der Gallier",
+        "Calvin und Hobbes"
+      ],
+      "hints": [
+        "Er erschien auf den Comicseiten von Zeitungen.",
+        "Der Held hat einen Hund namens Snert.",
+        "Der Titel nennt den Vornamen des Wikingers und einen Beinamen, der ihn furchterregend klingen lässt."
+      ],
+      "fun_fact": "Echte Wikinger trugen im Kampf so gut wie sicher keine Hörnerhelme: Dieses Bild wurde erst im 19. Jahrhundert durch Opern und Gemälde populär.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Viking_Arms_and_Armor_%289302360544%29.jpg/3840px-Viking_Arms_and_Armor_%289302360544%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AViking_Arms_and_Armor_%289302360544%29.jpg",
+        "credit": "Helgi Halldórsson from Reykjavík, Iceland · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Helgi Halldórsson from Reykjavík, Iceland",
+        "author_url": "https://www.flickr.com/people/8058853@N06"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0842",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "world-cups",
+      "bundle": "base",
+      "description": "Sterne, die man nachts nicht sieht, dafür aber jedes Mal, wenn das Team aufs Spielfeld läuft.",
+      "question": "Schau dir die Sterne über dem Wappen auf diesem Trikot an. Wofür stehen sie?",
+      "answer": "Die gewonnenen Weltmeistertitel",
+      "wrong_answers": [
+        "Die berühmten Spieler im Team",
+        "Die gewonnenen Kontinentaltitel",
+        "Die erreichten Endspiele"
+      ],
+      "hints": [
+        "Mit dem Himmel haben sie nichts zu tun.",
+        "Brasilien hat fünf davon, Argentinien drei.",
+        "Man bekommt sie, wenn man den wichtigsten Pokal im Fußball in die Höhe stemmt."
+      ],
+      "fun_fact": "Argentinien bekam seinen dritten Stern nach dem WM-Sieg in Katar 2022.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Alexander_Gerst_sports_the_fourth_star.jpg/3840px-Alexander_Gerst_sports_the_fourth_star.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlexander_Gerst_sports_the_fourth_star.jpg",
+        "credit": "NASA · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-0863",
       "status": "approved",
       "difficulty": 2,
@@ -989,36 +2485,36 @@
       "background": null
     },
     {
-      "id": "q-0885",
+      "id": "q-0872",
       "status": "approved",
-      "difficulty": 4,
-      "subcategory": "planet-earth",
+      "difficulty": 7,
+      "subcategory": "video-game-characters",
       "bundle": "base",
-      "description": "Ein Rätsel, in dem mehr Land steckt als auf jedem Bauernhof.",
-      "question": "„Kolumbien verhält sich zu Land wie Südamerika zu …“. Welches Wort ergänzt den Satz?",
-      "answer": "Kontinent",
+      "description": "Ein Turnier, bei dem garantiert niemand zum Mensch-ärgere-dich-nicht kommt.",
+      "question": "Am Spielautomaten kannst du zum Kämpfen Ryu, Chun-Li oder Blanka wählen. Was haben diese drei Figuren gemeinsam?",
+      "answer": "Sie sind aus Street Fighter",
       "wrong_answers": [
-        "Ozean",
-        "Insel",
-        "Stadt"
+        "Sie sind aus Mortal Kombat",
+        "Sie sind aus Tekken",
+        "Sie sind aus Final Fantasy"
       ],
       "hints": [
-        "Südamerika ist viel größer als Kolumbien.",
-        "In Südamerika haben viele Länder Platz.",
-        "Afrika, Europa und Asien sind auch welche."
+        "Alle drei sind Figuren aus einem sehr berühmten Kampfspiel.",
+        "Das Spiel entstand an den Spielautomaten von Capcom.",
+        "Auf Deutsch hieße es ungefähr „Straßenkämpfer“."
       ],
-      "fun_fact": "Je nach Zählweise gibt es 5, 6 oder 7 Kontinente: In Kolumbien lernt man meist, dass Amerika ein einziger ist.",
+      "fun_fact": "Laut der Geschichte des Spiels stammt Blanka, der grüne Kämpfer, der Strom verschießt, aus Brasilien.",
       "media": {
         "type": "image",
         "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Globe_with_yellow_background_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGlobe_with_yellow_background_1.jpg",
-        "credit": "Wendy Cope · CC BY 2.0 · Wikimedia Commons",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Mazinger_Z_arcade_cabinet_2026-08-14.jpg/3840px-Mazinger_Z_arcade_cabinet_2026-08-14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMazinger_Z_arcade_cabinet_2026-08-14.jpg",
+        "credit": "GuiltyGearFan37 · CC0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "Wendy Cope",
-        "author_url": null
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "GuiltyGearFan37",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:GuiltyGearFan37&action=edit&redlink=1"
       },
       "background": null
     },
@@ -1091,6 +2587,74 @@
       "background": null
     },
     {
+      "id": "q-0982",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "magic",
+      "bundle": "base",
+      "description": "Ein Möbelstück, das mehr liest als du – und dabei hat es nicht mal Augen.",
+      "question": "Ich bin der Zaubertisch aus Minecraft: Auf mir schwebt ein Buch, das sich öffnet, wenn du näher kommst. Was bringen Bücherregale um mich herum?",
+      "answer": "Die Verzauberungen werden stärker",
+      "wrong_answers": [
+        "Man verzaubert mehrere Dinge auf einmal",
+        "Man braucht kein Lapislazuli mehr",
+        "Die Verzauberungen gehen schneller"
+      ],
+      "hints": [
+        "Die Regale müssen in der Nähe stehen, aber mit einem freien Block zwischen ihnen und dem Tisch.",
+        "Achte auf die Zahlen neben jeder Verzauberung, die angeboten wird.",
+        "Mehr Bücher ringsum, mehr magisches Wissen für den Tisch."
+      ],
+      "fun_fact": "Mit genug Bücherregalen drumherum bietet der Zaubertisch in Minecraft Verzauberungen bis Stufe 30 an.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Oldbooks-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOldbooks-02.jpg",
+        "credit": "Liam Quin · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Liam Quin",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-1032",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "pirates",
+      "bundle": "base",
+      "description": "Piraten ohne Papagei und Holzbein, dafür mit Schnellbooten.",
+      "question": "Was haben „Captain Phillips“, Schnellboote, die Frachter überfallen, und Kriegsschiffe, die Tanker im Indischen Ozean begleiten, gemeinsam?",
+      "answer": "Somalische Piraten",
+      "wrong_answers": [
+        "Barbaresken-Korsaren",
+        "Piraten der Malakkastraße",
+        "Wikinger"
+      ],
+      "hints": [
+        "Es geht um moderne Piraterie aus diesem Jahrhundert.",
+        "Es passiert in der Nähe des Eingangs zum Roten Meer.",
+        "Die Hauptstadt des Landes dieser Piraten ist Mogadischu."
+      ],
+      "fun_fact": "„Captain Phillips“ beruht auf der echten Entführung des Frachters Maersk Alabama im Jahr 2009.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Container_ship_Reecon_Whale_on_Black_Sea_near_Constan%C8%9Ba_Romania.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AContainer_ship_Reecon_Whale_on_Black_Sea_near_Constan%C8%9Ba_Romania.jpg",
+        "credit": "HopsonRoad · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "HopsonRoad",
+        "author_url": "https://commons.wikimedia.org/wiki/User:HopsonRoad"
+      },
+      "background": null
+    },
+    {
       "id": "q-1040",
       "status": "approved",
       "difficulty": 4,
@@ -1125,40 +2689,6 @@
       "background": null
     },
     {
-      "id": "q-1051",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "indigenous-peoples-of-the-amazon",
-      "bundle": "base",
-      "description": "Ein Baum, dem man den Bauch ausgeräumt hat, damit er einen neuen Job antreten kann.",
-      "question": "Ein riesiger Baumstamm wird mit Feuer und Axt ausgehöhlt und an beiden Enden spitz zugeschnitten. Wofür wird er benutzt?",
-      "answer": "Zum Fahren auf dem Fluss",
-      "wrong_answers": [
-        "Zum Auffangen von Regenwasser",
-        "Zum Lagern der Maniokernte",
-        "Zum Musikmachen"
-      ],
-      "hints": [
-        "Die Spitzen helfen dabei, etwas zu durchschneiden, das sich bewegt.",
-        "Im Regenwald sind die Flüsse so etwas wie die Straßen.",
-        "Ein paar Paddel werden auch noch gebraucht."
-      ],
-      "fun_fact": "Manche aus einem einzigen Stamm geschnitzten Kanus bieten Platz für mehr als zehn Menschen.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Brazil-00336_-_Kapok_Tree_%2848964056527%29.jpg/3840px-Brazil-00336_-_Kapok_Tree_%2848964056527%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABrazil-00336_-_Kapok_Tree_%2848964056527%29.jpg",
-        "credit": "Dennis G. Jarvis · CC BY-SA 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "Dennis G. Jarvis",
-        "author_url": "https://www.wikidata.org/wiki/Q122977591"
-      },
-      "background": null
-    },
-    {
       "id": "q-1053",
       "status": "approved",
       "difficulty": 13,
@@ -1189,6 +2719,142 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "veeterzy veeterzy",
         "author_url": "https://unsplash.com/@veeterzy"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1071",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "robots",
+      "bundle": "base",
+      "description": "Ein Baby, das nie weint, nie schläft und eine Bauanleitung hat, die jeder lesen darf.",
+      "question": "iCub ist ein Roboter in der Größe eines Kleinkinds, gebaut an einem Institut in Genua. Welcher italienische Forscher leitete seine Entwicklung mit?",
+      "answer": "Giorgio Metta",
+      "wrong_answers": [
+        "Bruno Siciliano",
+        "Paolo Dario",
+        "Dario Floreano"
+      ],
+      "hints": [
+        "Er hat den Großteil seiner Laufbahn in Genua gearbeitet.",
+        "Er wurde wissenschaftlicher Direktor des Italienischen Instituts für Technologie.",
+        "Sein Vorname ist die italienische Form von „Georg“."
+      ],
+      "fun_fact": "Dutzende iCub-Exemplare stehen in Laboren auf der ganzen Welt, und ihre Baupläne sind frei für alle zugänglich.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Aerial_view_-_Harbour_of_Genoa%2C_Italy_-_DSC01156.JPG/3840px-Aerial_view_-_Harbour_of_Genoa%2C_Italy_-_DSC01156.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAerial_view_-_Harbour_of_Genoa%2C_Italy_-_DSC01156.JPG",
+        "credit": "Daderot · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Daderot",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Daderot"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1084",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "knights",
+      "bundle": "base",
+      "description": "Ein Name, der nach russischem Volkstanz klingt, aber mehr nach Galopp als nach Kniebeugen.",
+      "question": "Die Kosaken waren Reiter aus den Steppen der Ukraine und Südrusslands. Was bedeutete ihr Name, der aus einer Turksprache stammt, ursprünglich?",
+      "answer": "Freier Mann",
+      "wrong_answers": [
+        "Sohn des Flusses",
+        "Reiter des Zaren",
+        "Wächter der Steppe"
+      ],
+      "hints": [
+        "Dasselbe Wort steckt im Namen eines Landes in Zentralasien.",
+        "Der Name sagt etwas darüber, wie sie lebten, nicht wo.",
+        "Das Gegenteil eines Leibeigenen oder Sklaven."
+      ],
+      "fun_fact": "Das Wort „Kosak“ hat denselben Ursprung wie der Name der Kasachen, des Volkes von Kasachstan.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/%D0%9E%D0%B1%D0%B8%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D0%B8_%D0%90%D0%B7%D0%BE%D0%B2%D0%BE-%D0%A1%D0%B8%D0%B2%D0%B0%D1%88%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%91%D0%B8%D1%80%D1%8E%D1%87%D0%B5%D0%BC_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%B5.jpg/3840px-%D0%9E%D0%B1%D0%B8%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D0%B8_%D0%90%D0%B7%D0%BE%D0%B2%D0%BE-%D0%A1%D0%B8%D0%B2%D0%B0%D1%88%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%91%D0%B8%D1%80%D1%8E%D1%87%D0%B5%D0%BC_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%B5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%D0%9E%D0%B1%D0%B8%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D0%B8_%D0%90%D0%B7%D0%BE%D0%B2%D0%BE-%D0%A1%D0%B8%D0%B2%D0%B0%D1%88%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%91%D0%B8%D1%80%D1%8E%D1%87%D0%B5%D0%BC_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%B5.jpg",
+        "credit": "YegorGeologist · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "YegorGeologist",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:YegorGeologist&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1099",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "famous-villains",
+      "bundle": "base",
+      "description": "Das älteste Haustier der Zauberwelt, und das liegt bestimmt nicht an gesunder Ernährung.",
+      "question": "Wie viele Jahre versteckte sich Peter Pettigrew als Krätze, die Ratte der Weasleys, bevor er in „Harry Potter und der Gefangene von Askaban“ aufflog?",
+      "answer": "12",
+      "wrong_answers": [
+        "3",
+        "7",
+        "20"
+      ],
+      "hints": [
+        "Eine normale Ratte wird etwa 3 Jahre alt, Krätze lebte viel länger.",
+        "So lange saß auch Sirius Black in Askaban.",
+        "Mehr als ein Jahrzehnt, aber weniger als 15 Jahre."
+      ],
+      "fun_fact": "Lupin wusste, dass Pettigrew noch lebte, als er dessen Namen auf der Karte des Rumtreibers wandern sah.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Fancy_rat_2.JPG/3840px-Fancy_rat_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFancy_rat_2.JPG",
+        "credit": "Ectopistes666 · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ectopistes666",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ectopistes666&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1104",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "famous-villains",
+      "bundle": "base",
+      "description": "Ein Endgegner mit rotem Umhang und Militärmütze, der nicht mal bei Schere, Stein, Papier verlieren will.",
+      "question": "Ergänze: „Bowser ist zu Super Mario Bros. wie M. Bison zu …“",
+      "answer": "Street Fighter",
+      "wrong_answers": [
+        "Mortal Kombat",
+        "Tekken",
+        "The King of Fighters"
+      ],
+      "hints": [
+        "Es ist ein Videospiel, in dem zwei Figuren gegeneinander kämpfen.",
+        "Ryu, Ken und Chun-Li sind Figuren aus diesem Spiel.",
+        "Einer der Kämpfer ruft „Hadouken!“."
+      ],
+      "fun_fact": "In Japan heißt M. Bison eigentlich Vega, und den Namen M. Bison trägt dort der Boxer.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Arcade_%288409657650%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArcade_%288409657650%29.jpg",
+        "credit": "Faruk Ateş from Vancouver & SF · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Faruk Ateş from Vancouver & SF",
+        "author_url": "https://www.flickr.com/people/62449696@N00"
       },
       "background": null
     },
@@ -1295,6 +2961,74 @@
       "background": null
     },
     {
+      "id": "q-1214",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "saving-and-banks",
+      "bundle": "base",
+      "description": "Eine Familie, die fest zusammenhält, vor allem wenn sie etwas ausheckt, was sie nicht sollte.",
+      "question": "Wir sind Brüder, tragen Augenmasken und Häftlingsnummern und wollen immer Dagobert Ducks Geldspeicher knacken. Wer sind wir?",
+      "answer": "Die Panzerknacker",
+      "wrong_answers": [
+        "Die Daltons",
+        "Die Pinguine aus Madagascar",
+        "Die Minions"
+      ],
+      "hints": [
+        "Wir tauchen in den Abenteuern von „DuckTales“ auf.",
+        "Unsere Mama ist auch eine Gaunerin.",
+        "Auf Englisch heißen wir „Beagle Boys“."
+      ],
+      "fun_fact": "Die Panzerknacker wurden vom Zeichner Carl Barks erfunden und hatten 1951 ihren ersten Auftritt in einem Comic.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Cleveland_FRB_Vault_Door_-_brightened.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACleveland_FRB_Vault_Door_-_brightened.jpg",
+        "credit": "Spamguy at English Wikipedia · CC BY 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "author": "Spamguy at English Wikipedia",
+        "author_url": "https://en.wikipedia.org/wiki/User:Spamguy"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1217",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "saving-and-banks",
+      "bundle": "base",
+      "description": "Geld per SMS verschicken, lange bevor das cool war.",
+      "question": "Mit dem Dienst M-Pesa kann man seit 2007 Geld per Handy verschicken. In welchem afrikanischen Land wurde er erfunden?",
+      "answer": "Kenia",
+      "wrong_answers": [
+        "Nigeria",
+        "Südafrika",
+        "Ägypten"
+      ],
+      "hints": [
+        "Das Land liegt in Ostafrika.",
+        "Es ist berühmt für Safaris und seine Marathonläufer.",
+        "Seine Hauptstadt ist Nairobi."
+      ],
+      "fun_fact": "„Pesa“ bedeutet auf Suaheli „Geld“, und das „M“ steht für „mobil“.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://live.staticflickr.com/2891/32893313893_d747b0d1ed_b.jpg",
+        "source_url": "https://www.flickr.com/photos/134037448@N03/32893313893",
+        "credit": "wrcomms · CC BY-SA 2.0 · Flickr via Openverse",
+        "provider": "openverse",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "author": "wrcomms",
+        "author_url": "https://www.flickr.com/photos/134037448@N03"
+      },
+      "background": null
+    },
+    {
       "id": "q-1227",
       "status": "approved",
       "difficulty": 10,
@@ -1329,36 +3063,546 @@
       "background": null
     },
     {
-      "id": "q-1468",
+      "id": "q-1247",
       "status": "approved",
-      "difficulty": 6,
-      "subcategory": "african-wildlife",
+      "difficulty": 3,
+      "subcategory": "childrens-songs",
       "bundle": "base",
-      "description": "Das Flusspferd hat eine eigene Kosmetiklinie – und verkauft sie nicht.",
-      "question": "Es ist rötlich, kommt aus der Haut des Flusspferds und ist kein Blut. Welchem Produkt der Menschen ähnelt es in seiner Funktion?",
-      "answer": "Sonnenschutzmittel",
+      "description": "Ein Lied, in dem jemand hinfällt und statt aufzustehen lieber Matheaufgaben löst.",
+      "question": "Im spanischen Kinderlied „La farolera“ wird gezählt: „Sechs und zwei sind acht, und acht sechzehn, und acht vierundzwanzig, und acht …“. Welche Zahl folgt?",
+      "answer": "32",
       "wrong_answers": [
-        "Parfüms",
-        "Haarfärbemittel",
-        "Klebstoffe"
+        "30",
+        "28",
+        "36"
       ],
       "hints": [
-        "Das Flusspferd verbringt viele Stunden unter der afrikanischen Sonne.",
-        "Seine Haut ist empfindlich und bekommt leicht Risse.",
-        "Das cremt man sich am Strand ein, damit man keinen Sonnenbrand bekommt."
+        "Das Lied zählt immer dieselbe Zahl dazu.",
+        "Bei jedem Schritt kommen 8 zur vorigen Zahl dazu.",
+        "Es ist 24 plus 8."
       ],
-      "fun_fact": "Dieser „rote Schweiß“ hilft auch dabei, Entzündungen in den Wunden des Flusspferds zu verhindern.",
+      "fun_fact": "Vor den elektrischen Glühbirnen zündeten Laternenanzünder jeden Abend die Straßenlaternen von Hand an.",
       "media": {
         "type": "image",
         "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Hippo_%28Hippopotamus_amphibius%29_going_out_of_the_water.jpg/3840px-Hippo_%28Hippopotamus_amphibius%29_going_out_of_the_water.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHippo_%28Hippopotamus_amphibius%29_going_out_of_the_water.jpg",
-        "credit": "Bernard DUPONT · CC BY-SA 4.0 · Wikimedia Commons",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Gas_street_lamp_in_the_Old_Town_of_Prague_01.JPG/3840px-Gas_street_lamp_in_the_Old_Town_of_Prague_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGas_street_lamp_in_the_Old_Town_of_Prague_01.JPG",
+        "credit": "Pentachlorphenol · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Bernard DUPONT",
+        "author": "Pentachlorphenol",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pentachlorphenol"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1292",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "famous-scientists",
+      "bundle": "base",
+      "description": "Ein Film, in dem die Gleichungen spannender sind als jeder Bösewicht.",
+      "question": "In welchem Jahrzehnt kam „A Beautiful Mind“ ins Kino, der Film über den Mathematiker John Nash?",
+      "answer": "2000er-Jahre",
+      "wrong_answers": [
+        "1970er-Jahre",
+        "1980er-Jahre",
+        "1990er-Jahre"
+      ],
+      "hints": [
+        "Die Hauptrolle spielt Russell Crowe.",
+        "Er gewann den Oscar als bester Film.",
+        "Er kam im selben Jahr heraus wie der erste Harry-Potter-Film."
+      ],
+      "fun_fact": "John Nash bekam 1994 den Wirtschaftsnobelpreis für seine Ideen zur Spieltheorie.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Equation_MP.jpg/3840px-Equation_MP.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEquation_MP.jpg",
+        "credit": "Quantum Information Retrieval · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Quantum Information Retrieval",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Quantum_Information_Retrieval&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1354",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "fashion-designers",
+      "bundle": "base",
+      "description": "Ein Stückchen Seide, das mehr kostet als so mancher Wintermantel.",
+      "question": "Das Seidentuch von Hermès misst 90 cm pro Seite, und Grace Kelly trug es als Armschlinge für einen gebrochenen Arm. Aus welchem Land stammt die Marke?",
+      "answer": "Frankreich",
+      "wrong_answers": [
+        "Italien",
+        "England",
+        "Spanien"
+      ],
+      "hints": [
+        "Hermès begann 1837 mit der Herstellung von Pferdegeschirr und Sätteln.",
+        "Das Hauptgeschäft liegt in einer eleganten Straße der Hauptstadt dieses Landes.",
+        "Diese Hauptstadt hat einen sehr berühmten Turm aus Eisen."
+      ],
+      "fun_fact": "Hermès brachte sein erstes Seidentuch 1937 heraus, genau 100 Jahre nach der Gründung.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Scarf_%28AM_1985.148-20%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AScarf_%28AM_1985.148-20%29.jpg",
+        "credit": "Unknown authorUnknown author · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Unknown authorUnknown author",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-1355",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "fashion-designers",
+      "bundle": "base",
+      "description": "Ein Kleidungsstück so spitz, dass es fast ein Warnschild bräuchte.",
+      "question": "In welchem Jahrzehnt trug Madonna auf Tour ihr berühmtes Kegel-Korsett, entworfen von Jean Paul Gaultier?",
+      "answer": "1990er-Jahre",
+      "wrong_answers": [
+        "1960er-Jahre",
+        "1970er-Jahre",
+        "2000er-Jahre"
+      ],
+      "hints": [
+        "Madonna war da schon ein Weltstar.",
+        "Die Tour hieß „Blond Ambition“.",
+        "Sie startete gleich zu Beginn dieses Jahrzehnts, im selben Jahr wie die Fußball-WM in Italien."
+      ],
+      "fun_fact": "Gaultier erzählte, dass er als Kind seinem Teddybären Nana ein Kegel-Korsett genäht hat.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Beach-Please-2022-crowd-stage-lights-night-performance.jpg/3840px-Beach-Please-2022-crowd-stage-lights-night-performance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeach-Please-2022-crowd-stage-lights-night-performance.jpg",
+        "credit": "PinkBeachPlanet · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PinkBeachPlanet",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:PinkBeachPlanet&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1358",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "product-design",
+      "bundle": "base",
+      "description": "Die Generalprobe, bevor eine Erfindung die große Bühne betritt.",
+      "question": "Es ist das erste Testmodell einer Erfindung, wird vor der Serienfertigung gebaut und hilft, Fehler zu finden. Wie heißt es?",
+      "answer": "Prototyp",
+      "wrong_answers": [
+        "Patent",
+        "Katalog",
+        "Inventar"
+      ],
+      "hints": [
+        "Von neuen Autos gibt es so etwas, lange bevor sie im Autohaus stehen.",
+        "Die Brüder Wright bauten mehrere davon, bevor sie fliegen konnten.",
+        "Das Wort beginnt mit „proto“, griechisch für „erster“."
+      ],
+      "fun_fact": "James Dyson sagt, er habe 5127 Prototypen gebaut, bevor sein beutelloser Staubsauger funktionierte.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Workbench_and_tools_%28Unsplash%29.jpg/3840px-Workbench_and_tools_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWorkbench_and_tools_%28Unsplash%29.jpg",
+        "credit": "Jeff Sheldon ugmonk · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Jeff Sheldon ugmonk",
+        "author_url": "http://unsplash.com/@ugmonk"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1395",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "famous-companies",
+      "bundle": "base",
+      "description": "Manche Väter schenken ihrer Tochter eine Puppe – dieser schenkte ihr gleich eine ganze Automarke.",
+      "question": "Ich war ein Mädchen. Mein Papa verkaufte Autos und benannte die Marke mit dem dreizackigen Stern nach mir. Wie heiße ich?",
+      "answer": "Mercedes",
+      "wrong_answers": [
+        "Mathilde",
+        "Victoria",
+        "Carolina"
+      ],
+      "hints": [
+        "Die Marke kommt aus Deutschland und baut Luxusautos.",
+        "Mein Name ist spanisch, obwohl meine Familie aus Österreich stammte.",
+        "Auf Spanisch bedeutet mein Name so viel wie „Gnaden“."
+      ],
+      "fun_fact": "Emil Jellinek, der Vater von Mercedes, fuhr in Nizza Rennen unter dem Spitznamen „Monsieur Mercedes“.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Nice%2C_Quai_des_%C3%89tats-Unis_and_Promenade_des_Anglais_FRANCE.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANice%2C_Quai_des_%C3%89tats-Unis_and_Promenade_des_Anglais_FRANCE.jpg",
+        "credit": "Lspigon · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Lspigon",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Lspigon&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1396",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "famous-companies",
+      "bundle": "base",
+      "description": "Ein Laden für Handgemachtes, dessen Name jemandem beim Filmeschauen auf dem Sofa eingefallen ist.",
+      "question": "Der Etsy-Gründer sagte, der Name stamme von einem „eh, sì“ in einem italienischen Film. Von welchem Regisseur war der Film?",
+      "answer": "Federico Fellini",
+      "wrong_answers": [
+        "Sergio Leone",
+        "Vittorio De Sica",
+        "Roberto Rossellini"
+      ],
+      "hints": [
+        "Es war ein italienischer Schwarz-Weiß-Film aus den frühen 60ern über einen Regisseur, dem nichts einfällt.",
+        "In seinen Filmen gibt es viel Zirkus, Clowns und traumartige Umzüge.",
+        "Er wurde in Rimini geboren, und aus seinem Nachnamen wurde ein Adjektiv: „fellinesk“."
+      ],
+      "fun_fact": "Rob Kalin wollte ein Wort ohne klare Bedeutung, um die Marke ganz von vorn aufbauen zu können.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Display_of_handmade_pottery_and_wooden_items_in_a_craft_market.jpg/3840px-Display_of_handmade_pottery_and_wooden_items_in_a_craft_market.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADisplay_of_handmade_pottery_and_wooden_items_in_a_craft_market.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1401",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "famous-scandals",
+      "bundle": "base",
+      "description": "Auch Mode kann einen Prozess entscheiden, wenn die Größe nicht stimmt.",
+      "question": "Im Prozess gegen O. J. Simpson sagte sein Anwalt: „Wenn es nicht passt, müsst ihr ihn freisprechen.“ Was passte nicht?",
+      "answer": "Handschuh",
+      "wrong_answers": [
+        "Schuh",
+        "Hut",
+        "Jacke"
+      ],
+      "hints": [
+        "Es war ein Kleidungsstück, das als Beweisstück gefunden wurde.",
+        "Simpson probierte es vor der Jury an.",
+        "Man trägt es an der Hand."
+      ],
+      "fun_fact": "Der Prozess von 1995 wurde im Fernsehen übertragen und von Millionen Menschen verfolgt wie eine Seifenoper.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Courtroom_One_Gavel_-_Flickr_-_Joe_Gratz.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACourtroom_One_Gavel_-_Flickr_-_Joe_Gratz.jpg",
+        "credit": "Joe Gratz · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Joe Gratz",
+        "author_url": "https://www.flickr.com/people/63126465@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1412",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "architectural-styles",
+      "bundle": "base",
+      "description": "Eine Kuppel, so dicht verschlossen, dass selbst der beste Schlüsseldienst nicht hineinkommt.",
+      "question": "Ich bin eine massive Kuppel, niemand kann mich betreten, und Pilger gehen um mich herum. Die ersten bewahrten die Asche eines Lehrers auf. Wessen Asche?",
+      "answer": "Buddha",
+      "wrong_answers": [
+        "Konfuzius",
+        "Laotse",
+        "Zarathustra"
+      ],
+      "hints": [
+        "Er ist ein spiritueller Lehrer, der vor etwa 2500 Jahren im heutigen Nepal geboren wurde.",
+        "Seine Anhänger beten mit Mönchen in orangefarbenen Gewändern.",
+        "Viele seiner Statuen zeigen ihn sitzend und lächelnd beim Meditieren."
+      ],
+      "fun_fact": "Der Große Stupa von Sanchi in Indien wurde im 3. Jahrhundert v. Chr. begonnen und gehört zu den ältesten Steinbauten des Landes.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Eastern_Gateway_of_The_Great_stupa%2C_Sanchi_02.jpg/3840px-Eastern_Gateway_of_The_Great_stupa%2C_Sanchi_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEastern_Gateway_of_The_Great_stupa%2C_Sanchi_02.jpg",
+        "credit": "Rohit Sharma · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rohit Sharma",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rohit14400"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1422",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "eurovision",
+      "bundle": "base",
+      "description": "Bevor sie für einen Film in die Lederjacke schlüpfte, stand sie im Festivalkleid auf der Bühne.",
+      "question": "Olivia Newton-John, die Sandy aus „Grease“, sang beim Eurovision Song Contest für Großbritannien. In welchem Jahrzehnt?",
+      "answer": "Die 1970er",
+      "wrong_answers": [
+        "Die 1950er",
+        "Die 1990er",
+        "Die 2000er"
+      ],
+      "hints": [
+        "Es war ein paar Jahre, bevor sie „Grease“ drehte.",
+        "Es war im selben Jahr, in dem ABBA mit „Waterloo“ gewann.",
+        "Es war 1974."
+      ],
+      "fun_fact": "Olivia wurde beim Eurovision Song Contest 1974 Vierte – in dem berühmten Jahr, in dem ABBA mit „Waterloo“ gewann.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Elektra%2C_opereta_de_cocina_%E2%80%93_int%C3%A9rprete_con_micr%C3%B3fono_en_el_Festival_Escenarios_del_Mundo.jpg/3840px-Elektra%2C_opereta_de_cocina_%E2%80%93_int%C3%A9rprete_con_micr%C3%B3fono_en_el_Festival_Escenarios_del_Mundo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElektra%2C_opereta_de_cocina_%E2%80%93_int%C3%A9rprete_con_micr%C3%B3fono_en_el_Festival_Escenarios_del_Mundo.jpg",
+        "credit": "Martín Vasco · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Martín Vasco",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Martin.vascovinueza"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1475",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "famous-philosophers",
+      "bundle": "base",
+      "description": "Ein Buch so lang, dass nicht einmal sein Autor damit fertig wurde.",
+      "question": "Augustinus verhält sich zu den „Bekenntnissen“ wie Thomas von Aquin zu …",
+      "answer": "Summa theologiae",
+      "wrong_answers": [
+        "Lob der Torheit",
+        "Leviathan",
+        "Vom Gottesstaat"
+      ],
+      "hints": [
+        "Es ist ein riesiges Werk, das unvollendet blieb.",
+        "Es entstand im 13. Jahrhundert.",
+        "Sein lateinischer Titel kündigt eine Gesamtdarstellung der ganzen Theologie an."
+      ],
+      "fun_fact": "Weil er so schweigsam und massig war, nannten seine Mitstudenten Thomas von Aquin „den stummen Ochsen“.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Winchester_cathedral_flags.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWinchester_cathedral_flags.jpg",
+        "credit": "Tom Habibi · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Tom Habibi",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Tomhab&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1542",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "hip-hop-and-rap",
+      "bundle": "base",
+      "description": "Musik, bei der sogar dein Opa die Schultern bewegt, ohne es zu merken.",
+      "question": "Der Bass dieser Musik bringt dich zum Tanzen, James Brown war ihr größter Star und ihre Drumbeats nährten den Hip-Hop. Welche Musikrichtung ist das?",
+      "answer": "Funk",
+      "wrong_answers": [
+        "Disco",
+        "Jazz",
+        "Rock ’n’ Roll"
+      ],
+      "hints": [
+        "Diese Musik entstand in den 1960er-Jahren in den USA.",
+        "DJs in der Bronx spielten die Schlagzeugteile dieser Musik immer wieder ab, damit die Leute tanzten.",
+        "Der Name dieser Musik ist auf Deutsch auch ein Wort für Radioübertragung."
+      ],
+      "fun_fact": "Das Schlagzeugsolo aus James Browns „Funky Drummer“ gehört zu den meistgesampelten Aufnahmen der Musikgeschichte.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Camac_electric_Bass_with_case.jpg/3840px-Camac_electric_Bass_with_case.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACamac_electric_Bass_with_case.jpg",
+        "credit": "Elmschrat · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Elmschrat",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Elmschrat"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1561",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "bible-stories",
+      "bundle": "base",
+      "description": "Der Trick, den jeder Kellner gern lernen würde.",
+      "question": "Auf der Hochzeit zu Kana ging der Wein aus. Was verwandelte Jesus laut dem Evangelium in Wein?",
+      "answer": "Wasser",
+      "wrong_answers": [
+        "Trauben",
+        "Honig",
+        "Milch"
+      ],
+      "hints": [
+        "Geschöpft wurde aus großen Krügen aus Stein.",
+        "Jesus ließ die Diener die Krüge bis zum Rand füllen.",
+        "Farblos und ohne Geschmack."
+      ],
+      "fun_fact": "Laut dem Johannesevangelium war das das erste Wunder Jesu, und der neue Wein schmeckte sogar besser als der erste.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Ancient_Egypt_Early_Dynastic_Stone_Jars_%2828393993356%29.jpg/3840px-Ancient_Egypt_Early_Dynastic_Stone_Jars_%2828393993356%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAncient_Egypt_Early_Dynastic_Stone_Jars_%2828393993356%29.jpg",
+        "credit": "Gary Todd from Xinzheng, China · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Gary Todd from Xinzheng, China",
+        "author_url": "https://www.flickr.com/people/101561334@N08"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1579",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "accidental-inventions",
+      "bundle": "base",
+      "description": "Ein missglücktes Experiment, das hüpft, sich dehnt und nie seinen Zweck erfüllte, aber Millionen Menschen Spaß macht.",
+      "question": "Die Knetmasse, die hüpft, sich dehnt und Bilder aus der Zeitung abdruckt, entstand zufällig bei der Suche nach Kautschuk-Ersatz. In welchem Jahrzehnt?",
+      "answer": "1940er-Jahre",
+      "wrong_answers": [
+        "1900er-Jahre",
+        "1970er-Jahre",
+        "1990er-Jahre"
+      ],
+      "hints": [
+        "Ihr Erfinder arbeitete im Labor eines großen US-Elektrokonzerns.",
+        "Von der Entdeckung bis zum Verkauf als Spielzeug vergingen nur wenige Jahre.",
+        "Wegen des Krieges war Kautschuk knapp, und ab 1950 wurde sie in Plastikeiern verkauft."
+      ],
+      "fun_fact": "Kein Ingenieur fand eine ernsthafte Verwendung dafür, bis ein Verkäufer sie in Plastikeier steckte und zum Spielzeug machte.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/UFV_Science_Rocks_%2814534714507%29.jpg/3840px-UFV_Science_Rocks_%2814534714507%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUFV_Science_Rocks_%2814534714507%29.jpg",
+        "credit": "University of the Fraser Valley · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "University of the Fraser Valley",
+        "author_url": "https://www.flickr.com/people/21187388@N06"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1614",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "wonders-of-the-world",
+      "bundle": "base",
+      "description": "Ohne diese Person wären Gebäude nur gut gemeinte Ziegelhaufen.",
+      "question": "Ohne meine Pläne weiß niemand, wie das Haus gebaut wird. Ich entwerfe Häuser, Gebäude und Wolkenkratzer. Wer bin ich?",
+      "answer": "Architekt",
+      "wrong_answers": [
+        "Zimmermann",
+        "Klempner",
+        "Maurer"
+      ],
+      "hints": [
+        "Ich arbeite viel mit Bleistift, Lineal und Plänen am Bildschirm.",
+        "Meine Arbeit beginnt, bevor der erste Ziegelstein gesetzt wird.",
+        "Für meinen Beruf habe ich an der Universität studiert."
+      ],
+      "fun_fact": "Das Wort „Architekt“ kommt aus dem Griechischen und bedeutet ungefähr „oberster Baumeister“.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/D%C3%BClmen%2C_Br%C3%BCckenbaustelle_der_Deutschen_Bahn_--_2016_--_2011.jpg/3840px-D%C3%BClmen%2C_Br%C3%BCckenbaustelle_der_Deutschen_Bahn_--_2016_--_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AD%C3%BClmen%2C_Br%C3%BCckenbaustelle_der_Deutschen_Bahn_--_2016_--_2011.jpg",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1642",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "british-royals",
+      "bundle": "base",
+      "description": "Elegante Wasservögel mit einem sehr vornehmen Besitzer.",
+      "question": "Auf der Themse schwimmen weiße Schwäne ohne Markierung. Wem gehören sie nach einer alten Tradition?",
+      "answer": "Dem König",
+      "wrong_answers": [
+        "Dem Bürgermeister von London",
+        "Den Fischern",
+        "Dem Premierminister"
+      ],
+      "hints": [
+        "Ihr Besitzer trägt eine Krone.",
+        "Jedes Jahr werden sie bei einer offiziellen Zeremonie gezählt.",
+        "Früher gehörten sie Elisabeth II., heute ihrem Sohn."
+      ],
+      "fun_fact": "Jeden Sommer findet das „Swan Upping“ statt: Bei dieser Zeremonie werden die Schwäne der Themse von Booten aus gezählt und untersucht.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Swan_on_the_River_Thames_at_Twickenham_%28March_2010%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASwan_on_the_River_Thames_at_Twickenham_%28March_2010%29.jpg",
+        "credit": "Carcharoth (Commons) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Carcharoth (Commons)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Carcharoth_(Commons)"
       },
       "background": null
     },
@@ -1431,6 +3675,74 @@
       "background": null
     },
     {
+      "id": "q-1772",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "supermarket-products",
+      "bundle": "base",
+      "description": "Das Pulver, mit dem Babys nach Baby duften.",
+      "question": "Dieses weiche, weiße Pulver kommt nach dem Baden auf die Babyhaut, und Johnson's verkaufte es über 100 Jahre lang. Was ist es?",
+      "answer": "Talkum",
+      "wrong_answers": [
+        "Natron",
+        "Gips",
+        "Kreide"
+      ],
+      "hints": [
+        "Es steckt in einer Dose mit kleinen Löchern im Deckel.",
+        "Es hält die Haut trocken, damit sie nicht wund wird.",
+        "Der Name kommt von einem Mineral, dem weichsten auf der Mohs-Härteskala."
+      ],
+      "fun_fact": "Seit 2023 wird Johnson's Babypuder aus Maisstärke statt aus dem Mineral Talk hergestellt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/When_to_send_for_the_doctor_-_and_what_to_do_before_the_doctor_comes_%281913%29_%2814763784525%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWhen_to_send_for_the_doctor_-_and_what_to_do_before_the_doctor_comes_%281913%29_%2814763784525%29.jpg",
+        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Internet Archive Book Images",
+        "author_url": "https://www.flickr.com/people/126377022@N07"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1777",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "famous-bridges",
+      "bundle": "base",
+      "description": "Eine Brücke für Mutige, die mehr wackelt als dein Onkel auf der Tanzfläche.",
+      "question": "Eine Tibetbrücke führt über eine Schlucht zwischen Bergen und schaukelt bei jedem Schritt. Woraus besteht sie hauptsächlich?",
+      "answer": "Seile",
+      "wrong_answers": [
+        "Ziegel",
+        "Beton",
+        "Steine"
+      ],
+      "hints": [
+        "Dieses Material lässt sich biegen.",
+        "Damit hüpft man auch in der Pause auf dem Schulhof.",
+        "Daraus macht man Knoten."
+      ],
+      "fun_fact": "In den Anden flochten die Inka Hängebrücken aus Gras; die Brücke Q'eswachaka in Peru wird jedes Jahr neu geflochten.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Mountains_in_snow%2C_Mountain_lake%2C_Chola_Valley%2C_Nepal%2C_Himalayas.jpg/3840px-Mountains_in_snow%2C_Mountain_lake%2C_Chola_Valley%2C_Nepal%2C_Himalayas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMountains_in_snow%2C_Mountain_lake%2C_Chola_Valley%2C_Nepal%2C_Himalayas.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
+      },
+      "background": null
+    },
+    {
       "id": "q-1781",
       "status": "approved",
       "difficulty": 10,
@@ -1461,6 +3773,74 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "DarkF 77",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:DarkF_77&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1782",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "cheese",
+      "bundle": "base",
+      "description": "Zwei berühmte Käse mit derselben Milch-Mama.",
+      "question": "Von welchem Tier stammt die Milch für den französischen Roquefort und den italienischen Pecorino Romano?",
+      "answer": "Schaf",
+      "wrong_answers": [
+        "Kuh",
+        "Ziege",
+        "Büffel"
+      ],
+      "hints": [
+        "Es ist ein Bauernhoftier.",
+        "Es lebt in Herden, die oft von Hütehunden bewacht werden.",
+        "Aus seinem Fell wird Wolle gemacht."
+      ],
+      "fun_fact": "Schafmilch hat fast doppelt so viel Fett wie Kuhmilch, deshalb wird Käse daraus so cremig.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Some_French_Cheese_on_the_Market_Place.jpg/3840px-Some_French_Cheese_on_the_Market_Place.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASome_French_Cheese_on_the_Market_Place.jpg",
+        "credit": "Peachyeung316 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Peachyeung316",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Peachyeung316"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1791",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "chemistry",
+      "bundle": "base",
+      "description": "Der beste Freund deiner Hände, nachdem du im Matsch gespielt hast.",
+      "question": "Gibt es als Stück, schäumt kräftig, und damit wäschst du dir die Hände. Was ist das?",
+      "answer": "Seife",
+      "wrong_answers": [
+        "Zahnpasta",
+        "Shampoo",
+        "Puder"
+      ],
+      "hints": [
+        "Du findest es am Waschbecken.",
+        "Wenn es nass ist, rutscht es dir leicht aus der Hand.",
+        "Reimt sich auf „Pfeife“."
+      ],
+      "fun_fact": "Schon vor über 4000 Jahren stellten die Menschen im alten Mesopotamien Seife aus Fett und Asche her.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Wash_basins%2C_Maximum_Security_Prison%2C_Robben_Island_%2801%29.jpg/3840px-Wash_basins%2C_Maximum_Security_Prison%2C_Robben_Island_%2801%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWash_basins%2C_Maximum_Security_Prison%2C_Robben_Island_%2801%29.jpg",
+        "credit": "Moheen Reeyad · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Moheen Reeyad",
+        "author_url": "https://www.wikidata.org/wiki/Q28709819"
       },
       "background": null
     },
@@ -1499,6 +3879,40 @@
       "background": null
     },
     {
+      "id": "q-1922",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "history-of-money",
+      "bundle": "base",
+      "description": "Eine Währung, die schon seit Jahrtausenden den Besitzer wechselt.",
+      "question": "Ihr Name bedeutet „Handvoll“, es gab sie schon in der Antike, und 2002 wurde sie durch den Euro ersetzt. Aus welchem Land stammte die Drachme?",
+      "answer": "Griechenland",
+      "wrong_answers": [
+        "Italien",
+        "Spanien",
+        "Portugal"
+      ],
+      "hints": [
+        "Das Land liegt am Mittelmeer.",
+        "Seine Hauptstadt gehört zu den ältesten Städten Europas.",
+        "Dort entstanden die Olympischen Spiele."
+      ],
+      "fun_fact": "Auf der griechischen 1-Euro-Münze ist noch immer die Eule zu sehen, die schon die antiken Drachmen aus Athen zierte.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/The_Mediterranean_Sea_and_its_ruins_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Mediterranean_Sea_and_its_ruins_-_panoramio.jpg",
+        "credit": "Evilscaught · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Evilscaught",
+        "author_url": "https://web.archive.org/web/20161026122723/http://www.panoramio.com/user/3056394?with_photo_id=76950149"
+      },
+      "background": null
+    },
+    {
       "id": "q-1967",
       "status": "approved",
       "difficulty": 7,
@@ -1533,6 +3947,40 @@
       "background": null
     },
     {
+      "id": "q-2025",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "oscars",
+      "bundle": "base",
+      "description": "Gotham City hat jede Menge Schurken, aber nur einer hat goldene Statuetten in der Vitrine.",
+      "question": "Ich bin ein Batman-Schurke. Heath Ledger bekam 2009 einen Oscar dafür, dass er mich in „The Dark Knight“ spielte. Wer bin ich?",
+      "answer": "Joker",
+      "wrong_answers": [
+        "Pinguin",
+        "Riddler",
+        "Two-Face"
+      ],
+      "hints": [
+        "Mein Gesicht ist sehr blass.",
+        "Ich habe grüne Haare und ein riesiges aufgemaltes Grinsen.",
+        "Ich frage immer: „Warum so ernst?“"
+      ],
+      "fun_fact": "Jahre später gewann auch Joaquin Phoenix einen Oscar für die Rolle desselben Schurken.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Gotham_City_%28128878277%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGotham_City_%28128878277%29.jpeg",
+        "credit": "Hakan Albağ · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Hakan Albağ",
+        "author_url": "https://500px.com/halbag"
+      },
+      "background": null
+    },
+    {
       "id": "q-2123",
       "status": "approved",
       "difficulty": 8,
@@ -1563,6 +4011,210 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Jason Hollinger",
         "author_url": "https://www.flickr.com/people/7147684@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2156",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "world-war-ii",
+      "bundle": "base",
+      "description": "Die einzige Schokolade der Geschichte, die niemand klauen wollte.",
+      "question": "Sie war hart wie ein Ziegelstein, schmolz nicht in der Hitze und schmeckte absichtlich schlecht: die Schokolade der Soldaten. Wofür war sie gedacht?",
+      "answer": "Zum Essen im Notfall",
+      "wrong_answers": [
+        "Zum Anmalen der Panzer",
+        "Zum Zukleben der Briefe",
+        "Zum Anzünden von Lagerfeuern"
+      ],
+      "hints": [
+        "Man trug sie im Rucksack bei sich.",
+        "Sie gab viel Energie.",
+        "Man griff zu ihr, wenn es sonst nichts zu essen gab."
+      ],
+      "fun_fact": "Die US-Armee verlangte, dass sie nur ein kleines bisschen besser schmeckt als eine gekochte Kartoffel, damit die Soldaten sie nicht als Süßigkeit naschen.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Green_and_Black%27s_dark_chocolate_bar_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGreen_and_Black%27s_dark_chocolate_bar_2.jpg",
+        "credit": "Mx. Granger · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Mx. Granger",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mx._Granger"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2386",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "cricket",
+      "bundle": "base",
+      "description": "Ein Stadion, in dem ein ganzes Land einmal so laut gejubelt hat, dass sogar das Meer aufgewacht ist.",
+      "question": "In diesem Stadion gewann Indien 2011 das Finale der Cricket-Weltmeisterschaft. Wie heißt es?",
+      "answer": "Wankhede Stadium",
+      "wrong_answers": [
+        "Eden Gardens",
+        "M. Chinnaswamy Stadium",
+        "Arun Jaitley Stadium"
+      ],
+      "hints": [
+        "Es liegt nahe am Arabischen Meer.",
+        "Es steht in Mumbai, der größten Stadt Indiens.",
+        "Sein Name beginnt mit einem W."
+      ],
+      "fun_fact": "Sachin Tendulkar, der in Mumbai aufgewachsen ist, bestritt hier 2013 sein letztes Testspiel.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Wankhede_Stadium_as_seen_from_Marine_Lines%2C_Mumbai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWankhede_Stadium_as_seen_from_Marine_Lines%2C_Mumbai.jpg",
+        "credit": "DesiBoy101 · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "DesiBoy101",
+        "author_url": "https://commons.wikimedia.org/wiki/User:DesiBoy101"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2485",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "football-history",
+      "bundle": "base",
+      "description": "Ein kleines Stück Pappe, das einem Spieler den ganzen Nachmittag verderben kann.",
+      "question": "„Der Schiedsrichter zeigt mich, um einen Spieler zu verwarnen. Wer mich zweimal in einem Spiel sieht, muss vom Platz.“ Was bin ich?",
+      "answer": "Gelbe Karte",
+      "wrong_answers": [
+        "Rote Karte",
+        "Grüne Karte",
+        "Blaue Karte"
+      ],
+      "hints": [
+        "Der Schiedsrichter trägt mich in der Tasche, gleich neben meiner strengeren Partnerin.",
+        "Ich bin eine Warnung, nicht die härteste Strafe.",
+        "Ich habe die Farbe des mittleren Lichts einer Ampel."
+      ],
+      "fun_fact": "Der englische Schiedsrichter Ken Aston kam an einer Ampel auf die Idee mit Gelb und Rot – zum ersten Mal gezeigt wurden die Karten bei der WM 1970.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/86th_MDG_wins_flag_football_championship_%287531676%29.jpg/3840px-86th_MDG_wins_flag_football_championship_%287531676%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A86th_MDG_wins_flag_football_championship_%287531676%29.jpg",
+        "credit": "U.S. Air Force photo by Airman 1st Class Regan Enriquez · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Air Force photo by Airman 1st Class Regan Enriquez",
+        "author_url": "https://www.dvidshub.net/portfolio/1734692"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2873",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "stars-and-galaxies",
+      "bundle": "base",
+      "description": "Die Zeitungsecke, die deine Zukunft kennt – oder zumindest so tut.",
+      "question": "Wie viele Sternzeichen gibt es im üblichen westlichen Horoskop?",
+      "answer": "12",
+      "wrong_answers": [
+        "7",
+        "10",
+        "24"
+      ],
+      "hints": [
+        "Für jeden Abschnitt des Jahres gibt es eins.",
+        "Die Sonne bleibt ungefähr einen Monat in jedem Zeichen.",
+        "Es ist ein Dutzend."
+      ],
+      "fun_fact": "Die Sonne zieht auch durch ein 13. Sternbild, den Schlangenträger, aber Horoskope lassen ihn weg.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Starry_night_%28175371483%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStarry_night_%28175371483%29.jpg",
+        "credit": "Chad Ajamian · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Chad Ajamian",
+        "author_url": "https://500px.com/cajamian"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3018",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "solar-system",
+      "bundle": "base",
+      "description": "Kepler jagte jahrelang Planeten um die Sonne, ohne je seinen Schreibtisch zu verlassen.",
+      "question": "„Kepler zeigte: Ich bin die Bahn jedes Planeten um die Sonne, und die Sonne sitzt in einem meiner zwei Brennpunkte.“ Welche Form bin ich?",
+      "answer": "Ellipse",
+      "wrong_answers": [
+        "Kreis",
+        "Parabel",
+        "Spirale"
+      ],
+      "hints": [
+        "Ein Kreis hat nur einen Mittelpunkt, also ist es kein Kreis.",
+        "Die Form sieht aus wie ein leicht plattgedrückter Kreis.",
+        "Man kann sie mit einer Schnurschlaufe um zwei Nägel zeichnen."
+      ],
+      "fun_fact": "Die Erdbahn ist einem Kreis so ähnlich, dass man auf Papier gar nicht erkennen würde, dass sie eine Ellipse ist.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Solar_System_Illustration_%28rubin-20220314-Solar-System-hero%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASolar_System_Illustration_%28rubin-20220314-Solar-System-hero%29.jpg",
+        "credit": "Rubin Observatory/NSF/AURA · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Rubin Observatory/NSF/AURA",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-3201",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "bible-stories",
+      "bundle": "base",
+      "description": "Zwei Finger, die sich fast berühren, und ganz schön viel Druck am allerersten Lebenstag.",
+      "question": "Dieses berühmte Detail von Michelangelo zeigt, wie Gott dem ersten Menschen Leben schenkt. Wer waren laut Bibel die ersten zwei Menschen?",
+      "answer": "Adam und Eva",
+      "wrong_answers": [
+        "Noah und seine Frau",
+        "Maria und Josef",
+        "Abraham und Sara"
+      ],
+      "hints": [
+        "Sie lebten in einem wunderschönen Garten.",
+        "Eine Schlange überredete einen von ihnen, eine verbotene Frucht zu essen.",
+        "Ihre Namen beginnen mit A und E."
+      ],
+      "fun_fact": "Auf Michelangelos Gemälde berühren sich die beiden Finger nie: Zwischen ihnen bleibt eine winzige Lücke.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Creation_of_Adam_%28Michelangelo%29_Detail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACreation_of_Adam_%28Michelangelo%29_Detail.jpg",
+        "credit": "Michelangelo · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Michelangelo",
+        "author_url": "https://en.wikipedia.org/wiki/en:Michelangelo"
       },
       "background": null
     }

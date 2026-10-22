@@ -5,7 +5,7 @@
     | "flag" | "idea" | "broom" | "wand" | "point" | "trick-shot" | "crosshair" | "puzzle"
     | "rocket" | "play" | "sparkle" | "next" | "back" | "person" | "person-plus" | "pencil" | "family" | "mic"
     | "balloon" | "skateboard" | "headphones" | "mug" | "sliders" | "book" | "pin" | "refresh" | "power" | "globe" | "exit" | "seal"
-    | "gamepad" | "keyboard" | "heart";
+    | "gamepad" | "keyboard" | "heart" | "flask" | "ball" | "scroll" | "reel";
 </script>
 
 <script lang="ts">
@@ -174,6 +174,22 @@
     <path d="M6 9.5h.01M9.3 9.5h.01M12.6 9.5h.01M15.9 9.5h.01M18 9.5h.01M7 12.5h.01M10.5 12.5h.01M14 12.5h.01M17 12.5h.01M8 15h8" />
   {:else if name === "heart"}
     <path d="M12 20.5s-8-4.9-8-10.6A4.4 4.4 0 0 1 12 7.3a4.4 4.4 0 0 1 8 2.6c0 5.7-8 10.6-8 10.6z" fill="currentColor" fill-opacity="var(--heart-fill, 0.85)" />
+  {:else if name === "flask"}
+    <path d="M10.5 3.5v6L5 18.5a1.8 1.8 0 0 0 1.6 2.8h10.8a1.8 1.8 0 0 0 1.6-2.8l-5.5-9v-6z" fill="currentColor" fill-opacity="0.25" />
+    <path d="M9 3.5h6" />
+    <circle cx="11" cy="17.5" r="0.6" fill="currentColor" />
+    <circle cx="14" cy="16.5" r="0.6" fill="currentColor" />
+  {:else if name === "ball"}
+    <circle cx="12" cy="12" r="8.5" fill="currentColor" fill-opacity="0.25" />
+    <path d="M12 3.5v17M3.5 12h17M6 6.2c2.5 3 2.5 8.6 0 11.6M18 6.2c-2.5 3-2.5 8.6 0 11.6" />
+  {:else if name === "scroll"}
+    <path d="M7 4.5h11a1.5 1.5 0 0 1 1.5 1.5v10.5H8.5V6A1.5 1.5 0 0 0 7 4.5z" fill="currentColor" fill-opacity="0.25" />
+    <path d="M7 4.5A1.5 1.5 0 0 0 5.5 6v1.5h3M8.5 16.5v1a2 2 0 0 1-2 2h10a3 3 0 0 0 3-3v0M11.5 9h5M11.5 12.5h5" />
+  {:else if name === "reel"}
+    <circle cx="12" cy="12" r="8.5" fill="currentColor" fill-opacity="0.25" />
+    <circle cx="12" cy="12" r="1.3" fill="currentColor" />
+    <circle cx="12" cy="7.2" r="1.5" /><circle cx="12" cy="16.8" r="1.5" />
+    <circle cx="7.2" cy="12" r="1.5" /><circle cx="16.8" cy="12" r="1.5" />
   {/if}
 </svg>
 

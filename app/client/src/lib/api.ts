@@ -4,7 +4,7 @@ import { gameChoice, jokersUsed, playerMode, view } from "../engine/game.ts";
 import { seededRng } from "../engine/rng.ts";
 import type { Outlook } from "../engine/outlook.ts";
 export type { Outlook };
-import { bundlesFor, type Bundle } from "../engine/pool.ts";
+import { bundlesFor, type Bundle, type BundleIcon } from "../engine/pool.ts";
 import { setFlag as saveFlag, setReported, type FlagInput } from "../engine/save.ts";
 import { newest, withDefaults, type EngineData, type SaveData } from "../engine/state.ts";
 import { messageOf } from "./http.ts";
@@ -111,7 +111,7 @@ export interface ChoiceOptions {
   /** `span`: lowest and highest difficulty of its levels (the «Custom» start, D-88). */
   groups: { id: string; name: string; ages: readonly [number, number | null]; span: readonly [number, number] }[];
   /** `source`/`modName`: a mod's bundle (decision 128), marked player-made. `country`: a regional bundle's (plan 151). */
-  bundles: { id: string; base: boolean; region: boolean; country?: string; count?: number; name: string; description: string; source?: "mod"; modName?: string }[];
+  bundles: { id: string; base: boolean; region: boolean; country?: string; icon?: BundleIcon; count?: number; name: string; description: string; source?: "mod"; modName?: string }[];
 }
 
 /** A bundle's name in the UI language (plan 127), else bundles.json's. */
@@ -125,7 +125,7 @@ export async function fetchChoiceOptions(scope: DataScope = "next"): Promise<Cho
     const bundles = bundlesFor(data).map((b) => {
       const n = data.uiNames.bundles[b.id];
       return {
-        id: b.id, base: b.kind === "base", region: b.kind === "region", ...(b.country && { country: b.country }),
+        id: b.id, base: b.kind === "base", region: b.kind === "region", ...(b.country && { country: b.country }), ...(b.icon && { icon: b.icon }),
         ...((b.source === "mod" || data.demo) && { count: data.pool.filter((q) => q.bundle === b.id && q.status === "approved").length }),
         name: bundleName(data, b), description: n?.description ?? b.description,
         ...(b.source === "mod" && { source: b.source, modName: b.modName ?? b.mod ?? b.id }),

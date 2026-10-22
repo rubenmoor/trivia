@@ -1,5 +1,5 @@
 {
-  "about": "Bundles (plans/22-bundles.md, D-39): sets of questions chosen before a session. `languages`: the locales a bundle is offered in; the game offers only its language's bundles (D-85). `kind: base`: a base bundle, exactly one per session; players switch the other bundles on or off. `country` (ISO 3166-1 alpha-2, capitals): required on `kind: region`, only there; the game shows its flag as the bundle's icon. Every question is in exactly one bundle (`bundle`, default base). Bundles add questions and don't own a topic. `rule` (English) is how the pipeline decides membership, `voice` (English) the language variety of its own text in prompts (D-78): a regional bundle's drafts, in its first `languages` entry; base's es text. `name` and `description` are for the game, in Spanish (es, es-ES); en and de in names.<locale>.json.",
+  "about": "Bundles (plans/22-bundles.md, D-39): sets of questions chosen before a session. `languages`: the locales a bundle is offered in; the game offers only its language's bundles (D-85). `kind: base`: a base bundle, exactly one per session; players switch the other bundles on or off. `country` (ISO 3166-1 alpha-2, capitals): required on `kind: region`, only there; the game shows its flag as the bundle's icon. `icon` (optional, not on `kind: region`): the tile's symbol, one of book, pin, puzzle, flask, ball, scroll, reel, globe, film, heart, mic, headphones (BUNDLE_ICONS in app/client/src/engine/pool.ts); missing → pin. Every question is in exactly one bundle (`bundle`, default base). Bundles add questions and don't own a topic. `rule` (English) is how the pipeline decides membership, `voice` (English) the language variety of its own text in prompts (D-78): a regional bundle's drafts, in its first `languages` entry; base's es text. `name` and `description` are for the game, in Spanish (es, es-ES); en and de in names.<locale>.json.",
   "bundles": [
     {
       "id": "base",
@@ -86,6 +86,61 @@
       "description": "Para quien tiene relación con México: lugares, comida, costumbres, gente, música, deporte y palabras de allá.",
       "rule": "Answering needs a connection to Mexico: Mexican places, food, customs, fiestas, people, music, sport, media, words, sayings or history that players outside Mexico mostly wouldn't know; things families anywhere know (Mexico City as a capital, tacos as a dish) stay in `base`, and the topics of other Latin American regions (`colombia`) and of Spain (`spain`) are not here.",
       "voice": "Mexican Spanish: \"computadora\", \"celular\", \"carro\", \"camión\" (bus), \"platicar\", \"chamarra\", \"padre\" (cool), \"ahorita\", \"ustedes\" (no vosotros), dates as \"20 de julio de 1969\", metric units"
+    },
+    {
+      "id": "stem",
+      "kind": "theme",
+      "icon": "flask",
+      "languages": [
+        "en"
+      ],
+      "name": "Paquete de preguntas de ciencia",
+      "description": "Más preguntas sobre naturaleza, espacio, inventos, ingeniería y matemáticas.",
+      "rule": "More and deeper questions on natural sciences, technology, engineering and maths: living things, the human body, physics, chemistry, space, geology, weather and ecology, inventions and machines, numbers and shapes, and their history (scientists, inventions, the space race) at every difficulty, from kids to adults, answerable by families anywhere in the world whatever their language; fan-level detail is welcome, while the famous core base already asks stays in `base`, and things only one country's players know stay in that country's regional bundle (`usa`, `spain`, …); present-day places, maps and climate zones are `geography`'s, sport `sports`', film and TV `movies`', history outside science `history`'s"
+    },
+    {
+      "id": "sports",
+      "kind": "theme",
+      "icon": "ball",
+      "languages": [
+        "en"
+      ],
+      "name": "Paquete de preguntas de deportes",
+      "description": "Más preguntas sobre deportes: deportistas, competiciones, equipos, récords.",
+      "rule": "More and deeper questions on sport: football and every other sport, clubs, leagues, competitions, legendary players, records and rules, the Olympics and World Cups, and the history of each sport at every difficulty, from kids to adults, answerable by families anywhere in the world whatever their language; fan-level detail is welcome, while the famous core base already asks stays in `base`, and things only one country's players know stay in that country's regional bundle (`usa`, `spain`, …); films about sport are `movies`', the science of the body `stem`'s"
+    },
+    {
+      "id": "history",
+      "kind": "theme",
+      "icon": "scroll",
+      "languages": [
+        "en"
+      ],
+      "name": "Paquete de preguntas de historia",
+      "description": "Más preguntas sobre historia: épocas, imperios, personajes y sucesos de todo el mundo.",
+      "rule": "More and deeper questions on history: eras, civilisations, empires, rulers, wars, revolutions, explorers and everyday life in the past, historical borders and old place names, with every region of the world in balance at every difficulty, from kids to adults, answerable by families anywhere in the world whatever their language; fan-level detail is welcome, while the famous core base already asks stays in `base`, and things only one country's players know stay in that country's regional bundle (`usa`, `spain`, …); the history of science, inventions and the space race is `stem`'s, of a sport, the Olympics and World Cups `sports`', of film and TV `movies`', present-day places `geography`'s"
+    },
+    {
+      "id": "movies",
+      "kind": "theme",
+      "icon": "reel",
+      "languages": [
+        "en"
+      ],
+      "name": "Paquete de preguntas de cine y series",
+      "description": "Más preguntas sobre cine y series: sus películas y series favoritas, personajes e historias.",
+      "rule": "More and deeper questions on film and TV series: films and series of every era and country, live action and animation, genres, directors, actors, characters, quotes, soundtracks, awards and screen history at every difficulty, from kids to adults, answerable by families anywhere in the world whatever their language; fan-level detail is welcome, while the famous core base already asks stays in `base`, and things only one country's players know stay in that country's regional bundle (`usa`, `spain`, …); reality TV and news stay in `base`"
+    },
+    {
+      "id": "geography",
+      "kind": "theme",
+      "icon": "globe",
+      "languages": [
+        "en"
+      ],
+      "name": "Paquete de preguntas de geografía",
+      "description": "Más preguntas de geografía: países, ciudades, mapas, banderas, montañas, ríos y mares.",
+      "rule": "More and deeper questions on present-day geography: countries, regions, cities and capitals, flags, maps and borders, mountains, rivers, lakes, seas, islands, deserts, climate zones and populations at every difficulty, from kids to adults, answerable by families anywhere in the world whatever their language; fan-level detail is welcome, while the famous core base already asks stays in `base`, and things only one country's players know stay in that country's regional bundle (`usa`, `spain`, …); geology, weather physics and ecology are `stem`'s, historical borders, empires and old place names `history`'s"
     }
   ]
 }

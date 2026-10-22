@@ -41,6 +41,11 @@ BUNDLE_DATA = app_paths.BUNDLE_DATA  # app/data/bundles/: a pack's files
 NAMES = app_paths.names  # app/data/[bundles/<id>/]names.<locale>.json (D-81)
 
 
+def base_related(bundle):
+    """authoring/data/bundles/<id>/base-related.json: a theme's subcategory → base subcategories it goes beyond (plan 184)."""
+    return BUNDLE_SOURCES / bundle / "base-related.json"
+
+
 def translations(locale):
     """authoring/data/questions.<locale>.json: one locale's translations of the source (D-81)."""
     return AUTHORING / "data" / f"questions.{locale}.json"

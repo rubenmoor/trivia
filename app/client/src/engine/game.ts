@@ -779,7 +779,7 @@ function jokersView(work: SaveData, row: GameRow, state: GameState, data: Engine
           && replacement(avail, state.level, ranges, categoryCandidates(avail, state.level, ranges, key), () => 0, count, io, fill, cardsOf(state)) !== null,
       };
     });
-    return { slug: c.slug, key: catKey(c), available: subs.some((s) => s.available), subcategories: subs };
+    return { slug: c.slug, key: catKey(c), bundle: c.bundle, available: subs.some((s) => s.available), subcategories: subs };
   });
   const possible = groups.some((g) => g.available);
   const out: Jokers = {

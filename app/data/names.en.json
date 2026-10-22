@@ -29,6 +29,26 @@
     "mexico": {
       "name": "Regional: Mexico",
       "description": "For anyone with ties to Mexico: its places, food, customs, people, music, sport and words."
+    },
+    "stem": {
+      "name": "Science questions bundle",
+      "description": "More questions on nature, space, inventions, engineering and maths."
+    },
+    "sports": {
+      "name": "Sports questions bundle",
+      "description": "More questions on sports: athletes, events, teams, records."
+    },
+    "history": {
+      "name": "History questions bundle",
+      "description": "More questions on history: eras, empires, people and events from all over the world."
+    },
+    "movies": {
+      "name": "Movies & Series questions bundle",
+      "description": "More questions on movies and series: your favorite shows, characters and stories."
+    },
+    "geography": {
+      "name": "Geography questions bundle",
+      "description": "More geography questions: countries, cities, maps, flags, mountains, rivers and seas."
     }
   },
   "age_groups": {

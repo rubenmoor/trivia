@@ -103,7 +103,7 @@ export interface Jokers {
   easier: JokerState;
   category: JokerState & {
     categories: {
-      slug: string; key: string; available: boolean; subcategories: { key: string; available: boolean }[];
+      slug: string; key: string; bundle: string; available: boolean; subcategories: { key: string; available: boolean }[];
     }[];
   };
   snipe: JokerState;

@@ -1,0 +1,140 @@
+{
+  "about": "A theme bundle's subcategory → the base subcategories it goes beyond (plan 184); its concept lists and drafts keep away from their questions. Authoring only, never exported.",
+  "subcategories": {
+    "european-club-football": [
+      "football",
+      "football-history"
+    ],
+    "world-club-football": [
+      "football"
+    ],
+    "club-competitions": [
+      "football",
+      "football-history"
+    ],
+    "football-legends": [
+      "football",
+      "football-history",
+      "international-football"
+    ],
+    "managers-and-transfers": [
+      "football"
+    ],
+    "football-rules-and-tactics": [
+      "football"
+    ],
+    "stadiums-and-derbies": [
+      "football"
+    ],
+    "continental-tournaments": [
+      "international-football"
+    ],
+    "world-cup-stories": [
+      "world-cups"
+    ],
+    "womens-football": [],
+    "nba-and-basketball-history": [
+      "basketball"
+    ],
+    "basketball-legends": [
+      "basketball"
+    ],
+    "baseball-and-softball": [],
+    "american-football": [],
+    "volleyball-and-handball": [],
+    "ice-and-field-hockey": [],
+    "rugby-deeper": [
+      "rugby"
+    ],
+    "cricket-deeper": [
+      "cricket"
+    ],
+    "grand-slams-and-tennis-events": [
+      "tennis"
+    ],
+    "tennis-legends": [
+      "tennis"
+    ],
+    "other-racket-sports": [],
+    "golf": [],
+    "cue-and-target-sports": [],
+    "sprints-and-hurdles": [
+      "athletics"
+    ],
+    "distance-running": [
+      "athletics"
+    ],
+    "jumps-and-throws": [
+      "athletics"
+    ],
+    "gymnastics": [
+      "summer-olympics"
+    ],
+    "olympic-history": [
+      "summer-olympics",
+      "winter-olympics"
+    ],
+    "olympic-programme": [
+      "summer-olympics"
+    ],
+    "paralympic-sport": [],
+    "skiing": [
+      "winter-olympics"
+    ],
+    "skating": [
+      "winter-olympics"
+    ],
+    "sliding-and-snow-sports": [
+      "winter-olympics",
+      "extreme-sports"
+    ],
+    "swimming-deeper": [
+      "swimming"
+    ],
+    "diving-and-water-polo": [
+      "swimming"
+    ],
+    "boats-and-boards": [
+      "extreme-sports"
+    ],
+    "boxing": [],
+    "martial-arts": [],
+    "wrestling-fencing-and-weightlifting": [],
+    "f1-drivers": [
+      "formula-1-and-motorsport"
+    ],
+    "f1-teams-and-circuits": [
+      "formula-1-and-motorsport"
+    ],
+    "rally-endurance-and-motorcycles": [
+      "formula-1-and-motorsport"
+    ],
+    "cycling": [],
+    "horse-racing-and-equestrian": [],
+    "track-and-pool-records": [
+      "athletics",
+      "swimming"
+    ],
+    "speed-records": [
+      "formula-1-and-motorsport",
+      "extreme-sports"
+    ],
+    "career-and-medal-records": [
+      "summer-olympics",
+      "winter-olympics"
+    ],
+    "human-limits": [
+      "guinness-world-records",
+      "extreme-sports"
+    ],
+    "origins-of-sports": [
+      "football-history"
+    ],
+    "traditional-sports": [],
+    "chess-and-mind-sports": [
+      "board-games"
+    ],
+    "sports-awards-and-milestones": [],
+    "fans-and-traditions": []
+  }
+}

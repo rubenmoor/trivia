@@ -15,7 +15,7 @@
         "purpose": "what it is for, or what it is used for",
         "cause_effect": "what happens if…, or why something happens",
         "sequence": "what comes before or after, what it was called before, what it becomes, or what comes next in a series",
-        "connection": "retired (weight 0): what three given things have in common; it made weak questions",
+        "connection": "no new drafts (weight 0, never drawn): what three given things have in common; existing questions in this style stay",
         "analogy": "\"A es a B como C es a…\"",
         "odd_one_out": "which of the four does NOT belong or is NOT true; the other three share a real-world property",
         "who": "who made, invented, discovered, said or did it",

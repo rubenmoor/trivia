@@ -1,0 +1,997 @@
+{
+  "subcategory": "tv-shows-and-hosts",
+  "facets": [
+    "Programas infantiles clásicos",
+    "Conductores y presentadores famosos",
+    "Comedia y sketches de TV",
+    "Concursos y reality shows",
+    "Noticieros y periodistas",
+    "Programas matutinos y de revista",
+    "Televisoras y canales mexicanos",
+    "Música y variedades en TV",
+    "Narradores y comentaristas deportivos",
+    "Youtubers e influencers mexicanos",
+    "Memes y fenómenos virales",
+    "Series web y plataformas de streaming"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "En Familia con Chabelo",
+      "facet": "Programas infantiles clásicos",
+      "known_at": 5
+    },
+    {
+      "name": "Abelardo Montoya",
+      "facet": "Programas infantiles clásicos",
+      "known_at": 8
+    },
+    {
+      "name": "El Tío Gamboín",
+      "facet": "Programas infantiles clásicos",
+      "known_at": 12
+    },
+    {
+      "name": "Chiquilladas",
+      "facet": "Programas infantiles clásicos",
+      "known_at": 11
+    },
+    {
+      "name": "Cachún cachún ra ra!",
+      "facet": "Programas infantiles clásicos",
+      "known_at": 12
+    },
+    {
+      "name": "Bizbirije",
+      "facet": "Programas infantiles clásicos",
+      "known_at": 12
+    },
+    {
+      "name": "Once Niñas y Niños",
+      "facet": "Programas infantiles clásicos",
+      "known_at": 7
+    },
+    {
+      "name": "Kipatla",
+      "facet": "Programas infantiles clásicos",
+      "known_at": 10
+    },
+    {
+      "name": "Amigos x siempre",
+      "facet": "Programas infantiles clásicos",
+      "known_at": 10
+    },
+    {
+      "name": "Cómplices al rescate",
+      "facet": "Programas infantiles clásicos",
+      "known_at": 9
+    },
+    {
+      "name": "Carita de ángel",
+      "facet": "Programas infantiles clásicos",
+      "known_at": 9
+    },
+    {
+      "name": "Vivan los niños",
+      "facet": "Programas infantiles clásicos",
+      "known_at": 11
+    },
+    {
+      "name": "El Diario de Daniela",
+      "facet": "Programas infantiles clásicos",
+      "known_at": 11
+    },
+    {
+      "name": "Xavier López «Chabelo»",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 4
+    },
+    {
+      "name": "Raúl Velasco",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Andrea Legarreta",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Galilea Montijo",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Marco Antonio Regil",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Yordi Rosado",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Adal Ramones",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Paty Chapoy",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Verónica Castro",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Héctor Sandarti",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Omar Chaparro",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Montserrat Oliver",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Ingrid Coronado",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Raúl «Negro» Araiza",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Tania Rincón",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Juan José Origel",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Gloria Calzada",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Fernando del Solar",
+      "facet": "Conductores y presentadores famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Roberto Gómez Bolaños «Chespirito»",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 6
+    },
+    {
+      "name": "La Chilindrina",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 4
+    },
+    {
+      "name": "Don Ramón",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 3
+    },
+    {
+      "name": "Quico",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 3
+    },
+    {
+      "name": "Doña Florinda",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 4
+    },
+    {
+      "name": "Fue sin querer queriendo",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 4
+    },
+    {
+      "name": "La Familia P. Luche",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 6
+    },
+    {
+      "name": "XHDRBZ",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 9
+    },
+    {
+      "name": "Eugenio Derbez",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 5
+    },
+    {
+      "name": "Una familia de diez",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 6
+    },
+    {
+      "name": "Vecinos",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 7
+    },
+    {
+      "name": "La Hora Pico",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 10
+    },
+    {
+      "name": "¿Qué nos pasa?",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 12
+    },
+    {
+      "name": "Los Polivoces",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 13
+    },
+    {
+      "name": "La Escuelita",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 11
+    },
+    {
+      "name": "Papá soltero",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 12
+    },
+    {
+      "name": "Brozo",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 10
+    },
+    {
+      "name": "Andrés Bustamante «Ponchito»",
+      "facet": "Comedia y sketches de TV",
+      "known_at": 12
+    },
+    {
+      "name": "La Academia",
+      "facet": "Concursos y reality shows",
+      "known_at": 8
+    },
+    {
+      "name": "Big Brother México",
+      "facet": "Concursos y reality shows",
+      "known_at": 10
+    },
+    {
+      "name": "La Casa de los Famosos México",
+      "facet": "Concursos y reality shows",
+      "known_at": 7
+    },
+    {
+      "name": "100 mexicanos dijeron",
+      "facet": "Concursos y reality shows",
+      "known_at": 6
+    },
+    {
+      "name": "Atínale al precio",
+      "facet": "Concursos y reality shows",
+      "known_at": 11
+    },
+    {
+      "name": "Código F.A.M.A.",
+      "facet": "Concursos y reality shows",
+      "known_at": 11
+    },
+    {
+      "name": "Operación Triunfo México",
+      "facet": "Concursos y reality shows",
+      "known_at": 12
+    },
+    {
+      "name": "La Voz México",
+      "facet": "Concursos y reality shows",
+      "known_at": 7
+    },
+    {
+      "name": "MasterChef México",
+      "facet": "Concursos y reality shows",
+      "known_at": 6
+    },
+    {
+      "name": "Pequeños Gigantes",
+      "facet": "Concursos y reality shows",
+      "known_at": 8
+    },
+    {
+      "name": "Exatlón México",
+      "facet": "Concursos y reality shows",
+      "known_at": 6
+    },
+    {
+      "name": "Bailando por un sueño",
+      "facet": "Concursos y reality shows",
+      "known_at": 11
+    },
+    {
+      "name": "Acapulco Shore",
+      "facet": "Concursos y reality shows",
+      "known_at": 10
+    },
+    {
+      "name": "Tengo talento, mucho talento",
+      "facet": "Concursos y reality shows",
+      "known_at": 11
+    },
+    {
+      "name": "¿Quién quiere ser millonario? (México)",
+      "facet": "Concursos y reality shows",
+      "known_at": 9
+    },
+    {
+      "name": "Jacobo Zabludovsky",
+      "facet": "Noticieros y periodistas",
+      "known_at": 12
+    },
+    {
+      "name": "24 Horas",
+      "facet": "Noticieros y periodistas",
+      "known_at": 13
+    },
+    {
+      "name": "Joaquín López-Dóriga",
+      "facet": "Noticieros y periodistas",
+      "known_at": 10
+    },
+    {
+      "name": "Lolita Ayala",
+      "facet": "Noticieros y periodistas",
+      "known_at": 11
+    },
+    {
+      "name": "Javier Alatorre",
+      "facet": "Noticieros y periodistas",
+      "known_at": 10
+    },
+    {
+      "name": "Hechos",
+      "facet": "Noticieros y periodistas",
+      "known_at": 10
+    },
+    {
+      "name": "Denise Maerker",
+      "facet": "Noticieros y periodistas",
+      "known_at": 11
+    },
+    {
+      "name": "Carmen Aristegui",
+      "facet": "Noticieros y periodistas",
+      "known_at": 11
+    },
+    {
+      "name": "Carlos Loret de Mola",
+      "facet": "Noticieros y periodistas",
+      "known_at": 11
+    },
+    {
+      "name": "Adela Micha",
+      "facet": "Noticieros y periodistas",
+      "known_at": 11
+    },
+    {
+      "name": "Ciro Gómez Leyva",
+      "facet": "Noticieros y periodistas",
+      "known_at": 12
+    },
+    {
+      "name": "Pedro Ferriz de Con",
+      "facet": "Noticieros y periodistas",
+      "known_at": 13
+    },
+    {
+      "name": "Jorge Ramos",
+      "facet": "Noticieros y periodistas",
+      "known_at": 11
+    },
+    {
+      "name": "Guillermo Ortega",
+      "facet": "Noticieros y periodistas",
+      "known_at": 13
+    },
+    {
+      "name": "N+",
+      "facet": "Noticieros y periodistas",
+      "known_at": 10
+    },
+    {
+      "name": "Primero Noticias",
+      "facet": "Noticieros y periodistas",
+      "known_at": 12
+    },
+    {
+      "name": "Once Noticias",
+      "facet": "Noticieros y periodistas",
+      "known_at": 12
+    },
+    {
+      "name": "Hoy",
+      "facet": "Programas matutinos y de revista",
+      "known_at": 6
+    },
+    {
+      "name": "Venga la Alegría",
+      "facet": "Programas matutinos y de revista",
+      "known_at": 7
+    },
+    {
+      "name": "Ventaneando",
+      "facet": "Programas matutinos y de revista",
+      "known_at": 9
+    },
+    {
+      "name": "Sale el Sol",
+      "facet": "Programas matutinos y de revista",
+      "known_at": 11
+    },
+    {
+      "name": "Netas Divinas",
+      "facet": "Programas matutinos y de revista",
+      "known_at": 12
+    },
+    {
+      "name": "Montse & Joe",
+      "facet": "Programas matutinos y de revista",
+      "known_at": 12
+    },
+    {
+      "name": "Mujer, casos de la vida real",
+      "facet": "Programas matutinos y de revista",
+      "known_at": 10
+    },
+    {
+      "name": "Lo que callamos las mujeres",
+      "facet": "Programas matutinos y de revista",
+      "known_at": 9
+    },
+    {
+      "name": "Cuéntamelo ya!",
+      "facet": "Programas matutinos y de revista",
+      "known_at": 11
+    },
+    {
+      "name": "La Oreja",
+      "facet": "Programas matutinos y de revista",
+      "known_at": 12
+    },
+    {
+      "name": "Vida TV",
+      "facet": "Programas matutinos y de revista",
+      "known_at": 12
+    },
+    {
+      "name": "Historias engarzadas",
+      "facet": "Programas matutinos y de revista",
+      "known_at": 13
+    },
+    {
+      "name": "La Rosa de Guadalupe",
+      "facet": "Programas matutinos y de revista",
+      "known_at": 5
+    },
+    {
+      "name": "Laura en América",
+      "facet": "Programas matutinos y de revista",
+      "known_at": 11
+    },
+    {
+      "name": "Televisa",
+      "facet": "Televisoras y canales mexicanos",
+      "known_at": 4
+    },
+    {
+      "name": "TV Azteca",
+      "facet": "Televisoras y canales mexicanos",
+      "known_at": 5
+    },
+    {
+      "name": "Las Estrellas",
+      "facet": "Televisoras y canales mexicanos",
+      "known_at": 6
+    },
+    {
+      "name": "Canal 5",
+      "facet": "Televisoras y canales mexicanos",
+      "known_at": 5
+    },
+    {
+      "name": "Canal Once",
+      "facet": "Televisoras y canales mexicanos",
+      "known_at": 8
+    },
+    {
+      "name": "Canal 22",
+      "facet": "Televisoras y canales mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Imagen Televisión",
+      "facet": "Televisoras y canales mexicanos",
+      "known_at": 10
+    },
+    {
+      "name": "Azteca Uno",
+      "facet": "Televisoras y canales mexicanos",
+      "known_at": 8
+    },
+    {
+      "name": "Azteca 7",
+      "facet": "Televisoras y canales mexicanos",
+      "known_at": 8
+    },
+    {
+      "name": "Imevisión",
+      "facet": "Televisoras y canales mexicanos",
+      "known_at": 14
+    },
+    {
+      "name": "Telesistema Mexicano",
+      "facet": "Televisoras y canales mexicanos",
+      "known_at": 14
+    },
+    {
+      "name": "TV UNAM",
+      "facet": "Televisoras y canales mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Multimedios",
+      "facet": "Televisoras y canales mexicanos",
+      "known_at": 11
+    },
+    {
+      "name": "Televisa San Ángel",
+      "facet": "Televisoras y canales mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Guillermo González Camarena",
+      "facet": "Televisoras y canales mexicanos",
+      "known_at": 11
+    },
+    {
+      "name": "Emilio Azcárraga Milmo",
+      "facet": "Televisoras y canales mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Siempre en Domingo",
+      "facet": "Música y variedades en TV",
+      "known_at": 11
+    },
+    {
+      "name": "Festival OTI de la Canción",
+      "facet": "Música y variedades en TV",
+      "known_at": 13
+    },
+    {
+      "name": "Valores Juveniles Bacardí",
+      "facet": "Música y variedades en TV",
+      "known_at": 15
+    },
+    {
+      "name": "La Movida",
+      "facet": "Música y variedades en TV",
+      "known_at": 13
+    },
+    {
+      "name": "Mala Noche... ¡No!",
+      "facet": "Música y variedades en TV",
+      "known_at": 14
+    },
+    {
+      "name": "Telehit",
+      "facet": "Música y variedades en TV",
+      "known_at": 10
+    },
+    {
+      "name": "Bandamax",
+      "facet": "Música y variedades en TV",
+      "known_at": 10
+    },
+    {
+      "name": "Ritmoson Latino",
+      "facet": "Música y variedades en TV",
+      "known_at": 12
+    },
+    {
+      "name": "Otro Rollo",
+      "facet": "Música y variedades en TV",
+      "known_at": 10
+    },
+    {
+      "name": "Sabadazo",
+      "facet": "Música y variedades en TV",
+      "known_at": 11
+    },
+    {
+      "name": "Teletón",
+      "facet": "Música y variedades en TV",
+      "known_at": 5
+    },
+    {
+      "name": "Premios TVyNovelas",
+      "facet": "Música y variedades en TV",
+      "known_at": 11
+    },
+    {
+      "name": "Furia Musical",
+      "facet": "Música y variedades en TV",
+      "known_at": 13
+    },
+    {
+      "name": "Video Éxitos",
+      "facet": "Música y variedades en TV",
+      "known_at": 14
+    },
+    {
+      "name": "Enrique «Perro» Bermúdez",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 10
+    },
+    {
+      "name": "Christian Martinoli",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 8
+    },
+    {
+      "name": "Luis García",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 9
+    },
+    {
+      "name": "José Ramón Fernández",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 11
+    },
+    {
+      "name": "Ángel Fernández",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 13
+    },
+    {
+      "name": "Fernando Marcos",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 14
+    },
+    {
+      "name": "Raúl Orvañanos",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 12
+    },
+    {
+      "name": "Antonio de Valdés",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 12
+    },
+    {
+      "name": "Javier Alarcón",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 12
+    },
+    {
+      "name": "David Faitelson",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 10
+    },
+    {
+      "name": "Félix Fernández",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 13
+    },
+    {
+      "name": "Inés Sainz",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 12
+    },
+    {
+      "name": "Marion Reimers",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 13
+    },
+    {
+      "name": "Los Protagonistas",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 11
+    },
+    {
+      "name": "Futbol Picante",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 11
+    },
+    {
+      "name": "Luisito Comunica",
+      "facet": "Youtubers e influencers mexicanos",
+      "known_at": 5
+    },
+    {
+      "name": "Werevertumorro",
+      "facet": "Youtubers e influencers mexicanos",
+      "known_at": 7
+    },
+    {
+      "name": "Yuya",
+      "facet": "Youtubers e influencers mexicanos",
+      "known_at": 7
+    },
+    {
+      "name": "Juanpa Zurita",
+      "facet": "Youtubers e influencers mexicanos",
+      "known_at": 8
+    },
+    {
+      "name": "Kimberly Loaiza",
+      "facet": "Youtubers e influencers mexicanos",
+      "known_at": 5
+    },
+    {
+      "name": "Juan de Dios Pantoja",
+      "facet": "Youtubers e influencers mexicanos",
+      "known_at": 6
+    },
+    {
+      "name": "Los Polinesios",
+      "facet": "Youtubers e influencers mexicanos",
+      "known_at": 5
+    },
+    {
+      "name": "Escorpión Dorado",
+      "facet": "Youtubers e influencers mexicanos",
+      "known_at": 8
+    },
+    {
+      "name": "Chumel Torres",
+      "facet": "Youtubers e influencers mexicanos",
+      "known_at": 11
+    },
+    {
+      "name": "Caeli",
+      "facet": "Youtubers e influencers mexicanos",
+      "known_at": 10
+    },
+    {
+      "name": "Mis Pastelitos",
+      "facet": "Youtubers e influencers mexicanos",
+      "known_at": 6
+    },
+    {
+      "name": "Badabun",
+      "facet": "Youtubers e influencers mexicanos",
+      "known_at": 8
+    },
+    {
+      "name": "Domelipa",
+      "facet": "Youtubers e influencers mexicanos",
+      "known_at": 6
+    },
+    {
+      "name": "La Divaza",
+      "facet": "Youtubers e influencers mexicanos",
+      "known_at": 10
+    },
+    {
+      "name": "Franco Escamilla",
+      "facet": "Youtubers e influencers mexicanos",
+      "known_at": 10
+    },
+    {
+      "name": "Mariana Rodríguez Cantú",
+      "facet": "Youtubers e influencers mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Los XV años de Rubí",
+      "facet": "Memes y fenómenos virales",
+      "known_at": 8
+    },
+    {
+      "name": "Doctor Simi",
+      "facet": "Memes y fenómenos virales",
+      "known_at": 4
+    },
+    {
+      "name": "Wendy Guevara",
+      "facet": "Memes y fenómenos virales",
+      "known_at": 7
+    },
+    {
+      "name": "Kimberly «La más preciosa»",
+      "facet": "Memes y fenómenos virales",
+      "known_at": 9
+    },
+    {
+      "name": "Las Perdidas",
+      "facet": "Memes y fenómenos virales",
+      "known_at": 9
+    },
+    {
+      "name": "El Brayan",
+      "facet": "Memes y fenómenos virales",
+      "known_at": 8
+    },
+    {
+      "name": "La Chona challenge",
+      "facet": "Memes y fenómenos virales",
+      "known_at": 8
+    },
+    {
+      "name": "Lady Profeco",
+      "facet": "Memes y fenómenos virales",
+      "known_at": 12
+    },
+    {
+      "name": "La caída de Edgar",
+      "facet": "Memes y fenómenos virales",
+      "known_at": 10
+    },
+    {
+      "name": "Lo que se ve no se pregunta",
+      "facet": "Memes y fenómenos virales",
+      "known_at": 11
+    },
+    {
+      "name": "Pepe el Toro es inocente",
+      "facet": "Memes y fenómenos virales",
+      "known_at": 11
+    },
+    {
+      "name": "El aire de La Rosa de Guadalupe",
+      "facet": "Memes y fenómenos virales",
+      "known_at": 7
+    },
+    {
+      "name": "Peluches del Dr. Simi en conciertos",
+      "facet": "Memes y fenómenos virales",
+      "known_at": 8
+    },
+    {
+      "name": "Que no panda el cúnico",
+      "facet": "Memes y fenómenos virales",
+      "known_at": 6
+    },
+    {
+      "name": "Se me chispoteó",
+      "facet": "Memes y fenómenos virales",
+      "known_at": 6
+    },
+    {
+      "name": "Club de Cuervos",
+      "facet": "Series web y plataformas de streaming",
+      "known_at": 10
+    },
+    {
+      "name": "La Casa de las Flores",
+      "facet": "Series web y plataformas de streaming",
+      "known_at": 10
+    },
+    {
+      "name": "Luis Miguel: la serie",
+      "facet": "Series web y plataformas de streaming",
+      "known_at": 9
+    },
+    {
+      "name": "Control Z",
+      "facet": "Series web y plataformas de streaming",
+      "known_at": 9
+    },
+    {
+      "name": "¿Quién mató a Sara?",
+      "facet": "Series web y plataformas de streaming",
+      "known_at": 9
+    },
+    {
+      "name": "Rebelde (Netflix)",
+      "facet": "Series web y plataformas de streaming",
+      "known_at": 10
+    },
+    {
+      "name": "Blim",
+      "facet": "Series web y plataformas de streaming",
+      "known_at": 11
+    },
+    {
+      "name": "ViX",
+      "facet": "Series web y plataformas de streaming",
+      "known_at": 8
+    },
+    {
+      "name": "Claro Video",
+      "facet": "Series web y plataformas de streaming",
+      "known_at": 8
+    },
+    {
+      "name": "De viaje con los Derbez",
+      "facet": "Series web y plataformas de streaming",
+      "known_at": 8
+    },
+    {
+      "name": "LOL: Last One Laughing México",
+      "facet": "Series web y plataformas de streaming",
+      "known_at": 10
+    },
+    {
+      "name": "Chespirito: Sin querer queriendo",
+      "facet": "Series web y plataformas de streaming",
+      "known_at": 9
+    },
+    {
+      "name": "Diablero",
+      "facet": "Series web y plataformas de streaming",
+      "known_at": 12
+    },
+    {
+      "name": "Monarca",
+      "facet": "Series web y plataformas de streaming",
+      "known_at": 13
+    },
+    {
+      "name": "Cómo sobrevivir soltero",
+      "facet": "Series web y plataformas de streaming",
+      "known_at": 12
+    },
+    {
+      "name": "Backdoor",
+      "facet": "Series web y plataformas de streaming",
+      "known_at": 12
+    }
+  ]
+}

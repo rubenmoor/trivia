@@ -30,12 +30,13 @@ const dataFor = (name: string): EngineData => (data[name] ??= engineData(pool(na
 
 const keyed = (args: Record<string, unknown>) =>
   (typeof args.subcategory === "string" ? { ...args, subcategory: oldKeys.subcategories[args.subcategory] ?? args.subcategory } : args);
-/** An engine body or save as recorded: keys → names (a joker group's `key` → its `name`). */
+/** An engine body or save as recorded: keys → names (a joker group's `key` → its `name`, its `bundle` dropped). */
 const recorded = (v: unknown): unknown => {
   if (typeof v === "string") return back.get(v) ?? v.replace(/^colombia\//, "");
   if (Array.isArray(v)) return v.map(recorded);
   if (!v || typeof v !== "object") return v;
   const { key, ...rest } = v as Record<string, unknown>;
+  if (typeof key === "string" && "slug" in rest && "available" in rest) delete rest.bundle;
   const out = Object.fromEntries(Object.entries(rest).map(([k, x]) => [k, recorded(x)]));
   if (typeof key === "string" && "available" in rest) out.name = "slug" in rest ? catName.get(rest.slug as string) : recorded(key);
   return out;

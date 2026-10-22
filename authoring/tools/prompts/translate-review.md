@@ -4,6 +4,7 @@ The question above is a translation of an approved question in {source_language}
 
 ## Changes
 - **Voice:** "Language" means the section above for this locale, not the source's. Report wording that isn't natural for its players (a literal idiom, translationese, the wrong spelling or unit convention, a word of the source's variety where the target's differs) as `style`.
+- **"In common" style:** a source asking what several things have in common is fine; never report it.
 - **International angle:** the source passed it already; don't report it again.
 - **Media:** the media is the source's picked file; there are no candidates and no new search. Leave `pick`, `background_pick` and `new_query` null. Text in the media, in any language, is never a problem.
 - **Language of your answer:** `feedback`, `fix` and `notes` in English.

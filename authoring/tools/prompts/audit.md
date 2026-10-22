@@ -15,7 +15,7 @@ Check every one of these; use web searches for any fact you aren't sure of:
 4. **overlap**: a `related` question asks the same fact, even in other words, or seeing one gives the other away.
 5. **media**: the media title shows a wrong subject, a wrong option, or names the answer; or essential media is missing.
 6. **difficulty**: estimate the difficulty yourself on the scale (calibration examples in the house style). A gap of 3 or more to the given difficulty is a problem.
-7. **style**: house style "Keep it short" is broken (long-winded, an invented story, "Imagine that…"), it uses a retired style ("What do … have in common?", a clue label like "Three clues:"), its wording doesn't match its locale's and bundle's voice (house style "Language"; a word of one country where a common one exists), or an English-sourced `base` question breaks the house style's "International angle" (needs one country's or language's knowledge, or wordplay that only works in one language).
+7. **style**: house style "Keep it short" is broken (long-winded, an invented story, "Imagine that…"), it uses a clue label like "Three clues:" (the "What do … have in common?" style is fine in existing questions: never a finding), its wording doesn't match its locale's and bundle's voice (house style "Language"; a word of one country where a common one exists), or an English-sourced `base` question breaks the house style's "International angle" (needs one country's or language's knowledge, or wordplay that only works in one language).
 8. **other**: anything else that would embarrass the gamemaster on game night; say what in `notes`.
 
 Not problems: a dry question, weak distractors, a joke that isn't funny, a hint 3 that comes close to the answer.

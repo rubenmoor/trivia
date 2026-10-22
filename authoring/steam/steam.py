@@ -9,8 +9,9 @@
 OS depot without resources/media plus the content depot at resources/media = the zip/tar.gz
 (paths and sizes); exit 1 with the difference. It first stages each pack's DLC depot (decision 66,
 steam.json `dlc`) into app/desktop/build/dlc/<id>/ (hard links): resources/data/bundles/<id>/ and the
-pack's media from build/pack-media.json; the OS and content depots leave those out. Every shipped
-bundle needs a `dlc` entry.
+pack's media from build/pack-media.json; the OS and content depots leave those out. A bundle ships as DLC
+only with a pool and real IDs in steam.json `dlc` (`packs()`); the others are left out of the build, one
+line each (`<id>: not shipped (no pool | no Steam IDs)`). Placeholder IDs (--depots, --dry-run) ship every bundle.
 
 `vdf` renders app_build.vdf.in and depot_build.vdf.in with absolute paths into DIR
 (default work/steam/<tag>/vdf): the windows and linux depots from app/desktop/release/
@@ -59,9 +60,34 @@ def conf() -> dict:
     return json.loads((HERE / "steam.json").read_text())
 
 
+SHIP_ALL = False  # placeholder IDs (--depots, --dry-run): every bundle gets a depot
+
+
+def bundles() -> list[str]:
+    return sorted(d.name for d in (REPO / "app" / "data" / "bundles").iterdir() if d.is_dir())
+
+
+def has_pool(bundle: str) -> bool:
+    """A pool file makes a pack offered (decision 112: missing = not offered)."""
+    return any(re.fullmatch(r"pool(\.[\w-]+)?\.json", f.name) for f in (REPO / "app" / "data" / "bundles" / bundle).iterdir())
+
+
 def packs(demo: bool = False) -> list[str]:
-    """Bundles shipped as DLC (decision 66), steam.json order; none in the demo."""
-    return [] if demo else list(conf()["dlc"])
+    """Bundles shipped as DLC (decision 66): a pool and real IDs in steam.json `dlc`; none in the demo."""
+    if demo:
+        return []
+    if SHIP_ALL:
+        return bundles()
+    dlc = conf()["dlc"]
+    return [b for b in bundles() if has_pool(b) and all((dlc.get(b) or {}).values()) and b in dlc]
+
+
+def left_out(demo: bool = False) -> list[str]:
+    """Bundles in the build that don't ship: one line each, printed by stage."""
+    if demo:
+        return []
+    shipped = packs()
+    return [f"{b}: not shipped ({'no pool' if not has_pool(b) else 'no Steam IDs'})" for b in bundles() if b not in shipped]
 
 
 def pack_media() -> dict[str, list[str]]:
@@ -87,14 +113,16 @@ def head_tag() -> str:
 
 def ids(args) -> tuple[int, dict[str, int]]:
     """App ID and {depot name: ID}: windows, linux, content, then one per pack."""
+    global SHIP_ALL
     demo = getattr(args, "demo", False)
+    SHIP_ALL = SHIP_ALL or bool(args.depots)
     c = conf()["demo"] if demo else conf()
     names = [*DEPOTS, *packs(demo)]
     appid = args.appid or c["appid"]
     if args.depots:
         depots = dict(zip(names, (int(d) for d in args.depots.split(","))))
     else:
-        depots = c["depots"] | ({} if demo else {p: d["depot"] for p, d in c["dlc"].items()})
+        depots = c["depots"] | ({} if demo else {p: c["dlc"][p]["depot"] for p in names[len(DEPOTS):]})
     missing = [k for k, v in [("appid", appid), *depots.items()] if not v]
     if missing or len(depots) != len(names):
         sys.exit(f"trivia-steam: no ID for {', '.join(missing) or 'all depots'} (steam.json or --appid/--depots {','.join(names)})")
@@ -106,12 +134,13 @@ def render(out: Path, appid: int, depots: dict[str, int], tag: str, desc: str, p
     out.mkdir(parents=True, exist_ok=True)
     depot_t = Template((HERE / "depot_build.vdf.in").read_text())
     lines = []
-    media = pack_media() if packs(demo) else {}
+    media = {} if demo else pack_media()
     roots = (DEMO_DEPOTS if demo else DEPOTS) | {p: (DLC / p, ".", False) for p in packs(demo)}
+    every = [] if demo else bundles()  # left-out bundles leave the OS and content depots too
     for name, (root, path, is_os) in roots.items():
-        excl = EXCLUDE + ([*EXCLUDE_OS, *(pack_data(p) + "*" for p in packs(demo))] if is_os else [])
+        excl = EXCLUDE + ([*EXCLUDE_OS, *(pack_data(p) + "*" for p in every)] if is_os else [])
         if name == "content":
-            excl += [f for p in packs(demo) for f in media.get(p, [])]
+            excl += [f for p in every for f in media.get(p, [])]
         vdf = out / f"depot_build_{name}.vdf"
         vdf.write_text(depot_t.substitute(
             depotid=depots[name], content_root=root, depot_path=path,
@@ -164,9 +193,12 @@ def stage_dlc(linux: Path, media_root: Path) -> dict[str, dict[str, int]]:
     """Each pack's depot folder in build/dlc/<id>/ (hard links); {pack: tree}."""
     shipped = {p.name for p in (linux / "resources" / "data" / "bundles").iterdir() if p.is_dir()}
     media = pack_media()
-    if shipped != set(packs()) or set(media) != shipped:
-        sys.exit(f"trivia-steam stage: packs in the build {sorted(shipped)}, build/pack-media.json {sorted(media)},"
-                 f" steam.json dlc {packs()}: every shipped bundle needs a dlc entry (decision 66)")
+    ids = {b for b, d in conf()["dlc"].items() if all(d.values())}
+    if shipped != set(bundles()) or set(media) != shipped or not set(packs()) <= shipped or not (SHIP_ALL or ids <= shipped):
+        sys.exit(f"trivia-steam stage: bundles in the build {sorted(shipped)}, build/pack-media.json {sorted(media)},"
+                 f" app/data/bundles {bundles()}, steam.json dlc with IDs {sorted(ids)}: they must agree (decision 66)")
+    for line in left_out():
+        print(f"  {line}")
     shutil.rmtree(DLC, ignore_errors=True)
     trees = {}
     for p in packs():
@@ -203,19 +235,22 @@ def stage(demo: bool = False) -> bool:
         dlc = {}
     else:
         dlc = stage_dlc(depots["linux"][0], content_root)
-    pack_files = {f"{content_path}/{f}" for p in packs(demo) for f in pack_media()[p]}
+    out_media = {} if demo else pack_media()
+    pack_files = {f"{content_path}/{f}" for p in out_media for f in out_media[p]}
     content = {k: v for k, v in tree(content_root, content_path + "/").items() if k not in pack_files}
     dlc_all = {k: v for t in dlc.values() for k, v in t.items()}
     for p, t in dlc.items():
         print(f"  {p}: DLC depot {len(t)} files")
+    left = sorted(set(bundles()) - set(packs(demo))) if not demo else []
     ok = True
     for name, ext in [("windows", "win-x64.zip"), ("linux", "linux-x64.tar.gz")]:
         arc = release / f"{arc_name}-{version()}-{ext}"
         if not arc.is_file():
             sys.exit(f"trivia-steam stage: missing {arc} (run trivia-desktop-build{' --demo' if demo else ''} --dir)")
-        own = (content_path + "/", *(pack_data(p) for p in packs(demo)))
+        own = (content_path + "/", *(pack_data(p) for p in ([] if demo else bundles())))
         depot = {k: v for k, v in tree(depots[name][0]).items() if not k.startswith(own)}
-        want, got = archive(arc), depot | content | dlc_all
+        gone = tuple(pack_data(p) for p in left) + tuple(f"{content_path}/{f}" for p in left for f in out_media[p])
+        want, got = {k: v for k, v in archive(arc).items() if not k.startswith(gone)}, depot | content | dlc_all
         diff = sorted(set(want) ^ set(got)) + sorted(k for k in set(want) & set(got) if want[k] != got[k])
         for k in diff[:20]:
             print(f"  {name}: {k}: archive {want.get(k, '-')}, depots {got.get(k, '-')}")
@@ -252,7 +287,9 @@ def cmd_upload(args) -> None:
         gate(tag == want, f"HEAD has no tag {want} (tag it yourself; this command never tags)")
     if args.dry_run and not args.appid and not args.depots:
         c = conf()["demo"] if demo else conf()
-        if not c["appid"] or not all(c["depots"].values()) or (not demo and not all(d["depot"] for d in c["dlc"].values())):
+        if not c["appid"] or not all(c["depots"].values()) or left_out(demo):
+            global SHIP_ALL
+            SHIP_ALL = True
             args.appid = DRY_RUN_APPID
             args.depots = ",".join(str(DRY_RUN_APPID + 1 + i) for i in range(len(DEPOTS) + len(packs(demo))))
             print(f"dry run: placeholder IDs {args.appid}, {args.depots}")

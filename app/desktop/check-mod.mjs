@@ -2,7 +2,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
-import { bundleRows, readManifest } from "./mods.mjs";
+import { BUNDLE_ICONS, bundleRows, readManifest } from "./mods.mjs";
 import { contained } from "./resolve.mjs";
 
 // LOCALES in app/client/src/lib/data.ts.
@@ -26,6 +26,7 @@ const WARNINGS = {
   unknown_language: (w) => `mod.json languages: "${w.tag}" isn't a game language`,
   unknown_key: (w) => `mod.json: unknown key "${w.key}"`,
   game_version: (w) => `made for ${w.game}, running ${w.running}`,
+  bad_icon: (w) => `bundle ${w.id}: icon ignored (puzzle shown): not allowed on kind "region", else one of ${BUNDLE_ICONS.join(", ")}`,
   bundle_language: (w) => `bundle ${w.bundle}: language "${w.tag}" has no questions in the game (es, es-ES, en, de), ignored`,
   no_pool_file: (w) => `${w.file}: missing, bundle ${w.bundle} not offered in ${w.locale}`,
   bad_names: (w) => `${w.file}: ${w.key ? `${w.kind} "${w.key}" not in ${w.kind === "bundles" ? "data/bundles.json" : "categories.json"}` : "not a JSON object"}, ignored`,
@@ -85,7 +86,7 @@ export async function checkMod(folder, { dist, data, gameVersion }, out = () => 
   if (!mod.error) out(`kind: ${mod.kind.join(", ") || "none"}`);
   const id = mod.id ?? "mod";
   const rows = await bundleRows(mod.dir);
-  rows.warnings.forEach((w) => error(w));
+  rows.warnings.filter((w) => w.code !== "bad_icon").forEach((w) => error(w)); // bad_icon: a warning, shown above
   if (!rows.rows.length) {
     if (mod.kind.includes("bundle") && !rows.warnings.length) error({ code: "no_bundles" });
     return done(mod.id);

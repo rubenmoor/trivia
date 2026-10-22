@@ -1,0 +1,111 @@
+{
+  "about": "Categories of the stem bundle (D-41, D-43): structure only, keyed by English slugs unique within the bundle (decision 259); names in names.<locale>.json.",
+  "categories": [
+    {
+      "slug": "living-things",
+      "subcategories": [
+        "microbes-and-fungi",
+        "cells-and-genetics",
+        "evolution-and-fossils",
+        "animal-behaviour",
+        "animal-adaptations",
+        "invertebrates",
+        "ocean-life",
+        "plant-science"
+      ]
+    },
+    {
+      "slug": "ecology",
+      "subcategories": [
+        "ecosystems-and-food-webs",
+        "conservation"
+      ]
+    },
+    {
+      "slug": "human-body",
+      "subcategories": [
+        "heart-blood-and-breathing",
+        "digestion-and-nutrition",
+        "bones-muscles-and-skin",
+        "senses-and-nerves",
+        "immune-system-and-disease",
+        "history-of-medicine"
+      ]
+    },
+    {
+      "slug": "physics",
+      "subcategories": [
+        "forces-and-motion",
+        "energy-and-heat",
+        "light-and-optics",
+        "sound-and-waves",
+        "electricity-and-magnetism",
+        "atoms-and-modern-physics",
+        "units-and-measurement"
+      ]
+    },
+    {
+      "slug": "chemistry",
+      "subcategories": [
+        "chemical-elements",
+        "chemical-reactions",
+        "everyday-chemistry",
+        "materials-and-metals"
+      ]
+    },
+    {
+      "slug": "space",
+      "subcategories": [
+        "moons-comets-and-asteroids",
+        "night-sky",
+        "telescopes-and-observatories",
+        "space-probes-and-rovers",
+        "space-stations-and-living-in-space",
+        "cosmology"
+      ]
+    },
+    {
+      "slug": "earth-science",
+      "subcategories": [
+        "plate-tectonics",
+        "crystals-and-gemstones",
+        "weather-science",
+        "ocean-science",
+        "climate-and-atmosphere"
+      ]
+    },
+    {
+      "slug": "mathematics",
+      "subcategories": [
+        "special-numbers",
+        "geometry-and-solids",
+        "probability-and-statistics",
+        "number-systems-and-maths-history",
+        "mathematicians",
+        "logic-and-maths-puzzles"
+      ]
+    },
+    {
+      "slug": "technology-and-engineering",
+      "subcategories": [
+        "simple-machines-and-tools",
+        "how-vehicles-work",
+        "computing-history",
+        "programming-and-code",
+        "electronics-and-gadgets",
+        "communications",
+        "power-and-energy-sources",
+        "structural-engineering"
+      ]
+    },
+    {
+      "slug": "history-of-science",
+      "subcategories": [
+        "ancient-and-medieval-science",
+        "scientific-revolution",
+        "famous-experiments",
+        "women-in-science"
+      ]
+    }
+  ]
+}

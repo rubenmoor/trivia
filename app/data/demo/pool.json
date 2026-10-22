@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "b1be46c6",
+  "hash": "cd8ae073",
   "questions": [
     {
       "id": "q-0016",
@@ -139,6 +139,40 @@
       "background": null
     },
     {
+      "id": "q-0040",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "science",
+      "bundle": "base",
+      "description": "Cuidado con esta pregunta, que está hirviendo.",
+      "question": "¿A qué temperatura hierve el agua al nivel del mar?",
+      "answer": "100 °C",
+      "wrong_answers": [
+        "50 °C",
+        "0 °C",
+        "200 °C"
+      ],
+      "hints": [
+        "Es mucho más caliente que un día de sol.",
+        "A 0 °C el agua se congela.",
+        "Es un número redondo de tres cifras."
+      ],
+      "fun_fact": "En Bogotá, por la altura, el agua hierve a unos 91 °C.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Boiling_water.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoiling_water.jpg",
+        "credit": "GRAN · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "GRAN",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-0045",
       "status": "approved",
       "difficulty": 5,
@@ -271,6 +305,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Anna Hanks from Austin, Texas, USA",
         "author_url": "https://www.flickr.com/people/23349893@N08"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0063",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "world-cups",
+      "bundle": "base",
+      "description": "Una pregunta para mover la cintura mientras piensas.",
+      "question": "¿Qué cantante colombiana cantó 'Waka Waka' para el Mundial de 2010?",
+      "answer": "Shakira",
+      "wrong_answers": [
+        "Karol G",
+        "Greeicy",
+        "Fanny Lu"
+      ],
+      "hints": [
+        "Canta desde que era niña y hoy es famosa en todo el mundo.",
+        "Es famosa por cómo baila.",
+        "Es de Barranquilla."
+      ],
+      "fun_fact": "'Waka Waka' es uno de los videos musicales más vistos de la historia en YouTube.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/FNB_Stadium_and_mooifontein_Arrial_View_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFNB_Stadium_and_mooifontein_Arrial_View_-_panoramio.jpg",
+        "credit": "fading · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "fading",
+        "author_url": "https://web.archive.org/web/20161021055257/http://www.panoramio.com/user/5397823?with_photo_id=66317669"
       },
       "background": null
     },
@@ -513,6 +581,40 @@
       "background": null
     },
     {
+      "id": "q-0098",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "inventions",
+      "bundle": "base",
+      "description": "Una idea tan buena que hasta tiene forma de idea.",
+      "question": "¿Qué invento usamos para iluminar la casa de noche?",
+      "answer": "La bombilla",
+      "wrong_answers": [
+        "La rueda",
+        "El reloj",
+        "El espejo"
+      ],
+      "hints": [
+        "Funciona con electricidad.",
+        "Se pone en el techo o en una lámpara.",
+        "Thomas Edison la mejoró para que durara mucho."
+      ],
+      "fun_fact": "Hoy se usan bombillas LED, que gastan mucha menos energía.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Price_Building_illuminated_at_night_in_Quebec_City.jpg/3840px-Price_Building_illuminated_at_night_in_Quebec_City.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APrice_Building_illuminated_at_night_in_Quebec_City.jpg",
+        "credit": "Wilfredor · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Wilfredor",
+        "author_url": "https://www.wikidata.org/wiki/Q115464159"
+      },
+      "background": null
+    },
+    {
       "id": "q-0100",
       "status": "approved",
       "difficulty": 4,
@@ -667,7 +769,7 @@
         "Perdió el movimiento de una mano en una batalla.",
         "Lo llaman 'el Manco de Lepanto'."
       ],
-      "fun_fact": "El Día del Idioma, el 23 de abril, recuerda la muerte de Cervantes.",
+      "fun_fact": "El Día del Idioma, el 23 de abril, recuerda a Cervantes: murió el 22 y lo enterraron el 23.",
       "media": {
         "type": "image",
         "role": "illustrative",
@@ -1023,40 +1125,6 @@
       "background": null
     },
     {
-      "id": "q-0236",
-      "status": "approved",
-      "difficulty": 4,
-      "subcategory": "pharaohs",
-      "bundle": "base",
-      "description": "Los faraones querían seguir guapos durante miles de años, y no existía la crema antiarrugas.",
-      "question": "¿Qué hacían los antiguos egipcios con el cuerpo de un faraón al morir, para conservarlo durante miles de años?",
-      "answer": "Lo momificaban",
-      "wrong_answers": [
-        "Lo congelaban en hielo",
-        "Lo bañaban en oro",
-        "Lo cubrían con cera"
-      ],
-      "hints": [
-        "Usaban sales, aceites y resinas para secarlo.",
-        "Al final lo envolvían en muchísimas vendas de tela.",
-        "En las películas de terror, este cuerpo vendado se levanta del sarcófago."
-      ],
-      "fun_fact": "Preparar el cuerpo de un faraón podía tardar unos 70 días.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Thebes%2C_Luxor%2C_Egypt%2C_Valley_of_the_Kings_from_above.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AThebes%2C_Luxor%2C_Egypt%2C_Valley_of_the_Kings_from_above.jpg",
-        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 4.0",
-        "license_url": "https://creativecommons.org/licenses/by/4.0",
-        "author": "Vyacheslav Argenberg",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
-      },
-      "background": null
-    },
-    {
       "id": "q-0248",
       "status": "approved",
       "difficulty": 2,
@@ -1121,6 +1189,108 @@
         "license_url": null,
         "author": "Didier Descouens",
         "author_url": "https://commons.wikimedia.org/wiki/User:Archaeodontosaurus"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0271",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "anime",
+      "bundle": "base",
+      "description": "Japón nos mandó vehículos, videojuegos y también palabras que se pegan como chicle.",
+      "question": "¿Qué significa la palabra japonesa 'kawaii'?",
+      "answer": "Tierno o adorable",
+      "wrong_answers": [
+        "Rápido o veloz",
+        "Rico o delicioso",
+        "Valiente o fuerte"
+      ],
+      "hints": [
+        "Se volvió famosa en todo el mundo gracias a la moda y los dibujos japoneses.",
+        "Es lo que dice la gente cuando ve un gatito bebé.",
+        "Hello Kitty es el ejemplo perfecto de esta palabra."
+      ],
+      "fun_fact": "Hello Kitty se dibuja sin boca, y aun así es uno de los personajes más famosos del mundo.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg/3840px-Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg",
+        "credit": "Benh LIEU SONG (Flickr) · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Benh LIEU SONG (Flickr)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Benh"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0283",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "pharaohs",
+      "bundle": "base",
+      "description": "Antes de los emojis, los egipcios ya mandaban mensajes con caritas, pájaros y ojitos.",
+      "question": "¿Cómo se llama el sistema de escritura de los antiguos egipcios?",
+      "answer": "Jeroglíficos",
+      "wrong_answers": [
+        "Runas",
+        "Cuneiforme",
+        "Kanji"
+      ],
+      "hints": [
+        "La tallaban en templos y tumbas, y también la pintaban sobre papiro.",
+        "Durante siglos nadie supo leerla, hasta que se descubrió la Piedra de Rosetta.",
+        "Cuando alguien escribe con una letra imposible de entender, decimos que parecen... esto."
+      ],
+      "fun_fact": "El francés Jean-François Champollion logró descifrar los jeroglíficos en 1822 gracias a la Piedra de Rosetta.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Sarcophagus_of_Ankhnesneferibre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASarcophagus_of_Ankhnesneferibre.jpg",
+        "credit": "Hans Hillewaert · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Hans Hillewaert",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-0287",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "winter-olympics",
+      "bundle": "base",
+      "description": "Un deporte tan tranquilo que lo podría jugar tu abuelo en pantuflas, y aun así reparten medallas olímpicas.",
+      "question": "Mira la foto: ¿qué deporte olímpico de invierno están jugando?",
+      "answer": "Curling",
+      "wrong_answers": [
+        "Hockey sobre hielo",
+        "Patinaje de velocidad",
+        "Patinaje artístico"
+      ],
+      "hints": [
+        "Es un deporte que nació en Escocia hace siglos.",
+        "Se lanza una piedra pesada que se desliza por el hielo hasta un blanco de círculos.",
+        "Los compañeros frotan el hielo con escobas delante de la piedra para guiarla."
+      ],
+      "fun_fact": "Casi todas las piedras de curling olímpicas están hechas de granito de una sola isla pequeña de Escocia llamada Ailsa Craig.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/12-01-20-yog-674.jpg/3840px-12-01-20-yog-674.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A12-01-20-yog-674.jpg",
+        "credit": "Ralf Roletschek · CC BY-SA 3.0 at · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 at",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+        "author": "Ralf Roletschek",
+        "author_url": "https://www.wikidata.org/wiki/Q15080600"
       },
       "background": null
     },
@@ -1257,40 +1427,6 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Shixart1985",
         "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
-      },
-      "background": null
-    },
-    {
-      "id": "q-0335",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "artificial-intelligence",
-      "bundle": "base",
-      "description": "Es blanco, suave, se infla como un globo y te pregunta cuánto te duele del 1 al 10.",
-      "question": "¿Qué robot inflable de Disney cuida la salud de las personas y es el mejor amigo de Hiro?",
-      "answer": "Baymax",
-      "wrong_answers": [
-        "R2-D2",
-        "Bumblebee",
-        "El Gigante de Hierro"
-      ],
-      "hints": [
-        "La película pasa en una ciudad que mezcla San Francisco con Tokio.",
-        "Al final se convierte en superhéroe con armadura roja en 'Grandes héroes'.",
-        "Su nombre empieza por 'Bay' y suena a 'máximo' en inglés."
-      ],
-      "fun_fact": "Los creadores de la película se inspiraron en un brazo robótico inflable de verdad que vieron en una universidad de Estados Unidos.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Erste_Hilfe_003_2026_02_17.jpg/3840px-Erste_Hilfe_003_2026_02_17.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AErste_Hilfe_003_2026_02_17.jpg",
-        "credit": "Friedrich Haag · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Friedrich Haag",
-        "author_url": "https://commons.wikimedia.org/wiki/User:F._Riedelio"
       },
       "background": null
     },
@@ -1563,6 +1699,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Dr. Raju Kasambe",
         "author_url": "https://commons.wikimedia.org/wiki/User:Dr._Raju_Kasambe"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0490",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "plants",
+      "bundle": "base",
+      "description": "Una planta que pidió comida a domicilio y el almuerzo le llegó volando.",
+      "question": "Mira la foto: ¿cómo se llama esta planta carnívora?",
+      "answer": "Venus atrapamoscas",
+      "wrong_answers": [
+        "Planta jarra",
+        "Rocío de sol",
+        "Grasilla"
+      ],
+      "hints": [
+        "Crece de forma natural solo en unos pantanos de Estados Unidos.",
+        "Sus hojas parecen una boca con dientes y se cierran de golpe cuando un insecto las toca.",
+        "Su nombre lleva el de un planeta y dice lo que caza."
+      ],
+      "fun_fact": "Para no gastar energía en falsas alarmas, la trampa solo se cierra si el insecto toca sus pelitos sensores dos veces en pocos segundos.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Dionaea_muscipula_PT_20240516_063394.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADionaea_muscipula_PT_20240516_063394.jpg",
+        "credit": "Philiptdotcom · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Philiptdotcom",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Philiptdotcom&action=edit&redlink=1"
       },
       "background": null
     },
@@ -1873,40 +2043,6 @@
       "background": null
     },
     {
-      "id": "q-0596",
-      "status": "approved",
-      "difficulty": 8,
-      "subcategory": "amphibians",
-      "bundle": "base",
-      "description": "Una rana con apetito de toro y modales de invitado que nadie invitó.",
-      "question": "Adivina: soy una rana enorme de Norteamérica. Me criaron en granjas de otros países, me escapé y ahora me como a las ranas de allá. ¿Qué especie soy?",
-      "answer": "Especie invasora",
-      "wrong_answers": [
-        "Especie endémica",
-        "Especie migratoria",
-        "Especie domesticada"
-      ],
-      "hints": [
-        "Es un problema para la naturaleza del lugar adonde llegó.",
-        "Es lo contrario de una especie nativa del lugar.",
-        "Es como alguien que entra a una casa ajena y se adueña de todo."
-      ],
-      "fun_fact": "La rana toro puede comer casi cualquier cosa que le quepa en la boca: insectos, peces, otras ranas ¡y hasta pajaritos!",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Lithobates_catesbeianus_PP.jpg/3840px-Lithobates_catesbeianus_PP.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALithobates_catesbeianus_PP.jpg",
-        "credit": "Cephas · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Cephas",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Cephas"
-      },
-      "background": null
-    },
-    {
       "id": "q-0604",
       "status": "approved",
       "difficulty": 15,
@@ -2111,6 +2247,40 @@
       "background": null
     },
     {
+      "id": "q-0670",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "El único invitado de la fiesta al que todos quieren pegarle, y él feliz.",
+      "question": "Cuelgo en las fiestas de cumpleaños y los niños me pegan con un palo con los ojos vendados. Cuando me rompo, ¿qué cae de mí?",
+      "answer": "Dulces y juguetes",
+      "wrong_answers": [
+        "Arena y piedras",
+        "Agua y jabón",
+        "Hojas y ramas"
+      ],
+      "hints": [
+        "A todos los niños les encanta lo que cae.",
+        "Todos se tiran al piso a recogerlo rápido.",
+        "Hay caramelos, bombones y chocolates."
+      ],
+      "fun_fact": "En México, la piñata tradicional tiene forma de estrella con siete picos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Birthday_party_decoration.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABirthday_party_decoration.jpg",
+        "credit": "Abinayasekar357 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Abinayasekar357",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Abinayasekar357&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-0693",
       "status": "approved",
       "difficulty": 4,
@@ -2141,6 +2311,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Ocdp",
         "author_url": "https://commons.wikimedia.org/wiki/User:Ocdp"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0709",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "fairy-tales",
+      "bundle": "base",
+      "description": "Una princesa que juega cerca de un pozo y luego se queja de las consecuencias.",
+      "question": "Una princesa juega junto a un pozo, se le cae su pelota al agua y una rana se ofrece a sacarla a cambio de su amistad. ¿De qué está hecha la pelota?",
+      "answer": "De oro",
+      "wrong_answers": [
+        "De cristal",
+        "De madera",
+        "De plata"
+      ],
+      "hints": [
+        "Es un juguete digno de una princesa.",
+        "Brilla mucho, como una corona.",
+        "Es el mismo material de las medallas del primer puesto."
+      ],
+      "fun_fact": "En la versión original de los hermanos Grimm, el hechizo no se rompe con un beso: la princesa, furiosa, lanza la rana contra la pared.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/MYLF_Frog_%285794436732%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMYLF_Frog_%285794436732%29.jpg",
+        "credit": "Pacific Southwest Region 5 · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Pacific Southwest Region 5",
+        "author_url": "https://www.flickr.com/people/39108150@N05"
       },
       "background": null
     },
@@ -2587,40 +2791,6 @@
       "background": null
     },
     {
-      "id": "q-0885",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "planet-earth",
-      "bundle": "base",
-      "description": "Un acertijo de tablero que tiene más tierra que un potrero.",
-      "question": "'Colombia es a país como América es a…'. ¿Qué palabra completa la frase?",
-      "answer": "Continente",
-      "wrong_answers": [
-        "Océano",
-        "Isla",
-        "Ciudad"
-      ],
-      "hints": [
-        "América es mucho más grande que Colombia.",
-        "Dentro de América caben muchos países.",
-        "África, Europa y Asia también lo son."
-      ],
-      "fun_fact": "Según cómo se cuenten, hay 5, 6 o 7 continentes: en Colombia suele enseñarse que América es uno solo.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Globe_with_yellow_background_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGlobe_with_yellow_background_1.jpg",
-        "credit": "Wendy Cope · CC BY 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "Wendy Cope",
-        "author_url": null
-      },
-      "background": null
-    },
-    {
       "id": "q-0919",
       "status": "approved",
       "difficulty": 10,
@@ -2689,6 +2859,40 @@
       "background": null
     },
     {
+      "id": "q-0982",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "magic",
+      "bundle": "base",
+      "description": "Un mueble que lee más que tú, y eso que ni siquiera tiene ojos.",
+      "question": "Soy la mesa de encantamientos de Minecraft: tengo un libro que flota y se abre cuando te acercas. ¿Qué pasa si me rodeas de estanterías de libros?",
+      "answer": "Los encantamientos son más poderosos",
+      "wrong_answers": [
+        "Puedes encantar varios objetos a la vez",
+        "Ya no necesitas lapislázuli",
+        "Los encantamientos salen más rápido"
+      ],
+      "hints": [
+        "Las estanterías tienen que estar cerca, pero con un espacio libre entre ellas y la mesa.",
+        "Fíjate en los números que aparecen junto a cada opción de encantamiento.",
+        "Más libros alrededor, más sabiduría mágica para la mesa."
+      ],
+      "fun_fact": "Con suficientes estanterías alrededor, la mesa de encantamientos de Minecraft llega a ofrecer encantamientos de nivel 30.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Oldbooks-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOldbooks-02.jpg",
+        "credit": "Liam Quin · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Liam Quin",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-1032",
       "status": "approved",
       "difficulty": 11,
@@ -2753,40 +2957,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Xlanu",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Xlanu&action=edit&redlink=1"
-      },
-      "background": null
-    },
-    {
-      "id": "q-1051",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "indigenous-peoples-of-the-amazon",
-      "bundle": "base",
-      "description": "Un árbol al que le sacaron las tripas para darle un oficio nuevo.",
-      "question": "Un tronco gigante se ahueca con fuego y hacha, y se deja alargado y puntiagudo por los dos lados. ¿Para qué se usa?",
-      "answer": "Para navegar por el río",
-      "wrong_answers": [
-        "Para guardar agua de lluvia",
-        "Para guardar la cosecha de yuca",
-        "Para tocar música"
-      ],
-      "hints": [
-        "Las puntas ayudan a cortar algo que se mueve.",
-        "En la selva, los ríos son como las carreteras.",
-        "Le van a hacer falta unos remos."
-      ],
-      "fun_fact": "Algunas canoas talladas de un solo tronco pueden llevar a más de diez personas.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Brazil-00336_-_Kapok_Tree_%2848964056527%29.jpg/3840px-Brazil-00336_-_Kapok_Tree_%2848964056527%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABrazil-00336_-_Kapok_Tree_%2848964056527%29.jpg",
-        "credit": "Dennis G. Jarvis · CC BY-SA 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "Dennis G. Jarvis",
-        "author_url": "https://www.wikidata.org/wiki/Q122977591"
       },
       "background": null
     },
@@ -3199,36 +3369,70 @@
       "background": null
     },
     {
-      "id": "q-1248",
+      "id": "q-1254",
       "status": "approved",
       "difficulty": 2,
       "subcategory": "childrens-songs",
       "bundle": "base",
-      "description": "El hechizo médico más antiguo de la casa, y ni siquiera necesita una curita.",
-      "question": "Completa: 'Sana, sana, colita de rana, si no sana hoy, sanará…'",
-      "answer": "Mañana",
+      "description": "Una canción que convierte la alegría en ejercicio.",
+      "question": "Se hace con las dos manos, hace ruido y la canción 'Si estás feliz y lo sabes' te pide hacerlo. ¿Qué es?",
+      "answer": "Aplaudir",
       "wrong_answers": [
-        "El lunes",
-        "En un rato",
-        "Pasado mañana"
+        "Saludar",
+        "Silbar",
+        "Saltar"
       ],
       "hints": [
-        "Es una palabra que rima con 'rana'.",
-        "Habla del día siguiente.",
-        "Es el día que viene después de hoy."
+        "Lo hace el público al final de un show.",
+        "Las manos se chocan una contra otra.",
+        "También se dice 'dar palmas'."
       ],
-      "fun_fact": "Esta frase para curar raspones se dice en casi todos los países donde se habla español.",
+      "fun_fact": "La canción es originalmente en inglés y se llama 'If You're Happy and You Know It'.",
       "media": {
         "type": "image",
         "role": "decorative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Child_gets_a_bandage_on_their_knee_after_a_small_injury_closeup.jpg/3840px-Child_gets_a_bandage_on_their_knee_after_a_small_injury_closeup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AChild_gets_a_bandage_on_their_knee_after_a_small_injury_closeup.jpg",
-        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Happy_group_of_children_playing_race.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHappy_group_of_children_playing_race.jpg",
+        "credit": "Jackson Elizabeth, U.S. Fish and Wildlife Service · Public domain · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "Shixart1985",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jackson Elizabeth, U.S. Fish and Wildlife Service",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-1261",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "castles",
+      "bundle": "base",
+      "description": "Un castillo japonés con apodo de pájaro, como los futbolistas que tienen apodo de animal.",
+      "question": "Estás en Matsumoto, Japón, frente a uno de los castillos más antiguos del país. ¿Qué ave le da su apodo?",
+      "answer": "El cuervo",
+      "wrong_answers": [
+        "La garza",
+        "La grulla",
+        "El águila"
+      ],
+      "hints": [
+        "El apodo se debe al color de sus muros.",
+        "El castillo de Himeji, todo blanco, tiene el apodo de un ave blanca: la garza.",
+        "Es un ave negra, lista y ruidosa, que según la leyenda también protege la Torre de Londres."
+      ],
+      "fun_fact": "El castillo de Matsumoto conserva su torre principal original de madera desde hace más de 400 años, algo rarísimo en Japón.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Osaka_Castle_Outer_Moat_and_Osaka_Business_Park%2C_November_2016.jpg/3840px-Osaka_Castle_Outer_Moat_and_Osaka_Business_Park%2C_November_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOsaka_Castle_Outer_Moat_and_Osaka_Business_Park%2C_November_2016.jpg",
+        "credit": "Martin Falbisoner · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Martin Falbisoner",
+        "author_url": null
       },
       "background": null
     },
@@ -3263,6 +3467,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Quantum Information Retrieval",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Quantum_Information_Retrieval&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1312",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "body-oddities",
+      "bundle": "base",
+      "description": "Una sangre tan exclusiva que no tiene ni con quién compartir.",
+      "question": "Me apodan 'sangre dorada' y solo unas decenas de personas en el mundo me tienen. ¿Qué tipo de sangre soy?",
+      "answer": "Rh nulo",
+      "wrong_answers": [
+        "AB negativo",
+        "Fenotipo Bombay",
+        "O negativo"
+      ],
+      "hints": [
+        "No soy uno de los ocho tipos comunes (A, B, AB y O, positivos o negativos).",
+        "Mis glóbulos rojos no tienen ninguno de los antígenos de un sistema muy conocido.",
+        "Ese sistema es el mismo que hace a una sangre 'positiva' o 'negativa'."
+      ],
+      "fun_fact": "Quien tiene sangre Rh nulo puede donar a muchas personas con tipos Rh raros, pero solo puede recibir sangre de otro Rh nulo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Antonio_e_Biagio_e_Cesare_Arrigo_Blood_bags.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAntonio_e_Biagio_e_Cesare_Arrigo_Blood_bags.jpg",
+        "credit": "CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ufficio Comunicazione, Azienda Ospedaliera SS. Antonio e Biagio e Cesare Arrigo, Alessandria, Biblioteca Biomedica Centro di Documentazione",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PescediBabele"
       },
       "background": null
     },
@@ -3485,7 +3723,7 @@
         "Zoroastro"
       ],
       "hints": [
-        "Es un maestro espiritual nacido hace unos 2.500 años en el norte de la India.",
+        "Es un maestro espiritual nacido hace unos 2500 años en lo que hoy es Nepal.",
         "Sus seguidores rezan con monjes de túnicas naranjas.",
         "Muchas de sus estatuas lo muestran sentado y meditando con una sonrisa."
       ],
@@ -3535,40 +3773,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Martín Vasco",
         "author_url": "https://commons.wikimedia.org/wiki/User:Martin.vascovinueza"
-      },
-      "background": null
-    },
-    {
-      "id": "q-1468",
-      "status": "approved",
-      "difficulty": 10,
-      "subcategory": "african-wildlife",
-      "bundle": "base",
-      "description": "El hipopótamo tiene su propia línea de cosméticos y no la vende.",
-      "question": "Es rojizo, sale de la piel del hipopótamo y no es sangre. ¿A qué tipo de producto humano se parece por su función?",
-      "answer": "Protectores solares",
-      "wrong_answers": [
-        "Perfumes",
-        "Tintes para el pelo",
-        "Pegamentos"
-      ],
-      "hints": [
-        "El hipopótamo pasa muchas horas bajo el sol africano.",
-        "Su piel es delicada y se agrieta fácilmente.",
-        "Lo usarías en la playa para no quemarte."
-      ],
-      "fun_fact": "Ese 'sudor rojo' también ayuda a evitar infecciones en las heridas del hipopótamo.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Hippo_%28Hippopotamus_amphibius%29_going_out_of_the_water.jpg/3840px-Hippo_%28Hippopotamus_amphibius%29_going_out_of_the_water.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHippo_%28Hippopotamus_amphibius%29_going_out_of_the_water.jpg",
-        "credit": "Bernard DUPONT · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Bernard DUPONT",
-        "author_url": null
       },
       "background": null
     },
@@ -3675,6 +3879,40 @@
       "background": null
     },
     {
+      "id": "q-1579",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "accidental-inventions",
+      "bundle": "base",
+      "description": "Un experimento fallido que rebota, se estira y no sirvió para lo que debía, pero divirtió a millones.",
+      "question": "La masilla que rebota, se estira y copia dibujos del periódico nació por accidente buscando un sustituto del caucho. ¿En qué década?",
+      "answer": "Década de 1940",
+      "wrong_answers": [
+        "Década de 1900",
+        "Década de 1970",
+        "Década de 1990"
+      ],
+      "hints": [
+        "Su inventor trabajaba en el laboratorio de una gran empresa eléctrica de Estados Unidos.",
+        "Pasaron unos pocos años desde que se descubrió hasta que se vendió como juguete.",
+        "El caucho escaseaba por la guerra, y en 1950 empezó a venderse en huevos de plástico."
+      ],
+      "fun_fact": "Ningún ingeniero le encontró un uso serio, hasta que un vendedor la metió en huevos de plástico y la convirtió en juguete.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/UFV_Science_Rocks_%2814534714507%29.jpg/3840px-UFV_Science_Rocks_%2814534714507%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUFV_Science_Rocks_%2814534714507%29.jpg",
+        "credit": "University of the Fraser Valley · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "University of the Fraser Valley",
+        "author_url": "https://www.flickr.com/people/21187388@N06"
+      },
+      "background": null
+    },
+    {
       "id": "q-1614",
       "status": "approved",
       "difficulty": 3,
@@ -3705,6 +3943,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Dietmar Rabich",
         "author_url": "https://www.wikidata.org/wiki/Q34788025"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1642",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "british-royals",
+      "bundle": "base",
+      "description": "Unos patos elegantes con dueño importante.",
+      "question": "Estás a orillas del río Támesis y ves cisnes blancos sin marca. Según una antigua tradición, ¿de quién son?",
+      "answer": "Del rey",
+      "wrong_answers": [
+        "Del alcalde de Londres",
+        "De los pescadores",
+        "Del primer ministro"
+      ],
+      "hints": [
+        "Su dueño lleva corona.",
+        "Cada año los cuentan en una ceremonia oficial.",
+        "Antes eran de Isabel II, hoy son de su hijo."
+      ],
+      "fun_fact": "Cada verano se hace el «Swan Upping», una ceremonia en barcas para contar y revisar a los cisnes del Támesis.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Swan_on_the_River_Thames_at_Twickenham_%28March_2010%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASwan_on_the_River_Thames_at_Twickenham_%28March_2010%29.jpg",
+        "credit": "Carcharoth (Commons) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Carcharoth (Commons)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Carcharoth_(Commons)"
       },
       "background": null
     },
@@ -3773,6 +4045,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0/ch/deed.en",
         "author": "A. Buser",
         "author_url": "https://commons.wikimedia.org/wiki/User:AmBu"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1732",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "big-questions",
+      "bundle": "base",
+      "description": "La materia que te pregunta si está bien comerte el último pedazo de pastel sin avisar.",
+      "question": "Estudia qué está bien y qué está mal, se pregunta cómo debemos portarnos y en muchos colegios es una materia. ¿Qué es?",
+      "answer": "La ética",
+      "wrong_answers": [
+        "La estética",
+        "La lógica",
+        "La gramática"
+      ],
+      "hints": [
+        "Es una rama de la filosofía.",
+        "Se ocupa de valores como la honestidad y la justicia.",
+        "Cuando algo es tramposo, se dice que no es muy…"
+      ],
+      "fun_fact": "La palabra viene del griego 'êthos', que significa 'costumbre' o 'carácter'.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/A_public_school%2C_high_school_classroom_in_the_United_States_01.jpg/3840px-A_public_school%2C_high_school_classroom_in_the_United_States_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_public_school%2C_high_school_classroom_in_the_United_States_01.jpg",
+        "credit": "Harrison Keely · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Harrison Keely",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Hkeely"
       },
       "background": null
     },
@@ -3875,6 +4181,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "DarkF 77",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:DarkF_77&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1782",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "cheese",
+      "bundle": "base",
+      "description": "Dos quesos famosos con la misma mamá peluda.",
+      "question": "¿De qué animal es la leche del Roquefort francés y del pecorino romano italiano?",
+      "answer": "Oveja",
+      "wrong_answers": [
+        "Vaca",
+        "Cabra",
+        "Búfala"
+      ],
+      "hints": [
+        "Es un animal de granja.",
+        "Vive en rebaños que a menudo cuidan perros pastores.",
+        "Con su pelo se hace la lana."
+      ],
+      "fun_fact": "La leche de oveja tiene casi el doble de grasa que la de vaca, por eso sus quesos son tan cremosos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Some_French_Cheese_on_the_Market_Place.jpg/3840px-Some_French_Cheese_on_the_Market_Place.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASome_French_Cheese_on_the_Market_Place.jpg",
+        "credit": "Peachyeung316 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Peachyeung316",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Peachyeung316"
       },
       "background": null
     },
@@ -4011,6 +4351,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Charles J. Sharp",
         "author_url": "https://www.wikidata.org/wiki/Q54800218"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2025",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "oscars",
+      "bundle": "base",
+      "description": "Ciudad Gótica tiene muchos villanos, pero solo uno tiene estatuillas doradas en la vitrina.",
+      "question": "Soy un villano de Batman. Heath Ledger ganó un Óscar en 2009 por interpretarme en 'El caballero de la noche'. ¿Quién soy?",
+      "answer": "El Joker",
+      "wrong_answers": [
+        "El Pingüino",
+        "El Acertijo",
+        "Dos Caras"
+      ],
+      "hints": [
+        "Mi cara es muy pálida.",
+        "Tengo el pelo verde y una sonrisa enorme pintada.",
+        "Siempre pregunto: '¿Por qué tan serio?'."
+      ],
+      "fun_fact": "Años después, Joaquin Phoenix también ganó un Óscar haciendo de este mismo villano.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Gotham_City_%28128878277%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGotham_City_%28128878277%29.jpeg",
+        "credit": "Hakan Albağ · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Hakan Albağ",
+        "author_url": "https://500px.com/halbag"
       },
       "background": null
     },

@@ -28,8 +28,9 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per questi
 - No games-per-player number (pm decision 21). Estimate at 5000, strong player, old Normal joker budget: ≥ 80 games in every age group (bottleneck: adults, difficulty 13–15).
 - Later languages (zh-Hans, ru, pt-BR, milestone 12): no target now.
 - **Regional packs:** 2000 approved each, D-53's mix scaled (`targets.json` `colombia`: 100 … 50), per locale (region's language + en); progress: `qgen report --bundle <id> [--locale L]` (D-101).
+- **Theme bundles** (plan 184: `stem`, `sports`, `history`, `movies`, `geography`): 2000 approved each per question locale (es, es-ES, en, de), the same scaled mix (`targets.json`); progress: `qgen report --bundle <id> [--locale L]`.
 - Translations count: a locale's 5000 = approved sources in it + its playing translations (re-rated, fact-checked, reviewed, 15b; decision 235).
-- **Gap rule (D-107, pm decision 236):** English drafting for `base` aims at the largest per level over the four locales of deficit / yield − approved translatable sources not yet in that locale (`targets.draft_gaps`, `locale_gap`); regional packs their own deficit (D-101).
+- **Gap rule (D-107, pm decision 236):** English drafting for `base` aims at the largest per level over the four locales of deficit / yield − approved translatable sources not yet in that locale (`targets.draft_gaps`, `locale_gap`); theme bundles the same rule on their own deficits (plan 184); regional packs their own deficit (D-101).
 - The release also needs **every subcategory** to have depth at several difficulties, or it is merged into a neighbour (D-19).
 
 ## Quality bar
@@ -44,7 +45,9 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per questi
 `costs.log` records the cost per generated question. A full run for 5000 questions × 4 question locales (English drafts plus three translations each, with translation, rating and fact-checking) needs a budget estimate before it starts (CT-3).
 - pm plan 70: `qgen report --cost` (CT-3), per-locale deficits + `es` source shortfall for `en`/`de` (CT-4, pm decision 37; the shortfall replaced by English drafting for the four question locales' deficits, D-107, pm decision 236), release budget per language as a pm decision after the translation pilot, before full runs.
 - `qgen report --cost [--json]` (task 461): $ per run (own log + `audit/`), draft $/approved (last 3 batches, weighted), translation $/approved per locale, overhead ratio, projection per language, spent vs. `targets.json` `"budget"`.
+- `qgen report --cost` also lists rows per regional bundle (× es, en) and per theme bundle (× en drafting, × es, es-ES, de translations): deficit to its target (a theme's en row: its draft gap), $/approved of its own runs, else base's rate (marked `*`) (plan 184).
 - Numbers 2026-10-12 (list price): batch-4..7 $0.16 / $0.37 / $0.30 / $0.24 per approved; draft $0.26 (batch-5..7); overhead $129 (concepts $65, tighten $38, rework $6, pilot/first-120 $16, bundles $2, audit $3) / batches $183 = 0.70; `es` 3966 to go → ~$1750; `en`/`de` no pilot yet; spent $343 (`es`, incl. batch-8 in progress $31); batch-3's cost unknown (no `work/`).
+- Numbers 2026-10-21 (`qgen report --cost`, list price, information only, no budget; task 1506): translation $/approved per direction: pilots `tr-en-1` (es → en) $0.12, `tr-de-1` (es → de) $0.14, `tr-es-ES-1` (es → es-ES) $0.11, `tr-es-1` (en → es) $0.11; per locale with full runs: es $0.11, es-ES $0.09, en $0.10, de $0.10; en drafts $0.26 (batch-9..11), es drafts $0.23; overhead 0.24 of batch cost. Projection to base targets: es 2945 to go ≈ $412, es-ES 4655 ≈ $527, en 1506 translations ≈ $186, de 4657 ≈ $567, en drafts ≈ $163.
 
 ## Tasks
 - [x] CT-1 Decide the target (OQ-32): 5000 approved per launch language, D-53's mix, no games number (2026-10-12, D-75). CT-2 (S4) reports games per player.
