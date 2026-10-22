@@ -41796,6 +41796,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Bump first with `RETURNING count` (user, then `*`), reject with `rateLimited` when over `RATE_TELEMETRY_USER` / `RATE_TELEMETRY_TOTAL`, then insert the session; reuse or move `bump` instead of a second copy (decision 199)
 - Keep the duplicate check before the bump, so a duplicate doesn''t count
 - Done: `tsc -p report-server` passes; `trivia-report-server dev` + `seed-telemetry` still stores sessions; the limit holds', '2026-10-22T20:59:17Z', NULL, NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1687, NULL, 'atomic.locked: no double holder after a stale lock', 'exec', 'open', NULL, NULL, 'Audit finding 5. `authoring/tools/atomic.py` `_acquire` deletes a lock file older than `STALE` (60 s). Two waiters that both see the same stale file: one deletes it and creates a new one, the other then deletes that new one; both hold the lock, and a pool write can be lost.
+
+- Replace create-and-delete with `fcntl.flock(LOCK_EX)` on `<name>.lock` (kept open while held; the OS frees it on a crash); drop `STALE` and the stale logic
+- The `PermissionError` branch is for Windows: check whether the authoring tools must run on Windows at all (README, flake). If they must, keep the current path there behind `os.name == "nt"`, else drop it
+- Keep the in-process `RLock` re-entrancy and the lock order in the docstring
+- Done: authoring server and `qgen` still share the pool lock (one holds, the other waits); `npm run check` (ruff) passes', '2026-10-22T20:59:18Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
