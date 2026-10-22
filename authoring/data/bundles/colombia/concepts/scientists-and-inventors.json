@@ -1,0 +1,673 @@
+{
+  "subcategory": "scientists-and-inventors",
+  "facets": [
+    "Expedición Botánica y naturalistas",
+    "Sabios de la Independencia",
+    "Astronomía y Observatorio de Bogotá",
+    "Vacunas y enfermedades tropicales",
+    "Cerebro y neurociencia",
+    "Inventos médicos colombianos",
+    "Mujeres científicas colombianas",
+    "Colombianos en el espacio",
+    "Exploración y mapas del territorio",
+    "Instituciones, premios y homenajes",
+    "Inventos e ingenio cotidiano"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 1,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 1,
+      "popular_science": 3,
+      "science_news": 4,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 4,
+      "language": 1
+    }
+  },
+  "concepts": [
+    {
+      "name": "Real Expedición Botánica del Nuevo Reino de Granada",
+      "facet": "Expedición Botánica y naturalistas",
+      "known_at": 8
+    },
+    {
+      "name": "Francisco Javier Matís",
+      "facet": "Expedición Botánica y naturalistas",
+      "known_at": 14
+    },
+    {
+      "name": "Té de Bogotá",
+      "facet": "Expedición Botánica y naturalistas",
+      "known_at": 14
+    },
+    {
+      "name": "Real Jardín Botánico de Madrid",
+      "facet": "Expedición Botánica y naturalistas",
+      "known_at": 13
+    },
+    {
+      "name": "Enrique Pérez Arbeláez",
+      "facet": "Expedición Botánica y naturalistas",
+      "known_at": 13
+    },
+    {
+      "name": "Richard Evans Schultes",
+      "facet": "Expedición Botánica y naturalistas",
+      "known_at": 14
+    },
+    {
+      "name": "Armando Dugand",
+      "facet": "Expedición Botánica y naturalistas",
+      "known_at": 15
+    },
+    {
+      "name": "Sinforoso Mutis",
+      "facet": "Expedición Botánica y naturalistas",
+      "known_at": 15
+    },
+    {
+      "name": "Francisco Antonio Zea",
+      "facet": "Sabios de la Independencia",
+      "known_at": 12
+    },
+    {
+      "name": "Declaración de los Derechos del Hombre y del Ciudadano",
+      "facet": "Sabios de la Independencia",
+      "known_at": 8
+    },
+    {
+      "name": "Papel Periódico de Santafé de Bogotá",
+      "facet": "Sabios de la Independencia",
+      "known_at": 13
+    },
+    {
+      "name": "Manuel del Socorro Rodríguez",
+      "facet": "Sabios de la Independencia",
+      "known_at": 14
+    },
+    {
+      "name": "Pedro Fermín de Vargas",
+      "facet": "Sabios de la Independencia",
+      "known_at": 14,
+      "retired": "unaskable: Pedro Fermín de Vargas es demasiado oscuro y ninguna de las opciones encaja (foto de lugar, nombre de concepto)."
+    },
+    {
+      "name": "José Félix de Restrepo",
+      "facet": "Sabios de la Independencia",
+      "known_at": 13
+    },
+    {
+      "name": "Joaquín Camacho",
+      "facet": "Sabios de la Independencia",
+      "known_at": 14
+    },
+    {
+      "name": "Frutos Joaquín Gutiérrez",
+      "facet": "Sabios de la Independencia",
+      "known_at": 15,
+      "retired": "unaskable: Frutos Joaquín Gutiérrez es demasiado desconocido; ni los adultos colombianos podrían razonar hacia la respuesta, y ninguna opción da una pregunta justa."
+    },
+    {
+      "name": "Observatorio Astronómico Nacional",
+      "facet": "Astronomía y Observatorio de Bogotá",
+      "known_at": 9
+    },
+    {
+      "name": "Domingo de Petrés",
+      "facet": "Astronomía y Observatorio de Bogotá",
+      "known_at": 14
+    },
+    {
+      "name": "Julio Garavito Armero",
+      "facet": "Astronomía y Observatorio de Bogotá",
+      "known_at": 9
+    },
+    {
+      "name": "Billete de 20 000 pesos",
+      "facet": "Astronomía y Observatorio de Bogotá",
+      "known_at": 5
+    },
+    {
+      "name": "Cráter Garavito",
+      "facet": "Astronomía y Observatorio de Bogotá",
+      "known_at": 12
+    },
+    {
+      "name": "Planetario de Medellín",
+      "facet": "Astronomía y Observatorio de Bogotá",
+      "known_at": 7
+    },
+    {
+      "name": "José María González Benito",
+      "facet": "Astronomía y Observatorio de Bogotá",
+      "known_at": 15
+    },
+    {
+      "name": "Jorge Álvarez Lleras",
+      "facet": "Astronomía y Observatorio de Bogotá",
+      "known_at": 15
+    },
+    {
+      "name": "Manuel Elkin Patarroyo",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 7
+    },
+    {
+      "name": "Vacuna sintética contra la malaria",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 9
+    },
+    {
+      "name": "SPf66",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 14
+    },
+    {
+      "name": "Malaria",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 6
+    },
+    {
+      "name": "Fiebre amarilla",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 6
+    },
+    {
+      "name": "Dengue",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 4
+    },
+    {
+      "name": "Zika",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 7
+    },
+    {
+      "name": "Chikunguña",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 7
+    },
+    {
+      "name": "Leishmaniasis",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 11
+    },
+    {
+      "name": "Mal de Chagas",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 11
+    },
+    {
+      "name": "Aedes aegypti",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 8
+    },
+    {
+      "name": "Anopheles",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 11
+    },
+    {
+      "name": "Viruela",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 8
+    },
+    {
+      "name": "Expedición Balmis",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 13
+    },
+    {
+      "name": "Instituto Nacional de Salud",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 9
+    },
+    {
+      "name": "Fundación Instituto de Inmunología de Colombia",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 13
+    },
+    {
+      "name": "Roberto Franco",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 15
+    },
+    {
+      "name": "Agua de Dios",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 11
+    },
+    {
+      "name": "Mosquitos con Wolbachia",
+      "facet": "Vacunas y enfermedades tropicales",
+      "known_at": 13
+    },
+    {
+      "name": "Rodolfo Llinás",
+      "facet": "Cerebro y neurociencia",
+      "known_at": 10
+    },
+    {
+      "name": "Francisco Lopera",
+      "facet": "Cerebro y neurociencia",
+      "known_at": 11
+    },
+    {
+      "name": "Alzhéimer",
+      "facet": "Cerebro y neurociencia",
+      "known_at": 7
+    },
+    {
+      "name": "Mutación paisa",
+      "facet": "Cerebro y neurociencia",
+      "known_at": 12
+    },
+    {
+      "name": "Aliria Rosa Piedrahita",
+      "facet": "Cerebro y neurociencia",
+      "known_at": 14
+    },
+    {
+      "name": "Mutación Christchurch",
+      "facet": "Cerebro y neurociencia",
+      "known_at": 15
+    },
+    {
+      "name": "Grupo de Neurociencias de Antioquia",
+      "facet": "Cerebro y neurociencia",
+      "known_at": 13
+    },
+    {
+      "name": "Yarumal",
+      "facet": "Cerebro y neurociencia",
+      "known_at": 11
+    },
+    {
+      "name": "Cerebelo",
+      "facet": "Cerebro y neurociencia",
+      "known_at": 8
+    },
+    {
+      "name": "Neurona",
+      "facet": "Cerebro y neurociencia",
+      "known_at": 7
+    },
+    {
+      "name": "El cerebro y el mito del yo",
+      "facet": "Cerebro y neurociencia",
+      "known_at": 14
+    },
+    {
+      "name": "Neurolab",
+      "facet": "Cerebro y neurociencia",
+      "known_at": 14
+    },
+    {
+      "name": "Magnetoencefalografía",
+      "facet": "Cerebro y neurociencia",
+      "known_at": 14
+    },
+    {
+      "name": "Jorge Reynolds Pombo",
+      "facet": "Inventos médicos colombianos",
+      "known_at": 10
+    },
+    {
+      "name": "Marcapasos",
+      "facet": "Inventos médicos colombianos",
+      "known_at": 8
+    },
+    {
+      "name": "Salomón Hakim",
+      "facet": "Inventos médicos colombianos",
+      "known_at": 12
+    },
+    {
+      "name": "Válvula de Hakim",
+      "facet": "Inventos médicos colombianos",
+      "known_at": 12
+    },
+    {
+      "name": "Hidrocefalia",
+      "facet": "Inventos médicos colombianos",
+      "known_at": 11
+    },
+    {
+      "name": "José Ignacio Barraquer",
+      "facet": "Inventos médicos colombianos",
+      "known_at": 12
+    },
+    {
+      "name": "Queratomileusis",
+      "facet": "Inventos médicos colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Cirugía refractiva",
+      "facet": "Inventos médicos colombianos",
+      "known_at": 11
+    },
+    {
+      "name": "Clínica Barraquer",
+      "facet": "Inventos médicos colombianos",
+      "known_at": 11
+    },
+    {
+      "name": "Método madre canguro",
+      "facet": "Inventos médicos colombianos",
+      "known_at": 8
+    },
+    {
+      "name": "Edgar Rey Sanabria",
+      "facet": "Inventos médicos colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Bebé prematuro",
+      "facet": "Inventos médicos colombianos",
+      "known_at": 5
+    },
+    {
+      "name": "Incubadora",
+      "facet": "Inventos médicos colombianos",
+      "known_at": 5
+    },
+    {
+      "name": "Emilio Yunis Turbay",
+      "facet": "Inventos médicos colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Ángela Restrepo",
+      "facet": "Mujeres científicas colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Paracoccidioidomicosis",
+      "facet": "Mujeres científicas colombianas",
+      "known_at": 15
+    },
+    {
+      "name": "Nubia Muñoz",
+      "facet": "Mujeres científicas colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Virus del papiloma humano",
+      "facet": "Mujeres científicas colombianas",
+      "known_at": 10
+    },
+    {
+      "name": "Adriana Ocampo",
+      "facet": "Mujeres científicas colombianas",
+      "known_at": 13
+    },
+    {
+      "name": "Cráter de Chicxulub",
+      "facet": "Mujeres científicas colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Ana María Rey",
+      "facet": "Mujeres científicas colombianas",
+      "known_at": 13
+    },
+    {
+      "name": "Brigitte Baptiste",
+      "facet": "Mujeres científicas colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Helena Groot",
+      "facet": "Mujeres científicas colombianas",
+      "known_at": 14
+    },
+    {
+      "name": "Virginia Gutiérrez de Pineda",
+      "facet": "Mujeres científicas colombianas",
+      "known_at": 13
+    },
+    {
+      "name": "Diana Trujillo",
+      "facet": "Colombianos en el espacio",
+      "known_at": 8
+    },
+    {
+      "name": "Rover Perseverance",
+      "facet": "Colombianos en el espacio",
+      "known_at": 7
+    },
+    {
+      "name": "Rover Curiosity",
+      "facet": "Colombianos en el espacio",
+      "known_at": 8
+    },
+    {
+      "name": "Ingenuity",
+      "facet": "Colombianos en el espacio",
+      "known_at": 9
+    },
+    {
+      "name": "Cráter Jezero",
+      "facet": "Colombianos en el espacio",
+      "known_at": 13
+    },
+    {
+      "name": "Marte",
+      "facet": "Colombianos en el espacio",
+      "known_at": 2
+    },
+    {
+      "name": "Libertad 1",
+      "facet": "Colombianos en el espacio",
+      "known_at": 11
+    },
+    {
+      "name": "FACSAT-1",
+      "facet": "Colombianos en el espacio",
+      "known_at": 13
+    },
+    {
+      "name": "Universidad Sergio Arboleda",
+      "facet": "Colombianos en el espacio",
+      "known_at": 13
+    },
+    {
+      "name": "Fuerza Aeroespacial Colombiana",
+      "facet": "Colombianos en el espacio",
+      "known_at": 9
+    },
+    {
+      "name": "Satélite artificial",
+      "facet": "Colombianos en el espacio",
+      "known_at": 5
+    },
+    {
+      "name": "Instituto Geográfico Agustín Codazzi",
+      "facet": "Exploración y mapas del territorio",
+      "known_at": 10
+    },
+    {
+      "name": "Carmelo Fernández",
+      "facet": "Exploración y mapas del territorio",
+      "known_at": 15
+    },
+    {
+      "name": "Joaquín Acosta",
+      "facet": "Exploración y mapas del territorio",
+      "known_at": 14
+    },
+    {
+      "name": "Francisco Javier Vergara y Velasco",
+      "facet": "Exploración y mapas del territorio",
+      "known_at": 15
+    },
+    {
+      "name": "Mapa de Juan de la Cosa",
+      "facet": "Exploración y mapas del territorio",
+      "known_at": 13
+    },
+    {
+      "name": "Expedición Antártica colombiana",
+      "facet": "Exploración y mapas del territorio",
+      "known_at": 11
+    },
+    {
+      "name": "Expedición Colombia BIO",
+      "facet": "Exploración y mapas del territorio",
+      "known_at": 13
+    },
+    {
+      "name": "Universidad Nacional de Colombia",
+      "facet": "Instituciones, premios y homenajes",
+      "known_at": 6
+    },
+    {
+      "name": "Minciencias",
+      "facet": "Instituciones, premios y homenajes",
+      "known_at": 11
+    },
+    {
+      "name": "Colciencias",
+      "facet": "Instituciones, premios y homenajes",
+      "known_at": 11
+    },
+    {
+      "name": "Misión de Sabios",
+      "facet": "Instituciones, premios y homenajes",
+      "known_at": 12
+    },
+    {
+      "name": "Premio Príncipe de Asturias",
+      "facet": "Instituciones, premios y homenajes",
+      "known_at": 11
+    },
+    {
+      "name": "Academia Colombiana de Ciencias Exactas, Físicas y Naturales",
+      "facet": "Instituciones, premios y homenajes",
+      "known_at": 14
+    },
+    {
+      "name": "Instituto Humboldt",
+      "facet": "Instituciones, premios y homenajes",
+      "known_at": 11
+    },
+    {
+      "name": "Departamento de Caldas",
+      "facet": "Instituciones, premios y homenajes",
+      "known_at": 4
+    },
+    {
+      "name": "Universidad Distrital Francisco José de Caldas",
+      "facet": "Instituciones, premios y homenajes",
+      "known_at": 9
+    },
+    {
+      "name": "Universidad de Antioquia",
+      "facet": "Instituciones, premios y homenajes",
+      "known_at": 7
+    },
+    {
+      "name": "Escuela de Minas de Medellín",
+      "facet": "Instituciones, premios y homenajes",
+      "known_at": 13
+    },
+    {
+      "name": "Cenicafé",
+      "facet": "Instituciones, premios y homenajes",
+      "known_at": 12
+    },
+    {
+      "name": "CIAT",
+      "facet": "Instituciones, premios y homenajes",
+      "known_at": 14
+    },
+    {
+      "name": "Invemar",
+      "facet": "Instituciones, premios y homenajes",
+      "known_at": 14
+    },
+    {
+      "name": "Premio Alejandro Ángel Escobar",
+      "facet": "Instituciones, premios y homenajes",
+      "known_at": 14
+    },
+    {
+      "name": "Ciclovía de Bogotá",
+      "facet": "Inventos e ingenio cotidiano",
+      "known_at": 4
+    },
+    {
+      "name": "Metrocable de Medellín",
+      "facet": "Inventos e ingenio cotidiano",
+      "known_at": 5
+    },
+    {
+      "name": "Escaleras eléctricas de la Comuna 13",
+      "facet": "Inventos e ingenio cotidiano",
+      "known_at": 8
+    },
+    {
+      "name": "Pico y placa",
+      "facet": "Inventos e ingenio cotidiano",
+      "known_at": 6
+    },
+    {
+      "name": "Tarabita",
+      "facet": "Inventos e ingenio cotidiano",
+      "known_at": 10
+    },
+    {
+      "name": "Bon Bon Bum",
+      "facet": "Inventos e ingenio cotidiano",
+      "known_at": 1
+    },
+    {
+      "name": "Chocoramo",
+      "facet": "Inventos e ingenio cotidiano",
+      "known_at": 1
+    },
+    {
+      "name": "Biblioburro",
+      "facet": "Inventos e ingenio cotidiano",
+      "known_at": 9
+    },
+    {
+      "name": "Ladrillos de plástico reciclado",
+      "facet": "Inventos e ingenio cotidiano",
+      "known_at": 10
+    }
+  ]
+}

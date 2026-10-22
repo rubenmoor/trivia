@@ -1,0 +1,822 @@
+{
+  "subcategory": "popular-and-andean-music",
+  "facets": [
+    "Ritmos andinos tradicionales",
+    "Instrumentos de cuerda andinos",
+    "Compositores clásicos andinos",
+    "Duetos y voces de la música andina",
+    "Canciones andinas emblemáticas",
+    "Carranga y música campesina",
+    "Música de despecho y carrilera",
+    "Parranda paisa y música decembrina",
+    "Festivales y concursos andinos",
+    "Estrellas actuales de la música popular",
+    "Tango, bolero y ranchera en Colombia"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Guabina",
+      "facet": "Ritmos andinos tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Torbellino",
+      "facet": "Ritmos andinos tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Rajaleña",
+      "facet": "Ritmos andinos tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Sanjuanero",
+      "facet": "Ritmos andinos tradicionales",
+      "known_at": 7
+    },
+    {
+      "name": "Bunde",
+      "facet": "Ritmos andinos tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Danza andina colombiana",
+      "facet": "Ritmos andinos tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Rumba criolla",
+      "facet": "Ritmos andinos tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Caña",
+      "facet": "Ritmos andinos tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Vals colombiano",
+      "facet": "Ritmos andinos tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Sanjuanito",
+      "facet": "Ritmos andinos tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Son sureño",
+      "facet": "Ritmos andinos tradicionales",
+      "known_at": 14
+    },
+    {
+      "name": "Chirimía caucana",
+      "facet": "Ritmos andinos tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Contradanza",
+      "facet": "Ritmos andinos tradicionales",
+      "known_at": 14
+    },
+    {
+      "name": "Tiple",
+      "facet": "Instrumentos de cuerda andinos",
+      "known_at": 6
+    },
+    {
+      "name": "Bandola andina",
+      "facet": "Instrumentos de cuerda andinos",
+      "known_at": 9
+    },
+    {
+      "name": "Requinto",
+      "facet": "Instrumentos de cuerda andinos",
+      "known_at": 9
+    },
+    {
+      "name": "Charango",
+      "facet": "Instrumentos de cuerda andinos",
+      "known_at": 9
+    },
+    {
+      "name": "Tiple requinto",
+      "facet": "Instrumentos de cuerda andinos",
+      "known_at": 13
+    },
+    {
+      "name": "Violín",
+      "facet": "Instrumentos de cuerda andinos",
+      "known_at": 2
+    },
+    {
+      "name": "Contrabajo",
+      "facet": "Instrumentos de cuerda andinos",
+      "known_at": 6
+    },
+    {
+      "name": "Trío andino",
+      "facet": "Instrumentos de cuerda andinos",
+      "known_at": 11
+    },
+    {
+      "name": "Estudiantina",
+      "facet": "Instrumentos de cuerda andinos",
+      "known_at": 11
+    },
+    {
+      "name": "Púa",
+      "facet": "Instrumentos de cuerda andinos",
+      "known_at": 8
+    },
+    {
+      "name": "Clavijero",
+      "facet": "Instrumentos de cuerda andinos",
+      "known_at": 11
+    },
+    {
+      "name": "Lutier",
+      "facet": "Instrumentos de cuerda andinos",
+      "known_at": 11
+    },
+    {
+      "name": "Rasgueo",
+      "facet": "Instrumentos de cuerda andinos",
+      "known_at": 9
+    },
+    {
+      "name": "José A. Morales",
+      "facet": "Compositores clásicos andinos",
+      "known_at": 12
+    },
+    {
+      "name": "Pedro Morales Pino",
+      "facet": "Compositores clásicos andinos",
+      "known_at": 13
+    },
+    {
+      "name": "Luis A. Calvo",
+      "facet": "Compositores clásicos andinos",
+      "known_at": 13
+    },
+    {
+      "name": "Jorge Villamil",
+      "facet": "Compositores clásicos andinos",
+      "known_at": 12
+    },
+    {
+      "name": "Emilio Murillo",
+      "facet": "Compositores clásicos andinos",
+      "known_at": 14
+    },
+    {
+      "name": "Alberto Castilla",
+      "facet": "Compositores clásicos andinos",
+      "known_at": 14
+    },
+    {
+      "name": "Luis Uribe Bueno",
+      "facet": "Compositores clásicos andinos",
+      "known_at": 14
+    },
+    {
+      "name": "Carlos Vieco",
+      "facet": "Compositores clásicos andinos",
+      "known_at": 14
+    },
+    {
+      "name": "Jorge Añez",
+      "facet": "Compositores clásicos andinos",
+      "known_at": 14
+    },
+    {
+      "name": "Rafael Godoy",
+      "facet": "Compositores clásicos andinos",
+      "known_at": 13
+    },
+    {
+      "name": "Anselmo Durán Plazas",
+      "facet": "Compositores clásicos andinos",
+      "known_at": 14
+    },
+    {
+      "name": "Álvaro Dalmar",
+      "facet": "Compositores clásicos andinos",
+      "known_at": 14
+    },
+    {
+      "name": "Héctor Ochoa",
+      "facet": "Compositores clásicos andinos",
+      "known_at": 13
+    },
+    {
+      "name": "Arnulfo Briceño",
+      "facet": "Compositores clásicos andinos",
+      "known_at": 13
+    },
+    {
+      "name": "Oriol Rangel",
+      "facet": "Compositores clásicos andinos",
+      "known_at": 15
+    },
+    {
+      "name": "Gentil Montaña",
+      "facet": "Compositores clásicos andinos",
+      "known_at": 15
+    },
+    {
+      "name": "Silva y Villalba",
+      "facet": "Duetos y voces de la música andina",
+      "known_at": 12
+    },
+    {
+      "name": "Los Tolimenses",
+      "facet": "Duetos y voces de la música andina",
+      "known_at": 10
+    },
+    {
+      "name": "Espinosa y Bedoya",
+      "facet": "Duetos y voces de la música andina",
+      "known_at": 13
+    },
+    {
+      "name": "Obdulio y Julián",
+      "facet": "Duetos y voces de la música andina",
+      "known_at": 13
+    },
+    {
+      "name": "Dueto de Antaño",
+      "facet": "Duetos y voces de la música andina",
+      "known_at": 14
+    },
+    {
+      "name": "Briceño y Añez",
+      "facet": "Duetos y voces de la música andina",
+      "known_at": 15
+    },
+    {
+      "name": "Wills y Escobar",
+      "facet": "Duetos y voces de la música andina",
+      "known_at": 15
+    },
+    {
+      "name": "Elsa y Elvia",
+      "facet": "Duetos y voces de la música andina",
+      "known_at": 14
+    },
+    {
+      "name": "Ana y Jaime",
+      "facet": "Duetos y voces de la música andina",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Julio Ramírez",
+      "facet": "Duetos y voces de la música andina",
+      "known_at": 15,
+      "retired": "unaskable: Barítono demasiado poco conocido y sin datos que yo pueda verificar con seguridad."
+    },
+    {
+      "name": "Niyireth Alarcón",
+      "facet": "Duetos y voces de la música andina",
+      "known_at": 14
+    },
+    {
+      "name": "Leonor González Mina",
+      "facet": "Duetos y voces de la música andina",
+      "known_at": 12
+    },
+    {
+      "name": "Emeterio y Felipe",
+      "facet": "Duetos y voces de la música andina",
+      "known_at": 11
+    },
+    {
+      "name": "Soy colombiano",
+      "facet": "Canciones andinas emblemáticas",
+      "known_at": 8
+    },
+    {
+      "name": "Espumas",
+      "facet": "Canciones andinas emblemáticas",
+      "known_at": 13
+    },
+    {
+      "name": "El barcino",
+      "facet": "Canciones andinas emblemáticas",
+      "known_at": 13
+    },
+    {
+      "name": "Los guaduales",
+      "facet": "Canciones andinas emblemáticas",
+      "known_at": 13
+    },
+    {
+      "name": "La guaneña",
+      "facet": "Canciones andinas emblemáticas",
+      "known_at": 12
+    },
+    {
+      "name": "El camino de la vida",
+      "facet": "Canciones andinas emblemáticas",
+      "known_at": 11
+    },
+    {
+      "name": "Bunde tolimense",
+      "facet": "Canciones andinas emblemáticas",
+      "known_at": 13
+    },
+    {
+      "name": "Campesina santandereana",
+      "facet": "Canciones andinas emblemáticas",
+      "known_at": 13
+    },
+    {
+      "name": "San Pedro en El Espinal",
+      "facet": "Canciones andinas emblemáticas",
+      "known_at": 12
+    },
+    {
+      "name": "Me llevarás en ti",
+      "facet": "Canciones andinas emblemáticas",
+      "known_at": 14
+    },
+    {
+      "name": "Malvaloca",
+      "facet": "Canciones andinas emblemáticas",
+      "known_at": 15
+    },
+    {
+      "name": "Mi cafetal",
+      "facet": "Canciones andinas emblemáticas",
+      "known_at": 12
+    },
+    {
+      "name": "Antioqueñita",
+      "facet": "Canciones andinas emblemáticas",
+      "known_at": 14
+    },
+    {
+      "name": "Jorge Velosa",
+      "facet": "Carranga y música campesina",
+      "known_at": 9
+    },
+    {
+      "name": "Los Carrangueros de Ráquira",
+      "facet": "Carranga y música campesina",
+      "known_at": 11
+    },
+    {
+      "name": "Merengue carranguero",
+      "facet": "Carranga y música campesina",
+      "known_at": 12
+    },
+    {
+      "name": "Rumba carranguera",
+      "facet": "Carranga y música campesina",
+      "known_at": 12
+    },
+    {
+      "name": "Sombrero de paja",
+      "facet": "Carranga y música campesina",
+      "known_at": 3
+    },
+    {
+      "name": "Copla",
+      "facet": "Carranga y música campesina",
+      "known_at": 9
+    },
+    {
+      "name": "La cucharita",
+      "facet": "Carranga y música campesina",
+      "known_at": 11
+    },
+    {
+      "name": "A quién engañas abuelo",
+      "facet": "Carranga y música campesina",
+      "known_at": 12
+    },
+    {
+      "name": "Festival Nacional Carranguero",
+      "facet": "Carranga y música campesina",
+      "known_at": 14
+    },
+    {
+      "name": "Darío Gómez",
+      "facet": "Música de despecho y carrilera",
+      "known_at": 9
+    },
+    {
+      "name": "Las Hermanitas Calle",
+      "facet": "Música de despecho y carrilera",
+      "known_at": 12
+    },
+    {
+      "name": "El Charrito Negro",
+      "facet": "Música de despecho y carrilera",
+      "known_at": 12
+    },
+    {
+      "name": "Luis Alberto Posada",
+      "facet": "Música de despecho y carrilera",
+      "known_at": 11
+    },
+    {
+      "name": "Galy Galiano",
+      "facet": "Música de despecho y carrilera",
+      "known_at": 11
+    },
+    {
+      "name": "El Andariego",
+      "facet": "Música de despecho y carrilera",
+      "known_at": 13
+    },
+    {
+      "name": "Lady Yuliana",
+      "facet": "Música de despecho y carrilera",
+      "known_at": 13
+    },
+    {
+      "name": "Nadie es eterno",
+      "facet": "Música de despecho y carrilera",
+      "known_at": 10
+    },
+    {
+      "name": "Música de carrilera",
+      "facet": "Música de despecho y carrilera",
+      "known_at": 11
+    },
+    {
+      "name": "Música guasca",
+      "facet": "Música de despecho y carrilera",
+      "known_at": 11
+    },
+    {
+      "name": "Rockola",
+      "facet": "Música de despecho y carrilera",
+      "known_at": 10
+    },
+    {
+      "name": "Cantina",
+      "facet": "Música de despecho y carrilera",
+      "known_at": 7
+    },
+    {
+      "name": "Tecnocarrilera",
+      "facet": "Música de despecho y carrilera",
+      "known_at": 11
+    },
+    {
+      "name": "Guillermo Buitrago",
+      "facet": "Parranda paisa y música decembrina",
+      "known_at": 12
+    },
+    {
+      "name": "El año viejo",
+      "facet": "Parranda paisa y música decembrina",
+      "known_at": 7
+    },
+    {
+      "name": "Crescencio Salcedo",
+      "facet": "Parranda paisa y música decembrina",
+      "known_at": 13
+    },
+    {
+      "name": "Los 50 de Joselito",
+      "facet": "Parranda paisa y música decembrina",
+      "known_at": 10
+    },
+    {
+      "name": "Los Graduados",
+      "facet": "Parranda paisa y música decembrina",
+      "known_at": 11
+    },
+    {
+      "name": "Gustavo Quintero",
+      "facet": "Parranda paisa y música decembrina",
+      "known_at": 13
+    },
+    {
+      "name": "Rodolfo Aicardi",
+      "facet": "Parranda paisa y música decembrina",
+      "known_at": 11
+    },
+    {
+      "name": "Pastor López",
+      "facet": "Parranda paisa y música decembrina",
+      "known_at": 10
+    },
+    {
+      "name": "Octavio Mesa",
+      "facet": "Parranda paisa y música decembrina",
+      "known_at": 13
+    },
+    {
+      "name": "Noche de velitas",
+      "facet": "Parranda paisa y música decembrina",
+      "known_at": 3
+    },
+    {
+      "name": "Alumbrados de Medellín",
+      "facet": "Parranda paisa y música decembrina",
+      "known_at": 6
+    },
+    {
+      "name": "Música decembrina",
+      "facet": "Parranda paisa y música decembrina",
+      "known_at": 6
+    },
+    {
+      "name": "Los Hispanos",
+      "facet": "Parranda paisa y música decembrina",
+      "known_at": 12
+    },
+    {
+      "name": "Festival Mono Núñez",
+      "facet": "Festivales y concursos andinos",
+      "known_at": 12
+    },
+    {
+      "name": "Benigno Mono Núñez",
+      "facet": "Festivales y concursos andinos",
+      "known_at": 15
+    },
+    {
+      "name": "Ginebra",
+      "facet": "Festivales y concursos andinos",
+      "known_at": 12
+    },
+    {
+      "name": "Festival Folclórico y Reinado Nacional del Bambuco",
+      "facet": "Festivales y concursos andinos",
+      "known_at": 8
+    },
+    {
+      "name": "Festival Nacional de la Música Colombiana",
+      "facet": "Festivales y concursos andinos",
+      "known_at": 12
+    },
+    {
+      "name": "Conservatorio del Tolima",
+      "facet": "Festivales y concursos andinos",
+      "known_at": 13
+    },
+    {
+      "name": "Concurso Nacional del Bambuco",
+      "facet": "Festivales y concursos andinos",
+      "known_at": 14
+    },
+    {
+      "name": "Festival Nacional del Pasillo Colombiano",
+      "facet": "Festivales y concursos andinos",
+      "known_at": 13
+    },
+    {
+      "name": "Aguadas",
+      "facet": "Festivales y concursos andinos",
+      "known_at": 13
+    },
+    {
+      "name": "Festival Hatoviejo Cotrafa",
+      "facet": "Festivales y concursos andinos",
+      "known_at": 15
+    },
+    {
+      "name": "Festival Nacional de la Guabina y el Tiple",
+      "facet": "Festivales y concursos andinos",
+      "known_at": 14
+    },
+    {
+      "name": "Vélez",
+      "facet": "Festivales y concursos andinos",
+      "known_at": 11
+    },
+    {
+      "name": "Fiestas de San Pedro en El Espinal",
+      "facet": "Festivales y concursos andinos",
+      "known_at": 12
+    },
+    {
+      "name": "Festival Antioquia le Canta a Colombia",
+      "facet": "Festivales y concursos andinos",
+      "known_at": 15
+    },
+    {
+      "name": "Feria de Manizales",
+      "facet": "Festivales y concursos andinos",
+      "known_at": 9
+    },
+    {
+      "name": "Jessi Uribe",
+      "facet": "Estrellas actuales de la música popular",
+      "known_at": 7
+    },
+    {
+      "name": "Paola Jara",
+      "facet": "Estrellas actuales de la música popular",
+      "known_at": 7
+    },
+    {
+      "name": "Pipe Bueno",
+      "facet": "Estrellas actuales de la música popular",
+      "known_at": 7
+    },
+    {
+      "name": "Yeison Jiménez",
+      "facet": "Estrellas actuales de la música popular",
+      "known_at": 8
+    },
+    {
+      "name": "Jhonny Rivera",
+      "facet": "Estrellas actuales de la música popular",
+      "known_at": 8
+    },
+    {
+      "name": "Andy Rivera",
+      "facet": "Estrellas actuales de la música popular",
+      "known_at": 9
+    },
+    {
+      "name": "Luis Alfonso",
+      "facet": "Estrellas actuales de la música popular",
+      "known_at": 9
+    },
+    {
+      "name": "Francy",
+      "facet": "Estrellas actuales de la música popular",
+      "known_at": 10
+    },
+    {
+      "name": "Alzate",
+      "facet": "Estrellas actuales de la música popular",
+      "known_at": 10
+    },
+    {
+      "name": "Marbelle",
+      "facet": "Estrellas actuales de la música popular",
+      "known_at": 10
+    },
+    {
+      "name": "Arelys Henao",
+      "facet": "Estrellas actuales de la música popular",
+      "known_at": 10
+    },
+    {
+      "name": "Giovanny Ayala",
+      "facet": "Estrellas actuales de la música popular",
+      "known_at": 10
+    },
+    {
+      "name": "Jhon Alex Castaño",
+      "facet": "Estrellas actuales de la música popular",
+      "known_at": 11
+    },
+    {
+      "name": "Fernando Burbano",
+      "facet": "Estrellas actuales de la música popular",
+      "known_at": 12
+    },
+    {
+      "name": "Música popular",
+      "facet": "Estrellas actuales de la música popular",
+      "known_at": 7
+    },
+    {
+      "name": "Carlos Gardel",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Barrio Manrique",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Casa Gardeliana",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Festival Internacional de Tango de Medellín",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Salón Málaga",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Bandoneón",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Tango",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Bolero",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Ranchera",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Mariachi",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 3
+    },
+    {
+      "name": "Vicente Fernández",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "José Alfredo Jiménez",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Jorge Negrete",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Helenita Vargas",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Julio Jaramillo",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Olimpo Cárdenas",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Alci Acosta",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Los Panchos",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Daniel Santos",
+      "facet": "Tango, bolero y ranchera en Colombia",
+      "known_at": 13
+    }
+  ]
+}

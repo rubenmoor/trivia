@@ -1,0 +1,857 @@
+{
+  "subcategory": "writers-and-books",
+  "facets": [
+    "Gabriel García Márquez y su obra",
+    "Macondo y personajes de Cien años de soledad",
+    "Novelas clásicas colombianas",
+    "Poetas y poemas colombianos",
+    "Literatura infantil y juvenil colombiana",
+    "Rafael Pombo y sus fábulas",
+    "Escritores colombianos contemporáneos",
+    "Periodismo y crónica colombiana",
+    "Libros llevados al cine y la televisión",
+    "Premios, ferias y festivales literarios",
+    "Lugares y ciudades de los escritores",
+    "Frases célebres y primeras líneas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 1,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 5,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "El otoño del patriarca",
+      "facet": "Gabriel García Márquez y su obra",
+      "known_at": 12
+    },
+    {
+      "name": "Del amor y otros demonios",
+      "facet": "Gabriel García Márquez y su obra",
+      "known_at": 12
+    },
+    {
+      "name": "El general en su laberinto",
+      "facet": "Gabriel García Márquez y su obra",
+      "known_at": 12
+    },
+    {
+      "name": "Vivir para contarla",
+      "facet": "Gabriel García Márquez y su obra",
+      "known_at": 12
+    },
+    {
+      "name": "La hojarasca",
+      "facet": "Gabriel García Márquez y su obra",
+      "known_at": 13
+    },
+    {
+      "name": "La mala hora",
+      "facet": "Gabriel García Márquez y su obra",
+      "known_at": 13
+    },
+    {
+      "name": "Doce cuentos peregrinos",
+      "facet": "Gabriel García Márquez y su obra",
+      "known_at": 13
+    },
+    {
+      "name": "Ojos de perro azul",
+      "facet": "Gabriel García Márquez y su obra",
+      "known_at": 14
+    },
+    {
+      "name": "El ahogado más hermoso del mundo",
+      "facet": "Gabriel García Márquez y su obra",
+      "known_at": 13
+    },
+    {
+      "name": "La increíble y triste historia de la cándida Eréndira",
+      "facet": "Gabriel García Márquez y su obra",
+      "known_at": 13
+    },
+    {
+      "name": "En agosto nos vemos",
+      "facet": "Gabriel García Márquez y su obra",
+      "known_at": 11
+    },
+    {
+      "name": "Realismo mágico",
+      "facet": "Gabriel García Márquez y su obra",
+      "known_at": 8
+    },
+    {
+      "name": "Mariposas amarillas",
+      "facet": "Gabriel García Márquez y su obra",
+      "known_at": 7
+    },
+    {
+      "name": "Mercedes Barcha",
+      "facet": "Gabriel García Márquez y su obra",
+      "known_at": 13
+    },
+    {
+      "name": "Nicolás Márquez, el abuelo coronel",
+      "facet": "Gabriel García Márquez y su obra",
+      "known_at": 13
+    },
+    {
+      "name": "José Arcadio Buendía",
+      "facet": "Macondo y personajes de Cien años de soledad",
+      "known_at": 9
+    },
+    {
+      "name": "Coronel Aureliano Buendía",
+      "facet": "Macondo y personajes de Cien años de soledad",
+      "known_at": 9
+    },
+    {
+      "name": "Amaranta",
+      "facet": "Macondo y personajes de Cien años de soledad",
+      "known_at": 12
+    },
+    {
+      "name": "Rebeca",
+      "facet": "Macondo y personajes de Cien años de soledad",
+      "known_at": 12
+    },
+    {
+      "name": "Pilar Ternera",
+      "facet": "Macondo y personajes de Cien años de soledad",
+      "known_at": 13
+    },
+    {
+      "name": "Fernanda del Carpio",
+      "facet": "Macondo y personajes de Cien años de soledad",
+      "known_at": 13
+    },
+    {
+      "name": "Aureliano Segundo",
+      "facet": "Macondo y personajes de Cien años de soledad",
+      "known_at": 13
+    },
+    {
+      "name": "José Arcadio Segundo",
+      "facet": "Macondo y personajes de Cien años de soledad",
+      "known_at": 13
+    },
+    {
+      "name": "Aureliano Babilonia",
+      "facet": "Macondo y personajes de Cien años de soledad",
+      "known_at": 13
+    },
+    {
+      "name": "Petra Cotes",
+      "facet": "Macondo y personajes de Cien años de soledad",
+      "known_at": 14
+    },
+    {
+      "name": "Remedios Moscote",
+      "facet": "Macondo y personajes de Cien años de soledad",
+      "known_at": 14
+    },
+    {
+      "name": "Gerineldo Márquez",
+      "facet": "Macondo y personajes de Cien años de soledad",
+      "known_at": 14
+    },
+    {
+      "name": "Peste del insomnio",
+      "facet": "Macondo y personajes de Cien años de soledad",
+      "known_at": 12
+    },
+    {
+      "name": "El hielo de los gitanos",
+      "facet": "Macondo y personajes de Cien años de soledad",
+      "known_at": 10
+    },
+    {
+      "name": "Pergaminos de Melquíades",
+      "facet": "Macondo y personajes de Cien años de soledad",
+      "known_at": 13
+    },
+    {
+      "name": "Cola de cerdo",
+      "facet": "Macondo y personajes de Cien años de soledad",
+      "known_at": 12
+    },
+    {
+      "name": "María (Jorge Isaacs)",
+      "facet": "Novelas clásicas colombianas",
+      "known_at": 7
+    },
+    {
+      "name": "Manuela (Eugenio Díaz)",
+      "facet": "Novelas clásicas colombianas",
+      "known_at": 14
+    },
+    {
+      "name": "La marquesa de Yolombó",
+      "facet": "Novelas clásicas colombianas",
+      "known_at": 13
+    },
+    {
+      "name": "Frutos de mi tierra",
+      "facet": "Novelas clásicas colombianas",
+      "known_at": 14
+    },
+    {
+      "name": "De sobremesa",
+      "facet": "Novelas clásicas colombianas",
+      "known_at": 14
+    },
+    {
+      "name": "Cóndores no entierran todos los días",
+      "facet": "Novelas clásicas colombianas",
+      "known_at": 13
+    },
+    {
+      "name": "La casa grande",
+      "facet": "Novelas clásicas colombianas",
+      "known_at": 14
+    },
+    {
+      "name": "Respirando el verano",
+      "facet": "Novelas clásicas colombianas",
+      "known_at": 15
+    },
+    {
+      "name": "Andrés Caicedo",
+      "facet": "Novelas clásicas colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "¡Que viva la música!",
+      "facet": "Novelas clásicas colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Sin remedio",
+      "facet": "Novelas clásicas colombianas",
+      "known_at": 14
+    },
+    {
+      "name": "La otra raya del tigre",
+      "facet": "Novelas clásicas colombianas",
+      "known_at": 14
+    },
+    {
+      "name": "En diciembre llegaban las brisas",
+      "facet": "Novelas clásicas colombianas",
+      "known_at": 14
+    },
+    {
+      "name": "Nocturno (José Asunción Silva)",
+      "facet": "Poetas y poemas colombianos",
+      "known_at": 10
+    },
+    {
+      "name": "Canción de la vida profunda",
+      "facet": "Poetas y poemas colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Guillermo Valencia",
+      "facet": "Poetas y poemas colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Aurelio Arturo",
+      "facet": "Poetas y poemas colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Eduardo Carranza",
+      "facet": "Poetas y poemas colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Piedra y Cielo",
+      "facet": "Poetas y poemas colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Meira Delmar",
+      "facet": "Poetas y poemas colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "María Mercedes Carranza",
+      "facet": "Poetas y poemas colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Raúl Gómez Jattin",
+      "facet": "Poetas y poemas colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Jotamario Arbeláez",
+      "facet": "Poetas y poemas colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Giovanni Quessep",
+      "facet": "Poetas y poemas colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Juan Manuel Roca",
+      "facet": "Poetas y poemas colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "La alegría de querer",
+      "facet": "Literatura infantil y juvenil colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Zoro",
+      "facet": "Literatura infantil y juvenil colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Ivar Da Coll",
+      "facet": "Literatura infantil y juvenil colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Irene Vasco",
+      "facet": "Literatura infantil y juvenil colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Yolanda Reyes",
+      "facet": "Literatura infantil y juvenil colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Celso Román",
+      "facet": "Literatura infantil y juvenil colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Las cosas de la casa",
+      "facet": "Literatura infantil y juvenil colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Triunfo Arciniegas",
+      "facet": "Literatura infantil y juvenil colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Pilar Lozano",
+      "facet": "Literatura infantil y juvenil colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Gloria Cecilia Díaz",
+      "facet": "Literatura infantil y juvenil colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "El valle de los cocuyos",
+      "facet": "Literatura infantil y juvenil colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Jairo Buitrago",
+      "facet": "Literatura infantil y juvenil colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Camino a casa",
+      "facet": "Literatura infantil y juvenil colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Eloísa y los bichos",
+      "facet": "Literatura infantil y juvenil colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Rafael Yockteng",
+      "facet": "Literatura infantil y juvenil colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Francisco Montaña",
+      "facet": "Literatura infantil y juvenil colombiana",
+      "known_at": 14
+    },
+    {
+      "name": "Pastorcita",
+      "facet": "Rafael Pombo y sus fábulas",
+      "known_at": 6
+    },
+    {
+      "name": "El niño y la mariposa",
+      "facet": "Rafael Pombo y sus fábulas",
+      "known_at": 6
+    },
+    {
+      "name": "Juan Chunguero",
+      "facet": "Rafael Pombo y sus fábulas",
+      "known_at": 8
+    },
+    {
+      "name": "Doña Pánfaga",
+      "facet": "Rafael Pombo y sus fábulas",
+      "known_at": 9
+    },
+    {
+      "name": "Cutufato y su gato",
+      "facet": "Rafael Pombo y sus fábulas",
+      "known_at": 9
+    },
+    {
+      "name": "El pato y la serpiente",
+      "facet": "Rafael Pombo y sus fábulas",
+      "known_at": 10
+    },
+    {
+      "name": "Cuentos pintados para niños",
+      "facet": "Rafael Pombo y sus fábulas",
+      "known_at": 11
+    },
+    {
+      "name": "Cuentos morales para niños formales",
+      "facet": "Rafael Pombo y sus fábulas",
+      "known_at": 11
+    },
+    {
+      "name": "Hora de tinieblas",
+      "facet": "Rafael Pombo y sus fábulas",
+      "known_at": 13
+    },
+    {
+      "name": "Fundación Rafael Pombo",
+      "facet": "Rafael Pombo y sus fábulas",
+      "known_at": 11
+    },
+    {
+      "name": "Delirio",
+      "facet": "Escritores colombianos contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Gabriel Vásquez",
+      "facet": "Escritores colombianos contemporáneos",
+      "known_at": 12
+    },
+    {
+      "name": "El ruido de las cosas al caer",
+      "facet": "Escritores colombianos contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "Jorge Franco",
+      "facet": "Escritores colombianos contemporáneos",
+      "known_at": 12
+    },
+    {
+      "name": "Maqroll el Gaviero",
+      "facet": "Escritores colombianos contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "Mario Mendoza",
+      "facet": "Escritores colombianos contemporáneos",
+      "known_at": 11
+    },
+    {
+      "name": "Santiago Gamboa",
+      "facet": "Escritores colombianos contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "Los ejércitos",
+      "facet": "Escritores colombianos contemporáneos",
+      "known_at": 14
+    },
+    {
+      "name": "Tomás González",
+      "facet": "Escritores colombianos contemporáneos",
+      "known_at": 14
+    },
+    {
+      "name": "Pilar Quintana",
+      "facet": "Escritores colombianos contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "William Ospina",
+      "facet": "Escritores colombianos contemporáneos",
+      "known_at": 12
+    },
+    {
+      "name": "Ursúa",
+      "facet": "Escritores colombianos contemporáneos",
+      "known_at": 14
+    },
+    {
+      "name": "Sara Jaramillo Klinkert",
+      "facet": "Escritores colombianos contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Esteban Constaín",
+      "facet": "Escritores colombianos contemporáneos",
+      "known_at": 14
+    },
+    {
+      "name": "Relato de un náufrago",
+      "facet": "Periodismo y crónica colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Noticia de un secuestro",
+      "facet": "Periodismo y crónica colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "El Heraldo",
+      "facet": "Periodismo y crónica colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Revista Cromos",
+      "facet": "Periodismo y crónica colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Guillermo Cano",
+      "facet": "Periodismo y crónica colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Alfredo Molano",
+      "facet": "Periodismo y crónica colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Antonio Caballero",
+      "facet": "Periodismo y crónica colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Klim",
+      "facet": "Periodismo y crónica colombiana",
+      "known_at": 14
+    },
+    {
+      "name": "Alberto Salcedo Ramos",
+      "facet": "Periodismo y crónica colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Fundación Gabo",
+      "facet": "Periodismo y crónica colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Crónica periodística",
+      "facet": "Periodismo y crónica colombiana",
+      "known_at": 9
+    },
+    {
+      "name": "Jineth Bedoya",
+      "facet": "Periodismo y crónica colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Serie Cien años de soledad de Netflix",
+      "facet": "Libros llevados al cine y la televisión",
+      "known_at": 8
+    },
+    {
+      "name": "El olvido que seremos",
+      "facet": "Libros llevados al cine y la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Rosario Tijeras",
+      "facet": "Libros llevados al cine y la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Paraíso Travel",
+      "facet": "Libros llevados al cine y la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Satanás",
+      "facet": "Libros llevados al cine y la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "La casa de las dos palmas",
+      "facet": "Libros llevados al cine y la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Película El amor en los tiempos del cólera",
+      "facet": "Libros llevados al cine y la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Película Crónica de una muerte anunciada",
+      "facet": "Libros llevados al cine y la televisión",
+      "known_at": 14
+    },
+    {
+      "name": "Película El coronel no tiene quien le escriba",
+      "facet": "Libros llevados al cine y la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Película Del amor y otros demonios",
+      "facet": "Libros llevados al cine y la televisión",
+      "known_at": 14
+    },
+    {
+      "name": "Perder es cuestión de método",
+      "facet": "Libros llevados al cine y la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Rodrigo García",
+      "facet": "Libros llevados al cine y la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Fernando Trueba",
+      "facet": "Libros llevados al cine y la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Claudio Cataño",
+      "facet": "Libros llevados al cine y la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Feria Internacional del Libro de Bogotá",
+      "facet": "Premios, ferias y festivales literarios",
+      "known_at": 9
+    },
+    {
+      "name": "Corferias",
+      "facet": "Premios, ferias y festivales literarios",
+      "known_at": 10
+    },
+    {
+      "name": "Hay Festival Cartagena",
+      "facet": "Premios, ferias y festivales literarios",
+      "known_at": 12
+    },
+    {
+      "name": "Fiesta del Libro y la Cultura de Medellín",
+      "facet": "Premios, ferias y festivales literarios",
+      "known_at": 12
+    },
+    {
+      "name": "Festival Internacional de Poesía de Medellín",
+      "facet": "Premios, ferias y festivales literarios",
+      "known_at": 12
+    },
+    {
+      "name": "Festival Gabo",
+      "facet": "Premios, ferias y festivales literarios",
+      "known_at": 13
+    },
+    {
+      "name": "Premio Rómulo Gallegos",
+      "facet": "Premios, ferias y festivales literarios",
+      "known_at": 13
+    },
+    {
+      "name": "Premio Alfaguara de Novela",
+      "facet": "Premios, ferias y festivales literarios",
+      "known_at": 13
+    },
+    {
+      "name": "Premio Cervantes",
+      "facet": "Premios, ferias y festivales literarios",
+      "known_at": 13
+    },
+    {
+      "name": "Premio Biblioteca de Narrativa Colombiana",
+      "facet": "Premios, ferias y festivales literarios",
+      "known_at": 15
+    },
+    {
+      "name": "Premio Simón Bolívar de Periodismo",
+      "facet": "Premios, ferias y festivales literarios",
+      "known_at": 12
+    },
+    {
+      "name": "Biblioteca Virgilio Barco",
+      "facet": "Premios, ferias y festivales literarios",
+      "known_at": 11
+    },
+    {
+      "name": "Parques biblioteca de Medellín",
+      "facet": "Premios, ferias y festivales literarios",
+      "known_at": 11
+    },
+    {
+      "name": "Libro al Viento",
+      "facet": "Premios, ferias y festivales literarios",
+      "known_at": 11
+    },
+    {
+      "name": "Día del Idioma",
+      "facet": "Premios, ferias y festivales literarios",
+      "known_at": 9
+    },
+    {
+      "name": "Casa Museo Gabriel García Márquez",
+      "facet": "Lugares y ciudades de los escritores",
+      "known_at": 11
+    },
+    {
+      "name": "Cartagena de Indias",
+      "facet": "Lugares y ciudades de los escritores",
+      "known_at": 3
+    },
+    {
+      "name": "La Cueva",
+      "facet": "Lugares y ciudades de los escritores",
+      "known_at": 13
+    },
+    {
+      "name": "Casa de Poesía Silva",
+      "facet": "Lugares y ciudades de los escritores",
+      "known_at": 12
+    },
+    {
+      "name": "Santa Rosa de Osos",
+      "facet": "Lugares y ciudades de los escritores",
+      "known_at": 14
+    },
+    {
+      "name": "Convento de Santa Clara",
+      "facet": "Lugares y ciudades de los escritores",
+      "known_at": 13
+    },
+    {
+      "name": "Biblioteca Nacional de Colombia",
+      "facet": "Lugares y ciudades de los escritores",
+      "known_at": 10
+    },
+    {
+      "name": "Muchos años después, frente al pelotón de fusilamiento",
+      "facet": "Frases célebres y primeras líneas",
+      "known_at": 8
+    },
+    {
+      "name": "El día en que lo iban a matar, Santiago Nasar se levantó a las cinco y media",
+      "facet": "Frases célebres y primeras líneas",
+      "known_at": 11
+    },
+    {
+      "name": "Era inevitable: el olor de las almendras amargas",
+      "facet": "Frases célebres y primeras líneas",
+      "known_at": 13
+    },
+    {
+      "name": "Antes que me hubiese apasionado por mujer alguna, jugué mi corazón al azar",
+      "facet": "Frases célebres y primeras líneas",
+      "known_at": 14
+    },
+    {
+      "name": "La vida no es la que uno vivió, sino la que uno recuerda",
+      "facet": "Frases célebres y primeras líneas",
+      "known_at": 12
+    },
+    {
+      "name": "Las estirpes condenadas a cien años de soledad",
+      "facet": "Frases célebres y primeras líneas",
+      "known_at": 13
+    },
+    {
+      "name": "Érase una viejecita sin nadita qué comer",
+      "facet": "Frases célebres y primeras líneas",
+      "known_at": 4
+    },
+    {
+      "name": "El hijo de Rana, Rinrín Renacuajo",
+      "facet": "Frases célebres y primeras líneas",
+      "known_at": 3
+    },
+    {
+      "name": "Simón el bobito llamó al pastelero",
+      "facet": "Frases célebres y primeras líneas",
+      "known_at": 5
+    },
+    {
+      "name": "Pastorcita perdió sus ovejas",
+      "facet": "Frases célebres y primeras líneas",
+      "known_at": 6
+    },
+    {
+      "name": "Una noche, toda llena de perfumes",
+      "facet": "Frases célebres y primeras líneas",
+      "known_at": 11
+    },
+    {
+      "name": "Hay días en que somos tan móviles",
+      "facet": "Frases célebres y primeras líneas",
+      "known_at": 13
+    },
+    {
+      "name": "Noble rincón de mis abuelos",
+      "facet": "Frases célebres y primeras líneas",
+      "known_at": 13
+    },
+    {
+      "name": "Era yo niño aún cuando me alejaron de la casa paterna",
+      "facet": "Frases célebres y primeras líneas",
+      "known_at": 14
+    },
+    {
+      "name": "La soledad de América Latina",
+      "facet": "Frases célebres y primeras líneas",
+      "known_at": 13
+    }
+  ]
+}

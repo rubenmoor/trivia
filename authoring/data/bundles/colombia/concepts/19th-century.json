@@ -1,0 +1,987 @@
+{
+  "subcategory": "19th-century",
+  "facets": [
+    "Independencia y campañas libertadoras",
+    "Próceres y heroínas de la Independencia",
+    "Gran Colombia y su disolución",
+    "Guerras civiles del siglo XIX",
+    "Constituciones y nombres del país",
+    "Presidentes y partidos políticos",
+    "Expedición Botánica y Comisión Corográfica",
+    "Vida cotidiana y costumbres de la época",
+    "Economía: tabaco, quina, café y añil",
+    "Transporte: champanes, vapores y ferrocarriles",
+    "Literatura y arte del siglo XIX",
+    "Símbolos patrios y su origen"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 5,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Grito de Independencia",
+      "facet": "Independencia y campañas libertadoras",
+      "known_at": 3
+    },
+    {
+      "name": "Florero de Llorente",
+      "facet": "Independencia y campañas libertadoras",
+      "known_at": 4
+    },
+    {
+      "name": "Batalla de Boyacá",
+      "facet": "Independencia y campañas libertadoras",
+      "known_at": 3
+    },
+    {
+      "name": "Campaña Libertadora de 1819",
+      "facet": "Independencia y campañas libertadoras",
+      "known_at": 7
+    },
+    {
+      "name": "Páramo de Pisba",
+      "facet": "Independencia y campañas libertadoras",
+      "known_at": 9
+    },
+    {
+      "name": "Régimen del Terror",
+      "facet": "Independencia y campañas libertadoras",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Sámano",
+      "facet": "Independencia y campañas libertadoras",
+      "known_at": 12
+    },
+    {
+      "name": "Independencia de Cartagena",
+      "facet": "Independencia y campañas libertadoras",
+      "known_at": 7
+    },
+    {
+      "name": "Sitio de Cartagena de 1815",
+      "facet": "Independencia y campañas libertadoras",
+      "known_at": 12
+    },
+    {
+      "name": "Junta Suprema de Santafé",
+      "facet": "Independencia y campañas libertadoras",
+      "known_at": 12
+    },
+    {
+      "name": "Memorial de agravios",
+      "facet": "Independencia y campañas libertadoras",
+      "known_at": 13
+    },
+    {
+      "name": "Batalla de Carabobo",
+      "facet": "Independencia y campañas libertadoras",
+      "known_at": 11
+    },
+    {
+      "name": "Batalla de Pichincha",
+      "facet": "Independencia y campañas libertadoras",
+      "known_at": 12
+    },
+    {
+      "name": "Batalla de Ayacucho",
+      "facet": "Independencia y campañas libertadoras",
+      "known_at": 11
+    },
+    {
+      "name": "Batalla de Bomboná",
+      "facet": "Independencia y campañas libertadoras",
+      "known_at": 14
+    },
+    {
+      "name": "Simón Bolívar",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 1
+    },
+    {
+      "name": "Francisco de Paula Santander",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 4
+    },
+    {
+      "name": "Antonio Nariño",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 6
+    },
+    {
+      "name": "Policarpa Salavarrieta",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 4
+    },
+    {
+      "name": "Antonio José de Sucre",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 8
+    },
+    {
+      "name": "Camilo Torres Tenorio",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 10
+    },
+    {
+      "name": "José María Córdova",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 8
+    },
+    {
+      "name": "Antonia Santos",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 9
+    },
+    {
+      "name": "Manuela Sáenz",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 9
+    },
+    {
+      "name": "Mercedes Ábrego",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 13
+    },
+    {
+      "name": "Juan José Rondón",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 11
+    },
+    {
+      "name": "Atanasio Girardot",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 10
+    },
+    {
+      "name": "Hermógenes Maza",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 13
+    },
+    {
+      "name": "Pedro Pascasio Martínez",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 10
+    },
+    {
+      "name": "Negro José",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 13
+    },
+    {
+      "name": "José Prudencio Padilla",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 10
+    },
+    {
+      "name": "Jorge Tadeo Lozano",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 11
+    },
+    {
+      "name": "José Fernández Madrid",
+      "facet": "Próceres y heroínas de la Independencia",
+      "known_at": 13
+    },
+    {
+      "name": "Gran Colombia",
+      "facet": "Gran Colombia y su disolución",
+      "known_at": 6
+    },
+    {
+      "name": "Conspiración septembrina",
+      "facet": "Gran Colombia y su disolución",
+      "known_at": 10
+    },
+    {
+      "name": "Convención de Ocaña",
+      "facet": "Gran Colombia y su disolución",
+      "known_at": 12
+    },
+    {
+      "name": "La Cosiata",
+      "facet": "Gran Colombia y su disolución",
+      "known_at": 14
+    },
+    {
+      "name": "José Antonio Páez",
+      "facet": "Gran Colombia y su disolución",
+      "known_at": 12
+    },
+    {
+      "name": "Juan José Flores",
+      "facet": "Gran Colombia y su disolución",
+      "known_at": 13
+    },
+    {
+      "name": "Rafael Urdaneta",
+      "facet": "Gran Colombia y su disolución",
+      "known_at": 13
+    },
+    {
+      "name": "Congreso Admirable",
+      "facet": "Gran Colombia y su disolución",
+      "known_at": 13
+    },
+    {
+      "name": "Separación de Venezuela",
+      "facet": "Gran Colombia y su disolución",
+      "known_at": 11
+    },
+    {
+      "name": "Congreso Anfictiónico de Panamá",
+      "facet": "Gran Colombia y su disolución",
+      "known_at": 12
+    },
+    {
+      "name": "Última proclama de Bolívar",
+      "facet": "Gran Colombia y su disolución",
+      "known_at": 12
+    },
+    {
+      "name": "Guerra de los Mil Días",
+      "facet": "Guerras civiles del siglo XIX",
+      "known_at": 7
+    },
+    {
+      "name": "Guerra de los Supremos",
+      "facet": "Guerras civiles del siglo XIX",
+      "known_at": 12
+    },
+    {
+      "name": "José María Melo",
+      "facet": "Guerras civiles del siglo XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Golpe de Estado de 1854",
+      "facet": "Guerras civiles del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Guerra civil de 1860-1862",
+      "facet": "Guerras civiles del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Guerra de las Escuelas",
+      "facet": "Guerras civiles del siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Guerra civil de 1885",
+      "facet": "Guerras civiles del siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Batalla de Palonegro",
+      "facet": "Guerras civiles del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Batalla de La Humareda",
+      "facet": "Guerras civiles del siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Batalla de Peralonso",
+      "facet": "Guerras civiles del siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Rafael Uribe Uribe",
+      "facet": "Guerras civiles del siglo XIX",
+      "known_at": 9
+    },
+    {
+      "name": "Benjamín Herrera",
+      "facet": "Guerras civiles del siglo XIX",
+      "known_at": 11
+    },
+    {
+      "name": "Tratado de Wisconsin",
+      "facet": "Guerras civiles del siglo XIX",
+      "known_at": 11
+    },
+    {
+      "name": "Tratado de Neerlandia",
+      "facet": "Guerras civiles del siglo XIX",
+      "known_at": 11
+    },
+    {
+      "name": "José María Obando",
+      "facet": "Guerras civiles del siglo XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Constitución de Rionegro",
+      "facet": "Constituciones y nombres del país",
+      "known_at": 9
+    },
+    {
+      "name": "Constitución de Cúcuta",
+      "facet": "Constituciones y nombres del país",
+      "known_at": 10
+    },
+    {
+      "name": "Constitución de 1853",
+      "facet": "Constituciones y nombres del país",
+      "known_at": 13
+    },
+    {
+      "name": "Constitución de 1858",
+      "facet": "Constituciones y nombres del país",
+      "known_at": 14
+    },
+    {
+      "name": "Constitución de Cundinamarca",
+      "facet": "Constituciones y nombres del país",
+      "known_at": 13
+    },
+    {
+      "name": "Virreinato de la Nueva Granada",
+      "facet": "Constituciones y nombres del país",
+      "known_at": 7
+    },
+    {
+      "name": "Provincias Unidas de la Nueva Granada",
+      "facet": "Constituciones y nombres del país",
+      "known_at": 12
+    },
+    {
+      "name": "República de la Nueva Granada",
+      "facet": "Constituciones y nombres del país",
+      "known_at": 8
+    },
+    {
+      "name": "República de Colombia",
+      "facet": "Constituciones y nombres del país",
+      "known_at": 3
+    },
+    {
+      "name": "Estados soberanos",
+      "facet": "Constituciones y nombres del país",
+      "known_at": 10
+    },
+    {
+      "name": "Federalismo",
+      "facet": "Constituciones y nombres del país",
+      "known_at": 9
+    },
+    {
+      "name": "Centralismo",
+      "facet": "Constituciones y nombres del país",
+      "known_at": 9
+    },
+    {
+      "name": "Regeneración",
+      "facet": "Constituciones y nombres del país",
+      "known_at": 11
+    },
+    {
+      "name": "Concordato de 1887",
+      "facet": "Constituciones y nombres del país",
+      "known_at": 13
+    },
+    {
+      "name": "Partido Liberal",
+      "facet": "Presidentes y partidos políticos",
+      "known_at": 5
+    },
+    {
+      "name": "Partido Conservador",
+      "facet": "Presidentes y partidos políticos",
+      "known_at": 5
+    },
+    {
+      "name": "Rafael Núñez",
+      "facet": "Presidentes y partidos políticos",
+      "known_at": 8
+    },
+    {
+      "name": "Tomás Cipriano de Mosquera",
+      "facet": "Presidentes y partidos políticos",
+      "known_at": 9
+    },
+    {
+      "name": "José Hilario López",
+      "facet": "Presidentes y partidos políticos",
+      "known_at": 11
+    },
+    {
+      "name": "Mariano Ospina Rodríguez",
+      "facet": "Presidentes y partidos políticos",
+      "known_at": 12
+    },
+    {
+      "name": "José Ignacio de Márquez",
+      "facet": "Presidentes y partidos políticos",
+      "known_at": 13
+    },
+    {
+      "name": "Ezequiel Rojas",
+      "facet": "Presidentes y partidos políticos",
+      "known_at": 14
+    },
+    {
+      "name": "Manuel Murillo Toro",
+      "facet": "Presidentes y partidos políticos",
+      "known_at": 12
+    },
+    {
+      "name": "Miguel Antonio Caro",
+      "facet": "Presidentes y partidos políticos",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro Alcántara Herrán",
+      "facet": "Presidentes y partidos políticos",
+      "known_at": 13
+    },
+    {
+      "name": "Julio Arboleda",
+      "facet": "Presidentes y partidos políticos",
+      "known_at": 14
+    },
+    {
+      "name": "Manuel Antonio Sanclemente",
+      "facet": "Presidentes y partidos políticos",
+      "known_at": 14
+    },
+    {
+      "name": "Olimpo Radical",
+      "facet": "Presidentes y partidos políticos",
+      "known_at": 12
+    },
+    {
+      "name": "Gólgotas y draconianos",
+      "facet": "Presidentes y partidos políticos",
+      "known_at": 14
+    },
+    {
+      "name": "Soledad Román",
+      "facet": "Presidentes y partidos políticos",
+      "known_at": 12
+    },
+    {
+      "name": "El Cabrero",
+      "facet": "Presidentes y partidos políticos",
+      "known_at": 13
+    },
+    {
+      "name": "Expedición Botánica",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 6
+    },
+    {
+      "name": "José Celestino Mutis",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 6
+    },
+    {
+      "name": "Francisco José de Caldas",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 7
+    },
+    {
+      "name": "Comisión Corográfica",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 11
+    },
+    {
+      "name": "Agustín Codazzi",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 10
+    },
+    {
+      "name": "Manuel Ancízar",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 13
+    },
+    {
+      "name": "Peregrinación de Alpha",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 14
+    },
+    {
+      "name": "Alexander von Humboldt",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 9
+    },
+    {
+      "name": "Aimé Bonpland",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 13
+    },
+    {
+      "name": "Salvador Rizo",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 14
+    },
+    {
+      "name": "Láminas de la Expedición Botánica",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 11
+    },
+    {
+      "name": "Observatorio Astronómico de Bogotá",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 9
+    },
+    {
+      "name": "Hipsómetro",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 13
+    },
+    {
+      "name": "Acuarelas de la Comisión Corográfica",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 13
+    },
+    {
+      "name": "Jardín Botánico José Celestino Mutis",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 8
+    },
+    {
+      "name": "Semanario del Nuevo Reino de Granada",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 13
+    },
+    {
+      "name": "Mutisia",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 13
+    },
+    {
+      "name": "Cattleya trianae",
+      "facet": "Expedición Botánica y Comisión Corográfica",
+      "known_at": 8
+    },
+    {
+      "name": "Ajiaco santafereño",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 3
+    },
+    {
+      "name": "Chichería",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 10
+    },
+    {
+      "name": "Tertulia",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 9
+    },
+    {
+      "name": "Ruana",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 3
+    },
+    {
+      "name": "Alpargatas",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 4
+    },
+    {
+      "name": "Carriel",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 5
+    },
+    {
+      "name": "Mantilla",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 11
+    },
+    {
+      "name": "Arriero",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 5
+    },
+    {
+      "name": "Aguadora",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 12
+    },
+    {
+      "name": "Sereno",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 13
+    },
+    {
+      "name": "Velas de sebo",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 11
+    },
+    {
+      "name": "Cachaco",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 8
+    },
+    {
+      "name": "Serenata",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 6
+    },
+    {
+      "name": "Bambuco",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 6
+    },
+    {
+      "name": "Tejo",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 4
+    },
+    {
+      "name": "Colonización antioqueña",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 9
+    },
+    {
+      "name": "Abolición de la esclavitud",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 8
+    },
+    {
+      "name": "Ley de libertad de vientres",
+      "facet": "Vida cotidiana y costumbres de la época",
+      "known_at": 12
+    },
+    {
+      "name": "Tabaco",
+      "facet": "Economía: tabaco, quina, café y añil",
+      "known_at": 4
+    },
+    {
+      "name": "Quina",
+      "facet": "Economía: tabaco, quina, café y añil",
+      "known_at": 8
+    },
+    {
+      "name": "Añil",
+      "facet": "Economía: tabaco, quina, café y añil",
+      "known_at": 11
+    },
+    {
+      "name": "Estanco del tabaco",
+      "facet": "Economía: tabaco, quina, café y añil",
+      "known_at": 12
+    },
+    {
+      "name": "Ambalema",
+      "facet": "Economía: tabaco, quina, café y añil",
+      "known_at": 11
+    },
+    {
+      "name": "Hacienda cafetera",
+      "facet": "Economía: tabaco, quina, café y añil",
+      "known_at": 8
+    },
+    {
+      "name": "Caucho",
+      "facet": "Economía: tabaco, quina, café y añil",
+      "known_at": 9
+    },
+    {
+      "name": "Tagua",
+      "facet": "Economía: tabaco, quina, café y añil",
+      "known_at": 12
+    },
+    {
+      "name": "Sombrero de jipijapa",
+      "facet": "Economía: tabaco, quina, café y añil",
+      "known_at": 10
+    },
+    {
+      "name": "Minería de oro",
+      "facet": "Economía: tabaco, quina, café y añil",
+      "known_at": 5
+    },
+    {
+      "name": "Esmeraldas de Muzo",
+      "facet": "Economía: tabaco, quina, café y añil",
+      "known_at": 7
+    },
+    {
+      "name": "Salinas de Zipaquirá",
+      "facet": "Economía: tabaco, quina, café y añil",
+      "known_at": 4
+    },
+    {
+      "name": "Banco de Bogotá",
+      "facet": "Economía: tabaco, quina, café y añil",
+      "known_at": 10
+    },
+    {
+      "name": "Peso colombiano",
+      "facet": "Economía: tabaco, quina, café y añil",
+      "known_at": 4
+    },
+    {
+      "name": "Librecambio",
+      "facet": "Economía: tabaco, quina, café y añil",
+      "known_at": 13
+    },
+    {
+      "name": "Desamortización de bienes de manos muertas",
+      "facet": "Economía: tabaco, quina, café y añil",
+      "known_at": 13
+    },
+    {
+      "name": "Río Magdalena",
+      "facet": "Transporte: champanes, vapores y ferrocarriles",
+      "known_at": 3
+    },
+    {
+      "name": "Champán",
+      "facet": "Transporte: champanes, vapores y ferrocarriles",
+      "known_at": 11
+    },
+    {
+      "name": "Barco de vapor",
+      "facet": "Transporte: champanes, vapores y ferrocarriles",
+      "known_at": 6
+    },
+    {
+      "name": "Juan Bernardo Elbers",
+      "facet": "Transporte: champanes, vapores y ferrocarriles",
+      "known_at": 14
+    },
+    {
+      "name": "Bogas",
+      "facet": "Transporte: champanes, vapores y ferrocarriles",
+      "known_at": 12
+    },
+    {
+      "name": "Mula",
+      "facet": "Transporte: champanes, vapores y ferrocarriles",
+      "known_at": 3
+    },
+    {
+      "name": "Silleteros",
+      "facet": "Transporte: champanes, vapores y ferrocarriles",
+      "known_at": 6
+    },
+    {
+      "name": "Camino del Quindío",
+      "facet": "Transporte: champanes, vapores y ferrocarriles",
+      "known_at": 12
+    },
+    {
+      "name": "Ferrocarril de Panamá",
+      "facet": "Transporte: champanes, vapores y ferrocarriles",
+      "known_at": 11
+    },
+    {
+      "name": "Ferrocarril de Antioquia",
+      "facet": "Transporte: champanes, vapores y ferrocarriles",
+      "known_at": 11
+    },
+    {
+      "name": "Ferrocarril de Bolívar",
+      "facet": "Transporte: champanes, vapores y ferrocarriles",
+      "known_at": 13
+    },
+    {
+      "name": "Francisco Javier Cisneros",
+      "facet": "Transporte: champanes, vapores y ferrocarriles",
+      "known_at": 13
+    },
+    {
+      "name": "Túnel de La Quiebra",
+      "facet": "Transporte: champanes, vapores y ferrocarriles",
+      "known_at": 14
+    },
+    {
+      "name": "Tren de la Sabana",
+      "facet": "Transporte: champanes, vapores y ferrocarriles",
+      "known_at": 7
+    },
+    {
+      "name": "Muelle de Puerto Colombia",
+      "facet": "Transporte: champanes, vapores y ferrocarriles",
+      "known_at": 10
+    },
+    {
+      "name": "Telégrafo",
+      "facet": "Transporte: champanes, vapores y ferrocarriles",
+      "known_at": 9
+    },
+    {
+      "name": "María",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 6
+    },
+    {
+      "name": "Jorge Isaacs",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 7
+    },
+    {
+      "name": "Efraín",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 9
+    },
+    {
+      "name": "Hacienda El Paraíso",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 9
+    },
+    {
+      "name": "José Asunción Silva",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 8
+    },
+    {
+      "name": "Nocturno",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 11
+    },
+    {
+      "name": "Rafael Pombo",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 3
+    },
+    {
+      "name": "El renacuajo paseador",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 2
+    },
+    {
+      "name": "La pobre viejecita",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 2
+    },
+    {
+      "name": "Costumbrismo",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 11
+    },
+    {
+      "name": "Tomás Carrasquilla",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 11
+    },
+    {
+      "name": "Manuela",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Soledad Acosta de Samper",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Candelario Obeso",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Epifanio Mejía",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Rufino José Cuervo",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Julio Flórez",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Ramón Torres Méndez",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Epifanio Garay",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Papel Periódico Ilustrado",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "El Mosaico",
+      "facet": "Literatura y arte del siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera de Colombia",
+      "facet": "Símbolos patrios y su origen",
+      "known_at": 1
+    },
+    {
+      "name": "Himno Nacional de Colombia",
+      "facet": "Símbolos patrios y su origen",
+      "known_at": 2
+    },
+    {
+      "name": "Escudo de Colombia",
+      "facet": "Símbolos patrios y su origen",
+      "known_at": 3
+    },
+    {
+      "name": "Oreste Sindici",
+      "facet": "Símbolos patrios y su origen",
+      "known_at": 10
+    },
+    {
+      "name": "Granada",
+      "facet": "Símbolos patrios y su origen",
+      "known_at": 9
+    },
+    {
+      "name": "Estatua de Bolívar de Tenerani",
+      "facet": "Símbolos patrios y su origen",
+      "known_at": 13
+    }
+  ]
+}

@@ -1,0 +1,630 @@
+{
+  "subcategory": "painters-sculptors-and-museums",
+  "facets": [
+    "Fernando Botero y su obra",
+    "Pintores colombianos del siglo XX",
+    "Escultores y monumentos públicos",
+    "Arte colonial neogranadino",
+    "Orfebrería y arte precolombino",
+    "Museos de Bogotá",
+    "Museos de Medellín y las regiones",
+    "Arte contemporáneo colombiano",
+    "Arte del siglo XIX y la Expedición Botánica",
+    "Grafiti y arte urbano"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Boterismo",
+      "facet": "Fernando Botero y su obra",
+      "known_at": 6
+    },
+    {
+      "name": "La Gorda Gertrudis",
+      "facet": "Fernando Botero y su obra",
+      "known_at": 8
+    },
+    {
+      "name": "El Gato de Botero",
+      "facet": "Fernando Botero y su obra",
+      "known_at": 9
+    },
+    {
+      "name": "Mona Lisa a los doce años",
+      "facet": "Fernando Botero y su obra",
+      "known_at": 9
+    },
+    {
+      "name": "Pájaro de paz",
+      "facet": "Fernando Botero y su obra",
+      "known_at": 10
+    },
+    {
+      "name": "Donación Botero",
+      "facet": "Fernando Botero y su obra",
+      "known_at": 10
+    },
+    {
+      "name": "Hombre a caballo",
+      "facet": "Fernando Botero y su obra",
+      "known_at": 10
+    },
+    {
+      "name": "La familia presidencial",
+      "facet": "Fernando Botero y su obra",
+      "known_at": 11
+    },
+    {
+      "name": "Los músicos",
+      "facet": "Fernando Botero y su obra",
+      "known_at": 11
+    },
+    {
+      "name": "Adán y Eva de Botero",
+      "facet": "Fernando Botero y su obra",
+      "known_at": 11
+    },
+    {
+      "name": "Serie del circo de Botero",
+      "facet": "Fernando Botero y su obra",
+      "known_at": 11
+    },
+    {
+      "name": "Gloria Zea",
+      "facet": "Fernando Botero y su obra",
+      "known_at": 12
+    },
+    {
+      "name": "Pietrasanta",
+      "facet": "Fernando Botero y su obra",
+      "known_at": 13
+    },
+    {
+      "name": "Exposición de Botero en los Campos Elíseos",
+      "facet": "Fernando Botero y su obra",
+      "known_at": 13
+    },
+    {
+      "name": "David Manzur",
+      "facet": "Pintores colombianos del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Violencia (Obregón)",
+      "facet": "Pintores colombianos del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Ignacio Gómez Jaramillo",
+      "facet": "Pintores colombianos del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Guillermo Wiedemann",
+      "facet": "Pintores colombianos del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Antonio Roda",
+      "facet": "Pintores colombianos del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Grupo Bachué",
+      "facet": "Pintores colombianos del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Marco Ospina",
+      "facet": "Pintores colombianos del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Fanny Sanín",
+      "facet": "Pintores colombianos del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Gonzalo Ariza",
+      "facet": "Pintores colombianos del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Darío Morales",
+      "facet": "Pintores colombianos del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Santiago Martínez Delgado",
+      "facet": "Pintores colombianos del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Alipio Jaramillo",
+      "facet": "Pintores colombianos del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Los Zapatos Viejos",
+      "facet": "Escultores y monumentos públicos",
+      "known_at": 6
+    },
+    {
+      "name": "Monumento al Pibe Valderrama",
+      "facet": "Escultores y monumentos públicos",
+      "known_at": 5
+    },
+    {
+      "name": "Estatua de Bolívar de la Plaza de Bolívar",
+      "facet": "Escultores y monumentos públicos",
+      "known_at": 8
+    },
+    {
+      "name": "Hernando Tejada",
+      "facet": "Escultores y monumentos públicos",
+      "known_at": 9
+    },
+    {
+      "name": "Bolívar Cóndor",
+      "facet": "Escultores y monumentos públicos",
+      "known_at": 11
+    },
+    {
+      "name": "Pietro Tenerani",
+      "facet": "Escultores y monumentos públicos",
+      "known_at": 14
+    },
+    {
+      "name": "Virgen de Chiquinquirá",
+      "facet": "Arte colonial neogranadino",
+      "known_at": 5
+    },
+    {
+      "name": "Pasos de Semana Santa de Popayán",
+      "facet": "Arte colonial neogranadino",
+      "known_at": 8
+    },
+    {
+      "name": "La Lechuga",
+      "facet": "Arte colonial neogranadino",
+      "known_at": 9
+    },
+    {
+      "name": "Retablo",
+      "facet": "Arte colonial neogranadino",
+      "known_at": 10
+    },
+    {
+      "name": "Barroco",
+      "facet": "Arte colonial neogranadino",
+      "known_at": 10
+    },
+    {
+      "name": "Imaginería",
+      "facet": "Arte colonial neogranadino",
+      "known_at": 11
+    },
+    {
+      "name": "Iglesia de Santa Clara de Bogotá",
+      "facet": "Arte colonial neogranadino",
+      "known_at": 11
+    },
+    {
+      "name": "Iglesia de San Ignacio de Bogotá",
+      "facet": "Arte colonial neogranadino",
+      "known_at": 11
+    },
+    {
+      "name": "Ángeles arcabuceros",
+      "facet": "Arte colonial neogranadino",
+      "known_at": 12
+    },
+    {
+      "name": "Escuela Quiteña",
+      "facet": "Arte colonial neogranadino",
+      "known_at": 12
+    },
+    {
+      "name": "Armadura mudéjar",
+      "facet": "Arte colonial neogranadino",
+      "known_at": 13
+    },
+    {
+      "name": "Capilla del Sagrario",
+      "facet": "Arte colonial neogranadino",
+      "known_at": 13
+    },
+    {
+      "name": "Casa del Escribano Juan de Vargas",
+      "facet": "Arte colonial neogranadino",
+      "known_at": 13
+    },
+    {
+      "name": "Capilla del Rosario de Tunja",
+      "facet": "Arte colonial neogranadino",
+      "known_at": 13
+    },
+    {
+      "name": "Baltasar de Figueroa",
+      "facet": "Arte colonial neogranadino",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio Acero de la Cruz",
+      "facet": "Arte colonial neogranadino",
+      "known_at": 14
+    },
+    {
+      "name": "Cultura Muisca",
+      "facet": "Orfebrería y arte precolombino",
+      "known_at": 4
+    },
+    {
+      "name": "Cultura Tairona",
+      "facet": "Orfebrería y arte precolombino",
+      "known_at": 7
+    },
+    {
+      "name": "Hipogeos de Tierradentro",
+      "facet": "Orfebrería y arte precolombino",
+      "known_at": 9
+    },
+    {
+      "name": "Museo del Oro",
+      "facet": "Museos de Bogotá",
+      "known_at": 3
+    },
+    {
+      "name": "Museo de los Niños",
+      "facet": "Museos de Bogotá",
+      "known_at": 5
+    },
+    {
+      "name": "Museo de la Independencia Casa del Florero",
+      "facet": "Museos de Bogotá",
+      "known_at": 7
+    },
+    {
+      "name": "Museo Militar de Colombia",
+      "facet": "Museos de Bogotá",
+      "known_at": 9
+    },
+    {
+      "name": "Museo de Arte Moderno de Bogotá",
+      "facet": "Museos de Bogotá",
+      "known_at": 10
+    },
+    {
+      "name": "Museo Colonial",
+      "facet": "Museos de Bogotá",
+      "known_at": 10
+    },
+    {
+      "name": "Museo de Bogotá",
+      "facet": "Museos de Bogotá",
+      "known_at": 10
+    },
+    {
+      "name": "Panóptico de Bogotá",
+      "facet": "Museos de Bogotá",
+      "known_at": 11
+    },
+    {
+      "name": "Museo de Arte Miguel Urrutia",
+      "facet": "Museos de Bogotá",
+      "known_at": 12
+    },
+    {
+      "name": "Museo Arqueológico de Bogotá",
+      "facet": "Museos de Bogotá",
+      "known_at": 13
+    },
+    {
+      "name": "Museo del Caribe",
+      "facet": "Museos de Medellín y las regiones",
+      "known_at": 9
+    },
+    {
+      "name": "Museo de Arte Moderno de Medellín",
+      "facet": "Museos de Medellín y las regiones",
+      "known_at": 10
+    },
+    {
+      "name": "Museo La Tertulia",
+      "facet": "Museos de Medellín y las regiones",
+      "known_at": 10
+    },
+    {
+      "name": "Museo Casa de la Memoria",
+      "facet": "Museos de Medellín y las regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Museo El Castillo",
+      "facet": "Museos de Medellín y las regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Museo Rayo",
+      "facet": "Museos de Medellín y las regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Museo de Arte Moderno de Cartagena",
+      "facet": "Museos de Medellín y las regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Museo del Oro Zenú",
+      "facet": "Museos de Medellín y las regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Museo Naval del Caribe",
+      "facet": "Museos de Medellín y las regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Casa Museo Pedro Nel Gómez",
+      "facet": "Museos de Medellín y las regiones",
+      "known_at": 12
+    },
+    {
+      "name": "Museo de Arte Religioso de Popayán",
+      "facet": "Museos de Medellín y las regiones",
+      "known_at": 12
+    },
+    {
+      "name": "Casa Museo Otraparte",
+      "facet": "Museos de Medellín y las regiones",
+      "known_at": 12
+    },
+    {
+      "name": "Museo Juan del Corral",
+      "facet": "Museos de Medellín y las regiones",
+      "known_at": 13
+    },
+    {
+      "name": "Salón Nacional de Artistas",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Fragmentos",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Antonio Caro",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Feliza Bursztyn",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Marta Traba",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "ARTBO",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Shibboleth",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Colombia Coca-Cola",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Óscar Muñoz",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Bernardo Salcedo",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Auras anónimas",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Nadín Ospina",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "María Fernanda Cardoso",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Miguel Ángel Rojas",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "José Alejandro Restrepo",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Álvaro Barrios",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Delcy Morelos",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Iván Argote",
+      "facet": "Arte contemporáneo colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "José María Espinosa",
+      "facet": "Arte del siglo XIX y la Expedición Botánica",
+      "known_at": 12
+    },
+    {
+      "name": "Escuela de Bellas Artes de Bogotá",
+      "facet": "Arte del siglo XIX y la Expedición Botánica",
+      "known_at": 12
+    },
+    {
+      "name": "Pedro José Figueroa",
+      "facet": "Arte del siglo XIX y la Expedición Botánica",
+      "known_at": 13
+    },
+    {
+      "name": "Ricardo Acevedo Bernal",
+      "facet": "Arte del siglo XIX y la Expedición Botánica",
+      "known_at": 13
+    },
+    {
+      "name": "Alberto Urdaneta",
+      "facet": "Arte del siglo XIX y la Expedición Botánica",
+      "known_at": 13
+    },
+    {
+      "name": "Manuel María Paz",
+      "facet": "Arte del siglo XIX y la Expedición Botánica",
+      "known_at": 14
+    },
+    {
+      "name": "Edward Walhouse Mark",
+      "facet": "Arte del siglo XIX y la Expedición Botánica",
+      "known_at": 14
+    },
+    {
+      "name": "Aerosol",
+      "facet": "Grafiti y arte urbano",
+      "known_at": 3
+    },
+    {
+      "name": "Hip hop",
+      "facet": "Grafiti y arte urbano",
+      "known_at": 6
+    },
+    {
+      "name": "Tag",
+      "facet": "Grafiti y arte urbano",
+      "known_at": 9
+    },
+    {
+      "name": "Grafiti de Justin Bieber en Bogotá",
+      "facet": "Grafiti y arte urbano",
+      "known_at": 9
+    },
+    {
+      "name": "Esténcil",
+      "facet": "Grafiti y arte urbano",
+      "known_at": 10
+    },
+    {
+      "name": "Distrito Graffiti",
+      "facet": "Grafiti y arte urbano",
+      "known_at": 10
+    },
+    {
+      "name": "Murales de la Calle 26",
+      "facet": "Grafiti y arte urbano",
+      "known_at": 11
+    },
+    {
+      "name": "Bogotá Graffiti Tour",
+      "facet": "Grafiti y arte urbano",
+      "known_at": 12
+    },
+    {
+      "name": "Regulación del grafiti en Bogotá",
+      "facet": "Grafiti y arte urbano",
+      "known_at": 13
+    },
+    {
+      "name": "Crisp",
+      "facet": "Grafiti y arte urbano",
+      "known_at": 13
+    },
+    {
+      "name": "Toxicómano Callejero",
+      "facet": "Grafiti y arte urbano",
+      "known_at": 13
+    },
+    {
+      "name": "DJLU",
+      "facet": "Grafiti y arte urbano",
+      "known_at": 13
+    },
+    {
+      "name": "Stinkfish",
+      "facet": "Grafiti y arte urbano",
+      "known_at": 13
+    },
+    {
+      "name": "Bastardilla",
+      "facet": "Grafiti y arte urbano",
+      "known_at": 14
+    },
+    {
+      "name": "Vértigo Graffiti",
+      "facet": "Grafiti y arte urbano",
+      "known_at": 14
+    }
+  ]
+}

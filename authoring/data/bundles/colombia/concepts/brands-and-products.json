@@ -1,0 +1,877 @@
+{
+  "subcategory": "brands-and-products",
+  "facets": [
+    "Bebidas y gaseosas colombianas",
+    "Café y marcas de tinto",
+    "Dulces, chocolatinas y golosinas",
+    "Mecato y paquetes salados",
+    "Lácteos, panadería y alimentos de mercado",
+    "Aseo, cuidado personal y productos del hogar",
+    "Almacenes, supermercados y tiendas",
+    "Restaurantes y comidas rápidas colombianas",
+    "Bancos, aerolíneas y empresas de servicios",
+    "Moda, calzado y textiles colombianos",
+    "Publicidad, jingles y mascotas de marca",
+    "Historia y fundadores de empresas colombianas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Jugos Hit",
+      "facet": "Bebidas y gaseosas colombianas",
+      "known_at": 3
+    },
+    {
+      "name": "Agua Cristal",
+      "facet": "Bebidas y gaseosas colombianas",
+      "known_at": 4
+    },
+    {
+      "name": "Agua Brisa",
+      "facet": "Bebidas y gaseosas colombianas",
+      "known_at": 5
+    },
+    {
+      "name": "Frutiño",
+      "facet": "Bebidas y gaseosas colombianas",
+      "known_at": 4
+    },
+    {
+      "name": "Tutti Frutti",
+      "facet": "Bebidas y gaseosas colombianas",
+      "known_at": 6
+    },
+    {
+      "name": "Cerveza Águila",
+      "facet": "Bebidas y gaseosas colombianas",
+      "known_at": 7
+    },
+    {
+      "name": "Club Colombia",
+      "facet": "Bebidas y gaseosas colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Speed Max",
+      "facet": "Bebidas y gaseosas colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Tiendas Juan Valdez Café",
+      "facet": "Café y marcas de tinto",
+      "known_at": 6
+    },
+    {
+      "name": "Café Águila Roja",
+      "facet": "Café y marcas de tinto",
+      "known_at": 7
+    },
+    {
+      "name": "Café La Bastilla",
+      "facet": "Café y marcas de tinto",
+      "known_at": 9
+    },
+    {
+      "name": "Café Oma",
+      "facet": "Café y marcas de tinto",
+      "known_at": 8
+    },
+    {
+      "name": "Tostao' Café & Pan",
+      "facet": "Café y marcas de tinto",
+      "known_at": 7
+    },
+    {
+      "name": "Café de Colombia (denominación de origen)",
+      "facet": "Café y marcas de tinto",
+      "known_at": 10
+    },
+    {
+      "name": "Amor Perfecto",
+      "facet": "Café y marcas de tinto",
+      "known_at": 13
+    },
+    {
+      "name": "Café Quindío",
+      "facet": "Café y marcas de tinto",
+      "known_at": 11
+    },
+    {
+      "name": "Café San Alberto",
+      "facet": "Café y marcas de tinto",
+      "known_at": 13
+    },
+    {
+      "name": "Café Devoción",
+      "facet": "Café y marcas de tinto",
+      "known_at": 14
+    },
+    {
+      "name": "Jumbo (chocolatina)",
+      "facet": "Dulces, chocolatinas y golosinas",
+      "known_at": 2
+    },
+    {
+      "name": "Chocolatina Gol",
+      "facet": "Dulces, chocolatinas y golosinas",
+      "known_at": 4
+    },
+    {
+      "name": "Super Coco",
+      "facet": "Dulces, chocolatinas y golosinas",
+      "known_at": 3
+    },
+    {
+      "name": "Barrilete",
+      "facet": "Dulces, chocolatinas y golosinas",
+      "known_at": 4
+    },
+    {
+      "name": "Frunas",
+      "facet": "Dulces, chocolatinas y golosinas",
+      "known_at": 3
+    },
+    {
+      "name": "Gomas Trululú",
+      "facet": "Dulces, chocolatinas y golosinas",
+      "known_at": 2
+    },
+    {
+      "name": "Nucita",
+      "facet": "Dulces, chocolatinas y golosinas",
+      "known_at": 3
+    },
+    {
+      "name": "Chocolate Luker",
+      "facet": "Dulces, chocolatinas y golosinas",
+      "known_at": 6
+    },
+    {
+      "name": "Coffee Delight",
+      "facet": "Dulces, chocolatinas y golosinas",
+      "known_at": 8
+    },
+    {
+      "name": "Menta Helada",
+      "facet": "Dulces, chocolatinas y golosinas",
+      "known_at": 7
+    },
+    {
+      "name": "Bianchi",
+      "facet": "Dulces, chocolatinas y golosinas",
+      "known_at": 6
+    },
+    {
+      "name": "Colombina",
+      "facet": "Dulces, chocolatinas y golosinas",
+      "known_at": 3
+    },
+    {
+      "name": "Papas Margarita",
+      "facet": "Mecato y paquetes salados",
+      "known_at": 2
+    },
+    {
+      "name": "De Todito",
+      "facet": "Mecato y paquetes salados",
+      "known_at": 3
+    },
+    {
+      "name": "Natuchips",
+      "facet": "Mecato y paquetes salados",
+      "known_at": 5
+    },
+    {
+      "name": "Choclitos",
+      "facet": "Mecato y paquetes salados",
+      "known_at": 3
+    },
+    {
+      "name": "Boliqueso",
+      "facet": "Mecato y paquetes salados",
+      "known_at": 4
+    },
+    {
+      "name": "Tostacos",
+      "facet": "Mecato y paquetes salados",
+      "known_at": 6
+    },
+    {
+      "name": "Maní Moto",
+      "facet": "Mecato y paquetes salados",
+      "known_at": 5
+    },
+    {
+      "name": "Yupi",
+      "facet": "Mecato y paquetes salados",
+      "known_at": 5
+    },
+    {
+      "name": "Todo Rico",
+      "facet": "Mecato y paquetes salados",
+      "known_at": 6
+    },
+    {
+      "name": "Papas Super Ricas",
+      "facet": "Mecato y paquetes salados",
+      "known_at": 5
+    },
+    {
+      "name": "Gudiz",
+      "facet": "Mecato y paquetes salados",
+      "known_at": 7
+    },
+    {
+      "name": "Platanitos",
+      "facet": "Mecato y paquetes salados",
+      "known_at": 4
+    },
+    {
+      "name": "Cheese Tris",
+      "facet": "Mecato y paquetes salados",
+      "known_at": 6
+    },
+    {
+      "name": "Rizadas",
+      "facet": "Mecato y paquetes salados",
+      "known_at": 7
+    },
+    {
+      "name": "Alpina",
+      "facet": "Lácteos, panadería y alimentos de mercado",
+      "known_at": 2
+    },
+    {
+      "name": "Bon Yurt",
+      "facet": "Lácteos, panadería y alimentos de mercado",
+      "known_at": 2
+    },
+    {
+      "name": "Avena Alpina",
+      "facet": "Lácteos, panadería y alimentos de mercado",
+      "known_at": 3
+    },
+    {
+      "name": "Colanta",
+      "facet": "Lácteos, panadería y alimentos de mercado",
+      "known_at": 5
+    },
+    {
+      "name": "Alquería",
+      "facet": "Lácteos, panadería y alimentos de mercado",
+      "known_at": 5
+    },
+    {
+      "name": "Ponqué Ramo",
+      "facet": "Lácteos, panadería y alimentos de mercado",
+      "known_at": 3
+    },
+    {
+      "name": "Galletas Festival",
+      "facet": "Lácteos, panadería y alimentos de mercado",
+      "known_at": 2
+    },
+    {
+      "name": "Saltín Noel",
+      "facet": "Lácteos, panadería y alimentos de mercado",
+      "known_at": 4
+    },
+    {
+      "name": "Galletas Ducales",
+      "facet": "Lácteos, panadería y alimentos de mercado",
+      "known_at": 5
+    },
+    {
+      "name": "Arroz Diana",
+      "facet": "Lácteos, panadería y alimentos de mercado",
+      "known_at": 6
+    },
+    {
+      "name": "Arroz Roa",
+      "facet": "Lácteos, panadería y alimentos de mercado",
+      "known_at": 6
+    },
+    {
+      "name": "Pastas Doria",
+      "facet": "Lácteos, panadería y alimentos de mercado",
+      "known_at": 6
+    },
+    {
+      "name": "Fruco",
+      "facet": "Lácteos, panadería y alimentos de mercado",
+      "known_at": 5
+    },
+    {
+      "name": "Salchichas Ranchera",
+      "facet": "Lácteos, panadería y alimentos de mercado",
+      "known_at": 6
+    },
+    {
+      "name": "Doña Gallina",
+      "facet": "Lácteos, panadería y alimentos de mercado",
+      "known_at": 6
+    },
+    {
+      "name": "Jabón Rey",
+      "facet": "Aseo, cuidado personal y productos del hogar",
+      "known_at": 6
+    },
+    {
+      "name": "Límpido",
+      "facet": "Aseo, cuidado personal y productos del hogar",
+      "known_at": 6
+    },
+    {
+      "name": "Blancox",
+      "facet": "Aseo, cuidado personal y productos del hogar",
+      "known_at": 7
+    },
+    {
+      "name": "Papel higiénico Familia",
+      "facet": "Aseo, cuidado personal y productos del hogar",
+      "known_at": 4
+    },
+    {
+      "name": "Nosotras",
+      "facet": "Aseo, cuidado personal y productos del hogar",
+      "known_at": 9
+    },
+    {
+      "name": "Pequeñín",
+      "facet": "Aseo, cuidado personal y productos del hogar",
+      "known_at": 5
+    },
+    {
+      "name": "Winny",
+      "facet": "Aseo, cuidado personal y productos del hogar",
+      "known_at": 5
+    },
+    {
+      "name": "Tecnoquímicas",
+      "facet": "Aseo, cuidado personal y productos del hogar",
+      "known_at": 11
+    },
+    {
+      "name": "MK",
+      "facet": "Aseo, cuidado personal y productos del hogar",
+      "known_at": 8
+    },
+    {
+      "name": "Yodora",
+      "facet": "Aseo, cuidado personal y productos del hogar",
+      "known_at": 9
+    },
+    {
+      "name": "Sal de Frutas Lua",
+      "facet": "Aseo, cuidado personal y productos del hogar",
+      "known_at": 8
+    },
+    {
+      "name": "Jabón Coco Varela",
+      "facet": "Aseo, cuidado personal y productos del hogar",
+      "known_at": 8
+    },
+    {
+      "name": "Fortident",
+      "facet": "Aseo, cuidado personal y productos del hogar",
+      "known_at": 7
+    },
+    {
+      "name": "Savital",
+      "facet": "Aseo, cuidado personal y productos del hogar",
+      "known_at": 6
+    },
+    {
+      "name": "Ego (shampoo)",
+      "facet": "Aseo, cuidado personal y productos del hogar",
+      "known_at": 8
+    },
+    {
+      "name": "Bonfiest",
+      "facet": "Aseo, cuidado personal y productos del hogar",
+      "known_at": 10
+    },
+    {
+      "name": "Dersa",
+      "facet": "Aseo, cuidado personal y productos del hogar",
+      "known_at": 9
+    },
+    {
+      "name": "Almacenes Éxito",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 2
+    },
+    {
+      "name": "Carulla",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 6
+    },
+    {
+      "name": "Olímpica",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 5
+    },
+    {
+      "name": "Tiendas Ara",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 4
+    },
+    {
+      "name": "Tiendas D1",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 3
+    },
+    {
+      "name": "Justo & Bueno",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 7
+    },
+    {
+      "name": "Alkosto",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 5
+    },
+    {
+      "name": "Ktronix",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 7
+    },
+    {
+      "name": "Surtimax",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 8
+    },
+    {
+      "name": "La 14",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 9
+    },
+    {
+      "name": "Homecenter",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 6
+    },
+    {
+      "name": "Pepe Ganga",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 6
+    },
+    {
+      "name": "Almacenes Flamingo",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 8
+    },
+    {
+      "name": "Panamericana",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 4
+    },
+    {
+      "name": "Colsubsidio",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 8
+    },
+    {
+      "name": "San Andresito",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 7
+    },
+    {
+      "name": "Falabella",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 6
+    },
+    {
+      "name": "Centro Andino",
+      "facet": "Almacenes, supermercados y tiendas",
+      "known_at": 10
+    },
+    {
+      "name": "Crepes & Waffles",
+      "facet": "Restaurantes y comidas rápidas colombianas",
+      "known_at": 4
+    },
+    {
+      "name": "Presto",
+      "facet": "Restaurantes y comidas rápidas colombianas",
+      "known_at": 6
+    },
+    {
+      "name": "Sándwich Qbano",
+      "facet": "Restaurantes y comidas rápidas colombianas",
+      "known_at": 7
+    },
+    {
+      "name": "Andrés Carne de Res",
+      "facet": "Restaurantes y comidas rápidas colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Jeno's Pizza",
+      "facet": "Restaurantes y comidas rápidas colombianas",
+      "known_at": 5
+    },
+    {
+      "name": "Archie's",
+      "facet": "Restaurantes y comidas rápidas colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Home Burgers",
+      "facet": "Restaurantes y comidas rápidas colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Pan Pa' Ya!",
+      "facet": "Restaurantes y comidas rápidas colombianas",
+      "known_at": 8
+    },
+    {
+      "name": "Brasa Roja",
+      "facet": "Restaurantes y comidas rápidas colombianas",
+      "known_at": 8
+    },
+    {
+      "name": "Wok",
+      "facet": "Restaurantes y comidas rápidas colombianas",
+      "known_at": 10
+    },
+    {
+      "name": "Dogger",
+      "facet": "Restaurantes y comidas rápidas colombianas",
+      "known_at": 8
+    },
+    {
+      "name": "Sipote Burrito",
+      "facet": "Restaurantes y comidas rápidas colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Helados Mimo's",
+      "facet": "Restaurantes y comidas rápidas colombianas",
+      "known_at": 5
+    },
+    {
+      "name": "Helados Popsy",
+      "facet": "Restaurantes y comidas rápidas colombianas",
+      "known_at": 5
+    },
+    {
+      "name": "Bancolombia",
+      "facet": "Bancos, aerolíneas y empresas de servicios",
+      "known_at": 5
+    },
+    {
+      "name": "Davivienda",
+      "facet": "Bancos, aerolíneas y empresas de servicios",
+      "known_at": 5
+    },
+    {
+      "name": "Banco Popular",
+      "facet": "Bancos, aerolíneas y empresas de servicios",
+      "known_at": 9
+    },
+    {
+      "name": "Satena",
+      "facet": "Bancos, aerolíneas y empresas de servicios",
+      "known_at": 10
+    },
+    {
+      "name": "Easyfly",
+      "facet": "Bancos, aerolíneas y empresas de servicios",
+      "known_at": 11
+    },
+    {
+      "name": "EPM",
+      "facet": "Bancos, aerolíneas y empresas de servicios",
+      "known_at": 8
+    },
+    {
+      "name": "ETB",
+      "facet": "Bancos, aerolíneas y empresas de servicios",
+      "known_at": 10
+    },
+    {
+      "name": "Servientrega",
+      "facet": "Bancos, aerolíneas y empresas de servicios",
+      "known_at": 7
+    },
+    {
+      "name": "Interrapidísimo",
+      "facet": "Bancos, aerolíneas y empresas de servicios",
+      "known_at": 8
+    },
+    {
+      "name": "Coordinadora",
+      "facet": "Bancos, aerolíneas y empresas de servicios",
+      "known_at": 10
+    },
+    {
+      "name": "Rappi",
+      "facet": "Bancos, aerolíneas y empresas de servicios",
+      "known_at": 4
+    },
+    {
+      "name": "Efecty",
+      "facet": "Bancos, aerolíneas y empresas de servicios",
+      "known_at": 7
+    },
+    {
+      "name": "Terpel",
+      "facet": "Bancos, aerolíneas y empresas de servicios",
+      "known_at": 7
+    },
+    {
+      "name": "Grupo Aval",
+      "facet": "Bancos, aerolíneas y empresas de servicios",
+      "known_at": 11
+    },
+    {
+      "name": "Studio F",
+      "facet": "Moda, calzado y textiles colombianos",
+      "known_at": 8
+    },
+    {
+      "name": "Totto",
+      "facet": "Moda, calzado y textiles colombianos",
+      "known_at": 4
+    },
+    {
+      "name": "Bosi",
+      "facet": "Moda, calzado y textiles colombianos",
+      "known_at": 10
+    },
+    {
+      "name": "Offcorss",
+      "facet": "Moda, calzado y textiles colombianos",
+      "known_at": 5
+    },
+    {
+      "name": "Leonisa",
+      "facet": "Moda, calzado y textiles colombianos",
+      "known_at": 9
+    },
+    {
+      "name": "Gef",
+      "facet": "Moda, calzado y textiles colombianos",
+      "known_at": 8
+    },
+    {
+      "name": "Punto Blanco",
+      "facet": "Moda, calzado y textiles colombianos",
+      "known_at": 9
+    },
+    {
+      "name": "Tennis (marca)",
+      "facet": "Moda, calzado y textiles colombianos",
+      "known_at": 8
+    },
+    {
+      "name": "Pat Primo",
+      "facet": "Moda, calzado y textiles colombianos",
+      "known_at": 9
+    },
+    {
+      "name": "Croydon",
+      "facet": "Moda, calzado y textiles colombianos",
+      "known_at": 8
+    },
+    {
+      "name": "Johanna Ortiz",
+      "facet": "Moda, calzado y textiles colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Silvia Tcherassi",
+      "facet": "Moda, calzado y textiles colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Esteban Cortázar",
+      "facet": "Moda, calzado y textiles colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Colombiamoda",
+      "facet": "Moda, calzado y textiles colombianos",
+      "known_at": 11
+    },
+    {
+      "name": "Fabricato",
+      "facet": "Moda, calzado y textiles colombianos",
+      "known_at": 12
+    },
+    {
+      "name": "Conchita (mula de Juan Valdez)",
+      "facet": "Publicidad, jingles y mascotas de marca",
+      "known_at": 7
+    },
+    {
+      "name": "Vendedor de Bon Ice",
+      "facet": "Publicidad, jingles y mascotas de marca",
+      "known_at": 4
+    },
+    {
+      "name": "Gallina de Doña Gallina",
+      "facet": "Publicidad, jingles y mascotas de marca",
+      "known_at": 7
+    },
+    {
+      "name": "Colombia es pasión",
+      "facet": "Publicidad, jingles y mascotas de marca",
+      "known_at": 10
+    },
+    {
+      "name": "Marca país Colombia",
+      "facet": "Publicidad, jingles y mascotas de marca",
+      "known_at": 11
+    },
+    {
+      "name": "Vive Colombia, viaja por ella",
+      "facet": "Publicidad, jingles y mascotas de marca",
+      "known_at": 12
+    },
+    {
+      "name": "Cuña radial",
+      "facet": "Publicidad, jingles y mascotas de marca",
+      "known_at": 10
+    },
+    {
+      "name": "Jingle",
+      "facet": "Publicidad, jingles y mascotas de marca",
+      "known_at": 8
+    },
+    {
+      "name": "Láminas del Álbum Jet",
+      "facet": "Publicidad, jingles y mascotas de marca",
+      "known_at": 5
+    },
+    {
+      "name": "Logo de Juan Valdez",
+      "facet": "Publicidad, jingles y mascotas de marca",
+      "known_at": 6
+    },
+    {
+      "name": "Patrocinio de la Selección Colombia",
+      "facet": "Publicidad, jingles y mascotas de marca",
+      "known_at": 9
+    },
+    {
+      "name": "Tapas premiadas",
+      "facet": "Publicidad, jingles y mascotas de marca",
+      "known_at": 6
+    },
+    {
+      "name": "Valla publicitaria",
+      "facet": "Publicidad, jingles y mascotas de marca",
+      "known_at": 7
+    },
+    {
+      "name": "Comercial navideño",
+      "facet": "Publicidad, jingles y mascotas de marca",
+      "known_at": 6
+    },
+    {
+      "name": "Pauta en la Vuelta a Colombia",
+      "facet": "Publicidad, jingles y mascotas de marca",
+      "known_at": 12
+    },
+    {
+      "name": "Grupo Empresarial Antioqueño",
+      "facet": "Historia y fundadores de empresas colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Grupo Nutresa",
+      "facet": "Historia y fundadores de empresas colombianas",
+      "known_at": 10
+    },
+    {
+      "name": "Compañía Nacional de Chocolates",
+      "facet": "Historia y fundadores de empresas colombianas",
+      "known_at": 10
+    },
+    {
+      "name": "Valerio Tobón",
+      "facet": "Historia y fundadores de empresas colombianas",
+      "known_at": 13
+    },
+    {
+      "name": "Hernando Caicedo",
+      "facet": "Historia y fundadores de empresas colombianas",
+      "known_at": 14
+    },
+    {
+      "name": "Eduardo Macaya",
+      "facet": "Historia y fundadores de empresas colombianas",
+      "known_at": 14
+    },
+    {
+      "name": "Alejandro Echavarría",
+      "facet": "Historia y fundadores de empresas colombianas",
+      "known_at": 14
+    },
+    {
+      "name": "Cementos Argos",
+      "facet": "Historia y fundadores de empresas colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Organización Ardila Lülle",
+      "facet": "Historia y fundadores de empresas colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Quala",
+      "facet": "Historia y fundadores de empresas colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Walter Goggel",
+      "facet": "Historia y fundadores de empresas colombianas",
+      "known_at": 15
+    }
+  ]
+}

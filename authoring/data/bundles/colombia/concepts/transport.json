@@ -1,0 +1,818 @@
+{
+  "subcategory": "transport",
+  "facets": [
+    "Sistemas masivos urbanos",
+    "Buses, busetas y colectivos",
+    "Cables y metrocables",
+    "Transporte rural y chivas",
+    "Motos, taxis y bicitaxis",
+    "Bicicleta y ciclovía",
+    "Ríos y transporte fluvial",
+    "Aeropuertos y aerolíneas",
+    "Puertos y transporte marítimo",
+    "Carreteras, túneles y puentes",
+    "Trenes y ferrocarriles históricos",
+    "Normas, pico y placa y jerga vial"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "MIO",
+      "facet": "Sistemas masivos urbanos",
+      "known_at": 6
+    },
+    {
+      "name": "Megabús",
+      "facet": "Sistemas masivos urbanos",
+      "known_at": 9
+    },
+    {
+      "name": "Transcaribe",
+      "facet": "Sistemas masivos urbanos",
+      "known_at": 9
+    },
+    {
+      "name": "Transmetro",
+      "facet": "Sistemas masivos urbanos",
+      "known_at": 9
+    },
+    {
+      "name": "Metrolínea",
+      "facet": "Sistemas masivos urbanos",
+      "known_at": 10
+    },
+    {
+      "name": "Metroplús",
+      "facet": "Sistemas masivos urbanos",
+      "known_at": 9
+    },
+    {
+      "name": "Tranvía de Ayacucho",
+      "facet": "Sistemas masivos urbanos",
+      "known_at": 9
+    },
+    {
+      "name": "Tarjeta TuLlave",
+      "facet": "Sistemas masivos urbanos",
+      "known_at": 6
+    },
+    {
+      "name": "Tarjeta Cívica",
+      "facet": "Sistemas masivos urbanos",
+      "known_at": 8
+    },
+    {
+      "name": "Cultura Metro",
+      "facet": "Sistemas masivos urbanos",
+      "known_at": 8
+    },
+    {
+      "name": "Regiotram de Occidente",
+      "facet": "Sistemas masivos urbanos",
+      "known_at": 11
+    },
+    {
+      "name": "SITP",
+      "facet": "Sistemas masivos urbanos",
+      "known_at": 7
+    },
+    {
+      "name": "Portal del Norte",
+      "facet": "Sistemas masivos urbanos",
+      "known_at": 8
+    },
+    {
+      "name": "Bus articulado",
+      "facet": "Sistemas masivos urbanos",
+      "known_at": 6
+    },
+    {
+      "name": "Buseta",
+      "facet": "Buses, busetas y colectivos",
+      "known_at": 2
+    },
+    {
+      "name": "Colectivo",
+      "facet": "Buses, busetas y colectivos",
+      "known_at": 4
+    },
+    {
+      "name": "Bus intermunicipal",
+      "facet": "Buses, busetas y colectivos",
+      "known_at": 5
+    },
+    {
+      "name": "Terminal de Transportes de Bogotá",
+      "facet": "Buses, busetas y colectivos",
+      "known_at": 6
+    },
+    {
+      "name": "Terminal del Norte de Medellín",
+      "facet": "Buses, busetas y colectivos",
+      "known_at": 8
+    },
+    {
+      "name": "Expreso Bolivariano",
+      "facet": "Buses, busetas y colectivos",
+      "known_at": 8
+    },
+    {
+      "name": "Expreso Brasilia",
+      "facet": "Buses, busetas y colectivos",
+      "known_at": 8
+    },
+    {
+      "name": "Copetran",
+      "facet": "Buses, busetas y colectivos",
+      "known_at": 10
+    },
+    {
+      "name": "Registradora",
+      "facet": "Buses, busetas y colectivos",
+      "known_at": 9
+    },
+    {
+      "name": "Paradero",
+      "facet": "Buses, busetas y colectivos",
+      "known_at": 3
+    },
+    {
+      "name": "Pasaje",
+      "facet": "Buses, busetas y colectivos",
+      "known_at": 3
+    },
+    {
+      "name": "Guerra del centavo",
+      "facet": "Buses, busetas y colectivos",
+      "known_at": 12
+    },
+    {
+      "name": "Microbús",
+      "facet": "Buses, busetas y colectivos",
+      "known_at": 5
+    },
+    {
+      "name": "Timbre del bus",
+      "facet": "Buses, busetas y colectivos",
+      "known_at": 3
+    },
+    {
+      "name": "Vendedor ambulante en el bus",
+      "facet": "Buses, busetas y colectivos",
+      "known_at": 4
+    },
+    {
+      "name": "Bus pirata",
+      "facet": "Buses, busetas y colectivos",
+      "known_at": 9
+    },
+    {
+      "name": "Línea K del Metrocable",
+      "facet": "Cables y metrocables",
+      "known_at": 10
+    },
+    {
+      "name": "Línea L del Metrocable",
+      "facet": "Cables y metrocables",
+      "known_at": 11
+    },
+    {
+      "name": "Parque Arví",
+      "facet": "Cables y metrocables",
+      "known_at": 8
+    },
+    {
+      "name": "TransMiCable",
+      "facet": "Cables y metrocables",
+      "known_at": 7
+    },
+    {
+      "name": "Ciudad Bolívar",
+      "facet": "Cables y metrocables",
+      "known_at": 7
+    },
+    {
+      "name": "Teleférico de Monserrate",
+      "facet": "Cables y metrocables",
+      "known_at": 4
+    },
+    {
+      "name": "Cable aéreo Manizales–Mariquita",
+      "facet": "Cables y metrocables",
+      "known_at": 13
+    },
+    {
+      "name": "Teleférico del Chicamocha",
+      "facet": "Cables y metrocables",
+      "known_at": 8
+    },
+    {
+      "name": "Santo Domingo Savio",
+      "facet": "Cables y metrocables",
+      "known_at": 11
+    },
+    {
+      "name": "Línea H del Metrocable",
+      "facet": "Cables y metrocables",
+      "known_at": 12
+    },
+    {
+      "name": "Cabina",
+      "facet": "Cables y metrocables",
+      "known_at": 3
+    },
+    {
+      "name": "Chiva",
+      "facet": "Transporte rural y chivas",
+      "known_at": 2
+    },
+    {
+      "name": "Jeep Willys",
+      "facet": "Transporte rural y chivas",
+      "known_at": 6
+    },
+    {
+      "name": "Garrucha",
+      "facet": "Transporte rural y chivas",
+      "known_at": 10
+    },
+    {
+      "name": "Campero",
+      "facet": "Transporte rural y chivas",
+      "known_at": 7
+    },
+    {
+      "name": "Trocha",
+      "facet": "Transporte rural y chivas",
+      "known_at": 8
+    },
+    {
+      "name": "Camino de herradura",
+      "facet": "Transporte rural y chivas",
+      "known_at": 11
+    },
+    {
+      "name": "Camino real",
+      "facet": "Transporte rural y chivas",
+      "known_at": 10
+    },
+    {
+      "name": "Carro lechero",
+      "facet": "Transporte rural y chivas",
+      "known_at": 9
+    },
+    {
+      "name": "Caballo",
+      "facet": "Transporte rural y chivas",
+      "known_at": 1
+    },
+    {
+      "name": "Mototaxi",
+      "facet": "Motos, taxis y bicitaxis",
+      "known_at": 4
+    },
+    {
+      "name": "Bicitaxi",
+      "facet": "Motos, taxis y bicitaxis",
+      "known_at": 4
+    },
+    {
+      "name": "Taxi amarillo",
+      "facet": "Motos, taxis y bicitaxis",
+      "known_at": 1
+    },
+    {
+      "name": "Motocarro",
+      "facet": "Motos, taxis y bicitaxis",
+      "known_at": 7
+    },
+    {
+      "name": "Parrillero",
+      "facet": "Motos, taxis y bicitaxis",
+      "known_at": 8
+    },
+    {
+      "name": "Taxímetro",
+      "facet": "Motos, taxis y bicitaxis",
+      "known_at": 5
+    },
+    {
+      "name": "Carrera mínima",
+      "facet": "Motos, taxis y bicitaxis",
+      "known_at": 9
+    },
+    {
+      "name": "Casco",
+      "facet": "Motos, taxis y bicitaxis",
+      "known_at": 2
+    },
+    {
+      "name": "Chaleco reflectivo",
+      "facet": "Motos, taxis y bicitaxis",
+      "known_at": 7
+    },
+    {
+      "name": "Domiciliario",
+      "facet": "Motos, taxis y bicitaxis",
+      "known_at": 4
+    },
+    {
+      "name": "Taxista",
+      "facet": "Motos, taxis y bicitaxis",
+      "known_at": 2
+    },
+    {
+      "name": "AKT",
+      "facet": "Motos, taxis y bicitaxis",
+      "known_at": 10
+    },
+    {
+      "name": "Moto",
+      "facet": "Motos, taxis y bicitaxis",
+      "known_at": 1
+    },
+    {
+      "name": "Plataformas de transporte",
+      "facet": "Motos, taxis y bicitaxis",
+      "known_at": 8
+    },
+    {
+      "name": "Ciclorruta",
+      "facet": "Bicicleta y ciclovía",
+      "known_at": 5
+    },
+    {
+      "name": "Alto de Letras",
+      "facet": "Bicicleta y ciclovía",
+      "known_at": 11,
+      "retired": "used_up: El dato principal (subida pavimentada más larga) ya está en el pool; lo que queda es oscuro o se superpone."
+    },
+    {
+      "name": "Tour Colombia",
+      "facet": "Bicicleta y ciclovía",
+      "known_at": 10
+    },
+    {
+      "name": "Ciclovía nocturna",
+      "facet": "Bicicleta y ciclovía",
+      "known_at": 8
+    },
+    {
+      "name": "EnCicla",
+      "facet": "Bicicleta y ciclovía",
+      "known_at": 10
+    },
+    {
+      "name": "Escarabajos",
+      "facet": "Bicicleta y ciclovía",
+      "known_at": 8
+    },
+    {
+      "name": "Clásico RCN",
+      "facet": "Bicicleta y ciclovía",
+      "known_at": 11
+    },
+    {
+      "name": "Bicicletero",
+      "facet": "Bicicleta y ciclovía",
+      "known_at": 5
+    },
+    {
+      "name": "Río Cauca",
+      "facet": "Ríos y transporte fluvial",
+      "known_at": 5
+    },
+    {
+      "name": "Río Atrato",
+      "facet": "Ríos y transporte fluvial",
+      "known_at": 8
+    },
+    {
+      "name": "Río Amazonas",
+      "facet": "Ríos y transporte fluvial",
+      "known_at": 2
+    },
+    {
+      "name": "Chalupa",
+      "facet": "Ríos y transporte fluvial",
+      "known_at": 9
+    },
+    {
+      "name": "Lancha",
+      "facet": "Ríos y transporte fluvial",
+      "known_at": 3
+    },
+    {
+      "name": "Planchón",
+      "facet": "Ríos y transporte fluvial",
+      "known_at": 11
+    },
+    {
+      "name": "Bongo",
+      "facet": "Ríos y transporte fluvial",
+      "known_at": 12
+    },
+    {
+      "name": "Balsa",
+      "facet": "Ríos y transporte fluvial",
+      "known_at": 3
+    },
+    {
+      "name": "Puerto Berrío",
+      "facet": "Ríos y transporte fluvial",
+      "known_at": 11
+    },
+    {
+      "name": "Motor fuera de borda",
+      "facet": "Ríos y transporte fluvial",
+      "known_at": 10
+    },
+    {
+      "name": "Aeropuerto José María Córdova",
+      "facet": "Aeropuertos y aerolíneas",
+      "known_at": 7
+    },
+    {
+      "name": "Aeropuerto Alfonso Bonilla Aragón",
+      "facet": "Aeropuertos y aerolíneas",
+      "known_at": 10
+    },
+    {
+      "name": "Aeropuerto Rafael Núñez",
+      "facet": "Aeropuertos y aerolíneas",
+      "known_at": 9
+    },
+    {
+      "name": "Aeropuerto Ernesto Cortissoz",
+      "facet": "Aeropuertos y aerolíneas",
+      "known_at": 10
+    },
+    {
+      "name": "Aeropuerto Gustavo Rojas Pinilla",
+      "facet": "Aeropuertos y aerolíneas",
+      "known_at": 12
+    },
+    {
+      "name": "Aeropuerto Olaya Herrera",
+      "facet": "Aeropuertos y aerolíneas",
+      "known_at": 9
+    },
+    {
+      "name": "Aeropuerto Matecaña",
+      "facet": "Aeropuertos y aerolíneas",
+      "known_at": 11
+    },
+    {
+      "name": "Aeropuerto Alfredo Vásquez Cobo",
+      "facet": "Aeropuertos y aerolíneas",
+      "known_at": 13
+    },
+    {
+      "name": "LATAM Colombia",
+      "facet": "Aeropuertos y aerolíneas",
+      "known_at": 6
+    },
+    {
+      "name": "Wingo",
+      "facet": "Aeropuertos y aerolíneas",
+      "known_at": 8
+    },
+    {
+      "name": "Viva Air",
+      "facet": "Aeropuertos y aerolíneas",
+      "known_at": 8
+    },
+    {
+      "name": "Puente aéreo",
+      "facet": "Aeropuertos y aerolíneas",
+      "known_at": 10
+    },
+    {
+      "name": "Aerocivil",
+      "facet": "Aeropuertos y aerolíneas",
+      "known_at": 11
+    },
+    {
+      "name": "Puerto de Buenaventura",
+      "facet": "Puertos y transporte marítimo",
+      "known_at": 6
+    },
+    {
+      "name": "Puerto de Cartagena",
+      "facet": "Puertos y transporte marítimo",
+      "known_at": 5
+    },
+    {
+      "name": "Puerto de Barranquilla",
+      "facet": "Puertos y transporte marítimo",
+      "known_at": 7
+    },
+    {
+      "name": "Puerto de Tumaco",
+      "facet": "Puertos y transporte marítimo",
+      "known_at": 10
+    },
+    {
+      "name": "Puerto Bolívar",
+      "facet": "Puertos y transporte marítimo",
+      "known_at": 12
+    },
+    {
+      "name": "Turbo",
+      "facet": "Puertos y transporte marítimo",
+      "known_at": 10
+    },
+    {
+      "name": "Bahía de Cartagena",
+      "facet": "Puertos y transporte marítimo",
+      "known_at": 7
+    },
+    {
+      "name": "Bocas de Ceniza",
+      "facet": "Puertos y transporte marítimo",
+      "known_at": 10
+    },
+    {
+      "name": "Contenedor",
+      "facet": "Puertos y transporte marítimo",
+      "known_at": 4
+    },
+    {
+      "name": "Armada de Colombia",
+      "facet": "Puertos y transporte marítimo",
+      "known_at": 8
+    },
+    {
+      "name": "ARC Gloria",
+      "facet": "Puertos y transporte marítimo",
+      "known_at": 10
+    },
+    {
+      "name": "Galeón San José",
+      "facet": "Puertos y transporte marítimo",
+      "known_at": 9
+    },
+    {
+      "name": "Catamarán a Providencia",
+      "facet": "Puertos y transporte marítimo",
+      "known_at": 11
+    },
+    {
+      "name": "Crucero",
+      "facet": "Puertos y transporte marítimo",
+      "known_at": 3
+    },
+    {
+      "name": "Faro",
+      "facet": "Puertos y transporte marítimo",
+      "known_at": 2
+    },
+    {
+      "name": "Túnel del Toyo",
+      "facet": "Carreteras, túneles y puentes",
+      "known_at": 11
+    },
+    {
+      "name": "Túnel de Occidente",
+      "facet": "Carreteras, túneles y puentes",
+      "known_at": 10
+    },
+    {
+      "name": "Puente Hisgaura",
+      "facet": "Carreteras, túneles y puentes",
+      "known_at": 12
+    },
+    {
+      "name": "Viaducto César Gaviria Trujillo",
+      "facet": "Carreteras, túneles y puentes",
+      "known_at": 11
+    },
+    {
+      "name": "Carretera Panamericana",
+      "facet": "Carreteras, túneles y puentes",
+      "known_at": 8
+    },
+    {
+      "name": "Troncal del Caribe",
+      "facet": "Carreteras, túneles y puentes",
+      "known_at": 10
+    },
+    {
+      "name": "Vía al Llano",
+      "facet": "Carreteras, túneles y puentes",
+      "known_at": 7
+    },
+    {
+      "name": "Alto de La Línea",
+      "facet": "Carreteras, túneles y puentes",
+      "known_at": 8
+    },
+    {
+      "name": "Peaje",
+      "facet": "Carreteras, túneles y puentes",
+      "known_at": 4
+    },
+    {
+      "name": "Trampolín de la Muerte",
+      "facet": "Carreteras, túneles y puentes",
+      "known_at": 11
+    },
+    {
+      "name": "Ruta del Sol",
+      "facet": "Carreteras, túneles y puentes",
+      "known_at": 10
+    },
+    {
+      "name": "Vías 4G",
+      "facet": "Carreteras, túneles y puentes",
+      "known_at": 12
+    },
+    {
+      "name": "Autopista Norte",
+      "facet": "Carreteras, túneles y puentes",
+      "known_at": 8
+    },
+    {
+      "name": "Tren Turístico de la Sabana",
+      "facet": "Trenes y ferrocarriles históricos",
+      "known_at": 8
+    },
+    {
+      "name": "Ferrocarril del Pacífico",
+      "facet": "Trenes y ferrocarriles históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Locomotora de vapor",
+      "facet": "Trenes y ferrocarriles históricos",
+      "known_at": 4
+    },
+    {
+      "name": "Ferrocarril de Girardot",
+      "facet": "Trenes y ferrocarriles históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Tren del Cerrejón",
+      "facet": "Trenes y ferrocarriles históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Estación Cisneros",
+      "facet": "Trenes y ferrocarriles históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Brujita",
+      "facet": "Trenes y ferrocarriles históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Ferrocarril de Amagá",
+      "facet": "Trenes y ferrocarriles históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Tren de Cercanías",
+      "facet": "Trenes y ferrocarriles históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Ferrocarril del Atlántico",
+      "facet": "Trenes y ferrocarriles históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Día sin carro",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 5
+    },
+    {
+      "name": "SOAT",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 7
+    },
+    {
+      "name": "Revisión técnico-mecánica",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 9
+    },
+    {
+      "name": "Pase",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 7
+    },
+    {
+      "name": "Comparendo",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 8
+    },
+    {
+      "name": "Fotomulta",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 7
+    },
+    {
+      "name": "Agente de tránsito",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 5
+    },
+    {
+      "name": "Cebra",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 2
+    },
+    {
+      "name": "Semáforo",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 1
+    },
+    {
+      "name": "Trancón",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 3
+    },
+    {
+      "name": "Varado",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 5
+    },
+    {
+      "name": "Pinchazo",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 4
+    },
+    {
+      "name": "Parqueadero",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 3
+    },
+    {
+      "name": "Bomba de gasolina",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 4
+    },
+    {
+      "name": "Patios",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 10
+    },
+    {
+      "name": "Retén",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 9
+    },
+    {
+      "name": "Placa",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 4
+    },
+    {
+      "name": "Puente festivo",
+      "facet": "Normas, pico y placa y jerga vial",
+      "known_at": 5
+    }
+  ]
+}

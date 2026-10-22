@@ -1,0 +1,790 @@
+{
+  "subcategory": "telenovelas",
+  "facets": [
+    "Clásicos de RCN y Caracol",
+    "Personajes inolvidables",
+    "Actores y actrices de telenovela",
+    "Frases y dichos célebres",
+    "Canciones y cabezotes",
+    "Narconovelas y súper series",
+    "Bionovelas de artistas y deportistas",
+    "Novelas de época y costumbristas",
+    "Regiones y escenarios de las novelas",
+    "Éxitos internacionales y adaptaciones",
+    "Historia de la televisión colombiana",
+    "Escritores y libretistas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "La costeña y el cachaco",
+      "facet": "Clásicos de RCN y Caracol",
+      "known_at": 11
+    },
+    {
+      "name": "Hasta que la plata nos separe",
+      "facet": "Clásicos de RCN y Caracol",
+      "known_at": 8
+    },
+    {
+      "name": "Nuevo rico, nuevo pobre",
+      "facet": "Clásicos de RCN y Caracol",
+      "known_at": 9
+    },
+    {
+      "name": "Oye bonita",
+      "facet": "Clásicos de RCN y Caracol",
+      "known_at": 10
+    },
+    {
+      "name": "La hija del mariachi",
+      "facet": "Clásicos de RCN y Caracol",
+      "known_at": 9
+    },
+    {
+      "name": "Amor en custodia",
+      "facet": "Clásicos de RCN y Caracol",
+      "known_at": 11
+    },
+    {
+      "name": "Pura sangre",
+      "facet": "Clásicos de RCN y Caracol",
+      "known_at": 12
+    },
+    {
+      "name": "La venganza de Analía",
+      "facet": "Clásicos de RCN y Caracol",
+      "known_at": 10
+    },
+    {
+      "name": "A corazón abierto",
+      "facet": "Clásicos de RCN y Caracol",
+      "known_at": 10
+    },
+    {
+      "name": "Enfermeras",
+      "facet": "Clásicos de RCN y Caracol",
+      "known_at": 9
+    },
+    {
+      "name": "Beatriz Pinzón Solano",
+      "facet": "Personajes inolvidables",
+      "known_at": 4
+    },
+    {
+      "name": "Freddy Stewart Contreras",
+      "facet": "Personajes inolvidables",
+      "known_at": 9
+    },
+    {
+      "name": "Aura María Fuentes",
+      "facet": "Personajes inolvidables",
+      "known_at": 10
+    },
+    {
+      "name": "Bertha Muñoz",
+      "facet": "Personajes inolvidables",
+      "known_at": 10
+    },
+    {
+      "name": "Pedro Coral Tavera",
+      "facet": "Personajes inolvidables",
+      "known_at": 7
+    },
+    {
+      "name": "Paula Murillo",
+      "facet": "Personajes inolvidables",
+      "known_at": 12
+    },
+    {
+      "name": "Sebastián Vallejo",
+      "facet": "Personajes inolvidables",
+      "known_at": 11
+    },
+    {
+      "name": "Franco Reyes",
+      "facet": "Personajes inolvidables",
+      "known_at": 8
+    },
+    {
+      "name": "Norma Elizondo",
+      "facet": "Personajes inolvidables",
+      "known_at": 9
+    },
+    {
+      "name": "Juan Reyes",
+      "facet": "Personajes inolvidables",
+      "known_at": 9
+    },
+    {
+      "name": "Óscar Reyes",
+      "facet": "Personajes inolvidables",
+      "known_at": 9
+    },
+    {
+      "name": "Yeimy Montoya",
+      "facet": "Personajes inolvidables",
+      "known_at": 8
+    },
+    {
+      "name": "Ana María Orozco",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 6
+    },
+    {
+      "name": "Jorge Enrique Abello",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 8
+    },
+    {
+      "name": "Natalia Ramírez",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 10
+    },
+    {
+      "name": "Lorna Cepeda",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 9
+    },
+    {
+      "name": "Julián Arango",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 9
+    },
+    {
+      "name": "Miguel Varoni",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 8
+    },
+    {
+      "name": "Margarita Rosa de Francisco",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 7
+    },
+    {
+      "name": "Guy Ecker",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 11
+    },
+    {
+      "name": "Danna García",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 8
+    },
+    {
+      "name": "Mario Cimarro",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 9
+    },
+    {
+      "name": "Amparo Grisales",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 5
+    },
+    {
+      "name": "Vicky Hernández",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 12
+    },
+    {
+      "name": "Diego Trujillo",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 10
+    },
+    {
+      "name": "Majida Issa",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 10
+    },
+    {
+      "name": "Carolina Ramírez",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 8
+    },
+    {
+      "name": "Manolo Cardona",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 8
+    },
+    {
+      "name": "Juan Pablo Raba",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 10
+    },
+    {
+      "name": "Robinson Díaz",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 8
+    },
+    {
+      "name": "Flora Martínez",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 12
+    },
+    {
+      "name": "Paola Rey",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 9
+    },
+    {
+      "name": "Kristina Lilley",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos Muñoz",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 11
+    },
+    {
+      "name": "La Peliteñida",
+      "facet": "Frases y dichos célebres",
+      "known_at": 8
+    },
+    {
+      "name": "Escamoso",
+      "facet": "Frases y dichos célebres",
+      "known_at": 6
+    },
+    {
+      "name": "Lambón",
+      "facet": "Frases y dichos célebres",
+      "known_at": 8
+    },
+    {
+      "name": "Mamagallista",
+      "facet": "Frases y dichos célebres",
+      "known_at": 9
+    },
+    {
+      "name": "Berraco",
+      "facet": "Frases y dichos célebres",
+      "known_at": 6
+    },
+    {
+      "name": "Ñero",
+      "facet": "Frases y dichos célebres",
+      "known_at": 7
+    },
+    {
+      "name": "Pinchado",
+      "facet": "Frases y dichos célebres",
+      "known_at": 9
+    },
+    {
+      "name": "Lagarto",
+      "facet": "Frases y dichos célebres",
+      "known_at": 9
+    },
+    {
+      "name": "Boleta",
+      "facet": "Frases y dichos célebres",
+      "known_at": 8
+    },
+    {
+      "name": "Gomelo",
+      "facet": "Frases y dichos célebres",
+      "known_at": 8
+    },
+    {
+      "name": "Mañé",
+      "facet": "Frases y dichos célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Se dice de mí",
+      "facet": "Canciones y cabezotes",
+      "known_at": 7
+    },
+    {
+      "name": "Yolanda Rayo",
+      "facet": "Canciones y cabezotes",
+      "known_at": 11
+    },
+    {
+      "name": "Gaviota (canción)",
+      "facet": "Canciones y cabezotes",
+      "known_at": 10
+    },
+    {
+      "name": "¿Quién es ese hombre?",
+      "facet": "Canciones y cabezotes",
+      "known_at": 8
+    },
+    {
+      "name": "Cabezote",
+      "facet": "Canciones y cabezotes",
+      "known_at": 9
+    },
+    {
+      "name": "Reguetón",
+      "facet": "Canciones y cabezotes",
+      "known_at": 5
+    },
+    {
+      "name": "Joropo",
+      "facet": "Canciones y cabezotes",
+      "known_at": 8
+    },
+    {
+      "name": "Salsa caleña",
+      "facet": "Canciones y cabezotes",
+      "known_at": 8
+    },
+    {
+      "name": "Pablo Escobar, el patrón del mal",
+      "facet": "Narconovelas y súper series",
+      "known_at": 7,
+      "retired": "unaskable: Narconovela sobre Pablo Escobar; las opciones exigen hablar del narcotráfico, poco apto para un juego familiar."
+    },
+    {
+      "name": "El cartel de los sapos",
+      "facet": "Narconovelas y súper series",
+      "known_at": 10
+    },
+    {
+      "name": "Las muñecas de la mafia",
+      "facet": "Narconovelas y súper series",
+      "known_at": 11
+    },
+    {
+      "name": "El capo",
+      "facet": "Narconovelas y súper series",
+      "known_at": 11
+    },
+    {
+      "name": "Súper serie",
+      "facet": "Narconovelas y súper series",
+      "known_at": 10
+    },
+    {
+      "name": "Narconovela",
+      "facet": "Narconovelas y súper series",
+      "known_at": 9
+    },
+    {
+      "name": "Alias el Mexicano",
+      "facet": "Narconovelas y súper series",
+      "known_at": 13,
+      "retired": "unaskable: Narcotraficante real; tema poco apto para un juego familiar."
+    },
+    {
+      "name": "Tres Caínes",
+      "facet": "Narconovelas y súper series",
+      "known_at": 13
+    },
+    {
+      "name": "Andrés Parra",
+      "facet": "Narconovelas y súper series",
+      "known_at": 10
+    },
+    {
+      "name": "Sobreviviendo a Escobar, alias JJ",
+      "facet": "Narconovelas y súper series",
+      "known_at": 12,
+      "retired": "unaskable: Serie sobre un sicario real; tema poco apto para un juego familiar."
+    },
+    {
+      "name": "Distrito salvaje",
+      "facet": "Narconovelas y súper series",
+      "known_at": 12
+    },
+    {
+      "name": "Narcos",
+      "facet": "Narconovelas y súper series",
+      "known_at": 9
+    },
+    {
+      "name": "Bloque de búsqueda",
+      "facet": "Narconovelas y súper series",
+      "known_at": 13
+    },
+    {
+      "name": "Lady, la vendedora de rosas",
+      "facet": "Narconovelas y súper series",
+      "known_at": 12
+    },
+    {
+      "name": "Celia",
+      "facet": "Bionovelas de artistas y deportistas",
+      "known_at": 10
+    },
+    {
+      "name": "La Selección",
+      "facet": "Bionovelas de artistas y deportistas",
+      "known_at": 9
+    },
+    {
+      "name": "Garzón vive",
+      "facet": "Bionovelas de artistas y deportistas",
+      "known_at": 12
+    },
+    {
+      "name": "Rigo",
+      "facet": "Bionovelas de artistas y deportistas",
+      "known_at": 10
+    },
+    {
+      "name": "Bionovela",
+      "facet": "Bionovelas de artistas y deportistas",
+      "known_at": 10
+    },
+    {
+      "name": "Tarde lo conocí",
+      "facet": "Bionovelas de artistas y deportistas",
+      "known_at": 11
+    },
+    {
+      "name": "Arelys Henao: canto para no llorar",
+      "facet": "Bionovelas de artistas y deportistas",
+      "known_at": 12
+    },
+    {
+      "name": "Pambelé",
+      "facet": "Bionovelas de artistas y deportistas",
+      "known_at": 11
+    },
+    {
+      "name": "La esclava blanca",
+      "facet": "Novelas de época y costumbristas",
+      "known_at": 11
+    },
+    {
+      "name": "La Pola",
+      "facet": "Novelas de época y costumbristas",
+      "known_at": 10
+    },
+    {
+      "name": "Bolívar",
+      "facet": "Novelas de época y costumbristas",
+      "known_at": 9
+    },
+    {
+      "name": "Azúcar",
+      "facet": "Novelas de época y costumbristas",
+      "known_at": 11
+    },
+    {
+      "name": "Los pecados de Inés de Hinojosa",
+      "facet": "Novelas de época y costumbristas",
+      "known_at": 13
+    },
+    {
+      "name": "Amar y vivir",
+      "facet": "Novelas de época y costumbristas",
+      "known_at": 11
+    },
+    {
+      "name": "Romeo y Buseta",
+      "facet": "Novelas de época y costumbristas",
+      "known_at": 13
+    },
+    {
+      "name": "Gallito Ramírez",
+      "facet": "Novelas de época y costumbristas",
+      "known_at": 11
+    },
+    {
+      "name": "Caballo viejo",
+      "facet": "Novelas de época y costumbristas",
+      "known_at": 13
+    },
+    {
+      "name": "Leche",
+      "facet": "Novelas de época y costumbristas",
+      "known_at": 13
+    },
+    {
+      "name": "Amores de mercado",
+      "facet": "Novelas de época y costumbristas",
+      "known_at": 11
+    },
+    {
+      "name": "Ecomoda",
+      "facet": "Regiones y escenarios de las novelas",
+      "known_at": 6
+    },
+    {
+      "name": "Hacienda Elizondo",
+      "facet": "Regiones y escenarios de las novelas",
+      "known_at": 10
+    },
+    {
+      "name": "Terramoda",
+      "facet": "Regiones y escenarios de las novelas",
+      "known_at": 11
+    },
+    {
+      "name": "Ugly Betty",
+      "facet": "Éxitos internacionales y adaptaciones",
+      "known_at": 8
+    },
+    {
+      "name": "La fea más bella",
+      "facet": "Éxitos internacionales y adaptaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Verliebt in Berlin",
+      "facet": "Éxitos internacionales y adaptaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Betty en NY",
+      "facet": "Éxitos internacionales y adaptaciones",
+      "known_at": 11
+    },
+    {
+      "name": "America Ferrera",
+      "facet": "Éxitos internacionales y adaptaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Ecomoda (serie)",
+      "facet": "Éxitos internacionales y adaptaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Betty la fea: la historia continúa",
+      "facet": "Éxitos internacionales y adaptaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Pasión de gavilanes 2",
+      "facet": "Éxitos internacionales y adaptaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Las aguas mansas",
+      "facet": "Éxitos internacionales y adaptaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Fuego en la sangre",
+      "facet": "Éxitos internacionales y adaptaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Hasta que el dinero nos separe",
+      "facet": "Éxitos internacionales y adaptaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Cien años de soledad (serie)",
+      "facet": "Éxitos internacionales y adaptaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Telemundo",
+      "facet": "Éxitos internacionales y adaptaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Netflix",
+      "facet": "Éxitos internacionales y adaptaciones",
+      "known_at": 5
+    },
+    {
+      "name": "Prime Video",
+      "facet": "Éxitos internacionales y adaptaciones",
+      "known_at": 7
+    },
+    {
+      "name": "Doblaje",
+      "facet": "Éxitos internacionales y adaptaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Primera transmisión de televisión en Colombia",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 10
+    },
+    {
+      "name": "Señal Colombia",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 8
+    },
+    {
+      "name": "Canal Uno",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 8
+    },
+    {
+      "name": "RCN Televisión",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 4
+    },
+    {
+      "name": "Caracol Televisión",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 4
+    },
+    {
+      "name": "Punch",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "RTI",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Fernando Gómez Agudelo",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 14
+    },
+    {
+      "name": "Canales privados",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Programadoras",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "El show de Jimmy",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Televisión en color",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Telenovela",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 3
+    },
+    {
+      "name": "Rating",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 8
+    },
+    {
+      "name": "Horario triple A",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Teleantioquia",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 10
+    },
+    {
+      "name": "Telepacífico",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 10
+    },
+    {
+      "name": "Producciones JES",
+      "facet": "Historia de la televisión colombiana",
+      "known_at": 14
+    },
+    {
+      "name": "Fernando Gaitán",
+      "facet": "Escritores y libretistas",
+      "known_at": 9
+    },
+    {
+      "name": "Julio Jiménez",
+      "facet": "Escritores y libretistas",
+      "known_at": 12
+    },
+    {
+      "name": "Mónica Agudelo",
+      "facet": "Escritores y libretistas",
+      "known_at": 13
+    },
+    {
+      "name": "Dago García",
+      "facet": "Escritores y libretistas",
+      "known_at": 11
+    },
+    {
+      "name": "Gustavo Bolívar",
+      "facet": "Escritores y libretistas",
+      "known_at": 9
+    },
+    {
+      "name": "Bernardo Romero Pereiro",
+      "facet": "Escritores y libretistas",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Duplat",
+      "facet": "Escritores y libretistas",
+      "known_at": 14
+    },
+    {
+      "name": "Martha Bossio",
+      "facet": "Escritores y libretistas",
+      "known_at": 14
+    },
+    {
+      "name": "Luis Felipe Salamanca",
+      "facet": "Escritores y libretistas",
+      "known_at": 13
+    },
+    {
+      "name": "Libretista",
+      "facet": "Escritores y libretistas",
+      "known_at": 9
+    },
+    {
+      "name": "Juana Uribe",
+      "facet": "Escritores y libretistas",
+      "known_at": 13
+    },
+    {
+      "name": "Camilo Cano",
+      "facet": "Escritores y libretistas",
+      "known_at": 14
+    }
+  ]
+}

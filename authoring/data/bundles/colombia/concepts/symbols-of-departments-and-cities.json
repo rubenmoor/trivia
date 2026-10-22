@@ -1,0 +1,623 @@
+{
+  "subcategory": "symbols-of-departments-and-cities",
+  "facets": [
+    "Banderas de departamentos y ciudades",
+    "Escudos departamentales y municipales",
+    "Himnos regionales y de ciudades",
+    "Apodos de ciudades colombianas",
+    "Monumentos y estatuas insignia",
+    "Aves y animales emblemáticos regionales",
+    "Árboles y flores símbolo regionales",
+    "Platos insignia de cada región",
+    "Prendas y objetos típicos regionales",
+    "Gentilicios de departamentos y ciudades",
+    "Fundadores y fundación de ciudades",
+    "Edificios y lugares icónicos urbanos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 4,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Bandera de Antioquia",
+      "facet": "Banderas de departamentos y ciudades",
+      "known_at": 7
+    },
+    {
+      "name": "Bandera de Medellín",
+      "facet": "Banderas de departamentos y ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Bandera de Cartagena",
+      "facet": "Banderas de departamentos y ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Bandera de San Andrés y Providencia",
+      "facet": "Banderas de departamentos y ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera de Santa Marta",
+      "facet": "Banderas de departamentos y ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de Cartagena",
+      "facet": "Escudos departamentales y municipales",
+      "known_at": 11
+    },
+    {
+      "name": "Escudo de Cali",
+      "facet": "Escudos departamentales y municipales",
+      "known_at": 12
+    },
+    {
+      "name": "Escudo de Barranquilla",
+      "facet": "Escudos departamentales y municipales",
+      "known_at": 12
+    },
+    {
+      "name": "Escudo de Tunja",
+      "facet": "Escudos departamentales y municipales",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de Popayán",
+      "facet": "Escudos departamentales y municipales",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de Santa Marta",
+      "facet": "Escudos departamentales y municipales",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de Boyacá",
+      "facet": "Escudos departamentales y municipales",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de Santander",
+      "facet": "Escudos departamentales y municipales",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de Pasto",
+      "facet": "Escudos departamentales y municipales",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de Manizales",
+      "facet": "Escudos departamentales y municipales",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo del Valle del Cauca",
+      "facet": "Escudos departamentales y municipales",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de Nariño",
+      "facet": "Escudos departamentales y municipales",
+      "known_at": 14
+    },
+    {
+      "name": "Himno Antioqueño",
+      "facet": "Himnos regionales y de ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "Himno de Bogotá",
+      "facet": "Himnos regionales y de ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Pedro Medina Avendaño",
+      "facet": "Himnos regionales y de ciudades",
+      "known_at": 14
+    },
+    {
+      "name": "Himno de Barranquilla",
+      "facet": "Himnos regionales y de ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Himno de Cali",
+      "facet": "Himnos regionales y de ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Himno de Medellín",
+      "facet": "Himnos regionales y de ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Himno de Boyacá",
+      "facet": "Himnos regionales y de ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Himno de Santander",
+      "facet": "Himnos regionales y de ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Himno del Valle del Cauca",
+      "facet": "Himnos regionales y de ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Himno de Cartagena",
+      "facet": "Himnos regionales y de ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Himno de Caldas",
+      "facet": "Himnos regionales y de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Himno de Nariño",
+      "facet": "Himnos regionales y de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Himno de Cundinamarca",
+      "facet": "Himnos regionales y de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Himno de Santa Marta",
+      "facet": "Himnos regionales y de ciudades",
+      "known_at": 13,
+      "retired": "unaskable: Los datos del himno de Santa Marta son demasiado oscuros e inciertos."
+    },
+    {
+      "name": "Ciudad de la Eterna Primavera",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 5
+    },
+    {
+      "name": "La Arenosa",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 8
+    },
+    {
+      "name": "La Heroica",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 8
+    },
+    {
+      "name": "Sultana del Valle",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Capital Mundial de la Salsa",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 6
+    },
+    {
+      "name": "Ciudad Blanca",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Ciudad Bonita",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 10
+    },
+    {
+      "name": "Ciudad de los Parques",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 10
+    },
+    {
+      "name": "Ciudad Musical de Colombia",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 10
+    },
+    {
+      "name": "Ciudad Sorpresa de Colombia",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Atenas Suramericana",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Puerta de Oro de Colombia",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 10
+    },
+    {
+      "name": "Perla de América",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Ciudad Milagro",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Ciudad de las Puertas Abiertas",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Perla del Otún",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Puerta del Llano",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Perla del Sinú",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Perla del Norte",
+      "facet": "Apodos de ciudades colombianas",
+      "known_at": 13
+    },
+    {
+      "name": "Monumento a las Banderas",
+      "facet": "Monumentos y estatuas insignia",
+      "known_at": 12
+    },
+    {
+      "name": "Tití cabeciblanco",
+      "facet": "Aves y animales emblemáticos regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Tingua bogotana",
+      "facet": "Aves y animales emblemáticos regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Manatí del Caribe",
+      "facet": "Aves y animales emblemáticos regionales",
+      "known_at": 7
+    },
+    {
+      "name": "Hicotea",
+      "facet": "Aves y animales emblemáticos regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Cangrejo negro",
+      "facet": "Aves y animales emblemáticos regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Burro de San Antero",
+      "facet": "Aves y animales emblemáticos regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Caimán del Orinoco",
+      "facet": "Aves y animales emblemáticos regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Caballo criollo colombiano",
+      "facet": "Aves y animales emblemáticos regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Guayacán amarillo",
+      "facet": "Árboles y flores símbolo regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Samán",
+      "facet": "Árboles y flores símbolo regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Nogal",
+      "facet": "Árboles y flores símbolo regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Heliconia",
+      "facet": "Árboles y flores símbolo regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Anturio",
+      "facet": "Árboles y flores símbolo regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Guayacán rosado",
+      "facet": "Árboles y flores símbolo regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Chiminango",
+      "facet": "Árboles y flores símbolo regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Caracolí",
+      "facet": "Árboles y flores símbolo regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Bandeja paisa",
+      "facet": "Platos insignia de cada región",
+      "known_at": 3
+    },
+    {
+      "name": "Sancocho de gallina",
+      "facet": "Platos insignia de cada región",
+      "known_at": 4
+    },
+    {
+      "name": "Lechona tolimense",
+      "facet": "Platos insignia de cada región",
+      "known_at": 6
+    },
+    {
+      "name": "Cuy asado",
+      "facet": "Platos insignia de cada región",
+      "known_at": 8
+    },
+    {
+      "name": "Rondón",
+      "facet": "Platos insignia de cada región",
+      "known_at": 11
+    },
+    {
+      "name": "Cabrito santandereano",
+      "facet": "Platos insignia de cada región",
+      "known_at": 10
+    },
+    {
+      "name": "Posta negra cartagenera",
+      "facet": "Platos insignia de cada región",
+      "known_at": 11
+    },
+    {
+      "name": "Arroz con coco",
+      "facet": "Platos insignia de cada región",
+      "known_at": 6
+    },
+    {
+      "name": "Pandebono",
+      "facet": "Platos insignia de cada región",
+      "known_at": 4
+    },
+    {
+      "name": "Liquiliqui",
+      "facet": "Prendas y objetos típicos regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Hamaca de San Jacinto",
+      "facet": "Prendas y objetos típicos regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Arpa llanera",
+      "facet": "Prendas y objetos típicos regionales",
+      "known_at": 8
+    },
+    {
+      "name": "Paisa",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 3
+    },
+    {
+      "name": "Antioqueño",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 5
+    },
+    {
+      "name": "Caleño",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 3
+    },
+    {
+      "name": "Barranquillero",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 4
+    },
+    {
+      "name": "Cartagenero",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 4
+    },
+    {
+      "name": "Samario",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 7
+    },
+    {
+      "name": "Bumangués",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Santandereano",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 6
+    },
+    {
+      "name": "Pastuso",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 5
+    },
+    {
+      "name": "Tunjano",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Boyacense",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 6
+    },
+    {
+      "name": "Llanero",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 4
+    },
+    {
+      "name": "Costeño",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 4
+    },
+    {
+      "name": "Raizal",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Manizaleño",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 7
+    },
+    {
+      "name": "Cucuteño",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 7
+    },
+    {
+      "name": "Vallecaucano",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 7
+    },
+    {
+      "name": "Payanés",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Momposino",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Cundinamarqués",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Quindiano",
+      "facet": "Gentilicios de departamentos y ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Gonzalo Suárez Rendón",
+      "facet": "Fundadores y fundación de ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Jorge Robledo",
+      "facet": "Fundadores y fundación de ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Francisco Herrera Campuzano",
+      "facet": "Fundadores y fundación de ciudades",
+      "known_at": 14
+    },
+    {
+      "name": "Juana Rangel de Cuéllar",
+      "facet": "Fundadores y fundación de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Fundación de Cartagena",
+      "facet": "Fundadores y fundación de ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Fundación de Cali",
+      "facet": "Fundadores y fundación de ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Expedición de los Veinte",
+      "facet": "Fundadores y fundación de ciudades",
+      "known_at": 14
+    },
+    {
+      "name": "Jesús María Ocampo",
+      "facet": "Fundadores y fundación de ciudades",
+      "known_at": 14
+    },
+    {
+      "name": "Remigio Antonio Cañarte",
+      "facet": "Fundadores y fundación de ciudades",
+      "known_at": 14
+    },
+    {
+      "name": "Monserrate",
+      "facet": "Edificios y lugares icónicos urbanos",
+      "known_at": 5
+    },
+    {
+      "name": "Biblioteca España",
+      "facet": "Edificios y lugares icónicos urbanos",
+      "known_at": 12
+    },
+    {
+      "name": "Malecón del Río",
+      "facet": "Edificios y lugares icónicos urbanos",
+      "known_at": 11
+    }
+  ]
+}

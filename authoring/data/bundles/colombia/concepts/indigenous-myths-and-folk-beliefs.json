@@ -1,0 +1,693 @@
+{
+  "subcategory": "indigenous-myths-and-folk-beliefs",
+  "facets": [
+    "Mitos de creación indígenas",
+    "Dioses y héroes muiscas",
+    "Mitos de la Sierra Nevada",
+    "Mitos amazónicos y del Pacífico",
+    "Mitos wayuu y de La Guajira",
+    "El Dorado y lagunas sagradas",
+    "Espantos y apariciones del campo",
+    "Seres protectores del monte y el agua",
+    "Agüeros y supersticiones cotidianas",
+    "Remedios y creencias de la abuela",
+    "Animales con poderes y presagios",
+    "Mitos en libros, música y pantalla"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 1,
+      "record": 1,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Juan Tama",
+      "facet": "Mitos de creación indígenas",
+      "known_at": 12
+    },
+    {
+      "name": "Uma y Tay",
+      "facet": "Mitos de creación indígenas",
+      "known_at": 14
+    },
+    {
+      "name": "Karagabí",
+      "facet": "Mitos de creación indígenas",
+      "known_at": 14
+    },
+    {
+      "name": "Moo Buinaima",
+      "facet": "Mitos de creación indígenas",
+      "known_at": 14
+    },
+    {
+      "name": "Yoí e Ipi",
+      "facet": "Mitos de creación indígenas",
+      "known_at": 14
+    },
+    {
+      "name": "Kaliawirinae",
+      "facet": "Mitos de creación indígenas",
+      "known_at": 15
+    },
+    {
+      "name": "Ceiba sagrada",
+      "facet": "Mitos de creación indígenas",
+      "known_at": 9
+    },
+    {
+      "name": "Canoa anaconda",
+      "facet": "Mitos de creación indígenas",
+      "known_at": 13
+    },
+    {
+      "name": "Tutruica",
+      "facet": "Mitos de creación indígenas",
+      "known_at": 15
+    },
+    {
+      "name": "Mito del origen del maíz",
+      "facet": "Mitos de creación indígenas",
+      "known_at": 10
+    },
+    {
+      "name": "Diluvio muisca",
+      "facet": "Mitos de creación indígenas",
+      "known_at": 10
+    },
+    {
+      "name": "Mito del sol y la luna",
+      "facet": "Mitos de creación indígenas",
+      "known_at": 7
+    },
+    {
+      "name": "Chaquén",
+      "facet": "Dioses y héroes muiscas",
+      "known_at": 14
+    },
+    {
+      "name": "Goranchacha",
+      "facet": "Dioses y héroes muiscas",
+      "known_at": 14
+    },
+    {
+      "name": "Kogui",
+      "facet": "Mitos de la Sierra Nevada",
+      "known_at": 6
+    },
+    {
+      "name": "Wiwa",
+      "facet": "Mitos de la Sierra Nevada",
+      "known_at": 10
+    },
+    {
+      "name": "Kankuamo",
+      "facet": "Mitos de la Sierra Nevada",
+      "known_at": 11
+    },
+    {
+      "name": "Poporo",
+      "facet": "Mitos de la Sierra Nevada",
+      "known_at": 7
+    },
+    {
+      "name": "Ley de Origen",
+      "facet": "Mitos de la Sierra Nevada",
+      "known_at": 12
+    },
+    {
+      "name": "Hermanos mayores",
+      "facet": "Mitos de la Sierra Nevada",
+      "known_at": 10
+    },
+    {
+      "name": "Curupira",
+      "facet": "Mitos amazónicos y del Pacífico",
+      "known_at": 10
+    },
+    {
+      "name": "Chullachaqui",
+      "facet": "Mitos amazónicos y del Pacífico",
+      "known_at": 12
+    },
+    {
+      "name": "Yacuruna",
+      "facet": "Mitos amazónicos y del Pacífico",
+      "known_at": 14
+    },
+    {
+      "name": "Maloca",
+      "facet": "Mitos amazónicos y del Pacífico",
+      "known_at": 7
+    },
+    {
+      "name": "Yagé",
+      "facet": "Mitos amazónicos y del Pacífico",
+      "known_at": 11
+    },
+    {
+      "name": "Mambe",
+      "facet": "Mitos amazónicos y del Pacífico",
+      "known_at": 12
+    },
+    {
+      "name": "Payé",
+      "facet": "Mitos amazónicos y del Pacífico",
+      "known_at": 13
+    },
+    {
+      "name": "Pusanga",
+      "facet": "Mitos amazónicos y del Pacífico",
+      "known_at": 13
+    },
+    {
+      "name": "La Tunda",
+      "facet": "Mitos amazónicos y del Pacífico",
+      "known_at": 8
+    },
+    {
+      "name": "El Riviel",
+      "facet": "Mitos amazónicos y del Pacífico",
+      "known_at": 11
+    },
+    {
+      "name": "El Bambero",
+      "facet": "Mitos amazónicos y del Pacífico",
+      "known_at": 13
+    },
+    {
+      "name": "Jaibaná",
+      "facet": "Mitos amazónicos y del Pacífico",
+      "known_at": 13
+    },
+    {
+      "name": "Alabaos",
+      "facet": "Mitos amazónicos y del Pacífico",
+      "known_at": 11
+    },
+    {
+      "name": "Chigualo",
+      "facet": "Mitos amazónicos y del Pacífico",
+      "known_at": 13
+    },
+    {
+      "name": "Wanülü",
+      "facet": "Mitos wayuu y de La Guajira",
+      "known_at": 14
+    },
+    {
+      "name": "Jepira",
+      "facet": "Mitos wayuu y de La Guajira",
+      "known_at": 12
+    },
+    {
+      "name": "Outsü",
+      "facet": "Mitos wayuu y de La Guajira",
+      "known_at": 13
+    },
+    {
+      "name": "Yonna",
+      "facet": "Mitos wayuu y de La Guajira",
+      "known_at": 10
+    },
+    {
+      "name": "Encierro de la majayut",
+      "facet": "Mitos wayuu y de La Guajira",
+      "known_at": 11
+    },
+    {
+      "name": "Sueños wayuu",
+      "facet": "Mitos wayuu y de La Guajira",
+      "known_at": 11
+    },
+    {
+      "name": "Kashi",
+      "facet": "Mitos wayuu y de La Guajira",
+      "known_at": 14
+    },
+    {
+      "name": "Pilón de Azúcar",
+      "facet": "Mitos wayuu y de La Guajira",
+      "known_at": 9
+    },
+    {
+      "name": "Laguna de Fúquene",
+      "facet": "El Dorado y lagunas sagradas",
+      "known_at": 11
+    },
+    {
+      "name": "Laguna de Ubaque",
+      "facet": "El Dorado y lagunas sagradas",
+      "known_at": 13
+    },
+    {
+      "name": "Desagüe de Guatavita",
+      "facet": "El Dorado y lagunas sagradas",
+      "known_at": 12
+    },
+    {
+      "name": "La Llorona",
+      "facet": "Espantos y apariciones del campo",
+      "known_at": 2
+    },
+    {
+      "name": "El Silbón",
+      "facet": "Espantos y apariciones del campo",
+      "known_at": 4
+    },
+    {
+      "name": "La Mula Herrada",
+      "facet": "Espantos y apariciones del campo",
+      "known_at": 7
+    },
+    {
+      "name": "El Jinete sin cabeza",
+      "facet": "Espantos y apariciones del campo",
+      "known_at": 5
+    },
+    {
+      "name": "La Candileja",
+      "facet": "Espantos y apariciones del campo",
+      "known_at": 8
+    },
+    {
+      "name": "El Sombrerón",
+      "facet": "Espantos y apariciones del campo",
+      "known_at": 6
+    },
+    {
+      "name": "La Bola de fuego",
+      "facet": "Espantos y apariciones del campo",
+      "known_at": 7
+    },
+    {
+      "name": "El Ánima Sola",
+      "facet": "Espantos y apariciones del campo",
+      "known_at": 9
+    },
+    {
+      "name": "La Muelona",
+      "facet": "Espantos y apariciones del campo",
+      "known_at": 9
+    },
+    {
+      "name": "El Cura sin cabeza",
+      "facet": "Espantos y apariciones del campo",
+      "known_at": 9
+    },
+    {
+      "name": "El Pollo Maligno",
+      "facet": "Espantos y apariciones del campo",
+      "known_at": 8
+    },
+    {
+      "name": "La Mano Peluda",
+      "facet": "Espantos y apariciones del campo",
+      "known_at": 8
+    },
+    {
+      "name": "El Bracamonte",
+      "facet": "Espantos y apariciones del campo",
+      "known_at": 12
+    },
+    {
+      "name": "El Buziraco",
+      "facet": "Espantos y apariciones del campo",
+      "known_at": 12
+    },
+    {
+      "name": "El Guando",
+      "facet": "Espantos y apariciones del campo",
+      "known_at": 12
+    },
+    {
+      "name": "Las brujas",
+      "facet": "Espantos y apariciones del campo",
+      "known_at": 3
+    },
+    {
+      "name": "La Patasola",
+      "facet": "Seres protectores del monte y el agua",
+      "known_at": 3
+    },
+    {
+      "name": "La Madremonte",
+      "facet": "Seres protectores del monte y el agua",
+      "known_at": 4
+    },
+    {
+      "name": "El Hojarasquín del Monte",
+      "facet": "Seres protectores del monte y el agua",
+      "known_at": 8
+    },
+    {
+      "name": "La Madre de agua",
+      "facet": "Seres protectores del monte y el agua",
+      "known_at": 6
+    },
+    {
+      "name": "La Mancarita",
+      "facet": "Seres protectores del monte y el agua",
+      "known_at": 12
+    },
+    {
+      "name": "El Duende",
+      "facet": "Seres protectores del monte y el agua",
+      "known_at": 3
+    },
+    {
+      "name": "El Patetarro",
+      "facet": "Seres protectores del monte y el agua",
+      "known_at": 11
+    },
+    {
+      "name": "Yacumama",
+      "facet": "Seres protectores del monte y el agua",
+      "known_at": 12
+    },
+    {
+      "name": "El Dueño del monte",
+      "facet": "Seres protectores del monte y el agua",
+      "known_at": 11
+    },
+    {
+      "name": "El Encanto",
+      "facet": "Seres protectores del monte y el agua",
+      "known_at": 11
+    },
+    {
+      "name": "La Sirena",
+      "facet": "Seres protectores del monte y el agua",
+      "known_at": 3
+    },
+    {
+      "name": "Pachamama",
+      "facet": "Seres protectores del monte y el agua",
+      "known_at": 8
+    },
+    {
+      "name": "El Poira",
+      "facet": "Seres protectores del monte y el agua",
+      "known_at": 12
+    },
+    {
+      "name": "Calzones amarillos en Año Nuevo",
+      "facet": "Agüeros y supersticiones cotidianas",
+      "known_at": 3
+    },
+    {
+      "name": "Maleta alrededor de la cuadra",
+      "facet": "Agüeros y supersticiones cotidianas",
+      "known_at": 4
+    },
+    {
+      "name": "Lentejas en el bolsillo",
+      "facet": "Agüeros y supersticiones cotidianas",
+      "known_at": 5
+    },
+    {
+      "name": "Ruda",
+      "facet": "Agüeros y supersticiones cotidianas",
+      "known_at": 8
+    },
+    {
+      "name": "Espejo roto",
+      "facet": "Agüeros y supersticiones cotidianas",
+      "known_at": 3
+    },
+    {
+      "name": "Gato negro",
+      "facet": "Agüeros y supersticiones cotidianas",
+      "known_at": 2,
+      "retired": "used_up: El dato principal (el gato negro trae mala suerte) ya está en el pool; las opciones no dan otro dato bueno."
+    },
+    {
+      "name": "Pasar debajo de una escalera",
+      "facet": "Agüeros y supersticiones cotidianas",
+      "known_at": 4
+    },
+    {
+      "name": "Martes 13",
+      "facet": "Agüeros y supersticiones cotidianas",
+      "known_at": 4
+    },
+    {
+      "name": "Tocar madera",
+      "facet": "Agüeros y supersticiones cotidianas",
+      "known_at": 4
+    },
+    {
+      "name": "Sal derramada",
+      "facet": "Agüeros y supersticiones cotidianas",
+      "known_at": 6
+    },
+    {
+      "name": "Paraguas abierto dentro de la casa",
+      "facet": "Agüeros y supersticiones cotidianas",
+      "known_at": 4
+    },
+    {
+      "name": "Herradura",
+      "facet": "Agüeros y supersticiones cotidianas",
+      "known_at": 5
+    },
+    {
+      "name": "Barrer los pies",
+      "facet": "Agüeros y supersticiones cotidianas",
+      "known_at": 5
+    },
+    {
+      "name": "Picazón en la mano",
+      "facet": "Agüeros y supersticiones cotidianas",
+      "known_at": 6
+    },
+    {
+      "name": "Quema del Año Viejo",
+      "facet": "Agüeros y supersticiones cotidianas",
+      "known_at": 4
+    },
+    {
+      "name": "Levantarse con el pie derecho",
+      "facet": "Agüeros y supersticiones cotidianas",
+      "known_at": 3
+    },
+    {
+      "name": "Billete en el zapato",
+      "facet": "Agüeros y supersticiones cotidianas",
+      "known_at": 7
+    },
+    {
+      "name": "Agua de panela con limón",
+      "facet": "Remedios y creencias de la abuela",
+      "known_at": 2
+    },
+    {
+      "name": "Vick VapoRub",
+      "facet": "Remedios y creencias de la abuela",
+      "known_at": 2
+    },
+    {
+      "name": "Caldo de costilla",
+      "facet": "Remedios y creencias de la abuela",
+      "known_at": 5
+    },
+    {
+      "name": "Mal de ojo",
+      "facet": "Remedios y creencias de la abuela",
+      "known_at": 4
+    },
+    {
+      "name": "Azabache",
+      "facet": "Remedios y creencias de la abuela",
+      "known_at": 7
+    },
+    {
+      "name": "Aromática de toronjil",
+      "facet": "Remedios y creencias de la abuela",
+      "known_at": 7
+    },
+    {
+      "name": "Sábila",
+      "facet": "Remedios y creencias de la abuela",
+      "known_at": 4
+    },
+    {
+      "name": "Sobandero",
+      "facet": "Remedios y creencias de la abuela",
+      "known_at": 8
+    },
+    {
+      "name": "Ventosas",
+      "facet": "Remedios y creencias de la abuela",
+      "known_at": 10
+    },
+    {
+      "name": "Limpia con huevo",
+      "facet": "Remedios y creencias de la abuela",
+      "known_at": 8
+    },
+    {
+      "name": "Ombliguero",
+      "facet": "Remedios y creencias de la abuela",
+      "known_at": 10
+    },
+    {
+      "name": "Dieta de los 40 días",
+      "facet": "Remedios y creencias de la abuela",
+      "known_at": 9
+    },
+    {
+      "name": "Bañarse después de planchar",
+      "facet": "Remedios y creencias de la abuela",
+      "known_at": 5
+    },
+    {
+      "name": "Descuajado",
+      "facet": "Remedios y creencias de la abuela",
+      "known_at": 11
+    },
+    {
+      "name": "Culebrilla",
+      "facet": "Remedios y creencias de la abuela",
+      "known_at": 10
+    },
+    {
+      "name": "Mariposa negra",
+      "facet": "Animales con poderes y presagios",
+      "known_at": 4
+    },
+    {
+      "name": "Lechuza",
+      "facet": "Animales con poderes y presagios",
+      "known_at": 4
+    },
+    {
+      "name": "Gallina que canta como gallo",
+      "facet": "Animales con poderes y presagios",
+      "known_at": 8
+    },
+    {
+      "name": "Perro que aúlla",
+      "facet": "Animales con poderes y presagios",
+      "known_at": 5
+    },
+    {
+      "name": "El Hombre Caimán",
+      "facet": "Animales con poderes y presagios",
+      "known_at": 6
+    },
+    {
+      "name": "Delfín rosado",
+      "facet": "Animales con poderes y presagios",
+      "known_at": 5
+    },
+    {
+      "name": "Jaguar",
+      "facet": "Animales con poderes y presagios",
+      "known_at": 5
+    },
+    {
+      "name": "Cóndor",
+      "facet": "Animales con poderes y presagios",
+      "known_at": 5
+    },
+    {
+      "name": "Guácharo",
+      "facet": "Animales con poderes y presagios",
+      "known_at": 12
+    },
+    {
+      "name": "Murciélago",
+      "facet": "Animales con poderes y presagios",
+      "known_at": 8
+    },
+    {
+      "name": "Pájaro guaco",
+      "facet": "Animales con poderes y presagios",
+      "known_at": 12
+    },
+    {
+      "name": "Mauricio Babilonia",
+      "facet": "Mitos en libros, música y pantalla",
+      "known_at": 11
+    },
+    {
+      "name": "Se va el caimán",
+      "facet": "Mitos en libros, música y pantalla",
+      "known_at": 9
+    },
+    {
+      "name": "Florentino y el Diablo",
+      "facet": "Mitos en libros, música y pantalla",
+      "known_at": 10
+    },
+    {
+      "name": "Francisco el Hombre",
+      "facet": "Mitos en libros, música y pantalla",
+      "known_at": 9
+    },
+    {
+      "name": "Frontera Verde",
+      "facet": "Mitos en libros, música y pantalla",
+      "known_at": 12
+    },
+    {
+      "name": "María de Jorge Isaacs",
+      "facet": "Mitos en libros, música y pantalla",
+      "known_at": 9
+    },
+    {
+      "name": "En la diestra de Dios Padre",
+      "facet": "Mitos en libros, música y pantalla",
+      "known_at": 13
+    },
+    {
+      "name": "Javier Ocampo López",
+      "facet": "Mitos en libros, música y pantalla",
+      "known_at": 14
+    },
+    {
+      "name": "Ciro Guerra",
+      "facet": "Mitos en libros, música y pantalla",
+      "known_at": 12
+    }
+  ]
+}

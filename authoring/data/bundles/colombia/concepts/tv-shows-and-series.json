@@ -1,0 +1,689 @@
+{
+  "subcategory": "tv-shows-and-series",
+  "facets": [
+    "Telenovelas clásicas colombianas",
+    "Narconovelas y series de acción",
+    "Bionovelas de artistas y deportistas",
+    "Comedias y sitcoms colombianas",
+    "Programas infantiles y juveniles",
+    "Realities y concursos de talento",
+    "Humor y programas de sketches",
+    "Noticieros y periodismo televisivo",
+    "Presentadores y figuras de la TV",
+    "Canales y historia de la televisión",
+    "Personajes, frases y canciones de series",
+    "Series colombianas en el mundo y streaming"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Perro amor",
+      "facet": "Telenovelas clásicas colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "El último matrimonio feliz",
+      "facet": "Telenovelas clásicas colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Te voy a enseñar a querer",
+      "facet": "Telenovelas clásicas colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Señora Isabel",
+      "facet": "Telenovelas clásicas colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Amor a la plancha",
+      "facet": "Telenovelas clásicas colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "La vorágine (serie)",
+      "facet": "Telenovelas clásicas colombianas",
+      "known_at": 13
+    },
+    {
+      "name": "Escobar, el patrón del mal",
+      "facet": "Narconovelas y series de acción",
+      "known_at": 8
+    },
+    {
+      "name": "Pandillas, guerra y paz",
+      "facet": "Narconovelas y series de acción",
+      "known_at": 11
+    },
+    {
+      "name": "La niña",
+      "facet": "Narconovelas y series de acción",
+      "known_at": 12
+    },
+    {
+      "name": "El general Naranjo",
+      "facet": "Narconovelas y series de acción",
+      "known_at": 13
+    },
+    {
+      "name": "Metástasis",
+      "facet": "Narconovelas y series de acción",
+      "known_at": 13
+    },
+    {
+      "name": "Correo de inocentes",
+      "facet": "Narconovelas y series de acción",
+      "known_at": 13
+    },
+    {
+      "name": "La mariposa",
+      "facet": "Narconovelas y series de acción",
+      "known_at": 13
+    },
+    {
+      "name": "En la boca del lobo",
+      "facet": "Narconovelas y series de acción",
+      "known_at": 13
+    },
+    {
+      "name": "Los Victorinos",
+      "facet": "Narconovelas y series de acción",
+      "known_at": 13
+    },
+    {
+      "name": "Comando élite",
+      "facet": "Narconovelas y series de acción",
+      "known_at": 14
+    },
+    {
+      "name": "La ronca de oro",
+      "facet": "Bionovelas de artistas y deportistas",
+      "known_at": 12
+    },
+    {
+      "name": "Amor sincero",
+      "facet": "Bionovelas de artistas y deportistas",
+      "known_at": 12
+    },
+    {
+      "name": "Casados con hijos",
+      "facet": "Comedias y sitcoms colombianas",
+      "known_at": 10
+    },
+    {
+      "name": "Vecinos",
+      "facet": "Comedias y sitcoms colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Yo y tú",
+      "facet": "Comedias y sitcoms colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "El secretario",
+      "facet": "Comedias y sitcoms colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Hogar, dulce hogar",
+      "facet": "Comedias y sitcoms colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "N.N.",
+      "facet": "Comedias y sitcoms colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Las Vega's",
+      "facet": "Comedias y sitcoms colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Así es la vida",
+      "facet": "Comedias y sitcoms colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Las detectivas y el Víctor",
+      "facet": "Comedias y sitcoms colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Los caballeros las prefieren brutas",
+      "facet": "Comedias y sitcoms colombianas",
+      "known_at": 13
+    },
+    {
+      "name": "Guillermina y Candelario",
+      "facet": "Programas infantiles y juveniles",
+      "known_at": 6
+    },
+    {
+      "name": "El profesor Yarumo",
+      "facet": "Programas infantiles y juveniles",
+      "known_at": 8
+    },
+    {
+      "name": "Chica vampiro",
+      "facet": "Programas infantiles y juveniles",
+      "known_at": 8
+    },
+    {
+      "name": "Yo soy Franky",
+      "facet": "Programas infantiles y juveniles",
+      "known_at": 9
+    },
+    {
+      "name": "Pequeños gigantes",
+      "facet": "Programas infantiles y juveniles",
+      "known_at": 9
+    },
+    {
+      "name": "Club 10",
+      "facet": "Programas infantiles y juveniles",
+      "known_at": 10
+    },
+    {
+      "name": "Mi Señal",
+      "facet": "Programas infantiles y juveniles",
+      "known_at": 10
+    },
+    {
+      "name": "Oki Doki",
+      "facet": "Programas infantiles y juveniles",
+      "known_at": 12
+    },
+    {
+      "name": "Décimo grado",
+      "facet": "Programas infantiles y juveniles",
+      "known_at": 12
+    },
+    {
+      "name": "Niños ricos, pobres padres",
+      "facet": "Programas infantiles y juveniles",
+      "known_at": 12
+    },
+    {
+      "name": "Floricienta (versión colombiana)",
+      "facet": "Programas infantiles y juveniles",
+      "known_at": 12
+    },
+    {
+      "name": "Cuentos de viejos",
+      "facet": "Programas infantiles y juveniles",
+      "known_at": 13,
+      "retired": "unaskable: No conozco con suficiente seguridad los datos de creación y fechas de 'Cuentos de viejos'."
+    },
+    {
+      "name": "Yo me llamo",
+      "facet": "Realities y concursos de talento",
+      "known_at": 4
+    },
+    {
+      "name": "La Voz Kids",
+      "facet": "Realities y concursos de talento",
+      "known_at": 5
+    },
+    {
+      "name": "Concurso Nacional de Belleza",
+      "facet": "Realities y concursos de talento",
+      "known_at": 5
+    },
+    {
+      "name": "La Voz Colombia",
+      "facet": "Realities y concursos de talento",
+      "known_at": 6
+    },
+    {
+      "name": "Desafío",
+      "facet": "Realities y concursos de talento",
+      "known_at": 7
+    },
+    {
+      "name": "MasterChef Celebrity Colombia",
+      "facet": "Realities y concursos de talento",
+      "known_at": 7
+    },
+    {
+      "name": "La casa de los famosos Colombia",
+      "facet": "Realities y concursos de talento",
+      "known_at": 8
+    },
+    {
+      "name": "¿Quién quiere ser millonario? (Colombia)",
+      "facet": "Realities y concursos de talento",
+      "known_at": 9
+    },
+    {
+      "name": "100 colombianos dicen",
+      "facet": "Realities y concursos de talento",
+      "known_at": 9
+    },
+    {
+      "name": "El último pasajero",
+      "facet": "Realities y concursos de talento",
+      "known_at": 9
+    },
+    {
+      "name": "Protagonistas de novela",
+      "facet": "Realities y concursos de talento",
+      "known_at": 10
+    },
+    {
+      "name": "Factor X (Colombia)",
+      "facet": "Realities y concursos de talento",
+      "known_at": 11
+    },
+    {
+      "name": "Colombia tiene talento",
+      "facet": "Realities y concursos de talento",
+      "known_at": 11
+    },
+    {
+      "name": "A otro nivel",
+      "facet": "Realities y concursos de talento",
+      "known_at": 11
+    },
+    {
+      "name": "La Voz Senior",
+      "facet": "Realities y concursos de talento",
+      "known_at": 11
+    },
+    {
+      "name": "Expedición Robinson",
+      "facet": "Realities y concursos de talento",
+      "known_at": 12
+    },
+    {
+      "name": "La isla de los famosos",
+      "facet": "Realities y concursos de talento",
+      "known_at": 12
+    },
+    {
+      "name": "Gran Hermano Colombia",
+      "facet": "Realities y concursos de talento",
+      "known_at": 12
+    },
+    {
+      "name": "Factor XS",
+      "facet": "Realities y concursos de talento",
+      "known_at": 13
+    },
+    {
+      "name": "Concurso de cuentachistes",
+      "facet": "Humor y programas de sketches",
+      "known_at": 7
+    },
+    {
+      "name": "The Suso's Show",
+      "facet": "Humor y programas de sketches",
+      "known_at": 9
+    },
+    {
+      "name": "La pelota de letras",
+      "facet": "Humor y programas de sketches",
+      "known_at": 10
+    },
+    {
+      "name": "Heriberto de la Calle",
+      "facet": "Humor y programas de sketches",
+      "known_at": 11
+    },
+    {
+      "name": "Quac! El noticero",
+      "facet": "Humor y programas de sketches",
+      "known_at": 11
+    },
+    {
+      "name": "Zoociedad",
+      "facet": "Humor y programas de sketches",
+      "known_at": 12
+    },
+    {
+      "name": "Vuelo secreto",
+      "facet": "Humor y programas de sketches",
+      "known_at": 12,
+      "retired": "unaskable: No tengo datos confiables sobre 'Vuelo secreto'."
+    },
+    {
+      "name": "La Tele",
+      "facet": "Humor y programas de sketches",
+      "known_at": 12
+    },
+    {
+      "name": "La pulla",
+      "facet": "Humor y programas de sketches",
+      "known_at": 12
+    },
+    {
+      "name": "Godofredo Cínico Caspa",
+      "facet": "Humor y programas de sketches",
+      "known_at": 13
+    },
+    {
+      "name": "El siguiente programa",
+      "facet": "Humor y programas de sketches",
+      "known_at": 13
+    },
+    {
+      "name": "Noticias Caracol",
+      "facet": "Noticieros y periodismo televisivo",
+      "known_at": 5
+    },
+    {
+      "name": "Noticias RCN",
+      "facet": "Noticieros y periodismo televisivo",
+      "known_at": 6
+    },
+    {
+      "name": "Día a día",
+      "facet": "Noticieros y periodismo televisivo",
+      "known_at": 9
+    },
+    {
+      "name": "Séptimo día",
+      "facet": "Noticieros y periodismo televisivo",
+      "known_at": 9
+    },
+    {
+      "name": "Muy buenos días",
+      "facet": "Noticieros y periodismo televisivo",
+      "known_at": 10
+    },
+    {
+      "name": "Especiales Pirry",
+      "facet": "Noticieros y periodismo televisivo",
+      "known_at": 10
+    },
+    {
+      "name": "Lo sé todo",
+      "facet": "Noticieros y periodismo televisivo",
+      "known_at": 10
+    },
+    {
+      "name": "La red",
+      "facet": "Noticieros y periodismo televisivo",
+      "known_at": 10
+    },
+    {
+      "name": "CM&",
+      "facet": "Noticieros y periodismo televisivo",
+      "known_at": 11
+    },
+    {
+      "name": "Los informantes",
+      "facet": "Noticieros y periodismo televisivo",
+      "known_at": 11
+    },
+    {
+      "name": "Testigo directo",
+      "facet": "Noticieros y periodismo televisivo",
+      "known_at": 11
+    },
+    {
+      "name": "Noticias Uno",
+      "facet": "Noticieros y periodismo televisivo",
+      "known_at": 12
+    },
+    {
+      "name": "QAP Noticias",
+      "facet": "Noticieros y periodismo televisivo",
+      "known_at": 13
+    },
+    {
+      "name": "Noticiero 24 Horas",
+      "facet": "Noticieros y periodismo televisivo",
+      "known_at": 14
+    },
+    {
+      "name": "Noticiero 90 Minutos",
+      "facet": "Noticieros y periodismo televisivo",
+      "known_at": 14
+    },
+    {
+      "name": "Contravía",
+      "facet": "Noticieros y periodismo televisivo",
+      "known_at": 14
+    },
+    {
+      "name": "Sofía Vergara",
+      "facet": "Presentadores y figuras de la TV",
+      "known_at": 5
+    },
+    {
+      "name": "Andrea Serna",
+      "facet": "Presentadores y figuras de la TV",
+      "known_at": 10
+    },
+    {
+      "name": "Jessica Cediel",
+      "facet": "Presentadores y figuras de la TV",
+      "known_at": 10
+    },
+    {
+      "name": "Carolina Cruz",
+      "facet": "Presentadores y figuras de la TV",
+      "known_at": 11
+    },
+    {
+      "name": "Iván Lalinde",
+      "facet": "Presentadores y figuras de la TV",
+      "known_at": 11
+    },
+    {
+      "name": "Juan Diego Alvira",
+      "facet": "Presentadores y figuras de la TV",
+      "known_at": 11
+    },
+    {
+      "name": "Yamid Amat",
+      "facet": "Presentadores y figuras de la TV",
+      "known_at": 11
+    },
+    {
+      "name": "Carlos Calero",
+      "facet": "Presentadores y figuras de la TV",
+      "known_at": 11
+    },
+    {
+      "name": "Laura Acuña",
+      "facet": "Presentadores y figuras de la TV",
+      "known_at": 11
+    },
+    {
+      "name": "María Lucía Fernández",
+      "facet": "Presentadores y figuras de la TV",
+      "known_at": 12
+    },
+    {
+      "name": "Santiago Moure",
+      "facet": "Presentadores y figuras de la TV",
+      "known_at": 12
+    },
+    {
+      "name": "Héctor Ulloa",
+      "facet": "Presentadores y figuras de la TV",
+      "known_at": 12
+    },
+    {
+      "name": "Canal 1",
+      "facet": "Canales y historia de la televisión",
+      "known_at": 10
+    },
+    {
+      "name": "Canal Capital",
+      "facet": "Canales y historia de la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Telecaribe",
+      "facet": "Canales y historia de la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Citytv",
+      "facet": "Canales y historia de la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Telecafé",
+      "facet": "Canales y historia de la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Canal Trece",
+      "facet": "Canales y historia de la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Llegada de la televisión a Colombia",
+      "facet": "Canales y historia de la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Canal TRO",
+      "facet": "Canales y historia de la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "RTVC",
+      "facet": "Canales y historia de la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "RTI Producciones",
+      "facet": "Canales y historia de la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Televisión Digital Terrestre",
+      "facet": "Canales y historia de la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Comisión Nacional de Televisión",
+      "facet": "Canales y historia de la televisión",
+      "known_at": 14
+    },
+    {
+      "name": "Canal Institucional",
+      "facet": "Canales y historia de la televisión",
+      "known_at": 14
+    },
+    {
+      "name": "Patricia Fernández, la Peliteñida",
+      "facet": "Personajes, frases y canciones de series",
+      "known_at": 9
+    },
+    {
+      "name": "Juanpis González",
+      "facet": "Personajes, frases y canciones de series",
+      "known_at": 9
+    },
+    {
+      "name": "Mario Calderón",
+      "facet": "Personajes, frases y canciones de series",
+      "known_at": 11
+    },
+    {
+      "name": "Catalina Ángel",
+      "facet": "Personajes, frases y canciones de series",
+      "known_at": 12
+    },
+    {
+      "name": "Rafael Méndez",
+      "facet": "Personajes, frases y canciones de series",
+      "known_at": 12
+    },
+    {
+      "name": "Daisy O'Brian",
+      "facet": "Personajes, frases y canciones de series",
+      "known_at": 12
+    },
+    {
+      "name": "Siempre bruja",
+      "facet": "Series colombianas en el mundo y streaming",
+      "known_at": 11
+    },
+    {
+      "name": "Pálpito",
+      "facet": "Series colombianas en el mundo y streaming",
+      "known_at": 11
+    },
+    {
+      "name": "El robo del siglo",
+      "facet": "Series colombianas en el mundo y streaming",
+      "known_at": 11
+    },
+    {
+      "name": "Goles en contra",
+      "facet": "Series colombianas en el mundo y streaming",
+      "known_at": 11
+    },
+    {
+      "name": "La primera vez",
+      "facet": "Series colombianas en el mundo y streaming",
+      "known_at": 12
+    },
+    {
+      "name": "Perfil falso",
+      "facet": "Series colombianas en el mundo y streaming",
+      "known_at": 12
+    },
+    {
+      "name": "Chichipatos",
+      "facet": "Series colombianas en el mundo y streaming",
+      "known_at": 12
+    },
+    {
+      "name": "Mil colmillos",
+      "facet": "Series colombianas en el mundo y streaming",
+      "known_at": 13
+    }
+  ]
+}

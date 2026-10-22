@@ -1,0 +1,807 @@
+{
+  "subcategory": "crafts-and-traditional-dress",
+  "facets": [
+    "Sombreros y tocados típicos",
+    "Mochilas, bolsos y tejidos indígenas",
+    "Cerámica y alfarería",
+    "Trajes típicos por región",
+    "Vestuario de carnavales y fiestas",
+    "Joyería y orfebrería (filigrana, oro)",
+    "Cestería y fibras naturales",
+    "Tallas en madera y tagua",
+    "Hamacas, ruanas y textiles de lana",
+    "Pueblos artesanos y sus oficios",
+    "Molas, chumbes y arte indígena",
+    "Accesorios de feria: alpargatas, carriel y poncho"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sombrero aguadeño",
+      "facet": "Sombreros y tocados típicos",
+      "known_at": 8
+    },
+    {
+      "name": "Sombrero suaceño",
+      "facet": "Sombreros y tocados típicos",
+      "known_at": 12
+    },
+    {
+      "name": "Sombrero de iraca",
+      "facet": "Sombreros y tocados típicos",
+      "known_at": 10
+    },
+    {
+      "name": "Sombrero de Sandoná",
+      "facet": "Sombreros y tocados típicos",
+      "known_at": 11
+    },
+    {
+      "name": "Sombrero pelo e' guama",
+      "facet": "Sombreros y tocados típicos",
+      "known_at": 12
+    },
+    {
+      "name": "Tutusoma",
+      "facet": "Sombreros y tocados típicos",
+      "known_at": 13
+    },
+    {
+      "name": "Corona de plumas indígena",
+      "facet": "Sombreros y tocados típicos",
+      "known_at": 6
+    },
+    {
+      "name": "Turbante palenquero",
+      "facet": "Sombreros y tocados típicos",
+      "known_at": 9
+    },
+    {
+      "name": "Trenzas palenqueras",
+      "facet": "Sombreros y tocados típicos",
+      "known_at": 10
+    },
+    {
+      "name": "Sombrero de fieltro campesino",
+      "facet": "Sombreros y tocados típicos",
+      "known_at": 10
+    },
+    {
+      "name": "Sombrero sabanero",
+      "facet": "Sombreros y tocados típicos",
+      "known_at": 9
+    },
+    {
+      "name": "Pañoleta cumbiambera",
+      "facet": "Sombreros y tocados típicos",
+      "known_at": 8
+    },
+    {
+      "name": "Sombrero wayuu",
+      "facet": "Sombreros y tocados típicos",
+      "known_at": 11
+    },
+    {
+      "name": "Mochila kogui",
+      "facet": "Mochilas, bolsos y tejidos indígenas",
+      "known_at": 11
+    },
+    {
+      "name": "Mochila kankuama",
+      "facet": "Mochilas, bolsos y tejidos indígenas",
+      "known_at": 12
+    },
+    {
+      "name": "Mochila wiwa",
+      "facet": "Mochilas, bolsos y tejidos indígenas",
+      "known_at": 13
+    },
+    {
+      "name": "Mochila de fique",
+      "facet": "Mochilas, bolsos y tejidos indígenas",
+      "known_at": 9
+    },
+    {
+      "name": "Susu",
+      "facet": "Mochilas, bolsos y tejidos indígenas",
+      "known_at": 13
+    },
+    {
+      "name": "Kanaas",
+      "facet": "Mochilas, bolsos y tejidos indígenas",
+      "known_at": 13
+    },
+    {
+      "name": "Gaza",
+      "facet": "Mochilas, bolsos y tejidos indígenas",
+      "known_at": 12
+    },
+    {
+      "name": "Crochet",
+      "facet": "Mochilas, bolsos y tejidos indígenas",
+      "known_at": 7
+    },
+    {
+      "name": "Telar de cintura",
+      "facet": "Mochilas, bolsos y tejidos indígenas",
+      "known_at": 11
+    },
+    {
+      "name": "Manilla wayuu",
+      "facet": "Mochilas, bolsos y tejidos indígenas",
+      "known_at": 6
+    },
+    {
+      "name": "Bolso de caña flecha",
+      "facet": "Mochilas, bolsos y tejidos indígenas",
+      "known_at": 8
+    },
+    {
+      "name": "Wale'kerü",
+      "facet": "Mochilas, bolsos y tejidos indígenas",
+      "known_at": 14
+    },
+    {
+      "name": "Hilo de algodón",
+      "facet": "Mochilas, bolsos y tejidos indígenas",
+      "known_at": 6
+    },
+    {
+      "name": "Barro",
+      "facet": "Cerámica y alfarería",
+      "known_at": 2
+    },
+    {
+      "name": "Olla de barro",
+      "facet": "Cerámica y alfarería",
+      "known_at": 2
+    },
+    {
+      "name": "Alcancía de marranito",
+      "facet": "Cerámica y alfarería",
+      "known_at": 3
+    },
+    {
+      "name": "Cazuela de barro",
+      "facet": "Cerámica y alfarería",
+      "known_at": 4
+    },
+    {
+      "name": "Chiva de cerámica",
+      "facet": "Cerámica y alfarería",
+      "known_at": 5
+    },
+    {
+      "name": "Pesebre de barro",
+      "facet": "Cerámica y alfarería",
+      "known_at": 6
+    },
+    {
+      "name": "Matera de barro",
+      "facet": "Cerámica y alfarería",
+      "known_at": 6
+    },
+    {
+      "name": "Torno de alfarero",
+      "facet": "Cerámica y alfarería",
+      "known_at": 7
+    },
+    {
+      "name": "Horno de leña",
+      "facet": "Cerámica y alfarería",
+      "known_at": 7
+    },
+    {
+      "name": "Tinaja",
+      "facet": "Cerámica y alfarería",
+      "known_at": 8
+    },
+    {
+      "name": "Loza de El Carmen de Viboral",
+      "facet": "Cerámica y alfarería",
+      "known_at": 10
+    },
+    {
+      "name": "Tiesto de barro",
+      "facet": "Cerámica y alfarería",
+      "known_at": 10
+    },
+    {
+      "name": "Cerámica quimbaya",
+      "facet": "Cerámica y alfarería",
+      "known_at": 12
+    },
+    {
+      "name": "Cerámica Tumaco-La Tolita",
+      "facet": "Cerámica y alfarería",
+      "known_at": 13
+    },
+    {
+      "name": "Liqui liqui",
+      "facet": "Trajes típicos por región",
+      "known_at": 10
+    },
+    {
+      "name": "Traje de joropo",
+      "facet": "Trajes típicos por región",
+      "known_at": 8
+    },
+    {
+      "name": "Traje de chapolera",
+      "facet": "Trajes típicos por región",
+      "known_at": 7
+    },
+    {
+      "name": "Traje de sanjuanero huilense",
+      "facet": "Trajes típicos por región",
+      "known_at": 8
+    },
+    {
+      "name": "Manta guajira",
+      "facet": "Trajes típicos por región",
+      "known_at": 9
+    },
+    {
+      "name": "Traje de palenquera",
+      "facet": "Trajes típicos por región",
+      "known_at": 6
+    },
+    {
+      "name": "Traje campesino boyacense",
+      "facet": "Trajes típicos por región",
+      "known_at": 7
+    },
+    {
+      "name": "Traje de currulao",
+      "facet": "Trajes típicos por región",
+      "known_at": 10
+    },
+    {
+      "name": "Traje típico raizal",
+      "facet": "Trajes típicos por región",
+      "known_at": 12
+    },
+    {
+      "name": "Guayabera",
+      "facet": "Trajes típicos por región",
+      "known_at": 7
+    },
+    {
+      "name": "Traje de arriero paisa",
+      "facet": "Trajes típicos por región",
+      "known_at": 6
+    },
+    {
+      "name": "Traje de guabina",
+      "facet": "Trajes típicos por región",
+      "known_at": 12
+    },
+    {
+      "name": "Traje de bambuco",
+      "facet": "Trajes típicos por región",
+      "known_at": 9
+    },
+    {
+      "name": "Traje de mapalé",
+      "facet": "Trajes típicos por región",
+      "known_at": 9
+    },
+    {
+      "name": "Traje típico amazonense",
+      "facet": "Trajes típicos por región",
+      "known_at": 12
+    },
+    {
+      "name": "Traje de bunde tolimense",
+      "facet": "Trajes típicos por región",
+      "known_at": 12
+    },
+    {
+      "name": "Marimonda",
+      "facet": "Vestuario de carnavales y fiestas",
+      "known_at": 6
+    },
+    {
+      "name": "Congo",
+      "facet": "Vestuario de carnavales y fiestas",
+      "known_at": 8
+    },
+    {
+      "name": "Garabato",
+      "facet": "Vestuario de carnavales y fiestas",
+      "known_at": 9
+    },
+    {
+      "name": "Monocuco",
+      "facet": "Vestuario de carnavales y fiestas",
+      "known_at": 9
+    },
+    {
+      "name": "Torito",
+      "facet": "Vestuario de carnavales y fiestas",
+      "known_at": 8
+    },
+    {
+      "name": "Negrita Puloy",
+      "facet": "Vestuario de carnavales y fiestas",
+      "known_at": 9
+    },
+    {
+      "name": "María Moñitos",
+      "facet": "Vestuario de carnavales y fiestas",
+      "known_at": 10
+    },
+    {
+      "name": "Rey Momo",
+      "facet": "Vestuario de carnavales y fiestas",
+      "known_at": 9
+    },
+    {
+      "name": "Joselito Carnaval",
+      "facet": "Vestuario de carnavales y fiestas",
+      "known_at": 10
+    },
+    {
+      "name": "Reina del Carnaval",
+      "facet": "Vestuario de carnavales y fiestas",
+      "known_at": 5
+    },
+    {
+      "name": "Silleta",
+      "facet": "Vestuario de carnavales y fiestas",
+      "known_at": 7
+    },
+    {
+      "name": "Diablo de Riosucio",
+      "facet": "Vestuario de carnavales y fiestas",
+      "known_at": 11
+    },
+    {
+      "name": "Carroza de Negros y Blancos",
+      "facet": "Vestuario de carnavales y fiestas",
+      "known_at": 9
+    },
+    {
+      "name": "Talco",
+      "facet": "Vestuario de carnavales y fiestas",
+      "known_at": 6
+    },
+    {
+      "name": "Comparsa",
+      "facet": "Vestuario de carnavales y fiestas",
+      "known_at": 8
+    },
+    {
+      "name": "Filigrana momposina",
+      "facet": "Joyería y orfebrería (filigrana, oro)",
+      "known_at": 9
+    },
+    {
+      "name": "Candongas",
+      "facet": "Joyería y orfebrería (filigrana, oro)",
+      "known_at": 11
+    },
+    {
+      "name": "Nariguera",
+      "facet": "Joyería y orfebrería (filigrana, oro)",
+      "known_at": 10
+    },
+    {
+      "name": "Pectoral de oro",
+      "facet": "Joyería y orfebrería (filigrana, oro)",
+      "known_at": 11
+    },
+    {
+      "name": "Orejera",
+      "facet": "Joyería y orfebrería (filigrana, oro)",
+      "known_at": 10
+    },
+    {
+      "name": "Barequeo",
+      "facet": "Joyería y orfebrería (filigrana, oro)",
+      "known_at": 11
+    },
+    {
+      "name": "Caña flecha",
+      "facet": "Cestería y fibras naturales",
+      "known_at": 8
+    },
+    {
+      "name": "Fique",
+      "facet": "Cestería y fibras naturales",
+      "known_at": 8
+    },
+    {
+      "name": "Iraca",
+      "facet": "Cestería y fibras naturales",
+      "known_at": 10
+    },
+    {
+      "name": "Werregue",
+      "facet": "Cestería y fibras naturales",
+      "known_at": 13
+    },
+    {
+      "name": "Cestería de Guacamayas",
+      "facet": "Cestería y fibras naturales",
+      "known_at": 12
+    },
+    {
+      "name": "Enea",
+      "facet": "Cestería y fibras naturales",
+      "known_at": 11
+    },
+    {
+      "name": "Canasto",
+      "facet": "Cestería y fibras naturales",
+      "known_at": 3
+    },
+    {
+      "name": "Estera",
+      "facet": "Cestería y fibras naturales",
+      "known_at": 7
+    },
+    {
+      "name": "Chocolatillo",
+      "facet": "Cestería y fibras naturales",
+      "known_at": 13
+    },
+    {
+      "name": "Matamba",
+      "facet": "Cestería y fibras naturales",
+      "known_at": 13
+    },
+    {
+      "name": "Cumare",
+      "facet": "Cestería y fibras naturales",
+      "known_at": 13
+    },
+    {
+      "name": "Palma de moriche",
+      "facet": "Cestería y fibras naturales",
+      "known_at": 12
+    },
+    {
+      "name": "Junco",
+      "facet": "Cestería y fibras naturales",
+      "known_at": 9
+    },
+    {
+      "name": "Balay",
+      "facet": "Cestería y fibras naturales",
+      "known_at": 12
+    },
+    {
+      "name": "Enchapado en tamo",
+      "facet": "Tallas en madera y tagua",
+      "known_at": 13
+    },
+    {
+      "name": "Taburete",
+      "facet": "Tallas en madera y tagua",
+      "known_at": 8
+    },
+    {
+      "name": "Mecedora momposina",
+      "facet": "Tallas en madera y tagua",
+      "known_at": 11
+    },
+    {
+      "name": "Imaginería religiosa",
+      "facet": "Tallas en madera y tagua",
+      "known_at": 12
+    },
+    {
+      "name": "Máscara de madera",
+      "facet": "Tallas en madera y tagua",
+      "known_at": 7
+    },
+    {
+      "name": "Bastón de mando",
+      "facet": "Tallas en madera y tagua",
+      "known_at": 11
+    },
+    {
+      "name": "Balso",
+      "facet": "Tallas en madera y tagua",
+      "known_at": 11
+    },
+    {
+      "name": "Cuchara de palo",
+      "facet": "Tallas en madera y tagua",
+      "known_at": 4
+    },
+    {
+      "name": "Chonta",
+      "facet": "Tallas en madera y tagua",
+      "known_at": 12
+    },
+    {
+      "name": "Banco de pensar",
+      "facet": "Tallas en madera y tagua",
+      "known_at": 13
+    },
+    {
+      "name": "Hamaca sanjacintera",
+      "facet": "Hamacas, ruanas y textiles de lana",
+      "known_at": 10
+    },
+    {
+      "name": "Lana de oveja",
+      "facet": "Hamacas, ruanas y textiles de lana",
+      "known_at": 4
+    },
+    {
+      "name": "Telar horizontal",
+      "facet": "Hamacas, ruanas y textiles de lana",
+      "known_at": 9
+    },
+    {
+      "name": "Huso",
+      "facet": "Hamacas, ruanas y textiles de lana",
+      "known_at": 10
+    },
+    {
+      "name": "Rueca",
+      "facet": "Hamacas, ruanas y textiles de lana",
+      "known_at": 10
+    },
+    {
+      "name": "Cobija de lana",
+      "facet": "Hamacas, ruanas y textiles de lana",
+      "known_at": 5
+    },
+    {
+      "name": "Bufanda de lana",
+      "facet": "Hamacas, ruanas y textiles de lana",
+      "known_at": 4
+    },
+    {
+      "name": "Tintes naturales",
+      "facet": "Hamacas, ruanas y textiles de lana",
+      "known_at": 9
+    },
+    {
+      "name": "Cardado",
+      "facet": "Hamacas, ruanas y textiles de lana",
+      "known_at": 12
+    },
+    {
+      "name": "Pañolón",
+      "facet": "Hamacas, ruanas y textiles de lana",
+      "known_at": 9
+    },
+    {
+      "name": "Tapete",
+      "facet": "Hamacas, ruanas y textiles de lana",
+      "known_at": 6
+    },
+    {
+      "name": "Chal",
+      "facet": "Hamacas, ruanas y textiles de lana",
+      "known_at": 7
+    },
+    {
+      "name": "Mompox",
+      "facet": "Pueblos artesanos y sus oficios",
+      "known_at": 8
+    },
+    {
+      "name": "San Jacinto",
+      "facet": "Pueblos artesanos y sus oficios",
+      "known_at": 10
+    },
+    {
+      "name": "Nobsa",
+      "facet": "Pueblos artesanos y sus oficios",
+      "known_at": 11
+    },
+    {
+      "name": "Tuchín",
+      "facet": "Pueblos artesanos y sus oficios",
+      "known_at": 11
+    },
+    {
+      "name": "Pitalito",
+      "facet": "Pueblos artesanos y sus oficios",
+      "known_at": 11
+    },
+    {
+      "name": "Uribia",
+      "facet": "Pueblos artesanos y sus oficios",
+      "known_at": 11
+    },
+    {
+      "name": "Usiacurí",
+      "facet": "Pueblos artesanos y sus oficios",
+      "known_at": 12
+    },
+    {
+      "name": "Curití",
+      "facet": "Pueblos artesanos y sus oficios",
+      "known_at": 12
+    },
+    {
+      "name": "Chiquinquirá",
+      "facet": "Pueblos artesanos y sus oficios",
+      "known_at": 10
+    },
+    {
+      "name": "Silvia",
+      "facet": "Pueblos artesanos y sus oficios",
+      "known_at": 11
+    },
+    {
+      "name": "Artesanías de Colombia",
+      "facet": "Pueblos artesanos y sus oficios",
+      "known_at": 11
+    },
+    {
+      "name": "Expoartesanías",
+      "facet": "Pueblos artesanos y sus oficios",
+      "known_at": 11
+    },
+    {
+      "name": "Pueblo guna dule",
+      "facet": "Molas, chumbes y arte indígena",
+      "known_at": 12
+    },
+    {
+      "name": "Chumbe",
+      "facet": "Molas, chumbes y arte indígena",
+      "known_at": 12
+    },
+    {
+      "name": "Chaquira embera",
+      "facet": "Molas, chumbes y arte indígena",
+      "known_at": 10
+    },
+    {
+      "name": "Okama",
+      "facet": "Molas, chumbes y arte indígena",
+      "known_at": 13
+    },
+    {
+      "name": "Chiribiquete",
+      "facet": "Molas, chumbes y arte indígena",
+      "known_at": 12
+    },
+    {
+      "name": "Pueblo misak",
+      "facet": "Molas, chumbes y arte indígena",
+      "known_at": 11
+    },
+    {
+      "name": "Anaco",
+      "facet": "Molas, chumbes y arte indígena",
+      "known_at": 13
+    },
+    {
+      "name": "Yanchama",
+      "facet": "Molas, chumbes y arte indígena",
+      "known_at": 13
+    },
+    {
+      "name": "Máscaras ticuna",
+      "facet": "Molas, chumbes y arte indígena",
+      "known_at": 12
+    },
+    {
+      "name": "Pueblo wayuu",
+      "facet": "Molas, chumbes y arte indígena",
+      "known_at": 6
+    },
+    {
+      "name": "Pueblo arhuaco",
+      "facet": "Molas, chumbes y arte indígena",
+      "known_at": 8
+    },
+    {
+      "name": "Pueblo zenú",
+      "facet": "Molas, chumbes y arte indígena",
+      "known_at": 10
+    },
+    {
+      "name": "Pueblo kamëntšá",
+      "facet": "Molas, chumbes y arte indígena",
+      "known_at": 13
+    },
+    {
+      "name": "Poncho",
+      "facet": "Accesorios de feria: alpargatas, carriel y poncho",
+      "known_at": 6
+    },
+    {
+      "name": "Machete",
+      "facet": "Accesorios de feria: alpargatas, carriel y poncho",
+      "known_at": 5
+    },
+    {
+      "name": "Pañuelo rabo 'e gallo",
+      "facet": "Accesorios de feria: alpargatas, carriel y poncho",
+      "known_at": 10
+    },
+    {
+      "name": "Cotizas",
+      "facet": "Accesorios de feria: alpargatas, carriel y poncho",
+      "known_at": 11
+    },
+    {
+      "name": "Mulera",
+      "facet": "Accesorios de feria: alpargatas, carriel y poncho",
+      "known_at": 11
+    },
+    {
+      "name": "Tapapinche",
+      "facet": "Accesorios de feria: alpargatas, carriel y poncho",
+      "known_at": 13
+    },
+    {
+      "name": "Zurriago",
+      "facet": "Accesorios de feria: alpargatas, carriel y poncho",
+      "known_at": 12
+    },
+    {
+      "name": "Faja",
+      "facet": "Accesorios de feria: alpargatas, carriel y poncho",
+      "known_at": 9
+    },
+    {
+      "name": "Espuelas",
+      "facet": "Accesorios de feria: alpargatas, carriel y poncho",
+      "known_at": 8
+    },
+    {
+      "name": "Escapulario",
+      "facet": "Accesorios de feria: alpargatas, carriel y poncho",
+      "known_at": 9
+    },
+    {
+      "name": "Lazo",
+      "facet": "Accesorios de feria: alpargatas, carriel y poncho",
+      "known_at": 8
+    }
+  ]
+}

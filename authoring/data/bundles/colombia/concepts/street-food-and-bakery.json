@@ -1,0 +1,982 @@
+{
+  "subcategory": "street-food-and-bakery",
+  "facets": [
+    "Arepas y sus variedades regionales",
+    "Empanadas, pasteles y fritos",
+    "Pan de bono, almojábanas y buñuelos",
+    "Pan de panadería de barrio",
+    "Postres y dulces callejeros",
+    "Bebidas callejeras y jugos",
+    "Frutas y antojos de carrito",
+    "Comida rápida a la colombiana",
+    "Ingredientes y masas tradicionales",
+    "Puestos, vendedores y costumbres callejeras",
+    "Palabras y dichos de la calle y la panadería",
+    "Antojos regionales y ferias gastronómicas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 1,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 2,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Arepa de queso",
+      "facet": "Arepas y sus variedades regionales",
+      "known_at": 1
+    },
+    {
+      "name": "Arepa rellena",
+      "facet": "Arepas y sus variedades regionales",
+      "known_at": 2
+    },
+    {
+      "name": "Arepa de huevo",
+      "facet": "Arepas y sus variedades regionales",
+      "known_at": 3
+    },
+    {
+      "name": "Arepa de choclo",
+      "facet": "Arepas y sus variedades regionales",
+      "known_at": 3
+    },
+    {
+      "name": "Arepa paisa",
+      "facet": "Arepas y sus variedades regionales",
+      "known_at": 3
+    },
+    {
+      "name": "Arepa con chicharrón",
+      "facet": "Arepas y sus variedades regionales",
+      "known_at": 5
+    },
+    {
+      "name": "Arepa boyacense",
+      "facet": "Arepas y sus variedades regionales",
+      "known_at": 6
+    },
+    {
+      "name": "Arepa de maíz amarillo",
+      "facet": "Arepas y sus variedades regionales",
+      "known_at": 6
+    },
+    {
+      "name": "Arepa de maíz pelao",
+      "facet": "Arepas y sus variedades regionales",
+      "known_at": 7
+    },
+    {
+      "name": "Arepa tela",
+      "facet": "Arepas y sus variedades regionales",
+      "known_at": 7
+    },
+    {
+      "name": "Arepa dulce de anís",
+      "facet": "Arepas y sus variedades regionales",
+      "known_at": 7
+    },
+    {
+      "name": "Arepa santandereana",
+      "facet": "Arepas y sus variedades regionales",
+      "known_at": 8
+    },
+    {
+      "name": "Arepa de yuca",
+      "facet": "Arepas y sus variedades regionales",
+      "known_at": 8
+    },
+    {
+      "name": "Arepa de plátano",
+      "facet": "Arepas y sus variedades regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Arepa de arroz",
+      "facet": "Arepas y sus variedades regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Arepa de peto",
+      "facet": "Arepas y sus variedades regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Arepa ocañera",
+      "facet": "Arepas y sus variedades regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Empanada colombiana",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 1
+    },
+    {
+      "name": "Patacón",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 2
+    },
+    {
+      "name": "Chicharrón",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 2
+    },
+    {
+      "name": "Papa rellena",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 3
+    },
+    {
+      "name": "Dedito de queso",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 3
+    },
+    {
+      "name": "Pastel de pollo",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 3
+    },
+    {
+      "name": "Morcilla",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 4
+    },
+    {
+      "name": "Pastel de gloria",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 6
+    },
+    {
+      "name": "Fritanga",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 6
+    },
+    {
+      "name": "Carimañola",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 7
+    },
+    {
+      "name": "Aborrajado",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 7
+    },
+    {
+      "name": "Empanada vallecaucana",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 7
+    },
+    {
+      "name": "Empanada de pipián",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 8
+    },
+    {
+      "name": "Marranitas",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 8
+    },
+    {
+      "name": "Chorizo santarrosano",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 8
+    },
+    {
+      "name": "Quibbe",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 9
+    },
+    {
+      "name": "Pastel de garbanzo",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 11
+    },
+    {
+      "name": "Empanada de cambray",
+      "facet": "Empanadas, pasteles y fritos",
+      "known_at": 12
+    },
+    {
+      "name": "Buñuelo",
+      "facet": "Pan de bono, almojábanas y buñuelos",
+      "known_at": 1
+    },
+    {
+      "name": "Pan de bono",
+      "facet": "Pan de bono, almojábanas y buñuelos",
+      "known_at": 2
+    },
+    {
+      "name": "Pandeyuca",
+      "facet": "Pan de bono, almojábanas y buñuelos",
+      "known_at": 5
+    },
+    {
+      "name": "Pandequeso",
+      "facet": "Pan de bono, almojábanas y buñuelos",
+      "known_at": 6
+    },
+    {
+      "name": "Rosquillas",
+      "facet": "Pan de bono, almojábanas y buñuelos",
+      "known_at": 6
+    },
+    {
+      "name": "Mantecada",
+      "facet": "Pan de bono, almojábanas y buñuelos",
+      "known_at": 7
+    },
+    {
+      "name": "Bizcochuelo",
+      "facet": "Pan de bono, almojábanas y buñuelos",
+      "known_at": 7
+    },
+    {
+      "name": "Pan de maíz",
+      "facet": "Pan de bono, almojábanas y buñuelos",
+      "known_at": 7
+    },
+    {
+      "name": "Envuelto de mazorca",
+      "facet": "Pan de bono, almojábanas y buñuelos",
+      "known_at": 7
+    },
+    {
+      "name": "Galleta de cuajada",
+      "facet": "Pan de bono, almojábanas y buñuelos",
+      "known_at": 9
+    },
+    {
+      "name": "Pan de arroz",
+      "facet": "Pan de bono, almojábanas y buñuelos",
+      "known_at": 11
+    },
+    {
+      "name": "Garulla",
+      "facet": "Pan de bono, almojábanas y buñuelos",
+      "known_at": 12
+    },
+    {
+      "name": "Bizcocho de sagú",
+      "facet": "Pan de bono, almojábanas y buñuelos",
+      "known_at": 12
+    },
+    {
+      "name": "Pan tajado",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 2
+    },
+    {
+      "name": "Pan francés",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 3
+    },
+    {
+      "name": "Roscón",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 3
+    },
+    {
+      "name": "Pan de coco",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 4
+    },
+    {
+      "name": "Mogolla",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 5
+    },
+    {
+      "name": "Pan trenza",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 5
+    },
+    {
+      "name": "Pan blandito",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 5
+    },
+    {
+      "name": "Pan perro",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 5
+    },
+    {
+      "name": "Pan campesino",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 6
+    },
+    {
+      "name": "Milhoja",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 6
+    },
+    {
+      "name": "Pan aliñado",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 7
+    },
+    {
+      "name": "Pan rollo",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 7
+    },
+    {
+      "name": "Mojicón",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 7
+    },
+    {
+      "name": "Cucas",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 7
+    },
+    {
+      "name": "Torta negra",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 7
+    },
+    {
+      "name": "Cono de crema",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 7
+    },
+    {
+      "name": "Mogolla chicharrona",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 8
+    },
+    {
+      "name": "Liberal",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 9
+    },
+    {
+      "name": "Corazón de hojaldre",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 9
+    },
+    {
+      "name": "Calentano",
+      "facet": "Pan de panadería de barrio",
+      "known_at": 10
+    },
+    {
+      "name": "Obleas",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 1
+    },
+    {
+      "name": "Arequipe",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 1
+    },
+    {
+      "name": "Algodón de azúcar",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 2
+    },
+    {
+      "name": "Arroz con leche",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 2
+    },
+    {
+      "name": "Natilla",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 3
+    },
+    {
+      "name": "Cocadas",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 4
+    },
+    {
+      "name": "Postre de tres leches",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 4
+    },
+    {
+      "name": "Panelitas de leche",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 5
+    },
+    {
+      "name": "Manjar blanco",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 6
+    },
+    {
+      "name": "Melcocha",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 6
+    },
+    {
+      "name": "Cuajada con melao",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 7
+    },
+    {
+      "name": "Solteritas",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 8
+    },
+    {
+      "name": "Enyucado",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 8
+    },
+    {
+      "name": "Postre de natas",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 9
+    },
+    {
+      "name": "Alfandoque",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 9
+    },
+    {
+      "name": "Casquitos de guayaba",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 9
+    },
+    {
+      "name": "Alegrías",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 9
+    },
+    {
+      "name": "Cortado de leche",
+      "facet": "Postres y dulces callejeros",
+      "known_at": 11
+    },
+    {
+      "name": "Aguapanela",
+      "facet": "Bebidas callejeras y jugos",
+      "known_at": 1
+    },
+    {
+      "name": "Jugo de mora",
+      "facet": "Bebidas callejeras y jugos",
+      "known_at": 2
+    },
+    {
+      "name": "Avena colombiana",
+      "facet": "Bebidas callejeras y jugos",
+      "known_at": 3
+    },
+    {
+      "name": "Gaseosa Colombiana",
+      "facet": "Bebidas callejeras y jugos",
+      "known_at": 3
+    },
+    {
+      "name": "Jugo de guanábana",
+      "facet": "Bebidas callejeras y jugos",
+      "known_at": 4
+    },
+    {
+      "name": "Raspao",
+      "facet": "Bebidas callejeras y jugos",
+      "known_at": 5
+    },
+    {
+      "name": "Mazamorra antioqueña",
+      "facet": "Bebidas callejeras y jugos",
+      "known_at": 5
+    },
+    {
+      "name": "Champús",
+      "facet": "Bebidas callejeras y jugos",
+      "known_at": 7
+    },
+    {
+      "name": "Masato",
+      "facet": "Bebidas callejeras y jugos",
+      "known_at": 8
+    },
+    {
+      "name": "Jugo de corozo",
+      "facet": "Bebidas callejeras y jugos",
+      "known_at": 9
+    },
+    {
+      "name": "Crispetas",
+      "facet": "Frutas y antojos de carrito",
+      "known_at": 1
+    },
+    {
+      "name": "Maní",
+      "facet": "Frutas y antojos de carrito",
+      "known_at": 2
+    },
+    {
+      "name": "Mango biche",
+      "facet": "Frutas y antojos de carrito",
+      "known_at": 3
+    },
+    {
+      "name": "Mazorca asada",
+      "facet": "Frutas y antojos de carrito",
+      "known_at": 3
+    },
+    {
+      "name": "Mamoncillo",
+      "facet": "Frutas y antojos de carrito",
+      "known_at": 5
+    },
+    {
+      "name": "Pitahaya",
+      "facet": "Frutas y antojos de carrito",
+      "known_at": 5
+    },
+    {
+      "name": "Guama",
+      "facet": "Frutas y antojos de carrito",
+      "known_at": 7
+    },
+    {
+      "name": "Perro caliente colombiano",
+      "facet": "Comida rápida a la colombiana",
+      "known_at": 1
+    },
+    {
+      "name": "Salchipapa",
+      "facet": "Comida rápida a la colombiana",
+      "known_at": 2
+    },
+    {
+      "name": "Salsa rosada",
+      "facet": "Comida rápida a la colombiana",
+      "known_at": 3
+    },
+    {
+      "name": "Chuzo",
+      "facet": "Comida rápida a la colombiana",
+      "known_at": 3
+    },
+    {
+      "name": "Huevos de codorniz",
+      "facet": "Comida rápida a la colombiana",
+      "known_at": 4
+    },
+    {
+      "name": "Picada",
+      "facet": "Comida rápida a la colombiana",
+      "known_at": 5
+    },
+    {
+      "name": "Salsa de piña",
+      "facet": "Comida rápida a la colombiana",
+      "known_at": 5
+    },
+    {
+      "name": "Pollo broaster",
+      "facet": "Comida rápida a la colombiana",
+      "known_at": 5
+    },
+    {
+      "name": "Papa ripio",
+      "facet": "Comida rápida a la colombiana",
+      "known_at": 6
+    },
+    {
+      "name": "Choripán",
+      "facet": "Comida rápida a la colombiana",
+      "known_at": 6
+    },
+    {
+      "name": "Salchicha ranchera",
+      "facet": "Comida rápida a la colombiana",
+      "known_at": 6
+    },
+    {
+      "name": "Salsa tártara",
+      "facet": "Comida rápida a la colombiana",
+      "known_at": 6
+    },
+    {
+      "name": "Desgranado",
+      "facet": "Comida rápida a la colombiana",
+      "known_at": 7
+    },
+    {
+      "name": "Mazorcada",
+      "facet": "Comida rápida a la colombiana",
+      "known_at": 7
+    },
+    {
+      "name": "Patacón con todo",
+      "facet": "Comida rápida a la colombiana",
+      "known_at": 7
+    },
+    {
+      "name": "Suizo",
+      "facet": "Comida rápida a la colombiana",
+      "known_at": 10
+    },
+    {
+      "name": "Perra",
+      "facet": "Comida rápida a la colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Plátano maduro",
+      "facet": "Ingredientes y masas tradicionales",
+      "known_at": 1
+    },
+    {
+      "name": "Aguacate",
+      "facet": "Ingredientes y masas tradicionales",
+      "known_at": 1
+    },
+    {
+      "name": "Plátano verde",
+      "facet": "Ingredientes y masas tradicionales",
+      "known_at": 2
+    },
+    {
+      "name": "Hogao",
+      "facet": "Ingredientes y masas tradicionales",
+      "known_at": 4
+    },
+    {
+      "name": "Cuajada",
+      "facet": "Ingredientes y masas tradicionales",
+      "known_at": 4
+    },
+    {
+      "name": "Quesito antioqueño",
+      "facet": "Ingredientes y masas tradicionales",
+      "known_at": 4
+    },
+    {
+      "name": "Hoja de plátano",
+      "facet": "Ingredientes y masas tradicionales",
+      "known_at": 4
+    },
+    {
+      "name": "Queso costeño",
+      "facet": "Ingredientes y masas tradicionales",
+      "known_at": 5
+    },
+    {
+      "name": "Harina precocida de maíz",
+      "facet": "Ingredientes y masas tradicionales",
+      "known_at": 5
+    },
+    {
+      "name": "Chócolo",
+      "facet": "Ingredientes y masas tradicionales",
+      "known_at": 5
+    },
+    {
+      "name": "Manteca de cerdo",
+      "facet": "Ingredientes y masas tradicionales",
+      "known_at": 5
+    },
+    {
+      "name": "Molino de maíz",
+      "facet": "Ingredientes y masas tradicionales",
+      "known_at": 6
+    },
+    {
+      "name": "Pilón",
+      "facet": "Ingredientes y masas tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Maíz trillado",
+      "facet": "Ingredientes y masas tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Hoja de bijao",
+      "facet": "Ingredientes y masas tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Budare",
+      "facet": "Ingredientes y masas tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Almidón agrio",
+      "facet": "Ingredientes y masas tradicionales",
+      "known_at": 11
+    },
+    {
+      "name": "Vendedor ambulante",
+      "facet": "Puestos, vendedores y costumbres callejeras",
+      "known_at": 3
+    },
+    {
+      "name": "Plaza de mercado",
+      "facet": "Puestos, vendedores y costumbres callejeras",
+      "known_at": 3
+    },
+    {
+      "name": "Calentado",
+      "facet": "Puestos, vendedores y costumbres callejeras",
+      "known_at": 3
+    },
+    {
+      "name": "Domicilio",
+      "facet": "Puestos, vendedores y costumbres callejeras",
+      "known_at": 3
+    },
+    {
+      "name": "Paletero",
+      "facet": "Puestos, vendedores y costumbres callejeras",
+      "known_at": 4
+    },
+    {
+      "name": "Carrito de perros",
+      "facet": "Puestos, vendedores y costumbres callejeras",
+      "known_at": 4
+    },
+    {
+      "name": "Algo",
+      "facet": "Puestos, vendedores y costumbres callejeras",
+      "known_at": 5
+    },
+    {
+      "name": "Tinto de termo",
+      "facet": "Puestos, vendedores y costumbres callejeras",
+      "known_at": 5
+    },
+    {
+      "name": "Medias nueves",
+      "facet": "Puestos, vendedores y costumbres callejeras",
+      "known_at": 6
+    },
+    {
+      "name": "Fiado",
+      "facet": "Puestos, vendedores y costumbres callejeras",
+      "known_at": 6
+    },
+    {
+      "name": "Almuerzo ejecutivo",
+      "facet": "Puestos, vendedores y costumbres callejeras",
+      "known_at": 6
+    },
+    {
+      "name": "Corrientazo",
+      "facet": "Puestos, vendedores y costumbres callejeras",
+      "known_at": 7
+    },
+    {
+      "name": "Rebusque",
+      "facet": "Puestos, vendedores y costumbres callejeras",
+      "known_at": 8
+    },
+    {
+      "name": "Chacero",
+      "facet": "Puestos, vendedores y costumbres callejeras",
+      "known_at": 9
+    },
+    {
+      "name": "La Minorista",
+      "facet": "Puestos, vendedores y costumbres callejeras",
+      "known_at": 12
+    },
+    {
+      "name": "Mecato",
+      "facet": "Palabras y dichos de la calle y la panadería",
+      "known_at": 3
+    },
+    {
+      "name": "Antojo",
+      "facet": "Palabras y dichos de la calle y la panadería",
+      "known_at": 4
+    },
+    {
+      "name": "Pan comido",
+      "facet": "Palabras y dichos de la calle y la panadería",
+      "known_at": 4
+    },
+    {
+      "name": "Venderse como pan caliente",
+      "facet": "Palabras y dichos de la calle y la panadería",
+      "known_at": 5
+    },
+    {
+      "name": "Dar papaya",
+      "facet": "Palabras y dichos de la calle y la panadería",
+      "known_at": 5
+    },
+    {
+      "name": "Pegao",
+      "facet": "Palabras y dichos de la calle y la panadería",
+      "known_at": 6
+    },
+    {
+      "name": "Más bueno que el pan",
+      "facet": "Palabras y dichos de la calle y la panadería",
+      "known_at": 6
+    },
+    {
+      "name": "Hacer una vaca",
+      "facet": "Palabras y dichos de la calle y la panadería",
+      "known_at": 6
+    },
+    {
+      "name": "Al pan, pan y al vino, vino",
+      "facet": "Palabras y dichos de la calle y la panadería",
+      "known_at": 7
+    },
+    {
+      "name": "Del afán no queda sino el cansancio",
+      "facet": "Palabras y dichos de la calle y la panadería",
+      "known_at": 7
+    },
+    {
+      "name": "Con el pan bajo el brazo",
+      "facet": "Palabras y dichos de la calle y la panadería",
+      "known_at": 8
+    },
+    {
+      "name": "Comer como lima nueva",
+      "facet": "Palabras y dichos de la calle y la panadería",
+      "known_at": 8
+    },
+    {
+      "name": "Chuspa",
+      "facet": "Palabras y dichos de la calle y la panadería",
+      "known_at": 8
+    },
+    {
+      "name": "Parva",
+      "facet": "Palabras y dichos de la calle y la panadería",
+      "known_at": 9
+    },
+    {
+      "name": "Al que le van a dar le guardan",
+      "facet": "Palabras y dichos de la calle y la panadería",
+      "known_at": 9
+    },
+    {
+      "name": "Lechona",
+      "facet": "Antojos regionales y ferias gastronómicas",
+      "known_at": 3
+    },
+    {
+      "name": "Ajiaco",
+      "facet": "Antojos regionales y ferias gastronómicas",
+      "known_at": 3
+    },
+    {
+      "name": "Tamal tolimense",
+      "facet": "Antojos regionales y ferias gastronómicas",
+      "known_at": 5
+    },
+    {
+      "name": "Changua",
+      "facet": "Antojos regionales y ferias gastronómicas",
+      "known_at": 5
+    },
+    {
+      "name": "Mote de queso",
+      "facet": "Antojos regionales y ferias gastronómicas",
+      "known_at": 6
+    },
+    {
+      "name": "Bollo de yuca",
+      "facet": "Antojos regionales y ferias gastronómicas",
+      "known_at": 6
+    },
+    {
+      "name": "Hormigas culonas",
+      "facet": "Antojos regionales y ferias gastronómicas",
+      "known_at": 6
+    },
+    {
+      "name": "Cuy",
+      "facet": "Antojos regionales y ferias gastronómicas",
+      "known_at": 7
+    },
+    {
+      "name": "Mamona",
+      "facet": "Antojos regionales y ferias gastronómicas",
+      "known_at": 7
+    },
+    {
+      "name": "Butifarra soledeña",
+      "facet": "Antojos regionales y ferias gastronómicas",
+      "known_at": 8
+    },
+    {
+      "name": "Floridablanca",
+      "facet": "Antojos regionales y ferias gastronómicas",
+      "known_at": 8
+    },
+    {
+      "name": "Mute santandereano",
+      "facet": "Antojos regionales y ferias gastronómicas",
+      "known_at": 9
+    },
+    {
+      "name": "Viudo de pescado",
+      "facet": "Antojos regionales y ferias gastronómicas",
+      "known_at": 9
+    },
+    {
+      "name": "Jamundí",
+      "facet": "Antojos regionales y ferias gastronómicas",
+      "known_at": 10
+    },
+    {
+      "name": "Alimentarte",
+      "facet": "Antojos regionales y ferias gastronómicas",
+      "known_at": 10
+    },
+    {
+      "name": "Luruaco",
+      "facet": "Antojos regionales y ferias gastronómicas",
+      "known_at": 11
+    },
+    {
+      "name": "Congreso Gastronómico de Popayán",
+      "facet": "Antojos regionales y ferias gastronómicas",
+      "known_at": 11
+    }
+  ]
+}

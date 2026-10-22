@@ -1,0 +1,1042 @@
+{
+  "subcategory": "places-and-monuments",
+  "facets": [
+    "Ciudades y sus apodos",
+    "Monumentos y estatuas",
+    "Iglesias, catedrales y santuarios",
+    "Pueblos patrimonio y coloniales",
+    "Fortificaciones y arquitectura colonial",
+    "Parques arqueológicos y culturas precolombinas",
+    "Parques naturales y paisajes famosos",
+    "Islas, playas y costas",
+    "Museos y edificios emblemáticos",
+    "Plazas, calles y barrios famosos",
+    "Estadios, teleféricos y obras modernas",
+    "Patrimonio de la Humanidad en Colombia"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Medellín",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 2
+    },
+    {
+      "name": "Barranquilla",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 3
+    },
+    {
+      "name": "Cartagena",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 2
+    },
+    {
+      "name": "Santa Marta",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 3
+    },
+    {
+      "name": "Bucaramanga",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 5
+    },
+    {
+      "name": "Manizales",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 6
+    },
+    {
+      "name": "Pereira",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 6
+    },
+    {
+      "name": "Armenia",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 7
+    },
+    {
+      "name": "Ibagué",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 7
+    },
+    {
+      "name": "Popayán",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 7
+    },
+    {
+      "name": "Villavicencio",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 7
+    },
+    {
+      "name": "Pasto",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 7
+    },
+    {
+      "name": "Cúcuta",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 6
+    },
+    {
+      "name": "Tunja",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 7
+    },
+    {
+      "name": "Valledupar",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 6
+    },
+    {
+      "name": "Neiva",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 8
+    },
+    {
+      "name": "Montería",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 8
+    },
+    {
+      "name": "Leticia",
+      "facet": "Ciudades y sus apodos",
+      "known_at": 7
+    },
+    {
+      "name": "Monumento a los Zapatos Viejos",
+      "facet": "Monumentos y estatuas",
+      "known_at": 8
+    },
+    {
+      "name": "Gato del Río",
+      "facet": "Monumentos y estatuas",
+      "known_at": 7
+    },
+    {
+      "name": "Cristo Rey de Cali",
+      "facet": "Monumentos y estatuas",
+      "known_at": 6
+    },
+    {
+      "name": "India Catalina",
+      "facet": "Monumentos y estatuas",
+      "known_at": 7
+    },
+    {
+      "name": "La Gorda de Botero",
+      "facet": "Monumentos y estatuas",
+      "known_at": 7
+    },
+    {
+      "name": "Monumento a Los Héroes",
+      "facet": "Monumentos y estatuas",
+      "known_at": 9
+    },
+    {
+      "name": "Estatua de Simón Bolívar de la Plaza de Bolívar",
+      "facet": "Monumentos y estatuas",
+      "known_at": 6
+    },
+    {
+      "name": "Puente de Boyacá",
+      "facet": "Monumentos y estatuas",
+      "known_at": 6
+    },
+    {
+      "name": "Monumento al Pantano de Vargas",
+      "facet": "Monumentos y estatuas",
+      "known_at": 9
+    },
+    {
+      "name": "Bolívar Desnudo",
+      "facet": "Monumentos y estatuas",
+      "known_at": 10
+    },
+    {
+      "name": "Monumento a la Raza",
+      "facet": "Monumentos y estatuas",
+      "known_at": 11
+    },
+    {
+      "name": "Ventana al Mundo",
+      "facet": "Monumentos y estatuas",
+      "known_at": 9
+    },
+    {
+      "name": "Monumento a la Santandereanidad",
+      "facet": "Monumentos y estatuas",
+      "known_at": 11
+    },
+    {
+      "name": "Monumento a los Colonizadores",
+      "facet": "Monumentos y estatuas",
+      "known_at": 11
+    },
+    {
+      "name": "Estatua de Shakira en Barranquilla",
+      "facet": "Monumentos y estatuas",
+      "known_at": 5
+    },
+    {
+      "name": "Estatua del Pibe Valderrama",
+      "facet": "Monumentos y estatuas",
+      "known_at": 7
+    },
+    {
+      "name": "Estatua de Pedro de Heredia",
+      "facet": "Monumentos y estatuas",
+      "known_at": 11
+    },
+    {
+      "name": "Monumento al Silletero",
+      "facet": "Monumentos y estatuas",
+      "known_at": 9
+    },
+    {
+      "name": "Santuario de Las Lajas",
+      "facet": "Iglesias, catedrales y santuarios",
+      "known_at": 4
+    },
+    {
+      "name": "Catedral de Sal de Zipaquirá",
+      "facet": "Iglesias, catedrales y santuarios",
+      "known_at": 4
+    },
+    {
+      "name": "Santuario de Monserrate",
+      "facet": "Iglesias, catedrales y santuarios",
+      "known_at": 3
+    },
+    {
+      "name": "Basílica de Chiquinquirá",
+      "facet": "Iglesias, catedrales y santuarios",
+      "known_at": 7
+    },
+    {
+      "name": "Iglesia de San Pedro Claver",
+      "facet": "Iglesias, catedrales y santuarios",
+      "known_at": 8
+    },
+    {
+      "name": "Catedral de Manizales",
+      "facet": "Iglesias, catedrales y santuarios",
+      "known_at": 9
+    },
+    {
+      "name": "Basílica del Señor de los Milagros de Buga",
+      "facet": "Iglesias, catedrales y santuarios",
+      "known_at": 7
+    },
+    {
+      "name": "Iglesia de La Ermita",
+      "facet": "Iglesias, catedrales y santuarios",
+      "known_at": 8
+    },
+    {
+      "name": "Catedral Metropolitana de Medellín",
+      "facet": "Iglesias, catedrales y santuarios",
+      "known_at": 10
+    },
+    {
+      "name": "Santuario de Guadalupe",
+      "facet": "Iglesias, catedrales y santuarios",
+      "known_at": 9
+    },
+    {
+      "name": "Iglesia de San Francisco de Bogotá",
+      "facet": "Iglesias, catedrales y santuarios",
+      "known_at": 11
+    },
+    {
+      "name": "Santuario del Carmen",
+      "facet": "Iglesias, catedrales y santuarios",
+      "known_at": 11
+    },
+    {
+      "name": "Catedral de Santa Marta",
+      "facet": "Iglesias, catedrales y santuarios",
+      "known_at": 11
+    },
+    {
+      "name": "Catedral de Cartagena",
+      "facet": "Iglesias, catedrales y santuarios",
+      "known_at": 10
+    },
+    {
+      "name": "Iglesia de Santa Bárbara de Mompox",
+      "facet": "Iglesias, catedrales y santuarios",
+      "known_at": 12
+    },
+    {
+      "name": "Basílica de Jardín",
+      "facet": "Iglesias, catedrales y santuarios",
+      "known_at": 11
+    },
+    {
+      "name": "Santuario del Divino Niño del 20 de Julio",
+      "facet": "Iglesias, catedrales y santuarios",
+      "known_at": 6
+    },
+    {
+      "name": "Villa de Leyva",
+      "facet": "Pueblos patrimonio y coloniales",
+      "known_at": 5
+    },
+    {
+      "name": "Barichara",
+      "facet": "Pueblos patrimonio y coloniales",
+      "known_at": 7
+    },
+    {
+      "name": "Santa Cruz de Mompox",
+      "facet": "Pueblos patrimonio y coloniales",
+      "known_at": 7
+    },
+    {
+      "name": "Guatapé",
+      "facet": "Pueblos patrimonio y coloniales",
+      "known_at": 5
+    },
+    {
+      "name": "Jardín",
+      "facet": "Pueblos patrimonio y coloniales",
+      "known_at": 9
+    },
+    {
+      "name": "Santa Fe de Antioquia",
+      "facet": "Pueblos patrimonio y coloniales",
+      "known_at": 8
+    },
+    {
+      "name": "Girón",
+      "facet": "Pueblos patrimonio y coloniales",
+      "known_at": 9
+    },
+    {
+      "name": "Ráquira",
+      "facet": "Pueblos patrimonio y coloniales",
+      "known_at": 8
+    },
+    {
+      "name": "Filandia",
+      "facet": "Pueblos patrimonio y coloniales",
+      "known_at": 10
+    },
+    {
+      "name": "Honda",
+      "facet": "Pueblos patrimonio y coloniales",
+      "known_at": 10
+    },
+    {
+      "name": "Aracataca",
+      "facet": "Pueblos patrimonio y coloniales",
+      "known_at": 8
+    },
+    {
+      "name": "Jericó",
+      "facet": "Pueblos patrimonio y coloniales",
+      "known_at": 10
+    },
+    {
+      "name": "Monguí",
+      "facet": "Pueblos patrimonio y coloniales",
+      "known_at": 11
+    },
+    {
+      "name": "Guaduas",
+      "facet": "Pueblos patrimonio y coloniales",
+      "known_at": 11
+    },
+    {
+      "name": "Playa de Belén",
+      "facet": "Pueblos patrimonio y coloniales",
+      "known_at": 13
+    },
+    {
+      "name": "El Socorro",
+      "facet": "Pueblos patrimonio y coloniales",
+      "known_at": 11
+    },
+    {
+      "name": "Castillo de San Felipe de Barajas",
+      "facet": "Fortificaciones y arquitectura colonial",
+      "known_at": 6
+    },
+    {
+      "name": "Murallas de Cartagena",
+      "facet": "Fortificaciones y arquitectura colonial",
+      "known_at": 4
+    },
+    {
+      "name": "Torre del Reloj de Cartagena",
+      "facet": "Fortificaciones y arquitectura colonial",
+      "known_at": 7
+    },
+    {
+      "name": "Fuerte de San Fernando de Bocachica",
+      "facet": "Fortificaciones y arquitectura colonial",
+      "known_at": 11
+    },
+    {
+      "name": "Batería de San José",
+      "facet": "Fortificaciones y arquitectura colonial",
+      "known_at": 13
+    },
+    {
+      "name": "Las Bóvedas",
+      "facet": "Fortificaciones y arquitectura colonial",
+      "known_at": 10
+    },
+    {
+      "name": "Fuerte de San Sebastián del Pastelillo",
+      "facet": "Fortificaciones y arquitectura colonial",
+      "known_at": 13
+    },
+    {
+      "name": "Fuerte de San Juan de Manzanillo",
+      "facet": "Fortificaciones y arquitectura colonial",
+      "known_at": 14
+    },
+    {
+      "name": "Puente del Humilladero",
+      "facet": "Fortificaciones y arquitectura colonial",
+      "known_at": 11
+    },
+    {
+      "name": "Puente de Occidente",
+      "facet": "Fortificaciones y arquitectura colonial",
+      "known_at": 10
+    },
+    {
+      "name": "Balcón colonial",
+      "facet": "Fortificaciones y arquitectura colonial",
+      "known_at": 5
+    },
+    {
+      "name": "Bahareque",
+      "facet": "Fortificaciones y arquitectura colonial",
+      "known_at": 9
+    },
+    {
+      "name": "Tapia pisada",
+      "facet": "Fortificaciones y arquitectura colonial",
+      "known_at": 11
+    },
+    {
+      "name": "Casa del Marqués de Valdehoyos",
+      "facet": "Fortificaciones y arquitectura colonial",
+      "known_at": 14
+    },
+    {
+      "name": "Claustro de Santo Domingo de Cartagena",
+      "facet": "Fortificaciones y arquitectura colonial",
+      "known_at": 13
+    },
+    {
+      "name": "Casa de Moneda de Bogotá",
+      "facet": "Fortificaciones y arquitectura colonial",
+      "known_at": 11
+    },
+    {
+      "name": "Ciudad Perdida",
+      "facet": "Parques arqueológicos y culturas precolombinas",
+      "known_at": 6
+    },
+    {
+      "name": "Parque Arqueológico de San Agustín",
+      "facet": "Parques arqueológicos y culturas precolombinas",
+      "known_at": 7
+    },
+    {
+      "name": "Tierradentro",
+      "facet": "Parques arqueológicos y culturas precolombinas",
+      "known_at": 9
+    },
+    {
+      "name": "Cultura Zenú",
+      "facet": "Parques arqueológicos y culturas precolombinas",
+      "known_at": 9
+    },
+    {
+      "name": "Cultura Quimbaya",
+      "facet": "Parques arqueológicos y culturas precolombinas",
+      "known_at": 8
+    },
+    {
+      "name": "Tesoro Quimbaya",
+      "facet": "Parques arqueológicos y culturas precolombinas",
+      "known_at": 11
+    },
+    {
+      "name": "Balsa Muisca",
+      "facet": "Parques arqueológicos y culturas precolombinas",
+      "known_at": 6
+    },
+    {
+      "name": "Laguna de Guatavita",
+      "facet": "Parques arqueológicos y culturas precolombinas",
+      "known_at": 6
+    },
+    {
+      "name": "El Dorado",
+      "facet": "Parques arqueológicos y culturas precolombinas",
+      "known_at": 4
+    },
+    {
+      "name": "El Infiernito",
+      "facet": "Parques arqueológicos y culturas precolombinas",
+      "known_at": 11
+    },
+    {
+      "name": "Cultura Calima",
+      "facet": "Parques arqueológicos y culturas precolombinas",
+      "known_at": 11
+    },
+    {
+      "name": "Cultura Tumaco-La Tolita",
+      "facet": "Parques arqueológicos y culturas precolombinas",
+      "known_at": 13
+    },
+    {
+      "name": "Piedras de Tunja",
+      "facet": "Parques arqueológicos y culturas precolombinas",
+      "known_at": 12
+    },
+    {
+      "name": "Templo del Sol de Sogamoso",
+      "facet": "Parques arqueológicos y culturas precolombinas",
+      "known_at": 11
+    },
+    {
+      "name": "Nevado del Ruiz",
+      "facet": "Parques naturales y paisajes famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Sierra Nevada de Santa Marta",
+      "facet": "Parques naturales y paisajes famosos",
+      "known_at": 5
+    },
+    {
+      "name": "Desierto de la Tatacoa",
+      "facet": "Parques naturales y paisajes famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Piedra del Peñol",
+      "facet": "Parques naturales y paisajes famosos",
+      "known_at": 4
+    },
+    {
+      "name": "Cañón del Chicamocha",
+      "facet": "Parques naturales y paisajes famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Parque Amacayacu",
+      "facet": "Parques naturales y paisajes famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Parque Nacional Natural Los Nevados",
+      "facet": "Parques naturales y paisajes famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Sierra Nevada de El Cocuy",
+      "facet": "Parques naturales y paisajes famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Laguna de Tota",
+      "facet": "Parques naturales y paisajes famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Salto del Tequendama",
+      "facet": "Parques naturales y paisajes famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Chingaza",
+      "facet": "Parques naturales y paisajes famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Serranía de La Macarena",
+      "facet": "Parques naturales y paisajes famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Volcán Puracé",
+      "facet": "Parques naturales y paisajes famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Laguna de La Cocha",
+      "facet": "Parques naturales y paisajes famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Ensenada de Utría",
+      "facet": "Parques naturales y paisajes famosos",
+      "known_at": 12
+    },
+    {
+      "name": "San Andrés",
+      "facet": "Islas, playas y costas",
+      "known_at": 3
+    },
+    {
+      "name": "Providencia",
+      "facet": "Islas, playas y costas",
+      "known_at": 5
+    },
+    {
+      "name": "Isla Gorgona",
+      "facet": "Islas, playas y costas",
+      "known_at": 8
+    },
+    {
+      "name": "Islas del Rosario",
+      "facet": "Islas, playas y costas",
+      "known_at": 6
+    },
+    {
+      "name": "Playa Blanca de Barú",
+      "facet": "Islas, playas y costas",
+      "known_at": 7
+    },
+    {
+      "name": "Cabo de la Vela",
+      "facet": "Islas, playas y costas",
+      "known_at": 7
+    },
+    {
+      "name": "Punta Gallinas",
+      "facet": "Islas, playas y costas",
+      "known_at": 8
+    },
+    {
+      "name": "Johnny Cay",
+      "facet": "Islas, playas y costas",
+      "known_at": 8
+    },
+    {
+      "name": "Mar de los siete colores",
+      "facet": "Islas, playas y costas",
+      "known_at": 5
+    },
+    {
+      "name": "Capurganá",
+      "facet": "Islas, playas y costas",
+      "known_at": 9
+    },
+    {
+      "name": "Nuquí",
+      "facet": "Islas, playas y costas",
+      "known_at": 10
+    },
+    {
+      "name": "Bahía Solano",
+      "facet": "Islas, playas y costas",
+      "known_at": 10
+    },
+    {
+      "name": "El Rodadero",
+      "facet": "Islas, playas y costas",
+      "known_at": 7
+    },
+    {
+      "name": "Taganga",
+      "facet": "Islas, playas y costas",
+      "known_at": 8
+    },
+    {
+      "name": "Palomino",
+      "facet": "Islas, playas y costas",
+      "known_at": 10
+    },
+    {
+      "name": "Tierra Bomba",
+      "facet": "Islas, playas y costas",
+      "known_at": 10
+    },
+    {
+      "name": "Isla Múcura",
+      "facet": "Islas, playas y costas",
+      "known_at": 11
+    },
+    {
+      "name": "Santa Cruz del Islote",
+      "facet": "Islas, playas y costas",
+      "known_at": 10
+    },
+    {
+      "name": "Bocagrande",
+      "facet": "Islas, playas y costas",
+      "known_at": 7
+    },
+    {
+      "name": "Museo del Oro",
+      "facet": "Museos y edificios emblemáticos",
+      "known_at": 4
+    },
+    {
+      "name": "Museo Botero",
+      "facet": "Museos y edificios emblemáticos",
+      "known_at": 7
+    },
+    {
+      "name": "Casa de Nariño",
+      "facet": "Museos y edificios emblemáticos",
+      "known_at": 5
+    },
+    {
+      "name": "Palacio de la Inquisición",
+      "facet": "Museos y edificios emblemáticos",
+      "known_at": 9
+    },
+    {
+      "name": "Museo de Antioquia",
+      "facet": "Museos y edificios emblemáticos",
+      "known_at": 10
+    },
+    {
+      "name": "Biblioteca Luis Ángel Arango",
+      "facet": "Museos y edificios emblemáticos",
+      "known_at": 10
+    },
+    {
+      "name": "Teatro Colón de Bogotá",
+      "facet": "Museos y edificios emblemáticos",
+      "known_at": 9
+    },
+    {
+      "name": "Edificio Coltejer",
+      "facet": "Museos y edificios emblemáticos",
+      "known_at": 9
+    },
+    {
+      "name": "Torre Colpatria",
+      "facet": "Museos y edificios emblemáticos",
+      "known_at": 8
+    },
+    {
+      "name": "Planetario de Bogotá",
+      "facet": "Museos y edificios emblemáticos",
+      "known_at": 6
+    },
+    {
+      "name": "Maloka",
+      "facet": "Museos y edificios emblemáticos",
+      "known_at": 6
+    },
+    {
+      "name": "Parque Explora",
+      "facet": "Museos y edificios emblemáticos",
+      "known_at": 7
+    },
+    {
+      "name": "Palacio de la Cultura Rafael Uribe Uribe",
+      "facet": "Museos y edificios emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Teatro Adolfo Mejía",
+      "facet": "Museos y edificios emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Plaza de Bolívar de Bogotá",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 3
+    },
+    {
+      "name": "La Candelaria",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Plaza Botero",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Comuna 13",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Barrio San Antonio de Cali",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Getsemaní",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Plaza de Santo Domingo de Cartagena",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Plaza de los Coches",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Carrera Séptima",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Usaquén",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Parque de la 93",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 9
+    },
+    {
+      "name": "El Poblado",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Parque Lleras",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Pueblito Paisa",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Plaza de mercado de Paloquemao",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Avenida Jiménez",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Parque Berrío",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Parque Simón Bolívar",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 5
+    },
+    {
+      "name": "Bulevar del Río",
+      "facet": "Plazas, calles y barrios famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Estadio Metropolitano Roberto Meléndez",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 5
+    },
+    {
+      "name": "Estadio El Campín",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 4
+    },
+    {
+      "name": "Estadio Atanasio Girardot",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 6
+    },
+    {
+      "name": "Metro de Medellín",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 4
+    },
+    {
+      "name": "Metrocable",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 5
+    },
+    {
+      "name": "TransMilenio",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 3
+    },
+    {
+      "name": "Túnel de La Línea",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 8
+    },
+    {
+      "name": "Puente Pumarejo",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 10
+    },
+    {
+      "name": "Hidroituango",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 9
+    },
+    {
+      "name": "BD Bacatá",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 10
+    },
+    {
+      "name": "Funicular de Monserrate",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 5
+    },
+    {
+      "name": "Teleférico del Parque Nacional del Chicamocha",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 9
+    },
+    {
+      "name": "Cable Aéreo de Manizales",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 11
+    },
+    {
+      "name": "Parque Biblioteca España",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 11
+    },
+    {
+      "name": "Metro de Bogotá",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 6
+    },
+    {
+      "name": "Canal del Dique",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 11
+    },
+    {
+      "name": "Gran Malecón del Río",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 8
+    },
+    {
+      "name": "Túnel de Oriente",
+      "facet": "Estadios, teleféricos y obras modernas",
+      "known_at": 10
+    },
+    {
+      "name": "Qhapaq Ñan",
+      "facet": "Patrimonio de la Humanidad en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Santuario de Fauna y Flora Malpelo",
+      "facet": "Patrimonio de la Humanidad en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Carnaval de Barranquilla",
+      "facet": "Patrimonio de la Humanidad en Colombia",
+      "known_at": 3
+    },
+    {
+      "name": "San Basilio de Palenque",
+      "facet": "Patrimonio de la Humanidad en Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Música de marimba del Pacífico",
+      "facet": "Patrimonio de la Humanidad en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Semana Santa de Popayán",
+      "facet": "Patrimonio de la Humanidad en Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Carnaval de Negros y Blancos",
+      "facet": "Patrimonio de la Humanidad en Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Vallenato tradicional",
+      "facet": "Patrimonio de la Humanidad en Colombia",
+      "known_at": 4
+    },
+    {
+      "name": "Pütchipü'ü",
+      "facet": "Patrimonio de la Humanidad en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Barniz de Pasto",
+      "facet": "Patrimonio de la Humanidad en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Fiestas de San Pacho",
+      "facet": "Patrimonio de la Humanidad en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Cuadro de Cartagena en la lista de la UNESCO",
+      "facet": "Patrimonio de la Humanidad en Colombia",
+      "known_at": 8
+    }
+  ]
+}

@@ -1,0 +1,937 @@
+{
+  "subcategory": "vallenato",
+  "facets": [
+    "Instrumentos del vallenato",
+    "Los cuatro aires",
+    "Juglares y acordeoneros legendarios",
+    "Cantantes y agrupaciones famosas",
+    "Canciones y letras clásicas",
+    "Festival de la Leyenda Vallenata",
+    "Valledupar y la región vallenata",
+    "Leyendas y personajes míticos",
+    "Compositores y cronistas del vallenato",
+    "Palabras y dichos vallenatos",
+    "Historia y patrimonio del vallenato",
+    "El vallenato en el cine, la TV y la literatura"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 3,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Acordeón",
+      "facet": "Instrumentos del vallenato",
+      "known_at": 1
+    },
+    {
+      "name": "Caja vallenata",
+      "facet": "Instrumentos del vallenato",
+      "known_at": 3
+    },
+    {
+      "name": "Guacharaca",
+      "facet": "Instrumentos del vallenato",
+      "known_at": 3
+    },
+    {
+      "name": "Trinche de la guacharaca",
+      "facet": "Instrumentos del vallenato",
+      "known_at": 8
+    },
+    {
+      "name": "Fuelle del acordeón",
+      "facet": "Instrumentos del vallenato",
+      "known_at": 6
+    },
+    {
+      "name": "Pitos del acordeón",
+      "facet": "Instrumentos del vallenato",
+      "known_at": 10
+    },
+    {
+      "name": "Bajos del acordeón",
+      "facet": "Instrumentos del vallenato",
+      "known_at": 10
+    },
+    {
+      "name": "Hohner",
+      "facet": "Instrumentos del vallenato",
+      "known_at": 10
+    },
+    {
+      "name": "Bajo eléctrico",
+      "facet": "Instrumentos del vallenato",
+      "known_at": 7
+    },
+    {
+      "name": "Congas",
+      "facet": "Instrumentos del vallenato",
+      "known_at": 7
+    },
+    {
+      "name": "Guitarra",
+      "facet": "Instrumentos del vallenato",
+      "known_at": 3
+    },
+    {
+      "name": "Carrizo",
+      "facet": "Instrumentos del vallenato",
+      "known_at": 12
+    },
+    {
+      "name": "Cuero de chivo",
+      "facet": "Instrumentos del vallenato",
+      "known_at": 9
+    },
+    {
+      "name": "Acordeón de tres hileras",
+      "facet": "Instrumentos del vallenato",
+      "known_at": 12
+    },
+    {
+      "name": "Caña de lata",
+      "facet": "Instrumentos del vallenato",
+      "known_at": 11
+    },
+    {
+      "name": "Raspador metálico",
+      "facet": "Instrumentos del vallenato",
+      "known_at": 10
+    },
+    {
+      "name": "Paseo",
+      "facet": "Los cuatro aires",
+      "known_at": 6
+    },
+    {
+      "name": "Merengue",
+      "facet": "Los cuatro aires",
+      "known_at": 6
+    },
+    {
+      "name": "Son",
+      "facet": "Los cuatro aires",
+      "known_at": 7
+    },
+    {
+      "name": "Puya",
+      "facet": "Los cuatro aires",
+      "known_at": 6
+    },
+    {
+      "name": "Paseaíto",
+      "facet": "Los cuatro aires",
+      "known_at": 12
+    },
+    {
+      "name": "Tambora",
+      "facet": "Los cuatro aires",
+      "known_at": 12
+    },
+    {
+      "name": "Chandé",
+      "facet": "Los cuatro aires",
+      "known_at": 13
+    },
+    {
+      "name": "Romanza vallenata",
+      "facet": "Los cuatro aires",
+      "known_at": 12
+    },
+    {
+      "name": "Vallenato romántico",
+      "facet": "Los cuatro aires",
+      "known_at": 7
+    },
+    {
+      "name": "Nueva ola vallenata",
+      "facet": "Los cuatro aires",
+      "known_at": 10
+    },
+    {
+      "name": "Estilo vallenato-vallenato",
+      "facet": "Los cuatro aires",
+      "known_at": 13
+    },
+    {
+      "name": "Estilo bajero",
+      "facet": "Los cuatro aires",
+      "known_at": 14
+    },
+    {
+      "name": "Estilo sabanero",
+      "facet": "Los cuatro aires",
+      "known_at": 13
+    },
+    {
+      "name": "Estilo ribereño",
+      "facet": "Los cuatro aires",
+      "known_at": 14
+    },
+    {
+      "name": "Luis Enrique Martínez",
+      "facet": "Juglares y acordeoneros legendarios",
+      "known_at": 12
+    },
+    {
+      "name": "Emiliano Zuleta Baquero",
+      "facet": "Juglares y acordeoneros legendarios",
+      "known_at": 11
+    },
+    {
+      "name": "Lorenzo Morales",
+      "facet": "Juglares y acordeoneros legendarios",
+      "known_at": 11
+    },
+    {
+      "name": "Calixto Ochoa",
+      "facet": "Juglares y acordeoneros legendarios",
+      "known_at": 11
+    },
+    {
+      "name": "Juancho Polo Valencia",
+      "facet": "Juglares y acordeoneros legendarios",
+      "known_at": 13
+    },
+    {
+      "name": "Abel Antonio Villa",
+      "facet": "Juglares y acordeoneros legendarios",
+      "known_at": 14
+    },
+    {
+      "name": "Colacho Mendoza",
+      "facet": "Juglares y acordeoneros legendarios",
+      "known_at": 12
+    },
+    {
+      "name": "Alfredo Gutiérrez",
+      "facet": "Juglares y acordeoneros legendarios",
+      "known_at": 10
+    },
+    {
+      "name": "Israel Romero",
+      "facet": "Juglares y acordeoneros legendarios",
+      "known_at": 11
+    },
+    {
+      "name": "Juancho Rois",
+      "facet": "Juglares y acordeoneros legendarios",
+      "known_at": 11
+    },
+    {
+      "name": "Egidio Cuadrado",
+      "facet": "Juglares y acordeoneros legendarios",
+      "known_at": 10
+    },
+    {
+      "name": "Emilianito Zuleta",
+      "facet": "Juglares y acordeoneros legendarios",
+      "known_at": 11
+    },
+    {
+      "name": "Náfer Durán",
+      "facet": "Juglares y acordeoneros legendarios",
+      "known_at": 14
+    },
+    {
+      "name": "Andrés el Turco Gil",
+      "facet": "Juglares y acordeoneros legendarios",
+      "known_at": 13
+    },
+    {
+      "name": "Omar Geles",
+      "facet": "Juglares y acordeoneros legendarios",
+      "known_at": 9
+    },
+    {
+      "name": "Hugo Carlos Granados",
+      "facet": "Juglares y acordeoneros legendarios",
+      "known_at": 13
+    },
+    {
+      "name": "Gonzalo el Cocha Molina",
+      "facet": "Juglares y acordeoneros legendarios",
+      "known_at": 13
+    },
+    {
+      "name": "Jorge Oñate",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Poncho Zuleta",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Los Hermanos Zuleta",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Binomio de Oro",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 7
+    },
+    {
+      "name": "Rafael Orozco",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Peter Manjarrés",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 7
+    },
+    {
+      "name": "Iván Villazón",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Los Diablitos",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Los Inquietos",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Kaleth Morales",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Martín Elías",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 7
+    },
+    {
+      "name": "Felipe Peláez",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 7
+    },
+    {
+      "name": "Otto Serge",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Beto Zabaleta",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Patricia Teherán",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Nelson Velásquez",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Ivo Díaz",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Fabián Corrales",
+      "facet": "Cantantes y agrupaciones famosas",
+      "known_at": 9
+    },
+    {
+      "name": "La gota fría",
+      "facet": "Canciones y letras clásicas",
+      "known_at": 5
+    },
+    {
+      "name": "Matilde Lina",
+      "facet": "Canciones y letras clásicas",
+      "known_at": 10
+    },
+    {
+      "name": "Alicia adorada",
+      "facet": "Canciones y letras clásicas",
+      "known_at": 10
+    },
+    {
+      "name": "Los caminos de la vida",
+      "facet": "Canciones y letras clásicas",
+      "known_at": 5
+    },
+    {
+      "name": "El cantor de Fonseca",
+      "facet": "Canciones y letras clásicas",
+      "known_at": 10
+    },
+    {
+      "name": "La casa en el aire",
+      "facet": "Canciones y letras clásicas",
+      "known_at": 10
+    },
+    {
+      "name": "Jaime Molina",
+      "facet": "Canciones y letras clásicas",
+      "known_at": 12
+    },
+    {
+      "name": "El testamento",
+      "facet": "Canciones y letras clásicas",
+      "known_at": 11
+    },
+    {
+      "name": "Mi hermano y yo",
+      "facet": "Canciones y letras clásicas",
+      "known_at": 10
+    },
+    {
+      "name": "Sin medir distancias",
+      "facet": "Canciones y letras clásicas",
+      "known_at": 9
+    },
+    {
+      "name": "La custodia de Badillo",
+      "facet": "Canciones y letras clásicas",
+      "known_at": 13
+    },
+    {
+      "name": "El mochuelo",
+      "facet": "Canciones y letras clásicas",
+      "known_at": 12
+    },
+    {
+      "name": "La hamaca grande",
+      "facet": "Canciones y letras clásicas",
+      "known_at": 11
+    },
+    {
+      "name": "La celosa",
+      "facet": "Canciones y letras clásicas",
+      "known_at": 11
+    },
+    {
+      "name": "Pedazo de acordeón",
+      "facet": "Canciones y letras clásicas",
+      "known_at": 12
+    },
+    {
+      "name": "Clásicos de la provincia",
+      "facet": "Canciones y letras clásicas",
+      "known_at": 9
+    },
+    {
+      "name": "La tierra del olvido",
+      "facet": "Canciones y letras clásicas",
+      "known_at": 6
+    },
+    {
+      "name": "Rey vallenato",
+      "facet": "Festival de la Leyenda Vallenata",
+      "known_at": 7
+    },
+    {
+      "name": "Rey de reyes",
+      "facet": "Festival de la Leyenda Vallenata",
+      "known_at": 11
+    },
+    {
+      "name": "Plaza Alfonso López",
+      "facet": "Festival de la Leyenda Vallenata",
+      "known_at": 11
+    },
+    {
+      "name": "Parque de la Leyenda Vallenata",
+      "facet": "Festival de la Leyenda Vallenata",
+      "known_at": 10
+    },
+    {
+      "name": "Piquería",
+      "facet": "Festival de la Leyenda Vallenata",
+      "known_at": 9
+    },
+    {
+      "name": "Canción inédita",
+      "facet": "Festival de la Leyenda Vallenata",
+      "known_at": 11
+    },
+    {
+      "name": "Rey infantil",
+      "facet": "Festival de la Leyenda Vallenata",
+      "known_at": 10
+    },
+    {
+      "name": "Rey aficionado",
+      "facet": "Festival de la Leyenda Vallenata",
+      "known_at": 12
+    },
+    {
+      "name": "Consuelo Araújo Noguera",
+      "facet": "Festival de la Leyenda Vallenata",
+      "known_at": 12
+    },
+    {
+      "name": "Tarima Francisco el Hombre",
+      "facet": "Festival de la Leyenda Vallenata",
+      "known_at": 12
+    },
+    {
+      "name": "Desfile de piloneras",
+      "facet": "Festival de la Leyenda Vallenata",
+      "known_at": 10
+    },
+    {
+      "name": "Piloneras",
+      "facet": "Festival de la Leyenda Vallenata",
+      "known_at": 9
+    },
+    {
+      "name": "Fundación Festival de la Leyenda Vallenata",
+      "facet": "Festival de la Leyenda Vallenata",
+      "known_at": 13
+    },
+    {
+      "name": "Primer festival de 1968",
+      "facet": "Festival de la Leyenda Vallenata",
+      "known_at": 12
+    },
+    {
+      "name": "Cesar",
+      "facet": "Valledupar y la región vallenata",
+      "known_at": 5
+    },
+    {
+      "name": "La Guajira",
+      "facet": "Valledupar y la región vallenata",
+      "known_at": 4
+    },
+    {
+      "name": "Magdalena",
+      "facet": "Valledupar y la región vallenata",
+      "known_at": 5
+    },
+    {
+      "name": "Río Guatapurí",
+      "facet": "Valledupar y la región vallenata",
+      "known_at": 10
+    },
+    {
+      "name": "Patillal",
+      "facet": "Valledupar y la región vallenata",
+      "known_at": 13
+    },
+    {
+      "name": "Villanueva",
+      "facet": "Valledupar y la región vallenata",
+      "known_at": 12
+    },
+    {
+      "name": "San Juan del Cesar",
+      "facet": "Valledupar y la región vallenata",
+      "known_at": 12
+    },
+    {
+      "name": "Atánquez",
+      "facet": "Valledupar y la región vallenata",
+      "known_at": 13
+    },
+    {
+      "name": "Balneario Hurtado",
+      "facet": "Valledupar y la región vallenata",
+      "known_at": 11
+    },
+    {
+      "name": "Riohacha",
+      "facet": "Valledupar y la región vallenata",
+      "known_at": 6
+    },
+    {
+      "name": "El Paso",
+      "facet": "Valledupar y la región vallenata",
+      "known_at": 13
+    },
+    {
+      "name": "La Junta",
+      "facet": "Valledupar y la región vallenata",
+      "known_at": 10
+    },
+    {
+      "name": "Plato",
+      "facet": "Valledupar y la región vallenata",
+      "known_at": 11
+    },
+    {
+      "name": "El Diablo",
+      "facet": "Leyendas y personajes míticos",
+      "known_at": 7
+    },
+    {
+      "name": "Credo al revés",
+      "facet": "Leyendas y personajes míticos",
+      "known_at": 12
+    },
+    {
+      "name": "Pacho Rada",
+      "facet": "Leyendas y personajes míticos",
+      "known_at": 13
+    },
+    {
+      "name": "Cacique Upar",
+      "facet": "Leyendas y personajes míticos",
+      "known_at": 11
+    },
+    {
+      "name": "Virgen del Rosario",
+      "facet": "Leyendas y personajes míticos",
+      "known_at": 10
+    },
+    {
+      "name": "Laguna de Sicarare",
+      "facet": "Leyendas y personajes míticos",
+      "known_at": 14
+    },
+    {
+      "name": "Leyenda vallenata",
+      "facet": "Leyendas y personajes míticos",
+      "known_at": 11
+    },
+    {
+      "name": "Sirena de Hurtado",
+      "facet": "Leyendas y personajes míticos",
+      "known_at": 10
+    },
+    {
+      "name": "Compae Chipuco",
+      "facet": "Leyendas y personajes míticos",
+      "known_at": 10
+    },
+    {
+      "name": "Moralito",
+      "facet": "Leyendas y personajes míticos",
+      "known_at": 12
+    },
+    {
+      "name": "La Llorona Loca",
+      "facet": "Leyendas y personajes míticos",
+      "known_at": 11
+    },
+    {
+      "name": "Indios tupes",
+      "facet": "Leyendas y personajes míticos",
+      "known_at": 14
+    },
+    {
+      "name": "Duelo de acordeones",
+      "facet": "Leyendas y personajes míticos",
+      "known_at": 9
+    },
+    {
+      "name": "Adolfo Pacheco",
+      "facet": "Compositores y cronistas del vallenato",
+      "known_at": 12
+    },
+    {
+      "name": "Gustavo Gutiérrez Cabello",
+      "facet": "Compositores y cronistas del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Tobías Enrique Pumarejo",
+      "facet": "Compositores y cronistas del vallenato",
+      "known_at": 14
+    },
+    {
+      "name": "Hernando Marín",
+      "facet": "Compositores y cronistas del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Rosendo Romero",
+      "facet": "Compositores y cronistas del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Fernando Meneses",
+      "facet": "Compositores y cronistas del vallenato",
+      "known_at": 14
+    },
+    {
+      "name": "Sergio Moya Molina",
+      "facet": "Compositores y cronistas del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Freddy Molina",
+      "facet": "Compositores y cronistas del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Huertas",
+      "facet": "Compositores y cronistas del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Octavio Daza",
+      "facet": "Compositores y cronistas del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Roberto Calderón",
+      "facet": "Compositores y cronistas del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Chiche Maestre",
+      "facet": "Compositores y cronistas del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Romualdo Brito",
+      "facet": "Compositores y cronistas del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Rafael Manjarrez",
+      "facet": "Compositores y cronistas del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Wilfran Castillo",
+      "facet": "Compositores y cronistas del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Juglar",
+      "facet": "Palabras y dichos vallenatos",
+      "known_at": 8
+    },
+    {
+      "name": "Parranda",
+      "facet": "Palabras y dichos vallenatos",
+      "known_at": 5
+    },
+    {
+      "name": "Saludo vallenato",
+      "facet": "Palabras y dichos vallenatos",
+      "known_at": 7
+    },
+    {
+      "name": "Ay hombe",
+      "facet": "Palabras y dichos vallenatos",
+      "known_at": 5
+    },
+    {
+      "name": "Compae",
+      "facet": "Palabras y dichos vallenatos",
+      "known_at": 5
+    },
+    {
+      "name": "Ajá",
+      "facet": "Palabras y dichos vallenatos",
+      "known_at": 4
+    },
+    {
+      "name": "Mamar gallo",
+      "facet": "Palabras y dichos vallenatos",
+      "known_at": 7
+    },
+    {
+      "name": "Corroncho",
+      "facet": "Palabras y dichos vallenatos",
+      "known_at": 9
+    },
+    {
+      "name": "Cajero",
+      "facet": "Palabras y dichos vallenatos",
+      "known_at": 9
+    },
+    {
+      "name": "Guacharaquero",
+      "facet": "Palabras y dichos vallenatos",
+      "known_at": 8
+    },
+    {
+      "name": "Décima",
+      "facet": "Palabras y dichos vallenatos",
+      "known_at": 11
+    },
+    {
+      "name": "Contrapunteo",
+      "facet": "Palabras y dichos vallenatos",
+      "known_at": 11
+    },
+    {
+      "name": "Llave",
+      "facet": "Palabras y dichos vallenatos",
+      "known_at": 7
+    },
+    {
+      "name": "Pelao",
+      "facet": "Palabras y dichos vallenatos",
+      "known_at": 5
+    },
+    {
+      "name": "Vallenato (palabra)",
+      "facet": "Palabras y dichos vallenatos",
+      "known_at": 9
+    },
+    {
+      "name": "Vallenatólogo",
+      "facet": "Palabras y dichos vallenatos",
+      "known_at": 12
+    },
+    {
+      "name": "Patrimonio Cultural Inmaterial de la Humanidad",
+      "facet": "Historia y patrimonio del vallenato",
+      "known_at": 8
+    },
+    {
+      "name": "UNESCO",
+      "facet": "Historia y patrimonio del vallenato",
+      "known_at": 7
+    },
+    {
+      "name": "Lista de salvaguardia urgente",
+      "facet": "Historia y patrimonio del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Tres raíces del vallenato",
+      "facet": "Historia y patrimonio del vallenato",
+      "known_at": 10
+    },
+    {
+      "name": "Cantos de vaquería",
+      "facet": "Historia y patrimonio del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Llegada del acordeón por La Guajira",
+      "facet": "Historia y patrimonio del vallenato",
+      "known_at": 12
+    },
+    {
+      "name": "Creación del departamento del Cesar",
+      "facet": "Historia y patrimonio del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Museo del Acordeón",
+      "facet": "Historia y patrimonio del vallenato",
+      "known_at": 12
+    },
+    {
+      "name": "Grammy Latino",
+      "facet": "Historia y patrimonio del vallenato",
+      "known_at": 7
+    },
+    {
+      "name": "Discos Fuentes",
+      "facet": "Historia y patrimonio del vallenato",
+      "known_at": 12
+    },
+    {
+      "name": "Ceremonia del Nobel de 1982",
+      "facet": "Historia y patrimonio del vallenato",
+      "known_at": 12
+    },
+    {
+      "name": "Plan Especial de Salvaguardia",
+      "facet": "Historia y patrimonio del vallenato",
+      "known_at": 14
+    },
+    {
+      "name": "Escuelas de acordeoneritos",
+      "facet": "Historia y patrimonio del vallenato",
+      "known_at": 10
+    },
+    {
+      "name": "Tierra de cantores",
+      "facet": "Historia y patrimonio del vallenato",
+      "known_at": 11
+    },
+    {
+      "name": "Diomedes, el Cacique de La Junta",
+      "facet": "El vallenato en el cine, la TV y la literatura",
+      "known_at": 8
+    },
+    {
+      "name": "Rafael Orozco, el ídolo",
+      "facet": "El vallenato en el cine, la TV y la literatura",
+      "known_at": 8
+    },
+    {
+      "name": "La Cacica",
+      "facet": "El vallenato en el cine, la TV y la literatura",
+      "known_at": 11
+    },
+    {
+      "name": "Los viajes del viento",
+      "facet": "El vallenato en el cine, la TV y la literatura",
+      "known_at": 13
+    },
+    {
+      "name": "El viaje del acordeón",
+      "facet": "El vallenato en el cine, la TV y la literatura",
+      "known_at": 14
+    },
+    {
+      "name": "Colombia, mi encanto",
+      "facet": "El vallenato en el cine, la TV y la literatura",
+      "known_at": 3
+    },
+    {
+      "name": "Cien años de vallenato (libro)",
+      "facet": "El vallenato en el cine, la TV y la literatura",
+      "known_at": 14
+    },
+    {
+      "name": "Un vallenato de 350 páginas",
+      "facet": "El vallenato en el cine, la TV y la literatura",
+      "known_at": 13
+    }
+  ]
+}

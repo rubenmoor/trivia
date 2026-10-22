@@ -1,0 +1,967 @@
+{
+  "subcategory": "pre-columbian-cultures",
+  "facets": [
+    "Muiscas y el altiplano",
+    "Taironas y la Sierra Nevada",
+    "San Agustín y Tierradentro",
+    "Orfebrería y el Museo del Oro",
+    "Leyenda de El Dorado y Guatavita",
+    "Zenúes, Quimbayas y Calimas",
+    "Mitos y dioses indígenas",
+    "Cerámica, tejidos y arte",
+    "Alimentos y cultivos ancestrales",
+    "Pueblos indígenas que perviven hoy",
+    "Encuentro con los conquistadores",
+    "Palabras de origen indígena"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Muiscas",
+      "facet": "Muiscas y el altiplano",
+      "known_at": 5
+    },
+    {
+      "name": "Zipa",
+      "facet": "Muiscas y el altiplano",
+      "known_at": 8
+    },
+    {
+      "name": "Zaque",
+      "facet": "Muiscas y el altiplano",
+      "known_at": 9
+    },
+    {
+      "name": "Bacatá",
+      "facet": "Muiscas y el altiplano",
+      "known_at": 9
+    },
+    {
+      "name": "Hunza",
+      "facet": "Muiscas y el altiplano",
+      "known_at": 11
+    },
+    {
+      "name": "Iraca de Sugamuxi",
+      "facet": "Muiscas y el altiplano",
+      "known_at": 13
+    },
+    {
+      "name": "Tisquesusa",
+      "facet": "Muiscas y el altiplano",
+      "known_at": 12
+    },
+    {
+      "name": "Quemuenchatocha",
+      "facet": "Muiscas y el altiplano",
+      "known_at": 14
+    },
+    {
+      "name": "Nemequene",
+      "facet": "Muiscas y el altiplano",
+      "known_at": 13
+    },
+    {
+      "name": "Confederación muisca",
+      "facet": "Muiscas y el altiplano",
+      "known_at": 10
+    },
+    {
+      "name": "Lengua muisca",
+      "facet": "Muiscas y el altiplano",
+      "known_at": 10
+    },
+    {
+      "name": "Salinas de Nemocón",
+      "facet": "Muiscas y el altiplano",
+      "known_at": 10
+    },
+    {
+      "name": "Calendario muisca",
+      "facet": "Muiscas y el altiplano",
+      "known_at": 12
+    },
+    {
+      "name": "Altiplano cundiboyacense",
+      "facet": "Muiscas y el altiplano",
+      "known_at": 8
+    },
+    {
+      "name": "Cercado muisca",
+      "facet": "Muiscas y el altiplano",
+      "known_at": 12
+    },
+    {
+      "name": "Taironas",
+      "facet": "Taironas y la Sierra Nevada",
+      "known_at": 6
+    },
+    {
+      "name": "Ciudad Perdida",
+      "facet": "Taironas y la Sierra Nevada",
+      "known_at": 6
+    },
+    {
+      "name": "Parque Nacional Natural Tayrona",
+      "facet": "Taironas y la Sierra Nevada",
+      "known_at": 4
+    },
+    {
+      "name": "Pico Cristóbal Colón",
+      "facet": "Taironas y la Sierra Nevada",
+      "known_at": 8
+    },
+    {
+      "name": "Río Buritaca",
+      "facet": "Taironas y la Sierra Nevada",
+      "known_at": 12
+    },
+    {
+      "name": "Terrazas circulares taironas",
+      "facet": "Taironas y la Sierra Nevada",
+      "known_at": 9
+    },
+    {
+      "name": "Caminos de piedra taironas",
+      "facet": "Taironas y la Sierra Nevada",
+      "known_at": 9
+    },
+    {
+      "name": "Bonda",
+      "facet": "Taironas y la Sierra Nevada",
+      "known_at": 13
+    },
+    {
+      "name": "Corazón del Mundo",
+      "facet": "Taironas y la Sierra Nevada",
+      "known_at": 11
+    },
+    {
+      "name": "Guaqueros",
+      "facet": "Taironas y la Sierra Nevada",
+      "known_at": 10
+    },
+    {
+      "name": "Hombre murciélago tairona",
+      "facet": "Taironas y la Sierra Nevada",
+      "known_at": 12
+    },
+    {
+      "name": "Pocigueyca",
+      "facet": "Taironas y la Sierra Nevada",
+      "known_at": 15
+    },
+    {
+      "name": "Estatuas de San Agustín",
+      "facet": "San Agustín y Tierradentro",
+      "known_at": 5
+    },
+    {
+      "name": "Hipogeos",
+      "facet": "San Agustín y Tierradentro",
+      "known_at": 11
+    },
+    {
+      "name": "Fuente de Lavapatas",
+      "facet": "San Agustín y Tierradentro",
+      "known_at": 11
+    },
+    {
+      "name": "Alto de los Ídolos",
+      "facet": "San Agustín y Tierradentro",
+      "known_at": 11
+    },
+    {
+      "name": "Alto de las Piedras",
+      "facet": "San Agustín y Tierradentro",
+      "known_at": 13
+    },
+    {
+      "name": "Mesitas",
+      "facet": "San Agustín y Tierradentro",
+      "known_at": 13
+    },
+    {
+      "name": "Estrecho del Magdalena",
+      "facet": "San Agustín y Tierradentro",
+      "known_at": 10
+    },
+    {
+      "name": "Macizo colombiano",
+      "facet": "San Agustín y Tierradentro",
+      "known_at": 8
+    },
+    {
+      "name": "Huila",
+      "facet": "San Agustín y Tierradentro",
+      "known_at": 5
+    },
+    {
+      "name": "El Doble Yo",
+      "facet": "San Agustín y Tierradentro",
+      "known_at": 13
+    },
+    {
+      "name": "Águila con serpiente de San Agustín",
+      "facet": "San Agustín y Tierradentro",
+      "known_at": 13
+    },
+    {
+      "name": "Konrad Theodor Preuss",
+      "facet": "San Agustín y Tierradentro",
+      "known_at": 15
+    },
+    {
+      "name": "Isnos",
+      "facet": "San Agustín y Tierradentro",
+      "known_at": 12
+    },
+    {
+      "name": "Inzá",
+      "facet": "San Agustín y Tierradentro",
+      "known_at": 13
+    },
+    {
+      "name": "Poporo quimbaya",
+      "facet": "Orfebrería y el Museo del Oro",
+      "known_at": 8
+    },
+    {
+      "name": "Tumbaga",
+      "facet": "Orfebrería y el Museo del Oro",
+      "known_at": 11
+    },
+    {
+      "name": "Cera perdida",
+      "facet": "Orfebrería y el Museo del Oro",
+      "known_at": 12
+    },
+    {
+      "name": "Narigueras",
+      "facet": "Orfebrería y el Museo del Oro",
+      "known_at": 7
+    },
+    {
+      "name": "Pectorales de oro",
+      "facet": "Orfebrería y el Museo del Oro",
+      "known_at": 9
+    },
+    {
+      "name": "Orejeras",
+      "facet": "Orfebrería y el Museo del Oro",
+      "known_at": 8
+    },
+    {
+      "name": "Tunjo",
+      "facet": "Orfebrería y el Museo del Oro",
+      "known_at": 10
+    },
+    {
+      "name": "Banco de la República",
+      "facet": "Orfebrería y el Museo del Oro",
+      "known_at": 9
+    },
+    {
+      "name": "Orfebrería martillada",
+      "facet": "Orfebrería y el Museo del Oro",
+      "known_at": 12
+    },
+    {
+      "name": "Figuras de hombre-pájaro",
+      "facet": "Orfebrería y el Museo del Oro",
+      "known_at": 11
+    },
+    {
+      "name": "Sala de la Ofrenda",
+      "facet": "Orfebrería y el Museo del Oro",
+      "known_at": 12
+    },
+    {
+      "name": "Platino",
+      "facet": "Orfebrería y el Museo del Oro",
+      "known_at": 11
+    },
+    {
+      "name": "Dorado por oxidación",
+      "facet": "Orfebrería y el Museo del Oro",
+      "known_at": 14
+    },
+    {
+      "name": "Oro de aluvión",
+      "facet": "Orfebrería y el Museo del Oro",
+      "known_at": 11
+    },
+    {
+      "name": "Batea",
+      "facet": "Orfebrería y el Museo del Oro",
+      "known_at": 8
+    },
+    {
+      "name": "Leyenda de El Dorado",
+      "facet": "Leyenda de El Dorado y Guatavita",
+      "known_at": 4
+    },
+    {
+      "name": "Cacique de Guatavita",
+      "facet": "Leyenda de El Dorado y Guatavita",
+      "known_at": 8
+    },
+    {
+      "name": "Polvo de oro",
+      "facet": "Leyenda de El Dorado y Guatavita",
+      "known_at": 6
+    },
+    {
+      "name": "Ofrendas en la laguna",
+      "facet": "Leyenda de El Dorado y Guatavita",
+      "known_at": 8
+    },
+    {
+      "name": "Antonio de Sepúlveda",
+      "facet": "Leyenda de El Dorado y Guatavita",
+      "known_at": 15
+    },
+    {
+      "name": "Walter Raleigh",
+      "facet": "Leyenda de El Dorado y Guatavita",
+      "known_at": 13
+    },
+    {
+      "name": "El Carnero",
+      "facet": "Leyenda de El Dorado y Guatavita",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Rodríguez Freyle",
+      "facet": "Leyenda de El Dorado y Guatavita",
+      "known_at": 14
+    },
+    {
+      "name": "Embalse de Tominé",
+      "facet": "Leyenda de El Dorado y Guatavita",
+      "known_at": 11
+    },
+    {
+      "name": "Nuevo Guatavita",
+      "facet": "Leyenda de El Dorado y Guatavita",
+      "known_at": 11
+    },
+    {
+      "name": "Desagüe de la laguna",
+      "facet": "Leyenda de El Dorado y Guatavita",
+      "known_at": 12
+    },
+    {
+      "name": "Zenúes",
+      "facet": "Zenúes, Quimbayas y Calimas",
+      "known_at": 8
+    },
+    {
+      "name": "Quimbayas",
+      "facet": "Zenúes, Quimbayas y Calimas",
+      "known_at": 8
+    },
+    {
+      "name": "Calimas",
+      "facet": "Zenúes, Quimbayas y Calimas",
+      "known_at": 10
+    },
+    {
+      "name": "Canales zenúes",
+      "facet": "Zenúes, Quimbayas y Calimas",
+      "known_at": 12
+    },
+    {
+      "name": "Depresión momposina",
+      "facet": "Zenúes, Quimbayas y Calimas",
+      "known_at": 11
+    },
+    {
+      "name": "Río Sinú",
+      "facet": "Zenúes, Quimbayas y Calimas",
+      "known_at": 8
+    },
+    {
+      "name": "Río San Jorge",
+      "facet": "Zenúes, Quimbayas y Calimas",
+      "known_at": 11
+    },
+    {
+      "name": "Tesoro de los Quimbayas",
+      "facet": "Zenúes, Quimbayas y Calimas",
+      "known_at": 11
+    },
+    {
+      "name": "Museo de América de Madrid",
+      "facet": "Zenúes, Quimbayas y Calimas",
+      "known_at": 13
+    },
+    {
+      "name": "Cultura Ilama",
+      "facet": "Zenúes, Quimbayas y Calimas",
+      "known_at": 14
+    },
+    {
+      "name": "Cultura Yotoco",
+      "facet": "Zenúes, Quimbayas y Calimas",
+      "known_at": 14
+    },
+    {
+      "name": "Cultura Malagana",
+      "facet": "Zenúes, Quimbayas y Calimas",
+      "known_at": 14
+    },
+    {
+      "name": "Cultura Nariño",
+      "facet": "Zenúes, Quimbayas y Calimas",
+      "known_at": 12
+    },
+    {
+      "name": "Cultura San Jacinto",
+      "facet": "Zenúes, Quimbayas y Calimas",
+      "known_at": 14
+    },
+    {
+      "name": "Cultura Tolima",
+      "facet": "Zenúes, Quimbayas y Calimas",
+      "known_at": 13
+    },
+    {
+      "name": "Bochica",
+      "facet": "Mitos y dioses indígenas",
+      "known_at": 8
+    },
+    {
+      "name": "Chiminigagua",
+      "facet": "Mitos y dioses indígenas",
+      "known_at": 12
+    },
+    {
+      "name": "Sué",
+      "facet": "Mitos y dioses indígenas",
+      "known_at": 9
+    },
+    {
+      "name": "Chía",
+      "facet": "Mitos y dioses indígenas",
+      "known_at": 9
+    },
+    {
+      "name": "Huitaca",
+      "facet": "Mitos y dioses indígenas",
+      "known_at": 11
+    },
+    {
+      "name": "Chibchacum",
+      "facet": "Mitos y dioses indígenas",
+      "known_at": 12
+    },
+    {
+      "name": "Nencatacoa",
+      "facet": "Mitos y dioses indígenas",
+      "known_at": 14
+    },
+    {
+      "name": "Cuchavira",
+      "facet": "Mitos y dioses indígenas",
+      "known_at": 14
+    },
+    {
+      "name": "Laguna de Iguaque",
+      "facet": "Mitos y dioses indígenas",
+      "known_at": 11
+    },
+    {
+      "name": "Serankua",
+      "facet": "Mitos y dioses indígenas",
+      "known_at": 14
+    },
+    {
+      "name": "Aluna",
+      "facet": "Mitos y dioses indígenas",
+      "known_at": 13
+    },
+    {
+      "name": "Maleiwa",
+      "facet": "Mitos y dioses indígenas",
+      "known_at": 13
+    },
+    {
+      "name": "Pulowi",
+      "facet": "Mitos y dioses indígenas",
+      "known_at": 14
+    },
+    {
+      "name": "Juyá",
+      "facet": "Mitos y dioses indígenas",
+      "known_at": 14
+    },
+    {
+      "name": "Yuruparí",
+      "facet": "Mitos y dioses indígenas",
+      "known_at": 13
+    },
+    {
+      "name": "Mohán",
+      "facet": "Mitos y dioses indígenas",
+      "known_at": 7
+    },
+    {
+      "name": "Anaconda ancestral",
+      "facet": "Mitos y dioses indígenas",
+      "known_at": 12
+    },
+    {
+      "name": "Sombrero vueltiao",
+      "facet": "Cerámica, tejidos y arte",
+      "known_at": 3
+    },
+    {
+      "name": "Caña flecha",
+      "facet": "Cerámica, tejidos y arte",
+      "known_at": 9
+    },
+    {
+      "name": "Mochila wayuu",
+      "facet": "Cerámica, tejidos y arte",
+      "known_at": 4
+    },
+    {
+      "name": "Mochila arhuaca",
+      "facet": "Cerámica, tejidos y arte",
+      "known_at": 6
+    },
+    {
+      "name": "Chinchorro",
+      "facet": "Cerámica, tejidos y arte",
+      "known_at": 8
+    },
+    {
+      "name": "Mola",
+      "facet": "Cerámica, tejidos y arte",
+      "known_at": 10
+    },
+    {
+      "name": "Cerámica de Ráquira",
+      "facet": "Cerámica, tejidos y arte",
+      "known_at": 8
+    },
+    {
+      "name": "Cerámica de La Chamba",
+      "facet": "Cerámica, tejidos y arte",
+      "known_at": 10
+    },
+    {
+      "name": "Urnas funerarias",
+      "facet": "Cerámica, tejidos y arte",
+      "known_at": 11
+    },
+    {
+      "name": "Alcarraza",
+      "facet": "Cerámica, tejidos y arte",
+      "known_at": 13
+    },
+    {
+      "name": "Múcura",
+      "facet": "Cerámica, tejidos y arte",
+      "known_at": 8
+    },
+    {
+      "name": "Petroglifos",
+      "facet": "Cerámica, tejidos y arte",
+      "known_at": 10
+    },
+    {
+      "name": "Piedras del Tunjo",
+      "facet": "Cerámica, tejidos y arte",
+      "known_at": 11
+    },
+    {
+      "name": "Mantas muiscas",
+      "facet": "Cerámica, tejidos y arte",
+      "known_at": 11
+    },
+    {
+      "name": "Volante de huso",
+      "facet": "Cerámica, tejidos y arte",
+      "known_at": 13
+    },
+    {
+      "name": "Sellos de cerámica",
+      "facet": "Cerámica, tejidos y arte",
+      "known_at": 13
+    },
+    {
+      "name": "Cestería werregue",
+      "facet": "Cerámica, tejidos y arte",
+      "known_at": 13
+    },
+    {
+      "name": "Papa",
+      "facet": "Alimentos y cultivos ancestrales",
+      "known_at": 1
+    },
+    {
+      "name": "Yuca",
+      "facet": "Alimentos y cultivos ancestrales",
+      "known_at": 2
+    },
+    {
+      "name": "Chicha",
+      "facet": "Alimentos y cultivos ancestrales",
+      "known_at": 6
+    },
+    {
+      "name": "Arepa",
+      "facet": "Alimentos y cultivos ancestrales",
+      "known_at": 1
+    },
+    {
+      "name": "Ají",
+      "facet": "Alimentos y cultivos ancestrales",
+      "known_at": 3
+    },
+    {
+      "name": "Quinua",
+      "facet": "Alimentos y cultivos ancestrales",
+      "known_at": 8
+    },
+    {
+      "name": "Frijol",
+      "facet": "Alimentos y cultivos ancestrales",
+      "known_at": 2
+    },
+    {
+      "name": "Ahuyama",
+      "facet": "Alimentos y cultivos ancestrales",
+      "known_at": 4
+    },
+    {
+      "name": "Arracacha",
+      "facet": "Alimentos y cultivos ancestrales",
+      "known_at": 7
+    },
+    {
+      "name": "Cubio",
+      "facet": "Alimentos y cultivos ancestrales",
+      "known_at": 11
+    },
+    {
+      "name": "Cazabe",
+      "facet": "Alimentos y cultivos ancestrales",
+      "known_at": 10
+    },
+    {
+      "name": "Mazamorra",
+      "facet": "Alimentos y cultivos ancestrales",
+      "known_at": 5
+    },
+    {
+      "name": "Bollo de mazorca",
+      "facet": "Alimentos y cultivos ancestrales",
+      "known_at": 6
+    },
+    {
+      "name": "Camellones de cultivo",
+      "facet": "Alimentos y cultivos ancestrales",
+      "known_at": 13
+    },
+    {
+      "name": "Wayuu",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 5
+    },
+    {
+      "name": "Arhuacos",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 7
+    },
+    {
+      "name": "Koguis",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 9
+    },
+    {
+      "name": "Wiwas",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 12
+    },
+    {
+      "name": "Kankuamos",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 12
+    },
+    {
+      "name": "Nasa",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 10
+    },
+    {
+      "name": "Misak",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 10
+    },
+    {
+      "name": "Emberá",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 9
+    },
+    {
+      "name": "Wounaan",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 13
+    },
+    {
+      "name": "Ticuna",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 10
+    },
+    {
+      "name": "Pijaos",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 10
+    },
+    {
+      "name": "U'wa",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 12
+    },
+    {
+      "name": "Kamëntsá",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 13
+    },
+    {
+      "name": "Guna Dule",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 12
+    },
+    {
+      "name": "Sikuani",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 12
+    },
+    {
+      "name": "Palabrero wayuu",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 12
+    },
+    {
+      "name": "Resguardo indígena",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 9
+    },
+    {
+      "name": "Guardia indígena",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 10
+    },
+    {
+      "name": "Minga",
+      "facet": "Pueblos indígenas que perviven hoy",
+      "known_at": 9
+    },
+    {
+      "name": "Gonzalo Jiménez de Quesada",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 7
+    },
+    {
+      "name": "Sebastián de Belalcázar",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 9
+    },
+    {
+      "name": "Nicolás de Federmán",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 11
+    },
+    {
+      "name": "Rodrigo de Bastidas",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 10
+    },
+    {
+      "name": "Alonso de Ojeda",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro de Heredia",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 10
+    },
+    {
+      "name": "Juan de la Cosa",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 12
+    },
+    {
+      "name": "Vasco Núñez de Balboa",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 10
+    },
+    {
+      "name": "Santa María la Antigua del Darién",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 12
+    },
+    {
+      "name": "Fundación de Santa Marta",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 9
+    },
+    {
+      "name": "Fundación de Cartagena de Indias",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 9
+    },
+    {
+      "name": "Fundación de Bogotá",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 7
+    },
+    {
+      "name": "La Gaitana",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 10
+    },
+    {
+      "name": "Cacique Calarcá",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 10
+    },
+    {
+      "name": "Cacique Tundama",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 12
+    },
+    {
+      "name": "Encomienda",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 10
+    },
+    {
+      "name": "Requerimiento",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 14
+    },
+    {
+      "name": "Hernán Pérez de Quesada",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 14
+    },
+    {
+      "name": "Juan de Castellanos",
+      "facet": "Encuentro con los conquistadores",
+      "known_at": 14
+    },
+    {
+      "name": "Hamaca",
+      "facet": "Palabras de origen indígena",
+      "known_at": 4
+    },
+    {
+      "name": "Canoa",
+      "facet": "Palabras de origen indígena",
+      "known_at": 4
+    },
+    {
+      "name": "Huracán",
+      "facet": "Palabras de origen indígena",
+      "known_at": 7
+    },
+    {
+      "name": "Guache",
+      "facet": "Palabras de origen indígena",
+      "known_at": 7
+    },
+    {
+      "name": "Cuba",
+      "facet": "Palabras de origen indígena",
+      "known_at": 10
+    },
+    {
+      "name": "Guaricha",
+      "facet": "Palabras de origen indígena",
+      "known_at": 12
+    },
+    {
+      "name": "Chagra",
+      "facet": "Palabras de origen indígena",
+      "known_at": 11
+    },
+    {
+      "name": "Choclo",
+      "facet": "Palabras de origen indígena",
+      "known_at": 6
+    },
+    {
+      "name": "Cancha",
+      "facet": "Palabras de origen indígena",
+      "known_at": 9
+    },
+    {
+      "name": "Zipaquirá",
+      "facet": "Palabras de origen indígena",
+      "known_at": 8
+    },
+    {
+      "name": "Facatativá",
+      "facet": "Palabras de origen indígena",
+      "known_at": 11
+    },
+    {
+      "name": "Cundinamarca",
+      "facet": "Palabras de origen indígena",
+      "known_at": 10
+    },
+    {
+      "name": "Bohío",
+      "facet": "Palabras de origen indígena",
+      "known_at": 9
+    }
+  ]
+}
