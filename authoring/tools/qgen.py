@@ -436,7 +436,8 @@ def claude(system, user, schema, model, cwd, web=False, retries=2, read=False, w
     read=True lets the session open files under cwd with the Read tool (contact sheets).
     Every attempt goes to <cwd>/calls.jsonl and CALLS (decision 208)."""
     cmd = ["claude", "-p", "--output-format", "json", "--no-session-persistence",
-           "--model", model, "--system-prompt", system, "--json-schema", json.dumps(schema)]
+           "--model", model, "--system-prompt", system, "--json-schema", json.dumps(schema),
+           "--settings", '{"enabledPlugins": {"ponytail@ponytail": false}}']  # coding plugin, not for writing
     if web:
         cmd += ["--tools", "WebSearch,WebFetch", "--allowedTools", "WebSearch", "WebFetch"]
     elif read:

@@ -23,7 +23,7 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 - Before linking a new work tree: move its own `work/` runs into the main checkout's `work/`
 
 ## Rules
-- Ponytail plugin on (`.claude/settings.json`, level `lite`): it decides on tests; AGENTS.md wins everywhere else, e.g. deferred work and known limits go to `pm task add`, never `shortcut:` comments.
+- Ponytail plugin on (`.claude/settings.json`, level `lite`; off in `qgen`'s writing calls): it decides on tests; AGENTS.md wins everywhere else, e.g. deferred work and known limits go to `pm task add`, never `shortcut:` comments.
 - Push directly to `main`. No feature branches or pull requests.
 - Human review work (`trivia-authoring` reviews, spot checks, `qgen health ack`, the developer's hand edits to the pool): always in `../trivia-review`, then merge into `main` (README "Review in a separate worktree"); never in the main checkout, where `pm run` moves unstaged changes to a `pm/task-…-left` branch.
 - CI is local, no GitHub Actions (D-73): before every commit `npm run check`, `npm test`, `npm run build`, `qgen validate` and the task's own check pass.
