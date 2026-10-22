@@ -47259,6 +47259,176 @@ Checks:
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (400, 'Topic bundle pools ready for the Steam DLC entry?', 'pending', '["Ready: <bundles>", "Not yet"]', 'Gate for the Steamworks entry checklist. At this date `app/data/bundles/<id>/` for `stem`, `sports`, `history`, `movies`, `geography` holds only `categories.json` (stem also names), no `pool*.json` (content runs: `plan 188: Content runs for the topic bundles`). Answer with the bundles whose pool is to ship with the next upload; the entry checklist (`task 1657: Topic DLCs entered in Steamworks? (checklist decision)`) then covers exactly those.', 'The five topic question bundles (science, sports, history, movies and series, geography) are meant to be released as free optional add-ons on Steam, but none of them has approved questions yet. Once at least one bundle''s questions are ready to ship, you can enter that bundle in Steamworks and report its IDs. Answer when a bundle''s questions are to go into the next upload.', NULL, NULL, '2026-10-21T23:31:14Z', NULL, 1657, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (401, 'batch-11: health stop, ack? (blocks run batch-<n> (stem))', 'pending', '["Ack batch-11 (qgen health ack batch-11 \"<note>\") and continue", "Do not ack; investigate batch-11''s drop rate first"]', 'batch-11 fails the batch health thresholds: drop rate.
 See `qgen report --batches` or authoring/reports/batches.md. The developer looks at it and clears the stop with: qgen health ack batch-11 "<note>"', 'The question-making tool refuses to start a new set of questions because the previous set, a batch for the main question pool, lost too many drafts along the way. Only the developer can clear that stop after looking at the numbers. Until it is cleared, no new batch can start, including the first one for the science, technology, engineering and maths pack.', NULL, NULL, '2026-10-21T23:32:08Z', NULL, 1676, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (402, 'history taxonomy: categories and subcategories', 'answered', '["Apply as proposed (with the hand edits listed)", "Apply with changes (name them: merges, drops, scopes)", "Redo the proposal (say what to change)"]', 'Bundle `history` (History questions bundle, `kind: theme`, `languages: ["en"]`, target 2000 ≈ 36 per subcategory at 55; `task 1644: Create the five topic bundles`).
+
+Rule (`app/data/bundles.json`): More and deeper questions on history: eras, civilisations, empires, rulers, wars, revolutions, explorers and everyday life in the past, historical borders and old place names, with every region of the world in balance at every difficulty, from kids to adults, answerable by families anywhere in the world whatever their language; fan-level detail is welcome, while the famous core base already asks stays in `base`, and things only one country''s players know stay in that country''s regional bundle (`usa`, `spain`, …); the history of science, inventions and the space race is `stem`''s, of a sport, the Olympics and World Cups `sports`'', of film and TV `movies`'', present-day places `geography`''s.
+
+No voice: base''s voice holds (`plan 184: Pipeline for topic bundles`).
+
+Proposal (`qgen taxonomy --bundle history`, theme prompt of `decision 370: Theme taxonomy prompt: apply?`; opus 1 call, $0.91): 11 categories (6 `base_extends`, 5 `new`: `asian-history`, `african-history`, `americas-and-pacific`, `everyday-life-in-the-past`, `maps-and-borders`), 55 subcategories, each with `base_related` (base subcategories it goes beyond; drafting keeps off their questions, `decision 350: Overlap rate in drafting: which changes?`). es/de names drafted on apply. Full proposal with scopes, reasons and samples (`known_at`): `work/taxonomy/history/proposal.md` (before the hand edits); edited `proposal.json` (`proposal.orig.json` beside it is the unedited one).
+
+Checks and hand edits:
+- Regions: Europe 14 subcategories (medieval kingdoms, Byzantium, Vikings, Renaissance, royal houses, tsars, Napoleon, unifications …); Asia 9, Africa 4 (+ Egypt), the Americas 5, Oceania 1, Middle East and steppe 4 (Persia, Mesopotamia, caliphates, Ottomans, Mongols); 20 cross-regional (everyday life, rulers, trade, writing, archaeology, maps, the 20th century).
+- Periods: ancient 8, medieval 7, 1450–1800 about 10, 1800–1914 5, 20th century 5 (ends about 1997), the rest across eras.
+- Base overlap: base asks the famous core (pharaohs, pyramids, mummies, knights, castles, pirates, Roman Empire, French Revolution, World War II, Cold War, explorers, US presidents, British royals); scopes leave those to base and name them in `base_related`. Hand edit: the 23 subcategories without a related base subcategory get base''s general `history` (19 approved questions) so drafting avoids it; `trade-routes` and `archaeology-and-great-finds` also get `explorers-and-discoveries`. All `base_related` slugs exist; no slug equals a base, `stem` or `sports` slug.
+- `sports` (applied, `decision 399: sports taxonomy: categories and subcategories`): hand edits: sample "Marathon run legend" → Battle of Marathon, "Maya ball game" → cacao beans as Aztec money, "Hippodrome chariot races" → Nika riots, "Chaturanga" → Lion Capital of Ashoka; scopes of `greek-city-states`, `mesoamerica`, `byzantine-empire` say the sport is `sports`''.
+- `stem` (applied, `decision 395: stem taxonomy: categories and subcategories`): printing, machines, inventors, medical science to `stem` (in the proposal''s scopes); hand edits: `islamic-caliphates` leaves its scholars'' science to `stem`, `archaeology-and-great-finds` the science a find shows (Antikythera mechanism).
+- `geography`, `movies`: old place names, vanished states and old borders are history''s by the rules; present-day places not asked; no film subcategory.
+- Regional bundles (`usa` history and `native-nations`, `uk` history, `spain` `al-andalus-and-reconquista`, `mexico` `ancient-mexico` and revolution, `colombia` independence, `germany` history): drafting''s overlap wiring only sees base, so the boundary rests on the rule and scopes; hand edits: 14 scopes near regional ground say "one country''s detail its players alone know stays in that country''s regional bundle"; samples dropped: Liberty Bell, Women''s Land Army, Tolpuddle Martyrs, Cottonopolis, Peterloo, Eyam, dame schools, Lindow Man, Staffordshire Hoard, Republic of Texas, Pony Express rider. World-known events of one country stay here (American Revolution, Bolívar, Battle of Hastings, Rosa Parks).
+- Kids level: 17 of 55 have a sample at `known_at` ≤ 4 (Egypt, Vikings, samurai, First Nations, Pacific peoples, royal titles, jobs, homes, childhood, archaeology, trade …), 24 start at 5–6, 12 at 7–8, 2 at 9–10 (`travellers-and-expeditions`, `unifications-and-new-nations`): every difficulty has subcategories to draw from.
+- Size: 55, above the planned ≈ 50 (≈ 36 per subcategory); merges if wanted: `celts-goths-and-huns` into `medieval-kingdoms-and-crusades`, `royal-titles-and-court-life` into `royal-houses-of-europe`, `homes-and-towns-of-the-past` into `childhood-in-the-past`, `jobs-of-the-past` into `industrial-age-life`, `ancient-persia` into `mesopotamia`.
+
+- `ancient-world` Ancient world (8, base_extends)
+  - `life-in-ancient-egypt` Life in ancient Egypt: `pharaohs`, `pyramids`, `mummies`
+  - `mesopotamia` Mesopotamia: `history`
+  - `bronze-age-civilisations` Bronze Age civilisations: `history`
+  - `greek-city-states` Ancient Greek city-states: `greek-gods`, `greek-heroes`
+  - `ancient-persia` Ancient Persia: `history`
+  - `roman-republic` Roman Republic: `roman-empire`, `roman-mythology`
+  - `early-china` Early China: `history`
+  - `ancient-india` Ancient India: `history`
+- `medieval-world` Medieval world (7, base_extends)
+  - `celts-goths-and-huns` Celts, Goths and Huns: `roman-empire`
+  - `viking-age` Viking Age: `norse-mythology`
+  - `medieval-kingdoms-and-crusades` Medieval kingdoms and crusades: `knights`, `castles`, `british-royals`
+  - `medieval-daily-life` Medieval daily life: `knights`, `castles`
+  - `byzantine-empire` Byzantine Empire: `roman-empire`
+  - `islamic-caliphates` Islamic caliphates: `world-religions`
+  - `mongols-and-steppe-empires` Mongols and steppe empires: `history`
+- `asian-history` Asian history (4, new)
+  - `imperial-china` Imperial China: `history`
+  - `japan-and-korea` Japan and Korea through the ages: `history`
+  - `indian-empires` Indian empires: `history`
+  - `southeast-asian-kingdoms` Kingdoms of Southeast Asia: `temples-and-cathedrals`
+- `african-history` African history (3, new)
+  - `west-african-empires` West African empires: `history`
+  - `kush-aksum-and-ethiopia` Kush, Aksum and Ethiopia: `pharaohs`
+  - `central-and-southern-africa` Central and southern African kingdoms: `history`
+- `americas-and-pacific` Americas and the Pacific (5, new)
+  - `mesoamerica` Maya, Aztecs and Mesoamerica: `wonders-of-the-world`, `explorers-and-discoveries`
+  - `andean-civilisations` Incas and the Andes: `wonders-of-the-world`
+  - `first-nations-of-north-america` First Nations of North America: `history`
+  - `latin-american-independence` Latin American independence: `history`
+  - `pacific-peoples` Oceania and Pacific peoples: `islands`
+- `early-modern-world` Early modern world (5, base_extends)
+  - `renaissance-and-reformation` Renaissance and Reformation: `art`, `world-religions`
+  - `ottoman-empire` Ottoman Empire: `history`
+  - `colonial-empires` Colonial empires and trading companies: `explorers-and-discoveries`, `pirates`
+  - `imperial-russia` Tsars and imperial Russia: `history`
+  - `travellers-and-expeditions` Travellers and expeditions: `explorers-and-discoveries`, `amazon-history-and-exploration`
+- `rulers-and-courts` Rulers and courts (3, base_extends)
+  - `queens-and-empresses` Queens and empresses: `british-royals`, `pharaohs`, `french-revolution`
+  - `royal-houses-of-europe` Royal houses of Europe: `british-royals`
+  - `royal-titles-and-court-life` Royal titles and court life: `british-royals`
+- `age-of-revolutions-and-industry` Revolutions and the 19th century (5, base_extends)
+  - `age-of-revolutions` Age of revolutions: `french-revolution`, `us-presidents`
+  - `napoleons-europe` Napoleon''s Europe: `french-revolution`
+  - `unifications-and-new-nations` Unifications and new nations: `history`
+  - `industrial-age-life` Life in the Industrial Revolution: `history`
+  - `slavery-and-abolition` Slavery and abolition: `us-presidents`
+- `twentieth-century` 20th century (5, base_extends)
+  - `first-world-war` First World War: `history`
+  - `between-the-wars` Between the world wars: `world-war-ii`
+  - `home-fronts` Home fronts of the world wars: `world-war-ii`
+  - `independence-movements` Independence movements: `cold-war`
+  - `votes-and-civil-rights` Votes and civil rights: `famous-quotes`
+- `everyday-life-in-the-past` Everyday life in the past (7, new)
+  - `childhood-in-the-past` Childhood and school in the past: `toys`
+  - `jobs-of-the-past` Jobs of the past: `history`
+  - `trade-routes` Trade routes and markets: `history-of-money`, `explorers-and-discoveries`
+  - `writing-and-records` Writing, scripts and records: `languages-of-the-world`, `pharaohs`
+  - `archaeology-and-great-finds` Archaeology and great finds: `prehistory`, `mummies`, `explorers-and-discoveries`, `history`
+  - `homes-and-towns-of-the-past` Homes and towns of the past: `castles`, `architectural-styles`
+  - `plagues-fires-and-famines` Plagues, fires and famines: `volcanoes`, `earthquakes`, `medicine-and-health`
+- `maps-and-borders` Historical maps and borders (3, new)
+  - `old-place-names` Old place names: `countries`, `capital-cities`
+  - `vanished-countries` Vanished countries: `countries`, `cold-war`
+  - `maps-borders-and-treaties` Maps, borders and treaties: `cold-war`, `continents`', 'The new history question pack needs its own list of topics, so its questions go deeper than the main pool on every era and every part of the world, not only Europe, without repeating what the main pool, the country packs or the other topic packs already ask. The proposal splits the pack into 11 topics and 55 subtopics, about 36 questions each at 2000 questions. The choice is to apply it as proposed, apply it with changes, or have it redone; applying fixes the pack''s structure and drafts the Spanish and German topic names.', 'Apply as proposed (with the hand edits listed)', NULL, '2026-10-22T01:36:48Z', '2026-10-22T02:11:00Z', 1647, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (403, 'history taxonomy: categories and subcategories', 'pending', '["Apply as proposed (with the hand edits listed)", "Apply with changes (name them: merges, drops, scopes)", "Redo the proposal (say what to change)"]', 'Bundle `history` (History questions bundle, `kind: theme`, `languages: ["en"]`, target 2000 ≈ 36 per subcategory at 55; `task 1644: Create the five topic bundles`).
+
+Rule (`app/data/bundles.json`): More and deeper questions on history: eras, civilisations, empires, rulers, wars, revolutions, explorers and everyday life in the past, historical borders and old place names, with every region of the world in balance at every difficulty, from kids to adults, answerable by families anywhere in the world whatever their language; fan-level detail is welcome, while the famous core base already asks stays in `base`, and things only one country''s players know stay in that country''s regional bundle (`usa`, `spain`, …); the history of science, inventions and the space race is `stem`''s, of a sport, the Olympics and World Cups `sports`'', of film and TV `movies`'', present-day places `geography`''s.
+
+No voice: base''s voice holds (`plan 184: Pipeline for topic bundles`).
+
+Proposal (`qgen taxonomy --bundle history`, theme prompt of `decision 370: Theme taxonomy prompt: apply?`; opus 1 call, $0.91): 11 categories (6 `base_extends`, 5 `new`: `asian-history`, `african-history`, `americas-and-pacific`, `everyday-life-in-the-past`, `maps-and-borders`), 55 subcategories, each with `base_related` (base subcategories it goes beyond; drafting keeps off their questions, `decision 350: Overlap rate in drafting: which changes?`). es/de names drafted on apply. Full proposal with scopes, reasons and samples (`known_at`): `work/taxonomy/history/proposal.md` (before the hand edits); edited `proposal.json` (`proposal.orig.json` beside it is the unedited one).
+
+Checks and hand edits:
+- Regions: Europe 13 subcategories (Greece, Rome, Bronze Age Mediterranean, Celts and Goths, Vikings, medieval kingdoms, medieval daily life, Byzantium, Renaissance, tsars, royal houses, Napoleon, unifications); Asia 6 (early and imperial China, ancient India and Indian empires, Japan and Korea, Southeast Asia); Middle East and steppe 5 (Mesopotamia, Persia, caliphates, Ottomans, Mongols); Africa 4 (Egypt, West Africa, Kush and Ethiopia, central and southern Africa); the Americas 4; Oceania 1; 22 across regions (everyday life, rulers, trade, writing, archaeology, maps, revolutions, colonial empires, the 20th century).
+- Periods: ancient 8, medieval 7, 1450–1800 about 10, 1800–1914 5, 20th century 5 (ends about 1997), the rest across eras.
+- Base overlap: base asks the famous core (pharaohs, pyramids, mummies, knights, castles, pirates, Roman Empire, French Revolution, World War II, Cold War, explorers, US presidents, British royals); scopes leave those to base and name them in `base_related`. Hand edit: the 23 subcategories without a related base subcategory get base''s general `history` (19 approved questions) so drafting avoids it; `trade-routes` and `archaeology-and-great-finds` also get `explorers-and-discoveries`. All `base_related` slugs exist; no slug equals a base, `stem` or `sports` slug.
+- `sports` (applied, `decision 399: sports taxonomy: categories and subcategories`): hand edits: sample "Marathon run legend" → Battle of Marathon, "Maya ball game" → cacao beans as Aztec money, "Hippodrome chariot races" → Nika riots, "Chaturanga" → Lion Capital of Ashoka; scopes of `greek-city-states`, `mesoamerica`, `byzantine-empire` say the sport is `sports`''.
+- `stem` (applied, `decision 395: stem taxonomy: categories and subcategories`): printing, machines, inventors, medical science to `stem` (in the proposal''s scopes); hand edits: `islamic-caliphates` leaves its scholars'' science to `stem`, `archaeology-and-great-finds` the science a find shows (Antikythera mechanism).
+- `geography`, `movies`: old place names, vanished states and old borders are history''s by the rules; present-day places not asked; no film subcategory.
+- Regional bundles (`usa` history and `native-nations`, `uk` history, `spain` `al-andalus-and-reconquista`, `mexico` `ancient-mexico` and revolution, `colombia` independence, `germany` history): drafting''s overlap wiring only sees base, so the boundary rests on the rule and scopes; hand edits: 14 scopes near regional ground say "one country''s detail its players alone know stays in that country''s regional bundle"; samples dropped: Liberty Bell, Women''s Land Army, Tolpuddle Martyrs, Cottonopolis, Peterloo, Eyam, dame schools, Lindow Man, Staffordshire Hoard, Republic of Texas, Pony Express rider. World-known events of one country stay here (American Revolution, Bolívar, Battle of Hastings, Rosa Parks).
+- Kids level: 17 of 55 have a sample at `known_at` ≤ 4 (Egypt, Vikings, samurai, First Nations, Pacific peoples, royal titles, jobs, homes, childhood, archaeology, trade …), 24 start at 5–6, 12 at 7–8, 2 at 9–10 (`travellers-and-expeditions`, `unifications-and-new-nations`): every difficulty has subcategories to draw from.
+- Size: 55, above the planned ≈ 50 (≈ 36 per subcategory); merges if wanted: `celts-goths-and-huns` into `medieval-kingdoms-and-crusades`, `royal-titles-and-court-life` into `royal-houses-of-europe`, `homes-and-towns-of-the-past` into `childhood-in-the-past`, `jobs-of-the-past` into `industrial-age-life`, `ancient-persia` into `mesopotamia`.
+
+- `ancient-world` Ancient world (8, base_extends)
+  - `life-in-ancient-egypt` Life in ancient Egypt: `pharaohs`, `pyramids`, `mummies`
+  - `mesopotamia` Mesopotamia: `history`
+  - `bronze-age-civilisations` Bronze Age civilisations: `history`
+  - `greek-city-states` Ancient Greek city-states: `greek-gods`, `greek-heroes`
+  - `ancient-persia` Ancient Persia: `history`
+  - `roman-republic` Roman Republic: `roman-empire`, `roman-mythology`
+  - `early-china` Early China: `history`
+  - `ancient-india` Ancient India: `history`
+- `medieval-world` Medieval world (7, base_extends)
+  - `celts-goths-and-huns` Celts, Goths and Huns: `roman-empire`
+  - `viking-age` Viking Age: `norse-mythology`
+  - `medieval-kingdoms-and-crusades` Medieval kingdoms and crusades: `knights`, `castles`, `british-royals`
+  - `medieval-daily-life` Medieval daily life: `knights`, `castles`
+  - `byzantine-empire` Byzantine Empire: `roman-empire`
+  - `islamic-caliphates` Islamic caliphates: `world-religions`
+  - `mongols-and-steppe-empires` Mongols and steppe empires: `history`
+- `asian-history` Asian history (4, new)
+  - `imperial-china` Imperial China: `history`
+  - `japan-and-korea` Japan and Korea through the ages: `history`
+  - `indian-empires` Indian empires: `history`
+  - `southeast-asian-kingdoms` Kingdoms of Southeast Asia: `temples-and-cathedrals`
+- `african-history` African history (3, new)
+  - `west-african-empires` West African empires: `history`
+  - `kush-aksum-and-ethiopia` Kush, Aksum and Ethiopia: `pharaohs`
+  - `central-and-southern-africa` Central and southern African kingdoms: `history`
+- `americas-and-pacific` Americas and the Pacific (5, new)
+  - `mesoamerica` Maya, Aztecs and Mesoamerica: `wonders-of-the-world`, `explorers-and-discoveries`
+  - `andean-civilisations` Incas and the Andes: `wonders-of-the-world`
+  - `first-nations-of-north-america` First Nations of North America: `history`
+  - `latin-american-independence` Latin American independence: `history`
+  - `pacific-peoples` Oceania and Pacific peoples: `islands`
+- `early-modern-world` Early modern world (5, base_extends)
+  - `renaissance-and-reformation` Renaissance and Reformation: `art`, `world-religions`
+  - `ottoman-empire` Ottoman Empire: `history`
+  - `colonial-empires` Colonial empires and trading companies: `explorers-and-discoveries`, `pirates`
+  - `imperial-russia` Tsars and imperial Russia: `history`
+  - `travellers-and-expeditions` Travellers and expeditions: `explorers-and-discoveries`, `amazon-history-and-exploration`
+- `rulers-and-courts` Rulers and courts (3, base_extends)
+  - `queens-and-empresses` Queens and empresses: `british-royals`, `pharaohs`, `french-revolution`
+  - `royal-houses-of-europe` Royal houses of Europe: `british-royals`
+  - `royal-titles-and-court-life` Royal titles and court life: `british-royals`
+- `age-of-revolutions-and-industry` Revolutions and the 19th century (5, base_extends)
+  - `age-of-revolutions` Age of revolutions: `french-revolution`, `us-presidents`
+  - `napoleons-europe` Napoleon''s Europe: `french-revolution`
+  - `unifications-and-new-nations` Unifications and new nations: `history`
+  - `industrial-age-life` Life in the Industrial Revolution: `history`
+  - `slavery-and-abolition` Slavery and abolition: `us-presidents`
+- `twentieth-century` 20th century (5, base_extends)
+  - `first-world-war` First World War: `history`
+  - `between-the-wars` Between the world wars: `world-war-ii`
+  - `home-fronts` Home fronts of the world wars: `world-war-ii`
+  - `independence-movements` Independence movements: `cold-war`
+  - `votes-and-civil-rights` Votes and civil rights: `famous-quotes`
+- `everyday-life-in-the-past` Everyday life in the past (7, new)
+  - `childhood-in-the-past` Childhood and school in the past: `toys`
+  - `jobs-of-the-past` Jobs of the past: `history`
+  - `trade-routes` Trade routes and markets: `history-of-money`, `explorers-and-discoveries`
+  - `writing-and-records` Writing, scripts and records: `languages-of-the-world`, `pharaohs`
+  - `archaeology-and-great-finds` Archaeology and great finds: `prehistory`, `mummies`, `explorers-and-discoveries`, `history`
+  - `homes-and-towns-of-the-past` Homes and towns of the past: `castles`, `architectural-styles`
+  - `plagues-fires-and-famines` Plagues, fires and famines: `volcanoes`, `earthquakes`, `medicine-and-health`
+- `maps-and-borders` Historical maps and borders (3, new)
+  - `old-place-names` Old place names: `countries`, `capital-cities`
+  - `vanished-countries` Vanished countries: `countries`, `cold-war`
+  - `maps-borders-and-treaties` Maps, borders and treaties: `cold-war`, `continents`', 'The new history question pack needs its own list of topics, so its questions go deeper than the main pool on every era and every part of the world, not only Europe, without repeating what the main pool, the country packs or the other topic packs already ask. The proposal splits the pack into 11 topics and 55 subtopics, about 36 questions each at 2000 questions. The choice is to apply it as proposed, apply it with changes, or have it redone; applying fixes the pack''s structure and drafts the Spanish and German topic names.', NULL, NULL, '2026-10-22T01:37:06Z', NULL, 1647, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -49103,6 +49273,8 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1787, 1506, '2026-10-21T23:39:55Z', '2026-10-21T23:40:21Z', 'done', NULL, 0, '315093196ae8db702eae588621533f61bc40a971', 'questions', 'claude-sonnet-5-5', '8afc9960-2ba5-4356-87e4-e9f132970405', 1786, 5, 8, 2393, 274283, 26847, 0.40110120000000005, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1788, 1228, '2026-10-21T23:40:21Z', '2026-10-21T23:40:57Z', 'blocked', NULL, 0, '3a7681b9935e41ca9bee38698f3d9649c7554832', 'questions', 'claude-sonnet-5-5', '8afc9960-2ba5-4356-87e4-e9f132970405', 1787, 6, 12, 1138, 580461, 25616, 0.63106140000000011, 344501);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1789, 1646, '2026-10-22T01:26:12Z', '2026-10-22T01:28:37Z', 'done', NULL, 0, 'fc8e0ae013ed1cce403f32dafd6b924d8231bd05', 'questions', 'claude-opus-5-5', '665606a3-497a-4fe2-a9ef-7e0f6ae46cf1', NULL, 18, 36, 10150, 848451, 65049, 0.89322620000000008, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1790, 1647, '2026-10-22T01:28:38Z', '2026-10-22T01:37:20Z', 'blocked', NULL, 0, '67ef8daf0c67175969026bf4d521eba057966b6d', 'questions', 'claude-opus-5-5', '665606a3-497a-4fe2-a9ef-7e0f6ae46cf1', 1789, 19, 38, 14434, 1878213, 51665, 1.9710208000000002, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1791, 1649, '2026-10-22T01:37:20Z', '2026-10-22T01:37:57Z', 'blocked', NULL, 0, '67ef8daf0c67175969026bf4d521eba057966b6d', 'questions', 'claude-opus-5-5', '9697217c-6725-4272-a784-1ead93b4f353', NULL, 7, 16, 1497, 229669, 27944, 0.29948980000000003, 494342);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -49709,14 +49881,17 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1647, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1647, 370);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1647, 395);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1647, 399);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1647, 403);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1648, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1648, 370);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1648, 395);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1648, 399);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1648, 403);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 370);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 395);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 399);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1649, 403);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1652, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1653, 369);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1653, 396);
@@ -49758,6 +49933,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1673, 389);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1676, 401);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1677, 401);
 
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1649, 1648);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
