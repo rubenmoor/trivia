@@ -1,7 +1,7 @@
 // Question report server (plan 103, decision 93): the game posts, `qgen flag --pull` pulls and acks.
 // Never logs bodies, tickets, SteamIDs or hashes.
 import type { Env, ExecutionContext, ScheduledController } from "../env";
-import { authorized, day, error, json, rateLimited, readBody, rejected, ticketFailed } from "./http";
+import { authorized, bump, day, error, json, rateLimited, readBody, rejected, ticketFailed } from "./http";
 import { checkTicket, devTickets, userHash } from "./steam";
 import { ackTelemetry, postTelemetry, pullTelemetry, telemetryRetention } from "./telemetry";
 import { checkAck, checkLimit, checkReport, MAX_BODY } from "./validate";
@@ -9,16 +9,6 @@ import { checkAck, checkLimit, checkReport, MAX_BODY } from "./validate";
 const KEEP_DAYS = 90;
 
 const second = (d: Date): string => d.toISOString().slice(0, 19) + "Z";
-
-/** Today's count of `user` after this one. */
-async function bump(env: Env, user: string, today: string): Promise<number> {
-  const row = await env.DB.prepare(
-    "INSERT INTO rate (user_hash, day, count) VALUES (?, ?, 1) ON CONFLICT (user_hash, day) DO UPDATE SET count = count + 1 RETURNING count",
-  )
-    .bind(user, today)
-    .first<{ count: number }>();
-  return row?.count ?? 0;
-}
 
 async function postReport(req: Request, env: Env, url: URL): Promise<Response> {
   if (env.REPORTS_OPEN === "0") return error(503, "closed");
@@ -32,8 +22,8 @@ async function postReport(req: Request, env: Env, url: URL): Promise<Response> {
 
   const now = new Date();
   const today = day(now);
-  if ((await bump(env, await userHash(env.HASH_SALT, ticket.steamid), today)) > Number(env.RATE_USER)) return rateLimited(now);
-  if ((await bump(env, "*", today)) > Number(env.RATE_TOTAL)) return rateLimited(now);
+  if ((await bump(env, "rate", await userHash(env.HASH_SALT, ticket.steamid), today)) > Number(env.RATE_USER)) return rateLimited(now);
+  if ((await bump(env, "rate", "*", today)) > Number(env.RATE_TOTAL)) return rateLimited(now);
 
   const row = await env.DB.prepare(
     "INSERT INTO reports (received_at, question_id, lang, text, note, version, pool) VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING id",
