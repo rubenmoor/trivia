@@ -1,4 +1,115 @@
 {
   "about": "Categories of the history bundle (D-41, D-43): structure only, keyed by English slugs unique within the bundle (decision 259); names in names.<locale>.json.",
-  "categories": []
+  "categories": [
+    {
+      "slug": "ancient-world",
+      "subcategories": [
+        "life-in-ancient-egypt",
+        "mesopotamia",
+        "bronze-age-civilisations",
+        "greek-city-states",
+        "ancient-persia",
+        "roman-republic",
+        "early-china",
+        "ancient-india"
+      ]
+    },
+    {
+      "slug": "medieval-world",
+      "subcategories": [
+        "celts-goths-and-huns",
+        "viking-age",
+        "medieval-kingdoms-and-crusades",
+        "medieval-daily-life",
+        "byzantine-empire",
+        "islamic-caliphates",
+        "mongols-and-steppe-empires"
+      ]
+    },
+    {
+      "slug": "asian-history",
+      "subcategories": [
+        "imperial-china",
+        "japan-and-korea",
+        "indian-empires",
+        "southeast-asian-kingdoms"
+      ]
+    },
+    {
+      "slug": "african-history",
+      "subcategories": [
+        "west-african-empires",
+        "kush-aksum-and-ethiopia",
+        "central-and-southern-africa"
+      ]
+    },
+    {
+      "slug": "americas-and-pacific",
+      "subcategories": [
+        "mesoamerica",
+        "andean-civilisations",
+        "first-nations-of-north-america",
+        "latin-american-independence",
+        "pacific-peoples"
+      ]
+    },
+    {
+      "slug": "early-modern-world",
+      "subcategories": [
+        "renaissance-and-reformation",
+        "ottoman-empire",
+        "colonial-empires",
+        "imperial-russia",
+        "travellers-and-expeditions"
+      ]
+    },
+    {
+      "slug": "rulers-and-courts",
+      "subcategories": [
+        "queens-and-empresses",
+        "royal-houses-of-europe",
+        "royal-titles-and-court-life"
+      ]
+    },
+    {
+      "slug": "age-of-revolutions-and-industry",
+      "subcategories": [
+        "age-of-revolutions",
+        "napoleons-europe",
+        "unifications-and-new-nations",
+        "industrial-age-life",
+        "slavery-and-abolition"
+      ]
+    },
+    {
+      "slug": "twentieth-century",
+      "subcategories": [
+        "first-world-war",
+        "between-the-wars",
+        "home-fronts",
+        "independence-movements",
+        "votes-and-civil-rights"
+      ]
+    },
+    {
+      "slug": "everyday-life-in-the-past",
+      "subcategories": [
+        "childhood-in-the-past",
+        "jobs-of-the-past",
+        "trade-routes",
+        "writing-and-records",
+        "archaeology-and-great-finds",
+        "homes-and-towns-of-the-past",
+        "plagues-fires-and-famines"
+      ]
+    },
+    {
+      "slug": "maps-and-borders",
+      "subcategories": [
+        "old-place-names",
+        "vanished-countries",
+        "maps-borders-and-treaties"
+      ]
+    }
+  ]
 }
