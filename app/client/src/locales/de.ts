@@ -109,6 +109,8 @@ export const de = {
     sintetizada: "Synthetisch",
     variaciones: "Variationen",
     caja: "Spieluhr",
+    "sin-prisa": "Gelassen",
+    reflejos: "Spiegelungen",
   },
   language: {
     choose: "Sprache wählen",

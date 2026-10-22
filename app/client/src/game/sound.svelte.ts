@@ -68,6 +68,22 @@ export const SOUNDTRACKS = {
     level: 1.6,
     sameBeat: true,
   },
+  // OpenGameArt «Thoughtful Music Loops Library» by Little Robot Sound Factory, CC BY 3.0: «No Need To Worry», loops 00 / 08 / 05, 20 s each
+  "sin-prisa": {
+    files: { normal: "musica-sin-prisa-normal", question: "musica-sin-prisa-pregunta", submitted: "musica-sin-prisa-enviada" },
+    loopStart: 0,
+    loopEnd: 20,
+    level: 1.6,
+    sameBeat: true,
+  },
+  // Same library, «Reflections», loops 00 / 04 / 05 doubled (the three lengths differ by ≤ 50 ms)
+  reflejos: {
+    files: { normal: "musica-reflejos-normal", question: "musica-reflejos-pregunta", submitted: "musica-reflejos-enviada" },
+    loopStart: 0,
+    loopEnd: 22.597,
+    level: 1.6,
+    sameBeat: true,
+  },
 } as const satisfies Record<string, Soundtrack>;
 
 export type SoundtrackId = keyof typeof SOUNDTRACKS;
