@@ -8,7 +8,8 @@ database = "tasks.sql"
 # "{settings}" is replaced by claude settings (JSON) with a hook that blocks `pkill -f`, `killall` and `kill -1`.
 # With claude's JSON output (--output-format stream-json --verbose), pm shows it readably and records model, turns,
 # tokens and cost per run.
-worker = ["claude", "-p", "--settings", "{settings}", "--permission-mode", "acceptEdits",
+# authoring/tools/pm-worker/claude: the real claude, Ponytail at lite for programming tasks (kind work, work tree app).
+worker = ["authoring/tools/pm-worker/claude", "-p", "--settings", "{settings}", "--permission-mode", "acceptEdits",
           "--allowedTools", "Bash Read Edit Write Glob Grep", "--output-format", "stream-json", "--verbose"]
 
 # Minutes to wait after a usage limit resets before retrying the task.

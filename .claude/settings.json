@@ -8,6 +8,6 @@
     "ponytail@ponytail": true
   },
   "env": {
-    "PONYTAIL_DEFAULT_MODE": "lite"
+    "PONYTAIL_DEFAULT_MODE": "off"
   }
 }
