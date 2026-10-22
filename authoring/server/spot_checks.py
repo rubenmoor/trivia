@@ -4,19 +4,21 @@ import datetime, json
 
 import layout  # authoring/tools/layout.py
 import atomic  # authoring/tools/atomic.py
-import qgen  # authoring/tools/qgen.py: audit sample, LLM decisions, audits
+import qgen  # noqa: F401  (authoring/tools/qgen.py: loads the command modules, import it first)
+import audit  # authoring/tools/audit.py
+import validate  # authoring/tools/validate.py
 import translations  # authoring/tools/translations.py
 
 FILE = layout.SPOT_CHECKS
 
 
 def size(batch=None):
-    return qgen.spot_check_size(batch)
+    return audit.spot_check_size(batch)
 
 
 def sample(batch):
     """The batch's (or back-audit run's) spot-check ids in order: the first `size(batch)` of the audit sample."""
-    return qgen.audit_sample(batch, size(batch))
+    return audit.audit_sample(batch, size(batch))
 
 
 def load():
@@ -35,17 +37,17 @@ def record(batch, q, media_changed):
     if locale:
         q = next((t for t in translations.load(locale)["questions"] if t["id"] == q["id"]), None) or {"id": q["id"]}
     rv = q.get("review") or {}
-    if q.get("batch") != batch and q["id"] not in (qgen.run_ids(batch) or ()):
+    if q.get("batch") != batch and q["id"] not in (validate.run_ids(batch) or ()):
         raise ValueError(f"{q['id']} is not in {batch}")
     if q["id"] not in sample(batch):
         raise ValueError(f"{q['id']} is not in {batch}'s spot-check sample")
     if rv.get("reviewer") != "human":
         raise ValueError(f"{q['id']} has no human review yet")
-    llm = qgen.llm_decisions(batch).get(q["id"])
+    llm = audit.llm_decisions(batch).get(q["id"])
     if llm is None:
         raise ValueError(f"{q['id']} has no recorded LLM review")
-    a = qgen.translation_audit_of(q) if locale else qgen.audit_of(q)
-    item = {"llm": llm, "audit": a and ("problem" if qgen.is_major(a) else "ok"), "human": rv["decision"],
+    a = audit.translation_audit_of(q) if locale else audit.audit_of(q)
+    item = {"llm": llm, "audit": a and ("problem" if audit.is_major(a) else "ok"), "human": rv["decision"],
             "problems": rv.get("problems") or [],
             "difficulty": [q.get("difficulty_original") or q["difficulty"], q["difficulty"]],
             "media_changed": bool(media_changed), "on": datetime.date.today().isoformat()}
@@ -54,7 +56,7 @@ def record(batch, q, media_changed):
     with atomic.locked(FILE):
         data = load()
         entry = data.setdefault(batch, {"size": size(batch), "seed": batch, "items": {}})
-        if (ids := qgen.run_ids(batch)) is not None:
+        if (ids := validate.run_ids(batch)) is not None:
             entry["ids"] = ids  # tracked: validate needs no work/
         entry["items"][q["id"]] = item
         save(data)

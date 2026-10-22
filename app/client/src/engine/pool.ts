@@ -54,10 +54,10 @@ export interface Bundle {
 export const isModId = (id: string): boolean => id.includes(":");
 export const isOurs = (id: string): boolean => !isModId(id);
 
-/** A regional bundle's `country` (plan 151); COUNTRY in authoring/tools/qgen.py, countryOk in app/desktop/mods.mjs. */
+/** A regional bundle's `country` (plan 151); COUNTRY in authoring/tools/validate.py, countryOk in app/desktop/mods.mjs. */
 export const COUNTRY = /^[A-Z]{2}$/;
 
-/** The symbols a bundle row's `icon` may name (decision 367), all in Icon.svelte; copies in app/desktop/mods.mjs and authoring/tools/qgen.py. */
+/** The symbols a bundle row's `icon` may name (decision 367), all in Icon.svelte; copies in app/desktop/mods.mjs and authoring/tools/validate.py. */
 export const BUNDLE_ICONS = ["book", "pin", "puzzle", "flask", "ball", "scroll", "reel", "globe", "film", "heart", "mic", "headphones"] as const;
 export type BundleIcon = (typeof BUNDLE_ICONS)[number];
 const iconOf = (icon: unknown): BundleIcon | undefined => BUNDLE_ICONS.find((n) => n === icon);

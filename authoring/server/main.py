@@ -28,7 +28,7 @@ API:
          &licence=replace                          licence=replace: not rejected, a picked file to replace, plan 53;
          &played=outliers                          played=outliers: played difficulty outliers of `qgen report --played`
                                                    (too easy / too hard, not mixed), by |Δ|, plan 109;
-         &demo=1                                   demo=1: the demo list's ids (qgen.demo_listed), plan 174)
+         &demo=1                                   demo=1: the demo list's ids (translate.demo_listed), plan 174)
     GET  /api/questions?locale=en&stale=1          locale (translations.LOCALES; absent = the above, the sources in any
                                                    language, each with its locale, decision 235): one item per
                                                    entry of questions.<locale>.json, the source with the translation's
@@ -101,7 +101,10 @@ import reviews  # noqa: E402  (authoring/tools/reviews.py)
 from reviews import (NoQuestion, POOL, load_pool, save_pool, set_review,  # noqa: E402
                      update_question, update_translation)
 import save_file  # noqa: E402  (authoring/tools/save_file.py)
-from qgen import PROBLEMS, audit_of, demo_listed, is_major, run_ids, translation_audit_of  # noqa: E402  (authoring/tools/qgen.py)
+from qgen import PROBLEMS  # noqa: E402  (authoring/tools/qgen.py; first, it loads the command modules)
+from audit import audit_of, is_major, translation_audit_of  # noqa: E402  (authoring/tools/audit.py)
+from translate import demo_listed  # noqa: E402  (authoring/tools/translate.py)
+from validate import run_ids  # noqa: E402  (authoring/tools/validate.py)
 import spot_checks  # noqa: E402  (authoring/server/spot_checks.py)
 import targets  # noqa: E402  (authoring/tools/targets.py)
 import translations  # noqa: E402  (authoring/tools/translations.py)
