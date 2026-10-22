@@ -1,0 +1,633 @@
+{
+  "subcategory": "banknotes-and-coins",
+  "facets": [
+    "Personajes en los billetes",
+    "Fauna y flora en los billetes",
+    "Monedas y sus diseños",
+    "Denominaciones y colores",
+    "Seguridad y billetes falsos",
+    "Banco de la República y emisión",
+    "Historia del peso colombiano",
+    "Billetes y monedas que ya no circulan",
+    "Plata en la vida diaria",
+    "Expresiones y jerga de la plata",
+    "Lugares y paisajes en los billetes"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 2,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Oso de anteojos",
+      "facet": "Fauna y flora en los billetes",
+      "known_at": 4
+    },
+    {
+      "name": "Tortuga caguama",
+      "facet": "Fauna y flora en los billetes",
+      "known_at": 7
+    },
+    {
+      "name": "Guayacán",
+      "facet": "Fauna y flora en los billetes",
+      "known_at": 8
+    },
+    {
+      "name": "Orquídea Cattleya trianae",
+      "facet": "Fauna y flora en los billetes",
+      "known_at": 9
+    },
+    {
+      "name": "Familia de monedas de 2012",
+      "facet": "Monedas y sus diseños",
+      "known_at": 6
+    },
+    {
+      "name": "Moneda de 100 pesos",
+      "facet": "Monedas y sus diseños",
+      "known_at": 3
+    },
+    {
+      "name": "Moneda de 1000 pesos",
+      "facet": "Monedas y sus diseños",
+      "known_at": 3
+    },
+    {
+      "name": "Moneda bimetálica",
+      "facet": "Monedas y sus diseños",
+      "known_at": 7
+    },
+    {
+      "name": "Cara y sello",
+      "facet": "Monedas y sus diseños",
+      "known_at": 2
+    },
+    {
+      "name": "Figura quimbaya",
+      "facet": "Monedas y sus diseños",
+      "known_at": 10
+    },
+    {
+      "name": "Canto de la moneda",
+      "facet": "Monedas y sus diseños",
+      "known_at": 8
+    },
+    {
+      "name": "Moneda conmemorativa",
+      "facet": "Monedas y sus diseños",
+      "known_at": 10
+    },
+    {
+      "name": "Acero recubierto de níquel",
+      "facet": "Monedas y sus diseños",
+      "known_at": 12
+    },
+    {
+      "name": "Cuproníquel",
+      "facet": "Monedas y sus diseños",
+      "known_at": 13
+    },
+    {
+      "name": "Imagen latente en la moneda",
+      "facet": "Monedas y sus diseños",
+      "known_at": 12
+    },
+    {
+      "name": "Bronce aluminio",
+      "facet": "Monedas y sus diseños",
+      "known_at": 13
+    },
+    {
+      "name": "Billete de 2000 pesos",
+      "facet": "Denominaciones y colores",
+      "known_at": 3
+    },
+    {
+      "name": "Billete de 5000 pesos",
+      "facet": "Denominaciones y colores",
+      "known_at": 3
+    },
+    {
+      "name": "Billete de 10 000 pesos",
+      "facet": "Denominaciones y colores",
+      "known_at": 3
+    },
+    {
+      "name": "Billete de 50 000 pesos",
+      "facet": "Denominaciones y colores",
+      "known_at": 3
+    },
+    {
+      "name": "Billete de 100 000 pesos",
+      "facet": "Denominaciones y colores",
+      "known_at": 4
+    },
+    {
+      "name": "Familia de billetes de 2016",
+      "facet": "Denominaciones y colores",
+      "known_at": 8
+    },
+    {
+      "name": "Billete rojo",
+      "facet": "Denominaciones y colores",
+      "known_at": 4
+    },
+    {
+      "name": "Billete morado",
+      "facet": "Denominaciones y colores",
+      "known_at": 4
+    },
+    {
+      "name": "Billete verde",
+      "facet": "Denominaciones y colores",
+      "known_at": 4
+    },
+    {
+      "name": "Billete naranja",
+      "facet": "Denominaciones y colores",
+      "known_at": 4
+    },
+    {
+      "name": "Billete azul",
+      "facet": "Denominaciones y colores",
+      "known_at": 4
+    },
+    {
+      "name": "Billete ocre",
+      "facet": "Denominaciones y colores",
+      "known_at": 6
+    },
+    {
+      "name": "Marcas táctiles para personas ciegas",
+      "facet": "Denominaciones y colores",
+      "known_at": 9
+    },
+    {
+      "name": "Tamaño de los billetes",
+      "facet": "Denominaciones y colores",
+      "known_at": 6
+    },
+    {
+      "name": "Denominación más alta",
+      "facet": "Denominaciones y colores",
+      "known_at": 5
+    },
+    {
+      "name": "Marca de agua",
+      "facet": "Seguridad y billetes falsos",
+      "known_at": 6
+    },
+    {
+      "name": "Hilo de seguridad",
+      "facet": "Seguridad y billetes falsos",
+      "known_at": 7
+    },
+    {
+      "name": "Tinta que cambia de color",
+      "facet": "Seguridad y billetes falsos",
+      "known_at": 7
+    },
+    {
+      "name": "Relieve del billete",
+      "facet": "Seguridad y billetes falsos",
+      "known_at": 6
+    },
+    {
+      "name": "Microtexto",
+      "facet": "Seguridad y billetes falsos",
+      "known_at": 10
+    },
+    {
+      "name": "Imagen latente",
+      "facet": "Seguridad y billetes falsos",
+      "known_at": 11
+    },
+    {
+      "name": "Fibras fluorescentes",
+      "facet": "Seguridad y billetes falsos",
+      "known_at": 11
+    },
+    {
+      "name": "Luz ultravioleta",
+      "facet": "Seguridad y billetes falsos",
+      "known_at": 8
+    },
+    {
+      "name": "Registro perfecto",
+      "facet": "Seguridad y billetes falsos",
+      "known_at": 12
+    },
+    {
+      "name": "Número de serie",
+      "facet": "Seguridad y billetes falsos",
+      "known_at": 6
+    },
+    {
+      "name": "Papel de algodón",
+      "facet": "Seguridad y billetes falsos",
+      "known_at": 9
+    },
+    {
+      "name": "Tocar, mirar y girar",
+      "facet": "Seguridad y billetes falsos",
+      "known_at": 8
+    },
+    {
+      "name": "Billete falso",
+      "facet": "Seguridad y billetes falsos",
+      "known_at": 3
+    },
+    {
+      "name": "Detector de billetes",
+      "facet": "Seguridad y billetes falsos",
+      "known_at": 7
+    },
+    {
+      "name": "Billete chimbo",
+      "facet": "Seguridad y billetes falsos",
+      "known_at": 6
+    },
+    {
+      "name": "Imprenta de billetes",
+      "facet": "Banco de la República y emisión",
+      "known_at": 10
+    },
+    {
+      "name": "Fábrica de moneda de Ibagué",
+      "facet": "Banco de la República y emisión",
+      "known_at": 13
+    },
+    {
+      "name": "Junta Directiva del Banco de la República",
+      "facet": "Banco de la República y emisión",
+      "known_at": 12
+    },
+    {
+      "name": "Gerente del Banco de la República",
+      "facet": "Banco de la República y emisión",
+      "known_at": 12
+    },
+    {
+      "name": "Inflación",
+      "facet": "Banco de la República y emisión",
+      "known_at": 9
+    },
+    {
+      "name": "Tasa de interés",
+      "facet": "Banco de la República y emisión",
+      "known_at": 10
+    },
+    {
+      "name": "Reservas internacionales",
+      "facet": "Banco de la República y emisión",
+      "known_at": 12
+    },
+    {
+      "name": "Banco central",
+      "facet": "Banco de la República y emisión",
+      "known_at": 9
+    },
+    {
+      "name": "Destrucción de billetes viejos",
+      "facet": "Banco de la República y emisión",
+      "known_at": 9
+    },
+    {
+      "name": "Año 1923",
+      "facet": "Banco de la República y emisión",
+      "known_at": 13
+    },
+    {
+      "name": "Real",
+      "facet": "Historia del peso colombiano",
+      "known_at": 10
+    },
+    {
+      "name": "Macuquina",
+      "facet": "Historia del peso colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Escudo de oro",
+      "facet": "Historia del peso colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Casa de Moneda de Santa Fe",
+      "facet": "Historia del peso colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Casa de Moneda de Popayán",
+      "facet": "Historia del peso colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Peso oro",
+      "facet": "Historia del peso colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Centavo",
+      "facet": "Historia del peso colombiano",
+      "known_at": 5
+    },
+    {
+      "name": "Papel moneda",
+      "facet": "Historia del peso colombiano",
+      "known_at": 8
+    },
+    {
+      "name": "Bancos privados de emisión",
+      "facet": "Historia del peso colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Símbolo del peso ($)",
+      "facet": "Historia del peso colombiano",
+      "known_at": 4
+    },
+    {
+      "name": "COP",
+      "facet": "Historia del peso colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Trueque",
+      "facet": "Historia del peso colombiano",
+      "known_at": 6
+    },
+    {
+      "name": "Oro precolombino",
+      "facet": "Historia del peso colombiano",
+      "known_at": 7
+    },
+    {
+      "name": "Devaluación",
+      "facet": "Historia del peso colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Billete de 1000 de Gaitán",
+      "facet": "Billetes y monedas que ya no circulan",
+      "known_at": 7
+    },
+    {
+      "name": "Billete de 10 000 de Policarpa",
+      "facet": "Billetes y monedas que ya no circulan",
+      "known_at": 8
+    },
+    {
+      "name": "Billete de 20 000 de Julio Garavito",
+      "facet": "Billetes y monedas que ya no circulan",
+      "known_at": 10
+    },
+    {
+      "name": "Billete de 50 000 de Jorge Isaacs",
+      "facet": "Billetes y monedas que ya no circulan",
+      "known_at": 10
+    },
+    {
+      "name": "Billete de 5000 de Rafael Núñez",
+      "facet": "Billetes y monedas que ya no circulan",
+      "known_at": 10
+    },
+    {
+      "name": "Billete de 2000 de Santander",
+      "facet": "Billetes y monedas que ya no circulan",
+      "known_at": 9
+    },
+    {
+      "name": "Billete de 1000 de Bolívar",
+      "facet": "Billetes y monedas que ya no circulan",
+      "known_at": 11,
+      "retired": "unaskable: No estoy seguro de los detalles del diseño del billete. La pregunta sería demasiado oscura."
+    },
+    {
+      "name": "Billete de 500 de Caldas",
+      "facet": "Billetes y monedas que ya no circulan",
+      "known_at": 12
+    },
+    {
+      "name": "Billete de 200 de Mutis",
+      "facet": "Billetes y monedas que ya no circulan",
+      "known_at": 12
+    },
+    {
+      "name": "Billete de 100 pesos",
+      "facet": "Billetes y monedas que ya no circulan",
+      "known_at": 11
+    },
+    {
+      "name": "Moneda de 20 pesos",
+      "facet": "Billetes y monedas que ya no circulan",
+      "known_at": 9
+    },
+    {
+      "name": "Moneda de 10 pesos",
+      "facet": "Billetes y monedas que ya no circulan",
+      "known_at": 10,
+      "retired": "unaskable: No estoy seguro de qué personaje aparece en la moneda."
+    },
+    {
+      "name": "Moneda de 1 peso",
+      "facet": "Billetes y monedas que ya no circulan",
+      "known_at": 11
+    },
+    {
+      "name": "Moneda de 500 del guayacán",
+      "facet": "Billetes y monedas que ya no circulan",
+      "known_at": 8
+    },
+    {
+      "name": "Moneda de 200 quimbaya",
+      "facet": "Billetes y monedas que ya no circulan",
+      "known_at": 9
+    },
+    {
+      "name": "Moneda de 50 pesos antigua",
+      "facet": "Billetes y monedas que ya no circulan",
+      "known_at": 9
+    },
+    {
+      "name": "Vuelto",
+      "facet": "Plata en la vida diaria",
+      "known_at": 2
+    },
+    {
+      "name": "Sencillo",
+      "facet": "Plata en la vida diaria",
+      "known_at": 3
+    },
+    {
+      "name": "Alcancía",
+      "facet": "Plata en la vida diaria",
+      "known_at": 2
+    },
+    {
+      "name": "Marrano alcancía",
+      "facet": "Plata en la vida diaria",
+      "known_at": 3
+    },
+    {
+      "name": "Nequi",
+      "facet": "Plata en la vida diaria",
+      "known_at": 6
+    },
+    {
+      "name": "Daviplata",
+      "facet": "Plata en la vida diaria",
+      "known_at": 7
+    },
+    {
+      "name": "Cajero automático",
+      "facet": "Plata en la vida diaria",
+      "known_at": 4
+    },
+    {
+      "name": "Datáfono",
+      "facet": "Plata en la vida diaria",
+      "known_at": 7
+    },
+    {
+      "name": "Salario mínimo",
+      "facet": "Plata en la vida diaria",
+      "known_at": 8
+    },
+    {
+      "name": "Prima de diciembre",
+      "facet": "Plata en la vida diaria",
+      "known_at": 10
+    },
+    {
+      "name": "Cuatro por mil",
+      "facet": "Plata en la vida diaria",
+      "known_at": 12
+    },
+    {
+      "name": "Propina",
+      "facet": "Plata en la vida diaria",
+      "known_at": 4
+    },
+    {
+      "name": "Baloto",
+      "facet": "Plata en la vida diaria",
+      "known_at": 7
+    },
+    {
+      "name": "Chance",
+      "facet": "Plata en la vida diaria",
+      "known_at": 9
+    },
+    {
+      "name": "Recibo de servicios",
+      "facet": "Plata en la vida diaria",
+      "known_at": 8
+    },
+    {
+      "name": "Mesada",
+      "facet": "Plata en la vida diaria",
+      "known_at": 5
+    },
+    {
+      "name": "Luca",
+      "facet": "Expresiones y jerga de la plata",
+      "known_at": 4
+    },
+    {
+      "name": "Barra",
+      "facet": "Expresiones y jerga de la plata",
+      "known_at": 8
+    },
+    {
+      "name": "Gamba",
+      "facet": "Expresiones y jerga de la plata",
+      "known_at": 9
+    },
+    {
+      "name": "Estar varado",
+      "facet": "Expresiones y jerga de la plata",
+      "known_at": 7
+    },
+    {
+      "name": "Codo",
+      "facet": "Expresiones y jerga de la plata",
+      "known_at": 6
+    },
+    {
+      "name": "Agarrado",
+      "facet": "Expresiones y jerga de la plata",
+      "known_at": 6
+    },
+    {
+      "name": "Platal",
+      "facet": "Expresiones y jerga de la plata",
+      "known_at": 5
+    },
+    {
+      "name": "Encimar",
+      "facet": "Expresiones y jerga de la plata",
+      "known_at": 8
+    },
+    {
+      "name": "Rebaja",
+      "facet": "Expresiones y jerga de la plata",
+      "known_at": 3
+    },
+    {
+      "name": "Echar la casa por la ventana",
+      "facet": "Expresiones y jerga de la plata",
+      "known_at": 7
+    },
+    {
+      "name": "Páramo",
+      "facet": "Lugares y paisajes en los billetes",
+      "known_at": 6
+    },
+    {
+      "name": "La Luna",
+      "facet": "Lugares y paisajes en los billetes",
+      "known_at": 2
+    }
+  ]
+}

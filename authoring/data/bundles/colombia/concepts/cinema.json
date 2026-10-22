@@ -1,0 +1,768 @@
+{
+  "subcategory": "cinema",
+  "facets": [
+    "Clásicos del cine colombiano",
+    "Películas colombianas premiadas",
+    "Directores y directoras colombianos",
+    "Actores y actrices colombianos",
+    "Comedias y éxitos de taquilla",
+    "Animación y cine para niños",
+    "Historia del cine en Colombia",
+    "Festivales y premios de cine",
+    "Colombia en el cine extranjero",
+    "Novelas llevadas al cine",
+    "Cine documental colombiano",
+    "Escenarios y regiones de rodaje"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 5,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "La estrategia del caracol",
+      "facet": "Clásicos del cine colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Rodrigo D. No futuro",
+      "facet": "Clásicos del cine colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "La vendedora de rosas",
+      "facet": "Clásicos del cine colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Tiempo de morir",
+      "facet": "Clásicos del cine colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Confesión a Laura",
+      "facet": "Clásicos del cine colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Garras de oro",
+      "facet": "Clásicos del cine colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Bajo el cielo antioqueño",
+      "facet": "Clásicos del cine colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Carne de tu carne",
+      "facet": "Clásicos del cine colombiano",
+      "known_at": 15
+    },
+    {
+      "name": "La gente de La Universal",
+      "facet": "Clásicos del cine colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Golpe de estadio",
+      "facet": "Clásicos del cine colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Edipo alcalde",
+      "facet": "Clásicos del cine colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Bolívar soy yo",
+      "facet": "Clásicos del cine colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Soplo de vida",
+      "facet": "Clásicos del cine colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Kapax del Amazonas",
+      "facet": "Clásicos del cine colombiano",
+      "known_at": 14,
+      "retired": "unaskable: I'm not sure enough of the facts about the film or the real-life Kapax."
+    },
+    {
+      "name": "Canaguaro",
+      "facet": "Clásicos del cine colombiano",
+      "known_at": 15
+    },
+    {
+      "name": "Sumas y restas",
+      "facet": "Clásicos del cine colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Visa USA",
+      "facet": "Clásicos del cine colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "La tierra y la sombra",
+      "facet": "Películas colombianas premiadas",
+      "known_at": 13
+    },
+    {
+      "name": "Los colores de la montaña",
+      "facet": "Películas colombianas premiadas",
+      "known_at": 12
+    },
+    {
+      "name": "Monos",
+      "facet": "Películas colombianas premiadas",
+      "known_at": 12
+    },
+    {
+      "name": "Los reyes del mundo",
+      "facet": "Películas colombianas premiadas",
+      "known_at": 13
+    },
+    {
+      "name": "Un poeta",
+      "facet": "Películas colombianas premiadas",
+      "known_at": 13
+    },
+    {
+      "name": "La sociedad del semáforo",
+      "facet": "Películas colombianas premiadas",
+      "known_at": 14
+    },
+    {
+      "name": "El vuelco del cangrejo",
+      "facet": "Películas colombianas premiadas",
+      "known_at": 14
+    },
+    {
+      "name": "Perro come perro",
+      "facet": "Películas colombianas premiadas",
+      "known_at": 13
+    },
+    {
+      "name": "Matar a Jesús",
+      "facet": "Películas colombianas premiadas",
+      "known_at": 13
+    },
+    {
+      "name": "Alias María",
+      "facet": "Películas colombianas premiadas",
+      "known_at": 13
+    },
+    {
+      "name": "Gente de bien",
+      "facet": "Películas colombianas premiadas",
+      "known_at": 14
+    },
+    {
+      "name": "Retratos en un mar de mentiras",
+      "facet": "Películas colombianas premiadas",
+      "known_at": 14
+    },
+    {
+      "name": "Litigante",
+      "facet": "Películas colombianas premiadas",
+      "known_at": 14
+    },
+    {
+      "name": "Chocó",
+      "facet": "Películas colombianas premiadas",
+      "known_at": 14
+    },
+    {
+      "name": "Tantas almas",
+      "facet": "Películas colombianas premiadas",
+      "known_at": 14
+    },
+    {
+      "name": "La playa D.C.",
+      "facet": "Películas colombianas premiadas",
+      "known_at": 14
+    },
+    {
+      "name": "Víctor Gaviria",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 12
+    },
+    {
+      "name": "Sergio Cabrera",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 12
+    },
+    {
+      "name": "Cristina Gallego",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Laura Mora",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Mayolo",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Luis Ospina",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Marta Rodríguez",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Harold Trompetero",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Felipe Aljure",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Simón Mesa Soto",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Franco Lolli",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "César Acevedo",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Jorge Alí Triana",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Rubén Mendoza",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Andrés Baiz",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Lisandro Duque",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Carlos Moreno",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Alejandro Landes",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Ciro Durán",
+      "facet": "Directores y directoras colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Fausto Cabrera",
+      "facet": "Actores y actrices colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Uno al año no hace daño",
+      "facet": "Comedias y éxitos de taquilla",
+      "known_at": 10
+    },
+    {
+      "name": "La pena máxima",
+      "facet": "Comedias y éxitos de taquilla",
+      "known_at": 11
+    },
+    {
+      "name": "Soñar no cuesta nada",
+      "facet": "Comedias y éxitos de taquilla",
+      "known_at": 11
+    },
+    {
+      "name": "Mi gente linda, mi gente bella",
+      "facet": "Comedias y éxitos de taquilla",
+      "known_at": 11
+    },
+    {
+      "name": "Muertos de susto",
+      "facet": "Comedias y éxitos de taquilla",
+      "known_at": 11
+    },
+    {
+      "name": "Esto huele mal",
+      "facet": "Comedias y éxitos de taquilla",
+      "known_at": 12
+    },
+    {
+      "name": "Mañana te cuento",
+      "facet": "Comedias y éxitos de taquilla",
+      "known_at": 12
+    },
+    {
+      "name": "Sanandresito",
+      "facet": "Comedias y éxitos de taquilla",
+      "known_at": 12
+    },
+    {
+      "name": "Mamá, tómate la sopa",
+      "facet": "Comedias y éxitos de taquilla",
+      "known_at": 13
+    },
+    {
+      "name": "Colombian Dream",
+      "facet": "Comedias y éxitos de taquilla",
+      "known_at": 13
+    },
+    {
+      "name": "Dios los junta y ellos se separan",
+      "facet": "Comedias y éxitos de taquilla",
+      "known_at": 13
+    },
+    {
+      "name": "El man",
+      "facet": "Comedias y éxitos de taquilla",
+      "known_at": 13
+    },
+    {
+      "name": "Te busco",
+      "facet": "Comedias y éxitos de taquilla",
+      "known_at": 13
+    },
+    {
+      "name": "Casita",
+      "facet": "Animación y cine para niños",
+      "known_at": 3
+    },
+    {
+      "name": "El libro de Lila",
+      "facet": "Animación y cine para niños",
+      "known_at": 11
+    },
+    {
+      "name": "Pequeñas voces",
+      "facet": "Animación y cine para niños",
+      "known_at": 13
+    },
+    {
+      "name": "Virus tropical",
+      "facet": "Animación y cine para niños",
+      "known_at": 13
+    },
+    {
+      "name": "Hermanos Di Domenico",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Acevedo e Hijos",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 15
+    },
+    {
+      "name": "María (1922)",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Cine mudo",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Salón Olympia",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 15
+    },
+    {
+      "name": "Focine",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Proimágenes Colombia",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Ley de cine",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Fondo para el Desarrollo Cinematográfico",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Grupo de Cali",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Caliwood",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Pornomiseria",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Cine Club de Cali",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Ojo al cine",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 15
+    },
+    {
+      "name": "Cinemateca de Bogotá",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Teatro Faenza",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Fundación Patrimonio Fílmico Colombiano",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Cine Colombia",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Gótico tropical",
+      "facet": "Historia del cine en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Festival Internacional de Cine de Cartagena",
+      "facet": "Festivales y premios de cine",
+      "known_at": 10
+    },
+    {
+      "name": "Premios Macondo",
+      "facet": "Festivales y premios de cine",
+      "known_at": 12
+    },
+    {
+      "name": "Academia Colombiana de Artes y Ciencias Cinematográficas",
+      "facet": "Festivales y premios de cine",
+      "known_at": 13
+    },
+    {
+      "name": "Festival Internacional de Cine de Cali",
+      "facet": "Festivales y premios de cine",
+      "known_at": 13
+    },
+    {
+      "name": "Bogoshorts",
+      "facet": "Festivales y premios de cine",
+      "known_at": 13
+    },
+    {
+      "name": "Festival de Cine de Santa Fe de Antioquia",
+      "facet": "Festivales y premios de cine",
+      "known_at": 14
+    },
+    {
+      "name": "Festival de Cine Verde de Barichara",
+      "facet": "Festivales y premios de cine",
+      "known_at": 14
+    },
+    {
+      "name": "Muestra Internacional Documental de Bogotá",
+      "facet": "Festivales y premios de cine",
+      "known_at": 14
+    },
+    {
+      "name": "Eurocine",
+      "facet": "Festivales y premios de cine",
+      "known_at": 14
+    },
+    {
+      "name": "Festival de Cine de Bogotá",
+      "facet": "Festivales y premios de cine",
+      "known_at": 13
+    },
+    {
+      "name": "Premios India Catalina",
+      "facet": "Festivales y premios de cine",
+      "known_at": 11
+    },
+    {
+      "name": "Víctor Nieto",
+      "facet": "Festivales y premios de cine",
+      "known_at": 15
+    },
+    {
+      "name": "Premios Óscar",
+      "facet": "Festivales y premios de cine",
+      "known_at": 5
+    },
+    {
+      "name": "Festival de Cannes",
+      "facet": "Festivales y premios de cine",
+      "known_at": 9
+    },
+    {
+      "name": "Cámara de Oro",
+      "facet": "Festivales y premios de cine",
+      "known_at": 14
+    },
+    {
+      "name": "Quincena de Realizadores",
+      "facet": "Festivales y premios de cine",
+      "known_at": 14
+    },
+    {
+      "name": "Premios Platino",
+      "facet": "Festivales y premios de cine",
+      "known_at": 12
+    },
+    {
+      "name": "Premios Goya",
+      "facet": "Festivales y premios de cine",
+      "known_at": 11
+    },
+    {
+      "name": "Festival de Sundance",
+      "facet": "Festivales y premios de cine",
+      "known_at": 12
+    },
+    {
+      "name": "Concha de Oro",
+      "facet": "Festivales y premios de cine",
+      "known_at": 13
+    },
+    {
+      "name": "Festival de Berlín",
+      "facet": "Festivales y premios de cine",
+      "known_at": 12
+    },
+    {
+      "name": "Tras la esmeralda perdida",
+      "facet": "Colombia en el cine extranjero",
+      "known_at": 12
+    },
+    {
+      "name": "María llena eres de gracia",
+      "facet": "Colombia en el cine extranjero",
+      "known_at": 12
+    },
+    {
+      "name": "Géminis",
+      "facet": "Colombia en el cine extranjero",
+      "known_at": 12
+    },
+    {
+      "name": "Memoria",
+      "facet": "Colombia en el cine extranjero",
+      "known_at": 14
+    },
+    {
+      "name": "Tilda Swinton",
+      "facet": "Colombia en el cine extranjero",
+      "known_at": 13
+    },
+    {
+      "name": "Triple frontera",
+      "facet": "Colombia en el cine extranjero",
+      "known_at": 13
+    },
+    {
+      "name": "Señor y señora Smith",
+      "facet": "Colombia en el cine extranjero",
+      "known_at": 12
+    },
+    {
+      "name": "Jungla",
+      "facet": "Colombia en el cine extranjero",
+      "known_at": 13
+    },
+    {
+      "name": "Will Smith",
+      "facet": "Colombia en el cine extranjero",
+      "known_at": 5
+    },
+    {
+      "name": "Michael Douglas",
+      "facet": "Colombia en el cine extranjero",
+      "known_at": 11
+    },
+    {
+      "name": "Daniel Radcliffe",
+      "facet": "Colombia en el cine extranjero",
+      "known_at": 6
+    },
+    {
+      "name": "Javier Bardem",
+      "facet": "Colombia en el cine extranjero",
+      "known_at": 11
+    },
+    {
+      "name": "Disney",
+      "facet": "Colombia en el cine extranjero",
+      "known_at": 1
+    },
+    {
+      "name": "Colombia magia salvaje",
+      "facet": "Cine documental colombiano",
+      "known_at": 8
+    },
+    {
+      "name": "Gamín",
+      "facet": "Cine documental colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Chircales",
+      "facet": "Cine documental colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Agarrando pueblo",
+      "facet": "Cine documental colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Un tigre de papel",
+      "facet": "Cine documental colombiano",
+      "known_at": 15
+    },
+    {
+      "name": "Todo comenzó por el fin",
+      "facet": "Cine documental colombiano",
+      "known_at": 15
+    },
+    {
+      "name": "Jorge Silva",
+      "facet": "Cine documental colombiano",
+      "known_at": 15
+    },
+    {
+      "name": "Amazona",
+      "facet": "Cine documental colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Carta a una sombra",
+      "facet": "Cine documental colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Jericó, el infinito vuelo de los días",
+      "facet": "Cine documental colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Señorita María, la falda de la montaña",
+      "facet": "Cine documental colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "El silencio de los fusiles",
+      "facet": "Cine documental colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Pizarro",
+      "facet": "Cine documental colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Sumercé",
+      "facet": "Cine documental colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Mudos testigos",
+      "facet": "Cine documental colombiano",
+      "known_at": 15
+    },
+    {
+      "name": "Nuestra voz de tierra, memoria y futuro",
+      "facet": "Cine documental colombiano",
+      "known_at": 15
+    },
+    {
+      "name": "Amazonas",
+      "facet": "Escenarios y regiones de rodaje",
+      "known_at": 3
+    },
+    {
+      "name": "Páramo de Chingaza",
+      "facet": "Escenarios y regiones de rodaje",
+      "known_at": 11
+    }
+  ]
+}

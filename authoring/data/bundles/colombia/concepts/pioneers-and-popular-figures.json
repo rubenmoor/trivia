@@ -1,0 +1,742 @@
+{
+  "subcategory": "pioneers-and-popular-figures",
+  "facets": [
+    "Científicos e inventores colombianos",
+    "Pioneros de la aviación y el transporte",
+    "Deportistas que hicieron historia",
+    "Músicos y cantantes populares",
+    "Escritores y periodistas",
+    "Pintores, escultores y artistas",
+    "Mujeres pioneras de Colombia",
+    "Humoristas y figuras de la televisión",
+    "Personajes de telenovelas y series",
+    "Personajes de cuentos y películas",
+    "Personajes de marcas y publicidad",
+    "Empresarios y fundadores de empresas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 4,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Raúl Cuero",
+      "facet": "Científicos e inventores colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Emilio Yunis",
+      "facet": "Científicos e inventores colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Camilo Daza",
+      "facet": "Pioneros de la aviación y el transporte",
+      "known_at": 13
+    },
+    {
+      "name": "Gonzalo Mejía",
+      "facet": "Pioneros de la aviación y el transporte",
+      "known_at": 13
+    },
+    {
+      "name": "Ernesto Cortissoz",
+      "facet": "Pioneros de la aviación y el transporte",
+      "known_at": 13
+    },
+    {
+      "name": "Barcos de vapor del río Magdalena",
+      "facet": "Pioneros de la aviación y el transporte",
+      "known_at": 11
+    },
+    {
+      "name": "Yipao",
+      "facet": "Pioneros de la aviación y el transporte",
+      "known_at": 7
+    },
+    {
+      "name": "Correo aéreo Barranquilla-Puerto Colombia",
+      "facet": "Pioneros de la aviación y el transporte",
+      "known_at": 13
+    },
+    {
+      "name": "Egan Bernal",
+      "facet": "Deportistas que hicieron historia",
+      "known_at": 4
+    },
+    {
+      "name": "Nairo Quintana",
+      "facet": "Deportistas que hicieron historia",
+      "known_at": 4
+    },
+    {
+      "name": "Rigoberto Urán",
+      "facet": "Deportistas que hicieron historia",
+      "known_at": 5
+    },
+    {
+      "name": "Mariana Pajón",
+      "facet": "Deportistas que hicieron historia",
+      "known_at": 5
+    },
+    {
+      "name": "Caterine Ibargüen",
+      "facet": "Deportistas que hicieron historia",
+      "known_at": 5
+    },
+    {
+      "name": "Óscar Figueroa",
+      "facet": "Deportistas que hicieron historia",
+      "known_at": 9
+    },
+    {
+      "name": "María Isabel Urrutia",
+      "facet": "Deportistas que hicieron historia",
+      "known_at": 9
+    },
+    {
+      "name": "James Rodríguez",
+      "facet": "Deportistas que hicieron historia",
+      "known_at": 2
+    },
+    {
+      "name": "Radamel Falcao",
+      "facet": "Deportistas que hicieron historia",
+      "known_at": 3
+    },
+    {
+      "name": "Carlos 'El Pibe' Valderrama",
+      "facet": "Deportistas que hicieron historia",
+      "known_at": 3
+    },
+    {
+      "name": "Juan Pablo Montoya",
+      "facet": "Deportistas que hicieron historia",
+      "known_at": 7
+    },
+    {
+      "name": "Luis Díaz",
+      "facet": "Deportistas que hicieron historia",
+      "known_at": 2
+    },
+    {
+      "name": "Linda Caicedo",
+      "facet": "Deportistas que hicieron historia",
+      "known_at": 5
+    },
+    {
+      "name": "Anthony Zambrano",
+      "facet": "Deportistas que hicieron historia",
+      "known_at": 9
+    },
+    {
+      "name": "Yuberjen Martínez",
+      "facet": "Deportistas que hicieron historia",
+      "known_at": 10
+    },
+    {
+      "name": "Juanes",
+      "facet": "Músicos y cantantes populares",
+      "known_at": 3
+    },
+    {
+      "name": "J Balvin",
+      "facet": "Músicos y cantantes populares",
+      "known_at": 3
+    },
+    {
+      "name": "Karol G",
+      "facet": "Músicos y cantantes populares",
+      "known_at": 2
+    },
+    {
+      "name": "Maluma",
+      "facet": "Músicos y cantantes populares",
+      "known_at": 3
+    },
+    {
+      "name": "Feid",
+      "facet": "Músicos y cantantes populares",
+      "known_at": 4
+    },
+    {
+      "name": "Sebastián Yatra",
+      "facet": "Músicos y cantantes populares",
+      "known_at": 3
+    },
+    {
+      "name": "Morat",
+      "facet": "Músicos y cantantes populares",
+      "known_at": 4
+    },
+    {
+      "name": "Fonseca",
+      "facet": "Músicos y cantantes populares",
+      "known_at": 7
+    },
+    {
+      "name": "Silvestre Dangond",
+      "facet": "Músicos y cantantes populares",
+      "known_at": 6
+    },
+    {
+      "name": "Aterciopelados",
+      "facet": "Músicos y cantantes populares",
+      "known_at": 10
+    },
+    {
+      "name": "Petrona Martínez",
+      "facet": "Músicos y cantantes populares",
+      "known_at": 12
+    },
+    {
+      "name": "Jorge Celedón",
+      "facet": "Músicos y cantantes populares",
+      "known_at": 8
+    },
+    {
+      "name": "Andrés Cepeda",
+      "facet": "Músicos y cantantes populares",
+      "known_at": 8
+    },
+    {
+      "name": "Leandro Díaz",
+      "facet": "Músicos y cantantes populares",
+      "known_at": 12
+    },
+    {
+      "name": "Fruko",
+      "facet": "Músicos y cantantes populares",
+      "known_at": 10
+    },
+    {
+      "name": "Fernando Vallejo",
+      "facet": "Escritores y periodistas",
+      "known_at": 13
+    },
+    {
+      "name": "Héctor Abad Faciolince",
+      "facet": "Escritores y periodistas",
+      "known_at": 13
+    },
+    {
+      "name": "Laura Restrepo",
+      "facet": "Escritores y periodistas",
+      "known_at": 13
+    },
+    {
+      "name": "Piedad Bonnett",
+      "facet": "Escritores y periodistas",
+      "known_at": 14
+    },
+    {
+      "name": "Manuel Mejía Vallejo",
+      "facet": "Escritores y periodistas",
+      "known_at": 13
+    },
+    {
+      "name": "Evelio Rosero",
+      "facet": "Escritores y periodistas",
+      "known_at": 14
+    },
+    {
+      "name": "Jairo Aníbal Niño",
+      "facet": "Escritores y periodistas",
+      "known_at": 9
+    },
+    {
+      "name": "Germán Castro Caycedo",
+      "facet": "Escritores y periodistas",
+      "known_at": 13
+    },
+    {
+      "name": "Daniel Samper Pizano",
+      "facet": "Escritores y periodistas",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Gossaín",
+      "facet": "Escritores y periodistas",
+      "known_at": 12
+    },
+    {
+      "name": "Eduardo Ramírez Villamizar",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 13
+    },
+    {
+      "name": "Doris Salcedo",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 13
+    },
+    {
+      "name": "Gregorio Vásquez de Arce y Ceballos",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 13
+    },
+    {
+      "name": "Enrique Grau",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 12
+    },
+    {
+      "name": "Pedro Nel Gómez",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 12
+    },
+    {
+      "name": "Rodrigo Arenas Betancourt",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 12
+    },
+    {
+      "name": "Beatriz González",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 13
+    },
+    {
+      "name": "Ana Mercedes Hoyos",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 13
+    },
+    {
+      "name": "Luis Caballero",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 13
+    },
+    {
+      "name": "Andrés de Santa María",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 14
+    },
+    {
+      "name": "Carlos Jacanamijoy",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 14
+    },
+    {
+      "name": "Manuela Beltrán",
+      "facet": "Mujeres pioneras de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "María Martínez de Nisser",
+      "facet": "Mujeres pioneras de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Josefina Valencia",
+      "facet": "Mujeres pioneras de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "María Cano",
+      "facet": "Mujeres pioneras de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Ofelia Uribe de Acosta",
+      "facet": "Mujeres pioneras de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Nina S. de Friedemann",
+      "facet": "Mujeres pioneras de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Luz Marina Zuluaga",
+      "facet": "Mujeres pioneras de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Paulina Vega",
+      "facet": "Mujeres pioneras de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Noemí Sanín",
+      "facet": "Mujeres pioneras de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Andrés López",
+      "facet": "Humoristas y figuras de la televisión",
+      "known_at": 9
+    },
+    {
+      "name": "Alejandra Azcárate",
+      "facet": "Humoristas y figuras de la televisión",
+      "known_at": 10
+    },
+    {
+      "name": "Don Jediondo",
+      "facet": "Humoristas y figuras de la televisión",
+      "known_at": 9
+    },
+    {
+      "name": "Montecristo",
+      "facet": "Humoristas y figuras de la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Jorge Barón",
+      "facet": "Humoristas y figuras de la televisión",
+      "known_at": 8
+    },
+    {
+      "name": "Jota Mario Valencia",
+      "facet": "Humoristas y figuras de la televisión",
+      "known_at": 9
+    },
+    {
+      "name": "Suso el Paspi",
+      "facet": "Humoristas y figuras de la televisión",
+      "known_at": 10
+    },
+    {
+      "name": "Martín de Francisco",
+      "facet": "Humoristas y figuras de la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Pirry",
+      "facet": "Humoristas y figuras de la televisión",
+      "known_at": 10
+    },
+    {
+      "name": "Ricardo Quevedo",
+      "facet": "Humoristas y figuras de la televisión",
+      "known_at": 9
+    },
+    {
+      "name": "Piter Albeiro",
+      "facet": "Humoristas y figuras de la televisión",
+      "known_at": 9
+    },
+    {
+      "name": "Tola y Maruja",
+      "facet": "Humoristas y figuras de la televisión",
+      "known_at": 10
+    },
+    {
+      "name": "Alfonso Lizarazo",
+      "facet": "Humoristas y figuras de la televisión",
+      "known_at": 10
+    },
+    {
+      "name": "Betty la fea",
+      "facet": "Personajes de telenovelas y series",
+      "known_at": 3
+    },
+    {
+      "name": "Armando Mendoza",
+      "facet": "Personajes de telenovelas y series",
+      "known_at": 7
+    },
+    {
+      "name": "Hugo Lombardi",
+      "facet": "Personajes de telenovelas y series",
+      "known_at": 9
+    },
+    {
+      "name": "Patricia Fernández",
+      "facet": "Personajes de telenovelas y series",
+      "known_at": 9
+    },
+    {
+      "name": "Nicolás Mora",
+      "facet": "Personajes de telenovelas y series",
+      "known_at": 9
+    },
+    {
+      "name": "Marcela Valencia",
+      "facet": "Personajes de telenovelas y series",
+      "known_at": 10
+    },
+    {
+      "name": "Don Hermes Pinzón",
+      "facet": "Personajes de telenovelas y series",
+      "known_at": 10
+    },
+    {
+      "name": "El cuartel de las feas",
+      "facet": "Personajes de telenovelas y series",
+      "known_at": 9
+    },
+    {
+      "name": "Gaviota",
+      "facet": "Personajes de telenovelas y series",
+      "known_at": 9
+    },
+    {
+      "name": "Pedro el Escamoso",
+      "facet": "Personajes de telenovelas y series",
+      "known_at": 6
+    },
+    {
+      "name": "Pasión de gavilanes",
+      "facet": "Personajes de telenovelas y series",
+      "known_at": 6
+    },
+    {
+      "name": "Los Reyes",
+      "facet": "Personajes de telenovelas y series",
+      "known_at": 9
+    },
+    {
+      "name": "Francisco el Matemático",
+      "facet": "Personajes de telenovelas y series",
+      "known_at": 9
+    },
+    {
+      "name": "El man es Germán",
+      "facet": "Personajes de telenovelas y series",
+      "known_at": 9
+    },
+    {
+      "name": "Chepe Fortuna",
+      "facet": "Personajes de telenovelas y series",
+      "known_at": 9
+    },
+    {
+      "name": "Las Juanas",
+      "facet": "Personajes de telenovelas y series",
+      "known_at": 11
+    },
+    {
+      "name": "La saga, negocio de familia",
+      "facet": "Personajes de telenovelas y series",
+      "known_at": 12
+    },
+    {
+      "name": "Mirabel Madrigal",
+      "facet": "Personajes de cuentos y películas",
+      "known_at": 2
+    },
+    {
+      "name": "Bruno Madrigal",
+      "facet": "Personajes de cuentos y películas",
+      "known_at": 2
+    },
+    {
+      "name": "Abuela Alma",
+      "facet": "Personajes de cuentos y películas",
+      "known_at": 4
+    },
+    {
+      "name": "Luisa Madrigal",
+      "facet": "Personajes de cuentos y películas",
+      "known_at": 3
+    },
+    {
+      "name": "Isabela Madrigal",
+      "facet": "Personajes de cuentos y películas",
+      "known_at": 3
+    },
+    {
+      "name": "Pepa Madrigal",
+      "facet": "Personajes de cuentos y películas",
+      "known_at": 5
+    },
+    {
+      "name": "Simón el Bobito",
+      "facet": "Personajes de cuentos y películas",
+      "known_at": 4
+    },
+    {
+      "name": "Aureliano Buendía",
+      "facet": "Personajes de cuentos y películas",
+      "known_at": 11
+    },
+    {
+      "name": "Úrsula Iguarán",
+      "facet": "Personajes de cuentos y películas",
+      "known_at": 12
+    },
+    {
+      "name": "Melquíades",
+      "facet": "Personajes de cuentos y películas",
+      "known_at": 12
+    },
+    {
+      "name": "Remedios la Bella",
+      "facet": "Personajes de cuentos y películas",
+      "known_at": 12
+    },
+    {
+      "name": "Florentino Ariza",
+      "facet": "Personajes de cuentos y películas",
+      "known_at": 12
+    },
+    {
+      "name": "Santiago Nasar",
+      "facet": "Personajes de cuentos y películas",
+      "known_at": 13
+    },
+    {
+      "name": "María y Efraín",
+      "facet": "Personajes de cuentos y películas",
+      "known_at": 10
+    },
+    {
+      "name": "Arturo Cova",
+      "facet": "Personajes de cuentos y películas",
+      "known_at": 13
+    },
+    {
+      "name": "Karamakate",
+      "facet": "Personajes de cuentos y películas",
+      "known_at": 14
+    },
+    {
+      "name": "Carlos Sánchez (Juan Valdez)",
+      "facet": "Personajes de marcas y publicidad",
+      "known_at": 13
+    },
+    {
+      "name": "Álbum de Jet",
+      "facet": "Personajes de marcas y publicidad",
+      "known_at": 6
+    },
+    {
+      "name": "Alpinito",
+      "facet": "Personajes de marcas y publicidad",
+      "known_at": 4
+    },
+    {
+      "name": "Frisby",
+      "facet": "Personajes de marcas y publicidad",
+      "known_at": 5
+    },
+    {
+      "name": "Kokoriko",
+      "facet": "Personajes de marcas y publicidad",
+      "known_at": 6
+    },
+    {
+      "name": "El Corral",
+      "facet": "Personajes de marcas y publicidad",
+      "known_at": 5
+    },
+    {
+      "name": "Crem Helado",
+      "facet": "Personajes de marcas y publicidad",
+      "known_at": 5
+    },
+    {
+      "name": "Super Ricas",
+      "facet": "Personajes de marcas y publicidad",
+      "known_at": 5
+    },
+    {
+      "name": "Carlos Ardila Lülle",
+      "facet": "Empresarios y fundadores de empresas",
+      "known_at": 12
+    },
+    {
+      "name": "Luis Carlos Sarmiento Angulo",
+      "facet": "Empresarios y fundadores de empresas",
+      "known_at": 11
+    },
+    {
+      "name": "Julio Mario Santo Domingo",
+      "facet": "Empresarios y fundadores de empresas",
+      "known_at": 11
+    },
+    {
+      "name": "Gabriel Posada y Valerio Tobón",
+      "facet": "Empresarios y fundadores de empresas",
+      "known_at": 13
+    },
+    {
+      "name": "Walter Goggel y Max Bazinger",
+      "facet": "Empresarios y fundadores de empresas",
+      "known_at": 14
+    },
+    {
+      "name": "Hernán Caicedo",
+      "facet": "Empresarios y fundadores de empresas",
+      "known_at": 14
+    },
+    {
+      "name": "Rafael Molano",
+      "facet": "Empresarios y fundadores de empresas",
+      "known_at": 13
+    },
+    {
+      "name": "Arturo Calle",
+      "facet": "Empresarios y fundadores de empresas",
+      "known_at": 8
+    },
+    {
+      "name": "Mario Hernández",
+      "facet": "Empresarios y fundadores de empresas",
+      "known_at": 10
+    },
+    {
+      "name": "Simón Borrero",
+      "facet": "Empresarios y fundadores de empresas",
+      "known_at": 11
+    },
+    {
+      "name": "Gustavo Toro Quintero",
+      "facet": "Empresarios y fundadores de empresas",
+      "known_at": 14
+    },
+    {
+      "name": "Pepe Sierra",
+      "facet": "Empresarios y fundadores de empresas",
+      "known_at": 14
+    },
+    {
+      "name": "Diego Echavarría Misas",
+      "facet": "Empresarios y fundadores de empresas",
+      "known_at": 14
+    },
+    {
+      "name": "Coltejer",
+      "facet": "Empresarios y fundadores de empresas",
+      "known_at": 13
+    }
+  ]
+}

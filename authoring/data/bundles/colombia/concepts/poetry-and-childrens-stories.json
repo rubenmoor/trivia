@@ -1,0 +1,586 @@
+{
+  "subcategory": "poetry-and-childrens-stories",
+  "facets": [
+    "Vida de Rafael Pombo",
+    "Personajes de los cuentos de Pombo",
+    "Versos famosos de Pombo",
+    "Jairo Aníbal Niño y su obra",
+    "Autores infantiles colombianos contemporáneos",
+    "Rondas, nanas y canciones infantiles",
+    "Adivinanzas, trabalenguas y retahílas",
+    "Coplas y décimas populares",
+    "Cuentos de Tío Conejo y Pedro Rimales",
+    "Relatos indígenas y afrocolombianos",
+    "Ferias, premios y bibliotecas infantiles"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 1,
+      "record": 1,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Rafael Pombo",
+      "facet": "Vida de Rafael Pombo",
+      "known_at": 3
+    },
+    {
+      "name": "Lino de Pombo",
+      "facet": "Vida de Rafael Pombo",
+      "known_at": 13
+    },
+    {
+      "name": "Nueva York",
+      "facet": "Vida de Rafael Pombo",
+      "known_at": 9
+    },
+    {
+      "name": "Editorial Appleton",
+      "facet": "Vida de Rafael Pombo",
+      "known_at": 14
+    },
+    {
+      "name": "Mamá Gansa",
+      "facet": "Vida de Rafael Pombo",
+      "known_at": 12
+    },
+    {
+      "name": "Edda la bogotana",
+      "facet": "Vida de Rafael Pombo",
+      "known_at": 14
+    },
+    {
+      "name": "Noche de diciembre",
+      "facet": "Vida de Rafael Pombo",
+      "known_at": 14
+    },
+    {
+      "name": "Romanticismo",
+      "facet": "Vida de Rafael Pombo",
+      "known_at": 10
+    },
+    {
+      "name": "Coronación de Pombo",
+      "facet": "Vida de Rafael Pombo",
+      "known_at": 13
+    },
+    {
+      "name": "Academia Colombiana de la Lengua",
+      "facet": "Vida de Rafael Pombo",
+      "known_at": 12
+    },
+    {
+      "name": "Traductor",
+      "facet": "Vida de Rafael Pombo",
+      "known_at": 10
+    },
+    {
+      "name": "Siglo XIX",
+      "facet": "Vida de Rafael Pombo",
+      "known_at": 8
+    },
+    {
+      "name": "Mamá Rana",
+      "facet": "Personajes de los cuentos de Pombo",
+      "known_at": 4
+    },
+    {
+      "name": "Ratón amigo de Rin Rin",
+      "facet": "Personajes de los cuentos de Pombo",
+      "known_at": 5
+    },
+    {
+      "name": "Doña Ratona",
+      "facet": "Personajes de los cuentos de Pombo",
+      "known_at": 5
+    },
+    {
+      "name": "Gata y gaticos",
+      "facet": "Personajes de los cuentos de Pombo",
+      "known_at": 6
+    },
+    {
+      "name": "El pato",
+      "facet": "Personajes de los cuentos de Pombo",
+      "known_at": 6
+    },
+    {
+      "name": "Michín",
+      "facet": "Personajes de los cuentos de Pombo",
+      "known_at": 6
+    },
+    {
+      "name": "Fumachón",
+      "facet": "Personajes de los cuentos de Pombo",
+      "known_at": 10
+    },
+    {
+      "name": "Tía Pasitrote",
+      "facet": "Personajes de los cuentos de Pombo",
+      "known_at": 11
+    },
+    {
+      "name": "Perico Zanquituerto",
+      "facet": "Personajes de los cuentos de Pombo",
+      "known_at": 11
+    },
+    {
+      "name": "Cutufato",
+      "facet": "Personajes de los cuentos de Pombo",
+      "known_at": 11
+    },
+    {
+      "name": "Érase una viejecita",
+      "facet": "Versos famosos de Pombo",
+      "known_at": 5
+    },
+    {
+      "name": "Ocho gatos",
+      "facet": "Versos famosos de Pombo",
+      "known_at": 7
+    },
+    {
+      "name": "Chupa de boda",
+      "facet": "Versos famosos de Pombo",
+      "known_at": 10
+    },
+    {
+      "name": "Sombrero encintado",
+      "facet": "Versos famosos de Pombo",
+      "known_at": 9
+    },
+    {
+      "name": "Muy tieso y muy majo",
+      "facet": "Versos famosos de Pombo",
+      "known_at": 7
+    },
+    {
+      "name": "Gata candonga",
+      "facet": "Versos famosos de Pombo",
+      "known_at": 7
+    },
+    {
+      "name": "Convite de Mirringa Mirronga",
+      "facet": "Versos famosos de Pombo",
+      "known_at": 8
+    },
+    {
+      "name": "Pastelero",
+      "facet": "Versos famosos de Pombo",
+      "known_at": 6
+    },
+    {
+      "name": "Moraleja",
+      "facet": "Versos famosos de Pombo",
+      "known_at": 6
+    },
+    {
+      "name": "Fábula en verso",
+      "facet": "Versos famosos de Pombo",
+      "known_at": 7
+    },
+    {
+      "name": "Cuento en verso",
+      "facet": "Versos famosos de Pombo",
+      "known_at": 6
+    },
+    {
+      "name": "Moniquirá",
+      "facet": "Jairo Aníbal Niño y su obra",
+      "known_at": 12
+    },
+    {
+      "name": "Preguntario",
+      "facet": "Jairo Aníbal Niño y su obra",
+      "known_at": 10
+    },
+    {
+      "name": "Puro pájaro",
+      "facet": "Jairo Aníbal Niño y su obra",
+      "known_at": 11
+    },
+    {
+      "name": "Dalia y Zazir",
+      "facet": "Jairo Aníbal Niño y su obra",
+      "known_at": 11
+    },
+    {
+      "name": "Razzgo, Indo y Zas",
+      "facet": "Jairo Aníbal Niño y su obra",
+      "known_at": 12
+    },
+    {
+      "name": "Aviador Santiago",
+      "facet": "Jairo Aníbal Niño y su obra",
+      "known_at": 12
+    },
+    {
+      "name": "La estrella de papel",
+      "facet": "Jairo Aníbal Niño y su obra",
+      "known_at": 12
+    },
+    {
+      "name": "El monte calvo",
+      "facet": "Jairo Aníbal Niño y su obra",
+      "known_at": 13
+    },
+    {
+      "name": "Los inquilinos de la ira",
+      "facet": "Jairo Aníbal Niño y su obra",
+      "known_at": 14
+    },
+    {
+      "name": "Toda la vida",
+      "facet": "Jairo Aníbal Niño y su obra",
+      "known_at": 13
+    },
+    {
+      "name": "Premio Enka de Literatura Infantil",
+      "facet": "Jairo Aníbal Niño y su obra",
+      "known_at": 14
+    },
+    {
+      "name": "Poemas de amor para niños",
+      "facet": "Jairo Aníbal Niño y su obra",
+      "known_at": 10
+    },
+    {
+      "name": "Colombia mi abuelo y yo",
+      "facet": "Autores infantiles colombianos contemporáneos",
+      "known_at": 10
+    },
+    {
+      "name": "Claudia Rueda",
+      "facet": "Autores infantiles colombianos contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "El terror de sexto B",
+      "facet": "Autores infantiles colombianos contemporáneos",
+      "known_at": 10
+    },
+    {
+      "name": "Francisco Leal Quevedo",
+      "facet": "Autores infantiles colombianos contemporáneos",
+      "known_at": 14
+    },
+    {
+      "name": "Luis Darío Bernal Pinilla",
+      "facet": "Autores infantiles colombianos contemporáneos",
+      "known_at": 14
+    },
+    {
+      "name": "Pin Pon",
+      "facet": "Rondas, nanas y canciones infantiles",
+      "known_at": 2
+    },
+    {
+      "name": "Que llueva, que llueva",
+      "facet": "Rondas, nanas y canciones infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "A la víbora de la mar",
+      "facet": "Rondas, nanas y canciones infantiles",
+      "known_at": 4
+    },
+    {
+      "name": "Señora Santana",
+      "facet": "Rondas, nanas y canciones infantiles",
+      "known_at": 7
+    },
+    {
+      "name": "Arrurrú",
+      "facet": "Rondas, nanas y canciones infantiles",
+      "known_at": 4
+    },
+    {
+      "name": "Sana que sana, colita de rana",
+      "facet": "Rondas, nanas y canciones infantiles",
+      "known_at": 1
+    },
+    {
+      "name": "Tengo una muñeca vestida de azul",
+      "facet": "Rondas, nanas y canciones infantiles",
+      "known_at": 4
+    },
+    {
+      "name": "Cantoalegre",
+      "facet": "Rondas, nanas y canciones infantiles",
+      "known_at": 12
+    },
+    {
+      "name": "Arrullo del Pacífico",
+      "facet": "Rondas, nanas y canciones infantiles",
+      "known_at": 12
+    },
+    {
+      "name": "Ronda infantil",
+      "facet": "Rondas, nanas y canciones infantiles",
+      "known_at": 4
+    },
+    {
+      "name": "Adivinanza",
+      "facet": "Adivinanzas, trabalenguas y retahílas",
+      "known_at": 2
+    },
+    {
+      "name": "Trabalenguas",
+      "facet": "Adivinanzas, trabalenguas y retahílas",
+      "known_at": 3
+    },
+    {
+      "name": "Retahíla",
+      "facet": "Adivinanzas, trabalenguas y retahílas",
+      "known_at": 9
+    },
+    {
+      "name": "Jitanjáfora",
+      "facet": "Adivinanzas, trabalenguas y retahílas",
+      "known_at": 14
+    },
+    {
+      "name": "Pablito clavó un clavito",
+      "facet": "Adivinanzas, trabalenguas y retahílas",
+      "known_at": 3
+    },
+    {
+      "name": "Tres tristes tigres",
+      "facet": "Adivinanzas, trabalenguas y retahílas",
+      "known_at": 3
+    },
+    {
+      "name": "El cielo está enladrillado",
+      "facet": "Adivinanzas, trabalenguas y retahílas",
+      "known_at": 6
+    },
+    {
+      "name": "Erre con erre cigarro",
+      "facet": "Adivinanzas, trabalenguas y retahílas",
+      "known_at": 4
+    },
+    {
+      "name": "Pepe Pecas pica papas",
+      "facet": "Adivinanzas, trabalenguas y retahílas",
+      "known_at": 4
+    },
+    {
+      "name": "Compadre, cómpreme un coco",
+      "facet": "Adivinanzas, trabalenguas y retahílas",
+      "known_at": 5
+    },
+    {
+      "name": "Mi mamá me mima",
+      "facet": "Adivinanzas, trabalenguas y retahílas",
+      "known_at": 2
+    },
+    {
+      "name": "Tin marín de do pingüé",
+      "facet": "Adivinanzas, trabalenguas y retahílas",
+      "known_at": 3
+    },
+    {
+      "name": "Zapatico cochinito",
+      "facet": "Adivinanzas, trabalenguas y retahílas",
+      "known_at": 4
+    },
+    {
+      "name": "Pito pito colorito",
+      "facet": "Adivinanzas, trabalenguas y retahílas",
+      "known_at": 5
+    },
+    {
+      "name": "Oro parece, plata no es",
+      "facet": "Adivinanzas, trabalenguas y retahílas",
+      "known_at": 3
+    },
+    {
+      "name": "Agua pasa por mi casa",
+      "facet": "Adivinanzas, trabalenguas y retahílas",
+      "known_at": 4
+    },
+    {
+      "name": "Décima espinela",
+      "facet": "Coplas y décimas populares",
+      "known_at": 14
+    },
+    {
+      "name": "Cuarteta",
+      "facet": "Coplas y décimas populares",
+      "known_at": 11
+    },
+    {
+      "name": "Octosílabo",
+      "facet": "Coplas y décimas populares",
+      "known_at": 11
+    },
+    {
+      "name": "Trovador",
+      "facet": "Coplas y décimas populares",
+      "known_at": 7
+    },
+    {
+      "name": "Salvo Ruiz",
+      "facet": "Coplas y décimas populares",
+      "known_at": 13
+    },
+    {
+      "name": "Tío Tigre",
+      "facet": "Cuentos de Tío Conejo y Pedro Rimales",
+      "known_at": 5
+    },
+    {
+      "name": "Pedro Rimales",
+      "facet": "Cuentos de Tío Conejo y Pedro Rimales",
+      "known_at": 8
+    },
+    {
+      "name": "Pedro Urdemales",
+      "facet": "Cuentos de Tío Conejo y Pedro Rimales",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro de Urdemalas de Cervantes",
+      "facet": "Cuentos de Tío Conejo y Pedro Rimales",
+      "known_at": 14
+    },
+    {
+      "name": "Cosiaca",
+      "facet": "Cuentos de Tío Conejo y Pedro Rimales",
+      "known_at": 11
+    },
+    {
+      "name": "Juan Bobo",
+      "facet": "Cuentos de Tío Conejo y Pedro Rimales",
+      "known_at": 9
+    },
+    {
+      "name": "Muñeco de brea",
+      "facet": "Cuentos de Tío Conejo y Pedro Rimales",
+      "known_at": 12
+    },
+    {
+      "name": "Pícaro",
+      "facet": "Cuentos de Tío Conejo y Pedro Rimales",
+      "known_at": 8
+    },
+    {
+      "name": "Tradición oral",
+      "facet": "Cuentos de Tío Conejo y Pedro Rimales",
+      "known_at": 9
+    },
+    {
+      "name": "Cuentero",
+      "facet": "Cuentos de Tío Conejo y Pedro Rimales",
+      "known_at": 7
+    },
+    {
+      "name": "África Occidental",
+      "facet": "Cuentos de Tío Conejo y Pedro Rimales",
+      "known_at": 13
+    },
+    {
+      "name": "Fábula de animales",
+      "facet": "Cuentos de Tío Conejo y Pedro Rimales",
+      "known_at": 5
+    },
+    {
+      "name": "Astucia",
+      "facet": "Cuentos de Tío Conejo y Pedro Rimales",
+      "known_at": 5
+    },
+    {
+      "name": "Anansi",
+      "facet": "Relatos indígenas y afrocolombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Hugo Niño",
+      "facet": "Relatos indígenas y afrocolombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Mary Grueso Romero",
+      "facet": "Relatos indígenas y afrocolombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Manuel Zapata Olivella",
+      "facet": "Relatos indígenas y afrocolombianos",
+      "known_at": 12
+    },
+    {
+      "name": "BibloRed",
+      "facet": "Ferias, premios y bibliotecas infantiles",
+      "known_at": 10
+    },
+    {
+      "name": "Parques biblioteca",
+      "facet": "Ferias, premios y bibliotecas infantiles",
+      "known_at": 10
+    },
+    {
+      "name": "Luis Soriano",
+      "facet": "Ferias, premios y bibliotecas infantiles",
+      "known_at": 12
+    },
+    {
+      "name": "Fundalectura",
+      "facet": "Ferias, premios y bibliotecas infantiles",
+      "known_at": 13
+    },
+    {
+      "name": "Maguaré",
+      "facet": "Ferias, premios y bibliotecas infantiles",
+      "known_at": 10
+    },
+    {
+      "name": "Leer es mi cuento",
+      "facet": "Ferias, premios y bibliotecas infantiles",
+      "known_at": 11
+    },
+    {
+      "name": "Premio El Barco de Vapor",
+      "facet": "Ferias, premios y bibliotecas infantiles",
+      "known_at": 13
+    }
+  ]
+}

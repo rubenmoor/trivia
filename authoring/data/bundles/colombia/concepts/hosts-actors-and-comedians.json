@@ -1,0 +1,614 @@
+{
+  "subcategory": "hosts-actors-and-comedians",
+  "facets": [
+    "Presentadores de televisión",
+    "Presentadores de noticieros y periodistas",
+    "Narradores y comentaristas deportivos",
+    "Presentadores de realities y concursos",
+    "Actores y actrices de telenovelas",
+    "Personajes célebres de telenovelas y series",
+    "Actores colombianos en Hollywood y el exterior",
+    "Actores del cine colombiano",
+    "Humoristas de stand-up",
+    "Personajes cómicos, imitadores y sátira política",
+    "Programas de humor y frases célebres",
+    "Humoristas digitales y creadores de contenido"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 5,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Catalina Aristizábal",
+      "facet": "Presentadores de televisión",
+      "known_at": 8
+    },
+    {
+      "name": "Marcelo Cezán",
+      "facet": "Presentadores de televisión",
+      "known_at": 9
+    },
+    {
+      "name": "Ernesto Calzadilla",
+      "facet": "Presentadores de televisión",
+      "known_at": 8
+    },
+    {
+      "name": "Cristina Hurtado",
+      "facet": "Presentadores de televisión",
+      "known_at": 8
+    },
+    {
+      "name": "Mónica Rodríguez",
+      "facet": "Presentadores de televisión",
+      "known_at": 9
+    },
+    {
+      "name": "Paola Turbay",
+      "facet": "Presentadores de televisión",
+      "known_at": 10
+    },
+    {
+      "name": "Linda Palma",
+      "facet": "Presentadores de televisión",
+      "known_at": 10
+    },
+    {
+      "name": "Jorge Alfredo Vargas",
+      "facet": "Presentadores de noticieros y periodistas",
+      "known_at": 8
+    },
+    {
+      "name": "Vanessa de la Torre",
+      "facet": "Presentadores de noticieros y periodistas",
+      "known_at": 10
+    },
+    {
+      "name": "Claudia Gurisatti",
+      "facet": "Presentadores de noticieros y periodistas",
+      "known_at": 10
+    },
+    {
+      "name": "Darío Arizmendi",
+      "facet": "Presentadores de noticieros y periodistas",
+      "known_at": 12
+    },
+    {
+      "name": "Mónica Jaramillo",
+      "facet": "Presentadores de noticieros y periodistas",
+      "known_at": 10
+    },
+    {
+      "name": "Vicky Dávila",
+      "facet": "Presentadores de noticieros y periodistas",
+      "known_at": 10
+    },
+    {
+      "name": "María Elvira Arango",
+      "facet": "Presentadores de noticieros y periodistas",
+      "known_at": 12
+    },
+    {
+      "name": "Inés María Zabaraín",
+      "facet": "Presentadores de noticieros y periodistas",
+      "known_at": 13
+    },
+    {
+      "name": "Néstor Morales",
+      "facet": "Presentadores de noticieros y periodistas",
+      "known_at": 12
+    },
+    {
+      "name": "Daniel Coronell",
+      "facet": "Presentadores de noticieros y periodistas",
+      "known_at": 13
+    },
+    {
+      "name": "Mábel Lara",
+      "facet": "Presentadores de noticieros y periodistas",
+      "known_at": 11
+    },
+    {
+      "name": "Juan Roberto Vargas",
+      "facet": "Presentadores de noticieros y periodistas",
+      "known_at": 12
+    },
+    {
+      "name": "Alejandra Giraldo",
+      "facet": "Presentadores de noticieros y periodistas",
+      "known_at": 11
+    },
+    {
+      "name": "Silvia Corzo",
+      "facet": "Presentadores de noticieros y periodistas",
+      "known_at": 12
+    },
+    {
+      "name": "Diana Uribe",
+      "facet": "Presentadores de noticieros y periodistas",
+      "known_at": 11
+    },
+    {
+      "name": "Carlos Antonio Vélez",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 9
+    },
+    {
+      "name": "Javier Fernández, el Cantante del Gol",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 9
+    },
+    {
+      "name": "William Vinasco Ch.",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 10
+    },
+    {
+      "name": "Édgar Perea",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 12
+    },
+    {
+      "name": "Hernán Peláez",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 12
+    },
+    {
+      "name": "Iván Mejía",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 12
+    },
+    {
+      "name": "Eduardo Luis López",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 11
+    },
+    {
+      "name": "César Augusto Londoño",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 11
+    },
+    {
+      "name": "Jorge Eliécer Campuzano",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 12
+    },
+    {
+      "name": "Andrés Marocco",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Felipe Cadavid",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 12
+    },
+    {
+      "name": "Antonio Casale",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 12
+    },
+    {
+      "name": "Wbeimar Muñoz Ceballos",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 13
+    },
+    {
+      "name": "Héctor Urrego",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 14
+    },
+    {
+      "name": "Javier Hernández Bonnet",
+      "facet": "Narradores y comentaristas deportivos",
+      "known_at": 12
+    },
+    {
+      "name": "Protagonistas de Nuestra Tele",
+      "facet": "Presentadores de realities y concursos",
+      "known_at": 8
+    },
+    {
+      "name": "La Voz Kids Colombia",
+      "facet": "Presentadores de realities y concursos",
+      "known_at": 4
+    },
+    {
+      "name": "¿Quién quiere ser millonario?",
+      "facet": "Presentadores de realities y concursos",
+      "known_at": 8
+    },
+    {
+      "name": "Do Re Millonarios",
+      "facet": "Presentadores de realities y concursos",
+      "known_at": 13
+    },
+    {
+      "name": "Claudia Bahamón",
+      "facet": "Presentadores de realities y concursos",
+      "known_at": 7
+    },
+    {
+      "name": "Paulo Laserna Phillips",
+      "facet": "Presentadores de realities y concursos",
+      "known_at": 11
+    },
+    {
+      "name": "Jorge Rausch",
+      "facet": "Presentadores de realities y concursos",
+      "known_at": 8
+    },
+    {
+      "name": "Nicolás de Zubiría",
+      "facet": "Presentadores de realities y concursos",
+      "known_at": 8
+    },
+    {
+      "name": "Judy Henríquez",
+      "facet": "Actores y actrices de telenovelas",
+      "known_at": 13
+    },
+    {
+      "name": "Kathy Sáenz",
+      "facet": "Actores y actrices de telenovelas",
+      "known_at": 11
+    },
+    {
+      "name": "Lina Tejeiro",
+      "facet": "Actores y actrices de telenovelas",
+      "known_at": 7
+    },
+    {
+      "name": "Sebastián Martínez",
+      "facet": "Actores y actrices de telenovelas",
+      "known_at": 10
+    },
+    {
+      "name": "Laura Londoño",
+      "facet": "Actores y actrices de telenovelas",
+      "known_at": 10
+    },
+    {
+      "name": "Diego Cadavid",
+      "facet": "Actores y actrices de telenovelas",
+      "known_at": 10
+    },
+    {
+      "name": "Marcela Mar",
+      "facet": "Actores y actrices de telenovelas",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro Coral",
+      "facet": "Personajes célebres de telenovelas y series",
+      "known_at": 8
+    },
+    {
+      "name": "Paula Dávila",
+      "facet": "Personajes célebres de telenovelas y series",
+      "known_at": 12
+    },
+    {
+      "name": "Germán",
+      "facet": "Personajes célebres de telenovelas y series",
+      "known_at": 8
+    },
+    {
+      "name": "John Leguizamo",
+      "facet": "Actores colombianos en Hollywood y el exterior",
+      "known_at": 10
+    },
+    {
+      "name": "Catalina Sandino Moreno",
+      "facet": "Actores colombianos en Hollywood y el exterior",
+      "known_at": 12
+    },
+    {
+      "name": "Juana Acosta",
+      "facet": "Actores colombianos en Hollywood y el exterior",
+      "known_at": 12
+    },
+    {
+      "name": "Angie Cepeda",
+      "facet": "Actores colombianos en Hollywood y el exterior",
+      "known_at": 12
+    },
+    {
+      "name": "Carolina Guerra",
+      "facet": "Actores colombianos en Hollywood y el exterior",
+      "known_at": 12
+    },
+    {
+      "name": "Natalia Reyes",
+      "facet": "Actores colombianos en Hollywood y el exterior",
+      "known_at": 11
+    },
+    {
+      "name": "Diane Guerrero",
+      "facet": "Actores colombianos en Hollywood y el exterior",
+      "known_at": 10
+    },
+    {
+      "name": "Stephanie Beatriz",
+      "facet": "Actores colombianos en Hollywood y el exterior",
+      "known_at": 9
+    },
+    {
+      "name": "Moisés Arias",
+      "facet": "Actores colombianos en Hollywood y el exterior",
+      "known_at": 11
+    },
+    {
+      "name": "Wilmer Valderrama",
+      "facet": "Actores colombianos en Hollywood y el exterior",
+      "known_at": 12
+    },
+    {
+      "name": "Carolina Gómez",
+      "facet": "Actores colombianos en Hollywood y el exterior",
+      "known_at": 11
+    },
+    {
+      "name": "Frank Ramírez",
+      "facet": "Actores del cine colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos Benjumea",
+      "facet": "Actores del cine colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Fernando Solórzano",
+      "facet": "Actores del cine colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Hernán Méndez",
+      "facet": "Actores del cine colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Salvo Basile",
+      "facet": "Actores del cine colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Antonio Bolívar",
+      "facet": "Actores del cine colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Nilbio Torres",
+      "facet": "Actores del cine colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Carmiña Martínez",
+      "facet": "Actores del cine colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "John Alex Toro",
+      "facet": "Actores del cine colombiano",
+      "known_at": 10
+    },
+    {
+      "name": "Ramiro Meneses",
+      "facet": "Actores del cine colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Marlon Moreno",
+      "facet": "Actores del cine colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Edgardo Román",
+      "facet": "Actores del cine colombiano",
+      "known_at": 13,
+      "retired": "unaskable: Too obscure; options (sequence, completion) give no fair question."
+    },
+    {
+      "name": "Martina García",
+      "facet": "Actores del cine colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Alejandro Riaño",
+      "facet": "Humoristas de stand-up",
+      "known_at": 9
+    },
+    {
+      "name": "Liss Pereira",
+      "facet": "Humoristas de stand-up",
+      "known_at": 10
+    },
+    {
+      "name": "Iván Marín",
+      "facet": "Humoristas de stand-up",
+      "known_at": 11
+    },
+    {
+      "name": "Antonio Sanint",
+      "facet": "Humoristas de stand-up",
+      "known_at": 11
+    },
+    {
+      "name": "Hassam",
+      "facet": "Humoristas de stand-up",
+      "known_at": 8
+    },
+    {
+      "name": "Lokillo Flórez",
+      "facet": "Humoristas de stand-up",
+      "known_at": 9
+    },
+    {
+      "name": "La Gorda Fabiola",
+      "facet": "Humoristas de stand-up",
+      "known_at": 7
+    },
+    {
+      "name": "Alerta",
+      "facet": "Humoristas de stand-up",
+      "known_at": 8
+    },
+    {
+      "name": "Boyacomán",
+      "facet": "Humoristas de stand-up",
+      "known_at": 9
+    },
+    {
+      "name": "Jeringa",
+      "facet": "Humoristas de stand-up",
+      "known_at": 10
+    },
+    {
+      "name": "Néstor Elí",
+      "facet": "Personajes cómicos, imitadores y sátira política",
+      "known_at": 13
+    },
+    {
+      "name": "Dioselina Tibaná",
+      "facet": "Personajes cómicos, imitadores y sátira política",
+      "known_at": 13
+    },
+    {
+      "name": "John Lenin",
+      "facet": "Personajes cómicos, imitadores y sátira política",
+      "known_at": 13
+    },
+    {
+      "name": "Inti de la Hoz",
+      "facet": "Personajes cómicos, imitadores y sátira política",
+      "known_at": 14
+    },
+    {
+      "name": "Vargasvil",
+      "facet": "Personajes cómicos, imitadores y sátira política",
+      "known_at": 12
+    },
+    {
+      "name": "Daniel Samper Ospina",
+      "facet": "Personajes cómicos, imitadores y sátira política",
+      "known_at": 12
+    },
+    {
+      "name": "Guillermo Díaz Salamanca",
+      "facet": "Personajes cómicos, imitadores y sátira política",
+      "known_at": 13
+    },
+    {
+      "name": "Nicolás Arrieta",
+      "facet": "Humoristas digitales y creadores de contenido",
+      "known_at": 9
+    },
+    {
+      "name": "La Liendra",
+      "facet": "Humoristas digitales y creadores de contenido",
+      "known_at": 6
+    },
+    {
+      "name": "Dani Duke",
+      "facet": "Humoristas digitales y creadores de contenido",
+      "known_at": 8
+    },
+    {
+      "name": "Yeferson Cossio",
+      "facet": "Humoristas digitales y creadores de contenido",
+      "known_at": 6
+    },
+    {
+      "name": "Pautips",
+      "facet": "Humoristas digitales y creadores de contenido",
+      "known_at": 8
+    },
+    {
+      "name": "Kika Nieto",
+      "facet": "Humoristas digitales y creadores de contenido",
+      "known_at": 6
+    },
+    {
+      "name": "Calle y Poché",
+      "facet": "Humoristas digitales y creadores de contenido",
+      "known_at": 8
+    },
+    {
+      "name": "Juan Pablo Jaramillo",
+      "facet": "Humoristas digitales y creadores de contenido",
+      "known_at": 8
+    },
+    {
+      "name": "Sebastián Villalobos",
+      "facet": "Humoristas digitales y creadores de contenido",
+      "known_at": 8
+    },
+    {
+      "name": "Westcol",
+      "facet": "Humoristas digitales y creadores de contenido",
+      "known_at": 6,
+      "retired": "unaskable: Content and controversies are not family-friendly."
+    },
+    {
+      "name": "Luisa Fernanda W",
+      "facet": "Humoristas digitales y creadores de contenido",
+      "known_at": 6
+    },
+    {
+      "name": "Ami Rodríguez",
+      "facet": "Humoristas digitales y creadores de contenido",
+      "known_at": 8
+    },
+    {
+      "name": "Andrea Valdiri",
+      "facet": "Humoristas digitales y creadores de contenido",
+      "known_at": 8
+    },
+    {
+      "name": "Valentina Taguado",
+      "facet": "Humoristas digitales y creadores de contenido",
+      "known_at": 9
+    }
+  ]
+}

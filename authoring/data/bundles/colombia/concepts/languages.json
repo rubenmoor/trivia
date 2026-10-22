@@ -1,0 +1,782 @@
+{
+  "subcategory": "languages",
+  "facets": [
+    "Lenguas indígenas y sus pueblos",
+    "Palenquero y creole sanandresano",
+    "Acentos y dialectos regionales",
+    "Voseo, ustedeo y formas de tratamiento",
+    "Palabras indígenas del habla diaria",
+    "Herencia africana en el vocabulario",
+    "Nombres de lugares de origen indígena",
+    "Lengua de Señas Colombiana",
+    "Rromaní y lenguas llegadas de afuera",
+    "Leyes, Constitución e instituciones lingüísticas",
+    "Lenguas en riesgo y su rescate",
+    "Lenguas en música, cine y literatura"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 3,
+      "estimate": 3,
+      "record": 3,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Wayuunaiki",
+      "facet": "Lenguas indígenas y sus pueblos",
+      "known_at": 6
+    },
+    {
+      "name": "Nasa yuwe",
+      "facet": "Lenguas indígenas y sus pueblos",
+      "known_at": 11
+    },
+    {
+      "name": "Namtrik (lengua misak)",
+      "facet": "Lenguas indígenas y sus pueblos",
+      "known_at": 12
+    },
+    {
+      "name": "Pueblo kogui",
+      "facet": "Lenguas indígenas y sus pueblos",
+      "known_at": 8
+    },
+    {
+      "name": "Inga",
+      "facet": "Lenguas indígenas y sus pueblos",
+      "known_at": 12
+    },
+    {
+      "name": "Tucano",
+      "facet": "Lenguas indígenas y sus pueblos",
+      "known_at": 12
+    },
+    {
+      "name": "Pueblo wiwa",
+      "facet": "Lenguas indígenas y sus pueblos",
+      "known_at": 12
+    },
+    {
+      "name": "Gunadule",
+      "facet": "Lenguas indígenas y sus pueblos",
+      "known_at": 13
+    },
+    {
+      "name": "Pueblo u'wa",
+      "facet": "Lenguas indígenas y sus pueblos",
+      "known_at": 12
+    },
+    {
+      "name": "Pueblo barí",
+      "facet": "Lenguas indígenas y sus pueblos",
+      "known_at": 13
+    },
+    {
+      "name": "Familia lingüística chibcha",
+      "facet": "Lenguas indígenas y sus pueblos",
+      "known_at": 10
+    },
+    {
+      "name": "Familia lingüística arawak",
+      "facet": "Lenguas indígenas y sus pueblos",
+      "known_at": 13
+    },
+    {
+      "name": "Lengua palenquera",
+      "facet": "Palenquero y creole sanandresano",
+      "known_at": 7
+    },
+    {
+      "name": "Benkos Biohó",
+      "facet": "Palenquero y creole sanandresano",
+      "known_at": 9
+    },
+    {
+      "name": "Creole sanandresano",
+      "facet": "Palenquero y creole sanandresano",
+      "known_at": 7
+    },
+    {
+      "name": "Pueblo raizal",
+      "facet": "Palenquero y creole sanandresano",
+      "known_at": 8
+    },
+    {
+      "name": "Isla de San Andrés",
+      "facet": "Palenquero y creole sanandresano",
+      "known_at": 3
+    },
+    {
+      "name": "Isla de Providencia",
+      "facet": "Palenquero y creole sanandresano",
+      "known_at": 6
+    },
+    {
+      "name": "Lengua criolla",
+      "facet": "Palenquero y creole sanandresano",
+      "known_at": 10
+    },
+    {
+      "name": "Lumbalú",
+      "facet": "Palenquero y creole sanandresano",
+      "known_at": 12
+    },
+    {
+      "name": "Ma-kuagro",
+      "facet": "Palenquero y creole sanandresano",
+      "known_at": 13
+    },
+    {
+      "name": "Palenqueras vendedoras de frutas",
+      "facet": "Palenquero y creole sanandresano",
+      "known_at": 4
+    },
+    {
+      "name": "Obra Maestra del Patrimonio Oral de la Humanidad",
+      "facet": "Palenquero y creole sanandresano",
+      "known_at": 11
+    },
+    {
+      "name": "Cimarrones",
+      "facet": "Palenquero y creole sanandresano",
+      "known_at": 9
+    },
+    {
+      "name": "Iglesia bautista de San Andrés",
+      "facet": "Palenquero y creole sanandresano",
+      "known_at": 12
+    },
+    {
+      "name": "Inglés de los raizales",
+      "facet": "Palenquero y creole sanandresano",
+      "known_at": 9
+    },
+    {
+      "name": "Acento paisa",
+      "facet": "Acentos y dialectos regionales",
+      "known_at": 3
+    },
+    {
+      "name": "Acento costeño",
+      "facet": "Acentos y dialectos regionales",
+      "known_at": 3
+    },
+    {
+      "name": "Acento rolo",
+      "facet": "Acentos y dialectos regionales",
+      "known_at": 4
+    },
+    {
+      "name": "Acento caleño",
+      "facet": "Acentos y dialectos regionales",
+      "known_at": 5
+    },
+    {
+      "name": "Acento pastuso",
+      "facet": "Acentos y dialectos regionales",
+      "known_at": 5
+    },
+    {
+      "name": "Acento santandereano",
+      "facet": "Acentos y dialectos regionales",
+      "known_at": 5
+    },
+    {
+      "name": "Acento boyacense",
+      "facet": "Acentos y dialectos regionales",
+      "known_at": 5
+    },
+    {
+      "name": "Acento llanero",
+      "facet": "Acentos y dialectos regionales",
+      "known_at": 6
+    },
+    {
+      "name": "Acento opita",
+      "facet": "Acentos y dialectos regionales",
+      "known_at": 7
+    },
+    {
+      "name": "Acento chocoano",
+      "facet": "Acentos y dialectos regionales",
+      "known_at": 7
+    },
+    {
+      "name": "Acento tolimense",
+      "facet": "Acentos y dialectos regionales",
+      "known_at": 8
+    },
+    {
+      "name": "Acento cucuteño",
+      "facet": "Acentos y dialectos regionales",
+      "known_at": 8
+    },
+    {
+      "name": "Aspiración de la s",
+      "facet": "Acentos y dialectos regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Parlache",
+      "facet": "Acentos y dialectos regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Español andino",
+      "facet": "Acentos y dialectos regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Español caribeño",
+      "facet": "Acentos y dialectos regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Voseo",
+      "facet": "Voseo, ustedeo y formas de tratamiento",
+      "known_at": 8
+    },
+    {
+      "name": "Ustedeo",
+      "facet": "Voseo, ustedeo y formas de tratamiento",
+      "known_at": 10
+    },
+    {
+      "name": "Tuteo",
+      "facet": "Voseo, ustedeo y formas de tratamiento",
+      "known_at": 9
+    },
+    {
+      "name": "Don y doña",
+      "facet": "Voseo, ustedeo y formas de tratamiento",
+      "known_at": 3
+    },
+    {
+      "name": "Veci",
+      "facet": "Voseo, ustedeo y formas de tratamiento",
+      "known_at": 3
+    },
+    {
+      "name": "Mi rey",
+      "facet": "Voseo, ustedeo y formas de tratamiento",
+      "known_at": 5
+    },
+    {
+      "name": "Doctor como tratamiento",
+      "facet": "Voseo, ustedeo y formas de tratamiento",
+      "known_at": 8
+    },
+    {
+      "name": "Patrón",
+      "facet": "Voseo, ustedeo y formas de tratamiento",
+      "known_at": 6
+    },
+    {
+      "name": "Compadre",
+      "facet": "Voseo, ustedeo y formas de tratamiento",
+      "known_at": 5
+    },
+    {
+      "name": "Mano",
+      "facet": "Voseo, ustedeo y formas de tratamiento",
+      "known_at": 5
+    },
+    {
+      "name": "Joven (para llamar al mesero)",
+      "facet": "Voseo, ustedeo y formas de tratamiento",
+      "known_at": 6
+    },
+    {
+      "name": "Socio",
+      "facet": "Voseo, ustedeo y formas de tratamiento",
+      "known_at": 6
+    },
+    {
+      "name": "Cacique",
+      "facet": "Palabras indígenas del habla diaria",
+      "known_at": 7
+    },
+    {
+      "name": "Cuncho",
+      "facet": "Palabras indígenas del habla diaria",
+      "known_at": 9
+    },
+    {
+      "name": "Chocolate",
+      "facet": "Palabras indígenas del habla diaria",
+      "known_at": 6
+    },
+    {
+      "name": "Tomate",
+      "facet": "Palabras indígenas del habla diaria",
+      "known_at": 7
+    },
+    {
+      "name": "Marimba",
+      "facet": "Herencia africana en el vocabulario",
+      "known_at": 7
+    },
+    {
+      "name": "Mondongo",
+      "facet": "Herencia africana en el vocabulario",
+      "known_at": 8
+    },
+    {
+      "name": "Ñame",
+      "facet": "Herencia africana en el vocabulario",
+      "known_at": 9
+    },
+    {
+      "name": "Guandú",
+      "facet": "Herencia africana en el vocabulario",
+      "known_at": 11
+    },
+    {
+      "name": "Bemba",
+      "facet": "Herencia africana en el vocabulario",
+      "known_at": 9
+    },
+    {
+      "name": "Mandinga",
+      "facet": "Herencia africana en el vocabulario",
+      "known_at": 12
+    },
+    {
+      "name": "Burundanga",
+      "facet": "Herencia africana en el vocabulario",
+      "known_at": 11
+    },
+    {
+      "name": "Guineo",
+      "facet": "Herencia africana en el vocabulario",
+      "known_at": 8
+    },
+    {
+      "name": "Malanga",
+      "facet": "Herencia africana en el vocabulario",
+      "known_at": 12
+    },
+    {
+      "name": "Currulao",
+      "facet": "Herencia africana en el vocabulario",
+      "known_at": 8
+    },
+    {
+      "name": "Mapalé",
+      "facet": "Herencia africana en el vocabulario",
+      "known_at": 7
+    },
+    {
+      "name": "Cununo",
+      "facet": "Herencia africana en el vocabulario",
+      "known_at": 11
+    },
+    {
+      "name": "Tambor alegre",
+      "facet": "Herencia africana en el vocabulario",
+      "known_at": 9
+    },
+    {
+      "name": "Kikongo",
+      "facet": "Herencia africana en el vocabulario",
+      "known_at": 13
+    },
+    {
+      "name": "Lenguas bantúes",
+      "facet": "Herencia africana en el vocabulario",
+      "known_at": 12
+    },
+    {
+      "name": "Fusagasugá",
+      "facet": "Nombres de lugares de origen indígena",
+      "known_at": 8
+    },
+    {
+      "name": "Sogamoso",
+      "facet": "Nombres de lugares de origen indígena",
+      "known_at": 8
+    },
+    {
+      "name": "Caquetá",
+      "facet": "Nombres de lugares de origen indígena",
+      "known_at": 7
+    },
+    {
+      "name": "Putumayo",
+      "facet": "Nombres de lugares de origen indígena",
+      "known_at": 7
+    },
+    {
+      "name": "Guaviare",
+      "facet": "Nombres de lugares de origen indígena",
+      "known_at": 8
+    },
+    {
+      "name": "Vaupés",
+      "facet": "Nombres de lugares de origen indígena",
+      "known_at": 9
+    },
+    {
+      "name": "Soacha",
+      "facet": "Nombres de lugares de origen indígena",
+      "known_at": 8
+    },
+    {
+      "name": "Lengua de Señas Colombiana",
+      "facet": "Lengua de Señas Colombiana",
+      "known_at": 5
+    },
+    {
+      "name": "INSOR",
+      "facet": "Lengua de Señas Colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "FENASCOL",
+      "facet": "Lengua de Señas Colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Ley 324 de 1996",
+      "facet": "Lengua de Señas Colombiana",
+      "known_at": 14
+    },
+    {
+      "name": "Ley 982 de 2005",
+      "facet": "Lengua de Señas Colombiana",
+      "known_at": 14
+    },
+    {
+      "name": "Intérprete de lengua de señas",
+      "facet": "Lengua de Señas Colombiana",
+      "known_at": 4
+    },
+    {
+      "name": "Recuadro del intérprete en televisión",
+      "facet": "Lengua de Señas Colombiana",
+      "known_at": 4
+    },
+    {
+      "name": "Comunidad sorda",
+      "facet": "Lengua de Señas Colombiana",
+      "known_at": 7
+    },
+    {
+      "name": "Alfabeto dactilológico",
+      "facet": "Lengua de Señas Colombiana",
+      "known_at": 10
+    },
+    {
+      "name": "Seña personal",
+      "facet": "Lengua de Señas Colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Expresión facial en señas",
+      "facet": "Lengua de Señas Colombiana",
+      "known_at": 8
+    },
+    {
+      "name": "Día Internacional de las Lenguas de Señas",
+      "facet": "Lengua de Señas Colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Persona oyente",
+      "facet": "Lengua de Señas Colombiana",
+      "known_at": 8
+    },
+    {
+      "name": "Configuración manual",
+      "facet": "Lengua de Señas Colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "CODA (hijo oyente de padres sordos)",
+      "facet": "Lengua de Señas Colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Implante coclear",
+      "facet": "Lengua de Señas Colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Rromaní",
+      "facet": "Rromaní y lenguas llegadas de afuera",
+      "known_at": 11
+    },
+    {
+      "name": "Pueblo rrom",
+      "facet": "Rromaní y lenguas llegadas de afuera",
+      "known_at": 9
+    },
+    {
+      "name": "Kumpania",
+      "facet": "Rromaní y lenguas llegadas de afuera",
+      "known_at": 13
+    },
+    {
+      "name": "Kris rromaní",
+      "facet": "Rromaní y lenguas llegadas de afuera",
+      "known_at": 14
+    },
+    {
+      "name": "Comunidad sirio-libanesa",
+      "facet": "Rromaní y lenguas llegadas de afuera",
+      "known_at": 10
+    },
+    {
+      "name": "Turco (apodo de inmigrantes árabes)",
+      "facet": "Rromaní y lenguas llegadas de afuera",
+      "known_at": 11
+    },
+    {
+      "name": "Inmigrantes japoneses del Valle del Cauca",
+      "facet": "Rromaní y lenguas llegadas de afuera",
+      "known_at": 13
+    },
+    {
+      "name": "Anglicismos",
+      "facet": "Rromaní y lenguas llegadas de afuera",
+      "known_at": 9
+    },
+    {
+      "name": "Galicismos",
+      "facet": "Rromaní y lenguas llegadas de afuera",
+      "known_at": 11
+    },
+    {
+      "name": "Arabismos",
+      "facet": "Rromaní y lenguas llegadas de afuera",
+      "known_at": 10
+    },
+    {
+      "name": "Portugués en Leticia",
+      "facet": "Rromaní y lenguas llegadas de afuera",
+      "known_at": 9
+    },
+    {
+      "name": "Latín",
+      "facet": "Rromaní y lenguas llegadas de afuera",
+      "known_at": 7
+    },
+    {
+      "name": "Venezolanismos",
+      "facet": "Rromaní y lenguas llegadas de afuera",
+      "known_at": 8
+    },
+    {
+      "name": "Quechua",
+      "facet": "Rromaní y lenguas llegadas de afuera",
+      "known_at": 8
+    },
+    {
+      "name": "Inmigrantes alemanes en Colombia",
+      "facet": "Rromaní y lenguas llegadas de afuera",
+      "known_at": 13
+    },
+    {
+      "name": "Artículo 10 de la Constitución",
+      "facet": "Leyes, Constitución e instituciones lingüísticas",
+      "known_at": 13
+    },
+    {
+      "name": "Ley de Lenguas Nativas (Ley 1381 de 2010)",
+      "facet": "Leyes, Constitución e instituciones lingüísticas",
+      "known_at": 13
+    },
+    {
+      "name": "Instituto Caro y Cuervo",
+      "facet": "Leyes, Constitución e instituciones lingüísticas",
+      "known_at": 10
+    },
+    {
+      "name": "Diccionario de construcción y régimen",
+      "facet": "Leyes, Constitución e instituciones lingüísticas",
+      "known_at": 14
+    },
+    {
+      "name": "Lengua oficial",
+      "facet": "Leyes, Constitución e instituciones lingüísticas",
+      "known_at": 6
+    },
+    {
+      "name": "Etnoeducación",
+      "facet": "Leyes, Constitución e instituciones lingüísticas",
+      "known_at": 12
+    },
+    {
+      "name": "Ministerio de Cultura",
+      "facet": "Leyes, Constitución e instituciones lingüísticas",
+      "known_at": 8
+    },
+    {
+      "name": "Día Internacional de la Lengua Materna",
+      "facet": "Leyes, Constitución e instituciones lingüísticas",
+      "known_at": 11
+    },
+    {
+      "name": "Atlas Lingüístico-Etnográfico de Colombia",
+      "facet": "Leyes, Constitución e instituciones lingüísticas",
+      "known_at": 14
+    },
+    {
+      "name": "Andrés Bello",
+      "facet": "Leyes, Constitución e instituciones lingüísticas",
+      "known_at": 11
+    },
+    {
+      "name": "Muysccubun",
+      "facet": "Lenguas en riesgo y su rescate",
+      "known_at": 10
+    },
+    {
+      "name": "Lengua en peligro",
+      "facet": "Lenguas en riesgo y su rescate",
+      "known_at": 8
+    },
+    {
+      "name": "Lengua extinta",
+      "facet": "Lenguas en riesgo y su rescate",
+      "known_at": 9
+    },
+    {
+      "name": "Revitalización lingüística",
+      "facet": "Lenguas en riesgo y su rescate",
+      "known_at": 12
+    },
+    {
+      "name": "Atlas UNESCO de las lenguas en peligro",
+      "facet": "Lenguas en riesgo y su rescate",
+      "known_at": 13
+    },
+    {
+      "name": "Pueblo nukak",
+      "facet": "Lenguas en riesgo y su rescate",
+      "known_at": 11
+    },
+    {
+      "name": "Tinigua",
+      "facet": "Lenguas en riesgo y su rescate",
+      "known_at": 15
+    },
+    {
+      "name": "Pueblo pijao",
+      "facet": "Lenguas en riesgo y su rescate",
+      "known_at": 9
+    },
+    {
+      "name": "Carijona",
+      "facet": "Lenguas en riesgo y su rescate",
+      "known_at": 14
+    },
+    {
+      "name": "Andoque",
+      "facet": "Lenguas en riesgo y su rescate",
+      "known_at": 15
+    },
+    {
+      "name": "Achagua",
+      "facet": "Lenguas en riesgo y su rescate",
+      "known_at": 14
+    },
+    {
+      "name": "Bora",
+      "facet": "Lenguas en riesgo y su rescate",
+      "known_at": 14
+    },
+    {
+      "name": "Mamos",
+      "facet": "Lenguas en riesgo y su rescate",
+      "known_at": 10
+    },
+    {
+      "name": "Emisoras comunitarias indígenas",
+      "facet": "Lenguas en riesgo y su rescate",
+      "known_at": 11
+    },
+    {
+      "name": "Bilingüismo",
+      "facet": "Lenguas en riesgo y su rescate",
+      "known_at": 7
+    },
+    {
+      "name": "Abuelos sabedores",
+      "facet": "Lenguas en riesgo y su rescate",
+      "known_at": 10
+    },
+    {
+      "name": "Década Internacional de las Lenguas Indígenas",
+      "facet": "Lenguas en riesgo y su rescate",
+      "known_at": 13
+    },
+    {
+      "name": "Kombilesa Mi",
+      "facet": "Lenguas en música, cine y literatura",
+      "known_at": 13
+    },
+    {
+      "name": "Las Alegres Ambulancias",
+      "facet": "Lenguas en música, cine y literatura",
+      "known_at": 13
+    },
+    {
+      "name": "Paulino Salgado Batata",
+      "facet": "Lenguas en música, cine y literatura",
+      "known_at": 13
+    },
+    {
+      "name": "Hugo Jamioy",
+      "facet": "Lenguas en música, cine y literatura",
+      "known_at": 14
+    },
+    {
+      "name": "Vito Apüshana",
+      "facet": "Lenguas en música, cine y literatura",
+      "known_at": 14
+    },
+    {
+      "name": "Fredy Chikangana",
+      "facet": "Lenguas en música, cine y literatura",
+      "known_at": 14
+    }
+  ]
+}

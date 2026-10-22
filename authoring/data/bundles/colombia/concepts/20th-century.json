@@ -1,0 +1,1073 @@
+{
+  "subcategory": "20th-century",
+  "facets": [
+    "Guerra de los Mil Días y Panamá",
+    "Gobiernos y presidentes del siglo",
+    "El Bogotazo y La Violencia",
+    "Frente Nacional y dictadura de Rojas",
+    "Constitución de 1991",
+    "Café, bananeras y economía",
+    "Ciudades, transporte y modernización",
+    "Radio, televisión y prensa",
+    "Literatura y artes del siglo XX",
+    "Música colombiana del siglo XX",
+    "Deporte y hazañas deportivas",
+    "Vida cotidiana y costumbres de antes"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Separación de Panamá",
+      "facet": "Guerra de los Mil Días y Panamá",
+      "known_at": 6
+    },
+    {
+      "name": "Canal de Panamá",
+      "facet": "Guerra de los Mil Días y Panamá",
+      "known_at": 5
+    },
+    {
+      "name": "José Manuel Marroquín",
+      "facet": "Guerra de los Mil Días y Panamá",
+      "known_at": 13
+    },
+    {
+      "name": "Tratado Herrán-Hay",
+      "facet": "Guerra de los Mil Días y Panamá",
+      "known_at": 14
+    },
+    {
+      "name": "Tratado Urrutia-Thomson",
+      "facet": "Guerra de los Mil Días y Panamá",
+      "known_at": 14
+    },
+    {
+      "name": "Theodore Roosevelt",
+      "facet": "Guerra de los Mil Días y Panamá",
+      "known_at": 11
+    },
+    {
+      "name": "Victoriano Lorenzo",
+      "facet": "Guerra de los Mil Días y Panamá",
+      "known_at": 14
+    },
+    {
+      "name": "Manuel Amador Guerrero",
+      "facet": "Guerra de los Mil Días y Panamá",
+      "known_at": 14
+    },
+    {
+      "name": "Philippe Bunau-Varilla",
+      "facet": "Guerra de los Mil Días y Panamá",
+      "known_at": 15
+    },
+    {
+      "name": "Rafael Reyes",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 12
+    },
+    {
+      "name": "Hegemonía Conservadora",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 13
+    },
+    {
+      "name": "Marco Fidel Suárez",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 12
+    },
+    {
+      "name": "República Liberal",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 13
+    },
+    {
+      "name": "Enrique Olaya Herrera",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 13
+    },
+    {
+      "name": "Alfonso López Pumarejo",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 12
+    },
+    {
+      "name": "Revolución en Marcha",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 14
+    },
+    {
+      "name": "Eduardo Santos",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 13
+    },
+    {
+      "name": "Mariano Ospina Pérez",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 12
+    },
+    {
+      "name": "Laureano Gómez",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 12
+    },
+    {
+      "name": "Guerra colombo-peruana",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 13
+    },
+    {
+      "name": "Batallón Colombia en Corea",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Lleras Restrepo",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 13
+    },
+    {
+      "name": "Misael Pastrana Borrero",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 13
+    },
+    {
+      "name": "Alfonso López Michelsen",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 13
+    },
+    {
+      "name": "Julio César Turbay",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 12
+    },
+    {
+      "name": "Belisario Betancur",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 12
+    },
+    {
+      "name": "Virgilio Barco",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 12
+    },
+    {
+      "name": "César Gaviria",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 11
+    },
+    {
+      "name": "Ernesto Samper",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 11
+    },
+    {
+      "name": "Andrés Pastrana",
+      "facet": "Gobiernos y presidentes del siglo",
+      "known_at": 10
+    },
+    {
+      "name": "Jorge Eliécer Gaitán",
+      "facet": "El Bogotazo y La Violencia",
+      "known_at": 9
+    },
+    {
+      "name": "El Bogotazo",
+      "facet": "El Bogotazo y La Violencia",
+      "known_at": 9
+    },
+    {
+      "name": "9 de abril de 1948",
+      "facet": "El Bogotazo y La Violencia",
+      "known_at": 11
+    },
+    {
+      "name": "Juan Roa Sierra",
+      "facet": "El Bogotazo y La Violencia",
+      "known_at": 13,
+      "retired": "unaskable: Todas las opciones necesitan una foto esencial y la pregunta giraría en torno a un asesinato; no va con el tono familiar."
+    },
+    {
+      "name": "La Violencia",
+      "facet": "El Bogotazo y La Violencia",
+      "known_at": 11
+    },
+    {
+      "name": "Oración por la Paz",
+      "facet": "El Bogotazo y La Violencia",
+      "known_at": 14
+    },
+    {
+      "name": "Marcha del Silencio",
+      "facet": "El Bogotazo y La Violencia",
+      "known_at": 14
+    },
+    {
+      "name": "Novena Conferencia Panamericana",
+      "facet": "El Bogotazo y La Violencia",
+      "known_at": 14
+    },
+    {
+      "name": "Organización de Estados Americanos",
+      "facet": "El Bogotazo y La Violencia",
+      "known_at": 12
+    },
+    {
+      "name": "Casa Museo Jorge Eliécer Gaitán",
+      "facet": "El Bogotazo y La Violencia",
+      "known_at": 12
+    },
+    {
+      "name": "Gaitanismo",
+      "facet": "El Bogotazo y La Violencia",
+      "known_at": 13
+    },
+    {
+      "name": "Guerrillas del Llano",
+      "facet": "El Bogotazo y La Violencia",
+      "known_at": 14
+    },
+    {
+      "name": "Guadalupe Salcedo",
+      "facet": "El Bogotazo y La Violencia",
+      "known_at": 14
+    },
+    {
+      "name": "Gustavo Rojas Pinilla",
+      "facet": "Frente Nacional y dictadura de Rojas",
+      "known_at": 10
+    },
+    {
+      "name": "Frente Nacional",
+      "facet": "Frente Nacional y dictadura de Rojas",
+      "known_at": 11
+    },
+    {
+      "name": "Golpe de 1953",
+      "facet": "Frente Nacional y dictadura de Rojas",
+      "known_at": 13
+    },
+    {
+      "name": "Pacto de Benidorm",
+      "facet": "Frente Nacional y dictadura de Rojas",
+      "known_at": 14
+    },
+    {
+      "name": "Pacto de Sitges",
+      "facet": "Frente Nacional y dictadura de Rojas",
+      "known_at": 14
+    },
+    {
+      "name": "Plebiscito de 1957",
+      "facet": "Frente Nacional y dictadura de Rojas",
+      "known_at": 13
+    },
+    {
+      "name": "Voto femenino",
+      "facet": "Frente Nacional y dictadura de Rojas",
+      "known_at": 11
+    },
+    {
+      "name": "10 de mayo de 1957",
+      "facet": "Frente Nacional y dictadura de Rojas",
+      "known_at": 14
+    },
+    {
+      "name": "Junta Militar de 1957",
+      "facet": "Frente Nacional y dictadura de Rojas",
+      "known_at": 14
+    },
+    {
+      "name": "Alberto Lleras Camargo",
+      "facet": "Frente Nacional y dictadura de Rojas",
+      "known_at": 12
+    },
+    {
+      "name": "Alternancia",
+      "facet": "Frente Nacional y dictadura de Rojas",
+      "known_at": 13
+    },
+    {
+      "name": "Bipartidismo",
+      "facet": "Frente Nacional y dictadura de Rojas",
+      "known_at": 13
+    },
+    {
+      "name": "Anapo",
+      "facet": "Frente Nacional y dictadura de Rojas",
+      "known_at": 14
+    },
+    {
+      "name": "Elecciones de 1970",
+      "facet": "Frente Nacional y dictadura de Rojas",
+      "known_at": 14
+    },
+    {
+      "name": "María Eugenia Rojas",
+      "facet": "Frente Nacional y dictadura de Rojas",
+      "known_at": 14
+    },
+    {
+      "name": "Esmeralda Arboleda",
+      "facet": "Frente Nacional y dictadura de Rojas",
+      "known_at": 14
+    },
+    {
+      "name": "M-19",
+      "facet": "Frente Nacional y dictadura de Rojas",
+      "known_at": 12
+    },
+    {
+      "name": "Séptima papeleta",
+      "facet": "Constitución de 1991",
+      "known_at": 13
+    },
+    {
+      "name": "Asamblea Nacional Constituyente",
+      "facet": "Constitución de 1991",
+      "known_at": 12
+    },
+    {
+      "name": "Acción de tutela",
+      "facet": "Constitución de 1991",
+      "known_at": 10
+    },
+    {
+      "name": "Derecho de petición",
+      "facet": "Constitución de 1991",
+      "known_at": 12
+    },
+    {
+      "name": "Corte Constitucional",
+      "facet": "Constitución de 1991",
+      "known_at": 11
+    },
+    {
+      "name": "Fiscalía General de la Nación",
+      "facet": "Constitución de 1991",
+      "known_at": 12
+    },
+    {
+      "name": "Defensoría del Pueblo",
+      "facet": "Constitución de 1991",
+      "known_at": 12
+    },
+    {
+      "name": "Estado social de derecho",
+      "facet": "Constitución de 1991",
+      "known_at": 12
+    },
+    {
+      "name": "Diversidad étnica y cultural",
+      "facet": "Constitución de 1991",
+      "known_at": 12
+    },
+    {
+      "name": "Lenguas indígenas oficiales",
+      "facet": "Constitución de 1991",
+      "known_at": 12
+    },
+    {
+      "name": "Libertad de cultos",
+      "facet": "Constitución de 1991",
+      "known_at": 12
+    },
+    {
+      "name": "Antonio Navarro Wolff",
+      "facet": "Constitución de 1991",
+      "known_at": 13
+    },
+    {
+      "name": "Álvaro Gómez Hurtado",
+      "facet": "Constitución de 1991",
+      "known_at": 13
+    },
+    {
+      "name": "Horacio Serpa",
+      "facet": "Constitución de 1991",
+      "known_at": 13
+    },
+    {
+      "name": "Acuerdo de paz con el M-19",
+      "facet": "Constitución de 1991",
+      "known_at": 14
+    },
+    {
+      "name": "Vicepresidente de la República",
+      "facet": "Constitución de 1991",
+      "known_at": 12
+    },
+    {
+      "name": "Nuevos departamentos de 1991",
+      "facet": "Constitución de 1991",
+      "known_at": 14
+    },
+    {
+      "name": "Juan Valdez",
+      "facet": "Café, bananeras y economía",
+      "known_at": 3
+    },
+    {
+      "name": "Masacre de las bananeras",
+      "facet": "Café, bananeras y economía",
+      "known_at": 11
+    },
+    {
+      "name": "United Fruit Company",
+      "facet": "Café, bananeras y economía",
+      "known_at": 12
+    },
+    {
+      "name": "Ciénaga",
+      "facet": "Café, bananeras y economía",
+      "known_at": 12
+    },
+    {
+      "name": "Ecopetrol",
+      "facet": "Café, bananeras y economía",
+      "known_at": 9
+    },
+    {
+      "name": "Concesión de Mares",
+      "facet": "Café, bananeras y economía",
+      "known_at": 14
+    },
+    {
+      "name": "Barrancabermeja",
+      "facet": "Café, bananeras y economía",
+      "known_at": 10
+    },
+    {
+      "name": "Caño Limón",
+      "facet": "Café, bananeras y economía",
+      "known_at": 13
+    },
+    {
+      "name": "Cerrejón",
+      "facet": "Café, bananeras y economía",
+      "known_at": 11
+    },
+    {
+      "name": "Misión Kemmerer",
+      "facet": "Café, bananeras y economía",
+      "known_at": 14
+    },
+    {
+      "name": "Danza de los millones",
+      "facet": "Café, bananeras y economía",
+      "known_at": 14
+    },
+    {
+      "name": "Flores colombianas",
+      "facet": "Café, bananeras y economía",
+      "known_at": 11
+    },
+    {
+      "name": "SENA",
+      "facet": "Café, bananeras y economía",
+      "known_at": 10
+    },
+    {
+      "name": "SCADTA",
+      "facet": "Ciudades, transporte y modernización",
+      "known_at": 12
+    },
+    {
+      "name": "Avianca",
+      "facet": "Ciudades, transporte y modernización",
+      "known_at": 6
+    },
+    {
+      "name": "Tranvía de Bogotá",
+      "facet": "Ciudades, transporte y modernización",
+      "known_at": 12
+    },
+    {
+      "name": "Cable aéreo Manizales-Mariquita",
+      "facet": "Ciudades, transporte y modernización",
+      "known_at": 14
+    },
+    {
+      "name": "Barcos de vapor del Magdalena",
+      "facet": "Ciudades, transporte y modernización",
+      "known_at": 11
+    },
+    {
+      "name": "Estación de la Sabana",
+      "facet": "Ciudades, transporte y modernización",
+      "known_at": 12
+    },
+    {
+      "name": "Chiva",
+      "facet": "Ciudades, transporte y modernización",
+      "known_at": 4
+    },
+    {
+      "name": "Edificio Avianca",
+      "facet": "Ciudades, transporte y modernización",
+      "known_at": 13
+    },
+    {
+      "name": "Torres del Parque",
+      "facet": "Ciudades, transporte y modernización",
+      "known_at": 13
+    },
+    {
+      "name": "Ciudad Universitaria de Bogotá",
+      "facet": "Ciudades, transporte y modernización",
+      "known_at": 13
+    },
+    {
+      "name": "Unicentro",
+      "facet": "Ciudades, transporte y modernización",
+      "known_at": 12
+    },
+    {
+      "name": "Televisión colombiana de 1954",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 9
+    },
+    {
+      "name": "Inravisión",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 13
+    },
+    {
+      "name": "Radio Sutatenza",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 13
+    },
+    {
+      "name": "Caracol Radio",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 8
+    },
+    {
+      "name": "RCN",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 6
+    },
+    {
+      "name": "Radionovela",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 11
+    },
+    {
+      "name": "Kalimán",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 11
+    },
+    {
+      "name": "El Tiempo",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 9
+    },
+    {
+      "name": "El Espectador",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 10
+    },
+    {
+      "name": "Revista Semana",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 11
+    },
+    {
+      "name": "Cromos",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 13
+    },
+    {
+      "name": "Yo soy Betty, la fea",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 3
+    },
+    {
+      "name": "Café con aroma de mujer",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 8
+    },
+    {
+      "name": "Sábados Felices",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 5
+    },
+    {
+      "name": "Don Chinche",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 11
+    },
+    {
+      "name": "Dejémonos de vainas",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 12
+    },
+    {
+      "name": "Padres e hijos",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 10
+    },
+    {
+      "name": "Escalona (telenovela)",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 12
+    },
+    {
+      "name": "Fernando González Pacheco",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 6
+    },
+    {
+      "name": "Gloria Valencia de Castaño",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 12
+    },
+    {
+      "name": "Jaime Garzón",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 10
+    },
+    {
+      "name": "Animalandia",
+      "facet": "Radio, televisión y prensa",
+      "known_at": 11
+    },
+    {
+      "name": "Gabriel García Márquez",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 5
+    },
+    {
+      "name": "Cien años de soledad",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 6
+    },
+    {
+      "name": "Macondo",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 8
+    },
+    {
+      "name": "Premio Nobel de Literatura 1982",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 9
+    },
+    {
+      "name": "El coronel no tiene quien le escriba",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Crónica de una muerte anunciada",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "El amor en los tiempos del cólera",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "Grupo de Barranquilla",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "José Eustasio Rivera",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "La vorágine",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "León de Greiff",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Porfirio Barba Jacob",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Luis Carlos López",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Álvaro Mutis",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Nadaísmo",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Gonzalo Arango",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Fernando Botero",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 5
+    },
+    {
+      "name": "Débora Arango",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Alejandro Obregón",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Omar Rayo",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Edgar Negret",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Teatro La Candelaria",
+      "facet": "Literatura y artes del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Cumbia",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 3
+    },
+    {
+      "name": "Vallenato",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 2
+    },
+    {
+      "name": "Pasillo",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "Porro",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "Carranga",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Lucho Bermúdez",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Pacho Galán",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Rafael Escalona",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "Alejo Durán",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Festival de la Leyenda Vallenata",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 8
+    },
+    {
+      "name": "Diomedes Díaz",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 8
+    },
+    {
+      "name": "Joe Arroyo",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 8
+    },
+    {
+      "name": "La rebelión",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Colombia tierra querida",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "La pollera colorá",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 7
+    },
+    {
+      "name": "Pueblito viejo",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Los Corraleros de Majagual",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Fruko y sus Tesos",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Grupo Niche",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 9
+    },
+    {
+      "name": "Totó la Momposina",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "Garzón y Collazos",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Carlos Vives",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 3
+    },
+    {
+      "name": "Shakira",
+      "facet": "Música colombiana del siglo XX",
+      "known_at": 1
+    },
+    {
+      "name": "El Dorado del fútbol colombiano",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 14
+    },
+    {
+      "name": "Copa Libertadores 1989",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 10
+    },
+    {
+      "name": "Gol olímpico de Marcos Coll",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de Italia 1990",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 9
+    },
+    {
+      "name": "5-0 a Argentina",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 8
+    },
+    {
+      "name": "René Higuita",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 7
+    },
+    {
+      "name": "Escorpión de Higuita",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 7
+    },
+    {
+      "name": "Freddy Rincón",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 8
+    },
+    {
+      "name": "Faustino Asprilla",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 8
+    },
+    {
+      "name": "Francisco Maturana",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 8
+    },
+    {
+      "name": "Vuelta a Colombia",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 9
+    },
+    {
+      "name": "Ramón Hoyos",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 13
+    },
+    {
+      "name": "Cochise Rodríguez",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 12
+    },
+    {
+      "name": "Lucho Herrera",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 9
+    },
+    {
+      "name": "Kid Pambelé",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 10
+    },
+    {
+      "name": "Helmut Bellingrodt",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 14
+    },
+    {
+      "name": "Ximena Restrepo",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 12
+    },
+    {
+      "name": "Juegos Panamericanos de Cali 1971",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 13
+    },
+    {
+      "name": "Édgar Rentería",
+      "facet": "Deporte y hazañas deportivas",
+      "known_at": 11
+    },
+    {
+      "name": "Tinto",
+      "facet": "Vida cotidiana y costumbres de antes",
+      "known_at": 2
+    },
+    {
+      "name": "Bolirana",
+      "facet": "Vida cotidiana y costumbres de antes",
+      "known_at": 11
+    },
+    {
+      "name": "Trompo",
+      "facet": "Vida cotidiana y costumbres de antes",
+      "known_at": 3
+    },
+    {
+      "name": "Coca (juguete)",
+      "facet": "Vida cotidiana y costumbres de antes",
+      "known_at": 7
+    },
+    {
+      "name": "Novena de aguinaldos",
+      "facet": "Vida cotidiana y costumbres de antes",
+      "known_at": 5
+    },
+    {
+      "name": "Día de las velitas",
+      "facet": "Vida cotidiana y costumbres de antes",
+      "known_at": 4
+    },
+    {
+      "name": "Natilla y buñuelos",
+      "facet": "Vida cotidiana y costumbres de antes",
+      "known_at": 3
+    },
+    {
+      "name": "Radiola",
+      "facet": "Vida cotidiana y costumbres de antes",
+      "known_at": 12
+    },
+    {
+      "name": "Chocolatina Jet",
+      "facet": "Vida cotidiana y costumbres de antes",
+      "known_at": 2
+    },
+    {
+      "name": "Bon Ice",
+      "facet": "Vida cotidiana y costumbres de antes",
+      "known_at": 3
+    },
+    {
+      "name": "Leche en bolsa",
+      "facet": "Vida cotidiana y costumbres de antes",
+      "known_at": 6
+    },
+    {
+      "name": "Cartilla Nacho",
+      "facet": "Vida cotidiana y costumbres de antes",
+      "known_at": 6
+    },
+    {
+      "name": "Alcancía de marrano",
+      "facet": "Vida cotidiana y costumbres de antes",
+      "known_at": 6
+    },
+    {
+      "name": "Apagón de 1992",
+      "facet": "Vida cotidiana y costumbres de antes",
+      "known_at": 11
+    },
+    {
+      "name": "Hora Gaviria",
+      "facet": "Vida cotidiana y costumbres de antes",
+      "known_at": 10
+    }
+  ]
+}

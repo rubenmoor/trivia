@@ -1,0 +1,869 @@
+{
+  "subcategory": "pop-rock-and-urban-music",
+  "facets": [
+    "Reguetón paisa y sus estrellas",
+    "Shakira: canciones y carrera",
+    "Juanes y el pop rock",
+    "Carlos Vives y el pop vallenato",
+    "Rock colombiano y sus bandas",
+    "Rock al Parque y festivales",
+    "Pop latino colombiano actual",
+    "Hip hop y rap colombiano",
+    "Champeta urbana y fusiones",
+    "Éxitos, álbumes y premios",
+    "Videoclips, apodos y frases famosas",
+    "Música colombiana en series y películas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Karol G",
+      "facet": "Reguetón paisa y sus estrellas",
+      "known_at": 2
+    },
+    {
+      "name": "Blessd",
+      "facet": "Reguetón paisa y sus estrellas",
+      "known_at": 8
+    },
+    {
+      "name": "Ryan Castro",
+      "facet": "Reguetón paisa y sus estrellas",
+      "known_at": 8
+    },
+    {
+      "name": "Nicky Jam",
+      "facet": "Reguetón paisa y sus estrellas",
+      "known_at": 6
+    },
+    {
+      "name": "Reykon",
+      "facet": "Reguetón paisa y sus estrellas",
+      "known_at": 10
+    },
+    {
+      "name": "Kevin Roldán",
+      "facet": "Reguetón paisa y sus estrellas",
+      "known_at": 10
+    },
+    {
+      "name": "Mike Bahía",
+      "facet": "Reguetón paisa y sus estrellas",
+      "known_at": 10
+    },
+    {
+      "name": "Ovy on the Drums",
+      "facet": "Reguetón paisa y sus estrellas",
+      "known_at": 11
+    },
+    {
+      "name": "Sky Rompiendo",
+      "facet": "Reguetón paisa y sus estrellas",
+      "known_at": 11
+    },
+    {
+      "name": "Kapo",
+      "facet": "Reguetón paisa y sus estrellas",
+      "known_at": 9
+    },
+    {
+      "name": "Mi gente",
+      "facet": "Reguetón paisa y sus estrellas",
+      "known_at": 4
+    },
+    {
+      "name": "Hawái",
+      "facet": "Reguetón paisa y sus estrellas",
+      "known_at": 5
+    },
+    {
+      "name": "Provenza",
+      "facet": "Reguetón paisa y sus estrellas",
+      "known_at": 5
+    },
+    {
+      "name": "Ginza",
+      "facet": "Reguetón paisa y sus estrellas",
+      "known_at": 9
+    },
+    {
+      "name": "Hips Don't Lie",
+      "facet": "Shakira: canciones y carrera",
+      "known_at": 5
+    },
+    {
+      "name": "Waka Waka",
+      "facet": "Shakira: canciones y carrera",
+      "known_at": 2
+    },
+    {
+      "name": "Ojos así",
+      "facet": "Shakira: canciones y carrera",
+      "known_at": 8
+    },
+    {
+      "name": "Estoy aquí",
+      "facet": "Shakira: canciones y carrera",
+      "known_at": 9
+    },
+    {
+      "name": "Pies descalzos",
+      "facet": "Shakira: canciones y carrera",
+      "known_at": 9
+    },
+    {
+      "name": "Dónde están los ladrones",
+      "facet": "Shakira: canciones y carrera",
+      "known_at": 10
+    },
+    {
+      "name": "Magia",
+      "facet": "Shakira: canciones y carrera",
+      "known_at": 13
+    },
+    {
+      "name": "La tortura",
+      "facet": "Shakira: canciones y carrera",
+      "known_at": 8
+    },
+    {
+      "name": "Whenever, Wherever",
+      "facet": "Shakira: canciones y carrera",
+      "known_at": 8
+    },
+    {
+      "name": "Loba",
+      "facet": "Shakira: canciones y carrera",
+      "known_at": 8
+    },
+    {
+      "name": "Chantaje",
+      "facet": "Shakira: canciones y carrera",
+      "known_at": 6
+    },
+    {
+      "name": "Shakira: Bzrp Music Sessions, Vol. 53",
+      "facet": "Shakira: canciones y carrera",
+      "known_at": 4
+    },
+    {
+      "name": "TQG",
+      "facet": "Shakira: canciones y carrera",
+      "known_at": 6
+    },
+    {
+      "name": "Super Bowl LIV",
+      "facet": "Shakira: canciones y carrera",
+      "known_at": 9
+    },
+    {
+      "name": "Fundación Pies Descalzos",
+      "facet": "Shakira: canciones y carrera",
+      "known_at": 11
+    },
+    {
+      "name": "Ekhymosis",
+      "facet": "Juanes y el pop rock",
+      "known_at": 12
+    },
+    {
+      "name": "La camisa negra",
+      "facet": "Juanes y el pop rock",
+      "known_at": 4
+    },
+    {
+      "name": "A Dios le pido",
+      "facet": "Juanes y el pop rock",
+      "known_at": 7
+    },
+    {
+      "name": "Es por ti",
+      "facet": "Juanes y el pop rock",
+      "known_at": 9
+    },
+    {
+      "name": "Fíjate bien",
+      "facet": "Juanes y el pop rock",
+      "known_at": 10
+    },
+    {
+      "name": "Volverte a ver",
+      "facet": "Juanes y el pop rock",
+      "known_at": 9
+    },
+    {
+      "name": "Me enamora",
+      "facet": "Juanes y el pop rock",
+      "known_at": 8
+    },
+    {
+      "name": "Nada valgo sin tu amor",
+      "facet": "Juanes y el pop rock",
+      "known_at": 10
+    },
+    {
+      "name": "Mi sangre",
+      "facet": "Juanes y el pop rock",
+      "known_at": 11
+    },
+    {
+      "name": "Un día normal",
+      "facet": "Juanes y el pop rock",
+      "known_at": 12
+    },
+    {
+      "name": "Yerbatero",
+      "facet": "Juanes y el pop rock",
+      "known_at": 10
+    },
+    {
+      "name": "La Paga",
+      "facet": "Juanes y el pop rock",
+      "known_at": 11
+    },
+    {
+      "name": "Paz sin Fronteras",
+      "facet": "Juanes y el pop rock",
+      "known_at": 12
+    },
+    {
+      "name": "Fundación Mi Sangre",
+      "facet": "Juanes y el pop rock",
+      "known_at": 12
+    },
+    {
+      "name": "Origen",
+      "facet": "Juanes y el pop rock",
+      "known_at": 13
+    },
+    {
+      "name": "Fruta fresca",
+      "facet": "Carlos Vives y el pop vallenato",
+      "known_at": 7
+    },
+    {
+      "name": "La Bicicleta",
+      "facet": "Carlos Vives y el pop vallenato",
+      "known_at": 4
+    },
+    {
+      "name": "Volví a nacer",
+      "facet": "Carlos Vives y el pop vallenato",
+      "known_at": 8
+    },
+    {
+      "name": "Robarte un beso",
+      "facet": "Carlos Vives y el pop vallenato",
+      "known_at": 6
+    },
+    {
+      "name": "Pa' Mayté",
+      "facet": "Carlos Vives y el pop vallenato",
+      "known_at": 10
+    },
+    {
+      "name": "Carito",
+      "facet": "Carlos Vives y el pop vallenato",
+      "known_at": 10
+    },
+    {
+      "name": "Cumbiana",
+      "facet": "Carlos Vives y el pop vallenato",
+      "known_at": 12
+    },
+    {
+      "name": "La Provincia",
+      "facet": "Carlos Vives y el pop vallenato",
+      "known_at": 12
+    },
+    {
+      "name": "El rock de mi pueblo",
+      "facet": "Carlos Vives y el pop vallenato",
+      "known_at": 12
+    },
+    {
+      "name": "Andrea Echeverri",
+      "facet": "Rock colombiano y sus bandas",
+      "known_at": 11
+    },
+    {
+      "name": "Héctor Buitrago",
+      "facet": "Rock colombiano y sus bandas",
+      "known_at": 14
+    },
+    {
+      "name": "Bolero falaz",
+      "facet": "Rock colombiano y sus bandas",
+      "known_at": 11
+    },
+    {
+      "name": "Florecita rockera",
+      "facet": "Rock colombiano y sus bandas",
+      "known_at": 11
+    },
+    {
+      "name": "Kraken",
+      "facet": "Rock colombiano y sus bandas",
+      "known_at": 11
+    },
+    {
+      "name": "Elkin Ramírez",
+      "facet": "Rock colombiano y sus bandas",
+      "known_at": 13
+    },
+    {
+      "name": "Diamante Eléctrico",
+      "facet": "Rock colombiano y sus bandas",
+      "known_at": 12
+    },
+    {
+      "name": "Doctor Krápula",
+      "facet": "Rock colombiano y sus bandas",
+      "known_at": 12
+    },
+    {
+      "name": "1280 Almas",
+      "facet": "Rock colombiano y sus bandas",
+      "known_at": 13
+    },
+    {
+      "name": "Estados Alterados",
+      "facet": "Rock colombiano y sus bandas",
+      "known_at": 13
+    },
+    {
+      "name": "Superlitio",
+      "facet": "Rock colombiano y sus bandas",
+      "known_at": 13
+    },
+    {
+      "name": "La Derecha",
+      "facet": "Rock colombiano y sus bandas",
+      "known_at": 14
+    },
+    {
+      "name": "Los Speakers",
+      "facet": "Rock colombiano y sus bandas",
+      "known_at": 14
+    },
+    {
+      "name": "The Mills",
+      "facet": "Rock colombiano y sus bandas",
+      "known_at": 13
+    },
+    {
+      "name": "Rock al Parque",
+      "facet": "Rock al Parque y festivales",
+      "known_at": 7
+    },
+    {
+      "name": "Festival Estéreo Picnic",
+      "facet": "Rock al Parque y festivales",
+      "known_at": 9
+    },
+    {
+      "name": "Altavoz",
+      "facet": "Rock al Parque y festivales",
+      "known_at": 12
+    },
+    {
+      "name": "Hip Hop al Parque",
+      "facet": "Rock al Parque y festivales",
+      "known_at": 10
+    },
+    {
+      "name": "Jazz al Parque",
+      "facet": "Rock al Parque y festivales",
+      "known_at": 11
+    },
+    {
+      "name": "Salsa al Parque",
+      "facet": "Rock al Parque y festivales",
+      "known_at": 10
+    },
+    {
+      "name": "Baum Festival",
+      "facet": "Rock al Parque y festivales",
+      "known_at": 13
+    },
+    {
+      "name": "Cordillera Festival",
+      "facet": "Rock al Parque y festivales",
+      "known_at": 12
+    },
+    {
+      "name": "Festival Petronio Álvarez",
+      "facet": "Rock al Parque y festivales",
+      "known_at": 10
+    },
+    {
+      "name": "Movistar Arena Bogotá",
+      "facet": "Rock al Parque y festivales",
+      "known_at": 9
+    },
+    {
+      "name": "Pogo",
+      "facet": "Rock al Parque y festivales",
+      "known_at": 10
+    },
+    {
+      "name": "Camilo",
+      "facet": "Pop latino colombiano actual",
+      "known_at": 4
+    },
+    {
+      "name": "Manuel Turizo",
+      "facet": "Pop latino colombiano actual",
+      "known_at": 5
+    },
+    {
+      "name": "Piso 21",
+      "facet": "Pop latino colombiano actual",
+      "known_at": 7
+    },
+    {
+      "name": "Greeicy",
+      "facet": "Pop latino colombiano actual",
+      "known_at": 6
+    },
+    {
+      "name": "Beéle",
+      "facet": "Pop latino colombiano actual",
+      "known_at": 8
+    },
+    {
+      "name": "Santiago Cruz",
+      "facet": "Pop latino colombiano actual",
+      "known_at": 10
+    },
+    {
+      "name": "Cali y El Dandee",
+      "facet": "Pop latino colombiano actual",
+      "known_at": 8
+    },
+    {
+      "name": "Kali Uchis",
+      "facet": "Pop latino colombiano actual",
+      "known_at": 11
+    },
+    {
+      "name": "Paula Arenas",
+      "facet": "Pop latino colombiano actual",
+      "known_at": 12
+    },
+    {
+      "name": "Monsieur Periné",
+      "facet": "Pop latino colombiano actual",
+      "known_at": 12
+    },
+    {
+      "name": "Bacilos",
+      "facet": "Pop latino colombiano actual",
+      "known_at": 11
+    },
+    {
+      "name": "Lalo Ebratt",
+      "facet": "Pop latino colombiano actual",
+      "known_at": 11
+    },
+    {
+      "name": "Esteman",
+      "facet": "Pop latino colombiano actual",
+      "known_at": 13
+    },
+    {
+      "name": "ChocQuibTown",
+      "facet": "Hip hop y rap colombiano",
+      "known_at": 8
+    },
+    {
+      "name": "Goyo",
+      "facet": "Hip hop y rap colombiano",
+      "known_at": 9
+    },
+    {
+      "name": "Tostao",
+      "facet": "Hip hop y rap colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Somos Pacífico",
+      "facet": "Hip hop y rap colombiano",
+      "known_at": 10
+    },
+    {
+      "name": "De dónde vengo yo",
+      "facet": "Hip hop y rap colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "La Etnnia",
+      "facet": "Hip hop y rap colombiano",
+      "known_at": 13,
+      "retired": "unaskable: La Etnnia es demasiado oscura para dar una pregunta justa, y las opciones (analogía, adivinanza de palabra) quedan forzadas."
+    },
+    {
+      "name": "Crew Peligrosos",
+      "facet": "Hip hop y rap colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Alcolirykoz",
+      "facet": "Hip hop y rap colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Ali Aka Mind",
+      "facet": "Hip hop y rap colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Gotas de Rap",
+      "facet": "Hip hop y rap colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Tribu Omerta",
+      "facet": "Hip hop y rap colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Nanpa Básico",
+      "facet": "Hip hop y rap colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Flaco Flow y Melanina",
+      "facet": "Hip hop y rap colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Mabiland",
+      "facet": "Hip hop y rap colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Grafiti",
+      "facet": "Hip hop y rap colombiano",
+      "known_at": 4
+    },
+    {
+      "name": "Freestyle",
+      "facet": "Hip hop y rap colombiano",
+      "known_at": 7
+    },
+    {
+      "name": "Champeta",
+      "facet": "Champeta urbana y fusiones",
+      "known_at": 5
+    },
+    {
+      "name": "Bomba Estéreo",
+      "facet": "Champeta urbana y fusiones",
+      "known_at": 9
+    },
+    {
+      "name": "Li Saumet",
+      "facet": "Champeta urbana y fusiones",
+      "known_at": 12
+    },
+    {
+      "name": "Fuego",
+      "facet": "Champeta urbana y fusiones",
+      "known_at": 10
+    },
+    {
+      "name": "Soy yo",
+      "facet": "Champeta urbana y fusiones",
+      "known_at": 10
+    },
+    {
+      "name": "Systema Solar",
+      "facet": "Champeta urbana y fusiones",
+      "known_at": 12
+    },
+    {
+      "name": "Mr. Black",
+      "facet": "Champeta urbana y fusiones",
+      "known_at": 8
+    },
+    {
+      "name": "Kevin Flórez",
+      "facet": "Champeta urbana y fusiones",
+      "known_at": 10
+    },
+    {
+      "name": "Picó",
+      "facet": "Champeta urbana y fusiones",
+      "known_at": 9
+    },
+    {
+      "name": "Louis Towers",
+      "facet": "Champeta urbana y fusiones",
+      "known_at": 13,
+      "retired": "unaskable: No tengo datos seguros sobre los éxitos de Louis Towers, así que no puedo escribir una pregunta confiable."
+    },
+    {
+      "name": "Elio Boom",
+      "facet": "Champeta urbana y fusiones",
+      "known_at": 13
+    },
+    {
+      "name": "Soukous",
+      "facet": "Champeta urbana y fusiones",
+      "known_at": 14
+    },
+    {
+      "name": "Frente Cumbiero",
+      "facet": "Champeta urbana y fusiones",
+      "known_at": 14
+    },
+    {
+      "name": "Herencia de Timbiquí",
+      "facet": "Champeta urbana y fusiones",
+      "known_at": 11
+    },
+    {
+      "name": "Puerto Candelaria",
+      "facet": "Champeta urbana y fusiones",
+      "known_at": 14
+    },
+    {
+      "name": "Latin Grammy",
+      "facet": "Éxitos, álbumes y premios",
+      "known_at": 6
+    },
+    {
+      "name": "Grammy",
+      "facet": "Éxitos, álbumes y premios",
+      "known_at": 5
+    },
+    {
+      "name": "Premios Nuestra Tierra",
+      "facet": "Éxitos, álbumes y premios",
+      "known_at": 11
+    },
+    {
+      "name": "Premios Juventud",
+      "facet": "Éxitos, álbumes y premios",
+      "known_at": 9
+    },
+    {
+      "name": "Persona del Año de la Academia Latina de la Grabación",
+      "facet": "Éxitos, álbumes y premios",
+      "known_at": 13
+    },
+    {
+      "name": "Billboard Hot 100",
+      "facet": "Éxitos, álbumes y premios",
+      "known_at": 10
+    },
+    {
+      "name": "Tusa",
+      "facet": "Éxitos, álbumes y premios",
+      "known_at": 4
+    },
+    {
+      "name": "Mañana será bonito",
+      "facet": "Éxitos, álbumes y premios",
+      "known_at": 6
+    },
+    {
+      "name": "Vibras",
+      "facet": "Éxitos, álbumes y premios",
+      "known_at": 10
+    },
+    {
+      "name": "Fijación oral vol. 1",
+      "facet": "Éxitos, álbumes y premios",
+      "known_at": 12
+    },
+    {
+      "name": "Felices los 4",
+      "facet": "Éxitos, álbumes y premios",
+      "known_at": 6
+    },
+    {
+      "name": "Papi Juancho",
+      "facet": "Éxitos, álbumes y premios",
+      "known_at": 10
+    },
+    {
+      "name": "Vida de rico",
+      "facet": "Éxitos, álbumes y premios",
+      "known_at": 6
+    },
+    {
+      "name": "Tacones rojos",
+      "facet": "Éxitos, álbumes y premios",
+      "known_at": 6
+    },
+    {
+      "name": "Una lady como tú",
+      "facet": "Éxitos, álbumes y premios",
+      "known_at": 7
+    },
+    {
+      "name": "Cómo te atreves",
+      "facet": "Éxitos, álbumes y premios",
+      "known_at": 8
+    },
+    {
+      "name": "X",
+      "facet": "Éxitos, álbumes y premios",
+      "known_at": 8
+    },
+    {
+      "name": "Bichota",
+      "facet": "Videoclips, apodos y frases famosas",
+      "known_at": 5
+    },
+    {
+      "name": "Pretty Boy, Dirty Boy",
+      "facet": "Videoclips, apodos y frases famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Las mujeres ya no lloran, las mujeres facturan",
+      "facet": "Videoclips, apodos y frases famosas",
+      "known_at": 5
+    },
+    {
+      "name": "Twingo",
+      "facet": "Videoclips, apodos y frases famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Casio",
+      "facet": "Videoclips, apodos y frases famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Parcero",
+      "facet": "Videoclips, apodos y frases famosas",
+      "known_at": 4
+    },
+    {
+      "name": "Medallo",
+      "facet": "Videoclips, apodos y frases famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Perreo",
+      "facet": "Videoclips, apodos y frases famosas",
+      "known_at": 7
+    },
+    {
+      "name": "Mor",
+      "facet": "Videoclips, apodos y frases famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Bacano",
+      "facet": "Videoclips, apodos y frases famosas",
+      "known_at": 4
+    },
+    {
+      "name": "Despecho",
+      "facet": "Videoclips, apodos y frases famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Shakira, Shakira",
+      "facet": "Videoclips, apodos y frases famosas",
+      "known_at": 7
+    },
+    {
+      "name": "No se habla de Bruno",
+      "facet": "Música colombiana en series y películas",
+      "known_at": 2
+    },
+    {
+      "name": "Dos oruguitas",
+      "facet": "Música colombiana en series y películas",
+      "known_at": 5
+    },
+    {
+      "name": "Mauro Castillo",
+      "facet": "Música colombiana en series y películas",
+      "known_at": 11
+    },
+    {
+      "name": "Lin-Manuel Miranda",
+      "facet": "Música colombiana en series y películas",
+      "known_at": 11
+    },
+    {
+      "name": "Escalona",
+      "facet": "Música colombiana en series y películas",
+      "known_at": 12
+    },
+    {
+      "name": "La Reina del Flow",
+      "facet": "Música colombiana en series y películas",
+      "known_at": 8
+    },
+    {
+      "name": "El Joe, la leyenda",
+      "facet": "Música colombiana en series y películas",
+      "known_at": 12
+    },
+    {
+      "name": "Zootopia",
+      "facet": "Música colombiana en series y películas",
+      "known_at": 3
+    },
+    {
+      "name": "Try Everything",
+      "facet": "Música colombiana en series y películas",
+      "known_at": 6
+    },
+    {
+      "name": "Karol G: Mañana fue muy bonito",
+      "facet": "Música colombiana en series y películas",
+      "known_at": 10
+    }
+  ]
+}

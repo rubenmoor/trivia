@@ -1,0 +1,857 @@
+{
+  "subcategory": "sayings-and-expressions",
+  "facets": [
+    "Refranes de la abuela",
+    "Expresiones de saludo y despedida",
+    "Dichos sobre la plata",
+    "Comparaciones y frases con animales",
+    "Expresiones de comida y tinto",
+    "Frases para quejarse y regañar",
+    "Expresiones de fiesta y parranda",
+    "Dichos del fútbol y la cancha",
+    "Frases de la costa Caribe",
+    "Dichos paisas y del interior",
+    "Expresiones de la calle y la juventud",
+    "Frases célebres de la televisión"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 2,
+      "name_concept": 3,
+      "word_meaning": 5,
+      "count": 1,
+      "estimate": 1,
+      "record": 1,
+      "origin": 4,
+      "made_of": 1,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 1
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 2,
+      "history": 2,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Al que madruga Dios le ayuda",
+      "facet": "Refranes de la abuela",
+      "known_at": 3
+    },
+    {
+      "name": "Más vale tarde que nunca",
+      "facet": "Refranes de la abuela",
+      "known_at": 3
+    },
+    {
+      "name": "Al mal tiempo, buena cara",
+      "facet": "Refranes de la abuela",
+      "known_at": 5
+    },
+    {
+      "name": "Más vale prevenir que lamentar",
+      "facet": "Refranes de la abuela",
+      "known_at": 5
+    },
+    {
+      "name": "Dime con quién andas y te diré quién eres",
+      "facet": "Refranes de la abuela",
+      "known_at": 5
+    },
+    {
+      "name": "Ojos que no ven, corazón que no siente",
+      "facet": "Refranes de la abuela",
+      "known_at": 6
+    },
+    {
+      "name": "No hay mal que por bien no venga",
+      "facet": "Refranes de la abuela",
+      "known_at": 6
+    },
+    {
+      "name": "Cada loco con su tema",
+      "facet": "Refranes de la abuela",
+      "known_at": 6
+    },
+    {
+      "name": "Lo que no mata engorda",
+      "facet": "Refranes de la abuela",
+      "known_at": 6
+    },
+    {
+      "name": "Cuando el río suena, piedras lleva",
+      "facet": "Refranes de la abuela",
+      "known_at": 7
+    },
+    {
+      "name": "Del dicho al hecho hay mucho trecho",
+      "facet": "Refranes de la abuela",
+      "known_at": 7
+    },
+    {
+      "name": "Más sabe el diablo por viejo que por diablo",
+      "facet": "Refranes de la abuela",
+      "known_at": 8
+    },
+    {
+      "name": "Agua que no has de beber, déjala correr",
+      "facet": "Refranes de la abuela",
+      "known_at": 8
+    },
+    {
+      "name": "No por mucho madrugar amanece más temprano",
+      "facet": "Refranes de la abuela",
+      "known_at": 8
+    },
+    {
+      "name": "El que con niños se acuesta, amanece mojado",
+      "facet": "Refranes de la abuela",
+      "known_at": 8
+    },
+    {
+      "name": "El que nace pa' tamal, del cielo le caen las hojas",
+      "facet": "Refranes de la abuela",
+      "known_at": 9
+    },
+    {
+      "name": "En casa de herrero, cuchillo de palo",
+      "facet": "Refranes de la abuela",
+      "known_at": 9
+    },
+    {
+      "name": "Crea fama y échate a dormir",
+      "facet": "Refranes de la abuela",
+      "known_at": 9
+    },
+    {
+      "name": "Árbol que nace torcido, jamás su tronco endereza",
+      "facet": "Refranes de la abuela",
+      "known_at": 9
+    },
+    {
+      "name": "El que tiene rabo de paja no se arrima a la candela",
+      "facet": "Refranes de la abuela",
+      "known_at": 11
+    },
+    {
+      "name": "Mucho gusto",
+      "facet": "Expresiones de saludo y despedida",
+      "known_at": 3
+    },
+    {
+      "name": "Que le vaya bien",
+      "facet": "Expresiones de saludo y despedida",
+      "known_at": 3
+    },
+    {
+      "name": "Buenas",
+      "facet": "Expresiones de saludo y despedida",
+      "known_at": 4
+    },
+    {
+      "name": "¿Quiubo?",
+      "facet": "Expresiones de saludo y despedida",
+      "known_at": 5
+    },
+    {
+      "name": "¿Qué más?",
+      "facet": "Expresiones de saludo y despedida",
+      "known_at": 5
+    },
+    {
+      "name": "A la orden",
+      "facet": "Expresiones de saludo y despedida",
+      "known_at": 5
+    },
+    {
+      "name": "Con mucho gusto",
+      "facet": "Expresiones de saludo y despedida",
+      "known_at": 5
+    },
+    {
+      "name": "¿Bien o qué?",
+      "facet": "Expresiones de saludo y despedida",
+      "known_at": 6
+    },
+    {
+      "name": "Chao pues",
+      "facet": "Expresiones de saludo y despedida",
+      "known_at": 6
+    },
+    {
+      "name": "Siga, siga",
+      "facet": "Expresiones de saludo y despedida",
+      "known_at": 6
+    },
+    {
+      "name": "¿Qué me cuenta?",
+      "facet": "Expresiones de saludo y despedida",
+      "known_at": 6
+    },
+    {
+      "name": "Que Dios me lo bendiga",
+      "facet": "Expresiones de saludo y despedida",
+      "known_at": 6
+    },
+    {
+      "name": "¿Cómo me le va?",
+      "facet": "Expresiones de saludo y despedida",
+      "known_at": 7
+    },
+    {
+      "name": "Me voy yendo",
+      "facet": "Expresiones de saludo y despedida",
+      "known_at": 7
+    },
+    {
+      "name": "Saludes a la casa",
+      "facet": "Expresiones de saludo y despedida",
+      "known_at": 8
+    },
+    {
+      "name": "Nos pillamos",
+      "facet": "Expresiones de saludo y despedida",
+      "known_at": 8
+    },
+    {
+      "name": "Plata",
+      "facet": "Dichos sobre la plata",
+      "known_at": 2
+    },
+    {
+      "name": "La plata no da la felicidad",
+      "facet": "Dichos sobre la plata",
+      "known_at": 5
+    },
+    {
+      "name": "Estar pelado",
+      "facet": "Dichos sobre la plata",
+      "known_at": 6
+    },
+    {
+      "name": "Lo barato sale caro",
+      "facet": "Dichos sobre la plata",
+      "known_at": 6
+    },
+    {
+      "name": "Lucas",
+      "facet": "Dichos sobre la plata",
+      "known_at": 7
+    },
+    {
+      "name": "El que guarda siempre tiene",
+      "facet": "Dichos sobre la plata",
+      "known_at": 7
+    },
+    {
+      "name": "Tirar la casa por la ventana",
+      "facet": "Dichos sobre la plata",
+      "known_at": 7
+    },
+    {
+      "name": "Estar en la olla",
+      "facet": "Dichos sobre la plata",
+      "known_at": 8
+    },
+    {
+      "name": "Cuentas claras, amistades largas",
+      "facet": "Dichos sobre la plata",
+      "known_at": 8
+    },
+    {
+      "name": "Hoy no se fía, mañana sí",
+      "facet": "Dichos sobre la plata",
+      "known_at": 8
+    },
+    {
+      "name": "Barras",
+      "facet": "Dichos sobre la plata",
+      "known_at": 9
+    },
+    {
+      "name": "Palo",
+      "facet": "Dichos sobre la plata",
+      "known_at": 9
+    },
+    {
+      "name": "Gota a gota",
+      "facet": "Dichos sobre la plata",
+      "known_at": 10
+    },
+    {
+      "name": "Pagadiario",
+      "facet": "Dichos sobre la plata",
+      "known_at": 10
+    },
+    {
+      "name": "Chichipato",
+      "facet": "Dichos sobre la plata",
+      "known_at": 11
+    },
+    {
+      "name": "Chichigua",
+      "facet": "Dichos sobre la plata",
+      "known_at": 11
+    },
+    {
+      "name": "Billete mata galán",
+      "facet": "Dichos sobre la plata",
+      "known_at": 11
+    },
+    {
+      "name": "Ser una tortuga",
+      "facet": "Comparaciones y frases con animales",
+      "known_at": 3
+    },
+    {
+      "name": "Estar como un toro",
+      "facet": "Comparaciones y frases con animales",
+      "known_at": 4
+    },
+    {
+      "name": "Comer como un pajarito",
+      "facet": "Comparaciones y frases con animales",
+      "known_at": 4
+    },
+    {
+      "name": "Ser un burro",
+      "facet": "Comparaciones y frases con animales",
+      "known_at": 4
+    },
+    {
+      "name": "Piel de gallina",
+      "facet": "Comparaciones y frases con animales",
+      "known_at": 4
+    },
+    {
+      "name": "Ser un gallina",
+      "facet": "Comparaciones y frases con animales",
+      "known_at": 5
+    },
+    {
+      "name": "Ser un zorro",
+      "facet": "Comparaciones y frases con animales",
+      "known_at": 6
+    },
+    {
+      "name": "Estar mosca",
+      "facet": "Comparaciones y frases con animales",
+      "known_at": 7
+    },
+    {
+      "name": "Ser un sapo",
+      "facet": "Comparaciones y frases con animales",
+      "known_at": 7
+    },
+    {
+      "name": "Hijo de tigre sale pintado",
+      "facet": "Comparaciones y frases con animales",
+      "known_at": 8
+    },
+    {
+      "name": "Loro viejo no aprende a hablar",
+      "facet": "Comparaciones y frases con animales",
+      "known_at": 10
+    },
+    {
+      "name": "Ser un lagarto",
+      "facet": "Comparaciones y frases con animales",
+      "known_at": 11
+    },
+    {
+      "name": "Gallina vieja da buen caldo",
+      "facet": "Comparaciones y frases con animales",
+      "known_at": 11
+    },
+    {
+      "name": "Ser pan comido",
+      "facet": "Expresiones de comida y tinto",
+      "known_at": 5
+    },
+    {
+      "name": "Ponerse como un tomate",
+      "facet": "Expresiones de comida y tinto",
+      "known_at": 5
+    },
+    {
+      "name": "¿Me regala un tinto?",
+      "facet": "Expresiones de comida y tinto",
+      "known_at": 7
+    },
+    {
+      "name": "Más colombiano que la arepa",
+      "facet": "Expresiones de comida y tinto",
+      "known_at": 7
+    },
+    {
+      "name": "Ser un bizcocho",
+      "facet": "Expresiones de comida y tinto",
+      "known_at": 8
+    },
+    {
+      "name": "Se volteó la arepa",
+      "facet": "Expresiones de comida y tinto",
+      "known_at": 9
+    },
+    {
+      "name": "Pintadito",
+      "facet": "Expresiones de comida y tinto",
+      "known_at": 10
+    },
+    {
+      "name": "Chanclazo",
+      "facet": "Frases para quejarse y regañar",
+      "known_at": 5
+    },
+    {
+      "name": "Ponerse bravo",
+      "facet": "Frases para quejarse y regañar",
+      "known_at": 6
+    },
+    {
+      "name": "Hacer pataleta",
+      "facet": "Frases para quejarse y regañar",
+      "known_at": 6
+    },
+    {
+      "name": "¡Qué oso!",
+      "facet": "Frases para quejarse y regañar",
+      "known_at": 7
+    },
+    {
+      "name": "¡Qué pena con usted!",
+      "facet": "Frases para quejarse y regañar",
+      "known_at": 7
+    },
+    {
+      "name": "Juicioso",
+      "facet": "Frases para quejarse y regañar",
+      "known_at": 7
+    },
+    {
+      "name": "¡Qué boleta!",
+      "facet": "Frases para quejarse y regañar",
+      "known_at": 8
+    },
+    {
+      "name": "¡Qué jartera!",
+      "facet": "Frases para quejarse y regañar",
+      "known_at": 8
+    },
+    {
+      "name": "¡Juepucha!",
+      "facet": "Frases para quejarse y regañar",
+      "known_at": 8
+    },
+    {
+      "name": "Cansón",
+      "facet": "Frases para quejarse y regañar",
+      "known_at": 8
+    },
+    {
+      "name": "Cantaleta",
+      "facet": "Frases para quejarse y regañar",
+      "known_at": 8
+    },
+    {
+      "name": "Sacar la piedra",
+      "facet": "Frases para quejarse y regañar",
+      "known_at": 8
+    },
+    {
+      "name": "Echar vaina",
+      "facet": "Frases para quejarse y regañar",
+      "known_at": 8
+    },
+    {
+      "name": "Estar mamado",
+      "facet": "Frases para quejarse y regañar",
+      "known_at": 9
+    },
+    {
+      "name": "Estar piedro",
+      "facet": "Frases para quejarse y regañar",
+      "known_at": 9
+    },
+    {
+      "name": "Ni de fundas",
+      "facet": "Frases para quejarse y regañar",
+      "known_at": 10
+    },
+    {
+      "name": "Sacar a bailar",
+      "facet": "Expresiones de fiesta y parranda",
+      "known_at": 4
+    },
+    {
+      "name": "Rumba",
+      "facet": "Expresiones de fiesta y parranda",
+      "known_at": 5
+    },
+    {
+      "name": "Mover el esqueleto",
+      "facet": "Expresiones de fiesta y parranda",
+      "known_at": 5
+    },
+    {
+      "name": "Amanecida",
+      "facet": "Expresiones de fiesta y parranda",
+      "known_at": 8
+    },
+    {
+      "name": "Bailar pegado",
+      "facet": "Expresiones de fiesta y parranda",
+      "known_at": 8
+    },
+    {
+      "name": "La última y nos vamos",
+      "facet": "Expresiones de fiesta y parranda",
+      "known_at": 9
+    },
+    {
+      "name": "Estar prendido",
+      "facet": "Expresiones de fiesta y parranda",
+      "known_at": 9
+    },
+    {
+      "name": "Guaro",
+      "facet": "Expresiones de fiesta y parranda",
+      "known_at": 10
+    },
+    {
+      "name": "Echarle los perros",
+      "facet": "Expresiones de fiesta y parranda",
+      "known_at": 10
+    },
+    {
+      "name": "Verbena",
+      "facet": "Expresiones de fiesta y parranda",
+      "known_at": 10
+    },
+    {
+      "name": "Golazo",
+      "facet": "Dichos del fútbol y la cancha",
+      "known_at": 4
+    },
+    {
+      "name": "Arquero",
+      "facet": "Dichos del fútbol y la cancha",
+      "known_at": 5
+    },
+    {
+      "name": "Hincha",
+      "facet": "Dichos del fútbol y la cancha",
+      "known_at": 6
+    },
+    {
+      "name": "Túnel",
+      "facet": "Dichos del fútbol y la cancha",
+      "known_at": 6
+    },
+    {
+      "name": "Ponerse la camiseta",
+      "facet": "Dichos del fútbol y la cancha",
+      "known_at": 6
+    },
+    {
+      "name": "Jugar de local",
+      "facet": "Dichos del fútbol y la cancha",
+      "known_at": 6
+    },
+    {
+      "name": "Chilena",
+      "facet": "Dichos del fútbol y la cancha",
+      "known_at": 7
+    },
+    {
+      "name": "Picadito",
+      "facet": "Dichos del fútbol y la cancha",
+      "known_at": 7
+    },
+    {
+      "name": "Clásico",
+      "facet": "Dichos del fútbol y la cancha",
+      "known_at": 7
+    },
+    {
+      "name": "Escorpión",
+      "facet": "Dichos del fútbol y la cancha",
+      "known_at": 8
+    },
+    {
+      "name": "Sombrerito",
+      "facet": "Dichos del fútbol y la cancha",
+      "known_at": 8
+    },
+    {
+      "name": "La Tricolor",
+      "facet": "Dichos del fútbol y la cancha",
+      "known_at": 8
+    },
+    {
+      "name": "Pecho frío",
+      "facet": "Dichos del fútbol y la cancha",
+      "known_at": 10
+    },
+    {
+      "name": "Gol de camerino",
+      "facet": "Dichos del fútbol y la cancha",
+      "known_at": 11
+    },
+    {
+      "name": "Goles son amores",
+      "facet": "Dichos del fútbol y la cancha",
+      "known_at": 11
+    },
+    {
+      "name": "Bacán",
+      "facet": "Frases de la costa Caribe",
+      "known_at": 7
+    },
+    {
+      "name": "Al pelo",
+      "facet": "Frases de la costa Caribe",
+      "known_at": 8
+    },
+    {
+      "name": "Bulla",
+      "facet": "Frases de la costa Caribe",
+      "known_at": 8
+    },
+    {
+      "name": "Cógela suave",
+      "facet": "Frases de la costa Caribe",
+      "known_at": 8
+    },
+    {
+      "name": "Quien lo vive es quien lo goza",
+      "facet": "Frases de la costa Caribe",
+      "known_at": 8
+    },
+    {
+      "name": "Mi vale",
+      "facet": "Frases de la costa Caribe",
+      "known_at": 9
+    },
+    {
+      "name": "¡Eche!",
+      "facet": "Frases de la costa Caribe",
+      "known_at": 9
+    },
+    {
+      "name": "Bollo",
+      "facet": "Frases de la costa Caribe",
+      "known_at": 9
+    },
+    {
+      "name": "¡Ombe!",
+      "facet": "Frases de la costa Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "¡Epa, je!",
+      "facet": "Frases de la costa Caribe",
+      "known_at": 11
+    },
+    {
+      "name": "Pues",
+      "facet": "Dichos paisas y del interior",
+      "known_at": 5
+    },
+    {
+      "name": "Mijo",
+      "facet": "Dichos paisas y del interior",
+      "known_at": 5
+    },
+    {
+      "name": "Parce",
+      "facet": "Dichos paisas y del interior",
+      "known_at": 6
+    },
+    {
+      "name": "Vea pues",
+      "facet": "Dichos paisas y del interior",
+      "known_at": 7
+    },
+    {
+      "name": "Hágale pues",
+      "facet": "Dichos paisas y del interior",
+      "known_at": 7
+    },
+    {
+      "name": "¡Eh, Ave María!",
+      "facet": "Dichos paisas y del interior",
+      "known_at": 8
+    },
+    {
+      "name": "Paila",
+      "facet": "Dichos paisas y del interior",
+      "known_at": 8
+    },
+    {
+      "name": "Rolo",
+      "facet": "Dichos paisas y del interior",
+      "known_at": 8
+    },
+    {
+      "name": "Amañarse",
+      "facet": "Dichos paisas y del interior",
+      "known_at": 9
+    },
+    {
+      "name": "Chino",
+      "facet": "Dichos paisas y del interior",
+      "known_at": 9
+    },
+    {
+      "name": "Montañero",
+      "facet": "Dichos paisas y del interior",
+      "known_at": 9
+    },
+    {
+      "name": "Embejucarse",
+      "facet": "Dichos paisas y del interior",
+      "known_at": 10
+    },
+    {
+      "name": "Chusco",
+      "facet": "Dichos paisas y del interior",
+      "known_at": 10
+    },
+    {
+      "name": "Guámbito",
+      "facet": "Dichos paisas y del interior",
+      "known_at": 12
+    },
+    {
+      "name": "¡Achichay!",
+      "facet": "Dichos paisas y del interior",
+      "known_at": 12
+    },
+    {
+      "name": "Chévere",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 5
+    },
+    {
+      "name": "¡Pilas!",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 6
+    },
+    {
+      "name": "No dar papaya",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 7
+    },
+    {
+      "name": "Camello",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 7
+    },
+    {
+      "name": "Embarrarla",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 7
+    },
+    {
+      "name": "Fresco",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 7
+    },
+    {
+      "name": "¡Qué nota!",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 8
+    },
+    {
+      "name": "Severo",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 8
+    },
+    {
+      "name": "Sisas",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 8
+    },
+    {
+      "name": "Una vuelta",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 8
+    },
+    {
+      "name": "Nones",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 9
+    },
+    {
+      "name": "Tombo",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 9
+    },
+    {
+      "name": "Faltón",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 9
+    },
+    {
+      "name": "Dar lora",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 9
+    },
+    {
+      "name": "Breve",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 9
+    },
+    {
+      "name": "Visaje",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 10
+    },
+    {
+      "name": "Tirar caja",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 10
+    },
+    {
+      "name": "Ni de riesgos",
+      "facet": "Expresiones de la calle y la juventud",
+      "known_at": 10
+    },
+    {
+      "name": "Don Armando",
+      "facet": "Frases célebres de la televisión",
+      "known_at": 8
+    },
+    {
+      "name": "El Show de las Estrellas",
+      "facet": "Frases célebres de la televisión",
+      "known_at": 8
+    }
+  ]
+}

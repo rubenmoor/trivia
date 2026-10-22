@@ -1,0 +1,913 @@
+{
+  "subcategory": "traditional-games",
+  "facets": [
+    "Tejo, mechas y bocín",
+    "Rana, bolo criollo y lanzamientos",
+    "Trompo, coca y juguetes de destreza",
+    "Canicas, golosa y yermis",
+    "Juegos de calle y de patio",
+    "Rondas y juegos cantados",
+    "Aguinaldos y juegos navideños",
+    "Cometas y vientos de agosto",
+    "Carros de balineras y juguetes artesanales",
+    "Parqués, dominó y juegos de mesa",
+    "Juegos de feria y fiestas de pueblo",
+    "Orígenes indígenas y juegos regionales"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 2,
+      "record": 1,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mecha",
+      "facet": "Tejo, mechas y bocín",
+      "known_at": 5
+    },
+    {
+      "name": "Bocín",
+      "facet": "Tejo, mechas y bocín",
+      "known_at": 8
+    },
+    {
+      "name": "Greda",
+      "facet": "Tejo, mechas y bocín",
+      "known_at": 8
+    },
+    {
+      "name": "Cancha de tejo",
+      "facet": "Tejo, mechas y bocín",
+      "known_at": 6
+    },
+    {
+      "name": "Moñona",
+      "facet": "Tejo, mechas y bocín",
+      "known_at": 9
+    },
+    {
+      "name": "Embocinada",
+      "facet": "Tejo, mechas y bocín",
+      "known_at": 10
+    },
+    {
+      "name": "Deporte nacional de Colombia",
+      "facet": "Tejo, mechas y bocín",
+      "known_at": 7
+    },
+    {
+      "name": "Tejódromo",
+      "facet": "Tejo, mechas y bocín",
+      "known_at": 9
+    },
+    {
+      "name": "Federación Colombiana de Tejo",
+      "facet": "Tejo, mechas y bocín",
+      "known_at": 13
+    },
+    {
+      "name": "Ley 613 de 2000",
+      "facet": "Tejo, mechas y bocín",
+      "known_at": 14
+    },
+    {
+      "name": "Pólvora",
+      "facet": "Tejo, mechas y bocín",
+      "known_at": 5
+    },
+    {
+      "name": "Minitejo",
+      "facet": "Tejo, mechas y bocín",
+      "known_at": 7
+    },
+    {
+      "name": "Tejo de piedra",
+      "facet": "Tejo, mechas y bocín",
+      "known_at": 11
+    },
+    {
+      "name": "Rana",
+      "facet": "Rana, bolo criollo y lanzamientos",
+      "known_at": 3
+    },
+    {
+      "name": "Fichas de rana",
+      "facet": "Rana, bolo criollo y lanzamientos",
+      "known_at": 5
+    },
+    {
+      "name": "Boca de la rana",
+      "facet": "Rana, bolo criollo y lanzamientos",
+      "known_at": 5
+    },
+    {
+      "name": "Molinete",
+      "facet": "Rana, bolo criollo y lanzamientos",
+      "known_at": 9
+    },
+    {
+      "name": "Puente",
+      "facet": "Rana, bolo criollo y lanzamientos",
+      "known_at": 10
+    },
+    {
+      "name": "Bolo criollo",
+      "facet": "Rana, bolo criollo y lanzamientos",
+      "known_at": 7
+    },
+    {
+      "name": "Pinos",
+      "facet": "Rana, bolo criollo y lanzamientos",
+      "known_at": 6
+    },
+    {
+      "name": "Bola de bolo criollo",
+      "facet": "Rana, bolo criollo y lanzamientos",
+      "known_at": 9
+    },
+    {
+      "name": "Argollas",
+      "facet": "Rana, bolo criollo y lanzamientos",
+      "known_at": 6
+    },
+    {
+      "name": "Herraduras",
+      "facet": "Rana, bolo criollo y lanzamientos",
+      "known_at": 8
+    },
+    {
+      "name": "Dardos",
+      "facet": "Rana, bolo criollo y lanzamientos",
+      "known_at": 4
+    },
+    {
+      "name": "Tiro al blanco",
+      "facet": "Rana, bolo criollo y lanzamientos",
+      "known_at": 4
+    },
+    {
+      "name": "Bochas",
+      "facet": "Rana, bolo criollo y lanzamientos",
+      "known_at": 11
+    },
+    {
+      "name": "Bolo americano",
+      "facet": "Rana, bolo criollo y lanzamientos",
+      "known_at": 5
+    },
+    {
+      "name": "Coca",
+      "facet": "Trompo, coca y juguetes de destreza",
+      "known_at": 5
+    },
+    {
+      "name": "Yoyo",
+      "facet": "Trompo, coca y juguetes de destreza",
+      "known_at": 1
+    },
+    {
+      "name": "Pirinola",
+      "facet": "Trompo, coca y juguetes de destreza",
+      "known_at": 6
+    },
+    {
+      "name": "Cauchera",
+      "facet": "Trompo, coca y juguetes de destreza",
+      "known_at": 4
+    },
+    {
+      "name": "Piola del trompo",
+      "facet": "Trompo, coca y juguetes de destreza",
+      "known_at": 4
+    },
+    {
+      "name": "Púa del trompo",
+      "facet": "Trompo, coca y juguetes de destreza",
+      "known_at": 7
+    },
+    {
+      "name": "Zumbambico",
+      "facet": "Trompo, coca y juguetes de destreza",
+      "known_at": 11
+    },
+    {
+      "name": "Kendama",
+      "facet": "Trompo, coca y juguetes de destreza",
+      "known_at": 8
+    },
+    {
+      "name": "Diábolo",
+      "facet": "Trompo, coca y juguetes de destreza",
+      "known_at": 8
+    },
+    {
+      "name": "Bailar el trompo",
+      "facet": "Trompo, coca y juguetes de destreza",
+      "known_at": 3
+    },
+    {
+      "name": "Malabares",
+      "facet": "Trompo, coca y juguetes de destreza",
+      "known_at": 5
+    },
+    {
+      "name": "Trompo zumbador",
+      "facet": "Trompo, coca y juguetes de destreza",
+      "known_at": 9
+    },
+    {
+      "name": "La vuelta al mundo",
+      "facet": "Trompo, coca y juguetes de destreza",
+      "known_at": 6
+    },
+    {
+      "name": "Aro y palito",
+      "facet": "Trompo, coca y juguetes de destreza",
+      "known_at": 8
+    },
+    {
+      "name": "Canicas",
+      "facet": "Canicas, golosa y yermis",
+      "known_at": 1
+    },
+    {
+      "name": "Ojo de gato",
+      "facet": "Canicas, golosa y yermis",
+      "known_at": 8
+    },
+    {
+      "name": "Uñita",
+      "facet": "Canicas, golosa y yermis",
+      "known_at": 6
+    },
+    {
+      "name": "Hoyito",
+      "facet": "Canicas, golosa y yermis",
+      "known_at": 6
+    },
+    {
+      "name": "Triángulo de canicas",
+      "facet": "Canicas, golosa y yermis",
+      "known_at": 7
+    },
+    {
+      "name": "Golosa",
+      "facet": "Canicas, golosa y yermis",
+      "known_at": 5
+    },
+    {
+      "name": "Cielo",
+      "facet": "Canicas, golosa y yermis",
+      "known_at": 7
+    },
+    {
+      "name": "Golosa de caracol",
+      "facet": "Canicas, golosa y yermis",
+      "known_at": 9
+    },
+    {
+      "name": "Tiza",
+      "facet": "Canicas, golosa y yermis",
+      "known_at": 2
+    },
+    {
+      "name": "Yermis",
+      "facet": "Canicas, golosa y yermis",
+      "known_at": 5
+    },
+    {
+      "name": "Tapas de gaseosa",
+      "facet": "Canicas, golosa y yermis",
+      "known_at": 4
+    },
+    {
+      "name": "Pelota de caucho",
+      "facet": "Canicas, golosa y yermis",
+      "known_at": 4
+    },
+    {
+      "name": "Pelota de trapo",
+      "facet": "Canicas, golosa y yermis",
+      "known_at": 5
+    },
+    {
+      "name": "Cinco piedritas",
+      "facet": "Canicas, golosa y yermis",
+      "known_at": 7
+    },
+    {
+      "name": "Vuelta a Colombia con tapas",
+      "facet": "Canicas, golosa y yermis",
+      "known_at": 9
+    },
+    {
+      "name": "Escondidas",
+      "facet": "Juegos de calle y de patio",
+      "known_at": 1
+    },
+    {
+      "name": "La lleva",
+      "facet": "Juegos de calle y de patio",
+      "known_at": 3
+    },
+    {
+      "name": "Policías y ladrones",
+      "facet": "Juegos de calle y de patio",
+      "known_at": 3
+    },
+    {
+      "name": "Ponchados",
+      "facet": "Juegos de calle y de patio",
+      "known_at": 6
+    },
+    {
+      "name": "Stop",
+      "facet": "Juegos de calle y de patio",
+      "known_at": 4
+    },
+    {
+      "name": "Saltar lazo",
+      "facet": "Juegos de calle y de patio",
+      "known_at": 2
+    },
+    {
+      "name": "Congelados",
+      "facet": "Juegos de calle y de patio",
+      "known_at": 3
+    },
+    {
+      "name": "Banquitas",
+      "facet": "Juegos de calle y de patio",
+      "known_at": 6
+    },
+    {
+      "name": "Encostalados",
+      "facet": "Juegos de calle y de patio",
+      "known_at": 5
+    },
+    {
+      "name": "Huevo en cuchara",
+      "facet": "Juegos de calle y de patio",
+      "known_at": 4
+    },
+    {
+      "name": "Gallina ciega",
+      "facet": "Juegos de calle y de patio",
+      "known_at": 3
+    },
+    {
+      "name": "Estatuas",
+      "facet": "Juegos de calle y de patio",
+      "known_at": 3
+    },
+    {
+      "name": "Pañuelito",
+      "facet": "Juegos de calle y de patio",
+      "known_at": 6
+    },
+    {
+      "name": "Tarro escondido",
+      "facet": "Juegos de calle y de patio",
+      "known_at": 8,
+      "retired": "unaskable: No tengo reglas fiables del 'tarro escondido'."
+    },
+    {
+      "name": "Tirar la cuerda",
+      "facet": "Juegos de calle y de patio",
+      "known_at": 4
+    },
+    {
+      "name": "El puente está quebrado",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 5
+    },
+    {
+      "name": "La pájara pinta",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 6
+    },
+    {
+      "name": "A la rueda rueda",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 3
+    },
+    {
+      "name": "Juguemos en el bosque",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 3
+    },
+    {
+      "name": "Tingo tingo tango",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 4
+    },
+    {
+      "name": "Agua de limones",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 6
+    },
+    {
+      "name": "El patio de mi casa",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 5
+    },
+    {
+      "name": "Los pollitos dicen",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 1
+    },
+    {
+      "name": "Doña Ana",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 7
+    },
+    {
+      "name": "El gato y el ratón",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 4
+    },
+    {
+      "name": "Aserrín aserrán",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 5
+    },
+    {
+      "name": "Un elefante se balanceaba",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 3
+    },
+    {
+      "name": "Antón Pirulero",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 8
+    },
+    {
+      "name": "El florón",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 6
+    },
+    {
+      "name": "Matarile",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 7
+    },
+    {
+      "name": "Mambrú se fue a la guerra",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 7
+    },
+    {
+      "name": "Aguinaldos",
+      "facet": "Aguinaldos y juegos navideños",
+      "known_at": 5
+    },
+    {
+      "name": "Pajita en boca",
+      "facet": "Aguinaldos y juegos navideños",
+      "known_at": 6
+    },
+    {
+      "name": "Dar y no recibir",
+      "facet": "Aguinaldos y juegos navideños",
+      "known_at": 7
+    },
+    {
+      "name": "Hablar y no contestar",
+      "facet": "Aguinaldos y juegos navideños",
+      "known_at": 8
+    },
+    {
+      "name": "Sí y no",
+      "facet": "Aguinaldos y juegos navideños",
+      "known_at": 7
+    },
+    {
+      "name": "Tres pies",
+      "facet": "Aguinaldos y juegos navideños",
+      "known_at": 8
+    },
+    {
+      "name": "Beso robado",
+      "facet": "Aguinaldos y juegos navideños",
+      "known_at": 8
+    },
+    {
+      "name": "Villancicos",
+      "facet": "Aguinaldos y juegos navideños",
+      "known_at": 3
+    },
+    {
+      "name": "Pesebre",
+      "facet": "Aguinaldos y juegos navideños",
+      "known_at": 2
+    },
+    {
+      "name": "Buñuelos",
+      "facet": "Aguinaldos y juegos navideños",
+      "known_at": 2
+    },
+    {
+      "name": "Tutaina",
+      "facet": "Aguinaldos y juegos navideños",
+      "known_at": 7
+    },
+    {
+      "name": "Mi burrito sabanero",
+      "facet": "Aguinaldos y juegos navideños",
+      "known_at": 3
+    },
+    {
+      "name": "Muñeco de año viejo",
+      "facet": "Aguinaldos y juegos navideños",
+      "known_at": 6
+    },
+    {
+      "name": "Agüeros de Año Nuevo",
+      "facet": "Aguinaldos y juegos navideños",
+      "known_at": 7
+    },
+    {
+      "name": "Doce uvas",
+      "facet": "Aguinaldos y juegos navideños",
+      "known_at": 5
+    },
+    {
+      "name": "Día de los Inocentes",
+      "facet": "Aguinaldos y juegos navideños",
+      "known_at": 6
+    },
+    {
+      "name": "Cometa",
+      "facet": "Cometas y vientos de agosto",
+      "known_at": 1
+    },
+    {
+      "name": "Vientos de agosto",
+      "facet": "Cometas y vientos de agosto",
+      "known_at": 5
+    },
+    {
+      "name": "Pita de la cometa",
+      "facet": "Cometas y vientos de agosto",
+      "known_at": 4
+    },
+    {
+      "name": "Cola de la cometa",
+      "facet": "Cometas y vientos de agosto",
+      "known_at": 3
+    },
+    {
+      "name": "Frenillo",
+      "facet": "Cometas y vientos de agosto",
+      "known_at": 8
+    },
+    {
+      "name": "Varillas de la cometa",
+      "facet": "Cometas y vientos de agosto",
+      "known_at": 7
+    },
+    {
+      "name": "Papel seda",
+      "facet": "Cometas y vientos de agosto",
+      "known_at": 6
+    },
+    {
+      "name": "Engrudo",
+      "facet": "Cometas y vientos de agosto",
+      "known_at": 9
+    },
+    {
+      "name": "Festival del Viento y las Cometas de Villa de Leyva",
+      "facet": "Cometas y vientos de agosto",
+      "known_at": 10
+    },
+    {
+      "name": "Cometa de bolsa plástica",
+      "facet": "Cometas y vientos de agosto",
+      "known_at": 5
+    },
+    {
+      "name": "Cortar la pita",
+      "facet": "Cometas y vientos de agosto",
+      "known_at": 9
+    },
+    {
+      "name": "Cometa de cajón",
+      "facet": "Cometas y vientos de agosto",
+      "known_at": 9
+    },
+    {
+      "name": "Vientos alisios",
+      "facet": "Cometas y vientos de agosto",
+      "known_at": 11
+    },
+    {
+      "name": "Festival de Verano de Bogotá",
+      "facet": "Cometas y vientos de agosto",
+      "known_at": 9
+    },
+    {
+      "name": "Carro de balineras",
+      "facet": "Carros de balineras y juguetes artesanales",
+      "known_at": 5
+    },
+    {
+      "name": "Balineras",
+      "facet": "Carros de balineras y juguetes artesanales",
+      "known_at": 6
+    },
+    {
+      "name": "Carro de rodillos",
+      "facet": "Carros de balineras y juguetes artesanales",
+      "known_at": 9
+    },
+    {
+      "name": "Muñeca de trapo",
+      "facet": "Carros de balineras y juguetes artesanales",
+      "known_at": 2
+    },
+    {
+      "name": "Caballito de palo",
+      "facet": "Carros de balineras y juguetes artesanales",
+      "known_at": 3
+    },
+    {
+      "name": "Zancos",
+      "facet": "Carros de balineras y juguetes artesanales",
+      "known_at": 4
+    },
+    {
+      "name": "Carrito de lata",
+      "facet": "Carros de balineras y juguetes artesanales",
+      "known_at": 5
+    },
+    {
+      "name": "Matraca",
+      "facet": "Carros de balineras y juguetes artesanales",
+      "known_at": 8
+    },
+    {
+      "name": "Teléfono de vasos",
+      "facet": "Carros de balineras y juguetes artesanales",
+      "known_at": 4
+    },
+    {
+      "name": "Barquito de papel",
+      "facet": "Carros de balineras y juguetes artesanales",
+      "known_at": 2
+    },
+    {
+      "name": "Avioncito de papel",
+      "facet": "Carros de balineras y juguetes artesanales",
+      "known_at": 1
+    },
+    {
+      "name": "Pito de barro",
+      "facet": "Carros de balineras y juguetes artesanales",
+      "known_at": 8
+    },
+    {
+      "name": "Alcancía de barro",
+      "facet": "Carros de balineras y juguetes artesanales",
+      "known_at": 5
+    },
+    {
+      "name": "Parqués",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 3
+    },
+    {
+      "name": "Dominó",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 2
+    },
+    {
+      "name": "Fichas del parqués",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 4
+    },
+    {
+      "name": "Dados",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 1
+    },
+    {
+      "name": "Cubilete",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 6
+    },
+    {
+      "name": "Salida",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 6
+    },
+    {
+      "name": "Cárcel",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 6
+    },
+    {
+      "name": "Seguro",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 6
+    },
+    {
+      "name": "Sacar par",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 5
+    },
+    {
+      "name": "Parqués de seis puestos",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 7
+    },
+    {
+      "name": "Parchís",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 7
+    },
+    {
+      "name": "Pachisi",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 12
+    },
+    {
+      "name": "Billar",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 5
+    },
+    {
+      "name": "Carambola a tres bandas",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 9
+    },
+    {
+      "name": "Naipes",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 3
+    },
+    {
+      "name": "Burro",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 5
+    },
+    {
+      "name": "Damas chinas",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 6
+    },
+    {
+      "name": "Bingo",
+      "facet": "Parqués, dominó y juegos de mesa",
+      "known_at": 4
+    },
+    {
+      "name": "Vara de premio",
+      "facet": "Juegos de feria y fiestas de pueblo",
+      "known_at": 7
+    },
+    {
+      "name": "Marrano encebado",
+      "facet": "Juegos de feria y fiestas de pueblo",
+      "known_at": 8
+    },
+    {
+      "name": "Rueda de Chicago",
+      "facet": "Juegos de feria y fiestas de pueblo",
+      "known_at": 5
+    },
+    {
+      "name": "Carrusel",
+      "facet": "Juegos de feria y fiestas de pueblo",
+      "known_at": 2
+    },
+    {
+      "name": "Pescar patos",
+      "facet": "Juegos de feria y fiestas de pueblo",
+      "known_at": 4
+    },
+    {
+      "name": "Carros chocones",
+      "facet": "Juegos de feria y fiestas de pueblo",
+      "known_at": 4
+    },
+    {
+      "name": "Bingo bailable",
+      "facet": "Juegos de feria y fiestas de pueblo",
+      "known_at": 8
+    },
+    {
+      "name": "Reinado",
+      "facet": "Juegos de feria y fiestas de pueblo",
+      "known_at": 6
+    },
+    {
+      "name": "Fiestas patronales",
+      "facet": "Juegos de feria y fiestas de pueblo",
+      "known_at": 7
+    },
+    {
+      "name": "Cabalgata",
+      "facet": "Juegos de feria y fiestas de pueblo",
+      "known_at": 7
+    },
+    {
+      "name": "Tómbola",
+      "facet": "Juegos de feria y fiestas de pueblo",
+      "known_at": 6
+    },
+    {
+      "name": "Papayera",
+      "facet": "Juegos de feria y fiestas de pueblo",
+      "known_at": 9
+    },
+    {
+      "name": "Vaca loca",
+      "facet": "Juegos de feria y fiestas de pueblo",
+      "known_at": 8
+    },
+    {
+      "name": "Chiva rumbera",
+      "facet": "Juegos de feria y fiestas de pueblo",
+      "known_at": 6
+    },
+    {
+      "name": "Kermés",
+      "facet": "Juegos de feria y fiestas de pueblo",
+      "known_at": 6
+    },
+    {
+      "name": "Trova paisa",
+      "facet": "Juegos de feria y fiestas de pueblo",
+      "known_at": 10
+    },
+    {
+      "name": "Turmequé",
+      "facet": "Orígenes indígenas y juegos regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Chaza",
+      "facet": "Orígenes indígenas y juegos regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Coleo",
+      "facet": "Orígenes indígenas y juegos regionales",
+      "known_at": 8
+    },
+    {
+      "name": "Cerbatana",
+      "facet": "Orígenes indígenas y juegos regionales",
+      "known_at": 8
+    },
+    {
+      "name": "Tayrona",
+      "facet": "Orígenes indígenas y juegos regionales",
+      "known_at": 8
+    },
+    {
+      "name": "Zenú",
+      "facet": "Orígenes indígenas y juegos regionales",
+      "known_at": 10
+    }
+  ]
+}
