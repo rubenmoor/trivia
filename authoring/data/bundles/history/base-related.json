@@ -1,0 +1,195 @@
+{
+  "about": "A theme bundle's subcategory → the base subcategories it goes beyond (plan 184); its concept lists and drafts keep away from their questions. Authoring only, never exported.",
+  "subcategories": {
+    "life-in-ancient-egypt": [
+      "pharaohs",
+      "pyramids",
+      "mummies"
+    ],
+    "mesopotamia": [
+      "history"
+    ],
+    "bronze-age-civilisations": [
+      "history"
+    ],
+    "greek-city-states": [
+      "greek-gods",
+      "greek-heroes"
+    ],
+    "ancient-persia": [
+      "history"
+    ],
+    "roman-republic": [
+      "roman-empire",
+      "roman-mythology"
+    ],
+    "early-china": [
+      "history"
+    ],
+    "ancient-india": [
+      "history"
+    ],
+    "celts-goths-and-huns": [
+      "roman-empire"
+    ],
+    "viking-age": [
+      "norse-mythology"
+    ],
+    "medieval-kingdoms-and-crusades": [
+      "knights",
+      "castles",
+      "british-royals"
+    ],
+    "medieval-daily-life": [
+      "knights",
+      "castles"
+    ],
+    "byzantine-empire": [
+      "roman-empire"
+    ],
+    "islamic-caliphates": [
+      "world-religions"
+    ],
+    "mongols-and-steppe-empires": [
+      "history"
+    ],
+    "imperial-china": [
+      "history"
+    ],
+    "japan-and-korea": [
+      "history"
+    ],
+    "indian-empires": [
+      "history"
+    ],
+    "southeast-asian-kingdoms": [
+      "temples-and-cathedrals"
+    ],
+    "west-african-empires": [
+      "history"
+    ],
+    "kush-aksum-and-ethiopia": [
+      "pharaohs"
+    ],
+    "central-and-southern-africa": [
+      "history"
+    ],
+    "mesoamerica": [
+      "wonders-of-the-world",
+      "explorers-and-discoveries"
+    ],
+    "andean-civilisations": [
+      "wonders-of-the-world"
+    ],
+    "first-nations-of-north-america": [
+      "history"
+    ],
+    "latin-american-independence": [
+      "history"
+    ],
+    "pacific-peoples": [
+      "islands"
+    ],
+    "renaissance-and-reformation": [
+      "art",
+      "world-religions"
+    ],
+    "ottoman-empire": [
+      "history"
+    ],
+    "colonial-empires": [
+      "explorers-and-discoveries",
+      "pirates"
+    ],
+    "imperial-russia": [
+      "history"
+    ],
+    "travellers-and-expeditions": [
+      "explorers-and-discoveries",
+      "amazon-history-and-exploration"
+    ],
+    "queens-and-empresses": [
+      "british-royals",
+      "pharaohs",
+      "french-revolution"
+    ],
+    "royal-houses-of-europe": [
+      "british-royals"
+    ],
+    "royal-titles-and-court-life": [
+      "british-royals"
+    ],
+    "age-of-revolutions": [
+      "french-revolution",
+      "us-presidents"
+    ],
+    "napoleons-europe": [
+      "french-revolution"
+    ],
+    "unifications-and-new-nations": [
+      "history"
+    ],
+    "industrial-age-life": [
+      "history"
+    ],
+    "slavery-and-abolition": [
+      "us-presidents"
+    ],
+    "first-world-war": [
+      "history"
+    ],
+    "between-the-wars": [
+      "world-war-ii"
+    ],
+    "home-fronts": [
+      "world-war-ii"
+    ],
+    "independence-movements": [
+      "cold-war"
+    ],
+    "votes-and-civil-rights": [
+      "famous-quotes"
+    ],
+    "childhood-in-the-past": [
+      "toys"
+    ],
+    "jobs-of-the-past": [
+      "history"
+    ],
+    "trade-routes": [
+      "history-of-money",
+      "explorers-and-discoveries"
+    ],
+    "writing-and-records": [
+      "languages-of-the-world",
+      "pharaohs"
+    ],
+    "archaeology-and-great-finds": [
+      "prehistory",
+      "mummies",
+      "explorers-and-discoveries",
+      "history"
+    ],
+    "homes-and-towns-of-the-past": [
+      "castles",
+      "architectural-styles"
+    ],
+    "plagues-fires-and-famines": [
+      "volcanoes",
+      "earthquakes",
+      "medicine-and-health"
+    ],
+    "old-place-names": [
+      "countries",
+      "capital-cities"
+    ],
+    "vanished-countries": [
+      "countries",
+      "cold-war"
+    ],
+    "maps-borders-and-treaties": [
+      "cold-war",
+      "continents"
+    ]
+  }
+}
