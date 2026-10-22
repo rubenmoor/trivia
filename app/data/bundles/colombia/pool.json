@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "ad524262",
+  "hash": "3dc106ce",
   "questions": [
     {
       "id": "q-0002",
@@ -5477,40 +5477,6 @@
       "background": null
     },
     {
-      "id": "q-5071",
-      "status": "approved",
-      "difficulty": 2,
-      "subcategory": "pioneers-and-popular-figures",
-      "bundle": "colombia",
-      "description": "El tío del que todos hablan justamente cuando dicen que no hablan de él.",
-      "question": "Veo el futuro, vivo escondido entre las paredes de la Casita y mi familia prefiere no hablar de mí. ¿Quién soy?",
-      "answer": "Bruno",
-      "wrong_answers": [
-        "Camilo",
-        "Agustín",
-        "Félix"
-      ],
-      "hints": [
-        "Soy de la película 'Encanto'.",
-        "Tengo ratas como amigas y uso una ruana verde.",
-        "Hay una canción muy famosa con mi nombre."
-      ],
-      "fun_fact": "La canción sobre Bruno fue tan famosa que superó en las listas a muchas canciones de cantantes reales.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Ruana.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ARuana.JPG",
-        "credit": "GtPLzcat89 · CC0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "author": "GtPLzcat89",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:GtPLzcat89&action=edit&redlink=1"
-      },
-      "background": null
-    },
-    {
       "id": "q-5072",
       "status": "approved",
       "difficulty": 6,
@@ -8329,6 +8295,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Bernard Gagnon",
         "author_url": "https://commons.wikimedia.org/wiki/User:Bgag"
+      },
+      "background": null
+    },
+    {
+      "id": "q-5158",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "indigenous-myths-and-folk-beliefs",
+      "bundle": "colombia",
+      "description": "Un espanto que dejó la mina, pero no la mala costumbre de ensuciarlo todo.",
+      "question": "Es un espanto antioqueño, anda por minas abandonadas y deja un rastro que seca las matas. ¿Qué significa su nombre, Patetarro?",
+      "answer": "Que tiene un tarro en lugar de pierna",
+      "wrong_answers": [
+        "Que patea tarros por los caminos",
+        "Que tiene patas anchas como tarros",
+        "Que lleva un tarro en la cabeza"
+      ],
+      "hints": [
+        "El nombre está hecho de dos palabras pegadas.",
+        "Su nombre recuerda lo que le pasó en una pelea.",
+        "Perdió una pierna en una pelea y la reemplazó con un recipiente de guadua."
+      ],
+      "fun_fact": "Se cuenta que el tarro del Patetarro va lleno de inmundicia y que, donde la derrama, no vuelve a crecer nada.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Minero_de_San_Roque%2C_Huila%2C_Colombia.jpg/3840px-Minero_de_San_Roque%2C_Huila%2C_Colombia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMinero_de_San_Roque%2C_Huila%2C_Colombia.jpg",
+        "credit": "CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "The authors are unknown, but the pictures belong to the Alliance for Responsible Mining.",
+        "author_url": null
       },
       "background": null
     },

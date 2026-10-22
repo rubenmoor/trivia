@@ -386595,11 +386595,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:49:16"
       },
       "bundle": "colombia",
       "background": null
@@ -386666,11 +386674,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:43:50"
       },
       "bundle": "colombia",
       "background": null
@@ -387456,11 +387472,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:50:00"
       },
       "bundle": "colombia",
       "background": null
@@ -387908,11 +387932,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:48:45"
       },
       "bundle": "colombia",
       "background": null
@@ -390503,11 +390535,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:47:57"
       },
       "bundle": "colombia",
       "background": null
@@ -390860,11 +390900,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:47:20"
       },
       "bundle": "colombia",
       "background": null,
@@ -391027,7 +391075,7 @@
     },
     {
       "id": "q-5071",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 2,
       "description": "El tío del que todos hablan justamente cuando dicen que no hablan de él.",
       "question": "Veo el futuro, vivo escondido entre las paredes de la Casita y mi familia prefiere no hablar de mí. ¿Quién soy?",
@@ -391085,13 +391133,21 @@
       "needs_media": false,
       "batch": "batch-12",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "needs_work",
+        "feedback": "i like the question but it is about a fictional character. that doesn't seem to fit. fictional characters would be allowed, but this specific fictional character is just a small role in a disney move which happens to take place in colombia. too much of a stretch. we can leave this in the colombia bundle, but the category must be \"colombia in fiction\" or something close. if no category can be found: this is a totally fine question for the base bundle",
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:46:01"
       },
       "bundle": "colombia",
       "background": null
@@ -391242,11 +391298,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:42:56"
       },
       "bundle": "colombia",
       "background": null,
@@ -391774,11 +391838,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:42:27"
       },
       "bundle": "colombia",
       "background": null
@@ -392440,11 +392512,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:43:38"
       },
       "bundle": "colombia",
       "background": null
@@ -392511,11 +392591,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:43:04"
       },
       "bundle": "colombia",
       "background": null
@@ -393476,11 +393564,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:48:39"
       },
       "bundle": "colombia",
       "background": null
@@ -395029,11 +395125,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:47:41"
       },
       "bundle": "colombia",
       "background": null
@@ -395395,14 +395499,22 @@
       "batch": "batch-12",
       "review": {
         "decision": "needs_work",
-        "feedback": "This asks the same fact as approved q-3205 (\"This board is for Ludo, also called Parcheesi. How many tokens does each player get?\" → 4). Parqués is the Colombian form of parchís/Parcheesi, so the token count is the same fact in other words. Drop it, or ask about something only parqués has, such as the 'seguros', capturing pieces or 'soplar'.",
-        "problems": [
-          "overlap"
-        ],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "feedback": "don't be too strict on overlaps. this one's totally fine",
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This asks the same fact as approved q-3205 (\"This board is for Ludo, also called Parcheesi. How many tokens does each player get?\" → 4). Parqués is the Colombian form of parchís/Parcheesi, so the token count is the same fact in other words. Drop it, or ask about something only parqués has, such as the 'seguros', capturing pieces or 'soplar'.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:47:08"
       },
       "bundle": "colombia",
       "background": null
@@ -395835,11 +395947,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:49:53"
       },
       "bundle": "colombia",
       "background": null,
@@ -396216,11 +396336,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:49:09"
       },
       "bundle": "colombia",
       "background": null
@@ -396287,11 +396415,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:49:35"
       },
       "bundle": "colombia",
       "background": null
@@ -396796,11 +396932,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:43:21"
       },
       "bundle": "colombia",
       "background": null
@@ -396867,11 +397011,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:51:51"
       },
       "bundle": "colombia",
       "background": null
@@ -397151,11 +397303,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:46:36"
       },
       "bundle": "colombia",
       "background": null,
@@ -397471,7 +397631,7 @@
     },
     {
       "id": "q-5158",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Un espanto que dejó la mina, pero no la mala costumbre de ensuciarlo todo.",
       "question": "Es un espanto antioqueño, anda por minas abandonadas y deja un rastro que seca las matas. ¿Qué significa su nombre, Patetarro?",
@@ -397529,15 +397689,23 @@
       "needs_media": false,
       "batch": "batch-12",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. I could not verify the details. A source confirms the Patetarro exists in Antioquian folklore, but it says he throws worms at crops out of revenge. I found nothing on the tarro-for-a-leg story, the abandoned mines, or the trail that dries plants.",
-        "problems": [
-          "fact"
-        ],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. I could not verify the details. A source confirms the Patetarro exists in Antioquian folklore, but it says he throws worms at crops out of revenge. I found nothing on the tarro-for-a-leg story, the abandoned mines, or the trail that dries plants.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:50:09"
       },
       "bundle": "colombia",
       "background": null
@@ -397981,11 +398149,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:49:43"
       },
       "bundle": "colombia",
       "background": null
@@ -399518,11 +399694,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:49:00"
       },
       "bundle": "colombia",
       "background": null,
@@ -399686,11 +399870,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:48:31"
       },
       "bundle": "colombia",
       "background": null
@@ -400689,11 +400881,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:49:25"
       },
       "bundle": "colombia",
       "background": null
@@ -401672,11 +401872,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:48:04"
       },
       "bundle": "colombia",
       "background": null
@@ -402588,11 +402796,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:46:26"
       },
       "bundle": "colombia",
       "background": null,
@@ -403847,11 +404063,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:51:44"
       },
       "bundle": "colombia",
       "background": null
@@ -404154,11 +404378,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:48:53"
       },
       "bundle": "colombia",
       "background": null
@@ -405192,11 +405424,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-22",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-22T18:48:15"
       },
       "bundle": "colombia",
       "background": null,
