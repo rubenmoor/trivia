@@ -319383,11 +319383,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:07:37"
       },
       "bundle": "base",
       "locale": "en",
@@ -320752,11 +320760,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:05:55"
       },
       "bundle": "base",
       "locale": "en",
@@ -322296,11 +322312,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:02:11"
       },
       "bundle": "base",
       "locale": "en",
@@ -324091,11 +324115,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:04:15"
       },
       "bundle": "base",
       "locale": "en",
@@ -324634,11 +324666,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:00:55"
       },
       "bundle": "base",
       "locale": "en",
@@ -325586,11 +325626,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:04:03"
       },
       "bundle": "base",
       "locale": "en",
@@ -325658,11 +325706,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:01:13"
       },
       "bundle": "base",
       "locale": "en",
@@ -326853,11 +326909,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:06:11"
       },
       "bundle": "base",
       "locale": "en",
@@ -327230,11 +327294,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:06:38"
       },
       "bundle": "base",
       "locale": "en",
@@ -328391,11 +328463,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:00:41"
       },
       "bundle": "base",
       "locale": "en",
@@ -330290,11 +330370,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:06:21"
       },
       "bundle": "base",
       "locale": "en",
@@ -332033,7 +332121,7 @@
     },
     {
       "id": "q-4315",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 4,
       "description": "A sign that tells you where to go without saying a single word.",
       "question": "A crossed-out cigarette is to “no smoking” as a white wheelchair on a blue square is to…",
@@ -332091,13 +332179,21 @@
       "needs_media": false,
       "batch": "batch-11",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
+        "decision": "needs_work",
+        "feedback": "i don't like it. the question is difficult only because of the question style. the subject matter is trivial.",
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:07:24"
       },
       "bundle": "base",
       "locale": "en",
@@ -334148,9 +334244,16 @@
         "role": "essential",
         "query": "milking cluster cow udder",
         "note": "Photo of a milking machine cluster where all four teat cups are clearly visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACow_milking_machine_in_action_DSC04132.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Cow_milking_machine_in_action_DSC04132.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Copyright © 2004 David Monniaux · CC BY-SA 2.0 fr · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0 fr",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en",
+        "author": "Copyright © 2004 David Monniaux",
+        "author_url": "https://commons.wikimedia.org/wiki/User:David.Monniaux",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "On some farms, cows walk to a milking robot all by themselves whenever they feel like being milked.",
       "subcategory": "farm-animals",
@@ -334180,14 +334283,22 @@
       "batch": "batch-11",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates clearly shows all four teat cups. Candidates 1 and 2 are old book drawings of something else, 4 and 5 show an udder with no machine, and in 3 and 6 only two or three cups can be seen, which would point players to a wrong option. We need a photo of a milking cluster with all four cups clearly visible, for example one hanging up or lying on a table rather than attached under a cow. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "feedback": "the  question doesn't work. we can show a photo of an actual milking machine, but why would all milking machines have 4 cups? maybe the question is about the anatomy of a cow",
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates clearly shows all four teat cups. Candidates 1 and 2 are old book drawings of something else, 4 and 5 show an udder with no machine, and in 3 and 6 only two or three cups can be seen, which would point players to a wrong option. We need a photo of a milking cluster with all four cups clearly visible, for example one hanging up or lying on a table rather than attached under a cow. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:05:32"
       },
       "bundle": "base",
       "locale": "en",
@@ -335400,11 +335511,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:07:31"
       },
       "bundle": "base",
       "locale": "en",
@@ -336180,7 +336299,7 @@
     },
     {
       "id": "q-4370",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "A fish with fans across Europe, and one very smelly fan club in Sweden.",
       "question": "I swim in huge schools in the North Atlantic. The Dutch eat me raw with onions, smoked I'm a kipper, and Swedes ferment me in smelly cans. What am I?",
@@ -336200,16 +336319,19 @@
         "role": "decorative",
         "query": "Dutch fish stall market",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Fish_Market_at_Leyden_%28SM_1132%29.png",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/The_Fish_Market_at_Leyden_%28SM_1132%29.png/3840px-The_Fish_Market_at_Leyden_%28SM_1132%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Jan Steen · PDM-owner · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAdriaen_van_Utrecht_-_Fishmonger%27s_Stall_-_WGA24196.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Adriaen_van_Utrecht_-_Fishmonger%27s_Stall_-_WGA24196.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Adriaen van Utrecht · Public domain · Wikimedia Commons",
         "provider": "commons",
-        "license": "PDM-owner",
+        "license": "Public domain",
         "license_url": null,
-        "author": "Jan Steen",
-        "author_url": "https://en.wikipedia.org/wiki/en:Jan_Steen",
+        "author": "Adriaen van Utrecht",
+        "author_url": "https://en.wikipedia.org/wiki/en:Adriaen_van_Utrecht",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [
+          "PD-Art",
+          "PD-old-auto-expired"
+        ]
       },
       "fun_fact": "Swedish fermented fish, surströmming, smells so strong that people often open the cans outdoors.",
       "subcategory": "fish",
@@ -336238,15 +336360,23 @@
       "needs_media": false,
       "batch": "batch-11",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-no-reason: public domain without a template).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-no-reason: public domain without a template).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:07:50"
       },
       "bundle": "base",
       "locale": "en",
@@ -338656,11 +338786,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:02:20"
       },
       "bundle": "base",
       "locale": "en",
@@ -342914,11 +343052,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:02:31"
       },
       "bundle": "base",
       "locale": "en",
@@ -344610,11 +344756,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:06:29"
       },
       "bundle": "base",
       "locale": "en",
@@ -349355,11 +349509,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:04:20"
       },
       "bundle": "base",
       "locale": "en",
@@ -354046,11 +354208,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:01:59"
       },
       "bundle": "base",
       "locale": "en",
@@ -354110,14 +354280,22 @@
       "batch": "batch-11",
       "review": {
         "decision": "needs_work",
-        "feedback": "The text and facts are fine (Grammys February 2000, Google Images 2001, Versace show September 2019), but no image candidate works and there can't be another search. Re-run the media search with something like \"green tropical leaf print\" or \"jungle print dress\", or switch to a decorative image such as \"Grammy red carpet\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "feedback": "image doesn't fit",
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text and facts are fine (Grammys February 2000, Google Images 2001, Versace show September 2019), but no image candidate works and there can't be another search. Re-run the media search with something like \"green tropical leaf print\" or \"jungle print dress\", or switch to a decorative image such as \"Grammy red carpet\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:01:37"
       },
       "bundle": "base",
       "locale": "en",
@@ -355188,11 +355366,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:04:09"
       },
       "bundle": "base",
       "locale": "en",
@@ -356514,11 +356700,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:06:42"
       },
       "bundle": "base",
       "locale": "en",
@@ -370743,11 +370937,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:04:26"
       },
       "bundle": "base",
       "locale": "en",
@@ -372590,11 +372792,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:01:02"
       },
       "bundle": "base",
       "locale": "en",
@@ -372885,11 +373095,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:02:06"
       },
       "bundle": "base",
       "locale": "en",
@@ -374059,11 +374277,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:02:40"
       },
       "bundle": "base",
       "locale": "en",
@@ -381332,11 +381558,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:05:49"
       },
       "bundle": "base",
       "locale": "en",
@@ -382126,11 +382360,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:00:50"
       },
       "bundle": "base",
       "locale": "en",
@@ -384198,11 +384440,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T20:06:04"
       },
       "bundle": "base",
       "locale": "en",
