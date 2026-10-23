@@ -50318,6 +50318,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1677, 401);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1677, 411);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1680, 408);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1682, 407);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1690, 408);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1690, 413);
 
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1649, 1648);
