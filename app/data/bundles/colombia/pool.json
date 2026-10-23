@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "3dc106ce",
+  "hash": "437f9352",
   "questions": [
     {
       "id": "q-0002",
@@ -3845,6 +3845,40 @@
       "background": null
     },
     {
+      "id": "q-5020",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "20th-century",
+      "bundle": "colombia",
+      "description": "Aquí las obras no las escribe uno solo: las escribe todo el grupo, y a veces hasta el gato.",
+      "question": "El Teatro La Candelaria, fundado en Bogotá en 1966, fue el gran laboratorio de la creación colectiva. ¿Quién fue su fundador y director?",
+      "answer": "Santiago García",
+      "wrong_answers": [
+        "Enrique Buenaventura",
+        "Fanny Mikey",
+        "Jorge Alí Triana"
+      ],
+      "hints": [
+        "Fue arquitecto antes de dedicarse al teatro.",
+        "Dirigió el grupo durante décadas junto a Patricia Ariza.",
+        "Su apellido es el mismo del autor de 'Cien años de soledad'."
+      ],
+      "fun_fact": "La Candelaria montó por creación colectiva obras como 'Guadalupe años sin cuenta' (1975).",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Bog_La_Candelaria.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABog_La_Candelaria.JPG",
+        "credit": "Felipe Restrepo Acosta · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Felipe Restrepo Acosta",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pedro_Felipe"
+      },
+      "background": null
+    },
+    {
       "id": "q-5021",
       "status": "approved",
       "difficulty": 8,
@@ -4525,6 +4559,40 @@
       "background": null
     },
     {
+      "id": "q-5041",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "crafts-and-traditional-dress",
+      "bundle": "colombia",
+      "description": "Una cara de madera que solo sale de la casa cuando hay fiesta.",
+      "question": "Las máscaras de madera tallada de toritos y tigres son típicas de un carnaval colombiano muy famoso. ¿De qué ciudad?",
+      "answer": "Barranquilla",
+      "wrong_answers": [
+        "Pasto",
+        "Riosucio",
+        "Cali"
+      ],
+      "hints": [
+        "Su carnaval es uno de los más grandes del mundo.",
+        "Su carnaval empieza con la Batalla de Flores.",
+        "Queda donde el río Magdalena llega al mar Caribe."
+      ],
+      "fun_fact": "Muchas máscaras de madera del Carnaval de Barranquilla se tallan en Galapa, un municipio vecino del Atlántico.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Bullar%C3%A4tze_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABullar%C3%A4tze_001.jpg",
+        "credit": "Bibe66 · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Bibe66",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Bibe66&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-5042",
       "status": "approved",
       "difficulty": 8,
@@ -4657,6 +4725,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Difference engine",
         "author_url": "https://commons.wikimedia.org/wiki/User:Difference_engine"
+      },
+      "background": null
+    },
+    {
+      "id": "q-5046",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "drinks",
+      "bundle": "colombia",
+      "description": "Una limonada que se fue de vacaciones a la playa y volvió blanquita.",
+      "question": "En las playas de Cartagena es famosa una limonada blanca y cremosa. Además de limón, ¿de qué fruta lleva?",
+      "answer": "Coco",
+      "wrong_answers": [
+        "Guanábana",
+        "Banano",
+        "Piña"
+      ],
+      "hints": [
+        "Es una fruta tropical muy común en la costa Caribe.",
+        "Con ella se prepara el arroz típico que acompaña el pescado frito en la costa.",
+        "Por dentro tiene agua y una carne blanca."
+      ],
+      "fun_fact": "La limonada de coco se licúa con hielo, limón, azúcar y leche o crema de coco, y queda casi como un granizado.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/City_walls_of_Cartagena_02.jpg/3840px-City_walls_of_Cartagena_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACity_walls_of_Cartagena_02.jpg",
+        "credit": "Bernard Gagnon · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bernard Gagnon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bgag"
       },
       "background": null
     },
@@ -5473,6 +5575,40 @@
         "license_url": null,
         "author": "Ridderstedt assistant on assignment, acquired by Lars Jacob Prod",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-5071",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "pioneers-and-popular-figures",
+      "bundle": "colombia",
+      "description": "El tío del que todos hablan justamente cuando dicen que no hablan de él.",
+      "question": "Veo el futuro, vivo escondido entre las paredes de la Casita y mi familia prefiere no hablar de mí. ¿Quién soy?",
+      "answer": "Bruno",
+      "wrong_answers": [
+        "Camilo",
+        "Agustín",
+        "Félix"
+      ],
+      "hints": [
+        "Soy de la película 'Encanto'.",
+        "Tengo ratas como amigas y uso una ruana verde.",
+        "Hay una canción muy famosa con mi nombre."
+      ],
+      "fun_fact": "La canción sobre Bruno fue tan famosa que superó en las listas a muchas canciones de cantantes reales.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Ruana.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARuana.JPG",
+        "credit": "GtPLzcat89 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "GtPLzcat89",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:GtPLzcat89&action=edit&redlink=1"
       },
       "background": null
     },
@@ -6357,6 +6493,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Vyacheslav Argenberg",
         "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
+      },
+      "background": null
+    },
+    {
+      "id": "q-5098",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "pop-rock-and-urban-music",
+      "bundle": "colombia",
+      "description": "Dos hermanos que se esperaron y por fin se encontraron.",
+      "question": "Somos dos hermanos colombianos: pegamos «Yo te esperaré» y luego «Por fin te encontré» con Juan Magán. ¿Quiénes somos?",
+      "answer": "Cali y El Dandee",
+      "wrong_answers": [
+        "Mau y Ricky",
+        "Morat",
+        "Jesse & Joy"
+      ],
+      "hints": [
+        "Nos llamamos Alejandro y Mauricio Rengifo.",
+        "Uno de nosotros también es productor y compone canciones para otros artistas.",
+        "Uno de nosotros lleva en su nombre artístico a la capital mundial de la salsa."
+      ],
+      "fun_fact": "En «Por fin te encontré», junto a Juan Magán, también canta un joven Sebastián Yatra.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Beach-Please-2022-crowd-stage-lights-night-performance.jpg/3840px-Beach-Please-2022-crowd-stage-lights-night-performance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeach-Please-2022-crowd-stage-lights-night-performance.jpg",
+        "credit": "PinkBeachPlanet · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PinkBeachPlanet",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:PinkBeachPlanet&action=edit&redlink=1"
       },
       "background": null
     },
@@ -8333,6 +8503,40 @@
       "background": null
     },
     {
+      "id": "q-5159",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "indigenous-myths-and-folk-beliefs",
+      "bundle": "colombia",
+      "description": "Un vecino del monte que se viste con todo lo que el viento tumba al suelo.",
+      "question": "Según la leyenda, ¿a quiénes castiga el Hojarasquín del Monte?",
+      "answer": "A los que dañan el bosque y sus animales",
+      "wrong_answers": [
+        "A los que andan de parranda de noche",
+        "A los que no van a misa el domingo",
+        "A los que se burlan de los espantos"
+      ],
+      "hints": [
+        "Está cubierto de hojas, musgo y ramas.",
+        "Parece un árbol que camina.",
+        "Protege la naturaleza de cazadores y taladores."
+      ],
+      "fun_fact": "Los campesinos lo describen como un hombre con forma de árbol y lo ven como la conciencia de la naturaleza.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Cloud_Forest%2C_Narcondam_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACloud_Forest%2C_Narcondam_Island.jpg",
+        "credit": "Rohitjahnavi · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Rohitjahnavi",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rohitjahnavi"
+      },
+      "background": null
+    },
+    {
       "id": "q-5160",
       "status": "approved",
       "difficulty": 7,
@@ -9451,6 +9655,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Kleseus",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kleseus&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-5196",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "sayings-and-expressions",
+      "bundle": "colombia",
+      "description": "Para algunos bailes se necesita espacio; para otros, apenas un cachete.",
+      "question": "En la fiesta, la pareja quiere bailar pegadito, cachete con cachete. ¿Cuál de estos ritmos NO se baila así?",
+      "answer": "Mapalé",
+      "wrong_answers": [
+        "Vallenato",
+        "Bolero",
+        "Bachata"
+      ],
+      "hints": [
+        "Uno de estos se baila suelto y con mucha energía.",
+        "Es un ritmo del Caribe colombiano con raíces africanas.",
+        "Se baila con tambores, saltos y movimientos rapidísimos."
+      ],
+      "fun_fact": "Se dice que el nombre del mapalé viene de un pez del Caribe colombiano.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Party_Tent.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AParty_Tent.JPG",
+        "credit": "Don Williams · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Don Williams",
+        "author_url": null
       },
       "background": null
     },

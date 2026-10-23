@@ -386345,7 +386345,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Mutis botanical expedition plate",
+        "query": "Flora Real Expedicion Botanica Nuevo Reino Granada",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -386379,17 +386379,43 @@
       "batch": "batch-12",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates shows what the question names. All six are black-and-white lithographs from 19th-century US expedition reports (Bigelow/Torrey, Stansbury, Sitgreaves), not the hand-painted colour plates of the Real Expedición Botánica. A new search can't be run, so the slot needs a real Mutis expedition plate, for example a search for \"Flora de la Real Expedición Botánica\" or \"Mutis lámina quina\" on Commons. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
-        "reviewed_on": "2026-10-21",
+        "reviewed_on": "2026-10-22",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates shows what the question names. All six are black-and-white lithographs from 19th-century US expedition reports (Bigelow/Torrey, Stansbury, Sitgreaves), not the hand-painted colour plates of the Real Expedición Botánica. A new search can't be run, so the slot needs a real Mutis expedition plate, for example a search for \"Flora de la Real Expedición Botánica\" or \"Mutis lámina quina\" on Commons. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query so it finds an actual hand-painted plate from Mutis's expedition, not US expedition lithographs.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Mutis botanical expedition plate",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-22"
+      }
     },
     {
       "id": "q-5009",
@@ -387204,10 +387230,10 @@
     },
     {
       "id": "q-5020",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "Aquí las obras no las escribe uno solo: las escribe todo el grupo, y a veces hasta el gato.",
-      "question": "Este teatro bogotano, fundado en 1966, fue el gran laboratorio de la creación colectiva. ¿Quién fue su fundador y director?",
+      "question": "El Teatro La Candelaria, fundado en Bogotá en 1966, fue el gran laboratorio de la creación colectiva. ¿Quién fue su fundador y director?",
       "answer": "Santiago García",
       "wrong_answers": [
         "Enrique Buenaventura",
@@ -387221,12 +387247,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Teatro La Candelaria fachada",
-        "note": "Foto de la fachada del Teatro La Candelaria en el centro histórico de Bogotá.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "La Candelaria Bogota colonial street",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABog_La_Candelaria.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Bog_La_Candelaria.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Felipe Restrepo Acosta · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Felipe Restrepo Acosta",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pedro_Felipe",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "La Candelaria montó por creación colectiva obras como 'Guadalupe años sin cuenta' (1975).",
       "subcategory": "20th-century",
@@ -387252,21 +387285,47 @@
         "notes": "This is a dry specialist fact. Hint 3 (same surname as García Márquez) is very strong, but hint 3 may be. The facade photo is labelled essential but only identifies the theatre, not the answer, so it works more like illustrative media. That's fine."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-12",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine and the facts check out (Santiago García co-founded La Candelaria in 1966, studied architecture, and led it with Patricia Ariza). But \"Este teatro bogotano\" points to the Teatro La Candelaria building, and none of the six candidates shows it. They show the Camarín del Carmen, the Iglesia/Templo de la Candelaria and ordinary houses in the La Candelaria neighbourhood. A new search isn't allowed. Find a photo of the theatre's facade (Calle 12 No. 2-59), or change the slot to decorative with a Bogotá colonial-street image. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-10-21",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-22",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine and the facts check out (Santiago García co-founded La Candelaria in 1966, studied architecture, and led it with Patricia Ariza). But \"Este teatro bogotano\" points to the Teatro La Candelaria building, and none of the six candidates shows it. They show the Camarín del Carmen, the Iglesia/Templo de la Candelaria and ordinary houses in the La Candelaria neighbourhood. A new search isn't allowed. Find a photo of the theatre's facade (Calle 12 No. 2-59), or change the slot to decorative with a Bogotá colonial-street image. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The answer is a person, so a photo of the theatre isn't needed: the question now names the theatre and the image is an illustrative La Candelaria street.",
+        "previous": {
+          "question": "Este teatro bogotano, fundado en 1966, fue el gran laboratorio de la creación colectiva. ¿Quién fue su fundador y director?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Teatro La Candelaria fachada",
+            "note": "Foto de la fachada del Teatro La Candelaria en el centro histórico de Bogotá.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-22"
+      }
     },
     {
       "id": "q-5021",
@@ -388795,10 +388854,10 @@
     },
     {
       "id": "q-5041",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Una cara de madera que solo sale de la casa cuando hay fiesta.",
-      "question": "Mira la foto: estas máscaras de madera tallada, de toritos y tigres, se usan en un carnaval famoso. ¿De qué ciudad?",
+      "question": "Las máscaras de madera tallada de toritos y tigres son típicas de un carnaval colombiano muy famoso. ¿De qué ciudad?",
       "answer": "Barranquilla",
       "wrong_answers": [
         "Pasto",
@@ -388812,12 +388871,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Galapa carnival wooden masks",
-        "note": "Foto de máscaras de madera pintadas de torito o tigre del Carnaval de Barranquilla, sin letreros con nombres de ciudades.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "painted wooden carnival mask",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABullar%C3%A4tze_001.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Bullar%C3%A4tze_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Bibe66 · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Bibe66",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Bibe66&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Muchas máscaras de madera del Carnaval de Barranquilla se tallan en Galapa, un municipio vecino del Atlántico.",
       "subcategory": "crafts-and-traditional-dress",
@@ -388843,32 +388909,46 @@
         "notes": "Riosucio and Pasto also use masks, but torito and tiger masks are clearly Barranquilla. There's a risk the essential image search returns photos with Barranquilla text on them. It shares only the Barranquilla carnival topic with q-0128 and q-0129."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-12",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The essential image must show the carved torito/tiger masks of the Barranquilla Carnival, but every candidate shows Portuguese (Lazarim caretos, a Diabo mask) or German Fastnacht masks. A photo of Barranquilla's masks is needed, or the question must drop \"Mira la foto\" and use an illustrative image. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-10-21",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-22",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential image must show the carved torito/tiger masks of the Barranquilla Carnival, but every candidate shows Portuguese (Lazarim caretos, a Diabo mask) or German Fastnacht masks. A photo of Barranquilla's masks is needed, or the question must drop \"Mira la foto\" and use an illustrative image. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 1 (coast) singled out Barranquilla; replaced it with a non-geographic vague hint.",
+        "reason": "No photo of Barranquilla's masks was found, so I dropped \"Mira la foto\" and made the image a decorative mask image.",
         "previous": {
-          "hints": [
-            "Es una ciudad de la costa.",
-            "Su carnaval empieza con la Batalla de Flores.",
-            "Queda donde el río Magdalena llega al mar Caribe."
-          ]
+          "question": "Mira la foto: estas máscaras de madera tallada, de toritos y tigres, se usan en un carnaval famoso. ¿De qué ciudad?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Galapa carnival wooden masks",
+            "note": "Foto de máscaras de madera pintadas de torito o tigre del Carnaval de Barranquilla, sin letreros con nombres de ciudades.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
-        "revised_on": "2026-10-21"
+        "revised_on": "2026-10-22"
       }
     },
     {
@@ -389178,10 +389258,10 @@
     },
     {
       "id": "q-5046",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Una limonada que se fue de vacaciones a la playa y volvió blanquita.",
-      "question": "Esta bebida cremosa es la estrella de las playas de Cartagena. Además de limón, ¿de qué fruta lleva?",
+      "question": "En las playas de Cartagena es famosa una limonada blanca y cremosa. Además de limón, ¿de qué fruta lleva?",
       "answer": "Coco",
       "wrong_answers": [
         "Guanábana",
@@ -389195,12 +389275,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "coconut lemonade glass",
-        "note": "Un vaso de limonada de coco: bebida blanca y cremosa con hielo, sin cocos enteros visibles.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Cartagena walled city street",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACity_walls_of_Cartagena_02.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/City_walls_of_Cartagena_02.jpg/3840px-City_walls_of_Cartagena_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Bernard Gagnon · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bernard Gagnon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bgag",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "La limonada de coco se licúa con hielo, limón, azúcar y leche o crema de coco, y queda casi como un granizado.",
       "subcategory": "drinks",
@@ -389226,32 +389313,46 @@
         "notes": "The essential photo is risky. A clear, identifiable limonada de coco is unlikely to be in Commons or Openverse, and a white creamy drink could just as well be guanábana juice. The question works without the photo, so an illustrative role would be safer."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-12",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows a coconut lemonade: the sheet has Ter Borch paintings (1, 5, 6), empty engraved glasses from the MET (2, 3) and a gilded vase (4). No new search is allowed. As the rater suggested, switch the slot to an illustrative image, such as a Cartagena beach or a coastal fruit stand, because the question works without a photo of the drink. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-10-21",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-22",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a coconut lemonade: the sheet has Ter Borch paintings (1, 5, 6), empty engraved glasses from the MET (2, 3) and a gilded vase (4). No new search is allowed. As the rater suggested, switch the slot to an illustrative image, such as a Cartagena beach or a coastal fruit stand, because the question works without a photo of the drink. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which identified coconut outright, with a vague and a medium hint.",
+        "reason": "No photo of the drink was available, so the question now describes it in words and the image is an illustrative Cartagena street.",
         "previous": {
-          "hints": [
-            "Esta fruta crece en palmeras.",
-            "Por fuera es café y peluda.",
-            "Por dentro tiene agua y una carne blanca."
-          ]
+          "question": "Esta bebida cremosa es la estrella de las playas de Cartagena. Además de limón, ¿de qué fruta lleva?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "coconut lemonade glass",
+            "note": "Un vaso de limonada de coco: bebida blanca y cremosa con hielo, sin cocos enteros visibles.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
-        "revised_on": "2026-10-21"
+        "revised_on": "2026-10-22"
       }
     },
     {
@@ -391075,7 +391176,7 @@
     },
     {
       "id": "q-5071",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "El tío del que todos hablan justamente cuando dicen que no hablan de él.",
       "question": "Veo el futuro, vivo escondido entre las paredes de la Casita y mi familia prefiere no hablar de mí. ¿Quién soy?",
@@ -391129,25 +391230,33 @@
         "difficulty_estimate": 2,
         "notes": "The description and the riddle both echo the famous song, which is acceptable at difficulty 2. The lens is labelled 'history', which is wrong. The fun fact is vague: it could say the song reached number 1 on the Billboard Hot 100."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-12",
       "review": {
-        "decision": "needs_work",
-        "feedback": "i like the question but it is about a fictional character. that doesn't seem to fit. fictional characters would be allowed, but this specific fictional character is just a small role in a disney move which happens to take place in colombia. too much of a stretch. we can leave this in the colombia bundle, but the category must be \"colombia in fiction\" or something close. if no category can be found: this is a totally fine question for the base bundle",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-22",
-        "reviewer": "human",
-        "model": null,
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
         "previous": {
-          "decision": "approved",
-          "feedback": null,
-          "problems": [],
-          "reviewed_on": "2026-10-21",
-          "reviewer": "llm",
-          "model": "claude-opus-5-5",
-          "previous": null
-        },
-        "reviewed_at": "2026-10-22T18:46:01"
+          "decision": "needs_work",
+          "feedback": "i like the question but it is about a fictional character. that doesn't seem to fit. fictional characters would be allowed, but this specific fictional character is just a small role in a disney move which happens to take place in colombia. too much of a stretch. we can leave this in the colombia bundle, but the category must be \"colombia in fiction\" or something close. if no category can be found: this is a totally fine question for the base bundle",
+          "reviewed_on": "2026-10-22",
+          "reviewer": "human",
+          "model": null,
+          "previous": {
+            "decision": "approved",
+            "feedback": null,
+            "problems": [],
+            "reviewed_on": "2026-10-21",
+            "reviewer": "llm",
+            "model": "claude-opus-5-5",
+            "previous": null
+          },
+          "reviewed_at": "2026-10-22T18:46:01"
+        }
       },
       "bundle": "colombia",
       "background": null
@@ -393122,10 +393231,10 @@
     },
     {
       "id": "q-5098",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Dos hermanos que se esperaron y por fin se encontraron.",
-      "question": "Somos dos hermanos del Valle del Cauca: pegamos «Yo te esperaré» y luego «Por fin te encontré» con Juan Magán. ¿Quiénes somos?",
+      "question": "Somos dos hermanos colombianos: pegamos «Yo te esperaré» y luego «Por fin te encontré» con Juan Magán. ¿Quiénes somos?",
       "answer": "Cali y El Dandee",
       "wrong_answers": [
         "Mau y Ricky",
@@ -393139,17 +393248,17 @@
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "Valle del Cauca landscape",
+        "role": "decorative",
+        "query": "concert stage lights crowd",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMi_hijo-mirando_el_valle_del_cauca.JPG",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Mi_hijo-mirando_el_valle_del_cauca.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Librerosduran · CC BY-SA 3.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeach-Please-2022-crowd-stage-lights-night-performance.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Beach-Please-2022-crowd-stage-lights-night-performance.jpg/3840px-Beach-Please-2022-crowd-stage-lights-night-performance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "PinkBeachPlanet · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Librerosduran",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Librerosduran&action=edit&redlink=1",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PinkBeachPlanet",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:PinkBeachPlanet&action=edit&redlink=1",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -393180,30 +393289,49 @@
       "needs_media": false,
       "batch": "batch-12",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question says the duo is from Valle del Cauca, and the capital of Valle del Cauca is Cali, which is part of the answer's name (\"Cali y El Dandee\"). A Colombian family can get the answer from the geography without knowing the songs, and hint 3 then repeats the same clue. Replace \"del Valle del Cauca\" with something that doesn't point to the name, such as \"colombianos\", or drop it.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-21",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-22",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question says the duo is from Valle del Cauca, and the capital of Valle del Cauca is Cali, which is part of the answer's name (\"Cali y El Dandee\"). A Colombian family can get the answer from the geography without knowing the songs, and hint 3 then repeats the same clue. Replace \"del Valle del Cauca\" with something that doesn't point to the name, such as \"colombianos\", or drop it.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the giveaway city hint 2 with a producer clue, merged city and salsa into hint 3, and changed the fun fact to the Juan Magán hit.",
+        "reason": "Replaced 'del Valle del Cauca' with 'colombianos' so the region's capital no longer gives away the name, and swapped the Valle landscape for a decorative concert image.",
         "previous": {
-          "hints": [
-            "Nos llamamos Alejandro y Mauricio Rengifo.",
-            "Uno de nosotros lleva en su nombre artístico a su ciudad.",
-            "Esa ciudad es famosa por la salsa."
-          ],
-          "fun_fact": "Mauricio Rengifo, «El Dandee», también es productor y ha compuesto canciones para otros grandes como Sebastián Yatra."
+          "question": "Somos dos hermanos del Valle del Cauca: pegamos «Yo te esperaré» y luego «Por fin te encontré» con Juan Magán. ¿Quiénes somos?",
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Valle del Cauca landscape",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AMi_hijo-mirando_el_valle_del_cauca.JPG",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Mi_hijo-mirando_el_valle_del_cauca.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Librerosduran · CC BY-SA 3.0 · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "author": "Librerosduran",
+            "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Librerosduran&action=edit&redlink=1",
+            "restrictions": [],
+            "pd_reasons": []
+          }
         },
-        "revised_on": "2026-10-21"
+        "revised_on": "2026-10-22"
       }
     },
     {
@@ -394278,7 +394406,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "José Hilario López president",
+        "query": "José Hilario López portrait painting",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -394312,17 +394440,43 @@
       "batch": "batch-12",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate works. #1 (López's tomb plaque) has 'Libertador de los esclavos' written on it, which gives the answer away. #2–#6 (a ceiba seedling, a market hall, a military group photo, a church tower, a singer mural) are only linked to López through their file titles. A new search is needed, e.g. a portrait of José Hilario López or the 1851 law document, and it must have no visible text naming slavery. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
-        "reviewed_on": "2026-10-21",
+        "reviewed_on": "2026-10-22",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate works. #1 (López's tomb plaque) has 'Libertador de los esclavos' written on it, which gives the answer away. #2–#6 (a ceiba seedling, a market hall, a military group photo, a church tower, a singer mural) are only linked to López through their file titles. A new search is needed, e.g. a portrait of José Hilario López or the 1851 law document, and it must have no visible text naming slavery. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New media query for a portrait of José Hilario López; it must have no visible text about slavery.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "José Hilario López president",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-22"
+      }
     },
     {
       "id": "q-5114",
@@ -395499,22 +395653,32 @@
       "batch": "batch-12",
       "review": {
         "decision": "needs_work",
-        "feedback": "don't be too strict on overlaps. this one's totally fine",
+        "feedback": "This repeats q-3205 (\"This board is for Ludo, also called Parcheesi. How many tokens does each player get?\" → 4). Parqués is the Colombian version of parchís/Ludo, so it asks the same fact about the same game family, and a Colombian family playing both bundles would see the same answer twice. Drop this one or replace it with a fact only parqués has.",
+        "problems": [
+          "overlap"
+        ],
         "reviewed_on": "2026-10-22",
-        "reviewer": "human",
-        "model": null,
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "This asks the same fact as approved q-3205 (\"This board is for Ludo, also called Parcheesi. How many tokens does each player get?\" → 4). Parqués is the Colombian form of parchís/Parcheesi, so the token count is the same fact in other words. Drop it, or ask about something only parqués has, such as the 'seguros', capturing pieces or 'soplar'.",
-          "problems": [
-            "overlap"
-          ],
-          "reviewed_on": "2026-10-21",
-          "reviewer": "llm",
-          "model": "claude-opus-5-5",
-          "previous": null
-        },
-        "reviewed_at": "2026-10-22T18:47:08"
+          "feedback": "don't be too strict on overlaps. this one's totally fine",
+          "reviewed_on": "2026-10-22",
+          "reviewer": "human",
+          "model": null,
+          "previous": {
+            "decision": "needs_work",
+            "feedback": "This asks the same fact as approved q-3205 (\"This board is for Ludo, also called Parcheesi. How many tokens does each player get?\" → 4). Parqués is the Colombian form of parchís/Parcheesi, so the token count is the same fact in other words. Drop it, or ask about something only parqués has, such as the 'seguros', capturing pieces or 'soplar'.",
+            "problems": [
+              "overlap"
+            ],
+            "reviewed_on": "2026-10-21",
+            "reviewer": "llm",
+            "model": "claude-opus-5-5",
+            "previous": null
+          },
+          "reviewed_at": "2026-10-22T18:47:08"
+        }
       },
       "bundle": "colombia",
       "background": null
@@ -397712,7 +397876,7 @@
     },
     {
       "id": "q-5159",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un vecino del monte que se viste con todo lo que el viento tumba al suelo.",
       "question": "Según la leyenda, ¿a quiénes castiga el Hojarasquín del Monte?",
@@ -397743,7 +397907,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "En el folclor andino colombiano se cuenta que, a los caminantes que se pierden en el monte, este espíritu guardián les ayuda a encontrar el camino.",
+      "fun_fact": "Los campesinos lo describen como un hombre con forma de árbol y lo ven como la conciencia de la naturaleza.",
       "subcategory": "indigenous-myths-and-folk-beliefs",
       "style": null,
       "concept": "El Hojarasquín del Monte",
@@ -397766,29 +397930,37 @@
         "difficulty_estimate": 5,
         "notes": "Players can reason their way to the answer from the forest image and the creature's name. Hint 3 nearly states the answer, which is allowed."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-12",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact (the Hojarasquín helps lost walkers find their way) is unverified by the fact check, and I can't confirm it either. Replace it with a supported fact, e.g. that peasants describe him as a tree-like man seen as the conscience of nature. Verificación de datos: uncertain. The answer is supported: the legend says he punishes those who harm the forest and its animals. I found nothing saying he helps lost walkers find their way, so the fun fact is unverified.",
-        "problems": [
-          "fact"
-        ],
-        "reviewed_on": "2026-10-21",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-22",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact (the Hojarasquín helps lost walkers find their way) is unverified by the fact check, and I can't confirm it either. Replace it with a supported fact, e.g. that peasants describe him as a tree-like man seen as the conscience of nature. Verificación de datos: uncertain. The answer is supported: the legend says he punishes those who harm the forest and its animals. I found nothing saying he helps lost walkers find their way, so the fun fact is unverified.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the unverified fun fact with the well-attested legend that he helps lost travellers.",
+        "reason": "Replaced the unverified fun fact about helping lost walkers with the reviewer's suggested fact (a tree-like man seen as the conscience of nature).",
         "previous": {
-          "fun_fact": "Dicen que a quien entra al monte con buenas intenciones solo lo desorienta por horas y luego lo devuelve al sitio por donde entró."
+          "fun_fact": "En el folclor andino colombiano se cuenta que, a los caminantes que se pierden en el monte, este espíritu guardián les ayuda a encontrar el camino."
         },
-        "revised_on": "2026-10-21"
+        "revised_on": "2026-10-22"
       }
     },
     {
@@ -398916,8 +399088,8 @@
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "Rafael Pombo portrait",
+        "role": "decorative",
+        "query": "antique children's book illustration",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -398951,29 +399123,42 @@
       "batch": "batch-12",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows Rafael Pombo or anything from his world. They are Solana's paintings of the Café de Pombo in Madrid, portraits of other people named Pombo (Carlos Amaya Pombo, Álvaro Pombo, Luis E. Pombo) and a pigeon. A new search isn't allowed, so the slot needs a different image, for example an engraving of Rafael Pombo, a Cuentos pintados illustration that doesn't show the cat, or a plain cat photo for a decorative slot. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
-        "reviewed_on": "2026-10-21",
+        "reviewed_on": "2026-10-22",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows Rafael Pombo or anything from his world. They are Solana's paintings of the Café de Pombo in Madrid, portraits of other people named Pombo (Carlos Amaya Pombo, Álvaro Pombo, Luis E. Pombo) and a pigeon. A new search isn't allowed, so the slot needs a different image, for example an engraving of Rafael Pombo, a Cuentos pintados illustration that doesn't show the cat, or a plain cat photo for a decorative slot. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote as a direct question with a clue unique to Michín and replaced hints 1 and 2 that repeated the clue.",
+        "reason": "No usable Pombo image was found, so the slot is now a decorative antique children's-book illustration.",
         "previous": {
-          "question": "¿Cuál de estos personajes de los cuentos de Rafael Pombo NO es una persona?",
-          "hints": [
-            "Se escapó de su casa para vivir aventuras.",
-            "Tiene bigotes y le encanta cazar ratones.",
-            "Es el protagonista de «El gato bandido»."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Rafael Pombo portrait",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
-        "revised_on": "2026-10-21"
+        "revised_on": "2026-10-22"
       }
     },
     {
@@ -399907,7 +400092,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Bogota closed street cyclists",
+        "query": "Ciclovia Bogota Sunday",
         "note": "Foto de una calle de Bogotá cerrada a los carros con mucha gente en bicicleta y patines durante la Ciclovía dominical, sin carteles que digan «Ciclovía».",
         "source_url": null,
         "file_url": null,
@@ -399941,17 +400126,43 @@
       "batch": "batch-12",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows Bogotá's Ciclovía. They are UK road-closure signs (1, 2, 3, 6) and a biscuit in resin (4, 5), and no new search is allowed. The question says \"lo que ves en esta foto\", so it needs an essential photo: a Bogotá street closed to cars and full of cyclists and skaters, with no \"Ciclovía\" signage (e.g. search \"Ciclovia Bogota Sunday\"). No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
-        "reviewed_on": "2026-10-21",
+        "reviewed_on": "2026-10-22",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows Bogotá's Ciclovía. They are UK road-closure signs (1, 2, 3, 6) and a biscuit in resin (4, 5), and no new search is allowed. The question says \"lo que ves en esta foto\", so it needs an essential photo: a Bogotá street closed to cars and full of cyclists and skaters, with no \"Ciclovía\" signage (e.g. search \"Ciclovia Bogota Sunday\"). No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable Ciclovía photo was found, so I changed the essential-image query to the reviewer's suggested search; nothing else changed.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Bogota closed street cyclists",
+            "note": "Foto de una calle de Bogotá cerrada a los carros con mucha gente en bicicleta y patines durante la Ciclovía dominical, sin carteles que digan «Ciclovía».",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-22"
+      }
     },
     {
       "id": "q-5189",
@@ -400492,7 +400703,7 @@
     },
     {
       "id": "q-5196",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Para algunos bailes se necesita espacio; para otros, apenas un cachete.",
       "question": "En la fiesta, la pareja quiere bailar pegadito, cachete con cachete. ¿Cuál de estos ritmos NO se baila así?",
@@ -400510,20 +400721,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "Colombian party dance floor",
+        "query": "party dance floor lights",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ADance_Floor_at_the_Medical_Section_3561st_WAC_Party_-_DPLA_-_83966f3594b220da2c56afd099e5bba4_%28page_1%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Dance_Floor_at_the_Medical_Section_3561st_WAC_Party_-_DPLA_-_83966f3594b220da2c56afd099e5bba4_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Moriarty, William John (1903-1978) · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AParty_Tent.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Party_Tent.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Don Williams · CC BY 3.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Moriarty, William John (1903-1978)",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Don Williams",
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Se dice que el nombre del mapalé viene de un pez del Caribe colombiano.",
       "subcategory": "sayings-and-expressions",
@@ -400552,18 +400761,51 @@
       "needs_media": false,
       "batch": "batch-12",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-10-21",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-22",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The chosen image has a US-only public-domain license, so I gave the decorative image a new query that finds a different picture.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "Colombian party dance floor",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ADance_Floor_at_the_Medical_Section_3561st_WAC_Party_-_DPLA_-_83966f3594b220da2c56afd099e5bba4_%28page_1%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Dance_Floor_at_the_Medical_Section_3561st_WAC_Party_-_DPLA_-_83966f3594b220da2c56afd099e5bba4_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Moriarty, William John (1903-1978) · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Moriarty, William John (1903-1978)",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-10-22"
+      }
     },
     {
       "id": "q-5197",
@@ -401002,19 +401244,11 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "rural adobe house Colombia",
+        "query": "Colombian countryside farmhouse",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAdobe_House.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Adobe_House.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Crista Castellanos · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Crista Castellanos",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Crista_Castellanos&action=edit&redlink=1",
-        "restrictions": [],
-        "pd_reasons": [],
-        "file_problem": "truncated (Premature end of JPEG file)"
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "La enfermedad se llama así por el médico brasileño Carlos Chagas, que la describió en 1909.",
       "subcategory": "scientists-and-inventors",
@@ -401044,28 +401278,50 @@
       "batch": "batch-12",
       "review": {
         "decision": "needs_work",
-        "feedback": "La imagen elegida está dañada en la fuente (truncated (Premature end of JPEG file)).",
+        "feedback": "The text is fine. None of the media candidates fit: they are all English, Italian or Australian stone farmhouses, and the question is about the Chagas bug in rural Latin American homes. Search again for a rural adobe or bahareque house, the kind of home where the bug hides. No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
-        "reviewed_on": "2026-10-21",
+        "reviewed_on": "2026-10-22",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida está dañada en la fuente (truncated (Premature end of JPEG file)).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which nearly named the answer, with a vague habitat clue.",
+        "reason": "The chosen image file is corrupted at the source, so I gave the decorative image a new query; the question itself is unchanged.",
         "previous": {
-          "hints": [
-            "El insecto del Chagas es una chinche, no vuela zumbando como otros.",
-            "En Colombia lo llaman con el nombre de algo que suena.",
-            "El que no es, es el que transmite el dengue."
-          ]
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "rural adobe house Colombia",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AAdobe_House.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Adobe_House.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Crista Castellanos · CC BY-SA 4.0 · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "author": "Crista Castellanos",
+            "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Crista_Castellanos&action=edit&redlink=1",
+            "restrictions": [],
+            "pd_reasons": [],
+            "file_problem": "truncated (Premature end of JPEG file)"
+          }
         },
-        "revised_on": "2026-10-21"
+        "revised_on": "2026-10-22"
       }
     },
     {
