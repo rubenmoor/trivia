@@ -1,0 +1,439 @@
+{
+  "subcategory": "mountains-and-landscapes",
+  "facets": [
+    "Las tres cordilleras andinas",
+    "Volcanes y nevados",
+    "Sierra Nevada y serranías aisladas",
+    "Páramos y bosques de niebla",
+    "Llanos Orientales y sabanas",
+    "Selvas del Amazonas y del Pacífico",
+    "Costas, islas y playas",
+    "Desiertos y zonas áridas",
+    "Cañones, cascadas y lagunas",
+    "Pisos térmicos y climas",
+    "Paisaje Cultural Cafetero y campo",
+    "Rocas, cuevas y formaciones curiosas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 4,
+      "origin": 2,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Valle del río Magdalena",
+      "facet": "Las tres cordilleras andinas",
+      "known_at": 6
+    },
+    {
+      "name": "Valle del río Cauca",
+      "facet": "Las tres cordilleras andinas",
+      "known_at": 6
+    },
+    {
+      "name": "Sabana de Bogotá",
+      "facet": "Las tres cordilleras andinas",
+      "known_at": 6
+    },
+    {
+      "name": "Cerro de Monserrate",
+      "facet": "Las tres cordilleras andinas",
+      "known_at": 3
+    },
+    {
+      "name": "Cerro de Guadalupe",
+      "facet": "Las tres cordilleras andinas",
+      "known_at": 8
+    },
+    {
+      "name": "Cerros Orientales de Bogotá",
+      "facet": "Las tres cordilleras andinas",
+      "known_at": 6
+    },
+    {
+      "name": "Farallones de Cali",
+      "facet": "Las tres cordilleras andinas",
+      "known_at": 8
+    },
+    {
+      "name": "Nevado del Huila",
+      "facet": "Volcanes y nevados",
+      "known_at": 8
+    },
+    {
+      "name": "Nevado del Tolima",
+      "facet": "Volcanes y nevados",
+      "known_at": 7
+    },
+    {
+      "name": "Nevado de Santa Isabel",
+      "facet": "Volcanes y nevados",
+      "known_at": 9
+    },
+    {
+      "name": "Volcán Cumbal",
+      "facet": "Volcanes y nevados",
+      "known_at": 10
+    },
+    {
+      "name": "Volcán Azufral",
+      "facet": "Volcanes y nevados",
+      "known_at": 11
+    },
+    {
+      "name": "Volcán Doña Juana",
+      "facet": "Volcanes y nevados",
+      "known_at": 12
+    },
+    {
+      "name": "Volcán Cerro Machín",
+      "facet": "Volcanes y nevados",
+      "known_at": 11
+    },
+    {
+      "name": "Volcán Chiles",
+      "facet": "Volcanes y nevados",
+      "known_at": 12
+    },
+    {
+      "name": "Volcán Sotará",
+      "facet": "Volcanes y nevados",
+      "known_at": 13,
+      "retired": "unaskable: El volcán Sotará es demasiado poco conocido para una pregunta justa."
+    },
+    {
+      "name": "Glaciares de Colombia",
+      "facet": "Volcanes y nevados",
+      "known_at": 8
+    },
+    {
+      "name": "Servicio Geológico Colombiano",
+      "facet": "Volcanes y nevados",
+      "known_at": 12
+    },
+    {
+      "name": "Pico Simón Bolívar",
+      "facet": "Sierra Nevada y serranías aisladas",
+      "known_at": 8
+    },
+    {
+      "name": "Pueblo kankuamo",
+      "facet": "Sierra Nevada y serranías aisladas",
+      "known_at": 12
+    },
+    {
+      "name": "Serranía de San Lucas",
+      "facet": "Sierra Nevada y serranías aisladas",
+      "known_at": 12
+    },
+    {
+      "name": "Serranía de la Macuira",
+      "facet": "Sierra Nevada y serranías aisladas",
+      "known_at": 11
+    },
+    {
+      "name": "Montes de María",
+      "facet": "Sierra Nevada y serranías aisladas",
+      "known_at": 9
+    },
+    {
+      "name": "Musgo de páramo",
+      "facet": "Páramos y bosques de niebla",
+      "known_at": 8
+    },
+    {
+      "name": "Pajonal",
+      "facet": "Páramos y bosques de niebla",
+      "known_at": 11
+    },
+    {
+      "name": "Cuatro",
+      "facet": "Llanos Orientales y sabanas",
+      "known_at": 6
+    },
+    {
+      "name": "Raudales de Maipures",
+      "facet": "Llanos Orientales y sabanas",
+      "known_at": 13
+    },
+    {
+      "name": "Sabana inundable",
+      "facet": "Llanos Orientales y sabanas",
+      "known_at": 9
+    },
+    {
+      "name": "Estero",
+      "facet": "Llanos Orientales y sabanas",
+      "known_at": 11
+    },
+    {
+      "name": "Islas de San Bernardo",
+      "facet": "Costas, islas y playas",
+      "known_at": 10
+    },
+    {
+      "name": "Bahía de Taganga",
+      "facet": "Costas, islas y playas",
+      "known_at": 8
+    },
+    {
+      "name": "Desierto de la Tatacoa",
+      "facet": "Desiertos y zonas áridas",
+      "known_at": 5
+    },
+    {
+      "name": "Laberintos del Cuzco",
+      "facet": "Desiertos y zonas áridas",
+      "known_at": 11
+    },
+    {
+      "name": "Observatorio Astronómico de la Tatacoa",
+      "facet": "Desiertos y zonas áridas",
+      "known_at": 10
+    },
+    {
+      "name": "Villavieja",
+      "facet": "Desiertos y zonas áridas",
+      "known_at": 11
+    },
+    {
+      "name": "Alta Guajira",
+      "facet": "Desiertos y zonas áridas",
+      "known_at": 8
+    },
+    {
+      "name": "Dunas de Taroa",
+      "facet": "Desiertos y zonas áridas",
+      "known_at": 9
+    },
+    {
+      "name": "Ranchería wayuu",
+      "facet": "Desiertos y zonas áridas",
+      "known_at": 10
+    },
+    {
+      "name": "Jagüey",
+      "facet": "Desiertos y zonas áridas",
+      "known_at": 12
+    },
+    {
+      "name": "Salinas de Manaure",
+      "facet": "Desiertos y zonas áridas",
+      "known_at": 8
+    },
+    {
+      "name": "Cardón",
+      "facet": "Desiertos y zonas áridas",
+      "known_at": 9
+    },
+    {
+      "name": "Desierto de la Candelaria",
+      "facet": "Desiertos y zonas áridas",
+      "known_at": 12
+    },
+    {
+      "name": "Desierto de Sabrinsky",
+      "facet": "Desiertos y zonas áridas",
+      "known_at": 13
+    },
+    {
+      "name": "Bosque seco tropical",
+      "facet": "Desiertos y zonas áridas",
+      "known_at": 10
+    },
+    {
+      "name": "Cañón del Combeima",
+      "facet": "Cañones, cascadas y lagunas",
+      "known_at": 11
+    },
+    {
+      "name": "Cañón del río Guáitara",
+      "facet": "Cañones, cascadas y lagunas",
+      "known_at": 10
+    },
+    {
+      "name": "Cascadas de Juan Curí",
+      "facet": "Cañones, cascadas y lagunas",
+      "known_at": 11
+    },
+    {
+      "name": "Río Claro",
+      "facet": "Cañones, cascadas y lagunas",
+      "known_at": 10
+    },
+    {
+      "name": "Embalse de Guatapé",
+      "facet": "Cañones, cascadas y lagunas",
+      "known_at": 7
+    },
+    {
+      "name": "Piso térmico cálido",
+      "facet": "Pisos térmicos y climas",
+      "known_at": 6
+    },
+    {
+      "name": "Piso térmico templado",
+      "facet": "Pisos térmicos y climas",
+      "known_at": 6
+    },
+    {
+      "name": "Piso térmico frío",
+      "facet": "Pisos térmicos y climas",
+      "known_at": 6
+    },
+    {
+      "name": "Piso térmico de páramo",
+      "facet": "Pisos térmicos y climas",
+      "known_at": 7
+    },
+    {
+      "name": "Nieves perpetuas",
+      "facet": "Pisos térmicos y climas",
+      "known_at": 7
+    },
+    {
+      "name": "Altitud sobre el nivel del mar",
+      "facet": "Pisos térmicos y climas",
+      "known_at": 5
+    },
+    {
+      "name": "Tierra caliente",
+      "facet": "Pisos térmicos y climas",
+      "known_at": 3
+    },
+    {
+      "name": "Fenómeno de El Niño",
+      "facet": "Pisos térmicos y climas",
+      "known_at": 6,
+      "retired": "used_up: El efecto de El Niño en Colombia ya se preguntó; las opciones solo repetirían sequía y calor."
+    },
+    {
+      "name": "Fenómeno de La Niña",
+      "facet": "Pisos térmicos y climas",
+      "known_at": 7
+    },
+    {
+      "name": "Temporada de lluvias",
+      "facet": "Pisos térmicos y climas",
+      "known_at": 4
+    },
+    {
+      "name": "Temporada seca",
+      "facet": "Pisos térmicos y climas",
+      "known_at": 5
+    },
+    {
+      "name": "Granizada",
+      "facet": "Pisos térmicos y climas",
+      "known_at": 3
+    },
+    {
+      "name": "Helada",
+      "facet": "Pisos térmicos y climas",
+      "known_at": 7
+    },
+    {
+      "name": "Línea ecuatorial",
+      "facet": "Pisos térmicos y climas",
+      "known_at": 5
+    },
+    {
+      "name": "Zona de Convergencia Intertropical",
+      "facet": "Pisos térmicos y climas",
+      "known_at": 12
+    },
+    {
+      "name": "Microclima",
+      "facet": "Pisos térmicos y climas",
+      "known_at": 10
+    },
+    {
+      "name": "Chapolero",
+      "facet": "Paisaje Cultural Cafetero y campo",
+      "known_at": 10
+    },
+    {
+      "name": "Finca cafetera",
+      "facet": "Paisaje Cultural Cafetero y campo",
+      "known_at": 4
+    },
+    {
+      "name": "Volcán de lodo El Totumo",
+      "facet": "Rocas, cuevas y formaciones curiosas",
+      "known_at": 7
+    },
+    {
+      "name": "Cueva del Esplendor",
+      "facet": "Rocas, cuevas y formaciones curiosas",
+      "known_at": 10
+    },
+    {
+      "name": "Cueva de los Guácharos",
+      "facet": "Rocas, cuevas y formaciones curiosas",
+      "known_at": 10
+    },
+    {
+      "name": "Cueva del Indio",
+      "facet": "Rocas, cuevas y formaciones curiosas",
+      "known_at": 11
+    },
+    {
+      "name": "Cueva de la Vaca",
+      "facet": "Rocas, cuevas y formaciones curiosas",
+      "known_at": 12
+    },
+    {
+      "name": "Área Natural Única Los Estoraques",
+      "facet": "Rocas, cuevas y formaciones curiosas",
+      "known_at": 12
+    },
+    {
+      "name": "Cerro Tusa",
+      "facet": "Rocas, cuevas y formaciones curiosas",
+      "known_at": 10
+    },
+    {
+      "name": "Estalactita",
+      "facet": "Rocas, cuevas y formaciones curiosas",
+      "known_at": 7
+    }
+  ]
+}

@@ -1,0 +1,460 @@
+{
+  "subcategory": "ghosts-and-creatures",
+  "facets": [
+    "Espantos del monte y la selva",
+    "Espantos de ríos, lagunas y mar",
+    "Espantos de caminos y llanuras",
+    "Almas en pena y aparecidos",
+    "Duendes, brujas y hechiceros",
+    "Personas que se vuelven animales",
+    "Seres de leyendas indígenas",
+    "Contras, rezos y agüeros contra espantos",
+    "Fiestas y desfiles de mitos y leyendas",
+    "Espantos en canciones, TV y libros",
+    "Palabras y dichos de espantos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 1,
+      "record": 1,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "La Madremonte",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 5
+    },
+    {
+      "name": "El Chuzalongo",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 12
+    },
+    {
+      "name": "El Gritón",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 11
+    },
+    {
+      "name": "El Mohán",
+      "facet": "Espantos de ríos, lagunas y mar",
+      "known_at": 6
+    },
+    {
+      "name": "La Mohana",
+      "facet": "Espantos de ríos, lagunas y mar",
+      "known_at": 12
+    },
+    {
+      "name": "El Diablo de Tota",
+      "facet": "Espantos de ríos, lagunas y mar",
+      "known_at": 12,
+      "retired": "unaskable: No estoy seguro de los datos de la leyenda."
+    },
+    {
+      "name": "Barco fantasma",
+      "facet": "Espantos de ríos, lagunas y mar",
+      "known_at": 6
+    },
+    {
+      "name": "El Silbón",
+      "facet": "Espantos de caminos y llanuras",
+      "known_at": 6
+    },
+    {
+      "name": "La Mula de Tres Patas",
+      "facet": "Espantos de caminos y llanuras",
+      "known_at": 8
+    },
+    {
+      "name": "La Sayona",
+      "facet": "Espantos de caminos y llanuras",
+      "known_at": 10
+    },
+    {
+      "name": "Juan Machete",
+      "facet": "Espantos de caminos y llanuras",
+      "known_at": 11
+    },
+    {
+      "name": "El Llorón",
+      "facet": "Espantos de caminos y llanuras",
+      "known_at": 12,
+      "retired": "unaskable: Leyenda poco documentada; no estoy seguro de los datos."
+    },
+    {
+      "name": "El Perro Negro",
+      "facet": "Espantos de caminos y llanuras",
+      "known_at": 6
+    },
+    {
+      "name": "La Viudita",
+      "facet": "Almas en pena y aparecidos",
+      "known_at": 11
+    },
+    {
+      "name": "El Judío Errante",
+      "facet": "Almas en pena y aparecidos",
+      "known_at": 12
+    },
+    {
+      "name": "Ánimas del Purgatorio",
+      "facet": "Almas en pena y aparecidos",
+      "known_at": 9
+    },
+    {
+      "name": "Procesión de las ánimas",
+      "facet": "Almas en pena y aparecidos",
+      "known_at": 11
+    },
+    {
+      "name": "El Animero",
+      "facet": "Almas en pena y aparecidos",
+      "known_at": 12
+    },
+    {
+      "name": "Día de los Fieles Difuntos",
+      "facet": "Almas en pena y aparecidos",
+      "known_at": 6
+    },
+    {
+      "name": "Hotel del Salto del Tequendama",
+      "facet": "Almas en pena y aparecidos",
+      "known_at": 10
+    },
+    {
+      "name": "Cementerio Central de Bogotá",
+      "facet": "Almas en pena y aparecidos",
+      "known_at": 10
+    },
+    {
+      "name": "Alma en pena",
+      "facet": "Almas en pena y aparecidos",
+      "known_at": 6
+    },
+    {
+      "name": "Juana García",
+      "facet": "Duendes, brujas y hechiceros",
+      "known_at": 13
+    },
+    {
+      "name": "Pacto con el diablo",
+      "facet": "Duendes, brujas y hechiceros",
+      "known_at": 8
+    },
+    {
+      "name": "El Basilisco",
+      "facet": "Duendes, brujas y hechiceros",
+      "known_at": 11
+    },
+    {
+      "name": "El Curandero",
+      "facet": "Duendes, brujas y hechiceros",
+      "known_at": 6
+    },
+    {
+      "name": "El Taita",
+      "facet": "Duendes, brujas y hechiceros",
+      "known_at": 11
+    },
+    {
+      "name": "El Rezandero",
+      "facet": "Duendes, brujas y hechiceros",
+      "known_at": 10
+    },
+    {
+      "name": "El Aquelarre",
+      "facet": "Duendes, brujas y hechiceros",
+      "known_at": 12
+    },
+    {
+      "name": "La Escoba",
+      "facet": "Duendes, brujas y hechiceros",
+      "known_at": 1
+    },
+    {
+      "name": "El Maleficio",
+      "facet": "Duendes, brujas y hechiceros",
+      "known_at": 8
+    },
+    {
+      "name": "El Hechizo",
+      "facet": "Duendes, brujas y hechiceros",
+      "known_at": 3
+    },
+    {
+      "name": "El Hombre Caimán",
+      "facet": "Personas que se vuelven animales",
+      "known_at": 5
+    },
+    {
+      "name": "Saúl Montenegro",
+      "facet": "Personas que se vuelven animales",
+      "known_at": 13
+    },
+    {
+      "name": "Plato (Magdalena)",
+      "facet": "Personas que se vuelven animales",
+      "known_at": 10
+    },
+    {
+      "name": "El Bufeo colorado",
+      "facet": "Personas que se vuelven animales",
+      "known_at": 11
+    },
+    {
+      "name": "El Tigre Mojano",
+      "facet": "Personas que se vuelven animales",
+      "known_at": 13
+    },
+    {
+      "name": "El Hombre Jaguar",
+      "facet": "Personas que se vuelven animales",
+      "known_at": 10
+    },
+    {
+      "name": "El Hombre Lobo",
+      "facet": "Personas que se vuelven animales",
+      "known_at": 3,
+      "retired": "used_up: El hecho de la luna llena ya está en el pool; no hay ángulo colombiano claro para nivel 2."
+    },
+    {
+      "name": "La Bruja Lechuza",
+      "facet": "Personas que se vuelven animales",
+      "known_at": 9
+    },
+    {
+      "name": "La Bruja Gallinazo",
+      "facet": "Personas que se vuelven animales",
+      "known_at": 12
+    },
+    {
+      "name": "El Hombre Serpiente",
+      "facet": "Personas que se vuelven animales",
+      "known_at": 12
+    },
+    {
+      "name": "Ramo bendito",
+      "facet": "Contras, rezos y agüeros contra espantos",
+      "known_at": 7
+    },
+    {
+      "name": "Agua bendita",
+      "facet": "Contras, rezos y agüeros contra espantos",
+      "known_at": 5
+    },
+    {
+      "name": "Ajo",
+      "facet": "Contras, rezos y agüeros contra espantos",
+      "known_at": 4
+    },
+    {
+      "name": "Sal",
+      "facet": "Contras, rezos y agüeros contra espantos",
+      "known_at": 6
+    },
+    {
+      "name": "Ropa al revés",
+      "facet": "Contras, rezos y agüeros contra espantos",
+      "known_at": 10
+    },
+    {
+      "name": "Rosario",
+      "facet": "Contras, rezos y agüeros contra espantos",
+      "known_at": 5
+    },
+    {
+      "name": "Señal de la cruz",
+      "facet": "Contras, rezos y agüeros contra espantos",
+      "known_at": 3
+    },
+    {
+      "name": "Canto de la lechuza",
+      "facet": "Contras, rezos y agüeros contra espantos",
+      "known_at": 9
+    },
+    {
+      "name": "Perro aullando",
+      "facet": "Contras, rezos y agüeros contra espantos",
+      "known_at": 6,
+      "retired": "unaskable: El agüero anuncia una muerte, un tema que no va con el tono familiar."
+    },
+    {
+      "name": "Tijeras en cruz",
+      "facet": "Contras, rezos y agüeros contra espantos",
+      "known_at": 11
+    },
+    {
+      "name": "Manilla roja",
+      "facet": "Contras, rezos y agüeros contra espantos",
+      "known_at": 7
+    },
+    {
+      "name": "Oración del Justo Juez",
+      "facet": "Contras, rezos y agüeros contra espantos",
+      "known_at": 12
+    },
+    {
+      "name": "Decir groserías",
+      "facet": "Contras, rezos y agüeros contra espantos",
+      "known_at": 8
+    },
+    {
+      "name": "Silbar de noche",
+      "facet": "Contras, rezos y agüeros contra espantos",
+      "known_at": 7
+    },
+    {
+      "name": "Desfile de Mitos y Leyendas de Medellín",
+      "facet": "Fiestas y desfiles de mitos y leyendas",
+      "known_at": 9
+    },
+    {
+      "name": "Festival del Hombre Caimán",
+      "facet": "Fiestas y desfiles de mitos y leyendas",
+      "known_at": 10
+    },
+    {
+      "name": "Carnaval del Diablo de Riosucio",
+      "facet": "Fiestas y desfiles de mitos y leyendas",
+      "known_at": 10
+    },
+    {
+      "name": "Diablos Arlequines",
+      "facet": "Fiestas y desfiles de mitos y leyendas",
+      "known_at": 12
+    },
+    {
+      "name": "Danza del Garabato",
+      "facet": "Fiestas y desfiles de mitos y leyendas",
+      "known_at": 10
+    },
+    {
+      "name": "Día de los Niños (31 de octubre)",
+      "facet": "Fiestas y desfiles de mitos y leyendas",
+      "known_at": 2
+    },
+    {
+      "name": "Prudencio Aguilar",
+      "facet": "Espantos en canciones, TV y libros",
+      "known_at": 13
+    },
+    {
+      "name": "Un señor muy viejo con unas alas enormes",
+      "facet": "Espantos en canciones, TV y libros",
+      "known_at": 11
+    },
+    {
+      "name": "Los fantasmas de agosto",
+      "facet": "Espantos en canciones, TV y libros",
+      "known_at": 13
+    },
+    {
+      "name": "Al final del espectro",
+      "facet": "Espantos en canciones, TV y libros",
+      "known_at": 13
+    },
+    {
+      "name": "Espanto",
+      "facet": "Palabras y dichos de espantos",
+      "known_at": 4
+    },
+    {
+      "name": "Aparecido",
+      "facet": "Palabras y dichos de espantos",
+      "known_at": 7
+    },
+    {
+      "name": "El Patas",
+      "facet": "Palabras y dichos de espantos",
+      "known_at": 8
+    },
+    {
+      "name": "Guaca",
+      "facet": "Palabras y dichos de espantos",
+      "known_at": 9
+    },
+    {
+      "name": "Entierro",
+      "facet": "Palabras y dichos de espantos",
+      "known_at": 10
+    },
+    {
+      "name": "La Pelona",
+      "facet": "Palabras y dichos de espantos",
+      "known_at": 10
+    },
+    {
+      "name": "Susto",
+      "facet": "Palabras y dichos de espantos",
+      "known_at": 2
+    },
+    {
+      "name": "Yo no creo en brujas, pero de que las hay, las hay",
+      "facet": "Palabras y dichos de espantos",
+      "known_at": 7
+    },
+    {
+      "name": "Andar como alma en pena",
+      "facet": "Palabras y dichos de espantos",
+      "known_at": 9
+    },
+    {
+      "name": "Hablando del rey de Roma",
+      "facet": "Palabras y dichos de espantos",
+      "known_at": 8
+    },
+    {
+      "name": "Echarse la bendición",
+      "facet": "Palabras y dichos de espantos",
+      "known_at": 6
+    },
+    {
+      "name": "Embrujado",
+      "facet": "Palabras y dichos de espantos",
+      "known_at": 4
+    },
+    {
+      "name": "Más feo que un espanto",
+      "facet": "Palabras y dichos de espantos",
+      "known_at": 6
+    }
+  ]
+}

@@ -1,0 +1,812 @@
+{
+  "subcategory": "home-school-and-paperwork",
+  "facets": [
+    "Objetos de la casa colombiana",
+    "Oficio y rutinas del hogar",
+    "Servicios públicos y estratos",
+    "Arriendo, vecinos y conjuntos",
+    "Útiles, uniformes y lonchera",
+    "Vida diaria en el colegio",
+    "Sistema educativo y pruebas Saber",
+    "Documentos de identidad y Registraduría",
+    "Trámites, notarías y entidades",
+    "Salud, EPS y seguridad social",
+    "Carro, licencia y pico y placa",
+    "Plata, pagos y billetes del día a día"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 3,
+      "estimate": 3,
+      "record": 1,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mecedora",
+      "facet": "Objetos de la casa colombiana",
+      "known_at": 3
+    },
+    {
+      "name": "Ducha eléctrica",
+      "facet": "Objetos de la casa colombiana",
+      "known_at": 6
+    },
+    {
+      "name": "Olla arrocera",
+      "facet": "Objetos de la casa colombiana",
+      "known_at": 3
+    },
+    {
+      "name": "Termo de tinto",
+      "facet": "Objetos de la casa colombiana",
+      "known_at": 5
+    },
+    {
+      "name": "Trapero",
+      "facet": "Objetos de la casa colombiana",
+      "known_at": 3
+    },
+    {
+      "name": "Sanduchera",
+      "facet": "Objetos de la casa colombiana",
+      "known_at": 5
+    },
+    {
+      "name": "Tinajero",
+      "facet": "Objetos de la casa colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Trapear",
+      "facet": "Oficio y rutinas del hogar",
+      "known_at": 2
+    },
+    {
+      "name": "Barrer",
+      "facet": "Oficio y rutinas del hogar",
+      "known_at": 1
+    },
+    {
+      "name": "Lavar la loza",
+      "facet": "Oficio y rutinas del hogar",
+      "known_at": 3
+    },
+    {
+      "name": "Lavadero",
+      "facet": "Oficio y rutinas del hogar",
+      "known_at": 4
+    },
+    {
+      "name": "Tender la ropa",
+      "facet": "Oficio y rutinas del hogar",
+      "known_at": 3
+    },
+    {
+      "name": "Planchar",
+      "facet": "Oficio y rutinas del hogar",
+      "known_at": 2
+    },
+    {
+      "name": "Empleada doméstica",
+      "facet": "Oficio y rutinas del hogar",
+      "known_at": 5
+    },
+    {
+      "name": "Hacer mercado",
+      "facet": "Oficio y rutinas del hogar",
+      "known_at": 3
+    },
+    {
+      "name": "Arepa del desayuno",
+      "facet": "Oficio y rutinas del hogar",
+      "known_at": 2
+    },
+    {
+      "name": "Sacar la basura",
+      "facet": "Oficio y rutinas del hogar",
+      "known_at": 2
+    },
+    {
+      "name": "Esponjilla",
+      "facet": "Oficio y rutinas del hogar",
+      "known_at": 5
+    },
+    {
+      "name": "Varsol",
+      "facet": "Oficio y rutinas del hogar",
+      "known_at": 9
+    },
+    {
+      "name": "Jabón de barra",
+      "facet": "Oficio y rutinas del hogar",
+      "known_at": 4
+    },
+    {
+      "name": "Estrato 1",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 7
+    },
+    {
+      "name": "Estrato 6",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 7
+    },
+    {
+      "name": "Subsidio de servicios públicos",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 11
+    },
+    {
+      "name": "Contribución de solidaridad",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 13
+    },
+    {
+      "name": "Recibo de la luz",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 4
+    },
+    {
+      "name": "Contador de agua",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 6
+    },
+    {
+      "name": "Empresas Públicas de Medellín",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 8
+    },
+    {
+      "name": "Acueducto",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 6
+    },
+    {
+      "name": "Alcantarillado",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 7
+    },
+    {
+      "name": "Gas natural domiciliario",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 6
+    },
+    {
+      "name": "Pipeta de gas",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 5
+    },
+    {
+      "name": "Caneca blanca",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 5
+    },
+    {
+      "name": "Caneca negra",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 6
+    },
+    {
+      "name": "Caneca verde",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 6
+    },
+    {
+      "name": "Reciclador",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 4
+    },
+    {
+      "name": "Racionamiento de energía",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 9
+    },
+    {
+      "name": "Kilovatio hora",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 9
+    },
+    {
+      "name": "Superintendencia de Servicios Públicos",
+      "facet": "Servicios públicos y estratos",
+      "known_at": 13
+    },
+    {
+      "name": "Arriendo",
+      "facet": "Arriendo, vecinos y conjuntos",
+      "known_at": 4
+    },
+    {
+      "name": "Canon de arrendamiento",
+      "facet": "Arriendo, vecinos y conjuntos",
+      "known_at": 12
+    },
+    {
+      "name": "Fiador",
+      "facet": "Arriendo, vecinos y conjuntos",
+      "known_at": 10
+    },
+    {
+      "name": "Contrato de arrendamiento",
+      "facet": "Arriendo, vecinos y conjuntos",
+      "known_at": 10
+    },
+    {
+      "name": "Inmobiliaria",
+      "facet": "Arriendo, vecinos y conjuntos",
+      "known_at": 8
+    },
+    {
+      "name": "Conjunto residencial",
+      "facet": "Arriendo, vecinos y conjuntos",
+      "known_at": 4
+    },
+    {
+      "name": "Portería",
+      "facet": "Arriendo, vecinos y conjuntos",
+      "known_at": 3
+    },
+    {
+      "name": "Celador",
+      "facet": "Arriendo, vecinos y conjuntos",
+      "known_at": 4
+    },
+    {
+      "name": "Cuota de administración",
+      "facet": "Arriendo, vecinos y conjuntos",
+      "known_at": 9
+    },
+    {
+      "name": "Propiedad horizontal",
+      "facet": "Arriendo, vecinos y conjuntos",
+      "known_at": 12
+    },
+    {
+      "name": "Asamblea de copropietarios",
+      "facet": "Arriendo, vecinos y conjuntos",
+      "known_at": 11
+    },
+    {
+      "name": "Salón comunal",
+      "facet": "Arriendo, vecinos y conjuntos",
+      "known_at": 6
+    },
+    {
+      "name": "Junta de Acción Comunal",
+      "facet": "Arriendo, vecinos y conjuntos",
+      "known_at": 10
+    },
+    {
+      "name": "Citófono",
+      "facet": "Arriendo, vecinos y conjuntos",
+      "known_at": 4
+    },
+    {
+      "name": "Hora loca",
+      "facet": "Arriendo, vecinos y conjuntos",
+      "known_at": 4
+    },
+    {
+      "name": "Lonchera",
+      "facet": "Útiles, uniformes y lonchera",
+      "known_at": 1
+    },
+    {
+      "name": "Cuaderno cuadriculado",
+      "facet": "Útiles, uniformes y lonchera",
+      "known_at": 3
+    },
+    {
+      "name": "Cartuchera",
+      "facet": "Útiles, uniformes y lonchera",
+      "known_at": 2
+    },
+    {
+      "name": "Borrador",
+      "facet": "Útiles, uniformes y lonchera",
+      "known_at": 1
+    },
+    {
+      "name": "Uniforme de diario",
+      "facet": "Útiles, uniformes y lonchera",
+      "known_at": 3
+    },
+    {
+      "name": "Sudadera del colegio",
+      "facet": "Útiles, uniformes y lonchera",
+      "known_at": 3
+    },
+    {
+      "name": "Jardinera",
+      "facet": "Útiles, uniformes y lonchera",
+      "known_at": 6
+    },
+    {
+      "name": "Lista de útiles",
+      "facet": "Útiles, uniformes y lonchera",
+      "known_at": 4
+    },
+    {
+      "name": "Papel silueta",
+      "facet": "Útiles, uniformes y lonchera",
+      "known_at": 4
+    },
+    {
+      "name": "Plastilina",
+      "facet": "Útiles, uniformes y lonchera",
+      "known_at": 1
+    },
+    {
+      "name": "Cartulina",
+      "facet": "Útiles, uniformes y lonchera",
+      "known_at": 2
+    },
+    {
+      "name": "Morral",
+      "facet": "Útiles, uniformes y lonchera",
+      "known_at": 2
+    },
+    {
+      "name": "Forro de cuadernos",
+      "facet": "Útiles, uniformes y lonchera",
+      "known_at": 4
+    },
+    {
+      "name": "Compás",
+      "facet": "Útiles, uniformes y lonchera",
+      "known_at": 5
+    },
+    {
+      "name": "Bocadillo",
+      "facet": "Útiles, uniformes y lonchera",
+      "known_at": 3
+    },
+    {
+      "name": "Jugo en cajita",
+      "facet": "Útiles, uniformes y lonchera",
+      "known_at": 2
+    },
+    {
+      "name": "Formación",
+      "facet": "Vida diaria en el colegio",
+      "known_at": 4
+    },
+    {
+      "name": "Recreo",
+      "facet": "Vida diaria en el colegio",
+      "known_at": 1
+    },
+    {
+      "name": "Tienda escolar",
+      "facet": "Vida diaria en el colegio",
+      "known_at": 2
+    },
+    {
+      "name": "Coordinador de disciplina",
+      "facet": "Vida diaria en el colegio",
+      "known_at": 5
+    },
+    {
+      "name": "Rector",
+      "facet": "Vida diaria en el colegio",
+      "known_at": 4
+    },
+    {
+      "name": "Personero estudiantil",
+      "facet": "Vida diaria en el colegio",
+      "known_at": 7
+    },
+    {
+      "name": "Prom",
+      "facet": "Vida diaria en el colegio",
+      "known_at": 8
+    },
+    {
+      "name": "Jean day",
+      "facet": "Vida diaria en el colegio",
+      "known_at": 6
+    },
+    {
+      "name": "Semana cultural",
+      "facet": "Vida diaria en el colegio",
+      "known_at": 6
+    },
+    {
+      "name": "Observador del alumno",
+      "facet": "Vida diaria en el colegio",
+      "known_at": 7
+    },
+    {
+      "name": "Boletín de notas",
+      "facet": "Vida diaria en el colegio",
+      "known_at": 4
+    },
+    {
+      "name": "Servicio social estudiantil",
+      "facet": "Vida diaria en el colegio",
+      "known_at": 10
+    },
+    {
+      "name": "Salida pedagógica",
+      "facet": "Vida diaria en el colegio",
+      "known_at": 6
+    },
+    {
+      "name": "Pruebas Saber 11",
+      "facet": "Sistema educativo y pruebas Saber",
+      "known_at": 8
+    },
+    {
+      "name": "Pruebas Saber Pro",
+      "facet": "Sistema educativo y pruebas Saber",
+      "known_at": 12
+    },
+    {
+      "name": "Grado once",
+      "facet": "Sistema educativo y pruebas Saber",
+      "known_at": 5
+    },
+    {
+      "name": "Bachillerato",
+      "facet": "Sistema educativo y pruebas Saber",
+      "known_at": 5
+    },
+    {
+      "name": "Grado transición",
+      "facet": "Sistema educativo y pruebas Saber",
+      "known_at": 6
+    },
+    {
+      "name": "Primaria",
+      "facet": "Sistema educativo y pruebas Saber",
+      "known_at": 2
+    },
+    {
+      "name": "Colegio público",
+      "facet": "Sistema educativo y pruebas Saber",
+      "known_at": 4
+    },
+    {
+      "name": "ICETEX",
+      "facet": "Sistema educativo y pruebas Saber",
+      "known_at": 11
+    },
+    {
+      "name": "Ser Pilo Paga",
+      "facet": "Sistema educativo y pruebas Saber",
+      "known_at": 11
+    },
+    {
+      "name": "Ministerio de Educación Nacional",
+      "facet": "Sistema educativo y pruebas Saber",
+      "known_at": 9
+    },
+    {
+      "name": "Programa de Alimentación Escolar",
+      "facet": "Sistema educativo y pruebas Saber",
+      "known_at": 10
+    },
+    {
+      "name": "Jornada única",
+      "facet": "Sistema educativo y pruebas Saber",
+      "known_at": 10
+    },
+    {
+      "name": "Matrícula",
+      "facet": "Sistema educativo y pruebas Saber",
+      "known_at": 6
+    },
+    {
+      "name": "Cédula de ciudadanía",
+      "facet": "Documentos de identidad y Registraduría",
+      "known_at": 4
+    },
+    {
+      "name": "Cédula digital",
+      "facet": "Documentos de identidad y Registraduría",
+      "known_at": 8
+    },
+    {
+      "name": "Tarjeta de identidad",
+      "facet": "Documentos de identidad y Registraduría",
+      "known_at": 5
+    },
+    {
+      "name": "Registro civil de nacimiento",
+      "facet": "Documentos de identidad y Registraduría",
+      "known_at": 7
+    },
+    {
+      "name": "Registraduría Nacional del Estado Civil",
+      "facet": "Documentos de identidad y Registraduría",
+      "known_at": 8
+    },
+    {
+      "name": "Registrador Nacional",
+      "facet": "Documentos de identidad y Registraduría",
+      "known_at": 12
+    },
+    {
+      "name": "Huella dactilar",
+      "facet": "Documentos de identidad y Registraduría",
+      "known_at": 4
+    },
+    {
+      "name": "Pasaporte",
+      "facet": "Documentos de identidad y Registraduría",
+      "known_at": 4
+    },
+    {
+      "name": "Libreta militar",
+      "facet": "Documentos de identidad y Registraduría",
+      "known_at": 9
+    },
+    {
+      "name": "NUIP",
+      "facet": "Documentos de identidad y Registraduría",
+      "known_at": 12
+    },
+    {
+      "name": "Cédula de extranjería",
+      "facet": "Documentos de identidad y Registraduría",
+      "known_at": 10
+    },
+    {
+      "name": "Permiso por Protección Temporal",
+      "facet": "Documentos de identidad y Registraduría",
+      "known_at": 12
+    },
+    {
+      "name": "Contraseña de la cédula",
+      "facet": "Documentos de identidad y Registraduría",
+      "known_at": 10
+    },
+    {
+      "name": "Certificado electoral",
+      "facet": "Documentos de identidad y Registraduría",
+      "known_at": 11
+    },
+    {
+      "name": "Jurado de votación",
+      "facet": "Documentos de identidad y Registraduría",
+      "known_at": 10
+    },
+    {
+      "name": "Tarjetón electoral",
+      "facet": "Documentos de identidad y Registraduría",
+      "known_at": 9
+    },
+    {
+      "name": "Notaría",
+      "facet": "Trámites, notarías y entidades",
+      "known_at": 8
+    },
+    {
+      "name": "Autenticación de firma",
+      "facet": "Trámites, notarías y entidades",
+      "known_at": 11
+    },
+    {
+      "name": "Declaración extrajuicio",
+      "facet": "Trámites, notarías y entidades",
+      "known_at": 13
+    },
+    {
+      "name": "Escritura pública",
+      "facet": "Trámites, notarías y entidades",
+      "known_at": 12
+    },
+    {
+      "name": "DIAN",
+      "facet": "Trámites, notarías y entidades",
+      "known_at": 9
+    },
+    {
+      "name": "RUT",
+      "facet": "Trámites, notarías y entidades",
+      "known_at": 11
+    },
+    {
+      "name": "Declaración de renta",
+      "facet": "Trámites, notarías y entidades",
+      "known_at": 11
+    },
+    {
+      "name": "Procuraduría General de la Nación",
+      "facet": "Trámites, notarías y entidades",
+      "known_at": 11
+    },
+    {
+      "name": "Contraloría General de la República",
+      "facet": "Trámites, notarías y entidades",
+      "known_at": 12
+    },
+    {
+      "name": "Certificado de antecedentes judiciales",
+      "facet": "Trámites, notarías y entidades",
+      "known_at": 11
+    },
+    {
+      "name": "Personería",
+      "facet": "Trámites, notarías y entidades",
+      "known_at": 12
+    },
+    {
+      "name": "Cámara de Comercio",
+      "facet": "Trámites, notarías y entidades",
+      "known_at": 11
+    },
+    {
+      "name": "Superintendencia de Industria y Comercio",
+      "facet": "Trámites, notarías y entidades",
+      "known_at": 13
+    },
+    {
+      "name": "Ventanilla única",
+      "facet": "Trámites, notarías y entidades",
+      "known_at": 12
+    },
+    {
+      "name": "EPS",
+      "facet": "Salud, EPS y seguridad social",
+      "known_at": 6
+    },
+    {
+      "name": "Sisbén",
+      "facet": "Salud, EPS y seguridad social",
+      "known_at": 8
+    },
+    {
+      "name": "Régimen subsidiado",
+      "facet": "Salud, EPS y seguridad social",
+      "known_at": 11
+    },
+    {
+      "name": "Régimen contributivo",
+      "facet": "Salud, EPS y seguridad social",
+      "known_at": 11
+    },
+    {
+      "name": "Cuota moderadora",
+      "facet": "Salud, EPS y seguridad social",
+      "known_at": 11
+    },
+    {
+      "name": "Copago",
+      "facet": "Salud, EPS y seguridad social",
+      "known_at": 12
+    },
+    {
+      "name": "POS",
+      "facet": "Salud, EPS y seguridad social",
+      "known_at": 12
+    },
+    {
+      "name": "Incapacidad médica",
+      "facet": "Salud, EPS y seguridad social",
+      "known_at": 9
+    },
+    {
+      "name": "ARL",
+      "facet": "Salud, EPS y seguridad social",
+      "known_at": 12
+    },
+    {
+      "name": "Colpensiones",
+      "facet": "Salud, EPS y seguridad social",
+      "known_at": 11
+    },
+    {
+      "name": "Fondo de pensiones",
+      "facet": "Salud, EPS y seguridad social",
+      "known_at": 11
+    },
+    {
+      "name": "Caja de compensación familiar",
+      "facet": "Salud, EPS y seguridad social",
+      "known_at": 10
+    },
+    {
+      "name": "Cesantías",
+      "facet": "Salud, EPS y seguridad social",
+      "known_at": 11
+    },
+    {
+      "name": "Urgencias",
+      "facet": "Salud, EPS y seguridad social",
+      "known_at": 3
+    },
+    {
+      "name": "Orden médica",
+      "facet": "Salud, EPS y seguridad social",
+      "known_at": 8
+    },
+    {
+      "name": "Medicina prepagada",
+      "facet": "Salud, EPS y seguridad social",
+      "known_at": 11
+    },
+    {
+      "name": "Carné de vacunación",
+      "facet": "Salud, EPS y seguridad social",
+      "known_at": 5
+    },
+    {
+      "name": "Licencia de conducción",
+      "facet": "Carro, licencia y pico y placa",
+      "known_at": 7
+    },
+    {
+      "name": "RUNT",
+      "facet": "Carro, licencia y pico y placa",
+      "known_at": 12
+    },
+    {
+      "name": "Placa amarilla",
+      "facet": "Carro, licencia y pico y placa",
+      "known_at": 7
+    },
+    {
+      "name": "Placa blanca",
+      "facet": "Carro, licencia y pico y placa",
+      "known_at": 9
+    },
+    {
+      "name": "Tarjeta de propiedad",
+      "facet": "Carro, licencia y pico y placa",
+      "known_at": 11
+    },
+    {
+      "name": "Terminal de transporte",
+      "facet": "Carro, licencia y pico y placa",
+      "known_at": 5
+    },
+    {
+      "name": "PSE",
+      "facet": "Plata, pagos y billetes del día a día",
+      "known_at": 10
+    },
+    {
+      "name": "Corresponsal bancario",
+      "facet": "Plata, pagos y billetes del día a día",
+      "known_at": 10
+    }
+  ]
+}

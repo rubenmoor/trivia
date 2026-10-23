@@ -1,0 +1,541 @@
+{
+  "subcategory": "salsa-and-tropical-music",
+  "facets": [
+    "Salsa caleña y su baile",
+    "Orquestas y cantantes de salsa",
+    "Feria de Cali y Salsódromo",
+    "Cumbia colombiana",
+    "Porro y bandas sabaneras",
+    "Champeta y picós del Caribe",
+    "Chucu-chucu y orquestas bailables",
+    "Clásicos decembrinos y de fin de año",
+    "Instrumentos de la música tropical",
+    "Sellos, viejotecas y salsotecas",
+    "Fusión tropical y nuevas generaciones"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 3,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 5,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Cali",
+      "facet": "Salsa caleña y su baile",
+      "known_at": 3
+    },
+    {
+      "name": "Pachanga",
+      "facet": "Salsa caleña y su baile",
+      "known_at": 7
+    },
+    {
+      "name": "Bugalú",
+      "facet": "Salsa caleña y su baile",
+      "known_at": 11
+    },
+    {
+      "name": "Salsa en línea",
+      "facet": "Salsa caleña y su baile",
+      "known_at": 11
+    },
+    {
+      "name": "Swing Latino",
+      "facet": "Salsa caleña y su baile",
+      "known_at": 9
+    },
+    {
+      "name": "Ensálsate",
+      "facet": "Salsa caleña y su baile",
+      "known_at": 12
+    },
+    {
+      "name": "Mulato Cabaret",
+      "facet": "Salsa caleña y su baile",
+      "known_at": 12
+    },
+    {
+      "name": "Barrio Obrero",
+      "facet": "Salsa caleña y su baile",
+      "known_at": 11
+    },
+    {
+      "name": "Avenida Sexta",
+      "facet": "Salsa caleña y su baile",
+      "known_at": 10
+    },
+    {
+      "name": "Festival Mundial de Salsa",
+      "facet": "Salsa caleña y su baile",
+      "known_at": 9
+    },
+    {
+      "name": "Escuelas de salsa de Cali",
+      "facet": "Salsa caleña y su baile",
+      "known_at": 7
+    },
+    {
+      "name": "Salsa acrobática",
+      "facet": "Salsa caleña y su baile",
+      "known_at": 8
+    },
+    {
+      "name": "Alexis Lozano",
+      "facet": "Orquestas y cantantes de salsa",
+      "known_at": 13
+    },
+    {
+      "name": "Los Titanes",
+      "facet": "Orquestas y cantantes de salsa",
+      "known_at": 11
+    },
+    {
+      "name": "Orquesta Internacional Los Niches",
+      "facet": "Orquestas y cantantes de salsa",
+      "known_at": 13
+    },
+    {
+      "name": "Tito Gómez",
+      "facet": "Orquestas y cantantes de salsa",
+      "known_at": 13
+    },
+    {
+      "name": "Son de Cali",
+      "facet": "Orquestas y cantantes de salsa",
+      "known_at": 10
+    },
+    {
+      "name": "Michel el Buenón",
+      "facet": "Orquestas y cantantes de salsa",
+      "known_at": 12
+    },
+    {
+      "name": "El preso",
+      "facet": "Orquestas y cantantes de salsa",
+      "known_at": 9
+    },
+    {
+      "name": "Buenaventura y Caney",
+      "facet": "Orquestas y cantantes de salsa",
+      "known_at": 10
+    },
+    {
+      "name": "Gran Cabalgata",
+      "facet": "Feria de Cali y Salsódromo",
+      "known_at": 9
+    },
+    {
+      "name": "Encuentro de Melómanos y Coleccionistas",
+      "facet": "Feria de Cali y Salsódromo",
+      "known_at": 12
+    },
+    {
+      "name": "Carnaval del Cali Viejo",
+      "facet": "Feria de Cali y Salsódromo",
+      "known_at": 11
+    },
+    {
+      "name": "Superconcierto de la Feria",
+      "facet": "Feria de Cali y Salsódromo",
+      "known_at": 10
+    },
+    {
+      "name": "Comparsas del Salsódromo",
+      "facet": "Feria de Cali y Salsódromo",
+      "known_at": 9
+    },
+    {
+      "name": "Autopista Suroriental",
+      "facet": "Feria de Cali y Salsódromo",
+      "known_at": 13
+    },
+    {
+      "name": "25 de diciembre",
+      "facet": "Feria de Cali y Salsódromo",
+      "known_at": 9
+    },
+    {
+      "name": "Primera Feria de Cali de 1957",
+      "facet": "Feria de Cali y Salsódromo",
+      "known_at": 14
+    },
+    {
+      "name": "Reina de la Feria de Cali",
+      "facet": "Feria de Cali y Salsódromo",
+      "known_at": 11
+    },
+    {
+      "name": "Plaza de Cayzedo",
+      "facet": "Feria de Cali y Salsódromo",
+      "known_at": 11
+    },
+    {
+      "name": "Festival de Orquestas de la Feria",
+      "facet": "Feria de Cali y Salsódromo",
+      "known_at": 12
+    },
+    {
+      "name": "La piragua",
+      "facet": "Cumbia colombiana",
+      "known_at": 9
+    },
+    {
+      "name": "José Barros",
+      "facet": "Cumbia colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Wilson Choperena",
+      "facet": "Cumbia colombiana",
+      "known_at": 14
+    },
+    {
+      "name": "Cumbia sampuesana",
+      "facet": "Cumbia colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Velas en la cumbia",
+      "facet": "Cumbia colombiana",
+      "known_at": 6
+    },
+    {
+      "name": "El Banco, Magdalena",
+      "facet": "Cumbia colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Cumbia en México",
+      "facet": "Cumbia colombiana",
+      "known_at": 10
+    },
+    {
+      "name": "Cumbia argentina",
+      "facet": "Cumbia colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Matilde Díaz",
+      "facet": "Porro y bandas sabaneras",
+      "known_at": 13
+    },
+    {
+      "name": "Banda sabanera",
+      "facet": "Porro y bandas sabaneras",
+      "known_at": 10
+    },
+    {
+      "name": "San Pelayo",
+      "facet": "Porro y bandas sabaneras",
+      "known_at": 12
+    },
+    {
+      "name": "Porro palitiao",
+      "facet": "Porro y bandas sabaneras",
+      "known_at": 14
+    },
+    {
+      "name": "Porro tapao",
+      "facet": "Porro y bandas sabaneras",
+      "known_at": 14
+    },
+    {
+      "name": "Fandango sabanero",
+      "facet": "Porro y bandas sabaneras",
+      "known_at": 12
+    },
+    {
+      "name": "Pedro Laza y sus Pelayeros",
+      "facet": "Porro y bandas sabaneras",
+      "known_at": 14
+    },
+    {
+      "name": "Prende la vela",
+      "facet": "Porro y bandas sabaneras",
+      "known_at": 10
+    },
+    {
+      "name": "Carmen de Bolívar",
+      "facet": "Porro y bandas sabaneras",
+      "known_at": 11
+    },
+    {
+      "name": "El Rey de Rocha",
+      "facet": "Champeta y picós del Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "El Sibanicú",
+      "facet": "Champeta y picós del Caribe",
+      "known_at": 13
+    },
+    {
+      "name": "Champeta urbana",
+      "facet": "Champeta y picós del Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "El Afinaito",
+      "facet": "Champeta y picós del Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "Viviano Torres",
+      "facet": "Champeta y picós del Caribe",
+      "known_at": 13
+    },
+    {
+      "name": "Champeta en el Super Bowl",
+      "facet": "Champeta y picós del Caribe",
+      "known_at": 8
+    },
+    {
+      "name": "Chucu-chucu",
+      "facet": "Chucu-chucu y orquestas bailables",
+      "known_at": 9
+    },
+    {
+      "name": "Gustavo 'el Loco' Quintero",
+      "facet": "Chucu-chucu y orquestas bailables",
+      "known_at": 11
+    },
+    {
+      "name": "Los Golden Boys",
+      "facet": "Chucu-chucu y orquestas bailables",
+      "known_at": 13
+    },
+    {
+      "name": "Los Black Star",
+      "facet": "Chucu-chucu y orquestas bailables",
+      "known_at": 14
+    },
+    {
+      "name": "Afrosound",
+      "facet": "Chucu-chucu y orquestas bailables",
+      "known_at": 13
+    },
+    {
+      "name": "Lisandro Meza",
+      "facet": "Chucu-chucu y orquestas bailables",
+      "known_at": 12
+    },
+    {
+      "name": "Los Tupamaros",
+      "facet": "Chucu-chucu y orquestas bailables",
+      "known_at": 11
+    },
+    {
+      "name": "La Sonora Dinamita",
+      "facet": "Chucu-chucu y orquestas bailables",
+      "known_at": 9
+    },
+    {
+      "name": "Billo's Caracas Boys",
+      "facet": "Chucu-chucu y orquestas bailables",
+      "known_at": 11
+    },
+    {
+      "name": "Hernán Hernández",
+      "facet": "Chucu-chucu y orquestas bailables",
+      "known_at": 13
+    },
+    {
+      "name": "Tony Camargo",
+      "facet": "Clásicos decembrinos y de fin de año",
+      "known_at": 13
+    },
+    {
+      "name": "La víspera de año nuevo",
+      "facet": "Clásicos decembrinos y de fin de año",
+      "known_at": 10
+    },
+    {
+      "name": "Pachito eché",
+      "facet": "Clásicos decembrinos y de fin de año",
+      "known_at": 10
+    },
+    {
+      "name": "Ay cosita linda",
+      "facet": "Clásicos decembrinos y de fin de año",
+      "known_at": 12
+    },
+    {
+      "name": "14 Cañonazos Bailables",
+      "facet": "Clásicos decembrinos y de fin de año",
+      "known_at": 10
+    },
+    {
+      "name": "Navidad en la costa",
+      "facet": "Clásicos decembrinos y de fin de año",
+      "known_at": 10
+    },
+    {
+      "name": "Parranda decembrina",
+      "facet": "Clásicos decembrinos y de fin de año",
+      "known_at": 6
+    },
+    {
+      "name": "El caballo pechichón",
+      "facet": "Clásicos decembrinos y de fin de año",
+      "known_at": 13
+    },
+    {
+      "name": "Caña de millo",
+      "facet": "Instrumentos de la música tropical",
+      "known_at": 12
+    },
+    {
+      "name": "Trombón",
+      "facet": "Instrumentos de la música tropical",
+      "known_at": 5
+    },
+    {
+      "name": "Timbales",
+      "facet": "Instrumentos de la música tropical",
+      "known_at": 7
+    },
+    {
+      "name": "Clave",
+      "facet": "Instrumentos de la música tropical",
+      "known_at": 10
+    },
+    {
+      "name": "Güiro",
+      "facet": "Instrumentos de la música tropical",
+      "known_at": 7
+    },
+    {
+      "name": "Cencerro",
+      "facet": "Instrumentos de la música tropical",
+      "known_at": 8
+    },
+    {
+      "name": "Antonio Fuentes",
+      "facet": "Sellos, viejotecas y salsotecas",
+      "known_at": 13
+    },
+    {
+      "name": "Codiscos",
+      "facet": "Sellos, viejotecas y salsotecas",
+      "known_at": 12
+    },
+    {
+      "name": "Sonolux",
+      "facet": "Sellos, viejotecas y salsotecas",
+      "known_at": 13
+    },
+    {
+      "name": "Discos Tropical",
+      "facet": "Sellos, viejotecas y salsotecas",
+      "known_at": 14
+    },
+    {
+      "name": "Fania Records",
+      "facet": "Sellos, viejotecas y salsotecas",
+      "known_at": 12
+    },
+    {
+      "name": "Salsoteca",
+      "facet": "Sellos, viejotecas y salsotecas",
+      "known_at": 8
+    },
+    {
+      "name": "Tin Tin Deo",
+      "facet": "Sellos, viejotecas y salsotecas",
+      "known_at": 12
+    },
+    {
+      "name": "Zaperoco",
+      "facet": "Sellos, viejotecas y salsotecas",
+      "known_at": 12
+    },
+    {
+      "name": "La Topa Tolondra",
+      "facet": "Sellos, viejotecas y salsotecas",
+      "known_at": 12
+    },
+    {
+      "name": "Changó",
+      "facet": "Sellos, viejotecas y salsotecas",
+      "known_at": 12
+    },
+    {
+      "name": "La Troja",
+      "facet": "Sellos, viejotecas y salsotecas",
+      "known_at": 12
+    },
+    {
+      "name": "Disco de vinilo",
+      "facet": "Sellos, viejotecas y salsotecas",
+      "known_at": 5
+    },
+    {
+      "name": "Disco de 78 revoluciones",
+      "facet": "Sellos, viejotecas y salsotecas",
+      "known_at": 12
+    },
+    {
+      "name": "Tropipop",
+      "facet": "Fusión tropical y nuevas generaciones",
+      "known_at": 9
+    },
+    {
+      "name": "La Mojarra Eléctrica",
+      "facet": "Fusión tropical y nuevas generaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Ondatrópica",
+      "facet": "Fusión tropical y nuevas generaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Salsa choke",
+      "facet": "Fusión tropical y nuevas generaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Sidestepper",
+      "facet": "Fusión tropical y nuevas generaciones",
+      "known_at": 14
+    }
+  ]
+}

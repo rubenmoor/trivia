@@ -1,0 +1,367 @@
+{
+  "subcategory": "cities-and-towns",
+  "facets": [
+    "Capitales de departamento",
+    "Pueblos patrimonio y coloniales",
+    "Apodos y gentilicios de ciudades",
+    "Monumentos y lugares emblemáticos urbanos",
+    "Ciudades del Caribe colombiano",
+    "Pueblos y ciudades del Eje Cafetero",
+    "Fundación e historia de ciudades",
+    "Ferias, fiestas y carnavales locales",
+    "Platos y productos típicos de cada ciudad",
+    "Pueblos turísticos y de naturaleza",
+    "Barrios, transporte y vida urbana",
+    "Ciudades en canciones, novelas y películas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Medellín",
+      "facet": "Capitales de departamento",
+      "known_at": 3
+    },
+    {
+      "name": "Tunja",
+      "facet": "Capitales de departamento",
+      "known_at": 8
+    },
+    {
+      "name": "Santa Cruz de Lorica",
+      "facet": "Pueblos patrimonio y coloniales",
+      "known_at": 12
+    },
+    {
+      "name": "Sucursal del Cielo",
+      "facet": "Apodos y gentilicios de ciudades",
+      "known_at": 7
+    },
+    {
+      "name": "Ciudad Blanca",
+      "facet": "Apodos y gentilicios de ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Ciudad Sorpresa",
+      "facet": "Apodos y gentilicios de ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Ciudad Musical",
+      "facet": "Apodos y gentilicios de ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Capital Mundial del Vallenato",
+      "facet": "Apodos y gentilicios de ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "Torre del Reloj",
+      "facet": "Monumentos y lugares emblemáticos urbanos",
+      "known_at": 6
+    },
+    {
+      "name": "Catedral de Sal",
+      "facet": "Monumentos y lugares emblemáticos urbanos",
+      "known_at": 6
+    },
+    {
+      "name": "Cristo Rey",
+      "facet": "Monumentos y lugares emblemáticos urbanos",
+      "known_at": 9
+    },
+    {
+      "name": "Cerro de las Tres Cruces",
+      "facet": "Monumentos y lugares emblemáticos urbanos",
+      "known_at": 10
+    },
+    {
+      "name": "Barranquilla",
+      "facet": "Ciudades del Caribe colombiano",
+      "known_at": 4
+    },
+    {
+      "name": "Cartagena",
+      "facet": "Ciudades del Caribe colombiano",
+      "known_at": 3
+    },
+    {
+      "name": "Tolú",
+      "facet": "Ciudades del Caribe colombiano",
+      "known_at": 10
+    },
+    {
+      "name": "Coveñas",
+      "facet": "Ciudades del Caribe colombiano",
+      "known_at": 10
+    },
+    {
+      "name": "Puerto Colombia",
+      "facet": "Ciudades del Caribe colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Soledad",
+      "facet": "Ciudades del Caribe colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Magangué",
+      "facet": "Ciudades del Caribe colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Necoclí",
+      "facet": "Ciudades del Caribe colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Santa Rosa de Cabal",
+      "facet": "Pueblos y ciudades del Eje Cafetero",
+      "known_at": 10
+    },
+    {
+      "name": "Montenegro",
+      "facet": "Pueblos y ciudades del Eje Cafetero",
+      "known_at": 10
+    },
+    {
+      "name": "Chinchiná",
+      "facet": "Pueblos y ciudades del Eje Cafetero",
+      "known_at": 12
+    },
+    {
+      "name": "Calarcá",
+      "facet": "Pueblos y ciudades del Eje Cafetero",
+      "known_at": 12
+    },
+    {
+      "name": "Marsella",
+      "facet": "Pueblos y ciudades del Eje Cafetero",
+      "known_at": 12
+    },
+    {
+      "name": "Quimbaya",
+      "facet": "Pueblos y ciudades del Eje Cafetero",
+      "known_at": 11
+    },
+    {
+      "name": "Circasia",
+      "facet": "Pueblos y ciudades del Eje Cafetero",
+      "known_at": 12
+    },
+    {
+      "name": "Salamina",
+      "facet": "Pueblos y ciudades del Eje Cafetero",
+      "known_at": 11
+    },
+    {
+      "name": "Riosucio",
+      "facet": "Pueblos y ciudades del Eje Cafetero",
+      "known_at": 12
+    },
+    {
+      "name": "Dosquebradas",
+      "facet": "Pueblos y ciudades del Eje Cafetero",
+      "known_at": 11
+    },
+    {
+      "name": "Santa Fe de Bogotá",
+      "facet": "Fundación e historia de ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "Tragedia de Armero",
+      "facet": "Fundación e historia de ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Terremoto del Eje Cafetero de 1999",
+      "facet": "Fundación e historia de ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Terremoto de Popayán de 1983",
+      "facet": "Fundación e historia de ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Blas de Lezo",
+      "facet": "Fundación e historia de ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Villa de la Candelaria",
+      "facet": "Fundación e historia de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Festival del Bambuco",
+      "facet": "Ferias, fiestas y carnavales locales",
+      "known_at": 10
+    },
+    {
+      "name": "Festival Iberoamericano de Teatro",
+      "facet": "Ferias, fiestas y carnavales locales",
+      "known_at": 11
+    },
+    {
+      "name": "Fiesta del Mar",
+      "facet": "Ferias, fiestas y carnavales locales",
+      "known_at": 11
+    },
+    {
+      "name": "Carnaval del Diablo",
+      "facet": "Ferias, fiestas y carnavales locales",
+      "known_at": 11
+    },
+    {
+      "name": "Alumbrados navideños de Medellín",
+      "facet": "Ferias, fiestas y carnavales locales",
+      "known_at": 5
+    },
+    {
+      "name": "Festival del Burro",
+      "facet": "Ferias, fiestas y carnavales locales",
+      "known_at": 10
+    },
+    {
+      "name": "Corralejas",
+      "facet": "Ferias, fiestas y carnavales locales",
+      "known_at": 11
+    },
+    {
+      "name": "Obleas de Floridablanca",
+      "facet": "Platos y productos típicos de cada ciudad",
+      "known_at": 11
+    },
+    {
+      "name": "Cazuela de mariscos",
+      "facet": "Platos y productos típicos de cada ciudad",
+      "known_at": 10
+    },
+    {
+      "name": "San Gil",
+      "facet": "Pueblos turísticos y de naturaleza",
+      "known_at": 7
+    },
+    {
+      "name": "San Agustín",
+      "facet": "Pueblos turísticos y de naturaleza",
+      "known_at": 8
+    },
+    {
+      "name": "Minca",
+      "facet": "Pueblos turísticos y de naturaleza",
+      "known_at": 10
+    },
+    {
+      "name": "Melgar",
+      "facet": "Pueblos turísticos y de naturaleza",
+      "known_at": 9
+    },
+    {
+      "name": "Girardot",
+      "facet": "Pueblos turísticos y de naturaleza",
+      "known_at": 8
+    },
+    {
+      "name": "Valle de Aburrá",
+      "facet": "Pueblos turísticos y de naturaleza",
+      "known_at": 9
+    },
+    {
+      "name": "Ciclovía",
+      "facet": "Barrios, transporte y vida urbana",
+      "known_at": 7
+    },
+    {
+      "name": "Estrato socioeconómico",
+      "facet": "Barrios, transporte y vida urbana",
+      "known_at": 8
+    },
+    {
+      "name": "Chapinero",
+      "facet": "Barrios, transporte y vida urbana",
+      "known_at": 8
+    },
+    {
+      "name": "Barrio San Antonio",
+      "facet": "Barrios, transporte y vida urbana",
+      "known_at": 11
+    },
+    {
+      "name": "Plaza de Paloquemao",
+      "facet": "Barrios, transporte y vida urbana",
+      "known_at": 10
+    },
+    {
+      "name": "Cali Pachanguero",
+      "facet": "Ciudades en canciones, novelas y películas",
+      "known_at": 8
+    },
+    {
+      "name": "Oiga, mire, vea",
+      "facet": "Ciudades en canciones, novelas y películas",
+      "known_at": 9
+    },
+    {
+      "name": "Mi Buenaventura",
+      "facet": "Ciudades en canciones, novelas y películas",
+      "known_at": 11
+    },
+    {
+      "name": "Santa Marta tiene tren",
+      "facet": "Ciudades en canciones, novelas y películas",
+      "known_at": 11
+    },
+    {
+      "name": "Medellín (canción)",
+      "facet": "Ciudades en canciones, novelas y películas",
+      "known_at": 10
+    }
+  ]
+}

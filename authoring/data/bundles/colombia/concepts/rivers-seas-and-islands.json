@@ -1,0 +1,706 @@
+{
+  "subcategory": "rivers-seas-and-islands",
+  "facets": [
+    "Río Magdalena y su cuenca",
+    "Ríos de la Orinoquía y la Amazonía",
+    "Ríos del Pacífico y el Atrato",
+    "Costa Caribe y sus golfos",
+    "Costa Pacífica y sus bahías",
+    "San Andrés, Providencia y Santa Catalina",
+    "Islas del Caribe continental",
+    "Islas del Pacífico: Gorgona y Malpelo",
+    "Ciénagas, lagunas y humedales",
+    "Fauna de ríos y mares",
+    "Puertos, navegación y vida ribereña",
+    "Cascadas, raudales y ríos famosos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 5,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Río Magdalena",
+      "facet": "Río Magdalena y su cuenca",
+      "known_at": 2
+    },
+    {
+      "name": "Río Cauca",
+      "facet": "Río Magdalena y su cuenca",
+      "known_at": 4
+    },
+    {
+      "name": "Río Bogotá",
+      "facet": "Río Magdalena y su cuenca",
+      "known_at": 5
+    },
+    {
+      "name": "Río Medellín",
+      "facet": "Río Magdalena y su cuenca",
+      "known_at": 6
+    },
+    {
+      "name": "Laguna de la Magdalena",
+      "facet": "Río Magdalena y su cuenca",
+      "known_at": 12
+    },
+    {
+      "name": "Río Sogamoso",
+      "facet": "Río Magdalena y su cuenca",
+      "known_at": 11
+    },
+    {
+      "name": "Río Cesar",
+      "facet": "Río Magdalena y su cuenca",
+      "known_at": 10
+    },
+    {
+      "name": "Río La Miel",
+      "facet": "Río Magdalena y su cuenca",
+      "known_at": 13,
+      "retired": "unaskable: Es demasiado poco conocido para dar una pregunta justa de causa y efecto."
+    },
+    {
+      "name": "Río Saldaña",
+      "facet": "Río Magdalena y su cuenca",
+      "known_at": 13
+    },
+    {
+      "name": "Río Chicamocha",
+      "facet": "Río Magdalena y su cuenca",
+      "known_at": 10
+    },
+    {
+      "name": "Río Suárez",
+      "facet": "Río Magdalena y su cuenca",
+      "known_at": 13
+    },
+    {
+      "name": "Río Porce",
+      "facet": "Río Magdalena y su cuenca",
+      "known_at": 12
+    },
+    {
+      "name": "Represa de Betania",
+      "facet": "Río Magdalena y su cuenca",
+      "known_at": 11
+    },
+    {
+      "name": "Río Guaviare",
+      "facet": "Ríos de la Orinoquía y la Amazonía",
+      "known_at": 8
+    },
+    {
+      "name": "Río Vaupés",
+      "facet": "Ríos de la Orinoquía y la Amazonía",
+      "known_at": 11
+    },
+    {
+      "name": "Río Guainía",
+      "facet": "Ríos de la Orinoquía y la Amazonía",
+      "known_at": 12
+    },
+    {
+      "name": "Río Arauca",
+      "facet": "Ríos de la Orinoquía y la Amazonía",
+      "known_at": 9
+    },
+    {
+      "name": "Río Casanare",
+      "facet": "Ríos de la Orinoquía y la Amazonía",
+      "known_at": 10
+    },
+    {
+      "name": "Río Vichada",
+      "facet": "Ríos de la Orinoquía y la Amazonía",
+      "known_at": 10
+    },
+    {
+      "name": "Río Tomo",
+      "facet": "Ríos de la Orinoquía y la Amazonía",
+      "known_at": 13
+    },
+    {
+      "name": "Río Atabapo",
+      "facet": "Ríos de la Orinoquía y la Amazonía",
+      "known_at": 13
+    },
+    {
+      "name": "Río Negro",
+      "facet": "Ríos de la Orinoquía y la Amazonía",
+      "known_at": 10
+    },
+    {
+      "name": "Río Ariari",
+      "facet": "Ríos de la Orinoquía y la Amazonía",
+      "known_at": 12
+    },
+    {
+      "name": "Río Patía",
+      "facet": "Ríos del Pacífico y el Atrato",
+      "known_at": 10
+    },
+    {
+      "name": "Río Baudó",
+      "facet": "Ríos del Pacífico y el Atrato",
+      "known_at": 11,
+      "retired": "unaskable: Es un río poco conocido, y no tiene un dato de origen que una familia pueda adivinar."
+    },
+    {
+      "name": "Río Mira",
+      "facet": "Ríos del Pacífico y el Atrato",
+      "known_at": 11
+    },
+    {
+      "name": "Río Micay",
+      "facet": "Ríos del Pacífico y el Atrato",
+      "known_at": 12
+    },
+    {
+      "name": "Río Anchicayá",
+      "facet": "Ríos del Pacífico y el Atrato",
+      "known_at": 12
+    },
+    {
+      "name": "Río Dagua",
+      "facet": "Ríos del Pacífico y el Atrato",
+      "known_at": 11
+    },
+    {
+      "name": "Río Naya",
+      "facet": "Ríos del Pacífico y el Atrato",
+      "known_at": 13
+    },
+    {
+      "name": "Río Telembí",
+      "facet": "Ríos del Pacífico y el Atrato",
+      "known_at": 14
+    },
+    {
+      "name": "Río Guapi",
+      "facet": "Ríos del Pacífico y el Atrato",
+      "known_at": 12
+    },
+    {
+      "name": "Río Quito",
+      "facet": "Ríos del Pacífico y el Atrato",
+      "known_at": 12
+    },
+    {
+      "name": "Río Timbiquí",
+      "facet": "Ríos del Pacífico y el Atrato",
+      "known_at": 12
+    },
+    {
+      "name": "Río Calima",
+      "facet": "Ríos del Pacífico y el Atrato",
+      "known_at": 10
+    },
+    {
+      "name": "Río Sucio",
+      "facet": "Ríos del Pacífico y el Atrato",
+      "known_at": 13
+    },
+    {
+      "name": "Istmo de San Pablo",
+      "facet": "Ríos del Pacífico y el Atrato",
+      "known_at": 14
+    },
+    {
+      "name": "Mar Caribe",
+      "facet": "Costa Caribe y sus golfos",
+      "known_at": 2
+    },
+    {
+      "name": "Península de La Guajira",
+      "facet": "Costa Caribe y sus golfos",
+      "known_at": 4
+    },
+    {
+      "name": "Bahía de Santa Marta",
+      "facet": "Costa Caribe y sus golfos",
+      "known_at": 6
+    },
+    {
+      "name": "Cabo San Juan del Guía",
+      "facet": "Costa Caribe y sus golfos",
+      "known_at": 10
+    },
+    {
+      "name": "Cabo Tiburón",
+      "facet": "Costa Caribe y sus golfos",
+      "known_at": 12
+    },
+    {
+      "name": "Sapzurro",
+      "facet": "Costa Caribe y sus golfos",
+      "known_at": 9
+    },
+    {
+      "name": "Golfo de Darién",
+      "facet": "Costa Caribe y sus golfos",
+      "known_at": 10
+    },
+    {
+      "name": "Bahía de Barbacoas",
+      "facet": "Costa Caribe y sus golfos",
+      "known_at": 12
+    },
+    {
+      "name": "Bahía Portete",
+      "facet": "Costa Caribe y sus golfos",
+      "known_at": 12
+    },
+    {
+      "name": "Bahía Honda",
+      "facet": "Costa Caribe y sus golfos",
+      "known_at": 13
+    },
+    {
+      "name": "Océano Pacífico",
+      "facet": "Costa Pacífica y sus bahías",
+      "known_at": 2
+    },
+    {
+      "name": "Bahía de Buenaventura",
+      "facet": "Costa Pacífica y sus bahías",
+      "known_at": 6
+    },
+    {
+      "name": "Bahía de Tumaco",
+      "facet": "Costa Pacífica y sus bahías",
+      "known_at": 8
+    },
+    {
+      "name": "Juanchaco",
+      "facet": "Costa Pacífica y sus bahías",
+      "known_at": 8
+    },
+    {
+      "name": "Ladrilleros",
+      "facet": "Costa Pacífica y sus bahías",
+      "known_at": 9
+    },
+    {
+      "name": "Golfo de Tortugas",
+      "facet": "Costa Pacífica y sus bahías",
+      "known_at": 12
+    },
+    {
+      "name": "Cabo Manglares",
+      "facet": "Costa Pacífica y sus bahías",
+      "known_at": 13
+    },
+    {
+      "name": "Bahía Cupica",
+      "facet": "Costa Pacífica y sus bahías",
+      "known_at": 13
+    },
+    {
+      "name": "El Valle",
+      "facet": "Costa Pacífica y sus bahías",
+      "known_at": 10
+    },
+    {
+      "name": "Bahía Humboldt",
+      "facet": "Costa Pacífica y sus bahías",
+      "known_at": 13
+    },
+    {
+      "name": "Cayo Acuario",
+      "facet": "San Andrés, Providencia y Santa Catalina",
+      "known_at": 9
+    },
+    {
+      "name": "Cayo Bolívar",
+      "facet": "San Andrés, Providencia y Santa Catalina",
+      "known_at": 11
+    },
+    {
+      "name": "Cueva de Morgan",
+      "facet": "San Andrés, Providencia y Santa Catalina",
+      "known_at": 9
+    },
+    {
+      "name": "Henry Morgan",
+      "facet": "San Andrés, Providencia y Santa Catalina",
+      "known_at": 10
+    },
+    {
+      "name": "Cabeza de Morgan",
+      "facet": "San Andrés, Providencia y Santa Catalina",
+      "known_at": 11
+    },
+    {
+      "name": "Cayo Cangrejo",
+      "facet": "San Andrés, Providencia y Santa Catalina",
+      "known_at": 11,
+      "retired": "unaskable: Es un cayo poco conocido, y el origen de su nombre es obvio."
+    },
+    {
+      "name": "El Peak",
+      "facet": "San Andrés, Providencia y Santa Catalina",
+      "known_at": 13
+    },
+    {
+      "name": "Quitasueño",
+      "facet": "San Andrés, Providencia y Santa Catalina",
+      "known_at": 13
+    },
+    {
+      "name": "Playa Blanca",
+      "facet": "Islas del Caribe continental",
+      "known_at": 5
+    },
+    {
+      "name": "Isla Tintipán",
+      "facet": "Islas del Caribe continental",
+      "known_at": 11
+    },
+    {
+      "name": "Isla Tierra Bomba",
+      "facet": "Islas del Caribe continental",
+      "known_at": 8
+    },
+    {
+      "name": "Isla Palma",
+      "facet": "Islas del Caribe continental",
+      "known_at": 11
+    },
+    {
+      "name": "Isla de Salamanca",
+      "facet": "Islas del Caribe continental",
+      "known_at": 11
+    },
+    {
+      "name": "Isla Grande",
+      "facet": "Islas del Caribe continental",
+      "known_at": 10
+    },
+    {
+      "name": "Isla Tortuguilla",
+      "facet": "Islas del Caribe continental",
+      "known_at": 13
+    },
+    {
+      "name": "Bocachica",
+      "facet": "Islas del Caribe continental",
+      "known_at": 9
+    },
+    {
+      "name": "Cholón",
+      "facet": "Islas del Caribe continental",
+      "known_at": 11
+    },
+    {
+      "name": "Isla Ceycén",
+      "facet": "Islas del Caribe continental",
+      "known_at": 13
+    },
+    {
+      "name": "Isla Pirata",
+      "facet": "Islas del Caribe continental",
+      "known_at": 12
+    },
+    {
+      "name": "Prisión de Gorgona",
+      "facet": "Islas del Pacífico: Gorgona y Malpelo",
+      "known_at": 9
+    },
+    {
+      "name": "Gorgonilla",
+      "facet": "Islas del Pacífico: Gorgona y Malpelo",
+      "known_at": 12,
+      "retired": "unaskable: Es un islote muy poco conocido, y no tiene un buen dato para las opciones disponibles."
+    },
+    {
+      "name": "Isla del Gallo",
+      "facet": "Islas del Pacífico: Gorgona y Malpelo",
+      "known_at": 10
+    },
+    {
+      "name": "Los Trece de la Fama",
+      "facet": "Islas del Pacífico: Gorgona y Malpelo",
+      "known_at": 11
+    },
+    {
+      "name": "Francisco Pizarro",
+      "facet": "Islas del Pacífico: Gorgona y Malpelo",
+      "known_at": 8
+    },
+    {
+      "name": "Lagarto azul de Gorgona",
+      "facet": "Islas del Pacífico: Gorgona y Malpelo",
+      "known_at": 12
+    },
+    {
+      "name": "Lagarto de Malpelo",
+      "facet": "Islas del Pacífico: Gorgona y Malpelo",
+      "known_at": 13
+    },
+    {
+      "name": "Piquero de Nazca",
+      "facet": "Islas del Pacífico: Gorgona y Malpelo",
+      "known_at": 12
+    },
+    {
+      "name": "Corredor Marino del Pacífico Este Tropical",
+      "facet": "Islas del Pacífico: Gorgona y Malpelo",
+      "known_at": 14
+    },
+    {
+      "name": "Serpientes de Gorgona",
+      "facet": "Islas del Pacífico: Gorgona y Malpelo",
+      "known_at": 9
+    },
+    {
+      "name": "Isla del Morro",
+      "facet": "Islas del Pacífico: Gorgona y Malpelo",
+      "known_at": 11
+    },
+    {
+      "name": "Isla de Cascajal",
+      "facet": "Islas del Pacífico: Gorgona y Malpelo",
+      "known_at": 12
+    },
+    {
+      "name": "Bocagrande de Tumaco",
+      "facet": "Islas del Pacífico: Gorgona y Malpelo",
+      "known_at": 11
+    },
+    {
+      "name": "Lago de Tota",
+      "facet": "Ciénagas, lagunas y humedales",
+      "known_at": 7
+    },
+    {
+      "name": "Ciénaga de Zapatosa",
+      "facet": "Ciénagas, lagunas y humedales",
+      "known_at": 10
+    },
+    {
+      "name": "Embalse del Peñol",
+      "facet": "Ciénagas, lagunas y humedales",
+      "known_at": 5
+    },
+    {
+      "name": "Ciénaga de Ayapel",
+      "facet": "Ciénagas, lagunas y humedales",
+      "known_at": 11
+    },
+    {
+      "name": "Laguna Verde del Azufral",
+      "facet": "Ciénagas, lagunas y humedales",
+      "known_at": 11
+    },
+    {
+      "name": "Humedal Juan Amarillo",
+      "facet": "Ciénagas, lagunas y humedales",
+      "known_at": 12
+    },
+    {
+      "name": "Ciénaga de la Virgen",
+      "facet": "Ciénagas, lagunas y humedales",
+      "known_at": 10
+    },
+    {
+      "name": "Laguna de Chingaza",
+      "facet": "Ciénagas, lagunas y humedales",
+      "known_at": 12
+    },
+    {
+      "name": "Convención Ramsar",
+      "facet": "Ciénagas, lagunas y humedales",
+      "known_at": 14
+    },
+    {
+      "name": "Nueva Venecia",
+      "facet": "Ciénagas, lagunas y humedales",
+      "known_at": 10
+    },
+    {
+      "name": "Lago Calima",
+      "facet": "Ciénagas, lagunas y humedales",
+      "known_at": 9
+    },
+    {
+      "name": "Manatí",
+      "facet": "Fauna de ríos y mares",
+      "known_at": 5
+    },
+    {
+      "name": "Tortuga carey",
+      "facet": "Fauna de ríos y mares",
+      "known_at": 9
+    },
+    {
+      "name": "Tiburón martillo",
+      "facet": "Fauna de ríos y mares",
+      "known_at": 5
+    },
+    {
+      "name": "Babilla",
+      "facet": "Fauna de ríos y mares",
+      "known_at": 7
+    },
+    {
+      "name": "Nutria gigante",
+      "facet": "Fauna de ríos y mares",
+      "known_at": 9
+    },
+    {
+      "name": "Pez león",
+      "facet": "Fauna de ríos y mares",
+      "known_at": 9
+    },
+    {
+      "name": "Tortuga charapa",
+      "facet": "Fauna de ríos y mares",
+      "known_at": 11
+    },
+    {
+      "name": "Mantarraya",
+      "facet": "Fauna de ríos y mares",
+      "known_at": 6
+    },
+    {
+      "name": "Pez capitán de la sabana",
+      "facet": "Fauna de ríos y mares",
+      "known_at": 13
+    },
+    {
+      "name": "Puerto Inírida",
+      "facet": "Puertos, navegación y vida ribereña",
+      "known_at": 11
+    },
+    {
+      "name": "Barco de vapor del Magdalena",
+      "facet": "Puertos, navegación y vida ribereña",
+      "known_at": 9
+    },
+    {
+      "name": "Atarraya",
+      "facet": "Puertos, navegación y vida ribereña",
+      "known_at": 8
+    },
+    {
+      "name": "Subienda",
+      "facet": "Puertos, navegación y vida ribereña",
+      "known_at": 11
+    },
+    {
+      "name": "Bogas del Magdalena",
+      "facet": "Puertos, navegación y vida ribereña",
+      "known_at": 12
+    },
+    {
+      "name": "Caño Cristales",
+      "facet": "Cascadas, raudales y ríos famosos",
+      "known_at": 4
+    },
+    {
+      "name": "Cascada Fin del Mundo",
+      "facet": "Cascadas, raudales y ríos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Raudal de Jirijirimo",
+      "facet": "Cascadas, raudales y ríos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Cañón del Río Claro",
+      "facet": "Cascadas, raudales y ríos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Salto de Bordones",
+      "facet": "Cascadas, raudales y ríos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Cascada La Chorrera",
+      "facet": "Cascadas, raudales y ríos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Chorrera de Araracuara",
+      "facet": "Cascadas, raudales y ríos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Cascada de Juan Curí",
+      "facet": "Cascadas, raudales y ríos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Salto de Candelas",
+      "facet": "Cascadas, raudales y ríos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Cascadas de Marinka",
+      "facet": "Cascadas, raudales y ríos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Quebrada Las Gachas",
+      "facet": "Cascadas, raudales y ríos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Río Manzanares",
+      "facet": "Cascadas, raudales y ríos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Río Pance",
+      "facet": "Cascadas, raudales y ríos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Río Cali",
+      "facet": "Cascadas, raudales y ríos famosos",
+      "known_at": 8
+    }
+  ]
+}

@@ -1,0 +1,783 @@
+{
+  "subcategory": "christmas-and-special-dates",
+  "facets": [
+    "Novena de aguinaldos",
+    "Noche de velitas y alumbrados",
+    "Pesebre y adornos navideños",
+    "Comida y bebida decembrina",
+    "Música decembrina y villancicos",
+    "Juegos de aguinaldos y Niño Dios",
+    "Año Viejo y agüeros de fin de año",
+    "Inocentes, Reyes y Candelaria",
+    "Semana Santa y festivos religiosos",
+    "Amor y Amistad y fechas familiares",
+    "Halloween y Día del Niño",
+    "Puentes festivos y calendario"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 5,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Novena de Aguinaldos",
+      "facet": "Novena de aguinaldos",
+      "known_at": 2
+    },
+    {
+      "name": "Gozos",
+      "facet": "Novena de aguinaldos",
+      "known_at": 4
+    },
+    {
+      "name": "Fray Fernando de Jesús Larrea",
+      "facet": "Novena de aguinaldos",
+      "known_at": 14
+    },
+    {
+      "name": "Madre María Ignacia",
+      "facet": "Novena de aguinaldos",
+      "known_at": 14
+    },
+    {
+      "name": "Oración para todos los días",
+      "facet": "Novena de aguinaldos",
+      "known_at": 7
+    },
+    {
+      "name": "Consideraciones del día",
+      "facet": "Novena de aguinaldos",
+      "known_at": 8
+    },
+    {
+      "name": "Oración a la Santísima Virgen",
+      "facet": "Novena de aguinaldos",
+      "known_at": 7
+    },
+    {
+      "name": "Oración a San José",
+      "facet": "Novena de aguinaldos",
+      "known_at": 7
+    },
+    {
+      "name": "Oración al Niño Jesús",
+      "facet": "Novena de aguinaldos",
+      "known_at": 6
+    },
+    {
+      "name": "Librito de la novena",
+      "facet": "Novena de aguinaldos",
+      "known_at": 5
+    },
+    {
+      "name": "Pandereta",
+      "facet": "Novena de aguinaldos",
+      "known_at": 3
+    },
+    {
+      "name": "Maracas",
+      "facet": "Novena de aguinaldos",
+      "known_at": 2
+    },
+    {
+      "name": "Chucho",
+      "facet": "Novena de aguinaldos",
+      "known_at": 10
+    },
+    {
+      "name": "Virgen María",
+      "facet": "Novena de aguinaldos",
+      "known_at": 2
+    },
+    {
+      "name": "San José",
+      "facet": "Novena de aguinaldos",
+      "known_at": 2
+    },
+    {
+      "name": "Ángel Gabriel",
+      "facet": "Novena de aguinaldos",
+      "known_at": 6
+    },
+    {
+      "name": "Quito",
+      "facet": "Novena de aguinaldos",
+      "known_at": 13
+    },
+    {
+      "name": "Día de las Velitas",
+      "facet": "Noche de velitas y alumbrados",
+      "known_at": 2
+    },
+    {
+      "name": "Inmaculada Concepción",
+      "facet": "Noche de velitas y alumbrados",
+      "known_at": 8
+    },
+    {
+      "name": "Pío IX",
+      "facet": "Noche de velitas y alumbrados",
+      "known_at": 14
+    },
+    {
+      "name": "Faroles de papel",
+      "facet": "Noche de velitas y alumbrados",
+      "known_at": 4
+    },
+    {
+      "name": "Velas",
+      "facet": "Noche de velitas y alumbrados",
+      "known_at": 1
+    },
+    {
+      "name": "Alumbrado de Medellín",
+      "facet": "Noche de velitas y alumbrados",
+      "known_at": 3
+    },
+    {
+      "name": "Festival de Luces de Villa de Leyva",
+      "facet": "Noche de velitas y alumbrados",
+      "known_at": 9
+    },
+    {
+      "name": "Festival de Velas y Faroles de Quimbaya",
+      "facet": "Noche de velitas y alumbrados",
+      "known_at": 11
+    },
+    {
+      "name": "Pólvora",
+      "facet": "Noche de velitas y alumbrados",
+      "known_at": 2
+    },
+    {
+      "name": "Voladores",
+      "facet": "Noche de velitas y alumbrados",
+      "known_at": 6
+    },
+    {
+      "name": "Tote",
+      "facet": "Noche de velitas y alumbrados",
+      "known_at": 7
+    },
+    {
+      "name": "Luces de bengala",
+      "facet": "Noche de velitas y alumbrados",
+      "known_at": 4
+    },
+    {
+      "name": "Bombillos navideños",
+      "facet": "Noche de velitas y alumbrados",
+      "known_at": 2
+    },
+    {
+      "name": "Buey",
+      "facet": "Pesebre y adornos navideños",
+      "known_at": 3
+    },
+    {
+      "name": "Barba de viejo",
+      "facet": "Pesebre y adornos navideños",
+      "known_at": 11
+    },
+    {
+      "name": "Espejo",
+      "facet": "Pesebre y adornos navideños",
+      "known_at": 5
+    },
+    {
+      "name": "Árbol de Navidad",
+      "facet": "Pesebre y adornos navideños",
+      "known_at": 1
+    },
+    {
+      "name": "Estrella de Belén",
+      "facet": "Pesebre y adornos navideños",
+      "known_at": 3
+    },
+    {
+      "name": "Pastores",
+      "facet": "Pesebre y adornos navideños",
+      "known_at": 3
+    },
+    {
+      "name": "Ovejas",
+      "facet": "Pesebre y adornos navideños",
+      "known_at": 1
+    },
+    {
+      "name": "Belén",
+      "facet": "Pesebre y adornos navideños",
+      "known_at": 4
+    },
+    {
+      "name": "Escarcha",
+      "facet": "Pesebre y adornos navideños",
+      "known_at": 5
+    },
+    {
+      "name": "Bolas navideñas",
+      "facet": "Pesebre y adornos navideños",
+      "known_at": 2
+    },
+    {
+      "name": "Guirnalda",
+      "facet": "Pesebre y adornos navideños",
+      "known_at": 5
+    },
+    {
+      "name": "Corona de Adviento",
+      "facet": "Pesebre y adornos navideños",
+      "known_at": 8
+    },
+    {
+      "name": "Flor de Navidad",
+      "facet": "Pesebre y adornos navideños",
+      "known_at": 6
+    },
+    {
+      "name": "Papá Noel",
+      "facet": "Pesebre y adornos navideños",
+      "known_at": 1
+    },
+    {
+      "name": "Hojuelas",
+      "facet": "Comida y bebida decembrina",
+      "known_at": 7
+    },
+    {
+      "name": "Tamal",
+      "facet": "Comida y bebida decembrina",
+      "known_at": 3
+    },
+    {
+      "name": "Dulce de brevas",
+      "facet": "Comida y bebida decembrina",
+      "known_at": 6
+    },
+    {
+      "name": "Fécula de maíz",
+      "facet": "Comida y bebida decembrina",
+      "known_at": 6
+    },
+    {
+      "name": "Los peces en el río",
+      "facet": "Música decembrina y villancicos",
+      "known_at": 3
+    },
+    {
+      "name": "Antón tiruliruliru",
+      "facet": "Música decembrina y villancicos",
+      "known_at": 5
+    },
+    {
+      "name": "Noche de paz",
+      "facet": "Música decembrina y villancicos",
+      "known_at": 3
+    },
+    {
+      "name": "El tamborilero",
+      "facet": "Música decembrina y villancicos",
+      "known_at": 4
+    },
+    {
+      "name": "Campana sobre campana",
+      "facet": "Música decembrina y villancicos",
+      "known_at": 4
+    },
+    {
+      "name": "Yo no olvido el año viejo",
+      "facet": "Música decembrina y villancicos",
+      "known_at": 7
+    },
+    {
+      "name": "Faltan cinco pa' las doce",
+      "facet": "Música decembrina y villancicos",
+      "known_at": 8
+    },
+    {
+      "name": "Ven a mi casa esta Navidad",
+      "facet": "Música decembrina y villancicos",
+      "known_at": 9
+    },
+    {
+      "name": "Las cuatro fiestas",
+      "facet": "Música decembrina y villancicos",
+      "known_at": 10
+    },
+    {
+      "name": "El ron de Vinola",
+      "facet": "Música decembrina y villancicos",
+      "known_at": 11
+    },
+    {
+      "name": "Música parrandera",
+      "facet": "Música decembrina y villancicos",
+      "known_at": 7
+    },
+    {
+      "name": "Hugo Liscano",
+      "facet": "Música decembrina y villancicos",
+      "known_at": 14
+    },
+    {
+      "name": "Aguinaldo",
+      "facet": "Juegos de aguinaldos y Niño Dios",
+      "known_at": 5
+    },
+    {
+      "name": "Juegos de aguinaldos",
+      "facet": "Juegos de aguinaldos y Niño Dios",
+      "known_at": 6
+    },
+    {
+      "name": "Estatua",
+      "facet": "Juegos de aguinaldos y Niño Dios",
+      "known_at": 8
+    },
+    {
+      "name": "Niño Dios",
+      "facet": "Juegos de aguinaldos y Niño Dios",
+      "known_at": 1
+    },
+    {
+      "name": "Carta al Niño Dios",
+      "facet": "Juegos de aguinaldos y Niño Dios",
+      "known_at": 2
+    },
+    {
+      "name": "Nochebuena",
+      "facet": "Juegos de aguinaldos y Niño Dios",
+      "known_at": 3
+    },
+    {
+      "name": "Misa de gallo",
+      "facet": "Juegos de aguinaldos y Niño Dios",
+      "known_at": 8
+    },
+    {
+      "name": "Intercambio de regalos",
+      "facet": "Juegos de aguinaldos y Niño Dios",
+      "known_at": 4
+    },
+    {
+      "name": "Estrenar ropa",
+      "facet": "Juegos de aguinaldos y Niño Dios",
+      "known_at": 5
+    },
+    {
+      "name": "Testamento del Año Viejo",
+      "facet": "Año Viejo y agüeros de fin de año",
+      "known_at": 9
+    },
+    {
+      "name": "Viuda del Año Viejo",
+      "facet": "Año Viejo y agüeros de fin de año",
+      "known_at": 10
+    },
+    {
+      "name": "Aserrín",
+      "facet": "Año Viejo y agüeros de fin de año",
+      "known_at": 7
+    },
+    {
+      "name": "Uvas debajo de la mesa",
+      "facet": "Año Viejo y agüeros de fin de año",
+      "known_at": 8
+    },
+    {
+      "name": "Calzones amarillos",
+      "facet": "Año Viejo y agüeros de fin de año",
+      "known_at": 4
+    },
+    {
+      "name": "Maleta",
+      "facet": "Año Viejo y agüeros de fin de año",
+      "known_at": 4
+    },
+    {
+      "name": "Lentejas",
+      "facet": "Año Viejo y agüeros de fin de año",
+      "known_at": 5
+    },
+    {
+      "name": "Espigas de trigo",
+      "facet": "Año Viejo y agüeros de fin de año",
+      "known_at": 9
+    },
+    {
+      "name": "Barrer la casa",
+      "facet": "Año Viejo y agüeros de fin de año",
+      "known_at": 8
+    },
+    {
+      "name": "Abrazo de Año Nuevo",
+      "facet": "Año Viejo y agüeros de fin de año",
+      "known_at": 2
+    },
+    {
+      "name": "Campanadas de medianoche",
+      "facet": "Año Viejo y agüeros de fin de año",
+      "known_at": 5
+    },
+    {
+      "name": "Día de los Santos Inocentes",
+      "facet": "Inocentes, Reyes y Candelaria",
+      "known_at": 5
+    },
+    {
+      "name": "Inocentada",
+      "facet": "Inocentes, Reyes y Candelaria",
+      "known_at": 7
+    },
+    {
+      "name": "Pásela por inocente",
+      "facet": "Inocentes, Reyes y Candelaria",
+      "known_at": 7
+    },
+    {
+      "name": "Herodes",
+      "facet": "Inocentes, Reyes y Candelaria",
+      "known_at": 8
+    },
+    {
+      "name": "Reyes Magos",
+      "facet": "Inocentes, Reyes y Candelaria",
+      "known_at": 2
+    },
+    {
+      "name": "Melchor",
+      "facet": "Inocentes, Reyes y Candelaria",
+      "known_at": 5
+    },
+    {
+      "name": "Gaspar",
+      "facet": "Inocentes, Reyes y Candelaria",
+      "known_at": 5,
+      "retired": "used_up: Caspar's gift and what it is made of are already asked; nothing else about him has a Colombian angle."
+    },
+    {
+      "name": "Baltasar",
+      "facet": "Inocentes, Reyes y Candelaria",
+      "known_at": 5
+    },
+    {
+      "name": "Oro, incienso y mirra",
+      "facet": "Inocentes, Reyes y Candelaria",
+      "known_at": 6
+    },
+    {
+      "name": "Día de Negros",
+      "facet": "Inocentes, Reyes y Candelaria",
+      "known_at": 8
+    },
+    {
+      "name": "Día de Blancos",
+      "facet": "Inocentes, Reyes y Candelaria",
+      "known_at": 8
+    },
+    {
+      "name": "Familia Castañeda",
+      "facet": "Inocentes, Reyes y Candelaria",
+      "known_at": 10
+    },
+    {
+      "name": "Virgen de la Candelaria",
+      "facet": "Inocentes, Reyes y Candelaria",
+      "known_at": 8
+    },
+    {
+      "name": "Cerro de La Popa",
+      "facet": "Inocentes, Reyes y Candelaria",
+      "known_at": 8
+    },
+    {
+      "name": "Semana Santa",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 3
+    },
+    {
+      "name": "Miércoles de Ceniza",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 6
+    },
+    {
+      "name": "Cuaresma",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 7
+    },
+    {
+      "name": "Jueves Santo",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 6
+    },
+    {
+      "name": "Visita a los monumentos",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 10
+    },
+    {
+      "name": "Viernes Santo",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 5
+    },
+    {
+      "name": "Domingo de Resurrección",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 6
+    },
+    {
+      "name": "Huevos de Pascua",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 4
+    },
+    {
+      "name": "Procesiones de Popayán",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 8
+    },
+    {
+      "name": "Cargueros",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 12
+    },
+    {
+      "name": "Festival de Música Religiosa de Popayán",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 12
+    },
+    {
+      "name": "Semana Santa de Mompox",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 10
+    },
+    {
+      "name": "Subida a Monserrate",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 8
+    },
+    {
+      "name": "Corpus Christi",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 9
+    },
+    {
+      "name": "Sagrado Corazón",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 9
+    },
+    {
+      "name": "San Pedro y San Pablo",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 9
+    },
+    {
+      "name": "Asunción de la Virgen",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 10
+    },
+    {
+      "name": "Día de Todos los Santos",
+      "facet": "Semana Santa y festivos religiosos",
+      "known_at": 9
+    },
+    {
+      "name": "Día del Amor y la Amistad",
+      "facet": "Amor y Amistad y fechas familiares",
+      "known_at": 4
+    },
+    {
+      "name": "Amigo secreto",
+      "facet": "Amor y Amistad y fechas familiares",
+      "known_at": 4
+    },
+    {
+      "name": "Dulce compañía",
+      "facet": "Amor y Amistad y fechas familiares",
+      "known_at": 9
+    },
+    {
+      "name": "Día de San Valentín",
+      "facet": "Amor y Amistad y fechas familiares",
+      "known_at": 5
+    },
+    {
+      "name": "Día del Padre",
+      "facet": "Amor y Amistad y fechas familiares",
+      "known_at": 2
+    },
+    {
+      "name": "Día de los Abuelos",
+      "facet": "Amor y Amistad y fechas familiares",
+      "known_at": 9
+    },
+    {
+      "name": "Día del Maestro",
+      "facet": "Amor y Amistad y fechas familiares",
+      "known_at": 5
+    },
+    {
+      "name": "Día de la Mujer",
+      "facet": "Amor y Amistad y fechas familiares",
+      "known_at": 6
+    },
+    {
+      "name": "Día de la Secretaria",
+      "facet": "Amor y Amistad y fechas familiares",
+      "known_at": 10
+    },
+    {
+      "name": "Primera comunión",
+      "facet": "Amor y Amistad y fechas familiares",
+      "known_at": 5
+    },
+    {
+      "name": "Bautizo",
+      "facet": "Amor y Amistad y fechas familiares",
+      "known_at": 4
+    },
+    {
+      "name": "Fiesta de quince años",
+      "facet": "Amor y Amistad y fechas familiares",
+      "known_at": 4
+    },
+    {
+      "name": "Ceremonia de grado",
+      "facet": "Amor y Amistad y fechas familiares",
+      "known_at": 6
+    },
+    {
+      "name": "Fenalco",
+      "facet": "Amor y Amistad y fechas familiares",
+      "known_at": 13
+    },
+    {
+      "name": "Halloween",
+      "facet": "Halloween y Día del Niño",
+      "known_at": 1
+    },
+    {
+      "name": "Triqui triqui Halloween",
+      "facet": "Halloween y Día del Niño",
+      "known_at": 3
+    },
+    {
+      "name": "Disfraces",
+      "facet": "Halloween y Día del Niño",
+      "known_at": 1
+    },
+    {
+      "name": "Calabaza",
+      "facet": "Halloween y Día del Niño",
+      "known_at": 2
+    },
+    {
+      "name": "Bruja",
+      "facet": "Halloween y Día del Niño",
+      "known_at": 1
+    },
+    {
+      "name": "Piñata",
+      "facet": "Halloween y Día del Niño",
+      "known_at": 2
+    },
+    {
+      "name": "Día del Niño",
+      "facet": "Halloween y Día del Niño",
+      "known_at": 3
+    },
+    {
+      "name": "Lunes festivo",
+      "facet": "Puentes festivos y calendario",
+      "known_at": 4
+    },
+    {
+      "name": "Ley Emiliani",
+      "facet": "Puentes festivos y calendario",
+      "known_at": 11
+    },
+    {
+      "name": "Día del Trabajo",
+      "facet": "Puentes festivos y calendario",
+      "known_at": 5
+    },
+    {
+      "name": "Calendario A",
+      "facet": "Puentes festivos y calendario",
+      "known_at": 8
+    },
+    {
+      "name": "Calendario B",
+      "facet": "Puentes festivos y calendario",
+      "known_at": 8
+    },
+    {
+      "name": "Semana de receso",
+      "facet": "Puentes festivos y calendario",
+      "known_at": 8
+    },
+    {
+      "name": "Vacaciones de mitad de año",
+      "facet": "Puentes festivos y calendario",
+      "known_at": 4
+    },
+    {
+      "name": "Prima de servicios",
+      "facet": "Puentes festivos y calendario",
+      "known_at": 10
+    },
+    {
+      "name": "Plan retorno",
+      "facet": "Puentes festivos y calendario",
+      "known_at": 11
+    },
+    {
+      "name": "Almanaque Bristol",
+      "facet": "Puentes festivos y calendario",
+      "known_at": 10
+    },
+    {
+      "name": "Temporada alta",
+      "facet": "Puentes festivos y calendario",
+      "known_at": 7
+    }
+  ]
+}

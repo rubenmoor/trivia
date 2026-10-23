@@ -110,7 +110,8 @@
     {
       "name": "Son sureño",
       "facet": "Ritmos andinos tradicionales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: No estoy seguro de qué instrumentos ni qué personas definen el son sureño."
     },
     {
       "name": "Chirimía caucana",
@@ -641,7 +642,8 @@
     {
       "name": "Festival Antioquia le Canta a Colombia",
       "facet": "Festivales y concursos andinos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: No estoy seguro de dónde se hace el festival (puede cambiar de sede); el dato es demasiado incierto."
     },
     {
       "name": "Feria de Manizales",

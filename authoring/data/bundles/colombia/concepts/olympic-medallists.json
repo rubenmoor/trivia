@@ -1,0 +1,773 @@
+{
+  "subcategory": "olympic-medallists",
+  "facets": [
+    "Primeras medallas e hitos históricos",
+    "Levantamiento de pesas",
+    "Ciclismo de ruta y pista",
+    "Ciclismo BMX",
+    "Atletismo: saltos y carreras",
+    "Boxeo, lucha y judo",
+    "Tiro, gimnasia y otros deportes",
+    "Juegos y sedes olímpicas",
+    "Regiones de origen de los medallistas",
+    "Apodos, celebraciones y homenajes",
+    "Medallistas paralímpicos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 1,
+      "count": 4,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 1,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 4,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "María Isabel Urrutia",
+      "facet": "Primeras medallas e hitos históricos",
+      "known_at": 7
+    },
+    {
+      "name": "Clemente Rojas",
+      "facet": "Primeras medallas e hitos históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Alfonso Pérez",
+      "facet": "Primeras medallas e hitos históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Primera medalla olímpica de Colombia",
+      "facet": "Primeras medallas e hitos históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Primer oro olímpico de Colombia",
+      "facet": "Primeras medallas e hitos históricos",
+      "known_at": 8
+    },
+    {
+      "name": "Primer oro olímpico masculino de Colombia",
+      "facet": "Primeras medallas e hitos históricos",
+      "known_at": 10
+    },
+    {
+      "name": "Primera medalla olímpica femenina de Colombia",
+      "facet": "Primeras medallas e hitos históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Comité Olímpico Colombiano",
+      "facet": "Primeras medallas e hitos históricos",
+      "known_at": 8
+    },
+    {
+      "name": "Medallero olímpico de Colombia",
+      "facet": "Primeras medallas e hitos históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Medalla de oro",
+      "facet": "Primeras medallas e hitos históricos",
+      "known_at": 1
+    },
+    {
+      "name": "Medalla de plata",
+      "facet": "Primeras medallas e hitos históricos",
+      "known_at": 2
+    },
+    {
+      "name": "Medalla de bronce",
+      "facet": "Primeras medallas e hitos históricos",
+      "known_at": 2
+    },
+    {
+      "name": "Medallas reasignadas por dopaje",
+      "facet": "Primeras medallas e hitos históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Abanderado olímpico",
+      "facet": "Primeras medallas e hitos históricos",
+      "known_at": 7
+    },
+    {
+      "name": "Ministerio del Deporte",
+      "facet": "Primeras medallas e hitos históricos",
+      "known_at": 8
+    },
+    {
+      "name": "Récord de medallas de Colombia en unos Juegos",
+      "facet": "Primeras medallas e hitos históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Diego Salazar",
+      "facet": "Levantamiento de pesas",
+      "known_at": 12
+    },
+    {
+      "name": "Luis Javier Mosquera",
+      "facet": "Levantamiento de pesas",
+      "known_at": 10
+    },
+    {
+      "name": "Mabel Mosquera",
+      "facet": "Levantamiento de pesas",
+      "known_at": 12
+    },
+    {
+      "name": "Ubaldina Valoyes",
+      "facet": "Levantamiento de pesas",
+      "known_at": 12
+    },
+    {
+      "name": "Yeison López",
+      "facet": "Levantamiento de pesas",
+      "known_at": 10
+    },
+    {
+      "name": "Mari Leivis Sánchez",
+      "facet": "Levantamiento de pesas",
+      "known_at": 11
+    },
+    {
+      "name": "Halterofilia",
+      "facet": "Levantamiento de pesas",
+      "known_at": 7
+    },
+    {
+      "name": "Arrancada",
+      "facet": "Levantamiento de pesas",
+      "known_at": 10
+    },
+    {
+      "name": "Envión",
+      "facet": "Levantamiento de pesas",
+      "known_at": 10
+    },
+    {
+      "name": "Total olímpico",
+      "facet": "Levantamiento de pesas",
+      "known_at": 12
+    },
+    {
+      "name": "Barra olímpica",
+      "facet": "Levantamiento de pesas",
+      "known_at": 5
+    },
+    {
+      "name": "Discos de pesas",
+      "facet": "Levantamiento de pesas",
+      "known_at": 4
+    },
+    {
+      "name": "Categoría de peso",
+      "facet": "Levantamiento de pesas",
+      "known_at": 7
+    },
+    {
+      "name": "Magnesio",
+      "facet": "Levantamiento de pesas",
+      "known_at": 8
+    },
+    {
+      "name": "Cinturón de levantamiento",
+      "facet": "Levantamiento de pesas",
+      "known_at": 6
+    },
+    {
+      "name": "Alexander Vinokourov",
+      "facet": "Ciclismo de ruta y pista",
+      "known_at": 13
+    },
+    {
+      "name": "Ciclismo de ruta",
+      "facet": "Ciclismo de ruta y pista",
+      "known_at": 3
+    },
+    {
+      "name": "Ciclismo de pista",
+      "facet": "Ciclismo de ruta y pista",
+      "known_at": 6
+    },
+    {
+      "name": "Contrarreloj individual",
+      "facet": "Ciclismo de ruta y pista",
+      "known_at": 8
+    },
+    {
+      "name": "Persecución por equipos",
+      "facet": "Ciclismo de ruta y pista",
+      "known_at": 11
+    },
+    {
+      "name": "Velódromo",
+      "facet": "Ciclismo de ruta y pista",
+      "known_at": 6
+    },
+    {
+      "name": "Bicicleta de pista",
+      "facet": "Ciclismo de ruta y pista",
+      "known_at": 8
+    },
+    {
+      "name": "Vincent Pelluard",
+      "facet": "Ciclismo BMX",
+      "known_at": 11
+    },
+    {
+      "name": "Saray Villegas",
+      "facet": "Ciclismo BMX",
+      "known_at": 12
+    },
+    {
+      "name": "Bethany Shriever",
+      "facet": "Ciclismo BMX",
+      "known_at": 13
+    },
+    {
+      "name": "Ciclismo BMX",
+      "facet": "Ciclismo BMX",
+      "known_at": 3
+    },
+    {
+      "name": "Bicicleta BMX",
+      "facet": "Ciclismo BMX",
+      "known_at": 3
+    },
+    {
+      "name": "Partidor",
+      "facet": "Ciclismo BMX",
+      "known_at": 10
+    },
+    {
+      "name": "Peralte",
+      "facet": "Ciclismo BMX",
+      "known_at": 9
+    },
+    {
+      "name": "Casco integral",
+      "facet": "Ciclismo BMX",
+      "known_at": 4
+    },
+    {
+      "name": "Campeonato Mundial de BMX",
+      "facet": "Ciclismo BMX",
+      "known_at": 8
+    },
+    {
+      "name": "Pista de BMX",
+      "facet": "Ciclismo BMX",
+      "known_at": 4
+    },
+    {
+      "name": "Sandra Arenas",
+      "facet": "Atletismo: saltos y carreras",
+      "known_at": 10
+    },
+    {
+      "name": "Eider Arévalo",
+      "facet": "Atletismo: saltos y carreras",
+      "known_at": 12
+    },
+    {
+      "name": "Flor Denis Ruiz",
+      "facet": "Atletismo: saltos y carreras",
+      "known_at": 12
+    },
+    {
+      "name": "Yulimar Rojas",
+      "facet": "Atletismo: saltos y carreras",
+      "known_at": 9
+    },
+    {
+      "name": "Steven Gardiner",
+      "facet": "Atletismo: saltos y carreras",
+      "known_at": 14
+    },
+    {
+      "name": "Salto triple",
+      "facet": "Atletismo: saltos y carreras",
+      "known_at": 4
+    },
+    {
+      "name": "Salto largo",
+      "facet": "Atletismo: saltos y carreras",
+      "known_at": 3
+    },
+    {
+      "name": "Salto alto",
+      "facet": "Atletismo: saltos y carreras",
+      "known_at": 3
+    },
+    {
+      "name": "400 metros planos",
+      "facet": "Atletismo: saltos y carreras",
+      "known_at": 6
+    },
+    {
+      "name": "Relevo 4x400",
+      "facet": "Atletismo: saltos y carreras",
+      "known_at": 8
+    },
+    {
+      "name": "Marcha atlética",
+      "facet": "Atletismo: saltos y carreras",
+      "known_at": 7
+    },
+    {
+      "name": "Foso de arena",
+      "facet": "Atletismo: saltos y carreras",
+      "known_at": 4
+    },
+    {
+      "name": "Tabla de batida",
+      "facet": "Atletismo: saltos y carreras",
+      "known_at": 10
+    },
+    {
+      "name": "Lanzamiento de jabalina",
+      "facet": "Atletismo: saltos y carreras",
+      "known_at": 5,
+      "retired": "unaskable: Colombia no tiene medallistas olímpicos conocidos en jabalina."
+    },
+    {
+      "name": "Jorge Julio Rocha",
+      "facet": "Boxeo, lucha y judo",
+      "known_at": 13
+    },
+    {
+      "name": "Ingrit Valencia",
+      "facet": "Boxeo, lucha y judo",
+      "known_at": 10
+    },
+    {
+      "name": "Jackeline Rentería",
+      "facet": "Boxeo, lucha y judo",
+      "known_at": 10
+    },
+    {
+      "name": "Tatiana Rentería",
+      "facet": "Boxeo, lucha y judo",
+      "known_at": 10
+    },
+    {
+      "name": "Yuri Alvear",
+      "facet": "Boxeo, lucha y judo",
+      "known_at": 9
+    },
+    {
+      "name": "Boxeo olímpico",
+      "facet": "Boxeo, lucha y judo",
+      "known_at": 4
+    },
+    {
+      "name": "Lucha libre olímpica",
+      "facet": "Boxeo, lucha y judo",
+      "known_at": 6
+    },
+    {
+      "name": "Judo",
+      "facet": "Boxeo, lucha y judo",
+      "known_at": 4
+    },
+    {
+      "name": "Peso minimosca",
+      "facet": "Boxeo, lucha y judo",
+      "known_at": 11
+    },
+    {
+      "name": "Peso mosca",
+      "facet": "Boxeo, lucha y judo",
+      "known_at": 9
+    },
+    {
+      "name": "Guantes de boxeo",
+      "facet": "Boxeo, lucha y judo",
+      "known_at": 1
+    },
+    {
+      "name": "Cuadrilátero",
+      "facet": "Boxeo, lucha y judo",
+      "known_at": 5
+    },
+    {
+      "name": "Judogui",
+      "facet": "Boxeo, lucha y judo",
+      "known_at": 8
+    },
+    {
+      "name": "Cinturón negro",
+      "facet": "Boxeo, lucha y judo",
+      "known_at": 3
+    },
+    {
+      "name": "Ippon",
+      "facet": "Boxeo, lucha y judo",
+      "known_at": 10
+    },
+    {
+      "name": "Tatami",
+      "facet": "Boxeo, lucha y judo",
+      "known_at": 8
+    },
+    {
+      "name": "Ángel Barajas",
+      "facet": "Tiro, gimnasia y otros deportes",
+      "known_at": 8
+    },
+    {
+      "name": "Jossimar Calvo",
+      "facet": "Tiro, gimnasia y otros deportes",
+      "known_at": 11
+    },
+    {
+      "name": "Sara López",
+      "facet": "Tiro, gimnasia y otros deportes",
+      "known_at": 10
+    },
+    {
+      "name": "Tiro deportivo",
+      "facet": "Tiro, gimnasia y otros deportes",
+      "known_at": 6
+    },
+    {
+      "name": "Blanco móvil",
+      "facet": "Tiro, gimnasia y otros deportes",
+      "known_at": 11
+    },
+    {
+      "name": "Carabina",
+      "facet": "Tiro, gimnasia y otros deportes",
+      "known_at": 9
+    },
+    {
+      "name": "Tiro con arco",
+      "facet": "Tiro, gimnasia y otros deportes",
+      "known_at": 3
+    },
+    {
+      "name": "Gimnasia artística",
+      "facet": "Tiro, gimnasia y otros deportes",
+      "known_at": 4
+    },
+    {
+      "name": "Barra fija",
+      "facet": "Tiro, gimnasia y otros deportes",
+      "known_at": 7
+    },
+    {
+      "name": "Taekwondo",
+      "facet": "Tiro, gimnasia y otros deportes",
+      "known_at": 4
+    },
+    {
+      "name": "Dobok",
+      "facet": "Tiro, gimnasia y otros deportes",
+      "known_at": 12
+    },
+    {
+      "name": "Peto electrónico",
+      "facet": "Tiro, gimnasia y otros deportes",
+      "known_at": 12
+    },
+    {
+      "name": "Patada giratoria",
+      "facet": "Tiro, gimnasia y otros deportes",
+      "known_at": 5
+    },
+    {
+      "name": "Múnich 1972",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 11
+    },
+    {
+      "name": "Los Ángeles 1984",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 12
+    },
+    {
+      "name": "Seúl 1988",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 12
+    },
+    {
+      "name": "Barcelona 1992",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 10
+    },
+    {
+      "name": "Sídney 2000",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 9
+    },
+    {
+      "name": "Atenas 2004",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 9
+    },
+    {
+      "name": "Pekín 2008",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 8
+    },
+    {
+      "name": "Londres 2012",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 6
+    },
+    {
+      "name": "Río 2016",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 5
+    },
+    {
+      "name": "Tokio 2020",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 5
+    },
+    {
+      "name": "París 2024",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 4
+    },
+    {
+      "name": "Los Ángeles 2028",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 8
+    },
+    {
+      "name": "Juegos Panamericanos",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 7
+    },
+    {
+      "name": "Juegos Centroamericanos y del Caribe",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 9
+    },
+    {
+      "name": "Juegos Bolivarianos",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 10
+    },
+    {
+      "name": "Juegos Panamericanos Junior Cali-Valle 2021",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 11
+    },
+    {
+      "name": "Antorcha olímpica",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 3,
+      "retired": "unaskable: Colombia no ha sido sede olímpica ni tiene un dato claro sobre la antorcha; quedaría forzada."
+    },
+    {
+      "name": "Aros olímpicos",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 2
+    },
+    {
+      "name": "Villa olímpica",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 7
+    },
+    {
+      "name": "Ceremonia de inauguración",
+      "facet": "Juegos y sedes olímpicas",
+      "known_at": 4
+    },
+    {
+      "name": "Apartadó",
+      "facet": "Regiones de origen de los medallistas",
+      "known_at": 10
+    },
+    {
+      "name": "Urabá antioqueño",
+      "facet": "Regiones de origen de los medallistas",
+      "known_at": 9
+    },
+    {
+      "name": "Zaragoza (Antioquia)",
+      "facet": "Regiones de origen de los medallistas",
+      "known_at": 13
+    },
+    {
+      "name": "Candelaria (Valle del Cauca)",
+      "facet": "Regiones de origen de los medallistas",
+      "known_at": 13
+    },
+    {
+      "name": "Reina del BMX",
+      "facet": "Apodos, celebraciones y homenajes",
+      "known_at": 5
+    },
+    {
+      "name": "Cruz de Boyacá",
+      "facet": "Apodos, celebraciones y homenajes",
+      "known_at": 11
+    },
+    {
+      "name": "Podio olímpico",
+      "facet": "Apodos, celebraciones y homenajes",
+      "known_at": 3
+    },
+    {
+      "name": "Caravana de medallistas",
+      "facet": "Apodos, celebraciones y homenajes",
+      "known_at": 7
+    },
+    {
+      "name": "Atleta Mundial del Año",
+      "facet": "Apodos, celebraciones y homenajes",
+      "known_at": 12
+    },
+    {
+      "name": "Deportista del Año en Colombia",
+      "facet": "Apodos, celebraciones y homenajes",
+      "known_at": 9
+    },
+    {
+      "name": "Despedida de Óscar Figueroa",
+      "facet": "Apodos, celebraciones y homenajes",
+      "known_at": 10
+    },
+    {
+      "name": "Baile de celebración de Caterine Ibargüen",
+      "facet": "Apodos, celebraciones y homenajes",
+      "known_at": 7
+    },
+    {
+      "name": "Elkin Serna",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Moisés Fuentes",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 12
+    },
+    {
+      "name": "Nelson Crispín",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 11
+    },
+    {
+      "name": "Carlos Serrano",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 12
+    },
+    {
+      "name": "Mauricio Valencia",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Diego Dueñas",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Carolina Munévar",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 14
+    },
+    {
+      "name": "José Gregorio Lemos",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 14
+    },
+    {
+      "name": "Juegos Paralímpicos",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 5
+    },
+    {
+      "name": "Comité Paralímpico Colombiano",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 10
+    },
+    {
+      "name": "Natación paralímpica",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 7
+    },
+    {
+      "name": "Paraatletismo",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 8
+    },
+    {
+      "name": "Paraciclismo",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 9
+    },
+    {
+      "name": "Atleta guía",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 8
+    },
+    {
+      "name": "Bicicleta tándem",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 8
+    },
+    {
+      "name": "Agitos",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Silla de ruedas deportiva",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 5
+    },
+    {
+      "name": "Boccia",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 12
+    },
+    {
+      "name": "Goalball",
+      "facet": "Medallistas paralímpicos",
+      "known_at": 11
+    }
+  ]
+}
