@@ -195,7 +195,15 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 
  cf. those past plans for reference:
 
- Plan files: `plans/02-question-pool.md`, `plans/06-images.md`, `plans/07-question-generation.md`, `plans/20-pipeline-efficiency.md`, `plans/21-age-groups.md`, `plans/23-media-providers.md`.', '2026-10-11T20:08:18Z', NULL, 0);
+ Plan files: `plans/02-question-pool.md`, `plans/06-images.md`, `plans/07-question-generation.md`, `plans/20-pipeline-efficiency.md`, `plans/21-age-groups.md`, `plans/23-media-providers.md`.
+
+## Reviews don''t gate generation (developer, 2026-10-23; decision 414)
+- I trust the question generation and the translations; I still review, but no run waits for me
+- health ✗, spot checks and QC proposals still come to me as pm decisions; no task ever waits on one
+- health ✗ never stops `qgen batch` (drafting or `--translate`); report and decision only; `qgen health ack` = my "looked at it"
+- answers are acted on afterwards (QC report, change tasks), by whatever task runs next, not by a task that waited
+- the only human gate is the final release (`trivia-release-check`, release bar), which is mine, not a pm task
+- RUNBOOK, QC.md, plans 15–17 and open batch/QC tasks follow this; task 1692''s "link to the pending ack decision" goes', '2026-10-11T20:08:18Z', NULL, 0);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (2, 'Game engine in TypeScript', 'implemented', 'The game referee moves from Python (`app/server/game.py`, `selection.py`) to `app/client/src/engine/` with the same rules and the family''s saves kept. The game then runs without Python, which the Steam desktop shell needs (S3).
 
 ## Outcome
@@ -41885,6 +41893,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-23T01:03:00Z', '2026-10-23T01:03:58Z', 1692, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1694, 84, 'create tasks for plan 84: Release content runs', 'split', 'done', 1000, '2026-10-22, tasks.sql: exit-2 rule (link a pending ''<run>: health stop'' decision, no duplicate) in the bodies of open plan 84 tasks 639, 641, 1226, 1228, 1690, 1691, 1268-1272; no new tasks or decisions needed', 'Split plan 84 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-23T01:03:01Z', '2026-10-23T01:05:18Z', 1692, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1695, 1, 'revise the masterplan of milestone 1: Enough content for game nights', 'revise', 'open', 1000, NULL, '`milestone 1: Enough content for game nights` changed. Bring `plan 1: masterplan`, the masterplan, in line with it (`pm plan edit 1 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-23T01:09:43Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
