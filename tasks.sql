@@ -19282,7 +19282,7 @@ Done when: both decisions answered, change tasks and the next pair (or the 15b l
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
 - Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:48Z', '2026-10-16T23:16:12Z', 631, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (641, 84, 'run tr-de-2', 'work', 'open', -110, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-de-2`, up to 300 approved `base` sources of either source locale ≠ `de` into German (es → de, en → de; plan 66, D-87; `decision 235: Source locale per question and translations from either source (English-first base)`). Translation run shape: one task, no QC task; this task adds the next run.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (641, 84, 'run tr-de-2', 'work', 'done', -110, '2026-10-23, plans/15b-question-translation.md, authoring/reports/tr-de-2.md. Done: tr-de-2: 297 translated, 290 approved, 7 need work, 2 not travelling (2 confirmed); 300 sources selected; health ✓; audit agreement 95 %; $0.09 per approved (report; run $28.95); de pool 343 approved, target not met; next: task 1731 run tr-de-3. report authoring/reports/tr-de-2.md', 'Plan 84 chain 3, full translation (QT-6): run `tr-de-2`, up to 300 approved `base` sources of either source locale ≠ `de` into German (es → de, en → de; plan 66, D-87; `decision 235: Source locale per question and translations from either source (English-first base)`). Translation run shape: one task, no QC task; this task adds the next run.
 
 ## Before running
 - Plan 17''s exit check (plan 17''s last task) done; if not, wait for what blocks plan 17''s earliest open task (masterplan order: milestone 1''s batches first; the queue reaches -110 only when -100 is blocked): a pending decision → `pm task-pending-decision <this task> <id>`; a prerequisite task → `pm task requires <this task> <id>`; stop. Under decision 414 that blocker is never a review (spot check, QC proposals, health ack): don''t wait on one of those.
@@ -19309,7 +19309,7 @@ Done when: `authoring/reports/tr-de-2.md` exists, printed paths staged, 15b line
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148, 171 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Health ✗ (in the output, the report or `qgen health`): `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health ✗, look at it?"` with the warning verbatim (`plan 190: Reviews don''t gate generation`; also finds the older "<run>: health stop, ack?"), no task linked (no `pm task-pending-decision`); the task goes on. Never `qgen health ack` (the developer''s).
-- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-13T05:14:48Z', NULL, 631, 0, NULL, 'questions');
+- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-13T05:14:48Z', '2026-10-23T14:44:48Z', 631, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (642, 84, 'QC tr-de-2', 'work', 'dropped', -110, 'plan 84 revision (milestone 9, developer 2026-10-16): no QC per tr-* run; task 641: run tr-de-2 adds the next run itself', 'Plan 84 chain 3: QC of `tr-de-2` per `authoring/QC.md` steps 1–4 and "Translation runs", then the next pair of the chain.
 
 - If task 641 (run tr-de-2) isn''t done: pend on the decision that blocks it, stop. Dropped → drop this one too.
@@ -43028,6 +43028,25 @@ Parts 1–5 are built (plans 12–16); what''s left is part 6''s last batch and 
 - Health and spot checks: the exit check reads the last two batches'' health and the spot checks the developer has answered against decision 2''s rate; an open health or spot-check decision doesn''t block it (decision 414). Its ✗ lines go into the task note and, if new, a decision for the developer; no task waits on it.
 - `qgen validate` is clean; `trivia-media sync --status approved` has filled the cache.
 - The release gate after that (`trivia-release-check`, release bar) is the developer''s, not part of this milestone''s tasks.', '2026-10-23T13:23:15Z', NULL, 1727, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1731, 84, 'run tr-de-3', 'work', 'open', -110, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-de-3`, up to 300 approved `base` sources of either source locale ≠ `de` into German (`decision 235: Source locale per question and translations from either source (English-first base)`). Translation run shape: one task, no QC task; this task adds the next run.
+
+## Before running
+- Plan 17''s exit check done; if not, wait for what blocks plan 17''s earliest open task: a pending decision → `pm task-pending-decision <this task> <id>`; a prerequisite task → `pm task requires <this task> <id>`; stop. Never wait on a review (decision 414).
+- Start only after a plan 17 batch QC done since `tr-de-2`; else wait for what blocks plan 17''s earliest open task as above. The remaining deficit is English drafting''s, never an `es` top-up.
+
+## Run
+`nix develop -c qgen batch --translate de` (RUNBOOK steps 1-5, same command on reruns).
+
+## After the run
+- Note: "Done:" line, report path, numbers from `authoring/reports/tr-de-3.md` and `qgen report --cost`: selected, translated, approved, needs_work, rejected, not travelling, $ per approved (information only), audit agreement, health result (✗ reported, not a stop), per source locale (es → de, en → de).
+- QT-6 progress line for `de` in `plans/15b-question-translation.md`.
+- Next, first that applies: (1) `qgen report --locale de` meets `targets.json` `base` at every level → no next run; if `en`, `de`, `es-ES`, `es` all done: QT-6 `[x]` in 15b and record `qgen report --locale <L>` for all four in `plans/16-content-target.md`. (2) Fewer than 300 sources selected → still add `run tr-de-4` with the plan 17 wait above. (3) Else add `run tr-de-4` (`pm task add 84 "run tr-de-4" --worktree questions --priority -110`).
+- One open run per chain. Health ✗: `pm decision list --grep "tr-de-3: health"`, none → `pm decision add "tr-de-3: health ✗, look at it?"`, no task link; never `qgen health ack`.
+- No spot check, no QC task, no QC decision.
+
+## pm-run rules
+- D-36: no prompt, pool, media or `qgen.py` changes. `tasks.sql` alone isn''t a dirty tree. Stage exactly the printed `git add` paths; don''t commit.
+- Exit 75, other non-zero code, or exit 1 three times at one step: `pm decision add "Continue tr-de-3 …?"` with the last 30 lines, `pm task-pending-decision`, stage nothing, stop.', '2026-10-23T14:44:47Z', NULL, 641, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -50877,6 +50896,8 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1859, 1721, '2026-10-23T14:03:35Z', '2026-10-23T14:18:28Z', 'done', NULL, 0, '27449a7766767abfa524391c2e4141e8bf5f8572', 'questions', 'claude-sonnet-5-5', '63efc2f6-56c7-46b6-b8c2-3ad22cdbeb0b', 1858, 5, 10, 1249, 323617, 12041, 0.42671460000000006, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1860, 1724, '2026-10-23T14:18:28Z', '2026-10-23T14:31:02Z', 'done', NULL, 0, '05c837d7eaaeca1b38cd51b485005fb9b53fb457', 'questions', 'claude-sonnet-5-5', 'f7a429c4-3244-4b6a-8016-4a5827c32553', NULL, 6, 10, 1387, 180256, 34857, 0.1893692, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1861, 1722, '2026-10-23T14:31:03Z', '2026-10-23T14:42:43Z', 'done', NULL, 0, 'a16d35fe53d287fd6420d205ba033d96be48cf43', 'questions', 'claude-sonnet-5-5', 'f7a429c4-3244-4b6a-8016-4a5827c32553', 1860, 3, 6, 985, 160389, 11855, 0.278729, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1862, 639, '2026-10-23T14:42:43Z', '2026-10-23T14:43:45Z', 'blocked', NULL, 0, 'dd2b1c21b1c1994097625571f4a6d16c0e72851d', 'questions', 'claude-sonnet-5-5', '3252f8ff-8190-4f75-acef-57fe3a0b9abd', NULL, 9, 20, 1799, 436611, 47877, 0.29686019999999996, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1863, 641, '2026-10-23T14:43:45Z', '2026-10-23T14:44:53Z', 'done', NULL, 0, 'dd2b1c21b1c1994097625571f4a6d16c0e72851d', 'questions', 'claude-sonnet-5-5', 'd92d8200-6f5e-4aa1-9856-adbe381049a0', NULL, 10, 18, 3369, 476443, 54280, 0.3461346, 494342);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -51562,6 +51583,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1711, 63);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1711, 64);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1711, 65);
 
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (639, 1726);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1034, 1033);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1034, 1711);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1035, 1034);
