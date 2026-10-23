@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "f711c866",
+  "hash": "c7472e2f",
   "questions": [
     {
       "id": "q-0002",
@@ -32883,6 +32883,40 @@
       "background": null
     },
     {
+      "id": "q-7425",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "animals",
+      "bundle": "colombia",
+      "description": "Una dinosauria jubilada que se pasa el día tomando el sol en el parque.",
+      "question": "Soy verde, tengo una cresta de púas en la espalda y una papada, y me asoleo en los árboles de los parques de Cartagena y Santa Marta. ¿Quién soy?",
+      "answer": "La iguana",
+      "wrong_answers": [
+        "La babilla",
+        "La hicotea",
+        "El camaleón"
+      ],
+      "hints": [
+        "Soy un reptil de cola larga.",
+        "No como carne: me encantan las hojas, las flores y las frutas.",
+        "Mi nombre empieza por la letra I."
+      ],
+      "fun_fact": "Las iguanas son buenas nadadoras y pueden aguantar la respiración bajo el agua cerca de media hora.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Adventourscolombia-playa-cabo-san-juan-tayrona-national-park-colombia-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAdventourscolombia-playa-cabo-san-juan-tayrona-national-park-colombia-02.jpg",
+        "credit": "Adventourscolombia · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Adventourscolombia",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Adventourscolombia&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-7426",
       "status": "approved",
       "difficulty": 9,
@@ -33049,6 +33083,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Jair Armando Beltrán Hernández",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Nauzael&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7431",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "carnivals-and-fairs",
+      "bundle": "colombia",
+      "description": "El periódico de ayer tiene una segunda vida mucho más divertida.",
+      "question": "El papel maché se hace con papel periódico y engrudo de harina y agua; después se seca y se pinta. ¿Para qué se usa en los carnavales?",
+      "answer": "Para hacer figuras y máscaras",
+      "wrong_answers": [
+        "Para hacer comidas y dulces",
+        "Para hacer casas y puentes",
+        "Para hacer ropa y zapatos"
+      ],
+      "hints": [
+        "Al secarse queda duro pero liviano.",
+        "En Pasto, los artesanos pasan meses trabajando con él en sus talleres antes del gran desfile del 6 de enero.",
+        "Con él puedes taparte la cara o hacer un muñeco enorme."
+      ],
+      "fun_fact": "Las carrozas del Carnaval de Negros y Blancos pueden medir hasta 8 metros de alto y 16 de largo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Pile_of_newspapers_%2826864183398%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APile_of_newspapers_%2826864183398%29.jpg",
+        "credit": "Howard Lake from Colchester, UK · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Howard Lake from Colchester, UK",
+        "author_url": "https://www.flickr.com/people/53941041@N00"
       },
       "background": null
     },
@@ -33287,6 +33355,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Yann Forget",
         "author_url": "https://commons.wikimedia.org/wiki/User:Yann"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7439",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "cycling",
+      "bundle": "colombia",
+      "description": "Pasta, montañas y muchísimos días pedaleando.",
+      "question": "Nairo Quintana y Egan Bernal ganaron el Giro de Italia. ¿Más o menos cuántas etapas tiene esa carrera?",
+      "answer": "21",
+      "wrong_answers": [
+        "5",
+        "60",
+        "100"
+      ],
+      "hints": [
+        "Es una de las tres grandes vueltas del ciclismo, junto al Tour de Francia y la Vuelta a España.",
+        "Tiene un par de días de descanso.",
+        "Son tres semanas de siete días, casi todos con etapa."
+      ],
+      "fun_fact": "El trofeo del ganador del Giro se llama «Trofeo Senza Fine», que significa «sin fin», y tiene forma de espiral.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/The_Great_Dolomites_Road_SS48_and_Tofane.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Great_Dolomites_Road_SS48_and_Tofane.jpg",
+        "credit": "Pimlico27 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Pimlico27",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pimlico27"
       },
       "background": null
     },
@@ -33797,6 +33899,40 @@
         "license_url": null,
         "author": "MODIS Land Rapid Response Team, NASA GSFC",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-7455",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "independence",
+      "bundle": "colombia",
+      "description": "Un herrero que, en vez de herraduras, forjó una fecha en el calendario.",
+      "question": "Pedro Romero era herrero, había nacido en Cuba y armó a los artesanos de su barrio. Con su presión, en 1811 su ciudad se declaró independiente de España del todo. ¿Qué ciudad?",
+      "answer": "Cartagena",
+      "wrong_answers": [
+        "Santa Marta",
+        "Popayán",
+        "Tunja"
+      ],
+      "hints": [
+        "Está en la costa Caribe.",
+        "Los artesanos de Romero, armados como lanceros, rodearon la junta de gobierno para exigir la independencia.",
+        "Celebra su independencia cada 11 de noviembre, con fiestas y reinado."
+      ],
+      "fun_fact": "El 11 de noviembre, día de la independencia de esta ciudad, es festivo nacional en Colombia, aunque se pasa al lunes.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Anvil%2C_northern_German_type_with_upsetting_block.jpg/3840px-Anvil%2C_northern_German_type_with_upsetting_block.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAnvil%2C_northern_German_type_with_upsetting_block.jpg",
+        "credit": "Kleseus · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Kleseus",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kleseus&action=edit&redlink=1"
       },
       "background": null
     },
@@ -34481,6 +34617,40 @@
       "background": null
     },
     {
+      "id": "q-7477",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "olympic-medallists",
+      "bundle": "colombia",
+      "description": "Matemáticas de gimnasio: aquí las sumas sí pesan.",
+      "question": "Óscar Figueroa alza una barra de 20 kilos con un disco rojo de 25 kilos en cada lado. ¿Cuántos kilos levanta en total?",
+      "answer": "70",
+      "wrong_answers": [
+        "45",
+        "50",
+        "75"
+      ],
+      "hints": [
+        "No olvides sumar la barra.",
+        "Los dos discos juntos pesan 50 kilos.",
+        "A los discos súmales los 20 kilos de la barra."
+      ],
+      "fun_fact": "En halterofilia cada color de disco tiene su peso: rojo 25 kilos, azul 20, amarillo 15 y verde 10.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Weight_plates_in_gym_20180112.jpg/3840px-Weight_plates_in_gym_20180112.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWeight_plates_in_gym_20180112.jpg",
+        "credit": "Santeri Viinamäki · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Santeri Viinamäki",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Zunter"
+      },
+      "background": null
+    },
+    {
       "id": "q-7478",
       "status": "approved",
       "difficulty": 1,
@@ -34987,6 +35157,40 @@
         "license_url": null,
         "author": "Hack, William",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-7495",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "regions-and-departments",
+      "bundle": "colombia",
+      "description": "Un mapa sin nombres es como un álbum sin láminas: toca adivinar.",
+      "question": "Leticia, en la frontera con Brasil y Perú, queda en una región natural de Colombia. ¿En cuál?",
+      "answer": "La región Amazónica",
+      "wrong_answers": [
+        "La región de la Orinoquía",
+        "La región Pacífica",
+        "La región Andina"
+      ],
+      "hints": [
+        "Ocupa el sur y el sureste del país.",
+        "Es casi toda selva húmeda y la cruzan ríos enormes.",
+        "Allí nadan los delfines rosados."
+      ],
+      "fun_fact": "La región Amazónica ocupa más de la tercera parte del territorio colombiano, pero allí vive muy poca gente.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Guayabal%2C_Santiago_de_Tol%C3%BA%2C_Sucre%2C_Colombia_-_panoramio_-_yesid_ferney_pati%C3%B1o_%E2%80%A6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGuayabal%2C_Santiago_de_Tol%C3%BA%2C_Sucre%2C_Colombia_-_panoramio_-_yesid_ferney_pati%C3%B1o_%E2%80%A6.jpg",
+        "credit": "yesid ferney patiño … · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "yesid ferney patiño …",
+        "author_url": "https://web.archive.org/web/20161103140346/http://www.panoramio.com/user/7594455?with_photo_id=132890862"
       },
       "background": null
     },
@@ -35501,6 +35705,40 @@
       "background": null
     },
     {
+      "id": "q-7511",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "cycling",
+      "bundle": "colombia",
+      "description": "Pequeño, brillante y siempre sentado en primera fila del manubrio.",
+      "question": "Mira la foto: este aparatico va en el manubrio de la cicla. ¿Para qué sirve?",
+      "answer": "Para avisar que vas pasando",
+      "wrong_answers": [
+        "Para frenar la cicla",
+        "Para inflar las llantas",
+        "Para alumbrar de noche"
+      ],
+      "hints": [
+        "Funciona con el dedo pulgar.",
+        "Hace un sonido.",
+        "Los peatones lo oyen y se hacen a un lado."
+      ],
+      "fun_fact": "Los primeros timbres de bicicleta se inventaron hace más de 100 años, cuando las ciclas empezaron a llenar las calles.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Detail_of_a_bicycle_handlebar_and_pink_bell_amidst_hundreds_of_parked_bicycles%2C_Central_Station%2C_Amsterdam%2C_Netherlands_julesvernex2.jpg/3840px-Detail_of_a_bicycle_handlebar_and_pink_bell_amidst_hundreds_of_parked_bicycles%2C_Central_Station%2C_Amsterdam%2C_Netherlands_julesvernex2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADetail_of_a_bicycle_handlebar_and_pink_bell_amidst_hundreds_of_parked_bicycles%2C_Central_Station%2C_Amsterdam%2C_Netherlands_julesvernex2.jpg",
+        "credit": "Jules Verne Times Two · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jules Verne Times Two",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Julesvernex2"
+      },
+      "background": null
+    },
+    {
       "id": "q-7512",
       "status": "approved",
       "difficulty": 9,
@@ -35633,6 +35871,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Zenyrgarden",
         "author_url": "https://commons.wikimedia.org/wiki/User:Zenyrgarden"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7516",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "fruits",
+      "bundle": "colombia",
+      "description": "La fruta verde que viaja a Europa en mejor clase que muchos turistas.",
+      "question": "Buena parte se exporta a Europa. ¿Qué departamento de Colombia tiene más hectáreas sembradas de aguacate Hass?",
+      "answer": "Antioquia",
+      "wrong_answers": [
+        "Caldas",
+        "Tolima",
+        "Risaralda"
+      ],
+      "hints": [
+        "Es un departamento andino, con el clima templado de montaña que le gusta al aguacate Hass.",
+        "Muchos de sus cultivos de Hass están en el oriente y el suroeste del departamento.",
+        "Su capital es la ciudad de la eterna primavera"
+      ],
+      "fun_fact": "La variedad Hass se llama así por Rudolph Hass, un cartero de California que plantó el primer árbol.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Avocado_orchard_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAvocado_orchard_02.JPG",
+        "credit": "B.navez · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "B.navez",
+        "author_url": "https://commons.wikimedia.org/wiki/User:B.navez"
       },
       "background": null
     },
@@ -36283,6 +36555,40 @@
       "background": null
     },
     {
+      "id": "q-7537",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "regional-speech",
+      "bundle": "colombia",
+      "description": "Lo que en tierra fría se pide con la ruana bien puesta.",
+      "question": "En Boyacá y Cundinamarca es muy común pedir «cuchuco de trigo». ¿Qué es el cuchuco?",
+      "answer": "Una sopa",
+      "wrong_answers": [
+        "Una bebida fermentada",
+        "Un pan de horno",
+        "Un postre de leche"
+      ],
+      "hints": [
+        "Se pide a la hora del almuerzo.",
+        "Se hace con grano partido.",
+        "Se come caliente y con cuchara."
+      ],
+      "fun_fact": "Además del de trigo, hay cuchuco de maíz y de cebada.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Pueblo_del_Municipio_de_La_Victoria.jpg/3840px-Pueblo_del_Municipio_de_La_Victoria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APueblo_del_Municipio_de_La_Victoria.jpg",
+        "credit": "Andresandres17 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Andresandres17",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Andresandres17&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-7538",
       "status": "approved",
       "difficulty": 6,
@@ -36721,6 +37027,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Nubelbariloe",
         "author_url": "https://commons.wikimedia.org/wiki/User:Nubelbariloe"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7551",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "vallenato",
+      "bundle": "colombia",
+      "description": "Un tambor que llegó de visita desde el Caribe y se quedó a vivir en la parranda.",
+      "question": "Mira la foto: este tambor alto, que se toca con las manos, se sumó al conjunto vallenato moderno. ¿Cuál es?",
+      "answer": "La conga",
+      "wrong_answers": [
+        "La caja vallenata",
+        "El bongó",
+        "La tambora"
+      ],
+      "hints": [
+        "Llegó desde Cuba, como muchos ritmos del Caribe.",
+        "Es largo y estrecho, y muchas veces se tocan dos o tres juntos.",
+        "También suena mucho en la salsa, y su nombre se parece al de un baile en fila."
+      ],
+      "fun_fact": "El conjunto vallenato tradicional era de tres instrumentos; las congas, el bajo y la guitarra llegaron después, con las agrupaciones modernas.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/2006-06-03_Congas1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2006-06-03_Congas1.JPG",
+        "credit": "Stephan Czuratis (Jazz-face at de.wikipedia · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Stephan Czuratis (Jazz-face at de.wikipedia",
+        "author_url": "https://de.wikipedia.org/wiki/Benutzer:Jazz-face"
       },
       "background": null
     },
@@ -37235,6 +37575,40 @@
       "background": null
     },
     {
+      "id": "q-7567",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "scientists-and-inventors",
+      "bundle": "colombia",
+      "description": "Bogotá no solo exporta tinto y aguaceros: también inventos que dieron la vuelta al mundo.",
+      "question": "Nací en Bogotá, estudié ingeniería en Cambridge y en 1958 hice un marcapasos tan grande que funcionaba con una batería de carro. ¿Quién soy?",
+      "answer": "Jorge Reynolds",
+      "wrong_answers": [
+        "Rodolfo Llinás",
+        "Manuel Elkin Patarroyo",
+        "Salomón Hakim"
+      ],
+      "hints": [
+        "Mi invento fue uno de los primeros de su tipo en el mundo.",
+        "Mi aparato era externo y pesaba decenas de kilos.",
+        "Mi apellido suena en inglés, aunque soy bien bogotano."
+      ],
+      "fun_fact": "Aquel primer marcapasos de Jorge Reynolds mantuvo vivo a un sacerdote ecuatoriano que vivió 18 años más.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Electrocardiogram_of_a_healthy_man%2C_21_years_old.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElectrocardiogram_of_a_healthy_man%2C_21_years_old.jpg",
+        "credit": "CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": null,
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-7568",
       "status": "approved",
       "difficulty": 6,
@@ -37299,6 +37673,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Angeline A. van Achterberg",
         "author_url": "https://www.wikidata.org/wiki/Q39384175"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7570",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "street-food-and-bakery",
+      "bundle": "colombia",
+      "description": "Una grasa con más historia en la cocina que muchas abuelas.",
+      "question": "En muchas cocinas colombianas, los chicharrones se fríen con una grasa blanca. ¿Cuál es?",
+      "answer": "Manteca de cerdo",
+      "wrong_answers": [
+        "Queso campesino",
+        "Mantequilla",
+        "Crema de leche"
+      ],
+      "hints": [
+        "Las abuelas la guardaban en latas y la usaban para casi todo.",
+        "También se usa para que los tamales queden suavecitos.",
+        "Viene del marrano."
+      ],
+      "fun_fact": "Antes de que se popularizara el aceite vegetal, la manteca de cerdo era la grasa principal para freír en las cocinas colombianas.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Chicharron_Sandwich_%26_Ceviche%40Mochikas_Peruvian_Cafe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChicharron_Sandwich_%26_Ceviche%40Mochikas_Peruvian_Cafe.jpg",
+        "credit": "Ruocaled · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Ruocaled",
+        "author_url": "https://www.flickr.com/people/54063325@N07"
       },
       "background": null
     },
@@ -37677,6 +38085,40 @@
       "background": null
     },
     {
+      "id": "q-7582",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "symbols-of-departments-and-cities",
+      "bundle": "colombia",
+      "description": "Fundar una ciudad es fácil; lo difícil es ganarse un apodo así en el Quindío.",
+      "question": "Jesús María Ocampo, fundador de Armenia en 1889, era conocido por todos como «el…». ¿Cómo termina su apodo?",
+      "answer": "Tigrero",
+      "wrong_answers": [
+        "Arriero",
+        "Hachero",
+        "Guaquero"
+      ],
+      "hints": [
+        "El apodo viene de una fama que tenía en el monte, antes de la fundación.",
+        "Se ganó esa fama por su valentía en un oficio muy arriesgado en las selvas de la región.",
+        "Los campesinos de la época le decían «tigre» al jaguar."
+      ],
+      "fun_fact": "A Armenia le dicen «la Ciudad Milagro» por lo rápido que creció después de su fundación.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Landscape_coffee_farm.jpg/3840px-Landscape_coffee_farm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALandscape_coffee_farm.jpg",
+        "credit": "Richard grivas · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Richard grivas",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Richard_grivas&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-7583",
       "status": "approved",
       "difficulty": 6,
@@ -37847,6 +38289,40 @@
       "background": null
     },
     {
+      "id": "q-7588",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "tv-shows-and-series",
+      "bundle": "colombia",
+      "description": "Un monólogo que hace sentir viejos a los papás en menos de dos horas.",
+      "question": "Si te ríes con 'La pelota de letras', de Andrés López, ¿la infancia de quiénes estás recordando?",
+      "answer": "De quienes crecieron en los años 70 y 80",
+      "wrong_answers": [
+        "De quienes crecieron en los años 50 y 60",
+        "De quienes crecieron en los años 90 y 2000",
+        "De quienes crecieron en los años 30 y 40"
+      ],
+      "hints": [
+        "Andrés López repasa los juguetes, los programas de televisión y los regaños de mamá de su propia niñez.",
+        "La televisión tenía pocos canales y los juegos eran en la calle.",
+        "Ya había televisión a color y llegaban las primeras consolas de videojuegos, pero no internet."
+      ],
+      "fun_fact": "'La pelota de letras' se volvió uno de los espectáculos de humor más vistos en Colombia y se grabó en DVD.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Atle_Antonsen_Parkteatret_Crap_%C3%A5pp%C3%A5_Park_%28000056%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAtle_Antonsen_Parkteatret_Crap_%C3%A5pp%C3%A5_Park_%28000056%29.jpg",
+        "credit": "Tore Sætre · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Tore Sætre",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Toresetre"
+      },
+      "background": null
+    },
+    {
       "id": "q-7589",
       "status": "approved",
       "difficulty": 1,
@@ -38013,6 +38489,40 @@
         "license_url": null,
         "author": "User: (WT-shared) CONOCER at  wts wikivoyage",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-7594",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "typical-dishes",
+      "bundle": "colombia",
+      "description": "El desayuno que demuestra que las sobras de ayer pueden ser las estrellas de hoy.",
+      "question": "Abres la nevera en la mañana y vas a hacer calentado paisa. ¿Qué dos sobras de ayer no pueden faltar?",
+      "answer": "Fríjoles y arroz",
+      "wrong_answers": [
+        "Avena y canela",
+        "Pasta y atún",
+        "Lentejas y papa"
+      ],
+      "hints": [
+        "Se calientan juntas en la sartén con un poquito de hogao.",
+        "Las dos vienen del almuerzo de ayer, ese plato de todos los días en las casas paisas.",
+        "Uno es un grano blanco y el otro, un grano rojo que se cocina en olla a presión."
+      ],
+      "fun_fact": "El calentado se suele servir con huevo frito, arepa y chocolate o tinto.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Woman_prepares_breakfast_by_pouring_eggs_into_frying_pan.jpg/3840px-Woman_prepares_breakfast_by_pouring_eggs_into_frying_pan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWoman_prepares_breakfast_by_pouring_eggs_into_frying_pan.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
       },
       "background": null
     },
