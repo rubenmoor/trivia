@@ -41857,6 +41857,17 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths a command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
 - Note on done: the QC numbers (approved, rejected, needs_work, agreement, $ per approved, review time per 100).', '2026-10-23T00:13:00Z', NULL, 1296, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1692, 17, 'RUNBOOK: on a health stop, link to a pending ack decision instead of adding a duplicate', 'work', 'open', 0, NULL, '`decision 413: batch-12: health stop, ack?` duplicated `decision 408: batch-12: health stop, ack?`: `task 1690: run colombia batch (batch-<n>)` hit the same batch-12 health stop as `task 1680: run batch-13` and added a new decision. The translation tasks 639, 641, 1226, 1228 had linked to 408 instead. 413 was closed as a duplicate by hand, and 1690 moved to 408.
+
+The health stop applies to every bundle and locale run until `qgen health ack <run>`, so every batch task waiting on it should wait on one decision.
+
+Change `authoring/RUNBOOK.md` "Under `pm run`":
+- Step 3 "stop", exit 2: first `pm decision list --grep "<run>: health stop"` (the run named in the output, e.g. `batch-12`)
+  - pending one found → `pm task-pending-decision <task> <id>`, no new decision; stage nothing, don''t `pm task done`; end the turn
+  - none → `pm decision add` as now
+- same rule in plan 17 "Batch tasks under `pm run`" and plan 84''s batch-task body template, if they repeat the exit-2 rule; `rg "health stop"` over `.md` files and pm task bodies of open batch tasks (decision 200)
+
+Done when: the RUNBOOK and the plans say it; `npm run check`, `qgen validate` pass.', '2026-10-23T01:02:01Z', NULL, NULL, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -49642,6 +49653,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1825, 1690, '2026-10-23T00:13:11Z', '2026-10-23T00:13:27Z', 'blocked', NULL, 0, '0233da9dc7ddc39e3d18abf1bf21836497184098', 'questions', 'claude-sonnet-5-5', 'eebfcd2e-793b-4988-a392-c0d7ba661df5', 1823, 4, 8, 974, 334798, 24763, 0.6145262, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1826, 1035, '2026-10-23T00:13:28Z', '2026-10-23T00:16:44Z', 'blocked', NULL, 0, '0233da9dc7ddc39e3d18abf1bf21836497184098', 'questions', 'claude-opus-5-5', '041c2a70-f255-447e-b900-0416332170ff', NULL, 4, 8, 801, 136547, 44750, 0.40136139999999992, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1827, 1649, '2026-10-23T00:16:44Z', '2026-10-23T00:18:12Z', 'done', NULL, 0, '0233da9dc7ddc39e3d18abf1bf21836497184098', 'questions', 'claude-opus-5-5', '7a1e354b-f83a-4aad-acbb-1659bd8e36e1', NULL, 11, 22, 3124, 436718, 37976, 0.45371960000000006, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1828, 1035, '2026-10-23T01:01:54Z', NULL, 'running', NULL, NULL, 'fa1e3936f23b90c212fd02c1dcbdbbbf4d71f6ae', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 494342);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
