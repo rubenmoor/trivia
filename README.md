@@ -85,7 +85,7 @@ Every decision is saved into `authoring/data/questions.json` and re-exported to 
 
 #### Review in a separate worktree
 
-`pm run` works in the main checkout and moves files it didn't stage, including your reviews and `qgen health ack`s, to a `pm/task-…-left` branch. Review in a second worktree instead, so pm never sees your edits:
+`pm run` works in the main checkout and moves files it didn't stage, including your reviews and `qgen health ack`s, to a `pm/task-…-left` branch. No `git stash`, `--autostash` or checkout of `tasks.sql` in the main checkout while `pm run` runs (`pm stop` first): pm can overwrite `tasks.sql` with an empty schema meanwhile ([`plans/pm-tasks-sql-safety.md`](plans/pm-tasks-sql-safety.md)). Review in a second worktree instead, so pm never sees your edits:
 
 ```sh
 # once
