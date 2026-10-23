@@ -366,12 +366,14 @@
     {
       "name": "Celso Román",
       "facet": "Literatura infantil y juvenil colombiana",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: No estoy seguro de los detalles de su obra."
     },
     {
       "name": "Las cosas de la casa",
       "facet": "Literatura infantil y juvenil colombiana",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: No estoy seguro de los datos de este libro (autor, año)."
     },
     {
       "name": "Triunfo Arciniegas",
@@ -416,7 +418,8 @@
     {
       "name": "Francisco Montaña",
       "facet": "Literatura infantil y juvenil colombiana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Demasiado oscuro, no tengo datos confiables."
     },
     {
       "name": "Pastorcita",
@@ -716,7 +719,8 @@
     {
       "name": "Premio Biblioteca de Narrativa Colombiana",
       "facet": "Premios, ferias y festivales literarios",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: No estoy seguro de la lista de ganadores ni de las fechas; demasiado oscuro."
     },
     {
       "name": "Premio Simón Bolívar de Periodismo",
@@ -751,7 +755,8 @@
     {
       "name": "Cartagena de Indias",
       "facet": "Lugares y ciudades de los escritores",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: La torre del reloj y las murallas ya están en el pool; a dificultad 2 no queda un dato nuevo."
     },
     {
       "name": "La Cueva",

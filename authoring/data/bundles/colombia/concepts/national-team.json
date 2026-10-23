@@ -1,0 +1,873 @@
+{
+  "subcategory": "national-team",
+  "facets": [
+    "Ídolos y jugadores históricos",
+    "Figuras actuales de la Selección",
+    "Mundiales y participaciones",
+    "Copa América y torneos continentales",
+    "Partidos y goles memorables",
+    "Técnicos y cuerpo técnico",
+    "Camiseta, apodos y símbolos",
+    "Estadios y sedes en Colombia",
+    "Hinchada, celebraciones y cultura futbolera",
+    "Selección Colombia femenina",
+    "Selecciones juveniles y Sub-20",
+    "Rivales y eliminatorias sudamericanas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Carlos Valderrama",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 2
+    },
+    {
+      "name": "Andrés Escobar",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 8
+    },
+    {
+      "name": "Iván Ramiro Córdoba",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 8
+    },
+    {
+      "name": "Mario Alberto Yepes",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 7
+    },
+    {
+      "name": "David Ospina",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 4
+    },
+    {
+      "name": "Juan Guillermo Cuadrado",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 4
+    },
+    {
+      "name": "Faryd Mondragón",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 7
+    },
+    {
+      "name": "Leonel Álvarez",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Óscar Córdoba",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Teófilo Gutiérrez",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Fredy Guarín",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Jackson Martínez",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 10
+    },
+    {
+      "name": "Víctor Aristizábal",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Adolfo Valencia",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Willington Ortiz",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Juan Pablo Ángel",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Marcos Coll",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 13
+    },
+    {
+      "name": "James Rodríguez",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 1
+    },
+    {
+      "name": "Yerry Mina",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 4
+    },
+    {
+      "name": "Davinson Sánchez",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 6
+    },
+    {
+      "name": "Jhon Arias",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 6
+    },
+    {
+      "name": "Jhon Jáder Durán",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 6
+    },
+    {
+      "name": "Richard Ríos",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 7
+    },
+    {
+      "name": "Jefferson Lerma",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 7
+    },
+    {
+      "name": "Daniel Muñoz",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 7
+    },
+    {
+      "name": "Camilo Vargas",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 7
+    },
+    {
+      "name": "Jhon Córdoba",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 8
+    },
+    {
+      "name": "Rafael Santos Borré",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 8
+    },
+    {
+      "name": "Luis Sinisterra",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 9
+    },
+    {
+      "name": "Jhon Lucumí",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 9
+    },
+    {
+      "name": "Carlos Cuesta",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 9
+    },
+    {
+      "name": "Johan Mojica",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 9
+    },
+    {
+      "name": "Jorge Carrascal",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 9
+    },
+    {
+      "name": "Kevin Castaño",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 10
+    },
+    {
+      "name": "Deiver Machado",
+      "facet": "Figuras actuales de la Selección",
+      "known_at": 10
+    },
+    {
+      "name": "Copa Mundial de la FIFA",
+      "facet": "Mundiales y participaciones",
+      "known_at": 1
+    },
+    {
+      "name": "Mundial de Brasil 2014",
+      "facet": "Mundiales y participaciones",
+      "known_at": 3
+    },
+    {
+      "name": "Mundial de Rusia 2018",
+      "facet": "Mundiales y participaciones",
+      "known_at": 4
+    },
+    {
+      "name": "Mundial 2026",
+      "facet": "Mundiales y participaciones",
+      "known_at": 3
+    },
+    {
+      "name": "Mundial de Qatar 2022",
+      "facet": "Mundiales y participaciones",
+      "known_at": 6
+    },
+    {
+      "name": "Mundial de Estados Unidos 1994",
+      "facet": "Mundiales y participaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Mundial de Francia 1998",
+      "facet": "Mundiales y participaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Mundial de Chile 1962",
+      "facet": "Mundiales y participaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Botín de Oro",
+      "facet": "Mundiales y participaciones",
+      "known_at": 6
+    },
+    {
+      "name": "Premio Puskás",
+      "facet": "Mundiales y participaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Octavos de final",
+      "facet": "Mundiales y participaciones",
+      "known_at": 5
+    },
+    {
+      "name": "Cuartos de final",
+      "facet": "Mundiales y participaciones",
+      "known_at": 5
+    },
+    {
+      "name": "Premio al Juego Limpio",
+      "facet": "Mundiales y participaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Renuncia a la sede del Mundial de 1986",
+      "facet": "Mundiales y participaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Estadio Maracaná",
+      "facet": "Mundiales y participaciones",
+      "known_at": 5
+    },
+    {
+      "name": "Copa América",
+      "facet": "Copa América y torneos continentales",
+      "known_at": 3
+    },
+    {
+      "name": "Copa América 2001",
+      "facet": "Copa América y torneos continentales",
+      "known_at": 6
+    },
+    {
+      "name": "Copa América 2024",
+      "facet": "Copa América y torneos continentales",
+      "known_at": 4
+    },
+    {
+      "name": "Final de la Copa América 2024",
+      "facet": "Copa América y torneos continentales",
+      "known_at": 5
+    },
+    {
+      "name": "Estadio Hard Rock",
+      "facet": "Copa América y torneos continentales",
+      "known_at": 9
+    },
+    {
+      "name": "Copa América 2021",
+      "facet": "Copa América y torneos continentales",
+      "known_at": 7
+    },
+    {
+      "name": "Copa América Centenario 2016",
+      "facet": "Copa América y torneos continentales",
+      "known_at": 9
+    },
+    {
+      "name": "Copa América 2019",
+      "facet": "Copa América y torneos continentales",
+      "known_at": 10
+    },
+    {
+      "name": "Copa América 1975",
+      "facet": "Copa América y torneos continentales",
+      "known_at": 13
+    },
+    {
+      "name": "Copa América 1987",
+      "facet": "Copa América y torneos continentales",
+      "known_at": 13
+    },
+    {
+      "name": "Copa América 1993",
+      "facet": "Copa América y torneos continentales",
+      "known_at": 12
+    },
+    {
+      "name": "Copa América 1995",
+      "facet": "Copa América y torneos continentales",
+      "known_at": 13
+    },
+    {
+      "name": "Copa de Oro de la Concacaf 2000",
+      "facet": "Copa América y torneos continentales",
+      "known_at": 13
+    },
+    {
+      "name": "Golazo de James a Uruguay en 2014",
+      "facet": "Partidos y goles memorables",
+      "known_at": 2
+    },
+    {
+      "name": "Argentina 0-5 Colombia",
+      "facet": "Partidos y goles memorables",
+      "known_at": 4
+    },
+    {
+      "name": "Escorpión de Higuita en Wembley",
+      "facet": "Partidos y goles memorables",
+      "known_at": 4
+    },
+    {
+      "name": "Doblete de Luis Díaz a Brasil en 2023",
+      "facet": "Partidos y goles memorables",
+      "known_at": 5
+    },
+    {
+      "name": "Gol de Yerry Mina a Inglaterra en 2018",
+      "facet": "Partidos y goles memorables",
+      "known_at": 6
+    },
+    {
+      "name": "Tanda de penaltis contra Inglaterra en 2018",
+      "facet": "Partidos y goles memorables",
+      "known_at": 6
+    },
+    {
+      "name": "Colombia 3-0 Grecia",
+      "facet": "Partidos y goles memorables",
+      "known_at": 6
+    },
+    {
+      "name": "Gol de Freddy Rincón a Alemania en 1990",
+      "facet": "Partidos y goles memorables",
+      "known_at": 7
+    },
+    {
+      "name": "Semifinal Colombia-Uruguay de 2024",
+      "facet": "Partidos y goles memorables",
+      "known_at": 7
+    },
+    {
+      "name": "Colombia 2-1 Argentina en Barranquilla",
+      "facet": "Partidos y goles memorables",
+      "known_at": 7
+    },
+    {
+      "name": "Brasil 2-1 Colombia en Fortaleza",
+      "facet": "Partidos y goles memorables",
+      "known_at": 7
+    },
+    {
+      "name": "Final de la Copa América 2001",
+      "facet": "Partidos y goles memorables",
+      "known_at": 8
+    },
+    {
+      "name": "Colombia 3-0 Polonia",
+      "facet": "Partidos y goles memorables",
+      "known_at": 8
+    },
+    {
+      "name": "Colombia 4-1 Japón",
+      "facet": "Partidos y goles memorables",
+      "known_at": 9
+    },
+    {
+      "name": "Colombia 4-4 Unión Soviética",
+      "facet": "Partidos y goles memorables",
+      "known_at": 12
+    },
+    {
+      "name": "Néstor Lorenzo",
+      "facet": "Técnicos y cuerpo técnico",
+      "known_at": 3
+    },
+    {
+      "name": "José Pékerman",
+      "facet": "Técnicos y cuerpo técnico",
+      "known_at": 4
+    },
+    {
+      "name": "Carlos Queiroz",
+      "facet": "Técnicos y cuerpo técnico",
+      "known_at": 8
+    },
+    {
+      "name": "Luis Fernando Suárez",
+      "facet": "Técnicos y cuerpo técnico",
+      "known_at": 10
+    },
+    {
+      "name": "Eduardo Lara",
+      "facet": "Técnicos y cuerpo técnico",
+      "known_at": 11
+    },
+    {
+      "name": "Arturo Reyes",
+      "facet": "Técnicos y cuerpo técnico",
+      "known_at": 12
+    },
+    {
+      "name": "Luis Augusto García",
+      "facet": "Técnicos y cuerpo técnico",
+      "known_at": 12
+    },
+    {
+      "name": "Juan José Peláez",
+      "facet": "Técnicos y cuerpo técnico",
+      "known_at": 13
+    },
+    {
+      "name": "Efraín Sánchez",
+      "facet": "Técnicos y cuerpo técnico",
+      "known_at": 13
+    },
+    {
+      "name": "Selección Colombia",
+      "facet": "Camiseta, apodos y símbolos",
+      "known_at": 1
+    },
+    {
+      "name": "Camiseta amarilla",
+      "facet": "Camiseta, apodos y símbolos",
+      "known_at": 1
+    },
+    {
+      "name": "Los Cafeteros",
+      "facet": "Camiseta, apodos y símbolos",
+      "known_at": 4
+    },
+    {
+      "name": "Dorsal 10",
+      "facet": "Camiseta, apodos y símbolos",
+      "known_at": 4
+    },
+    {
+      "name": "Número 9",
+      "facet": "Camiseta, apodos y símbolos",
+      "known_at": 5
+    },
+    {
+      "name": "Uniforme azul",
+      "facet": "Camiseta, apodos y símbolos",
+      "known_at": 7
+    },
+    {
+      "name": "Medias rojas",
+      "facet": "Camiseta, apodos y símbolos",
+      "known_at": 8
+    },
+    {
+      "name": "Escudo de la Federación Colombiana de Fútbol",
+      "facet": "Camiseta, apodos y símbolos",
+      "known_at": 9
+    },
+    {
+      "name": "Adidas",
+      "facet": "Camiseta, apodos y símbolos",
+      "known_at": 8
+    },
+    {
+      "name": "Generación dorada",
+      "facet": "Camiseta, apodos y símbolos",
+      "known_at": 8
+    },
+    {
+      "name": "Estadio Metropolitano Roberto Meléndez",
+      "facet": "Estadios y sedes en Colombia",
+      "known_at": 3
+    },
+    {
+      "name": "Estadio Centenario de Armenia",
+      "facet": "Estadios y sedes en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Estadio Eduardo Santos",
+      "facet": "Estadios y sedes en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Álbum Panini",
+      "facet": "Hinchada, celebraciones y cultura futbolera",
+      "known_at": 3
+    },
+    {
+      "name": "Baile del Ras Tas Tas",
+      "facet": "Hinchada, celebraciones y cultura futbolera",
+      "known_at": 6
+    },
+    {
+      "name": "Espuma carioca",
+      "facet": "Hinchada, celebraciones y cultura futbolera",
+      "known_at": 6
+    },
+    {
+      "name": "Gol Caracol",
+      "facet": "Hinchada, celebraciones y cultura futbolera",
+      "known_at": 7
+    },
+    {
+      "name": "Javier Fernández Franco",
+      "facet": "Hinchada, celebraciones y cultura futbolera",
+      "known_at": 10
+    },
+    {
+      "name": "Hernán Peláez Restrepo",
+      "facet": "Hinchada, celebraciones y cultura futbolera",
+      "known_at": 12
+    },
+    {
+      "name": "Linda Caicedo",
+      "facet": "Selección Colombia femenina",
+      "known_at": 3
+    },
+    {
+      "name": "Mundial femenino de 2023",
+      "facet": "Selección Colombia femenina",
+      "known_at": 6
+    },
+    {
+      "name": "Catalina Usme",
+      "facet": "Selección Colombia femenina",
+      "known_at": 6
+    },
+    {
+      "name": "Mayra Ramírez",
+      "facet": "Selección Colombia femenina",
+      "known_at": 7
+    },
+    {
+      "name": "Las Superpoderosas",
+      "facet": "Selección Colombia femenina",
+      "known_at": 7
+    },
+    {
+      "name": "Copa América Femenina 2022",
+      "facet": "Selección Colombia femenina",
+      "known_at": 7
+    },
+    {
+      "name": "Leicy Santos",
+      "facet": "Selección Colombia femenina",
+      "known_at": 8
+    },
+    {
+      "name": "Yoreli Rincón",
+      "facet": "Selección Colombia femenina",
+      "known_at": 8
+    },
+    {
+      "name": "Daniela Montoya",
+      "facet": "Selección Colombia femenina",
+      "known_at": 9
+    },
+    {
+      "name": "Catalina Pérez",
+      "facet": "Selección Colombia femenina",
+      "known_at": 9
+    },
+    {
+      "name": "Liga Profesional Femenina",
+      "facet": "Selección Colombia femenina",
+      "known_at": 9
+    },
+    {
+      "name": "Juegos Olímpicos de París 2024",
+      "facet": "Selección Colombia femenina",
+      "known_at": 9
+    },
+    {
+      "name": "Nelson Abadía",
+      "facet": "Selección Colombia femenina",
+      "known_at": 10
+    },
+    {
+      "name": "Ana María Guzmán",
+      "facet": "Selección Colombia femenina",
+      "known_at": 10
+    },
+    {
+      "name": "Manuela Vanegas",
+      "facet": "Selección Colombia femenina",
+      "known_at": 10
+    },
+    {
+      "name": "Lady Andrade",
+      "facet": "Selección Colombia femenina",
+      "known_at": 10
+    },
+    {
+      "name": "Carlos Paniagua",
+      "facet": "Selección Colombia femenina",
+      "known_at": 11
+    },
+    {
+      "name": "Carolina Arias",
+      "facet": "Selección Colombia femenina",
+      "known_at": 11
+    },
+    {
+      "name": "Sandra Sepúlveda",
+      "facet": "Selección Colombia femenina",
+      "known_at": 11
+    },
+    {
+      "name": "Mundial femenino de 2015",
+      "facet": "Selección Colombia femenina",
+      "known_at": 11
+    },
+    {
+      "name": "Oro panamericano de Lima 2019",
+      "facet": "Selección Colombia femenina",
+      "known_at": 11
+    },
+    {
+      "name": "Ángelo Marsiglia",
+      "facet": "Selección Colombia femenina",
+      "known_at": 12
+    },
+    {
+      "name": "Selección Colombia Sub-20",
+      "facet": "Selecciones juveniles y Sub-20",
+      "known_at": 5
+    },
+    {
+      "name": "Selección Colombia Sub-17",
+      "facet": "Selecciones juveniles y Sub-20",
+      "known_at": 6
+    },
+    {
+      "name": "Mundial Sub-20 de 2011",
+      "facet": "Selecciones juveniles y Sub-20",
+      "known_at": 8
+    },
+    {
+      "name": "Mundial Sub-17 femenino de 2022",
+      "facet": "Selecciones juveniles y Sub-20",
+      "known_at": 9
+    },
+    {
+      "name": "Mundial Sub-20 de 2025",
+      "facet": "Selecciones juveniles y Sub-20",
+      "known_at": 10
+    },
+    {
+      "name": "Yaser Asprilla",
+      "facet": "Selecciones juveniles y Sub-20",
+      "known_at": 10
+    },
+    {
+      "name": "Néiser Villarreal",
+      "facet": "Selecciones juveniles y Sub-20",
+      "known_at": 10
+    },
+    {
+      "name": "Sudamericano Sub-20 de 2005",
+      "facet": "Selecciones juveniles y Sub-20",
+      "known_at": 11
+    },
+    {
+      "name": "Sudamericano Sub-20 de 2013",
+      "facet": "Selecciones juveniles y Sub-20",
+      "known_at": 11
+    },
+    {
+      "name": "Hugo Rodallega",
+      "facet": "Selecciones juveniles y Sub-20",
+      "known_at": 11
+    },
+    {
+      "name": "Preolímpico Sub-23",
+      "facet": "Selecciones juveniles y Sub-20",
+      "known_at": 11
+    },
+    {
+      "name": "Mundial Sub-20 de 2003",
+      "facet": "Selecciones juveniles y Sub-20",
+      "known_at": 12
+    },
+    {
+      "name": "Héctor Cárdenas",
+      "facet": "Selecciones juveniles y Sub-20",
+      "known_at": 12,
+      "retired": "unaskable: Es un técnico de juveniles muy poco conocido y las opciones son de conteo; no sale una pregunta justa."
+    },
+    {
+      "name": "Gustavo Puerta",
+      "facet": "Selecciones juveniles y Sub-20",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial Sub-17 de 2009",
+      "facet": "Selecciones juveniles y Sub-20",
+      "known_at": 13
+    },
+    {
+      "name": "Juegos Olímpicos de Barcelona 1992",
+      "facet": "Selecciones juveniles y Sub-20",
+      "known_at": 13
+    },
+    {
+      "name": "Argentina",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 1
+    },
+    {
+      "name": "Brasil",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 1
+    },
+    {
+      "name": "Lionel Messi",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 1
+    },
+    {
+      "name": "Neymar",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 2
+    },
+    {
+      "name": "Uruguay",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 2
+    },
+    {
+      "name": "Venezuela",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 2
+    },
+    {
+      "name": "Ecuador",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 3
+    },
+    {
+      "name": "Perú",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 3
+    },
+    {
+      "name": "Chile",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 3
+    },
+    {
+      "name": "Diego Maradona",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 3
+    },
+    {
+      "name": "Eliminatorias sudamericanas",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 3
+    },
+    {
+      "name": "Paraguay",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 4
+    },
+    {
+      "name": "Bolivia",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 4
+    },
+    {
+      "name": "Luis Suárez",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 4
+    },
+    {
+      "name": "Repechaje",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 7
+    },
+    {
+      "name": "Estadio Monumental de Buenos Aires",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 7
+    },
+    {
+      "name": "Estadio Hernando Siles",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 9
+    },
+    {
+      "name": "Estadio Centenario de Montevideo",
+      "facet": "Rivales y eliminatorias sudamericanas",
+      "known_at": 10
+    }
+  ]
+}

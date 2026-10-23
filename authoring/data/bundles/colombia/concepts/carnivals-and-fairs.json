@@ -1,0 +1,467 @@
+{
+  "subcategory": "carnivals-and-fairs",
+  "facets": [
+    "Carnaval de Barranquilla",
+    "Carnaval de Negros y Blancos",
+    "Feria de las Flores",
+    "Feria de Cali",
+    "Feria de Manizales y fiestas cafeteras",
+    "Festivales de música folclórica",
+    "Fiestas del Caribe y el Pacífico",
+    "Fiestas del interior y los Llanos",
+    "Danzas y ritmos de carnaval",
+    "Disfraces, máscaras y carrozas",
+    "Comidas y bebidas de feria",
+    "Historia y patrimonio festivo"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Marimonda",
+      "facet": "Carnaval de Barranquilla",
+      "known_at": 4
+    },
+    {
+      "name": "Entierro de Joselito",
+      "facet": "Carnaval de Barranquilla",
+      "known_at": 7
+    },
+    {
+      "name": "La Guacherna",
+      "facet": "Carnaval de Barranquilla",
+      "known_at": 8
+    },
+    {
+      "name": "Lectura del Bando",
+      "facet": "Carnaval de Barranquilla",
+      "known_at": 9
+    },
+    {
+      "name": "Gran Parada de Tradición",
+      "facet": "Carnaval de Barranquilla",
+      "known_at": 9
+    },
+    {
+      "name": "Gran Parada de Fantasía",
+      "facet": "Carnaval de Barranquilla",
+      "known_at": 10
+    },
+    {
+      "name": "Quien lo vive es quien lo goza",
+      "facet": "Carnaval de Barranquilla",
+      "known_at": 5
+    },
+    {
+      "name": "Congo Grande de Barranquilla",
+      "facet": "Carnaval de Barranquilla",
+      "known_at": 11
+    },
+    {
+      "name": "Congo de Oro",
+      "facet": "Carnaval de Barranquilla",
+      "known_at": 11
+    },
+    {
+      "name": "Vía 40",
+      "facet": "Carnaval de Barranquilla",
+      "known_at": 9
+    },
+    {
+      "name": "Esther Forero",
+      "facet": "Carnaval de Barranquilla",
+      "known_at": 12
+    },
+    {
+      "name": "Carnaval de los Niños",
+      "facet": "Carnaval de Barranquilla",
+      "known_at": 6
+    },
+    {
+      "name": "Maicena",
+      "facet": "Carnaval de Barranquilla",
+      "known_at": 3
+    },
+    {
+      "name": "Espuma de carnaval",
+      "facet": "Carnaval de Barranquilla",
+      "known_at": 2
+    },
+    {
+      "name": "Carnaval de Negros y Blancos",
+      "facet": "Carnaval de Negros y Blancos",
+      "known_at": 4
+    },
+    {
+      "name": "Día de Negritos",
+      "facet": "Carnaval de Negros y Blancos",
+      "known_at": 7
+    },
+    {
+      "name": "Cosmético negro",
+      "facet": "Carnaval de Negros y Blancos",
+      "known_at": 8
+    },
+    {
+      "name": "Carioca",
+      "facet": "Carnaval de Negros y Blancos",
+      "known_at": 9
+    },
+    {
+      "name": "Desfile Magno",
+      "facet": "Carnaval de Negros y Blancos",
+      "known_at": 10
+    },
+    {
+      "name": "Carnavalito",
+      "facet": "Carnaval de Negros y Blancos",
+      "known_at": 10
+    },
+    {
+      "name": "Canto a la Tierra",
+      "facet": "Carnaval de Negros y Blancos",
+      "known_at": 12
+    },
+    {
+      "name": "Arcoíris en el Asfalto",
+      "facet": "Carnaval de Negros y Blancos",
+      "known_at": 12
+    },
+    {
+      "name": "Maestros artesanos del carnaval",
+      "facet": "Carnaval de Negros y Blancos",
+      "known_at": 11
+    },
+    {
+      "name": "Feria de las Flores",
+      "facet": "Feria de las Flores",
+      "known_at": 3
+    },
+    {
+      "name": "Silleta",
+      "facet": "Feria de las Flores",
+      "known_at": 4
+    },
+    {
+      "name": "Silleteros",
+      "facet": "Feria de las Flores",
+      "known_at": 4
+    },
+    {
+      "name": "Cabalgata de Medellín",
+      "facet": "Feria de las Flores",
+      "known_at": 9
+    },
+    {
+      "name": "Festival Nacional de la Trova",
+      "facet": "Feria de las Flores",
+      "known_at": 9
+    },
+    {
+      "name": "Desfile de Chivas",
+      "facet": "Feria de las Flores",
+      "known_at": 8
+    },
+    {
+      "name": "Fonda paisa",
+      "facet": "Feria de las Flores",
+      "known_at": 8
+    },
+    {
+      "name": "Desfile de Mitos y Leyendas",
+      "facet": "Feria de las Flores",
+      "known_at": 10
+    },
+    {
+      "name": "Feria de Cali",
+      "facet": "Feria de Cali",
+      "known_at": 4
+    },
+    {
+      "name": "Cabalgata de la Feria de Cali",
+      "facet": "Feria de Cali",
+      "known_at": 9
+    },
+    {
+      "name": "Desfile del Cali Viejo",
+      "facet": "Feria de Cali",
+      "known_at": 11
+    },
+    {
+      "name": "Superconcierto",
+      "facet": "Feria de Cali",
+      "known_at": 10
+    },
+    {
+      "name": "Plaza de Toros de Cañaveralejo",
+      "facet": "Feria de Cali",
+      "known_at": 11
+    },
+    {
+      "name": "Escuelas de salsa",
+      "facet": "Feria de Cali",
+      "known_at": 8
+    },
+    {
+      "name": "Reinado Internacional del Café",
+      "facet": "Feria de Manizales y fiestas cafeteras",
+      "known_at": 8
+    },
+    {
+      "name": "Pasodoble Feria de Manizales",
+      "facet": "Feria de Manizales y fiestas cafeteras",
+      "known_at": 12
+    },
+    {
+      "name": "Plaza de Toros de Manizales",
+      "facet": "Feria de Manizales y fiestas cafeteras",
+      "known_at": 12
+    },
+    {
+      "name": "Fiesta Nacional del Café",
+      "facet": "Feria de Manizales y fiestas cafeteras",
+      "known_at": 10
+    },
+    {
+      "name": "Festival Internacional de Teatro de Manizales",
+      "facet": "Feria de Manizales y fiestas cafeteras",
+      "known_at": 12
+    },
+    {
+      "name": "Fiestas de la Cosecha de Pereira",
+      "facet": "Feria de Manizales y fiestas cafeteras",
+      "known_at": 11
+    },
+    {
+      "name": "Festival Nacional de Gaitas de Ovejas",
+      "facet": "Festivales de música folclórica",
+      "known_at": 12
+    },
+    {
+      "name": "Festival Cuna de Acordeones",
+      "facet": "Festivales de música folclórica",
+      "known_at": 12
+    },
+    {
+      "name": "Festival Nacional del Pasillo",
+      "facet": "Festivales de música folclórica",
+      "known_at": 13
+    },
+    {
+      "name": "Bandola",
+      "facet": "Festivales de música folclórica",
+      "known_at": 10
+    },
+    {
+      "name": "Fiestas de Independencia de Cartagena",
+      "facet": "Fiestas del Caribe y el Pacífico",
+      "known_at": 8
+    },
+    {
+      "name": "Buscapiés",
+      "facet": "Fiestas del Caribe y el Pacífico",
+      "known_at": 10
+    },
+    {
+      "name": "Fiesta de la Candelaria de Cartagena",
+      "facet": "Fiestas del Caribe y el Pacífico",
+      "known_at": 11
+    },
+    {
+      "name": "Fiestas del Mar",
+      "facet": "Fiestas del Caribe y el Pacífico",
+      "known_at": 9
+    },
+    {
+      "name": "Fiesta del 20 de Enero",
+      "facet": "Fiestas del Caribe y el Pacífico",
+      "known_at": 12
+    },
+    {
+      "name": "Festival del Bullerengue",
+      "facet": "Fiestas del Caribe y el Pacífico",
+      "known_at": 12
+    },
+    {
+      "name": "Festival de la Cultura Wayuu",
+      "facet": "Fiestas del Caribe y el Pacífico",
+      "known_at": 11
+    },
+    {
+      "name": "Fiesta de la Virgen del Carmen",
+      "facet": "Fiestas del Caribe y el Pacífico",
+      "known_at": 8
+    },
+    {
+      "name": "Festival del Currulao",
+      "facet": "Fiestas del Caribe y el Pacífico",
+      "known_at": 11
+    },
+    {
+      "name": "Fiestas del Mar de San Andrés",
+      "facet": "Fiestas del Caribe y el Pacífico",
+      "known_at": 12
+    },
+    {
+      "name": "Fiestas de San Juan y San Pedro",
+      "facet": "Fiestas del interior y los Llanos",
+      "known_at": 8
+    },
+    {
+      "name": "Aguinaldo Boyacense",
+      "facet": "Fiestas del interior y los Llanos",
+      "known_at": 11
+    },
+    {
+      "name": "Festival del Viento y las Cometas",
+      "facet": "Fiestas del interior y los Llanos",
+      "known_at": 9
+    },
+    {
+      "name": "Feria Bonita",
+      "facet": "Fiestas del interior y los Llanos",
+      "known_at": 11
+    },
+    {
+      "name": "Festival Folclórico Colombiano de Ibagué",
+      "facet": "Fiestas del interior y los Llanos",
+      "known_at": 12
+    },
+    {
+      "name": "Festival Iberoamericano de Teatro de Bogotá",
+      "facet": "Fiestas del interior y los Llanos",
+      "known_at": 11
+    },
+    {
+      "name": "Festival de la Canción Llanera",
+      "facet": "Fiestas del interior y los Llanos",
+      "known_at": 12
+    },
+    {
+      "name": "Las Farotas",
+      "facet": "Danzas y ritmos de carnaval",
+      "known_at": 12
+    },
+    {
+      "name": "Salsa",
+      "facet": "Danzas y ritmos de carnaval",
+      "known_at": 2
+    },
+    {
+      "name": "Gaita",
+      "facet": "Danzas y ritmos de carnaval",
+      "known_at": 7
+    },
+    {
+      "name": "Descabezado",
+      "facet": "Disfraces, máscaras y carrozas",
+      "known_at": 10
+    },
+    {
+      "name": "Careta",
+      "facet": "Disfraces, máscaras y carrozas",
+      "known_at": 4
+    },
+    {
+      "name": "Carroza",
+      "facet": "Disfraces, máscaras y carrozas",
+      "known_at": 3
+    },
+    {
+      "name": "Papel maché",
+      "facet": "Disfraces, máscaras y carrozas",
+      "known_at": 6
+    },
+    {
+      "name": "Matachín",
+      "facet": "Disfraces, máscaras y carrozas",
+      "known_at": 12
+    },
+    {
+      "name": "Cumbiambero",
+      "facet": "Disfraces, máscaras y carrozas",
+      "known_at": 9
+    },
+    {
+      "name": "Hervido",
+      "facet": "Comidas y bebidas de feria",
+      "known_at": 11
+    },
+    {
+      "name": "Empanada",
+      "facet": "Comidas y bebidas de feria",
+      "known_at": 1
+    },
+    {
+      "name": "Lista Representativa de Patrimonio Cultural Inmaterial de la Nación",
+      "facet": "Historia y patrimonio festivo",
+      "known_at": 13
+    },
+    {
+      "name": "Cabildos de negros",
+      "facet": "Historia y patrimonio festivo",
+      "known_at": 13
+    },
+    {
+      "name": "Fiesta de Reyes",
+      "facet": "Historia y patrimonio festivo",
+      "known_at": 5
+    },
+    {
+      "name": "Fundación Carnaval de Barranquilla",
+      "facet": "Historia y patrimonio festivo",
+      "known_at": 12
+    },
+    {
+      "name": "Casa del Carnaval",
+      "facet": "Historia y patrimonio festivo",
+      "known_at": 12
+    },
+    {
+      "name": "Museo del Carnaval de Pasto",
+      "facet": "Historia y patrimonio festivo",
+      "known_at": 13
+    }
+  ]
+}

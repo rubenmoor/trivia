@@ -298,7 +298,8 @@
     {
       "name": "Océano Pacífico",
       "facet": "Costa Pacífica y sus bahías",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: La pregunta del barco que llega a Buenaventura ya cubre la costa Pacífica a nivel 1."
     },
     {
       "name": "Bahía de Buenaventura",
@@ -353,7 +354,8 @@
     {
       "name": "Cayo Bolívar",
       "facet": "San Andrés, Providencia y Santa Catalina",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Cayo Bolívar es demasiado oscuro y no hay foto confiable."
     },
     {
       "name": "Cueva de Morgan",
@@ -404,7 +406,8 @@
     {
       "name": "Isla Palma",
       "facet": "Islas del Caribe continental",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Isla Palma es demasiado oscura y sus datos son poco seguros."
     },
     {
       "name": "Isla de Salamanca",

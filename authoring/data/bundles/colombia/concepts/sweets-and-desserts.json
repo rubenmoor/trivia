@@ -1,0 +1,541 @@
+{
+  "subcategory": "sweets-and-desserts",
+  "facets": [
+    "Arequipe y dulces de leche",
+    "Bocadillo y dulces de guayaba",
+    "Frutas en almíbar y conservas",
+    "Cocadas y dulcería del Caribe",
+    "Panela, melcochas y alfandoque",
+    "Postres de Navidad y Semana Santa",
+    "Postres caseros de cuchara",
+    "Obleas, merengones y dulces callejeros",
+    "Golosinas y marcas colombianas",
+    "Pailas, técnicas e ingredientes dulceros",
+    "Palabras y dichos dulces"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Arequipe",
+      "facet": "Arequipe y dulces de leche",
+      "known_at": 1
+    },
+    {
+      "name": "Manjar blanco",
+      "facet": "Arequipe y dulces de leche",
+      "known_at": 5
+    },
+    {
+      "name": "Natas",
+      "facet": "Arequipe y dulces de leche",
+      "known_at": 7
+    },
+    {
+      "name": "Arequipe de leche de cabra",
+      "facet": "Arequipe y dulces de leche",
+      "known_at": 10
+    },
+    {
+      "name": "Alfajores de arequipe",
+      "facet": "Arequipe y dulces de leche",
+      "known_at": 5
+    },
+    {
+      "name": "Roscón de arequipe",
+      "facet": "Arequipe y dulces de leche",
+      "known_at": 3
+    },
+    {
+      "name": "Brazo de reina",
+      "facet": "Arequipe y dulces de leche",
+      "known_at": 7
+    },
+    {
+      "name": "Leche condensada",
+      "facet": "Arequipe y dulces de leche",
+      "known_at": 3
+    },
+    {
+      "name": "Leche asada",
+      "facet": "Arequipe y dulces de leche",
+      "known_at": 8
+    },
+    {
+      "name": "Sopó",
+      "facet": "Arequipe y dulces de leche",
+      "known_at": 9
+    },
+    {
+      "name": "Bocadillo veleño",
+      "facet": "Bocadillo y dulces de guayaba",
+      "known_at": 3
+    },
+    {
+      "name": "Queso con bocadillo",
+      "facet": "Bocadillo y dulces de guayaba",
+      "known_at": 2
+    },
+    {
+      "name": "Bocadillo combinado",
+      "facet": "Bocadillo y dulces de guayaba",
+      "known_at": 7
+    },
+    {
+      "name": "Festival Nacional de la Guayaba",
+      "facet": "Bocadillo y dulces de guayaba",
+      "known_at": 11
+    },
+    {
+      "name": "Barbosa",
+      "facet": "Bocadillo y dulces de guayaba",
+      "known_at": 11
+    },
+    {
+      "name": "Jalea de guayaba",
+      "facet": "Bocadillo y dulces de guayaba",
+      "known_at": 5
+    },
+    {
+      "name": "Pasta de guayaba",
+      "facet": "Bocadillo y dulces de guayaba",
+      "known_at": 8
+    },
+    {
+      "name": "Guayaba blanca",
+      "facet": "Bocadillo y dulces de guayaba",
+      "known_at": 9
+    },
+    {
+      "name": "Denominación de origen del bocadillo veleño",
+      "facet": "Bocadillo y dulces de guayaba",
+      "known_at": 13
+    },
+    {
+      "name": "Lonja de bocadillo",
+      "facet": "Bocadillo y dulces de guayaba",
+      "known_at": 6
+    },
+    {
+      "name": "Pandebono relleno de bocadillo",
+      "facet": "Bocadillo y dulces de guayaba",
+      "known_at": 5
+    },
+    {
+      "name": "Brevas en almíbar",
+      "facet": "Frutas en almíbar y conservas",
+      "known_at": 5
+    },
+    {
+      "name": "Duraznos en almíbar",
+      "facet": "Frutas en almíbar y conservas",
+      "known_at": 4
+    },
+    {
+      "name": "Dulce de grosella",
+      "facet": "Frutas en almíbar y conservas",
+      "known_at": 10
+    },
+    {
+      "name": "Dulce de tomate de árbol",
+      "facet": "Frutas en almíbar y conservas",
+      "known_at": 8
+    },
+    {
+      "name": "Dulce de mora",
+      "facet": "Frutas en almíbar y conservas",
+      "known_at": 5
+    },
+    {
+      "name": "Dulce de feijoa",
+      "facet": "Frutas en almíbar y conservas",
+      "known_at": 10
+    },
+    {
+      "name": "Dulce de papaya verde",
+      "facet": "Frutas en almíbar y conservas",
+      "known_at": 9
+    },
+    {
+      "name": "Dulce de toronja",
+      "facet": "Frutas en almíbar y conservas",
+      "known_at": 10
+    },
+    {
+      "name": "Cascos de limón",
+      "facet": "Frutas en almíbar y conservas",
+      "known_at": 9
+    },
+    {
+      "name": "Cascos de naranja",
+      "facet": "Frutas en almíbar y conservas",
+      "known_at": 10
+    },
+    {
+      "name": "Dulce de uchuva",
+      "facet": "Frutas en almíbar y conservas",
+      "known_at": 10
+    },
+    {
+      "name": "Dulce de piña",
+      "facet": "Frutas en almíbar y conservas",
+      "known_at": 6
+    },
+    {
+      "name": "Dulce de curuba",
+      "facet": "Frutas en almíbar y conservas",
+      "known_at": 11
+    },
+    {
+      "name": "Peras en almíbar",
+      "facet": "Frutas en almíbar y conservas",
+      "known_at": 6
+    },
+    {
+      "name": "Portal de los Dulces",
+      "facet": "Cocadas y dulcería del Caribe",
+      "known_at": 9
+    },
+    {
+      "name": "Alegría",
+      "facet": "Cocadas y dulcería del Caribe",
+      "known_at": 9
+    },
+    {
+      "name": "Caballito de papaya",
+      "facet": "Cocadas y dulcería del Caribe",
+      "known_at": 11
+    },
+    {
+      "name": "Dulce de icaco",
+      "facet": "Cocadas y dulcería del Caribe",
+      "known_at": 11
+    },
+    {
+      "name": "Diabolín",
+      "facet": "Cocadas y dulcería del Caribe",
+      "known_at": 12
+    },
+    {
+      "name": "Dulce de corozo",
+      "facet": "Cocadas y dulcería del Caribe",
+      "known_at": 11
+    },
+    {
+      "name": "Casadilla",
+      "facet": "Cocadas y dulcería del Caribe",
+      "known_at": 13
+    },
+    {
+      "name": "Bocadillo de coco",
+      "facet": "Cocadas y dulcería del Caribe",
+      "known_at": 7
+    },
+    {
+      "name": "Alfeñique",
+      "facet": "Panela, melcochas y alfandoque",
+      "known_at": 11
+    },
+    {
+      "name": "Melao",
+      "facet": "Panela, melcochas y alfandoque",
+      "known_at": 7
+    },
+    {
+      "name": "Panela pulverizada",
+      "facet": "Panela, melcochas y alfandoque",
+      "known_at": 6
+    },
+    {
+      "name": "Molienda",
+      "facet": "Panela, melcochas y alfandoque",
+      "known_at": 10
+    },
+    {
+      "name": "Villeta",
+      "facet": "Panela, melcochas y alfandoque",
+      "known_at": 11
+    },
+    {
+      "name": "Reinado Nacional de la Panela",
+      "facet": "Panela, melcochas y alfandoque",
+      "known_at": 12
+    },
+    {
+      "name": "Bagazo",
+      "facet": "Panela, melcochas y alfandoque",
+      "known_at": 10
+    },
+    {
+      "name": "Natilla",
+      "facet": "Postres de Navidad y Semana Santa",
+      "known_at": 1
+    },
+    {
+      "name": "Mongo mongo",
+      "facet": "Postres de Navidad y Semana Santa",
+      "known_at": 13
+    },
+    {
+      "name": "Dulce de ñame",
+      "facet": "Postres de Navidad y Semana Santa",
+      "known_at": 12
+    },
+    {
+      "name": "Cabanga",
+      "facet": "Postres de Navidad y Semana Santa",
+      "known_at": 13
+    },
+    {
+      "name": "Dulce de ahuyama",
+      "facet": "Postres de Navidad y Semana Santa",
+      "known_at": 10
+    },
+    {
+      "name": "Torta de tres leches",
+      "facet": "Postres caseros de cuchara",
+      "known_at": 3
+    },
+    {
+      "name": "Flan de caramelo",
+      "facet": "Postres caseros de cuchara",
+      "known_at": 2
+    },
+    {
+      "name": "Huevos chimbos",
+      "facet": "Postres caseros de cuchara",
+      "known_at": 11
+    },
+    {
+      "name": "Gelatina de colores",
+      "facet": "Postres caseros de cuchara",
+      "known_at": 1
+    },
+    {
+      "name": "Postre de maracuyá",
+      "facet": "Postres caseros de cuchara",
+      "known_at": 4
+    },
+    {
+      "name": "Esponjado de curuba",
+      "facet": "Postres caseros de cuchara",
+      "known_at": 11
+    },
+    {
+      "name": "Postre de limón",
+      "facet": "Postres caseros de cuchara",
+      "known_at": 4
+    },
+    {
+      "name": "Torta de galletas",
+      "facet": "Postres caseros de cuchara",
+      "known_at": 4
+    },
+    {
+      "name": "Pudín de pan",
+      "facet": "Postres caseros de cuchara",
+      "known_at": 6
+    },
+    {
+      "name": "Mousse de guanábana",
+      "facet": "Postres caseros de cuchara",
+      "known_at": 7
+    },
+    {
+      "name": "Plátanos calados",
+      "facet": "Postres caseros de cuchara",
+      "known_at": 11
+    },
+    {
+      "name": "Oblea",
+      "facet": "Obleas, merengones y dulces callejeros",
+      "known_at": 1
+    },
+    {
+      "name": "Barquillos",
+      "facet": "Obleas, merengones y dulces callejeros",
+      "known_at": 4
+    },
+    {
+      "name": "Paletas de agua",
+      "facet": "Obleas, merengones y dulces callejeros",
+      "known_at": 2
+    },
+    {
+      "name": "Chontaduro con miel",
+      "facet": "Obleas, merengones y dulces callejeros",
+      "known_at": 7
+    },
+    {
+      "name": "Fresas con crema",
+      "facet": "Obleas, merengones y dulces callejeros",
+      "known_at": 2
+    },
+    {
+      "name": "Gansito Ramo",
+      "facet": "Golosinas y marcas colombianas",
+      "known_at": 2
+    },
+    {
+      "name": "Jumbo",
+      "facet": "Golosinas y marcas colombianas",
+      "known_at": 3
+    },
+    {
+      "name": "Trululú",
+      "facet": "Golosinas y marcas colombianas",
+      "known_at": 3
+    },
+    {
+      "name": "Doña Pepa",
+      "facet": "Golosinas y marcas colombianas",
+      "known_at": 5
+    },
+    {
+      "name": "Paila de cobre",
+      "facet": "Pailas, técnicas e ingredientes dulceros",
+      "known_at": 7
+    },
+    {
+      "name": "Punto de hilo",
+      "facet": "Pailas, técnicas e ingredientes dulceros",
+      "known_at": 11
+    },
+    {
+      "name": "Punto de bola",
+      "facet": "Pailas, técnicas e ingredientes dulceros",
+      "known_at": 12
+    },
+    {
+      "name": "Baño María",
+      "facet": "Pailas, técnicas e ingredientes dulceros",
+      "known_at": 7
+    },
+    {
+      "name": "Almíbar",
+      "facet": "Pailas, técnicas e ingredientes dulceros",
+      "known_at": 5
+    },
+    {
+      "name": "Clavos de olor",
+      "facet": "Pailas, técnicas e ingredientes dulceros",
+      "known_at": 6
+    },
+    {
+      "name": "Bicarbonato de sodio",
+      "facet": "Pailas, técnicas e ingredientes dulceros",
+      "known_at": 10
+    },
+    {
+      "name": "Coco rallado",
+      "facet": "Pailas, técnicas e ingredientes dulceros",
+      "known_at": 3
+    },
+    {
+      "name": "Agua de cal",
+      "facet": "Pailas, técnicas e ingredientes dulceros",
+      "known_at": 13
+    },
+    {
+      "name": "Caramelización",
+      "facet": "Pailas, técnicas e ingredientes dulceros",
+      "known_at": 8
+    },
+    {
+      "name": "Esencia de vainilla",
+      "facet": "Pailas, técnicas e ingredientes dulceros",
+      "known_at": 4
+    },
+    {
+      "name": "Goloso",
+      "facet": "Palabras y dichos dulces",
+      "known_at": 4
+    },
+    {
+      "name": "Bizcocho",
+      "facet": "Palabras y dichos dulces",
+      "known_at": 8
+    },
+    {
+      "name": "Bombón",
+      "facet": "Palabras y dichos dulces",
+      "known_at": 7
+    },
+    {
+      "name": "Endulzar el oído",
+      "facet": "Palabras y dichos dulces",
+      "known_at": 10
+    },
+    {
+      "name": "Como arroz",
+      "facet": "Palabras y dichos dulces",
+      "known_at": 7
+    },
+    {
+      "name": "Empalagoso",
+      "facet": "Palabras y dichos dulces",
+      "known_at": 8
+    },
+    {
+      "name": "Meter la cucharada",
+      "facet": "Palabras y dichos dulces",
+      "known_at": 8
+    },
+    {
+      "name": "Caramelear",
+      "facet": "Palabras y dichos dulces",
+      "known_at": 11
+    },
+    {
+      "name": "Ser un pan de Dios",
+      "facet": "Palabras y dichos dulces",
+      "known_at": 9
+    },
+    {
+      "name": "Mermelada",
+      "facet": "Palabras y dichos dulces",
+      "known_at": 12
+    }
+  ]
+}
