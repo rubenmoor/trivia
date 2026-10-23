@@ -61,7 +61,8 @@
     {
       "name": "Ancient Egypt",
       "facet": "Ancient civilizations",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Easy Ancient Egypt facts (pyramids, mummies, the Nile) are already in the pool; none of the options gives a new difficulty-1 question."
     },
     {
       "name": "Ancient Rome",
@@ -76,7 +77,8 @@
     {
       "name": "Pharaoh",
       "facet": "Ancient civilizations",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Pharaoh is already covered by five questions, including one on crown and regalia; a detail photo would repeat that fact."
     },
     {
       "name": "Aztecs",
@@ -151,7 +153,8 @@
     {
       "name": "Jester",
       "facet": "Medieval world",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The jester's outfit is already asked; a detail of the hat would repeat it, and how many points the hat has can't be estimated."
     },
     {
       "name": "Joan of Arc",
@@ -512,7 +515,8 @@
     {
       "name": "Chariot racing",
       "facet": "Daily life in the past",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The chariot-race fact is already in the pool; at difficulty 1 a charioteer riddle or name question would only repeat it."
     },
     {
       "name": "Ancient Olympic Games",

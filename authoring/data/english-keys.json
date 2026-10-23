@@ -323,9 +323,9 @@
       "concept": "Guitar"
     },
     "q-0066": {
-      "hash": "f93709b71039",
+      "hash": "7e7736852099",
       "answer": "Medellín",
-      "concept": null
+      "concept": "Karol G"
     },
     "q-0067": {
       "hash": "c21fce4e48a4",
@@ -498,9 +498,9 @@
       "concept": "Incas"
     },
     "q-0103": {
-      "hash": "ad4fd499a903",
+      "hash": "2dff1754d371",
       "answer": "Muisca",
-      "concept": null
+      "concept": "Muisca"
     },
     "q-0104": {
       "hash": "cd49cd843906",
@@ -518,9 +518,9 @@
       "concept": "Berlin Wall"
     },
     "q-0107": {
-      "hash": "6ba48b62c00b",
+      "hash": "9beb047bc978",
       "answer": "Panama",
-      "concept": null
+      "concept": "Separation of Panama"
     },
     "q-0108": {
       "hash": "657528c72e67",
@@ -538,9 +538,9 @@
       "concept": "Ñ"
     },
     "q-0111": {
-      "hash": "bbf37a70f9e3",
+      "hash": "3f9e7ee86fde",
       "answer": "Rafael Pombo",
-      "concept": null
+      "concept": "Rafael Pombo"
     },
     "q-0112": {
       "hash": "6ef287d9431c",
@@ -578,9 +578,9 @@
       "concept": "The Starry Night"
     },
     "q-0119": {
-      "hash": "bb8a921a54af",
+      "hash": "eb424e0061fd",
       "answer": "María",
-      "concept": null
+      "concept": "María (Jorge Isaacs)"
     },
     "q-0120": {
       "hash": "1ee18a63b090",
@@ -1573,9 +1573,9 @@
       "concept": "Rafting"
     },
     "q-0327": {
-      "hash": "a6674f29b917",
+      "hash": "5d5b2ef57f41",
       "answer": "Don't let your guard down or give an advantage",
-      "concept": null
+      "concept": "No dar papaya"
     },
     "q-0329": {
       "hash": "4c05df5e8520",
@@ -1893,9 +1893,9 @@
       "concept": "Louvre Museum"
     },
     "q-0393": {
-      "hash": "62c89bf8082f",
+      "hash": "8227f8c6b823",
       "answer": "Gold Museum",
-      "concept": null
+      "concept": "Gold Museum"
     },
     "q-0394": {
       "hash": "7b69e63dd434",
@@ -1958,9 +1958,9 @@
       "concept": null
     },
     "q-0406": {
-      "hash": "e691a3065cee",
-      "answer": "Gynerium cane",
-      "concept": null
+      "hash": "bb3e688e8dab",
+      "answer": "Caña flecha",
+      "concept": "Caña flecha"
     },
     "q-0407": {
       "hash": "c72f42a2d60e",
@@ -2313,9 +2313,9 @@
       "concept": "One Thousand and One Nights"
     },
     "q-0477": {
-      "hash": "4bf1c44cf180",
-      "answer": "The frog",
-      "concept": null
+      "hash": "1b7b6e6a7ecb",
+      "answer": "Frog",
+      "concept": "Frog"
     },
     "q-0478": {
       "hash": "52ebf98fa9db",
@@ -2463,9 +2463,9 @@
       "concept": "Wakanda"
     },
     "q-0508": {
-      "hash": "128965f18f9f",
+      "hash": "7dcf7993d79c",
       "answer": "Chiva",
-      "concept": null
+      "concept": "Chiva"
     },
     "q-0509": {
       "hash": "a70ce5c436d0",
@@ -2828,9 +2828,9 @@
       "concept": null
     },
     "q-0583": {
-      "hash": "0bed7a5a99c3",
+      "hash": "a3ec72f2c070",
       "answer": "English",
-      "concept": null
+      "concept": "San Andrés Creole"
     },
     "q-0584": {
       "hash": "ce1fb7aa66c4",
@@ -2848,14 +2848,14 @@
       "concept": "Black vulture"
     },
     "q-0587": {
-      "hash": "2bc6b6101d85",
-      "answer": "It is the official seat and residence of the president",
-      "concept": null
+      "hash": "fc6840d549f0",
+      "answer": "Official seat and residence of the president",
+      "concept": "Casa de Nariño"
     },
     "q-0588": {
-      "hash": "85fe28c4b5db",
+      "hash": "78d82139c2cb",
       "answer": "Antioquia",
-      "concept": null
+      "concept": "Flag of Antioquia"
     },
     "q-0589": {
       "hash": "580d7289a6d3",
@@ -4368,9 +4368,9 @@
       "concept": "Cotyledon"
     },
     "q-0905": {
-      "hash": "74ee9fa0fa60",
-      "answer": "Their perfect match",
-      "concept": "Orange"
+      "hash": "361d01b3a3ba",
+      "answer": "Ideal partner",
+      "concept": "Media naranja"
     },
     "q-0906": {
       "hash": "3806ed7efe1e",
@@ -4608,9 +4608,9 @@
       "concept": "Psyche"
     },
     "q-0958": {
-      "hash": "9e6f0d0aa1f3",
+      "hash": "ed0f4f4a882f",
       "answer": "Using something excessive for a small problem",
-      "concept": "Fly swatter"
+      "concept": "Killing flies with cannon shots"
     },
     "q-0959": {
       "hash": "f5914286ea19",
@@ -6043,9 +6043,9 @@
       "concept": "La pájara pinta"
     },
     "q-1252": {
-      "hash": "f06bf1d12e79",
+      "hash": "59ff14094cb8",
       "answer": "Cepillín",
-      "concept": "Miliki"
+      "concept": "Cepillín"
     },
     "q-1253": {
       "hash": "8a3526805357",
@@ -9768,9 +9768,9 @@
       "concept": "Guppy"
     },
     "q-1998": {
-      "hash": "ef9ee06a6671",
-      "answer": "From very bad weather",
-      "concept": "Raining cats and dogs"
+      "hash": "f27c95c40dbd",
+      "answer": "Very bad weather",
+      "concept": "Hacer un tiempo de perros"
     },
     "q-1999": {
       "hash": "dfd9d9937a9d",
@@ -10796,6 +10796,1271 @@
       "hash": "d16b829842fc",
       "answer": "Victoria of the United Kingdom",
       "concept": "Chelsea boots"
+    },
+    "q-5008": {
+      "hash": "20eb884d685d",
+      "answer": "José Celestino Mutis",
+      "concept": "José Celestino Mutis"
+    },
+    "q-5009": {
+      "hash": "4b3076c0c8dc",
+      "answer": "Steamboat",
+      "concept": "Steamboat"
+    },
+    "q-5010": {
+      "hash": "23167f05c241",
+      "answer": "Lana",
+      "concept": "Colombian peso"
+    },
+    "q-5011": {
+      "hash": "ef361396bf8c",
+      "answer": "Simón Bolívar",
+      "concept": "Simón Bolívar"
+    },
+    "q-5012": {
+      "hash": "d5f9ed0afa5a",
+      "answer": "The Supremes",
+      "concept": "José María Obando"
+    },
+    "q-5013": {
+      "hash": "ebdbeebc10f5",
+      "answer": "Ajiaco",
+      "concept": "Ajiaco santafereño"
+    },
+    "q-5014": {
+      "hash": "2d0ea79f757f",
+      "answer": "Manuel Antonio Sanclemente",
+      "concept": "Manuel Antonio Sanclemente"
+    },
+    "q-5015": {
+      "hash": "ee7be0749f94",
+      "answer": "July 20",
+      "concept": "Cry of Independence"
+    },
+    "q-5016": {
+      "hash": "33f0e7708da5",
+      "answer": "A battle he won in Peru",
+      "concept": "Antonio José de Sucre"
+    },
+    "q-5017": {
+      "hash": "ea8875cc9655",
+      "answer": "Jorge Velosa",
+      "concept": "Carranga"
+    },
+    "q-5018": {
+      "hash": "3758c6456bc4",
+      "answer": "Natilla and buñuelos",
+      "concept": "Natilla and buñuelos"
+    },
+    "q-5019": {
+      "hash": "ae9f3c0ba591",
+      "answer": "Carlos Vives",
+      "concept": "Carlos Vives"
+    },
+    "q-5020": {
+      "hash": "63d7d7752fdf",
+      "answer": "Santiago García",
+      "concept": "La Candelaria Theatre"
+    },
+    "q-5021": {
+      "hash": "92bc4d997a3f",
+      "answer": "Vuelta a Colombia",
+      "concept": "Vuelta a Colombia"
+    },
+    "q-5022": {
+      "hash": "c037539d2073",
+      "answer": "A Constituent Assembly",
+      "concept": "Séptima papeleta"
+    },
+    "q-5023": {
+      "hash": "8e47ecd403bc",
+      "answer": "Sábados Felices",
+      "concept": "Sábados Felices"
+    },
+    "q-5024": {
+      "hash": "7f003e29fe68",
+      "answer": "Kalimán",
+      "concept": "Kalimán"
+    },
+    "q-5025": {
+      "hash": "4f16a0e25443",
+      "answer": "Legal monthly minimum wage",
+      "concept": "Minimum wage"
+    },
+    "q-5026": {
+      "hash": "a0d9c83a7959",
+      "answer": "20,000 pesos",
+      "concept": "Discount"
+    },
+    "q-5027": {
+      "hash": "32c7915a5ec0",
+      "answer": "Single",
+      "concept": "Single"
+    },
+    "q-5028": {
+      "hash": "a0a05614a2fe",
+      "answer": "EPM",
+      "concept": "EPM"
+    },
+    "q-5029": {
+      "hash": "83597d0b7dad",
+      "answer": "Felipe Aljure",
+      "concept": "Colombian Dream"
+    },
+    "q-5030": {
+      "hash": "6f12f21887e9",
+      "answer": "1993",
+      "concept": "Golpe de estadio"
+    },
+    "q-5031": {
+      "hash": "0803039f139d",
+      "answer": "Walt Disney",
+      "concept": "Disney"
+    },
+    "q-5032": {
+      "hash": "0a641f24abc6",
+      "answer": "Carlos Mayolo",
+      "concept": "Carlos Mayolo"
+    },
+    "q-5033": {
+      "hash": "73992cd3a137",
+      "answer": "Natalia Orozco",
+      "concept": "El silencio de los fusiles"
+    },
+    "q-5034": {
+      "hash": "fe40ad130467",
+      "answer": "1920s",
+      "concept": "Silent film"
+    },
+    "q-5035": {
+      "hash": "f42d3abf28f0",
+      "answer": "Focine",
+      "concept": "Film Development Fund"
+    },
+    "q-5036": {
+      "hash": "a3f8f29185e2",
+      "answer": "Amazon region",
+      "concept": "Amazon"
+    },
+    "q-5037": {
+      "hash": "1467a2724d6e",
+      "answer": "Village neighbors",
+      "concept": "Casita"
+    },
+    "q-5038": {
+      "hash": "c2cedaa2900f",
+      "answer": "Wooden spoon",
+      "concept": "Wooden spoon"
+    },
+    "q-5039": {
+      "hash": "e0fbf3f30395",
+      "answer": "Huila",
+      "concept": "Suaza hat"
+    },
+    "q-5040": {
+      "hash": "732cbf6ec87d",
+      "answer": "Poporo",
+      "concept": "Anaco"
+    },
+    "q-5041": {
+      "hash": "34455f8bffcb",
+      "answer": "Barranquilla",
+      "concept": "Wooden mask"
+    },
+    "q-5042": {
+      "hash": "605da0a0f9d0",
+      "answer": "Mocking the rich and politicians",
+      "concept": "Marimonda"
+    },
+    "q-5043": {
+      "hash": "2882313b6239",
+      "answer": "Palenquera",
+      "concept": "Palenquera dress"
+    },
+    "q-5044": {
+      "hash": "4c4631c3fa2f",
+      "answer": "Coffee maker",
+      "concept": "Coffee maker"
+    },
+    "q-5045": {
+      "hash": "781c62adbb72",
+      "answer": "Spearmint",
+      "concept": "Spearmint"
+    },
+    "q-5046": {
+      "hash": "71713d86ab97",
+      "answer": "Coconut",
+      "concept": "Lemonade"
+    },
+    "q-5047": {
+      "hash": "502b2724f057",
+      "answer": "Enameled metal",
+      "concept": "Pocillo"
+    },
+    "q-5048": {
+      "hash": "145a06cfed20",
+      "answer": "Kika Nieto",
+      "concept": "Kika Nieto"
+    },
+    "q-5049": {
+      "hash": "4b6536c32d57",
+      "answer": "Vicks VapoRub",
+      "concept": "Vicks VapoRub"
+    },
+    "q-5050": {
+      "hash": "fb9d24c25cfa",
+      "answer": "Jaguar",
+      "concept": "Jaguar"
+    },
+    "q-5051": {
+      "hash": "5ffaf8630308",
+      "answer": "To remove the evil eye",
+      "concept": "Egg cleansing"
+    },
+    "q-5052": {
+      "hash": "eb0e2e27461c",
+      "answer": "...money is coming to you",
+      "concept": "Itchy hand"
+    },
+    "q-5053": {
+      "hash": "df0b2ab5569a",
+      "answer": "A fall or a hard shake",
+      "concept": "Descuajado"
+    },
+    "q-5054": {
+      "hash": "940de6039e31",
+      "answer": "The Mermaid",
+      "concept": "The Mermaid"
+    },
+    "q-5055": {
+      "hash": "33a3561d18b3",
+      "answer": "Bemba",
+      "concept": "Bemba"
+    },
+    "q-5056": {
+      "hash": "9f5e47995ba5",
+      "answer": "Gallicisms",
+      "concept": "Gallicisms"
+    },
+    "q-5057": {
+      "hash": "d6756baa328c",
+      "answer": "Paisa",
+      "concept": "Paisa accent"
+    },
+    "q-5058": {
+      "hash": "a350764aa510",
+      "answer": "Nariño",
+      "concept": "Pasto accent"
+    },
+    "q-5059": {
+      "hash": "b0388f67d47a",
+      "answer": "Compadre",
+      "concept": "Compadre"
+    },
+    "q-5060": {
+      "hash": "661c9bb11f02",
+      "answer": "Turks",
+      "concept": "Turco (nickname for Arab immigrants)"
+    },
+    "q-5061": {
+      "hash": "60c6a8498910",
+      "answer": "Jorge Eliécer Gaitán",
+      "concept": "National Salon of Artists"
+    },
+    "q-5062": {
+      "hash": "d04ada558973",
+      "answer": "Our Lady of Chiquinquirá",
+      "concept": "Our Lady of Chiquinquirá"
+    },
+    "q-5063": {
+      "hash": "1358669e4f05",
+      "answer": "Quito School",
+      "concept": "Quito School"
+    },
+    "q-5064": {
+      "hash": "7f70b33c5579",
+      "answer": "Hypogea",
+      "concept": "Tierradentro hypogea"
+    },
+    "q-5065": {
+      "hash": "679532ad15f4",
+      "answer": "José Alejandro Restrepo",
+      "concept": "José Alejandro Restrepo"
+    },
+    "q-5066": {
+      "hash": "7ec7102996f6",
+      "answer": "Alberto Urdaneta",
+      "concept": "Bogotá School of Fine Arts"
+    },
+    "q-5067": {
+      "hash": "d09be0577caa",
+      "answer": "Alejandro Echavarría",
+      "concept": "Coltejer"
+    },
+    "q-5068": {
+      "hash": "83d9b7b006aa",
+      "answer": "Petrona Martínez",
+      "concept": "Petrona Martínez"
+    },
+    "q-5069": {
+      "hash": "c57058cc963a",
+      "answer": "Isabela",
+      "concept": "Luisa Madrigal"
+    },
+    "q-5070": {
+      "hash": "30272aaee9d3",
+      "answer": "Jota Mario Valencia",
+      "concept": "Jota Mario Valencia"
+    },
+    "q-5071": {
+      "hash": "9fa4ac7f3623",
+      "answer": "Bruno",
+      "concept": "Bruno Madrigal"
+    },
+    "q-5072": {
+      "hash": "e684bf15cbbf",
+      "answer": "Nairo Quintana",
+      "concept": "Nairo Quintana"
+    },
+    "q-5073": {
+      "hash": "e5c47728cf0b",
+      "answer": "Cable car",
+      "concept": "TransMilenio"
+    },
+    "q-5074": {
+      "hash": "ceae1063610e",
+      "answer": "Las Lajas Sanctuary",
+      "concept": "Las Lajas Sanctuary"
+    },
+    "q-5075": {
+      "hash": "01695bd6991c",
+      "answer": "23",
+      "concept": "Botero Plaza"
+    },
+    "q-5076": {
+      "hash": "1df05e09959c",
+      "answer": "Amacayacu",
+      "concept": "Amacayacu Park"
+    },
+    "q-5077": {
+      "hash": "ec6900c4228a",
+      "answer": "Sombrero vueltiao",
+      "concept": "Santa Cruz de Mompox"
+    },
+    "q-5078": {
+      "hash": "a4673e9ec685",
+      "answer": "Filandia",
+      "concept": "Filandia"
+    },
+    "q-5079": {
+      "hash": "320d5b66afc3",
+      "answer": "Guatapé",
+      "concept": "Guatapé"
+    },
+    "q-5080": {
+      "hash": "3117400868ae",
+      "answer": "Santander",
+      "concept": "Barichara"
+    },
+    "q-5081": {
+      "hash": "7893b6b2a5d6",
+      "answer": "Metro",
+      "concept": "Monserrate funicular"
+    },
+    "q-5082": {
+      "hash": "e229bdb68b09",
+      "answer": "Neiva",
+      "concept": "Neiva"
+    },
+    "q-5083": {
+      "hash": "ad65e3dbde86",
+      "answer": "Puracé volcano",
+      "concept": "Puracé volcano"
+    },
+    "q-5084": {
+      "hash": "0fb6bed96a39",
+      "answer": "Quimbaya Poporo",
+      "concept": "Gold Museum"
+    },
+    "q-5085": {
+      "hash": "325c6a679874",
+      "answer": "Malpelo",
+      "concept": "San Andrés"
+    },
+    "q-5086": {
+      "hash": "bc2c840edcc0",
+      "answer": "Sugar",
+      "concept": "Erre con erre cigarro"
+    },
+    "q-5087": {
+      "hash": "06f4691d76ea",
+      "answer": "Pampers me lovingly",
+      "concept": "Mi mamá me mima"
+    },
+    "q-5088": {
+      "hash": "c2cdd4e1bfda",
+      "answer": "Tiger",
+      "concept": "Uncle Tiger"
+    },
+    "q-5089": {
+      "hash": "d02770459a0d",
+      "answer": "Cardboard",
+      "concept": "Pin Pon"
+    },
+    "q-5090": {
+      "hash": "85e31def12db",
+      "answer": "19th century",
+      "concept": "Convite de Mirringa Mirronga"
+    },
+    "q-5091": {
+      "hash": "d0f9e6057961",
+      "answer": "Little birds",
+      "concept": "Que llueva, que llueva"
+    },
+    "q-5092": {
+      "hash": "19fc98ea1902",
+      "answer": "Despecho",
+      "concept": "Despecho"
+    },
+    "q-5093": {
+      "hash": "e153d875b735",
+      "answer": "ChocQuibTown",
+      "concept": "De dónde vengo yo"
+    },
+    "q-5094": {
+      "hash": "b6e33246112b",
+      "answer": "Shakira",
+      "concept": "Billboard Hot 100"
+    },
+    "q-5095": {
+      "hash": "9fb7c26ae340",
+      "answer": "Manuel Turizo",
+      "concept": "Manuel Turizo"
+    },
+    "q-5096": {
+      "hash": "c81cd7a21c30",
+      "answer": "Li Saumet",
+      "concept": "Li Saumet"
+    },
+    "q-5097": {
+      "hash": "cc2eaf7bbebb",
+      "answer": "Maluma",
+      "concept": "Hawái"
+    },
+    "q-5098": {
+      "hash": "0ce589678f45",
+      "answer": "Cali y El Dandee",
+      "concept": "Cali y El Dandee"
+    },
+    "q-5099": {
+      "hash": "04ef4e3dfc65",
+      "answer": "12",
+      "concept": "Strumming"
+    },
+    "q-5100": {
+      "hash": "6a1388a020dd",
+      "answer": "Mariachi",
+      "concept": "Mariachi"
+    },
+    "q-5101": {
+      "hash": "50948fbe4d55",
+      "answer": "Paola Jara",
+      "concept": "Paola Jara"
+    },
+    "q-5102": {
+      "hash": "2e621909789e",
+      "answer": "That the pope gave away lands that were not his",
+      "concept": "Requerimiento"
+    },
+    "q-5103": {
+      "hash": "b41da1a862f8",
+      "answer": "Darién and the Gulf of Urabá",
+      "concept": "Guna Dule"
+    },
+    "q-5104": {
+      "hash": "6a86345201ca",
+      "answer": "A rude, vulgar person",
+      "concept": "Guache"
+    },
+    "q-5105": {
+      "hash": "5c5f22ed7a78",
+      "answer": "Rodrigo de Bastidas",
+      "concept": "Rodrigo de Bastidas"
+    },
+    "q-5106": {
+      "hash": "51f31cd419fa",
+      "answer": "Arhuaco bag",
+      "concept": "Arhuaco bag"
+    },
+    "q-5107": {
+      "hash": "ac7c085f4ead",
+      "answer": "Potato",
+      "concept": "Potato"
+    },
+    "q-5108": {
+      "hash": "6123e5e8407b",
+      "answer": "Cundiboyacense plateau",
+      "concept": "Cundiboyacense plateau"
+    },
+    "q-5109": {
+      "hash": "e8c10eb1ddae",
+      "answer": "Konrad Theodor Preuss",
+      "concept": "Konrad Theodor Preuss"
+    },
+    "q-5110": {
+      "hash": "406378d1c289",
+      "answer": "José Asunción Silva",
+      "concept": "José Asunción Silva"
+    },
+    "q-5111": {
+      "hash": "a9c1e7d4a774",
+      "answer": "Ezequiel Rojas",
+      "concept": "Ezequiel Rojas"
+    },
+    "q-5112": {
+      "hash": "d962a229f55e",
+      "answer": "Llorente vase",
+      "concept": "Llorente vase"
+    },
+    "q-5113": {
+      "hash": "0be0509fe8ed",
+      "answer": "Slavery",
+      "concept": "José Hilario López"
+    },
+    "q-5114": {
+      "hash": "58615b122758",
+      "answer": "Theodore Roosevelt",
+      "concept": "Theodore Roosevelt"
+    },
+    "q-5115": {
+      "hash": "7b3e939b7e91",
+      "answer": "United Fruit Company",
+      "concept": "United Fruit Company"
+    },
+    "q-5116": {
+      "hash": "6abb16ce0bf8",
+      "answer": "El Cacique de La Junta",
+      "concept": "Diomedes Díaz"
+    },
+    "q-5117": {
+      "hash": "ac5074d4ba35",
+      "answer": "Chicken pie",
+      "concept": "Chicken pie"
+    },
+    "q-5118": {
+      "hash": "3f9b0ecd5b90",
+      "answer": "Breaded pressure-fried chicken",
+      "concept": "Broasted chicken"
+    },
+    "q-5119": {
+      "hash": "7cdf40a23682",
+      "answer": "Antioquia",
+      "concept": "Bandeja paisa"
+    },
+    "q-5120": {
+      "hash": "0ae4bd113ef0",
+      "answer": "Sheep wool",
+      "concept": "Boyacá"
+    },
+    "q-5121": {
+      "hash": "b63ab20bfb33",
+      "answer": "A beer",
+      "concept": "La Pola"
+    },
+    "q-5122": {
+      "hash": "bcb7ce55ae8f",
+      "answer": "1998",
+      "concept": "Private channels"
+    },
+    "q-5123": {
+      "hash": "8dbe622b0339",
+      "answer": "2022",
+      "concept": "Norma Elizondo"
+    },
+    "q-5124": {
+      "hash": "72bfa80309fd",
+      "answer": "Playing Betty, la fea",
+      "concept": "Amparo Grisales"
+    },
+    "q-5125": {
+      "hash": "6e761af92397",
+      "answer": "A betting game with numbers",
+      "concept": "Rigo"
+    },
+    "q-5126": {
+      "hash": "bbb96bb7eced",
+      "answer": "2",
+      "concept": "Dice"
+    },
+    "q-5127": {
+      "hash": "e4cdbeaff115",
+      "answer": "A bazaar",
+      "concept": "Kermesse"
+    },
+    "q-5128": {
+      "hash": "00c10ecd298d",
+      "answer": "It is kite-flying season",
+      "concept": "August winds"
+    },
+    "q-5129": {
+      "hash": "d2fd7699717d",
+      "answer": "4",
+      "concept": "Parcheesi"
+    },
+    "q-5130": {
+      "hash": "ed908df14261",
+      "answer": "Carlos Calero",
+      "concept": "Carlos Calero"
+    },
+    "q-5131": {
+      "hash": "c1f88f7cdad7",
+      "answer": "Manuel Teodoro",
+      "concept": "Séptimo día"
+    },
+    "q-5132": {
+      "hash": "713066a9888d",
+      "answer": "Miss Colombia",
+      "concept": "National Beauty Pageant"
+    },
+    "q-5133": {
+      "hash": "611753203269",
+      "answer": "An android",
+      "concept": "Yo soy Franky"
+    },
+    "q-5134": {
+      "hash": "439c055e3d08",
+      "answer": "Pacific coast",
+      "concept": "Guillermina y Candelario"
+    },
+    "q-5135": {
+      "hash": "64e68f9b86cb",
+      "answer": "Vallenato King",
+      "concept": "Vallenato King"
+    },
+    "q-5136": {
+      "hash": "c25a52ef71d8",
+      "answer": "Patillal",
+      "concept": "Patillal"
+    },
+    "q-5137": {
+      "hash": "d587edf2a912",
+      "answer": "Cacica",
+      "concept": "Vallenato Legend Festival Foundation"
+    },
+    "q-5138": {
+      "hash": "4bd0348b0fa8",
+      "answer": "Little shepherdess",
+      "concept": "Pastorcita perdió sus ovejas"
+    },
+    "q-5139": {
+      "hash": "bdc4e55ad3c9",
+      "answer": "Gabriel García Márquez",
+      "concept": "El Heraldo"
+    },
+    "q-5140": {
+      "hash": "4e7a4b79d361",
+      "answer": "Pig",
+      "concept": "Piggy bank"
+    },
+    "q-5141": {
+      "hash": "19845b7f582a",
+      "answer": "Because it stores and provides the water they drink",
+      "concept": "Páramo"
+    },
+    "q-5142": {
+      "hash": "a858d86bd74f",
+      "answer": "Medicines",
+      "concept": "MK"
+    },
+    "q-5143": {
+      "hash": "6c21a29ec400",
+      "answer": "Red",
+      "concept": "Davivienda"
+    },
+    "q-5144": {
+      "hash": "882d8c1a69ae",
+      "answer": "Alpina",
+      "concept": "Alpina"
+    },
+    "q-5145": {
+      "hash": "9d001be1f68e",
+      "answer": "Coffee",
+      "concept": "Café de Colombia (designation of origin)"
+    },
+    "q-5146": {
+      "hash": "e81f91aef4ea",
+      "answer": "Barranquilla",
+      "concept": "Olímpica"
+    },
+    "q-5147": {
+      "hash": "700439a53e1f",
+      "answer": "Donkey",
+      "concept": "Juan Valdez logo"
+    },
+    "q-5148": {
+      "hash": "b4fb490fb35f",
+      "answer": "Rubén Mendoza",
+      "concept": "Rubén Mendoza"
+    },
+    "q-5149": {
+      "hash": "2bbf4c8fc53b",
+      "answer": "Harold Trompetero",
+      "concept": "Harold Trompetero"
+    },
+    "q-5150": {
+      "hash": "9b9f72890932",
+      "answer": "Mexico",
+      "concept": "Michael Douglas"
+    },
+    "q-5151": {
+      "hash": "b18bd35795de",
+      "answer": "Mud",
+      "concept": "Mud"
+    },
+    "q-5152": {
+      "hash": "3439909a285f",
+      "answer": "A metal piece on the heel of the boot",
+      "concept": "Spurs"
+    },
+    "q-5153": {
+      "hash": "410204092852",
+      "answer": "A group of costumed people dancing together",
+      "concept": "Comparsa"
+    },
+    "q-5154": {
+      "hash": "913fc1646a03",
+      "answer": "San Juan costume",
+      "concept": "Huila San Juan costume"
+    },
+    "q-5155": {
+      "hash": "50f6daf148dd",
+      "answer": "Basket",
+      "concept": "Basket"
+    },
+    "q-5156": {
+      "hash": "54e8b09f5b3c",
+      "answer": "Moisés Arias",
+      "concept": "Moisés Arias"
+    },
+    "q-5157": {
+      "hash": "ae00554ba440",
+      "answer": "Stephanie Beatriz",
+      "concept": "Stephanie Beatriz"
+    },
+    "q-5158": {
+      "hash": "38059e41e5be",
+      "answer": "Has a can instead of a leg",
+      "concept": "El Patetarro"
+    },
+    "q-5159": {
+      "hash": "b18d6efba5b3",
+      "answer": "Those who harm the forest and its animals",
+      "concept": "El Hojarasquín del Monte"
+    },
+    "q-5160": {
+      "hash": "c7fc21a824a9",
+      "answer": "A duel of improvised verses",
+      "concept": "Florentino and the Devil"
+    },
+    "q-5161": {
+      "hash": "66b2f9937a4c",
+      "answer": "Opita accent",
+      "concept": "Opita accent"
+    },
+    "q-5162": {
+      "hash": "95ab4ee81200",
+      "answer": "their territories",
+      "concept": "Official language"
+    },
+    "q-5163": {
+      "hash": "b1d1481304ff",
+      "answer": "A fish and snail soup",
+      "concept": "Raizal people"
+    },
+    "q-5164": {
+      "hash": "78244a2e8d2e",
+      "answer": "Quechua",
+      "concept": "Quechua"
+    },
+    "q-5165": {
+      "hash": "cb414c4fe619",
+      "answer": "1846",
+      "concept": "Bolívar statue in Plaza de Bolívar"
+    },
+    "q-5166": {
+      "hash": "6281a3fe8978",
+      "answer": "J Balvin",
+      "concept": "J Balvin"
+    },
+    "q-5167": {
+      "hash": "ba9587587c70",
+      "answer": "Rio de Janeiro",
+      "concept": "Óscar Figueroa"
+    },
+    "q-5168": {
+      "hash": "d5fcb27a7c76",
+      "answer": "Bogotá",
+      "concept": "Andrés Cepeda"
+    },
+    "q-5169": {
+      "hash": "35b47462954a",
+      "answer": "Lucho",
+      "concept": "Luis Díaz"
+    },
+    "q-5170": {
+      "hash": "94ab00a43097",
+      "answer": "Juan Reyes",
+      "concept": "Pasión de gavilanes"
+    },
+    "q-5171": {
+      "hash": "78c9d92cc008",
+      "answer": "Tongue twister",
+      "concept": "Tongue twister"
+    },
+    "q-5172": {
+      "hash": "30c0ae435ada",
+      "answer": "Avocado",
+      "concept": "Riddle"
+    },
+    "q-5173": {
+      "hash": "2579265ee387",
+      "answer": "Cunning",
+      "concept": "Cunning"
+    },
+    "q-5174": {
+      "hash": "9e4e886af8e2",
+      "answer": "Banana",
+      "concept": "Oro parece, plata no es"
+    },
+    "q-5175": {
+      "hash": "ead2931bf98f",
+      "answer": "Michín",
+      "concept": "Michín"
+    },
+    "q-5176": {
+      "hash": "8f2380b44eb6",
+      "answer": "Nicky Jam",
+      "concept": "Nicky Jam"
+    },
+    "q-5177": {
+      "hash": "1a24ff137622",
+      "answer": "Mustache",
+      "concept": "Camilo"
+    },
+    "q-5178": {
+      "hash": "ec440c7dbc05",
+      "answer": "Night of the Little Candles",
+      "concept": "Night of the Little Candles"
+    },
+    "q-5179": {
+      "hash": "0075cb59da32",
+      "answer": "With gold dust",
+      "concept": "Gold dust"
+    },
+    "q-5180": {
+      "hash": "8a986f440efb",
+      "answer": "Chili pepper",
+      "concept": "Chili pepper"
+    },
+    "q-5181": {
+      "hash": "045b676ded21",
+      "answer": "Fountain of Lavapatas",
+      "concept": "Fountain of Lavapatas"
+    },
+    "q-5182": {
+      "hash": "c18681031afe",
+      "answer": "Tolima",
+      "concept": "La Chamba pottery"
+    },
+    "q-5183": {
+      "hash": "a2a22e25fed5",
+      "answer": "Of reeds",
+      "concept": "Juan Rodríguez Freyle"
+    },
+    "q-5184": {
+      "hash": "31949356aba7",
+      "answer": "The one that fell on the floor",
+      "concept": "What doesn't kill you makes you fat"
+    },
+    "q-5185": {
+      "hash": "425b1f5cd68d",
+      "answer": "Heart that does not feel",
+      "concept": "Out of sight, out of mind"
+    },
+    "q-5186": {
+      "hash": "fa391dbafc84",
+      "answer": "The one who gets up early",
+      "concept": "God helps those who rise early"
+    },
+    "q-5187": {
+      "hash": "50f8dac923f6",
+      "answer": "The goal",
+      "concept": "Goalkeeper"
+    },
+    "q-5188": {
+      "hash": "4169797d0520",
+      "answer": "Ciclovía",
+      "concept": "Bogotá Ciclovía"
+    },
+    "q-5189": {
+      "hash": "5c6acb53af97",
+      "answer": "Living beings and their ecosystems",
+      "concept": "Humboldt Institute"
+    },
+    "q-5190": {
+      "hash": "4ae4c60a7442",
+      "answer": "Tres leches",
+      "concept": "Tres leches cake"
+    },
+    "q-5191": {
+      "hash": "2e6ee75e8db1",
+      "answer": "Market square",
+      "concept": "Market square"
+    },
+    "q-5192": {
+      "hash": "c30581fd187c",
+      "answer": "Tomato",
+      "concept": "Turning red as a tomato"
+    },
+    "q-5193": {
+      "hash": "6a52fc3781a6",
+      "answer": "Stone",
+      "concept": "Sacar la piedra"
+    },
+    "q-5194": {
+      "hash": "d2bad7c2dde6",
+      "answer": "Parrot",
+      "concept": "Dar lora"
+    },
+    "q-5195": {
+      "hash": "f2cac66d4cb3",
+      "answer": "People who don't use their trade at home",
+      "concept": "The cobbler's children go barefoot"
+    },
+    "q-5196": {
+      "hash": "f837fdfdef4f",
+      "answer": "Mapalé",
+      "concept": "Dancing close"
+    },
+    "q-5197": {
+      "hash": "fc8228d0ac66",
+      "answer": "From \"mi hijo\"",
+      "concept": "Mijo"
+    },
+    "q-5198": {
+      "hash": "bb6bc15a2329",
+      "answer": "The one who says \"nos pillamos\"",
+      "concept": "Nos pillamos"
+    },
+    "q-5199": {
+      "hash": "9eba0ccc0704",
+      "answer": "Your friends",
+      "concept": "A man is known by the company he keeps"
+    },
+    "q-5200": {
+      "hash": "946fdd8fea07",
+      "answer": "Francisco José de Caldas",
+      "concept": "Francisco José de Caldas District University"
+    },
+    "q-5201": {
+      "hash": "1c5c1c79d336",
+      "answer": "1791",
+      "concept": "Papel Periódico de Santafé de Bogotá"
+    },
+    "q-5202": {
+      "hash": "d022efd7db45",
+      "answer": "Kissing bug",
+      "concept": "Chagas disease"
+    },
+    "q-5203": {
+      "hash": "fee72847909e",
+      "answer": "Mother's chest",
+      "concept": "Kangaroo mother care"
+    },
+    "q-5204": {
+      "hash": "a455dfc2bc1f",
+      "answer": "2000s",
+      "concept": "Artificial satellite"
+    },
+    "q-5205": {
+      "hash": "e656b1841b8f",
+      "answer": "2015",
+      "concept": "Zika"
+    },
+    "q-5206": {
+      "hash": "96da93a55157",
+      "answer": "Malaria",
+      "concept": "Manuel Elkin Patarroyo"
+    },
+    "q-5207": {
+      "hash": "7e507b4a6e89",
+      "answer": "Juan de la Cosa",
+      "concept": "Juan de la Cosa map"
+    },
+    "q-5208": {
+      "hash": "102c51fb4f24",
+      "answer": "19th century",
+      "concept": "National University of Colombia"
+    },
+    "q-5209": {
+      "hash": "4f9482e883ce",
+      "answer": "Caldense",
+      "concept": "Caldas Department"
+    },
+    "q-5210": {
+      "hash": "6684eb6340ab",
+      "answer": "Bon Bon Bum",
+      "concept": "Bon Bon Bum"
+    },
+    "q-5211": {
+      "hash": "0a8b1deb0af6",
+      "answer": "Diana Trujillo",
+      "concept": "Perseverance rover"
+    },
+    "q-5212": {
+      "hash": "f17bd277dbea",
+      "answer": "To wrap tamales",
+      "concept": "Banana leaf"
+    },
+    "q-5213": {
+      "hash": "fe119a5568bb",
+      "answer": "Green plantain",
+      "concept": "Green plantain"
+    },
+    "q-5214": {
+      "hash": "da16d96b0129",
+      "answer": "Wheat flour",
+      "concept": "Sliced bread"
+    },
+    "q-5215": {
+      "hash": "f8a87f589a5f",
+      "answer": "To keep drinks cold",
+      "concept": "Street vendor"
+    },
+    "q-5216": {
+      "hash": "1a630b8e63a8",
+      "answer": "A metal tool for wearing down",
+      "concept": "Comer como lima nueva"
+    },
+    "q-5217": {
+      "hash": "3a738babdf2b",
+      "answer": "Cassava",
+      "concept": "Carimañola"
+    },
+    "q-5218": {
+      "hash": "445fc1a12505",
+      "answer": "Fried plantain slices",
+      "concept": "Ripe plantain"
+    },
+    "q-5219": {
+      "hash": "5c0a7ec4cc4a",
+      "answer": "Mantecada",
+      "concept": "Mantecada"
+    },
+    "q-5220": {
+      "hash": "e884e64c8f2d",
+      "answer": "Cheese",
+      "concept": "Aguapanela"
+    },
+    "q-5221": {
+      "hash": "14b830e36413",
+      "answer": "Ear of tender corn",
+      "concept": "Chócolo"
+    },
+    "q-5222": {
+      "hash": "1c5694effba1",
+      "answer": "Rice",
+      "concept": "Masato"
+    },
+    "q-5223": {
+      "hash": "c41ee8da9b62",
+      "answer": "Cundinamarqués",
+      "concept": "Cundinamarqués"
+    },
+    "q-5224": {
+      "hash": "1d21e19f9a33",
+      "answer": "Cauca",
+      "concept": "White City"
+    },
+    "q-5225": {
+      "hash": "185e48073298",
+      "answer": "Bogotá rail",
+      "concept": "Bogotá rail"
+    },
+    "q-5226": {
+      "hash": "38c2af46eda8",
+      "answer": "A thick soup",
+      "concept": "Hen sancocho"
+    },
+    "q-5227": {
+      "hash": "5bfd0778d684",
+      "answer": "The people of Valle del Cauca",
+      "concept": "Pandebono"
+    },
+    "q-5228": {
+      "hash": "57f49b666be6",
+      "answer": "Juan Pablo Raba",
+      "concept": "Juan Pablo Raba"
+    },
+    "q-5229": {
+      "hash": "c68c8fc04eb5",
+      "answer": "Showing off and pretending to be more than you are",
+      "concept": "Pedro Coral Tavera"
+    },
+    "q-5230": {
+      "hash": "b246cc8ab248",
+      "answer": "Julián Arango",
+      "concept": "Julián Arango"
+    },
+    "q-5231": {
+      "hash": "15d68345de8c",
+      "answer": "Angélica Vale",
+      "concept": "La fea más bella"
+    },
+    "q-5232": {
+      "hash": "81e79e48b988",
+      "answer": "Strike!",
+      "concept": "Ten-pin bowling"
+    },
+    "q-5233": {
+      "hash": "815174e3eb45",
+      "answer": "A kite",
+      "concept": "Kite"
+    },
+    "q-5234": {
+      "hash": "7800252a3057",
+      "answer": "Baseball",
+      "concept": "Soda bottle caps"
+    },
+    "q-5235": {
+      "hash": "c1d63a17cfae",
+      "answer": "They lower their arms to block the way",
+      "concept": "Cat and mouse"
+    },
+    "q-5236": {
+      "hash": "43062738b4f2",
+      "answer": "A forfeit",
+      "concept": "Tingo tingo tango"
+    },
+    "q-5237": {
+      "hash": "c8973303c64c",
+      "answer": "Pacific Ocean",
+      "concept": "Port of Buenaventura"
+    },
+    "q-5238": {
+      "hash": "29b1ceb97bee",
+      "answer": "Arví Park",
+      "concept": "Arví Park"
+    },
+    "q-5239": {
+      "hash": "af54449c1214",
+      "answer": "A puncture",
+      "concept": "Puncture"
+    },
+    "q-5240": {
+      "hash": "1ad591662303",
+      "answer": "About 3150 meters",
+      "concept": "Monserrate cable car"
+    },
+    "q-5241": {
+      "hash": "63ccf4a8c349",
+      "answer": "The last digit",
+      "concept": "License plate"
+    },
+    "q-5242": {
+      "hash": "1938d2c50f85",
+      "answer": "Parking lot",
+      "concept": "Parking lot"
+    },
+    "q-5243": {
+      "hash": "5b89c52e6bf8",
+      "answer": "In an off-road vehicle",
+      "concept": "Campero"
+    },
+    "q-5244": {
+      "hash": "e0558aae6767",
+      "answer": "The driver",
+      "concept": "Bus bell"
+    },
+    "q-5245": {
+      "hash": "97da2d8e1e98",
+      "answer": "Minibus",
+      "concept": "Minibus"
+    },
+    "q-5246": {
+      "hash": "f3d9d0587392",
+      "answer": "Hollman Morris",
+      "concept": "Contravía"
+    },
+    "q-5247": {
+      "hash": "ca3b22359516",
+      "answer": "2004",
+      "concept": "Desafío"
+    },
+    "q-5248": {
+      "hash": "4e1b8ace5e76",
+      "answer": "Margarita Rosa de Francisco",
+      "concept": "Expedición Robinson"
+    },
+    "q-5249": {
+      "hash": "b18a35a6ae43",
+      "answer": "Claudia Bahamón",
+      "concept": "MasterChef Celebrity Colombia"
+    },
+    "q-5250": {
+      "hash": "92864e6c1937",
+      "answer": "2004",
+      "concept": "Married with Children"
+    },
+    "q-5251": {
+      "hash": "a084cdbc7e71",
+      "answer": "2015",
+      "concept": "UNESCO"
+    },
+    "q-5252": {
+      "hash": "d84104594f17",
+      "answer": "Rafael Orozco, el ídolo",
+      "concept": "Rafael Orozco, el ídolo"
+    },
+    "q-5253": {
+      "hash": "923616b0b526",
+      "answer": "The Gypsies",
+      "concept": "The gypsies' ice"
+    },
+    "q-5254": {
+      "hash": "6abd09f0e508",
+      "answer": "Simón el bobito",
+      "concept": "Simón el bobito called the pastry cook"
+    },
+    "q-5255": {
+      "hash": "a0fe3f09becd",
+      "answer": "Mauricio Babilonia",
+      "concept": "Yellow butterflies"
+    },
+    "q-5256": {
+      "hash": "94acd3c38abc",
+      "answer": "Aureliano Segundo",
+      "concept": "Aureliano Segundo"
+    },
+    "q-5257": {
+      "hash": "995198ca7d84",
+      "answer": "Amaranta",
+      "concept": "Amaranta"
+    },
+    "q-5258": {
+      "hash": "8d65cc200528",
+      "answer": "51 years, 9 months and 4 days",
+      "concept": "It was inevitable: the smell of bitter almonds"
+    },
+    "q-5259": {
+      "hash": "ddb72f2bf02c",
+      "answer": "The 1930s",
+      "concept": "Eduardo Carranza"
+    },
+    "q-5260": {
+      "hash": "d23881b20944",
+      "answer": "Pedro Gómez Valderrama",
+      "concept": "La otra raya del tigre"
     }
   }
 }

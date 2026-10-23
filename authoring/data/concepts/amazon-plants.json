@@ -545,7 +545,8 @@
     {
       "name": "Escalera de mono",
       "facet": "Plantas carnívoras, trepadoras y estranguladoras",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: The monkey ladder vine is too obscure, and a photo question would be a guess about what group it belongs to."
     },
     {
       "name": "Utricularia",
@@ -788,7 +789,8 @@
     {
       "name": "Rubber tree",
       "facet": "Árboles gigantes de la selva",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Latex, the rubber boom and what rubber comes from are already in the pool; the remaining options would repeat them."
     },
     {
       "name": "Big-leaf mahogany",
@@ -1187,7 +1189,8 @@
     {
       "name": "Shaman",
       "facet": "Pueblos indígenas y sus plantas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The basic shaman question is already asked; the word's Siberian origin is far too hard for level 4."
     },
     {
       "name": "Blowgun",

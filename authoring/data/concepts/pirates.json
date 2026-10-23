@@ -115,7 +115,8 @@
     {
       "name": "Edward Low",
       "facet": "Piratas famosos de la historia",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Edward Low is mainly known for cruelty; there is no family-friendly, fair fact at this level."
     },
     {
       "name": "Olivier Levasseur",
@@ -215,7 +216,8 @@
     {
       "name": "Mapa del tesoro",
       "facet": "Armas, tesoros y objetos piratas",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: The X on the map and Stevenson's map are already asked; the 'who' option would repeat 'a pirate' from slot 10."
     },
     {
       "name": "Doblón",
