@@ -66,7 +66,8 @@
     {
       "name": "Más vale tarde que nunca",
       "facet": "Refranes de la abuela",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: La pregunta de significado ya existe; las otras opciones darían preguntas forzadas"
     },
     {
       "name": "Al mal tiempo, buena cara",
@@ -501,7 +502,8 @@
     {
       "name": "Ni de fundas",
       "facet": "Frases para quejarse y regañar",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: No estoy seguro del origen ni de qué tan colombiana es la expresión; las opciones (origen/lugar, quién) no encajan"
     },
     {
       "name": "Sacar a bailar",

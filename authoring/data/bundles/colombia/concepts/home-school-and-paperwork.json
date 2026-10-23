@@ -96,7 +96,8 @@
     {
       "name": "Trapear",
       "facet": "Oficio y rutinas del hogar",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: El pool ya pregunta para qué sirve el trapero; las opciones de secuencia con lugar son forzadas."
     },
     {
       "name": "Barrer",
