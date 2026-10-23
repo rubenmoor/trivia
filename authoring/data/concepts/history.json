@@ -495,7 +495,8 @@
     {
       "name": "Mummification",
       "facet": "Daily life in the past",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The existing question already gives away the easy facts: Egyptians, mummy. Nothing easy is left."
     },
     {
       "name": "Quill pen",
@@ -571,7 +572,8 @@
     {
       "name": "Mother Teresa",
       "facet": "Famous historical figures",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The existing riddle already covers who she was. There is no other easy fact about Mother Teresa."
     },
     {
       "name": "Siddhartha Gautama",

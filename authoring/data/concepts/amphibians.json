@@ -409,7 +409,8 @@
     {
       "name": "Masa gelatinosa de huevos",
       "facet": "Metamorfosis y ciclo de vida",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Frog eggs as jelly clumps and foam are already in the pool twice."
     },
     {
       "name": "Ranita juvenil",
@@ -434,12 +435,14 @@
     {
       "name": "Branquias",
       "facet": "Piel, cuerpo y respiración",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Gills are already asked (fish breathing, axolotl gills); a group-answer detail photo would be forced."
     },
     {
       "name": "Lengua pegajosa",
       "facet": "Piel, cuerpo y respiración",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: The tongue catching insects is already asked; asking which body part catches bugs is the same fact turned around."
     },
     {
       "name": "Tímpano",

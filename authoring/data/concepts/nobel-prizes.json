@@ -81,7 +81,8 @@
     {
       "name": "Detonador",
       "facet": "Alfred Nobel y su historia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: A detonator count or identification question at difficulty 1 is forced and not family-friendly."
     },
     {
       "name": "Gelignita",
@@ -574,7 +575,8 @@
     {
       "name": "Angus Deaton",
       "facet": "Nobel de Economía",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Deaton's work on poverty and consumption gives no fair, fun family question with these options."
     },
     {
       "name": "Robert Solow",
@@ -777,7 +779,8 @@
     {
       "name": "Diploma Nobel",
       "facet": "Ceremonia, medalla y tradiciones",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: No question about the Nobel diploma works at difficulty 1, and the award date is already in the pool."
     },
     {
       "name": "10 de diciembre",

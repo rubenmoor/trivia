@@ -472,7 +472,8 @@
     {
       "name": "Hacha de Gimli",
       "facet": "Anillos, armas y objetos mágicos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The pool already links Gimli to his axe, and none of the options gives a fresh question at difficulty 1."
     },
     {
       "name": "Arco de Legolas",

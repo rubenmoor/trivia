@@ -12,7 +12,8 @@
     "Art nouveau y art déco",
     "Modernismo y arquitectos del siglo XX",
     "Rascacielos y arquitectura contemporánea",
-    "Elementos y términos arquitectónicos"
+    "Elementos y términos arquitectónicos",
+    "Traditional homes around the world"
   ],
   "axis_fit": {
     "move": {
@@ -444,6 +445,83 @@
       "name": "Escalera de caracol",
       "facet": "Elementos y términos arquitectónicos",
       "known_at": 3
+    },
+    {
+      "name": "Flying buttress",
+      "facet": "Románico y gótico",
+      "known_at": 12
+    },
+    {
+      "name": "Rose window",
+      "facet": "Románico y gótico",
+      "known_at": 10
+    },
+    {
+      "name": "St Paul's Cathedral",
+      "facet": "Renacimiento y barroco",
+      "known_at": 11
+    },
+    {
+      "name": "Mosque-Cathedral of Córdoba",
+      "facet": "Arquitectura islámica y mudéjar",
+      "known_at": 12
+    },
+    {
+      "name": "Inca stone walls",
+      "facet": "Arquitectura precolombina",
+      "known_at": 9
+    },
+    {
+      "name": "Arc de Triomphe",
+      "facet": "Neoclásico e historicismo",
+      "known_at": 6
+    },
+    {
+      "name": "Palace of Westminster",
+      "facet": "Neoclásico e historicismo",
+      "known_at": 8
+    },
+    {
+      "name": "Brutalism",
+      "facet": "Modernismo y arquitectos del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Arch",
+      "facet": "Elementos y términos arquitectónicos",
+      "known_at": 3
+    },
+    {
+      "name": "Facade",
+      "facet": "Elementos y términos arquitectónicos",
+      "known_at": 9
+    },
+    {
+      "name": "Cantilever",
+      "facet": "Elementos y términos arquitectónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Yurt",
+      "facet": "Traditional homes around the world",
+      "known_at": 8
+    },
+    {
+      "name": "Stilt house",
+      "facet": "Traditional homes around the world",
+      "known_at": 4
+    },
+    {
+      "name": "Tipi",
+      "facet": "Traditional homes around the world",
+      "known_at": 3
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-23",
+      "added": 14,
+      "unused": 35
     }
   ]
 }

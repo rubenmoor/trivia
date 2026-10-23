@@ -336,7 +336,8 @@
     {
       "name": "Light bulb",
       "facet": "Electricity and magnetism",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Easy light bulb facts already asked; options are forced (place/person answers)."
     },
     {
       "name": "Battery",
@@ -426,7 +427,8 @@
     {
       "name": "Solid",
       "facet": "States of matter",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Easy 'which state is it' question already exists; other options (time answers) are forced."
     },
     {
       "name": "Liquid",
@@ -971,7 +973,8 @@
     {
       "name": "Stopwatch",
       "facet": "Units and measurement",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Stopwatch identify question exists; purpose question would repeat it, place answers don't fit."
     },
     {
       "name": "Meter",

@@ -66,7 +66,8 @@
     {
       "name": "12 de octubre de 1492",
       "facet": "Viajes de Colón y llegada a América",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Landing in America in 1492, three ships and October 12 are already covered; nothing new at level 1."
     },
     {
       "name": "Día de la Raza",
@@ -425,7 +426,8 @@
     {
       "name": "Christopher Columbus",
       "facet": "Viajes de Colón y llegada a América",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Columbus is heavily covered (1492, three ships, West Indies/Asia, egg anecdote); the options give no new level-1 fact."
     },
     {
       "name": "Santa María (ship)",
@@ -642,7 +644,8 @@
     {
       "name": "Pacific Ocean",
       "facet": "Vueltas al mundo y navegantes",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Largest, typhoons and crossings already asked; Magellan's 'peaceful' naming is around level 6, too far from target."
     },
     {
       "name": "HMS Endeavour",
@@ -814,7 +817,8 @@
     {
       "name": "Antarctica",
       "facet": "Exploración polar",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Coldest record already asked; other records (largest desert, most fresh water) are far above level 1."
     },
     {
       "name": "Arctic Ocean",
@@ -1258,7 +1262,8 @@
     {
       "name": "Great Pyramid of Giza",
       "facet": "Descubrimientos arqueológicos famosos",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Many Great Pyramid facts already asked; the count option is ambiguous (the faces are slightly concave), and the 'only Ancient Wonder still standing' record is around level 5."
     },
     {
       "name": "Terracotta Army",
@@ -1303,7 +1308,8 @@
     {
       "name": "Moai of Easter Island",
       "facet": "Descubrimientos arqueológicos famosos",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Name and island already asked; nothing else about moai works at difficulty 1 with these options."
     },
     {
       "name": "Nazca Lines",

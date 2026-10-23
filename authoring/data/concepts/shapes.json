@@ -336,7 +336,8 @@
     {
       "name": "Señal de pare",
       "facet": "Formas en objetos cotidianos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The pool already asks for the stop sign's shape (octagon), so counting its sides would repeat that fact."
     },
     {
       "name": "Señal de ceda el paso",

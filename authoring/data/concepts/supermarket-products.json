@@ -488,7 +488,8 @@
     {
       "name": "Baygon",
       "facet": "Aseo y limpieza del hogar",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: Baygon is a regional insecticide brand, unknown in many countries and not kid-friendly as a topic."
     },
     {
       "name": "Papel higiénico Familia",
@@ -555,7 +556,8 @@
     {
       "name": "Protex",
       "facet": "Higiene y cuidado personal",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: Protex is mostly a Latin American brand that families everywhere don't know."
     },
     {
       "name": "Pequeñín",

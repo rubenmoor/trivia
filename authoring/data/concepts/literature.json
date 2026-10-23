@@ -690,7 +690,8 @@
     {
       "name": "Trabalenguas",
       "facet": "Géneros y formas literarias",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Tongue twisters are already asked, they depend on the language, and the options (places, photo) don't fit."
     },
     {
       "name": "Novela gráfica",
@@ -700,7 +701,8 @@
     {
       "name": "Ciencia ficción",
       "facet": "Géneros y formas literarias",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Asking what science fiction is made of repeats the earlier riddle's robots and rockets clue."
     },
     {
       "name": "Novela policíaca",
@@ -885,7 +887,8 @@
     {
       "name": "Antónimo",
       "facet": "Figuras retóricas y recursos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The pool already asks for the term; the only option that fits asks the same fact again."
     },
     {
       "name": "Palíndromo",
