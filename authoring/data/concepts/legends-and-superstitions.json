@@ -234,7 +234,8 @@
     {
       "name": "Pasar debajo de una escalera",
       "facet": "Supersticiones de mala suerte",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The pool already asks that walking under a ladder brings bad luck. The origin theories are uncertain, and none of the options fit."
     },
     {
       "name": "Romper un espejo",
@@ -1066,7 +1067,8 @@
     {
       "name": "Easter Bunny",
       "facet": "Héroes y personajes legendarios",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: At difficulty 1, the questions left (who hides the eggs, what he brings) repeat the one already asked."
     },
     {
       "name": "Sandman",

@@ -627,7 +627,8 @@
     {
       "name": "Armador",
       "facet": "Oficios y vida a bordo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Shipowner (armador) is a dry term with no fair level-15 question from these options."
     }
   ]
 }

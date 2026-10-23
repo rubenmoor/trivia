@@ -343,6 +343,88 @@
       "name": "Terry Pratchett",
       "facet": "Autores y creadores de fantasía",
       "known_at": 14
+    },
+    {
+      "name": "Frodo Baggins",
+      "facet": "Sagas épicas y Tierra Media",
+      "known_at": 4
+    },
+    {
+      "name": "Toothless",
+      "facet": "Criaturas mágicas y dragones",
+      "known_at": 3
+    },
+    {
+      "name": "Basilisk",
+      "facet": "Criaturas mágicas y dragones",
+      "known_at": 8
+    },
+    {
+      "name": "One Ring",
+      "facet": "Objetos y armas mágicas",
+      "known_at": 3
+    },
+    {
+      "name": "Elder Wand",
+      "facet": "Objetos y armas mágicas",
+      "known_at": 6
+    },
+    {
+      "name": "Invisibility Cloak",
+      "facet": "Objetos y armas mágicas",
+      "known_at": 4
+    },
+    {
+      "name": "Golden Snitch",
+      "facet": "Objetos y armas mágicas",
+      "known_at": 4
+    },
+    {
+      "name": "Ruby slippers",
+      "facet": "Objetos y armas mágicas",
+      "known_at": 9
+    },
+    {
+      "name": "Neverland",
+      "facet": "Mundos y reinos imaginarios",
+      "known_at": 3
+    },
+    {
+      "name": "Wonderland",
+      "facet": "Mundos y reinos imaginarios",
+      "known_at": 4
+    },
+    {
+      "name": "Wicked Witch of the West",
+      "facet": "Villanos, brujas y hechiceros",
+      "known_at": 6
+    },
+    {
+      "name": "White Witch",
+      "facet": "Villanos, brujas y hechiceros",
+      "known_at": 8
+    },
+    {
+      "name": "Hercules (Disney film)",
+      "facet": "Mitología en el cine y series",
+      "known_at": 4
+    },
+    {
+      "name": "Game of Thrones",
+      "facet": "Fantasía en series y videojuegos",
+      "known_at": 10
+    },
+    {
+      "name": "Avatar: The Last Airbender",
+      "facet": "Fantasía en series y videojuegos",
+      "known_at": 6
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-22",
+      "added": 15,
+      "unused": 44
     }
   ]
 }

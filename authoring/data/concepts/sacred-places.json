@@ -429,6 +429,138 @@
       "name": "Mausoleo de Augusto",
       "facet": "Monasterios, mausoleos y tumbas",
       "known_at": 14
+    },
+    {
+      "name": "Hagia Sophia",
+      "facet": "Iglesias y catedrales cristianas",
+      "known_at": 9
+    },
+    {
+      "name": "Masjid al-Haram",
+      "facet": "Mezquitas y lugares del islam",
+      "known_at": 10
+    },
+    {
+      "name": "Great Mosque of Djenné",
+      "facet": "Mezquitas y lugares del islam",
+      "known_at": 12
+    },
+    {
+      "name": "Golden Temple of Amritsar",
+      "facet": "Templos hindúes, budistas y sintoístas",
+      "known_at": 10
+    },
+    {
+      "name": "Kinkaku-ji",
+      "facet": "Templos hindúes, budistas y sintoístas",
+      "known_at": 10
+    },
+    {
+      "name": "Itsukushima Shrine",
+      "facet": "Templos hindúes, budistas y sintoístas",
+      "known_at": 11
+    },
+    {
+      "name": "Shwedagon Pagoda",
+      "facet": "Templos hindúes, budistas y sintoístas",
+      "known_at": 12
+    },
+    {
+      "name": "Leshan Giant Buddha",
+      "facet": "Templos hindúes, budistas y sintoístas",
+      "known_at": 10
+    },
+    {
+      "name": "Western Wall",
+      "facet": "Jerusalén y Tierra Santa",
+      "known_at": 8
+    },
+    {
+      "name": "Bethlehem",
+      "facet": "Jerusalén y Tierra Santa",
+      "known_at": 3
+    },
+    {
+      "name": "Nazareth",
+      "facet": "Jerusalén y Tierra Santa",
+      "known_at": 6
+    },
+    {
+      "name": "Jordan River",
+      "facet": "Jerusalén y Tierra Santa",
+      "known_at": 7
+    },
+    {
+      "name": "Sea of Galilee",
+      "facet": "Jerusalén y Tierra Santa",
+      "known_at": 8
+    },
+    {
+      "name": "Pantheon of Rome",
+      "facet": "Templos del mundo antiguo",
+      "known_at": 8
+    },
+    {
+      "name": "Temple of Karnak",
+      "facet": "Templos del mundo antiguo",
+      "known_at": 11
+    },
+    {
+      "name": "Oracle of Delphi",
+      "facet": "Templos del mundo antiguo",
+      "known_at": 10
+    },
+    {
+      "name": "Temple of Artemis at Ephesus",
+      "facet": "Templos del mundo antiguo",
+      "known_at": 11
+    },
+    {
+      "name": "Sacred Cenote",
+      "facet": "Lugares sagrados precolombinos",
+      "known_at": 11
+    },
+    {
+      "name": "Ganges River",
+      "facet": "Montañas, ríos y naturaleza sagrada",
+      "known_at": 7
+    },
+    {
+      "name": "Bodhi Tree",
+      "facet": "Montañas, ríos y naturaleza sagrada",
+      "known_at": 10
+    },
+    {
+      "name": "Stained glass window",
+      "facet": "Partes y objetos del templo",
+      "known_at": 5
+    },
+    {
+      "name": "Bell tower",
+      "facet": "Partes y objetos del templo",
+      "known_at": 4
+    },
+    {
+      "name": "Menorah",
+      "facet": "Partes y objetos del templo",
+      "known_at": 9
+    },
+    {
+      "name": "Stupa",
+      "facet": "Partes y objetos del templo",
+      "known_at": 12
+    },
+    {
+      "name": "Prayer wheel",
+      "facet": "Partes y objetos del templo",
+      "known_at": 10
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-22",
+      "added": 25,
+      "unused": 49
     }
   ]
 }

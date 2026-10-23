@@ -779,7 +779,8 @@
     {
       "name": "Bandera blanca",
       "facet": "Banderas de organizaciones y señales",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The pool already has the main fact (white flag means “we give up”), and the options give no good second question."
     },
     {
       "name": "Cruz Roja",

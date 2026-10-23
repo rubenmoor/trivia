@@ -638,7 +638,8 @@
     {
       "name": "Queso en cubos",
       "facet": "Quesos en la cocina diaria",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: Cheese cubes give only trivial filler (cheese is dairy/made from milk); none of the options gives a real question."
     },
     {
       "name": "Queso en tiras",

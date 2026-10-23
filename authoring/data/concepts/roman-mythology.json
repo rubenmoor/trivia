@@ -256,7 +256,8 @@
     {
       "name": "Planeta Júpiter",
       "facet": "Planetas, meses y días con nombres romanos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The obvious easy Jupiter fact (largest planet) is already in the pool, and none of the options gives another level-1 question."
     },
     {
       "name": "Planeta Saturno",

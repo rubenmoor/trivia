@@ -326,7 +326,8 @@
     {
       "name": "Programa Artemis",
       "facet": "Nombres romanos y planetas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: The naming of Artemis is already asked; the remaining options would be forced or would depend on mission news that changes."
     },
     {
       "name": "Cereal",

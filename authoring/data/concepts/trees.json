@@ -636,7 +636,8 @@
     {
       "name": "De tal palo, tal astilla",
       "facet": "Palabras y dichos del árbol",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: This saying belongs to one language, and difficulty 1 doesn't work across languages with these options."
     },
     {
       "name": "Del árbol caído todos hacen leña",
@@ -677,7 +678,8 @@
     {
       "name": "Frondoso",
       "facet": "Palabras y dichos del árbol",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: “Frondoso” is an adjective from one language. In English (“leafy”) the question would be trivial or wouldn't make sense."
     },
     {
       "name": "Plantar un árbol, tener un hijo y escribir un libro",

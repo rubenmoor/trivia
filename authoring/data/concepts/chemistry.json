@@ -251,7 +251,8 @@
     {
       "name": "Gas",
       "facet": "Estados y cambios de la materia",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Gas at difficulty 1 is already covered twice, and the person/word options don't fit."
     },
     {
       "name": "Fusión",
