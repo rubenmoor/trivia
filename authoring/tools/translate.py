@@ -10,7 +10,7 @@ import media as media_tool  # authoring/tools/media.py: candidates, sheets, pick
 import targets  # authoring/tools/targets.py: pool targets (D-53)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
 
-from qgen import EXIT_HEALTH, REVIEW_URL, TRANSLATE_SCHEMA, check_bundle, check_question_shape, claude, cmd_export, cmd_factcheck, cmd_merge, cmd_rate, collect, concept_file, costs, load_age_groups, load_json, lock_run, named, natural_key, parallel, prompt, run_dir, run_steps, save_json, split_list, work_runs, write_report  # authoring/tools/qgen.py
+from qgen import REVIEW_URL, TRANSLATE_SCHEMA, check_bundle, check_question_shape, claude, cmd_export, cmd_factcheck, cmd_merge, cmd_rate, collect, concept_file, costs, load_age_groups, load_json, lock_run, named, natural_key, parallel, prompt, run_dir, run_steps, save_json, split_list, work_runs, write_report  # authoring/tools/qgen.py
 
 
 # --- translation runs (plan 66, D-81) -----------------------------------------
@@ -338,10 +338,8 @@ def cmd_translate_batch(args):
         if args.count or args.ids:
             print("(--count and --ids ignored: resuming)", flush=True)
     else:
-        if stop := health.translate_stop_reason(locale):
-            print(stop, file=sys.stderr)
-            if not args.dry_run:
-                sys.exit(EXIT_HEALTH)
+        if warn := health.translate_unacked_failure(locale):  # decision 414: warning only
+            print(warn, file=sys.stderr)
         if args.ids:
             ids, stale = split_list(args.ids), []
             src = {q["id"]: q for q in load_json(POOL)["questions"]}

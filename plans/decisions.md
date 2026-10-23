@@ -438,7 +438,7 @@ Template:
 - Consequences: `qgen batch` still takes no arguments (D-36). Batches change shape as the pool fills. pm plan 13 (Aim batches at difficulty gaps) has the tasks.
 - Supersedes / related: D-36, D-40, D-46, D-53; B-6; amended by D-84 (base past its target: the `es` source shortfall)
 
-## D-55: Batch health thresholds stop the next batch
+## D-55: Batch health thresholds stop the next batch (the stop is superseded by pm decision 414: no stop)
 - Date: 2026-10-11
 - Context: D-52 grows `base` by ~8 batches. Overlaps with the pool reach the review as `needs_work` (B-5), and nothing says when a batch got worse than the ones before (pm milestone 1, part 4).
 - Decision: `rate` judges each draft against pool questions that share its answer or concept (`no_overlap`, a hard criterion), so overlaps are dropped before merge. Every batch report gets health metrics with thresholds stored in `authoring/data/targets.json` (`batch_health`). When the last batch fails one, `qgen batch` exits 2 before drafting until the developer acknowledges it (`qgen health ack`). Threshold numbers: a pm decision of plan 15.
@@ -775,7 +775,7 @@ Template:
   - **Size:** `TRANSLATE_SIZE` 300 sources; the locale's first run (no `questions.<locale>.json` yet) is the pilot, `TRANSLATE_PILOT` 50 (QT-5).
   - **Steps:** translate (opus, chunks of 15 per subcategory, `prompts/translate.md` + `locale-<l>.md`; a regional bundle's run adds `translate-region.md` to every step's prompt, pm decision 167) → rate → factcheck (changed numbers, units, dates, records only) → merge → review 1 → fix → review 2 → record → audit → export → validate → report `authoring/reports/tr-<locale>-<n>.md`. No concepts, draft, media search or sheets; media stays the source's.
   - **Not travelling:** the translator says so instead of forcing it → no entry, `work/<run>/not-travelling.json`; review 1 confirms → `translatable: false` on the source (`questions.json`), else translated again next run.
-  - **Stop (exit 2, D-55):** only after a run failing a threshold that applies (decision 45 as amended by pm decision 313: the pilot `tr-<locale>-1` is no stop), until `qgen health ack <run> "<note>"`.
+  - **Stop (exit 2, D-55; superseded by decision 414: no stop):** only after a run failing a threshold that applies (decision 45 as amended by pm decision 313: the pilot `tr-<locale>-1` is no stop), until `qgen health ack <run> "<note>"`.
   - **Text in media** is never a problem (decision 35): no `media_text` flag, no media problem for it.
 - Consequences: RUNBOOK step 2 names `--translate`; review view per locale (plan 67); no spot check or QC per `tr-*` run since milestone 9 (developer, 2026-10-16: LLM review only). Commit lines: the locale file, `pool.<locale>.json`, the report, `questions.json` when `translatable` changed.
 - Supersedes / related: D-36 (amends), D-55, D-56, D-79, D-81, D-84; plan 66; pm decisions 35, 45, 110, 112; amended by D-107 (sources in either locale, `es` and `es-ES` as targets)
