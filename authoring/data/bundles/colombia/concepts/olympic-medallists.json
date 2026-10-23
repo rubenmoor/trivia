@@ -115,7 +115,8 @@
     {
       "name": "Medalla de bronce",
       "facet": "Primeras medallas e hitos históricos",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: 'Third place gets bronze' is already in the pool, and the other options don't work at level 1."
     },
     {
       "name": "Medallas reasignadas por dopaje",

@@ -221,7 +221,8 @@
     {
       "name": "Cabalgata de la Feria de Cali",
       "facet": "Feria de Cali",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: La pregunta que ya existe da la palabra «cabalgata» y la ciudad; además, no estoy seguro de que la cabalgata se siga haciendo."
     },
     {
       "name": "Desfile del Cali Viejo",
@@ -396,7 +397,8 @@
     {
       "name": "Descabezado",
       "facet": "Disfraces, máscaras y carrozas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: El disfraz es alguien que lleva su propia cabeza en la mano; es demasiado macabro para niños."
     },
     {
       "name": "Careta",

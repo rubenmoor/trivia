@@ -121,7 +121,8 @@
     {
       "name": "Joda",
       "facet": "Habla costeña del Caribe",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: «Joda»/«nojoda» es una palabra algo vulgar; no es buena para una pregunta familiar."
     },
     {
       "name": "Rolo",
@@ -411,7 +412,8 @@
     {
       "name": "Vos",
       "facet": "Voseo, tuteo y ustedeo",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: El voseo, «vos» frente a «tú» y quiénes dicen «vos» ya están en el pool; las opciones solo darían variantes del mismo dato."
     },
     {
       "name": "Tú",

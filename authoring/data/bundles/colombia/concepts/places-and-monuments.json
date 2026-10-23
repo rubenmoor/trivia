@@ -246,7 +246,8 @@
     {
       "name": "Catedral de Sal de Zipaquirá",
       "facet": "Iglesias, catedrales y santuarios",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Las preguntas que ya están en el pool revelan el municipio, la sal y la mina; lo que queda sería relleno."
     },
     {
       "name": "Santuario de Monserrate",
@@ -671,7 +672,8 @@
     {
       "name": "Mar de los siete colores",
       "facet": "Islas, playas y costas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: La pregunta de Malpelo que ya está en el pool dice que San Andrés es famosa por su mar de los siete colores, así que regala tanto la foto como el mapa."
     },
     {
       "name": "Capurganá",

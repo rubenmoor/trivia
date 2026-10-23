@@ -627,7 +627,8 @@
     {
       "name": "La Luna",
       "facet": "Lugares y paisajes en los billetes",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: La Luna en los billetes ya está cubierta por la pregunta de Garavito."
     }
   ]
 }
