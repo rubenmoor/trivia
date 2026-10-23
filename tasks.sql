@@ -19197,35 +19197,35 @@ Done when: the decision is answered and 15b updated; note with the table.
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
 - Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:33Z', '2026-10-16T23:16:07Z', 631, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (639, 84, 'run tr-en-2', 'work', 'open', -110, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-en-2`, up to 300 approved `base` sources of either source locale ≠ `en` into English (es → en (en-sourced are already en); plan 66, D-87; `decision 235: Source locale per question and translations from either source (English-first base)`). Translation run shape: one task, no QC task; this task adds the next run.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (639, 84, 'run tr-en-2', 'work', 'open', -110, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-en-2`, up to 300 approved `base` sources of either source locale ≠ `en` into English (es → en; en-sourced are already en; plan 66, D-87; `decision 235: Source locale per question and translations from either source (English-first base)`). Translation run shape: one task, no QC task; this task adds the next run.
 
 ## Before running
-In this order; the first that fails → `pm task-pending-decision <this task> <decision>`, stop:
-- The pilot `task 634: run tr-en-1` done (no ack, no go/no-go needed); if not, pend on the decision blocking it.
-- `plan 171: Translations without human control`''s change that drops decision 45''s pilot stop done (`pm show p171`); if not, pend on the decision blocking it, or with none stop without changes (it runs first in this work tree).
-- Plan 17''s exit check (plan 17''s last task) done; if not, pend on the decision that blocks plan 17''s earliest open task (masterplan order: milestone 1''s batches first; the queue reaches -110 only when -100 is blocked).
+- Plan 17''s exit check (plan 17''s last task) done; if not, wait for what blocks plan 17''s earliest open task (masterplan order: milestone 1''s batches first; the queue reaches -110 only when -100 is blocked): a pending decision → `pm task-pending-decision <this task> <id>`; a prerequisite task → `pm task requires <this task> <id>`; stop. Under decision 414 that blocker is never a review (spot check, QC proposals, health ack): don''t wait on one of those.
+- (The pilot `task 634: run tr-en-1` and `plan 171: Translations without human control` are done; no pre-check.)
 
 ## Run
 `nix develop -c qgen batch --translate en` (RUNBOOK steps 1–5, same command on reruns).
 
 ## After the run
-- Note: "Done:" line, report path, and from `authoring/reports/tr-en-2.md` and `qgen report --cost`: selected, translated, approved, needs_work, rejected, not travelling, $ per approved translation (information only), audit agreement, per source locale (es → en) where the report shows them.
+- Note: "Done:" line, report path, and from `authoring/reports/tr-en-2.md` and `qgen report --cost`: selected, translated, approved, needs_work, rejected, not travelling, $ per approved translation (information only), audit agreement, health result (✗ reported, not a stop), per source locale (es → en; en-sourced are already en) where the report shows them.
 - QT-6 progress line for `en` in `plans/15b-question-translation.md` (approved in `en`, `qgen report --locale en`).
 - Next, first that applies:
   1. `qgen report --locale en`: every level at `targets.json` `base` → no next run; if `en`, `de`, `es-ES` and `es` are all done: QT-6 `[x]` in 15b and `qgen report --locale <L>` for all four recorded in `plans/16-content-target.md`.
-  2. The run selected fewer than 300 sources (approved sources not yet in `en` ran out) → still add `run tr-en-3`; its body adds: start only after a plan 17 batch QC done since `tr-en-2`, else pend on the decision blocking plan 17''s earliest open task. The remaining deficit is English drafting''s (plan 148''s gap aiming), never an `es` top-up.
+  2. The run selected fewer than 300 sources (approved sources not yet in `en` ran out) → still add `run tr-en-3`; its body adds: start only after a plan 17 batch QC done since `tr-en-2`, else wait for what blocks plan 17''s earliest open task (as above). The remaining deficit is English drafting''s (plan 148''s gap aiming), never an `es` top-up.
   3. Else add `run tr-en-3` (`pm task add 84 "run tr-en-3" --worktree questions --priority -110`), body like this one with n+1.
+- A health ✗ doesn''t stop the chain: raise its decision (rules below) and add the next run like any other.
 - One open run per chain: don''t add one if one is already open.
 - needs_work: nothing (a non-approved translation is picked again by the next run).
+- No spot check, no QC task or QC decision, no `qgen health ack` by this task (milestone 9, developer 2026-10-16: the LLM translation review is a translation''s only review).
 
 Done when: `authoring/reports/tr-en-2.md` exists, printed paths staged, 15b line written, next run added (or the target noted), note with the numbers above.
 
-## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
-- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (66, 70, 148, 171 or new).
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run", `decision 414: Human reviews don''t gate question generation or translation`)
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148, 171 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
-- Exit 2 first: `pm decision list --grep "<run>: health stop"` (`<run>`: the run the stop names, e.g. an earlier batch); a pending one → `pm task-pending-decision <this task> <id>`, no new decision (the stop holds for every bundle and locale until the developer''s `qgen health ack <run>`), stage nothing, stop.
-- Exit 75, exit 2 (none pending; a decision 45 threshold crossed: the decision asks the developer for `qgen health ack <run>`), any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- No spot check, no QC task or QC decision, no `qgen health ack` by this task (milestone 9, developer 2026-10-16: the LLM translation review is a translation''s only review).', '2026-10-13T05:14:48Z', NULL, 631, 0, NULL, 'questions');
+- Health ✗ (in the output, the report or `qgen health`): `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health stop, ack?"` (or the name RUNBOOK gives once task 1699''s plan renames it), no task linked (no `pm task-pending-decision`); the task goes on. Never `qgen health ack` (the developer''s).
+- Exit 2 (health stop, while qgen still has it): a bug under decision 414. Find or raise the health decision as above, no task linked; then the qgen fix task of the plan `task 1699: write plan: Reviews don''t gate generation` writes (`pm plan list`; add it there if missing; if that plan isn''t written yet, use task 1699 itself): `pm task requires <this task> <fix id>`, stage nothing, stop.
+- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-13T05:14:48Z', NULL, 631, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (640, 84, 'QC tr-en-2', 'work', 'dropped', -110, 'plan 84 revision (milestone 9, developer 2026-10-16): no QC per tr-* run; task 639: run tr-en-2 adds the next run itself', 'Plan 84 chain 3: QC of `tr-en-2` per `authoring/QC.md` steps 1–4 and "Translation runs", then the next pair of the chain.
 
 - If task 639 (run tr-en-2) isn''t done: pend on the decision that blocks it, stop. Dropped → drop this one too.
@@ -19247,32 +19247,32 @@ Done when: both decisions answered, change tasks and the next pair (or the 15b l
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (641, 84, 'run tr-de-2', 'work', 'open', -110, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-de-2`, up to 300 approved `base` sources of either source locale ≠ `de` into German (es → de, en → de; plan 66, D-87; `decision 235: Source locale per question and translations from either source (English-first base)`). Translation run shape: one task, no QC task; this task adds the next run.
 
 ## Before running
-In this order; the first that fails → `pm task-pending-decision <this task> <decision>`, stop:
-- The pilot `task 636: run tr-de-1` done (no ack, no go/no-go needed); if not, pend on the decision blocking it.
-- `plan 171: Translations without human control`''s change that drops decision 45''s pilot stop done (`pm show p171`); if not, pend on the decision blocking it, or with none stop without changes (it runs first in this work tree).
-- Plan 17''s exit check (plan 17''s last task) done; if not, pend on the decision that blocks plan 17''s earliest open task (masterplan order: milestone 1''s batches first; the queue reaches -110 only when -100 is blocked).
+- Plan 17''s exit check (plan 17''s last task) done; if not, wait for what blocks plan 17''s earliest open task (masterplan order: milestone 1''s batches first; the queue reaches -110 only when -100 is blocked): a pending decision → `pm task-pending-decision <this task> <id>`; a prerequisite task → `pm task requires <this task> <id>`; stop. Under decision 414 that blocker is never a review (spot check, QC proposals, health ack): don''t wait on one of those.
+- (The pilot `task 636: run tr-de-1` and `plan 171: Translations without human control` are done; no pre-check.)
 
 ## Run
 `nix develop -c qgen batch --translate de` (RUNBOOK steps 1–5, same command on reruns).
 
 ## After the run
-- Note: "Done:" line, report path, and from `authoring/reports/tr-de-2.md` and `qgen report --cost`: selected, translated, approved, needs_work, rejected, not travelling, $ per approved translation (information only), audit agreement, per source locale (es → de, en → de) where the report shows them.
+- Note: "Done:" line, report path, and from `authoring/reports/tr-de-2.md` and `qgen report --cost`: selected, translated, approved, needs_work, rejected, not travelling, $ per approved translation (information only), audit agreement, health result (✗ reported, not a stop), per source locale (es → de, en → de) where the report shows them.
 - QT-6 progress line for `de` in `plans/15b-question-translation.md` (approved in `de`, `qgen report --locale de`).
 - Next, first that applies:
   1. `qgen report --locale de`: every level at `targets.json` `base` → no next run; if `en`, `de`, `es-ES` and `es` are all done: QT-6 `[x]` in 15b and `qgen report --locale <L>` for all four recorded in `plans/16-content-target.md`.
-  2. The run selected fewer than 300 sources (approved sources not yet in `de` ran out) → still add `run tr-de-3`; its body adds: start only after a plan 17 batch QC done since `tr-de-2`, else pend on the decision blocking plan 17''s earliest open task. The remaining deficit is English drafting''s (plan 148''s gap aiming), never an `es` top-up.
+  2. The run selected fewer than 300 sources (approved sources not yet in `de` ran out) → still add `run tr-de-3`; its body adds: start only after a plan 17 batch QC done since `tr-de-2`, else wait for what blocks plan 17''s earliest open task (as above). The remaining deficit is English drafting''s (plan 148''s gap aiming), never an `es` top-up.
   3. Else add `run tr-de-3` (`pm task add 84 "run tr-de-3" --worktree questions --priority -110`), body like this one with n+1.
+- A health ✗ doesn''t stop the chain: raise its decision (rules below) and add the next run like any other.
 - One open run per chain: don''t add one if one is already open.
 - needs_work: nothing (a non-approved translation is picked again by the next run).
+- No spot check, no QC task or QC decision, no `qgen health ack` by this task (milestone 9, developer 2026-10-16: the LLM translation review is a translation''s only review).
 
 Done when: `authoring/reports/tr-de-2.md` exists, printed paths staged, 15b line written, next run added (or the target noted), note with the numbers above.
 
-## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
-- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (66, 70, 148, 171 or new).
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run", `decision 414: Human reviews don''t gate question generation or translation`)
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148, 171 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
-- Exit 2 first: `pm decision list --grep "<run>: health stop"` (`<run>`: the run the stop names, e.g. an earlier batch); a pending one → `pm task-pending-decision <this task> <id>`, no new decision (the stop holds for every bundle and locale until the developer''s `qgen health ack <run>`), stage nothing, stop.
-- Exit 75, exit 2 (none pending; a decision 45 threshold crossed: the decision asks the developer for `qgen health ack <run>`), any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- No spot check, no QC task or QC decision, no `qgen health ack` by this task (milestone 9, developer 2026-10-16: the LLM translation review is a translation''s only review).', '2026-10-13T05:14:48Z', NULL, 631, 0, NULL, 'questions');
+- Health ✗ (in the output, the report or `qgen health`): `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health stop, ack?"` (or the name RUNBOOK gives once task 1699''s plan renames it), no task linked (no `pm task-pending-decision`); the task goes on. Never `qgen health ack` (the developer''s).
+- Exit 2 (health stop, while qgen still has it): a bug under decision 414. Find or raise the health decision as above, no task linked; then the qgen fix task of the plan `task 1699: write plan: Reviews don''t gate generation` writes (`pm plan list`; add it there if missing; if that plan isn''t written yet, use task 1699 itself): `pm task requires <this task> <fix id>`, stage nothing, stop.
+- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-13T05:14:48Z', NULL, 631, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (642, 84, 'QC tr-de-2', 'work', 'dropped', -110, 'plan 84 revision (milestone 9, developer 2026-10-16): no QC per tr-* run; task 641: run tr-de-2 adds the next run itself', 'Plan 84 chain 3: QC of `tr-de-2` per `authoring/QC.md` steps 1–4 and "Translation runs", then the next pair of the chain.
 
 - If task 641 (run tr-de-2) isn''t done: pend on the decision that blocks it, stop. Dropped → drop this one too.
@@ -31780,32 +31780,32 @@ Done when: the decision is answered and 15b updated; note with the table.
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1226, 84, 'run tr-es-ES-2', 'work', 'open', NULL, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-es-ES-2`, up to 300 approved `base` sources of either source locale ≠ `es-ES` into Spain''s Spanish (es → es-ES, en → es-ES; plan 66, D-87; `decision 235: Source locale per question and translations from either source (English-first base)`). Translation run shape: one task, no QC task; this task adds the next run.
 
 ## Before running
-In this order; the first that fails → `pm task-pending-decision <this task> <decision>`, stop:
-- The pilot `task 1221: run tr-es-ES-1` done (no ack, no go/no-go needed); if not, pend on the decision blocking it.
-- `plan 171: Translations without human control`''s change that drops decision 45''s pilot stop done (`pm show p171`); if not, pend on the decision blocking it, or with none stop without changes (it runs first in this work tree).
-- Plan 17''s exit check (plan 17''s last task) done; if not, pend on the decision that blocks plan 17''s earliest open task (masterplan order: milestone 1''s batches first; the queue reaches -110 only when -100 is blocked).
+- Plan 17''s exit check (plan 17''s last task) done; if not, wait for what blocks plan 17''s earliest open task (masterplan order: milestone 1''s batches first; the queue reaches -110 only when -100 is blocked): a pending decision → `pm task-pending-decision <this task> <id>`; a prerequisite task → `pm task requires <this task> <id>`; stop. Under decision 414 that blocker is never a review (spot check, QC proposals, health ack): don''t wait on one of those.
+- (The pilot `task 1221: run tr-es-ES-1` and `plan 171: Translations without human control` are done; no pre-check.)
 
 ## Run
 `nix develop -c qgen batch --translate es-ES` (RUNBOOK steps 1–5, same command on reruns).
 
 ## After the run
-- Note: "Done:" line, report path, and from `authoring/reports/tr-es-ES-2.md` and `qgen report --cost`: selected, translated, approved, needs_work, rejected, not travelling, $ per approved translation (information only), audit agreement, per source locale (es → es-ES, en → es-ES) where the report shows them.
+- Note: "Done:" line, report path, and from `authoring/reports/tr-es-ES-2.md` and `qgen report --cost`: selected, translated, approved, needs_work, rejected, not travelling, $ per approved translation (information only), audit agreement, health result (✗ reported, not a stop), per source locale (es → es-ES, en → es-ES) where the report shows them.
 - QT-6 progress line for `es-ES` in `plans/15b-question-translation.md` (approved in `es-ES`, `qgen report --locale es-ES`).
 - Next, first that applies:
   1. `qgen report --locale es-ES`: every level at `targets.json` `base` → no next run; if `en`, `de`, `es-ES` and `es` are all done: QT-6 `[x]` in 15b and `qgen report --locale <L>` for all four recorded in `plans/16-content-target.md`.
-  2. The run selected fewer than 300 sources (approved sources not yet in `es-ES` ran out) → still add `run tr-es-ES-3`; its body adds: start only after a plan 17 batch QC done since `tr-es-ES-2`, else pend on the decision blocking plan 17''s earliest open task. The remaining deficit is English drafting''s (plan 148''s gap aiming), never an `es` top-up.
+  2. The run selected fewer than 300 sources (approved sources not yet in `es-ES` ran out) → still add `run tr-es-ES-3`; its body adds: start only after a plan 17 batch QC done since `tr-es-ES-2`, else wait for what blocks plan 17''s earliest open task (as above). The remaining deficit is English drafting''s (plan 148''s gap aiming), never an `es` top-up.
   3. Else add `run tr-es-ES-3` (`pm task add 84 "run tr-es-ES-3" --worktree questions --priority -110`), body like this one with n+1.
+- A health ✗ doesn''t stop the chain: raise its decision (rules below) and add the next run like any other.
 - One open run per chain: don''t add one if one is already open.
 - needs_work: nothing (a non-approved translation is picked again by the next run).
+- No spot check, no QC task or QC decision, no `qgen health ack` by this task (milestone 9, developer 2026-10-16: the LLM translation review is a translation''s only review).
 
 Done when: `authoring/reports/tr-es-ES-2.md` exists, printed paths staged, 15b line written, next run added (or the target noted), note with the numbers above.
 
-## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
-- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (66, 70, 148, 171 or new).
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run", `decision 414: Human reviews don''t gate question generation or translation`)
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148, 171 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
-- Exit 2 first: `pm decision list --grep "<run>: health stop"` (`<run>`: the run the stop names, e.g. an earlier batch); a pending one → `pm task-pending-decision <this task> <id>`, no new decision (the stop holds for every bundle and locale until the developer''s `qgen health ack <run>`), stage nothing, stop.
-- Exit 75, exit 2 (none pending; a decision 45 threshold crossed: the decision asks the developer for `qgen health ack <run>`), any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- No spot check, no QC task or QC decision, no `qgen health ack` by this task (milestone 9, developer 2026-10-16: the LLM translation review is a translation''s only review).', '2026-10-16T00:36:02Z', NULL, 1220, 0, NULL, 'questions');
+- Health ✗ (in the output, the report or `qgen health`): `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health stop, ack?"` (or the name RUNBOOK gives once task 1699''s plan renames it), no task linked (no `pm task-pending-decision`); the task goes on. Never `qgen health ack` (the developer''s).
+- Exit 2 (health stop, while qgen still has it): a bug under decision 414. Find or raise the health decision as above, no task linked; then the qgen fix task of the plan `task 1699: write plan: Reviews don''t gate generation` writes (`pm plan list`; add it there if missing; if that plan isn''t written yet, use task 1699 itself): `pm task requires <this task> <fix id>`, stage nothing, stop.
+- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-16T00:36:02Z', NULL, 1220, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1227, 84, 'QC tr-es-ES-2', 'work', 'dropped', NULL, 'plan 84 revision (milestone 9, developer 2026-10-16): no QC per tr-* run; task 1226: run tr-es-ES-2 adds the next run itself', 'Plan 84 chain 3: QC of `tr-es-ES-2` per `authoring/QC.md` steps 1–4 and "Translation runs", then the next pair of the chain.
 
 - If task 1226 (run tr-es-ES-2) isn''t done: pend on the decision that blocks it, stop. Dropped → drop this one too.
@@ -31824,35 +31824,35 @@ Done when: both decisions answered, change tasks and the next pair (or the 15b l
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
 - Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:36:02Z', '2026-10-16T23:16:13Z', 1220, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1228, 84, 'run tr-es-2', 'work', 'open', NULL, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-es-2`, up to 300 approved `base` sources of either source locale ≠ `es` into idiomatic Latin American Spanish (en → es only (es-sourced are already es); plan 66, D-87; `decision 235: Source locale per question and translations from either source (English-first base)`). Translation run shape: one task, no QC task; this task adds the next run.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1228, 84, 'run tr-es-2', 'work', 'open', NULL, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-es-2`, up to 300 approved `base` sources of either source locale ≠ `es` into idiomatic Latin American Spanish (en → es only; es-sourced are already es; plan 66, D-87; `decision 235: Source locale per question and translations from either source (English-first base)`). Translation run shape: one task, no QC task; this task adds the next run.
 
 ## Before running
-In this order; the first that fails → `pm task-pending-decision <this task> <decision>`, stop:
-- The pilot `task 1223: run tr-es-1` done (no ack, no go/no-go needed); if not, pend on the decision blocking it.
-- `plan 171: Translations without human control`''s change that drops decision 45''s pilot stop done (`pm show p171`); if not, pend on the decision blocking it, or with none stop without changes (it runs first in this work tree).
-- Plan 17''s exit check (plan 17''s last task) done; if not, pend on the decision that blocks plan 17''s earliest open task (masterplan order: milestone 1''s batches first; the queue reaches -110 only when -100 is blocked).
+- Plan 17''s exit check (plan 17''s last task) done; if not, wait for what blocks plan 17''s earliest open task (masterplan order: milestone 1''s batches first; the queue reaches -110 only when -100 is blocked): a pending decision → `pm task-pending-decision <this task> <id>`; a prerequisite task → `pm task requires <this task> <id>`; stop. Under decision 414 that blocker is never a review (spot check, QC proposals, health ack): don''t wait on one of those.
+- (The pilot `task 1223: run tr-es-1` and `plan 171: Translations without human control` are done; no pre-check.)
 
 ## Run
 `nix develop -c qgen batch --translate es` (RUNBOOK steps 1–5, same command on reruns).
 
 ## After the run
-- Note: "Done:" line, report path, and from `authoring/reports/tr-es-2.md` and `qgen report --cost`: selected, translated, approved, needs_work, rejected, not travelling, $ per approved translation (information only), audit agreement, per source locale (en → es only) where the report shows them.
+- Note: "Done:" line, report path, and from `authoring/reports/tr-es-2.md` and `qgen report --cost`: selected, translated, approved, needs_work, rejected, not travelling, $ per approved translation (information only), audit agreement, health result (✗ reported, not a stop), per source locale (en → es only; es-sourced are already es) where the report shows them.
 - QT-6 progress line for `es` in `plans/15b-question-translation.md` (approved in `es`, `qgen report --locale es`).
 - Next, first that applies:
   1. `qgen report --locale es`: every level at `targets.json` `base` → no next run; if `en`, `de`, `es-ES` and `es` are all done: QT-6 `[x]` in 15b and `qgen report --locale <L>` for all four recorded in `plans/16-content-target.md`.
-  2. The run selected fewer than 300 sources (approved sources not yet in `es` ran out) → still add `run tr-es-3`; its body adds: start only after a plan 17 batch QC done since `tr-es-2`, else pend on the decision blocking plan 17''s earliest open task. The remaining deficit is English drafting''s (plan 148''s gap aiming), never an `es` top-up.
+  2. The run selected fewer than 300 sources (approved sources not yet in `es` ran out) → still add `run tr-es-3`; its body adds: start only after a plan 17 batch QC done since `tr-es-2`, else wait for what blocks plan 17''s earliest open task (as above). The remaining deficit is English drafting''s (plan 148''s gap aiming), never an `es` top-up.
   3. Else add `run tr-es-3` (`pm task add 84 "run tr-es-3" --worktree questions --priority -110`), body like this one with n+1.
+- A health ✗ doesn''t stop the chain: raise its decision (rules below) and add the next run like any other.
 - One open run per chain: don''t add one if one is already open.
 - needs_work: nothing (a non-approved translation is picked again by the next run).
+- No spot check, no QC task or QC decision, no `qgen health ack` by this task (milestone 9, developer 2026-10-16: the LLM translation review is a translation''s only review).
 
 Done when: `authoring/reports/tr-es-2.md` exists, printed paths staged, 15b line written, next run added (or the target noted), note with the numbers above.
 
-## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
-- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (66, 70, 148, 171 or new).
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run", `decision 414: Human reviews don''t gate question generation or translation`)
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148, 171 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
-- Exit 2 first: `pm decision list --grep "<run>: health stop"` (`<run>`: the run the stop names, e.g. an earlier batch); a pending one → `pm task-pending-decision <this task> <id>`, no new decision (the stop holds for every bundle and locale until the developer''s `qgen health ack <run>`), stage nothing, stop.
-- Exit 75, exit 2 (none pending; a decision 45 threshold crossed: the decision asks the developer for `qgen health ack <run>`), any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- No spot check, no QC task or QC decision, no `qgen health ack` by this task (milestone 9, developer 2026-10-16: the LLM translation review is a translation''s only review).', '2026-10-16T00:36:02Z', NULL, 1220, 0, NULL, 'questions');
+- Health ✗ (in the output, the report or `qgen health`): `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health stop, ack?"` (or the name RUNBOOK gives once task 1699''s plan renames it), no task linked (no `pm task-pending-decision`); the task goes on. Never `qgen health ack` (the developer''s).
+- Exit 2 (health stop, while qgen still has it): a bug under decision 414. Find or raise the health decision as above, no task linked; then the qgen fix task of the plan `task 1699: write plan: Reviews don''t gate generation` writes (`pm plan list`; add it there if missing; if that plan isn''t written yet, use task 1699 itself): `pm task requires <this task> <fix id>`, stage nothing, stop.
+- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-16T00:36:02Z', NULL, 1220, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1229, 84, 'QC tr-es-2', 'work', 'dropped', NULL, 'plan 84 revision (milestone 9, developer 2026-10-16): no QC per tr-* run; task 1228: run tr-es-2 adds the next run itself', 'Plan 84 chain 3: QC of `tr-es-2` per `authoring/QC.md` steps 1–4 and "Translation runs", then the next pair of the chain.
 
 - If task 1228 (run tr-es-2) isn''t done: pend on the decision that blocks it, stop. Dropped → drop this one too.
@@ -33373,131 +33373,136 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T03:34:37Z', '2026-10-16T03:35:09Z', 1261, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1267, 84, 'create tasks for plan 84: Release content runs', 'split', 'done', 1000, '2026-10-15, tasks.sql: task 643 body in line with chain 4 (first QC records effort numbers, no ''More regional bundles?'' decision, plan 138 / task 1140 prerequisites); chain 5 start tasks 1268 usa, 1269 germany, 1270 uk, 1271 spain, 1272 mexico (-110); no new decisions (bundle taxonomies are plan 98''s, under revision in task 1263)', 'Split plan 84 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T03:36:07Z', '2026-10-16T03:37:08Z', 1262, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1268, 84, 'Regional runs `usa`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `usa` (milestone 9, developer 2026-10-15; same rules as `colombia`, decision 110: Regional packs at launch (RG-5, OQ-46)): 2000 approved in en, drafted in US English. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1268, 84, 'Regional runs `usa`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `usa` (milestone 9, developer 2026-10-15; same rules as `colombia`, `decision 110: Regional packs at launch (RG-5, OQ-46)`): 2000 approved in en, drafted in US English. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
 
 ## Before starting
-- Needs plan 98''s tasks for `usa` done (`pm show p98`; subjects may change): bundle created (`qgen bundle new --kind region`), its taxonomy decision answered and `qgen taxonomy --bundle usa` applied, its 2000 target in `targets.json`, `qgen batch --bundle usa` drafting in en (US English; `bundles.json` `rule`/`voice`).
-- Needs chain 4''s first `QC batch-<n>` of `colombia` done (added by `task 643: Regional pilot `colombia`: start`), with its first effort numbers in `plans/15c-regional-questions.md`.
-- Any open → `pm task-pending-decision <this task>` on the decision blocking it (the bundle''s taxonomy decision, plan 98''s or chain 4''s earliest open decision), stop.
-- If colombia''s effort numbers look too costly for this pace: `pm decision add "Regional bundle usa: start now?"` with the numbers, pend on it, stop.
+- Needs plan 98''s tasks for `usa` done (`pm show p98`; subjects may change): bundle created (`qgen bundle new --kind region`), its taxonomy decision answered and `qgen taxonomy --bundle usa` applied (after `plan 149: Slug keys for categories`), its 2000 target in `targets.json`, `qgen batch --bundle usa` drafting in US English (`bundles.json` `rule`/`voice`).
+- Needs colombia''s first QC, `task 1296: QC batch-12 (colombia)`, done (it is; first effort numbers in `plans/15c-regional-questions.md`).
+- Not done → pend on the decision blocking it (the bundle''s taxonomy decision, plan 149''s slug decision, plan 98''s earliest open decision: choices, not reviews, so they still block) via `pm task-pending-decision`, or `pm task requires <this task> <id>` on the unfinished task; stop.
+- No cost or pace question (cost is information only, milestone 9, developer 2026-10-15).
 
-## Then: add the first drafting pair (priority -110)
-- `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle usa` (RUNBOOK steps 1–5; US English). Done when its report exists, printed paths staged, note with "Done:" line and report path.
-- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of US English needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC; note `qgen report --cost` per bundle ($ per approved, information only). Then, first that applies:
-  1. `qgen report --bundle usa` shows 2000 approved (en) → closing step below.
-  2. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
-  3. Else the next pair (same bodies, next batch number).
-- At 2000 (en): nothing more (`usa` is en only); the closing QC notes `usa` done in `plans/15c-regional-questions.md`.
-- One open pair per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 2–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
+## Then: add the first drafting pair (priority -110, work tree `questions`)
+- `run batch-<n> (usa)` (run name from `qgen`; rename after the run like `task 1690: run colombia batch (batch-<n>)`): `nix develop -c qgen batch --bundle usa` (RUNBOOK steps 1–5; US English). Done when its report exists, printed paths staged, note with "Done:" line, report path, health result (✗ raised, not a stop).
+- `QC batch-<n> (usa)`, requires the run: the drafted-run QC shape of `task 1691: QC colombia batch (batch-<n>)` (decision 414, no waits):
+  - first: answered review decisions of earlier `usa` batches not yet acted on → change tasks in their plans, report lines; unanswered ones stay open
+  - spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of US English; review link, `trivia-authoring`; never answered by an LLM), raised, not waited on
+  - `qgen report --qc batch-<n>` → proposals decision `"QC batch-<n>: which changes?"`, raised, not waited on; none → `--changes none`
+  - decision 3''s `qgen rework` once; note `qgen report --cost` per bundle (information only)
+  - then, first that applies: `qgen report --bundle usa` shows 2000 approved (en) → nothing more (en only); the closing QC notes the bundle done in `plans/15c-regional-questions.md`; else the next pair (same bodies, next batch number)
+- One open pair (or en run) per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 3–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
 
-Done when: the first drafting pair is added (or this task pends on the blocking decision); note names the pair.
+Done when: the first drafting pair is added (or this task pends on / requires the blocker); note names the pair.
 
-## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
-- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (98, 138, 148 or new).
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run", `decision 414: Human reviews don''t gate question generation or translation`)
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148, 171 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
-- Exit 2 first: `pm decision list --grep "<run>: health stop"` (`<run>`: the run the stop names, e.g. an earlier batch); a pending one → `pm task-pending-decision <this task> <id>`, no new decision (the stop holds for every bundle and locale until the developer''s `qgen health ack <run>`), stage nothing, stop.
-- Exit 75, exit 2 (none pending), any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:02Z', NULL, 1267, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1269, 84, 'Regional runs `germany`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `germany` (milestone 9, developer 2026-10-15; same rules as `colombia`, decision 110: Regional packs at launch (RG-5, OQ-46)): 2000 approved in de, drafted in German, then translated to en. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
+- Health ✗ (in the output, the report or `qgen health`): `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health stop, ack?"` (or the name RUNBOOK gives once task 1699''s plan renames it), no task linked (no `pm task-pending-decision`); the task goes on. Never `qgen health ack` (the developer''s).
+- Exit 2 (health stop, while qgen still has it): a bug under decision 414. Find or raise the health decision as above, no task linked; then the qgen fix task of the plan `task 1699: write plan: Reviews don''t gate generation` writes (`pm plan list`; add it there if missing; if that plan isn''t written yet, use task 1699 itself): `pm task requires <this task> <fix id>`, stage nothing, stop.
+- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-16T03:37:02Z', NULL, 1267, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1269, 84, 'Regional runs `germany`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `germany` (milestone 9, developer 2026-10-15; same rules as `colombia`, `decision 110: Regional packs at launch (RG-5, OQ-46)`): 2000 approved in de, drafted in German. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
 
 ## Before starting
-- Needs plan 98''s tasks for `germany` done (`pm show p98`; subjects may change): bundle created (`qgen bundle new --kind region`), its taxonomy decision answered and `qgen taxonomy --bundle germany` applied, its 2000 target in `targets.json`, `qgen batch --bundle germany` drafting in de (German; `bundles.json` `rule`/`voice`).
-- Needs chain 4''s first `QC batch-<n>` of `colombia` done (added by `task 643: Regional pilot `colombia`: start`), with its first effort numbers in `plans/15c-regional-questions.md`.
-- Any open → `pm task-pending-decision <this task>` on the decision blocking it (the bundle''s taxonomy decision, plan 98''s or chain 4''s earliest open decision), stop.
-- If colombia''s effort numbers look too costly for this pace: `pm decision add "Regional bundle germany: start now?"` with the numbers, pend on it, stop.
+- Needs plan 98''s tasks for `germany` done (`pm show p98`; subjects may change): bundle created (`qgen bundle new --kind region`), its taxonomy decision answered and `qgen taxonomy --bundle germany` applied (after `plan 149: Slug keys for categories`), its 2000 target in `targets.json`, `qgen batch --bundle germany` drafting in German (`bundles.json` `rule`/`voice`).
+- Needs colombia''s first QC, `task 1296: QC batch-12 (colombia)`, done (it is; first effort numbers in `plans/15c-regional-questions.md`).
+- Not done → pend on the decision blocking it (the bundle''s taxonomy decision, plan 149''s slug decision, plan 98''s earliest open decision: choices, not reviews, so they still block) via `pm task-pending-decision`, or `pm task requires <this task> <id>` on the unfinished task; stop.
+- No cost or pace question (cost is information only, milestone 9, developer 2026-10-15).
 
-## Then: add the first drafting pair (priority -110)
-- `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle germany` (RUNBOOK steps 1–5; German). Done when its report exists, printed paths staged, note with "Done:" line and report path.
-- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of German needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC; note `qgen report --cost` per bundle ($ per approved, information only). Then, first that applies:
-  1. `qgen report --bundle germany` shows 2000 approved (de) → closing step below.
-  2. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
-  3. Else the next pair (same bodies, next batch number).
-- At 2000 (de): the closing QC adds the first en run (translation run shape: one task, no QC task, no spot check, no `qgen health ack`; milestone 9, developer 2026-10-16): `run tr-en-<n>` (`qgen batch --translate en --bundle germany`; needs plan 98''s `--translate en` from de done and the en pilot `task 634: run tr-en-1` done; else pend on the blocking decision). Each en run notes its numbers (selected, translated, approved, needs_work, rejected, not travelling, $ per approved translation, audit agreement) and adds the next run until `qgen report --bundle germany --locale en` shows 2000 approved en; then `plans/15c-regional-questions.md` notes `germany` de + en done. needs_work: nothing (picked again by the next run).
-- One open pair (or en run) per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 2–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
+## Then: add the first drafting pair (priority -110, work tree `questions`)
+- `run batch-<n> (germany)` (run name from `qgen`; rename after the run like `task 1690: run colombia batch (batch-<n>)`): `nix develop -c qgen batch --bundle germany` (RUNBOOK steps 1–5; German). Done when its report exists, printed paths staged, note with "Done:" line, report path, health result (✗ raised, not a stop).
+- `QC batch-<n> (germany)`, requires the run: the drafted-run QC shape of `task 1691: QC colombia batch (batch-<n>)` (decision 414, no waits):
+  - first: answered review decisions of earlier `germany` batches not yet acted on → change tasks in their plans, report lines; unanswered ones stay open
+  - spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of German; review link, `trivia-authoring`; never answered by an LLM), raised, not waited on
+  - `qgen report --qc batch-<n>` → proposals decision `"QC batch-<n>: which changes?"`, raised, not waited on; none → `--changes none`
+  - decision 3''s `qgen rework` once; note `qgen report --cost` per bundle (information only)
+  - then, first that applies: `qgen report --bundle germany` shows 2000 approved (de) → add the first en run `run tr-en-<n>` (`qgen batch --translate en --bundle germany`; translation run shape like chain 3''s: one task, no QC, no spot check, no `qgen health ack`; needs plan 98''s `--translate en` from de done, else `pm task requires` on it); each en run adds the next until `qgen report --bundle germany --locale en` shows 2000 approved en; then `plans/15c-regional-questions.md` notes germany done; else the next pair (same bodies, next batch number)
+- One open pair (or en run) per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 3–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
 
-Done when: the first drafting pair is added (or this task pends on the blocking decision); note names the pair.
+Done when: the first drafting pair is added (or this task pends on / requires the blocker); note names the pair.
 
-## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
-- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (98, 138, 148 or new).
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run", `decision 414: Human reviews don''t gate question generation or translation`)
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148, 171 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
-- Exit 2 first: `pm decision list --grep "<run>: health stop"` (`<run>`: the run the stop names, e.g. an earlier batch); a pending one → `pm task-pending-decision <this task> <id>`, no new decision (the stop holds for every bundle and locale until the developer''s `qgen health ack <run>`), stage nothing, stop.
-- Exit 75, exit 2 (none pending), any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:02Z', NULL, 1267, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1270, 84, 'Regional runs `uk`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `uk` (milestone 9, developer 2026-10-15; same rules as `colombia`, decision 110: Regional packs at launch (RG-5, OQ-46)): 2000 approved in en, drafted in British English. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
+- Health ✗ (in the output, the report or `qgen health`): `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health stop, ack?"` (or the name RUNBOOK gives once task 1699''s plan renames it), no task linked (no `pm task-pending-decision`); the task goes on. Never `qgen health ack` (the developer''s).
+- Exit 2 (health stop, while qgen still has it): a bug under decision 414. Find or raise the health decision as above, no task linked; then the qgen fix task of the plan `task 1699: write plan: Reviews don''t gate generation` writes (`pm plan list`; add it there if missing; if that plan isn''t written yet, use task 1699 itself): `pm task requires <this task> <fix id>`, stage nothing, stop.
+- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-16T03:37:02Z', NULL, 1267, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1270, 84, 'Regional runs `uk`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `uk` (milestone 9, developer 2026-10-15; same rules as `colombia`, `decision 110: Regional packs at launch (RG-5, OQ-46)`): 2000 approved in en, drafted in British English. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
 
 ## Before starting
-- Needs plan 98''s tasks for `uk` done (`pm show p98`; subjects may change): bundle created (`qgen bundle new --kind region`), its taxonomy decision answered and `qgen taxonomy --bundle uk` applied, its 2000 target in `targets.json`, `qgen batch --bundle uk` drafting in en (British English; `bundles.json` `rule`/`voice`).
-- Needs chain 4''s first `QC batch-<n>` of `colombia` done (added by `task 643: Regional pilot `colombia`: start`), with its first effort numbers in `plans/15c-regional-questions.md`.
-- Any open → `pm task-pending-decision <this task>` on the decision blocking it (the bundle''s taxonomy decision, plan 98''s or chain 4''s earliest open decision), stop.
-- If colombia''s effort numbers look too costly for this pace: `pm decision add "Regional bundle uk: start now?"` with the numbers, pend on it, stop.
+- Needs plan 98''s tasks for `uk` done (`pm show p98`; subjects may change): bundle created (`qgen bundle new --kind region`), its taxonomy decision answered and `qgen taxonomy --bundle uk` applied (after `plan 149: Slug keys for categories`), its 2000 target in `targets.json`, `qgen batch --bundle uk` drafting in British English (`bundles.json` `rule`/`voice`).
+- Needs colombia''s first QC, `task 1296: QC batch-12 (colombia)`, done (it is; first effort numbers in `plans/15c-regional-questions.md`).
+- Not done → pend on the decision blocking it (the bundle''s taxonomy decision, plan 149''s slug decision, plan 98''s earliest open decision: choices, not reviews, so they still block) via `pm task-pending-decision`, or `pm task requires <this task> <id>` on the unfinished task; stop.
+- No cost or pace question (cost is information only, milestone 9, developer 2026-10-15).
 
-## Then: add the first drafting pair (priority -110)
-- `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle uk` (RUNBOOK steps 1–5; British English). Done when its report exists, printed paths staged, note with "Done:" line and report path.
-- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of British English needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC; note `qgen report --cost` per bundle ($ per approved, information only). Then, first that applies:
-  1. `qgen report --bundle uk` shows 2000 approved (en) → closing step below.
-  2. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
-  3. Else the next pair (same bodies, next batch number).
-- At 2000 (en): nothing more (`uk` is en only); the closing QC notes `uk` done in `plans/15c-regional-questions.md`.
-- One open pair per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 2–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
+## Then: add the first drafting pair (priority -110, work tree `questions`)
+- `run batch-<n> (uk)` (run name from `qgen`; rename after the run like `task 1690: run colombia batch (batch-<n>)`): `nix develop -c qgen batch --bundle uk` (RUNBOOK steps 1–5; British English). Done when its report exists, printed paths staged, note with "Done:" line, report path, health result (✗ raised, not a stop).
+- `QC batch-<n> (uk)`, requires the run: the drafted-run QC shape of `task 1691: QC colombia batch (batch-<n>)` (decision 414, no waits):
+  - first: answered review decisions of earlier `uk` batches not yet acted on → change tasks in their plans, report lines; unanswered ones stay open
+  - spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of British English; review link, `trivia-authoring`; never answered by an LLM), raised, not waited on
+  - `qgen report --qc batch-<n>` → proposals decision `"QC batch-<n>: which changes?"`, raised, not waited on; none → `--changes none`
+  - decision 3''s `qgen rework` once; note `qgen report --cost` per bundle (information only)
+  - then, first that applies: `qgen report --bundle uk` shows 2000 approved (en) → nothing more (en only); the closing QC notes the bundle done in `plans/15c-regional-questions.md`; else the next pair (same bodies, next batch number)
+- One open pair (or en run) per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 3–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
 
-Done when: the first drafting pair is added (or this task pends on the blocking decision); note names the pair.
+Done when: the first drafting pair is added (or this task pends on / requires the blocker); note names the pair.
 
-## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
-- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (98, 138, 148 or new).
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run", `decision 414: Human reviews don''t gate question generation or translation`)
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148, 171 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
-- Exit 2 first: `pm decision list --grep "<run>: health stop"` (`<run>`: the run the stop names, e.g. an earlier batch); a pending one → `pm task-pending-decision <this task> <id>`, no new decision (the stop holds for every bundle and locale until the developer''s `qgen health ack <run>`), stage nothing, stop.
-- Exit 75, exit 2 (none pending), any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:02Z', NULL, 1267, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1271, 84, 'Regional runs `spain`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `spain` (milestone 9, developer 2026-10-15; same rules as `colombia`, decision 110: Regional packs at launch (RG-5, OQ-46)): 2000 approved in es-ES, drafted in Spain''s Spanish, then translated to en. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
+- Health ✗ (in the output, the report or `qgen health`): `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health stop, ack?"` (or the name RUNBOOK gives once task 1699''s plan renames it), no task linked (no `pm task-pending-decision`); the task goes on. Never `qgen health ack` (the developer''s).
+- Exit 2 (health stop, while qgen still has it): a bug under decision 414. Find or raise the health decision as above, no task linked; then the qgen fix task of the plan `task 1699: write plan: Reviews don''t gate generation` writes (`pm plan list`; add it there if missing; if that plan isn''t written yet, use task 1699 itself): `pm task requires <this task> <fix id>`, stage nothing, stop.
+- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-16T03:37:02Z', NULL, 1267, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1271, 84, 'Regional runs `spain`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `spain` (milestone 9, developer 2026-10-15; same rules as `colombia`, `decision 110: Regional packs at launch (RG-5, OQ-46)`): 2000 approved in es-ES, drafted in Spain''s Spanish. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
 
 ## Before starting
-- Needs plan 98''s tasks for `spain` done (`pm show p98`; subjects may change): bundle created (`qgen bundle new --kind region`), its taxonomy decision answered and `qgen taxonomy --bundle spain` applied, its 2000 target in `targets.json`, `qgen batch --bundle spain` drafting in es-ES (Spain''s Spanish; `bundles.json` `rule`/`voice`).
-- Needs chain 4''s first `QC batch-<n>` of `colombia` done (added by `task 643: Regional pilot `colombia`: start`), with its first effort numbers in `plans/15c-regional-questions.md`.
-- Any open → `pm task-pending-decision <this task>` on the decision blocking it (the bundle''s taxonomy decision, plan 98''s or chain 4''s earliest open decision), stop.
-- If colombia''s effort numbers look too costly for this pace: `pm decision add "Regional bundle spain: start now?"` with the numbers, pend on it, stop.
+- Needs plan 98''s tasks for `spain` done (`pm show p98`; subjects may change): bundle created (`qgen bundle new --kind region`), its taxonomy decision answered and `qgen taxonomy --bundle spain` applied (after `plan 149: Slug keys for categories`), its 2000 target in `targets.json`, `qgen batch --bundle spain` drafting in Spain''s Spanish (`bundles.json` `rule`/`voice`).
+- Needs colombia''s first QC, `task 1296: QC batch-12 (colombia)`, done (it is; first effort numbers in `plans/15c-regional-questions.md`).
+- Not done → pend on the decision blocking it (the bundle''s taxonomy decision, plan 149''s slug decision, plan 98''s earliest open decision: choices, not reviews, so they still block) via `pm task-pending-decision`, or `pm task requires <this task> <id>` on the unfinished task; stop.
+- No cost or pace question (cost is information only, milestone 9, developer 2026-10-15).
 
-## Then: add the first drafting pair (priority -110)
-- `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle spain` (RUNBOOK steps 1–5; Spain''s Spanish). Done when its report exists, printed paths staged, note with "Done:" line and report path.
-- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of Spain''s Spanish needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC; note `qgen report --cost` per bundle ($ per approved, information only). Then, first that applies:
-  1. `qgen report --bundle spain` shows 2000 approved (es-ES) → closing step below.
-  2. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
-  3. Else the next pair (same bodies, next batch number).
-- At 2000 (es-ES): the closing QC adds the first en run (translation run shape: one task, no QC task, no spot check, no `qgen health ack`; milestone 9, developer 2026-10-16): `run tr-en-<n>` (`qgen batch --translate en --bundle spain`; needs plan 98''s `--translate en` from es-ES done and the en pilot `task 634: run tr-en-1` done; else pend on the blocking decision). Each en run notes its numbers (selected, translated, approved, needs_work, rejected, not travelling, $ per approved translation, audit agreement) and adds the next run until `qgen report --bundle spain --locale en` shows 2000 approved en; then `plans/15c-regional-questions.md` notes `spain` es-ES + en done. needs_work: nothing (picked again by the next run).
-- One open pair (or en run) per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 2–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
+## Then: add the first drafting pair (priority -110, work tree `questions`)
+- `run batch-<n> (spain)` (run name from `qgen`; rename after the run like `task 1690: run colombia batch (batch-<n>)`): `nix develop -c qgen batch --bundle spain` (RUNBOOK steps 1–5; Spain''s Spanish). Done when its report exists, printed paths staged, note with "Done:" line, report path, health result (✗ raised, not a stop).
+- `QC batch-<n> (spain)`, requires the run: the drafted-run QC shape of `task 1691: QC colombia batch (batch-<n>)` (decision 414, no waits):
+  - first: answered review decisions of earlier `spain` batches not yet acted on → change tasks in their plans, report lines; unanswered ones stay open
+  - spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of Spain''s Spanish; review link, `trivia-authoring`; never answered by an LLM), raised, not waited on
+  - `qgen report --qc batch-<n>` → proposals decision `"QC batch-<n>: which changes?"`, raised, not waited on; none → `--changes none`
+  - decision 3''s `qgen rework` once; note `qgen report --cost` per bundle (information only)
+  - then, first that applies: `qgen report --bundle spain` shows 2000 approved (es-ES) → add the first en run `run tr-en-<n>` (`qgen batch --translate en --bundle spain`; translation run shape like chain 3''s: one task, no QC, no spot check, no `qgen health ack`; needs plan 98''s `--translate en` from es-ES done, else `pm task requires` on it); each en run adds the next until `qgen report --bundle spain --locale en` shows 2000 approved en; then `plans/15c-regional-questions.md` notes spain done; else the next pair (same bodies, next batch number)
+- One open pair (or en run) per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 3–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
 
-Done when: the first drafting pair is added (or this task pends on the blocking decision); note names the pair.
+Done when: the first drafting pair is added (or this task pends on / requires the blocker); note names the pair.
 
-## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
-- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (98, 138, 148 or new).
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run", `decision 414: Human reviews don''t gate question generation or translation`)
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148, 171 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
-- Exit 2 first: `pm decision list --grep "<run>: health stop"` (`<run>`: the run the stop names, e.g. an earlier batch); a pending one → `pm task-pending-decision <this task> <id>`, no new decision (the stop holds for every bundle and locale until the developer''s `qgen health ack <run>`), stage nothing, stop.
-- Exit 75, exit 2 (none pending), any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:03Z', NULL, 1267, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1272, 84, 'Regional runs `mexico`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `mexico` (milestone 9, developer 2026-10-15; same rules as `colombia`, decision 110: Regional packs at launch (RG-5, OQ-46)): 2000 approved in es, drafted in Mexican Spanish, then translated to en. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
+- Health ✗ (in the output, the report or `qgen health`): `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health stop, ack?"` (or the name RUNBOOK gives once task 1699''s plan renames it), no task linked (no `pm task-pending-decision`); the task goes on. Never `qgen health ack` (the developer''s).
+- Exit 2 (health stop, while qgen still has it): a bug under decision 414. Find or raise the health decision as above, no task linked; then the qgen fix task of the plan `task 1699: write plan: Reviews don''t gate generation` writes (`pm plan list`; add it there if missing; if that plan isn''t written yet, use task 1699 itself): `pm task requires <this task> <fix id>`, stage nothing, stop.
+- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-16T03:37:03Z', NULL, 1267, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1272, 84, 'Regional runs `mexico`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `mexico` (milestone 9, developer 2026-10-15; same rules as `colombia`, `decision 110: Regional packs at launch (RG-5, OQ-46)`): 2000 approved in es, drafted in Mexican Spanish. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
 
 ## Before starting
-- Needs plan 98''s tasks for `mexico` done (`pm show p98`; subjects may change): bundle created (`qgen bundle new --kind region`), its taxonomy decision answered and `qgen taxonomy --bundle mexico` applied, its 2000 target in `targets.json`, `qgen batch --bundle mexico` drafting in es (Mexican Spanish; `bundles.json` `rule`/`voice`).
-- Needs chain 4''s first `QC batch-<n>` of `colombia` done (added by `task 643: Regional pilot `colombia`: start`), with its first effort numbers in `plans/15c-regional-questions.md`.
-- Any open → `pm task-pending-decision <this task>` on the decision blocking it (the bundle''s taxonomy decision, plan 98''s or chain 4''s earliest open decision), stop.
-- If colombia''s effort numbers look too costly for this pace: `pm decision add "Regional bundle mexico: start now?"` with the numbers, pend on it, stop.
+- Needs plan 98''s tasks for `mexico` done (`pm show p98`; subjects may change): bundle created (`qgen bundle new --kind region`), its taxonomy decision answered and `qgen taxonomy --bundle mexico` applied (after `plan 149: Slug keys for categories`), its 2000 target in `targets.json`, `qgen batch --bundle mexico` drafting in Mexican Spanish (`bundles.json` `rule`/`voice`).
+- Needs colombia''s first QC, `task 1296: QC batch-12 (colombia)`, done (it is; first effort numbers in `plans/15c-regional-questions.md`).
+- Not done → pend on the decision blocking it (the bundle''s taxonomy decision, plan 149''s slug decision, plan 98''s earliest open decision: choices, not reviews, so they still block) via `pm task-pending-decision`, or `pm task requires <this task> <id>` on the unfinished task; stop.
+- No cost or pace question (cost is information only, milestone 9, developer 2026-10-15).
 
-## Then: add the first drafting pair (priority -110)
-- `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle mexico` (RUNBOOK steps 1–5; Mexican Spanish). Done when its report exists, printed paths staged, note with "Done:" line and report path.
-- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of Mexican Spanish needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC; note `qgen report --cost` per bundle ($ per approved, information only). Then, first that applies:
-  1. `qgen report --bundle mexico` shows 2000 approved (es) → closing step below.
-  2. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
-  3. Else the next pair (same bodies, next batch number).
-- At 2000 (es): the closing QC adds the first en run (translation run shape: one task, no QC task, no spot check, no `qgen health ack`; milestone 9, developer 2026-10-16): `run tr-en-<n>` (`qgen batch --translate en --bundle mexico`; needs plan 98''s `--translate en` from es done and the en pilot `task 634: run tr-en-1` done; else pend on the blocking decision). Each en run notes its numbers (selected, translated, approved, needs_work, rejected, not travelling, $ per approved translation, audit agreement) and adds the next run until `qgen report --bundle mexico --locale en` shows 2000 approved en; then `plans/15c-regional-questions.md` notes `mexico` es + en done. needs_work: nothing (picked again by the next run).
-- One open pair (or en run) per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 2–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
+## Then: add the first drafting pair (priority -110, work tree `questions`)
+- `run batch-<n> (mexico)` (run name from `qgen`; rename after the run like `task 1690: run colombia batch (batch-<n>)`): `nix develop -c qgen batch --bundle mexico` (RUNBOOK steps 1–5; Mexican Spanish). Done when its report exists, printed paths staged, note with "Done:" line, report path, health result (✗ raised, not a stop).
+- `QC batch-<n> (mexico)`, requires the run: the drafted-run QC shape of `task 1691: QC colombia batch (batch-<n>)` (decision 414, no waits):
+  - first: answered review decisions of earlier `mexico` batches not yet acted on → change tasks in their plans, report lines; unanswered ones stay open
+  - spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of Mexican Spanish; review link, `trivia-authoring`; never answered by an LLM), raised, not waited on
+  - `qgen report --qc batch-<n>` → proposals decision `"QC batch-<n>: which changes?"`, raised, not waited on; none → `--changes none`
+  - decision 3''s `qgen rework` once; note `qgen report --cost` per bundle (information only)
+  - then, first that applies: `qgen report --bundle mexico` shows 2000 approved (es) → add the first en run `run tr-en-<n>` (`qgen batch --translate en --bundle mexico`; translation run shape like chain 3''s: one task, no QC, no spot check, no `qgen health ack`; needs plan 98''s `--translate en` from es done, else `pm task requires` on it); each en run adds the next until `qgen report --bundle mexico --locale en` shows 2000 approved en; then `plans/15c-regional-questions.md` notes mexico done; else the next pair (same bodies, next batch number)
+- One open pair (or en run) per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 3–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
 
-Done when: the first drafting pair is added (or this task pends on the blocking decision); note names the pair.
+Done when: the first drafting pair is added (or this task pends on / requires the blocker); note names the pair.
 
-## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
-- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (98, 138, 148 or new).
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run", `decision 414: Human reviews don''t gate question generation or translation`)
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148, 171 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
-- Exit 2 first: `pm decision list --grep "<run>: health stop"` (`<run>`: the run the stop names, e.g. an earlier batch); a pending one → `pm task-pending-decision <this task> <id>`, no new decision (the stop holds for every bundle and locale until the developer''s `qgen health ack <run>`), stage nothing, stop.
-- Exit 75, exit 2 (none pending), any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:03Z', NULL, 1267, 0, NULL, 'questions');
+- Health ✗ (in the output, the report or `qgen health`): `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health stop, ack?"` (or the name RUNBOOK gives once task 1699''s plan renames it), no task linked (no `pm task-pending-decision`); the task goes on. Never `qgen health ack` (the developer''s).
+- Exit 2 (health stop, while qgen still has it): a bug under decision 414. Find or raise the health decision as above, no task linked; then the qgen fix task of the plan `task 1699: write plan: Reviews don''t gate generation` writes (`pm plan list`; add it there if missing; if that plan isn''t written yet, use task 1699 itself): `pm task requires <this task> <fix id>`, stage nothing, stop.
+- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-16T03:37:03Z', NULL, 1267, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1273, 98, 'create tasks for plan 98: Regional packs (RG-3..RG-5)', 'split', 'done', 1000, '2026-10-15, tasks.sql: plan 98 tasks 10 (task 1275) and 11–15 (tasks 1276–1280) added; task 752 close-out brought in line (new bundles, tasks 1268–1272, D-entry amending decision 110). No new decisions now: task 1275 adds the prompt decision, 1276–1280 their taxonomy decisions.', 'Split plan 98 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T03:38:57Z', '2026-10-16T03:40:22Z', 1263, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1274, 138, 'revise plan 138: Regional taxonomy: a general list, colombia reworked', 'revise', 'done', 1000, '2026-10-15, plan 138 body: plan 98''s further bundles in Builds on; out of scope points at tasks 1275–1280 instead of ''after the pilot decision''', '`plan 98: Regional packs (RG-3..RG-5)`, the plan above `plan 138: Regional taxonomy: a general list, colombia reworked`, changed; it is quoted below. Bring `plan 138: Regional taxonomy: a general list, colombia reworked` in line with it
@@ -41887,35 +41892,41 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Run
 - `nix develop -c qgen batch --bundle colombia` (`authoring/RUNBOOK.md` steps 1–5; Colombian Spanish, `bundles.json` `rule`/`voice`). No other pipeline steps by hand.
 - Run name: whatever `qgen` prints (`batch-<max+1>`). After the run rename this task and its QC task to the real name (`pm task set <id> --subject "run batch-<n> (colombia)"`, QC the same) and replace `batch-<n>` in the QC body.
-- Done when its report exists, the printed paths are staged, note with the "Done:" line and the report path.
+- Note on done: the "Done:" line, the report path, the health result (✗ reported and raised per the rules below, not a stop).
 
-## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
-- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148 or new).
-- `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths a command prints; don''t commit (pm commits as "task N: …").
-- Exit 2 first: `pm decision list --grep "<run>: health stop"` (`<run>`: the run the stop names, e.g. an earlier batch); a pending one → `pm task-pending-decision <this task> <id>`, no new decision (the stop holds for every bundle and locale until the developer''s `qgen health ack <run>`), stage nothing, stop.
-- Exit 75, exit 2 (none pending), any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- Note on done: the "Done:" line and the report path.', '2026-10-23T00:13:00Z', NULL, 1296, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1691, 84, 'QC colombia batch (batch-<n>)', 'work', 'open', -110, NULL, 'Plan 84 chain 4: QC of colombia''s next batch (`task 1690: run colombia batch (batch-<n>)`). Owners: `plans/15c-regional-questions.md`, `plans/16-content-target.md`.
+Done when its report exists, the printed paths are staged, note as above.
+
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run", `decision 414: Human reviews don''t gate question generation or translation`)
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148, 171 or new).
+- `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
+- Health ✗ (in the output, the report or `qgen health`): `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health stop, ack?"` (or the name RUNBOOK gives once task 1699''s plan renames it), no task linked (no `pm task-pending-decision`); the task goes on. Never `qgen health ack` (the developer''s).
+- Exit 2 (health stop, while qgen still has it): a bug under decision 414. Find or raise the health decision as above, no task linked; then the qgen fix task of the plan `task 1699: write plan: Reviews don''t gate generation` writes (`pm plan list`; add it there if missing; if that plan isn''t written yet, use task 1699 itself): `pm task requires <this task> <fix id>`, stage nothing, stop.
+- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-23T00:13:00Z', NULL, 1296, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1691, 84, 'QC colombia batch (batch-<n>)', 'work', 'open', -110, NULL, 'Plan 84 chain 4: QC of colombia''s next batch (`task 1690: run colombia batch (batch-<n>)`). Drafted-run QC shape, `authoring/QC.md` steps 1–4 without waits (`decision 414: Human reviews don''t gate question generation or translation`). Owners: `plans/15c-regional-questions.md`, `plans/16-content-target.md`.
+
+## First: answered review decisions of earlier colombia batches
+- `pm decision list --answered --grep batch-12` (and every earlier colombia batch not yet acted on; batch-12: decisions 408 health ack, 409 spot check), plus the answered spot-check / QC-proposal / health decisions of later colombia batches.
+- Not yet acted on → change tasks in their plans at their priority (QC proposal choices), lines in the report (spot-check results, health ack notes). An unanswered one stays open; nothing waits.
 
 ## QC
-- `authoring/QC.md` steps 1–4:
-  - spot check: `pm decision add "Spot check batch-<n> done?"` (native speaker of Colombian Spanish; link `http://127.0.0.1:8001/review?batch=batch-<n>&sample=1`, `trivia-authoring`); never answered by an LLM; pending, stop until answered
-  - `qgen report --qc batch-<n>`; proposals (≥ 2 disagreements per problem kind, ≥ 2 major audit findings, any fact false approve) → `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans; none → `qgen report --qc batch-<n> --changes none`
-- decision 3: `qgen rework --batch batch-<n>` once after QC; stage the paths it prints.
-- Note `qgen report --cost` per bundle ($ per approved, information only; no budget, no gates) and `qgen report --review-time --bundle colombia`.
-- Chain 5''s pace: if the numbers look too costly, `pm decision add` instead of adding the next pair (batch-12: $0.28 per approved, 35 min per 100 verdicts).
+- Spot check: `pm decision add "Spot check batch-<n> done?"` (native speaker of Colombian Spanish; link `http://127.0.0.1:8001/review?batch=batch-<n>&sample=1`, `trivia-authoring`); never answered by an LLM; raised, not waited on (no `pm task-pending-decision`).
+- `qgen report --qc batch-<n>` with the spot checks recorded so far (the next QC task adds later ones). Proposals (≥ 2 disagreements per problem kind, ≥ 2 major audit findings, any fact false approve) → `pm decision add "QC batch-<n>: which changes?"`, raised, not waited on; its recommended option names the change tasks the next QC task adds once answered. None → `qgen report --qc batch-<n> --changes none`.
+- Decision 3: `qgen rework --batch batch-<n>` once; stage the paths it prints.
+- Note `qgen report --cost` per bundle ($ per approved, information only; no budget, no gates, no pace question) and `qgen report --review-time --bundle colombia`.
 
-## Then, first that applies
-1. `qgen report --bundle colombia` shows 2000 approved (es) → add two closing tasks (plan 84 chain 4): **Pilot effort** ($ per approved per bundle and review time per 100 into `plans/15c-regional-questions.md` and `plans/16-content-target.md`; no "More regional bundles?" decision) and **first en run** `run tr-en-<n>` (`qgen batch --translate en --bundle colombia`; translation run shape: one task, no QC, no spot check, no `qgen health ack`; needs plan 98''s `--translate --bundle` done and `task 634: run tr-en-1` done, else pend on the blocking decision; each en run notes its numbers and adds the next until `qgen report --bundle colombia --locale en` shows 2000 approved; then `plans/15c` notes colombia es + en done).
-2. Else the next es pair (same bodies as this task and its run task, next batch number from `qgen`).
+## Then, first that applies (without waiting for any answer)
+1. `qgen report --bundle colombia` shows 2000 approved (es) → add two closing tasks (plan 84 chain 4): **Pilot effort** ($ per approved per bundle and the developer''s review time per 100 into `plans/15c-regional-questions.md` and `plans/16-content-target.md`; no "More regional bundles?" decision) and **first en run** `run tr-en-<n>` (`qgen batch --translate en --bundle colombia`; translation run shape: one task, no QC, no spot check, no `qgen health ack`; needs plan 98''s `--translate --bundle` done, else `pm task requires` on that task, stop; each en run notes its numbers and adds the next until `qgen report --bundle colombia --locale en` shows 2000 approved; then `plans/15c` notes colombia es + en done).
+2. Else the next es pair (same bodies as this task and its run task, next batch number from `qgen`; QC requires the run).
 - One open pair (or en run) per language of the bundle.
 
-## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
-- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148 or new).
-- `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths a command prints; don''t commit (pm commits as "task N: …").
-- Exit 2 first: `pm decision list --grep "<run>: health stop"` (`<run>`: the run the stop names, e.g. an earlier batch); a pending one → `pm task-pending-decision <this task> <id>`, no new decision (the stop holds for every bundle and locale until the developer''s `qgen health ack <run>`), stage nothing, stop.
-- Exit 75, exit 2 (none pending), any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- Note on done: the QC numbers (approved, rejected, needs_work, agreement, $ per approved, review time per 100).', '2026-10-23T00:13:00Z', NULL, 1296, 0, NULL, 'questions');
+Done when: QC steps done, decisions raised (not linked), rework staged, next pair or closing tasks added; note with the QC numbers (approved, rejected, needs_work, agreement, $ per approved, review time per 100).
+
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run", `decision 414: Human reviews don''t gate question generation or translation`)
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148, 171 or new).
+- `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
+- Health ✗ (in the output, the report or `qgen health`): `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health stop, ack?"` (or the name RUNBOOK gives once task 1699''s plan renames it), no task linked (no `pm task-pending-decision`); the task goes on. Never `qgen health ack` (the developer''s).
+- Exit 2 (health stop, while qgen still has it): a bug under decision 414. Find or raise the health decision as above, no task linked; then the qgen fix task of the plan `task 1699: write plan: Reviews don''t gate generation` writes (`pm plan list`; add it there if missing; if that plan isn''t written yet, use task 1699 itself): `pm task requires <this task> <fix id>`, stage nothing, stop.
+- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-23T00:13:00Z', NULL, 1296, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1692, 17, 'RUNBOOK: on a health stop, link to a pending ack decision instead of adding a duplicate', 'work', 'done', 0, '2026-10-22, authoring/RUNBOOK.md; plans 17 and 84 bodies and task 1690 body updated in pm', '`decision 413: batch-12: health stop, ack?` duplicated `decision 408: batch-12: health stop, ack?`: `task 1690: run colombia batch (batch-<n>)` hit the same batch-12 health stop as `task 1680: run batch-13` and added a new decision. The translation tasks 639, 641, 1226, 1228 had linked to 408 instead. 413 was closed as a duplicate by hand, and 1690 moved to 408.
 
 The health stop applies to every bundle and locale run until `qgen health ack <run>`, so every batch task waiting on it should wait on one decision.
@@ -42767,8 +42778,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/project.md`: CT-5 line.
 
 Done when: both files updated with the numbers; every slice listed with its release row or "spot check pending".', '2026-10-23T01:20:01Z', NULL, 1706, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1709, 84, 'create tasks for plan 84: Release content runs', 'split', 'open', 1000, NULL, 'Split plan 84 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-23T01:24:10Z', NULL, 1704, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1709, 84, 'create tasks for plan 84: Release content runs', 'split', 'done', 1000, '2026-10-23, tasks.sql only: bodies of tasks 639, 641, 1226, 1228, 1690, 1691, 1268–1272 revised to decision 414 (health ✗ raised not waited on, exit 2 → task 1699''s fix task, reviews raised not linked, no pilot/171 pre-checks, no cost pace question); no new tasks or decisions. Bundle starts 1268–1272 still wait on decisions 324, 325, 326, 333 (start before colombia''s first QC?), moot now that task 1296 is done: the developer answers them', 'Split plan 84 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-23T01:24:10Z', '2026-10-23T01:25:59Z', 1704, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -50575,6 +50586,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1840, 1706, '2026-10-23T01:19:10Z', '2026-10-23T01:21:44Z', 'done', NULL, 0, 'ca2fa3b584ce12b0d99bcc0c2c3f92322b6da44b', NULL, 'claude-opus-5-5', '2b17913c-5ab5-4c12-8222-0127d1c4d543', NULL, 16, 30, 6718, 738134, 48864, 0.6730188, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1841, 1703, '2026-10-23T01:21:44Z', '2026-10-23T01:22:07Z', 'done', NULL, 0, 'bf9005e7bc5fb3d14b4e7260fe2d55c1874b45ed', NULL, 'claude-opus-5-5', '74b24bb5-7898-49c2-a928-d321828cdf7d', NULL, 4, 8, 1096, 173814, 45602, 0.4215308, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1842, 1704, '2026-10-23T01:22:08Z', '2026-10-23T01:24:23Z', 'done', NULL, 0, 'f443e7605917e8f392dfbd6cc604ccd45e9f83c7', NULL, 'claude-opus-5-5', 'f222c574-b88e-43e4-979d-0af59a497367', NULL, 7, 14, 12051, 407236, 67713, 0.8642272, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1843, 1709, '2026-10-23T01:24:23Z', '2026-10-23T01:26:08Z', 'done', NULL, 0, '706b87b0cf632e7381ed7297110be1f51667cdba', NULL, 'claude-opus-5-5', 'c9856db5-68ca-49a4-96b1-0997521e7399', NULL, 13, 26, 9290, 777075, 68487, 0.889215, 494342);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
