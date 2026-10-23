@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "9ee41ffd",
+  "hash": "2b322e03",
   "questions": [
     {
       "id": "q-0002",
@@ -18678,6 +18678,40 @@
       "background": null
     },
     {
+      "id": "q-6996",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "19th-century",
+      "bundle": "colombia",
+      "description": "Una semilla tan dura que los elefantes deberían agradecerle.",
+      "question": "En el siglo XIX, Colombia exportaba a Europa y Estados Unidos la tagua, el 'marfil vegetal'. ¿Para qué se usaba sobre todo?",
+      "answer": "Para hacer botones",
+      "wrong_answers": [
+        "Para hacer tinta",
+        "Para hacer jabón",
+        "Para teñir telas"
+      ],
+      "hints": [
+        "Terminaba cosida en la ropa.",
+        "Se cortaba en rodajas pequeñas y se le hacían huecos.",
+        "Las camisas y los abrigos llevaban muchos de ellos."
+      ],
+      "fun_fact": "El plástico acabó con el gran negocio de la tagua, pero hoy se usa otra vez para joyas y artesanías.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/TaguaPalm.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATaguaPalm.JPG",
+        "credit": "The lifted lorax (talk) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "The lifted lorax (talk)\n\nOriginal uploader was The lifted lorax at en.wikipedia",
+        "author_url": "https://en.wikipedia.org/wiki/User:The_lifted_lorax"
+      },
+      "background": null
+    },
+    {
       "id": "q-6997",
       "status": "approved",
       "difficulty": 3,
@@ -18984,6 +19018,40 @@
       "background": null
     },
     {
+      "id": "q-7006",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "banknotes-and-coins",
+      "bundle": "colombia",
+      "description": "El billete que todos quieren encontrar olvidado en el bolsillo de una chaqueta.",
+      "question": "El billete colombiano de Gabriel García Márquez vale 50 000 pesos. ¿Cuántas lucas son?",
+      "answer": "50",
+      "wrong_answers": [
+        "5",
+        "20",
+        "100"
+      ],
+      "hints": [
+        "En la calle, 'luca' es una forma de hablar de plata.",
+        "Una luca son 1000 pesos.",
+        "Le quitas los tres últimos ceros y ya está."
+      ],
+      "fun_fact": "En el billete de 50 000 aparece Gabriel García Márquez, el único colombiano con Nobel de Literatura.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Moneda_200_pesos_colombianos_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMoneda_200_pesos_colombianos_2016.jpg",
+        "credit": "Rjcastillo · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rjcastillo",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rjcastillo"
+      },
+      "background": null
+    },
+    {
       "id": "q-7007",
       "status": "approved",
       "difficulty": 3,
@@ -19120,6 +19188,40 @@
       "background": null
     },
     {
+      "id": "q-7011",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "brands-and-products",
+      "bundle": "colombia",
+      "description": "Un restaurante donde hasta el helado tiene conciencia social.",
+      "question": "Crepes & Waffles nació en Bogotá en 1980, es famosa por sus helados y tiene una política especial al contratar. ¿A quiénes contrata principalmente?",
+      "answer": "Madres cabeza de familia",
+      "wrong_answers": [
+        "Jóvenes en su primer empleo",
+        "Deportistas retirados",
+        "Abuelos ya pensionados"
+      ],
+      "hints": [
+        "Es una política social que la marca tiene casi desde sus inicios.",
+        "Es un grupo al que en Colombia le suele costar conseguir un trabajo estable.",
+        "Muchas de ellas sacan adelante solas a sus hijos."
+      ],
+      "fun_fact": "Sus helados se volvieron tan famosos que la marca tiene heladerías propias aparte de los restaurantes.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Ice_Cream_Crepe_%28218792%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIce_Cream_Crepe_%28218792%29.jpg",
+        "credit": "https://pixabay.com/es/users/publicdomainpictures-14/ · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "https://pixabay.com/es/users/publicdomainpictures-14/",
+        "author_url": "https://pixabay.com/es/users/publicdomainpictures-14/"
+      },
+      "background": null
+    },
+    {
       "id": "q-7012",
       "status": "approved",
       "difficulty": 7,
@@ -19150,6 +19252,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Ip19216811",
         "author_url": "https://commons.wikimedia.org/wiki/User:Ip19216811"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7013",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "brands-and-products",
+      "bundle": "colombia",
+      "description": "Un champú con tanta autoestima que se bautizó con ella.",
+      "question": "Ego es una marca colombiana de champú y gel, de la misma empresa que hace Savital y Bon Ice. ¿Para quién se creó?",
+      "answer": "Para hombres",
+      "wrong_answers": [
+        "Para bebés",
+        "Para mascotas",
+        "Para nadadores"
+      ],
+      "hints": [
+        "Su gel es famoso para peinados con mucha fijación.",
+        "Su nombre habla de la confianza en uno mismo.",
+        "Su nombre completo en inglés le agrega 'for men'."
+      ],
+      "fun_fact": "Quala, la empresa detrás de Ego, también fabrica el caldo Doña Gallina.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/MC_%E6%BE%B3%E9%96%80_Macau_Cotai_%E4%B8%8A%E8%92%B2%E4%BA%AC_Grand_Lisboa_Palace_%E9%85%92%E5%BA%97_hotel_bathroom_soap_plastic_bottles_November_2024_R12S_01.jpg/3840px-MC_%E6%BE%B3%E9%96%80_Macau_Cotai_%E4%B8%8A%E8%92%B2%E4%BA%AC_Grand_Lisboa_Palace_%E9%85%92%E5%BA%97_hotel_bathroom_soap_plastic_bottles_November_2024_R12S_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMC_%E6%BE%B3%E9%96%80_Macau_Cotai_%E4%B8%8A%E8%92%B2%E4%BA%AC_Grand_Lisboa_Palace_%E9%85%92%E5%BA%97_hotel_bathroom_soap_plastic_bottles_November_2024_R12S_01.jpg",
+        "credit": "JohnLEE Brothers · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "JohnLEE Brothers",
+        "author_url": "https://commons.wikimedia.org/wiki/User:JohnLEE_Brothers"
       },
       "background": null
     },
@@ -21364,6 +21500,40 @@
       "background": null
     },
     {
+      "id": "q-7083",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "painters-sculptors-and-museums",
+      "bundle": "colombia",
+      "description": "Siete vidas no le alcanzaron a este felino para quedarse quieto en un solo sitio.",
+      "question": "Un enorme gato de bronce de Botero llegó a esta ciudad en 1987, cambió de sitio varias veces y hoy vive en el barrio del Raval. ¿Qué ciudad es?",
+      "answer": "Barcelona",
+      "wrong_answers": [
+        "Madrid",
+        "París",
+        "Roma"
+      ],
+      "hints": [
+        "El gato tiene las formas redondas y gorditas típicas de Botero.",
+        "Es una ciudad europea famosa por su arquitectura y sus museos.",
+        "Allí está la Sagrada Familia de Gaudí."
+      ],
+      "fun_fact": "Antes de llegar al Raval, el gato de Botero estuvo en el parque de la Ciutadella y luego junto al Estadio Olímpico de Montjuïc.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Gat_Gato_Cat_%28371758010%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGat_Gato_Cat_%28371758010%29.jpg",
+        "credit": "Anna · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Anna",
+        "author_url": "https://www.flickr.com/people/61219542@N00"
+      },
+      "background": null
+    },
+    {
       "id": "q-7084",
       "status": "approved",
       "difficulty": 12,
@@ -21602,6 +21772,74 @@
       "background": null
     },
     {
+      "id": "q-7092",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "banknotes-and-coins",
+      "bundle": "colombia",
+      "description": "Un secreto que el billete guarda escondido en su propio papel.",
+      "question": "El papel de los billetes colombianos tiene unas fibras de colores que a simple vista no se notan. ¿Cómo se pueden ver?",
+      "answer": "Con una lámpara de luz ultravioleta",
+      "wrong_answers": [
+        "Mirando el billete a contraluz",
+        "Girando el billete de lado",
+        "Mojando el billete con agua"
+      ],
+      "hints": [
+        "Son una medida contra los billetes falsos.",
+        "Es la misma luz que en las fiestas hace brillar la ropa blanca.",
+        "La llaman luz “negra”."
+      ],
+      "fun_fact": "Las fibras quedan dentro del papel al fabricarlo, por eso es muy difícil copiarlas con una impresora.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/100_Pesos_-_Banco_De_Oriente_%281900%29_Bisco5_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A100_Pesos_-_Banco_De_Oriente_%281900%29_Bisco5_01.jpg",
+        "credit": "El Banco De Oriente. · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "El Banco De Oriente.",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-7093",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "banknotes-and-coins",
+      "bundle": "colombia",
+      "description": "Cuatro años en la Casa de Nariño dan para muchísimas fotos oficiales.",
+      "question": "Fui presidente de Colombia en los años 70 y mi papá también había sido presidente. ¿Quién soy?",
+      "answer": "Alfonso López Michelsen",
+      "wrong_answers": [
+        "Carlos Lleras Restrepo",
+        "Misael Pastrana Borrero",
+        "Julio César Turbay"
+      ],
+      "hints": [
+        "En los años 60 fundó el Movimiento Revolucionario Liberal (MRL).",
+        "Fue el primer gobernador del Cesar y ayudó a crear el Festival de la Leyenda Vallenata.",
+        "Lleva el mismo nombre y primer apellido que su papá."
+      ],
+      "fun_fact": "Su papá, Alfonso López Pumarejo, fue presidente dos veces: de 1934 a 1938 y de 1942 a 1945.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Acorde%C3%B3n_vallenato.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAcorde%C3%B3n_vallenato.jpg",
+        "credit": "Jdvillalobos · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jdvillalobos",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jdvillalobos"
+      },
+      "background": null
+    },
+    {
       "id": "q-7094",
       "status": "approved",
       "difficulty": 8,
@@ -21734,6 +21972,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Paul from Hacketts Cove, Canada",
         "author_url": "https://www.flickr.com/people/66284982@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7098",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "cycling",
+      "bundle": "colombia",
+      "description": "Pasta, montañas y tres semanas de pedal: el Giro tiene premio para todos los gustos.",
+      "question": "Egan Bernal la conquistó en el Giro de Italia de 2021, y allá la llaman «maglia rosa». ¿Qué es?",
+      "answer": "La camiseta del líder de la carrera",
+      "wrong_answers": [
+        "La camiseta del mejor escalador",
+        "La camiseta del mejor embalador",
+        "La camiseta del campeón del mundo"
+      ],
+      "hints": [
+        "Es algo que se pone el ciclista sobre el cuerpo.",
+        "Su color viene del papel del periódico que fundó la carrera.",
+        "Quien la tiene en la última etapa gana el Giro."
+      ],
+      "fun_fact": "Egan Bernal llegó a Milán con la maglia rosa en 2021 y se convirtió en el segundo colombiano en ganar el Giro, después de Nairo Quintana.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/20110724_Milan_Cathedral_5260.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A20110724_Milan_Cathedral_5260.jpg",
+        "credit": "Jakub Hałun · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jakub Hałun",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jakubhal"
       },
       "background": null
     },
@@ -22282,6 +22554,40 @@
       "background": null
     },
     {
+      "id": "q-7115",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "other-sports",
+      "bundle": "colombia",
+      "description": "Un clásico del recreo que se juega con más gritos que reglas.",
+      "question": "Estás jugando ponchados en el recreo y tienes el balón en la mano. ¿Para qué lo lanzas?",
+      "answer": "Para sacar a un rival",
+      "wrong_answers": [
+        "Para encestar en un aro",
+        "Para pasarlo sobre una red",
+        "Para meterlo en un arco"
+      ],
+      "hints": [
+        "Los del otro equipo corren y esquivan.",
+        "Se juega con dos equipos, cada uno en su lado de la cancha.",
+        "El que recibe el golpe sale del juego."
+      ],
+      "fun_fact": "El ponchado tiene muchos nombres en el mundo: en otros países le dicen 'quemados' o 'dodgeball'.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Minden_State_School_playground%2C_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMinden_State_School_playground%2C_2023.jpg",
+        "credit": "Unidentified · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Unidentified",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-7116",
       "status": "approved",
       "difficulty": 9,
@@ -22414,6 +22720,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Yimicorrea",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Yimicorrea&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7120",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "popular-and-andean-music",
+      "bundle": "colombia",
+      "description": "Una receta musical tolimense: mezcla bien, sirve en Ibagué y ponte de pie para cantarla.",
+      "question": "El Bunde tolimense se convirtió en el himno del Tolima. ¿Quién compuso su música?",
+      "answer": "Alberto Castilla",
+      "wrong_answers": [
+        "Jorge Villamil",
+        "Pedro Morales Pino",
+        "José A. Morales"
+      ],
+      "hints": [
+        "Fue un músico que vivió y trabajó en Ibagué.",
+        "Fundó el Conservatorio del Tolima.",
+        "Su apellido es también el nombre de una región de España."
+      ],
+      "fun_fact": "El Bunde tolimense es tan querido que en el Tolima se canta en actos oficiales casi como si fuera el himno nacional.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Murillo_%28Tolima%29_-_Zona_rural_2.jpg/3840px-Murillo_%28Tolima%29_-_Zona_rural_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMurillo_%28Tolima%29_-_Zona_rural_2.jpg",
+        "credit": "SajoR · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "SajoR",
+        "author_url": "https://commons.wikimedia.org/wiki/User:SajoR"
       },
       "background": null
     },
@@ -23898,6 +24238,40 @@
       "background": null
     },
     {
+      "id": "q-7166",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "sweets-and-desserts",
+      "bundle": "colombia",
+      "description": "El invitado más colorido de cualquier cumpleaños infantil, después del payaso.",
+      "question": "Viene en polvo en un sobrecito, se cuaja en la nevera, tiembla en el plato y hay roja, verde y amarilla. ¿Qué es?",
+      "answer": "Gelatina",
+      "wrong_answers": [
+        "Helado",
+        "Arequipe",
+        "Bocadillo"
+      ],
+      "hints": [
+        "Es un postre frío.",
+        "En los cumpleaños la sirven en vasitos.",
+        "Si mueves el plato, se mueve toda, como si bailara."
+      ],
+      "fun_fact": "La gelatina se cuaja porque el colágeno forma una red que atrapa el agua.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/130422-N-ZZ999-022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A130422-N-ZZ999-022.jpg",
+        "credit": "U.S. Navy photo by Chief Mass Communication Specialist Michael Ard/Released · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Navy photo by Chief Mass Communication Specialist Michael Ard/Released",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-7167",
       "status": "approved",
       "difficulty": 1,
@@ -24136,6 +24510,40 @@
       "background": null
     },
     {
+      "id": "q-7174",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "symbols-of-departments-and-cities",
+      "bundle": "colombia",
+      "description": "Tu cédula dice dónde naciste, pero tu acento lo grita primero.",
+      "question": "Si naces en Palmira, Buga o Buenaventura, ¿cómo te dicen según tu departamento?",
+      "answer": "Vallecaucano",
+      "wrong_answers": [
+        "Caucano",
+        "Antioqueño",
+        "Tolimense"
+      ],
+      "hints": [
+        "Las tres ciudades están en el mismo departamento.",
+        "Es famoso por sus enormes cultivos de caña de azúcar.",
+        "Su departamento lleva el nombre de un valle y de un río."
+      ],
+      "fun_fact": "Buenaventura, en el Valle del Cauca, es el puerto más importante de Colombia sobre el océano Pacífico.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Ca%C3%B1a_de_az%C3%BAcar_.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACa%C3%B1a_de_az%C3%BAcar_.jpg",
+        "credit": "Orzalaga · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Orzalaga",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Orzalaga&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-7175",
       "status": "approved",
       "difficulty": 6,
@@ -24234,6 +24642,40 @@
         "license_url": null,
         "author": "El Banco De Oriente.",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-7178",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "telenovelas",
+      "bundle": "colombia",
+      "description": "En Ecomoda había más chisme que telas, y esta secretaria salía en casi todos.",
+      "question": "En «Yo soy Betty, la fea», Lorna Cepeda interpretó a Patricia Fernández. ¿Qué cosa de ella inspiró su famoso apodo?",
+      "answer": "Su pelo teñido",
+      "wrong_answers": [
+        "Sus uñas postizas",
+        "Sus tacones altos",
+        "Sus pestañas falsas"
+      ],
+      "hints": [
+        "El apodo se lo pusieron las del cuartel de las feas.",
+        "Tiene que ver con algo que se hace en la peluquería.",
+        "El apodo junta «pelo» con lo que le hizo a su color."
+      ],
+      "fun_fact": "Patricia vivía presumiendo sus «seis semestres de Finanzas y Relaciones Internacionales».",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Bletchley_Park_Desk_and_Typewriter_%2821598716801%29.jpg/3840px-Bletchley_Park_Desk_and_Typewriter_%2821598716801%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABletchley_Park_Desk_and_Typewriter_%2821598716801%29.jpg",
+        "credit": "William Warby from London, England · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "William Warby from London, England",
+        "author_url": "https://www.flickr.com/people/26782864@N00"
       },
       "background": null
     },
@@ -24574,6 +25016,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Camilo Sanchez",
         "author_url": "https://commons.wikimedia.org/wiki/User:Camilo_Sanchez"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7189",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "traditional-games",
+      "bundle": "colombia",
+      "description": "Una puntica de metal que hace todo el trabajo mientras la madera se lleva toda la fama.",
+      "question": "La púa es la punta de metal del trompo: sobre ella baila y raya el piso. En los juegos de calle, ¿para qué más la usan los niños?",
+      "answer": "Para golpear el trompo del rival",
+      "wrong_answers": [
+        "Para colgarlo en la pared",
+        "Para hacer silbar el trompo",
+        "Para medir cuánto baila"
+      ],
+      "hints": [
+        "Tiene que ver con los otros jugadores.",
+        "Es un uso más bien brusco, nada delicado.",
+        "En Colombia a ese golpe se le llama 'quiña'."
+      ],
+      "fun_fact": "Muchos niños afilaban la púa de su trompo para que las 'quiñas' le dejaran marca al trompo del contrincante.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Toupie_de_jeu%2C_Tunisie_2019_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AToupie_de_jeu%2C_Tunisie_2019_01.jpg",
+        "credit": "Habib M'henni · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Habib M'henni",
+        "author_url": "https://www.wikidata.org/wiki/Q105725266"
       },
       "background": null
     },

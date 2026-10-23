@@ -43096,7 +43096,7 @@ Done when its report exists, the printed `git add` paths are staged, note as abo
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the printed `git add` paths; don''t commit.
 - Health ✗: `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health ✗, look at it?"` with the warning verbatim, no task linked; the task goes on. Never `qgen health ack`.
 - Exit 75, other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines, `pm task-pending-decision <this task> <id>`, stage nothing, stop. A Bash timeout isn''t a failure: rerun (resumes).', '2026-10-23T17:44:45Z', '2026-10-23T19:42:27Z', 1691, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1735, 84, 'QC colombia batch (batch-<n>)', 'work', 'open', NULL, NULL, 'Plan 84 chain 4: QC of colombia''s next batch (the run task just before it in the chain). Drafted-run QC shape, `authoring/QC.md` steps 1–4 without waits (`decision 414: Human reviews don''t gate question generation or translation`). Owners: `plans/15c-regional-questions.md`, `plans/16-content-target.md`. The run''s real name is in the run task''s note (`batch-<n>`).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1735, 84, 'QC colombia batch (batch-<n>)', 'work', 'done', NULL, '2026-10-23, QC batch-17 (colombia): 194 approved, 21 needs_work (rework-10 fixed 14, 7 still need work), audit agreement 98 % (0 of 54 major among approved), spot check raised as decision 431 (not recorded, so no QC report/proposals; none by audit rule), colombia es $0.29 per approved (3 runs, 619 approved of 741 total; 1259 to go), review time 35 min per 100 verdicts, health decision 429; next pair: tasks 1736, 1737; staged rework-10 paths', 'Plan 84 chain 4: QC of colombia''s next batch (the run task just before it in the chain). Drafted-run QC shape, `authoring/QC.md` steps 1–4 without waits (`decision 414: Human reviews don''t gate question generation or translation`). Owners: `plans/15c-regional-questions.md`, `plans/16-content-target.md`. The run''s real name is in the run task''s note (`batch-<n>`).
 
 ## First: answered review decisions of earlier colombia batches
 - `pm decision list --answered --grep batch-<earlier>` for colombia''s earlier batches (12, 16, …) not yet acted on: spot-check results and health ack notes → report lines; QC proposal choices → change tasks in their plans. Unanswered ones stay open; nothing waits.
@@ -43118,7 +43118,46 @@ Done when: QC steps done, decisions raised (not linked), rework staged, next pai
 - D-36: no prompt, pool, media or `qgen.py` changes.
 - Stage exactly the printed `git add` paths; don''t commit.
 - Health ✗: raise `<run>: health ✗, look at it?` unless one exists; never `qgen health ack`; the task goes on.
-- Exit 75, other non-zero, or exit 1 three times at one step → `pm decision add "Continue <run> …?"`, `pm task-pending-decision`, stage nothing, stop.', '2026-10-23T17:44:53Z', NULL, 1691, 0, NULL, 'questions');
+- Exit 75, other non-zero, or exit 1 three times at one step → `pm decision add "Continue <run> …?"`, `pm task-pending-decision`, stage nothing, stop.', '2026-10-23T17:44:53Z', '2026-10-23T19:47:54Z', 1691, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1736, 84, 'run colombia batch (batch-<n>)', 'work', 'open', NULL, NULL, 'Plan 84 chain 4, next es pair of the regional pilot `colombia` (`decision 110: Regional packs at launch (RG-5, OQ-46)`), added by `task 1735: QC colombia batch (batch-<n>)`.
+
+## Run
+- `nix develop -c qgen batch --bundle colombia` (`authoring/RUNBOOK.md` steps 1–5; Colombian Spanish). No other pipeline steps by hand. Run name: whatever `qgen` prints (`batch-<max+1>`); it can''t be renamed while the task runs, so note the real name in the done note and say it in the QC task''s note.
+- Note on done: the "Done:" line, the `claude:` line, the report path, the health result (✗ reported and raised, not a stop).
+
+Done when its report exists, the printed `git add` paths are staged, note as above.
+
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run", `decision 414: Human reviews don''t gate question generation or translation`)
+- D-36: no prompt, pool, media or `qgen.py` changes; findings become decisions or tasks in their own plans.
+- `tasks.sql` alone isn''t a dirty tree. Stage exactly the printed `git add` paths; don''t commit.
+- Health ✗: `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health ✗, look at it?"` with the warning verbatim, no task linked; the task goes on. Never `qgen health ack`.
+- Exit 75, other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines, `pm task-pending-decision <this task> <id>`, stage nothing, stop. A Bash timeout isn''t a failure: rerun (resumes).
+
+Required by:
+  task 1735 [open] QC colombia batch (batch-<n>)', '2026-10-23T19:47:47Z', NULL, 1735, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1737, 84, 'QC colombia batch (batch-<n>)', 'work', 'open', NULL, NULL, 'Plan 84 chain 4: QC of colombia''s next batch (the run task just before it in the chain). Drafted-run QC shape, `authoring/QC.md` steps 1–4 without waits (`decision 414: Human reviews don''t gate question generation or translation`). Owners: `plans/15c-regional-questions.md`, `plans/16-content-target.md`. The run''s real name is in the run task''s note (`batch-<n>`).
+
+## First: answered review decisions of earlier colombia batches
+- `pm decision list --answered --grep batch-<earlier>` for colombia''s earlier batches (12, 16, …) not yet acted on: spot-check results and health ack notes → report lines; QC proposal choices → change tasks in their plans. Unanswered ones stay open; nothing waits.
+
+## QC
+- Spot check: `pm decision add "Spot check batch-<n> done?"` (native Colombian Spanish speaker; link `http://127.0.0.1:8001/review?batch=batch-<n>&sample=1`, `trivia-authoring`); never answered by an LLM; raised, not waited on.
+- `qgen report --qc batch-<n>` (needs a recorded spot check; without one it prints "no spot check" and writes nothing: then judge proposals from the report''s Audit section). Proposals (≥ 2 disagreements per problem kind, ≥ 2 major audit findings on approved questions, any fact false approve) → `pm decision add "QC batch-<n>: which changes?"`, raised, not waited on. None → `qgen report --qc batch-<n> --changes none`.
+- Decision 3: `qgen rework --batch batch-<n>` once; stage the paths it prints that exist.
+- Note `qgen report --cost` (colombia es line: $ per approved, information only) and `qgen report --review-time --bundle colombia`.
+
+## Then, first that applies (without waiting for any answer)
+1. `qgen report --bundle colombia` shows 2000 approved (es) → add two closing tasks: **Pilot effort** ($ per approved per bundle and the developer''s review time per 100 into `plans/15c-regional-questions.md` and `plans/16-content-target.md`; no "More regional bundles?" decision) and **first en run** `run tr-en-<n>` (`qgen batch --translate en --bundle colombia`; translation run shape: one task, no QC, no spot check; each en run notes its numbers and adds the next until `qgen report --bundle colombia --locale en` shows 2000 approved).
+2. Else the next es pair (same bodies as this task and its run task; QC requires the run).
+- One open pair per language of the bundle.
+
+Done when: QC steps done, decisions raised (not linked), rework staged, next pair or closing tasks added; note with the QC numbers (approved, rejected, needs_work, agreement, $ per approved, review time per 100).
+
+## pm-run rules
+- D-36: no prompt, pool, media or `qgen.py` changes.
+- Stage exactly the printed `git add` paths; don''t commit.
+- Health ✗: raise `<run>: health ✗, look at it?` unless one exists; never `qgen health ack`; the task goes on.
+- Exit 75, other non-zero, or exit 1 three times at one step → `pm decision add "Continue <run> …?"`, `pm task-pending-decision`, stage nothing, stop.', '2026-10-23T19:47:50Z', NULL, 1735, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -49074,6 +49113,12 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
      M app/data/demo/pool.json
 
 Look: `git show pm/task-1734-run-1871-left`. Keep: `git merge pm/task-1734-run-1871-left`. Then `git branch -D pm/task-1734-run-1871-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', NULL, NULL, '2026-10-23T19:42:32Z', NULL, NULL, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (431, 'Spot check batch-17 done?', 'pending', '["Done"]', 'Native Colombian Spanish speaker: run trivia-authoring, open http://127.0.0.1:8001/review?batch=batch-17&sample=1 (30 questions, ~10-15 min, mark problem kinds in the feedback box).', 'Each batch of Colombian questions gets a blind check by a native speaker, who judges 30 questions without seeing the machine''s verdict. This tells us whether the automatic review decides like a person. Nothing waits for it.', NULL, NULL, '2026-10-23T19:43:11Z', NULL, 1735, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (432, 'Task 1735 left unstaged changes after `pm task done`: investigate', 'pending', '[]', 'Run 1872 of task 1735 closed the task but left 1 file unstaged. pm committed them on the branch `pm/task-1735-run-1872-left` and cleaned the tree.
+
+     M app/data/demo/pool.json
+
+Look: `git show pm/task-1735-run-1872-left`. Keep: `git merge pm/task-1735-run-1872-left`. Then `git branch -D pm/task-1735-run-1872-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', NULL, NULL, '2026-10-23T19:47:59Z', NULL, NULL, NULL, 'once', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -51001,6 +51046,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1869, 1732, '2026-10-23T17:45:25Z', '2026-10-23T17:45:57Z', 'blocked', NULL, 0, 'afa50aefdaa542bd96b7e93bfe01fdde9ce74d0b', 'questions', 'claude-sonnet-5-5', '35e6e5d8-4f48-4a38-b09a-f36cecf4a28b', NULL, 8, 16, 1614, 333409, 46619, 0.26932980000000006, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1870, 1733, '2026-10-23T17:45:57Z', '2026-10-23T17:46:26Z', 'blocked', NULL, 0, 'afa50aefdaa542bd96b7e93bfe01fdde9ce74d0b', 'questions', 'claude-sonnet-5-5', 'd61a150e-4093-4199-b6eb-a9f2ec9a5b25', NULL, 8, 16, 1616, 335657, 47572, 0.2736114, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1871, 1734, '2026-10-23T17:46:27Z', '2026-10-23T19:42:32Z', 'done', 'left 1 file unstaged, committed on branch pm/task-1734-run-1871-left; decision 430: investigate', 0, 'afa50aefdaa542bd96b7e93bfe01fdde9ce74d0b', 'questions', 'claude-sonnet-5-5', '496b0268-60f0-44d3-825e-8075b6450716', NULL, 7, 14, 1736, 298329, 39497, 0.2350418, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1872, 1735, '2026-10-23T19:42:37Z', '2026-10-23T19:47:58Z', 'done', 'left 1 file unstaged, committed on branch pm/task-1735-run-1872-left; decision 432: investigate', 0, 'bbc9175e8e4c33cc01a4c27bdaabec1c305d2460', 'questions', 'claude-sonnet-5-5', '496b0268-60f0-44d3-825e-8075b6450716', 1871, 10, 18, 2748, 639769, 25859, 0.49394760000000004, 494342);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -51716,6 +51762,7 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1731, 172
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1732, 1726);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1733, 1726);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1735, 1734);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1737, 1736);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
