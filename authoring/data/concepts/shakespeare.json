@@ -91,7 +91,8 @@
     {
       "name": "Montescos y Capuletos",
       "facet": "Tragedias famosas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The pool already has two questions that place the Montagues and Capulets in Verona, which also answers the country. No fresh fact at this level."
     },
     {
       "name": "Celos",
@@ -176,7 +177,8 @@
     {
       "name": "Cimbelino",
       "facet": "Comedias y obras de enredo",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Cymbeline is too obscure for a fair question with these options (photo or estimate)."
     },
     {
       "name": "Pericles",
@@ -700,7 +702,8 @@
     {
       "name": "Lackluster",
       "facet": "Palabras y expresiones inventadas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: The question would be about where an English word came from, which doesn't work in other languages."
     },
     {
       "name": "Bedazzled",
@@ -715,7 +718,8 @@
     {
       "name": "Wild-goose chase",
       "facet": "Palabras y expresiones inventadas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: The question would be about where an English idiom came from, which doesn't work in other languages."
     },
     {
       "name": "Heart of gold",
@@ -821,7 +825,8 @@
     {
       "name": "Verona",
       "facet": "Escenarios y lugares de las obras",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: Verona's Shakespeare facts (Juliet's balcony and courtyard, the Romeo and Juliet setting) are already in the pool."
     },
     {
       "name": "Elsinor",

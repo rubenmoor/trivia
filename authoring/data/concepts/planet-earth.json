@@ -411,7 +411,8 @@
     {
       "name": "Paleontólogo",
       "facet": "Eras geológicas y fósiles",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Paleontology is already asked; naming the scientist would repeat the same fact."
     },
     {
       "name": "Jurásico",
@@ -466,7 +467,8 @@
     {
       "name": "Estegosaurio",
       "facet": "Eras geológicas y fósiles",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The skeleton question already covers identifying a stegosaurus; a close-up of its plates would ask the same fact, and the other options don't fit."
     },
     {
       "name": "Megalodón",

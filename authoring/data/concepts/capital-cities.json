@@ -465,7 +465,8 @@
     {
       "name": "Museo del Louvre",
       "facet": "Monumentos famosos de capitales",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The photo and pyramid questions already cover what kids know about the Louvre."
     },
     {
       "name": "Torre de Tokio",

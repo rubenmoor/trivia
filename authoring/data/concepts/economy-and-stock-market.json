@@ -196,7 +196,8 @@
     {
       "name": "Mano invisible",
       "facet": "Economistas e ideas económicas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: The pool already has an invisible-hand question with Adam Smith as the answer; the odd-one-out options would be forced at difficulty 1."
     },
     {
       "name": "John Maynard Keynes",
@@ -216,7 +217,8 @@
     {
       "name": "El capital",
       "facet": "Economistas e ideas económicas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: The pool already asks about Das Kapital and the British Museum; the options with Marx's photo would repeat it or be too hard."
     },
     {
       "name": "Thomas Malthus",

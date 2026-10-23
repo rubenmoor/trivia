@@ -180,7 +180,8 @@
     {
       "name": "Umarí",
       "facet": "Frutas amazónicas comestibles",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Umarí is a regional fruit known only in parts of Peru and Colombia."
     },
     {
       "name": "Uva caimarona",
@@ -382,7 +383,8 @@
     {
       "name": "Catasetum",
       "facet": "Flores, orquídeas y bromelias",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Catasetum is too obscure, and none of the record options fits it."
     },
     {
       "name": "Calathea",
@@ -392,7 +394,8 @@
     {
       "name": "Costus",
       "facet": "Flores, orquídeas y bromelias",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Costus (spiral ginger) is too obscure for a fair question in these options."
     },
     {
       "name": "Brownea",
@@ -402,7 +405,8 @@
     {
       "name": "Gongora",
       "facet": "Flores, orquídeas y bromelias",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Gongora pollination by orchid bees is too obscure for a fair photo question."
     },
     {
       "name": "Canangucho",
@@ -440,7 +444,8 @@
     {
       "name": "Bacaba",
       "facet": "Palmas amazónicas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Bacaba palm is too obscure for families everywhere; there is no fair angle."
     },
     {
       "name": "Caraná",
@@ -571,7 +576,8 @@
     {
       "name": "Clusia",
       "facet": "Plantas carnívoras, trepadoras y estranguladoras",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Clusia is too obscure, and its best-known species is Caribbean, not Amazonian."
     },
     {
       "name": "Hemiepífita",
@@ -714,7 +720,8 @@
     {
       "name": "Theodor Koch-Grünberg",
       "facet": "Exploradores y botánicos del Amazonas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Koch-Grünberg's fame (Makunaima myths) is off-topic for plants and too obscure."
     },
     {
       "name": "Tupí",

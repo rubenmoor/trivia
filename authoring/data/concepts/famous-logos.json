@@ -446,7 +446,8 @@
     {
       "name": "Lacoste",
       "facet": "Animales en los logotipos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The crocodile is already asked, and a reptile-group question would follow straight from it."
     },
     {
       "name": "Tux",
@@ -499,7 +500,8 @@
     {
       "name": "Pájaro de Twitter",
       "facet": "Historia y cambios de logos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The bird-to-X change overlaps the existing Twitter→X question. The other options use the Colombia lens or an obscure date."
     },
     {
       "name": "Carolyn Davidson",

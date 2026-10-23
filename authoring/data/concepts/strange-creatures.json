@@ -369,6 +369,118 @@
       "name": "Esfinge de la calavera",
       "facet": "Nombres curiosos de animales",
       "known_at": 13
+    },
+    {
+      "name": "Tarsier",
+      "facet": "Mamíferos de aspecto insólito",
+      "known_at": 9
+    },
+    {
+      "name": "Aardvark",
+      "facet": "Mamíferos de aspecto insólito",
+      "known_at": 9
+    },
+    {
+      "name": "Goblin shark",
+      "facet": "Criaturas del mar profundo",
+      "known_at": 11
+    },
+    {
+      "name": "Barreleye fish",
+      "facet": "Criaturas del mar profundo",
+      "known_at": 13
+    },
+    {
+      "name": "Gulper eel",
+      "facet": "Criaturas del mar profundo",
+      "known_at": 12
+    },
+    {
+      "name": "Sea pig",
+      "facet": "Criaturas del mar profundo",
+      "known_at": 11
+    },
+    {
+      "name": "Praying mantis",
+      "facet": "Insectos y arácnidos sorprendentes",
+      "known_at": 4
+    },
+    {
+      "name": "Hercules beetle",
+      "facet": "Insectos y arácnidos sorprendentes",
+      "known_at": 6
+    },
+    {
+      "name": "Orchid mantis",
+      "facet": "Insectos y arácnidos sorprendentes",
+      "known_at": 9
+    },
+    {
+      "name": "Atlas moth",
+      "facet": "Insectos y arácnidos sorprendentes",
+      "known_at": 11
+    },
+    {
+      "name": "Goliath birdeater",
+      "facet": "Insectos y arácnidos sorprendentes",
+      "known_at": 10
+    },
+    {
+      "name": "Frilled lizard",
+      "facet": "Anfibios y reptiles extraños",
+      "known_at": 8
+    },
+    {
+      "name": "Glass frog",
+      "facet": "Anfibios y reptiles extraños",
+      "known_at": 9
+    },
+    {
+      "name": "Basilisk lizard",
+      "facet": "Anfibios y reptiles extraños",
+      "known_at": 10
+    },
+    {
+      "name": "Bombardier beetle",
+      "facet": "Superpoderes y defensas animales",
+      "known_at": 12
+    },
+    {
+      "name": "Archerfish",
+      "facet": "Superpoderes y defensas animales",
+      "known_at": 10
+    },
+    {
+      "name": "Coelacanth",
+      "facet": "Fósiles vivientes y animales extintos",
+      "known_at": 11
+    },
+    {
+      "name": "Tasmanian tiger",
+      "facet": "Fósiles vivientes y animales extintos",
+      "known_at": 10
+    },
+    {
+      "name": "Gary the Snail",
+      "facet": "Bichos raros en películas y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Pink fairy armadillo",
+      "facet": "Nombres curiosos de animales",
+      "known_at": 12
+    },
+    {
+      "name": "Satanic leaf-tailed gecko",
+      "facet": "Nombres curiosos de animales",
+      "known_at": 12
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-23",
+      "added": 21,
+      "unused": 46
     }
   ]
 }

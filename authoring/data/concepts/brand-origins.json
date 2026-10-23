@@ -61,7 +61,8 @@
     {
       "name": "Nesquik",
       "facet": "Gaseosas y bebidas famosas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The purpose is already asked; the bunny mascot's name varies by market and is not difficulty 1."
     },
     {
       "name": "Mountain Dew",
@@ -118,7 +119,8 @@
     {
       "name": "Johnson's",
       "facet": "Aseo, hogar y cuidado personal",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The 'made for babies' purpose is already covered by the 'No more tears' question; the other options need Colombia or don't fit."
     },
     {
       "name": "Oral-B",
@@ -267,7 +269,8 @@
     {
       "name": "Pósit",
       "facet": "Marcas que se volvieron palabras",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Post-it's invention and decade are already asked; the remaining options need Colombia or don't fit."
     },
     {
       "name": "Maicena",
@@ -481,6 +484,36 @@
       "date": "2026-10-23",
       "added": 0,
       "unused": 5
+    },
+    {
+      "date": "2026-10-23",
+      "added": 0,
+      "unused": 5
+    },
+    {
+      "date": "2026-10-23",
+      "added": 0,
+      "unused": 5
+    },
+    {
+      "date": "2026-10-23",
+      "added": 0,
+      "unused": 5
+    },
+    {
+      "date": "2026-10-23",
+      "added": 0,
+      "unused": 4
+    },
+    {
+      "date": "2026-10-23",
+      "added": 0,
+      "unused": 4
+    },
+    {
+      "date": "2026-10-23",
+      "added": 0,
+      "unused": 4
     }
   ]
 }

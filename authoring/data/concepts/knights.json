@@ -66,7 +66,8 @@
     {
       "name": "Cota de malla",
       "facet": "Armaduras y armas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Chain mail is already a pool answer; a detail-photo identification would repeat it, and the other options are not level 1."
     },
     {
       "name": "Escudo",

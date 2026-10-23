@@ -912,7 +912,8 @@
     {
       "name": "Moat",
       "facet": "Construcción y constructores de monumentos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The existing question already covers the moat's definition and its water. Nothing simple is left to ask."
     },
     {
       "name": "Drawbridge",
