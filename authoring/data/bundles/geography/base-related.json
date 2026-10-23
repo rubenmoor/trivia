@@ -1,0 +1,164 @@
+{
+  "about": "A theme bundle's subcategory → the base subcategories it goes beyond (plan 184); its concept lists and drafts keep away from their questions. Authoring only, never exported.",
+  "subcategories": {
+    "countries-of-africa": [
+      "countries",
+      "continents"
+    ],
+    "countries-of-asia": [
+      "countries",
+      "continents"
+    ],
+    "countries-of-europe": [
+      "countries",
+      "continents"
+    ],
+    "countries-of-the-americas": [
+      "countries",
+      "continents"
+    ],
+    "oceania-and-the-pacific": [
+      "countries",
+      "continents"
+    ],
+    "microstates-and-territories": [
+      "countries"
+    ],
+    "states-and-provinces": [
+      "countries"
+    ],
+    "capitals-of-africa": [
+      "capital-cities"
+    ],
+    "capitals-of-asia-and-oceania": [
+      "capital-cities"
+    ],
+    "capitals-of-europe": [
+      "capital-cities"
+    ],
+    "capitals-of-the-americas": [
+      "capital-cities"
+    ],
+    "megacities": [
+      "capital-cities"
+    ],
+    "city-nicknames": [
+      "capital-cities"
+    ],
+    "port-cities": [
+      "the-sea"
+    ],
+    "famous-neighbourhoods": [
+      "famous-landmarks"
+    ],
+    "flag-designs": [
+      "flags"
+    ],
+    "lookalike-flags": [
+      "flags"
+    ],
+    "regional-flags": [
+      "flags"
+    ],
+    "national-emblems": [
+      "flags"
+    ],
+    "country-codes": [
+      "countries"
+    ],
+    "borders-and-neighbours": [
+      "countries"
+    ],
+    "enclaves-and-odd-borders": [
+      "countries"
+    ],
+    "latitude-and-longitude": [
+      "planet-earth"
+    ],
+    "time-zones": [
+      "planet-earth"
+    ],
+    "map-reading": [
+      "continents"
+    ],
+    "extreme-points": [
+      "natures-records"
+    ],
+    "mountain-ranges": [
+      "mountains"
+    ],
+    "high-peaks": [
+      "mountains",
+      "natures-records"
+    ],
+    "volcanic-peaks": [
+      "volcanoes"
+    ],
+    "plateaus-passes-and-valleys": [
+      "mountains"
+    ],
+    "rivers-of-europe-and-the-americas": [
+      "rivers"
+    ],
+    "rivers-of-africa-asia-and-oceania": [
+      "rivers"
+    ],
+    "lakes": [
+      "natures-records"
+    ],
+    "waterfalls-and-canyons": [
+      "natures-records"
+    ],
+    "seas-and-gulfs": [
+      "oceans",
+      "the-sea"
+    ],
+    "straits-and-canals": [
+      "the-sea"
+    ],
+    "peninsulas-and-capes": [
+      "the-sea"
+    ],
+    "islands-of-the-pacific-and-indian-ocean": [
+      "islands"
+    ],
+    "islands-of-the-atlantic-and-europe": [
+      "islands"
+    ],
+    "deserts-of-the-world": [
+      "deserts"
+    ],
+    "climate-zones": [
+      "weather-and-climate"
+    ],
+    "polar-regions": [
+      "continents"
+    ],
+    "forests-and-grasslands": [
+      "amazon-plants"
+    ],
+    "natural-wonders": [
+      "natural-phenomena",
+      "natures-records"
+    ],
+    "world-national-parks": [
+      "african-wildlife"
+    ],
+    "climate-extremes-by-place": [
+      "natures-records",
+      "weather-and-climate"
+    ],
+    "population-records": [
+      "countries"
+    ],
+    "demonyms": [
+      "countries"
+    ],
+    "official-languages": [
+      "languages-of-the-world"
+    ],
+    "place-name-meanings": [
+      "countries"
+    ]
+  }
+}

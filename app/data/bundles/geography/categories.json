@@ -1,4 +1,100 @@
 {
   "about": "Categories of the geography bundle (D-41, D-43): structure only, keyed by English slugs unique within the bundle (decision 259); names in names.<locale>.json.",
-  "categories": []
+  "categories": [
+    {
+      "slug": "countries-by-region",
+      "subcategories": [
+        "countries-of-africa",
+        "countries-of-asia",
+        "countries-of-europe",
+        "countries-of-the-americas",
+        "oceania-and-the-pacific",
+        "microstates-and-territories",
+        "states-and-provinces"
+      ]
+    },
+    {
+      "slug": "capitals-and-cities",
+      "subcategories": [
+        "capitals-of-africa",
+        "capitals-of-asia-and-oceania",
+        "capitals-of-europe",
+        "capitals-of-the-americas",
+        "megacities",
+        "city-nicknames",
+        "port-cities",
+        "famous-neighbourhoods"
+      ]
+    },
+    {
+      "slug": "flags-and-symbols",
+      "subcategories": [
+        "flag-designs",
+        "lookalike-flags",
+        "regional-flags",
+        "national-emblems",
+        "country-codes"
+      ]
+    },
+    {
+      "slug": "maps-and-borders",
+      "subcategories": [
+        "borders-and-neighbours",
+        "enclaves-and-odd-borders",
+        "latitude-and-longitude",
+        "time-zones",
+        "map-reading",
+        "extreme-points"
+      ]
+    },
+    {
+      "slug": "mountains-and-highlands",
+      "subcategories": [
+        "mountain-ranges",
+        "high-peaks",
+        "volcanic-peaks",
+        "plateaus-passes-and-valleys"
+      ]
+    },
+    {
+      "slug": "rivers-and-lakes",
+      "subcategories": [
+        "rivers-of-europe-and-the-americas",
+        "rivers-of-africa-asia-and-oceania",
+        "lakes",
+        "waterfalls-and-canyons"
+      ]
+    },
+    {
+      "slug": "seas-coasts-and-islands",
+      "subcategories": [
+        "seas-and-gulfs",
+        "straits-and-canals",
+        "peninsulas-and-capes",
+        "islands-of-the-pacific-and-indian-ocean",
+        "islands-of-the-atlantic-and-europe"
+      ]
+    },
+    {
+      "slug": "landscapes-and-climate-zones",
+      "subcategories": [
+        "deserts-of-the-world",
+        "climate-zones",
+        "polar-regions",
+        "forests-and-grasslands",
+        "natural-wonders",
+        "world-national-parks",
+        "climate-extremes-by-place"
+      ]
+    },
+    {
+      "slug": "people-and-places",
+      "subcategories": [
+        "population-records",
+        "demonyms",
+        "official-languages",
+        "place-name-meanings"
+      ]
+    }
+  ]
 }
