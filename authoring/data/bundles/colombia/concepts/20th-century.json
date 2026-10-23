@@ -91,7 +91,8 @@
     {
       "name": "Victoriano Lorenzo",
       "facet": "Guerra de los Mil Días y Panamá",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Solo hay opciones numéricas, y los números clave giran en torno a su fusilamiento, tema que no va con el tono."
     },
     {
       "name": "Manuel Amador Guerrero",
@@ -787,12 +788,14 @@
     {
       "name": "Cumbia",
       "facet": "Música colombiana del siglo XX",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: El origen y la difusión ya están preguntados; ninguna opción da otra pregunta buena de dificultad 2."
     },
     {
       "name": "Vallenato",
       "facet": "Música colombiana del siglo XX",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Los instrumentos y el festival ya están preguntados; no queda una pregunta nueva de dificultad 1."
     },
     {
       "name": "Pasillo",

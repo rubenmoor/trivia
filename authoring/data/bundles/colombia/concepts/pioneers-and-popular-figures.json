@@ -76,7 +76,8 @@
     {
       "name": "Gonzalo Mejía",
       "facet": "Pioneros de la aviación y el transporte",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Only minor dates or uncertain records available; too obscure as fair multiple choice."
     },
     {
       "name": "Ernesto Cortissoz",
@@ -381,7 +382,8 @@
     {
       "name": "Nina S. de Friedemann",
       "facet": "Mujeres pioneras de Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Too obscure for families; the options don't give a fair question."
     },
     {
       "name": "Luz Marina Zuluaga",
@@ -641,7 +643,8 @@
     {
       "name": "Alpinito",
       "facet": "Personajes de marcas y publicidad",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: Only 'when' options, and Alpinito's launch date is neither known nor reliably verifiable."
     },
     {
       "name": "Frisby",

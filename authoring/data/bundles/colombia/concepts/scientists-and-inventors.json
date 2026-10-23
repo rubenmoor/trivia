@@ -532,7 +532,8 @@
     {
       "name": "Francisco Javier Vergara y Velasco",
       "facet": "Exploración y mapas del territorio",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Es demasiado poco conocido y todas las opciones necesitan una foto esencial de sus mapas, que probablemente no se consigue con claridad."
     },
     {
       "name": "Mapa de Juan de la Cosa",
@@ -577,7 +578,8 @@
     {
       "name": "Academia Colombiana de Ciencias Exactas, Físicas y Naturales",
       "facet": "Instituciones, premios y homenajes",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: No tiene un dato justo y razonable sobre la academia para esta familia; quedaría como una pregunta de relleno."
     },
     {
       "name": "Instituto Humboldt",
@@ -602,7 +604,8 @@
     {
       "name": "Escuela de Minas de Medellín",
       "facet": "Instituciones, premios y homenajes",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: El propósito se adivina por el nombre y los datos de su fundación son confusos; no hay una pregunta limpia."
     },
     {
       "name": "Cenicafé",
