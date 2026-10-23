@@ -207,7 +207,8 @@
     {
       "name": "Dengue",
       "facet": "Vacunas y enfermedades tropicales",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The dengue/mosquito and zancudo facts are already asked, and no option gives a fresh Colombian question for kids."
     },
     {
       "name": "Zika",
@@ -357,7 +358,8 @@
     {
       "name": "Válvula de Hakim",
       "facet": "Inventos médicos colombianos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: The pool already asks who invented the valve (Salomón Hakim); every option leads to the same answer again."
     },
     {
       "name": "Hidrocefalia",

@@ -572,7 +572,8 @@
     {
       "name": "Bogotá",
       "facet": "Bebidas típicas por región",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: Ya hay muchas preguntas sobre Bogotá, también la de su costumbre con bebidas (el chocolate con queso)."
     },
     {
       "name": "Aguardiente",

@@ -75,7 +75,8 @@
     {
       "name": "Francisco Morales",
       "facet": "El grito del 20 de julio",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Francisco Morales es un personaje secundario; ninguna opción (foto de retrato, año o grupo intruso) da una pregunta justa sin depender de un dato que casi nadie conoce."
     },
     {
       "name": "Acta de Independencia",
@@ -120,7 +121,8 @@
     {
       "name": "Derechos del Hombre y del Ciudadano",
       "facet": "Precursores y antecedentes",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: La pregunta anterior ya dice que Nariño tradujo los Derechos del Hombre y del Ciudadano; las opciones de completar o identificar solo repetirían ese dato."
     },
     {
       "name": "Imprenta Patriótica",
@@ -372,7 +374,8 @@
     {
       "name": "Plaza de los Mártires",
       "facet": "Reconquista y régimen del terror",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: La plaza es famosa justamente por los fusilamientos de patriotas; cualquier pregunta con estas opciones gira en torno a muertes."
     },
     {
       "name": "Batalla de Cachirí",
@@ -492,7 +495,8 @@
     {
       "name": "Juan Nepomuceno Moreno",
       "facet": "Soldados, llaneros y legiones",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Juan Nepomuceno Moreno es demasiado poco conocido, y ninguna de las opciones de significado de palabras le queda a una persona."
     },
     {
       "name": "Palomo",

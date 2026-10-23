@@ -185,7 +185,8 @@
     {
       "name": "Autopista Suroriental",
       "facet": "Feria de Cali y Salsódromo",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: No estoy seguro del recorrido actual del Salsódromo."
     },
     {
       "name": "25 de diciembre",
@@ -352,7 +353,8 @@
     {
       "name": "Afrosound",
       "facet": "Chucu-chucu y orquestas bailables",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Solo hay opciones de sonido (no se permiten canciones) o de números poco seguros."
     },
     {
       "name": "Lisandro Meza",
@@ -362,7 +364,8 @@
     {
       "name": "Los Tupamaros",
       "facet": "Chucu-chucu y orquestas bailables",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: El dato es poco seguro y las opciones exigen una foto de la banda."
     },
     {
       "name": "La Sonora Dinamita",
@@ -463,7 +466,8 @@
     {
       "name": "Sonolux",
       "facet": "Sellos, viejotecas y salsotecas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Las opciones exigen una foto o un sonido de un sello discográfico; no es viable."
     },
     {
       "name": "Discos Tropical",
