@@ -4,7 +4,7 @@ This is the procedure that follows every finished batch (plan 16, D-56). The LLM
 
 ## Steps
 
-The steps run in order; a pm worker stops at each decision and continues when it is answered.
+The steps run in order; a pm worker raises each decision and never waits on it (decision 414: reviews don't gate generation); the next QC task acts on the answers.
 
 1. **Batch done.** `qgen batch` finished and is committed (RUNBOOK). The report `authoring/reports/<batch>.md` has the "## Audit" section (LLM audit of a seeded sample of 60, or of the whole spot check if larger, blind to the review).
    - Major audit findings on approved questions: `http://127.0.0.1:8001/review?batch=<batch>&audit=flagged`.
@@ -14,7 +14,7 @@ The steps run in order; a pm worker stops at each decision and continues when it
    - Larger check of one run (decision 228: batch-8, 120): its `"size"` in `authoring/data/spot-checks.json`; the first 30 stay a prefix; `qgen audit --batch <batch>` audits up to that size.
    - The LLM decision, feedback and audit stay hidden until you decide; then they show next to yours. Mark the problem kinds in the feedback box.
    - Recorded in `authoring/data/spot-checks.json`; undo removes the item; a back-audit or neutralize run also keeps its `ids` there (`qgen validate` needs no `work/`).
-   - pm worker: can't do this. `pm decision add "Spot check <batch> done?"` (body: the link, the size, `trivia-authoring`; option "done"), `pm task-pending-decision <task> <decision>`, stop.
+   - pm worker: can't do this. `pm decision add "Spot check <batch> done?"` (body: the link, the size, `trivia-authoring`; option "done"), no `pm task-pending-decision`, no stop; the next QC task reads the answer.
 3. **QC report.** `qgen report --qc <batch>`: rewrites "## Quality control" in `authoring/reports/<batch>.md`.
    - Agreement (both accept or both don't) against `quality.min_agreement` (90 %), false approves, false needs_work, difficulty |Δ| ≥ 2, media changed, audit/human agreement.
    - Every disagreement with the human's feedback, grouped by problem kind.
@@ -28,9 +28,9 @@ The steps run in order; a pm worker stops at each decision and continues when it
    - any false approve for `fact`.
    - Each proposal: which prompt (`authoring/tools/prompts/`: `review.md`, `draft.md`, `house-style.md`, `rate.md`, `audit.md`) and the change in a few lines.
    - Trend: if the audit agrees with the human clearly better than the review over two batches, propose moving the audit's checks into `review.md` or making the audit a gate.
-   - All proposals in one decision: `pm decision add "QC <batch>: which changes?"`, options "recommended set" (first), "all", "none"; wait on it, stop. No proposals: no decision.
-   - Answered: each approved change becomes a task in its plan (`pm task add <plan>`, the plan's priority, so above the -100 batch tasks). Then `qgen report --qc <batch> --changes "<task ids>"` (or `"none"`) writes the report's "Changes from this QC" line.
-5. **Next batch waits.** The next batch task runs only after both decisions are answered and the change tasks are done (they outrank it; plan 17 "Per-batch pattern").
+   - All proposals in one decision: `pm decision add "QC <batch>: which changes?"`, options "recommended set" (first), "all", "none"; raise it, don't wait. No proposals: no decision.
+   - Once answered (by the next QC task): each approved change becomes a task in its plan (`pm task add <plan>`, the plan's priority, so above the -100 batch tasks). Then `qgen report --qc <batch> --changes "<task ids>"` (or `"none"`) writes the report's "Changes from this QC" line.
+5. **Next batch doesn't wait.** The next batch task runs without the answers (decision 414); answered decisions become change tasks, which outrank it (plan 17 "Per-batch pattern"), so they run first if they exist by then.
 
 ## Neutralize runs
 
@@ -47,7 +47,7 @@ A `qgen neutralize` run (D-83) changes approved questions, so it gets the same s
 A `qgen batch --translate <locale>` run (D-87; `es`, `es-ES`, `en`, `de`, from sources in any other locale, D-107) has no QC steps. The LLM translation review (D-32, D-33) is its only review (milestone 9, developer 2026-10-16): no spot check, no QC decision, no pilot go/no-go.
 
 - Report: `authoring/reports/tr-<locale>-<n>.md` (Health, Audit, Not travelling, Stale re-translated).
-- Stop: a ✗ in the Health table stops the next `qgen batch --translate <locale>` (exit 2) until the developer's `qgen health ack <run> "<note>"` (decision 45); the first run (50-source pilot) is no exception, and its numbers only inform `qgen report --cost`.
+- Health ✗: reported in the Health table and raised as a decision, never a stop (decision 414); the developer's `qgen health ack <run> "<note>"` records their look; the first run (50-source pilot) is no exception, and its numbers only inform `qgen report --cost`.
 - Optional review by the developer: `http://127.0.0.1:8001/review?batch=tr-<locale>-<n>&locale=<locale>`; source and translation side by side (plan 67).
   - Stale translation: no approve (the next run redoes it); a question that only works in its source language: "doesn't travel".
   - `&sample=1` (blind sample) still works by URL; existing records in `authoring/data/spot-checks.json` stay.
