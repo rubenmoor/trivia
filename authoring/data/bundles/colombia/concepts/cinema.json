@@ -267,7 +267,8 @@
     {
       "name": "Felipe Aljure",
       "facet": "Directores y directoras colombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "used_up: The existing question already gives the year of his first film; I'm not sure of his birthplace"
     },
     {
       "name": "Simón Mesa Soto",
@@ -437,7 +438,8 @@
     {
       "name": "Focine",
       "facet": "Historia del cine en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "used_up: The existing question already covers the key fact about Focine"
     },
     {
       "name": "Proimágenes Colombia",
@@ -467,7 +469,8 @@
     {
       "name": "Pornomiseria",
       "facet": "Historia del cine en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: The term isn't suitable for a family game"
     },
     {
       "name": "Cine Club de Cali",
@@ -712,7 +715,8 @@
     {
       "name": "Amazona",
       "facet": "Cine documental colombiano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: The documentary is too niche, and it is easily confused with the Amazon questions already in the pool"
     },
     {
       "name": "Carta a una sombra",

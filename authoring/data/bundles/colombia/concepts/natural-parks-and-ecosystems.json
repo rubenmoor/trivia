@@ -552,7 +552,8 @@
     {
       "name": "Hipogeo",
       "facet": "Arqueología y patrimonio en los parques",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "used_up: La pregunta existente ya identifica los hipogeos de Tierradentro; las opciones con sonido, video o detalle con respuesta de grupo saldrían forzadas a nivel 15."
     },
     {
       "name": "Petroglifo",

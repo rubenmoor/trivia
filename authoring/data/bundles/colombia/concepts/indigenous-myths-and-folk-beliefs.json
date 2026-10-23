@@ -181,7 +181,8 @@
     {
       "name": "Yagé",
       "facet": "Mitos amazónicos y del Pacífico",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: El yagé es una bebida psicoactiva; es difícil hacer una pregunta apropiada para niños."
     },
     {
       "name": "Mambe",
@@ -607,7 +608,8 @@
     {
       "name": "Perro que aúlla",
       "facet": "Animales con poderes y presagios",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: La creencia central es que el aullido anuncia una muerte, y eso no encaja con el tono familiar."
     },
     {
       "name": "El Hombre Caimán",
