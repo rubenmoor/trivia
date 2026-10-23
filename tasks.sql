@@ -42813,6 +42813,16 @@ Binding: `decision 21: Content target per player and language (OQ-32)?` (D-75): 
 - Plan 84 has an open pair for that locale: `pm task requires <this task> <that run task>`, stop.
 
 Done when: `qgen report --simulate` exits 0 for all four question locales (or an answered decision accepts the shortfall), the result is in `plans/16-content-target.md`.', '2026-10-23T01:28:46Z', NULL, 1710, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1712, 17, 'run batch-13', 'work', 'open', -100, NULL, 'Next batch of `plan 17: Batch runs` (per-batch pattern 1), added by `task 1580: QC batch-11`. batch-12 was the colombia batch, so the next `base` batch takes the next free number: use whatever `qgen batch` prints. Follow `authoring/RUNBOOK.md` steps 1–5 exactly, including "Under `pm run`" (plain `qgen batch`; `tasks.sql` alone isn''t a dirty tree; stage exactly the printed `git add` paths, also `authoring/reports/batches.md`, don''t commit).
+
+- Gate first (plan 17 "English-first batches"): `qgen batch` drafts `en` for `base`. Missing: `pm decision add "batch: English drafting not in place, wait?"`, `pm task-pending-decision <this task> <id>`, stop. Never a Spanish `base` draft.
+- Runs after the change tasks (they outrank -100), including the one from `decision 405: QC batch-11: which changes?`.
+- batch-9 to batch-12 health ended ✗: expect exit 2 from the health stop; never `qgen health ack` by the worker. Exit 2: first `pm decision list --grep "<run>: health stop"` (the run named in the output); a pending one found (e.g. `decision 408: batch-12: health stop, ack?`) → `pm task-pending-decision 1680 <id>`, no new decision, stage nothing, stop. Exit 75 / exit 1 three times at one step: RUNBOOK "Under `pm run`" / plan 17 "Batch tasks under `pm run`".
+- Never inside this task: prompt, `qgen.py`, subcategory or media changes; findings become decisions or tasks in their own plans.
+
+Done when: the batch report exists and the batch''s files are staged; note: the "Done:" line, the report path, and what of plan 147 / milestone 9 was missing, if anything.
+
+Resumes batch-13 after `task 1680: run batch-13` was stopped so the non-gating reviews come first (`decision 414: Human reviews don''t gate question generation or translation`); plain `qgen batch` resumes it.', '2026-10-23T01:42:55Z', NULL, NULL, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -51315,6 +51325,7 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1677, 167
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1681, 1680);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1691, 1690);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1708, 1707);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1712, 1699);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
