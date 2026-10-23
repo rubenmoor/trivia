@@ -41806,6 +41806,25 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 - Wrap both reads in `untrack(...)`, as the next line already does for `picked`
 - Done: `npm run check` shows 0 warnings for `Splash.svelte`; the splash still shows the right topic per question', '2026-10-22T20:59:18Z', '2026-10-22T21:09:50Z', NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1689, NULL, 'Investigate and fix: pm run wrote a schema-only tasks.sql during a git autostash', 'exec', 'open', NULL, NULL, 'On 2026-10-22 at about 19:08 local, in the main checkout, `tasks.sql` lost every data row: it became a 182-line, schema-only file. That happened while `pm run` (PID 494342) was running.
+
+What happened, in order:
+- `tasks.sql` had uncommitted changes from pm: the line `INSERT INTO run … (1823, 1296, …, ''running'', …)`, for `task 1296: QC batch-12 (colombia)`, which had just started
+- the developer''s session ran `git pull --rebase --autostash` (origin/main was 1 commit ahead, `a6a66f0a`)
+- the autostash put `tasks.sql` back to HEAD; while it was stashed, pm wrote `tasks.sql` (mtime 19:08) with only the schema
+- the rebase didn''t run, and the autostash couldn''t be put back ("Your changes are safe in the stash")
+- recovered by hand: `git show ''stash@{0}:tasks.sql'' > tasks.sql`, `pm validate` OK
+
+Investigate:
+- how pm reads and writes `tasks.sql` (load per command? kept in memory and dumped?), and how a dump of the schema without data can happen: reading the file while git was rewriting it (empty or truncated), a failed import that left an empty DB, a non-atomic write, …
+- reproduce it if you can: `pm run` busy + `git stash` / checkout of `tasks.sql` in a scratch copy, never in the real checkout
+
+Fix, so it can''t happen again:
+- pm never writes a `tasks.sql` with fewer rows than it read without a command that deletes them; a load that gives an empty or invalid DB is an error, not an empty project
+- atomic writes (temp file + rename); detect the file changing under pm (mtime/hash) and refuse or reload instead of overwriting
+- if the cause or fix is in pm itself (outside this repo), write up a change for it and a pm decision for the developer; in this repo, a note on git operations to avoid while `pm run` is running (README / AGENTS.md) if still needed after the fix
+
+Done when: the cause is named, the fix (or the pm change write-up) exists, and a reproduction no longer loses rows.', '2026-10-23T00:10:29Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -49569,6 +49588,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1820, 1687, '2026-10-22T21:08:41Z', '2026-10-22T21:09:20Z', 'done', NULL, 0, '74947e902a8e92111c64ef359122c55f35e11fb9', NULL, 'claude-sonnet-5-5', '29aadfb2-1504-4bb6-9f4e-ece0ba9d88a2', NULL, 5, 10, 1796, 146580, 25651, 0.1499, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1821, 1688, '2026-10-22T21:09:20Z', '2026-10-22T21:10:18Z', 'done', NULL, 0, 'fff3a208fbf90918e42a908e4eb5f64a3a1b148d', NULL, 'claude-sonnet-5-5', '04a5d00e-6bc7-45dc-af64-62fd69e0c31d', NULL, 4, 8, 658, 106713, 21311, 0.11318260000000001, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1822, 1682, '2026-10-22T22:40:30Z', '2026-10-22T22:40:55Z', 'done', NULL, 0, '78b69f96ec3334b5c2641747aed48c77ce5030bd', 'questions', 'claude-sonnet-5-5', '49d62252-f077-46b9-a2e0-453970d70c12', NULL, 8, 16, 1573, 259879, 39578, 0.2260498, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1823, 1296, '2026-10-23T00:08:25Z', NULL, 'running', NULL, NULL, 'ad8197c850858641b3b95fdb9eb5627912035e70', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 494342);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
