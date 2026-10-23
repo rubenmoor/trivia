@@ -203,7 +203,12 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - health ✗ never stops `qgen batch` (drafting or `--translate`); report and decision only; `qgen health ack` = my "looked at it"
 - answers are acted on afterwards (QC report, change tasks), by whatever task runs next, not by a task that waited
 - the only human gate is the final release (`trivia-release-check`, release bar), which is mine, not a pm task
-- RUNBOOK, QC.md, plans 15–17 and open batch/QC tasks follow this; task 1692''s "link to the pending ack decision" goes', '2026-10-11T20:08:18Z', NULL, 0);
+
+## 5000 reached (developer, 2026-10-23)
+- 5000 approved base reached with batch-14 (5488); batch-15 is the last batch
+- QC batch-15 queues the exit check, not batch-16
+- small per-difficulty gaps (e.g. difficulty 1: 243/250) don''t justify a full batch; aim a later batch at them or accept them
+- open health / spot-check decisions are mine and don''t block the exit check (decision 414)', '2026-10-11T20:08:18Z', NULL, 0);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (2, 'Game engine in TypeScript', 'implemented', 'The game referee moves from Python (`app/server/game.py`, `selection.py`) to `app/client/src/engine/` with the same rules and the family''s saves kept. The game then runs without Python, which the Steam desktop shell needs (S3).
 
 ## Outcome
@@ -42953,6 +42958,8 @@ No step waits for the developer (`decision 414: Human reviews don''t gate questi
 Missing tooling to list in the note: none known; `qgen report --overlaps` timed out in QC batch-11.
 
 Done when: steps 1–8 done or listed as missing in the note; staged per RUNBOOK "Under `pm run`"; `qgen validate` clean.', '2026-10-23T08:05:43Z', NULL, 1681, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1727, 1, 'revise the masterplan of milestone 1: Enough content for game nights', 'revise', 'open', 1000, NULL, '`milestone 1: Enough content for game nights` changed. Bring `plan 1: masterplan`, the masterplan, in line with it (`pm plan edit 1 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-23T13:22:17Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -50774,6 +50781,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1852, 1707, '2026-10-23T01:50:32Z', '2026-10-23T01:51:31Z', 'done', NULL, 0, 'd760884aaf1d00033c39e18cba620009b46341cd', 'questions', 'claude-sonnet-5-5', '6afe2c00-6424-4e5f-8db0-3da89299acd3', NULL, 10, 18, 3837, 389024, 39901, 0.27581479999999997, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1853, 1712, '2026-10-23T01:51:31Z', '2026-10-23T07:55:36Z', 'done', NULL, 0, 'd760884aaf1d00033c39e18cba620009b46341cd', 'questions', 'claude-sonnet-5-5', '66b3c6b4-5b55-41a5-9a32-01a32824c350', NULL, 11, 22, 2183, 425213, 34235, 0.24385659999999998, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1854, 1681, '2026-10-23T07:55:41Z', '2026-10-23T08:05:57Z', 'done', NULL, 0, '1900fb320c2a3fd63ff3a82a70e9d8381e3213b7', 'questions', 'claude-sonnet-5-5', '66b3c6b4-5b55-41a5-9a32-01a32824c350', 1853, 11, 20, 4807, 655014, 30124, 0.5434654, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1855, 1725, '2026-10-23T08:05:57Z', NULL, 'running', NULL, NULL, '247d6d109529cf1c8c499b879d89ca60df74afe1', 'questions', NULL, NULL, 1854, NULL, NULL, NULL, NULL, NULL, NULL, 494342);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
