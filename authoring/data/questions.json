@@ -572951,7 +572951,7 @@
     },
     {
       "id": "q-7425",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Una dinosauria jubilada que se pasa el día tomando el sol en el parque.",
       "question": "Soy verde, tengo una cresta de púas en la espalda y una papada, y me asoleo en los árboles de los parques de Cartagena y Santa Marta. ¿Quién soy?",
@@ -572969,11 +572969,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "Cartagena old town plaza",
+        "query": "Santa Marta Colombia park",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAdventourscolombia-playa-cabo-san-juan-tayrona-national-park-colombia-02.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Adventourscolombia-playa-cabo-san-juan-tayrona-national-park-colombia-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Adventourscolombia · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Adventourscolombia",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Adventourscolombia&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Las iguanas son buenas nadadoras y pueden aguantar la respiración bajo el agua cerca de media hora.",
       "subcategory": "animals",
@@ -573002,18 +573009,42 @@
       "needs_media": false,
       "batch": "batch-19",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No adequate decorative image: candidates 1 and 2 are a nativity scene in Cartagena, Spain, and candidate 3 is an old photo of the Puerta de San José with a tram, which also appears to be in Cartagena, Spain. None shows the parks of Cartagena or Santa Marta in Colombia. A new search is needed, e.g. \"Cartagena Colombia park trees\" or \"Santa Marta park\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No adequate decorative image: candidates 1 and 2 are a nativity scene in Cartagena, Spain, and candidate 3 is an old photo of the Puerta de San José with a tram, which also appears to be in Cartagena, Spain. None shows the parks of Cartagena or Santa Marta in Colombia. A new search is needed, e.g. \"Cartagena Colombia park trees\" or \"Santa Marta park\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced the decorative image query so it finds a park in Colombia, not Cartagena in Spain.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "Cartagena old town plaza",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7426",
@@ -573381,7 +573412,7 @@
     },
     {
       "id": "q-7431",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "El periódico de ayer tiene una segunda vida mucho más divertida.",
       "question": "El papel maché se hace con papel periódico y engrudo de harina y agua; después se seca y se pinta. ¿Para qué se usa en los carnavales?",
@@ -573412,7 +573443,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Las figuras del Carnaval de Negros y Blancos pueden medir más de 10 metros de alto.",
+      "fun_fact": "Las carrozas del Carnaval de Negros y Blancos pueden medir hasta 8 metros de alto y 16 de largo.",
       "subcategory": "carnivals-and-fairs",
       "style": null,
       "concept": "Papel maché",
@@ -573435,31 +573466,35 @@
         "difficulty_estimate": 2,
         "notes": "The distractors are absurd (houses and bridges, food), which is fine for kids. The fun fact's '>10 m' height is plausible but not fully certain. The question is a little dry."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-19",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fact check is 'uncertain' about the fun fact's claim that the Carnaval de Negros y Blancos figures can be over 10 m tall: sources mostly give about 8 m high by 16 m long, and I can't confirm the 10 m figure myself. Replace it with the safer version: 'Las carrozas del Carnaval de Negros y Blancos pueden medir hasta 8 metros de alto y 16 de largo.' Verificación de datos: uncertain. The fun fact says the Carnaval de Negros y Blancos figures 'pueden medir más de 10 metros de alto'. Sources say the floats reach about 8 m high by 16 m long. One 14 m float was also reported. The answer and wrong answers are fine.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fact check is 'uncertain' about the fun fact's claim that the Carnaval de Negros y Blancos figures can be over 10 m tall: sources mostly give about 8 m high by 16 m long, and I can't confirm the 10 m figure myself. Replace it with the safer version: 'Las carrozas del Carnaval de Negros y Blancos pueden medir hasta 8 metros de alto y 16 de largo.' Verificación de datos: uncertain. The fun fact says the Carnaval de Negros y Blancos figures 'pueden medir más de 10 metros de alto'. Sources say the floats reach about 8 m high by 16 m long. One 14 m float was also reported. The answer and wrong answers are fine.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2 so it points to the Pasto workshops without saying what gets made.",
+        "reason": "Replaced the uncertain 10-metre fun fact with the reviewer's verified version.",
         "previous": {
-          "hints": [
-            "Al secarse queda duro pero liviano.",
-            "En Pasto lo usan para las figuras gigantes de las carrozas.",
-            "Con él puedes taparte la cara o hacer un muñeco enorme."
-          ]
+          "fun_fact": "Las figuras del Carnaval de Negros y Blancos pueden medir más de 10 metros de alto."
         },
         "revised_on": "2026-10-23"
       }
@@ -573989,7 +574024,7 @@
     },
     {
       "id": "q-7439",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Pasta, montañas y muchísimos días pedaleando.",
       "question": "Nairo Quintana y Egan Bernal ganaron el Giro de Italia. ¿Más o menos cuántas etapas tiene esa carrera?",
@@ -574020,7 +574055,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "En el Giro de Italia, el líder lleva una camiseta rosada porque el periódico que creó la carrera se imprimía en papel rosado.",
+      "fun_fact": "El trofeo del ganador del Giro se llama «Trofeo Senza Fine», que significa «sin fin», y tiene forma de espiral.",
       "subcategory": "cycling",
       "style": null,
       "concept": "Giro de Italia",
@@ -574047,27 +574082,31 @@
       "needs_media": false,
       "batch": "batch-19",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact says the Giro leader wears a pink jersey, and that is the answer to q-7098 (\"maglia rosa\" → the race leader's jersey). Players who see this fun fact get q-7098 for free. Replace the fun fact with a different true Giro fact, for example that the winner's trophy is the spiral Trofeo Senza Fine, or that the race sometimes starts outside Italy.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact says the Giro leader wears a pink jersey, and that is the answer to q-7098 (\"maglia rosa\" → the race leader's jersey). Players who see this fun fact get q-7098 for free. Replace the fun fact with a different true Giro fact, for example that the winner's trophy is the spiral Trofeo Senza Fine, or that the race sometimes starts outside Italy.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which gave away the race length, with a vague hint about the three Grand Tours.",
+        "reason": "Replaced the fun fact that gave away q-7098 (pink jersey) with a fact about the trophy.",
         "previous": {
-          "hints": [
-            "Dura unas tres semanas.",
-            "Tiene un par de días de descanso.",
-            "Son tres semanas de siete días, casi todos con etapa."
-          ]
+          "fun_fact": "En el Giro de Italia, el líder lleva una camiseta rosada porque el periódico que creó la carrera se imprimía en papel rosado."
         },
         "revised_on": "2026-10-23"
       }
@@ -575212,7 +575251,7 @@
     },
     {
       "id": "q-7455",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Un herrero que, en vez de herraduras, forjó una fecha en el calendario.",
       "question": "Pedro Romero era herrero, había nacido en Cuba y armó a los artesanos de su barrio. Con su presión, en 1811 su ciudad se declaró independiente de España del todo. ¿Qué ciudad?",
@@ -575230,21 +575269,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "blacksmith anvil hammer",
+        "query": "blacksmith forge anvil",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AFluid_hammer%2C_blacksmith%2C_hammer_machine%2C_anvil%2C_crafts_Fortepan_86855.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Fluid_hammer%2C_blacksmith%2C_hammer_machine%2C_anvil%2C_crafts_Fortepan_86855.jpg/3840px-Fluid_hammer%2C_blacksmith%2C_hammer_machine%2C_anvil%2C_crafts_Fortepan_86855.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAnvil%2C_northern_German_type_with_upsetting_block.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Anvil%2C_northern_German_type_with_upsetting_block.jpg/3840px-Anvil%2C_northern_German_type_with_upsetting_block.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Kleseus · CC0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "FOTO:Fortepan — ID 86855: Adományozó/Donor: Magyar Földrajzi Múzeum / Erdélyi Mór cége.",
-        "author_url": "https://fortepan.hu/",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Kleseus",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kleseus&action=edit&redlink=1",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-1923",
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "El 11 de noviembre, día de la independencia de esta ciudad, es festivo nacional en Colombia, aunque se pasa al lunes.",
       "subcategory": "independence",
@@ -575273,28 +575309,49 @@
       "needs_media": false,
       "batch": "batch-19",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-1923, PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-1923, PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which named Getsemaní and gave away Cartagena, and noted in the fun fact that the holiday moves to Monday.",
+        "reason": "Changed the image query so the search finds a new blacksmith image with a suitable license.",
         "previous": {
-          "hints": [
-            "Está en la costa Caribe.",
-            "Pedro Romero vivía en el barrio Getsemaní.",
-            "Celebra su independencia cada 11 de noviembre, con fiestas y reinado."
-          ],
-          "fun_fact": "El 11 de noviembre, día de la independencia de esta ciudad, es festivo nacional en Colombia."
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "blacksmith anvil hammer",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AFluid_hammer%2C_blacksmith%2C_hammer_machine%2C_anvil%2C_crafts_Fortepan_86855.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Fluid_hammer%2C_blacksmith%2C_hammer_machine%2C_anvil%2C_crafts_Fortepan_86855.jpg/3840px-Fluid_hammer%2C_blacksmith%2C_hammer_machine%2C_anvil%2C_crafts_Fortepan_86855.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "FOTO:Fortepan — ID 86855: Adományozó/Donor: Magyar Földrajzi Múzeum / Erdélyi Mór cége.",
+            "author_url": "https://fortepan.hu/",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-1923",
+              "PD-US-expired"
+            ]
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -576638,14 +576695,14 @@
         "Las Orquídeas"
       ],
       "hints": [
-        "No soy un volcán ni estoy en el Valle del Cauca ni en Antioquia.",
+        "En mis montañas llueve muchísimo y casi siempre estoy cubierto de niebla.",
         "Ese colibrí fue descrito por la ciencia en los años 60 y está en peligro de extinción.",
         "Mi nombre empieza por «Mun»."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "cloud forest Andes Colombia",
+        "query": "Eriocnemis mirabilis",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3ACerro_Pan_de_Az%C3%BAcar_%2810.3897-zookeys.961.51971%29_Figure_2.jpg",
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Cerro_Pan_de_Az%C3%BAcar_%2810.3897-zookeys.961.51971%29_Figure_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -576686,28 +576743,36 @@
       "batch": "batch-19",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 1 (\"No soy un volcán ni estoy en el Valle del Cauca ni en Antioquia\") rules out all three wrong answers at once: Puracé is a volcano, Farallones de Cali is in Valle del Cauca, and Las Orquídeas is in Antioquia. That gives the answer away before hint 3. Hint 1 should be replaced with a vague hint that doesn't eliminate any option, for example one about the Pacific-facing slope of the Western Cordillera or the rainy cloud forest.",
+        "feedback": "The media slot has no candidates, and no new search is allowed, so the question has no picture. The text itself is fine: Munchique, near El Tambo in Cauca, is the home of the colorful puffleg (Eriocnemis mirabilis, described in 1967). The slot needs an image found by hand, for example a cloud forest in Cauca or a photo of the puffleg. No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
-          "giveaway"
+          "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"No soy un volcán ni estoy en el Valle del Cauca ni en Antioquia\") rules out all three wrong answers at once: Puracé is a volcano, Farallones de Cali is in Valle del Cauca, and Las Orquídeas is in Antioquia. That gives the answer away before hint 3. Hint 1 should be replaced with a vague hint that doesn't eliminate any option, for example one about the Pacific-facing slope of the Western Cordillera or the rainy cloud forest.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Softened the endemism claim and shortened the question, updated the conservation status in hint 2, and replaced the loose fun fact with a safe one.",
+        "reason": "Replaced hint 1, which ruled out all three wrong answers, with a vague hint about the misty, rainy forest.",
         "previous": {
-          "question": "Soy un parque nacional del Cauca, en la cordillera Occidental, cerca de El Tambo. En mis bosques de niebla vive el zamarrito multicolor, un colibrí que no existe en ningún otro lugar. ¿Qué parque soy?",
           "hints": [
             "No soy un volcán ni estoy en el Valle del Cauca ni en Antioquia.",
-            "Ese colibrí fue descrito por la ciencia en los años 60 y está en peligro crítico.",
+            "Ese colibrí fue descrito por la ciencia en los años 60 y está en peligro de extinción.",
             "Mi nombre empieza por «Mun»."
-          ],
-          "fun_fact": "El zamarrito multicolor es tan escaso que durante décadas casi nadie logró volver a verlo después de su descubrimiento."
+          ]
         },
         "revised_on": "2026-10-23"
       }
@@ -576856,7 +576921,7 @@
     },
     {
       "id": "q-7477",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Matemáticas de gimnasio: aquí las sumas sí pesan.",
       "question": "Óscar Figueroa alza una barra de 20 kilos con un disco rojo de 25 kilos en cada lado. ¿Cuántos kilos levanta en total?",
@@ -576874,11 +576939,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "olympic barbell bumper plates",
+        "query": "weightlifting barbell plates",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWeight_plates_in_gym_20180112.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Weight_plates_in_gym_20180112.jpg/3840px-Weight_plates_in_gym_20180112.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Santeri Viinamäki · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Santeri Viinamäki",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Zunter",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En halterofilia cada color de disco tiene su peso: rojo 25 kilos, azul 20, amarillo 15 y verde 10.",
       "subcategory": "olympic-medallists",
@@ -576907,18 +576979,42 @@
       "needs_media": false,
       "batch": "batch-19",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot has no candidates and no new search is allowed, so the question has no image. The text itself is fine: 20 + 2×25 = 70, and the plate colours in the fun fact are correct. It needs a manual image search, for example 'red bumper plate barbell' or 'weightlifting barbell plates'. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot has no candidates and no new search is allowed, so the question has no image. The text itself is fine: 20 + 2×25 = 70, and the plate colours in the fun fact are correct. It needs a manual image search, for example 'red bumper plate barbell' or 'weightlifting barbell plates'. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New image query, since the old search found no image.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "olympic barbell bumper plates",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7478",
@@ -577170,14 +577266,14 @@
         "Bucaramanga"
       ],
       "hints": [
-        "Es la ciudad más grande del país.",
-        "Allí trabaja el presidente de Colombia.",
+        "Queda en el centro del país, sobre la cordillera Oriental.",
+        "Es una ciudad fría y lluviosa, a más de 2500 metros de altura.",
         "Es la capital de Colombia."
       ],
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Bogota Capital District locator map",
+        "query": "Colombia Bogota locator map",
         "note": "Mapa de Colombia con Bogotá (Distrito Capital) resaltado, sin nombres de ciudades ni departamentos.",
         "source_url": "https://commons.wikimedia.org/wiki/File%3ABogota_Capital_District.png",
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Bogota_Capital_District.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -577213,22 +577309,44 @@
         "difficulty_estimate": 3,
         "notes": "It's fairly dry: anyone who knows Millonarios and Santa Fe answers without looking at the map. Several other candidates also have Bogotá as the answer, but they ask different facts. The 'nature' lens doesn't fit."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-19",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hints 1 and 2 already give the answer away for Colombian players: 'the largest city in the country' and 'where the president works' each mean Bogotá immediately, just like hint 3. Hint 1 should be vague, for example about the stadium's location or the city's cool highland climate without saying it's the biggest, and hint 2 should be only moderately strong. Media candidate 1 is usable but weak: the Colombia inset with the red mark is small, and most of the picture is the shape of the district.",
+        "feedback": "None of the candidates works as the essential map. Candidate 1 is a map of South America with 'Bogota' written on it, which gives the answer away. Candidates 2 and 3 highlight Amazonas and Antioquia, not Bogotá. A new search isn't allowed, so the slot needs a clean, unlabeled locator map of Colombia with Bogotá D.C. highlighted. No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
-          "giveaway"
+          "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hints 1 and 2 already give the answer away for Colombian players: 'the largest city in the country' and 'where the president works' each mean Bogotá immediately, just like hint 3. Hint 1 should be vague, for example about the stadium's location or the city's cool highland climate without saying it's the biggest, and hint 2 should be only moderately strong. Media candidate 1 is usable but weak: the Colombia inset with the red mark is small, and most of the picture is the shape of the district.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made hints 1 and 2 vaguer so they don't give away Bogotá before hint 3; kept the usable map.",
+        "previous": {
+          "hints": [
+            "Es la ciudad más grande del país.",
+            "Allí trabaja el presidente de Colombia.",
+            "Es la capital de Colombia."
+          ]
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7482",
@@ -578208,10 +578326,10 @@
     },
     {
       "id": "q-7495",
-      "status": "needs_work",
-      "difficulty": 4,
+      "status": "approved",
+      "difficulty": 5,
       "description": "Un mapa sin nombres es como un álbum sin láminas: toca adivinar.",
-      "question": "Mira el mapa: ¿qué región natural de Colombia está resaltada?",
+      "question": "Leticia, en la frontera con Brasil y Perú, queda en una región natural de Colombia. ¿En cuál?",
       "answer": "La región Amazónica",
       "wrong_answers": [
         "La región de la Orinoquía",
@@ -578221,16 +578339,23 @@
       "hints": [
         "Ocupa el sur y el sureste del país.",
         "Es casi toda selva húmeda y la cruzan ríos enormes.",
-        "Allí quedan Leticia y los delfines rosados."
+        "Allí nadan los delfines rosados."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Amazonía Colombia locator map",
-        "note": "Mapa de Colombia sin nombres ni letreros, con solo la región Amazónica (sur y sureste del país) resaltada en color.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "Colombia river boat",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGuayabal%2C_Santiago_de_Tol%C3%BA%2C_Sucre%2C_Colombia_-_panoramio_-_yesid_ferney_pati%C3%B1o_%E2%80%A6.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Guayabal%2C_Santiago_de_Tol%C3%BA%2C_Sucre%2C_Colombia_-_panoramio_-_yesid_ferney_pati%C3%B1o_%E2%80%A6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "yesid ferney patiño … · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "yesid ferney patiño …",
+        "author_url": "https://web.archive.org/web/20161103140346/http://www.panoramio.com/user/7594455?with_photo_id=132890862",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "La región Amazónica ocupa más de la tercera parte del territorio colombiano, pero allí vive muy poca gente.",
       "subcategory": "regions-and-departments",
@@ -578256,29 +578381,54 @@
         "notes": "A plain school map question, so it's a bit dry. The description's 'green/repellent' points to jungle, which leaves Amazon or Pacific. Wikimedia has many all-regions maps, but a map with only the Amazon region highlighted and no labels may be harder to find."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-19",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the essential-image candidates is a map of Colombia with the Amazon region highlighted. #1 is a labelled map of South America, and #2–6 are bilateral locator maps of Colombia with another country. A new search isn't allowed (can_search_again is false), so the map has to be sourced by hand: an unlabelled Colombia map with the Amazon region highlighted, e.g. a 'Colombia natural regions' map edited down to that one region. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the essential-image candidates is a map of Colombia with the Amazon region highlighted. #1 is a labelled map of South America, and #2–6 are bilateral locator maps of Colombia with another country. A new search isn't allowed (can_search_again is false), so the map has to be sourced by hand: an unlabelled Colombia map with the Amazon region highlighted, e.g. a 'Colombia natural regions' map edited down to that one region. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer points to jungle, which ruled out two options.",
+        "reason": "No suitable highlighted-region map exists, so the question now asks about Leticia's region without a map and uses a decorative image.",
         "previous": {
-          "description": "Tanto verde junto que hasta el mapa necesita repelente."
+          "difficulty": 4,
+          "question": "Mira el mapa: ¿qué región natural de Colombia está resaltada?",
+          "hints": [
+            "Ocupa el sur y el sureste del país.",
+            "Es casi toda selva húmeda y la cruzan ríos enormes.",
+            "Allí quedan Leticia y los delfines rosados."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Amazonía Colombia locator map",
+            "note": "Mapa de Colombia sin nombres ni letreros, con solo la región Amazónica (sur y sureste del país) resaltada en color.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-10-23"
-      }
+      },
+      "difficulty_original": 4
     },
     {
       "id": "q-7496",
@@ -579425,7 +579575,7 @@
     },
     {
       "id": "q-7511",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "Pequeño, brillante y siempre sentado en primera fila del manubrio.",
       "question": "Mira la foto: este aparatico va en el manubrio de la cicla. ¿Para qué sirve?",
@@ -579443,11 +579593,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "bicycle bell close-up",
+        "query": "bicycle bell handlebar",
         "note": "Foto clara de un timbre de bicicleta montado en el manubrio.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADetail_of_a_bicycle_handlebar_and_pink_bell_amidst_hundreds_of_parked_bicycles%2C_Central_Station%2C_Amsterdam%2C_Netherlands_julesvernex2.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Detail_of_a_bicycle_handlebar_and_pink_bell_amidst_hundreds_of_parked_bicycles%2C_Central_Station%2C_Amsterdam%2C_Netherlands_julesvernex2.jpg/3840px-Detail_of_a_bicycle_handlebar_and_pink_bell_amidst_hundreds_of_parked_bicycles%2C_Central_Station%2C_Amsterdam%2C_Netherlands_julesvernex2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Jules Verne Times Two · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jules Verne Times Two",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Julesvernex2",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Los primeros timbres de bicicleta se inventaron hace más de 100 años, cuando las ciclas empezaron a llenar las calles.",
       "subcategory": "cycling",
@@ -579476,18 +579633,42 @@
       "needs_media": true,
       "batch": "batch-19",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The only candidate showing a bike bell is #2. The bell there is small and in the background, and the brake lever is the most visible thing on the handlebar, so \"Para frenar la cicla\" would look like a fair answer. The other candidates show a gear hub, a mission bell, bell towers and a foxglove flower. The slot needs a clear close-up of a bicycle bell on a handlebar (e.g. a search for \"bicycle bell handlebar\"), but no new search is allowed here. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The only candidate showing a bike bell is #2. The bell there is small and in the background, and the brake lever is the most visible thing on the handlebar, so \"Para frenar la cicla\" would look like a fair answer. The other candidates show a gear hub, a mission bell, bell towers and a foxglove flower. The slot needs a clear close-up of a bicycle bell on a handlebar (e.g. a search for \"bicycle bell handlebar\"), but no new search is allowed here. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New essential-image query to find a clear close-up of a bell on a handlebar; the old candidates were unusable.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "bicycle bell close-up",
+            "note": "Foto clara de un timbre de bicicleta montado en el manubrio.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7512",
@@ -579777,7 +579958,7 @@
     },
     {
       "id": "q-7516",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "La fruta verde que viaja a Europa en mejor clase que muchos turistas.",
       "question": "Buena parte se exporta a Europa. ¿Qué departamento de Colombia tiene más hectáreas sembradas de aguacate Hass?",
@@ -579788,8 +579969,8 @@
         "Risaralda"
       ],
       "hints": [
-        "Es uno de los departamentos más grandes y poblados del país",
-        "Es famoso por su tradición cafetera y por sus cultivos de flores",
+        "Es un departamento andino, con el clima templado de montaña que le gusta al aguacate Hass.",
+        "Muchos de sus cultivos de Hass están en el oriente y el suroeste del departamento.",
         "Su capital es la ciudad de la eterna primavera"
       ],
       "media": {
@@ -579835,26 +580016,33 @@
       "needs_media": false,
       "batch": "batch-19",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 gives the answer away. \"One of the largest and most populated departments\" fits only Antioquia among the options, since Caldas, Risaralda and Tolima are all much smaller. Hint 2 (coffee plus flowers) also points straight at Antioquia. Hint 1 should be vague, for example about the Andean highlands where Hass grows. Hint 2 should not name a trait only Antioquia has among the options.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 gives the answer away. \"One of the largest and most populated departments\" fits only Antioquia among the options, since Caldas, Risaralda and Tolima are all much smaller. Hint 2 (coffee plus flowers) also points straight at Antioquia. Hint 1 should be vague, for example about the Andean highlands where Hass grows. Hint 2 should not name a trait only Antioquia has among the options.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Asked about planted area, where Antioquia clearly leads, cut the long avocado description, and replaced the coast hint that ruled out every wrong option at once.",
+        "reason": "Rewrote hints 1 and 2 so they no longer single out Antioquia among the options; hint 3 still gives the answer away.",
         "previous": {
-          "question": "Se siembra en montañas de clima frío, se exporta a Europa y su cáscara rugosa se pone casi negra al madurar. ¿Qué departamento produce más aguacate Hass?",
           "hints": [
             "Es uno de los departamentos más grandes y poblados del país",
-            "Tiene costa en el mar Caribe",
+            "Es famoso por su tradición cafetera y por sus cultivos de flores",
             "Su capital es la ciudad de la eterna primavera"
           ]
         },
@@ -580997,7 +581185,7 @@
       "status": "needs_work",
       "difficulty": 5,
       "description": "Una burbuja gigante que aterrizó en el occidente de Bogotá.",
-      "question": "Mira la foto: este domo de Bogotá es Maloka. ¿Qué clase de lugar es?",
+      "question": "En el occidente de Bogotá hay un gran domo llamado Maloka. ¿Qué clase de lugar es?",
       "answer": "Un museo interactivo de ciencia",
       "wrong_answers": [
         "Un estadio cubierto",
@@ -581011,9 +581199,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Centro Interactivo Maloka",
-        "note": "Foto exterior del domo de Maloka en Bogotá.",
+        "role": "illustrative",
+        "query": "Bogota city view",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -581042,21 +581230,49 @@
         "notes": "Fairly dry 'what kind of place is this' question. The photo isn't really needed (it works more as an illustration than as essential media), but a Commons photo of the dome very likely exists. Kids who don't know Maloka can only work it out from the hints."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-19",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows the Maloka dome in Bogotá, and no new search is possible. Candidates 2–4 and 6 show ayahuasca malocas at Centro Takiwasi in Peru, 1 is a Florentino y el Diablo statue, and 5 is a portrait photo of a glass pyramid behind a 'Huerta Uaque Maloka' sign, not the dome the question names. Either find a real Commons photo of the Maloka dome, or make the image illustrative and drop 'Mira la foto: este domo'. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the Maloka dome in Bogotá, and no new search is possible. Candidates 2–4 and 6 show ayahuasca malocas at Centro Takiwasi in Peru, 1 is a Florentino y el Diablo statue, and 5 is a portrait photo of a glass pyramid behind a 'Huerta Uaque Maloka' sign, not the dome the question names. Either find a real Commons photo of the Maloka dome, or make the image illustrative and drop 'Mira la foto: este domo'. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable photo of the Maloka dome exists, so I made the image an illustrative Bogotá view and took out the 'Mira la foto' wording.",
+        "previous": {
+          "question": "Mira la foto: este domo de Bogotá es Maloka. ¿Qué clase de lugar es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Centro Interactivo Maloka",
+            "note": "Foto exterior del domo de Maloka en Bogotá.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7533",
@@ -581344,7 +581560,7 @@
     },
     {
       "id": "q-7537",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Lo que en tierra fría se pide con la ruana bien puesta.",
       "question": "En Boyacá y Cundinamarca es muy común pedir «cuchuco de trigo». ¿Qué es el cuchuco?",
@@ -581362,11 +581578,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "Boyacá Andes farmland",
+        "query": "Boyacá countryside",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APueblo_del_Municipio_de_La_Victoria.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Pueblo_del_Municipio_de_La_Victoria.jpg/3840px-Pueblo_del_Municipio_de_La_Victoria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Andresandres17 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Andresandres17",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Andresandres17&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Además del de trigo, hay cuchuco de maíz y de cebada.",
       "subcategory": "regional-speech",
@@ -581395,23 +581618,39 @@
       "needs_media": false,
       "batch": "batch-19",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows the question's setting, the Colombian Andean highlands. #1 is a South Dakota prairie with an English 'Waterfowl Production Area' sign, and #2 and #3 are NASA satellite views (a coastline and a river floodplain in Patagonia). No new search is allowed, so the slot needs a new search such as 'Boyacá countryside' or 'Colombian ruana'. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the question's setting, the Colombian Andean highlands. #1 is a South Dakota prairie with an English 'Waterfowl Production Area' sign, and #2 and #3 are NASA satellite views (a coastline and a river floodplain in Patagonia). No new search is allowed, so the slot needs a new search such as 'Boyacá countryside' or 'Colombian ruana'. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer says the answer is a dish.",
+        "reason": "The decorative image search returned nothing from the setting, so I gave it a new, more specific query for the Boyacá countryside.",
         "previous": {
-          "description": "Un plato que en tierra fría se pide con la ruana bien puesta."
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "Boyacá Andes farmland",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -582391,10 +582630,10 @@
     },
     {
       "id": "q-7551",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Un tambor que llegó de visita desde el Caribe y se quedó a vivir en la parranda.",
-      "question": "Escucha: este tambor alto, que se toca con las manos, se sumó al conjunto vallenato moderno. ¿Cuál es?",
+      "question": "Mira la foto: este tambor alto, que se toca con las manos, se sumó al conjunto vallenato moderno. ¿Cuál es?",
       "answer": "La conga",
       "wrong_answers": [
         "La caja vallenata",
@@ -582407,13 +582646,20 @@
         "También suena mucho en la salsa, y su nombre se parece al de un baile en fila."
       ],
       "media": {
-        "type": "audio",
+        "type": "image",
         "role": "essential",
-        "query": "conga drums playing",
-        "note": "Grabación de congas solas (golpes abiertos con la mano), sin otros instrumentos.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "query": "conga drums",
+        "note": "Foto clara de dos o tres congas de pie, sin texto ni otros instrumentos.",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2006-06-03_Congas1.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/2006-06-03_Congas1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Stephan Czuratis (Jazz-face at de.wikipedia · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Stephan Czuratis (Jazz-face at de.wikipedia",
+        "author_url": "https://de.wikipedia.org/wiki/Benutzer:Jazz-face",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El conjunto vallenato tradicional era de tres instrumentos; las congas, el bajo y la guitarra llegaron después, con las agrupaciones modernas.",
       "subcategory": "vallenato",
@@ -582442,29 +582688,55 @@
       "needs_media": true,
       "batch": "batch-19",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the audio candidates is a conga recording. They are a gated-reverb drum-kit demo, a reggae kit beat, a talking drum, an Indian street drummer, a brass band and an udu. A new search isn't allowed, so the essential audio slot can't be filled. It needs a solo conga recording (open hand strokes), for example from Freesound. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the audio candidates is a conga recording. They are a gated-reverb drum-kit demo, a reggae kit beat, a talking drum, an Indian street drummer, a brass band and an udu. A new search isn't allowed, so the essential audio slot can't be filled. It needs a solo conga recording (open hand strokes), for example from Freesound. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": {
-        "query": "Colombian village plaza",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASan_Agust%C3%ADn_square_%28Plaza_de_San_Agust%C3%ADn%29_%284925126227%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/San_Agust%C3%ADn_square_%28Plaza_de_San_Agust%C3%ADn%29_%284925126227%29.jpg/3840px-San_Agust%C3%ADn_square_%28Plaza_de_San_Agust%C3%ADn%29_%284925126227%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Jorge Láscar from Australia · CC BY 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "Jorge Láscar from Australia",
-        "author_url": "https://www.flickr.com/people/8721758@N06",
-        "restrictions": [],
-        "pd_reasons": []
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No solo conga recording was found, so I swapped the essential audio for an essential photo of congas, which Commons has plenty of.",
+        "previous": {
+          "question": "Escucha: este tambor alto, que se toca con las manos, se sumó al conjunto vallenato moderno. ¿Cuál es?",
+          "media": {
+            "type": "audio",
+            "role": "essential",
+            "query": "conga drums playing",
+            "note": "Grabación de congas solas (golpes abiertos con la mano), sin otros instrumentos.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "background": {
+            "query": "Colombian village plaza",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ASan_Agust%C3%ADn_square_%28Plaza_de_San_Agust%C3%ADn%29_%284925126227%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/San_Agust%C3%ADn_square_%28Plaza_de_San_Agust%C3%ADn%29_%284925126227%29.jpg/3840px-San_Agust%C3%ADn_square_%28Plaza_de_San_Agust%C3%ADn%29_%284925126227%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Jorge Láscar from Australia · CC BY 2.0 · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0",
+            "author": "Jorge Láscar from Australia",
+            "author_url": "https://www.flickr.com/people/8721758@N06",
+            "restrictions": [],
+            "pd_reasons": []
+          }
+        },
+        "revised_on": "2026-10-23"
       }
     },
     {
@@ -583647,7 +583919,7 @@
     },
     {
       "id": "q-7567",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Bogotá no solo exporta tinto y aguaceros: también inventos que dieron la vuelta al mundo.",
       "question": "Nací en Bogotá, estudié ingeniería en Cambridge y en 1958 hice un marcapasos tan grande que funcionaba con una batería de carro. ¿Quién soy?",
@@ -583659,7 +583931,7 @@
       ],
       "hints": [
         "Mi invento fue uno de los primeros de su tipo en el mundo.",
-        "Mi aparato era externo y pesaba unos 45 kilos.",
+        "Mi aparato era externo y pesaba decenas de kilos.",
         "Mi apellido suena en inglés, aunque soy bien bogotano."
       ],
       "media": {
@@ -583701,29 +583973,36 @@
         "difficulty_estimate": 10,
         "notes": "Facts match the standard account (Cambridge, 1958, car battery, about 45 kg, Ecuadorian priest lived 18 more years); the detail is commonly reported but hard to verify. Hint 3 (English-sounding surname) is a strong giveaway among the options, which is acceptable for hint 3."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-19",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. Answer Jorge Reynolds is right, and so are Bogotá, Cambridge, 1958, the car battery, the Ecuadorian priest and the 18 extra years. The weight is inconsistent across sources: 'unos 45 kilos' (hint) vs 'más de 50 kilos', 'casi 50' and 55 kg.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. Answer Jorge Reynolds is right, and so are Bogotá, Cambridge, 1958, the car battery, the Ecuadorian priest and the 18 extra years. The weight is inconsistent across sources: 'unos 45 kilos' (hint) vs 'más de 50 kilos', 'casi 50' and 55 kg.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Description no longer names the engineer or heart trait; hint 1 no longer repeats the engineering clue.",
+        "reason": "Sources disagree on the pacemaker's weight, so hint 2 now says 'decenas de kilos' instead of an exact figure.",
         "previous": {
-          "description": "Un ingeniero que le enseñó al corazón a llevar el ritmo, como un buen profe de baile.",
           "hints": [
-            "No soy médico: soy ingeniero electrónico.",
+            "Mi invento fue uno de los primeros de su tipo en el mundo.",
             "Mi aparato era externo y pesaba unos 45 kilos.",
             "Mi apellido suena en inglés, aunque soy bien bogotano."
           ]
@@ -583888,10 +584167,10 @@
     },
     {
       "id": "q-7570",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Una grasa con más historia en la cocina que muchas abuelas.",
-      "question": "Con esta grasa blanca se fríen los chicharrones en muchas cocinas colombianas. ¿Qué es?",
+      "question": "En muchas cocinas colombianas, los chicharrones se fríen con una grasa blanca. ¿Cuál es?",
       "answer": "Manteca de cerdo",
       "wrong_answers": [
         "Queso campesino",
@@ -583905,12 +584184,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "lard in jar",
-        "note": "Close-up of white pork lard in a bowl or block, no labels.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "chicharron frying pan",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChicharron_Sandwich_%26_Ceviche%40Mochikas_Peruvian_Cafe.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Chicharron_Sandwich_%26_Ceviche%40Mochikas_Peruvian_Cafe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Ruocaled · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Ruocaled",
+        "author_url": "https://www.flickr.com/people/54063325@N07",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Antes de que se popularizara el aceite vegetal, la manteca de cerdo era la grasa principal para freír en las cocinas colombianas.",
       "subcategory": "street-food-and-bakery",
@@ -583936,30 +584222,44 @@
         "notes": "'Queso campesino' is not a fat, so it's a weak distractor. Chicharrón is often fried in its own rendered fat, so that's fine. In a photo, white lard can look like butter or cream, which makes the essential image less useful. It's fairly dry."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-19",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows pork lard. #1 is jars of goose lard ('Gęsi smalec') with readable labels, and #2–#6 are unrelated (a lab apparatus drawing, ceramic jars, a sketchbook page and a drape illustration). A new search isn't allowed. Re-search with something like 'pork lard block' or 'rendered pork fat'. If nothing clear turns up, change the slot to decorative (for example 'chicharron frying pan') and drop 'esta' from the question. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows pork lard. #1 is jars of goose lard ('Gęsi smalec') with readable labels, and #2–#6 are unrelated (a lab apparatus drawing, ceramic jars, a sketchbook page and a drape illustration). A new search isn't allowed. Re-search with something like 'pork lard block' or 'rendered pork fat'. If nothing clear turns up, change the slot to decorative (for example 'chicharron frying pan') and drop 'esta' from the question. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which each separated the answer from the three dairy options.",
+        "reason": "No clear lard photo was found, so I made the image decorative and took 'esta' out of the question.",
         "previous": {
-          "hints": [
-            "No sale de la vaca.",
-            "Sale del mismo animal que el chicharrón.",
-            "Viene del marrano."
-          ]
+          "question": "Con esta grasa blanca se fríen los chicharrones en muchas cocinas colombianas. ¿Qué es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "lard in jar",
+            "note": "Close-up of white pork lard in a bowl or block, no labels.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-10-23"
       }
@@ -584783,7 +585083,7 @@
     },
     {
       "id": "q-7582",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Fundar una ciudad es fácil; lo difícil es ganarse un apodo así en el Quindío.",
       "question": "Jesús María Ocampo, fundador de Armenia en 1889, era conocido por todos como «el…». ¿Cómo termina su apodo?",
@@ -584795,7 +585095,7 @@
       ],
       "hints": [
         "El apodo viene de una fama que tenía en el monte, antes de la fundación.",
-        "Su fama venía de un oficio peligroso: era cazador en el monte, no cargaba mercancía ni buscaba tesoros.",
+        "Se ganó esa fama por su valentía en un oficio muy arriesgado en las selvas de la región.",
         "Los campesinos de la época le decían «tigre» al jaguar."
       ],
       "media": {
@@ -584841,25 +585141,33 @@
       "needs_media": false,
       "batch": "batch-19",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. It says Ocampo was a hunter in the forest who neither carried goods nor looked for treasure, which rules out Arriero and Guaquero by name. Of the two options left, only Tigrero is about hunting, since a hachero cuts wood. Hint 2 should be rewritten to stay vague, for example about how dangerous and brave his work in the wild forest was, without saying \"cazador\" or ruling options out.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. It says Ocampo was a hunter in the forest who neither carried goods nor looked for treasure, which rules out Arriero and Guaquero by name. Of the two options left, only Tigrero is about hunting, since a hachero cuts wood. Hint 2 should be rewritten to stay vague, for example about how dangerous and brave his work in the wild forest was, without saying \"cazador\" or ruling options out.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 2 now only mentions a dangerous hunting trade, without cats.",
+        "reason": "Rewrote hint 2 so it talks about a brave, risky trade without saying 'cazador' or ruling out options by name.",
         "previous": {
           "hints": [
             "El apodo viene de una fama que tenía en el monte, antes de la fundación.",
-            "Perseguía felinos grandes en las selvas del Quindío.",
+            "Su fama venía de un oficio peligroso: era cazador en el monte, no cargaba mercancía ni buscaba tesoros.",
             "Los campesinos de la época le decían «tigre» al jaguar."
           ]
         },
@@ -585231,7 +585539,7 @@
     },
     {
       "id": "q-7588",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Un monólogo que hace sentir viejos a los papás en menos de dos horas.",
       "question": "Si te ríes con 'La pelota de letras', de Andrés López, ¿la infancia de quiénes estás recordando?",
@@ -585242,17 +585550,17 @@
         "De quienes crecieron en los años 30 y 40"
       ],
       "hints": [
-        "El show se estrenó en 2004, cuando esa generación tenía entre veintitantos y treinta y tantos años.",
-        "Ya había televisión a color y llegaban las primeras consolas de videojuegos, pero no internet.",
-        "La televisión tenía pocos canales y los juegos eran en la calle."
+        "Andrés López repasa los juguetes, los programas de televisión y los regaños de mamá de su propia niñez.",
+        "La televisión tenía pocos canales y los juegos eran en la calle.",
+        "Ya había televisión a color y llegaban las primeras consolas de videojuegos, pero no internet."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
         "query": "stand-up comedian microphone stage",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASitcom_Live_%28141520%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Sitcom_Live_%28141520%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAtle_Antonsen_Parkteatret_Crap_%C3%A5pp%C3%A5_Park_%28000056%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Atle_Antonsen_Parkteatret_Crap_%C3%A5pp%C3%A5_Park_%28000056%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "credit": "Tore Sætre · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 4.0",
@@ -585289,25 +585597,33 @@
       "needs_media": false,
       "batch": "batch-19",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 gives the answer away. It says the generation was in its twenties and thirties in 2004, so you can work out that they were children in the 70s and 80s. Hint 1 should be vague, for example about the show's style or its success, without ages or dates that point to the decade. Hint 2 also nearly settles it (colour TV and the first video game consoles, but no internet) and could be the strong hint instead.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 gives the answer away. It says the generation was in its twenties and thirties in 2004, so you can work out that they were children in the 70s and 80s. Hint 1 should be vague, for example about the show's style or its success, without ages or dates that point to the decade. Hint 2 also nearly settles it (colour TV and the first video game consoles, but no internet) and could be the strong hint instead.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the misleading 'papás de hoy' hint with the 2004 premiere, and hint 2 now also rules out the 50s/60s.",
+        "reason": "Replaced hint 1, which let players work out the decade from ages and dates, with a vague one, and moved the strongest clue to hint 3.",
         "previous": {
           "hints": [
-            "Es la generación de muchos papás de hoy.",
-            "Aún no había internet ni celulares en las casas.",
+            "El show se estrenó en 2004, cuando esa generación tenía entre veintitantos y treinta y tantos años.",
+            "Ya había televisión a color y llegaban las primeras consolas de videojuegos, pero no internet.",
             "La televisión tenía pocos canales y los juegos eran en la calle."
           ]
         },
@@ -585722,7 +586038,7 @@
     },
     {
       "id": "q-7594",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "El desayuno que demuestra que las sobras de ayer pueden ser las estrellas de hoy.",
       "question": "Abres la nevera en la mañana y vas a hacer calentado paisa. ¿Qué dos sobras de ayer no pueden faltar?",
@@ -585734,8 +586050,8 @@
       ],
       "hints": [
         "Se calientan juntas en la sartén con un poquito de hogao.",
-        "Uno es un grano blanco que va en casi todo almuerzo.",
-        "El otro es un grano rojo que se cocina en olla a presión."
+        "Las dos vienen del almuerzo de ayer, ese plato de todos los días en las casas paisas.",
+        "Uno es un grano blanco y el otro, un grano rojo que se cocina en olla a presión."
       ],
       "media": {
         "type": "image",
@@ -585780,24 +586096,32 @@
       "needs_media": false,
       "batch": "batch-19",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"un grano blanco que va en casi todo almuerzo\") clearly points to rice, and only the correct option has rice, so the second hint gives the answer away. Hint 2 should stay vague (e.g. about the meal they come from, like the previous day's lunch), and the rice/bean clues should move into hint 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"un grano blanco que va en casi todo almuerzo\") clearly points to rice, and only the correct option has rice, so the second hint gives the answer away. Hint 2 should stay vague (e.g. about the meal they come from, like the previous day's lunch), and the rice/bean clues should move into hint 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1 (bandeja paisa), which gave the answer away, with a vague hint about frying with hogao.",
+        "reason": "Hint 2 gave away the rice, so it now only points to yesterday's lunch, and the rice and bean clues are combined in hint 3.",
         "previous": {
           "hints": [
-            "Son los mismos de la bandeja paisa.",
+            "Se calientan juntas en la sartén con un poquito de hogao.",
             "Uno es un grano blanco que va en casi todo almuerzo.",
             "El otro es un grano rojo que se cocina en olla a presión."
           ]
