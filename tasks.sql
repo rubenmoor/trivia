@@ -51322,7 +51322,6 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1034, 171
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1035, 1034);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1649, 1648);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1677, 1676);
-INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1681, 1680);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1681, 1712);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1691, 1690);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1708, 1707);
