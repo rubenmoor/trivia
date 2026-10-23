@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "92d56baf",
+  "hash": "b6e6a34e",
   "questions": [
     {
       "id": "q-0016",
@@ -103135,6 +103135,40 @@
       "background": null
     },
     {
+      "id": "q-5263",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "accidental-inventions",
+      "bundle": "base",
+      "description": "Fashion designers would never put these on a runway, no matter how bold they feel.",
+      "question": "What are these for?",
+      "answer": "Swimming faster",
+      "wrong_answers": [
+        "Walking on snow",
+        "Fanning a fire",
+        "Climbing ice"
+      ],
+      "hints": [
+        "You use them where you get wet.",
+        "They work like the feet of a frog or a duck.",
+        "Divers wear them in the sea."
+      ],
+      "fun_fact": "Benjamin Franklin made wooden fins for his hands when he was about 11 years old.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Technisub_Ala_Swimming_Fins_with_Coloured_Fin_Grips.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATechnisub_Ala_Swimming_Fins_with_Coloured_Fin_Grips.jpg",
+        "credit": "Helmardine · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Helmardine",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Helmardine"
+      },
+      "background": null
+    },
+    {
       "id": "q-5264",
       "status": "approved",
       "difficulty": 12,
@@ -104223,6 +104257,40 @@
       "background": null
     },
     {
+      "id": "q-5299",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "animal-records",
+      "bundle": "base",
+      "description": "A bat with a face like a bulldog and a voice like a rock concert.",
+      "question": "The greater bulldog bat catches fish with its claws, and its calls are among the loudest of any animal. Where does it live in the wild?",
+      "answer": "Central and South America",
+      "wrong_answers": [
+        "Southeast Asia",
+        "Central Africa",
+        "Northern Australia"
+      ],
+      "hints": [
+        "It lives in the tropics, near rivers and coasts.",
+        "At night it flies low over calm water, using echoes to find fish near the surface.",
+        "Its range stretches from Mexico to Argentina."
+      ],
+      "fun_fact": "Its calls are so loud that, close up, they're about as loud as a jet engine, but they're too high-pitched for humans to hear.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Noctilio_leporinus_mastivus_82949491.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANoctilio_leporinus_mastivus_82949491.jpg",
+        "credit": "Juan Cruzado Cortés · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Juan Cruzado Cortés",
+        "author_url": "https://www.inaturalist.org/users/5772"
+      },
+      "background": null
+    },
+    {
       "id": "q-5300",
       "status": "approved",
       "difficulty": 1,
@@ -105241,6 +105309,49 @@
         "author_url": "https://commons.wikimedia.org/wiki/User:Giles_Laurent"
       },
       "background": null
+    },
+    {
+      "id": "q-5333",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "A tiny voice with a big message.",
+      "question": "Listen: what animal is making this sound?",
+      "answer": "A bird",
+      "wrong_answers": [
+        "A frog",
+        "A cat",
+        "A dog"
+      ],
+      "hints": [
+        "This animal makes this sound to talk to others of its kind.",
+        "You often hear this sound outside early in the morning.",
+        "It has feathers and a beak."
+      ],
+      "fun_fact": "Chicks can peep to their mother from inside the egg, even before they hatch.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/House_Sparrows_chirping.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHouse_Sparrows_chirping.ogg",
+        "credit": "QWerk · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "QWerk",
+        "author_url": "https://commons.wikimedia.org/wiki/User:QWerk"
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/East_Ruston_Old_Vicarage_Garden%2C_Lawn_leading_to_the_Green_Court_-_geograph.org.uk_-_7131973.jpg/3840px-East_Ruston_Old_Vicarage_Garden%2C_Lawn_leading_to_the_Green_Court_-_geograph.org.uk_-_7131973.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEast_Ruston_Old_Vicarage_Garden%2C_Lawn_leading_to_the_Green_Court_-_geograph.org.uk_-_7131973.jpg",
+        "credit": "Michael Garlick · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Michael Garlick",
+        "author_url": "https://www.geograph.org.uk/profile/118660"
+      }
     },
     {
       "id": "q-5334",
@@ -106467,6 +106578,40 @@
       "background": null
     },
     {
+      "id": "q-5370",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "A vegetable that gets a scary haircut once a year.",
+      "question": "Carved pumpkins with glowing faces sit on doorsteps for Halloween. In which month is Halloween?",
+      "answer": "October",
+      "wrong_answers": [
+        "December",
+        "April",
+        "July"
+      ],
+      "hints": [
+        "It is in the second half of the year.",
+        "It comes before Christmas, but not in the same month.",
+        "Halloween is on the 31st, the last day of the month."
+      ],
+      "fun_fact": "Long ago in Ireland, people carved scary faces into turnips, not pumpkins.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Carved_pumpkins_in_Scotland.jpg/3840px-Carved_pumpkins_in_Scotland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACarved_pumpkins_in_Scotland.jpg",
+        "credit": "Lirazelf · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Lirazelf",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Lirazelf"
+      },
+      "background": null
+    },
+    {
       "id": "q-5371",
       "status": "approved",
       "difficulty": 2,
@@ -106943,6 +107088,40 @@
       "background": null
     },
     {
+      "id": "q-5386",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "childrens-songs",
+      "bundle": "base",
+      "description": "The night-light that came with the sky, free of charge.",
+      "question": "It is a giant ball of hot, glowing gas, it looks tiny because it is so far away, and a famous lullaby says it twinkles. What is it?",
+      "answer": "A star",
+      "wrong_answers": [
+        "The Moon",
+        "A comet",
+        "A firefly"
+      ],
+      "hints": [
+        "You can see it in the sky at night.",
+        "There are millions and millions of them up there.",
+        "The Sun is one of them."
+      ],
+      "fun_fact": "The tune of “Twinkle, Twinkle, Little Star” is the same one used for the alphabet song.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/%22In_October%22_-_illustration_for_%22Baby%27s_Lullaby_Book_..._by_Charles_Stuart_Pratt%22_showing_parents_looking_in_on_a_child_asleep_in_a_bed_LCCN2017650219.jpg/3840px-%22In_October%22_-_illustration_for_%22Baby%27s_Lullaby_Book_..._by_Charles_Stuart_Pratt%22_showing_parents_looking_in_on_a_child_asleep_in_a_bed_LCCN2017650219.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%22In_October%22_-_illustration_for_%22Baby%27s_Lullaby_Book_..._by_Charles_Stuart_Pratt%22_showing_parents_looking_in_on_a_child_asleep_in_a_bed_LCCN2017650219.jpg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "L. Prang & Co., publisher; L. Prang & Co., copyright claimant; Taylor, William Ladd, 1854-1926, artist; Pratt, Charles Stuart, 1854-1921.; Chadwick, G. W. (George Whitefield), 1854-1931.",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-5387",
       "status": "approved",
       "difficulty": 5,
@@ -107177,6 +107356,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "PinkBeachPlanet",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:PinkBeachPlanet&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-5394",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "childrens-songs",
+      "bundle": "base",
+      "description": "Some instruments have a heart of gold; these ones have bars of something else.",
+      "question": "A metallophone is played by striking bars made of metal. Which of these is NOT a metallophone?",
+      "answer": "Xylophone",
+      "wrong_answers": [
+        "Glockenspiel",
+        "Vibraphone",
+        "Celesta"
+      ],
+      "hints": [
+        "Think about what the bars are made of.",
+        "One of these has bars made of wood.",
+        "Its name starts with the Greek word for wood."
+      ],
+      "fun_fact": "The celesta looks like a small piano, but its keys make little hammers strike metal plates; it plays the famous “Dance of the Sugar Plum Fairy”.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Burgwindheim_Pauken-20180909-RM-150632.jpg/3840px-Burgwindheim_Pauken-20180909-RM-150632.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABurgwindheim_Pauken-20180909-RM-150632.jpg",
+        "credit": "Reinhold Möller Ermell · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Reinhold Möller Ermell",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ermell"
       },
       "background": null
     },
@@ -107895,6 +108108,40 @@
       "background": null
     },
     {
+      "id": "q-5416",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "continents",
+      "bundle": "base",
+      "description": "An invisible belt that Earth wears and never takes off.",
+      "question": "Which of these countries does the equator NOT pass through?",
+      "answer": "Canada",
+      "wrong_answers": [
+        "Colombia",
+        "Brazil",
+        "Kenya"
+      ],
+      "hints": [
+        "The equator runs around the middle of the Earth.",
+        "The equator runs through huge rainforests, like the Amazon.",
+        "The odd one out is very far north and has cold winters."
+      ],
+      "fun_fact": "On the equator, day and night last about 12 hours each all year round.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Ecuador_Equator_SW_Cayambe_78_10_36_W_a.jpg/3840px-Ecuador_Equator_SW_Cayambe_78_10_36_W_a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEcuador_Equator_SW_Cayambe_78_10_36_W_a.jpg",
+        "credit": "Cayambe · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Cayambe",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Cayambe"
+      },
+      "background": null
+    },
+    {
       "id": "q-5417",
       "status": "approved",
       "difficulty": 5,
@@ -107993,6 +108240,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Arturo Pardavila III from Hoboken, NJ, USA",
         "author_url": "https://www.flickr.com/people/63704136@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-5420",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "cricket",
+      "bundle": "base",
+      "description": "Baseball: the only sport where stealing is allowed and nobody calls the police.",
+      "question": "This baseball player crouches behind home plate in a mask and signals to the pitcher. Which position?",
+      "answer": "Catcher",
+      "wrong_answers": [
+        "Shortstop",
+        "Outfielder",
+        "First baseman"
+      ],
+      "hints": [
+        "He wears the biggest, roundest glove on the field.",
+        "He receives almost every pitch.",
+        "He wears shin guards and a chest protector, and the batter stands right in front of him."
+      ],
+      "fun_fact": "The catcher uses secret finger signs between his knees to tell the pitcher which throw to make.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Daejeon_Hanbat_Baseball_Stadium_Summer_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADaejeon_Hanbat_Baseball_Stadium_Summer_2023.jpg",
+        "credit": "Pmlydon · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Pmlydon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pmlydon"
       },
       "background": null
     },
@@ -109969,6 +110250,40 @@
       "background": null
     },
     {
+      "id": "q-5481",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "fantasy",
+      "bundle": "base",
+      "description": "He lost his toad, his memory ball and his password list, but never his courage.",
+      "question": "Neville Longbottom was part of three of these groups at some point. Which one was he never part of?",
+      "answer": "The Gryffindor Quidditch team",
+      "wrong_answers": [
+        "Gryffindor house",
+        "Dumbledore's Army",
+        "The Hogwarts teachers"
+      ],
+      "hints": [
+        "One of these groups needed a talent he never had.",
+        "As a young student he was famously clumsy and nervous.",
+        "In his very first flying lesson, he fell off his broom and broke his wrist."
+      ],
+      "fun_fact": "J.K. Rowling has said that the grown-up Neville became the Herbology teacher at Hogwarts.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Starr-140528-0560-Viola_chamissoniana_subsp_tracheliifolia-plants_in_pots-RM_Greenhouse_HNP-Maui_%2825124426232%29.jpg/3840px-Starr-140528-0560-Viola_chamissoniana_subsp_tracheliifolia-plants_in_pots-RM_Greenhouse_HNP-Maui_%2825124426232%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStarr-140528-0560-Viola_chamissoniana_subsp_tracheliifolia-plants_in_pots-RM_Greenhouse_HNP-Maui_%2825124426232%29.jpg",
+        "credit": "Forest and Kim Starr · CC BY 3.0 us · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0 us",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
+        "author": "Forest and Kim Starr",
+        "author_url": "https://www.flickr.com/people/97499887@N06"
+      },
+      "background": null
+    },
+    {
       "id": "q-5482",
       "status": "approved",
       "difficulty": 4,
@@ -111839,6 +112154,40 @@
       "background": null
     },
     {
+      "id": "q-5539",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "indigenous-peoples-of-the-amazon",
+      "bundle": "base",
+      "description": "She never sends a bill, but people still thank her for every meal.",
+      "question": "In the Andes, people pour a little drink on the ground to thank Mother Earth for good harvests. What do they call her?",
+      "answer": "Pachamama",
+      "wrong_answers": [
+        "Inti",
+        "Mama Quilla",
+        "Viracocha"
+      ],
+      "hints": [
+        "Her name comes from Quechua, the language of the Inca.",
+        "Many Andean festivals for her are held in August, before planting begins.",
+        "Her name ends in “mama”, and she is not the Moon."
+      ],
+      "fun_fact": "In 2008, Ecuador became the first country to write the rights of nature, Pachamama, into its constitution.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Peru_-_Cusco_Sacred_Valley_%26_Incan_Ruins_153_-_steep-sided_Urubama_valley_%286997273576%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APeru_-_Cusco_Sacred_Valley_%26_Incan_Ruins_153_-_steep-sided_Urubama_valley_%286997273576%29.jpg",
+        "credit": "McKay Savage from London, UK · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "McKay Savage from London, UK",
+        "author_url": "https://www.flickr.com/people/56796376@N00"
+      },
+      "background": null
+    },
+    {
       "id": "q-5540",
       "status": "approved",
       "difficulty": 1,
@@ -112825,6 +113174,40 @@
       "background": null
     },
     {
+      "id": "q-5570",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "language",
+      "bundle": "base",
+      "description": "You've pressed these keys thousands of times, but have you ever counted them?",
+      "question": "You're typing on a classic QWERTY keyboard. How many letter keys are in the top row, the one that starts with Q?",
+      "answer": "10",
+      "wrong_answers": [
+        "8",
+        "12",
+        "13"
+      ],
+      "hints": [
+        "The row below it, starting with A, has one key fewer.",
+        "The row ends with O and P.",
+        "Q, W, E, R, T, Y, U, I, O, P."
+      ],
+      "fun_fact": "The QWERTY layout was designed in the 1870s for typewriters, long before computers existed.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Coffee_while_working.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoffee_while_working.jpg",
+        "credit": "Shanazar Nizamaddinov · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Shanazar Nizamaddinov",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Shanazar_Nizamaddinov&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-5571",
       "status": "approved",
       "difficulty": 3,
@@ -113092,6 +113475,40 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Auckland War Memorial Museum",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-5580",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "literature",
+      "bundle": "base",
+      "description": "Elementary, my dear players: this one needs a map, not a magnifying glass.",
+      "question": "This detective plays the violin, wears a deerstalker hat and lives at 221B Baker Street. In which city?",
+      "answer": "London",
+      "wrong_answers": [
+        "Paris",
+        "New York",
+        "Dublin"
+      ],
+      "hints": [
+        "The city sits on a river and is famous for its foggy streets.",
+        "Its red double-decker buses are famous all over the world.",
+        "It is the capital of the United Kingdom."
+      ],
+      "fun_fact": "When the stories were written, 221B Baker Street did not exist, yet fans still sent letters there addressed to the detective.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Pet_van_bruin_geruite_wol_met_klep_voor_en_achter%2C_zijflappen_bovenop_geknoopt%2C_objectnr_77812.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APet_van_bruin_geruite_wol_met_klep_voor_en_achter%2C_zijflappen_bovenop_geknoopt%2C_objectnr_77812.JPG",
+        "credit": "Fa. Vero, vh van Veen · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Fa. Vero, vh van Veen",
         "author_url": null
       },
       "background": null
@@ -113671,6 +114088,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Eden, Janine and Jim from New York City",
         "author_url": "https://www.flickr.com/people/10485077@N06"
+      },
+      "background": null
+    },
+    {
+      "id": "q-5598",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "mexican-food",
+      "bundle": "base",
+      "description": "A party where the guests of honor are your great-great-grandparents.",
+      "question": "Which of these is NOT a tradition of Mexico's Day of the Dead?",
+      "answer": "Carved pumpkins",
+      "wrong_answers": [
+        "Bread of the dead",
+        "Paper cut-out banners",
+        "Painted skull faces"
+      ],
+      "hints": [
+        "The odd one out belongs to a different holiday.",
+        "That holiday happens a day or two earlier, mostly in the United States.",
+        "It means scooping out an orange vegetable and putting a candle inside."
+      ],
+      "fun_fact": "Bread of the dead, or “pan de muerto”, is a sweet round bread decorated with dough shaped like bones.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Tagetes_erecta_26122014_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATagetes_erecta_26122014_%283%29.jpg",
+        "credit": "Joydeep · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Joydeep",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Joydeep"
       },
       "background": null
     },
@@ -117195,6 +117646,40 @@
       "background": null
     },
     {
+      "id": "q-5704",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "famous-philosophers",
+      "bundle": "base",
+      "description": "Gluing a Latin word to a Greek one: the scholar's version of putting pineapple on pizza.",
+      "question": "French thinker Auguste Comte named this science in the 1830s, mixing a Latin and a Greek word. What is it?",
+      "answer": "Sociology",
+      "wrong_answers": [
+        "Psychology",
+        "Anthropology",
+        "Economics"
+      ],
+      "hints": [
+        "Comte wanted a science that finds laws by observation, the way physics does.",
+        "It looks at things like families, cities, classes and religions.",
+        "The Latin part of the name means “companion” or “ally”."
+      ],
+      "fun_fact": "Some scholars of the time disliked the word because it glued Latin and Greek together, but it stuck anyway.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Busy_scene_of_bazaar_with_men_in_Dhaka%2C_Bangladesh.jpg/3840px-Busy_scene_of_bazaar_with_men_in_Dhaka%2C_Bangladesh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABusy_scene_of_bazaar_with_men_in_Dhaka%2C_Bangladesh.jpg",
+        "credit": "Khaleq · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Khaleq",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-5705",
       "status": "approved",
       "difficulty": 12,
@@ -119380,6 +119865,40 @@
       "background": null
     },
     {
+      "id": "q-5773",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "animal-records",
+      "bundle": "base",
+      "description": "Half duck, half beaver, and fully confusing to scientists.",
+      "question": "Look at this egg-laying animal. The mother has no nipples. How does she feed her babies?",
+      "answer": "Milk oozes from patches of her skin",
+      "wrong_answers": [
+        "She brings them chewed-up insects",
+        "She coughs up mashed food for them",
+        "They feed on the egg yolk until grown"
+      ],
+      "hints": [
+        "Her babies stay snuggled against her belly after they hatch.",
+        "The babies lick their food straight off her fur.",
+        "It comes out of her skin a bit like sweat."
+      ],
+      "fun_fact": "Baby platypuses are called “puggles” and are only about the size of a jelly bean when they hatch.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Duck-billed_platypus_%28Ornithorhynchus_anatinus%29_Scottsdale.jpg/3840px-Duck-billed_platypus_%28Ornithorhynchus_anatinus%29_Scottsdale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADuck-billed_platypus_%28Ornithorhynchus_anatinus%29_Scottsdale.jpg",
+        "credit": "Charles J. Sharp · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Charles J. Sharp",
+        "author_url": "https://www.wikidata.org/wiki/Q54800218"
+      },
+      "background": null
+    },
+    {
       "id": "q-5774",
       "status": "approved",
       "difficulty": 3,
@@ -119784,6 +120303,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Superior National Forest",
         "author_url": "https://www.flickr.com/people/53801642@N06"
+      },
+      "background": null
+    },
+    {
+      "id": "q-5786",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "numbers",
+      "bundle": "base",
+      "description": "A part of the day that every clock knows by heart, even the broken ones.",
+      "question": "Which part of the day comes right after the morning and before the evening?",
+      "answer": "The afternoon",
+      "wrong_answers": [
+        "Midnight",
+        "The night",
+        "Sunrise"
+      ],
+      "hints": [
+        "The sun is still up.",
+        "It's when many kids get home from school.",
+        "Lunch has just finished."
+      ],
+      "fun_fact": "“Noon” comes from the Latin word for “ninth”, because it once meant the ninth hour after sunrise.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Canberra_%28AU%29%2C_Albert_Hall%2C_Sundial_--_2019_--_1740.jpg/3840px-Canberra_%28AU%29%2C_Albert_Hall%2C_Sundial_--_2019_--_1740.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACanberra_%28AU%29%2C_Albert_Hall%2C_Sundial_--_2019_--_1740.jpg",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025"
       },
       "background": null
     },
@@ -120339,6 +120892,40 @@
         "author": "Shixart1985",
         "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
       }
+    },
+    {
+      "id": "q-5803",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "rock",
+      "bundle": "base",
+      "description": "So loud that the band itself couldn't hear the band.",
+      "question": "In 1963, the press named a craze of screaming fans after a British band. Which band?",
+      "answer": "The Beatles",
+      "wrong_answers": [
+        "The Rolling Stones",
+        "The Beach Boys",
+        "The Kinks"
+      ],
+      "hints": [
+        "The band came from Liverpool.",
+        "Their haircuts were called “mop tops”.",
+        "John, Paul, George and Ringo."
+      ],
+      "fun_fact": "The Beatles stopped touring in 1966, partly because the screaming meant they couldn't hear themselves play.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Cheering_concertgoers_%28Unsplash%29.jpg/3840px-Cheering_concertgoers_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACheering_concertgoers_%28Unsplash%29.jpg",
+        "credit": "Ezra Jeffrey emcomeau · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Ezra Jeffrey emcomeau",
+        "author_url": "https://unsplash.com/@emcomeau"
+      },
+      "background": null
     },
     {
       "id": "q-5804",
@@ -122517,6 +123104,74 @@
       "background": null
     },
     {
+      "id": "q-5871",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "banknotes",
+      "bundle": "base",
+      "description": "Like a pizza that gets cut into slices before anyone can spend them.",
+      "question": "Banknotes aren't printed one at a time. Dozens are printed together on one big flat piece, then cut apart. What is that piece called?",
+      "answer": "A sheet",
+      "wrong_answers": [
+        "A plate",
+        "A panel",
+        "A tile"
+      ],
+      "hints": [
+        "It's thin and flat, not rolled up.",
+        "A notebook is made of many of these, bound together.",
+        "A home printer takes paper one of these at a time."
+      ],
+      "fun_fact": "Uncut sheets of real US dollars are sold to collectors as souvenirs.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Pile_of_SLE_banknotes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APile_of_SLE_banknotes.jpg",
+        "credit": "Ivanh1 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Ivanh1",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ivanh1&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-5872",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "banknotes",
+      "bundle": "base",
+      "description": "Money with a very short career and a very colorful wardrobe.",
+      "question": "Look at this money. Who is it made for?",
+      "answer": "Children playing games",
+      "wrong_answers": [
+        "Travelers going abroad",
+        "Shopkeepers giving change",
+        "Collectors buying old notes"
+      ],
+      "hints": [
+        "Look at the bright colors and the shape.",
+        "No real shop would take it.",
+        "It often comes in a box with a board game."
+      ],
+      "fun_fact": "In many countries, the law says copies of money must look clearly different from real notes, for example in size.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Monopoly_money.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMonopoly_money.jpg",
+        "credit": "James Petts from London, England · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "James Petts from London, England",
+        "author_url": "https://www.flickr.com/people/14730981@N08"
+      },
+      "background": null
+    },
+    {
       "id": "q-5873",
       "status": "approved",
       "difficulty": 7,
@@ -124247,6 +124902,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Crew crew",
         "author_url": "https://unsplash.com/@crew"
+      },
+      "background": null
+    },
+    {
+      "id": "q-5925",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "rock",
+      "bundle": "base",
+      "description": "Free neck exercises included with every ticket.",
+      "question": "Shaking your head hard to the beat is called headbanging. Fans of which music made it famous?",
+      "answer": "Heavy metal",
+      "wrong_answers": [
+        "Reggae",
+        "Classical",
+        "Country"
+      ],
+      "hints": [
+        "It is a loud, heavy kind of rock.",
+        "Long hair makes it look even better.",
+        "Metallica and Iron Maiden play it."
+      ],
+      "fun_fact": "Doctors have warned that very hard headbanging for a long time can strain the neck.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Beach-Please-2022-crowd-stage-lights-night-performance.jpg/3840px-Beach-Please-2022-crowd-stage-lights-night-performance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeach-Please-2022-crowd-stage-lights-night-performance.jpg",
+        "credit": "PinkBeachPlanet · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PinkBeachPlanet",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:PinkBeachPlanet&action=edit&redlink=1"
       },
       "background": null
     },
@@ -127685,6 +128374,40 @@
       "background": null
     },
     {
+      "id": "q-6031",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "the-lord-of-the-rings",
+      "bundle": "base",
+      "description": "The original group chat: one fire, then another, then another.",
+      "question": "Gondor lights great fires, one hilltop after another, all the way to the west. Which people ride to help Gondor in answer?",
+      "answer": "The Riders of Rohan",
+      "wrong_answers": [
+        "The Elves of Rivendell",
+        "The Dwarves of Erebor",
+        "The Ents of Fangorn"
+      ],
+      "hints": [
+        "The two kingdoms are old allies.",
+        "These people are famous for their horses.",
+        "Their king is Théoden."
+      ],
+      "fun_fact": "In the book, there are seven beacon hills between Minas Tirith and the border of Rohan.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/V%C3%A5rdkasen_p%C3%A5_Korpberget_2012a_01.jpg/3840px-V%C3%A5rdkasen_p%C3%A5_Korpberget_2012a_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AV%C3%A5rdkasen_p%C3%A5_Korpberget_2012a_01.jpg",
+        "credit": "Holger.Ellgaard · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Holger.Ellgaard",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Holger.Ellgaard"
+      },
+      "background": null
+    },
+    {
       "id": "q-6032",
       "status": "approved",
       "difficulty": 8,
@@ -127715,6 +128438,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Shixart1985",
         "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6033",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "the-lord-of-the-rings",
+      "bundle": "base",
+      "description": "After the worst day underground, everyone needs a walk in the woods.",
+      "question": "After Gandalf falls in Moria, the Fellowship escapes into a forest where Elves live high up in tall silver trees. Where are they?",
+      "answer": "Lothlórien",
+      "wrong_answers": [
+        "Rivendell",
+        "Fangorn",
+        "Mirkwood"
+      ],
+      "hints": [
+        "It lies just east of the Misty Mountains, near Moria's gates.",
+        "It's ruled by a Lady and her husband, Celeborn.",
+        "Galadriel lives there."
+      ],
+      "fun_fact": "The mallorn trees of Lothlórien turn gold in autumn but keep their leaves until new ones grow in spring.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Darasuram%2C_Airavatesvara_Temple%2C_Inner_halls_2%2C_India.jpg/3840px-Darasuram%2C_Airavatesvara_Temple%2C_Inner_halls_2%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADarasuram%2C_Airavatesvara_Temple%2C_Inner_halls_2%2C_India.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
       },
       "background": null
     },
@@ -127987,6 +128744,40 @@
         "license_url": null,
         "author": "Unknown authorUnknown author",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-6043",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "trees",
+      "bundle": "base",
+      "description": "Sorting the trash: the game everyone plays, whether they like it or not.",
+      "question": "Which of these does NOT belong in the paper recycling bin?",
+      "answer": "A glass bottle",
+      "wrong_answers": [
+        "A newspaper",
+        "A cardboard box",
+        "An old notebook"
+      ],
+      "hints": [
+        "In many cities, the paper bin is blue.",
+        "Three of them were once part of a tree.",
+        "It's made from melted sand, not wood."
+      ],
+      "fun_fact": "Paper can be recycled about five to seven times before its fibers get too short to use.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Recycling_bins_Drammen.jpg/3840px-Recycling_bins_Drammen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARecycling_bins_Drammen.jpg",
+        "credit": "Peulle · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Peulle",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Peulle"
       },
       "background": null
     },
@@ -129551,6 +130342,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Jeremy Keith",
         "author_url": "https://www.flickr.com/photos/74105777@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6092",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "world-currencies",
+      "bundle": "base",
+      "description": "A symbol that has been hanging around supermarkets longer than the shopping carts.",
+      "question": "This symbol appears on price tags in the United States and Canada. What does it stand for?",
+      "answer": "A cent",
+      "wrong_answers": [
+        "A euro",
+        "Copyright",
+        "Degrees Celsius"
+      ],
+      "hints": [
+        "It looks like a small letter “c” with a line through it.",
+        "A single coin in your pocket might be worth exactly one of these.",
+        "You need 100 of them to make a dollar."
+      ],
+      "fun_fact": "The ¢ sign used to be on most US typewriters, but it was left off the standard computer keyboard, so it's hard to type today.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/15-cent_prices_on_notebooks_at_Walmart.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A15-cent_prices_on_notebooks_at_Walmart.jpg",
+        "credit": "Daniel Christensen (talk). · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Daniel Christensen (talk).",
+        "author_url": "https://en.wikipedia.org/wiki/User:Daniel_Christensen"
       },
       "background": null
     },

@@ -405851,7 +405851,7 @@
     },
     {
       "id": "q-5263",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Fashion designers would never put these on a runway, no matter how bold they feel.",
       "question": "What are these for?",
@@ -405869,11 +405869,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "swimming flippers pair",
+        "query": "diving fins pair",
         "note": "A clear photo of a pair of rubber swim fins (flippers), not worn, ideally on sand or a plain background.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATechnisub_Ala_Swimming_Fins_with_Coloured_Fin_Grips.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Technisub_Ala_Swimming_Fins_with_Coloured_Fin_Grips.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Helmardine · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Helmardine",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Helmardine",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Benjamin Franklin made wooden fins for his hands when he was about 11 years old.",
       "subcategory": "accidental-inventions",
@@ -405902,24 +405909,40 @@
       "needs_media": true,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows swim fins, so the essential image is missing and the question can't work without it. None of the three pictures is usable, and a new search isn't allowed. The next search should look for a clear photo of a pair of rubber swim fins (for example \"diving fins pair\" or \"swim fins on sand\"). No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows swim fins, so the essential image is missing and the question can't work without it. None of the three pictures is usable, and a new search isn't allowed. The next search should look for a clear photo of a pair of rubber swim fins (for example \"diving fins pair\" or \"swim fins on sand\"). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer says the object is footwear or mentions the beach.",
+        "reason": "Text is fine; only changed the essential image query so the next search finds a clear pair of swim fins.",
         "previous": {
-          "description": "Footwear that makes walking to the beach a lot less elegant."
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "swimming flippers pair",
+            "note": "A clear photo of a pair of rubber swim fins (flippers), not worn, ideally on sand or a plain background.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -406016,7 +406039,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "bubble wrap sheet",
+        "query": "bubble wrap close-up",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -406050,27 +406073,41 @@
       "batch": "batch-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "The text is fine, but none of the image candidates works. 1, 2 and 4 are British Museum bronze artefacts (Sussex loops and an axe head) that have nothing to do with the question. 3 is a dark, blurry, glittery close-up that doesn't read as bubble wrap. A new search for something like \"bubble wrap close-up\" is needed. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but none of the image candidates works. 1, 2 and 4 are British Museum bronze artefacts (Sussex loops and an axe head) that have nothing to do with the question. 3 is a dark, blurry, glittery close-up that doesn't read as bubble wrap. A new search for something like \"bubble wrap close-up\" is needed. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which pointed only to walls, with a vaguer hint about a room's look.",
+        "reason": "Text is fine; changed the image query to find a clear bubble wrap close-up.",
         "previous": {
-          "hints": [
-            "They hoped it would be a new kind of decoration.",
-            "People usually cover this part with paint or paper.",
-            "They tried to sell it as wallpaper."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "bubble wrap sheet",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -408087,7 +408124,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "tendril coiled around stick",
+        "query": "pea plant tendril",
         "note": "Close-up of a green plant tendril coiled around a stick or wire; no flowers, no labels.",
         "source_url": null,
         "file_url": null,
@@ -408121,18 +408158,44 @@
       "batch": "batch-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "The question needs an essential close-up photo of a green tendril coiled around a stick or wire, and none of the candidates shows a plant. No new search is allowed, so the media slot can't be filled. The text itself is fine. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question needs an essential close-up photo of a green tendril coiled around a stick or wire, and none of the candidates shows a plant. No new search is allowed, so the media slot can't be filled. The text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Text is fine; changed the essential image query to a common, well-photographed tendril subject.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "tendril coiled around stick",
+            "note": "Close-up of a green plant tendril coiled around a stick or wire; no flowers, no labels.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-5293",
@@ -408592,7 +408655,7 @@
     },
     {
       "id": "q-5299",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "A bat with a face like a bulldog and a voice like a rock concert.",
       "question": "The greater bulldog bat catches fish with its claws, and its calls are among the loudest of any animal. Where does it live in the wild?",
@@ -408604,7 +408667,7 @@
       ],
       "hints": [
         "It lives in the tropics, near rivers and coasts.",
-        "It shares its home with jaguars and toucans.",
+        "At night it flies low over calm water, using echoes to find fish near the surface.",
         "Its range stretches from Mexico to Argentina."
       ],
       "media": {
@@ -408650,26 +408713,34 @@
       "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"It shares its home with jaguars and toucans\") gives the answer away. Both animals live only in the Americas, so the hint rules out all three wrong options. Replace it with a vaguer hint, for example about the warm, wet habitat or the fish it shares rivers with, that doesn't point to one continent.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"It shares its home with jaguars and toucans\") gives the answer away. Both animals live only in the Americas, so the hint rules out all three wrong options. Replace it with a vaguer hint, for example about the warm, wet habitat or the fish it shares rivers with, that doesn't point to one continent.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which named the Amazon basin, with a clue about the animals it lives alongside.",
+        "reason": "Replaced hint 2, which gave the answer away with jaguars and toucans, with a hint about how it hunts that doesn't point to one continent.",
         "previous": {
           "hints": [
             "It lives in the tropics, near rivers and coasts.",
-            "It is found in the Amazon basin.",
+            "It shares its home with jaguars and toucans.",
             "Its range stretches from Mexico to Argentina."
           ]
         },
@@ -411077,7 +411148,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "owl pellet whole",
+        "query": "barn owl pellet",
         "note": "A whole, unopened grey owl pellet; not a dissected one with bones laid out, which would give the answer away.",
         "source_url": null,
         "file_url": null,
@@ -411106,23 +411177,49 @@
         "difficulty_estimate": 6,
         "notes": "Wikimedia Commons very likely has owl pellet photos, but many of them show bits of bone or are taken apart, so the note asking for a whole pellet matters."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate clearly shows a whole owl pellet, and the essential image needs one. The sheet has a ranger holding something too small to make out, two old book plates (a girl in a garden, a barn owl), a long-eared owl, and two golden eagles in flight. No new search is allowed, so the image needs a manual source, for example a Commons photo of a whole barn owl pellet. The question text itself is fine. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate clearly shows a whole owl pellet, and the essential image needs one. The sheet has a ranger holding something too small to make out, two old book plates (a girl in a garden, a barn owl), a long-eared owl, and two golden eagles in flight. No new search is allowed, so the image needs a manual source, for example a Commons photo of a whole barn owl pellet. The question text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Text is fine; changed the essential image query to target a whole barn owl pellet.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "owl pellet whole",
+            "note": "A whole, unopened grey owl pellet; not a dissected one with bones laid out, which would give the answer away.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-5331",
@@ -411144,7 +411241,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "duck foot close-up",
+        "query": "webbed duck foot",
         "note": "Close-up of a duck's or goose's webbed foot clearly showing the skin between the toes; no water or whole bird in view.",
         "source_url": null,
         "file_url": null,
@@ -411178,18 +411275,44 @@
       "batch": "batch-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows a webbed bird foot. They are two 1913 Goodyear ads, an Iron Age brooch (a photo and a drawing), a basketball and a basketball player. A new search isn't allowed in this run. The essential image needs a close-up of a duck or goose foot, for example from the search \"Anas platyrhynchos foot\" or \"webbed duck foot\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows a webbed bird foot. They are two 1913 Goodyear ads, an Iron Age brooch (a photo and a drawing), a basketball and a basketball player. A new search isn't allowed in this run. The essential image needs a close-up of a duck or goose foot, for example from the search \"Anas platyrhynchos foot\" or \"webbed duck foot\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Text is fine; changed the essential image query to find a webbed duck foot close-up.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "duck foot close-up",
+            "note": "Close-up of a duck's or goose's webbed foot clearly showing the skin between the toes; no water or whole bird in view.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-5332",
@@ -411277,7 +411400,7 @@
     },
     {
       "id": "q-5333",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "A tiny voice with a big message.",
       "question": "Listen: what animal is making this sound?",
@@ -411331,19 +411454,27 @@
         "difficulty_estimate": 1,
         "notes": "A very simple question, which suits difficulty 1, but it is not very surprising. The description is generic. amazon-animals-0 (a talking parrot) asks something different."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. Audio can't be checked here. Text is fine if the clip really is a bird.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. Audio can't be checked here. Text is fine if the clip really is a bird.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -414081,7 +414212,7 @@
     },
     {
       "id": "q-5370",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "A vegetable that gets a scary haircut once a year.",
       "question": "Carved pumpkins with glowing faces sit on doorsteps for Halloween. In which month is Halloween?",
@@ -414139,15 +414270,23 @@
       "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Approved pool question q-0665 (\"Nochebuena es a Navidad como Halloween (31 de octubre) es a…\") states Halloween's date in its question text, so a family that has seen it already knows this answer. Either drop this question or remove \"(31 de octubre)\" from q-0665. Everything else is fine, and candidate 1 works as the image.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Approved pool question q-0665 (\"Nochebuena es a Navidad como Halloween (31 de octubre) es a…\") states Halloween's date in its question text, so a family that has seen it already knows this answer. Either drop this question or remove \"(31 de octubre)\" from q-0665. Everything else is fine, and candidate 1 works as the image.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -415319,7 +415458,7 @@
     },
     {
       "id": "q-5386",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "The night-light that came with the sky, free of charge.",
       "question": "It is a giant ball of hot, glowing gas, it looks tiny because it is so far away, and a famous lullaby says it twinkles. What is it?",
@@ -415337,11 +415476,21 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "baby crib nursery night",
+        "query": "child bedroom night",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%22In_October%22_-_illustration_for_%22Baby%27s_Lullaby_Book_..._by_Charles_Stuart_Pratt%22_showing_parents_looking_in_on_a_child_asleep_in_a_bed_LCCN2017650219.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/%22In_October%22_-_illustration_for_%22Baby%27s_Lullaby_Book_..._by_Charles_Stuart_Pratt%22_showing_parents_looking_in_on_a_child_asleep_in_a_bed_LCCN2017650219.jpg/3840px-%22In_October%22_-_illustration_for_%22Baby%27s_Lullaby_Book_..._by_Charles_Stuart_Pratt%22_showing_parents_looking_in_on_a_child_asleep_in_a_bed_LCCN2017650219.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "L. Prang & Co., publisher; L. Prang & Co., copyright claimant; Taylor, William Ladd, 1854-1926, artist; Pratt, Charles Stuart, 1854-1921.; Chadwick, G. W. (George Whitefield), 1854-1931.",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-old-100-1923",
+          "PD-old-100-expired"
+        ]
       },
       "fun_fact": "The tune of “Twinkle, Twinkle, Little Star” is the same one used for the alphabet song.",
       "subcategory": "childrens-songs",
@@ -415366,23 +415515,47 @@
         "difficulty_estimate": 1,
         "notes": "\"A giant ball of hot, glowing gas\" also fits the Sun, but since the Sun is a star, this is acceptable. The question is a bit long for reading aloud."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question text is fine, but none of the media candidates fits: they are a 1948 mattress ad page, a hospital diet kitchen, a Sunbonnet Babies illustration, orangutans, an 1899 nursery-garden engraving and a handwritten letter. A new search isn't allowed here, so the slot needs a new decorative search, for example \"night sky over trees\" or \"child bedroom night\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text is fine, but none of the media candidates fits: they are a 1948 mattress ad page, a hospital diet kitchen, a Sunbonnet Babies illustration, orangutans, an 1899 nursery-garden engraving and a handwritten letter. A new search isn't allowed here, so the slot needs a new decorative search, for example \"night sky over trees\" or \"child bedroom night\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Gave the decorative image a new search for a child's bedroom at night, which shows no stars or Moon.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "baby crib nursery night",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-5387",
@@ -415935,7 +416108,7 @@
     },
     {
       "id": "q-5394",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Some instruments have a heart of gold; these ones have bars of something else.",
       "question": "A metallophone is played by striking bars made of metal. Which of these is NOT a metallophone?",
@@ -415953,11 +416126,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "percussion mallets closeup",
+        "query": "timpani drums orchestra",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABurgwindheim_Pauken-20180909-RM-150632.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Burgwindheim_Pauken-20180909-RM-150632.jpg/3840px-Burgwindheim_Pauken-20180909-RM-150632.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Reinhold Möller Ermell · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Reinhold Möller Ermell",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ermell",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The celesta looks like a small piano, but its keys make little hammers strike metal plates; it plays the famous “Dance of the Sugar Plum Fairy”.",
       "subcategory": "childrens-songs",
@@ -415986,19 +416166,43 @@
       "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates fits: #1 shows people hitting old computer parts with mallets, #2 is an ancient Chinese bronze bell with a tiger on top, and #3 is the Commons logo mosaic. No new search is allowed. The slot needs a new search, e.g. \"glockenspiel mallets closeup\" or \"vibraphone bars\", for a metal-bar instrument that isn't the xylophone. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits: #1 shows people hitting old computer parts with mallets, #2 is an ancient Chinese bronze bell with a tiger on top, and #3 is the Commons logo mosaic. No new search is allowed. The slot needs a new search, e.g. \"glockenspiel mallets closeup\" or \"vibraphone bars\", for a metal-bar instrument that isn't the xylophone. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Gave the image a new search for timpani, a percussion instrument that isn't one of the options, so the picture neither shows nor rules out any choice.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "percussion mallets closeup",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-5395",
@@ -417587,7 +417791,7 @@
     },
     {
       "id": "q-5416",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "An invisible belt that Earth wears and never takes off.",
       "question": "Which of these countries does the equator NOT pass through?",
@@ -417599,7 +417803,7 @@
       ],
       "hints": [
         "The equator runs around the middle of the Earth.",
-        "Three of these countries are in South America or Africa.",
+        "The equator runs through huge rainforests, like the Amazon.",
         "The odd one out is very far north and has cold winters."
       ],
       "media": {
@@ -417645,26 +417849,34 @@
       "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Three of these countries are in South America or Africa\") gives the answer away: anyone who knows Canada is in North America is left with only Canada, so it is as strong as hint 3. Replace it with a vague hint, for example that the equator crosses two continents' rainforests, or that it passes through only 13 countries.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Three of these countries are in South America or Africa\") gives the answer away: anyone who knows Canada is in North America is left with only Canada, so it is as strong as hint 3. Replace it with a vague hint, for example that the equator crosses two continents' rainforests, or that it passes through only 13 countries.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which talked about climate, gave the answer away and wasn't fully true.",
+        "reason": "Replaced hint 2, which gave the answer away, with a vaguer hint about the rainforests the equator crosses.",
         "previous": {
           "hints": [
             "The equator runs around the middle of the Earth.",
-            "Countries on the equator are warm all year.",
+            "Three of these countries are in South America or Africa.",
             "The odd one out is very far north and has cold winters."
           ]
         },
@@ -417897,9 +418109,9 @@
     },
     {
       "id": "q-5420",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
-      "description": "Some players just wear a cap; this one shows up dressed like a hockey goalie.",
+      "description": "Baseball: the only sport where stealing is allowed and nobody calls the police.",
       "question": "This baseball player crouches behind home plate in a mask and signals to the pitcher. Which position?",
       "answer": "Catcher",
       "wrong_answers": [
@@ -417917,14 +418129,14 @@
         "role": "decorative",
         "query": "baseball stadium",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHiroshima_Municipal_Baseball_Stadium_2009.JPG",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Hiroshima_Municipal_Baseball_Stadium_2009.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Taisyo · CC BY-SA 3.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADaejeon_Hanbat_Baseball_Stadium_Summer_2023.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Daejeon_Hanbat_Baseball_Stadium_Summer_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Pmlydon · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
-        "author": "Taisyo",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Taisyo",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Pmlydon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pmlydon",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -417955,15 +418167,23 @@
       "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description gives the answer away. \"Dressed like a hockey goalie\" names the catcher's defining trait, the heavy protective gear, so with only the four options shown, anyone picks Catcher before hearing the question. Rewrite it to play on baseball in general (crouching, the pitcher's secret signals as a joke) without describing the gear.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description gives the answer away. \"Dressed like a hockey goalie\" names the catcher's defining trait, the heavy protective gear, so with only the four options shown, anyone picks Catcher before hearing the question. Rewrite it to play on baseball in general (crouching, the pitcher's secret signals as a joke) without describing the gear.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -417971,16 +418191,9 @@
       "difficulty_original": 8,
       "revision": {
         "action": "revise",
-        "reason": "Removed the Salinger clue and the hint built on it, rewrote the description so it doesn't mention crouching, and lowered the difficulty a little.",
+        "reason": "Rewrote the description so it jokes about baseball in general and no longer points to the catcher's protective gear.",
         "previous": {
-          "difficulty": 8,
-          "description": "Squatting for three hours: the yoga class nobody signed up for.",
-          "question": "This baseball player crouches behind home plate in a mask, signals to the pitcher, and gave a famous J. D. Salinger novel its title. Which position?",
-          "hints": [
-            "He wears the biggest, roundest glove on the field.",
-            "He receives almost every pitch.",
-            "In the novel's title, he is “in the Rye”."
-          ]
+          "description": "Some players just wear a cap; this one shows up dressed like a hockey goalie."
         },
         "revised_on": "2026-10-23"
       }
@@ -422576,7 +422789,7 @@
     },
     {
       "id": "q-5481",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "He lost his toad, his memory ball and his password list, but never his courage.",
       "question": "Neville Longbottom was part of three of these groups at some point. Which one was he never part of?",
@@ -422607,7 +422820,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "In the book epilogue, Neville has become a teacher at Hogwarts, and J.K. Rowling said he teaches Herbology.",
+      "fun_fact": "J.K. Rowling has said that the grown-up Neville became the Herbology teacher at Hogwarts.",
       "subcategory": "fantasy",
       "style": null,
       "concept": "Neville Longbottom",
@@ -422630,32 +422843,36 @@
         "difficulty_estimate": 8,
         "notes": "Ruling out 'Hogwarts teachers' means knowing about the epilogue and Rowling's interview, which is beyond a difficulty-6 kid. The Herbology detail comes from Rowling's interviews, not the epilogue text, and the fun fact words this loosely. The 'language' lens tag doesn't fit."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: wrong. The fun fact is false: Neville does not appear in the book's \"Nineteen Years Later\" epilogue. His job as Herbology teacher comes from Rowling's interviews and extra material. The answer and wrong answers are fine.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: wrong. The fun fact is false: Neville does not appear in the book's \"Nineteen Years Later\" epilogue. His job as Herbology teacher comes from Rowling's interviews and extra material. The answer and wrong answers are fine.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hints 1 and 2 so they no longer point straight to flying, and moved the broom accident to hint 3.",
+        "reason": "Corrected the fun fact: Neville's job as a Herbology teacher comes from Rowling's later statements, not from the book's epilogue.",
         "previous": {
-          "hints": [
-            "Think about his flying skills.",
-            "In his very first flying lesson, he fell off his broom and broke his wrist.",
-            "He was much better with plants than with brooms."
-          ]
+          "fun_fact": "In the book epilogue, Neville has become a teacher at Hogwarts, and J.K. Rowling said he teaches Herbology."
         },
         "revised_on": "2026-10-23"
       }
@@ -422824,7 +423041,7 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "voxel block landscape",
+        "query": "voxel art landscape",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -422858,23 +423075,41 @@
       "batch": "batch-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the image candidates fits the Minecraft topic: they show a volcanic slope, an old sepia landscape drawing, Hong Kong housing estates, a city view of Tabriz and pine trees. No new search is allowed. The slot needs a decorative image of a block-built or voxel world, for example a search for \"LEGO brick landscape\" or \"voxel art\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates fits the Minecraft topic: they show a volcanic slope, an old sepia landscape drawing, Hong Kong housing estates, a city view of Tabriz and pine trees. No new search is allowed. The slot needs a decorative image of a block-built or voxel world, for example a search for \"LEGO brick landscape\" or \"voxel art\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Cut the scenario sentence and asked the question directly, as the reviewer asked.",
+        "reason": "Gave the decorative image a new search for a voxel-art landscape that matches Minecraft's block-built world.",
         "previous": {
-          "question": "You're playing Minecraft and want to fight the Ender Dragon. Which of these is NOT a Minecraft dimension?"
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "voxel block landscape",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -422899,7 +423134,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "white stone city walls",
+        "query": "white walled hill city",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -422928,28 +423163,46 @@
         "difficulty_estimate": 10,
         "notes": "Hint 3 (Peregrin Took) all but gives the name away, which hint 3 is allowed to do. q-3094 has Pippin as its answer too, but asks a different fact."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "The text is correct and fair: Pippin swore service to Denethor and wore the black-and-silver uniform of the Guard of the Citadel, and the hints and fun fact check out. The problem is the picture. None of the candidates suggests Minas Tirith or a white walled city, and no new search is allowed. Find a better illustrative image, for example \"white walled hill city\" or \"medieval citadel walls\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is correct and fair: Pippin swore service to Denethor and wore the black-and-silver uniform of the Guard of the Citadel, and the hints and fun fact check out. The problem is the picture. None of the candidates suggests Minas Tirith or a white walled city, and no new search is allowed. Find a better illustrative image, for example \"white walled hill city\" or \"medieval citadel walls\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer names the soldier and White City trait, and it now fits all four hobbits.",
+        "reason": "Gave the illustrative image a new search for a white walled city on a hill that suggests Minas Tirith.",
         "previous": {
-          "description": "A small soldier in a very big white city."
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "white stone city walls",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -427032,20 +427285,20 @@
     },
     {
       "id": "q-5539",
-      "status": "needs_work",
-      "difficulty": 5,
+      "status": "approved",
+      "difficulty": 12,
       "description": "She never sends a bill, but people still thank her for every meal.",
-      "question": "In the Andes, people pour a little drink on the ground for her, thank her for good harvests and call her Pachamama. Who is she?",
-      "answer": "Mother Earth",
+      "question": "In the Andes, people pour a little drink on the ground to thank Mother Earth for good harvests. What do they call her?",
+      "answer": "Pachamama",
       "wrong_answers": [
-        "The Moon",
-        "The Sun",
-        "The Rain"
+        "Inti",
+        "Mama Quilla",
+        "Viracocha"
       ],
       "hints": [
-        "Farmers in the Andes count on her every season.",
-        "She is right under your feet.",
-        "Plants grow out of her."
+        "Her name comes from Quechua, the language of the Inca.",
+        "Many Andean festivals for her are held in August, before planting begins.",
+        "Her name ends in “mama”, and she is not the Moon."
       ],
       "media": {
         "type": "image",
@@ -427090,32 +427343,49 @@
       "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“She is right under your feet”) gives the answer away: of Moon, Sun, Rain and Mother Earth, only the Earth is under your feet. The question also names “Pachamama”, which literally means “Mother Earth/World” (pacha = earth/world, mama = mother). That breaks the clue-translation rule: “mama” points straight to “Mother”, especially in Spanish (“Madre Tierra”). The question needs reworking, for example asking which Andean name belongs to Mother Earth, with other Andean deities such as Inti or Mama Quilla as wrong answers, and hint 2 needs replacing.",
-        "problems": [
-          "giveaway",
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“She is right under your feet”) gives the answer away: of Moon, Sun, Rain and Mother Earth, only the Earth is under your feet. The question also names “Pachamama”, which literally means “Mother Earth/World” (pacha = earth/world, mama = mother). That breaks the clue-translation rule: “mama” points straight to “Mother”, especially in Spanish (“Madre Tierra”). The question needs reworking, for example asking which Andean name belongs to Mother Earth, with other Andean deities such as Inti or Mama Quilla as wrong answers, and hint 2 needs replacing.",
+          "problems": [
+            "giveaway",
+            "style"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which pointed at “mama” in the name and gave away the only “mother” option.",
+        "reason": "The question no longer names Pachamama as a clue to “Mother Earth”: it now asks for her Andean name, with other Andean gods as wrong answers, new hints and a new difficulty.",
         "previous": {
+          "difficulty": 5,
+          "question": "In the Andes, people pour a little drink on the ground for her, thank her for good harvests and call her Pachamama. Who is she?",
+          "answer": "Mother Earth",
+          "wrong_answers": [
+            "The Moon",
+            "The Sun",
+            "The Rain"
+          ],
           "hints": [
-            "The word “mama” in her name is a clue.",
+            "Farmers in the Andes count on her every season.",
             "She is right under your feet.",
             "Plants grow out of her."
           ]
         },
         "revised_on": "2026-10-23"
-      }
+      },
+      "difficulty_original": 5
     },
     {
       "id": "q-5540",
@@ -427673,7 +427943,7 @@
       "status": "needs_work",
       "difficulty": 5,
       "description": "The video is thinking very hard, and so are you.",
-      "question": "Your video freezes and a spinning circle like this one appears while it loads the next part. What is that called?",
+      "question": "Your video freezes and a spinning circle appears while it loads the next part. What is that called?",
       "answer": "Buffering",
       "wrong_answers": [
         "Uploading",
@@ -427687,9 +427957,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "throbber",
-        "note": "A plain spinning loading circle (throbber) icon, with no text or words on it.",
+        "role": "illustrative",
+        "query": "person watching laptop",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -427717,23 +427987,51 @@
         "difficulty_estimate": 6,
         "notes": "Hint 3 contains “buffer”, which is almost the answer word itself. A plain throbber icon is likely on Commons, so the essential image is fine. The question is a vocabulary test, so it is only moderately fun."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates works, and no new search is allowed. Candidate 1 is explicit nudity and must never be used anywhere. Candidates 2–4 are a skyscraper and a public art installation that happen to be called \"Throbber\". This essential slot needs a plain loading-spinner icon, so search again by hand with a term like \"loading spinner icon\" or \"loading animation gif\" on Commons. The question text itself is fine. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates works, and no new search is allowed. Candidate 1 is explicit nudity and must never be used anywhere. Candidates 2–4 are a skyscraper and a public art installation that happen to be called \"Throbber\". This essential slot needs a plain loading-spinner icon, so search again by hand with a term like \"loading spinner icon\" or \"loading animation gif\" on Commons. The question text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No spinner image was found, so “like this one” is gone and the media is now an illustrative photo of someone watching a video.",
+        "previous": {
+          "question": "Your video freezes and a spinning circle like this one appears while it loads the next part. What is that called?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "throbber",
+            "note": "A plain spinning loading circle (throbber) icon, with no text or words on it.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-5548",
@@ -429415,7 +429713,7 @@
     },
     {
       "id": "q-5570",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "You've pressed these keys thousands of times, but have you ever counted them?",
       "question": "You're typing on a classic QWERTY keyboard. How many letter keys are in the top row, the one that starts with Q?",
@@ -429433,20 +429731,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "office desk with coffee mug",
+        "query": "coffee mug desk lamp",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AOffice_desk_with_papers_-_DPLA_-_bacc10bd7825152341818a63e9628905.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Office_desk_with_papers_-_DPLA_-_bacc10bd7825152341818a63e9628905.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "David E. Lucas · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoffee_while_working.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Coffee_while_working.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Shanazar Nizamaddinov · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "David E. Lucas",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Shanazar Nizamaddinov",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Shanazar_Nizamaddinov&action=edit&redlink=1",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "The QWERTY layout was designed in the 1870s for typewriters, long before computers existed.",
       "subcategory": "language",
@@ -429475,19 +429771,52 @@
       "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query so a picture with a suitable licence gets picked; everything else is unchanged.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "office desk with coffee mug",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AOffice_desk_with_papers_-_DPLA_-_bacc10bd7825152341818a63e9628905.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Office_desk_with_papers_-_DPLA_-_bacc10bd7825152341818a63e9628905.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "David E. Lucas · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "David E. Lucas",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-5571",
@@ -430199,7 +430528,7 @@
     },
     {
       "id": "q-5580",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Elementary, my dear players: this one needs a map, not a magnifying glass.",
       "question": "This detective plays the violin, wears a deerstalker hat and lives at 221B Baker Street. In which city?",
@@ -430211,7 +430540,7 @@
       ],
       "hints": [
         "The city sits on a river and is famous for its foggy streets.",
-        "Big Ben is in the same city.",
+        "Its red double-decker buses are famous all over the world.",
         "It is the capital of the United Kingdom."
       ],
       "media": {
@@ -430257,19 +430586,39 @@
       "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Big Ben is in the same city\") gives the answer away: nearly every player links Big Ben straight to London, so it's as strong as hint 3. Replace it with a mid-strength clue that doesn't name a London landmark, such as one about the city's red double-decker buses being world-famous, or hint at the river without naming it.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Big Ben is in the same city\") gives the answer away: nearly every player links Big Ben straight to London, so it's as strong as hint 3. Replace it with a mid-strength clue that doesn't name a London landmark, such as one about the city's red double-decker buses being world-famous, or hint at the river without naming it.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 2 (Big Ben) with a mid-strength clue about the red double-decker buses.",
+        "previous": {
+          "hints": [
+            "The city sits on a river and is famous for its foggy streets.",
+            "Big Ben is in the same city.",
+            "It is the capital of the United Kingdom."
+          ]
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-5581",
@@ -431580,7 +431929,7 @@
     },
     {
       "id": "q-5598",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "A party where the guests of honor are your great-great-grandparents.",
       "question": "Which of these is NOT a tradition of Mexico's Day of the Dead?",
@@ -431598,11 +431947,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "cempasuchil marigold field",
+        "query": "Tagetes erecta flowers",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATagetes_erecta_26122014_%283%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Tagetes_erecta_26122014_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Joydeep · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Joydeep",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Joydeep",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Bread of the dead, or “pan de muerto”, is a sweet round bread decorated with dough shaped like bones.",
       "subcategory": "mexican-food",
@@ -431627,23 +431983,47 @@
         "difficulty_estimate": 4,
         "notes": "The illustrative image shows papel picado, one of the wrong options, which helps players rule it out. Halloween is also spreading in Mexico itself, though carved pumpkins are still clearly not a Day of the Dead tradition."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "All six media candidates are Calendula arvensis (field marigold), a small wild yellow daisy photographed in Europe, not the cempasúchil (Tagetes erecta) used on Day of the Dead altars, and no search is left. The slot needs a new image, e.g. \"Tagetes erecta field\" or \"Day of the Dead altar\", that shows no carved pumpkin and no option. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "All six media candidates are Calendula arvensis (field marigold), a small wild yellow daisy photographed in Europe, not the cempasúchil (Tagetes erecta) used on Day of the Dead altars, and no search is left. The slot needs a new image, e.g. \"Tagetes erecta field\" or \"Day of the Dead altar\", that shows no carved pumpkin and no option. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query to the real cempasúchil flower (Tagetes erecta), which shows no option.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "cempasuchil marigold field",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-5599",
@@ -439831,9 +440211,9 @@
     },
     {
       "id": "q-5704",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
-      "description": "A science that studies you, your family and your neighbors, preferably all at once.",
+      "description": "Gluing a Latin word to a Greek one: the scholar's version of putting pineapple on pizza.",
       "question": "French thinker Auguste Comte named this science in the 1830s, mixing a Latin and a Greek word. What is it?",
       "answer": "Sociology",
       "wrong_answers": [
@@ -439896,28 +440276,32 @@
       "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description, \"a science that studies you, your family and your neighbors, preferably all at once\", says the answer studies people in groups, which is what defines sociology. Read with just the four options, it rules out psychology (one person) and economics. Rewrite it to play on the theme without naming that trait, for example a joke about naming things or about Latin and Greek.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description, \"a science that studies you, your family and your neighbors, preferably all at once\", says the answer studies people in groups, which is what defines sociology. Read with just the four options, it rules out psychology (one person) and economics. Rewrite it to play on the theme without naming that trait, for example a joke about naming things or about Latin and Greek.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which said “social physics”, with a vague clue that doesn't use the word “social”.",
+        "reason": "Rewrote the description so it jokes about mixing Latin and Greek instead of saying that the science studies people in groups.",
         "previous": {
-          "hints": [
-            "Comte first called it “social physics”.",
-            "It looks at things like families, cities, classes and religions.",
-            "The Latin part of the name means “companion” or “ally”."
-          ]
+          "description": "A science that studies you, your family and your neighbors, preferably all at once."
         },
         "revised_on": "2026-10-23"
       }
@@ -443641,9 +444025,9 @@
     {
       "id": "q-5754",
       "status": "needs_work",
-      "difficulty": 3,
-      "description": "Small, shy, and full of very big plans.",
-      "question": "I grow in a pod and can be black, red or white. In a fairy tale, a boy swaps his cow for some magic ones like me. What am I?",
+      "difficulty": 4,
+      "description": "The shy little seed behind your breakfast drink and your favorite dessert.",
+      "question": "I grow in a pod and can be black, red or white. Chocolate and coffee are made from seeds that share my name. What am I?",
       "answer": "Beans",
       "wrong_answers": [
         "Peas",
@@ -443652,22 +444036,22 @@
       ],
       "hints": [
         "Mexican cooks use me in many dishes.",
-        "In the story, a giant lives at the top of the plant that grows from me.",
-        "The boy in the story is called Jack."
+        "A small, chewy, colorful candy also carries my name.",
+        "You can buy me baked in tomato sauce in a can."
       ],
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "cow in green meadow",
+        "query": "hot chocolate mug",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMeadow_at_the_end_of_Appenzellerweg_in_Z%C3%BCrich.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Meadow_at_the_end_of_Appenzellerweg_in_Z%C3%BCrich.jpg/3840px-Meadow_at_the_end_of_Appenzellerweg_in_Z%C3%BCrich.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Balise42 · CC BY 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHot_cocoa_in_a_mug_with_a_hand_sprinkling_chili_pepper_flakes_onto_the_whipped_cream_%2815852162626%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Hot_cocoa_in_a_mug_with_a_hand_sprinkling_chili_pepper_flakes_onto_the_whipped_cream_%2815852162626%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Personal Creations · CC BY 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY 4.0",
-        "license_url": "https://creativecommons.org/licenses/by/4.0",
-        "author": "Balise42",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Balise42",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Personal Creations",
+        "author_url": "https://www.flickr.com/people/127294011@N07",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -443699,18 +444083,60 @@
       "batch": "batch-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "This question overlaps with approved q-4038, which asks for Jack's beanstalk from the same fairy tale. Its central clue (Jack trades his cow for magic beans, and a giant lives at the top of the plant) is the same Jack and the Beanstalk fact, so seeing one question gives away the other. Without the fairy tale, \"grows in a pod, black, red or white\" also fits lentils and peas.",
+        "feedback": "This base question depends on English words. Its main clue (cocoa and coffee \"beans\" share the answer's name) and hint 2 (\"jelly beans\") don't carry over to Spanish, where you'd say \"granos de café/cacao\", \"frijoles\" and \"gomitas\". Without them, a pod-grown seed that can be black, red or white could also be peas or lentils. Rebuild it around a clue that works in every language, such as the Mesoamerican origin of black or pinto beans, or retire it.",
         "problems": [
-          "overlap"
+          "style"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This question overlaps with approved q-4038, which asks for Jack's beanstalk from the same fairy tale. Its central clue (Jack trades his cow for magic beans, and a giant lives at the top of the plant) is the same Jack and the Beanstalk fact, so seeing one question gives away the other. Without the fairy tale, \"grows in a pod, black, red or white\" also fits lentils and peas.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "difficulty_original": 3,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced the Jack and the Beanstalk clue (overlaps q-4038) with the fact that chocolate and coffee come from seeds called beans, and updated the description, hints, media and difficulty to match.",
+        "previous": {
+          "difficulty": 3,
+          "description": "Small, shy, and full of very big plans.",
+          "question": "I grow in a pod and can be black, red or white. In a fairy tale, a boy swaps his cow for some magic ones like me. What am I?",
+          "hints": [
+            "Mexican cooks use me in many dishes.",
+            "In the story, a giant lives at the top of the plant that grows from me.",
+            "The boy in the story is called Jack."
+          ],
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "cow in green meadow",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AMeadow_at_the_end_of_Appenzellerweg_in_Z%C3%BCrich.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Meadow_at_the_end_of_Appenzellerweg_in_Z%C3%BCrich.jpg/3840px-Meadow_at_the_end_of_Appenzellerweg_in_Z%C3%BCrich.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Balise42 · CC BY 4.0 · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY 4.0",
+            "license_url": "https://creativecommons.org/licenses/by/4.0",
+            "author": "Balise42",
+            "author_url": "https://commons.wikimedia.org/wiki/User:Balise42",
+            "restrictions": [],
+            "pd_reasons": []
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-5755",
@@ -445115,7 +445541,7 @@
     },
     {
       "id": "q-5773",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Half duck, half beaver, and fully confusing to scientists.",
       "question": "Look at this egg-laying animal. The mother has no nipples. How does she feed her babies?",
@@ -445127,7 +445553,7 @@
       ],
       "hints": [
         "Her babies stay snuggled against her belly after they hatch.",
-        "Even though it lays eggs, this animal is a mammal.",
+        "The babies lick their food straight off her fur.",
         "It comes out of her skin a bit like sweat."
       ],
       "media": {
@@ -445173,26 +445599,34 @@
       "needs_media": true,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“Even though it lays eggs, this animal is a mammal.”) gives the answer away: feeding young with milk is what makes an animal a mammal, and only one option involves milk. Replace hint 2 with a vaguer clue, for example that the babies lick their food off the mother's fur, without saying “mammal”.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“Even though it lays eggs, this animal is a mammal.”) gives the answer away: feeding young with milk is what makes an animal a mammal, and only one option involves milk. Replace hint 2 with a vaguer clue, for example that the babies lick their food off the mother's fur, without saying “mammal”.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave the answer away, with a hint that narrows things down less directly.",
+        "reason": "Replaced hint 2, which gave the answer away by saying \"mammal\", with a vaguer clue about the babies licking food off her fur.",
         "previous": {
           "hints": [
             "Her babies stay snuggled against her belly after they hatch.",
-            "The babies lick their food from her belly fur.",
+            "Even though it lays eggs, this animal is a mammal.",
             "It comes out of her skin a bit like sweat."
           ]
         },
@@ -446133,9 +446567,9 @@
     },
     {
       "id": "q-5786",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
-      "description": "That sleepy, after-lunch time when grown-ups secretly dream of a nap on the sofa.",
+      "description": "A part of the day that every clock knows by heart, even the broken ones.",
       "question": "Which part of the day comes right after the morning and before the evening?",
       "answer": "The afternoon",
       "wrong_answers": [
@@ -446191,24 +446625,32 @@
       "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description calls it the “after-lunch time”, which is exactly the answer's defining trait. With only the four options showing, it rules out midnight, the night and sunrise. Rewrite it so it plays on the theme of the day's routine without saying when the afternoon happens.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description calls it the “after-lunch time”, which is exactly the answer's defining trait. With only the four options showing, it rules out midnight, the night and sunrise. Rewrite it so it plays on the theme of the day's routine without saying when the afternoon happens.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description, which described noon instead of the afternoon.",
+        "reason": "Rewrote the description so it no longer says \"after lunch\", which ruled out the wrong options.",
         "previous": {
-          "description": "The moment the sun is at its highest and lunch is on everyone's mind."
+          "description": "That sleepy, after-lunch time when grown-ups secretly dream of a nap on the sofa."
         },
         "revised_on": "2026-10-23"
       }
@@ -447430,10 +447872,10 @@
     },
     {
       "id": "q-5803",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "So loud that the band itself couldn't hear the band.",
-      "question": "Listen: in 1963, the press named a craze of screaming fans like these after a British band. Which band?",
+      "question": "In 1963, the press named a craze of screaming fans after a British band. Which band?",
       "answer": "The Beatles",
       "wrong_answers": [
         "The Rolling Stones",
@@ -447446,13 +447888,20 @@
         "John, Paul, George and Ringo."
       ],
       "media": {
-        "type": "audio",
-        "role": "essential",
-        "query": "screaming crowd concert",
-        "note": "A large crowd of fans screaming loudly, no music.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "type": "image",
+        "role": "decorative",
+        "query": "concert crowd cheering",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACheering_concertgoers_%28Unsplash%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Cheering_concertgoers_%28Unsplash%29.jpg/3840px-Cheering_concertgoers_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Ezra Jeffrey emcomeau · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Ezra Jeffrey emcomeau",
+        "author_url": "https://unsplash.com/@emcomeau",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The Beatles stopped touring in 1966, partly because the screaming meant they couldn't hear themselves play.",
       "subcategory": "rock",
@@ -447478,33 +447927,60 @@
         "notes": "The screaming crowd isn't really essential: any crowd sound works and the clue is in the text, so the media is more decorative. The Beatles are also the default guess for “a British band in 1963”."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The essential audio slot (screaming fans, no music) has no candidates, and no new search is allowed. The question begins with “Listen:”, so it can't be played without the sound. Either find a crowd-screaming recording on Freesound, or rewrite it as an image question without “Listen:”. The text itself is fine. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential audio slot (screaming fans, no music) has no candidates, and no new search is allowed. The question begins with “Listen:”, so it can't be played without the sound. Either find a crowd-screaming recording on Freesound, or rewrite it as an image question without “Listen:”. The text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": {
-        "query": "1960s concert hall",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AStockholm_Concert_Hall_and_H%C3%B6torget.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Stockholm_Concert_Hall_and_H%C3%B6torget.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Andy Eick · CC BY 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "Andy Eick",
-        "author_url": "https://www.flickr.com/photos/19429588@N00",
-        "restrictions": [],
-        "pd_reasons": []
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The crowd recording is missing, so this is now a text question with a decorative image, and \"Listen:\" and \"like these\" are gone.",
+        "previous": {
+          "question": "Listen: in 1963, the press named a craze of screaming fans like these after a British band. Which band?",
+          "media": {
+            "type": "audio",
+            "role": "essential",
+            "query": "screaming crowd concert",
+            "note": "A large crowd of fans screaming loudly, no music.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true,
+          "background": {
+            "query": "1960s concert hall",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AStockholm_Concert_Hall_and_H%C3%B6torget.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Stockholm_Concert_Hall_and_H%C3%B6torget.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Andy Eick · CC BY 2.0 · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0",
+            "author": "Andy Eick",
+            "author_url": "https://www.flickr.com/photos/19429588@N00",
+            "restrictions": [],
+            "pd_reasons": []
+          }
+        },
+        "revised_on": "2026-10-23"
       }
     },
     {
@@ -452562,7 +453038,7 @@
     },
     {
       "id": "q-5871",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Like a pizza that gets cut into slices before anyone can spend them.",
       "question": "Banknotes aren't printed one at a time. Dozens are printed together on one big flat piece, then cut apart. What is that piece called?",
@@ -452580,16 +453056,16 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "stack of banknotes",
+        "query": "pile of banknotes",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AStack_of_360_banknotes_of_50%27000_kips_%28Laos%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Stack_of_360_banknotes_of_50%27000_kips_%28Laos%29.jpg/3840px-Stack_of_360_banknotes_of_50%27000_kips_%28Laos%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Basile Morin · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APile_of_SLE_banknotes.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Pile_of_SLE_banknotes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Ivanh1 · CC0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Basile Morin",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Basile_Morin",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Ivanh1",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ivanh1&action=edit&redlink=1",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -452620,35 +453096,54 @@
       "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-no-reason: public domain without a template).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-no-reason: public domain without a template).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the bed-sheet wordplay in hint 2 with a notebook clue that works in every language.",
+        "reason": "The chosen picture had an unsuitable licence, so the media is reset for a new illustrative banknote image; the text is unchanged.",
         "previous": {
-          "hints": [
-            "It's thin and flat, not rolled up.",
-            "You can also find one on a bed.",
-            "A home printer takes paper one of these at a time."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "stack of banknotes",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AStack_of_360_banknotes_of_50%27000_kips_%28Laos%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Stack_of_360_banknotes_of_50%27000_kips_%28Laos%29.jpg/3840px-Stack_of_360_banknotes_of_50%27000_kips_%28Laos%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Basile Morin · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Basile Morin",
+            "author_url": "https://commons.wikimedia.org/wiki/User:Basile_Morin",
+            "restrictions": [],
+            "pd_reasons": []
+          }
         },
         "revised_on": "2026-10-23"
       }
     },
     {
       "id": "q-5872",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "Money with a very short career and a very colorful wardrobe.",
       "question": "Look at this money. Who is it made for?",
@@ -452666,11 +453161,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "play money banknotes",
+        "query": "Monopoly money",
         "note": "A clear photo of colorful toy play money banknotes, clearly not real currency.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMonopoly_money.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Monopoly_money.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "James Petts from London, England · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "James Petts from London, England",
+        "author_url": "https://www.flickr.com/people/14730981@N08",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "In many countries, the law says copies of money must look clearly different from real notes, for example in size.",
       "subcategory": "banknotes",
@@ -452699,19 +453201,43 @@
       "needs_media": true,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows toy play money: #1 shows real-looking euro notes on a clothesline, #2 is historical card money from a museum, and #3–6 are unrelated (a Buddhist procession and Soviet stamps). The question depends entirely on an essential photo of clearly fake, colorful play money, and no new search is allowed. Find such a photo (for example \"Monopoly money\" or \"toy money board game\") before this question can go in. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows toy play money: #1 shows real-looking euro notes on a clothesline, #2 is historical card money from a museum, and #3–6 are unrelated (a Buddhist procession and Soviet stamps). The question depends entirely on an essential photo of clearly fake, colorful play money, and no new search is allowed. Find such a photo (for example \"Monopoly money\" or \"toy money board game\") before this question can go in. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The essential photo search found no play money, so I changed the media query to the reviewer's suggestion, which should return clearly fake banknotes on Commons.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "play money banknotes",
+            "note": "A clear photo of colorful toy play money banknotes, clearly not real currency.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-5873",
@@ -456554,7 +457080,7 @@
       "media": {
         "type": "audio",
         "role": "essential",
-        "query": "foot stomp hand clap",
+        "query": "stomp stomp clap rhythm",
         "note": "The rhythm stomp, stomp, clap, repeated a few times, without any music or singing.",
         "source_url": null,
         "file_url": null,
@@ -456588,14 +457114,24 @@
       "batch": "batch-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "The essential audio slot has no candidates, and no new search is allowed. The question needs a clean stomp-stomp-clap recording with no music, for example from Freesound (\"stomp stomp clap rhythm\" or \"body percussion stomp clap\"). Otherwise it can't be played. The text itself is fine. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential audio slot has no candidates, and no new search is allowed. The question needs a clean stomp-stomp-clap recording with no music, for example from Freesound (\"stomp stomp clap rhythm\" or \"body percussion stomp clap\"). Otherwise it can't be played. The text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -456611,6 +457147,22 @@
         "author_url": "https://www.flickr.com/people/72060323@N02",
         "restrictions": [],
         "pd_reasons": []
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "The essential audio search found nothing, so I changed the query to a stomp-stomp-clap term that Freesound is likely to have; the text stays the same.",
+        "previous": {
+          "media": {
+            "type": "audio",
+            "role": "essential",
+            "query": "foot stomp hand clap",
+            "note": "The rhythm stomp, stomp, clap, repeated a few times, without any music or singing.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
       }
     },
     {
@@ -456687,10 +457239,10 @@
     },
     {
       "id": "q-5925",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Free neck exercises included with every ticket.",
-      "question": "Shaking your head hard to the beat, like these fans, is called headbanging. Fans of which music made it famous?",
+      "question": "Shaking your head hard to the beat is called headbanging. Fans of which music made it famous?",
       "answer": "Heavy metal",
       "wrong_answers": [
         "Reggae",
@@ -456704,12 +457256,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "headbanging crowd metal festival",
-        "note": "Close-up of concert fans swinging their long hair in motion; no band name visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "concert crowd stage lights",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeach-Please-2022-crowd-stage-lights-night-performance.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Beach-Please-2022-crowd-stage-lights-night-performance.jpg/3840px-Beach-Please-2022-crowd-stage-lights-night-performance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "PinkBeachPlanet · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PinkBeachPlanet",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:PinkBeachPlanet&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Doctors have warned that very hard headbanging for a long time can strain the neck.",
       "subcategory": "rock",
@@ -456734,23 +457293,49 @@
         "difficulty_estimate": 5,
         "notes": "Clear, and a good image is very likely available. Candidate q-2739 (Klopp) also has heavy metal as its answer, but it asks a different fact."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows what the essential slot needs: fans swinging their hair in motion. All six are wide crowd shots or raised hands, and #3 has a TUSKA sign on the stage. A new search isn't allowed, so the media needs a manual pick (e.g. \"headbanging long hair\" on Commons), or the question needs to drop \"like these fans\" and switch to an illustrative or decorative image. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows what the essential slot needs: fans swinging their hair in motion. All six are wide crowd shots or raised hands, and #3 has a TUSKA sign on the stage. A new search isn't allowed, so the media needs a manual pick (e.g. \"headbanging long hair\" on Commons), or the question needs to drop \"like these fans\" and switch to an illustrative or decorative image. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No photo showed fans swinging their hair, so I cut “like these fans” and switched to a decorative concert image that doesn't depend on that shot.",
+        "previous": {
+          "question": "Shaking your head hard to the beat, like these fans, is called headbanging. Fans of which music made it famous?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "headbanging crowd metal festival",
+            "note": "Close-up of concert fans swinging their long hair in motion; no band name visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-5926",
@@ -458144,7 +458729,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "football tactics board",
+        "query": "coach tactics board",
         "note": "Close-up of a tactics board or clipboard with a drawn field and player markers, no team names.",
         "source_url": null,
         "file_url": null,
@@ -458178,18 +458763,44 @@
       "batch": "batch-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows a tactics board. The search returned an old basketball team photo, military \"special tactics\" photos and squadron badges. A new search isn't allowed, so the essential image slot can't be filled. Next time, search for something like \"coach tactics board\" or \"sports tactics whiteboard\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a tactics board. The search returned an old basketball team photo, military \"special tactics\" photos and squadron badges. A new search isn't allowed, so the essential image slot can't be filled. Next time, search for something like \"coach tactics board\" or \"sports tactics whiteboard\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The essential image search found no tactics board, so I changed the query to the reviewer's suggested term.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "football tactics board",
+            "note": "Close-up of a tactics board or clipboard with a drawn field and player markers, no team names.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-5945",
@@ -458991,7 +459602,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "TV talk show studio",
+        "query": "Oprah Winfrey portrait",
         "note": "A clear portrait photo of Oprah Winfrey, with no caption or name visible.",
         "source_url": null,
         "file_url": null,
@@ -459025,18 +459636,44 @@
       "batch": "batch-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "The media slot is essential and needs a clear portrait of Oprah Winfrey, but the search used \"TV talk show studio\" and none of the candidates shows her. No new search is allowed. Either change the role to illustrative or decorative with a studio or couch image, or search again for \"Oprah Winfrey portrait\". No suitable picture found for this question.",
+        "feedback": "None of the media candidates shows Oprah Winfrey (two Klimt paintings, a stranger's selfie, a 1916 school photo, and Obama artwork by Gilbert Young), so the essential portrait slot can't be filled. Search again. No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot is essential and needs a clear portrait of Oprah Winfrey, but the search used \"TV talk show studio\" and none of the candidates shows her. No new search is allowed. Either change the role to illustrative or decorative with a studio or couch image, or search again for \"Oprah Winfrey portrait\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The essential portrait had been searched with a studio query, so I changed it to an Oprah Winfrey portrait, which Commons has.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "TV talk show studio",
+            "note": "A clear portrait photo of Oprah Winfrey, with no caption or name visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-5956",
@@ -461365,7 +462002,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Huygens probe replica",
+        "query": "Cassini Huygens clean room",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -461399,24 +462036,42 @@
       "batch": "batch-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "The text is fine, but no media candidate works. The only Huygens picture (#1) has a backdrop with Saturn's rings and an orange surface. That gives away hints 1 and 2 before play starts and rules out Europa and Ganymede, which are moons of Jupiter. Candidates 2–6 show other things: Luna 16, Mars 3, an Apollo 17 plaque, a medal certificate and surgical tools. Another search isn't allowed, so the image needs a manual fix, either a crop of #1 that removes the backdrop or a plain Huygens or Cassini photo without Saturn in it. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
-          "giveaway",
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but no media candidate works. The only Huygens picture (#1) has a backdrop with Saturn's rings and an orange surface. That gives away hints 1 and 2 before play starts and rules out Europa and Ganymede, which are moons of Jupiter. Candidates 2–6 show other things: Luna 16, Mars 3, an Apollo 17 plaque, a medal certificate and surgical tools. Another search isn't allowed, so the image needs a manual fix, either a crop of #1 that removes the backdrop or a plain Huygens or Cassini photo without Saturn in it. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Corrected the fun fact: Cassini, not Huygens, found Titan's lakes.",
+        "reason": "The only Huygens image showed Saturn and Titan's surface, so I changed the query to clean-room photos of Cassini-Huygens, which have no Saturn backdrop.",
         "previous": {
-          "fun_fact": "Huygens found Titan has rivers and lakes, but they're filled with liquid methane, not water."
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Huygens probe replica",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -464797,7 +465452,7 @@
     },
     {
       "id": "q-6031",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "The original group chat: one fire, then another, then another.",
       "question": "Gondor lights great fires, one hilltop after another, all the way to the west. Which people ride to help Gondor in answer?",
@@ -464815,11 +465470,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "beacon fire hilltop",
+        "query": "signal beacon fire",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AV%C3%A5rdkasen_p%C3%A5_Korpberget_2012a_01.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/V%C3%A5rdkasen_p%C3%A5_Korpberget_2012a_01.jpg/3840px-V%C3%A5rdkasen_p%C3%A5_Korpberget_2012a_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Holger.Ellgaard · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Holger.Ellgaard",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Holger.Ellgaard",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "In the book, there are seven beacon hills between Minas Tirith and the border of Rohan.",
       "subcategory": "the-lord-of-the-rings",
@@ -464848,19 +465510,43 @@
       "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the image candidates works: they are US fire stations (1–3), close-ups of clinker rock (4–5) and a ceremony for a historic marker (6). None shows a beacon or a signal fire on a hill, and a new search isn't allowed in this run. The slot needs a new search, for example \"signal beacon fire\" or \"beacon bonfire hill\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates works: they are US fire stations (1–3), close-ups of clinker rock (4–5) and a ceremony for a historic marker (6). None shows a beacon or a signal fire on a hill, and a new search isn't allowed in this run. The slot needs a new search, for example \"signal beacon fire\" or \"beacon bonfire hill\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No candidate showed a beacon fire, so I changed the query to the reviewer's suggested term.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "beacon fire hilltop",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-6032",
@@ -464936,10 +465622,10 @@
     },
     {
       "id": "q-6033",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "After the worst day underground, everyone needs a walk in the woods.",
-      "question": "After Gandalf falls in Moria, the Fellowship escapes into a golden forest where Elves live high up in tall silver trees. Where are they?",
+      "question": "After Gandalf falls in Moria, the Fellowship escapes into a forest where Elves live high up in tall silver trees. Where are they?",
       "answer": "Lothlórien",
       "wrong_answers": [
         "Rivendell",
@@ -464954,16 +465640,16 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "dark underground cavern hall",
+        "query": "dark stone pillared hall",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AEntrance_To_Big_Mouth_Cave_The_Caverns_Grundy_County_Tennessee.png",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Entrance_To_Big_Mouth_Cave_The_Caverns_Grundy_County_Tennessee.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "JourneyMap · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADarasuram%2C_Airavatesvara_Temple%2C_Inner_halls_2%2C_India.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Darasuram%2C_Airavatesvara_Temple%2C_Inner_halls_2%2C_India.jpg/3840px-Darasuram%2C_Airavatesvara_Temple%2C_Inner_halls_2%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "JourneyMap",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:JourneyMap&action=edit&redlink=1",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -464994,19 +465680,35 @@
       "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Approved question q-1388 (Legolas's bow) says “el bosque dorado de Lothlórien” in its question text. This question's clue is “golden forest”, so a player who has seen q-1388 is handed the answer. Either drop this question or reword q-1388 so it doesn't name Lothlórien.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Approved question q-1388 (Legolas's bow) says “el bosque dorado de Lothlórien” in its question text. This question's clue is “golden forest”, so a player who has seen q-1388 is handed the answer. Either drop this question or reword q-1388 so it doesn't name Lothlórien.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "I removed the “golden forest” clue, which q-1388's “golden forest of Lothlórien” would give away, and kept the silver trees and Elves living high up.",
+        "previous": {
+          "question": "After Gandalf falls in Moria, the Fellowship escapes into a golden forest where Elves live high up in tall silver trees. Where are they?"
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-6034",
@@ -465185,7 +465887,7 @@
       "media": {
         "type": "audio",
         "role": "essential",
-        "query": "split-flap display flipping",
+        "query": "Solari board flipping",
         "note": "Clear recording of a split-flap departure board (Solari board) flipping its flaps, with little other station noise.",
         "source_url": null,
         "file_url": null,
@@ -465219,14 +465921,24 @@
       "batch": "batch-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "Neither audio candidate is a split-flap departure board: #1 is a click track from Audacity, and #2 (\"Airport station bulleti\") isn't clearly a flap board and may just be an announcement. The essential sound needs a Freesound split-flap / Solari board recording, for example searched as \"Solari board flipping\" or \"split flap display\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Neither audio candidate is a split-flap departure board: #1 is a click track from Audacity, and #2 (\"Airport station bulleti\") isn't clearly a flap board and may just be an announcement. The essential sound needs a Freesound split-flap / Solari board recording, for example searched as \"Solari board flipping\" or \"split flap display\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -465245,14 +465957,17 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description and hint 2, which pointed to a display board and ruled out the wrong answers.",
+        "reason": "Neither audio candidate was a flap board, so I changed the query to the reviewer's suggested Solari board term, which Freesound has recordings of.",
         "previous": {
-          "description": "Before screens took over, stations had their own way of applauding every departure.",
-          "hints": [
-            "It made the sound every time something new had to be announced.",
-            "Travelers looked up at it, not down.",
-            "Hundreds of little flaps turned at once to show new times and platforms."
-          ]
+          "media": {
+            "type": "audio",
+            "role": "essential",
+            "query": "split-flap display flipping",
+            "note": "Clear recording of a split-flap departure board (Solari board) flipping its flaps, with little other station noise.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -465705,7 +466420,7 @@
     },
     {
       "id": "q-6043",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "Sorting the trash: the game everyone plays, whether they like it or not.",
       "question": "Which of these does NOT belong in the paper recycling bin?",
@@ -465717,7 +466432,7 @@
       ],
       "hints": [
         "In many cities, the paper bin is blue.",
-        "One of them can break into sharp pieces.",
+        "Three of them were once part of a tree.",
         "It's made from melted sand, not wood."
       ],
       "media": {
@@ -465763,25 +466478,33 @@
       "needs_media": false,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“One of them can break into sharp pieces”) gives the answer away: only the glass bottle can do that, so players get it from hint 2 rather than hint 3. Replace it with a vaguer hint, for example one about what the other three items are made from (trees), without naming glass or what it does.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“One of them can break into sharp pieces”) gives the answer away: only the glass bottle can do that, so players get it from hint 2 rather than hint 3. Replace it with a vaguer hint, for example one about what the other three items are made from (trees), without naming glass or what it does.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which gave the answer away by material, with a vague hint about the bin.",
+        "reason": "Replaced hint 2, which gave the answer away, with a vaguer hint about what the other three items are made from.",
         "previous": {
           "hints": [
-            "Three of these were made from trees.",
+            "In many cities, the paper bin is blue.",
             "One of them can break into sharp pieces.",
             "It's made from melted sand, not wood."
           ]
@@ -469388,9 +470111,9 @@
     },
     {
       "id": "q-6092",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
-      "description": "The tiniest symbol in the shop, for the tiniest prices.",
+      "description": "A symbol that has been hanging around supermarkets longer than the shopping carts.",
       "question": "This symbol appears on price tags in the United States and Canada. What does it stand for?",
       "answer": "A cent",
       "wrong_answers": [
@@ -469399,8 +470122,8 @@
         "Degrees Celsius"
       ],
       "hints": [
-        "You'd see it on very cheap items, like candy or a pencil.",
-        "It's worth one hundredth of something.",
+        "It looks like a small letter “c” with a line through it.",
+        "A single coin in your pocket might be worth exactly one of these.",
         "You need 100 of them to make a dollar."
       ],
       "media": {
@@ -469446,26 +470169,34 @@
       "needs_media": true,
       "batch": "batch-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description (\"for the tiniest prices\") states the answer's defining trait. Looking only at the four options, it rules out the euro, copyright and degrees Celsius. Hint 1 (\"very cheap items\") and hint 2 (\"one hundredth of something\") give the cent away the same way. The description should play on shopping without saying how small the value is, and hints 1–2 should point elsewhere, for example at the region or the symbol's shape.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description (\"for the tiniest prices\") states the answer's defining trait. Looking only at the four options, it rules out the euro, copyright and degrees Celsius. Hint 1 (\"very cheap items\") and hint 2 (\"one hundredth of something\") give the cent away the same way. The description should play on shopping without saying how small the value is, and hints 1–2 should point elsewhere, for example at the region or the symbol's shape.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Put the regional context into the question and replaced hint 1, which would now repeat it, with a vaguer hint.",
+        "reason": "Rewrote the description and hints 1–2 so they no longer give away the small value; they now play on shopping and point at the symbol's shape and coins.",
         "previous": {
-          "question": "What does this symbol stand for?",
+          "description": "The tiniest symbol in the shop, for the tiniest prices.",
           "hints": [
-            "It's used mostly in the United States and Canada.",
+            "You'd see it on very cheap items, like candy or a pencil.",
             "It's worth one hundredth of something.",
             "You need 100 of them to make a dollar."
           ]
