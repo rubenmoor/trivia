@@ -34678,7 +34678,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
 - Note on done: the "Done:" line and the report path.', '2026-10-16T04:23:18Z', '2026-10-22T04:51:51Z', 643, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1296, 84, 'QC batch-12 (colombia)', 'work', 'open', NULL, NULL, 'Plan 84 chain 4: QC of colombia''s first batch (`task 1295: run batch-12 (colombia)`). Owners: `plans/15c-regional-questions.md`, `plans/16-content-target.md`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1296, 84, 'QC batch-12 (colombia)', 'work', 'done', NULL, '2026-10-22, authoring/data/questions.json app/data authoring/reports/batch-12.md plans/15c-regional-questions.md', 'Plan 84 chain 4: QC of colombia''s first batch (`task 1295: run batch-12 (colombia)`). Owners: `plans/15c-regional-questions.md`, `plans/16-content-target.md`.
 
 ## QC
 - `authoring/QC.md` steps 1–4:
@@ -34699,7 +34699,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths a command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- Note on done: the QC numbers (approved, rejected, needs_work, agreement, $ per approved, review time per 100).', '2026-10-16T04:23:18Z', NULL, 643, 0, NULL, 'questions');
+- Note on done: the QC numbers (approved, rejected, needs_work, agreement, $ per approved, review time per 100).', '2026-10-16T04:23:18Z', '2026-10-23T00:13:05Z', 643, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1297, 9, 'revise the masterplan of milestone 9: Steam S4: content for release', 'revise', 'done', 1000, '2026-10-16, plan 9 body: part 16 slug keys for categories (priority 880), parts 10/12, intro and order updated', '`milestone 9: Steam S4: content for release` changed. Bring `plan 9: masterplan`, the masterplan, in line with it (`pm plan edit 9 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T12:29:42Z', '2026-10-16T12:32:43Z', NULL, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1298, 9, 'create tasks for plan 9: masterplan', 'split', 'done', 1000, '2026-10-16, tasks.sql: task 1305 (write plan: Slug keys for categories, part 16); other parts already have plans, plans 98/128 revisions queued (tasks 1302, 1303)', 'Split plan 9 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -41825,6 +41825,38 @@ Fix, so it can''t happen again:
 - if the cause or fix is in pm itself (outside this repo), write up a change for it and a pm decision for the developer; in this repo, a note on git operations to avoid while `pm run` is running (README / AGENTS.md) if still needed after the fix
 
 Done when: the cause is named, the fix (or the pm change write-up) exists, and a reproduction no longer loses rows.', '2026-10-23T00:10:29Z', '2026-10-23T00:11:19Z', NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1690, 84, 'run colombia batch (batch-<n>)', 'work', 'open', -110, NULL, 'Plan 84 chain 4, next es pair of the regional pilot `colombia` (`decision 110: Regional packs at launch (RG-5, OQ-46)`), added by `task 1296: QC batch-12 (colombia)`.
+
+## Run
+- `nix develop -c qgen batch --bundle colombia` (`authoring/RUNBOOK.md` steps 1–5; Colombian Spanish, `bundles.json` `rule`/`voice`). No other pipeline steps by hand.
+- Run name: whatever `qgen` prints (`batch-<max+1>`). After the run rename this task and its QC task to the real name (`pm task set <id> --subject "run batch-<n> (colombia)"`, QC the same) and replace `batch-<n>` in the QC body.
+- Done when its report exists, the printed paths are staged, note with the "Done:" line and the report path.
+
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148 or new).
+- `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths a command prints; don''t commit (pm commits as "task N: …").
+- Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
+- Note on done: the "Done:" line and the report path.', '2026-10-23T00:13:00Z', NULL, 1296, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1691, 84, 'QC colombia batch (batch-<n>)', 'work', 'open', -110, NULL, 'Plan 84 chain 4: QC of colombia''s next batch (`task 1690: run colombia batch (batch-<n>)`). Owners: `plans/15c-regional-questions.md`, `plans/16-content-target.md`.
+
+## QC
+- `authoring/QC.md` steps 1–4:
+  - spot check: `pm decision add "Spot check batch-<n> done?"` (native speaker of Colombian Spanish; link `http://127.0.0.1:8001/review?batch=batch-<n>&sample=1`, `trivia-authoring`); never answered by an LLM; pending, stop until answered
+  - `qgen report --qc batch-<n>`; proposals (≥ 2 disagreements per problem kind, ≥ 2 major audit findings, any fact false approve) → `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans; none → `qgen report --qc batch-<n> --changes none`
+- decision 3: `qgen rework --batch batch-<n>` once after QC; stage the paths it prints.
+- Note `qgen report --cost` per bundle ($ per approved, information only; no budget, no gates) and `qgen report --review-time --bundle colombia`.
+- Chain 5''s pace: if the numbers look too costly, `pm decision add` instead of adding the next pair (batch-12: $0.28 per approved, 35 min per 100 verdicts).
+
+## Then, first that applies
+1. `qgen report --bundle colombia` shows 2000 approved (es) → add two closing tasks (plan 84 chain 4): **Pilot effort** ($ per approved per bundle and review time per 100 into `plans/15c-regional-questions.md` and `plans/16-content-target.md`; no "More regional bundles?" decision) and **first en run** `run tr-en-<n>` (`qgen batch --translate en --bundle colombia`; translation run shape: one task, no QC, no spot check, no `qgen health ack`; needs plan 98''s `--translate --bundle` done and `task 634: run tr-en-1` done, else pend on the blocking decision; each en run notes its numbers and adds the next until `qgen report --bundle colombia --locale en` shows 2000 approved; then `plans/15c` notes colombia es + en done).
+2. Else the next es pair (same bodies as this task and its run task, next batch number from `qgen`).
+- One open pair (or en run) per language of the bundle.
+
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148 or new).
+- `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths a command prints; don''t commit (pm commits as "task N: …").
+- Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
+- Note on done: the QC numbers (approved, rejected, needs_work, agreement, $ per approved, review time per 100).', '2026-10-23T00:13:00Z', NULL, 1296, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -47711,7 +47743,7 @@ See `qgen report --batches` or authoring/reports/batches.md. The developer looks
 ```
 
 The ack of batch-11 (`authoring/data/health-acks.json`, `authoring/reports/batches.md`) is left unstaged in the work tree.', 'The question-making tool again refuses to start a new set of questions, now because the latest batch (batch-12) missed several quality thresholds: too many drafts lost, uneven coverage, a low share of questions with media, and a low average fun rating. Only the developer can clear the stop after looking at the numbers. Until then, the first batch for the science, technology, engineering and maths pack cannot start.', NULL, NULL, '2026-10-22T05:19:55Z', NULL, 1676, NULL, 'rule', NULL, '');
-INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (412, 'Should pm be changed so it never overwrites tasks.sql with fewer rows or a missing file?', 'pending', '["Make the change in pm as written in the write-up", "Only keep the warning in README, no pm change"]', 'Write-up: `plans/pm-tasks-sql-safety.md`. Cause: a missing `tasks.sql` is loaded as an empty project and written back at once.', 'The tool that keeps the project''s work list in one file once replaced that file with an empty one, because it looked at the file at the moment another program was rewriting it. The fix has to be made in the tool itself, which lives outside this project. The choice is whether to make that change (or ask for it) now, or to live with a written warning about which operations to avoid while the tool runs.', NULL, NULL, '2026-10-23T00:11:18Z', NULL, 1689, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (412, 'Should pm be changed so it never overwrites tasks.sql with fewer rows or a missing file?', 'answered', '["Make the change in pm as written in the write-up", "Only keep the warning in README, no pm change"]', 'Write-up: `plans/pm-tasks-sql-safety.md`. Cause: a missing `tasks.sql` is loaded as an empty project and written back at once.', 'The tool that keeps the project''s work list in one file once replaced that file with an empty one, because it looked at the file at the moment another program was rewriting it. The fix has to be made in the tool itself, which lives outside this project. The choice is whether to make that change (or ask for it) now, or to live with a written warning about which operations to avoid while the tool runs.', 'i ordered the change to pm elsewhere. nothing do here. delete the file `pm-tasks-sql-safety.md`', NULL, '2026-10-23T00:11:18Z', '2026-10-23T00:13:07Z', 1689, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -50270,6 +50302,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1682, 407);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1649, 1648);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1677, 1676);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1681, 1680);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1691, 1690);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
