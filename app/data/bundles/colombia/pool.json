@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "1df1175d",
+  "hash": "d0a3fafd",
   "questions": [
     {
       "id": "q-0002",
@@ -26083,6 +26083,40 @@
       "background": null
     },
     {
+      "id": "q-7220",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "christmas-and-special-dates",
+      "bundle": "colombia",
+      "description": "Agua bendita, velas, vestido blanco y un fotógrafo que no para de tomar fotos.",
+      "question": "En el bautizo cargo al bebé junto a la pila de agua y prometo ayudar a cuidarlo toda la vida. ¿Quién soy?",
+      "answer": "El padrino",
+      "wrong_answers": [
+        "El monaguillo",
+        "El sacristán",
+        "El notario"
+      ],
+      "hints": [
+        "Los papás me escogen especialmente para ese día.",
+        "En la ceremonia estoy al lado de los papás y respondo por el bebé cuando pregunta el sacerdote.",
+        "Después del bautizo, el niño me dice «padri»."
+      ],
+      "fun_fact": "En Colombia es tradición que los padrinos le regalen al bebé una cadena o una medalla de oro.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Baptismal_font_of_Saint-Sernin.jpg/3840px-Baptismal_font_of_Saint-Sernin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABaptismal_font_of_Saint-Sernin.jpg",
+        "credit": "Didier Descouens · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Didier Descouens",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Archaeodontosaurus"
+      },
+      "background": null
+    },
+    {
       "id": "q-7221",
       "status": "approved",
       "difficulty": 2,
@@ -27303,6 +27337,74 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Camilo1982",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Camilo1982&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7258",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "crafts-and-traditional-dress",
+      "bundle": "colombia",
+      "description": "La nevera de las abuelas, sin enchufe y sin cuenta de la luz.",
+      "question": "Mira de cerca: en esta vasija grande de barro se guardaba el agua fresca en las casas de antes. ¿Cómo se llama?",
+      "answer": "Tinaja",
+      "wrong_answers": [
+        "Totuma",
+        "Batea",
+        "Pilón"
+      ],
+      "hints": [
+        "Es grande, panzona y de boca ancha.",
+        "El barro deja que el agua se enfríe sola.",
+        "Su nombre rima con «baraja»."
+      ],
+      "fun_fact": "El barro de la tinaja es poroso: un poquito de agua se evapora por fuera y eso mantiene fresca la de adentro.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Las_tinajas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALas_tinajas.jpg",
+        "credit": "Wilmeris Hernández · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Wilmeris Hernández",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Wilrachel&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7259",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "crafts-and-traditional-dress",
+      "bundle": "colombia",
+      "description": "Un velorio con más baile que lágrimas.",
+      "question": "En el desfile del martes de Carnaval en Barranquilla, unas «viudas» lloran a un personaje que «murió» de tanto parrandear. ¿Quién es?",
+      "answer": "Joselito Carnaval",
+      "wrong_answers": [
+        "El Rey Momo",
+        "La Marimonda",
+        "El Garabato"
+      ],
+      "hints": [
+        "Su entierro marca el final del Carnaval.",
+        "Vuelve a «resucitar» cada año.",
+        "Su apellido es el nombre de la fiesta."
+      ],
+      "fun_fact": "Según la tradición, Joselito «muere» el martes de Carnaval y resucita al año siguiente para volver a la parranda.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/GOLERO.jpg/3840px-GOLERO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGOLERO.jpg",
+        "credit": "Enramada · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Enramada",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Enramada&action=edit&redlink=1"
       },
       "background": null
     },
@@ -29653,6 +29755,40 @@
       "background": null
     },
     {
+      "id": "q-7331",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "pre-columbian-cultures",
+      "bundle": "colombia",
+      "description": "Lleva más de mil años posando para la foto sin pestañear.",
+      "question": "Mira esta figura tallada en piedra. ¿Qué es?",
+      "answer": "Una estatua de San Agustín",
+      "wrong_answers": [
+        "Un moái de la Isla de Pascua",
+        "Una cabeza olmeca de México",
+        "Una escultura de Machu Picchu"
+      ],
+      "hints": [
+        "Quienes las tallaron no dejaron escritura, y muchas de estas figuras cuidaban tumbas.",
+        "Muchas caras tienen colmillos, como de jaguar, y algunas figuras parecen guardianes que sostienen animales o herramientas.",
+        "Están en un parque arqueológico del Huila, cerca del nacimiento del río Magdalena."
+      ],
+      "fun_fact": "El Parque Arqueológico de San Agustín es Patrimonio de la Humanidad de la UNESCO desde 1995.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/San_Agustin_%2846157877692%29.jpg/3840px-San_Agustin_%2846157877692%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASan_Agustin_%2846157877692%29.jpg",
+        "credit": "Paul from Hacketts Cove, Canada · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Paul from Hacketts Cove, Canada",
+        "author_url": "https://www.flickr.com/people/66284982@N03"
+      },
+      "background": null
+    },
+    {
       "id": "q-7332",
       "status": "approved",
       "difficulty": 8,
@@ -30163,6 +30299,74 @@
       "background": null
     },
     {
+      "id": "q-7348",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "conquest-and-colonial-era",
+      "bundle": "colombia",
+      "description": "Un navarro que llegó tan lejos de casa que tuvo que traerse el nombre de su tierra en la maleta.",
+      "question": "El conquistador navarro Pedro de Ursúa fundó la ciudad de Pamplona, en el actual Norte de Santander. ¿En qué año?",
+      "answer": "1549",
+      "wrong_answers": [
+        "1525",
+        "1538",
+        "1572"
+      ],
+      "hints": [
+        "Fue en pleno siglo XVI, cuando la conquista del interior ya estaba en marcha.",
+        "Fue poco más de diez años después de que Jiménez de Quesada fundara Santafé.",
+        "Fue a mediados del siglo XVI, a menos de una década de 1550."
+      ],
+      "fun_fact": "Años después, Ursúa se fue a buscar El Dorado por el río Amazonas, en una de las expediciones más famosas de la Conquista.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Pamplona%2CNorte_de_Santander.PNG/3840px-Pamplona%2CNorte_de_Santander.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APamplona%2CNorte_de_Santander.PNG",
+        "credit": "EEIM · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "EEIM",
+        "author_url": "https://commons.wikimedia.org/wiki/User:EEIM"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7349",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "conquest-and-colonial-era",
+      "bundle": "colombia",
+      "description": "No tiene nada que ver con la mazamorra de la abuela, aunque también se hace con paciencia.",
+      "question": "En el mazamorreo, en los ríos de Antioquia y Chocó, se lava la arena en una batea de madera. ¿Qué se busca?",
+      "answer": "Oro",
+      "wrong_answers": [
+        "Sal",
+        "Carbón",
+        "Perlas"
+      ],
+      "hints": [
+        "Se mueve en círculos con agua y arena del río.",
+        "Lo que se busca es pesado y se queda en el fondo.",
+        "Es el metal que hizo famosos a los orfebres precolombinos."
+      ],
+      "fun_fact": "El mazamorreo se practica desde antes de la llegada de los españoles y todavía hoy es el sustento de muchas familias del Chocó.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/BETE_donde_creci%2C_ahora_Municio_del_medio_Atrato_Rio_04.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABETE_donde_creci%2C_ahora_Municio_del_medio_Atrato_Rio_04.JPG",
+        "credit": "CHOColombia · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "CHOColombia",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:CHOColombia&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-7350",
       "status": "approved",
       "difficulty": 11,
@@ -30537,6 +30741,40 @@
       "background": null
     },
     {
+      "id": "q-7361",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "hosts-actors-and-comedians",
+      "bundle": "colombia",
+      "description": "Un apodo tan pegajoso que nadie se lo puede quitar de encima.",
+      "question": "«La Liendra» es el apodo de un influencer colombiano muy famoso. Pero, ¿qué es de verdad una liendra?",
+      "answer": "El huevo del piojo",
+      "wrong_answers": [
+        "Una pulga de perro",
+        "Una garrapata pequeña",
+        "Un mosquito diminuto"
+      ],
+      "hints": [
+        "Es tan chiquita que casi no se ve.",
+        "Se queda bien pegada a un pelo.",
+        "De ella nace el bichito que da rasquiña en la cabeza."
+      ],
+      "fun_fact": "En el diccionario la palabra es «liendre», pero en Colombia muchos dicen «liendra».",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/The_Ladies%27_home_journal_%281948%29_%2814763302201%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Ladies%27_home_journal_%281948%29_%2814763302201%29.jpg",
+        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Internet Archive Book Images",
+        "author_url": "https://www.flickr.com/people/126377022@N07"
+      },
+      "background": null
+    },
+    {
       "id": "q-7362",
       "status": "approved",
       "difficulty": 7,
@@ -30669,6 +30907,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "HaHa Calabacita",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:HaHa_Calabacita&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7366",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "national-symbols",
+      "bundle": "colombia",
+      "description": "El escudo de una familia que se separó hace casi dos siglos y todavía se reúne en los partidos de fútbol.",
+      "question": "En 1819 nació un país cuyo escudo tenía dos cuernos de la abundancia y un haz de lanzas. ¿Qué países de hoy lo formaban?",
+      "answer": "Colombia, Venezuela, Ecuador y Panamá",
+      "wrong_answers": [
+        "Colombia, Venezuela, Perú y Bolivia",
+        "Colombia, Ecuador, Perú y Panamá",
+        "Colombia, Venezuela, Ecuador y Perú"
+      ],
+      "hints": [
+        "Su primer presidente fue Simón Bolívar.",
+        "Se disolvió hacia 1830.",
+        "Uno de esos países tiene hoy un canal muy famoso."
+      ],
+      "fun_fact": "«Gran Colombia» es el nombre que le pusieron los historiadores: en su época se llamaba simplemente República de Colombia.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Portrait_of_Sim%C3%B3n_Bol%C3%ADvar_by_Arturo_Michelena.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APortrait_of_Sim%C3%B3n_Bol%C3%ADvar_by_Arturo_Michelena.jpg",
+        "credit": "Arturo Michelena · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Arturo Michelena",
+        "author_url": "https://en.wikipedia.org/wiki/en:Arturo_Michelena"
       },
       "background": null
     },
@@ -31149,6 +31421,40 @@
       "background": null
     },
     {
+      "id": "q-7382",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "pop-rock-and-urban-music",
+      "bundle": "colombia",
+      "description": "En esta ciudad de animales hasta la estrella del pop tiene club de fans y bailarines de lujo.",
+      "question": "Esta cantante colombiana le pone la voz a la estrella pop de Zootopia. ¿Qué animal es ese personaje?",
+      "answer": "Una gacela",
+      "wrong_answers": [
+        "Una coneja",
+        "Una oveja",
+        "Una cebra"
+      ],
+      "hints": [
+        "No es la policía ni la alcaldesa: canta en un escenario gigante.",
+        "Come solo plantas y tiene patas largas y delgadas.",
+        "Vive en la sabana africana, tiene cuernos y corre muy rápido."
+      ],
+      "fun_fact": "Shakira grabó «Try Everything» para Zootopia, y en Latinoamérica también se escuchó su versión en español, «Lo intentaré».",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Shakira_Rio_02_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AShakira_Rio_02_cropped.jpg",
+        "credit": "CC BY 2.5 es · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5 es",
+        "license_url": "https://creativecommons.org/licenses/by/2.5/es/deed.en",
+        "author": "Shakira_Rio_02.jpg: Andres.Arranz - Original uploaded to www.arteyfotografia.com as Shakira Rock in Rio 08 003\nderivative work: Jonathas Davi (talk)",
+        "author_url": "https://commons.wikimedia.org/wiki/File:Shakira_Rio_02.jpg"
+      },
+      "background": null
+    },
+    {
       "id": "q-7383",
       "status": "approved",
       "difficulty": 8,
@@ -31449,6 +31755,40 @@
         "provider": "commons",
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Felipe Restrepo Acosta",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pedro_Felipe"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7392",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "sayings-and-expressions",
+      "bundle": "colombia",
+      "description": "Dos sílabas, cero formalidad y nadie se queja.",
+      "question": "Es muy informal y viene de juntar «qué» y «hubo». ¿Qué quiere decir «¿quiubo?»?",
+      "answer": "Hola, ¿qué más?",
+      "wrong_answers": [
+        "Adiós, nos vemos",
+        "Gracias, muy amable",
+        "Perdón, con permiso"
+      ],
+      "hints": [
+        "Se dice al llegar, no al irse.",
+        "Muchas veces lo acompaña un choque de manos.",
+        "Es una forma rápida de saludar y preguntar cómo vas."
+      ],
+      "fun_fact": "«Q'hubo» es tan colombiano que así se llama también un periódico popular del país.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Bogota_Quiroga_bario_-_casas_calle_28_C_sur_con_carrera_19_B_bis.JPG/3840px-Bogota_Quiroga_bario_-_casas_calle_28_C_sur_con_carrera_19_B_bis.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABogota_Quiroga_bario_-_casas_calle_28_C_sur_con_carrera_19_B_bis.JPG",
+        "credit": "Felipe Restrepo Acosta · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Felipe Restrepo Acosta",
         "author_url": "https://commons.wikimedia.org/wiki/User:Pedro_Felipe"
       },
@@ -31791,6 +32131,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Kham Tran",
         "author_url": "https://commons.wikimedia.org/wiki/User:Khamtran"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7403",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "salsa-and-tropical-music",
+      "bundle": "colombia",
+      "description": "En Cali la salsa se toma tan en serio que hasta los melómanos hablan como profesores de conservatorio.",
+      "question": "Estás en una salsoteca de Cali y un melómano dice que la orquesta «se cruzó de clave». En la salsa, ¿qué es la clave?",
+      "answer": "Un patrón de cinco golpes que guía el ritmo",
+      "wrong_answers": [
+        "La nota más aguda que canta el sonero",
+        "El paso básico que marcan los bailarines",
+        "El solo de piano con que cierra la canción"
+      ],
+      "hints": [
+        "Es algo que se toca, no que se baila ni se canta.",
+        "Se marca con dos palitos de madera que chocan entre sí.",
+        "Se escribe «3-2» o «2-3», según cómo se repartan los golpes."
+      ],
+      "fun_fact": "La clave viene de la música afrocubana, y los dos palitos con que se toca también se llaman claves.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Salsa_band_and_salsa_dancing_-_Fatacil_Agriculture_and_Tourism_Fair_-_Lagoa_-_The_Algarve%2C_Portugal_%281469449571%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASalsa_band_and_salsa_dancing_-_Fatacil_Agriculture_and_Tourism_Fair_-_Lagoa_-_The_Algarve%2C_Portugal_%281469449571%29.jpg",
+        "credit": "Glen Bowman from Newcastle, England · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Glen Bowman from Newcastle, England",
+        "author_url": "https://www.flickr.com/people/10978503@N00"
       },
       "background": null
     },
@@ -32203,6 +32577,40 @@
       "background": null
     },
     {
+      "id": "q-7416",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "scientists-and-inventors",
+      "bundle": "colombia",
+      "description": "Un billete con la cabeza en las nubes… y un poquito más arriba.",
+      "question": "El billete de 20 000 pesos lleva la cara de Julio Garavito y un dibujo de la Luna, y un cráter lunar tiene su nombre. ¿Por qué?",
+      "answer": "Porque estudió el movimiento de la Luna",
+      "wrong_answers": [
+        "Porque fue el primer colombiano en el espacio",
+        "Porque inventó el calendario muisca",
+        "Porque descubrió el agua en la Luna"
+      ],
+      "hints": [
+        "Fue un sabio bogotano de finales del siglo XIX y comienzos del XX.",
+        "Dirigió el Observatorio Astronómico Nacional.",
+        "Hacía cálculos de astronomía con lápiz y papel."
+      ],
+      "fun_fact": "El cráter Garavito está en la cara oculta de la Luna, la que nunca vemos desde la Tierra.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFullMoon2010.jpg",
+        "credit": "Gregory H. Revera · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Gregory H. Revera",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-7417",
       "status": "approved",
       "difficulty": 3,
@@ -32437,6 +32845,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "--F3rn4nd0 06:17, 27 March 2007 (UTC)",
         "author_url": "https://commons.wikimedia.org/wiki/User:F3rn4nd0"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7424",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "vallenato",
+      "bundle": "colombia",
+      "description": "Estocolmo nunca había oído tanto acordeón en una noche tan fría.",
+      "question": "En 1982 García Márquez llevó músicos vallenatos a Estocolmo y recibió el Nobel vestido con una prenda blanca. ¿Cómo se llama?",
+      "answer": "El liqui liqui",
+      "wrong_answers": [
+        "La guayabera",
+        "El poncho",
+        "La ruana"
+      ],
+      "hints": [
+        "No era el frac que pedía el protocolo.",
+        "Es un traje de cuello alto y cerrado, típico de los Llanos.",
+        "Su nombre repite dos veces la misma palabra."
+      ],
+      "fun_fact": "Gabo fue de los pocos premiados de esa noche que no recibió el Nobel de frac.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/The_concert_hall_stockholm_sweden_20050616.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_concert_hall_stockholm_sweden_20050616.jpg",
+        "credit": "Jonas Bergsten · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jonas Bergsten",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bergsten"
       },
       "background": null
     }

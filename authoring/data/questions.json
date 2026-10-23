@@ -557115,9 +557115,9 @@
     },
     {
       "id": "q-7220",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
-      "description": "El cargo más bonito de la familia: te dan un bebé y una promesa, pero no sueldo.",
+      "description": "Agua bendita, velas, vestido blanco y un fotógrafo que no para de tomar fotos.",
       "question": "En el bautizo cargo al bebé junto a la pila de agua y prometo ayudar a cuidarlo toda la vida. ¿Quién soy?",
       "answer": "El padrino",
       "wrong_answers": [
@@ -557173,28 +557173,31 @@
       "needs_media": false,
       "batch": "batch-18",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description gives the answer away. \"El cargo más bonito de la familia… te dan un bebé y una promesa, pero no sueldo\" calls the answer a family role that holds the baby and is unpaid. With the four options alone, that rules out the monaguillo, the sacristán and the notario, which are all church or legal jobs. Rewrite it so it plays on baptism day without calling the role a family one, without the baby and promise, and without the unpaid contrast.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description gives the answer away. \"El cargo más bonito de la familia… te dan un bebé y una promesa, pero no sueldo\" calls the answer a family role that holds the baby and is unpaid. With the four options alone, that rules out the monaguillo, the sacristán and the notario, which are all church or legal jobs. Rewrite it so it plays on baptism day without calling the role a family one, without the baby and promise, and without the unpaid contrast.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which named 'madrina', and the fun fact, which overlapped with q-5059's 'compadres'.",
+        "reason": "Rewrote the description so it plays on baptism day without calling the role a family one, unpaid, or about a baby and a promise.",
         "previous": {
-          "hints": [
-            "Los papás me escogen especialmente para ese día.",
-            "Mi pareja en esa tarea se llama madrina.",
-            "Después del bautizo, el niño me dice «padri»."
-          ],
-          "fun_fact": "En Colombia, después del bautizo, los papás y los padrinos del bebé se dicen «compadres»."
+          "description": "El cargo más bonito de la familia: te dan un bebé y una promesa, pero no sueldo."
         },
         "revised_on": "2026-10-23"
       }
@@ -557818,20 +557821,11 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "secret bookshelf door",
+        "query": "hidden door bookcase",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALibrary_in_the_home_of_Ina_D._Coolbrith_on_Russian_Hill%2C_San_Francisco%2C_ca.1905_%28CHS-4026%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Library_in_the_home_of_Ina_D._Coolbrith_on_Russian_Hill%2C_San_Francisco%2C_ca.1905_%28CHS-4026%29.jpg/3840px-Library_in_the_home_of_Ina_D._Coolbrith_on_Russian_Hill%2C_San_Francisco%2C_ca.1905_%28CHS-4026%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Unknown authorUnknown author",
-        "author_url": null,
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "Andrés Baiz también dirigió capítulos de la serie 'Narcos'.",
       "subcategory": "cinema",
@@ -557861,17 +557855,52 @@
       "batch": "batch-18",
       "review": {
         "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The image had a US-only public-domain licence, so I changed the media query to trigger a new search.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "secret bookshelf door",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ALibrary_in_the_home_of_Ina_D._Coolbrith_on_Russian_Hill%2C_San_Francisco%2C_ca.1905_%28CHS-4026%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Library_in_the_home_of_Ina_D._Coolbrith_on_Russian_Hill%2C_San_Francisco%2C_ca.1905_%28CHS-4026%29.jpg/3840px-Library_in_the_home_of_Ina_D._Coolbrith_on_Russian_Hill%2C_San_Francisco%2C_ca.1905_%28CHS-4026%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Unknown authorUnknown author",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7230",
@@ -560008,7 +560037,7 @@
     },
     {
       "id": "q-7258",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "La nevera de las abuelas, sin enchufe y sin cuenta de la luz.",
       "question": "Mira de cerca: en esta vasija grande de barro se guardaba el agua fresca en las casas de antes. ¿Cómo se llama?",
@@ -560026,11 +560055,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "large terracotta water jar",
-        "note": "Primer plano de una tinaja de barro grande para agua, sin texto.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "query": "tinaja barro agua",
+        "note": "Primer plano de una tinaja de barro grande, panzona y de boca ancha, para agua, sin texto.",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALas_tinajas.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Las_tinajas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Wilmeris Hernández · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Wilmeris Hernández",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Wilrachel&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El barro de la tinaja es poroso: un poquito de agua se evapora por fuera y eso mantiene fresca la de adentro.",
       "subcategory": "crafts-and-traditional-dress",
@@ -560055,29 +560091,53 @@
         "difficulty_estimate": 6,
         "notes": "The wording 'vasija grande de barro para agua' fits the tinaja; 'múcura' is a close regional alternative, but it is not among the options. Good distractors."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-18",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate is an adequate essential image. #1 is a black-and-white book scan with a crowd, and #2–#6 are ancient Greek hydriae from the MET (painted figures, handles, narrow necks), not the wide-mouthed, big-bellied clay water tinaja the question and hints describe. A new search isn't allowed here. The media needs a real tinaja photo, for example from a search like \"tinaja barro agua\" or \"clay water tinaja Colombia\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate is an adequate essential image. #1 is a black-and-white book scan with a crowd, and #2–#6 are ancient Greek hydriae from the MET (painted figures, handles, narrow necks), not the wide-mouthed, big-bellied clay water tinaja the question and hints describe. A new search isn't allowed here. The media needs a real tinaja photo, for example from a search like \"tinaja barro agua\" or \"clay water tinaja Colombia\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No candidate showed a real tinaja, so I changed the essential image query to target clay water tinajas.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "large terracotta water jar",
+            "note": "Primer plano de una tinaja de barro grande para agua, sin texto.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7259",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Un velorio con más baile que lágrimas.",
-      "question": "En este desfile del martes de Carnaval en Barranquilla, unas «viudas» lloran a un personaje que «murió» de tanto parrandear. ¿Quién es?",
+      "question": "En el desfile del martes de Carnaval en Barranquilla, unas «viudas» lloran a un personaje que «murió» de tanto parrandear. ¿Quién es?",
       "answer": "Joselito Carnaval",
       "wrong_answers": [
         "El Rey Momo",
@@ -560091,12 +560151,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Joselito Carnaval",
-        "note": "Foto del entierro simbólico de Joselito Carnaval: ataúd o muñeco en desfile con «viudas», sin carteles que digan el nombre.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Barranquilla Carnival costumes",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGOLERO.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/GOLERO.jpg/3840px-GOLERO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Enramada · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Enramada",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Enramada&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Según la tradición, Joselito «muere» el martes de Carnaval y resucita al año siguiente para volver a la parranda.",
       "subcategory": "crafts-and-traditional-dress",
@@ -560122,21 +560189,47 @@
         "notes": "The text alone answers the question, so the photo is illustrative rather than essential. A clear Commons photo of the burial without a sign naming Joselito is not guaranteed. The mock funeral is playful, so it is fine for tone."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-18",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot has no candidates and can't be searched again, so the question has no image. The text answers the question on its own, so the slot should also be illustrative, not essential. A new search should look for the Barranquilla Carnival or its 'viudas' costumes, and the picture must not show a sign naming Joselito. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot has no candidates and can't be searched again, so the question has no image. The text answers the question on its own, so the slot should also be illustrative, not essential. A new search should look for the Barranquilla Carnival or its 'viudas' costumes, and the picture must not show a sign naming Joselito. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made the image illustrative (the text stands alone), reworded 'este desfile' to match, and set a new carnival costume query.",
+        "previous": {
+          "question": "En este desfile del martes de Carnaval en Barranquilla, unas «viudas» lloran a un personaje que «murió» de tanto parrandear. ¿Quién es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Joselito Carnaval",
+            "note": "Foto del entierro simbólico de Joselito Carnaval: ataúd o muñeco en desfile con «viudas», sin carteles que digan el nombre.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7260",
@@ -564794,7 +564887,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Boyaca Andes landscape",
+        "query": "Boyaca countryside farm",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -564828,22 +564921,40 @@
       "batch": "batch-18",
       "review": {
         "decision": "needs_work",
-        "feedback": "The text is fine: the carranga etymology (meat from cattle that died in the field, from Velosa's 'El carranguero') is confirmed and nothing gives it away. But no image candidate shows the Boyacá countryside: they are snowy Chilean/Argentine Andes, ISS desert views and South Dakota wetlands. A new search is needed, for example \"Boyaca countryside farm\" or \"Colombian Andes pasture cows\". No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine: the carranga etymology (meat from cattle that died in the field, from Velosa's 'El carranguero') is confirmed and nothing gives it away. But no image candidate shows the Boyacá countryside: they are snowy Chilean/Argentine Andes, ISS desert views and South Dakota wetlands. A new search is needed, for example \"Boyaca countryside farm\" or \"Colombian Andes pasture cows\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer rules out the harvest-party option.",
+        "reason": "No candidate showed Boyacá, so I changed the image query to Boyacá countryside.",
         "previous": {
-          "description": "Un nombre de género musical que suena a todo menos a fiesta, y aun así hace bailar a medio Boyacá."
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Boyaca Andes landscape",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -565519,21 +565630,31 @@
       "batch": "batch-18",
       "review": {
         "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. I didn't verify this one online. The Caribe origin and the meaning 'muchacha/mujer' look plausible. The claim that the Independence-era 'guarichas' were camp followers who marched with Bolívar's armies is unverified.",
+        "feedback": "The fact check is 'uncertain' and I can't confirm its claims myself. The Cumanagoto (Carib) origin meaning 'young woman' matches the DRAE. But the claims that the word was used in Independence-era camps (question text and hint 2) and that 'many guarichas marched with Bolívar's armies' (fun fact) are poorly supported: camp followers of that era were usually called 'juanas' or 'rabonas', and the Ecuadorian 'guarichas' are tied to Alfaro's 1895 revolution. Rework the question text, hint 2 and the fun fact so they keep to the etymology and the chroniclers' use, or back them with a source. Verificación de datos: uncertain. 'Muchacha o mujer joven' is plausible. Some sources give a Muisca origin, not Carib. The hint and fun fact about guarichas in the independence wars and Bolívar's armies are not well supported. The 'guarichas' of Ecuador date to Alfaro's 1895 revolution. Camp followers of the independence era were usually called 'juanas' or 'rabonas'. I could not verify the Carib origin or the chronicler attestation.",
         "problems": [
           "fact"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. I didn't verify this one online. The Caribe origin and the meaning 'muchacha/mujer' look plausible. The claim that the Independence-era 'guarichas' were camp followers who marched with Bolívar's armies is unverified.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null
     },
     {
       "id": "q-7331",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Lleva más de mil años posando para la foto sin pestañear.",
       "question": "Mira esta figura tallada en piedra. ¿Qué es?",
@@ -565545,7 +565666,7 @@
       ],
       "hints": [
         "Quienes las tallaron no dejaron escritura, y muchas de estas figuras cuidaban tumbas.",
-        "Están en las montañas del sur de Colombia, y muchas caras tienen colmillos, como de jaguar.",
+        "Muchas caras tienen colmillos, como de jaguar, y algunas figuras parecen guardianes que sostienen animales o herramientas.",
         "Están en un parque arqueológico del Huila, cerca del nacimiento del río Magdalena."
       ],
       "media": {
@@ -565591,26 +565712,33 @@
       "needs_media": true,
       "batch": "batch-18",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: 'en las montañas del sur de Colombia' rules out all three wrong answers outright (Easter Island/Chile, Mexico, Peru), so hint 2 solves the question by itself. Hint 2 should be about something like the fangs or the guardian figures, with no country or region. Media pick 6 is fine.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: 'en las montañas del sur de Colombia' rules out all three wrong answers outright (Easter Island/Chile, Mexico, Peru), so hint 2 solves the question by itself. Hint 2 should be about something like the fangs or the guardian figures, with no country or region. Media pick 6 is fine.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 1 no longer names Colombia (moved to hint 2), and the question now refers to a whole carved figure.",
+        "reason": "Hint 2 named southern Colombia, which ruled out every wrong option; it now describes the fangs and guardian figures with no place named.",
         "previous": {
-          "question": "Mira este acercamiento a una cara tallada en piedra. ¿Qué es?",
           "hints": [
-            "Está en Colombia, entre montañas del sur del país.",
-            "Muchas de estas caras tienen colmillos, como de jaguar.",
+            "Quienes las tallaron no dejaron escritura, y muchas de estas figuras cuidaban tumbas.",
+            "Están en las montañas del sur de Colombia, y muchas caras tienen colmillos, como de jaguar.",
             "Están en un parque arqueológico del Huila, cerca del nacimiento del río Magdalena."
           ]
         },
@@ -566826,7 +566954,7 @@
     },
     {
       "id": "q-7348",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Un navarro que llegó tan lejos de casa que tuvo que traerse el nombre de su tierra en la maleta.",
       "question": "El conquistador navarro Pedro de Ursúa fundó la ciudad de Pamplona, en el actual Norte de Santander. ¿En qué año?",
@@ -566844,11 +566972,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Pamplona Colombia plaza",
+        "query": "Pamplona Norte de Santander",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APamplona%2CNorte_de_Santander.PNG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Pamplona%2CNorte_de_Santander.PNG/3840px-Pamplona%2CNorte_de_Santander.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "EEIM · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "EEIM",
+        "author_url": "https://commons.wikimedia.org/wiki/User:EEIM",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Años después, Ursúa se fue a buscar El Dorado por el río Amazonas, en una de las expediciones más famosas de la Conquista.",
       "subcategory": "conquest-and-colonial-era",
@@ -566877,25 +567012,49 @@
       "needs_media": false,
       "batch": "batch-18",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the image candidates shows Pamplona in Norte de Santander. They show Plaza Colombia in Buenos Aires (1, 2), Botero sculptures in Medellín (3, 4), Plaza de Bolívar in Bogotá (5) and Cartagena (6), and no new search is allowed. The slot needs a photo of Pamplona's main square or cathedral, for example from the search 'Pamplona Norte de Santander'. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates shows Pamplona in Norte de Santander. They show Plaza Colombia in Buenos Aires (1, 2), Botero sculptures in Medellín (3, 4), Plaza de Bolívar in Bogotá (5) and Cartagena (6), and no new search is allowed. The slot needs a photo of Pamplona's main square or cathedral, for example from the search 'Pamplona Norte de Santander'. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No candidate showed Pamplona in Norte de Santander, so I changed the image query to target it.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Pamplona Colombia plaza",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7349",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "No tiene nada que ver con la mazamorra de la abuela, aunque también se hace con paciencia.",
-      "question": "Este recipiente de madera se usa en el mazamorreo, en los ríos de Antioquia y Chocó. ¿Qué se busca con él?",
+      "question": "En el mazamorreo, en los ríos de Antioquia y Chocó, se lava la arena en una batea de madera. ¿Qué se busca?",
       "answer": "Oro",
       "wrong_answers": [
         "Sal",
@@ -566909,12 +567068,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "barequeo batea Colombia",
-        "note": "Una batea de madera (plato cónico para lavar arenas de río), idealmente vacía o con arena; que no se vea oro brillante.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Atrato river Choco",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABETE_donde_creci%2C_ahora_Municio_del_medio_Atrato_Rio_04.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/BETE_donde_creci%2C_ahora_Municio_del_medio_Atrato_Rio_04.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "CHOColombia · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "CHOColombia",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:CHOColombia&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El mazamorreo se practica desde antes de la llegada de los españoles y todavía hoy es el sustento de muchas familias del Chocó.",
       "subcategory": "conquest-and-colonial-era",
@@ -566940,21 +567106,47 @@
         "notes": "Hint 3 nearly gives it away, which hint 3 may do. The query 'gold panning' could return photos with visible gold; the note asks for none, but that relies on the image being picked carefully."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-18",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The essential image must show a wooden batea, but none of the candidates does: two are municipal coats of arms (Nechí, Bagadó) and one is a river swimming spot. Another search isn't allowed, so the slot needs a real batea photo (e.g. 'wooden gold pan batea'), or the question should be reworded so it doesn't depend on the image (\"Este recipiente…\"). No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential image must show a wooden batea, but none of the candidates does: two are municipal coats of arms (Nechí, Bagadó) and one is a river swimming spot. Another search isn't allowed, so the slot needs a real batea photo (e.g. 'wooden gold pan batea'), or the question should be reworded so it doesn't depend on the image (\"Este recipiente…\"). No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No batea photo was found, so I reworded the question to name the batea itself and made the media an illustrative river image.",
+        "previous": {
+          "question": "Este recipiente de madera se usa en el mazamorreo, en los ríos de Antioquia y Chocó. ¿Qué se busca con él?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "barequeo batea Colombia",
+            "note": "Una batea de madera (plato cónico para lavar arenas de río), idealmente vacía o con arena; que no se vea oro brillante.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7350",
@@ -567773,7 +567965,7 @@
     },
     {
       "id": "q-7361",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Un apodo tan pegajoso que nadie se lo puede quitar de encima.",
       "question": "«La Liendra» es el apodo de un influencer colombiano muy famoso. Pero, ¿qué es de verdad una liendra?",
@@ -567791,11 +567983,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "long hair closeup",
+        "query": "fine tooth comb hair",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Ladies%27_home_journal_%281948%29_%2814763302201%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/The_Ladies%27_home_journal_%281948%29_%2814763302201%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Internet Archive Book Images",
+        "author_url": "https://www.flickr.com/people/126377022@N07",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En el diccionario la palabra es «liendre», pero en Colombia muchos dicen «liendra».",
       "subcategory": "hosts-actors-and-comedians",
@@ -567824,18 +568023,42 @@
       "needs_media": false,
       "batch": "batch-18",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but none of the candidates fits a question about nits and human hair. Candidates 1 and 6 are plants. Candidates 2, 3 and 5 are cats, which suggest pets and fleas (close to the wrong option «pulga de perro»). Candidate 4 is a body-focused gym photo, not suitable for families. A new search such as \"child hair comb\" or \"hair brushing\" is needed. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but none of the candidates fits a question about nits and human hair. Candidates 1 and 6 are plants. Candidates 2, 3 and 5 are cats, which suggest pets and fleas (close to the wrong option «pulga de perro»). Candidate 4 is a body-focused gym photo, not suitable for families. A new search such as \"child hair comb\" or \"hair brushing\" is needed. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Only the media failed, so I gave the decorative image a new query (a fine-tooth comb in hair) that fits nits without suggesting pets or fleas.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "long hair closeup",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7362",
@@ -568143,10 +568366,10 @@
     },
     {
       "id": "q-7366",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "El escudo de una familia que se separó hace casi dos siglos y todavía se reúne en los partidos de fútbol.",
-      "question": "Este escudo, con dos cuernos de la abundancia y un haz de lanzas, era el de un país creado en 1819. ¿Qué países de hoy lo formaban?",
+      "question": "En 1819 nació un país cuyo escudo tenía dos cuernos de la abundancia y un haz de lanzas. ¿Qué países de hoy lo formaban?",
       "answer": "Colombia, Venezuela, Ecuador y Panamá",
       "wrong_answers": [
         "Colombia, Venezuela, Perú y Bolivia",
@@ -568160,12 +568383,23 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Escudo Gran Colombia 1821",
-        "note": "El escudo de la Gran Colombia de 1821, con las cornucopias y el haz de lanzas; sin el nombre «Gran Colombia» escrito.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Simon Bolivar portrait painting",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APortrait_of_Sim%C3%B3n_Bol%C3%ADvar_by_Arturo_Michelena.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Portrait_of_Sim%C3%B3n_Bol%C3%ADvar_by_Arturo_Michelena.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Arturo Michelena · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Arturo Michelena",
+        "author_url": "https://en.wikipedia.org/wiki/en:Arturo_Michelena",
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-US",
+          "PD-Venezuela",
+          "PD-old"
+        ]
       },
       "fun_fact": "«Gran Colombia» es el nombre que le pusieron los historiadores: en su época se llamaba simplemente República de Colombia.",
       "subcategory": "national-symbols",
@@ -568191,21 +568425,47 @@
         "notes": "Solid question. The image is labelled essential, but the text alone ('un país creado en 1819') is enough to answer, so it is really illustrative. The coat of arms is easy to find on Commons."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-18",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows the Gran Colombia coat of arms, but the question needs it because it says \"Este escudo\". #1 is Venezuela's 2006 coat of arms, which is a different emblem. #2, #3 and #5 are maps of Gran Colombia that show which countries it covered, so they give the answer away. #4 is Panama's 1821 independence act, which points to Panama. #6 is a handwritten letter. No new search is allowed, so the media needs a manual fix: for example, Commons' Gran Colombia coat of arms file, cropped so the name doesn't show. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows the Gran Colombia coat of arms, but the question needs it because it says \"Este escudo\". #1 is Venezuela's 2006 coat of arms, which is a different emblem. #2, #3 and #5 are maps of Gran Colombia that show which countries it covered, so they give the answer away. #4 is Panama's 1821 independence act, which points to Panama. #6 is a handwritten letter. No new search is allowed, so the media needs a manual fix: for example, Commons' Gran Colombia coat of arms file, cropped so the name doesn't show. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable coat-of-arms image was found, so the question now describes the coat of arms in words and uses an illustrative Bolívar portrait, which doesn't rule out any option.",
+        "previous": {
+          "question": "Este escudo, con dos cuernos de la abundancia y un haz de lanzas, era el de un país creado en 1819. ¿Qué países de hoy lo formaban?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Escudo Gran Colombia 1821",
+            "note": "El escudo de la Gran Colombia de 1821, con las cornucopias y el haz de lanzas; sin el nombre «Gran Colombia» escrito.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7367",
@@ -569316,7 +569576,7 @@
     },
     {
       "id": "q-7382",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "En esta ciudad de animales hasta la estrella del pop tiene club de fans y bailarines de lujo.",
       "question": "Esta cantante colombiana le pone la voz a la estrella pop de Zootopia. ¿Qué animal es ese personaje?",
@@ -569324,12 +569584,12 @@
       "wrong_answers": [
         "Una coneja",
         "Una oveja",
-        "Una zorra"
+        "Una cebra"
       ],
       "hints": [
         "No es la policía ni la alcaldesa: canta en un escenario gigante.",
-        "Es un animal de la sabana africana, flaco, con cuernos y muy veloz.",
-        "Su nombre en la película es casi igual a la palabra del animal en inglés."
+        "Come solo plantas y tiene patas largas y delgadas.",
+        "Vive en la sabana africana, tiene cuernos y corre muy rápido."
       ],
       "media": {
         "type": "image",
@@ -569374,19 +569634,44 @@
       "needs_media": true,
       "batch": "batch-18",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: \"savanna, thin, horns, very fast\" leaves gazelle as the only possible option out of the four (rabbit, sheep and fox all fail), so hint 2 effectively solves the question. It should give a vaguer clue (e.g. that she has a herbivore's diet or a long neck and legs), and the third hint can then point to savanna and horns. Separately, \"Una zorra\" works as a crude insult for a woman in Colombia and much of Latin America, so a family game shouldn't use it as an option. Replace it with another animal from the film (e.g. \"Una cebra\" or \"Una leona\").",
-        "problems": [
-          "giveaway",
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: \"savanna, thin, horns, very fast\" leaves gazelle as the only possible option out of the four (rabbit, sheep and fox all fail), so hint 2 effectively solves the question. It should give a vaguer clue (e.g. that she has a herbivore's diet or a long neck and legs), and the third hint can then point to savanna and horns. Separately, \"Una zorra\" works as a crude insult for a woman in Colombia and much of Latin America, so a family game shouldn't use it as an option. Replace it with another animal from the film (e.g. \"Una cebra\" or \"Una leona\").",
+          "problems": [
+            "giveaway",
+            "style"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made hint 2 vaguer (it eats plants, long thin legs), moved savanna and horns to hint 3, and replaced «Una zorra» with «Una cebra» because «zorra» is a crude insult in much of Latin America.",
+        "previous": {
+          "wrong_answers": [
+            "Una coneja",
+            "Una oveja",
+            "Una zorra"
+          ],
+          "hints": [
+            "No es la policía ni la alcaldesa: canta en un escenario gigante.",
+            "Es un animal de la sabana africana, flaco, con cuernos y muy veloz.",
+            "Su nombre en la película es casi igual a la palabra del animal en inglés."
+          ]
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7383",
@@ -570041,7 +570326,7 @@
     },
     {
       "id": "q-7392",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Dos sílabas, cero formalidad y nadie se queja.",
       "question": "Es muy informal y viene de juntar «qué» y «hubo». ¿Qué quiere decir «¿quiubo?»?",
@@ -570059,11 +570344,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "two friends greeting",
+        "query": "Bogota neighborhood street",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABogota_Quiroga_bario_-_casas_calle_28_C_sur_con_carrera_19_B_bis.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Bogota_Quiroga_bario_-_casas_calle_28_C_sur_con_carrera_19_B_bis.JPG/3840px-Bogota_Quiroga_bario_-_casas_calle_28_C_sur_con_carrera_19_B_bis.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Felipe Restrepo Acosta · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Felipe Restrepo Acosta",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pedro_Felipe",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "«Q'hubo» es tan colombiano que así se llama también un periódico popular del país.",
       "subcategory": "sayings-and-expressions",
@@ -570092,18 +570384,42 @@
       "needs_media": false,
       "batch": "batch-18",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate works as an illustrative image, and another search isn't allowed. #2 (two cats touching noses) shows a greeting, which is the answer itself. #1 is a climate protest with a 'KILLER' sign, #3 is a captioned 1847 Māori engraving, #5 is a diplomatic meeting, and #4 and #6 have nothing to do with the question. The question needs a neutral Colombian image instead, such as a neighbourhood street or a corner shop in Bogotá or Medellín. Also check overlap with q-5198: if its options list «quiubo» as a greeting, it gives this answer away. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate works as an illustrative image, and another search isn't allowed. #2 (two cats touching noses) shows a greeting, which is the answer itself. #1 is a climate protest with a 'KILLER' sign, #3 is a captioned 1847 Māori engraving, #5 is a diplomatic meeting, and #4 and #6 have nothing to do with the question. The question needs a neutral Colombian image instead, such as a neighbourhood street or a corner shop in Bogotá or Medellín. Also check overlap with q-5198: if its options list «quiubo» as a greeting, it gives this answer away. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the illustrative image to a neutral Bogotá street scene, because a greeting image would show the answer.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "two friends greeting",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7393",
@@ -570870,9 +571186,9 @@
     },
     {
       "id": "q-7403",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
-      "description": "Sin ella, hasta la mejor orquesta anda más perdida que turista sin GPS.",
+      "description": "En Cali la salsa se toma tan en serio que hasta los melómanos hablan como profesores de conservatorio.",
       "question": "Estás en una salsoteca de Cali y un melómano dice que la orquesta «se cruzó de clave». En la salsa, ¿qué es la clave?",
       "answer": "Un patrón de cinco golpes que guía el ritmo",
       "wrong_answers": [
@@ -570928,18 +571244,34 @@
       "needs_media": false,
       "batch": "batch-18",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description gives away the answer: saying that even the best orchestra is lost without it is the clave's defining trait (the pattern that guides the rhythm). It also rules out the sung high note, the dancers' step and the closing piano solo, since no orchestra gets lost without those. Rewrite the description so it plays on Cali or salsoteca nights without hinting that the thing keeps the band together.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description gives away the answer: saying that even the best orchestra is lost without it is the clave's defining trait (the pattern that guides the rhythm). It also rules out the sung high note, the dancers' step and the closing piano solo, since no orchestra gets lost without those. Rewrite the description so it plays on Cali or salsoteca nights without hinting that the thing keeps the band together.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote the description so it plays on Cali's salsa culture without hinting that the clave keeps the band together.",
+        "previous": {
+          "description": "Sin ella, hasta la mejor orquesta anda más perdida que turista sin GPS."
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7404",
@@ -571880,7 +572212,7 @@
     },
     {
       "id": "q-7416",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Un billete con la cabeza en las nubes… y un poquito más arriba.",
       "question": "El billete de 20 000 pesos lleva la cara de Julio Garavito y un dibujo de la Luna, y un cráter lunar tiene su nombre. ¿Por qué?",
@@ -571898,11 +572230,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Colombia 20000 pesos banknote",
+        "query": "full moon telescope",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFullMoon2010.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Gregory H. Revera · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Gregory H. Revera",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El cráter Garavito está en la cara oculta de la Luna, la que nunca vemos desde la Tierra.",
       "subcategory": "scientists-and-inventors",
@@ -571931,18 +572270,42 @@
       "needs_media": false,
       "batch": "batch-18",
       "review": {
-        "decision": "needs_work",
-        "feedback": "All four media candidates show the Chilean 20 000 peso banknote (Andrés Bello portrait and the reverse with a landscape), not the Colombian note with Julio Garavito and the Moon. A new search isn't allowed, so the slot needs media from somewhere else, e.g. a Commons file of the Colombian 20 000 COP note (2016 series) or a generic Moon photo as the illustrative image. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "All four media candidates show the Chilean 20 000 peso banknote (Andrés Bello portrait and the reverse with a landscape), not the Colombian note with Julio Garavito and the Moon. A new search isn't allowed, so the slot needs media from somewhere else, e.g. a Commons file of the Colombian 20 000 COP note (2016 series) or a generic Moon photo as the illustrative image. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The banknote search only found Chilean notes, so the illustrative image is now a Moon photo, which belongs to the question and rules out no option.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Colombia 20000 pesos banknote",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7417",
@@ -572487,10 +572850,10 @@
     },
     {
       "id": "q-7424",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Estocolmo nunca había oído tanto acordeón en una noche tan fría.",
-      "question": "En 1982 García Márquez llevó músicos vallenatos a Estocolmo y recibió el Nobel vestido con esta prenda blanca. ¿Cómo se llama?",
+      "question": "En 1982 García Márquez llevó músicos vallenatos a Estocolmo y recibió el Nobel vestido con una prenda blanca. ¿Cómo se llama?",
       "answer": "El liqui liqui",
       "wrong_answers": [
         "La guayabera",
@@ -572504,12 +572867,21 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "liquiliqui traditional costume",
-        "note": "Primer plano de un liqui liqui blanco: cuello alto cerrado y botonadura al frente; sin texto ni personas reconocibles.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Stockholm Concert Hall",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_concert_hall_stockholm_sweden_20050616.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/The_concert_hall_stockholm_sweden_20050616.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Jonas Bergsten · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jonas Bergsten",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bergsten",
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-user"
+        ]
       },
       "fun_fact": "Gabo fue de los pocos premiados de esa noche que no recibió el Nobel de frac.",
       "subcategory": "vallenato",
@@ -572535,21 +572907,47 @@
         "notes": "The facts are correct: a white liqui liqui at the 1982 Nobel ceremony, with vallenato musicians in the delegation. Poncho and ruana are not white suits that could be worn to a ceremony, so only the guayabera is a strong distractor. The essential image isn't necessary (the question works without it), and a clean Commons photo of a liqui liqui is uncertain; it would be better as illustrative or decorative. Hint 3 nearly gives the answer away, which is allowed."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-18",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the six candidates shows a liqui liqui: they are Ifugao, Tibetan, Andean, Seto, Russian and Uzbek costumes, and #3 even shows a poncho (a wrong option). No new search is allowed. The slot needs a real liqui liqui photo, or a change to an illustrative or decorative role (e.g. Stockholm Concert Hall or a vallenato accordion). No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates shows a liqui liqui: they are Ifugao, Tibetan, Andean, Seto, Russian and Uzbek costumes, and #3 even shows a poncho (a wrong option). No new search is allowed. The slot needs a real liqui liqui photo, or a change to an illustrative or decorative role (e.g. Stockholm Concert Hall or a vallenato accordion). No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No liqui liqui photo was found, so the question no longer says «esta prenda» and the media is an illustrative photo of the Stockholm Concert Hall.",
+        "previous": {
+          "question": "En 1982 García Márquez llevó músicos vallenatos a Estocolmo y recibió el Nobel vestido con esta prenda blanca. ¿Cómo se llama?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "liquiliqui traditional costume",
+            "note": "Primer plano de un liqui liqui blanco: cuello alto cerrado y botonadura al frente; sin texto ni personas reconocibles.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-23"
+      }
     }
   ]
 }
