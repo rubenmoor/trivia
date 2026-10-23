@@ -91,6 +91,28 @@ Major findings on approved questions:
 - **q-5079**: media — The illustrative image is "File:Guatapé 29.jpg". Its title names the answer, and the photo itself is shown sharp. If it shows Guatapé's famous colourful streets or El Peñol rock, Colombian families can recognise the place from the picture alone. The facts check out: the zócalos, the Peñol-Guatapé reservoir, the rock climbed by stairs and the roughly two-hour drive from Medellín are all correct. The three wrong options don't fit the clue, and none of the related questions overlap. (http://127.0.0.1:8001/review/q-5079)
 - **q-5106**: giveaway, difficulty — The description ("Una cartera que piensa") already says the object is a bag. That rules out all three wrong answers (ruana, sombrero vueltiao, hamaca). Hint 1 ("Sirve para cargar cosas") narrows it the same way. The question text adds "cruzada al pecho", which also only fits a bag, so this is easier than 6 for Colombian players (about 4). The facts (Arhuaco women weave the mochila with sheep wool, men wear it crossed over the chest) are correct. (http://127.0.0.1:8001/review/q-5106)
 
+## Quality control
+
+The developer's blind spot check (`/review?batch=…&sample=1`) against the LLM review and the audit (plan 16, `qgen report --qc`). Agree = both accept or both don't.
+
+- Spot check: 30 decided of 30
+- Agreement with the LLM review: 28 of 30 (93 %) ✓ (bar: ≥ 30 questions, ≥ 90 %)
+- Release bar (D-79): ✓ release-ready
+- False approve (LLM approved, human not): 1 of 30 (3 %); the audit flagged 0
+- False needs work (LLM not approved, human approved): 1 of 30 (3 %)
+- Difficulty |Δ| ≥ 2: 0 of 30 (0 %)
+- Media changed: 0 of 30 (0 %)
+- Audit/human agreement: 27 of 30 (90 %)
+
+Disagreements with the LLM review, by the human's problems:
+
+### no problem given (2)
+
+- **q-5071** LLM approved → human needs_work, audit ok: i like the question but it is about a fictional character. that doesn't seem to fit. fictional characters would be allowed, but this specific fictional character is just a small role in a disney move which happens to take place in colombia. too much of a stretch. we can leave this in the colombia bundle, but the category must be "colombia in fiction" or something close. if no category can be found: this is a totally fine question for the base bundle (http://127.0.0.1:8001/review/q-5071)
+- **q-5158** LLM needs_work → human approved, audit ok (http://127.0.0.1:8001/review/q-5158)
+
+Changes from this QC: none
+
 ## Needs work
 
 - **q-5008** (19th-century) Estás viendo las miles de láminas de flores pintadas a mano por la Real Expedición Botánica. ¿Quién dirigió esa expedición? → José Celestino Mutis: None of the media candidates shows what the question names. All six are black-and-white lithographs from 19th-century US expedition reports (Bigelow/Torrey, Stansbury, Sitgreaves), not the hand-painted colour plates of the Real Expedición Botánica. A new search can't be run, so the slot needs a real Mutis expedition plate, for example a search for "Flora de la Real Expedición Botánica" or "Mutis lámina quina" on Commons. No se encontró una imagen adecuada para esta pregunta.

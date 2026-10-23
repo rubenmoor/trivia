@@ -20,3 +20,8 @@ Sub-plan of [15](15-i18n.md). The pool was written for two Colombian kids (D-6),
 - [x] RG-5 Decide which regional packs come next (by launch language). *2026-10-14 (D-99, pm decision 110): every regional bundle 2000 approved, region's language + en, free DLC, off by default, bundle-scoped taxonomy; pilot `colombia`, more packs (`mexico`, `argentina`) by a decision after it; work in pm plan 98.*
 - [ ] RG-7 More regional bundles (milestone 9, 2026-10-15; plan 98 tasks 11–15): `usa` (en, 2000, set up by task 1276, runs from task 1268), `germany` (de, 2000, set up by task 1277, runs from task 1269), `uk` (en, 2000, set up by task 1278, runs from task 1270), `spain` (es-ES, 2000, set up by task 1279, runs from task 1271), `mexico` (es, 2000, set up by task 1280, runs from task 1272).
 - [x] RG-6 Regional taxonomies (pm decision 166, plan 138). *2026-10-16 (D-109): general list `authoring/data/regional-categories.json` (pm decision 213); `qgen taxonomy --bundle <id>` proposes and applies a region's list; `colombia` 14 categories, 53 subcategories (pm decision 249); `qgen remap --bundle colombia` moved its 109 questions onto it; `validate` requires a question's subcategory in its own bundle's list.*
+- Pilot effort, first numbers (`colombia` batch-12, QC 2026-10-22; chain proven, chain 5 may start):
+  - 239 approved, 14 needs_work (rework-7 fixed 7); spot check 28 of 30 agree (93 %), release bar ✓
+  - $0.28 per approved (`qgen report --cost`, bundle row; run $12.41 plus factcheck; the bundle row's $69.26 includes earlier spend); 1659 to go → ≈ $575
+  - review time: 35 min per 100 verdicts (`qgen report --review-time --bundle colombia`; only 28 timed verdicts, small sample)
+  - not too costly for chain 5's pace; no decision
