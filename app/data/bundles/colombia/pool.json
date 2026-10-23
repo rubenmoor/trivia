@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "d5cc7b58",
+  "hash": "5bf5825d",
   "questions": [
     {
       "id": "q-0002",
@@ -12558,6 +12558,40 @@
       "background": null
     },
     {
+      "id": "q-6809",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "cities-and-towns",
+      "bundle": "colombia",
+      "description": "Un vecino caleño con los brazos abiertos que nunca se cansa de saludar.",
+      "question": "¿En qué década se terminó el Cristo Rey que vigila a Cali desde el cerro Los Cristales?",
+      "answer": "La década de 1950",
+      "wrong_answers": [
+        "La década de 1850",
+        "La década de 1900",
+        "La década de 2000"
+      ],
+      "hints": [
+        "Es más joven que la Torre Eiffel.",
+        "Se construyó en el siglo XX, cuando Cali ya crecía rápido.",
+        "Se pensó para celebrar los 50 años del fin de la Guerra de los Mil Días (1902)."
+      ],
+      "fun_fact": "Mide unos 26 metros de alto con su base y se ve desde casi toda Cali.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Panoramic_Cali_Col.jpg/3840px-Panoramic_Cali_Col.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APanoramic_Cali_Col.jpg",
+        "credit": "Aleko · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Aleko",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Aleko&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-6810",
       "status": "approved",
       "difficulty": 8,
@@ -12966,6 +13000,40 @@
       "background": null
     },
     {
+      "id": "q-6823",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "cycling",
+      "bundle": "colombia",
+      "description": "Una carretera con más curvas que una telenovela, y un final feliz para Colombia.",
+      "question": "En 1984, en la subida al Alpe d'Huez, un colombiano ganó la primera etapa del Tour para su país. ¿Quién fue?",
+      "answer": "Lucho Herrera",
+      "wrong_answers": [
+        "Fabio Parra",
+        "Martín Ramírez",
+        "Patrocinio Jiménez"
+      ],
+      "hints": [
+        "Años después ganó también la Vuelta a España",
+        "Nació en Fusagasugá",
+        "Le decían «el Jardinerito»"
+      ],
+      "fun_fact": "El Alpe d'Huez tiene 21 curvas, y cada una lleva una placa con el nombre de ganadores de etapa allí.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Alpe_d%27Huez%2C_France_%287957045090%29.jpg/3840px-Alpe_d%27Huez%2C_France_%287957045090%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlpe_d%27Huez%2C_France_%287957045090%29.jpg",
+        "credit": "Robbie Shade · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Robbie Shade",
+        "author_url": "https://www.flickr.com/people/89466603@N00"
+      },
+      "background": null
+    },
+    {
       "id": "q-6825",
       "status": "approved",
       "difficulty": 5,
@@ -13030,6 +13098,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Ivar Leidus",
         "author_url": "https://commons.wikimedia.org/wiki/User:Iifar"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6827",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "drinks",
+      "bundle": "colombia",
+      "description": "Unas burbujas que cosquillean hasta la nariz.",
+      "question": "Mira de cerca: ¿cómo se le dice en Colombia a esta bebida dulce llena de burbujas?",
+      "answer": "Gaseosa",
+      "wrong_answers": [
+        "Aromática",
+        "Tinto",
+        "Jugo"
+      ],
+      "hints": [
+        "Viene en botella o en lata.",
+        "Se toma bien fría.",
+        "Su nombre viene del gas de sus burbujas."
+      ],
+      "fun_fact": "Las burbujas de la gaseosa son gas carbónico, el mismo que soltamos al respirar.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Gasbl%C3%A4schen_--_2022_--_9759.jpg/3840px-Gasbl%C3%A4schen_--_2022_--_9759.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGasbl%C3%A4schen_--_2022_--_9759.jpg",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025"
       },
       "background": null
     },
@@ -13578,6 +13680,40 @@
       "background": null
     },
     {
+      "id": "q-6844",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "hosts-actors-and-comedians",
+      "bundle": "colombia",
+      "description": "Un personaje que nunca ha tenido que hacer fila en su vida, porque su papi siempre llama a alguien.",
+      "question": "Juanpis González es un gomelo, le dice «mi papi» a su papá y tiene su programa, «Juanpis Live Show». ¿De qué ciudad es?",
+      "answer": "Bogotá",
+      "wrong_answers": [
+        "Medellín",
+        "Cali",
+        "Barranquilla"
+      ],
+      "hints": [
+        "Lo interpreta el humorista Alejandro Riaño.",
+        "Se burla de los jóvenes ricos del norte de su ciudad.",
+        "Es la capital del país."
+      ],
+      "fun_fact": "En el «Juanpis Live Show» Alejandro Riaño ha entrevistado, metido en el personaje, a políticos y famosos de verdad.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Carlsson_C25_at_the_Michelin_Stand.jpg/3840px-Carlsson_C25_at_the_Michelin_Stand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACarlsson_C25_at_the_Michelin_Stand.jpg",
+        "credit": "Michelin LIVE UK · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Michelin LIVE UK",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-6845",
       "status": "approved",
       "difficulty": 12,
@@ -13816,6 +13952,74 @@
       "background": null
     },
     {
+      "id": "q-6852",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "independence",
+      "bundle": "colombia",
+      "description": "Cruzaron un océano entero para venir a meterse en un pantano boyacense.",
+      "question": "En el Pantano de Vargas (1819), el coronel James Rooke dirigió a voluntarios europeos que pelearon junto a Bolívar. ¿De dónde venían casi todos?",
+      "answer": "De Gran Bretaña e Irlanda",
+      "wrong_answers": [
+        "De Francia y Bélgica",
+        "De Alemania y Austria",
+        "De Italia y Suiza"
+      ],
+      "hints": [
+        "Muchos eran veteranos de las guerras contra Napoleón.",
+        "Llegaron por mar desde un reino de islas.",
+        "El propio Rooke había nacido en Dublín."
+      ],
+      "fun_fact": "El monumento del Pantano de Vargas, obra de Rodrigo Arenas Betancourt, es uno de los más grandes de Colombia.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Monumento_pantano_de_vargas%2C_completo._2006.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMonumento_pantano_de_vargas%2C_completo._2006.JPG",
+        "credit": "Kamilokardona · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Kamilokardona",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kamilokardona&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6853",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "independence",
+      "bundle": "colombia",
+      "description": "Antes de los megáfonos, la independencia se pedía a pulmón.",
+      "question": "El 20 de julio de 1810, un criollo animó a la multitud de Santafé a exigir un cabildo abierto. ¿Quién fue?",
+      "answer": "José Acevedo y Gómez",
+      "wrong_answers": [
+        "Antonio Nariño",
+        "Francisco José de Caldas",
+        "Antonio Morales"
+      ],
+      "hints": [
+        "Era regidor del cabildo de Santafé.",
+        "Su apodo venía de un cargo de la antigua Roma que defendía a la gente común.",
+        "Lo llamaron «el Tribuno del Pueblo»."
+      ],
+      "fun_fact": "Acevedo y Gómez le gritó al pueblo que si perdía «estos momentos de efervescencia y calor», sería tratado como insurgente.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Casa_Florero.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACasa_Florero.jpg",
+        "credit": "Baiji · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Baiji",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Baiji"
+      },
+      "background": null
+    },
+    {
       "id": "q-6854",
       "status": "approved",
       "difficulty": 11,
@@ -14016,6 +14220,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Fons Heijnsbroek",
         "author_url": "https://commons.wikimedia.org/wiki/User:FotoDutch"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6860",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "mountains-and-landscapes",
+      "bundle": "colombia",
+      "description": "Una ciudad que viene con ruana incluida.",
+      "question": "Completa: por su clima frío, mucha gente de tierra caliente le dice a Bogotá «la…»",
+      "answer": "Nevera",
+      "wrong_answers": [
+        "Estufa",
+        "Licuadora",
+        "Olla"
+      ],
+      "hints": [
+        "Es un apodo que viene de un aparato de la cocina.",
+        "En ese aparato todo se mantiene frío.",
+        "Ahí guardas la leche y el hielo."
+      ],
+      "fun_fact": "Bogotá está a unos 2600 metros de altura y su temperatura promedio ronda los 14 grados.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Bogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg/3840px-Bogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg",
+        "credit": "Steffen Schmitz (more photos) · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Steffen Schmitz (more photos)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Carschten"
       },
       "background": null
     },
@@ -14526,6 +14764,40 @@
         "license_url": "https://www.flickr.com/commons/usage/",
         "author": "Internet Archive Book Images",
         "author_url": "https://www.flickr.com/people/126377022@N07"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6879",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "plants-and-flowers",
+      "bundle": "colombia",
+      "description": "Una nube que en vez de llover se convierte en camiseta.",
+      "question": "Mira esta mota blanca que sale de una planta sembrada en Córdoba y el Tolima. ¿Qué es?",
+      "answer": "Algodón",
+      "wrong_answers": [
+        "Fique",
+        "Lana",
+        "Seda"
+      ],
+      "hints": [
+        "Con ella se hacen camisetas y medias.",
+        "Es blanca, suavecita y esponjosa.",
+        "También se usa en bolitas para limpiar heridas."
+      ],
+      "fun_fact": "En los años setenta, al algodón le decían “oro blanco” en Córdoba y el Cesar por la plata que dejaba.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Cotton_boll_nearly_ready_for_harvest.jpg/3840px-Cotton_boll_nearly_ready_for_harvest.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACotton_boll_nearly_ready_for_harvest.jpg",
+        "credit": "Michael Bass-Deschenes(Commons User Mike Bass-Deschênes) · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Michael Bass-Deschenes(Commons User Mike Bass-Deschênes)",
+        "author_url": "https://www.flickr.com/people/123184012@N02"
       },
       "background": null
     },
@@ -15754,6 +16026,40 @@
       "background": null
     },
     {
+      "id": "q-6916",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "fruits",
+      "bundle": "colombia",
+      "description": "Unas semillitas chiquitas con un puesto fijo en la cocina colombiana.",
+      "question": "Mira la foto: en Colombia estas semillas se le echan al tamal y al arroz. ¿Para qué se usan?",
+      "answer": "Como colorante",
+      "wrong_answers": [
+        "Como endulzante",
+        "Como espesante",
+        "Como fermento"
+      ],
+      "hints": [
+        "Casi no cambian el sabor de la comida.",
+        "Si las tocas, te quedan los dedos manchados.",
+        "Gracias a ellas muchos platos quedan rojizos o anaranjados."
+      ],
+      "fun_fact": "El mismo achiote que pinta el arroz le da su color naranja a muchos quesos tipo cheddar en el mundo.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Bixa_orellana_fruit_open.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABixa_orellana_fruit_open.jpg",
+        "credit": "Leonardo Ré-Jorge · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Leonardo Ré-Jorge",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Leonardorejorge"
+      },
+      "background": null
+    },
+    {
       "id": "q-6917",
       "status": "approved",
       "difficulty": 2,
@@ -16230,6 +16536,40 @@
       "background": null
     },
     {
+      "id": "q-6931",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "olympic-medallists",
+      "bundle": "colombia",
+      "description": "Una categoría donde cada gramo cuenta y la báscula es la rival más temida.",
+      "question": "Ingrit Valencia ganó bronce en Río 2016, fue la primera boxeadora colombiana con medalla olímpica y peleaba en la categoría femenina más liviana de esos Juegos. ¿Cuál era?",
+      "answer": "Peso mosca",
+      "wrong_answers": [
+        "Peso pluma",
+        "Peso gallo",
+        "Peso ligero"
+      ],
+      "hints": [
+        "En esos Juegos, el límite de su categoría era de 51 kilos.",
+        "Se llama como un animal.",
+        "Es un insecto que zumba."
+      ],
+      "fun_fact": "En Río 2016 las mujeres solo tenían tres categorías de boxeo: 51, 60 y 75 kilos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/US_Navy_110215-N-2610F-097_Master-at-Arms_Seaman_Rhonda_McGee%2C_left%2C_spars_with_Patricia_Cuevas_during_an_exhibition_match_in_the_preliminary_round.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUS_Navy_110215-N-2610F-097_Master-at-Arms_Seaman_Rhonda_McGee%2C_left%2C_spars_with_Patricia_Cuevas_during_an_exhibition_match_in_the_preliminary_round.jpg",
+        "credit": "U.S. Navy photo by Mass Communication Specialist 2nd Class Elliott Fabrizio · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Navy photo by Mass Communication Specialist 2nd Class Elliott Fabrizio",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-6932",
       "status": "approved",
       "difficulty": 5,
@@ -16362,6 +16702,74 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Mariaalejandragallego",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Mariaalejandragallego&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6936",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "plants-and-flowers",
+      "bundle": "colombia",
+      "description": "Viaja más en avión que muchos ejecutivos, y siempre en clase refrigerada.",
+      "question": "Colombia es uno de los mayores exportadores del mundo de esta flor. Mira el detalle: ¿cuál es?",
+      "answer": "Clavel",
+      "wrong_answers": [
+        "Rosa",
+        "Lirio",
+        "Girasol"
+      ],
+      "hints": [
+        "Sus pétalos tienen el borde dentado.",
+        "Huele un poco a especias.",
+        "Su nombre se parece al de la especia que se le echa a la natilla."
+      ],
+      "fun_fact": "El clavel se llama así por el clavo de olor, porque su aroma lo recuerda.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Dianthus_caryophyllus_%28flowers_white%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADianthus_caryophyllus_%28flowers_white%29.jpg",
+        "credit": "Takkk · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Takkk",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Takkk"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6937",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "plants-and-flowers",
+      "bundle": "colombia",
+      "description": "Un jardín entero que camina por Medellín sobre la espalda de alguien.",
+      "question": "En el Desfile de Silleteros, ¿qué categoría de silleta lleva solo flores en ramilletes, sin figuras ni letreros?",
+      "answer": "Tradicional",
+      "wrong_answers": [
+        "Monumental",
+        "Emblemática",
+        "Comercial"
+      ],
+      "hints": [
+        "No lleva marcas ni anuncios.",
+        "Tampoco dibuja mensajes ni imágenes con flores.",
+        "Se arma como lo hacían los abuelos silleteros de Santa Elena."
+      ],
+      "fun_fact": "Antes de la Feria, los campesinos de Santa Elena usaban la silleta para bajar flores a vender a Medellín.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Medell%C3%ADn_skyline02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMedell%C3%ADn_skyline02.jpg",
+        "credit": "I.D. R.J. · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "I.D. R.J.",
+        "author_url": "https://www.flickr.com/people/15072398@N00"
       },
       "background": null
     },
@@ -17790,6 +18198,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "BishopNana",
         "author_url": "https://commons.wikimedia.org/wiki/User:BishopNana"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6981",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "typical-dishes",
+      "bundle": "colombia",
+      "description": "Un mercado donde el maíz manda, pero alguien se coló en la lista.",
+      "question": "Compras maíz peto en la plaza. ¿Cuál de estas preparaciones NO se hace con maíz?",
+      "answer": "Mote de queso",
+      "wrong_answers": [
+        "Mazamorra",
+        "Chicha",
+        "Arepa"
+      ],
+      "hints": [
+        "El intruso es típico de la costa Caribe, sobre todo de Córdoba y Sucre.",
+        "Se come caliente y se acompaña con arroz blanco.",
+        "Se espesa con ñame, un tubérculo."
+      ],
+      "fun_fact": "En Antioquia la mazamorra de maíz peto se toma con leche y un pedazo de panela o bocadillo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Corn_with_white_and_yellow_kernels.jpg/3840px-Corn_with_white_and_yellow_kernels.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACorn_with_white_and_yellow_kernels.jpg",
+        "credit": "Jud McCranie · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jud McCranie",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bubba73"
       },
       "background": null
     },
