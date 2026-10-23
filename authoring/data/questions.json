@@ -539799,10 +539799,10 @@
     },
     {
       "id": "q-6996",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Una semilla tan dura que los elefantes deberían agradecerle.",
-      "question": "En el siglo XIX, Colombia exportaba a Europa y Estados Unidos esta semilla, el 'marfil vegetal'. ¿Para qué se usaba sobre todo?",
+      "question": "En el siglo XIX, Colombia exportaba a Europa y Estados Unidos la tagua, el 'marfil vegetal'. ¿Para qué se usaba sobre todo?",
       "answer": "Para hacer botones",
       "wrong_answers": [
         "Para hacer tinta",
@@ -539816,12 +539816,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Phytelephas seeds",
-        "note": "Foto clara de semillas de tagua, enteras o peladas, sin productos hechos con ellas.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Phytelephas palm tree",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATaguaPalm.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/TaguaPalm.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "The lifted lorax (talk) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "The lifted lorax (talk)\n\nOriginal uploader was The lifted lorax at en.wikipedia",
+        "author_url": "https://en.wikipedia.org/wiki/User:The_lifted_lorax",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El plástico acabó con el gran negocio de la tagua, pero hoy se usa otra vez para joyas y artesanías.",
       "subcategory": "19th-century",
@@ -539847,21 +539854,47 @@
         "notes": "Nice surprising fact. Hint 1 already points strongly at clothing."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-17",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows clean tagua seeds as the essential slot needs. #6 is tagua buttons, which shows the answer. #4 and #5 are carvings made from tagua. #2 and #3 are frog photos where the nut is only a perch. #1 shows the palm's spiky fruit clusters, not the seeds. A new search (e.g. 'tagua nut' or 'vegetable ivory seeds') is needed. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows clean tagua seeds as the essential slot needs. #6 is tagua buttons, which shows the answer. #4 and #5 are carvings made from tagua. #2 and #3 are frog photos where the nut is only a perch. #1 shows the palm's spiky fruit clusters, not the seeds. A new search (e.g. 'tagua nut' or 'vegetable ivory seeds') is needed. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No clean tagua seed photo exists, so the question now names the tagua in the text and uses an illustrative image of the palm instead of an essential seed photo.",
+        "previous": {
+          "question": "En el siglo XIX, Colombia exportaba a Europa y Estados Unidos esta semilla, el 'marfil vegetal'. ¿Para qué se usaba sobre todo?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Phytelephas seeds",
+            "note": "Foto clara de semillas de tagua, enteras o peladas, sin productos hechos con ellas.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-6997",
@@ -540535,10 +540568,10 @@
     },
     {
       "id": "q-7006",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "El billete que todos quieren encontrar olvidado en el bolsillo de una chaqueta.",
-      "question": "Mira este billete colombiano. ¿Cuántas lucas vale?",
+      "question": "El billete colombiano de Gabriel García Márquez vale 50 000 pesos. ¿Cuántas lucas son?",
       "answer": "50",
       "wrong_answers": [
         "5",
@@ -540546,18 +540579,25 @@
         "100"
       ],
       "hints": [
+        "En la calle, 'luca' es una forma de hablar de plata.",
         "Una luca son 1000 pesos.",
-        "Mira el número grande que tiene impreso.",
         "Le quitas los tres últimos ceros y ya está."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "García Márquez 50000 billete",
-        "note": "Foto clara del billete colombiano de 50 000 pesos (Gabriel García Márquez), con el número visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Colombian peso coins",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMoneda_200_pesos_colombianos_2016.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Moneda_200_pesos_colombianos_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Rjcastillo · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rjcastillo",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rjcastillo",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En el billete de 50 000 aparece Gabriel García Márquez, el único colombiano con Nobel de Literatura.",
       "subcategory": "banknotes-and-coins",
@@ -540583,21 +540623,52 @@
         "notes": "Essential media risk: Wikimedia Commons may not have a clean photo of the current 50 000 note, since banknote images are often restricted. Once you know luca = 1000 it's just reading a number, so it's a bit dry. The fun fact touches q-0007 (García Márquez's Nobel), but the question asks something else."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-17",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows the 50 000 peso note: they are people at Fundación Gabo events and an FNPI logo. A search can't be run again here, so this essential-image question can't be finished. Either find a freely licensed photo of the García Márquez 50 000 note, or change the question so it doesn't need a photo of the note. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows the 50 000 peso note: they are people at Fundación Gabo events and an FNPI logo. A search can't be run again here, so this essential-image question can't be finished. Either find a freely licensed photo of the García Márquez 50 000 note, or change the question so it doesn't need a photo of the note. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No photo of the 50 000 note is available, so the question now states the note's value in the text and becomes a lucas conversion with a non-essential image; hints adjusted to match.",
+        "previous": {
+          "question": "Mira este billete colombiano. ¿Cuántas lucas vale?",
+          "hints": [
+            "Una luca son 1000 pesos.",
+            "Mira el número grande que tiene impreso.",
+            "Le quitas los tres últimos ceros y ya está."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "García Márquez 50000 billete",
+            "note": "Foto clara del billete colombiano de 50 000 pesos (Gabriel García Márquez), con el número visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7007",
@@ -540897,7 +540968,7 @@
     },
     {
       "id": "q-7011",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Un restaurante donde hasta el helado tiene conciencia social.",
       "question": "Crepes & Waffles nació en Bogotá en 1980, es famosa por sus helados y tiene una política especial al contratar. ¿A quiénes contrata principalmente?",
@@ -540909,7 +540980,7 @@
       ],
       "hints": [
         "Es una política social que la marca tiene casi desde sus inicios.",
-        "La idea es darle un trabajo estable a quien sostiene un hogar sin ayuda.",
+        "Es un grupo al que en Colombia le suele costar conseguir un trabajo estable.",
         "Muchas de ellas sacan adelante solas a sus hijos."
       ],
       "media": {
@@ -540955,30 +541026,33 @@
       "needs_media": false,
       "batch": "batch-17",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 ('darle un trabajo estable a quien sostiene un hogar sin ayuda') is just the definition of 'madre cabeza de familia', so it gives the answer away and rules out all three wrong options at the second hint. Make hint 2 vaguer, for example about the policy aiming to support a particular group of women or families, and leave the strong clue for hint 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 ('darle un trabajo estable a quien sostiene un hogar sin ayuda') is just the definition of 'madre cabeza de familia', so it gives the answer away and rules out all three wrong options at the second hint. Make hint 2 vaguer, for example about the policy aiming to support a particular group of women or families, and leave the strong clue for hint 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 2 no longer points to gender, and the wrong answers are now as specific as the answer.",
+        "reason": "Hint 2 defined the answer; replaced it with a vaguer hint that fits all options.",
         "previous": {
-          "wrong_answers": [
-            "Estudiantes universitarios",
-            "Deportistas retirados",
-            "Abuelos pensionados"
-          ],
           "hints": [
             "Es una política social que la marca tiene casi desde sus inicios.",
-            "La gran mayoría de quienes trabajan allí son mujeres.",
+            "La idea es darle un trabajo estable a quien sostiene un hogar sin ayuda.",
             "Muchas de ellas sacan adelante solas a sus hijos."
           ]
         },
@@ -541058,7 +541132,7 @@
     },
     {
       "id": "q-7013",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un champú con tanta autoestima que se bautizó con ella.",
       "question": "Ego es una marca colombiana de champú y gel, de la misma empresa que hace Savital y Bon Ice. ¿Para quién se creó?",
@@ -541070,7 +541144,7 @@
       ],
       "hints": [
         "Su gel es famoso para peinados con mucha fijación.",
-        "Sus empaques son oscuros y sobrios, y sus aromas más fuertes que los de Savital.",
+        "Su nombre habla de la confianza en uno mismo.",
         "Su nombre completo en inglés le agrega 'for men'."
       ],
       "media": {
@@ -541078,14 +541152,14 @@
         "role": "decorative",
         "query": "shampoo bottles bathroom",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHotel_room_bathroom_in_building_on_Chapel_Street%2C_Salford%2C_Greater_Manchester%2C_England%2C_on_5_October_2025.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Hotel_room_bathroom_in_building_on_Chapel_Street%2C_Salford%2C_Greater_Manchester%2C_England%2C_on_5_October_2025.jpg/3840px-Hotel_room_bathroom_in_building_on_Chapel_Street%2C_Salford%2C_Greater_Manchester%2C_England%2C_on_5_October_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "MatthewHoobin · CC0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMC_%E6%BE%B3%E9%96%80_Macau_Cotai_%E4%B8%8A%E8%92%B2%E4%BA%AC_Grand_Lisboa_Palace_%E9%85%92%E5%BA%97_hotel_bathroom_soap_plastic_bottles_November_2024_R12S_01.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/MC_%E6%BE%B3%E9%96%80_Macau_Cotai_%E4%B8%8A%E8%92%B2%E4%BA%AC_Grand_Lisboa_Palace_%E9%85%92%E5%BA%97_hotel_bathroom_soap_plastic_bottles_November_2024_R12S_01.jpg/3840px-MC_%E6%BE%B3%E9%96%80_Macau_Cotai_%E4%B8%8A%E8%92%B2%E4%BA%AC_Grand_Lisboa_Palace_%E9%85%92%E5%BA%97_hotel_bathroom_soap_plastic_bottles_November_2024_R12S_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "JohnLEE Brothers · CC0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "author": "MatthewHoobin",
-        "author_url": "https://commons.wikimedia.org/wiki/User:MatthewHoobin",
+        "author": "JohnLEE Brothers",
+        "author_url": "https://commons.wikimedia.org/wiki/User:JohnLEE_Brothers",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -541116,26 +541190,33 @@
       "needs_media": false,
       "batch": "batch-17",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: \"dark, sober packaging and stronger scents than Savital\" is textbook men's-product marketing and, against babies, pets and swimmers, points straight to \"Para hombres\". Rewrite hint 2 so it stays vague, e.g. about when the brand launched or its gel's place in the shelf, without the masculine-styling cues.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: \"dark, sober packaging and stronger scents than Savital\" is textbook men's-product marketing and, against babies, pets and swimmers, points straight to \"Para hombres\". Rewrite hint 2 so it stays vague, e.g. about when the brand launched or its gel's place in the shelf, without the masculine-styling cues.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the giveaway hint 2 about the dad and reworded the description so it doesn't read as a woman.",
+        "reason": "Hint 2 gave the answer away with masculine-marketing cues; replaced with a vague hint about the brand name.",
         "previous": {
-          "description": "Un champú con tanta autoestima que se puso el nombre de ella.",
           "hints": [
             "Su gel es famoso para peinados con mucha fijación.",
-            "En el baño de la casa, suele ser el champú del papá.",
+            "Sus empaques son oscuros y sobrios, y sus aromas más fuertes que los de Savital.",
             "Su nombre completo en inglés le agrega 'for men'."
           ]
         },
@@ -543630,7 +543711,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "coffee sock filter",
+        "query": "cloth coffee filter",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -543664,17 +543745,43 @@
       "batch": "batch-17",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the image candidates fits: they show a fuel outlet, an industrial filter room, a beach, an airman, a 1943 warehouse and mussel shells, none of them a cloth coffee filter. A new search isn't allowed in this run. The text itself is fine. A good search would be \"cloth coffee filter\" or \"colador de tela café\". No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates fits: they show a fuel outlet, an industrial filter room, a beach, an airman, a 1943 warehouse and mussel shells, none of them a cloth coffee filter. A new search isn't allowed in this run. The text itself is fine. A good search would be \"cloth coffee filter\" or \"colador de tela café\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The text is fine; only the image query changed to one that finds a cloth coffee filter.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "coffee sock filter",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7047",
@@ -546400,7 +546507,7 @@
     },
     {
       "id": "q-7083",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Siete vidas no le alcanzaron a este felino para quedarse quieto en un solo sitio.",
       "question": "Un enorme gato de bronce de Botero llegó a esta ciudad en 1987, cambió de sitio varias veces y hoy vive en el barrio del Raval. ¿Qué ciudad es?",
@@ -546411,8 +546518,8 @@
         "Roma"
       ],
       "hints": [
-        "Es una ciudad europea a orillas del mar Mediterráneo.",
-        "No es la capital de su país.",
+        "El gato tiene las formas redondas y gorditas típicas de Botero.",
+        "Es una ciudad europea famosa por su arquitectura y sus museos.",
         "Allí está la Sagrada Familia de Gaudí."
       ],
       "media": {
@@ -546458,28 +546565,35 @@
       "needs_media": false,
       "batch": "batch-17",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hints 1 and 2 each give the answer away. Hint 1 (\"European city on the Mediterranean shore\") rules out Madrid, Paris and Rome (Rome isn't on the coast), and hint 2 (\"not its country's capital\") rules out all three wrong options at once. Replace them with vague hints that leave more than one option open, for example about Botero's rounded style or the 1980s. Optionally make hint 3 something other than the Sagrada Familia.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hints 1 and 2 each give the answer away. Hint 1 (\"European city on the Mediterranean shore\") rules out Madrid, Paris and Rome (Rome isn't on the coast), and hint 2 (\"not its country's capital\") rules out all three wrong options at once. Replace them with vague hints that leave more than one option open, for example about Botero's rounded style or the 1980s. Optionally make hint 3 something other than the Sagrada Familia.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the unverifiable fun fact with the cat's documented earlier locations and swapped the Olympics hint for a less specific one.",
+        "reason": "Hints 1 and 2 each ruled out all the wrong options; replaced them with vague hints that fit all four cities.",
         "previous": {
           "hints": [
             "Es una ciudad europea a orillas del mar Mediterráneo.",
-            "Fue sede de los Juegos Olímpicos de 1992.",
+            "No es la capital de su país.",
             "Allí está la Sagrada Familia de Gaudí."
-          ],
-          "fun_fact": "Antes de llegar al Raval, el gato de Botero pasó años guardado en un depósito porque nadie le encontraba un lugar fijo."
+          ]
         },
         "revised_on": "2026-10-23"
       }
@@ -546726,7 +546840,7 @@
       "status": "needs_work",
       "difficulty": 8,
       "description": "Escaleras, anillos de piedra y nada de ascensor: la vida en la Sierra era puro ejercicio.",
-      "question": "Mira estas terrazas circulares de piedra que construyeron los taironas en Ciudad Perdida. ¿Para qué servían?",
+      "question": "Los taironas construyeron muchas terrazas circulares de piedra en Ciudad Perdida. ¿Para qué servían?",
       "answer": "Bases para casas y templos",
       "wrong_answers": [
         "Canchas para juegos de pelota",
@@ -546740,9 +546854,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Teyuna main terraces aerial",
-        "note": "Foto de las terrazas circulares de piedra de Ciudad Perdida (Teyuna), en la Sierra Nevada de Santa Marta, sin construcciones encima.",
+        "role": "illustrative",
+        "query": "Sierra Nevada Santa Marta jungle",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -546771,21 +546885,49 @@
         "notes": "The facts are solid. A photo of the terraces is commonly available."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-17",
       "review": {
         "decision": "needs_work",
-        "feedback": "The essential image must show Ciudad Perdida's (Teyuna's) circular stone terraces, but none of the candidates does, and a new search isn't allowed this round. Find a Commons photo of the Teyuna terraces (try 'Ciudad Perdida terraces' or 'Teyuna Colombia') and attach it manually. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "The text is fine, but no candidate works as media. Candidate 1 is a portrait-format photo of Wiwa children. Candidates 2 and 3 are blue mushrooms, which have nothing to do with the topic. The question names the stone terraces of Ciudad Perdida, so the image should show them. No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential image must show Ciudad Perdida's (Teyuna's) circular stone terraces, but none of the candidates does, and a new search isn't allowed this round. Find a Commons photo of the Teyuna terraces (try 'Ciudad Perdida terraces' or 'Teyuna Colombia') and attach it manually. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No Teyuna terrace photo was found, so the question no longer refers to a photo and gets an illustrative Sierra Nevada image.",
+        "previous": {
+          "question": "Mira estas terrazas circulares de piedra que construyeron los taironas en Ciudad Perdida. ¿Para qué servían?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Teyuna main terraces aerial",
+            "note": "Foto de las terrazas circulares de piedra de Ciudad Perdida (Teyuna), en la Sierra Nevada de Santa Marta, sin construcciones encima.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7088",
@@ -547111,7 +547253,7 @@
     },
     {
       "id": "q-7092",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Un secreto que el billete guarda escondido en su propio papel.",
       "question": "El papel de los billetes colombianos tiene unas fibras de colores que a simple vista no se notan. ¿Cómo se pueden ver?",
@@ -547129,11 +547271,21 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Colombia 50000 pesos banknote",
+        "query": "Colombian peso banknote",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A100_Pesos_-_Banco_De_Oriente_%281900%29_Bisco5_01.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/100_Pesos_-_Banco_De_Oriente_%281900%29_Bisco5_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "El Banco De Oriente. · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "El Banco De Oriente.",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-Colombia",
+          "PD-US"
+        ]
       },
       "fun_fact": "Las fibras quedan dentro del papel al fabricarlo, por eso es muy difícil copiarlas con una impresora.",
       "subcategory": "banknotes-and-coins",
@@ -547162,25 +547314,49 @@
       "needs_media": false,
       "batch": "batch-17",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but all three image candidates are Argentine 50 000-peso banknotes. A question about Colombian banknotes can't use them, and no new search is allowed. The slot needs a Colombian banknote (e.g. \"Colombian peso banknote\" or \"billete colombiano\") or a neutral UV lamp/counterfeit-detector image. A UV lamp would hint at the answer, so the banknote is better. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but all three image candidates are Argentine 50 000-peso banknotes. A question about Colombian banknotes can't use them, and no new search is allowed. The slot needs a Colombian banknote (e.g. \"Colombian peso banknote\" or \"billete colombiano\") or a neutral UV lamp/counterfeit-detector image. A UV lamp would hint at the answer, so the banknote is better. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The image candidates showed Argentine banknotes, so I changed the media query to target a Colombian banknote; the text is unchanged.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Colombia 50000 pesos banknote",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7093",
-      "status": "needs_work",
-      "difficulty": 8,
-      "description": "Un billete del color del jugo del desayuno, con un personaje bien serio.",
-      "question": "Fui presidente de Colombia en los años 70, mi papá también fue presidente y hoy salgo en el billete naranja de 20 000. ¿Quién soy?",
+      "status": "approved",
+      "difficulty": 9,
+      "description": "Cuatro años en la Casa de Nariño dan para muchísimas fotos oficiales.",
+      "question": "Fui presidente de Colombia en los años 70 y mi papá también había sido presidente. ¿Quién soy?",
       "answer": "Alfonso López Michelsen",
       "wrong_answers": [
         "Carlos Lleras Restrepo",
@@ -547188,7 +547364,7 @@
         "Julio César Turbay"
       ],
       "hints": [
-        "Gobernó de 1974 a 1978.",
+        "En los años 60 fundó el Movimiento Revolucionario Liberal (MRL).",
         "Fue el primer gobernador del Cesar y ayudó a crear el Festival de la Leyenda Vallenata.",
         "Lleva el mismo nombre y primer apellido que su papá."
       ],
@@ -547237,18 +547413,42 @@
       "needs_media": false,
       "batch": "batch-17",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The premise is wrong. Colombia's orange 20 000-peso note (the 2016 series) shows the astronomer Julio Garavito Armero, not Alfonso López Michelsen, and I know of no Colombian banknote that shows López Michelsen. One of the wrong answers, Carlos Lleras Restrepo, is actually on the 100 000-peso note, so the banknote clue points away from the intended answer. The fact check's 'confirmed' verdict should be overruled.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The premise is wrong. Colombia's orange 20 000-peso note (the 2016 series) shows the astronomer Julio Garavito Armero, not Alfonso López Michelsen, and I know of no Colombian banknote that shows López Michelsen. One of the wrong answers, Carlos Lleras Restrepo, is actually on the 100 000-peso note, so the banknote clue points away from the intended answer. The fact check's 'confirmed' verdict should be overruled.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "difficulty_original": 8,
+      "revision": {
+        "action": "revise",
+        "reason": "López Michelsen is on no banknote, so I removed the false banknote clue from the question and description and replaced the 1974–1978 hint, which nearly gave the answer away, with a vaguer one.",
+        "previous": {
+          "difficulty": 8,
+          "description": "Un billete del color del jugo del desayuno, con un personaje bien serio.",
+          "question": "Fui presidente de Colombia en los años 70, mi papá también fue presidente y hoy salgo en el billete naranja de 20 000. ¿Quién soy?",
+          "hints": [
+            "Gobernó de 1974 a 1978.",
+            "Fue el primer gobernador del Cesar y ayudó a crear el Festival de la Leyenda Vallenata.",
+            "Lleva el mismo nombre y primer apellido que su papá."
+          ]
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7094",
@@ -547548,15 +547748,15 @@
     },
     {
       "id": "q-7098",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
-      "description": "Una prenda que le quedó de maravilla a un zipaquireño, aunque no combinaba con nada más.",
+      "description": "Pasta, montañas y tres semanas de pedal: el Giro tiene premio para todos los gustos.",
       "question": "Egan Bernal la conquistó en el Giro de Italia de 2021, y allá la llaman «maglia rosa». ¿Qué es?",
       "answer": "La camiseta del líder de la carrera",
       "wrong_answers": [
         "La camiseta del mejor escalador",
         "La camiseta del mejor embalador",
-        "El trofeo para el equipo ganador"
+        "La camiseta del campeón del mundo"
       ],
       "hints": [
         "Es algo que se pone el ciclista sobre el cuerpo.",
@@ -547606,25 +547806,34 @@
       "needs_media": false,
       "batch": "batch-17",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description calls it 'una prenda' and the question says 'la conquistó', so both the description and the feminine pronoun rule out the masculine 'El trofeo para el equipo ganador'. Replace that option with a fourth feminine garment-type option, e.g. 'La camiseta del mejor joven' (would need checking against Egan's 2021 classifications) or 'La camiseta del campeón nacional'. Also make the description play on the Giro or Italy without saying it's a garment.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description calls it 'una prenda' and the question says 'la conquistó', so both the description and the feminine pronoun rule out the masculine 'El trofeo para el equipo ganador'. Replace that option with a fourth feminine garment-type option, e.g. 'La camiseta del mejor joven' (would need checking against Egan's 2021 classifications) or 'La camiseta del campeón nacional'. Also make the description play on the Giro or Italy without saying it's a garment.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the young rider's jersey, which Bernal also won in 2021, with the points jersey.",
+        "reason": "I replaced the masculine trophy option with a feminine jersey option that is clearly wrong, and rewrote the description so it no longer says the answer is a garment.",
         "previous": {
+          "description": "Una prenda que le quedó de maravilla a un zipaquireño, aunque no combinaba con nada más.",
           "wrong_answers": [
             "La camiseta del mejor escalador",
-            "La camiseta del mejor joven",
+            "La camiseta del mejor embalador",
             "El trofeo para el equipo ganador"
           ]
         },
@@ -548805,7 +549014,7 @@
     },
     {
       "id": "q-7115",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Un clásico del recreo que se juega con más gritos que reglas.",
       "question": "Estás jugando ponchados en el recreo y tienes el balón en la mano. ¿Para qué lo lanzas?",
@@ -548817,7 +549026,7 @@
       ],
       "hints": [
         "Los del otro equipo corren y esquivan.",
-        "En este juego no hay red, ni aro, ni arco.",
+        "Se juega con dos equipos, cada uno en su lado de la cancha.",
         "El que recibe el golpe sale del juego."
       ],
       "media": {
@@ -548825,19 +549034,16 @@
         "role": "illustrative",
         "query": "dodgeball school playground",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGirls%27_dodge_ball_game_on_school_playground._Girls_standing_in_circle_and_girl_in_middle_holding_ball_LCCN2003655391.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Girls%27_dodge_ball_game_on_school_playground._Girls_standing_in_circle_and_girl_in_middle_holding_ball_LCCN2003655391.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Miscellaneous Items in High Demand, PPOC, Library of Congress · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMinden_State_School_playground%2C_2023.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Minden_State_School_playground%2C_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Unidentified · CC BY 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Miscellaneous Items in High Demand, PPOC, Library of Congress",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Unidentified",
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": [
-          "PD-old-70-1923",
-          "PD-old-70-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "El ponchado tiene muchos nombres en el mundo: en otros países le dicen 'quemados' o 'dodgeball'.",
       "subcategory": "other-sports",
@@ -548866,25 +549072,33 @@
       "needs_media": false,
       "batch": "batch-17",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"En este juego no hay red, ni aro, ni arco\") rules out all three wrong answers, so it gives the answer away before hint 3. Replace it with a vague hint that rules out none of the options, e.g. about how the teams are set up or where they stand on the court.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"En este juego no hay red, ni aro, ni arco\") rules out all three wrong answers, so it gives the answer away before hint 3. Replace it with a vague hint that rules out none of the options, e.g. about how the teams are set up or where they stand on the court.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave the answer away, with a vaguer hint that rules out the target-based options.",
+        "reason": "Hint 2 ruled out all three wrong answers, so I replaced it with a vague hint about how the teams are set up.",
         "previous": {
           "hints": [
             "Los del otro equipo corren y esquivan.",
-            "Si el balón te toca, te 'ponchan'.",
+            "En este juego no hay red, ni aro, ni arco.",
             "El que recibe el golpe sale del juego."
           ]
         },
@@ -549200,20 +549414,20 @@
     },
     {
       "id": "q-7120",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Una receta musical tolimense: mezcla bien, sirve en Ibagué y ponte de pie para cantarla.",
-      "question": "El Bunde tolimense, de Alberto Castilla, se convirtió en el himno del Tolima. ¿Qué tres aires andinos mezcla su música?",
-      "answer": "Guabina, torbellino y bambuco",
+      "question": "El Bunde tolimense se convirtió en el himno del Tolima. ¿Quién compuso su música?",
+      "answer": "Alberto Castilla",
       "wrong_answers": [
-        "Pasillo, danza y vals",
-        "Rajaleña, caña y sanjuanero",
-        "Pasillo, chotis y bambuco"
+        "Jorge Villamil",
+        "Pedro Morales Pino",
+        "José A. Morales"
       ],
       "hints": [
-        "Alberto Castilla fue el fundador del Conservatorio del Tolima, en Ibagué.",
-        "Uno de los tres es el ritmo más emblemático de la zona andina colombiana.",
-        "Los otros dos son aires campesinos muy ligados a Boyacá y Santander, entre otras regiones."
+        "Fue un músico que vivió y trabajó en Ibagué.",
+        "Fundó el Conservatorio del Tolima.",
+        "Su apellido es también el nombre de una región de España."
       ],
       "media": {
         "type": "image",
@@ -549254,32 +549468,46 @@
         "difficulty_estimate": 13,
         "notes": "Guabina, torbellino and bambuco is the usual description, but some sources describe the mix differently. Dry recall question. Hint 3 ties guabina to Boyacá and Santander, but it is just as much a Tolima/Huila rhythm."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-17",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fact check is 'uncertain' and I can't confirm it either: sources disagree on which aires the Bunde tolimense blends. Some say guabina, torbellino and bambuco. Spanish Wikipedia adds rajaleña, pasillo, vals, chotis and others. English Wikipedia names bambuco, vals, danza and pasillo. That means the distractors 'Pasillo, danza y vals' and 'Pasillo, chotis y bambuco' are partly defensible. Hint 3 also ties guabina to Boyacá and Santander, but it is just as much a Tolima/Huila rhythm. Either ask about a fact that isn't disputed (for example the composer or the song's status as the department's anthem), or replace the distractors with rhythms that no source links to the Bunde. Verificación de datos: uncertain. Sources disagree. Some give guabina, torbellino and bambuco. The Spanish Wikipedia lists rajaleña, pasillo, guabina, torbellino and bambuco, plus vals, mazurka, redova and chotis. The English Wikipedia lists bambuco, vals, danza and pasillo. So 'three aires' is ambiguous, and the distractors 'Pasillo, chotis y bambuco' and 'Pasillo, danza y vals' partly overlap with documented elements. Also, the Tolima anthem version has lyrics by Nicanor Velásquez, which the question doesn't mention.",
-        "problems": [
-          "fact",
-          "ambiguity"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fact check is 'uncertain' and I can't confirm it either: sources disagree on which aires the Bunde tolimense blends. Some say guabina, torbellino and bambuco. Spanish Wikipedia adds rajaleña, pasillo, vals, chotis and others. English Wikipedia names bambuco, vals, danza and pasillo. That means the distractors 'Pasillo, danza y vals' and 'Pasillo, chotis y bambuco' are partly defensible. Hint 3 also ties guabina to Boyacá and Santander, but it is just as much a Tolima/Huila rhythm. Either ask about a fact that isn't disputed (for example the composer or the song's status as the department's anthem), or replace the distractors with rhythms that no source links to the Bunde. Verificación de datos: uncertain. Sources disagree. Some give guabina, torbellino and bambuco. The Spanish Wikipedia lists rajaleña, pasillo, guabina, torbellino and bambuco, plus vals, mazurka, redova and chotis. The English Wikipedia lists bambuco, vals, danza and pasillo. So 'three aires' is ambiguous, and the distractors 'Pasillo, chotis y bambuco' and 'Pasillo, danza y vals' partly overlap with documented elements. Also, the Tolima anthem version has lyrics by Nicanor Velásquez, which the question doesn't mention.",
+          "problems": [
+            "fact",
+            "ambiguity"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Changed the description's 'usted' imperatives to 'tú' and added 'entre otras regiones' to hint 3 for accuracy.",
+        "reason": "Sources disagree on which rhythms the Bunde blends, so I now ask about its composer, which is undisputed, and gave it new distractors and hints.",
         "previous": {
-          "description": "Una receta musical tolimense: mezcle bien, sirva en Ibagué y póngase de pie para cantarla.",
+          "question": "El Bunde tolimense, de Alberto Castilla, se convirtió en el himno del Tolima. ¿Qué tres aires andinos mezcla su música?",
+          "answer": "Guabina, torbellino y bambuco",
+          "wrong_answers": [
+            "Pasillo, danza y vals",
+            "Rajaleña, caña y sanjuanero",
+            "Pasillo, chotis y bambuco"
+          ],
           "hints": [
             "Alberto Castilla fue el fundador del Conservatorio del Tolima, en Ibagué.",
             "Uno de los tres es el ritmo más emblemático de la zona andina colombiana.",
-            "Los otros dos son aires campesinos muy ligados a Boyacá y Santander."
+            "Los otros dos son aires campesinos muy ligados a Boyacá y Santander, entre otras regiones."
           ]
         },
         "revised_on": "2026-10-23"
@@ -550022,7 +550250,7 @@
       "status": "needs_work",
       "difficulty": 9,
       "description": "Un río con nombre de general romano, pero que nunca ha visto a Roma.",
-      "question": "Este es el río Cesar, que le da nombre a un departamento y desemboca en la ciénaga de Zapatosa. ¿Dónde nace?",
+      "question": "El río Cesar le da nombre a un departamento y desemboca en la ciénaga de Zapatosa. ¿Dónde nace?",
       "answer": "En la Sierra Nevada de Santa Marta",
       "wrong_answers": [
         "En el Macizo Colombiano",
@@ -550037,11 +550265,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Río Cesar Valledupar",
+        "query": "Cienaga de Zapatosa",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACi%C3%A9naga_de_Zapatosa.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Ci%C3%A9naga_de_Zapatosa.jpg/3840px-Ci%C3%A9naga_de_Zapatosa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Evetila24 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Evetila24",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Evetila24&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El río Cesar recorre las tierras del vallenato y, después de pasar por la ciénaga de Zapatosa, entrega sus aguas al río Magdalena.",
       "subcategory": "rivers-seas-and-islands",
@@ -550066,22 +550301,49 @@
         "difficulty_estimate": 10,
         "notes": "A fairly dry school-geography fact. Hint 2 (Colombia's highest peaks) almost gives it away. A river photo is probably safe, though it might show the snowy Sierra in the background. It only shares the Santa Marta topic with the other questions."
       },
-      "fact_checked": true,
+      "fact_checked": false,
       "needs_media": false,
       "batch": "batch-17",
       "review": {
         "decision": "needs_work",
-        "feedback": "The question text says \"Este es el río Cesar\", so the picture has to show the Cesar River. Candidates 1 and 2 show the Guatapurí, a different river (a tributary at Valledupar). Candidate 3 is an unidentified rocky gorge with nothing to place it. No new search is allowed, so the slot needs a real photo of the Cesar River, e.g. from a search for \"Cesar River Colombia\". Another option is to drop \"Este es\" and use a decorative Cesar-region image. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "The description says the river has \"a Roman general's name\". Players will take that to mean it was named after Julius Caesar. The name Cesar actually comes from an indigenous word (Zazare/Chet-tzar), not from Rome, so the description teaches a false origin. Replace it with a playful line that doesn't mention the name's origin, e.g. «Un río que nace en la nieve y termina en una ciénaga gigante.» Verificación de datos: wrong. The answer is right, but the description says the river is named after a Roman general. The name Cesar comes from a native cacique (Zazare/Upar), not from Rome.",
         "problems": [
-          "media"
+          "fact"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text says \"Este es el río Cesar\", so the picture has to show the Cesar River. Candidates 1 and 2 show the Guatapurí, a different river (a tributary at Valledupar). Candidate 3 is an unidentified rocky gorge with nothing to place it. No new search is allowed, so the slot needs a real photo of the Cesar River, e.g. from a search for \"Cesar River Colombia\". Another option is to drop \"Este es\" and use a decorative Cesar-region image. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No photo of the Cesar River exists, so I dropped 'Este es' and switched the image to the Zapatosa swamp that the question names.",
+        "previous": {
+          "question": "Este es el río Cesar, que le da nombre a un departamento y desemboca en la ciénaga de Zapatosa. ¿Dónde nace?",
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Río Cesar Valledupar",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7132",
@@ -550266,7 +550528,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "tambor alegre Colombia",
+        "query": "tambor alegre drum",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -550300,26 +550562,40 @@
       "batch": "batch-17",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates fits the question: the search \"tambor alegre Colombia\" matched place names containing \"Alegre\" (a river dolphin, a night hike, a couple by a chiva bus, village houses, a Brazilian signing ceremony). A new search is needed, e.g. \"cumbia dancers pollera\" or \"tambor alegre drum\". Avoid any picture that shows candles. The question text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits the question: the search \"tambor alegre Colombia\" matched place names containing \"Alegre\" (a river dolphin, a night hike, a couple by a chiva bus, village houses, a Brazilian signing ceremony). A new search is needed, e.g. \"cumbia dancers pollera\" or \"tambor alegre drum\". Avoid any picture that shows candles. The question text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave the answer away by mentioning light, with a clue about how the dancers hold the object.",
+        "reason": "The old query matched unrelated place names, so I changed it to search for the drum itself, which avoids candle images.",
         "previous": {
-          "hints": [
-            "Lo que llevan se va gastando a medida que avanza la noche.",
-            "Antes de la luz eléctrica, ayudaba a alumbrar la rueda.",
-            "Se prende con un fósforo."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "tambor alegre Colombia",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -552626,7 +552902,7 @@
     },
     {
       "id": "q-7166",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "El invitado más colorido de cualquier cumpleaños infantil, después del payaso.",
       "question": "Viene en polvo en un sobrecito, se cuaja en la nevera, tiembla en el plato y hay roja, verde y amarilla. ¿Qué es?",
@@ -552644,19 +552920,19 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "children birthday party table",
+        "query": "children birthday party balloons",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAgnes%27_Birthday_Party_-_DPLA_-_f3efac94ccd4f080eb93ee3ab882ac96.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Agnes%27_Birthday_Party_-_DPLA_-_f3efac94ccd4f080eb93ee3ab882ac96.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A130422-N-ZZ999-022.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/130422-N-ZZ999-022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "U.S. Navy photo by Chief Mass Communication Specialist Michael Ard/Released · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": null,
+        "author": "U.S. Navy photo by Chief Mass Communication Specialist Michael Ard/Released",
         "author_url": null,
         "restrictions": [],
         "pd_reasons": [
-          "PD-US"
+          "PD-USGov-Military-Navy"
         ]
       },
       "fun_fact": "La gelatina se cuaja porque el colágeno forma una red que atrapa el agua.",
@@ -552682,27 +552958,52 @@
         "difficulty_estimate": 1,
         "notes": "q-1367 asks about gelatin as an ingredient, which is a different question. Hint 3 repeats the description's 'dancing' joke."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-17",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer names the wobbling trait or claims to be the only such dessert.",
+        "reason": "The chosen image had a US-only public-domain licence, so I changed the decorative query to find a new image.",
         "previous": {
-          "description": "El único postre que baila sin que nadie le ponga música."
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "children birthday party table",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AAgnes%27_Birthday_Party_-_DPLA_-_f3efac94ccd4f080eb93ee3ab882ac96.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Agnes%27_Birthday_Party_-_DPLA_-_f3efac94ccd4f080eb93ee3ab882ac96.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": null,
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -553223,9 +553524,9 @@
     },
     {
       "id": "q-7174",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
-      "description": "Salsa, pandebono y lulada: requisitos para el pasaporte de este departamento.",
+      "description": "Tu cédula dice dónde naciste, pero tu acento lo grita primero.",
       "question": "Si naces en Palmira, Buga o Buenaventura, ¿cómo te dicen según tu departamento?",
       "answer": "Vallecaucano",
       "wrong_answers": [
@@ -553281,29 +553582,32 @@
       "needs_media": false,
       "batch": "batch-17",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description ('Salsa, pandebono y lulada') names Cali's best-known trademarks, so a Colombian family can pick 'Vallecaucano' from the description alone, before hearing the cities or any hint. The description needs to play on the theme without Valle-specific signatures. Also note the overlap with approved q-5227 (pandebono → 'De los vallunos'): it asks the same Valle demonym, and naming pandebono here makes the link even stronger.",
-        "problems": [
-          "giveaway",
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description ('Salsa, pandebono y lulada') names Cali's best-known trademarks, so a Colombian family can pick 'Vallecaucano' from the description alone, before hearing the cities or any hint. The description needs to play on the theme without Valle-specific signatures. Also note the overlap with approved q-5227 (pandebono → 'De los vallunos'): it asks the same Valle demonym, and naming pandebono here makes the link even stronger.",
+          "problems": [
+            "giveaway",
+            "overlap"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Took Cali out of the question and replaced the Cali hint, so the question no longer links to q-7176.",
+        "reason": "The description named Cali's trademarks (salsa, pandebono, lulada) and gave the answer away, so I rewrote it to be neutral.",
         "previous": {
-          "question": "Si naces en Cali, Palmira o Buenaventura, ¿cómo te dicen según tu departamento?",
-          "hints": [
-            "Las tres ciudades están en el mismo departamento.",
-            "Cali es su capital.",
-            "Su departamento lleva el nombre de un valle y de un río."
-          ]
+          "description": "Salsa, pandebono y lulada: requisitos para el pasaporte de este departamento."
         },
         "revised_on": "2026-10-23"
       }
@@ -553550,7 +553854,7 @@
     },
     {
       "id": "q-7178",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "En Ecomoda había más chisme que telas, y esta secretaria salía en casi todos.",
       "question": "En «Yo soy Betty, la fea», Lorna Cepeda interpretó a Patricia Fernández. ¿Qué cosa de ella inspiró su famoso apodo?",
@@ -553568,20 +553872,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "vintage office secretary desk",
+        "query": "office desk typewriter",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APhotograph_of_Buddy_the_Dog_Playing_with_Toys_in_front_of_Betty_Currie%27s_Desk_in_the_Outer_Oval_Office_-_DPLA_-_0af6c66eab894e4e602ec1faa177b9ea.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Photograph_of_Buddy_the_Dog_Playing_with_Toys_in_front_of_Betty_Currie%27s_Desk_in_the_Outer_Oval_Office_-_DPLA_-_0af6c66eab894e4e602ec1faa177b9ea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABletchley_Park_Desk_and_Typewriter_%2821598716801%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Bletchley_Park_Desk_and_Typewriter_%2821598716801%29.jpg/3840px-Bletchley_Park_Desk_and_Typewriter_%2821598716801%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "William Warby from London, England · CC BY 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "President (1993-2001 : Clinton). White House Photograph Office. 1/20/1993-1/20/2001",
-        "author_url": null,
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "William Warby from London, England",
+        "author_url": "https://www.flickr.com/people/26782864@N00",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Patricia vivía presumiendo sus «seis semestres de Finanzas y Relaciones Internacionales».",
       "subcategory": "telenovelas",
@@ -553610,18 +553912,51 @@
       "needs_media": false,
       "batch": "batch-17",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The chosen image had a US-only public-domain licence, so I changed the decorative query to find a new image.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "vintage office secretary desk",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3APhotograph_of_Buddy_the_Dog_Playing_with_Toys_in_front_of_Betty_Currie%27s_Desk_in_the_Outer_Oval_Office_-_DPLA_-_0af6c66eab894e4e602ec1faa177b9ea.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Photograph_of_Buddy_the_Dog_Playing_with_Toys_in_front_of_Betty_Currie%27s_Desk_in_the_Outer_Oval_Office_-_DPLA_-_0af6c66eab894e4e602ec1faa177b9ea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "President (1993-2001 : Clinton). White House Photograph Office. 1/20/1993-1/20/2001",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7179",
@@ -554394,19 +554729,19 @@
     },
     {
       "id": "q-7189",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Una puntica de metal que hace todo el trabajo mientras la madera se lleva toda la fama.",
       "question": "La púa es la punta de metal del trompo: sobre ella baila y raya el piso. En los juegos de calle, ¿para qué más la usan los niños?",
       "answer": "Para golpear el trompo del rival",
       "wrong_answers": [
-        "Para enrollar la pita",
+        "Para colgarlo en la pared",
         "Para hacer silbar el trompo",
         "Para medir cuánto baila"
       ],
       "hints": [
         "Tiene que ver con los otros jugadores.",
-        "A veces deja marcas o hasta raja la madera.",
+        "Es un uso más bien brusco, nada delicado.",
         "En Colombia a ese golpe se le llama 'quiña'."
       ],
       "media": {
@@ -554452,23 +554787,40 @@
       "needs_media": false,
       "batch": "batch-17",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The wrong answer 'Para enrollar la pita' can be defended: the usual way to wind a trompo is to start the cord at the púa, wrapping it around the tip first and then up the body. Replace it with a use the púa clearly never has (for example 'Para guardarlo colgado' or 'Para pintar figuras en el piso'). Hint 2 ('deja marcas o hasta raja la madera') also comes very close to giving the answer away, so consider making it vaguer.",
-        "problems": [
-          "ambiguity"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The wrong answer 'Para enrollar la pita' can be defended: the usual way to wind a trompo is to start the cord at the púa, wrapping it around the tip first and then up the body. Replace it with a use the púa clearly never has (for example 'Para guardarlo colgado' or 'Para pintar figuras en el piso'). Hint 2 ('deja marcas o hasta raja la madera') also comes very close to giving the answer away, so consider making it vaguer.",
+          "problems": [
+            "ambiguity"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer suggests rivalry or fights.",
+        "reason": "Replaced the defensible wrong answer 'Para enrollar la pita' with an option that is clearly wrong, and made hint 2 vaguer so it no longer gives the answer away.",
         "previous": {
-          "description": "Una pieza pequeñita que ha causado más peleas de recreo que cualquier gol."
+          "wrong_answers": [
+            "Para enrollar la pita",
+            "Para hacer silbar el trompo",
+            "Para medir cuánto baila"
+          ],
+          "hints": [
+            "Tiene que ver con los otros jugadores.",
+            "A veces deja marcas o hasta raja la madera.",
+            "En Colombia a ese golpe se le llama 'quiña'."
+          ]
         },
         "revised_on": "2026-10-23"
       }
