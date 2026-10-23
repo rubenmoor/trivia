@@ -26,5 +26,9 @@
   "batch-11": {
     "date": "2026-10-21",
     "note": "spot check 28/30 agreement, 30 checked; drop/overlap accepted for now, as batch-9/10 (decision 401)"
+  },
+  "batch-12": {
+    "date": "2026-10-22",
+    "note": "First colombia batch; yield/spread metrics, quality ✓, spot check 93 %"
   }
 }
