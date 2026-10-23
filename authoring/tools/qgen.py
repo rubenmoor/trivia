@@ -313,7 +313,6 @@ RESET_RE = re.compile(r"resets\s+(?:(?P<mon>[a-z]{3})[a-z]*\.?\s+(?P<day>\d{1,2}
                       r"(?P<h>\d{1,2})(?::(?P<m>\d{2}))?\s*(?P<ap>[ap]\.?m\.?)?(?:\s*\((?P<tz>[^)]+)\))?", re.I)
 LIMIT_MARGIN = datetime.timedelta(minutes=5)  # resume this long after the reset (QG-21)
 EXIT_LIMIT = 75  # exit code: stopped at the usage limit (RUNBOOK)
-EXIT_HEALTH = 2  # exit code: batch health stop until `qgen health ack` (D-55, RUNBOOK)
 
 
 def limit_reset(msg, now=None):
@@ -1835,10 +1834,8 @@ def cmd_batch(args):
                      f"Finish it first: qgen batch" + (f" --bundle {open_bundle}" if open_bundle != "base" else ""))
     else:
         import health  # authoring/tools/health.py (imports qgen)
-        stop = health.stop_reason()  # D-55: before concepts, no LLM calls
-        if stop:
-            print(stop, file=sys.stderr)
-            sys.exit(EXIT_HEALTH)
+        if warn := health.unacked_failure():  # decision 414: warning only
+            print(warn, file=sys.stderr)
         check_bundle(args.bundle)
         if args.subcategories:
             subs = sub_keys(args.subcategories, args.bundle)
@@ -1902,7 +1899,7 @@ def cmd_batch(args):
 # --- health ack, rework, scans: tighten, neutralize ---------------------------
 
 def cmd_health_ack(args):
-    """The developer has looked at a failing batch: clears the stop of `qgen batch` (D-55)."""
+    """The developer has looked at a failing batch: records the look, a warning of `qgen batch` goes (decision 414)."""
     import health  # authoring/tools/health.py (imports qgen)
     if args.batch not in health.batch_runs() + health.translation_runs():
         sys.exit(f"not a merged batch or translation run: {args.batch}")
@@ -2066,7 +2063,7 @@ def main():
     add("sync", cmd_sync_run)
     add("batch-report", cmd_batch_report)
     hp = sub.add_parser("health", help="batch health (plan 15)").add_subparsers(dest="action", required=True)
-    ha = hp.add_parser("ack", help="the developer has looked at a failing batch: clears the stop of `qgen batch` (D-55)")
+    ha = hp.add_parser("ack", help="the developer has looked at a failing batch: records the look, `qgen batch` warns no more (decision 414)")
     ha.set_defaults(fn=cmd_health_ack)
     ha.add_argument("batch")
     ha.add_argument("note")

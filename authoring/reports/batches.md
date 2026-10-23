@@ -59,7 +59,7 @@ Deficit to the targets (base, approved now): 1: 63, 2: 9, 3: 77, 4: 57, 5: 43, 6
 
 ## Acknowledgements
 
-Failing batches the developer has looked at (`qgen health ack`): the stop is cleared, the batch still fails.
+Failing batches the developer has looked at (`qgen health ack`): looked at, the batch still fails.
 
 - batch-8 (2026-10-15): 120 spot-checked (decisions 230/231, fixes A–E); media share via decision 227; overlap and the 11–15 gap accepted for now
 - batch-9 (2026-10-17): spot check 30/30 approved; drop/overlap/top clue accepted for now

@@ -21,7 +21,7 @@ Sub-plan of [15](15-i18n.md). Translates the question pool between the four ques
 ## Pipeline
 Decided: D-87 (pm plan 66). One command, `qgen batch --translate <locale>` (`authoring/RUNBOOK.md`), reusing the batch steps through the run's `locale`.
 
-- Run `tr-<locale>-<n>`: 300 sources (`TRANSLATE_SIZE`); the locale's first run is the 50-question pilot (QT-5), no stop: only a run failing a threshold makes the next exit 2, until `qgen health ack <run>`.
+- Run `tr-<locale>-<n>`: 300 sources (`TRANSLATE_SIZE`); the locale's first run is the 50-question pilot (QT-5), no stop; a run failing a threshold is warned about, never a stop (superseded by decision 414: no stop); `qgen health ack <run>` records the look.
 - Locales: `es`, `es-ES`, `en`, `de`; sources in any locale but the target; `{source_language}` in the prompts; rate and factcheck for the target's market (`es`: Latin America, `es-ES`: Spain).
 - Selection: approved, translatable sources of one bundle (`base`, or `--bundle <id>`, plan 98) not in the target locale; stale translations first, then the `base` demo list's ids (`authoring/data/demo.json`, else `work/demo/proposal.json`; plan 174), then subcategories with the fewest approved translations, levels by the locale's deficit (D-84).
 - Steps: translate → rate → factcheck (changed facts only) → merge → review 1 → fix → review 2 → record → audit → export → report.

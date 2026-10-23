@@ -41,7 +41,7 @@
     }
   },
   "batch_health": {
-    "about": "Batch health thresholds (plan 15, pm decision 13, D-55): metric of health.py → min/max; a ✗ in the last done batch stops the next `qgen batch` until `qgen health ack`. «needs_work: each problem» applies to every problem without its own key.",
+    "about": "Batch health thresholds (plan 15, pm decision 13, D-55): metric of health.py → min/max; a ✗ in the last done batch is reported and warned about, never a stop (decision 414); `qgen health ack` records the developer's look. «needs_work: each problem» applies to every problem without its own key.",
     "drop rate": {
       "max": 0.2
     },

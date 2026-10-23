@@ -190,16 +190,16 @@ def last_done(runs):
     return done[-1] if done else None
 
 
-def stop_reason():
-    """Why the next `qgen batch` must stop (D-55), or None: the last done batch (any bundle) fails a
-    threshold and the developer hasn't acked it."""
+def unacked_failure():
+    """Warning for the next `qgen batch` (decision 414: never a stop), or None: the last done batch
+    (any bundle) fails a threshold and the developer hasn't acked it."""
     run = last_done(batch_runs())
     if run is None or run in acks(): return None
     bad = failures(run)
     if not bad: return None
-    return (f"{run} fails the batch health thresholds: {', '.join(bad)}.\n"
-            f"See `qgen report --batches` or authoring/reports/batches.md. The developer looks at it and "
-            f"clears the stop with: qgen health ack {run} \"<note>\"")
+    return (f"warning: {run} fails the batch health thresholds: {', '.join(bad)}.\n"
+            f"See `qgen report --batches` or authoring/reports/batches.md. The developer may record a look "
+            f"with: qgen health ack {run} \"<note>\"")
 
 
 PCT = {"drop rate", "needs_work rate", "overlap rate", "rejected rate", "audit/review agreement", "merged/slots 11–15", "media share",
@@ -305,15 +305,15 @@ def translation_failures(run, h=None):
             and (k != "audit/review agreement" or h["audited"] >= q.get("spot_check_size", 0))]
 
 
-def translate_stop_reason(locale):
-    """Why the next `qgen batch --translate <locale>` must stop, or None: the last done run fails a
-    threshold, until `qgen health ack`."""
+def translate_unacked_failure(locale):
+    """Warning for the next `qgen batch --translate <locale>` (decision 414: never a stop), or None:
+    the last done run fails a threshold and isn't acked."""
     run = last_done(translation_runs(locale))
     if run is None or run in acks(): return None
     bad = translation_failures(run)
     if not bad: return None
-    return (f"{run} fails the health thresholds: {', '.join(bad)} (authoring/reports/{run}.md). The developer looks "
-            f"at it and clears the stop with: qgen health ack {run} \"<note>\"")
+    return (f"warning: {run} fails the health thresholds: {', '.join(bad)} (authoring/reports/{run}.md). The developer "
+            f"may record a look with: qgen health ack {run} \"<note>\"")
 
 
 def translation_health_section(run):
@@ -326,8 +326,8 @@ def translation_health_section(run):
     return ["## Health", "",
             "Translation run health (plan 66): this run and the two before it of the same locale, ✓/✗ against the "
             "thresholds that apply to translations (`health.py`); audit/review agreement only counts from "
-            "the spot-check size on. A ✗ stops the next `qgen batch --translate` until "
-            "`qgen health ack` (D-55).", "", *lines, ""]
+            "the spot-check size on. A ✗ is reported, never a stop (decision 414); "
+            "`qgen health ack` records the developer's look.", "", *lines, ""]
 
 
 def deficit_line(bundle="base", pool=None):
@@ -345,7 +345,7 @@ def health_section(run, pool=None):
     return ["## Health", "",
             f"Batch health (plan 15): this batch and the two before it ({', '.join(runs[:-1]) or 'none'}; "
             "across the source-locale switch too, decision 233), ✓/✗ against the thresholds in "
-            "`authoring/data/targets.json`; a ✗ stops the next `qgen batch` until `qgen health ack` (D-55). "
+            "`authoring/data/targets.json`; a ✗ is reported, never a stop (decision 414); `qgen health ack` records the developer's look. "
             "Needs-work counts are `record`'s decisions; `problems guessed` = classified from feedback.", "",
             *table(runs, pool), "", deficit_line(pool=pool), ""]
 
@@ -361,7 +361,7 @@ def write_batches_md(pool=None):
              "«source locale»: the drafts' language (`run.json` draft_locale; es up to batch-8, en from batch-9, "
              "plan 147); the trend across the switch reads as before (decision 233).", "",
              *table(runs, pool), "", deficit_line(pool=pool), "", "## Acknowledgements", "",
-             "Failing batches the developer has looked at (`qgen health ack`): the stop is cleared, the batch still fails.", "",
+             "Failing batches the developer has looked at (`qgen health ack`): looked at, the batch still fails.", "",
              *ack_lines(), ""]
     qc = report.qc_trend(pool)
     if qc:
