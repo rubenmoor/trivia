@@ -525307,7 +525307,7 @@
     },
     {
       "id": "q-6809",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Un vecino caleño con los brazos abiertos que nunca se cansa de saludar.",
       "question": "¿En qué década se terminó el Cristo Rey que vigila a Cali desde el cerro Los Cristales?",
@@ -525319,17 +525319,24 @@
       ],
       "hints": [
         "Es más joven que la Torre Eiffel.",
-        "Su construcción empezó pocos años después de la Segunda Guerra Mundial.",
+        "Se construyó en el siglo XX, cuando Cali ya crecía rápido.",
         "Se pensó para celebrar los 50 años del fin de la Guerra de los Mil Días (1902)."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Cristo Rey Cali statue",
+        "query": "Cali Colombia cityscape",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APanoramic_Cali_Col.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Panoramic_Cali_Col.jpg/3840px-Panoramic_Cali_Col.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Aleko · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Aleko",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Aleko&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Mide unos 26 metros de alto con su base y se ve desde casi toda Cali.",
       "subcategory": "cities-and-towns",
@@ -525358,19 +525365,48 @@
       "needs_media": false,
       "batch": "batch-16",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows Cali's Cristo Rey: 1, 2, 4, 5 and 6 show the Christ the King statue in Świebodzin, Poland, and 3 shows Cristo Rei in Lisbon. No new search is allowed, so the slot can't be filled. Also, hint 2 (\"a few years after the Second World War\") gives the answer away: with these options, only the 1950s fits. Make it vaguer, e.g. a hint about the 20th century or the city's growth. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows Cali's Cristo Rey: 1, 2, 4, 5 and 6 show the Christ the King statue in Świebodzin, Poland, and 3 shows Cristo Rei in Lisbon. No new search is allowed, so the slot can't be filled. Also, hint 2 (\"a few years after the Second World War\") gives the answer away: with these options, only the 1950s fits. Make it vaguer, e.g. a hint about the 20th century or the city's growth. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made hint 2 vaguer so it no longer gives away the decade, and switched the media query to a Cali view because no Cali Cristo Rey photo was found.",
+        "previous": {
+          "hints": [
+            "Es más joven que la Torre Eiffel.",
+            "Su construcción empezó pocos años después de la Segunda Guerra Mundial.",
+            "Se pensó para celebrar los 50 años del fin de la Guerra de los Mil Días (1902)."
+          ],
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Cristo Rey Cali statue",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-6810",
@@ -525462,12 +525498,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Dayro Moreno footballer",
-        "note": "Foto clara de la cara del futbolista colombiano Dayro Moreno.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Colombian football stadium crowd",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACrowd_at_Dora_Stadium.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Crowd_at_Dora_Stadium.jpg/3840px-Crowd_at_Dora_Stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "TrickyH · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "TrickyH",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:TrickyH&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Dayro Moreno nació en Chicoral, un corregimiento de El Espinal, en el Tolima.",
       "subcategory": "club-football",
@@ -525492,23 +525535,50 @@
         "difficulty_estimate": 8,
         "notes": "Dayro broke Galván Rey's record in 2023. This record could still change and the career facts may date. A clear photo of Dayro Moreno's face on Commons/Openverse is not certain, and the photo is essential. The fun fact only repeats hint 3 (Chicoral), so it adds nothing surprising. The question is a dry who-is-this."
       },
-      "fact_checked": true,
-      "needs_media": true,
+      "fact_checked": false,
+      "needs_media": false,
       "batch": "batch-16",
       "review": {
         "decision": "needs_work",
-        "feedback": "The media slot is 'essential' with a face photo of Dayro Moreno, but the question text never refers to a photo: a sharp face shot of the answer would just give it away to anyone who recognises him. None of the candidates shows a clear face anyway (1: two Steaua players seen from afar; 2: face cut off; 3: titled Juan Carlos Bedoya; 4–5: distant Xolos action shots). Make the media illustrative instead, with a picture that doesn't show the player, e.g. 'Estadio Palogrande Manizales' or 'Colombian football stadium crowd'. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "Hint 2 is wrong. Dayro Moreno passed Sergio Galván Rey's scoring record in 2024, not 2023 (the fact check confirms this). The hint should say \"En 2024 superó el récord del argentino Sergio Galván Rey.\" The fun fact also just repeats hint 3 (Chicoral), so a new surprising fact would help. Verificación de datos: wrong. Hint 2 says he beat Galván Rey's record in 2023. He tied it and then passed it in March 2024 (225 vs 224 goals), at age 38.",
         "problems": [
-          "giveaway",
-          "media"
+          "fact"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot is 'essential' with a face photo of Dayro Moreno, but the question text never refers to a photo: a sharp face shot of the answer would just give it away to anyone who recognises him. None of the candidates shows a clear face anyway (1: two Steaua players seen from afar; 2: face cut off; 3: titled Juan Carlos Bedoya; 4–5: distant Xolos action shots). Make the media illustrative instead, with a picture that doesn't show the player, e.g. 'Estadio Palogrande Manizales' or 'Colombian football stadium crowd'. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the essential face photo to an illustrative stadium image that doesn't show the player.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Dayro Moreno footballer",
+            "note": "Foto clara de la cara del futbolista colombiano Dayro Moreno.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-6812",
@@ -526341,10 +526411,10 @@
     },
     {
       "id": "q-6823",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Una carretera con más curvas que una telenovela, y un final feliz para Colombia.",
-      "question": "Mira la foto: en esta subida, el Alpe d'Huez, un colombiano ganó en 1984 la primera etapa del Tour para su país. ¿Quién fue?",
+      "question": "En 1984, en la subida al Alpe d'Huez, un colombiano ganó la primera etapa del Tour para su país. ¿Quién fue?",
       "answer": "Lucho Herrera",
       "wrong_answers": [
         "Fabio Parra",
@@ -526358,12 +526428,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Alpe d'Huez road",
-        "note": "Foto de las curvas en zigzag de la carretera del Alpe d'Huez, vista desde arriba o de lado, sin ciclistas reconocibles.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Alpe d'Huez hairpins",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlpe_d%27Huez%2C_France_%287957045090%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Alpe_d%27Huez%2C_France_%287957045090%29.jpg/3840px-Alpe_d%27Huez%2C_France_%287957045090%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Robbie Shade · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Robbie Shade",
+        "author_url": "https://www.flickr.com/people/89466603@N00",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El Alpe d'Huez tiene 21 curvas, y cada una lleva una placa con el nombre de ganadores de etapa allí.",
       "subcategory": "cycling",
@@ -526389,21 +526466,47 @@
         "notes": "The question already names Alpe d'Huez, so the hairpin photo doesn't add any clue and isn't really essential; it should be illustrative. Lucho Herrera is the subject of cycling-1 and cycling-7 too, but this asks a different fact. The distractors are strong rival names from the same era."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-16",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows the Alpe d'Huez hairpins that the question points to (\"Mira la foto: en esta subida\"). 1 and 2 show the Col de Sarenne pastoral road with signs, and 3 is a portrait of Pierre Rolland on a podium. A new search can't be run, so this needs a proper hairpin photo (e.g. 'Alpe d'Huez hairpins'). The text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the Alpe d'Huez hairpins that the question points to (\"Mira la foto: en esta subida\"). 1 and 2 show the Col de Sarenne pastoral road with signs, and 3 is a portrait of Pierre Rolland on a podium. A new search can't be run, so this needs a proper hairpin photo (e.g. 'Alpe d'Huez hairpins'). The text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made the media illustrative with a hairpin query and removed 'Mira la foto' so the question no longer depends on a missing image.",
+        "previous": {
+          "question": "Mira la foto: en esta subida, el Alpe d'Huez, un colombiano ganó en 1984 la primera etapa del Tour para su país. ¿Quién fue?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Alpe d'Huez road",
+            "note": "Foto de las curvas en zigzag de la carretera del Alpe d'Huez, vista desde arriba o de lado, sin ciclistas reconocibles.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-6824",
@@ -526425,7 +526528,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "BMX bicycle side view",
+        "query": "BMX race bike",
         "note": "Foto clara de una bicicleta BMX de carreras, sin pista ni texto visible.",
         "source_url": null,
         "file_url": null,
@@ -526459,22 +526562,40 @@
       "batch": "batch-16",
       "review": {
         "decision": "needs_work",
-        "feedback": "The essential image must show a BMX race bike, but all six candidates are other bikes: an 1890s safety bicycle, old roadsters, a road racer, a public bike-share station and Dutch city bikes. A new search isn't allowed, so the slot needs a real BMX photo (e.g. 'BMX race bike' or 'BMX bicycle'). No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No candidate shows a clear BMX race bike on its own. #3 shows a dirt track full of jumps and berms, which gives the answer away. #1, #2, #4 and #5 show freestyle tricks (flatland, foam pit, a flip), with bikes that are partly hidden or have pegs. Search again for a standalone racing BMX bike. No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential image must show a BMX race bike, but all six candidates are other bikes: an 1890s safety bicycle, old roadsters, a road racer, a public bike-share station and Dutch city bikes. A new search isn't allowed, so the slot needs a real BMX photo (e.g. 'BMX race bike' or 'BMX bicycle'). No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer hints at the jumps.",
+        "reason": "Changed the media query to a more direct BMX search so the essential image can be found.",
         "previous": {
-          "description": "Una bici tan chiquita que parece de juguete, pero vuela más alto que muchas."
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "BMX bicycle side view",
+            "note": "Foto clara de una bicicleta BMX de carreras, sin pista ni texto visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -526623,7 +526744,7 @@
     },
     {
       "id": "q-6827",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "Unas burbujas que cosquillean hasta la nariz.",
       "question": "Mira de cerca: ¿cómo se le dice en Colombia a esta bebida dulce llena de burbujas?",
@@ -526641,11 +526762,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "glass of cola",
+        "query": "soda glass bubbles closeup",
         "note": "Primer plano de un vaso con gaseosa oscura y burbujas visibles, sin marcas ni logos.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGasbl%C3%A4schen_--_2022_--_9759.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Gasbl%C3%A4schen_--_2022_--_9759.jpg/3840px-Gasbl%C3%A4schen_--_2022_--_9759.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Las burbujas de la gaseosa son gas carbónico, el mismo que soltamos al respirar.",
       "subcategory": "drinks",
@@ -526670,22 +526798,46 @@
         "difficulty_estimate": 1,
         "notes": "The distractors (tinto, aromática) are clearly not fizzy, so it is very easy, which is fine at level 1. The fun fact touches the answer of q-4356 (the bubbles are gas), but the questions ask different things."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-16",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Every image candidate is a branded Coca-Cola bottle or pack with big logos (and #1 has skulls). The note asks for an unbranded close-up of a glass of dark soda with visible bubbles, and none of them shows bubbles. No new search is allowed, so the media slot can't be filled. Try a search like \"soda glass bubbles closeup\" or \"carbonated drink glass\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Every image candidate is a branded Coca-Cola bottle or pack with big logos (and #1 has skulls). The note asks for an unbranded close-up of a glass of dark soda with visible bubbles, and none of them shows bubbles. No new search is allowed, so the media slot can't be filled. Try a search like \"soda glass bubbles closeup\" or \"carbonated drink glass\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query to find an unbranded close-up of a fizzy drink with bubbles.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "glass of cola",
+            "note": "Primer plano de un vaso con gaseosa oscura y burbujas visibles, sin marcas ni logos.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-6828",
@@ -527948,7 +528100,7 @@
     },
     {
       "id": "q-6844",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un personaje que nunca ha tenido que hacer fila en su vida, porque su papi siempre llama a alguien.",
       "question": "Juanpis González es un gomelo, le dice «mi papi» a su papá y tiene su programa, «Juanpis Live Show». ¿De qué ciudad es?",
@@ -527960,7 +528112,7 @@
       ],
       "hints": [
         "Lo interpreta el humorista Alejandro Riaño.",
-        "Se burla de los jóvenes ricos del norte de su ciudad, que es la más grande del país.",
+        "Se burla de los jóvenes ricos del norte de su ciudad.",
         "Es la capital del país."
       ],
       "media": {
@@ -528006,25 +528158,33 @@
       "needs_media": false,
       "batch": "batch-16",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: 'la más grande del país' points only to Bogotá, so any Colombian player has the answer before hint 3, which then just repeats it ('la capital'). Hint 2 should hint at the upper-class northern neighbourhoods without naming a fact that only Bogotá has (e.g. drop 'que es la más grande del país').",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: 'la más grande del país' points only to Bogotá, so any Colombian player has the answer before hint 3, which then just repeats it ('la capital'). Hint 2 should hint at the upper-class northern neighbourhoods without naming a fact that only Bogotá has (e.g. drop 'que es la más grande del país').",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2: 'rolo' means 'from Bogotá', so it gave the answer away.",
+        "reason": "Removed 'the largest city in the country' from hint 2, which gave the answer away.",
         "previous": {
           "hints": [
             "Lo interpreta el humorista Alejandro Riaño.",
-            "Su acento es rolo, del norte de la ciudad.",
+            "Se burla de los jóvenes ricos del norte de su ciudad, que es la más grande del país.",
             "Es la capital del país."
           ]
         },
@@ -528545,20 +528705,20 @@
     },
     {
       "id": "q-6852",
-      "status": "needs_work",
-      "difficulty": 13,
-      "description": "Vino de las islas británicas y dejó en Boyacá algo más que su firma.",
-      "question": "James Rooke, jefe de la Legión Británica, fue herido en el Pantano de Vargas en 1819. ¿Qué tuvieron que amputarle?",
-      "answer": "Un brazo",
+      "status": "approved",
+      "difficulty": 11,
+      "description": "Cruzaron un océano entero para venir a meterse en un pantano boyacense.",
+      "question": "En el Pantano de Vargas (1819), el coronel James Rooke dirigió a voluntarios europeos que pelearon junto a Bolívar. ¿De dónde venían casi todos?",
+      "answer": "De Gran Bretaña e Irlanda",
       "wrong_answers": [
-        "Una pierna",
-        "Un pie",
-        "Una oreja"
+        "De Francia y Bélgica",
+        "De Alemania y Austria",
+        "De Italia y Suiza"
       ],
       "hints": [
-        "Pudo seguir hablando después de la operación.",
-        "Según la leyenda, gritó «¡Viva la patria!» alzando lo que le quedaba.",
-        "Lo que le quedó libre fue una mano."
+        "Muchos eran veteranos de las guerras contra Napoleón.",
+        "Llegaron por mar desde un reino de islas.",
+        "El propio Rooke había nacido en Dublín."
       ],
       "media": {
         "type": "image",
@@ -528578,7 +528738,7 @@
           "PD-self"
         ]
       },
-      "fun_fact": "Cuenta la leyenda que, cuando le preguntaron qué patria, Rooke respondió: «La que me va a dar sepultura».",
+      "fun_fact": "El monumento del Pantano de Vargas, obra de Rodrigo Arenas Betancourt, es uno de los más grandes de Colombia.",
       "subcategory": "independence",
       "style": null,
       "concept": "James Rooke",
@@ -528605,25 +528765,56 @@
       "needs_media": false,
       "batch": "batch-16",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question is about an injury: which body part was cut off a wounded officer. Hint 2 shows him raising the cut-off limb, and the fun fact jokes about his burial. That breaks the Tone rule (never ask about suffering or deaths, nothing gory). Hint 3 ('Lo que le quedó libre fue una mano') is also confusing. The question should be dropped or replaced with a non-injury question about Rooke or the British Legion at Pantano de Vargas, such as which foreign unit he led.",
-        "problems": [
-          "other"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question is about an injury: which body part was cut off a wounded officer. Hint 2 shows him raising the cut-off limb, and the fun fact jokes about his burial. That breaks the Tone rule (never ask about suffering or deaths, nothing gory). Hint 3 ('Lo que le quedó libre fue una mano') is also confusing. The question should be dropped or replaced with a non-injury question about Rooke or the British Legion at Pantano de Vargas, such as which foreign unit he led.",
+          "problems": [
+            "other"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "difficulty_original": 13,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced the injury question, which broke the Tone rule, with the reviewer's suggestion: where Rooke's foreign legion came from. Rewrote the description, hints and fun fact to match.",
+        "previous": {
+          "difficulty": 13,
+          "description": "Vino de las islas británicas y dejó en Boyacá algo más que su firma.",
+          "question": "James Rooke, jefe de la Legión Británica, fue herido en el Pantano de Vargas en 1819. ¿Qué tuvieron que amputarle?",
+          "answer": "Un brazo",
+          "wrong_answers": [
+            "Una pierna",
+            "Un pie",
+            "Una oreja"
+          ],
+          "hints": [
+            "Pudo seguir hablando después de la operación.",
+            "Según la leyenda, gritó «¡Viva la patria!» alzando lo que le quedaba.",
+            "Lo que le quedó libre fue una mano."
+          ],
+          "fun_fact": "Cuenta la leyenda que, cuando le preguntaron qué patria, Rooke respondió: «La que me va a dar sepultura»."
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-6853",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Antes de los megáfonos, la independencia se pedía a pulmón.",
-      "question": "El 20 de julio de 1810, este hombre animó a la multitud de Santafé a exigir un cabildo abierto. ¿Quién es?",
+      "question": "El 20 de julio de 1810, un criollo animó a la multitud de Santafé a exigir un cabildo abierto. ¿Quién fue?",
       "answer": "José Acevedo y Gómez",
       "wrong_answers": [
         "Antonio Nariño",
@@ -528637,12 +528828,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "José Acevedo Gómez Tribuno",
-        "note": "Retrato de José Acevedo y Gómez, sin el nombre visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Casa del Florero Bogota",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACasa_Florero.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Casa_Florero.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Baiji · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Baiji",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Baiji",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Acevedo y Gómez le gritó al pueblo que si perdía «estos momentos de efervescencia y calor», sería tratado como insurgente.",
       "subcategory": "independence",
@@ -528668,30 +528866,44 @@
         "notes": "Hint 2 calls a tribune a 'Roman orator', which is loose: a tribune was a magistrate. Few people would recognise this portrait, so essential media adds nothing and illustrative would fit better. Acevedo y Gómez is less well known than the stated 9 suggests."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-16",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the six candidates is a portrait of Acevedo y Gómez, and most of them print his full name. 1 and 2 are handwritten or typed documents, 3 is a school logo, 4 is a school bus, 5 is a UNAD building and 6 is a Bucaramanga cityscape. Another search isn't allowed. The slot should become illustrative or decorative, for example a colonial Bogotá plaza or the Casa del Florero, as the rater suggested, since few players would recognise his face anyway. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates is a portrait of Acevedo y Gómez, and most of them print his full name. 1 and 2 are handwritten or typed documents, 3 is a school logo, 4 is a school bus, 5 is a UNAD building and 6 is a Bucaramanga cityscape. Another search isn't allowed. The slot should become illustrative or decorative, for example a colonial Bogotá plaza or the Casa del Florero, as the rater suggested, since few players would recognise his face anyway. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Corrected hint 2: a tribune was a Roman office defending commoners, not an orator.",
+        "reason": "Made the media an illustrative Casa del Florero image instead of an unavailable portrait, and changed 'este hombre' so the text no longer points to a photo.",
         "previous": {
-          "hints": [
-            "Era regidor del cabildo de Santafé.",
-            "Le dieron un apodo de orador romano.",
-            "Lo llamaron «el Tribuno del Pueblo»."
-          ]
+          "question": "El 20 de julio de 1810, este hombre animó a la multitud de Santafé a exigir un cabildo abierto. ¿Quién es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "José Acevedo Gómez Tribuno",
+            "note": "Retrato de José Acevedo y Gómez, sin el nombre visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-10-23"
       }
@@ -529129,7 +529341,7 @@
     },
     {
       "id": "q-6860",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Una ciudad que viene con ruana incluida.",
       "question": "Completa: por su clima frío, mucha gente de tierra caliente le dice a Bogotá «la…»",
@@ -529147,11 +529359,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Bogota skyline cloudy",
+        "query": "Bogota view from Monserrate",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Bogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg/3840px-Bogot%C3%A1%2C_Monserrate%2C_2023-06_CN-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Steffen Schmitz (more photos) · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Steffen Schmitz (more photos)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Carschten",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Bogotá está a unos 2600 metros de altura y su temperatura promedio ronda los 14 grados.",
       "subcategory": "mountains-and-landscapes",
@@ -529180,18 +529399,42 @@
       "needs_media": false,
       "batch": "batch-16",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates shows Bogotá. They are cloudy skylines of Dhaka, Calgary, Kaohsiung (two), London and Atlanta, and no new search is allowed. The slot needs a real Bogotá image, such as a cloudy Bogotá skyline from Monserrate or people in ruanas in Bogotá. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates shows Bogotá. They are cloudy skylines of Dhaka, Calgary, Kaohsiung (two), London and Atlanta, and no new search is allowed. The slot needs a real Bogotá image, such as a cloudy Bogotá skyline from Monserrate or people in ruanas in Bogotá. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query to find a real view of Bogotá.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Bogota skyline cloudy",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-6861",
@@ -529420,13 +529663,13 @@
       ],
       "hints": [
         "Es un departamento de la costa Caribe.",
-        "Su capital es una ciudad amurallada.",
+        "Su capital es una de las ciudades más antiguas del país.",
         "Lleva el nombre del Libertador."
       ],
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Flag of Bolívar (Colombia)",
+        "query": "Flag of Bolívar (Colombia).svg",
         "note": "La bandera del departamento de Bolívar (Colombia): tres franjas horizontales iguales, amarilla, verde y roja, sin texto ni nombre visible.",
         "source_url": null,
         "file_url": null,
@@ -529460,17 +529703,48 @@
       "batch": "batch-16",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows the Bolívar department flag, and the question needs it as essential media. The candidates are Plaza Bolívar scenes, a protest, Palestinian flags and a Cúcuta statue with national flags. No new search is allowed. Supply the Commons SVG 'Flag of Bolívar (Colombia).svg' directly. Also note: hint 2 (walled capital, i.e. Cartagena) already gives the answer away almost as clearly as hint 3. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the Bolívar department flag, and the question needs it as essential media. The candidates are Plaza Bolívar scenes, a protest, Palestinian flags and a Cúcuta statue with national flags. No new search is allowed. Supply the Commons SVG 'Flag of Bolívar (Colombia).svg' directly. Also note: hint 2 (walled capital, i.e. Cartagena) already gives the answer away almost as clearly as hint 3. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query to point at the Commons flag file, and made hint 2 vaguer so it no longer gives away Cartagena.",
+        "previous": {
+          "hints": [
+            "Es un departamento de la costa Caribe.",
+            "Su capital es una ciudad amurallada.",
+            "Lleva el nombre del Libertador."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Flag of Bolívar (Colombia)",
+            "note": "La bandera del departamento de Bolívar (Colombia): tres franjas horizontales iguales, amarilla, verde y roja, sin texto ni nombre visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-6865",
@@ -530363,7 +530637,7 @@
       "status": "needs_work",
       "difficulty": 3,
       "description": "El domingo en que las floristerías no dan abasto y los almuerzos familiares tampoco.",
-      "question": "Es el segundo domingo de mayo en Colombia y todo el mundo sale a comprar flores. ¿A quién se las regalan?",
+      "question": "Es el último domingo de mayo en Colombia y todo el mundo sale a comprar flores. ¿A quién se las regalan?",
       "answer": "A las mamás",
       "wrong_answers": [
         "A los papás",
@@ -530419,17 +530693,35 @@
       "batch": "batch-16",
       "review": {
         "decision": "needs_work",
-        "feedback": "The date is wrong: Colombia celebrates Mother's Day on the last Sunday of May (law from 1925), not the second Sunday like the USA and Mexico's neighbours. The rater's note confirming the second Sunday is mistaken.",
+        "feedback": "The question says Colombia's Mother's Day is the last Sunday of May. Nationally it is the second Sunday of May (Ley 28 de 1925); only Cúcuta celebrates it on the last Sunday. Change the question text to \"segundo domingo de mayo\". The rater note also confirms the second Sunday. Verificación de datos: wrong. In Colombia, Mother's Day is the second Sunday of May (Law 28 of 1925). Only Cúcuta moves it to the last Sunday of May.",
         "problems": [
           "fact"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The date is wrong: Colombia celebrates Mother's Day on the last Sunday of May (law from 1925), not the second Sunday like the USA and Mexico's neighbours. The rater's note confirming the second Sunday is mistaken.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Corrected the date: Colombia celebrates Mother's Day on the last Sunday of May.",
+        "previous": {
+          "question": "Es el segundo domingo de mayo en Colombia y todo el mundo sale a comprar flores. ¿A quién se las regalan?"
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-6878",
@@ -530512,7 +530804,7 @@
     },
     {
       "id": "q-6879",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Una nube que en vez de llover se convierte en camiseta.",
       "question": "Mira esta mota blanca que sale de una planta sembrada en Córdoba y el Tolima. ¿Qué es?",
@@ -530530,11 +530822,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "open cotton boll white",
+        "query": "Gossypium open boll",
         "note": "Close-up of an open cotton boll on the plant, white fiber visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACotton_boll_nearly_ready_for_harvest.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Cotton_boll_nearly_ready_for_harvest.jpg/3840px-Cotton_boll_nearly_ready_for_harvest.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Michael Bass-Deschenes(Commons User Mike Bass-Deschênes) · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Michael Bass-Deschenes(Commons User Mike Bass-Deschênes)",
+        "author_url": "https://www.flickr.com/people/123184012@N02",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En los años setenta, al algodón le decían “oro blanco” en Córdoba y el Cesar por la plata que dejaba.",
       "subcategory": "plants-and-flowers",
@@ -530563,18 +530862,42 @@
       "needs_media": true,
       "batch": "batch-16",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question needs an essential photo of an open white cotton boll, and none of the candidates shows one. The candidates are a boll weevil monument (1, 2), old book illustrations (3, 4), a chart (5) and a textile fragment (6). The slot needs a new search such as \"Gossypium open boll\" or \"cotton boll field\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question needs an essential photo of an open white cotton boll, and none of the candidates shows one. The candidates are a boll weevil monument (1, 2), old book illustrations (3, 4), a chart (5) and a textile fragment (6). The slot needs a new search such as \"Gossypium open boll\" or \"cotton boll field\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New media query aimed at a clear photo of an open cotton boll, which Commons has plenty of.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "open cotton boll white",
+            "note": "Close-up of an open cotton boll on the plant, white fiber visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-6880",
@@ -533229,7 +533552,7 @@
     },
     {
       "id": "q-6916",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Unas semillitas chiquitas con un puesto fijo en la cocina colombiana.",
       "question": "Mira la foto: en Colombia estas semillas se le echan al tamal y al arroz. ¿Para qué se usan?",
@@ -533247,11 +533570,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "annatto seeds closeup",
+        "query": "Bixa orellana fruit",
         "note": "Fruto abierto de achiote (Bixa orellana) con sus semillas rojas visibles, sin letreros.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABixa_orellana_fruit_open.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Bixa_orellana_fruit_open.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Leonardo Ré-Jorge · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Leonardo Ré-Jorge",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Leonardorejorge",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El mismo achiote que pinta el arroz le da su color naranja a muchos quesos tipo cheddar en el mundo.",
       "subcategory": "fruits",
@@ -533280,18 +533610,42 @@
       "needs_media": true,
       "batch": "batch-16",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows achiote (Bixa orellana). The sheet has pepper seeds, mustard seeds, pomegranate arils and a milkweed pod. The image is essential (\"Mira la foto\"), and no new search is allowed. The slot needs a photo of an open achiote pod with its red seeds, for example from a search like \"Bixa orellana fruit\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows achiote (Bixa orellana). The sheet has pepper seeds, mustard seeds, pomegranate arils and a milkweed pod. The image is essential (\"Mira la foto\"), and no new search is allowed. The slot needs a photo of an open achiote pod with its red seeds, for example from a search like \"Bixa orellana fruit\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New media query aimed at an open achiote pod with red seeds.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "annatto seeds closeup",
+            "note": "Fruto abierto de achiote (Bixa orellana) con sus semillas rojas visibles, sin letreros.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-6917",
@@ -534318,7 +534672,7 @@
     },
     {
       "id": "q-6931",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Una categoría donde cada gramo cuenta y la báscula es la rival más temida.",
       "question": "Ingrit Valencia ganó bronce en Río 2016, fue la primera boxeadora colombiana con medalla olímpica y peleaba en la categoría femenina más liviana de esos Juegos. ¿Cuál era?",
@@ -534374,19 +534728,27 @@
         "difficulty_estimate": 10,
         "notes": "The facts check out (51 kg flyweight, Rio had 3 women's classes). Peso pluma sounds lighter than mosca, so it makes a good trap. The question is somewhat dry."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-16",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: wrong. Ingrit Valencia won bronze in Rio 2016 in the women's lightweight (60 kg) category, not flyweight. The 51 kg flyweight hint and the 'lightest category' framing are therefore wrong for her. Peso ligero is listed as a wrong answer but is the true one. The question premise 'más liviana' is also false.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: wrong. Ingrit Valencia won bronze in Rio 2016 in the women's lightweight (60 kg) category, not flyweight. The 51 kg flyweight hint and the 'lightest category' framing are therefore wrong for her. Peso ligero is listed as a wrong answer but is the true one. The question premise 'más liviana' is also false.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -534689,7 +535051,7 @@
     },
     {
       "id": "q-6936",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Viaja más en avión que muchos ejecutivos, y siempre en clase refrigerada.",
       "question": "Colombia es uno de los mayores exportadores del mundo de esta flor. Mira el detalle: ¿cuál es?",
@@ -534707,11 +535069,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Dianthus caryophyllus bloom",
+        "query": "Dianthus caryophyllus flower",
         "note": "Close-up of a single carnation bloom showing the frilled petal edges, no labels.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADianthus_caryophyllus_%28flowers_white%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Dianthus_caryophyllus_%28flowers_white%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Takkk · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Takkk",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Takkk",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El clavel se llama así por el clavo de olor, porque su aroma lo recuerda.",
       "subcategory": "plants-and-flowers",
@@ -534740,22 +535109,46 @@
       "needs_media": true,
       "batch": "batch-16",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate gives the clear photo of a single carnation that this essential slot needs. All three are 19th-century seed-catalogue engravings. #1 and #2 show other flowers, and #3 shows a small drawn carnation crowded in with three other plants under a catalogue banner. Since the text alone also fits roses, the question needs a real close-up photo of a carnation, for example from a search for 'Dianthus caryophyllus flower'. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate gives the clear photo of a single carnation that this essential slot needs. All three are 19th-century seed-catalogue engravings. #1 and #2 show other flowers, and #3 shows a small drawn carnation crowded in with three other plants under a catalogue banner. Since the text alone also fits roses, the question needs a real close-up photo of a carnation, for example from a search for 'Dianthus caryophyllus flower'. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New media query aimed at a real close-up photo of a carnation instead of catalogue engravings.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Dianthus caryophyllus bloom",
+            "note": "Close-up of a single carnation bloom showing the frilled petal edges, no labels.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-6937",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un jardín entero que camina por Medellín sobre la espalda de alguien.",
       "question": "En el Desfile de Silleteros, ¿qué categoría de silleta lleva solo flores en ramilletes, sin figuras ni letreros?",
@@ -534773,11 +535166,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Santa Elena Antioquia village",
+        "query": "Medellin Colombia skyline",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMedell%C3%ADn_skyline02.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Medell%C3%ADn_skyline02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "I.D. R.J. · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "I.D. R.J.",
+        "author_url": "https://www.flickr.com/people/15072398@N00",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Antes de la Feria, los campesinos de Santa Elena usaban la silleta para bajar flores a vender a Medellín.",
       "subcategory": "plants-and-flowers",
@@ -534806,18 +535206,42 @@
       "needs_media": false,
       "batch": "batch-16",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates fits. All six are churches of St Margaret of Antioch in Slovakia and England. The search for 'Santa Elena Antioquia' matched 'Antioch' instead of the Colombian village. No new search is allowed, so the slot needs a new query by hand, for example 'Silleteros parade Medellín' or 'Feria de las Flores Medellín'. Make sure the picture doesn't clearly show a traditional silleta that gives the answer away. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits. All six are churches of St Margaret of Antioch in Slovakia and England. The search for 'Santa Elena Antioquia' matched 'Antioch' instead of the Colombian village. No new search is allowed, so the slot needs a new query by hand, for example 'Silleteros parade Medellín' or 'Feria de las Flores Medellín'. Make sure the picture doesn't clearly show a traditional silleta that gives the answer away. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced the media query, which matched Antioch, with a Medellín city view that can't show a silleta.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Santa Elena Antioquia village",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-6938",
@@ -538092,7 +538516,7 @@
     },
     {
       "id": "q-6981",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Un mercado donde el maíz manda, pero alguien se coló en la lista.",
       "question": "Compras maíz peto en la plaza. ¿Cuál de estas preparaciones NO se hace con maíz?",
@@ -538103,8 +538527,8 @@
         "Arepa"
       ],
       "hints": [
-        "El intruso es una sopa típica de la costa Caribe.",
-        "Se come caliente con arroz o suero, y su base es un tubérculo, no un grano.",
+        "El intruso es típico de la costa Caribe, sobre todo de Córdoba y Sucre.",
+        "Se come caliente y se acompaña con arroz blanco.",
         "Se espesa con ñame, un tubérculo."
       ],
       "media": {
@@ -538150,25 +538574,33 @@
       "needs_media": false,
       "batch": "batch-16",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 gives the answer away: it calls the odd one out \"a soup\", and mote de queso is the only soup among the options (mazamorra, chicha and arepa are not). Hint 2 then names its base, a tuber, which leaves nothing to guess. Hint 1 should say something vaguer, for example about the Caribbean region or its cheese, without naming the dish type. Hint 2 shouldn't name the tuber base. The \"suero\" pairing in hint 2 is also shaky (it is usually served with white rice) and should be dropped.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 gives the answer away: it calls the odd one out \"a soup\", and mote de queso is the only soup among the options (mazamorra, chicha and arepa are not). Hint 2 then names its base, a tuber, which leaves nothing to guess. Hint 1 should say something vaguer, for example about the Caribbean region or its cheese, without naming the dish type. Hint 2 shouldn't name the tuber base. The \"suero\" pairing in hint 2 is also shaky (it is usually served with white rice) and should be dropped.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave the answer away by mentioning cheese.",
+        "reason": "Hints 1 and 2 rewritten so they no longer call it a soup or name the tuber base early, and the shaky suero pairing is gone.",
         "previous": {
           "hints": [
             "El intruso es una sopa típica de la costa Caribe.",
-            "Lleva queso costeño, pero no lleva granos.",
+            "Se come caliente con arroz o suero, y su base es un tubérculo, no un grano.",
             "Se espesa con ñame, un tubérculo."
           ]
         },
@@ -538427,7 +538859,7 @@
       "status": "needs_work",
       "difficulty": 3,
       "description": "Tiene nombre de pájaro, pero ni vuela ni pone huevos: solo pone sabor.",
-      "question": "Este instrumento del conjunto vallenato lleva el nombre de un ave de la costa. ¿A qué familia de instrumentos pertenece?",
+      "question": "La guacharaca del conjunto vallenato lleva el nombre de un ave de la costa. ¿A qué familia de instrumentos pertenece?",
       "answer": "De percusión",
       "wrong_answers": [
         "De viento",
@@ -538441,12 +538873,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "guacharaca vallenato scraper",
-        "note": "Foto clara de una guacharaca vallenata (tubo de caña con ranuras), idealmente con su trinche; sin texto ni nombre visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Valledupar Colombia",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARaining_in_Valledupar.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Raining_in_Valledupar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "--F3rn4nd0 06:17, 27 March 2007 (UTC) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "--F3rn4nd0 06:17, 27 March 2007 (UTC)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:F3rn4nd0",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Se dice que la guacharaca imita el canto del ave del mismo nombre, que en las mañanas de la costa grita sin parar.",
       "subcategory": "vallenato",
@@ -538472,21 +538911,49 @@
         "notes": "Essential media is risky: the guacharaca is a regional object, and Wikimedia/Openverse may not have a clear, label-free photo of one (house style warns against this, much like the gaita example). 'De teclado' is a weak distractor. It's a fairly dry family-classification question. q-4063 also has percussion as its answer but asks about orchestra families, so the overlap is only mild."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-16",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows the guacharaca instrument. They are all Espeletia guacharaca plants (1, 4) or chachalaca birds (2, 3, 5, 6), and no new search is allowed. The question (\"Este instrumento…\") only works with an essential photo of the instrument. Either find a real photo of a guacharaca with its trinche, or rework the question to name the instrument in the text and use an illustrative image (for example a vallenato ensemble or a caja vallenata). No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "Hint 1 (\"No tiene teclas ni cuerdas, y tampoco se sopla\") rules out all three wrong answers, so it gives the answer away. Replace it with a vague hint, for example one about the guacharaca's role in the vallenato trio or about what it is made of (cane or wood), that doesn't eliminate any option.",
         "problems": [
-          "media"
+          "giveaway"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows the guacharaca instrument. They are all Espeletia guacharaca plants (1, 4) or chachalaca birds (2, 3, 5, 6), and no new search is allowed. The question (\"Este instrumento…\") only works with an essential photo of the instrument. Either find a real photo of a guacharaca with its trinche, or rework the question to name the instrument in the text and use an illustrative image (for example a vallenato ensemble or a caja vallenata). No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The instrument is now named in the text, and the essential photo became an illustrative Valledupar image, since no guacharaca photo is available.",
+        "previous": {
+          "question": "Este instrumento del conjunto vallenato lleva el nombre de un ave de la costa. ¿A qué familia de instrumentos pertenece?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "guacharaca vallenato scraper",
+            "note": "Foto clara de una guacharaca vallenata (tubo de caña con ranuras), idealmente con su trinche; sin texto ni nombre visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-6986",
