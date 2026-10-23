@@ -382,7 +382,8 @@
     {
       "name": "Limón",
       "facet": "Frutas ácidas para jugo",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: Lemon's sourness is already in the pool, and none of the options gives an easy question that needs Colombia."
     },
     {
       "name": "Piña",
@@ -487,7 +488,8 @@
     {
       "name": "Milpesos",
       "facet": "Palmas y sus frutos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Milpesos is too obscure to recognise from a close-up photo, and its region is unclear (Amazonía, Pacífico, Orinoquía)."
     },
     {
       "name": "Palma de vino",

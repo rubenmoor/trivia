@@ -1,0 +1,483 @@
+{
+  "subcategory": "plants-and-flowers",
+  "facets": [
+    "Orquídeas y la flor nacional",
+    "Palma de cera y árboles emblemáticos",
+    "Frailejones y plantas del páramo",
+    "Flores de exportación y cultivo de flores",
+    "Feria de las Flores y silleteros",
+    "Frutas tropicales colombianas",
+    "Café, cacao y cultivos tradicionales",
+    "Plantas medicinales y aromáticas",
+    "Plantas de la Amazonia y el Pacífico",
+    "Fibras vegetales y artesanías",
+    "Expedición Botánica y botánicos",
+    "Jardines botánicos y bosques famosos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Flor nacional de Colombia",
+      "facet": "Orquídeas y la flor nacional",
+      "known_at": 4
+    },
+    {
+      "name": "Masdevallia",
+      "facet": "Orquídeas y la flor nacional",
+      "known_at": 14
+    },
+    {
+      "name": "Odontoglossum",
+      "facet": "Orquídeas y la flor nacional",
+      "known_at": 14
+    },
+    {
+      "name": "Miltoniopsis",
+      "facet": "Orquídeas y la flor nacional",
+      "known_at": 15
+    },
+    {
+      "name": "Anguloa o cuna de Venus",
+      "facet": "Orquídeas y la flor nacional",
+      "known_at": 14
+    },
+    {
+      "name": "Orquídea Drácula",
+      "facet": "Orquídeas y la flor nacional",
+      "known_at": 12
+    },
+    {
+      "name": "Vainilla",
+      "facet": "Orquídeas y la flor nacional",
+      "known_at": 9
+    },
+    {
+      "name": "Oncidium o lluvia de oro",
+      "facet": "Orquídeas y la flor nacional",
+      "known_at": 12
+    },
+    {
+      "name": "Sobralia",
+      "facet": "Orquídeas y la flor nacional",
+      "known_at": 15,
+      "retired": "unaskable: Sobralia es demasiado especializado y ninguna opción da una pregunta justa."
+    },
+    {
+      "name": "Labelo",
+      "facet": "Orquídeas y la flor nacional",
+      "known_at": 13
+    },
+    {
+      "name": "Pseudobulbo",
+      "facet": "Orquídeas y la flor nacional",
+      "known_at": 14
+    },
+    {
+      "name": "Colombia, país con más especies de orquídeas",
+      "facet": "Orquídeas y la flor nacional",
+      "known_at": 8
+    },
+    {
+      "name": "Lycaste",
+      "facet": "Orquídeas y la flor nacional",
+      "known_at": 15
+    },
+    {
+      "name": "Árbol nacional de Colombia",
+      "facet": "Palma de cera y árboles emblemáticos",
+      "known_at": 5
+    },
+    {
+      "name": "Nogal cafetero",
+      "facet": "Palma de cera y árboles emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Cedro",
+      "facet": "Palma de cera y árboles emblemáticos",
+      "known_at": 7
+    },
+    {
+      "name": "Almendro",
+      "facet": "Palma de cera y árboles emblemáticos",
+      "known_at": 6
+    },
+    {
+      "name": "Carbonero",
+      "facet": "Palma de cera y árboles emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Higuerón",
+      "facet": "Palma de cera y árboles emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Abarco",
+      "facet": "Palma de cera y árboles emblemáticos",
+      "known_at": 14
+    },
+    {
+      "name": "Arrayán",
+      "facet": "Palma de cera y árboles emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Domingo de Ramos",
+      "facet": "Palma de cera y árboles emblemáticos",
+      "known_at": 5
+    },
+    {
+      "name": "Frailejón",
+      "facet": "Frailejones y plantas del páramo",
+      "known_at": 3
+    },
+    {
+      "name": "Sietecueros",
+      "facet": "Frailejones y plantas del páramo",
+      "known_at": 12
+    },
+    {
+      "name": "Musgo",
+      "facet": "Frailejones y plantas del páramo",
+      "known_at": 4
+    },
+    {
+      "name": "Árnica",
+      "facet": "Frailejones y plantas del páramo",
+      "known_at": 10
+    },
+    {
+      "name": "Páramo como fábrica de agua",
+      "facet": "Frailejones y plantas del páramo",
+      "known_at": 7
+    },
+    {
+      "name": "Clavel",
+      "facet": "Flores de exportación y cultivo de flores",
+      "known_at": 4
+    },
+    {
+      "name": "Rosa",
+      "facet": "Flores de exportación y cultivo de flores",
+      "known_at": 1
+    },
+    {
+      "name": "Crisantemo",
+      "facet": "Flores de exportación y cultivo de flores",
+      "known_at": 8
+    },
+    {
+      "name": "Pompón",
+      "facet": "Flores de exportación y cultivo de flores",
+      "known_at": 9
+    },
+    {
+      "name": "Astromelia",
+      "facet": "Flores de exportación y cultivo de flores",
+      "known_at": 8
+    },
+    {
+      "name": "Gerbera",
+      "facet": "Flores de exportación y cultivo de flores",
+      "known_at": 10
+    },
+    {
+      "name": "Hortensia",
+      "facet": "Flores de exportación y cultivo de flores",
+      "known_at": 6
+    },
+    {
+      "name": "Girasol",
+      "facet": "Flores de exportación y cultivo de flores",
+      "known_at": 2
+    },
+    {
+      "name": "Invernadero",
+      "facet": "Flores de exportación y cultivo de flores",
+      "known_at": 6
+    },
+    {
+      "name": "San Valentín",
+      "facet": "Flores de exportación y cultivo de flores",
+      "known_at": 6
+    },
+    {
+      "name": "Día de la Madre",
+      "facet": "Flores de exportación y cultivo de flores",
+      "known_at": 3
+    },
+    {
+      "name": "Asocolflores",
+      "facet": "Flores de exportación y cultivo de flores",
+      "known_at": 13
+    },
+    {
+      "name": "Rionegro",
+      "facet": "Flores de exportación y cultivo de flores",
+      "known_at": 9
+    },
+    {
+      "name": "Lirio",
+      "facet": "Flores de exportación y cultivo de flores",
+      "known_at": 6
+    },
+    {
+      "name": "Colombia, segundo exportador de flores del mundo",
+      "facet": "Flores de exportación y cultivo de flores",
+      "known_at": 10
+    },
+    {
+      "name": "Silletero",
+      "facet": "Feria de las Flores y silleteros",
+      "known_at": 5
+    },
+    {
+      "name": "Desfile de Silleteros",
+      "facet": "Feria de las Flores y silleteros",
+      "known_at": 6
+    },
+    {
+      "name": "Santa Elena",
+      "facet": "Feria de las Flores y silleteros",
+      "known_at": 9
+    },
+    {
+      "name": "Silleta emblemática",
+      "facet": "Feria de las Flores y silleteros",
+      "known_at": 11
+    },
+    {
+      "name": "Silleta monumental",
+      "facet": "Feria de las Flores y silleteros",
+      "known_at": 11
+    },
+    {
+      "name": "Silleta tradicional",
+      "facet": "Feria de las Flores y silleteros",
+      "known_at": 11
+    },
+    {
+      "name": "Silleta comercial",
+      "facet": "Feria de las Flores y silleteros",
+      "known_at": 12
+    },
+    {
+      "name": "Desfile de Autos Clásicos y Antiguos",
+      "facet": "Feria de las Flores y silleteros",
+      "known_at": 10
+    },
+    {
+      "name": "Trova antioqueña",
+      "facet": "Feria de las Flores y silleteros",
+      "known_at": 10
+    },
+    {
+      "name": "Agosto",
+      "facet": "Feria de las Flores y silleteros",
+      "known_at": 7
+    },
+    {
+      "name": "Patrimonio Cultural Inmaterial de la Nación",
+      "facet": "Feria de las Flores y silleteros",
+      "known_at": 12
+    },
+    {
+      "name": "Festival de Orquídeas, Pájaros y Flores",
+      "facet": "Feria de las Flores y silleteros",
+      "known_at": 13
+    },
+    {
+      "name": "Variedad Castillo",
+      "facet": "Café, cacao y cultivos tradicionales",
+      "known_at": 14
+    },
+    {
+      "name": "Chapolera",
+      "facet": "Café, cacao y cultivos tradicionales",
+      "known_at": 11
+    },
+    {
+      "name": "Papa criolla",
+      "facet": "Café, cacao y cultivos tradicionales",
+      "known_at": 4
+    },
+    {
+      "name": "Cacao fino de aroma",
+      "facet": "Café, cacao y cultivos tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Caléndula",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 9
+    },
+    {
+      "name": "Albahaca",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 6
+    },
+    {
+      "name": "Prontoalivio",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 12
+    },
+    {
+      "name": "Romero",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 6
+    },
+    {
+      "name": "Paico",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 12
+    },
+    {
+      "name": "Llantén",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 12
+    },
+    {
+      "name": "Cilantro",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 3
+    },
+    {
+      "name": "Guascas",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 6
+    },
+    {
+      "name": "Ortiga",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 7
+    },
+    {
+      "name": "Valeriana",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 11
+    },
+    {
+      "name": "Canangucho",
+      "facet": "Plantas de la Amazonia y el Pacífico",
+      "known_at": 13
+    },
+    {
+      "name": "Sangre de drago",
+      "facet": "Plantas de la Amazonia y el Pacífico",
+      "known_at": 11
+    },
+    {
+      "name": "Matapalo",
+      "facet": "Plantas de la Amazonia y el Pacífico",
+      "known_at": 11
+    },
+    {
+      "name": "Esparto",
+      "facet": "Fibras vegetales y artesanías",
+      "known_at": 13
+    },
+    {
+      "name": "Mopa-mopa o barniz de Pasto",
+      "facet": "Fibras vegetales y artesanías",
+      "known_at": 13
+    },
+    {
+      "name": "Algodón",
+      "facet": "Fibras vegetales y artesanías",
+      "known_at": 3
+    },
+    {
+      "name": "Jardín Botánico de Bogotá José Celestino Mutis",
+      "facet": "Jardines botánicos y bosques famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Jardín Botánico de Medellín",
+      "facet": "Jardines botánicos y bosques famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Orquideorama",
+      "facet": "Jardines botánicos y bosques famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Jardín Botánico de Cartagena Guillermo Piñeres",
+      "facet": "Jardines botánicos y bosques famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Jardín Botánico del Quindío",
+      "facet": "Jardines botánicos y bosques famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Santuario de Flora y Fauna Otún Quimbaya",
+      "facet": "Jardines botánicos y bosques famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Sierra de la Macarena",
+      "facet": "Jardines botánicos y bosques famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Jardín Botánico de Cali",
+      "facet": "Jardines botánicos y bosques famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Jardín Botánico Eloy Valenzuela",
+      "facet": "Jardines botánicos y bosques famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Selva del Darién",
+      "facet": "Jardines botánicos y bosques famosos",
+      "known_at": 9
+    }
+  ]
+}

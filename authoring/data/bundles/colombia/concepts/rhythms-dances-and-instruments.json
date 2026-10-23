@@ -1,0 +1,543 @@
+{
+  "subcategory": "rhythms-dances-and-instruments",
+  "facets": [
+    "Cumbia y ritmos del Caribe",
+    "Vallenato y sus juglares",
+    "Salsa caleña y baile de salsa",
+    "Música del Pacífico y currulao",
+    "Bambuco, pasillo y música andina",
+    "Joropo y música llanera",
+    "Instrumentos de percusión colombianos",
+    "Instrumentos de viento y cuerda",
+    "Bailes folclóricos y trajes típicos",
+    "Festivales y carnavales musicales",
+    "Champeta, reguetón y ritmos urbanos",
+    "Palabras y dichos de la música colombiana"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Cumbia",
+      "facet": "Cumbia y ritmos del Caribe",
+      "known_at": 2
+    },
+    {
+      "name": "Bullerengue",
+      "facet": "Cumbia y ritmos del Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "Fandango",
+      "facet": "Cumbia y ritmos del Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "Cumbiamba",
+      "facet": "Cumbia y ritmos del Caribe",
+      "known_at": 9
+    },
+    {
+      "name": "Merecumbé",
+      "facet": "Cumbia y ritmos del Caribe",
+      "known_at": 13
+    },
+    {
+      "name": "Los Gaiteros de San Jacinto",
+      "facet": "Cumbia y ritmos del Caribe",
+      "known_at": 11
+    },
+    {
+      "name": "Andrés Landero",
+      "facet": "Cumbia y ritmos del Caribe",
+      "known_at": 13
+    },
+    {
+      "name": "Cumbia cienaguera",
+      "facet": "Cumbia y ritmos del Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "Vallenato",
+      "facet": "Vallenato y sus juglares",
+      "known_at": 2
+    },
+    {
+      "name": "Paseo vallenato",
+      "facet": "Vallenato y sus juglares",
+      "known_at": 9
+    },
+    {
+      "name": "Merengue vallenato",
+      "facet": "Vallenato y sus juglares",
+      "known_at": 10
+    },
+    {
+      "name": "Son vallenato",
+      "facet": "Vallenato y sus juglares",
+      "known_at": 10
+    },
+    {
+      "name": "Puya vallenata",
+      "facet": "Vallenato y sus juglares",
+      "known_at": 9
+    },
+    {
+      "name": "Emiliano Zuleta",
+      "facet": "Vallenato y sus juglares",
+      "known_at": 11
+    },
+    {
+      "name": "Juglar vallenato",
+      "facet": "Vallenato y sus juglares",
+      "known_at": 9
+    },
+    {
+      "name": "Guayacán Orquesta",
+      "facet": "Salsa caleña y baile de salsa",
+      "known_at": 9
+    },
+    {
+      "name": "Jairo Varela",
+      "facet": "Salsa caleña y baile de salsa",
+      "known_at": 11
+    },
+    {
+      "name": "Paso caleño",
+      "facet": "Salsa caleña y baile de salsa",
+      "known_at": 8
+    },
+    {
+      "name": "Juanchito",
+      "facet": "Salsa caleña y baile de salsa",
+      "known_at": 11
+    },
+    {
+      "name": "Sonora Carruseles",
+      "facet": "Salsa caleña y baile de salsa",
+      "known_at": 12
+    },
+    {
+      "name": "Orquesta La 33",
+      "facet": "Salsa caleña y baile de salsa",
+      "known_at": 11
+    },
+    {
+      "name": "Yuri Buenaventura",
+      "facet": "Salsa caleña y baile de salsa",
+      "known_at": 12
+    },
+    {
+      "name": "Grupo Galé",
+      "facet": "Salsa caleña y baile de salsa",
+      "known_at": 11
+    },
+    {
+      "name": "Piper Pimienta",
+      "facet": "Salsa caleña y baile de salsa",
+      "known_at": 13
+    },
+    {
+      "name": "Las caleñas son como las flores",
+      "facet": "Salsa caleña y baile de salsa",
+      "known_at": 9
+    },
+    {
+      "name": "Mundial de Salsa",
+      "facet": "Salsa caleña y baile de salsa",
+      "known_at": 11
+    },
+    {
+      "name": "Escuela de salsa",
+      "facet": "Salsa caleña y baile de salsa",
+      "known_at": 6
+    },
+    {
+      "name": "Currulao",
+      "facet": "Música del Pacífico y currulao",
+      "known_at": 7
+    },
+    {
+      "name": "Chirimía chocoana",
+      "facet": "Música del Pacífico y currulao",
+      "known_at": 10
+    },
+    {
+      "name": "Aguabajo",
+      "facet": "Música del Pacífico y currulao",
+      "known_at": 12
+    },
+    {
+      "name": "Alabao",
+      "facet": "Música del Pacífico y currulao",
+      "known_at": 12
+    },
+    {
+      "name": "Arrullo",
+      "facet": "Música del Pacífico y currulao",
+      "known_at": 11
+    },
+    {
+      "name": "Abozao",
+      "facet": "Música del Pacífico y currulao",
+      "known_at": 13
+    },
+    {
+      "name": "Juga",
+      "facet": "Música del Pacífico y currulao",
+      "known_at": 13
+    },
+    {
+      "name": "Grupo Bahía",
+      "facet": "Música del Pacífico y currulao",
+      "known_at": 12
+    },
+    {
+      "name": "Hugo Candelario González",
+      "facet": "Música del Pacífico y currulao",
+      "known_at": 14
+    },
+    {
+      "name": "Cantaora",
+      "facet": "Música del Pacífico y currulao",
+      "known_at": 11
+    },
+    {
+      "name": "Joropo",
+      "facet": "Joropo y música llanera",
+      "known_at": 5
+    },
+    {
+      "name": "Pasaje llanero",
+      "facet": "Joropo y música llanera",
+      "known_at": 11
+    },
+    {
+      "name": "Galerón",
+      "facet": "Joropo y música llanera",
+      "known_at": 12
+    },
+    {
+      "name": "Seis por derecho",
+      "facet": "Joropo y música llanera",
+      "known_at": 12
+    },
+    {
+      "name": "Zumba que zumba",
+      "facet": "Joropo y música llanera",
+      "known_at": 13
+    },
+    {
+      "name": "Cuatro llanero",
+      "facet": "Joropo y música llanera",
+      "known_at": 7
+    },
+    {
+      "name": "Capachos",
+      "facet": "Joropo y música llanera",
+      "known_at": 10
+    },
+    {
+      "name": "Bandola llanera",
+      "facet": "Joropo y música llanera",
+      "known_at": 12
+    },
+    {
+      "name": "Zapateo",
+      "facet": "Joropo y música llanera",
+      "known_at": 7
+    },
+    {
+      "name": "Cholo Valderrama",
+      "facet": "Joropo y música llanera",
+      "known_at": 11
+    },
+    {
+      "name": "Ay mi llanura",
+      "facet": "Joropo y música llanera",
+      "known_at": 10
+    },
+    {
+      "name": "Alma llanera",
+      "facet": "Joropo y música llanera",
+      "known_at": 8
+    },
+    {
+      "name": "Copla llanera",
+      "facet": "Joropo y música llanera",
+      "known_at": 10
+    },
+    {
+      "name": "Llamador",
+      "facet": "Instrumentos de percusión colombianos",
+      "known_at": 11
+    },
+    {
+      "name": "Guasá",
+      "facet": "Instrumentos de percusión colombianos",
+      "known_at": 11
+    },
+    {
+      "name": "Bombo",
+      "facet": "Instrumentos de percusión colombianos",
+      "known_at": 4
+    },
+    {
+      "name": "Quijada de burro",
+      "facet": "Instrumentos de percusión colombianos",
+      "known_at": 10
+    },
+    {
+      "name": "Cucharas",
+      "facet": "Instrumentos de percusión colombianos",
+      "known_at": 8
+    },
+    {
+      "name": "Charrasca",
+      "facet": "Instrumentos de percusión colombianos",
+      "known_at": 11
+    },
+    {
+      "name": "Tambor pechiche",
+      "facet": "Instrumentos de percusión colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Redoblante",
+      "facet": "Instrumentos de percusión colombianos",
+      "known_at": 7
+    },
+    {
+      "name": "Carángano",
+      "facet": "Instrumentos de percusión colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Esterilla",
+      "facet": "Instrumentos de percusión colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Gaita colombiana",
+      "facet": "Instrumentos de viento y cuerda",
+      "known_at": 8
+    },
+    {
+      "name": "Flauta de millo",
+      "facet": "Instrumentos de viento y cuerda",
+      "known_at": 9
+    },
+    {
+      "name": "Clarinete",
+      "facet": "Instrumentos de viento y cuerda",
+      "known_at": 6
+    },
+    {
+      "name": "Bombardino",
+      "facet": "Instrumentos de viento y cuerda",
+      "known_at": 11
+    },
+    {
+      "name": "Trompeta",
+      "facet": "Instrumentos de viento y cuerda",
+      "known_at": 1
+    },
+    {
+      "name": "Violín caucano",
+      "facet": "Instrumentos de viento y cuerda",
+      "known_at": 13,
+      "retired": "unaskable: I'm not sure enough about how the violín caucano is built or about its terminology to write a reliable question."
+    },
+    {
+      "name": "Capador",
+      "facet": "Instrumentos de viento y cuerda",
+      "known_at": 14
+    },
+    {
+      "name": "Dulzaina",
+      "facet": "Instrumentos de viento y cuerda",
+      "known_at": 10
+    },
+    {
+      "name": "Pito atravesao",
+      "facet": "Instrumentos de viento y cuerda",
+      "known_at": 13
+    },
+    {
+      "name": "Tuba",
+      "facet": "Instrumentos de viento y cuerda",
+      "known_at": 5
+    },
+    {
+      "name": "Pollera",
+      "facet": "Bailes folclóricos y trajes típicos",
+      "known_at": 5
+    },
+    {
+      "name": "Danza del Congo",
+      "facet": "Bailes folclóricos y trajes típicos",
+      "known_at": 9
+    },
+    {
+      "name": "Son de negro",
+      "facet": "Bailes folclóricos y trajes típicos",
+      "known_at": 12
+    },
+    {
+      "name": "Danza de las Farotas",
+      "facet": "Bailes folclóricos y trajes típicos",
+      "known_at": 12
+    },
+    {
+      "name": "Paloteo",
+      "facet": "Bailes folclóricos y trajes típicos",
+      "known_at": 12
+    },
+    {
+      "name": "Danza de los Diablos",
+      "facet": "Bailes folclóricos y trajes típicos",
+      "known_at": 12
+    },
+    {
+      "name": "Torneo Internacional del Joropo",
+      "facet": "Festivales y carnavales musicales",
+      "known_at": 11
+    },
+    {
+      "name": "Festival Nacional del Bambuco",
+      "facet": "Festivales y carnavales musicales",
+      "known_at": 9
+    },
+    {
+      "name": "Festival Nacional de la Cumbia",
+      "facet": "Festivales y carnavales musicales",
+      "known_at": 11
+    },
+    {
+      "name": "Festival de Gaitas de Ovejas",
+      "facet": "Festivales y carnavales musicales",
+      "known_at": 13
+    },
+    {
+      "name": "Festival Nacional del Porro",
+      "facet": "Festivales y carnavales musicales",
+      "known_at": 12
+    },
+    {
+      "name": "Carnaval de Riosucio",
+      "facet": "Festivales y carnavales musicales",
+      "known_at": 12
+    },
+    {
+      "name": "Salsódromo",
+      "facet": "Festivales y carnavales musicales",
+      "known_at": 9
+    },
+    {
+      "name": "Batalla de Flores",
+      "facet": "Festivales y carnavales musicales",
+      "known_at": 7
+    },
+    {
+      "name": "Terapia criolla",
+      "facet": "Champeta, reguetón y ritmos urbanos",
+      "known_at": 12
+    },
+    {
+      "name": "Charles King",
+      "facet": "Champeta, reguetón y ritmos urbanos",
+      "known_at": 11
+    },
+    {
+      "name": "Reguetón paisa",
+      "facet": "Champeta, reguetón y ritmos urbanos",
+      "known_at": 6
+    },
+    {
+      "name": "Gozadera",
+      "facet": "Palabras y dichos de la música colombiana",
+      "known_at": 4
+    },
+    {
+      "name": "Sabrosura",
+      "facet": "Palabras y dichos de la música colombiana",
+      "known_at": 5
+    },
+    {
+      "name": "Rumbear",
+      "facet": "Palabras y dichos de la música colombiana",
+      "known_at": 4
+    },
+    {
+      "name": "Tirar paso",
+      "facet": "Palabras y dichos de la música colombiana",
+      "known_at": 5
+    },
+    {
+      "name": "Caseta",
+      "facet": "Palabras y dichos de la música colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Viejoteca",
+      "facet": "Palabras y dichos de la música colombiana",
+      "known_at": 9
+    },
+    {
+      "name": "Melómano",
+      "facet": "Palabras y dichos de la música colombiana",
+      "known_at": 10
+    },
+    {
+      "name": "Música de plancha",
+      "facet": "Palabras y dichos de la música colombiana",
+      "known_at": 9
+    },
+    {
+      "name": "Echar un pie",
+      "facet": "Palabras y dichos de la música colombiana",
+      "known_at": 8
+    }
+  ]
+}

@@ -1,0 +1,507 @@
+{
+  "subcategory": "words",
+  "facets": [
+    "Saludos y trato entre personas",
+    "Comida, bebida y mecato",
+    "Expresiones de ánimo y sorpresa",
+    "Objetos de la casa y del día",
+    "Calle, transporte y trancón",
+    "Rumba, parche y fiesta",
+    "Plata, camello y estudio",
+    "Habla paisa y antioqueña",
+    "Habla costeña del Caribe",
+    "Habla rola, boyacense y del interior",
+    "Dichos y refranes colombianos",
+    "Palabras de origen indígena y africano"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 3,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 1,
+      "estimate": 1,
+      "record": 1,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 1,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 1
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 2,
+      "history": 2,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mono",
+      "facet": "Saludos y trato entre personas",
+      "known_at": 3
+    },
+    {
+      "name": "Pelado",
+      "facet": "Saludos y trato entre personas",
+      "known_at": 4
+    },
+    {
+      "name": "Lagarto",
+      "facet": "Saludos y trato entre personas",
+      "known_at": 7
+    },
+    {
+      "name": "Codo",
+      "facet": "Saludos y trato entre personas",
+      "known_at": 5
+    },
+    {
+      "name": "Cucho",
+      "facet": "Saludos y trato entre personas",
+      "known_at": 5
+    },
+    {
+      "name": "Regáleme",
+      "facet": "Saludos y trato entre personas",
+      "known_at": 4
+    },
+    {
+      "name": "Hágale",
+      "facet": "Saludos y trato entre personas",
+      "known_at": 4
+    },
+    {
+      "name": "Crispetas",
+      "facet": "Comida, bebida y mecato",
+      "known_at": 1
+    },
+    {
+      "name": "Ñapa",
+      "facet": "Comida, bebida y mecato",
+      "known_at": 4
+    },
+    {
+      "name": "Mazorca",
+      "facet": "Comida, bebida y mecato",
+      "known_at": 3
+    },
+    {
+      "name": "Pailas",
+      "facet": "Expresiones de ánimo y sorpresa",
+      "known_at": 5
+    },
+    {
+      "name": "Qué pena",
+      "facet": "Expresiones de ánimo y sorpresa",
+      "known_at": 4
+    },
+    {
+      "name": "Qué mamera",
+      "facet": "Expresiones de ánimo y sorpresa",
+      "known_at": 5
+    },
+    {
+      "name": "Nonas",
+      "facet": "Expresiones de ánimo y sorpresa",
+      "known_at": 6
+    },
+    {
+      "name": "Ni por el chiras",
+      "facet": "Expresiones de ánimo y sorpresa",
+      "known_at": 9
+    },
+    {
+      "name": "Tenaz",
+      "facet": "Expresiones de ánimo y sorpresa",
+      "known_at": 5
+    },
+    {
+      "name": "Achantado",
+      "facet": "Expresiones de ánimo y sorpresa",
+      "known_at": 8
+    },
+    {
+      "name": "Bombillo",
+      "facet": "Objetos de la casa y del día",
+      "known_at": 2
+    },
+    {
+      "name": "Chécheres",
+      "facet": "Objetos de la casa y del día",
+      "known_at": 6
+    },
+    {
+      "name": "Corotos",
+      "facet": "Objetos de la casa y del día",
+      "known_at": 6
+    },
+    {
+      "name": "Esfero",
+      "facet": "Objetos de la casa y del día",
+      "known_at": 2
+    },
+    {
+      "name": "Cobija",
+      "facet": "Objetos de la casa y del día",
+      "known_at": 2
+    },
+    {
+      "name": "Tajalápiz",
+      "facet": "Objetos de la casa y del día",
+      "known_at": 2
+    },
+    {
+      "name": "Olla pitadora",
+      "facet": "Objetos de la casa y del día",
+      "known_at": 5
+    },
+    {
+      "name": "Cauchos",
+      "facet": "Objetos de la casa y del día",
+      "known_at": 4
+    },
+    {
+      "name": "Colbón",
+      "facet": "Objetos de la casa y del día",
+      "known_at": 3
+    },
+    {
+      "name": "Saco",
+      "facet": "Objetos de la casa y del día",
+      "known_at": 3
+    },
+    {
+      "name": "Interiores",
+      "facet": "Objetos de la casa y del día",
+      "known_at": 4
+    },
+    {
+      "name": "Vaina",
+      "facet": "Objetos de la casa y del día",
+      "known_at": 4
+    },
+    {
+      "name": "Platón",
+      "facet": "Objetos de la casa y del día",
+      "known_at": 6
+    },
+    {
+      "name": "Cosiánfira",
+      "facet": "Objetos de la casa y del día",
+      "known_at": 10
+    },
+    {
+      "name": "Nevera",
+      "facet": "Objetos de la casa y del día",
+      "known_at": 2
+    },
+    {
+      "name": "Chanclas",
+      "facet": "Objetos de la casa y del día",
+      "known_at": 1
+    },
+    {
+      "name": "Parquear",
+      "facet": "Calle, transporte y trancón",
+      "known_at": 4
+    },
+    {
+      "name": "Andén",
+      "facet": "Calle, transporte y trancón",
+      "known_at": 3
+    },
+    {
+      "name": "Flota",
+      "facet": "Calle, transporte y trancón",
+      "known_at": 7
+    },
+    {
+      "name": "Raponero",
+      "facet": "Calle, transporte y trancón",
+      "known_at": 7
+    },
+    {
+      "name": "Parche",
+      "facet": "Rumba, parche y fiesta",
+      "known_at": 4
+    },
+    {
+      "name": "Vaca",
+      "facet": "Rumba, parche y fiesta",
+      "known_at": 6
+    },
+    {
+      "name": "Farra",
+      "facet": "Rumba, parche y fiesta",
+      "known_at": 7
+    },
+    {
+      "name": "Tusa",
+      "facet": "Rumba, parche y fiesta",
+      "known_at": 6
+    },
+    {
+      "name": "Jarto",
+      "facet": "Rumba, parche y fiesta",
+      "known_at": 9
+    },
+    {
+      "name": "Desparchado",
+      "facet": "Rumba, parche y fiesta",
+      "known_at": 6
+    },
+    {
+      "name": "Quincena",
+      "facet": "Plata, camello y estudio",
+      "known_at": 6
+    },
+    {
+      "name": "Prima",
+      "facet": "Plata, camello y estudio",
+      "known_at": 9
+    },
+    {
+      "name": "Chanfa",
+      "facet": "Plata, camello y estudio",
+      "known_at": 10
+    },
+    {
+      "name": "Capar clase",
+      "facet": "Plata, camello y estudio",
+      "known_at": 6
+    },
+    {
+      "name": "Rajarse",
+      "facet": "Plata, camello y estudio",
+      "known_at": 6
+    },
+    {
+      "name": "Perder el año",
+      "facet": "Plata, camello y estudio",
+      "known_at": 4
+    },
+    {
+      "name": "Icfes",
+      "facet": "Plata, camello y estudio",
+      "known_at": 7
+    },
+    {
+      "name": "Chepa",
+      "facet": "Plata, camello y estudio",
+      "known_at": 7
+    },
+    {
+      "name": "Recocha",
+      "facet": "Plata, camello y estudio",
+      "known_at": 5
+    },
+    {
+      "name": "Monitor",
+      "facet": "Plata, camello y estudio",
+      "known_at": 5
+    },
+    {
+      "name": "Ome",
+      "facet": "Habla paisa y antioqueña",
+      "known_at": 7
+    },
+    {
+      "name": "Avemaría",
+      "facet": "Habla paisa y antioqueña",
+      "known_at": 5
+    },
+    {
+      "name": "Berriondo",
+      "facet": "Habla paisa y antioqueña",
+      "known_at": 8
+    },
+    {
+      "name": "Voseo paisa",
+      "facet": "Habla paisa y antioqueña",
+      "known_at": 7
+    },
+    {
+      "name": "Charro",
+      "facet": "Habla paisa y antioqueña",
+      "known_at": 9
+    },
+    {
+      "name": "Pispo",
+      "facet": "Habla paisa y antioqueña",
+      "known_at": 10
+    },
+    {
+      "name": "Embalado",
+      "facet": "Habla paisa y antioqueña",
+      "known_at": 8
+    },
+    {
+      "name": "Peye",
+      "facet": "Habla paisa y antioqueña",
+      "known_at": 11
+    },
+    {
+      "name": "Chicanero",
+      "facet": "Habla paisa y antioqueña",
+      "known_at": 9
+    },
+    {
+      "name": "Erda",
+      "facet": "Habla costeña del Caribe",
+      "known_at": 8
+    },
+    {
+      "name": "Primo",
+      "facet": "Habla costeña del Caribe",
+      "known_at": 6
+    },
+    {
+      "name": "Butifarra",
+      "facet": "Habla costeña del Caribe",
+      "known_at": 8
+    },
+    {
+      "name": "La seño",
+      "facet": "Habla costeña del Caribe",
+      "known_at": 6
+    },
+    {
+      "name": "Jartar",
+      "facet": "Habla costeña del Caribe",
+      "known_at": 9
+    },
+    {
+      "name": "Molleja",
+      "facet": "Habla costeña del Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "Pechiche",
+      "facet": "Habla costeña del Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "Ala",
+      "facet": "Habla rola, boyacense y del interior",
+      "known_at": 7
+    },
+    {
+      "name": "Chirrete",
+      "facet": "Habla rola, boyacense y del interior",
+      "known_at": 9
+    },
+    {
+      "name": "Boyaco",
+      "facet": "Habla rola, boyacense y del interior",
+      "known_at": 6
+    },
+    {
+      "name": "Mirá ve",
+      "facet": "Habla rola, boyacense y del interior",
+      "known_at": 7
+    },
+    {
+      "name": "Qué hubo, sumercé",
+      "facet": "Habla rola, boyacense y del interior",
+      "known_at": 8
+    },
+    {
+      "name": "Echar los perros",
+      "facet": "Dichos y refranes colombianos",
+      "known_at": 8
+    },
+    {
+      "name": "Hacerse el de las gafas",
+      "facet": "Dichos y refranes colombianos",
+      "known_at": 8
+    },
+    {
+      "name": "Más perdido que el hijo de Lindbergh",
+      "facet": "Dichos y refranes colombianos",
+      "known_at": 12
+    },
+    {
+      "name": "Le tocó bailar con la más fea",
+      "facet": "Dichos y refranes colombianos",
+      "known_at": 7
+    },
+    {
+      "name": "Ponerse las pilas",
+      "facet": "Dichos y refranes colombianos",
+      "known_at": 4
+    },
+    {
+      "name": "Ojo al dato",
+      "facet": "Dichos y refranes colombianos",
+      "known_at": 7
+    },
+    {
+      "name": "Se le corrió la teja",
+      "facet": "Dichos y refranes colombianos",
+      "known_at": 9
+    },
+    {
+      "name": "Más contento que marrano estrenando lazo",
+      "facet": "Dichos y refranes colombianos",
+      "known_at": 10
+    },
+    {
+      "name": "Más feo que un carro por debajo",
+      "facet": "Dichos y refranes colombianos",
+      "known_at": 8
+    },
+    {
+      "name": "Pelar el cobre",
+      "facet": "Dichos y refranes colombianos",
+      "known_at": 10
+    },
+    {
+      "name": "Desvestir un santo para vestir otro",
+      "facet": "Dichos y refranes colombianos",
+      "known_at": 11
+    },
+    {
+      "name": "Comer callado",
+      "facet": "Dichos y refranes colombianos",
+      "known_at": 9
+    },
+    {
+      "name": "Hacer el oso",
+      "facet": "Dichos y refranes colombianos",
+      "known_at": 5
+    },
+    {
+      "name": "Bijao",
+      "facet": "Palabras de origen indígena y africano",
+      "known_at": 9
+    },
+    {
+      "name": "Palenquero",
+      "facet": "Palabras de origen indígena y africano",
+      "known_at": 11
+    }
+  ]
+}

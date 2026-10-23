@@ -1,0 +1,569 @@
+{
+  "subcategory": "conquest-and-colonial-era",
+  "facets": [
+    "Pueblos indígenas antes y durante la Conquista",
+    "Conquistadores y expediciones",
+    "Fundación de ciudades coloniales",
+    "El Dorado y la búsqueda del oro",
+    "Cartagena, piratas y fortificaciones",
+    "Instituciones y gobierno colonial",
+    "Esclavitud, cimarrones y palenques",
+    "Iglesia, misiones e Inquisición",
+    "Economía colonial: minas, haciendas y comercio",
+    "Vida cotidiana y sociedad de castas",
+    "Arte, arquitectura y ciencia coloniales",
+    "Revueltas y crisis del orden colonial"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Cultura de San Agustín",
+      "facet": "Pueblos indígenas antes y durante la Conquista",
+      "known_at": 8
+    },
+    {
+      "name": "Lengua chibcha",
+      "facet": "Pueblos indígenas antes y durante la Conquista",
+      "known_at": 9
+    },
+    {
+      "name": "Cristóbal Colón",
+      "facet": "Conquistadores y expediciones",
+      "known_at": 2
+    },
+    {
+      "name": "Nicolás de Federmann",
+      "facet": "Conquistadores y expediciones",
+      "known_at": 10
+    },
+    {
+      "name": "Martín Fernández de Enciso",
+      "facet": "Conquistadores y expediciones",
+      "known_at": 13
+    },
+    {
+      "name": "Pedro de Ursúa",
+      "facet": "Conquistadores y expediciones",
+      "known_at": 13
+    },
+    {
+      "name": "Lope de Aguirre",
+      "facet": "Conquistadores y expediciones",
+      "known_at": 13
+    },
+    {
+      "name": "Ambrosio Alfinger",
+      "facet": "Conquistadores y expediciones",
+      "known_at": 14
+    },
+    {
+      "name": "Pedro Fernández de Lugo",
+      "facet": "Conquistadores y expediciones",
+      "known_at": 13
+    },
+    {
+      "name": "Francisco de Orellana",
+      "facet": "Conquistadores y expediciones",
+      "known_at": 12
+    },
+    {
+      "name": "San Sebastián de Urabá",
+      "facet": "Fundación de ciudades coloniales",
+      "known_at": 13
+    },
+    {
+      "name": "Pamplona",
+      "facet": "Fundación de ciudades coloniales",
+      "known_at": 11
+    },
+    {
+      "name": "Orfebrería precolombina",
+      "facet": "El Dorado y la búsqueda del oro",
+      "known_at": 8
+    },
+    {
+      "name": "Buriticá",
+      "facet": "El Dorado y la búsqueda del oro",
+      "known_at": 13
+    },
+    {
+      "name": "Cartagena de Indias",
+      "facet": "Cartagena, piratas y fortificaciones",
+      "known_at": 2
+    },
+    {
+      "name": "Francis Drake",
+      "facet": "Cartagena, piratas y fortificaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Edward Vernon",
+      "facet": "Cartagena, piratas y fortificaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Barón de Pointis",
+      "facet": "Cartagena, piratas y fortificaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Antonio de Arévalo",
+      "facet": "Cartagena, piratas y fortificaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Castillo de San Lorenzo del Chagres",
+      "facet": "Cartagena, piratas y fortificaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Corsarios",
+      "facet": "Cartagena, piratas y fortificaciones",
+      "known_at": 7
+    },
+    {
+      "name": "Flota de Indias",
+      "facet": "Cartagena, piratas y fortificaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Batería del Ángel San Rafael",
+      "facet": "Cartagena, piratas y fortificaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Sitio de Cartagena de 1741",
+      "facet": "Cartagena, piratas y fortificaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Portobelo",
+      "facet": "Cartagena, piratas y fortificaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Nuevo Reino de Granada",
+      "facet": "Instituciones y gobierno colonial",
+      "known_at": 7
+    },
+    {
+      "name": "Real Audiencia de Santafé",
+      "facet": "Instituciones y gobierno colonial",
+      "known_at": 10
+    },
+    {
+      "name": "Virrey",
+      "facet": "Instituciones y gobierno colonial",
+      "known_at": 6
+    },
+    {
+      "name": "Mita",
+      "facet": "Instituciones y gobierno colonial",
+      "known_at": 10
+    },
+    {
+      "name": "Resguardo",
+      "facet": "Instituciones y gobierno colonial",
+      "known_at": 10
+    },
+    {
+      "name": "Cabildo",
+      "facet": "Instituciones y gobierno colonial",
+      "known_at": 8
+    },
+    {
+      "name": "Consejo de Indias",
+      "facet": "Instituciones y gobierno colonial",
+      "known_at": 12
+    },
+    {
+      "name": "Casa de Contratación",
+      "facet": "Instituciones y gobierno colonial",
+      "known_at": 12
+    },
+    {
+      "name": "Capitulación",
+      "facet": "Instituciones y gobierno colonial",
+      "known_at": 13
+    },
+    {
+      "name": "Reformas borbónicas",
+      "facet": "Instituciones y gobierno colonial",
+      "known_at": 12
+    },
+    {
+      "name": "Leyes Nuevas",
+      "facet": "Instituciones y gobierno colonial",
+      "known_at": 13
+    },
+    {
+      "name": "Corregidor",
+      "facet": "Instituciones y gobierno colonial",
+      "known_at": 12
+    },
+    {
+      "name": "Juicio de residencia",
+      "facet": "Instituciones y gobierno colonial",
+      "known_at": 14
+    },
+    {
+      "name": "Pedro Messía de la Cerda",
+      "facet": "Instituciones y gobierno colonial",
+      "known_at": 13
+    },
+    {
+      "name": "Antonio Caballero y Góngora",
+      "facet": "Instituciones y gobierno colonial",
+      "known_at": 12
+    },
+    {
+      "name": "Cimarrón",
+      "facet": "Esclavitud, cimarrones y palenques",
+      "known_at": 8
+    },
+    {
+      "name": "Trata transatlántica de esclavos",
+      "facet": "Esclavitud, cimarrones y palenques",
+      "known_at": 9
+    },
+    {
+      "name": "Barco negrero",
+      "facet": "Esclavitud, cimarrones y palenques",
+      "known_at": 9
+    },
+    {
+      "name": "Trenzas como mapas de escape",
+      "facet": "Esclavitud, cimarrones y palenques",
+      "known_at": 8
+    },
+    {
+      "name": "Kuagro",
+      "facet": "Esclavitud, cimarrones y palenques",
+      "known_at": 13
+    },
+    {
+      "name": "Manumisión",
+      "facet": "Esclavitud, cimarrones y palenques",
+      "known_at": 12
+    },
+    {
+      "name": "Abolición de la esclavitud de 1851",
+      "facet": "Esclavitud, cimarrones y palenques",
+      "known_at": 10
+    },
+    {
+      "name": "Alonso de Sandoval",
+      "facet": "Esclavitud, cimarrones y palenques",
+      "known_at": 14
+    },
+    {
+      "name": "Mercado de esclavos de Cartagena",
+      "facet": "Esclavitud, cimarrones y palenques",
+      "known_at": 11
+    },
+    {
+      "name": "Palenque de la Matuna",
+      "facet": "Esclavitud, cimarrones y palenques",
+      "known_at": 13
+    },
+    {
+      "name": "Asiento de negros",
+      "facet": "Esclavitud, cimarrones y palenques",
+      "known_at": 14
+    },
+    {
+      "name": "Carimba",
+      "facet": "Esclavitud, cimarrones y palenques",
+      "known_at": 13
+    },
+    {
+      "name": "Palenqueras",
+      "facet": "Esclavitud, cimarrones y palenques",
+      "known_at": 4,
+      "retired": "used_up: Ya existe el acertijo de la palenquera; la foto mostraría la ponchera con frutas y regalaría la respuesta, y la opción de año no da una pregunta justa."
+    },
+    {
+      "name": "San Pedro Claver",
+      "facet": "Iglesia, misiones e Inquisición",
+      "known_at": 8
+    },
+    {
+      "name": "Tribunal del Santo Oficio de Cartagena",
+      "facet": "Iglesia, misiones e Inquisición",
+      "known_at": 10
+    },
+    {
+      "name": "Expulsión de los jesuitas",
+      "facet": "Iglesia, misiones e Inquisición",
+      "known_at": 12
+    },
+    {
+      "name": "Franciscanos",
+      "facet": "Iglesia, misiones e Inquisición",
+      "known_at": 10
+    },
+    {
+      "name": "Dominicos",
+      "facet": "Iglesia, misiones e Inquisición",
+      "known_at": 11
+    },
+    {
+      "name": "Bartolomé de las Casas",
+      "facet": "Iglesia, misiones e Inquisición",
+      "known_at": 9
+    },
+    {
+      "name": "Doctrina de indios",
+      "facet": "Iglesia, misiones e Inquisición",
+      "known_at": 13
+    },
+    {
+      "name": "Diezmo",
+      "facet": "Iglesia, misiones e Inquisición",
+      "known_at": 10
+    },
+    {
+      "name": "Madre Castillo",
+      "facet": "Iglesia, misiones e Inquisición",
+      "known_at": 13
+    },
+    {
+      "name": "Misiones de los Llanos",
+      "facet": "Iglesia, misiones e Inquisición",
+      "known_at": 13
+    },
+    {
+      "name": "Fray Pedro Simón",
+      "facet": "Iglesia, misiones e Inquisición",
+      "known_at": 14
+    },
+    {
+      "name": "Convento del Santo Ecce Homo",
+      "facet": "Iglesia, misiones e Inquisición",
+      "known_at": 13
+    },
+    {
+      "name": "Hacienda",
+      "facet": "Economía colonial: minas, haciendas y comercio",
+      "known_at": 7
+    },
+    {
+      "name": "Mina de sal de Zipaquirá",
+      "facet": "Economía colonial: minas, haciendas y comercio",
+      "known_at": 5
+    },
+    {
+      "name": "Real de Minas",
+      "facet": "Economía colonial: minas, haciendas y comercio",
+      "known_at": 13,
+      "retired": "unaskable: Datos muy específicos y dudosos sobre los Reales de Minas; foto o fecha no dan una pregunta justa."
+    },
+    {
+      "name": "Alcabala",
+      "facet": "Economía colonial: minas, haciendas y comercio",
+      "known_at": 11
+    },
+    {
+      "name": "Contrabando",
+      "facet": "Economía colonial: minas, haciendas y comercio",
+      "known_at": 9
+    },
+    {
+      "name": "Real de plata",
+      "facet": "Economía colonial: minas, haciendas y comercio",
+      "known_at": 10
+    },
+    {
+      "name": "Mazamorreo",
+      "facet": "Economía colonial: minas, haciendas y comercio",
+      "known_at": 12
+    },
+    {
+      "name": "Arriería",
+      "facet": "Economía colonial: minas, haciendas y comercio",
+      "known_at": 9
+    },
+    {
+      "name": "Criollos",
+      "facet": "Vida cotidiana y sociedad de castas",
+      "known_at": 7
+    },
+    {
+      "name": "Mestizos",
+      "facet": "Vida cotidiana y sociedad de castas",
+      "known_at": 6
+    },
+    {
+      "name": "Mulatos",
+      "facet": "Vida cotidiana y sociedad de castas",
+      "known_at": 9
+    },
+    {
+      "name": "Zambos",
+      "facet": "Vida cotidiana y sociedad de castas",
+      "known_at": 10
+    },
+    {
+      "name": "Peninsulares",
+      "facet": "Vida cotidiana y sociedad de castas",
+      "known_at": 9
+    },
+    {
+      "name": "Chapetones",
+      "facet": "Vida cotidiana y sociedad de castas",
+      "known_at": 11
+    },
+    {
+      "name": "Pintura de castas",
+      "facet": "Vida cotidiana y sociedad de castas",
+      "known_at": 12
+    },
+    {
+      "name": "Limpieza de sangre",
+      "facet": "Vida cotidiana y sociedad de castas",
+      "known_at": 13
+    },
+    {
+      "name": "Hidalgo",
+      "facet": "Vida cotidiana y sociedad de castas",
+      "known_at": 11
+    },
+    {
+      "name": "Título de don",
+      "facet": "Vida cotidiana y sociedad de castas",
+      "known_at": 11
+    },
+    {
+      "name": "Indios ladinos",
+      "facet": "Vida cotidiana y sociedad de castas",
+      "known_at": 14
+    },
+    {
+      "name": "Calle Real",
+      "facet": "Vida cotidiana y sociedad de castas",
+      "known_at": 10
+    },
+    {
+      "name": "Barroco neogranadino",
+      "facet": "Arte, arquitectura y ciencia coloniales",
+      "known_at": 13
+    },
+    {
+      "name": "Balcones coloniales",
+      "facet": "Arte, arquitectura y ciencia coloniales",
+      "known_at": 5
+    },
+    {
+      "name": "Patio colonial",
+      "facet": "Arte, arquitectura y ciencia coloniales",
+      "known_at": 7
+    },
+    {
+      "name": "Colegio Mayor de Nuestra Señora del Rosario",
+      "facet": "Arte, arquitectura y ciencia coloniales",
+      "known_at": 10
+    },
+    {
+      "name": "Revolución de los Comuneros",
+      "facet": "Revueltas y crisis del orden colonial",
+      "known_at": 7
+    },
+    {
+      "name": "José Antonio Galán",
+      "facet": "Revueltas y crisis del orden colonial",
+      "known_at": 7
+    },
+    {
+      "name": "Capitulaciones de Zipaquirá",
+      "facet": "Revueltas y crisis del orden colonial",
+      "known_at": 11
+    },
+    {
+      "name": "Juan Francisco Berbeo",
+      "facet": "Revueltas y crisis del orden colonial",
+      "known_at": 12
+    },
+    {
+      "name": "Traducción de los Derechos del Hombre",
+      "facet": "Revueltas y crisis del orden colonial",
+      "known_at": 9
+    },
+    {
+      "name": "20 de julio de 1810",
+      "facet": "Revueltas y crisis del orden colonial",
+      "known_at": 2
+    },
+    {
+      "name": "Ambrosio Pisco",
+      "facet": "Revueltas y crisis del orden colonial",
+      "known_at": 14
+    },
+    {
+      "name": "Rebelión de Túpac Amaru",
+      "facet": "Revueltas y crisis del orden colonial",
+      "known_at": 12
+    },
+    {
+      "name": "Invasión napoleónica de España",
+      "facet": "Revueltas y crisis del orden colonial",
+      "known_at": 11
+    },
+    {
+      "name": "José Acevedo y Gómez",
+      "facet": "Revueltas y crisis del orden colonial",
+      "known_at": 12
+    },
+    {
+      "name": "Independencia de Cartagena de 1811",
+      "facet": "Revueltas y crisis del orden colonial",
+      "known_at": 11
+    },
+    {
+      "name": "Virrey Antonio Amar y Borbón",
+      "facet": "Revueltas y crisis del orden colonial",
+      "known_at": 12
+    }
+  ]
+}

@@ -1,0 +1,489 @@
+{
+  "subcategory": "typical-dishes",
+  "facets": [
+    "Sopas, caldos y sancochos",
+    "Arepas y masas de maíz",
+    "Tamales y envueltos en hoja",
+    "Platos de la región paisa",
+    "Cocina del Caribe y el Pacífico",
+    "Platos de los Llanos y del sur",
+    "Fritos y comida callejera",
+    "Desayunos y algos tradicionales",
+    "Postres y dulces típicos",
+    "Acompañamientos, salsas y ají",
+    "Ingredientes nativos y exóticos",
+    "Platos de Navidad y celebraciones"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 1,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 2,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sancocho trifásico",
+      "facet": "Sopas, caldos y sancochos",
+      "known_at": 7
+    },
+    {
+      "name": "Cuchuco de trigo",
+      "facet": "Sopas, caldos y sancochos",
+      "known_at": 9
+    },
+    {
+      "name": "Puchero santafereño",
+      "facet": "Sopas, caldos y sancochos",
+      "known_at": 12
+    },
+    {
+      "name": "Sopa de mazorca",
+      "facet": "Sopas, caldos y sancochos",
+      "known_at": 6
+    },
+    {
+      "name": "Sopa de arracacha",
+      "facet": "Sopas, caldos y sancochos",
+      "known_at": 9
+    },
+    {
+      "name": "Sopa de ahuyama",
+      "facet": "Sopas, caldos y sancochos",
+      "known_at": 5
+    },
+    {
+      "name": "Sopa de colicero",
+      "facet": "Sopas, caldos y sancochos",
+      "known_at": 11
+    },
+    {
+      "name": "Sopa de plátano",
+      "facet": "Sopas, caldos y sancochos",
+      "known_at": 5
+    },
+    {
+      "name": "Sopa de pasta",
+      "facet": "Sopas, caldos y sancochos",
+      "known_at": 2
+    },
+    {
+      "name": "Sopa de cebada perlada",
+      "facet": "Sopas, caldos y sancochos",
+      "known_at": 10
+    },
+    {
+      "name": "Caldo de papa",
+      "facet": "Sopas, caldos y sancochos",
+      "known_at": 4
+    },
+    {
+      "name": "Arepa de chócolo",
+      "facet": "Arepas y masas de maíz",
+      "known_at": 4
+    },
+    {
+      "name": "Arepa de mote",
+      "facet": "Arepas y masas de maíz",
+      "known_at": 12,
+      "retired": "unaskable: No estoy seguro de qué es exactamente el mote en la arepa de mote ni de qué región es; a dificultad 13 sería una pregunta poco segura."
+    },
+    {
+      "name": "Arepa con quesito",
+      "facet": "Arepas y masas de maíz",
+      "known_at": 3
+    },
+    {
+      "name": "Maíz pilado",
+      "facet": "Arepas y masas de maíz",
+      "known_at": 9
+    },
+    {
+      "name": "Maíz peto",
+      "facet": "Arepas y masas de maíz",
+      "known_at": 10
+    },
+    {
+      "name": "Masa de maíz",
+      "facet": "Arepas y masas de maíz",
+      "known_at": 4,
+      "retired": "used_up: Las preguntas sobre de qué se hace la masa ya están en el pool (maíz); las opciones disponibles solo dan una pregunta de relleno."
+    },
+    {
+      "name": "Tamal santafereño",
+      "facet": "Tamales y envueltos en hoja",
+      "known_at": 9
+    },
+    {
+      "name": "Tamal antioqueño",
+      "facet": "Tamales y envueltos en hoja",
+      "known_at": 8
+    },
+    {
+      "name": "Tamal de pipián",
+      "facet": "Tamales y envueltos en hoja",
+      "known_at": 12
+    },
+    {
+      "name": "Pastel de arroz",
+      "facet": "Tamales y envueltos en hoja",
+      "known_at": 10
+    },
+    {
+      "name": "Bollo limpio",
+      "facet": "Tamales y envueltos en hoja",
+      "known_at": 8
+    },
+    {
+      "name": "Bollo de plátano",
+      "facet": "Tamales y envueltos en hoja",
+      "known_at": 10
+    },
+    {
+      "name": "Bollo de angelito",
+      "facet": "Tamales y envueltos en hoja",
+      "known_at": 13
+    },
+    {
+      "name": "Envuelto de ahuyama",
+      "facet": "Tamales y envueltos en hoja",
+      "known_at": 13
+    },
+    {
+      "name": "Fiambre valluno",
+      "facet": "Tamales y envueltos en hoja",
+      "known_at": 12
+    },
+    {
+      "name": "Quesillo",
+      "facet": "Tamales y envueltos en hoja",
+      "known_at": 11
+    },
+    {
+      "name": "Bandeja paisa",
+      "facet": "Platos de la región paisa",
+      "known_at": 3
+    },
+    {
+      "name": "Arepa antioqueña",
+      "facet": "Platos de la región paisa",
+      "known_at": 5
+    },
+    {
+      "name": "Fríjoles antioqueños",
+      "facet": "Platos de la región paisa",
+      "known_at": 5
+    },
+    {
+      "name": "Carne en polvo",
+      "facet": "Platos de la región paisa",
+      "known_at": 8
+    },
+    {
+      "name": "Sudado de pollo",
+      "facet": "Platos de la región paisa",
+      "known_at": 5
+    },
+    {
+      "name": "Arroz paisa",
+      "facet": "Platos de la región paisa",
+      "known_at": 9
+    },
+    {
+      "name": "Trucha",
+      "facet": "Platos de la región paisa",
+      "known_at": 6
+    },
+    {
+      "name": "Calentado paisa",
+      "facet": "Platos de la región paisa",
+      "known_at": 5
+    },
+    {
+      "name": "Tajada de maduro",
+      "facet": "Platos de la región paisa",
+      "known_at": 3
+    },
+    {
+      "name": "Mojarra frita",
+      "facet": "Cocina del Caribe y el Pacífico",
+      "known_at": 5
+    },
+    {
+      "name": "Sancocho de pescado",
+      "facet": "Cocina del Caribe y el Pacífico",
+      "known_at": 6
+    },
+    {
+      "name": "Arroz con camarones",
+      "facet": "Cocina del Caribe y el Pacífico",
+      "known_at": 5
+    },
+    {
+      "name": "Encocado de pescado",
+      "facet": "Cocina del Caribe y el Pacífico",
+      "known_at": 11
+    },
+    {
+      "name": "Pusandao",
+      "facet": "Cocina del Caribe y el Pacífico",
+      "known_at": 14
+    },
+    {
+      "name": "Tapao de pescado",
+      "facet": "Cocina del Caribe y el Pacífico",
+      "known_at": 14
+    },
+    {
+      "name": "Arroz atollado",
+      "facet": "Cocina del Caribe y el Pacífico",
+      "known_at": 11
+    },
+    {
+      "name": "Arroz de lisa",
+      "facet": "Cocina del Caribe y el Pacífico",
+      "known_at": 12
+    },
+    {
+      "name": "Piangua",
+      "facet": "Cocina del Caribe y el Pacífico",
+      "known_at": 13
+    },
+    {
+      "name": "Asado huilense",
+      "facet": "Platos de los Llanos y del sur",
+      "known_at": 11
+    },
+    {
+      "name": "Hayaca llanera",
+      "facet": "Platos de los Llanos y del sur",
+      "known_at": 13
+    },
+    {
+      "name": "Cachapa",
+      "facet": "Platos de los Llanos y del sur",
+      "known_at": 11
+    },
+    {
+      "name": "Pisillo",
+      "facet": "Platos de los Llanos y del sur",
+      "known_at": 14
+    },
+    {
+      "name": "Casabe",
+      "facet": "Platos de los Llanos y del sur",
+      "known_at": 11
+    },
+    {
+      "name": "Fariña",
+      "facet": "Platos de los Llanos y del sur",
+      "known_at": 14
+    },
+    {
+      "name": "Frito pastuso",
+      "facet": "Platos de los Llanos y del sur",
+      "known_at": 12
+    },
+    {
+      "name": "Hornado pastuso",
+      "facet": "Platos de los Llanos y del sur",
+      "known_at": 12
+    },
+    {
+      "name": "Empanadas de pipián",
+      "facet": "Platos de los Llanos y del sur",
+      "known_at": 11
+    },
+    {
+      "name": "Carantanta",
+      "facet": "Platos de los Llanos y del sur",
+      "known_at": 14
+    },
+    {
+      "name": "Perro caliente",
+      "facet": "Fritos y comida callejera",
+      "known_at": 1
+    },
+    {
+      "name": "Deditos de queso",
+      "facet": "Fritos y comida callejera",
+      "known_at": 4
+    },
+    {
+      "name": "Mango biche con sal",
+      "facet": "Fritos y comida callejera",
+      "known_at": 4
+    },
+    {
+      "name": "Huevos pericos",
+      "facet": "Desayunos y algos tradicionales",
+      "known_at": 3
+    },
+    {
+      "name": "Tamal con chocolate",
+      "facet": "Desayunos y algos tradicionales",
+      "known_at": 5
+    },
+    {
+      "name": "Aguapanela con queso",
+      "facet": "Desayunos y algos tradicionales",
+      "known_at": 3
+    },
+    {
+      "name": "Dulce de papayuela",
+      "facet": "Postres y dulces típicos",
+      "known_at": 12
+    },
+    {
+      "name": "Salpicón de frutas",
+      "facet": "Postres y dulces típicos",
+      "known_at": 3
+    },
+    {
+      "name": "Bolitas de tamarindo",
+      "facet": "Postres y dulces típicos",
+      "known_at": 7
+    },
+    {
+      "name": "Gelatina de pata",
+      "facet": "Postres y dulces típicos",
+      "known_at": 9
+    },
+    {
+      "name": "Ají pique",
+      "facet": "Acompañamientos, salsas y ají",
+      "known_at": 6
+    },
+    {
+      "name": "Ají de tomate de árbol",
+      "facet": "Acompañamientos, salsas y ají",
+      "known_at": 9
+    },
+    {
+      "name": "Ají de maní",
+      "facet": "Acompañamientos, salsas y ají",
+      "known_at": 12
+    },
+    {
+      "name": "Ají de aguacate",
+      "facet": "Acompañamientos, salsas y ají",
+      "known_at": 9
+    },
+    {
+      "name": "Suero costeño",
+      "facet": "Acompañamientos, salsas y ají",
+      "known_at": 8
+    },
+    {
+      "name": "Arroz blanco",
+      "facet": "Acompañamientos, salsas y ají",
+      "known_at": 1
+    },
+    {
+      "name": "Yuca cocida",
+      "facet": "Acompañamientos, salsas y ají",
+      "known_at": 3
+    },
+    {
+      "name": "Papas saladas",
+      "facet": "Acompañamientos, salsas y ají",
+      "known_at": 7
+    },
+    {
+      "name": "Ensalada de repollo",
+      "facet": "Acompañamientos, salsas y ají",
+      "known_at": 4
+    },
+    {
+      "name": "Alcaparras",
+      "facet": "Acompañamientos, salsas y ají",
+      "known_at": 9
+    },
+    {
+      "name": "Crema de leche",
+      "facet": "Acompañamientos, salsas y ají",
+      "known_at": 4
+    },
+    {
+      "name": "Cubios",
+      "facet": "Ingredientes nativos y exóticos",
+      "known_at": 12
+    },
+    {
+      "name": "Lechona",
+      "facet": "Platos de Navidad y celebraciones",
+      "known_at": 5
+    },
+    {
+      "name": "Hojaldras",
+      "facet": "Platos de Navidad y celebraciones",
+      "known_at": 10
+    },
+    {
+      "name": "Pernil de cerdo",
+      "facet": "Platos de Navidad y celebraciones",
+      "known_at": 6
+    },
+    {
+      "name": "Arroz con pollo",
+      "facet": "Platos de Navidad y celebraciones",
+      "known_at": 2
+    },
+    {
+      "name": "Desamargado",
+      "facet": "Platos de Navidad y celebraciones",
+      "known_at": 13
+    },
+    {
+      "name": "Pavo relleno",
+      "facet": "Platos de Navidad y celebraciones",
+      "known_at": 4
+    },
+    {
+      "name": "Dulce de cidra",
+      "facet": "Platos de Navidad y celebraciones",
+      "known_at": 12
+    },
+    {
+      "name": "Ponqué",
+      "facet": "Platos de Navidad y celebraciones",
+      "known_at": 3
+    }
+  ]
+}

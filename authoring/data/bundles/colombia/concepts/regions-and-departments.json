@@ -1,0 +1,517 @@
+{
+  "subcategory": "regions-and-departments",
+  "facets": [
+    "Regiones naturales de Colombia",
+    "Departamentos y sus capitales",
+    "Departamentos del Caribe",
+    "Departamentos andinos y Eje Cafetero",
+    "Pacífico y Chocó biogeográfico",
+    "Orinoquía y Llanos Orientales",
+    "Amazonía y sus departamentos",
+    "Islas y territorios insulares",
+    "Gentilicios y apodos regionales",
+    "Comidas típicas de cada región",
+    "Fiestas, música y costumbres regionales",
+    "Historia y formación de los departamentos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 5,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 4,
+      "odd_one_out": 5,
+      "who": 1,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 5,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Región Andina",
+      "facet": "Regiones naturales de Colombia",
+      "known_at": 3
+    },
+    {
+      "name": "Región Caribe",
+      "facet": "Regiones naturales de Colombia",
+      "known_at": 3
+    },
+    {
+      "name": "Región Pacífica",
+      "facet": "Regiones naturales de Colombia",
+      "known_at": 4
+    },
+    {
+      "name": "Región de la Orinoquía",
+      "facet": "Regiones naturales de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Región Amazónica",
+      "facet": "Regiones naturales de Colombia",
+      "known_at": 4
+    },
+    {
+      "name": "Región Insular",
+      "facet": "Regiones naturales de Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Cordillera Occidental",
+      "facet": "Regiones naturales de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Cordillera Central",
+      "facet": "Regiones naturales de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Cordillera Oriental",
+      "facet": "Regiones naturales de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Nudo de los Pastos",
+      "facet": "Regiones naturales de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Volcán Galeras",
+      "facet": "Regiones naturales de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Pisos térmicos",
+      "facet": "Regiones naturales de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Serranía del Perijá",
+      "facet": "Regiones naturales de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Sincelejo",
+      "facet": "Departamentos y sus capitales",
+      "known_at": 9
+    },
+    {
+      "name": "Quibdó",
+      "facet": "Departamentos y sus capitales",
+      "known_at": 8
+    },
+    {
+      "name": "Yopal",
+      "facet": "Departamentos y sus capitales",
+      "known_at": 10
+    },
+    {
+      "name": "Florencia",
+      "facet": "Departamentos y sus capitales",
+      "known_at": 10
+    },
+    {
+      "name": "Mocoa",
+      "facet": "Departamentos y sus capitales",
+      "known_at": 10
+    },
+    {
+      "name": "Atlántico",
+      "facet": "Departamentos del Caribe",
+      "known_at": 5
+    },
+    {
+      "name": "Córdoba",
+      "facet": "Departamentos del Caribe",
+      "known_at": 7
+    },
+    {
+      "name": "Sucre",
+      "facet": "Departamentos del Caribe",
+      "known_at": 8
+    },
+    {
+      "name": "Ciénaga Grande de Santa Marta",
+      "facet": "Departamentos del Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "Volcán del Totumo",
+      "facet": "Departamentos del Caribe",
+      "known_at": 9
+    },
+    {
+      "name": "Golfo de Morrosquillo",
+      "facet": "Departamentos del Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "Golfo de Urabá",
+      "facet": "Departamentos del Caribe",
+      "known_at": 9
+    },
+    {
+      "name": "Antioquia",
+      "facet": "Departamentos andinos y Eje Cafetero",
+      "known_at": 3
+    },
+    {
+      "name": "Norte de Santander",
+      "facet": "Departamentos andinos y Eje Cafetero",
+      "known_at": 7
+    },
+    {
+      "name": "Tolima",
+      "facet": "Departamentos andinos y Eje Cafetero",
+      "known_at": 6
+    },
+    {
+      "name": "Caldas",
+      "facet": "Departamentos andinos y Eje Cafetero",
+      "known_at": 7
+    },
+    {
+      "name": "Risaralda",
+      "facet": "Departamentos andinos y Eje Cafetero",
+      "known_at": 7
+    },
+    {
+      "name": "Chocó",
+      "facet": "Pacífico y Chocó biogeográfico",
+      "known_at": 4
+    },
+    {
+      "name": "Cauca",
+      "facet": "Pacífico y Chocó biogeográfico",
+      "known_at": 6
+    },
+    {
+      "name": "Nariño",
+      "facet": "Pacífico y Chocó biogeográfico",
+      "known_at": 5
+    },
+    {
+      "name": "Buenaventura",
+      "facet": "Pacífico y Chocó biogeográfico",
+      "known_at": 6
+    },
+    {
+      "name": "Tumaco",
+      "facet": "Pacífico y Chocó biogeográfico",
+      "known_at": 8
+    },
+    {
+      "name": "Río San Juan",
+      "facet": "Pacífico y Chocó biogeográfico",
+      "known_at": 12
+    },
+    {
+      "name": "Rana dorada venenosa",
+      "facet": "Pacífico y Chocó biogeográfico",
+      "known_at": 6
+    },
+    {
+      "name": "Lloró",
+      "facet": "Pacífico y Chocó biogeográfico",
+      "known_at": 11
+    },
+    {
+      "name": "Manglar",
+      "facet": "Pacífico y Chocó biogeográfico",
+      "known_at": 6
+    },
+    {
+      "name": "Golfo de Tribugá",
+      "facet": "Pacífico y Chocó biogeográfico",
+      "known_at": 13
+    },
+    {
+      "name": "Bahía Málaga",
+      "facet": "Pacífico y Chocó biogeográfico",
+      "known_at": 12
+    },
+    {
+      "name": "Guapi",
+      "facet": "Pacífico y Chocó biogeográfico",
+      "known_at": 12
+    },
+    {
+      "name": "Meta",
+      "facet": "Orinoquía y Llanos Orientales",
+      "known_at": 5
+    },
+    {
+      "name": "Casanare",
+      "facet": "Orinoquía y Llanos Orientales",
+      "known_at": 7
+    },
+    {
+      "name": "Arauca",
+      "facet": "Orinoquía y Llanos Orientales",
+      "known_at": 7
+    },
+    {
+      "name": "Vichada",
+      "facet": "Orinoquía y Llanos Orientales",
+      "known_at": 9
+    },
+    {
+      "name": "Río Orinoco",
+      "facet": "Orinoquía y Llanos Orientales",
+      "known_at": 6
+    },
+    {
+      "name": "Puerto Carreño",
+      "facet": "Orinoquía y Llanos Orientales",
+      "known_at": 11
+    },
+    {
+      "name": "Hato llanero",
+      "facet": "Orinoquía y Llanos Orientales",
+      "known_at": 10
+    },
+    {
+      "name": "Sabana",
+      "facet": "Orinoquía y Llanos Orientales",
+      "known_at": 5
+    },
+    {
+      "name": "Puerto Gaitán",
+      "facet": "Orinoquía y Llanos Orientales",
+      "known_at": 12
+    },
+    {
+      "name": "Amazonas",
+      "facet": "Amazonía y sus departamentos",
+      "known_at": 3
+    },
+    {
+      "name": "Guainía",
+      "facet": "Amazonía y sus departamentos",
+      "known_at": 10
+    },
+    {
+      "name": "Mitú",
+      "facet": "Amazonía y sus departamentos",
+      "known_at": 11
+    },
+    {
+      "name": "Inírida",
+      "facet": "Amazonía y sus departamentos",
+      "known_at": 11
+    },
+    {
+      "name": "San José del Guaviare",
+      "facet": "Amazonía y sus departamentos",
+      "known_at": 11
+    },
+    {
+      "name": "Río Putumayo",
+      "facet": "Amazonía y sus departamentos",
+      "known_at": 10
+    },
+    {
+      "name": "Trapecio amazónico",
+      "facet": "Amazonía y sus departamentos",
+      "known_at": 10
+    },
+    {
+      "name": "Puerto Nariño",
+      "facet": "Amazonía y sus departamentos",
+      "known_at": 11
+    },
+    {
+      "name": "Victoria regia",
+      "facet": "Amazonía y sus departamentos",
+      "known_at": 8
+    },
+    {
+      "name": "Parque Nacional Natural Serranía de Chiribiquete",
+      "facet": "Amazonía y sus departamentos",
+      "known_at": 11
+    },
+    {
+      "name": "Isla de los Micos",
+      "facet": "Amazonía y sus departamentos",
+      "known_at": 11
+    },
+    {
+      "name": "Pueblo ticuna",
+      "facet": "Amazonía y sus departamentos",
+      "known_at": 11
+    },
+    {
+      "name": "Tres Fronteras",
+      "facet": "Amazonía y sus departamentos",
+      "known_at": 9
+    },
+    {
+      "name": "Santa Catalina",
+      "facet": "Islas y territorios insulares",
+      "known_at": 9
+    },
+    {
+      "name": "Isla Barú",
+      "facet": "Islas y territorios insulares",
+      "known_at": 7
+    },
+    {
+      "name": "Archipiélago de San Bernardo",
+      "facet": "Islas y territorios insulares",
+      "known_at": 10
+    },
+    {
+      "name": "Isla Malpelo",
+      "facet": "Islas y territorios insulares",
+      "known_at": 10
+    },
+    {
+      "name": "Hoyo Soplador",
+      "facet": "Islas y territorios insulares",
+      "known_at": 10
+    },
+    {
+      "name": "Puente de los Enamorados",
+      "facet": "Islas y territorios insulares",
+      "known_at": 11
+    },
+    {
+      "name": "Reserva de Biosfera Seaflower",
+      "facet": "Islas y territorios insulares",
+      "known_at": 12
+    },
+    {
+      "name": "Raizales",
+      "facet": "Islas y territorios insulares",
+      "known_at": 9
+    },
+    {
+      "name": "Huracán Iota",
+      "facet": "Islas y territorios insulares",
+      "known_at": 10
+    },
+    {
+      "name": "Isla Fuerte",
+      "facet": "Islas y territorios insulares",
+      "known_at": 12
+    },
+    {
+      "name": "Cayos de Albuquerque",
+      "facet": "Islas y territorios insulares",
+      "known_at": 14
+    },
+    {
+      "name": "Valluno",
+      "facet": "Gentilicios y apodos regionales",
+      "known_at": 5
+    },
+    {
+      "name": "Chocoano",
+      "facet": "Gentilicios y apodos regionales",
+      "known_at": 5
+    },
+    {
+      "name": "Guajiro",
+      "facet": "Gentilicios y apodos regionales",
+      "known_at": 6
+    },
+    {
+      "name": "Capital Musical de Colombia",
+      "facet": "Gentilicios y apodos regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Sancocho",
+      "facet": "Comidas típicas de cada región",
+      "known_at": 2
+    },
+    {
+      "name": "Cayeye",
+      "facet": "Comidas típicas de cada región",
+      "known_at": 11
+    },
+    {
+      "name": "Encocado",
+      "facet": "Comidas típicas de cada región",
+      "known_at": 11
+    },
+    {
+      "name": "Feria de las Flores",
+      "facet": "Fiestas, música y costumbres regionales",
+      "known_at": 4
+    },
+    {
+      "name": "Feria de Cali",
+      "facet": "Fiestas, música y costumbres regionales",
+      "known_at": 5
+    },
+    {
+      "name": "Marimba de chonta",
+      "facet": "Fiestas, música y costumbres regionales",
+      "known_at": 10
+    },
+    {
+      "name": "División político-administrativa de Colombia",
+      "facet": "Historia y formación de los departamentos",
+      "known_at": 6
+    },
+    {
+      "name": "Estado Soberano de Antioquia",
+      "facet": "Historia y formación de los departamentos",
+      "known_at": 13
+    },
+    {
+      "name": "Intendencias y comisarías",
+      "facet": "Historia y formación de los departamentos",
+      "known_at": 12
+    },
+    {
+      "name": "Gran Caldas",
+      "facet": "Historia y formación de los departamentos",
+      "known_at": 11
+    },
+    {
+      "name": "Bogotá Distrito Capital",
+      "facet": "Historia y formación de los departamentos",
+      "known_at": 9
+    },
+    {
+      "name": "Fallo de La Haya de 2012",
+      "facet": "Historia y formación de los departamentos",
+      "known_at": 11
+    }
+  ]
+}

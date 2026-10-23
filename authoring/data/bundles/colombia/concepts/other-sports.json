@@ -1,0 +1,765 @@
+{
+  "subcategory": "other-sports",
+  "facets": [
+    "Tejo y juegos tradicionales",
+    "Patinaje y BMX",
+    "Levantamiento de pesas",
+    "Atletismo colombiano",
+    "Boxeo, lucha y artes marciales",
+    "Tenis, golf y squash",
+    "Automovilismo y motociclismo",
+    "Béisbol, baloncesto y voleibol",
+    "Deportes acuáticos y de aventura",
+    "Deporte paralímpico colombiano",
+    "Juegos y eventos deportivos en Colombia"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 4,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Tejo",
+      "facet": "Tejo y juegos tradicionales",
+      "known_at": 2
+    },
+    {
+      "name": "Turmequé",
+      "facet": "Tejo y juegos tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Mecha",
+      "facet": "Tejo y juegos tradicionales",
+      "known_at": 5
+    },
+    {
+      "name": "Palo encebado",
+      "facet": "Tejo y juegos tradicionales",
+      "known_at": 6
+    },
+    {
+      "name": "Carrera de encostalados",
+      "facet": "Tejo y juegos tradicionales",
+      "known_at": 3
+    },
+    {
+      "name": "Ponchado",
+      "facet": "Tejo y juegos tradicionales",
+      "known_at": 4
+    },
+    {
+      "name": "Carlos Ramírez Yepes",
+      "facet": "Patinaje y BMX",
+      "known_at": 10
+    },
+    {
+      "name": "Diego Arboleda",
+      "facet": "Patinaje y BMX",
+      "known_at": 13
+    },
+    {
+      "name": "Jhancarlos González",
+      "facet": "Patinaje y BMX",
+      "known_at": 13
+    },
+    {
+      "name": "Patinaje de velocidad",
+      "facet": "Patinaje y BMX",
+      "known_at": 4
+    },
+    {
+      "name": "Patinódromo",
+      "facet": "Patinaje y BMX",
+      "known_at": 6
+    },
+    {
+      "name": "Mundial de Patinaje de Velocidad",
+      "facet": "Patinaje y BMX",
+      "known_at": 8
+    },
+    {
+      "name": "Luz Karime Garzón",
+      "facet": "Patinaje y BMX",
+      "known_at": 13
+    },
+    {
+      "name": "Jercy Puello",
+      "facet": "Patinaje y BMX",
+      "known_at": 13
+    },
+    {
+      "name": "Alex Cujavante",
+      "facet": "Patinaje y BMX",
+      "known_at": 13
+    },
+    {
+      "name": "Andrés Felipe Muñoz",
+      "facet": "Patinaje y BMX",
+      "known_at": 14
+    },
+    {
+      "name": "Pedro Causil",
+      "facet": "Patinaje y BMX",
+      "known_at": 13,
+      "retired": "unaskable: I'm not sure of dates or counts from Pedro Causil's career, so the question would be unfair."
+    },
+    {
+      "name": "Fabriana Arias",
+      "facet": "Patinaje y BMX",
+      "known_at": 14,
+      "retired": "unaskable: The athlete is too obscure, I'm not sure of her career facts, and every option needs a photo of her."
+    },
+    {
+      "name": "Cecilia Baena",
+      "facet": "Patinaje y BMX",
+      "known_at": 14
+    },
+    {
+      "name": "Skateboarding",
+      "facet": "Patinaje y BMX",
+      "known_at": 3
+    },
+    {
+      "name": "Mercedes Pérez",
+      "facet": "Levantamiento de pesas",
+      "known_at": 13
+    },
+    {
+      "name": "Leidy Solís",
+      "facet": "Levantamiento de pesas",
+      "known_at": 13
+    },
+    {
+      "name": "Jhonatan Rivas",
+      "facet": "Levantamiento de pesas",
+      "known_at": 14
+    },
+    {
+      "name": "Arranque",
+      "facet": "Levantamiento de pesas",
+      "known_at": 10
+    },
+    {
+      "name": "Federación Colombiana de Levantamiento de Pesas",
+      "facet": "Levantamiento de pesas",
+      "known_at": 13,
+      "retired": "unaskable: The federation's founding year and its leaders are trivia nobody could know or work out."
+    },
+    {
+      "name": "Luis Fernando López",
+      "facet": "Atletismo colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Domingo Tibaduiza",
+      "facet": "Atletismo colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Natalia Linares",
+      "facet": "Atletismo colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Muriel Coneo",
+      "facet": "Atletismo colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Evelis Aguilar",
+      "facet": "Atletismo colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Mauricio Ortega",
+      "facet": "Atletismo colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Triple salto",
+      "facet": "Atletismo colombiano",
+      "known_at": 6
+    },
+    {
+      "name": "Lanzamiento de disco",
+      "facet": "Atletismo colombiano",
+      "known_at": 6
+    },
+    {
+      "name": "Media Maratón de Bogotá",
+      "facet": "Atletismo colombiano",
+      "known_at": 9
+    },
+    {
+      "name": "Rodrigo Valdez",
+      "facet": "Boxeo, lucha y artes marciales",
+      "known_at": 13
+    },
+    {
+      "name": "Miguel 'Happy' Lora",
+      "facet": "Boxeo, lucha y artes marciales",
+      "known_at": 12
+    },
+    {
+      "name": "Fidel Bassa",
+      "facet": "Boxeo, lucha y artes marciales",
+      "known_at": 14
+    },
+    {
+      "name": "Doris Patiño",
+      "facet": "Boxeo, lucha y artes marciales",
+      "known_at": 14
+    },
+    {
+      "name": "Saskia van Erven",
+      "facet": "Boxeo, lucha y artes marciales",
+      "known_at": 14
+    },
+    {
+      "name": "Boxeo",
+      "facet": "Boxeo, lucha y artes marciales",
+      "known_at": 2
+    },
+    {
+      "name": "Lucha olímpica",
+      "facet": "Boxeo, lucha y artes marciales",
+      "known_at": 6
+    },
+    {
+      "name": "Karate",
+      "facet": "Boxeo, lucha y artes marciales",
+      "known_at": 2
+    },
+    {
+      "name": "Esgrima",
+      "facet": "Boxeo, lucha y artes marciales",
+      "known_at": 6
+    },
+    {
+      "name": "Fabiola Zuluaga",
+      "facet": "Tenis, golf y squash",
+      "known_at": 11
+    },
+    {
+      "name": "Santiago Giraldo",
+      "facet": "Tenis, golf y squash",
+      "known_at": 12
+    },
+    {
+      "name": "Alejandro Falla",
+      "facet": "Tenis, golf y squash",
+      "known_at": 12
+    },
+    {
+      "name": "Robert Farah",
+      "facet": "Tenis, golf y squash",
+      "known_at": 10
+    },
+    {
+      "name": "Juan Sebastián Cabal",
+      "facet": "Tenis, golf y squash",
+      "known_at": 10
+    },
+    {
+      "name": "Mariana Duque",
+      "facet": "Tenis, golf y squash",
+      "known_at": 13
+    },
+    {
+      "name": "Camila Osorio",
+      "facet": "Tenis, golf y squash",
+      "known_at": 10
+    },
+    {
+      "name": "Iván Molina",
+      "facet": "Tenis, golf y squash",
+      "known_at": 14
+    },
+    {
+      "name": "Copa Colsanitas",
+      "facet": "Tenis, golf y squash",
+      "known_at": 12
+    },
+    {
+      "name": "Copa Davis",
+      "facet": "Tenis, golf y squash",
+      "known_at": 10
+    },
+    {
+      "name": "Wimbledon",
+      "facet": "Tenis, golf y squash",
+      "known_at": 7
+    },
+    {
+      "name": "Dobles",
+      "facet": "Tenis, golf y squash",
+      "known_at": 5
+    },
+    {
+      "name": "Camilo Villegas",
+      "facet": "Tenis, golf y squash",
+      "known_at": 11
+    },
+    {
+      "name": "Sebastián Muñoz",
+      "facet": "Tenis, golf y squash",
+      "known_at": 14
+    },
+    {
+      "name": "Nicolás Echavarría",
+      "facet": "Tenis, golf y squash",
+      "known_at": 14
+    },
+    {
+      "name": "Mariajo Uribe",
+      "facet": "Tenis, golf y squash",
+      "known_at": 14
+    },
+    {
+      "name": "Miguel Ángel Rodríguez",
+      "facet": "Tenis, golf y squash",
+      "known_at": 13
+    },
+    {
+      "name": "Catalina Peláez",
+      "facet": "Tenis, golf y squash",
+      "known_at": 14
+    },
+    {
+      "name": "Squash",
+      "facet": "Tenis, golf y squash",
+      "known_at": 7
+    },
+    {
+      "name": "Golf",
+      "facet": "Tenis, golf y squash",
+      "known_at": 3
+    },
+    {
+      "name": "Roberto Guerrero",
+      "facet": "Automovilismo y motociclismo",
+      "known_at": 14
+    },
+    {
+      "name": "Ricardo Londoño",
+      "facet": "Automovilismo y motociclismo",
+      "known_at": 15
+    },
+    {
+      "name": "Tatiana Calderón",
+      "facet": "Automovilismo y motociclismo",
+      "known_at": 11
+    },
+    {
+      "name": "Sebastián Saavedra",
+      "facet": "Automovilismo y motociclismo",
+      "known_at": 14
+    },
+    {
+      "name": "Gabby Chaves",
+      "facet": "Automovilismo y motociclismo",
+      "known_at": 14
+    },
+    {
+      "name": "Óscar Tunjo",
+      "facet": "Automovilismo y motociclismo",
+      "known_at": 14,
+      "retired": "unaskable: I'm not sure of facts about Óscar Tunjo's career, and the options don't fit him."
+    },
+    {
+      "name": "Sebastián Montoya",
+      "facet": "Automovilismo y motociclismo",
+      "known_at": 12
+    },
+    {
+      "name": "Yonny Hernández",
+      "facet": "Automovilismo y motociclismo",
+      "known_at": 13
+    },
+    {
+      "name": "Martín Cárdenas",
+      "facet": "Automovilismo y motociclismo",
+      "known_at": 14
+    },
+    {
+      "name": "David Alonso",
+      "facet": "Automovilismo y motociclismo",
+      "known_at": 11
+    },
+    {
+      "name": "Fórmula 1",
+      "facet": "Automovilismo y motociclismo",
+      "known_at": 4
+    },
+    {
+      "name": "Indy 500",
+      "facet": "Automovilismo y motociclismo",
+      "known_at": 10
+    },
+    {
+      "name": "Gran Premio de Mónaco",
+      "facet": "Automovilismo y motociclismo",
+      "known_at": 9
+    },
+    {
+      "name": "Rally Dakar",
+      "facet": "Automovilismo y motociclismo",
+      "known_at": 9
+    },
+    {
+      "name": "MotoGP",
+      "facet": "Automovilismo y motociclismo",
+      "known_at": 7
+    },
+    {
+      "name": "Autódromo de Tocancipá",
+      "facet": "Automovilismo y motociclismo",
+      "known_at": 11
+    },
+    {
+      "name": "Karts",
+      "facet": "Automovilismo y motociclismo",
+      "known_at": 4
+    },
+    {
+      "name": "Orlando Cabrera",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 13
+    },
+    {
+      "name": "Julio Teherán",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 13
+    },
+    {
+      "name": "José Quintana",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 13
+    },
+    {
+      "name": "Gio Urshela",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 13
+    },
+    {
+      "name": "Donovan Solano",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 14
+    },
+    {
+      "name": "Jorge Alfaro",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 14
+    },
+    {
+      "name": "Serie Mundial",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 9
+    },
+    {
+      "name": "Mundial de Béisbol de 1947",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 13
+    },
+    {
+      "name": "Liga Colombiana de Béisbol Profesional",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 11
+    },
+    {
+      "name": "Caimanes de Barranquilla",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 10
+    },
+    {
+      "name": "Tigres de Cartagena",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 11
+    },
+    {
+      "name": "Serie del Caribe",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 11
+    },
+    {
+      "name": "Estadio Édgar Rentería",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 11
+    },
+    {
+      "name": "Béisbol",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 3
+    },
+    {
+      "name": "Liga Profesional de Baloncesto",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 12
+    },
+    {
+      "name": "Titanes de Barranquilla",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 13
+    },
+    {
+      "name": "Braian Angola",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 14
+    },
+    {
+      "name": "Selección Colombia femenina de voleibol",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 11
+    },
+    {
+      "name": "Amanda Coneo",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 14
+    },
+    {
+      "name": "Voleibol playa",
+      "facet": "Béisbol, baloncesto y voleibol",
+      "known_at": 5
+    },
+    {
+      "name": "Parapente",
+      "facet": "Deportes acuáticos y de aventura",
+      "known_at": 5
+    },
+    {
+      "name": "Rafting",
+      "facet": "Deportes acuáticos y de aventura",
+      "known_at": 6
+    },
+    {
+      "name": "Roldanillo",
+      "facet": "Deportes acuáticos y de aventura",
+      "known_at": 13
+    },
+    {
+      "name": "Suesca",
+      "facet": "Deportes acuáticos y de aventura",
+      "known_at": 12
+    },
+    {
+      "name": "Escalada en roca",
+      "facet": "Deportes acuáticos y de aventura",
+      "known_at": 5
+    },
+    {
+      "name": "Torrentismo",
+      "facet": "Deportes acuáticos y de aventura",
+      "known_at": 10
+    },
+    {
+      "name": "Kitesurf",
+      "facet": "Deportes acuáticos y de aventura",
+      "known_at": 8
+    },
+    {
+      "name": "Buceo",
+      "facet": "Deportes acuáticos y de aventura",
+      "known_at": 3
+    },
+    {
+      "name": "Surf en Nuquí",
+      "facet": "Deportes acuáticos y de aventura",
+      "known_at": 12
+    },
+    {
+      "name": "Apnea",
+      "facet": "Deportes acuáticos y de aventura",
+      "known_at": 9
+    },
+    {
+      "name": "Sofía Gómez Uribe",
+      "facet": "Deportes acuáticos y de aventura",
+      "known_at": 14
+    },
+    {
+      "name": "Natación con aletas",
+      "facet": "Deportes acuáticos y de aventura",
+      "known_at": 10
+    },
+    {
+      "name": "Esquí náutico",
+      "facet": "Deportes acuáticos y de aventura",
+      "known_at": 8
+    },
+    {
+      "name": "Clavados",
+      "facet": "Deportes acuáticos y de aventura",
+      "known_at": 5
+    },
+    {
+      "name": "Sebastián Morales",
+      "facet": "Deportes acuáticos y de aventura",
+      "known_at": 14
+    },
+    {
+      "name": "Diana Pineda",
+      "facet": "Deportes acuáticos y de aventura",
+      "known_at": 14
+    },
+    {
+      "name": "Omar Pinzón",
+      "facet": "Deportes acuáticos y de aventura",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Serrano Zárate",
+      "facet": "Deporte paralímpico colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Juegos Parapanamericanos",
+      "facet": "Deporte paralímpico colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Juegos Paranacionales",
+      "facet": "Deporte paralímpico colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Fútbol para ciegos",
+      "facet": "Deporte paralímpico colombiano",
+      "known_at": 7
+    },
+    {
+      "name": "Baloncesto en silla de ruedas",
+      "facet": "Deporte paralímpico colombiano",
+      "known_at": 5
+    },
+    {
+      "name": "Tenis en silla de ruedas",
+      "facet": "Deporte paralímpico colombiano",
+      "known_at": 7
+    },
+    {
+      "name": "Atletismo paralímpico",
+      "facet": "Deporte paralímpico colombiano",
+      "known_at": 7
+    },
+    {
+      "name": "Powerlifting paralímpico",
+      "facet": "Deporte paralímpico colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Ciclismo paralímpico",
+      "facet": "Deporte paralímpico colombiano",
+      "known_at": 8
+    },
+    {
+      "name": "Prótesis deportiva",
+      "facet": "Deporte paralímpico colombiano",
+      "known_at": 6
+    },
+    {
+      "name": "Juegos Nacionales",
+      "facet": "Juegos y eventos deportivos en Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Juegos Centroamericanos y del Caribe de Barranquilla 2018",
+      "facet": "Juegos y eventos deportivos en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Juegos Centroamericanos y del Caribe de Cartagena 2006",
+      "facet": "Juegos y eventos deportivos en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Juegos Suramericanos de Medellín 2010",
+      "facet": "Juegos y eventos deportivos en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Juegos Mundiales de Cali 2013",
+      "facet": "Juegos y eventos deportivos en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Juegos Panamericanos Junior de Cali 2021",
+      "facet": "Juegos y eventos deportivos en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Juegos Bolivarianos de Valledupar 2022",
+      "facet": "Juegos y eventos deportivos en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Mundial de Futsal 2016",
+      "facet": "Juegos y eventos deportivos en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Maratón de Medellín",
+      "facet": "Juegos y eventos deportivos en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Juegos Intercolegiados Supérate",
+      "facet": "Juegos y eventos deportivos en Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Unidad Deportiva Atanasio Girardot",
+      "facet": "Juegos y eventos deportivos en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Coliseo El Campín",
+      "facet": "Juegos y eventos deportivos en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Juegos Olímpicos",
+      "facet": "Juegos y eventos deportivos en Colombia",
+      "known_at": 3
+    }
+  ]
+}

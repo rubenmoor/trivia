@@ -1,0 +1,482 @@
+{
+  "subcategory": "regional-speech",
+  "facets": [
+    "Habla paisa y del Eje Cafetero",
+    "Habla costeña del Caribe",
+    "Habla rola y bogotana",
+    "Habla caleña y vallecaucana",
+    "Habla pastusa y nariñense",
+    "Habla santandereana",
+    "Habla llanera y del Orinoco",
+    "Habla del Pacífico chocoano",
+    "Habla cundiboyacense",
+    "Habla opita y tolimense",
+    "Creoles y lenguas nativas",
+    "Voseo, tuteo y ustedeo"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 3,
+      "name_concept": 3,
+      "word_meaning": 5,
+      "count": 1,
+      "estimate": 1,
+      "record": 1,
+      "origin": 5,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 1,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 1
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 2,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Pues (muletilla paisa)",
+      "facet": "Habla paisa y del Eje Cafetero",
+      "known_at": 4
+    },
+    {
+      "name": "Ave María pues",
+      "facet": "Habla paisa y del Eje Cafetero",
+      "known_at": 5
+    },
+    {
+      "name": "Mero",
+      "facet": "Habla paisa y del Eje Cafetero",
+      "known_at": 9
+    },
+    {
+      "name": "Tragado",
+      "facet": "Habla paisa y del Eje Cafetero",
+      "known_at": 7
+    },
+    {
+      "name": "Amañado",
+      "facet": "Habla paisa y del Eje Cafetero",
+      "known_at": 8
+    },
+    {
+      "name": "Costeño",
+      "facet": "Habla costeña del Caribe",
+      "known_at": 2
+    },
+    {
+      "name": "Vale",
+      "facet": "Habla costeña del Caribe",
+      "known_at": 7
+    },
+    {
+      "name": "Aguaje",
+      "facet": "Habla costeña del Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "Pava",
+      "facet": "Habla costeña del Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "Cipote",
+      "facet": "Habla costeña del Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "Aspiración de la ese",
+      "facet": "Habla costeña del Caribe",
+      "known_at": 12
+    },
+    {
+      "name": "Pechichón",
+      "facet": "Habla costeña del Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "Joda",
+      "facet": "Habla costeña del Caribe",
+      "known_at": 8
+    },
+    {
+      "name": "Rolo",
+      "facet": "Habla rola y bogotana",
+      "known_at": 4
+    },
+    {
+      "name": "Lobo",
+      "facet": "Habla rola y bogotana",
+      "known_at": 8
+    },
+    {
+      "name": "Chirriado",
+      "facet": "Habla rola y bogotana",
+      "known_at": 10
+    },
+    {
+      "name": "Sardino",
+      "facet": "Habla rola y bogotana",
+      "known_at": 8
+    },
+    {
+      "name": "Camellar",
+      "facet": "Habla rola y bogotana",
+      "known_at": 6
+    },
+    {
+      "name": "Chicanear",
+      "facet": "Habla rola y bogotana",
+      "known_at": 8
+    },
+    {
+      "name": "Ve",
+      "facet": "Habla caleña y vallecaucana",
+      "known_at": 5
+    },
+    {
+      "name": "Oís",
+      "facet": "Habla caleña y vallecaucana",
+      "known_at": 7
+    },
+    {
+      "name": "Ole",
+      "facet": "Habla caleña y vallecaucana",
+      "known_at": 7
+    },
+    {
+      "name": "Mompa",
+      "facet": "Habla caleña y vallecaucana",
+      "known_at": 10
+    },
+    {
+      "name": "Borondo",
+      "facet": "Habla caleña y vallecaucana",
+      "known_at": 9
+    },
+    {
+      "name": "Arrarray",
+      "facet": "Habla pastusa y nariñense",
+      "known_at": 11
+    },
+    {
+      "name": "Atatay",
+      "facet": "Habla pastusa y nariñense",
+      "known_at": 11
+    },
+    {
+      "name": "Ananay",
+      "facet": "Habla pastusa y nariñense",
+      "known_at": 12
+    },
+    {
+      "name": "Guagua",
+      "facet": "Habla pastusa y nariñense",
+      "known_at": 10
+    },
+    {
+      "name": "Ñaño",
+      "facet": "Habla pastusa y nariñense",
+      "known_at": 10
+    },
+    {
+      "name": "Chuta",
+      "facet": "Habla pastusa y nariñense",
+      "known_at": 11
+    },
+    {
+      "name": "Longo",
+      "facet": "Habla pastusa y nariñense",
+      "known_at": 13
+    },
+    {
+      "name": "Guambra",
+      "facet": "Habla pastusa y nariñense",
+      "known_at": 12
+    },
+    {
+      "name": "Dar + gerundio",
+      "facet": "Habla pastusa y nariñense",
+      "known_at": 13
+    },
+    {
+      "name": "Pupo",
+      "facet": "Habla pastusa y nariñense",
+      "known_at": 12
+    },
+    {
+      "name": "Chulla",
+      "facet": "Habla pastusa y nariñense",
+      "known_at": 13
+    },
+    {
+      "name": "Mande",
+      "facet": "Habla pastusa y nariñense",
+      "known_at": 7
+    },
+    {
+      "name": "Habla golpeada",
+      "facet": "Habla santandereana",
+      "known_at": 8
+    },
+    {
+      "name": "Jartera",
+      "facet": "Habla santandereana",
+      "known_at": 7
+    },
+    {
+      "name": "Bonito (como insulto)",
+      "facet": "Habla santandereana",
+      "known_at": 12
+    },
+    {
+      "name": "Pringamoza",
+      "facet": "Habla santandereana",
+      "known_at": 10
+    },
+    {
+      "name": "Bravo (enojado)",
+      "facet": "Habla santandereana",
+      "known_at": 6
+    },
+    {
+      "name": "Pique",
+      "facet": "Habla santandereana",
+      "known_at": 10
+    },
+    {
+      "name": "Cuchilla",
+      "facet": "Habla santandereana",
+      "known_at": 12
+    },
+    {
+      "name": "Catire",
+      "facet": "Habla llanera y del Orinoco",
+      "known_at": 11
+    },
+    {
+      "name": "Guate",
+      "facet": "Habla llanera y del Orinoco",
+      "known_at": 12
+    },
+    {
+      "name": "Cachicamo",
+      "facet": "Habla llanera y del Orinoco",
+      "known_at": 11
+    },
+    {
+      "name": "Baquiano",
+      "facet": "Habla llanera y del Orinoco",
+      "known_at": 12
+    },
+    {
+      "name": "Mastranto",
+      "facet": "Habla llanera y del Orinoco",
+      "known_at": 13
+    },
+    {
+      "name": "Morichal",
+      "facet": "Habla llanera y del Orinoco",
+      "known_at": 12
+    },
+    {
+      "name": "Champa",
+      "facet": "Habla del Pacífico chocoano",
+      "known_at": 13
+    },
+    {
+      "name": "Potrillo",
+      "facet": "Habla del Pacífico chocoano",
+      "known_at": 12
+    },
+    {
+      "name": "Azotea",
+      "facet": "Habla del Pacífico chocoano",
+      "known_at": 13
+    },
+    {
+      "name": "Bitute",
+      "facet": "Habla del Pacífico chocoano",
+      "known_at": 13
+    },
+    {
+      "name": "Chirimía",
+      "facet": "Habla del Pacífico chocoano",
+      "known_at": 9
+    },
+    {
+      "name": "Ombligada",
+      "facet": "Habla del Pacífico chocoano",
+      "known_at": 14
+    },
+    {
+      "name": "Toyo",
+      "facet": "Habla del Pacífico chocoano",
+      "known_at": 13
+    },
+    {
+      "name": "Ansina",
+      "facet": "Habla cundiboyacense",
+      "known_at": 11
+    },
+    {
+      "name": "Truje",
+      "facet": "Habla cundiboyacense",
+      "known_at": 10
+    },
+    {
+      "name": "Mesmo",
+      "facet": "Habla cundiboyacense",
+      "known_at": 11
+    },
+    {
+      "name": "Dentrar",
+      "facet": "Habla cundiboyacense",
+      "known_at": 11
+    },
+    {
+      "name": "Mi Dios le pague",
+      "facet": "Habla cundiboyacense",
+      "known_at": 8
+    },
+    {
+      "name": "Cuchuco",
+      "facet": "Habla cundiboyacense",
+      "known_at": 9
+    },
+    {
+      "name": "Tolimense",
+      "facet": "Habla opita y tolimense",
+      "known_at": 5
+    },
+    {
+      "name": "Insulso",
+      "facet": "Habla opita y tolimense",
+      "known_at": 10
+    },
+    {
+      "name": "Juepa jé",
+      "facet": "Habla opita y tolimense",
+      "known_at": 10
+    },
+    {
+      "name": "Arhuaco",
+      "facet": "Creoles y lenguas nativas",
+      "known_at": 9
+    },
+    {
+      "name": "Muisca",
+      "facet": "Creoles y lenguas nativas",
+      "known_at": 6
+    },
+    {
+      "name": "Romaní",
+      "facet": "Creoles y lenguas nativas",
+      "known_at": 13
+    },
+    {
+      "name": "Huitoto",
+      "facet": "Creoles y lenguas nativas",
+      "known_at": 12
+    },
+    {
+      "name": "Guna",
+      "facet": "Creoles y lenguas nativas",
+      "known_at": 13
+    },
+    {
+      "name": "Vos",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 4
+    },
+    {
+      "name": "Tú",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 2
+    },
+    {
+      "name": "Usted",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 2
+    },
+    {
+      "name": "Ustedes",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 3
+    },
+    {
+      "name": "Vosotros",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 8
+    },
+    {
+      "name": "Vos sabés",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 6
+    },
+    {
+      "name": "Vení",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 6
+    },
+    {
+      "name": "Decí",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 7
+    },
+    {
+      "name": "Voseo antioqueño",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 9
+    },
+    {
+      "name": "Voseo vallecaucano",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 10
+    },
+    {
+      "name": "Tuteo caribeño",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 10
+    },
+    {
+      "name": "Ustedeo boyacense",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 11
+    },
+    {
+      "name": "Ustedeo santandereano",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 11
+    },
+    {
+      "name": "Usted de cariño",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 10
+    }
+  ]
+}

@@ -33420,7 +33420,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Then: add the first drafting pair (priority -110, work tree `questions`)
 - `run batch-<n> (usa)` (run name from `qgen`; rename after the run like `task 1690: run colombia batch (batch-<n>)`): `nix develop -c qgen batch --bundle usa` (RUNBOOK steps 1–5; US English). Done when its report exists, printed paths staged, note with "Done:" line, report path, health result (✗ raised, not a stop).
-- `QC batch-<n> (usa)`, requires the run: the drafted-run QC shape of `task 1691: QC colombia batch (batch-<n>)` (decision 414, no waits):
+- `QC batch-<n> (usa)`, requires the run: the drafted-run QC shape of `task 1691: QC batch-16 (colombia)` (decision 414, no waits):
   - first: answered review decisions of earlier `usa` batches not yet acted on → change tasks in their plans, report lines; unanswered ones stay open
   - spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of US English; review link, `trivia-authoring`; never answered by an LLM), raised, not waited on
   - `qgen report --qc batch-<n>` → proposals decision `"QC batch-<n>: which changes?"`, raised, not waited on; none → `--changes none`
@@ -33445,7 +33445,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Then: add the first drafting pair (priority -110, work tree `questions`)
 - `run batch-<n> (germany)` (run name from `qgen`; rename after the run like `task 1690: run colombia batch (batch-<n>)`): `nix develop -c qgen batch --bundle germany` (RUNBOOK steps 1–5; German). Done when its report exists, printed paths staged, note with "Done:" line, report path, health result (✗ raised, not a stop).
-- `QC batch-<n> (germany)`, requires the run: the drafted-run QC shape of `task 1691: QC colombia batch (batch-<n>)` (decision 414, no waits):
+- `QC batch-<n> (germany)`, requires the run: the drafted-run QC shape of `task 1691: QC batch-16 (colombia)` (decision 414, no waits):
   - first: answered review decisions of earlier `germany` batches not yet acted on → change tasks in their plans, report lines; unanswered ones stay open
   - spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of German; review link, `trivia-authoring`; never answered by an LLM), raised, not waited on
   - `qgen report --qc batch-<n>` → proposals decision `"QC batch-<n>: which changes?"`, raised, not waited on; none → `--changes none`
@@ -33470,7 +33470,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Then: add the first drafting pair (priority -110, work tree `questions`)
 - `run batch-<n> (uk)` (run name from `qgen`; rename after the run like `task 1690: run colombia batch (batch-<n>)`): `nix develop -c qgen batch --bundle uk` (RUNBOOK steps 1–5; British English). Done when its report exists, printed paths staged, note with "Done:" line, report path, health result (✗ raised, not a stop).
-- `QC batch-<n> (uk)`, requires the run: the drafted-run QC shape of `task 1691: QC colombia batch (batch-<n>)` (decision 414, no waits):
+- `QC batch-<n> (uk)`, requires the run: the drafted-run QC shape of `task 1691: QC batch-16 (colombia)` (decision 414, no waits):
   - first: answered review decisions of earlier `uk` batches not yet acted on → change tasks in their plans, report lines; unanswered ones stay open
   - spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of British English; review link, `trivia-authoring`; never answered by an LLM), raised, not waited on
   - `qgen report --qc batch-<n>` → proposals decision `"QC batch-<n>: which changes?"`, raised, not waited on; none → `--changes none`
@@ -33495,7 +33495,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Then: add the first drafting pair (priority -110, work tree `questions`)
 - `run batch-<n> (spain)` (run name from `qgen`; rename after the run like `task 1690: run colombia batch (batch-<n>)`): `nix develop -c qgen batch --bundle spain` (RUNBOOK steps 1–5; Spain''s Spanish). Done when its report exists, printed paths staged, note with "Done:" line, report path, health result (✗ raised, not a stop).
-- `QC batch-<n> (spain)`, requires the run: the drafted-run QC shape of `task 1691: QC colombia batch (batch-<n>)` (decision 414, no waits):
+- `QC batch-<n> (spain)`, requires the run: the drafted-run QC shape of `task 1691: QC batch-16 (colombia)` (decision 414, no waits):
   - first: answered review decisions of earlier `spain` batches not yet acted on → change tasks in their plans, report lines; unanswered ones stay open
   - spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of Spain''s Spanish; review link, `trivia-authoring`; never answered by an LLM), raised, not waited on
   - `qgen report --qc batch-<n>` → proposals decision `"QC batch-<n>: which changes?"`, raised, not waited on; none → `--changes none`
@@ -33520,7 +33520,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Then: add the first drafting pair (priority -110, work tree `questions`)
 - `run batch-<n> (mexico)` (run name from `qgen`; rename after the run like `task 1690: run colombia batch (batch-<n>)`): `nix develop -c qgen batch --bundle mexico` (RUNBOOK steps 1–5; Mexican Spanish). Done when its report exists, printed paths staged, note with "Done:" line, report path, health result (✗ raised, not a stop).
-- `QC batch-<n> (mexico)`, requires the run: the drafted-run QC shape of `task 1691: QC colombia batch (batch-<n>)` (decision 414, no waits):
+- `QC batch-<n> (mexico)`, requires the run: the drafted-run QC shape of `task 1691: QC batch-16 (colombia)` (decision 414, no waits):
   - first: answered review decisions of earlier `mexico` batches not yet acted on → change tasks in their plans, report lines; unanswered ones stay open
   - spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of Mexican Spanish; review link, `trivia-authoring`; never answered by an LLM), raised, not waited on
   - `qgen report --qc batch-<n>` → proposals decision `"QC batch-<n>: which changes?"`, raised, not waited on; none → `--changes none`
@@ -41919,7 +41919,7 @@ Fix, so it can''t happen again:
 - if the cause or fix is in pm itself (outside this repo), write up a change for it and a pm decision for the developer; in this repo, a note on git operations to avoid while `pm run` is running (README / AGENTS.md) if still needed after the fix
 
 Done when: the cause is named, the fix (or the pm change write-up) exists, and a reproduction no longer loses rows.', '2026-10-23T00:10:29Z', '2026-10-23T00:11:19Z', NULL, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1690, 84, 'run colombia batch (batch-<n>)', 'work', 'open', -110, NULL, 'Plan 84 chain 4, next es pair of the regional pilot `colombia` (`decision 110: Regional packs at launch (RG-5, OQ-46)`), added by `task 1296: QC batch-12 (colombia)`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1690, 84, 'run colombia batch (batch-<n>)', 'work', 'done', -110, '2026-10-23, run is batch-16 (colombia). Done: batch-16: 206 merged, 186 approved, 20 needs work (took 4m49s). claude: 58 calls (0 failed), opus 58, 895k tokens, $2.64, 13m27s. report authoring/reports/batch-16.md. Health ✗ (drop rate, overlap) raised as decision 425. Task 1691 body still says batch-<n>: read as batch-16; subject renamed to QC batch-16 (colombia). Task subject couldn''t be renamed while running.', 'Plan 84 chain 4, next es pair of the regional pilot `colombia` (`decision 110: Regional packs at launch (RG-5, OQ-46)`), added by `task 1296: QC batch-12 (colombia)`.
 
 ## Run
 - `nix develop -c qgen batch --bundle colombia` (`authoring/RUNBOOK.md` steps 1–5; Colombian Spanish, `bundles.json` `rule`/`voice`). No other pipeline steps by hand.
@@ -41932,8 +41932,8 @@ Done when its report exists, the printed paths are staged, note as above.
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148, 171 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Health ✗ (in the output, the report or `qgen health`): `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health ✗, look at it?"` with the warning verbatim (`plan 190: Reviews don''t gate generation`; also finds the older "<run>: health stop, ack?"), no task linked (no `pm task-pending-decision`); the task goes on. Never `qgen health ack` (the developer''s).
-- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-23T00:13:00Z', NULL, 1296, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1691, 84, 'QC colombia batch (batch-<n>)', 'work', 'open', -110, NULL, 'Plan 84 chain 4: QC of colombia''s next batch (`task 1690: run colombia batch (batch-<n>)`). Drafted-run QC shape, `authoring/QC.md` steps 1–4 without waits (`decision 414: Human reviews don''t gate question generation or translation`). Owners: `plans/15c-regional-questions.md`, `plans/16-content-target.md`.
+- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-23T00:13:00Z', '2026-10-23T17:38:30Z', 1296, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1691, 84, 'QC batch-16 (colombia)', 'work', 'open', -110, NULL, 'Plan 84 chain 4: QC of colombia''s next batch (`task 1690: run colombia batch (batch-<n>)`). Drafted-run QC shape, `authoring/QC.md` steps 1–4 without waits (`decision 414: Human reviews don''t gate question generation or translation`). Owners: `plans/15c-regional-questions.md`, `plans/16-content-target.md`.
 
 ## First: answered review decisions of earlier colombia batches
 - `pm decision list --answered --grep batch-12` (and every earlier colombia batch not yet acted on; batch-12: decisions 408 health ack, 409 spot check), plus the answered spot-check / QC-proposal / health decisions of later colombia batches.
@@ -49020,6 +49020,12 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
      M app/data/demo/pool.json
 
 Look: `git show pm/task-1228-run-1865-left`. Keep: `git merge pm/task-1228-run-1865-left`. Then `git branch -D pm/task-1228-run-1865-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', NULL, NULL, '2026-10-23T15:32:57Z', NULL, NULL, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (425, 'batch-16: health ✗, look at it?', 'pending', '["Looked at it, carry on (qgen health ack by the developer)", "Change something first"]', 'batch-16 (colombia) health ✗ vs batch-14, batch-15: drop rate 25.7 % ✗, needs_work: overlap 1.4 % ✗, overlap rate 21.2 % ✗ (see authoring/reports/batch-16.md; batch-15 also max final-target gap, mean fun).', 'The latest batch of Colombian questions scored below several of the quality thresholds the project set for a batch, such as how many drafts were dropped and how fun the questions rate. Nothing is stopped; the developer can look at the numbers and decide whether anything needs changing.', NULL, NULL, '2026-10-23T17:38:24Z', NULL, 1690, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (426, 'Task 1690 left unstaged changes after `pm task done`: investigate', 'pending', '[]', 'Run 1866 of task 1690 closed the task but left 1 file unstaged. pm committed them on the branch `pm/task-1690-run-1866-left` and cleaned the tree.
+
+     M app/data/demo/pool.json
+
+Look: `git show pm/task-1690-run-1866-left`. Keep: `git merge pm/task-1690-run-1866-left`. Then `git branch -D pm/task-1690-run-1866-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', NULL, NULL, '2026-10-23T17:38:35Z', NULL, NULL, NULL, 'once', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -50941,6 +50947,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1863, 641, '2026-10-23T14:43:45Z', '2026-10-23T14:44:53Z', 'done', NULL, 0, 'dd2b1c21b1c1994097625571f4a6d16c0e72851d', 'questions', 'claude-sonnet-5-5', 'd92d8200-6f5e-4aa1-9856-adbe381049a0', NULL, 10, 18, 3369, 476443, 54280, 0.3461346, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1864, 1226, '2026-10-23T14:44:53Z', '2026-10-23T14:45:39Z', 'done', NULL, 0, '61c0d57080f8969103835e243fff459731d548a4', 'questions', 'claude-sonnet-5-5', 'd92d8200-6f5e-4aa1-9856-adbe381049a0', 1863, 5, 10, 2454, 402029, 20344, 0.5324764, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1865, 1228, '2026-10-23T14:45:39Z', '2026-10-23T15:32:56Z', 'done', 'left 1 file unstaged, committed on branch pm/task-1228-run-1865-left; decision 424: investigate', 0, '795a638ffdf0636615a94fe8bc3a9965c08f851f', 'questions', 'claude-sonnet-5-5', 'd92d8200-6f5e-4aa1-9856-adbe381049a0', 1864, 4, 8, 2241, 398105, 20020, 0.7146034, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1866, 1690, '2026-10-23T15:32:57Z', '2026-10-23T17:38:35Z', 'done', 'left 1 file unstaged, committed on branch pm/task-1690-run-1866-left; decision 426: investigate', 0, '1d5c9490bfa33b12954e43ce79fe41a7983132bf', 'questions', 'claude-sonnet-5-5', 'a26fae9a-bced-43e6-8cd4-62de8e68f521', NULL, 9, 18, 2375, 414405, 43741, 0.281631, 494342);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

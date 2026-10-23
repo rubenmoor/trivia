@@ -1,0 +1,593 @@
+{
+  "subcategory": "independence",
+  "facets": [
+    "El grito del 20 de julio",
+    "Precursores y antecedentes",
+    "Próceres y líderes criollos",
+    "Heroínas de la independencia",
+    "Patria Boba y primeras repúblicas",
+    "Cartagena y las regiones",
+    "Reconquista y régimen del terror",
+    "Campaña Libertadora y batallas",
+    "Soldados, llaneros y legiones",
+    "La Gran Colombia",
+    "Símbolos, fechas y memoria patria"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 1,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Grito de Independencia",
+      "facet": "El grito del 20 de julio",
+      "known_at": 3
+    },
+    {
+      "name": "José González Llorente",
+      "facet": "El grito del 20 de julio",
+      "known_at": 7
+    },
+    {
+      "name": "Antonio Morales",
+      "facet": "El grito del 20 de julio",
+      "known_at": 10
+    },
+    {
+      "name": "Francisco Morales",
+      "facet": "El grito del 20 de julio",
+      "known_at": 11
+    },
+    {
+      "name": "Acta de Independencia",
+      "facet": "El grito del 20 de julio",
+      "known_at": 7
+    },
+    {
+      "name": "Cabildo abierto",
+      "facet": "El grito del 20 de julio",
+      "known_at": 8
+    },
+    {
+      "name": "Antonio Amar y Borbón",
+      "facet": "El grito del 20 de julio",
+      "known_at": 10
+    },
+    {
+      "name": "Francisca Villanova",
+      "facet": "El grito del 20 de julio",
+      "known_at": 13
+    },
+    {
+      "name": "Antonio Villavicencio",
+      "facet": "El grito del 20 de julio",
+      "known_at": 12
+    },
+    {
+      "name": "José María Carbonell",
+      "facet": "El grito del 20 de julio",
+      "known_at": 12
+    },
+    {
+      "name": "Santafé de Bogotá",
+      "facet": "El grito del 20 de julio",
+      "known_at": 5
+    },
+    {
+      "name": "Día de mercado",
+      "facet": "El grito del 20 de julio",
+      "known_at": 7
+    },
+    {
+      "name": "Derechos del Hombre y del Ciudadano",
+      "facet": "Precursores y antecedentes",
+      "known_at": 8
+    },
+    {
+      "name": "Imprenta Patriótica",
+      "facet": "Precursores y antecedentes",
+      "known_at": 12
+    },
+    {
+      "name": "Revolución francesa",
+      "facet": "Precursores y antecedentes",
+      "known_at": 8
+    },
+    {
+      "name": "Junta de Quito",
+      "facet": "Precursores y antecedentes",
+      "known_at": 11
+    },
+    {
+      "name": "Real Audiencia",
+      "facet": "Precursores y antecedentes",
+      "known_at": 11
+    },
+    {
+      "name": "Jorge Tadeo Lozano",
+      "facet": "Próceres y líderes criollos",
+      "known_at": 9
+    },
+    {
+      "name": "Antonio Ricaurte",
+      "facet": "Próceres y líderes criollos",
+      "known_at": 8
+    },
+    {
+      "name": "Custodio García Rovira",
+      "facet": "Próceres y líderes criollos",
+      "known_at": 11
+    },
+    {
+      "name": "Manuel Rodríguez Torices",
+      "facet": "Próceres y líderes criollos",
+      "known_at": 12
+    },
+    {
+      "name": "Joaquín París",
+      "facet": "Próceres y líderes criollos",
+      "known_at": 13
+    },
+    {
+      "name": "Juan del Corral",
+      "facet": "Próceres y líderes criollos",
+      "known_at": 11
+    },
+    {
+      "name": "Liborio Mejía",
+      "facet": "Próceres y líderes criollos",
+      "known_at": 12
+    },
+    {
+      "name": "José Miguel Pey",
+      "facet": "Próceres y líderes criollos",
+      "known_at": 12
+    },
+    {
+      "name": "Pedro Gual",
+      "facet": "Próceres y líderes criollos",
+      "known_at": 13
+    },
+    {
+      "name": "Evangelina Díaz",
+      "facet": "Heroínas de la independencia",
+      "known_at": 13
+    },
+    {
+      "name": "Juana Escobar",
+      "facet": "Heroínas de la independencia",
+      "known_at": 13,
+      "retired": "unaskable: No tengo datos seguros sobre Juana Escobar como para hacer una pregunta justa."
+    },
+    {
+      "name": "Teresa Cornejo",
+      "facet": "Heroínas de la independencia",
+      "known_at": 14
+    },
+    {
+      "name": "Carlota Armero",
+      "facet": "Heroínas de la independencia",
+      "known_at": 13
+    },
+    {
+      "name": "Simona Duque",
+      "facet": "Heroínas de la independencia",
+      "known_at": 12
+    },
+    {
+      "name": "Andrea Ricaurte",
+      "facet": "Heroínas de la independencia",
+      "known_at": 13
+    },
+    {
+      "name": "Juana Velasco de Gallo",
+      "facet": "Heroínas de la independencia",
+      "known_at": 14,
+      "retired": "unaskable: Es demasiado poco conocida y no tengo datos seguros sobre ella; además no hay un retrato fiable para la foto."
+    },
+    {
+      "name": "Día de la Mujer Colombiana",
+      "facet": "Heroínas de la independencia",
+      "known_at": 10
+    },
+    {
+      "name": "Estado de Cundinamarca",
+      "facet": "Patria Boba y primeras repúblicas",
+      "known_at": 9
+    },
+    {
+      "name": "La Bagatela",
+      "facet": "Patria Boba y primeras repúblicas",
+      "known_at": 12
+    },
+    {
+      "name": "Batalla de San Victorino",
+      "facet": "Patria Boba y primeras repúblicas",
+      "known_at": 12
+    },
+    {
+      "name": "Campaña del Sur",
+      "facet": "Patria Boba y primeras repúblicas",
+      "known_at": 12
+    },
+    {
+      "name": "Congreso de las Provincias Unidas",
+      "facet": "Patria Boba y primeras repúblicas",
+      "known_at": 12
+    },
+    {
+      "name": "Acta de Federación",
+      "facet": "Patria Boba y primeras repúblicas",
+      "known_at": 13
+    },
+    {
+      "name": "Toma de Santafé de 1814",
+      "facet": "Patria Boba y primeras repúblicas",
+      "known_at": 13
+    },
+    {
+      "name": "Carracos y pateadores",
+      "facet": "Patria Boba y primeras repúblicas",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio Baraya",
+      "facet": "Patria Boba y primeras repúblicas",
+      "known_at": 13
+    },
+    {
+      "name": "Estado Libre de Antioquia",
+      "facet": "Patria Boba y primeras repúblicas",
+      "known_at": 12
+    },
+    {
+      "name": "Primera República",
+      "facet": "Patria Boba y primeras repúblicas",
+      "known_at": 10
+    },
+    {
+      "name": "Ciudad Heroica",
+      "facet": "Cartagena y las regiones",
+      "known_at": 6
+    },
+    {
+      "name": "Lanceros de Getsemaní",
+      "facet": "Cartagena y las regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro Romero",
+      "facet": "Cartagena y las regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Grito de Mompox",
+      "facet": "Cartagena y las regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Santa Marta realista",
+      "facet": "Cartagena y las regiones",
+      "known_at": 10
+    },
+    {
+      "name": "Pasto realista",
+      "facet": "Cartagena y las regiones",
+      "known_at": 9
+    },
+    {
+      "name": "Agustín Agualongo",
+      "facet": "Cartagena y las regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Ciudades Confederadas del Valle",
+      "facet": "Cartagena y las regiones",
+      "known_at": 12
+    },
+    {
+      "name": "Grito de Pamplona",
+      "facet": "Cartagena y las regiones",
+      "known_at": 12
+    },
+    {
+      "name": "Independencia de Panamá de España",
+      "facet": "Cartagena y las regiones",
+      "known_at": 10
+    },
+    {
+      "name": "Ejército Expedicionario de Costa Firme",
+      "facet": "Reconquista y régimen del terror",
+      "known_at": 12
+    },
+    {
+      "name": "Fernando VII",
+      "facet": "Reconquista y régimen del terror",
+      "known_at": 8
+    },
+    {
+      "name": "Huerta de Jaime",
+      "facet": "Reconquista y régimen del terror",
+      "known_at": 12
+    },
+    {
+      "name": "Consejo de guerra permanente",
+      "facet": "Reconquista y régimen del terror",
+      "known_at": 13
+    },
+    {
+      "name": "Consejo de Purificación",
+      "facet": "Reconquista y régimen del terror",
+      "known_at": 13
+    },
+    {
+      "name": "Junta de Secuestros",
+      "facet": "Reconquista y régimen del terror",
+      "known_at": 14
+    },
+    {
+      "name": "Alejo Sabaraín",
+      "facet": "Reconquista y régimen del terror",
+      "known_at": 12
+    },
+    {
+      "name": "Plaza de los Mártires",
+      "facet": "Reconquista y régimen del terror",
+      "known_at": 9
+    },
+    {
+      "name": "Batalla de Cachirí",
+      "facet": "Reconquista y régimen del terror",
+      "known_at": 13
+    },
+    {
+      "name": "Francisco de Montalvo",
+      "facet": "Reconquista y régimen del terror",
+      "known_at": 14
+    },
+    {
+      "name": "Oh larga y negra partida",
+      "facet": "Reconquista y régimen del terror",
+      "known_at": 11
+    },
+    {
+      "name": "Batalla de La Plata",
+      "facet": "Reconquista y régimen del terror",
+      "known_at": 14
+    },
+    {
+      "name": "Campaña Libertadora",
+      "facet": "Campaña Libertadora y batallas",
+      "known_at": 6
+    },
+    {
+      "name": "Batalla de Boyacá",
+      "facet": "Campaña Libertadora y batallas",
+      "known_at": 3
+    },
+    {
+      "name": "José María Barreiro",
+      "facet": "Campaña Libertadora y batallas",
+      "known_at": 10
+    },
+    {
+      "name": "Batalla de Gámeza",
+      "facet": "Campaña Libertadora y batallas",
+      "known_at": 12
+    },
+    {
+      "name": "Batalla de Paya",
+      "facet": "Campaña Libertadora y batallas",
+      "known_at": 13
+    },
+    {
+      "name": "Entrada de Bolívar a Santafé",
+      "facet": "Campaña Libertadora y batallas",
+      "known_at": 11
+    },
+    {
+      "name": "Batalla de Junín",
+      "facet": "Campaña Libertadora y batallas",
+      "known_at": 12
+    },
+    {
+      "name": "Batalla del Lago de Maracaibo",
+      "facet": "Campaña Libertadora y batallas",
+      "known_at": 12
+    },
+    {
+      "name": "Campaña Admirable",
+      "facet": "Campaña Libertadora y batallas",
+      "known_at": 11
+    },
+    {
+      "name": "San Mateo",
+      "facet": "Campaña Libertadora y batallas",
+      "known_at": 12
+    },
+    {
+      "name": "Batalla de Chorros Blancos",
+      "facet": "Campaña Libertadora y batallas",
+      "known_at": 14
+    },
+    {
+      "name": "Batalla de Bárbula",
+      "facet": "Campaña Libertadora y batallas",
+      "known_at": 13
+    },
+    {
+      "name": "Socha",
+      "facet": "Campaña Libertadora y batallas",
+      "known_at": 12
+    },
+    {
+      "name": "Vuelvan caras",
+      "facet": "Soldados, llaneros y legiones",
+      "known_at": 11
+    },
+    {
+      "name": "Lanceros",
+      "facet": "Soldados, llaneros y legiones",
+      "known_at": 6
+    },
+    {
+      "name": "Legión Británica",
+      "facet": "Soldados, llaneros y legiones",
+      "known_at": 10
+    },
+    {
+      "name": "James Rooke",
+      "facet": "Soldados, llaneros y legiones",
+      "known_at": 13
+    },
+    {
+      "name": "Daniel Florencio O'Leary",
+      "facet": "Soldados, llaneros y legiones",
+      "known_at": 13
+    },
+    {
+      "name": "Luis Brión",
+      "facet": "Soldados, llaneros y legiones",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Nepomuceno Moreno",
+      "facet": "Soldados, llaneros y legiones",
+      "known_at": 13
+    },
+    {
+      "name": "Palomo",
+      "facet": "Soldados, llaneros y legiones",
+      "known_at": 9
+    },
+    {
+      "name": "Fray Ignacio Mariño",
+      "facet": "Soldados, llaneros y legiones",
+      "known_at": 13
+    },
+    {
+      "name": "José Antonio Anzoátegui",
+      "facet": "Soldados, llaneros y legiones",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos Soublette",
+      "facet": "Soldados, llaneros y legiones",
+      "known_at": 13
+    },
+    {
+      "name": "Batallón Albión",
+      "facet": "Soldados, llaneros y legiones",
+      "known_at": 14
+    },
+    {
+      "name": "Hermanos Almeyda",
+      "facet": "Soldados, llaneros y legiones",
+      "known_at": 13
+    },
+    {
+      "name": "Disolución de la Gran Colombia",
+      "facet": "La Gran Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Guerra grancolombo-peruana",
+      "facet": "La Gran Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Ley de manumisión",
+      "facet": "La Gran Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Carta de Jamaica",
+      "facet": "La Gran Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Joaquín Mosquera",
+      "facet": "La Gran Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Desfile militar del 20 de julio",
+      "facet": "Símbolos, fechas y memoria patria",
+      "known_at": 4
+    },
+    {
+      "name": "Posesión presidencial del 7 de agosto",
+      "facet": "Símbolos, fechas y memoria patria",
+      "known_at": 9
+    },
+    {
+      "name": "El Libertador",
+      "facet": "Símbolos, fechas y memoria patria",
+      "known_at": 4
+    },
+    {
+      "name": "Hombre de las Leyes",
+      "facet": "Símbolos, fechas y memoria patria",
+      "known_at": 9
+    },
+    {
+      "name": "Bicentenario de la Independencia",
+      "facet": "Símbolos, fechas y memoria patria",
+      "known_at": 8
+    },
+    {
+      "name": "Departamento de Bolívar",
+      "facet": "Símbolos, fechas y memoria patria",
+      "known_at": 5
+    },
+    {
+      "name": "Departamento de Santander",
+      "facet": "Símbolos, fechas y memoria patria",
+      "known_at": 7
+    },
+    {
+      "name": "Orden de Boyacá",
+      "facet": "Símbolos, fechas y memoria patria",
+      "known_at": 12
+    }
+  ]
+}
