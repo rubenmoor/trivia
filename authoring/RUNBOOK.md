@@ -38,6 +38,7 @@ A pm worker (environment `PM_WORKER=1`) follows the steps above with these chang
   - `pm decision add "<subject>" --body - <<'EOF'` with the body below; prints the decision id
   - `pm task-pending-decision <task> <id>`
   - stage nothing, don't `pm task done`; end the turn
+  - exit 2 first: `pm decision list --grep "<run>: health stop"` (the run named in the output, e.g. `batch-12`); a pending one found → `pm task-pending-decision <task> <id>`, no new decision (the stop holds for every bundle and locale until `qgen health ack <run>`); none → add as above
 - **Step 3, exit 1 at the same step three times in a row:** no decision (decision 205); the queue doesn't wait for the developer on script bugs:
   - partial batch: `qgen validate`; passes → `git add authoring/data` (`work/<batch>` stays); fails → stop as above, subject `<batch>: qgen validate fails after <step>`, body its output
   - fix task in the batch task's plan: `pm task add <plan> "Fix qgen <step>: <cause>" --priority 0`; body: failing step, last 30 lines, your read-only diagnosis (file, cause, suggested fix), how to check it
