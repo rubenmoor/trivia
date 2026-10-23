@@ -203,6 +203,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - health ✗ never stops `qgen batch` (drafting or `--translate`); report and decision only; `qgen health ack` = my "looked at it"
 - answers are acted on afterwards (QC report, change tasks), by whatever task runs next, not by a task that waited
 - the only human gate is the final release (`trivia-release-check`, release bar), which is mine, not a pm task
+- RUNBOOK, QC.md, plans 15–17 and open batch/QC tasks follow this; task 1692''s "link to the pending ack decision" goes
 
 ## 5000 reached (developer, 2026-10-23)
 - 5000 approved base reached with batch-14 (5488); batch-15 is the last batch
@@ -808,17 +809,23 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 
 STEM (natural sciences, engineering, math), sports, history, movies, geography', '2026-10-16T19:04:11Z', NULL, 2);
 
-INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows. From batch-9 on, `base` is drafted in English with an international angle and translated to es, es-ES and de (milestone 9, "English-first drafting for `base`"). Human reviews still happen, but no run waits for them (`decision 414: Human reviews don''t gate question generation or translation`).
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows. From batch-9 on, `base` is drafted in English with an international angle and translated to es, es-ES and de (milestone 9, "English-first drafting for `base`"). Human reviews still happen, but no run waits for them (`decision 414: Human reviews don''t gate question generation or translation`). 5000 was reached with batch-14; batch-15 is the last batch, then the exit check.
 
 **This masterplan''s own tasks are not implementation work.** Each one writes the plan for one part below (`pm plan add 1 …`). That plan''s tasks do the work.
 
 ## Where we stand (2026-10-11, updated 2026-10-23)
 - 2026-10-11: approved `base` questions: 1035. By difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
-- `focus: null` in `app/data/age-groups.json`: `draft` already aims evenly at 1–15 (D-40). But high targets come out too easy (B-6), and subcategories are picked by fewest approved, not by difficulty gaps.
-- One `base` batch (D-46): about 57 subcategories × 18 slots, ~1000 drafts, ~600 merged, ~500 approved, ~$120 at list price (batch-7).
-- batch-7 needs_work reasons: mostly a giveaway hint, overlap with a pool question, or no usable media.
-- 2026-10-23: batch-8 (the last Spanish `base` batch) and batch-9 to batch-12 (English-first) done with their QC; `task 1680: run batch-13` open. `qgen report`: 4697 approved `base` (all bundles 5055). By difficulty (all bundles): 1: 190 · 2: 369 · 3: 402 · 4: 428 · 5: 456 · 6: 502 · 7: 472 · 8: 456 · 9: 350 · 10: 356 · 11: 324 · 12: 260 · 13: 248 · 14: 168 · 15: 74. 161 `needs_work`.
-- Leftovers that belong here: PE-6, PE-13, MP-11 (batch comparisons), B-5 (dedupe misses rewordings), B-6 (high difficulties), QP-6 (media for every question), the `needs_work` questions.
+- 2026-10-23, after batch-14: batch-8 (last Spanish) and batch-9 to batch-14 (English-first) done; QC batch-13 done. Open: `task 1725: run batch-15`, `task 1726: QC batch-15`.
+- `qgen report --exit-check` (2026-10-23): ✓ approved `base` 5512 (developer: 5488 at batch-14) · ✗ difficulty 1: 248/250, the only gap · ✗ health of the last two batches · ✗ spot check batch-14 missing · ✓ `qgen validate`.
+- `qgen report` progress vs. targets (`--locale es`, the default) counts es-sourced only (2055); the milestone count is the exit check''s (source locale, each once).
+- Leftovers that belong here: PE-6, PE-13, MP-11 (batch comparisons), B-5 (dedupe misses rewordings), B-6 (high difficulties), QP-6 (media for every question), the `needs_work` questions (191).
+
+## 5000 reached (developer, 2026-10-23)
+- 5000 approved `base` reached with batch-14; **batch-15 is the last batch** of this milestone.
+- `task 1726: QC batch-15` adds the exit-check task, not `run batch-16` / `QC batch-16`.
+- Small per-difficulty gaps (e.g. difficulty 1: 243/250, now 248/250) don''t justify a full batch: a later batch aims at them (e.g. a release content run, plan 84, or milestone 9''s), or they are accepted. Either way they don''t hold the exit check.
+- Open health and spot-check decisions are the developer''s and don''t block the exit check (decision 414); it reads the answers given.
+- Implementation tasks of parts 2–5 still open after batch-15: done if cheap, else they move to the plan that owns the pipeline afterwards (milestone 9, plan 147); they don''t hold the exit check.
 
 ## Reviews don''t gate generation (decision 414)
 - The developer trusts generation and translation; reviews still happen, but **no task waits on a review decision**.
@@ -826,10 +833,10 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - Health ✗ never stops `qgen batch` (drafting or `--translate`): report and decision only; `qgen health ack` = the developer''s "looked at it". Partly supersedes `decision 13: Batch health thresholds and stop rule?` and `decision 313` (translation stop).
 - Answers are acted on afterwards, by whatever task runs next (QC report, change tasks), not by a task that waited.
 - The only human gate: the final release (`trivia-release-check`, release bar), the developer''s, not a pm task.
-- RUNBOOK, QC.md, plans 15–17 and open batch/QC tasks follow this (revised through this masterplan''s edit).
+- RUNBOOK, QC.md, plans 15–17 and open batch/QC tasks follow this.
 
 ## English-first from batch-9
-- Owner: milestone 9, "English-first drafting for `base`": the drafting switch (`qgen batch` drafts `en`, international angle, `es`/`es-ES`/`de` via translation), the Spanish voices, the es-sourced questions'' en, de, es-ES entries. This milestone doesn''t build it; it runs batches with it.
+- Owner: milestone 9, "English-first drafting for `base`": the drafting switch, the Spanish voices, the es-sourced questions'' en, de, es-ES entries. This milestone doesn''t build it; it runs batches with it.
 - No more Spanish `base` drafts.
 - Count for this milestone: approved `base` questions in their source locale, each question once (es-sourced up to batch-8, en-sourced from batch-9). The 5000 per question locale (en, es, es-ES, de; decision 21: Content target per player and language (OQ-32)?) is milestone 9''s.
 - What the switch means for the parts below:
@@ -839,20 +846,20 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
   - Part 5: audit and spot check run on the English text; the spot-check agreement of the English batches is watched closely.
 
 ## Parts
-Rough order: 1 and 2 first, since they steer every later batch; 3–5 alongside; 6 keeps running at the lowest priority.
+Parts 1–5 are built (plans 12–16); what''s left is part 6''s last batch and the exit check.
 
-1. **Targets and progress.** A target count per difficulty that adds up to 5000 and tapers at the top (`decision 1: Target count per difficulty (1–15) for 5000 approved base questions?`). Plus a progress view: approved vs. target per difficulty and per category (`qgen report` and `/stats/difficulty`). It also states what "quality is fine" means: the exit check of the milestone (`decision 2: When is batch quality "fine": human spot-check size and agreement rate with the LLM review?`). Priority ~700.
-2. **Aim batches at difficulty gaps (B-6).** `draft` draws targets weighted by what''s missing against part 1''s targets, not evenly. Also check how well targets come out (target vs. rated vs. reviewed difficulty per batch), and fix the prompts or concept `known_at` choice where 11–15 drafts land at 7–9. Changes to `qgen.py`/prompts are the developer''s prompts (RUNBOOK): the plan does them as implementation tasks, never as a workaround inside a batch run. Priority ~700.
-3. **More subcategories.** Find saturated subcategories (approved count, concept use, duplicate rate) and propose new `base` subcategories, especially ones that carry hard questions. New subcategories are the developer''s call (RUNBOOK): proposed through a decision (`decision 18: Which new base subcategories?`), then added with their concept lists. Priority ~600.
-4. **Duplicate and drift detection (B-5).** Compare answers, concepts and topics against the whole approved pool, before merge, so overlaps get dropped rather than ending up `needs_work`. Per-batch health metrics in `authoring/reports/<batch>.md` and across batches: drop rate, needs_work rate by reason, duplicate rate, difficulty spread vs. targets, axis/style variety, cost per approved question. Thresholds whose ✗ is reported and raised as a decision for the developer to look at (`qgen health ack`); a ✗ never stops the next batch (decision 414). Absorbs PE-6, PE-13, MP-11. Priority ~700.
-5. **Quality control after every batch.** A fixed procedure run once a batch is committed: (a) an LLM audit with a different prompt from `review.md` on a sample of the batch; (b) a human spot check of a random sample in the review tool, recording agree/disagree, raised as a decision no task waits on; (c) findings turned into prompt or house-style changes as change tasks, by whatever task runs next; the next batch doesn''t wait for them (decision 414). The trend of the developer''s disagreement rate with the LLM review is the main "is quality fine" signal. Tooling priority ~650; the QC runs themselves are tasks in part 6.
-6. **Batch runs.** The recurring work: one `qgen batch` per task (RUNBOOK, unchanged), each followed by part 5''s QC and `qgen rework` per `decision 3: How are needs_work questions (33 now, more per batch) resolved?`, until part 1''s targets are met. **Every task that runs `qgen batch` has priority -100**, so it runs only when every implementation task is done or waits for a decision. Batch tasks one or two at a time, so the results of parts 2–5 shape later batches; a batch task never waits on a health, spot-check or QC decision (decision 414). Media yield: `plan 146: Media yield`. The last task is the exit check.
+1. **Targets and progress** (plan 12). Target count per difficulty, adding up to 5000 and tapering at the top (`decision 1: Target count per difficulty (1–15) for 5000 approved base questions?`); progress in `qgen report` and `/stats/difficulty`; the exit check `qgen report --exit-check` (`decision 2: When is batch quality "fine": human spot-check size and agreement rate with the LLM review?`). Its "every difficulty ≥ target" line may show a small gap; the exit-check task reads that per the section "5000 reached", not as a failure that needs a batch.
+2. **Aim batches at difficulty gaps (B-6)** (plan 13). `draft` weighted by what''s missing; target vs. rated vs. reviewed difficulty per batch. With batch-15 the last, batch-15 aims at the remaining gaps (difficulty 1).
+3. **More subcategories** (plan 14). Saturated subcategories, new ones through `decision 18: Which new base subcategories?`.
+4. **Duplicate and drift detection (B-5)** (plan 15). Overlap against the whole approved pool before merge; per-batch health in `authoring/reports/<batch>.md`; ✗ reported and raised, never a stop (decision 414). Absorbs PE-6, PE-13, MP-11.
+5. **Quality control after every batch** (plan 16). LLM audit, human spot check as a decision no task waits on, findings as change tasks run by whatever task comes next. The developer''s disagreement rate with the LLM review is the main "is quality fine" signal.
+6. **Batch runs** (plan 17). One `qgen batch` per task (RUNBOOK), each followed by part 5''s QC and `qgen rework` per `decision 3: How are needs_work questions (33 now, more per batch) resolved?`. **Every task that runs `qgen batch` has priority -100.** batch-15 is the last; `task 1726: QC batch-15` queues the exit check instead of batch-16. Media yield: `plan 146: Media yield`.
 
 ## Done when
-- `qgen report` shows ≥ 5000 approved `base` questions (source locale, each once), and every difficulty meets part 1''s target.
-- The last two batches pass part 4''s thresholds, and the human spot checks the developer has answered agree with the LLM review at the agreed rate; the exit check reads the answers given, it doesn''t wait for more.
+- `qgen report --exit-check` shows ≥ 5000 approved `base` questions (source locale, each once); every difficulty at part 1''s target, or a small gap listed in the exit-check note as accepted or left to a later batch (section "5000 reached").
+- Health and spot checks: the exit check reads the last two batches'' health and the spot checks the developer has answered against decision 2''s rate; an open health or spot-check decision doesn''t block it (decision 414). Its ✗ lines go into the task note and, if new, a decision for the developer; no task waits on it.
 - `qgen validate` is clean; `trivia-media sync --status approved` has filled the cache.
-- The release gate after that (`trivia-release-check`, release bar) is the developer''s, not part of this milestone''s tasks.', 'The family trivia game needs about five thousand good questions in its main collection, with fewer but still enough very hard ones, so game nights don''t repeat. This work grows the collection batch by batch, now written in English first and then translated, and checks after every batch that quality holds. The developer still reviews samples and warnings, but the question writing never waits for those reviews; only the final release is held for the developer''s own check.', '2026-10-11T20:08:18Z', NULL);
+- The release gate after that (`trivia-release-check`, release bar) is the developer''s, not part of this milestone''s tasks.', 'The family trivia game needs about five thousand good questions in its main collection, with fewer but still enough very hard ones, so game nights don''t repeat. That count has now been reached; one last round of new questions runs, and then a final check confirms the count, the spread over difficulty levels and the quality before this work is closed. The developer still reviews samples and warnings, but the question writing never waits for those reviews; only the final release is held for the developer''s own check.', '2026-10-11T20:08:18Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (2, 2, 'masterplan', 1000, 'The game referee moves from Python into `app/client/src/engine/`, a pure TypeScript module, with the same rules and the family''s saves kept; afterwards the game runs without Python, which the Steam desktop shell needs. Source plan: `plans/12-client-engine.md` (tasks PORT-1..PORT-8; PORT-6, the pool export, is done).
 
 **The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 2 …`), with its own tasks, files and checks.
@@ -42958,8 +42965,69 @@ No step waits for the developer (`decision 414: Human reviews don''t gate questi
 Missing tooling to list in the note: none known; `qgen report --overlaps` timed out in QC batch-11.
 
 Done when: steps 1–8 done or listed as missing in the note; staged per RUNBOOK "Under `pm run`"; `qgen validate` clean.', '2026-10-23T08:05:43Z', NULL, 1681, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1727, 1, 'revise the masterplan of milestone 1: Enough content for game nights', 'revise', 'open', 1000, NULL, '`milestone 1: Enough content for game nights` changed. Bring `plan 1: masterplan`, the masterplan, in line with it (`pm plan edit 1 --body -`), or
-leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-23T13:22:17Z', NULL, NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1727, 1, 'revise the masterplan of milestone 1: Enough content for game nights', 'revise', 'done', 1000, '2026-10-23, tasks.sql: plan 1 masterplan revised for ''5000 reached'': batch-15 last, QC batch-15 queues the exit check, small difficulty gaps accepted or left to a later batch, open review decisions don''t block the exit check; state updated (5512 approved, exit check: only gap difficulty 1 248/250)', '`milestone 1: Enough content for game nights` changed. Bring `plan 1: masterplan`, the masterplan, in line with it (`pm plan edit 1 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-23T13:22:17Z', '2026-10-23T13:23:19Z', NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1728, 1, 'revise the masterplan of milestone 1: Enough content for game nights', 'revise', 'open', 1000, NULL, '`milestone 1: Enough content for game nights` changed. Bring `plan 1: masterplan`, the masterplan, in line with it (`pm plan edit 1 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-23T13:22:24Z', NULL, NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1729, 1, 'create tasks for plan 1: masterplan', 'split', 'open', 1000, NULL, 'Split plan 1 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-23T13:23:15Z', NULL, 1727, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1730, 17, 'revise plan 17: Batch runs', 'revise', 'open', 1000, NULL, '`plan 1: masterplan`, the plan above `plan 17: Batch runs`, changed; it is quoted below. Bring `plan 17: Batch runs` in line with it
+(`pm plan edit 17 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 1: masterplan
+
+Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows. From batch-9 on, `base` is drafted in English with an international angle and translated to es, es-ES and de (milestone 9, "English-first drafting for `base`"). Human reviews still happen, but no run waits for them (`decision 414: Human reviews don''t gate question generation or translation`). 5000 was reached with batch-14; batch-15 is the last batch, then the exit check.
+
+**This masterplan''s own tasks are not implementation work.** Each one writes the plan for one part below (`pm plan add 1 …`). That plan''s tasks do the work.
+
+## Where we stand (2026-10-11, updated 2026-10-23)
+- 2026-10-11: approved `base` questions: 1035. By difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
+- 2026-10-23, after batch-14: batch-8 (last Spanish) and batch-9 to batch-14 (English-first) done; QC batch-13 done. Open: `task 1725: run batch-15`, `task 1726: QC batch-15`.
+- `qgen report --exit-check` (2026-10-23): ✓ approved `base` 5512 (developer: 5488 at batch-14) · ✗ difficulty 1: 248/250, the only gap · ✗ health of the last two batches · ✗ spot check batch-14 missing · ✓ `qgen validate`.
+- `qgen report` progress vs. targets (`--locale es`, the default) counts es-sourced only (2055); the milestone count is the exit check''s (source locale, each once).
+- Leftovers that belong here: PE-6, PE-13, MP-11 (batch comparisons), B-5 (dedupe misses rewordings), B-6 (high difficulties), QP-6 (media for every question), the `needs_work` questions (191).
+
+## 5000 reached (developer, 2026-10-23)
+- 5000 approved `base` reached with batch-14; **batch-15 is the last batch** of this milestone.
+- `task 1726: QC batch-15` adds the exit-check task, not `run batch-16` / `QC batch-16`.
+- Small per-difficulty gaps (e.g. difficulty 1: 243/250, now 248/250) don''t justify a full batch: a later batch aims at them (e.g. a release content run, plan 84, or milestone 9''s), or they are accepted. Either way they don''t hold the exit check.
+- Open health and spot-check decisions are the developer''s and don''t block the exit check (decision 414); it reads the answers given.
+- Implementation tasks of parts 2–5 still open after batch-15: done if cheap, else they move to the plan that owns the pipeline afterwards (milestone 9, plan 147); they don''t hold the exit check.
+
+## Reviews don''t gate generation (decision 414)
+- The developer trusts generation and translation; reviews still happen, but **no task waits on a review decision**.
+- Health ✗, spot checks and QC proposals: raised as pm decisions; never linked to a task (`pm task-pending-decision`), never a prerequisite.
+- Health ✗ never stops `qgen batch` (drafting or `--translate`): report and decision only; `qgen health ack` = the developer''s "looked at it". Partly supersedes `decision 13: Batch health thresholds and stop rule?` and `decision 313` (translation stop).
+- Answers are acted on afterwards, by whatever task runs next (QC report, change tasks), not by a task that waited.
+- The only human gate: the final release (`trivia-release-check`, release bar), the developer''s, not a pm task.
+- RUNBOOK, QC.md, plans 15–17 and open batch/QC tasks follow this.
+
+## English-first from batch-9
+- Owner: milestone 9, "English-first drafting for `base`": the drafting switch, the Spanish voices, the es-sourced questions'' en, de, es-ES entries. This milestone doesn''t build it; it runs batches with it.
+- No more Spanish `base` drafts.
+- Count for this milestone: approved `base` questions in their source locale, each question once (es-sourced up to batch-8, en-sourced from batch-9). The 5000 per question locale (en, es, es-ES, de; decision 21: Content target per player and language (OQ-32)?) is milestone 9''s.
+- What the switch means for the parts below:
+  - Part 2: difficulty calibration starts over for English drafts; each English batch''s target vs. rated vs. reviewed difficulty is checked like batch-7/8''s.
+  - Part 3: new subcategories and concept lists suit an international, English-drafted pool (no Spanish-speaking-world focus, no Anglo/US bias).
+  - Part 4: dedupe and overlap compare English drafts against the es-sourced pool too (across languages); health across the language change is noted, not read as drift.
+  - Part 5: audit and spot check run on the English text; the spot-check agreement of the English batches is watched closely.
+
+## Parts
+Parts 1–5 are built (plans 12–16); what''s left is part 6''s last batch and the exit check.
+
+1. **Targets and progress** (plan 12). Target count per difficulty, adding up to 5000 and tapering at the top (`decision 1: Target count per difficulty (1–15) for 5000 approved base questions?`); progress in `qgen report` and `/stats/difficulty`; the exit check `qgen report --exit-check` (`decision 2: When is batch quality "fine": human spot-check size and agreement rate with the LLM review?`). Its "every difficulty ≥ target" line may show a small gap; the exit-check task reads that per the section "5000 reached", not as a failure that needs a batch.
+2. **Aim batches at difficulty gaps (B-6)** (plan 13). `draft` weighted by what''s missing; target vs. rated vs. reviewed difficulty per batch. With batch-15 the last, batch-15 aims at the remaining gaps (difficulty 1).
+3. **More subcategories** (plan 14). Saturated subcategories, new ones through `decision 18: Which new base subcategories?`.
+4. **Duplicate and drift detection (B-5)** (plan 15). Overlap against the whole approved pool before merge; per-batch health in `authoring/reports/<batch>.md`; ✗ reported and raised, never a stop (decision 414). Absorbs PE-6, PE-13, MP-11.
+5. **Quality control after every batch** (plan 16). LLM audit, human spot check as a decision no task waits on, findings as change tasks run by whatever task comes next. The developer''s disagreement rate with the LLM review is the main "is quality fine" signal.
+6. **Batch runs** (plan 17). One `qgen batch` per task (RUNBOOK), each followed by part 5''s QC and `qgen rework` per `decision 3: How are needs_work questions (33 now, more per batch) resolved?`. **Every task that runs `qgen batch` has priority -100.** batch-15 is the last; `task 1726: QC batch-15` queues the exit check instead of batch-16. Media yield: `plan 146: Media yield`.
+
+## Done when
+- `qgen report --exit-check` shows ≥ 5000 approved `base` questions (source locale, each once); every difficulty at part 1''s target, or a small gap listed in the exit-check note as accepted or left to a later batch (section "5000 reached").
+- Health and spot checks: the exit check reads the last two batches'' health and the spot checks the developer has answered against decision 2''s rate; an open health or spot-check decision doesn''t block it (decision 414). Its ✗ lines go into the task note and, if new, a decision for the developer; no task waits on it.
+- `qgen validate` is clean; `trivia-media sync --status approved` has filled the cache.
+- The release gate after that (`trivia-release-check`, release bar) is the developer''s, not part of this milestone''s tasks.', '2026-10-23T13:23:15Z', NULL, 1727, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -50782,6 +50850,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1853, 1712, '2026-10-23T01:51:31Z', '2026-10-23T07:55:36Z', 'done', NULL, 0, 'd760884aaf1d00033c39e18cba620009b46341cd', 'questions', 'claude-sonnet-5-5', '66b3c6b4-5b55-41a5-9a32-01a32824c350', NULL, 11, 22, 2183, 425213, 34235, 0.24385659999999998, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1854, 1681, '2026-10-23T07:55:41Z', '2026-10-23T08:05:57Z', 'done', NULL, 0, '1900fb320c2a3fd63ff3a82a70e9d8381e3213b7', 'questions', 'claude-sonnet-5-5', '66b3c6b4-5b55-41a5-9a32-01a32824c350', 1853, 11, 20, 4807, 655014, 30124, 0.5434654, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1855, 1725, '2026-10-23T08:05:57Z', NULL, 'running', NULL, NULL, '247d6d109529cf1c8c499b879d89ca60df74afe1', 'questions', NULL, NULL, 1854, NULL, NULL, NULL, NULL, NULL, NULL, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1856, 1727, '2026-10-23T13:22:21Z', '2026-10-23T13:23:27Z', 'done', NULL, 0, 'f72a862ac8087274d1ca80d99f3bc2b9d130ab1e', NULL, 'claude-opus-5-5', 'd763d68d-6019-4e57-83e6-fb629c41be56', NULL, 9, 18, 6051, 365606, 54542, 0.6305492, 494342);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
