@@ -433,7 +433,8 @@
     {
       "name": "Ustedes",
       "facet": "Voseo, tuteo y ustedeo",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: El pool ya pregunta «ustedes» en lugar de «vosotros»; las opciones de origen/mapa no dan un dato nuevo con conexión colombiana."
     },
     {
       "name": "Vosotros",
@@ -468,7 +469,8 @@
     {
       "name": "Tuteo caribeño",
       "facet": "Voseo, tuteo y ustedeo",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: El pool ya tiene «Paisa es a vos como costeño es a… → tú» y una pregunta de intruso con ciudades; repetiría el dato."
     },
     {
       "name": "Ustedeo boyacense",
@@ -484,6 +486,58 @@
       "name": "Usted de cariño",
       "facet": "Voseo, tuteo y ustedeo",
       "known_at": 10
+    },
+    {
+      "name": "Chupa",
+      "facet": "Habla rola y bogotana",
+      "known_at": 11
+    },
+    {
+      "name": "Viringo",
+      "facet": "Habla caleña y vallecaucana",
+      "known_at": 10
+    },
+    {
+      "name": "Cotiza",
+      "facet": "Habla llanera y del Orinoco",
+      "known_at": 11
+    },
+    {
+      "name": "Arrunchar",
+      "facet": "Habla cundiboyacense",
+      "known_at": 8
+    },
+    {
+      "name": "Achira",
+      "facet": "Habla opita y tolimense",
+      "known_at": 9
+    },
+    {
+      "name": "Andá",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 7
+    },
+    {
+      "name": "Tenés",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 7
+    },
+    {
+      "name": "Sos",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 6
+    },
+    {
+      "name": "Querés",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 7
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-24",
+      "added": 9,
+      "unused": 35
     }
   ]
 }

@@ -204,7 +204,8 @@
     {
       "name": "Teresa Cornejo",
       "facet": "Heroínas de la independencia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: No tengo datos seguros sobre Teresa Cornejo para escribir una pregunta confiable."
     },
     {
       "name": "Carlota Armero",
@@ -396,7 +397,8 @@
     {
       "name": "Batalla de La Plata",
       "facet": "Reconquista y régimen del terror",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Batalla poco documentada; no hay foto fiable ni un dato numérico o de secuencia claro."
     },
     {
       "name": "Campaña Libertadora",
@@ -522,7 +524,8 @@
     {
       "name": "Batallón Albión",
       "facet": "Soldados, llaneros y legiones",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Unidad demasiado oscura y las opciones piden foto o datos poco seguros."
     },
     {
       "name": "Hermanos Almeyda",

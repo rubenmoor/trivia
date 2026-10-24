@@ -286,7 +286,8 @@
     {
       "name": "Escamoso",
       "facet": "Frases y dichos célebres",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: El significado de «escamoso» ya está en el pool"
     },
     {
       "name": "Lambón",
@@ -754,17 +755,20 @@
     {
       "name": "Bernardo Romero Pereiro",
       "facet": "Escritores y libretistas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: No estoy seguro de su fecha ni de su lugar de nacimiento"
     },
     {
       "name": "Carlos Duplat",
       "facet": "Escritores y libretistas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Libretista demasiado poco conocido y sin datos seguros"
     },
     {
       "name": "Martha Bossio",
       "facet": "Escritores y libretistas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Libretista demasiado poco conocida y sin datos seguros"
     },
     {
       "name": "Luis Felipe Salamanca",

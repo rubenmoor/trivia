@@ -111,7 +111,8 @@
     {
       "name": "Medalla de plata",
       "facet": "Primeras medallas e hitos históricos",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Las opciones de contar repiten datos del pool (puesto de la plata, conteos de medallas)."
     },
     {
       "name": "Medalla de bronce",
@@ -192,7 +193,8 @@
     {
       "name": "Barra olímpica",
       "facet": "Levantamiento de pesas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: El pool ya tiene una pregunta sobre la barra de Óscar Figueroa; las otras opciones son forzadas."
     },
     {
       "name": "Discos de pesas",
@@ -333,12 +335,14 @@
     {
       "name": "Salto largo",
       "facet": "Atletismo: saltos y carreras",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: Colombia no tiene medalla olímpica en salto largo."
     },
     {
       "name": "Salto alto",
       "facet": "Atletismo: saltos y carreras",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: Colombia no tiene medallista olímpico en salto alto; no hay pregunta colombiana justa."
     },
     {
       "name": "400 metros planos",
@@ -404,7 +408,8 @@
     {
       "name": "Lucha libre olímpica",
       "facet": "Boxeo, lucha y judo",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: El bronce de Jackeline Rentería en Pekín 2008 ya está en el pool; las opciones lo repetirían."
     },
     {
       "name": "Judo",
@@ -429,7 +434,8 @@
     {
       "name": "Cuadrilátero",
       "facet": "Boxeo, lucha y judo",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: El pool ya pregunta las esquinas del ring con Ingrit Valencia."
     },
     {
       "name": "Judogui",
@@ -485,12 +491,14 @@
     {
       "name": "Tiro con arco",
       "facet": "Tiro, gimnasia y otros deportes",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: Colombia no tiene medalla olímpica en tiro con arco; la pregunta de los 10 puntos ya existe."
     },
     {
       "name": "Gimnasia artística",
       "facet": "Tiro, gimnasia y otros deportes",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: La plata de Ángel Barajas ya está en el pool; cualquier pregunta se respondería con ella."
     },
     {
       "name": "Barra fija",
@@ -500,7 +508,8 @@
     {
       "name": "Taekwondo",
       "facet": "Tiro, gimnasia y otros deportes",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: Colombia no tiene medalla olímpica en taekwondo y la pregunta general ya existe."
     },
     {
       "name": "Dobok",
@@ -515,7 +524,8 @@
     {
       "name": "Patada giratoria",
       "facet": "Tiro, gimnasia y otros deportes",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: Colombia no tiene medalla olímpica en taekwondo; las opciones no encajan."
     },
     {
       "name": "Múnich 1972",

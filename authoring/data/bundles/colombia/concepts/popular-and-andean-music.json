@@ -191,7 +191,8 @@
     {
       "name": "José A. Morales",
       "facet": "Compositores clásicos andinos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: His birthplace and main songs are already used in the existing riddle; none of the options gives a new fair fact."
     },
     {
       "name": "Pedro Morales Pino",
@@ -222,7 +223,8 @@
     {
       "name": "Luis Uribe Bueno",
       "facet": "Compositores clásicos andinos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Too obscure, and I'm not sure of the facts."
     },
     {
       "name": "Carlos Vieco",
@@ -233,7 +235,8 @@
     {
       "name": "Jorge Añez",
       "facet": "Compositores clásicos andinos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Too obscure, and I'm not sure of the facts."
     },
     {
       "name": "Rafael Godoy",
@@ -263,7 +266,8 @@
     {
       "name": "Oriol Rangel",
       "facet": "Compositores clásicos andinos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Too obscure for these options, and I'm not sure of the facts."
     },
     {
       "name": "Gentil Montaña",
@@ -303,12 +307,14 @@
     {
       "name": "Wills y Escobar",
       "facet": "Duetos y voces de la música andina",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Too obscure for these word_meaning/made_of options."
     },
     {
       "name": "Elsa y Elvia",
       "facet": "Duetos y voces de la música andina",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Too obscure, and I'm not sure of its dates."
     },
     {
       "name": "Ana y Jaime",

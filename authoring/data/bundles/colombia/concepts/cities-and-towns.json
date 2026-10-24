@@ -12,7 +12,8 @@
     "Platos y productos típicos de cada ciudad",
     "Pueblos turísticos y de naturaleza",
     "Barrios, transporte y vida urbana",
-    "Ciudades en canciones, novelas y películas"
+    "Ciudades en canciones, novelas y películas",
+    "Ciudades del Pacífico colombiano"
   ],
   "axis_fit": {
     "move": {
@@ -362,6 +363,11 @@
       "name": "Medellín (canción)",
       "facet": "Ciudades en canciones, novelas y películas",
       "known_at": 10
+    },
+    {
+      "name": "Guatavita",
+      "facet": "Pueblos turísticos y de naturaleza",
+      "known_at": 8
     }
   ],
   "top_ups": [
@@ -369,6 +375,16 @@
       "date": "2026-10-23",
       "added": 0,
       "unused": 22
+    },
+    {
+      "date": "2026-10-24",
+      "added": 1,
+      "unused": 23
+    },
+    {
+      "date": "2026-10-24",
+      "added": 0,
+      "unused": 20
     }
   ]
 }

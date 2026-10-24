@@ -590,7 +590,8 @@
     {
       "name": "Grafiti",
       "facet": "Hip hop y rap colombiano",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Graffiti and Comuna 13 are already covered, and the time and place sequence options are forced."
     },
     {
       "name": "Freestyle",
@@ -822,7 +823,8 @@
     {
       "name": "Shakira, Shakira",
       "facet": "Videoclips, apodos y frases famosas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: Shakira and 'Hips Don't Lie' are already well covered, and the options don't fit the chant."
     },
     {
       "name": "No se habla de Bruno",

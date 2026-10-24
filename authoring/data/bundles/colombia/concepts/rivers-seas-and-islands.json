@@ -226,7 +226,8 @@
     {
       "name": "Río Quito",
       "facet": "Ríos del Pacífico y el Atrato",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: El río Quito es demasiado oscuro para estas opciones; el tema de la minería no da una pregunta clara para la familia."
     },
     {
       "name": "Río Timbiquí",
@@ -246,7 +247,8 @@
     {
       "name": "Istmo de San Pablo",
       "facet": "Ríos del Pacífico y el Atrato",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: El canal de La Raspadura y el istmo de San Pablo tienen datos inciertos y no encajan bien con ninguna opción."
     },
     {
       "name": "Mar Caribe",
