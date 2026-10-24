@@ -69,6 +69,7 @@ Done (pm plan 67, RV-24..RV-26). The developer and native speakers review `quest
 
   - Audit-agreement ✗ in en, de, es-ES (decision 45 threshold ≥ 90 %): mostly false "media missing" findings from `task 1492: Translation audit: media title missing in pm work trees` (6 en, 8 de; es-ES 12 media findings), not re-audited; `tr-es-1` ran after the fix. Their full runs already ran; no ack needed here.
 - [ ] QT-6 Full translation per question locale: `en`, `de`, `es`, `es-ES` (D-78, D-107); no native-speaker spot check (LLM review only, milestone 9); runs per pm plan 84. Later: `zh-Hans`, `ru`, `pt-BR` (milestone 12).
+  - QT-6 progress `en`: `tr-en-2` (2026-10-24) 291 translated, 282 approved (9 not travelling); 4498 in the `en` pool (incl. en-sourced), target not met; next `tr-en-3`.
   - QT-6 progress `de`: `tr-de-2` (2026-10-23) 297 translated, 290 approved; `qgen report --locale de`: 343 approved in `de`, target not met; next `tr-de-3`.
   - QT-6 progress `es-ES`: `tr-es-ES-2` (2026-10-23) 300 translated, 297 approved; 345 in the `es-ES` pool, target not met; next `tr-es-ES-3`.
   - QT-6 progress `es`: `tr-es-2` (2026-10-23) 300 translated, 296 approved; 2351 in the `es` pool (incl. es-sourced), target not met; next `tr-es-3`.
