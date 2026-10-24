@@ -275,12 +275,14 @@
     {
       "name": "Billete falso",
       "facet": "Seguridad y billetes falsos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Las preguntas sobre para qué sirve revisar un billete falso ya están en el pool; las otras opciones serían forzadas."
     },
     {
       "name": "Detector de billetes",
       "facet": "Seguridad y billetes falsos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: La pregunta de para qué sirve el detector de luz ultravioleta ya está en el pool, y las otras opciones no sirven."
     },
     {
       "name": "Billete chimbo",
@@ -451,7 +453,8 @@
     {
       "name": "Billete de 200 de Mutis",
       "facet": "Billetes y monedas que ya no circulan",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: El diseño del billete de Mutis es demasiado oscuro y no estoy seguro de los datos."
     },
     {
       "name": "Billete de 100 pesos",

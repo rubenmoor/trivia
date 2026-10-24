@@ -115,7 +115,8 @@
     {
       "name": "Mundial de Patinaje de Velocidad",
       "facet": "Patinaje y BMX",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The track-and-road events and Colombia's dominance are already given away by an existing question."
     },
     {
       "name": "Luz Karime Garzón",
@@ -195,7 +196,8 @@
     {
       "name": "Domingo Tibaduiza",
       "facet": "Atletismo colombiano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: I'm not confident of Domingo Tibaduiza's results and records."
     },
     {
       "name": "Natalia Linares",
@@ -205,7 +207,8 @@
     {
       "name": "Muriel Coneo",
       "facet": "Atletismo colombiano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: I'm not confident of enough facts about Muriel Coneo."
     },
     {
       "name": "Evelis Aguilar",
@@ -225,7 +228,8 @@
     {
       "name": "Lanzamiento de disco",
       "facet": "Atletismo colombiano",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Mauricio Ortega is already asked; the other options need no connection to Colombia."
     },
     {
       "name": "Media Maratón de Bogotá",
@@ -557,7 +561,8 @@
     {
       "name": "Amanda Coneo",
       "facet": "Béisbol, baloncesto y voleibol",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: I'm not confident of enough facts about Amanda Coneo."
     },
     {
       "name": "Voleibol playa",

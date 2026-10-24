@@ -372,7 +372,8 @@
     {
       "name": "Chupa chupa",
       "facet": "Anonáceas y frutas cremosas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Fruta amazónica muy poco conocida; ninguna opción de 'odd_one_out' da una pregunta justa y centrada en la chupa chupa."
     },
     {
       "name": "Atemoya",
@@ -554,7 +555,8 @@
     {
       "name": "Sal y limón",
       "facet": "Plaza de mercado y venta callejera",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: El dato central (mango biche con sal y limón) ya está en el pool; las opciones restantes serían relleno."
     },
     {
       "name": "Libra",

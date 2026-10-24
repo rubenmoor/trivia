@@ -43230,7 +43230,7 @@ Done when: QC steps done, decisions raised (not linked), rework staged, next pai
 - Stage exactly the printed `git add` paths; don''t commit.
 - Health ✗: raise `<run>: health ✗, look at it?` unless one exists; never `qgen health ack`; the task goes on.
 - Exit 75, other non-zero, or exit 1 three times at one step → `pm decision add "Continue <run> …?"`, `pm task-pending-decision`, stage nothing, stop.', '2026-10-23T23:32:58Z', '2026-10-24T01:21:24Z', 1739, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1742, 84, 'run colombia batch (batch-<n>)', 'work', 'open', NULL, NULL, 'Plan 84 chain 4, next es pair of the regional pilot `colombia` (`decision 110: Regional packs at launch (RG-5, OQ-46)`), added by `task 1741: QC colombia batch (batch-<n>)`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1742, 84, 'run colombia batch (batch-<n>)', 'work', 'done', NULL, '2026-10-24, run batch-21 (real name; tell QC), Done: batch-21: 177 merged, 169 approved, 8 needs work (took 9m37s). claude (final resume): 60 calls (0 failed, 0 retried), opus 60, 131 turns, 1.2M tokens (1.0M cache), $4.21, 12m08s in calls; earlier attempt stopped at factcheck: 83 calls, $21.82; one Bash timeout rerun. Report authoring/reports/batch-21.md. Health ✗ (drop rate, overlap rate, merged/slots 11-15, mean fun): decision raised, not a stop.', 'Plan 84 chain 4, next es pair of the regional pilot `colombia` (`decision 110: Regional packs at launch (RG-5, OQ-46)`), added by `task 1741: QC colombia batch (batch-<n>)`.
 
 ## Run
 - `nix develop -c qgen batch --bundle colombia` (`authoring/RUNBOOK.md` steps 1–5; Colombian Spanish). No other pipeline steps by hand. Run name: whatever `qgen` prints (`batch-<max+1>`); it can''t be renamed while the task runs, so note the real name in the done note and say it in the QC task''s note.
@@ -43242,7 +43242,7 @@ Done when its report exists, the printed `git add` paths are staged, note as abo
 - D-36: no prompt, pool, media or `qgen.py` changes; findings become decisions or tasks in their own plans.
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the printed `git add` paths; don''t commit.
 - Health ✗: `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health ✗, look at it?"` with the warning verbatim, no task linked; the task goes on. Never `qgen health ack`.
-- Exit 75, other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines, `pm task-pending-decision <this task> <id>`, stage nothing, stop. A Bash timeout isn''t a failure: rerun (resumes).', '2026-10-24T01:21:23Z', NULL, 1741, 0, NULL, 'questions');
+- Exit 75, other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines, `pm task-pending-decision <this task> <id>`, stage nothing, stop. A Bash timeout isn''t a failure: rerun (resumes).', '2026-10-24T01:21:23Z', '2026-10-24T03:06:58Z', 1741, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1743, 84, 'QC colombia batch (batch-<n>)', 'work', 'open', NULL, NULL, 'Plan 84 chain 4: QC of colombia''s next batch (the run task just before it in the chain). Drafted-run QC shape, `authoring/QC.md` steps 1–4 without waits (`decision 414: Human reviews don''t gate question generation or translation`). Owners: `plans/15c-regional-questions.md`, `plans/16-content-target.md`. The run''s real name is in the run task''s note (`batch-<n>`).
 
 ## First: answered review decisions of earlier colombia batches
@@ -49319,6 +49319,63 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
      M app/data/demo/pool.json
 
 Look: `git show pm/task-1741-run-1878-left`. Keep: `git merge pm/task-1741-run-1878-left`. Then `git branch -D pm/task-1741-run-1878-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', 'kept via merge of pm/task-1741-run-1878-left: stale demo pool after tr-es-2', NULL, '2026-10-24T01:21:30Z', '2026-10-24T02:51:39Z', NULL, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (445, 'batch-21: health ✗, look at it?', 'pending', '["Looked at it, no change", "Ack and change something (name it)"]', '| metric | threshold | batch-19 | batch-20 | batch-21 |
+|---|---|---:|---:|---:|
+| source locale |  | es | es | es |
+| drafts |  | 261 | 266 | 266 |
+| skipped slots |  | 225 | 220 | 220 |
+| dropped |  | 84 | 79 | 89 |
+| drop rate | ≤ 20.0 % | 32.2 % ✗ | 29.7 % ✗ | 33.5 % ✗ |
+| dropped: hard fail correct |  | 2 | 3 | 0 |
+| dropped: hard fail unambiguous |  | 1 | 2 | 1 |
+| dropped: hard fail no_giveaway |  | 15 | 13 | 20 |
+| dropped: overlap |  | 66 | 63 | 67 |
+| dropped: duplicate |  | 0 | 0 | 2 |
+| dropped: fact-check wrong |  | 0 | 0 | 0 |
+| merged |  | 177 | 187 | 177 |
+| approved |  | 157 | 170 | 169 |
+| needs_work |  | 20 | 17 | 8 |
+| needs_work rate | ≤ 20.0 % | 11.3 % ✓ | 9.1 % ✓ | 4.5 % ✓ |
+| needs_work: giveaway | ≤ 10.0 % | 4.0 % ✓ | 2.7 % ✓ | 0.0 % ✓ |
+| needs_work: fact | ≤ 10.0 % | 1.1 % ✓ | 0.0 % ✓ | 0.6 % ✓ |
+| needs_work: ambiguity | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| needs_work: overlap | ≤ 1.0 % | 1.7 % ✗ | 1.6 % ✗ | 0.6 % ✓ |
+| needs_work: media | ≤ 10.0 % | 5.1 % ✓ | 5.3 % ✓ | 3.4 % ✓ |
+| media: no pick in review 1 |  | 31 | 33 | 26 |
+| media: recovered by research |  | 23 | 23 | 22 |
+| media: no pick at record |  | 8 | 10 | 4 |
+| needs_work: difficulty | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| needs_work: style | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| needs_work: other | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| problems guessed |  | no | no | no |
+| overlap rate | ≤ 20.0 % | 26.4 % ✗ | 24.8 % ✗ | 26.3 % ✗ |
+| merged/slots 11–15 | ≥ 55.0 % | 32.8 % ✗ | 48.0 % ✗ | 34.7 % ✗ |
+| max final−target gap 11–15 | ≤ 1.50 | 1.13 ✓ | 1.50 ✓ | 1.43 ✓ |
+| approved 11–15 |  | 27 | 51 | 28 |
+| top move | ≤ 25.0 % | 16.4 % ✓ | 13.4 % ✓ | 13.0 % ✓ |
+| values move |  | 15 | 15 | 14 |
+| top stimulus |  | 80.2 % | 88.8 % | 84.7 % |
+| values stimulus |  | 5 | 4 | 4 |
+| top clue | ≤ 60.0 % | 44.1 % ✓ | 41.7 % ✓ | 39.0 % ✓ |
+| values clue |  | 5 | 5 | 5 |
+| top answer_kind | ≤ 40.0 % | 24.9 % ✓ | 25.7 % ✓ | 20.3 % ✓ |
+| values answer_kind |  | 7 | 7 | 7 |
+| top lens | ≤ 25.0 % | 27.7 % ✗ | 23.5 % ✓ | 23.7 % ✓ |
+| values lens |  | 12 | 11 | 12 |
+| media share | 15.0 %–50.0 % | 19.8 % ✓ | 11.2 % ✗ | 15.3 % ✓ |
+| mean fun | ≥ 3.40 | 3.33 ✗ | 3.38 ✗ | 3.38 ✗ |
+| cost $ |  | $53.84 | $58.01 | $56.01 |
+| $ per approved | ≤ $0.35 | $0.34 ✓ | $0.34 ✓ | $0.33 ✓ |
+| calls |  | 382 | 395 | 375 |
+| calls per approved |  | 2.43 | 2.32 | 2.22 |
+| wall time h |  | 1.49 | 1.71 | 1.65 |
+| days |  | 1 | 1 | n/a |
+| **health** | | ✗ fail | ✗ fail | ✗ fail |', 'A new batch of Colombian-Spanish trivia questions was written, and several quality measures fell outside the limits we set, such as too many drafts dropped and slightly low fun ratings. The batch was kept and generation continues; the question is whether the developer wants to look at the numbers and act on them.', NULL, NULL, '2026-10-24T03:06:58Z', NULL, 1742, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (446, 'Task 1742 left unstaged changes after `pm task done`: investigate', 'pending', '[]', 'Run 1879 of task 1742 closed the task but left 1 file unstaged. pm committed them on the branch `pm/task-1742-run-1879-left` and cleaned the tree.
+
+     M app/data/demo/pool.json
+
+Look: `git show pm/task-1742-run-1879-left`. Keep: `git merge pm/task-1742-run-1879-left`. Then `git branch -D pm/task-1742-run-1879-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', NULL, NULL, '2026-10-24T03:07:04Z', NULL, NULL, NULL, 'once', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -51253,7 +51310,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1876, 1739, '2026-10-23T23:26:47Z', '2026-10-23T23:33:07Z', 'done', 'left 1 file unstaged, committed on branch pm/task-1739-run-1876-left; decision 440: investigate', 0, '6f420f1faeae5efb6a37f6a79d3d5726efabd93f', 'questions', 'claude-sonnet-5-5', '5e886eda-3dc0-492a-95e8-d62316cbe648', 1875, 7, 14, 2074, 685325, 19586, 0.78643420000000008, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1877, 1740, '2026-10-23T23:33:07Z', '2026-10-24T01:16:12Z', 'done', 'left 1 file unstaged, committed on branch pm/task-1740-run-1877-left; decision 442: investigate', 0, 'a1bb2c455b888ee3595b554a83b3d76294e7d9d7', 'questions', 'claude-sonnet-5-5', '460a12b9-1360-4238-8900-b9e0e7c34327', NULL, 8, 14, 1981, 319700, 44470, 0.261658, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1878, 1741, '2026-10-24T01:16:18Z', '2026-10-24T01:21:30Z', 'done', 'left 1 file unstaged, committed on branch pm/task-1741-run-1878-left; decision 444: investigate', 0, 'd225c5e7339ffc15d5de0d50648604dca7596e37', 'questions', 'claude-sonnet-5-5', '460a12b9-1360-4238-8900-b9e0e7c34327', 1877, 8, 16, 4507, 629921, 35298, 0.5739362, 494342);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1879, 1742, '2026-10-24T01:21:31Z', NULL, 'running', NULL, NULL, '1c99bf48311d99851afa95afb7039097442e4b7c', 'questions', NULL, NULL, 1878, NULL, NULL, NULL, NULL, NULL, NULL, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1879, 1742, '2026-10-24T01:21:31Z', '2026-10-24T03:07:03Z', 'done', 'left 1 file unstaged, committed on branch pm/task-1742-run-1879-left; decision 446: investigate', 0, '1c99bf48311d99851afa95afb7039097442e4b7c', 'questions', 'claude-sonnet-5-5', '460a12b9-1360-4238-8900-b9e0e7c34327', 1878, 6, 12, 1554, 633362, 19050, 0.7923726, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1880, 1744, '2026-10-24T02:51:43Z', '2026-10-24T02:52:01Z', 'done', NULL, 0, '06c44bd5578459767f15600187c6b4349972cc47', NULL, 'claude-sonnet-5-5', '9b82d216-5af3-4862-86b7-eaaa0098bfdf', NULL, 7, 14, 1914, 207133, 24380, 0.1581146, 494342);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
