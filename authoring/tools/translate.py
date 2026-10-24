@@ -387,7 +387,7 @@ def cmd_translate_batch(args):
     print(f"\nDone: {run}: {h['translated']} translated, {h['approved']} approved, {h['needs_work']} need work, "
           f"{h['not travelling']} not travelling ({h['not travelling confirmed']} confirmed) "
           f"(took {progress.duration(time.monotonic() - t0)}).")
-    files = [translations.path(locale), layout.POOL_FILE(locale, bundle), layout.BUNDLE_DATA, out]
+    files = [translations.path(locale), layout.POOL_FILE(locale, bundle), layout.BUNDLE_DATA, layout.DEMO_DATA, out]
     if h["not travelling confirmed"]:
         files.insert(1, POOL)
     print("Commit exactly this:\n  git add " + " ".join(f.relative_to(ROOT).as_posix() for f in files) + "\n"

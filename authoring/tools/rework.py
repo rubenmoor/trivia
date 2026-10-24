@@ -59,7 +59,7 @@ def cmd_rework(args):
     print(f"\nDone: {run}: {n_ok} of {len(qs)} approved, {len(qs) - n_ok} still need work "
           f"(took {progress.duration(time.monotonic() - t0)}).")
     by_id = {q["id"]: q for q in load_json(POOL)["questions"]}
-    files = ["authoring/data/questions.json", "app/data/pool.json", "app/data/bundles/", *stale_lines(set(cfg["ids"]), by_id)]
+    files = ["authoring/data/questions.json", "app/data/pool.json", "app/data/bundles/", "app/data/demo/", *stale_lines(set(cfg["ids"]), by_id)]
     print(f"Commit exactly this:\n  git add {' '.join(files)}\n"
           f"  git commit -m \"{run}: {n_ok} of {len(qs)} needs_work questions fixed and approved (qgen rework)\"")
 
@@ -138,7 +138,7 @@ def cmd_tighten(args):
     n_ok = sum(by_id[i]["status"] == "approved" for i in revised if i in by_id)
     print(f"\nDone: {run}: {len(cfg.get('ids', []))} flagged, {len(revised)} shortened, {n_ok} of those approved, "
           f"{len(revised) - n_ok} need work (took {progress.duration(time.monotonic() - t0)}).")
-    files = ["authoring/data/questions.json", "app/data/pool.json", "app/data/bundles/", *stale_lines(revised, by_id)]
+    files = ["authoring/data/questions.json", "app/data/pool.json", "app/data/bundles/", "app/data/demo/", *stale_lines(revised, by_id)]
     print(f"Commit exactly this:\n  git add {' '.join(files)}\n"
           f"  git commit -m \"{run}: {len(revised)} long-winded questions shortened, {n_ok} approved (qgen tighten)\"")
 
@@ -198,7 +198,7 @@ def cmd_neutralize(args):
     out = write_neutralize_report(run, revised)
     print(f"\nDone: {run}: {len(cfg['ids'])} flagged, {len(revised)} reworded, {n_ok} of those approved, "
           f"{len(revised) - n_ok} need work (took {progress.duration(time.monotonic() - t0)}).")
-    files = ["authoring/data/questions.json", "app/data/pool.json", "app/data/bundles/", out.relative_to(ROOT).as_posix(),
+    files = ["authoring/data/questions.json", "app/data/pool.json", "app/data/bundles/", "app/data/demo/", out.relative_to(ROOT).as_posix(),
              *stale_lines(revised, by_id)]
     print(f"Commit exactly this:\n  git add {' '.join(files)}\n"
           f"  git commit -m \"{run}: {len(revised)} base questions reworded into neutral Spanish, {n_ok} approved (qgen neutralize)\"")
