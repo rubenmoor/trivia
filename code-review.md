@@ -2130,6 +2130,16 @@ Post-milestone cleanup of milestone 7 (Steam S2: product definition), per `decis
 | `app/client/src/game/screens/Question.svelte`, `question/FinalAnswer.svelte`, `question/Answers.svelte`, `screens/Revealed.svelte`, `screens/Choice.svelte`, `GameSettings.svelte`, `Overlay.svelte` | no findings: picks, pad glyphs and letter keys off with answers off; Enter/A/click reveal; switch rows like video/audio | — | — | — |
 | `authoring/tools/providers/__init__.py` | no findings: Freesound out of `ORDER["audio"]` (D-103); module kept, as plan 23 says | — | — | — |
 
+## Milestone 1 review (task 1758)
+
+Post-milestone cleanup of milestone 1 (Enough content for game nights), per `decision 201: Recurring code review: who reviews new code after milestone 13? (code review part 11)`. Most of its commits are batch runs, QC reports and pool data; its code is the batch-health and exit-check tooling (plans 12, 15, 16, 190), read here in its current state against milestone 13's "What to look for". `qgen.py` was split and reviewed by its own tasks and is not re-read.
+
+| file | finding | category | severity | status |
+|---|---|---|---|---|
+| `authoring/tools/health.py` (`batch_health`, `recorded`, `failures`, `unacked_failure`) | no findings: an ack doesn't change `failures` (exit check reads the raw result), the unacked warning never stops a run (decision 414), `first` is falsy for no earlier batch, `ruff` clean | — | — | — |
+| `authoring/tools/report.py` (`exit_check`, `report_exit_check`) | no findings: the last two done runs are taken per bundle, so the colombia batches (batch-16 on) don't enter the `base` check; missing data counts as ✗ | — | — | — |
+| `README.md` | status block still said ~2,140 approved and that question translations weren't shipped; now the counts, English-first drafting and the running translations | inconsistency | low | fixed (task 1758) |
+
 ## Inventory
 
 Every `git ls-files` path in scope, mapped to the one part that reviews it (2026-10-13, 174 files; produced by a throw-away script that reported no unassigned file). Files added later are added here by the part that reviews them.

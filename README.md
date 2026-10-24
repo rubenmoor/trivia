@@ -8,11 +8,11 @@ Everything runs locally and offline: the game (a Svelte client with the game eng
 
 **The family game is done** (October 2026): a full game night on the TV with sound, jokers and the final look, played by player name without touching code.
 
-- **Questions:** about 2,140 approved (base ~2,040, «Regional: Colombia» ~100) on the shared difficulty scale 1–15 (D-38), with images, audio or video; more batches are being made.
+- **Questions:** about 8,200 approved (base ~6,170, «Regional: Colombia» ~2,010, a few more) on the shared difficulty scale 1–15 (D-38), with images, audio or video. Milestone 1 reached its 5000 `base` target; `base` has been drafted in English since batch-9, then translated to es, es-ES and de (translation runs are still going). Current counts: `qgen report`.
 - **Age groups and bundles:** before each game the Mode screens pick the mode and the Choice screen sets an age group (or a custom difficulty range in gamemaster mode), then the Bundles screen toggles any combination of bundles, base and regional (start needs at least one question); the game offers only the bundles of its language (milestone 5).
 - **Modes:** gamemaster mode (configure screen, Esc menu cheats; «Responder para avanzar» off: the padlock only reveals the answer, no win or loss) and «Solo o en grupo» (standard jokers, no skips); the three multiplayer modes are specified, not built (D-74, D-77, D-80, D-105; [`plans/13-game-modes.md`](plans/13-game-modes.md)).
 - **Engine:** the referee runs in the browser (TypeScript, `app/client/src/engine/`); the Python server only serves files and the save (D-90).
-- **UI:** every on-screen string comes from a catalog (`es`, `es-ES`, `en`, `de`); one language setting for UI and questions, picked at first start; question translations aren't shipped yet, so every language plays the Spanish questions.
+- **UI:** every on-screen string comes from a catalog (`es`, `es-ES`, `en`, `de`); one language setting for UI and questions, picked at first start; question translations (en, es-ES, de) are still being filled in, so which questions a language plays depends on how far its translation has got.
 - **Code quality:** reviewed file by file (milestone 13, [`code-review.md`](code-review.md)); `npm run check` now also runs knip and ruff.
 - **Next:** more content, screen polish, and the Steam release track (desktop build, store, release).
 
