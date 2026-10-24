@@ -71,7 +71,8 @@
     {
       "name": "Odontoglossum",
       "facet": "Orquídeas y la flor nacional",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Es un género botánico de especialistas; el 'cuál no es' no deja el concepto en el centro."
     },
     {
       "name": "Miltoniopsis",
@@ -213,7 +214,8 @@
     {
       "name": "Pompón",
       "facet": "Flores de exportación y cultivo de flores",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: La pregunta del crisantemo que ya está en el pool usa el nombre de cultivo 'pompón'."
     },
     {
       "name": "Astromelia",
@@ -314,7 +316,8 @@
     {
       "name": "Trova antioqueña",
       "facet": "Feria de las Flores y silleteros",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: El origen (Antioquia/Medellín) ya se puede responder con la pregunta sobre la trova en la Feria de las Flores; las demás opciones no encajan."
     },
     {
       "name": "Agosto",
@@ -330,7 +333,8 @@
     {
       "name": "Festival de Orquídeas, Pájaros y Flores",
       "facet": "Feria de las Flores y silleteros",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Las opciones piden personas; es un evento poco conocido y no da una pregunta justa."
     },
     {
       "name": "Variedad Castillo",

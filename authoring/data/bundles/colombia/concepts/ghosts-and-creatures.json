@@ -304,7 +304,8 @@
     {
       "name": "Señal de la cruz",
       "facet": "Contras, rezos y agüeros contra espantos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: La pregunta que ya existe sobre persignarse antes de un penal deja ver para qué sirve el gesto; las opciones de conteo no tienen una sola respuesta clara."
     },
     {
       "name": "Canto de la lechuza",
@@ -435,7 +436,8 @@
     {
       "name": "Andar como alma en pena",
       "facet": "Palabras y dichos de espantos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: La frase ya se preguntó como completar el dicho; ninguna opción da un dato nuevo."
     },
     {
       "name": "Hablando del rey de Roma",

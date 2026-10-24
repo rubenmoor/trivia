@@ -363,5 +363,12 @@
       "facet": "Ciudades en canciones, novelas y películas",
       "known_at": 10
     }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-23",
+      "added": 0,
+      "unused": 22
+    }
   ]
 }

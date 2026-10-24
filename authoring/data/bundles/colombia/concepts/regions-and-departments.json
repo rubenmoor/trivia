@@ -296,7 +296,8 @@
     {
       "name": "Puerto Carreño",
       "facet": "Orinoquía y Llanos Orientales",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: I'm not sure where the name comes from, and the other options are obscure."
     },
     {
       "name": "Hato llanero",
@@ -366,7 +367,8 @@
     {
       "name": "Isla de los Micos",
       "facet": "Amazonía y sus departamentos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Too little known to ask about as a year or a map."
     },
     {
       "name": "Pueblo ticuna",
@@ -376,7 +378,8 @@
     {
       "name": "Tres Fronteras",
       "facet": "Amazonía y sus departamentos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The pool already says Leticia lies on the border with Brazil and Peru, and the options give no other good fact."
     },
     {
       "name": "Santa Catalina",
@@ -471,12 +474,14 @@
     {
       "name": "Feria de las Flores",
       "facet": "Fiestas, música y costumbres regionales",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The pool already covers the silleteros, the flowers and the month of the fair."
     },
     {
       "name": "Feria de Cali",
       "facet": "Fiestas, música y costumbres regionales",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The pool already covers the Feria de Cali: its city, month and cabalgata."
     },
     {
       "name": "Marimba de chonta",

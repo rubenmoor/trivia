@@ -252,7 +252,8 @@
     {
       "name": "Jagüey",
       "facet": "Desiertos y zonas áridas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: El pool ya tiene la pregunta del jagüey (pozo wayuu de agua de lluvia); las opciones restantes son forzadas."
     },
     {
       "name": "Salinas de Manaure",

@@ -121,7 +121,8 @@
     {
       "name": "Puya vallenata",
       "facet": "Vallenato y sus juglares",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The puya is already asked; the options give a forced question"
     },
     {
       "name": "Emiliano Zuleta",
