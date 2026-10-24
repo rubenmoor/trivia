@@ -43505,7 +43505,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Fix `option_key`/`norm` so numeric options with signs/units stay distinct (or make the translate prompt keep them), then check: `qgen batch --translate es-ES` resumes past `translate`.
 - Last output (claude: lines): 238 calls $6.89 in the first run, then 1 call $0.02, 1 call $0.01 on retries.', '2026-10-24T14:23:26Z', '2026-10-24T14:24:03Z', 1732, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1761, 84, 'Finish tr-es-ES-3 after task 1760', 'work', 'done', -99, '2026-10-24, Done: tr-es-ES-3: 300 translated, 296 approved, 4 need work, 0 not travelling (33m47s); report authoring/reports/tr-es-ES-3.md; health pass, audit agreement 98.3 %, $0.09 per approved ($28.37 list); 641 in es-ES pool; claude: 605 calls $21.44 (resume); 15b QT-6 line; next tr-es-ES-4', 'Follow RUNBOOK; plain `nix develop -c qgen batch --translate es-ES` resumes `tr-es-ES-3` (translate step had 237/238 chunks done). Then the "After the run" section of `task 1732: run tr-es-ES-3` (note, 15b QT-6 line, next run `run tr-es-ES-4` or none). Task 1732 stopped at `translate` (see fix task).', '2026-10-24T14:23:26Z', '2026-10-24T14:58:19Z', 1732, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1762, 84, 'run tr-es-ES-4', 'work', 'open', -110, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-es-ES-4`, up to 300 approved `base` sources of either source locale ≠ `es-ES` into Spain''s Spanish (`decision 235: Source locale per question and translations from either source (English-first base)`). One task, no QC task; it adds the next run.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1762, 84, 'run tr-es-ES-4', 'work', 'done', -110, '2026-10-24, tr-es-ES-4: 299 translated, 295 approved, 4 need work, 1 not travelling; $29.05 run, $0.09 per approved; audit agreement 98.3%, health pass; report authoring/reports/tr-es-ES-4.md; plans/15b; added run tr-es-ES-5', 'Plan 84 chain 3, full translation (QT-6): run `tr-es-ES-4`, up to 300 approved `base` sources of either source locale ≠ `es-ES` into Spain''s Spanish (`decision 235: Source locale per question and translations from either source (English-first base)`). One task, no QC task; it adds the next run.
 
 ## Before running
 - Plan 17''s exit check done; if not, wait for what blocks plan 17''s earliest open task (pending decision → `pm task-pending-decision`; prerequisite task → `pm task requires`; stop). Never wait on a review (decision 414).
@@ -43522,8 +43522,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## pm-run rules
 - D-36: no prompt, pool, media or `qgen.py` changes. `tasks.sql` alone isn''t a dirty tree. Stage exactly the printed `git add` paths; don''t commit.
-- Exit 75, other non-zero code: `pm decision add "Continue tr-es-ES-4 …?"` with the last 30 lines, `pm task-pending-decision`, stage nothing, stop. Exit 1 three times at one step: per RUNBOOK (fix task + resume task, no decision).', '2026-10-24T14:58:18Z', NULL, 1761, 0, NULL, 'questions');
+- Exit 75, other non-zero code: `pm decision add "Continue tr-es-ES-4 …?"` with the last 30 lines, `pm task-pending-decision`, stage nothing, stop. Exit 1 three times at one step: per RUNBOOK (fix task + resume task, no decision).', '2026-10-24T14:58:18Z', '2026-10-24T17:14:59Z', 1761, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1763, 84, 'run tr-es-4', 'work', 'open', -110, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-es-4`, up to 300 approved `base` sources of either source locale ≠ `es` into Latin American Spanish (`qgen batch --translate es`, RUNBOOK steps 1-5; plan 17''s exit check task 1757 is done). Same shape as `task 1733: run tr-es-3`: after the run note the "Done:" line, report `authoring/reports/tr-es-4.md`, numbers and `qgen report --cost`; add a QT-6 progress line for `es` in `plans/15b-question-translation.md`; if `qgen report --locale es` meets `targets.json` `base` no next run (all four locales done: QT-6 `[x]`, record the four reports in `plans/16-content-target.md`); else add `run tr-es-5` (`pm task add 84 "run tr-es-5" --worktree questions --priority -110`). Health ✗: `pm decision list --grep "tr-es-4: health"`, none → `pm decision add "tr-es-4: health ✗, look at it?"`, never `qgen health ack`. No spot check, no QC. D-36: no prompt/pool/media/qgen.py changes; stage exactly the printed `git add` paths, don''t commit. Exit 75, other non-zero or exit 1 three times: decision "Continue tr-es-4 …?" with the last 30 lines, `pm task-pending-decision`, stop.', '2026-10-24T15:47:54Z', NULL, 1733, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1764, 84, 'run tr-es-ES-5', 'work', 'open', -110, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-es-ES-5`, up to 300 approved `base` sources of either source locale ≠ `es-ES` into Spain''s Spanish. One task, no QC task; it adds the next run.
+
+Same shape as `task 1762: run tr-es-ES-4`: plan 17 exit check (done; else wait for what blocks it, never a review), `nix develop -c qgen batch --translate es-ES` (RUNBOOK steps 1-5), note the "Done:" line, report path, numbers from `authoring/reports/tr-es-ES-5.md` and `qgen report --cost`, add the QT-6 progress line for `es-ES` in `plans/15b-question-translation.md`, then: target met (`qgen report --locale es-ES`) → no next run (all four locales done: QT-6 `[x]`, record the four reports in `plans/16-content-target.md`); fewer than 300 selected → add `run tr-es-ES-6` starting only after a plan 17 batch QC done since this run; else add `run tr-es-ES-6`. Health ✗: `pm decision list --grep "tr-es-ES-5: health"`, none → `pm decision add`, no task link; never `qgen health ack`. D-36: no prompt/pool/media/qgen.py changes; stage the printed `git add` paths, don''t commit; exit 75 / other non-zero → decision + `pm task-pending-decision`, stage nothing.', '2026-10-24T17:14:59Z', NULL, 1762, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -49658,6 +49661,41 @@ authoring/data/questions.en.json: q-0397: source is rejected or translatable: fa
 Worktree has unstaged tr-de-3 changes (questions.de.json, questions.json, pools); nothing staged.
 
 claude: line of the last full run: 856 calls (0 failed, 0 retried), opus 771 / sonnet 85, 1737 turns, 10.5M tokens, $31.52, 2h35m in calls (reruns: no calls).', 'A batch of German translations finished its work but the final consistency check refuses it. One question was found not to translate well after it already had an English version, and the check wants that English version rejected. Either the tool is fixed to reject such leftovers itself, or the developer rejects it by hand, and then the run is finished.', NULL, NULL, '2026-10-24T14:09:26Z', NULL, 1731, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (461, 'tr-en-3: qgen validate fails after the export step', 'pending', '["Reject the es-ES translation of q-1201, then resume tr-en-3", "Fix qgen validate/translate so such a case is handled automatically"]', 'tr-en-3: qgen batch --translate en exits 1 at step 11/11 validate three times in a row (the translation work itself finished: 679 calls, 9.3M tokens, $30.65, first attempt).
+
+
+== [8/11] record
+   record took 0s (batch: 5s)
+
+== [9/11] audit
+  audit: all done earlier, skipped (60 questions)
+   audit took 0s (batch: 5s)
+
+== [10/11] export
+exported 2649 es question(s) to app/data/pool.json
+exported 2014 es question(s) to app/data/bundles/colombia/pool.json
+exported 5 es question(s) to app/data/bundles/mexico/pool.json
+  es translations: 0 stale, 0 left out (source not approved or not translatable)
+exported 640 es-ES question(s) to app/data/pool.es-ES.json
+exported 5 es-ES question(s) to app/data/bundles/spain/pool.es-ES.json
+  es-ES translations: 0 stale, 3 left out (source not approved or not translatable)
+exported 4790 en question(s) to app/data/pool.en.json
+  en translations: 0 stale, 0 left out (source not approved or not translatable)
+exported 343 de question(s) to app/data/pool.de.json
+  de translations: 0 stale, 0 left out (source not approved or not translatable)
+exported 138 demo question(s) to app/data/demo/pool.json
+exported 137 demo question(s) to app/data/demo/pool.es-ES.json
+exported 138 demo question(s) to app/data/demo/pool.en.json
+exported 124 demo question(s) to app/data/demo/pool.de.json
+   export took 0s (batch: 6s)
+
+== [11/11] validate
+authoring/data/questions.es-ES.json: q-1201: source is rejected or translatable: false; reject the translation
+
+`qgen validate` failed. Stop and report the output.
+
+First-attempt claude line: claude: 679 calls (0 failed, 0 retried), opus 600 / sonnet 79, 1373 turns, 9.3M tokens (8.6M cache), $30.65, 2h00m in calls
+Cause: authoring/data/questions.es-ES.json q-1201 is an es-ES translation whose source is rejected or translatable:false; it must be rejected (pool/data edit, not a worker''s).', 'A batch of question translations into English finished its work but the final consistency check fails, because one Spanish (Spain) translation belongs to a question that has since been rejected or marked untranslatable. Until that translation is rejected, the batch cannot be wrapped up and its results cannot be saved. The developer chooses how to clear it.', NULL, NULL, '2026-10-24T16:30:13Z', NULL, 1759, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -51620,6 +51658,8 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1904, 1760, '2026-10-24T14:23:32Z', '2026-10-24T14:24:07Z', 'done', NULL, 0, '968f36aa1f0d8e1a23f1275ed316bdb15204791c', 'questions', 'claude-sonnet-5-5', '536fb40d-bcd2-432e-90e9-67805a8b3a12', 1903, 11, 22, 2320, 826137, 21487, 0.60167780000000015, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1905, 1761, '2026-10-24T14:24:08Z', '2026-10-24T14:58:23Z', 'done', NULL, 0, '320d8ea54b093d3dfdd303d2bde9333bc2e4b618', 'questions', 'claude-sonnet-5-5', '536fb40d-bcd2-432e-90e9-67805a8b3a12', 1904, 4, 8, 2378, 371103, 22419, 0.78937040000000014, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1906, 1733, '2026-10-24T14:58:23Z', '2026-10-24T15:47:59Z', 'done', NULL, 0, '9b5c8e19b6382f7daee49add4a1969249b36f2e3', 'questions', 'claude-sonnet-5-5', 'f842e91e-aa2d-4017-8a99-7d978b25afc4', NULL, 6, 12, 1947, 266340, 46803, 0.259974, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1907, 1759, '2026-10-24T15:47:59Z', '2026-10-24T16:30:18Z', 'blocked', 'left 5 files unstaged, stashed as f8ef637e for the task''s next run', 0, '99e89473a9e4bb466de0054a557f8adf13dd7042', 'questions', 'claude-sonnet-5-5', 'f842e91e-aa2d-4017-8a99-7d978b25afc4', 1906, 6, 12, 1933, 436486, 19123, 0.4431172, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1908, 1762, '2026-10-24T16:30:19Z', '2026-10-24T17:15:03Z', 'done', NULL, 0, '99e89473a9e4bb466de0054a557f8adf13dd7042', 'questions', 'claude-sonnet-5-5', '1810261d-7748-4544-82a3-b8bc5a9a6898', NULL, 7, 12, 1973, 282569, 49414, 0.27392380000000005, 494342);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -52306,6 +52346,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1711, 64);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1711, 65);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1731, 460);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1755, 458);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1759, 461);
 
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (639, 1726);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1034, 1033);

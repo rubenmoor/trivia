@@ -89511,7 +89511,8 @@
           "description": "La frase oficial de todo tío que logra parquear en un hueco imposible."
         },
         "revised_on": "2026-10-15"
-      }
+      },
+      "translatable": false
     },
     {
       "id": "q-1167",
