@@ -307,7 +307,8 @@
     {
       "name": "Gerente del Banco de la República",
       "facet": "Banco de la República y emisión",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: The current manager changes; for these players there's no stable, fair fact to ask"
     },
     {
       "name": "Inflación",

@@ -708,7 +708,8 @@
     {
       "name": "Carijona",
       "facet": "Lenguas en riesgo y su rescate",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: No hay datos fiables (hablantes, territorio exacto) sobre el carijona para una pregunta justa."
     },
     {
       "name": "Andoque",
@@ -718,7 +719,8 @@
     {
       "name": "Achagua",
       "facet": "Lenguas en riesgo y su rescate",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: El número de hablantes del achagua es incierto y ninguna opción da una pregunta justa."
     },
     {
       "name": "Bora",

@@ -151,7 +151,8 @@
     {
       "name": "Patacón",
       "facet": "Empanadas, pasteles y fritos",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: El pool ya tiene el ingrediente del patacón; las otras opciones no encajan."
     },
     {
       "name": "Chicharrón",
@@ -416,7 +417,8 @@
     {
       "name": "Arroz con leche",
       "facet": "Postres y dulces callejeros",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: El arroz con leche ya se preguntó con foto; un acertijo o una pregunta de origen repetiría o forzaría el tema."
     },
     {
       "name": "Natilla",
@@ -556,7 +558,8 @@
     {
       "name": "Mazorca asada",
       "facet": "Frutas y antojos de carrito",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: El pool ya pregunta por la mazorca asada en la calle con mantequilla; un acertijo repetiría ese hecho."
     },
     {
       "name": "Mamoncillo",

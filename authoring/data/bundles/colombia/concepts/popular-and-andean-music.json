@@ -211,7 +211,8 @@
     {
       "name": "Emilio Murillo",
       "facet": "Compositores clásicos andinos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Las opciones (conteo, foto, hecho de) no dan una pregunta justa sobre Emilio Murillo."
     },
     {
       "name": "Alberto Castilla",
@@ -226,7 +227,8 @@
     {
       "name": "Carlos Vieco",
       "facet": "Compositores clásicos andinos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Solo daría una fecha menor (nacimiento en 1900), sin forma de razonarla."
     },
     {
       "name": "Jorge Añez",
@@ -333,7 +335,8 @@
     {
       "name": "Emeterio y Felipe",
       "facet": "Duetos y voces de la música andina",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: Los Tolimenses ya están en el pool; las opciones (contar integrantes, origen) repetirían ese dato."
     },
     {
       "name": "Soy colombiano",
@@ -553,7 +556,8 @@
     {
       "name": "Octavio Mesa",
       "facet": "Parranda paisa y música decembrina",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: No tengo datos seguros sobre las canciones de Octavio Mesa."
     },
     {
       "name": "Noche de velitas",
@@ -623,7 +627,8 @@
     {
       "name": "Festival Hatoviejo Cotrafa",
       "facet": "Festivales y concursos andinos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Demasiado oscuro y las opciones son forzadas."
     },
     {
       "name": "Festival Nacional de la Guabina y el Tiple",

@@ -502,7 +502,8 @@
     {
       "name": "Izada de bandera",
       "facet": "Protocolo y uso de los símbolos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: La izada de bandera y su premiación ya están en el pool; las opciones solo darían una variante forzada."
     },
     {
       "name": "Acto cívico",

@@ -182,7 +182,8 @@
     {
       "name": "¿Qué más?",
       "facet": "Expresiones de saludo y despedida",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The existing quiubo question already shows «¿qué más?» is a greeting."
     },
     {
       "name": "A la orden",
@@ -337,12 +338,14 @@
     {
       "name": "Comer como un pajarito",
       "facet": "Comparaciones y frases con animales",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The meaning has already been asked; asking for the expression from its meaning can be answered from that question."
     },
     {
       "name": "Ser un burro",
       "facet": "Comparaciones y frases con animales",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: The meaning is unclear (dumb or very hard-working) and it's an insult; not good for a family game."
     },
     {
       "name": "Piel de gallina",

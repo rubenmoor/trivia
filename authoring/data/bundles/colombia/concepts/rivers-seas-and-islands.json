@@ -215,7 +215,8 @@
     {
       "name": "Río Telembí",
       "facet": "Ríos del Pacífico y el Atrato",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Demasiado oscuro; no hay un hecho justo con opciones razonables."
     },
     {
       "name": "Río Guapi",
@@ -347,7 +348,8 @@
     {
       "name": "Bahía Humboldt",
       "facet": "Costa Pacífica y sus bahías",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Hay pocos datos fiables y conocidos sobre Bahía Humboldt."
     },
     {
       "name": "Cayo Acuario",
@@ -462,7 +464,8 @@
     {
       "name": "Isla del Gallo",
       "facet": "Islas del Pacífico: Gorgona y Malpelo",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: El hecho principal (Pizarro y la raya) ya está en el pool; las opciones no dan una alternativa buena."
     },
     {
       "name": "Los Trece de la Fama",

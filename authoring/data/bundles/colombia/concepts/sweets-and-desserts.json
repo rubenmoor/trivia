@@ -135,7 +135,8 @@
     {
       "name": "Jalea de guayaba",
       "facet": "Bocadillo y dulces de guayaba",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: La guayaba ya se preguntó tres veces; las opciones restantes quedan forzadas."
     },
     {
       "name": "Pasta de guayaba",
@@ -456,7 +457,8 @@
     {
       "name": "Almíbar",
       "facet": "Pailas, técnicas e ingredientes dulceros",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: La pregunta del pool sobre el almíbar (agua y azúcar) ya revela su definición; cualquier name_concept la repetiría."
     },
     {
       "name": "Clavos de olor",
