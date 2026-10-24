@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "15cf43b1",
+  "hash": "a8ae625c",
   "questions": [
     {
       "id": "q-0016",
@@ -139,6 +139,40 @@
       "background": null
     },
     {
+      "id": "q-0040",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "science",
+      "bundle": "base",
+      "description": "Cuidado con esta pregunta, que está hirviendo.",
+      "question": "¿A qué temperatura hierve el agua al nivel del mar?",
+      "answer": "100 °C",
+      "wrong_answers": [
+        "50 °C",
+        "0 °C",
+        "200 °C"
+      ],
+      "hints": [
+        "Es mucho más caliente que un día de sol.",
+        "A 0 °C el agua se congela.",
+        "Es un número redondo de tres cifras."
+      ],
+      "fun_fact": "En Bogotá, por la altura, el agua hierve a unos 91 °C.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Boiling_water.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoiling_water.jpg",
+        "credit": "GRAN · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "GRAN",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-0045",
       "status": "approved",
       "difficulty": 7,
@@ -271,6 +305,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Anna Hanks from Austin, Texas, USA",
         "author_url": "https://www.flickr.com/people/23349893@N08"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0063",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "world-cups",
+      "bundle": "base",
+      "description": "Una pregunta para mover la cintura mientras piensas.",
+      "question": "¿Qué cantante colombiana cantó «Waka Waka» para el Mundial de 2010?",
+      "answer": "Shakira",
+      "wrong_answers": [
+        "Karol G",
+        "Greeicy",
+        "Fanny Lu"
+      ],
+      "hints": [
+        "Canta desde que era niña y hoy es famosa en todo el mundo.",
+        "Es famosa por cómo baila.",
+        "Es de Barranquilla."
+      ],
+      "fun_fact": "«Waka Waka» es uno de los vídeos musicales más vistos de la historia de YouTube.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/FNB_Stadium_and_mooifontein_Arrial_View_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFNB_Stadium_and_mooifontein_Arrial_View_-_panoramio.jpg",
+        "credit": "fading · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "fading",
+        "author_url": "https://web.archive.org/web/20161021055257/http://www.panoramio.com/user/5397823?with_photo_id=66317669"
       },
       "background": null
     },
@@ -509,6 +577,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Obsidian Soul",
         "author_url": "https://commons.wikimedia.org/wiki/User:Obsidian_Soul"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0098",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "inventions",
+      "bundle": "base",
+      "description": "Una idea tan buena que hasta tiene forma de idea.",
+      "question": "¿Qué invento usamos para iluminar la casa de noche?",
+      "answer": "La bombilla",
+      "wrong_answers": [
+        "La rueda",
+        "El reloj",
+        "El espejo"
+      ],
+      "hints": [
+        "Funciona con electricidad.",
+        "Se pone en el techo o en una lámpara.",
+        "Thomas Edison la mejoró para que durara mucho."
+      ],
+      "fun_fact": "Hoy se usan bombillas LED, que gastan mucha menos energía.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Price_Building_illuminated_at_night_in_Quebec_City.jpg/3840px-Price_Building_illuminated_at_night_in_Quebec_City.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APrice_Building_illuminated_at_night_in_Quebec_City.jpg",
+        "credit": "Wilfredor · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Wilfredor",
+        "author_url": "https://www.wikidata.org/wiki/Q115464159"
       },
       "background": null
     },
@@ -1087,6 +1189,108 @@
         "license_url": null,
         "author": "Didier Descouens",
         "author_url": "https://commons.wikimedia.org/wiki/User:Archaeodontosaurus"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0271",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "anime",
+      "bundle": "base",
+      "description": "Japón nos mandó coches, videojuegos y también palabras que se pegan como un chicle.",
+      "question": "¿Qué significa la palabra japonesa «kawaii»?",
+      "answer": "Tierno o adorable",
+      "wrong_answers": [
+        "Rápido o veloz",
+        "Rico o delicioso",
+        "Valiente o fuerte"
+      ],
+      "hints": [
+        "Se hizo famosa en todo el mundo gracias a la moda y los dibujos animados japoneses.",
+        "Es lo que dice la gente cuando ve un gatito recién nacido.",
+        "Hello Kitty es el ejemplo perfecto de esta palabra."
+      ],
+      "fun_fact": "Hello Kitty se dibuja sin boca y, aun así, es uno de los personajes más famosos del mundo.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg/3840px-Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg",
+        "credit": "Benh LIEU SONG (Flickr) · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Benh LIEU SONG (Flickr)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Benh"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0283",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "pharaohs",
+      "bundle": "base",
+      "description": "Antes de los emojis, los egipcios ya mandaban mensajes con caritas, pájaros y ojitos.",
+      "question": "¿Cómo se llama el sistema de escritura de los antiguos egipcios?",
+      "answer": "Jeroglíficos",
+      "wrong_answers": [
+        "Runas",
+        "Cuneiforme",
+        "Kanji"
+      ],
+      "hints": [
+        "La tallaban en templos y tumbas, y también la pintaban sobre papiro.",
+        "Durante siglos nadie supo leerla, hasta que se descubrió la Piedra de Rosetta.",
+        "Cuando alguien escribe con una letra imposible de entender, decimos que parecen... esto."
+      ],
+      "fun_fact": "El francés Jean-François Champollion logró descifrar los jeroglíficos en 1822 gracias a la Piedra de Rosetta.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Sarcophagus_of_Ankhnesneferibre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASarcophagus_of_Ankhnesneferibre.jpg",
+        "credit": "Hans Hillewaert · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Hans Hillewaert",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-0287",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "winter-olympics",
+      "bundle": "base",
+      "description": "Un deporte tan tranquilo que tu abuelo podría jugarlo en zapatillas de estar por casa, y aun así reparten medallas olímpicas.",
+      "question": "Mira la foto: ¿qué deporte olímpico de invierno están jugando?",
+      "answer": "Curling",
+      "wrong_answers": [
+        "Hockey sobre hielo",
+        "Patinaje de velocidad",
+        "Patinaje artístico"
+      ],
+      "hints": [
+        "Es un deporte que nació en Escocia hace siglos.",
+        "Se lanza una piedra pesada que se desliza por el hielo hasta una diana de círculos.",
+        "Los compañeros frotan el hielo con escobas delante de la piedra para guiarla."
+      ],
+      "fun_fact": "Casi todas las piedras de curling olímpicas están hechas de granito de una sola isla pequeña de Escocia llamada Ailsa Craig.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/12-01-20-yog-674.jpg/3840px-12-01-20-yog-674.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A12-01-20-yog-674.jpg",
+        "credit": "Ralf Roletschek · CC BY-SA 3.0 at · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 at",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+        "author": "Ralf Roletschek",
+        "author_url": "https://www.wikidata.org/wiki/Q15080600"
       },
       "background": null
     },
@@ -2043,6 +2247,40 @@
       "background": null
     },
     {
+      "id": "q-0670",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "El único invitado de la fiesta al que todos quieren pegarle, y él tan feliz.",
+      "question": "Cuelgo en las fiestas de cumpleaños y los niños me pegan con un palo con los ojos vendados. Cuando me rompo, ¿qué cae de mí?",
+      "answer": "Dulces y juguetes",
+      "wrong_answers": [
+        "Arena y piedras",
+        "Agua y jabón",
+        "Hojas y ramas"
+      ],
+      "hints": [
+        "A todos los niños les encanta lo que cae.",
+        "Todos se tiran al suelo a recogerlo rápido.",
+        "Hay caramelos, bombones y chocolatinas."
+      ],
+      "fun_fact": "En México, la piñata tradicional tiene forma de estrella con siete picos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Birthday_party_decoration.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABirthday_party_decoration.jpg",
+        "credit": "Abinayasekar357 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Abinayasekar357",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Abinayasekar357&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-0693",
       "status": "approved",
       "difficulty": 4,
@@ -2073,6 +2311,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Ocdp",
         "author_url": "https://commons.wikimedia.org/wiki/User:Ocdp"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0709",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "fairy-tales",
+      "bundle": "base",
+      "description": "Una princesa que juega cerca de un pozo y luego se queja de las consecuencias.",
+      "question": "Una princesa juega junto a un pozo, se le cae su pelota al agua y una rana se ofrece a sacarla a cambio de su amistad. ¿De qué está hecha la pelota?",
+      "answer": "De oro",
+      "wrong_answers": [
+        "De cristal",
+        "De madera",
+        "De plata"
+      ],
+      "hints": [
+        "Es un juguete digno de una princesa.",
+        "Brilla mucho, como una corona.",
+        "Es el mismo material de las medallas del primer puesto."
+      ],
+      "fun_fact": "En la versión original de los hermanos Grimm, el hechizo no se rompe con un beso: la princesa, furiosa, lanza la rana contra la pared.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/MYLF_Frog_%285794436732%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMYLF_Frog_%285794436732%29.jpg",
+        "credit": "Pacific Southwest Region 5 · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Pacific Southwest Region 5",
+        "author_url": "https://www.flickr.com/people/39108150@N05"
       },
       "background": null
     },
@@ -3097,6 +3369,40 @@
       "background": null
     },
     {
+      "id": "q-1261",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "castles",
+      "bundle": "base",
+      "description": "Un castillo japonés con apodo de pájaro, como los futbolistas que tienen apodo de animal.",
+      "question": "Estás en Matsumoto, Japón, frente a uno de los castillos más antiguos del país. ¿Qué ave le da su apodo?",
+      "answer": "El cuervo",
+      "wrong_answers": [
+        "La garza",
+        "La grulla",
+        "El águila"
+      ],
+      "hints": [
+        "El apodo se debe al color de sus muros.",
+        "El castillo de Himeji, todo blanco, tiene el apodo de un ave blanca: la garza.",
+        "Es un ave negra, lista y ruidosa, que según la leyenda también protege la Torre de Londres."
+      ],
+      "fun_fact": "El castillo de Matsumoto conserva su torre principal original de madera desde hace más de 400 años, algo rarísimo en Japón.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Osaka_Castle_Outer_Moat_and_Osaka_Business_Park%2C_November_2016.jpg/3840px-Osaka_Castle_Outer_Moat_and_Osaka_Business_Park%2C_November_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOsaka_Castle_Outer_Moat_and_Osaka_Business_Park%2C_November_2016.jpg",
+        "credit": "Martin Falbisoner · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Martin Falbisoner",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-1292",
       "status": "approved",
       "difficulty": 11,
@@ -3127,6 +3433,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Quantum Information Retrieval",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Quantum_Information_Retrieval&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1312",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "body-oddities",
+      "bundle": "base",
+      "description": "Una sangre tan exclusiva que no tiene ni con quién compartir.",
+      "question": "Me apodan «sangre dorada» y solo unas decenas de personas en el mundo me tienen. ¿Qué tipo de sangre soy?",
+      "answer": "Rh nulo",
+      "wrong_answers": [
+        "AB negativo",
+        "Fenotipo Bombay",
+        "O negativo"
+      ],
+      "hints": [
+        "No soy uno de los ocho tipos comunes (A, B, AB y O, positivos o negativos).",
+        "Mis glóbulos rojos no tienen ninguno de los antígenos de un sistema muy conocido.",
+        "Ese sistema es el mismo que hace que una sangre sea «positiva» o «negativa»."
+      ],
+      "fun_fact": "Quien tiene sangre Rh nulo puede donar a muchas personas con tipos Rh raros, pero solo puede recibir sangre de otro Rh nulo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Antonio_e_Biagio_e_Cesare_Arrigo_Blood_bags.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAntonio_e_Biagio_e_Cesare_Arrigo_Blood_bags.jpg",
+        "credit": "CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ufficio Comunicazione, Azienda Ospedaliera SS. Antonio e Biagio e Cesare Arrigo, Alessandria, Biblioteca Biomedica Centro di Documentazione",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PescediBabele"
       },
       "background": null
     },
@@ -3675,6 +4015,40 @@
       "background": null
     },
     {
+      "id": "q-1732",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "big-questions",
+      "bundle": "base",
+      "description": "La asignatura que te pregunta si está bien comerte el último trozo de tarta sin avisar.",
+      "question": "Estudia qué está bien y qué está mal, se pregunta cómo debemos portarnos y en muchos colegios es una asignatura. ¿Qué es?",
+      "answer": "La ética",
+      "wrong_answers": [
+        "La estética",
+        "La lógica",
+        "La gramática"
+      ],
+      "hints": [
+        "Es una rama de la filosofía.",
+        "Se ocupa de valores como la honestidad y la justicia.",
+        "Cuando algo es tramposo, se dice que no es muy…"
+      ],
+      "fun_fact": "La palabra viene del griego «êthos», que significa «costumbre» o «carácter».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/A_public_school%2C_high_school_classroom_in_the_United_States_01.jpg/3840px-A_public_school%2C_high_school_classroom_in_the_United_States_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_public_school%2C_high_school_classroom_in_the_United_States_01.jpg",
+        "credit": "Harrison Keely · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Harrison Keely",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Hkeely"
+      },
+      "background": null
+    },
+    {
       "id": "q-1772",
       "status": "approved",
       "difficulty": 4,
@@ -4049,6 +4423,40 @@
       "background": null
     },
     {
+      "id": "q-2344",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Unos zapatos para pasarte toda la noche de puntillas, y además a propósito.",
+      "question": "¿Dónde verías a bailarines con unos zapatos como estos?",
+      "answer": "En un escenario de ballet",
+      "wrong_answers": [
+        "En un campo de fútbol",
+        "En una piscina",
+        "En una pista de esquí"
+      ],
+      "hints": [
+        "Estos zapatos son de satén rosa brillante y llevan cintas largas.",
+        "Los bailarines dan vueltas y se ponen de puntillas.",
+        "Piensa en «El lago de los cisnes»."
+      ],
+      "fun_fact": "Una bailarina profesional de ballet puede gastar un par de zapatillas de punta en una sola función.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Pointe_shoes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APointe_shoes.jpg",
+        "credit": "Keitei · CC BY 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "author": "Keitei",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Keitei&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-2386",
       "status": "approved",
       "difficulty": 15,
@@ -4113,6 +4521,40 @@
         "license_url": null,
         "author": "U.S. Air Force photo by Airman 1st Class Regan Enriquez",
         "author_url": "https://www.dvidshub.net/portfolio/1734692"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2702",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "famous-bridges",
+      "bundle": "base",
+      "description": "El material de los puentes rústicos, los lápices y las mesas de la cocina.",
+      "question": "La lana sale de una oveja. ¿Y la madera?",
+      "answer": "De un árbol",
+      "wrong_answers": [
+        "De una roca",
+        "De una nube",
+        "De un pez"
+      ],
+      "hints": [
+        "Crece en el bosque.",
+        "Tiene hojas y ramas.",
+        "Las ardillas trepan por él."
+      ],
+      "fun_fact": "El Puente de la Capilla de Lucerna, en Suiza, se construyó por primera vez en el siglo XIV y es uno de los puentes de madera cubiertos más antiguos de Europa.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Yarn_ball.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AYarn_ball.jpg",
+        "credit": "Lori from New York, NY, United States · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Lori from New York, NY, United States",
+        "author_url": "https://www.flickr.com/photos/74405061@N00"
       },
       "background": null
     },
