@@ -228,6 +228,8 @@ export interface Overview {
     bundles: { id: string; name: string; questions: number; unreviewed: number }[];
   };
   llm_approved: number;
+  /** Runs whose blind spot check isn't complete (spot_checks.json decided against its size). */
+  spot_checks: { run: string; kind: "batch" | "backaudit" | "translation"; decided: number; size: number }[];
   /** `qgen batch` runs, then `tr-<locale>-<n>` runs of `qgen batch --translate`. */
   unfinished_runs: string[];
   batches: {

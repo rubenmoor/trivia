@@ -55,6 +55,17 @@
           ? { count: 1, text: `unfinished translation run ${run}: resume it with`, command: `qgen batch --translate ${locale}` }
           : { count: 1, text: `unfinished batch ${run}: resume it with`, command: "qgen batch" };
       }),
+      ...overview.spot_checks.flatMap((c) => {
+        const sample = { sample: "1", ...(c.kind === "backaudit" ? { run: c.run } : { batch: c.run }) };
+        const row: Task = {
+          count: c.size - c.decided,
+          text: `${c.decided} of ${c.size} spot-check questions of ${c.run} decided: blind check`,
+          href: review(sample),
+        };
+        return c.kind === "backaudit"
+          ? [row, { count: 1, text: `audit notes of ${c.run}, after the blind check`, href: review({ run: c.run, audit: "flagged" }) }]
+          : [row];
+      }),
       {
         count: q.needs_work,
         text: `${q.needs_work === 1 ? "question needs" : "questions need"} work: approve, reject or give new feedback`,

@@ -10,6 +10,7 @@ import save_file  # authoring/tools/save_file.py
 import engine  # authoring/tools/engine.py: selection.ts under Node (D-60)
 import qgen  # authoring/tools/qgen.py: work runs
 import translations  # authoring/tools/translations.py
+import spot_checks  # authoring/server/spot_checks.py
 
 
 def supply(pool):
@@ -29,6 +30,20 @@ def unfinished_translate_runs():
     """Unfinished `qgen batch --translate` runs (tr-<locale>-<n>, = translate.next_translate_run), oldest first."""
     return [r for r in qgen.work_runs(r"tr-[A-Za-z-]+-\d+", "run.json")
             if translations.run_locale(r) and not (qgen.load_json(layout.WORK / r / "run.json") or {}).get("done")]
+
+
+def spot_check_rows(pool):
+    """Runs whose blind spot check isn't complete, oldest first: batches with a recorded LLM review, back-audit
+    runs, and translation runs already started (they get no new one, milestone 9). {run, kind, decided, size}."""
+    done = spot_checks.load()
+    unfinished = set(batches.unfinished_runs())
+    runs = [(r, "batch") for r in qgen.work_runs(r"batch-\d+", "recorded.json")
+            if r not in unfinished and any(q.get("batch") == r for q in pool)]
+    runs += [(r, "backaudit") for r in qgen.work_runs(r"backaudit-\d+", "run.json")]
+    runs += [(r, "translation") for r in done if translations.run_locale(r)]
+    rows = [{"run": r, "kind": k, "decided": len((done.get(r) or {}).get("items") or {}), "size": spot_checks.size(r)}
+            for r, k in runs]
+    return [r for r in rows if r["decided"] < r["size"]]
 
 
 def batch_rows(pool, locale=None, src=None):
@@ -112,6 +127,7 @@ def build(pool, bundles):
             "bundles": bundle_rows,
         },
         "llm_approved": sum((q.get("review") or {}).get("reviewer") == "llm" for q in approved),
+        "spot_checks": spot_check_rows(pool),
         "unfinished_runs": batches.unfinished_runs() + unfinished_translate_runs(),
         "batches": [r for l in translations.LOCALES
                     for r in batch_rows(translations.load(l)["questions"], l, {q["id"]: q for q in pool})]
