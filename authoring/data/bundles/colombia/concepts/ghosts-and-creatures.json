@@ -212,7 +212,8 @@
     {
       "name": "El Maleficio",
       "facet": "Duendes, brujas y hechiceros",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: No tengo segura qué es «El Maleficio» en el folclor colombiano (la telenovela famosa es mexicana)."
     },
     {
       "name": "El Hechizo",
@@ -454,7 +455,8 @@
     {
       "name": "Más feo que un espanto",
       "facet": "Palabras y dichos de espantos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: El significado del dicho es obvio; con estas opciones saldría una pregunta de relleno."
     }
   ]
 }

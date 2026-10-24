@@ -90,7 +90,8 @@
     {
       "name": "Noche de diciembre",
       "facet": "Vida de Rafael Pombo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: I'm not sure of the poem's exact date, and it is too obscure to make a fair question."
     },
     {
       "name": "Romanticismo",
@@ -371,7 +372,8 @@
     {
       "name": "Retahíla",
       "facet": "Adivinanzas, trabalenguas y retahílas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The meaning has already been asked. The other options (place, number) don't fit the term."
     },
     {
       "name": "Jitanjáfora",
@@ -381,7 +383,8 @@
     {
       "name": "Pablito clavó un clavito",
       "facet": "Adivinanzas, trabalenguas y retahílas",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The pool already quotes the whole tongue twister. Asking who nailed the nail would be answered by that earlier question."
     },
     {
       "name": "Tres tristes tigres",
@@ -436,7 +439,8 @@
     {
       "name": "Agua pasa por mi casa",
       "facet": "Adivinanzas, trabalenguas y retahílas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The pool already uses the riddle's answer (el aguacate). None of the remaining options gives a fresh, natural question."
     },
     {
       "name": "Décima espinela",
@@ -536,7 +540,8 @@
     {
       "name": "Hugo Niño",
       "facet": "Relatos indígenas y afrocolombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: This author is too obscure for these players, and none of the options fits him naturally."
     },
     {
       "name": "Mary Grueso Romero",
@@ -576,7 +581,8 @@
     {
       "name": "Leer es mi cuento",
       "facet": "Ferias, premios y bibliotecas infantiles",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: I'm not sure of the reading plan's exact launch details, and none of the options gives a fair, interesting question."
     },
     {
       "name": "Premio El Barco de Vapor",

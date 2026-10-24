@@ -559,7 +559,8 @@
     {
       "name": "Ali Aka Mind",
       "facet": "Hip hop y rap colombiano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: El rapero es demasiado poco conocido; la única pregunta posible (la sigla AKA) trata de inglés, no de Colombia."
     },
     {
       "name": "Gotas de Rap",
@@ -746,7 +747,8 @@
     {
       "name": "Una lady como tú",
       "facet": "Éxitos, álbumes y premios",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: El acertijo de Manuel Turizo que ya está en el pool dice que empezó con «Una lady como tú»; las opciones restantes (récord, año suelto) darían una pregunta forzada."
     },
     {
       "name": "Cómo te atreves",
@@ -766,7 +768,8 @@
     {
       "name": "Pretty Boy, Dirty Boy",
       "facet": "Videoclips, apodos y frases famosas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: El acertijo de Maluma del pool ya usa «Pretty Boy»; ninguna opción da una pregunta limpia sobre el álbum."
     },
     {
       "name": "Las mujeres ya no lloran, las mujeres facturan",

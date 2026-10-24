@@ -136,7 +136,8 @@
     {
       "name": "Andrés Felipe Muñoz",
       "facet": "Patinaje y BMX",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: No estoy seguro de quién es Andrés Felipe Muñoz ni de sus logros."
     },
     {
       "name": "Pedro Causil",
@@ -249,7 +250,8 @@
     {
       "name": "Doris Patiño",
       "facet": "Boxeo, lucha y artes marciales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: No tengo datos confiables sobre Doris Patiño para una pregunta segura."
     },
     {
       "name": "Saskia van Erven",
@@ -565,7 +567,8 @@
     {
       "name": "Parapente",
       "facet": "Deportes acuáticos y de aventura",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Ya hay en el pool una pregunta de identificar el parapente con foto; las otras opciones (quién, grupo) no encajan."
     },
     {
       "name": "Rafting",
@@ -731,7 +734,8 @@
     {
       "name": "Juegos Bolivarianos de Valledupar 2022",
       "facet": "Juegos y eventos deportivos en Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: No tengo datos confiables sobre personas o récords de los Bolivarianos de Valledupar 2022."
     },
     {
       "name": "Mundial de Futsal 2016",

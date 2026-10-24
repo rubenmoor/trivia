@@ -226,7 +226,8 @@
     {
       "name": "Parquear",
       "facet": "Calle, transporte y trancón",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: El significado de «parquear» ya se responde con la pregunta del parqueadero; las opciones no dan un dato nuevo."
     },
     {
       "name": "Andén",
