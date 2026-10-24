@@ -342,7 +342,8 @@
     {
       "name": "Fiestas del Mar de San Andrés",
       "facet": "Fiestas del Caribe y el Pacífico",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Las Fiestas del Mar son de Santa Marta (ya en el pool); el concepto atribuido a San Andrés es dudoso."
     },
     {
       "name": "Fiestas de San Juan y San Pedro",
@@ -418,7 +419,8 @@
     {
       "name": "Matachín",
       "facet": "Disfraces, máscaras y carrozas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: No tengo certeza sobre el papel del matachín en las fiestas colombianas."
     },
     {
       "name": "Cumbiambero",

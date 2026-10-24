@@ -173,7 +173,8 @@
     {
       "name": "Hogar, dulce hogar",
       "facet": "Comedias y sitcoms colombianas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: No tengo datos fiables sobre «Hogar, dulce hogar» en la TV colombiana."
     },
     {
       "name": "N.N.",
@@ -244,7 +245,8 @@
     {
       "name": "Décimo grado",
       "facet": "Programas infantiles y juveniles",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Serie poco conocida y sin datos fiables para estas opciones."
     },
     {
       "name": "Niños ricos, pobres padres",
@@ -613,7 +615,8 @@
     {
       "name": "Comisión Nacional de Televisión",
       "facet": "Canales y historia de la televisión",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Un récord u origen de un ente regulador no da una buena pregunta para una familia."
     },
     {
       "name": "Canal Institucional",

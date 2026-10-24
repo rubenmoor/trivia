@@ -191,7 +191,8 @@
     {
       "name": "Pocigueyca",
       "facet": "Taironas y la Sierra Nevada",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Asentamiento tairona demasiado oscuro; no hay un dato justo al que se pueda llegar razonando."
     },
     {
       "name": "Estatuas de San Agustín",
@@ -677,7 +678,8 @@
     {
       "name": "Ahuyama",
       "facet": "Alimentos y cultivos ancestrales",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: El acertijo que ya existe cubre lo básico; las opciones de fecha o de intruso no funcionan a dificultad 3."
     },
     {
       "name": "Arracacha",

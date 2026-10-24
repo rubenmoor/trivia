@@ -371,7 +371,8 @@
     {
       "name": "Papel higiénico Familia",
       "facet": "Aseo, cuidado personal y productos del hogar",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: La marca Familia ya se preguntó, y las opciones que quedan (número de rollos, materiales) serían de relleno."
     },
     {
       "name": "Nosotras",

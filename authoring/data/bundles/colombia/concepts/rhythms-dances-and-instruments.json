@@ -392,7 +392,8 @@
     {
       "name": "Capador",
       "facet": "Instrumentos de viento y cuerda",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: No hay foto fiable del capador y el número de tubos o la fecha no son hechos seguros."
     },
     {
       "name": "Dulzaina",
@@ -492,7 +493,8 @@
     {
       "name": "Reguetón paisa",
       "facet": "Champeta, reguetón y ritmos urbanos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Reguetón y Medellín ya están cubiertos en el pool."
     },
     {
       "name": "Gozadera",

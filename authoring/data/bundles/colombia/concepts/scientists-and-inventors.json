@@ -90,7 +90,8 @@
     {
       "name": "Armando Dugand",
       "facet": "Expedición Botánica y naturalistas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Armando Dugand is too obscure, and none of the purpose/record options give a fair question."
     },
     {
       "name": "Sinforoso Mutis",
@@ -328,7 +329,8 @@
     {
       "name": "El cerebro y el mito del yo",
       "facet": "Cerebro y neurociencia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: A book title only gives a minor publication date or a forced place question."
     },
     {
       "name": "Neurolab",
@@ -364,7 +366,8 @@
     {
       "name": "Hidrocefalia",
       "facet": "Inventos médicos colombianos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: Hakim's hydrocephalus valve is already in the pool; the options left would be forced."
     },
     {
       "name": "José Ignacio Barraquer",
@@ -394,12 +397,14 @@
     {
       "name": "Edgar Rey Sanabria",
       "facet": "Inventos médicos colombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "used_up: Edgar Rey Sanabria's method is already covered twice in the pool; an odd-one-out would be easy and would overlap."
     },
     {
       "name": "Bebé prematuro",
       "facet": "Inventos médicos colombianos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Kangaroo mother care for premature babies already has two questions in the pool; asking which babies it is for overlaps them."
     },
     {
       "name": "Incubadora",
@@ -627,7 +632,8 @@
     {
       "name": "Premio Alejandro Ángel Escobar",
       "facet": "Instituciones, premios y homenajes",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: The prize can't fill these options (record/body_senses, photo) with a fair question."
     },
     {
       "name": "Ciclovía de Bogotá",

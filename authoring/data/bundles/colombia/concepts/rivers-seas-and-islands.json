@@ -194,7 +194,8 @@
     {
       "name": "Río Micay",
       "facet": "Ríos del Pacífico y el Atrato",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: El río Micay es poco conocido y casi siempre se nombra por el conflicto armado, que no es un tema familiar."
     },
     {
       "name": "Río Anchicayá",
@@ -284,7 +285,8 @@
     {
       "name": "Bahía de Barbacoas",
       "facet": "Costa Caribe y sus golfos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Un mapa en blanco no sirve para reconocer una bahía, y no hay ningún récord ni origen claro que preguntar."
     },
     {
       "name": "Bahía Portete",

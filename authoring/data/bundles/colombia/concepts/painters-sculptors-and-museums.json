@@ -517,7 +517,8 @@
     {
       "name": "Iván Argote",
       "facet": "Arte contemporáneo colombiano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: None of the options gives a fair question about Iván Argote; his dates and works are too obscure."
     },
     {
       "name": "José María Espinosa",
@@ -542,7 +543,8 @@
     {
       "name": "Alberto Urdaneta",
       "facet": "Arte del siglo XIX y la Expedición Botánica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "used_up: The good Urdaneta facts (newspaper, Escuela de Bellas Artes) are already used; only minor dates remain."
     },
     {
       "name": "Manuel María Paz",
