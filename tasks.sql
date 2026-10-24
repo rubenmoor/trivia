@@ -43423,7 +43423,7 @@ Done when: QC steps done, decisions raised (not linked), rework staged, next pai
 - Stage exactly the printed `git add` paths; don''t commit.
 - Health ✗: raise `<run>: health ✗, look at it?` unless one exists; never `qgen health ack`; the task goes on.
 - Exit 75, other non-zero, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines, `pm task-pending-decision`, stop.', '2026-10-24T07:54:39Z', '2026-10-24T09:22:29Z', 1751, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1754, 84, 'Colombia pilot effort (es) recorded in 15c and 16', 'work', 'open', NULL, NULL, 'Plan 84 chain 4, closing task of the es pilot: `colombia` reached 2000 approved in es (`qgen report --bundle colombia`: 2014 approved in `colombia/*` categories after `batch-25`''s QC, `task 1753: QC colombia batch (batch-<n>)`). No "More regional bundles?" decision (chain 5 already runs them).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1754, 84, 'Colombia pilot effort (es) recorded in 15c and 16', 'work', 'done', NULL, '2026-10-24, plans/15c-regional-questions.md, plans/16-content-target.md', 'Plan 84 chain 4, closing task of the es pilot: `colombia` reached 2000 approved in es (`qgen report --bundle colombia`: 2014 approved in `colombia/*` categories after `batch-25`''s QC, `task 1753: QC colombia batch (batch-<n>)`). No "More regional bundles?" decision (chain 5 already runs them).
 
 ## Do
 - Record the pilot''s effort in `plans/15c-regional-questions.md` (extend its "Pilot effort" lines) and `plans/16-content-target.md`:
@@ -43434,7 +43434,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Information only: no budget or pace decision.
 
 ## pm-run rules
-- D-36: no prompt, pool, media or `qgen.py` changes. Stage; don''t commit.', '2026-10-24T09:22:28Z', NULL, 1753, 0, NULL, 'questions');
+- D-36: no prompt, pool, media or `qgen.py` changes. Stage; don''t commit.', '2026-10-24T09:22:28Z', '2026-10-24T09:23:12Z', 1753, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1755, 84, 'run tr-en-<n> colombia (qgen batch --translate en --bundle colombia)', 'work', 'open', NULL, NULL, 'Plan 84 chain 4: first en run of `colombia` (translation run shape, one task, no QC, no spot check, no `qgen health ack`; `decision 414: Human reviews don''t gate question generation or translation`). Colombia has 2000+ approved es; `task 829: qgen batch --translate <locale> --bundle <id>` is done.
 
 ## Run
@@ -51508,6 +51508,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1888, 1751, '2026-10-24T07:50:34Z', '2026-10-24T07:54:48Z', 'done', NULL, 0, 'b6335bb7d9c0c9fd8e4a4356e1af9f777a4ca51c', 'questions', 'claude-sonnet-5-5', '058b0435-677f-4084-b2d1-64db0df51716', NULL, 12, 20, 4407, 521728, 51869, 0.35593160000000007, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1889, 1752, '2026-10-24T07:54:48Z', '2026-10-24T09:19:31Z', 'done', NULL, 0, '965ebb546ae20225270646c105b68e06e1fb9718', 'questions', 'claude-sonnet-5-5', '058b0435-677f-4084-b2d1-64db0df51716', 1888, 5, 10, 1530, 385537, 19198, 0.525151, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1890, 1753, '2026-10-24T09:19:31Z', '2026-10-24T09:22:35Z', 'done', NULL, 0, '1ab66386d4dd59baa0f321026063c1468a851e83', 'questions', 'claude-sonnet-5-5', '058b0435-677f-4084-b2d1-64db0df51716', 1889, 6, 12, 4033, 598884, 27538, 0.79543380000000008, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1891, 1754, '2026-10-24T09:22:35Z', '2026-10-24T09:23:17Z', 'done', NULL, 0, 'c6daaf2f4801c036dd0157194153c34406e1baf6', 'questions', 'claude-sonnet-5-5', '898ef005-0531-4b01-979a-c98774e3dac0', NULL, 8, 14, 3414, 339688, 52120, 0.3105856, 494342);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

@@ -25,3 +25,12 @@ Sub-plan of [15](15-i18n.md). The pool was written for two Colombian kids (D-6),
   - $0.28 per approved (`qgen report --cost`, bundle row; run $12.41 plus factcheck; the bundle row's $69.26 includes earlier spend); 1659 to go → ≈ $575
   - review time: 35 min per 100 verdicts (`qgen report --review-time --bundle colombia`; only 28 timed verdicts, small sample)
   - not too costly for chain 5's pace; no decision
+- Pilot effort, es done (`colombia` 2014 approved after batch-25's QC, 2026-10-24; `task 1754: Colombia pilot effort (es) recorded in 15c and 16`):
+  - batches: 11 (batch-12, batch-16..25), one `qgen rework` each (rework-7, rework-9..18)
+  - cost (`qgen report --cost`, bundle row): 11 runs, 1806 approved by runs, spent $643.00, $0.33 per approved; pool 2014 approved includes the 102 older ones and rework fixes
+  - $ per approved per batch rises as the pool fills: $0.28 (batch-12), $0.29–0.34 (16–21), $0.38–0.40 (22–25); draft es trend $0.38 (batch-23..25)
+  - yield falls: approved per batch 239 (12), 186 (16), 194, 198, 157, 170, 169, 126, 136, 117, 114 (25)
+  - health ✗ trend: drop rate 25 % (batch-12) → 24–33 % (16–21) → 36–42 % (22–25); overlap rate 14.9 % ✓ (12) → 21 % (16) → 35–37 % (22, 24, 25); other ✗: merged/slots 11–15, mean fun, $ per approved above 0.35
+  - review time: 35 min per 100 verdicts (`qgen report --review-time --bundle colombia`; 28 timed verdicts in 1 session, 109 untimed skipped; small sample)
+  - spot checks: batch-12 answered (decision 409: 28 of 30, ≥ 90 %); batch-16..25 raised (decisions 427, 431, 435, 439, 443, 447, 449, 451, 453, 456), unanswered, nothing waits (decision 414)
+  - information only: no budget or pace decision; next: `colombia` en (`qgen batch --translate en --bundle colombia`)
