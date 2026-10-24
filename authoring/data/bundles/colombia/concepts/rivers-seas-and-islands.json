@@ -102,7 +102,8 @@
     {
       "name": "Río Saldaña",
       "facet": "Río Magdalena y su cuenca",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: El río Saldaña es muy poco conocido y no tengo datos seguros sobre su nombre."
     },
     {
       "name": "Río Chicamocha",
@@ -437,7 +438,8 @@
     {
       "name": "Isla Ceycén",
       "facet": "Islas del Caribe continental",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Isla Ceycén es demasiado desconocida y no tengo datos seguros sobre ella."
     },
     {
       "name": "Isla Pirata",

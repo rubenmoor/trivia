@@ -286,7 +286,8 @@
     {
       "name": "Especie en peligro de extinción",
       "facet": "Cóndor, orquídea y palma de cera",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Concepto genérico ya preguntado; ninguna opción da una pregunta colombiana buena."
     },
     {
       "name": "Quindío",
@@ -511,7 +512,8 @@
     {
       "name": "Minuto de silencio",
       "facet": "Protocolo y uso de los símbolos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: El minuto de silencio no es propio de Colombia y obliga a hablar de muertes."
     },
     {
       "name": "Quitarse la gorra",
@@ -741,7 +743,8 @@
     {
       "name": "Bandera del Quindío",
       "facet": "Banderas y escudos departamentales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Demasiado oscuro y no tengo certeza de los datos."
     },
     {
       "name": "Palma de cera",

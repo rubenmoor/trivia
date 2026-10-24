@@ -188,7 +188,8 @@
     {
       "name": "Así es la vida",
       "facet": "Comedias y sitcoms colombianas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: No tengo datos seguros sobre esta comedia."
     },
     {
       "name": "Las detectivas y el Víctor",
@@ -269,7 +270,8 @@
     {
       "name": "La Voz Kids",
       "facet": "Realities y concursos de talento",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Ya hay preguntas sobre el formato y los spin-offs; no conozco con certeza la lista de coaches de La Voz Kids."
     },
     {
       "name": "Concurso Nacional de Belleza",
@@ -600,7 +602,8 @@
     {
       "name": "RTI Producciones",
       "facet": "Canales y historia de la televisión",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Los récords y el origen de RTI no se pueden preguntar con datos seguros ni con opciones justas."
     },
     {
       "name": "Televisión Digital Terrestre",
@@ -615,7 +618,8 @@
     {
       "name": "Canal Institucional",
       "facet": "Canales y historia de la televisión",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Los datos de la historia del Canal Institucional (cambios de nombre, fechas) no son seguros, y las opciones no dan para una buena pregunta."
     },
     {
       "name": "Patricia Fernández, la Peliteñida",

@@ -454,7 +454,8 @@
     {
       "name": "Ave nacional de Colombia",
       "facet": "Animales símbolo y escudos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Ya se preguntó cuál es el ave nacional (el cóndor), y en este lote el cóndor sale en el slot 9."
     },
     {
       "name": "Águila del escudo de Bogotá",

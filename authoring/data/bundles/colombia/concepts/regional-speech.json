@@ -61,12 +61,14 @@
     {
       "name": "Pues (muletilla paisa)",
       "facet": "Habla paisa y del Eje Cafetero",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: El pool ya pregunta por el acento paisa a partir del «pues»; cualquier opción repite ese mismo hecho."
     },
     {
       "name": "Ave María pues",
       "facet": "Habla paisa y del Eje Cafetero",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: El pool ya relaciona «¡ave María!» con el acento paisa; su origen queda respondido y no hay otro hecho bueno."
     },
     {
       "name": "Mero",
@@ -157,7 +159,8 @@
     {
       "name": "Ve",
       "facet": "Habla caleña y vallecaucana",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: El pool ya asocia «mirá, ve» con Cali; preguntar de dónde viene «ve» repetiría ese hecho, y el odd_one_out choca con la pregunta de «oís» de este lote."
     },
     {
       "name": "Oís",
@@ -282,7 +285,8 @@
     {
       "name": "Guate",
       "facet": "Habla llanera y del Orinoco",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: No estoy seguro del significado llanero de «guate» (¿andino?, ¿rústico?); no hay un hecho fiable."
     },
     {
       "name": "Cachicamo",
