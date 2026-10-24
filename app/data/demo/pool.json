@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "cd8ae073",
+  "hash": "5dee95b7",
   "questions": [
     {
       "id": "q-0016",
@@ -4457,6 +4457,40 @@
       "background": null
     },
     {
+      "id": "q-2344",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Zapatos para pasar toda la noche parado en la punta de los pies, y a propósito.",
+      "question": "¿Dónde verías a bailarinas con zapatillas como estas?",
+      "answer": "En un escenario de ballet",
+      "wrong_answers": [
+        "En una cancha de fútbol",
+        "En una piscina",
+        "En una pista de esquí"
+      ],
+      "hints": [
+        "Estas zapatillas son de satén rosado brillante y tienen cintas largas.",
+        "Las bailarinas giran y se paran sobre la punta de los pies.",
+        "Piensa en «El lago de los cisnes»."
+      ],
+      "fun_fact": "Una bailarina profesional de ballet puede gastar un par de zapatillas de punta en una sola función.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Pointe_shoes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APointe_shoes.jpg",
+        "credit": "Keitei · CC BY 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "author": "Keitei",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Keitei&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-2386",
       "status": "approved",
       "difficulty": 15,
@@ -4521,6 +4555,40 @@
         "license_url": null,
         "author": "U.S. Air Force photo by Airman 1st Class Regan Enriquez",
         "author_url": "https://www.dvidshub.net/portfolio/1734692"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2702",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "famous-bridges",
+      "bundle": "base",
+      "description": "El material de los puentes de troncos, los lápices y la mesa de la cocina.",
+      "question": "La lana viene de una oveja. La madera viene de…",
+      "answer": "un árbol",
+      "wrong_answers": [
+        "una roca",
+        "una nube",
+        "un pez"
+      ],
+      "hints": [
+        "Crece en el bosque.",
+        "Tiene hojas y ramas.",
+        "Las ardillas se suben a él."
+      ],
+      "fun_fact": "El Puente de la Capilla de Lucerna, en Suiza, se construyó por primera vez en el siglo XIV y es uno de los puentes de madera cubiertos más antiguos de Europa.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Yarn_ball.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AYarn_ball.jpg",
+        "credit": "Lori from New York, NY, United States · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Lori from New York, NY, United States",
+        "author_url": "https://www.flickr.com/photos/74405061@N00"
       },
       "background": null
     },
