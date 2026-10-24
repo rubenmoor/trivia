@@ -471763,20 +471763,20 @@
     },
     {
       "id": "q-6108",
-      "status": "needs_work",
-      "difficulty": 2,
+      "status": "approved",
+      "difficulty": 3,
       "description": "The savanna's favorite drinking fountain.",
-      "question": "Simba the lion and Pumbaa the warthog drink at a watering hole. How many legs do they have together?",
-      "answer": "8",
+      "question": "Simba the lion, Pumbaa the warthog and Zazu the bird drink at a watering hole. How many legs do they have together?",
+      "answer": "10",
       "wrong_answers": [
-        "4",
-        "6",
-        "10"
+        "8",
+        "12",
+        "6"
       ],
       "hints": [
-        "Both of them walk on all fours.",
-        "Each one has 4 legs.",
-        "4 + 4."
+        "Not everyone at the water walks on four legs.",
+        "Zazu is a bird, and birds stand on two legs.",
+        "4 + 4 + 2."
       ],
       "media": {
         "type": "image",
@@ -471821,23 +471821,52 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This asks the same thing as approved q-4216 (two cats: how many paws in total? → 8): two four-legged animals have 8 legs. It is also very close to approved q-2666 (Woody, Jessie and Bullseye → 8 legs) and draft q-6190 (hare and tortoise → 8 legs). A fourth \"count the legs, answer 8\" question adds nothing. Drop it, or replace it with a counting question that has a different setup and a different answer.",
-        "problems": [
-          "overlap"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This asks the same thing as approved q-4216 (two cats: how many paws in total? → 8): two four-legged animals have 8 legs. It is also very close to approved q-2666 (Woody, Jessie and Bullseye → 8 legs) and draft q-6190 (hare and tortoise → 8 legs). A fourth \"count the legs, answer 8\" question adds nothing. Drop it, or replace it with a counting question that has a different setup and a different answer.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "difficulty_original": 2,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced the duplicate 'two animals = 8 legs' count with a different setup (adding Zazu the bird) and a different answer, 10.",
+        "previous": {
+          "difficulty": 2,
+          "question": "Simba the lion and Pumbaa the warthog drink at a watering hole. How many legs do they have together?",
+          "answer": "8",
+          "wrong_answers": [
+            "4",
+            "6",
+            "10"
+          ],
+          "hints": [
+            "Both of them walk on all fours.",
+            "Each one has 4 legs.",
+            "4 + 4."
+          ]
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6109",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "A moth dressed for a party it will never eat at.",
       "question": "This huge Madagascar moth has no mouth, and its long tails twist and flutter as it flies. What are the tails for?",
@@ -471849,7 +471878,7 @@
       ],
       "hints": [
         "The moth flies at night.",
-        "The tails help keep the moth safe from danger in the dark.",
+        "Scientists found out by snipping the tails off some moths and watching what happened.",
         "The tails make a hunter attack the wrong end."
       ],
       "media": {
@@ -471895,30 +471924,38 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"The tails help keep the moth safe from danger in the dark\") gives the answer away. It points to defence against a night predator, so it rules out all three wrong options (mate, steering, water) at once. Hint 2 should stay vaguer, for example about how the tails move or what they look like, and leave the defence idea to hint 3.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"The tails help keep the moth safe from danger in the dark\") gives the answer away. It points to defence against a night predator, so it rules out all three wrong options (mate, steering, water) at once. Hint 2 should stay vaguer, for example about how the tails move or what they look like, and leave the defence idea to hint 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which described echolocation and pointed straight to bats, with a vaguer hint about danger.",
+        "reason": "Made hint 2 vaguer so it no longer points to defense against a night predator.",
         "previous": {
           "hints": [
             "The moth flies at night.",
-            "Its main hunters find food with echoes.",
+            "The tails help keep the moth safe from danger in the dark.",
             "The tails make a hunter attack the wrong end."
           ]
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -472167,7 +472204,7 @@
     },
     {
       "id": "q-6113",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "This frog never skips moisturizer, and for a good reason.",
       "question": "Look at this frog's shiny, wet skin. What does its wet skin help it do?",
@@ -472179,7 +472216,7 @@
       ],
       "hints": [
         "Frogs use their skin for much more than people do.",
-        "Air passes through the thin, wet skin.",
+        "It lets some frogs stay underwater for a long time without coming up.",
         "You do it with your nose and mouth all day."
       ],
       "media": {
@@ -472225,30 +472262,38 @@
       "needs_media": true,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“Air passes through the thin, wet skin.”) gives the answer away: with these four options, air passing through the skin can only mean breathing. Hint 2 should point at something vaguer, for example that frogs also have lungs but the skin does extra work, or that they can stay underwater for a long time.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“Air passes through the thin, wet skin.”) gives the answer away: with these four options, air passing through the skin can only mean breathing. Hint 2 should point at something vaguer, for example that frogs also have lungs but the skin does extra work, or that they can stay underwater for a long time.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which mentioned lungs, with a vague hint that names no breathing organ.",
+        "reason": "Replaced the giveaway hint 2 with the reviewer's vaguer underwater clue.",
         "previous": {
           "hints": [
-            "Frogs also have lungs, but the skin helps a lot.",
+            "Frogs use their skin for much more than people do.",
             "Air passes through the thin, wet skin.",
             "You do it with your nose and mouth all day."
           ]
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -473646,7 +473691,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "artist palette paint blobs",
+        "query": "wooden painter's palette",
         "note": "A clear photo of a wooden painter's palette with a thumb hole, ideally with a few blobs of paint; no painting or easel in view.",
         "source_url": null,
         "file_url": null,
@@ -473675,23 +473720,49 @@
         "difficulty_estimate": 2,
         "notes": "An everyday object with an obvious use. Satisfying for kids, but not very surprising."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-15",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates is a clear photo of a painter's palette with a thumb hole, and the question depends on showing one (\"boards like this one\"). A new search can't be run here. The slot needs a query such as \"wooden painter's palette\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
-        "reviewed_on": "2026-10-23",
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates is a clear photo of a painter's palette with a thumb hole, and the question depends on showing one (\"boards like this one\"). A new search can't be run here. The slot needs a query such as \"wooden painter's palette\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the image query to the reviewer's suggested 'wooden painter's palette' so a new search can find the essential photo.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "artist palette paint blobs",
+            "note": "A clear photo of a wooden painter's palette with a thumb hole, ideally with a few blobs of paint; no painting or easel in view.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6133",
@@ -474482,18 +474553,20 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "car driving on highway",
+        "query": "country road car trip",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ACar_Driving_in_Outback_Queensland%2C_Diamantina_Developmental%2C_Charleville_-_Quilpie_Highway_%281979%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Car_Driving_in_Outback_Queensland%2C_Diamantina_Developmental%2C_Charleville_-_Quilpie_Highway_%281979%29.jpg/3840px-Car_Driving_in_Outback_Queensland%2C_Diamantina_Developmental%2C_Charleville_-_Quilpie_Highway_%281979%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Queensland State Archives · PDM-owner · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAutomobile_on_a_Country_Road%2C_1909_-_DPLA_-_a20dea9005c78a987a73bef3f5136ee3.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Automobile_on_a_Country_Road%2C_1909_-_DPLA_-_a20dea9005c78a987a73bef3f5136ee3.jpg/3840px-Automobile_on_a_Country_Road%2C_1909_-_DPLA_-_a20dea9005c78a987a73bef3f5136ee3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Public domain · Wikimedia Commons",
         "provider": "commons",
-        "license": "PDM-owner",
+        "license": "Public domain",
         "license_url": null,
-        "author": "Queensland State Archives",
+        "author": null,
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [
+          "PD-US"
+        ]
       },
       "fun_fact": "The GPS system uses about 30 satellites orbiting Earth to tell your device where it is.",
       "subcategory": "artificial-intelligence",
@@ -474523,18 +474596,51 @@
       "batch": "batch-15",
       "review": {
         "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-no-reason: public domain without a template).",
+        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
         "problems": [
           "media"
         ],
-        "reviewed_on": "2026-10-23",
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-no-reason: public domain without a template).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The chosen picture has an unsuitable license, so I changed the decorative query to get a new search.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "car driving on highway",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ACar_Driving_in_Outback_Queensland%2C_Diamantina_Developmental%2C_Charleville_-_Quilpie_Highway_%281979%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Car_Driving_in_Outback_Queensland%2C_Diamantina_Developmental%2C_Charleville_-_Quilpie_Highway_%281979%29.jpg/3840px-Car_Driving_in_Outback_Queensland%2C_Diamantina_Developmental%2C_Charleville_-_Quilpie_Highway_%281979%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Queensland State Archives · PDM-owner · Wikimedia Commons",
+            "provider": "commons",
+            "license": "PDM-owner",
+            "license_url": null,
+            "author": "Queensland State Archives",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": []
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6144",
@@ -474682,7 +474788,7 @@
     },
     {
       "id": "q-6146",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "Squeaky sneakers, very tall people and a lot of bouncing.",
       "question": "How many baskets does a full basketball court have?",
@@ -474693,25 +474799,27 @@
         "6"
       ],
       "hints": [
-        "Each team attacks one of them.",
-        "Teams switch sides at halftime.",
-        "It's the same as the number of teams playing."
+        "They hang about 3 m (10 ft) above the floor.",
+        "Players run up and down the whole court during a game.",
+        "There's one for each team."
       ],
       "media": {
         "type": "image",
         "role": "decorative",
         "query": "basketball on wooden floor",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ADefend_the_basketball.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Defend_the_basketball.jpg/3840px-Defend_the_basketball.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Kikaputv · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUS_Navy_111108-N-SB672-008_McWil_Sport_Surfaces_employees_begin_laying_the_hardwood_floor_for_a_basketball_court_aboard_the_Nimitz-class_aircraft_c.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/US_Navy_111108-N-SB672-008_McWil_Sport_Surfaces_employees_begin_laying_the_hardwood_floor_for_a_basketball_court_aboard_the_Nimitz-class_aircraft_c.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "U.S. Navy photo by Mass Communication Specialist 2nd Class Dylan McCord · Public domain · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Kikaputv",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kikaputv&action=edit&redlink=1",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Navy photo by Mass Communication Specialist 2nd Class Dylan McCord",
+        "author_url": null,
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [
+          "PD-USGov-Military-Navy"
+        ]
       },
       "fun_fact": "An NBA court is about 28.7 m (94 ft) long, longer than two buses parked end to end.",
       "subcategory": "basketball",
@@ -474740,31 +474848,38 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (\"Each team attacks one of them\") gives the answer away on its own, since everyone knows a basketball game has two teams. Hint 2 (\"Teams switch sides at halftime\") also points straight to two ends. Hint 1 should be vague (for example about where the baskets hang or how high they are), and hint 2 should be a softer clue. Leave hint 3 to point at the answer.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"Each team attacks one of them\") gives the answer away on its own, since everyone knows a basketball game has two teams. Hint 2 (\"Teams switch sides at halftime\") also points straight to two ends. Hint 1 should be vague (for example about where the baskets hang or how high they are), and hint 2 should be a softer clue. Leave hint 3 to point at the answer.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed “Two teams” from the description and replaced hint 2, which stated the count.",
+        "reason": "Replaced hints 1 and 2, which gave the answer away, with vaguer clues.",
         "previous": {
-          "description": "Two teams, one ball, and somewhere to throw it.",
           "hints": [
             "Each team attacks one of them.",
-            "There is one at each end of the court.",
+            "Teams switch sides at halftime.",
             "It's the same as the number of teams playing."
           ]
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -476912,10 +477027,10 @@
     },
     {
       "id": "q-6175",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "A city that took off its old name tag and never looked back.",
-      "question": "On an old map, Kinshasa is labeled “Léopoldville”, after a Belgian king. In which year did it get its current name?",
+      "question": "Kinshasa used to be called “Léopoldville”, after a Belgian king. In which year did it get its current name?",
       "answer": "1966",
       "wrong_answers": [
         "1908",
@@ -476932,9 +477047,16 @@
         "role": "illustrative",
         "query": "Congo River Kinshasa",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_view_of_Congo_River_from_Kinshasa%2C_Democratic_Republic_of_the_Congo_%28DRC%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/A_view_of_Congo_River_from_Kinshasa%2C_Democratic_Republic_of_the_Congo_%28DRC%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "EdwinAlden.1995 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "EdwinAlden.1995",
+        "author_url": "https://commons.wikimedia.org/wiki/User:EdwinAlden.1995",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Kinshasa and Brazzaville face each other across the Congo River, the closest pair of capitals in the world apart from Rome and Vatican City.",
       "subcategory": "capital-cities",
@@ -476963,30 +477085,34 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question names something you could show (“On an old map, Kinshasa is labeled ‘Léopoldville’”), so the picture has to be an old map labeled Léopoldville. All six candidates are views of the Congo River or Kinshasa, and no new search is allowed. Search again for something like “Léopoldville map Belgian Congo”, or reword the question so it doesn't refer to a map. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question names something you could show (“On an old map, Kinshasa is labeled ‘Léopoldville’”), so the picture has to be an old map labeled Léopoldville. All six candidates are views of the Congo River or Kinshasa, and no new search is allowed. Search again for something like “Léopoldville map Belgian Congo”, or reword the question so it doesn't refer to a map. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which left 1966 as the only possible option, with a vague hint about where the name came from.",
+        "reason": "Took out the map wording so the question no longer names something showable, and the Congo River image fits again.",
         "previous": {
-          "hints": [
-            "The change came a few years after the country's independence in 1960.",
-            "President Mobutu renamed many places to drop colonial names.",
-            "It was the middle of the 1960s."
-          ]
+          "question": "On an old map, Kinshasa is labeled “Léopoldville”, after a Belgian king. In which year did it get its current name?"
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -477446,10 +477572,10 @@
     },
     {
       "id": "q-6182",
-      "status": "needs_work",
-      "difficulty": 1,
+      "status": "approved",
+      "difficulty": 2,
       "description": "A job that needs patient hands and a whole lot of waiting around.",
-      "question": "This person is pressing soft white lumps into a mold. What is their job?",
+      "question": "Whose job is it to press soft white lumps of curdled milk into molds and let them rest for months?",
       "answer": "Cheesemaker",
       "wrong_answers": [
         "Baker",
@@ -477463,12 +477589,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "hands making cheese",
-        "note": "A photo of a person's hands pressing white cheese curds into a cheese mold; no text or labels visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "alpine farm meadow",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANature-grass-mountain-farm-meadow-animal.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Nature-grass-mountain-farm-meadow-animal.jpg/3840px-Nature-grass-mountain-farm-meadow-animal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Unknown authorUnknown author · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Unknown authorUnknown author",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "It takes about 10 liters (2.6 gallons) of milk to make just 1 kg (2.2 lb) of hard cheese.",
       "subcategory": "cheese",
@@ -477494,36 +477627,50 @@
         "notes": "Saying 'curds' in the question pretty much says 'cheese', and kids may not know the word anyway. A clean photo of hands pressing curds into a mold is less certain to exist on Commons or Openverse. The question is a bit plain."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows what the essential image needs: hands pressing white curds into a cheese mold. A new search isn't allowed. Either find a fitting photo by hand (e.g. \"cheese curds mold\" or \"pressing curd into cheese mould\") or reword the question so it doesn't depend on that photo. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows what the essential image needs: hands pressing white curds into a cheese mold. A new search isn't allowed. Either find a fitting photo by hand (e.g. \"cheese curds mold\" or \"pressing curd into cheese mould\") or reword the question so it doesn't depend on that photo. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Took milk out of the description and hint 1 and replaced “curds” with “soft white lumps”, so the answer isn't given away.",
+        "reason": "The essential curd-pressing photo isn't available, so I put the clue in the text and switched to a decorative farm image.",
         "previous": {
-          "description": "A job where you spend all day telling milk to get its act together.",
-          "question": "This person is pressing white curds into a mold. What is their job?",
-          "hints": [
-            "The white stuff came from milk.",
-            "Later it will be sliced and put on bread.",
-            "It might end up yellow with holes."
-          ]
+          "difficulty": 1,
+          "question": "This person is pressing soft white lumps into a mold. What is their job?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "hands making cheese",
+            "note": "A photo of a person's hands pressing white cheese curds into a cheese mold; no text or labels visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
-        "revised_on": "2026-10-23"
-      }
+        "revised_on": "2026-10-24"
+      },
+      "difficulty_original": 1
     },
     {
       "id": "q-6183",
@@ -477545,8 +477692,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Edam cheese ball",
-        "note": "A photo of a round cheese (such as Edam) covered in red wax, no brand logos.",
+        "query": "red wax cheese",
+        "note": "A clear color photo of a round cheese covered in real red wax (such as a red-waxed Edam), no brand logos or plastic wrap.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -477579,18 +477726,44 @@
       "batch": "batch-15",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates can serve as the essential image. #1 is a yellow plastic-wrapped Edam covered in brand logos, not red wax. #2 and #3 are old black-and-white dairy scenes. The question's \"this cheese\" needs a clear photo of a red-waxed ball cheese, and no new search is allowed. Also note that Dutch cheeses are often coated in plastic (PVA), so \"Plastic\" is only clearly wrong if the photo shows a real waxed cheese, such as a red-waxed Edam or Babybel. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
-        "reviewed_on": "2026-10-23",
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates can serve as the essential image. #1 is a yellow plastic-wrapped Edam covered in brand logos, not red wax. #2 and #3 are old black-and-white dairy scenes. The question's \"this cheese\" needs a clear photo of a red-waxed ball cheese, and no new search is allowed. Also note that Dutch cheeses are often coated in plastic (PVA), so \"Plastic\" is only clearly wrong if the photo shows a real waxed cheese, such as a red-waxed Edam or Babybel. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the query and note so a new search finds a real red-waxed cheese with no logos, which keeps “Plastic” clearly wrong.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Edam cheese ball",
+            "note": "A photo of a round cheese (such as Edam) covered in red wax, no brand logos.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6184",
@@ -479135,7 +479308,7 @@
     },
     {
       "id": "q-6204",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "Students at a famous university found something much more fun to do with a giant computer.",
       "question": "“I was written in 1962 on a PDP-1 computer at MIT. In me, two spaceships duel around a star whose gravity pulls them in.” What am I?",
@@ -479153,11 +479326,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "DEC PDP-1 computer",
+        "query": "PDP-1 Computer History Museum",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADEC_PDP-1_Demo_Lab_at_Mountain_View%27s_Computer_History_Museum.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/DEC_PDP-1_Demo_Lab_at_Mountain_View%27s_Computer_History_Museum.jpg/3840px-DEC_PDP-1_Demo_Lab_at_Mountain_View%27s_Computer_History_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Alexey Komarov · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Alexey Komarov",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Alexkom000",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Computer Space from 1971, the first commercially sold arcade video game, was based on this game.",
       "subcategory": "consoles-and-game-companies",
@@ -479186,26 +479366,42 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question names the PDP-1, but every candidate shows a different, later DEC machine (PDP-10, PDP-15, PDP-11), so none shows what the question names. No new search is allowed. The text itself is fine: it needs a new image search such as \"PDP-1 Computer History Museum\" (avoid photos with Spacewar! on the screen). No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question names the PDP-1, but every candidate shows a different, later DEC machine (PDP-10, PDP-15, PDP-11), so none shows what the question names. No new search is allowed. The text itself is fine: it needs a new image search such as \"PDP-1 Computer History Museum\" (avoid photos with Spacewar! on the screen). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Reworded the fun fact to call Computer Space the first commercially sold arcade video game, since “first arcade video game” is disputed.",
+        "reason": "Only the media query changed, to find a photo of the PDP-1 itself; the text is fine.",
         "previous": {
-          "fun_fact": "The first arcade video game, Computer Space from 1971, was based on this game."
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "DEC PDP-1 computer",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -479953,7 +480149,7 @@
     },
     {
       "id": "q-6215",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Tea, rain and a river right through the middle.",
       "question": "Which of these famous sights is NOT in London?",
@@ -479965,7 +480161,7 @@
       ],
       "hints": [
         "One of them is in another country.",
-        "Three of them stand close to the River Thames; the odd one stands by a different river.",
+        "Three of them are in London, a city on the River Thames; the odd one stands by a different river.",
         "It's made of iron and stands in Paris."
       ],
       "media": {
@@ -480007,34 +480203,42 @@
         "difficulty_estimate": 1,
         "notes": "The Eiffel Tower is far more famous than the other options as 'not London', so the answer stands out. It reads as a dry odd-one-out. The bus image overlaps a little with capital-cities-7, but only in the media."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 is wrong: it says all three London sights stand close to the Thames, but Buckingham Palace is about 1 km from the river (the fact check marked it wrong). Reword hint 2, e.g. “Three of them are in London, a city on the River Thames; the odd one stands by a different river.” Don't name the Seine, because that would nearly give the answer away before hint 3. Fact check: wrong. Hint 2 says all three London sights stand close to the Thames, but Buckingham Palace is about 1 km from the river.",
-        "problems": [
-          "fact"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 is wrong: it says all three London sights stand close to the Thames, but Buckingham Palace is about 1 km from the river (the fact check marked it wrong). Reword hint 2, e.g. “Three of them are in London, a city on the River Thames; the odd one stands by a different river.” Don't name the Seine, because that would nearly give the answer away before hint 3. Fact check: wrong. Hint 2 says all three London sights stand close to the Thames, but Buckingham Palace is about 1 km from the river.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which named France and solved the question, with a vaguer river clue.",
+        "reason": "Reworded hint 2 because Buckingham Palace is not close to the Thames.",
         "previous": {
           "hints": [
             "One of them is in another country.",
-            "That one is in France.",
+            "Three of them stand close to the River Thames; the odd one stands by a different river.",
             "It's made of iron and stands in Paris."
           ]
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -481499,9 +481703,9 @@
     },
     {
       "id": "q-6235",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
-      "description": "The breakfast that spends its whole life living in a little pot.",
+      "description": "A cow starts this job, and some very tiny helpers finish it.",
       "question": "This thick, creamy food is made from milk with the help of tiny bacteria. What is it?",
       "answer": "Yogurt",
       "wrong_answers": [
@@ -481555,23 +481759,39 @@
         "difficulty_estimate": 2,
         "notes": "Solid but plain. The 'bacteria' clue may puzzle 6-year-olds, but the photo carries the question. 'Little pot' in the description hints a bit at yogurt cups."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description calls the answer \"The breakfast\" that lives \"in a little pot\", which rules out two options (mashed potatoes and vanilla ice cream aren't breakfast foods) and points at yogurt cups before any hint. Rewrite it to play on the dairy or kitchen theme without naming the meal or the container. Candidate 2, berry yogurt with blueberries and a spoon, works as the image.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description calls the answer \"The breakfast\" that lives \"in a little pot\", which rules out two options (mashed potatoes and vanilla ice cream aren't breakfast foods) and points at yogurt cups before any hint. Rewrite it to play on the dairy or kitchen theme without naming the meal or the container. Candidate 2, berry yogurt with blueberries and a spoon, works as the image.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote the description so it no longer names breakfast or a little pot, which ruled out options.",
+        "previous": {
+          "description": "The breakfast that spends its whole life living in a little pot."
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6236",
@@ -482556,9 +482776,9 @@
     },
     {
       "id": "q-6249",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
-      "description": "She'd give anything for feet, which is more than most of us say on a Monday.",
+      "description": "Some dreams are so big they need a whole song to explain them.",
       "question": "Which princess is a mermaid who gives up her voice to get legs and walk on land?",
       "answer": "Ariel",
       "wrong_answers": [
@@ -482614,26 +482834,34 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description (\"She'd give anything for feet\") gives away the answer's defining trait. Against the four options alone, only the mermaid wants feet, so the answer is clear before the question is even read. Rewrite it to play on the under-the-sea or fairy-tale theme without mentioning legs, feet or giving something up.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description (\"She'd give anything for feet\") gives away the answer's defining trait. Against the four options alone, only the mermaid wants feet, so the answer is clear before the question is even read. Rewrite it to play on the under-the-sea or fairy-tale theme without mentioning legs, feet or giving something up.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the fun fact so it no longer gives away the Copenhagen statue question.",
+        "reason": "Rewrote the description so it no longer gives away the wish for feet.",
         "previous": {
-          "fun_fact": "A famous statue of the Little Mermaid has sat on a rock in Copenhagen, Denmark, since 1913."
+          "description": "She'd give anything for feet, which is more than most of us say on a Monday."
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -483082,7 +483310,7 @@
     },
     {
       "id": "q-6256",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "A chocolate whose cow clearly ate far too many grapes.",
       "question": "Milka chocolate comes in purple wrappers with a purple cow. Its name joins the German words for milk and which other ingredient?",
@@ -483094,7 +483322,7 @@
       ],
       "hints": [
         "The name was made from the start of two German words.",
-        "It's the ingredient no chocolate can be made without.",
+        "“Mil” comes from milk, and “ka” comes from the other ingredient.",
         "It comes from beans that grow on a tropical tree."
       ],
       "media": {
@@ -483140,31 +483368,38 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“It's the ingredient no chocolate can be made without”) gives the answer away: of the four options, only cocoa fits, so the hint settles the question before hint 3. Hint 2 should point more vaguely, for example to where the ingredient's plant grows or to the name's first two letters coming from “milk”. The current hint 3 about tropical tree beans could stay as the strongest hint.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“It's the ingredient no chocolate can be made without”) gives the answer away: of the four options, only cocoa fits, so the hint settles the question before hint 3. Hint 2 should point more vaguely, for example to where the ingredient's plant grows or to the name's first two letters coming from “milk”. The current hint 3 about tropical tree beans could stay as the strongest hint.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Question now says the name comes from German words, and hint 1 no longer relies on English pronunciation.",
+        "reason": "Replaced hint 2, which settled the answer, with a vaguer hint about the name's parts.",
         "previous": {
-          "question": "Milka chocolate comes in purple wrappers with a purple cow. Its name joins milk and which other ingredient?",
           "hints": [
-            "Say the name slowly: Milk… a.",
+            "The name was made from the start of two German words.",
             "It's the ingredient no chocolate can be made without.",
             "It comes from beans that grow on a tropical tree."
           ]
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -483619,10 +483854,10 @@
     },
     {
       "id": "q-6263",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "A recipe for life: take some water, add a few gases, then zap it like a mad scientist.",
-      "question": "In 1952, this glass setup sent sparks through water and gases like those of the early Earth, and it made amino acids. Which student ran it?",
+      "question": "In 1952, a glass setup sent sparks through water and gases like those of the early Earth, and it made amino acids. Which student ran it?",
       "answer": "Stanley Miller",
       "wrong_answers": [
         "Alexander Oparin",
@@ -483636,12 +483871,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "spark discharge apparatus flasks",
-        "note": "Photo or clean diagram of the Miller–Urey glass apparatus (flasks, electrodes, tubes); no labels showing the names Miller or Urey.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "laboratory glass flasks",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVerrerie-p1030896.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Verrerie-p1030896.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Rama · CC BY-SA 2.0 fr · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0 fr",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en",
+        "author": "Rama",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rama",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "In 2008, scientists tested his old sealed sample vials with modern tools and found more than 20 amino acids, more than he could detect in the 1950s.",
       "subcategory": "famous-scientists",
@@ -483667,22 +483909,48 @@
         "notes": "Facts check out (1952 run, 2008 reanalysis of the vials). The Miller–Urey experiment is standard school biology, so this is closer to 13 than 15. The image is labeled essential but adds little, and diagrams on Commons are often labeled 'Miller-Urey', which is a risk. Hint 3 nearly gives the answer, which hint 3 is allowed to do."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows the Miller–Urey apparatus. 1 is a page of 19th-century electrical machines, 2 is a breathing apparatus with a mask, and 3 is a blueprint wiring diagram for spark plugs. The question says \"this glass setup\", so it needs a picture of that apparatus, and no new search is allowed. Search Commons for \"Miller-Urey experiment\" or \"Miller Urey apparatus\" and check that no label names Miller or Urey. If none is clean, change the wording so it doesn't point to a picture and use an illustrative image such as \"laboratory glass flasks\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows the Miller–Urey apparatus. 1 is a page of 19th-century electrical machines, 2 is a breathing apparatus with a mask, and 3 is a blueprint wiring diagram for spark plugs. The question says \"this glass setup\", so it needs a picture of that apparatus, and no new search is allowed. Search Commons for \"Miller-Urey experiment\" or \"Miller Urey apparatus\" and check that no label names Miller or Urey. If none is clean, change the wording so it doesn't point to a picture and use an illustrative image such as \"laboratory glass flasks\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No apparatus photo was found, so the wording no longer points to a picture and the image is now illustrative.",
+        "previous": {
+          "question": "In 1952, this glass setup sent sparks through water and gases like those of the early Earth, and it made amino acids. Which student ran it?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "spark discharge apparatus flasks",
+            "note": "Photo or clean diagram of the Miller–Urey glass apparatus (flasks, electrodes, tubes); no labels showing the names Miller or Urey.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6264",
@@ -485412,7 +485680,7 @@
     },
     {
       "id": "q-6287",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "An island with pirates, mermaids, fairies and absolutely no bedtime rules.",
       "question": "Peter Pan lives in Neverland, and the name says it all: children there never do one thing. What is it?",
@@ -485423,7 +485691,7 @@
         "Eat vegetables"
       ],
       "hints": [
-        "Every grown-up has already done it.",
+        "It happens to everyone slowly, a little bit every year.",
         "Peter ran away as a baby after he heard his parents talk about what he would be as a man.",
         "Birthdays there don't make you any older."
       ],
@@ -485470,30 +485738,38 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1, “Every grown-up has already done it.”, gives the answer away through its wording: “grown-up” is the answer itself, and it stays that way in translation (Erwachsene/erwachsen werden, adulto/hacerse adulto). Hint 1 should be vague, for example about something that happens to everyone slowly, year by year, without the words grown-up, adult or old.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1, “Every grown-up has already done it.”, gives the answer away through its wording: “grown-up” is the answer itself, and it stays that way in translation (Erwachsene/erwachsen werden, adulto/hacerse adulto). Hint 1 should be vague, for example about something that happens to everyone slowly, year by year, without the words grown-up, adult or old.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave the answer away, with a medium-strength clue from the book.",
+        "reason": "Rewrote hint 1 so it no longer contains the word “grown-up”, which is the answer.",
         "previous": {
           "hints": [
             "Every grown-up has already done it.",
-            "Peter Pan stays a boy forever.",
+            "Peter ran away as a baby after he heard his parents talk about what he would be as a man.",
             "Birthdays there don't make you any older."
           ]
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -485755,9 +486031,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Camp Nou stands panorama",
-        "note": "Wide view of the inside of Camp Nou stadium in Barcelona, without any player shown.",
+        "role": "illustrative",
+        "query": "Camp Nou stadium interior",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -485786,38 +486062,53 @@
         "notes": "The role should be illustrative, not essential, because the text already says the stadium is FC Barcelona's. Messi is a strong default guess, but that is fine at this level."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-15",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the six candidates shows Camp Nou: 1 and 2 are taped-up cable posts in Berlin (Reichstag behind 2), 3 to 5 are Alpine and Norwegian landscape panoramas, and 6 is an engraving of a Bible scene. A new search isn't allowed in this run. The question text is fine, but it needs a real photo of the inside of Camp Nou. The rater suggested making that photo illustrative rather than essential. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
-        "reviewed_on": "2026-10-23",
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates shows Camp Nou: 1 and 2 are taped-up cable posts in Berlin (Reichstag behind 2), 3 to 5 are Alpine and Norwegian landscape panoramas, and 6 is an engraving of a Bible scene. A new search isn't allowed in this run. The question text is fine, but it needs a real photo of the inside of Camp Nou. The rater suggested making that photo illustrative rather than essential. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1 (Argentina), which gave the answer away, with a vague hint that fits all four options.",
+        "reason": "The Camp Nou image is now illustrative with a new search query, as the rater suggested; the text is unchanged.",
         "previous": {
-          "hints": [
-            "He is from Argentina.",
-            "He joined the club as a boy and stayed for over 20 years.",
-            "He wears the number 10 and is often called “Leo”."
-          ]
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Camp Nou stands panorama",
+            "note": "Wide view of the inside of Camp Nou stadium in Barcelona, without any player shown.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
       "id": "q-6292",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Sometimes standing out from your teammates is not a choice, it's a rule.",
       "question": "In soccer, which player must wear a shirt of a different color from all the teammates?",
@@ -485835,11 +486126,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "football shirts hanging",
+        "query": "soccer ball on grass",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAdidas_soccer_ball_on_a_grass_pitch_%28Unsplash%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Adidas_soccer_ball_on_a_grass_pitch_%28Unsplash%29.jpg/3840px-Adidas_soccer_ball_on_a_grass_pitch_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Peter Glaser baraida · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Peter Glaser baraida",
+        "author_url": "https://unsplash.com/@baraida",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The rule forcing goalkeepers to wear a different color started in 1909, so referees could tell who was allowed to handle the ball.",
       "subcategory": "football",
@@ -485868,30 +486166,42 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows soccer shirts or anything about soccer. 1 and 2 are Lancaster bomber planes, 3 is a shirt seen through a window, 4 and 5 are black T-shirts hung over a shopping street in Rotterdam, and 6 is checked shirts on racks in a shop. No new search is allowed, so the media slot needs another search by hand (e.g. \"soccer team jerseys\" or \"goalkeeper gloves\") or a decorative stadium image. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows soccer shirts or anything about soccer. 1 and 2 are Lancaster bomber planes, 3 is a shirt seen through a window, 4 and 5 are black T-shirts hung over a shopping street in Rotterdam, and 6 is checked shirts on racks in a shop. No new search is allowed, so the media slot needs another search by hand (e.g. \"soccer team jerseys\" or \"goalkeeper gloves\") or a decorative stadium image. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which mentioned using hands, with a vaguer hint.",
+        "reason": "New media query for a soccer image that doesn't give away the goalkeeper.",
         "previous": {
-          "hints": [
-            "This player spends most of the game near one goal.",
-            "The different shirt helps the referee see who may use their hands.",
-            "This player often wears big gloves."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "football shirts hanging",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -486130,8 +486440,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "football shin pads pair",
-        "note": "A pair of soccer shin guards on their own, not being worn.",
+        "query": "soccer shin guards",
+        "note": "A pair of modern soccer shin guards on their own, not being worn.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -486164,29 +486474,43 @@
       "batch": "batch-15",
       "review": {
         "decision": "needs_work",
-        "feedback": "The question text works, but no candidate shows soccer shin guards. Candidates 2–4 are leg protectors made for the racehorse Phar Lap (old leather with buckles). Candidate 1 is a museum case with Zamora's boots and ball, a caption card and only a faint leather piece at the edge. Search again for a clear photo of a modern pair of soccer shin guards, for example \"soccer shin guards\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
-        "reviewed_on": "2026-10-23",
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text works, but no candidate shows soccer shin guards. Candidates 2–4 are leg protectors made for the racehorse Phar Lap (old leather with buckles). Candidate 1 is a museum case with Zamora's boots and ball, a caption card and only a faint leather piece at the edge. Search again for a clear photo of a modern pair of soccer shin guards, for example \"soccer shin guards\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made hint 1 vague and hint 2 less direct so the hints build up properly.",
+        "reason": "No usable shin guard photo was found, so I changed the search to a plain “soccer shin guards” query as the reviewer suggested.",
         "previous": {
-          "hints": [
-            "They go below the knees.",
-            "They protect the bone at the front of your leg.",
-            "They are named after the shins."
-          ]
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "football shin pads pair",
+            "note": "A pair of soccer shin guards on their own, not being worn.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -486263,7 +486587,7 @@
     },
     {
       "id": "q-6298",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Lights that work like a traffic light, except the drivers want to go as fast as possible.",
       "question": "In Formula 1, five red lights hang above the cars. They switch on one by one, then all go out at once. What are they for?",
@@ -486281,11 +486605,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "F1 start lights gantry",
+        "query": "Formula One starting lights",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFIA_Start_lights.gif",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/FIA_Start_lights.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "PitLane02 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "PitLane02",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "After the fifth light comes on, there is a short wait of random length before they go out, so drivers can't guess when to go.",
       "subcategory": "formula-1-and-motorsport",
@@ -486314,19 +486645,43 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates fit: 1 is a US highway with overhead signs, and 2 and 3 are railway signals at sunset. None of them shows Formula 1 or the start lights the question names, and no new search is allowed. The question text itself is fine. Search again with something like \"Formula 1 starting lights\", or use a decorative F1 image. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fit: 1 is a US highway with overhead signs, and 2 and 3 are railway signals at sunset. None of them shows Formula 1 or the start lights the question names, and no new search is allowed. The question text itself is fine. Search again with something like \"Formula 1 starting lights\", or use a decorative F1 image. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "None of the image candidates showed F1, so I changed the search to name the Formula One start lights directly.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "F1 start lights gantry",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6299",
@@ -487683,7 +488038,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Palace of Parliament facade",
+        "query": "Palace of the Parliament Bucharest",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -487717,18 +488072,44 @@
       "batch": "batch-15",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the image candidates shows Bucharest's Palace of the Parliament: they show the parliaments of Greece, Switzerland and Denmark. A new search isn't allowed, so the slot needs a search for the Bucharest building itself (e.g. \"Palace of the Parliament Bucharest\"). No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
-        "reviewed_on": "2026-10-23",
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates shows Bucharest's Palace of the Parliament: they show the parliaments of Greece, Switzerland and Denmark. A new search isn't allowed, so the slot needs a search for the Bucharest building itself (e.g. \"Palace of the Parliament Bucharest\"). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The image candidates showed the wrong parliaments, so I changed the search to name the Bucharest building.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Palace of Parliament facade",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6317",
@@ -488422,9 +488803,9 @@
     },
     {
       "id": "q-6326",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
-      "description": "Behind every great footballer is a trophy cabinet that ran out of room.",
+      "description": "Behind every great soccer star is a trophy cabinet that ran out of room.",
       "question": "I'm a striker from Norway and the top scorer in Women's Champions League history. In 2018, I won the first women's Ballon d'Or. Who am I?",
       "answer": "Ada Hegerberg",
       "wrong_answers": [
@@ -488480,26 +488861,34 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description uses “footballer”, a UK word. For the `en` locale, house style asks for the US word where UK and US English differ, or a rewording that avoids both. Change “footballer” to something like “soccer star” or “great striker”. The facts are confirmed, and the rater's old point about “collects” golden balls has already been fixed.",
-        "problems": [
-          "style"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description uses “footballer”, a UK word. For the `en` locale, house style asks for the US word where UK and US English differ, or a rewording that avoids both. Change “footballer” to something like “soccer star” or “great striker”. The facts are confirmed, and the rater's old point about “collects” golden balls has already been fixed.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description as a general trophy-shelf joke so it no longer suggests several golden awards, goals, Norway or Lyon.",
+        "reason": "I replaced the UK word “footballer” with “soccer star” in the description.",
         "previous": {
-          "description": "She collects golden balls the way other people collect fridge magnets."
+          "description": "Behind every great footballer is a trophy cabinet that ran out of room."
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -488736,10 +489125,10 @@
     },
     {
       "id": "q-6330",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Teachers, classmates and a ringing bell: some school days are just a little different from the rest.",
-      "question": "My teacher is on a screen, my classmates are little squares, and I go to school without leaving home. What am I?",
+      "question": "With me, the teacher is on a screen, the pupils are little squares, and nobody leaves home. What am I?",
       "answer": "An online class",
       "wrong_answers": [
         "A field trip",
@@ -488756,8 +489145,8 @@
         "role": "decorative",
         "query": "school desk pencils",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ACreative-desk-pens-school_%2823698555204%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Creative-desk-pens-school_%2823698555204%29.jpg/3840px-Creative-desk-pens-school_%2823698555204%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACreative-desk-pens-school-2_%2824300233966%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Creative-desk-pens-school-2_%2824300233966%29.jpg/3840px-Creative-desk-pens-school-2_%2824300233966%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "credit": "www.Pixel.la Free Stock Photos · CC0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC0",
@@ -488794,26 +489183,34 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The riddle's speaker doesn't match its answer. In the question, “I” is a pupil (“my teacher”, “my classmates”, “I go to school without leaving home”), but “What am I?” expects “An online class”, and the hints speak as the class (“You need a computer or tablet for me”). Either make the class the speaker (“My teacher appears on a screen, the pupils are little squares, and nobody leaves home. What am I?”) or turn it into a direct question (“…What kind of school day is this?”).",
-        "problems": [
-          "style"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The riddle's speaker doesn't match its answer. In the question, “I” is a pupil (“my teacher”, “my classmates”, “I go to school without leaving home”), but “What am I?” expects “An online class”, and the hints speak as the class (“You need a computer or tablet for me”). Either make the class the speaker (“My teacher appears on a screen, the pupils are little squares, and nobody leaves home. What am I?”) or turn it into a direct question (“…What kind of school day is this?”).",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it fits all four school options and no longer points to learning from home.",
+        "reason": "I reworded the riddle so the online class is the one speaking, which matches “What am I?” and the hints.",
         "previous": {
-          "description": "School, but in your pajamas from the waist down."
+          "question": "My teacher is on a screen, my classmates are little squares, and I go to school without leaving home. What am I?"
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -489292,7 +489689,7 @@
     },
     {
       "id": "q-6337",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Never pick a fight with something taller than you that won't stop waving.",
       "question": "In a famous Spanish novel, a knight charges at tall machines with huge spinning arms, sure they are giants. What are they?",
@@ -489303,7 +489700,7 @@
         "Water wheels"
       ],
       "hints": [
-        "They need the wind to work.",
+        "The knight's name became a word for dreamers who chase impossible goals.",
         "Farmers used them to grind grain.",
         "In the Netherlands you can see many of them next to tulip fields."
       ],
@@ -489350,19 +489747,39 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (“They need the wind to work.”) gives the answer away: it rules out lighthouses, clock towers and water wheels at once, so only windmills are left. Hint 1 should be a vague hint, for example about the novel or Spain, that doesn't point to wind or grain.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (“They need the wind to work.”) gives the answer away: it rules out lighthouses, clock towers and water wheels at once, so only windmills are left. Hint 1 should be a vague hint, for example about the novel or Spain, that doesn't point to wind or grain.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Hint 1 gave the answer away by mentioning wind, so I replaced it with a vague hint about the novel.",
+        "previous": {
+          "hints": [
+            "They need the wind to work.",
+            "Farmers used them to grind grain.",
+            "In the Netherlands you can see many of them next to tulip fields."
+          ]
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6338",
@@ -490915,31 +491332,38 @@
     },
     {
       "id": "q-6358",
-      "status": "needs_work",
-      "difficulty": 2,
+      "status": "approved",
+      "difficulty": 6,
       "description": "A gift-wrapped package that nobody should ever open.",
-      "question": "Ancient Egyptians wrapped up this little mummy and painted a face on it. What kind of animal is inside?",
+      "question": "Ancient Egyptians made millions of mummies of the ibis. What kind of animal is an ibis?",
       "answer": "A bird",
       "wrong_answers": [
         "A fish",
         "A snake",
-        "A crocodile"
+        "A monkey"
       ],
       "hints": [
-        "Look at the shape of the painted face.",
-        "That face has a pointy beak.",
-        "This animal had feathers and could fly."
+        "It was the sacred animal of Thoth, the Egyptian god of writing.",
+        "It wades through the mud of the Nile on long, thin legs.",
+        "It has feathers and a long, curved beak."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "bird mummy linen painted",
-        "note": "An ancient Egyptian falcon mummy in linen wrappings with a clearly visible painted bird face and beak; no label text.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Saqqara step pyramid Djoser",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASaqqara%2C_Pyramid_of_Djoser%2C_Ancient_Egypt.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Saqqara%2C_Pyramid_of_Djoser%2C_Ancient_Egypt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg",
+        "restrictions": [],
+        "pd_reasons": []
       },
-      "fun_fact": "Egyptians mummified many falcons for the god Horus, who was shown with a falcon's head.",
+      "fun_fact": "Ibis mummies were left as offerings by pilgrims, and the tunnels at Saqqara hold millions of them.",
       "subcategory": "mummies",
       "style": null,
       "concept": "Halcón",
@@ -490962,23 +491386,61 @@
         "difficulty_estimate": 3,
         "notes": "Falcon mummies with painted faces do exist on Commons and in museum collections, but finding a clear one with no label is only fairly likely. Fish, snakes and crocodiles were also mummified, so the photo has to show the beak clearly."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows what the question and hints rely on: a bird mummy with a painted face and a visible beak. All six are plain wrapped ibis bundles with no painted face, and most look like a shapeless lump or a fish. No new search is allowed, so the media needs a hand-picked file, for example a falcon mummy with a painted face from a museum collection. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows what the question and hints rely on: a bird mummy with a painted face and a visible beak. All six are plain wrapped ibis bundles with no painted face, and most look like a shapeless lump or a fish. No new search is allowed, so the media needs a hand-picked file, for example a falcon mummy with a painted face from a museum collection. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "difficulty_original": 2,
+      "revision": {
+        "action": "revise",
+        "reason": "No suitable essential photo exists, so I rewrote it as a text question about ibis mummies with the same answer, an illustrative image of Saqqara, and difficulty raised to match.",
+        "previous": {
+          "difficulty": 2,
+          "question": "Ancient Egyptians wrapped up this little mummy and painted a face on it. What kind of animal is inside?",
+          "wrong_answers": [
+            "A fish",
+            "A snake",
+            "A crocodile"
+          ],
+          "hints": [
+            "Look at the shape of the painted face.",
+            "That face has a pointy beak.",
+            "This animal had feathers and could fly."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "bird mummy linen painted",
+            "note": "An ancient Egyptian falcon mummy in linen wrappings with a clearly visible painted bird face and beak; no label text.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "fun_fact": "Egyptians mummified many falcons for the god Horus, who was shown with a falcon's head."
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6359",
@@ -492195,7 +492657,7 @@
     },
     {
       "id": "q-6375",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "A rescue mission where the passenger had to travel very light.",
       "question": "A giant in the shape of an eagle kidnapped the goddess Idun. To fly her home, Loki became a falcon and turned her into what?",
@@ -492207,7 +492669,7 @@
       ],
       "hints": [
         "It's small enough for a bird to carry in its claws.",
-        "It grows on trees, like Idun's own apples.",
+        "You might find one lying on a forest floor in autumn.",
         "It has a hard shell."
       ],
       "media": {
@@ -492253,30 +492715,38 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“It grows on trees, like Idun's own apples.”) gives the answer away. It rules out the feather and the pebble, and comparing it to her apples suggests it isn't an apple, which leaves only the nut. Hint 2 should be vaguer, for example about how small Loki had to make her, without saying where the thing comes from.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“It grows on trees, like Idun's own apples.”) gives the answer away. It rules out the feather and the pebble, and comparing it to her apples suggests it isn't an apple, which leaves only the nut. Hint 2 should be vaguer, for example about how small Loki had to make her, without saying where the thing comes from.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which pointed only at the nut, with a tree hint that the apple also fits.",
+        "reason": "Hint 2 gave the answer away by saying it grows on trees, so I replaced it with a vaguer hint that still fits the feather and the pebble.",
         "previous": {
           "hints": [
             "It's small enough for a bird to carry in its claws.",
-            "Squirrels love to hide them.",
+            "It grows on trees, like Idun's own apples.",
             "It has a hard shell."
           ]
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -492425,7 +492895,7 @@
     },
     {
       "id": "q-6378",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "Two identical shapes walk into a lab, and one comes out looking bigger.",
       "question": "Two identical curved shapes, one above the other, look like different sizes. Which American psychologist is this illusion named after?",
@@ -492438,7 +492908,7 @@
       "hints": [
         "He worked in the late 1800s and taught in Wisconsin.",
         "The shapes look like slices of a ring, a bit like railroad tracks on a toy train set.",
-        "He also made the famous drawing that is both a duck and a rabbit well known among scientists."
+        "He made an old drawing that is both a duck and a rabbit famous among psychologists."
       ],
       "media": {
         "type": "image",
@@ -492479,45 +492949,53 @@
         "difficulty_estimate": 15,
         "notes": "Hint 3 is grammatically broken ('made the famous drawing that is both a duck and a rabbit well known'). Jastrow made the duck-rabbit famous; he did not draw it first. 'American' rules out the German Müller-Lyer. The toy track image is safe, so it could be illustrative rather than decorative."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 3 is wrong: it says Jastrow \"made\" the duck-rabbit drawing. The drawing came from an 1892 Fliegende Blätter cartoon, and Jastrow only made it well known in psychology in 1899. The sentence is also garbled. It should say something like: “He also made a famous drawing that is both a duck and a rabbit popular among scientists.” Fact check: wrong. Hint 3 says Jastrow 'made' the duck-rabbit drawing. He didn't create it; it came from an 1892 Fliegende Blätter cartoon and Jastrow popularized it in psychology in 1899.",
-        "problems": [
-          "fact"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 3 is wrong: it says Jastrow \"made\" the duck-rabbit drawing. The drawing came from an 1892 Fliegende Blätter cartoon, and Jastrow only made it well known in psychology in 1899. The sentence is also garbled. It should say something like: “He also made a famous drawing that is both a duck and a rabbit popular among scientists.” Fact check: wrong. Hint 3 says Jastrow 'made' the duck-rabbit drawing. He didn't create it; it came from an 1892 Fliegende Blätter cartoon and Jastrow popularized it in psychology in 1899.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hint 3 as one clean sentence saying Jastrow made the duck-rabbit drawing well known, not that he drew it.",
+        "reason": "Hint 3 wrongly said Jastrow made the duck-rabbit drawing, so I reworded it to say he made it famous, which is true.",
         "previous": {
           "hints": [
             "He worked in the late 1800s and taught in Wisconsin.",
             "The shapes look like slices of a ring, a bit like railroad tracks on a toy train set.",
-            "He also made the famous drawing that is both a duck and a rabbit well known."
+            "He also made the famous drawing that is both a duck and a rabbit well known among scientists."
           ]
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
       "id": "q-6379",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "Rocks don't climb. Your brain just thinks they do.",
       "question": "Stare at a waterfall for a while, then look at the rocks beside it: they seem to drift upward. When was this illusion first written about?",
       "answer": "The 4th century BC",
       "wrong_answers": [
-        "The 12th century",
+        "The 1st century BC",
         "The 17th century",
         "The 19th century"
       ],
@@ -492569,31 +493047,38 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"an Ancient Greek philosopher\") gives the answer away. The other three options are all AD centuries, so naming an ancient Greek writer leaves only \"The 4th century BC\". Hint 1 (\"before telescopes or microscopes\") already rules out the 17th and 19th centuries, so after two hints the question is solved. Hint 2 should hint at the era without pointing to antiquity, or one wrong option should be another BC century so that hint 2 no longer settles it.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"an Ancient Greek philosopher\") gives the answer away. The other three options are all AD centuries, so naming an ancient Greek writer leaves only \"The 4th century BC\". Hint 1 (\"before telescopes or microscopes\") already rules out the 17th and 19th centuries, so after two hints the question is solved. Hint 2 should hint at the era without pointing to antiquity, or one wrong option should be another BC century so that hint 2 no longer settles it.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Corrected the fun fact about 1834 and swapped hints 2 and 3 so they go from vague to strong.",
+        "reason": "I replaced the wrong answer “The 12th century” with “The 1st century BC”, so the Ancient Greek hint no longer settles the question and hint 3 (Aristotle) is still needed.",
         "previous": {
-          "hints": [
-            "It was written down long before telescopes or microscopes existed.",
-            "The writer was a teacher of Alexander the Great.",
-            "It appears in the work of an Ancient Greek philosopher."
-          ],
-          "fun_fact": "It was named the “waterfall illusion” in 1834, after a Scottish traveler watched the Falls of Foyers in the Highlands."
+          "wrong_answers": [
+            "The 12th century",
+            "The 17th century",
+            "The 19th century"
+          ]
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -494275,8 +494760,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "scissors close-up",
-        "note": "Close-up of the middle of a pair of scissors: the screw where the two blades cross, with only part of the blades and handles visible.",
+        "query": "scissors macro",
+        "note": "Close-up photo of a pair of scissors where only part is visible (for example the blades where they cross, or the pivot), still clearly recognisable as scissors.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -494309,18 +494794,44 @@
       "batch": "batch-15",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows what the question describes: a close-up of part of a pair of scissors (the pivot screw with only parts of the blades and handles). A new search isn't allowed, so the image slot is still empty. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
-        "reviewed_on": "2026-10-23",
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows what the question describes: a close-up of part of a pair of scissors (the pivot screw with only parts of the blades and handles). A new search isn't allowed, so the image slot is still empty. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No image matched the narrow pivot-screw note, so I widened the query and the note to any close-up that shows only part of a pair of scissors.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "scissors close-up",
+            "note": "Close-up of the middle of a pair of scissors: the screw where the two blades cross, with only part of the blades and handles visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6402",
@@ -495674,7 +496185,7 @@
     },
     {
       "id": "q-6420",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "A tune so famous that Final Fantasy fans can hum it before the title screen even loads.",
       "question": "Nobuo Uematsu’s “Prelude” has returned in most Final Fantasy games since 1987 and is built on rising and falling arpeggios. What is an arpeggio?",
@@ -495686,22 +496197,22 @@
       ],
       "hints": [
         "On a harp or piano it sounds like notes rippling up and down.",
-        "It uses the same notes as a chord.",
+        "The word comes from the Italian for playing the harp.",
         "Instead of all at the same time, the notes come one by one."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "harp strings close up",
+        "query": "pedal harp strings",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AClose_up_of_an_acoustic_guitar_being_played.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Close_up_of_an_acoustic_guitar_being_played.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Nataev · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALyrafl%C3%BCgel_%28ca.1820-44%29_by_Johann_Christian_Schleip%2C_Grand_Pianoforte_%28ca.1840%29_by_Erard_et_Cie%2C_Pedal_Harp_%281891-95%29_by_Lyon_%26_Healy%2C_The_Met%2C_NYC.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Lyrafl%C3%BCgel_%28ca.1820-44%29_by_Johann_Christian_Schleip%2C_Grand_Pianoforte_%28ca.1840%29_by_Erard_et_Cie%2C_Pedal_Harp_%281891-95%29_by_Lyon_%26_Healy%2C_The_Met%2C_NYC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Ana Paula Hirama · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Nataev",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Nataev",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Ana Paula Hirama",
+        "author_url": "https://www.flickr.com/people/33704098@N00",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -495732,27 +496243,38 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“It uses the same notes as a chord”) gives the answer away: only the correct option mentions a chord, so players can match the word without knowing the term. Hint 2 should be a vaguer clue, e.g. that the word comes from the Italian for playing the harp, or that guitarists often play one by picking strings one at a time.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“It uses the same notes as a chord”) gives the answer away: only the correct option mentions a chord, so players can match the word without knowing the term. Hint 2 should be a vaguer clue, e.g. that the word comes from the Italian for playing the harp, or that guitarists often play one by picking strings one at a time.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made the question's claim about the “Prelude” accurate and replaced the unconfirmed fun fact with one that can be checked.",
+        "reason": "I replaced hint 2, which matched the word “chord” in the answer, with the word's Italian harp origin.",
         "previous": {
-          "question": "Nobuo Uematsu’s “Prelude” opens almost every Final Fantasy game and is built entirely from arpeggios. What is an arpeggio?",
-          "fun_fact": "Uematsu has said he wrote the first “Prelude” very quickly, and it has been reused in Final Fantasy games for more than 30 years."
+          "hints": [
+            "On a harp or piano it sounds like notes rippling up and down.",
+            "It uses the same notes as a chord.",
+            "Instead of all at the same time, the notes come one by one."
+          ]
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -496459,9 +496981,9 @@
     },
     {
       "id": "q-6430",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
-      "description": "A tortoise that skipped the heavy-armor upgrade.",
+      "description": "This reptile's favorite game is hide-and-seek, and it always wins.",
       "question": "My shell is flat and so soft it bends. Instead of hiding inside it, I run and squeeze into a crack in the rocks. Who am I?",
       "answer": "Pancake tortoise",
       "wrong_answers": [
@@ -496517,30 +497039,34 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description “A tortoise that skipped the heavy-armor upgrade” states the answer's defining trait (a thin, soft shell), so it points to the pancake tortoise before the question is read. Rewrite it to play on the tortoise/East Africa theme without hinting at a light, soft or flat shell.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description “A tortoise that skipped the heavy-armor upgrade” states the answer's defining trait (a thin, soft shell), so it points to the pancake tortoise before the question is read. Rewrite it to play on the tortoise/East Africa theme without hinting at a light, soft or flat shell.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the English-only “pancake” wordplay in hint 3 with a fact that works in any language.",
+        "reason": "I rewrote the description so it no longer hints at a light or soft shell.",
         "previous": {
-          "hints": [
-            "I live on rocky hills in East Africa.",
-            "Most tortoises have a round, domed shell; mine is not.",
-            "You might eat something flat like me with syrup."
-          ]
+          "description": "A tortoise that skipped the heavy-armor upgrade."
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -498132,7 +498658,7 @@
     },
     {
       "id": "q-6452",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Supporting this team builds character, and mostly patience.",
       "question": "Ron Weasley's favorite Quidditch team wears bright orange robes. Complete its name: the Chudley…",
@@ -498144,7 +498670,7 @@
       ],
       "hints": [
         "Ron's bedroom walls are covered in this team's posters.",
-        "It's a word for something that goes boom.",
+        "It is famous for being one of the worst teams in the league.",
         "It fires heavy iron balls from a castle wall."
       ],
       "media": {
@@ -498190,19 +498716,39 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“a word for something that goes boom”) gives the answer away: of Cannons, Arrows, Bats and Harpies, only cannons go boom, so the second hint already settles it. Hint 2 should point to the team or its fans instead, for example that it is the worst team in the league, without describing the word.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“a word for something that goes boom”) gives the answer away: of Cannons, Arrows, Bats and Harpies, only cannons go boom, so the second hint already settles it. Hint 2 should point to the team or its fans instead, for example that it is the worst team in the league, without describing the word.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "I replaced hint 2, which described the word “cannon”, with a clue about the team's poor record.",
+        "previous": {
+          "hints": [
+            "Ron's bedroom walls are covered in this team's posters.",
+            "It's a word for something that goes boom.",
+            "It fires heavy iron balls from a castle wall."
+          ]
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6453",
@@ -498444,7 +498990,7 @@
     },
     {
       "id": "q-6456",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Retired sports stars always land somewhere with a nice office.",
       "question": "After playing Beater for the Wimbourne Wasps, Ludo Bagman went to work where?",
@@ -498455,18 +499001,25 @@
         "The Daily Prophet"
       ],
       "hints": [
-        "He helps run the Quidditch World Cup.",
+        "He swapped his Beater's bat for a desk job.",
         "His job puts him in charge of big wizarding sports events, even the Triwizard Tournament.",
         "Cornelius Fudge is his boss there."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "quidditch match broomstick",
+        "query": "besom broom",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABesom_broom_maker.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Besom_broom_maker.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Joseolgon · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Joseolgon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Joseolgon",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Bagman bet on the Quidditch World Cup with goblins and lost, and they chased him for the money.",
       "subcategory": "harry-potter",
@@ -498495,30 +499048,47 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the three image candidates fits a Quidditch/Harry Potter question (1893 and 1868 book engravings and a 1913 baby photo), and no new search is allowed. Separately, hint 1 (“helps run the Quidditch World Cup”) already almost settles it, since none of the wrong options would run sports events. Consider a vaguer first hint when the question is reworked. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the three image candidates fits a Quidditch/Harry Potter question (1893 and 1868 book engravings and a 1913 baby photo), and no new search is allowed. Separately, hint 1 (“helps run the Quidditch World Cup”) already almost settles it, since none of the wrong options would run sports events. Consider a vaguer first hint when the question is reworked. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hint 2 so it no longer uses the word “department”, which pointed straight at the Ministry.",
+        "reason": "I made hint 1 vaguer and switched the media query to a besom broom, a picture that likely exists and fits the Quidditch theme.",
         "previous": {
           "hints": [
             "He helps run the Quidditch World Cup.",
-            "He is head of a department about games and sports.",
+            "His job puts him in charge of big wizarding sports events, even the Triwizard Tournament.",
             "Cornelius Fudge is his boss there."
-          ]
+          ],
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "quidditch match broomstick",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -500227,7 +500797,7 @@
     },
     {
       "id": "q-6479",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "A wind with such a warm personality that it melts snow in hours and still gets blamed for headaches.",
       "question": "The föhn is a warm, dry wind that rushes down mountain slopes. In which mountain range did it get its name?",
@@ -500239,7 +500809,7 @@
       ],
       "hints": [
         "The air warms up as it sinks down the mountain slope.",
-        "The word reached English from German.",
+        "A similar wind in North America has its own local name: the chinook.",
         "Think of Switzerland, Austria, Heidi and Mont Blanc."
       ],
       "media": {
@@ -500247,14 +500817,14 @@
         "role": "decorative",
         "query": "mountain clouds sky",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AColorful_sky_with_pink_clouds_reflecting_in_the_water_of_a_paddy_field_and_mountains_at_dusk_Vang_Vieng_Laos.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Colorful_sky_with_pink_clouds_reflecting_in_the_water_of_a_paddy_field_and_mountains_at_dusk_Vang_Vieng_Laos.jpg/3840px-Colorful_sky_with_pink_clouds_reflecting_in_the_water_of_a_paddy_field_and_mountains_at_dusk_Vang_Vieng_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Basile Morin · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AZagedan_Lakes%2C_Mountain_cirque%2C_Caucasus_Mountains.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Zagedan_Lakes%2C_Mountain_cirque%2C_Caucasus_Mountains.jpg/3840px-Zagedan_Lakes%2C_Mountain_cirque%2C_Caucasus_Mountains.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Basile Morin",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Basile_Morin",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -500285,30 +500855,38 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"The word reached English from German\") gives the answer away: the Alps are the only German-speaking range among the options. It also falls apart in the German version of the game. Replace it with a vague hint that doesn't point to a language or country, for example that the range is in Europe's heart, or that a similar wind elsewhere has a different local name.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"The word reached English from German\") gives the answer away: the Alps are the only German-speaking range among the options. It also falls apart in the German version of the game. Replace it with a vague hint that doesn't point to a language or country, for example that the range is in Europe's heart, or that a similar wind elsewhere has a different local name.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Reordered and rewrote the hints so they go from vague to strong and the Alpine countries only come up in hint 3.",
+        "reason": "I replaced hint 2, which pointed to German and so to the Alps, with a clue about the chinook, a similar wind with its own name.",
         "previous": {
           "hints": [
+            "The air warms up as it sinks down the mountain slope.",
             "The word reached English from German.",
-            "Its warm gusts are well known in Switzerland and Austria.",
-            "Think of the mountains of Heidi and Mont Blanc."
+            "Think of Switzerland, Austria, Heidi and Mont Blanc."
           ]
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -501889,7 +502467,7 @@
     },
     {
       "id": "q-6501",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "A family with magic powers, and still nobody can fix the leaky roof.",
       "question": "“Encanto”, the film about a magical family in Colombia, won an Oscar in 2022. In which category?",
@@ -501901,7 +502479,7 @@
       ],
       "hints": [
         "Think about how the film was made, not about its songs.",
-        "The prize went to the whole film, not to one part of it, such as its music or its effects.",
+        "“Zootopia” and “Spirited Away” won this same award.",
         "Its characters were drawn and moved on a computer."
       ],
       "media": {
@@ -501909,14 +502487,14 @@
         "role": "illustrative",
         "query": "colorful Colombian town street",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AStreets_Of_My_Town_%28248878449%29.jpeg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Streets_Of_My_Town_%28248878449%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Pedro Agudelo Gaona · CC BY 3.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APedestrianized_river_front_in_Mompox%2C_Colombia.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Pedestrianized_river_front_in_Mompox%2C_Colombia.jpg/3840px-Pedestrianized_river_front_in_Mompox%2C_Colombia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "GKantaris · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY 3.0",
-        "license_url": "https://creativecommons.org/licenses/by/3.0",
-        "author": "Pedro Agudelo Gaona",
-        "author_url": "https://500px.com/peterxg",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "GKantaris",
+        "author_url": "https://commons.wikimedia.org/wiki/User:GKantaris?action=edit&redlink=1",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -501947,30 +502525,38 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: by saying the prize went to the whole film and not to its music or effects, it rules out all three wrong answers at once. Hint 1 already rules out the two music options. Hint 2 should give a vaguer clue instead, for example about the kind of studio or other films that have won the same award, without ruling out options by name.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: by saying the prize went to the whole film and not to its music or effects, it rules out all three wrong answers at once. Hint 1 already rules out the two music options. Hint 2 should give a vaguer clue instead, for example about the kind of studio or other films that have won the same award, without ruling out options by name.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave away that the film is animated, with a vaguer hint that keeps the wrong answers in play.",
+        "reason": "I replaced hint 2, which ruled out all three wrong answers, with past winners of the award; neither of them won a music prize.",
         "previous": {
           "hints": [
             "Think about how the film was made, not about its songs.",
-            "No real actors were filmed for it.",
+            "The prize went to the whole film, not to one part of it, such as its music or its effects.",
             "Its characters were drawn and moved on a computer."
           ]
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -502491,19 +503077,19 @@
     },
     {
       "id": "q-6509",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "The coolest friend at any party, quite literally.",
       "question": "Frozone from “The Incredibles” can make ice almost anywhere. What does he make it from?",
       "answer": "Water in the air",
       "wrong_answers": [
         "Snow in his boots",
-        "Ice in his backpack",
-        "Frost in his gloves"
+        "His own cold breath",
+        "Ice packed in his suit"
       ],
       "hints": [
         "His ice shoots out of his hands as he moves.",
-        "It's around you all the time, even if you can't see it.",
+        "Fog and clouds are made of the same stuff.",
         "When he's thirsty and dried out, his power is weak."
       ],
       "media": {
@@ -502549,30 +503135,43 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“It's around you all the time, even if you can't see it”) gives the answer away. All three wrong answers are things Frozone would carry (boots, backpack, gloves), so only “Water in the air” fits that hint. Hint 2 should be vaguer, or the wrong answers should not all follow the “something he carries” pattern, for example by using non-carried sources like his own sweat or the cold in his body.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“It's around you all the time, even if you can't see it”) gives the answer away. All three wrong answers are things Frozone would carry (boots, backpack, gloves), so only “Water in the air” fits that hint. Hint 2 should be vaguer, or the wrong answers should not all follow the “something he carries” pattern, for example by using non-carried sources like his own sweat or the cold in his body.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which ruled out all three carried-item wrong answers, with a vague hint about his ice coming out of his hands.",
+        "reason": "Hint 2 gave the answer away against the three ‘carried’ wrong answers, so I made it vaguer and changed two wrong answers so they aren't all things he carries.",
         "previous": {
+          "wrong_answers": [
+            "Snow in his boots",
+            "Ice in his backpack",
+            "Frost in his gloves"
+          ],
           "hints": [
-            "He doesn't need to carry anything with him.",
+            "His ice shoots out of his hands as he moves.",
             "It's around you all the time, even if you can't see it.",
             "When he's thirsty and dried out, his power is weak."
           ]
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -502809,7 +503408,7 @@
     },
     {
       "id": "q-6513",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "A feathery forest neighbor who is very wise and very chatty.",
       "question": "Listen: when do you usually hear this animal calling?",
@@ -502867,37 +503466,52 @@
       "needs_media": true,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "All six background candidates show the Moon or a night sky, so the background reveals the answer “At night” while the owl call plays. The background needs a time-neutral forest picture instead (for example “dense forest trees” in daylight-neutral shade). The question text itself is fine. No suitable background picture found.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "All six background candidates show the Moon or a night sky, so the background reveals the answer “At night” while the owl call plays. The background needs a time-neutral forest picture instead (for example “dense forest trees” in daylight-neutral shade). The question text itself is fine. No suitable background picture found.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": {
-        "query": "forest at night moon",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "query": "dense green forest trees",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADense_green_woodland.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Dense_green_woodland.jpg/3840px-Dense_green_woodland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Mar Mkrtchyan · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Mar Mkrtchyan",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Mar_Mkrtchyan&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description and hints 1–2 so they no longer point at the time of day.",
+        "reason": "The background query asked for the Moon and a night sky, which gave away “At night”, so I swapped it for a forest picture that doesn't show the time of day.",
         "previous": {
-          "description": "A forest neighbor with a lot to say and a very strange schedule.",
-          "hints": [
-            "It sleeps while you're at school.",
-            "It has huge eyes for seeing in the dark.",
-            "It's an owl, and owls hunt when the Sun is gone."
-          ]
+          "background": {
+            "query": "forest at night moon",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -504952,7 +505566,7 @@
       "answer": "Blacks",
       "wrong_answers": [
         "Reds",
-        "Golds",
+        "Greens",
         "Stars"
       ],
       "hints": [
@@ -505004,18 +505618,40 @@
       "batch": "batch-15",
       "review": {
         "decision": "needs_work",
-        "feedback": "Approved pool questions q-2854 (“In 2005 the All Blacks first performed a new haka…”) and q-2987 (“Dan Carter ended his All Blacks career…”) contain this question's answer word for word, so seeing either one gives this question away. Separately, “Golds” is a risky wrong answer: the 1907–08 New Zealand rugby league touring team was really nicknamed the “All Golds”. If this question is kept, replace “Golds” with something like “Greens”.",
+        "feedback": "Approved pool questions q-2854 (“In 2005 the All Blacks first performed a new haka…”) and q-2987 (“Dan Carter ended his All Blacks career…”) both use the full nickname “All Blacks”. Anyone who has seen either one already knows this answer. Either drop this question or reword those two to say “New Zealand” instead of “All Blacks”.",
         "problems": [
           "overlap"
         ],
-        "reviewed_on": "2026-10-23",
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Approved pool questions q-2854 (“In 2005 the All Blacks first performed a new haka…”) and q-2987 (“Dan Carter ended his All Blacks career…”) contain this question's answer word for word, so seeing either one gives this question away. Separately, “Golds” is a risky wrong answer: the 1907–08 New Zealand rugby league touring team was really nicknamed the “All Golds”. If this question is kept, replace “Golds” with something like “Greens”.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "I replaced “Golds” with “Greens” because a real New Zealand rugby league team was called the “All Golds”; the overlap with q-2854 and q-2987 has to be handled at pool level.",
+        "previous": {
+          "wrong_answers": [
+            "Reds",
+            "Golds",
+            "Stars"
+          ]
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6542",
@@ -506777,10 +507413,10 @@
     },
     {
       "id": "q-6565",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "A hat that has marched with soldiers and strolled down fashion runways.",
-      "question": "This close-up shows part of a hat. What is this hat called?",
+      "question": "What is this kind of hat called?",
       "answer": "Beret",
       "wrong_answers": [
         "Beanie",
@@ -506795,11 +507431,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "black Basque beret",
-        "note": "Close-up of the top of a wool beret, showing the soft round felt and the small stalk in the middle.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "query": "wool beret hat",
+        "note": "A whole soft, round, flat wool beret, clearly recognisable; no text naming it.",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeret_%28AM_2001.25.383-1%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Beret_%28AM_2001.25.383-1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Hills Hats · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Hills Hats",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Berets are knitted as a big wool circle, then shrunk in water until the wool turns into thick felt.",
       "subcategory": "traditional-dress",
@@ -506828,19 +507471,44 @@
       "needs_media": true,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question promises \"This close-up shows part of a hat\", but no candidate is a close-up of a beret's top with the stalk. All six show whole berets worn by people, in a painting, crowds or an old sports photo, and no new search is allowed. Either find a real close-up of a beret top (e.g. \"beret top close-up\"), or reword the question to show a whole beret, which would make it much easier. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question promises \"This close-up shows part of a hat\", but no candidate is a close-up of a beret's top with the stalk. All six show whole berets worn by people, in a painting, crowds or an old sports photo, and no new search is allowed. Either find a real close-up of a beret top (e.g. \"beret top close-up\"), or reword the question to show a whole beret, which would make it much easier. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No close-up of a beret's top exists, so I reworded the question to show a whole beret, which is a photo that does exist, and changed the media query and note to match.",
+        "previous": {
+          "question": "This close-up shows part of a hat. What is this hat called?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "black Basque beret",
+            "note": "Close-up of the top of a wool beret, showing the soft round felt and the small stalk in the middle.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6566",
@@ -507293,7 +507961,7 @@
     },
     {
       "id": "q-6572",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Lasers, flying saucers, a president under pressure, and Earth's last hope came from the place nobody expected.",
       "question": "In Tim Burton's 1996 film “Mars Attacks!”, what finally defeats the big-brained Martian invaders?",
@@ -507305,7 +507973,7 @@
       ],
       "hints": [
         "The weapon was found by accident, far away from the army.",
-        "A teenager discovered it while rescuing his grandma from her care home.",
+        "A teenager discovered it while rescuing his grandma from her retirement home.",
         "Hearing Slim Whitman's “Indian Love Call” is too much for the Martians."
       ],
       "media": {
@@ -507351,30 +508019,38 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 uses \"care home\", which is British; in US English it is \"nursing home\" or \"retirement home\". The en locale asks for wording everyone understands, and the US word where the two differ. Change it to \"retirement home\". The facts and media are fine.",
-        "problems": [
-          "style"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 uses \"care home\", which is British; in US English it is \"nursing home\" or \"retirement home\". The en locale asks for wording everyone understands, and the US word where the two differ. Change it to \"retirement home\". The facts and media are fine.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hint 2 so it no longer says “listening”, which only fits a song.",
+        "reason": "I changed the British “care home” in hint 2 to “retirement home”, which everyone understands.",
         "previous": {
           "hints": [
             "The weapon was found by accident, far away from the army.",
-            "A grandma in a care home was listening to it.",
+            "A teenager discovered it while rescuing his grandma from her care home.",
             "Hearing Slim Whitman's “Indian Love Call” is too much for the Martians."
           ]
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -508014,7 +508690,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Japan supporters face paint",
+        "query": "Hinomaru face paint",
         "note": "A sports fan with the Japanese flag (red circle on white) clearly painted on the cheek or face; no text naming the country.",
         "source_url": null,
         "file_url": null,
@@ -508048,18 +508724,44 @@
       "batch": "batch-15",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows a Japanese flag face paint. 1 is German colours, 2 is Texas Longhorns, 3 is Pittsburgh Steelers, 4 is a US-style star, 5 is Australian fans, and 6 is the Trinity College gate. The question can't be played without this essential image, and no new search is allowed. To fix it, find a Commons photo of a fan with the red circle on white painted on the face (for example \"Japan fan face painting\" or \"Hinomaru face paint\") by hand. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
-        "reviewed_on": "2026-10-23",
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows a Japanese flag face paint. 1 is German colours, 2 is Texas Longhorns, 3 is Pittsburgh Steelers, 4 is a US-style star, 5 is Australian fans, and 6 is the Trinity College gate. The question can't be played without this essential image, and no new search is allowed. To fix it, find a Commons photo of a fan with the red circle on white painted on the face (for example \"Japan fan face painting\" or \"Hinomaru face paint\") by hand. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The essential face-paint photo wasn't found, so I changed the query to the reviewer's more exact search term to get a new search; the text stays the same.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Japan supporters face paint",
+            "note": "A sports fan with the Japanese flag (red circle on white) clearly painted on the cheek or face; no text naming the country.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6582",
@@ -509085,7 +509787,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "empty bench basketball court",
+        "query": "basketball team bench sideline",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -509119,30 +509821,43 @@
       "batch": "batch-15",
       "review": {
         "decision": "needs_work",
-        "feedback": "The question says \"this bench\", so the picture has to show a team bench beside an indoor game court (with chairs or a bench along the sideline). None of the candidates shows one, and a new search isn't allowed. The text itself is fine. Search again for something like \"basketball team bench sideline\". No suitable picture found for this question.",
+        "feedback": "No adequate image: candidates 1 and 2 show players sitting on the bench (the answer), 3 is a labelled court diagram, 4 shows a coach and fans rather than a team bench. Need a photo of an empty team bench beside a court. No suitable picture found for this question.",
         "problems": [
           "media"
         ],
-        "reviewed_on": "2026-10-23",
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question says \"this bench\", so the picture has to show a team bench beside an indoor game court (with chairs or a bench along the sideline). None of the candidates shows one, and a new search isn't allowed. The text itself is fine. Search again for something like \"basketball team bench sideline\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description, which ruled out the fans option, and replaced hint 1, which nearly named the answer.",
+        "reason": "No picture showed a team bench, so I changed the media query to the reviewer's suggested search to get a new search.",
         "previous": {
-          "description": "The best seat in the arena, and you can't buy a ticket for it.",
-          "hints": [
-            "They wear the same jerseys as the team on the court.",
-            "They jump up and cheer when their team scores.",
-            "The coach can send them into the game at any moment."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "empty bench basketball court",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -509337,20 +510052,11 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "person listening hand ear",
+        "query": "hand cupped behind ear",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AThomas_Edison_listening_to_phonograph%2C_hand_cupped_to_ear._%285ece41ec4fb54c298c9cb1aae635e0fe%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Thomas_Edison_listening_to_phonograph%2C_hand_cupped_to_ear._%285ece41ec4fb54c298c9cb1aae635e0fe%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Unknown authorUnknown author",
-        "author_url": null,
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-US-expired"
-        ]
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "The tree makes waves in the air either way; philosophers argue about whether it's a “sound” if nobody hears it.",
       "subcategory": "big-questions",
@@ -509380,30 +510086,52 @@
       "batch": "batch-15",
       "review": {
         "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-expired).",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
-        "reviewed_on": "2026-10-23",
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which described a tree, and removed “nature” from the description because it ruled out the kitchen glass.",
+        "reason": "The picked image's licence only covers the US, so I changed the query to get a new search for a similar listening picture that doesn't show a tree.",
         "previous": {
-          "description": "Nature's biggest mystery: nobody was there, so nobody can tell.",
-          "hints": [
-            "It happens far away from any people.",
-            "It's tall, has leaves and grew for many years.",
-            "Woodcutters make this happen with an axe."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "person listening hand ear",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AThomas_Edison_listening_to_phonograph%2C_hand_cupped_to_ear._%285ece41ec4fb54c298c9cb1aae635e0fe%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Thomas_Edison_listening_to_phonograph%2C_hand_cupped_to_ear._%285ece41ec4fb54c298c9cb1aae635e0fe%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Unknown authorUnknown author",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-expired"
+            ]
+          }
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -512170,7 +512898,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "shiny silk fabric close-up",
+        "query": "silk fabric rolls",
         "note": "A clear photo of shiny silk cloth or rolls of silk fabric, with no animals or cocoons visible.",
         "source_url": null,
         "file_url": null,
@@ -512204,18 +512932,45 @@
       "batch": "batch-15",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates shows clear, shiny silk cloth. 1–2 are samurai armour details, 3–4 are a crocheted gold jacket and 5–6 are piña (pineapple-fiber) cloth, which is a different material. Another search isn't allowed, so the slot needs new media, for example \"silk fabric rolls\" or \"colorful silk scarves\". It could also become illustrative with a query like \"silk road caravan\". No suitable picture found for this question.",
+        "feedback": "Hint 2 (“It's a caterpillar that eats mulberry leaves”) gives the answer away: the silkworm is the only caterpillar among the options, so hint 2 solves the question. It should be a vaguer clue, for example that the animal is much smaller than the other options, without naming caterpillars or mulberry. Also, no candidate shows shiny silk cloth. #2 is matte market fabric, #1 is a tissue ad, #3 and #4 are sketches, and #5 and #6 are Rolls-Royce cars. A new search is needed. No suitable picture found for this question.",
         "problems": [
+          "giveaway",
           "media"
         ],
-        "reviewed_on": "2026-10-23",
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates shows clear, shiny silk cloth. 1–2 are samurai armour details, 3–4 are a crocheted gold jacket and 5–6 are piña (pineapple-fiber) cloth, which is a different material. Another search isn't allowed, so the slot needs new media, for example \"silk fabric rolls\" or \"colorful silk scarves\". It could also become illustrative with a query like \"silk road caravan\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No candidate showed silk cloth, so the media query is now a more concrete search for silk fabric.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "shiny silk fabric close-up",
+            "note": "A clear photo of shiny silk cloth or rolls of silk fabric, with no animals or cocoons visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6636",
@@ -514634,7 +515389,7 @@
     },
     {
       "id": "q-6668",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Clang, clang, clang: the soundtrack of a Roman god's workshop.",
       "question": "Look: the Roman god of blacksmiths is often shown with a hammer and this heavy iron block. What is it called?",
@@ -514652,21 +515407,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "blacksmith anvil hammer",
+        "query": "anvil with hammer",
         "note": "A close-up photo of a blacksmith's iron anvil, ideally with a hammer on it.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AFluid_hammer%2C_blacksmith%2C_hammer_machine%2C_anvil%2C_crafts_Fortepan_86855.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Fluid_hammer%2C_blacksmith%2C_hammer_machine%2C_anvil%2C_crafts_Fortepan_86855.jpg/3840px-Fluid_hammer%2C_blacksmith%2C_hammer_machine%2C_anvil%2C_crafts_Fortepan_86855.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHammer-anvil-notice-icon.png",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Hammer-anvil-notice-icon.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Osmo Lundell · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "FOTO:Fortepan — ID 86855: Adományozó/Donor: Magyar Földrajzi Múzeum / Erdélyi Mór cége.",
-        "author_url": "https://fortepan.hu/",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Osmo Lundell",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Osmo_Lundell",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-1923",
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "The Romans said the god Vulcan had his forge under a volcano, and the word “volcano” comes from his name.",
       "subcategory": "roman-mythology",
@@ -514695,26 +515447,52 @@
       "needs_media": true,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-1923, PD-US-expired).",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-1923, PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Changed “always shown” to “often shown” so the question doesn't overstate the fact.",
+        "reason": "The picked image's licence only works in the US, so the media slot gets a new search for a properly licensed anvil photo.",
         "previous": {
-          "question": "Look: the Roman god of blacksmiths was always shown with a hammer and this heavy iron block. What is it called?"
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "blacksmith anvil hammer",
+            "note": "A close-up photo of a blacksmith's iron anvil, ideally with a hammer on it.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AFluid_hammer%2C_blacksmith%2C_hammer_machine%2C_anvil%2C_crafts_Fortepan_86855.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Fluid_hammer%2C_blacksmith%2C_hammer_machine%2C_anvil%2C_crafts_Fortepan_86855.jpg/3840px-Fluid_hammer%2C_blacksmith%2C_hammer_machine%2C_anvil%2C_crafts_Fortepan_86855.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "FOTO:Fortepan — ID 86855: Adományozó/Donor: Magyar Földrajzi Múzeum / Erdélyi Mór cége.",
+            "author_url": "https://fortepan.hu/",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-1923",
+              "PD-US-expired"
+            ]
+          }
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -516691,7 +517469,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "paper boat floating water",
+        "query": "paper boat puddle",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -516720,23 +517498,49 @@
         "difficulty_estimate": 1,
         "notes": "The wrong answers (the sky, your desk, the ocean) are absurd, which is acceptable for very young players."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-15",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows a paper boat or a puddle: the sheet has an iceberg sketch, an old print of sailing ships, a Singapore stadium, a Hamburg harbor barge, an archive harbor scan and a crane lifting a sunk wreck. A new search isn't allowed this round. The question text itself is fine; the slot needs a new search such as \"paper boat puddle\" or \"origami boat water\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
-        "reviewed_on": "2026-10-23",
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a paper boat or a puddle: the sheet has an iceberg sketch, an old print of sailing ships, a Singapore stadium, a Hamburg harbor barge, an archive harbor scan and a crane lifting a sunk wreck. A new search isn't allowed this round. The question text itself is fine; the slot needs a new search such as \"paper boat puddle\" or \"origami boat water\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No candidate showed a paper boat, so the media query is now more concrete.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "paper boat floating water",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6696",
@@ -518004,7 +518808,7 @@
     },
     {
       "id": "q-6712",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "The only person at the match with the best seat and no snacks.",
       "question": "Look at the photo: who is the person sitting high up in this chair during a tennis match?",
@@ -518022,11 +518826,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "umpire seated tennis chair",
+        "query": "chair umpire tennis match",
         "note": "A tennis chair umpire sitting in the tall umpire's chair beside the net during a match.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2019_USTA_U.S._Open_qualies_chair_umpire.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/2019_USTA_U.S._Open_qualies_chair_umpire.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Beyond My Ken · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Beyond My Ken",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Beyond_My_Ken",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "In big tennis matches the umpire sits about 2 meters (6 feet) above the court to see the whole game.",
       "subcategory": "tennis",
@@ -518055,19 +518866,43 @@
       "needs_media": true,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows what the question describes: an umpire sitting in the tall chair during a match. #2, #3 and #4 show empty umpire chairs (Perrier branding in #3/#4). #1 is an old black-and-white match where the chair is tiny. #5 is a hunting look-out and #6 is a tennis club sign. A new search is not allowed, so the media slot needs a new search term such as \"chair umpire tennis match\" or \"tennis umpire high chair\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows what the question describes: an umpire sitting in the tall chair during a match. #2, #3 and #4 show empty umpire chairs (Perrier branding in #3/#4). #1 is an old black-and-white match where the chair is tiny. #5 is a hunting look-out and #6 is a tennis club sign. A new search is not allowed, so the media slot needs a new search term such as \"chair umpire tennis match\" or \"tennis umpire high chair\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No candidate showed an umpire sitting in the chair, so the media query is now a more precise search.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "umpire seated tennis chair",
+            "note": "A tennis chair umpire sitting in the tall umpire's chair beside the net during a match.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6713",
@@ -518396,10 +519231,10 @@
     },
     {
       "id": "q-6717",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Sports gear that once belonged to a bird, at least partly.",
-      "question": "This close-up shows part of an object used in a sport. What is the object?",
+      "question": "This object is used in a sport. What is it?",
       "answer": "A shuttlecock",
       "wrong_answers": [
         "A feather duster",
@@ -518414,11 +519249,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "feather shuttlecock badminton",
-        "note": "Close-up of the overlapping white feathers of a badminton shuttlecock, cork tip partly or not visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "query": "badminton shuttlecock",
+        "note": "A clear photo of a whole feather badminton shuttlecock, with its white feathers and cork tip.",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVolant_badminton.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Volant_badminton.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "CC BY-SA 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": "No machine-readable author provided. Badplayer~commonswiki assumed (based on copyright claims).",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Badplayer~commonswiki&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "A top-quality shuttlecock has 16 goose feathers, and a smash can make it fly faster than 400 km/h (250 mph).",
       "subcategory": "tennis",
@@ -518447,19 +519289,44 @@
       "needs_media": true,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question says the photo is a close-up of part of the object, and the note asks for the feathers with little or no cork showing. All six candidates show the whole shuttlecock with the cork tip in view, so the picture would contradict the question and give the answer away at once. No new search is allowed. Either find a real close-up of the feathers by hand, or reword the question to something like \"This object is used in a sport. What is it?\" No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question says the photo is a close-up of part of the object, and the note asks for the feathers with little or no cork showing. All six candidates show the whole shuttlecock with the cork tip in view, so the picture would contradict the question and give the answer away at once. No new search is allowed. Either find a real close-up of the feathers by hand, or reword the question to something like \"This object is used in a sport. What is it?\" No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The question asked about a close-up of part of the object, but only photos of the whole shuttlecock exist. The question and media note now ask about the whole object.",
+        "previous": {
+          "question": "This close-up shows part of an object used in a sport. What is the object?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "feather shuttlecock badminton",
+            "note": "Close-up of the overlapping white feathers of a badminton shuttlecock, cork tip partly or not visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6718",
@@ -518535,7 +519402,7 @@
     },
     {
       "id": "q-6719",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Sam had heard about these in a hobbit rhyme and never thought he'd meet one for real.",
       "question": "The Southrons from Harad bring giant oliphaunts with them to Gondor. What do they use them for?",
@@ -518546,7 +519413,7 @@
         "Carrying the king's gold"
       ],
       "hints": [
-        "The oliphaunts arrive on the day of a great battle.",
+        "The Southrons come from hot lands far to the south.",
         "They stomp across the fields in front of Minas Tirith.",
         "They are like giant war elephants."
       ],
@@ -518593,32 +519460,38 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 gives the answer away. “The oliphaunts arrive on the day of a great battle” points straight to “Carrying warriors into battle”, and none of the other options (ships, farm fields, the king's gold) has anything to do with a battle. Hint 1 should be vague, for example about where the Southrons come from, and only hint 2 or 3 should bring in the battle.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 gives the answer away. “The oliphaunts arrive on the day of a great battle” points straight to “Carrying warriors into battle”, and none of the other options (ships, farm fields, the king's gold) has anything to do with a battle. Hint 1 should be vague, for example about where the Southrons come from, and only hint 2 or 3 should bring in the battle.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made hint 1 vague, removed the unverified Hannibal-inspiration claim from the fun fact, and rewrote the description to match the story.",
+        "reason": "Hint 1 mentioned the battle and gave the answer away, so it now names where the Southrons come from instead.",
         "previous": {
-          "description": "Sam always wanted to see one, and then he wished he hadn't.",
           "hints": [
-            "The oliphaunts have towers on their backs, full of soldiers.",
+            "The oliphaunts arrive on the day of a great battle.",
             "They stomp across the fields in front of Minas Tirith.",
             "They are like giant war elephants."
-          ],
-          "fun_fact": "Tolkien's oliphaunts were inspired by the war elephants of history, like the ones Hannibal led across the Alps."
+          ]
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -518695,7 +519568,7 @@
     },
     {
       "id": "q-6721",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "Fancy handwriting so beautiful even the villains use it.",
       "question": "You look at the flowing Elvish letters on the One Ring. In Tolkien's legend, who invented this script, the Tengwar?",
@@ -518713,11 +519586,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "One Ring inscription replica",
+        "query": "Tengwar script",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_star_shines_upon_the_hour_of_the_meeting_of_our_ways_tengwar.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/A_star_shines_upon_the_hour_of_the_meeting_of_our_ways_tengwar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Lilijuros · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Lilijuros",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Lilijuros",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Fëanor based the Tengwar on an older Elvish script made by the loremaster Rúmil.",
       "subcategory": "the-lord-of-the-rings",
@@ -518746,31 +519626,42 @@
       "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the six candidates fits: they show military medals (one a Norwegian Nazi-party cross), a Holbein portrait, a bell tower and a museum case, and none shows the One Ring or Tengwar script. No new search is allowed, so the media slot can't be filled. The question text itself is fine; it needs a new media search, for example \"Tengwar script\" or \"One Ring replica\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates fits: they show military medals (one a Norwegian Nazi-party cross), a Holbein portrait, a bell tower and a museum case, and none shows the One Ring or Tengwar script. No new search is allowed, so the media slot can't be filled. The question text itself is fine; it needs a new media search, for example \"Tengwar script\" or \"One Ring replica\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the fun fact and hint 2, which repeated answers of other pool questions.",
+        "reason": "No candidate showed the Ring or Tengwar, so the media query now asks for Tengwar script.",
         "previous": {
-          "hints": [
-            "He was the greatest craftsman of the Elves.",
-            "He also made the three Silmarils.",
-            "His name means “spirit of fire”."
-          ],
-          "fun_fact": "The inscription on the One Ring is written in Elvish letters, but its words are in the Black Speech of Mordor."
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "One Ring inscription replica",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -520376,7 +521267,7 @@
     },
     {
       "id": "q-6743",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "A tiny feathered roommate who is always up before everyone else in the house.",
       "question": "Look at this close-up of a pet bird. Which bird is it?",
@@ -520387,7 +521278,7 @@
         "Toucan"
       ],
       "hints": [
-        "It is a small kind of parrot.",
+        "In the wild, it lives in big flocks in Australia.",
         "It is one of the most popular pet birds in the world.",
         "It has wavy stripes on its head and back."
       ],
@@ -520434,28 +521325,38 @@
       "needs_media": true,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (\"It is a small kind of parrot.\") gives the answer away: none of the wrong answers (canary, pigeon, toucan) is a parrot, so the first hint alone settles it. Replace it with a vague hint that fits several of the options, such as where the bird comes from in the wild (Australia), without saying what kind of bird it is.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"It is a small kind of parrot.\") gives the answer away: none of the wrong answers (canary, pigeon, toucan) is a parrot, so the first hint alone settles it. Replace it with a vague hint that fits several of the options, such as where the bird comes from in the wild (Australia), without saying what kind of bird it is.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Changed the answer to “Budgerigar”, updated the fun fact to match, and rewrote the description so it no longer hints at talking.",
+        "reason": "Hint 1 said “parrot” and gave the answer away, so it now gives the vaguer clue that the bird comes from Australia.",
         "previous": {
-          "description": "A chatterbox in a feather coat who never runs out of things to say.",
-          "answer": "Budgie",
-          "fun_fact": "All wild budgies are green and yellow; blue and white ones were bred by people."
+          "hints": [
+            "It is a small kind of parrot.",
+            "It is one of the most popular pet birds in the world.",
+            "It has wavy stripes on its head and back."
+          ]
         },
-        "revised_on": "2026-10-23"
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -523443,26 +524344,26 @@
     },
     {
       "id": "q-6783",
-      "status": "needs_work",
-      "difficulty": 3,
+      "status": "approved",
+      "difficulty": 12,
       "description": "The most famous dinner party in art, and nobody brought dessert.",
-      "question": "This painting by Leonardo da Vinci shows Jesus at his last supper. How many people sit at the table with him?",
-      "answer": "12",
+      "question": "Leonardo da Vinci painted The Last Supper on the wall of a monastery dining hall. In which city can you still see it?",
+      "answer": "Milan",
       "wrong_answers": [
-        "10",
-        "11",
-        "13"
+        "Florence",
+        "Rome",
+        "Venice"
       ],
       "hints": [
-        "Count the people on both sides of Jesus.",
-        "They sit in groups of three.",
-        "It is the number of his apostles."
+        "The city is in northern Italy.",
+        "It is famous for fashion and a huge Gothic cathedral.",
+        "Its two big soccer clubs are AC and Inter."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
+        "role": "illustrative",
         "query": "The Last Supper Leonardo da Vinci",
-        "note": "The full painting The Last Supper by Leonardo da Vinci, showing Jesus in the middle and all twelve apostles at the table.",
+        "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3ALeonardo_da_Vinci_%281452-1519%29_-_The_Last_Supper_%281495-1498%29.jpg",
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Leonardo_da_Vinci_%281452-1519%29_-_The_Last_Supper_%281495-1498%29.jpg/3840px-Leonardo_da_Vinci_%281452-1519%29_-_The_Last_Supper_%281495-1498%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "credit": "Leonardo da Vinci · Public domain · Wikimedia Commons",
@@ -523477,7 +524378,7 @@
           "PD-old-100-expired"
         ]
       },
-      "fun_fact": "Leonardo painted The Last Supper on a wall of a dining hall in Milan, Italy, more than 500 years ago.",
+      "fun_fact": "Leonardo painted on dry plaster instead of using true fresco, so the paint began flaking off while he was still alive.",
       "subcategory": "world-religions",
       "style": null,
       "concept": "Jesús de Nazaret",
@@ -523501,22 +524402,72 @@
         "notes": "Players may mix up 12 and 13 (13 counting Jesus), but “with him” makes it clear. The painting is easy to find and the figures can be counted."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-15",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This is the same fact as approved q-1563 (“How many apostles did Jesus have?” → 12). The people at the table with Jesus are his twelve apostles, and hint 3 says so directly, so seeing one question gives away the other. Drop it, or replace it with a different Last Supper fact (for example, the city where the painting is).",
-        "problems": [
-          "overlap"
-        ],
-        "reviewed_on": "2026-10-23",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This is the same fact as approved q-1563 (“How many apostles did Jesus have?” → 12). The people at the table with Jesus are his twelve apostles, and hint 3 says so directly, so seeing one question gives away the other. Drop it, or replace it with a different Last Supper fact (for example, the city where the painting is).",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "difficulty_original": 3,
+      "revision": {
+        "action": "revise",
+        "reason": "Following the reviewer, it now asks which city has the painting (Milan) instead of repeating the twelve-apostles fact from q-1563; the image is now illustrative and the difficulty, hints and fun fact are updated.",
+        "previous": {
+          "difficulty": 3,
+          "question": "This painting by Leonardo da Vinci shows Jesus at his last supper. How many people sit at the table with him?",
+          "answer": "12",
+          "wrong_answers": [
+            "10",
+            "11",
+            "13"
+          ],
+          "hints": [
+            "Count the people on both sides of Jesus.",
+            "They sit in groups of three.",
+            "It is the number of his apostles."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "The Last Supper Leonardo da Vinci",
+            "note": "The full painting The Last Supper by Leonardo da Vinci, showing Jesus in the middle and all twelve apostles at the table.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ALeonardo_da_Vinci_%281452-1519%29_-_The_Last_Supper_%281495-1498%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Leonardo_da_Vinci_%281452-1519%29_-_The_Last_Supper_%281495-1498%29.jpg/3840px-Leonardo_da_Vinci_%281452-1519%29_-_The_Last_Supper_%281495-1498%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Leonardo da Vinci · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Leonardo da Vinci",
+            "author_url": "https://en.wikipedia.org/wiki/en:Leonardo_da_Vinci",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-Art",
+              "PD-old-100-expired"
+            ]
+          },
+          "fun_fact": "Leonardo painted The Last Supper on a wall of a dining hall in Milan, Italy, more than 500 years ago.",
+          "needs_media": true
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6784",
@@ -523538,7 +524489,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "person watching smartphone video",
+        "query": "watching phone vertical video",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -523572,18 +524523,44 @@
       "batch": "batch-15",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates fits. The slot needs a person watching a vertical video on a smartphone, but the sheet shows a drone controller, seabirds, seals, a speaker at a microphone, two people at a railing and a NORAD Santa graphic. A new search isn't allowed, so the media needs a new query, for example \"watching phone vertical video\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
-        "reviewed_on": "2026-10-23",
+        "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits. The slot needs a person watching a vertical video on a smartphone, but the sheet shows a drone controller, seabirds, seals, a speaker at a microphone, two people at a railing and a NORAD Santa graphic. A new search isn't allowed, so the media needs a new query, for example \"watching phone vertical video\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Only the media query changed, to find a usable photo of someone watching a phone.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "person watching smartphone video",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-6785",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "bb477c45",
+  "hash": "4a106323",
   "questions": [
     {
       "id": "q-0016",
@@ -130890,6 +130890,74 @@
       "background": null
     },
     {
+      "id": "q-6108",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "african-wildlife",
+      "bundle": "base",
+      "description": "The savanna's favorite drinking fountain.",
+      "question": "Simba the lion, Pumbaa the warthog and Zazu the bird drink at a watering hole. How many legs do they have together?",
+      "answer": "10",
+      "wrong_answers": [
+        "8",
+        "12",
+        "6"
+      ],
+      "hints": [
+        "Not everyone at the water walks on four legs.",
+        "Zazu is a bird, and birds stand on two legs.",
+        "4 + 4 + 2."
+      ],
+      "fun_fact": "In the dry season, a watering hole can bring lions, zebras and elephants to the same spot.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Savanna_watering_hole_with_distant_animals%2C_Disney%27s_Animal_Kingdom%2C_June_2006_-_ThrillZing.jpg/3840px-Savanna_watering_hole_with_distant_animals%2C_Disney%27s_Animal_Kingdom%2C_June_2006_-_ThrillZing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASavanna_watering_hole_with_distant_animals%2C_Disney%27s_Animal_Kingdom%2C_June_2006_-_ThrillZing.jpg",
+        "credit": "ThrillZing · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "ThrillZing",
+        "author_url": "https://thrillzing.com"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6109",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "african-wildlife",
+      "bundle": "base",
+      "description": "A moth dressed for a party it will never eat at.",
+      "question": "This huge Madagascar moth has no mouth, and its long tails twist and flutter as it flies. What are the tails for?",
+      "answer": "Fooling bats",
+      "wrong_answers": [
+        "Attracting a mate",
+        "Steering in the wind",
+        "Storing water"
+      ],
+      "hints": [
+        "The moth flies at night.",
+        "Scientists found out by snipping the tails off some moths and watching what happened.",
+        "The tails make a hunter attack the wrong end."
+      ],
+      "fun_fact": "An adult comet moth can't eat, so it lives only a few days.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Lowland_rainforest%2C_Masoala_National_Park%2C_Madagascar_%284026784053%29.jpg/3840px-Lowland_rainforest%2C_Masoala_National_Park%2C_Madagascar_%284026784053%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALowland_rainforest%2C_Masoala_National_Park%2C_Madagascar_%284026784053%29.jpg",
+        "credit": "Frank Vassen from Brussels, Belgium · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Frank Vassen from Brussels, Belgium",
+        "author_url": "https://www.flickr.com/people/42244964@N03"
+      },
+      "background": null
+    },
+    {
       "id": "q-6110",
       "status": "approved",
       "difficulty": 15,
@@ -130988,6 +131056,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "RL0919",
         "author_url": "https://commons.wikimedia.org/wiki/User:RL0919"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6113",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "amphibians",
+      "bundle": "base",
+      "description": "This frog never skips moisturizer, and for a good reason.",
+      "question": "Look at this frog's shiny, wet skin. What does its wet skin help it do?",
+      "answer": "Breathe",
+      "wrong_answers": [
+        "Hear sounds",
+        "Smell food",
+        "Keep warm"
+      ],
+      "hints": [
+        "Frogs use their skin for much more than people do.",
+        "It lets some frogs stay underwater for a long time without coming up.",
+        "You do it with your nose and mouth all day."
+      ],
+      "fun_fact": "Frogs don't drink with their mouths: they soak up water through their skin.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/%22Caught_in_the_Splash_Zone_When_You%27re_Just_Vibing_on_a_Blue_Monday%22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%22Caught_in_the_Splash_Zone_When_You%27re_Just_Vibing_on_a_Blue_Monday%22.jpg",
+        "credit": "Capturedbyalish · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Capturedbyalish",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Capturedbyalish&action=edit&redlink=1"
       },
       "background": null
     },
@@ -131978,6 +132080,40 @@
       "background": null
     },
     {
+      "id": "q-6146",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "basketball",
+      "bundle": "base",
+      "description": "Squeaky sneakers, very tall people and a lot of bouncing.",
+      "question": "How many baskets does a full basketball court have?",
+      "answer": "2",
+      "wrong_answers": [
+        "1",
+        "4",
+        "6"
+      ],
+      "hints": [
+        "They hang about 3 m (10 ft) above the floor.",
+        "Players run up and down the whole court during a game.",
+        "There's one for each team."
+      ],
+      "fun_fact": "An NBA court is about 28.7 m (94 ft) long, longer than two buses parked end to end.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/US_Navy_111108-N-SB672-008_McWil_Sport_Surfaces_employees_begin_laying_the_hardwood_floor_for_a_basketball_court_aboard_the_Nimitz-class_aircraft_c.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUS_Navy_111108-N-SB672-008_McWil_Sport_Surfaces_employees_begin_laying_the_hardwood_floor_for_a_basketball_court_aboard_the_Nimitz-class_aircraft_c.jpg",
+        "credit": "U.S. Navy photo by Mass Communication Specialist 2nd Class Dylan McCord · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Navy photo by Mass Communication Specialist 2nd Class Dylan McCord",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-6147",
       "status": "approved",
       "difficulty": 3,
@@ -132930,6 +133066,40 @@
       "background": null
     },
     {
+      "id": "q-6175",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "capital-cities",
+      "bundle": "base",
+      "description": "A city that took off its old name tag and never looked back.",
+      "question": "Kinshasa used to be called “Léopoldville”, after a Belgian king. In which year did it get its current name?",
+      "answer": "1966",
+      "wrong_answers": [
+        "1908",
+        "1945",
+        "1997"
+      ],
+      "hints": [
+        "The new name came from a village that once stood where the city grew.",
+        "President Mobutu renamed many places to drop colonial names.",
+        "It was the middle of the 1960s."
+      ],
+      "fun_fact": "Kinshasa and Brazzaville face each other across the Congo River, the closest pair of capitals in the world apart from Rome and Vatican City.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/A_view_of_Congo_River_from_Kinshasa%2C_Democratic_Republic_of_the_Congo_%28DRC%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_view_of_Congo_River_from_Kinshasa%2C_Democratic_Republic_of_the_Congo_%28DRC%29.jpg",
+        "credit": "EdwinAlden.1995 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "EdwinAlden.1995",
+        "author_url": "https://commons.wikimedia.org/wiki/User:EdwinAlden.1995"
+      },
+      "background": null
+    },
+    {
       "id": "q-6176",
       "status": "approved",
       "difficulty": 14,
@@ -133130,6 +133300,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "King....",
         "author_url": "https://www.flickr.com/people/kinglomo/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6182",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "cheese",
+      "bundle": "base",
+      "description": "A job that needs patient hands and a whole lot of waiting around.",
+      "question": "Whose job is it to press soft white lumps of curdled milk into molds and let them rest for months?",
+      "answer": "Cheesemaker",
+      "wrong_answers": [
+        "Baker",
+        "Potter",
+        "Butcher"
+      ],
+      "hints": [
+        "The food has to rest for days or even months before you eat it.",
+        "Later it will be sliced and put on bread.",
+        "It might end up yellow with holes."
+      ],
+      "fun_fact": "It takes about 10 liters (2.6 gallons) of milk to make just 1 kg (2.2 lb) of hard cheese.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Nature-grass-mountain-farm-meadow-animal.jpg/3840px-Nature-grass-mountain-farm-meadow-animal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANature-grass-mountain-farm-meadow-animal.jpg",
+        "credit": "Unknown authorUnknown author · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Unknown authorUnknown author",
+        "author_url": null
       },
       "background": null
     },
@@ -133814,6 +134018,40 @@
       "background": null
     },
     {
+      "id": "q-6204",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "consoles-and-game-companies",
+      "bundle": "base",
+      "description": "Students at a famous university found something much more fun to do with a giant computer.",
+      "question": "“I was written in 1962 on a PDP-1 computer at MIT. In me, two spaceships duel around a star whose gravity pulls them in.” What am I?",
+      "answer": "Spacewar!",
+      "wrong_answers": [
+        "Tennis for Two",
+        "Pong",
+        "Computer Space"
+      ],
+      "hints": [
+        "I'm one of the very first video games ever.",
+        "Each player steers a little rocket and fires missiles.",
+        "My name has an exclamation mark."
+      ],
+      "fun_fact": "Computer Space from 1971, the first commercially sold arcade video game, was based on this game.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/DEC_PDP-1_Demo_Lab_at_Mountain_View%27s_Computer_History_Museum.jpg/3840px-DEC_PDP-1_Demo_Lab_at_Mountain_View%27s_Computer_History_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADEC_PDP-1_Demo_Lab_at_Mountain_View%27s_Computer_History_Museum.jpg",
+        "credit": "Alexey Komarov · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Alexey Komarov",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Alexkom000"
+      },
+      "background": null
+    },
+    {
       "id": "q-6205",
       "status": "approved",
       "difficulty": 15,
@@ -134150,6 +134388,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Wilfredor",
         "author_url": "https://www.wikidata.org/wiki/Q115464159"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6215",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Tea, rain and a river right through the middle.",
+      "question": "Which of these famous sights is NOT in London?",
+      "answer": "Eiffel Tower",
+      "wrong_answers": [
+        "Big Ben",
+        "Tower Bridge",
+        "Buckingham Palace"
+      ],
+      "hints": [
+        "One of them is in another country.",
+        "Three of them are in London, a city on the River Thames; the odd one stands by a different river.",
+        "It's made of iron and stands in Paris."
+      ],
+      "fun_fact": "“Big Ben” is really the name of the giant bell inside the clock tower, not the tower itself.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Red_double_decker_bus%2C_Epping%2C_Essex_-_April_2021.jpg/3840px-Red_double_decker_bus%2C_Epping%2C_Essex_-_April_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARed_double_decker_bus%2C_Epping%2C_Essex_-_April_2021.jpg",
+        "credit": "Mutney · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Mutney",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mutney"
       },
       "background": null
     },
@@ -134800,6 +135072,40 @@
       "background": null
     },
     {
+      "id": "q-6235",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "drinks",
+      "bundle": "base",
+      "description": "A cow starts this job, and some very tiny helpers finish it.",
+      "question": "This thick, creamy food is made from milk with the help of tiny bacteria. What is it?",
+      "answer": "Yogurt",
+      "wrong_answers": [
+        "Butter",
+        "Mashed potatoes",
+        "Vanilla ice cream"
+      ],
+      "hints": [
+        "You often eat it with a spoon at breakfast.",
+        "It can be plain or mixed with fruit.",
+        "It tastes a little sour and is sold in small cups."
+      ],
+      "fun_fact": "Friendly bacteria eat the sugar in milk and turn it thick and a little sour: that's how yogurt is made.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Food_Portions_%28Team_Nutrition%29_%2820210902-FNS-UNC-0055%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFood_Portions_%28Team_Nutrition%29_%2820210902-FNS-UNC-0055%29.jpg",
+        "credit": "USDAgov · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "USDAgov",
+        "author_url": "https://www.flickr.com/people/usdagov/"
+      },
+      "background": null
+    },
+    {
       "id": "q-6236",
       "status": "approved",
       "difficulty": 2,
@@ -135208,6 +135514,40 @@
       "background": null
     },
     {
+      "id": "q-6249",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "fairy-tales",
+      "bundle": "base",
+      "description": "Some dreams are so big they need a whole song to explain them.",
+      "question": "Which princess is a mermaid who gives up her voice to get legs and walk on land?",
+      "answer": "Ariel",
+      "wrong_answers": [
+        "Moana",
+        "Rapunzel",
+        "Jasmine"
+      ],
+      "hints": [
+        "She lives under the sea.",
+        "Her best friend is a fish called Flounder.",
+        "She has red hair and a green tail."
+      ],
+      "fun_fact": "In Hans Christian Andersen's original 1837 fairy tale, the little mermaid has no name; Disney named her Ariel in 1989.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Coral_Outcrop_Flynn_Reef.jpg/3840px-Coral_Outcrop_Flynn_Reef.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoral_Outcrop_Flynn_Reef.jpg",
+        "credit": "Toby Hudson · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Toby Hudson",
+        "author_url": "https://commons.wikimedia.org/wiki/User:99of9"
+      },
+      "background": null
+    },
+    {
       "id": "q-6250",
       "status": "approved",
       "difficulty": 1,
@@ -135412,6 +135752,40 @@
       "background": null
     },
     {
+      "id": "q-6256",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "famous-logos",
+      "bundle": "base",
+      "description": "A chocolate whose cow clearly ate far too many grapes.",
+      "question": "Milka chocolate comes in purple wrappers with a purple cow. Its name joins the German words for milk and which other ingredient?",
+      "answer": "Cocoa",
+      "wrong_answers": [
+        "Caramel",
+        "Hazelnut",
+        "Vanilla"
+      ],
+      "hints": [
+        "The name was made from the start of two German words.",
+        "“Mil” comes from milk, and “ka” comes from the other ingredient.",
+        "It comes from beans that grow on a tropical tree."
+      ],
+      "fun_fact": "Milka was first made in Switzerland in 1901, and its name comes from the German words “Milch” (milk) and “Kakao” (cocoa).",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Curious_Cows.jpg/3840px-Curious_Cows.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACurious_Cows.jpg",
+        "credit": "Delicious27 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Delicious27",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Delicious27&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-6257",
       "status": "approved",
       "difficulty": 2,
@@ -135612,6 +135986,40 @@
         "license_url": null,
         "author": "Margaret Gillies",
         "author_url": "https://en.wikipedia.org/wiki/en:Margaret_Gillies"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6263",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "famous-scientists",
+      "bundle": "base",
+      "description": "A recipe for life: take some water, add a few gases, then zap it like a mad scientist.",
+      "question": "In 1952, a glass setup sent sparks through water and gases like those of the early Earth, and it made amino acids. Which student ran it?",
+      "answer": "Stanley Miller",
+      "wrong_answers": [
+        "Alexander Oparin",
+        "J.B.S. Haldane",
+        "Francis Crick"
+      ],
+      "hints": [
+        "He was a young graduate student at the University of Chicago.",
+        "His supervisor was a Nobel Prize winner who had discovered heavy hydrogen.",
+        "The experiment is known by his surname together with his supervisor's, Urey."
+      ],
+      "fun_fact": "In 2008, scientists tested his old sealed sample vials with modern tools and found more than 20 amino acids, more than he could detect in the 1950s.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Verrerie-p1030896.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVerrerie-p1030896.jpg",
+        "credit": "Rama · CC BY-SA 2.0 fr · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0 fr",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en",
+        "author": "Rama",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rama"
       },
       "background": null
     },
@@ -136398,6 +136806,40 @@
       "background": null
     },
     {
+      "id": "q-6287",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "fantasy",
+      "bundle": "base",
+      "description": "An island with pirates, mermaids, fairies and absolutely no bedtime rules.",
+      "question": "Peter Pan lives in Neverland, and the name says it all: children there never do one thing. What is it?",
+      "answer": "Grow up",
+      "wrong_answers": [
+        "Go to sleep",
+        "Take a bath",
+        "Eat vegetables"
+      ],
+      "hints": [
+        "It happens to everyone slowly, a little bit every year.",
+        "Peter ran away as a baby after he heard his parents talk about what he would be as a man.",
+        "Birthdays there don't make you any older."
+      ],
+      "fun_fact": "Peter Pan's author, J. M. Barrie, gave the rights to the story to a children's hospital in London.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Clearwater_Beach_pirate_ship_excursion.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClearwater_Beach_pirate_ship_excursion.jpg",
+        "credit": "WikiPedant · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "WikiPedant",
+        "author_url": "https://commons.wikimedia.org/wiki/User:WikiPedant"
+      },
+      "background": null
+    },
+    {
       "id": "q-6288",
       "status": "approved",
       "difficulty": 14,
@@ -136496,6 +136938,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Krigore",
         "author_url": "https://commons.wikimedia.org/wiki/User:Krigore"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6292",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "football",
+      "bundle": "base",
+      "description": "Sometimes standing out from your teammates is not a choice, it's a rule.",
+      "question": "In soccer, which player must wear a shirt of a different color from all the teammates?",
+      "answer": "The goalkeeper",
+      "wrong_answers": [
+        "The captain",
+        "The striker",
+        "The defender"
+      ],
+      "hints": [
+        "This player spends most of the game near one goal.",
+        "There is only one player in this position on each team at a time.",
+        "This player often wears big gloves."
+      ],
+      "fun_fact": "The rule forcing goalkeepers to wear a different color started in 1909, so referees could tell who was allowed to handle the ball.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Adidas_soccer_ball_on_a_grass_pitch_%28Unsplash%29.jpg/3840px-Adidas_soccer_ball_on_a_grass_pitch_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAdidas_soccer_ball_on_a_grass_pitch_%28Unsplash%29.jpg",
+        "credit": "Peter Glaser baraida · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Peter Glaser baraida",
+        "author_url": "https://unsplash.com/@baraida"
       },
       "background": null
     },
@@ -136631,6 +137107,40 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Fabio Alessandro Locati",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-6298",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "formula-1-and-motorsport",
+      "bundle": "base",
+      "description": "Lights that work like a traffic light, except the drivers want to go as fast as possible.",
+      "question": "In Formula 1, five red lights hang above the cars. They switch on one by one, then all go out at once. What are they for?",
+      "answer": "Starting the race",
+      "wrong_answers": [
+        "Ending the race",
+        "Calling cars into the pits",
+        "Warning drivers about rain"
+      ],
+      "hints": [
+        "All the cars are waiting in a line, with their engines roaring.",
+        "The drivers stare at these lights before anything else happens in the race.",
+        "When every light goes dark, all the cars race away at once."
+      ],
+      "fun_fact": "After the fifth light comes on, there is a short wait of random length before they go out, so drivers can't guess when to go.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/FIA_Start_lights.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFIA_Start_lights.gif",
+        "credit": "PitLane02 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "PitLane02",
         "author_url": null
       },
       "background": null
@@ -137520,6 +138030,40 @@
       "background": null
     },
     {
+      "id": "q-6326",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "international-football",
+      "bundle": "base",
+      "description": "Behind every great soccer star is a trophy cabinet that ran out of room.",
+      "question": "I'm a striker from Norway and the top scorer in Women's Champions League history. In 2018, I won the first women's Ballon d'Or. Who am I?",
+      "answer": "Ada Hegerberg",
+      "wrong_answers": [
+        "Megan Rapinoe",
+        "Alexia Putellas",
+        "Sam Kerr"
+      ],
+      "hints": [
+        "I won many Champions League titles with a French club.",
+        "I skipped the 2019 World Cup to protest unequal treatment of women players.",
+        "My first name has just three letters and reads the same backwards."
+      ],
+      "fun_fact": "Ada Hegerberg won the Women's Champions League six times with Lyon.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Women_football_youth_olympic_games.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWomen_football_youth_olympic_games.JPG",
+        "credit": "مانفی (Monfie) · CC BY 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "author": "مانفی (Monfie)",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-6327",
       "status": "approved",
       "difficulty": 11,
@@ -137618,6 +138162,40 @@
         "license_url": "https://creativecommons.org/licenses/by/3.0",
         "author": "Biswarup Ganguly",
         "author_url": "https://commons.wikimedia.org/wiki/User:Gangulybiswarup"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6330",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "internet",
+      "bundle": "base",
+      "description": "Teachers, classmates and a ringing bell: some school days are just a little different from the rest.",
+      "question": "With me, the teacher is on a screen, the pupils are little squares, and nobody leaves home. What am I?",
+      "answer": "An online class",
+      "wrong_answers": [
+        "A field trip",
+        "A school play",
+        "A sports day"
+      ],
+      "hints": [
+        "You need a computer or tablet for me.",
+        "Many children had me when schools closed in 2020.",
+        "I happen over the internet."
+      ],
+      "fun_fact": "In 2020, more than a billion students around the world had their schools closed, and many of them learned through online classes.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Creative-desk-pens-school-2_%2824300233966%29.jpg/3840px-Creative-desk-pens-school-2_%2824300233966%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACreative-desk-pens-school-2_%2824300233966%29.jpg",
+        "credit": "www.Pixel.la Free Stock Photos · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "www.Pixel.la Free Stock Photos",
+        "author_url": "https://www.flickr.com/people/137643065@N06"
       },
       "background": null
     },
@@ -137822,6 +138400,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Lobsterthermidor (talk) 09:57, 14 October 2022 (UTC)",
         "author_url": "https://commons.wikimedia.org/wiki/User:Lobsterthermidor"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6337",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "knights",
+      "bundle": "base",
+      "description": "Never pick a fight with something taller than you that won't stop waving.",
+      "question": "In a famous Spanish novel, a knight charges at tall machines with huge spinning arms, sure they are giants. What are they?",
+      "answer": "Windmills",
+      "wrong_answers": [
+        "Lighthouses",
+        "Clock towers",
+        "Water wheels"
+      ],
+      "hints": [
+        "The knight's name became a word for dreamers who chase impossible goals.",
+        "Farmers used them to grind grain.",
+        "In the Netherlands you can see many of them next to tulip fields."
+      ],
+      "fun_fact": "The knight is Don Quixote, from the novel by Miguel de Cervantes first published in 1605.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/32/R%C3%BCstkammer%2C_Dresden_-_tournament_armor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AR%C3%BCstkammer%2C_Dresden_-_tournament_armor.jpg",
+        "credit": "Pudelek (Marcin Szala) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Pudelek (Marcin Szala)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pudelek"
       },
       "background": null
     },
@@ -138506,6 +139118,40 @@
       "background": null
     },
     {
+      "id": "q-6358",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "mummies",
+      "bundle": "base",
+      "description": "A gift-wrapped package that nobody should ever open.",
+      "question": "Ancient Egyptians made millions of mummies of the ibis. What kind of animal is an ibis?",
+      "answer": "A bird",
+      "wrong_answers": [
+        "A fish",
+        "A snake",
+        "A monkey"
+      ],
+      "hints": [
+        "It was the sacred animal of Thoth, the Egyptian god of writing.",
+        "It wades through the mud of the Nile on long, thin legs.",
+        "It has feathers and a long, curved beak."
+      ],
+      "fun_fact": "Ibis mummies were left as offerings by pilgrims, and the tunnels at Saqqara hold millions of them.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Saqqara%2C_Pyramid_of_Djoser%2C_Ancient_Egypt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASaqqara%2C_Pyramid_of_Djoser%2C_Ancient_Egypt.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
+      },
+      "background": null
+    },
+    {
       "id": "q-6359",
       "status": "approved",
       "difficulty": 15,
@@ -139050,6 +139696,40 @@
       "background": null
     },
     {
+      "id": "q-6375",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "norse-mythology",
+      "bundle": "base",
+      "description": "A rescue mission where the passenger had to travel very light.",
+      "question": "A giant in the shape of an eagle kidnapped the goddess Idun. To fly her home, Loki became a falcon and turned her into what?",
+      "answer": "A nut",
+      "wrong_answers": [
+        "An apple",
+        "A feather",
+        "A pebble"
+      ],
+      "hints": [
+        "It's small enough for a bird to carry in its claws.",
+        "You might find one lying on a forest floor in autumn.",
+        "It has a hard shell."
+      ],
+      "fun_fact": "While Idun and her magic apples were gone, the gods began to grow old and gray.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Laggar_Falcon_in_Flight.jpg/3840px-Laggar_Falcon_in_Flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALaggar_Falcon_in_Flight.jpg",
+        "credit": "Sumeet Moghe · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Sumeet Moghe",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Sumeetmoghe&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-6376",
       "status": "approved",
       "difficulty": 14,
@@ -139114,6 +139794,74 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "HaJunkiyada",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:HaJunkiyada&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6378",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "optical-illusions",
+      "bundle": "base",
+      "description": "Two identical shapes walk into a lab, and one comes out looking bigger.",
+      "question": "Two identical curved shapes, one above the other, look like different sizes. Which American psychologist is this illusion named after?",
+      "answer": "Joseph Jastrow",
+      "wrong_answers": [
+        "Franz Müller-Lyer",
+        "Edward Titchener",
+        "Roger Shepard"
+      ],
+      "hints": [
+        "He worked in the late 1800s and taught in Wisconsin.",
+        "The shapes look like slices of a ring, a bit like railroad tracks on a toy train set.",
+        "He made an old drawing that is both a duck and a rabbit famous among psychologists."
+      ],
+      "fun_fact": "You can see this illusion with toys: two identical curved pieces of wooden train track look different sizes when laid one above the other.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/%E2%80%9CSometimes_you%E2%80%99re_the_train%2C_sometimes_you%E2%80%99re_the_track.%E2%80%9D_%E2%80%93Luke_Bryan.jpg/3840px-%E2%80%9CSometimes_you%E2%80%99re_the_train%2C_sometimes_you%E2%80%99re_the_track.%E2%80%9D_%E2%80%93Luke_Bryan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%E2%80%9CSometimes_you%E2%80%99re_the_train%2C_sometimes_you%E2%80%99re_the_track.%E2%80%9D_%E2%80%93Luke_Bryan.jpg",
+        "credit": "Sarkardurba02 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Sarkardurba02",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Sarkardurba02&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6379",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "optical-illusions",
+      "bundle": "base",
+      "description": "Rocks don't climb. Your brain just thinks they do.",
+      "question": "Stare at a waterfall for a while, then look at the rocks beside it: they seem to drift upward. When was this illusion first written about?",
+      "answer": "The 4th century BC",
+      "wrong_answers": [
+        "The 1st century BC",
+        "The 17th century",
+        "The 19th century"
+      ],
+      "hints": [
+        "It was written down long before telescopes or microscopes existed.",
+        "It appears in the work of an Ancient Greek philosopher.",
+        "The writer was a teacher of Alexander the Great."
+      ],
+      "fun_fact": "In 1834, a traveler described the effect after watching the Falls of Foyers in the Scottish Highlands.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Elakala_Waterfalls_Swirling_Pool_Mossy_Rocks.jpg/3840px-Elakala_Waterfalls_Swirling_Pool_Mossy_Rocks.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElakala_Waterfalls_Swirling_Pool_Mossy_Rocks.jpg",
+        "credit": "Forest Wander from Cross Lanes · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Forest Wander from Cross Lanes",
+        "author_url": "https://www.flickr.com/people/10922353@N03"
       },
       "background": null
     },
@@ -140410,6 +141158,40 @@
       "background": null
     },
     {
+      "id": "q-6420",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "retro-games",
+      "bundle": "base",
+      "description": "A tune so famous that Final Fantasy fans can hum it before the title screen even loads.",
+      "question": "Nobuo Uematsu’s “Prelude” has returned in most Final Fantasy games since 1987 and is built on rising and falling arpeggios. What is an arpeggio?",
+      "answer": "The notes of a chord played one after another",
+      "wrong_answers": [
+        "One single note held for a very long time",
+        "Two different melodies played at once",
+        "A rhythm played only on drums"
+      ],
+      "hints": [
+        "On a harp or piano it sounds like notes rippling up and down.",
+        "The word comes from the Italian for playing the harp.",
+        "Instead of all at the same time, the notes come one by one."
+      ],
+      "fun_fact": "The “Prelude” first appeared in the original 1987 Final Fantasy and has been rearranged for many games since, sometimes with a melody added on top of the arpeggios.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Lyrafl%C3%BCgel_%28ca.1820-44%29_by_Johann_Christian_Schleip%2C_Grand_Pianoforte_%28ca.1840%29_by_Erard_et_Cie%2C_Pedal_Harp_%281891-95%29_by_Lyon_%26_Healy%2C_The_Met%2C_NYC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALyrafl%C3%BCgel_%28ca.1820-44%29_by_Johann_Christian_Schleip%2C_Grand_Pianoforte_%28ca.1840%29_by_Erard_et_Cie%2C_Pedal_Harp_%281891-95%29_by_Lyon_%26_Healy%2C_The_Met%2C_NYC.jpg",
+        "credit": "Ana Paula Hirama · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Ana Paula Hirama",
+        "author_url": "https://www.flickr.com/people/33704098@N00"
+      },
+      "background": null
+    },
+    {
       "id": "q-6421",
       "status": "approved",
       "difficulty": 14,
@@ -140712,6 +141494,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Bernard DUPONT from FRANCE",
         "author_url": "https://www.flickr.com/people/65695019@N07"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6430",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "african-wildlife",
+      "bundle": "base",
+      "description": "This reptile's favorite game is hide-and-seek, and it always wins.",
+      "question": "My shell is flat and so soft it bends. Instead of hiding inside it, I run and squeeze into a crack in the rocks. Who am I?",
+      "answer": "Pancake tortoise",
+      "wrong_answers": [
+        "Leopard tortoise",
+        "Radiated tortoise",
+        "Gopher tortoise"
+      ],
+      "hints": [
+        "I live on rocky hills in East Africa.",
+        "Most tortoises have a round, domed shell; mine is not.",
+        "Unlike most tortoises, I am quick on my feet and a good climber."
+      ],
+      "fun_fact": "Once wedged into a crack, a pancake tortoise is very hard for a predator to pull out.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Pride_of_lions_on_rock_outcropping%2C_Samburu_National_Reserve%2C_Kenya.jpg/3840px-Pride_of_lions_on_rock_outcropping%2C_Samburu_National_Reserve%2C_Kenya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APride_of_lions_on_rock_outcropping%2C_Samburu_National_Reserve%2C_Kenya.jpg",
+        "credit": "Daniel Case · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Daniel Case",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Daniel_Case"
       },
       "background": null
     },
@@ -141396,6 +142212,40 @@
       "background": null
     },
     {
+      "id": "q-6452",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "harry-potter",
+      "bundle": "base",
+      "description": "Supporting this team builds character, and mostly patience.",
+      "question": "Ron Weasley's favorite Quidditch team wears bright orange robes. Complete its name: the Chudley…",
+      "answer": "Cannons",
+      "wrong_answers": [
+        "Arrows",
+        "Bats",
+        "Harpies"
+      ],
+      "hints": [
+        "Ron's bedroom walls are covered in this team's posters.",
+        "It is famous for being one of the worst teams in the league.",
+        "It fires heavy iron balls from a castle wall."
+      ],
+      "fun_fact": "In 1972 the team changed its motto from “We shall conquer” to “Let's all just keep our fingers crossed and hope for the best.”",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Besom_broom_maker.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABesom_broom_maker.JPG",
+        "credit": "Joseolgon · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Joseolgon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Joseolgon"
+      },
+      "background": null
+    },
+    {
       "id": "q-6453",
       "status": "approved",
       "difficulty": 3,
@@ -141494,6 +142344,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "PattayaPatrol",
         "author_url": "https://www.flickr.com/people/PattayaPatrol/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6456",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "harry-potter",
+      "bundle": "base",
+      "description": "Retired sports stars always land somewhere with a nice office.",
+      "question": "After playing Beater for the Wimbourne Wasps, Ludo Bagman went to work where?",
+      "answer": "The Ministry of Magic",
+      "wrong_answers": [
+        "Gringotts Bank",
+        "Hogwarts School",
+        "The Daily Prophet"
+      ],
+      "hints": [
+        "He swapped his Beater's bat for a desk job.",
+        "His job puts him in charge of big wizarding sports events, even the Triwizard Tournament.",
+        "Cornelius Fudge is his boss there."
+      ],
+      "fun_fact": "Bagman bet on the Quidditch World Cup with goblins and lost, and they chased him for the money.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Besom_broom_maker.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABesom_broom_maker.JPG",
+        "credit": "Joseolgon · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Joseolgon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Joseolgon"
       },
       "background": null
     },
@@ -142246,6 +143130,40 @@
       "background": null
     },
     {
+      "id": "q-6479",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "mountains",
+      "bundle": "base",
+      "description": "A wind with such a warm personality that it melts snow in hours and still gets blamed for headaches.",
+      "question": "The föhn is a warm, dry wind that rushes down mountain slopes. In which mountain range did it get its name?",
+      "answer": "The Alps",
+      "wrong_answers": [
+        "The Rocky Mountains",
+        "The Andes",
+        "The Himalayas"
+      ],
+      "hints": [
+        "The air warms up as it sinks down the mountain slope.",
+        "A similar wind in North America has its own local name: the chinook.",
+        "Think of Switzerland, Austria, Heidi and Mont Blanc."
+      ],
+      "fun_fact": "The word föhn goes back to Favonius, the Roman god of the warm west wind.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Zagedan_Lakes%2C_Mountain_cirque%2C_Caucasus_Mountains.jpg/3840px-Zagedan_Lakes%2C_Mountain_cirque%2C_Caucasus_Mountains.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AZagedan_Lakes%2C_Mountain_cirque%2C_Caucasus_Mountains.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
+      },
+      "background": null
+    },
+    {
       "id": "q-6480",
       "status": "approved",
       "difficulty": 12,
@@ -142926,6 +143844,40 @@
       "background": null
     },
     {
+      "id": "q-6501",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "oscars",
+      "bundle": "base",
+      "description": "A family with magic powers, and still nobody can fix the leaky roof.",
+      "question": "“Encanto”, the film about a magical family in Colombia, won an Oscar in 2022. In which category?",
+      "answer": "Best Animated Feature",
+      "wrong_answers": [
+        "Best Original Song",
+        "Best Original Score",
+        "Best Visual Effects"
+      ],
+      "hints": [
+        "Think about how the film was made, not about its songs.",
+        "“Zootopia” and “Spirited Away” won this same award.",
+        "Its characters were drawn and moved on a computer."
+      ],
+      "fun_fact": "Encanto's song “We Don't Talk About Bruno” reached number one on the US Billboard Hot 100 chart.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Pedestrianized_river_front_in_Mompox%2C_Colombia.jpg/3840px-Pedestrianized_river_front_in_Mompox%2C_Colombia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APedestrianized_river_front_in_Mompox%2C_Colombia.jpg",
+        "credit": "GKantaris · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "GKantaris",
+        "author_url": "https://commons.wikimedia.org/wiki/User:GKantaris?action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-6502",
       "status": "approved",
       "difficulty": 14,
@@ -143164,6 +144116,40 @@
       "background": null
     },
     {
+      "id": "q-6509",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "pixar-films",
+      "bundle": "base",
+      "description": "The coolest friend at any party, quite literally.",
+      "question": "Frozone from “The Incredibles” can make ice almost anywhere. What does he make it from?",
+      "answer": "Water in the air",
+      "wrong_answers": [
+        "Snow in his boots",
+        "His own cold breath",
+        "Ice packed in his suit"
+      ],
+      "hints": [
+        "His ice shoots out of his hands as he moves.",
+        "Fog and clouds are made of the same stuff.",
+        "When he's thirsty and dried out, his power is weak."
+      ],
+      "fun_fact": "Frozone is Mr. Incredible's best friend, and he skates along on ice slides he makes as he goes.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Fleur_de_givre_L.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFleur_de_givre_L.jpg",
+        "credit": "Annick MONNIER · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Annick MONNIER",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Cquoi"
+      },
+      "background": null
+    },
+    {
       "id": "q-6510",
       "status": "approved",
       "difficulty": 1,
@@ -143264,6 +144250,49 @@
         "author_url": null
       },
       "background": null
+    },
+    {
+      "id": "q-6513",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "planet-earth",
+      "bundle": "base",
+      "description": "A feathery forest neighbor who is very wise and very chatty.",
+      "question": "Listen: when do you usually hear this animal calling?",
+      "answer": "At night",
+      "wrong_answers": [
+        "At midday",
+        "In the afternoon",
+        "At breakfast time"
+      ],
+      "hints": [
+        "It's a bird with soft feathers that let it fly almost silently.",
+        "This bird says “hoo-hoo”.",
+        "It's an owl, and owls hunt when the Sun is gone."
+      ],
+      "fun_fact": "Owls can turn their heads about three-quarters of the way around, because their eyes can't move in their sockets.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Maghreb_owl_hooting.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMaghreb_owl_hooting.wav",
+        "credit": "عثمان · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "عثمان",
+        "author_url": "https://commons.wikimedia.org/wiki/User:%D8%B9%D8%AB%D9%85%D8%A7%D9%86"
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Dense_green_woodland.jpg/3840px-Dense_green_woodland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADense_green_woodland.jpg",
+        "credit": "Mar Mkrtchyan · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Mar Mkrtchyan",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Mar_Mkrtchyan&action=edit&redlink=1"
+      }
     },
     {
       "id": "q-6514",
@@ -144898,6 +145927,40 @@
       "background": null
     },
     {
+      "id": "q-6565",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "traditional-dress",
+      "bundle": "base",
+      "description": "A hat that has marched with soldiers and strolled down fashion runways.",
+      "question": "What is this kind of hat called?",
+      "answer": "Beret",
+      "wrong_answers": [
+        "Beanie",
+        "Flat cap",
+        "Bucket hat"
+      ],
+      "hints": [
+        "It has no brim at all.",
+        "It is often worn tilted to one side.",
+        "Cartoon French painters love to wear one."
+      ],
+      "fun_fact": "Berets are knitted as a big wool circle, then shrunk in water until the wool turns into thick felt.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Beret_%28AM_2001.25.383-1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeret_%28AM_2001.25.383-1%29.jpg",
+        "credit": "Hills Hats · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Hills Hats",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-6566",
       "status": "approved",
       "difficulty": 3,
@@ -145098,6 +146161,40 @@
         "license_url": null,
         "author": "drytortugasnps",
         "author_url": "https://www.flickr.com/people/drytortugasnps/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6572",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "us-presidents",
+      "bundle": "base",
+      "description": "Lasers, flying saucers, a president under pressure, and Earth's last hope came from the place nobody expected.",
+      "question": "In Tim Burton's 1996 film “Mars Attacks!”, what finally defeats the big-brained Martian invaders?",
+      "answer": "An old yodeling love song",
+      "wrong_answers": [
+        "Ordinary tap water",
+        "A common cold virus",
+        "Bright camera flashes"
+      ],
+      "hints": [
+        "The weapon was found by accident, far away from the army.",
+        "A teenager discovered it while rescuing his grandma from her retirement home.",
+        "Hearing Slim Whitman's “Indian Love Call” is too much for the Martians."
+      ],
+      "fun_fact": "“Mars Attacks!” was based on a set of 1960s trading cards, not on a book or comic.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Masudaya_%E2%80%93_Battery_Operated_%E2%80%93_Tin_UFO_%E2%80%93_Galaxy_Flying_Saucer_X-7_%28%E9%8A%80%E6%B2%B3%E5%86%86%E7%9B%A4_X-7%29_%E2%80%93_Top.jpg/3840px-Masudaya_%E2%80%93_Battery_Operated_%E2%80%93_Tin_UFO_%E2%80%93_Galaxy_Flying_Saucer_X-7_%28%E9%8A%80%E6%B2%B3%E5%86%86%E7%9B%A4_X-7%29_%E2%80%93_Top.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMasudaya_%E2%80%93_Battery_Operated_%E2%80%93_Tin_UFO_%E2%80%93_Galaxy_Flying_Saucer_X-7_%28%E9%8A%80%E6%B2%B3%E5%86%86%E7%9B%A4_X-7%29_%E2%80%93_Top.jpg",
+        "credit": "D J Shin · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "D J Shin",
+        "author_url": null
       },
       "background": null
     },
@@ -148162,6 +149259,40 @@
       "background": null
     },
     {
+      "id": "q-6668",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "roman-mythology",
+      "bundle": "base",
+      "description": "Clang, clang, clang: the soundtrack of a Roman god's workshop.",
+      "question": "Look: the Roman god of blacksmiths is often shown with a hammer and this heavy iron block. What is it called?",
+      "answer": "An anvil",
+      "wrong_answers": [
+        "A forge",
+        "A grindstone",
+        "A chisel"
+      ],
+      "hints": [
+        "Blacksmiths put hot metal on it.",
+        "Then they hit the metal with a hammer to shape it.",
+        "In cartoons, one often falls on a character's head."
+      ],
+      "fun_fact": "The Romans said the god Vulcan had his forge under a volcano, and the word “volcano” comes from his name.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Hammer-anvil-notice-icon.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHammer-anvil-notice-icon.png",
+        "credit": "Osmo Lundell · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Osmo Lundell",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Osmo_Lundell"
+      },
+      "background": null
+    },
+    {
       "id": "q-6669",
       "status": "approved",
       "difficulty": 4,
@@ -149556,6 +150687,40 @@
       "background": null
     },
     {
+      "id": "q-6712",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "tennis",
+      "bundle": "base",
+      "description": "The only person at the match with the best seat and no snacks.",
+      "question": "Look at the photo: who is the person sitting high up in this chair during a tennis match?",
+      "answer": "The umpire",
+      "wrong_answers": [
+        "The coach",
+        "A ball kid",
+        "The team captain"
+      ],
+      "hints": [
+        "This person doesn't play, but has an important job.",
+        "They call out the score for everyone.",
+        "They make sure the players follow the rules."
+      ],
+      "fun_fact": "In big tennis matches the umpire sits about 2 meters (6 feet) above the court to see the whole game.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/2019_USTA_U.S._Open_qualies_chair_umpire.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2019_USTA_U.S._Open_qualies_chair_umpire.jpg",
+        "credit": "Beyond My Ken · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Beyond My Ken",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Beyond_My_Ken"
+      },
+      "background": null
+    },
+    {
       "id": "q-6713",
       "status": "approved",
       "difficulty": 2,
@@ -149692,6 +150857,40 @@
       "background": null
     },
     {
+      "id": "q-6717",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "tennis",
+      "bundle": "base",
+      "description": "Sports gear that once belonged to a bird, at least partly.",
+      "question": "This object is used in a sport. What is it?",
+      "answer": "A shuttlecock",
+      "wrong_answers": [
+        "A feather duster",
+        "An arrow",
+        "A bird's nest"
+      ],
+      "hints": [
+        "It flies through the air in a sport played with rackets.",
+        "It has a round cork tip at the front.",
+        "It's hit over a high net in badminton."
+      ],
+      "fun_fact": "A top-quality shuttlecock has 16 goose feathers, and a smash can make it fly faster than 400 km/h (250 mph).",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Volant_badminton.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVolant_badminton.jpg",
+        "credit": "CC BY-SA 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": "No machine-readable author provided. Badplayer~commonswiki assumed (based on copyright claims).",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Badplayer~commonswiki&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-6718",
       "status": "approved",
       "difficulty": 15,
@@ -149726,6 +150925,40 @@
       "background": null
     },
     {
+      "id": "q-6719",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "the-lord-of-the-rings",
+      "bundle": "base",
+      "description": "Sam had heard about these in a hobbit rhyme and never thought he'd meet one for real.",
+      "question": "The Southrons from Harad bring giant oliphaunts with them to Gondor. What do they use them for?",
+      "answer": "Carrying warriors into battle",
+      "wrong_answers": [
+        "Pulling heavy ships",
+        "Plowing farm fields",
+        "Carrying the king's gold"
+      ],
+      "hints": [
+        "The Southrons come from hot lands far to the south.",
+        "They stomp across the fields in front of Minas Tirith.",
+        "They are like giant war elephants."
+      ],
+      "fun_fact": "Real armies, like Hannibal's, once used war elephants too, though Tolkien's oliphaunts are far bigger.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Savanna_Elephants_%28Loxodonta_africana%29_herd_drinking_..._%2851588920921%29.jpg/3840px-Savanna_Elephants_%28Loxodonta_africana%29_herd_drinking_..._%2851588920921%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASavanna_Elephants_%28Loxodonta_africana%29_herd_drinking_..._%2851588920921%29.jpg",
+        "credit": "Bernard DUPONT from FRANCE · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Bernard DUPONT from FRANCE",
+        "author_url": "https://www.flickr.com/people/65695019@N07"
+      },
+      "background": null
+    },
+    {
       "id": "q-6720",
       "status": "approved",
       "difficulty": 13,
@@ -149756,6 +150989,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Fredericknoronha",
         "author_url": "https://commons.wikimedia.org/wiki/User:Fredericknoronha"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6721",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "the-lord-of-the-rings",
+      "bundle": "base",
+      "description": "Fancy handwriting so beautiful even the villains use it.",
+      "question": "You look at the flowing Elvish letters on the One Ring. In Tolkien's legend, who invented this script, the Tengwar?",
+      "answer": "Fëanor",
+      "wrong_answers": [
+        "Celebrimbor",
+        "Elrond",
+        "Galadriel"
+      ],
+      "hints": [
+        "He was the greatest craftsman of the Elves.",
+        "He was the eldest son of the Elf king Finwë and led the Noldor's rebellion against the Valar.",
+        "His name means “spirit of fire”."
+      ],
+      "fun_fact": "Fëanor based the Tengwar on an older Elvish script made by the loremaster Rúmil.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/A_star_shines_upon_the_hour_of_the_meeting_of_our_ways_tengwar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_star_shines_upon_the_hour_of_the_meeting_of_our_ways_tengwar.jpg",
+        "credit": "Lilijuros · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Lilijuros",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Lilijuros"
       },
       "background": null
     },
@@ -150470,6 +151737,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "PattayaPatrol",
         "author_url": "https://www.flickr.com/people/PattayaPatrol/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6743",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "unusual-pets",
+      "bundle": "base",
+      "description": "A tiny feathered roommate who is always up before everyone else in the house.",
+      "question": "Look at this close-up of a pet bird. Which bird is it?",
+      "answer": "Budgerigar",
+      "wrong_answers": [
+        "Canary",
+        "Pigeon",
+        "Toucan"
+      ],
+      "hints": [
+        "In the wild, it lives in big flocks in Australia.",
+        "It is one of the most popular pet birds in the world.",
+        "It has wavy stripes on its head and back."
+      ],
+      "fun_fact": "All wild budgerigars are green and yellow; blue and white ones were bred by people.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Budgerigars_eating_tangerine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABudgerigars_eating_tangerine.jpg",
+        "credit": "Falk Lademann · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Falk Lademann",
+        "author_url": "https://www.flickr.com/photos/58441544@N00"
       },
       "background": null
     },
@@ -151728,6 +153029,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Alvaro.vinuela.carnicero",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Alvaro.vinuela.carnicero&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6783",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "world-religions",
+      "bundle": "base",
+      "description": "The most famous dinner party in art, and nobody brought dessert.",
+      "question": "Leonardo da Vinci painted The Last Supper on the wall of a monastery dining hall. In which city can you still see it?",
+      "answer": "Milan",
+      "wrong_answers": [
+        "Florence",
+        "Rome",
+        "Venice"
+      ],
+      "hints": [
+        "The city is in northern Italy.",
+        "It is famous for fashion and a huge Gothic cathedral.",
+        "Its two big soccer clubs are AC and Inter."
+      ],
+      "fun_fact": "Leonardo painted on dry plaster instead of using true fresco, so the paint began flaking off while he was still alive.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Leonardo_da_Vinci_%281452-1519%29_-_The_Last_Supper_%281495-1498%29.jpg/3840px-Leonardo_da_Vinci_%281452-1519%29_-_The_Last_Supper_%281495-1498%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALeonardo_da_Vinci_%281452-1519%29_-_The_Last_Supper_%281495-1498%29.jpg",
+        "credit": "Leonardo da Vinci · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Leonardo da Vinci",
+        "author_url": "https://en.wikipedia.org/wiki/en:Leonardo_da_Vinci"
       },
       "background": null
     },
