@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "5b12abf5",
+  "hash": "003135f0",
   "questions": [
     {
       "id": "q-0002",
@@ -38740,6 +38740,40 @@
       "background": null
     },
     {
+      "id": "q-7602",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "20th-century",
+      "bundle": "colombia",
+      "description": "Un pacto político con más letra menuda que un contrato de celular.",
+      "question": "El Frente Nacional, que empezó en 1958, lo pactaron liberales y conservadores. ¿Para qué se creó?",
+      "answer": "Para turnarse la presidencia entre los dos partidos",
+      "wrong_answers": [
+        "Para devolverle el poder a Rojas Pinilla",
+        "Para reemplazar los dos partidos por uno nuevo",
+        "Para convocar una Asamblea Constituyente"
+      ],
+      "hints": [
+        "Venía de años de violencia entre los dos partidos tradicionales.",
+        "Lo acordaron en España el liberal Alberto Lleras Camargo y el conservador Laureano Gómez.",
+        "Cada cuatro años, la presidencia pasaba al otro partido."
+      ],
+      "fun_fact": "Alberto Lleras Camargo también fue el primer secretario general de la OEA, fundada en Bogotá en 1948.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Capitolio_Nacional_de_Colombia_%28Bogot%C3%A1%29_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACapitolio_Nacional_de_Colombia_%28Bogot%C3%A1%29_02.JPG",
+        "credit": "Racso (Oscar Fernando Gómez) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Racso (Oscar Fernando Gómez)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Racso"
+      },
+      "background": null
+    },
+    {
       "id": "q-7604",
       "status": "approved",
       "difficulty": 14,
@@ -39760,6 +39794,40 @@
       "background": null
     },
     {
+      "id": "q-7636",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "drinks",
+      "bundle": "colombia",
+      "description": "Una olla con cintura de modelo y ganas de hacer espuma.",
+      "question": "¿Cómo se llama la olla de aluminio, ancha abajo y angosta arriba, que no falta en las cocinas colombianas?",
+      "answer": "La chocolatera",
+      "wrong_answers": [
+        "La olla pitadora",
+        "La paila",
+        "La cafetera"
+      ],
+      "hints": [
+        "Por su boca angosta se mete un palito de madera.",
+        "En ella se prepara lo que se toma con queso en las onces.",
+        "Su nombre viene de la bebida que se hace en ella."
+      ],
+      "fun_fact": "La forma angosta de la chocolatera ayuda a que el molinillo levante más espuma sin que el chocolate se riegue.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Traditional_cooking_pots_on_a_hearth_in_Uganda%22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATraditional_cooking_pots_on_a_hearth_in_Uganda%22.jpg",
+        "credit": "Oliversamson1 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Oliversamson1",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Oliversamson1"
+      },
+      "background": null
+    },
+    {
       "id": "q-7637",
       "status": "approved",
       "difficulty": 5,
@@ -40746,6 +40814,40 @@
       "background": null
     },
     {
+      "id": "q-7666",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "poetry-and-childrens-stories",
+      "bundle": "colombia",
+      "description": "Una palabra que suena a mora, pero no se come.",
+      "question": "Va al final de las fábulas, a veces en un par de versos, y Rafael Pombo la ponía en sus «Fábulas y verdades». ¿Qué es la moraleja?",
+      "answer": "La enseñanza que deja la historia",
+      "wrong_answers": [
+        "El último dibujo de la historia",
+        "La firma del autor de la historia",
+        "El final feliz de la historia"
+      ],
+      "hints": [
+        "Tiene que ver con lo que está bien y lo que está mal.",
+        "Responde a la pregunta «¿qué aprendimos?».",
+        "Viene de la palabra «moral»."
+      ],
+      "fun_fact": "Las fábulas con moraleja son antiquísimas: las de Esopo ya se contaban en Grecia hace más de 2500 años.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Page_4_illustration_from_The_Fables_of_%C3%86sop_%28Jacobs%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APage_4_illustration_from_The_Fables_of_%C3%86sop_%28Jacobs%29.png",
+        "credit": "Joseph Jacobs / Richard Heighway · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Joseph Jacobs / Richard Heighway",
+        "author_url": "https://en.wikipedia.org/wiki/en:Joseph_Jacobs"
+      },
+      "background": null
+    },
+    {
       "id": "q-7667",
       "status": "approved",
       "difficulty": 8,
@@ -41562,6 +41664,40 @@
       "background": null
     },
     {
+      "id": "q-7691",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "banknotes-and-coins",
+      "bundle": "colombia",
+      "description": "Son tan chiquitos que en Colombia ya ni el marrano los quiere.",
+      "question": "Aunque ya casi nadie los ve, el peso colombiano se divide en centavos. ¿Cuántos centavos tiene un peso?",
+      "answer": "100",
+      "wrong_answers": [
+        "10",
+        "1000",
+        "50"
+      ],
+      "hints": [
+        "Es un número redondo.",
+        "El dólar y el euro también se dividen en centavos de la misma manera.",
+        "Es un 1 seguido de dos ceros."
+      ],
+      "fun_fact": "Por la inflación, las monedas de centavos dejaron de usarse en Colombia hace décadas, y hoy la moneda más pequeña que circula es la de 50 pesos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Moneda_200_pesos_colombianos_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMoneda_200_pesos_colombianos_2016.jpg",
+        "credit": "Rjcastillo · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rjcastillo",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rjcastillo"
+      },
+      "background": null
+    },
+    {
       "id": "q-7692",
       "status": "approved",
       "difficulty": 7,
@@ -41936,6 +42072,40 @@
       "background": null
     },
     {
+      "id": "q-7703",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "ghosts-and-creatures",
+      "bundle": "colombia",
+      "description": "Ni el mejor electricista del barrio logra arreglar esta casa.",
+      "question": "En una casa vieja las puertas se abren solas, se oyen pasos en la noche y los bombillos titilan sin razón. ¿Qué dice la gente que está la casa?",
+      "answer": "Embrujada",
+      "wrong_answers": [
+        "Enguayabada",
+        "Achantada",
+        "Amañada"
+      ],
+      "hints": [
+        "Es una palabra que aparece mucho en cuentos de miedo y en películas de terror.",
+        "Es lo que dice la gente cuando cree que en un lugar hay espantos.",
+        "La palabra tiene que ver con brujas."
+      ],
+      "fun_fact": "Las casas viejas crujen de noche porque la madera se encoge al enfriarse, y por eso muchas parecen embrujadas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/1960_abandoned_old_colonial_house_entrance.jpg/3840px-1960_abandoned_old_colonial_house_entrance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A1960_abandoned_old_colonial_house_entrance.jpg",
+        "credit": "Moenish sing · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Moenish sing",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Moenish_sing&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-7704",
       "status": "approved",
       "difficulty": 8,
@@ -42136,6 +42306,40 @@
         "license_url": null,
         "author": "Congreso de la Confederación Granadina",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-7710",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "national-symbols",
+      "bundle": "colombia",
+      "description": "Esas primeras notas que interrumpen hasta la conversación más interesante del estadio.",
+      "question": "En Colombia, cuando suena el himno nacional en un evento, ¿quiénes deben ponerse de pie?",
+      "answer": "Todos los presentes",
+      "wrong_answers": [
+        "Los militares y policías",
+        "Los estudiantes y profesores",
+        "Las autoridades del evento"
+      ],
+      "hints": [
+        "Pasa igual en partidos de fútbol, actos del colegio y ceremonias oficiales.",
+        "Es una muestra de respeto a un símbolo patrio.",
+        "Nadie queda por fuera."
+      ],
+      "fun_fact": "Por ley, en Colombia las emisoras de radio y los canales de televisión deben transmitir el himno nacional a las 6 de la mañana y a las 6 de la tarde.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/London_%2C_Wembley_-_Stadium_Crowds_-_geograph.org.uk_-_2112464.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALondon_%2C_Wembley_-_Stadium_Crowds_-_geograph.org.uk_-_2112464.jpg",
+        "credit": "Lewis Clarke · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Lewis Clarke",
+        "author_url": "https://www.geograph.org.uk/profile/11775"
       },
       "background": null
     },
@@ -42544,6 +42748,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Reduvida3",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Reduvida3&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7724",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "regional-speech",
+      "bundle": "colombia",
+      "description": "Su nombre suena aburrido, pero las abuelas tolimenses no opinan lo mismo.",
+      "question": "En las fiestas del Tolima y el Huila, ¿qué es un «insulso»?",
+      "answer": "Una masa dulce de maíz y panela",
+      "wrong_answers": [
+        "Un sombrero de paja",
+        "Un baile de San Pedro",
+        "Una sopa de pescado"
+      ],
+      "hints": [
+        "Se comparte en familia en época de fiestas.",
+        "Es dulce, aunque en el diccionario su nombre signifique «sin sabor».",
+        "Suele acompañar la lechona tolimense."
+      ],
+      "fun_fact": "En el diccionario, «insulso» quiere decir insípido y sin gracia: ¡todo lo contrario de este dulce!",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Suckling_pig_6444.JPG/3840px-Suckling_pig_6444.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASuckling_pig_6444.JPG",
+        "credit": "Karl Gruber · CC BY-SA 3.0 at · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 at",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+        "author": "Karl Gruber",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Karl_Gruber"
       },
       "background": null
     },
@@ -43466,6 +43704,40 @@
       "background": null
     },
     {
+      "id": "q-7753",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "symbols-of-departments-and-cities",
+      "bundle": "colombia",
+      "description": "El día en que Barranquilla por fin se dio la vuelta y miró al río.",
+      "question": "¿En qué década abrió su primera etapa el Gran Malecón del Río, junto al Magdalena en Barranquilla?",
+      "answer": "En la década de 2010",
+      "wrong_answers": [
+        "En la década de 1990",
+        "En la década de 1970",
+        "En la década de 1950"
+      ],
+      "hints": [
+        "Es una obra bastante reciente.",
+        "Convirtió en paseo una orilla que antes era zona de bodegas y fábricas.",
+        "Fue pocos años antes de la pandemia."
+      ],
+      "fun_fact": "Durante décadas, Barranquilla le dio la espalda al río: esa orilla estaba llena de bodegas y fábricas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Barranquilla_-_R%C3%ADo_Magdalena_-_panoramio_%2835%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABarranquilla_-_R%C3%ADo_Magdalena_-_panoramio_%2835%29.jpg",
+        "credit": "TMbux · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "TMbux",
+        "author_url": "https://web.archive.org/web/20161025174726/http://www.panoramio.com/user/1322186?with_photo_id=84992821"
+      },
+      "background": null
+    },
+    {
       "id": "q-7754",
       "status": "approved",
       "difficulty": 4,
@@ -44010,6 +44282,40 @@
       "background": null
     },
     {
+      "id": "q-7770",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "tv-shows-and-series",
+      "bundle": "colombia",
+      "description": "Tres letras que dan las noticias todas las noches y casi nadie sabe qué significan.",
+      "question": "Las letras de «Noticias RCN» vienen de una cadena que nació en la radio. Completa: Radio Cadena…",
+      "answer": "Nacional",
+      "wrong_answers": [
+        "Noticiosa",
+        "Novedosa",
+        "Nocturna"
+      ],
+      "hints": [
+        "La fundaron industriales de Antioquia.",
+        "Nació en Medellín, cuando la radio era la reina de las casas colombianas.",
+        "Es lo contrario de «regional»."
+      ],
+      "fun_fact": "RCN empezó como cadena de radio a finales de los años 40 y solo décadas después se convirtió en canal de televisión privado.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Vintage_Little_Wonder_Microphone%2C_Attach_It_To_Your_Radio%2C_%22Latest_Radio_Sensation%2C_Broadcast_Over_Your_Own_Radio%2C_Talk-Sing-Play%2C_Impersonate_Your_Radio_Favorites%22%2C_Circa_1930s_%289758965504%29.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVintage_Little_Wonder_Microphone%2C_Attach_It_To_Your_Radio%2C_%22Latest_Radio_Sensation%2C_Broadcast_Over_Your_Own_Radio%2C_Talk-Sing-Play%2C_Impersonate_Your_Radio_Favorites%22%2C_Circa_1930s_%289758965504%29.jpg",
+        "credit": "Joe Haupt from USA · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Joe Haupt from USA",
+        "author_url": "https://www.flickr.com/people/51764518@N02"
+      },
+      "background": null
+    },
+    {
       "id": "q-7771",
       "status": "approved",
       "difficulty": 11,
@@ -44108,6 +44414,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Alejandro  Bayer Tamayo from Armenia, Colombia",
         "author_url": "https://www.flickr.com/people/52346729@N04"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7774",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "typical-dishes",
+      "bundle": "colombia",
+      "description": "Una olla que lleva horas en el fogón y todavía le falta el sombrero.",
+      "question": "En los fríjoles antioqueños, ¿cómo se llama el guiso de tomate y cebolla que se les sirve encima?",
+      "answer": "Hogao",
+      "wrong_answers": [
+        "Chimichurri",
+        "Suero costeño",
+        "Ají pique"
+      ],
+      "hints": [
+        "Se sofríe despacio en la sartén con un poquito de aceite.",
+        "Es la base de muchísimas comidas colombianas, de la arepa al sudado.",
+        "Su nombre suena a «ahogado», porque el tomate se cocina hasta deshacerse."
+      ],
+      "fun_fact": "En muchas casas paisas los fríjoles se cocinan con pezuña de cerdo y trocitos de plátano verde para que el caldo quede espeso.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Mixture_of_beans_%28small_red%2C_cannellini%2C_pinto%2C_roman%2C_red_kidney%2C_black%29%2C_peas_%28blackeye%2C_yellow_split%29%2C_and_pardina_lentils_21.jpg/3840px-Mixture_of_beans_%28small_red%2C_cannellini%2C_pinto%2C_roman%2C_red_kidney%2C_black%29%2C_peas_%28blackeye%2C_yellow_split%29%2C_and_pardina_lentils_21.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMixture_of_beans_%28small_red%2C_cannellini%2C_pinto%2C_roman%2C_red_kidney%2C_black%29%2C_peas_%28blackeye%2C_yellow_split%29%2C_and_pardina_lentils_21.jpg",
+        "credit": "Bean appreciator · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Bean appreciator",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bean_appreciator"
       },
       "background": null
     },
@@ -44312,6 +44652,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Denapoly",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Denapoly&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7781",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "words",
+      "bundle": "colombia",
+      "description": "Allá todo el mundo es familia, aunque no compartan ni un apellido.",
+      "question": "¿En qué región de Colombia es típico saludar a cualquier amigo con un «¿Qué más, primo?»?",
+      "answer": "La costa Caribe",
+      "wrong_answers": [
+        "Los Llanos Orientales",
+        "Antioquia",
+        "Nariño"
+      ],
+      "hints": [
+        "Allá hace calor casi todo el año.",
+        "Es tierra de vallenato y de carnaval.",
+        "Ahí quedan Barranquilla y Cartagena."
+      ],
+      "fun_fact": "En la costa, a un amigo también se le dice «mi vale».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Two_friends_chatting%2C_Jardin_du_Luxembourg_April_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATwo_friends_chatting%2C_Jardin_du_Luxembourg_April_2011.jpg",
+        "credit": "Chris Waits · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Chris Waits",
+        "author_url": "https://www.flickr.com/people/78341140@N00"
       },
       "background": null
     },

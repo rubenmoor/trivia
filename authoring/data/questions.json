@@ -586653,10 +586653,10 @@
     },
     {
       "id": "q-7602",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
-      "description": "Un presidente, dos partidos y un pacto con más letra menuda que un contrato de celular.",
-      "question": "En 1958, liberales y conservadores pactaron el Frente Nacional. ¿Para qué se creó?",
+      "description": "Un pacto político con más letra menuda que un contrato de celular.",
+      "question": "El Frente Nacional, que empezó en 1958, lo pactaron liberales y conservadores. ¿Para qué se creó?",
       "answer": "Para turnarse la presidencia entre los dos partidos",
       "wrong_answers": [
         "Para devolverle el poder a Rojas Pinilla",
@@ -586711,28 +586711,32 @@
       "needs_media": false,
       "batch": "batch-20",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description gives the answer away. \"Un presidente, dos partidos y un pacto\" tells players that two parties share one presidency, which is the answer's defining trait. It also rules out the \"replace both parties with a new one\" option. The description should play on pacts or fine print without hinting that the parties shared power. A smaller point: the question says the pact was made \"en 1958\", but hint 2 places the agreement in Spain, and that happened in 1956–57 (Benidorm and Sitges). Wording like \"El Frente Nacional, que empezó en 1958…\" would be more accurate.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description gives the answer away. \"Un presidente, dos partidos y un pacto\" tells players that two parties share one presidency, which is the answer's defining trait. It also rules out the \"replace both parties with a new one\" option. The description should play on pacts or fine print without hinting that the parties shared power. A smaller point: the question says the pact was made \"en 1958\", but hint 2 places the agreement in Spain, and that happened in 1956–57 (Benidorm and Sitges). Wording like \"El Frente Nacional, que empezó en 1958…\" would be more accurate.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Shortened the question to a direct ask and replaced hint 2, which revealed the alternation, with the Spain pact detail.",
+        "reason": "Rewrote the description so it no longer hints at a shared presidency, and reworded the question so it doesn't say the pact was signed in 1958.",
         "previous": {
-          "question": "Alberto Lleras Camargo fue su primer presidente, en 1958; duró 16 años y lo pactaron liberales y conservadores. ¿Para qué se creó el Frente Nacional?",
-          "hints": [
-            "Venía de años de violencia entre los dos partidos tradicionales.",
-            "Después de Lleras, que era liberal, llegó Guillermo León Valencia, que era conservador.",
-            "Cada cuatro años, la presidencia pasaba al otro partido."
-          ]
+          "description": "Un presidente, dos partidos y un pacto con más letra menuda que un contrato de celular.",
+          "question": "En 1958, liberales y conservadores pactaron el Frente Nacional. ¿Para qué se creó?"
         },
         "revised_on": "2026-10-23"
       }
@@ -586757,7 +586761,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "bullerengue drums Colombia",
+        "query": "cumbia drums Colombia",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -586791,22 +586795,40 @@
       "batch": "batch-20",
       "review": {
         "decision": "needs_work",
-        "feedback": "The text is fine, but none of the media candidates works. The sheet shows a Quebec hotel, a Western rock drum kit, a cluttered hall, and photos of Colombian politicians and officials. None of them shows Caribbean Colombian drums or bullerengue/cumbia music, and I can't search again. A new search such as \"tambor alegre drum\" or \"cumbia drums Colombia\" is needed. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but none of the media candidates works. The sheet shows a Quebec hotel, a Western rock drum kit, a cluttered hall, and photos of Colombian politicians and officials. None of them shows Caribbean Colombian drums or bullerengue/cumbia music, and I can't search again. A new search such as \"tambor alegre drum\" or \"cumbia drums Colombia\" is needed. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Shortened the question by cutting the genre list, as requested.",
+        "reason": "Changed the media query to one more likely to find Caribbean Colombian drums.",
         "previous": {
-          "question": "Soy cantadora del Caribe y llevo décadas cantando bullerengue, cumbia y tambora. En 1982 canté en Estocolmo para el Nobel de Gabo, y en 2011 canté con Calle 13. ¿Quién soy?"
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "bullerengue drums Colombia",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -587628,7 +587650,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Gaitán 1940s portrait photograph",
+        "query": "Jorge Eliécer Gaitán",
         "note": "Retrato fotográfico clásico de Jorge Eliécer Gaitán, sin nombre ni pie de foto visible.",
         "source_url": null,
         "file_url": null,
@@ -587662,17 +587684,43 @@
       "batch": "batch-20",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the six candidates is Jorge Eliécer Gaitán. The essential image needs a portrait of Gaitán, and a new search isn't allowed. A query like \"Jorge Eliécer Gaitán\" would likely find one on Commons. The text itself has no problems. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates is Jorge Eliécer Gaitán. The essential image needs a portrait of Gaitán, and a new search isn't allowed. A query like \"Jorge Eliécer Gaitán\" would likely find one on Commons. The text itself has no problems. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the essential media query to Gaitán's name so a portrait of him is found.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Gaitán 1940s portrait photograph",
+            "note": "Retrato fotográfico clásico de Jorge Eliécer Gaitán, sin nombre ni pie de foto visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7616",
@@ -589193,10 +589241,10 @@
     },
     {
       "id": "q-7636",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Una olla con cintura de modelo y ganas de hacer espuma.",
-      "question": "Mira de cerca esta olla de aluminio, ancha abajo y angosta arriba, que no falta en las cocinas colombianas. ¿Cómo se llama?",
+      "question": "¿Cómo se llama la olla de aluminio, ancha abajo y angosta arriba, que no falta en las cocinas colombianas?",
       "answer": "La chocolatera",
       "wrong_answers": [
         "La olla pitadora",
@@ -589210,12 +589258,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "chocolatera aluminio",
-        "note": "Close-up of a traditional Colombian aluminum chocolatera (tall pot, wide bottom, narrow top), without a molinillo or visible chocolate.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "traditional kitchen cooking pots",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATraditional_cooking_pots_on_a_hearth_in_Uganda%22.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Traditional_cooking_pots_on_a_hearth_in_Uganda%22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Oliversamson1 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Oliversamson1",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Oliversamson1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "La forma angosta de la chocolatera ayuda a que el molinillo levante más espuma sin que el chocolate se riegue.",
       "subcategory": "drinks",
@@ -589240,22 +589295,48 @@
         "difficulty_estimate": 4,
         "notes": "The essential photo is only moderately likely: Commons may not have a clean picture of a Colombian aluminium chocolatera without the molinillo. Close in topic to q-7447 (the molinillo), but it asks a different fact. Colombian kids know the chocolatera, so 6 is too high."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-20",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The essential image slot has no candidates, and no new search is allowed. Without a clear photo of a Colombian aluminium chocolatera, a question that starts \"Mira de cerca esta olla\" can't be played. Either find a suitable photo by hand or reword the question so it doesn't depend on the picture. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential image slot has no candidates, and no new search is allowed. Without a clear photo of a Colombian aluminium chocolatera, a question that starts \"Mira de cerca esta olla\" can't be played. Either find a suitable photo by hand or reword the question so it doesn't depend on the picture. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No chocolatera photo exists, so I reworded the question to work without the picture and made the media a decorative kitchen image.",
+        "previous": {
+          "question": "Mira de cerca esta olla de aluminio, ancha abajo y angosta arriba, que no falta en las cocinas colombianas. ¿Cómo se llama?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "chocolatera aluminio",
+            "note": "Close-up of a traditional Colombian aluminum chocolatera (tall pot, wide bottom, narrow top), without a molinillo or visible chocolate.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7637",
@@ -591505,7 +591586,7 @@
     },
     {
       "id": "q-7666",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Una palabra que suena a mora, pero no se come.",
       "question": "Va al final de las fábulas, a veces en un par de versos, y Rafael Pombo la ponía en sus «Fábulas y verdades». ¿Qué es la moraleja?",
@@ -591523,11 +591604,21 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "antique fable book illustration",
+        "query": "Aesop fable illustration",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APage_4_illustration_from_The_Fables_of_%C3%86sop_%28Jacobs%29.png",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Page_4_illustration_from_The_Fables_of_%C3%86sop_%28Jacobs%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Joseph Jacobs / Richard Heighway · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Joseph Jacobs / Richard Heighway",
+        "author_url": "https://en.wikipedia.org/wiki/en:Joseph_Jacobs",
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-old-auto-1923",
+          "PD-old-auto-expired"
+        ]
       },
       "fun_fact": "Las fábulas con moraleja son antiquísimas: las de Esopo ya se contaban en Grecia hace más de 2500 años.",
       "subcategory": "poetry-and-childrens-stories",
@@ -591556,27 +591647,39 @@
       "needs_media": false,
       "batch": "batch-20",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the image candidates fits the topic: they show a medieval sickroom, a portrait medal, an Alma-Tadema dance scene, an Art Nouveau ornament, an Ovid mythology engraving and a royal frontispiece. None of them shows a fable. A new search isn't allowed, so the slot needs a fable picture, e.g. \"Aesop fable illustration\" or \"fox and crow fable\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates fits the topic: they show a medieval sickroom, a portrait medal, an Alma-Tadema dance scene, an Art Nouveau ornament, an Ovid mythology engraving and a royal frontispiece. None of them shows a fable. A new search isn't allowed, so the slot needs a fable picture, e.g. \"Aesop fable illustration\" or \"fox and crow fable\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "The 'at the end' clue ruled out the title and first-verse options, so all three wrong answers are now parts that can also come at the end of a story.",
+        "reason": "Changed the media query so it finds a real fable illustration.",
         "previous": {
-          "wrong_answers": [
-            "El título de la historia",
-            "El dibujo de la historia",
-            "El primer verso de la historia"
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "antique fable book illustration",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -593404,7 +593507,7 @@
     },
     {
       "id": "q-7691",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Son tan chiquitos que en Colombia ya ni el marrano los quiere.",
       "question": "Aunque ya casi nadie los ve, el peso colombiano se divide en centavos. ¿Cuántos centavos tiene un peso?",
@@ -593416,7 +593519,7 @@
       ],
       "hints": [
         "Es un número redondo.",
-        "La palabra «centavo» viene de la misma raíz latina que «centímetro».",
+        "El dólar y el euro también se dividen en centavos de la misma manera.",
         "Es un 1 seguido de dos ceros."
       ],
       "media": {
@@ -593462,25 +593565,33 @@
       "needs_media": false,
       "batch": "batch-20",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: tying «centavo» to «centímetro» tells players straight away that it's a hundredth (100 cm in a metre). That is hint-3 strength. Replace it with a vague hint, for example one about how other currencies such as the dollar or the euro are split up, that doesn't point to the hundred.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: tying «centavo» to «centímetro» tells players straight away that it's a hundredth (100 cm in a metre). That is hint-3 strength. Replace it with a vague hint, for example one about how other currencies such as the dollar or the euro are split up, that doesn't point to the hundred.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2's dollar and euro comparison, which gave the answer away, with the Latin root of 'centavo'.",
+        "reason": "Replaced hint 2, which gave away the hundred, with a vaguer comparison to other currencies.",
         "previous": {
           "hints": [
             "Es un número redondo.",
-            "Es igual que con el dólar o el euro.",
+            "La palabra «centavo» viene de la misma raíz latina que «centímetro».",
             "Es un 1 seguido de dos ceros."
           ]
         },
@@ -594314,7 +594425,7 @@
     },
     {
       "id": "q-7703",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Ni el mejor electricista del barrio logra arreglar esta casa.",
       "question": "En una casa vieja las puertas se abren solas, se oyen pasos en la noche y los bombillos titilan sin razón. ¿Qué dice la gente que está la casa?",
@@ -594345,7 +594456,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "En Colombia hay casonas famosas por sus «espantos», como la del Salto del Tequendama, que hoy es un museo.",
+      "fun_fact": "Las casas viejas crujen de noche porque la madera se encoge al enfriarse, y por eso muchas parecen embrujadas.",
       "subcategory": "ghosts-and-creatures",
       "style": null,
       "concept": "Embrujado",
@@ -594372,27 +594483,31 @@
       "needs_media": false,
       "batch": "batch-20",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact says the Salto del Tequendama casona 'hoy es un museo', which is exactly the answer of approved question q-6835, so a player who sees this question's fun fact already knows q-6835's answer. The fun fact needs another fact about haunted houses that doesn't reveal what the Tequendama house is used for today. The question itself, the description, hints and options are fine.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact says the Salto del Tequendama casona 'hoy es un museo', which is exactly the answer of approved question q-6835, so a player who sees this question's fun fact already knows q-6835's answer. The fun fact needs another fact about haunted houses that doesn't reveal what the Tequendama house is used for today. The question itself, the description, hints and options are fine.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which ruled out the wrong answers by saying the word is for places, not people.",
+        "reason": "Replaced the fun fact, which gave away the answer to q-6835.",
         "previous": {
-          "hints": [
-            "Es una palabra que se usa más para lugares que para personas.",
-            "Es lo que dice la gente cuando cree que en un lugar hay espantos.",
-            "La palabra tiene que ver con brujas."
-          ]
+          "fun_fact": "En Colombia hay casonas famosas por sus «espantos», como la del Salto del Tequendama, que hoy es un museo."
         },
         "revised_on": "2026-10-23"
       }
@@ -594851,7 +594966,7 @@
     },
     {
       "id": "q-7710",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Esas primeras notas que interrumpen hasta la conversación más interesante del estadio.",
       "question": "En Colombia, cuando suena el himno nacional en un evento, ¿quiénes deben ponerse de pie?",
@@ -594869,11 +594984,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "Colombian flag waving crowd",
+        "query": "Colombia stadium crowd",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALondon_%2C_Wembley_-_Stadium_Crowds_-_geograph.org.uk_-_2112464.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/London_%2C_Wembley_-_Stadium_Crowds_-_geograph.org.uk_-_2112464.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Lewis Clarke · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Lewis Clarke",
+        "author_url": "https://www.geograph.org.uk/profile/11775",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Por ley, en Colombia las emisoras de radio y los canales de televisión deben transmitir el himno nacional a las 6 de la mañana y a las 6 de la tarde.",
       "subcategory": "national-symbols",
@@ -594902,28 +595024,39 @@
       "needs_media": false,
       "batch": "batch-20",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the image candidates works for a question about the Colombian national anthem. They show pride flags (1–3), US flags (4, 6) and a Panamanian flag at a Noriega rally (5), and a new search isn't allowed. The slot needs a decorative image such as \"Colombia stadium crowd\" or \"Colombian flag ceremony\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates works for a question about the Colombian national anthem. They show pride flags (1–3), US flags (4, 6) and a Panamanian flag at a Noriega rally (5), and a new search isn't allowed. The slot needs a decorative image such as \"Colombia stadium crowd\" or \"Colombian flag ceremony\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1 and the description, which both implied that everyone stands.",
+        "reason": "Changed the decorative media query to a Colombian stadium crowd.",
         "previous": {
-          "description": "Unos segundos en los que hasta el más inquieto se vuelve estatua.",
-          "hints": [
-            "No importa la edad ni el oficio.",
-            "Es una muestra de respeto a un símbolo patrio.",
-            "Nadie queda por fuera."
-          ]
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "Colombian flag waving crowd",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -595247,7 +595380,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "raw potatoes heap",
+        "query": "pile of potatoes",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -595281,17 +595414,43 @@
       "batch": "batch-20",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the image candidates shows potatoes or anything else from the tongue-twister's world, and no new search is allowed. The slot needs a clear photo of raw potatoes (for example \"potatoes in sack\" or \"pile of potatoes\"). No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates shows potatoes or anything else from the tongue-twister's world, and no new search is allowed. The slot needs a clear photo of raw potatoes (for example \"potatoes in sack\" or \"pile of potatoes\"). No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query to a simpler potato search.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "raw potatoes heap",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7716",
@@ -595863,7 +596022,7 @@
     },
     {
       "id": "q-7724",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Su nombre suena aburrido, pero las abuelas tolimenses no opinan lo mismo.",
       "question": "En las fiestas del Tolima y el Huila, ¿qué es un «insulso»?",
@@ -595881,11 +596040,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "Ibagué folk festival",
+        "query": "lechona tolimense",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASuckling_pig_6444.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Suckling_pig_6444.JPG/3840px-Suckling_pig_6444.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Karl Gruber · CC BY-SA 3.0 at · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 at",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+        "author": "Karl Gruber",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Karl_Gruber",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En el diccionario, «insulso» quiere decir insípido y sin gracia: ¡todo lo contrario de este dulce!",
       "subcategory": "regional-speech",
@@ -595914,28 +596080,39 @@
       "needs_media": false,
       "batch": "batch-20",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but none of the media candidates fits. All six are folk-music festivals in the US, Canada or Australia (Newport, Winnipeg, Kerrville, Woodford), not Tolima's San Pedro festivities or its food, and no new search is allowed. The slot needs a new search such as \"lechona tolimense\" or \"San Pedro festival Neiva\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but none of the media candidates fits. All six are folk-music festivals in the US, Canada or Australia (Newport, Winnipeg, Kerrville, Woodford), not Tolima's San Pedro festivities or its food, and no new search is allowed. The slot needs a new search such as \"lechona tolimense\" or \"San Pedro festival Neiva\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Reworded the answer so it doesn't call the dish a 'postre', and replaced hint 3, which repeated words from the answer.",
+        "reason": "Replaced the media query with one from Tolima's own festive food so the decorative image fits.",
         "previous": {
-          "answer": "Un postre de maíz y panela",
-          "hints": [
-            "Se comparte en familia en época de fiestas.",
-            "Es dulce, aunque en el diccionario su nombre signifique «sin sabor».",
-            "Lleva panela y canela."
-          ]
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "Ibagué folk festival",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -597805,8 +597982,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "San Andrés Providencia flag svg",
-        "note": "Mostrar la bandera oficial del departamento de San Andrés, Providencia y Santa Catalina, sin texto ni nombre visible.",
+        "query": "Flag of San Andrés y Providencia",
+        "note": "Mostrar la bandera oficial del departamento de San Andrés, Providencia y Santa Catalina (archivo SVG de Commons), sin nombre de archivo, texto ni pie de foto visible.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -597839,17 +598016,43 @@
       "batch": "batch-20",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows the flag of San Andrés, Providencia y Santa Catalina, so this essential image slot can't be filled, and no new search is allowed. The question needs the official flag file (e.g. the Commons SVG 'Flag of San Andrés y Providencia'), shown without its filename or caption. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows the flag of San Andrés, Providencia y Santa Catalina, so this essential image slot can't be filled, and no new search is allowed. The question needs the official flag file (e.g. the Commons SVG 'Flag of San Andrés y Providencia'), shown without its filename or caption. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Pointed the essential media query at the official Commons flag file name.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "San Andrés Providencia flag svg",
+            "note": "Mostrar la bandera oficial del departamento de San Andrés, Providencia y Santa Catalina, sin texto ni nombre visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7751",
@@ -598015,7 +598218,7 @@
     },
     {
       "id": "q-7753",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "El día en que Barranquilla por fin se dio la vuelta y miró al río.",
       "question": "¿En qué década abrió su primera etapa el Gran Malecón del Río, junto al Magdalena en Barranquilla?",
@@ -598027,7 +598230,7 @@
       ],
       "hints": [
         "Es una obra bastante reciente.",
-        "Abrió cuando Shakira, la barranquillera más famosa, ya era una estrella mundial.",
+        "Convirtió en paseo una orilla que antes era zona de bodegas y fábricas.",
         "Fue pocos años antes de la pandemia."
       ],
       "media": {
@@ -598073,26 +598276,33 @@
       "needs_media": false,
       "batch": "batch-20",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: Shakira became a worldwide star around 2001, so with hint 1 (\"bastante reciente\") the 2010s is the only option left. Replace hint 2 with a vaguer clue, for example one about the city's riverfront being industrial before, without a time anchor that rules out the 1990s.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: Shakira became a worldwide star around 2001, so with hint 1 (\"bastante reciente\") the 2010s is the only option left. Replace hint 2 with a vaguer clue, for example one about the city's riverfront being industrial before, without a time anchor that rules out the 1990s.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Cut the scene-setting opening and replaced hint 2, which pinned the decade, with the reviewer's weaker Shakira hint.",
+        "reason": "Replaced hint 2, whose Shakira time anchor gave the answer away, with a vaguer clue about the industrial riverfront.",
         "previous": {
-          "question": "Estás paseando por el Gran Malecón del Río, en Barranquilla, junto al Magdalena. ¿En qué década abrió su primera etapa?",
           "hints": [
             "Es una obra bastante reciente.",
-            "Se abrió mientras la ciudad se preparaba para los Juegos Centroamericanos y del Caribe de 2018.",
+            "Abrió cuando Shakira, la barranquillera más famosa, ya era una estrella mundial.",
             "Fue pocos años antes de la pandemia."
           ]
         },
@@ -599274,7 +599484,7 @@
     },
     {
       "id": "q-7770",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Tres letras que dan las noticias todas las noches y casi nadie sabe qué significan.",
       "question": "Las letras de «Noticias RCN» vienen de una cadena que nació en la radio. Completa: Radio Cadena…",
@@ -599286,7 +599496,7 @@
       ],
       "hints": [
         "La fundaron industriales de Antioquia.",
-        "La misma palabra aparece en el nombre de un famoso equipo de fútbol de Medellín.",
+        "Nació en Medellín, cuando la radio era la reina de las casas colombianas.",
         "Es lo contrario de «regional»."
       ],
       "media": {
@@ -599294,8 +599504,8 @@
         "role": "illustrative",
         "query": "vintage radio microphone",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AVintage_Radio_Microphone%2C_Attach_the_Mike_to_Your_Radio_to_Broadcast_Your_Voice_or_Music%2C_Empire_Radio_%26_Television%2C_Brooklyn%2C_N.Y._%289758989506%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Vintage_Radio_Microphone%2C_Attach_the_Mike_to_Your_Radio_to_Broadcast_Your_Voice_or_Music%2C_Empire_Radio_%26_Television%2C_Brooklyn%2C_N.Y._%289758989506%29.jpg/3840px-Vintage_Radio_Microphone%2C_Attach_the_Mike_to_Your_Radio_to_Broadcast_Your_Voice_or_Music%2C_Empire_Radio_%26_Television%2C_Brooklyn%2C_N.Y._%289758989506%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVintage_Little_Wonder_Microphone%2C_Attach_It_To_Your_Radio%2C_%22Latest_Radio_Sensation%2C_Broadcast_Over_Your_Own_Radio%2C_Talk-Sing-Play%2C_Impersonate_Your_Radio_Favorites%22%2C_Circa_1930s_%289758965504%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Vintage_Little_Wonder_Microphone%2C_Attach_It_To_Your_Radio%2C_%22Latest_Radio_Sensation%2C_Broadcast_Over_Your_Own_Radio%2C_Talk-Sing-Play%2C_Impersonate_Your_Radio_Favorites%22%2C_Circa_1930s_%289758965504%29.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "credit": "Joe Haupt from USA · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 2.0",
@@ -599332,28 +599542,35 @@
       "needs_media": false,
       "batch": "batch-20",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: with these four options, every Colombian player instantly links 'a famous football club from Medellín' to Atlético Nacional, so the question is solved at hint 2. That is hint-3 strength, and hint 3 ('lo contrario de regional') already plays that role. Replace hint 2 with a vaguer clue, for example one about the radio era or Medellín as the founding city, without pointing to the word itself.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: with these four options, every Colombian player instantly links 'a famous football club from Medellín' to Atlético Nacional, so the question is solved at hint 2. That is hint-3 strength, and hint 3 ('lo contrario de regional') already plays that role. Replace hint 2 with a vaguer clue, for example one about the radio era or Medellín as the founding city, without pointing to the word itself.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which defined the answer, moved the 'regional' clue to hint 3, and softened the founding year in the fun fact.",
+        "reason": "Replaced hint 2, which pointed straight to Atlético Nacional, with a vaguer clue about the radio era in Medellín.",
         "previous": {
           "hints": [
-            "La cadena quería sonar en todo el país.",
-            "Es lo contrario de «regional».",
-            "Es la misma palabra que acompaña al himno y a la Selección."
-          ],
-          "fun_fact": "RCN empezó como cadena de radio en 1948 y solo décadas después se convirtió en canal de televisión privado."
+            "La fundaron industriales de Antioquia.",
+            "La misma palabra aparece en el nombre de un famoso equipo de fútbol de Medellín.",
+            "Es lo contrario de «regional»."
+          ]
         },
         "revised_on": "2026-10-23"
       }
@@ -599599,10 +599816,10 @@
     },
     {
       "id": "q-7774",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Una olla que lleva horas en el fogón y todavía le falta el sombrero.",
-      "question": "Mira estos fríjoles antioqueños. ¿Cómo se llama el guiso de tomate y cebolla que se les sirve encima?",
+      "question": "En los fríjoles antioqueños, ¿cómo se llama el guiso de tomate y cebolla que se les sirve encima?",
       "answer": "Hogao",
       "wrong_answers": [
         "Chimichurri",
@@ -599616,12 +599833,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Colombian bean soup",
-        "note": "Una foto clara de un plato de fríjoles rojos antioqueños en caldo, idealmente con guiso de tomate y cebolla encima; sin texto con el nombre de la salsa.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "dried red kidney beans",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMixture_of_beans_%28small_red%2C_cannellini%2C_pinto%2C_roman%2C_red_kidney%2C_black%29%2C_peas_%28blackeye%2C_yellow_split%29%2C_and_pardina_lentils_21.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Mixture_of_beans_%28small_red%2C_cannellini%2C_pinto%2C_roman%2C_red_kidney%2C_black%29%2C_peas_%28blackeye%2C_yellow_split%29%2C_and_pardina_lentils_21.jpg/3840px-Mixture_of_beans_%28small_red%2C_cannellini%2C_pinto%2C_roman%2C_red_kidney%2C_black%29%2C_peas_%28blackeye%2C_yellow_split%29%2C_and_pardina_lentils_21.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Bean appreciator · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Bean appreciator",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bean_appreciator",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En muchas casas paisas los fríjoles se cocinan con pezuña de cerdo y trocitos de plátano verde para que el caldo quede espeso.",
       "subcategory": "typical-dishes",
@@ -599646,22 +599870,48 @@
         "difficulty_estimate": 6,
         "notes": "Essential media isn't needed: the photo adds nothing to the question, and a clear Commons photo of frijoles antioqueños with hogao on top is uncertain. It should be illustrative. The description ('le falta el sombrero') is a weak joke. The hogao/'ahogado' etymology is popular lore rather than a firm fact."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-20",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows frijoles antioqueños: all six are foreign bean soups (US Senate bean soup, Moroccan bissara, Maltese kusksu, etc.). The question says \"Mira estos fríjoles antioqueños\", so the media must show that dish, and no new search is allowed. Either find a real photo of frijoles antioqueños (search \"frijoles antioqueños\" or \"bandeja paisa beans\"), or reword the question so it doesn't point at a photo and use illustrative media. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows frijoles antioqueños: all six are foreign bean soups (US Senate bean soup, Moroccan bissara, Maltese kusksu, etc.). The question says \"Mira estos fríjoles antioqueños\", so the media must show that dish, and no new search is allowed. Either find a real photo of frijoles antioqueños (search \"frijoles antioqueños\" or \"bandeja paisa beans\"), or reword the question so it doesn't point at a photo and use illustrative media. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Reworded so the question no longer points at a photo, and switched to illustrative media of beans that doesn't show the sauce.",
+        "previous": {
+          "question": "Mira estos fríjoles antioqueños. ¿Cómo se llama el guiso de tomate y cebolla que se les sirve encima?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Colombian bean soup",
+            "note": "Una foto clara de un plato de fríjoles rojos antioqueños en caldo, idealmente con guiso de tomate y cebolla encima; sin texto con el nombre de la salsa.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7775",
@@ -600100,7 +600350,7 @@
     },
     {
       "id": "q-7781",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Allá todo el mundo es familia, aunque no compartan ni un apellido.",
       "question": "¿En qué región de Colombia es típico saludar a cualquier amigo con un «¿Qué más, primo?»?",
@@ -600118,11 +600368,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "friends greeting handshake",
+        "query": "friends chatting street",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATwo_friends_chatting%2C_Jardin_du_Luxembourg_April_2011.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Two_friends_chatting%2C_Jardin_du_Luxembourg_April_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Chris Waits · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Chris Waits",
+        "author_url": "https://www.flickr.com/people/78341140@N00",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En la costa, a un amigo también se le dice «mi vale».",
       "subcategory": "words",
@@ -600151,33 +600408,39 @@
       "needs_media": false,
       "batch": "batch-20",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No media candidate fits. 1 and 2 are a US graduation candle ceremony, and 3 to 6 are Gerald Ford Library contact sheets, none of which shows friends greeting each other. The slot needs a new search such as \"friends greeting street\" or \"Colombian friends chatting\". The question text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No media candidate fits. 1 and 2 are a US graduation candle ceremony, and 3 to 6 are Gerald Ford Library contact sheets, none of which shows friends greeting each other. The slot needs a new search such as \"friends greeting street\" or \"Colombian friends chatting\". The question text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the Andean 'Quiubo' with a coastal greeting, kept only 'mi vale' in the fun fact, and switched to a non-coastal image.",
+        "reason": "New media query for friends chatting, without a Caribbean city that would give the answer away.",
         "previous": {
-          "question": "¿En qué región de Colombia es muy común saludar a cualquier amigo o conocido con un «¡Quiubo, primo!»?",
           "media": {
             "type": "image",
             "role": "illustrative",
-            "query": "Colombian Caribbean beach town",
+            "query": "friends greeting handshake",
             "note": null,
             "source_url": null,
             "file_url": null,
             "credit": null
-          },
-          "fun_fact": "En la costa, «primo» es tan común como «mi llave» o «compa» para hablarle a un amigo."
+          }
         },
         "revised_on": "2026-10-23"
       }
