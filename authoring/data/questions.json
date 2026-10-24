@@ -78116,7 +78116,8 @@
           "question": "Un amigo español te cuenta que en su oficina sacan papelitos con nombres, nadie puede revelar a quién le tocó y en la fiesta de diciembre cada uno entrega un regalo. Tú lo llamas 'amigo secreto'. ¿Cómo lo llama él?"
         },
         "revised_on": "2026-10-10"
-      }
+      },
+      "translatable": false
     },
     {
       "id": "q-1018",
