@@ -614471,7 +614471,7 @@
     },
     {
       "id": "q-7967",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "Hoy la pregunta entra por los ojos, no por los oídos.",
       "question": "¿Quién es esta cantante colombiana?",
@@ -614484,16 +614484,23 @@
       "hints": [
         "Nació en Barranquilla.",
         "Su papá es de origen libanés.",
-        "Cantó «Waka Waka» en el Mundial de Sudáfrica."
+        "En 2020 cantó en el show de medio tiempo del Super Bowl con Jennifer Lopez."
       ],
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Shakira singer performing",
+        "query": "Shakira concert",
         "note": "Clear photo of Shakira's face (performing or portrait); no caption or name visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AShakira_Rio_02_cropped.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Shakira_Rio_02_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "CC BY 2.5 es · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5 es",
+        "license_url": "https://creativecommons.org/licenses/by/2.5/es/deed.en",
+        "author": "Shakira_Rio_02.jpg: Andres.Arranz - Original uploaded to www.arteyfotografia.com as Shakira Rock in Rio 08 003\nderivative work: Jonathas Davi (talk)",
+        "author_url": "https://commons.wikimedia.org/wiki/File:Shakira_Rio_02.jpg",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Lanzó su primer álbum, «Magia», en 1991, cuando tenía 14 años.",
       "subcategory": "20th-century",
@@ -614522,27 +614529,44 @@
       "needs_media": true,
       "batch": "batch-22",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The essential image needs a clear photo of Shakira, but none of the six candidates shows her, and no new search is allowed. Hint 3 (Waka Waka) also repeats the fact asked in approved q-0063. Consider a better search (e.g. 'Shakira concert') or drop the question. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential image needs a clear photo of Shakira, but none of the six candidates shows her, and no new search is allowed. Hint 3 (Waka Waka) also repeats the fact asked in approved q-0063. Consider a better search (e.g. 'Shakira concert') or drop the question. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the inaccurate name-meaning hint 2 with a true clue about her father's Lebanese origin.",
+        "reason": "Changed the image query to a concert search that is more likely to find a clear photo of Shakira, and replaced hint 3 so it no longer repeats the Waka Waka fact from q-0063.",
         "previous": {
           "hints": [
             "Nació en Barranquilla.",
-            "Su nombre viene del árabe y significa «llena de gracia».",
+            "Su papá es de origen libanés.",
             "Cantó «Waka Waka» en el Mundial de Sudáfrica."
-          ]
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Shakira singer performing",
+            "note": "Clear photo of Shakira's face (performing or portrait); no caption or name visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -614552,7 +614576,7 @@
       "status": "needs_work",
       "difficulty": 4,
       "description": "Un atajo de agua para que los barcos no tengan que darle la vuelta a Suramérica.",
-      "question": "Panamá se separó de Colombia en 1903. ¿Qué país construyó después el Canal de Panamá y lo manejó hasta 1999?",
+      "question": "¿Qué país terminó de construir el Canal de Panamá en 1914 y lo manejó hasta 1999?",
       "answer": "Estados Unidos",
       "wrong_answers": [
         "Francia",
@@ -614560,7 +614584,7 @@
         "Colombia"
       ],
       "hints": [
-        "Ese país apoyó la separación de Panamá.",
+        "Ese país tiene costas en el Atlántico y en el Pacífico.",
         "Queda al norte de México.",
         "Su moneda, el dólar, también se usa en Panamá."
       ],
@@ -614608,24 +614632,35 @@
       "batch": "batch-22",
       "review": {
         "decision": "needs_work",
-        "feedback": "The question text opens with 'Panamá se separó de Colombia en 1903', which is exactly the answer to approved q-0107 ('¿Qué país se separó de Colombia en 1903?'), so seeing this question gives that one away. Approved q-5114 also says a US president backed Panama's 1903 separation, which overlaps hint 1 and points to this answer. A fix would have to drop the separation framing and that hint (for example, ask only who built and ran the canal until 1999), but can_fix is false.",
+        "feedback": "Hint 2 (\"Queda al norte de México\") gives the answer away: among the four options, only Estados Unidos is north of Mexico, so the second hint already solves the question. Replace it with a hint that narrows things down without settling it (e.g. one about the era of the construction, or that the country had a famous president who pushed for the canal), and leave the strongest clue for hint 3.",
         "problems": [
-          "overlap"
+          "giveaway"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text opens with 'Panamá se separó de Colombia en 1903', which is exactly the answer to approved q-0107 ('¿Qué país se separó de Colombia en 1903?'), so seeing this question gives that one away. Approved q-5114 also says a US president backed Panama's 1903 separation, which overlaps hint 1 and points to this answer. A fix would have to drop the separation framing and that hint (for example, ask only who built and ran the canal until 1999), but can_fix is false.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the Theodore Roosevelt hint, which gave away a related question, with a location hint.",
+        "reason": "Took out the 1903 separation framing and the hint about backing the separation, which gave away q-0107 and overlapped q-5114.",
         "previous": {
+          "question": "Panamá se separó de Colombia en 1903. ¿Qué país construyó después el Canal de Panamá y lo manejó hasta 1999?",
           "hints": [
             "Ese país apoyó la separación de Panamá.",
-            "Su presidente de entonces era Theodore Roosevelt.",
+            "Queda al norte de México.",
             "Su moneda, el dólar, también se usa en Panamá."
           ]
         },
@@ -616004,7 +616039,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Sibundoy wooden mask",
+        "query": "Sibundoy Valley Putumayo",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -616038,27 +616073,40 @@
       "batch": "batch-22",
       "review": {
         "decision": "needs_work",
-        "feedback": "No adequate image: none of the candidates is a Sibundoy/Kamëntšá mask or anything from the Sibundoy Valley. They are Northwest Coast, Brazilian, African and Portuguese masks, so they would mislead in a sharp illustrative slot. The text itself is fine. A new search (e.g. \"Sibundoy Valley Putumayo\" or \"Kamentsa mask\") is needed, but no new search is allowed here. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "The text is fine, but none of the image candidates works. 1 is Amazon lowland jungle from a 1913 book about atrocities in the Putumayo rubber region. 2 and 3 are rubber-belt houses in the Issa valley, which is Amazonian, not Sibundoy. 4 is a scanned encyclopedia page full of text. A new search for the Sibundoy Valley itself is needed. No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No adequate image: none of the candidates is a Sibundoy/Kamëntšá mask or anything from the Sibundoy Valley. They are Northwest Coast, Brazilian, African and Portuguese masks, so they would mislead in a sharp illustrative slot. The text itself is fine. A new search (e.g. \"Sibundoy Valley Putumayo\" or \"Kamentsa mask\") is needed, but no new search is allowed here. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Added the language-isolate clue, which only the Kamëntšá have (the Inga share the valley and the carnival), and replaced hint 3 with the carnival's Kamëntšá name.",
+        "reason": "Only the image query changed, to the Sibundoy Valley itself, since no Sibundoy mask was found.",
         "previous": {
-          "question": "Viven en el Valle de Sibundoy, celebran el Carnaval del Perdón y tallan máscaras de madera muy coloridas. ¿Qué pueblo indígena es?",
-          "hints": [
-            "Viven en el sur del país, en el Putumayo",
-            "Comparten su valle con el pueblo inga",
-            "Su lengua no se parece a ninguna otra del mundo"
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Sibundoy wooden mask",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -616083,11 +616131,20 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Wayuu bag Colombia",
+        "query": "Wayuu mochila",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACAMELLON_Y_MOCHILAS.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/CAMELLON_Y_MOCHILAS.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Miller Sierra · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Miller Sierra",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Miller_Sierra&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-self"
+        ]
       },
       "fun_fact": "La gaza de una mochila wayuu se suele tejer en un telar aparte y después se cose a la mochila.",
       "subcategory": "crafts-and-traditional-dress",
@@ -616112,22 +616169,48 @@
         "difficulty_estimate": 12,
         "notes": "A specialist craft term, fair for the level. The illustrative image of a mochila will show the strap but won't label it. The fun fact repeats hint 2."
       },
-      "fact_checked": true,
+      "fact_checked": false,
       "needs_media": false,
       "batch": "batch-22",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the six candidates shows a Wayuu mochila. They show sea turtles with plastic bags, a potted plant, a soldier swimming with a plastic bag, an old steamboat and workers carrying a cement sack. No new search is allowed, so the slot needs a real Wayuu bag photo, for example from the search \"Wayuu mochila\". No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "Verificación de datos: uncertain. Retail sources use 'gaza' for the strap (e.g. 'long gaza' of about 1 m), which fits the answer. I found no authoritative source on the term. The first search result suggested 'gaza' might mean the bag's body, but that result was garbled.",
         "problems": [
-          "media"
+          "fact"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates shows a Wayuu mochila. They show sea turtles with plastic bags, a potted plant, a soldier swimming with a plastic bag, an old steamboat and workers carrying a cement sack. No new search is allowed, so the slot needs a real Wayuu bag photo, for example from the search \"Wayuu mochila\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Only the image query changed, to 'Wayuu mochila', so the search finds a real Wayuu bag.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Wayuu bag Colombia",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7989",
@@ -617162,7 +617245,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Casanare llanos landscape",
+        "query": "Llanos Orientales savanna",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -617196,29 +617279,47 @@
       "batch": "batch-22",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the image candidates shows Colombian lowlands. They are a Pyrenees valley, Iceland, a Tuscan field, an Italian pine painting, a Swedish farm and a Swiss alpine village, and no new search is allowed. The slot needs a photo of the Llanos, the Caribbean coast or the Amazon lowlands (e.g. 'Llanos Orientales savanna'). The question text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates shows Colombian lowlands. They are a Pyrenees valley, Iceland, a Tuscan field, an Italian pine painting, a Swedish farm and a Swiss alpine village, and no new search is allowed. The slot needs a photo of the Llanos, the Caribbean coast or the Amazon lowlands (e.g. 'Llanos Orientales savanna'). The question text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer says the zone is hot.",
+        "reason": "Only the image query changed, to find Colombian lowland savanna.",
         "previous": {
-          "description": "El piso térmico donde la chaqueta sobra y el jugo nunca."
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Casanare llanos landscape",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
     },
     {
       "id": "q-8003",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Dos vecinos de la Sierra Nevada que llevan años discutiendo quién es más alto.",
       "question": "Completa: los dos picos más altos de Colombia, en la Sierra Nevada de Santa Marta, son el Simón Bolívar y el ____.",
@@ -617230,7 +617331,7 @@
       ],
       "hints": [
         "Los dos miden unos 5700 metros y aún se discute cuál es más alto.",
-        "Uno lleva el nombre del Libertador y el otro el de un personaje famoso en todo el mundo, no solo en Colombia.",
+        "El otro pico lleva el nombre de alguien que vivió siglos antes que Bolívar.",
         "Ese personaje llegó a América en 1492."
       ],
       "media": {
@@ -617276,26 +617377,34 @@
       "needs_media": false,
       "batch": "batch-22",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"un personaje famoso en todo el mundo, no solo en Colombia\") rules out all three wrong answers at once: Santander, Nariño and Jiménez de Quesada are known mainly in Colombian history. So hint 2 gives the answer away. Rewrite hint 2 so it narrows the field without eliminating every wrong option, for example a vague hint about the peaks' location or about naming after historical figures in general.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"un personaje famoso en todo el mundo, no solo en Colombia\") rules out all three wrong answers at once: Santander, Nariño and Jiménez de Quesada are known mainly in Colombian history. So hint 2 gives the answer away. Rewrite hint 2 so it narrows the field without eliminating every wrong option, for example a vague hint about the peaks' location or about naming after historical figures in general.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made hint 2 vaguer so it no longer singles out Colón (it also avoids fitting Jiménez de Quesada), and reworded hint 3 so it stands on its own.",
+        "reason": "Rewrote hint 2 so it only rules out Bolívar's contemporaries (Santander, Nariño) instead of all three wrong options.",
         "previous": {
           "hints": [
             "Los dos miden unos 5700 metros y aún se discute cuál es más alto.",
-            "Uno lleva el nombre del Libertador y el otro el de un navegante.",
-            "Ese navegante llegó a América en 1492."
+            "Uno lleva el nombre del Libertador y el otro el de un personaje famoso en todo el mundo, no solo en Colombia.",
+            "Ese personaje llegó a América en 1492."
           ]
         },
         "revised_on": "2026-10-23"
@@ -617303,10 +617412,10 @@
     },
     {
       "id": "q-8004",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Los locutores de fútbol tienen apodos para todo, hasta para un pedazo de tela.",
-      "question": "Soy la bandera de Colombia y por mis colores tengo un apodo que también usa la Selección. ¿Cómo me dicen?",
+      "question": "Por sus colores, la bandera de Colombia tiene un apodo que también usa la Selección. ¿Cuál es?",
       "answer": "La Tricolor",
       "wrong_answers": [
         "La albiceleste",
@@ -617361,28 +617470,31 @@
       "needs_media": false,
       "batch": "batch-22",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question is a first-person riddle (\"Soy la bandera de Colombia…\") that names its own subject and then asks for a different fact (its nickname). That makes it a plain question in disguise. Rewrite it as a direct question, e.g. \"Por sus colores, la bandera de Colombia tiene un apodo que también usa la Selección. ¿Cuál es?\"",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question is a first-person riddle (\"Soy la bandera de Colombia…\") that names its own subject and then asks for a different fact (its nickname). That makes it a plain question in disguise. Rewrite it as a direct question, e.g. \"Por sus colores, la bandera de Colombia tiene un apodo que también usa la Selección. ¿Cuál es?\"",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Changed the answer to 'La Tricolor' to match the other options, and replaced hints 1 and 2, which pointed straight to counting the colours.",
+        "reason": "Turned the first-person riddle into a direct question, as the reviewer asked.",
         "previous": {
-          "answer": "El tricolor",
-          "hints": [
-            "Mi apodo tiene que ver con cuántos colores tengo.",
-            "Amarillo, azul y rojo: cuéntalos.",
-            "Empieza por «tri», como triciclo o triángulo."
-          ]
+          "question": "Soy la bandera de Colombia y por mis colores tengo un apodo que también usa la Selección. ¿Cómo me dicen?"
         },
         "revised_on": "2026-10-23"
       }
@@ -617912,7 +618024,7 @@
     },
     {
       "id": "q-8012",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Dulce pecado sería no saber de dónde es este cantante.",
       "question": "Canta música popular y se hizo famoso con «Dulce pecado». ¿De qué ciudad es Jessi Uribe?",
@@ -617924,7 +618036,7 @@
       ],
       "hints": [
         "No es paisa, aunque mucha gente lo cree.",
-        "La gente de su región tiene fama de hablar fuerte y sin rodeos.",
+        "Su ciudad está en la cordillera Oriental.",
         "Es la capital de Santander, la «Ciudad Bonita»."
       ],
       "media": {
@@ -617943,7 +618055,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Antes de ser famoso, Jessi Uribe cantó en buses y restaurantes para ganarse la vida.",
+      "fun_fact": "«Dulce pecado» salió en 2018 y lo convirtió en una de las voces más escuchadas de la música popular colombiana.",
       "subcategory": "popular-and-andean-music",
       "style": null,
       "concept": "Jessi Uribe",
@@ -617970,28 +618082,36 @@
       "needs_media": false,
       "batch": "batch-22",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact (Jessi Uribe sang on buses and in restaurants to make a living before he was famous) wasn't checked, and I can't confirm it either. Replace it with a verifiable fact, for example his time on La Voz Colombia before «Dulce pecado» made him famous, but only if a source confirms it. Also, hint 2 (people from his region speak loudly and bluntly) is a well-known Santander stereotype and points strongly to the answer; consider making it vaguer.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact (Jessi Uribe sang on buses and in restaurants to make a living before he was famous) wasn't checked, and I can't confirm it either. Replace it with a verifiable fact, for example his time on La Voz Colombia before «Dulce pecado» made him famous, but only if a source confirms it. Also, hint 2 (people from his region speak loudly and bluntly) is a well-known Santander stereotype and points strongly to the answer; consider making it vaguer.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the Paola Jara clause (gives away q-5101) and made hint 2 vaguer than naming Santander's signature dish.",
+        "reason": "Replaced the unverified fun fact with a safer one, and swapped the regional-stereotype hint for a geographic one.",
         "previous": {
-          "question": "Canta música popular, se hizo famoso con «Dulce pecado» y está casado con Paola Jara. ¿De qué ciudad es Jessi Uribe?",
           "hints": [
             "No es paisa, aunque mucha gente lo cree.",
-            "Es de la tierra de las hormigas culonas.",
+            "La gente de su región tiene fama de hablar fuerte y sin rodeos.",
             "Es la capital de Santander, la «Ciudad Bonita»."
-          ]
+          ],
+          "fun_fact": "Antes de ser famoso, Jessi Uribe cantó en buses y restaurantes para ganarse la vida."
         },
         "revised_on": "2026-10-23"
       }
@@ -619537,7 +619657,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "dark rural path night",
+        "query": "dark country road night",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -619571,26 +619691,40 @@
       "batch": "batch-22",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate is a suitable illustrative image. The slot needs a dark rural road or country path at night, ideally in the Colombian countryside. The candidates are northern lights over Icelandic cabins, cherry blossoms in daylight, two handwritten letters, a Roman arch at night and an old book photo of children. A new search isn't allowed (can_search_again is false). The question text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate is a suitable illustrative image. The slot needs a dark rural road or country path at night, ideally in the Colombian countryside. The candidates are northern lights over Icelandic cabins, cherry blossoms in daylight, two handwritten letters, a Roman arch at night and an old book photo of children. A new search isn't allowed (can_search_again is false). The question text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which pointed to the only metal option, with one about villagers shutting their doors.",
+        "reason": "Only the image query changed, to find a dark country road at night.",
         "previous": {
-          "hints": [
-            "Se le oye antes de verlo.",
-            "Hace un ruido metálico al caminar.",
-            "En las películas viejas, los presos las llevan en los pies."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "dark rural path night",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -620050,7 +620184,7 @@
       "status": "needs_work",
       "difficulty": 8,
       "description": "Un ecosistema colombiano tan escaso que casi hay que pedir cita para visitarlo.",
-      "question": "Mira la foto, tomada en el Caribe colombiano. ¿Qué ecosistema es?",
+      "question": "Mira la foto. ¿Qué ecosistema es?",
       "answer": "El bosque seco tropical",
       "wrong_answers": [
         "El bosque de niebla",
@@ -620065,8 +620199,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "bosque seco tropical",
-        "note": "Foto de bosque seco tropical colombiano en temporada seca: árboles sin hojas, cactus, suelo seco; sin texto.",
+        "query": "tropical dry forest dry season",
+        "note": "Foto clara de bosque seco tropical en temporada seca: árboles sin hojas, cactus, suelo seco. Nada de desierto sin árboles (como la Tatacoa) y sin texto.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -620099,17 +620233,44 @@
       "batch": "batch-22",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates works as the essential photo of dry forest in the Colombian Caribbean, and no new search is allowed. Candidates 1–2 show the Tatacoa badlands in Huila, which is not Caribbean and looks like a desert; that clashes with q-0282 (desierto de la Tatacoa). Candidate 3 is from Paraguaná, Venezuela, and is dim. 4 is a bee close-up, 5 an infographic with the answer written on it, and 6 a green Honduran landscape. Next step: find a clear dry-season photo of dry forest in La Guajira, Magdalena or Bolívar (leafless trees, cacti). If none exists, drop \"tomada en el Caribe colombiano\" from the question. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "None of the candidates clearly shows tropical dry forest in the dry season. The question depends on an essential photo, so a new search is needed for leafless deciduous trees, cacti and dry ground. No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates works as the essential photo of dry forest in the Colombian Caribbean, and no new search is allowed. Candidates 1–2 show the Tatacoa badlands in Huila, which is not Caribbean and looks like a desert; that clashes with q-0282 (desierto de la Tatacoa). Candidate 3 is from Paraguaná, Venezuela, and is dim. 4 is a bee close-up, 5 an infographic with the answer written on it, and 6 a green Honduran landscape. Next step: find a clear dry-season photo of dry forest in La Guajira, Magdalena or Bolívar (leafless trees, cacti). If none exists, drop \"tomada en el Caribe colombiano\" from the question. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No Caribbean dry-forest photo was found, so I took the location out of the question and widened the query to any clear dry-season tropical dry forest photo, keeping out Tatacoa-style desert shots.",
+        "previous": {
+          "question": "Mira la foto, tomada en el Caribe colombiano. ¿Qué ecosistema es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "bosque seco tropical",
+            "note": "Foto de bosque seco tropical colombiano en temporada seca: árboles sin hojas, cactus, suelo seco; sin texto.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-8041",
@@ -620424,8 +620585,8 @@
       "id": "q-8045",
       "status": "needs_work",
       "difficulty": 2,
-      "description": "Un accesorio que no se compra en ninguna tienda: se gana a punta de caídas.",
-      "question": "Judocas como la colombiana Yuri Alvear usan un cinturón como el de la foto. ¿Qué significa ese color?",
+      "description": "Un piyama blanco, mucho respeto y un nudo bien apretado en la cintura.",
+      "question": "Los judocas colombianos usan cinturones de colores. ¿Qué significa uno del color del de la foto?",
       "answer": "Que tiene un nivel avanzado",
       "wrong_answers": [
         "Que apenas está empezando",
@@ -620481,17 +620642,36 @@
       "batch": "batch-22",
       "review": {
         "decision": "needs_work",
-        "feedback": "The description (\"no se compra en ninguna tienda: se gana a punta de caídas\") says the belt is earned through long training. That gives away \"nivel avanzado\" and rules out the beginner, referee and \"va perdiendo\" options before any hint. Rewrite it to play on judo or the uniform without saying the belt is earned. Also a minor point: naming Yuri Alvear as a judoka partly gives away q-7075 (\"En este deporte, ¿qué colombiana…?\" → Yuri Alvear). Consider \"judocas colombianos\" without her name.",
+        "feedback": "Hint 1 (\"Para tenerlo hay que entrenar muchos años\") just restates the answer. It already rules out the three wrong options, so the hint ladder starts with the answer. Replace it with a vague hint, for example about judo's Japanese origin or how belts are tied, and keep the stronger hints for later.",
         "problems": [
           "giveaway"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description (\"no se compra en ninguna tienda: se gana a punta de caídas\") says the belt is earned through long training. That gives away \"nivel avanzado\" and rules out the beginner, referee and \"va perdiendo\" options before any hint. Rewrite it to play on judo or the uniform without saying the belt is earned. Also a minor point: naming Yuri Alvear as a judoka partly gives away q-7075 (\"En este deporte, ¿qué colombiana…?\" → Yuri Alvear). Consider \"judocas colombianos\" without her name.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "I rewrote the description so it no longer says the belt is earned, and dropped Yuri Alvear's name so this question doesn't give away q-7075.",
+        "previous": {
+          "description": "Un accesorio que no se compra en ninguna tienda: se gana a punta de caídas.",
+          "question": "Judocas como la colombiana Yuri Alvear usan un cinturón como el de la foto. ¿Qué significa ese color?"
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-8046",
@@ -620566,7 +620746,7 @@
     },
     {
       "id": "q-8047",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Paciencia infinita, lógica cero.",
       "question": "En el poema de Rafael Pombo, Simón el bobito pasa horas y horas sentado frente a un balde de agua. ¿Para qué?",
@@ -620578,7 +620758,7 @@
       ],
       "hints": [
         "Lo que intenta Simón normalmente se hace en un río, un lago o el mar.",
-        "Es lo que hace la gente que va al río con una caña.",
+        "Para eso hace falta mucha paciencia y quedarse muy quieto esperando.",
         "Espera que algo pique."
       ],
       "media": {
@@ -620620,29 +620800,37 @@
         "difficulty_estimate": 3,
         "notes": "The wording of the bucket stanza in Pombo's version is recalled from memory, and the fun fact's snow pastry is plausible but should be checked. Hint 2 nearly gives the answer. It's a different stanza from q-5254."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-22",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Es lo que hace la gente que va al río con una caña\") gives the answer away: a fishing rod means fishing. Make it vaguer, e.g. about patience and waiting, and leave the near-answer for hint 3. The poem's content (fishing in a pail, the snow pastry melting) matches Pombo's adaptation of 'Simple Simon' as far as I know, so the facts look fine. Verificación de datos: uncertain. Simón fishing in a pail (\"Para pescar\") matches the poem as I remember it. The pastel de nieve fun fact also matches my memory. My search did not return the poem text, so I could not verify either.",
-        "problems": [
-          "giveaway",
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Es lo que hace la gente que va al río con una caña\") gives the answer away: a fishing rod means fishing. Make it vaguer, e.g. about patience and waiting, and leave the near-answer for hint 3. The poem's content (fishing in a pail, the snow pastry melting) matches Pombo's adaptation of 'Simple Simon' as far as I know, so the facts look fine. Verificación de datos: uncertain. Simón fishing in a pail (\"Para pescar\") matches the poem as I remember it. The pastel de nieve fun fact also matches my memory. My search did not return the poem text, so I could not verify either.",
+          "problems": [
+            "giveaway",
+            "fact"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which relied on an unverified detail of the poem, with a generic hint. The pastel-de-nieve fun fact matches the well-known poem, so it stays.",
+        "reason": "Hint 2 mentioned a fishing rod, which gave the answer away, so I replaced it with a vaguer hint about patience.",
         "previous": {
           "hints": [
-            "Al bobito le encanta comer algo que vive en el agua.",
+            "Lo que intenta Simón normalmente se hace en un río, un lago o el mar.",
             "Es lo que hace la gente que va al río con una caña.",
             "Espera que algo pique."
           ]
@@ -621560,7 +621748,7 @@
     },
     {
       "id": "q-8060",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "El batido que acompaña al pandebono como un guardaespaldas frío.",
       "question": "La avena de las panaderías colombianas es espesa y fría. ¿Qué tipo de alimento es la avena?",
@@ -621573,16 +621761,23 @@
       "hints": [
         "No crece dentro de una vaina ni bajo la tierra.",
         "Es pariente del trigo y la cebada.",
-        "Se cosecha en espigas, igual que el arroz."
+        "Se cosecha como grano, igual que el arroz."
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "oatmeal drink glass",
+        "role": "decorative",
+        "query": "Colombian bakery display",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABakery%2C_Cartagena%2C_Colombia_%2824501035211%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Bakery%2C_Cartagena%2C_Colombia_%2824501035211%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Joe Ross from Lansing, Michigan · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Joe Ross from Lansing, Michigan",
+        "author_url": "https://www.flickr.com/people/59398780@N00",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En muchas panaderías colombianas el combo de avena fría con pandebono o buñuelo es el algo favorito de la tarde.",
       "subcategory": "street-food-and-bakery",
@@ -621611,18 +621806,47 @@
       "needs_media": false,
       "batch": "batch-22",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows a glass of cold oat drink (avena colombiana). All six are empty or wine/beer glasses, and 1 and 2 have engraved grain/leaf motifs that hint at the answer \"cereal\". No new search is allowed, so this needs a better media search (e.g. \"Colombian avena drink\" or \"oat milk glass\") or a decorative bakery image (e.g. \"Colombian bakery display\"). Separately, hint 3 (\"se cosecha en espigas, igual que el arroz\") is loose botany, since oats and rice grow in panicles. Consider \"se cosecha como grano, igual que el arroz\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a glass of cold oat drink (avena colombiana). All six are empty or wine/beer glasses, and 1 and 2 have engraved grain/leaf motifs that hint at the answer \"cereal\". No new search is allowed, so this needs a better media search (e.g. \"Colombian avena drink\" or \"oat milk glass\") or a decorative bakery image (e.g. \"Colombian bakery display\"). Separately, hint 3 (\"se cosecha en espigas, igual que el arroz\") is loose botany, since oats and rice grow in panicles. Consider \"se cosecha como grano, igual que el arroz\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable photo of an oat drink was found, so the media is now a decorative bakery image; I also fixed the loose botany in hint 3 (oats and rice grow in panicles, not spikes).",
+        "previous": {
+          "hints": [
+            "No crece dentro de una vaina ni bajo la tierra.",
+            "Es pariente del trigo y la cebada.",
+            "Se cosecha en espigas, igual que el arroz."
+          ],
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "oatmeal drink glass",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-8061",

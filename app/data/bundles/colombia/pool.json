@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "13005f5c",
+  "hash": "0e0c1538",
   "questions": [
     {
       "id": "q-0002",
@@ -50810,6 +50810,40 @@
       "background": null
     },
     {
+      "id": "q-7967",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "20th-century",
+      "bundle": "colombia",
+      "description": "Hoy la pregunta entra por los ojos, no por los oídos.",
+      "question": "¿Quién es esta cantante colombiana?",
+      "answer": "Shakira",
+      "wrong_answers": [
+        "Karol G",
+        "Greeicy",
+        "Fanny Lú"
+      ],
+      "hints": [
+        "Nació en Barranquilla.",
+        "Su papá es de origen libanés.",
+        "En 2020 cantó en el show de medio tiempo del Super Bowl con Jennifer Lopez."
+      ],
+      "fun_fact": "Lanzó su primer álbum, «Magia», en 1991, cuando tenía 14 años.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Shakira_Rio_02_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AShakira_Rio_02_cropped.jpg",
+        "credit": "CC BY 2.5 es · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5 es",
+        "license_url": "https://creativecommons.org/licenses/by/2.5/es/deed.en",
+        "author": "Shakira_Rio_02.jpg: Andres.Arranz - Original uploaded to www.arteyfotografia.com as Shakira Rock in Rio 08 003\nderivative work: Jonathas Davi (talk)",
+        "author_url": "https://commons.wikimedia.org/wiki/File:Shakira_Rio_02.jpg"
+      },
+      "background": null
+    },
+    {
       "id": "q-7969",
       "status": "approved",
       "difficulty": 12,
@@ -51830,6 +51864,74 @@
       "background": null
     },
     {
+      "id": "q-8003",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "mountains-and-landscapes",
+      "bundle": "colombia",
+      "description": "Dos vecinos de la Sierra Nevada que llevan años discutiendo quién es más alto.",
+      "question": "Completa: los dos picos más altos de Colombia, en la Sierra Nevada de Santa Marta, son el Simón Bolívar y el ____.",
+      "answer": "Cristóbal Colón",
+      "wrong_answers": [
+        "Francisco de Paula Santander",
+        "Antonio Nariño",
+        "Gonzalo Jiménez de Quesada"
+      ],
+      "hints": [
+        "Los dos miden unos 5700 metros y aún se discute cuál es más alto.",
+        "El otro pico lleva el nombre de alguien que vivió siglos antes que Bolívar.",
+        "Ese personaje llegó a América en 1492."
+      ],
+      "fun_fact": "La Sierra Nevada de Santa Marta es la montaña costera más alta del mundo: sus picos nevados están a solo unos 42 km del mar Caribe.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Snow-capped_peaks_of_the_Sierra_Nevada_de_Santa_Marta_viewed_from_Cuchilla_de_San_Lorenzo.jpg/3840px-Snow-capped_peaks_of_the_Sierra_Nevada_de_Santa_Marta_viewed_from_Cuchilla_de_San_Lorenzo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASnow-capped_peaks_of_the_Sierra_Nevada_de_Santa_Marta_viewed_from_Cuchilla_de_San_Lorenzo.jpg",
+        "credit": "Reduvida3 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Reduvida3",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Reduvida3&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8004",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "national-symbols",
+      "bundle": "colombia",
+      "description": "Los locutores de fútbol tienen apodos para todo, hasta para un pedazo de tela.",
+      "question": "Por sus colores, la bandera de Colombia tiene un apodo que también usa la Selección. ¿Cuál es?",
+      "answer": "La Tricolor",
+      "wrong_answers": [
+        "La albiceleste",
+        "La canarinha",
+        "La celeste"
+      ],
+      "hints": [
+        "Hinchas y narradores gritan este nombre en cada partido de la Selección.",
+        "Ecuador y Venezuela podrían usar el mismo apodo, porque sus banderas tienen los mismos colores.",
+        "Empieza por «tri», como triciclo o triángulo."
+      ],
+      "fun_fact": "Las banderas de Colombia, Venezuela y Ecuador vienen del mismo tricolor que diseñó Francisco de Miranda.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Colombia_flag_wave_in_the_air.jpg/3840px-Colombia_flag_wave_in_the_air.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AColombia_flag_wave_in_the_air.jpg",
+        "credit": "Edgar Jiménez · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Edgar Jiménez",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-8005",
       "status": "approved",
       "difficulty": 8,
@@ -52064,6 +52166,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": null,
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8012",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "popular-and-andean-music",
+      "bundle": "colombia",
+      "description": "Dulce pecado sería no saber de dónde es este cantante.",
+      "question": "Canta música popular y se hizo famoso con «Dulce pecado». ¿De qué ciudad es Jessi Uribe?",
+      "answer": "Bucaramanga",
+      "wrong_answers": [
+        "Medellín",
+        "Pereira",
+        "Ibagué"
+      ],
+      "hints": [
+        "No es paisa, aunque mucha gente lo cree.",
+        "Su ciudad está en la cordillera Oriental.",
+        "Es la capital de Santander, la «Ciudad Bonita»."
+      ],
+      "fun_fact": "«Dulce pecado» salió en 2018 y lo convirtió en una de las voces más escuchadas de la música popular colombiana.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Rock_Al_Parque_2024.jpg/3840px-Rock_Al_Parque_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARock_Al_Parque_2024.jpg",
+        "credit": "RayScript · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "RayScript",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:RayScript&action=edit&redlink=1"
       },
       "background": null
     },
@@ -53122,6 +53258,40 @@
       "background": null
     },
     {
+      "id": "q-8047",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "pioneers-and-popular-figures",
+      "bundle": "colombia",
+      "description": "Paciencia infinita, lógica cero.",
+      "question": "En el poema de Rafael Pombo, Simón el bobito pasa horas y horas sentado frente a un balde de agua. ¿Para qué?",
+      "answer": "Para pescar",
+      "wrong_answers": [
+        "Para ver su reflejo",
+        "Para refrescarse los pies",
+        "Para hacer barquitos"
+      ],
+      "hints": [
+        "Lo que intenta Simón normalmente se hace en un río, un lago o el mar.",
+        "Para eso hace falta mucha paciencia y quedarse muy quieto esperando.",
+        "Espera que algo pique."
+      ],
+      "fun_fact": "En el mismo poema, Simón hace un pastel de nieve, lo pone a asar en las brasas… ¡y se le derrite!",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Ducks_And_Bucket_Of_Water_%28210394321%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADucks_And_Bucket_Of_Water_%28210394321%29.jpeg",
+        "credit": "Aleksei Belta · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Aleksei Belta",
+        "author_url": "https://500px.com/aleksei86"
+      },
+      "background": null
+    },
+    {
       "id": "q-8048",
       "status": "approved",
       "difficulty": 2,
@@ -53526,6 +53696,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Death270598",
         "author_url": "https://commons.wikimedia.org/wiki/User:Death270598"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8060",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "street-food-and-bakery",
+      "bundle": "colombia",
+      "description": "El batido que acompaña al pandebono como un guardaespaldas frío.",
+      "question": "La avena de las panaderías colombianas es espesa y fría. ¿Qué tipo de alimento es la avena?",
+      "answer": "Un cereal",
+      "wrong_answers": [
+        "Una fruta",
+        "Una legumbre",
+        "Un tubérculo"
+      ],
+      "hints": [
+        "No crece dentro de una vaina ni bajo la tierra.",
+        "Es pariente del trigo y la cebada.",
+        "Se cosecha como grano, igual que el arroz."
+      ],
+      "fun_fact": "En muchas panaderías colombianas el combo de avena fría con pandebono o buñuelo es el algo favorito de la tarde.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Bakery%2C_Cartagena%2C_Colombia_%2824501035211%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABakery%2C_Cartagena%2C_Colombia_%2824501035211%29.jpg",
+        "credit": "Joe Ross from Lansing, Michigan · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Joe Ross from Lansing, Michigan",
+        "author_url": "https://www.flickr.com/people/59398780@N00"
       },
       "background": null
     },
