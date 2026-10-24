@@ -80,3 +80,4 @@ Done (pm plan 67, RV-24..RV-26). The developer and native speakers review `quest
   - QT-6 progress `es`: `tr-es-3` (2026-10-24) 300 translated, 298 approved; 2649 in the `es` pool (incl. es-sourced), target not met; next `tr-es-4`.
   - QT-6 progress `es`: `tr-es-4` (2026-10-24) 300 translated, 298 approved, 2 needs_work; 2947 in the `es` pool (incl. es-sourced), target not met; next `tr-es-5`.
   - QT-6 progress `es`: `tr-es-5` (2026-10-24) 300 translated, 293 approved, 7 needs_work; 3240 in the `es` pool (incl. es-sourced), target not met; next `tr-es-6`.
+  - QT-6 progress `es`: `tr-es-6` (2026-10-24) 300 translated, 297 approved, 3 needs_work; 3537 in the `es` pool (incl. es-sourced), target not met; next `tr-es-7`.
