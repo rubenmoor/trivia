@@ -227,7 +227,8 @@
     {
       "name": "Chigualo",
       "facet": "Mitos amazónicos y del Pacífico",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Es un ritual fúnebre para niños muertos; no es apto para un juego familiar."
     },
     {
       "name": "Wanülü",
@@ -432,7 +433,8 @@
     {
       "name": "Calzones amarillos en Año Nuevo",
       "facet": "Agüeros y supersticiones cotidianas",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: El grupo ya tiene la pregunta del amarillo en Año Nuevo para tener plata; las opciones con lugar no encajan."
     },
     {
       "name": "Maleta alrededor de la cuadra",

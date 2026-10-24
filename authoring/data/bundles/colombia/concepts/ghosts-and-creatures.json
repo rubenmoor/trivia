@@ -336,7 +336,8 @@
     {
       "name": "Decir groserías",
       "facet": "Contras, rezos y agüeros contra espantos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: El agüero de que decir groserías llama al diablo ya está en el pool; no hay otro hecho bueno."
     },
     {
       "name": "Silbar de noche",

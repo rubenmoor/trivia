@@ -179,7 +179,8 @@
     {
       "name": "Santiago Martínez Delgado",
       "facet": "Pintores colombianos del siglo XX",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Too little reliably known about Martínez Delgado to fit these options fairly."
     },
     {
       "name": "Alipio Jaramillo",
@@ -215,7 +216,8 @@
     {
       "name": "Pietro Tenerani",
       "facet": "Escultores y monumentos públicos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "used_up: The statue's year is already in the pool; material or record questions would overlap it."
     },
     {
       "name": "Virgen de Chiquinquirá",
@@ -497,7 +499,8 @@
     {
       "name": "Miguel Ángel Rojas",
       "facet": "Arte contemporáneo colombiano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Too obscure, and his materials are not certain enough to write fair options."
     },
     {
       "name": "José Alejandro Restrepo",
@@ -507,7 +510,8 @@
     {
       "name": "Álvaro Barrios",
       "facet": "Arte contemporáneo colombiano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Too obscure for a fair multiple-choice question."
     },
     {
       "name": "Delcy Morelos",

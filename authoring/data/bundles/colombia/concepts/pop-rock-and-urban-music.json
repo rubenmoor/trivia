@@ -785,12 +785,14 @@
     {
       "name": "Casio",
       "facet": "Videoclips, apodos y frases famosas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Three Casio questions already exist, and asking 'who' for the Rolex/Casio line would repeat the Shakira-Bizarrap question."
     },
     {
       "name": "Parcero",
       "facet": "Videoclips, apodos y frases famosas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The 'parce' question already covers the word, and the remaining options (record, sequence, odd_one_out person) would make forced questions."
     },
     {
       "name": "Medallo",
