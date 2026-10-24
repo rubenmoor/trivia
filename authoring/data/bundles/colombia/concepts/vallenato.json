@@ -146,7 +146,8 @@
     {
       "name": "Merengue",
       "facet": "Los cuatro aires",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Lo de que se llama igual que el ritmo dominicano ya está preguntado; las demás opciones son forzadas."
     },
     {
       "name": "Son",
@@ -887,7 +888,8 @@
     {
       "name": "Plan Especial de Salvaguardia",
       "facet": "Historia y patrimonio del vallenato",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Demasiado técnico y se cruza con la pregunta del pool sobre el patrimonio de 2015; no tengo detalles seguros."
     },
     {
       "name": "Escuelas de acordeoneritos",

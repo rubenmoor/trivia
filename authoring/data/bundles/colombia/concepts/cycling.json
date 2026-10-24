@@ -166,7 +166,8 @@
     {
       "name": "Rey de la montaña",
       "facet": "Victorias en Grandes Vueltas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: El pool ya cubre el Gran Premio de la Montaña y la camiseta de bolitas; la estimación tiene recuentos inseguros."
     },
     {
       "name": "Campos Elíseos",
@@ -626,7 +627,8 @@
     {
       "name": "Escalador",
       "facet": "Apodos y jerga del ciclismo",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: El pool ya tiene preguntas sobre el escalador (camiseta, Gaviria embalador), así que la de cuál no pertenece quedaría regalada."
     },
     {
       "name": "Rodador",

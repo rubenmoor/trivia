@@ -373,7 +373,8 @@
     {
       "name": "La Madremonte",
       "facet": "Seres protectores del monte y el agua",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Ya se preguntó quién es con sus rasgos; la adivinanza lo repetiría y no existe foto real."
     },
     {
       "name": "El Hojarasquín del Monte",
@@ -444,7 +445,8 @@
     {
       "name": "Lentejas en el bolsillo",
       "facet": "Agüeros y supersticiones cotidianas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Su único dato bueno (las lentejas dan plata en Año Nuevo) ya está en el pool como «Para tener plata todo el año»."
     },
     {
       "name": "Ruda",
@@ -616,7 +618,8 @@
     {
       "name": "El Hombre Caimán",
       "facet": "Animales con poderes y presagios",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: La región y el pueblo (Plato) ya están en el pool; las opciones restantes son forzadas o pasan por contenido no apto."
     },
     {
       "name": "Delfín rosado",

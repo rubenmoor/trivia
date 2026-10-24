@@ -292,7 +292,8 @@
     {
       "name": "Baltasar de Figueroa",
       "facet": "Arte colonial neogranadino",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Pintor colonial casi sin datos conocidos; ninguna opción (odd_one_out, made_of, record) da una pregunta justa."
     },
     {
       "name": "Antonio Acero de la Cruz",
@@ -629,12 +630,14 @@
     {
       "name": "Bastardilla",
       "facet": "Grafiti y arte urbano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Artista anónima sobre la que no tengo datos seguros de materiales ni propósito; foto esencial de un mural con derechos de autor poco probable."
     },
     {
       "name": "Vértigo Graffiti",
       "facet": "Grafiti y arte urbano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: No tengo datos seguros sobre récords o materiales de este colectivo."
     }
   ]
 }

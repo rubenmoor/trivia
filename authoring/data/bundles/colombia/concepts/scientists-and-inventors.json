@@ -96,7 +96,8 @@
     {
       "name": "Sinforoso Mutis",
       "facet": "Expedición Botánica y naturalistas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Sinforoso Mutis is too obscure; I can't verify a fact that fits these options."
     },
     {
       "name": "Francisco Antonio Zea",
@@ -302,7 +303,8 @@
     {
       "name": "Aliria Rosa Piedrahita",
       "facet": "Cerebro y neurociencia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "used_up: The pool already covers her key fact (the Christchurch mutation protecting against Alzheimer's), and the photo options don't fit."
     },
     {
       "name": "Mutación Christchurch",
@@ -339,7 +341,8 @@
     {
       "name": "Neurolab",
       "facet": "Cerebro y neurociencia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Not sure enough what Colombians did in Neurolab; the options don't fit either."
     },
     {
       "name": "Magnetoencefalografía",
@@ -376,7 +379,8 @@
     {
       "name": "José Ignacio Barraquer",
       "facet": "Inventos médicos colombianos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: Any question about Barraquer's corneal work or a riddle about him could be answered from the existing keratomileusis question."
     },
     {
       "name": "Queratomileusis",
@@ -463,7 +467,8 @@
     {
       "name": "Helena Groot",
       "facet": "Mujeres científicas colombianas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Not confident enough about Helena Groot's specific contributions to write a fair, verified question."
     },
     {
       "name": "Virginia Gutiérrez de Pineda",
@@ -540,7 +545,8 @@
     {
       "name": "Joaquín Acosta",
       "facet": "Exploración y mapas del territorio",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Not confident enough about Joaquín Acosta's details to write a cause-effect question."
     },
     {
       "name": "Francisco Javier Vergara y Velasco",
