@@ -636949,7 +636949,7 @@
     },
     {
       "id": "q-8257",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Repetida, repetida, repetida… ¡me falta!",
       "question": "Destapas una chocolatina Jet clásica para llenar tu álbum. ¿Cuántas láminas trae adentro?",
@@ -636966,12 +636966,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "chocolate bar wrapper",
+        "role": "decorative",
+        "query": "children trading stickers",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATroca_de_cromos_da_panini_-_1.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Troca_de_cromos_da_panini_-_1.jpg/3840px-Troca_de_cromos_da_panini_-_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Joalpe · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Joalpe",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Joalpe",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Cambiar las láminas repetidas de Jet en el recreo es una costumbre que comparten varias generaciones de colombianos.",
       "subcategory": "brands-and-products",
@@ -637000,25 +637007,49 @@
       "needs_media": false,
       "batch": "batch-24",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine and the fact (one lámina per classic Jet bar) checks out, but no candidate shows a Jet bar. They are all foreign brands (Milka, Hershey's, Cadbury Fudge, Galaxy foil), and a foreign brand shown sharp in a question about a Colombian product misleads. Another search isn't allowed, so the image needs a manual pick, such as a Jet wrapper or a Jet sticker album, or the role should become decorative with a generic picture of kids trading stickers. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine and the fact (one lámina per classic Jet bar) checks out, but no candidate shows a Jet bar. They are all foreign brands (Milka, Hershey's, Cadbury Fudge, Galaxy foil), and a foreign brand shown sharp in a question about a Colombian product misleads. Another search isn't allowed, so the image needs a manual pick, such as a Jet wrapper or a Jet sticker album, or the role should become decorative with a generic picture of kids trading stickers. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No Jet image available and foreign brands mislead, so the media is now decorative with kids trading stickers.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "chocolate bar wrapper",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-8258",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Las carrozas más grandes del sur del país, y ninguna cabe en el garaje.",
-      "question": "En Pasto, el Desfile Magno, con sus carrozas gigantes, cierra el Carnaval de Negros y Blancos en el Día de Blancos. ¿Qué día de enero es?",
+      "question": "El Desfile Magno, con sus carrozas gigantes, cierra el Carnaval de Negros y Blancos en el Día de Blancos. ¿Qué día de enero es?",
       "answer": "6",
       "wrong_answers": [
         "2",
@@ -637073,27 +637104,31 @@
       "needs_media": false,
       "batch": "batch-24",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question text says 'En Pasto … Carnaval de Negros y Blancos', which directly answers related q-0239 ('¿En qué ciudad colombiana se celebra el Carnaval de Negros y Blancos?' → Pasto). Seeing this question gives that one away. Drop 'En Pasto' (e.g. 'El Desfile Magno, con sus carrozas gigantes, cierra el Carnaval de Negros y Blancos en el Día de Blancos. ¿Qué día de enero es?') and the description's 'del sur del país' can stay. Otherwise the date (6 January) and the 2009 UNESCO fact are correct.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text says 'En Pasto … Carnaval de Negros y Blancos', which directly answers related q-0239 ('¿En qué ciudad colombiana se celebra el Carnaval de Negros y Blancos?' → Pasto). Seeing this question gives that one away. Drop 'En Pasto' (e.g. 'El Desfile Magno, con sus carrozas gigantes, cierra el Carnaval de Negros y Blancos en el Día de Blancos. ¿Qué día de enero es?') and the description's 'del sur del país' can stay. Otherwise the date (6 January) and the 2009 UNESCO fact are correct.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 2 gave away the date; replaced it with a vaguer clue and moved the Día de Reyes clue to hint 3.",
+        "reason": "Removed 'En Pasto' so this question no longer gives away the related q-0239.",
         "previous": {
-          "hints": [
-            "Primero llega el Día de Negros y después el de Blancos.",
-            "Coincide con el Día de Reyes.",
-            "Es el día siguiente al 5 de enero."
-          ]
+          "question": "En Pasto, el Desfile Magno, con sus carrozas gigantes, cierra el Carnaval de Negros y Blancos en el Día de Blancos. ¿Qué día de enero es?"
         },
         "revised_on": "2026-10-24"
       }
@@ -637384,9 +637419,9 @@
     },
     {
       "id": "q-8263",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
-      "description": "Lo pisan todos los días y nunca se queja.",
+      "description": "Esa cosa de la casa que todos juran que sacudieron la semana pasada.",
       "question": "Se pone en el piso de la sala o junto a la cama, se teje en lana u otras fibras, y en Colombia así se le dice a una alfombra pequeña. ¿Cómo se llama?",
       "answer": "Tapete",
       "wrong_answers": [
@@ -637402,16 +637437,16 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "wooden loom weaving wool",
+        "query": "wool yarn skeins",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Weaver_%28SM_1812%29.png",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/The_Weaver_%28SM_1812%29.png/3840px-The_Weaver_%28SM_1812%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Max Liebermann · PDM-owner · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AYarn_skeins.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Yarn_skeins.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Pschemp · CC BY-SA 3.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "PDM-owner",
-        "license_url": null,
-        "author": "Max Liebermann",
-        "author_url": "https://en.wikipedia.org/wiki/en:Max_Liebermann",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Pschemp",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pschemp",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -637442,25 +637477,48 @@
       "needs_media": false,
       "batch": "batch-24",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description \"Lo pisan todos los días y nunca se queja\" gives away the answer's defining trait: of the four options, only the tapete is stepped on, so it rules out cobija, mantel and cortina before any hint. Rewrite it to play on the home or weaving theme without saying it goes on the floor, e.g. a joke about it hiding the dust swept under it is also too close, so something like the household textile that the family argues over who has to shake out. La imagen elegida tiene una licencia no adecuada (pd-no-reason: public domain without a template).",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description \"Lo pisan todos los días y nunca se queja\" gives away the answer's defining trait: of the four options, only the tapete is stepped on, so it rules out cobija, mantel and cortina before any hint. Rewrite it to play on the home or weaving theme without saying it goes on the floor, e.g. a joke about it hiding the dust swept under it is also too close, so something like the household textile that the family argues over who has to shake out. La imagen elegida tiene una licencia no adecuada (pd-no-reason: public domain without a template).",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed fique from the question and replaced the Curití fun fact with the Pazyryk carpet, as the reviewer asked.",
+        "reason": "Rewrote the description so it no longer says the item is stepped on, and changed the image query because the old image's license was unsuitable.",
         "previous": {
-          "question": "Se pone en el piso de la sala o junto a la cama, se teje en lana o fique, y en Colombia así se le dice a una alfombra pequeña. ¿Cómo se llama?",
-          "fun_fact": "En Curití, Santander, muchas familias tejen tapetes de fique en telares que han pasado de padres a hijos."
+          "description": "Lo pisan todos los días y nunca se queja.",
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "wooden loom weaving wool",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Weaver_%28SM_1812%29.png",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/The_Weaver_%28SM_1812%29.png/3840px-The_Weaver_%28SM_1812%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Max Liebermann · PDM-owner · Wikimedia Commons",
+            "provider": "commons",
+            "license": "PDM-owner",
+            "license_url": null,
+            "author": "Max Liebermann",
+            "author_url": "https://en.wikipedia.org/wiki/en:Max_Liebermann",
+            "restrictions": [],
+            "pd_reasons": []
+          }
         },
         "revised_on": "2026-10-24"
       }
@@ -638229,9 +638287,9 @@
         "El Premio Reina Sofía"
       ],
       "hints": [
-        "El premio lo entrega una institución cultural de La Habana.",
-        "La institución lleva el nombre de todo el continente.",
-        "Se llama «Casa de las…»."
+        "Lo entregan cada año a escritores de América Latina y el Caribe.",
+        "Ganarlo significa que el libro se publica en Cuba.",
+        "Lo entrega una institución de La Habana fundada en 1959."
       ],
       "media": {
         "type": "image",
@@ -638272,27 +638330,41 @@
         "difficulty_estimate": 13,
         "notes": "As far as I know, López Hernández (Vito Apüshana) won Casa de las Américas in 2000 with this book, but it's a niche fact, so correct is 4. Saying 'de Cuba' in the question makes it much easier: Casa de las Américas is the only Cuban prize among the options. Rómulo Gallegos is Venezuelan, Cervantes and Reina Sofía are Spanish. Anyone who knows the prizes can answer without knowing the poet, so it's closer to a 13. Hint 1 (Havana) only repeats the question. It's a dry fact you either know or don't."
       },
-      "fact_checked": true,
+      "fact_checked": false,
       "needs_media": false,
       "batch": "batch-24",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 2 (\"La institución lleva el nombre de todo el continente\") gives the answer away. \"Casa de las Américas\" is the only option named after a continent, so hint 2 solves the question as well as hint 3 does. Hint 1 (Havana) also points straight to the answer for anyone who knows the prizes, because it's the only Cuban one. Hint 1 should be vague (e.g. the prize is old and goes to Latin American and Caribbean writing), and hint 2 should not single out the option by its name.",
+        "feedback": "The fun fact names the wrong book. Vito Apüshana won the 2000 Casa de las Américas prize for «Encuentros en los senderos de Abya Yala». «Contrabandeo sueños con alijunas cercanos» is an earlier book of his, from 1992. The description's joke about smuggling dreams also refers to that earlier book. Correct the fun fact and rework the description. Verificación de datos: wrong. The answer (Casa de las Américas, 2000) is right, but the fun fact is wrong. The 2000 prize was for «Encuentros en los senderos de Abya Yala», not «Contrabandeo sueños con alijunas cercanos». That book was published in 1992 by Universidad de La Guajira.",
         "problems": [
-          "giveaway"
+          "fact"
         ],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"La institución lleva el nombre de todo el continente\") gives the answer away. \"Casa de las Américas\" is the only option named after a continent, so hint 2 solves the question as well as hint 3 does. Hint 1 (Havana) also points straight to the answer for anyone who knows the prizes, because it's the only Cuban one. Hint 1 should be vague (e.g. the prize is old and goes to Latin American and Caribbean writing), and hint 2 should not single out the option by its name.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Cut 'de Cuba' from the question so hint 1 brings in the country.",
+        "reason": "Rewrote hints 1 and 2 so they no longer single out the answer by its Havana location or its continental name; Havana moves to hint 3.",
         "previous": {
-          "question": "Vito Apüshana es el seudónimo de un poeta wayuu de La Guajira. En el año 2000 ganó un premio literario de Cuba. ¿Cuál?"
+          "hints": [
+            "El premio lo entrega una institución cultural de La Habana.",
+            "La institución lleva el nombre de todo el continente.",
+            "Se llama «Casa de las…»."
+          ]
         },
         "revised_on": "2026-10-24"
       }
@@ -640669,7 +640741,7 @@
     },
     {
       "id": "q-8307",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Lo que se dice cuando te acuerdas de las llaves justo después de cerrar la puerta.",
       "question": "«¡Chuta, se me olvidó!» es una exclamación muy típica de una ciudad colombiana. ¿De cuál?",
@@ -640686,12 +640758,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "keys on table",
+        "role": "illustrative",
+        "query": "Nariño Colombia Andes landscape",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANevado_del_quindio_-_servicio_geologico_de_colombia.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Nevado_del_quindio_-_servicio_geologico_de_colombia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Servicio Geológico Colombiano · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Servicio Geológico Colombiano",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "«¡Chuta!» también se oye en Ecuador y en Chile.",
       "subcategory": "regional-speech",
@@ -640720,27 +640799,39 @@
       "needs_media": false,
       "batch": "batch-24",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine (facts check out, no overlap with q-0239/q-6941/q-7584, the hints are fair). The problem is the media: the query \"keys on table\" takes its image from the description's joke, not from the question's topic, and every candidate is either keys (2, 4), Allen keys (3) or unrelated Key West furniture or islands (1, 5, 6). Search again for the setting instead, for example \"Pasto Colombia street\" or \"Nariño Andes landscape\". An illustrative photo of Pasto works, as long as no sign in it names the city. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine (facts check out, no overlap with q-0239/q-6941/q-7584, the hints are fair). The problem is the media: the query \"keys on table\" takes its image from the description's joke, not from the question's topic, and every candidate is either keys (2, 4), Allen keys (3) or unrelated Key West furniture or islands (1, 5, 6). Search again for the setting instead, for example \"Pasto Colombia street\" or \"Nariño Andes landscape\". An illustrative photo of Pasto works, as long as no sign in it names the city. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 3, which gave away another pool question, with the Nariño capital clue.",
+        "reason": "The image query now searches for the question's setting (the Nariño Andes) instead of the description's joke about keys.",
         "previous": {
-          "hints": [
-            "Es una ciudad fría de montaña.",
-            "Queda muy cerca de Ecuador, donde también se dice.",
-            "Es famosa por su Carnaval de Negros y Blancos."
-          ]
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "keys on table",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-24"
       }
@@ -642135,7 +642226,7 @@
     },
     {
       "id": "q-8327",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Un país tan montañoso que hasta los acentos se dividen en alturas.",
       "question": "Los lingüistas dividen el habla de Colombia en dos bloques: el costeño y el andino. ¿Cuál de estas ciudades es del bloque costeño?",
@@ -642189,19 +642280,27 @@
         "difficulty_estimate": 7,
         "notes": "Putting the Pacific in the costeño block follows Montes's classification, which is standard but not the only way to divide Colombian Spanish. The surprise (Quibdó counts as 'costeño') is nice."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-24",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. I could not check Montes' classification (costeño vs andino) by search. The answer looks plausible, since Pasto, Tunja and Medellín are Andean.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. I could not check Montes' classification (costeño vs andino) by search. The answer looks plausible, since Pasto, Tunja and Medellín are Andean.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null
@@ -644234,7 +644333,7 @@
     },
     {
       "id": "q-8355",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "El plato que convierte cualquier cumpleaños en una fiesta de todo el barrio.",
       "question": "Este plato típico del Tolima es un animal entero relleno de arveja y de su propia carne. ¿Qué animal es?",
@@ -644246,7 +644345,7 @@
       ],
       "hints": [
         "Se sirve en las fiestas grandes, con arepa e insulso.",
-        "Es un animal rosado al que le encanta revolcarse en el barro.",
+        "Se lleva entero a la mesa, con la piel dorada y crocante por encima.",
         "Su cría se llama lechón."
       ],
       "media": {
@@ -644254,14 +644353,14 @@
         "role": "illustrative",
         "query": "Tolima Colombia landscape",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ANevado_del_Tolima_vista_en_atardecer.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Nevado_del_Tolima_vista_en_atardecer.jpg/3840px-Nevado_del_Tolima_vista_en_atardecer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "AntonioEliseo · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMurillo_%28Tolima%29_-Panor%C3%A1mica_P%C3%A1ramo_2.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Murillo_%28Tolima%29_-Panor%C3%A1mica_P%C3%A1ramo_2.jpg/3840px-Murillo_%28Tolima%29_-Panor%C3%A1mica_P%C3%A1ramo_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "SajoR · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "AntonioEliseo",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:AntonioEliseo&action=edit&redlink=1",
+        "author": "SajoR",
+        "author_url": "https://commons.wikimedia.org/wiki/User:SajoR",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -644292,25 +644391,33 @@
       "needs_media": false,
       "batch": "batch-24",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"un animal rosado al que le encanta revolcarse en el barro\") gives the answer away: it plainly describes a pig. Replace it with a vaguer hint, for example about how long the dish cooks or the wood-fired oven, without describing the animal.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"un animal rosado al que le encanta revolcarse en el barro\") gives the answer away: it plainly describes a pig. Replace it with a vaguer hint, for example about how long the dish cooks or the wood-fired oven, without describing the animal.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which gave the pig away through chicharrón and its oink.",
+        "reason": "Replaced hint 2, which plainly described a pig, with a vaguer hint about how the dish is served.",
         "previous": {
           "hints": [
-            "Su piel queda crocante, como un chicharrón.",
-            "Es un animal de finca que hace «oinc».",
+            "Se sirve en las fiestas grandes, con arepa e insulso.",
+            "Es un animal rosado al que le encanta revolcarse en el barro.",
             "Su cría se llama lechón."
           ]
         },
@@ -645072,10 +645179,10 @@
     },
     {
       "id": "q-8366",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Antes de Spotify, la música se guardaba en cosas que pedían mucho cuidado.",
-      "question": "Escucha: así se oían en los años 40 los porros de Lucho Bermúdez en las vitrolas. ¿En qué estaban grabados?",
+      "question": "En los años 40, los porros de Lucho Bermúdez sonaban en las vitrolas. ¿En qué estaban grabados?",
       "answer": "En discos de 78 revoluciones",
       "wrong_answers": [
         "En cilindros de cera",
@@ -645088,13 +645195,22 @@
         "Su nombre lleva un número: las vueltas que daban por minuto."
       ],
       "media": {
-        "type": "audio",
-        "role": "essential",
-        "query": "gramophone record crackle",
-        "note": "El crujido y el siseo de un disco de goma laca de 78 rpm sonando en un gramófono, sin una canción reconocible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "type": "image",
+        "role": "illustrative",
+        "query": "1940s big band orchestra",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClaude_Thornhill_Orchestra_%28Gottlieb_08551%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Claude_Thornhill_Orchestra_%28Gottlieb_08551%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "William P. Gottlieb · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "William P. Gottlieb",
+        "author_url": "https://en.wikipedia.org/wiki/en:William_P._Gottlieb",
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-Gottlieb"
+        ]
       },
       "fun_fact": "En cada cara de un disco de 78 revoluciones cabían apenas unos tres minutos de música, por eso las canciones de entonces eran cortas.",
       "subcategory": "salsa-and-tropical-music",
@@ -645120,32 +645236,59 @@
         "notes": "Generic record crackle adds little and is not truly essential (an illustrative image of a gramophone would do). The answer is longer than the options and the most specific of them. Adults can reason past the anachronistic options. Fairly dry."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-24",
       "review": {
-        "decision": "needs_work",
-        "feedback": "All six audio candidates are recordings of the Thai national or royal anthem, not record crackle and not Lucho Bermúdez porros, so the 'Escucha' clip would be misleading. No new search is allowed. Consider turning it into an image question (e.g. a gramophone or a 78 rpm shellac record) with the 'Escucha' framing removed. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "All six audio candidates are recordings of the Thai national or royal anthem, not record crackle and not Lucho Bermúdez porros, so the 'Escucha' clip would be misleading. No new search is allowed. Consider turning it into an image question (e.g. a gramophone or a 78 rpm shellac record) with the 'Escucha' framing removed. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": {
-        "query": "vintage radio living room",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASpark_Museum_Radio_Living_Room.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Spark_Museum_Radio_Living_Room.jpg/3840px-Spark_Museum_Radio_Living_Room.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Allyn · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Allyn",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Allyn",
-        "restrictions": [],
-        "pd_reasons": []
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable audio exists, so this is now an image question: the 'Escucha' framing is gone and the image is an illustrative 1940s dance band.",
+        "previous": {
+          "question": "Escucha: así se oían en los años 40 los porros de Lucho Bermúdez en las vitrolas. ¿En qué estaban grabados?",
+          "media": {
+            "type": "audio",
+            "role": "essential",
+            "query": "gramophone record crackle",
+            "note": "El crujido y el siseo de un disco de goma laca de 78 rpm sonando en un gramófono, sin una canción reconocible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true,
+          "background": {
+            "query": "vintage radio living room",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ASpark_Museum_Radio_Living_Room.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Spark_Museum_Radio_Living_Room.jpg/3840px-Spark_Museum_Radio_Living_Room.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Allyn · CC BY-SA 4.0 · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "author": "Allyn",
+            "author_url": "https://commons.wikimedia.org/wiki/User:Allyn",
+            "restrictions": [],
+            "pd_reasons": []
+          }
+        },
+        "revised_on": "2026-10-24"
       }
     },
     {
@@ -645312,7 +645455,7 @@
       ],
       "hints": [
         "Pintaba con lupa y pincel finísimo, con detalles que parecen fotos.",
-        "Trabajó más de 30 años junto al sabio gaditano José Celestino Mutis en Santafé.",
+        "Trabajó cerca de 30 años en la Expedición Botánica dirigida por el sabio gaditano José Celestino Mutis.",
         "Sus láminas muestran orquídeas, quinas y pasifloras."
       ],
       "media": {
@@ -645354,29 +645497,39 @@
         "difficulty_estimate": 11,
         "notes": "Humboldt's praise of Matís as the best flower painter is well documented. From the era plus Humboldt, players can reason towards botany, so the question is easier than 13."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-24",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 2 says Matís worked 'más de 30 años' with Mutis. That is wrong: he joined the Expedición Botánica in 1783 and Mutis died in 1808, so he worked with Mutis himself for about 25 years (about 29 years with the Expedición in total). Change the hint to 'cerca de 30 años en la Expedición Botánica dirigida por…', as the fact check suggests. Verificación de datos: wrong. Answer (flowers) is right, but hint 2 says Matís worked 'más de 30 años' with Mutis. He served the Expedición Botánica about 27 years (1783–1812), and Mutis died in 1808, so about 25 years with Mutis himself.",
+        "feedback": "Hint 2 gives the answer away: 'la Expedición Botánica' says outright that he painted plants, so against Aves, Volcanes and Mapas it settles the question before hint 3. Hint 2 should name Mutis or the era without the word 'Botánica', for example 'Trabajó casi 30 años para el sabio gaditano José Celestino Mutis'.",
         "problems": [
-          "fact"
+          "giveaway"
         ],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 says Matís worked 'más de 30 años' with Mutis. That is wrong: he joined the Expedición Botánica in 1783 and Mutis died in 1808, so he worked with Mutis himself for about 25 years (about 29 years with the Expedición in total). Change the hint to 'cerca de 30 años en la Expedición Botánica dirigida por…', as the fact check suggests. Verificación de datos: wrong. Answer (flowers) is right, but hint 2 says Matís worked 'más de 30 años' with Mutis. He served the Expedición Botánica about 27 years (1783–1812), and Mutis died in 1808, so about 25 years with Mutis himself.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hint 2 so it no longer names the Expedición Botánica.",
+        "reason": "Corrected hint 2: Matís spent about 30 years with the Expedición Botánica, not more than 30 years with Mutis himself.",
         "previous": {
           "hints": [
             "Pintaba con lupa y pincel finísimo, con detalles que parecen fotos.",
-            "Trabajó más de 30 años en la Expedición Botánica de José Celestino Mutis.",
+            "Trabajó más de 30 años junto al sabio gaditano José Celestino Mutis en Santafé.",
             "Sus láminas muestran orquídeas, quinas y pasifloras."
           ]
         },

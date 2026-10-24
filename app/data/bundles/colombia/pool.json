@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "a3efabc4",
+  "hash": "a8f7034d",
   "questions": [
     {
       "id": "q-0002",
@@ -60262,6 +60262,74 @@
       "background": null
     },
     {
+      "id": "q-8257",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "brands-and-products",
+      "bundle": "colombia",
+      "description": "Repetida, repetida, repetida… ¡me falta!",
+      "question": "Destapas una chocolatina Jet clásica para llenar tu álbum. ¿Cuántas láminas trae adentro?",
+      "answer": "1",
+      "wrong_answers": [
+        "3",
+        "6",
+        "12"
+      ],
+      "hints": [
+        "Por eso llenar el álbum toma tanto tiempo.",
+        "Hay que comprar muchas chocolatinas para completarlo.",
+        "No viene un sobre lleno: es una sola sorpresa."
+      ],
+      "fun_fact": "Cambiar las láminas repetidas de Jet en el recreo es una costumbre que comparten varias generaciones de colombianos.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Troca_de_cromos_da_panini_-_1.jpg/3840px-Troca_de_cromos_da_panini_-_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATroca_de_cromos_da_panini_-_1.jpg",
+        "credit": "Joalpe · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Joalpe",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Joalpe"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8258",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "carnivals-and-fairs",
+      "bundle": "colombia",
+      "description": "Las carrozas más grandes del sur del país, y ninguna cabe en el garaje.",
+      "question": "El Desfile Magno, con sus carrozas gigantes, cierra el Carnaval de Negros y Blancos en el Día de Blancos. ¿Qué día de enero es?",
+      "answer": "6",
+      "wrong_answers": [
+        "2",
+        "12",
+        "20"
+      ],
+      "hints": [
+        "Primero llega el Día de Negros y después el de Blancos.",
+        "Cae en la primera semana de enero.",
+        "Coincide con el Día de Reyes."
+      ],
+      "fun_fact": "En 2009, la UNESCO declaró el Carnaval de Negros y Blancos Patrimonio Cultural Inmaterial de la Humanidad.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/DIOSESANCESTRALES_HUGOMONCAYO2007_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADIOSESANCESTRALES_HUGOMONCAYO2007_3.jpg",
+        "credit": "Etienne Le Cocq · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Etienne Le Cocq",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Etienne_Le_Cocq&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-8259",
       "status": "approved",
       "difficulty": 3,
@@ -60394,6 +60462,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Gersonparra11",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Gersonparra11&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8263",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "crafts-and-traditional-dress",
+      "bundle": "colombia",
+      "description": "Esa cosa de la casa que todos juran que sacudieron la semana pasada.",
+      "question": "Se pone en el piso de la sala o junto a la cama, se teje en lana u otras fibras, y en Colombia así se le dice a una alfombra pequeña. ¿Cómo se llama?",
+      "answer": "Tapete",
+      "wrong_answers": [
+        "Cobija",
+        "Mantel",
+        "Cortina"
+      ],
+      "hints": [
+        "Sirve para no pisar el piso frío al levantarte.",
+        "Lo sacuden afuera para quitarle el polvo.",
+        "Empieza por «ta»."
+      ],
+      "fun_fact": "La alfombra anudada más antigua que se conoce, la de Pazyryk, tiene unos 2400 años y se encontró congelada en las montañas de Altái, en Siberia.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Yarn_skeins.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AYarn_skeins.JPG",
+        "credit": "Pschemp · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Pschemp",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pschemp"
       },
       "background": null
     },
@@ -61792,6 +61894,40 @@
       "background": null
     },
     {
+      "id": "q-8307",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "regional-speech",
+      "bundle": "colombia",
+      "description": "Lo que se dice cuando te acuerdas de las llaves justo después de cerrar la puerta.",
+      "question": "«¡Chuta, se me olvidó!» es una exclamación muy típica de una ciudad colombiana. ¿De cuál?",
+      "answer": "Pasto",
+      "wrong_answers": [
+        "Barranquilla",
+        "Cali",
+        "Medellín"
+      ],
+      "hints": [
+        "Es una ciudad fría de montaña.",
+        "Queda muy cerca de Ecuador, donde también se dice.",
+        "Es la capital del departamento de Nariño."
+      ],
+      "fun_fact": "«¡Chuta!» también se oye en Ecuador y en Chile.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Nevado_del_quindio_-_servicio_geologico_de_colombia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANevado_del_quindio_-_servicio_geologico_de_colombia.jpg",
+        "credit": "Servicio Geológico Colombiano · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Servicio Geológico Colombiano",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-8308",
       "status": "approved",
       "difficulty": 6,
@@ -62434,6 +62570,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Romain Bréget",
         "author_url": "https://commons.wikimedia.org/wiki/User:Kormin"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8327",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "languages",
+      "bundle": "colombia",
+      "description": "Un país tan montañoso que hasta los acentos se dividen en alturas.",
+      "question": "Los lingüistas dividen el habla de Colombia en dos bloques: el costeño y el andino. ¿Cuál de estas ciudades es del bloque costeño?",
+      "answer": "Quibdó",
+      "wrong_answers": [
+        "Tunja",
+        "Pasto",
+        "Medellín"
+      ],
+      "hints": [
+        "La respuesta no queda en la cordillera.",
+        "Esa ciudad está en la región del Pacífico.",
+        "Es la capital del Chocó."
+      ],
+      "fun_fact": "Para el lingüista José Joaquín Montes, el habla del Pacífico pertenece al bloque costeño, igual que la del Caribe, aunque estén en costas distintas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Andes_mountains_in_the_Huila_department_%28Monta%C3%B1as_de_los_Andes_en_el_departamento_del_Huila%29.jpg/3840px-Andes_mountains_in_the_Huila_department_%28Monta%C3%B1as_de_los_Andes_en_el_departamento_del_Huila%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAndes_mountains_in_the_Huila_department_%28Monta%C3%B1as_de_los_Andes_en_el_departamento_del_Huila%29.jpg",
+        "credit": "SergiXCX · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "SergiXCX",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:SergiXCX&action=edit&redlink=1"
       },
       "background": null
     },
@@ -63356,6 +63526,40 @@
       "background": null
     },
     {
+      "id": "q-8355",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "symbols-of-departments-and-cities",
+      "bundle": "colombia",
+      "description": "El plato que convierte cualquier cumpleaños en una fiesta de todo el barrio.",
+      "question": "Este plato típico del Tolima es un animal entero relleno de arveja y de su propia carne. ¿Qué animal es?",
+      "answer": "Un cerdo",
+      "wrong_answers": [
+        "Un pavo",
+        "Una vaca",
+        "Un cordero"
+      ],
+      "hints": [
+        "Se sirve en las fiestas grandes, con arepa e insulso.",
+        "Se lleva entero a la mesa, con la piel dorada y crocante por encima.",
+        "Su cría se llama lechón."
+      ],
+      "fun_fact": "La lechona se hornea durante muchas horas, a veces toda la noche, en horno de leña.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Murillo_%28Tolima%29_-Panor%C3%A1mica_P%C3%A1ramo_2.jpg/3840px-Murillo_%28Tolima%29_-Panor%C3%A1mica_P%C3%A1ramo_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMurillo_%28Tolima%29_-Panor%C3%A1mica_P%C3%A1ramo_2.jpg",
+        "credit": "SajoR · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "SajoR",
+        "author_url": "https://commons.wikimedia.org/wiki/User:SajoR"
+      },
+      "background": null
+    },
+    {
       "id": "q-8356",
       "status": "approved",
       "difficulty": 9,
@@ -63692,6 +63896,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Wuselig",
         "author_url": "https://commons.wikimedia.org/wiki/User:Wuselig"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8366",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "salsa-and-tropical-music",
+      "bundle": "colombia",
+      "description": "Antes de Spotify, la música se guardaba en cosas que pedían mucho cuidado.",
+      "question": "En los años 40, los porros de Lucho Bermúdez sonaban en las vitrolas. ¿En qué estaban grabados?",
+      "answer": "En discos de 78 revoluciones",
+      "wrong_answers": [
+        "En cilindros de cera",
+        "En casetes",
+        "En cintas de ocho pistas"
+      ],
+      "hints": [
+        "Eran de goma laca, un material duro y quebradizo.",
+        "Giraban mucho más rápido que los acetatos de las viejotecas.",
+        "Su nombre lleva un número: las vueltas que daban por minuto."
+      ],
+      "fun_fact": "En cada cara de un disco de 78 revoluciones cabían apenas unos tres minutos de música, por eso las canciones de entonces eran cortas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Claude_Thornhill_Orchestra_%28Gottlieb_08551%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClaude_Thornhill_Orchestra_%28Gottlieb_08551%29.jpg",
+        "credit": "William P. Gottlieb · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "William P. Gottlieb",
+        "author_url": "https://en.wikipedia.org/wiki/en:William_P._Gottlieb"
       },
       "background": null
     },
