@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "cd5eaebb",
+  "hash": "c7ae37d7",
   "questions": [
     {
       "id": "q-0002",
@@ -44894,6 +44894,40 @@
       "background": null
     },
     {
+      "id": "q-7789",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "19th-century",
+      "bundle": "colombia",
+      "description": "Una pelea de familia tan seria que cada bando terminó con apodo propio.",
+      "question": "Hacia 1850 el Partido Liberal se dividió entre jóvenes librecambistas y militares aliados de los artesanos. ¿Cómo se llamaron los dos bandos?",
+      "answer": "Gólgotas y draconianos",
+      "wrong_answers": [
+        "Godos y cachiporros",
+        "Chulavitas y pájaros",
+        "Ministeriales y progresistas"
+      ],
+      "hints": [
+        "Los dos bandos eran del mismo partido, no rivales entre liberales y conservadores.",
+        "Un nombre viene de un discurso que hablaba del monte donde crucificaron a Jesús.",
+        "El otro nombre viene de Dracón, un legislador griego famoso por sus leyes durísimas."
+      ],
+      "fun_fact": "En 1854, los draconianos y los artesanos apoyaron el golpe de Estado del general José María Melo.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/VI._Profil_du_chemin_de_Carthagene_des_Indes_au_plateau_de_Santa-Fe_de_Bogota._%28IA_dr_vi-profil-du-chemin-de-carthagene-des-indes-au-plateau-de-santa-fe-de-bogo-12125028%29.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVI._Profil_du_chemin_de_Carthagene_des_Indes_au_plateau_de_Santa-Fe_de_Bogota._%28IA_dr_vi-profil-du-chemin-de-carthagene-des-indes-au-plateau-de-santa-fe-de-bogo-12125028%29.jpg",
+        "credit": "Humboldt, Alexander von, 1769-1859 · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Humboldt, Alexander von, 1769-1859\nBonpland, Aime\nL. Coutant\nL. Aubert\nLanglois",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-7790",
       "status": "approved",
       "difficulty": 9,
@@ -47886,6 +47920,40 @@
       "background": null
     },
     {
+      "id": "q-7880",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "19th-century",
+      "bundle": "colombia",
+      "description": "Un deporte donde ganar suena literalmente como una explosión.",
+      "question": "Según la tradición, ¿desde qué época se juega el tejo en Colombia?",
+      "answer": "Desde antes de la llegada de los españoles",
+      "wrong_answers": [
+        "Desde la época de la Colonia",
+        "Desde la Independencia",
+        "Desde la década de 1950"
+      ],
+      "hints": [
+        "Es uno de los juegos más antiguos del país.",
+        "Se asocia sobre todo con el altiplano de Boyacá y Cundinamarca.",
+        "Dicen que los primeros tejos eran discos de oro de los muiscas."
+      ],
+      "fun_fact": "Al tejo también lo llaman «turmequé», por un pueblo de Boyacá.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Cancha_de_tejo_Univalle.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACancha_de_tejo_Univalle.JPG",
+        "credit": "Akire gatuna · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Akire gatuna",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Akire_gatuna&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-7881",
       "status": "approved",
       "difficulty": 7,
@@ -49654,6 +49722,40 @@
       "background": null
     },
     {
+      "id": "q-7935",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "writers-and-books",
+      "bundle": "colombia",
+      "description": "Un libro que lleva décadas en las maletas de los colegios colombianos y todavía hace suspirar a los papás.",
+      "question": "Lo escribió el boyacense Jairo Aníbal Niño en los años ochenta y se lee muchísimo en los colegios colombianos. ¿Qué es «La alegría de querer»?",
+      "answer": "Un libro de poemas de amor para niños",
+      "wrong_answers": [
+        "Una novela de amor juvenil en la selva",
+        "Una obra de teatro sobre un amor imposible",
+        "Una colección de cuentos de amor para adolescentes"
+      ],
+      "hints": [
+        "No trae capítulos largos.",
+        "Sus textos son muy cortos y cada uno cabe en una página.",
+        "Habla de los primeros enamoramientos, en verso."
+      ],
+      "fun_fact": "Jairo Aníbal Niño también escribió «Zoro», una novela muy leída por los jóvenes colombianos.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Reading_Ranger_at_the_Ste._Genevieve_Library%2C_2022_%28b3ab1a32-e597-4424-9d32-38a8e3b453c4%29.JPG/3840px-Reading_Ranger_at_the_Ste._Genevieve_Library%2C_2022_%28b3ab1a32-e597-4424-9d32-38a8e3b453c4%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AReading_Ranger_at_the_Ste._Genevieve_Library%2C_2022_%28b3ab1a32-e597-4424-9d32-38a8e3b453c4%29.JPG",
+        "credit": "NPS Photo · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NPS Photo",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-7936",
       "status": "approved",
       "difficulty": 11,
@@ -49718,6 +49820,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Bernard Gagnon",
         "author_url": "https://commons.wikimedia.org/wiki/User:Bgag"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7938",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "writers-and-books",
+      "bundle": "colombia",
+      "description": "Libros con muy pocas palabras y muchísimo corazón.",
+      "question": "El bogotano Ivar Da Coll escribe e ilustra libros álbum para los más chiquitos, casi sin palabras. ¿Qué animal protagoniza su serie más famosa?",
+      "answer": "Un chigüiro",
+      "wrong_answers": [
+        "Un armadillo",
+        "Un oso de anteojos",
+        "Una danta"
+      ],
+      "hints": [
+        "Es un animal colombiano muy tranquilo.",
+        "Le encanta el agua y vive en los Llanos.",
+        "Es un roedor grande y gordito que vive en manadas cerca de ríos y lagunas."
+      ],
+      "fun_fact": "En Venezuela a este animal le dicen chigüire, y en Brasil, capivara.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/The_children%27s_library_at_the_Broomfield_Library.jpg/3840px-The_children%27s_library_at_the_Broomfield_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_children%27s_library_at_the_Broomfield_Library.jpg",
+        "credit": "HonjuTheCat · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "HonjuTheCat",
+        "author_url": "https://commons.wikimedia.org/wiki/User:HonjuTheCat"
       },
       "background": null
     },

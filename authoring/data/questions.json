@@ -600978,7 +600978,7 @@
     },
     {
       "id": "q-7789",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Una pelea de familia tan seria que cada bando terminó con apodo propio.",
       "question": "Hacia 1850 el Partido Liberal se dividió entre jóvenes librecambistas y militares aliados de los artesanos. ¿Cómo se llamaron los dos bandos?",
@@ -601011,7 +601011,7 @@
           "PD-old-100-expired"
         ]
       },
-      "fun_fact": "A los draconianos los llamaron así porque defendían castigos duros, como la pena de muerte.",
+      "fun_fact": "En 1854, los draconianos y los artesanos apoyaron el golpe de Estado del general José María Melo.",
       "subcategory": "19th-century",
       "style": null,
       "concept": "Gólgotas y draconianos",
@@ -601034,28 +601034,35 @@
         "difficulty_estimate": 13,
         "notes": "The question is long (about 170 characters) and dense for reading aloud. The fun fact just repeats hint 2 (the 'mártir del Gólgota' speech). The distractors are strong, real Colombian party nicknames."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-21",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. Answer (Gólgotas and draconianos) and the split are right. I could not verify the fun fact that draconianos got the name for defending harsh punishments like the death penalty. The origin of the nickname is usually explained differently, so check it.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. Answer (Gólgotas and draconianos) and the split are right. I could not verify the fun fact that draconianos got the name for defending harsh punishments like the death penalty. The origin of the nickname is usually explained differently, so check it.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed Melo's name and shortened the question; replaced the fun fact that repeated hint 2.",
+        "reason": "Replaced the unverified fun fact about the nickname with a well-documented fact (draconianos and artisans backed Melo's 1854 coup).",
         "previous": {
-          "question": "Hacia 1850 el Partido Liberal se partió en dos: jóvenes librecambistas de levita y militares aliados de los artesanos, que apoyaron el golpe de Melo en 1854. ¿Cómo se llamaron?",
-          "fun_fact": "A los gólgotas les pusieron ese nombre porque uno de ellos, en un discurso, habló del «mártir del Gólgota», es decir, de Jesús."
+          "fun_fact": "A los draconianos los llamaron así porque defendían castigos duros, como la pena de muerte."
         },
         "revised_on": "2026-10-23"
       }
@@ -604466,7 +604473,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "hand knocking wooden door",
+        "query": "knuckles knocking wood table",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -604495,27 +604502,45 @@
         "difficulty_estimate": 4,
         "notes": "Solid. 'Salarse' is good Colombian usage. Hint 3 comes close to the answer, which is allowed."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-21",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the image candidates fits the question, and no new search is allowed. The slot needs a photo of a hand knocking on a wooden table or door; a search like \"knuckles knocking wood table\" might find one. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates fits the question, and no new search is allowed. The slot needs a photo of a hand knocking on a wooden table or door; a search like \"knuckles knocking wood table\" might find one. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer states the jinx trait.",
+        "reason": "New media query so the search can find a photo of knuckles knocking on wood.",
         "previous": {
-          "description": "Hay frases que uno dice y enseguida se arrepiente, por si acaso el universo estaba escuchando."
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "hand knocking wooden door",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -607869,7 +607894,7 @@
     },
     {
       "id": "q-7880",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un deporte donde ganar suena literalmente como una explosión.",
       "question": "Según la tradición, ¿desde qué época se juega el tejo en Colombia?",
@@ -607887,11 +607912,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "tejo turmequé game",
+        "query": "tejo Colombia cancha",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACancha_de_tejo_Univalle.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Cancha_de_tejo_Univalle.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Akire gatuna · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Akire gatuna",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Akire_gatuna&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Al tejo también lo llaman «turmequé», por un pueblo de Boyacá.",
       "subcategory": "19th-century",
@@ -607920,28 +607952,39 @@
       "needs_media": false,
       "batch": "batch-21",
       "review": {
-        "decision": "needs_work",
-        "feedback": "All six media candidates show the Vasco da Gama Bridge in Lisbon. The search for \"tejo\" matched the Portuguese name of the Tagus River instead of the Colombian game. None fits, and no new search is allowed. The slot needs a new search such as \"tejo Colombia cancha\" or \"tejo mecha Boyacá\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "All six media candidates show the Vasco da Gama Bridge in Lisbon. The search for \"tejo\" matched the Portuguese name of the Tagus River instead of the Colombian game. None fits, and no new search is allowed. The slot needs a new search such as \"tejo Colombia cancha\" or \"tejo mecha Boyacá\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Cut the scene-setting clause, made hint 2 a weaker regional clue and moved the Muisca into the strong hint 3.",
+        "reason": "New media query so it finds the Colombian game rather than the Tagus River in Lisbon.",
         "previous": {
-          "question": "Estás en una cancha de tejo y acaba de reventar una mecha. Según la tradición, ¿desde qué época se juega el tejo en Colombia?",
-          "hints": [
-            "Es uno de los juegos más antiguos del país.",
-            "Según la tradición, ya lo jugaban los muiscas.",
-            "Dicen que los primeros tejos eran discos de oro."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "tejo turmequé game",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -608632,7 +608675,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Passiflora edulis trellis",
+        "query": "passion fruit vine trellis wires",
         "note": "Foto de una mata de maracuyá o granadilla trepando por un emparrado de alambres, con hojas y zarcillos visibles; sin texto.",
         "source_url": null,
         "file_url": null,
@@ -608666,17 +608709,43 @@
       "batch": "batch-21",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate clearly shows a passion-fruit or granadilla vine growing on a wire trellis, and the question says \"Mira la foto: así se cultivan… sobre alambres\". A new search can't be run, so the media slot needs a clear photo of a maracuyá/granadilla emparrado (e.g. \"passion fruit vine trellis wires\"). No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate clearly shows a passion-fruit or granadilla vine growing on a wire trellis, and the question says \"Mira la foto: así se cultivan… sobre alambres\". A new search can't be run, so the media slot needs a clear photo of a maracuyá/granadilla emparrado (e.g. \"passion fruit vine trellis wires\"). No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New media query for a clear photo of passion-fruit vines growing on trellis wires.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Passiflora edulis trellis",
+            "note": "Foto de una mata de maracuyá o granadilla trepando por un emparrado de alambres, con hojas y zarcillos visibles; sin texto.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7891",
@@ -611717,7 +611786,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "quiz buzzer button",
+        "query": "television studio stage lights",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -611751,17 +611820,43 @@
       "batch": "batch-21",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates works. The piezo and electromagnetic buzzers (2–6) are electronic components and have nothing to do with a TV game show. Candidate 1 is a Japanese bus stop button with Japanese text, which points players towards the wrong option 'Japón'. The question text itself is fine; it only needs a new image, such as a TV game show studio set. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates works. The piezo and electromagnetic buzzers (2–6) are electronic components and have nothing to do with a TV game show. Candidate 1 is a Japanese bus stop button with Japanese text, which points players towards the wrong option 'Japón'. The question text itself is fine; it only needs a new image, such as a TV game show studio set. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New media query for a generic TV game show studio, without text that would hint at a country.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "quiz buzzer button",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-23"
+      }
     },
     {
       "id": "q-7933",
@@ -611907,7 +612002,7 @@
     },
     {
       "id": "q-7935",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un libro que lleva décadas en las maletas de los colegios colombianos y todavía hace suspirar a los papás.",
       "question": "Lo escribió el boyacense Jairo Aníbal Niño en los años ochenta y se lee muchísimo en los colegios colombianos. ¿Qué es «La alegría de querer»?",
@@ -611925,19 +612020,19 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "children reading books classroom",
+        "query": "kids reading school library",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AChildren_reading_in_classroom%2C_ca._1915_-_DPLA_-_11b2b4aeffab2be680113fd9dd736174.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Children_reading_in_classroom%2C_ca._1915_-_DPLA_-_11b2b4aeffab2be680113fd9dd736174.jpg/3840px-Children_reading_in_classroom%2C_ca._1915_-_DPLA_-_11b2b4aeffab2be680113fd9dd736174.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Curtis & Miller · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AReading_Ranger_at_the_Ste._Genevieve_Library%2C_2022_%28b3ab1a32-e597-4424-9d32-38a8e3b453c4%29.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Reading_Ranger_at_the_Ste._Genevieve_Library%2C_2022_%28b3ab1a32-e597-4424-9d32-38a8e3b453c4%29.JPG/3840px-Reading_Ranger_at_the_Ste._Genevieve_Library%2C_2022_%28b3ab1a32-e597-4424-9d32-38a8e3b453c4%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "NPS Photo · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "Curtis & Miller",
+        "author": "NPS Photo",
         "author_url": null,
         "restrictions": [],
         "pd_reasons": [
-          "PD-US"
+          "PD-USGov-NPS"
         ]
       },
       "fun_fact": "Jairo Aníbal Niño también escribió «Zoro», una novela muy leída por los jóvenes colombianos.",
@@ -611967,28 +612062,48 @@
       "needs_media": false,
       "batch": "batch-21",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed 'recitan de memoria' from the description (it signalled poetry) and replaced the inaccurate rhyming claim in hint 2.",
+        "reason": "New media query so the image can be re-sourced with a license that works everywhere.",
         "previous": {
-          "description": "Un clásico de la maleta del colegio que muchos papás todavía recitan de memoria.",
-          "hints": [
-            "No trae capítulos largos.",
-            "Sus textos son cortos y riman o casi riman.",
-            "Habla de los primeros enamoramientos, en verso."
-          ]
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "children reading books classroom",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AChildren_reading_in_classroom%2C_ca._1915_-_DPLA_-_11b2b4aeffab2be680113fd9dd736174.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Children_reading_in_classroom%2C_ca._1915_-_DPLA_-_11b2b4aeffab2be680113fd9dd736174.jpg/3840px-Children_reading_in_classroom%2C_ca._1915_-_DPLA_-_11b2b4aeffab2be680113fd9dd736174.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Curtis & Miller · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Curtis & Miller",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-10-23"
       }
@@ -612161,7 +612276,7 @@
     },
     {
       "id": "q-7938",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Libros con muy pocas palabras y muchísimo corazón.",
       "question": "El bogotano Ivar Da Coll escribe e ilustra libros álbum para los más chiquitos, casi sin palabras. ¿Qué animal protagoniza su serie más famosa?",
@@ -612179,20 +612294,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "colorful children's picture books",
+        "query": "stack of children's books",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AIllustration_at_title_in_Just_So_Stories_%28c1912%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Illustration_at_title_in_Just_So_Stories_%28c1912%29.jpg/3840px-Illustration_at_title_in_Just_So_Stories_%28c1912%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Illustration by Bransom, Paul, 1885- (ill.) · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_children%27s_library_at_the_Broomfield_Library.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/The_children%27s_library_at_the_Broomfield_Library.jpg/3840px-The_children%27s_library_at_the_Broomfield_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "HonjuTheCat · CC0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Illustration by Bransom, Paul, 1885- (ill.)",
-        "author_url": null,
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "HonjuTheCat",
+        "author_url": "https://commons.wikimedia.org/wiki/User:HonjuTheCat",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "En Venezuela a este animal le dicen chigüire, y en Brasil, capivara.",
       "subcategory": "writers-and-books",
@@ -612221,27 +612334,48 @@
       "needs_media": false,
       "batch": "batch-21",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-23",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 3 so it no longer repeats the largest-rodent fact asked in q-0032.",
+        "reason": "New media query so the image can be re-sourced with a license that works everywhere.",
         "previous": {
-          "hints": [
-            "Es un animal colombiano muy tranquilo.",
-            "Le encanta el agua y vive en los Llanos.",
-            "Es el roedor más grande del mundo."
-          ]
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "colorful children's picture books",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AIllustration_at_title_in_Just_So_Stories_%28c1912%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Illustration_at_title_in_Just_So_Stories_%28c1912%29.jpg/3840px-Illustration_at_title_in_Just_So_Stories_%28c1912%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Illustration by Bransom, Paul, 1885- (ill.) · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Illustration by Bransom, Paul, 1885- (ill.)",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-10-23"
       }
