@@ -625779,7 +625779,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Colombian peso banknotes",
+        "query": "García Márquez 50000 pesos banknote",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -625813,17 +625813,43 @@
       "batch": "batch-23",
       "review": {
         "decision": "needs_work",
-        "feedback": "The text is fine (25 is correct and the Ciudad Perdida fun fact checks out), but none of the image candidates works. The question names the current 50 000 and 2000 peso bills, and all four candidates are 1890s–1900 notes from private banks. No new search is allowed. Find a photo of the current 50 000 peso bill (García Márquez), or of 2000 peso bills, with no '25' visible. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine (25 is correct and the Ciudad Perdida fun fact checks out), but none of the image candidates works. The question names the current 50 000 and 2000 peso bills, and all four candidates are 1890s–1900 notes from private banks. No new search is allowed. Find a photo of the current 50 000 peso bill (García Márquez), or of 2000 peso bills, with no '25' visible. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the image query to target the current 50 000 peso bill instead of old banknotes.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Colombian peso banknotes",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-8114",
@@ -626880,10 +626906,10 @@
     },
     {
       "id": "q-8128",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "En este pueblo del Atlántico las manos trabajan más rápido que el ventilador.",
-      "question": "Mira la foto: en Usiacurí, Atlántico, tejen artesanías como estas. ¿Con qué fibra?",
+      "question": "En Usiacurí, Atlántico, tejen artesanías de colores muy famosas. ¿Con qué fibra?",
       "answer": "Palma de iraca",
       "wrong_answers": [
         "Caña flecha",
@@ -626897,12 +626923,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "Usiacurí handicrafts",
+        "role": "decorative",
+        "query": "colorful woven baskets",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_woven_basket_filled_with_an_assortment_of_colorful_vegetables.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/A_woven_basket_filled_with_an_assortment_of_colorful_vegetables.jpg/3840px-A_woven_basket_filled_with_an_assortment_of_colorful_vegetables.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En Usiacurí vivió sus últimos años el poeta Julio Flórez, y su casa hoy es un museo.",
       "subcategory": "crafts-and-traditional-dress",
@@ -626928,39 +626961,44 @@
         "notes": "The essential photo can't convey which fiber it is, so it is really illustrative. A Commons photo of Usiacurí iraca crafts is also unlikely. Hint 2 points to q-5039 (suaceño = iraca). The description is weakly tied to the content."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-23",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot has no candidates and can't be searched again. The question says \"Mira la foto… artesanías como estas\", so it needs a real photo of Usiacurí iraca crafts. Either find such an image by hand, or reword the question so it doesn't refer to a photo and use a decorative image instead. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot has no candidates and can't be searched again. The question says \"Mira la foto… artesanías como estas\", so it needs a real photo of Usiacurí iraca crafts. Either find such an image by hand, or reword the question so it doesn't refer to a photo and use a decorative image instead. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2 (palm giveaway, overlap with q-5039) and made the image illustrative.",
+        "reason": "Reworded so the question no longer refers to a photo and switched to a decorative image, because no Usiacurí photo exists.",
         "previous": {
-          "hints": [
-            "Es una fibra que sale de una palma.",
-            "Es la misma fibra del sombrero suaceño del Huila.",
-            "El famoso sombrero «Panamá» de Ecuador se teje con esta misma palma."
-          ],
+          "question": "Mira la foto: en Usiacurí, Atlántico, tejen artesanías como estas. ¿Con qué fibra?",
           "media": {
             "type": "image",
-            "role": "essential",
-            "query": "Usiacurí iraca handicrafts",
-            "note": "Foto de artesanías tejidas en palma de iraca (canastos, bolsos o adornos de colores) de Usiacurí, sin letreros.",
+            "role": "illustrative",
+            "query": "Usiacurí handicrafts",
+            "note": null,
             "source_url": null,
             "file_url": null,
             "credit": null
-          }
+          },
+          "needs_media": true
         },
         "revised_on": "2026-10-24"
       }
@@ -628175,7 +628213,7 @@
     },
     {
       "id": "q-8145",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Un señor con un sombrero tan grande que necesita su propio parqueadero.",
       "question": "Según la leyenda antioqueña, el Sombrerón sale de noche en un caballo negro con dos perros encadenados. ¿A quiénes persigue?",
@@ -628193,11 +628231,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "colonial village street night",
+        "query": "Santa Fe de Antioquia street",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASector_Antiguo_de_la_ciudad_de_Santa_Fe_de_Antioquia_01.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Sector_Antiguo_de_la_ciudad_de_Santa_Fe_de_Antioquia_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Juan Diego Santacruz · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Juan Diego Santacruz",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Juandiegosanta",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Dicen que el sombrero del Sombrerón crece al caer sobre su víctima hasta envolverla por completo.",
       "subcategory": "indigenous-myths-and-folk-beliefs",
@@ -628226,27 +628271,39 @@
       "needs_media": false,
       "batch": "batch-23",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the six candidates fits the question, and no new search is allowed. They show a Sunoco gas station, an 1893 sketch of Princeton's Nassau Hall, an old greenhouse print, a brick street in Greenwich Village, New York, and two newspaper scans. The slot needs a new search for a night-time Antioquian village street, for example \"Jardín Antioquia night\" or \"Santa Fe de Antioquia street\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates fits the question, and no new search is allowed. They show a Sunoco gas station, an 1893 sketch of Princeton's Nassau Hall, an old greenhouse print, a brick street in Greenwich Village, New York, and two newspaper scans. The slot needs a new search for a night-time Antioquian village street, for example \"Jardín Antioquia night\" or \"Santa Fe de Antioquia street\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1 so it no longer mentions bars and gambling places.",
+        "reason": "New image query for a real Antioquian village street.",
         "previous": {
-          "hints": [
-            "Se aparece en las calles de los pueblos, cerca de cantinas y garitos.",
-            "Sus víctimas son gente de malos pasos.",
-            "Les tira el sombrero a los que salen de la cantina o juegan plata."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "colonial village street night",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-24"
       }
@@ -628840,7 +628897,7 @@
     },
     {
       "id": "q-8154",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Unas fiestas en que la bandera sale de paseo por todas las ventanas.",
       "question": "Son en julio y agosto, se cuelgan banderas en las casas y hay desfiles por la independencia. ¿Cómo se llaman estas celebraciones?",
@@ -628853,16 +628910,23 @@
       "hints": [
         "En el colegio se hacen izadas de bandera para estas fechas.",
         "Una es el 20 de julio y otra el 7 de agosto.",
-        "Su nombre viene de la palabra «patria»."
+        "Celebran el Grito de Independencia y la Batalla de Boyacá, es decir, el nacimiento de la nación."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Colombian flag house window",
+        "query": "Colombia independence day parade",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A20_de_julio_2012_%287610259304%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/20_de_julio_2012_%287610259304%29.jpg/3840px-20_de_julio_2012_%287610259304%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "National Police of Colombia · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "National Police of Colombia",
+        "author_url": "https://commons.wikimedia.org/wiki/Polic%C3%ADa_Nacional_de_Colombia",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En Colombia, el 20 de julio y el 7 de agosto son festivos que nunca se pasan para el lunes.",
       "subcategory": "national-symbols",
@@ -628891,32 +628955,44 @@
       "needs_media": false,
       "batch": "batch-23",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates fits as an illustrative image. Candidates 2–4 show Ukrainian and Palestinian flags, 5 a Brazilian flag, 6 the US Star-Spangled Banner Flag House, and 1 is a plain wooden window in Riga with no link to Colombia. A new search is needed, for example \"Colombian flag balcony\" or \"Colombia independence parade\". Minor point for whoever revises next: hint 3 spells out \"patria\", which is very close to the answer's own wording. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates fits as an illustrative image. Candidates 2–4 show Ukrainian and Palestinian flags, 5 a Brazilian flag, 6 the US Star-Spangled Banner Flag House, and 1 is a plain wooden window in Riga with no link to Colombia. A new search is needed, for example \"Colombian flag balcony\" or \"Colombia independence parade\". Minor point for whoever revises next: hint 3 spells out \"patria\", which is very close to the answer's own wording. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which nearly spelled out the answer, and corrected the Feria de las Flores name.",
+        "reason": "New image query for a Colombian independence parade, and hint 3 no longer spells out «patria».",
         "previous": {
-          "wrong_answers": [
-            "Fiestas navideñas",
-            "Ferias de las flores",
-            "Carnavales"
-          ],
           "hints": [
-            "Se celebran en honor a la patria.",
+            "En el colegio se hacen izadas de bandera para estas fechas.",
             "Una es el 20 de julio y otra el 7 de agosto.",
             "Su nombre viene de la palabra «patria»."
-          ]
+          ],
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Colombian flag house window",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-24"
       }
@@ -629794,7 +629870,7 @@
     },
     {
       "id": "q-8166",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Un juego donde la mantequilla es tu peor enemiga.",
       "question": "En las fiestas de pueblo ponen un palo muy alto untado de grasa, con premios arriba, y la gente intenta trepar. ¿Cómo se llama?",
@@ -629812,11 +629888,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Colombian village fiesta",
+        "query": "greasy pole climbing festival",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A148_climbing_the_pole_%284762301546%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/148_climbing_the_pole_%284762301546%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "apium from Northern Virginia, U.S.A. · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "apium from Northern Virginia, U.S.A.",
+        "author_url": "https://www.flickr.com/people/7377473@N02",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Juegos parecidos al palo encebado existen en muchos países, desde Filipinas hasta Italia.",
       "subcategory": "other-sports",
@@ -629845,18 +629928,42 @@
       "needs_media": false,
       "batch": "batch-23",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but none of the image candidates fits a Colombian town fiesta. 1 is a painted wardrobe in a museum. 2 and 3 are a 'Villaggio Latino' street event in Carpentras, France. 4 is a Belgian trade-union festival. 5 and 6 are 17th-century Flemish peasant paintings by Teniers. A new search, for example 'palo encebado Colombia' or 'greasy pole festival', would help, but no more searches are allowed for this slot. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but none of the image candidates fits a Colombian town fiesta. 1 is a painted wardrobe in a museum. 2 and 3 are a 'Villaggio Latino' street event in Carpentras, France. 4 is a Belgian trade-union festival. 5 and 6 are 17th-century Flemish peasant paintings by Teniers. A new search, for example 'palo encebado Colombia' or 'greasy pole festival', would help, but no more searches are allowed for this slot. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New image query for a greasy-pole game, since the earlier candidates had nothing to do with it.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Colombian village fiesta",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-8167",
@@ -630262,7 +630369,7 @@
     },
     {
       "id": "q-8172",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "Un señor que vivía en un castillo sin ser rey ni personaje de cuento.",
       "question": "Fui un filántropo antioqueño, viví en un castillo de Medellín que hoy es museo y le regalé a Itagüí su primera biblioteca. ¿Quién soy?",
@@ -630316,19 +630423,27 @@
         "difficulty_estimate": 15,
         "notes": "Very local Medellín trivia. The riddle is long, about 170 characters. Hint 2 undersells the link: he was the son of Coltejer's founder, not just someone with the same surname. A photo of Museo El Castillo may show its sign, but that wouldn't give his name."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-23",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: wrong. Hint 2 says he bought the castle in the 1940s and filled it with art. He did buy it, in about 1943. But he did not build it. Construction began in 1930 for José Tobón Uribe. The riddle and the answer are fine. The hint is true as written, so only the 'castle' phrasing needs checking. The riddle's 'viví en un castillo' is also correct.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: wrong. Hint 2 says he bought the castle in the 1940s and filled it with art. He did buy it, in about 1943. But he did not build it. Construction began in 1930 for José Tobón Uribe. The riddle and the answer are fine. The hint is true as written, so only the 'castle' phrasing needs checking. The riddle's 'viví en un castillo' is also correct.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -631666,7 +631781,7 @@
     },
     {
       "id": "q-8190",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Una lista de maravillas amazónicas con un turista despistado.",
       "question": "¿Cuál de estas maravillas naturales NO queda en el departamento del Guainía?",
@@ -631679,7 +631794,7 @@
       "hints": [
         "Tres están cerca de Puerto Inírida.",
         "La que sobra queda entre Caquetá y Guaviare.",
-        "Es el parque nacional más grande de Colombia, famoso por sus pinturas rupestres."
+        "Sus tepuyes esconden miles de pinturas rupestres muy antiguas."
       ],
       "media": {
         "type": "image",
@@ -631726,27 +631841,34 @@
       "needs_media": false,
       "batch": "batch-23",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 3 says Chiribiquete is Colombia's largest national park. That is exactly what approved question q-0175 asks, so playing this question gives that one away. Replace hint 3 with another detail, such as its tepuis or its rock paintings, and leave out the \"largest park\" claim.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 3 says Chiribiquete is Colombia's largest national park. That is exactly what approved question q-0175 asks, so playing this question gives that one away. Replace hint 3 with another detail, such as its tepuis or its rock paintings, and leave out the \"largest park\" claim.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Changed the answer to the Serranía de Chiribiquete to avoid overlap with q-0010, and rewrote hints 2 and 3 to fit it.",
+        "reason": "Hint 3 no longer gives away approved q-0175's 'largest park' fact.",
         "previous": {
-          "answer": "Caño Cristales",
           "hints": [
             "Tres están cerca de Puerto Inírida.",
-            "La que sobra queda en la serranía de La Macarena.",
-            "Es el río de los cinco colores, en el Meta."
+            "La que sobra queda entre Caquetá y Guaviare.",
+            "Es el parque nacional más grande de Colombia, famoso por sus pinturas rupestres."
           ]
         },
         "revised_on": "2026-10-24"
@@ -633391,20 +633513,20 @@
     },
     {
       "id": "q-8213",
-      "status": "needs_work",
-      "difficulty": 9,
+      "status": "approved",
+      "difficulty": 10,
       "description": "Una fiesta deportiva en la Sucursal del Cielo con deportes que no ves todos los días.",
-      "question": "En 2013, Cali organizó los Juegos Mundiales, con patinaje, squash y tiro de cuerda. ¿Qué tienen en común casi todos sus deportes?",
-      "answer": "No hacen parte de los Juegos Olímpicos",
+      "question": "En 2013, Cali fue sede de un gran evento con patinaje, salvamento y tiro de cuerda. ¿Cómo se llamaba?",
+      "answer": "Juegos Mundiales",
       "wrong_answers": [
-        "Nacieron todos en Sudamérica",
-        "Se juegan siempre bajo techo",
-        "Son solo para deportistas aficionados"
+        "Juegos Panamericanos",
+        "Juegos Bolivarianos",
+        "Juegos Centroamericanos y del Caribe"
       ],
       "hints": [
         "Los organiza cada cuatro años una asociación con apoyo del Comité Olímpico Internacional.",
         "Algunos deportes que pasaron por ahí, como el karate, después llegaron a los Olímpicos.",
-        "Son como la sala de espera para entrar a la cita olímpica."
+        "Su nombre suena a que juega el planeta entero, no solo un continente."
       ],
       "media": {
         "type": "image",
@@ -633449,18 +633571,47 @@
       "needs_media": false,
       "batch": "batch-23",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This is a new draft (existing is false) that asks \"¿Qué tienen en común casi todos sus deportes?\", a 'what do they have in common' question, and new drafts may not use that style (developer rule, 2026-10-21). The answer is also losing accuracy: squash joins the Olympics at LA 2028, and tug of war was an Olympic sport from 1900 to 1920. To keep the topic, ask a direct question about the 2013 World Games in Cali, without overlapping q-6932 or q-7114.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This is a new draft (existing is false) that asks \"¿Qué tienen en común casi todos sus deportes?\", a 'what do they have in common' question, and new drafts may not use that style (developer rule, 2026-10-21). The answer is also losing accuracy: squash joins the Olympics at LA 2028, and tug of war was an Olympic sport from 1900 to 1920. To keep the topic, ask a direct question about the 2013 World Games in Cali, without overlapping q-6932 or q-7114.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "difficulty_original": 9,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced the banned 'what do they have in common' format with a direct question asking for the event's name, and dropped the shaky 'not Olympic' claim.",
+        "previous": {
+          "difficulty": 9,
+          "question": "En 2013, Cali organizó los Juegos Mundiales, con patinaje, squash y tiro de cuerda. ¿Qué tienen en común casi todos sus deportes?",
+          "answer": "No hacen parte de los Juegos Olímpicos",
+          "wrong_answers": [
+            "Nacieron todos en Sudamérica",
+            "Se juegan siempre bajo techo",
+            "Son solo para deportistas aficionados"
+          ],
+          "hints": [
+            "Los organiza cada cuatro años una asociación con apoyo del Comité Olímpico Internacional.",
+            "Algunos deportes que pasaron por ahí, como el karate, después llegaron a los Olímpicos.",
+            "Son como la sala de espera para entrar a la cita olímpica."
+          ]
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-8214",
@@ -634148,7 +634299,7 @@
     },
     {
       "id": "q-8223",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "En Boyacá hasta lo que suena a postre se toca con ruana puesta.",
       "question": "En la carranga de Jorge Velosa, el «merengue» no es el dulce de clara de huevo. ¿Qué es?",
@@ -634160,17 +634311,24 @@
       ],
       "hints": [
         "La música de Velosa nació de las tradiciones del campo boyacense.",
-        "En las fiestas de pueblo la gente lo baila en pareja.",
+        "En los discos de carranga, esta palabra aparece al lado del título de muchas canciones.",
         "Es un aire musical que se baila en las fiestas de pueblo, igual que la rumba carranguera."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Colombian tiple guitar",
+        "query": "Boyacá countryside ruana",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APueblo_del_Municipio_de_La_Victoria.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Pueblo_del_Municipio_de_La_Victoria.jpg/3840px-Pueblo_del_Municipio_de_La_Victoria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Andresandres17 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Andresandres17",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Andresandres17&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Aunque comparte nombre con el famoso merengue dominicano, el merengue carranguero suena a campo boyacense y no al Caribe.",
       "subcategory": "popular-and-andean-music",
@@ -634199,28 +634357,45 @@
       "needs_media": false,
       "batch": "batch-23",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates works: all four show string instruments (a tiple or guitar), and one wrong answer is literally \"Un instrumento de cuerda\", so the sharp illustrative image points to a wrong option. The slot needs a new search for something like \"Boyacá countryside ruana\" or \"Colombian village fiesta\". Also, hint 2 (\"la gente lo baila en pareja\") already gives the answer away, since only a rhythm gets danced. Hint 3 repeats it, so hint 2 should be vaguer. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates works: all four show string instruments (a tiple or guitar), and one wrong answer is literally \"Un instrumento de cuerda\", so the sharp illustrative image points to a wrong option. The slot needs a new search for something like \"Boyacá countryside ruana\" or \"Colombian village fiesta\". Also, hint 2 (\"la gente lo baila en pareja\") already gives the answer away, since only a rhythm gets danced. Hint 3 repeats it, so hint 2 should be vaguer. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which only repeated the question, with a vague Boyacá hint, and replaced hint 2, which named other rhythms, with the couple-dance hint.",
+        "reason": "The image query no longer shows string instruments, which pointed to a wrong option, and hint 2 is vaguer so it doesn't give away the dancing.",
         "previous": {
           "hints": [
-            "Tiene que ver con la música, no con la comida.",
-            "La rumba y el paseo también son esto dentro de la carranga.",
+            "La música de Velosa nació de las tradiciones del campo boyacense.",
+            "En las fiestas de pueblo la gente lo baila en pareja.",
             "Es un aire musical que se baila en las fiestas de pueblo, igual que la rumba carranguera."
-          ]
+          ],
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Colombian tiple guitar",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-24"
       }
@@ -635043,7 +635218,7 @@
     },
     {
       "id": "q-8235",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Un ritmo para el que la banda del pueblo saca hasta la tuba del armario.",
       "question": "En las bandas de las sabanas de Córdoba, hay un ritmo en el que el bombero golpea el aro de madera del bombo y no el cuero. ¿Cuál es?",
@@ -635055,7 +635230,7 @@
       ],
       "hints": [
         "Lo tocan bandas de viento, con clarinetes, trompetas y bombardinos.",
-        "Es un porro, pero no el que apaga el cuero del bombo con la mano.",
+        "Suena en las fiestas de los pueblos del valle del río Sinú.",
         "Su nombre viene de «palito», dicho a la manera costeña."
       ],
       "media": {
@@ -635063,14 +635238,14 @@
         "role": "illustrative",
         "query": "San Pelayo porro festival",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AFestival_Nacional_del_Porro%3B_Desfile_Homenaje_p%C3%B3stumo_a_M%C3%BAsicos._San_Pelayo%2C_C%C3%B3rdoba%2C_Colombia%2C_img_2.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Festival_Nacional_del_Porro%3B_Desfile_Homenaje_p%C3%B3stumo_a_M%C3%BAsicos._San_Pelayo%2C_C%C3%B3rdoba%2C_Colombia%2C_img_2.jpg/3840px-Festival_Nacional_del_Porro%3B_Desfile_Homenaje_p%C3%B3stumo_a_M%C3%BAsicos._San_Pelayo%2C_C%C3%B3rdoba%2C_Colombia%2C_img_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Rural Todoterreno · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFestival_del_Porro.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Festival_del_Porro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Luis Pérez · CC BY 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Rural Todoterreno",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Rural_Todoterreno",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Luis Pérez",
+        "author_url": "https://www.flickr.com/photos/65092670@N00",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -635101,18 +635276,38 @@
       "needs_media": false,
       "batch": "batch-23",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. \"Es un porro\" leaves only the two porro options, and \"pero no el que apaga el cuero del bombo con la mano\" then rules out porro tapao, so the answer is settled before hint 3. Hint 2 should instead give a vague clue, such as the San Pelayo festival or the Sinú region, that doesn't eliminate options.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. \"Es un porro\" leaves only the two porro options, and \"pero no el que apaga el cuero del bombo con la mano\" then rules out porro tapao, so the answer is settled before hint 3. Hint 2 should instead give a vague clue, such as the San Pelayo festival or the Sinú region, that doesn't eliminate options.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote hint 2 as a vague regional clue (Sinú) because the old one ruled out every option except the answer.",
+        "previous": {
+          "hints": [
+            "Lo tocan bandas de viento, con clarinetes, trompetas y bombardinos.",
+            "Es un porro, pero no el que apaga el cuero del bombo con la mano.",
+            "Su nombre viene de «palito», dicho a la manera costeña."
+          ]
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-8236",
@@ -635557,7 +635752,7 @@
     },
     {
       "id": "q-8242",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Una palabra que se puso a dieta y perdió dos sílabas en el camino.",
       "question": "En Bogotá, de recortar la palabra «compañero» salió «ñero». ¿Qué significa hoy esa palabra?",
@@ -635569,7 +635764,7 @@
       ],
       "hints": [
         "No es precisamente un piropo.",
-        "Habla más de los modales que de la edad o del dinero.",
+        "Se oye en el habla popular de Bogotá, nunca en un discurso formal.",
         "Se parece bastante a lo que es un gamín."
       ],
       "media": {
@@ -635577,14 +635772,14 @@
         "role": "illustrative",
         "query": "Bogota street downtown",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALascar_La_Candelaria_-_Downtown_Bogota_%284584497829%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Lascar_La_Candelaria_-_Downtown_Bogota_%284584497829%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Jorge Láscar from Australia · CC BY 2.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASkyline_downtown_Bogota.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Skyline_downtown_Bogota.jpg/3840px-Skyline_downtown_Bogota.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Tijs Zwinkels · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "Jorge Láscar from Australia",
-        "author_url": "https://www.flickr.com/people/8721758@N06",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Tijs Zwinkels",
+        "author_url": "https://www.flickr.com/people/41668395@N04",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -635615,23 +635810,35 @@
       "needs_media": false,
       "batch": "batch-23",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hints 1 and 2 together give the answer away. Hint 2 (\"Habla más de los modales que de la edad o del dinero\") rules out the child and stingy options by naming them outright, and hint 1 (\"No es precisamente un piropo\") rules out \"elegante\". That leaves only the correct answer before hint 3. Hint 2 should be rewritten as a vague clue that doesn't name what the other options are about, for example something about where the word is heard.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hints 1 and 2 together give the answer away. Hint 2 (\"Habla más de los modales que de la edad o del dinero\") rules out the child and stingy options by naming them outright, and hint 1 (\"No es precisamente un piropo\") rules out \"elegante\". That leaves only the correct answer before hint 3. Hint 2 should be rewritten as a vague clue that doesn't name what the other options are about, for example something about where the word is heard.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer uses «calle», which echoed the answer.",
+        "reason": "Rewrote hint 2 so it says where the word is heard instead of naming and ruling out the wrong options.",
         "previous": {
-          "description": "Una palabra que llegó a la calle tan rápido que se le cayó la mitad por el camino."
+          "hints": [
+            "No es precisamente un piropo.",
+            "Habla más de los modales que de la edad o del dinero.",
+            "Se parece bastante a lo que es un gamín."
+          ]
         },
         "revised_on": "2026-10-24"
       }
@@ -635805,7 +636012,7 @@
     },
     {
       "id": "q-8245",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un baile para el que hay que calentar antes, como en el fútbol.",
       "question": "¿Qué distingue al paso caleño, el estilo de bailar salsa de Cali?",
@@ -635823,11 +636030,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "salsa orchestra concert",
+        "query": "Salsodromo Feria de Cali",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASals%C3%B3dromo%2C_Feria_de_Cali%2C_Colombia.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Sals%C3%B3dromo%2C_Feria_de_Cali%2C_Colombia.JPG/3840px-Sals%C3%B3dromo%2C_Feria_de_Cali%2C_Colombia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Jyon · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jyon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jyon",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Según la tradición, los caleños ponían los discos de 33 revoluciones a 45, y bailar esa música acelerada dio origen al paso caleño.",
       "subcategory": "rhythms-dances-and-instruments",
@@ -635856,18 +636070,42 @@
       "needs_media": false,
       "batch": "batch-23",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate fits the salsa world: 1–5 are classical symphony orchestras, choirs and rehearsals, and 6 is a Balkan rock band (No Smoking Orchestra) on stage in St Petersburg. Re-search for something like \"salsa dancers Cali\" or \"salsa band congas timbales\", without footwork close-ups that hint at the answer. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate fits the salsa world: 1–5 are classical symphony orchestras, choirs and rehearsals, and 6 is a Balkan rock band (No Smoking Orchestra) on stage in St Petersburg. Re-search for something like \"salsa dancers Cali\" or \"salsa band congas timbales\", without footwork close-ups that hint at the answer. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the image query to the Feria de Cali salsa parade, so the picture fits the salsa world without a close-up of the footwork.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "salsa orchestra concert",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-8246",

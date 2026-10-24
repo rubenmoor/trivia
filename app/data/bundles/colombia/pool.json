@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "5143e079",
+  "hash": "3570daaa",
   "questions": [
     {
       "id": "q-0002",
@@ -55944,6 +55944,40 @@
       "background": null
     },
     {
+      "id": "q-8128",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "crafts-and-traditional-dress",
+      "bundle": "colombia",
+      "description": "En este pueblo del Atlántico las manos trabajan más rápido que el ventilador.",
+      "question": "En Usiacurí, Atlántico, tejen artesanías de colores muy famosas. ¿Con qué fibra?",
+      "answer": "Palma de iraca",
+      "wrong_answers": [
+        "Caña flecha",
+        "Fique",
+        "Junco"
+      ],
+      "hints": [
+        "La fibra se corta en tiras delgadas y se tiñe de colores vivos.",
+        "Con esta misma fibra tejen sombreros en Sandoná, Nariño.",
+        "El famoso sombrero «Panamá» de Ecuador se teje con esta misma palma."
+      ],
+      "fun_fact": "En Usiacurí vivió sus últimos años el poeta Julio Flórez, y su casa hoy es un museo.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/A_woven_basket_filled_with_an_assortment_of_colorful_vegetables.jpg/3840px-A_woven_basket_filled_with_an_assortment_of_colorful_vegetables.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_woven_basket_filled_with_an_assortment_of_colorful_vegetables.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      },
+      "background": null
+    },
+    {
       "id": "q-8129",
       "status": "approved",
       "difficulty": 12,
@@ -56488,6 +56522,40 @@
       "background": null
     },
     {
+      "id": "q-8145",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "indigenous-myths-and-folk-beliefs",
+      "bundle": "colombia",
+      "description": "Un señor con un sombrero tan grande que necesita su propio parqueadero.",
+      "question": "Según la leyenda antioqueña, el Sombrerón sale de noche en un caballo negro con dos perros encadenados. ¿A quiénes persigue?",
+      "answer": "A borrachos, apostadores y peleones",
+      "wrong_answers": [
+        "A niños que no hacen las tareas",
+        "A cazadores de animales del monte",
+        "A mujeres que lavan en el río"
+      ],
+      "hints": [
+        "Se aparece de noche en las calles de los pueblos antioqueños.",
+        "Sus víctimas son gente de malos pasos.",
+        "Les tira el sombrero a los que salen de la cantina o juegan plata."
+      ],
+      "fun_fact": "Dicen que el sombrero del Sombrerón crece al caer sobre su víctima hasta envolverla por completo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Sector_Antiguo_de_la_ciudad_de_Santa_Fe_de_Antioquia_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASector_Antiguo_de_la_ciudad_de_Santa_Fe_de_Antioquia_01.JPG",
+        "credit": "Juan Diego Santacruz · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Juan Diego Santacruz",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Juandiegosanta"
+      },
+      "background": null
+    },
+    {
       "id": "q-8146",
       "status": "approved",
       "difficulty": 5,
@@ -56722,6 +56790,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Javierleiva",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Javierleiva&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8154",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "national-symbols",
+      "bundle": "colombia",
+      "description": "Unas fiestas en que la bandera sale de paseo por todas las ventanas.",
+      "question": "Son en julio y agosto, se cuelgan banderas en las casas y hay desfiles por la independencia. ¿Cómo se llaman estas celebraciones?",
+      "answer": "Fiestas patrias",
+      "wrong_answers": [
+        "Fiestas navideñas",
+        "Feria de las Flores",
+        "Carnavales"
+      ],
+      "hints": [
+        "En el colegio se hacen izadas de bandera para estas fechas.",
+        "Una es el 20 de julio y otra el 7 de agosto.",
+        "Celebran el Grito de Independencia y la Batalla de Boyacá, es decir, el nacimiento de la nación."
+      ],
+      "fun_fact": "En Colombia, el 20 de julio y el 7 de agosto son festivos que nunca se pasan para el lunes.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/20_de_julio_2012_%287610259304%29.jpg/3840px-20_de_julio_2012_%287610259304%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A20_de_julio_2012_%287610259304%29.jpg",
+        "credit": "National Police of Colombia · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "National Police of Colombia",
+        "author_url": "https://commons.wikimedia.org/wiki/Polic%C3%ADa_Nacional_de_Colombia"
       },
       "background": null
     },
@@ -57100,6 +57202,40 @@
       "background": null
     },
     {
+      "id": "q-8166",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "other-sports",
+      "bundle": "colombia",
+      "description": "Un juego donde la mantequilla es tu peor enemiga.",
+      "question": "En las fiestas de pueblo ponen un palo muy alto untado de grasa, con premios arriba, y la gente intenta trepar. ¿Cómo se llama?",
+      "answer": "Palo encebado",
+      "wrong_answers": [
+        "Vaca loca",
+        "Tejo",
+        "Carrera de encostalados"
+      ],
+      "hints": [
+        "Casi todos se resbalan antes de llegar arriba.",
+        "Los concursantes se paran unos encima de otros para lograrlo.",
+        "'Sebo' es otra palabra para la grasa."
+      ],
+      "fun_fact": "Juegos parecidos al palo encebado existen en muchos países, desde Filipinas hasta Italia.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/148_climbing_the_pole_%284762301546%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A148_climbing_the_pole_%284762301546%29.jpg",
+        "credit": "apium from Northern Virginia, U.S.A. · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "apium from Northern Virginia, U.S.A.",
+        "author_url": "https://www.flickr.com/people/7377473@N02"
+      },
+      "background": null
+    },
+    {
       "id": "q-8167",
       "status": "approved",
       "difficulty": 5,
@@ -57266,6 +57402,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Krzysztof Popławski",
         "author_url": "https://commons.wikimedia.org/wiki/User:KrzysztofPoplawski"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8172",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "pioneers-and-popular-figures",
+      "bundle": "colombia",
+      "description": "Un señor que vivía en un castillo sin ser rey ni personaje de cuento.",
+      "question": "Fui un filántropo antioqueño, viví en un castillo de Medellín que hoy es museo y le regalé a Itagüí su primera biblioteca. ¿Quién soy?",
+      "answer": "Diego Echavarría Misas",
+      "wrong_answers": [
+        "Carlos Ardila Lülle",
+        "Julio Mario Santo Domingo",
+        "Gonzalo Mejía"
+      ],
+      "hints": [
+        "Mi familia estuvo detrás de grandes textileras de Antioquia.",
+        "Compré el castillo en los años 40 y lo llené de arte y muebles europeos.",
+        "La biblioteca de Itagüí lleva mi nombre completo."
+      ],
+      "fun_fact": "El Museo El Castillo, en El Poblado, imita a los castillos medievales de Francia y tiene jardines abiertos al público.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/El_Castillo%2C_Medell%C3%ADn%2C_Medellin%2C_Antioquia%2C_Colombia_-_panoramio_%286%29.jpg/3840px-El_Castillo%2C_Medell%C3%ADn%2C_Medellin%2C_Antioquia%2C_Colombia_-_panoramio_%286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEl_Castillo%2C_Medell%C3%ADn%2C_Medellin%2C_Antioquia%2C_Colombia_-_panoramio_%286%29.jpg",
+        "credit": "Zack Knowles · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Zack Knowles",
+        "author_url": "https://web.archive.org/web/20161020052035/http://www.panoramio.com/user/4132368?with_photo_id=60807222"
       },
       "background": null
     },
@@ -57844,6 +58014,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Adrian mariote",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Adrian_mariote&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8190",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "regions-and-departments",
+      "bundle": "colombia",
+      "description": "Una lista de maravillas amazónicas con un turista despistado.",
+      "question": "¿Cuál de estas maravillas naturales NO queda en el departamento del Guainía?",
+      "answer": "La serranía de Chiribiquete",
+      "wrong_answers": [
+        "Los cerros de Mavecure",
+        "La flor de Inírida",
+        "La Estrella Fluvial de Inírida"
+      ],
+      "hints": [
+        "Tres están cerca de Puerto Inírida.",
+        "La que sobra queda entre Caquetá y Guaviare.",
+        "Sus tepuyes esconden miles de pinturas rupestres muy antiguas."
+      ],
+      "fun_fact": "Los cerros de Mavecure son rocas de más de mil millones de años que salen como torres de la selva.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Rivers_of_South_America_%28MODIS_2024-08-24%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARivers_of_South_America_%28MODIS_2024-08-24%29.jpg",
+        "credit": "MODIS Land Rapid Response Team, NASA GSFC · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "MODIS Land Rapid Response Team, NASA GSFC",
+        "author_url": null
       },
       "background": null
     },
@@ -58596,6 +58800,40 @@
       "background": null
     },
     {
+      "id": "q-8213",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "other-sports",
+      "bundle": "colombia",
+      "description": "Una fiesta deportiva en la Sucursal del Cielo con deportes que no ves todos los días.",
+      "question": "En 2013, Cali fue sede de un gran evento con patinaje, salvamento y tiro de cuerda. ¿Cómo se llamaba?",
+      "answer": "Juegos Mundiales",
+      "wrong_answers": [
+        "Juegos Panamericanos",
+        "Juegos Bolivarianos",
+        "Juegos Centroamericanos y del Caribe"
+      ],
+      "hints": [
+        "Los organiza cada cuatro años una asociación con apoyo del Comité Olímpico Internacional.",
+        "Algunos deportes que pasaron por ahí, como el karate, después llegaron a los Olímpicos.",
+        "Su nombre suena a que juega el planeta entero, no solo un continente."
+      ],
+      "fun_fact": "Cali fue la primera ciudad de Latinoamérica en organizar los Juegos Mundiales.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Cali_downtown-_skyline.jpg/3840px-Cali_downtown-_skyline.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACali_downtown-_skyline.jpg",
+        "credit": "Johannes Bud · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Johannes Bud",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Johannes_Bud&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-8214",
       "status": "approved",
       "difficulty": 12,
@@ -58898,6 +59136,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "PattayaPatrol",
         "author_url": "https://www.flickr.com/people/PattayaPatrol/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8223",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "popular-and-andean-music",
+      "bundle": "colombia",
+      "description": "En Boyacá hasta lo que suena a postre se toca con ruana puesta.",
+      "question": "En la carranga de Jorge Velosa, el «merengue» no es el dulce de clara de huevo. ¿Qué es?",
+      "answer": "Un ritmo campesino",
+      "wrong_answers": [
+        "Un instrumento de cuerda",
+        "El coro que se repite",
+        "Una copla de desafío"
+      ],
+      "hints": [
+        "La música de Velosa nació de las tradiciones del campo boyacense.",
+        "En los discos de carranga, esta palabra aparece al lado del título de muchas canciones.",
+        "Es un aire musical que se baila en las fiestas de pueblo, igual que la rumba carranguera."
+      ],
+      "fun_fact": "Aunque comparte nombre con el famoso merengue dominicano, el merengue carranguero suena a campo boyacense y no al Caribe.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Pueblo_del_Municipio_de_La_Victoria.jpg/3840px-Pueblo_del_Municipio_de_La_Victoria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APueblo_del_Municipio_de_La_Victoria.jpg",
+        "credit": "Andresandres17 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Andresandres17",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Andresandres17&action=edit&redlink=1"
       },
       "background": null
     },
@@ -59242,6 +59514,40 @@
       "background": null
     },
     {
+      "id": "q-8235",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "salsa-and-tropical-music",
+      "bundle": "colombia",
+      "description": "Un ritmo para el que la banda del pueblo saca hasta la tuba del armario.",
+      "question": "En las bandas de las sabanas de Córdoba, hay un ritmo en el que el bombero golpea el aro de madera del bombo y no el cuero. ¿Cuál es?",
+      "answer": "Porro palitiao",
+      "wrong_answers": [
+        "Porro tapao",
+        "Bullerengue sentao",
+        "Fandango de lengua"
+      ],
+      "hints": [
+        "Lo tocan bandas de viento, con clarinetes, trompetas y bombardinos.",
+        "Suena en las fiestas de los pueblos del valle del río Sinú.",
+        "Su nombre viene de «palito», dicho a la manera costeña."
+      ],
+      "fun_fact": "El porro tiene dos grandes estilos: el palitiao y el tapao, en el que el bombero apaga el sonido del cuero con la mano.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Festival_del_Porro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFestival_del_Porro.jpg",
+        "credit": "Luis Pérez · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Luis Pérez",
+        "author_url": "https://www.flickr.com/photos/65092670@N00"
+      },
+      "background": null
+    },
+    {
       "id": "q-8236",
       "status": "approved",
       "difficulty": 12,
@@ -59446,6 +59752,40 @@
       "background": null
     },
     {
+      "id": "q-8242",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "telenovelas",
+      "bundle": "colombia",
+      "description": "Una palabra que se puso a dieta y perdió dos sílabas en el camino.",
+      "question": "En Bogotá, de recortar la palabra «compañero» salió «ñero». ¿Qué significa hoy esa palabra?",
+      "answer": "Una persona callejera y de modales bruscos",
+      "wrong_answers": [
+        "Una persona elegante y de buena familia",
+        "Un niño muy pequeño y consentido",
+        "Una persona tacaña con su dinero"
+      ],
+      "hints": [
+        "No es precisamente un piropo.",
+        "Se oye en el habla popular de Bogotá, nunca en un discurso formal.",
+        "Se parece bastante a lo que es un gamín."
+      ],
+      "fun_fact": "«Ñero» nació como forma cariñosa de «compañero» y con los años pasó a describir a alguien callejero y de malos modales.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Skyline_downtown_Bogota.jpg/3840px-Skyline_downtown_Bogota.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASkyline_downtown_Bogota.jpg",
+        "credit": "Tijs Zwinkels · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Tijs Zwinkels",
+        "author_url": "https://www.flickr.com/people/41668395@N04"
+      },
+      "background": null
+    },
+    {
       "id": "q-8243",
       "status": "approved",
       "difficulty": 7,
@@ -59510,6 +59850,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "g013m",
         "author_url": "https://www.flickr.com/people/g013m/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8245",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "rhythms-dances-and-instruments",
+      "bundle": "colombia",
+      "description": "Un baile para el que hay que calentar antes, como en el fútbol.",
+      "question": "¿Qué distingue al paso caleño, el estilo de bailar salsa de Cali?",
+      "answer": "Pasos de pies muy rápidos",
+      "wrong_answers": [
+        "Giros lentos y abrazados",
+        "Saltos agitando un pañuelo",
+        "Zapateo con botas de cuero"
+      ],
+      "hints": [
+        "Mira las piernas de los bailarines de los shows caleños.",
+        "Se dice que nació cuando los caleños ponían los discos más rápido de lo normal.",
+        "Los pies se mueven tan rápido que casi no se alcanzan a ver."
+      ],
+      "fun_fact": "Según la tradición, los caleños ponían los discos de 33 revoluciones a 45, y bailar esa música acelerada dio origen al paso caleño.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Sals%C3%B3dromo%2C_Feria_de_Cali%2C_Colombia.JPG/3840px-Sals%C3%B3dromo%2C_Feria_de_Cali%2C_Colombia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASals%C3%B3dromo%2C_Feria_de_Cali%2C_Colombia.JPG",
+        "credit": "Jyon · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jyon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jyon"
       },
       "background": null
     },
