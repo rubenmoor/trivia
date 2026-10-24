@@ -647069,10 +647069,10 @@
     },
     {
       "id": "q-8390",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Hay camisetas que pesan más que otras, aunque estén hechas de la misma tela.",
-      "question": "Llevo el 10 en la espalda, juego detrás de los delanteros y me toca inventar los pases de gol; en Colombia el Pibe fue mi rey. ¿Cómo se llama mi posición?",
+      "question": "¿Cómo se llama en Colombia la posición del 10 que juega detrás de los delanteros y arma los pases de gol, como el Pibe Valderrama?",
       "answer": "Volante creativo",
       "wrong_answers": [
         "Volante de marca",
@@ -647086,12 +647086,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "soccer shirt number 10",
+        "role": "decorative",
+        "query": "football stadium crowd",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStadium_of_Football_Club_FC_Barcelona_-_Camp_Nou.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Stadium_of_Football_Club_FC_Barcelona_-_Camp_Nou.jpg/3840px-Stadium_of_Football_Club_FC_Barcelona_-_Camp_Nou.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "ticketsluxury · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "ticketsluxury",
+        "author_url": "https://pixabay.com/users/ticketsluxury-1455902/",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El 10 se volvió el número de los magos gracias a Pelé, que lo usó casi por casualidad en el Mundial de 1958.",
       "subcategory": "club-football",
@@ -647120,19 +647127,44 @@
       "needs_media": false,
       "batch": "batch-25",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates works: #1 is a Free the Nipple rally (not family-friendly and off topic), and #2–#6 are close-ups of antique museum shirts, not a football shirt with the number 10. No new search is allowed. The text has a problem too: the first-person riddle speaks as the player but asks for his position instead of who he is, so it is really a plain question in disguise. It should be rewritten as a direct question, e.g. \"¿Cómo se llama en Colombia la posición del 10 que juega detrás de los delanteros y arma los pases de gol, como el Pibe Valderrama?\" No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media",
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates works: #1 is a Free the Nipple rally (not family-friendly and off topic), and #2–#6 are close-ups of antique museum shirts, not a football shirt with the number 10. No new search is allowed. The text has a problem too: the first-person riddle speaks as the player but asks for his position instead of who he is, so it is really a plain question in disguise. It should be rewritten as a direct question, e.g. \"¿Cómo se llama en Colombia la posición del 10 que juega detrás de los delanteros y arma los pases de gol, como el Pibe Valderrama?\" No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media",
+            "style"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote the disguised first-person riddle as the direct question the reviewer suggested, and switched to a decorative stadium image because no usable number-10 shirt photo exists.",
+        "previous": {
+          "question": "Llevo el 10 en la espalda, juego detrás de los delanteros y me toca inventar los pases de gol; en Colombia el Pibe fue mi rey. ¿Cómo se llama mi posición?",
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "soccer shirt number 10",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-8391",
@@ -647588,7 +647620,7 @@
     },
     {
       "id": "q-8397",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "De la laguna salen peces, patos y… esta artesanía.",
       "question": "En la laguna de Fúquene cortan junco, lo secan al sol y lo tejen para hacer esteras. ¿Qué es una estera?",
@@ -647600,7 +647632,7 @@
       ],
       "hints": [
         "La tejen familias que viven alrededor de la laguna desde hace generaciones.",
-        "Se teje en forma de rectángulo plano, como un individual gigante.",
+        "Antes era común en las casas campesinas y hoy se vende como artesanía en los mercados.",
         "Cuando no se usa, se enrolla."
       ],
       "media": {
@@ -647646,25 +647678,33 @@
       "needs_media": false,
       "batch": "batch-25",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Se teje en forma de rectángulo plano, como un individual gigante\") gives the answer away: only the correct option is flat, and it even repeats the answer's key word \"plano\". It's also stronger than hint 3. Replace hint 2 with a vaguer clue, e.g. about where or how it's used, without \"plano\" or \"piso\", and keep the flat/floor clue for hint 3 at the latest.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Se teje en forma de rectángulo plano, como un individual gigante\") gives the answer away: only the correct option is flat, and it even repeats the answer's key word \"plano\". It's also stronger than hint 3. Replace hint 2 with a vaguer clue, e.g. about where or how it's used, without \"plano\" or \"piso\", and keep the flat/floor clue for hint 3 at the latest.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which paraphrased the answer, with a vague hint and a medium-strength one.",
+        "reason": "Replaced hint 2, which gave the answer away, with a vaguer clue about where esteras are used and sold.",
         "previous": {
           "hints": [
-            "Se extiende, no se carga.",
-            "Sirve para sentarse o acostarse encima.",
+            "La tejen familias que viven alrededor de la laguna desde hace generaciones.",
+            "Se teje en forma de rectángulo plano, como un individual gigante.",
             "Cuando no se usa, se enrolla."
           ]
         },
@@ -649762,10 +649802,10 @@
     },
     {
       "id": "q-8425",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Tres instrumentos, un montón de parrandas y cero ganas de irse a dormir.",
-      "question": "Mira la foto: acordeón, caja y guacharaca. ¿En qué ciudad se hace el festival más famoso de esta música?",
+      "question": "El acordeón, la caja y la guacharaca suenan juntos en una música colombiana. ¿En qué ciudad se hace su festival más famoso?",
       "answer": "Valledupar",
       "wrong_answers": [
         "Barranquilla",
@@ -649779,12 +649819,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "vallenato group accordion",
-        "note": "Un grupo vallenato o los tres instrumentos: acordeón, caja y guacharaca; sin letreros con nombres de ciudades.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "accordion close up",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWiki_loves_Music_-_Hamburg-5702.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Wiki_loves_Music_-_Hamburg-5702.jpg/3840px-Wiki_loves_Music_-_Hamburg-5702.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Wuselig · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Wuselig",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Wuselig",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En 2015 la UNESCO declaró el vallenato tradicional Patrimonio Cultural Inmaterial de la Humanidad.",
       "subcategory": "places-and-monuments",
@@ -649810,21 +649857,47 @@
         "notes": "UNESCO put vallenato on the Urgent Safeguarding list in 2015, not on the Representative list; the fun fact's wording is a bit loose. It's close to q-0067 on the instruments, but it asks a different fact."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-25",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The essential image must show a vallenato group or the three instruments (accordion, caja, guacharaca), but every candidate shows only European or US accordion players, and no new search is allowed. The slot needs a real photo of a vallenato ensemble, for example from a search like \"vallenato caja guacharaca\" or \"conjunto vallenato\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential image must show a vallenato group or the three instruments (accordion, caja, guacharaca), but every candidate shows only European or US accordion players, and no new search is allowed. The slot needs a real photo of a vallenato ensemble, for example from a search like \"vallenato caja guacharaca\" or \"conjunto vallenato\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No vallenato photo exists, so the instruments are now named in the text and the image is an illustrative accordion instead of an essential one.",
+        "previous": {
+          "question": "Mira la foto: acordeón, caja y guacharaca. ¿En qué ciudad se hace el festival más famoso de esta música?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "vallenato group accordion",
+            "note": "Un grupo vallenato o los tres instrumentos: acordeón, caja y guacharaca; sin letreros con nombres de ciudades.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-8426",
@@ -652916,7 +652989,7 @@
     },
     {
       "id": "q-8468",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Una palabra que cruzó los Andes desde el imperio inca y se quedó a vivir en Pasto.",
       "question": "Viene del quechua y se oye mucho en Pasto y en Ecuador. ¿Qué es un «guambra»?",
@@ -652928,7 +653001,7 @@
       ],
       "hints": [
         "Es una palabra que muchas veces se dice con cariño.",
-        "Las mamás nariñenses lo usan para llamar a sus hijos.",
+        "Sirve para hombres y mujeres: se dice «el guambra» o «la guambra».",
         "En Bogotá le dirían «sardino»."
       ],
       "media": {
@@ -652974,29 +653047,32 @@
       "needs_media": false,
       "batch": "batch-25",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Las mamás nariñenses lo usan para llamar a sus hijos\") gives the answer away. Of the four options, only \"un muchacho joven\" fits a word mothers use for their children, so it rules out all three wrong answers before hint 3. Replace it with something vaguer, for example that the word is used for both boys and girls, or that it's common in Ecuador's highlands too, without implying \"child\".",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Las mamás nariñenses lo usan para llamar a sus hijos\") gives the answer away. Of the four options, only \"un muchacho joven\" fits a word mothers use for their children, so it rules out all three wrong answers before hint 3. Replace it with something vaguer, for example that the word is used for both boys and girls, or that it's common in Ecuador's highlands too, without implying \"child\".",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Changed the wrong answers to other kinds of people and rewrote hint 1 so it doesn't rule out options.",
+        "reason": "Replaced hint 2, which pointed straight to 'child', with a neutral clue that the word works for both genders.",
         "previous": {
-          "wrong_answers": [
-            "Un sombrero de lana",
-            "Un caldo de papa",
-            "Un perro callejero"
-          ],
           "hints": [
-            "Es una persona, no un objeto.",
+            "Es una palabra que muchas veces se dice con cariño.",
             "Las mamás nariñenses lo usan para llamar a sus hijos.",
             "En Bogotá le dirían «sardino»."
           ]
@@ -655062,7 +655138,7 @@
     },
     {
       "id": "q-8497",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "Veinte antioqueños, machetes y mulas: el plan de fin de semana más ambicioso de la historia.",
       "question": "En 1848, colonos de Neira y Salamina hicieron la «Expedición de los Veinte» para escoger el sitio de una ciudad nueva. ¿Cuál se fundó allí en 1849?",
@@ -655080,11 +655156,21 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Salamina Colombia architecture",
+        "query": "Colombian arrieros mules",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMuletiers_espagnols_-_Fonds_Trutat_-_MHNT.PHa.659.L.107.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Muletiers_espagnols_-_Fonds_Trutat_-_MHNT.PHa.659.L.107.jpg/3840px-Muletiers_espagnols_-_Fonds_Trutat_-_MHNT.PHa.659.L.107.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Eugène Trutat · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Eugène Trutat",
+        "author_url": "https://en.wikipedia.org/wiki/en:Eug%C3%A8ne_Trutat",
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-old-100-1923",
+          "PD-old-100-expired"
+        ]
       },
       "fun_fact": "La colonización antioqueña fundó decenas de pueblos en las montañas del centro occidente de Colombia en el siglo XIX.",
       "subcategory": "symbols-of-departments-and-cities",
@@ -655113,18 +655199,42 @@
       "needs_media": false,
       "batch": "batch-25",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the image candidates fits the topic (the 1848 Antioquian colonization and the founding of Manizales), and a new search is not allowed. A suitable image would be the colonial architecture of Salamina or Neira, mule trains (arrieros) or Andean coffee-region mountains, without anything showing Manizales. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-24",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates fits the topic (the 1848 Antioquian colonization and the founding of Manizales), and a new search is not allowed. A suitable image would be the colonial architecture of Salamina or Neira, mule trains (arrieros) or Andean coffee-region mountains, without anything showing Manizales. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the image query to arrieros with mules, which fits the colonization theme without showing Manizales.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Salamina Colombia architecture",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-24"
+      }
     },
     {
       "id": "q-8498",

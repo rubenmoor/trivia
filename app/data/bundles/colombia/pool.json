@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "e583bf9e",
+  "hash": "b04c3762",
   "questions": [
     {
       "id": "q-0002",
@@ -64682,6 +64682,40 @@
       "background": null
     },
     {
+      "id": "q-8390",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "club-football",
+      "bundle": "colombia",
+      "description": "Hay camisetas que pesan más que otras, aunque estén hechas de la misma tela.",
+      "question": "¿Cómo se llama en Colombia la posición del 10 que juega detrás de los delanteros y arma los pases de gol, como el Pibe Valderrama?",
+      "answer": "Volante creativo",
+      "wrong_answers": [
+        "Volante de marca",
+        "Defensa central",
+        "Lateral derecho"
+      ],
+      "hints": [
+        "Mi puesto está en el medio de la cancha.",
+        "No soy el que quita balones: yo los reparto.",
+        "En otros países me dicen «enganche» o «armador»."
+      ],
+      "fun_fact": "El 10 se volvió el número de los magos gracias a Pelé, que lo usó casi por casualidad en el Mundial de 1958.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Stadium_of_Football_Club_FC_Barcelona_-_Camp_Nou.jpg/3840px-Stadium_of_Football_Club_FC_Barcelona_-_Camp_Nou.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStadium_of_Football_Club_FC_Barcelona_-_Camp_Nou.jpg",
+        "credit": "ticketsluxury · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "ticketsluxury",
+        "author_url": "https://pixabay.com/users/ticketsluxury-1455902/"
+      },
+      "background": null
+    },
+    {
       "id": "q-8391",
       "status": "approved",
       "difficulty": 4,
@@ -64882,6 +64916,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Garst, Warren, 1922-2016, photographer",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8397",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "crafts-and-traditional-dress",
+      "bundle": "colombia",
+      "description": "De la laguna salen peces, patos y… esta artesanía.",
+      "question": "En la laguna de Fúquene cortan junco, lo secan al sol y lo tejen para hacer esteras. ¿Qué es una estera?",
+      "answer": "Un tejido plano para tender en el piso",
+      "wrong_answers": [
+        "Una canasta con asa para el mercado",
+        "Un sombrero de ala ancha",
+        "Una bolsa para cargar al hombro"
+      ],
+      "hints": [
+        "La tejen familias que viven alrededor de la laguna desde hace generaciones.",
+        "Antes era común en las casas campesinas y hoy se vende como artesanía en los mercados.",
+        "Cuando no se usa, se enrolla."
+      ],
+      "fun_fact": "Con el junco y la enea de Fúquene también se tejen canastos, individuales y hasta muebles.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Laguna_de_F%C3%BAquene.jpg/3840px-Laguna_de_F%C3%BAquene.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALaguna_de_F%C3%BAquene.jpg",
+        "credit": "Adgrant96 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Adgrant96",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Adgrant96?action=edit&redlink=1"
       },
       "background": null
     },
@@ -65766,6 +65834,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Ehsanul Siddiq Aranya",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ehsanul_Siddiq_Aranya&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8425",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "places-and-monuments",
+      "bundle": "colombia",
+      "description": "Tres instrumentos, un montón de parrandas y cero ganas de irse a dormir.",
+      "question": "El acordeón, la caja y la guacharaca suenan juntos en una música colombiana. ¿En qué ciudad se hace su festival más famoso?",
+      "answer": "Valledupar",
+      "wrong_answers": [
+        "Barranquilla",
+        "Montería",
+        "Cartagena"
+      ],
+      "hints": [
+        "Es una ciudad del Cesar, cerca de la Sierra Nevada.",
+        "Allí se corona cada año al Rey Vallenato.",
+        "El festival se llama de la Leyenda Vallenata."
+      ],
+      "fun_fact": "En 2015 la UNESCO declaró el vallenato tradicional Patrimonio Cultural Inmaterial de la Humanidad.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Wiki_loves_Music_-_Hamburg-5702.jpg/3840px-Wiki_loves_Music_-_Hamburg-5702.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWiki_loves_Music_-_Hamburg-5702.jpg",
+        "credit": "Wuselig · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Wuselig",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Wuselig"
       },
       "background": null
     },
@@ -67164,6 +67266,40 @@
       "background": null
     },
     {
+      "id": "q-8468",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "regional-speech",
+      "bundle": "colombia",
+      "description": "Una palabra que cruzó los Andes desde el imperio inca y se quedó a vivir en Pasto.",
+      "question": "Viene del quechua y se oye mucho en Pasto y en Ecuador. ¿Qué es un «guambra»?",
+      "answer": "Un muchacho joven",
+      "wrong_answers": [
+        "Un anciano",
+        "Un forastero",
+        "Un campesino"
+      ],
+      "hints": [
+        "Es una palabra que muchas veces se dice con cariño.",
+        "Sirve para hombres y mujeres: se dice «el guambra» o «la guambra».",
+        "En Bogotá le dirían «sardino»."
+      ],
+      "fun_fact": "«Guambra» viene del quechua «wampra», que significa muchacho o muchacha.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Plaza_Pasto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APlaza_Pasto.jpg",
+        "credit": "Jhoanna1206 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jhoanna1206",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jhoanna1206&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-8469",
       "status": "approved",
       "difficulty": 14,
@@ -68087,6 +68223,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "AlixSaz",
         "author_url": "https://commons.wikimedia.org/wiki/User:AlixSaz"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8497",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "symbols-of-departments-and-cities",
+      "bundle": "colombia",
+      "description": "Veinte antioqueños, machetes y mulas: el plan de fin de semana más ambicioso de la historia.",
+      "question": "En 1848, colonos de Neira y Salamina hicieron la «Expedición de los Veinte» para escoger el sitio de una ciudad nueva. ¿Cuál se fundó allí en 1849?",
+      "answer": "Manizales",
+      "wrong_answers": [
+        "Pereira",
+        "Armenia",
+        "Sonsón"
+      ],
+      "hints": [
+        "Es parte del Eje Cafetero.",
+        "Hoy es capital de un departamento creado en 1905.",
+        "Su feria de enero tiene un famoso reinado internacional del café."
+      ],
+      "fun_fact": "La colonización antioqueña fundó decenas de pueblos en las montañas del centro occidente de Colombia en el siglo XIX.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Muletiers_espagnols_-_Fonds_Trutat_-_MHNT.PHa.659.L.107.jpg/3840px-Muletiers_espagnols_-_Fonds_Trutat_-_MHNT.PHa.659.L.107.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMuletiers_espagnols_-_Fonds_Trutat_-_MHNT.PHa.659.L.107.jpg",
+        "credit": "Eugène Trutat · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Eugène Trutat",
+        "author_url": "https://en.wikipedia.org/wiki/en:Eug%C3%A8ne_Trutat"
       },
       "background": null
     },
