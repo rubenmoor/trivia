@@ -105,7 +105,8 @@
     {
       "name": "Medalla de oro",
       "facet": "Primeras medallas e hitos históricos",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: The obvious level-1 golds (Pajón, Ibargüen) are already in the pool with their sports; a 'who' riddle would be answerable from them."
     },
     {
       "name": "Medalla de plata",
@@ -686,7 +687,8 @@
     {
       "name": "Moisés Fuentes",
       "facet": "Medallistas paralímpicos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Moisés Fuentes's medal details are too obscure and uncertain for a fair question."
     },
     {
       "name": "Nelson Crispín",

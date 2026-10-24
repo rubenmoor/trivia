@@ -347,7 +347,8 @@
     {
       "name": "Congo",
       "facet": "Vestuario de carnavales y fiestas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: La pregunta del Congo de Oro ya dice que el congo es una danza con turbante y espejos, así que una nueva pregunta sobre el disfraz se respondería con esa o la repetiría."
     },
     {
       "name": "Garabato",
@@ -572,7 +573,8 @@
     {
       "name": "Lana de oveja",
       "facet": "Hamacas, ruanas y textiles de lana",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Ya se preguntó que la ruana es de lana de oveja; cualquier pregunta de origen se podría responder con esa."
     },
     {
       "name": "Telar horizontal",

@@ -241,7 +241,8 @@
     {
       "name": "Mundial de Brasil 2014",
       "facet": "Mundiales y participaciones",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The pool already covers the key 2014 facts (James as top scorer, the volley, Mondragón, the dance, the elimination)."
     },
     {
       "name": "Mundial de Rusia 2018",
@@ -311,7 +312,8 @@
     {
       "name": "Copa América",
       "facet": "Copa América y torneos continentales",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The 2001 title and the 2024 final are already in the pool; the options left are forced."
     },
     {
       "name": "Copa América 2001",

@@ -337,7 +337,8 @@
     {
       "name": "Wimbledon",
       "facet": "Tenis, golf y squash",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: El año del título de Cabal y Farah y el récord de antigüedad de Wimbledon ya están preguntados."
     },
     {
       "name": "Dobles",
@@ -402,7 +403,8 @@
     {
       "name": "Sebastián Saavedra",
       "facet": "Automovilismo y motociclismo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Piloto demasiado oscuro; no hay un dato justo para preguntar."
     },
     {
       "name": "Gabby Chaves",
@@ -640,7 +642,8 @@
     {
       "name": "Clavados",
       "facet": "Deportes acuáticos y de aventura",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: La pregunta fácil por foto ya existe; las otras opciones no tienen conexión colombiana."
     },
     {
       "name": "Sebastián Morales",

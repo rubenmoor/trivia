@@ -602,7 +602,8 @@
     {
       "name": "Plato",
       "facet": "Valledupar y la región vallenata",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: Plato's main fact (the Hombre Caimán) is already asked, and the sound options don't fit."
     },
     {
       "name": "El Diablo",
@@ -697,7 +698,8 @@
     {
       "name": "Fernando Meneses",
       "facet": "Compositores y cronistas del vallenato",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Fernando Meneses is too little-known for a fair question with reliable facts."
     },
     {
       "name": "Sergio Moya Molina",

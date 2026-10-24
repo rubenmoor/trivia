@@ -302,12 +302,14 @@
     {
       "name": "Francisco Leal Quevedo",
       "facet": "Autores infantiles colombianos contemporáneos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: No tengo datos confiables sobre la obra del autor."
     },
     {
       "name": "Luis Darío Bernal Pinilla",
       "facet": "Autores infantiles colombianos contemporáneos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: No conozco con certeza los datos de la obra del autor."
     },
     {
       "name": "Pin Pon",
@@ -409,7 +411,8 @@
     {
       "name": "Compadre, cómpreme un coco",
       "facet": "Adivinanzas, trabalenguas y retahílas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: La única pregunta natural (qué tipo de frase es) ya está en el pool como «trabalenguas», y «compadre» y «coco» ya se preguntaron."
     },
     {
       "name": "Mi mamá me mima",

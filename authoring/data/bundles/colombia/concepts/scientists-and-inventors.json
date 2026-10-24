@@ -132,7 +132,8 @@
     {
       "name": "Joaquín Camacho",
       "facet": "Sabios de la Independencia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Es demasiado poco conocido para una pregunta justa de opción múltiple."
     },
     {
       "name": "Frutos Joaquín Gutiérrez",
@@ -193,7 +194,8 @@
     {
       "name": "SPf66",
       "facet": "Vacunas y enfermedades tropicales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "used_up: La vacuna de Patarroyo contra la malaria ya está en el pool."
     },
     {
       "name": "Malaria",
@@ -289,7 +291,8 @@
     {
       "name": "Alzhéimer",
       "facet": "Cerebro y neurociencia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: El vínculo entre Antioquia y el alzhéimer ya se preguntó con la mutación Christchurch."
     },
     {
       "name": "Mutación paisa",
@@ -324,7 +327,8 @@
     {
       "name": "Neurona",
       "facet": "Cerebro y neurociencia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: La pregunta sobre la neurona ya está; la conexión con Llinás no cambia el dato que se pregunta."
     },
     {
       "name": "El cerebro y el mito del yo",
@@ -469,7 +473,8 @@
     {
       "name": "Diana Trujillo",
       "facet": "Colombianos en el espacio",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: Ya se preguntó quién es, dónde nació y para qué sirve el brazo robótico que lideró; ninguna de las opciones da una pregunta nueva que valga la pena."
     },
     {
       "name": "Rover Perseverance",
@@ -494,7 +499,8 @@
     {
       "name": "Marte",
       "facet": "Colombianos en el espacio",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Lo de 'planeta rojo' y Marte con Diana Trujillo ya está en el pool."
     },
     {
       "name": "Libertad 1",
@@ -627,7 +633,8 @@
     {
       "name": "Invemar",
       "facet": "Instituciones, premios y homenajes",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Es demasiado poco conocido para una pregunta justa."
     },
     {
       "name": "Premio Alejandro Ángel Escobar",
