@@ -175,12 +175,14 @@
     {
       "name": "José María González Benito",
       "facet": "Astronomía y Observatorio de Bogotá",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: No tengo datos seguros sobre González Benito para una pregunta justa."
     },
     {
       "name": "Jorge Álvarez Lleras",
       "facet": "Astronomía y Observatorio de Bogotá",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: No tengo datos seguros sobre Álvarez Lleras para una pregunta justa."
     },
     {
       "name": "Manuel Elkin Patarroyo",
@@ -262,7 +264,8 @@
     {
       "name": "Fundación Instituto de Inmunología de Colombia",
       "facet": "Vacunas y enfermedades tropicales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "used_up: La FIDIC se reduce a la vacuna de Patarroyo contra la malaria, que ya está en el pool."
     },
     {
       "name": "Roberto Franco",
@@ -510,7 +513,8 @@
     {
       "name": "Libertad 1",
       "facet": "Colombianos en el espacio",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: El pool ya tiene la pregunta de cuándo y describe Libertad 1 como un satélite de 10 cm; no queda un dato distinto que sirva."
     },
     {
       "name": "FACSAT-1",
@@ -567,7 +571,8 @@
     {
       "name": "Expedición Colombia BIO",
       "facet": "Exploración y mapas del territorio",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: El programa es demasiado poco conocido y no tengo detalles seguros."
     },
     {
       "name": "Universidad Nacional de Colombia",

@@ -251,7 +251,8 @@
     {
       "name": "Álvaro Dalmar",
       "facet": "Compositores clásicos andinos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: I'm not sure which works or dates belong to Álvaro Dalmar."
     },
     {
       "name": "Héctor Ochoa",
@@ -302,7 +303,8 @@
     {
       "name": "Briceño y Añez",
       "facet": "Duetos y voces de la música andina",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: I have no reliable facts about this duo, and no photo is available for the photo options."
     },
     {
       "name": "Wills y Escobar",
@@ -392,12 +394,14 @@
     {
       "name": "Me llevarás en ti",
       "facet": "Canciones andinas emblemáticas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: I'm not sure who composed it or its history."
     },
     {
       "name": "Malvaloca",
       "facet": "Canciones andinas emblemáticas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: I'm not sure who composed it or where it comes from."
     },
     {
       "name": "Mi cafetal",
@@ -407,7 +411,8 @@
     {
       "name": "Antioqueñita",
       "facet": "Canciones andinas emblemáticas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: I'm not sure who composed it or its rhythm, and the word-meaning options don't fit."
     },
     {
       "name": "Jorge Velosa",
@@ -452,7 +457,8 @@
     {
       "name": "Festival Nacional Carranguero",
       "facet": "Carranga y música campesina",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: I'm not sure where it is held or of its other facts."
     },
     {
       "name": "Darío Gómez",

@@ -91,7 +91,8 @@
     {
       "name": "Escobar, el patrón del mal",
       "facet": "Narconovelas y series de acción",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: Una narconovela sobre Pablo Escobar no es apta para una pregunta de nivel 1 para niños."
     },
     {
       "name": "Pandillas, guerra y paz",
@@ -116,7 +117,8 @@
     {
       "name": "Correo de inocentes",
       "facet": "Narconovelas y series de acción",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Los detalles de la serie que tengo no son confiables y el tema de las mulas del narcotráfico no sirve para una pregunta familiar."
     },
     {
       "name": "La mariposa",
@@ -358,7 +360,8 @@
     {
       "name": "Factor XS",
       "facet": "Realities y concursos de talento",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Son datos poco conocidos y no tengo fechas confiables sobre este concurso."
     },
     {
       "name": "Concurso de cuentachistes",
@@ -653,7 +656,8 @@
     {
       "name": "Daisy O'Brian",
       "facet": "Personajes, frases y canciones de series",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: La relación entre Daisy, Greeicy y «Chica vampiro» ya está en el pool; no tengo otros datos seguros sobre el personaje."
     },
     {
       "name": "Siempre bruja",

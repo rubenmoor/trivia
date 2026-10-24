@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "a8f7034d",
+  "hash": "e583bf9e",
   "questions": [
     {
       "id": "q-0002",
@@ -64474,6 +64474,3891 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Øyvind Holmstad",
         "author_url": "https://commons.wikimedia.org/wiki/User:%C3%98yvind_Holmstad"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8384",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "brands-and-products",
+      "bundle": "colombia",
+      "description": "El mecato que siempre llega al paseo antes que tú.",
+      "question": "Mira la foto: de aquí sale el ingrediente principal de uno de estos mecatos. ¿De cuál?",
+      "answer": "Choclitos",
+      "wrong_answers": [
+        "Platanitos",
+        "Papas Margarita",
+        "Maní Moto"
+      ],
+      "hints": [
+        "Es amarillo y crocante.",
+        "Su ingrediente también se usa para hacer arepas.",
+        "Su nombre suena a «choclo», como le dicen al maíz tierno."
+      ],
+      "fun_fact": "Uno de los sabores más famosos de los Choclitos es el de limón.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Yellow_Corn_on_the_Cob_%2835115370841%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AYellow_Corn_on_the_Cob_%2835115370841%29.jpg",
+        "credit": "Willis Lam · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Willis Lam",
+        "author_url": "https://www.flickr.com/people/85567416@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8385",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "cities-and-towns",
+      "bundle": "colombia",
+      "description": "Un pueblo donde uno se mete al agua calientita y sale con hambre de algo bien sabroso.",
+      "question": "Santa Rosa de Cabal, en Risaralda, es famosa por sus termales, tiene un festival propio y se vende en cada esquina. ¿Qué producto es?",
+      "answer": "El chorizo",
+      "wrong_answers": [
+        "La morcilla",
+        "La butifarra",
+        "La longaniza"
+      ],
+      "hints": [
+        "Es un embutido.",
+        "Se come con arepa y se asa a la parrilla.",
+        "Lo llaman «santarrosano» y es rojizo."
+      ],
+      "fun_fact": "Santa Rosa de Cabal se hace llamar la «capital mundial del chorizo» y le dedica fiestas cada año.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Imagen_de_los_Termales_de_Santa_Rosa_de_Cabal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AImagen_de_los_Termales_de_Santa_Rosa_de_Cabal.jpg",
+        "credit": "Colombia Turiscol · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Colombia Turiscol",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8386",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "cities-and-towns",
+      "bundle": "colombia",
+      "description": "Una fiesta donde las reinas no se coronan solo por su belleza, sino también por cómo mueven los pies.",
+      "question": "Si quieres ver en Neiva el Festival Folclórico y Reinado Nacional del Bambuco, ¿en qué mes viajas?",
+      "answer": "En junio",
+      "wrong_answers": [
+        "En marzo",
+        "En agosto",
+        "En diciembre"
+      ],
+      "hints": [
+        "Es a mitad de año.",
+        "Las calles se llenan de comparsas, bambucos y asado huilense.",
+        "Es el mes en que empiezan las vacaciones de mitad de año en muchos colegios."
+      ],
+      "fun_fact": "En el reinado, cada candidata debe bailar el sanjuanero huilense frente al jurado.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Jard%C3%ADn_Botanico_de_Neiva_Huila_Colombia.jpg/3840px-Jard%C3%ADn_Botanico_de_Neiva_Huila_Colombia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJard%C3%ADn_Botanico_de_Neiva_Huila_Colombia.jpg",
+        "credit": "CesarRincon · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "CesarRincon",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:CesarRincon&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8387",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "club-football",
+      "bundle": "colombia",
+      "description": "En la nevera de los apodos bogotanos alguien guardó una etiqueta que no era suya.",
+      "question": "¿Cuál de estos apodos NO es de Millonarios, el club azul y blanco de Bogotá?",
+      "answer": "Los Cardenales",
+      "wrong_answers": [
+        "El Ballet Azul",
+        "El Embajador",
+        "Los Albiazules"
+      ],
+      "hints": [
+        "Tres de los apodos hablan de su color o de su historia.",
+        "El intruso es del gran rival de Millonarios, la otra mitad del clásico bogotano.",
+        "Ese apodo es de Independiente Santa Fe, como el pájaro rojo."
+      ],
+      "fun_fact": "Le dicen «el Embajador» porque en 1952 viajó a Madrid y le ganó 4-2 al Real Madrid en el torneo de sus 50 años.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/BOG_Estadio_El_Campin.jpg/3840px-BOG_Estadio_El_Campin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABOG_Estadio_El_Campin.jpg",
+        "credit": "Felipe Restrepo Acosta · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Felipe Restrepo Acosta",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pedro_Felipe"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8388",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "club-football",
+      "bundle": "colombia",
+      "description": "Hay un salón de clases donde el tablero es verde y mide cien metros.",
+      "question": "En el fútbol colombiano, alumno es a «profe» como jugador es a…",
+      "answer": "El director técnico",
+      "wrong_answers": [
+        "El árbitro",
+        "El capitán",
+        "El utilero"
+      ],
+      "hints": [
+        "Es quien les enseña y les da instrucciones a los jugadores.",
+        "Arma la nómina y decide los cambios.",
+        "En Colombia los jugadores le dicen «profe» en las entrevistas."
+      ],
+      "fun_fact": "Francisco «Pacho» Maturana, uno de los técnicos más famosos de Colombia, estudió odontología antes de dirigir.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Football_Gloves_Cone_Ball.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFootball_Gloves_Cone_Ball.jpg",
+        "credit": "Walter Mains · Attribution · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Attribution",
+        "license_url": null,
+        "author": "Walter Mains",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8389",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "club-football",
+      "bundle": "colombia",
+      "description": "Once salen a la cancha, pero no todos llegan al final.",
+      "question": "En un partido de la Liga colombiana, ¿cuántos cambios de jugador puede hacer cada equipo?",
+      "answer": "5",
+      "wrong_answers": [
+        "1",
+        "11",
+        "20"
+      ],
+      "hints": [
+        "Hace unos años eran solo tres.",
+        "Se hacen en máximo tres paradas, sin contar el entretiempo.",
+        "Son tantos como los dedos de una mano."
+      ],
+      "fun_fact": "La regla de los cinco cambios nació en 2020, durante la pandemia, para que los jugadores no se cansaran tanto.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Substitution_board_being_used_in_a_football_match.jpg/3840px-Substitution_board_being_used_in_a_football_match.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASubstitution_board_being_used_in_a_football_match.jpg",
+        "credit": "Samson Ssemakadde · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Samson Ssemakadde",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Samson_Ssemakadde&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8391",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "crafts-and-traditional-dress",
+      "bundle": "colombia",
+      "description": "Ropa de trabajo tan bonita que terminó bailando en las fiestas.",
+      "question": "La chapolera lleva falda de colores, pañoleta en la cabeza y un canasto amarrado a la cintura. ¿Qué echaba en ese canasto?",
+      "answer": "Granos de café",
+      "wrong_answers": [
+        "Flores",
+        "Hierbas medicinales",
+        "Huevos"
+      ],
+      "hints": [
+        "Era la ropa de trabajo de las recolectoras en fincas de montaña.",
+        "Su nombre viene de «chapola», como llaman a las mariposas en esa región.",
+        "Lo que recogía se tuesta y se toma en tinto."
+      ],
+      "fun_fact": "Les decían chapoleras porque con sus faldas de colores entre los cafetales parecían chapolas, o sea mariposas.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Colombia-wegen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AColombia-wegen.jpg",
+        "credit": "Silasintveld · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Silasintveld",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Silasintveld&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8392",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "crafts-and-traditional-dress",
+      "bundle": "colombia",
+      "description": "Una fiesta con tanta gente disfrazada que alguien se coló sin invitación.",
+      "question": "¿Cuál de estos personajes NO acompaña a la reina en el Carnaval de Barranquilla?",
+      "answer": "Papá Noel",
+      "wrong_answers": [
+        "La marimonda",
+        "El Rey Momo",
+        "Joselito Carnaval"
+      ],
+      "hints": [
+        "Uno de ellos es de otra fiesta del año.",
+        "Ese personaje no baila en la Vía 40: vive muy lejos, donde hace mucho frío.",
+        "Llega en diciembre con regalos."
+      ],
+      "fun_fact": "Cada año el Carnaval de Barranquilla tiene su reina y también su Rey Momo, que suele ser un hacedor muy querido del carnaval.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Carroza_en_el_Carnaval_de_Barranquilla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACarroza_en_el_Carnaval_de_Barranquilla.jpg",
+        "credit": "Jdvillalobos · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jdvillalobos",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jdvillalobos"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8393",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "crafts-and-traditional-dress",
+      "bundle": "colombia",
+      "description": "Un traje tan elegante que sirve para arrear ganado y para recibir un Nobel.",
+      "question": "Soy una región de sabanas planas, mis ríos van al Orinoco y mis hombres se ponen liqui liqui y sombrero para la fiesta. ¿Qué región soy?",
+      "answer": "Los Llanos Orientales",
+      "wrong_answers": [
+        "La región Caribe",
+        "La región Pacífica",
+        "La región Andina"
+      ],
+      "hints": [
+        "Comparto esas sabanas con Venezuela.",
+        "Aquí se baila joropo con arpa, cuatro y maracas.",
+        "Villavicencio es mi puerta de entrada."
+      ],
+      "fun_fact": "El liqui liqui es típico de los llanos de Colombia y Venezuela, y en Venezuela se considera el traje nacional del hombre.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Sim%C3%B3n_D%C3%ADaz_en_Boston.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASim%C3%B3n_D%C3%ADaz_en_Boston.jpg",
+        "credit": "Wladimir Labeikovsky · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Wladimir Labeikovsky",
+        "author_url": "https://www.flickr.com/people/39786858@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8394",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "crafts-and-traditional-dress",
+      "bundle": "colombia",
+      "description": "Mismo nombre, otra prenda: los paisas siempre le ponen su toque.",
+      "question": "En el traje del arriero paisa, ¿qué es el poncho?",
+      "answer": "Una tela que se lleva sobre el hombro",
+      "wrong_answers": [
+        "Un bolso de cuero con muchos bolsillos",
+        "Un sombrero blanco de paja",
+        "Unas alpargatas tejidas en fique"
+      ],
+      "hints": [
+        "No se pone por la cabeza como en otros países.",
+        "Es de tela de algodón, casi siempre blanca o de cuadritos.",
+        "El arriero lo usaba para secarse el sudor."
+      ],
+      "fun_fact": "El arriero usaba el poncho para todo: secarse el sudor, taparse del sol, espantar moscas y hasta de almohada.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Panorama_San_Rafael_Antioquia_%28255394055%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APanorama_San_Rafael_Antioquia_%28255394055%29.jpeg",
+        "credit": "Jacques Di Saint · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Jacques Di Saint",
+        "author_url": "https://500px.com/jacquesdisaint"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8395",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "crafts-and-traditional-dress",
+      "bundle": "colombia",
+      "description": "El accesorio que convierte cualquier cabeza en cabeza de arriero.",
+      "question": "Es blanco con cinta negra, se teje con palma de iraca en un pueblo de Caldas y lo usan los arrieros paisas. ¿Cómo se llama?",
+      "answer": "El sombrero aguadeño",
+      "wrong_answers": [
+        "El sombrero vueltiao",
+        "El sombrero suaceño",
+        "El sombrero pelo e' guama"
+      ],
+      "hints": [
+        "Su pueblo queda en el norte de Caldas, cerca de Antioquia.",
+        "Ese pueblo celebra el Festival Nacional del Pasillo.",
+        "Su nombre viene del municipio de Aguadas."
+      ],
+      "fun_fact": "Un buen sombrero de iraca se teje a mano hebra por hebra y puede tardar varios días en terminarse.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Mirador_Alto_de_La_Cruz%2C_Aguada.jpg/3840px-Mirador_Alto_de_La_Cruz%2C_Aguada.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMirador_Alto_de_La_Cruz%2C_Aguada.jpg",
+        "credit": "Juan Gómez · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Juan Gómez",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8396",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "crafts-and-traditional-dress",
+      "bundle": "colombia",
+      "description": "Un tocado tan colorido que haría llorar de envidia a un loro.",
+      "question": "En pueblos indígenas del Amazonas colombiano, la corona de plumas de guacamaya se usa en ceremonias y bailes. ¿Qué muestra quien la lleva?",
+      "answer": "Que es una persona importante",
+      "wrong_answers": [
+        "Que está de cumpleaños",
+        "Que va a llover pronto",
+        "Que se va de viaje"
+      ],
+      "hints": [
+        "No cualquiera se la puede poner.",
+        "Muchas veces la llevan el chamán o los líderes de la comunidad.",
+        "Es parecido a lo que significa la corona de un rey."
+      ],
+      "fun_fact": "Las guacamayas, cuyas plumas adornan estas coronas, pueden vivir más de 50 años.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Red_and_blue_macaw_sitting_on_branch_-_DPLA_-_5bfe8149bd28ae861c1acfb41001d427.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARed_and_blue_macaw_sitting_on_branch_-_DPLA_-_5bfe8149bd28ae861c1acfb41001d427.jpg",
+        "credit": "Garst, Warren, 1922-2016, photographer · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Garst, Warren, 1922-2016, photographer",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8398",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "ghosts-and-creatures",
+      "bundle": "colombia",
+      "description": "Un desfile sin carrozas, sin música y sin nadie que quiera ir a verlo.",
+      "question": "Cuentan en los pueblos que a medianoche pasa por la calle una fila silenciosa de figuras con velas, rezando. ¿Quiénes son?",
+      "answer": "Almas de difuntos",
+      "wrong_answers": [
+        "Brujas del pueblo",
+        "Duendes del monte",
+        "Monjas del convento"
+      ],
+      "hints": [
+        "Ya no son de este mundo.",
+        "Piden que la gente rece por ellas.",
+        "Son las ánimas del purgatorio."
+      ],
+      "fun_fact": "Según la leyenda, si alguien le recibe una vela a la procesión, al otro día amanece convertida en un hueso.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Solemnes_Velas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASolemnes_Velas.jpg",
+        "credit": "Julia Folsom · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Julia Folsom",
+        "author_url": "https://www.flickr.com/photos/52187251@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8399",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "ghosts-and-creatures",
+      "bundle": "colombia",
+      "description": "El sistema de seguridad más barato del mundo: ni alarma ni cámaras, solo un truco de la abuela.",
+      "question": "Según las abuelas, para que una bruja no entre a la casa hay que dejar detrás de la puerta un objeto de metal abierto en cruz. ¿Cuál?",
+      "answer": "Unas tijeras",
+      "wrong_answers": [
+        "Unas llaves",
+        "Unas cucharas",
+        "Unos clavos"
+      ],
+      "hints": [
+        "Casi todas las casas guardan uno en algún cajón.",
+        "Tiene dos partes de metal unidas en el medio.",
+        "Tiene dos huecos para meter los dedos."
+      ],
+      "fun_fact": "Hay quien también las pone en cruz debajo de la almohada para dormir sin pesadillas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Old_wooden_door%E2%80%93IMG_7297_02.jpg/3840px-Old_wooden_door%E2%80%93IMG_7297_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_wooden_door%E2%80%93IMG_7297_02.jpg",
+        "credit": "Kızıl · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Kızıl",
+        "author_url": "https://commons.wikimedia.org/wiki/User:K%C4%B1z%C4%B1l"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8400",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "ghosts-and-creatures",
+      "bundle": "colombia",
+      "description": "Un baile donde la Muerte sale a bailar y siempre se va perdiendo.",
+      "question": "En el Carnaval de Barranquilla, los bailarines de la danza del Garabato pelean contra la Muerte. ¿Qué es el garabato que llevan en la mano?",
+      "answer": "Un palo con gancho",
+      "wrong_answers": [
+        "Una máscara de toro",
+        "Un tambor de cuero",
+        "Un abanico de plumas"
+      ],
+      "hints": [
+        "Los bailarines lo levantan bien alto y lo agitan mientras bailan.",
+        "Va adornado con flores y cintas de colores.",
+        "Tiene la punta doblada, como un signo de interrogación."
+      ],
+      "fun_fact": "En la danza del Garabato la vida le gana a la Muerte, y por eso termina en fiesta.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Carnaval_de_Barranquilla_2016_-GOPR4108_1465093426925_high.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACarnaval_de_Barranquilla_2016_-GOPR4108_1465093426925_high.jpg",
+        "credit": "Eddy Milfort · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Eddy Milfort",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8401",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "independence",
+      "bundle": "colombia",
+      "description": "Un general que cambió de bando más rápido que un hincha cuando su equipo pierde.",
+      "question": "En 1812, Antonio Baraya, héroe de Palacé, cambió de bando en la Patria Boba. ¿Contra quién se volteó?",
+      "answer": "Antonio Nariño",
+      "wrong_answers": [
+        "Camilo Torres",
+        "Francisco José de Caldas",
+        "Francisco de Paula Santander"
+      ],
+      "hints": [
+        "Era el líder centralista de Cundinamarca.",
+        "Tradujo e imprimió la Declaración de los Derechos del Hombre.",
+        "Más tarde, en 1814, lo capturaron en Pasto."
+      ],
+      "fun_fact": "Baraya ganó en 1811 la batalla del Bajo Palacé, una de las primeras victorias patriotas de la Nueva Granada.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Museo_de_Arte_Colonial%2C_una_de_las_edificaciones_m%C3%A1s_antiguas_de_Bogot%C3%A1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMuseo_de_Arte_Colonial%2C_una_de_las_edificaciones_m%C3%A1s_antiguas_de_Bogot%C3%A1.JPG",
+        "credit": "JuanGris (Lucía Estévez) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "JuanGris (Lucía Estévez)",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:JuanGris_(Luc%C3%ADa_Est%C3%A9vez)&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8402",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "independence",
+      "bundle": "colombia",
+      "description": "Mientras otros peleaban con sables, este señor peleaba con cartas y sellos.",
+      "question": "Nací en Caracas, fui canciller de la Gran Colombia, fui delegado al Congreso de Panamá de 1826 y, ya viejo, presidente de Venezuela. ¿Quién soy?",
+      "answer": "Pedro Gual",
+      "wrong_answers": [
+        "Francisco Antonio Zea",
+        "Pedro Briceño Méndez",
+        "José María Castillo y Rada"
+      ],
+      "hints": [
+        "Mi trabajo era tratar con otros países, no mandar tropas.",
+        "Firmé tratados con México, Perú y Centroamérica.",
+        "Mi nombre de pila es el mismo del primer papa."
+      ],
+      "fun_fact": "El Congreso de Panamá de 1826, impulsado por Bolívar, fue uno de los primeros intentos de unir a los países de América.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/With_Speaker_Cannon_through_the_tropics_-_a_descriptive_story_of_a_voyage_to_the_West_Indies%2C_Venezuela_and_Panama-_containing_views_of_the_Speaker_upon_our_colonial_possessions_%281907%29_%2814775747201%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWith_Speaker_Cannon_through_the_tropics_-_a_descriptive_story_of_a_voyage_to_the_West_Indies%2C_Venezuela_and_Panama-_containing_views_of_the_Speaker_upon_our_colonial_possessions_%281907%29_%2814775747201%29.jpg",
+        "credit": "Moore, J. Hampton (Joseph Hampton), 1864-1950 · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Moore, J. Hampton (Joseph Hampton), 1864-1950",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8403",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "independence",
+      "bundle": "colombia",
+      "description": "La casa más peligrosa de Santafé no tenía cañones, sino agujas e hilos.",
+      "question": "¿En casa de qué mujer patriota vivió Policarpa Salavarrieta en Santafé, mientras se reunían allí los conspiradores contra la Reconquista?",
+      "answer": "Andrea Ricaurte",
+      "wrong_answers": [
+        "Antonia Santos",
+        "Manuela Beltrán",
+        "Mercedes Ábrego"
+      ],
+      "hints": [
+        "Como otras mujeres patriotas, se arriesgó para ayudar a la causa de la independencia.",
+        "Estaba casada con un Lozano.",
+        "Su apellido es el mismo de un héroe de San Mateo."
+      ],
+      "fun_fact": "Policarpa entraba a casas de realistas como costurera y así conseguía información para los patriotas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/La_Candelaria_-_Casa_colonial_%28Bogot%C3%A1%29_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALa_Candelaria_-_Casa_colonial_%28Bogot%C3%A1%29_02.JPG",
+        "credit": "Racso (Oscar Fernando Gómez) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Racso (Oscar Fernando Gómez)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Racso"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8404",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "independence",
+      "bundle": "colombia",
+      "description": "Alguien tenía que hacer el papeleo mientras Bolívar posaba para los cuadros.",
+      "question": "Nací en La Guaira, fui jefe del Estado Mayor de Bolívar en la Campaña Libertadora de 1819 y luego fui dos veces presidente de Venezuela. ¿Quién soy?",
+      "answer": "Carlos Soublette",
+      "wrong_answers": [
+        "José Antonio Anzoátegui",
+        "Rafael Urdaneta",
+        "Francisco de Paula Santander"
+      ],
+      "hints": [
+        "No mandé la vanguardia ni la retaguardia en Boyacá.",
+        "Más tarde fui ministro y diplomático de Venezuela.",
+        "Goberné Venezuela en las décadas de 1830 y 1840."
+      ],
+      "fun_fact": "Soublette murió en 1870 a los 80 años: fue uno de los pocos próceres de la independencia que llegaron a viejos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Puente_de_Boyac%C3%A1%2C_vista_lateral..JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APuente_de_Boyac%C3%A1%2C_vista_lateral..JPG",
+        "credit": "Kamilokardona · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Kamilokardona",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kamilokardona&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8405",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "independence",
+      "bundle": "colombia",
+      "description": "Antioquia no esperó permiso de nadie para decir «hasta aquí llegamos».",
+      "question": "Cada 11 de agosto, Antioquia recuerda que Juan del Corral declaró su independencia absoluta de España. ¿En qué año fue?",
+      "answer": "1813",
+      "wrong_answers": [
+        "1810",
+        "1819",
+        "1830"
+      ],
+      "hints": [
+        "Fue durante la Patria Boba.",
+        "Fue antes de la llegada de Pablo Morillo.",
+        "Fue el mismo año de la Campaña Admirable de Bolívar."
+      ],
+      "fun_fact": "Juan del Corral también impulsó en Antioquia una ley de libertad de vientres: los hijos de esclavas nacerían libres.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Esquina_Comercial_%2894757787%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEsquina_Comercial_%2894757787%29.jpeg",
+        "credit": "Carlos Chalarca · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Carlos Chalarca",
+        "author_url": "https://500px.com/Chalarca"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8406",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "mountains-and-landscapes",
+      "bundle": "colombia",
+      "description": "Bogotá tiene dos guardianes en la montaña, y uno de ellos lleva una Virgen en la cabeza.",
+      "question": "El cerro de Guadalupe, con su gran estatua de la Virgen, vigila Bogotá desde los cerros orientales. ¿Más o menos a qué altura está su cima?",
+      "answer": "Unos 3300 metros",
+      "wrong_answers": [
+        "Unos 330 metros",
+        "Unos 1300 metros",
+        "Unos 6300 metros"
+      ],
+      "hints": [
+        "Bogotá ya está muy alto: a unos 2600 metros sobre el mar.",
+        "Desde la cima se ve toda la ciudad, y allá arriba suele hacer frío y haber niebla.",
+        "Su cima está a más de 3000 metros, pero muy lejos de la altura de los nevados."
+      ],
+      "fun_fact": "La estatua de la Virgen de Guadalupe en la cima mide unos 15 metros y se ve desde buena parte de Bogotá.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/View_of_Easterh_Hills%2C_Bogot%C3%A1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AView_of_Easterh_Hills%2C_Bogot%C3%A1.jpg",
+        "credit": "Tisquesusa · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Tisquesusa",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tisquesusa"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8408",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "mountains-and-landscapes",
+      "bundle": "colombia",
+      "description": "Una iglesia con vértigo: vive colgada encima de un abismo y no se queja.",
+      "question": "El santuario de Las Lajas, en Ipiales, se levanta sobre el cañón del río Guáitara. ¿Por qué lo construyeron justo ahí?",
+      "answer": "Por una imagen de la Virgen en la roca",
+      "wrong_answers": [
+        "Por una mina de oro en el fondo",
+        "Para vigilar la frontera con Ecuador",
+        "Porque allí se firmó la independencia"
+      ],
+      "hints": [
+        "Cada año llegan miles de visitantes de Colombia y Ecuador.",
+        "Según la leyenda, una mamá y su hija vieron algo en una piedra del cañón en el siglo XVIII.",
+        "La iglesia se apoya en la pared del cañón y esa piedra quedó como su altar."
+      ],
+      "fun_fact": "La iglesia actual, de estilo gótico, se terminó en 1949 y en el mundo la cuentan entre las iglesias más bonitas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Santuario_de_Las_Lajas%2C_Ipiales%2C_Colombia%2C_2015-07-21%2C_DD_21-23_HDR.jpg/3840px-Santuario_de_Las_Lajas%2C_Ipiales%2C_Colombia%2C_2015-07-21%2C_DD_21-23_HDR.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASantuario_de_Las_Lajas%2C_Ipiales%2C_Colombia%2C_2015-07-21%2C_DD_21-23_HDR.jpg",
+        "credit": "Diego Delso · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Diego Delso",
+        "author_url": "https://www.wikidata.org/wiki/Q28147777"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8409",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "mountains-and-landscapes",
+      "bundle": "colombia",
+      "description": "Una cueva con la dentadura completa y ni un dentista a la vista.",
+      "question": "Mira la foto: puntas que cuelgan del techo de una cueva, como en las cuevas de Santander. ¿De qué están hechas?",
+      "answer": "De piedra",
+      "wrong_answers": [
+        "De hielo",
+        "De cera",
+        "De raíces de árboles"
+      ],
+      "hints": [
+        "No se derriten con el calor.",
+        "Se forman con gotas que traen minerales disueltos.",
+        "Por eso son durísimas y no se doblan."
+      ],
+      "fun_fact": "Una estalactita puede tardar unos 100 años en crecer apenas un centímetro.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Tham_Lot_%28cave%29%2C_Stalactites%2C_Ceiling%2C_Thailand.jpg/3840px-Tham_Lot_%28cave%29%2C_Stalactites%2C_Ceiling%2C_Thailand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATham_Lot_%28cave%29%2C_Stalactites%2C_Ceiling%2C_Thailand.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8410",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "mountains-and-landscapes",
+      "bundle": "colombia",
+      "description": "Bogotá: el único lugar donde sales con gafas de sol y llegas con paraguas a tres cuadras.",
+      "question": "En Bogotá puede llover en un barrio y hacer sol en otro, porque los cerros y el viento le dan a cada zona su propio clima. ¿Cómo se llama ese clima de una zona pequeña?",
+      "answer": "Microclima",
+      "wrong_answers": [
+        "Piso térmico",
+        "Temporada",
+        "Estación"
+      ],
+      "hints": [
+        "Es un clima en tamaño pequeño.",
+        "Lo puede tener un valle, un barrio o hasta un jardín.",
+        "Su nombre empieza con el prefijo que significa «muy pequeño»."
+      ],
+      "fun_fact": "Por sus montañas, en Colombia hay pueblos vecinos con climas muy distintos, uno frío y otro caliente.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Nubes_sobre_La_Perseverancia_y_Monserrate.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANubes_sobre_La_Perseverancia_y_Monserrate.JPG",
+        "credit": "Peter Angritt · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Peter Angritt",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mrtony77"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8411",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "mountains-and-landscapes",
+      "bundle": "colombia",
+      "description": "Una ducha natural en Santander, solo que con la regadera puesta en las nubes.",
+      "question": "Las cascadas de Juan Curí, cerca de San Gil, son de las más visitadas de Santander. ¿Más o menos qué altura tienen?",
+      "answer": "Unos 180 metros",
+      "wrong_answers": [
+        "Unos 8 metros",
+        "Unos 18 metros",
+        "Unos 1800 metros"
+      ],
+      "hints": [
+        "Son mucho más altas que una casa de dos pisos.",
+        "Superan la altura de un edificio de 40 pisos.",
+        "Están cerca de los 200 metros."
+      ],
+      "fun_fact": "En Juan Curí se puede bajar por la pared de la cascada colgado de una cuerda, haciendo rapel.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/San_Gil_Diurno.jpg/3840px-San_Gil_Diurno.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASan_Gil_Diurno.jpg",
+        "credit": "Pedro Alejandro Ariza Rubiano · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Pedro Alejandro Ariza Rubiano",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:ExitiuMGM&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8412",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "national-symbols",
+      "bundle": "colombia",
+      "description": "Una bandera capitalina que no necesita tres franjas para lucirse.",
+      "question": "La bandera de Bogotá tiene solo dos franjas horizontales del mismo tamaño. ¿De qué colores son?",
+      "answer": "Amarilla y roja",
+      "wrong_answers": [
+        "Azul y blanca",
+        "Verde y blanca",
+        "Roja y verde"
+      ],
+      "hints": [
+        "Sus colores vienen de la época de la independencia en Bogotá.",
+        "Uno de sus colores también está en la bandera de Colombia.",
+        "Son los colores del sol y del fuego."
+      ],
+      "fun_fact": "Sus colores vienen de los brazaletes amarillo y rojo que usaron los patriotas en Bogotá el 20 de julio de 1810.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Monserrate_y_centro_de_Bogota.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMonserrate_y_centro_de_Bogota.jpg",
+        "credit": "Jos Cuevasc · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jos Cuevasc",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jos_Cuevasc&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8413",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "national-team",
+      "bundle": "colombia",
+      "description": "Un álbum de láminas donde se coló un intruso.",
+      "question": "Estás viendo la Copa América 2024 con la camiseta amarilla puesta. ¿Cuál de estos jugadores NO era de la Selección Colombia?",
+      "answer": "Lionel Messi",
+      "wrong_answers": [
+        "James Rodríguez",
+        "Luis Díaz",
+        "Camilo Vargas"
+      ],
+      "hints": [
+        "Él no se pone la camiseta amarilla, sino una a rayas.",
+        "Esa Copa la terminó levantando él con su selección.",
+        "Usa la 10 de Argentina."
+      ],
+      "fun_fact": "Aunque Colombia perdió la final, James Rodríguez fue elegido el mejor jugador de esa Copa América.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/2026_FIFA_World_Cup_Match_24%2C_Uzbekistan_v_Colombia_-_FIFA_Fan_Fest_2026_-_01.jpg/3840px-2026_FIFA_World_Cup_Match_24%2C_Uzbekistan_v_Colombia_-_FIFA_Fan_Fest_2026_-_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2026_FIFA_World_Cup_Match_24%2C_Uzbekistan_v_Colombia_-_FIFA_Fan_Fest_2026_-_01.jpg",
+        "credit": "ProtoplasmaKid · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "ProtoplasmaKid",
+        "author_url": "https://commons.wikimedia.org/wiki/User:ProtoplasmaKid"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8414",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "national-team",
+      "bundle": "colombia",
+      "description": "Un hombre cuyo trabajo consiste en que no pase nada.",
+      "question": "Soy arquero, jugué en el Arsenal de Inglaterra y en el Napoli de Italia, y fui el titular de Colombia en los Mundiales 2014 y 2018. ¿Quién soy?",
+      "answer": "David Ospina",
+      "wrong_answers": [
+        "René Higuita",
+        "Faryd Mondragón",
+        "Camilo Vargas"
+      ],
+      "hints": [
+        "Nací en Medellín en 1988.",
+        "Soy el jugador con más partidos en la historia de la Selección.",
+        "Me llamo igual que el niño que venció al gigante Goliat."
+      ],
+      "fun_fact": "Ospina jugó más de 120 partidos con la Selección Colombia, más que cualquier otro futbolista.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Football_goalkeeper_gloves_Force_1000.jpg/3840px-Football_goalkeeper_gloves_Force_1000.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFootball_goalkeeper_gloves_Force_1000.jpg",
+        "credit": "Santeri Viinamäki · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Santeri Viinamäki",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Zunter"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8415",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "national-team",
+      "bundle": "colombia",
+      "description": "Dos cifras en la espalda que pesan más que la maleta del colegio.",
+      "question": "En la Selección, la camiseta 10 la han usado el Pibe Valderrama y James Rodríguez. ¿Qué suele hacer el jugador que lleva ese número?",
+      "answer": "Crear jugadas y dar pases de gol",
+      "wrong_answers": [
+        "Atajar los tiros al arco",
+        "Marcar a los delanteros rivales",
+        "Cuidar el área como último defensa"
+      ],
+      "hints": [
+        "Juega en el medio, cerca de los delanteros.",
+        "Le dicen «el cerebro» o «el armador» del equipo.",
+        "Es el que le pone el balón servido al goleador."
+      ],
+      "fun_fact": "La costumbre de darle la 10 al crack del equipo se hizo famosa con Pelé, que la usó en el Mundial de 1958.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Number_10_Jersey.JPG/3840px-Number_10_Jersey.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANumber_10_Jersey.JPG",
+        "credit": "Neogeolegend (talk) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Neogeolegend (talk)",
+        "author_url": "https://en.wikipedia.org/wiki/User:Neogeolegend"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8416",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "national-team",
+      "bundle": "colombia",
+      "description": "Cuando el reloj ya marcaba el final, alguien no se quiso ir para la casa.",
+      "question": "Estás viendo el Colombia-Inglaterra del Mundial 2018 y, en el minuto 93, un defensa central empata de cabeza. ¿Quién es?",
+      "answer": "Yerry Mina",
+      "wrong_answers": [
+        "Davinson Sánchez",
+        "Radamel Falcao",
+        "Juan Guillermo Cuadrado"
+      ],
+      "hints": [
+        "Es un defensa muy alto, nacido en Guachené, Cauca.",
+        "En ese Mundial hizo tres goles, todos de cabeza.",
+        "Celebra sus goles bailando."
+      ],
+      "fun_fact": "Yerry Mina marcó tres goles de cabeza en Rusia 2018: a Polonia, a Senegal y a Inglaterra.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Spartak_stadium_%28Otkrytiye_Arena%29%2C_23_August_2014.JPG/3840px-Spartak_stadium_%28Otkrytiye_Arena%29%2C_23_August_2014.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASpartak_stadium_%28Otkrytiye_Arena%29%2C_23_August_2014.JPG",
+        "credit": "Brateevsky · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Brateevsky",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Brateevsky"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8417",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "national-team",
+      "bundle": "colombia",
+      "description": "Un señor que dirigía desde la raya con cara de estar en misa.",
+      "question": "Este es José Pékerman, el técnico que llevó a Colombia a los Mundiales de 2014 y 2018. ¿En qué país nació?",
+      "answer": "Argentina",
+      "wrong_answers": [
+        "Uruguay",
+        "Chile",
+        "España"
+      ],
+      "hints": [
+        "Antes de Colombia, dirigió a la selección de ese país en el Mundial 2006.",
+        "Con ese país ganó tres Mundiales juveniles Sub-20.",
+        "Es el país de Messi."
+      ],
+      "fun_fact": "Con Pékerman, Colombia volvió a un Mundial en 2014, después de 16 años sin ir.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Jos%C3%A9_N%C3%A9stor_P%C3%A9kerman_and_Police_at_Colombia_vs_Uruguay_match_for_Russia_2018.jpg/3840px-Jos%C3%A9_N%C3%A9stor_P%C3%A9kerman_and_Police_at_Colombia_vs_Uruguay_match_for_Russia_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJos%C3%A9_N%C3%A9stor_P%C3%A9kerman_and_Police_at_Colombia_vs_Uruguay_match_for_Russia_2018.jpg",
+        "credit": "Policía Nacional de los colombianos · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Policía Nacional de los colombianos",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8418",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "natural-parks-and-ecosystems",
+      "bundle": "colombia",
+      "description": "El Tayrona tiene reglas, y no son para aburrirte.",
+      "question": "Estás de paseo en el Parque Tayrona. ¿Cuál de estas cosas NO debes hacer?",
+      "answer": "Dejar tu basura en la playa",
+      "wrong_answers": [
+        "Caminar por el sendero marcado",
+        "Mirar los animales sin tocarlos",
+        "Hacerle caso al guardaparques"
+      ],
+      "hints": [
+        "Tres de estas cosas cuidan la naturaleza.",
+        "Lo que no debes hacer puede hacerles daño a los animales y al mar.",
+        "Las bolsas y las botellas te las tienes que llevar de vuelta."
+      ],
+      "fun_fact": "En el Tayrona los visitantes deben sacar del parque la basura que llevan.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/111_Tayrona_National_Park_Colombia.JPG/3840px-111_Tayrona_National_Park_Colombia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A111_Tayrona_National_Park_Colombia.JPG",
+        "credit": "David Shankbone · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "David Shankbone",
+        "author_url": "https://en.wikipedia.org/wiki/en:David_Shankbone"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8419",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "painters-sculptors-and-museums",
+      "bundle": "colombia",
+      "description": "Dos esculturas que juntas cuentan una historia que ninguna podría contar sola.",
+      "question": "En 1995 una bomba destrozó esta escultura de Botero en Medellín. Él donó una nueva y pidió dejar la rota al lado. ¿Para qué?",
+      "answer": "Para recordar la violencia y pedir paz",
+      "wrong_answers": [
+        "Porque la rota pesaba mucho para moverla",
+        "Para arreglarla después con las piezas",
+        "Para venderla luego a un museo"
+      ],
+      "hints": [
+        "Botero hizo varias obras sobre la historia de Colombia.",
+        "En los años noventa, Medellín vivía años muy violentos.",
+        "La escultura nueva lleva en su nombre la palabra contraria a la guerra."
+      ],
+      "fun_fact": "La escultura nueva se llama «Pájaro de paz» y está en el Parque San Antonio, en el centro de Medellín.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/El_P%C3%A1jaro%2C_de_Fernando_Botero.JPG/3840px-El_P%C3%A1jaro%2C_de_Fernando_Botero.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEl_P%C3%A1jaro%2C_de_Fernando_Botero.JPG",
+        "credit": "Roapolice · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Roapolice",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Roapolice&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8420",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "painters-sculptors-and-museums",
+      "bundle": "colombia",
+      "description": "Detrás del altar, los santos tienen su propio edificio de apartamentos.",
+      "question": "Es una gran estructura de madera tallada y dorada detrás del altar, con nichos para santos. El de San Francisco, en Bogotá, es famoso. ¿Cómo se llama?",
+      "answer": "Retablo",
+      "wrong_answers": [
+        "Púlpito",
+        "Baldaquino",
+        "Coro"
+      ],
+      "hints": [
+        "Se ve de frente apenas entras a muchas iglesias coloniales.",
+        "Suele tener pisos y columnas, como una fachada pegada a la pared.",
+        "Su nombre se parece a la palabra «tabla»."
+      ],
+      "fun_fact": "El retablo mayor de la iglesia de San Francisco, en Bogotá, es una de las joyas del arte colonial de Colombia.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Iglesia_SFB.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIglesia_SFB.JPG",
+        "credit": "Dvwoud09 at English Wikipedia · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Dvwoud09 at English Wikipedia",
+        "author_url": "https://en.wikipedia.org/wiki/User:Dvwoud09"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8421",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "pioneers-and-popular-figures",
+      "bundle": "colombia",
+      "description": "Para muchos colombianos, el almuerzo del domingo huele a carbón y a familia.",
+      "question": "Doy vueltas y vueltas en el asador de Kokoriko hasta quedar doradito, y me sirven con papa y arepa. ¿Qué soy?",
+      "answer": "Un pollo",
+      "wrong_answers": [
+        "Un pescado",
+        "Un cerdo",
+        "Una res"
+      ],
+      "hints": [
+        "Soy un animal que tiene plumas.",
+        "Antes de llegar al asador, vivía en una granja y escarbaba la tierra.",
+        "El nombre «Kokoriko» suena al canto del gallo."
+      ],
+      "fun_fact": "El nombre Kokoriko imita el «quiquiriquí» del gallo, como se oye en algunos idiomas.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Starting_the_charcoal.jpg/3840px-Starting_the_charcoal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStarting_the_charcoal.jpg",
+        "credit": "Tomascastelazo · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Tomascastelazo",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tomascastelazo"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8422",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "pioneers-and-popular-figures",
+      "bundle": "colombia",
+      "description": "Un cucuteño que convirtió la camiseta 10 en un uniforme de superhéroe.",
+      "question": "Nací en Cúcuta, jugué en el Real Madrid y fui el 10 de la Selección Colombia. ¿Quién soy?",
+      "answer": "James Rodríguez",
+      "wrong_answers": [
+        "Radamel Falcao",
+        "Luis Díaz",
+        "Juan Guillermo Cuadrado"
+      ],
+      "hints": [
+        "Soy un volante zurdo famoso por mis pases y mis tiros libres.",
+        "Me hice famoso en todo el mundo en el Mundial de Brasil 2014.",
+        "Me dicen «Jamesito» y fui el mejor jugador de la Copa América 2024."
+      ],
+      "fun_fact": "Aunque Colombia perdió la final, James fue elegido el mejor jugador de la Copa América 2024.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/C%C3%BAcuta_desde_Torcoroma%2C_C%C3%BAcuta.jpeg/3840px-C%C3%BAcuta_desde_Torcoroma%2C_C%C3%BAcuta.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AC%C3%BAcuta_desde_Torcoroma%2C_C%C3%BAcuta.jpeg",
+        "credit": "EEIM · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "EEIM",
+        "author_url": "https://commons.wikimedia.org/wiki/User:EEIM"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8423",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "places-and-monuments",
+      "bundle": "colombia",
+      "description": "Calles empinadas, casas de colores y un tinto en cada esquina: por aquí empezó todo.",
+      "question": "Mira la foto: en este barrio colonial, La Candelaria, se fundó Bogotá en 1538. ¿Quién la fundó?",
+      "answer": "Gonzalo Jiménez de Quesada",
+      "wrong_answers": [
+        "Sebastián de Belalcázar",
+        "Pedro de Heredia",
+        "Rodrigo de Bastidas"
+      ],
+      "hints": [
+        "Fue un conquistador español que llegó desde Santa Marta subiendo por el río Magdalena.",
+        "Fue el primero en llegar a la sabana, donde vivían los muiscas.",
+        "Su primer nombre es Gonzalo."
+      ],
+      "fun_fact": "Se dice que la fundación fue cerca del Chorro de Quevedo, una placita de La Candelaria que hoy está llena de artistas y cuenteros.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/La_Candelaria%2C_Bogota_%288135515519%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALa_Candelaria%2C_Bogota_%288135515519%29.jpg",
+        "credit": "Pedro Szekely from Los Angeles, USA · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Pedro Szekely from Los Angeles, USA",
+        "author_url": "https://www.flickr.com/people/43355249@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8424",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "places-and-monuments",
+      "bundle": "colombia",
+      "description": "Un pueblo donde los carros sufren y las cometas vuelan felices.",
+      "question": "Este pueblo de Boyacá tiene casas coloniales blancas, un festival de cometas en agosto y la plaza empedrada más grande de Colombia. ¿Cuál es?",
+      "answer": "Villa de Leyva",
+      "wrong_answers": [
+        "Ráquira",
+        "Monguí",
+        "Paipa"
+      ],
+      "hints": [
+        "Queda a unas tres horas de Bogotá por carretera.",
+        "En sus alrededores se han encontrado muchos fósiles, y hasta tiene un museo de fósiles.",
+        "Su nombre empieza con la palabra «Villa»."
+      ],
+      "fun_fact": "La plaza mayor de Villa de Leyva mide unos 14 000 metros cuadrados, ¡casi como dos canchas de fútbol!",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Sky_Full_of_Kites_at_Shakrain_Festival.jpg/3840px-Sky_Full_of_Kites_at_Shakrain_Festival.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASky_Full_of_Kites_at_Shakrain_Festival.jpg",
+        "credit": "Ehsanul Siddiq Aranya · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ehsanul Siddiq Aranya",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ehsanul_Siddiq_Aranya&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8426",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "places-and-monuments",
+      "bundle": "colombia",
+      "description": "Un castillo sin princesas ni dragones, pero con mucha cara de pocos amigos.",
+      "question": "Los españoles lo construyeron en el cerro de San Lázaro, en Cartagena, con murallas inclinadas y túneles por dentro. ¿Para qué?",
+      "answer": "Para defender la ciudad de piratas y ejércitos enemigos",
+      "wrong_answers": [
+        "Para que viviera el virrey con su familia",
+        "Para guardar el oro antes de enviarlo a España",
+        "Para hacer misas y procesiones"
+      ],
+      "hints": [
+        "Desde arriba se veía todo lo que llegaba por tierra y por mar.",
+        "Su nombre recuerda a un rey de España, Felipe IV.",
+        "Tiene cañones apuntando hacia afuera."
+      ],
+      "fun_fact": "Se dice que es la fortaleza más grande que construyeron los españoles en sus colonias de América.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Castillo_San_Felipe_de_Barajas%2C_Cartagena_08.jpg/3840px-Castillo_San_Felipe_de_Barajas%2C_Cartagena_08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACastillo_San_Felipe_de_Barajas%2C_Cartagena_08.jpg",
+        "credit": "Bernard Gagnon · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bernard Gagnon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bgag"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8427",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "popular-and-andean-music",
+      "bundle": "colombia",
+      "description": "La voz que más monedas le ha sacado a una rocola en un domingo por la tarde.",
+      "question": "Nací en Ecuador en 1919, mi voz llenó las rocolas colombianas con «Temeridad» y me despedí de este mundo en Tuluá, Valle, en 1991. ¿Quién soy?",
+      "answer": "Olimpo Cárdenas",
+      "wrong_answers": [
+        "Julio Jaramillo",
+        "Daniel Santos",
+        "Alci Acosta"
+      ],
+      "hints": [
+        "Soy un cantante de boleros y pasillos de los que se oyen en cantinas.",
+        "Comparto país de origen con el famoso «Ruiseñor de América».",
+        "Mi nombre recuerda a la montaña de los dioses griegos."
+      ],
+      "fun_fact": "Olimpo Cárdenas pasó tantos años en Colombia que muchos colombianos lo consideraban un cantante de la casa.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/2_juke_boxes_02A.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2_juke_boxes_02A.jpg",
+        "credit": "Joe Mabel · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Joe Mabel",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jmabel"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8428",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "popular-and-andean-music",
+      "bundle": "colombia",
+      "description": "Un apodo de tienda de barrio terminó bautizando al festival más importante de la música andina.",
+      "question": "Nací en Ginebra, Valle del Cauca, toqué tiple toda la vida y el gran festival de música andina colombiana de mi pueblo lleva mi apodo. ¿Quién soy?",
+      "answer": "Benigno Núñez",
+      "wrong_answers": [
+        "Pedro Morales Pino",
+        "Luis Carlos González",
+        "Jorge Villamil"
+      ],
+      "hints": [
+        "El festival se celebra desde los años setenta.",
+        "Mi apodo hace referencia a mi pelo claro.",
+        "A mí me decían «el Mono»."
+      ],
+      "fun_fact": "El Festival Mono Núñez es tan prestigioso que ganarlo es como un grado de honor para los músicos andinos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Pedro_Nel_Mart%C3%ADnez_P.jpg/3840px-Pedro_Nel_Mart%C3%ADnez_P.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APedro_Nel_Mart%C3%ADnez_P.jpg",
+        "credit": "Peterfotografico · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Peterfotografico",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Peterfotografico&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8429",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "regional-speech",
+      "bundle": "colombia",
+      "description": "El plan favorito de los bogotanos cuando el cielo se pone gris a las tres de la tarde.",
+      "question": "Se hace en el sofá o la cama, mejor si llueve en Bogotá, y es acurrucarse bien pegadito a alguien bajo la cobija. ¿Cómo se dice?",
+      "answer": "«Arruncharse»",
+      "wrong_answers": [
+        "«Emparamarse»",
+        "«Enguayabarse»",
+        "«Achantarse»"
+      ],
+      "hints": [
+        "Es un plan para el frío, sin nada de afán.",
+        "Se hace con alguien que uno quiere mucho, o con el perro.",
+        "Empieza como «arru…»."
+      ],
+      "fun_fact": "«Emparamarse», en cambio, es quedar empapado y helado por la lluvia, algo muy fácil en la sabana de Bogotá.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Bogot%C3%A1_Barrio_La_Perseverancia.JPG/3840px-Bogot%C3%A1_Barrio_La_Perseverancia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABogot%C3%A1_Barrio_La_Perseverancia.JPG",
+        "credit": "Felipe Restrepo Acosta · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Felipe Restrepo Acosta",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pedro_Felipe"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8430",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "regional-speech",
+      "bundle": "colombia",
+      "description": "Hay acentos que parecen regaño aunque te estén ofreciendo almuerzo.",
+      "question": "¿Cómo se le dice en Colombia a la forma de hablar fuerte, seca y directa de los santandereanos?",
+      "answer": "Hablar «golpeado»",
+      "wrong_answers": [
+        "Hablar «cantadito»",
+        "Hablar «enredado»",
+        "Hablar «susurrado»"
+      ],
+      "hints": [
+        "Al que no está acostumbrado le parece que lo están regañando.",
+        "Es todo lo contrario a un hablar suave y musical.",
+        "Suena como si cada palabra diera un golpe."
+      ],
+      "fun_fact": "Muchos santandereanos explican que no están bravos: simplemente así hablan ellos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Ca%C3%B1%C3%B3n_del_R%C3%ADo_Chicamocha_02.jpg/3840px-Ca%C3%B1%C3%B3n_del_R%C3%ADo_Chicamocha_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACa%C3%B1%C3%B3n_del_R%C3%ADo_Chicamocha_02.jpg",
+        "credit": "Bernard Gagnon · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bernard Gagnon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bgag"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8431",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "regional-speech",
+      "bundle": "colombia",
+      "description": "Un lugar donde hasta las vacas reciben trato de respeto.",
+      "question": "Oyes a un señor decirle a su perro «¡sumercé, quédese quieto!». ¿De dónde es más probable que sea?",
+      "answer": "Un boyacense",
+      "wrong_answers": [
+        "Un barranquillero",
+        "Un caleño",
+        "Un llanero"
+      ],
+      "hints": [
+        "Es de tierra fría, de montaña.",
+        "Allí le hablan de «usted» a todo el mundo, incluidos niños y animales.",
+        "Su tierra queda junto a Cundinamarca y su capital es Tunja."
+      ],
+      "fun_fact": "«Sumercé» viene de «su merced», un trato de respeto de la época colonial.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Obedient_%286828189536%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AObedient_%286828189536%29.jpg",
+        "credit": "Garry Knight from London, England · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Garry Knight from London, England",
+        "author_url": "https://www.flickr.com/people/8176740@N05"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8432",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "regional-speech",
+      "bundle": "colombia",
+      "description": "En el llano los apodos se ponen más rápido que la silla al caballo.",
+      "question": "En un hato de Arauca, al peón nuevo todos le dicen «el catire». ¿Por qué?",
+      "answer": "Porque es rubio",
+      "wrong_answers": [
+        "Porque es muy alto",
+        "Porque canta joropo",
+        "Porque es muy callado"
+      ],
+      "hints": [
+        "Tiene que ver con cómo se ve.",
+        "Es una palabra que se usa igual en Venezuela.",
+        "En el resto de Colombia le dirían «mono»."
+      ],
+      "fun_fact": "En los Llanos y en Venezuela, «catire» es un apodo tan común que muchos lo llevan toda la vida.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Cowboys_in_Venezuela.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACowboys_in_Venezuela.JPG",
+        "credit": "Anagoria · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Anagoria",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Anagoria"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8433",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "regional-speech",
+      "bundle": "colombia",
+      "description": "El paseo al sur del Huila no termina sin una bolsa llena para el camino.",
+      "question": "Completa: «En la carretera del Huila paramos a comprar achiras, que son…»",
+      "answer": "Bizcochitos de almidón",
+      "wrong_answers": [
+        "Sombreros de paja",
+        "Dulces de leche",
+        "Frutas ácidas"
+      ],
+      "hints": [
+        "Se venden en puestos al borde de la carretera en el Huila y el Tolima.",
+        "Acompañan muy bien un tinto o un kumis.",
+        "Llevan queso y mantequilla, se hornean y tienen forma de rosquita o de palito."
+      ],
+      "fun_fact": "La achira se hace con el almidón de la raíz de una planta que se llama igual y que da flores rojas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Desierto_de_La_Tatacoa_%28Tatacoa_Desert%29.jpg/3840px-Desierto_de_La_Tatacoa_%28Tatacoa_Desert%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADesierto_de_La_Tatacoa_%28Tatacoa_Desert%29.jpg",
+        "credit": "SergiXCX · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "SergiXCX",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:SergiXCX&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8434",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "regions-and-departments",
+      "bundle": "colombia",
+      "description": "Un spa natural donde la mascarilla de barro viene de cuerpo entero.",
+      "question": "Mira el mapa: en el departamento resaltado está el volcán del Totumo, donde la gente flota en lodo. ¿Cuál es?",
+      "answer": "Bolívar",
+      "wrong_answers": [
+        "Atlántico",
+        "Sucre",
+        "Córdoba"
+      ],
+      "hints": [
+        "Queda en la costa Caribe.",
+        "En este mismo departamento queda Mompox, la ciudad junto al río Magdalena.",
+        "Su capital es Cartagena, la ciudad amurallada."
+      ],
+      "fun_fact": "En el lodo del Totumo es casi imposible hundirse: es tan espeso que uno flota como un corcho.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Colombia-Bol%C3%ADvar-departamentos.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AColombia-Bol%C3%ADvar-departamentos.png",
+        "credit": "Elkin Fricke · CC BY-SA 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": "Elkin Fricke",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8435",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "regions-and-departments",
+      "bundle": "colombia",
+      "description": "Pregunta para los que empacan el vestido de baño antes que el cepillo de dientes.",
+      "question": "Quieres bañarte en el mar sin salir de la ciudad. ¿Cuál de estas capitales del Caribe colombiano NO te sirve?",
+      "answer": "Sincelejo",
+      "wrong_answers": [
+        "Santa Marta",
+        "Cartagena",
+        "Riohacha"
+      ],
+      "hints": [
+        "Su departamento sí tiene costa, pero ella no.",
+        "Queda tierra adentro, en medio de las sabanas.",
+        "Es la capital del departamento de Sucre."
+      ],
+      "fun_fact": "Desde Sincelejo hasta las playas de Tolú hay apenas unos 40 kilómetros.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Hotel_Tamarijn_-_Strand_tussen_Tamarijn_en_Divi_-_Aruba_%2815592739815%29.jpg/3840px-Hotel_Tamarijn_-_Strand_tussen_Tamarijn_en_Divi_-_Aruba_%2815592739815%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHotel_Tamarijn_-_Strand_tussen_Tamarijn_en_Divi_-_Aruba_%2815592739815%29.jpg",
+        "credit": "CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Roel van Deursen - Spijkenisse / Nissewaard - Nederland from Spijkenisse - Nissewaard, Holland",
+        "author_url": "https://www.flickr.com/people/24352666@N05"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8436",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "regions-and-departments",
+      "bundle": "colombia",
+      "description": "Cuatro grupos en la foto de familia y uno de ellos tiene otra historia.",
+      "question": "¿Cuál de estos grupos NO es un pueblo indígena de Colombia?",
+      "answer": "Los raizales",
+      "wrong_answers": [
+        "Los wayuu",
+        "Los emberá",
+        "Los arhuacos"
+      ],
+      "hints": [
+        "Su hogar está rodeado de mar.",
+        "Además de español, hablan una lengua criolla con base en el inglés.",
+        "Viven en San Andrés, Providencia y Santa Catalina."
+      ],
+      "fun_fact": "Los raizales hablan creole sanandresano, una lengua criolla que mezcla inglés con palabras africanas.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/My_Colombian_flag_waving_in_the_headquarters_building_of_Congress%2C_where_laws_are_made.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMy_Colombian_flag_waving_in_the_headquarters_building_of_Congress%2C_where_laws_are_made.jpg",
+        "credit": "Nelson Fernando  Sotelo Castro · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Nelson Fernando  Sotelo Castro",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8437",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "regions-and-departments",
+      "bundle": "colombia",
+      "description": "Un río tan importante que le prestó su nombre a todo un departamento.",
+      "question": "Mira el mapa: este departamento lleva el nombre de un río que hace frontera con Ecuador y Perú. ¿Cómo se llama ese río?",
+      "answer": "El Putumayo",
+      "wrong_answers": [
+        "El Caquetá",
+        "El Amazonas",
+        "El Guaviare"
+      ],
+      "hints": [
+        "Corre hacia el oriente por la selva hasta llegar a Brasil.",
+        "En este departamento está la cascada del Fin del Mundo.",
+        "Puerto Asís, uno de los puertos más importantes del sur de Colombia, queda a orillas de este río."
+      ],
+      "fun_fact": "Al entrar a Brasil, el río Putumayo cambia de nombre y pasa a llamarse Içá.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Colombia-Putumayo-departamentos.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AColombia-Putumayo-departamentos.png",
+        "credit": "Elkin Fricke · CC BY-SA 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": "Elkin Fricke",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8438",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "regions-and-departments",
+      "bundle": "colombia",
+      "description": "Un desayuno costeño que te deja listo para aguantar el calor del mediodía.",
+      "question": "Estás desayunando en Santa Marta y te sirven un puré de guineo verde con queso costeño y mantequilla. ¿Cómo se llama?",
+      "answer": "El cayeye",
+      "wrong_answers": [
+        "El patacón",
+        "El mote",
+        "El bollo limpio"
+      ],
+      "hints": [
+        "Es típico del Magdalena y La Guajira.",
+        "No se fríe: el guineo se cocina y se machaca.",
+        "Su nombre empieza por «ca» y termina en «ye»."
+      ],
+      "fun_fact": "En Santa Marta el cayeye suele ir acompañado de huevo, suero costeño o pescado frito.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Freshly_Harvested_Green_Banana_and_plantain.jpg/3840px-Freshly_Harvested_Green_Banana_and_plantain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFreshly_Harvested_Green_Banana_and_plantain.jpg",
+        "credit": "NiferO · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "NiferO",
+        "author_url": "https://commons.wikimedia.org/wiki/User:NiferO"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8439",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "regions-and-departments",
+      "bundle": "colombia",
+      "description": "Una capital tan escondida en la selva que el GPS pide un guía.",
+      "question": "Mitú, la capital del Vaupés, tiene un nombre que viene de una lengua indígena. ¿Qué es un mitú?",
+      "answer": "Un ave parecida al pavo",
+      "wrong_answers": [
+        "Un pez de río",
+        "Un mono pequeño",
+        "Una rana venenosa"
+      ],
+      "hints": [
+        "Vive en la selva amazónica.",
+        "Los pueblos indígenas del Vaupés lo cazaban para comer.",
+        "Es el paujil, de plumas negras y pico llamativo."
+      ],
+      "fun_fact": "Los científicos usan «Mitu» como nombre de un grupo de paujiles, como el paujil de Salvin.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Sunset_at_Amazon_rainforest%2C_Brazil_-_2026_1.jpg/3840px-Sunset_at_Amazon_rainforest%2C_Brazil_-_2026_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASunset_at_Amazon_rainforest%2C_Brazil_-_2026_1.jpg",
+        "credit": "flowcomm · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "flowcomm",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8440",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "brands-and-products",
+      "bundle": "colombia",
+      "description": "Un mecato que cruje más que una puerta vieja.",
+      "question": "Mira la foto: con esta fruta verde se hace uno de estos mecatos de paquete. ¿Cuál?",
+      "answer": "Platanitos",
+      "wrong_answers": [
+        "Boliqueso",
+        "Papas Margarita",
+        "Maní Moto"
+      ],
+      "hints": [
+        "Viene en tajadas delgadas y crocantes.",
+        "Esta fruta, verde y frita, también se convierte en patacón.",
+        "Su nombre es el diminutivo de la fruta de la foto."
+      ],
+      "fun_fact": "El plátano verde casi no es dulce: tiene mucho almidón, que se vuelve azúcar cuando la fruta madura.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Bunch_of_Plantain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABunch_of_Plantain.jpg",
+        "credit": "Menyea · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Menyea",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Menyea"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8441",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "brands-and-products",
+      "bundle": "colombia",
+      "description": "La merienda que cabe en la lonchera y en el corazón.",
+      "question": "Mira la foto: estos copos son el ingrediente principal de una bebida de Alpina que se toma bien fría. ¿Cuál?",
+      "answer": "Avena Alpina",
+      "wrong_answers": [
+        "Kumis Alpina",
+        "Bon Yurt",
+        "Yogur Alpina"
+      ],
+      "hints": [
+        "Es una bebida espesa y cremosa.",
+        "Los copos de la foto son un cereal que muchas mamás cocinan con leche y canela.",
+        "La bebida se llama igual que el cereal de la foto."
+      ],
+      "fun_fact": "La avena es un cereal, pariente del trigo y de la cebada.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Rolled_oats_in_bowl_2.jpg/3840px-Rolled_oats_in_bowl_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARolled_oats_in_bowl_2.jpg",
+        "credit": "Bodhi Peace · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bodhi Peace",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Bodhi_Peace&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8442",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "cities-and-towns",
+      "bundle": "colombia",
+      "description": "Una estructura que se adentra en el mar como quien no quiere mojarse los pies.",
+      "question": "¿Qué muelle del Caribe colombiano, inaugurado en 1893, fue durante años la gran puerta de entrada al país?",
+      "answer": "El muelle de Puerto Colombia",
+      "wrong_answers": [
+        "El muelle de Riohacha",
+        "El muelle de Santa Marta",
+        "El muelle de Coveñas"
+      ],
+      "hints": [
+        "Un tren lo conectaba con una gran ciudad cercana para llevar la mercancía al interior.",
+        "Por él entraron muchos inmigrantes antes de que existiera Bocas de Ceniza.",
+        "Queda a pocos minutos de Barranquilla, en un municipio con el nombre del país."
+      ],
+      "fun_fact": "El muelle lo construyó el ingeniero cubano Francisco Javier Cisneros y medía más de un kilómetro mar adentro.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/KITLV_-_87203_-_Stafhell_%26_Kleingrothe_-_Medan-Deli_-_Steamship_in_the_harbor_at_Belawan_Labuhan_Deli_-_circa_1880.tif/lossy-page1-3840px-KITLV_-_87203_-_Stafhell_%26_Kleingrothe_-_Medan-Deli_-_Steamship_in_the_harbor_at_Belawan_Labuhan_Deli_-_circa_1880.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKITLV_-_87203_-_Stafhell_%26_Kleingrothe_-_Medan-Deli_-_Steamship_in_the_harbor_at_Belawan_Labuhan_Deli_-_circa_1880.tif",
+        "credit": "Stafhell & Kleingrothe / Medan-Deli · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Stafhell & Kleingrothe / Medan-Deli",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8443",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "club-football",
+      "bundle": "colombia",
+      "description": "Llega al estadio sin que nadie le haya guardado puesto.",
+      "question": "Muchas veces usa su camiseta alterna y en varios clásicos colombianos su hinchada no puede entrar al estadio. ¿Cómo se le llama?",
+      "answer": "El equipo visitante",
+      "wrong_answers": [
+        "El equipo local",
+        "El equipo de reserva",
+        "El equipo descendido"
+      ],
+      "hints": [
+        "No juega en su propia casa.",
+        "Cuando dejan entrar a su barra, va en una tribuna apartada.",
+        "Es lo contrario del equipo que recibe."
+      ],
+      "fun_fact": "En la Copa Libertadores, hasta 2021 un gol de visitante valía más para desempatar una serie.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Uganda_Cranes_football_team_bus.jpg/3840px-Uganda_Cranes_football_team_bus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUganda_Cranes_football_team_bus.jpg",
+        "credit": "Samson Ssemakadde · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Samson Ssemakadde",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Samson_Ssemakadde&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8444",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "crafts-and-traditional-dress",
+      "bundle": "colombia",
+      "description": "El recuerdo más fácil de empacar de todo el viaje a La Guajira.",
+      "question": "Estás en Riohacha y ves tejiditos de colores con figuras wayuu para amarrarse en la muñeca. ¿Cómo les dicen en Colombia?",
+      "answer": "Manillas",
+      "wrong_answers": [
+        "Mochilas",
+        "Chumbes",
+        "Chinchorros"
+      ],
+      "hints": [
+        "Se ponen en la muñeca.",
+        "Se regalan mucho como recuerdo de viaje.",
+        "Su nombre viene de «mano»."
+      ],
+      "fun_fact": "Las figuras geométricas de los tejidos wayuu se llaman kanaas y cada una tiene su propio significado.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Ciudad_de_Riohacha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACiudad_de_Riohacha.jpg",
+        "credit": "Leonfd1992 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Leonfd1992",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Leonfd1992"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8445",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "ghosts-and-creatures",
+      "bundle": "colombia",
+      "description": "Una vecina nocturna que no paga arriendo y tiene unos ojos enormes.",
+      "question": "En el campo dicen que cuando una lechuza canta de noche encima del techo, viene a anunciar algo. ¿Qué anuncia?",
+      "answer": "Una desgracia",
+      "wrong_answers": [
+        "Un aguacero",
+        "Una buena cosecha",
+        "Un temblor de tierra"
+      ],
+      "hints": [
+        "La gente se persigna cuando la oye.",
+        "Es un agüero de los malos.",
+        "Es lo contrario de una bendición."
+      ],
+      "fun_fact": "La lechuza no trae mala suerte: cada noche se come muchos ratones y ayuda a los campesinos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Eastern_Barn_Owl_-_Tyto_javanica%2C_Pune%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEastern_Barn_Owl_-_Tyto_javanica%2C_Pune%2C_India.jpg",
+        "credit": "Nikhil More · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Nikhil More",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Nikhilmore_nimo&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8446",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "hosts-actors-and-comedians",
+      "bundle": "colombia",
+      "description": "Mientras la familia almuerza, ella cuenta lo que pasó en el país, y nadie le cambia el canal.",
+      "question": "¿Qué periodista nacida en el Cauca fue durante años presentadora de Noticias Caracol?",
+      "answer": "Mábel Lara",
+      "wrong_answers": [
+        "Vicky Dávila",
+        "Darcy Quinn",
+        "Claudia Gurisatti"
+      ],
+      "hints": [
+        "Es del suroccidente del país.",
+        "Se convirtió en un referente para muchas mujeres afro del periodismo colombiano.",
+        "Su nombre empieza por M y su apellido rima con «para»."
+      ],
+      "fun_fact": "Mábel Lara es una de las caras afrocolombianas más reconocidas de la televisión nacional.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Calle_5%2C_Popay%C3%A1n_04.jpg/3840px-Calle_5%2C_Popay%C3%A1n_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACalle_5%2C_Popay%C3%A1n_04.jpg",
+        "credit": "Bernard Gagnon · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bernard Gagnon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bgag"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8447",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "hosts-actors-and-comedians",
+      "bundle": "colombia",
+      "description": "Un apodo de tres letras que ninguno de sus amigos pensó dos veces.",
+      "question": "Wilmer Valderrama, de mamá colombiana, fue Fez en «That '70s Show». ¿De dónde sale ese apodo?",
+      "answer": "De las iniciales de «estudiante extranjero de intercambio» en inglés",
+      "wrong_answers": [
+        "Del sombrero rojo que llevaba al llegar",
+        "De la ciudad marroquí donde nació",
+        "De un error al escribir su nombre real"
+      ],
+      "hints": [
+        "En la serie, nadie logra pronunciar el verdadero nombre del personaje.",
+        "Fez vive con una familia de Wisconsin que no es la suya.",
+        "Son tres letras, F, E y S, de tres palabras en inglés."
+      ],
+      "fun_fact": "En la serie nunca se revela de qué país viene Fez, y ese misterio se volvió uno de los chistes recurrentes.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Smiling_woman_with_curly_hair_drinking_coffee_in_her_retro_living_room.jpg/3840px-Smiling_woman_with_curly_hair_drinking_coffee_in_her_retro_living_room.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASmiling_woman_with_curly_hair_drinking_coffee_in_her_retro_living_room.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8448",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "independence",
+      "bundle": "colombia",
+      "description": "Su nombre suena a poca cosa, pero tumbó a todo un presidente.",
+      "question": "En 1811, Antonio Nariño lanzó en Santafé «La Bagatela», con la que criticaba duro al gobierno de Jorge Tadeo Lozano. ¿Qué era La Bagatela?",
+      "answer": "Un periódico",
+      "wrong_answers": [
+        "Un batallón de voluntarios",
+        "Una logia secreta",
+        "Un partido político"
+      ],
+      "hints": [
+        "Nariño fue un precursor famoso por difundir ideas.",
+        "Se leía en voz alta en las tertulias.",
+        "Nariño escribía casi todo lo que traía cada número."
+      ],
+      "fun_fact": "Las críticas de La Bagatela ayudaron a que Lozano renunciara y Nariño quedara al mando de Cundinamarca.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Bog_La_Candelaria.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABog_La_Candelaria.JPG",
+        "credit": "Felipe Restrepo Acosta · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Felipe Restrepo Acosta",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pedro_Felipe"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8449",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "independence",
+      "bundle": "colombia",
+      "description": "Un viaje al sur que terminó sin tiquete de regreso.",
+      "question": "Antonio Nariño marchó al sur contra los realistas de Popayán y Pasto, pero terminó preso en Pasto. ¿En qué año lo capturaron?",
+      "answer": "1814",
+      "wrong_answers": [
+        "1810",
+        "1819",
+        "1816"
+      ],
+      "hints": [
+        "Fue en plena Patria Boba.",
+        "Pasó antes de que llegara Pablo Morillo.",
+        "Fue cuatro años después del Grito."
+      ],
+      "fun_fact": "Después de su captura, Nariño fue enviado preso a Cádiz, en España, donde pasó varios años en la cárcel.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/VolcanGaleras.jpg/3840px-VolcanGaleras.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVolcanGaleras.jpg",
+        "credit": "Luis Eduardo White Patiño · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Luis Eduardo White Patiño",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8450",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "independence",
+      "bundle": "colombia",
+      "description": "Hoy las palomas comen maíz donde antes se escribía historia patria.",
+      "question": "En la Reconquista, en Santafé, fusilaban a patriotas en un terreno llamado la Huerta de Jaime. Hoy es un parque con un obelisco. ¿Cuál?",
+      "answer": "El Parque de los Mártires",
+      "wrong_answers": [
+        "El Parque Santander",
+        "El Parque de la Independencia",
+        "El Parque Simón Bolívar"
+      ],
+      "hints": [
+        "Queda en el centro de Bogotá.",
+        "Está junto a la Avenida Caracas, al occidente de La Candelaria.",
+        "Su nombre recuerda a los que murieron por la causa patriota."
+      ],
+      "fun_fact": "El obelisco del parque se levantó en el siglo XIX para recordar a los patriotas ejecutados allí.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Lascar_La_Candelaria_-_Downtown_Bogota_%284584497829%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALascar_La_Candelaria_-_Downtown_Bogota_%284584497829%29.jpg",
+        "credit": "Jorge Láscar from Australia · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Jorge Láscar from Australia",
+        "author_url": "https://www.flickr.com/people/8721758@N06"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8451",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "independence",
+      "bundle": "colombia",
+      "description": "Un consejo que nadie quería recibir, y menos en persona.",
+      "question": "En 1816 se creó en Santafé el Consejo de guerra permanente, que decidió la suerte de muchos próceres. ¿Qué jefe español lo creó?",
+      "answer": "Pablo Morillo",
+      "wrong_answers": [
+        "Juan Sámano",
+        "Francisco Montalvo",
+        "Antonio Amar y Borbón"
+      ],
+      "hints": [
+        "Llegó de España en 1815 al frente de un gran ejército.",
+        "Antes de llegar a Santafé sitió Cartagena durante más de cien días.",
+        "Le decían «El Pacificador»."
+      ],
+      "fun_fact": "Antes de venir a América, Morillo había peleado en España contra las tropas de Napoleón.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/La_Candelaria%2C_Bogot%C3%A1%2C_Colombia_-_panoramio_%2828%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALa_Candelaria%2C_Bogot%C3%A1%2C_Colombia_-_panoramio_%2828%29.jpg",
+        "credit": "Jimmy Gómez N · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jimmy Gómez N",
+        "author_url": "https://web.archive.org/web/20161029164558/http://www.panoramio.com/user/6130023?with_photo_id=105736732"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8452",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "mountains-and-landscapes",
+      "bundle": "colombia",
+      "description": "Un río con mucha paciencia y un gusto muy fino para decorar.",
+      "question": "El río Claro, en Antioquia, excavó un cañón de paredes claras y lisas. ¿De qué roca son?",
+      "answer": "De mármol",
+      "wrong_answers": [
+        "De granito",
+        "De basalto",
+        "De arenisca"
+      ],
+      "hints": [
+        "Es una roca que se forma cuando la caliza se transforma con calor y presión.",
+        "Es una roca que se usa para estatuas, pisos y mesones elegantes.",
+        "Con ella hizo Miguel Ángel su famosa estatua de David."
+      ],
+      "fun_fact": "En la reserva del Río Claro hay cavernas de mármol donde viven guácharos, unas aves que vuelan de noche guiándose por sonidos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Reserva_Natural_R%C3%ADo_Claro_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AReserva_Natural_R%C3%ADo_Claro_11.jpg",
+        "credit": "05591 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "05591",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Moterocolombia&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8453",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "mountains-and-landscapes",
+      "bundle": "colombia",
+      "description": "En el desierto de día no hay mucho que ver, pero de noche el show es gratis y con millones de luces.",
+      "question": "«Vivo en el desierto de la Tatacoa, en el Huila. De noche la gente viene a mirar las estrellas conmigo.» ¿Qué soy?",
+      "answer": "Un observatorio",
+      "wrong_answers": [
+        "Un faro",
+        "Un acuario",
+        "Una torre de control"
+      ],
+      "hints": [
+        "Mi trabajo empieza cuando se oculta el sol.",
+        "Desde mí se ven planetas, la Luna y estrellas fugaces.",
+        "Por dentro tengo telescopios."
+      ],
+      "fun_fact": "La Tatacoa es de los mejores lugares de Colombia para mirar estrellas porque hay pocas nubes y casi no llega luz de ciudades.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/V%C3%ADa_L%C3%A1ctea_sobre_el_horizonte_de_la_Tatacoa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AV%C3%ADa_L%C3%A1ctea_sobre_el_horizonte_de_la_Tatacoa.jpg",
+        "credit": "Johan Andrés Toro · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Johan Andrés Toro",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Johan_Andr%C3%A9s_Toro&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8454",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "national-symbols",
+      "bundle": "colombia",
+      "description": "Un puente chiquito con una historia gigante.",
+      "question": "Mira la foto: junto a este puente se ganó la batalla del 7 de agosto de 1819. ¿Quién dirigía el ejército patriota?",
+      "answer": "Simón Bolívar",
+      "wrong_answers": [
+        "Antonio Nariño",
+        "Francisco José de Caldas",
+        "José María Córdova"
+      ],
+      "hints": [
+        "Nació en Caracas.",
+        "Llegó a Boyacá después de cruzar los Andes desde los llanos.",
+        "Le dicen «el Libertador»."
+      ],
+      "fun_fact": "La batalla de Boyacá duró apenas unas dos horas y abrió el camino a la independencia.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Puente_de_Boyac%C3%A1%2C_vista_lateral..JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APuente_de_Boyac%C3%A1%2C_vista_lateral..JPG",
+        "credit": "Kamilokardona · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Kamilokardona",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kamilokardona&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8455",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "natural-parks-and-ecosystems",
+      "bundle": "colombia",
+      "description": "Un pasto que creció tanto que se le olvidó que era pasto.",
+      "question": "Este bambú gigante crece en el Eje Cafetero. ¿Para qué lo usa mucho la gente de allá?",
+      "answer": "Para construir casas",
+      "wrong_answers": [
+        "Para hacer jugos",
+        "Para teñir ropa",
+        "Para hacer medicinas"
+      ],
+      "hints": [
+        "Es muy fuerte y muy largo.",
+        "Se dobla sin romperse y aguanta muy bien los temblores de tierra.",
+        "Los arquitectos y los carpinteros lo aman."
+      ],
+      "fun_fact": "La guadua puede crecer más de 10 centímetros en un solo día.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Guadua_angustifolia_%2811274473695%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGuadua_angustifolia_%2811274473695%29.jpg",
+        "credit": "Dick Culbert from Gibsons, B.C., Canada · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Dick Culbert from Gibsons, B.C., Canada",
+        "author_url": "https://www.flickr.com/people/92252798@N07"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8456",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "olympic-medallists",
+      "bundle": "colombia",
+      "description": "Un deporte para gente con mucha prisa y todavía más paciencia.",
+      "question": "El colombiano Éider Arévalo fue campeón mundial en 2017 en la prueba de atletismo que ves en la foto. ¿Cuál es?",
+      "answer": "Marcha atlética",
+      "wrong_answers": [
+        "Maratón",
+        "Carrera de obstáculos",
+        "Decatlón"
+      ],
+      "hints": [
+        "Los jueces se fijan mucho en cómo mueven las piernas los atletas.",
+        "Sus distancias olímpicas clásicas fueron 20 y 50 kilómetros.",
+        "Está prohibido despegar los dos pies del suelo a la vez."
+      ],
+      "fun_fact": "En la marcha, la pierna que apoya tiene que ir estirada desde que toca el suelo hasta que pasa debajo del cuerpo.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/20260815_2026_European_Athletics_Championships_%E2%80%93_Race_walking_147.jpg/3840px-20260815_2026_European_Athletics_Championships_%E2%80%93_Race_walking_147.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A20260815_2026_European_Athletics_Championships_%E2%80%93_Race_walking_147.jpg",
+        "credit": "Bearas · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bearas",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bearas"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8457",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "olympic-medallists",
+      "bundle": "colombia",
+      "description": "Una bicicleta que se fue al velódromo y dejó algo olvidado en la casa.",
+      "question": "¿Cuál de estas cosas NO tiene una bicicleta de pista como las que usan los pisteros colombianos en el velódromo?",
+      "answer": "Frenos",
+      "wrong_answers": [
+        "Pedales",
+        "Manubrio",
+        "Sillín"
+      ],
+      "hints": [
+        "Le falta algo que casi todas las bicicletas de la calle sí tienen.",
+        "En la pista todos van en la misma dirección y no hay que parar de golpe.",
+        "Para bajar la velocidad, el ciclista hace fuerza hacia atrás con los pedales."
+      ],
+      "fun_fact": "La bicicleta de pista tiene piñón fijo: si la rueda gira, los pedales también, así que el ciclista no puede dejar de pedalear.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Velodrome-de-Bretagne-Loudeac-22-gradins-piste-Henri-Caresmel-2-byRundvald.jpg/3840px-Velodrome-de-Bretagne-Loudeac-22-gradins-piste-Henri-Caresmel-2-byRundvald.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVelodrome-de-Bretagne-Loudeac-22-gradins-piste-Henri-Caresmel-2-byRundvald.jpg",
+        "credit": "Rundvald · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rundvald",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rundvald"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8458",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "pioneers-and-popular-figures",
+      "bundle": "colombia",
+      "description": "Un cantante tan famoso que hasta tu abuela se ha puesto a cantar sus canciones a todo pulmón en el bus.",
+      "question": "¿Quién es este cantante colombiano?",
+      "answer": "Juanes",
+      "wrong_answers": [
+        "Carlos Vives",
+        "Fonseca",
+        "Andrés Cepeda"
+      ],
+      "hints": [
+        "Es de Antioquia y casi siempre canta con una guitarra eléctrica.",
+        "Cantó «La camisa negra» y «A Dios le pido».",
+        "Su nombre artístico une sus dos nombres: Juan y Esteban."
+      ],
+      "fun_fact": "Antes de ser solista, Juanes tocaba en Ekhymosis, una banda de rock pesado de Medellín.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/JuanesLive01.JPG/1920px-JuanesLive01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJuanesLive01.JPG",
+        "credit": "Chris Duque · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Chris Duque",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Chrisduque?action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8459",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "places-and-monuments",
+      "bundle": "colombia",
+      "description": "La sala de la casa de todos los colombianos, con palomas incluidas.",
+      "question": "La plaza principal de Bogotá queda frente al Capitolio y la Catedral. ¿En honor a quién lleva su nombre?",
+      "answer": "Simón Bolívar",
+      "wrong_answers": [
+        "Francisco de Paula Santander",
+        "Antonio Nariño",
+        "Policarpa Salavarrieta"
+      ],
+      "hints": [
+        "Es un héroe de la Independencia.",
+        "Le dicen «el Libertador».",
+        "Un departamento de la costa Caribe lleva su apellido."
+      ],
+      "fun_fact": "La estatua de Bolívar en el centro de la plaza es de 1846 y es el monumento público más antiguo de Bogotá.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Fachada_Capitolio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFachada_Capitolio.jpg",
+        "credit": "Baiji · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Baiji",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Baiji"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8460",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "places-and-monuments",
+      "bundle": "colombia",
+      "description": "Agua tan transparente que los peces no tienen dónde esconderse.",
+      "question": "Las Islas del Rosario son islas de coral dentro de un parque nacional. ¿Desde qué ciudad salen casi todas las lanchas para visitarlas?",
+      "answer": "Cartagena",
+      "wrong_answers": [
+        "Santa Marta",
+        "Barranquilla",
+        "Riohacha"
+      ],
+      "hints": [
+        "Es una ciudad del Caribe colombiano.",
+        "Cada año se celebra allí un famoso festival internacional de cine.",
+        "Le dicen «la Ciudad Amurallada»."
+      ],
+      "fun_fact": "Las Islas del Rosario hacen parte del Parque Nacional Natural Corales del Rosario y San Bernardo, creado en 1977.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Kleine_Bonaire-Underwater_life%28js%29.jpg/3840px-Kleine_Bonaire-Underwater_life%28js%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKleine_Bonaire-Underwater_life%28js%29.jpg",
+        "credit": "Michal Strzelecki, Wojtek Strzelecki & Jerzy Strzelecki · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Michal Strzelecki, Wojtek Strzelecki & Jerzy Strzelecki",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jerzystrzelecki"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8462",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "plants-and-flowers",
+      "bundle": "colombia",
+      "description": "Una casa de vidrio donde los inquilinos no pagan arriendo y además entran volando.",
+      "question": "Tengo alas de colores y en el Jardín Botánico del Quindío vivo con cientos de compañeras en una casa enorme. ¿Qué soy?",
+      "answer": "Una mariposa",
+      "wrong_answers": [
+        "Un colibrí",
+        "Una abeja",
+        "Una libélula"
+      ],
+      "hints": [
+        "Me encanta tomar néctar de las flores.",
+        "Antes de volar pasé un tiempo quieta dentro de un capullo.",
+        "Antes de tener alas, fui una oruga."
+      ],
+      "fun_fact": "El mariposario del Jardín Botánico del Quindío, en Calarcá, visto desde arriba tiene forma de mariposa.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Botanical_garden_in_Ufa_%28greenhouse%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABotanical_garden_in_Ufa_%28greenhouse%29.jpg",
+        "credit": "Lumaca · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Lumaca",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Lumaca"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8463",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "popular-and-andean-music",
+      "bundle": "colombia",
+      "description": "Una voz que suena en todas las cantinas, desde la tienda de la esquina hasta la finca del tío.",
+      "question": "Arelys Henao es una de las reinas de la música popular colombiana. ¿En qué departamento nació?",
+      "answer": "Antioquia",
+      "wrong_answers": [
+        "Valle del Cauca",
+        "Risaralda",
+        "Tolima"
+      ],
+      "hints": [
+        "Es un departamento de montaña con muchos cantantes de música popular y despecho.",
+        "Su capital es una ciudad famosa por la Feria de las Flores.",
+        "La gente de allá se llama paisa."
+      ],
+      "fun_fact": "La música popular colombiana mezcla la ranchera mexicana, el tango y la música campesina de las montañas.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Pedro_Nel_Mart%C3%ADnez_P.jpg/3840px-Pedro_Nel_Mart%C3%ADnez_P.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APedro_Nel_Mart%C3%ADnez_P.jpg",
+        "credit": "Peterfotografico · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Peterfotografico",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Peterfotografico&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8464",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "popular-and-andean-music",
+      "bundle": "colombia",
+      "description": "En la orquesta todos siguen al director, aunque algunos hagan como que no lo ven.",
+      "question": "Tengo cuatro cuerdas gruesas, soy casi tan alto como una persona, me tocan de pie y mi sonido es el más grave de la orquesta de cuerdas. ¿Qué soy?",
+      "answer": "El contrabajo",
+      "wrong_answers": [
+        "El violonchelo",
+        "La viola",
+        "El tiple"
+      ],
+      "hints": [
+        "También me encuentras en muchos grupos de jazz.",
+        "Me pueden tocar con arco o pellizcando las cuerdas.",
+        "Mi nombre empieza con «contra»."
+      ],
+      "fun_fact": "En muchas estudiantinas colombianas el contrabajo acompaña a tiples, bandolas y guitarras para dar el sonido grave.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Iwelam%2C_Perth_Concert_Hall._Auditorium_towards_the_Stage..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIwelam%2C_Perth_Concert_Hall._Auditorium_towards_the_Stage..jpg",
+        "credit": "Iwelam · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Iwelam",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Iwelam"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8465",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "regional-speech",
+      "bundle": "colombia",
+      "description": "El gentilicio: la forma elegante de preguntar «¿y usted de dónde es, pues?».",
+      "question": "Si una persona es ibaguereña, ¿de qué departamento de Colombia es?",
+      "answer": "Del Tolima",
+      "wrong_answers": [
+        "Del Huila",
+        "De Caldas",
+        "Del Quindío"
+      ],
+      "hints": [
+        "Es un departamento del centro de Colombia, en el valle del río Magdalena.",
+        "Allí se celebra el Festival Folclórico Colombiano y la lechona es reina.",
+        "Su nombre empieza por T y lo comparte con un nevado."
+      ],
+      "fun_fact": "A Ibagué, la capital del Tolima, la llaman la «Capital Musical de Colombia».",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Andes_mountains_in_the_Huila_department_%28Monta%C3%B1as_de_los_Andes_en_el_departamento_del_Huila%29.jpg/3840px-Andes_mountains_in_the_Huila_department_%28Monta%C3%B1as_de_los_Andes_en_el_departamento_del_Huila%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAndes_mountains_in_the_Huila_department_%28Monta%C3%B1as_de_los_Andes_en_el_departamento_del_Huila%29.jpg",
+        "credit": "SergiXCX · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "SergiXCX",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:SergiXCX&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8466",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "regional-speech",
+      "bundle": "colombia",
+      "description": "En Colombia una sola palabrita sirve para el profesor, el jefe y hasta el gato.",
+      "question": "En Colombia, muchas mamás le hablan de «usted» a su bebé. ¿Qué expresa casi siempre ese «usted»?",
+      "answer": "Cariño",
+      "wrong_answers": [
+        "Distancia",
+        "Desconfianza",
+        "Burla"
+      ],
+      "hints": [
+        "No siempre «usted» sirve para guardar distancia.",
+        "Suele salir mientras la mamá le hace mimos y le canta.",
+        "Es lo mismo que siente la mamá cuando le da besos al bebé."
+      ],
+      "fun_fact": "En buena parte de Colombia hay parejas que se tratan de «usted» toda la vida, y no por respeto sino de puro cariño.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Young_mother_smiling_while_holding_her_baby_in_Laos.jpg/3840px-Young_mother_smiling_while_holding_her_baby_in_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AYoung_mother_smiling_while_holding_her_baby_in_Laos.jpg",
+        "credit": "Basile Morin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Basile Morin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Basile_Morin"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8467",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "regional-speech",
+      "bundle": "colombia",
+      "description": "Una palabra caleña que pone a correr a cualquier mamá justo cuando llegan las visitas.",
+      "question": "En Cali, si dicen que un niño anda «viringo», ¿cómo anda?",
+      "answer": "Desnudo",
+      "wrong_answers": [
+        "Descalzo",
+        "Despeinado",
+        "Dormido"
+      ],
+      "hints": [
+        "Le falta algo muy importante.",
+        "Acaba de salir del baño y corre muerto de risa por toda la casa.",
+        "Anda tal como vino al mundo."
+      ],
+      "fun_fact": "En Perú hay un perro sin pelo al que también llaman «perro viringo».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Cali%2C_Colombia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACali%2C_Colombia.jpg",
+        "credit": "inyucho · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "inyucho",
+        "author_url": "https://www.flickr.com/people/31817492@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8469",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "rivers-seas-and-islands",
+      "bundle": "colombia",
+      "description": "Un nombre que suena a aguita de hierbas que te da la abuela antes de dormir.",
+      "question": "En el archipiélago de San Andrés y Providencia hay un lugar llamado Quitasueño. ¿Qué es?",
+      "answer": "Un banco de arrecifes",
+      "wrong_answers": [
+        "Un volcán apagado",
+        "Una laguna de agua dulce",
+        "Una bahía de pescadores"
+      ],
+      "hints": [
+        "Queda lejos de las islas habitadas, al norte de Providencia",
+        "Casi todo está bajo el agua",
+        "Los barcos le temen porque pueden encallar allí"
+      ],
+      "fun_fact": "En 2012, la Corte Internacional de Justicia confirmó que Quitasueño es de Colombia, en el litigio con Nicaragua.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Sailing_Trimaran.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASailing_Trimaran.jpg",
+        "credit": "Paul Harrison · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Paul Harrison",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:ImagePerson&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8470",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "salsa-and-tropical-music",
+      "bundle": "colombia",
+      "description": "El himno no oficial de las doce campanadas, con sombrero y todo.",
+      "question": "El colombiano Crescencio Salcedo compuso «El año viejo». ¿Quién la grabó después, en 1953, y la volvió un éxito en toda América?",
+      "answer": "Tony Camargo",
+      "wrong_answers": [
+        "Lucho Bermúdez",
+        "Pedro Infante",
+        "Daniel Santos"
+      ],
+      "hints": [
+        "Era cantante, no director de orquesta.",
+        "La grabó en México con la orquesta de Rafael de Paz.",
+        "Su apellido es también el de una ciudad de Chihuahua."
+      ],
+      "fun_fact": "Mucha gente en Colombia cree que el cantante de «El año viejo» era colombiano, pero Tony Camargo era mexicano.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Fireworks_on_New_Year%27s_Eve_in_a_small_Swabian_village_%281%29%2C_brightened.jpg/3840px-Fireworks_on_New_Year%27s_Eve_in_a_small_Swabian_village_%281%29%2C_brightened.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFireworks_on_New_Year%27s_Eve_in_a_small_Swabian_village_%281%29%2C_brightened.jpg",
+        "credit": "Andreas Weith · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Andreas Weith",
+        "author_url": "https://commons.wikimedia.org/wiki/User:AWeith"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8472",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "sayings-and-expressions",
+      "bundle": "colombia",
+      "description": "Un momento de valentía que empieza al otro lado del salón.",
+      "question": "En la fiesta, alguien cruza el salón, te extiende la mano y te lleva a la pista. ¿Cómo se dice eso?",
+      "answer": "Sacar a bailar",
+      "wrong_answers": [
+        "Hacer la vaca",
+        "Dar papaya",
+        "Mamar gallo"
+      ],
+      "hints": [
+        "Pasa en matrimonios y quinceañeras.",
+        "Casi siempre empieza con una pregunta de una sola palabra.",
+        "Es lo contrario de quedarse sentado toda la fiesta."
+      ],
+      "fun_fact": "En Cali, la capital de la salsa, hay escuelas donde los niños aprenden a bailar desde muy pequeños.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Taiwanese_guests_enjoying_the_wedding_reception_at_HOLE_Banquet_Hall.jpg/3840px-Taiwanese_guests_enjoying_the_wedding_reception_at_HOLE_Banquet_Hall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATaiwanese_guests_enjoying_the_wedding_reception_at_HOLE_Banquet_Hall.jpg",
+        "credit": "王 威 【風動‧拾光】 · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "王 威 【風動‧拾光】",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8473",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "sayings-and-expressions",
+      "bundle": "colombia",
+      "description": "La palabra favorita de los narradores, gritada hasta quedarse sin aire.",
+      "question": "En el fútbol, ¿cómo le dicen los narradores colombianos a un gol espectacular?",
+      "answer": "Un golazo",
+      "wrong_answers": [
+        "Un golcito",
+        "Un autogol",
+        "Un gol de camerino"
+      ],
+      "hints": [
+        "Todo el estadio se levanta a celebrar.",
+        "Los narradores lo gritan estirando la última letra.",
+        "Es la palabra «gol» con un final que la hace más grande."
+      ],
+      "fun_fact": "El gol de James Rodríguez contra Uruguay en el Mundial de 2014 ganó el Premio Puskás al gol más bonito del año.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Lokomotiv_-_Spartak_%2819%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALokomotiv_-_Spartak_%2819%29.jpg",
+        "credit": "Maarten · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Maarten",
+        "author_url": "https://www.flickr.com/photos/23336697@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8474",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "sayings-and-expressions",
+      "bundle": "colombia",
+      "description": "Unas palabras que en Colombia salen solitas al cruzar la puerta.",
+      "question": "Cuando sales de la tienda, el tendero te dice «¡que le vaya bien!». ¿Qué se suele responder?",
+      "answer": "Igualmente",
+      "wrong_answers": [
+        "Buen provecho",
+        "Bienvenido",
+        "Salud"
+      ],
+      "hints": [
+        "Es una sola palabra.",
+        "Le devuelves al tendero el mismo deseo.",
+        "Significa «lo mismo para usted»."
+      ],
+      "fun_fact": "Muchos colombianos alargan la despedida: «que le vaya bien, que esté bien, saludes en la casa».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Butcher_shop%2C_Cartagena%2C_Colombia_%2824474990782%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AButcher_shop%2C_Cartagena%2C_Colombia_%2824474990782%29.jpg",
+        "credit": "Joe Ross from Lansing, Michigan · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Joe Ross from Lansing, Michigan",
+        "author_url": "https://www.flickr.com/people/59398780@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8475",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "scientists-and-inventors",
+      "bundle": "colombia",
+      "description": "Una despensa tan grande que serviría para resembrar medio planeta después de una catástrofe.",
+      "question": "El CIAT, en Palmira, guarda en su banco de semillas las colecciones más grandes del mundo de dos alimentos básicos. ¿Cuáles son?",
+      "answer": "El fríjol y la yuca",
+      "wrong_answers": [
+        "El café y el cacao",
+        "La papa y el maíz",
+        "El arroz y la caña"
+      ],
+      "hints": [
+        "Los dos son comida básica en el trópico, de América Latina a África.",
+        "Uno crece en vainas y el otro es una raíz gruesa bajo la tierra.",
+        "Uno va en la bandeja paisa y la otra en el sancocho."
+      ],
+      "fun_fact": "El banco de semillas del CIAT guarda decenas de miles de variedades de fríjol traídas de muchísimos países.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Research_Institute%2C_greenhouse_interior%2C_2021_Budat%C3%A9t%C3%A9ny.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AResearch_Institute%2C_greenhouse_interior%2C_2021_Budat%C3%A9t%C3%A9ny.jpg",
+        "credit": "Globetrotter19 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Globetrotter19",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Globetrotter19"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8476",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "scientists-and-inventors",
+      "bundle": "colombia",
+      "description": "El cerebro piensa tan rápido que hace falta un aparato carísimo para agarrarlo en el acto.",
+      "question": "Registra la actividad del cerebro milisegundo a milisegundo con sensores superconductores casi al cero absoluto, y Rodolfo Llinás la usó. ¿Cómo se llama?",
+      "answer": "Magnetoencefalografía",
+      "wrong_answers": [
+        "Electroencefalografía",
+        "Resonancia magnética",
+        "Tomografía computarizada"
+      ],
+      "hints": [
+        "No mide la electricidad directamente con electrodos en el cuero cabelludo.",
+        "Tampoco toma imágenes de los tejidos con ondas de radio, como otro famoso examen.",
+        "Su nombre junta «imán» con «registro del cerebro»."
+      ],
+      "fun_fact": "Los campos magnéticos del cerebro son cientos de millones de veces más débiles que el campo magnético de la Tierra.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Neuron_-_Nerve_Cell_01.png/3840px-Neuron_-_Nerve_Cell_01.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANeuron_-_Nerve_Cell_01.png",
+        "credit": "Doctor Jana · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Doctor Jana",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8477",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "scientists-and-inventors",
+      "bundle": "colombia",
+      "description": "Una bogotana que pone a los átomos a temblar de frío para que trabajen juiciosos.",
+      "question": "La bogotana Ana María Rey, «beca de los genios» MacArthur, estudia átomos enfriados con láser en los aparatos más precisos del mundo. ¿Para qué sirven?",
+      "answer": "Para medir el tiempo",
+      "wrong_answers": [
+        "Para detectar terremotos",
+        "Para observar galaxias",
+        "Para encontrar virus"
+      ],
+      "hints": [
+        "Trabaja en el JILA, en Colorado, un instituto famoso por esos aparatos.",
+        "El GPS de tu celular depende de ellos.",
+        "Son la versión más precisa de lo que llevas en la muñeca."
+      ],
+      "fun_fact": "Los mejores relojes atómicos se atrasarían menos de un segundo en toda la edad del universo.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Laser_Optics_-_Idaho_National_Laboratory.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALaser_Optics_-_Idaho_National_Laboratory.jpg",
+        "credit": "Idaho National Laboratory · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Idaho National Laboratory",
+        "author_url": "https://www.flickr.com/people/30369883@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8478",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "scientists-and-inventors",
+      "bundle": "colombia",
+      "description": "Para escoger dónde aterrizar en Marte, la NASA tuvo que mirar muy, muy hacia atrás en el tiempo.",
+      "question": "El robot Perseverance, en el que trabajó la colombiana Diana Trujillo, aterrizó en el cráter Jezero. ¿Por qué lo eligió la NASA? Porque allí hubo…",
+      "answer": "Un antiguo lago",
+      "wrong_answers": [
+        "Un volcán activo",
+        "Un casquete de hielo",
+        "Un desierto de dunas"
+      ],
+      "hints": [
+        "La NASA buscaba un lugar donde pudo haber vida microscópica hace mucho tiempo.",
+        "Desde órbita se ve un delta, como el que forma un río al desembocar.",
+        "Allí hubo agua quieta hace miles de millones de años."
+      ],
+      "fun_fact": "Perseverance guarda muestras de roca en tubos sellados para que una futura misión pueda traerlas a la Tierra.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Perseverance_Landing_Skycrane.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APerseverance_Landing_Skycrane.jpg",
+        "credit": "NASA · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8479",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "scientists-and-inventors",
+      "bundle": "colombia",
+      "description": "La regla que hace que tu papá revise el calendario antes de sacar el carro.",
+      "question": "En Bogotá y Medellín, según el día de la semana, ciertos carros no pueden andar en las horas de más tráfico. ¿Cómo se llama esa medida?",
+      "answer": "Pico y placa",
+      "wrong_answers": [
+        "Día sin carro",
+        "Ciclovía",
+        "Pare y siga"
+      ],
+      "hints": [
+        "Cambia según el día de la semana.",
+        "Depende de los números que tiene el carro adelante y atrás.",
+        "Su nombre junta la «hora ___» con lo que lleva el número del carro."
+      ],
+      "fun_fact": "Bogotá empezó con el pico y placa en 1998, y luego muchas ciudades colombianas copiaron la idea.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Bogota_Traffic_Jam.JPG/3840px-Bogota_Traffic_Jam.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABogota_Traffic_Jam.JPG",
+        "credit": "Tokota · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Tokota",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tokota"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8480",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "symbols-of-departments-and-cities",
+      "bundle": "colombia",
+      "description": "Nació mirando la Sierra Nevada y el mar al mismo tiempo, como quien no se decide.",
+      "question": "Carlos Vives nació en Santa Marta. ¿Cómo se le dice a alguien de esa ciudad?",
+      "answer": "Samario",
+      "wrong_answers": [
+        "Cartagenero",
+        "Riohachero",
+        "Barranquillero"
+      ],
+      "hints": [
+        "La palabra no se parece tanto al nombre completo de la ciudad.",
+        "Carlos «el Pibe» Valderrama también lo es, y lo dice con orgullo.",
+        "Junta un pedacito de «Santa» con un pedacito de «Marta»."
+      ],
+      "fun_fact": "Santa Marta, fundada en 1525, es la ciudad más antigua de Colombia que sigue en pie.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Bah%C3%ADa_de_Santa_Marta_vista_desde_chalupa.jpg/3840px-Bah%C3%ADa_de_Santa_Marta_vista_desde_chalupa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABah%C3%ADa_de_Santa_Marta_vista_desde_chalupa.jpg",
+        "credit": "StellaInfante · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "StellaInfante",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:StellaInfante&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8481",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "telenovelas",
+      "bundle": "colombia",
+      "description": "Una actriz que cambia de personaje como quien cambia de paso en la pista de baile.",
+      "question": "Soy actriz caleña y también bailarina. Fui Rosario en «La hija del mariachi» y Policarpa Salavarrieta en «La Pola». ¿Quién soy?",
+      "answer": "Carolina Ramírez",
+      "wrong_answers": [
+        "Ana María Orozco",
+        "Paola Rey",
+        "Juliana Galvis"
+      ],
+      "hints": [
+        "Me formé en danza antes de ser actriz.",
+        "Años después protagonicé una serie de reguetón muy vista en Netflix.",
+        "Protagonicé «La reina del flow»."
+      ],
+      "fun_fact": "Antes de la actuación, Carolina Ramírez estudió ballet en Incolballet, el Instituto Colombiano de Ballet de Cali.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/MAdP_FA_2025_Lenka_Mitasova_A.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMAdP_FA_2025_Lenka_Mitasova_A.jpg",
+        "credit": "Mojmir Churavy · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Mojmir Churavy",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mojmir_Churavy"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8482",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "vallenato",
+      "bundle": "colombia",
+      "description": "El instrumento que casi nadie mira en la tarima, pero que todo el mundo siente en la barriga.",
+      "question": "Escucha: este instrumento se sumó al acordeón, la caja y la guacharaca en el vallenato moderno. ¿Cuál es?",
+      "answer": "El bajo eléctrico",
+      "wrong_answers": [
+        "El violín",
+        "La trompeta",
+        "La flauta de millo"
+      ],
+      "hints": [
+        "Suena grave, como un retumbe por debajo de la melodía.",
+        "Se toca pellizcando cuerdas gruesas.",
+        "Se parece a una guitarra, pero más larga y con sonido mucho más grave."
+      ],
+      "fun_fact": "El bajo eléctrico se popularizó en 1951, cuando Leo Fender lanzó su famoso Precision Bass.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Bassline_played_on_a_bass_guitar_using_a_pick.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABassline_played_on_a_bass_guitar_using_a_pick.ogg",
+        "credit": "OVRDRIVN32 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "OVRDRIVN32",
+        "author_url": "https://en.wikipedia.org/wiki/User:OVRDRIVN32"
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Drummer_performs_energetically_on_stage_with_vibrant_lights_in_a_lively_concert_setting_during_the_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADrummer_performs_energetically_on_stage_with_vibrant_lights_in_a_lively_concert_setting_during_the_night.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      }
+    },
+    {
+      "id": "q-8483",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "vallenato",
+      "bundle": "colombia",
+      "description": "Una agrupación tan buena que hasta su nombre suena a joyería.",
+      "question": "¿Qué estilo de vallenato hicieron famoso Rafael Orozco y el Binomio de Oro desde finales de los años 70?",
+      "answer": "Vallenato romántico",
+      "wrong_answers": [
+        "Vallenato protesta",
+        "Vallenato bajero",
+        "Vallenato sabanero"
+      ],
+      "hints": [
+        "No cuenta crónicas del pueblo ni historias de vaqueros.",
+        "Es el que más suena cuando alguien está enamorado... o con tusa.",
+        "Su nombre viene de la misma palabra que «romance»."
+      ],
+      "fun_fact": "El Binomio de Oro nació en 1976 y su nombre viene de la dupla entre el cantante Rafael Orozco y el acordeonero Israel Romero.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Blind_accordion_player.jpg/3840px-Blind_accordion_player.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlind_accordion_player.jpg",
+        "credit": "Tomascastelazo · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Tomascastelazo",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tomascastelazo"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8484",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "rivers-seas-and-islands",
+      "bundle": "colombia",
+      "description": "Una nadadora elegante que lleva puesta una armadura de lujo.",
+      "question": "Mira esta tortuga marina, que anida en playas del Caribe colombiano y tiene pico curvo. ¿Cómo se llama?",
+      "answer": "Tortuga carey",
+      "wrong_answers": [
+        "Tortuga caguama",
+        "Tortuga verde",
+        "Tortuga laúd"
+      ],
+      "hints": [
+        "Está en peligro crítico de extinción",
+        "Las placas de su caparazón se montan unas sobre otras, como tejas",
+        "Con su caparazón se hacían peinetas y marcos de gafas"
+      ],
+      "fun_fact": "La tortuga carey come sobre todo esponjas marinas, incluso algunas que son tóxicas para otros animales.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Tortuga_carey_%28Eretmochelys_imbricata%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-28%2C_DD_56.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATortuga_carey_%28Eretmochelys_imbricata%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-28%2C_DD_56.jpg",
+        "credit": "Diego Delso · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Diego Delso",
+        "author_url": "https://www.wikidata.org/wiki/Q28147777"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8485",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "salsa-and-tropical-music",
+      "bundle": "colombia",
+      "description": "Una fiesta tan buena que lleva décadas repitiéndose cada diciembre.",
+      "question": "Estás en la Feria de Cali, que se celebra cada año del 25 al 30 de diciembre. ¿En qué década se hizo la primera?",
+      "answer": "Los años 50",
+      "wrong_answers": [
+        "Los años 30",
+        "Los años 70",
+        "Los años 90"
+      ],
+      "hints": [
+        "Es más vieja que el Salsódromo.",
+        "Tus abuelos pudieron ir a la primera cuando eran jóvenes.",
+        "Fue a finales de la década en que llegó la televisión a Colombia."
+      ],
+      "fun_fact": "La primera Feria de Cali, en diciembre de 1957, tuvo corridas de toros, cabalgata y reinado.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Sals%C3%B3dromo%2C_Feria_de_Cali%2C_Colombia.JPG/3840px-Sals%C3%B3dromo%2C_Feria_de_Cali%2C_Colombia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASals%C3%B3dromo%2C_Feria_de_Cali%2C_Colombia.JPG",
+        "credit": "Jyon · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jyon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jyon"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8486",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "salsa-and-tropical-music",
+      "bundle": "colombia",
+      "description": "Del corral de la sabana al salón con lámparas de cristal: una mudanza musical.",
+      "question": "El porro nació en las bandas sabaneras de Córdoba y Sucre. ¿Qué director de orquesta lo llevó en los años 40 a los clubes elegantes de Bogotá?",
+      "answer": "Lucho Bermúdez",
+      "wrong_answers": [
+        "Joe Arroyo",
+        "Diomedes Díaz",
+        "Jairo Varela"
+      ],
+      "hints": [
+        "Era clarinetista.",
+        "Su esposa, Matilde Díaz, cantaba con su orquesta.",
+        "Compuso «Carmen de Bolívar» y «Colombia tierra querida»."
+      ],
+      "fun_fact": "Lucho Bermúdez tocaba el clarinete y escribió cientos de canciones, entre porros, cumbias y gaitas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/PaulinBrosClarinetDSBNOLAJazzfest2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APaulinBrosClarinetDSBNOLAJazzfest2008.jpg",
+        "credit": "Flickr photographer dsb nola · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Flickr photographer dsb nola",
+        "author_url": "https://www.flickr.com/people/derek_b/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8487",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "salsa-and-tropical-music",
+      "bundle": "colombia",
+      "description": "Un trombón que se fue de una orquesta famosa a fundar otra igual de famosa.",
+      "question": "Nací en el Chocó, toqué trombón e hice arreglos en Grupo Niche en sus comienzos, y luego fundé Guayacán Orquesta. ¿Quién soy?",
+      "answer": "Alexis Lozano",
+      "wrong_answers": [
+        "Jairo Varela",
+        "Joe Arroyo",
+        "Alberto Barros"
+      ],
+      "hints": [
+        "No fui el fundador ni el director de Grupo Niche.",
+        "Nací en Quibdó, igual que Jairo Varela.",
+        "Mi nombre empieza por Alexis."
+      ],
+      "fun_fact": "Guayacán Orquesta es la de «Oiga, mire, vea», que se volvió casi un himno de Cali.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Juanchi_consu_Bongoo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJuanchi_consu_Bongoo.jpg",
+        "credit": "GMEMOS39 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "GMEMOS39",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:GMEMOS39&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8488",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "sayings-and-expressions",
+      "bundle": "colombia",
+      "description": "Un dicho que salió de la finca y se quedó a vivir en el colegio.",
+      "question": "Vivo en la finca, pongo huevos y cuido a mis pollitos. Si alguien le tiene miedo a todo, le dicen que es como yo. ¿Qué soy?",
+      "answer": "La gallina",
+      "wrong_answers": [
+        "La vaca",
+        "El pato",
+        "El caballo"
+      ],
+      "hints": [
+        "Tengo plumas y no sé volar muy alto.",
+        "Con mi caldo te curan la gripa.",
+        "Soy la esposa del gallo."
+      ],
+      "fun_fact": "Las gallinas no tienen nada de cobardes: una mamá gallina defiende a sus pollitos a picotazos.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Mid_Devon_%2C_Holwell_Farm_%5E_Countryside_-_geograph.org.uk_-_1953489.jpg/3840px-Mid_Devon_%2C_Holwell_Farm_%5E_Countryside_-_geograph.org.uk_-_1953489.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMid_Devon_%2C_Holwell_Farm_%5E_Countryside_-_geograph.org.uk_-_1953489.jpg",
+        "credit": "Lewis Clarke · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Lewis Clarke",
+        "author_url": "https://www.geograph.org.uk/profile/11775"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8489",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "sayings-and-expressions",
+      "bundle": "colombia",
+      "description": "Una orden que se oye en todo matrimonio colombiano después de la torta.",
+      "question": "Completa: si en la fiesta te gritan «¡a mover el esqueleto!», te están pidiendo que…",
+      "answer": "…te pongas a bailar",
+      "wrong_answers": [
+        "…te vayas a dormir",
+        "…te sirvas más torta",
+        "…recojas los platos"
+      ],
+      "hints": [
+        "Hay música sonando.",
+        "Se hace en la pista.",
+        "Salsa, cumbia o vallenato sirven para eso."
+      ],
+      "fun_fact": "Un adulto tiene 206 huesos, y al bailar pone a trabajar buena parte de ellos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Party_Tent.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AParty_Tent.JPG",
+        "credit": "Don Williams · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Don Williams",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8490",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "sayings-and-expressions",
+      "bundle": "colombia",
+      "description": "Las abuelas lo dicen más que «¿ya comió?».",
+      "question": "La abuela lo dice cuando te hace llevar sombrilla, saco y casco: «más vale prevenir que lamentar». ¿Qué quiere decir?",
+      "answer": "Que es mejor cuidarse antes de que pase algo",
+      "wrong_answers": [
+        "Que llorar ayuda cuando todo sale mal",
+        "Que nunca hay que preocuparse por nada",
+        "Que los regaños no sirven para nada"
+      ],
+      "hints": [
+        "Habla de pensar antes de que llegue el problema.",
+        "Es como llevar sombrilla por si llueve.",
+        "Mejor el cuidado de antes que el arrepentimiento de después."
+      ],
+      "fun_fact": "Muchos idiomas tienen un refrán parecido; en inglés dicen «better safe than sorry», más o menos «mejor seguro que arrepentido».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Rainy_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARainy_night.jpg",
+        "credit": "Osalberi · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Osalberi",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Osalberi&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8491",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "sayings-and-expressions",
+      "bundle": "colombia",
+      "description": "Un personaje de las calles colombianas que nunca necesitó GPS.",
+      "question": "Trabajo en la calle con un trapo en la mano. Cuando vas a parquear, te hago señas y grito «¡siga, siga, siga!». ¿Quién soy?",
+      "answer": "El cuidador de carros",
+      "wrong_answers": [
+        "El vendedor de helados",
+        "El cartero del barrio",
+        "El peluquero de la esquina"
+      ],
+      "hints": [
+        "Me encuentras afuera de tiendas y restaurantes.",
+        "Al final me das unas monedas.",
+        "Te digo cuándo parar antes de que choques."
+      ],
+      "fun_fact": "En Colombia «siga» también es la forma amable de decir «entre» cuando alguien llega a tu casa.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Estacionamiento_Carrera_6.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEstacionamiento_Carrera_6.JPG",
+        "credit": "Peter Angritt · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Peter Angritt",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mrtony77"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8492",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "sayings-and-expressions",
+      "bundle": "colombia",
+      "description": "Un refrán con pronóstico del clima incluido.",
+      "question": "Llueve el día del paseo y tu mamá dice «al mal tiempo, buena cara». ¿Para qué lo dice?",
+      "answer": "Para que te animes aunque salga mal",
+      "wrong_answers": [
+        "Para que te pongas el impermeable",
+        "Para avisar que se cancela el paseo",
+        "Para regañarte por haberte mojado"
+      ],
+      "hints": [
+        "No tiene nada que ver con la ropa.",
+        "Habla de la actitud.",
+        "Es como decir: sonríe aunque las cosas no salgan como querías."
+      ],
+      "fun_fact": "Este refrán llegó de España y se usa en toda América Latina, no solo cuando llueve.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Karagol_2.jpg/3840px-Karagol_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKaragol_2.jpg",
+        "credit": "Belenyaka · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Belenyaka",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Belenyaka&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8493",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "scientists-and-inventors",
+      "bundle": "colombia",
+      "description": "Una herencia de familia que nadie quiere recibir y que los científicos persiguen hace más de 30 años.",
+      "question": "Una mutación del gen PSEN1 causa alzhéimer antes de los 50 años en miles de parientes, estudiados por Francisco Lopera. ¿Dónde viven?",
+      "answer": "Antioquia",
+      "wrong_answers": [
+        "Boyacá",
+        "Valle del Cauca",
+        "Santander"
+      ],
+      "hints": [
+        "Es la región colombiana con más familias afectadas por esa mutación en el mundo.",
+        "El neurólogo Francisco Lopera trabajó en la universidad pública de esa región.",
+        "A la mutación le pusieron el apodo de la gente de Medellín."
+      ],
+      "fun_fact": "Los científicos ven a esas familias como una oportunidad única para probar tratamientos que frenen el alzhéimer antes de que aparezcan los síntomas.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Brain_scan_%2815962375199%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABrain_scan_%2815962375199%29.jpg",
+        "credit": "US Air Force from USA · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "US Air Force from USA",
+        "author_url": "https://www.flickr.com/people/39513508@N06"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8494",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "scientists-and-inventors",
+      "bundle": "colombia",
+      "description": "Antes de las redes sociales, las noticias de Santafé llegaban en papel y con tinta fresca.",
+      "question": "Nació en Bayamo, Cuba, dirigió la Biblioteca Real de Santafé y fundó el Papel Periódico de Santafé de Bogotá. ¿Quién fue?",
+      "answer": "Manuel del Socorro Rodríguez",
+      "wrong_answers": [
+        "Antonio Nariño",
+        "Francisco José de Caldas",
+        "Jorge Tadeo Lozano"
+      ],
+      "hints": [
+        "Llegó a Santafé como bibliotecario, no como político ni militar.",
+        "Se le considera el padre del periodismo colombiano.",
+        "Su segundo nombre recuerda a una advocación de la Virgen."
+      ],
+      "fun_fact": "La Biblioteca Real que dirigió es la antecesora de la Biblioteca Nacional de Colombia.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Old_printing_press_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_printing_press_-_panoramio.jpg",
+        "credit": "Roman Savulyak · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Roman Savulyak",
+        "author_url": "https://web.archive.org/web/20161012174516/http://www.panoramio.com/user/2350947?with_photo_id=17786465"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8495",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "scientists-and-inventors",
+      "bundle": "colombia",
+      "description": "Una científica que estudió a las familias colombianas y ahora anda en la billetera de todas ellas.",
+      "question": "Al pagar con un billete nuevo de 10 000 pesos, ves la cara de la antropóloga que estudió las familias de las regiones de Colombia. ¿Quién es?",
+      "answer": "Virginia Gutiérrez de Pineda",
+      "wrong_answers": [
+        "Débora Arango",
+        "Policarpa Salavarrieta",
+        "Ángela Restrepo"
+      ],
+      "hints": [
+        "Fue una de las primeras antropólogas del país.",
+        "Escribió «Familia y cultura en Colombia».",
+        "Nació en El Socorro, Santander."
+      ],
+      "fun_fact": "Su libro «Familia y cultura en Colombia», de 1968, mostró que la familia cambia muchísimo de una región del país a otra.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Moneda_200_pesos_colombianos_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMoneda_200_pesos_colombianos_2016.jpg",
+        "credit": "Rjcastillo · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rjcastillo",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rjcastillo"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8496",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "symbols-of-departments-and-cities",
+      "bundle": "colombia",
+      "description": "Un personaje que, apenas te saluda, ya te está diciendo de dónde es y por qué su tierra es la mejor.",
+      "question": "Nací en la capital de Norte de Santander, junto al puente que cruza a Venezuela, y me encantan los pasteles de garbanzo. ¿Qué soy?",
+      "answer": "Un cucuteño",
+      "wrong_answers": [
+        "Un bumangués",
+        "Un tunjano",
+        "Un pamplonés"
+      ],
+      "hints": [
+        "Mi ciudad es una de las más calurosas de los Santanderes.",
+        "Al lado de mi ciudad se reunió en 1821 el congreso que creó la Gran Colombia.",
+        "Mi ciudad empieza con «Cú»."
+      ],
+      "fun_fact": "En la Villa del Rosario, pegada a Cúcuta, se escribió en 1821 la Constitución de la Gran Colombia.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Ordinary_chickpeas_in_a_ceramic_bowl.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOrdinary_chickpeas_in_a_ceramic_bowl.jpg",
+        "credit": "AlixSaz · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "AlixSaz",
+        "author_url": "https://commons.wikimedia.org/wiki/User:AlixSaz"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8498",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "symbols-of-departments-and-cities",
+      "bundle": "colombia",
+      "description": "Una ciudad que existe porque alguien regaló un lote, y no precisamente para un parqueadero.",
+      "question": "¿Quién donó en 1733 las tierras sobre las que se fundó la ciudad de Cúcuta?",
+      "answer": "Juana Rangel de Cuéllar",
+      "wrong_answers": [
+        "Policarpa Salavarrieta",
+        "Manuela Beltrán",
+        "Antonia Santos"
+      ],
+      "hints": [
+        "Las tierras donadas quedaban en el valle del río Pamplonita.",
+        "Las regaló para que los vecinos levantaran una iglesia dedicada a San José.",
+        "Por eso se dice que Cúcuta la fundó una mujer."
+      ],
+      "fun_fact": "La donación se firmó el 17 de junio de 1733, fecha que se toma como fundación de Cúcuta.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/C%C3%BAcuta_desde_Torcoroma%2C_C%C3%BAcuta.jpeg/3840px-C%C3%BAcuta_desde_Torcoroma%2C_C%C3%BAcuta.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AC%C3%BAcuta_desde_Torcoroma%2C_C%C3%BAcuta.jpeg",
+        "credit": "EEIM · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "EEIM",
+        "author_url": "https://commons.wikimedia.org/wiki/User:EEIM"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8499",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "telenovelas",
+      "bundle": "colombia",
+      "description": "Una canción que hizo suspirar a medio país frente al televisor a la hora de la comida.",
+      "question": "¿De qué telenovela colombiana es la canción de entrada «¿Quién es ese hombre?»?",
+      "answer": "Pasión de gavilanes",
+      "wrong_answers": [
+        "Yo soy Betty, la fea",
+        "Café con aroma de mujer",
+        "Pedro el escamoso"
+      ],
+      "hints": [
+        "Se estrenó en 2003 y se volvió famosa en muchos países.",
+        "Cuenta la historia de tres hermanos que llegan a una hacienda para vengarse.",
+        "Los hermanos Reyes se enamoran de las hermanas Elizondo."
+      ],
+      "fun_fact": "Los hermanos Reyes de la telenovela eran tres: Juan, Óscar y Franco.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Horses_and_mules_grazing_on_coastal_bermuda_pasture_on_Walking_M_Ranch_in_Baylor_County_near_Seymour%2C_Texas._%2824999220722%29.jpg/3840px-Horses_and_mules_grazing_on_coastal_bermuda_pasture_on_Walking_M_Ranch_in_Baylor_County_near_Seymour%2C_Texas._%2824999220722%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHorses_and_mules_grazing_on_coastal_bermuda_pasture_on_Walking_M_Ranch_in_Baylor_County_near_Seymour%2C_Texas._%2824999220722%29.jpg",
+        "credit": "USDA NRCS Texas · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "USDA NRCS Texas",
+        "author_url": "https://www.flickr.com/people/139446213@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8500",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "telenovelas",
+      "bundle": "colombia",
+      "description": "Un libretista que sabía que la venganza es un plato que se sirve en muchos capítulos.",
+      "question": "Julio Jiménez escribió «Las aguas mansas», la telenovela que luego se rehízo como «Pasión de gavilanes». ¿En qué década se estrenó?",
+      "answer": "Los años noventa",
+      "wrong_answers": [
+        "Los años setenta",
+        "Los años ochenta",
+        "Los años 2000"
+      ],
+      "hints": [
+        "Fue antes de que Caracol y RCN fueran canales privados.",
+        "Su remake, «Pasión de gavilanes», salió unos nueve años después.",
+        "Salió al aire a mediados de esa década, en 1994."
+      ],
+      "fun_fact": "Julio Jiménez también escribió «En cuerpo ajeno», que se rehízo en Estados Unidos como «El cuerpo del deseo».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Vintage_television_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVintage_television_%28Unsplash%29.jpg",
+        "credit": "Sven Scheuermeier sveninho · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Sven Scheuermeier sveninho",
+        "author_url": "https://unsplash.com/@sveninho"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8501",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "telenovelas",
+      "bundle": "colombia",
+      "description": "Un escándalo tan viejo que los chismosos de la época escribían con pluma de ganso.",
+      "question": "La serie «Los pecados de Inés de Hinojosa» (1988) se basó en una mujer real de Tunja. ¿En qué siglo vivió?",
+      "answer": "El siglo XVI",
+      "wrong_answers": [
+        "El siglo XVII",
+        "El siglo XVIII",
+        "El siglo XIX"
+      ],
+      "hints": [
+        "Era la época de la Colonia española.",
+        "Tunja era entonces una ciudad recién fundada.",
+        "Su historia ocurrió pocas décadas después de que Gonzalo Suárez Rendón fundara Tunja en 1539."
+      ],
+      "fun_fact": "Su historia ya aparecía en «El carnero», la crónica que Juan Rodríguez Freyle escribió en el siglo XVII.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Mezcla_entre_arquitectura_moderna%2C_republicana_y_colonial_%22Tunja%22_05.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMezcla_entre_arquitectura_moderna%2C_republicana_y_colonial_%22Tunja%22_05.JPG",
+        "credit": "Cineltunjo · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Cineltunjo",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Cineltunjo&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8502",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "telenovelas",
+      "bundle": "colombia",
+      "description": "Los productores de telenovelas se comen las uñas la mañana después de cada estreno por culpa de esto.",
+      "question": "Se mide en puntos cada noche, si es muy bajo pueden sacar una telenovela del aire, y su nombre viene del inglés. ¿Qué es?",
+      "answer": "El rating",
+      "wrong_answers": [
+        "El libreto",
+        "El cabezote",
+        "El casting"
+      ],
+      "hints": [
+        "Al día siguiente sale en las noticias de farándula.",
+        "Caracol y RCN se lo pelean cada noche.",
+        "Es la medida de sintonía de la televisión."
+      ],
+      "fun_fact": "«Yo soy Betty, la fea» logró algunos de los ratings más altos de la historia de la televisión colombiana.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Karen_Refugees_become_Homeowners_%2820120718-RD-LSC-1163%29.jpg/3840px-Karen_Refugees_become_Homeowners_%2820120718-RD-LSC-1163%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKaren_Refugees_become_Homeowners_%2820120718-RD-LSC-1163%29.jpg",
+        "credit": "USDAgov · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "USDAgov",
+        "author_url": "https://www.flickr.com/people/usdagov/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8503",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "tv-shows-and-series",
+      "bundle": "colombia",
+      "description": "Un ejecutivo que vende de todo en Ecomoda, menos lealtad a las secretarias.",
+      "question": "En «Yo soy Betty, la fea», ¿cómo se llama el vicepresidente comercial de Ecomoda, mejor amigo de Armando Mendoza?",
+      "answer": "Mario Calderón",
+      "wrong_answers": [
+        "Nicolás Mora",
+        "Hugo Lombardi",
+        "Daniel Valencia"
+      ],
+      "hints": [
+        "Hace parte de la junta directiva de Ecomoda y casi siempre está del lado de Armando.",
+        "Lo interpretó el actor Ricardo Vélez.",
+        "Su nombre es el mismo del plomero bigotudo de Nintendo."
+      ],
+      "fun_fact": "«Yo soy Betty, la fea» ha tenido versiones en decenas de países, de México a India, y llegó a los Récords Guinness como la telenovela más exitosa.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Fashion_Sketch_Design.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFashion_Sketch_Design.jpg",
+        "credit": "Linda Alfiannisa · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Linda Alfiannisa",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Linda_Alfiannisa&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8504",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "vallenato",
+      "bundle": "colombia",
+      "description": "Una parranda donde el acordeón no descansa, el sancocho no se acaba y nadie se acuerda de mirar la hora.",
+      "question": "Aparezco en medio de la canción: sobre el acordeón, el cantante nombra a amigos, familiares y hasta al que pagó la parranda. ¿Qué soy?",
+      "answer": "El saludo",
+      "wrong_answers": [
+        "El estribillo",
+        "La piquería",
+        "El coro"
+      ],
+      "hints": [
+        "No hago parte de la letra original de la canción.",
+        "Hay quienes pagan para que los mencionen en mí.",
+        "Es lo mismo que haces cuando le dices «¡quiubo!» a alguien."
+      ],
+      "fun_fact": "Algunos saludos vallenatos se volvieron tan famosos que la gente se los sabe de memoria, igual que la letra de la canción.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Jimmy_Zambrano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJimmy_Zambrano.jpg",
+        "credit": "Alizambranof · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Alizambranof",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Alizambranof&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8505",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "vallenato",
+      "bundle": "colombia",
+      "description": "Una familia con poderes mágicos y, aun así, lo más mágico fue la banda sonora.",
+      "question": "Suena en la película «Encanto» de Disney, la canta Carlos Vives y mezcla vallenato con cumbia. ¿Qué canción es?",
+      "answer": "Colombia, mi encanto",
+      "wrong_answers": [
+        "No se habla de Bruno",
+        "Dos oruguitas",
+        "La familia Madrigal"
+      ],
+      "hints": [
+        "Suena mientras la gente del pueblo baila por las calles.",
+        "Tiene acordeón, como los vallenatos.",
+        "Su título lleva el nombre del país donde pasa la película."
+      ],
+      "fun_fact": "La canción fue escrita por Lin-Manuel Miranda, el mismo que compuso el resto de canciones de «Encanto».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Colombia-wegen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AColombia-wegen.jpg",
+        "credit": "Silasintveld · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Silasintveld",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Silasintveld&action=edit&redlink=1"
       },
       "background": null
     }

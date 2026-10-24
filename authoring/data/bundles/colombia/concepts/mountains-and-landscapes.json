@@ -12,7 +12,8 @@
     "Cañones, cascadas y lagunas",
     "Pisos térmicos y climas",
     "Paisaje Cultural Cafetero y campo",
-    "Rocas, cuevas y formaciones curiosas"
+    "Rocas, cuevas y formaciones curiosas",
+    "Ríos, ciénagas y humedales"
   ],
   "axis_fit": {
     "move": {
@@ -436,6 +437,23 @@
       "name": "Estalactita",
       "facet": "Rocas, cuevas y formaciones curiosas",
       "known_at": 7
+    },
+    {
+      "name": "Termales de Santa Rosa de Cabal",
+      "facet": "Volcanes y nevados",
+      "known_at": 7
+    },
+    {
+      "name": "Humedales de Bogotá",
+      "facet": "Ríos, ciénagas y humedales",
+      "known_at": 9
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-24",
+      "added": 2,
+      "unused": 29
     }
   ]
 }

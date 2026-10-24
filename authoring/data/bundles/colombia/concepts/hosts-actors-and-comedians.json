@@ -222,7 +222,8 @@
     {
       "name": "Juan Felipe Cadavid",
       "facet": "Narradores y comentaristas deportivos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Datos poco seguros y demasiado oscuro."
     },
     {
       "name": "Antonio Casale",
@@ -328,7 +329,8 @@
     {
       "name": "Paula Dávila",
       "facet": "Personajes célebres de telenovelas y series",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: No logro identificar con seguridad este personaje."
     },
     {
       "name": "Germán",
@@ -543,7 +545,8 @@
     {
       "name": "Guillermo Díaz Salamanca",
       "facet": "Personajes cómicos, imitadores y sátira política",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Demasiado oscuro y sin datos verificables seguros."
     },
     {
       "name": "Nicolás Arrieta",

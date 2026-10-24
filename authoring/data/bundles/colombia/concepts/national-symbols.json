@@ -146,7 +146,8 @@
     {
       "name": "Cesó la horrible noche",
       "facet": "El himno nacional y su letra",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: El autor de la letra (Núñez) y el significado del verso (el amanecer) ya están en el pool."
     },
     {
       "name": "Primera estrofa",
@@ -281,7 +282,8 @@
     {
       "name": "Carroñero",
       "facet": "Cóndor, orquídea y palma de cera",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Ya se preguntó qué son la hiena, el buitre y el cóndor (carroñeros); otra pregunta repetiría el mismo dato."
     },
     {
       "name": "Especie en peligro de extinción",
@@ -347,7 +349,8 @@
     {
       "name": "Desfile militar",
       "facet": "Fechas y fiestas patrias",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: El desfile militar del 20 de julio ya tiene su adivinanza; las otras opciones serían triviales o forzadas."
     },
     {
       "name": "Día de la Raza",
@@ -544,7 +547,8 @@
     {
       "name": "Bandera en las casas",
       "facet": "Protocolo y uso de los símbolos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: Colgar banderas en las casas en julio y agosto ya está en el pool (Fiestas patrias)."
     },
     {
       "name": "Saludo militar",
@@ -659,7 +663,8 @@
     {
       "name": "Bandera de Antioquia",
       "facet": "Banderas y escudos departamentales",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: Ya se preguntaron los colores de la bandera; no estoy seguro de qué significa cada color."
     },
     {
       "name": "Bandera de Cundinamarca",

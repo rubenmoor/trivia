@@ -65,7 +65,8 @@
     {
       "name": "El Chuzalongo",
       "facet": "Espantos del monte y la selva",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: La leyenda del Chuzalongo tiene contenido sexual y no es apta para el público familiar."
     },
     {
       "name": "El Gritón",
@@ -233,7 +234,8 @@
     {
       "name": "Plato (Magdalena)",
       "facet": "Personas que se vuelven animales",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: El dato principal de Plato (el pueblo del Hombre Caimán) ya está preguntado, y el espanto lo cubre la pregunta del espacio 6 de este lote."
     },
     {
       "name": "El Bufeo colorado",
@@ -460,6 +462,68 @@
       "facet": "Palabras y dichos de espantos",
       "known_at": 6,
       "retired": "unaskable: El significado del dicho es obvio; con estas opciones saldría una pregunta de relleno."
+    },
+    {
+      "name": "La Bolefuego",
+      "facet": "Espantos de caminos y llanuras",
+      "known_at": 8
+    },
+    {
+      "name": "La Monja sin cabeza",
+      "facet": "Almas en pena y aparecidos",
+      "known_at": 8
+    },
+    {
+      "name": "Velorio",
+      "facet": "Almas en pena y aparecidos",
+      "known_at": 6
+    },
+    {
+      "name": "Los Trenzadores",
+      "facet": "Duendes, brujas y hechiceros",
+      "known_at": 10
+    },
+    {
+      "name": "Libro de San Cipriano",
+      "facet": "Duendes, brujas y hechiceros",
+      "known_at": 11
+    },
+    {
+      "name": "Palacio de la Inquisición de Cartagena",
+      "facet": "Duendes, brujas y hechiceros",
+      "known_at": 9
+    },
+    {
+      "name": "Sué y Chía",
+      "facet": "Seres de leyendas indígenas",
+      "known_at": 10
+    },
+    {
+      "name": "Sábila detrás de la puerta",
+      "facet": "Contras, rezos y agüeros contra espantos",
+      "known_at": 7
+    },
+    {
+      "name": "Muerte de Joselito Carnaval",
+      "facet": "Fiestas y desfiles de mitos y leyendas",
+      "known_at": 8
+    },
+    {
+      "name": "Agüerista",
+      "facet": "Palabras y dichos de espantos",
+      "known_at": 8
+    },
+    {
+      "name": "Ánima",
+      "facet": "Palabras y dichos de espantos",
+      "known_at": 7
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-24",
+      "added": 11,
+      "unused": 36
     }
   ]
 }

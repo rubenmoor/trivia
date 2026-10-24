@@ -216,7 +216,8 @@
     {
       "name": "Longo",
       "facet": "Habla pastusa y nariñense",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: En Ecuador «longo» es un insulto contra los indígenas; no es apropiado para un juego familiar."
     },
     {
       "name": "Guambra",
@@ -520,15 +521,68 @@
     {
       "name": "Tenés",
       "facet": "Voseo, tuteo y ustedeo",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: El pool ya tiene «vos tenés» y varias preguntas sobre el origen del voseo; no queda un dato nuevo."
     },
     {
       "name": "Sos",
       "facet": "Voseo, tuteo y ustedeo",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Ya están en el pool el significado de «sos» (la analogía «tú eres»/«vos sos») y las ciudades donde se usa el voseo."
     },
     {
       "name": "Querés",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 7,
+      "retired": "used_up: Las preguntas sobre quién usa el voseo o en qué ciudad se oye ya están en el pool (caleño, paisa, rolos, Cartagena)."
+    },
+    {
+      "name": "Atembado",
+      "facet": "Habla paisa y del Eje Cafetero",
+      "known_at": 11
+    },
+    {
+      "name": "Qué más pues",
+      "facet": "Habla paisa y del Eje Cafetero",
+      "known_at": 5
+    },
+    {
+      "name": "Chino (niño)",
+      "facet": "Habla rola y bogotana",
+      "known_at": 5
+    },
+    {
+      "name": "Mano (hermano)",
+      "facet": "Habla santandereana",
+      "known_at": 7
+    },
+    {
+      "name": "Mute",
+      "facet": "Habla santandereana",
+      "known_at": 10
+    },
+    {
+      "name": "Pepitoria",
+      "facet": "Habla santandereana",
+      "known_at": 11
+    },
+    {
+      "name": "Siga (pase adelante)",
+      "facet": "Habla cundiboyacense",
+      "known_at": 7
+    },
+    {
+      "name": "Mirá",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 5
+    },
+    {
+      "name": "Tomá",
+      "facet": "Voseo, tuteo y ustedeo",
+      "known_at": 6
+    },
+    {
+      "name": "Podés",
       "facet": "Voseo, tuteo y ustedeo",
       "known_at": 7
     }
@@ -538,6 +592,11 @@
       "date": "2026-10-24",
       "added": 9,
       "unused": 35
+    },
+    {
+      "date": "2026-10-24",
+      "added": 10,
+      "unused": 32
     }
   ]
 }

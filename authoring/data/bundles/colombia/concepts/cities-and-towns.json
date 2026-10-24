@@ -87,7 +87,8 @@
     {
       "name": "Ciudad Sorpresa",
       "facet": "Apodos y gentilicios de ciudades",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: No estoy seguro de qué ciudad lleva el apodo «Ciudad Sorpresa»."
     },
     {
       "name": "Ciudad Musical",
@@ -102,7 +103,8 @@
     {
       "name": "Torre del Reloj",
       "facet": "Monumentos y lugares emblemáticos urbanos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: El pool ya pregunta por la foto de la Torre del Reloj; las opciones de quién o de qué grupo no tienen sentido aquí."
     },
     {
       "name": "Catedral de Sal",
@@ -385,6 +387,16 @@
       "date": "2026-10-24",
       "added": 0,
       "unused": 20
+    },
+    {
+      "date": "2026-10-24",
+      "added": 0,
+      "unused": 20
+    },
+    {
+      "date": "2026-10-24",
+      "added": 0,
+      "unused": 15
     }
   ]
 }
