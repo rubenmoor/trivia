@@ -102,7 +102,8 @@
     {
       "name": "Egan Bernal",
       "facet": "Deportistas que hicieron historia",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Tour win and sport already asked; the record/purpose options only give forced questions at this level"
     },
     {
       "name": "Nairo Quintana",
@@ -117,7 +118,8 @@
     {
       "name": "Mariana Pajón",
       "facet": "Deportistas que hicieron historia",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: BMX and both golds are already in the riddle; a photo of a BMX bike would repeat it"
     },
     {
       "name": "Caterine Ibargüen",
@@ -152,7 +154,8 @@
     {
       "name": "Juan Pablo Montoya",
       "facet": "Deportistas que hicieron historia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The Indy 500 question already shows that he is a racing driver; nothing left at this level"
     },
     {
       "name": "Luis Díaz",
@@ -192,7 +195,8 @@
     {
       "name": "Maluma",
       "facet": "Músicos y cantantes populares",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Medellín, nickname and Chantaje already used; the options left would give filler questions"
     },
     {
       "name": "Feid",
@@ -650,7 +654,8 @@
     {
       "name": "Frisby",
       "facet": "Personajes de marcas y publicidad",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: An odd-one-out on the menu would be ambiguous; no clean fact for children"
     },
     {
       "name": "Kokoriko",
@@ -665,12 +670,14 @@
     {
       "name": "Crem Helado",
       "facet": "Personajes de marcas y publicidad",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: The brand name already says it sells ice cream; no fair question at difficulty 1"
     },
     {
       "name": "Super Ricas",
       "facet": "Personajes de marcas y publicidad",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: Snack brand: no character or fact a child can answer without the brand name or logo giving it away"
     },
     {
       "name": "Carlos Ardila Lülle",

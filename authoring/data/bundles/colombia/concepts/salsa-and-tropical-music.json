@@ -277,7 +277,8 @@
     {
       "name": "Porro tapao",
       "facet": "Porro y bandas sabaneras",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: La diferencia técnica con el palitiao no se puede preguntar bien en opción múltiple con estas opciones."
     },
     {
       "name": "Fandango sabanero",
@@ -460,7 +461,8 @@
     {
       "name": "Antonio Fuentes",
       "facet": "Sellos, viejotecas y salsotecas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "used_up: El dato principal (fundó Discos Fuentes en Cartagena y la llevó a Medellín) ya está preguntado; las opciones con foto no sirven."
     },
     {
       "name": "Codiscos",

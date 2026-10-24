@@ -473,7 +473,8 @@
     {
       "name": "Liquen",
       "facet": "Flora y árboles de los parques",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: Las adivinanzas sobre el liquen (hongo más alga) ya se preguntaron."
     },
     {
       "name": "Árbol de caucho",
@@ -619,7 +620,8 @@
     {
       "name": "Avistamiento de aves",
       "facet": "Turismo, senderos y reglas del parque",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: Las aves en Minca ya se preguntaron; cualquier opción se solaparía."
     },
     {
       "name": "Careteo",

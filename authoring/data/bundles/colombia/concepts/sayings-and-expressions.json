@@ -193,7 +193,8 @@
     {
       "name": "Con mucho gusto",
       "facet": "Expresiones de saludo y despedida",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: El pool ya tiene la pregunta de que «con mucho gusto» equivale a «de nada»; una pregunta de cuál no pertenece repetiría ese dato."
     },
     {
       "name": "¿Bien o qué?",
@@ -243,7 +244,8 @@
     {
       "name": "Plata",
       "facet": "Dichos sobre la plata",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: El pool ya tiene ocho preguntas sobre la plata (platal, pelado, macuquina, agüeros); no queda un dato nuevo que encaje en estas opciones."
     },
     {
       "name": "La plata no da la felicidad",
@@ -516,7 +518,8 @@
     {
       "name": "Rumba",
       "facet": "Expresiones de fiesta y parranda",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Ya está la pregunta de «rumbear»; preguntar por «rumba» o «rumbero» se responde con ese mismo dato."
     },
     {
       "name": "Mover el esqueleto",
