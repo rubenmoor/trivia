@@ -1,6 +1,6 @@
 # 16 — Content Target for Release
 
-**Status:** target decided (D-75); CT-2, CT-4 done; CT-3, CT-5 open (S4)
+**Status:** target decided (D-75); CT-2, CT-4, CT-5 done; CT-3 open (S4)
 
 Part of the Steam plan ([11](11-steam.md)). The release target is set per question locale (D-75; `en`, `es`, `es-ES`, `de` since D-107): buyers judge a trivia game by how long it lasts before questions repeat, and by how often an answer is wrong.
 
@@ -36,7 +36,17 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per questi
 ## Quality bar
 - Every batch: LLM audit and blind human spot check (D-56).
 - Family pool (`base`, milestone 1, pm decision 2): human spot check of 30 random questions per batch (plan 16 tooling), ≥ 90 % agreement with the LLM review in each of the last two batches; plus 5000 approved, every difficulty at its target, the last two batches pass plan 15's health thresholds, `qgen validate` clean. Checked by `qgen report --exit-check`.
-- Release bar and back-audit of the pre-D-56 pool (1136 approved): pm plan 57; release bar: pm decision 15.
+- Release bar (D-79, pm decision 15): `quality.spot_check_size` 30, `quality.min_agreement` 0.9 in `targets.json`, D-56's numbers; `qgen report --qc` row "release". Applies to drafted batches (`base` in any source language, regional bundles) and back-audit slices; translation runs (`tr-*`) have no spot check and no release row (milestone 9, 2026-10-16): a translation counts through its source question's batch. Reported only, stops nothing (decision 414).
+- Back-audit of the pre-D-56 pool (pm plan 57; pm decision 415: all, slices of 200; `qgen audit --backlog`, opus, `authoring/reports/backaudit-<k>.md`): 1039 audited, 99 major findings (9.5 %), $51.49 (≈ $0.050 per question); nothing stays unaudited. All six spot checks are pending, so no slice has a release row yet; they stay the developer's at `trivia-release-check`.
+
+| Slice | Size | Batches | Major (flagged) | Cost | Spot check | Release row |
+|---|---|---|---|---|---|---|
+| backaudit-1 | 100 | pilot 73, first-120 27 | 19 (19 %) | $3.77 | pending (decision 203) | spot check pending |
+| backaudit-2 | 200 | first-120 87, batch-3 107, batch-4 6 | 16 (8 %) | $10.04 | pending (decision 419) | spot check pending |
+| backaudit-3 | 200 | batch-4 89, batch-5 75, batch-6 36 | 19 (10 %) | $9.88 | pending (decision 420) | spot check pending |
+| backaudit-4 | 200 | batch-6 41, batch-7 159 | 12 (6 %) | $10.25 | pending (decision 421) | spot check pending |
+| backaudit-5 | 200 | batch-7 200 | 23 (12 %) | $10.49 | pending (decision 422) | spot check pending |
+| backaudit-6 | 139 | batch-7 139 | 10 (7 %) | $7.06 | pending (decision 423) | spot check pending |
 - LLM-reviewed questions (D-33) are allowed, but the AI disclosure (17) must describe the process honestly.
 - After release: «Reportar pregunta» (MD-6) plus a manual channel (ST-5) feeds fixes into patches.
 - Patches (ST-5, [`11`](11-steam.md) "Content updates (ST-5)"): new approved questions per language, fixed questions, dropped ones by status; monthly, only if ≥ 100 new approved per launch language or a reported fix waits; hotfixes any time (decision 96).
@@ -55,6 +65,6 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per questi
 - [x] CT-2 `qgen.py report --simulate` on the engine: games per new player per language, region, mode and age group; information only (D-75). (2026-10-12, task 412: `authoring/tools/engine.py`, `qgen.py` `report --simulate`; default matrix 56 s; es today: adults typical ≈ 68 solo games, strong 28; exit 1: es 1136/5000, en/de no pool.)
 - [ ] CT-3 Cost estimate per question (draft → approved, and per translation) from `costs.log`; budget for the release.
 - [x] CT-4 Generation plan by gap: which difficulties and subcategories need the most, batch by batch. *2026-10-12, task 462 (D-84): deficits per locale + `es` source shortfall (`targets.py`), read by `draft` and the subcategory ranking; `qgen report --locale L`, `--simulate`'s target check and `--cost` use them. `--translate`'s weight: plan 66 follow-up. Source shortfall replaced by D-107 (English drafting by the four locales' deficits; plan 148 task 1236).*
-- [ ] CT-5 Quality sampling: spot-check size and error limit per batch; `qgen.py` support for drawing the sample.
+- [x] CT-5 Quality sampling: spot-check size and error limit per batch; `qgen.py` support for drawing the sample. *2026-10-24, plan 57: bar 30 / ≥ 90 %, back-audit 1039 questions, 99 major (9.5 %), $51.49; spot checks pending.*
   - Family pool: closed 2026-10-11 (pm decision 2: 30 per batch, ≥ 90 % agreement; `qgen report --exit-check`). Open for the public release: pm plan 57 (release bar, back-audit).
   - Release bar: D-79 = D-56's numbers (pm decision 15); `qgen report --qc` row "release" (2026-10-12, task 336). Back-audit open.
