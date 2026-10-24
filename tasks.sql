@@ -181,7 +181,7 @@ WHERE (m.status = 'open' OR t.kind = 'exec') AND t.status = 'open'
                   WHERE r.task_id = t.id AND q.status <> 'done')
 ORDER BY coalesce(m.queue_index, 0), priority DESC, m.id, p.id, t.id;
 
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (1, 'Enough content for game nights', 'open', 'we want 5000 questions in the base bundle. note the current difficulty scale (i think from 1 to 15). it''s okay to have fewer questions for higher difficulties, but currently there are way too few questions at high difficulties.
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (1, 'Enough content for game nights', 'implemented', 'we want 5000 questions in the base bundle. note the current difficulty scale (i think from 1 to 15). it''s okay to have fewer questions for higher difficulties, but currently there are way too few questions at high difficulties.
 
  `qgen batch` creates new questions, so it''s just a matter of running it a couple of times, but there might be improvements necessary along the way. E.g. we are currently assuming that our list of categories is complete. Creating more subcategories might be useful, though. Any task that runs qgen batch should be prioritized at -100. The idea is that any implementation task has higher priority and only when all tasks are blocked by pending decision new questions can be generated.
 
@@ -209,7 +209,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - 5000 approved base reached with batch-14 (5488); batch-15 is the last batch
 - QC batch-15 queues the exit check, not batch-16
 - small per-difficulty gaps (e.g. difficulty 1: 243/250) don''t justify a full batch; aim a later batch at them or accept them
-- open health / spot-check decisions are mine and don''t block the exit check (decision 414)', '2026-10-11T20:08:18Z', NULL, 0);
+- open health / spot-check decisions are mine and don''t block the exit check (decision 414)', '2026-10-11T20:08:18Z', '2026-10-24T13:16:02Z', 0);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (2, 'Game engine in TypeScript', 'implemented', 'The game referee moves from Python (`app/server/game.py`, `selection.py`) to `app/client/src/engine/` with the same rules and the family''s saves kept. The game then runs without Python, which the Steam desktop shell needs (S3).
 
 ## Outcome
