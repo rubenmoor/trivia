@@ -1,0 +1,1042 @@
+{
+  "subcategory": "forces-and-motion",
+  "facets": [
+    "Newton's laws of motion",
+    "Gravity and falling objects",
+    "Friction and drag",
+    "Speed, velocity and acceleration",
+    "Momentum and collisions",
+    "Pressure and buoyancy",
+    "Simple machines and levers",
+    "Circular motion and orbits",
+    "Elasticity, springs and tension",
+    "Balance and centre of mass",
+    "Famous experiments and physicists",
+    "Forces in sport, rides and vehicles"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 3,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 2,
+      "origin": 1,
+      "made_of": 1,
+      "purpose": 3,
+      "cause_effect": 5,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 5,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 3,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Inertia",
+      "facet": "Newton's laws of motion",
+      "known_at": 8
+    },
+    {
+      "name": "Newton's first law",
+      "facet": "Newton's laws of motion",
+      "known_at": 9
+    },
+    {
+      "name": "Newton's second law",
+      "facet": "Newton's laws of motion",
+      "known_at": 10
+    },
+    {
+      "name": "Force",
+      "facet": "Newton's laws of motion",
+      "known_at": 4
+    },
+    {
+      "name": "Net force",
+      "facet": "Newton's laws of motion",
+      "known_at": 11
+    },
+    {
+      "name": "Balanced forces",
+      "facet": "Newton's laws of motion",
+      "known_at": 8
+    },
+    {
+      "name": "Newton (unit)",
+      "facet": "Newton's laws of motion",
+      "known_at": 9
+    },
+    {
+      "name": "Mass",
+      "facet": "Newton's laws of motion",
+      "known_at": 6
+    },
+    {
+      "name": "Weight",
+      "facet": "Newton's laws of motion",
+      "known_at": 5
+    },
+    {
+      "name": "Tablecloth trick",
+      "facet": "Newton's laws of motion",
+      "known_at": 5
+    },
+    {
+      "name": "Principia Mathematica",
+      "facet": "Newton's laws of motion",
+      "known_at": 12
+    },
+    {
+      "name": "Seatbelt",
+      "facet": "Newton's laws of motion",
+      "known_at": 3
+    },
+    {
+      "name": "Rocket propulsion",
+      "facet": "Newton's laws of motion",
+      "known_at": 7
+    },
+    {
+      "name": "Inertial frame of reference",
+      "facet": "Newton's laws of motion",
+      "known_at": 14
+    },
+    {
+      "name": "Balloon rocket",
+      "facet": "Newton's laws of motion",
+      "known_at": 5
+    },
+    {
+      "name": "Gravity",
+      "facet": "Gravity and falling objects",
+      "known_at": 2
+    },
+    {
+      "name": "Free fall",
+      "facet": "Gravity and falling objects",
+      "known_at": 8
+    },
+    {
+      "name": "Acceleration due to gravity",
+      "facet": "Gravity and falling objects",
+      "known_at": 10
+    },
+    {
+      "name": "Weightlessness",
+      "facet": "Gravity and falling objects",
+      "known_at": 5
+    },
+    {
+      "name": "Microgravity",
+      "facet": "Gravity and falling objects",
+      "known_at": 10
+    },
+    {
+      "name": "Parabolic flight",
+      "facet": "Gravity and falling objects",
+      "known_at": 11
+    },
+    {
+      "name": "Black hole",
+      "facet": "Gravity and falling objects",
+      "known_at": 5
+    },
+    {
+      "name": "Tides",
+      "facet": "Gravity and falling objects",
+      "known_at": 7
+    },
+    {
+      "name": "Law of universal gravitation",
+      "facet": "Gravity and falling objects",
+      "known_at": 10
+    },
+    {
+      "name": "Gravitational constant",
+      "facet": "Gravity and falling objects",
+      "known_at": 13
+    },
+    {
+      "name": "Gravitational waves",
+      "facet": "Gravity and falling objects",
+      "known_at": 12
+    },
+    {
+      "name": "Moon's gravity",
+      "facet": "Gravity and falling objects",
+      "known_at": 5
+    },
+    {
+      "name": "Jupiter's gravity",
+      "facet": "Gravity and falling objects",
+      "known_at": 8
+    },
+    {
+      "name": "Projectile motion",
+      "facet": "Gravity and falling objects",
+      "known_at": 10
+    },
+    {
+      "name": "Spacetime curvature",
+      "facet": "Gravity and falling objects",
+      "known_at": 12
+    },
+    {
+      "name": "Friction",
+      "facet": "Friction and drag",
+      "known_at": 4
+    },
+    {
+      "name": "Static friction",
+      "facet": "Friction and drag",
+      "known_at": 11
+    },
+    {
+      "name": "Kinetic friction",
+      "facet": "Friction and drag",
+      "known_at": 12
+    },
+    {
+      "name": "Lubricant",
+      "facet": "Friction and drag",
+      "known_at": 7
+    },
+    {
+      "name": "Ball bearing",
+      "facet": "Friction and drag",
+      "known_at": 9
+    },
+    {
+      "name": "Terminal velocity",
+      "facet": "Friction and drag",
+      "known_at": 10
+    },
+    {
+      "name": "Parachute",
+      "facet": "Friction and drag",
+      "known_at": 2
+    },
+    {
+      "name": "Streamlining",
+      "facet": "Friction and drag",
+      "known_at": 7
+    },
+    {
+      "name": "Drag coefficient",
+      "facet": "Friction and drag",
+      "known_at": 13
+    },
+    {
+      "name": "Aquaplaning",
+      "facet": "Friction and drag",
+      "known_at": 11
+    },
+    {
+      "name": "Rolling resistance",
+      "facet": "Friction and drag",
+      "known_at": 12
+    },
+    {
+      "name": "Tire tread",
+      "facet": "Friction and drag",
+      "known_at": 6
+    },
+    {
+      "name": "Golf ball dimples",
+      "facet": "Friction and drag",
+      "known_at": 9
+    },
+    {
+      "name": "Safety match",
+      "facet": "Friction and drag",
+      "known_at": 5
+    },
+    {
+      "name": "Brakes",
+      "facet": "Friction and drag",
+      "known_at": 3
+    },
+    {
+      "name": "Ice skating",
+      "facet": "Friction and drag",
+      "known_at": 4
+    },
+    {
+      "name": "Speed",
+      "facet": "Speed, velocity and acceleration",
+      "known_at": 2
+    },
+    {
+      "name": "Velocity",
+      "facet": "Speed, velocity and acceleration",
+      "known_at": 9
+    },
+    {
+      "name": "Acceleration",
+      "facet": "Speed, velocity and acceleration",
+      "known_at": 7
+    },
+    {
+      "name": "Deceleration",
+      "facet": "Speed, velocity and acceleration",
+      "known_at": 9
+    },
+    {
+      "name": "Speed of light",
+      "facet": "Speed, velocity and acceleration",
+      "known_at": 8
+    },
+    {
+      "name": "Speed of sound",
+      "facet": "Speed, velocity and acceleration",
+      "known_at": 8
+    },
+    {
+      "name": "Sound barrier",
+      "facet": "Speed, velocity and acceleration",
+      "known_at": 9
+    },
+    {
+      "name": "Mach number",
+      "facet": "Speed, velocity and acceleration",
+      "known_at": 11
+    },
+    {
+      "name": "Knot (unit)",
+      "facet": "Speed, velocity and acceleration",
+      "known_at": 11
+    },
+    {
+      "name": "Speedometer",
+      "facet": "Speed, velocity and acceleration",
+      "known_at": 5
+    },
+    {
+      "name": "G-force",
+      "facet": "Speed, velocity and acceleration",
+      "known_at": 9
+    },
+    {
+      "name": "Average speed",
+      "facet": "Speed, velocity and acceleration",
+      "known_at": 8
+    },
+    {
+      "name": "Vector",
+      "facet": "Speed, velocity and acceleration",
+      "known_at": 11
+    },
+    {
+      "name": "Relative motion",
+      "facet": "Speed, velocity and acceleration",
+      "known_at": 11
+    },
+    {
+      "name": "Momentum",
+      "facet": "Momentum and collisions",
+      "known_at": 9
+    },
+    {
+      "name": "Newton's cradle",
+      "facet": "Momentum and collisions",
+      "known_at": 6
+    },
+    {
+      "name": "Conservation of momentum",
+      "facet": "Momentum and collisions",
+      "known_at": 11
+    },
+    {
+      "name": "Impulse",
+      "facet": "Momentum and collisions",
+      "known_at": 12
+    },
+    {
+      "name": "Elastic collision",
+      "facet": "Momentum and collisions",
+      "known_at": 12
+    },
+    {
+      "name": "Inelastic collision",
+      "facet": "Momentum and collisions",
+      "known_at": 12
+    },
+    {
+      "name": "Airbag",
+      "facet": "Momentum and collisions",
+      "known_at": 4
+    },
+    {
+      "name": "Crumple zone",
+      "facet": "Momentum and collisions",
+      "known_at": 10
+    },
+    {
+      "name": "Crash test dummy",
+      "facet": "Momentum and collisions",
+      "known_at": 5
+    },
+    {
+      "name": "Billiards",
+      "facet": "Momentum and collisions",
+      "known_at": 6
+    },
+    {
+      "name": "Recoil",
+      "facet": "Momentum and collisions",
+      "known_at": 10
+    },
+    {
+      "name": "Bumper cars",
+      "facet": "Momentum and collisions",
+      "known_at": 3
+    },
+    {
+      "name": "Angular momentum",
+      "facet": "Momentum and collisions",
+      "known_at": 12
+    },
+    {
+      "name": "Gyroscope",
+      "facet": "Momentum and collisions",
+      "known_at": 9
+    },
+    {
+      "name": "Egg drop challenge",
+      "facet": "Momentum and collisions",
+      "known_at": 6
+    },
+    {
+      "name": "Crash helmet",
+      "facet": "Momentum and collisions",
+      "known_at": 3
+    },
+    {
+      "name": "Archimedes' principle",
+      "facet": "Pressure and buoyancy",
+      "known_at": 9
+    },
+    {
+      "name": "Eureka",
+      "facet": "Pressure and buoyancy",
+      "known_at": 8
+    },
+    {
+      "name": "Buoyancy",
+      "facet": "Pressure and buoyancy",
+      "known_at": 7
+    },
+    {
+      "name": "Density",
+      "facet": "Pressure and buoyancy",
+      "known_at": 7
+    },
+    {
+      "name": "Pascal (unit)",
+      "facet": "Pressure and buoyancy",
+      "known_at": 11
+    },
+    {
+      "name": "Atmospheric pressure",
+      "facet": "Pressure and buoyancy",
+      "known_at": 8
+    },
+    {
+      "name": "Barometer",
+      "facet": "Pressure and buoyancy",
+      "known_at": 9
+    },
+    {
+      "name": "Hydraulic press",
+      "facet": "Pressure and buoyancy",
+      "known_at": 10
+    },
+    {
+      "name": "Bed of nails",
+      "facet": "Pressure and buoyancy",
+      "known_at": 7
+    },
+    {
+      "name": "Snowshoes",
+      "facet": "Pressure and buoyancy",
+      "known_at": 5
+    },
+    {
+      "name": "Hot-air balloon",
+      "facet": "Pressure and buoyancy",
+      "known_at": 3
+    },
+    {
+      "name": "Dead Sea",
+      "facet": "Pressure and buoyancy",
+      "known_at": 8
+    },
+    {
+      "name": "Plimsoll line",
+      "facet": "Pressure and buoyancy",
+      "known_at": 14
+    },
+    {
+      "name": "Cartesian diver",
+      "facet": "Pressure and buoyancy",
+      "known_at": 12
+    },
+    {
+      "name": "Deep-sea pressure",
+      "facet": "Pressure and buoyancy",
+      "known_at": 7
+    },
+    {
+      "name": "Bernoulli's principle",
+      "facet": "Pressure and buoyancy",
+      "known_at": 12
+    },
+    {
+      "name": "Lift",
+      "facet": "Pressure and buoyancy",
+      "known_at": 8
+    },
+    {
+      "name": "Lever",
+      "facet": "Simple machines and levers",
+      "known_at": 5
+    },
+    {
+      "name": "Fulcrum",
+      "facet": "Simple machines and levers",
+      "known_at": 9
+    },
+    {
+      "name": "Pulley",
+      "facet": "Simple machines and levers",
+      "known_at": 4
+    },
+    {
+      "name": "Inclined plane",
+      "facet": "Simple machines and levers",
+      "known_at": 7
+    },
+    {
+      "name": "Wedge",
+      "facet": "Simple machines and levers",
+      "known_at": 6
+    },
+    {
+      "name": "Screw",
+      "facet": "Simple machines and levers",
+      "known_at": 4
+    },
+    {
+      "name": "Wheel and axle",
+      "facet": "Simple machines and levers",
+      "known_at": 5
+    },
+    {
+      "name": "Seesaw",
+      "facet": "Simple machines and levers",
+      "known_at": 1
+    },
+    {
+      "name": "Archimedes' screw",
+      "facet": "Simple machines and levers",
+      "known_at": 10
+    },
+    {
+      "name": "Mechanical advantage",
+      "facet": "Simple machines and levers",
+      "known_at": 12
+    },
+    {
+      "name": "Crowbar",
+      "facet": "Simple machines and levers",
+      "known_at": 6
+    },
+    {
+      "name": "Wheelbarrow",
+      "facet": "Simple machines and levers",
+      "known_at": 3
+    },
+    {
+      "name": "Scissors",
+      "facet": "Simple machines and levers",
+      "known_at": 2
+    },
+    {
+      "name": "Block and tackle",
+      "facet": "Simple machines and levers",
+      "known_at": 12
+    },
+    {
+      "name": "Gear",
+      "facet": "Simple machines and levers",
+      "known_at": 4
+    },
+    {
+      "name": "Bottle opener",
+      "facet": "Simple machines and levers",
+      "known_at": 4
+    },
+    {
+      "name": "Shaduf",
+      "facet": "Simple machines and levers",
+      "known_at": 13
+    },
+    {
+      "name": "Crane",
+      "facet": "Simple machines and levers",
+      "known_at": 3
+    },
+    {
+      "name": "Centripetal force",
+      "facet": "Circular motion and orbits",
+      "known_at": 11
+    },
+    {
+      "name": "Centrifugal force",
+      "facet": "Circular motion and orbits",
+      "known_at": 9
+    },
+    {
+      "name": "Orbit",
+      "facet": "Circular motion and orbits",
+      "known_at": 4
+    },
+    {
+      "name": "Kepler's laws",
+      "facet": "Circular motion and orbits",
+      "known_at": 12
+    },
+    {
+      "name": "Satellite",
+      "facet": "Circular motion and orbits",
+      "known_at": 3
+    },
+    {
+      "name": "Geostationary orbit",
+      "facet": "Circular motion and orbits",
+      "known_at": 11
+    },
+    {
+      "name": "Escape velocity",
+      "facet": "Circular motion and orbits",
+      "known_at": 10
+    },
+    {
+      "name": "Salad spinner",
+      "facet": "Circular motion and orbits",
+      "known_at": 4
+    },
+    {
+      "name": "Spin cycle",
+      "facet": "Circular motion and orbits",
+      "known_at": 4
+    },
+    {
+      "name": "Sputnik 1",
+      "facet": "Circular motion and orbits",
+      "known_at": 9
+    },
+    {
+      "name": "Ellipse",
+      "facet": "Circular motion and orbits",
+      "known_at": 9
+    },
+    {
+      "name": "Merry-go-round",
+      "facet": "Circular motion and orbits",
+      "known_at": 1
+    },
+    {
+      "name": "Loop-the-loop",
+      "facet": "Circular motion and orbits",
+      "known_at": 4
+    },
+    {
+      "name": "Gravity assist",
+      "facet": "Circular motion and orbits",
+      "known_at": 12
+    },
+    {
+      "name": "Low Earth orbit",
+      "facet": "Circular motion and orbits",
+      "known_at": 11
+    },
+    {
+      "name": "Hooke's law",
+      "facet": "Elasticity, springs and tension",
+      "known_at": 11
+    },
+    {
+      "name": "Spring",
+      "facet": "Elasticity, springs and tension",
+      "known_at": 2
+    },
+    {
+      "name": "Elastic limit",
+      "facet": "Elasticity, springs and tension",
+      "known_at": 11
+    },
+    {
+      "name": "Rubber band",
+      "facet": "Elasticity, springs and tension",
+      "known_at": 1
+    },
+    {
+      "name": "Bungee jumping",
+      "facet": "Elasticity, springs and tension",
+      "known_at": 5
+    },
+    {
+      "name": "Trampoline",
+      "facet": "Elasticity, springs and tension",
+      "known_at": 1
+    },
+    {
+      "name": "Slinky",
+      "facet": "Elasticity, springs and tension",
+      "known_at": 4
+    },
+    {
+      "name": "Bow and arrow",
+      "facet": "Elasticity, springs and tension",
+      "known_at": 2
+    },
+    {
+      "name": "Catapult",
+      "facet": "Elasticity, springs and tension",
+      "known_at": 4
+    },
+    {
+      "name": "Tension",
+      "facet": "Elasticity, springs and tension",
+      "known_at": 9
+    },
+    {
+      "name": "Suspension bridge",
+      "facet": "Elasticity, springs and tension",
+      "known_at": 7
+    },
+    {
+      "name": "Spring scale",
+      "facet": "Elasticity, springs and tension",
+      "known_at": 8
+    },
+    {
+      "name": "Pogo stick",
+      "facet": "Elasticity, springs and tension",
+      "known_at": 4
+    },
+    {
+      "name": "Shock absorber",
+      "facet": "Elasticity, springs and tension",
+      "known_at": 8
+    },
+    {
+      "name": "Young's modulus",
+      "facet": "Elasticity, springs and tension",
+      "known_at": 14
+    },
+    {
+      "name": "Elastic potential energy",
+      "facet": "Elasticity, springs and tension",
+      "known_at": 10
+    },
+    {
+      "name": "Centre of mass",
+      "facet": "Balance and centre of mass",
+      "known_at": 10
+    },
+    {
+      "name": "Centre of gravity",
+      "facet": "Balance and centre of mass",
+      "known_at": 9
+    },
+    {
+      "name": "Leaning Tower of Pisa",
+      "facet": "Balance and centre of mass",
+      "known_at": 3
+    },
+    {
+      "name": "Tightrope walking",
+      "facet": "Balance and centre of mass",
+      "known_at": 3
+    },
+    {
+      "name": "Stable equilibrium",
+      "facet": "Balance and centre of mass",
+      "known_at": 12
+    },
+    {
+      "name": "Roly-poly toy",
+      "facet": "Balance and centre of mass",
+      "known_at": 4
+    },
+    {
+      "name": "Daruma doll",
+      "facet": "Balance and centre of mass",
+      "known_at": 10
+    },
+    {
+      "name": "Balancing bird toy",
+      "facet": "Balance and centre of mass",
+      "known_at": 6
+    },
+    {
+      "name": "Tripod",
+      "facet": "Balance and centre of mass",
+      "known_at": 6
+    },
+    {
+      "name": "Mobile",
+      "facet": "Balance and centre of mass",
+      "known_at": 7
+    },
+    {
+      "name": "Jenga",
+      "facet": "Balance and centre of mass",
+      "known_at": 4
+    },
+    {
+      "name": "Keel",
+      "facet": "Balance and centre of mass",
+      "known_at": 9
+    },
+    {
+      "name": "Vestibular system",
+      "facet": "Balance and centre of mass",
+      "known_at": 11
+    },
+    {
+      "name": "Torque",
+      "facet": "Balance and centre of mass",
+      "known_at": 11
+    },
+    {
+      "name": "Balance scale",
+      "facet": "Balance and centre of mass",
+      "known_at": 3
+    },
+    {
+      "name": "Gömböc",
+      "facet": "Balance and centre of mass",
+      "known_at": 14
+    },
+    {
+      "name": "Segway",
+      "facet": "Balance and centre of mass",
+      "known_at": 7
+    },
+    {
+      "name": "Isaac Newton",
+      "facet": "Famous experiments and physicists",
+      "known_at": 4
+    },
+    {
+      "name": "Galileo Galilei",
+      "facet": "Famous experiments and physicists",
+      "known_at": 6
+    },
+    {
+      "name": "Archimedes",
+      "facet": "Famous experiments and physicists",
+      "known_at": 7
+    },
+    {
+      "name": "Johannes Kepler",
+      "facet": "Famous experiments and physicists",
+      "known_at": 11
+    },
+    {
+      "name": "Albert Einstein",
+      "facet": "Famous experiments and physicists",
+      "known_at": 3
+    },
+    {
+      "name": "Aristotle",
+      "facet": "Famous experiments and physicists",
+      "known_at": 9
+    },
+    {
+      "name": "Galileo's falling bodies experiment",
+      "facet": "Famous experiments and physicists",
+      "known_at": 9
+    },
+    {
+      "name": "Galileo's inclined plane experiment",
+      "facet": "Famous experiments and physicists",
+      "known_at": 13
+    },
+    {
+      "name": "Foucault pendulum",
+      "facet": "Famous experiments and physicists",
+      "known_at": 12
+    },
+    {
+      "name": "Cavendish experiment",
+      "facet": "Famous experiments and physicists",
+      "known_at": 14
+    },
+    {
+      "name": "Christiaan Huygens",
+      "facet": "Famous experiments and physicists",
+      "known_at": 13
+    },
+    {
+      "name": "Pendulum",
+      "facet": "Famous experiments and physicists",
+      "known_at": 5
+    },
+    {
+      "name": "Emmy Noether",
+      "facet": "Famous experiments and physicists",
+      "known_at": 14
+    },
+    {
+      "name": "Blaise Pascal",
+      "facet": "Famous experiments and physicists",
+      "known_at": 11
+    },
+    {
+      "name": "Daniel Bernoulli",
+      "facet": "Famous experiments and physicists",
+      "known_at": 13
+    },
+    {
+      "name": "Hammer and feather drop",
+      "facet": "Famous experiments and physicists",
+      "known_at": 10
+    },
+    {
+      "name": "Émilie du Châtelet",
+      "facet": "Famous experiments and physicists",
+      "known_at": 14
+    },
+    {
+      "name": "Evangelista Torricelli",
+      "facet": "Famous experiments and physicists",
+      "known_at": 13
+    },
+    {
+      "name": "Roller coaster",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 2
+    },
+    {
+      "name": "Skydiving",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 4
+    },
+    {
+      "name": "Downforce",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 11
+    },
+    {
+      "name": "Rear spoiler",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 8
+    },
+    {
+      "name": "Magnus effect",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 13
+    },
+    {
+      "name": "Fosbury flop",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 12
+    },
+    {
+      "name": "Pole vault",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 6
+    },
+    {
+      "name": "Ski jumping",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 6
+    },
+    {
+      "name": "Slipstreaming",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 10
+    },
+    {
+      "name": "Curling",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 8
+    },
+    {
+      "name": "Drop tower",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 5
+    },
+    {
+      "name": "Jet engine",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 7
+    },
+    {
+      "name": "Hovercraft",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 6
+    },
+    {
+      "name": "Maglev train",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 9
+    },
+    {
+      "name": "Sail",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 3
+    },
+    {
+      "name": "Bicycle gears",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 5
+    },
+    {
+      "name": "Wind tunnel",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 9
+    },
+    {
+      "name": "Hammer throw",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 8
+    },
+    {
+      "name": "Banked curve",
+      "facet": "Forces in sport, rides and vehicles",
+      "known_at": 11
+    }
+  ]
+}

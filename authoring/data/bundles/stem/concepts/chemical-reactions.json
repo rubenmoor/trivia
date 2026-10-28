@@ -1,0 +1,627 @@
+{
+  "subcategory": "chemical-reactions",
+  "facets": [
+    "Burning and combustion",
+    "Rust and corrosion",
+    "Acids, bases and neutralization",
+    "Reactions in the kitchen",
+    "Reactions in the living body",
+    "Photosynthesis and respiration",
+    "Explosions, fireworks and flame colors",
+    "Signs of a chemical change",
+    "Reaction speed and catalysts",
+    "Electrochemistry and batteries",
+    "Industrial and famous reactions",
+    "Chemists and discoveries in reactions"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 3,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 2,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 4,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 4,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Smoke",
+      "facet": "Burning and combustion",
+      "known_at": 1
+    },
+    {
+      "name": "Ash",
+      "facet": "Burning and combustion",
+      "known_at": 2
+    },
+    {
+      "name": "Soot",
+      "facet": "Burning and combustion",
+      "known_at": 5
+    },
+    {
+      "name": "Blue flame",
+      "facet": "Burning and combustion",
+      "known_at": 6
+    },
+    {
+      "name": "Fossil fuels",
+      "facet": "Burning and combustion",
+      "known_at": 6
+    },
+    {
+      "name": "Complete combustion",
+      "facet": "Burning and combustion",
+      "known_at": 11
+    },
+    {
+      "name": "Spontaneous combustion",
+      "facet": "Burning and combustion",
+      "known_at": 11
+    },
+    {
+      "name": "Ignition temperature",
+      "facet": "Burning and combustion",
+      "known_at": 12
+    },
+    {
+      "name": "Flash point",
+      "facet": "Burning and combustion",
+      "known_at": 13
+    },
+    {
+      "name": "Rust",
+      "facet": "Rust and corrosion",
+      "known_at": 2
+    },
+    {
+      "name": "Statue of Liberty",
+      "facet": "Rust and corrosion",
+      "known_at": 3
+    },
+    {
+      "name": "Corrosion",
+      "facet": "Rust and corrosion",
+      "known_at": 7
+    },
+    {
+      "name": "Oxidation",
+      "facet": "Rust and corrosion",
+      "known_at": 8
+    },
+    {
+      "name": "Road salt",
+      "facet": "Rust and corrosion",
+      "known_at": 8
+    },
+    {
+      "name": "Iron oxide",
+      "facet": "Rust and corrosion",
+      "known_at": 9
+    },
+    {
+      "name": "Patina",
+      "facet": "Rust and corrosion",
+      "known_at": 11
+    },
+    {
+      "name": "Aluminum oxide",
+      "facet": "Rust and corrosion",
+      "known_at": 12
+    },
+    {
+      "name": "Verdigris",
+      "facet": "Rust and corrosion",
+      "known_at": 13
+    },
+    {
+      "name": "Iron Pillar of Delhi",
+      "facet": "Rust and corrosion",
+      "known_at": 13
+    },
+    {
+      "name": "Rusticle",
+      "facet": "Rust and corrosion",
+      "known_at": 13
+    },
+    {
+      "name": "Anodizing",
+      "facet": "Rust and corrosion",
+      "known_at": 13
+    },
+    {
+      "name": "Sacrificial anode",
+      "facet": "Rust and corrosion",
+      "known_at": 14
+    },
+    {
+      "name": "Lemon juice",
+      "facet": "Acids, bases and neutralization",
+      "known_at": 2
+    },
+    {
+      "name": "Bleach",
+      "facet": "Acids, bases and neutralization",
+      "known_at": 5
+    },
+    {
+      "name": "Citric acid",
+      "facet": "Acids, bases and neutralization",
+      "known_at": 6
+    },
+    {
+      "name": "Litmus paper",
+      "facet": "Acids, bases and neutralization",
+      "known_at": 7
+    },
+    {
+      "name": "Ammonia",
+      "facet": "Acids, bases and neutralization",
+      "known_at": 8
+    },
+    {
+      "name": "Sodium chloride",
+      "facet": "Acids, bases and neutralization",
+      "known_at": 8
+    },
+    {
+      "name": "Neutralization",
+      "facet": "Acids, bases and neutralization",
+      "known_at": 9
+    },
+    {
+      "name": "Sulfuric acid",
+      "facet": "Acids, bases and neutralization",
+      "known_at": 10
+    },
+    {
+      "name": "Sodium hydroxide",
+      "facet": "Acids, bases and neutralization",
+      "known_at": 11
+    },
+    {
+      "name": "Formic acid",
+      "facet": "Acids, bases and neutralization",
+      "known_at": 12
+    },
+    {
+      "name": "Phenolphthalein",
+      "facet": "Acids, bases and neutralization",
+      "known_at": 12
+    },
+    {
+      "name": "Toast",
+      "facet": "Reactions in the kitchen",
+      "known_at": 2
+    },
+    {
+      "name": "Baking powder",
+      "facet": "Reactions in the kitchen",
+      "known_at": 6
+    },
+    {
+      "name": "Ceviche",
+      "facet": "Reactions in the kitchen",
+      "known_at": 10
+    },
+    {
+      "name": "Protein denaturation",
+      "facet": "Reactions in the kitchen",
+      "known_at": 12
+    },
+    {
+      "name": "Bromelain",
+      "facet": "Reactions in the kitchen",
+      "known_at": 13
+    },
+    {
+      "name": "Digestion",
+      "facet": "Reactions in the living body",
+      "known_at": 3
+    },
+    {
+      "name": "Anaerobic respiration",
+      "facet": "Photosynthesis and respiration",
+      "known_at": 12
+    },
+    {
+      "name": "Fireworks",
+      "facet": "Explosions, fireworks and flame colors",
+      "known_at": 1
+    },
+    {
+      "name": "Sparkler",
+      "facet": "Explosions, fireworks and flame colors",
+      "known_at": 2
+    },
+    {
+      "name": "Firecracker",
+      "facet": "Explosions, fireworks and flame colors",
+      "known_at": 3
+    },
+    {
+      "name": "Gunpowder",
+      "facet": "Explosions, fireworks and flame colors",
+      "known_at": 6
+    },
+    {
+      "name": "Dynamite",
+      "facet": "Explosions, fireworks and flame colors",
+      "known_at": 6
+    },
+    {
+      "name": "TNT",
+      "facet": "Explosions, fireworks and flame colors",
+      "known_at": 8
+    },
+    {
+      "name": "Flame test",
+      "facet": "Explosions, fireworks and flame colors",
+      "known_at": 11
+    },
+    {
+      "name": "Nitroglycerin",
+      "facet": "Explosions, fireworks and flame colors",
+      "known_at": 11
+    },
+    {
+      "name": "Thermite",
+      "facet": "Explosions, fireworks and flame colors",
+      "known_at": 12
+    },
+    {
+      "name": "Strontium",
+      "facet": "Explosions, fireworks and flame colors",
+      "known_at": 13
+    },
+    {
+      "name": "Barium",
+      "facet": "Explosions, fireworks and flame colors",
+      "known_at": 13
+    },
+    {
+      "name": "Saltpeter",
+      "facet": "Explosions, fireworks and flame colors",
+      "known_at": 13
+    },
+    {
+      "name": "Tang dynasty",
+      "facet": "Explosions, fireworks and flame colors",
+      "known_at": 13
+    },
+    {
+      "name": "Gas bubbles",
+      "facet": "Signs of a chemical change",
+      "known_at": 3
+    },
+    {
+      "name": "Color change",
+      "facet": "Signs of a chemical change",
+      "known_at": 3
+    },
+    {
+      "name": "Baking soda volcano",
+      "facet": "Signs of a chemical change",
+      "known_at": 3
+    },
+    {
+      "name": "Sour milk",
+      "facet": "Signs of a chemical change",
+      "known_at": 5
+    },
+    {
+      "name": "Hand warmer",
+      "facet": "Signs of a chemical change",
+      "known_at": 6
+    },
+    {
+      "name": "Chemical change",
+      "facet": "Signs of a chemical change",
+      "known_at": 6
+    },
+    {
+      "name": "Effervescent tablet",
+      "facet": "Signs of a chemical change",
+      "known_at": 6
+    },
+    {
+      "name": "Physical change",
+      "facet": "Signs of a chemical change",
+      "known_at": 7
+    },
+    {
+      "name": "Elephant toothpaste",
+      "facet": "Signs of a chemical change",
+      "known_at": 7
+    },
+    {
+      "name": "Instant cold pack",
+      "facet": "Signs of a chemical change",
+      "known_at": 8
+    },
+    {
+      "name": "Irreversible change",
+      "facet": "Signs of a chemical change",
+      "known_at": 8
+    },
+    {
+      "name": "Hydrogen sulfide",
+      "facet": "Signs of a chemical change",
+      "known_at": 10
+    },
+    {
+      "name": "Exothermic reaction",
+      "facet": "Signs of a chemical change",
+      "known_at": 10
+    },
+    {
+      "name": "Chemical equation",
+      "facet": "Signs of a chemical change",
+      "known_at": 10
+    },
+    {
+      "name": "Endothermic reaction",
+      "facet": "Signs of a chemical change",
+      "known_at": 11
+    },
+    {
+      "name": "Precipitate",
+      "facet": "Signs of a chemical change",
+      "known_at": 11
+    },
+    {
+      "name": "Conservation of mass",
+      "facet": "Signs of a chemical change",
+      "known_at": 11
+    },
+    {
+      "name": "Freezing food",
+      "facet": "Reaction speed and catalysts",
+      "known_at": 3
+    },
+    {
+      "name": "Hydrogen peroxide",
+      "facet": "Reaction speed and catalysts",
+      "known_at": 7
+    },
+    {
+      "name": "Food preservatives",
+      "facet": "Reaction speed and catalysts",
+      "known_at": 7
+    },
+    {
+      "name": "Rate of reaction",
+      "facet": "Reaction speed and catalysts",
+      "known_at": 10
+    },
+    {
+      "name": "Concentration",
+      "facet": "Reaction speed and catalysts",
+      "known_at": 10
+    },
+    {
+      "name": "Enzyme detergent",
+      "facet": "Reaction speed and catalysts",
+      "known_at": 10
+    },
+    {
+      "name": "Surface area",
+      "facet": "Reaction speed and catalysts",
+      "known_at": 10
+    },
+    {
+      "name": "Dust explosion",
+      "facet": "Reaction speed and catalysts",
+      "known_at": 12
+    },
+    {
+      "name": "Inhibitor",
+      "facet": "Reaction speed and catalysts",
+      "known_at": 12
+    },
+    {
+      "name": "Catalase",
+      "facet": "Reaction speed and catalysts",
+      "known_at": 13
+    },
+    {
+      "name": "Manganese dioxide",
+      "facet": "Reaction speed and catalysts",
+      "known_at": 13
+    },
+    {
+      "name": "Collision theory",
+      "facet": "Reaction speed and catalysts",
+      "known_at": 13
+    },
+    {
+      "name": "Chemical equilibrium",
+      "facet": "Reaction speed and catalysts",
+      "known_at": 13
+    },
+    {
+      "name": "Le Chatelier's principle",
+      "facet": "Reaction speed and catalysts",
+      "known_at": 14
+    },
+    {
+      "name": "Iodine clock reaction",
+      "facet": "Reaction speed and catalysts",
+      "known_at": 14
+    },
+    {
+      "name": "Potato battery",
+      "facet": "Electrochemistry and batteries",
+      "known_at": 5
+    },
+    {
+      "name": "Electrolysis of water",
+      "facet": "Electrochemistry and batteries",
+      "known_at": 10
+    },
+    {
+      "name": "Hydrogen fuel cell",
+      "facet": "Electrochemistry and batteries",
+      "known_at": 10
+    },
+    {
+      "name": "Electroplating",
+      "facet": "Electrochemistry and batteries",
+      "known_at": 11
+    },
+    {
+      "name": "Hall-Héroult process",
+      "facet": "Electrochemistry and batteries",
+      "known_at": 14
+    },
+    {
+      "name": "Cement",
+      "facet": "Industrial and famous reactions",
+      "known_at": 8
+    },
+    {
+      "name": "Superglue",
+      "facet": "Industrial and famous reactions",
+      "known_at": 8
+    },
+    {
+      "name": "Glassmaking",
+      "facet": "Industrial and famous reactions",
+      "known_at": 9
+    },
+    {
+      "name": "Blast furnace",
+      "facet": "Industrial and famous reactions",
+      "known_at": 10
+    },
+    {
+      "name": "Teflon",
+      "facet": "Industrial and famous reactions",
+      "known_at": 10
+    },
+    {
+      "name": "Polymerization",
+      "facet": "Industrial and famous reactions",
+      "known_at": 11
+    },
+    {
+      "name": "Kevlar",
+      "facet": "Industrial and famous reactions",
+      "known_at": 11
+    },
+    {
+      "name": "Saponification",
+      "facet": "Industrial and famous reactions",
+      "known_at": 12
+    },
+    {
+      "name": "Haber process",
+      "facet": "Industrial and famous reactions",
+      "known_at": 13
+    },
+    {
+      "name": "Vulcanization",
+      "facet": "Industrial and famous reactions",
+      "known_at": 13
+    },
+    {
+      "name": "Bakelite",
+      "facet": "Industrial and famous reactions",
+      "known_at": 13
+    },
+    {
+      "name": "Silver halide photography",
+      "facet": "Industrial and famous reactions",
+      "known_at": 13
+    },
+    {
+      "name": "Bessemer process",
+      "facet": "Industrial and famous reactions",
+      "known_at": 14
+    },
+    {
+      "name": "Solvay process",
+      "facet": "Industrial and famous reactions",
+      "known_at": 15
+    },
+    {
+      "name": "Alfred Nobel",
+      "facet": "Chemists and discoveries in reactions",
+      "known_at": 7
+    },
+    {
+      "name": "Robert Boyle",
+      "facet": "Chemists and discoveries in reactions",
+      "known_at": 12
+    },
+    {
+      "name": "Charles Goodyear",
+      "facet": "Chemists and discoveries in reactions",
+      "known_at": 12
+    },
+    {
+      "name": "Stephanie Kwolek",
+      "facet": "Chemists and discoveries in reactions",
+      "known_at": 13
+    },
+    {
+      "name": "Linus Pauling",
+      "facet": "Chemists and discoveries in reactions",
+      "known_at": 13
+    },
+    {
+      "name": "Fritz Haber",
+      "facet": "Chemists and discoveries in reactions",
+      "known_at": 14
+    },
+    {
+      "name": "Svante Arrhenius",
+      "facet": "Chemists and discoveries in reactions",
+      "known_at": 14
+    },
+    {
+      "name": "Jabir ibn Hayyan",
+      "facet": "Chemists and discoveries in reactions",
+      "known_at": 14
+    },
+    {
+      "name": "Ahmed Zewail",
+      "facet": "Chemists and discoveries in reactions",
+      "known_at": 15
+    }
+  ]
+}

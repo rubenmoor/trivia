@@ -1,0 +1,1104 @@
+{
+  "subcategory": "bones-muscles-and-skin",
+  "facets": [
+    "Bones of the skeleton",
+    "Joints and cartilage",
+    "Muscles and how they move",
+    "Tendons and ligaments",
+    "Skin layers and functions",
+    "Hair, nails and teeth",
+    "Skin color, sun and sweat",
+    "Growth, healing and repair",
+    "Bone and skin conditions",
+    "Exercise and body records",
+    "Anatomy history and scientists",
+    "Comparing with animal bodies"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 4,
+      "record": 5,
+      "origin": 2,
+      "made_of": 5,
+      "purpose": 5,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 5,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Skull",
+      "facet": "Bones of the skeleton",
+      "known_at": 1,
+      "retired": "used_up: The easy skull questions (helmet for the brain, Hamlet) are already asked. The options left (how many skull bones, a person as the answer) can't reach difficulty 1."
+    },
+    {
+      "name": "Spine",
+      "facet": "Bones of the skeleton",
+      "known_at": 2
+    },
+    {
+      "name": "Kneecap",
+      "facet": "Bones of the skeleton",
+      "known_at": 3
+    },
+    {
+      "name": "Jawbone",
+      "facet": "Bones of the skeleton",
+      "known_at": 3
+    },
+    {
+      "name": "Pelvis",
+      "facet": "Bones of the skeleton",
+      "known_at": 6
+    },
+    {
+      "name": "Collarbone",
+      "facet": "Bones of the skeleton",
+      "known_at": 5
+    },
+    {
+      "name": "Shoulder blade",
+      "facet": "Bones of the skeleton",
+      "known_at": 5
+    },
+    {
+      "name": "Vertebra",
+      "facet": "Bones of the skeleton",
+      "known_at": 7
+    },
+    {
+      "name": "Stapes",
+      "facet": "Bones of the skeleton",
+      "known_at": 9
+    },
+    {
+      "name": "Humerus",
+      "facet": "Bones of the skeleton",
+      "known_at": 10
+    },
+    {
+      "name": "Tibia",
+      "facet": "Bones of the skeleton",
+      "known_at": 10
+    },
+    {
+      "name": "Fibula",
+      "facet": "Bones of the skeleton",
+      "known_at": 11
+    },
+    {
+      "name": "Radius",
+      "facet": "Bones of the skeleton",
+      "known_at": 11
+    },
+    {
+      "name": "Ulna",
+      "facet": "Bones of the skeleton",
+      "known_at": 11
+    },
+    {
+      "name": "Sternum",
+      "facet": "Bones of the skeleton",
+      "known_at": 9
+    },
+    {
+      "name": "Coccyx",
+      "facet": "Bones of the skeleton",
+      "known_at": 8
+    },
+    {
+      "name": "Sacrum",
+      "facet": "Bones of the skeleton",
+      "known_at": 13
+    },
+    {
+      "name": "Hyoid bone",
+      "facet": "Bones of the skeleton",
+      "known_at": 14
+    },
+    {
+      "name": "Carpal bones",
+      "facet": "Bones of the skeleton",
+      "known_at": 12
+    },
+    {
+      "name": "Phalanges",
+      "facet": "Bones of the skeleton",
+      "known_at": 11
+    },
+    {
+      "name": "Fontanelle",
+      "facet": "Bones of the skeleton",
+      "known_at": 10
+    },
+    {
+      "name": "Knee",
+      "facet": "Joints and cartilage",
+      "known_at": 1
+    },
+    {
+      "name": "Elbow",
+      "facet": "Joints and cartilage",
+      "known_at": 1
+    },
+    {
+      "name": "Wrist",
+      "facet": "Joints and cartilage",
+      "known_at": 2
+    },
+    {
+      "name": "Ankle",
+      "facet": "Joints and cartilage",
+      "known_at": 2
+    },
+    {
+      "name": "Hip joint",
+      "facet": "Joints and cartilage",
+      "known_at": 5
+    },
+    {
+      "name": "Shoulder joint",
+      "facet": "Joints and cartilage",
+      "known_at": 5
+    },
+    {
+      "name": "Jaw joint",
+      "facet": "Joints and cartilage",
+      "known_at": 8
+    },
+    {
+      "name": "Ball-and-socket joint",
+      "facet": "Joints and cartilage",
+      "known_at": 9
+    },
+    {
+      "name": "Hinge joint",
+      "facet": "Joints and cartilage",
+      "known_at": 9
+    },
+    {
+      "name": "Pivot joint",
+      "facet": "Joints and cartilage",
+      "known_at": 11
+    },
+    {
+      "name": "Saddle joint",
+      "facet": "Joints and cartilage",
+      "known_at": 13
+    },
+    {
+      "name": "Synovial fluid",
+      "facet": "Joints and cartilage",
+      "known_at": 12
+    },
+    {
+      "name": "Meniscus",
+      "facet": "Joints and cartilage",
+      "known_at": 12
+    },
+    {
+      "name": "Intervertebral disc",
+      "facet": "Joints and cartilage",
+      "known_at": 11
+    },
+    {
+      "name": "Ear cartilage",
+      "facet": "Joints and cartilage",
+      "known_at": 5
+    },
+    {
+      "name": "Nose cartilage",
+      "facet": "Joints and cartilage",
+      "known_at": 6
+    },
+    {
+      "name": "Knuckle cracking",
+      "facet": "Joints and cartilage",
+      "known_at": 4
+    },
+    {
+      "name": "Double-jointedness",
+      "facet": "Joints and cartilage",
+      "known_at": 7
+    },
+    {
+      "name": "Skull sutures",
+      "facet": "Joints and cartilage",
+      "known_at": 13
+    },
+    {
+      "name": "Biceps",
+      "facet": "Muscles and how they move",
+      "known_at": 4
+    },
+    {
+      "name": "Triceps",
+      "facet": "Muscles and how they move",
+      "known_at": 8
+    },
+    {
+      "name": "Gluteus maximus",
+      "facet": "Muscles and how they move",
+      "known_at": 8
+    },
+    {
+      "name": "Masseter",
+      "facet": "Muscles and how they move",
+      "known_at": 12
+    },
+    {
+      "name": "Heart muscle",
+      "facet": "Muscles and how they move",
+      "known_at": 4
+    },
+    {
+      "name": "Smooth muscle",
+      "facet": "Muscles and how they move",
+      "known_at": 11
+    },
+    {
+      "name": "Skeletal muscle",
+      "facet": "Muscles and how they move",
+      "known_at": 10
+    },
+    {
+      "name": "Quadriceps",
+      "facet": "Muscles and how they move",
+      "known_at": 9
+    },
+    {
+      "name": "Hamstrings",
+      "facet": "Muscles and how they move",
+      "known_at": 10
+    },
+    {
+      "name": "Calf muscle",
+      "facet": "Muscles and how they move",
+      "known_at": 5
+    },
+    {
+      "name": "Six-pack",
+      "facet": "Muscles and how they move",
+      "known_at": 4
+    },
+    {
+      "name": "Pectoral muscles",
+      "facet": "Muscles and how they move",
+      "known_at": 9
+    },
+    {
+      "name": "Deltoid",
+      "facet": "Muscles and how they move",
+      "known_at": 11
+    },
+    {
+      "name": "Sartorius",
+      "facet": "Muscles and how they move",
+      "known_at": 14
+    },
+    {
+      "name": "Stapedius",
+      "facet": "Muscles and how they move",
+      "known_at": 14
+    },
+    {
+      "name": "Smile muscles",
+      "facet": "Muscles and how they move",
+      "known_at": 5
+    },
+    {
+      "name": "Eye muscles",
+      "facet": "Muscles and how they move",
+      "known_at": 7
+    },
+    {
+      "name": "Muscle cramp",
+      "facet": "Muscles and how they move",
+      "known_at": 4
+    },
+    {
+      "name": "Antagonistic muscle pair",
+      "facet": "Muscles and how they move",
+      "known_at": 11
+    },
+    {
+      "name": "Muscle fiber",
+      "facet": "Muscles and how they move",
+      "known_at": 10
+    },
+    {
+      "name": "Myosin",
+      "facet": "Muscles and how they move",
+      "known_at": 14
+    },
+    {
+      "name": "Muscle memory",
+      "facet": "Muscles and how they move",
+      "known_at": 8
+    },
+    {
+      "name": "Tendon",
+      "facet": "Tendons and ligaments",
+      "known_at": 7
+    },
+    {
+      "name": "Ligament",
+      "facet": "Tendons and ligaments",
+      "known_at": 8
+    },
+    {
+      "name": "Achilles tendon",
+      "facet": "Tendons and ligaments",
+      "known_at": 8
+    },
+    {
+      "name": "Anterior cruciate ligament",
+      "facet": "Tendons and ligaments",
+      "known_at": 11
+    },
+    {
+      "name": "Sprained ankle",
+      "facet": "Tendons and ligaments",
+      "known_at": 5
+    },
+    {
+      "name": "Patellar tendon",
+      "facet": "Tendons and ligaments",
+      "known_at": 12
+    },
+    {
+      "name": "Tendinitis",
+      "facet": "Tendons and ligaments",
+      "known_at": 11
+    },
+    {
+      "name": "Collagen",
+      "facet": "Tendons and ligaments",
+      "known_at": 10
+    },
+    {
+      "name": "Rotator cuff",
+      "facet": "Tendons and ligaments",
+      "known_at": 12
+    },
+    {
+      "name": "Plantar fascia",
+      "facet": "Tendons and ligaments",
+      "known_at": 13
+    },
+    {
+      "name": "Tennis elbow",
+      "facet": "Tendons and ligaments",
+      "known_at": 10
+    },
+    {
+      "name": "Carpal tunnel",
+      "facet": "Tendons and ligaments",
+      "known_at": 12
+    },
+    {
+      "name": "Palmaris longus",
+      "facet": "Tendons and ligaments",
+      "known_at": 14
+    },
+    {
+      "name": "Fascia",
+      "facet": "Tendons and ligaments",
+      "known_at": 13
+    },
+    {
+      "name": "Whiplash",
+      "facet": "Tendons and ligaments",
+      "known_at": 11
+    },
+    {
+      "name": "Hamstring tendon",
+      "facet": "Tendons and ligaments",
+      "known_at": 12
+    },
+    {
+      "name": "Epidermis",
+      "facet": "Skin layers and functions",
+      "known_at": 8
+    },
+    {
+      "name": "Dermis",
+      "facet": "Skin layers and functions",
+      "known_at": 9
+    },
+    {
+      "name": "Subcutaneous fat",
+      "facet": "Skin layers and functions",
+      "known_at": 10
+    },
+    {
+      "name": "Stratum corneum",
+      "facet": "Skin layers and functions",
+      "known_at": 14
+    },
+    {
+      "name": "Dead skin cells",
+      "facet": "Skin layers and functions",
+      "known_at": 4
+    },
+    {
+      "name": "Household dust",
+      "facet": "Skin layers and functions",
+      "known_at": 6
+    },
+    {
+      "name": "Pores",
+      "facet": "Skin layers and functions",
+      "known_at": 5
+    },
+    {
+      "name": "Elastin",
+      "facet": "Skin layers and functions",
+      "known_at": 13
+    },
+    {
+      "name": "Touch receptors",
+      "facet": "Skin layers and functions",
+      "known_at": 7
+    },
+    {
+      "name": "Pain receptors",
+      "facet": "Skin layers and functions",
+      "known_at": 9
+    },
+    {
+      "name": "Meissner's corpuscles",
+      "facet": "Skin layers and functions",
+      "known_at": 15
+    },
+    {
+      "name": "Callus",
+      "facet": "Skin layers and functions",
+      "known_at": 6
+    },
+    {
+      "name": "Wrinkles",
+      "facet": "Skin layers and functions",
+      "known_at": 3
+    },
+    {
+      "name": "Lips",
+      "facet": "Skin layers and functions",
+      "known_at": 1
+    },
+    {
+      "name": "Palms and soles",
+      "facet": "Skin layers and functions",
+      "known_at": 5
+    },
+    {
+      "name": "Tattoo",
+      "facet": "Skin layers and functions",
+      "known_at": 7
+    },
+    {
+      "name": "Skin microbiome",
+      "facet": "Skin layers and functions",
+      "known_at": 12
+    },
+    {
+      "name": "Mucous membrane",
+      "facet": "Skin layers and functions",
+      "known_at": 12
+    },
+    {
+      "name": "Skin barrier",
+      "facet": "Skin layers and functions",
+      "known_at": 6
+    },
+    {
+      "name": "Hair follicle",
+      "facet": "Hair, nails and teeth",
+      "known_at": 9
+    },
+    {
+      "name": "Eyebrows",
+      "facet": "Hair, nails and teeth",
+      "known_at": 1
+    },
+    {
+      "name": "Eyelashes",
+      "facet": "Hair, nails and teeth",
+      "known_at": 1
+    },
+    {
+      "name": "Molars",
+      "facet": "Hair, nails and teeth",
+      "known_at": 5
+    },
+    {
+      "name": "Incisors",
+      "facet": "Hair, nails and teeth",
+      "known_at": 6
+    },
+    {
+      "name": "Premolars",
+      "facet": "Hair, nails and teeth",
+      "known_at": 9
+    },
+    {
+      "name": "Wisdom teeth",
+      "facet": "Hair, nails and teeth",
+      "known_at": 6
+    },
+    {
+      "name": "Tooth pulp",
+      "facet": "Hair, nails and teeth",
+      "known_at": 11
+    },
+    {
+      "name": "Cavity",
+      "facet": "Hair, nails and teeth",
+      "known_at": 3
+    },
+    {
+      "name": "Braces",
+      "facet": "Hair, nails and teeth",
+      "known_at": 3
+    },
+    {
+      "name": "Lunula",
+      "facet": "Hair, nails and teeth",
+      "known_at": 13
+    },
+    {
+      "name": "Fingernails",
+      "facet": "Hair, nails and teeth",
+      "known_at": 2
+    },
+    {
+      "name": "Toenails",
+      "facet": "Hair, nails and teeth",
+      "known_at": 2
+    },
+    {
+      "name": "Curly hair",
+      "facet": "Hair, nails and teeth",
+      "known_at": 4
+    },
+    {
+      "name": "Baldness",
+      "facet": "Hair, nails and teeth",
+      "known_at": 4
+    },
+    {
+      "name": "Dental floss",
+      "facet": "Hair, nails and teeth",
+      "known_at": 4
+    },
+    {
+      "name": "Tooth Fairy",
+      "facet": "Hair, nails and teeth",
+      "known_at": 2
+    },
+    {
+      "name": "Lanugo",
+      "facet": "Hair, nails and teeth",
+      "known_at": 14
+    },
+    {
+      "name": "Melanin",
+      "facet": "Skin color, sun and sweat",
+      "known_at": 9
+    },
+    {
+      "name": "Sunburn",
+      "facet": "Skin color, sun and sweat",
+      "known_at": 2
+    },
+    {
+      "name": "Sunscreen",
+      "facet": "Skin color, sun and sweat",
+      "known_at": 2
+    },
+    {
+      "name": "SPF",
+      "facet": "Skin color, sun and sweat",
+      "known_at": 8
+    },
+    {
+      "name": "Ultraviolet light",
+      "facet": "Skin color, sun and sweat",
+      "known_at": 7
+    },
+    {
+      "name": "Suntan",
+      "facet": "Skin color, sun and sweat",
+      "known_at": 4
+    },
+    {
+      "name": "Vitiligo",
+      "facet": "Skin color, sun and sweat",
+      "known_at": 11
+    },
+    {
+      "name": "Sweat glands",
+      "facet": "Skin color, sun and sweat",
+      "known_at": 7
+    },
+    {
+      "name": "Eccrine glands",
+      "facet": "Skin color, sun and sweat",
+      "known_at": 14
+    },
+    {
+      "name": "Apocrine glands",
+      "facet": "Skin color, sun and sweat",
+      "known_at": 14
+    },
+    {
+      "name": "Deodorant",
+      "facet": "Skin color, sun and sweat",
+      "known_at": 4
+    },
+    {
+      "name": "Evaporative cooling",
+      "facet": "Skin color, sun and sweat",
+      "known_at": 9
+    },
+    {
+      "name": "Moles",
+      "facet": "Skin color, sun and sweat",
+      "known_at": 5
+    },
+    {
+      "name": "Blushing",
+      "facet": "Skin color, sun and sweat",
+      "known_at": 3
+    },
+    {
+      "name": "Heatstroke",
+      "facet": "Skin color, sun and sweat",
+      "known_at": 7
+    },
+    {
+      "name": "Heat rash",
+      "facet": "Skin color, sun and sweat",
+      "known_at": 8
+    },
+    {
+      "name": "Fitzpatrick scale",
+      "facet": "Skin color, sun and sweat",
+      "known_at": 15
+    },
+    {
+      "name": "Growth plate",
+      "facet": "Growth, healing and repair",
+      "known_at": 11
+    },
+    {
+      "name": "Bruise",
+      "facet": "Growth, healing and repair",
+      "known_at": 2
+    },
+    {
+      "name": "Plaster cast",
+      "facet": "Growth, healing and repair",
+      "known_at": 3
+    },
+    {
+      "name": "Stitches",
+      "facet": "Growth, healing and repair",
+      "known_at": 4
+    },
+    {
+      "name": "Scar",
+      "facet": "Growth, healing and repair",
+      "known_at": 3
+    },
+    {
+      "name": "Growth spurt",
+      "facet": "Growth, healing and repair",
+      "known_at": 6
+    },
+    {
+      "name": "Puberty",
+      "facet": "Growth, healing and repair",
+      "known_at": 7
+    },
+    {
+      "name": "Growth hormone",
+      "facet": "Growth, healing and repair",
+      "known_at": 10
+    },
+    {
+      "name": "Osteoblasts",
+      "facet": "Growth, healing and repair",
+      "known_at": 13
+    },
+    {
+      "name": "Osteoclasts",
+      "facet": "Growth, healing and repair",
+      "known_at": 14
+    },
+    {
+      "name": "Platelets",
+      "facet": "Growth, healing and repair",
+      "known_at": 9
+    },
+    {
+      "name": "Bone remodeling",
+      "facet": "Growth, healing and repair",
+      "known_at": 13
+    },
+    {
+      "name": "Skin graft",
+      "facet": "Growth, healing and repair",
+      "known_at": 11
+    },
+    {
+      "name": "Adhesive bandage",
+      "facet": "Growth, healing and repair",
+      "known_at": 1
+    },
+    {
+      "name": "Morning height",
+      "facet": "Growth, healing and repair",
+      "known_at": 8
+    },
+    {
+      "name": "Physiotherapy",
+      "facet": "Growth, healing and repair",
+      "known_at": 9
+    },
+    {
+      "name": "Crutches",
+      "facet": "Growth, healing and repair",
+      "known_at": 3
+    },
+    {
+      "name": "Scoliosis",
+      "facet": "Bone and skin conditions",
+      "known_at": 11
+    },
+    {
+      "name": "Arthritis",
+      "facet": "Bone and skin conditions",
+      "known_at": 9
+    },
+    {
+      "name": "Gout",
+      "facet": "Bone and skin conditions",
+      "known_at": 12
+    },
+    {
+      "name": "Eczema",
+      "facet": "Bone and skin conditions",
+      "known_at": 9
+    },
+    {
+      "name": "Warts",
+      "facet": "Bone and skin conditions",
+      "known_at": 4
+    },
+    {
+      "name": "Psoriasis",
+      "facet": "Bone and skin conditions",
+      "known_at": 12
+    },
+    {
+      "name": "Brittle bone disease",
+      "facet": "Bone and skin conditions",
+      "known_at": 13
+    },
+    {
+      "name": "Flat feet",
+      "facet": "Bone and skin conditions",
+      "known_at": 6
+    },
+    {
+      "name": "Dislocation",
+      "facet": "Bone and skin conditions",
+      "known_at": 8
+    },
+    {
+      "name": "Bunion",
+      "facet": "Bone and skin conditions",
+      "known_at": 12
+    },
+    {
+      "name": "Hives",
+      "facet": "Bone and skin conditions",
+      "known_at": 10
+    },
+    {
+      "name": "Head lice",
+      "facet": "Bone and skin conditions",
+      "known_at": 3
+    },
+    {
+      "name": "Ingrown toenail",
+      "facet": "Bone and skin conditions",
+      "known_at": 7
+    },
+    {
+      "name": "Splinter",
+      "facet": "Bone and skin conditions",
+      "known_at": 2
+    },
+    {
+      "name": "Stretching",
+      "facet": "Exercise and body records",
+      "known_at": 2,
+      "retired": "used_up: At difficulty 1 the only fair question is spotting stretching in a photo, and the pool already has that. The other options don't fit a 6-year-old."
+    },
+    {
+      "name": "Muscle soreness",
+      "facet": "Exercise and body records",
+      "known_at": 5
+    },
+    {
+      "name": "Plank",
+      "facet": "Exercise and body records",
+      "known_at": 5
+    },
+    {
+      "name": "Usain Bolt",
+      "facet": "Exercise and body records",
+      "known_at": 5
+    },
+    {
+      "name": "Robert Wadlow",
+      "facet": "Exercise and body records",
+      "known_at": 12
+    },
+    {
+      "name": "Longest fingernails",
+      "facet": "Exercise and body records",
+      "known_at": 6
+    },
+    {
+      "name": "Longest hair",
+      "facet": "Exercise and body records",
+      "known_at": 6
+    },
+    {
+      "name": "Contortion",
+      "facet": "Exercise and body records",
+      "known_at": 6
+    },
+    {
+      "name": "Marathon",
+      "facet": "Exercise and body records",
+      "known_at": 5
+    },
+    {
+      "name": "Yoga",
+      "facet": "Exercise and body records",
+      "known_at": 3
+    },
+    {
+      "name": "Weightlifting",
+      "facet": "Exercise and body records",
+      "known_at": 4
+    },
+    {
+      "name": "Endorphins",
+      "facet": "Exercise and body records",
+      "known_at": 11
+    },
+    {
+      "name": "Muscle loss in space",
+      "facet": "Exercise and body records",
+      "known_at": 8
+    },
+    {
+      "name": "Hydration",
+      "facet": "Exercise and body records",
+      "known_at": 4
+    },
+    {
+      "name": "Leonardo da Vinci",
+      "facet": "Anatomy history and scientists",
+      "known_at": 5
+    },
+    {
+      "name": "Vitruvian Man",
+      "facet": "Anatomy history and scientists",
+      "known_at": 9
+    },
+    {
+      "name": "Wilhelm Röntgen",
+      "facet": "Anatomy history and scientists",
+      "known_at": 12
+    },
+    {
+      "name": "X-ray",
+      "facet": "Anatomy history and scientists",
+      "known_at": 3
+    },
+    {
+      "name": "Gray's Anatomy",
+      "facet": "Anatomy history and scientists",
+      "known_at": 12
+    },
+    {
+      "name": "Edwin Smith Papyrus",
+      "facet": "Anatomy history and scientists",
+      "known_at": 15
+    },
+    {
+      "name": "Hippocrates",
+      "facet": "Anatomy history and scientists",
+      "known_at": 11
+    },
+    {
+      "name": "Luigi Galvani",
+      "facet": "Anatomy history and scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Ötzi the Iceman",
+      "facet": "Anatomy history and scientists",
+      "known_at": 10
+    },
+    {
+      "name": "The Anatomy Lesson of Dr. Nicolaes Tulp",
+      "facet": "Anatomy history and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Anatomical theater",
+      "facet": "Anatomy history and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Body Worlds",
+      "facet": "Anatomy history and scientists",
+      "known_at": 12
+    },
+    {
+      "name": "Sushruta",
+      "facet": "Anatomy history and scientists",
+      "known_at": 15
+    },
+    {
+      "name": "Mummification",
+      "facet": "Anatomy history and scientists",
+      "known_at": 5
+    },
+    {
+      "name": "Trepanation",
+      "facet": "Anatomy history and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Cairo toe",
+      "facet": "Anatomy history and scientists",
+      "known_at": 15
+    },
+    {
+      "name": "Shark skeleton",
+      "facet": "Comparing with animal bodies",
+      "known_at": 8
+    },
+    {
+      "name": "Hollow bird bones",
+      "facet": "Comparing with animal bodies",
+      "known_at": 7
+    },
+    {
+      "name": "Bat wing",
+      "facet": "Comparing with animal bodies",
+      "known_at": 8
+    },
+    {
+      "name": "Whale flipper",
+      "facet": "Comparing with animal bodies",
+      "known_at": 10
+    },
+    {
+      "name": "Tail",
+      "facet": "Comparing with animal bodies",
+      "known_at": 2
+    },
+    {
+      "name": "Claws",
+      "facet": "Comparing with animal bodies",
+      "known_at": 2
+    },
+    {
+      "name": "Hooves",
+      "facet": "Comparing with animal bodies",
+      "known_at": 4
+    },
+    {
+      "name": "Horns",
+      "facet": "Comparing with animal bodies",
+      "known_at": 3
+    },
+    {
+      "name": "Antlers",
+      "facet": "Comparing with animal bodies",
+      "known_at": 6
+    },
+    {
+      "name": "Scales",
+      "facet": "Comparing with animal bodies",
+      "known_at": 2
+    },
+    {
+      "name": "Feathers",
+      "facet": "Comparing with animal bodies",
+      "known_at": 1
+    },
+    {
+      "name": "Fur",
+      "facet": "Comparing with animal bodies",
+      "known_at": 1
+    },
+    {
+      "name": "Elephant tusks",
+      "facet": "Comparing with animal bodies",
+      "known_at": 4
+    },
+    {
+      "name": "Snake jaw",
+      "facet": "Comparing with animal bodies",
+      "known_at": 7
+    },
+    {
+      "name": "Chimpanzee strength",
+      "facet": "Comparing with animal bodies",
+      "known_at": 9
+    }
+  ]
+}

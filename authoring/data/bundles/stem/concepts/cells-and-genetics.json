@@ -1,0 +1,1057 @@
+{
+  "subcategory": "cells-and-genetics",
+  "facets": [
+    "Cell parts and organelles",
+    "Types of cells and tissues",
+    "Microscopes and seeing cells",
+    "Cell division and growth",
+    "DNA structure and molecules",
+    "Genes, traits and heredity",
+    "Mendel and classic genetics experiments",
+    "Mutations and genetic variation",
+    "Chromosomes and the genome",
+    "Genetic technology and engineering",
+    "Famous discoveries and scientists",
+    "Single-celled life and microbes"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 4,
+      "record": 3,
+      "origin": 2,
+      "made_of": 5,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 5,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 4,
+      "science_news": 4,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 4,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Cell membrane",
+      "facet": "Cell parts and organelles",
+      "known_at": 7
+    },
+    {
+      "name": "Cytoplasm",
+      "facet": "Cell parts and organelles",
+      "known_at": 8
+    },
+    {
+      "name": "Mitochondria",
+      "facet": "Cell parts and organelles",
+      "known_at": 8
+    },
+    {
+      "name": "Chloroplast",
+      "facet": "Cell parts and organelles",
+      "known_at": 8
+    },
+    {
+      "name": "Chlorophyll",
+      "facet": "Cell parts and organelles",
+      "known_at": 7
+    },
+    {
+      "name": "Ribosome",
+      "facet": "Cell parts and organelles",
+      "known_at": 10
+    },
+    {
+      "name": "Vacuole",
+      "facet": "Cell parts and organelles",
+      "known_at": 9
+    },
+    {
+      "name": "Endoplasmic reticulum",
+      "facet": "Cell parts and organelles",
+      "known_at": 11
+    },
+    {
+      "name": "Golgi apparatus",
+      "facet": "Cell parts and organelles",
+      "known_at": 11
+    },
+    {
+      "name": "Lysosome",
+      "facet": "Cell parts and organelles",
+      "known_at": 11
+    },
+    {
+      "name": "Nucleolus",
+      "facet": "Cell parts and organelles",
+      "known_at": 12
+    },
+    {
+      "name": "Nuclear envelope",
+      "facet": "Cell parts and organelles",
+      "known_at": 12
+    },
+    {
+      "name": "Centriole",
+      "facet": "Cell parts and organelles",
+      "known_at": 13
+    },
+    {
+      "name": "Cytoskeleton",
+      "facet": "Cell parts and organelles",
+      "known_at": 13
+    },
+    {
+      "name": "Vesicle",
+      "facet": "Cell parts and organelles",
+      "known_at": 13
+    },
+    {
+      "name": "Peroxisome",
+      "facet": "Cell parts and organelles",
+      "known_at": 14
+    },
+    {
+      "name": "Red blood cell",
+      "facet": "Types of cells and tissues",
+      "known_at": 4
+    },
+    {
+      "name": "White blood cell",
+      "facet": "Types of cells and tissues",
+      "known_at": 5
+    },
+    {
+      "name": "Platelet",
+      "facet": "Types of cells and tissues",
+      "known_at": 8
+    },
+    {
+      "name": "Neuron",
+      "facet": "Types of cells and tissues",
+      "known_at": 8
+    },
+    {
+      "name": "Muscle cell",
+      "facet": "Types of cells and tissues",
+      "known_at": 6
+    },
+    {
+      "name": "Sperm cell",
+      "facet": "Types of cells and tissues",
+      "known_at": 7
+    },
+    {
+      "name": "Egg cell",
+      "facet": "Types of cells and tissues",
+      "known_at": 6
+    },
+    {
+      "name": "Stem cell",
+      "facet": "Types of cells and tissues",
+      "known_at": 10
+    },
+    {
+      "name": "Fat cell",
+      "facet": "Types of cells and tissues",
+      "known_at": 8
+    },
+    {
+      "name": "Bone cell",
+      "facet": "Types of cells and tissues",
+      "known_at": 9
+    },
+    {
+      "name": "Rod cell",
+      "facet": "Types of cells and tissues",
+      "known_at": 12
+    },
+    {
+      "name": "Cone cell",
+      "facet": "Types of cells and tissues",
+      "known_at": 11
+    },
+    {
+      "name": "Epithelial tissue",
+      "facet": "Types of cells and tissues",
+      "known_at": 12
+    },
+    {
+      "name": "Connective tissue",
+      "facet": "Types of cells and tissues",
+      "known_at": 12
+    },
+    {
+      "name": "Xylem",
+      "facet": "Types of cells and tissues",
+      "known_at": 11
+    },
+    {
+      "name": "Phloem",
+      "facet": "Types of cells and tissues",
+      "known_at": 11
+    },
+    {
+      "name": "Guard cell",
+      "facet": "Types of cells and tissues",
+      "known_at": 12
+    },
+    {
+      "name": "Root hair cell",
+      "facet": "Types of cells and tissues",
+      "known_at": 10
+    },
+    {
+      "name": "Light microscope",
+      "facet": "Microscopes and seeing cells",
+      "known_at": 4
+    },
+    {
+      "name": "Scanning electron microscope",
+      "facet": "Microscopes and seeing cells",
+      "known_at": 12
+    },
+    {
+      "name": "Objective lens",
+      "facet": "Microscopes and seeing cells",
+      "known_at": 9
+    },
+    {
+      "name": "Resolution",
+      "facet": "Microscopes and seeing cells",
+      "known_at": 12
+    },
+    {
+      "name": "Micrometer",
+      "facet": "Microscopes and seeing cells",
+      "known_at": 10
+    },
+    {
+      "name": "Iodine stain",
+      "facet": "Microscopes and seeing cells",
+      "known_at": 10
+    },
+    {
+      "name": "Cork cells",
+      "facet": "Microscopes and seeing cells",
+      "known_at": 10
+    },
+    {
+      "name": "Micrographia",
+      "facet": "Microscopes and seeing cells",
+      "known_at": 14
+    },
+    {
+      "name": "Fluorescence microscope",
+      "facet": "Microscopes and seeing cells",
+      "known_at": 13
+    },
+    {
+      "name": "Cryo-electron microscopy",
+      "facet": "Microscopes and seeing cells",
+      "known_at": 14
+    },
+    {
+      "name": "Mitosis",
+      "facet": "Cell division and growth",
+      "known_at": 9
+    },
+    {
+      "name": "Meiosis",
+      "facet": "Cell division and growth",
+      "known_at": 10
+    },
+    {
+      "name": "Cell cycle",
+      "facet": "Cell division and growth",
+      "known_at": 10
+    },
+    {
+      "name": "Interphase",
+      "facet": "Cell division and growth",
+      "known_at": 12
+    },
+    {
+      "name": "Prophase",
+      "facet": "Cell division and growth",
+      "known_at": 12
+    },
+    {
+      "name": "Metaphase",
+      "facet": "Cell division and growth",
+      "known_at": 12
+    },
+    {
+      "name": "Anaphase",
+      "facet": "Cell division and growth",
+      "known_at": 12
+    },
+    {
+      "name": "Telophase",
+      "facet": "Cell division and growth",
+      "known_at": 12
+    },
+    {
+      "name": "Cytokinesis",
+      "facet": "Cell division and growth",
+      "known_at": 13
+    },
+    {
+      "name": "Spindle fibers",
+      "facet": "Cell division and growth",
+      "known_at": 13
+    },
+    {
+      "name": "Fertilization",
+      "facet": "Cell division and growth",
+      "known_at": 7
+    },
+    {
+      "name": "Zygote",
+      "facet": "Cell division and growth",
+      "known_at": 10
+    },
+    {
+      "name": "Embryo",
+      "facet": "Cell division and growth",
+      "known_at": 7
+    },
+    {
+      "name": "Gamete",
+      "facet": "Cell division and growth",
+      "known_at": 11
+    },
+    {
+      "name": "Cancer",
+      "facet": "Cell division and growth",
+      "known_at": 7
+    },
+    {
+      "name": "Apoptosis",
+      "facet": "Cell division and growth",
+      "known_at": 13
+    },
+    {
+      "name": "Hayflick limit",
+      "facet": "Cell division and growth",
+      "known_at": 15
+    },
+    {
+      "name": "Regeneration",
+      "facet": "Cell division and growth",
+      "known_at": 7
+    },
+    {
+      "name": "DNA",
+      "facet": "DNA structure and molecules",
+      "known_at": 5
+    },
+    {
+      "name": "Double helix",
+      "facet": "DNA structure and molecules",
+      "known_at": 8
+    },
+    {
+      "name": "Nucleotide",
+      "facet": "DNA structure and molecules",
+      "known_at": 12
+    },
+    {
+      "name": "Adenine",
+      "facet": "DNA structure and molecules",
+      "known_at": 11
+    },
+    {
+      "name": "Thymine",
+      "facet": "DNA structure and molecules",
+      "known_at": 11
+    },
+    {
+      "name": "Guanine",
+      "facet": "DNA structure and molecules",
+      "known_at": 11
+    },
+    {
+      "name": "Cytosine",
+      "facet": "DNA structure and molecules",
+      "known_at": 11
+    },
+    {
+      "name": "Uracil",
+      "facet": "DNA structure and molecules",
+      "known_at": 12
+    },
+    {
+      "name": "Base pair",
+      "facet": "DNA structure and molecules",
+      "known_at": 11
+    },
+    {
+      "name": "Deoxyribose",
+      "facet": "DNA structure and molecules",
+      "known_at": 13
+    },
+    {
+      "name": "Hydrogen bond",
+      "facet": "DNA structure and molecules",
+      "known_at": 12
+    },
+    {
+      "name": "RNA",
+      "facet": "DNA structure and molecules",
+      "known_at": 10
+    },
+    {
+      "name": "Messenger RNA",
+      "facet": "DNA structure and molecules",
+      "known_at": 11
+    },
+    {
+      "name": "Protein",
+      "facet": "DNA structure and molecules",
+      "known_at": 5
+    },
+    {
+      "name": "Amino acid",
+      "facet": "DNA structure and molecules",
+      "known_at": 10
+    },
+    {
+      "name": "Enzyme",
+      "facet": "DNA structure and molecules",
+      "known_at": 9
+    },
+    {
+      "name": "Genetic code",
+      "facet": "DNA structure and molecules",
+      "known_at": 10
+    },
+    {
+      "name": "Codon",
+      "facet": "DNA structure and molecules",
+      "known_at": 12
+    },
+    {
+      "name": "DNA replication",
+      "facet": "DNA structure and molecules",
+      "known_at": 11
+    },
+    {
+      "name": "Transcription",
+      "facet": "DNA structure and molecules",
+      "known_at": 12
+    },
+    {
+      "name": "Translation",
+      "facet": "DNA structure and molecules",
+      "known_at": 12
+    },
+    {
+      "name": "Gene",
+      "facet": "Genes, traits and heredity",
+      "known_at": 6
+    },
+    {
+      "name": "Allele",
+      "facet": "Genes, traits and heredity",
+      "known_at": 11
+    },
+    {
+      "name": "Dominant trait",
+      "facet": "Genes, traits and heredity",
+      "known_at": 9
+    },
+    {
+      "name": "Recessive trait",
+      "facet": "Genes, traits and heredity",
+      "known_at": 9
+    },
+    {
+      "name": "Genotype",
+      "facet": "Genes, traits and heredity",
+      "known_at": 11
+    },
+    {
+      "name": "Phenotype",
+      "facet": "Genes, traits and heredity",
+      "known_at": 11
+    },
+    {
+      "name": "Homozygous",
+      "facet": "Genes, traits and heredity",
+      "known_at": 12
+    },
+    {
+      "name": "Heterozygous",
+      "facet": "Genes, traits and heredity",
+      "known_at": 12
+    },
+    {
+      "name": "Carrier",
+      "facet": "Genes, traits and heredity",
+      "known_at": 11
+    },
+    {
+      "name": "Eye color",
+      "facet": "Genes, traits and heredity",
+      "known_at": 3
+    },
+    {
+      "name": "Blood type",
+      "facet": "Genes, traits and heredity",
+      "known_at": 8
+    },
+    {
+      "name": "Freckles",
+      "facet": "Genes, traits and heredity",
+      "known_at": 3
+    },
+    {
+      "name": "Dimples",
+      "facet": "Genes, traits and heredity",
+      "known_at": 4
+    },
+    {
+      "name": "Tongue rolling",
+      "facet": "Genes, traits and heredity",
+      "known_at": 6
+    },
+    {
+      "name": "Identical twins",
+      "facet": "Genes, traits and heredity",
+      "known_at": 3
+    },
+    {
+      "name": "Fraternal twins",
+      "facet": "Genes, traits and heredity",
+      "known_at": 7
+    },
+    {
+      "name": "Color blindness",
+      "facet": "Genes, traits and heredity",
+      "known_at": 7
+    },
+    {
+      "name": "Family tree",
+      "facet": "Genes, traits and heredity",
+      "known_at": 4
+    },
+    {
+      "name": "Inherited trait",
+      "facet": "Genes, traits and heredity",
+      "known_at": 6
+    },
+    {
+      "name": "Polygenic trait",
+      "facet": "Genes, traits and heredity",
+      "known_at": 14
+    },
+    {
+      "name": "Gregor Mendel",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 9
+    },
+    {
+      "name": "Pea plant",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 9
+    },
+    {
+      "name": "Punnett square",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 10
+    },
+    {
+      "name": "Law of segregation",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 13
+    },
+    {
+      "name": "Law of independent assortment",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 13
+    },
+    {
+      "name": "3:1 ratio",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 12
+    },
+    {
+      "name": "F1 generation",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 12
+    },
+    {
+      "name": "Monohybrid cross",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 13
+    },
+    {
+      "name": "Test cross",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Pure-breeding line",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 13
+    },
+    {
+      "name": "Incomplete dominance",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 13
+    },
+    {
+      "name": "Codominance",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 13
+    },
+    {
+      "name": "Brno monastery",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Fruit fly",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 10
+    },
+    {
+      "name": "Thomas Hunt Morgan",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Reginald Punnett",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Hugo de Vries",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 15
+    },
+    {
+      "name": "Griffith's experiment",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Hershey–Chase experiment",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Meselson–Stahl experiment",
+      "facet": "Mendel and classic genetics experiments",
+      "known_at": 15
+    },
+    {
+      "name": "Mutation",
+      "facet": "Mutations and genetic variation",
+      "known_at": 6
+    },
+    {
+      "name": "Point mutation",
+      "facet": "Mutations and genetic variation",
+      "known_at": 13
+    },
+    {
+      "name": "Frameshift mutation",
+      "facet": "Mutations and genetic variation",
+      "known_at": 14
+    },
+    {
+      "name": "Mutagen",
+      "facet": "Mutations and genetic variation",
+      "known_at": 12
+    },
+    {
+      "name": "UV radiation",
+      "facet": "Mutations and genetic variation",
+      "known_at": 8
+    },
+    {
+      "name": "Albinism",
+      "facet": "Mutations and genetic variation",
+      "known_at": 8
+    },
+    {
+      "name": "Heterochromia",
+      "facet": "Mutations and genetic variation",
+      "known_at": 10
+    },
+    {
+      "name": "Polydactyly",
+      "facet": "Mutations and genetic variation",
+      "known_at": 11
+    },
+    {
+      "name": "Sickle cell anemia",
+      "facet": "Mutations and genetic variation",
+      "known_at": 12
+    },
+    {
+      "name": "Cystic fibrosis",
+      "facet": "Mutations and genetic variation",
+      "known_at": 13
+    },
+    {
+      "name": "Hemophilia",
+      "facet": "Mutations and genetic variation",
+      "known_at": 12
+    },
+    {
+      "name": "Down syndrome",
+      "facet": "Mutations and genetic variation",
+      "known_at": 10
+    },
+    {
+      "name": "Lactose tolerance",
+      "facet": "Mutations and genetic variation",
+      "known_at": 11
+    },
+    {
+      "name": "Natural selection",
+      "facet": "Mutations and genetic variation",
+      "known_at": 9
+    },
+    {
+      "name": "Evolution",
+      "facet": "Mutations and genetic variation",
+      "known_at": 6
+    },
+    {
+      "name": "Peppered moth",
+      "facet": "Mutations and genetic variation",
+      "known_at": 12
+    },
+    {
+      "name": "Genetic drift",
+      "facet": "Mutations and genetic variation",
+      "known_at": 13
+    },
+    {
+      "name": "Genetic diversity",
+      "facet": "Mutations and genetic variation",
+      "known_at": 10
+    },
+    {
+      "name": "Chromosome",
+      "facet": "Chromosomes and the genome",
+      "known_at": 8
+    },
+    {
+      "name": "46 chromosomes",
+      "facet": "Chromosomes and the genome",
+      "known_at": 9
+    },
+    {
+      "name": "X chromosome",
+      "facet": "Chromosomes and the genome",
+      "known_at": 9
+    },
+    {
+      "name": "Y chromosome",
+      "facet": "Chromosomes and the genome",
+      "known_at": 9
+    },
+    {
+      "name": "Autosome",
+      "facet": "Chromosomes and the genome",
+      "known_at": 13
+    },
+    {
+      "name": "Karyotype",
+      "facet": "Chromosomes and the genome",
+      "known_at": 13
+    },
+    {
+      "name": "Chromatid",
+      "facet": "Chromosomes and the genome",
+      "known_at": 12
+    },
+    {
+      "name": "Centromere",
+      "facet": "Chromosomes and the genome",
+      "known_at": 13
+    },
+    {
+      "name": "Telomere",
+      "facet": "Chromosomes and the genome",
+      "known_at": 13
+    },
+    {
+      "name": "Chromatin",
+      "facet": "Chromosomes and the genome",
+      "known_at": 13
+    },
+    {
+      "name": "Histone",
+      "facet": "Chromosomes and the genome",
+      "known_at": 14
+    },
+    {
+      "name": "Genome",
+      "facet": "Chromosomes and the genome",
+      "known_at": 10
+    },
+    {
+      "name": "Human Genome Project",
+      "facet": "Chromosomes and the genome",
+      "known_at": 11
+    },
+    {
+      "name": "Non-coding DNA",
+      "facet": "Chromosomes and the genome",
+      "known_at": 13
+    },
+    {
+      "name": "Mitochondrial DNA",
+      "facet": "Chromosomes and the genome",
+      "known_at": 13
+    },
+    {
+      "name": "Diploid",
+      "facet": "Chromosomes and the genome",
+      "known_at": 12
+    },
+    {
+      "name": "Haploid",
+      "facet": "Chromosomes and the genome",
+      "known_at": 12
+    },
+    {
+      "name": "Polyploidy",
+      "facet": "Chromosomes and the genome",
+      "known_at": 14
+    },
+    {
+      "name": "Epigenetics",
+      "facet": "Chromosomes and the genome",
+      "known_at": 14
+    },
+    {
+      "name": "CRISPR",
+      "facet": "Genetic technology and engineering",
+      "known_at": 11
+    },
+    {
+      "name": "Dolly the sheep",
+      "facet": "Genetic technology and engineering",
+      "known_at": 9
+    },
+    {
+      "name": "Cloning",
+      "facet": "Genetic technology and engineering",
+      "known_at": 7
+    },
+    {
+      "name": "Genetically modified organism",
+      "facet": "Genetic technology and engineering",
+      "known_at": 9
+    },
+    {
+      "name": "Selective breeding",
+      "facet": "Genetic technology and engineering",
+      "known_at": 9
+    },
+    {
+      "name": "PCR",
+      "facet": "Genetic technology and engineering",
+      "known_at": 11
+    },
+    {
+      "name": "DNA fingerprinting",
+      "facet": "Genetic technology and engineering",
+      "known_at": 9
+    },
+    {
+      "name": "DNA ancestry test",
+      "facet": "Genetic technology and engineering",
+      "known_at": 10
+    },
+    {
+      "name": "DNA sequencing",
+      "facet": "Genetic technology and engineering",
+      "known_at": 11
+    },
+    {
+      "name": "Gene therapy",
+      "facet": "Genetic technology and engineering",
+      "known_at": 12
+    },
+    {
+      "name": "Golden rice",
+      "facet": "Genetic technology and engineering",
+      "known_at": 13
+    },
+    {
+      "name": "Bt cotton",
+      "facet": "Genetic technology and engineering",
+      "known_at": 14
+    },
+    {
+      "name": "Insulin from bacteria",
+      "facet": "Genetic technology and engineering",
+      "known_at": 12
+    },
+    {
+      "name": "Recombinant DNA",
+      "facet": "Genetic technology and engineering",
+      "known_at": 13
+    },
+    {
+      "name": "Restriction enzyme",
+      "facet": "Genetic technology and engineering",
+      "known_at": 13
+    },
+    {
+      "name": "Gel electrophoresis",
+      "facet": "Genetic technology and engineering",
+      "known_at": 13
+    },
+    {
+      "name": "Green fluorescent protein",
+      "facet": "Genetic technology and engineering",
+      "known_at": 13
+    },
+    {
+      "name": "Transgenic animal",
+      "facet": "Genetic technology and engineering",
+      "known_at": 12
+    },
+    {
+      "name": "Rosalind Franklin",
+      "facet": "Famous discoveries and scientists",
+      "known_at": 11
+    },
+    {
+      "name": "Photo 51",
+      "facet": "Famous discoveries and scientists",
+      "known_at": 13
+    },
+    {
+      "name": "James Watson",
+      "facet": "Famous discoveries and scientists",
+      "known_at": 11
+    },
+    {
+      "name": "Francis Crick",
+      "facet": "Famous discoveries and scientists",
+      "known_at": 11
+    },
+    {
+      "name": "Charles Darwin",
+      "facet": "Famous discoveries and scientists",
+      "known_at": 7
+    },
+    {
+      "name": "Cell theory",
+      "facet": "Famous discoveries and scientists",
+      "known_at": 11
+    },
+    {
+      "name": "Matthias Schleiden",
+      "facet": "Famous discoveries and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Theodor Schwann",
+      "facet": "Famous discoveries and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Rudolf Virchow",
+      "facet": "Famous discoveries and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Santiago Ramón y Cajal",
+      "facet": "Famous discoveries and scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Barbara McClintock",
+      "facet": "Famous discoveries and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Frederick Sanger",
+      "facet": "Famous discoveries and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Kary Mullis",
+      "facet": "Famous discoveries and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Jennifer Doudna",
+      "facet": "Famous discoveries and scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Emmanuelle Charpentier",
+      "facet": "Famous discoveries and scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Shinya Yamanaka",
+      "facet": "Famous discoveries and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Har Gobind Khorana",
+      "facet": "Famous discoveries and scientists",
+      "known_at": 15
+    },
+    {
+      "name": "Diatom",
+      "facet": "Single-celled life and microbes",
+      "known_at": 12
+    },
+    {
+      "name": "E. coli",
+      "facet": "Single-celled life and microbes",
+      "known_at": 10
+    },
+    {
+      "name": "Gut microbiome",
+      "facet": "Single-celled life and microbes",
+      "known_at": 10
+    },
+    {
+      "name": "Spore",
+      "facet": "Single-celled life and microbes",
+      "known_at": 8
+    }
+  ]
+}

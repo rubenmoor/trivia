@@ -1,0 +1,714 @@
+{
+  "subcategory": "materials-and-metals",
+  "facets": [
+    "Everyday metals and their uses",
+    "Alloys and what they are made of",
+    "Precious and noble metals",
+    "Ores, mining and refining",
+    "Metalworking and smelting history",
+    "Rust, corrosion and protection",
+    "Properties of materials",
+    "Glass, ceramics and stone materials",
+    "Plastics and polymers",
+    "Natural materials: wood, fibers and rubber",
+    "Modern and high-tech materials",
+    "Metals in the body, nature and space"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 5,
+      "origin": 4,
+      "made_of": 5,
+      "purpose": 5,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 2,
+      "pop_culture": 3,
+      "popular_science": 4,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Vanadium",
+      "facet": "Everyday metals and their uses",
+      "known_at": 13
+    },
+    {
+      "name": "Tin can",
+      "facet": "Everyday metals and their uses",
+      "known_at": 3
+    },
+    {
+      "name": "Coin",
+      "facet": "Everyday metals and their uses",
+      "known_at": 2
+    },
+    {
+      "name": "Steel",
+      "facet": "Alloys and what they are made of",
+      "known_at": 3
+    },
+    {
+      "name": "Cast iron",
+      "facet": "Alloys and what they are made of",
+      "known_at": 7
+    },
+    {
+      "name": "Amalgam",
+      "facet": "Alloys and what they are made of",
+      "known_at": 12
+    },
+    {
+      "name": "Damascus steel",
+      "facet": "Alloys and what they are made of",
+      "known_at": 12
+    },
+    {
+      "name": "Nitinol",
+      "facet": "Alloys and what they are made of",
+      "known_at": 14
+    },
+    {
+      "name": "Duralumin",
+      "facet": "Alloys and what they are made of",
+      "known_at": 14
+    },
+    {
+      "name": "Invar",
+      "facet": "Alloys and what they are made of",
+      "known_at": 15
+    },
+    {
+      "name": "Alnico",
+      "facet": "Alloys and what they are made of",
+      "known_at": 14
+    },
+    {
+      "name": "Bell metal",
+      "facet": "Alloys and what they are made of",
+      "known_at": 13
+    },
+    {
+      "name": "Gold nugget",
+      "facet": "Precious and noble metals",
+      "known_at": 4,
+      "retired": "used_up: The gold rush question already answers “gold nuggets”, so any nugget question here could be answered from it."
+    },
+    {
+      "name": "Gold bar",
+      "facet": "Precious and noble metals",
+      "known_at": 3,
+      "retired": "used_up: Gold bars are already covered by several gold questions; none of the options gives a new fact at difficulty 2."
+    },
+    {
+      "name": "Gold medal",
+      "facet": "Precious and noble metals",
+      "known_at": 2
+    },
+    {
+      "name": "Mask of Tutankhamun",
+      "facet": "Precious and noble metals",
+      "known_at": 6
+    },
+    {
+      "name": "El Dorado",
+      "facet": "Precious and noble metals",
+      "known_at": 8
+    },
+    {
+      "name": "Magnetite",
+      "facet": "Ores, mining and refining",
+      "known_at": 12
+    },
+    {
+      "name": "Cassiterite",
+      "facet": "Ores, mining and refining",
+      "known_at": 14
+    },
+    {
+      "name": "Gold rush",
+      "facet": "Ores, mining and refining",
+      "known_at": 7
+    },
+    {
+      "name": "Open-pit mine",
+      "facet": "Ores, mining and refining",
+      "known_at": 9
+    },
+    {
+      "name": "Hall–Héroult process",
+      "facet": "Ores, mining and refining",
+      "known_at": 14
+    },
+    {
+      "name": "Slag",
+      "facet": "Ores, mining and refining",
+      "known_at": 12
+    },
+    {
+      "name": "Coke (fuel)",
+      "facet": "Ores, mining and refining",
+      "known_at": 13
+    },
+    {
+      "name": "Cerro Rico of Potosí",
+      "facet": "Ores, mining and refining",
+      "known_at": 13
+    },
+    {
+      "name": "Big Hole of Kimberley",
+      "facet": "Ores, mining and refining",
+      "known_at": 13
+    },
+    {
+      "name": "Canary in a coal mine",
+      "facet": "Ores, mining and refining",
+      "known_at": 9
+    },
+    {
+      "name": "Copper Age",
+      "facet": "Metalworking and smelting history",
+      "known_at": 11
+    },
+    {
+      "name": "Blacksmith",
+      "facet": "Metalworking and smelting history",
+      "known_at": 4
+    },
+    {
+      "name": "Anvil",
+      "facet": "Metalworking and smelting history",
+      "known_at": 4
+    },
+    {
+      "name": "Forge",
+      "facet": "Metalworking and smelting history",
+      "known_at": 5
+    },
+    {
+      "name": "Bellows",
+      "facet": "Metalworking and smelting history",
+      "known_at": 7
+    },
+    {
+      "name": "Katana",
+      "facet": "Metalworking and smelting history",
+      "known_at": 8
+    },
+    {
+      "name": "Ötzi's copper axe",
+      "facet": "Metalworking and smelting history",
+      "known_at": 12
+    },
+    {
+      "name": "Lost-wax casting",
+      "facet": "Metalworking and smelting history",
+      "known_at": 13
+    },
+    {
+      "name": "Benin Bronzes",
+      "facet": "Metalworking and smelting history",
+      "known_at": 13
+    },
+    {
+      "name": "Iron Bridge",
+      "facet": "Metalworking and smelting history",
+      "known_at": 14
+    },
+    {
+      "name": "Wrought iron",
+      "facet": "Metalworking and smelting history",
+      "known_at": 11
+    },
+    {
+      "name": "Hittites",
+      "facet": "Metalworking and smelting history",
+      "known_at": 13
+    },
+    {
+      "name": "Quenching",
+      "facet": "Metalworking and smelting history",
+      "known_at": 11
+    },
+    {
+      "name": "Casting",
+      "facet": "Metalworking and smelting history",
+      "known_at": 9
+    },
+    {
+      "name": "Welding",
+      "facet": "Metalworking and smelting history",
+      "known_at": 7
+    },
+    {
+      "name": "Galvanization",
+      "facet": "Rust, corrosion and protection",
+      "known_at": 11
+    },
+    {
+      "name": "Chrome plating",
+      "facet": "Rust, corrosion and protection",
+      "known_at": 10
+    },
+    {
+      "name": "Tinplate",
+      "facet": "Rust, corrosion and protection",
+      "known_at": 11
+    },
+    {
+      "name": "Rusticles",
+      "facet": "Rust, corrosion and protection",
+      "known_at": 13
+    },
+    {
+      "name": "Copper roof",
+      "facet": "Rust, corrosion and protection",
+      "known_at": 9
+    },
+    {
+      "name": "Hardness",
+      "facet": "Properties of materials",
+      "known_at": 5
+    },
+    {
+      "name": "Insulator",
+      "facet": "Properties of materials",
+      "known_at": 6
+    },
+    {
+      "name": "Heat conductor",
+      "facet": "Properties of materials",
+      "known_at": 8
+    },
+    {
+      "name": "Magnetism",
+      "facet": "Properties of materials",
+      "known_at": 3
+    },
+    {
+      "name": "Malleability",
+      "facet": "Properties of materials",
+      "known_at": 10
+    },
+    {
+      "name": "Ductility",
+      "facet": "Properties of materials",
+      "known_at": 12
+    },
+    {
+      "name": "Elasticity",
+      "facet": "Properties of materials",
+      "known_at": 7
+    },
+    {
+      "name": "Brittleness",
+      "facet": "Properties of materials",
+      "known_at": 9
+    },
+    {
+      "name": "Absorbency",
+      "facet": "Properties of materials",
+      "known_at": 6
+    },
+    {
+      "name": "Flexibility",
+      "facet": "Properties of materials",
+      "known_at": 4
+    },
+    {
+      "name": "Waterproof",
+      "facet": "Properties of materials",
+      "known_at": 3
+    },
+    {
+      "name": "Floating and sinking",
+      "facet": "Properties of materials",
+      "known_at": 3
+    },
+    {
+      "name": "Tensile strength",
+      "facet": "Properties of materials",
+      "known_at": 13
+    },
+    {
+      "name": "Luster",
+      "facet": "Properties of materials",
+      "known_at": 11
+    },
+    {
+      "name": "Glass",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 1
+    },
+    {
+      "name": "Sand",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 3
+    },
+    {
+      "name": "Glassblowing",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 7
+    },
+    {
+      "name": "Murano glass",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 12
+    },
+    {
+      "name": "Stained glass",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 6
+    },
+    {
+      "name": "Tempered glass",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 11
+    },
+    {
+      "name": "Borosilicate glass",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 13
+    },
+    {
+      "name": "Porcelain",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 6
+    },
+    {
+      "name": "Terracotta Army",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 8
+    },
+    {
+      "name": "Clay",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 2
+    },
+    {
+      "name": "Brick",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 2
+    },
+    {
+      "name": "Kiln",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 8
+    },
+    {
+      "name": "Pottery wheel",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 5
+    },
+    {
+      "name": "Glaze",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 10
+    },
+    {
+      "name": "Concrete",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 4
+    },
+    {
+      "name": "Roman concrete",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 12
+    },
+    {
+      "name": "Marble",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 6
+    },
+    {
+      "name": "Granite",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 7
+    },
+    {
+      "name": "Obsidian",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 8
+    },
+    {
+      "name": "Slate",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 9
+    },
+    {
+      "name": "Adobe",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 9
+    },
+    {
+      "name": "Mosaic",
+      "facet": "Glass, ceramics and stone materials",
+      "known_at": 7
+    },
+    {
+      "name": "Plastic",
+      "facet": "Plastics and polymers",
+      "known_at": 1
+    },
+    {
+      "name": "Monomer",
+      "facet": "Plastics and polymers",
+      "known_at": 13
+    },
+    {
+      "name": "PET",
+      "facet": "Plastics and polymers",
+      "known_at": 9
+    },
+    {
+      "name": "Polypropylene",
+      "facet": "Plastics and polymers",
+      "known_at": 12
+    },
+    {
+      "name": "Acrylic glass",
+      "facet": "Plastics and polymers",
+      "known_at": 10
+    },
+    {
+      "name": "Neoprene",
+      "facet": "Plastics and polymers",
+      "known_at": 10
+    },
+    {
+      "name": "Velcro",
+      "facet": "Plastics and polymers",
+      "known_at": 4
+    },
+    {
+      "name": "LEGO brick",
+      "facet": "Plastics and polymers",
+      "known_at": 2
+    },
+    {
+      "name": "Bubble wrap",
+      "facet": "Plastics and polymers",
+      "known_at": 3
+    },
+    {
+      "name": "Thermoplastic",
+      "facet": "Plastics and polymers",
+      "known_at": 13
+    },
+    {
+      "name": "Wood",
+      "facet": "Natural materials: wood, fibers and rubber",
+      "known_at": 1
+    },
+    {
+      "name": "Cork",
+      "facet": "Natural materials: wood, fibers and rubber",
+      "known_at": 6
+    },
+    {
+      "name": "Leather",
+      "facet": "Natural materials: wood, fibers and rubber",
+      "known_at": 3
+    },
+    {
+      "name": "Linen",
+      "facet": "Natural materials: wood, fibers and rubber",
+      "known_at": 8
+    },
+    {
+      "name": "Jute",
+      "facet": "Natural materials: wood, fibers and rubber",
+      "known_at": 11
+    },
+    {
+      "name": "Hemp",
+      "facet": "Natural materials: wood, fibers and rubber",
+      "known_at": 10
+    },
+    {
+      "name": "Sisal",
+      "facet": "Natural materials: wood, fibers and rubber",
+      "known_at": 13
+    },
+    {
+      "name": "Cashmere",
+      "facet": "Natural materials: wood, fibers and rubber",
+      "known_at": 10
+    },
+    {
+      "name": "Latex",
+      "facet": "Natural materials: wood, fibers and rubber",
+      "known_at": 8
+    },
+    {
+      "name": "Paper",
+      "facet": "Natural materials: wood, fibers and rubber",
+      "known_at": 2
+    },
+    {
+      "name": "Papyrus",
+      "facet": "Natural materials: wood, fibers and rubber",
+      "known_at": 7
+    },
+    {
+      "name": "Balsa wood",
+      "facet": "Natural materials: wood, fibers and rubber",
+      "known_at": 9
+    },
+    {
+      "name": "Teak",
+      "facet": "Natural materials: wood, fibers and rubber",
+      "known_at": 11
+    },
+    {
+      "name": "Plywood",
+      "facet": "Natural materials: wood, fibers and rubber",
+      "known_at": 8
+    },
+    {
+      "name": "Coir",
+      "facet": "Natural materials: wood, fibers and rubber",
+      "known_at": 12
+    },
+    {
+      "name": "Carbon fiber",
+      "facet": "Modern and high-tech materials",
+      "known_at": 8
+    },
+    {
+      "name": "Superconductor",
+      "facet": "Modern and high-tech materials",
+      "known_at": 12
+    },
+    {
+      "name": "Liquid crystal",
+      "facet": "Modern and high-tech materials",
+      "known_at": 12
+    },
+    {
+      "name": "Fiberglass",
+      "facet": "Modern and high-tech materials",
+      "known_at": 8
+    },
+    {
+      "name": "Carbon nanotube",
+      "facet": "Modern and high-tech materials",
+      "known_at": 12
+    },
+    {
+      "name": "Memory foam",
+      "facet": "Modern and high-tech materials",
+      "known_at": 5
+    },
+    {
+      "name": "Gore-Tex",
+      "facet": "Modern and high-tech materials",
+      "known_at": 10
+    },
+    {
+      "name": "Metamaterial",
+      "facet": "Modern and high-tech materials",
+      "known_at": 14
+    },
+    {
+      "name": "Quantum dot",
+      "facet": "Modern and high-tech materials",
+      "known_at": 13
+    },
+    {
+      "name": "Space Shuttle heat shield tiles",
+      "facet": "Modern and high-tech materials",
+      "known_at": 11
+    },
+    {
+      "name": "Self-healing concrete",
+      "facet": "Modern and high-tech materials",
+      "known_at": 12
+    },
+    {
+      "name": "Synthetic diamond",
+      "facet": "Modern and high-tech materials",
+      "known_at": 9
+    },
+    {
+      "name": "Perovskite",
+      "facet": "Modern and high-tech materials",
+      "known_at": 14
+    },
+    {
+      "name": "Banana",
+      "facet": "Metals in the body, nature and space",
+      "known_at": 3
+    },
+    {
+      "name": "Spinach",
+      "facet": "Metals in the body, nature and space",
+      "known_at": 3
+    },
+    {
+      "name": "Earth's core",
+      "facet": "Metals in the body, nature and space",
+      "known_at": 6
+    },
+    {
+      "name": "Mars",
+      "facet": "Metals in the body, nature and space",
+      "known_at": 2
+    },
+    {
+      "name": "Iron meteorite",
+      "facet": "Metals in the body, nature and space",
+      "known_at": 9
+    },
+    {
+      "name": "Hoba meteorite",
+      "facet": "Metals in the body, nature and space",
+      "known_at": 13
+    },
+    {
+      "name": "Neutron star collision",
+      "facet": "Metals in the body, nature and space",
+      "known_at": 13
+    },
+    {
+      "name": "16 Psyche",
+      "facet": "Metals in the body, nature and space",
+      "known_at": 12
+    },
+    {
+      "name": "Seawater",
+      "facet": "Metals in the body, nature and space",
+      "known_at": 6
+    }
+  ]
+}

@@ -1,0 +1,889 @@
+{
+  "subcategory": "sound-and-waves",
+  "facets": [
+    "How sound travels",
+    "Pitch, frequency and loudness",
+    "Echoes and acoustics",
+    "Hearing and the ear",
+    "Animal sounds and echolocation",
+    "Musical instruments and vibration",
+    "Ultrasound and infrasound",
+    "Light and electromagnetic waves",
+    "Water and earthquake waves",
+    "Wave behavior: reflection, refraction, interference",
+    "Sound technology and recording",
+    "Scientists and discoveries of waves"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 4,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 4,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 4,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 4,
+      "history": 3,
+      "body_senses": 5,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Vacuum",
+      "facet": "How sound travels",
+      "known_at": 7
+    },
+    {
+      "name": "Silence in space",
+      "facet": "How sound travels",
+      "known_at": 5
+    },
+    {
+      "name": "Sonic boom",
+      "facet": "How sound travels",
+      "known_at": 8
+    },
+    {
+      "name": "Thunder",
+      "facet": "How sound travels",
+      "known_at": 2
+    },
+    {
+      "name": "Counting seconds between lightning and thunder",
+      "facet": "How sound travels",
+      "known_at": 5
+    },
+    {
+      "name": "Longitudinal wave",
+      "facet": "How sound travels",
+      "known_at": 11
+    },
+    {
+      "name": "Compression",
+      "facet": "How sound travels",
+      "known_at": 10
+    },
+    {
+      "name": "Rarefaction",
+      "facet": "How sound travels",
+      "known_at": 13
+    },
+    {
+      "name": "Medium",
+      "facet": "How sound travels",
+      "known_at": 9
+    },
+    {
+      "name": "Sound underwater",
+      "facet": "How sound travels",
+      "known_at": 6
+    },
+    {
+      "name": "Bell jar experiment",
+      "facet": "How sound travels",
+      "known_at": 11
+    },
+    {
+      "name": "Concorde",
+      "facet": "How sound travels",
+      "known_at": 8
+    },
+    {
+      "name": "Chuck Yeager",
+      "facet": "How sound travels",
+      "known_at": 13
+    },
+    {
+      "name": "Ear to the railway track",
+      "facet": "How sound travels",
+      "known_at": 7
+    },
+    {
+      "name": "Sound in solids",
+      "facet": "How sound travels",
+      "known_at": 8
+    },
+    {
+      "name": "Pitch",
+      "facet": "Pitch, frequency and loudness",
+      "known_at": 6
+    },
+    {
+      "name": "Frequency",
+      "facet": "Pitch, frequency and loudness",
+      "known_at": 8
+    },
+    {
+      "name": "Amplitude",
+      "facet": "Pitch, frequency and loudness",
+      "known_at": 10
+    },
+    {
+      "name": "Tuning fork",
+      "facet": "Pitch, frequency and loudness",
+      "known_at": 7
+    },
+    {
+      "name": "Octave",
+      "facet": "Pitch, frequency and loudness",
+      "known_at": 8
+    },
+    {
+      "name": "Concert pitch A440",
+      "facet": "Pitch, frequency and loudness",
+      "known_at": 13
+    },
+    {
+      "name": "Helium voice",
+      "facet": "Pitch, frequency and loudness",
+      "known_at": 5
+    },
+    {
+      "name": "Timbre",
+      "facet": "Pitch, frequency and loudness",
+      "known_at": 12
+    },
+    {
+      "name": "Overtone",
+      "facet": "Pitch, frequency and loudness",
+      "known_at": 12
+    },
+    {
+      "name": "Noise pollution",
+      "facet": "Pitch, frequency and loudness",
+      "known_at": 8
+    },
+    {
+      "name": "Threshold of pain",
+      "facet": "Pitch, frequency and loudness",
+      "known_at": 11
+    },
+    {
+      "name": "Soprano",
+      "facet": "Pitch, frequency and loudness",
+      "known_at": 7
+    },
+    {
+      "name": "Falsetto",
+      "facet": "Pitch, frequency and loudness",
+      "known_at": 10
+    },
+    {
+      "name": "Middle C",
+      "facet": "Pitch, frequency and loudness",
+      "known_at": 9
+    },
+    {
+      "name": "Whisper",
+      "facet": "Pitch, frequency and loudness",
+      "known_at": 2
+    },
+    {
+      "name": "Voice breaking in puberty",
+      "facet": "Pitch, frequency and loudness",
+      "known_at": 7
+    },
+    {
+      "name": "Echo",
+      "facet": "Echoes and acoustics",
+      "known_at": 2
+    },
+    {
+      "name": "Reverberation",
+      "facet": "Echoes and acoustics",
+      "known_at": 11
+    },
+    {
+      "name": "Whispering gallery",
+      "facet": "Echoes and acoustics",
+      "known_at": 10
+    },
+    {
+      "name": "St Paul's Cathedral",
+      "facet": "Echoes and acoustics",
+      "known_at": 10
+    },
+    {
+      "name": "Anechoic chamber",
+      "facet": "Echoes and acoustics",
+      "known_at": 12
+    },
+    {
+      "name": "Acoustic foam",
+      "facet": "Echoes and acoustics",
+      "known_at": 8
+    },
+    {
+      "name": "Soundproofing",
+      "facet": "Echoes and acoustics",
+      "known_at": 7
+    },
+    {
+      "name": "Theatre of Epidaurus",
+      "facet": "Echoes and acoustics",
+      "known_at": 12
+    },
+    {
+      "name": "Echo Wall of the Temple of Heaven",
+      "facet": "Echoes and acoustics",
+      "known_at": 13
+    },
+    {
+      "name": "Gol Gumbaz",
+      "facet": "Echoes and acoustics",
+      "known_at": 14
+    },
+    {
+      "name": "El Castillo at Chichen Itza",
+      "facet": "Echoes and acoustics",
+      "known_at": 10
+    },
+    {
+      "name": "Musikverein",
+      "facet": "Echoes and acoustics",
+      "known_at": 13
+    },
+    {
+      "name": "Elbphilharmonie",
+      "facet": "Echoes and acoustics",
+      "known_at": 13
+    },
+    {
+      "name": "Wallace Sabine",
+      "facet": "Echoes and acoustics",
+      "known_at": 15
+    },
+    {
+      "name": "Echo (Greek nymph)",
+      "facet": "Echoes and acoustics",
+      "known_at": 10
+    },
+    {
+      "name": "Amphitheater",
+      "facet": "Echoes and acoustics",
+      "known_at": 8
+    },
+    {
+      "name": "Concert hall",
+      "facet": "Echoes and acoustics",
+      "known_at": 5
+    },
+    {
+      "name": "Ossicles",
+      "facet": "Hearing and the ear",
+      "known_at": 12
+    },
+    {
+      "name": "Pinna",
+      "facet": "Hearing and the ear",
+      "known_at": 11
+    },
+    {
+      "name": "Hair cells",
+      "facet": "Hearing and the ear",
+      "known_at": 12
+    },
+    {
+      "name": "Earplugs",
+      "facet": "Hearing and the ear",
+      "known_at": 4
+    },
+    {
+      "name": "Auditory nerve",
+      "facet": "Hearing and the ear",
+      "known_at": 10
+    },
+    {
+      "name": "Age-related hearing loss",
+      "facet": "Hearing and the ear",
+      "known_at": 9
+    },
+    {
+      "name": "Ludwig van Beethoven",
+      "facet": "Hearing and the ear",
+      "known_at": 6
+    },
+    {
+      "name": "Humpback whale song",
+      "facet": "Animal sounds and echolocation",
+      "known_at": 6
+    },
+    {
+      "name": "Oilbird",
+      "facet": "Animal sounds and echolocation",
+      "known_at": 14
+    },
+    {
+      "name": "Swiftlet",
+      "facet": "Animal sounds and echolocation",
+      "known_at": 13
+    },
+    {
+      "name": "Parrot",
+      "facet": "Animal sounds and echolocation",
+      "known_at": 1
+    },
+    {
+      "name": "Tiger moth",
+      "facet": "Animal sounds and echolocation",
+      "known_at": 13
+    },
+    {
+      "name": "Frog vocal sac",
+      "facet": "Animal sounds and echolocation",
+      "known_at": 6
+    },
+    {
+      "name": "Wolf howl",
+      "facet": "Animal sounds and echolocation",
+      "known_at": 2
+    },
+    {
+      "name": "Rooster",
+      "facet": "Animal sounds and echolocation",
+      "known_at": 1,
+      "retired": "used_up: At difficulty 1 the two existing rooster questions (its sound and its crow) already cover what kids know; the science-news facts are far too hard for this level."
+    },
+    {
+      "name": "Harp",
+      "facet": "Musical instruments and vibration",
+      "known_at": 3
+    },
+    {
+      "name": "Cello",
+      "facet": "Musical instruments and vibration",
+      "known_at": 6
+    },
+    {
+      "name": "Double bass",
+      "facet": "Musical instruments and vibration",
+      "known_at": 7
+    },
+    {
+      "name": "Flute",
+      "facet": "Musical instruments and vibration",
+      "known_at": 2
+    },
+    {
+      "name": "Oboe",
+      "facet": "Musical instruments and vibration",
+      "known_at": 9
+    },
+    {
+      "name": "Tuba",
+      "facet": "Musical instruments and vibration",
+      "known_at": 5
+    },
+    {
+      "name": "French horn",
+      "facet": "Musical instruments and vibration",
+      "known_at": 8
+    },
+    {
+      "name": "Xylophone",
+      "facet": "Musical instruments and vibration",
+      "known_at": 2
+    },
+    {
+      "name": "Didgeridoo",
+      "facet": "Musical instruments and vibration",
+      "known_at": 8
+    },
+    {
+      "name": "Sitar",
+      "facet": "Musical instruments and vibration",
+      "known_at": 9
+    },
+    {
+      "name": "Steelpan",
+      "facet": "Musical instruments and vibration",
+      "known_at": 9
+    },
+    {
+      "name": "Djembe",
+      "facet": "Musical instruments and vibration",
+      "known_at": 8
+    },
+    {
+      "name": "Kalimba",
+      "facet": "Musical instruments and vibration",
+      "known_at": 9
+    },
+    {
+      "name": "Bagpipes",
+      "facet": "Musical instruments and vibration",
+      "known_at": 5
+    },
+    {
+      "name": "Theremin",
+      "facet": "Musical instruments and vibration",
+      "known_at": 13
+    },
+    {
+      "name": "Tabla",
+      "facet": "Musical instruments and vibration",
+      "known_at": 11
+    },
+    {
+      "name": "Erhu",
+      "facet": "Musical instruments and vibration",
+      "known_at": 13
+    },
+    {
+      "name": "Koto",
+      "facet": "Musical instruments and vibration",
+      "known_at": 13
+    },
+    {
+      "name": "Kora",
+      "facet": "Musical instruments and vibration",
+      "known_at": 14
+    },
+    {
+      "name": "Glass harmonica",
+      "facet": "Musical instruments and vibration",
+      "known_at": 13
+    },
+    {
+      "name": "Resonance",
+      "facet": "Musical instruments and vibration",
+      "known_at": 10
+    },
+    {
+      "name": "Standing wave",
+      "facet": "Musical instruments and vibration",
+      "known_at": 12
+    },
+    {
+      "name": "Rosin",
+      "facet": "Musical instruments and vibration",
+      "known_at": 11
+    },
+    {
+      "name": "Fret",
+      "facet": "Musical instruments and vibration",
+      "known_at": 9
+    },
+    {
+      "name": "Medical ultrasound scan",
+      "facet": "Ultrasound and infrasound",
+      "known_at": 5
+    },
+    {
+      "name": "Elephant rumble",
+      "facet": "Ultrasound and infrasound",
+      "known_at": 9
+    },
+    {
+      "name": "Ultrasonic cleaner",
+      "facet": "Ultrasound and infrasound",
+      "known_at": 11
+    },
+    {
+      "name": "Lithotripsy",
+      "facet": "Ultrasound and infrasound",
+      "known_at": 14
+    },
+    {
+      "name": "Krakatoa eruption",
+      "facet": "Ultrasound and infrasound",
+      "known_at": 11
+    },
+    {
+      "name": "Ultrasonic parking sensor",
+      "facet": "Ultrasound and infrasound",
+      "known_at": 8
+    },
+    {
+      "name": "Ultrasonic humidifier",
+      "facet": "Ultrasound and infrasound",
+      "known_at": 12
+    },
+    {
+      "name": "Piezoelectric effect",
+      "facet": "Ultrasound and infrasound",
+      "known_at": 13
+    },
+    {
+      "name": "Bat detector",
+      "facet": "Ultrasound and infrasound",
+      "known_at": 12
+    },
+    {
+      "name": "Chelyabinsk meteor",
+      "facet": "Ultrasound and infrasound",
+      "known_at": 12
+    },
+    {
+      "name": "Doppler ultrasound",
+      "facet": "Ultrasound and infrasound",
+      "known_at": 13
+    },
+    {
+      "name": "Mosquito tone",
+      "facet": "Ultrasound and infrasound",
+      "known_at": 10
+    },
+    {
+      "name": "Ultrasonic pest repeller",
+      "facet": "Ultrasound and infrasound",
+      "known_at": 10
+    },
+    {
+      "name": "Radio waves",
+      "facet": "Light and electromagnetic waves",
+      "known_at": 7
+    },
+    {
+      "name": "Visible light",
+      "facet": "Light and electromagnetic waves",
+      "known_at": 6
+    },
+    {
+      "name": "X-rays",
+      "facet": "Light and electromagnetic waves",
+      "known_at": 4
+    },
+    {
+      "name": "Gamma rays",
+      "facet": "Light and electromagnetic waves",
+      "known_at": 9
+    },
+    {
+      "name": "Wi-Fi",
+      "facet": "Light and electromagnetic waves",
+      "known_at": 4
+    },
+    {
+      "name": "Radar",
+      "facet": "Light and electromagnetic waves",
+      "known_at": 7
+    },
+    {
+      "name": "Cosmic microwave background",
+      "facet": "Light and electromagnetic waves",
+      "known_at": 13
+    },
+    {
+      "name": "Bluetooth",
+      "facet": "Light and electromagnetic waves",
+      "known_at": 5
+    },
+    {
+      "name": "Color spectrum",
+      "facet": "Light and electromagnetic waves",
+      "known_at": 6
+    },
+    {
+      "name": "Tsunami",
+      "facet": "Water and earthquake waves",
+      "known_at": 5
+    },
+    {
+      "name": "P-wave",
+      "facet": "Water and earthquake waves",
+      "known_at": 12
+    },
+    {
+      "name": "S-wave",
+      "facet": "Water and earthquake waves",
+      "known_at": 12
+    },
+    {
+      "name": "Seismograph",
+      "facet": "Water and earthquake waves",
+      "known_at": 8
+    },
+    {
+      "name": "Richter scale",
+      "facet": "Water and earthquake waves",
+      "known_at": 8
+    },
+    {
+      "name": "Moment magnitude scale",
+      "facet": "Water and earthquake waves",
+      "known_at": 13
+    },
+    {
+      "name": "Mercalli scale",
+      "facet": "Water and earthquake waves",
+      "known_at": 13
+    },
+    {
+      "name": "Epicenter",
+      "facet": "Water and earthquake waves",
+      "known_at": 9
+    },
+    {
+      "name": "Rogue wave",
+      "facet": "Water and earthquake waves",
+      "known_at": 11
+    },
+    {
+      "name": "Breaking wave",
+      "facet": "Water and earthquake waves",
+      "known_at": 6
+    },
+    {
+      "name": "Swell",
+      "facet": "Water and earthquake waves",
+      "known_at": 10
+    },
+    {
+      "name": "Ripple",
+      "facet": "Water and earthquake waves",
+      "known_at": 3
+    },
+    {
+      "name": "Nazaré",
+      "facet": "Water and earthquake waves",
+      "known_at": 12
+    },
+    {
+      "name": "Tidal bore",
+      "facet": "Water and earthquake waves",
+      "known_at": 13
+    },
+    {
+      "name": "2004 Indian Ocean tsunami",
+      "facet": "Water and earthquake waves",
+      "known_at": 10
+    },
+    {
+      "name": "Seiche",
+      "facet": "Water and earthquake waves",
+      "known_at": 15
+    },
+    {
+      "name": "Zhang Heng's seismoscope",
+      "facet": "Water and earthquake waves",
+      "known_at": 13
+    },
+    {
+      "name": "Wave energy converter",
+      "facet": "Water and earthquake waves",
+      "known_at": 11
+    },
+    {
+      "name": "Reflection",
+      "facet": "Wave behavior: reflection, refraction, interference",
+      "known_at": 6
+    },
+    {
+      "name": "Refraction",
+      "facet": "Wave behavior: reflection, refraction, interference",
+      "known_at": 9
+    },
+    {
+      "name": "Mirage",
+      "facet": "Wave behavior: reflection, refraction, interference",
+      "known_at": 7
+    },
+    {
+      "name": "Bent straw in water",
+      "facet": "Wave behavior: reflection, refraction, interference",
+      "known_at": 5
+    },
+    {
+      "name": "Doppler effect",
+      "facet": "Wave behavior: reflection, refraction, interference",
+      "known_at": 10
+    },
+    {
+      "name": "Tacoma Narrows Bridge",
+      "facet": "Wave behavior: reflection, refraction, interference",
+      "known_at": 12
+    },
+    {
+      "name": "Beats",
+      "facet": "Wave behavior: reflection, refraction, interference",
+      "known_at": 14
+    },
+    {
+      "name": "Superposition",
+      "facet": "Wave behavior: reflection, refraction, interference",
+      "known_at": 13
+    },
+    {
+      "name": "Phonograph",
+      "facet": "Sound technology and recording",
+      "known_at": 8
+    },
+    {
+      "name": "Gramophone",
+      "facet": "Sound technology and recording",
+      "known_at": 8
+    },
+    {
+      "name": "Vinyl record",
+      "facet": "Sound technology and recording",
+      "known_at": 5
+    },
+    {
+      "name": "Cassette tape",
+      "facet": "Sound technology and recording",
+      "known_at": 6
+    },
+    {
+      "name": "Compact disc",
+      "facet": "Sound technology and recording",
+      "known_at": 4
+    },
+    {
+      "name": "MP3",
+      "facet": "Sound technology and recording",
+      "known_at": 7
+    },
+    {
+      "name": "Telephone",
+      "facet": "Sound technology and recording",
+      "known_at": 2
+    },
+    {
+      "name": "Radio",
+      "facet": "Sound technology and recording",
+      "known_at": 3,
+      "retired": "used_up: Radio is heavily covered already, and the options (record person, completion, odd one out person) only give forced or much harder questions."
+    },
+    {
+      "name": "Noise-cancelling headphones",
+      "facet": "Sound technology and recording",
+      "known_at": 8
+    },
+    {
+      "name": "Walkman",
+      "facet": "Sound technology and recording",
+      "known_at": 10
+    },
+    {
+      "name": "Auto-Tune",
+      "facet": "Sound technology and recording",
+      "known_at": 10
+    },
+    {
+      "name": "Stereo sound",
+      "facet": "Sound technology and recording",
+      "known_at": 8
+    },
+    {
+      "name": "Synthesizer",
+      "facet": "Sound technology and recording",
+      "known_at": 9
+    },
+    {
+      "name": "Magnetic tape",
+      "facet": "Sound technology and recording",
+      "known_at": 10
+    },
+    {
+      "name": "Phonautograph",
+      "facet": "Sound technology and recording",
+      "known_at": 15
+    },
+    {
+      "name": "Vocoder",
+      "facet": "Sound technology and recording",
+      "known_at": 13
+    },
+    {
+      "name": "Karaoke",
+      "facet": "Sound technology and recording",
+      "known_at": 4
+    },
+    {
+      "name": "Jukebox",
+      "facet": "Sound technology and recording",
+      "known_at": 8
+    },
+    {
+      "name": "Sampling rate",
+      "facet": "Sound technology and recording",
+      "known_at": 13
+    },
+    {
+      "name": "Christian Doppler",
+      "facet": "Scientists and discoveries of waves",
+      "known_at": 12
+    },
+    {
+      "name": "Heinrich Hertz",
+      "facet": "Scientists and discoveries of waves",
+      "known_at": 11
+    },
+    {
+      "name": "Alexander Graham Bell",
+      "facet": "Scientists and discoveries of waves",
+      "known_at": 6
+    },
+    {
+      "name": "Guglielmo Marconi",
+      "facet": "Scientists and discoveries of waves",
+      "known_at": 11
+    },
+    {
+      "name": "Pythagoras",
+      "facet": "Scientists and discoveries of waves",
+      "known_at": 8
+    },
+    {
+      "name": "Ernst Mach",
+      "facet": "Scientists and discoveries of waves",
+      "known_at": 13
+    },
+    {
+      "name": "Charles Richter",
+      "facet": "Scientists and discoveries of waves",
+      "known_at": 11
+    },
+    {
+      "name": "Hedy Lamarr",
+      "facet": "Scientists and discoveries of waves",
+      "known_at": 13
+    },
+    {
+      "name": "Ernst Chladni",
+      "facet": "Scientists and discoveries of waves",
+      "known_at": 15
+    },
+    {
+      "name": "Joseph Fourier",
+      "facet": "Scientists and discoveries of waves",
+      "known_at": 14
+    },
+    {
+      "name": "Emile Berliner",
+      "facet": "Scientists and discoveries of waves",
+      "known_at": 15
+    }
+  ]
+}

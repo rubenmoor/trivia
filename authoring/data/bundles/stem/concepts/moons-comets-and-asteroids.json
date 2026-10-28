@@ -1,0 +1,1227 @@
+{
+  "subcategory": "moons-comets-and-asteroids",
+  "facets": [
+    "Earth's Moon",
+    "Moons of Jupiter and Saturn",
+    "Moons of Mars, Uranus, Neptune and Pluto",
+    "Famous comets",
+    "Comet anatomy and orbits",
+    "Asteroids and the asteroid belt",
+    "Dwarf planets and the Kuiper Belt",
+    "Meteors, meteor showers and meteorites",
+    "Impacts and craters",
+    "Missions to small bodies",
+    "Discoverers and naming",
+    "Eclipses, tides and lunar phases"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 5,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 4,
+      "science_news": 5,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Apollo 11",
+      "facet": "Earth's Moon",
+      "known_at": 4
+    },
+    {
+      "name": "Neil Armstrong",
+      "facet": "Earth's Moon",
+      "known_at": 3
+    },
+    {
+      "name": "Buzz Aldrin",
+      "facet": "Earth's Moon",
+      "known_at": 6
+    },
+    {
+      "name": "Michael Collins",
+      "facet": "Earth's Moon",
+      "known_at": 11
+    },
+    {
+      "name": "Sea of Tranquility",
+      "facet": "Earth's Moon",
+      "known_at": 9
+    },
+    {
+      "name": "Far side of the Moon",
+      "facet": "Earth's Moon",
+      "known_at": 6
+    },
+    {
+      "name": "Lunar maria",
+      "facet": "Earth's Moon",
+      "known_at": 10
+    },
+    {
+      "name": "Lunar highlands",
+      "facet": "Earth's Moon",
+      "known_at": 12
+    },
+    {
+      "name": "Moon rocks",
+      "facet": "Earth's Moon",
+      "known_at": 5
+    },
+    {
+      "name": "Giant-impact hypothesis",
+      "facet": "Earth's Moon",
+      "known_at": 10
+    },
+    {
+      "name": "Theia",
+      "facet": "Earth's Moon",
+      "known_at": 13
+    },
+    {
+      "name": "Lunar regolith",
+      "facet": "Earth's Moon",
+      "known_at": 12
+    },
+    {
+      "name": "Tycho crater",
+      "facet": "Earth's Moon",
+      "known_at": 13
+    },
+    {
+      "name": "Moonquake",
+      "facet": "Earth's Moon",
+      "known_at": 10
+    },
+    {
+      "name": "Lunar water ice",
+      "facet": "Earth's Moon",
+      "known_at": 10
+    },
+    {
+      "name": "Supermoon",
+      "facet": "Earth's Moon",
+      "known_at": 6
+    },
+    {
+      "name": "Lunar gravity",
+      "facet": "Earth's Moon",
+      "known_at": 5
+    },
+    {
+      "name": "Apollo 17",
+      "facet": "Earth's Moon",
+      "known_at": 12
+    },
+    {
+      "name": "Lunar Roving Vehicle",
+      "facet": "Earth's Moon",
+      "known_at": 8
+    },
+    {
+      "name": "Chang'e 4",
+      "facet": "Earth's Moon",
+      "known_at": 12
+    },
+    {
+      "name": "Luna 9",
+      "facet": "Earth's Moon",
+      "known_at": 13
+    },
+    {
+      "name": "Footprints on the Moon",
+      "facet": "Earth's Moon",
+      "known_at": 4
+    },
+    {
+      "name": "Europa",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 8
+    },
+    {
+      "name": "Ganymede",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 8
+    },
+    {
+      "name": "Callisto",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 10
+    },
+    {
+      "name": "Galilean moons",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 9
+    },
+    {
+      "name": "Enceladus",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 10
+    },
+    {
+      "name": "Enceladus geysers",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 11
+    },
+    {
+      "name": "Mimas",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 11
+    },
+    {
+      "name": "Iapetus",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 13
+    },
+    {
+      "name": "Hyperion",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 13
+    },
+    {
+      "name": "Rhea",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 13
+    },
+    {
+      "name": "Dione",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 14
+    },
+    {
+      "name": "Tethys",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 14
+    },
+    {
+      "name": "Phoebe",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 14
+    },
+    {
+      "name": "Pan",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 14
+    },
+    {
+      "name": "Amalthea",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 15
+    },
+    {
+      "name": "Shepherd moons",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 13
+    },
+    {
+      "name": "Kraken Mare",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 14
+    },
+    {
+      "name": "Subsurface ocean of Europa",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 10
+    },
+    {
+      "name": "Europa Clipper",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 11
+    },
+    {
+      "name": "JUICE",
+      "facet": "Moons of Jupiter and Saturn",
+      "known_at": 13
+    },
+    {
+      "name": "Phobos",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 9
+    },
+    {
+      "name": "Deimos",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 10
+    },
+    {
+      "name": "Stickney crater",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 14
+    },
+    {
+      "name": "Triton",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 10
+    },
+    {
+      "name": "Retrograde orbit",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 12
+    },
+    {
+      "name": "Charon",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 9
+    },
+    {
+      "name": "Miranda",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 12
+    },
+    {
+      "name": "Titania",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 12
+    },
+    {
+      "name": "Oberon",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 12
+    },
+    {
+      "name": "Ariel",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 12
+    },
+    {
+      "name": "Umbriel",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 14
+    },
+    {
+      "name": "Nereid",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 14
+    },
+    {
+      "name": "Proteus",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 14
+    },
+    {
+      "name": "Nix",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 13
+    },
+    {
+      "name": "Hydra",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 13
+    },
+    {
+      "name": "Kerberos",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 14
+    },
+    {
+      "name": "Styx",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 14
+    },
+    {
+      "name": "Cryovolcano",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 12
+    },
+    {
+      "name": "Shakespeare characters as moon names",
+      "facet": "Moons of Mars, Uranus, Neptune and Pluto",
+      "known_at": 11
+    },
+    {
+      "name": "Halley's Comet",
+      "facet": "Famous comets",
+      "known_at": 5
+    },
+    {
+      "name": "Comet Hale-Bopp",
+      "facet": "Famous comets",
+      "known_at": 10
+    },
+    {
+      "name": "Comet Hyakutake",
+      "facet": "Famous comets",
+      "known_at": 13
+    },
+    {
+      "name": "Comet NEOWISE",
+      "facet": "Famous comets",
+      "known_at": 12
+    },
+    {
+      "name": "Comet McNaught",
+      "facet": "Famous comets",
+      "known_at": 14
+    },
+    {
+      "name": "Comet 67P/Churyumov–Gerasimenko",
+      "facet": "Famous comets",
+      "known_at": 11
+    },
+    {
+      "name": "Comet Tempel 1",
+      "facet": "Famous comets",
+      "known_at": 14
+    },
+    {
+      "name": "Comet Wild 2",
+      "facet": "Famous comets",
+      "known_at": 14
+    },
+    {
+      "name": "Comet Encke",
+      "facet": "Famous comets",
+      "known_at": 14
+    },
+    {
+      "name": "Comet Swift–Tuttle",
+      "facet": "Famous comets",
+      "known_at": 13
+    },
+    {
+      "name": "Comet Tempel–Tuttle",
+      "facet": "Famous comets",
+      "known_at": 14
+    },
+    {
+      "name": "Comet ISON",
+      "facet": "Famous comets",
+      "known_at": 14
+    },
+    {
+      "name": "Comet Kohoutek",
+      "facet": "Famous comets",
+      "known_at": 14
+    },
+    {
+      "name": "Great Comet of 1811",
+      "facet": "Famous comets",
+      "known_at": 15
+    },
+    {
+      "name": "Comet Tsuchinshan–ATLAS",
+      "facet": "Famous comets",
+      "known_at": 13
+    },
+    {
+      "name": "'Oumuamua",
+      "facet": "Famous comets",
+      "known_at": 11
+    },
+    {
+      "name": "2I/Borisov",
+      "facet": "Famous comets",
+      "known_at": 14
+    },
+    {
+      "name": "3I/ATLAS",
+      "facet": "Famous comets",
+      "known_at": 13
+    },
+    {
+      "name": "Comet on the Bayeux Tapestry",
+      "facet": "Famous comets",
+      "known_at": 12
+    },
+    {
+      "name": "Nucleus",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 8
+    },
+    {
+      "name": "Coma",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 11
+    },
+    {
+      "name": "Comet tail",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 3
+    },
+    {
+      "name": "Ion tail",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 12
+    },
+    {
+      "name": "Dust tail",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 11
+    },
+    {
+      "name": "Dirty snowball",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 9
+    },
+    {
+      "name": "Oort Cloud",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 11
+    },
+    {
+      "name": "Short-period comet",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 11
+    },
+    {
+      "name": "Long-period comet",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 11
+    },
+    {
+      "name": "Sungrazer",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 13
+    },
+    {
+      "name": "Kreutz sungrazers",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 15
+    },
+    {
+      "name": "Perihelion",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 11
+    },
+    {
+      "name": "Outgassing",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 13
+    },
+    {
+      "name": "Anti-tail",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 15
+    },
+    {
+      "name": "Jupiter-family comets",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 14
+    },
+    {
+      "name": "Centaur",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 14
+    },
+    {
+      "name": "Hyperbolic orbit",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 13
+    },
+    {
+      "name": "Interstellar object",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 11
+    },
+    {
+      "name": "Comet outburst",
+      "facet": "Comet anatomy and orbits",
+      "known_at": 14
+    },
+    {
+      "name": "Asteroid belt",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 5
+    },
+    {
+      "name": "Vesta",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 11
+    },
+    {
+      "name": "Pallas",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 13
+    },
+    {
+      "name": "Juno",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 14
+    },
+    {
+      "name": "Hygiea",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 14
+    },
+    {
+      "name": "Kirkwood gaps",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 15
+    },
+    {
+      "name": "Near-Earth asteroid",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 10
+    },
+    {
+      "name": "Potentially hazardous asteroid",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 11
+    },
+    {
+      "name": "Ryugu",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 13
+    },
+    {
+      "name": "Itokawa",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 13
+    },
+    {
+      "name": "Eros",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 13
+    },
+    {
+      "name": "Didymos",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 13
+    },
+    {
+      "name": "Dimorphos",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 12
+    },
+    {
+      "name": "Psyche",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 12
+    },
+    {
+      "name": "Ida and Dactyl",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 14
+    },
+    {
+      "name": "Gaspra",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 15
+    },
+    {
+      "name": "Kleopatra",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 15
+    },
+    {
+      "name": "C-type asteroid",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 14
+    },
+    {
+      "name": "M-type asteroid",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 14
+    },
+    {
+      "name": "Asteroid mining",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 10
+    },
+    {
+      "name": "Kamoʻoalewa",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 15
+    },
+    {
+      "name": "Asteroid moon",
+      "facet": "Asteroids and the asteroid belt",
+      "known_at": 12
+    },
+    {
+      "name": "Ceres",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 9
+    },
+    {
+      "name": "Occator crater",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 14
+    },
+    {
+      "name": "Ahuna Mons",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 15
+    },
+    {
+      "name": "Kuiper Belt",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 9
+    },
+    {
+      "name": "Scattered disc",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 14
+    },
+    {
+      "name": "Trans-Neptunian object",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 13
+    },
+    {
+      "name": "Sedna",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 12
+    },
+    {
+      "name": "Quaoar",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 13
+    },
+    {
+      "name": "Gonggong",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 14
+    },
+    {
+      "name": "Orcus",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 14
+    },
+    {
+      "name": "Dysnomia",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 14
+    },
+    {
+      "name": "Hiʻiaka",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 15
+    },
+    {
+      "name": "Plutino",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 15
+    },
+    {
+      "name": "Plutoid",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 14
+    },
+    {
+      "name": "Clearing the neighborhood",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 12
+    },
+    {
+      "name": "Dwarf planet",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 6
+    },
+    {
+      "name": "Planet Nine",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 11
+    },
+    {
+      "name": "Sputnik Planitia",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 13
+    },
+    {
+      "name": "Tombaugh Regio",
+      "facet": "Dwarf planets and the Kuiper Belt",
+      "known_at": 10
+    },
+    {
+      "name": "Shooting star",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 2
+    },
+    {
+      "name": "Meteoroid",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 9
+    },
+    {
+      "name": "Meteor",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 5
+    },
+    {
+      "name": "Fireball",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 9
+    },
+    {
+      "name": "Bolide",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 13
+    },
+    {
+      "name": "Meteor shower",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 5
+    },
+    {
+      "name": "Perseids",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 9
+    },
+    {
+      "name": "Leonids",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 11
+    },
+    {
+      "name": "Geminids",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 11
+    },
+    {
+      "name": "Quadrantids",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 14
+    },
+    {
+      "name": "Orionids",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 12
+    },
+    {
+      "name": "Lyrids",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 13
+    },
+    {
+      "name": "Radiant",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 13
+    },
+    {
+      "name": "Leonid meteor storm of 1833",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 14
+    },
+    {
+      "name": "Chondrite",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 14
+    },
+    {
+      "name": "Murchison meteorite",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 14
+    },
+    {
+      "name": "Allende meteorite",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 15
+    },
+    {
+      "name": "Martian meteorite",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 12
+    },
+    {
+      "name": "Widmanstätten pattern",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 15
+    },
+    {
+      "name": "Tektite",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 14
+    },
+    {
+      "name": "Micrometeorite",
+      "facet": "Meteors, meteor showers and meteorites",
+      "known_at": 12
+    },
+    {
+      "name": "Dinosaur-killing asteroid",
+      "facet": "Impacts and craters",
+      "known_at": 4
+    },
+    {
+      "name": "Meteor Crater",
+      "facet": "Impacts and craters",
+      "known_at": 10
+    },
+    {
+      "name": "Tunguska event",
+      "facet": "Impacts and craters",
+      "known_at": 12
+    },
+    {
+      "name": "Vredefort crater",
+      "facet": "Impacts and craters",
+      "known_at": 13
+    },
+    {
+      "name": "Sudbury Basin",
+      "facet": "Impacts and craters",
+      "known_at": 14
+    },
+    {
+      "name": "Popigai crater",
+      "facet": "Impacts and craters",
+      "known_at": 15
+    },
+    {
+      "name": "Wolfe Creek crater",
+      "facet": "Impacts and craters",
+      "known_at": 14
+    },
+    {
+      "name": "Ries crater",
+      "facet": "Impacts and craters",
+      "known_at": 15
+    },
+    {
+      "name": "Lonar Lake",
+      "facet": "Impacts and craters",
+      "known_at": 14
+    },
+    {
+      "name": "Manicouagan crater",
+      "facet": "Impacts and craters",
+      "known_at": 14
+    },
+    {
+      "name": "Aorounga crater",
+      "facet": "Impacts and craters",
+      "known_at": 15
+    },
+    {
+      "name": "Ejecta",
+      "facet": "Impacts and craters",
+      "known_at": 13
+    },
+    {
+      "name": "Central peak",
+      "facet": "Impacts and craters",
+      "known_at": 13
+    },
+    {
+      "name": "Crater rays",
+      "facet": "Impacts and craters",
+      "known_at": 12
+    },
+    {
+      "name": "Shocked quartz",
+      "facet": "Impacts and craters",
+      "known_at": 15
+    },
+    {
+      "name": "Late Heavy Bombardment",
+      "facet": "Impacts and craters",
+      "known_at": 14
+    },
+    {
+      "name": "Impact winter",
+      "facet": "Impacts and craters",
+      "known_at": 11
+    },
+    {
+      "name": "Torino scale",
+      "facet": "Impacts and craters",
+      "known_at": 14
+    },
+    {
+      "name": "Planetary defense",
+      "facet": "Impacts and craters",
+      "known_at": 11
+    },
+    {
+      "name": "Rosetta",
+      "facet": "Missions to small bodies",
+      "known_at": 11
+    },
+    {
+      "name": "Philae",
+      "facet": "Missions to small bodies",
+      "known_at": 11
+    },
+    {
+      "name": "Hayabusa",
+      "facet": "Missions to small bodies",
+      "known_at": 12
+    },
+    {
+      "name": "Hayabusa2",
+      "facet": "Missions to small bodies",
+      "known_at": 12
+    },
+    {
+      "name": "OSIRIS-REx",
+      "facet": "Missions to small bodies",
+      "known_at": 12
+    },
+    {
+      "name": "DART",
+      "facet": "Missions to small bodies",
+      "known_at": 10
+    },
+    {
+      "name": "Hera",
+      "facet": "Missions to small bodies",
+      "known_at": 14
+    },
+    {
+      "name": "Dawn",
+      "facet": "Missions to small bodies",
+      "known_at": 13
+    },
+    {
+      "name": "Deep Impact mission",
+      "facet": "Missions to small bodies",
+      "known_at": 13
+    },
+    {
+      "name": "Giotto",
+      "facet": "Missions to small bodies",
+      "known_at": 13
+    },
+    {
+      "name": "NEAR Shoemaker",
+      "facet": "Missions to small bodies",
+      "known_at": 14
+    },
+    {
+      "name": "New Horizons",
+      "facet": "Missions to small bodies",
+      "known_at": 10
+    },
+    {
+      "name": "Vega program",
+      "facet": "Missions to small bodies",
+      "known_at": 15
+    },
+    {
+      "name": "Halley Armada",
+      "facet": "Missions to small bodies",
+      "known_at": 15
+    },
+    {
+      "name": "Deep Space 1",
+      "facet": "Missions to small bodies",
+      "known_at": 15
+    },
+    {
+      "name": "Tianwen-2",
+      "facet": "Missions to small bodies",
+      "known_at": 14
+    },
+    {
+      "name": "Chang'e 2",
+      "facet": "Missions to small bodies",
+      "known_at": 15
+    },
+    {
+      "name": "Comet Interceptor",
+      "facet": "Missions to small bodies",
+      "known_at": 15
+    },
+    {
+      "name": "Sample-return capsule",
+      "facet": "Missions to small bodies",
+      "known_at": 11
+    },
+    {
+      "name": "Edmond Halley",
+      "facet": "Discoverers and naming",
+      "known_at": 8
+    },
+    {
+      "name": "Giuseppe Piazzi",
+      "facet": "Discoverers and naming",
+      "known_at": 14
+    },
+    {
+      "name": "Clyde Tombaugh",
+      "facet": "Discoverers and naming",
+      "known_at": 11
+    },
+    {
+      "name": "Venetia Burney",
+      "facet": "Discoverers and naming",
+      "known_at": 13
+    },
+    {
+      "name": "Caroline Herschel",
+      "facet": "Discoverers and naming",
+      "known_at": 13
+    },
+    {
+      "name": "Giovanni Cassini",
+      "facet": "Discoverers and naming",
+      "known_at": 12
+    },
+    {
+      "name": "Asaph Hall",
+      "facet": "Discoverers and naming",
+      "known_at": 14
+    },
+    {
+      "name": "William Lassell",
+      "facet": "Discoverers and naming",
+      "known_at": 15
+    },
+    {
+      "name": "Charles Messier",
+      "facet": "Discoverers and naming",
+      "known_at": 13
+    },
+    {
+      "name": "Mike Brown",
+      "facet": "Discoverers and naming",
+      "known_at": 13
+    },
+    {
+      "name": "Simon Marius",
+      "facet": "Discoverers and naming",
+      "known_at": 15
+    },
+    {
+      "name": "Heinrich Olbers",
+      "facet": "Discoverers and naming",
+      "known_at": 15
+    },
+    {
+      "name": "Jan Oort",
+      "facet": "Discoverers and naming",
+      "known_at": 13
+    },
+    {
+      "name": "Fred Whipple",
+      "facet": "Discoverers and naming",
+      "known_at": 14
+    },
+    {
+      "name": "Gene Shoemaker",
+      "facet": "Discoverers and naming",
+      "known_at": 14
+    },
+    {
+      "name": "Tycho Brahe",
+      "facet": "Discoverers and naming",
+      "known_at": 12
+    },
+    {
+      "name": "International Astronomical Union",
+      "facet": "Discoverers and naming",
+      "known_at": 11
+    },
+    {
+      "name": "Minor Planet Center",
+      "facet": "Discoverers and naming",
+      "known_at": 14
+    },
+    {
+      "name": "Comet naming after discoverers",
+      "facet": "Discoverers and naming",
+      "known_at": 10
+    },
+    {
+      "name": "Partial eclipse",
+      "facet": "Eclipses, tides and lunar phases",
+      "known_at": 7
+    },
+    {
+      "name": "Path of totality",
+      "facet": "Eclipses, tides and lunar phases",
+      "known_at": 11
+    },
+    {
+      "name": "Pinhole projector",
+      "facet": "Eclipses, tides and lunar phases",
+      "known_at": 8
+    },
+    {
+      "name": "Spring tide",
+      "facet": "Eclipses, tides and lunar phases",
+      "known_at": 11
+    },
+    {
+      "name": "Neap tide",
+      "facet": "Eclipses, tides and lunar phases",
+      "known_at": 12
+    },
+    {
+      "name": "Bay of Fundy",
+      "facet": "Eclipses, tides and lunar phases",
+      "known_at": 12
+    },
+    {
+      "name": "Tidal bulge",
+      "facet": "Eclipses, tides and lunar phases",
+      "known_at": 13
+    },
+    {
+      "name": "New moon",
+      "facet": "Eclipses, tides and lunar phases",
+      "known_at": 4
+    },
+    {
+      "name": "Full moon",
+      "facet": "Eclipses, tides and lunar phases",
+      "known_at": 1
+    },
+    {
+      "name": "Crescent moon",
+      "facet": "Eclipses, tides and lunar phases",
+      "known_at": 2
+    },
+    {
+      "name": "Gibbous moon",
+      "facet": "Eclipses, tides and lunar phases",
+      "known_at": 10
+    },
+    {
+      "name": "First quarter moon",
+      "facet": "Eclipses, tides and lunar phases",
+      "known_at": 8
+    },
+    {
+      "name": "Waxing and waning",
+      "facet": "Eclipses, tides and lunar phases",
+      "known_at": 8
+    },
+    {
+      "name": "Blue moon",
+      "facet": "Eclipses, tides and lunar phases",
+      "known_at": 8
+    },
+    {
+      "name": "Synodic month",
+      "facet": "Eclipses, tides and lunar phases",
+      "known_at": 12
+    }
+  ]
+}

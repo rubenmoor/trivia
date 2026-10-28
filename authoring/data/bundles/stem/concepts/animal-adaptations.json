@@ -1,0 +1,867 @@
+{
+  "subcategory": "animal-adaptations",
+  "facets": [
+    "Camouflage and color change",
+    "Mimicry and warning colors",
+    "Defenses: armor, spines and venom",
+    "Hunting tools and tricks",
+    "Senses beyond human",
+    "Surviving cold and polar life",
+    "Surviving heat and deserts",
+    "Life in water and the deep sea",
+    "Flight, gliding and movement",
+    "Hibernation, migration and seasons",
+    "Body shapes: beaks, teeth and limbs",
+    "Adaptation, evolution and the scientists"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 2,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 5,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 1
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 2,
+      "pop_culture": 3,
+      "popular_science": 4,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 5,
+      "history": 2,
+      "body_senses": 3,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Leaf insect",
+      "facet": "Camouflage and color change",
+      "known_at": 6
+    },
+    {
+      "name": "Pygmy seahorse",
+      "facet": "Camouflage and color change",
+      "known_at": 9
+    },
+    {
+      "name": "Orchid mantis",
+      "facet": "Camouflage and color change",
+      "known_at": 8
+    },
+    {
+      "name": "Dead leaf butterfly",
+      "facet": "Camouflage and color change",
+      "known_at": 10
+    },
+    {
+      "name": "Crab spider",
+      "facet": "Camouflage and color change",
+      "known_at": 10
+    },
+    {
+      "name": "Rock ptarmigan",
+      "facet": "Camouflage and color change",
+      "known_at": 11
+    },
+    {
+      "name": "Potoo",
+      "facet": "Camouflage and color change",
+      "known_at": 11
+    },
+    {
+      "name": "Leaf-tailed gecko",
+      "facet": "Camouflage and color change",
+      "known_at": 10
+    },
+    {
+      "name": "Zebra stripes",
+      "facet": "Camouflage and color change",
+      "known_at": 3
+    },
+    {
+      "name": "Tiger stripes",
+      "facet": "Camouflage and color change",
+      "known_at": 3
+    },
+    {
+      "name": "Disruptive coloration",
+      "facet": "Camouflage and color change",
+      "known_at": 14
+    },
+    {
+      "name": "Chromatophore",
+      "facet": "Camouflage and color change",
+      "known_at": 13
+    },
+    {
+      "name": "Algae in sloth fur",
+      "facet": "Camouflage and color change",
+      "known_at": 10
+    },
+    {
+      "name": "Coral snake",
+      "facet": "Mimicry and warning colors",
+      "known_at": 8
+    },
+    {
+      "name": "Milk snake",
+      "facet": "Mimicry and warning colors",
+      "known_at": 11
+    },
+    {
+      "name": "Owl butterfly",
+      "facet": "Mimicry and warning colors",
+      "known_at": 9
+    },
+    {
+      "name": "Müllerian mimicry",
+      "facet": "Mimicry and warning colors",
+      "known_at": 15
+    },
+    {
+      "name": "Ladybug",
+      "facet": "Mimicry and warning colors",
+      "known_at": 1
+    },
+    {
+      "name": "Wasp",
+      "facet": "Mimicry and warning colors",
+      "known_at": 2
+    },
+    {
+      "name": "Snake-mimic caterpillar",
+      "facet": "Mimicry and warning colors",
+      "known_at": 10
+    },
+    {
+      "name": "Ant-mimicking spider",
+      "facet": "Mimicry and warning colors",
+      "known_at": 12
+    },
+    {
+      "name": "Bee orchid",
+      "facet": "Mimicry and warning colors",
+      "known_at": 11
+    },
+    {
+      "name": "Blue-ringed octopus",
+      "facet": "Mimicry and warning colors",
+      "known_at": 8
+    },
+    {
+      "name": "Nudibranch",
+      "facet": "Mimicry and warning colors",
+      "known_at": 11
+    },
+    {
+      "name": "Clearwing moth",
+      "facet": "Mimicry and warning colors",
+      "known_at": 12
+    },
+    {
+      "name": "Femme fatale firefly",
+      "facet": "Mimicry and warning colors",
+      "known_at": 14
+    },
+    {
+      "name": "Porcupine",
+      "facet": "Defenses: armor, spines and venom",
+      "known_at": 3
+    },
+    {
+      "name": "Armadillo",
+      "facet": "Defenses: armor, spines and venom",
+      "known_at": 4
+    },
+    {
+      "name": "Sea cucumber",
+      "facet": "Defenses: armor, spines and venom",
+      "known_at": 9
+    },
+    {
+      "name": "Tail autotomy",
+      "facet": "Defenses: armor, spines and venom",
+      "known_at": 6
+    },
+    {
+      "name": "Stingray",
+      "facet": "Defenses: armor, spines and venom",
+      "known_at": 5
+    },
+    {
+      "name": "Box jellyfish",
+      "facet": "Defenses: armor, spines and venom",
+      "known_at": 9
+    },
+    {
+      "name": "Platypus spur",
+      "facet": "Defenses: armor, spines and venom",
+      "known_at": 10
+    },
+    {
+      "name": "Lionfish",
+      "facet": "Defenses: armor, spines and venom",
+      "known_at": 8
+    },
+    {
+      "name": "Sea urchin",
+      "facet": "Defenses: armor, spines and venom",
+      "known_at": 4
+    },
+    {
+      "name": "Opossum playing dead",
+      "facet": "Defenses: armor, spines and venom",
+      "known_at": 7
+    },
+    {
+      "name": "Hagfish slime",
+      "facet": "Defenses: armor, spines and venom",
+      "known_at": 12
+    },
+    {
+      "name": "Turtle shell",
+      "facet": "Defenses: armor, spines and venom",
+      "known_at": 1
+    },
+    {
+      "name": "Honeybee sting",
+      "facet": "Defenses: armor, spines and venom",
+      "known_at": 4
+    },
+    {
+      "name": "Slow loris",
+      "facet": "Defenses: armor, spines and venom",
+      "known_at": 12
+    },
+    {
+      "name": "Komodo dragon",
+      "facet": "Hunting tools and tricks",
+      "known_at": 6
+    },
+    {
+      "name": "Pelican pouch",
+      "facet": "Hunting tools and tricks",
+      "known_at": 4
+    },
+    {
+      "name": "Bolas spider",
+      "facet": "Hunting tools and tricks",
+      "known_at": 14
+    },
+    {
+      "name": "Crocodile death roll",
+      "facet": "Hunting tools and tricks",
+      "known_at": 9
+    },
+    {
+      "name": "Chimpanzee termite fishing",
+      "facet": "Hunting tools and tricks",
+      "known_at": 8
+    },
+    {
+      "name": "Jumping spider",
+      "facet": "Hunting tools and tricks",
+      "known_at": 8
+    },
+    {
+      "name": "Wolf pack",
+      "facet": "Hunting tools and tricks",
+      "known_at": 4
+    },
+    {
+      "name": "Dolphin",
+      "facet": "Senses beyond human",
+      "known_at": 2
+    },
+    {
+      "name": "Ampullae of Lorenzini",
+      "facet": "Senses beyond human",
+      "known_at": 14
+    },
+    {
+      "name": "Hammerhead shark",
+      "facet": "Senses beyond human",
+      "known_at": 5
+    },
+    {
+      "name": "Platypus bill",
+      "facet": "Senses beyond human",
+      "known_at": 10
+    },
+    {
+      "name": "Mantis shrimp eyes",
+      "facet": "Senses beyond human",
+      "known_at": 11
+    },
+    {
+      "name": "Ultraviolet vision in bees",
+      "facet": "Senses beyond human",
+      "known_at": 10
+    },
+    {
+      "name": "Bloodhound",
+      "facet": "Senses beyond human",
+      "known_at": 6
+    },
+    {
+      "name": "Elephant infrasound",
+      "facet": "Senses beyond human",
+      "known_at": 11
+    },
+    {
+      "name": "Lateral line",
+      "facet": "Senses beyond human",
+      "known_at": 12
+    },
+    {
+      "name": "Jacobson's organ",
+      "facet": "Senses beyond human",
+      "known_at": 13
+    },
+    {
+      "name": "Eagle eyesight",
+      "facet": "Senses beyond human",
+      "known_at": 3
+    },
+    {
+      "name": "Butterfly tasting with feet",
+      "facet": "Senses beyond human",
+      "known_at": 9
+    },
+    {
+      "name": "Compound eye",
+      "facet": "Senses beyond human",
+      "known_at": 7
+    },
+    {
+      "name": "Cat whiskers",
+      "facet": "Senses beyond human",
+      "known_at": 3
+    },
+    {
+      "name": "Tarsier",
+      "facet": "Senses beyond human",
+      "known_at": 10
+    },
+    {
+      "name": "Moth antennae",
+      "facet": "Senses beyond human",
+      "known_at": 9
+    },
+    {
+      "name": "Polar bear",
+      "facet": "Surviving cold and polar life",
+      "known_at": 1
+    },
+    {
+      "name": "Walrus",
+      "facet": "Surviving cold and polar life",
+      "known_at": 3
+    },
+    {
+      "name": "Blubber",
+      "facet": "Surviving cold and polar life",
+      "known_at": 6
+    },
+    {
+      "name": "Musk ox",
+      "facet": "Surviving cold and polar life",
+      "known_at": 9
+    },
+    {
+      "name": "Antarctic icefish",
+      "facet": "Surviving cold and polar life",
+      "known_at": 13
+    },
+    {
+      "name": "Antifreeze proteins",
+      "facet": "Surviving cold and polar life",
+      "known_at": 13
+    },
+    {
+      "name": "Snow leopard",
+      "facet": "Surviving cold and polar life",
+      "known_at": 5
+    },
+    {
+      "name": "Reindeer",
+      "facet": "Surviving cold and polar life",
+      "known_at": 2
+    },
+    {
+      "name": "Snowy owl",
+      "facet": "Surviving cold and polar life",
+      "known_at": 5
+    },
+    {
+      "name": "Weddell seal",
+      "facet": "Surviving cold and polar life",
+      "known_at": 12
+    },
+    {
+      "name": "Yak",
+      "facet": "Surviving cold and polar life",
+      "known_at": 6
+    },
+    {
+      "name": "Countercurrent heat exchange",
+      "facet": "Surviving cold and polar life",
+      "known_at": 14
+    },
+    {
+      "name": "Bergmann's rule",
+      "facet": "Surviving cold and polar life",
+      "known_at": 15
+    },
+    {
+      "name": "Allen's rule",
+      "facet": "Surviving cold and polar life",
+      "known_at": 15
+    },
+    {
+      "name": "Lemming",
+      "facet": "Surviving cold and polar life",
+      "known_at": 8
+    },
+    {
+      "name": "Woolly mammoth",
+      "facet": "Surviving cold and polar life",
+      "known_at": 3
+    },
+    {
+      "name": "Dromedary",
+      "facet": "Surviving heat and deserts",
+      "known_at": 3
+    },
+    {
+      "name": "Bactrian camel",
+      "facet": "Surviving heat and deserts",
+      "known_at": 7
+    },
+    {
+      "name": "Fennec fox",
+      "facet": "Surviving heat and deserts",
+      "known_at": 5
+    },
+    {
+      "name": "Thorny devil",
+      "facet": "Surviving heat and deserts",
+      "known_at": 10
+    },
+    {
+      "name": "Kangaroo rat",
+      "facet": "Surviving heat and deserts",
+      "known_at": 11
+    },
+    {
+      "name": "Jackrabbit",
+      "facet": "Surviving heat and deserts",
+      "known_at": 9
+    },
+    {
+      "name": "Sidewinder",
+      "facet": "Surviving heat and deserts",
+      "known_at": 9
+    },
+    {
+      "name": "Namib desert beetle",
+      "facet": "Surviving heat and deserts",
+      "known_at": 12
+    },
+    {
+      "name": "Sandgrouse",
+      "facet": "Surviving heat and deserts",
+      "known_at": 13
+    },
+    {
+      "name": "Oryx",
+      "facet": "Surviving heat and deserts",
+      "known_at": 9
+    },
+    {
+      "name": "Addax",
+      "facet": "Surviving heat and deserts",
+      "known_at": 14
+    },
+    {
+      "name": "Gila monster",
+      "facet": "Surviving heat and deserts",
+      "known_at": 10
+    },
+    {
+      "name": "Desert tortoise",
+      "facet": "Surviving heat and deserts",
+      "known_at": 7
+    },
+    {
+      "name": "Panting",
+      "facet": "Surviving heat and deserts",
+      "known_at": 3
+    },
+    {
+      "name": "Elephant ears",
+      "facet": "Surviving heat and deserts",
+      "known_at": 5
+    },
+    {
+      "name": "Roadrunner",
+      "facet": "Surviving heat and deserts",
+      "known_at": 5
+    },
+    {
+      "name": "Spadefoot toad",
+      "facet": "Surviving heat and deserts",
+      "known_at": 12
+    },
+    {
+      "name": "Saharan silver ant",
+      "facet": "Surviving heat and deserts",
+      "known_at": 13
+    },
+    {
+      "name": "Giant squid",
+      "facet": "Life in water and the deep sea",
+      "known_at": 5
+    },
+    {
+      "name": "Vampire squid",
+      "facet": "Life in water and the deep sea",
+      "known_at": 11
+    },
+    {
+      "name": "Swim bladder",
+      "facet": "Life in water and the deep sea",
+      "known_at": 10
+    },
+    {
+      "name": "Sperm whale",
+      "facet": "Life in water and the deep sea",
+      "known_at": 5
+    },
+    {
+      "name": "Blowhole",
+      "facet": "Life in water and the deep sea",
+      "known_at": 3
+    },
+    {
+      "name": "Mudskipper",
+      "facet": "Life in water and the deep sea",
+      "known_at": 9
+    },
+    {
+      "name": "Barreleye fish",
+      "facet": "Life in water and the deep sea",
+      "known_at": 12
+    },
+    {
+      "name": "Gulper eel",
+      "facet": "Life in water and the deep sea",
+      "known_at": 12
+    },
+    {
+      "name": "Giant tube worm",
+      "facet": "Life in water and the deep sea",
+      "known_at": 12
+    },
+    {
+      "name": "Hydrothermal vent",
+      "facet": "Life in water and the deep sea",
+      "known_at": 11
+    },
+    {
+      "name": "Dumbo octopus",
+      "facet": "Life in water and the deep sea",
+      "known_at": 9
+    },
+    {
+      "name": "Blobfish",
+      "facet": "Life in water and the deep sea",
+      "known_at": 7
+    },
+    {
+      "name": "Mariana snailfish",
+      "facet": "Life in water and the deep sea",
+      "known_at": 14
+    },
+    {
+      "name": "Sea turtle salt glands",
+      "facet": "Life in water and the deep sea",
+      "known_at": 12
+    },
+    {
+      "name": "Hummingbird",
+      "facet": "Flight, gliding and movement",
+      "known_at": 2
+    },
+    {
+      "name": "Peregrine falcon",
+      "facet": "Flight, gliding and movement",
+      "known_at": 7
+    },
+    {
+      "name": "Flying squirrel",
+      "facet": "Flight, gliding and movement",
+      "known_at": 4
+    },
+    {
+      "name": "Flying fish",
+      "facet": "Flight, gliding and movement",
+      "known_at": 4
+    },
+    {
+      "name": "Colugo",
+      "facet": "Flight, gliding and movement",
+      "known_at": 13
+    },
+    {
+      "name": "Draco lizard",
+      "facet": "Flight, gliding and movement",
+      "known_at": 12
+    },
+    {
+      "name": "Paradise tree snake",
+      "facet": "Flight, gliding and movement",
+      "known_at": 12
+    },
+    {
+      "name": "Wandering albatross",
+      "facet": "Flight, gliding and movement",
+      "known_at": 8
+    },
+    {
+      "name": "Cheetah",
+      "facet": "Flight, gliding and movement",
+      "known_at": 2
+    },
+    {
+      "name": "Gecko feet",
+      "facet": "Flight, gliding and movement",
+      "known_at": 8
+    },
+    {
+      "name": "Sailfish",
+      "facet": "Flight, gliding and movement",
+      "known_at": 9
+    },
+    {
+      "name": "Jellyfish",
+      "facet": "Flight, gliding and movement",
+      "known_at": 2
+    },
+    {
+      "name": "Flea",
+      "facet": "Flight, gliding and movement",
+      "known_at": 5
+    },
+    {
+      "name": "Penguin swimming",
+      "facet": "Flight, gliding and movement",
+      "known_at": 3
+    },
+    {
+      "name": "Ostrich",
+      "facet": "Flight, gliding and movement",
+      "known_at": 2
+    },
+    {
+      "name": "Sloth",
+      "facet": "Flight, gliding and movement",
+      "known_at": 2
+    },
+    {
+      "name": "Dragonfly",
+      "facet": "Flight, gliding and movement",
+      "known_at": 4
+    },
+    {
+      "name": "Water strider",
+      "facet": "Flight, gliding and movement",
+      "known_at": 8
+    },
+    {
+      "name": "Wildebeest migration",
+      "facet": "Hibernation, migration and seasons",
+      "known_at": 6
+    },
+    {
+      "name": "Salmon run",
+      "facet": "Hibernation, migration and seasons",
+      "known_at": 7
+    },
+    {
+      "name": "Gray whale",
+      "facet": "Hibernation, migration and seasons",
+      "known_at": 9
+    },
+    {
+      "name": "Common poorwill",
+      "facet": "Hibernation, migration and seasons",
+      "known_at": 14
+    },
+    {
+      "name": "Squirrel",
+      "facet": "Hibernation, migration and seasons",
+      "known_at": 1
+    },
+    {
+      "name": "Barn swallow",
+      "facet": "Hibernation, migration and seasons",
+      "known_at": 6
+    },
+    {
+      "name": "White stork",
+      "facet": "Hibernation, migration and seasons",
+      "known_at": 6
+    },
+    {
+      "name": "Leatherback sea turtle",
+      "facet": "Hibernation, migration and seasons",
+      "known_at": 10
+    },
+    {
+      "name": "V formation",
+      "facet": "Hibernation, migration and seasons",
+      "known_at": 6
+    },
+    {
+      "name": "Brumation",
+      "facet": "Hibernation, migration and seasons",
+      "known_at": 14
+    },
+    {
+      "name": "Molting",
+      "facet": "Hibernation, migration and seasons",
+      "known_at": 7
+    },
+    {
+      "name": "Toucan",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 2
+    },
+    {
+      "name": "Woodpecker",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 2
+    },
+    {
+      "name": "Flamingo",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 2
+    },
+    {
+      "name": "Elephant trunk",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 1
+    },
+    {
+      "name": "Giraffe neck",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 1
+    },
+    {
+      "name": "Giant anteater",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 5
+    },
+    {
+      "name": "Rodent incisors",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 8
+    },
+    {
+      "name": "Narwhal",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 6
+    },
+    {
+      "name": "Shark teeth",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 4
+    },
+    {
+      "name": "Webbed feet",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 3
+    },
+    {
+      "name": "Aye-aye",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 12
+    },
+    {
+      "name": "Opposable thumb",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 9
+    },
+    {
+      "name": "Giant panda's thumb",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 13
+    },
+    {
+      "name": "Prehensile tail",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 11
+    },
+    {
+      "name": "Kiwi",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 6
+    },
+    {
+      "name": "Shoebill",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 10
+    },
+    {
+      "name": "Red crossbill",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 13
+    },
+    {
+      "name": "Sword-billed hummingbird",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 12
+    },
+    {
+      "name": "Owl neck",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 5
+    },
+    {
+      "name": "Kangaroo pouch",
+      "facet": "Body shapes: beaks, teeth and limbs",
+      "known_at": 1
+    },
+    {
+      "name": "Fossil",
+      "facet": "Adaptation, evolution and the scientists",
+      "known_at": 3
+    }
+  ]
+}

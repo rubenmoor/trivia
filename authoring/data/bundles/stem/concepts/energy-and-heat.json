@@ -1,0 +1,1143 @@
+{
+  "subcategory": "energy-and-heat",
+  "facets": [
+    "Forms of energy",
+    "Energy conversion and machines",
+    "Temperature and thermometers",
+    "Heat transfer and insulation",
+    "States of matter and phase changes",
+    "Engines and power plants",
+    "Renewable energy sources",
+    "Fossil fuels and combustion",
+    "Energy units and measurement",
+    "Laws of thermodynamics",
+    "Heat in nature and the body",
+    "Scientists and energy discoveries"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 3,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 4,
+      "science_news": 3,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 3,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Kinetic energy",
+      "facet": "Forms of energy",
+      "known_at": 8
+    },
+    {
+      "name": "Potential energy",
+      "facet": "Forms of energy",
+      "known_at": 9
+    },
+    {
+      "name": "Chemical energy",
+      "facet": "Forms of energy",
+      "known_at": 8
+    },
+    {
+      "name": "Thermal energy",
+      "facet": "Forms of energy",
+      "known_at": 7
+    },
+    {
+      "name": "Electrical energy",
+      "facet": "Forms of energy",
+      "known_at": 4
+    },
+    {
+      "name": "Nuclear energy",
+      "facet": "Forms of energy",
+      "known_at": 7
+    },
+    {
+      "name": "Sound energy",
+      "facet": "Forms of energy",
+      "known_at": 6
+    },
+    {
+      "name": "Light energy",
+      "facet": "Forms of energy",
+      "known_at": 5
+    },
+    {
+      "name": "Mechanical energy",
+      "facet": "Forms of energy",
+      "known_at": 9
+    },
+    {
+      "name": "Magnetic energy",
+      "facet": "Forms of energy",
+      "known_at": 9
+    },
+    {
+      "name": "E = mc²",
+      "facet": "Forms of energy",
+      "known_at": 8
+    },
+    {
+      "name": "Static electricity",
+      "facet": "Forms of energy",
+      "known_at": 5
+    },
+    {
+      "name": "Ultraviolet radiation",
+      "facet": "Forms of energy",
+      "known_at": 7
+    },
+    {
+      "name": "Microwaves",
+      "facet": "Forms of energy",
+      "known_at": 6
+    },
+    {
+      "name": "Activation energy",
+      "facet": "Forms of energy",
+      "known_at": 12
+    },
+    {
+      "name": "Dark energy",
+      "facet": "Forms of energy",
+      "known_at": 12
+    },
+    {
+      "name": "Nuclear binding energy",
+      "facet": "Forms of energy",
+      "known_at": 14
+    },
+    {
+      "name": "Battery",
+      "facet": "Energy conversion and machines",
+      "known_at": 2,
+      "retired": "used_up: At difficulty 3, the pool already covers what a battery does, what it powers, who invented it and its name."
+    },
+    {
+      "name": "Electric motor",
+      "facet": "Energy conversion and machines",
+      "known_at": 6
+    },
+    {
+      "name": "Dynamo",
+      "facet": "Energy conversion and machines",
+      "known_at": 8
+    },
+    {
+      "name": "Light bulb",
+      "facet": "Energy conversion and machines",
+      "known_at": 2
+    },
+    {
+      "name": "LED",
+      "facet": "Energy conversion and machines",
+      "known_at": 6
+    },
+    {
+      "name": "Loudspeaker",
+      "facet": "Energy conversion and machines",
+      "known_at": 4
+    },
+    {
+      "name": "Microphone",
+      "facet": "Energy conversion and machines",
+      "known_at": 3
+    },
+    {
+      "name": "Toaster",
+      "facet": "Energy conversion and machines",
+      "known_at": 2
+    },
+    {
+      "name": "Hand-crank flashlight",
+      "facet": "Energy conversion and machines",
+      "known_at": 6
+    },
+    {
+      "name": "Wind-up toy",
+      "facet": "Energy conversion and machines",
+      "known_at": 4
+    },
+    {
+      "name": "Transformer",
+      "facet": "Energy conversion and machines",
+      "known_at": 10
+    },
+    {
+      "name": "Flywheel",
+      "facet": "Energy conversion and machines",
+      "known_at": 11
+    },
+    {
+      "name": "Regenerative braking",
+      "facet": "Energy conversion and machines",
+      "known_at": 12
+    },
+    {
+      "name": "Fuel cell",
+      "facet": "Energy conversion and machines",
+      "known_at": 12
+    },
+    {
+      "name": "Peltier element",
+      "facet": "Energy conversion and machines",
+      "known_at": 14
+    },
+    {
+      "name": "Trebuchet",
+      "facet": "Energy conversion and machines",
+      "known_at": 9
+    },
+    {
+      "name": "Water wheel",
+      "facet": "Energy conversion and machines",
+      "known_at": 6
+    },
+    {
+      "name": "Energy efficiency",
+      "facet": "Energy conversion and machines",
+      "known_at": 9
+    },
+    {
+      "name": "Celsius scale",
+      "facet": "Temperature and thermometers",
+      "known_at": 4
+    },
+    {
+      "name": "Fahrenheit scale",
+      "facet": "Temperature and thermometers",
+      "known_at": 6
+    },
+    {
+      "name": "Kelvin scale",
+      "facet": "Temperature and thermometers",
+      "known_at": 10
+    },
+    {
+      "name": "Galileo thermometer",
+      "facet": "Temperature and thermometers",
+      "known_at": 11
+    },
+    {
+      "name": "Infrared thermometer",
+      "facet": "Temperature and thermometers",
+      "known_at": 7
+    },
+    {
+      "name": "Bimetallic strip",
+      "facet": "Temperature and thermometers",
+      "known_at": 11
+    },
+    {
+      "name": "Thermostat",
+      "facet": "Temperature and thermometers",
+      "known_at": 7
+    },
+    {
+      "name": "Normal body temperature",
+      "facet": "Temperature and thermometers",
+      "known_at": 5
+    },
+    {
+      "name": "Room temperature",
+      "facet": "Temperature and thermometers",
+      "known_at": 6
+    },
+    {
+      "name": "Thermocouple",
+      "facet": "Temperature and thermometers",
+      "known_at": 13
+    },
+    {
+      "name": "Wind chill",
+      "facet": "Temperature and thermometers",
+      "known_at": 9
+    },
+    {
+      "name": "Vostok Station",
+      "facet": "Temperature and thermometers",
+      "known_at": 12
+    },
+    {
+      "name": "Death Valley",
+      "facet": "Temperature and thermometers",
+      "known_at": 10
+    },
+    {
+      "name": "Alcohol thermometer",
+      "facet": "Temperature and thermometers",
+      "known_at": 9
+    },
+    {
+      "name": "Mood ring",
+      "facet": "Temperature and thermometers",
+      "known_at": 7
+    },
+    {
+      "name": "Minus forty degrees",
+      "facet": "Temperature and thermometers",
+      "known_at": 12
+    },
+    {
+      "name": "Thermal expansion",
+      "facet": "Temperature and thermometers",
+      "known_at": 9
+    },
+    {
+      "name": "Surface temperature of the Sun",
+      "facet": "Temperature and thermometers",
+      "known_at": 10
+    },
+    {
+      "name": "Conduction",
+      "facet": "Heat transfer and insulation",
+      "known_at": 8
+    },
+    {
+      "name": "Convection",
+      "facet": "Heat transfer and insulation",
+      "known_at": 9
+    },
+    {
+      "name": "Thermal radiation",
+      "facet": "Heat transfer and insulation",
+      "known_at": 9
+    },
+    {
+      "name": "Thermal conductor",
+      "facet": "Heat transfer and insulation",
+      "known_at": 8
+    },
+    {
+      "name": "Double glazing",
+      "facet": "Heat transfer and insulation",
+      "known_at": 8
+    },
+    {
+      "name": "Down feathers",
+      "facet": "Heat transfer and insulation",
+      "known_at": 5
+    },
+    {
+      "name": "Wool",
+      "facet": "Heat transfer and insulation",
+      "known_at": 3
+    },
+    {
+      "name": "Space blanket",
+      "facet": "Heat transfer and insulation",
+      "known_at": 8
+    },
+    {
+      "name": "Oven mitt",
+      "facet": "Heat transfer and insulation",
+      "known_at": 2
+    },
+    {
+      "name": "Copper-bottomed pot",
+      "facet": "Heat transfer and insulation",
+      "known_at": 10
+    },
+    {
+      "name": "Sea breeze",
+      "facet": "Heat transfer and insulation",
+      "known_at": 10
+    },
+    {
+      "name": "Radiator",
+      "facet": "Heat transfer and insulation",
+      "known_at": 5
+    },
+    {
+      "name": "Heat sink",
+      "facet": "Heat transfer and insulation",
+      "known_at": 11
+    },
+    {
+      "name": "Fiberglass insulation",
+      "facet": "Heat transfer and insulation",
+      "known_at": 10
+    },
+    {
+      "name": "Aerogel",
+      "facet": "Heat transfer and insulation",
+      "known_at": 12
+    },
+    {
+      "name": "Heat shield",
+      "facet": "Heat transfer and insulation",
+      "known_at": 8
+    },
+    {
+      "name": "Wetsuit",
+      "facet": "Heat transfer and insulation",
+      "known_at": 7
+    },
+    {
+      "name": "Lava lamp",
+      "facet": "Heat transfer and insulation",
+      "known_at": 6
+    },
+    {
+      "name": "Melting",
+      "facet": "States of matter and phase changes",
+      "known_at": 1
+    },
+    {
+      "name": "Freezing",
+      "facet": "States of matter and phase changes",
+      "known_at": 1
+    },
+    {
+      "name": "Evaporation",
+      "facet": "States of matter and phase changes",
+      "known_at": 5
+    },
+    {
+      "name": "Condensation",
+      "facet": "States of matter and phase changes",
+      "known_at": 6
+    },
+    {
+      "name": "Boiling",
+      "facet": "States of matter and phase changes",
+      "known_at": 2
+    },
+    {
+      "name": "Sublimation",
+      "facet": "States of matter and phase changes",
+      "known_at": 10
+    },
+    {
+      "name": "Deposition",
+      "facet": "States of matter and phase changes",
+      "known_at": 12
+    },
+    {
+      "name": "Dry ice",
+      "facet": "States of matter and phase changes",
+      "known_at": 6
+    },
+    {
+      "name": "Latent heat",
+      "facet": "States of matter and phase changes",
+      "known_at": 13
+    },
+    {
+      "name": "Melting point",
+      "facet": "States of matter and phase changes",
+      "known_at": 7
+    },
+    {
+      "name": "Triple point",
+      "facet": "States of matter and phase changes",
+      "known_at": 13
+    },
+    {
+      "name": "Bose–Einstein condensate",
+      "facet": "States of matter and phase changes",
+      "known_at": 14
+    },
+    {
+      "name": "Supercooling",
+      "facet": "States of matter and phase changes",
+      "known_at": 12
+    },
+    {
+      "name": "Frost",
+      "facet": "States of matter and phase changes",
+      "known_at": 3
+    },
+    {
+      "name": "Dew",
+      "facet": "States of matter and phase changes",
+      "known_at": 4
+    },
+    {
+      "name": "Water cycle",
+      "facet": "States of matter and phase changes",
+      "known_at": 5
+    },
+    {
+      "name": "Gallium",
+      "facet": "States of matter and phase changes",
+      "known_at": 12
+    },
+    {
+      "name": "Liquid nitrogen",
+      "facet": "States of matter and phase changes",
+      "known_at": 8
+    },
+    {
+      "name": "Ice",
+      "facet": "States of matter and phase changes",
+      "known_at": 1
+    },
+    {
+      "name": "Internal combustion engine",
+      "facet": "Engines and power plants",
+      "known_at": 9
+    },
+    {
+      "name": "Diesel engine",
+      "facet": "Engines and power plants",
+      "known_at": 8
+    },
+    {
+      "name": "Rocket engine",
+      "facet": "Engines and power plants",
+      "known_at": 5
+    },
+    {
+      "name": "Four-stroke engine",
+      "facet": "Engines and power plants",
+      "known_at": 11
+    },
+    {
+      "name": "Spark plug",
+      "facet": "Engines and power plants",
+      "known_at": 10
+    },
+    {
+      "name": "Piston",
+      "facet": "Engines and power plants",
+      "known_at": 9
+    },
+    {
+      "name": "Nuclear power plant",
+      "facet": "Engines and power plants",
+      "known_at": 6
+    },
+    {
+      "name": "Nuclear fission",
+      "facet": "Engines and power plants",
+      "known_at": 10
+    },
+    {
+      "name": "Cooling tower",
+      "facet": "Engines and power plants",
+      "known_at": 8
+    },
+    {
+      "name": "Coal power station",
+      "facet": "Engines and power plants",
+      "known_at": 7
+    },
+    {
+      "name": "Hybrid car",
+      "facet": "Engines and power plants",
+      "known_at": 7
+    },
+    {
+      "name": "Stirling engine",
+      "facet": "Engines and power plants",
+      "known_at": 14
+    },
+    {
+      "name": "Wankel engine",
+      "facet": "Engines and power plants",
+      "known_at": 14
+    },
+    {
+      "name": "Stephenson's Rocket",
+      "facet": "Engines and power plants",
+      "known_at": 12
+    },
+    {
+      "name": "Heat pump",
+      "facet": "Engines and power plants",
+      "known_at": 11
+    },
+    {
+      "name": "Refrigerator",
+      "facet": "Engines and power plants",
+      "known_at": 3
+    },
+    {
+      "name": "Air conditioner",
+      "facet": "Engines and power plants",
+      "known_at": 4
+    },
+    {
+      "name": "Turbocharger",
+      "facet": "Engines and power plants",
+      "known_at": 11
+    },
+    {
+      "name": "Newcomen engine",
+      "facet": "Engines and power plants",
+      "known_at": 13
+    },
+    {
+      "name": "Aeolipile",
+      "facet": "Engines and power plants",
+      "known_at": 13
+    },
+    {
+      "name": "Solar panel",
+      "facet": "Renewable energy sources",
+      "known_at": 3
+    },
+    {
+      "name": "Wind turbine",
+      "facet": "Renewable energy sources",
+      "known_at": 3
+    },
+    {
+      "name": "Hydroelectric power",
+      "facet": "Renewable energy sources",
+      "known_at": 7
+    },
+    {
+      "name": "Geothermal energy",
+      "facet": "Renewable energy sources",
+      "known_at": 9
+    },
+    {
+      "name": "Tidal power",
+      "facet": "Renewable energy sources",
+      "known_at": 9
+    },
+    {
+      "name": "Wave power",
+      "facet": "Renewable energy sources",
+      "known_at": 9
+    },
+    {
+      "name": "Biofuel",
+      "facet": "Renewable energy sources",
+      "known_at": 9
+    },
+    {
+      "name": "Concentrated solar power",
+      "facet": "Renewable energy sources",
+      "known_at": 11
+    },
+    {
+      "name": "Three Gorges Dam",
+      "facet": "Renewable energy sources",
+      "known_at": 10
+    },
+    {
+      "name": "Itaipu Dam",
+      "facet": "Renewable energy sources",
+      "known_at": 12
+    },
+    {
+      "name": "Hoover Dam",
+      "facet": "Renewable energy sources",
+      "known_at": 9
+    },
+    {
+      "name": "Solar oven",
+      "facet": "Renewable energy sources",
+      "known_at": 6
+    },
+    {
+      "name": "Green hydrogen",
+      "facet": "Renewable energy sources",
+      "known_at": 12
+    },
+    {
+      "name": "Pumped-storage hydroelectricity",
+      "facet": "Renewable energy sources",
+      "known_at": 13
+    },
+    {
+      "name": "Photovoltaic effect",
+      "facet": "Renewable energy sources",
+      "known_at": 12
+    },
+    {
+      "name": "Noor Ouarzazate Solar Complex",
+      "facet": "Renewable energy sources",
+      "known_at": 14
+    },
+    {
+      "name": "Rance Tidal Power Station",
+      "facet": "Renewable energy sources",
+      "known_at": 14
+    },
+    {
+      "name": "Geothermal power in Iceland",
+      "facet": "Renewable energy sources",
+      "known_at": 10
+    },
+    {
+      "name": "Coal",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 3
+    },
+    {
+      "name": "Crude oil",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 6
+    },
+    {
+      "name": "Natural gas",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 6
+    },
+    {
+      "name": "Gasoline",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 3
+    },
+    {
+      "name": "Kerosene",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 10
+    },
+    {
+      "name": "Methane",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 9
+    },
+    {
+      "name": "Propane",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 10
+    },
+    {
+      "name": "Fire triangle",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 8
+    },
+    {
+      "name": "Carbon monoxide",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 10
+    },
+    {
+      "name": "Peat",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 12
+    },
+    {
+      "name": "Oil refinery",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 10
+    },
+    {
+      "name": "Fracking",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 12
+    },
+    {
+      "name": "Fire extinguisher",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 3
+    },
+    {
+      "name": "Match",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 2
+    },
+    {
+      "name": "Candle",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 1
+    },
+    {
+      "name": "Charcoal",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 5
+    },
+    {
+      "name": "Oil well",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 7
+    },
+    {
+      "name": "Asphalt",
+      "facet": "Fossil fuels and combustion",
+      "known_at": 9
+    },
+    {
+      "name": "Joule",
+      "facet": "Energy units and measurement",
+      "known_at": 10
+    },
+    {
+      "name": "Watt",
+      "facet": "Energy units and measurement",
+      "known_at": 7
+    },
+    {
+      "name": "Kilowatt-hour",
+      "facet": "Energy units and measurement",
+      "known_at": 11
+    },
+    {
+      "name": "British thermal unit",
+      "facet": "Energy units and measurement",
+      "known_at": 14
+    },
+    {
+      "name": "Horsepower",
+      "facet": "Energy units and measurement",
+      "known_at": 7
+    },
+    {
+      "name": "Electronvolt",
+      "facet": "Energy units and measurement",
+      "known_at": 13
+    },
+    {
+      "name": "Electricity meter",
+      "facet": "Energy units and measurement",
+      "known_at": 7
+    },
+    {
+      "name": "Ampere",
+      "facet": "Energy units and measurement",
+      "known_at": 10
+    },
+    {
+      "name": "Megawatt",
+      "facet": "Energy units and measurement",
+      "known_at": 10
+    },
+    {
+      "name": "Gigawatt",
+      "facet": "Energy units and measurement",
+      "known_at": 9
+    },
+    {
+      "name": "Specific heat capacity",
+      "facet": "Energy units and measurement",
+      "known_at": 12
+    },
+    {
+      "name": "Power",
+      "facet": "Energy units and measurement",
+      "known_at": 9
+    },
+    {
+      "name": "Barrel of oil",
+      "facet": "Energy units and measurement",
+      "known_at": 10
+    },
+    {
+      "name": "Ton of TNT",
+      "facet": "Energy units and measurement",
+      "known_at": 13
+    },
+    {
+      "name": "Energy label",
+      "facet": "Energy units and measurement",
+      "known_at": 9
+    },
+    {
+      "name": "Nutrition facts label",
+      "facet": "Energy units and measurement",
+      "known_at": 7
+    },
+    {
+      "name": "First law of thermodynamics",
+      "facet": "Laws of thermodynamics",
+      "known_at": 12
+    },
+    {
+      "name": "Third law of thermodynamics",
+      "facet": "Laws of thermodynamics",
+      "known_at": 14
+    },
+    {
+      "name": "Zeroth law of thermodynamics",
+      "facet": "Laws of thermodynamics",
+      "known_at": 14
+    },
+    {
+      "name": "Entropy",
+      "facet": "Laws of thermodynamics",
+      "known_at": 12
+    },
+    {
+      "name": "Thermal equilibrium",
+      "facet": "Laws of thermodynamics",
+      "known_at": 11
+    },
+    {
+      "name": "Heat death of the universe",
+      "facet": "Laws of thermodynamics",
+      "known_at": 13
+    },
+    {
+      "name": "Carnot cycle",
+      "facet": "Laws of thermodynamics",
+      "known_at": 14
+    },
+    {
+      "name": "Maxwell's demon",
+      "facet": "Laws of thermodynamics",
+      "known_at": 14
+    },
+    {
+      "name": "Heat engine",
+      "facet": "Laws of thermodynamics",
+      "known_at": 12
+    },
+    {
+      "name": "Arrow of time",
+      "facet": "Laws of thermodynamics",
+      "known_at": 13
+    },
+    {
+      "name": "Adiabatic process",
+      "facet": "Laws of thermodynamics",
+      "known_at": 14
+    },
+    {
+      "name": "Enthalpy",
+      "facet": "Laws of thermodynamics",
+      "known_at": 13
+    },
+    {
+      "name": "Ideal gas law",
+      "facet": "Laws of thermodynamics",
+      "known_at": 12
+    },
+    {
+      "name": "Boyle's law",
+      "facet": "Laws of thermodynamics",
+      "known_at": 12
+    },
+    {
+      "name": "Charles's law",
+      "facet": "Laws of thermodynamics",
+      "known_at": 13
+    },
+    {
+      "name": "Brownian motion",
+      "facet": "Laws of thermodynamics",
+      "known_at": 13
+    },
+    {
+      "name": "Closed system",
+      "facet": "Laws of thermodynamics",
+      "known_at": 12
+    },
+    {
+      "name": "Sweating",
+      "facet": "Heat in nature and the body",
+      "known_at": 3
+    },
+    {
+      "name": "Shivering",
+      "facet": "Heat in nature and the body",
+      "known_at": 4
+    },
+    {
+      "name": "Hypothermia",
+      "facet": "Heat in nature and the body",
+      "known_at": 9
+    },
+    {
+      "name": "Warm-blooded animals",
+      "facet": "Heat in nature and the body",
+      "known_at": 6
+    },
+    {
+      "name": "Cold-blooded animals",
+      "facet": "Heat in nature and the body",
+      "known_at": 6
+    },
+    {
+      "name": "African elephant's ears",
+      "facet": "Heat in nature and the body",
+      "known_at": 7
+    },
+    {
+      "name": "Emperor penguin huddle",
+      "facet": "Heat in nature and the body",
+      "known_at": 6
+    },
+    {
+      "name": "Geyser",
+      "facet": "Heat in nature and the body",
+      "known_at": 7
+    },
+    {
+      "name": "Earth's inner core",
+      "facet": "Heat in nature and the body",
+      "known_at": 8
+    },
+    {
+      "name": "Greenhouse effect",
+      "facet": "Heat in nature and the body",
+      "known_at": 8
+    },
+    {
+      "name": "Nuclear fusion",
+      "facet": "Heat in nature and the body",
+      "known_at": 10
+    },
+    {
+      "name": "Urban heat island",
+      "facet": "Heat in nature and the body",
+      "known_at": 12
+    },
+    {
+      "name": "Hot spring",
+      "facet": "Heat in nature and the body",
+      "known_at": 5
+    },
+    {
+      "name": "James Watt",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 9
+    },
+    {
+      "name": "James Prescott Joule",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 12
+    },
+    {
+      "name": "Lord Kelvin",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Daniel Gabriel Fahrenheit",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 10
+    },
+    {
+      "name": "Anders Celsius",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 8
+    },
+    {
+      "name": "Sadi Carnot",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Rudolf Clausius",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Ludwig Boltzmann",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "James Clerk Maxwell",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Michael Faraday",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Nikola Tesla",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 7
+    },
+    {
+      "name": "Thomas Edison",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 5
+    },
+    {
+      "name": "Alessandro Volta",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Rudolf Diesel",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Nikolaus Otto",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Enrico Fermi",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Lise Meitner",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Marie Curie",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 7
+    },
+    {
+      "name": "Count Rumford",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 15
+    },
+    {
+      "name": "Hermann von Helmholtz",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Heron of Alexandria",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Joseph Black",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 15
+    },
+    {
+      "name": "Mária Telkes",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 15
+    },
+    {
+      "name": "Frank Whittle",
+      "facet": "Scientists and energy discoveries",
+      "known_at": 13
+    }
+  ]
+}

@@ -1,0 +1,1037 @@
+{
+  "subcategory": "senses-and-nerves",
+  "facets": [
+    "The eye and vision",
+    "The ear, hearing and balance",
+    "Smell and taste",
+    "Touch, pain and temperature",
+    "The brain and its parts",
+    "Nerves and nerve cells",
+    "Reflexes and the spinal cord",
+    "Optical illusions and perception",
+    "Sleep, dreams and memory",
+    "Hormones and brain chemicals",
+    "Senses in animals compared to humans",
+    "Discoveries in neuroscience and sensory aids"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 4,
+      "origin": 2,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 5,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 3,
+      "body_senses": 5,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Pupil",
+      "facet": "The eye and vision",
+      "known_at": 3
+    },
+    {
+      "name": "Iris",
+      "facet": "The eye and vision",
+      "known_at": 5
+    },
+    {
+      "name": "Retina",
+      "facet": "The eye and vision",
+      "known_at": 8
+    },
+    {
+      "name": "Cornea",
+      "facet": "The eye and vision",
+      "known_at": 9
+    },
+    {
+      "name": "Lens of the eye",
+      "facet": "The eye and vision",
+      "known_at": 7
+    },
+    {
+      "name": "Optic nerve",
+      "facet": "The eye and vision",
+      "known_at": 8
+    },
+    {
+      "name": "Rod cells",
+      "facet": "The eye and vision",
+      "known_at": 10
+    },
+    {
+      "name": "Cone cells",
+      "facet": "The eye and vision",
+      "known_at": 10
+    },
+    {
+      "name": "Blind spot",
+      "facet": "The eye and vision",
+      "known_at": 9
+    },
+    {
+      "name": "Fovea",
+      "facet": "The eye and vision",
+      "known_at": 13
+    },
+    {
+      "name": "Tears",
+      "facet": "The eye and vision",
+      "known_at": 1
+    },
+    {
+      "name": "Blinking",
+      "facet": "The eye and vision",
+      "known_at": 2
+    },
+    {
+      "name": "Short-sightedness",
+      "facet": "The eye and vision",
+      "known_at": 6
+    },
+    {
+      "name": "Long-sightedness",
+      "facet": "The eye and vision",
+      "known_at": 7
+    },
+    {
+      "name": "Astigmatism",
+      "facet": "The eye and vision",
+      "known_at": 10
+    },
+    {
+      "name": "Cataract",
+      "facet": "The eye and vision",
+      "known_at": 10
+    },
+    {
+      "name": "Binocular vision",
+      "facet": "The eye and vision",
+      "known_at": 11
+    },
+    {
+      "name": "Eardrum",
+      "facet": "The ear, hearing and balance",
+      "known_at": 4
+    },
+    {
+      "name": "Outer ear",
+      "facet": "The ear, hearing and balance",
+      "known_at": 4
+    },
+    {
+      "name": "Earwax",
+      "facet": "The ear, hearing and balance",
+      "known_at": 2
+    },
+    {
+      "name": "Cochlea",
+      "facet": "The ear, hearing and balance",
+      "known_at": 9
+    },
+    {
+      "name": "Malleus",
+      "facet": "The ear, hearing and balance",
+      "known_at": 11
+    },
+    {
+      "name": "Incus",
+      "facet": "The ear, hearing and balance",
+      "known_at": 11
+    },
+    {
+      "name": "Eustachian tube",
+      "facet": "The ear, hearing and balance",
+      "known_at": 12
+    },
+    {
+      "name": "Semicircular canals",
+      "facet": "The ear, hearing and balance",
+      "known_at": 10
+    },
+    {
+      "name": "Inner ear hair cells",
+      "facet": "The ear, hearing and balance",
+      "known_at": 12
+    },
+    {
+      "name": "Otoliths",
+      "facet": "The ear, hearing and balance",
+      "known_at": 14
+    },
+    {
+      "name": "Decibel",
+      "facet": "The ear, hearing and balance",
+      "known_at": 7
+    },
+    {
+      "name": "Hertz",
+      "facet": "The ear, hearing and balance",
+      "known_at": 8
+    },
+    {
+      "name": "Human hearing range",
+      "facet": "The ear, hearing and balance",
+      "known_at": 10
+    },
+    {
+      "name": "Tinnitus",
+      "facet": "The ear, hearing and balance",
+      "known_at": 11
+    },
+    {
+      "name": "Dizziness",
+      "facet": "The ear, hearing and balance",
+      "known_at": 2
+    },
+    {
+      "name": "Ear popping",
+      "facet": "The ear, hearing and balance",
+      "known_at": 4
+    },
+    {
+      "name": "Sweet taste",
+      "facet": "Smell and taste",
+      "known_at": 1
+    },
+    {
+      "name": "Salty taste",
+      "facet": "Smell and taste",
+      "known_at": 1
+    },
+    {
+      "name": "Sour taste",
+      "facet": "Smell and taste",
+      "known_at": 2
+    },
+    {
+      "name": "Bitter taste",
+      "facet": "Smell and taste",
+      "known_at": 3
+    },
+    {
+      "name": "Papillae",
+      "facet": "Smell and taste",
+      "known_at": 11
+    },
+    {
+      "name": "Olfactory bulb",
+      "facet": "Smell and taste",
+      "known_at": 12
+    },
+    {
+      "name": "Flavor",
+      "facet": "Smell and taste",
+      "known_at": 5
+    },
+    {
+      "name": "Tongue map myth",
+      "facet": "Smell and taste",
+      "known_at": 10
+    },
+    {
+      "name": "Supertaster",
+      "facet": "Smell and taste",
+      "known_at": 12
+    },
+    {
+      "name": "Menthol",
+      "facet": "Smell and taste",
+      "known_at": 8
+    },
+    {
+      "name": "Anosmia",
+      "facet": "Smell and taste",
+      "known_at": 12
+    },
+    {
+      "name": "Proust effect",
+      "facet": "Smell and taste",
+      "known_at": 13
+    },
+    {
+      "name": "Kikunae Ikeda",
+      "facet": "Smell and taste",
+      "known_at": 14
+    },
+    {
+      "name": "Fingertips",
+      "facet": "Touch, pain and temperature",
+      "known_at": 2
+    },
+    {
+      "name": "Nociceptors",
+      "facet": "Touch, pain and temperature",
+      "known_at": 13
+    },
+    {
+      "name": "Thermoreceptors",
+      "facet": "Touch, pain and temperature",
+      "known_at": 12
+    },
+    {
+      "name": "Itch",
+      "facet": "Touch, pain and temperature",
+      "known_at": 2
+    },
+    {
+      "name": "Pins and needles",
+      "facet": "Touch, pain and temperature",
+      "known_at": 4
+    },
+    {
+      "name": "Funny bone",
+      "facet": "Touch, pain and temperature",
+      "known_at": 5
+    },
+    {
+      "name": "Brain freeze",
+      "facet": "Touch, pain and temperature",
+      "known_at": 4
+    },
+    {
+      "name": "Goosebumps",
+      "facet": "Touch, pain and temperature",
+      "known_at": 2
+    },
+    {
+      "name": "Two-point discrimination",
+      "facet": "Touch, pain and temperature",
+      "known_at": 13
+    },
+    {
+      "name": "Proprioception",
+      "facet": "Touch, pain and temperature",
+      "known_at": 13
+    },
+    {
+      "name": "Phantom limb",
+      "facet": "Touch, pain and temperature",
+      "known_at": 12
+    },
+    {
+      "name": "Sensory homunculus",
+      "facet": "Touch, pain and temperature",
+      "known_at": 13
+    },
+    {
+      "name": "Painkillers",
+      "facet": "Touch, pain and temperature",
+      "known_at": 4
+    },
+    {
+      "name": "Congenital insensitivity to pain",
+      "facet": "Touch, pain and temperature",
+      "known_at": 13
+    },
+    {
+      "name": "Cerebrum",
+      "facet": "The brain and its parts",
+      "known_at": 8
+    },
+    {
+      "name": "Cerebellum",
+      "facet": "The brain and its parts",
+      "known_at": 9
+    },
+    {
+      "name": "Brainstem",
+      "facet": "The brain and its parts",
+      "known_at": 9
+    },
+    {
+      "name": "Hippocampus",
+      "facet": "The brain and its parts",
+      "known_at": 11
+    },
+    {
+      "name": "Amygdala",
+      "facet": "The brain and its parts",
+      "known_at": 11
+    },
+    {
+      "name": "Hypothalamus",
+      "facet": "The brain and its parts",
+      "known_at": 11
+    },
+    {
+      "name": "Thalamus",
+      "facet": "The brain and its parts",
+      "known_at": 12
+    },
+    {
+      "name": "Corpus callosum",
+      "facet": "The brain and its parts",
+      "known_at": 12
+    },
+    {
+      "name": "Frontal lobe",
+      "facet": "The brain and its parts",
+      "known_at": 9
+    },
+    {
+      "name": "Occipital lobe",
+      "facet": "The brain and its parts",
+      "known_at": 12
+    },
+    {
+      "name": "Temporal lobe",
+      "facet": "The brain and its parts",
+      "known_at": 12
+    },
+    {
+      "name": "Parietal lobe",
+      "facet": "The brain and its parts",
+      "known_at": 13
+    },
+    {
+      "name": "Broca's area",
+      "facet": "The brain and its parts",
+      "known_at": 13
+    },
+    {
+      "name": "Wernicke's area",
+      "facet": "The brain and its parts",
+      "known_at": 14
+    },
+    {
+      "name": "Gray matter",
+      "facet": "The brain and its parts",
+      "known_at": 8
+    },
+    {
+      "name": "White matter",
+      "facet": "The brain and its parts",
+      "known_at": 11
+    },
+    {
+      "name": "Meninges",
+      "facet": "The brain and its parts",
+      "known_at": 13
+    },
+    {
+      "name": "Cerebrospinal fluid",
+      "facet": "The brain and its parts",
+      "known_at": 12
+    },
+    {
+      "name": "Axon",
+      "facet": "Nerves and nerve cells",
+      "known_at": 10
+    },
+    {
+      "name": "Dendrite",
+      "facet": "Nerves and nerve cells",
+      "known_at": 10
+    },
+    {
+      "name": "Synapse",
+      "facet": "Nerves and nerve cells",
+      "known_at": 10
+    },
+    {
+      "name": "Myelin sheath",
+      "facet": "Nerves and nerve cells",
+      "known_at": 11
+    },
+    {
+      "name": "Node of Ranvier",
+      "facet": "Nerves and nerve cells",
+      "known_at": 14
+    },
+    {
+      "name": "Schwann cell",
+      "facet": "Nerves and nerve cells",
+      "known_at": 14
+    },
+    {
+      "name": "Glial cells",
+      "facet": "Nerves and nerve cells",
+      "known_at": 12
+    },
+    {
+      "name": "Nerve impulse",
+      "facet": "Nerves and nerve cells",
+      "known_at": 7
+    },
+    {
+      "name": "Neurotransmitter",
+      "facet": "Nerves and nerve cells",
+      "known_at": 10
+    },
+    {
+      "name": "Motor neuron",
+      "facet": "Nerves and nerve cells",
+      "known_at": 10
+    },
+    {
+      "name": "Sensory neuron",
+      "facet": "Nerves and nerve cells",
+      "known_at": 10
+    },
+    {
+      "name": "Peripheral nervous system",
+      "facet": "Nerves and nerve cells",
+      "known_at": 10
+    },
+    {
+      "name": "Autonomic nervous system",
+      "facet": "Nerves and nerve cells",
+      "known_at": 12
+    },
+    {
+      "name": "Sympathetic nervous system",
+      "facet": "Nerves and nerve cells",
+      "known_at": 13
+    },
+    {
+      "name": "Parasympathetic nervous system",
+      "facet": "Nerves and nerve cells",
+      "known_at": 13
+    },
+    {
+      "name": "Cranial nerves",
+      "facet": "Nerves and nerve cells",
+      "known_at": 12
+    },
+    {
+      "name": "Trigeminal nerve",
+      "facet": "Nerves and nerve cells",
+      "known_at": 14
+    },
+    {
+      "name": "Multiple sclerosis",
+      "facet": "Nerves and nerve cells",
+      "known_at": 12
+    },
+    {
+      "name": "Reflex arc",
+      "facet": "Reflexes and the spinal cord",
+      "known_at": 11
+    },
+    {
+      "name": "Interneuron",
+      "facet": "Reflexes and the spinal cord",
+      "known_at": 13
+    },
+    {
+      "name": "Blink reflex",
+      "facet": "Reflexes and the spinal cord",
+      "known_at": 4
+    },
+    {
+      "name": "Sneeze reflex",
+      "facet": "Reflexes and the spinal cord",
+      "known_at": 3
+    },
+    {
+      "name": "Cough reflex",
+      "facet": "Reflexes and the spinal cord",
+      "known_at": 4
+    },
+    {
+      "name": "Withdrawal reflex",
+      "facet": "Reflexes and the spinal cord",
+      "known_at": 6
+    },
+    {
+      "name": "Startle reflex",
+      "facet": "Reflexes and the spinal cord",
+      "known_at": 6
+    },
+    {
+      "name": "Pupillary light reflex",
+      "facet": "Reflexes and the spinal cord",
+      "known_at": 9
+    },
+    {
+      "name": "Grasp reflex",
+      "facet": "Reflexes and the spinal cord",
+      "known_at": 7
+    },
+    {
+      "name": "Moro reflex",
+      "facet": "Reflexes and the spinal cord",
+      "known_at": 14
+    },
+    {
+      "name": "Rooting reflex",
+      "facet": "Reflexes and the spinal cord",
+      "known_at": 13
+    },
+    {
+      "name": "Babinski reflex",
+      "facet": "Reflexes and the spinal cord",
+      "known_at": 14
+    },
+    {
+      "name": "Yawning",
+      "facet": "Reflexes and the spinal cord",
+      "known_at": 2
+    },
+    {
+      "name": "Conditioned reflex",
+      "facet": "Reflexes and the spinal cord",
+      "known_at": 11
+    },
+    {
+      "name": "Vertebrae",
+      "facet": "Reflexes and the spinal cord",
+      "known_at": 7
+    },
+    {
+      "name": "Spinal nerves",
+      "facet": "Reflexes and the spinal cord",
+      "known_at": 11
+    },
+    {
+      "name": "Reaction time",
+      "facet": "Reflexes and the spinal cord",
+      "known_at": 6
+    },
+    {
+      "name": "Müller-Lyer illusion",
+      "facet": "Optical illusions and perception",
+      "known_at": 11
+    },
+    {
+      "name": "Rubin vase",
+      "facet": "Optical illusions and perception",
+      "known_at": 8
+    },
+    {
+      "name": "Rabbit–duck illusion",
+      "facet": "Optical illusions and perception",
+      "known_at": 8
+    },
+    {
+      "name": "Penrose triangle",
+      "facet": "Optical illusions and perception",
+      "known_at": 10
+    },
+    {
+      "name": "Necker cube",
+      "facet": "Optical illusions and perception",
+      "known_at": 13
+    },
+    {
+      "name": "Kanizsa triangle",
+      "facet": "Optical illusions and perception",
+      "known_at": 14
+    },
+    {
+      "name": "Ames room",
+      "facet": "Optical illusions and perception",
+      "known_at": 12
+    },
+    {
+      "name": "Café wall illusion",
+      "facet": "Optical illusions and perception",
+      "known_at": 13
+    },
+    {
+      "name": "Checker shadow illusion",
+      "facet": "Optical illusions and perception",
+      "known_at": 12
+    },
+    {
+      "name": "Hermann grid",
+      "facet": "Optical illusions and perception",
+      "known_at": 13
+    },
+    {
+      "name": "Ebbinghaus illusion",
+      "facet": "Optical illusions and perception",
+      "known_at": 13
+    },
+    {
+      "name": "Ponzo illusion",
+      "facet": "Optical illusions and perception",
+      "known_at": 14
+    },
+    {
+      "name": "Moon illusion",
+      "facet": "Optical illusions and perception",
+      "known_at": 9
+    },
+    {
+      "name": "Afterimage",
+      "facet": "Optical illusions and perception",
+      "known_at": 9
+    },
+    {
+      "name": "The Dress",
+      "facet": "Optical illusions and perception",
+      "known_at": 8
+    },
+    {
+      "name": "Yanny or Laurel",
+      "facet": "Optical illusions and perception",
+      "known_at": 10
+    },
+    {
+      "name": "Persistence of vision",
+      "facet": "Optical illusions and perception",
+      "known_at": 10
+    },
+    {
+      "name": "Pareidolia",
+      "facet": "Optical illusions and perception",
+      "known_at": 12
+    },
+    {
+      "name": "McGurk effect",
+      "facet": "Optical illusions and perception",
+      "known_at": 14
+    },
+    {
+      "name": "Magic Eye stereogram",
+      "facet": "Optical illusions and perception",
+      "known_at": 10
+    },
+    {
+      "name": "Invisible gorilla experiment",
+      "facet": "Optical illusions and perception",
+      "known_at": 12
+    },
+    {
+      "name": "Change blindness",
+      "facet": "Optical illusions and perception",
+      "known_at": 13
+    },
+    {
+      "name": "REM sleep",
+      "facet": "Sleep, dreams and memory",
+      "known_at": 9
+    },
+    {
+      "name": "Deep sleep",
+      "facet": "Sleep, dreams and memory",
+      "known_at": 6
+    },
+    {
+      "name": "Sleep cycle",
+      "facet": "Sleep, dreams and memory",
+      "known_at": 9
+    },
+    {
+      "name": "Nightmares",
+      "facet": "Sleep, dreams and memory",
+      "known_at": 2
+    },
+    {
+      "name": "Lucid dreaming",
+      "facet": "Sleep, dreams and memory",
+      "known_at": 11
+    },
+    {
+      "name": "Sleepwalking",
+      "facet": "Sleep, dreams and memory",
+      "known_at": 4
+    },
+    {
+      "name": "Insomnia",
+      "facet": "Sleep, dreams and memory",
+      "known_at": 9
+    },
+    {
+      "name": "Jet lag",
+      "facet": "Sleep, dreams and memory",
+      "known_at": 7
+    },
+    {
+      "name": "Power nap",
+      "facet": "Sleep, dreams and memory",
+      "known_at": 7
+    },
+    {
+      "name": "Hypnic jerk",
+      "facet": "Sleep, dreams and memory",
+      "known_at": 12
+    },
+    {
+      "name": "Long-term memory",
+      "facet": "Sleep, dreams and memory",
+      "known_at": 7
+    },
+    {
+      "name": "Déjà vu",
+      "facet": "Sleep, dreams and memory",
+      "known_at": 9
+    },
+    {
+      "name": "Amnesia",
+      "facet": "Sleep, dreams and memory",
+      "known_at": 8
+    },
+    {
+      "name": "Forgetting curve",
+      "facet": "Sleep, dreams and memory",
+      "known_at": 13
+    },
+    {
+      "name": "Mnemonic",
+      "facet": "Sleep, dreams and memory",
+      "known_at": 10
+    },
+    {
+      "name": "Memory palace",
+      "facet": "Sleep, dreams and memory",
+      "known_at": 11
+    },
+    {
+      "name": "Tip-of-the-tongue phenomenon",
+      "facet": "Sleep, dreams and memory",
+      "known_at": 10
+    },
+    {
+      "name": "Adrenaline",
+      "facet": "Hormones and brain chemicals",
+      "known_at": 6
+    },
+    {
+      "name": "Dopamine",
+      "facet": "Hormones and brain chemicals",
+      "known_at": 10
+    },
+    {
+      "name": "Serotonin",
+      "facet": "Hormones and brain chemicals",
+      "known_at": 11
+    },
+    {
+      "name": "Oxytocin",
+      "facet": "Hormones and brain chemicals",
+      "known_at": 12
+    },
+    {
+      "name": "Melatonin",
+      "facet": "Hormones and brain chemicals",
+      "known_at": 10
+    },
+    {
+      "name": "Cortisol",
+      "facet": "Hormones and brain chemicals",
+      "known_at": 11
+    },
+    {
+      "name": "Thyroxine",
+      "facet": "Hormones and brain chemicals",
+      "known_at": 13
+    },
+    {
+      "name": "Acetylcholine",
+      "facet": "Hormones and brain chemicals",
+      "known_at": 14
+    },
+    {
+      "name": "GABA",
+      "facet": "Hormones and brain chemicals",
+      "known_at": 14
+    },
+    {
+      "name": "Adenosine",
+      "facet": "Hormones and brain chemicals",
+      "known_at": 14
+    },
+    {
+      "name": "Ghrelin",
+      "facet": "Hormones and brain chemicals",
+      "known_at": 14
+    },
+    {
+      "name": "Pituitary gland",
+      "facet": "Hormones and brain chemicals",
+      "known_at": 11
+    },
+    {
+      "name": "Thyroid gland",
+      "facet": "Hormones and brain chemicals",
+      "known_at": 10
+    },
+    {
+      "name": "Adrenal glands",
+      "facet": "Hormones and brain chemicals",
+      "known_at": 11
+    },
+    {
+      "name": "Fight-or-flight response",
+      "facet": "Hormones and brain chemicals",
+      "known_at": 9
+    },
+    {
+      "name": "Electroreception",
+      "facet": "Senses in animals compared to humans",
+      "known_at": 12
+    },
+    {
+      "name": "Pit organ",
+      "facet": "Senses in animals compared to humans",
+      "known_at": 12
+    },
+    {
+      "name": "Tapetum lucidum",
+      "facet": "Senses in animals compared to humans",
+      "known_at": 13
+    },
+    {
+      "name": "Owl hearing",
+      "facet": "Senses in animals compared to humans",
+      "known_at": 6
+    },
+    {
+      "name": "Chameleon eyes",
+      "facet": "Senses in animals compared to humans",
+      "known_at": 5
+    },
+    {
+      "name": "Star-nosed mole",
+      "facet": "Senses in animals compared to humans",
+      "known_at": 11
+    },
+    {
+      "name": "Butterflies tasting with their feet",
+      "facet": "Senses in animals compared to humans",
+      "known_at": 8
+    },
+    {
+      "name": "Dog whistle",
+      "facet": "Senses in animals compared to humans",
+      "known_at": 6
+    },
+    {
+      "name": "Glasses",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 1
+    },
+    {
+      "name": "Contact lenses",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 5
+    },
+    {
+      "name": "Laser eye surgery",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 9
+    },
+    {
+      "name": "Hearing aid",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 3
+    },
+    {
+      "name": "Cochlear implant",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 11
+    },
+    {
+      "name": "White cane",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 4
+    },
+    {
+      "name": "Guide dog",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 2
+    },
+    {
+      "name": "Snellen eye chart",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 5
+    },
+    {
+      "name": "Ishihara color test",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 10
+    },
+    {
+      "name": "MRI scan",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 8
+    },
+    {
+      "name": "Brain-computer interface",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 12
+    },
+    {
+      "name": "Camillo Golgi",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 14
+    },
+    {
+      "name": "Ibn al-Haytham",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 13
+    },
+    {
+      "name": "John Dalton",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 12
+    },
+    {
+      "name": "Phineas Gage",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 13
+    },
+    {
+      "name": "Paul Broca",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 13
+    },
+    {
+      "name": "Wilder Penfield",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 15
+    },
+    {
+      "name": "Patient H.M.",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 15
+    },
+    {
+      "name": "Rita Levi-Montalcini",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 14
+    },
+    {
+      "name": "Otto Loewi",
+      "facet": "Discoveries in neuroscience and sensory aids",
+      "known_at": 15
+    }
+  ]
+}

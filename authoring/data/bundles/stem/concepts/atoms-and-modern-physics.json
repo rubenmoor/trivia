@@ -1,0 +1,997 @@
+{
+  "subcategory": "atoms-and-modern-physics",
+  "facets": [
+    "Atoms and their parts",
+    "Elementary particles",
+    "Radioactivity and decay",
+    "Nuclear fission and fusion",
+    "Quantum mechanics ideas",
+    "Relativity and spacetime",
+    "Light, photons and lasers",
+    "Famous physicists and discoveries",
+    "Particle accelerators and detectors",
+    "Modern physics in everyday tech",
+    "Thought experiments and paradoxes",
+    "Units, constants and scales"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 3,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 4,
+      "record": 3,
+      "origin": 3,
+      "made_of": 5,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 5,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 5,
+      "science_news": 4,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Atom",
+      "facet": "Atoms and their parts",
+      "known_at": 3
+    },
+    {
+      "name": "Neutron",
+      "facet": "Atoms and their parts",
+      "known_at": 6
+    },
+    {
+      "name": "Atomic nucleus",
+      "facet": "Atoms and their parts",
+      "known_at": 6
+    },
+    {
+      "name": "Electron shell",
+      "facet": "Atoms and their parts",
+      "known_at": 8
+    },
+    {
+      "name": "Atomic number",
+      "facet": "Atoms and their parts",
+      "known_at": 8
+    },
+    {
+      "name": "Mass number",
+      "facet": "Atoms and their parts",
+      "known_at": 9
+    },
+    {
+      "name": "Isotope",
+      "facet": "Atoms and their parts",
+      "known_at": 9
+    },
+    {
+      "name": "Ion",
+      "facet": "Atoms and their parts",
+      "known_at": 8
+    },
+    {
+      "name": "Valence electron",
+      "facet": "Atoms and their parts",
+      "known_at": 10
+    },
+    {
+      "name": "Atomic orbital",
+      "facet": "Atoms and their parts",
+      "known_at": 11
+    },
+    {
+      "name": "Bohr model",
+      "facet": "Atoms and their parts",
+      "known_at": 10
+    },
+    {
+      "name": "Plum pudding model",
+      "facet": "Atoms and their parts",
+      "known_at": 10
+    },
+    {
+      "name": "Gold foil experiment",
+      "facet": "Atoms and their parts",
+      "known_at": 10
+    },
+    {
+      "name": "Electron cloud",
+      "facet": "Atoms and their parts",
+      "known_at": 9
+    },
+    {
+      "name": "Strong nuclear force",
+      "facet": "Atoms and their parts",
+      "known_at": 11
+    },
+    {
+      "name": "Deuterium",
+      "facet": "Atoms and their parts",
+      "known_at": 11
+    },
+    {
+      "name": "Empty space inside the atom",
+      "facet": "Atoms and their parts",
+      "known_at": 8
+    },
+    {
+      "name": "Quark",
+      "facet": "Elementary particles",
+      "known_at": 9
+    },
+    {
+      "name": "Higgs boson",
+      "facet": "Elementary particles",
+      "known_at": 10
+    },
+    {
+      "name": "Neutrino",
+      "facet": "Elementary particles",
+      "known_at": 11
+    },
+    {
+      "name": "Muon",
+      "facet": "Elementary particles",
+      "known_at": 13
+    },
+    {
+      "name": "Gluon",
+      "facet": "Elementary particles",
+      "known_at": 13
+    },
+    {
+      "name": "Positron",
+      "facet": "Elementary particles",
+      "known_at": 11
+    },
+    {
+      "name": "Antimatter",
+      "facet": "Elementary particles",
+      "known_at": 7
+    },
+    {
+      "name": "Standard Model",
+      "facet": "Elementary particles",
+      "known_at": 12
+    },
+    {
+      "name": "Up quark",
+      "facet": "Elementary particles",
+      "known_at": 12
+    },
+    {
+      "name": "Down quark",
+      "facet": "Elementary particles",
+      "known_at": 12
+    },
+    {
+      "name": "Top quark",
+      "facet": "Elementary particles",
+      "known_at": 13
+    },
+    {
+      "name": "Lepton",
+      "facet": "Elementary particles",
+      "known_at": 13
+    },
+    {
+      "name": "Boson",
+      "facet": "Elementary particles",
+      "known_at": 12
+    },
+    {
+      "name": "Fermion",
+      "facet": "Elementary particles",
+      "known_at": 13
+    },
+    {
+      "name": "W and Z bosons",
+      "facet": "Elementary particles",
+      "known_at": 14
+    },
+    {
+      "name": "Graviton",
+      "facet": "Elementary particles",
+      "known_at": 13
+    },
+    {
+      "name": "Tau particle",
+      "facet": "Elementary particles",
+      "known_at": 14
+    },
+    {
+      "name": "Hadron",
+      "facet": "Elementary particles",
+      "known_at": 12
+    },
+    {
+      "name": "Antiproton",
+      "facet": "Elementary particles",
+      "known_at": 12
+    },
+    {
+      "name": "Dark matter",
+      "facet": "Elementary particles",
+      "known_at": 9
+    },
+    {
+      "name": "Color charge",
+      "facet": "Elementary particles",
+      "known_at": 14
+    },
+    {
+      "name": "Radioactivity",
+      "facet": "Radioactivity and decay",
+      "known_at": 6
+    },
+    {
+      "name": "Half-life",
+      "facet": "Radioactivity and decay",
+      "known_at": 9
+    },
+    {
+      "name": "Alpha particle",
+      "facet": "Radioactivity and decay",
+      "known_at": 10
+    },
+    {
+      "name": "Beta decay",
+      "facet": "Radioactivity and decay",
+      "known_at": 11
+    },
+    {
+      "name": "Uranium",
+      "facet": "Radioactivity and decay",
+      "known_at": 6
+    },
+    {
+      "name": "Polonium",
+      "facet": "Radioactivity and decay",
+      "known_at": 10
+    },
+    {
+      "name": "Plutonium",
+      "facet": "Radioactivity and decay",
+      "known_at": 8
+    },
+    {
+      "name": "Thorium",
+      "facet": "Radioactivity and decay",
+      "known_at": 12
+    },
+    {
+      "name": "Radon",
+      "facet": "Radioactivity and decay",
+      "known_at": 11
+    },
+    {
+      "name": "Tritium",
+      "facet": "Radioactivity and decay",
+      "known_at": 12
+    },
+    {
+      "name": "Geiger counter",
+      "facet": "Radioactivity and decay",
+      "known_at": 7
+    },
+    {
+      "name": "Background radiation",
+      "facet": "Radioactivity and decay",
+      "known_at": 11
+    },
+    {
+      "name": "Radiation warning symbol",
+      "facet": "Radioactivity and decay",
+      "known_at": 4
+    },
+    {
+      "name": "Decay chain",
+      "facet": "Radioactivity and decay",
+      "known_at": 13
+    },
+    {
+      "name": "Radiotherapy",
+      "facet": "Radioactivity and decay",
+      "known_at": 10
+    },
+    {
+      "name": "Cobalt-60",
+      "facet": "Radioactivity and decay",
+      "known_at": 14
+    },
+    {
+      "name": "Radioactive glow in the dark",
+      "facet": "Radioactivity and decay",
+      "known_at": 5
+    },
+    {
+      "name": "Chain reaction",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 9
+    },
+    {
+      "name": "Nuclear reactor",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 6
+    },
+    {
+      "name": "Critical mass",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 11
+    },
+    {
+      "name": "Control rod",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 11
+    },
+    {
+      "name": "Uranium-235",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 11
+    },
+    {
+      "name": "Uranium enrichment",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 11
+    },
+    {
+      "name": "Neutron moderator",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 13
+    },
+    {
+      "name": "Heavy water",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 12
+    },
+    {
+      "name": "Nuclear meltdown",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 9
+    },
+    {
+      "name": "Chernobyl disaster",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 8
+    },
+    {
+      "name": "Fukushima nuclear accident",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 10
+    },
+    {
+      "name": "Manhattan Project",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 10
+    },
+    {
+      "name": "Chicago Pile-1",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 14
+    },
+    {
+      "name": "Hydrogen bomb",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 10
+    },
+    {
+      "name": "Tokamak",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 13
+    },
+    {
+      "name": "ITER",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 13
+    },
+    {
+      "name": "Fusion in the Sun",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 7
+    },
+    {
+      "name": "Nuclear submarine",
+      "facet": "Nuclear fission and fusion",
+      "known_at": 8
+    },
+    {
+      "name": "Quantum",
+      "facet": "Quantum mechanics ideas",
+      "known_at": 8
+    },
+    {
+      "name": "Quantum leap",
+      "facet": "Quantum mechanics ideas",
+      "known_at": 10
+    },
+    {
+      "name": "Heisenberg uncertainty principle",
+      "facet": "Quantum mechanics ideas",
+      "known_at": 11
+    },
+    {
+      "name": "Quantum superposition",
+      "facet": "Quantum mechanics ideas",
+      "known_at": 11
+    },
+    {
+      "name": "Quantum entanglement",
+      "facet": "Quantum mechanics ideas",
+      "known_at": 11
+    },
+    {
+      "name": "Quantum tunneling",
+      "facet": "Quantum mechanics ideas",
+      "known_at": 12
+    },
+    {
+      "name": "Pauli exclusion principle",
+      "facet": "Quantum mechanics ideas",
+      "known_at": 13
+    },
+    {
+      "name": "Spin",
+      "facet": "Quantum mechanics ideas",
+      "known_at": 13
+    },
+    {
+      "name": "Schrödinger equation",
+      "facet": "Quantum mechanics ideas",
+      "known_at": 12
+    },
+    {
+      "name": "Wave function",
+      "facet": "Quantum mechanics ideas",
+      "known_at": 12
+    },
+    {
+      "name": "Observer effect",
+      "facet": "Quantum mechanics ideas",
+      "known_at": 11
+    },
+    {
+      "name": "Copenhagen interpretation",
+      "facet": "Quantum mechanics ideas",
+      "known_at": 14
+    },
+    {
+      "name": "Many-worlds interpretation",
+      "facet": "Quantum mechanics ideas",
+      "known_at": 12
+    },
+    {
+      "name": "Qubit",
+      "facet": "Quantum mechanics ideas",
+      "known_at": 12
+    },
+    {
+      "name": "Bose-Einstein condensate",
+      "facet": "Quantum mechanics ideas",
+      "known_at": 13
+    },
+    {
+      "name": "Zero-point energy",
+      "facet": "Quantum mechanics ideas",
+      "known_at": 14
+    },
+    {
+      "name": "Special relativity",
+      "facet": "Relativity and spacetime",
+      "known_at": 10
+    },
+    {
+      "name": "General relativity",
+      "facet": "Relativity and spacetime",
+      "known_at": 10
+    },
+    {
+      "name": "Time dilation",
+      "facet": "Relativity and spacetime",
+      "known_at": 10
+    },
+    {
+      "name": "Length contraction",
+      "facet": "Relativity and spacetime",
+      "known_at": 12
+    },
+    {
+      "name": "Spacetime",
+      "facet": "Relativity and spacetime",
+      "known_at": 9
+    },
+    {
+      "name": "LIGO",
+      "facet": "Relativity and spacetime",
+      "known_at": 13
+    },
+    {
+      "name": "Event horizon",
+      "facet": "Relativity and spacetime",
+      "known_at": 10
+    },
+    {
+      "name": "Gravitational singularity",
+      "facet": "Relativity and spacetime",
+      "known_at": 12
+    },
+    {
+      "name": "Spaghettification",
+      "facet": "Relativity and spacetime",
+      "known_at": 11
+    },
+    {
+      "name": "Gravitational lensing",
+      "facet": "Relativity and spacetime",
+      "known_at": 12
+    },
+    {
+      "name": "Wormhole",
+      "facet": "Relativity and spacetime",
+      "known_at": 8
+    },
+    {
+      "name": "Equivalence principle",
+      "facet": "Relativity and spacetime",
+      "known_at": 14
+    },
+    {
+      "name": "1919 solar eclipse expedition",
+      "facet": "Relativity and spacetime",
+      "known_at": 13
+    },
+    {
+      "name": "Precession of Mercury's orbit",
+      "facet": "Relativity and spacetime",
+      "known_at": 14
+    },
+    {
+      "name": "Cosmic speed limit",
+      "facet": "Relativity and spacetime",
+      "known_at": 8
+    },
+    {
+      "name": "Maser",
+      "facet": "Light, photons and lasers",
+      "known_at": 14
+    },
+    {
+      "name": "Spectral lines",
+      "facet": "Light, photons and lasers",
+      "known_at": 12
+    },
+    {
+      "name": "Spectroscopy",
+      "facet": "Light, photons and lasers",
+      "known_at": 12
+    },
+    {
+      "name": "Phosphorescence",
+      "facet": "Light, photons and lasers",
+      "known_at": 11
+    },
+    {
+      "name": "Polarized light",
+      "facet": "Light, photons and lasers",
+      "known_at": 11
+    },
+    {
+      "name": "Blackbody radiation",
+      "facet": "Light, photons and lasers",
+      "known_at": 13
+    },
+    {
+      "name": "Ultraviolet catastrophe",
+      "facet": "Light, photons and lasers",
+      "known_at": 14
+    },
+    {
+      "name": "Ernest Rutherford",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Niels Bohr",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Werner Heisenberg",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Erwin Schrödinger",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 10
+    },
+    {
+      "name": "Paul Dirac",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Richard Feynman",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 12
+    },
+    {
+      "name": "J. Robert Oppenheimer",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 10
+    },
+    {
+      "name": "Democritus",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 10
+    },
+    {
+      "name": "James Chadwick",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 12
+    },
+    {
+      "name": "Henri Becquerel",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 12
+    },
+    {
+      "name": "Peter Higgs",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Wolfgang Pauli",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Chien-Shiung Wu",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Satyendra Nath Bose",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Hideki Yukawa",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Subrahmanyan Chandrasekhar",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Louis de Broglie",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Ernest Lawrence",
+      "facet": "Famous physicists and discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "CERN",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 9
+    },
+    {
+      "name": "Particle collider",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 9
+    },
+    {
+      "name": "Cyclotron",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 13
+    },
+    {
+      "name": "Synchrotron",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 13
+    },
+    {
+      "name": "Linear accelerator",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 12
+    },
+    {
+      "name": "Cloud chamber",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 12
+    },
+    {
+      "name": "Bubble chamber",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 13
+    },
+    {
+      "name": "ATLAS detector",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 13
+    },
+    {
+      "name": "CMS detector",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 14
+    },
+    {
+      "name": "Super-Kamiokande",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 14
+    },
+    {
+      "name": "IceCube Neutrino Observatory",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 14
+    },
+    {
+      "name": "Fermilab",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 13
+    },
+    {
+      "name": "Tevatron",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 14
+    },
+    {
+      "name": "SLAC",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 14
+    },
+    {
+      "name": "Superconducting magnet",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 12
+    },
+    {
+      "name": "Scintillator",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 14
+    },
+    {
+      "name": "Cosmic rays",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 10
+    },
+    {
+      "name": "Proton therapy",
+      "facet": "Particle accelerators and detectors",
+      "known_at": 13
+    },
+    {
+      "name": "Microchip",
+      "facet": "Modern physics in everyday tech",
+      "known_at": 6
+    },
+    {
+      "name": "Smoke detector",
+      "facet": "Modern physics in everyday tech",
+      "known_at": 4
+    },
+    {
+      "name": "Digital camera sensor",
+      "facet": "Modern physics in everyday tech",
+      "known_at": 10
+    },
+    {
+      "name": "Atomic clock",
+      "facet": "Modern physics in everyday tech",
+      "known_at": 8
+    },
+    {
+      "name": "Flash memory",
+      "facet": "Modern physics in everyday tech",
+      "known_at": 11
+    },
+    {
+      "name": "Quantum computer",
+      "facet": "Modern physics in everyday tech",
+      "known_at": 10
+    },
+    {
+      "name": "Food irradiation",
+      "facet": "Modern physics in everyday tech",
+      "known_at": 13
+    },
+    {
+      "name": "Schrödinger's cat",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 9
+    },
+    {
+      "name": "Twin paradox",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 11
+    },
+    {
+      "name": "Laplace's demon",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 14
+    },
+    {
+      "name": "Einstein's elevator",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 13
+    },
+    {
+      "name": "Chasing a light beam",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 12
+    },
+    {
+      "name": "EPR paradox",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 14
+    },
+    {
+      "name": "Fermi paradox",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 12
+    },
+    {
+      "name": "Grandfather paradox",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 10
+    },
+    {
+      "name": "Bootstrap paradox",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 12
+    },
+    {
+      "name": "Olbers' paradox",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 14
+    },
+    {
+      "name": "Wigner's friend",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 15
+    },
+    {
+      "name": "Ladder paradox",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 14
+    },
+    {
+      "name": "Heisenberg's microscope",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 15
+    },
+    {
+      "name": "Newton's cannonball",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 11
+    },
+    {
+      "name": "Galileo's falling bodies",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 9
+    },
+    {
+      "name": "Black hole information paradox",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 14
+    },
+    {
+      "name": "Zeno's paradoxes",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 12
+    },
+    {
+      "name": "Boltzmann brain",
+      "facet": "Thought experiments and paradoxes",
+      "known_at": 15
+    },
+    {
+      "name": "Planck constant",
+      "facet": "Units, constants and scales",
+      "known_at": 12
+    },
+    {
+      "name": "Planck length",
+      "facet": "Units, constants and scales",
+      "known_at": 13
+    },
+    {
+      "name": "Avogadro constant",
+      "facet": "Units, constants and scales",
+      "known_at": 11
+    },
+    {
+      "name": "Ångström",
+      "facet": "Units, constants and scales",
+      "known_at": 13
+    },
+    {
+      "name": "Nanometer",
+      "facet": "Units, constants and scales",
+      "known_at": 8
+    },
+    {
+      "name": "Femtometer",
+      "facet": "Units, constants and scales",
+      "known_at": 14
+    },
+    {
+      "name": "Fine-structure constant",
+      "facet": "Units, constants and scales",
+      "known_at": 15
+    },
+    {
+      "name": "Boltzmann constant",
+      "facet": "Units, constants and scales",
+      "known_at": 14
+    },
+    {
+      "name": "Kelvin",
+      "facet": "Units, constants and scales",
+      "known_at": 8
+    },
+    {
+      "name": "Becquerel",
+      "facet": "Units, constants and scales",
+      "known_at": 13
+    },
+    {
+      "name": "Sievert",
+      "facet": "Units, constants and scales",
+      "known_at": 13
+    },
+    {
+      "name": "Gray",
+      "facet": "Units, constants and scales",
+      "known_at": 14
+    },
+    {
+      "name": "Curie",
+      "facet": "Units, constants and scales",
+      "known_at": 13
+    },
+    {
+      "name": "Size of an atom",
+      "facet": "Units, constants and scales",
+      "known_at": 9
+    },
+    {
+      "name": "Caesium definition of the second",
+      "facet": "Units, constants and scales",
+      "known_at": 13
+    }
+  ]
+}

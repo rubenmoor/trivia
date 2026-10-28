@@ -1,0 +1,762 @@
+{
+  "subcategory": "history-of-medicine",
+  "facets": [
+    "Ancient and traditional medicine",
+    "Famous doctors and healers",
+    "Germs, vaccines and antibiotics",
+    "Epidemics and pandemics in history",
+    "Surgery and anesthesia",
+    "Anatomy and dissection discoveries",
+    "Medical instruments and inventions",
+    "Medical imaging and diagnosis",
+    "Hospitals, nursing and public health",
+    "Medicines from plants and labs",
+    "Transplants and modern breakthroughs",
+    "Odd old cures and medical myths"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 4,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 5,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 4,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Hippocratic Oath",
+      "facet": "Ancient and traditional medicine",
+      "known_at": 9
+    },
+    {
+      "name": "Four humors",
+      "facet": "Ancient and traditional medicine",
+      "known_at": 12
+    },
+    {
+      "name": "Acupuncture",
+      "facet": "Ancient and traditional medicine",
+      "known_at": 7
+    },
+    {
+      "name": "Ayurveda",
+      "facet": "Ancient and traditional medicine",
+      "known_at": 11
+    },
+    {
+      "name": "Traditional Chinese medicine",
+      "facet": "Ancient and traditional medicine",
+      "known_at": 8
+    },
+    {
+      "name": "Ebers Papyrus",
+      "facet": "Ancient and traditional medicine",
+      "known_at": 14
+    },
+    {
+      "name": "Imhotep",
+      "facet": "Ancient and traditional medicine",
+      "known_at": 11
+    },
+    {
+      "name": "Asclepius",
+      "facet": "Ancient and traditional medicine",
+      "known_at": 11
+    },
+    {
+      "name": "Rod of Asclepius",
+      "facet": "Ancient and traditional medicine",
+      "known_at": 10
+    },
+    {
+      "name": "Hygieia",
+      "facet": "Ancient and traditional medicine",
+      "known_at": 13
+    },
+    {
+      "name": "Herbalism",
+      "facet": "Ancient and traditional medicine",
+      "known_at": 6
+    },
+    {
+      "name": "Shaman",
+      "facet": "Ancient and traditional medicine",
+      "known_at": 7
+    },
+    {
+      "name": "Qi",
+      "facet": "Ancient and traditional medicine",
+      "known_at": 11
+    },
+    {
+      "name": "Cupping therapy",
+      "facet": "Ancient and traditional medicine",
+      "known_at": 10
+    },
+    {
+      "name": "Yellow Emperor's Inner Classic",
+      "facet": "Ancient and traditional medicine",
+      "known_at": 14
+    },
+    {
+      "name": "Moxibustion",
+      "facet": "Ancient and traditional medicine",
+      "known_at": 14
+    },
+    {
+      "name": "Unani medicine",
+      "facet": "Ancient and traditional medicine",
+      "known_at": 14
+    },
+    {
+      "name": "Avicenna",
+      "facet": "Famous doctors and healers",
+      "known_at": 11
+    },
+    {
+      "name": "Al-Razi",
+      "facet": "Famous doctors and healers",
+      "known_at": 13
+    },
+    {
+      "name": "Maimonides",
+      "facet": "Famous doctors and healers",
+      "known_at": 13
+    },
+    {
+      "name": "Paracelsus",
+      "facet": "Famous doctors and healers",
+      "known_at": 12
+    },
+    {
+      "name": "Hildegard of Bingen",
+      "facet": "Famous doctors and healers",
+      "known_at": 12
+    },
+    {
+      "name": "Trotula of Salerno",
+      "facet": "Famous doctors and healers",
+      "known_at": 15
+    },
+    {
+      "name": "Hua Tuo",
+      "facet": "Famous doctors and healers",
+      "known_at": 14
+    },
+    {
+      "name": "Zhang Zhongjing",
+      "facet": "Famous doctors and healers",
+      "known_at": 15
+    },
+    {
+      "name": "Charaka",
+      "facet": "Famous doctors and healers",
+      "known_at": 15
+    },
+    {
+      "name": "Elizabeth Blackwell",
+      "facet": "Famous doctors and healers",
+      "known_at": 11
+    },
+    {
+      "name": "Elizabeth Garrett Anderson",
+      "facet": "Famous doctors and healers",
+      "known_at": 13
+    },
+    {
+      "name": "Mary Seacole",
+      "facet": "Famous doctors and healers",
+      "known_at": 12
+    },
+    {
+      "name": "Albert Schweitzer",
+      "facet": "Famous doctors and healers",
+      "known_at": 12
+    },
+    {
+      "name": "Sigmund Freud",
+      "facet": "Famous doctors and healers",
+      "known_at": 9
+    },
+    {
+      "name": "Virginia Apgar",
+      "facet": "Famous doctors and healers",
+      "known_at": 14
+    },
+    {
+      "name": "Patch Adams",
+      "facet": "Famous doctors and healers",
+      "known_at": 11
+    },
+    {
+      "name": "SARS",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 11
+    },
+    {
+      "name": "Broad Street pump",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 13
+    },
+    {
+      "name": "Smallpox eradication",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 11
+    },
+    {
+      "name": "Ether anesthesia",
+      "facet": "Surgery and anesthesia",
+      "known_at": 11
+    },
+    {
+      "name": "Chloroform",
+      "facet": "Surgery and anesthesia",
+      "known_at": 11
+    },
+    {
+      "name": "Nitrous oxide",
+      "facet": "Surgery and anesthesia",
+      "known_at": 9
+    },
+    {
+      "name": "William Morton",
+      "facet": "Surgery and anesthesia",
+      "known_at": 14
+    },
+    {
+      "name": "Ambroise Paré",
+      "facet": "Surgery and anesthesia",
+      "known_at": 14
+    },
+    {
+      "name": "Al-Zahrawi",
+      "facet": "Surgery and anesthesia",
+      "known_at": 14
+    },
+    {
+      "name": "Hanaoka Seishū",
+      "facet": "Surgery and anesthesia",
+      "known_at": 15
+    },
+    {
+      "name": "Scalpel",
+      "facet": "Surgery and anesthesia",
+      "known_at": 6
+    },
+    {
+      "name": "Barber surgeon",
+      "facet": "Surgery and anesthesia",
+      "known_at": 11
+    },
+    {
+      "name": "Barber's pole",
+      "facet": "Surgery and anesthesia",
+      "known_at": 11
+    },
+    {
+      "name": "Caesarean section",
+      "facet": "Surgery and anesthesia",
+      "known_at": 9
+    },
+    {
+      "name": "Robotic surgery",
+      "facet": "Surgery and anesthesia",
+      "known_at": 8
+    },
+    {
+      "name": "Keyhole surgery",
+      "facet": "Surgery and anesthesia",
+      "known_at": 11
+    },
+    {
+      "name": "Anesthesiologist",
+      "facet": "Surgery and anesthesia",
+      "known_at": 8
+    },
+    {
+      "name": "Operating theater",
+      "facet": "Surgery and anesthesia",
+      "known_at": 9
+    },
+    {
+      "name": "Robert Liston",
+      "facet": "Surgery and anesthesia",
+      "known_at": 15
+    },
+    {
+      "name": "Local anesthesia",
+      "facet": "Surgery and anesthesia",
+      "known_at": 8
+    },
+    {
+      "name": "Plastic surgery",
+      "facet": "Surgery and anesthesia",
+      "known_at": 9
+    },
+    {
+      "name": "De humani corporis fabrica",
+      "facet": "Anatomy and dissection discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Circulation of the blood",
+      "facet": "Anatomy and dissection discoveries",
+      "known_at": 8
+    },
+    {
+      "name": "Leonardo da Vinci's anatomical drawings",
+      "facet": "Anatomy and dissection discoveries",
+      "known_at": 10
+    },
+    {
+      "name": "Fallopian tube",
+      "facet": "Anatomy and dissection discoveries",
+      "known_at": 12
+    },
+    {
+      "name": "Capillaries",
+      "facet": "Anatomy and dissection discoveries",
+      "known_at": 7
+    },
+    {
+      "name": "Herophilus",
+      "facet": "Anatomy and dissection discoveries",
+      "known_at": 15
+    },
+    {
+      "name": "Plastination",
+      "facet": "Anatomy and dissection discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Visible Human Project",
+      "facet": "Anatomy and dissection discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Anatomical wax models",
+      "facet": "Anatomy and dissection discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Hypodermic syringe",
+      "facet": "Medical instruments and inventions",
+      "known_at": 5
+    },
+    {
+      "name": "Digital thermometer",
+      "facet": "Medical instruments and inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Eyeglasses",
+      "facet": "Medical instruments and inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Microscope",
+      "facet": "Medical instruments and inventions",
+      "known_at": 4
+    },
+    {
+      "name": "Dialysis machine",
+      "facet": "Medical instruments and inventions",
+      "known_at": 11
+    },
+    {
+      "name": "Prosthetic leg",
+      "facet": "Medical instruments and inventions",
+      "known_at": 5
+    },
+    {
+      "name": "Dentures",
+      "facet": "Medical instruments and inventions",
+      "known_at": 5
+    },
+    {
+      "name": "Otoscope",
+      "facet": "Medical instruments and inventions",
+      "known_at": 10
+    },
+    {
+      "name": "Tongue depressor",
+      "facet": "Medical instruments and inventions",
+      "known_at": 5
+    },
+    {
+      "name": "CT scan",
+      "facet": "Medical imaging and diagnosis",
+      "known_at": 10
+    },
+    {
+      "name": "MRI",
+      "facet": "Medical imaging and diagnosis",
+      "known_at": 9
+    },
+    {
+      "name": "Ultrasound",
+      "facet": "Medical imaging and diagnosis",
+      "known_at": 6
+    },
+    {
+      "name": "Electroencephalogram",
+      "facet": "Medical imaging and diagnosis",
+      "known_at": 12
+    },
+    {
+      "name": "Endoscope",
+      "facet": "Medical imaging and diagnosis",
+      "known_at": 11
+    },
+    {
+      "name": "Blood test",
+      "facet": "Medical imaging and diagnosis",
+      "known_at": 4
+    },
+    {
+      "name": "PET scan",
+      "facet": "Medical imaging and diagnosis",
+      "known_at": 12
+    },
+    {
+      "name": "Godfrey Hounsfield",
+      "facet": "Medical imaging and diagnosis",
+      "known_at": 15
+    },
+    {
+      "name": "Pregnancy test",
+      "facet": "Medical imaging and diagnosis",
+      "known_at": 9
+    },
+    {
+      "name": "Snellen chart",
+      "facet": "Medical imaging and diagnosis",
+      "known_at": 5
+    },
+    {
+      "name": "Reflex hammer",
+      "facet": "Medical imaging and diagnosis",
+      "known_at": 6
+    },
+    {
+      "name": "Biopsy",
+      "facet": "Medical imaging and diagnosis",
+      "known_at": 11
+    },
+    {
+      "name": "Hand mit Ringen",
+      "facet": "Medical imaging and diagnosis",
+      "known_at": 13
+    },
+    {
+      "name": "Red Cross",
+      "facet": "Hospitals, nursing and public health",
+      "known_at": 3
+    },
+    {
+      "name": "Henry Dunant",
+      "facet": "Hospitals, nursing and public health",
+      "known_at": 12
+    },
+    {
+      "name": "Doctors Without Borders",
+      "facet": "Hospitals, nursing and public health",
+      "known_at": 10
+    },
+    {
+      "name": "Clara Barton",
+      "facet": "Hospitals, nursing and public health",
+      "known_at": 13
+    },
+    {
+      "name": "Ambulance",
+      "facet": "Hospitals, nursing and public health",
+      "known_at": 1
+    },
+    {
+      "name": "Dominique Jean Larrey",
+      "facet": "Hospitals, nursing and public health",
+      "known_at": 15
+    },
+    {
+      "name": "Hôtel-Dieu de Paris",
+      "facet": "Hospitals, nursing and public health",
+      "known_at": 14
+    },
+    {
+      "name": "Bimaristan",
+      "facet": "Hospitals, nursing and public health",
+      "known_at": 15
+    },
+    {
+      "name": "Hospice",
+      "facet": "Hospitals, nursing and public health",
+      "known_at": 12
+    },
+    {
+      "name": "Triage",
+      "facet": "Hospitals, nursing and public health",
+      "known_at": 11
+    },
+    {
+      "name": "Intensive care unit",
+      "facet": "Hospitals, nursing and public health",
+      "known_at": 8
+    },
+    {
+      "name": "Water fluoridation",
+      "facet": "Hospitals, nursing and public health",
+      "known_at": 11
+    },
+    {
+      "name": "Red Crescent",
+      "facet": "Hospitals, nursing and public health",
+      "known_at": 9
+    },
+    {
+      "name": "World Health Day",
+      "facet": "Hospitals, nursing and public health",
+      "known_at": 12
+    },
+    {
+      "name": "International Nurses Day",
+      "facet": "Hospitals, nursing and public health",
+      "known_at": 12
+    },
+    {
+      "name": "Cinchona tree",
+      "facet": "Medicines from plants and labs",
+      "known_at": 13
+    },
+    {
+      "name": "Pacific yew",
+      "facet": "Medicines from plants and labs",
+      "known_at": 15
+    },
+    {
+      "name": "Madagascar periwinkle",
+      "facet": "Medicines from plants and labs",
+      "known_at": 15
+    },
+    {
+      "name": "Curare",
+      "facet": "Medicines from plants and labs",
+      "known_at": 13
+    },
+    {
+      "name": "Ginseng",
+      "facet": "Medicines from plants and labs",
+      "known_at": 9
+    },
+    {
+      "name": "Felix Hoffmann",
+      "facet": "Medicines from plants and labs",
+      "known_at": 15
+    },
+    {
+      "name": "Gertrude Elion",
+      "facet": "Medicines from plants and labs",
+      "known_at": 15
+    },
+    {
+      "name": "Chemotherapy",
+      "facet": "Medicines from plants and labs",
+      "known_at": 9
+    },
+    {
+      "name": "Kidney transplant",
+      "facet": "Transplants and modern breakthroughs",
+      "known_at": 9
+    },
+    {
+      "name": "Joseph Murray",
+      "facet": "Transplants and modern breakthroughs",
+      "known_at": 15
+    },
+    {
+      "name": "Organ donation",
+      "facet": "Transplants and modern breakthroughs",
+      "known_at": 7
+    },
+    {
+      "name": "Bone marrow transplant",
+      "facet": "Transplants and modern breakthroughs",
+      "known_at": 11
+    },
+    {
+      "name": "Cornea transplant",
+      "facet": "Transplants and modern breakthroughs",
+      "known_at": 11
+    },
+    {
+      "name": "Face transplant",
+      "facet": "Transplants and modern breakthroughs",
+      "known_at": 12
+    },
+    {
+      "name": "Louise Brown",
+      "facet": "Transplants and modern breakthroughs",
+      "known_at": 13
+    },
+    {
+      "name": "Stem cells",
+      "facet": "Transplants and modern breakthroughs",
+      "known_at": 10
+    },
+    {
+      "name": "Pig heart transplant",
+      "facet": "Transplants and modern breakthroughs",
+      "known_at": 12
+    },
+    {
+      "name": "Insulin pump",
+      "facet": "Transplants and modern breakthroughs",
+      "known_at": 10
+    },
+    {
+      "name": "Cyclosporine",
+      "facet": "Transplants and modern breakthroughs",
+      "known_at": 15
+    },
+    {
+      "name": "Bionic arm",
+      "facet": "Transplants and modern breakthroughs",
+      "known_at": 7
+    },
+    {
+      "name": "3D-printed organs",
+      "facet": "Transplants and modern breakthroughs",
+      "known_at": 10
+    },
+    {
+      "name": "Bloodletting",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 10
+    },
+    {
+      "name": "Leeches",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 7
+    },
+    {
+      "name": "Snake oil",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 11
+    },
+    {
+      "name": "Theriac",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 15
+    },
+    {
+      "name": "Mummy powder",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 13
+    },
+    {
+      "name": "Unicorn horn",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 10
+    },
+    {
+      "name": "Bezoar",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 10
+    },
+    {
+      "name": "Royal touch",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 14
+    },
+    {
+      "name": "Phrenology",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 13
+    },
+    {
+      "name": "Miasma theory",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 12
+    },
+    {
+      "name": "Medicine show",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 13
+    },
+    {
+      "name": "Radium water",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 14
+    },
+    {
+      "name": "Chicken soup",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 4
+    },
+    {
+      "name": "Carrots and night vision",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 8
+    },
+    {
+      "name": "Ten percent of the brain myth",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 9
+    },
+    {
+      "name": "Swallowed chewing gum myth",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 5
+    },
+    {
+      "name": "Knuckle cracking myth",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 8
+    },
+    {
+      "name": "An apple a day",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 5
+    },
+    {
+      "name": "Feed a cold, starve a fever",
+      "facet": "Odd old cures and medical myths",
+      "known_at": 10
+    }
+  ]
+}

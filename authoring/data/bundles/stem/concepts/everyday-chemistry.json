@@ -1,0 +1,468 @@
+{
+  "subcategory": "everyday-chemistry",
+  "facets": [
+    "Cooking and kitchen chemistry",
+    "Cleaning products and soaps",
+    "Acids, bases and pH at home",
+    "Burning, fire and flames",
+    "Rust, corrosion and tarnish",
+    "Plastics, rubber and fibers",
+    "Water, salt and dissolving",
+    "Gases in the air we breathe",
+    "Medicines and body chemistry",
+    "Batteries and household electricity",
+    "Cosmetics, dyes and colors",
+    "Fireworks, glow sticks and light"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 5,
+      "purpose": 5,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 4,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 3,
+      "body_senses": 4,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Pectin",
+      "facet": "Cooking and kitchen chemistry",
+      "known_at": 11
+    },
+    {
+      "name": "Detergent",
+      "facet": "Cleaning products and soaps",
+      "known_at": 5
+    },
+    {
+      "name": "Micelle",
+      "facet": "Cleaning products and soaps",
+      "known_at": 14
+    },
+    {
+      "name": "Lye",
+      "facet": "Cleaning products and soaps",
+      "known_at": 11
+    },
+    {
+      "name": "Limescale",
+      "facet": "Cleaning products and soaps",
+      "known_at": 8
+    },
+    {
+      "name": "Fabric softener",
+      "facet": "Cleaning products and soaps",
+      "known_at": 6
+    },
+    {
+      "name": "Washing soda",
+      "facet": "Cleaning products and soaps",
+      "known_at": 10
+    },
+    {
+      "name": "Borax",
+      "facet": "Cleaning products and soaps",
+      "known_at": 10
+    },
+    {
+      "name": "Dry cleaning",
+      "facet": "Cleaning products and soaps",
+      "known_at": 9
+    },
+    {
+      "name": "Rubbing alcohol",
+      "facet": "Cleaning products and soaps",
+      "known_at": 7
+    },
+    {
+      "name": "Aleppo soap",
+      "facet": "Cleaning products and soaps",
+      "known_at": 13
+    },
+    {
+      "name": "Marseille soap",
+      "facet": "Cleaning products and soaps",
+      "known_at": 12
+    },
+    {
+      "name": "Soap bubble",
+      "facet": "Cleaning products and soaps",
+      "known_at": 1
+    },
+    {
+      "name": "Toilet cleaner",
+      "facet": "Cleaning products and soaps",
+      "known_at": 4
+    },
+    {
+      "name": "Universal indicator",
+      "facet": "Acids, bases and pH at home",
+      "known_at": 10
+    },
+    {
+      "name": "Carbonic acid",
+      "facet": "Acids, bases and pH at home",
+      "known_at": 11
+    },
+    {
+      "name": "Tartaric acid",
+      "facet": "Acids, bases and pH at home",
+      "known_at": 13
+    },
+    {
+      "name": "Phosphoric acid",
+      "facet": "Acids, bases and pH at home",
+      "known_at": 12
+    },
+    {
+      "name": "Hydrangea",
+      "facet": "Acids, bases and pH at home",
+      "known_at": 10,
+      "retired": "used_up: The pool already asks the blue/pink and aluminum fact. Any other hydrangea and pH question would repeat it."
+    },
+    {
+      "name": "Combustion",
+      "facet": "Burning, fire and flames",
+      "known_at": 8
+    },
+    {
+      "name": "Candle wick",
+      "facet": "Burning, fire and flames",
+      "known_at": 4
+    },
+    {
+      "name": "Red phosphorus",
+      "facet": "Burning, fire and flames",
+      "known_at": 12
+    },
+    {
+      "name": "Fire blanket",
+      "facet": "Burning, fire and flames",
+      "known_at": 6
+    },
+    {
+      "name": "Flint",
+      "facet": "Burning, fire and flames",
+      "known_at": 6
+    },
+    {
+      "name": "Phlogiston",
+      "facet": "Burning, fire and flames",
+      "known_at": 14
+    },
+    {
+      "name": "Polymer",
+      "facet": "Plastics, rubber and fibers",
+      "known_at": 10
+    },
+    {
+      "name": "Polyethylene",
+      "facet": "Plastics, rubber and fibers",
+      "known_at": 11
+    },
+    {
+      "name": "PET bottle",
+      "facet": "Plastics, rubber and fibers",
+      "known_at": 8
+    },
+    {
+      "name": "PVC",
+      "facet": "Plastics, rubber and fibers",
+      "known_at": 9
+    },
+    {
+      "name": "Polystyrene",
+      "facet": "Plastics, rubber and fibers",
+      "known_at": 9
+    },
+    {
+      "name": "Celluloid",
+      "facet": "Plastics, rubber and fibers",
+      "known_at": 13
+    },
+    {
+      "name": "Natural rubber",
+      "facet": "Plastics, rubber and fibers",
+      "known_at": 5
+    },
+    {
+      "name": "Rubber tree",
+      "facet": "Plastics, rubber and fibers",
+      "known_at": 5
+    },
+    {
+      "name": "Polyester",
+      "facet": "Plastics, rubber and fibers",
+      "known_at": 8
+    },
+    {
+      "name": "Silicone",
+      "facet": "Plastics, rubber and fibers",
+      "known_at": 8
+    },
+    {
+      "name": "Spandex",
+      "facet": "Plastics, rubber and fibers",
+      "known_at": 9
+    },
+    {
+      "name": "Microplastics",
+      "facet": "Plastics, rubber and fibers",
+      "known_at": 8
+    },
+    {
+      "name": "Bioplastic",
+      "facet": "Plastics, rubber and fibers",
+      "known_at": 9
+    },
+    {
+      "name": "Silk",
+      "facet": "Plastics, rubber and fibers",
+      "known_at": 4
+    },
+    {
+      "name": "Cotton",
+      "facet": "Plastics, rubber and fibers",
+      "known_at": 2
+    },
+    {
+      "name": "Table salt",
+      "facet": "Water, salt and dissolving",
+      "known_at": 1
+    },
+    {
+      "name": "Solubility",
+      "facet": "Water, salt and dissolving",
+      "known_at": 10
+    },
+    {
+      "name": "Saturated solution",
+      "facet": "Water, salt and dissolving",
+      "known_at": 11
+    },
+    {
+      "name": "Solvent",
+      "facet": "Water, salt and dissolving",
+      "known_at": 9
+    },
+    {
+      "name": "Desalination",
+      "facet": "Water, salt and dissolving",
+      "known_at": 10
+    },
+    {
+      "name": "Salt pan",
+      "facet": "Water, salt and dissolving",
+      "known_at": 7
+    },
+    {
+      "name": "Salt crystal",
+      "facet": "Water, salt and dissolving",
+      "known_at": 4
+    },
+    {
+      "name": "Rock candy",
+      "facet": "Water, salt and dissolving",
+      "known_at": 6
+    },
+    {
+      "name": "Distilled water",
+      "facet": "Water, salt and dissolving",
+      "known_at": 8
+    },
+    {
+      "name": "Hard water",
+      "facet": "Water, salt and dissolving",
+      "known_at": 9
+    },
+    {
+      "name": "Brine",
+      "facet": "Water, salt and dissolving",
+      "known_at": 9
+    },
+    {
+      "name": "Freezing point depression",
+      "facet": "Water, salt and dissolving",
+      "known_at": 12
+    },
+    {
+      "name": "Oil and water",
+      "facet": "Water, salt and dissolving",
+      "known_at": 3
+    },
+    {
+      "name": "Sugar cube",
+      "facet": "Water, salt and dissolving",
+      "known_at": 2
+    },
+    {
+      "name": "Smog",
+      "facet": "Gases in the air we breathe",
+      "known_at": 8
+    },
+    {
+      "name": "Carbonation",
+      "facet": "Gases in the air we breathe",
+      "known_at": 6
+    },
+    {
+      "name": "Gas odorant",
+      "facet": "Gases in the air we breathe",
+      "known_at": 10
+    },
+    {
+      "name": "Oral rehydration salts",
+      "facet": "Medicines and body chemistry",
+      "known_at": 11
+    },
+    {
+      "name": "John Goodenough",
+      "facet": "Batteries and household electricity",
+      "known_at": 14
+    },
+    {
+      "name": "Battery recycling",
+      "facet": "Batteries and household electricity",
+      "known_at": 5
+    },
+    {
+      "name": "Henna",
+      "facet": "Cosmetics, dyes and colors",
+      "known_at": 7
+    },
+    {
+      "name": "Tyrian purple",
+      "facet": "Cosmetics, dyes and colors",
+      "known_at": 13
+    },
+    {
+      "name": "Mauveine",
+      "facet": "Cosmetics, dyes and colors",
+      "known_at": 14
+    },
+    {
+      "name": "William Henry Perkin",
+      "facet": "Cosmetics, dyes and colors",
+      "known_at": 14
+    },
+    {
+      "name": "Saffron",
+      "facet": "Cosmetics, dyes and colors",
+      "known_at": 8
+    },
+    {
+      "name": "Turmeric",
+      "facet": "Cosmetics, dyes and colors",
+      "known_at": 7
+    },
+    {
+      "name": "Ultramarine",
+      "facet": "Cosmetics, dyes and colors",
+      "known_at": 12
+    },
+    {
+      "name": "Kohl",
+      "facet": "Cosmetics, dyes and colors",
+      "known_at": 11
+    },
+    {
+      "name": "Lipstick",
+      "facet": "Cosmetics, dyes and colors",
+      "known_at": 2
+    },
+    {
+      "name": "Nail polish remover",
+      "facet": "Cosmetics, dyes and colors",
+      "known_at": 5
+    },
+    {
+      "name": "Acetone",
+      "facet": "Cosmetics, dyes and colors",
+      "known_at": 10
+    },
+    {
+      "name": "Zinc oxide",
+      "facet": "Cosmetics, dyes and colors",
+      "known_at": 11
+    },
+    {
+      "name": "Titanium dioxide",
+      "facet": "Cosmetics, dyes and colors",
+      "known_at": 13
+    },
+    {
+      "name": "Hair dye",
+      "facet": "Cosmetics, dyes and colors",
+      "known_at": 5
+    },
+    {
+      "name": "Toothpaste",
+      "facet": "Cosmetics, dyes and colors",
+      "known_at": 1
+    },
+    {
+      "name": "Chemiluminescence",
+      "facet": "Fireworks, glow sticks and light",
+      "known_at": 12
+    },
+    {
+      "name": "Luminol",
+      "facet": "Fireworks, glow sticks and light",
+      "known_at": 11
+    },
+    {
+      "name": "Sodium-vapor lamp",
+      "facet": "Fireworks, glow sticks and light",
+      "known_at": 11
+    },
+    {
+      "name": "Glow-in-the-dark stars",
+      "facet": "Fireworks, glow sticks and light",
+      "known_at": 2
+    },
+    {
+      "name": "Limelight",
+      "facet": "Fireworks, glow sticks and light",
+      "known_at": 14
+    },
+    {
+      "name": "Diwali",
+      "facet": "Fireworks, glow sticks and light",
+      "known_at": 8
+    }
+  ]
+}
