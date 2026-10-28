@@ -656937,8 +656937,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "chimpanzee hand thumb palm",
-        "note": "Close-up of a chimpanzee's hand with the thumb clearly visible; the face should not be shown.",
+        "query": "chimpanzee hand close-up",
+        "note": "Close-up photo of a chimpanzee's or other ape's hand with the thumb clearly visible; no face, no labels or text.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -656971,18 +656971,44 @@
       "batch": "batch-26",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows a chimpanzee's hand. #1 is a diagram labelled \"PRIMATES\", which gives the answer away. #2 is a staged human hand with an extra finger. #3–#6 are a bronze artifact, a solar-system mnemonic and a Japanese woodcut. A new search isn't allowed, so the essential image can't be filled. The slot needs a clear close-up photo of a chimpanzee or other ape hand, for example \"chimpanzee hand close-up\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows a chimpanzee's hand. #1 is a diagram labelled \"PRIMATES\", which gives the answer away. #2 is a staged human hand with an extra finger. #3–#6 are a bronze artifact, a solar-system mnemonic and a Japanese woodcut. A new search isn't allowed, so the essential image can't be filled. The slot needs a clear close-up photo of a chimpanzee or other ape hand, for example \"chimpanzee hand close-up\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable image was found, so I changed the search for the essential image to the simpler query the reviewer suggested.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "chimpanzee hand thumb palm",
+            "note": "Close-up of a chimpanzee's hand with the thumb clearly visible; the face should not be shown.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-28"
+      }
     },
     {
       "id": "q-8508",
@@ -658336,7 +658362,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "glow in the dark stickers",
+        "query": "glow in the dark stars ceiling",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -658370,22 +658396,48 @@
       "batch": "batch-26",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows glow-in-the-dark stickers. They are a night street stall, a vintage car, ordinary street stickers (one has a political slogan, “#PedoFidesz”) and a Wikidata logo. No new search is allowed, so the media slot can't be filled. Try a query like “glow in the dark stars ceiling” or “strontium aluminate glowing”. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows glow-in-the-dark stickers. They are a night street stall, a vintage car, ordinary street stickers (one has a political slogan, “#PedoFidesz”) and a Wikidata logo. No new search is allowed, so the media slot can't be filled. Try a query like “glow in the dark stars ceiling” or “strontium aluminate glowing”. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable image was found, so I changed the media search to a more concrete glow-in-the-dark query.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "glow in the dark stickers",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-28"
+      }
     },
     {
       "id": "q-8527",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "The world's coldest fishing trip, and the fish are invisible.",
       "question": "IceCube has more than 5,000 light sensors buried deep in the ice at the South Pole, watching for faint blue flashes. What is it built to catch?",
@@ -658403,11 +658455,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "IceCube Laboratory Antarctica",
+        "query": "IceCube Laboratory South Pole",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIceCube_Neutrino_Observatory_in_2023_02.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/IceCube_Neutrino_Observatory_in_2023_02.jpg/3840px-IceCube_Neutrino_Observatory_in_2023_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Christopher Michel · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Christopher Michel",
+        "author_url": "https://en.wikipedia.org/wiki/en:Christopher_Michel",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "IceCube's sensors hang between about 1,450 and 2,450 m deep, in a cubic kilometer of ice.",
       "subcategory": "atoms-and-modern-physics",
@@ -658436,19 +658495,43 @@
       "needs_media": false,
       "batch": "batch-26",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates fits. 1 and 2 are Rocket Lab launches, 4 is a PREFIRE satellite illustration, and 3 shows meteorite ALH84001, which is one of the wrong options, with a caption. No new search is allowed, so the slot needs a manual search for something like \"IceCube Laboratory South Pole\" or \"IceCube digital optical module\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits. 1 and 2 are Rocket Lab launches, 4 is a PREFIRE satellite illustration, and 3 shows meteorite ALH84001, which is one of the wrong options, with a caption. No new search is allowed, so the slot needs a manual search for something like \"IceCube Laboratory South Pole\" or \"IceCube digital optical module\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable image was found, so I changed the media search to the reviewer's IceCube query.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "IceCube Laboratory Antarctica",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-28"
+      }
     },
     {
       "id": "q-8528",
@@ -659207,7 +659290,7 @@
       "status": "needs_work",
       "difficulty": 9,
       "description": "Tiny power stations that came with a very particular family delivery service.",
-      "question": "You got the tiny cell parts in this photo from just one person. Who?",
+      "question": "You got your mitochondria, the tiny power stations in your cells, from just one person. Who?",
       "answer": "Your mother",
       "wrong_answers": [
         "Your father",
@@ -659215,15 +659298,15 @@
         "Your mother's father"
       ],
       "hints": [
-        "These parts turn food into energy for the cell.",
-        "These parts carry their own small set of DNA, separate from the cell's nucleus.",
+        "It's a close relative, not a stranger.",
+        "Mitochondria carry their own small set of DNA, separate from the cell's nucleus.",
         "That person got them from her own mother."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "mitochondrion TEM cristae",
-        "note": "A clear electron micrograph of a single mitochondrion (bean shape with folded inner walls), with no labels or text.",
+        "role": "illustrative",
+        "query": "mitochondrion illustration",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -659252,31 +659335,52 @@
         "notes": "Players need to recognise mitochondria from a micrograph and also know they come only from the mother. That's harder than 9 for young teens. There are very rare cases of paternal leakage, but the answer is fine for trivia. Hint 2 nearly gives it away."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-26",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows a single clear mitochondrion: all five are scientific figures with many panels, letter labels and scale bars (tick, protist, cicada sperm, colon tissue, an old cell scan). The question needs an essential image, and another search isn't allowed. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a single clear mitochondrion: all five are scientific figures with many panels, letter labels and scale bars (tick, protist, cicada sperm, colon tissue, an old cell scan). The question needs an essential image, and another search isn't allowed. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave the answer away with egg vs. sperm, with a hint about the parts' own DNA.",
+        "reason": "A clean micrograph without labels is unlikely to exist, so the question now names mitochondria in the text and the image is illustrative; hint 1 was rewritten because the question now says what they do.",
         "previous": {
+          "question": "You got the tiny cell parts in this photo from just one person. Who?",
           "hints": [
             "These parts turn food into energy for the cell.",
-            "They arrive with the egg, not with the sperm.",
+            "These parts carry their own small set of DNA, separate from the cell's nucleus.",
             "That person got them from her own mother."
-          ]
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "mitochondrion TEM cristae",
+            "note": "A clear electron micrograph of a single mitochondrion (bean shape with folded inner walls), with no labels or text.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-10-28"
       }
@@ -659904,7 +660008,7 @@
       ],
       "hints": [
         "Mendel used these labels when he crossed pea plants in the 1860s.",
-        "The same root gives the English phrase “filial love”: the love a child feels toward their parents.",
+        "In English, “filial” shows up in old phrases about family duty and respect.",
         "Spanish “hijo” and French “fils” come from the same Latin root."
       ],
       "media": {
@@ -659946,30 +660050,40 @@
         "difficulty_estimate": 12,
         "notes": "A Latin word origin wrapped in genetics; a bit dry. Hint 3 helps players across languages."
       },
-      "fact_checked": true,
+      "fact_checked": false,
       "needs_media": false,
       "batch": "batch-26",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. It defines “filial love” as “the love a child feels toward their parents”, so the clue “a child's” leaves only “Son or daughter” among the four options. Hint 2 should be a middle-strength clue, for example that the word appears in phrases about family duty, without saying it means a child.",
+        "feedback": "Hint 1 is wrong. Mendel did not use the F1/F2 labels in the 1860s. Bateson and Saunders brought them in around 1902. Hint 1 should say that geneticists after Mendel, in the early 1900s, used these labels for generations of crossed plants. Fact check: wrong. Hint 1 is inaccurate. Mendel did not use the labels F1/F2 in the 1860s. They were introduced later, by Bateson and others in the early 1900s. The answer (Latin filius/filia, son or daughter) is correct.",
         "problems": [
-          "giveaway"
+          "fact"
         ],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. It defines “filial love” as “the love a child feels toward their parents”, so the clue “a child's” leaves only “Son or daughter” among the four options. Hint 2 should be a middle-strength clue, for example that the word appears in phrases about family duty, without saying it means a child.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hints 1 and 2 so they no longer name family members and give the answer away.",
+        "reason": "Hint 2 defined the word as a child's love, which gave away the answer, so I replaced it with a vaguer clue about family duty.",
         "previous": {
           "hints": [
-            "Mendel's F1 plants were the children of his first cross.",
-            "The F2 plants are the grandchildren.",
+            "Mendel used these labels when he crossed pea plants in the 1860s.",
+            "The same root gives the English phrase “filial love”: the love a child feels toward their parents.",
             "Spanish “hijo” and French “fils” come from the same Latin root."
           ]
         },
@@ -661139,7 +661253,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "muddy grass stained clothes",
+        "query": "grass stained jeans",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -661173,18 +661287,44 @@
       "batch": "batch-26",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates fit the question. They show a hunter holding a jackrabbit, a 1940s Dow Chemical magazine ad full of text, and two scans of handwritten 1841 letters. A new search isn't allowed, so the slot needs a new image, for example a \"laundry detergent washing machine\" or \"grass stained jeans\" photo. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fit the question. They show a hunter holding a jackrabbit, a 1940s Dow Chemical magazine ad full of text, and two scans of handwritten 1841 letters. A new search isn't allowed, so the slot needs a new image, for example a \"laundry detergent washing machine\" or \"grass stained jeans\" photo. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable image was found, so I changed the media search to a simple grass-stained jeans query.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "muddy grass stained clothes",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-28"
+      }
     },
     {
       "id": "q-8564",
@@ -663186,10 +663326,10 @@
     },
     {
       "id": "q-8590",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "A field that quit farming and decided to become a forest instead.",
-      "question": "This abandoned farm field is slowly turning back into forest. Unlike regrowth on fresh lava, what does this kind of succession already have in place?",
+      "question": "An abandoned farm field slowly turns back into forest. Unlike regrowth on fresh lava, what is already in place there?",
       "answer": "Soil",
       "wrong_answers": [
         "Bare rock",
@@ -663203,12 +663343,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "old field succession",
-        "note": "An old, abandoned farm field overgrown with grasses, shrubs and young trees; no text.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "overgrown abandoned field shrubs",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOvergrown_embankment_between_the_rivers_-_geograph.org.uk_-_2295607.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Overgrown_embankment_between_the_rivers_-_geograph.org.uk_-_2295607.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Richard Humphrey · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Richard Humphrey",
+        "author_url": "https://www.geograph.org.uk/profile/39484",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "An abandoned field can grow back into a young forest within a few decades, much faster than bare rock ever could.",
       "subcategory": "ecosystems-and-food-webs",
@@ -663234,27 +663381,45 @@
         "notes": "The wording 'starts with what already in place?' is clumsy when read aloud. The photo doesn't need to be essential; 'illustrative' fits better. Players can reason towards the answer from the farm field, so 12 is too high. Hint 1 names the term 'secondary succession'."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-26",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows what the question names, an abandoned farm field growing back into forest, and a new search isn't possible. Candidates 1 and 3 are diagrams with text labels (\"Bare Rock\", \"Soil Layer\", and French labels). Candidate 2 is a cartoon of a forest fire. Candidate 4 is a burned pine forest, not a farm field. Candidates 5 and 6 show a bare mound of soil with weeds, which is not a field and would give away \"Soil\". The slot needs a photo of an old, overgrown farm field, for example from a search like \"abandoned field shrubs\", or the role should become illustrative with wording that doesn't say \"This … field\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows what the question names, an abandoned farm field growing back into forest, and a new search isn't possible. Candidates 1 and 3 are diagrams with text labels (\"Bare Rock\", \"Soil Layer\", and French labels). Candidate 2 is a cartoon of a forest fire. Candidate 4 is a burned pine forest, not a farm field. Candidates 5 and 6 show a bare mound of soil with weeds, which is not a field and would give away \"Soil\". The slot needs a photo of an old, overgrown farm field, for example from a search like \"abandoned field shrubs\", or the role should become illustrative with wording that doesn't say \"This … field\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Fixed the broken grammar in the question so it reads naturally aloud.",
+        "reason": "No matching photo was found, so the question no longer says “This … field” and the image is now illustrative with a new query, as the reviewer suggested.",
         "previous": {
-          "question": "This abandoned farm field is slowly turning back into forest. Unlike regrowth on fresh lava, this kind of succession starts with what already in place?"
+          "question": "This abandoned farm field is slowly turning back into forest. Unlike regrowth on fresh lava, what does this kind of succession already have in place?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "old field succession",
+            "note": "An old, abandoned farm field overgrown with grasses, shrubs and young trees; no text.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-10-28"
       }
@@ -663583,7 +663748,7 @@
     },
     {
       "id": "q-8595",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Before phone maps, getting lost at sea needed only a bowl of water to fix.",
       "question": "You're at sea, steering by a magnetized needle floating in a bowl of water. Which sailors first used this trick, around 1100?",
@@ -663595,28 +663760,24 @@
       ],
       "hints": [
         "These sailors were not from Europe.",
-        "They sailed big ships called junks.",
+        "They traded out of busy ports in Asia.",
         "A Song dynasty book from 1119 describes it."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "old wooden sailing ship at sea",
+        "query": "floating needle water compass",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAntonio_Jacobsen_-_The_Norwegian_bark_Friedig_at_sea_under_reduced_sail.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Antonio_Jacobsen_-_The_Norwegian_bark_Friedig_at_sea_under_reduced_sail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Antonio Jacobsen · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACompass-floating_needle_on_water.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Compass-floating_needle_on_water.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "CC BY-SA 3.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Antonio Jacobsen",
-        "author_url": "https://en.wikipedia.org/wiki/en:Antonio_Jacobsen",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": null,
+        "author_url": null,
         "restrictions": [],
-        "pd_reasons": [
-          "PD-Art",
-          "PD-old-auto-1923",
-          "PD-old-auto-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Long before sailors used it, the Chinese used spoons of magnetic lodestone that pointed south, often for fortune-telling.",
       "subcategory": "electricity-and-magnetism",
@@ -663645,31 +663806,34 @@
       "needs_media": false,
       "batch": "batch-26",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"They sailed big ships called junks\") gives the answer away, because junks are known worldwide as Chinese ships. Hint 1 (\"not from Europe\") already narrows it to Chinese or Arab sailors. Replace hint 2 with a vaguer clue, for example about the region of the world or the trade they did, that doesn't name a typically Chinese thing.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"They sailed big ships called junks\") gives the answer away, because junks are known worldwide as Chinese ships. Hint 1 (\"not from Europe\") already narrows it to Chinese or Arab sailors. Replace hint 2 with a vaguer clue, for example about the region of the world or the trade they did, that doesn't name a typically Chinese thing.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Swapped Roman for Arab sailors so the answer isn't the only non-European option, and rewrote hints 1 and 2 so they don't give it away.",
+        "reason": "Hint 2 named junks, which are typically Chinese, so I replaced it with a vaguer clue about the region.",
         "previous": {
-          "wrong_answers": [
-            "Viking sailors",
-            "Roman sailors",
-            "Portuguese sailors"
-          ],
           "hints": [
-            "It happened in Asia.",
-            "The same country invented paper, printing and gunpowder.",
+            "These sailors were not from Europe.",
+            "They sailed big ships called junks.",
             "A Song dynasty book from 1119 describes it."
           ]
         },
@@ -663835,10 +663999,10 @@
     },
     {
       "id": "q-8598",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Shiny on the inside, wrapped in plastic like a candy bar.",
-      "question": "Look at this shiny metal inside an electric cable. Because it lets electricity flow easily, what kind of material is it?",
+      "question": "The shiny copper inside an electric cable lets electricity flow through it easily. What kind of material is it?",
       "answer": "A conductor",
       "wrong_answers": [
         "An insulator",
@@ -663852,12 +664016,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "stripped copper electrical wire",
-        "note": "Close photo of an electric cable with the plastic stripped back, showing the shiny copper wires inside.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "copper electrical cable",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElectric_guide_3%C3%972.5_mm.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Electric_guide_3%C3%972.5_mm.jpg/3840px-Electric_guide_3%C3%972.5_mm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Petar Milošević · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Petar Milošević",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PetarM",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Silver conducts electricity even better than copper, but copper is used in cables because it is far cheaper.",
       "subcategory": "electricity-and-magnetism",
@@ -663883,31 +664054,45 @@
         "notes": "Hint 3 depends on English wordplay: the orchestra-conductor pun doesn't work in Spanish or German. The question reads like a school test."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-26",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows what the essential slot needs, an electric cable with the plastic stripped back to show the shiny copper inside. A new search isn't allowed, so the media has to be sourced by hand or the question re-queued. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows what the essential slot needs, an electric cable with the plastic stripped back to show the shiny copper inside. A new search isn't allowed, so the media has to be sourced by hand or the question re-queued. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made hint 1 vaguer and replaced the English-only orchestra pun in hint 3 with a hint that works in any language.",
+        "reason": "No matching essential photo was found, so the question no longer depends on the image, which is now illustrative with a simpler cable query.",
         "previous": {
-          "hints": [
-            "The plastic around it does the opposite job.",
-            "Most metals, and even your body, are this kind of material.",
-            "Its name sounds like the person who leads an orchestra."
-          ]
+          "question": "Look at this shiny metal inside an electric cable. Because it lets electricity flow easily, what kind of material is it?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "stripped copper electrical wire",
+            "note": "Close photo of an electric cable with the plastic stripped back, showing the shiny copper wires inside.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-10-28"
       }
@@ -664228,10 +664413,10 @@
     },
     {
       "id": "q-8603",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "A crane with a very sticky personality.",
-      "question": "This crane uses a huge magnet to lift scrap. What kind of metal can it pick up?",
+      "question": "Scrapyard cranes use a huge magnet to lift scrap. What kind of metal can they pick up?",
       "answer": "Iron and steel",
       "wrong_answers": [
         "Aluminum",
@@ -664245,12 +664430,21 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "scrap lifting electromagnet",
-        "note": "Photo of a crane with a big round lifting magnet holding scrap metal at a scrapyard.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "scrap metal magnet crane",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAllegheny_Ludlum_Steel_Corp_Scrap_Piles.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Allegheny_Ludlum_Steel_Corp_Scrap_Piles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Palmer, Alfred T. · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Palmer, Alfred T.",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-FSA"
+        ]
       },
       "fun_fact": "These are electromagnets: when the operator switches off the electricity, all the scrap drops at once.",
       "subcategory": "electricity-and-magnetism",
@@ -664275,23 +664469,49 @@
         "difficulty_estimate": 5,
         "notes": "Nickel and cobalt are magnetic too, but they aren't options. The answer names two metals while the others name one. It touches the same idea as chemical-elements-2 (sticks to a magnet → iron), but the focus is different."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-26",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows a scrapyard crane with a round lifting magnet, and this essential image can't be searched for again. The question says \"This crane\", so it needs that photo. A Commons search like \"lifting magnet scrap\" or \"scrap metal magnet crane\" should find one. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows a scrapyard crane with a round lifting magnet, and this essential image can't be searched for again. The question says \"This crane\", so it needs that photo. A Commons search like \"lifting magnet scrap\" or \"scrap metal magnet crane\" should find one. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No matching essential photo was found, so the question no longer says “This crane” and the image is now illustrative with the reviewer's suggested query.",
+        "previous": {
+          "question": "This crane uses a huge magnet to lift scrap. What kind of metal can it pick up?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "scrap lifting electromagnet",
+            "note": "Photo of a crane with a big round lifting magnet holding scrap metal at a scrapyard.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-28"
+      }
     },
     {
       "id": "q-8604",
@@ -664739,7 +664959,7 @@
     },
     {
       "id": "q-8610",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Your body's own built-in sprinkler system.",
       "question": "You do it when you run, on hot days and sometimes when you're nervous, and the salty drops dry on your skin. What is sweating mainly for?",
@@ -664751,7 +664971,7 @@
       ],
       "hints": [
         "You sweat more when your body gets hot.",
-        "When the drops dry up, they take heat away with them.",
+        "Dogs pant to do the same job.",
         "It works a bit like stepping out of a pool on a windy day and feeling chilly."
       ],
       "media": {
@@ -664800,19 +665020,39 @@
       "needs_media": false,
       "batch": "batch-26",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"When the drops dry up, they take heat away with them\") states the answer: taking heat away is cooling the body down. Only hint 3 is allowed to come that close. Hint 2 should point towards the answer without naming the mechanism, for example \"Dogs pant to do the same job.\"",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"When the drops dry up, they take heat away with them\") states the answer: taking heat away is cooling the body down. Only hint 3 is allowed to come that close. Hint 2 should point towards the answer without naming the mechanism, for example \"Dogs pant to do the same job.\"",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Hint 2 named the cooling mechanism, so I swapped it for a comparison with dogs panting that points to the answer without stating it.",
+        "previous": {
+          "hints": [
+            "You sweat more when your body gets hot.",
+            "When the drops dry up, they take heat away with them.",
+            "It works a bit like stepping out of a pool on a windy day and feeling chilly."
+          ]
+        },
+        "revised_on": "2026-10-28"
+      }
     },
     {
       "id": "q-8611",
@@ -665205,7 +665445,7 @@
     },
     {
       "id": "q-8616",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "A beauty product that does not enjoy a summer road trip.",
       "question": "What happens to a lipstick left in a very hot car?",
@@ -665236,7 +665476,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Lipstick is made mostly of waxes and oils, so it starts to soften at temperatures not much hotter than your body.",
+      "fun_fact": "Lipstick is mostly waxes and oils, so it softens and melts when a closed car heats up to 50–70 °C (122–158 °F).",
       "subcategory": "everyday-chemistry",
       "style": null,
       "concept": "Lipstick",
@@ -665259,32 +665499,36 @@
         "difficulty_estimate": 2,
         "notes": "Very easy. 'It freezes' is obviously wrong, so the distractors are weak. The question is plain."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-26",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact is wrong. Lipstick waxes melt at about 55–80 °C, well above body temperature, so \"starts to soften at temperatures not much hotter than your body\" overstates it, and the fact check marked it wrong. Use the fact check's correction: lipstick is mostly waxes and oils, so it softens and melts when a closed car heats up to 50–70 °C (122–158 °F). Fact check: wrong. Answer is right, but the fun fact overstates it. Lipstick waxes melt at roughly 55–80 °C, well above body temperature. A hot car can reach those temperatures.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact is wrong. Lipstick waxes melt at about 55–80 °C, well above body temperature, so \"starts to soften at temperatures not much hotter than your body\" overstates it, and the fact check marked it wrong. Use the fact check's correction: lipstick is mostly waxes and oils, so it softens and melts when a closed car heats up to 50–70 °C (122–158 °F). Fact check: wrong. Answer is right, but the fun fact overstates it. Lipstick waxes melt at roughly 55–80 °C, well above body temperature. A hot car can reach those temperatures.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which gave the answer away with chocolate, with a vague hint about how hot a closed car gets.",
+        "reason": "Corrected the fun fact to match the fact check: lipstick waxes melt well above body temperature, at heat a closed car can reach.",
         "previous": {
-          "hints": [
-            "Think of what heat does to chocolate.",
-            "Lipstick is mostly wax and oil.",
-            "Candles do the same thing near a flame."
-          ]
+          "fun_fact": "Lipstick is made mostly of waxes and oils, so it starts to soften at temperatures not much hotter than your body."
         },
         "revised_on": "2026-10-28"
       }
@@ -666944,10 +667188,10 @@
     },
     {
       "id": "q-8639",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "A hare that laughs at winter while everyone else stays indoors.",
-      "question": "The snowshoe hare can run on soft, deep snow where a lynx sinks. Which part of its body makes this possible?",
+      "question": "A hare in the snowy northern forests can run on soft, deep snow where a lynx sinks. Which part of its body makes this possible?",
       "answer": "Its big furry back feet",
       "wrong_answers": [
         "Its white winter coat",
@@ -666955,8 +667199,8 @@
         "Its short fluffy tail"
       ],
       "hints": [
-        "Snowshoes stop you sinking into deep snow.",
-        "They work by spreading your weight over a bigger area.",
+        "The trick is to press down less on each bit of snow.",
+        "It works by spreading the hare's weight over a bigger area.",
         "Look down at the hare, not up."
       ],
       "media": {
@@ -667004,26 +667248,38 @@
       "needs_media": false,
       "batch": "batch-26",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question names the animal \"snowshoe hare\", and the English name itself gives away the answer (feet). Hint 1 (\"Snowshoes…\") makes it even more obvious. The question relies on the English name's meaning, which other languages don't share (Spanish usually says \"liebre americana\"), so it collapses in English and breaks the International angle. To save it, don't name the species (for example: \"a hare in the snowy northern forests\"), and make hints 1–2 about weight and pressure without mentioning snowshoes.",
-        "problems": [
-          "giveaway",
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question names the animal \"snowshoe hare\", and the English name itself gives away the answer (feet). Hint 1 (\"Snowshoes…\") makes it even more obvious. The question relies on the English name's meaning, which other languages don't share (Spanish usually says \"liebre americana\"), so it collapses in English and breaks the International angle. To save it, don't name the species (for example: \"a hare in the snowy northern forests\"), and make hints 1–2 about weight and pressure without mentioning snowshoes.",
+          "problems": [
+            "giveaway",
+            "style"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it doesn't hint at a permanent body part, and turned the question into one about forces that still works in translation.",
+        "reason": "Removed the species name, which gave the answer away in English, and rewrote hints 1–2 to be about weight and pressure instead of snowshoes.",
         "previous": {
-          "description": "An animal named after winter gear, and it never takes it off.",
-          "question": "What does “snowshoe” refer to in the name of the snowshoe hare?"
+          "question": "The snowshoe hare can run on soft, deep snow where a lynx sinks. Which part of its body makes this possible?",
+          "hints": [
+            "Snowshoes stop you sinking into deep snow.",
+            "They work by spreading your weight over a bigger area.",
+            "Look down at the hare, not up."
+          ]
         },
         "revised_on": "2026-10-28"
       }
@@ -671140,7 +671396,7 @@
     },
     {
       "id": "q-8692",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Hundreds of tiny see-through domes, all waiting for their big moment.",
       "question": "What is shown here up close?",
@@ -671158,11 +671414,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "bubble wrap sheet",
-        "note": "A close-up of a sheet of bubble wrap showing its rows of air bubbles.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "query": "bubble wrap",
+        "note": "A clear close-up of a sheet of bubble wrap showing its rows of air bubbles.",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABubble_Wrap.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Bubble_Wrap.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "User Consequencefree on en.wikipedia · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "User Consequencefree on en.wikipedia",
+        "author_url": "https://en.wikipedia.org/wiki/User:Consequencefree",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Some people celebrate Bubble Wrap Appreciation Day on the last Monday of January.",
       "subcategory": "materials-and-metals",
@@ -671191,19 +671454,43 @@
       "needs_media": true,
       "batch": "batch-26",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate clearly shows bubble wrap. #1 is a dark, blurry, portrait-format shot of glittery texture that you can't recognise as bubble wrap. #2–4 are bronze artifacts from the British Museum. A new search isn't allowed, so the essential image slot needs a clear close-up of a bubble wrap sheet showing its rows of air bubbles. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate clearly shows bubble wrap. #1 is a dark, blurry, portrait-format shot of glittery texture that you can't recognise as bubble wrap. #2–4 are bronze artifacts from the British Museum. A new search isn't allowed, so the essential image slot needs a clear close-up of a bubble wrap sheet showing its rows of air bubbles. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The text is fine and Commons has plenty of bubble wrap photos, so I simplified the query to get a fresh search for a clear close-up.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "bubble wrap sheet",
+            "note": "A close-up of a sheet of bubble wrap showing its rows of air bubbles.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-28"
+      }
     },
     {
       "id": "q-8693",
@@ -672328,7 +672615,7 @@
     },
     {
       "id": "q-8708",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "Two Soviet probes that stopped at Venus before going to see a famous visitor.",
       "question": "In 1986, the Soviet probes Vega 1 and Vega 2 flew past Halley's Comet after visiting Venus. About how close did they get to the comet's core?",
@@ -672341,20 +672628,20 @@
       "hints": [
         "The comet's dust could damage a probe that came too close.",
         "Europe's Giotto probe later went closer, to about 600 km.",
-        "It's a bit less than the width of Earth."
+        "It's roughly two-thirds of the width of Earth."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
         "query": "Halley's Comet 1986",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AComet_Halley.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Comet_Halley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AComet_Halley_ARC-1986-AC86-0720-4~orig.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Comet_Halley_ARC-1986-AC86-0720-4~orig.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "NASA/Kuiper Airborne Observatory · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "Kuiper Airborne Observatory, C141 aircraft April 8/9, 1986, New Zealand Expedition",
+        "author": "NASA/Kuiper Airborne Observatory",
         "author_url": null,
         "restrictions": [],
         "pd_reasons": [
@@ -672384,31 +672671,39 @@
         "difficulty_estimate": 14,
         "notes": "Vega 1 came within about 8,900 km and Vega 2 within about 8,000 km, so \"about 8,000\" is fine. This is an obscure flyby distance that even experts mostly guess by order of magnitude, so it is dry and close to an unknowable fact. The description is flat. The lens \"everyday\" doesn't fit."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-26",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 3 is wrong. Earth is about 12,700 km wide, so 8,000 km is about two-thirds of its width, not \"a bit less\". The fact check also returned \"wrong\" for this reason. Change hint 3 to something like \"It's roughly two-thirds of the width of Earth.\" The answer itself is right (Vega 1 got to about 8,890 km, Vega 2 to about 8,030 km), and so are the Giotto hint (about 600 km) and the fun fact. Fact check: wrong. Answer is right (Vega 1 about 8,890 km, Vega 2 about 8,030 km). But hint 3 is inaccurate: 8,000 km is about two-thirds of Earth's diameter (about 12,700 km), not 'a bit less'.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 3 is wrong. Earth is about 12,700 km wide, so 8,000 km is about two-thirds of its width, not \"a bit less\". The fact check also returned \"wrong\" for this reason. Change hint 3 to something like \"It's roughly two-thirds of the width of Earth.\" The answer itself is right (Vega 1 got to about 8,890 km, Vega 2 to about 8,030 km), and so are the Giotto hint (about 600 km) and the fun fact. Fact check: wrong. Answer is right (Vega 1 about 8,890 km, Vega 2 about 8,030 km). But hint 3 is inaccurate: 8,000 km is about two-thirds of Earth's diameter (about 12,700 km), not 'a bit less'.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Fixed hint 3, which wrongly said the distance was about the width of Earth.",
+        "reason": "Fixed hint 3: 8,000 km is about two-thirds of Earth's width, not a bit less.",
         "previous": {
           "hints": [
             "The comet's dust could damage a probe that came too close.",
             "Europe's Giotto probe later went closer, to about 600 km.",
-            "It's about the width of Earth, give or take."
+            "It's a bit less than the width of Earth."
           ]
         },
         "revised_on": "2026-10-28"
@@ -674509,7 +674804,7 @@
       "media": {
         "type": "audio",
         "role": "essential",
-        "query": "Columba livia cooing",
+        "query": "pigeon cooing",
         "note": "A clear recording of a pigeon's soft cooing, with no other birds.",
         "source_url": null,
         "file_url": null,
@@ -674543,14 +674838,24 @@
       "batch": "batch-26",
       "review": {
         "decision": "needs_work",
-        "feedback": "The essential audio slot has no candidates, and no new search is allowed, so the question can't be played without a pigeon cooing recording. Find a Freesound clip of a rock pigeon (Columba livia) cooing by hand, or change the media. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential audio slot has no candidates, and no new search is allowed, so the question can't be played without a pigeon cooing recording. Find a Freesound clip of a rock pigeon (Columba livia) cooing by hand, or change the media. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
@@ -674566,6 +674871,22 @@
         "author_url": "https://commons.wikimedia.org/wiki/User:ADARSHluck",
         "restrictions": [],
         "pd_reasons": []
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Pigeon cooing clips are common on Freesound, so I simplified the query to get a fresh search for the essential sound.",
+        "previous": {
+          "media": {
+            "type": "audio",
+            "role": "essential",
+            "query": "Columba livia cooing",
+            "note": "A clear recording of a pigeon's soft cooing, with no other birds.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-28"
       }
     },
     {
@@ -674726,7 +675047,7 @@
     },
     {
       "id": "q-8739",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Every ambulance sings a sad little song as it drives away.",
       "question": "Listen to this siren as the vehicle passes. What is this change in its sound called?",
@@ -674744,11 +675065,20 @@
       "media": {
         "type": "audio",
         "role": "essential",
-        "query": "siren passing by",
+        "query": "ambulance siren doppler",
         "note": "A siren on an ambulance or police car driving past the microphone, with the pitch clearly dropping as it passes.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADoppler_effect_fast_vehicle_siren_exaggerated.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Doppler_effect_fast_vehicle_siren_exaggerated.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "CeeKay · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "CeeKay",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-author"
+        ]
       },
       "fun_fact": "In 1845, the effect was tested by putting trumpet players on a moving train while musicians on the platform judged the notes.",
       "subcategory": "sound-and-waves",
@@ -674777,15 +675107,23 @@
       "needs_media": true,
       "batch": "batch-26",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the audio candidates is a siren passing by. They are a chainsaw and some music-theory \"passing tone\" clips, so the essential sound is missing, and no new search is allowed. The slot needs a Freesound recording of an ambulance or police siren whose pitch clearly drops as it drives past (for example \"siren doppler\" or \"ambulance passing\"). No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the audio candidates is a siren passing by. They are a chainsaw and some music-theory \"passing tone\" clips, so the essential sound is missing, and no new search is allowed. The slot needs a Freesound recording of an ambulance or police siren whose pitch clearly drops as it drives past (for example \"siren doppler\" or \"ambulance passing\"). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
@@ -674801,6 +675139,22 @@
         "author_url": "https://www.flickr.com/people/paulobar/",
         "restrictions": [],
         "pd_reasons": []
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the query to a more specific term so a new search can find a passing siren with a clear Doppler drop in pitch.",
+        "previous": {
+          "media": {
+            "type": "audio",
+            "role": "essential",
+            "query": "siren passing by",
+            "note": "A siren on an ambulance or police car driving past the microphone, with the pitch clearly dropping as it passes.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-28"
       }
     },
     {
@@ -675129,7 +675483,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "runner heel back view",
+        "query": "bare foot heel back",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -675163,18 +675517,44 @@
       "batch": "batch-26",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates fits the question. They are old book scans: a football game, a baseball batter, a \"Breeder and Sportsman\" masthead with text, and a forest illustration. None of them shows a heel or ankle, and a new search isn't allowed in this run. The text is fine, so the slot needs a new search, for example \"runner heel close-up\" or \"bare foot heel back\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits the question. They are old book scans: a football game, a baseball batter, a \"Breeder and Sportsman\" masthead with text, and a forest illustration. None of them shows a heel or ankle, and a new search isn't allowed in this run. The text is fine, so the slot needs a new search, for example \"runner heel close-up\" or \"bare foot heel back\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The text is fine; I changed only the image query so a new search can find a heel or ankle photo.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "runner heel back view",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-28"
+      }
     },
     {
       "id": "q-8745",
@@ -677278,7 +677658,7 @@
     },
     {
       "id": "q-8773",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Some cities wear a brown hat that nobody asked for.",
       "question": "It's a brownish haze over big cities, worst on sunny days without wind. What mostly causes it?",
@@ -677290,7 +677670,7 @@
       ],
       "hints": [
         "Humans make it.",
-        "It comes out of tailpipes and chimneys.",
+        "It often gets worse during rush hour.",
         "Cities often limit traffic on the worst days to clear it."
       ],
       "media": {
@@ -677336,28 +677716,35 @@
       "needs_media": false,
       "batch": "batch-26",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“It comes out of tailpipes and chimneys.”) just restates the answer “Fumes from cars and factories” in other words, so it gives the answer away before hint 3. Hint 2 should only narrow things down, for example by saying that the source is something people use every day in cities, without naming cars, exhausts or factories.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“It comes out of tailpipes and chimneys.”) just restates the answer “Fumes from cars and factories” in other words, so it gives the answer away before hint 3. Hint 2 should only narrow things down, for example by saying that the source is something people use every day in cities, without naming cars, exhausts or factories.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the English-only name clue from the question and replaced the smoke/fog wordplay in hint 3 with a hint that works in any language.",
+        "reason": "Hint 2 restated the answer, so I replaced it with a rush-hour clue that narrows things down without naming cars or factories.",
         "previous": {
-          "question": "It's a brownish haze over big cities, worst on sunny days without wind, and its name joins two words. What mostly causes it?",
           "hints": [
             "Humans make it.",
             "It comes out of tailpipes and chimneys.",
-            "The two words in its name are “smoke” and “fog”."
+            "Cities often limit traffic on the worst days to clear it."
           ]
         },
         "revised_on": "2026-10-28"
@@ -679389,7 +679776,7 @@
     },
     {
       "id": "q-8801",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "A gadget so small, you'll find it in the sofa cushions before you find it in an ear.",
       "question": "I'm small enough to sit behind or inside your ear, I run on a tiny battery, and I make sounds louder for people who don't hear well. What am I?",
@@ -679407,11 +679794,20 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "grandmother talking with grandchild",
+        "query": "human ear close-up",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADefense.gov_photo_essay_090711-D-1852B-612.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Defense.gov_photo_essay_090711-D-1852B-612.jpg/3840px-Defense.gov_photo_essay_090711-D-1852B-612.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Fred W. Baker III · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Fred W. Baker III",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-Military"
+        ]
       },
       "fun_fact": "Some hearing aids today can connect to a phone, so calls and music play straight into the wearer's ears.",
       "subcategory": "senses-and-nerves",
@@ -679440,19 +679836,43 @@
       "needs_media": false,
       "batch": "batch-26",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates works as a decorative image for a question about hearing aids, and no new search is allowed. The text itself is fine. A new search for something like \"human ear close-up\" or \"grandmother listening grandchild\" photo should give a usable image. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates works as a decorative image for a question about hearing aids, and no new search is allowed. The text itself is fine. A new search for something like \"human ear close-up\" or \"grandmother listening grandchild\" photo should give a usable image. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Only the media was a problem, so I changed the decorative query to a new search that won't show a hearing aid.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "grandmother talking with grandchild",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-28"
+      }
     },
     {
       "id": "q-8802",
@@ -679546,7 +679966,7 @@
       "media": {
         "type": "audio",
         "role": "essential",
-        "query": "tabla drum playing",
+        "query": "tabla solo",
         "note": "A short recording of a tabla being played solo, with its typical bending bass notes and sharp ringing strokes. No other instruments or singing.",
         "source_url": null,
         "file_url": null,
@@ -679580,14 +680000,24 @@
       "batch": "batch-26",
       "review": {
         "decision": "needs_work",
-        "feedback": "No audio candidate is a tabla. They are an udu, a Yoruba talking drum, a reggae drum kit and three MIDI drum beats, and no new search is allowed. The essential audio needs a solo tabla recording, for example from Freesound with \"tabla solo\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No audio candidate is a tabla. They are an udu, a Yoruba talking drum, a reggae drum kit and three MIDI drum beats, and no new search is allowed. The essential audio needs a solo tabla recording, for example from Freesound with \"tabla solo\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
@@ -679603,6 +680033,22 @@
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:PinkBeachPlanet&action=edit&redlink=1",
         "restrictions": [],
         "pd_reasons": []
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Freesound has plenty of solo tabla recordings, so I sharpened the audio query to \"tabla solo\" so a new search finds one.",
+        "previous": {
+          "media": {
+            "type": "audio",
+            "role": "essential",
+            "query": "tabla drum playing",
+            "note": "A short recording of a tabla being played solo, with its typical bending bass notes and sharp ringing strokes. No other instruments or singing.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-28"
       }
     },
     {
@@ -680370,20 +680816,20 @@
     },
     {
       "id": "q-8814",
-      "status": "needs_work",
-      "difficulty": 1,
+      "status": "approved",
+      "difficulty": 5,
       "description": "The playground's favorite way to make the whole world wobble.",
-      "question": "You want to feel dizzy just for fun. Which of these would NOT do it?",
-      "answer": "A sandbox",
+      "question": "You spin around and around, then stop, and the room keeps turning. Which part of your body causes that dizzy feeling?",
+      "answer": "Your inner ear",
       "wrong_answers": [
-        "A merry-go-round",
-        "A spinning teacup ride",
-        "A roller coaster with loops"
+        "Your stomach",
+        "Your heart",
+        "Your feet"
       ],
       "hints": [
-        "Dizziness comes from a part of your body that helps you keep your balance.",
-        "Think about which one doesn't move you at all.",
-        "You build castles in it."
+        "This body part helps you keep your balance.",
+        "It is hidden inside your head.",
+        "It sits deep inside the part of you that hears."
       ],
       "media": {
         "type": "image",
@@ -680401,7 +680847,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "You feel dizzy after spinning because the fluid in your inner ear keeps swirling after you stop.",
+      "fun_fact": "Tiny tubes in your inner ear are filled with fluid, and that fluid keeps swirling for a moment after you stop spinning.",
       "subcategory": "senses-and-nerves",
       "style": null,
       "concept": "Dizziness",
@@ -680428,32 +680874,50 @@
       "needs_media": false,
       "batch": "batch-26",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question only works among its four options: \"Which of these would NOT make you dizzy?\" fits countless things in the world (a sandbox, a bench, a book…), so its clue doesn't point to the answer in the real world. Hint 2 (\"which one doesn't move you at all\") also gives the answer away, because the sandbox is the only option that isn't a ride. It should be redrafted as a positive question with a clue only the answer has, for example asking which body part makes you dizzy after spinning (the inner ear).",
-        "problems": [
-          "giveaway",
-          "ambiguity"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question only works among its four options: \"Which of these would NOT make you dizzy?\" fits countless things in the world (a sandbox, a bench, a book…), so its clue doesn't point to the answer in the real world. Hint 2 (\"which one doesn't move you at all\") also gives the answer away, because the sandbox is the only option that isn't a ride. It should be redrafted as a positive question with a clue only the answer has, for example asking which body part makes you dizzy after spinning (the inner ear).",
+          "problems": [
+            "giveaway",
+            "ambiguity"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2 with vaguer ones, as the reviewer asked.",
+        "reason": "I rewrote the \"which would NOT\" question as a positive real-world question about the inner ear, with new hints and a new fun fact, and rated it 5.",
         "previous": {
+          "difficulty": 1,
+          "question": "You want to feel dizzy just for fun. Which of these would NOT do it?",
+          "answer": "A sandbox",
+          "wrong_answers": [
+            "A merry-go-round",
+            "A spinning teacup ride",
+            "A roller coaster with loops"
+          ],
           "hints": [
-            "Three of these spin you around or flip you over.",
-            "The odd one out keeps you sitting still.",
+            "Dizziness comes from a part of your body that helps you keep your balance.",
+            "Think about which one doesn't move you at all.",
             "You build castles in it."
-          ]
+          ],
+          "fun_fact": "You feel dizzy after spinning because the fluid in your inner ear keeps swirling after you stop."
         },
         "revised_on": "2026-10-28"
-      }
+      },
+      "difficulty_original": 1
     },
     {
       "id": "q-8815",
@@ -681649,26 +682113,26 @@
     },
     {
       "id": "q-8831",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Measuring with body parts: great until someone with big feet shows up.",
-      "question": "This ruler is exactly one foot long. How many inches are there in one yard?",
-      "answer": "36",
+      "question": "This ruler has inches on one side and centimeters on the other. Exactly how many centimeters make one inch?",
+      "answer": "2.54",
       "wrong_answers": [
-        "30",
-        "24",
-        "100"
+        "2.45",
+        "3.12",
+        "1.85"
       ],
       "hints": [
-        "A yard is roughly one big step for an adult.",
-        "First count the inch numbers on this ruler.",
-        "A yard is three of these rulers laid end to end."
+        "This ruler is one foot long, about the same as 30 centimeters.",
+        "One foot has 12 inches, so try dividing 30 by 12.",
+        "It is a little more than two and a half."
       ],
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "wooden foot ruler inches",
-        "note": "A one-foot ruler with inch markings 1 to 12 clearly visible.",
+        "query": "ruler 1 foot 300 mm",
+        "note": "A one-foot ruler showing both inch markings (1 to 12) and centimeter or millimeter markings, so both scales can be compared.",
         "source_url": "https://commons.wikimedia.org/wiki/File%3AScale_ruler%2C_1_foot_and_300_mm.jpg",
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Scale_ruler%2C_1_foot_and_300_mm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "credit": "Kaviyadharshini Selvakumar · CC BY-SA 4.0 · Wikimedia Commons",
@@ -681680,7 +682144,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Since 1959, one inch has been defined as exactly 2.54 centimeters.",
+      "fun_fact": "Before 1959, the American inch and the British inch were very slightly different lengths.",
       "subcategory": "units-and-measurement",
       "style": null,
       "concept": "Imperial system",
@@ -681707,19 +682171,63 @@
       "needs_media": true,
       "batch": "batch-26",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question isn't international enough. Solving it depends on knowing that a yard is 3 feet, which is everyday knowledge in the US and UK but not in metric countries. The ruler only shows that a foot is 12 inches, so families elsewhere can only guess before hint 3. If imperial units stay in the stem bundle, ask something players can work out from the picture, or something about the metric/imperial link that everyone meets.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-28",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question isn't international enough. Solving it depends on knowing that a yard is 3 feet, which is everyday knowledge in the US and UK but not in metric countries. The ruler only shows that a foot is 12 inches, so families elsewhere can only guess before hint 3. If imperial units stay in the stem bundle, ask something players can work out from the picture, or something about the metric/imperial link that everyone meets.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "stem",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "I changed the question to the inch-to-centimeter link, which players anywhere can work out from a ruler showing both inches and millimeters, and gave it new hints, a new fun fact and a new media note.",
+        "previous": {
+          "question": "This ruler is exactly one foot long. How many inches are there in one yard?",
+          "answer": "36",
+          "wrong_answers": [
+            "30",
+            "24",
+            "100"
+          ],
+          "hints": [
+            "A yard is roughly one big step for an adult.",
+            "First count the inch numbers on this ruler.",
+            "A yard is three of these rulers laid end to end."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "wooden foot ruler inches",
+            "note": "A one-foot ruler with inch markings 1 to 12 clearly visible.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AScale_ruler%2C_1_foot_and_300_mm.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Scale_ruler%2C_1_foot_and_300_mm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Kaviyadharshini Selvakumar · CC BY-SA 4.0 · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "author": "Kaviyadharshini Selvakumar",
+            "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kaviyadharshini_Selvakumar&action=edit&redlink=1",
+            "restrictions": [],
+            "pd_reasons": []
+          },
+          "fun_fact": "Since 1959, one inch has been defined as exactly 2.54 centimeters."
+        },
+        "revised_on": "2026-10-28"
+      }
     },
     {
       "id": "q-8832",
