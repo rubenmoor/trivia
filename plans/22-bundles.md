@@ -38,6 +38,7 @@ A **bundle** is a named set of questions that players can switch on or off befor
   - Overlap with base: per subcategory `base-related.json` lists the base subcategories it goes beyond; `qgen concepts` shows the concept call their approved and pending questions ("already in the game") and the drafter's avoid list gets their answers; `draw_slots` and `rate` already see the whole pool (decision 350). Without the file, as for any bundle.
   - Cost: `qgen report --cost` rows per theme × en (drafting) and es, es-ES, de (translations), base's rates until its own runs exist.
   - Media: see "Media for theme bundles" below.
+  - Progress `stem` (content runs, plan 188): 2026-10-28 en 317, es 299 (tr-es-13, $0.08 per approved), es-ES 0, de 0, of 2000 each; `es` joined `languages`.
 - **House style:** base questions follow its "International angle" (well-known facts about any country, Colombia's included); anything more goes into `colombia`.
 
 ## Batches per bundle (D-41)
