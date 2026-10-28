@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "f9b69470",
+  "hash": "bca086b6",
   "questions": [
     {
       "id": "q-8506",
@@ -645,6 +645,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Motokoka",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Motokoka&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8527",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "atoms-and-modern-physics",
+      "bundle": "stem",
+      "description": "The world's coldest fishing trip, and the fish are invisible.",
+      "question": "IceCube has more than 5,000 light sensors buried deep in the ice at the South Pole, watching for faint blue flashes. What is it built to catch?",
+      "answer": "Neutrinos",
+      "wrong_answers": [
+        "Gravitational waves",
+        "Meteorites",
+        "Earthquake waves"
+      ],
+      "hints": [
+        "Its targets come from space, some from exploding stars and distant galaxies.",
+        "Trillions of them pass through your body every second without you noticing.",
+        "They are tiny particles nicknamed “ghost particles”."
+      ],
+      "fun_fact": "IceCube's sensors hang between about 1,450 and 2,450 m deep, in a cubic kilometer of ice.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/IceCube_Neutrino_Observatory_in_2023_02.jpg/3840px-IceCube_Neutrino_Observatory_in_2023_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIceCube_Neutrino_Observatory_in_2023_02.jpg",
+        "credit": "Christopher Michel · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Christopher Michel",
+        "author_url": "https://en.wikipedia.org/wiki/en:Christopher_Michel"
       },
       "background": null
     },
@@ -2655,6 +2689,40 @@
       "background": null
     },
     {
+      "id": "q-8590",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "ecosystems-and-food-webs",
+      "bundle": "stem",
+      "description": "A field that quit farming and decided to become a forest instead.",
+      "question": "An abandoned farm field slowly turns back into forest. Unlike regrowth on fresh lava, what is already in place there?",
+      "answer": "Soil",
+      "wrong_answers": [
+        "Bare rock",
+        "Lichens",
+        "Tall trees"
+      ],
+      "hints": [
+        "Ecologists call this secondary succession.",
+        "Fresh lava has none of it; it can take centuries to form.",
+        "Seeds and roots are already waiting inside it."
+      ],
+      "fun_fact": "An abandoned field can grow back into a young forest within a few decades, much faster than bare rock ever could.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Overgrown_embankment_between_the_rivers_-_geograph.org.uk_-_2295607.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOvergrown_embankment_between_the_rivers_-_geograph.org.uk_-_2295607.jpg",
+        "credit": "Richard Humphrey · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Richard Humphrey",
+        "author_url": "https://www.geograph.org.uk/profile/39484"
+      },
+      "background": null
+    },
+    {
       "id": "q-8591",
       "status": "approved",
       "difficulty": 5,
@@ -2791,6 +2859,40 @@
       "background": null
     },
     {
+      "id": "q-8595",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "electricity-and-magnetism",
+      "bundle": "stem",
+      "description": "Before phone maps, getting lost at sea needed only a bowl of water to fix.",
+      "question": "You're at sea, steering by a magnetized needle floating in a bowl of water. Which sailors first used this trick, around 1100?",
+      "answer": "Chinese sailors",
+      "wrong_answers": [
+        "Viking sailors",
+        "Arab sailors",
+        "Portuguese sailors"
+      ],
+      "hints": [
+        "These sailors were not from Europe.",
+        "They traded out of busy ports in Asia.",
+        "A Song dynasty book from 1119 describes it."
+      ],
+      "fun_fact": "Long before sailors used it, the Chinese used spoons of magnetic lodestone that pointed south, often for fortune-telling.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Compass-floating_needle_on_water.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACompass-floating_needle_on_water.jpg",
+        "credit": "CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": null,
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-8596",
       "status": "approved",
       "difficulty": 9,
@@ -2855,6 +2957,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Sihyeon0621",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Sihyeon0621&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8598",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "electricity-and-magnetism",
+      "bundle": "stem",
+      "description": "Shiny on the inside, wrapped in plastic like a candy bar.",
+      "question": "The shiny copper inside an electric cable lets electricity flow through it easily. What kind of material is it?",
+      "answer": "A conductor",
+      "wrong_answers": [
+        "An insulator",
+        "A magnet",
+        "A battery"
+      ],
+      "hints": [
+        "Think about why electricians wear rubber gloves.",
+        "Most metals, and even your body, are this kind of material.",
+        "Lightning rods and the wires in your walls are made of this kind of material so electricity can travel through them."
+      ],
+      "fun_fact": "Silver conducts electricity even better than copper, but copper is used in cables because it is far cheaper.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Electric_guide_3%C3%972.5_mm.jpg/3840px-Electric_guide_3%C3%972.5_mm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElectric_guide_3%C3%972.5_mm.jpg",
+        "credit": "Petar Milošević · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Petar Milošević",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PetarM"
       },
       "background": null
     },
@@ -2991,6 +3127,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Dmitry G",
         "author_url": "https://commons.wikimedia.org/wiki/User:Dmitry_G"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8603",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "electricity-and-magnetism",
+      "bundle": "stem",
+      "description": "A crane with a very sticky personality.",
+      "question": "Scrapyard cranes use a huge magnet to lift scrap. What kind of metal can they pick up?",
+      "answer": "Iron and steel",
+      "wrong_answers": [
+        "Aluminum",
+        "Copper",
+        "Gold"
+      ],
+      "hints": [
+        "Not every metal sticks to a magnet.",
+        "Soda cans don't stick to it.",
+        "Car bodies and old nails stick to it."
+      ],
+      "fun_fact": "These are electromagnets: when the operator switches off the electricity, all the scrap drops at once.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Allegheny_Ludlum_Steel_Corp_Scrap_Piles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAllegheny_Ludlum_Steel_Corp_Scrap_Piles.jpg",
+        "credit": "Palmer, Alfred T. · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Palmer, Alfred T.",
+        "author_url": null
       },
       "background": null
     },
@@ -3199,6 +3369,40 @@
       "background": null
     },
     {
+      "id": "q-8610",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "energy-and-heat",
+      "bundle": "stem",
+      "description": "Your body's own built-in sprinkler system.",
+      "question": "You do it when you run, on hot days and sometimes when you're nervous, and the salty drops dry on your skin. What is sweating mainly for?",
+      "answer": "To cool your body down",
+      "wrong_answers": [
+        "To clean your skin",
+        "To get rid of extra water",
+        "To keep your skin soft"
+      ],
+      "hints": [
+        "You sweat more when your body gets hot.",
+        "Dogs pant to do the same job.",
+        "It works a bit like stepping out of a pool on a windy day and feeling chilly."
+      ],
+      "fun_fact": "Your skin has about 2 to 4 million sweat glands.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/United_Services_Athletic_meeting_at_Tel_Aviv_Maccabiah_Stadium_on_Sat._May_2%2C_1942._Runner%2C_close_up_LOC_matpc.21243.tif/lossy-page1-1920px-United_Services_Athletic_meeting_at_Tel_Aviv_Maccabiah_Stadium_on_Sat._May_2%2C_1942._Runner%2C_close_up_LOC_matpc.21243.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUnited_Services_Athletic_meeting_at_Tel_Aviv_Maccabiah_Stadium_on_Sat._May_2%2C_1942._Runner%2C_close_up_LOC_matpc.21243.tif",
+        "credit": "Matson Collection · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Matson Collection",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-8611",
       "status": "approved",
       "difficulty": 7,
@@ -3365,6 +3569,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Jeremy Segrott from Cardiff, Wales, UK",
         "author_url": "https://www.flickr.com/people/126337928@N05"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8616",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "everyday-chemistry",
+      "bundle": "stem",
+      "description": "A beauty product that does not enjoy a summer road trip.",
+      "question": "What happens to a lipstick left in a very hot car?",
+      "answer": "It melts",
+      "wrong_answers": [
+        "It freezes",
+        "It turns to dust",
+        "It gets harder"
+      ],
+      "hints": [
+        "A closed car in summer can get much hotter inside than the air outside.",
+        "Lipstick is mostly wax and oil.",
+        "Candles do the same thing near a flame."
+      ],
+      "fun_fact": "Lipstick is mostly waxes and oils, so it softens and melts when a closed car heats up to 50–70 °C (122–158 °F).",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Lipstick-_My_top_5%21_-_18072840654.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALipstick-_My_top_5%21_-_18072840654.jpg",
+        "credit": "Vanilla and lace · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Vanilla and lace",
+        "author_url": null
       },
       "background": null
     },
@@ -4113,6 +4351,40 @@
         "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
         "author": "Pete",
         "author_url": "https://en.wikipedia.org/wiki/User:Pcb21"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8639",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "forces-and-motion",
+      "bundle": "stem",
+      "description": "A hare that laughs at winter while everyone else stays indoors.",
+      "question": "A hare in the snowy northern forests can run on soft, deep snow where a lynx sinks. Which part of its body makes this possible?",
+      "answer": "Its big furry back feet",
+      "wrong_answers": [
+        "Its white winter coat",
+        "Its very long ears",
+        "Its short fluffy tail"
+      ],
+      "hints": [
+        "The trick is to press down less on each bit of snow.",
+        "It works by spreading the hare's weight over a bigger area.",
+        "Look down at the hare, not up."
+      ],
+      "fun_fact": "Like real snowshoes, the hare's wide feet spread its weight, so it can run on soft snow where its predators sink.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Snowy_boreal_forest_%2851267438559%29.jpg/3840px-Snowy_boreal_forest_%2851267438559%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASnowy_boreal_forest_%2851267438559%29.jpg",
+        "credit": "BLM Alaska · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "BLM Alaska",
+        "author_url": "https://www.flickr.com/people/blmalaska/"
       },
       "background": null
     },
@@ -5894,6 +6166,40 @@
       "background": null
     },
     {
+      "id": "q-8692",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "materials-and-metals",
+      "bundle": "stem",
+      "description": "Hundreds of tiny see-through domes, all waiting for their big moment.",
+      "question": "What is shown here up close?",
+      "answer": "Bubble wrap",
+      "wrong_answers": [
+        "Frog eggs",
+        "A plastic egg carton",
+        "An ice cube tray"
+      ],
+      "hints": [
+        "It's made of plastic.",
+        "It's often found inside boxes.",
+        "Squeeze it and it goes pop!"
+      ],
+      "fun_fact": "Some people celebrate Bubble Wrap Appreciation Day on the last Monday of January.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Bubble_Wrap.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABubble_Wrap.jpg",
+        "credit": "User Consequencefree on en.wikipedia · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "User Consequencefree on en.wikipedia",
+        "author_url": "https://en.wikipedia.org/wiki/User:Consequencefree"
+      },
+      "background": null
+    },
+    {
       "id": "q-8693",
       "status": "approved",
       "difficulty": 9,
@@ -6400,6 +6706,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Andrea Luck",
         "author_url": "https://www.flickr.com/people/192271236@N03/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8708",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "moons-comets-and-asteroids",
+      "bundle": "stem",
+      "description": "Two Soviet probes that stopped at Venus before going to see a famous visitor.",
+      "question": "In 1986, the Soviet probes Vega 1 and Vega 2 flew past Halley's Comet after visiting Venus. About how close did they get to the comet's core?",
+      "answer": "About 8,000 km",
+      "wrong_answers": [
+        "About 80 km",
+        "About 800 km",
+        "About 80,000 km"
+      ],
+      "hints": [
+        "The comet's dust could damage a probe that came too close.",
+        "Europe's Giotto probe later went closer, to about 600 km.",
+        "It's roughly two-thirds of the width of Earth."
+      ],
+      "fun_fact": "The name Vega joins the Russian words for Venus (Venera) and Halley (Gallei).",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Comet_Halley_ARC-1986-AC86-0720-4~orig.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AComet_Halley_ARC-1986-AC86-0720-4~orig.jpg",
+        "credit": "NASA/Kuiper Airborne Observatory · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA/Kuiper Airborne Observatory",
+        "author_url": null
       },
       "background": null
     },
@@ -7354,6 +7694,49 @@
         "author_url": "https://commons.wikimedia.org/wiki/User:Acabashi"
       },
       "background": null
+    },
+    {
+      "id": "q-8739",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "sound-and-waves",
+      "bundle": "stem",
+      "description": "Every ambulance sings a sad little song as it drives away.",
+      "question": "Listen to this siren as the vehicle passes. What is this change in its sound called?",
+      "answer": "The Doppler effect",
+      "wrong_answers": [
+        "The Coriolis effect",
+        "The Tyndall effect",
+        "The Bernoulli effect"
+      ],
+      "hints": [
+        "The sound waves get squeezed together as the source comes toward you.",
+        "Astronomers use the same idea to tell if stars move toward or away from us.",
+        "It is named after the Austrian physicist Christian…"
+      ],
+      "fun_fact": "In 1845, the effect was tested by putting trumpet players on a moving train while musicians on the platform judged the notes.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Doppler_effect_fast_vehicle_siren_exaggerated.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADoppler_effect_fast_vehicle_siren_exaggerated.ogg",
+        "credit": "CeeKay · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "CeeKay",
+        "author_url": null
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/New_York_City_at_night_HDR.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANew_York_City_at_night_HDR.jpg",
+        "credit": "Paulo Barcellos Jr. · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Paulo Barcellos Jr.",
+        "author_url": "https://www.flickr.com/people/paulobar/"
+      }
     },
     {
       "id": "q-8740",
@@ -8444,6 +8827,40 @@
       "background": null
     },
     {
+      "id": "q-8773",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "everyday-chemistry",
+      "bundle": "stem",
+      "description": "Some cities wear a brown hat that nobody asked for.",
+      "question": "It's a brownish haze over big cities, worst on sunny days without wind. What mostly causes it?",
+      "answer": "Fumes from cars and factories",
+      "wrong_answers": [
+        "Steam from cooling towers",
+        "Pollen from blooming trees",
+        "Dust blown from deserts"
+      ],
+      "hints": [
+        "Humans make it.",
+        "It often gets worse during rush hour.",
+        "Cities often limit traffic on the worst days to clear it."
+      ],
+      "fun_fact": "Sunlight makes smog worse: it turns car fumes into ozone, a gas that stings the eyes and lungs.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Salt_Lake_City_smog_haze_skyline_01.jpg/3840px-Salt_Lake_City_smog_haze_skyline_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASalt_Lake_City_smog_haze_skyline_01.jpg",
+        "credit": "Eltiempo10 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Eltiempo10",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Eltiempo10&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-8774",
       "status": "approved",
       "difficulty": 13,
@@ -9362,6 +9779,40 @@
       "background": null
     },
     {
+      "id": "q-8801",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "senses-and-nerves",
+      "bundle": "stem",
+      "description": "A gadget so small, you'll find it in the sofa cushions before you find it in an ear.",
+      "question": "I'm small enough to sit behind or inside your ear, I run on a tiny battery, and I make sounds louder for people who don't hear well. What am I?",
+      "answer": "A hearing aid",
+      "wrong_answers": [
+        "An earplug",
+        "A stethoscope",
+        "An ear thermometer"
+      ],
+      "hints": [
+        "I help a sense, not block it.",
+        "I have a tiny microphone and a tiny speaker inside.",
+        "Many grandparents wear me so they can follow what you say."
+      ],
+      "fun_fact": "Some hearing aids today can connect to a phone, so calls and music play straight into the wearer's ears.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Defense.gov_photo_essay_090711-D-1852B-612.jpg/3840px-Defense.gov_photo_essay_090711-D-1852B-612.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADefense.gov_photo_essay_090711-D-1852B-612.jpg",
+        "credit": "Fred W. Baker III · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Fred W. Baker III",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-8802",
       "status": "approved",
       "difficulty": 7,
@@ -9732,6 +10183,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Jennifer C.",
         "author_url": "https://www.flickr.com/people/29638108@N06"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8814",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "senses-and-nerves",
+      "bundle": "stem",
+      "description": "The playground's favorite way to make the whole world wobble.",
+      "question": "You spin around and around, then stop, and the room keeps turning. Which part of your body causes that dizzy feeling?",
+      "answer": "Your inner ear",
+      "wrong_answers": [
+        "Your stomach",
+        "Your heart",
+        "Your feet"
+      ],
+      "hints": [
+        "This body part helps you keep your balance.",
+        "It is hidden inside your head.",
+        "It sits deep inside the part of you that hears."
+      ],
+      "fun_fact": "Tiny tubes in your inner ear are filled with fluid, and that fluid keeps swirling for a moment after you stop spinning.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Children%27s_playground_in_the_sanatorium_park_in_Shklo.jpg/3840px-Children%27s_playground_in_the_sanatorium_park_in_Shklo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChildren%27s_playground_in_the_sanatorium_park_in_Shklo.jpg",
+        "credit": "Rbrechko · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rbrechko",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rbrechko"
       },
       "background": null
     },
@@ -10242,6 +10727,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Donarreiskoffer",
         "author_url": "https://commons.wikimedia.org/wiki/User:Donarreiskoffer"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8831",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "units-and-measurement",
+      "bundle": "stem",
+      "description": "Measuring with body parts: great until someone with big feet shows up.",
+      "question": "This ruler has inches on one side and centimeters on the other. Exactly how many centimeters make one inch?",
+      "answer": "2.54",
+      "wrong_answers": [
+        "2.45",
+        "3.12",
+        "1.85"
+      ],
+      "hints": [
+        "This ruler is one foot long, about the same as 30 centimeters.",
+        "One foot has 12 inches, so try dividing 30 by 12.",
+        "It is a little more than two and a half."
+      ],
+      "fun_fact": "Before 1959, the American inch and the British inch were very slightly different lengths.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Scale_ruler%2C_1_foot_and_300_mm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AScale_ruler%2C_1_foot_and_300_mm.jpg",
+        "credit": "Kaviyadharshini Selvakumar · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Kaviyadharshini Selvakumar",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kaviyadharshini_Selvakumar&action=edit&redlink=1"
       },
       "background": null
     },
