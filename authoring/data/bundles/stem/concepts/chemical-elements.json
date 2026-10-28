@@ -1,0 +1,853 @@
+{
+  "subcategory": "chemical-elements",
+  "facets": [
+    "Metals in everyday life",
+    "Gases of the air",
+    "Elements of the human body",
+    "Precious and noble metals",
+    "Periodic table and its groups",
+    "Symbols and element names",
+    "Discoverers and their stories",
+    "Radioactive and heavy elements",
+    "Elements in space and stars",
+    "Elements in technology and gadgets",
+    "Minerals, ores and mining",
+    "Element records and oddities"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 3,
+      "record": 5,
+      "origin": 4,
+      "made_of": 5,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 4,
+      "odd_one_out": 5,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 2,
+      "pop_culture": 3,
+      "popular_science": 4,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 4,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Aluminum",
+      "facet": "Metals in everyday life",
+      "known_at": 3
+    },
+    {
+      "name": "Copper",
+      "facet": "Metals in everyday life",
+      "known_at": 4
+    },
+    {
+      "name": "Tin",
+      "facet": "Metals in everyday life",
+      "known_at": 4
+    },
+    {
+      "name": "Lead",
+      "facet": "Metals in everyday life",
+      "known_at": 6
+    },
+    {
+      "name": "Chromium",
+      "facet": "Metals in everyday life",
+      "known_at": 9
+    },
+    {
+      "name": "Tungsten",
+      "facet": "Metals in everyday life",
+      "known_at": 10
+    },
+    {
+      "name": "Titanium",
+      "facet": "Metals in everyday life",
+      "known_at": 7
+    },
+    {
+      "name": "Bronze",
+      "facet": "Metals in everyday life",
+      "known_at": 4
+    },
+    {
+      "name": "Brass",
+      "facet": "Metals in everyday life",
+      "known_at": 7
+    },
+    {
+      "name": "Stainless steel",
+      "facet": "Metals in everyday life",
+      "known_at": 6
+    },
+    {
+      "name": "Manganese",
+      "facet": "Metals in everyday life",
+      "known_at": 12
+    },
+    {
+      "name": "Pewter",
+      "facet": "Metals in everyday life",
+      "known_at": 12
+    },
+    {
+      "name": "Solder",
+      "facet": "Metals in everyday life",
+      "known_at": 11
+    },
+    {
+      "name": "Alloy",
+      "facet": "Metals in everyday life",
+      "known_at": 8
+    },
+    {
+      "name": "Argon",
+      "facet": "Gases of the air",
+      "known_at": 10
+    },
+    {
+      "name": "Water vapor",
+      "facet": "Gases of the air",
+      "known_at": 4
+    },
+    {
+      "name": "Ozone",
+      "facet": "Gases of the air",
+      "known_at": 7
+    },
+    {
+      "name": "Neon",
+      "facet": "Gases of the air",
+      "known_at": 6
+    },
+    {
+      "name": "Krypton",
+      "facet": "Gases of the air",
+      "known_at": 8
+    },
+    {
+      "name": "Xenon",
+      "facet": "Gases of the air",
+      "known_at": 11
+    },
+    {
+      "name": "Great Oxygenation Event",
+      "facet": "Gases of the air",
+      "known_at": 13
+    },
+    {
+      "name": "Carbon",
+      "facet": "Elements of the human body",
+      "known_at": 6
+    },
+    {
+      "name": "Phosphorus",
+      "facet": "Elements of the human body",
+      "known_at": 9
+    },
+    {
+      "name": "Sulfur",
+      "facet": "Elements of the human body",
+      "known_at": 7
+    },
+    {
+      "name": "Selenium",
+      "facet": "Elements of the human body",
+      "known_at": 13
+    },
+    {
+      "name": "Trace elements",
+      "facet": "Elements of the human body",
+      "known_at": 12
+    },
+    {
+      "name": "Hydroxyapatite",
+      "facet": "Elements of the human body",
+      "known_at": 14
+    },
+    {
+      "name": "Tooth enamel",
+      "facet": "Elements of the human body",
+      "known_at": 5,
+      "retired": "used_up: The pool already asks what tooth enamel is and that it's the body's hardest material. The word-meaning and record options would ask the same fact again, and an estimate question would be forced."
+    },
+    {
+      "name": "Gold",
+      "facet": "Precious and noble metals",
+      "known_at": 1
+    },
+    {
+      "name": "Silver",
+      "facet": "Precious and noble metals",
+      "known_at": 1
+    },
+    {
+      "name": "Platinum",
+      "facet": "Precious and noble metals",
+      "known_at": 6
+    },
+    {
+      "name": "Palladium",
+      "facet": "Precious and noble metals",
+      "known_at": 12
+    },
+    {
+      "name": "Rhodium",
+      "facet": "Precious and noble metals",
+      "known_at": 13
+    },
+    {
+      "name": "Iridium",
+      "facet": "Precious and noble metals",
+      "known_at": 12
+    },
+    {
+      "name": "Ruthenium",
+      "facet": "Precious and noble metals",
+      "known_at": 15
+    },
+    {
+      "name": "Karat",
+      "facet": "Precious and noble metals",
+      "known_at": 8
+    },
+    {
+      "name": "Sterling silver",
+      "facet": "Precious and noble metals",
+      "known_at": 11
+    },
+    {
+      "name": "White gold",
+      "facet": "Precious and noble metals",
+      "known_at": 9
+    },
+    {
+      "name": "Rose gold",
+      "facet": "Precious and noble metals",
+      "known_at": 8
+    },
+    {
+      "name": "Tarnish",
+      "facet": "Precious and noble metals",
+      "known_at": 9
+    },
+    {
+      "name": "Aqua regia",
+      "facet": "Precious and noble metals",
+      "known_at": 14
+    },
+    {
+      "name": "Gold leaf",
+      "facet": "Precious and noble metals",
+      "known_at": 6
+    },
+    {
+      "name": "Electrum",
+      "facet": "Precious and noble metals",
+      "known_at": 14
+    },
+    {
+      "name": "Hallmark",
+      "facet": "Precious and noble metals",
+      "known_at": 12
+    },
+    {
+      "name": "Periodic table",
+      "facet": "Periodic table and its groups",
+      "known_at": 6
+    },
+    {
+      "name": "Dmitri Mendeleev",
+      "facet": "Periodic table and its groups",
+      "known_at": 10
+    },
+    {
+      "name": "Alkali metals",
+      "facet": "Periodic table and its groups",
+      "known_at": 10
+    },
+    {
+      "name": "Alkaline earth metals",
+      "facet": "Periodic table and its groups",
+      "known_at": 11
+    },
+    {
+      "name": "Noble gases",
+      "facet": "Periodic table and its groups",
+      "known_at": 9
+    },
+    {
+      "name": "Transition metals",
+      "facet": "Periodic table and its groups",
+      "known_at": 11
+    },
+    {
+      "name": "Lanthanides",
+      "facet": "Periodic table and its groups",
+      "known_at": 13
+    },
+    {
+      "name": "Actinides",
+      "facet": "Periodic table and its groups",
+      "known_at": 13
+    },
+    {
+      "name": "Metalloids",
+      "facet": "Periodic table and its groups",
+      "known_at": 11
+    },
+    {
+      "name": "Period",
+      "facet": "Periodic table and its groups",
+      "known_at": 10
+    },
+    {
+      "name": "Valence electrons",
+      "facet": "Periodic table and its groups",
+      "known_at": 11
+    },
+    {
+      "name": "Atomic mass",
+      "facet": "Periodic table and its groups",
+      "known_at": 10
+    },
+    {
+      "name": "Chalcogens",
+      "facet": "Periodic table and its groups",
+      "known_at": 14
+    },
+    {
+      "name": "Electronegativity",
+      "facet": "Periodic table and its groups",
+      "known_at": 12
+    },
+    {
+      "name": "Chemical symbol",
+      "facet": "Symbols and element names",
+      "known_at": 7
+    },
+    {
+      "name": "Jöns Jacob Berzelius",
+      "facet": "Symbols and element names",
+      "known_at": 14
+    },
+    {
+      "name": "Aurum",
+      "facet": "Symbols and element names",
+      "known_at": 10
+    },
+    {
+      "name": "Argentum",
+      "facet": "Symbols and element names",
+      "known_at": 11
+    },
+    {
+      "name": "Plumbum",
+      "facet": "Symbols and element names",
+      "known_at": 12
+    },
+    {
+      "name": "Hydrargyrum",
+      "facet": "Symbols and element names",
+      "known_at": 14
+    },
+    {
+      "name": "Natrium",
+      "facet": "Symbols and element names",
+      "known_at": 12
+    },
+    {
+      "name": "Kalium",
+      "facet": "Symbols and element names",
+      "known_at": 13
+    },
+    {
+      "name": "Cuprum",
+      "facet": "Symbols and element names",
+      "known_at": 12
+    },
+    {
+      "name": "Stannum",
+      "facet": "Symbols and element names",
+      "known_at": 13
+    },
+    {
+      "name": "Wolfram",
+      "facet": "Symbols and element names",
+      "known_at": 13
+    },
+    {
+      "name": "Argentina",
+      "facet": "Symbols and element names",
+      "known_at": 11
+    },
+    {
+      "name": "Einsteinium",
+      "facet": "Symbols and element names",
+      "known_at": 9
+    },
+    {
+      "name": "Curium",
+      "facet": "Symbols and element names",
+      "known_at": 11
+    },
+    {
+      "name": "Germanium",
+      "facet": "Symbols and element names",
+      "known_at": 12
+    },
+    {
+      "name": "Francium",
+      "facet": "Symbols and element names",
+      "known_at": 11
+    },
+    {
+      "name": "Americium",
+      "facet": "Symbols and element names",
+      "known_at": 11
+    },
+    {
+      "name": "Ytterby",
+      "facet": "Symbols and element names",
+      "known_at": 15
+    },
+    {
+      "name": "Promethium",
+      "facet": "Symbols and element names",
+      "known_at": 13
+    },
+    {
+      "name": "Mendelevium",
+      "facet": "Symbols and element names",
+      "known_at": 12
+    },
+    {
+      "name": "Nobelium",
+      "facet": "Symbols and element names",
+      "known_at": 12
+    },
+    {
+      "name": "Pierre Curie",
+      "facet": "Discoverers and their stories",
+      "known_at": 10
+    },
+    {
+      "name": "Humphry Davy",
+      "facet": "Discoverers and their stories",
+      "known_at": 13
+    },
+    {
+      "name": "Henry Cavendish",
+      "facet": "Discoverers and their stories",
+      "known_at": 13
+    },
+    {
+      "name": "Carl Wilhelm Scheele",
+      "facet": "Discoverers and their stories",
+      "known_at": 15
+    },
+    {
+      "name": "Hennig Brand",
+      "facet": "Discoverers and their stories",
+      "known_at": 15
+    },
+    {
+      "name": "Glenn Seaborg",
+      "facet": "Discoverers and their stories",
+      "known_at": 14
+    },
+    {
+      "name": "William Ramsay",
+      "facet": "Discoverers and their stories",
+      "known_at": 14
+    },
+    {
+      "name": "Robert Bunsen",
+      "facet": "Discoverers and their stories",
+      "known_at": 12
+    },
+    {
+      "name": "Andrés Manuel del Río",
+      "facet": "Discoverers and their stories",
+      "known_at": 15
+    },
+    {
+      "name": "Yuri Oganessian",
+      "facet": "Discoverers and their stories",
+      "known_at": 15
+    },
+    {
+      "name": "Alchemy",
+      "facet": "Discoverers and their stories",
+      "known_at": 7
+    },
+    {
+      "name": "Philosopher's stone",
+      "facet": "Discoverers and their stories",
+      "known_at": 5
+    },
+    {
+      "name": "Phlogiston theory",
+      "facet": "Discoverers and their stories",
+      "known_at": 14
+    },
+    {
+      "name": "Radium",
+      "facet": "Radioactive and heavy elements",
+      "known_at": 9
+    },
+    {
+      "name": "Carbon-14",
+      "facet": "Radioactive and heavy elements",
+      "known_at": 10
+    },
+    {
+      "name": "Technetium",
+      "facet": "Radioactive and heavy elements",
+      "known_at": 14
+    },
+    {
+      "name": "Oganesson",
+      "facet": "Radioactive and heavy elements",
+      "known_at": 13
+    },
+    {
+      "name": "Tennessine",
+      "facet": "Radioactive and heavy elements",
+      "known_at": 14
+    },
+    {
+      "name": "Nihonium",
+      "facet": "Radioactive and heavy elements",
+      "known_at": 14
+    },
+    {
+      "name": "Synthetic elements",
+      "facet": "Radioactive and heavy elements",
+      "known_at": 12
+    },
+    {
+      "name": "Island of stability",
+      "facet": "Radioactive and heavy elements",
+      "known_at": 15
+    },
+    {
+      "name": "Radium Girls",
+      "facet": "Radioactive and heavy elements",
+      "known_at": 13
+    },
+    {
+      "name": "Hydrogen",
+      "facet": "Elements in space and stars",
+      "known_at": 4
+    },
+    {
+      "name": "Supernova",
+      "facet": "Elements in space and stars",
+      "known_at": 7
+    },
+    {
+      "name": "Big Bang nucleosynthesis",
+      "facet": "Elements in space and stars",
+      "known_at": 13
+    },
+    {
+      "name": "Stardust",
+      "facet": "Elements in space and stars",
+      "known_at": 6
+    },
+    {
+      "name": "Kilonova",
+      "facet": "Elements in space and stars",
+      "known_at": 14
+    },
+    {
+      "name": "Fraunhofer lines",
+      "facet": "Elements in space and stars",
+      "known_at": 15
+    },
+    {
+      "name": "Meteorite",
+      "facet": "Elements in space and stars",
+      "known_at": 5
+    },
+    {
+      "name": "Moon rock",
+      "facet": "Elements in space and stars",
+      "known_at": 6
+    },
+    {
+      "name": "Io",
+      "facet": "Elements in space and stars",
+      "known_at": 11
+    },
+    {
+      "name": "Titan",
+      "facet": "Elements in space and stars",
+      "known_at": 10
+    },
+    {
+      "name": "Red giant",
+      "facet": "Elements in space and stars",
+      "known_at": 9
+    },
+    {
+      "name": "Cecilia Payne-Gaposchkin",
+      "facet": "Elements in space and stars",
+      "known_at": 15
+    },
+    {
+      "name": "Comet",
+      "facet": "Elements in space and stars",
+      "known_at": 4
+    },
+    {
+      "name": "Silicon",
+      "facet": "Elements in technology and gadgets",
+      "known_at": 8
+    },
+    {
+      "name": "Lithium",
+      "facet": "Elements in technology and gadgets",
+      "known_at": 8
+    },
+    {
+      "name": "Indium",
+      "facet": "Elements in technology and gadgets",
+      "known_at": 14
+    },
+    {
+      "name": "Tantalum",
+      "facet": "Elements in technology and gadgets",
+      "known_at": 14
+    },
+    {
+      "name": "Rare earth elements",
+      "facet": "Elements in technology and gadgets",
+      "known_at": 11
+    },
+    {
+      "name": "Silicon Valley",
+      "facet": "Elements in technology and gadgets",
+      "known_at": 8
+    },
+    {
+      "name": "Solar cell",
+      "facet": "Elements in technology and gadgets",
+      "known_at": 7
+    },
+    {
+      "name": "Graphene",
+      "facet": "Elements in technology and gadgets",
+      "known_at": 12
+    },
+    {
+      "name": "Europium",
+      "facet": "Elements in technology and gadgets",
+      "known_at": 14
+    },
+    {
+      "name": "Lead-acid battery",
+      "facet": "Elements in technology and gadgets",
+      "known_at": 12
+    },
+    {
+      "name": "Pyrite",
+      "facet": "Minerals, ores and mining",
+      "known_at": 7
+    },
+    {
+      "name": "Hematite",
+      "facet": "Minerals, ores and mining",
+      "known_at": 11
+    },
+    {
+      "name": "Bauxite",
+      "facet": "Minerals, ores and mining",
+      "known_at": 12
+    },
+    {
+      "name": "Galena",
+      "facet": "Minerals, ores and mining",
+      "known_at": 14
+    },
+    {
+      "name": "Malachite",
+      "facet": "Minerals, ores and mining",
+      "known_at": 12
+    },
+    {
+      "name": "Cinnabar",
+      "facet": "Minerals, ores and mining",
+      "known_at": 14
+    },
+    {
+      "name": "Quartz",
+      "facet": "Minerals, ores and mining",
+      "known_at": 6
+    },
+    {
+      "name": "Diamond",
+      "facet": "Minerals, ores and mining",
+      "known_at": 2
+    },
+    {
+      "name": "Graphite",
+      "facet": "Minerals, ores and mining",
+      "known_at": 7
+    },
+    {
+      "name": "Halite",
+      "facet": "Minerals, ores and mining",
+      "known_at": 11
+    },
+    {
+      "name": "Coltan",
+      "facet": "Minerals, ores and mining",
+      "known_at": 13
+    },
+    {
+      "name": "Ore",
+      "facet": "Minerals, ores and mining",
+      "known_at": 8
+    },
+    {
+      "name": "Smelting",
+      "facet": "Minerals, ores and mining",
+      "known_at": 10
+    },
+    {
+      "name": "Gold panning",
+      "facet": "Minerals, ores and mining",
+      "known_at": 5
+    },
+    {
+      "name": "California Gold Rush",
+      "facet": "Minerals, ores and mining",
+      "known_at": 9
+    },
+    {
+      "name": "Klondike Gold Rush",
+      "facet": "Minerals, ores and mining",
+      "known_at": 12
+    },
+    {
+      "name": "Chuquicamata",
+      "facet": "Minerals, ores and mining",
+      "known_at": 15
+    },
+    {
+      "name": "Bronze Age",
+      "facet": "Minerals, ores and mining",
+      "known_at": 7
+    },
+    {
+      "name": "Iron Age",
+      "facet": "Minerals, ores and mining",
+      "known_at": 7
+    },
+    {
+      "name": "Mohs scale",
+      "facet": "Minerals, ores and mining",
+      "known_at": 10
+    },
+    {
+      "name": "Cerro Rico",
+      "facet": "Minerals, ores and mining",
+      "known_at": 14
+    },
+    {
+      "name": "Mercury",
+      "facet": "Element records and oddities",
+      "known_at": 5
+    },
+    {
+      "name": "Bromine",
+      "facet": "Element records and oddities",
+      "known_at": 12
+    },
+    {
+      "name": "Cesium",
+      "facet": "Element records and oddities",
+      "known_at": 12
+    },
+    {
+      "name": "Fluorine",
+      "facet": "Element records and oddities",
+      "known_at": 10
+    },
+    {
+      "name": "Astatine",
+      "facet": "Element records and oddities",
+      "known_at": 14
+    },
+    {
+      "name": "Osmium",
+      "facet": "Element records and oddities",
+      "known_at": 13
+    },
+    {
+      "name": "Bismuth",
+      "facet": "Element records and oddities",
+      "known_at": 11
+    },
+    {
+      "name": "Buckminsterfullerene",
+      "facet": "Element records and oddities",
+      "known_at": 14
+    },
+    {
+      "name": "Allotrope",
+      "facet": "Element records and oddities",
+      "known_at": 13
+    },
+    {
+      "name": "Rubidium",
+      "facet": "Element records and oddities",
+      "known_at": 13
+    },
+    {
+      "name": "Beryllium",
+      "facet": "Element records and oddities",
+      "known_at": 12
+    },
+    {
+      "name": "Antimony",
+      "facet": "Element records and oddities",
+      "known_at": 13
+    },
+    {
+      "name": "Boron",
+      "facet": "Element records and oddities",
+      "known_at": 11
+    }
+  ]
+}

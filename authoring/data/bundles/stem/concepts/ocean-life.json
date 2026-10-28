@@ -1,0 +1,837 @@
+{
+  "subcategory": "ocean-life",
+  "facets": [
+    "Sharks and rays",
+    "Whales, dolphins and seals",
+    "Ocean fish",
+    "Octopus, squid and shellfish",
+    "Jellyfish, corals and sponges",
+    "Sea turtles and sea birds",
+    "Coral reefs and kelp forests",
+    "Deep-sea creatures",
+    "Plankton and ocean food webs",
+    "Ocean survival tricks",
+    "Polar sea life",
+    "Ocean explorers and discoveries"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 4,
+      "record": 5,
+      "origin": 2,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 5,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 3,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 4
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 5,
+      "history": 2,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Great white shark",
+      "facet": "Sharks and rays",
+      "known_at": 2
+    },
+    {
+      "name": "Megalodon",
+      "facet": "Sharks and rays",
+      "known_at": 5
+    },
+    {
+      "name": "Shortfin mako",
+      "facet": "Sharks and rays",
+      "known_at": 11
+    },
+    {
+      "name": "Greenland shark",
+      "facet": "Sharks and rays",
+      "known_at": 11
+    },
+    {
+      "name": "Bull shark",
+      "facet": "Sharks and rays",
+      "known_at": 9
+    },
+    {
+      "name": "Nurse shark",
+      "facet": "Sharks and rays",
+      "known_at": 8
+    },
+    {
+      "name": "Basking shark",
+      "facet": "Sharks and rays",
+      "known_at": 10
+    },
+    {
+      "name": "Cookiecutter shark",
+      "facet": "Sharks and rays",
+      "known_at": 13
+    },
+    {
+      "name": "Thresher shark",
+      "facet": "Sharks and rays",
+      "known_at": 11
+    },
+    {
+      "name": "Wobbegong",
+      "facet": "Sharks and rays",
+      "known_at": 13
+    },
+    {
+      "name": "Epaulette shark",
+      "facet": "Sharks and rays",
+      "known_at": 13
+    },
+    {
+      "name": "Blacktip reef shark",
+      "facet": "Sharks and rays",
+      "known_at": 9
+    },
+    {
+      "name": "Lemon shark",
+      "facet": "Sharks and rays",
+      "known_at": 10
+    },
+    {
+      "name": "Manta ray",
+      "facet": "Sharks and rays",
+      "known_at": 5
+    },
+    {
+      "name": "Eagle ray",
+      "facet": "Sharks and rays",
+      "known_at": 10
+    },
+    {
+      "name": "Guitarfish",
+      "facet": "Sharks and rays",
+      "known_at": 12
+    },
+    {
+      "name": "Dermal denticles",
+      "facet": "Sharks and rays",
+      "known_at": 13
+    },
+    {
+      "name": "Mermaid's purse",
+      "facet": "Sharks and rays",
+      "known_at": 11
+    },
+    {
+      "name": "Cartilage skeleton",
+      "facet": "Sharks and rays",
+      "known_at": 8
+    },
+    {
+      "name": "Blue whale",
+      "facet": "Whales, dolphins and seals",
+      "known_at": 2
+    },
+    {
+      "name": "Humpback whale",
+      "facet": "Whales, dolphins and seals",
+      "known_at": 5
+    },
+    {
+      "name": "North Atlantic right whale",
+      "facet": "Whales, dolphins and seals",
+      "known_at": 12
+    },
+    {
+      "name": "Cuvier's beaked whale",
+      "facet": "Whales, dolphins and seals",
+      "known_at": 14
+    },
+    {
+      "name": "Pilot whale",
+      "facet": "Whales, dolphins and seals",
+      "known_at": 11
+    },
+    {
+      "name": "Vaquita",
+      "facet": "Whales, dolphins and seals",
+      "known_at": 12
+    },
+    {
+      "name": "Breaching",
+      "facet": "Whales, dolphins and seals",
+      "known_at": 10
+    },
+    {
+      "name": "Ambergris",
+      "facet": "Whales, dolphins and seals",
+      "known_at": 13
+    },
+    {
+      "name": "Sea lion",
+      "facet": "Whales, dolphins and seals",
+      "known_at": 3
+    },
+    {
+      "name": "Harbor seal",
+      "facet": "Whales, dolphins and seals",
+      "known_at": 5
+    },
+    {
+      "name": "Manatee",
+      "facet": "Whales, dolphins and seals",
+      "known_at": 5
+    },
+    {
+      "name": "Dugong",
+      "facet": "Whales, dolphins and seals",
+      "known_at": 10
+    },
+    {
+      "name": "Ocean sunfish",
+      "facet": "Ocean fish",
+      "known_at": 9
+    },
+    {
+      "name": "Swordfish",
+      "facet": "Ocean fish",
+      "known_at": 3
+    },
+    {
+      "name": "Bluefin tuna",
+      "facet": "Ocean fish",
+      "known_at": 7
+    },
+    {
+      "name": "Moray eel",
+      "facet": "Ocean fish",
+      "known_at": 7
+    },
+    {
+      "name": "Barracuda",
+      "facet": "Ocean fish",
+      "known_at": 7
+    },
+    {
+      "name": "Atlantic cod",
+      "facet": "Ocean fish",
+      "known_at": 8
+    },
+    {
+      "name": "Atlantic salmon",
+      "facet": "Ocean fish",
+      "known_at": 5
+    },
+    {
+      "name": "Blue tang",
+      "facet": "Ocean fish",
+      "known_at": 3
+    },
+    {
+      "name": "Giant grouper",
+      "facet": "Ocean fish",
+      "known_at": 11
+    },
+    {
+      "name": "Sardine",
+      "facet": "Ocean fish",
+      "known_at": 5
+    },
+    {
+      "name": "Mackerel",
+      "facet": "Ocean fish",
+      "known_at": 7
+    },
+    {
+      "name": "Chambered nautilus",
+      "facet": "Octopus, squid and shellfish",
+      "known_at": 10
+    },
+    {
+      "name": "Cephalopods",
+      "facet": "Octopus, squid and shellfish",
+      "known_at": 11
+    },
+    {
+      "name": "Chromatophores",
+      "facet": "Octopus, squid and shellfish",
+      "known_at": 14
+    },
+    {
+      "name": "Pearl oyster",
+      "facet": "Octopus, squid and shellfish",
+      "known_at": 5
+    },
+    {
+      "name": "Queen conch",
+      "facet": "Octopus, squid and shellfish",
+      "known_at": 9
+    },
+    {
+      "name": "Moon jellyfish",
+      "facet": "Jellyfish, corals and sponges",
+      "known_at": 6
+    },
+    {
+      "name": "Nematocyst",
+      "facet": "Jellyfish, corals and sponges",
+      "known_at": 13
+    },
+    {
+      "name": "Medusa",
+      "facet": "Jellyfish, corals and sponges",
+      "known_at": 12
+    },
+    {
+      "name": "Brain coral",
+      "facet": "Jellyfish, corals and sponges",
+      "known_at": 6
+    },
+    {
+      "name": "Staghorn coral",
+      "facet": "Jellyfish, corals and sponges",
+      "known_at": 11
+    },
+    {
+      "name": "Sea fan",
+      "facet": "Jellyfish, corals and sponges",
+      "known_at": 10
+    },
+    {
+      "name": "Sea pen",
+      "facet": "Jellyfish, corals and sponges",
+      "known_at": 13
+    },
+    {
+      "name": "Venus's flower basket",
+      "facet": "Jellyfish, corals and sponges",
+      "known_at": 14
+    },
+    {
+      "name": "Bath sponge",
+      "facet": "Jellyfish, corals and sponges",
+      "known_at": 6
+    },
+    {
+      "name": "Coral spawning",
+      "facet": "Jellyfish, corals and sponges",
+      "known_at": 11
+    },
+    {
+      "name": "Upside-down jellyfish",
+      "facet": "Jellyfish, corals and sponges",
+      "known_at": 12
+    },
+    {
+      "name": "Green sea turtle",
+      "facet": "Sea turtles and sea birds",
+      "known_at": 5
+    },
+    {
+      "name": "Hawksbill sea turtle",
+      "facet": "Sea turtles and sea birds",
+      "known_at": 10
+    },
+    {
+      "name": "Loggerhead sea turtle",
+      "facet": "Sea turtles and sea birds",
+      "known_at": 9
+    },
+    {
+      "name": "Olive ridley sea turtle",
+      "facet": "Sea turtles and sea birds",
+      "known_at": 12
+    },
+    {
+      "name": "Arribada",
+      "facet": "Sea turtles and sea birds",
+      "known_at": 13
+    },
+    {
+      "name": "Sea turtle hatchling",
+      "facet": "Sea turtles and sea birds",
+      "known_at": 3
+    },
+    {
+      "name": "Marine iguana",
+      "facet": "Sea turtles and sea birds",
+      "known_at": 9
+    },
+    {
+      "name": "Sea snake",
+      "facet": "Sea turtles and sea birds",
+      "known_at": 7
+    },
+    {
+      "name": "Atlantic puffin",
+      "facet": "Sea turtles and sea birds",
+      "known_at": 5
+    },
+    {
+      "name": "Brown pelican",
+      "facet": "Sea turtles and sea birds",
+      "known_at": 4
+    },
+    {
+      "name": "Northern gannet",
+      "facet": "Sea turtles and sea birds",
+      "known_at": 11
+    },
+    {
+      "name": "Seagull",
+      "facet": "Sea turtles and sea birds",
+      "known_at": 1
+    },
+    {
+      "name": "Cormorant",
+      "facet": "Sea turtles and sea birds",
+      "known_at": 9
+    },
+    {
+      "name": "African penguin",
+      "facet": "Sea turtles and sea birds",
+      "known_at": 8
+    },
+    {
+      "name": "Galápagos penguin",
+      "facet": "Sea turtles and sea birds",
+      "known_at": 9
+    },
+    {
+      "name": "Coral Triangle",
+      "facet": "Coral reefs and kelp forests",
+      "known_at": 13
+    },
+    {
+      "name": "Mesoamerican Barrier Reef",
+      "facet": "Coral reefs and kelp forests",
+      "known_at": 12
+    },
+    {
+      "name": "Red Sea coral reef",
+      "facet": "Coral reefs and kelp forests",
+      "known_at": 11
+    },
+    {
+      "name": "Raja Ampat",
+      "facet": "Coral reefs and kelp forests",
+      "known_at": 13
+    },
+    {
+      "name": "Atoll",
+      "facet": "Coral reefs and kelp forests",
+      "known_at": 9
+    },
+    {
+      "name": "Fringing reef",
+      "facet": "Coral reefs and kelp forests",
+      "known_at": 12
+    },
+    {
+      "name": "Maldives",
+      "facet": "Coral reefs and kelp forests",
+      "known_at": 8
+    },
+    {
+      "name": "Giant kelp",
+      "facet": "Coral reefs and kelp forests",
+      "known_at": 8
+    },
+    {
+      "name": "Holdfast",
+      "facet": "Coral reefs and kelp forests",
+      "known_at": 13
+    },
+    {
+      "name": "Crown-of-thorns starfish",
+      "facet": "Coral reefs and kelp forests",
+      "known_at": 11
+    },
+    {
+      "name": "Garibaldi",
+      "facet": "Coral reefs and kelp forests",
+      "known_at": 13
+    },
+    {
+      "name": "Seagrass meadow",
+      "facet": "Coral reefs and kelp forests",
+      "known_at": 10
+    },
+    {
+      "name": "Mangrove",
+      "facet": "Coral reefs and kelp forests",
+      "known_at": 8
+    },
+    {
+      "name": "Sargasso Sea",
+      "facet": "Coral reefs and kelp forests",
+      "known_at": 12
+    },
+    {
+      "name": "Frilled shark",
+      "facet": "Deep-sea creatures",
+      "known_at": 11
+    },
+    {
+      "name": "Viperfish",
+      "facet": "Deep-sea creatures",
+      "known_at": 11
+    },
+    {
+      "name": "Fangtooth",
+      "facet": "Deep-sea creatures",
+      "known_at": 12
+    },
+    {
+      "name": "Hatchetfish",
+      "facet": "Deep-sea creatures",
+      "known_at": 12
+    },
+    {
+      "name": "Yeti crab",
+      "facet": "Deep-sea creatures",
+      "known_at": 12
+    },
+    {
+      "name": "Lanternfish",
+      "facet": "Deep-sea creatures",
+      "known_at": 12
+    },
+    {
+      "name": "Sea pig",
+      "facet": "Deep-sea creatures",
+      "known_at": 12
+    },
+    {
+      "name": "Midnight zone",
+      "facet": "Deep-sea creatures",
+      "known_at": 10
+    },
+    {
+      "name": "Whale fall",
+      "facet": "Deep-sea creatures",
+      "known_at": 12
+    },
+    {
+      "name": "Black smoker",
+      "facet": "Deep-sea creatures",
+      "known_at": 13
+    },
+    {
+      "name": "Zooplankton",
+      "facet": "Plankton and ocean food webs",
+      "known_at": 9
+    },
+    {
+      "name": "Dinoflagellate",
+      "facet": "Plankton and ocean food webs",
+      "known_at": 13
+    },
+    {
+      "name": "Coccolithophore",
+      "facet": "Plankton and ocean food webs",
+      "known_at": 14
+    },
+    {
+      "name": "Prochlorococcus",
+      "facet": "Plankton and ocean food webs",
+      "known_at": 15
+    },
+    {
+      "name": "Sea sparkle",
+      "facet": "Plankton and ocean food webs",
+      "known_at": 11
+    },
+    {
+      "name": "Food chain",
+      "facet": "Plankton and ocean food webs",
+      "known_at": 4
+    },
+    {
+      "name": "Apex predator",
+      "facet": "Plankton and ocean food webs",
+      "known_at": 8
+    },
+    {
+      "name": "Filter feeding",
+      "facet": "Plankton and ocean food webs",
+      "known_at": 9
+    },
+    {
+      "name": "Upwelling",
+      "facet": "Plankton and ocean food webs",
+      "known_at": 12
+    },
+    {
+      "name": "Diel vertical migration",
+      "facet": "Plankton and ocean food webs",
+      "known_at": 14
+    },
+    {
+      "name": "Trophic cascade",
+      "facet": "Plankton and ocean food webs",
+      "known_at": 13
+    },
+    {
+      "name": "Dead zone",
+      "facet": "Plankton and ocean food webs",
+      "known_at": 12
+    },
+    {
+      "name": "Ocean oxygen production",
+      "facet": "Plankton and ocean food webs",
+      "known_at": 9
+    },
+    {
+      "name": "Ink cloud",
+      "facet": "Ocean survival tricks",
+      "known_at": 4
+    },
+    {
+      "name": "Symbiosis",
+      "facet": "Ocean survival tricks",
+      "known_at": 9
+    },
+    {
+      "name": "Sea cucumber evisceration",
+      "facet": "Ocean survival tricks",
+      "known_at": 13
+    },
+    {
+      "name": "Decorator crab",
+      "facet": "Ocean survival tricks",
+      "known_at": 11
+    },
+    {
+      "name": "Male pregnancy",
+      "facet": "Ocean survival tricks",
+      "known_at": 6
+    },
+    {
+      "name": "Sea otter tool use",
+      "facet": "Ocean survival tricks",
+      "known_at": 8
+    },
+    {
+      "name": "Salt gland",
+      "facet": "Ocean survival tricks",
+      "known_at": 12
+    },
+    {
+      "name": "Sequential hermaphroditism",
+      "facet": "Ocean survival tricks",
+      "known_at": 13
+    },
+    {
+      "name": "Transparency",
+      "facet": "Ocean survival tricks",
+      "known_at": 10
+    },
+    {
+      "name": "Porcupinefish spines",
+      "facet": "Ocean survival tricks",
+      "known_at": 8
+    },
+    {
+      "name": "Venom",
+      "facet": "Ocean survival tricks",
+      "known_at": 5
+    },
+    {
+      "name": "Adélie penguin",
+      "facet": "Polar sea life",
+      "known_at": 9
+    },
+    {
+      "name": "King penguin",
+      "facet": "Polar sea life",
+      "known_at": 7
+    },
+    {
+      "name": "Beluga whale",
+      "facet": "Polar sea life",
+      "known_at": 5
+    },
+    {
+      "name": "Bowhead whale",
+      "facet": "Polar sea life",
+      "known_at": 12
+    },
+    {
+      "name": "Leopard seal",
+      "facet": "Polar sea life",
+      "known_at": 9
+    },
+    {
+      "name": "Harp seal",
+      "facet": "Polar sea life",
+      "known_at": 9
+    },
+    {
+      "name": "Crabeater seal",
+      "facet": "Polar sea life",
+      "known_at": 13
+    },
+    {
+      "name": "Antifreeze protein",
+      "facet": "Polar sea life",
+      "known_at": 12
+    },
+    {
+      "name": "Snow petrel",
+      "facet": "Polar sea life",
+      "known_at": 13
+    },
+    {
+      "name": "Sea ice",
+      "facet": "Polar sea life",
+      "known_at": 7
+    },
+    {
+      "name": "Southern Ocean",
+      "facet": "Polar sea life",
+      "known_at": 10
+    },
+    {
+      "name": "Arctic cod",
+      "facet": "Polar sea life",
+      "known_at": 13
+    },
+    {
+      "name": "Jacques Cousteau",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 10
+    },
+    {
+      "name": "Aqua-Lung",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 12
+    },
+    {
+      "name": "Scuba diving",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 6
+    },
+    {
+      "name": "Calypso",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Sylvia Earle",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "HMS Challenger expedition",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Mariana Trench",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 7
+    },
+    {
+      "name": "Challenger Deep",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 12
+    },
+    {
+      "name": "Trieste",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Jacques Piccard",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Alvin",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "James Cameron",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Robert Ballard",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Titanic wreck",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 8
+    },
+    {
+      "name": "William Beebe",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Bathysphere",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Marie Tharp",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Mid-Atlantic Ridge",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 12
+    },
+    {
+      "name": "Sonar",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 8
+    },
+    {
+      "name": "Marjorie Courtenay-Latimer",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 15
+    },
+    {
+      "name": "Edith Widder",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 15
+    },
+    {
+      "name": "Submarine",
+      "facet": "Ocean explorers and discoveries",
+      "known_at": 3
+    }
+  ]
+}

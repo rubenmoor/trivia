@@ -41791,7 +41791,7 @@ Do:
 - Update plan 18 "Builds and depots" (DLC depots bullet) and the SW-7 "Installation → Depots" note.
 
 Check: `trivia-desktop-build --dir`, `trivia-steam stage`, `trivia-steam upload --dry-run` (all depots), and `ids()` with only colombia''s IDs filled (temporary edit) accepts a real-upload ID set.', '2026-10-21T22:59:58Z', '2026-10-21T23:01:38Z', 1652, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1676, 188, 'run batch-<n> (stem)', 'work', 'open', NULL, NULL, 'Part of `plan 188: Content runs for the topic bundles` (milestone 19), bundle `stem`, per `task 1660: Topic runs stem: start`. Drafting run in English; never re-asks base (`decision 350: Overlap rate in drafting: which changes?`).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1676, 188, 'run batch-<n> (stem)', 'work', 'done', NULL, '2026-10-28, Done: batch-26: 327 merged, 302 approved, 25 needs work (took 47m56s). claude: 394 calls, $33.83. report authoring/reports/batch-26.md; health ✗ → decision 464; run''s real name batch-26 (task 1676 can''t be renamed while running)', 'Part of `plan 188: Content runs for the topic bundles` (milestone 19), bundle `stem`, per `task 1660: Topic runs stem: start`. Drafting run in English; never re-asks base (`decision 350: Overlap rate in drafting: which changes?`).
 
 ## Steps
 - `nix develop -c qgen batch --bundle stem` (`authoring/RUNBOOK.md` steps 1–5).
@@ -41802,8 +41802,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - D-36: no prompt, pool, media or `qgen.py` changes; findings become decisions or tasks in their own plans (`plan 184: Pipeline for topic bundles` while it has open tasks, else a new plan in milestone 19). Only exception: a locale joining `stem`''s `languages` row.
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints (plus `app/data/bundles.json` after a `languages` edit); don''t commit (pm commits as "task N: …").
 - Exit 75, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> (stem)…?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- Note on done: the "Done:" line and report path (run tasks), or the QC numbers (approved, rejected, needs_work, agreement, $ per approved, review time per 100).', '2026-10-21T23:31:50Z', NULL, 1660, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1677, 188, 'QC batch-<n> (stem)', 'work', 'open', NULL, NULL, 'Part of `plan 188: Content runs for the topic bundles` (milestone 19), bundle `stem`, per `task 1660: Topic runs stem: start`. QC of the drafting run `run batch-<n> (stem)` (same batch name after the rename).
+- Note on done: the "Done:" line and report path (run tasks), or the QC numbers (approved, rejected, needs_work, agreement, $ per approved, review time per 100).', '2026-10-21T23:31:50Z', '2026-10-28T23:01:47Z', 1660, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1677, 188, 'QC batch-26 (stem)', 'work', 'open', NULL, NULL, 'Part of `plan 188: Content runs for the topic bundles` (milestone 19), bundle `stem`, per `task 1660: Topic runs stem: start`. QC of the drafting run `run batch-<n> (stem)` (same batch name after the rename).
 
 ## Steps
 `authoring/QC.md` steps 1–4:
@@ -49714,6 +49714,36 @@ authoring/data/questions.es-ES.json: q-1201: source is rejected or translatable:
 
 First-attempt claude line: claude: 679 calls (0 failed, 0 retried), opus 600 / sonnet 79, 1373 turns, 9.3M tokens (8.6M cache), $30.65, 2h00m in calls
 Cause: authoring/data/questions.es-ES.json q-1201 is an es-ES translation whose source is rejected or translatable:false; it must be rejected (pool/data edit, not a worker''s).', 'A batch of question translations into English finished its work but the final consistency check fails, because one Spanish (Spain) translation belongs to a question that has since been rejected or marked untranslatable. Until that translation is rejected, the batch cannot be wrapped up and its results cannot be saved. The developer chooses how to clear it.', NULL, NULL, '2026-10-24T16:30:13Z', NULL, 1759, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (462, 'tr-es-12: run finished with 0 of 300 translated, how to go on?', 'pending', '["Add a fix task for qgen''s resume after a limit, then rerun tr-es-12", "Delete work/tr-es-12 and start a fresh run", "Other"]', 'Run: qgen batch --translate es (tr-es-12), exit 0 after 21s, ''Done: tr-es-12: 0 translated, 0 approved, 0 need work''. work/tr-es-12 holds 129 translations, 101 reviews, but recorded.json is {} and merged.json is nearly empty; calls.jsonl ends with review 1 calls outcome failed/retry at usd 0 (2026-10-25 01:17, the usage limit). Earlier attempts spent about $17.46 (939 calls). Nothing staged; the bogus report was deleted. Likely cause: failed review calls at the limit were treated as finished steps, so the resume skipped them. Fix is qgen code, which a worker may not touch.', 'A batch of 300 questions was to be translated into Latin American Spanish. After two earlier attempts stopped at Claude''s weekly usage limit, the third finished in seconds and reported nothing translated, although most of the checking calls of the earlier attempts had failed. The saved intermediate results look incomplete, so the run''s report would wrongly claim it is done.', NULL, NULL, '2026-10-28T19:29:13Z', NULL, 1779, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (463, 'tr-es-ES-13: qgen validate fails after export', 'pending', '["Reject the English translation of q-0397 (review tool), then resume the run", "Fix qgen so it rejects translations of sources it marks untranslatable, then resume"]', '== [8/11] record
+   record took 1s (batch: 9s)
+== [9/11] audit
+  audit: all done earlier, skipped (60 questions)
+   audit took 0s (batch: 10s)
+== [10/11] export
+exported 5009 es question(s) to app/data/pool.json
+exported 2014 es question(s) to app/data/bundles/colombia/pool.json
+exported 5 es question(s) to app/data/bundles/mexico/pool.json
+  es translations: 0 stale, 0 left out (source not approved or not translatable)
+exported 3611 es-ES question(s) to app/data/pool.es-ES.json
+exported 5 es-ES question(s) to app/data/bundles/spain/pool.es-ES.json
+  es-ES translations: 0 stale, 2 left out (source not approved or not translatable)
+exported 4497 en question(s) to app/data/pool.en.json
+  en translations: 0 stale, 1 left out (source not approved or not translatable)
+exported 343 de question(s) to app/data/pool.de.json
+  de translations: 0 stale, 0 left out (source not approved or not translatable)
+exported 138 demo question(s) to app/data/demo/pool.json
+exported 138 demo question(s) to app/data/demo/pool.es-ES.json
+exported 126 demo question(s) to app/data/demo/pool.en.json
+exported 124 demo question(s) to app/data/demo/pool.de.json
+   export took 2s (batch: 13s)
+== [11/11] validate
+authoring/data/questions.en.json: q-0397: source is rejected or translatable: false; reject the translation
+`qgen validate` failed. Stop and report the output.
+
+Earlier calls: run 1 $31.78 (811 calls); reruns resumed at validate.
+Diagnosis: this run''s translatability check set translatable:false on q-0397 (colombia, Cocada, es source) while questions.en.json already holds an en translation of it; validate demands that translation be rejected, qgen doesn''t do it. Pre-existing en translation is not touched by the es-ES run. Fix: qgen should reject translations of a source it marks untranslatable (or the developer rejects en q-0397 in the review tool). Working tree has the run''s unstaged changes (questions.es-ES.json etc.).', 'A batch of machine translations into Spain''s Spanish finished all its work, but the final consistency check fails. One question was marked as not translatable while an English translation of it already exists, and the check insists that translation be rejected. Choose how to resolve it; until then the new translations stay unrecorded.', NULL, NULL, '2026-10-28T20:12:58Z', NULL, 1780, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (464, 'batch-26: health ✗, look at it?', 'pending', '["Ack batch-26 and continue", "Look at it first"]', 'Batch-26 (stem), drop rate 41.5 %, overlap rate 36.4 %, merged/slots 11–15 23.1 %, media share 11.0 %, mean fun 3.29: all over or under their thresholds (see authoring/reports/batch-26.md, Health). The run finished (302 approved).', 'A new batch of science, technology, engineering and maths trivia questions has been written and added to the pool. Some of its quality measures, such as how many drafts were dropped, how many repeat existing questions and how many have a picture, are outside the agreed limits. The developer can look at them and either accept them as they are or ask for changes.', NULL, NULL, '2026-10-28T23:01:43Z', NULL, 1676, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, NULL, NULL, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, NULL, NULL, 73367);
@@ -51695,6 +51725,9 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1923, 1777, '2026-10-25T04:11:14Z', '2026-10-25T04:58:24Z', 'done', NULL, 0, '5b4f4452dbdb046177ebd9067c46797e0ecc20b4', 'questions', 'claude-sonnet-5-5', '4dafaede-2c4e-4da8-8d90-349ee4023cd9', NULL, 8, 14, 2371, 322207, 44454, 0.26599540000000005, NULL, NULL, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1924, 1778, '2026-10-25T04:58:24Z', '2026-10-25T05:45:39Z', 'done', NULL, 0, '95965ae1ff65960a6dfc9a3ba63be05c8faea5c4', 'questions', 'claude-sonnet-5-5', '4dafaede-2c4e-4da8-8d90-349ee4023cd9', 1923, 5, 10, 2102, 350269, 20024, 0.4371852, NULL, NULL, 494342);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1925, 1779, '2026-10-25T05:45:40Z', '2026-10-25T06:17:55Z', 'limit', 'You''ve hit your weekly limit · resets Oct 28, 2pm (America/Bogota)', 1, 'c68d44a3bb0c094c3cefb8471fa47ede810d7b2b', 'questions', 'claude-sonnet-5-5', '4dafaede-2c4e-4da8-8d90-349ee4023cd9', 1924, 2, 2, 161, 75796, 16714, 0.5208144, NULL, NULL, 494342);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1926, 1779, '2026-10-28T19:27:30Z', '2026-10-28T19:29:20Z', 'blocked', NULL, 0, 'c3d8483d3bc2a01ca2c005192dbd35a6f00a946c', 'questions', 'claude-sonnet-5-5', '35e16646-de72-4b68-b45d-de989a325dce', NULL, 9, 16, 3070, 377556, 60614, 0.31094360000000004, 61118, 60, 50547);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1927, 1780, '2026-10-28T19:29:20Z', '2026-10-28T20:13:05Z', 'blocked', 'left 4 files unstaged, stashed as 8313999f for the task''s next run', 0, 'c3d8483d3bc2a01ca2c005192dbd35a6f00a946c', 'questions', 'claude-sonnet-5-5', '80de0fe0-efcf-4b98-9899-eb0c2f981cf6', NULL, 9, 18, 2554, 433192, 57352, 0.29830320000000005, 57849, 60, 50547);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1928, 1676, '2026-10-28T20:13:08Z', '2026-10-28T23:01:52Z', 'done', NULL, 0, 'c3d8483d3bc2a01ca2c005192dbd35a6f00a946c', 'questions', 'claude-sonnet-5-5', '61ef19a8-df02-4c34-b027-373645dc4060', NULL, 10, 20, 2361, 424356, 35592, 0.20845360000000002, 50341, 60, 50547);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -52382,6 +52415,8 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1711, 65);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1731, 460);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1755, 458);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1759, 461);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1779, 462);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1780, 463);
 
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (639, 1726);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1034, 1033);

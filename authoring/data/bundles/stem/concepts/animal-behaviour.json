@@ -1,0 +1,1283 @@
+{
+  "subcategory": "animal-behaviour",
+  "facets": [
+    "Hunting and feeding tricks",
+    "Camouflage, mimicry and defence",
+    "Courtship and mating displays",
+    "Parenting and raising young",
+    "Migration and navigation",
+    "Animal homes and building",
+    "Communication, calls and signals",
+    "Social groups and colonies",
+    "Sleep, hibernation and daily rhythms",
+    "Tool use and animal intelligence",
+    "Ethology: scientists and experiments",
+    "Symbiosis and animal partnerships"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 4,
+      "origin": 2,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 4,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 4,
+      "everyday": 3,
+      "colombia": 2,
+      "pop_culture": 3,
+      "popular_science": 4,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 5,
+      "history": 2,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Archerfish",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 9
+    },
+    {
+      "name": "Anglerfish",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 6
+    },
+    {
+      "name": "Trapdoor spider",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 10
+    },
+    {
+      "name": "Bubble-net feeding",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 12
+    },
+    {
+      "name": "Barn owl",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 5
+    },
+    {
+      "name": "Echolocation",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 8
+    },
+    {
+      "name": "Heat-sensing pits",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 12
+    },
+    {
+      "name": "Boa constrictor",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 4
+    },
+    {
+      "name": "Mantis shrimp",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 9
+    },
+    {
+      "name": "Praying mantis",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 3
+    },
+    {
+      "name": "Osprey",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 9
+    },
+    {
+      "name": "Kingfisher",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 6
+    },
+    {
+      "name": "Antlion",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 11
+    },
+    {
+      "name": "Electric eel",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 5
+    },
+    {
+      "name": "Pistol shrimp",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 10
+    },
+    {
+      "name": "Baleen",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 9
+    },
+    {
+      "name": "Orca",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 3
+    },
+    {
+      "name": "Vulture",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 4
+    },
+    {
+      "name": "Owl pellet",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 9
+    },
+    {
+      "name": "Bearded vulture",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 13
+    },
+    {
+      "name": "Shrike",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 13
+    },
+    {
+      "name": "Anteater",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 4
+    },
+    {
+      "name": "Aardvark",
+      "facet": "Hunting and feeding tricks",
+      "known_at": 7
+    },
+    {
+      "name": "Chameleon",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 2
+    },
+    {
+      "name": "Squid ink",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 5
+    },
+    {
+      "name": "Skunk",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 3
+    },
+    {
+      "name": "Pufferfish",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 3
+    },
+    {
+      "name": "Stick insect",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 5
+    },
+    {
+      "name": "Eyespots",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 10
+    },
+    {
+      "name": "Batesian mimicry",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 14
+    },
+    {
+      "name": "Viceroy butterfly",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 14
+    },
+    {
+      "name": "Poison dart frog",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 4
+    },
+    {
+      "name": "Aposematism",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 13
+    },
+    {
+      "name": "Hedgehog",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 2
+    },
+    {
+      "name": "Opossum",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 6
+    },
+    {
+      "name": "Autotomy",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 12
+    },
+    {
+      "name": "Cuttlefish",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 8
+    },
+    {
+      "name": "Arctic fox",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 5
+    },
+    {
+      "name": "Snowshoe hare",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 9
+    },
+    {
+      "name": "Zebra",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 2
+    },
+    {
+      "name": "Bombardier beetle",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 12
+    },
+    {
+      "name": "Hoverfly",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 10
+    },
+    {
+      "name": "Mimic octopus",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 11
+    },
+    {
+      "name": "Pangolin",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 7
+    },
+    {
+      "name": "Horned lizard",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 12
+    },
+    {
+      "name": "Countershading",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 13
+    },
+    {
+      "name": "Leafy seadragon",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 9
+    },
+    {
+      "name": "Stonefish",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 8
+    },
+    {
+      "name": "Flounder",
+      "facet": "Camouflage, mimicry and defence",
+      "known_at": 8
+    },
+    {
+      "name": "Bowerbird",
+      "facet": "Courtship and mating displays",
+      "known_at": 8
+    },
+    {
+      "name": "Blue-footed booby",
+      "facet": "Courtship and mating displays",
+      "known_at": 7
+    },
+    {
+      "name": "Frigatebird",
+      "facet": "Courtship and mating displays",
+      "known_at": 9
+    },
+    {
+      "name": "Firefly",
+      "facet": "Courtship and mating displays",
+      "known_at": 3
+    },
+    {
+      "name": "Lyrebird",
+      "facet": "Courtship and mating displays",
+      "known_at": 9
+    },
+    {
+      "name": "Sage grouse",
+      "facet": "Courtship and mating displays",
+      "known_at": 12
+    },
+    {
+      "name": "Lek",
+      "facet": "Courtship and mating displays",
+      "known_at": 14
+    },
+    {
+      "name": "White-spotted pufferfish",
+      "facet": "Courtship and mating displays",
+      "known_at": 12
+    },
+    {
+      "name": "Red deer",
+      "facet": "Courtship and mating displays",
+      "known_at": 5
+    },
+    {
+      "name": "Bighorn sheep",
+      "facet": "Courtship and mating displays",
+      "known_at": 7
+    },
+    {
+      "name": "Cricket",
+      "facet": "Courtship and mating displays",
+      "known_at": 3
+    },
+    {
+      "name": "Fiddler crab",
+      "facet": "Courtship and mating displays",
+      "known_at": 9
+    },
+    {
+      "name": "Great crested grebe",
+      "facet": "Courtship and mating displays",
+      "known_at": 11
+    },
+    {
+      "name": "Red-capped manakin",
+      "facet": "Courtship and mating displays",
+      "known_at": 11
+    },
+    {
+      "name": "Peacock spider",
+      "facet": "Courtship and mating displays",
+      "known_at": 9
+    },
+    {
+      "name": "Elephant seal",
+      "facet": "Courtship and mating displays",
+      "known_at": 6
+    },
+    {
+      "name": "Nuptial gift",
+      "facet": "Courtship and mating displays",
+      "known_at": 13
+    },
+    {
+      "name": "Albatross",
+      "facet": "Courtship and mating displays",
+      "known_at": 8
+    },
+    {
+      "name": "Mandrill",
+      "facet": "Courtship and mating displays",
+      "known_at": 8
+    },
+    {
+      "name": "Gentoo penguin",
+      "facet": "Courtship and mating displays",
+      "known_at": 10
+    },
+    {
+      "name": "Mute swan",
+      "facet": "Courtship and mating displays",
+      "known_at": 5
+    },
+    {
+      "name": "Kangaroo",
+      "facet": "Parenting and raising young",
+      "known_at": 1,
+      "retired": "used_up: The pouch and Australia are already asked. Asking for the group (marsupials) would be about a 6, far above the target of 2."
+    },
+    {
+      "name": "Emperor penguin",
+      "facet": "Parenting and raising young",
+      "known_at": 3
+    },
+    {
+      "name": "Seahorse",
+      "facet": "Parenting and raising young",
+      "known_at": 4
+    },
+    {
+      "name": "Cuckoo",
+      "facet": "Parenting and raising young",
+      "known_at": 7
+    },
+    {
+      "name": "Nile crocodile",
+      "facet": "Parenting and raising young",
+      "known_at": 6
+    },
+    {
+      "name": "Mouthbrooder",
+      "facet": "Parenting and raising young",
+      "known_at": 12
+    },
+    {
+      "name": "Sea turtle",
+      "facet": "Parenting and raising young",
+      "known_at": 3
+    },
+    {
+      "name": "Orangutan",
+      "facet": "Parenting and raising young",
+      "known_at": 5
+    },
+    {
+      "name": "Scorpion",
+      "facet": "Parenting and raising young",
+      "known_at": 8
+    },
+    {
+      "name": "Wolf spider",
+      "facet": "Parenting and raising young",
+      "known_at": 10
+    },
+    {
+      "name": "Darwin's frog",
+      "facet": "Parenting and raising young",
+      "known_at": 12
+    },
+    {
+      "name": "Surinam toad",
+      "facet": "Parenting and raising young",
+      "known_at": 13
+    },
+    {
+      "name": "Joey",
+      "facet": "Parenting and raising young",
+      "known_at": 3
+    },
+    {
+      "name": "Cub",
+      "facet": "Parenting and raising young",
+      "known_at": 2
+    },
+    {
+      "name": "Tadpole",
+      "facet": "Parenting and raising young",
+      "known_at": 2
+    },
+    {
+      "name": "Crop milk",
+      "facet": "Parenting and raising young",
+      "known_at": 13
+    },
+    {
+      "name": "Temperature-dependent sex determination",
+      "facet": "Parenting and raising young",
+      "known_at": 13
+    },
+    {
+      "name": "Marsupial",
+      "facet": "Parenting and raising young",
+      "known_at": 6
+    },
+    {
+      "name": "Brood patch",
+      "facet": "Parenting and raising young",
+      "known_at": 13
+    },
+    {
+      "name": "Giant Pacific octopus",
+      "facet": "Parenting and raising young",
+      "known_at": 11
+    },
+    {
+      "name": "Monarch butterfly",
+      "facet": "Migration and navigation",
+      "known_at": 6
+    },
+    {
+      "name": "Arctic tern",
+      "facet": "Migration and navigation",
+      "known_at": 8
+    },
+    {
+      "name": "Salmon",
+      "facet": "Migration and navigation",
+      "known_at": 5
+    },
+    {
+      "name": "European eel",
+      "facet": "Migration and navigation",
+      "known_at": 12
+    },
+    {
+      "name": "Homing pigeon",
+      "facet": "Migration and navigation",
+      "known_at": 4
+    },
+    {
+      "name": "Bar-tailed godwit",
+      "facet": "Migration and navigation",
+      "known_at": 12
+    },
+    {
+      "name": "Swallow",
+      "facet": "Migration and navigation",
+      "known_at": 4
+    },
+    {
+      "name": "Dung beetle",
+      "facet": "Migration and navigation",
+      "known_at": 6
+    },
+    {
+      "name": "Christmas Island red crab",
+      "facet": "Migration and navigation",
+      "known_at": 8
+    },
+    {
+      "name": "Desert locust",
+      "facet": "Migration and navigation",
+      "known_at": 9
+    },
+    {
+      "name": "Bird ringing",
+      "facet": "Migration and navigation",
+      "known_at": 10
+    },
+    {
+      "name": "Magnetoreception",
+      "facet": "Migration and navigation",
+      "known_at": 13
+    },
+    {
+      "name": "Bogong moth",
+      "facet": "Migration and navigation",
+      "known_at": 13
+    },
+    {
+      "name": "Spiny lobster",
+      "facet": "Migration and navigation",
+      "known_at": 12
+    },
+    {
+      "name": "Sun compass",
+      "facet": "Migration and navigation",
+      "known_at": 13
+    },
+    {
+      "name": "Painted lady butterfly",
+      "facet": "Migration and navigation",
+      "known_at": 11
+    },
+    {
+      "name": "Flyway",
+      "facet": "Migration and navigation",
+      "known_at": 13
+    },
+    {
+      "name": "Bar-headed goose",
+      "facet": "Migration and navigation",
+      "known_at": 11
+    },
+    {
+      "name": "Leatherback turtle",
+      "facet": "Migration and navigation",
+      "known_at": 10
+    },
+    {
+      "name": "Beaver",
+      "facet": "Animal homes and building",
+      "known_at": 2
+    },
+    {
+      "name": "Honeycomb",
+      "facet": "Animal homes and building",
+      "known_at": 3
+    },
+    {
+      "name": "Spider web",
+      "facet": "Animal homes and building",
+      "known_at": 2
+    },
+    {
+      "name": "Termite mound",
+      "facet": "Animal homes and building",
+      "known_at": 6
+    },
+    {
+      "name": "Weaver bird",
+      "facet": "Animal homes and building",
+      "known_at": 7
+    },
+    {
+      "name": "Ovenbird",
+      "facet": "Animal homes and building",
+      "known_at": 10
+    },
+    {
+      "name": "Edible-nest swiftlet",
+      "facet": "Animal homes and building",
+      "known_at": 11
+    },
+    {
+      "name": "Prairie dog",
+      "facet": "Animal homes and building",
+      "known_at": 6
+    },
+    {
+      "name": "Rabbit warren",
+      "facet": "Animal homes and building",
+      "known_at": 5
+    },
+    {
+      "name": "Mole",
+      "facet": "Animal homes and building",
+      "known_at": 3
+    },
+    {
+      "name": "Caddisfly",
+      "facet": "Animal homes and building",
+      "known_at": 12
+    },
+    {
+      "name": "Hermit crab",
+      "facet": "Animal homes and building",
+      "known_at": 3
+    },
+    {
+      "name": "Paper wasp",
+      "facet": "Animal homes and building",
+      "known_at": 7
+    },
+    {
+      "name": "Hornbill",
+      "facet": "Animal homes and building",
+      "known_at": 10
+    },
+    {
+      "name": "Badger",
+      "facet": "Animal homes and building",
+      "known_at": 5
+    },
+    {
+      "name": "Coral polyp",
+      "facet": "Animal homes and building",
+      "known_at": 8
+    },
+    {
+      "name": "Burrowing owl",
+      "facet": "Animal homes and building",
+      "known_at": 9
+    },
+    {
+      "name": "Mud dauber",
+      "facet": "Animal homes and building",
+      "known_at": 11
+    },
+    {
+      "name": "Tailorbird",
+      "facet": "Animal homes and building",
+      "known_at": 11
+    },
+    {
+      "name": "Spittlebug",
+      "facet": "Animal homes and building",
+      "known_at": 11
+    },
+    {
+      "name": "Stickleback",
+      "facet": "Animal homes and building",
+      "known_at": 13
+    },
+    {
+      "name": "Waggle dance",
+      "facet": "Communication, calls and signals",
+      "known_at": 8
+    },
+    {
+      "name": "Signature whistle",
+      "facet": "Communication, calls and signals",
+      "known_at": 12
+    },
+    {
+      "name": "Whale song",
+      "facet": "Communication, calls and signals",
+      "known_at": 5
+    },
+    {
+      "name": "Pheromone",
+      "facet": "Communication, calls and signals",
+      "known_at": 10
+    },
+    {
+      "name": "Vervet monkey",
+      "facet": "Communication, calls and signals",
+      "known_at": 13
+    },
+    {
+      "name": "Mockingbird",
+      "facet": "Communication, calls and signals",
+      "known_at": 9
+    },
+    {
+      "name": "Howler monkey",
+      "facet": "Communication, calls and signals",
+      "known_at": 5
+    },
+    {
+      "name": "Vocal sac",
+      "facet": "Communication, calls and signals",
+      "known_at": 8
+    },
+    {
+      "name": "Purring",
+      "facet": "Communication, calls and signals",
+      "known_at": 1
+    },
+    {
+      "name": "Tail wagging",
+      "facet": "Communication, calls and signals",
+      "known_at": 1
+    },
+    {
+      "name": "Dawn chorus",
+      "facet": "Communication, calls and signals",
+      "known_at": 9
+    },
+    {
+      "name": "Infrasound",
+      "facet": "Communication, calls and signals",
+      "known_at": 12
+    },
+    {
+      "name": "Gibbon",
+      "facet": "Communication, calls and signals",
+      "known_at": 9
+    },
+    {
+      "name": "Kookaburra",
+      "facet": "Communication, calls and signals",
+      "known_at": 6
+    },
+    {
+      "name": "Scent marking",
+      "facet": "Communication, calls and signals",
+      "known_at": 7
+    },
+    {
+      "name": "Bioluminescence",
+      "facet": "Communication, calls and signals",
+      "known_at": 9
+    },
+    {
+      "name": "Rattlesnake",
+      "facet": "Communication, calls and signals",
+      "known_at": 3
+    },
+    {
+      "name": "Chest beating",
+      "facet": "Communication, calls and signals",
+      "known_at": 3
+    },
+    {
+      "name": "Ant colony",
+      "facet": "Social groups and colonies",
+      "known_at": 2
+    },
+    {
+      "name": "Queen bee",
+      "facet": "Social groups and colonies",
+      "known_at": 2
+    },
+    {
+      "name": "Meerkat",
+      "facet": "Social groups and colonies",
+      "known_at": 3
+    },
+    {
+      "name": "Lion",
+      "facet": "Social groups and colonies",
+      "known_at": 1
+    },
+    {
+      "name": "Matriarch",
+      "facet": "Social groups and colonies",
+      "known_at": 9
+    },
+    {
+      "name": "Murmuration",
+      "facet": "Social groups and colonies",
+      "known_at": 11
+    },
+    {
+      "name": "School of fish",
+      "facet": "Social groups and colonies",
+      "known_at": 3
+    },
+    {
+      "name": "Army ant",
+      "facet": "Social groups and colonies",
+      "known_at": 9
+    },
+    {
+      "name": "Baboon",
+      "facet": "Social groups and colonies",
+      "known_at": 4
+    },
+    {
+      "name": "Pecking order",
+      "facet": "Social groups and colonies",
+      "known_at": 10
+    },
+    {
+      "name": "Eusociality",
+      "facet": "Social groups and colonies",
+      "known_at": 14
+    },
+    {
+      "name": "Pod",
+      "facet": "Social groups and colonies",
+      "known_at": 7
+    },
+    {
+      "name": "Bonobo",
+      "facet": "Social groups and colonies",
+      "known_at": 9
+    },
+    {
+      "name": "Grooming",
+      "facet": "Social groups and colonies",
+      "known_at": 6
+    },
+    {
+      "name": "Fire ant raft",
+      "facet": "Social groups and colonies",
+      "known_at": 10
+    },
+    {
+      "name": "Superorganism",
+      "facet": "Social groups and colonies",
+      "known_at": 13
+    },
+    {
+      "name": "Silverback",
+      "facet": "Social groups and colonies",
+      "known_at": 4
+    },
+    {
+      "name": "Sardine run",
+      "facet": "Social groups and colonies",
+      "known_at": 11
+    },
+    {
+      "name": "Hibernation",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 3
+    },
+    {
+      "name": "Brown bear",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 2
+    },
+    {
+      "name": "Bat",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 2
+    },
+    {
+      "name": "Nocturnal",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 4
+    },
+    {
+      "name": "Dormouse",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 9
+    },
+    {
+      "name": "Torpor",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 12
+    },
+    {
+      "name": "Estivation",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 13
+    },
+    {
+      "name": "Unihemispheric sleep",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 14
+    },
+    {
+      "name": "Wood frog",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 10
+    },
+    {
+      "name": "Koala",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 2
+    },
+    {
+      "name": "Circadian rhythm",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 11
+    },
+    {
+      "name": "Crepuscular",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 13
+    },
+    {
+      "name": "Diurnal",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 9
+    },
+    {
+      "name": "Common swift",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 10
+    },
+    {
+      "name": "Parrotfish",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 9
+    },
+    {
+      "name": "Giraffe",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 1
+    },
+    {
+      "name": "Horse",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 1
+    },
+    {
+      "name": "Arctic ground squirrel",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 13
+    },
+    {
+      "name": "Periodical cicada",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 12
+    },
+    {
+      "name": "Chipmunk",
+      "facet": "Sleep, hibernation and daily rhythms",
+      "known_at": 4
+    },
+    {
+      "name": "Chimpanzee",
+      "facet": "Tool use and animal intelligence",
+      "known_at": 2
+    },
+    {
+      "name": "Sea otter",
+      "facet": "Tool use and animal intelligence",
+      "known_at": 3
+    },
+    {
+      "name": "New Caledonian crow",
+      "facet": "Tool use and animal intelligence",
+      "known_at": 11
+    },
+    {
+      "name": "Octopus",
+      "facet": "Tool use and animal intelligence",
+      "known_at": 3
+    },
+    {
+      "name": "Bottlenose dolphin",
+      "facet": "Tool use and animal intelligence",
+      "known_at": 3
+    },
+    {
+      "name": "Capuchin monkey",
+      "facet": "Tool use and animal intelligence",
+      "known_at": 8
+    },
+    {
+      "name": "Egyptian vulture",
+      "facet": "Tool use and animal intelligence",
+      "known_at": 12
+    },
+    {
+      "name": "Green heron",
+      "facet": "Tool use and animal intelligence",
+      "known_at": 12
+    },
+    {
+      "name": "African grey parrot",
+      "facet": "Tool use and animal intelligence",
+      "known_at": 6
+    },
+    {
+      "name": "Mirror test",
+      "facet": "Tool use and animal intelligence",
+      "known_at": 9
+    },
+    {
+      "name": "Raven",
+      "facet": "Tool use and animal intelligence",
+      "known_at": 6
+    },
+    {
+      "name": "Kea",
+      "facet": "Tool use and animal intelligence",
+      "known_at": 11
+    },
+    {
+      "name": "Japanese macaque",
+      "facet": "Tool use and animal intelligence",
+      "known_at": 6
+    },
+    {
+      "name": "Border collie",
+      "facet": "Tool use and animal intelligence",
+      "known_at": 4
+    },
+    {
+      "name": "Woodpecker finch",
+      "facet": "Tool use and animal intelligence",
+      "known_at": 12
+    },
+    {
+      "name": "Pig",
+      "facet": "Tool use and animal intelligence",
+      "known_at": 2
+    },
+    {
+      "name": "Jane Goodall",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 6
+    },
+    {
+      "name": "Konrad Lorenz",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 12
+    },
+    {
+      "name": "Imprinting",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 10
+    },
+    {
+      "name": "Ivan Pavlov",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 8
+    },
+    {
+      "name": "Karl von Frisch",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 13
+    },
+    {
+      "name": "Niko Tinbergen",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Dian Fossey",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 11
+    },
+    {
+      "name": "Biruté Galdikas",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Clever Hans",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 12
+    },
+    {
+      "name": "Koko",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 9
+    },
+    {
+      "name": "Kanzi",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 13
+    },
+    {
+      "name": "Alex the parrot",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 12
+    },
+    {
+      "name": "B. F. Skinner",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 12
+    },
+    {
+      "name": "Fixed action pattern",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 14
+    },
+    {
+      "name": "David Attenborough",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 6
+    },
+    {
+      "name": "Frans de Waal",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Ethology",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 12
+    },
+    {
+      "name": "Washoe",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 13
+    },
+    {
+      "name": "Temple Grandin",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 12
+    },
+    {
+      "name": "Jean-Henri Fabre",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 13
+    },
+    {
+      "name": "Camera trap",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 7
+    },
+    {
+      "name": "Radio collar",
+      "facet": "Ethology: scientists and experiments",
+      "known_at": 9
+    },
+    {
+      "name": "Clownfish",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 2
+    },
+    {
+      "name": "Oxpecker",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 8
+    },
+    {
+      "name": "Cleaner wrasse",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 10
+    },
+    {
+      "name": "Remora",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 8
+    },
+    {
+      "name": "Honeyguide",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 11
+    },
+    {
+      "name": "Leafcutter ant",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 7
+    },
+    {
+      "name": "Aphid",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 8
+    },
+    {
+      "name": "Mutualism",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 10
+    },
+    {
+      "name": "Commensalism",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 12
+    },
+    {
+      "name": "Parasitism",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 9
+    },
+    {
+      "name": "Cattle egret",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 9
+    },
+    {
+      "name": "Goby",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 13
+    },
+    {
+      "name": "Pollination",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 4
+    },
+    {
+      "name": "Zooxanthellae",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 14
+    },
+    {
+      "name": "Cleaner shrimp",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 9
+    },
+    {
+      "name": "Yucca moth",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 13
+    },
+    {
+      "name": "Fig wasp",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 13
+    },
+    {
+      "name": "Pilot fish",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 11
+    },
+    {
+      "name": "Tick",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 5
+    },
+    {
+      "name": "Hawaiian bobtail squid",
+      "facet": "Symbiosis and animal partnerships",
+      "known_at": 13
+    }
+  ]
+}

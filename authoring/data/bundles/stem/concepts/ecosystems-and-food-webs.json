@@ -1,0 +1,798 @@
+{
+  "subcategory": "ecosystems-and-food-webs",
+  "facets": [
+    "Food chains and trophic levels",
+    "Predators and prey",
+    "Producers and photosynthesis",
+    "Decomposers and nutrient recycling",
+    "Symbiosis and species interactions",
+    "Keystone species and trophic cascades",
+    "Biomes and habitats of the world",
+    "Ocean and freshwater ecosystems",
+    "Energy flow and ecological pyramids",
+    "Population dynamics and carrying capacity",
+    "Ecological succession and disturbance",
+    "Ecologists and landmark ecology studies"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 1,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 5,
+      "sequence": 5,
+      "connection": 2,
+      "analogy": 4,
+      "odd_one_out": 5,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 2,
+      "colombia": 2,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 5,
+      "history": 2,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Food web",
+      "facet": "Food chains and trophic levels",
+      "known_at": 6
+    },
+    {
+      "name": "Herbivore",
+      "facet": "Food chains and trophic levels",
+      "known_at": 3
+    },
+    {
+      "name": "Carnivore",
+      "facet": "Food chains and trophic levels",
+      "known_at": 3
+    },
+    {
+      "name": "Omnivore",
+      "facet": "Food chains and trophic levels",
+      "known_at": 5
+    },
+    {
+      "name": "Primary consumer",
+      "facet": "Food chains and trophic levels",
+      "known_at": 8
+    },
+    {
+      "name": "Secondary consumer",
+      "facet": "Food chains and trophic levels",
+      "known_at": 8
+    },
+    {
+      "name": "Tertiary consumer",
+      "facet": "Food chains and trophic levels",
+      "known_at": 10
+    },
+    {
+      "name": "Trophic level",
+      "facet": "Food chains and trophic levels",
+      "known_at": 10
+    },
+    {
+      "name": "Detritivore",
+      "facet": "Food chains and trophic levels",
+      "known_at": 11
+    },
+    {
+      "name": "Insectivore",
+      "facet": "Food chains and trophic levels",
+      "known_at": 8
+    },
+    {
+      "name": "Filter feeder",
+      "facet": "Food chains and trophic levels",
+      "known_at": 8
+    },
+    {
+      "name": "Frugivore",
+      "facet": "Food chains and trophic levels",
+      "known_at": 12
+    },
+    {
+      "name": "Biomagnification",
+      "facet": "Food chains and trophic levels",
+      "known_at": 12
+    },
+    {
+      "name": "Gray wolf",
+      "facet": "Predators and prey",
+      "known_at": 2
+    },
+    {
+      "name": "Owl",
+      "facet": "Predators and prey",
+      "known_at": 2
+    },
+    {
+      "name": "Wildebeest",
+      "facet": "Predators and prey",
+      "known_at": 5
+    },
+    {
+      "name": "Thomson's gazelle",
+      "facet": "Predators and prey",
+      "known_at": 6
+    },
+    {
+      "name": "Venus flytrap",
+      "facet": "Predators and prey",
+      "known_at": 4
+    },
+    {
+      "name": "Ambush predator",
+      "facet": "Predators and prey",
+      "known_at": 10
+    },
+    {
+      "name": "Pack hunting",
+      "facet": "Predators and prey",
+      "known_at": 6
+    },
+    {
+      "name": "Photosynthesis",
+      "facet": "Producers and photosynthesis",
+      "known_at": 6
+    },
+    {
+      "name": "Sunlight",
+      "facet": "Producers and photosynthesis",
+      "known_at": 1
+    },
+    {
+      "name": "Glucose",
+      "facet": "Producers and photosynthesis",
+      "known_at": 9
+    },
+    {
+      "name": "Leaf",
+      "facet": "Producers and photosynthesis",
+      "known_at": 1
+    },
+    {
+      "name": "Seagrass",
+      "facet": "Producers and photosynthesis",
+      "known_at": 9
+    },
+    {
+      "name": "Chemosynthesis",
+      "facet": "Producers and photosynthesis",
+      "known_at": 13
+    },
+    {
+      "name": "Decomposer",
+      "facet": "Decomposers and nutrient recycling",
+      "known_at": 6
+    },
+    {
+      "name": "Millipede",
+      "facet": "Decomposers and nutrient recycling",
+      "known_at": 5
+    },
+    {
+      "name": "Humus",
+      "facet": "Decomposers and nutrient recycling",
+      "known_at": 10
+    },
+    {
+      "name": "Leaf litter",
+      "facet": "Decomposers and nutrient recycling",
+      "known_at": 8
+    },
+    {
+      "name": "Carbon cycle",
+      "facet": "Decomposers and nutrient recycling",
+      "known_at": 9
+    },
+    {
+      "name": "Nitrogen cycle",
+      "facet": "Decomposers and nutrient recycling",
+      "known_at": 11
+    },
+    {
+      "name": "Phosphorus cycle",
+      "facet": "Decomposers and nutrient recycling",
+      "known_at": 13
+    },
+    {
+      "name": "Common cuckoo",
+      "facet": "Symbiosis and species interactions",
+      "known_at": 8
+    },
+    {
+      "name": "Greater honeyguide",
+      "facet": "Symbiosis and species interactions",
+      "known_at": 13
+    },
+    {
+      "name": "Competition",
+      "facet": "Symbiosis and species interactions",
+      "known_at": 7
+    },
+    {
+      "name": "Keystone species",
+      "facet": "Keystone species and trophic cascades",
+      "known_at": 11
+    },
+    {
+      "name": "Wolves of Yellowstone",
+      "facet": "Keystone species and trophic cascades",
+      "known_at": 11
+    },
+    {
+      "name": "African elephant",
+      "facet": "Keystone species and trophic cascades",
+      "known_at": 1
+    },
+    {
+      "name": "Ochre sea star",
+      "facet": "Keystone species and trophic cascades",
+      "known_at": 13
+    },
+    {
+      "name": "Ecosystem engineer",
+      "facet": "Keystone species and trophic cascades",
+      "known_at": 12
+    },
+    {
+      "name": "Southern cassowary",
+      "facet": "Keystone species and trophic cascades",
+      "known_at": 9
+    },
+    {
+      "name": "Jaguar",
+      "facet": "Keystone species and trophic cascades",
+      "known_at": 3
+    },
+    {
+      "name": "Dingo",
+      "facet": "Keystone species and trophic cascades",
+      "known_at": 7
+    },
+    {
+      "name": "Hippopotamus",
+      "facet": "Keystone species and trophic cascades",
+      "known_at": 1
+    },
+    {
+      "name": "Fig tree",
+      "facet": "Keystone species and trophic cascades",
+      "known_at": 8
+    },
+    {
+      "name": "Flying fox",
+      "facet": "Keystone species and trophic cascades",
+      "known_at": 7
+    },
+    {
+      "name": "Mesopredator release",
+      "facet": "Keystone species and trophic cascades",
+      "known_at": 15
+    },
+    {
+      "name": "Elk",
+      "facet": "Keystone species and trophic cascades",
+      "known_at": 5
+    },
+    {
+      "name": "Biome",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 9
+    },
+    {
+      "name": "Habitat",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 4
+    },
+    {
+      "name": "Tropical rainforest",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 3
+    },
+    {
+      "name": "Amazon rainforest",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 3
+    },
+    {
+      "name": "Congo rainforest",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 9
+    },
+    {
+      "name": "Desert",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 1
+    },
+    {
+      "name": "Sahara",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 3,
+      "retired": "used_up: The Sahara's record and its well-known facts are already asked several times. The estimate option has no reliable, guessable number at difficulty 4."
+    },
+    {
+      "name": "Atacama Desert",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 10
+    },
+    {
+      "name": "Savanna",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 5
+    },
+    {
+      "name": "Tundra",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 7
+    },
+    {
+      "name": "Taiga",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 10
+    },
+    {
+      "name": "Temperate deciduous forest",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 8
+    },
+    {
+      "name": "Steppe",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 10
+    },
+    {
+      "name": "Pampas",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 11
+    },
+    {
+      "name": "Cloud forest",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 10
+    },
+    {
+      "name": "Mediterranean scrubland",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 12
+    },
+    {
+      "name": "Wetland",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 6
+    },
+    {
+      "name": "Pantanal",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 12
+    },
+    {
+      "name": "Okavango Delta",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 12
+    },
+    {
+      "name": "Borneo rainforest",
+      "facet": "Biomes and habitats of the world",
+      "known_at": 9
+    },
+    {
+      "name": "Coral reef",
+      "facet": "Ocean and freshwater ecosystems",
+      "known_at": 2
+    },
+    {
+      "name": "Kelp forest",
+      "facet": "Ocean and freshwater ecosystems",
+      "known_at": 7
+    },
+    {
+      "name": "Abyssal zone",
+      "facet": "Ocean and freshwater ecosystems",
+      "known_at": 11
+    },
+    {
+      "name": "Twilight zone",
+      "facet": "Ocean and freshwater ecosystems",
+      "known_at": 10
+    },
+    {
+      "name": "Estuary",
+      "facet": "Ocean and freshwater ecosystems",
+      "known_at": 10
+    },
+    {
+      "name": "Tide pool",
+      "facet": "Ocean and freshwater ecosystems",
+      "known_at": 4
+    },
+    {
+      "name": "Eutrophication",
+      "facet": "Ocean and freshwater ecosystems",
+      "known_at": 13
+    },
+    {
+      "name": "Lake Baikal",
+      "facet": "Ocean and freshwater ecosystems",
+      "known_at": 10
+    },
+    {
+      "name": "Pond",
+      "facet": "Ocean and freshwater ecosystems",
+      "known_at": 1
+    },
+    {
+      "name": "Nile perch",
+      "facet": "Ocean and freshwater ecosystems",
+      "known_at": 13
+    },
+    {
+      "name": "Amazon river dolphin",
+      "facet": "Ocean and freshwater ecosystems",
+      "known_at": 6
+    },
+    {
+      "name": "Ecological pyramid",
+      "facet": "Energy flow and ecological pyramids",
+      "known_at": 10
+    },
+    {
+      "name": "Pyramid of numbers",
+      "facet": "Energy flow and ecological pyramids",
+      "known_at": 11
+    },
+    {
+      "name": "Pyramid of biomass",
+      "facet": "Energy flow and ecological pyramids",
+      "known_at": 12
+    },
+    {
+      "name": "Pyramid of energy",
+      "facet": "Energy flow and ecological pyramids",
+      "known_at": 12
+    },
+    {
+      "name": "Inverted pyramid",
+      "facet": "Energy flow and ecological pyramids",
+      "known_at": 13
+    },
+    {
+      "name": "Ten percent rule",
+      "facet": "Energy flow and ecological pyramids",
+      "known_at": 11
+    },
+    {
+      "name": "Energy flow",
+      "facet": "Energy flow and ecological pyramids",
+      "known_at": 9
+    },
+    {
+      "name": "Biomass",
+      "facet": "Energy flow and ecological pyramids",
+      "known_at": 10
+    },
+    {
+      "name": "Primary productivity",
+      "facet": "Energy flow and ecological pyramids",
+      "known_at": 13
+    },
+    {
+      "name": "Net primary productivity",
+      "facet": "Energy flow and ecological pyramids",
+      "known_at": 14
+    },
+    {
+      "name": "Cellular respiration",
+      "facet": "Energy flow and ecological pyramids",
+      "known_at": 10
+    },
+    {
+      "name": "Body heat",
+      "facet": "Energy flow and ecological pyramids",
+      "known_at": 5
+    },
+    {
+      "name": "Cold-blooded animal",
+      "facet": "Energy flow and ecological pyramids",
+      "known_at": 5
+    },
+    {
+      "name": "Second law of thermodynamics",
+      "facet": "Energy flow and ecological pyramids",
+      "known_at": 13
+    },
+    {
+      "name": "Kilocalorie",
+      "facet": "Energy flow and ecological pyramids",
+      "known_at": 9
+    },
+    {
+      "name": "The Sun",
+      "facet": "Energy flow and ecological pyramids",
+      "known_at": 1
+    },
+    {
+      "name": "Population",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 5
+    },
+    {
+      "name": "Carrying capacity",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 12
+    },
+    {
+      "name": "Exponential growth",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 10
+    },
+    {
+      "name": "Logistic growth",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 13
+    },
+    {
+      "name": "Lotka–Volterra equations",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 14
+    },
+    {
+      "name": "Lynx–hare cycle",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 13
+    },
+    {
+      "name": "Limiting factor",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 11
+    },
+    {
+      "name": "Population density",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 9
+    },
+    {
+      "name": "Birth rate",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 8
+    },
+    {
+      "name": "Invasive species",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 9
+    },
+    {
+      "name": "Cane toad",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 9
+    },
+    {
+      "name": "Rabbits in Australia",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 10
+    },
+    {
+      "name": "Locust swarm",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 6
+    },
+    {
+      "name": "R/K selection",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 14
+    },
+    {
+      "name": "Mark and recapture",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 12
+    },
+    {
+      "name": "Overfishing",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 8
+    },
+    {
+      "name": "Endangered species",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 4
+    },
+    {
+      "name": "Animal migration",
+      "facet": "Population dynamics and carrying capacity",
+      "known_at": 4
+    },
+    {
+      "name": "Ecological succession",
+      "facet": "Ecological succession and disturbance",
+      "known_at": 12
+    },
+    {
+      "name": "Primary succession",
+      "facet": "Ecological succession and disturbance",
+      "known_at": 13
+    },
+    {
+      "name": "Secondary succession",
+      "facet": "Ecological succession and disturbance",
+      "known_at": 13
+    },
+    {
+      "name": "Climax community",
+      "facet": "Ecological succession and disturbance",
+      "known_at": 13
+    },
+    {
+      "name": "Krakatoa",
+      "facet": "Ecological succession and disturbance",
+      "known_at": 11
+    },
+    {
+      "name": "Surtsey",
+      "facet": "Ecological succession and disturbance",
+      "known_at": 14
+    },
+    {
+      "name": "Mount St. Helens",
+      "facet": "Ecological succession and disturbance",
+      "known_at": 11
+    },
+    {
+      "name": "Chernobyl Exclusion Zone",
+      "facet": "Ecological succession and disturbance",
+      "known_at": 10
+    },
+    {
+      "name": "Lodgepole pine",
+      "facet": "Ecological succession and disturbance",
+      "known_at": 13
+    },
+    {
+      "name": "Eucalyptus",
+      "facet": "Ecological succession and disturbance",
+      "known_at": 5
+    },
+    {
+      "name": "Fireweed",
+      "facet": "Ecological succession and disturbance",
+      "known_at": 13
+    },
+    {
+      "name": "Lava flow",
+      "facet": "Ecological succession and disturbance",
+      "known_at": 4
+    },
+    {
+      "name": "Glacier retreat",
+      "facet": "Ecological succession and disturbance",
+      "known_at": 9
+    },
+    {
+      "name": "Hurricane",
+      "facet": "Ecological succession and disturbance",
+      "known_at": 4
+    },
+    {
+      "name": "Intermediate disturbance hypothesis",
+      "facet": "Ecological succession and disturbance",
+      "known_at": 15
+    },
+    {
+      "name": "Rewilding",
+      "facet": "Ecological succession and disturbance",
+      "known_at": 12
+    },
+    {
+      "name": "Ecological resilience",
+      "facet": "Ecological succession and disturbance",
+      "known_at": 13
+    },
+    {
+      "name": "Ernst Haeckel",
+      "facet": "Ecologists and landmark ecology studies",
+      "known_at": 14
+    },
+    {
+      "name": "Wallace Line",
+      "facet": "Ecologists and landmark ecology studies",
+      "known_at": 14
+    },
+    {
+      "name": "Silent Spring",
+      "facet": "Ecologists and landmark ecology studies",
+      "known_at": 12
+    },
+    {
+      "name": "Arthur Tansley",
+      "facet": "Ecologists and landmark ecology studies",
+      "known_at": 15
+    },
+    {
+      "name": "Charles Elton",
+      "facet": "Ecologists and landmark ecology studies",
+      "known_at": 15
+    },
+    {
+      "name": "Raymond Lindeman",
+      "facet": "Ecologists and landmark ecology studies",
+      "known_at": 15
+    },
+    {
+      "name": "Eugene Odum",
+      "facet": "Ecologists and landmark ecology studies",
+      "known_at": 15
+    },
+    {
+      "name": "Robert Paine",
+      "facet": "Ecologists and landmark ecology studies",
+      "known_at": 15
+    },
+    {
+      "name": "G. Evelyn Hutchinson",
+      "facet": "Ecologists and landmark ecology studies",
+      "known_at": 15
+    },
+    {
+      "name": "Georgy Gause",
+      "facet": "Ecologists and landmark ecology studies",
+      "known_at": 15
+    },
+    {
+      "name": "Competitive exclusion principle",
+      "facet": "Ecologists and landmark ecology studies",
+      "known_at": 14
+    },
+    {
+      "name": "Island biogeography",
+      "facet": "Ecologists and landmark ecology studies",
+      "known_at": 14
+    },
+    {
+      "name": "Aldo Leopold",
+      "facet": "Ecologists and landmark ecology studies",
+      "known_at": 14
+    },
+    {
+      "name": "Gaia hypothesis",
+      "facet": "Ecologists and landmark ecology studies",
+      "known_at": 13
+    },
+    {
+      "name": "Biosphere 2",
+      "facet": "Ecologists and landmark ecology studies",
+      "known_at": 13
+    },
+    {
+      "name": "Ecological niche",
+      "facet": "Ecologists and landmark ecology studies",
+      "known_at": 11
+    }
+  ]
+}

@@ -1,0 +1,1022 @@
+{
+  "subcategory": "electricity-and-magnetism",
+  "facets": [
+    "Static electricity and charge",
+    "Circuits and components",
+    "Current, voltage and resistance",
+    "Batteries and energy storage",
+    "Magnets and magnetic materials",
+    "Earth's magnetism and compasses",
+    "Electromagnets and motors",
+    "Generating and distributing power",
+    "Lightning and electricity in nature",
+    "Pioneers of electricity and magnetism",
+    "Electrical units and laws",
+    "Electromagnetic waves and signals"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 5,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 4,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Static shock",
+      "facet": "Static electricity and charge",
+      "known_at": 3
+    },
+    {
+      "name": "Balloon rubbed on hair",
+      "facet": "Static electricity and charge",
+      "known_at": 2
+    },
+    {
+      "name": "Static cling",
+      "facet": "Static electricity and charge",
+      "known_at": 5
+    },
+    {
+      "name": "Electron",
+      "facet": "Static electricity and charge",
+      "known_at": 7
+    },
+    {
+      "name": "Proton",
+      "facet": "Static electricity and charge",
+      "known_at": 8
+    },
+    {
+      "name": "Positive and negative charge",
+      "facet": "Static electricity and charge",
+      "known_at": 6
+    },
+    {
+      "name": "Electric charge",
+      "facet": "Static electricity and charge",
+      "known_at": 7
+    },
+    {
+      "name": "Van de Graaff generator",
+      "facet": "Static electricity and charge",
+      "known_at": 9
+    },
+    {
+      "name": "Electroscope",
+      "facet": "Static electricity and charge",
+      "known_at": 11
+    },
+    {
+      "name": "Leyden jar",
+      "facet": "Static electricity and charge",
+      "known_at": 12
+    },
+    {
+      "name": "Triboelectric series",
+      "facet": "Static electricity and charge",
+      "known_at": 13
+    },
+    {
+      "name": "Electric field",
+      "facet": "Static electricity and charge",
+      "known_at": 10
+    },
+    {
+      "name": "Faraday cage",
+      "facet": "Static electricity and charge",
+      "known_at": 10
+    },
+    {
+      "name": "Photocopier",
+      "facet": "Static electricity and charge",
+      "known_at": 8
+    },
+    {
+      "name": "Electrostatic induction",
+      "facet": "Static electricity and charge",
+      "known_at": 12
+    },
+    {
+      "name": "Wimshurst machine",
+      "facet": "Static electricity and charge",
+      "known_at": 14
+    },
+    {
+      "name": "Electrostatic precipitator",
+      "facet": "Static electricity and charge",
+      "known_at": 14
+    },
+    {
+      "name": "Grounding",
+      "facet": "Static electricity and charge",
+      "known_at": 9
+    },
+    {
+      "name": "Electric circuit",
+      "facet": "Circuits and components",
+      "known_at": 5
+    },
+    {
+      "name": "Series circuit",
+      "facet": "Circuits and components",
+      "known_at": 8
+    },
+    {
+      "name": "Parallel circuit",
+      "facet": "Circuits and components",
+      "known_at": 8
+    },
+    {
+      "name": "Short circuit",
+      "facet": "Circuits and components",
+      "known_at": 7
+    },
+    {
+      "name": "Fuse",
+      "facet": "Circuits and components",
+      "known_at": 7
+    },
+    {
+      "name": "Circuit breaker",
+      "facet": "Circuits and components",
+      "known_at": 9
+    },
+    {
+      "name": "Resistor",
+      "facet": "Circuits and components",
+      "known_at": 9
+    },
+    {
+      "name": "Capacitor",
+      "facet": "Circuits and components",
+      "known_at": 11
+    },
+    {
+      "name": "Diode",
+      "facet": "Circuits and components",
+      "known_at": 11
+    },
+    {
+      "name": "Transistor",
+      "facet": "Circuits and components",
+      "known_at": 11
+    },
+    {
+      "name": "Integrated circuit",
+      "facet": "Circuits and components",
+      "known_at": 10
+    },
+    {
+      "name": "Printed circuit board",
+      "facet": "Circuits and components",
+      "known_at": 9
+    },
+    {
+      "name": "Breadboard",
+      "facet": "Circuits and components",
+      "known_at": 12
+    },
+    {
+      "name": "Electrical conductor",
+      "facet": "Circuits and components",
+      "known_at": 5
+    },
+    {
+      "name": "Electrical insulator",
+      "facet": "Circuits and components",
+      "known_at": 5
+    },
+    {
+      "name": "Copper wire",
+      "facet": "Circuits and components",
+      "known_at": 5
+    },
+    {
+      "name": "Plug and socket",
+      "facet": "Circuits and components",
+      "known_at": 2
+    },
+    {
+      "name": "Potentiometer",
+      "facet": "Circuits and components",
+      "known_at": 13
+    },
+    {
+      "name": "Relay",
+      "facet": "Circuits and components",
+      "known_at": 13
+    },
+    {
+      "name": "Soldering",
+      "facet": "Circuits and components",
+      "known_at": 10
+    },
+    {
+      "name": "Circuit diagram",
+      "facet": "Circuits and components",
+      "known_at": 8
+    },
+    {
+      "name": "Electric current",
+      "facet": "Current, voltage and resistance",
+      "known_at": 6
+    },
+    {
+      "name": "Voltage",
+      "facet": "Current, voltage and resistance",
+      "known_at": 7
+    },
+    {
+      "name": "Direct current",
+      "facet": "Current, voltage and resistance",
+      "known_at": 9
+    },
+    {
+      "name": "Alternating current",
+      "facet": "Current, voltage and resistance",
+      "known_at": 9
+    },
+    {
+      "name": "War of the Currents",
+      "facet": "Current, voltage and resistance",
+      "known_at": 11
+    },
+    {
+      "name": "Mains electricity",
+      "facet": "Current, voltage and resistance",
+      "known_at": 8
+    },
+    {
+      "name": "Multimeter",
+      "facet": "Current, voltage and resistance",
+      "known_at": 10
+    },
+    {
+      "name": "Ammeter",
+      "facet": "Current, voltage and resistance",
+      "known_at": 10
+    },
+    {
+      "name": "Voltmeter",
+      "facet": "Current, voltage and resistance",
+      "known_at": 9
+    },
+    {
+      "name": "Superconductivity",
+      "facet": "Current, voltage and resistance",
+      "known_at": 12
+    },
+    {
+      "name": "Semiconductor",
+      "facet": "Current, voltage and resistance",
+      "known_at": 11
+    },
+    {
+      "name": "Heating element",
+      "facet": "Current, voltage and resistance",
+      "known_at": 8
+    },
+    {
+      "name": "Nichrome",
+      "facet": "Current, voltage and resistance",
+      "known_at": 14
+    },
+    {
+      "name": "Thermistor",
+      "facet": "Current, voltage and resistance",
+      "known_at": 13
+    },
+    {
+      "name": "Electrolysis",
+      "facet": "Current, voltage and resistance",
+      "known_at": 11
+    },
+    {
+      "name": "Bird on a power line",
+      "facet": "Current, voltage and resistance",
+      "known_at": 6
+    },
+    {
+      "name": "Salt water conductivity",
+      "facet": "Current, voltage and resistance",
+      "known_at": 8
+    },
+    {
+      "name": "Electric shock",
+      "facet": "Current, voltage and resistance",
+      "known_at": 4
+    },
+    {
+      "name": "Voltaic pile",
+      "facet": "Batteries and energy storage",
+      "known_at": 11
+    },
+    {
+      "name": "Lemon battery",
+      "facet": "Batteries and energy storage",
+      "known_at": 5
+    },
+    {
+      "name": "Lithium-ion battery",
+      "facet": "Batteries and energy storage",
+      "known_at": 8
+    },
+    {
+      "name": "AA battery",
+      "facet": "Batteries and energy storage",
+      "known_at": 3
+    },
+    {
+      "name": "Lead–acid car battery",
+      "facet": "Batteries and energy storage",
+      "known_at": 9
+    },
+    {
+      "name": "Button cell",
+      "facet": "Batteries and energy storage",
+      "known_at": 6
+    },
+    {
+      "name": "Rechargeable battery",
+      "facet": "Batteries and energy storage",
+      "known_at": 4
+    },
+    {
+      "name": "Alkaline battery",
+      "facet": "Batteries and energy storage",
+      "known_at": 8
+    },
+    {
+      "name": "Anode",
+      "facet": "Batteries and energy storage",
+      "known_at": 11
+    },
+    {
+      "name": "Cathode",
+      "facet": "Batteries and energy storage",
+      "known_at": 11
+    },
+    {
+      "name": "Electrolyte",
+      "facet": "Batteries and energy storage",
+      "known_at": 11
+    },
+    {
+      "name": "Daniell cell",
+      "facet": "Batteries and energy storage",
+      "known_at": 14
+    },
+    {
+      "name": "Supercapacitor",
+      "facet": "Batteries and energy storage",
+      "known_at": 13
+    },
+    {
+      "name": "Power bank",
+      "facet": "Batteries and energy storage",
+      "known_at": 4
+    },
+    {
+      "name": "Baghdad Battery",
+      "facet": "Batteries and energy storage",
+      "known_at": 14
+    },
+    {
+      "name": "Flywheel energy storage",
+      "facet": "Batteries and energy storage",
+      "known_at": 14
+    },
+    {
+      "name": "Nickel–cadmium battery",
+      "facet": "Batteries and energy storage",
+      "known_at": 13
+    },
+    {
+      "name": "Magnet",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 1
+    },
+    {
+      "name": "Bar magnet",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 4
+    },
+    {
+      "name": "Horseshoe magnet",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 2
+    },
+    {
+      "name": "Fridge magnet",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 1
+    },
+    {
+      "name": "North and south poles of a magnet",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 4
+    },
+    {
+      "name": "Nickel",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 10
+    },
+    {
+      "name": "Cobalt",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 12
+    },
+    {
+      "name": "Lodestone",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 11
+    },
+    {
+      "name": "Neodymium magnet",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 11
+    },
+    {
+      "name": "Iron filings",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 6
+    },
+    {
+      "name": "Magnetic field",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 6
+    },
+    {
+      "name": "Ferromagnetism",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 12
+    },
+    {
+      "name": "Diamagnetism",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 14
+    },
+    {
+      "name": "Levitating frog",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 13
+    },
+    {
+      "name": "Curie temperature",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 14
+    },
+    {
+      "name": "Magnetic domain",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 13
+    },
+    {
+      "name": "Ferrofluid",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 11
+    },
+    {
+      "name": "Magnetic stripe card",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 7
+    },
+    {
+      "name": "Magnetic monopole",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 14
+    },
+    {
+      "name": "Magnesia",
+      "facet": "Magnets and magnetic materials",
+      "known_at": 14
+    },
+    {
+      "name": "Compass",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 2
+    },
+    {
+      "name": "Magnetic North Pole",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 7
+    },
+    {
+      "name": "Earth's magnetic field",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 7
+    },
+    {
+      "name": "Magnetosphere",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 11
+    },
+    {
+      "name": "Geomagnetic reversal",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 12
+    },
+    {
+      "name": "Earth's outer core",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 9
+    },
+    {
+      "name": "Geodynamo",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 14
+    },
+    {
+      "name": "Magnetic declination",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 13
+    },
+    {
+      "name": "Magnetic inclination",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 14
+    },
+    {
+      "name": "Sea turtle navigation",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 8
+    },
+    {
+      "name": "South-pointing spoon",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 12
+    },
+    {
+      "name": "Mariner's compass",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 9
+    },
+    {
+      "name": "Van Allen belts",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 13
+    },
+    {
+      "name": "Solar wind",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 10
+    },
+    {
+      "name": "De Magnete",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 14
+    },
+    {
+      "name": "South Atlantic Anomaly",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 15
+    },
+    {
+      "name": "Seafloor magnetic stripes",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 14
+    },
+    {
+      "name": "Geomagnetic storm",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 12
+    },
+    {
+      "name": "Carrington Event",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 14
+    },
+    {
+      "name": "Magnetotactic bacteria",
+      "facet": "Earth's magnetism and compasses",
+      "known_at": 15
+    },
+    {
+      "name": "Electromagnet",
+      "facet": "Electromagnets and motors",
+      "known_at": 7
+    },
+    {
+      "name": "Solenoid",
+      "facet": "Electromagnets and motors",
+      "known_at": 12
+    },
+    {
+      "name": "Electric bell",
+      "facet": "Electromagnets and motors",
+      "known_at": 8
+    },
+    {
+      "name": "MRI scanner",
+      "facet": "Electromagnets and motors",
+      "known_at": 9
+    },
+    {
+      "name": "Scrapyard crane magnet",
+      "facet": "Electromagnets and motors",
+      "known_at": 4
+    },
+    {
+      "name": "Homopolar motor",
+      "facet": "Electromagnets and motors",
+      "known_at": 13
+    },
+    {
+      "name": "Induction motor",
+      "facet": "Electromagnets and motors",
+      "known_at": 13
+    },
+    {
+      "name": "Stepper motor",
+      "facet": "Electromagnets and motors",
+      "known_at": 14
+    },
+    {
+      "name": "Electric car",
+      "facet": "Electromagnets and motors",
+      "known_at": 3
+    },
+    {
+      "name": "Ørsted's compass experiment",
+      "facet": "Electromagnets and motors",
+      "known_at": 12
+    },
+    {
+      "name": "Large Hadron Collider",
+      "facet": "Electromagnets and motors",
+      "known_at": 10
+    },
+    {
+      "name": "Railgun",
+      "facet": "Electromagnets and motors",
+      "known_at": 12
+    },
+    {
+      "name": "Induction cooktop",
+      "facet": "Electromagnets and motors",
+      "known_at": 9
+    },
+    {
+      "name": "Wireless charging",
+      "facet": "Electromagnets and motors",
+      "known_at": 7
+    },
+    {
+      "name": "Hard disk drive",
+      "facet": "Electromagnets and motors",
+      "known_at": 10
+    },
+    {
+      "name": "Commutator",
+      "facet": "Electromagnets and motors",
+      "known_at": 14
+    },
+    {
+      "name": "Generator",
+      "facet": "Generating and distributing power",
+      "known_at": 6
+    },
+    {
+      "name": "Bicycle dynamo",
+      "facet": "Generating and distributing power",
+      "known_at": 7
+    },
+    {
+      "name": "Power station",
+      "facet": "Generating and distributing power",
+      "known_at": 4
+    },
+    {
+      "name": "Turbine",
+      "facet": "Generating and distributing power",
+      "known_at": 8
+    },
+    {
+      "name": "Geothermal power",
+      "facet": "Generating and distributing power",
+      "known_at": 9
+    },
+    {
+      "name": "Power grid",
+      "facet": "Generating and distributing power",
+      "known_at": 8
+    },
+    {
+      "name": "Electricity pylon",
+      "facet": "Generating and distributing power",
+      "known_at": 5
+    },
+    {
+      "name": "Substation",
+      "facet": "Generating and distributing power",
+      "known_at": 11
+    },
+    {
+      "name": "Blackout",
+      "facet": "Generating and distributing power",
+      "known_at": 5
+    },
+    {
+      "name": "Pearl Street Station",
+      "facet": "Generating and distributing power",
+      "known_at": 14
+    },
+    {
+      "name": "Thunderstorm",
+      "facet": "Lightning and electricity in nature",
+      "known_at": 2
+    },
+    {
+      "name": "Lightning rod",
+      "facet": "Lightning and electricity in nature",
+      "known_at": 7
+    },
+    {
+      "name": "Ball lightning",
+      "facet": "Lightning and electricity in nature",
+      "known_at": 12
+    },
+    {
+      "name": "Saint Elmo's fire",
+      "facet": "Lightning and electricity in nature",
+      "known_at": 13
+    },
+    {
+      "name": "Electric ray",
+      "facet": "Lightning and electricity in nature",
+      "known_at": 9
+    },
+    {
+      "name": "Platypus electroreception",
+      "facet": "Lightning and electricity in nature",
+      "known_at": 12
+    },
+    {
+      "name": "Fulgurite",
+      "facet": "Lightning and electricity in nature",
+      "known_at": 14
+    },
+    {
+      "name": "Red sprite",
+      "facet": "Lightning and electricity in nature",
+      "known_at": 14
+    },
+    {
+      "name": "Catatumbo lightning",
+      "facet": "Lightning and electricity in nature",
+      "known_at": 13
+    },
+    {
+      "name": "Northern lights",
+      "facet": "Lightning and electricity in nature",
+      "known_at": 5
+    },
+    {
+      "name": "Volcanic lightning",
+      "facet": "Lightning and electricity in nature",
+      "known_at": 11
+    },
+    {
+      "name": "Bumblebee electric sense",
+      "facet": "Lightning and electricity in nature",
+      "known_at": 14
+    },
+    {
+      "name": "Flash-to-bang counting",
+      "facet": "Lightning and electricity in nature",
+      "known_at": 5
+    },
+    {
+      "name": "Benjamin Franklin",
+      "facet": "Pioneers of electricity and magnetism",
+      "known_at": 6
+    },
+    {
+      "name": "André-Marie Ampère",
+      "facet": "Pioneers of electricity and magnetism",
+      "known_at": 11
+    },
+    {
+      "name": "Georg Ohm",
+      "facet": "Pioneers of electricity and magnetism",
+      "known_at": 11
+    },
+    {
+      "name": "Hans Christian Ørsted",
+      "facet": "Pioneers of electricity and magnetism",
+      "known_at": 13
+    },
+    {
+      "name": "Charles-Augustin de Coulomb",
+      "facet": "Pioneers of electricity and magnetism",
+      "known_at": 12
+    },
+    {
+      "name": "William Gilbert",
+      "facet": "Pioneers of electricity and magnetism",
+      "known_at": 14
+    },
+    {
+      "name": "Joseph Henry",
+      "facet": "Pioneers of electricity and magnetism",
+      "known_at": 14
+    },
+    {
+      "name": "George Westinghouse",
+      "facet": "Pioneers of electricity and magnetism",
+      "known_at": 13
+    },
+    {
+      "name": "Thales of Miletus",
+      "facet": "Pioneers of electricity and magnetism",
+      "known_at": 12
+    },
+    {
+      "name": "Lewis Latimer",
+      "facet": "Pioneers of electricity and magnetism",
+      "known_at": 14
+    },
+    {
+      "name": "Shen Kuo",
+      "facet": "Pioneers of electricity and magnetism",
+      "known_at": 15
+    },
+    {
+      "name": "Werner von Siemens",
+      "facet": "Pioneers of electricity and magnetism",
+      "known_at": 13
+    },
+    {
+      "name": "J. J. Thomson",
+      "facet": "Pioneers of electricity and magnetism",
+      "known_at": 12
+    },
+    {
+      "name": "Hertha Ayrton",
+      "facet": "Pioneers of electricity and magnetism",
+      "known_at": 15
+    },
+    {
+      "name": "Volt",
+      "facet": "Electrical units and laws",
+      "known_at": 7
+    },
+    {
+      "name": "Coulomb (unit)",
+      "facet": "Electrical units and laws",
+      "known_at": 12
+    },
+    {
+      "name": "Tesla (unit)",
+      "facet": "Electrical units and laws",
+      "known_at": 12
+    },
+    {
+      "name": "Farad",
+      "facet": "Electrical units and laws",
+      "known_at": 13
+    },
+    {
+      "name": "Henry (unit)",
+      "facet": "Electrical units and laws",
+      "known_at": 14
+    },
+    {
+      "name": "Weber",
+      "facet": "Electrical units and laws",
+      "known_at": 14
+    },
+    {
+      "name": "Milliampere-hour",
+      "facet": "Electrical units and laws",
+      "known_at": 10
+    },
+    {
+      "name": "Ohm's law",
+      "facet": "Electrical units and laws",
+      "known_at": 10
+    },
+    {
+      "name": "Coulomb's law",
+      "facet": "Electrical units and laws",
+      "known_at": 12
+    },
+    {
+      "name": "Faraday's law of induction",
+      "facet": "Electrical units and laws",
+      "known_at": 12
+    },
+    {
+      "name": "Lenz's law",
+      "facet": "Electrical units and laws",
+      "known_at": 13
+    },
+    {
+      "name": "Maxwell's equations",
+      "facet": "Electrical units and laws",
+      "known_at": 13
+    },
+    {
+      "name": "Kirchhoff's circuit laws",
+      "facet": "Electrical units and laws",
+      "known_at": 13
+    },
+    {
+      "name": "Joule heating",
+      "facet": "Electrical units and laws",
+      "known_at": 12
+    },
+    {
+      "name": "Fleming's left-hand rule",
+      "facet": "Electrical units and laws",
+      "known_at": 12
+    },
+    {
+      "name": "Lorentz force",
+      "facet": "Electrical units and laws",
+      "known_at": 14
+    },
+    {
+      "name": "Elementary charge",
+      "facet": "Electrical units and laws",
+      "known_at": 13
+    },
+    {
+      "name": "Electromagnetic induction",
+      "facet": "Electrical units and laws",
+      "known_at": 11
+    },
+    {
+      "name": "GPS",
+      "facet": "Electromagnetic waves and signals",
+      "known_at": 5
+    },
+    {
+      "name": "Morse code",
+      "facet": "Electromagnetic waves and signals",
+      "known_at": 5
+    },
+    {
+      "name": "Electric telegraph",
+      "facet": "Electromagnetic waves and signals",
+      "known_at": 9
+    },
+    {
+      "name": "Microwave oven",
+      "facet": "Electromagnetic waves and signals",
+      "known_at": 2
+    },
+    {
+      "name": "Cell tower",
+      "facet": "Electromagnetic waves and signals",
+      "known_at": 6
+    },
+    {
+      "name": "AM and FM radio",
+      "facet": "Electromagnetic waves and signals",
+      "known_at": 9
+    },
+    {
+      "name": "Transatlantic telegraph cable",
+      "facet": "Electromagnetic waves and signals",
+      "known_at": 13
+    }
+  ]
+}

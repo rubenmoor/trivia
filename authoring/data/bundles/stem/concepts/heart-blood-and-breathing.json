@@ -1,0 +1,1082 @@
+{
+  "subcategory": "heart-blood-and-breathing",
+  "facets": [
+    "Heart anatomy and heartbeat",
+    "Blood vessels and circulation",
+    "Blood components and blood types",
+    "Lungs and the airways",
+    "Breathing mechanics and gas exchange",
+    "Pulse, blood pressure and fitness",
+    "Heart and lung health problems",
+    "Medical tools and treatments",
+    "Discoveries and pioneers in cardiology",
+    "Animal hearts, blood and breathing compared",
+    "Breathing in extreme places",
+    "Everyday reflexes: hiccups, yawns, sneezes"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 5,
+      "record": 3,
+      "origin": 2,
+      "made_of": 5,
+      "purpose": 5,
+      "cause_effect": 5,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 4,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 5,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Heartbeat",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 1
+    },
+    {
+      "name": "Atrium",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 9
+    },
+    {
+      "name": "Ventricle",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 9
+    },
+    {
+      "name": "Left ventricle",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 11
+    },
+    {
+      "name": "Heart valve",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 8
+    },
+    {
+      "name": "Mitral valve",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 13
+    },
+    {
+      "name": "Tricuspid valve",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 13
+    },
+    {
+      "name": "Aortic valve",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 13
+    },
+    {
+      "name": "Septum",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 11
+    },
+    {
+      "name": "Sinoatrial node",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 13
+    },
+    {
+      "name": "Atrioventricular node",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 14
+    },
+    {
+      "name": "Pericardium",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 13
+    },
+    {
+      "name": "Myocardium",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 12
+    },
+    {
+      "name": "Systole",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 12
+    },
+    {
+      "name": "Diastole",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 12
+    },
+    {
+      "name": "Lub-dub",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 6
+    },
+    {
+      "name": "Purkinje fibers",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 14
+    },
+    {
+      "name": "Bundle of His",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 15
+    },
+    {
+      "name": "Chordae tendineae",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 15
+    },
+    {
+      "name": "Cardiac muscle",
+      "facet": "Heart anatomy and heartbeat",
+      "known_at": 8
+    },
+    {
+      "name": "Artery",
+      "facet": "Blood vessels and circulation",
+      "known_at": 6
+    },
+    {
+      "name": "Vein",
+      "facet": "Blood vessels and circulation",
+      "known_at": 4
+    },
+    {
+      "name": "Capillary",
+      "facet": "Blood vessels and circulation",
+      "known_at": 8
+    },
+    {
+      "name": "Aorta",
+      "facet": "Blood vessels and circulation",
+      "known_at": 9
+    },
+    {
+      "name": "Vena cava",
+      "facet": "Blood vessels and circulation",
+      "known_at": 12
+    },
+    {
+      "name": "Pulmonary artery",
+      "facet": "Blood vessels and circulation",
+      "known_at": 12
+    },
+    {
+      "name": "Pulmonary vein",
+      "facet": "Blood vessels and circulation",
+      "known_at": 12
+    },
+    {
+      "name": "Coronary artery",
+      "facet": "Blood vessels and circulation",
+      "known_at": 12
+    },
+    {
+      "name": "Carotid artery",
+      "facet": "Blood vessels and circulation",
+      "known_at": 11
+    },
+    {
+      "name": "Jugular vein",
+      "facet": "Blood vessels and circulation",
+      "known_at": 10
+    },
+    {
+      "name": "Femoral artery",
+      "facet": "Blood vessels and circulation",
+      "known_at": 12
+    },
+    {
+      "name": "Venous valves",
+      "facet": "Blood vessels and circulation",
+      "known_at": 12
+    },
+    {
+      "name": "Pulmonary circulation",
+      "facet": "Blood vessels and circulation",
+      "known_at": 11
+    },
+    {
+      "name": "Systemic circulation",
+      "facet": "Blood vessels and circulation",
+      "known_at": 12
+    },
+    {
+      "name": "Double circulation",
+      "facet": "Blood vessels and circulation",
+      "known_at": 11
+    },
+    {
+      "name": "Hepatic portal vein",
+      "facet": "Blood vessels and circulation",
+      "known_at": 14
+    },
+    {
+      "name": "Lymphatic system",
+      "facet": "Blood vessels and circulation",
+      "known_at": 11
+    },
+    {
+      "name": "Circle of Willis",
+      "facet": "Blood vessels and circulation",
+      "known_at": 15
+    },
+    {
+      "name": "Endothelium",
+      "facet": "Blood vessels and circulation",
+      "known_at": 14
+    },
+    {
+      "name": "Blue-looking veins",
+      "facet": "Blood vessels and circulation",
+      "known_at": 6
+    },
+    {
+      "name": "Plasma",
+      "facet": "Blood components and blood types",
+      "known_at": 9
+    },
+    {
+      "name": "Hemoglobin",
+      "facet": "Blood components and blood types",
+      "known_at": 10
+    },
+    {
+      "name": "Iron",
+      "facet": "Blood components and blood types",
+      "known_at": 7
+    },
+    {
+      "name": "ABO blood group system",
+      "facet": "Blood components and blood types",
+      "known_at": 10
+    },
+    {
+      "name": "Blood type O",
+      "facet": "Blood components and blood types",
+      "known_at": 8
+    },
+    {
+      "name": "Blood type AB",
+      "facet": "Blood components and blood types",
+      "known_at": 10
+    },
+    {
+      "name": "Rh factor",
+      "facet": "Blood components and blood types",
+      "known_at": 12
+    },
+    {
+      "name": "Universal donor",
+      "facet": "Blood components and blood types",
+      "known_at": 10
+    },
+    {
+      "name": "Universal recipient",
+      "facet": "Blood components and blood types",
+      "known_at": 11
+    },
+    {
+      "name": "Bone marrow",
+      "facet": "Blood components and blood types",
+      "known_at": 9
+    },
+    {
+      "name": "Antibody",
+      "facet": "Blood components and blood types",
+      "known_at": 10
+    },
+    {
+      "name": "Blood clotting",
+      "facet": "Blood components and blood types",
+      "known_at": 6
+    },
+    {
+      "name": "Fibrin",
+      "facet": "Blood components and blood types",
+      "known_at": 14
+    },
+    {
+      "name": "Lymphocyte",
+      "facet": "Blood components and blood types",
+      "known_at": 13
+    },
+    {
+      "name": "Spleen",
+      "facet": "Blood components and blood types",
+      "known_at": 10
+    },
+    {
+      "name": "Hematocrit",
+      "facet": "Blood components and blood types",
+      "known_at": 14
+    },
+    {
+      "name": "Blood volume",
+      "facet": "Blood components and blood types",
+      "known_at": 7
+    },
+    {
+      "name": "Lungs",
+      "facet": "Lungs and the airways",
+      "known_at": 2
+    },
+    {
+      "name": "Trachea",
+      "facet": "Lungs and the airways",
+      "known_at": 7
+    },
+    {
+      "name": "Bronchi",
+      "facet": "Lungs and the airways",
+      "known_at": 10
+    },
+    {
+      "name": "Bronchioles",
+      "facet": "Lungs and the airways",
+      "known_at": 12
+    },
+    {
+      "name": "Alveoli",
+      "facet": "Lungs and the airways",
+      "known_at": 10
+    },
+    {
+      "name": "Larynx",
+      "facet": "Lungs and the airways",
+      "known_at": 10
+    },
+    {
+      "name": "Epiglottis",
+      "facet": "Lungs and the airways",
+      "known_at": 12
+    },
+    {
+      "name": "Pharynx",
+      "facet": "Lungs and the airways",
+      "known_at": 12
+    },
+    {
+      "name": "Vocal cords",
+      "facet": "Lungs and the airways",
+      "known_at": 6
+    },
+    {
+      "name": "Pleura",
+      "facet": "Lungs and the airways",
+      "known_at": 13
+    },
+    {
+      "name": "Lung lobes",
+      "facet": "Lungs and the airways",
+      "known_at": 12
+    },
+    {
+      "name": "Mucus",
+      "facet": "Lungs and the airways",
+      "known_at": 4
+    },
+    {
+      "name": "Sinuses",
+      "facet": "Lungs and the airways",
+      "known_at": 10
+    },
+    {
+      "name": "Rib cage",
+      "facet": "Lungs and the airways",
+      "known_at": 4
+    },
+    {
+      "name": "Intercostal muscles",
+      "facet": "Lungs and the airways",
+      "known_at": 13
+    },
+    {
+      "name": "Surfactant",
+      "facet": "Lungs and the airways",
+      "known_at": 14
+    },
+    {
+      "name": "Adam's apple",
+      "facet": "Lungs and the airways",
+      "known_at": 7
+    },
+    {
+      "name": "Inhalation",
+      "facet": "Breathing mechanics and gas exchange",
+      "known_at": 5
+    },
+    {
+      "name": "Exhalation",
+      "facet": "Breathing mechanics and gas exchange",
+      "known_at": 5
+    },
+    {
+      "name": "Diffusion",
+      "facet": "Breathing mechanics and gas exchange",
+      "known_at": 11
+    },
+    {
+      "name": "Gas exchange",
+      "facet": "Breathing mechanics and gas exchange",
+      "known_at": 10
+    },
+    {
+      "name": "Tidal volume",
+      "facet": "Breathing mechanics and gas exchange",
+      "known_at": 14
+    },
+    {
+      "name": "Vital capacity",
+      "facet": "Breathing mechanics and gas exchange",
+      "known_at": 12
+    },
+    {
+      "name": "Breathing rate",
+      "facet": "Breathing mechanics and gas exchange",
+      "known_at": 7
+    },
+    {
+      "name": "Medulla oblongata",
+      "facet": "Breathing mechanics and gas exchange",
+      "known_at": 13
+    },
+    {
+      "name": "Hyperventilation",
+      "facet": "Breathing mechanics and gas exchange",
+      "known_at": 11
+    },
+    {
+      "name": "Water vapor in breath",
+      "facet": "Breathing mechanics and gas exchange",
+      "known_at": 4
+    },
+    {
+      "name": "Residual volume",
+      "facet": "Breathing mechanics and gas exchange",
+      "known_at": 14
+    },
+    {
+      "name": "Bicarbonate",
+      "facet": "Breathing mechanics and gas exchange",
+      "known_at": 14
+    },
+    {
+      "name": "Breath-holding",
+      "facet": "Breathing mechanics and gas exchange",
+      "known_at": 4
+    },
+    {
+      "name": "Pulse",
+      "facet": "Pulse, blood pressure and fitness",
+      "known_at": 5
+    },
+    {
+      "name": "Radial pulse",
+      "facet": "Pulse, blood pressure and fitness",
+      "known_at": 8
+    },
+    {
+      "name": "Resting heart rate",
+      "facet": "Pulse, blood pressure and fitness",
+      "known_at": 8
+    },
+    {
+      "name": "Maximum heart rate",
+      "facet": "Pulse, blood pressure and fitness",
+      "known_at": 11
+    },
+    {
+      "name": "Blood pressure",
+      "facet": "Pulse, blood pressure and fitness",
+      "known_at": 7
+    },
+    {
+      "name": "Systolic pressure",
+      "facet": "Pulse, blood pressure and fitness",
+      "known_at": 12
+    },
+    {
+      "name": "Diastolic pressure",
+      "facet": "Pulse, blood pressure and fitness",
+      "known_at": 12
+    },
+    {
+      "name": "Millimeters of mercury",
+      "facet": "Pulse, blood pressure and fitness",
+      "known_at": 12
+    },
+    {
+      "name": "Aerobic exercise",
+      "facet": "Pulse, blood pressure and fitness",
+      "known_at": 9
+    },
+    {
+      "name": "Anaerobic exercise",
+      "facet": "Pulse, blood pressure and fitness",
+      "known_at": 11
+    },
+    {
+      "name": "VO2 max",
+      "facet": "Pulse, blood pressure and fitness",
+      "known_at": 13
+    },
+    {
+      "name": "Heart rate monitor",
+      "facet": "Pulse, blood pressure and fitness",
+      "known_at": 7
+    },
+    {
+      "name": "Athlete's heart",
+      "facet": "Pulse, blood pressure and fitness",
+      "known_at": 13
+    },
+    {
+      "name": "Bradycardia",
+      "facet": "Pulse, blood pressure and fitness",
+      "known_at": 13
+    },
+    {
+      "name": "Tachycardia",
+      "facet": "Pulse, blood pressure and fitness",
+      "known_at": 12
+    },
+    {
+      "name": "Side stitch",
+      "facet": "Pulse, blood pressure and fitness",
+      "known_at": 6
+    },
+    {
+      "name": "Warm-up",
+      "facet": "Pulse, blood pressure and fitness",
+      "known_at": 4
+    },
+    {
+      "name": "Heart attack",
+      "facet": "Heart and lung health problems",
+      "known_at": 7
+    },
+    {
+      "name": "Stroke",
+      "facet": "Heart and lung health problems",
+      "known_at": 9
+    },
+    {
+      "name": "Asthma",
+      "facet": "Heart and lung health problems",
+      "known_at": 5
+    },
+    {
+      "name": "Pneumonia",
+      "facet": "Heart and lung health problems",
+      "known_at": 9
+    },
+    {
+      "name": "Bronchitis",
+      "facet": "Heart and lung health problems",
+      "known_at": 10
+    },
+    {
+      "name": "Arrhythmia",
+      "facet": "Heart and lung health problems",
+      "known_at": 12
+    },
+    {
+      "name": "Atrial fibrillation",
+      "facet": "Heart and lung health problems",
+      "known_at": 13
+    },
+    {
+      "name": "Hypertension",
+      "facet": "Heart and lung health problems",
+      "known_at": 11
+    },
+    {
+      "name": "Atherosclerosis",
+      "facet": "Heart and lung health problems",
+      "known_at": 13
+    },
+    {
+      "name": "Cholesterol",
+      "facet": "Heart and lung health problems",
+      "known_at": 10
+    },
+    {
+      "name": "Anemia",
+      "facet": "Heart and lung health problems",
+      "known_at": 10
+    },
+    {
+      "name": "Sickle cell disease",
+      "facet": "Heart and lung health problems",
+      "known_at": 12
+    },
+    {
+      "name": "Heart murmur",
+      "facet": "Heart and lung health problems",
+      "known_at": 12
+    },
+    {
+      "name": "Emphysema",
+      "facet": "Heart and lung health problems",
+      "known_at": 13
+    },
+    {
+      "name": "Varicose veins",
+      "facet": "Heart and lung health problems",
+      "known_at": 11
+    },
+    {
+      "name": "Leukemia",
+      "facet": "Heart and lung health problems",
+      "known_at": 11
+    },
+    {
+      "name": "Stethoscope",
+      "facet": "Medical tools and treatments",
+      "known_at": 3
+    },
+    {
+      "name": "Sphygmomanometer",
+      "facet": "Medical tools and treatments",
+      "known_at": 9
+    },
+    {
+      "name": "Electrocardiogram",
+      "facet": "Medical tools and treatments",
+      "known_at": 10
+    },
+    {
+      "name": "Pacemaker",
+      "facet": "Medical tools and treatments",
+      "known_at": 10
+    },
+    {
+      "name": "Defibrillator",
+      "facet": "Medical tools and treatments",
+      "known_at": 8
+    },
+    {
+      "name": "Pulse oximeter",
+      "facet": "Medical tools and treatments",
+      "known_at": 10
+    },
+    {
+      "name": "Inhaler",
+      "facet": "Medical tools and treatments",
+      "known_at": 5
+    },
+    {
+      "name": "Spirometer",
+      "facet": "Medical tools and treatments",
+      "known_at": 13
+    },
+    {
+      "name": "CPR",
+      "facet": "Medical tools and treatments",
+      "known_at": 8
+    },
+    {
+      "name": "Heart transplant",
+      "facet": "Medical tools and treatments",
+      "known_at": 9
+    },
+    {
+      "name": "Blood transfusion",
+      "facet": "Medical tools and treatments",
+      "known_at": 9
+    },
+    {
+      "name": "Blood donation",
+      "facet": "Medical tools and treatments",
+      "known_at": 6
+    },
+    {
+      "name": "Stent",
+      "facet": "Medical tools and treatments",
+      "known_at": 12
+    },
+    {
+      "name": "Bypass surgery",
+      "facet": "Medical tools and treatments",
+      "known_at": 12
+    },
+    {
+      "name": "Ventilator",
+      "facet": "Medical tools and treatments",
+      "known_at": 10
+    },
+    {
+      "name": "Iron lung",
+      "facet": "Medical tools and treatments",
+      "known_at": 13
+    },
+    {
+      "name": "Heart-lung machine",
+      "facet": "Medical tools and treatments",
+      "known_at": 12
+    },
+    {
+      "name": "Artificial heart",
+      "facet": "Medical tools and treatments",
+      "known_at": 11
+    },
+    {
+      "name": "Aspirin",
+      "facet": "Medical tools and treatments",
+      "known_at": 10
+    },
+    {
+      "name": "Echocardiogram",
+      "facet": "Medical tools and treatments",
+      "known_at": 13
+    },
+    {
+      "name": "Nebulizer",
+      "facet": "Medical tools and treatments",
+      "known_at": 11
+    },
+    {
+      "name": "Heimlich maneuver",
+      "facet": "Medical tools and treatments",
+      "known_at": 9
+    },
+    {
+      "name": "William Harvey",
+      "facet": "Discoveries and pioneers in cardiology",
+      "known_at": 12
+    },
+    {
+      "name": "Galen",
+      "facet": "Discoveries and pioneers in cardiology",
+      "known_at": 13
+    },
+    {
+      "name": "Ibn al-Nafis",
+      "facet": "Discoveries and pioneers in cardiology",
+      "known_at": 14
+    },
+    {
+      "name": "René Laennec",
+      "facet": "Discoveries and pioneers in cardiology",
+      "known_at": 13
+    },
+    {
+      "name": "Karl Landsteiner",
+      "facet": "Discoveries and pioneers in cardiology",
+      "known_at": 13
+    },
+    {
+      "name": "Christiaan Barnard",
+      "facet": "Discoveries and pioneers in cardiology",
+      "known_at": 12
+    },
+    {
+      "name": "Willem Einthoven",
+      "facet": "Discoveries and pioneers in cardiology",
+      "known_at": 14
+    },
+    {
+      "name": "Marcello Malpighi",
+      "facet": "Discoveries and pioneers in cardiology",
+      "known_at": 14
+    },
+    {
+      "name": "Michael Servetus",
+      "facet": "Discoveries and pioneers in cardiology",
+      "known_at": 14
+    },
+    {
+      "name": "Andreas Vesalius",
+      "facet": "Discoveries and pioneers in cardiology",
+      "known_at": 13
+    },
+    {
+      "name": "Charles Drew",
+      "facet": "Discoveries and pioneers in cardiology",
+      "known_at": 13
+    },
+    {
+      "name": "Daniel Hale Williams",
+      "facet": "Discoveries and pioneers in cardiology",
+      "known_at": 14
+    },
+    {
+      "name": "Werner Forssmann",
+      "facet": "Discoveries and pioneers in cardiology",
+      "known_at": 15
+    },
+    {
+      "name": "Antoine Lavoisier",
+      "facet": "Discoveries and pioneers in cardiology",
+      "known_at": 12
+    },
+    {
+      "name": "Henry Heimlich",
+      "facet": "Discoveries and pioneers in cardiology",
+      "known_at": 12
+    },
+    {
+      "name": "Wilson Greatbatch",
+      "facet": "Discoveries and pioneers in cardiology",
+      "known_at": 15
+    },
+    {
+      "name": "Scipione Riva-Rocci",
+      "facet": "Discoveries and pioneers in cardiology",
+      "known_at": 15
+    },
+    {
+      "name": "Blue whale heart",
+      "facet": "Animal hearts, blood and breathing compared",
+      "known_at": 4
+    },
+    {
+      "name": "Frog",
+      "facet": "Animal hearts, blood and breathing compared",
+      "known_at": 5
+    },
+    {
+      "name": "Insect tracheae",
+      "facet": "Animal hearts, blood and breathing compared",
+      "known_at": 13
+    },
+    {
+      "name": "Icefish",
+      "facet": "Animal hearts, blood and breathing compared",
+      "known_at": 14
+    },
+    {
+      "name": "Bird air sacs",
+      "facet": "Animal hearts, blood and breathing compared",
+      "known_at": 13
+    },
+    {
+      "name": "Hemocyanin",
+      "facet": "Animal hearts, blood and breathing compared",
+      "known_at": 14
+    },
+    {
+      "name": "Etruscan shrew",
+      "facet": "Animal hearts, blood and breathing compared",
+      "known_at": 14
+    },
+    {
+      "name": "Fish two-chambered heart",
+      "facet": "Animal hearts, blood and breathing compared",
+      "known_at": 12
+    },
+    {
+      "name": "Altitude sickness",
+      "facet": "Breathing in extreme places",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Everest",
+      "facet": "Breathing in extreme places",
+      "known_at": 4
+    },
+    {
+      "name": "Death zone",
+      "facet": "Breathing in extreme places",
+      "known_at": 12
+    },
+    {
+      "name": "Decompression sickness",
+      "facet": "Breathing in extreme places",
+      "known_at": 11
+    },
+    {
+      "name": "Freediving",
+      "facet": "Breathing in extreme places",
+      "known_at": 10
+    },
+    {
+      "name": "Snorkel",
+      "facet": "Breathing in extreme places",
+      "known_at": 3
+    },
+    {
+      "name": "Oxygen tank",
+      "facet": "Breathing in extreme places",
+      "known_at": 4
+    },
+    {
+      "name": "Spacesuit",
+      "facet": "Breathing in extreme places",
+      "known_at": 3
+    },
+    {
+      "name": "International Space Station",
+      "facet": "Breathing in extreme places",
+      "known_at": 6
+    },
+    {
+      "name": "Sherpa",
+      "facet": "Breathing in extreme places",
+      "known_at": 10
+    },
+    {
+      "name": "Airplane oxygen mask",
+      "facet": "Breathing in extreme places",
+      "known_at": 5
+    },
+    {
+      "name": "Cabin pressure",
+      "facet": "Breathing in extreme places",
+      "known_at": 10
+    },
+    {
+      "name": "Hypoxia",
+      "facet": "Breathing in extreme places",
+      "known_at": 13
+    },
+    {
+      "name": "Nitrogen narcosis",
+      "facet": "Breathing in extreme places",
+      "known_at": 14
+    },
+    {
+      "name": "Bajau people",
+      "facet": "Breathing in extreme places",
+      "known_at": 14
+    },
+    {
+      "name": "Mammalian diving reflex",
+      "facet": "Breathing in extreme places",
+      "known_at": 14
+    },
+    {
+      "name": "Hyperbaric chamber",
+      "facet": "Breathing in extreme places",
+      "known_at": 13
+    },
+    {
+      "name": "Tibetan Plateau",
+      "facet": "Breathing in extreme places",
+      "known_at": 11
+    },
+    {
+      "name": "Carbon dioxide scrubber",
+      "facet": "Breathing in extreme places",
+      "known_at": 13
+    },
+    {
+      "name": "Hiccup",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 1
+    },
+    {
+      "name": "Yawn",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 1
+    },
+    {
+      "name": "Sneeze",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 1
+    },
+    {
+      "name": "Cough",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 1
+    },
+    {
+      "name": "Contagious yawning",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 5
+    },
+    {
+      "name": "Photic sneeze reflex",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 12
+    },
+    {
+      "name": "Gag reflex",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 9
+    },
+    {
+      "name": "Sigh",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 4
+    },
+    {
+      "name": "Snoring",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 2
+    },
+    {
+      "name": "Laughter",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 2
+    },
+    {
+      "name": "Gasp",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 5
+    },
+    {
+      "name": "Burp",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 2
+    },
+    {
+      "name": "Glottis",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 14
+    },
+    {
+      "name": "Phrenic nerve",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 15
+    },
+    {
+      "name": "Vagus nerve",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 13
+    },
+    {
+      "name": "Sleep apnea",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 12
+    },
+    {
+      "name": "Wheeze",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 8
+    },
+    {
+      "name": "Bless you",
+      "facet": "Everyday reflexes: hiccups, yawns, sneezes",
+      "known_at": 3
+    }
+  ]
+}

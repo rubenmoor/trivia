@@ -1,0 +1,1142 @@
+{
+  "subcategory": "plant-science",
+  "facets": [
+    "Photosynthesis and light",
+    "Roots, water and nutrients",
+    "Leaves, stems and plant parts",
+    "Flowers and pollination",
+    "Seeds, fruits and dispersal",
+    "Germination and plant growth",
+    "Plant movements and senses",
+    "Plant defenses and toxins",
+    "Carnivorous and parasitic plants",
+    "Plant cells and pigments",
+    "Plant life cycles and reproduction",
+    "Plant scientists and experiments"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 2,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 5,
+      "sequence": 4,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 4,
+      "colombia": 2,
+      "pop_culture": 2,
+      "popular_science": 4,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 2,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Oxygen",
+      "facet": "Photosynthesis and light",
+      "known_at": 3
+    },
+    {
+      "name": "Starch",
+      "facet": "Photosynthesis and light",
+      "known_at": 7
+    },
+    {
+      "name": "Light-dependent reactions",
+      "facet": "Photosynthesis and light",
+      "known_at": 13
+    },
+    {
+      "name": "Calvin cycle",
+      "facet": "Photosynthesis and light",
+      "known_at": 13
+    },
+    {
+      "name": "Rubisco",
+      "facet": "Photosynthesis and light",
+      "known_at": 14
+    },
+    {
+      "name": "C4 photosynthesis",
+      "facet": "Photosynthesis and light",
+      "known_at": 14
+    },
+    {
+      "name": "CAM photosynthesis",
+      "facet": "Photosynthesis and light",
+      "known_at": 14
+    },
+    {
+      "name": "ATP",
+      "facet": "Photosynthesis and light",
+      "known_at": 12
+    },
+    {
+      "name": "Photolysis",
+      "facet": "Photosynthesis and light",
+      "known_at": 14
+    },
+    {
+      "name": "Producer",
+      "facet": "Photosynthesis and light",
+      "known_at": 6
+    },
+    {
+      "name": "Autotroph",
+      "facet": "Photosynthesis and light",
+      "known_at": 11
+    },
+    {
+      "name": "Grow light",
+      "facet": "Photosynthesis and light",
+      "known_at": 8
+    },
+    {
+      "name": "Elodea",
+      "facet": "Photosynthesis and light",
+      "known_at": 11
+    },
+    {
+      "name": "Green light",
+      "facet": "Photosynthesis and light",
+      "known_at": 8
+    },
+    {
+      "name": "Iodine starch test",
+      "facet": "Photosynthesis and light",
+      "known_at": 10
+    },
+    {
+      "name": "Carbon fixation",
+      "facet": "Photosynthesis and light",
+      "known_at": 13
+    },
+    {
+      "name": "Taproot",
+      "facet": "Roots, water and nutrients",
+      "known_at": 8
+    },
+    {
+      "name": "Fibrous root",
+      "facet": "Roots, water and nutrients",
+      "known_at": 10
+    },
+    {
+      "name": "Root hair",
+      "facet": "Roots, water and nutrients",
+      "known_at": 9
+    },
+    {
+      "name": "Root cap",
+      "facet": "Roots, water and nutrients",
+      "known_at": 12
+    },
+    {
+      "name": "Transpiration",
+      "facet": "Roots, water and nutrients",
+      "known_at": 10
+    },
+    {
+      "name": "Osmosis",
+      "facet": "Roots, water and nutrients",
+      "known_at": 10
+    },
+    {
+      "name": "Capillary action",
+      "facet": "Roots, water and nutrients",
+      "known_at": 11
+    },
+    {
+      "name": "Root nodule",
+      "facet": "Roots, water and nutrients",
+      "known_at": 12
+    },
+    {
+      "name": "Fertilizer",
+      "facet": "Roots, water and nutrients",
+      "known_at": 5
+    },
+    {
+      "name": "Nitrogen",
+      "facet": "Roots, water and nutrients",
+      "known_at": 8
+    },
+    {
+      "name": "Banyan tree",
+      "facet": "Roots, water and nutrients",
+      "known_at": 8
+    },
+    {
+      "name": "Hydroponics",
+      "facet": "Roots, water and nutrients",
+      "known_at": 9
+    },
+    {
+      "name": "Wilting",
+      "facet": "Roots, water and nutrients",
+      "known_at": 3
+    },
+    {
+      "name": "Sap",
+      "facet": "Roots, water and nutrients",
+      "known_at": 5
+    },
+    {
+      "name": "Maple syrup",
+      "facet": "Roots, water and nutrients",
+      "known_at": 4
+    },
+    {
+      "name": "Carrot",
+      "facet": "Roots, water and nutrients",
+      "known_at": 1
+    },
+    {
+      "name": "Cohesion-tension theory",
+      "facet": "Roots, water and nutrients",
+      "known_at": 14
+    },
+    {
+      "name": "Guttation",
+      "facet": "Roots, water and nutrients",
+      "known_at": 14
+    },
+    {
+      "name": "Stomata",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 10
+    },
+    {
+      "name": "Leaf vein",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 5
+    },
+    {
+      "name": "Petiole",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 12
+    },
+    {
+      "name": "Bark",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 2
+    },
+    {
+      "name": "Tree rings",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 4
+    },
+    {
+      "name": "Cambium",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 12
+    },
+    {
+      "name": "Sapwood",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 13
+    },
+    {
+      "name": "Thorn",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 3
+    },
+    {
+      "name": "Cactus spine",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 4
+    },
+    {
+      "name": "Tendril",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 8
+    },
+    {
+      "name": "Bulb",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 6
+    },
+    {
+      "name": "Tuber",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 9
+    },
+    {
+      "name": "Potato",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 1
+    },
+    {
+      "name": "Rhizome",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 12
+    },
+    {
+      "name": "Node",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 12
+    },
+    {
+      "name": "Compound leaf",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 11
+    },
+    {
+      "name": "Deciduous tree",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 8
+    },
+    {
+      "name": "Evergreen",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 7
+    },
+    {
+      "name": "Leaf cuticle",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 12
+    },
+    {
+      "name": "Victoria amazonica",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 10
+    },
+    {
+      "name": "Succulent",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 7
+    },
+    {
+      "name": "Aloe vera",
+      "facet": "Leaves, stems and plant parts",
+      "known_at": 5
+    },
+    {
+      "name": "Petal",
+      "facet": "Flowers and pollination",
+      "known_at": 2
+    },
+    {
+      "name": "Stamen",
+      "facet": "Flowers and pollination",
+      "known_at": 9
+    },
+    {
+      "name": "Anther",
+      "facet": "Flowers and pollination",
+      "known_at": 11
+    },
+    {
+      "name": "Sepal",
+      "facet": "Flowers and pollination",
+      "known_at": 10
+    },
+    {
+      "name": "Ovary",
+      "facet": "Flowers and pollination",
+      "known_at": 11
+    },
+    {
+      "name": "Pollen",
+      "facet": "Flowers and pollination",
+      "known_at": 4
+    },
+    {
+      "name": "Honeybee",
+      "facet": "Flowers and pollination",
+      "known_at": 1
+    },
+    {
+      "name": "Bat pollination",
+      "facet": "Flowers and pollination",
+      "known_at": 10
+    },
+    {
+      "name": "Wind pollination",
+      "facet": "Flowers and pollination",
+      "known_at": 9
+    },
+    {
+      "name": "Hay fever",
+      "facet": "Flowers and pollination",
+      "known_at": 8
+    },
+    {
+      "name": "Self-pollination",
+      "facet": "Flowers and pollination",
+      "known_at": 11
+    },
+    {
+      "name": "Cross-pollination",
+      "facet": "Flowers and pollination",
+      "known_at": 11
+    },
+    {
+      "name": "Rafflesia arnoldii",
+      "facet": "Flowers and pollination",
+      "known_at": 10
+    },
+    {
+      "name": "Titan arum",
+      "facet": "Flowers and pollination",
+      "known_at": 10
+    },
+    {
+      "name": "Buzz pollination",
+      "facet": "Flowers and pollination",
+      "known_at": 14
+    },
+    {
+      "name": "Darwin's orchid",
+      "facet": "Flowers and pollination",
+      "known_at": 14
+    },
+    {
+      "name": "Vanilla",
+      "facet": "Flowers and pollination",
+      "known_at": 13
+    },
+    {
+      "name": "Dandelion",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 2
+    },
+    {
+      "name": "Coconut",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 2
+    },
+    {
+      "name": "Samara",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 8
+    },
+    {
+      "name": "Burdock",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 10
+    },
+    {
+      "name": "Strawberry",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 5
+    },
+    {
+      "name": "Tumbleweed",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 6
+    },
+    {
+      "name": "Squirting cucumber",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 13
+    },
+    {
+      "name": "Seed coat",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 8
+    },
+    {
+      "name": "Endosperm",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 12
+    },
+    {
+      "name": "Seed dormancy",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 12
+    },
+    {
+      "name": "Avocado",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 3
+    },
+    {
+      "name": "Botanical berry",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 10
+    },
+    {
+      "name": "Nut",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 4
+    },
+    {
+      "name": "Drupe",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 13
+    },
+    {
+      "name": "Coco de mer",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 12
+    },
+    {
+      "name": "Judean date palm",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 13
+    },
+    {
+      "name": "Pea pod",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 3
+    },
+    {
+      "name": "Peanut",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 4
+    },
+    {
+      "name": "Tomato",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 5
+    },
+    {
+      "name": "Durian",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 8
+    },
+    {
+      "name": "Serotiny",
+      "facet": "Seeds, fruits and dispersal",
+      "known_at": 14
+    },
+    {
+      "name": "Germination",
+      "facet": "Germination and plant growth",
+      "known_at": 6
+    },
+    {
+      "name": "Seedling",
+      "facet": "Germination and plant growth",
+      "known_at": 5
+    },
+    {
+      "name": "Radicle",
+      "facet": "Germination and plant growth",
+      "known_at": 12
+    },
+    {
+      "name": "Plumule",
+      "facet": "Germination and plant growth",
+      "known_at": 13
+    },
+    {
+      "name": "Auxin",
+      "facet": "Germination and plant growth",
+      "known_at": 12
+    },
+    {
+      "name": "Gibberellin",
+      "facet": "Germination and plant growth",
+      "known_at": 14
+    },
+    {
+      "name": "Ethylene",
+      "facet": "Germination and plant growth",
+      "known_at": 12
+    },
+    {
+      "name": "Meristem",
+      "facet": "Germination and plant growth",
+      "known_at": 13
+    },
+    {
+      "name": "Bamboo",
+      "facet": "Germination and plant growth",
+      "known_at": 5
+    },
+    {
+      "name": "Bean sprout",
+      "facet": "Germination and plant growth",
+      "known_at": 4
+    },
+    {
+      "name": "Etiolation",
+      "facet": "Germination and plant growth",
+      "known_at": 14
+    },
+    {
+      "name": "Photoperiodism",
+      "facet": "Germination and plant growth",
+      "known_at": 14
+    },
+    {
+      "name": "Vernalization",
+      "facet": "Germination and plant growth",
+      "known_at": 15
+    },
+    {
+      "name": "Bonsai",
+      "facet": "Germination and plant growth",
+      "known_at": 6
+    },
+    {
+      "name": "Grafting",
+      "facet": "Germination and plant growth",
+      "known_at": 11
+    },
+    {
+      "name": "Plant cutting",
+      "facet": "Germination and plant growth",
+      "known_at": 8
+    },
+    {
+      "name": "Secondary growth",
+      "facet": "Germination and plant growth",
+      "known_at": 14
+    },
+    {
+      "name": "Phototropism",
+      "facet": "Plant movements and senses",
+      "known_at": 11
+    },
+    {
+      "name": "Gravitropism",
+      "facet": "Plant movements and senses",
+      "known_at": 12
+    },
+    {
+      "name": "Heliotropism",
+      "facet": "Plant movements and senses",
+      "known_at": 12
+    },
+    {
+      "name": "Thigmotropism",
+      "facet": "Plant movements and senses",
+      "known_at": 13
+    },
+    {
+      "name": "Hydrotropism",
+      "facet": "Plant movements and senses",
+      "known_at": 13
+    },
+    {
+      "name": "Nyctinasty",
+      "facet": "Plant movements and senses",
+      "known_at": 14
+    },
+    {
+      "name": "Mimosa pudica",
+      "facet": "Plant movements and senses",
+      "known_at": 7
+    },
+    {
+      "name": "Prayer plant",
+      "facet": "Plant movements and senses",
+      "known_at": 10
+    },
+    {
+      "name": "Telegraph plant",
+      "facet": "Plant movements and senses",
+      "known_at": 14
+    },
+    {
+      "name": "Flower clock",
+      "facet": "Plant movements and senses",
+      "known_at": 13
+    },
+    {
+      "name": "Morning glory",
+      "facet": "Plant movements and senses",
+      "known_at": 9
+    },
+    {
+      "name": "Touch-me-not",
+      "facet": "Plant movements and senses",
+      "known_at": 10
+    },
+    {
+      "name": "Trigger hair",
+      "facet": "Plant movements and senses",
+      "known_at": 11
+    },
+    {
+      "name": "Plant chemical signals",
+      "facet": "Plant movements and senses",
+      "known_at": 12
+    },
+    {
+      "name": "Pulvinus",
+      "facet": "Plant movements and senses",
+      "known_at": 14
+    },
+    {
+      "name": "Circumnutation",
+      "facet": "Plant movements and senses",
+      "known_at": 15
+    },
+    {
+      "name": "Stinging nettle",
+      "facet": "Plant defenses and toxins",
+      "known_at": 4
+    },
+    {
+      "name": "Poison ivy",
+      "facet": "Plant defenses and toxins",
+      "known_at": 7
+    },
+    {
+      "name": "Prickle",
+      "facet": "Plant defenses and toxins",
+      "known_at": 13
+    },
+    {
+      "name": "Caffeine",
+      "facet": "Plant defenses and toxins",
+      "known_at": 7
+    },
+    {
+      "name": "Nicotine",
+      "facet": "Plant defenses and toxins",
+      "known_at": 10
+    },
+    {
+      "name": "Capsaicin",
+      "facet": "Plant defenses and toxins",
+      "known_at": 10
+    },
+    {
+      "name": "Hemlock",
+      "facet": "Plant defenses and toxins",
+      "known_at": 10
+    },
+    {
+      "name": "Foxglove",
+      "facet": "Plant defenses and toxins",
+      "known_at": 11
+    },
+    {
+      "name": "Oleander",
+      "facet": "Plant defenses and toxins",
+      "known_at": 12
+    },
+    {
+      "name": "Deadly nightshade",
+      "facet": "Plant defenses and toxins",
+      "known_at": 11
+    },
+    {
+      "name": "Castor bean",
+      "facet": "Plant defenses and toxins",
+      "known_at": 12
+    },
+    {
+      "name": "Manchineel",
+      "facet": "Plant defenses and toxins",
+      "known_at": 12
+    },
+    {
+      "name": "Gympie-gympie",
+      "facet": "Plant defenses and toxins",
+      "known_at": 13
+    },
+    {
+      "name": "Ant-plant mutualism",
+      "facet": "Plant defenses and toxins",
+      "known_at": 13
+    },
+    {
+      "name": "Tannin",
+      "facet": "Plant defenses and toxins",
+      "known_at": 13
+    },
+    {
+      "name": "Bitter almond",
+      "facet": "Plant defenses and toxins",
+      "known_at": 11
+    },
+    {
+      "name": "Giant hogweed",
+      "facet": "Plant defenses and toxins",
+      "known_at": 12
+    },
+    {
+      "name": "Wasabi",
+      "facet": "Plant defenses and toxins",
+      "known_at": 9
+    },
+    {
+      "name": "Quinine",
+      "facet": "Plant defenses and toxins",
+      "known_at": 11
+    },
+    {
+      "name": "Solanine",
+      "facet": "Plant defenses and toxins",
+      "known_at": 12
+    },
+    {
+      "name": "Resin",
+      "facet": "Plant defenses and toxins",
+      "known_at": 8
+    },
+    {
+      "name": "Sundew",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 8
+    },
+    {
+      "name": "Bladderwort",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 12
+    },
+    {
+      "name": "Butterwort",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 12
+    },
+    {
+      "name": "Cobra lily",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 13
+    },
+    {
+      "name": "Waterwheel plant",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 14
+    },
+    {
+      "name": "Corkscrew plant",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 15
+    },
+    {
+      "name": "Peat bog",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 9
+    },
+    {
+      "name": "Mistletoe",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 4
+    },
+    {
+      "name": "Dodder",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 12
+    },
+    {
+      "name": "Broomrape",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 14
+    },
+    {
+      "name": "Ghost plant",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 13
+    },
+    {
+      "name": "Strangler fig",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 10
+    },
+    {
+      "name": "Epiphyte",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 11
+    },
+    {
+      "name": "Witchweed",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 14
+    },
+    {
+      "name": "Hemiparasite",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 14
+    },
+    {
+      "name": "Haustorium",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 14
+    },
+    {
+      "name": "Sandalwood",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 14
+    },
+    {
+      "name": "Western Australian Christmas tree",
+      "facet": "Carnivorous and parasitic plants",
+      "known_at": 15
+    },
+    {
+      "name": "Cellulose",
+      "facet": "Plant cells and pigments",
+      "known_at": 10
+    },
+    {
+      "name": "Carotene",
+      "facet": "Plant cells and pigments",
+      "known_at": 9
+    },
+    {
+      "name": "Anthocyanin",
+      "facet": "Plant cells and pigments",
+      "known_at": 12
+    },
+    {
+      "name": "Xanthophyll",
+      "facet": "Plant cells and pigments",
+      "known_at": 14
+    },
+    {
+      "name": "Autumn leaf color",
+      "facet": "Plant cells and pigments",
+      "known_at": 4
+    },
+    {
+      "name": "Betalain",
+      "facet": "Plant cells and pigments",
+      "known_at": 14
+    },
+    {
+      "name": "Plastid",
+      "facet": "Plant cells and pigments",
+      "known_at": 14
+    },
+    {
+      "name": "Lignin",
+      "facet": "Plant cells and pigments",
+      "known_at": 12
+    },
+    {
+      "name": "Plant cell",
+      "facet": "Plant cells and pigments",
+      "known_at": 6
+    },
+    {
+      "name": "Plasmodesmata",
+      "facet": "Plant cells and pigments",
+      "known_at": 15
+    },
+    {
+      "name": "Amyloplast",
+      "facet": "Plant cells and pigments",
+      "known_at": 14
+    },
+    {
+      "name": "Turgor pressure",
+      "facet": "Plant cells and pigments",
+      "known_at": 12
+    },
+    {
+      "name": "Endosymbiosis",
+      "facet": "Plant cells and pigments",
+      "known_at": 14
+    },
+    {
+      "name": "Lycopene",
+      "facet": "Plant cells and pigments",
+      "known_at": 11
+    },
+    {
+      "name": "Red cabbage indicator",
+      "facet": "Plant cells and pigments",
+      "known_at": 8
+    },
+    {
+      "name": "Annual plant",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 8
+    },
+    {
+      "name": "Biennial plant",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 12
+    },
+    {
+      "name": "Perennial plant",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 10
+    },
+    {
+      "name": "Moss",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 4
+    },
+    {
+      "name": "Fern",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 4
+    },
+    {
+      "name": "Sorus",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 14
+    },
+    {
+      "name": "Alternation of generations",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 14
+    },
+    {
+      "name": "Gymnosperm",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 12
+    },
+    {
+      "name": "Angiosperm",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 12
+    },
+    {
+      "name": "Conifer",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 8
+    },
+    {
+      "name": "Runner",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 8
+    },
+    {
+      "name": "Pando",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 13
+    },
+    {
+      "name": "Century plant",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 12
+    },
+    {
+      "name": "Mast seeding",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 14
+    },
+    {
+      "name": "Bamboo mass flowering",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 13
+    },
+    {
+      "name": "Welwitschia",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 13
+    },
+    {
+      "name": "Puya raimondii",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 14
+    },
+    {
+      "name": "Liverwort",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 13
+    },
+    {
+      "name": "Dioecious plant",
+      "facet": "Plant life cycles and reproduction",
+      "known_at": 14
+    },
+    {
+      "name": "Jan Ingenhousz",
+      "facet": "Plant scientists and experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Joseph Priestley",
+      "facet": "Plant scientists and experiments",
+      "known_at": 13
+    },
+    {
+      "name": "Jan Baptist van Helmont",
+      "facet": "Plant scientists and experiments",
+      "known_at": 14
+    },
+    {
+      "name": "George Washington Carver",
+      "facet": "Plant scientists and experiments",
+      "known_at": 11
+    },
+    {
+      "name": "Norman Borlaug",
+      "facet": "Plant scientists and experiments",
+      "known_at": 13
+    },
+    {
+      "name": "Green Revolution",
+      "facet": "Plant scientists and experiments",
+      "known_at": 12
+    },
+    {
+      "name": "Nikolai Vavilov",
+      "facet": "Plant scientists and experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Melvin Calvin",
+      "facet": "Plant scientists and experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Robert Brown",
+      "facet": "Plant scientists and experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Wangari Maathai",
+      "facet": "Plant scientists and experiments",
+      "known_at": 11
+    },
+    {
+      "name": "Jagadish Chandra Bose",
+      "facet": "Plant scientists and experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Theophrastus",
+      "facet": "Plant scientists and experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Stephen Hales",
+      "facet": "Plant scientists and experiments",
+      "known_at": 15
+    },
+    {
+      "name": "Alexander von Humboldt",
+      "facet": "Plant scientists and experiments",
+      "known_at": 12
+    },
+    {
+      "name": "Janaki Ammal",
+      "facet": "Plant scientists and experiments",
+      "known_at": 15
+    },
+    {
+      "name": "Suzanne Simard",
+      "facet": "Plant scientists and experiments",
+      "known_at": 14
+    }
+  ]
+}

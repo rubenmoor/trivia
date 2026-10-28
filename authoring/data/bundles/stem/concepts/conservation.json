@@ -1,0 +1,1007 @@
+{
+  "subcategory": "conservation",
+  "facets": [
+    "Iconic endangered mammals",
+    "Threatened birds, reptiles and amphibians",
+    "Ocean and freshwater species at risk",
+    "Extinct animals and lost species",
+    "Conservation success stories",
+    "Threats: habitat loss and poaching",
+    "Invasive species and island ecosystems",
+    "Red List and conservation science",
+    "Protected areas and wildlife reserves",
+    "Zoos, breeding and rewilding",
+    "Conservationists and organizations",
+    "Treaties, laws and wildlife trade"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 4,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 2,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 4,
+      "educational_media": 5,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Bengal tiger",
+      "facet": "Iconic endangered mammals",
+      "known_at": 2
+    },
+    {
+      "name": "Red panda",
+      "facet": "Iconic endangered mammals",
+      "known_at": 3
+    },
+    {
+      "name": "Asian elephant",
+      "facet": "Iconic endangered mammals",
+      "known_at": 3
+    },
+    {
+      "name": "Mountain gorilla",
+      "facet": "Iconic endangered mammals",
+      "known_at": 4
+    },
+    {
+      "name": "Black rhinoceros",
+      "facet": "Iconic endangered mammals",
+      "known_at": 5
+    },
+    {
+      "name": "Tasmanian devil",
+      "facet": "Iconic endangered mammals",
+      "known_at": 6
+    },
+    {
+      "name": "Amur leopard",
+      "facet": "Iconic endangered mammals",
+      "known_at": 9
+    },
+    {
+      "name": "Okapi",
+      "facet": "Iconic endangered mammals",
+      "known_at": 9
+    },
+    {
+      "name": "Giant otter",
+      "facet": "Iconic endangered mammals",
+      "known_at": 9
+    },
+    {
+      "name": "Proboscis monkey",
+      "facet": "Iconic endangered mammals",
+      "known_at": 9
+    },
+    {
+      "name": "African forest elephant",
+      "facet": "Iconic endangered mammals",
+      "known_at": 9
+    },
+    {
+      "name": "Iberian lynx",
+      "facet": "Iconic endangered mammals",
+      "known_at": 10
+    },
+    {
+      "name": "Javan rhinoceros",
+      "facet": "Iconic endangered mammals",
+      "known_at": 11
+    },
+    {
+      "name": "Ethiopian wolf",
+      "facet": "Iconic endangered mammals",
+      "known_at": 12
+    },
+    {
+      "name": "Wild Bactrian camel",
+      "facet": "Iconic endangered mammals",
+      "known_at": 12
+    },
+    {
+      "name": "Hainan gibbon",
+      "facet": "Iconic endangered mammals",
+      "known_at": 14
+    },
+    {
+      "name": "Saola",
+      "facet": "Iconic endangered mammals",
+      "known_at": 14
+    },
+    {
+      "name": "Axolotl",
+      "facet": "Threatened birds, reptiles and amphibians",
+      "known_at": 4
+    },
+    {
+      "name": "Galápagos giant tortoise",
+      "facet": "Threatened birds, reptiles and amphibians",
+      "known_at": 4
+    },
+    {
+      "name": "Spix's macaw",
+      "facet": "Threatened birds, reptiles and amphibians",
+      "known_at": 5
+    },
+    {
+      "name": "Hyacinth macaw",
+      "facet": "Threatened birds, reptiles and amphibians",
+      "known_at": 7
+    },
+    {
+      "name": "California condor",
+      "facet": "Threatened birds, reptiles and amphibians",
+      "known_at": 8
+    },
+    {
+      "name": "Harpy eagle",
+      "facet": "Threatened birds, reptiles and amphibians",
+      "known_at": 8
+    },
+    {
+      "name": "Kakapo",
+      "facet": "Threatened birds, reptiles and amphibians",
+      "known_at": 9
+    },
+    {
+      "name": "Philippine eagle",
+      "facet": "Threatened birds, reptiles and amphibians",
+      "known_at": 10
+    },
+    {
+      "name": "Gharial",
+      "facet": "Threatened birds, reptiles and amphibians",
+      "known_at": 10
+    },
+    {
+      "name": "Chinese giant salamander",
+      "facet": "Threatened birds, reptiles and amphibians",
+      "known_at": 10
+    },
+    {
+      "name": "Panamanian golden frog",
+      "facet": "Threatened birds, reptiles and amphibians",
+      "known_at": 11
+    },
+    {
+      "name": "Whooping crane",
+      "facet": "Threatened birds, reptiles and amphibians",
+      "known_at": 11
+    },
+    {
+      "name": "Helmeted hornbill",
+      "facet": "Threatened birds, reptiles and amphibians",
+      "known_at": 13
+    },
+    {
+      "name": "Northern bald ibis",
+      "facet": "Threatened birds, reptiles and amphibians",
+      "known_at": 13
+    },
+    {
+      "name": "Takahe",
+      "facet": "Threatened birds, reptiles and amphibians",
+      "known_at": 13
+    },
+    {
+      "name": "Indian vulture",
+      "facet": "Threatened birds, reptiles and amphibians",
+      "known_at": 13
+    },
+    {
+      "name": "Ploughshare tortoise",
+      "facet": "Threatened birds, reptiles and amphibians",
+      "known_at": 14
+    },
+    {
+      "name": "Whale shark",
+      "facet": "Ocean and freshwater species at risk",
+      "known_at": 4
+    },
+    {
+      "name": "Ganges river dolphin",
+      "facet": "Ocean and freshwater species at risk",
+      "known_at": 11
+    },
+    {
+      "name": "Hawaiian monk seal",
+      "facet": "Ocean and freshwater species at risk",
+      "known_at": 11
+    },
+    {
+      "name": "Beluga sturgeon",
+      "facet": "Ocean and freshwater species at risk",
+      "known_at": 12
+    },
+    {
+      "name": "Mekong giant catfish",
+      "facet": "Ocean and freshwater species at risk",
+      "known_at": 12
+    },
+    {
+      "name": "Totoaba",
+      "facet": "Ocean and freshwater species at risk",
+      "known_at": 13
+    },
+    {
+      "name": "Lonesome George",
+      "facet": "Extinct animals and lost species",
+      "known_at": 10
+    },
+    {
+      "name": "Aurochs",
+      "facet": "Extinct animals and lost species",
+      "known_at": 12
+    },
+    {
+      "name": "Western black rhinoceros",
+      "facet": "Extinct animals and lost species",
+      "known_at": 12
+    },
+    {
+      "name": "Pyrenean ibex",
+      "facet": "Extinct animals and lost species",
+      "known_at": 13
+    },
+    {
+      "name": "Caribbean monk seal",
+      "facet": "Extinct animals and lost species",
+      "known_at": 13
+    },
+    {
+      "name": "Bald eagle",
+      "facet": "Conservation success stories",
+      "known_at": 6
+    },
+    {
+      "name": "American bison",
+      "facet": "Conservation success stories",
+      "known_at": 6
+    },
+    {
+      "name": "Golden lion tamarin",
+      "facet": "Conservation success stories",
+      "known_at": 9
+    },
+    {
+      "name": "Southern white rhinoceros",
+      "facet": "Conservation success stories",
+      "known_at": 10
+    },
+    {
+      "name": "Asiatic lion",
+      "facet": "Conservation success stories",
+      "known_at": 10
+    },
+    {
+      "name": "Arabian oryx",
+      "facet": "Conservation success stories",
+      "known_at": 11
+    },
+    {
+      "name": "Black-footed ferret",
+      "facet": "Conservation success stories",
+      "known_at": 11
+    },
+    {
+      "name": "Alpine ibex",
+      "facet": "Conservation success stories",
+      "known_at": 11
+    },
+    {
+      "name": "Saiga antelope",
+      "facet": "Conservation success stories",
+      "known_at": 11
+    },
+    {
+      "name": "Island fox",
+      "facet": "Conservation success stories",
+      "known_at": 12
+    },
+    {
+      "name": "Northern elephant seal",
+      "facet": "Conservation success stories",
+      "known_at": 12
+    },
+    {
+      "name": "Mauritius kestrel",
+      "facet": "Conservation success stories",
+      "known_at": 13
+    },
+    {
+      "name": "Pink pigeon",
+      "facet": "Conservation success stories",
+      "known_at": 13
+    },
+    {
+      "name": "Chatham Island black robin",
+      "facet": "Conservation success stories",
+      "known_at": 14
+    },
+    {
+      "name": "Echo parakeet",
+      "facet": "Conservation success stories",
+      "known_at": 14
+    },
+    {
+      "name": "Plastic pollution",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 3
+    },
+    {
+      "name": "Poaching",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 4
+    },
+    {
+      "name": "Climate change",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 5
+    },
+    {
+      "name": "Rhino horn",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 6
+    },
+    {
+      "name": "Oil spill",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 6
+    },
+    {
+      "name": "Roadkill",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 6
+    },
+    {
+      "name": "Palm oil",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 7
+    },
+    {
+      "name": "Illegal logging",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 7
+    },
+    {
+      "name": "Acid rain",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 8
+    },
+    {
+      "name": "Shark finning",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 9
+    },
+    {
+      "name": "Ghost nets",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 9
+    },
+    {
+      "name": "Light pollution",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 9
+    },
+    {
+      "name": "Habitat fragmentation",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 10
+    },
+    {
+      "name": "Slash-and-burn",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 10
+    },
+    {
+      "name": "Urban sprawl",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 10
+    },
+    {
+      "name": "Bycatch",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 11
+    },
+    {
+      "name": "Bushmeat",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 11
+    },
+    {
+      "name": "Monoculture",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 11
+    },
+    {
+      "name": "White-nose syndrome",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 14
+    },
+    {
+      "name": "Diclofenac",
+      "facet": "Threats: habitat loss and poaching",
+      "known_at": 15
+    },
+    {
+      "name": "Madagascar",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 3
+    },
+    {
+      "name": "Feral cat",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 7
+    },
+    {
+      "name": "Black rat",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 8
+    },
+    {
+      "name": "Endemic species",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 9
+    },
+    {
+      "name": "European rabbit in Australia",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 9
+    },
+    {
+      "name": "Burmese python",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 9
+    },
+    {
+      "name": "Grey squirrel",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 10
+    },
+    {
+      "name": "Brown tree snake",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 11
+    },
+    {
+      "name": "Zebra mussel",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 11
+    },
+    {
+      "name": "Water hyacinth",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 11
+    },
+    {
+      "name": "Asian carp",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 11
+    },
+    {
+      "name": "Asian hornet",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 11
+    },
+    {
+      "name": "Red imported fire ant",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 11
+    },
+    {
+      "name": "Kudzu",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 12
+    },
+    {
+      "name": "Rabbit-proof fence",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 12
+    },
+    {
+      "name": "Myxomatosis",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 13
+    },
+    {
+      "name": "Small Indian mongoose",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 13
+    },
+    {
+      "name": "Stoat in New Zealand",
+      "facet": "Invasive species and island ecosystems",
+      "known_at": 13
+    },
+    {
+      "name": "Endangered",
+      "facet": "Red List and conservation science",
+      "known_at": 4
+    },
+    {
+      "name": "Biodiversity",
+      "facet": "Red List and conservation science",
+      "known_at": 6
+    },
+    {
+      "name": "Critically endangered",
+      "facet": "Red List and conservation science",
+      "known_at": 8
+    },
+    {
+      "name": "IUCN Red List",
+      "facet": "Red List and conservation science",
+      "known_at": 9
+    },
+    {
+      "name": "Extinct in the wild",
+      "facet": "Red List and conservation science",
+      "known_at": 9
+    },
+    {
+      "name": "Vulnerable",
+      "facet": "Red List and conservation science",
+      "known_at": 9
+    },
+    {
+      "name": "Living fossil",
+      "facet": "Red List and conservation science",
+      "known_at": 9
+    },
+    {
+      "name": "Least concern",
+      "facet": "Red List and conservation science",
+      "known_at": 10
+    },
+    {
+      "name": "Biodiversity hotspot",
+      "facet": "Red List and conservation science",
+      "known_at": 11
+    },
+    {
+      "name": "Citizen science",
+      "facet": "Red List and conservation science",
+      "known_at": 11
+    },
+    {
+      "name": "Flagship species",
+      "facet": "Red List and conservation science",
+      "known_at": 12
+    },
+    {
+      "name": "Indicator species",
+      "facet": "Red List and conservation science",
+      "known_at": 12
+    },
+    {
+      "name": "Umbrella species",
+      "facet": "Red List and conservation science",
+      "known_at": 13
+    },
+    {
+      "name": "Environmental DNA",
+      "facet": "Red List and conservation science",
+      "known_at": 13
+    },
+    {
+      "name": "Population bottleneck",
+      "facet": "Red List and conservation science",
+      "known_at": 13
+    },
+    {
+      "name": "Functionally extinct",
+      "facet": "Red List and conservation science",
+      "known_at": 13
+    },
+    {
+      "name": "Lazarus taxon",
+      "facet": "Red List and conservation science",
+      "known_at": 14
+    },
+    {
+      "name": "Edge effect",
+      "facet": "Red List and conservation science",
+      "known_at": 14
+    },
+    {
+      "name": "Shifting baseline syndrome",
+      "facet": "Red List and conservation science",
+      "known_at": 15
+    },
+    {
+      "name": "Yellowstone National Park",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 6
+    },
+    {
+      "name": "UNESCO World Heritage Site",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 8
+    },
+    {
+      "name": "Ngorongoro Crater",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 10
+    },
+    {
+      "name": "Marine protected area",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 10
+    },
+    {
+      "name": "Wildlife corridor",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 10
+    },
+    {
+      "name": "Virunga National Park",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 11
+    },
+    {
+      "name": "Sundarbans",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 11
+    },
+    {
+      "name": "Kaziranga National Park",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 12
+    },
+    {
+      "name": "Biosphere reserve",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 12
+    },
+    {
+      "name": "Kakadu National Park",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 12
+    },
+    {
+      "name": "Torres del Paine National Park",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 12
+    },
+    {
+      "name": "Volcanoes National Park",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 12
+    },
+    {
+      "name": "Ranthambore National Park",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Chitwan National Park",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Wolong National Nature Reserve",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Bwindi Impenetrable National Park",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Korean Demilitarized Zone",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Corcovado National Park",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 13
+    },
+    {
+      "name": "Papahānaumokuākea",
+      "facet": "Protected areas and wildlife reserves",
+      "known_at": 15
+    },
+    {
+      "name": "Sea turtle hatchery",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 6
+    },
+    {
+      "name": "Captive breeding",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 7
+    },
+    {
+      "name": "Wildlife rehabilitation",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 8
+    },
+    {
+      "name": "Hand-rearing",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 9
+    },
+    {
+      "name": "Eurasian beaver",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 9
+    },
+    {
+      "name": "Svalbard Global Seed Vault",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 9
+    },
+    {
+      "name": "Northern white rhinoceros",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 9
+    },
+    {
+      "name": "Przewalski's horse",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 10
+    },
+    {
+      "name": "Wolf reintroduction in Yellowstone",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 10
+    },
+    {
+      "name": "European bison",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 11
+    },
+    {
+      "name": "Panda diplomacy",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 11
+    },
+    {
+      "name": "In vitro fertilization",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 11
+    },
+    {
+      "name": "Translocation",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 12
+    },
+    {
+      "name": "Frozen zoo",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 13
+    },
+    {
+      "name": "Père David's deer",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 13
+    },
+    {
+      "name": "Studbook",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 14
+    },
+    {
+      "name": "Cross-fostering",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 14
+    },
+    {
+      "name": "Pleistocene Park",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 14
+    },
+    {
+      "name": "Hawaiian crow",
+      "facet": "Zoos, breeding and rewilding",
+      "known_at": 14
+    },
+    {
+      "name": "WWF",
+      "facet": "Conservationists and organizations",
+      "known_at": 4
+    },
+    {
+      "name": "Steve Irwin",
+      "facet": "Conservationists and organizations",
+      "known_at": 6
+    },
+    {
+      "name": "Greenpeace",
+      "facet": "Conservationists and organizations",
+      "known_at": 6
+    },
+    {
+      "name": "Greta Thunberg",
+      "facet": "Conservationists and organizations",
+      "known_at": 6
+    },
+    {
+      "name": "IUCN",
+      "facet": "Conservationists and organizations",
+      "known_at": 11
+    },
+    {
+      "name": "Sea Shepherd",
+      "facet": "Conservationists and organizations",
+      "known_at": 11
+    },
+    {
+      "name": "Joy Adamson",
+      "facet": "Conservationists and organizations",
+      "known_at": 11
+    },
+    {
+      "name": "John Muir",
+      "facet": "Conservationists and organizations",
+      "known_at": 12
+    },
+    {
+      "name": "Gerald Durrell",
+      "facet": "Conservationists and organizations",
+      "known_at": 12
+    },
+    {
+      "name": "Bernhard Grzimek",
+      "facet": "Conservationists and organizations",
+      "known_at": 13
+    },
+    {
+      "name": "Daphne Sheldrick",
+      "facet": "Conservationists and organizations",
+      "known_at": 13
+    },
+    {
+      "name": "BirdLife International",
+      "facet": "Conservationists and organizations",
+      "known_at": 13
+    },
+    {
+      "name": "George Schaller",
+      "facet": "Conservationists and organizations",
+      "known_at": 14
+    },
+    {
+      "name": "Earth Day",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 5
+    },
+    {
+      "name": "Paris Agreement",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 8
+    },
+    {
+      "name": "Wildlife trafficking",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 8
+    },
+    {
+      "name": "Exotic pet trade",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 8
+    },
+    {
+      "name": "Wildlife detection dog",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 9
+    },
+    {
+      "name": "World Wildlife Day",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 9
+    },
+    {
+      "name": "Kyoto Protocol",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 10
+    },
+    {
+      "name": "CITES",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 11
+    },
+    {
+      "name": "Whaling moratorium",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 11
+    },
+    {
+      "name": "Antarctic Treaty",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 11
+    },
+    {
+      "name": "Earth Summit 1992",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 11
+    },
+    {
+      "name": "Montreal Protocol",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 12
+    },
+    {
+      "name": "30 by 30",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 12
+    },
+    {
+      "name": "Ivory burn",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 12
+    },
+    {
+      "name": "Ramsar Convention",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 13
+    },
+    {
+      "name": "Convention on Biological Diversity",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 13
+    },
+    {
+      "name": "High Seas Treaty",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 13
+    },
+    {
+      "name": "Kunming-Montreal Global Biodiversity Framework",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 14
+    },
+    {
+      "name": "Debt-for-nature swap",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 14
+    },
+    {
+      "name": "Nagoya Protocol",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 15
+    },
+    {
+      "name": "Bonn Convention",
+      "facet": "Treaties, laws and wildlife trade",
+      "known_at": 15
+    }
+  ]
+}

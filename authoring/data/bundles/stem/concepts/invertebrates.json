@@ -1,0 +1,1037 @@
+{
+  "subcategory": "invertebrates",
+  "facets": [
+    "Insect bodies and anatomy",
+    "Metamorphosis and life cycles",
+    "Ants, bees and wasps",
+    "Butterflies and moths",
+    "Beetles and true bugs",
+    "Spiders and scorpions",
+    "Crustaceans",
+    "Snails, octopuses and other molluscs",
+    "Worms, jellyfish and sea invertebrates",
+    "Insect senses and communication",
+    "Invertebrate records and extremes",
+    "Invertebrates, people and science history"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 5,
+      "estimate": 4,
+      "record": 5,
+      "origin": 2,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 5,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 5,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 4,
+      "colombia": 2,
+      "pop_culture": 3,
+      "popular_science": 4,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 3,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Antenna",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 2
+    },
+    {
+      "name": "Thorax",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 7
+    },
+    {
+      "name": "Abdomen",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 6
+    },
+    {
+      "name": "Exoskeleton",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 7
+    },
+    {
+      "name": "Chitin",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 11
+    },
+    {
+      "name": "Spiracle",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 12
+    },
+    {
+      "name": "Trachea (insect breathing tube)",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 12
+    },
+    {
+      "name": "Mandible",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 10
+    },
+    {
+      "name": "Proboscis",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 9
+    },
+    {
+      "name": "Ocellus",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 13
+    },
+    {
+      "name": "Haltere",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 14
+    },
+    {
+      "name": "Ovipositor",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 13
+    },
+    {
+      "name": "Hemolymph",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 13
+    },
+    {
+      "name": "Malpighian tubule",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 15
+    },
+    {
+      "name": "Stinger",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 2
+    },
+    {
+      "name": "Insect wing",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 1
+    },
+    {
+      "name": "Insect leg",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 2
+    },
+    {
+      "name": "Arthropod",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 9
+    },
+    {
+      "name": "Tarsal claw",
+      "facet": "Insect bodies and anatomy",
+      "known_at": 12
+    },
+    {
+      "name": "Caterpillar",
+      "facet": "Metamorphosis and life cycles",
+      "known_at": 1
+    },
+    {
+      "name": "Chrysalis",
+      "facet": "Metamorphosis and life cycles",
+      "known_at": 4
+    },
+    {
+      "name": "Larva",
+      "facet": "Metamorphosis and life cycles",
+      "known_at": 6
+    },
+    {
+      "name": "Pupa",
+      "facet": "Metamorphosis and life cycles",
+      "known_at": 7
+    },
+    {
+      "name": "Nymph",
+      "facet": "Metamorphosis and life cycles",
+      "known_at": 9
+    },
+    {
+      "name": "Complete metamorphosis",
+      "facet": "Metamorphosis and life cycles",
+      "known_at": 8
+    },
+    {
+      "name": "Incomplete metamorphosis",
+      "facet": "Metamorphosis and life cycles",
+      "known_at": 10
+    },
+    {
+      "name": "Maggot",
+      "facet": "Metamorphosis and life cycles",
+      "known_at": 4
+    },
+    {
+      "name": "Mealworm",
+      "facet": "Metamorphosis and life cycles",
+      "known_at": 7
+    },
+    {
+      "name": "Dragonfly nymph",
+      "facet": "Metamorphosis and life cycles",
+      "known_at": 9
+    },
+    {
+      "name": "Mayfly",
+      "facet": "Metamorphosis and life cycles",
+      "known_at": 8
+    },
+    {
+      "name": "Instar",
+      "facet": "Metamorphosis and life cycles",
+      "known_at": 14
+    },
+    {
+      "name": "Imago",
+      "facet": "Metamorphosis and life cycles",
+      "known_at": 14
+    },
+    {
+      "name": "Mosquito larva",
+      "facet": "Metamorphosis and life cycles",
+      "known_at": 8
+    },
+    {
+      "name": "Diapause",
+      "facet": "Metamorphosis and life cycles",
+      "known_at": 14
+    },
+    {
+      "name": "Locust swarm phase",
+      "facet": "Metamorphosis and life cycles",
+      "known_at": 12
+    },
+    {
+      "name": "Insect egg",
+      "facet": "Metamorphosis and life cycles",
+      "known_at": 2
+    },
+    {
+      "name": "Bullet ant",
+      "facet": "Ants, bees and wasps",
+      "known_at": 10
+    },
+    {
+      "name": "Fire ant",
+      "facet": "Ants, bees and wasps",
+      "known_at": 7
+    },
+    {
+      "name": "Bumblebee",
+      "facet": "Ants, bees and wasps",
+      "known_at": 3
+    },
+    {
+      "name": "Worker bee",
+      "facet": "Ants, bees and wasps",
+      "known_at": 4
+    },
+    {
+      "name": "Royal jelly",
+      "facet": "Ants, bees and wasps",
+      "known_at": 9
+    },
+    {
+      "name": "Beeswax",
+      "facet": "Ants, bees and wasps",
+      "known_at": 4
+    },
+    {
+      "name": "Pollen basket",
+      "facet": "Ants, bees and wasps",
+      "known_at": 10
+    },
+    {
+      "name": "Asian giant hornet",
+      "facet": "Ants, bees and wasps",
+      "known_at": 9
+    },
+    {
+      "name": "Parasitoid wasp",
+      "facet": "Ants, bees and wasps",
+      "known_at": 12
+    },
+    {
+      "name": "Carpenter bee",
+      "facet": "Ants, bees and wasps",
+      "known_at": 10
+    },
+    {
+      "name": "Weaver ant",
+      "facet": "Ants, bees and wasps",
+      "known_at": 11
+    },
+    {
+      "name": "Honeypot ant",
+      "facet": "Ants, bees and wasps",
+      "known_at": 11
+    },
+    {
+      "name": "Termite",
+      "facet": "Ants, bees and wasps",
+      "known_at": 5
+    },
+    {
+      "name": "Propolis",
+      "facet": "Ants, bees and wasps",
+      "known_at": 12
+    },
+    {
+      "name": "Nectar",
+      "facet": "Ants, bees and wasps",
+      "known_at": 4
+    },
+    {
+      "name": "Bee swarm",
+      "facet": "Ants, bees and wasps",
+      "known_at": 5
+    },
+    {
+      "name": "Colony collapse disorder",
+      "facet": "Ants, bees and wasps",
+      "known_at": 12
+    },
+    {
+      "name": "Silkworm",
+      "facet": "Butterflies and moths",
+      "known_at": 5
+    },
+    {
+      "name": "Luna moth",
+      "facet": "Butterflies and moths",
+      "known_at": 11
+    },
+    {
+      "name": "Atlas moth",
+      "facet": "Butterflies and moths",
+      "known_at": 10
+    },
+    {
+      "name": "Blue morpho",
+      "facet": "Butterflies and moths",
+      "known_at": 9
+    },
+    {
+      "name": "Swallowtail butterfly",
+      "facet": "Butterflies and moths",
+      "known_at": 8
+    },
+    {
+      "name": "Hummingbird hawk-moth",
+      "facet": "Butterflies and moths",
+      "known_at": 10
+    },
+    {
+      "name": "Death's-head hawkmoth",
+      "facet": "Butterflies and moths",
+      "known_at": 11
+    },
+    {
+      "name": "Clothes moth",
+      "facet": "Butterflies and moths",
+      "known_at": 6
+    },
+    {
+      "name": "Butterfly wing scales",
+      "facet": "Butterflies and moths",
+      "known_at": 9
+    },
+    {
+      "name": "Eyespot",
+      "facet": "Butterflies and moths",
+      "known_at": 8
+    },
+    {
+      "name": "Painted lady",
+      "facet": "Butterflies and moths",
+      "known_at": 11
+    },
+    {
+      "name": "Glasswing butterfly",
+      "facet": "Butterflies and moths",
+      "known_at": 10
+    },
+    {
+      "name": "Mud-puddling",
+      "facet": "Butterflies and moths",
+      "known_at": 13
+    },
+    {
+      "name": "Lepidoptera",
+      "facet": "Butterflies and moths",
+      "known_at": 13
+    },
+    {
+      "name": "Woolly bear caterpillar",
+      "facet": "Butterflies and moths",
+      "known_at": 9
+    },
+    {
+      "name": "Sacred scarab",
+      "facet": "Beetles and true bugs",
+      "known_at": 9
+    },
+    {
+      "name": "Stag beetle",
+      "facet": "Beetles and true bugs",
+      "known_at": 6
+    },
+    {
+      "name": "Goliath beetle",
+      "facet": "Beetles and true bugs",
+      "known_at": 10
+    },
+    {
+      "name": "Hercules beetle",
+      "facet": "Beetles and true bugs",
+      "known_at": 8
+    },
+    {
+      "name": "Weevil",
+      "facet": "Beetles and true bugs",
+      "known_at": 10
+    },
+    {
+      "name": "Colorado potato beetle",
+      "facet": "Beetles and true bugs",
+      "known_at": 12
+    },
+    {
+      "name": "Elytra",
+      "facet": "Beetles and true bugs",
+      "known_at": 13
+    },
+    {
+      "name": "Diving beetle",
+      "facet": "Beetles and true bugs",
+      "known_at": 11
+    },
+    {
+      "name": "Cicada",
+      "facet": "Beetles and true bugs",
+      "known_at": 5
+    },
+    {
+      "name": "Stink bug",
+      "facet": "Beetles and true bugs",
+      "known_at": 7
+    },
+    {
+      "name": "Bed bug",
+      "facet": "Beetles and true bugs",
+      "known_at": 6
+    },
+    {
+      "name": "Cochineal",
+      "facet": "Beetles and true bugs",
+      "known_at": 12
+    },
+    {
+      "name": "Assassin bug",
+      "facet": "Beetles and true bugs",
+      "known_at": 12
+    },
+    {
+      "name": "Woodworm",
+      "facet": "Beetles and true bugs",
+      "known_at": 10
+    },
+    {
+      "name": "Coleoptera",
+      "facet": "Beetles and true bugs",
+      "known_at": 13
+    },
+    {
+      "name": "Tarantula",
+      "facet": "Spiders and scorpions",
+      "known_at": 3
+    },
+    {
+      "name": "Black widow",
+      "facet": "Spiders and scorpions",
+      "known_at": 6
+    },
+    {
+      "name": "Spider silk",
+      "facet": "Spiders and scorpions",
+      "known_at": 4
+    },
+    {
+      "name": "Orb weaver",
+      "facet": "Spiders and scorpions",
+      "known_at": 11
+    },
+    {
+      "name": "Huntsman spider",
+      "facet": "Spiders and scorpions",
+      "known_at": 10
+    },
+    {
+      "name": "Diving bell spider",
+      "facet": "Spiders and scorpions",
+      "known_at": 12
+    },
+    {
+      "name": "Daddy longlegs",
+      "facet": "Spiders and scorpions",
+      "known_at": 6
+    },
+    {
+      "name": "Dust mite",
+      "facet": "Spiders and scorpions",
+      "known_at": 8
+    },
+    {
+      "name": "Arachnid",
+      "facet": "Spiders and scorpions",
+      "known_at": 8
+    },
+    {
+      "name": "Sydney funnel-web spider",
+      "facet": "Spiders and scorpions",
+      "known_at": 11
+    },
+    {
+      "name": "Spinneret",
+      "facet": "Spiders and scorpions",
+      "known_at": 12
+    },
+    {
+      "name": "Pedipalp",
+      "facet": "Spiders and scorpions",
+      "known_at": 14
+    },
+    {
+      "name": "Spider ballooning",
+      "facet": "Spiders and scorpions",
+      "known_at": 12
+    },
+    {
+      "name": "Book lung",
+      "facet": "Spiders and scorpions",
+      "known_at": 14
+    },
+    {
+      "name": "Goliath birdeater",
+      "facet": "Spiders and scorpions",
+      "known_at": 10
+    },
+    {
+      "name": "Darwin's bark spider",
+      "facet": "Spiders and scorpions",
+      "known_at": 14
+    },
+    {
+      "name": "Crab",
+      "facet": "Crustaceans",
+      "known_at": 1
+    },
+    {
+      "name": "Lobster",
+      "facet": "Crustaceans",
+      "known_at": 3
+    },
+    {
+      "name": "Shrimp",
+      "facet": "Crustaceans",
+      "known_at": 2
+    },
+    {
+      "name": "Krill",
+      "facet": "Crustaceans",
+      "known_at": 7
+    },
+    {
+      "name": "Barnacle",
+      "facet": "Crustaceans",
+      "known_at": 8
+    },
+    {
+      "name": "Woodlouse",
+      "facet": "Crustaceans",
+      "known_at": 6
+    },
+    {
+      "name": "Coconut crab",
+      "facet": "Crustaceans",
+      "known_at": 10
+    },
+    {
+      "name": "Japanese spider crab",
+      "facet": "Crustaceans",
+      "known_at": 10
+    },
+    {
+      "name": "Copepod",
+      "facet": "Crustaceans",
+      "known_at": 13
+    },
+    {
+      "name": "Crayfish",
+      "facet": "Crustaceans",
+      "known_at": 7
+    },
+    {
+      "name": "Water flea",
+      "facet": "Crustaceans",
+      "known_at": 12
+    },
+    {
+      "name": "Brine shrimp",
+      "facet": "Crustaceans",
+      "known_at": 10
+    },
+    {
+      "name": "Giant isopod",
+      "facet": "Crustaceans",
+      "known_at": 11
+    },
+    {
+      "name": "Decapod",
+      "facet": "Crustaceans",
+      "known_at": 13
+    },
+    {
+      "name": "Garden snail",
+      "facet": "Snails, octopuses and other molluscs",
+      "known_at": 1
+    },
+    {
+      "name": "Slug",
+      "facet": "Snails, octopuses and other molluscs",
+      "known_at": 2
+    },
+    {
+      "name": "Squid",
+      "facet": "Snails, octopuses and other molluscs",
+      "known_at": 3
+    },
+    {
+      "name": "Colossal squid",
+      "facet": "Snails, octopuses and other molluscs",
+      "known_at": 11
+    },
+    {
+      "name": "Ammonite",
+      "facet": "Snails, octopuses and other molluscs",
+      "known_at": 10
+    },
+    {
+      "name": "Oyster",
+      "facet": "Snails, octopuses and other molluscs",
+      "known_at": 5
+    },
+    {
+      "name": "Pearl",
+      "facet": "Snails, octopuses and other molluscs",
+      "known_at": 4
+    },
+    {
+      "name": "Giant clam",
+      "facet": "Snails, octopuses and other molluscs",
+      "known_at": 7
+    },
+    {
+      "name": "Mussel",
+      "facet": "Snails, octopuses and other molluscs",
+      "known_at": 6
+    },
+    {
+      "name": "Scallop",
+      "facet": "Snails, octopuses and other molluscs",
+      "known_at": 8
+    },
+    {
+      "name": "Cone snail",
+      "facet": "Snails, octopuses and other molluscs",
+      "known_at": 12
+    },
+    {
+      "name": "Octopus ink",
+      "facet": "Snails, octopuses and other molluscs",
+      "known_at": 3
+    },
+    {
+      "name": "Radula",
+      "facet": "Snails, octopuses and other molluscs",
+      "known_at": 14
+    },
+    {
+      "name": "Chiton",
+      "facet": "Snails, octopuses and other molluscs",
+      "known_at": 14
+    },
+    {
+      "name": "Mollusc",
+      "facet": "Snails, octopuses and other molluscs",
+      "known_at": 9
+    },
+    {
+      "name": "Earthworm",
+      "facet": "Worms, jellyfish and sea invertebrates",
+      "known_at": 1
+    },
+    {
+      "name": "Leech",
+      "facet": "Worms, jellyfish and sea invertebrates",
+      "known_at": 6
+    },
+    {
+      "name": "Tapeworm",
+      "facet": "Worms, jellyfish and sea invertebrates",
+      "known_at": 9
+    },
+    {
+      "name": "Portuguese man o' war",
+      "facet": "Worms, jellyfish and sea invertebrates",
+      "known_at": 10
+    },
+    {
+      "name": "Immortal jellyfish",
+      "facet": "Worms, jellyfish and sea invertebrates",
+      "known_at": 10
+    },
+    {
+      "name": "Coral",
+      "facet": "Worms, jellyfish and sea invertebrates",
+      "known_at": 4
+    },
+    {
+      "name": "Great Barrier Reef",
+      "facet": "Worms, jellyfish and sea invertebrates",
+      "known_at": 6
+    },
+    {
+      "name": "Sea anemone",
+      "facet": "Worms, jellyfish and sea invertebrates",
+      "known_at": 4
+    },
+    {
+      "name": "Starfish",
+      "facet": "Worms, jellyfish and sea invertebrates",
+      "known_at": 1
+    },
+    {
+      "name": "Sea sponge",
+      "facet": "Worms, jellyfish and sea invertebrates",
+      "known_at": 5
+    },
+    {
+      "name": "Comb jelly",
+      "facet": "Worms, jellyfish and sea invertebrates",
+      "known_at": 13
+    },
+    {
+      "name": "Nematode",
+      "facet": "Worms, jellyfish and sea invertebrates",
+      "known_at": 12
+    },
+    {
+      "name": "Planarian",
+      "facet": "Worms, jellyfish and sea invertebrates",
+      "known_at": 13
+    },
+    {
+      "name": "Bobbit worm",
+      "facet": "Worms, jellyfish and sea invertebrates",
+      "known_at": 13
+    },
+    {
+      "name": "Christmas tree worm",
+      "facet": "Worms, jellyfish and sea invertebrates",
+      "known_at": 12
+    },
+    {
+      "name": "Ultraviolet vision",
+      "facet": "Insect senses and communication",
+      "known_at": 9
+    },
+    {
+      "name": "Nectar guide",
+      "facet": "Insect senses and communication",
+      "known_at": 12
+    },
+    {
+      "name": "Tympanal organ",
+      "facet": "Insect senses and communication",
+      "known_at": 14
+    },
+    {
+      "name": "Cicada song",
+      "facet": "Insect senses and communication",
+      "known_at": 5
+    },
+    {
+      "name": "Katydid",
+      "facet": "Insect senses and communication",
+      "known_at": 11
+    },
+    {
+      "name": "Polarized light navigation",
+      "facet": "Insect senses and communication",
+      "known_at": 13
+    },
+    {
+      "name": "Tiger moth clicks",
+      "facet": "Insect senses and communication",
+      "known_at": 14
+    },
+    {
+      "name": "Mosquito buzz",
+      "facet": "Insect senses and communication",
+      "known_at": 3
+    },
+    {
+      "name": "Carbon dioxide sensing",
+      "facet": "Insect senses and communication",
+      "known_at": 11
+    },
+    {
+      "name": "Taste receptors on feet",
+      "facet": "Insect senses and communication",
+      "known_at": 9
+    },
+    {
+      "name": "Johnston's organ",
+      "facet": "Insect senses and communication",
+      "known_at": 15
+    },
+    {
+      "name": "Treehopper",
+      "facet": "Insect senses and communication",
+      "known_at": 13
+    },
+    {
+      "name": "Deathwatch beetle",
+      "facet": "Insect senses and communication",
+      "known_at": 13
+    },
+    {
+      "name": "Waitomo glowworm",
+      "facet": "Insect senses and communication",
+      "known_at": 11
+    },
+    {
+      "name": "Trophallaxis",
+      "facet": "Insect senses and communication",
+      "known_at": 14
+    },
+    {
+      "name": "Dung beetle Milky Way navigation",
+      "facet": "Insect senses and communication",
+      "known_at": 12
+    },
+    {
+      "name": "Tardigrade",
+      "facet": "Invertebrate records and extremes",
+      "known_at": 9
+    },
+    {
+      "name": "Lion's mane jellyfish",
+      "facet": "Invertebrate records and extremes",
+      "known_at": 10
+    },
+    {
+      "name": "Bootlace worm",
+      "facet": "Invertebrate records and extremes",
+      "known_at": 13
+    },
+    {
+      "name": "Fairyfly",
+      "facet": "Invertebrate records and extremes",
+      "known_at": 14
+    },
+    {
+      "name": "Titan beetle",
+      "facet": "Invertebrate records and extremes",
+      "known_at": 11
+    },
+    {
+      "name": "Giant weta",
+      "facet": "Invertebrate records and extremes",
+      "known_at": 12
+    },
+    {
+      "name": "Queen Alexandra's birdwing",
+      "facet": "Invertebrate records and extremes",
+      "known_at": 12
+    },
+    {
+      "name": "Meganeura",
+      "facet": "Invertebrate records and extremes",
+      "known_at": 12
+    },
+    {
+      "name": "Arthropleura",
+      "facet": "Invertebrate records and extremes",
+      "known_at": 13
+    },
+    {
+      "name": "Australian tiger beetle",
+      "facet": "Invertebrate records and extremes",
+      "known_at": 13
+    },
+    {
+      "name": "Termite queen",
+      "facet": "Invertebrate records and extremes",
+      "known_at": 10
+    },
+    {
+      "name": "Ocean quahog",
+      "facet": "Invertebrate records and extremes",
+      "known_at": 14
+    },
+    {
+      "name": "Pompeii worm",
+      "facet": "Invertebrate records and extremes",
+      "known_at": 13
+    },
+    {
+      "name": "Giant African land snail",
+      "facet": "Invertebrate records and extremes",
+      "known_at": 9
+    },
+    {
+      "name": "Arctic woolly bear moth",
+      "facet": "Invertebrate records and extremes",
+      "known_at": 13
+    },
+    {
+      "name": "Antarctic midge",
+      "facet": "Invertebrate records and extremes",
+      "known_at": 14
+    },
+    {
+      "name": "Giant Gippsland earthworm",
+      "facet": "Invertebrate records and extremes",
+      "known_at": 13
+    },
+    {
+      "name": "Charles Darwin's beetle collecting",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 12
+    },
+    {
+      "name": "Maria Sibylla Merian",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 13
+    },
+    {
+      "name": "E. O. Wilson",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 13
+    },
+    {
+      "name": "Fruit fly genetics",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 11
+    },
+    {
+      "name": "Silk Road",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 7
+    },
+    {
+      "name": "Rachel Carson",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 13
+    },
+    {
+      "name": "DDT",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 12
+    },
+    {
+      "name": "Louis Pasteur's silkworm research",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 14
+    },
+    {
+      "name": "Robert Hooke's Micrographia",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 13
+    },
+    {
+      "name": "Carl Linnaeus",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 11
+    },
+    {
+      "name": "Vladimir Nabokov",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 14
+    },
+    {
+      "name": "Squid giant axon",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 15
+    },
+    {
+      "name": "C. elegans",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 14
+    },
+    {
+      "name": "Sterile insect technique",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 14
+    },
+    {
+      "name": "Maggot therapy",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 12
+    },
+    {
+      "name": "Beekeeping",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 4
+    },
+    {
+      "name": "Edible insects",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 7
+    },
+    {
+      "name": "Entomology",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 10
+    },
+    {
+      "name": "Medicinal leech",
+      "facet": "Invertebrates, people and science history",
+      "known_at": 10
+    }
+  ]
+}

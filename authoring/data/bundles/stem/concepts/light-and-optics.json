@@ -1,0 +1,1118 @@
+{
+  "subcategory": "light-and-optics",
+  "facets": [
+    "Light sources and lamps",
+    "Colors and the spectrum",
+    "Reflection and mirrors",
+    "Refraction and lenses",
+    "Optical instruments",
+    "Shadows and eclipses",
+    "Light in nature and sky",
+    "Lasers and fiber optics",
+    "Invisible light: UV, infrared",
+    "Speed and nature of light",
+    "Vision and the eye",
+    "Optical illusions and tricks",
+    "Optics pioneers and experiments"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 3,
+      "origin": 2,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 4,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 4,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Incandescent light bulb",
+      "facet": "Light sources and lamps",
+      "known_at": 3
+    },
+    {
+      "name": "Fluorescent lamp",
+      "facet": "Light sources and lamps",
+      "known_at": 9
+    },
+    {
+      "name": "Neon sign",
+      "facet": "Light sources and lamps",
+      "known_at": 7
+    },
+    {
+      "name": "Oil lamp",
+      "facet": "Light sources and lamps",
+      "known_at": 5
+    },
+    {
+      "name": "Joseph Swan",
+      "facet": "Light sources and lamps",
+      "known_at": 13
+    },
+    {
+      "name": "Lighthouse",
+      "facet": "Light sources and lamps",
+      "known_at": 2
+    },
+    {
+      "name": "Halogen lamp",
+      "facet": "Light sources and lamps",
+      "known_at": 11
+    },
+    {
+      "name": "Sodium street lamp",
+      "facet": "Light sources and lamps",
+      "known_at": 12
+    },
+    {
+      "name": "Gas lamp",
+      "facet": "Light sources and lamps",
+      "known_at": 8
+    },
+    {
+      "name": "Flashlight",
+      "facet": "Light sources and lamps",
+      "known_at": 1
+    },
+    {
+      "name": "Lumen",
+      "facet": "Light sources and lamps",
+      "known_at": 12
+    },
+    {
+      "name": "Glow stick",
+      "facet": "Light sources and lamps",
+      "known_at": 4
+    },
+    {
+      "name": "Tungsten filament",
+      "facet": "Light sources and lamps",
+      "known_at": 11
+    },
+    {
+      "name": "Blue LED",
+      "facet": "Light sources and lamps",
+      "known_at": 13
+    },
+    {
+      "name": "Campfire",
+      "facet": "Light sources and lamps",
+      "known_at": 1
+    },
+    {
+      "name": "Visible spectrum",
+      "facet": "Colors and the spectrum",
+      "known_at": 9
+    },
+    {
+      "name": "Prism",
+      "facet": "Colors and the spectrum",
+      "known_at": 6
+    },
+    {
+      "name": "White light",
+      "facet": "Colors and the spectrum",
+      "known_at": 6
+    },
+    {
+      "name": "Violet",
+      "facet": "Colors and the spectrum",
+      "known_at": 3
+    },
+    {
+      "name": "Red",
+      "facet": "Colors and the spectrum",
+      "known_at": 1
+    },
+    {
+      "name": "Indigo",
+      "facet": "Colors and the spectrum",
+      "known_at": 7
+    },
+    {
+      "name": "Cyan",
+      "facet": "Colors and the spectrum",
+      "known_at": 8
+    },
+    {
+      "name": "Magenta",
+      "facet": "Colors and the spectrum",
+      "known_at": 7
+    },
+    {
+      "name": "RGB color model",
+      "facet": "Colors and the spectrum",
+      "known_at": 9
+    },
+    {
+      "name": "CMYK",
+      "facet": "Colors and the spectrum",
+      "known_at": 12
+    },
+    {
+      "name": "Additive color mixing",
+      "facet": "Colors and the spectrum",
+      "known_at": 11
+    },
+    {
+      "name": "Subtractive color mixing",
+      "facet": "Colors and the spectrum",
+      "known_at": 12
+    },
+    {
+      "name": "Complementary colors",
+      "facet": "Colors and the spectrum",
+      "known_at": 8
+    },
+    {
+      "name": "Pigment",
+      "facet": "Colors and the spectrum",
+      "known_at": 8
+    },
+    {
+      "name": "Pixel",
+      "facet": "Colors and the spectrum",
+      "known_at": 6
+    },
+    {
+      "name": "Newton's color wheel",
+      "facet": "Colors and the spectrum",
+      "known_at": 10
+    },
+    {
+      "name": "Color temperature",
+      "facet": "Colors and the spectrum",
+      "known_at": 13
+    },
+    {
+      "name": "Light absorption",
+      "facet": "Colors and the spectrum",
+      "known_at": 8
+    },
+    {
+      "name": "Vantablack",
+      "facet": "Colors and the spectrum",
+      "known_at": 12
+    },
+    {
+      "name": "Pantone",
+      "facet": "Colors and the spectrum",
+      "known_at": 12
+    },
+    {
+      "name": "Mirror",
+      "facet": "Reflection and mirrors",
+      "known_at": 1
+    },
+    {
+      "name": "Plane mirror",
+      "facet": "Reflection and mirrors",
+      "known_at": 9
+    },
+    {
+      "name": "Concave mirror",
+      "facet": "Reflection and mirrors",
+      "known_at": 9
+    },
+    {
+      "name": "Convex mirror",
+      "facet": "Reflection and mirrors",
+      "known_at": 9
+    },
+    {
+      "name": "Law of reflection",
+      "facet": "Reflection and mirrors",
+      "known_at": 10
+    },
+    {
+      "name": "Mirror image",
+      "facet": "Reflection and mirrors",
+      "known_at": 4
+    },
+    {
+      "name": "Kaleidoscope",
+      "facet": "Reflection and mirrors",
+      "known_at": 4
+    },
+    {
+      "name": "Infinity mirror",
+      "facet": "Reflection and mirrors",
+      "known_at": 8
+    },
+    {
+      "name": "Rear-view mirror",
+      "facet": "Reflection and mirrors",
+      "known_at": 3
+    },
+    {
+      "name": "Funhouse mirror",
+      "facet": "Reflection and mirrors",
+      "known_at": 3
+    },
+    {
+      "name": "Solar furnace",
+      "facet": "Reflection and mirrors",
+      "known_at": 12
+    },
+    {
+      "name": "Archimedes' burning mirrors",
+      "facet": "Reflection and mirrors",
+      "known_at": 12
+    },
+    {
+      "name": "Retroreflector",
+      "facet": "Reflection and mirrors",
+      "known_at": 12
+    },
+    {
+      "name": "Cat's eye road stud",
+      "facet": "Reflection and mirrors",
+      "known_at": 8
+    },
+    {
+      "name": "Bicycle reflector",
+      "facet": "Reflection and mirrors",
+      "known_at": 3
+    },
+    {
+      "name": "Diffuse reflection",
+      "facet": "Reflection and mirrors",
+      "known_at": 12
+    },
+    {
+      "name": "Two-way mirror",
+      "facet": "Reflection and mirrors",
+      "known_at": 9
+    },
+    {
+      "name": "Silvering",
+      "facet": "Reflection and mirrors",
+      "known_at": 12
+    },
+    {
+      "name": "Echo of light on calm water",
+      "facet": "Reflection and mirrors",
+      "known_at": 4
+    },
+    {
+      "name": "Convex lens",
+      "facet": "Refraction and lenses",
+      "known_at": 9
+    },
+    {
+      "name": "Concave lens",
+      "facet": "Refraction and lenses",
+      "known_at": 9
+    },
+    {
+      "name": "Focal point",
+      "facet": "Refraction and lenses",
+      "known_at": 10
+    },
+    {
+      "name": "Focal length",
+      "facet": "Refraction and lenses",
+      "known_at": 11
+    },
+    {
+      "name": "Snell's law",
+      "facet": "Refraction and lenses",
+      "known_at": 13
+    },
+    {
+      "name": "Refractive index",
+      "facet": "Refraction and lenses",
+      "known_at": 12
+    },
+    {
+      "name": "Contact lens",
+      "facet": "Refraction and lenses",
+      "known_at": 6
+    },
+    {
+      "name": "Diopter",
+      "facet": "Refraction and lenses",
+      "known_at": 13
+    },
+    {
+      "name": "Fresnel lens",
+      "facet": "Refraction and lenses",
+      "known_at": 13
+    },
+    {
+      "name": "Burning glass",
+      "facet": "Refraction and lenses",
+      "known_at": 7
+    },
+    {
+      "name": "Water drop lens",
+      "facet": "Refraction and lenses",
+      "known_at": 7
+    },
+    {
+      "name": "Dispersion",
+      "facet": "Refraction and lenses",
+      "known_at": 12
+    },
+    {
+      "name": "Chromatic aberration",
+      "facet": "Refraction and lenses",
+      "known_at": 14
+    },
+    {
+      "name": "Fisheye lens",
+      "facet": "Refraction and lenses",
+      "known_at": 9
+    },
+    {
+      "name": "Zoom lens",
+      "facet": "Refraction and lenses",
+      "known_at": 7
+    },
+    {
+      "name": "Gravitational lens",
+      "facet": "Refraction and lenses",
+      "known_at": 13
+    },
+    {
+      "name": "Apparent depth",
+      "facet": "Refraction and lenses",
+      "known_at": 10
+    },
+    {
+      "name": "Diamond sparkle",
+      "facet": "Refraction and lenses",
+      "known_at": 11
+    },
+    {
+      "name": "Telescope",
+      "facet": "Optical instruments",
+      "known_at": 2
+    },
+    {
+      "name": "Binoculars",
+      "facet": "Optical instruments",
+      "known_at": 3
+    },
+    {
+      "name": "Periscope",
+      "facet": "Optical instruments",
+      "known_at": 5
+    },
+    {
+      "name": "Camera",
+      "facet": "Optical instruments",
+      "known_at": 1
+    },
+    {
+      "name": "Camera obscura",
+      "facet": "Optical instruments",
+      "known_at": 10
+    },
+    {
+      "name": "Projector",
+      "facet": "Optical instruments",
+      "known_at": 4
+    },
+    {
+      "name": "Magic lantern",
+      "facet": "Optical instruments",
+      "known_at": 12
+    },
+    {
+      "name": "Hubble Space Telescope",
+      "facet": "Optical instruments",
+      "known_at": 7
+    },
+    {
+      "name": "James Webb Space Telescope",
+      "facet": "Optical instruments",
+      "known_at": 9
+    },
+    {
+      "name": "Refracting telescope",
+      "facet": "Optical instruments",
+      "known_at": 11
+    },
+    {
+      "name": "Reflecting telescope",
+      "facet": "Optical instruments",
+      "known_at": 11
+    },
+    {
+      "name": "Spectroscope",
+      "facet": "Optical instruments",
+      "known_at": 13
+    },
+    {
+      "name": "Stereoscope",
+      "facet": "Optical instruments",
+      "known_at": 12
+    },
+    {
+      "name": "Sextant",
+      "facet": "Optical instruments",
+      "known_at": 11
+    },
+    {
+      "name": "Monocle",
+      "facet": "Optical instruments",
+      "known_at": 7
+    },
+    {
+      "name": "Very Large Telescope",
+      "facet": "Optical instruments",
+      "known_at": 13
+    },
+    {
+      "name": "SLR camera",
+      "facet": "Optical instruments",
+      "known_at": 12
+    },
+    {
+      "name": "Shadow",
+      "facet": "Shadows and eclipses",
+      "known_at": 1
+    },
+    {
+      "name": "Solar eclipse",
+      "facet": "Shadows and eclipses",
+      "known_at": 4
+    },
+    {
+      "name": "Lunar eclipse",
+      "facet": "Shadows and eclipses",
+      "known_at": 6
+    },
+    {
+      "name": "Umbra",
+      "facet": "Shadows and eclipses",
+      "known_at": 12
+    },
+    {
+      "name": "Penumbra",
+      "facet": "Shadows and eclipses",
+      "known_at": 12
+    },
+    {
+      "name": "Total solar eclipse",
+      "facet": "Shadows and eclipses",
+      "known_at": 7
+    },
+    {
+      "name": "Annular eclipse",
+      "facet": "Shadows and eclipses",
+      "known_at": 11
+    },
+    {
+      "name": "Blood moon",
+      "facet": "Shadows and eclipses",
+      "known_at": 8
+    },
+    {
+      "name": "Sundial",
+      "facet": "Shadows and eclipses",
+      "known_at": 5
+    },
+    {
+      "name": "Diamond ring effect",
+      "facet": "Shadows and eclipses",
+      "known_at": 13
+    },
+    {
+      "name": "Solar corona",
+      "facet": "Shadows and eclipses",
+      "known_at": 11
+    },
+    {
+      "name": "Eclipse glasses",
+      "facet": "Shadows and eclipses",
+      "known_at": 6
+    },
+    {
+      "name": "Totality",
+      "facet": "Shadows and eclipses",
+      "known_at": 12
+    },
+    {
+      "name": "Saros cycle",
+      "facet": "Shadows and eclipses",
+      "known_at": 15
+    },
+    {
+      "name": "Moon phases",
+      "facet": "Shadows and eclipses",
+      "known_at": 4
+    },
+    {
+      "name": "Transit of Venus",
+      "facet": "Shadows and eclipses",
+      "known_at": 13
+    },
+    {
+      "name": "Noon shadow",
+      "facet": "Shadows and eclipses",
+      "known_at": 6
+    },
+    {
+      "name": "Baily's beads",
+      "facet": "Shadows and eclipses",
+      "known_at": 15
+    },
+    {
+      "name": "Pinhole projection",
+      "facet": "Shadows and eclipses",
+      "known_at": 10
+    },
+    {
+      "name": "Earthshine",
+      "facet": "Shadows and eclipses",
+      "known_at": 13
+    },
+    {
+      "name": "Rainbow",
+      "facet": "Light in nature and sky",
+      "known_at": 1
+    },
+    {
+      "name": "Double rainbow",
+      "facet": "Light in nature and sky",
+      "known_at": 6
+    },
+    {
+      "name": "Aurora borealis",
+      "facet": "Light in nature and sky",
+      "known_at": 6
+    },
+    {
+      "name": "Rayleigh scattering",
+      "facet": "Light in nature and sky",
+      "known_at": 12
+    },
+    {
+      "name": "Blue sky",
+      "facet": "Light in nature and sky",
+      "known_at": 3
+    },
+    {
+      "name": "Halo",
+      "facet": "Light in nature and sky",
+      "known_at": 11
+    },
+    {
+      "name": "Sun dog",
+      "facet": "Light in nature and sky",
+      "known_at": 13
+    },
+    {
+      "name": "Green flash",
+      "facet": "Light in nature and sky",
+      "known_at": 13
+    },
+    {
+      "name": "Waitomo Glowworm Caves",
+      "facet": "Light in nature and sky",
+      "known_at": 13
+    },
+    {
+      "name": "Lightning",
+      "facet": "Light in nature and sky",
+      "known_at": 1
+    },
+    {
+      "name": "Moonlight",
+      "facet": "Light in nature and sky",
+      "known_at": 3
+    },
+    {
+      "name": "Twilight",
+      "facet": "Light in nature and sky",
+      "known_at": 7
+    },
+    {
+      "name": "Crepuscular rays",
+      "facet": "Light in nature and sky",
+      "known_at": 13
+    },
+    {
+      "name": "Noctilucent clouds",
+      "facet": "Light in nature and sky",
+      "known_at": 14
+    },
+    {
+      "name": "Iridescence",
+      "facet": "Light in nature and sky",
+      "known_at": 12
+    },
+    {
+      "name": "Morpho butterfly",
+      "facet": "Light in nature and sky",
+      "known_at": 11
+    },
+    {
+      "name": "Golden hour",
+      "facet": "Light in nature and sky",
+      "known_at": 10
+    },
+    {
+      "name": "Moonbow",
+      "facet": "Light in nature and sky",
+      "known_at": 12
+    },
+    {
+      "name": "Laser",
+      "facet": "Lasers and fiber optics",
+      "known_at": 4
+    },
+    {
+      "name": "Theodore Maiman",
+      "facet": "Lasers and fiber optics",
+      "known_at": 14
+    },
+    {
+      "name": "Ruby laser",
+      "facet": "Lasers and fiber optics",
+      "known_at": 13
+    },
+    {
+      "name": "Optical fiber",
+      "facet": "Lasers and fiber optics",
+      "known_at": 8
+    },
+    {
+      "name": "Total internal reflection",
+      "facet": "Lasers and fiber optics",
+      "known_at": 12
+    },
+    {
+      "name": "Barcode scanner",
+      "facet": "Lasers and fiber optics",
+      "known_at": 4
+    },
+    {
+      "name": "Laser pointer",
+      "facet": "Lasers and fiber optics",
+      "known_at": 5
+    },
+    {
+      "name": "Hologram",
+      "facet": "Lasers and fiber optics",
+      "known_at": 7
+    },
+    {
+      "name": "CD",
+      "facet": "Lasers and fiber optics",
+      "known_at": 5
+    },
+    {
+      "name": "Blu-ray",
+      "facet": "Lasers and fiber optics",
+      "known_at": 8
+    },
+    {
+      "name": "Laser cutter",
+      "facet": "Lasers and fiber optics",
+      "known_at": 8
+    },
+    {
+      "name": "Lidar",
+      "facet": "Lasers and fiber optics",
+      "known_at": 12
+    },
+    {
+      "name": "Charles Kao",
+      "facet": "Lasers and fiber optics",
+      "known_at": 14
+    },
+    {
+      "name": "Fiber-optic lamp",
+      "facet": "Lasers and fiber optics",
+      "known_at": 6
+    },
+    {
+      "name": "Submarine communications cable",
+      "facet": "Lasers and fiber optics",
+      "known_at": 11
+    },
+    {
+      "name": "Laser printer",
+      "facet": "Lasers and fiber optics",
+      "known_at": 7
+    },
+    {
+      "name": "Stimulated emission",
+      "facet": "Lasers and fiber optics",
+      "known_at": 13
+    },
+    {
+      "name": "Lunar Laser Ranging",
+      "facet": "Lasers and fiber optics",
+      "known_at": 13
+    },
+    {
+      "name": "Ultraviolet",
+      "facet": "Invisible light: UV, infrared",
+      "known_at": 6
+    },
+    {
+      "name": "Black light",
+      "facet": "Invisible light: UV, infrared",
+      "known_at": 8
+    },
+    {
+      "name": "UV index",
+      "facet": "Invisible light: UV, infrared",
+      "known_at": 9
+    },
+    {
+      "name": "Bee vision",
+      "facet": "Invisible light: UV, infrared",
+      "known_at": 10
+    },
+    {
+      "name": "Thermal imaging camera",
+      "facet": "Invisible light: UV, infrared",
+      "known_at": 7
+    },
+    {
+      "name": "Night-vision goggles",
+      "facet": "Invisible light: UV, infrared",
+      "known_at": 6
+    },
+    {
+      "name": "Pit viper",
+      "facet": "Invisible light: UV, infrared",
+      "known_at": 11
+    },
+    {
+      "name": "Gamma ray",
+      "facet": "Invisible light: UV, infrared",
+      "known_at": 10
+    },
+    {
+      "name": "Microwave",
+      "facet": "Invisible light: UV, infrared",
+      "known_at": 6
+    },
+    {
+      "name": "Radio wave",
+      "facet": "Invisible light: UV, infrared",
+      "known_at": 8
+    },
+    {
+      "name": "Electromagnetic spectrum",
+      "facet": "Invisible light: UV, infrared",
+      "known_at": 10
+    },
+    {
+      "name": "Ozone layer",
+      "facet": "Invisible light: UV, infrared",
+      "known_at": 8
+    },
+    {
+      "name": "Fluorescence",
+      "facet": "Invisible light: UV, infrared",
+      "known_at": 11
+    },
+    {
+      "name": "UV water disinfection",
+      "facet": "Invisible light: UV, infrared",
+      "known_at": 12
+    },
+    {
+      "name": "Banknote UV security feature",
+      "facet": "Invisible light: UV, infrared",
+      "known_at": 10
+    },
+    {
+      "name": "Glowing scorpion",
+      "facet": "Invisible light: UV, infrared",
+      "known_at": 11
+    },
+    {
+      "name": "Light-year",
+      "facet": "Speed and nature of light",
+      "known_at": 7
+    },
+    {
+      "name": "Photon",
+      "facet": "Speed and nature of light",
+      "known_at": 10
+    },
+    {
+      "name": "Wave-particle duality",
+      "facet": "Speed and nature of light",
+      "known_at": 12
+    },
+    {
+      "name": "Electromagnetic wave",
+      "facet": "Speed and nature of light",
+      "known_at": 11
+    },
+    {
+      "name": "Polarization",
+      "facet": "Speed and nature of light",
+      "known_at": 12
+    },
+    {
+      "name": "Interference",
+      "facet": "Speed and nature of light",
+      "known_at": 12
+    },
+    {
+      "name": "Diffraction",
+      "facet": "Speed and nature of light",
+      "known_at": 12
+    },
+    {
+      "name": "Redshift",
+      "facet": "Speed and nature of light",
+      "known_at": 12
+    },
+    {
+      "name": "Luminiferous aether",
+      "facet": "Speed and nature of light",
+      "known_at": 13
+    },
+    {
+      "name": "Michelson–Morley experiment",
+      "facet": "Speed and nature of light",
+      "known_at": 14
+    },
+    {
+      "name": "Photoelectric effect",
+      "facet": "Speed and nature of light",
+      "known_at": 12
+    },
+    {
+      "name": "Cherenkov radiation",
+      "facet": "Speed and nature of light",
+      "known_at": 14
+    },
+    {
+      "name": "Light-second",
+      "facet": "Speed and nature of light",
+      "known_at": 11
+    },
+    {
+      "name": "Sunlight travel time",
+      "facet": "Speed and nature of light",
+      "known_at": 9
+    },
+    {
+      "name": "Polarized sunglasses",
+      "facet": "Speed and nature of light",
+      "known_at": 9
+    },
+    {
+      "name": "Soap bubble colors",
+      "facet": "Speed and nature of light",
+      "known_at": 8
+    },
+    {
+      "name": "Thunder and lightning delay",
+      "facet": "Speed and nature of light",
+      "known_at": 6
+    },
+    {
+      "name": "Crystalline lens",
+      "facet": "Vision and the eye",
+      "known_at": 9
+    },
+    {
+      "name": "Ishihara test",
+      "facet": "Vision and the eye",
+      "known_at": 10
+    },
+    {
+      "name": "Myopia",
+      "facet": "Vision and the eye",
+      "known_at": 8
+    },
+    {
+      "name": "Hyperopia",
+      "facet": "Vision and the eye",
+      "known_at": 10
+    },
+    {
+      "name": "Dark adaptation",
+      "facet": "Vision and the eye",
+      "known_at": 9
+    },
+    {
+      "name": "Inverted retinal image",
+      "facet": "Vision and the eye",
+      "known_at": 11
+    },
+    {
+      "name": "Depth perception",
+      "facet": "Vision and the eye",
+      "known_at": 9
+    },
+    {
+      "name": "Red-eye effect",
+      "facet": "Vision and the eye",
+      "known_at": 8
+    },
+    {
+      "name": "Penrose stairs",
+      "facet": "Optical illusions and tricks",
+      "known_at": 11
+    },
+    {
+      "name": "M. C. Escher",
+      "facet": "Optical illusions and tricks",
+      "known_at": 11
+    },
+    {
+      "name": "Duck-rabbit illusion",
+      "facet": "Optical illusions and tricks",
+      "known_at": 8
+    },
+    {
+      "name": "My Wife and My Mother-in-Law",
+      "facet": "Optical illusions and tricks",
+      "known_at": 11
+    },
+    {
+      "name": "Pepper's ghost",
+      "facet": "Optical illusions and tricks",
+      "known_at": 13
+    },
+    {
+      "name": "Op art",
+      "facet": "Optical illusions and tricks",
+      "known_at": 12
+    },
+    {
+      "name": "Victor Vasarely",
+      "facet": "Optical illusions and tricks",
+      "known_at": 14
+    },
+    {
+      "name": "Thaumatrope",
+      "facet": "Optical illusions and tricks",
+      "known_at": 12
+    },
+    {
+      "name": "Zoetrope",
+      "facet": "Optical illusions and tricks",
+      "known_at": 11
+    },
+    {
+      "name": "Wagon-wheel effect",
+      "facet": "Optical illusions and tricks",
+      "known_at": 11
+    },
+    {
+      "name": "Trompe-l'œil",
+      "facet": "Optical illusions and tricks",
+      "known_at": 12
+    },
+    {
+      "name": "Spinning dancer illusion",
+      "facet": "Optical illusions and tricks",
+      "known_at": 11
+    },
+    {
+      "name": "Thomas Young",
+      "facet": "Optics pioneers and experiments",
+      "known_at": 13
+    },
+    {
+      "name": "Double-slit experiment",
+      "facet": "Optics pioneers and experiments",
+      "known_at": 12
+    },
+    {
+      "name": "Augustin-Jean Fresnel",
+      "facet": "Optics pioneers and experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Ole Rømer",
+      "facet": "Optics pioneers and experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Hippolyte Fizeau",
+      "facet": "Optics pioneers and experiments",
+      "known_at": 15
+    },
+    {
+      "name": "C. V. Raman",
+      "facet": "Optics pioneers and experiments",
+      "known_at": 14
+    },
+    {
+      "name": "William Herschel",
+      "facet": "Optics pioneers and experiments",
+      "known_at": 12
+    },
+    {
+      "name": "Arthur Eddington",
+      "facet": "Optics pioneers and experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Eratosthenes",
+      "facet": "Optics pioneers and experiments",
+      "known_at": 11
+    },
+    {
+      "name": "Joseph von Fraunhofer",
+      "facet": "Optics pioneers and experiments",
+      "known_at": 14
+    },
+    {
+      "name": "Max Planck",
+      "facet": "Optics pioneers and experiments",
+      "known_at": 11
+    },
+    {
+      "name": "Louis Daguerre",
+      "facet": "Optics pioneers and experiments",
+      "known_at": 13
+    },
+    {
+      "name": "Newton's prism experiment",
+      "facet": "Optics pioneers and experiments",
+      "known_at": 10
+    }
+  ]
+}

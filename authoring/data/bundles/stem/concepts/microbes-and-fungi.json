@@ -1,0 +1,1383 @@
+{
+  "subcategory": "microbes-and-fungi",
+  "facets": [
+    "Bacteria and how they live",
+    "Viruses and how they spread",
+    "Mushrooms and wild fungi",
+    "Molds, yeasts and lichens",
+    "Microbes in food and fermentation",
+    "Germs, disease and hygiene",
+    "Vaccines and antibiotics",
+    "The human microbiome",
+    "Microbes in nature and ecosystems",
+    "Protists and single-celled life",
+    "Microscopes and lab tools",
+    "Microbe hunters and discoveries"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 4,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 5,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 5,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Bacteria",
+      "facet": "Bacteria and how they live",
+      "known_at": 4
+    },
+    {
+      "name": "Prokaryote",
+      "facet": "Bacteria and how they live",
+      "known_at": 11
+    },
+    {
+      "name": "Cell wall",
+      "facet": "Bacteria and how they live",
+      "known_at": 9
+    },
+    {
+      "name": "Flagellum",
+      "facet": "Bacteria and how they live",
+      "known_at": 11
+    },
+    {
+      "name": "Binary fission",
+      "facet": "Bacteria and how they live",
+      "known_at": 11
+    },
+    {
+      "name": "Endospore",
+      "facet": "Bacteria and how they live",
+      "known_at": 13
+    },
+    {
+      "name": "Cyanobacteria",
+      "facet": "Bacteria and how they live",
+      "known_at": 12
+    },
+    {
+      "name": "Escherichia coli",
+      "facet": "Bacteria and how they live",
+      "known_at": 10
+    },
+    {
+      "name": "Streptococcus",
+      "facet": "Bacteria and how they live",
+      "known_at": 12
+    },
+    {
+      "name": "Staphylococcus",
+      "facet": "Bacteria and how they live",
+      "known_at": 12
+    },
+    {
+      "name": "Bacillus",
+      "facet": "Bacteria and how they live",
+      "known_at": 12
+    },
+    {
+      "name": "Coccus",
+      "facet": "Bacteria and how they live",
+      "known_at": 13
+    },
+    {
+      "name": "Spirillum",
+      "facet": "Bacteria and how they live",
+      "known_at": 14
+    },
+    {
+      "name": "Plasmid",
+      "facet": "Bacteria and how they live",
+      "known_at": 13
+    },
+    {
+      "name": "Biofilm",
+      "facet": "Bacteria and how they live",
+      "known_at": 12
+    },
+    {
+      "name": "Extremophile",
+      "facet": "Bacteria and how they live",
+      "known_at": 12
+    },
+    {
+      "name": "Thermus aquaticus",
+      "facet": "Bacteria and how they live",
+      "known_at": 15
+    },
+    {
+      "name": "Deinococcus radiodurans",
+      "facet": "Bacteria and how they live",
+      "known_at": 14
+    },
+    {
+      "name": "Thiomargarita",
+      "facet": "Bacteria and how they live",
+      "known_at": 15
+    },
+    {
+      "name": "Quorum sensing",
+      "facet": "Bacteria and how they live",
+      "known_at": 14
+    },
+    {
+      "name": "Virus",
+      "facet": "Viruses and how they spread",
+      "known_at": 3
+    },
+    {
+      "name": "Common cold",
+      "facet": "Viruses and how they spread",
+      "known_at": 3
+    },
+    {
+      "name": "Influenza",
+      "facet": "Viruses and how they spread",
+      "known_at": 5
+    },
+    {
+      "name": "Chickenpox",
+      "facet": "Viruses and how they spread",
+      "known_at": 5
+    },
+    {
+      "name": "COVID-19",
+      "facet": "Viruses and how they spread",
+      "known_at": 4
+    },
+    {
+      "name": "Coronavirus",
+      "facet": "Viruses and how they spread",
+      "known_at": 6
+    },
+    {
+      "name": "Pandemic",
+      "facet": "Viruses and how they spread",
+      "known_at": 6
+    },
+    {
+      "name": "Epidemic",
+      "facet": "Viruses and how they spread",
+      "known_at": 8
+    },
+    {
+      "name": "Measles",
+      "facet": "Viruses and how they spread",
+      "known_at": 6
+    },
+    {
+      "name": "Smallpox",
+      "facet": "Viruses and how they spread",
+      "known_at": 9
+    },
+    {
+      "name": "Polio",
+      "facet": "Viruses and how they spread",
+      "known_at": 9
+    },
+    {
+      "name": "Rabies",
+      "facet": "Viruses and how they spread",
+      "known_at": 9
+    },
+    {
+      "name": "HIV",
+      "facet": "Viruses and how they spread",
+      "known_at": 10
+    },
+    {
+      "name": "Ebola",
+      "facet": "Viruses and how they spread",
+      "known_at": 10
+    },
+    {
+      "name": "Dengue",
+      "facet": "Viruses and how they spread",
+      "known_at": 11
+    },
+    {
+      "name": "Zika virus",
+      "facet": "Viruses and how they spread",
+      "known_at": 11
+    },
+    {
+      "name": "Respiratory droplets",
+      "facet": "Viruses and how they spread",
+      "known_at": 8
+    },
+    {
+      "name": "Host cell",
+      "facet": "Viruses and how they spread",
+      "known_at": 10
+    },
+    {
+      "name": "Variant",
+      "facet": "Viruses and how they spread",
+      "known_at": 9
+    },
+    {
+      "name": "Bacteriophage",
+      "facet": "Viruses and how they spread",
+      "known_at": 12
+    },
+    {
+      "name": "Capsid",
+      "facet": "Viruses and how they spread",
+      "known_at": 13
+    },
+    {
+      "name": "Retrovirus",
+      "facet": "Viruses and how they spread",
+      "known_at": 13
+    },
+    {
+      "name": "Zoonosis",
+      "facet": "Viruses and how they spread",
+      "known_at": 13
+    },
+    {
+      "name": "Incubation period",
+      "facet": "Viruses and how they spread",
+      "known_at": 11
+    },
+    {
+      "name": "Tobacco mosaic virus",
+      "facet": "Viruses and how they spread",
+      "known_at": 14
+    },
+    {
+      "name": "Mushroom",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 1
+    },
+    {
+      "name": "Fungi",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 5
+    },
+    {
+      "name": "Fly agaric",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 4
+    },
+    {
+      "name": "Button mushroom",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 5
+    },
+    {
+      "name": "Spores",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 7
+    },
+    {
+      "name": "Fairy ring",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 8
+    },
+    {
+      "name": "Puffball",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 8
+    },
+    {
+      "name": "Truffle",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 8
+    },
+    {
+      "name": "Oyster mushroom",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 8
+    },
+    {
+      "name": "Mycelium",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 9
+    },
+    {
+      "name": "Gills",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 9
+    },
+    {
+      "name": "Shiitake",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 9
+    },
+    {
+      "name": "Ophiocordyceps",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 10
+    },
+    {
+      "name": "Bracket fungus",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 10
+    },
+    {
+      "name": "Death cap",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 11
+    },
+    {
+      "name": "Chanterelle",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 11
+    },
+    {
+      "name": "Porcini",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 11
+    },
+    {
+      "name": "Morel",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 12
+    },
+    {
+      "name": "Hyphae",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 12
+    },
+    {
+      "name": "Mycology",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 12
+    },
+    {
+      "name": "Armillaria",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 13
+    },
+    {
+      "name": "Stinkhorn",
+      "facet": "Mushrooms and wild fungi",
+      "known_at": 13
+    },
+    {
+      "name": "Mold",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 3
+    },
+    {
+      "name": "Bread mold",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 5
+    },
+    {
+      "name": "Yeast",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 5
+    },
+    {
+      "name": "Lichen",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 8
+    },
+    {
+      "name": "Mildew",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 9
+    },
+    {
+      "name": "Black mold",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 10
+    },
+    {
+      "name": "Penicillium",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 11
+    },
+    {
+      "name": "Budding",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 12
+    },
+    {
+      "name": "Reindeer lichen",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 12
+    },
+    {
+      "name": "Dry rot",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 12
+    },
+    {
+      "name": "Saccharomyces cerevisiae",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 13
+    },
+    {
+      "name": "Candida",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 13
+    },
+    {
+      "name": "Sporangium",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 13
+    },
+    {
+      "name": "Rust fungus",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 13
+    },
+    {
+      "name": "Dutch elm disease",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 13
+    },
+    {
+      "name": "Huitlacoche",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 13
+    },
+    {
+      "name": "Aspergillus",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 14
+    },
+    {
+      "name": "Noble rot",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 14
+    },
+    {
+      "name": "Ergot",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 14
+    },
+    {
+      "name": "Chytrid fungus",
+      "facet": "Molds, yeasts and lichens",
+      "known_at": 14
+    },
+    {
+      "name": "Cheese",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 2
+    },
+    {
+      "name": "Yogurt",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 3
+    },
+    {
+      "name": "Pickles",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 6
+    },
+    {
+      "name": "Soy sauce",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 6
+    },
+    {
+      "name": "Vinegar",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 6
+    },
+    {
+      "name": "Carbon dioxide",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 7
+    },
+    {
+      "name": "Fermentation",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 8
+    },
+    {
+      "name": "Sourdough",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 8
+    },
+    {
+      "name": "Kimchi",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 8
+    },
+    {
+      "name": "Sauerkraut",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 9
+    },
+    {
+      "name": "Emmental",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 10
+    },
+    {
+      "name": "Camembert",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 10
+    },
+    {
+      "name": "Miso",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 10
+    },
+    {
+      "name": "Kombucha",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 10
+    },
+    {
+      "name": "Cocoa beans",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 10
+    },
+    {
+      "name": "Pasteurization",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 10
+    },
+    {
+      "name": "Kefir",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 11
+    },
+    {
+      "name": "Lactobacillus",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 11
+    },
+    {
+      "name": "Lactic acid",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 11
+    },
+    {
+      "name": "Roquefort",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 11
+    },
+    {
+      "name": "Tempeh",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 12
+    },
+    {
+      "name": "Natto",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 12
+    },
+    {
+      "name": "Injera",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 12
+    },
+    {
+      "name": "Koji",
+      "facet": "Microbes in food and fermentation",
+      "known_at": 13
+    },
+    {
+      "name": "Handwashing",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 1
+    },
+    {
+      "name": "Germs",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 2
+    },
+    {
+      "name": "Soap",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 2,
+      "retired": "used_up: Every simple soap question at difficulty 2 can be answered from the existing riddle (“you wash your hands with it”)."
+    },
+    {
+      "name": "Sneezing",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 2
+    },
+    {
+      "name": "Face mask",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 3
+    },
+    {
+      "name": "Hand sanitizer",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 4
+    },
+    {
+      "name": "Tooth decay",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 4
+    },
+    {
+      "name": "Fever",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 4
+    },
+    {
+      "name": "Infection",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 5
+    },
+    {
+      "name": "Plaque",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 6
+    },
+    {
+      "name": "Food poisoning",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 6
+    },
+    {
+      "name": "Immune system",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 6
+    },
+    {
+      "name": "White blood cells",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 7
+    },
+    {
+      "name": "Quarantine",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 8
+    },
+    {
+      "name": "Salmonella",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 9
+    },
+    {
+      "name": "Black Death",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 9
+    },
+    {
+      "name": "Athlete's foot",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 9
+    },
+    {
+      "name": "Tuberculosis",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 10
+    },
+    {
+      "name": "Cholera",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 10
+    },
+    {
+      "name": "Tetanus",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 10
+    },
+    {
+      "name": "Lyme disease",
+      "facet": "Germs, disease and hygiene",
+      "known_at": 12
+    },
+    {
+      "name": "Syringe",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 3
+    },
+    {
+      "name": "Vaccine",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 4
+    },
+    {
+      "name": "Antibiotic",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 6
+    },
+    {
+      "name": "Booster shot",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 7
+    },
+    {
+      "name": "Penicillin",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 8
+    },
+    {
+      "name": "Antibodies",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 8
+    },
+    {
+      "name": "Antiseptic",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 9
+    },
+    {
+      "name": "mRNA vaccine",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 10
+    },
+    {
+      "name": "Herd immunity",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 10
+    },
+    {
+      "name": "Antiviral drug",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 10
+    },
+    {
+      "name": "Antibiotic resistance",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 11
+    },
+    {
+      "name": "Cowpox",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 11
+    },
+    {
+      "name": "Immune memory",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 11
+    },
+    {
+      "name": "Clinical trial",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 11
+    },
+    {
+      "name": "Eradication",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 12
+    },
+    {
+      "name": "MRSA",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 13
+    },
+    {
+      "name": "Variolation",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 13
+    },
+    {
+      "name": "Cold chain",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 13
+    },
+    {
+      "name": "Broad-spectrum antibiotic",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 13
+    },
+    {
+      "name": "Streptomycin",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 14
+    },
+    {
+      "name": "Sulfa drugs",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 14
+    },
+    {
+      "name": "Phage therapy",
+      "facet": "Vaccines and antibiotics",
+      "known_at": 14
+    },
+    {
+      "name": "Intestinal gas",
+      "facet": "The human microbiome",
+      "known_at": 5
+    },
+    {
+      "name": "Gut bacteria",
+      "facet": "The human microbiome",
+      "known_at": 6
+    },
+    {
+      "name": "Body odor",
+      "facet": "The human microbiome",
+      "known_at": 6
+    },
+    {
+      "name": "Skin bacteria",
+      "facet": "The human microbiome",
+      "known_at": 8
+    },
+    {
+      "name": "Large intestine",
+      "facet": "The human microbiome",
+      "known_at": 8
+    },
+    {
+      "name": "Probiotics",
+      "facet": "The human microbiome",
+      "known_at": 9
+    },
+    {
+      "name": "Dietary fiber",
+      "facet": "The human microbiome",
+      "known_at": 9
+    },
+    {
+      "name": "Acne",
+      "facet": "The human microbiome",
+      "known_at": 9
+    },
+    {
+      "name": "Microbiome",
+      "facet": "The human microbiome",
+      "known_at": 10
+    },
+    {
+      "name": "Dandruff",
+      "facet": "The human microbiome",
+      "known_at": 10
+    },
+    {
+      "name": "Appendix",
+      "facet": "The human microbiome",
+      "known_at": 10
+    },
+    {
+      "name": "Prebiotics",
+      "facet": "The human microbiome",
+      "known_at": 12
+    },
+    {
+      "name": "Vitamin K",
+      "facet": "The human microbiome",
+      "known_at": 12
+    },
+    {
+      "name": "Helicobacter pylori",
+      "facet": "The human microbiome",
+      "known_at": 13
+    },
+    {
+      "name": "Streptococcus mutans",
+      "facet": "The human microbiome",
+      "known_at": 13
+    },
+    {
+      "name": "Bifidobacterium",
+      "facet": "The human microbiome",
+      "known_at": 13
+    },
+    {
+      "name": "Fecal transplant",
+      "facet": "The human microbiome",
+      "known_at": 13
+    },
+    {
+      "name": "Gut-brain axis",
+      "facet": "The human microbiome",
+      "known_at": 13
+    },
+    {
+      "name": "Hygiene hypothesis",
+      "facet": "The human microbiome",
+      "known_at": 14
+    },
+    {
+      "name": "Human Microbiome Project",
+      "facet": "The human microbiome",
+      "known_at": 14
+    },
+    {
+      "name": "Plankton",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 5
+    },
+    {
+      "name": "Compost",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 5
+    },
+    {
+      "name": "Decomposers",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 6
+    },
+    {
+      "name": "Phytoplankton",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 9
+    },
+    {
+      "name": "Algal bloom",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 11
+    },
+    {
+      "name": "Red tide",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 11
+    },
+    {
+      "name": "Hydrothermal vents",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 11
+    },
+    {
+      "name": "Grand Prismatic Spring",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 11
+    },
+    {
+      "name": "Coral bleaching",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 11
+    },
+    {
+      "name": "Nitrogen fixation",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 12
+    },
+    {
+      "name": "Wood Wide Web",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 12
+    },
+    {
+      "name": "Pioneer species",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 12
+    },
+    {
+      "name": "Lake Hillier",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 12
+    },
+    {
+      "name": "Oil-eating bacteria",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 12
+    },
+    {
+      "name": "Root nodules",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 13
+    },
+    {
+      "name": "Mycorrhiza",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 13
+    },
+    {
+      "name": "Stromatolites",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 13
+    },
+    {
+      "name": "Geosmin",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 13
+    },
+    {
+      "name": "Great Oxidation Event",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 14
+    },
+    {
+      "name": "Methanogens",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 14
+    },
+    {
+      "name": "Marine snow",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 14
+    },
+    {
+      "name": "Rio Tinto",
+      "facet": "Microbes in nature and ecosystems",
+      "known_at": 14
+    },
+    {
+      "name": "Algae",
+      "facet": "Protists and single-celled life",
+      "known_at": 5
+    },
+    {
+      "name": "Amoeba",
+      "facet": "Protists and single-celled life",
+      "known_at": 6
+    },
+    {
+      "name": "Single-celled organism",
+      "facet": "Protists and single-celled life",
+      "known_at": 6
+    },
+    {
+      "name": "Paramecium",
+      "facet": "Protists and single-celled life",
+      "known_at": 9
+    },
+    {
+      "name": "Euglena",
+      "facet": "Protists and single-celled life",
+      "known_at": 11
+    },
+    {
+      "name": "Slime mold",
+      "facet": "Protists and single-celled life",
+      "known_at": 11
+    },
+    {
+      "name": "Cilia",
+      "facet": "Protists and single-celled life",
+      "known_at": 11
+    },
+    {
+      "name": "Eukaryote",
+      "facet": "Protists and single-celled life",
+      "known_at": 11
+    },
+    {
+      "name": "Plasmodium",
+      "facet": "Protists and single-celled life",
+      "known_at": 12
+    },
+    {
+      "name": "Diatoms",
+      "facet": "Protists and single-celled life",
+      "known_at": 12
+    },
+    {
+      "name": "Pseudopod",
+      "facet": "Protists and single-celled life",
+      "known_at": 12
+    },
+    {
+      "name": "Archaea",
+      "facet": "Protists and single-celled life",
+      "known_at": 13
+    },
+    {
+      "name": "Dinoflagellates",
+      "facet": "Protists and single-celled life",
+      "known_at": 13
+    },
+    {
+      "name": "Volvox",
+      "facet": "Protists and single-celled life",
+      "known_at": 13
+    },
+    {
+      "name": "Giardia",
+      "facet": "Protists and single-celled life",
+      "known_at": 13
+    },
+    {
+      "name": "Contractile vacuole",
+      "facet": "Protists and single-celled life",
+      "known_at": 13
+    },
+    {
+      "name": "Foraminifera",
+      "facet": "Protists and single-celled life",
+      "known_at": 14
+    },
+    {
+      "name": "Radiolarians",
+      "facet": "Protists and single-celled life",
+      "known_at": 14
+    },
+    {
+      "name": "Coccolithophores",
+      "facet": "Protists and single-celled life",
+      "known_at": 14
+    },
+    {
+      "name": "Trypanosoma",
+      "facet": "Protists and single-celled life",
+      "known_at": 14
+    },
+    {
+      "name": "LUCA",
+      "facet": "Protists and single-celled life",
+      "known_at": 14
+    },
+    {
+      "name": "Choanoflagellates",
+      "facet": "Protists and single-celled life",
+      "known_at": 15
+    },
+    {
+      "name": "Magnifying glass",
+      "facet": "Microscopes and lab tools",
+      "known_at": 2
+    },
+    {
+      "name": "Lab coat",
+      "facet": "Microscopes and lab tools",
+      "known_at": 3
+    },
+    {
+      "name": "Test tube",
+      "facet": "Microscopes and lab tools",
+      "known_at": 4
+    },
+    {
+      "name": "Lens",
+      "facet": "Microscopes and lab tools",
+      "known_at": 5
+    },
+    {
+      "name": "Microscope slide",
+      "facet": "Microscopes and lab tools",
+      "known_at": 7
+    },
+    {
+      "name": "Magnification",
+      "facet": "Microscopes and lab tools",
+      "known_at": 7
+    },
+    {
+      "name": "Rapid antigen test",
+      "facet": "Microscopes and lab tools",
+      "known_at": 7
+    },
+    {
+      "name": "Petri dish",
+      "facet": "Microscopes and lab tools",
+      "known_at": 8
+    },
+    {
+      "name": "Pipette",
+      "facet": "Microscopes and lab tools",
+      "known_at": 8
+    },
+    {
+      "name": "Bunsen burner",
+      "facet": "Microscopes and lab tools",
+      "known_at": 8
+    },
+    {
+      "name": "Eyepiece",
+      "facet": "Microscopes and lab tools",
+      "known_at": 8
+    },
+    {
+      "name": "Incubator",
+      "facet": "Microscopes and lab tools",
+      "known_at": 9
+    },
+    {
+      "name": "Electron microscope",
+      "facet": "Microscopes and lab tools",
+      "known_at": 10
+    },
+    {
+      "name": "Cover slip",
+      "facet": "Microscopes and lab tools",
+      "known_at": 10
+    },
+    {
+      "name": "PCR test",
+      "facet": "Microscopes and lab tools",
+      "known_at": 10
+    },
+    {
+      "name": "Bacterial culture",
+      "facet": "Microscopes and lab tools",
+      "known_at": 11
+    },
+    {
+      "name": "Centrifuge",
+      "facet": "Microscopes and lab tools",
+      "known_at": 11
+    },
+    {
+      "name": "Agar",
+      "facet": "Microscopes and lab tools",
+      "known_at": 12
+    },
+    {
+      "name": "Autoclave",
+      "facet": "Microscopes and lab tools",
+      "known_at": 12
+    },
+    {
+      "name": "Gram stain",
+      "facet": "Microscopes and lab tools",
+      "known_at": 13
+    },
+    {
+      "name": "Inoculating loop",
+      "facet": "Microscopes and lab tools",
+      "known_at": 13
+    },
+    {
+      "name": "Biosafety level",
+      "facet": "Microscopes and lab tools",
+      "known_at": 13
+    },
+    {
+      "name": "Oil immersion lens",
+      "facet": "Microscopes and lab tools",
+      "known_at": 14
+    },
+    {
+      "name": "Louis Pasteur",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 8
+    },
+    {
+      "name": "Alexander Fleming",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 8
+    },
+    {
+      "name": "Florence Nightingale",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 8
+    },
+    {
+      "name": "Edward Jenner",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 10
+    },
+    {
+      "name": "Antonie van Leeuwenhoek",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Robert Hooke",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Jonas Salk",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Germ theory",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Robert Koch",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 12
+    },
+    {
+      "name": "John Snow",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 12
+    },
+    {
+      "name": "Spontaneous generation",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 12
+    },
+    {
+      "name": "Swan-neck flask experiment",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 12
+    },
+    {
+      "name": "Ignaz Semmelweis",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Joseph Lister",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Katalin Karikó",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 13
+    },
+    {
+      "name": "Tu Youyou",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Lynn Margulis",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Barry Marshall",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Koch's postulates",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Alexandre Yersin",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Kitasato Shibasaburō",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 15
+    },
+    {
+      "name": "Carl Woese",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 15
+    },
+    {
+      "name": "Martinus Beijerinck",
+      "facet": "Microbe hunters and discoveries",
+      "known_at": 15
+    }
+  ]
+}

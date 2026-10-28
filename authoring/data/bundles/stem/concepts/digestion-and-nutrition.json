@@ -1,0 +1,927 @@
+{
+  "subcategory": "digestion-and-nutrition",
+  "facets": [
+    "Mouth, teeth and swallowing",
+    "Stomach and intestines",
+    "Liver, pancreas and gallbladder",
+    "Enzymes, acids and bile",
+    "Gut bacteria and microbiome",
+    "Macronutrients and energy",
+    "Vitamins and minerals",
+    "Deficiency diseases and their history",
+    "Digestive troubles and everyday symptoms",
+    "Food science in the kitchen",
+    "Famous digestion experiments and scientists",
+    "Metabolism, calories and hydration"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 3,
+      "origin": 2,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 5,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 4,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 5,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Saliva",
+      "facet": "Mouth, teeth and swallowing",
+      "known_at": 2
+    },
+    {
+      "name": "Tongue",
+      "facet": "Mouth, teeth and swallowing",
+      "known_at": 1
+    },
+    {
+      "name": "Taste buds",
+      "facet": "Mouth, teeth and swallowing",
+      "known_at": 4
+    },
+    {
+      "name": "Molar",
+      "facet": "Mouth, teeth and swallowing",
+      "known_at": 4
+    },
+    {
+      "name": "Incisor",
+      "facet": "Mouth, teeth and swallowing",
+      "known_at": 5
+    },
+    {
+      "name": "Wisdom tooth",
+      "facet": "Mouth, teeth and swallowing",
+      "known_at": 6
+    },
+    {
+      "name": "Dental plaque",
+      "facet": "Mouth, teeth and swallowing",
+      "known_at": 6
+    },
+    {
+      "name": "Fluoride",
+      "facet": "Mouth, teeth and swallowing",
+      "known_at": 8
+    },
+    {
+      "name": "Tonsils",
+      "facet": "Mouth, teeth and swallowing",
+      "known_at": 6
+    },
+    {
+      "name": "Esophagus",
+      "facet": "Mouth, teeth and swallowing",
+      "known_at": 8
+    },
+    {
+      "name": "Uvula",
+      "facet": "Mouth, teeth and swallowing",
+      "known_at": 9
+    },
+    {
+      "name": "Palate",
+      "facet": "Mouth, teeth and swallowing",
+      "known_at": 9
+    },
+    {
+      "name": "Salivary glands",
+      "facet": "Mouth, teeth and swallowing",
+      "known_at": 9
+    },
+    {
+      "name": "Umami",
+      "facet": "Mouth, teeth and swallowing",
+      "known_at": 10
+    },
+    {
+      "name": "Dentin",
+      "facet": "Mouth, teeth and swallowing",
+      "known_at": 11
+    },
+    {
+      "name": "Bolus",
+      "facet": "Mouth, teeth and swallowing",
+      "known_at": 13
+    },
+    {
+      "name": "Small intestine",
+      "facet": "Stomach and intestines",
+      "known_at": 5
+    },
+    {
+      "name": "Colon",
+      "facet": "Stomach and intestines",
+      "known_at": 9
+    },
+    {
+      "name": "Rectum",
+      "facet": "Stomach and intestines",
+      "known_at": 10
+    },
+    {
+      "name": "Stomach lining",
+      "facet": "Stomach and intestines",
+      "known_at": 10
+    },
+    {
+      "name": "Villi",
+      "facet": "Stomach and intestines",
+      "known_at": 11
+    },
+    {
+      "name": "Peristalsis",
+      "facet": "Stomach and intestines",
+      "known_at": 12
+    },
+    {
+      "name": "Duodenum",
+      "facet": "Stomach and intestines",
+      "known_at": 12
+    },
+    {
+      "name": "Chyme",
+      "facet": "Stomach and intestines",
+      "known_at": 13
+    },
+    {
+      "name": "Pyloric sphincter",
+      "facet": "Stomach and intestines",
+      "known_at": 14
+    },
+    {
+      "name": "Ileum",
+      "facet": "Stomach and intestines",
+      "known_at": 14
+    },
+    {
+      "name": "Jejunum",
+      "facet": "Stomach and intestines",
+      "known_at": 14
+    },
+    {
+      "name": "Cecum",
+      "facet": "Stomach and intestines",
+      "known_at": 14
+    },
+    {
+      "name": "Feces",
+      "facet": "Stomach and intestines",
+      "known_at": 3
+    },
+    {
+      "name": "Liver",
+      "facet": "Liver, pancreas and gallbladder",
+      "known_at": 4
+    },
+    {
+      "name": "Pancreas",
+      "facet": "Liver, pancreas and gallbladder",
+      "known_at": 9
+    },
+    {
+      "name": "Gallbladder",
+      "facet": "Liver, pancreas and gallbladder",
+      "known_at": 9
+    },
+    {
+      "name": "Gallstones",
+      "facet": "Liver, pancreas and gallbladder",
+      "known_at": 10
+    },
+    {
+      "name": "Insulin",
+      "facet": "Liver, pancreas and gallbladder",
+      "known_at": 8
+    },
+    {
+      "name": "Diabetes",
+      "facet": "Liver, pancreas and gallbladder",
+      "known_at": 7
+    },
+    {
+      "name": "Glucagon",
+      "facet": "Liver, pancreas and gallbladder",
+      "known_at": 13
+    },
+    {
+      "name": "Islets of Langerhans",
+      "facet": "Liver, pancreas and gallbladder",
+      "known_at": 14
+    },
+    {
+      "name": "Liver regeneration",
+      "facet": "Liver, pancreas and gallbladder",
+      "known_at": 11
+    },
+    {
+      "name": "Glycogen",
+      "facet": "Liver, pancreas and gallbladder",
+      "known_at": 12
+    },
+    {
+      "name": "Hepatitis",
+      "facet": "Liver, pancreas and gallbladder",
+      "known_at": 11
+    },
+    {
+      "name": "Jaundice",
+      "facet": "Liver, pancreas and gallbladder",
+      "known_at": 11
+    },
+    {
+      "name": "Bile duct",
+      "facet": "Liver, pancreas and gallbladder",
+      "known_at": 12
+    },
+    {
+      "name": "Portal vein",
+      "facet": "Liver, pancreas and gallbladder",
+      "known_at": 14
+    },
+    {
+      "name": "Liver transplant",
+      "facet": "Liver, pancreas and gallbladder",
+      "known_at": 10
+    },
+    {
+      "name": "Prometheus",
+      "facet": "Liver, pancreas and gallbladder",
+      "known_at": 10
+    },
+    {
+      "name": "Amylase",
+      "facet": "Enzymes, acids and bile",
+      "known_at": 11
+    },
+    {
+      "name": "Pepsin",
+      "facet": "Enzymes, acids and bile",
+      "known_at": 12
+    },
+    {
+      "name": "Lipase",
+      "facet": "Enzymes, acids and bile",
+      "known_at": 12
+    },
+    {
+      "name": "Trypsin",
+      "facet": "Enzymes, acids and bile",
+      "known_at": 14
+    },
+    {
+      "name": "Lactase",
+      "facet": "Enzymes, acids and bile",
+      "known_at": 11
+    },
+    {
+      "name": "Protease",
+      "facet": "Enzymes, acids and bile",
+      "known_at": 12
+    },
+    {
+      "name": "Hydrochloric acid",
+      "facet": "Enzymes, acids and bile",
+      "known_at": 9
+    },
+    {
+      "name": "Bile",
+      "facet": "Enzymes, acids and bile",
+      "known_at": 9
+    },
+    {
+      "name": "pH",
+      "facet": "Enzymes, acids and bile",
+      "known_at": 9
+    },
+    {
+      "name": "Bilirubin",
+      "facet": "Enzymes, acids and bile",
+      "known_at": 13
+    },
+    {
+      "name": "Emulsification",
+      "facet": "Enzymes, acids and bile",
+      "known_at": 13
+    },
+    {
+      "name": "Catalyst",
+      "facet": "Enzymes, acids and bile",
+      "known_at": 10
+    },
+    {
+      "name": "Denaturation",
+      "facet": "Enzymes, acids and bile",
+      "known_at": 13
+    },
+    {
+      "name": "Pancreatic juice",
+      "facet": "Enzymes, acids and bile",
+      "known_at": 12
+    },
+    {
+      "name": "Bifidobacteria",
+      "facet": "Gut bacteria and microbiome",
+      "known_at": 13
+    },
+    {
+      "name": "Clostridioides difficile",
+      "facet": "Gut bacteria and microbiome",
+      "known_at": 14
+    },
+    {
+      "name": "Antibiotics",
+      "facet": "Gut bacteria and microbiome",
+      "known_at": 6
+    },
+    {
+      "name": "Fat",
+      "facet": "Macronutrients and energy",
+      "known_at": 3
+    },
+    {
+      "name": "Sugar",
+      "facet": "Macronutrients and energy",
+      "known_at": 1
+    },
+    {
+      "name": "Fructose",
+      "facet": "Macronutrients and energy",
+      "known_at": 10
+    },
+    {
+      "name": "Lactose",
+      "facet": "Macronutrients and energy",
+      "known_at": 9
+    },
+    {
+      "name": "Sucrose",
+      "facet": "Macronutrients and energy",
+      "known_at": 11
+    },
+    {
+      "name": "Amino acids",
+      "facet": "Macronutrients and energy",
+      "known_at": 10
+    },
+    {
+      "name": "Essential amino acids",
+      "facet": "Macronutrients and energy",
+      "known_at": 12
+    },
+    {
+      "name": "Fatty acids",
+      "facet": "Macronutrients and energy",
+      "known_at": 12
+    },
+    {
+      "name": "Omega-3",
+      "facet": "Macronutrients and energy",
+      "known_at": 10
+    },
+    {
+      "name": "Saturated fat",
+      "facet": "Macronutrients and energy",
+      "known_at": 11
+    },
+    {
+      "name": "Trans fat",
+      "facet": "Macronutrients and energy",
+      "known_at": 12
+    },
+    {
+      "name": "Food pyramid",
+      "facet": "Macronutrients and energy",
+      "known_at": 4
+    },
+    {
+      "name": "Vitamin C",
+      "facet": "Vitamins and minerals",
+      "known_at": 4
+    },
+    {
+      "name": "Vitamin D",
+      "facet": "Vitamins and minerals",
+      "known_at": 6
+    },
+    {
+      "name": "Vitamin A",
+      "facet": "Vitamins and minerals",
+      "known_at": 6
+    },
+    {
+      "name": "Vitamin B12",
+      "facet": "Vitamins and minerals",
+      "known_at": 11
+    },
+    {
+      "name": "Vitamin E",
+      "facet": "Vitamins and minerals",
+      "known_at": 11
+    },
+    {
+      "name": "Folic acid",
+      "facet": "Vitamins and minerals",
+      "known_at": 12
+    },
+    {
+      "name": "Thiamine",
+      "facet": "Vitamins and minerals",
+      "known_at": 13
+    },
+    {
+      "name": "Beta-carotene",
+      "facet": "Vitamins and minerals",
+      "known_at": 11
+    },
+    {
+      "name": "Calcium",
+      "facet": "Vitamins and minerals",
+      "known_at": 3
+    },
+    {
+      "name": "Iodine",
+      "facet": "Vitamins and minerals",
+      "known_at": 10
+    },
+    {
+      "name": "Zinc",
+      "facet": "Vitamins and minerals",
+      "known_at": 10
+    },
+    {
+      "name": "Potassium",
+      "facet": "Vitamins and minerals",
+      "known_at": 8
+    },
+    {
+      "name": "Magnesium",
+      "facet": "Vitamins and minerals",
+      "known_at": 10
+    },
+    {
+      "name": "Sodium",
+      "facet": "Vitamins and minerals",
+      "known_at": 8
+    },
+    {
+      "name": "Scurvy",
+      "facet": "Deficiency diseases and their history",
+      "known_at": 7
+    },
+    {
+      "name": "Rickets",
+      "facet": "Deficiency diseases and their history",
+      "known_at": 10
+    },
+    {
+      "name": "Beriberi",
+      "facet": "Deficiency diseases and their history",
+      "known_at": 12
+    },
+    {
+      "name": "Pellagra",
+      "facet": "Deficiency diseases and their history",
+      "known_at": 13
+    },
+    {
+      "name": "Goiter",
+      "facet": "Deficiency diseases and their history",
+      "known_at": 11
+    },
+    {
+      "name": "Night blindness",
+      "facet": "Deficiency diseases and their history",
+      "known_at": 10
+    },
+    {
+      "name": "Kwashiorkor",
+      "facet": "Deficiency diseases and their history",
+      "known_at": 13
+    },
+    {
+      "name": "Marasmus",
+      "facet": "Deficiency diseases and their history",
+      "known_at": 14
+    },
+    {
+      "name": "Osteoporosis",
+      "facet": "Deficiency diseases and their history",
+      "known_at": 10
+    },
+    {
+      "name": "Iodized salt",
+      "facet": "Deficiency diseases and their history",
+      "known_at": 9
+    },
+    {
+      "name": "Cod liver oil",
+      "facet": "Deficiency diseases and their history",
+      "known_at": 9
+    },
+    {
+      "name": "Limeys",
+      "facet": "Deficiency diseases and their history",
+      "known_at": 12
+    },
+    {
+      "name": "James Cook",
+      "facet": "Deficiency diseases and their history",
+      "known_at": 9
+    },
+    {
+      "name": "Polished white rice",
+      "facet": "Deficiency diseases and their history",
+      "known_at": 13
+    },
+    {
+      "name": "Christiaan Eijkman",
+      "facet": "Deficiency diseases and their history",
+      "known_at": 14
+    },
+    {
+      "name": "Casimir Funk",
+      "facet": "Deficiency diseases and their history",
+      "known_at": 14
+    },
+    {
+      "name": "Joseph Goldberger",
+      "facet": "Deficiency diseases and their history",
+      "known_at": 15
+    },
+    {
+      "name": "Flatulence",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 2
+    },
+    {
+      "name": "Stomachache",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 1
+    },
+    {
+      "name": "Stomach rumbling",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 3
+    },
+    {
+      "name": "Diarrhea",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 3
+    },
+    {
+      "name": "Constipation",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 4
+    },
+    {
+      "name": "Heartburn",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 7
+    },
+    {
+      "name": "Indigestion",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 7
+    },
+    {
+      "name": "Bloating",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 6
+    },
+    {
+      "name": "Motion sickness",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 7
+    },
+    {
+      "name": "Food allergy",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 5
+    },
+    {
+      "name": "Lactose intolerance",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 8
+    },
+    {
+      "name": "Gluten",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 9
+    },
+    {
+      "name": "Celiac disease",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 10
+    },
+    {
+      "name": "Stomach ulcer",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 10
+    },
+    {
+      "name": "Appendicitis",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 8
+    },
+    {
+      "name": "Antacid",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 9
+    },
+    {
+      "name": "Norovirus",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 11
+    },
+    {
+      "name": "Gastroenteritis",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 11
+    },
+    {
+      "name": "Irritable bowel syndrome",
+      "facet": "Digestive troubles and everyday symptoms",
+      "known_at": 12
+    },
+    {
+      "name": "Popcorn",
+      "facet": "Food science in the kitchen",
+      "known_at": 1
+    },
+    {
+      "name": "Cutting onions",
+      "facet": "Food science in the kitchen",
+      "known_at": 3
+    },
+    {
+      "name": "Baking soda",
+      "facet": "Food science in the kitchen",
+      "known_at": 6
+    },
+    {
+      "name": "Mayonnaise",
+      "facet": "Food science in the kitchen",
+      "known_at": 5
+    },
+    {
+      "name": "Gelatin",
+      "facet": "Food science in the kitchen",
+      "known_at": 7
+    },
+    {
+      "name": "Caramelization",
+      "facet": "Food science in the kitchen",
+      "known_at": 8
+    },
+    {
+      "name": "Meringue",
+      "facet": "Food science in the kitchen",
+      "known_at": 8
+    },
+    {
+      "name": "Pickling",
+      "facet": "Food science in the kitchen",
+      "known_at": 8
+    },
+    {
+      "name": "Pressure cooker",
+      "facet": "Food science in the kitchen",
+      "known_at": 8
+    },
+    {
+      "name": "Scoville scale",
+      "facet": "Food science in the kitchen",
+      "known_at": 9
+    },
+    {
+      "name": "Curdling",
+      "facet": "Food science in the kitchen",
+      "known_at": 9
+    },
+    {
+      "name": "Enzymatic browning",
+      "facet": "Food science in the kitchen",
+      "known_at": 10
+    },
+    {
+      "name": "Monosodium glutamate",
+      "facet": "Food science in the kitchen",
+      "known_at": 10
+    },
+    {
+      "name": "Freeze-drying",
+      "facet": "Food science in the kitchen",
+      "known_at": 10
+    },
+    {
+      "name": "Emulsion",
+      "facet": "Food science in the kitchen",
+      "known_at": 11
+    },
+    {
+      "name": "Cooking at high altitude",
+      "facet": "Food science in the kitchen",
+      "known_at": 11
+    },
+    {
+      "name": "Maillard reaction",
+      "facet": "Food science in the kitchen",
+      "known_at": 12
+    },
+    {
+      "name": "Smoke point",
+      "facet": "Food science in the kitchen",
+      "known_at": 12
+    },
+    {
+      "name": "Rennet",
+      "facet": "Food science in the kitchen",
+      "known_at": 12
+    },
+    {
+      "name": "James Lind",
+      "facet": "Famous digestion experiments and scientists",
+      "known_at": 12
+    },
+    {
+      "name": "Frederick Banting",
+      "facet": "Famous digestion experiments and scientists",
+      "known_at": 12
+    },
+    {
+      "name": "Charles Best",
+      "facet": "Famous digestion experiments and scientists",
+      "known_at": 13
+    },
+    {
+      "name": "William Beaumont",
+      "facet": "Famous digestion experiments and scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Alexis St. Martin",
+      "facet": "Famous digestion experiments and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Robin Warren",
+      "facet": "Famous digestion experiments and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Albert Szent-Györgyi",
+      "facet": "Famous digestion experiments and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Claude Bernard",
+      "facet": "Famous digestion experiments and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Ancel Keys",
+      "facet": "Famous digestion experiments and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Lazzaro Spallanzani",
+      "facet": "Famous digestion experiments and scientists",
+      "known_at": 15
+    },
+    {
+      "name": "William Prout",
+      "facet": "Famous digestion experiments and scientists",
+      "known_at": 15
+    },
+    {
+      "name": "Santorio Santorio",
+      "facet": "Famous digestion experiments and scientists",
+      "known_at": 15
+    },
+    {
+      "name": "Wilbur Atwater",
+      "facet": "Famous digestion experiments and scientists",
+      "known_at": 15
+    },
+    {
+      "name": "Thirst",
+      "facet": "Metabolism, calories and hydration",
+      "known_at": 1
+    },
+    {
+      "name": "Sweat",
+      "facet": "Metabolism, calories and hydration",
+      "known_at": 2
+    },
+    {
+      "name": "Dehydration",
+      "facet": "Metabolism, calories and hydration",
+      "known_at": 5
+    },
+    {
+      "name": "Urine color",
+      "facet": "Metabolism, calories and hydration",
+      "known_at": 5
+    },
+    {
+      "name": "Kidneys",
+      "facet": "Metabolism, calories and hydration",
+      "known_at": 5
+    },
+    {
+      "name": "Sports drink",
+      "facet": "Metabolism, calories and hydration",
+      "known_at": 5
+    },
+    {
+      "name": "Calorie",
+      "facet": "Metabolism, calories and hydration",
+      "known_at": 6
+    },
+    {
+      "name": "Metabolism",
+      "facet": "Metabolism, calories and hydration",
+      "known_at": 7
+    },
+    {
+      "name": "Fasting",
+      "facet": "Metabolism, calories and hydration",
+      "known_at": 7
+    },
+    {
+      "name": "Electrolytes",
+      "facet": "Metabolism, calories and hydration",
+      "known_at": 10
+    },
+    {
+      "name": "Body mass index",
+      "facet": "Metabolism, calories and hydration",
+      "known_at": 10
+    },
+    {
+      "name": "Kilojoule",
+      "facet": "Metabolism, calories and hydration",
+      "known_at": 11
+    },
+    {
+      "name": "Basal metabolic rate",
+      "facet": "Metabolism, calories and hydration",
+      "known_at": 12
+    },
+    {
+      "name": "Ketosis",
+      "facet": "Metabolism, calories and hydration",
+      "known_at": 12
+    },
+    {
+      "name": "Brown fat",
+      "facet": "Metabolism, calories and hydration",
+      "known_at": 13
+    },
+    {
+      "name": "Calorimeter",
+      "facet": "Metabolism, calories and hydration",
+      "known_at": 13
+    },
+    {
+      "name": "Hyponatremia",
+      "facet": "Metabolism, calories and hydration",
+      "known_at": 13
+    }
+  ]
+}

@@ -1,0 +1,782 @@
+{
+  "subcategory": "immune-system-and-disease",
+  "facets": [
+    "Germs and pathogens",
+    "Immune cells and defenders",
+    "Barriers and first-line defenses",
+    "Antibodies and immune memory",
+    "Vaccines and immunization",
+    "Famous infectious diseases",
+    "Medicines and antibiotics",
+    "Pioneers of germ science",
+    "Epidemics and pandemics in history",
+    "Allergies and immune disorders",
+    "Symptoms and body responses",
+    "Hygiene and disease prevention"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 4,
+      "science_news": 4,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 5,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Fungus",
+      "facet": "Germs and pathogens",
+      "known_at": 5
+    },
+    {
+      "name": "Parasite",
+      "facet": "Germs and pathogens",
+      "known_at": 6
+    },
+    {
+      "name": "Pinworm",
+      "facet": "Germs and pathogens",
+      "known_at": 9
+    },
+    {
+      "name": "Protozoa",
+      "facet": "Germs and pathogens",
+      "known_at": 11
+    },
+    {
+      "name": "Prion",
+      "facet": "Germs and pathogens",
+      "known_at": 13
+    },
+    {
+      "name": "Staphylococcus aureus",
+      "facet": "Germs and pathogens",
+      "known_at": 12
+    },
+    {
+      "name": "Influenza virus",
+      "facet": "Germs and pathogens",
+      "known_at": 7
+    },
+    {
+      "name": "Rhinovirus",
+      "facet": "Germs and pathogens",
+      "known_at": 12
+    },
+    {
+      "name": "Macrophage",
+      "facet": "Immune cells and defenders",
+      "known_at": 10
+    },
+    {
+      "name": "Neutrophil",
+      "facet": "Immune cells and defenders",
+      "known_at": 12
+    },
+    {
+      "name": "T cell",
+      "facet": "Immune cells and defenders",
+      "known_at": 10
+    },
+    {
+      "name": "Helper T cell",
+      "facet": "Immune cells and defenders",
+      "known_at": 12
+    },
+    {
+      "name": "Killer T cell",
+      "facet": "Immune cells and defenders",
+      "known_at": 11
+    },
+    {
+      "name": "B cell",
+      "facet": "Immune cells and defenders",
+      "known_at": 11
+    },
+    {
+      "name": "Plasma cell",
+      "facet": "Immune cells and defenders",
+      "known_at": 13
+    },
+    {
+      "name": "Natural killer cell",
+      "facet": "Immune cells and defenders",
+      "known_at": 12
+    },
+    {
+      "name": "Dendritic cell",
+      "facet": "Immune cells and defenders",
+      "known_at": 13
+    },
+    {
+      "name": "Mast cell",
+      "facet": "Immune cells and defenders",
+      "known_at": 13
+    },
+    {
+      "name": "Eosinophil",
+      "facet": "Immune cells and defenders",
+      "known_at": 14
+    },
+    {
+      "name": "Phagocytosis",
+      "facet": "Immune cells and defenders",
+      "known_at": 11
+    },
+    {
+      "name": "Thymus",
+      "facet": "Immune cells and defenders",
+      "known_at": 12
+    },
+    {
+      "name": "Lymph node",
+      "facet": "Immune cells and defenders",
+      "known_at": 9
+    },
+    {
+      "name": "Skin",
+      "facet": "Barriers and first-line defenses",
+      "known_at": 2
+    },
+    {
+      "name": "Stomach acid",
+      "facet": "Barriers and first-line defenses",
+      "known_at": 6
+    },
+    {
+      "name": "Nose hair",
+      "facet": "Barriers and first-line defenses",
+      "known_at": 3
+    },
+    {
+      "name": "Lysozyme",
+      "facet": "Barriers and first-line defenses",
+      "known_at": 14
+    },
+    {
+      "name": "Scab",
+      "facet": "Barriers and first-line defenses",
+      "known_at": 2
+    },
+    {
+      "name": "Innate immunity",
+      "facet": "Barriers and first-line defenses",
+      "known_at": 12
+    },
+    {
+      "name": "Complement system",
+      "facet": "Barriers and first-line defenses",
+      "known_at": 14
+    },
+    {
+      "name": "Interferon",
+      "facet": "Barriers and first-line defenses",
+      "known_at": 13
+    },
+    {
+      "name": "Antigen",
+      "facet": "Antibodies and immune memory",
+      "known_at": 10
+    },
+    {
+      "name": "Memory cell",
+      "facet": "Antibodies and immune memory",
+      "known_at": 10
+    },
+    {
+      "name": "Adaptive immunity",
+      "facet": "Antibodies and immune memory",
+      "known_at": 12
+    },
+    {
+      "name": "Active immunity",
+      "facet": "Antibodies and immune memory",
+      "known_at": 11
+    },
+    {
+      "name": "Passive immunity",
+      "facet": "Antibodies and immune memory",
+      "known_at": 12
+    },
+    {
+      "name": "Colostrum",
+      "facet": "Antibodies and immune memory",
+      "known_at": 12
+    },
+    {
+      "name": "Immunoglobulin E",
+      "facet": "Antibodies and immune memory",
+      "known_at": 14
+    },
+    {
+      "name": "Immunoglobulin G",
+      "facet": "Antibodies and immune memory",
+      "known_at": 14
+    },
+    {
+      "name": "Monoclonal antibody",
+      "facet": "Antibodies and immune memory",
+      "known_at": 13
+    },
+    {
+      "name": "Antivenom",
+      "facet": "Antibodies and immune memory",
+      "known_at": 8
+    },
+    {
+      "name": "Rhesus factor",
+      "facet": "Antibodies and immune memory",
+      "known_at": 11
+    },
+    {
+      "name": "Antibody test",
+      "facet": "Antibodies and immune memory",
+      "known_at": 10
+    },
+    {
+      "name": "Clonal selection",
+      "facet": "Antibodies and immune memory",
+      "known_at": 15
+    },
+    {
+      "name": "Epitope",
+      "facet": "Antibodies and immune memory",
+      "known_at": 15
+    },
+    {
+      "name": "Major histocompatibility complex",
+      "facet": "Antibodies and immune memory",
+      "known_at": 14
+    },
+    {
+      "name": "Smallpox vaccine",
+      "facet": "Vaccines and immunization",
+      "known_at": 9
+    },
+    {
+      "name": "Polio vaccine",
+      "facet": "Vaccines and immunization",
+      "known_at": 8
+    },
+    {
+      "name": "Oral polio vaccine",
+      "facet": "Vaccines and immunization",
+      "known_at": 9
+    },
+    {
+      "name": "MMR vaccine",
+      "facet": "Vaccines and immunization",
+      "known_at": 10
+    },
+    {
+      "name": "BCG vaccine",
+      "facet": "Vaccines and immunization",
+      "known_at": 12
+    },
+    {
+      "name": "Rabies vaccine",
+      "facet": "Vaccines and immunization",
+      "known_at": 9
+    },
+    {
+      "name": "Tetanus shot",
+      "facet": "Vaccines and immunization",
+      "known_at": 6
+    },
+    {
+      "name": "Flu shot",
+      "facet": "Vaccines and immunization",
+      "known_at": 5
+    },
+    {
+      "name": "HPV vaccine",
+      "facet": "Vaccines and immunization",
+      "known_at": 12
+    },
+    {
+      "name": "Malaria vaccine",
+      "facet": "Vaccines and immunization",
+      "known_at": 12
+    },
+    {
+      "name": "Attenuated vaccine",
+      "facet": "Vaccines and immunization",
+      "known_at": 13
+    },
+    {
+      "name": "Adjuvant",
+      "facet": "Vaccines and immunization",
+      "known_at": 14
+    },
+    {
+      "name": "Mumps",
+      "facet": "Famous infectious diseases",
+      "known_at": 8
+    },
+    {
+      "name": "Whooping cough",
+      "facet": "Famous infectious diseases",
+      "known_at": 9
+    },
+    {
+      "name": "Shingles",
+      "facet": "Famous infectious diseases",
+      "known_at": 11
+    },
+    {
+      "name": "Strep throat",
+      "facet": "Famous infectious diseases",
+      "known_at": 9
+    },
+    {
+      "name": "Malaria",
+      "facet": "Famous infectious diseases",
+      "known_at": 7
+    },
+    {
+      "name": "Yellow fever",
+      "facet": "Famous infectious diseases",
+      "known_at": 10
+    },
+    {
+      "name": "Zika",
+      "facet": "Famous infectious diseases",
+      "known_at": 10
+    },
+    {
+      "name": "HIV/AIDS",
+      "facet": "Famous infectious diseases",
+      "known_at": 9
+    },
+    {
+      "name": "Leprosy",
+      "facet": "Famous infectious diseases",
+      "known_at": 10
+    },
+    {
+      "name": "Typhoid fever",
+      "facet": "Famous infectious diseases",
+      "known_at": 11
+    },
+    {
+      "name": "Diphtheria",
+      "facet": "Famous infectious diseases",
+      "known_at": 12
+    },
+    {
+      "name": "Sleeping sickness",
+      "facet": "Famous infectious diseases",
+      "known_at": 12
+    },
+    {
+      "name": "Paracetamol",
+      "facet": "Medicines and antibiotics",
+      "known_at": 7
+    },
+    {
+      "name": "Ibuprofen",
+      "facet": "Medicines and antibiotics",
+      "known_at": 8
+    },
+    {
+      "name": "Willow bark",
+      "facet": "Medicines and antibiotics",
+      "known_at": 12
+    },
+    {
+      "name": "Antihistamine",
+      "facet": "Medicines and antibiotics",
+      "known_at": 10
+    },
+    {
+      "name": "Antifungal cream",
+      "facet": "Medicines and antibiotics",
+      "known_at": 9
+    },
+    {
+      "name": "Artemisinin",
+      "facet": "Medicines and antibiotics",
+      "known_at": 14
+    },
+    {
+      "name": "Salvarsan",
+      "facet": "Medicines and antibiotics",
+      "known_at": 15
+    },
+    {
+      "name": "Cortisone",
+      "facet": "Medicines and antibiotics",
+      "known_at": 12
+    },
+    {
+      "name": "Epinephrine auto-injector",
+      "facet": "Medicines and antibiotics",
+      "known_at": 9
+    },
+    {
+      "name": "Oral rehydration solution",
+      "facet": "Medicines and antibiotics",
+      "known_at": 11
+    },
+    {
+      "name": "Placebo",
+      "facet": "Medicines and antibiotics",
+      "known_at": 10
+    },
+    {
+      "name": "Albert Sabin",
+      "facet": "Pioneers of germ science",
+      "known_at": 14
+    },
+    {
+      "name": "Paul Ehrlich",
+      "facet": "Pioneers of germ science",
+      "known_at": 14
+    },
+    {
+      "name": "Ronald Ross",
+      "facet": "Pioneers of germ science",
+      "known_at": 14
+    },
+    {
+      "name": "Lady Mary Wortley Montagu",
+      "facet": "Pioneers of germ science",
+      "known_at": 15
+    },
+    {
+      "name": "Howard Florey",
+      "facet": "Pioneers of germ science",
+      "known_at": 14
+    },
+    {
+      "name": "Carlos Finlay",
+      "facet": "Pioneers of germ science",
+      "known_at": 15
+    },
+    {
+      "name": "Élie Metchnikoff",
+      "facet": "Pioneers of germ science",
+      "known_at": 15
+    },
+    {
+      "name": "Selman Waksman",
+      "facet": "Pioneers of germ science",
+      "known_at": 15
+    },
+    {
+      "name": "Plague doctor",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 7
+    },
+    {
+      "name": "Oriental rat flea",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 10
+    },
+    {
+      "name": "Plague of Athens",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 14
+    },
+    {
+      "name": "Plague of Justinian",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 14
+    },
+    {
+      "name": "Antonine Plague",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 15
+    },
+    {
+      "name": "Great Plague of London",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 12
+    },
+    {
+      "name": "Spanish flu",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 10
+    },
+    {
+      "name": "Smallpox in the Americas",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 11
+    },
+    {
+      "name": "Eradication of smallpox",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 11
+    },
+    {
+      "name": "Typhoid Mary",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 13
+    },
+    {
+      "name": "SARS outbreak",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 12
+    },
+    {
+      "name": "2009 swine flu pandemic",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 11
+    },
+    {
+      "name": "West African Ebola epidemic",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 12
+    },
+    {
+      "name": "World Health Organization",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 8
+    },
+    {
+      "name": "Patient zero",
+      "facet": "Epidemics and pandemics in history",
+      "known_at": 10
+    },
+    {
+      "name": "Allergy",
+      "facet": "Allergies and immune disorders",
+      "known_at": 4
+    },
+    {
+      "name": "Peanut allergy",
+      "facet": "Allergies and immune disorders",
+      "known_at": 5
+    },
+    {
+      "name": "Bee sting allergy",
+      "facet": "Allergies and immune disorders",
+      "known_at": 6
+    },
+    {
+      "name": "Cat allergy",
+      "facet": "Allergies and immune disorders",
+      "known_at": 5
+    },
+    {
+      "name": "Anaphylaxis",
+      "facet": "Allergies and immune disorders",
+      "known_at": 11
+    },
+    {
+      "name": "Histamine",
+      "facet": "Allergies and immune disorders",
+      "known_at": 12
+    },
+    {
+      "name": "Skin prick test",
+      "facet": "Allergies and immune disorders",
+      "known_at": 12
+    },
+    {
+      "name": "Autoimmune disease",
+      "facet": "Allergies and immune disorders",
+      "known_at": 11
+    },
+    {
+      "name": "Type 1 diabetes",
+      "facet": "Allergies and immune disorders",
+      "known_at": 11
+    },
+    {
+      "name": "Lupus",
+      "facet": "Allergies and immune disorders",
+      "known_at": 13
+    },
+    {
+      "name": "Rheumatoid arthritis",
+      "facet": "Allergies and immune disorders",
+      "known_at": 12
+    },
+    {
+      "name": "Severe combined immunodeficiency",
+      "facet": "Allergies and immune disorders",
+      "known_at": 13
+    },
+    {
+      "name": "Organ transplant rejection",
+      "facet": "Allergies and immune disorders",
+      "known_at": 11
+    },
+    {
+      "name": "Cytokine storm",
+      "facet": "Allergies and immune disorders",
+      "known_at": 14
+    },
+    {
+      "name": "Thermometer",
+      "facet": "Symptoms and body responses",
+      "known_at": 2
+    },
+    {
+      "name": "Inflammation",
+      "facet": "Symptoms and body responses",
+      "known_at": 9
+    },
+    {
+      "name": "Swollen lymph nodes",
+      "facet": "Symptoms and body responses",
+      "known_at": 10
+    },
+    {
+      "name": "Rash",
+      "facet": "Symptoms and body responses",
+      "known_at": 5
+    },
+    {
+      "name": "Runny nose",
+      "facet": "Symptoms and body responses",
+      "known_at": 1
+    },
+    {
+      "name": "Sore throat",
+      "facet": "Symptoms and body responses",
+      "known_at": 2
+    },
+    {
+      "name": "Pus",
+      "facet": "Symptoms and body responses",
+      "known_at": 6
+    },
+    {
+      "name": "Chills",
+      "facet": "Symptoms and body responses",
+      "known_at": 6
+    },
+    {
+      "name": "Headache",
+      "facet": "Symptoms and body responses",
+      "known_at": 1
+    },
+    {
+      "name": "Fatigue",
+      "facet": "Symptoms and body responses",
+      "known_at": 6
+    },
+    {
+      "name": "Loss of smell",
+      "facet": "Symptoms and body responses",
+      "known_at": 7
+    },
+    {
+      "name": "Asymptomatic carrier",
+      "facet": "Symptoms and body responses",
+      "known_at": 11
+    },
+    {
+      "name": "Sepsis",
+      "facet": "Symptoms and body responses",
+      "known_at": 12
+    },
+    {
+      "name": "Sneezing into your elbow",
+      "facet": "Hygiene and disease prevention",
+      "known_at": 2
+    },
+    {
+      "name": "Toothbrush",
+      "facet": "Hygiene and disease prevention",
+      "known_at": 1
+    },
+    {
+      "name": "Social distancing",
+      "facet": "Hygiene and disease prevention",
+      "known_at": 5
+    },
+    {
+      "name": "Lockdown",
+      "facet": "Hygiene and disease prevention",
+      "known_at": 5
+    },
+    {
+      "name": "Contact tracing",
+      "facet": "Hygiene and disease prevention",
+      "known_at": 10
+    },
+    {
+      "name": "Mosquito net",
+      "facet": "Hygiene and disease prevention",
+      "known_at": 5
+    },
+    {
+      "name": "Insect repellent",
+      "facet": "Hygiene and disease prevention",
+      "known_at": 5
+    },
+    {
+      "name": "Boiling water",
+      "facet": "Hygiene and disease prevention",
+      "known_at": 5
+    },
+    {
+      "name": "Water chlorination",
+      "facet": "Hygiene and disease prevention",
+      "known_at": 10
+    },
+    {
+      "name": "Sewer system",
+      "facet": "Hygiene and disease prevention",
+      "known_at": 8
+    },
+    {
+      "name": "Sterilization",
+      "facet": "Hygiene and disease prevention",
+      "known_at": 9
+    },
+    {
+      "name": "Disinfectant",
+      "facet": "Hygiene and disease prevention",
+      "known_at": 6
+    },
+    {
+      "name": "Surgical gloves",
+      "facet": "Hygiene and disease prevention",
+      "known_at": 4
+    },
+    {
+      "name": "Isolation ward",
+      "facet": "Hygiene and disease prevention",
+      "known_at": 10
+    }
+  ]
+}

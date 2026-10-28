@@ -1,0 +1,812 @@
+{
+  "subcategory": "units-and-measurement",
+  "facets": [
+    "SI base units and prefixes",
+    "Length and distance",
+    "Mass and weight",
+    "Time and timekeeping",
+    "Temperature scales",
+    "Speed, force and pressure units",
+    "Energy, power and electrical units",
+    "Measuring instruments and tools",
+    "Units named after scientists",
+    "Old and traditional units",
+    "Huge and tiny scales",
+    "History of measurement standards"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 4,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 5,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 4,
+      "science_news": 3,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Meter",
+      "facet": "SI base units and prefixes",
+      "known_at": 2
+    },
+    {
+      "name": "Kilogram",
+      "facet": "SI base units and prefixes",
+      "known_at": 2
+    },
+    {
+      "name": "Second",
+      "facet": "SI base units and prefixes",
+      "known_at": 2
+    },
+    {
+      "name": "Candela",
+      "facet": "SI base units and prefixes",
+      "known_at": 13
+    },
+    {
+      "name": "International System of Units",
+      "facet": "SI base units and prefixes",
+      "known_at": 8
+    },
+    {
+      "name": "Kilo-",
+      "facet": "SI base units and prefixes",
+      "known_at": 4
+    },
+    {
+      "name": "Centi-",
+      "facet": "SI base units and prefixes",
+      "known_at": 5
+    },
+    {
+      "name": "Milli-",
+      "facet": "SI base units and prefixes",
+      "known_at": 5
+    },
+    {
+      "name": "Deci-",
+      "facet": "SI base units and prefixes",
+      "known_at": 8
+    },
+    {
+      "name": "Mega-",
+      "facet": "SI base units and prefixes",
+      "known_at": 6
+    },
+    {
+      "name": "Giga-",
+      "facet": "SI base units and prefixes",
+      "known_at": 6
+    },
+    {
+      "name": "Tera-",
+      "facet": "SI base units and prefixes",
+      "known_at": 8
+    },
+    {
+      "name": "Micro-",
+      "facet": "SI base units and prefixes",
+      "known_at": 8
+    },
+    {
+      "name": "Nano-",
+      "facet": "SI base units and prefixes",
+      "known_at": 8
+    },
+    {
+      "name": "Pico-",
+      "facet": "SI base units and prefixes",
+      "known_at": 11
+    },
+    {
+      "name": "Femto-",
+      "facet": "SI base units and prefixes",
+      "known_at": 13
+    },
+    {
+      "name": "Centimeter",
+      "facet": "Length and distance",
+      "known_at": 2
+    },
+    {
+      "name": "Millimeter",
+      "facet": "Length and distance",
+      "known_at": 3
+    },
+    {
+      "name": "Kilometer",
+      "facet": "Length and distance",
+      "known_at": 3
+    },
+    {
+      "name": "Inch",
+      "facet": "Length and distance",
+      "known_at": 4
+    },
+    {
+      "name": "Foot",
+      "facet": "Length and distance",
+      "known_at": 4
+    },
+    {
+      "name": "Yard",
+      "facet": "Length and distance",
+      "known_at": 7
+    },
+    {
+      "name": "Mile",
+      "facet": "Length and distance",
+      "known_at": 5
+    },
+    {
+      "name": "Nautical mile",
+      "facet": "Length and distance",
+      "known_at": 10
+    },
+    {
+      "name": "Astronomical unit",
+      "facet": "Length and distance",
+      "known_at": 10
+    },
+    {
+      "name": "Parsec",
+      "facet": "Length and distance",
+      "known_at": 12
+    },
+    {
+      "name": "Earth's circumference",
+      "facet": "Length and distance",
+      "known_at": 8
+    },
+    {
+      "name": "Distance from the Earth to the Moon",
+      "facet": "Length and distance",
+      "known_at": 8
+    },
+    {
+      "name": "Distance from the Earth to the Sun",
+      "facet": "Length and distance",
+      "known_at": 8
+    },
+    {
+      "name": "Tonne",
+      "facet": "Mass and weight",
+      "known_at": 4
+    },
+    {
+      "name": "Milligram",
+      "facet": "Mass and weight",
+      "known_at": 5
+    },
+    {
+      "name": "Pound",
+      "facet": "Mass and weight",
+      "known_at": 4
+    },
+    {
+      "name": "Ounce",
+      "facet": "Mass and weight",
+      "known_at": 7
+    },
+    {
+      "name": "Stone",
+      "facet": "Mass and weight",
+      "known_at": 11
+    },
+    {
+      "name": "Carat",
+      "facet": "Mass and weight",
+      "known_at": 9
+    },
+    {
+      "name": "Troy ounce",
+      "facet": "Mass and weight",
+      "known_at": 13
+    },
+    {
+      "name": "Weight on the Moon",
+      "facet": "Mass and weight",
+      "known_at": 5
+    },
+    {
+      "name": "Atomic mass unit",
+      "facet": "Mass and weight",
+      "known_at": 12
+    },
+    {
+      "name": "Short ton",
+      "facet": "Mass and weight",
+      "known_at": 13
+    },
+    {
+      "name": "Grain",
+      "facet": "Mass and weight",
+      "known_at": 14
+    },
+    {
+      "name": "Center of mass",
+      "facet": "Mass and weight",
+      "known_at": 9
+    },
+    {
+      "name": "Minute",
+      "facet": "Time and timekeeping",
+      "known_at": 1
+    },
+    {
+      "name": "Hour",
+      "facet": "Time and timekeeping",
+      "known_at": 1
+    },
+    {
+      "name": "Week",
+      "facet": "Time and timekeeping",
+      "known_at": 1
+    },
+    {
+      "name": "Leap year",
+      "facet": "Time and timekeeping",
+      "known_at": 4
+    },
+    {
+      "name": "Leap second",
+      "facet": "Time and timekeeping",
+      "known_at": 12
+    },
+    {
+      "name": "Millisecond",
+      "facet": "Time and timekeeping",
+      "known_at": 6
+    },
+    {
+      "name": "Decade",
+      "facet": "Time and timekeeping",
+      "known_at": 4
+    },
+    {
+      "name": "Century",
+      "facet": "Time and timekeeping",
+      "known_at": 4
+    },
+    {
+      "name": "Millennium",
+      "facet": "Time and timekeeping",
+      "known_at": 6
+    },
+    {
+      "name": "Time zone",
+      "facet": "Time and timekeeping",
+      "known_at": 6
+    },
+    {
+      "name": "Greenwich Mean Time",
+      "facet": "Time and timekeeping",
+      "known_at": 9
+    },
+    {
+      "name": "Coordinated Universal Time",
+      "facet": "Time and timekeeping",
+      "known_at": 12
+    },
+    {
+      "name": "Daylight saving time",
+      "facet": "Time and timekeeping",
+      "known_at": 7
+    },
+    {
+      "name": "Pendulum clock",
+      "facet": "Time and timekeeping",
+      "known_at": 7
+    },
+    {
+      "name": "Gregorian calendar",
+      "facet": "Time and timekeeping",
+      "known_at": 11
+    },
+    {
+      "name": "Lunar month",
+      "facet": "Time and timekeeping",
+      "known_at": 8
+    },
+    {
+      "name": "Sidereal day",
+      "facet": "Time and timekeeping",
+      "known_at": 14
+    },
+    {
+      "name": "International Date Line",
+      "facet": "Time and timekeeping",
+      "known_at": 10
+    },
+    {
+      "name": "Celsius",
+      "facet": "Temperature scales",
+      "known_at": 3
+    },
+    {
+      "name": "Fahrenheit",
+      "facet": "Temperature scales",
+      "known_at": 5
+    },
+    {
+      "name": "Absolute zero",
+      "facet": "Temperature scales",
+      "known_at": 9
+    },
+    {
+      "name": "Boiling point of water",
+      "facet": "Temperature scales",
+      "known_at": 4
+    },
+    {
+      "name": "Freezing point of water",
+      "facet": "Temperature scales",
+      "known_at": 3
+    },
+    {
+      "name": "Minus 40 degrees",
+      "facet": "Temperature scales",
+      "known_at": 12
+    },
+    {
+      "name": "Rankine scale",
+      "facet": "Temperature scales",
+      "known_at": 14
+    },
+    {
+      "name": "Réaumur scale",
+      "facet": "Temperature scales",
+      "known_at": 15
+    },
+    {
+      "name": "Triple point of water",
+      "facet": "Temperature scales",
+      "known_at": 13
+    },
+    {
+      "name": "Degree",
+      "facet": "Temperature scales",
+      "known_at": 3
+    },
+    {
+      "name": "Kilometers per hour",
+      "facet": "Speed, force and pressure units",
+      "known_at": 4
+    },
+    {
+      "name": "Miles per hour",
+      "facet": "Speed, force and pressure units",
+      "known_at": 6
+    },
+    {
+      "name": "Meters per second",
+      "facet": "Speed, force and pressure units",
+      "known_at": 8
+    },
+    {
+      "name": "Knot",
+      "facet": "Speed, force and pressure units",
+      "known_at": 10
+    },
+    {
+      "name": "Newton",
+      "facet": "Speed, force and pressure units",
+      "known_at": 9
+    },
+    {
+      "name": "Pascal",
+      "facet": "Speed, force and pressure units",
+      "known_at": 10
+    },
+    {
+      "name": "Hectopascal",
+      "facet": "Speed, force and pressure units",
+      "known_at": 11
+    },
+    {
+      "name": "Bar",
+      "facet": "Speed, force and pressure units",
+      "known_at": 9
+    },
+    {
+      "name": "Atmosphere",
+      "facet": "Speed, force and pressure units",
+      "known_at": 11
+    },
+    {
+      "name": "Millimeter of mercury",
+      "facet": "Speed, force and pressure units",
+      "known_at": 12
+    },
+    {
+      "name": "Pounds per square inch",
+      "facet": "Speed, force and pressure units",
+      "known_at": 11
+    },
+    {
+      "name": "Beaufort scale",
+      "facet": "Speed, force and pressure units",
+      "known_at": 12
+    },
+    {
+      "name": "Ohm",
+      "facet": "Energy, power and electrical units",
+      "known_at": 10
+    },
+    {
+      "name": "Coulomb",
+      "facet": "Energy, power and electrical units",
+      "known_at": 12
+    },
+    {
+      "name": "Tesla",
+      "facet": "Energy, power and electrical units",
+      "known_at": 12
+    },
+    {
+      "name": "Ruler",
+      "facet": "Measuring instruments and tools",
+      "known_at": 1
+    },
+    {
+      "name": "Tape measure",
+      "facet": "Measuring instruments and tools",
+      "known_at": 2
+    },
+    {
+      "name": "Bathroom scale",
+      "facet": "Measuring instruments and tools",
+      "known_at": 2
+    },
+    {
+      "name": "Stopwatch",
+      "facet": "Measuring instruments and tools",
+      "known_at": 3
+    },
+    {
+      "name": "Vernier caliper",
+      "facet": "Measuring instruments and tools",
+      "known_at": 11
+    },
+    {
+      "name": "Protractor",
+      "facet": "Measuring instruments and tools",
+      "known_at": 5
+    },
+    {
+      "name": "Odometer",
+      "facet": "Measuring instruments and tools",
+      "known_at": 9
+    },
+    {
+      "name": "Anemometer",
+      "facet": "Measuring instruments and tools",
+      "known_at": 10
+    },
+    {
+      "name": "Hygrometer",
+      "facet": "Measuring instruments and tools",
+      "known_at": 11
+    },
+    {
+      "name": "Seismometer",
+      "facet": "Measuring instruments and tools",
+      "known_at": 9
+    },
+    {
+      "name": "Graduated cylinder",
+      "facet": "Measuring instruments and tools",
+      "known_at": 8
+    },
+    {
+      "name": "Spirit level",
+      "facet": "Measuring instruments and tools",
+      "known_at": 6
+    },
+    {
+      "name": "Hourglass",
+      "facet": "Measuring instruments and tools",
+      "known_at": 2
+    },
+    {
+      "name": "Pedometer",
+      "facet": "Measuring instruments and tools",
+      "known_at": 8
+    },
+    {
+      "name": "Measuring cup",
+      "facet": "Measuring instruments and tools",
+      "known_at": 3
+    },
+    {
+      "name": "Georg Simon Ohm",
+      "facet": "Units named after scientists",
+      "known_at": 11
+    },
+    {
+      "name": "Rolf Sievert",
+      "facet": "Units named after scientists",
+      "known_at": 15
+    },
+    {
+      "name": "Anders Jonas Ångström",
+      "facet": "Units named after scientists",
+      "known_at": 15
+    },
+    {
+      "name": "Cubit",
+      "facet": "Old and traditional units",
+      "known_at": 10
+    },
+    {
+      "name": "Fathom",
+      "facet": "Old and traditional units",
+      "known_at": 12
+    },
+    {
+      "name": "Furlong",
+      "facet": "Old and traditional units",
+      "known_at": 13
+    },
+    {
+      "name": "League",
+      "facet": "Old and traditional units",
+      "known_at": 9
+    },
+    {
+      "name": "Hand",
+      "facet": "Old and traditional units",
+      "known_at": 11
+    },
+    {
+      "name": "Span",
+      "facet": "Old and traditional units",
+      "known_at": 10
+    },
+    {
+      "name": "Roman mile",
+      "facet": "Old and traditional units",
+      "known_at": 12
+    },
+    {
+      "name": "Stadion",
+      "facet": "Old and traditional units",
+      "known_at": 13
+    },
+    {
+      "name": "Talent",
+      "facet": "Old and traditional units",
+      "known_at": 14
+    },
+    {
+      "name": "Li",
+      "facet": "Old and traditional units",
+      "known_at": 14
+    },
+    {
+      "name": "Tael",
+      "facet": "Old and traditional units",
+      "known_at": 14
+    },
+    {
+      "name": "Shaku",
+      "facet": "Old and traditional units",
+      "known_at": 15
+    },
+    {
+      "name": "Tatami mat",
+      "facet": "Old and traditional units",
+      "known_at": 12
+    },
+    {
+      "name": "Verst",
+      "facet": "Old and traditional units",
+      "known_at": 15
+    },
+    {
+      "name": "Gallon",
+      "facet": "Old and traditional units",
+      "known_at": 6
+    },
+    {
+      "name": "Pint",
+      "facet": "Old and traditional units",
+      "known_at": 8
+    },
+    {
+      "name": "Bushel",
+      "facet": "Old and traditional units",
+      "known_at": 12
+    },
+    {
+      "name": "Acre",
+      "facet": "Old and traditional units",
+      "known_at": 10
+    },
+    {
+      "name": "Googol",
+      "facet": "Huge and tiny scales",
+      "known_at": 8
+    },
+    {
+      "name": "Googolplex",
+      "facet": "Huge and tiny scales",
+      "known_at": 11
+    },
+    {
+      "name": "Scientific notation",
+      "facet": "Huge and tiny scales",
+      "known_at": 9
+    },
+    {
+      "name": "Order of magnitude",
+      "facet": "Huge and tiny scales",
+      "known_at": 12
+    },
+    {
+      "name": "Observable universe",
+      "facet": "Huge and tiny scales",
+      "known_at": 10
+    },
+    {
+      "name": "Age of the universe",
+      "facet": "Huge and tiny scales",
+      "known_at": 10
+    },
+    {
+      "name": "Width of a human hair",
+      "facet": "Huge and tiny scales",
+      "known_at": 7
+    },
+    {
+      "name": "Powers of Ten",
+      "facet": "Huge and tiny scales",
+      "known_at": 13
+    },
+    {
+      "name": "Logarithmic scale",
+      "facet": "Huge and tiny scales",
+      "known_at": 12
+    },
+    {
+      "name": "pH scale",
+      "facet": "Huge and tiny scales",
+      "known_at": 9
+    },
+    {
+      "name": "Long and short scale",
+      "facet": "Huge and tiny scales",
+      "known_at": 13
+    },
+    {
+      "name": "Milky Way",
+      "facet": "Huge and tiny scales",
+      "known_at": 4
+    },
+    {
+      "name": "Metric system",
+      "facet": "History of measurement standards",
+      "known_at": 5
+    },
+    {
+      "name": "Imperial system",
+      "facet": "History of measurement standards",
+      "known_at": 8
+    },
+    {
+      "name": "US customary units",
+      "facet": "History of measurement standards",
+      "known_at": 10
+    },
+    {
+      "name": "French Revolution",
+      "facet": "History of measurement standards",
+      "known_at": 9
+    },
+    {
+      "name": "International Prototype of the Kilogram",
+      "facet": "History of measurement standards",
+      "known_at": 12
+    },
+    {
+      "name": "International Prototype Metre",
+      "facet": "History of measurement standards",
+      "known_at": 13
+    },
+    {
+      "name": "Metre Convention",
+      "facet": "History of measurement standards",
+      "known_at": 14
+    },
+    {
+      "name": "International Bureau of Weights and Measures",
+      "facet": "History of measurement standards",
+      "known_at": 13
+    },
+    {
+      "name": "2019 redefinition of the SI",
+      "facet": "History of measurement standards",
+      "known_at": 14
+    },
+    {
+      "name": "Caesium-133",
+      "facet": "History of measurement standards",
+      "known_at": 14
+    },
+    {
+      "name": "Mars Climate Orbiter",
+      "facet": "History of measurement standards",
+      "known_at": 12
+    },
+    {
+      "name": "Gimli Glider",
+      "facet": "History of measurement standards",
+      "known_at": 14
+    },
+    {
+      "name": "Delambre and Méchain",
+      "facet": "History of measurement standards",
+      "known_at": 15
+    },
+    {
+      "name": "Prime meridian",
+      "facet": "History of measurement standards",
+      "known_at": 9
+    },
+    {
+      "name": "Railway time",
+      "facet": "History of measurement standards",
+      "known_at": 13
+    },
+    {
+      "name": "Metrication",
+      "facet": "History of measurement standards",
+      "known_at": 12
+    },
+    {
+      "name": "Napoleon Bonaparte",
+      "facet": "History of measurement standards",
+      "known_at": 7
+    },
+    {
+      "name": "Royal Egyptian cubit",
+      "facet": "History of measurement standards",
+      "known_at": 14
+    }
+  ]
+}

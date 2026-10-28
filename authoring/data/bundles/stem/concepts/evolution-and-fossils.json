@@ -1,0 +1,1242 @@
+{
+  "subcategory": "evolution-and-fossils",
+  "facets": [
+    "Dinosaurs and their kin",
+    "Prehistoric sea creatures",
+    "Ice Age megafauna",
+    "Human evolution and ancestors",
+    "How fossils form",
+    "Famous fossil finds and sites",
+    "Fossil hunters and scientists",
+    "Darwin and natural selection",
+    "Adaptation and evolution in action",
+    "Geologic time and eras",
+    "Mass extinctions",
+    "Living fossils and missing links"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 4,
+      "record": 4,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 3,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 2,
+      "colombia": 2,
+      "pop_culture": 4,
+      "popular_science": 5,
+      "science_news": 4,
+      "educational_media": 5,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Triceratops",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 2
+    },
+    {
+      "name": "Pteranodon",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 4
+    },
+    {
+      "name": "Pterosaur",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 7
+    },
+    {
+      "name": "Feathered dinosaurs",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 8
+    },
+    {
+      "name": "Allosaurus",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 8
+    },
+    {
+      "name": "Iguanodon",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 9
+    },
+    {
+      "name": "Sauropod",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 9
+    },
+    {
+      "name": "Giganotosaurus",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 10
+    },
+    {
+      "name": "Carnotaurus",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 10
+    },
+    {
+      "name": "Oviraptor",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 10
+    },
+    {
+      "name": "Theropod",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 11
+    },
+    {
+      "name": "Therizinosaurus",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 11
+    },
+    {
+      "name": "Quetzalcoatlus",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 11
+    },
+    {
+      "name": "Compsognathus",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 11
+    },
+    {
+      "name": "Protoceratops",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 11
+    },
+    {
+      "name": "Dimetrodon",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 11
+    },
+    {
+      "name": "Maiasaura",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 12
+    },
+    {
+      "name": "Troodon",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 12
+    },
+    {
+      "name": "Microraptor",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 13
+    },
+    {
+      "name": "Patagotitan",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 13
+    },
+    {
+      "name": "Mamenchisaurus",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 13
+    },
+    {
+      "name": "Gastrolith",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 13
+    },
+    {
+      "name": "Sinosauropteryx",
+      "facet": "Dinosaurs and their kin",
+      "known_at": 14
+    },
+    {
+      "name": "Plesiosaur",
+      "facet": "Prehistoric sea creatures",
+      "known_at": 6
+    },
+    {
+      "name": "Mosasaurus",
+      "facet": "Prehistoric sea creatures",
+      "known_at": 6
+    },
+    {
+      "name": "Ichthyosaur",
+      "facet": "Prehistoric sea creatures",
+      "known_at": 9
+    },
+    {
+      "name": "Trilobite",
+      "facet": "Prehistoric sea creatures",
+      "known_at": 9
+    },
+    {
+      "name": "Liopleurodon",
+      "facet": "Prehistoric sea creatures",
+      "known_at": 9
+    },
+    {
+      "name": "Dunkleosteus",
+      "facet": "Prehistoric sea creatures",
+      "known_at": 10
+    },
+    {
+      "name": "Elasmosaurus",
+      "facet": "Prehistoric sea creatures",
+      "known_at": 11
+    },
+    {
+      "name": "Archelon",
+      "facet": "Prehistoric sea creatures",
+      "known_at": 11
+    },
+    {
+      "name": "Sea scorpion",
+      "facet": "Prehistoric sea creatures",
+      "known_at": 11
+    },
+    {
+      "name": "Anomalocaris",
+      "facet": "Prehistoric sea creatures",
+      "known_at": 12
+    },
+    {
+      "name": "Helicoprion",
+      "facet": "Prehistoric sea creatures",
+      "known_at": 12
+    },
+    {
+      "name": "Livyatan",
+      "facet": "Prehistoric sea creatures",
+      "known_at": 12
+    },
+    {
+      "name": "Basilosaurus",
+      "facet": "Prehistoric sea creatures",
+      "known_at": 12
+    },
+    {
+      "name": "Hallucigenia",
+      "facet": "Prehistoric sea creatures",
+      "known_at": 13
+    },
+    {
+      "name": "Belemnite",
+      "facet": "Prehistoric sea creatures",
+      "known_at": 13
+    },
+    {
+      "name": "Opabinia",
+      "facet": "Prehistoric sea creatures",
+      "known_at": 14
+    },
+    {
+      "name": "Cameroceras",
+      "facet": "Prehistoric sea creatures",
+      "known_at": 14
+    },
+    {
+      "name": "Saber-toothed cat",
+      "facet": "Ice Age megafauna",
+      "known_at": 3
+    },
+    {
+      "name": "Woolly rhinoceros",
+      "facet": "Ice Age megafauna",
+      "known_at": 6
+    },
+    {
+      "name": "Giant ground sloth",
+      "facet": "Ice Age megafauna",
+      "known_at": 6
+    },
+    {
+      "name": "Cave bear",
+      "facet": "Ice Age megafauna",
+      "known_at": 7
+    },
+    {
+      "name": "Dire wolf",
+      "facet": "Ice Age megafauna",
+      "known_at": 7
+    },
+    {
+      "name": "Cave lion",
+      "facet": "Ice Age megafauna",
+      "known_at": 8
+    },
+    {
+      "name": "Glyptodon",
+      "facet": "Ice Age megafauna",
+      "known_at": 9
+    },
+    {
+      "name": "Moa",
+      "facet": "Ice Age megafauna",
+      "known_at": 9
+    },
+    {
+      "name": "Irish elk",
+      "facet": "Ice Age megafauna",
+      "known_at": 10
+    },
+    {
+      "name": "Elephant bird",
+      "facet": "Ice Age megafauna",
+      "known_at": 10
+    },
+    {
+      "name": "Haast's eagle",
+      "facet": "Ice Age megafauna",
+      "known_at": 11
+    },
+    {
+      "name": "Gigantopithecus",
+      "facet": "Ice Age megafauna",
+      "known_at": 11
+    },
+    {
+      "name": "Steppe bison",
+      "facet": "Ice Age megafauna",
+      "known_at": 11
+    },
+    {
+      "name": "Short-faced bear",
+      "facet": "Ice Age megafauna",
+      "known_at": 12
+    },
+    {
+      "name": "Marsupial lion",
+      "facet": "Ice Age megafauna",
+      "known_at": 12
+    },
+    {
+      "name": "Beringia",
+      "facet": "Ice Age megafauna",
+      "known_at": 12
+    },
+    {
+      "name": "Macrauchenia",
+      "facet": "Ice Age megafauna",
+      "known_at": 13
+    },
+    {
+      "name": "Toxodon",
+      "facet": "Ice Age megafauna",
+      "known_at": 13
+    },
+    {
+      "name": "Doedicurus",
+      "facet": "Ice Age megafauna",
+      "known_at": 14
+    },
+    {
+      "name": "Homo sapiens",
+      "facet": "Human evolution and ancestors",
+      "known_at": 5
+    },
+    {
+      "name": "Lucy",
+      "facet": "Human evolution and ancestors",
+      "known_at": 8
+    },
+    {
+      "name": "Bipedalism",
+      "facet": "Human evolution and ancestors",
+      "known_at": 9
+    },
+    {
+      "name": "Australopithecus",
+      "facet": "Human evolution and ancestors",
+      "known_at": 10
+    },
+    {
+      "name": "Out of Africa theory",
+      "facet": "Human evolution and ancestors",
+      "known_at": 10
+    },
+    {
+      "name": "Cro-Magnon",
+      "facet": "Human evolution and ancestors",
+      "known_at": 10
+    },
+    {
+      "name": "Peking Man",
+      "facet": "Human evolution and ancestors",
+      "known_at": 11
+    },
+    {
+      "name": "Denisovans",
+      "facet": "Human evolution and ancestors",
+      "known_at": 12
+    },
+    {
+      "name": "Homo floresiensis",
+      "facet": "Human evolution and ancestors",
+      "known_at": 12
+    },
+    {
+      "name": "Laetoli footprints",
+      "facet": "Human evolution and ancestors",
+      "known_at": 12
+    },
+    {
+      "name": "Java Man",
+      "facet": "Human evolution and ancestors",
+      "known_at": 12
+    },
+    {
+      "name": "Taung Child",
+      "facet": "Human evolution and ancestors",
+      "known_at": 13
+    },
+    {
+      "name": "Turkana Boy",
+      "facet": "Human evolution and ancestors",
+      "known_at": 13
+    },
+    {
+      "name": "Homo naledi",
+      "facet": "Human evolution and ancestors",
+      "known_at": 13
+    },
+    {
+      "name": "Mitochondrial Eve",
+      "facet": "Human evolution and ancestors",
+      "known_at": 13
+    },
+    {
+      "name": "Homo heidelbergensis",
+      "facet": "Human evolution and ancestors",
+      "known_at": 13
+    },
+    {
+      "name": "Paranthropus",
+      "facet": "Human evolution and ancestors",
+      "known_at": 14
+    },
+    {
+      "name": "Sahelanthropus",
+      "facet": "Human evolution and ancestors",
+      "known_at": 14
+    },
+    {
+      "name": "Amber",
+      "facet": "How fossils form",
+      "known_at": 5
+    },
+    {
+      "name": "Fossilization",
+      "facet": "How fossils form",
+      "known_at": 6
+    },
+    {
+      "name": "Sedimentary rock",
+      "facet": "How fossils form",
+      "known_at": 8
+    },
+    {
+      "name": "Petrified wood",
+      "facet": "How fossils form",
+      "known_at": 8
+    },
+    {
+      "name": "Petrification",
+      "facet": "How fossils form",
+      "known_at": 9
+    },
+    {
+      "name": "Trace fossil",
+      "facet": "How fossils form",
+      "known_at": 10
+    },
+    {
+      "name": "Coprolite",
+      "facet": "How fossils form",
+      "known_at": 10
+    },
+    {
+      "name": "Cast fossil",
+      "facet": "How fossils form",
+      "known_at": 11
+    },
+    {
+      "name": "Carbon-14 dating",
+      "facet": "How fossils form",
+      "known_at": 11
+    },
+    {
+      "name": "Permafrost",
+      "facet": "How fossils form",
+      "known_at": 11
+    },
+    {
+      "name": "Radiometric dating",
+      "facet": "How fossils form",
+      "known_at": 12
+    },
+    {
+      "name": "Microfossil",
+      "facet": "How fossils form",
+      "known_at": 12
+    },
+    {
+      "name": "Permineralization",
+      "facet": "How fossils form",
+      "known_at": 13
+    },
+    {
+      "name": "Carbonization",
+      "facet": "How fossils form",
+      "known_at": 13
+    },
+    {
+      "name": "Index fossil",
+      "facet": "How fossils form",
+      "known_at": 13
+    },
+    {
+      "name": "Law of superposition",
+      "facet": "How fossils form",
+      "known_at": 13
+    },
+    {
+      "name": "Pseudofossil",
+      "facet": "How fossils form",
+      "known_at": 14
+    },
+    {
+      "name": "Lagerstätte",
+      "facet": "How fossils form",
+      "known_at": 15
+    },
+    {
+      "name": "Taphonomy",
+      "facet": "How fossils form",
+      "known_at": 15
+    },
+    {
+      "name": "La Brea Tar Pits",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 10
+    },
+    {
+      "name": "Sue the T. rex",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 10
+    },
+    {
+      "name": "Jurassic Coast",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 11
+    },
+    {
+      "name": "Gobi Desert",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 11
+    },
+    {
+      "name": "Dippy the Diplodocus",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 11
+    },
+    {
+      "name": "Olduvai Gorge",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 12
+    },
+    {
+      "name": "Fighting Dinosaurs",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 12
+    },
+    {
+      "name": "Lyuba the baby mammoth",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 12
+    },
+    {
+      "name": "Burgess Shale",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 13
+    },
+    {
+      "name": "Liaoning",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 13
+    },
+    {
+      "name": "Dinosaur Provincial Park",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 13
+    },
+    {
+      "name": "Wadi Al-Hitan",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 13
+    },
+    {
+      "name": "Messel Pit",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 14
+    },
+    {
+      "name": "Solnhofen",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 14
+    },
+    {
+      "name": "Ischigualasto",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 14
+    },
+    {
+      "name": "Ediacara Hills",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 14
+    },
+    {
+      "name": "Chengjiang",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 15
+    },
+    {
+      "name": "Bernissart",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 15
+    },
+    {
+      "name": "Tendaguru",
+      "facet": "Famous fossil finds and sites",
+      "known_at": 15
+    },
+    {
+      "name": "Mary Anning",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 9
+    },
+    {
+      "name": "Richard Owen",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 11
+    },
+    {
+      "name": "Georges Cuvier",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 12
+    },
+    {
+      "name": "Bone Wars",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 12
+    },
+    {
+      "name": "Louis Leakey",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 12
+    },
+    {
+      "name": "Mary Leakey",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 12
+    },
+    {
+      "name": "Gideon Mantell",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 13
+    },
+    {
+      "name": "William Buckland",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Othniel Charles Marsh",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Edward Drinker Cope",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Roy Chapman Andrews",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Donald Johanson",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Sue Hendrickson",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Raymond Dart",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Jack Horner",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Svante Pääbo",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 13
+    },
+    {
+      "name": "Barnum Brown",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Paul Sereno",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Lee Berger",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Florentino Ameghino",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 14
+    },
+    {
+      "name": "Xu Xing",
+      "facet": "Fossil hunters and scientists",
+      "known_at": 15
+    },
+    {
+      "name": "Galápagos tortoise",
+      "facet": "Darwin and natural selection",
+      "known_at": 6
+    },
+    {
+      "name": "Galápagos Islands",
+      "facet": "Darwin and natural selection",
+      "known_at": 8
+    },
+    {
+      "name": "HMS Beagle",
+      "facet": "Darwin and natural selection",
+      "known_at": 9
+    },
+    {
+      "name": "Darwin's finches",
+      "facet": "Darwin and natural selection",
+      "known_at": 9
+    },
+    {
+      "name": "On the Origin of Species",
+      "facet": "Darwin and natural selection",
+      "known_at": 10
+    },
+    {
+      "name": "Survival of the fittest",
+      "facet": "Darwin and natural selection",
+      "known_at": 10
+    },
+    {
+      "name": "Common ancestor",
+      "facet": "Darwin and natural selection",
+      "known_at": 10
+    },
+    {
+      "name": "Tree of life",
+      "facet": "Darwin and natural selection",
+      "known_at": 11
+    },
+    {
+      "name": "Artificial selection",
+      "facet": "Darwin and natural selection",
+      "known_at": 11
+    },
+    {
+      "name": "Alfred Russel Wallace",
+      "facet": "Darwin and natural selection",
+      "known_at": 12
+    },
+    {
+      "name": "Jean-Baptiste Lamarck",
+      "facet": "Darwin and natural selection",
+      "known_at": 12
+    },
+    {
+      "name": "Sexual selection",
+      "facet": "Darwin and natural selection",
+      "known_at": 12
+    },
+    {
+      "name": "The Descent of Man",
+      "facet": "Darwin and natural selection",
+      "known_at": 13
+    },
+    {
+      "name": "Thomas Henry Huxley",
+      "facet": "Darwin and natural selection",
+      "known_at": 14
+    },
+    {
+      "name": "Thomas Malthus",
+      "facet": "Darwin and natural selection",
+      "known_at": 14
+    },
+    {
+      "name": "Erasmus Darwin",
+      "facet": "Darwin and natural selection",
+      "known_at": 15
+    },
+    {
+      "name": "Down House",
+      "facet": "Darwin and natural selection",
+      "known_at": 15
+    },
+    {
+      "name": "Camouflage",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 4
+    },
+    {
+      "name": "Dog domestication",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 7
+    },
+    {
+      "name": "Liger",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 7
+    },
+    {
+      "name": "Genetic mutation",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 10
+    },
+    {
+      "name": "Mimicry",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 11
+    },
+    {
+      "name": "Vestigial organ",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 11
+    },
+    {
+      "name": "Warning coloration",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 12
+    },
+    {
+      "name": "Convergent evolution",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 13
+    },
+    {
+      "name": "Coevolution",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 13
+    },
+    {
+      "name": "Speciation",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 13
+    },
+    {
+      "name": "Island gigantism",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 13
+    },
+    {
+      "name": "Island dwarfism",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 13
+    },
+    {
+      "name": "Homologous structures",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 13
+    },
+    {
+      "name": "Evolutionary arms race",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 13
+    },
+    {
+      "name": "Adaptive radiation",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 14
+    },
+    {
+      "name": "Lake Victoria cichlids",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 14
+    },
+    {
+      "name": "Silver fox experiment",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 14
+    },
+    {
+      "name": "Lenski E. coli experiment",
+      "facet": "Adaptation and evolution in action",
+      "known_at": 15
+    },
+    {
+      "name": "Pangaea",
+      "facet": "Geologic time and eras",
+      "known_at": 9
+    },
+    {
+      "name": "Triassic",
+      "facet": "Geologic time and eras",
+      "known_at": 9
+    },
+    {
+      "name": "Age of the Earth",
+      "facet": "Geologic time and eras",
+      "known_at": 9
+    },
+    {
+      "name": "Mesozoic",
+      "facet": "Geologic time and eras",
+      "known_at": 11
+    },
+    {
+      "name": "Cambrian",
+      "facet": "Geologic time and eras",
+      "known_at": 11
+    },
+    {
+      "name": "Geologic time scale",
+      "facet": "Geologic time and eras",
+      "known_at": 11
+    },
+    {
+      "name": "Eon",
+      "facet": "Geologic time and eras",
+      "known_at": 11
+    },
+    {
+      "name": "Precambrian",
+      "facet": "Geologic time and eras",
+      "known_at": 12
+    },
+    {
+      "name": "Paleozoic",
+      "facet": "Geologic time and eras",
+      "known_at": 12
+    },
+    {
+      "name": "Cenozoic",
+      "facet": "Geologic time and eras",
+      "known_at": 12
+    },
+    {
+      "name": "Cambrian explosion",
+      "facet": "Geologic time and eras",
+      "known_at": 12
+    },
+    {
+      "name": "Carboniferous",
+      "facet": "Geologic time and eras",
+      "known_at": 12
+    },
+    {
+      "name": "Pleistocene",
+      "facet": "Geologic time and eras",
+      "known_at": 12
+    },
+    {
+      "name": "Holocene",
+      "facet": "Geologic time and eras",
+      "known_at": 12
+    },
+    {
+      "name": "Anthropocene",
+      "facet": "Geologic time and eras",
+      "known_at": 12
+    },
+    {
+      "name": "Devonian",
+      "facet": "Geologic time and eras",
+      "known_at": 13
+    },
+    {
+      "name": "Deep time",
+      "facet": "Geologic time and eras",
+      "known_at": 13
+    },
+    {
+      "name": "Snowball Earth",
+      "facet": "Geologic time and eras",
+      "known_at": 13
+    },
+    {
+      "name": "Ordovician",
+      "facet": "Geologic time and eras",
+      "known_at": 14
+    },
+    {
+      "name": "Quaternary",
+      "facet": "Geologic time and eras",
+      "known_at": 14
+    },
+    {
+      "name": "Paleogene",
+      "facet": "Geologic time and eras",
+      "known_at": 14
+    },
+    {
+      "name": "Extinction",
+      "facet": "Mass extinctions",
+      "known_at": 4
+    },
+    {
+      "name": "Dodo",
+      "facet": "Mass extinctions",
+      "known_at": 4
+    },
+    {
+      "name": "Thylacine",
+      "facet": "Mass extinctions",
+      "known_at": 10
+    },
+    {
+      "name": "Sixth mass extinction",
+      "facet": "Mass extinctions",
+      "known_at": 11
+    },
+    {
+      "name": "Passenger pigeon",
+      "facet": "Mass extinctions",
+      "known_at": 11
+    },
+    {
+      "name": "Big Five mass extinctions",
+      "facet": "Mass extinctions",
+      "known_at": 12
+    },
+    {
+      "name": "K–Pg extinction",
+      "facet": "Mass extinctions",
+      "known_at": 12
+    },
+    {
+      "name": "Chicxulub crater",
+      "facet": "Mass extinctions",
+      "known_at": 12
+    },
+    {
+      "name": "Great auk",
+      "facet": "Mass extinctions",
+      "known_at": 13
+    },
+    {
+      "name": "Steller's sea cow",
+      "facet": "Mass extinctions",
+      "known_at": 13
+    },
+    {
+      "name": "Baiji",
+      "facet": "Mass extinctions",
+      "known_at": 13
+    },
+    {
+      "name": "Iridium anomaly",
+      "facet": "Mass extinctions",
+      "known_at": 14
+    },
+    {
+      "name": "Luis and Walter Alvarez",
+      "facet": "Mass extinctions",
+      "known_at": 14
+    },
+    {
+      "name": "Deccan Traps",
+      "facet": "Mass extinctions",
+      "known_at": 14
+    },
+    {
+      "name": "Siberian Traps",
+      "facet": "Mass extinctions",
+      "known_at": 14
+    },
+    {
+      "name": "End-Triassic extinction",
+      "facet": "Mass extinctions",
+      "known_at": 14
+    },
+    {
+      "name": "Late Devonian extinction",
+      "facet": "Mass extinctions",
+      "known_at": 14
+    },
+    {
+      "name": "Ordovician–Silurian extinction",
+      "facet": "Mass extinctions",
+      "known_at": 14
+    },
+    {
+      "name": "Quagga",
+      "facet": "Mass extinctions",
+      "known_at": 14
+    },
+    {
+      "name": "Golden toad",
+      "facet": "Mass extinctions",
+      "known_at": 14
+    },
+    {
+      "name": "Crocodile",
+      "facet": "Living fossils and missing links",
+      "known_at": 3
+    },
+    {
+      "name": "Platypus",
+      "facet": "Living fossils and missing links",
+      "known_at": 4
+    },
+    {
+      "name": "Horseshoe crab",
+      "facet": "Living fossils and missing links",
+      "known_at": 8
+    },
+    {
+      "name": "Archaeopteryx",
+      "facet": "Living fossils and missing links",
+      "known_at": 9
+    },
+    {
+      "name": "Nautilus",
+      "facet": "Living fossils and missing links",
+      "known_at": 9
+    },
+    {
+      "name": "Coelacanth",
+      "facet": "Living fossils and missing links",
+      "known_at": 10
+    },
+    {
+      "name": "Ginkgo",
+      "facet": "Living fossils and missing links",
+      "known_at": 10
+    },
+    {
+      "name": "Missing link",
+      "facet": "Living fossils and missing links",
+      "known_at": 11
+    },
+    {
+      "name": "Lungfish",
+      "facet": "Living fossils and missing links",
+      "known_at": 11
+    },
+    {
+      "name": "Goblin shark",
+      "facet": "Living fossils and missing links",
+      "known_at": 11
+    },
+    {
+      "name": "Horsetail",
+      "facet": "Living fossils and missing links",
+      "known_at": 11
+    },
+    {
+      "name": "Tuatara",
+      "facet": "Living fossils and missing links",
+      "known_at": 12
+    },
+    {
+      "name": "Tiktaalik",
+      "facet": "Living fossils and missing links",
+      "known_at": 12
+    },
+    {
+      "name": "Transitional fossil",
+      "facet": "Living fossils and missing links",
+      "known_at": 12
+    },
+    {
+      "name": "Hagfish",
+      "facet": "Living fossils and missing links",
+      "known_at": 12
+    },
+    {
+      "name": "Stromatolite",
+      "facet": "Living fossils and missing links",
+      "known_at": 12
+    },
+    {
+      "name": "Triops",
+      "facet": "Living fossils and missing links",
+      "known_at": 12
+    },
+    {
+      "name": "Wollemi pine",
+      "facet": "Living fossils and missing links",
+      "known_at": 13
+    },
+    {
+      "name": "Cycad",
+      "facet": "Living fossils and missing links",
+      "known_at": 13
+    },
+    {
+      "name": "Pakicetus",
+      "facet": "Living fossils and missing links",
+      "known_at": 13
+    },
+    {
+      "name": "Piltdown Man",
+      "facet": "Living fossils and missing links",
+      "known_at": 13
+    },
+    {
+      "name": "Velvet worm",
+      "facet": "Living fossils and missing links",
+      "known_at": 14
+    },
+    {
+      "name": "Dawn redwood",
+      "facet": "Living fossils and missing links",
+      "known_at": 14
+    },
+    {
+      "name": "Ambulocetus",
+      "facet": "Living fossils and missing links",
+      "known_at": 14
+    }
+  ]
+}
