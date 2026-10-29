@@ -43967,7 +43967,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## pm-run rules
 - D-36: no prompt, pool, media or `qgen.py` changes. `tasks.sql` alone isn''t a dirty tree. Stage exactly the printed `git add` paths; don''t commit.
 - Exit 75, other non-zero code, or exit 1 three times at one step: `pm decision add "Continue tr-de-5 …?"` with the last 30 lines, `pm task-pending-decision`, stage nothing, stop.', '2026-10-29T17:21:07Z', '2026-10-29T20:29:16Z', 1795, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1808, 84, 'run tr-en-6', 'work', 'open', -110, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-en-6` (name comes from qgen), up to 300 approved `base` sources of either source locale ≠ `en` into English. One task, no QC task; this task adds the next run.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1808, 84, 'run tr-en-6', 'work', 'done', -110, '2026-10-29, Done: tr-en-7: 295 translated, 293 approved, 2 need work, 5 not travelling (took 33m41s; first attempt failed at translate on q-0686/q-1126, rerun ok); claude (rerun): 497 calls, $25.69 ($0.10/approved; first attempt $5.36); audit agreement 100%; health ✓ pass; report authoring/reports/tr-en-7.md; en pool 5370, target not met; next tr-en-8', 'Plan 84 chain 3, full translation (QT-6): run `tr-en-6` (name comes from qgen), up to 300 approved `base` sources of either source locale ≠ `en` into English. One task, no QC task; this task adds the next run.
 
 ## Before running
 - Plan 17''s exit check done; if not, wait for what blocks plan 17''s earliest open task: pending decision → `pm task-pending-decision <this task> <id>`; prerequisite task → `pm task requires <this task> <id>`; stop. Never wait on a review (decision 414).
@@ -43984,7 +43984,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## pm-run rules
 - D-36: no prompt, pool, media or `qgen.py` changes. `tasks.sql` alone isn''t a dirty tree. Stage exactly the printed `git add` paths; don''t commit.
-- Exit 75, other non-zero code, or exit 1 three times at one step: `pm decision add "Continue <run> …?"` with the last 30 lines, `pm task-pending-decision`, stage nothing, stop.', '2026-10-29T18:03:02Z', NULL, 1798, 0, NULL, 'questions');
+- Exit 75, other non-zero code, or exit 1 three times at one step: `pm decision add "Continue <run> …?"` with the last 30 lines, `pm task-pending-decision`, stage nothing, stop.', '2026-10-29T18:03:02Z', '2026-10-29T21:16:29Z', 1798, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1809, 84, 'run tr-en-<n> colombia (qgen batch --translate en --bundle colombia)', 'work', 'open', NULL, NULL, 'Plan 84 chain 4: next en run of `colombia` (translation run shape, one task, no QC, no spot check, no `qgen health ack`; `decision 414: Human reviews don''t gate question generation or translation`). Previous: `task 1799`, tr-en-6 (587 of 2000 approved en).
 
 ## Run
@@ -44013,6 +44013,24 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## pm-run rules
 - D-36: no prompt, pool, media or `qgen.py` changes. `tasks.sql` alone isn''t a dirty tree. Stage exactly the printed `git add` paths; don''t commit.
 - Exit 75, other non-zero code, or exit 1 three times at one step: `pm decision add "Continue tr-de-6 …?"` with the last 30 lines, `pm task-pending-decision`, stage nothing, stop.', '2026-10-29T20:29:16Z', NULL, 1807, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1812, 84, 'run tr-en-8', 'work', 'open', -110, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-en-8` (name comes from qgen), up to 300 approved `base` sources of either source locale ≠ `en` into English. One task, no QC task; this task adds the next run.
+
+## Before running
+- Plan 17''s exit check done; if not, wait for what blocks plan 17''s earliest open task: pending decision → `pm task-pending-decision <this task> <id>`; prerequisite task → `pm task requires <this task> <id>`; stop. Never wait on a review (decision 414).
+
+## Run
+`nix develop -c qgen batch --translate en` (RUNBOOK steps 1-5, same command on reruns).
+
+## After the run
+- Note: "Done:" line, report path, numbers from the run''s report and `qgen report --cost`: selected, translated, approved, needs_work, rejected, not travelling, $ per approved (information only), audit agreement, health result.
+- QT-6 progress line for `en` in `plans/15b-question-translation.md`.
+- Next, first that applies: (1) `qgen report --locale en` meets `targets.json` `base` at every level → no next run; if `en`, `de`, `es-ES`, `es` all done: QT-6 `[x]` in 15b and record `qgen report --locale <L>` for all four in `plans/16-content-target.md`. (2) Fewer than 300 sources selected → still add the next run. (3) Else add it (`pm task add 84 "run tr-en-<n+1>" --worktree questions --priority -110`).
+- Health ✗: `pm decision list --grep "<run>: health"`, none → `pm decision add "<run>: health ✗, look at it?"`, no task link; never `qgen health ack`.
+- No spot check, no QC task, no QC decision.
+
+## pm-run rules
+- D-36: no prompt, pool, media or `qgen.py` changes. `tasks.sql` alone isn''t a dirty tree. Stage exactly the printed `git add` paths; don''t commit.
+- Exit 75, other non-zero code, or exit 1 three times at one step: `pm decision add "Continue <run> …?"` with the last 30 lines, `pm task-pending-decision`, stage nothing, stop.', '2026-10-29T21:16:29Z', NULL, 1808, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -50297,6 +50315,12 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
 
 Look: `git show pm/task-1799-run-1956-left`. Keep: `git merge pm/task-1799-run-1956-left`. Then `git branch -D pm/task-1799-run-1956-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', NULL, NULL, '2026-10-29T18:42:36Z', NULL, NULL, NULL, 'once', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (481, 'Unfinished batch for another bundle: run the named command?', 'pending', '["Yes, run qgen batch --bundle spain to finish batch-30, then rerun uk", "No, leave it"]', 'batch-30 is unfinished and writes for bundle ''spain'', not ''uk''. Finish it first: qgen batch --bundle spain', 'A run of new questions for the UK pack can''t start because an earlier run for the Spain pack was left unfinished. Qgen insists the unfinished one is completed first. The choice is whether to let it finish that Spain run now, which then frees the UK run to start.', NULL, NULL, '2026-10-29T19:35:46Z', NULL, 1805, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (482, 'Task 1808 left unstaged changes after `pm task done`: investigate', 'pending', '[]', 'Run 1962 of task 1808 closed the task but left 2 files unstaged. pm committed them on the branch `pm/task-1808-run-1962-left` and cleaned the tree.
+
+     M app/data/pool.es-ES.json
+     M authoring/data/questions.es-ES.json
+
+Look: `git show pm/task-1808-run-1962-left`. Keep: `git merge pm/task-1808-run-1962-left`. Then `git branch -D pm/task-1808-run-1962-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', NULL, NULL, '2026-10-29T21:16:35Z', NULL, NULL, NULL, 'once', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, NULL, NULL, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, NULL, NULL, 73367);
@@ -52314,6 +52338,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1959, 1803, '2026-10-29T19:35:04Z', '2026-10-29T19:35:36Z', 'blocked', NULL, 0, '6d9dbd8ff01d3abfa962c125cda5b16b8a5db6d6', 'questions', 'claude-sonnet-5-5', '0b12c89c-8ecf-4756-a9fd-a96812a02e7b', NULL, 7, 16, 1292, 345388, 47120, 0.23597079999999998, 61567, 60, 7562);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1960, 1805, '2026-10-29T19:35:36Z', '2026-10-29T19:35:49Z', 'blocked', NULL, 0, '6d9dbd8ff01d3abfa962c125cda5b16b8a5db6d6', 'questions', 'claude-sonnet-5-5', '88a0d378-fec6-4d4d-bd7e-2184aa1ff9d0', NULL, 5, 10, 879, 224437, 40097, 0.1916417, 54631, 60, 7562);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1961, 1807, '2026-10-29T19:35:49Z', '2026-10-29T20:29:20Z', 'done', NULL, 0, '6d9dbd8ff01d3abfa962c125cda5b16b8a5db6d6', 'questions', 'claude-sonnet-5-5', '59b6fcae-d186-4a69-985b-753419057087', NULL, 8, 16, 2753, 401259, 49230, 0.26460789999999995, 63969, 60, 7562);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1962, 1808, '2026-10-29T20:29:21Z', '2026-10-29T21:16:35Z', 'done', 'left 2 files unstaged, committed on branch pm/task-1808-run-1962-left; decision 482: investigate', 0, '63a5daed77dc24b613230475d37deed0a85b7070', 'questions', 'claude-sonnet-5-5', '59b6fcae-d186-4a69-985b-753419057087', 1961, 5, 12, 2402, 383433, 18473, 0.40088719999999989, 82900, 60, 7562);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
