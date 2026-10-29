@@ -34,3 +34,4 @@ Sub-plan of [15](15-i18n.md). The pool was written for two Colombian kids (D-6),
   - review time: 35 min per 100 verdicts (`qgen report --review-time --bundle colombia`; 28 timed verdicts in 1 session, 109 untimed skipped; small sample)
   - spot checks: batch-12 answered (decision 409: 28 of 30, ≥ 90 %); batch-16..25 raised (decisions 427, 431, 435, 439, 443, 447, 449, 451, 453, 456), unanswered, nothing waits (decision 414)
   - information only: no budget or pace decision; next: `colombia` en (`qgen batch --translate en --bundle colombia`)
+- `colombia` en progress: `tr-en-4` (2026-10-29) 298 translated, 292 approved, 6 needs_work, 2 not travelling; 292 of 2000 approved en; $0.08 per approved; audit 97 %, health pass; next `task 1799`.
