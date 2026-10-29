@@ -60678,7 +60678,8 @@
           ]
         },
         "revised_on": "2026-10-10"
-      }
+      },
+      "translatable": false
     },
     {
       "id": "q-0789",
@@ -92256,7 +92257,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-1202",
@@ -123633,7 +123635,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-1606",
