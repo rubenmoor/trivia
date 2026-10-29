@@ -43587,6 +43587,18 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - D-36: no prompt, pool, media or `qgen.py` changes; findings become decisions or tasks in their own plans. Only exception: a locale joining `stem`''s `languages` row.
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints (plus `app/data/bundles.json` after a `languages` edit); don''t commit.
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> (stem)…?"` with the last 30 lines of output, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-28T23:09:03Z', NULL, 1677, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1784, NULL, 'qgen: reject translations of a source marked translatable: false', 'exec', 'open', NULL, NULL, 'Answers `decision 460: tr-de-3: qgen validate fails after export`, `decision 461: tr-en-3: qgen validate fails after the export step`, `decision 463: tr-es-ES-13: qgen validate fails after export` (all: fix qgen).
+
+**What:** when a translate run''s translatability check sets `translatable: false` on a source (or the source is rejected), qgen rejects that source''s existing translations in every other locale (`authoring/data/questions.<locale>.json`). Today it doesn''t, so `authoring/tools/validate.py:235` ("source is rejected or translatable: false; reject the translation") fails step 11/11 of the run.
+
+**Why:** three runs are stuck on it: tr-de-3 and tr-es-ES-13 on en `q-0397`, tr-en-3 on es-ES `q-1201`.
+
+**Where:** where `translatable` is set in `authoring/tools/translations.py` / `authoring/tools/review_steps.py`; same for a source rejected in the review server (`authoring/server/main.py`) if it has the same gap.
+
+**Done when:**
+- the rule is in qgen, with a test
+- the three stuck cases are cleared by it (resume, or a one-off pass over the current data) so `qgen validate` passes
+- `task 1731: run tr-de-3`, `task 1759: run tr-en-3`, `task 1780: run tr-es-ES-13` can resume with plain `qgen batch --translate <locale>` (don''t run them here)', '2026-10-29T03:45:52Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
