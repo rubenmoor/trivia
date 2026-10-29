@@ -705534,7 +705534,7 @@
     },
     {
       "id": "q-9130",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Eine Redewendung, die so sehr nervt, dass sie schon wieder krümelt.",
       "question": "Wenn jemand dauernd stört, sagt man: „Du gehst mir auf den …“ Wie geht der Satz weiter?",
@@ -705552,11 +705552,20 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "frustrated person face",
+        "query": "child covering ears",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThree_girls_annoyed_by_some_screams.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Three_girls_annoyed_by_some_screams.jpg/3840px-Three_girls_annoyed_by_some_screams.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Basile Morin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Basile Morin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Basile_Morin",
+        "restrictions": [
+          "personality"
+        ],
+        "pd_reasons": []
       },
       "fun_fact": "Woher die Redewendung genau kommt, weiß niemand sicher. Sie ist aber erst seit dem 20. Jahrhundert bekannt.",
       "subcategory": "bread-and-baked-goods",
@@ -705585,19 +705594,43 @@
       "needs_media": false,
       "batch": "batch-28",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate fits: 1 is a US congressional press conference, 2 is explicit adult content (a chastity device, which must never be used), 3 and 4 are a roadside memorial and statues at a California lodge, and 5 is an Indian clean-water poster covered in text. A new search isn't allowed, so the media slot needs a new decorative query, for example \"cookies on plate\" or \"biscuit crumbs\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate fits: 1 is a US congressional press conference, 2 is explicit adult content (a chastity device, which must never be used), 3 and 4 are a roadside memorial and statues at a California lodge, and 5 is an Indian clean-water poster covered in text. A new search isn't allowed, so the media slot needs a new decorative query, for example \"cookies on plate\" or \"biscuit crumbs\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced the decorative media query because no usable candidate was found, choosing one that doesn't show the answer (cookies).",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "frustrated person face",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9131",
@@ -705999,10 +706032,10 @@
     },
     {
       "id": "q-9136",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Eine Weihnachtsleckerei, die auf einem dünnen weißen Teppich Platz nimmt.",
-      "question": "Kokosmakronen backt man oft auf einer dünnen weißen Scheibe wie hier. Wofür ist sie da?",
+      "question": "Kokosmakronen backt man oft auf einer dünnen weißen Oblate. Wofür ist sie da?",
       "answer": "Damit sie nicht am Blech kleben",
       "wrong_answers": [
         "Damit sie süßer schmecken",
@@ -706010,18 +706043,25 @@
         "Damit sie länger frisch bleiben"
       ],
       "hints": [
-        "Die Scheibe heißt Oblate.",
+        "Die Oblate wird einfach mitgegessen.",
         "Makronenteig ist sehr klebrig.",
         "Ohne sie bekommt man die Makronen schwer vom Blech."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "coconut macaroons wafer",
-        "note": "Photo of coconut macaroons (Kokosmakronen) sitting on round white wafers (Oblaten), wafer edges clearly visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "coconut macaroons",
+        "note": null,
+        "source_url": "https://www.flickr.com/photos/21001756@N06/3396616267",
+        "file_url": "https://live.staticflickr.com/3584/3396616267_7dcab9575f_b.jpg",
+        "credit": "Stacy Spensley · CC BY 2.0 · Flickr via Openverse",
+        "provider": "openverse",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "author": "Stacy Spensley",
+        "author_url": "https://www.flickr.com/photos/21001756@N06",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Oblaten bestehen nur aus Mehl und Wasser und sind hauchdünn gebacken.",
       "subcategory": "bread-and-baked-goods",
@@ -706046,23 +706086,54 @@
         "difficulty_estimate": 6,
         "notes": "A Commons photo with the wafer edges clearly visible is not guaranteed."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-28",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows coconut macaroons on Oblaten wafers, and the question depends on that picture (\"wie hier\"). Candidate 1 shows French macarons on gelato cones. Candidates 2–6 are old book scans: a soap ad, a nutrition chart, a kitchen exhibit, a camp scene and a market painting. No new search is allowed, so the slot needs a sourced photo of Kokosmakronen on Oblaten, or the question needs to drop the essential image. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows coconut macaroons on Oblaten wafers, and the question depends on that picture (\"wie hier\"). Candidate 1 shows French macarons on gelato cones. Candidates 2–6 are old book scans: a soap ad, a nutrition chart, a kitchen exhibit, a camp scene and a market painting. No new search is allowed, so the slot needs a sourced photo of Kokosmakronen on Oblaten, or the question needs to drop the essential image. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Reworded so the question no longer depends on an unavailable essential photo; Oblate is now named in the text, so hint 1 was replaced.",
+        "previous": {
+          "question": "Kokosmakronen backt man oft auf einer dünnen weißen Scheibe wie hier. Wofür ist sie da?",
+          "hints": [
+            "Die Scheibe heißt Oblate.",
+            "Makronenteig ist sehr klebrig.",
+            "Ohne sie bekommt man die Makronen schwer vom Blech."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "coconut macaroons wafer",
+            "note": "Photo of coconut macaroons (Kokosmakronen) sitting on round white wafers (Oblaten), wafer edges clearly visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9137",
@@ -706312,7 +706383,7 @@
     },
     {
       "id": "q-9140",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Ein Gerät, das schon beim Aufklappen Liebe verspricht.",
       "question": "Welches Gebäck backt man in diesem Gerät?",
@@ -706330,11 +706401,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "electric heart waffle maker",
-        "note": "Ein aufgeklapptes, leeres Herzwaffeleisen (fünf Herzen), ohne Teig oder fertige Waffeln.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "query": "Waffeleisen",
+        "note": "Ein aufgeklapptes, leeres Waffeleisen (am besten mit Herzform), ohne Teig oder fertige Waffeln.",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWaffle_Maker.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Waffle_Maker.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Donovan Govan. · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Donovan Govan.",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Herzförmige Waffeln sind besonders in Deutschland und Skandinavien beliebt.",
       "subcategory": "cakes-and-sweets",
@@ -706359,23 +706437,47 @@
         "difficulty_estimate": 3,
         "notes": "Straightforward and a bit dry. The heart-shaped waffle iron is easy to recognise."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-28",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question needs an essential photo of an open, empty heart-shaped waffle iron, but none of the candidates shows one: two are archaeological thimbles and one is an old book illustration of a dragon. A new search isn't allowed, so the image has to be found another way, for example by searching Commons for \"Waffeleisen\" or \"heart waffle iron\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question needs an essential photo of an open, empty heart-shaped waffle iron, but none of the candidates shows one: two are archaeological thimbles and one is an old book illustration of a dragon. A new search isn't allowed, so the image has to be found another way, for example by searching Commons for \"Waffeleisen\" or \"heart waffle iron\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New essential media query (German Commons term) so a photo of an open waffle iron can be found.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "electric heart waffle maker",
+            "note": "Ein aufgeklapptes, leeres Herzwaffeleisen (fünf Herzen), ohne Teig oder fertige Waffeln.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9141",
@@ -706539,7 +706641,7 @@
       "status": "needs_work",
       "difficulty": 3,
       "description": "Schuhputzen war noch nie so aufregend wie in dieser Nacht.",
-      "question": "Kinder putzen diese Stiefel am 5. Dezember und stellen sie vor die Tür. Wofür?",
+      "question": "Viele Kinder putzen am 5. Dezember ihre Stiefel und stellen sie vor die Tür. Wofür?",
       "answer": "Damit der Nikolaus sie füllt",
       "wrong_answers": [
         "Damit das Christkind sie anzieht",
@@ -706553,22 +706655,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "children's boots on doormat",
-        "note": "Geputzte, leere Kinderstiefel vor einer Haustür, ohne Nikolaus, Weihnachtsmann oder Süßigkeiten im Bild.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ARoberts%2C_Johnson%2C_and_Rand_Shoe_Company_Children%27s_Bobbie_Style_High-Top_Lace-up_Boots.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Roberts%2C_Johnson%2C_and_Rand_Shoe_Company_Children%27s_Bobbie_Style_High-Top_Lace-up_Boots.jpg/3840px-Roberts%2C_Johnson%2C_and_Rand_Shoe_Company_Children%27s_Bobbie_Style_High-Top_Lace-up_Boots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Roberts, Johnson, and Rand Shoe Company · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Roberts, Johnson, and Rand Shoe Company",
-        "author_url": null,
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-1923",
-          "PD-US-expired"
-        ]
+        "role": "illustrative",
+        "query": "boots at front door",
+        "note": null,
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "Der Nikolaustag erinnert an den Bischof Nikolaus von Myra, der Kindern heimlich Geschenke gemacht haben soll.",
       "subcategory": "cakes-and-sweets",
@@ -706594,22 +706686,60 @@
         "notes": "The question text already explains the image, so the media is really illustrative, not essential. Easy for children in Germany."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-28",
       "review": {
         "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-1923, PD-US-expired).",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-1923, PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Picked image had a US-only licence; reworded so the question no longer needs an essential photo and gave it a new illustrative query.",
+        "previous": {
+          "question": "Kinder putzen diese Stiefel am 5. Dezember und stellen sie vor die Tür. Wofür?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "children's boots on doormat",
+            "note": "Geputzte, leere Kinderstiefel vor einer Haustür, ohne Nikolaus, Weihnachtsmann oder Süßigkeiten im Bild.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ARoberts%2C_Johnson%2C_and_Rand_Shoe_Company_Children%27s_Bobbie_Style_High-Top_Lace-up_Boots.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Roberts%2C_Johnson%2C_and_Rand_Shoe_Company_Children%27s_Bobbie_Style_High-Top_Lace-up_Boots.jpg/3840px-Roberts%2C_Johnson%2C_and_Rand_Shoe_Company_Children%27s_Bobbie_Style_High-Top_Lace-up_Boots.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Roberts, Johnson, and Rand Shoe Company · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Roberts, Johnson, and Rand Shoe Company",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-1923",
+              "PD-US-expired"
+            ]
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9144",
@@ -709049,8 +709179,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Stralsund harbour skyline",
-        "note": "Außenansicht des Ozeaneums am Stralsunder Hafen, möglichst ohne lesbaren Schriftzug.",
+        "query": "Ozeaneum Stralsund exterior",
+        "note": "Außenansicht des Ozeaneums am Stralsunder Hafen, Schriftzug nicht lesbar oder nicht im Bild.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -709083,18 +709213,44 @@
       "batch": "batch-28",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the essential-image candidates shows the Ozeaneum in Stralsund. They are harbours in Heimaey, Lindau, Hong Kong, a US Navy ship, Chicago and Reykjavík. No new search is allowed, so the slot needs a new search such as \"Ozeaneum Stralsund exterior\", using a shot where the lettering is hidden or can't be read. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the essential-image candidates shows the Ozeaneum in Stralsund. They are harbours in Heimaey, Lindau, Hong Kong, a US Navy ship, Chicago and Reykjavík. No new search is allowed, so the slot needs a new search such as \"Ozeaneum Stralsund exterior\", using a shot where the lettering is hidden or can't be read. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New essential media query aimed at the Ozeaneum itself, since no candidate showed the building.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Stralsund harbour skyline",
+            "note": "Außenansicht des Ozeaneums am Stralsunder Hafen, möglichst ohne lesbaren Schriftzug.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9177",
@@ -710662,7 +710818,7 @@
     },
     {
       "id": "q-9197",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Ein Mann mit erhobenem Schwert, der seit 1875 nicht mehr runtergekommen ist.",
       "question": "Dieses Denkmal erinnert an den Sieg der Germanen über den Römer Varus. In welchem Gebirge steht es?",
@@ -710693,7 +710849,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Das Hermannsdenkmal ist mit Schwert rund 53 Meter hoch und war die höchste Statue der Welt, bis 1886 die Freiheitsstatue fertig wurde.",
+      "fun_fact": "Das Hermannsdenkmal ist mit Sockel rund 53 Meter hoch und war bis zur Freiheitsstatue 1886 die höchste Statue der westlichen Welt.",
       "subcategory": "early-history",
       "style": null,
       "concept": "Varus",
@@ -710720,29 +710876,32 @@
       "needs_media": true,
       "batch": "batch-28",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact says the Hermannsdenkmal was the tallest statue in the world until 1886. That is false: the Leshan Giant Buddha (about 71 m, 8th century) and the Bamiyan Buddhas were taller. The record only holds for the \"western world\". Also, the 53 m is the total height including the pedestal, not \"with the sword\" alone (the figure with its sword is about 26,6 m). Rewrite the fun fact, for example: total height about 53 m with the pedestal, tallest statue in the western world until the Statue of Liberty in 1886.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact says the Hermannsdenkmal was the tallest statue in the world until 1886. That is false: the Leshan Giant Buddha (about 71 m, 8th century) and the Bamiyan Buddhas were taller. The record only holds for the \"western world\". Also, the 53 m is the total height including the pedestal, not \"with the sword\" alone (the figure with its sword is about 26,6 m). Rewrite the fun fact, for example: total height about 53 m with the pedestal, tallest statue in the western world until the Statue of Liberty in 1886.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced giveaway hints 1 and 2 with vaguer ones and corrected the overstated statue record in the fun fact.",
+        "reason": "Corrected the fun fact: 53 m includes the pedestal, and the record only held for the western world.",
         "previous": {
-          "hints": [
-            "Es steht in Nordrhein-Westfalen.",
-            "Nach diesem Ort ist auch die berühmte Schlacht benannt.",
-            "Das Denkmal steht bei Detmold."
-          ],
-          "fun_fact": "Das Hermannsdenkmal ist mit Schwert rund 53 Meter hoch und war lange die höchste Statue der Welt."
+          "fun_fact": "Das Hermannsdenkmal ist mit Schwert rund 53 Meter hoch und war die höchste Statue der Welt, bis 1886 die Freiheitsstatue fertig wurde."
         },
         "revised_on": "2026-10-29"
       }
@@ -711518,7 +711677,7 @@
     },
     {
       "id": "q-9208",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Mode, die so frech war, dass die Großeltern damals nach Luft schnappten.",
       "question": "In den Zwanzigern trugen viele junge Frauen einen „Bubikopf“. Was war das?",
@@ -711536,20 +711695,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "1920s jazz band",
+        "query": "vintage gramophone",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHappy_Schilling%27s_Band_at_the_Beverly_Gardens.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Happy_Schilling%27s_Band_at_the_Beverly_Gardens.jpg/3840px-Happy_Schilling%27s_Band_at_the_Beverly_Gardens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Bennette C. Moore · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADetalj_glave_starog_gramofona_u_Dobrom_Potoku.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Detalj_glave_starog_gramofona_u_Dobrom_Potoku.jpg/3840px-Detalj_glave_starog_gramofona_u_Dobrom_Potoku.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Ljiljana Krupanj · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Bennette C. Moore",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ljiljana Krupanj",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ljiljana_Krupanj",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "„Bubi“ ist eine Koseform für einen kleinen Jungen – die Frauen trugen also wörtlich einen „Jungenkopf“.",
       "subcategory": "empire-weimar-and-nazi-era",
@@ -711574,23 +711731,56 @@
         "difficulty_estimate": 9,
         "notes": "The decorative 1920s jazz band image could show women with bob haircuts. Minor risk."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-28",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Picked image had a US-only licence; new decorative query from the 1920s world that doesn't show a haircut.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "1920s jazz band",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AHappy_Schilling%27s_Band_at_the_Beverly_Gardens.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Happy_Schilling%27s_Band_at_the_Beverly_Gardens.jpg/3840px-Happy_Schilling%27s_Band_at_the_Beverly_Gardens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Bennette C. Moore · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Bennette C. Moore",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-expired"
+            ]
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9209",
@@ -712799,7 +712989,7 @@
       "status": "needs_work",
       "difficulty": 3,
       "description": "Lärm auf Rädern – diesmal ganz ohne Strafzettel.",
-      "question": "Zu welchem Anlass klappern solche Dosen hinten am Auto?",
+      "question": "Zu welchem Anlass bindet man oft klappernde Blechdosen hinten ans Auto?",
       "answer": "Hochzeit",
       "wrong_answers": [
         "Taufe",
@@ -712813,9 +713003,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "cans tied car bumper",
-        "note": "Blechdosen, die an Schnüren hinten an einem Auto hängen; möglichst ohne Schild wie „Just Married“.",
+        "role": "illustrative",
+        "query": "empty tin cans",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -712844,31 +713034,47 @@
         "notes": "Most Commons photos of this custom will have a 'Just Married' sign on the car, which would give the answer away. It may be hard to find a clean image."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-28",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows cans tied behind a car: they are a bike carriage on Caltrain and old street-railway journal scans of trams. The question says \"solche Dosen\", so it needs an essential image of that exact thing, and no new search is allowed. It needs a hand-picked photo of tin cans on strings behind a car, with no \"Just Married\" sign. The alternative is to reword it so it doesn't point at a picture. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows cans tied behind a car: they are a bike carriage on Caltrain and old street-railway journal scans of trams. The question says \"solche Dosen\", so it needs an essential image of that exact thing, and no new search is allowed. It needs a hand-picked photo of tin cans on strings behind a car, with no \"Just Married\" sign. The alternative is to reword it so it doesn't point at a picture. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2 (honeymoon), which gave the answer away, with a milder hint.",
+        "reason": "Reworded so the question no longer points at an unavailable essential photo; the media is now an illustrative image of tin cans.",
         "previous": {
-          "hints": [
-            "Es ist ein Fest für zwei Erwachsene.",
-            "Danach fährt man oft in die Flitterwochen.",
-            "Am Ende sagt man „Ja“."
-          ]
+          "question": "Zu welchem Anlass klappern solche Dosen hinten am Auto?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "cans tied car bumper",
+            "note": "Blechdosen, die an Schnüren hinten an einem Auto hängen; möglichst ohne Schild wie „Just Married“.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-10-29"
       }
@@ -720260,7 +720466,7 @@
     },
     {
       "id": "q-9322",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Ein Baum, den Förster öfter zählen als andere Leute Schafe vor dem Einschlafen.",
       "question": "Im Harz und im Schwarzwald stehen riesige Fichtenwälder. Was für ein Baum ist die Fichte?",
@@ -720271,23 +720477,23 @@
         "Nussbaum"
       ],
       "hints": [
-        "Sie ist der häufigste Baum in deutschen Wäldern.",
+        "Sie ist einer der häufigsten Bäume in deutschen Wäldern.",
         "Viele Weihnachtsbäume sind Fichten.",
         "Sie trägt Zapfen, und ihre spitzen Blätter pieksen."
       ],
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "hiking boots forest trail",
+        "query": "Black Forest valley landscape",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AThese_Boots_Were_Made_for_Hiking_%284347791468%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/These_Boots_Were_Made_for_Hiking_%284347791468%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "cogdogblog · CC BY 2.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKloster_St._Trudpert_-_Gesamtsicht1.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Kloster_St._Trudpert_-_Gesamtsicht1.jpg/3840px-Kloster_St._Trudpert_-_Gesamtsicht1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Taxiarchos228 · FAL · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "cogdogblog",
-        "author_url": "https://www.flickr.com/people/37996646802@N01",
+        "license": "FAL",
+        "license_url": "http://artlibre.org/licence/lal/en",
+        "author": "Taxiarchos228",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Taxiarchos228",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -720318,27 +720524,35 @@
       "needs_media": false,
       "batch": "batch-28",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 is out of date. It says the spruce is the most common tree in German forests, but the fourth Bundeswaldinventur (2022 data, published 2024) found the Kiefer at about 22 % and the Fichte at about 21 %, so the pine now ranks first. Change hint 1, for example to \"Sie ist einer der häufigsten Bäume in deutschen Wäldern.\" or a vague hint about forestry or timber. The rest of the question and the media pick are fine.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 is out of date. It says the spruce is the most common tree in German forests, but the fourth Bundeswaldinventur (2022 data, published 2024) found the Kiefer at about 22 % and the Fichte at about 21 %, so the pine now ranks first. Change hint 1, for example to \"Sie ist einer der häufigsten Bäume in deutschen Wäldern.\" or a vague hint about forestry or timber. The rest of the question and the media pick are fine.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the hints so hints 1 and 2 no longer give away the conifer answer, following the reviewer's wording.",
+        "reason": "Hint 1 updated: per the 2022 forest inventory the spruce is no longer the most common tree, only one of the most common.",
         "previous": {
           "hints": [
-            "Sie bleibt auch im Winter grün.",
-            "Sie trägt Zapfen.",
-            "Ihre Blätter sind spitz und pieksen."
+            "Sie ist der häufigste Baum in deutschen Wäldern.",
+            "Viele Weihnachtsbäume sind Fichten.",
+            "Sie trägt Zapfen, und ihre spitzen Blätter pieksen."
           ]
         },
         "revised_on": "2026-10-29"
@@ -721355,20 +721569,11 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "witch broom water buckets",
+        "query": "old broom wooden bucket",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AWoman_turning_to_ascend_stairs_with_a_bucket_of_water_and_broom_in_hands_%28rbm-QP301M8-1887-107%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Woman_turning_to_ascend_stairs_with_a_bucket_of_water_and_broom_in_hands_%28rbm-QP301M8-1887-107%29.jpg/3840px-Woman_turning_to_ascend_stairs_with_a_bucket_of_water_and_broom_in_hands_%28rbm-QP301M8-1887-107%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Muybridge, Eadweard, 1830-1904 · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Muybridge, Eadweard, 1830-1904",
-        "author_url": null,
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "Die Ballade entstand 1797 im „Balladenjahr“, in dem Goethe und Schiller um die Wette dichteten.",
       "subcategory": "reformation-to-empire",
@@ -721398,18 +721603,53 @@
       "batch": "batch-28",
       "review": {
         "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+        "feedback": "The text is fine, but none of the image candidates fits. #1 is a WWI watercolour of an army kitchen car with only a small broom, #2 is a maternity-hygiene exhibit and #3 is a scanned inventory table. A new search for a broom-and-water or Sorcerer's Apprentice illustration is needed. No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New media query because the picked image had a PD-US-only licence.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "witch broom water buckets",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AWoman_turning_to_ascend_stairs_with_a_bucket_of_water_and_broom_in_hands_%28rbm-QP301M8-1887-107%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Woman_turning_to_ascend_stairs_with_a_bucket_of_water_and_broom_in_hands_%28rbm-QP301M8-1887-107%29.jpg/3840px-Woman_turning_to_ascend_stairs_with_a_bucket_of_water_and_broom_in_hands_%28rbm-QP301M8-1887-107%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Muybridge, Eadweard, 1830-1904 · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Muybridge, Eadweard, 1830-1904",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9337",
@@ -723733,8 +723973,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Baden-Württemberg outline map",
-        "note": "Unbeschriftete Umrisskarte des Bundeslandes Baden-Württemberg; keine Namen oder Städte.",
+        "query": "Baden-Württemberg locator map",
+        "note": "Unbeschriftete Karte mit dem heutigen Umriss von Baden-Württemberg (einzeln oder farbig hervorgehoben in einer unbeschrifteten Deutschlandkarte); keine Namen, Titel oder Städte.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -723767,18 +724007,44 @@
       "batch": "batch-28",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates is an unlabelled outline of today's Baden-Württemberg. Candidates 1, 2, 3 and 6 are historical atlas maps with titles naming Württemberg and Baden, which give the answer away. Candidate 5 shows the 1442 county of Württemberg, and candidate 4 highlights the Black Forest on a map of Germany. A new search isn't allowed, so the slot needs a hand-picked file, such as a blank locator map of Baden-Württemberg from Commons. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates is an unlabelled outline of today's Baden-Württemberg. Candidates 1, 2, 3 and 6 are historical atlas maps with titles naming Württemberg and Baden, which give the answer away. Candidate 5 shows the 1442 county of Württemberg, and candidate 4 highlights the Black Forest on a map of Germany. A new search isn't allowed, so the slot needs a hand-picked file, such as a blank locator map of Baden-Württemberg from Commons. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New media query and note targeting a blank Commons locator/outline map, since no unlabelled outline was found.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Baden-Württemberg outline map",
+            "note": "Unbeschriftete Umrisskarte des Bundeslandes Baden-Württemberg; keine Namen oder Städte.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9368",
@@ -725450,10 +725716,10 @@
     },
     {
       "id": "q-9390",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Ein Glas, das schon mehr Stammtischgespräche gehört hat als jeder Wirt.",
-      "question": "Dieses schlichte Bierglas wurde in den 1950ern entworfen und steht bis heute in fast jeder deutschen Kneipe. Wie heißt es?",
+      "question": "Dieses schlichte Bierglas steht seit Jahrzehnten in fast jeder deutschen Kneipe. Wie heißt es?",
       "answer": "Willi-Becher",
       "wrong_answers": [
         "Stange",
@@ -725463,21 +725729,21 @@
       "hints": [
         "Es ist kein Krug und hat keinen Stiel.",
         "Es ist dickwandig, hat einen schweren Boden und ist kaum kaputtzukriegen.",
-        "Sein Name ist eine Kurzform von Wilhelm."
+        "Sein Name klingt wie ein Männervorname mit einem Trinkgefäß dahinter."
       ],
       "media": {
         "type": "image",
         "role": "decorative",
         "query": "german pub interior",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AOdenw%C3%A4lder_Freilandmuseum_-_Kleinbauernhof_mit_ehem._Dorfsch%C3%A4nke_aus_Dallau_-_Fenster.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Odenw%C3%A4lder_Freilandmuseum_-_Kleinbauernhof_mit_ehem._Dorfsch%C3%A4nke_aus_Dallau_-_Fenster.jpg/3840px-Odenw%C3%A4lder_Freilandmuseum_-_Kleinbauernhof_mit_ehem._Dorfsch%C3%A4nke_aus_Dallau_-_Fenster.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Roman Eisele · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFactory_interiors_003_2005_10_13.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Factory_interiors_003_2005_10_13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Friedrich Haag · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Roman Eisele",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Aristeas",
+        "author": "Friedrich Haag",
+        "author_url": "https://commons.wikimedia.org/wiki/User:F._Riedelio",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -725504,33 +725770,41 @@
         "difficulty_estimate": 12,
         "notes": "Small inconsistency: the answer is spelled 'Willi-Becher' but the fun fact says 'Willy' (the inventor was Willy Steinmeier). The common spelling is usually 'Willibecher' or 'Willi-Becher'. Hint 3 comes very close to the answer, which is allowed."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-28",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: wrong. The answer is fine, but hint 3 is misleading. The glass is said to be named after its designer Willy Steinmeier (Ruhrglas, 1954), not as a generic short form of Wilhelm. That origin comes from a single blog source and I couldn't cross-check it. The 'designed in the 1950s' claim is also only loosely supported: museum items are dated 1940–1980.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: wrong. The answer is fine, but hint 3 is misleading. The glass is said to be named after its designer Willy Steinmeier (Ruhrglas, 1954), not as a generic short form of Wilhelm. That origin comes from a single blog source and I couldn't cross-check it. The 'designed in the 1950s' claim is also only loosely supported: museum items are dated 1940–1980.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the giveaway 'named after its inventor' hint with a hint about the glass and rewrote the fun fact so it no longer relies on the unverified naming story.",
+        "reason": "Replaced the unverified Wilhelm-origin hint and removed the loosely supported 1950s claim from the question.",
         "previous": {
+          "question": "Dieses schlichte Bierglas wurde in den 1950ern entworfen und steht bis heute in fast jeder deutschen Kneipe. Wie heißt es?",
           "hints": [
             "Es ist kein Krug und hat keinen Stiel.",
-            "Es ist nach seinem Erfinder benannt.",
+            "Es ist dickwandig, hat einen schweren Boden und ist kaum kaputtzukriegen.",
             "Sein Name ist eine Kurzform von Wilhelm."
-          ],
-          "fun_fact": "Der Becher trägt den Vornamen seines Erfinders: Ein einziger Willy hat so fast jede deutsche Kneipe erobert."
+          ]
         },
         "revised_on": "2026-10-29"
       }
@@ -725969,7 +726243,7 @@
     },
     {
       "id": "q-9397",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Ein Handwerker, der Tische nicht deckt, sondern baut.",
       "question": "Ein Tischler baut Schränke, Tische und Türen. Mit welchem Material arbeitet er vor allem?",
@@ -725987,11 +726261,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "old craftsman hand tools",
+        "query": "carpenter workshop interior",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHMS_Belfast_-_Carpenter%27s_workshop_2.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/HMS_Belfast_-_Carpenter%27s_workshop_2.jpg/3840px-HMS_Belfast_-_Carpenter%27s_workshop_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Rémi Kaupp · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Rémi Kaupp",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Korrigan",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "In Süddeutschland heißt der Tischler meist „Schreiner“ – es ist derselbe Beruf.",
       "subcategory": "family-customs-and-dress",
@@ -726020,28 +726301,40 @@
       "needs_media": false,
       "batch": "batch-28",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate fits as the decorative image. #1 is a wrought-iron 'Schlossermeister' sign, which points to the wrong option Metall. #2–4 are leather sailmaker's palm guards (wrong option Leder). #5 is a metal thimble and #6 is a drawing of a Roman figurine. A new search for a carpenter's workshop (e.g. 'woodworking workbench tools') is needed. The question text itself is fine. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate fits as the decorative image. #1 is a wrought-iron 'Schlossermeister' sign, which points to the wrong option Metall. #2–4 are leather sailmaker's palm guards (wrong option Leder). #5 is a metal thimble and #6 is a drawing of a Roman figurine. A new search for a carpenter's workshop (e.g. 'woodworking workbench tools') is needed. The question text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the giveaway forest hint 2 with a mid-strength floating hint.",
+        "reason": "New decorative media query for a carpentry workshop, since the candidates pointed to wrong options.",
         "previous": {
-          "hints": [
-            "Das Material ist ein Naturstoff.",
-            "Es wächst im Wald.",
-            "Bäume liefern es."
-          ]
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "old craftsman hand tools",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-29"
       }
@@ -726192,7 +726485,7 @@
     },
     {
       "id": "q-9400",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Eine Zeitkapsel für Leute mit sehr, sehr viel Geduld.",
       "question": "Beim feierlichen Baustart eines Hauses kommen Tageszeitung, Münzen und Baupläne in eine Metallkapsel. Wohin kommt sie?",
@@ -726209,21 +726502,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "time capsule metal cylinder",
+        "role": "decorative",
+        "query": "building construction site crane",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A1965_Westinghouse_time_capsule_contents.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/1965_Westinghouse_time_capsule_contents.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Westinghouse Electric Corporation · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A11_Liebherr_construction_crane_at_a_Strabag_company_construction_site_of_apartment_building_in_Budapest%2C_Hungary.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/11_Liebherr_construction_crane_at_a_Strabag_company_construction_site_of_apartment_building_in_Budapest%2C_Hungary.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Marek Ślusarczyk (Tupungato) Photo portfolio · CC BY 3.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Westinghouse Electric Corporation",
-        "author_url": null,
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Marek Ślusarczyk (Tupungato) Photo portfolio",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tupungato",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US-no notice"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Traditionell klopft man bei der Grundsteinlegung dreimal mit dem Hammer auf den Stein und spricht dazu einen Segenswunsch.",
       "subcategory": "family-customs-and-dress",
@@ -726252,28 +726543,49 @@
       "needs_media": false,
       "batch": "batch-28",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-no notice).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-no notice).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which ruled out every wrong option, with a vaguer hint about the ceremony.",
+        "reason": "New media query because the picked image had a PD-US-only licence; a decorative building-site image avoids showing the foundation stone.",
         "previous": {
-          "hints": [
-            "Sie bleibt im neuen Gebäude selbst.",
-            "Sie kommt ganz nach unten, nicht nach oben.",
-            "Diesen Stein legt man ganz am Anfang des Baus."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "time capsule metal cylinder",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3A1965_Westinghouse_time_capsule_contents.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/1965_Westinghouse_time_capsule_contents.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Westinghouse Electric Corporation · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Westinghouse Electric Corporation",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-no notice"
+            ]
+          }
         },
         "revised_on": "2026-10-29"
       }
@@ -727121,34 +727433,34 @@
     },
     {
       "id": "q-9412",
-      "status": "needs_work",
-      "difficulty": 9,
-      "description": "Drei tragen Weiß-Blau, einer tanzt farblich aus der Reihe.",
-      "question": "Welcher deutsche Wintersportort liegt NICHT in Bayern?",
+      "status": "approved",
+      "difficulty": 10,
+      "description": "Hier rast man im Eiskanal schneller bergab als jeder Schlitten am Rodelhang.",
+      "question": "Welcher Wintersportort im Sauerland ist für seine Bobbahn bekannt?",
       "answer": "Winterberg",
       "wrong_answers": [
-        "Oberstdorf",
-        "Garmisch-Partenkirchen",
-        "Berchtesgaden"
+        "Oberhof",
+        "Altenberg",
+        "Schönau am Königssee"
       ],
       "hints": [
-        "Auch in diesem Ort wurden schon Weltcup-Rennen ausgetragen.",
-        "Er liegt in einem Mittelgebirge im Westen Deutschlands.",
-        "Er ist das Wintersportzentrum des Sauerlands mit Bobbahn."
+        "Der Ort liegt in Nordrhein-Westfalen.",
+        "Ganz in der Nähe liegt der Kahle Asten.",
+        "Sein Name verbindet eine Jahreszeit mit einer Erhebung."
       ],
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "snowy ski slope Germany",
+        "query": "bobsleigh track curve",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AFunifor_Arabba_Porta_Vescovo_2.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Funifor_Arabba_Porta_Vescovo_2.jpg/3840px-Funifor_Arabba_Porta_Vescovo_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "This Photo was taken by Wolfgang Moroder. · CC BY-SA 3.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABobsleigh_in_Sigulda_%283147456378%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Bobsleigh_in_Sigulda_%283147456378%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Helmuts Rudzītis from Rīga, Latvia · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "This Photo was taken by Wolfgang Moroder.  \n\nFeel free to use my photos, but please mention me as the author and send me a  message. \n\n\n\nThis image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here are not appropriate.\n\n\n\nPlease do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
-        "author_url": "https://commons.wikimedia.org/wiki/File:Emblem-camera.svg",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Helmuts Rudzītis from Rīga, Latvia",
+        "author_url": "https://www.flickr.com/people/62866458@N00",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -727179,31 +727491,64 @@
       "needs_media": false,
       "batch": "batch-28",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The clue „deutscher Wintersportort, der NICHT in Bayern liegt“ fits many real places besides Winterberg: Oberhof, Willingen, Altenberg, Feldberg, Braunlage. So the answer only works within the four options, which the house style rules out (\"the clue must point to the answer in the real world\"). Rework it as a direct question with a clue only Winterberg has, e.g. the winter sports centre of the Sauerland with a bobsleigh track.",
-        "problems": [
-          "ambiguity"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The clue „deutscher Wintersportort, der NICHT in Bayern liegt“ fits many real places besides Winterberg: Oberhof, Willingen, Altenberg, Feldberg, Braunlage. So the answer only works within the four options, which the house style rules out (\"the clue must point to the answer in the real world\"). Rework it as a direct question with a clue only Winterberg has, e.g. the winter sports centre of the Sauerland with a bobsleigh track.",
+          "problems": [
+            "ambiguity"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which ruled out every wrong option, with a vague one, and dropped the state's name from hint 2.",
+        "reason": "Reworked into a direct question with a clue only Winterberg fits (Sauerland bobsleigh venue); all options now have bob tracks; new description, hints and media.",
         "previous": {
+          "difficulty": 9,
+          "description": "Drei tragen Weiß-Blau, einer tanzt farblich aus der Reihe.",
+          "question": "Welcher deutsche Wintersportort liegt NICHT in Bayern?",
+          "wrong_answers": [
+            "Oberstdorf",
+            "Garmisch-Partenkirchen",
+            "Berchtesgaden"
+          ],
           "hints": [
-            "Der gesuchte Ort liegt gar nicht in den Alpen.",
-            "Er liegt in einem Mittelgebirge in Nordrhein-Westfalen.",
+            "Auch in diesem Ort wurden schon Weltcup-Rennen ausgetragen.",
+            "Er liegt in einem Mittelgebirge im Westen Deutschlands.",
             "Er ist das Wintersportzentrum des Sauerlands mit Bobbahn."
-          ]
+          ],
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "snowy ski slope Germany",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AFunifor_Arabba_Porta_Vescovo_2.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Funifor_Arabba_Porta_Vescovo_2.jpg/3840px-Funifor_Arabba_Porta_Vescovo_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "This Photo was taken by Wolfgang Moroder. · CC BY-SA 3.0 · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "author": "This Photo was taken by Wolfgang Moroder.  \n\nFeel free to use my photos, but please mention me as the author and send me a  message. \n\n\n\nThis image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here are not appropriate.\n\n\n\nPlease do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+            "author_url": "https://commons.wikimedia.org/wiki/File:Emblem-camera.svg",
+            "restrictions": [],
+            "pd_reasons": []
+          }
         },
         "revised_on": "2026-10-29"
-      }
+      },
+      "difficulty_original": 9
     },
     {
       "id": "q-9413",
@@ -728620,8 +728965,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "ship inside canal lock",
-        "note": "Foto einer Schleusenkammer mit sichtbaren Schleusentoren und einem Schiff darin, ohne Schilder oder Schrift",
+        "query": "canal lock gates ship",
+        "note": "Farbfoto einer Schleusenkammer mit sichtbaren Schleusentoren und einem Schiff darin, ohne Schilder oder Schrift",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -728654,18 +728999,44 @@
       "batch": "batch-28",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows a lock clearly. 1 and 2 are scratched, faded black-and-white scans of the Miami and Erie Canal where you can't make out the lock chamber or gates, and 3 and 4 are photos of a WWII seaplane. A fresh search for a modern colour photo of a lock chamber with its gates and a ship inside is needed (e.g. \"Schleuse Kiel-Holtenau\" or \"canal lock gates ship\"). No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a lock clearly. 1 and 2 are scratched, faded black-and-white scans of the Miami and Erie Canal where you can't make out the lock chamber or gates, and 3 and 4 are photos of a WWII seaplane. A fresh search for a modern colour photo of a lock chamber with its gates and a ship inside is needed (e.g. \"Schleuse Kiel-Holtenau\" or \"canal lock gates ship\"). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New media query for a clear modern photo of a lock chamber with gates and a ship.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "ship inside canal lock",
+            "note": "Foto einer Schleusenkammer mit sichtbaren Schleusentoren und einem Schiff darin, ohne Schilder oder Schrift",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9433",
@@ -728837,7 +729208,7 @@
     },
     {
       "id": "q-9435",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Der heimliche Grund, warum Omas Käsekuchen so schmeckt, wie er schmeckt.",
       "question": "Quark steht in Deutschland in fast jedem Kühlschrank. Zu welcher Käsegruppe zählt er?",
@@ -728855,11 +729226,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Speisequark bowl",
+        "query": "quark cheese bowl",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABerry_quark_and_coffee_at_restaurant_Sapusca.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Berry_quark_and_coffee_at_restaurant_Sapusca.jpg/3840px-Berry_quark_and_coffee_at_restaurant_Sapusca.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "JIP · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "JIP",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:JIP&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Das Wort „Quark“ hat das Englische aus dem Deutschen übernommen.",
       "subcategory": "sausages-and-cheese",
@@ -728888,19 +729266,43 @@
       "needs_media": false,
       "batch": "batch-28",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but the media slot has no candidates and another search isn't allowed. The question needs an illustrative image of quark in a bowl (e.g. try \"quark cheese bowl\" or \"Speisequark\") from a manual or later search. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but the media slot has no candidates and another search isn't allowed. The question needs an illustrative image of quark in a bowl (e.g. try \"quark cheese bowl\" or \"Speisequark\") from a manual or later search. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New media query since the old one returned no candidates.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Speisequark bowl",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9436",
@@ -730231,7 +730633,7 @@
     },
     {
       "id": "q-9454",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Ein Lied, bei dem der Kleiderschrank verrät, in wen man verliebt ist.",
       "question": "Im Kinderlied „Grün, grün, grün sind alle meine Kleider“ trägt man Grün wegen des Berufs vom Schatz. Was ist der Schatz?",
@@ -730248,12 +730650,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "green laundry hanging",
-        "note": "Grüne Kleidungsstücke, z. B. auf einer Wäscheleine; keine Person, keine Jagd-, Garten- oder Bauernhofmotive.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "green clothes clothesline",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClothes%2C_clothesline_and_chimney%2C_Hobbiton_Movie_Set%2C_Matamata%2C_New_Zealand_2016_%2850797399622%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Clothes%2C_clothesline_and_chimney%2C_Hobbiton_Movie_Set%2C_Matamata%2C_New_Zealand_2016_%2850797399622%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Joe Ross from Lansing, Michigan · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Joe Ross from Lansing, Michigan",
+        "author_url": "https://www.flickr.com/people/59398780@N00",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "In anderen Strophen trägt man zum Beispiel Schwarz, weil der Schatz ein Schornsteinfeger ist.",
       "subcategory": "schlager-and-folk-music",
@@ -730282,19 +730691,43 @@
       "needs_media": true,
       "batch": "batch-28",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but none of the media candidates work. The slot needs green clothes, for example on a washing line, with no person in the picture. No candidate shows that, and no new search is possible. The role should also be illustrative rather than essential, since the question works without the image. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but none of the media candidates work. The slot needs green clothes, for example on a washing line, with no person in the picture. No candidate shows that, and no new search is possible. The role should also be illustrative rather than essential, since the question works without the image. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media to an illustrative image with a new query for green clothes, because the question works without the picture and no essential candidate fitted.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "green laundry hanging",
+            "note": "Grüne Kleidungsstücke, z. B. auf einer Wäscheleine; keine Person, keine Jagd-, Garten- oder Bauernhofmotive.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9455",
@@ -731191,7 +731624,7 @@
     },
     {
       "id": "q-9467",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Die Hauptstadt hat nasse Füße, und zwar nicht nur bei Regen.",
       "question": "Welcher Fluss fließt mitten durch Berlin?",
@@ -731209,11 +731642,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Reichstag building riverbank",
+        "query": "Reichstag Berlin river boat",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_River_Spree_in_Berlin_in_May_2011.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/32/The_River_Spree_in_Berlin_in_May_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Chris j wood · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Chris j wood",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Chris_j_wood",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Die Spree ist sogar länger als die Havel, in die sie in Spandau mündet.",
       "subcategory": "states-and-capitals",
@@ -731242,41 +731682,47 @@
       "needs_media": false,
       "batch": "batch-28",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates shows Berlin or a river. They are US riverbank buildings, shop fronts (Staples, Burlington), black-and-white interiors and an old sketch, and no new search is allowed. The slot needs a new search such as \"Reichstag Berlin river\" or \"Berlin Museum Island boat\". The question text itself is fine. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates shows Berlin or a river. They are US riverbank buildings, shop fronts (Staples, Burlington), black-and-white interiors and an old sketch, and no new search is allowed. The slot needs a new search such as \"Reichstag Berlin river\" or \"Berlin Museum Island boat\". The question text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Dropped the map sentence and essential map; now a direct question with an illustrative Reichstag image.",
+        "reason": "Changed the media query so the search finds Berlin's river scene at the Reichstag. The text stays the same.",
         "previous": {
-          "question": "Die Karte zeigt die Umrisse von Berlin. Welcher Fluss fließt mitten durch diese Stadt?",
           "media": {
             "type": "image",
-            "role": "essential",
-            "query": "Berlin blank map rivers",
-            "note": "Unbeschriftete Umrisskarte von Berlin, auf der die Flüsse eingezeichnet sind; keine Namen oder Beschriftungen.",
+            "role": "illustrative",
+            "query": "Reichstag building riverbank",
+            "note": null,
             "source_url": null,
             "file_url": null,
             "credit": null
-          },
-          "needs_media": true
+          }
         },
         "revised_on": "2026-10-29"
       }
     },
     {
       "id": "q-9468",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Hier spricht ein Dialekt in eigener Sache, also bitte nicht lachen.",
       "question": "Ich staune mit „Ei verbibbsch!“, sage „nu“, wenn ich ja meine, und aus Kaffee wird bei mir „Gaffee“. Welcher Dialekt bin ich?",
@@ -731287,8 +731733,8 @@
         "Kölsch"
       ],
       "hints": [
+        "In Umfragen zu beliebten Dialekten lande ich oft auf den hinteren Plätzen.",
         "Ich bin im Osten Deutschlands zu Hause.",
-        "In meiner Heimat liegt das Elbsandsteingebirge.",
         "Man hört mich in Leipzig und Dresden."
       ],
       "media": {
@@ -731334,23 +731780,43 @@
       "needs_media": false,
       "batch": "batch-28",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 („im Osten Deutschlands“) gives the answer away: Bairisch, Schwäbisch and Kölsch are all clearly southern or western, so the first hint alone picks out Sächsisch. Hint 2 (Elbsandsteingebirge) is almost as strong. Hint 1 should stay vague, e.g. about how the dialect is often teased or ranked in dialect polls, without giving the region.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 („im Osten Deutschlands“) gives the answer away: Bairisch, Schwäbisch and Kölsch are all clearly southern or western, so the first hint alone picks out Sächsisch. Hint 2 (Elbsandsteingebirge) is almost as strong. Hint 1 should stay vague, e.g. about how the dialect is often teased or ranked in dialect polls, without giving the region.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made hint 1 vague (dialect polls), moved the region clue to hint 2 and dropped the near-giveaway Elbsandsteingebirge hint.",
+        "previous": {
+          "hints": [
+            "Ich bin im Osten Deutschlands zu Hause.",
+            "In meiner Heimat liegt das Elbsandsteingebirge.",
+            "Man hört mich in Leipzig und Dresden."
+          ]
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9469",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Kiefern, Seen und Sand: Hier gibt es mehr Natur als Schlagzeilen.",
       "question": "Welches Bundesland zeigt diese Karte? Das Loch in der Mitte ist kein Druckfehler.",
@@ -731362,17 +731828,24 @@
       ],
       "hints": [
         "Es liegt im Osten Deutschlands.",
-        "Das Loch ist die Hauptstadt Deutschlands.",
+        "Das Loch ist ein eigenes Bundesland.",
         "Seine Landeshauptstadt ist Potsdam mit Schloss Sanssouci."
       ],
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Brandenburg outline map",
-        "note": "Unbeschriftete Umrisskarte des Bundeslandes Brandenburg, Berlin als sichtbares Loch in der Mitte; keine Namen.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "query": "Brandenburg location map Germany",
+        "note": "Moderne, unbeschriftete Lage- oder Umrisskarte (z. B. Commons-Locator-Map), Brandenburg hervorgehoben, Berlin als sichtbares Loch in der Mitte; keine Namen oder Beschriftungen.",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABrandenburg_relief_location_map.png",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Brandenburg_relief_location_map.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Grundkarte NordNordWest, Relief Alexrk2 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Grundkarte NordNordWest, Relief Alexrk2",
+        "author_url": "https://commons.wikimedia.org/wiki/User:NordNordWest",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Das Brandenburger Tor steht gar nicht in Brandenburg, sondern in Berlin, benannt ist es nach der Straße in die Stadt Brandenburg an der Havel.",
       "subcategory": "states-and-capitals",
@@ -731397,24 +731870,53 @@
         "difficulty_estimate": 6,
         "notes": "Nice reasoning question built on the Berlin hole. Commons very likely has a blank map of Brandenburg."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-28",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate is the unlabelled outline map of Brandenburg with Berlin as a hole that the essential slot needs: all six are 19th-century atlas pages or wider maps, and several have „Brandenburg“ printed on them. Another search isn't allowed, so the slot needs a blank modern locator or outline map (e.g. a Commons 'Brandenburg location map' or blank map). Also, hint 2 („Das Loch ist die Hauptstadt Deutschlands“) does almost the whole reasoning step for the player, so it is close to a giveaway. Consider making it vaguer, for example: „Das Loch ist ein eigenes Bundesland.“ No suitable picture found for this question.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate is the unlabelled outline map of Brandenburg with Berlin as a hole that the essential slot needs: all six are 19th-century atlas pages or wider maps, and several have „Brandenburg“ printed on them. Another search isn't allowed, so the slot needs a blank modern locator or outline map (e.g. a Commons 'Brandenburg location map' or blank map). Also, hint 2 („Das Loch ist die Hauptstadt Deutschlands“) does almost the whole reasoning step for the player, so it is close to a giveaway. Consider making it vaguer, for example: „Das Loch ist ein eigenes Bundesland.“ No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made hint 2 vaguer as the reviewer suggested, and changed the essential map query and note to a blank modern locator map, which Commons has.",
+        "previous": {
+          "hints": [
+            "Es liegt im Osten Deutschlands.",
+            "Das Loch ist die Hauptstadt Deutschlands.",
+            "Seine Landeshauptstadt ist Potsdam mit Schloss Sanssouci."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Brandenburg outline map",
+            "note": "Unbeschriftete Umrisskarte des Bundeslandes Brandenburg, Berlin als sichtbares Loch in der Mitte; keine Namen.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9470",
