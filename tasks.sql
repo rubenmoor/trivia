@@ -43650,7 +43650,7 @@ Done when its report exists, the printed paths are staged, note as above.
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Health ✗ (in the output, the report or `qgen health`): `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health ✗, look at it?"` with the warning verbatim (`plan 190: Reviews don''t gate generation`; also finds the older "<run>: health stop, ack?"), no task linked (no `pm task-pending-decision`); the task goes on. Never `qgen health ack` (the developer''s).
 - Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-29T03:47:24Z', '2026-10-29T11:04:13Z', 1269, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1788, 84, 'QC batch-28 (germany)', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: QC of the first `germany` drafting run (`run batch-<n> (germany)`, the task this requires). Drafted-run QC shape, `authoring/QC.md` steps 1–4 without waits (`decision 414: Human reviews don''t gate question generation or translation`); same as `task 1691: QC batch-16 (colombia)`. Owner: `plans/15c-regional-questions.md`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1788, 84, 'QC batch-28 (germany)', 'work', 'done', NULL, '2026-10-29, QC batch-28 (germany): audit 0 major of 56 approved, audit/review agreement 97 %, 343 approved (de), $0.26 per approved; spot check not recorded so far (decision 473 raised, QC report not writable until then); no proposals decision; rework-22: 15 of 24 fixed, 9 still need work; next pair run 1803 / QC 1804; health decision 472 already open', 'Plan 84 chain 5: QC of the first `germany` drafting run (`run batch-<n> (germany)`, the task this requires). Drafted-run QC shape, `authoring/QC.md` steps 1–4 without waits (`decision 414: Human reviews don''t gate question generation or translation`); same as `task 1691: QC batch-16 (colombia)`. Owner: `plans/15c-regional-questions.md`.
 
 ## First: answered review decisions of earlier germany batches
 - `pm decision list --answered --grep batch-<n>` for every earlier `germany` batch not yet acted on (spot checks, QC proposals, health). Not yet acted on → change tasks in their plans at their priority, lines in the report. Unanswered ones stay open; nothing waits.
@@ -43672,7 +43672,7 @@ Done when: QC steps done, decisions raised (not linked), rework staged, next pai
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148, 171 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Health ✗ (in the output, the report or `qgen health`): `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health ✗, look at it?"` with the warning verbatim (`plan 190: Reviews don''t gate generation`; also finds the older "<run>: health stop, ack?"), no task linked (no `pm task-pending-decision`); the task goes on. Never `qgen health ack` (the developer''s).
-- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-29T03:47:24Z', NULL, 1269, 0, NULL, 'questions');
+- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.', '2026-10-29T03:47:24Z', '2026-10-29T11:13:53Z', 1269, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1789, 84, 'run batch-<n> (uk)', 'work', 'open', -110, NULL, 'Plan 84 chain 5, first drafting run of the regional bundle `uk` (en, British English; `decision 110: Regional packs at launch (RG-5, OQ-46)`), added by `task 1270: Regional runs `uk`: start`. Owner: `plans/15c-regional-questions.md`.
 
 ## Run
@@ -43885,6 +43885,58 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - D-36: no prompt, pool, media or `qgen.py` changes. Stage the printed `git add` paths; don''t commit.
 - Health ✗: `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health ✗, look at it?"`, no task link. Never `qgen health ack`.
 - Exit 75, other non-zero, or exit 1 three times at one step → decision + `pm task-pending-decision`, stage nothing, stop.', '2026-10-29T07:20:34Z', NULL, 1786, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1803, 84, 'run batch-<n> (germany)', 'work', 'open', NULL, NULL, 'note: 2026-10-29, Done: batch-28: 367 merged, 343 approved, 24 needs work (took 43m08s); claude: 216 calls, opus 216, 588 turns, $16.59 (earlier resumed calls: $39.89 before the final resume); report authoring/reports/batch-28.md; health ✗ raised as decision 472; task/QC subjects couldn''t be renamed while running (QC 1788 still says batch-<n>, run is batch-28)
+Plan 84 chain 5, further drafting run (after batch-28) of the regional bundle `germany` (de, German; `decision 110: Regional packs at launch (RG-5, OQ-46)`), added by `task 1269: Regional runs germany: start`. Owner: `plans/15c-regional-questions.md`.
+
+## Run
+- `nix develop -c qgen batch --bundle germany` (`authoring/RUNBOOK.md` steps 1–5; German, `bundles.json` `rule`/`voice`). No other pipeline steps by hand.
+- Run name: whatever `qgen` prints (`batch-<max+1>`). After the run rename this task and its QC task (`pm task set <id> --subject "run batch-<n> (germany)"`, QC the same) and replace `batch-<n>` in the QC body.
+- Note on done: the "Done:" line, the report path, the health result (✗ reported and raised per the rules below, not a stop).
+
+Done when its report exists, the printed paths are staged, note as above.
+
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run", `decision 414: Human reviews don''t gate question generation or translation`)
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148, 171 or new).
+- `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
+- Health ✗ (in the output, the report or `qgen health`): `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health ✗, look at it?"` with the warning verbatim (`plan 190: Reviews don''t gate generation`; also finds the older "<run>: health stop, ack?"), no task linked (no `pm task-pending-decision`); the task goes on. Never `qgen health ack` (the developer''s).
+- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
+
+Required by:
+  task 1788 [open] QC batch-28 (germany)
+
+
+Runs:
+  run 1948, 2026-10-29 07:20, 3h43m, done, 11 turns, 0.63M tokens, $0.27, work tree questions', '2026-10-29T11:13:53Z', NULL, 1788, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1804, 84, 'QC batch-<n> (germany)', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: QC of the `germany` drafting run (`run batch-<n> (germany)`, the task this requires). Drafted-run QC shape, `authoring/QC.md` steps 1–4 without waits (`decision 414: Human reviews don''t gate question generation or translation`); same as `task 1691: QC batch-16 (colombia)`. Owner: `plans/15c-regional-questions.md`.
+
+## First: answered review decisions of earlier germany batches
+- `pm decision list --answered --grep batch-<n>` for every earlier `germany` batch not yet acted on (spot checks, QC proposals, health). Not yet acted on → change tasks in their plans at their priority, lines in the report. Unanswered ones stay open; nothing waits.
+
+## QC
+- Spot check: `pm decision add "Spot check batch-<n> done?"` (native speaker of German; link `http://127.0.0.1:8001/review?batch=batch-<n>&sample=1`, `trivia-authoring`); never answered by an LLM; raised, not waited on (no `pm task-pending-decision`).
+- `qgen report --qc batch-<n>` with the spot checks recorded so far. Proposals (≥ 2 disagreements per problem kind, ≥ 2 major audit findings, any fact false approve) → `pm decision add "QC batch-<n>: which changes?"`, raised, not waited on; its recommended option names the change tasks the next QC task adds once answered. None → `qgen report --qc batch-<n> --changes none`.
+- Decision 3: `qgen rework --batch batch-<n>` once; stage the paths it prints.
+- Note `qgen report --cost` per bundle ($ per approved, information only; no budget, no gates, no pace question).
+
+## Then, first that applies (without waiting for any answer)
+1. `qgen report --bundle germany` shows 2000 approved (de) → add the first en run `run tr-en-<n> (germany)` (`qgen batch --translate en --bundle germany`; translation run shape: one task, no QC, no spot check, no `qgen health ack`; needs plan 98''s `--translate en` from de done, else `pm task requires` on it). Each en run notes its numbers and adds the next until `qgen report --bundle germany --locale en` shows 2000 approved en; then `plans/15c-regional-questions.md` notes germany done.
+2. Else the next pair: `run batch-<n> (germany)` (`qgen batch --bundle germany`, German) + `QC batch-<n> (germany)` (requires the run), same bodies as this task and its run task, next batch number from `qgen`.
+- One open pair (or en run) per language of the bundle.
+
+Done when: QC steps done, decisions raised (not linked), rework staged, next pair or en run added; note with the QC numbers (approved, rejected, needs_work, agreement, $ per approved).
+
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run", `decision 414: Human reviews don''t gate question generation or translation`)
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148, 171 or new).
+- `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
+- Health ✗ (in the output, the report or `qgen health`): `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health ✗, look at it?"` with the warning verbatim (`plan 190: Reviews don''t gate generation`; also finds the older "<run>: health stop, ack?"), no task linked (no `pm task-pending-decision`); the task goes on. Never `qgen health ack` (the developer''s).
+- Exit 75, any other non-zero code, or exit 1 three times at one step → real failure: `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
+
+Requires (runs once they are done):
+  task 1787 [done] run batch-<n> (germany)
+
+
+Runs:
+  run 1949, 2026-10-29 11:04, 9m23s, running, continues run 1948, work tree questions', '2026-10-29T11:13:53Z', NULL, 1788, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -50115,6 +50167,7 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
 | $ per approved | ≤ $0.35 | $0.38 ✗ | $0.26 ✓ | $0.26 ✓ | Health ✗ for batch-27 (usa), report authoring/reports/batch-27.md.', 'A batch of new US-flavoured trivia questions finished, but several of its quality measures fell outside the limits we set, for example how many drafts were dropped and how much the questions overlapped. Nothing is blocked by this; it only asks whether you want to look at the batch more closely.', NULL, NULL, '2026-10-29T07:13:05Z', NULL, 1785, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (471, 'Spot check batch-27 done?', 'pending', '["Done, results recorded", "Later"]', 'Review link: http://127.0.0.1:8001/review?batch=batch-27&sample=1 (run trivia-authoring). A native speaker of US English, not an LLM.', 'A new set of US-flavoured trivia questions has been generated. A person who speaks American English natively should look at a small sample of them and say whether the questions read naturally and are correct. Nothing else waits on this; the result only feeds the next quality review.', NULL, NULL, '2026-10-29T07:13:30Z', NULL, 1786, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (472, 'batch-28: health ✗, look at it?', 'pending', '["Looked at it, carry on", "Change something first"]', 'warning: batch-27 fails the batch health thresholds: max final−target gap 11–15. batch-28 report (authoring/reports/batch-28.md): drop rate 20.6 % ✗ (limit 20.0 %), health ✗ fail for batch-28, batch-27 and batch-26 (max final−target gap 1.71 and 2.14 ✗, limit 1.50).', 'A batch of German regional quiz questions was just written, and its quality checks show some numbers outside the agreed limits, such as too many drafts dropped. Nothing is blocked; this only asks whether you want to look at the batch. Acknowledging it records that you looked.', NULL, NULL, '2026-10-29T11:04:08Z', NULL, 1787, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (473, 'Spot check batch-28 done?', 'pending', '["done"]', 'Native German speaker. Open http://127.0.0.1:8001/review?batch=batch-28&sample=1 (run trivia-authoring), 30 questions, ~10–15 min. Audit (60 of 60): 0 major findings among 56 approved, 97 % audit/review agreement; qgen report --qc batch-28 can''t be written until the check is recorded.', 'A new batch of German regional quiz questions has been written and checked by an automatic reviewer. A native German speaker should look at a sample of 30 of them blind, to see whether they agree with the automatic reviewer. Nothing waits for this; the answer is acted on by the next quality check.', NULL, NULL, '2026-10-29T11:05:18Z', NULL, 1788, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, NULL, NULL, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, NULL, NULL, 73367);
@@ -52119,6 +52172,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1946, 1785, '2026-10-29T04:34:52Z', '2026-10-29T07:13:14Z', 'done', NULL, 0, '9ad0ece7c48b013dbdb1aeb5ef8d02de9f4f504a', 'questions', 'claude-sonnet-5-5', '804733bb-6d1f-486f-83af-b383b7258705', 1945, 7, 16, 1807, 520053, 20026, 0.4089156, 79802, 60, 7562);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1947, 1786, '2026-10-29T07:13:19Z', '2026-10-29T07:20:43Z', 'done', NULL, 0, '5192dc93c0c78e03712144832afe0c9ed054592a', 'questions', 'claude-sonnet-5-5', '804733bb-6d1f-486f-83af-b383b7258705', 1946, 11, 24, 4680, 1115725, 33050, 0.6995361, 112897, 60, 7562);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1948, 1787, '2026-10-29T07:20:44Z', '2026-10-29T11:04:18Z', 'done', NULL, 0, '7aa7e24ececa5ac98680167605e949018dbc0a42', 'questions', 'claude-sonnet-5-5', 'e05660ca-47c6-4dba-8bd6-3c3c5d795dda', NULL, 11, 22, 2439, 579207, 47115, 0.2708147, 61850, 60, 7562);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1949, 1788, '2026-10-29T11:04:26Z', '2026-10-29T11:13:58Z', 'done', NULL, 0, 'e6b6a75aef52bc98c97e3ded27bac8e364a19b12', 'questions', 'claude-sonnet-5-5', 'e05660ca-47c6-4dba-8bd6-3c3c5d795dda', 1948, 8, 18, 2853, 675645, 32043, 0.4951172, 93982, 60, 7562);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -52886,6 +52940,8 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1799, 175
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1800, 1780);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1801, 1786);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1802, 1801);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1803, 1788);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1804, 1803);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
