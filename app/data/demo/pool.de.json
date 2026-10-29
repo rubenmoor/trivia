@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "f3f775db",
+  "hash": "37cfeb97",
   "questions": [
     {
       "id": "q-0016",
@@ -3365,6 +3365,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Pentachlorphenol",
         "author_url": "https://commons.wikimedia.org/wiki/User:Pentachlorphenol"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1254",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "childrens-songs",
+      "bundle": "base",
+      "description": "Ein Lied, das gute Laune in Sport verwandelt.",
+      "question": "Man macht es mit beiden Händen, es ist laut, und das Kinderlied „Wenn du glücklich bist, dann …“ fordert dazu auf. Was ist es?",
+      "answer": "Klatschen",
+      "wrong_answers": [
+        "Winken",
+        "Pfeifen",
+        "Hüpfen"
+      ],
+      "hints": [
+        "Das Publikum macht es am Ende einer Show.",
+        "Die Handflächen treffen aufeinander.",
+        "Beim Applaus hört man genau das."
+      ],
+      "fun_fact": "Das Lied wird weltweit gesungen, auf Englisch heißt es „If You're Happy and You Know It“, und woher es ursprünglich stammt, ist bis heute umstritten.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Happy_group_of_children_playing_race.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHappy_group_of_children_playing_race.jpg",
+        "credit": "Jackson Elizabeth, U.S. Fish and Wildlife Service · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jackson Elizabeth, U.S. Fish and Wildlife Service",
+        "author_url": null
       },
       "background": null
     },
