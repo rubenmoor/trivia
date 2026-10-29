@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "9c46c1d0",
+  "hash": "f3f775db",
   "questions": [
     {
       "id": "q-0016",
@@ -139,6 +139,40 @@
       "background": null
     },
     {
+      "id": "q-0040",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "science",
+      "bundle": "base",
+      "description": "Vorsicht, diese Frage ist kochend heiß!",
+      "question": "Bei welcher Temperatur kocht Wasser auf Meereshöhe?",
+      "answer": "100 °C",
+      "wrong_answers": [
+        "50 °C",
+        "0 °C",
+        "200 °C"
+      ],
+      "hints": [
+        "Viel heißer als ein sonniger Sommertag.",
+        "Bei 0 °C gefriert Wasser.",
+        "Es ist eine runde Zahl mit drei Ziffern."
+      ],
+      "fun_fact": "In Bogotá, das sehr hoch in den Anden liegt, kocht Wasser schon bei etwa 91 °C.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Boiling_water.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoiling_water.jpg",
+        "credit": "GRAN · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "GRAN",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-0045",
       "status": "approved",
       "difficulty": 6,
@@ -271,6 +305,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Anna Hanks from Austin, Texas, USA",
         "author_url": "https://www.flickr.com/people/23349893@N08"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0063",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "world-cups",
+      "bundle": "base",
+      "description": "Eine Frage, bei der du beim Nachdenken ruhig die Hüften schwingen darfst.",
+      "question": "Welche kolumbianische Sängerin sang „Waka Waka“ zur Fußball-WM 2010?",
+      "answer": "Shakira",
+      "wrong_answers": [
+        "Karol G",
+        "Greeicy",
+        "Fanny Lu"
+      ],
+      "hints": [
+        "Sie singt schon seit ihrer Kindheit und ist heute weltberühmt.",
+        "Sie ist berühmt dafür, wie sie tanzt.",
+        "Sie stammt aus Barranquilla."
+      ],
+      "fun_fact": "„Waka Waka“ ist eines der meistgesehenen Musikvideos in der Geschichte von YouTube.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/FNB_Stadium_and_mooifontein_Arrial_View_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFNB_Stadium_and_mooifontein_Arrial_View_-_panoramio.jpg",
+        "credit": "fading · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "fading",
+        "author_url": "https://web.archive.org/web/20161021055257/http://www.panoramio.com/user/5397823?with_photo_id=66317669"
       },
       "background": null
     },
@@ -509,6 +577,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Obsidian Soul",
         "author_url": "https://commons.wikimedia.org/wiki/User:Obsidian_Soul"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0098",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "inventions",
+      "bundle": "base",
+      "description": "Eine Idee, so gut, dass sie sogar wie eine aussieht.",
+      "question": "Welche Erfindung macht unser Zuhause nachts hell?",
+      "answer": "Glühbirne",
+      "wrong_answers": [
+        "Rad",
+        "Uhr",
+        "Spiegel"
+      ],
+      "hints": [
+        "Funktioniert mit Strom.",
+        "Steckt oben an der Decke oder in einer Lampe.",
+        "Thomas Edison machte diese Erfindung so haltbar, dass jeder Haushalt sie nutzen konnte."
+      ],
+      "fun_fact": "Heute nimmt man meist LED-Lampen, die viel weniger Strom verbrauchen.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Price_Building_illuminated_at_night_in_Quebec_City.jpg/3840px-Price_Building_illuminated_at_night_in_Quebec_City.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APrice_Building_illuminated_at_night_in_Quebec_City.jpg",
+        "credit": "Wilfredor · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Wilfredor",
+        "author_url": "https://www.wikidata.org/wiki/Q115464159"
       },
       "background": null
     },
@@ -1087,6 +1189,108 @@
         "license_url": null,
         "author": "Didier Descouens",
         "author_url": "https://commons.wikimedia.org/wiki/User:Archaeodontosaurus"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0271",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "anime",
+      "bundle": "base",
+      "description": "Japan hat uns Autos, Videospiele und auch Wörter geschickt, die kleben bleiben wie Kaugummi.",
+      "question": "Was bedeutet das japanische Wort „kawaii“?",
+      "answer": "Niedlich oder goldig",
+      "wrong_answers": [
+        "Schnell oder flink",
+        "Lecker oder köstlich",
+        "Mutig oder stark"
+      ],
+      "hints": [
+        "Durch japanische Mode und Zeichentrickfilme wurde es auf der ganzen Welt bekannt.",
+        "Das sagen viele, wenn sie ein Katzenbaby sehen.",
+        "Hello Kitty ist das perfekte Beispiel für dieses Wort."
+      ],
+      "fun_fact": "Hello Kitty wird ohne Mund gezeichnet und ist trotzdem eine der berühmtesten Figuren der Welt.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg/3840px-Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg",
+        "credit": "Benh LIEU SONG (Flickr) · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Benh LIEU SONG (Flickr)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Benh"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0283",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "pharaohs",
+      "bundle": "base",
+      "description": "Lange vor den Emojis verschickten die Ägypter schon Nachrichten mit Vögeln, Augen und Männchen.",
+      "question": "Wie heißt die Schrift der alten Ägypter?",
+      "answer": "Hieroglyphen",
+      "wrong_answers": [
+        "Runen",
+        "Keilschrift",
+        "Kanji"
+      ],
+      "hints": [
+        "Man meißelte sie in Tempel und Gräber und malte sie auch auf Papyrus.",
+        "Jahrhundertelang konnte niemand sie lesen, bis man den Stein von Rosette fand.",
+        "Wer unleserlich schreibt, hört oft, seine Schrift sehe aus wie … genau diese Zeichen."
+      ],
+      "fun_fact": "Der Franzose Jean-François Champollion entzifferte die Hieroglyphen im Jahr 1822 mithilfe des Steins von Rosette.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Sarcophagus_of_Ankhnesneferibre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASarcophagus_of_Ankhnesneferibre.jpg",
+        "credit": "Hans Hillewaert · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Hans Hillewaert",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-0287",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "winter-olympics",
+      "bundle": "base",
+      "description": "Eine olympische Medaille gibt es hier nur für alle, die auf dem Eis keine kalten Füße bekommen.",
+      "question": "Sieh dir das Foto an: Welche olympische Wintersportart ist hier zu sehen?",
+      "answer": "Curling",
+      "wrong_answers": [
+        "Eishockey",
+        "Eisschnelllauf",
+        "Eiskunstlauf"
+      ],
+      "hints": [
+        "Diese Sportart entstand vor Jahrhunderten in Schottland.",
+        "Ein schwerer Stein wird geworfen und gleitet über das Eis auf ein Ziel aus Kreisen zu.",
+        "Die Mitspieler wischen mit Besen vor dem Stein über das Eis, um ihn zu lenken."
+      ],
+      "fun_fact": "Fast alle olympischen Curlingsteine bestehen aus Granit von einer einzigen kleinen schottischen Insel namens Ailsa Craig.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/12-01-20-yog-674.jpg/3840px-12-01-20-yog-674.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A12-01-20-yog-674.jpg",
+        "credit": "Ralf Roletschek · CC BY-SA 3.0 at · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 at",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+        "author": "Ralf Roletschek",
+        "author_url": "https://www.wikidata.org/wiki/Q15080600"
       },
       "background": null
     },
@@ -2043,6 +2247,40 @@
       "background": null
     },
     {
+      "id": "q-0670",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "Der einzige Partygast, den alle hauen wollen – und er freut sich auch noch darüber.",
+      "question": "Ich hänge auf Geburtstagsfeiern, und Kinder schlagen mit verbundenen Augen mit einem Stock auf mich ein. Was fällt heraus, wenn ich kaputtgehe?",
+      "answer": "Süßigkeiten und Spielzeug",
+      "wrong_answers": [
+        "Sand und Steine",
+        "Wasser und Seife",
+        "Blätter und Zweige"
+      ],
+      "hints": [
+        "Alle Kinder lieben das, was herausfällt.",
+        "Alle werfen sich auf den Boden, um es schnell aufzusammeln.",
+        "Da sind Bonbons, Pralinen und Schokolade dabei."
+      ],
+      "fun_fact": "In Mexiko hat die traditionelle Piñata die Form eines Sterns mit sieben Zacken.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Birthday_party_decoration.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABirthday_party_decoration.jpg",
+        "credit": "Abinayasekar357 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Abinayasekar357",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Abinayasekar357&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-0693",
       "status": "approved",
       "difficulty": 7,
@@ -2073,6 +2311,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Ocdp",
         "author_url": "https://commons.wikimedia.org/wiki/User:Ocdp"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0709",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "fairy-tales",
+      "bundle": "base",
+      "description": "Eine Prinzessin spielt am Brunnen und jammert danach über die Folgen.",
+      "question": "Eine Prinzessin spielt an einem Brunnen, ihre Kugel fällt ins Wasser, und ein Frosch holt sie für ihre Freundschaft heraus. Woraus ist die Kugel?",
+      "answer": "Aus Gold",
+      "wrong_answers": [
+        "Aus Glas",
+        "Aus Holz",
+        "Aus Silber"
+      ],
+      "hints": [
+        "Ein Spielzeug, das einer Prinzessin würdig ist.",
+        "Sie glänzt sehr, wie eine Krone.",
+        "Aus diesem Material ist die Medaille für den ersten Platz."
+      ],
+      "fun_fact": "In der Fassung der Brüder Grimm wird der Zauber nicht durch einen Kuss gebrochen: Die wütende Prinzessin wirft den Frosch an die Wand.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/MYLF_Frog_%285794436732%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMYLF_Frog_%285794436732%29.jpg",
+        "credit": "Pacific Southwest Region 5 · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Pacific Southwest Region 5",
+        "author_url": "https://www.flickr.com/people/39108150@N05"
       },
       "background": null
     },
@@ -3097,6 +3369,40 @@
       "background": null
     },
     {
+      "id": "q-1261",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "castles",
+      "bundle": "base",
+      "description": "Eine japanische Burg mit Vogel-Spitznamen, so wie Fußballer, die man nach Tieren benennt.",
+      "question": "Du stehst in Matsumoto in Japan vor einer der ältesten Burgen des Landes. Welcher Vogel gibt ihr ihren Spitznamen?",
+      "answer": "Krähe",
+      "wrong_answers": [
+        "Reiher",
+        "Kranich",
+        "Adler"
+      ],
+      "hints": [
+        "Der Spitzname kommt von der Farbe ihrer Mauern.",
+        "Die ganz weiße Burg Himeji trägt den Spitznamen eines weißen Vogels: des Reihers.",
+        "Ein schwarzer, schlauer Vogel, der in japanischen Städten Nüsse auf die Straße legt, damit Autos sie knacken."
+      ],
+      "fun_fact": "Die Burg Matsumoto hat ihren originalen Hauptturm aus Holz seit über 400 Jahren bewahrt, was in Japan äußerst selten ist.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Osaka_Castle_Outer_Moat_and_Osaka_Business_Park%2C_November_2016.jpg/3840px-Osaka_Castle_Outer_Moat_and_Osaka_Business_Park%2C_November_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOsaka_Castle_Outer_Moat_and_Osaka_Business_Park%2C_November_2016.jpg",
+        "credit": "Martin Falbisoner · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Martin Falbisoner",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-1292",
       "status": "approved",
       "difficulty": 11,
@@ -3127,6 +3433,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Quantum Information Retrieval",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Quantum_Information_Retrieval&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1312",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "body-oddities",
+      "bundle": "base",
+      "description": "Dieses Blut ist so exklusiv, dass es niemanden zum Teilen findet.",
+      "question": "Man nennt mich „goldenes Blut“, und nur ein paar Dutzend Menschen weltweit haben mich. Welche Blutgruppe bin ich?",
+      "answer": "Rh-null",
+      "wrong_answers": [
+        "AB negativ",
+        "Bombay-Phänotyp",
+        "0 negativ"
+      ],
+      "hints": [
+        "Ich bin keine der acht häufigen Blutgruppen (A, B, AB und 0, jeweils positiv oder negativ).",
+        "Meinen roten Blutkörperchen fehlen alle Antigene eines sehr bekannten Systems.",
+        "Genau dieses System entscheidet, ob Blut „positiv“ oder „negativ“ ist."
+      ],
+      "fun_fact": "Menschen mit Rh-null-Blut können vielen Menschen mit seltenen Rh-Typen Blut spenden, selbst aber nur Rh-null-Blut empfangen.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Antonio_e_Biagio_e_Cesare_Arrigo_Blood_bags.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAntonio_e_Biagio_e_Cesare_Arrigo_Blood_bags.jpg",
+        "credit": "CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ufficio Comunicazione, Azienda Ospedaliera SS. Antonio e Biagio e Cesare Arrigo, Alessandria, Biblioteca Biomedica Centro di Documentazione",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PescediBabele"
       },
       "background": null
     },
@@ -3675,6 +4015,40 @@
       "background": null
     },
     {
+      "id": "q-1732",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "big-questions",
+      "bundle": "base",
+      "description": "Das Schulfach, das wissen will, ob man das letzte Stück Kuchen heimlich essen darf.",
+      "question": "Sie untersucht, was richtig und was falsch ist, fragt, wie wir uns verhalten sollen, und ist an vielen Schulen ein Fach. Was ist gemeint?",
+      "answer": "Ethik",
+      "wrong_answers": [
+        "Ästhetik",
+        "Logik",
+        "Grammatik"
+      ],
+      "hints": [
+        "Sie ist ein Teilgebiet der Philosophie.",
+        "Sie beschäftigt sich mit Werten wie Ehrlichkeit und Gerechtigkeit.",
+        "Wer schummelt, handelt nicht besonders …"
+      ],
+      "fun_fact": "Das Wort kommt vom griechischen „ēthos“, was „Gewohnheit“ oder „Charakter“ bedeutet.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/A_public_school%2C_high_school_classroom_in_the_United_States_01.jpg/3840px-A_public_school%2C_high_school_classroom_in_the_United_States_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_public_school%2C_high_school_classroom_in_the_United_States_01.jpg",
+        "credit": "Harrison Keely · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Harrison Keely",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Hkeely"
+      },
+      "background": null
+    },
+    {
       "id": "q-1772",
       "status": "approved",
       "difficulty": 7,
@@ -4049,6 +4423,40 @@
       "background": null
     },
     {
+      "id": "q-2344",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Schuhe, in denen man den ganzen Abend auf Zehenspitzen steht, und zwar mit Absicht.",
+      "question": "Wo sieht man Tänzerinnen und Tänzer mit solchen Schuhen?",
+      "answer": "Auf der Ballettbühne",
+      "wrong_answers": [
+        "Auf dem Fußballplatz",
+        "Im Schwimmbad",
+        "Auf der Skipiste"
+      ],
+      "hints": [
+        "Diese Schuhe sind aus glänzendem rosa Satin und haben lange Bänder.",
+        "Die Tänzerinnen drehen sich und stehen ganz vorne auf den Zehenspitzen.",
+        "Denk an „Schwanensee“."
+      ],
+      "fun_fact": "Eine Profi-Balletttänzerin kann ein Paar Spitzenschuhe in einer einzigen Vorstellung abnutzen.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Pointe_shoes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APointe_shoes.jpg",
+        "credit": "Keitei · CC BY 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "author": "Keitei",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Keitei&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-2386",
       "status": "approved",
       "difficulty": 15,
@@ -4113,6 +4521,40 @@
         "license_url": null,
         "author": "U.S. Air Force photo by Airman 1st Class Regan Enriquez",
         "author_url": "https://www.dvidshub.net/portfolio/1734692"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2702",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "famous-bridges",
+      "bundle": "base",
+      "description": "Der Stoff, aus dem Holzbrücken, Bleistifte und Küchentische gemacht sind.",
+      "question": "Wolle kommt vom Schaf. Holz kommt vom …",
+      "answer": "Baum",
+      "wrong_answers": [
+        "Stein",
+        "Mond",
+        "Fisch"
+      ],
+      "hints": [
+        "Er wächst im Wald.",
+        "Er hat Blätter und Äste.",
+        "Eichhörnchen klettern an ihm hoch."
+      ],
+      "fun_fact": "Die Kapellbrücke in Luzern in der Schweiz wurde erstmals im 14. Jahrhundert gebaut und ist eine der ältesten überdachten Holzbrücken Europas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Yarn_ball.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AYarn_ball.jpg",
+        "credit": "Lori from New York, NY, United States · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Lori from New York, NY, United States",
+        "author_url": "https://www.flickr.com/photos/74405061@N00"
       },
       "background": null
     },

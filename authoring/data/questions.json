@@ -30472,7 +30472,8 @@
         "answer_kind": "thing",
         "lens": "colombia"
       },
-      "concept": "Cocada"
+      "concept": "Cocada",
+      "translatable": false
     },
     {
       "id": "q-0398",
