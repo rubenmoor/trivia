@@ -43479,7 +43479,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 * check pending decisions if they are still relevant and really pending
 * check other milestones if their contents are up-to-date and update them if necessary
 * review the code files the milestone added or changed (`git diff` since its first commit) per milestone 13''s "What to look for": rows appended to `code-review.md`, small fixes in place, larger ones as tasks (decision 201)', '2026-10-24T13:14:51Z', '2026-10-24T13:15:57Z', NULL, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1759, 84, 'run tr-en-3', 'work', 'open', -110, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-en-3`, up to 300 approved `base` sources of either source locale ≠ `en` into English (es → en). Translation run shape: one task, no QC task; this task adds the next run.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1759, 84, 'run tr-en-3', 'work', 'done', -110, '2026-10-29, stopped at validate; fix: task 1796, resume: task 1797; claude: 679 calls, $30.65 (first attempt); reruns exit 1 at step 11/11 validate ×3: q-0397 en translation of untranslatable source', 'Plan 84 chain 3, full translation (QT-6): run `tr-en-3`, up to 300 approved `base` sources of either source locale ≠ `en` into English (es → en). Translation run shape: one task, no QC task; this task adds the next run.
 
 ## Before running
 - Plan 17''s exit check done; if not, wait for what blocks plan 17''s earliest open task: a pending decision → `pm task-pending-decision <this task> <id>`; a prerequisite task → `pm task requires <this task> <id>`; stop. Never wait on a review (decision 414).
@@ -43496,7 +43496,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## pm-run rules
 - D-36: no prompt, pool, media or `qgen.py` changes. `tasks.sql` alone isn''t a dirty tree. Stage exactly the printed `git add` paths; don''t commit.
-- Exit 75, other non-zero code, or exit 1 three times at one step: `pm decision add "Continue tr-en-3 …?"` with the last 30 lines, `pm task-pending-decision`, stage nothing, stop.', '2026-10-24T13:15:41Z', NULL, 639, 0, NULL, 'questions');
+- Exit 75, other non-zero code, or exit 1 three times at one step: `pm decision add "Continue tr-en-3 …?"` with the last 30 lines, `pm task-pending-decision`, stage nothing, stop.', '2026-10-24T13:15:41Z', '2026-10-29T03:51:42Z', 639, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1760, 84, 'Fix qgen translate: q-6678 es-ES translation rejected as duplicate options', 'work', 'done', 0, '2026-10-24, authoring/tools/qgen.py: option_key keeps a leading minus (cause: translation dropping °F made ''-100 °C'' = ''100 °C''); resume check left to task 1761', '`qgen batch --translate es-ES` (run `tr-es-ES-3`) fails 3 times in a row at step `translate`, chunk `science-en-1`:
 
     FAILED translate science-en-1: malformed translation: q-6678: duplicate options
@@ -43812,6 +43812,15 @@ Runs:
   run 1868, 2026-10-23 17:45, 0m23s, blocked, 6 turns, 0.66M tokens, $0.84, continues run 1867, work tree questions
   run 1902, 2026-10-24 13:15, 53m49s, blocked, 7 turns, 0.58M tokens, $0.54, continues run 1901, work tree questions: left 5 files unstaged, stashed as 0b5c4d6b for the task''s next run
   run 1939, 2026-10-29 03:48, 0m55s, running, continues run 1938, work tree questions', '2026-10-29T03:49:41Z', NULL, 1731, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1796, 84, 'Fix qgen validate: reject existing translations of already-untranslatable sources (en q-0397)', 'work', 'done', 0, '2026-10-29, authoring/tools/review_steps.py (record_translations rejects translations of every rejected/untranslatable source), q-0397 en rejected in questions.en.json, pool.en.json re-exported; qgen validate OK', 'Found by `task 1759: run tr-en-3`: `qgen batch --translate en` exits 1 at step 11/11 validate, three times, same line:
+`authoring/data/questions.en.json: q-0397: source is rejected or translatable: false; reject the translation`
+
+Diagnosis (read-only): `task 1784: qgen: reject translations of a source marked translatable: false` added `translations.reject_for_sources` but calls it only from `record_translations` for sources newly confirmed untranslatable in that run. Source `q-0397` (batch-4) was already `translatable: false`, and its approved en translation (batch `tr-en-2`) stayed. 1784''s "one-off pass over current data" did not clear it.
+
+What: make qgen reject every existing non-rejected translation, in every locale, whose source is rejected or `translatable: false` (e.g. `translations.reject_for_sources` over all such ids, called from `cmd_translate`/export before validate, or a one-off pass); test in `authoring/tools/test_translations.py`.
+Done when: `qgen validate` passes on the current data; `task 1759` can resume with plain `qgen batch --translate en`.', '2026-10-29T03:51:38Z', '2026-10-29T03:52:35Z', 1759, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1797, 84, 'Finish tr-en-3 after task 1796: Fix qgen validate: reject existing translations of already-untranslatable sources', 'work', 'open', -99, NULL, 'Follow `authoring/RUNBOOK.md` (pm run section); plain `nix develop -c qgen batch --translate en` resumes `tr-en-3` (translation work finished earlier: 679 calls, $30.65). Then the "After the run" steps of `task 1759: run tr-en-3` (note, 15b QT-6 progress line for en, next run `run tr-en-4` unless en meets target; health ✗ decision if any; never `qgen health ack`).
+Earlier worker left a stash with the run''s data (`git stash list`, f8ef637e); apply it, but take `app/data/pool.es-ES.json` from HEAD (it conflicts and is regenerated by export).', '2026-10-29T03:51:42Z', NULL, 1759, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -50021,6 +50030,16 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
      M authoring/data/questions.en.json
 
 Look: `git show pm/task-1731-run-1939-left`. Keep: `git merge pm/task-1731-run-1939-left`. Then `git branch -D pm/task-1731-run-1939-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', NULL, NULL, '2026-10-29T03:49:48Z', NULL, NULL, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (469, 'Task 1759 left unstaged changes after `pm task done`: investigate', 'pending', '[]', 'Run 1941 of task 1759 closed the task but left 6 files unstaged. pm committed them on the branch `pm/task-1759-run-1941-left` and cleaned the tree.
+
+     M app/data/demo/pool.en.json
+     M app/data/pool.en.json
+     M app/data/pool.es-ES.json
+     M authoring/data/questions.en.json
+     M authoring/data/questions.es-ES.json
+     M authoring/data/questions.json
+
+Look: `git show pm/task-1759-run-1941-left`. Keep: `git merge pm/task-1759-run-1941-left`. Then `git branch -D pm/task-1759-run-1941-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', NULL, NULL, '2026-10-29T03:51:48Z', NULL, NULL, NULL, 'once', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, NULL, NULL, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, NULL, NULL, 73367);
@@ -52016,6 +52035,9 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1937, 1271, '2026-10-29T03:47:56Z', '2026-10-29T03:48:16Z', 'done', NULL, 0, 'bf1c37c10e9c5f7b2435c5a58d85a79365a5c869', 'questions', 'claude-sonnet-5-5', 'dd278b74-8abc-44ff-b022-c28e7ad1da4d', 1936, 6, 14, 1597, 479683, 18776, 0.4036227, 84229, 60, 7562);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1938, 1272, '2026-10-29T03:48:16Z', '2026-10-29T03:48:46Z', 'done', NULL, 0, 'bf1c37c10e9c5f7b2435c5a58d85a79365a5c869', 'questions', 'claude-sonnet-5-5', '637944d7-58d4-4ded-a4bb-995873e24bc6', NULL, 7, 14, 2884, 365078, 49308, 0.2626078, 64019, 60, 7562);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1939, 1731, '2026-10-29T03:48:46Z', '2026-10-29T03:49:48Z', 'done', 'left 2 files unstaged, committed on branch pm/task-1731-run-1939-left; decision 468: investigate', 0, 'bf1c37c10e9c5f7b2435c5a58d85a79365a5c869', 'questions', 'claude-sonnet-5-5', '637944d7-58d4-4ded-a4bb-995873e24bc6', 1938, 8, 18, 2782, 649359, 24679, 0.4541157, 88759, 60, 7562);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1940, 1755, '2026-10-29T03:49:49Z', '2026-10-29T03:50:11Z', 'blocked', NULL, 0, '1ecda65f2c26a25b54e9d3571077e9a9452e1e94', 'questions', 'claude-sonnet-5-5', '4f0d78f6-aa6c-47d0-81fe-780c127b782f', NULL, 8, 18, 1133, 377631, 40299, 0.21032510000000002, 54754, 60, 7562);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1941, 1759, '2026-10-29T03:50:11Z', '2026-10-29T03:51:47Z', 'done', 'left 6 files unstaged, committed on branch pm/task-1759-run-1941-left; decision 469: investigate', 0, '1ecda65f2c26a25b54e9d3571077e9a9452e1e94', 'questions', 'claude-sonnet-5-5', 'aa7757c7-b705-407a-849b-930c41460050', NULL, 13, 26, 4495, 691861, 47821, 0.3054721, 62695, 60, 7562);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1942, 1796, '2026-10-29T03:51:49Z', '2026-10-29T03:52:39Z', 'done', NULL, 0, '1ecda65f2c26a25b54e9d3571077e9a9452e1e94', 'questions', 'claude-sonnet-5-5', 'aa7757c7-b705-407a-849b-930c41460050', 1941, 8, 18, 2060, 627020, 21062, 0.47305810000000004, 83510, 60, 7562);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -52750,6 +52772,7 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1747, 174
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1749, 1748);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1751, 1750);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1753, 1752);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1755, 1759);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1757, 1726);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1759, 1784);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1761, 1760);
@@ -52777,6 +52800,7 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1788, 178
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1790, 1789);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1792, 1791);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1794, 1793);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1797, 1796);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');

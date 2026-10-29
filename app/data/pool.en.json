@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "4a106323",
+  "hash": "252f3f25",
   "questions": [
     {
       "id": "q-0016",
@@ -2549,40 +2549,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "KeepActive Australia from Melbourne, VIC, Australia",
         "author_url": "https://keepactive.com.au/"
-      },
-      "background": null
-    },
-    {
-      "id": "q-0397",
-      "status": "approved",
-      "difficulty": 8,
-      "subcategory": "world-cuisines",
-      "bundle": "base",
-      "description": "A sweet so sticky it keeps your teeth glued together until the next day.",
-      "question": "Look at the photo: what is this typical sweet from the Colombian coast called?",
-      "answer": "Cocadas",
-      "wrong_answers": [
-        "Panelitas",
-        "Alfandoques",
-        "Bocadillos"
-      ],
-      "hints": [
-        "They're sold all over the beaches of Cartagena and Santa Marta, on trays carried on the head.",
-        "They're sticky and sweet, with little white shreds inside.",
-        "Their main ingredient is the hairy fruit that falls from palm trees."
-      ],
-      "fun_fact": "In Cartagena, the palenqueras, women street sellers in colorful dresses, sell cocadas in many flavors, like guava, pineapple and even milk.",
-      "media": {
-        "type": "image",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Cocada_on_black_background_20072011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ACocada_on_black_background_20072011.jpg",
-        "credit": "Dtarazona · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Dtarazona",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Dtarazona"
       },
       "background": null
     },
