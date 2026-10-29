@@ -8922,7 +8922,8 @@
         "clue": "direct",
         "answer_kind": "word",
         "lens": "school"
-      }
+      },
+      "translatable": false
     },
     {
       "id": "q-0114",
@@ -73201,7 +73202,8 @@
           }
         },
         "revised_on": "2026-10-10"
-      }
+      },
+      "translatable": false
     },
     {
       "id": "q-0953",
@@ -78930,7 +78932,8 @@
           "question": "Adivina: floto sobre la cabeza de los Sims y en inglés me llamo 'plumbob', como la herramienta de albañil que es una pesa colgada de un hilo para ver si una pared está derecha. ¿Cómo se llama esa herramienta en español?"
         },
         "revised_on": "2026-10-10"
-      }
+      },
+      "translatable": false
     },
     {
       "id": "q-1029",
@@ -84110,7 +84113,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-1096",
@@ -152510,7 +152514,8 @@
           ]
         },
         "revised_on": "2026-10-15"
-      }
+      },
+      "translatable": false
     },
     {
       "id": "q-1984",
