@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "e5935a56",
+  "hash": "50305f2f",
   "questions": [
     {
       "id": "q-0016",
@@ -139,6 +139,40 @@
       "background": null
     },
     {
+      "id": "q-0040",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "science",
+      "bundle": "base",
+      "description": "Careful with this question: it's piping hot.",
+      "question": "At what temperature does water boil at sea level?",
+      "answer": "100 °C",
+      "wrong_answers": [
+        "50 °C",
+        "0 °C",
+        "200 °C"
+      ],
+      "hints": [
+        "It's much hotter than a sunny day.",
+        "At 0 °C (32 °F), water freezes.",
+        "It's a round number with three digits."
+      ],
+      "fun_fact": "In Bogotá, because of the altitude, water boils at about 91 °C (196 °F).",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Boiling_water.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoiling_water.jpg",
+        "credit": "GRAN · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "GRAN",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-0045",
       "status": "approved",
       "difficulty": 6,
@@ -271,6 +305,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Anna Hanks from Austin, Texas, USA",
         "author_url": "https://www.flickr.com/people/23349893@N08"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0063",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "world-cups",
+      "bundle": "base",
+      "description": "A question to get your hips moving while you think.",
+      "question": "Which Colombian singer sang “Waka Waka” for the 2010 World Cup?",
+      "answer": "Shakira",
+      "wrong_answers": [
+        "Karol G",
+        "Greeicy",
+        "Fanny Lu"
+      ],
+      "hints": [
+        "She has been singing since she was a child and is now famous all over the world.",
+        "She is famous for the way she dances.",
+        "She is from Barranquilla."
+      ],
+      "fun_fact": "“Waka Waka” is one of the most-watched music videos in YouTube history.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/FNB_Stadium_and_mooifontein_Arrial_View_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFNB_Stadium_and_mooifontein_Arrial_View_-_panoramio.jpg",
+        "credit": "fading · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "fading",
+        "author_url": "https://web.archive.org/web/20161021055257/http://www.panoramio.com/user/5397823?with_photo_id=66317669"
       },
       "background": null
     },
@@ -509,6 +577,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Obsidian Soul",
         "author_url": "https://commons.wikimedia.org/wiki/User:Obsidian_Soul"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0098",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "inventions",
+      "bundle": "base",
+      "description": "An idea so good it's even shaped like one.",
+      "question": "Which invention do we use to light up the house at night?",
+      "answer": "The light bulb",
+      "wrong_answers": [
+        "The wheel",
+        "The clock",
+        "The mirror"
+      ],
+      "hints": [
+        "It runs on electricity.",
+        "It goes on the ceiling or in a lamp.",
+        "Thomas Edison improved it so it would last a long time."
+      ],
+      "fun_fact": "Today we use LED bulbs, which use much less energy.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Price_Building_illuminated_at_night_in_Quebec_City.jpg/3840px-Price_Building_illuminated_at_night_in_Quebec_City.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APrice_Building_illuminated_at_night_in_Quebec_City.jpg",
+        "credit": "Wilfredor · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Wilfredor",
+        "author_url": "https://www.wikidata.org/wiki/Q115464159"
       },
       "background": null
     },
@@ -1087,6 +1189,108 @@
         "license_url": null,
         "author": "Didier Descouens",
         "author_url": "https://commons.wikimedia.org/wiki/User:Archaeodontosaurus"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0271",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "anime",
+      "bundle": "base",
+      "description": "Japan sent us cars, video games and words that stick like chewing gum.",
+      "question": "What does the Japanese word “kawaii” mean?",
+      "answer": "Cute or adorable",
+      "wrong_answers": [
+        "Fast or quick",
+        "Tasty or delicious",
+        "Brave or strong"
+      ],
+      "hints": [
+        "It became famous around the world thanks to Japanese fashion and cartoons.",
+        "It's what people say when they see a baby kitten.",
+        "Hello Kitty is the perfect example of this word."
+      ],
+      "fun_fact": "Hello Kitty is drawn without a mouth, and she is still one of the most famous characters in the world.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg/3840px-Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg",
+        "credit": "Benh LIEU SONG (Flickr) · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Benh LIEU SONG (Flickr)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Benh"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0283",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "pharaohs",
+      "bundle": "base",
+      "description": "Long before emojis, the Egyptians were already sending messages full of little faces, birds and eyes.",
+      "question": "What is the writing system of the ancient Egyptians called?",
+      "answer": "Hieroglyphs",
+      "wrong_answers": [
+        "Runes",
+        "Cuneiform",
+        "Kanji"
+      ],
+      "hints": [
+        "They carved it into temples and tombs, and also painted it on papyrus.",
+        "For centuries nobody could read it, until the Rosetta Stone was found.",
+        "When someone's handwriting is impossible to read, people say it looks like… this."
+      ],
+      "fun_fact": "In 1822, the Frenchman Jean-François Champollion cracked the code of hieroglyphs with the help of the Rosetta Stone.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Sarcophagus_of_Ankhnesneferibre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASarcophagus_of_Ankhnesneferibre.jpg",
+        "credit": "Hans Hillewaert · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Hans Hillewaert",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-0287",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "winter-olympics",
+      "bundle": "base",
+      "description": "A sport so calm your grandpa could play it in his slippers, and they still hand out Olympic medals for it.",
+      "question": "Look at the photo: which Winter Olympic sport are they playing?",
+      "answer": "Curling",
+      "wrong_answers": [
+        "Ice hockey",
+        "Speed skating",
+        "Figure skating"
+      ],
+      "hints": [
+        "This sport was born in Scotland centuries ago.",
+        "Players slide a heavy stone across the ice toward a target made of circles.",
+        "Teammates scrub the ice with brooms in front of the stone to guide it."
+      ],
+      "fun_fact": "Almost all Olympic curling stones are made of granite from one small Scottish island called Ailsa Craig.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/12-01-20-yog-674.jpg/3840px-12-01-20-yog-674.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A12-01-20-yog-674.jpg",
+        "credit": "Ralf Roletschek · CC BY-SA 3.0 at · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 at",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+        "author": "Ralf Roletschek",
+        "author_url": "https://www.wikidata.org/wiki/Q15080600"
       },
       "background": null
     },
@@ -2043,6 +2247,40 @@
       "background": null
     },
     {
+      "id": "q-0670",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "The only party guest everyone wants to hit, and it's thrilled about it.",
+      "question": "I hang up at birthday parties, and blindfolded kids hit me with a stick. When I break, what falls out of me?",
+      "answer": "Candy and toys",
+      "wrong_answers": [
+        "Sand and stones",
+        "Water and soap",
+        "Leaves and twigs"
+      ],
+      "hints": [
+        "Every kid loves what falls out.",
+        "Everyone dives to the floor to grab it fast.",
+        "Think lollipops, gummies and chocolates."
+      ],
+      "fun_fact": "In Mexico, the traditional piñata is shaped like a star with seven points.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Birthday_party_decoration.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABirthday_party_decoration.jpg",
+        "credit": "Abinayasekar357 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Abinayasekar357",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Abinayasekar357&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-0693",
       "status": "approved",
       "difficulty": 6,
@@ -2073,6 +2311,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Ocdp",
         "author_url": "https://commons.wikimedia.org/wiki/User:Ocdp"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0709",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "fairy-tales",
+      "bundle": "base",
+      "description": "A princess plays next to a well, and then acts surprised when things go wrong.",
+      "question": "A princess is playing by a well when her ball falls into the water, and a frog offers to fetch it if she'll be his friend. What is the ball made of?",
+      "answer": "Gold",
+      "wrong_answers": [
+        "Glass",
+        "Wood",
+        "Silver"
+      ],
+      "hints": [
+        "It's a toy fit for a princess.",
+        "It shines brightly, like a crown.",
+        "It's the same material as first-place medals."
+      ],
+      "fun_fact": "In the original Brothers Grimm version, the spell isn't broken by a kiss: the furious princess throws the frog against the wall.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/MYLF_Frog_%285794436732%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMYLF_Frog_%285794436732%29.jpg",
+        "credit": "Pacific Southwest Region 5 · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Pacific Southwest Region 5",
+        "author_url": "https://www.flickr.com/people/39108150@N05"
       },
       "background": null
     },
@@ -3097,6 +3369,74 @@
       "background": null
     },
     {
+      "id": "q-1254",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "childrens-songs",
+      "bundle": "base",
+      "description": "A song that turns being happy into a workout.",
+      "question": "You do it with both hands, it makes noise, and the song “If You're Happy and You Know It” asks you to do it. What is it?",
+      "answer": "Clap",
+      "wrong_answers": [
+        "Wave",
+        "Whistle",
+        "Jump"
+      ],
+      "hints": [
+        "The audience does it at the end of a show.",
+        "Your hands hit each other.",
+        "People say “Give them a big hand!” just before doing it."
+      ],
+      "fun_fact": "In later verses, the song also asks you to stomp your feet and shout “Hooray!”",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Happy_group_of_children_playing_race.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHappy_group_of_children_playing_race.jpg",
+        "credit": "Jackson Elizabeth, U.S. Fish and Wildlife Service · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jackson Elizabeth, U.S. Fish and Wildlife Service",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-1261",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "castles",
+      "bundle": "base",
+      "description": "A Japanese castle with a bird for a nickname, just like athletes who get named after animals.",
+      "question": "You're in Matsumoto, Japan, in front of one of the country's oldest castles. Which bird gives it its nickname?",
+      "answer": "The crow",
+      "wrong_answers": [
+        "The heron",
+        "The crane",
+        "The eagle"
+      ],
+      "hints": [
+        "The nickname comes from the color of its walls.",
+        "Himeji Castle, all white, is nicknamed after a white bird: the heron.",
+        "It's a black, clever, noisy bird, and its bigger cousin, the raven, guards the Tower of London in legend."
+      ],
+      "fun_fact": "Matsumoto Castle still has its original wooden main tower from more than 400 years ago, which is very rare in Japan.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Osaka_Castle_Outer_Moat_and_Osaka_Business_Park%2C_November_2016.jpg/3840px-Osaka_Castle_Outer_Moat_and_Osaka_Business_Park%2C_November_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOsaka_Castle_Outer_Moat_and_Osaka_Business_Park%2C_November_2016.jpg",
+        "credit": "Martin Falbisoner · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Martin Falbisoner",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-1292",
       "status": "approved",
       "difficulty": 11,
@@ -3127,6 +3467,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Quantum Information Retrieval",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Quantum_Information_Retrieval&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1312",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "body-oddities",
+      "bundle": "base",
+      "description": "Blood so exclusive it has no one to share with.",
+      "question": "I'm nicknamed “golden blood,” and only a few dozen people in the world have me. What blood type am I?",
+      "answer": "Rh null",
+      "wrong_answers": [
+        "AB negative",
+        "Bombay phenotype",
+        "O negative"
+      ],
+      "hints": [
+        "I'm not one of the eight common types (A, B, AB and O, positive or negative).",
+        "My red blood cells lack every antigen of one very well-known system.",
+        "That system is the same one that makes blood “positive” or “negative.”"
+      ],
+      "fun_fact": "People with Rh null blood can donate to many people with rare Rh types, but they can only receive blood from another Rh null donor.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Antonio_e_Biagio_e_Cesare_Arrigo_Blood_bags.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAntonio_e_Biagio_e_Cesare_Arrigo_Blood_bags.jpg",
+        "credit": "CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ufficio Comunicazione, Azienda Ospedaliera SS. Antonio e Biagio e Cesare Arrigo, Alessandria, Biblioteca Biomedica Centro di Documentazione",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PescediBabele"
       },
       "background": null
     },
@@ -3671,6 +4045,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0/ch/deed.en",
         "author": "A. Buser",
         "author_url": "https://commons.wikimedia.org/wiki/User:AmBu"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1732",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "big-questions",
+      "bundle": "base",
+      "description": "The subject that asks whether it's okay to eat the last slice of cake without telling anyone.",
+      "question": "It studies what is right and wrong, asks how we should behave, and is a school subject in many places. What is it?",
+      "answer": "Ethics",
+      "wrong_answers": [
+        "Aesthetics",
+        "Logic",
+        "Grammar"
+      ],
+      "hints": [
+        "It is a branch of philosophy.",
+        "It deals with values like honesty and fairness.",
+        "Many doctors and lawyers must follow a professional code named after it."
+      ],
+      "fun_fact": "The word comes from the Greek “êthos”, which means “custom” or “character”.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/A_public_school%2C_high_school_classroom_in_the_United_States_01.jpg/3840px-A_public_school%2C_high_school_classroom_in_the_United_States_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_public_school%2C_high_school_classroom_in_the_United_States_01.jpg",
+        "credit": "Harrison Keely · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Harrison Keely",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Hkeely"
       },
       "background": null
     },
