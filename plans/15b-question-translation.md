@@ -71,6 +71,7 @@ Done (pm plan 67, RV-24..RV-26). The developer and native speakers review `quest
 - [ ] QT-6 Full translation per question locale: `en`, `de`, `es`, `es-ES` (D-78, D-107); no native-speaker spot check (LLM review only, milestone 9); runs per pm plan 84. Later: `zh-Hans`, `ru`, `pt-BR` (milestone 12).
   - QT-6 progress `en`: `tr-en-2` (2026-10-24) 291 translated, 282 approved (9 not travelling); 4498 in the `en` pool (incl. en-sourced), target not met; next `tr-en-3`.
   - QT-6 progress `de`: `tr-de-2` (2026-10-23) 297 translated, 290 approved; `qgen report --locale de`: 343 approved in `de`, target not met; next `tr-de-3`.
+  - QT-6 progress `de`: `tr-de-3` (2026-10-28) 298 translated, 294 approved, 4 needs_work, 2 not travelling; 637 in the `de` pool, target not met; next `tr-de-4`.
   - QT-6 progress `es-ES`: `tr-es-ES-2` (2026-10-23) 300 translated, 297 approved; 345 in the `es-ES` pool, target not met; next `tr-es-ES-3`.
   - QT-6 progress `es-ES`: `tr-es-ES-3` (2026-10-24) 300 translated, 296 approved; 641 in the `es-ES` pool, target not met; next `tr-es-ES-4`.
   - QT-6 progress `es-ES`: `tr-es-ES-4` (2026-10-24) 299 translated, 295 approved, 4 needs_work, 1 not travelling; 936 in the `es-ES` pool, target not met; next `tr-es-ES-5`.
