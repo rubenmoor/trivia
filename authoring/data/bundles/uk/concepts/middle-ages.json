@@ -1,0 +1,767 @@
+{
+  "subcategory": "middle-ages",
+  "facets": [
+    "Kings and queens",
+    "Anglo-Saxon kingdoms",
+    "Vikings in Britain",
+    "The Norman Conquest",
+    "Castles and cathedrals",
+    "Battles and wars",
+    "Scotland and Wales in the Middle Ages",
+    "Legends and outlaws",
+    "Medieval saints and the Church",
+    "Everyday life and the Black Death",
+    "Laws, Parliament and Magna Carta",
+    "Medieval writers and manuscripts"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Richard the Lionheart",
+      "facet": "Kings and queens",
+      "known_at": 5
+    },
+    {
+      "name": "King John",
+      "facet": "Kings and queens",
+      "known_at": 6
+    },
+    {
+      "name": "Henry II",
+      "facet": "Kings and queens",
+      "known_at": 10
+    },
+    {
+      "name": "Edward I",
+      "facet": "Kings and queens",
+      "known_at": 9
+    },
+    {
+      "name": "Edward II",
+      "facet": "Kings and queens",
+      "known_at": 11
+    },
+    {
+      "name": "Edward III",
+      "facet": "Kings and queens",
+      "known_at": 10
+    },
+    {
+      "name": "Richard II",
+      "facet": "Kings and queens",
+      "known_at": 11
+    },
+    {
+      "name": "Henry V",
+      "facet": "Kings and queens",
+      "known_at": 9
+    },
+    {
+      "name": "Henry VI",
+      "facet": "Kings and queens",
+      "known_at": 11
+    },
+    {
+      "name": "Edward IV",
+      "facet": "Kings and queens",
+      "known_at": 11
+    },
+    {
+      "name": "Richard III",
+      "facet": "Kings and queens",
+      "known_at": 8
+    },
+    {
+      "name": "Princes in the Tower",
+      "facet": "Kings and queens",
+      "known_at": 8
+    },
+    {
+      "name": "King Stephen",
+      "facet": "Kings and queens",
+      "known_at": 11
+    },
+    {
+      "name": "Empress Matilda",
+      "facet": "Kings and queens",
+      "known_at": 11
+    },
+    {
+      "name": "Eleanor of Aquitaine",
+      "facet": "Kings and queens",
+      "known_at": 11
+    },
+    {
+      "name": "Edward the Black Prince",
+      "facet": "Kings and queens",
+      "known_at": 11
+    },
+    {
+      "name": "Henry I",
+      "facet": "Kings and queens",
+      "known_at": 12
+    },
+    {
+      "name": "Kingdom of East Anglia",
+      "facet": "Anglo-Saxon kingdoms",
+      "known_at": 10
+    },
+    {
+      "name": "Kingdom of Sussex",
+      "facet": "Anglo-Saxon kingdoms",
+      "known_at": 11
+    },
+    {
+      "name": "Kingdom of Essex",
+      "facet": "Anglo-Saxon kingdoms",
+      "known_at": 11
+    },
+    {
+      "name": "King Offa",
+      "facet": "Anglo-Saxon kingdoms",
+      "known_at": 11
+    },
+    {
+      "name": "Jutes",
+      "facet": "Anglo-Saxon kingdoms",
+      "known_at": 10
+    },
+    {
+      "name": "Viking longship",
+      "facet": "Vikings in Britain",
+      "known_at": 4
+    },
+    {
+      "name": "Guthrum",
+      "facet": "Vikings in Britain",
+      "known_at": 11
+    },
+    {
+      "name": "Treaty of Wedmore",
+      "facet": "Vikings in Britain",
+      "known_at": 13
+    },
+    {
+      "name": "Cnut the Great",
+      "facet": "Vikings in Britain",
+      "known_at": 8
+    },
+    {
+      "name": "Runes",
+      "facet": "Vikings in Britain",
+      "known_at": 8
+    },
+    {
+      "name": "St Brice's Day massacre",
+      "facet": "Vikings in Britain",
+      "known_at": 14
+    },
+    {
+      "name": "1066",
+      "facet": "The Norman Conquest",
+      "known_at": 5
+    },
+    {
+      "name": "Norman French",
+      "facet": "The Norman Conquest",
+      "known_at": 11
+    },
+    {
+      "name": "William Rufus",
+      "facet": "The Norman Conquest",
+      "known_at": 11
+    },
+    {
+      "name": "Curfew",
+      "facet": "The Norman Conquest",
+      "known_at": 11
+    },
+    {
+      "name": "Flying buttress",
+      "facet": "Castles and cathedrals",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Agincourt",
+      "facet": "Battles and wars",
+      "known_at": 8
+    },
+    {
+      "name": "Battle of Bannockburn",
+      "facet": "Battles and wars",
+      "known_at": 9
+    },
+    {
+      "name": "Hundred Years' War",
+      "facet": "Battles and wars",
+      "known_at": 9
+    },
+    {
+      "name": "Battle of Bosworth Field",
+      "facet": "Battles and wars",
+      "known_at": 9
+    },
+    {
+      "name": "Battle of Stirling Bridge",
+      "facet": "Battles and wars",
+      "known_at": 10
+    },
+    {
+      "name": "Battle of Crécy",
+      "facet": "Battles and wars",
+      "known_at": 11
+    },
+    {
+      "name": "Battle of Poitiers",
+      "facet": "Battles and wars",
+      "known_at": 13
+    },
+    {
+      "name": "English longbow",
+      "facet": "Battles and wars",
+      "known_at": 6
+    },
+    {
+      "name": "Crusades",
+      "facet": "Battles and wars",
+      "known_at": 7
+    },
+    {
+      "name": "Battle of Towton",
+      "facet": "Battles and wars",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Tewkesbury",
+      "facet": "Battles and wars",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Falkirk",
+      "facet": "Battles and wars",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Lewes",
+      "facet": "Battles and wars",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Evesham",
+      "facet": "Battles and wars",
+      "known_at": 13
+    },
+    {
+      "name": "The Anarchy",
+      "facet": "Battles and wars",
+      "known_at": 12
+    },
+    {
+      "name": "Siege of Orléans",
+      "facet": "Battles and wars",
+      "known_at": 12
+    },
+    {
+      "name": "William Wallace",
+      "facet": "Scotland and Wales in the Middle Ages",
+      "known_at": 7
+    },
+    {
+      "name": "Robert the Bruce",
+      "facet": "Scotland and Wales in the Middle Ages",
+      "known_at": 7
+    },
+    {
+      "name": "Macbeth, King of Scotland",
+      "facet": "Scotland and Wales in the Middle Ages",
+      "known_at": 9
+    },
+    {
+      "name": "Owain Glyndŵr",
+      "facet": "Scotland and Wales in the Middle Ages",
+      "known_at": 10
+    },
+    {
+      "name": "Llywelyn the Great",
+      "facet": "Scotland and Wales in the Middle Ages",
+      "known_at": 12
+    },
+    {
+      "name": "Llywelyn ap Gruffudd",
+      "facet": "Scotland and Wales in the Middle Ages",
+      "known_at": 13
+    },
+    {
+      "name": "Declaration of Arbroath",
+      "facet": "Scotland and Wales in the Middle Ages",
+      "known_at": 12
+    },
+    {
+      "name": "Malcolm III",
+      "facet": "Scotland and Wales in the Middle Ages",
+      "known_at": 13
+    },
+    {
+      "name": "Saint Margaret of Scotland",
+      "facet": "Scotland and Wales in the Middle Ages",
+      "known_at": 13
+    },
+    {
+      "name": "Alexander III of Scotland",
+      "facet": "Scotland and Wales in the Middle Ages",
+      "known_at": 14
+    },
+    {
+      "name": "Prince of Wales",
+      "facet": "Scotland and Wales in the Middle Ages",
+      "known_at": 8
+    },
+    {
+      "name": "Eisteddfod",
+      "facet": "Scotland and Wales in the Middle Ages",
+      "known_at": 10
+    },
+    {
+      "name": "Scottish Wars of Independence",
+      "facet": "Scotland and Wales in the Middle Ages",
+      "known_at": 10
+    },
+    {
+      "name": "Lord of the Isles",
+      "facet": "Scotland and Wales in the Middle Ages",
+      "known_at": 13
+    },
+    {
+      "name": "Auld Alliance",
+      "facet": "Scotland and Wales in the Middle Ages",
+      "known_at": 12
+    },
+    {
+      "name": "Robin Hood",
+      "facet": "Legends and outlaws",
+      "known_at": 2
+    },
+    {
+      "name": "Knights of the Round Table",
+      "facet": "Legends and outlaws",
+      "known_at": 4
+    },
+    {
+      "name": "Maid Marian",
+      "facet": "Legends and outlaws",
+      "known_at": 5
+    },
+    {
+      "name": "Sheriff of Nottingham",
+      "facet": "Legends and outlaws",
+      "known_at": 5
+    },
+    {
+      "name": "Little John",
+      "facet": "Legends and outlaws",
+      "known_at": 5
+    },
+    {
+      "name": "Friar Tuck",
+      "facet": "Legends and outlaws",
+      "known_at": 6
+    },
+    {
+      "name": "Will Scarlet",
+      "facet": "Legends and outlaws",
+      "known_at": 9
+    },
+    {
+      "name": "Mordred",
+      "facet": "Legends and outlaws",
+      "known_at": 11
+    },
+    {
+      "name": "Saint George",
+      "facet": "Medieval saints and the Church",
+      "known_at": 4
+    },
+    {
+      "name": "Saint Patrick",
+      "facet": "Medieval saints and the Church",
+      "known_at": 5
+    },
+    {
+      "name": "Saint David",
+      "facet": "Medieval saints and the Church",
+      "known_at": 6
+    },
+    {
+      "name": "Saint Andrew",
+      "facet": "Medieval saints and the Church",
+      "known_at": 7
+    },
+    {
+      "name": "Thomas Becket",
+      "facet": "Medieval saints and the Church",
+      "known_at": 8
+    },
+    {
+      "name": "Archbishop of Canterbury",
+      "facet": "Medieval saints and the Church",
+      "known_at": 8
+    },
+    {
+      "name": "Saint Swithin",
+      "facet": "Medieval saints and the Church",
+      "known_at": 10
+    },
+    {
+      "name": "Saint Cuthbert",
+      "facet": "Medieval saints and the Church",
+      "known_at": 11
+    },
+    {
+      "name": "Augustine of Canterbury",
+      "facet": "Medieval saints and the Church",
+      "known_at": 11
+    },
+    {
+      "name": "Saint Columba",
+      "facet": "Medieval saints and the Church",
+      "known_at": 11
+    },
+    {
+      "name": "Saint Aidan",
+      "facet": "Medieval saints and the Church",
+      "known_at": 12
+    },
+    {
+      "name": "Hilda of Whitby",
+      "facet": "Medieval saints and the Church",
+      "known_at": 12
+    },
+    {
+      "name": "Saint Dunstan",
+      "facet": "Medieval saints and the Church",
+      "known_at": 13
+    },
+    {
+      "name": "John Wycliffe",
+      "facet": "Medieval saints and the Church",
+      "known_at": 12
+    },
+    {
+      "name": "Lollards",
+      "facet": "Medieval saints and the Church",
+      "known_at": 13
+    },
+    {
+      "name": "Tithe",
+      "facet": "Medieval saints and the Church",
+      "known_at": 12
+    },
+    {
+      "name": "Black Death",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 6
+    },
+    {
+      "name": "Plague doctor",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 6
+    },
+    {
+      "name": "Wat Tyler",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 11
+    },
+    {
+      "name": "Serf",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 10
+    },
+    {
+      "name": "Knight",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 3
+    },
+    {
+      "name": "Jester",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 5
+    },
+    {
+      "name": "Squire",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 8
+    },
+    {
+      "name": "Jousting",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 6
+    },
+    {
+      "name": "Pottage",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 11
+    },
+    {
+      "name": "Stocks",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 8
+    },
+    {
+      "name": "Ducking stool",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 9
+    },
+    {
+      "name": "Trial by ordeal",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 12
+    },
+    {
+      "name": "Guild",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 10
+    },
+    {
+      "name": "Manor house",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 9
+    },
+    {
+      "name": "Open-field system",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 13
+    },
+    {
+      "name": "Mystery plays",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 13
+    },
+    {
+      "name": "Wool trade",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 11
+    },
+    {
+      "name": "Morris dancing",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 9
+    },
+    {
+      "name": "Statute of Labourers",
+      "facet": "Everyday life and the Black Death",
+      "known_at": 14
+    },
+    {
+      "name": "Magna Carta",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 7
+    },
+    {
+      "name": "Runnymede",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 11
+    },
+    {
+      "name": "Simon de Montfort",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 12
+    },
+    {
+      "name": "Model Parliament",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 13
+    },
+    {
+      "name": "House of Lords",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 8
+    },
+    {
+      "name": "House of Commons",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 8
+    },
+    {
+      "name": "Speaker of the House of Commons",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 10
+    },
+    {
+      "name": "Woolsack",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 12
+    },
+    {
+      "name": "Westminster Hall",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 11
+    },
+    {
+      "name": "Common law",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 12
+    },
+    {
+      "name": "Trial by jury",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 10
+    },
+    {
+      "name": "Sheriff",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 8
+    },
+    {
+      "name": "Justice of the peace",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 12
+    },
+    {
+      "name": "Exchequer",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 12
+    },
+    {
+      "name": "Poll tax",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 11
+    },
+    {
+      "name": "Forest law",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 13
+    },
+    {
+      "name": "Charter of the Forest",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 14
+    },
+    {
+      "name": "Habeas corpus",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 13
+    },
+    {
+      "name": "Assizes",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 13
+    },
+    {
+      "name": "Constitutions of Clarendon",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 14
+    },
+    {
+      "name": "Treason Act 1351",
+      "facet": "Laws, Parliament and Magna Carta",
+      "known_at": 14
+    },
+    {
+      "name": "Geoffrey Chaucer",
+      "facet": "Medieval writers and manuscripts",
+      "known_at": 9
+    },
+    {
+      "name": "The Canterbury Tales",
+      "facet": "Medieval writers and manuscripts",
+      "known_at": 8
+    },
+    {
+      "name": "The Wife of Bath",
+      "facet": "Medieval writers and manuscripts",
+      "known_at": 12
+    },
+    {
+      "name": "Middle English",
+      "facet": "Medieval writers and manuscripts",
+      "known_at": 10
+    },
+    {
+      "name": "Sir Gawain and the Green Knight",
+      "facet": "Medieval writers and manuscripts",
+      "known_at": 12
+    },
+    {
+      "name": "Le Morte d'Arthur",
+      "facet": "Medieval writers and manuscripts",
+      "known_at": 12
+    },
+    {
+      "name": "Thomas Malory",
+      "facet": "Medieval writers and manuscripts",
+      "known_at": 13
+    },
+    {
+      "name": "William Caxton",
+      "facet": "Medieval writers and manuscripts",
+      "known_at": 11
+    },
+    {
+      "name": "Julian of Norwich",
+      "facet": "Medieval writers and manuscripts",
+      "known_at": 13
+    },
+    {
+      "name": "Margery Kempe",
+      "facet": "Medieval writers and manuscripts",
+      "known_at": 14
+    },
+    {
+      "name": "Piers Plowman",
+      "facet": "Medieval writers and manuscripts",
+      "known_at": 14
+    },
+    {
+      "name": "Paston Letters",
+      "facet": "Medieval writers and manuscripts",
+      "known_at": 14
+    },
+    {
+      "name": "Gerald of Wales",
+      "facet": "Medieval writers and manuscripts",
+      "known_at": 14
+    }
+  ]
+}

@@ -1,0 +1,1328 @@
+{
+  "subcategory": "twentieth-century",
+  "facets": [
+    "Suffragettes and votes for women",
+    "Britain in the First World War",
+    "The Home Front in the Second World War",
+    "Prime Ministers and politics",
+    "The NHS and the welfare state",
+    "The royal family's century",
+    "End of Empire and the Commonwealth",
+    "Swinging Sixties and British pop culture",
+    "Strikes, protests and the Troubles",
+    "British inventions and engineering",
+    "Everyday life, money and homes",
+    "Great sporting and national events"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 2,
+      "made_of": 1,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Suffragettes",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 6
+    },
+    {
+      "name": "Emmeline Pankhurst",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 7
+    },
+    {
+      "name": "Emily Wilding Davison",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 10
+    },
+    {
+      "name": "Christabel Pankhurst",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 12
+    },
+    {
+      "name": "Sylvia Pankhurst",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 12
+    },
+    {
+      "name": "Suffragists",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 11
+    },
+    {
+      "name": "Representation of the People Act 1918",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 11
+    },
+    {
+      "name": "Equal Franchise Act 1928",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 12
+    },
+    {
+      "name": "Cat and Mouse Act",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 12
+    },
+    {
+      "name": "Hunger strike",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 9
+    },
+    {
+      "name": "Force-feeding",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 11
+    },
+    {
+      "name": "1913 Epsom Derby",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 11
+    },
+    {
+      "name": "Deeds not words",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 10
+    },
+    {
+      "name": "Women's Social and Political Union",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 11
+    },
+    {
+      "name": "Nancy Astor",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 11
+    },
+    {
+      "name": "Constance Markievicz",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 14
+    },
+    {
+      "name": "Purple, white and green",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 10
+    },
+    {
+      "name": "Holloway Prison",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 12
+    },
+    {
+      "name": "Sophia Duleep Singh",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 13
+    },
+    {
+      "name": "Chaining to railings",
+      "facet": "Suffragettes and votes for women",
+      "known_at": 8
+    },
+    {
+      "name": "Trenches",
+      "facet": "Britain in the First World War",
+      "known_at": 5
+    },
+    {
+      "name": "Battle of the Somme",
+      "facet": "Britain in the First World War",
+      "known_at": 8
+    },
+    {
+      "name": "Armistice Day",
+      "facet": "Britain in the First World War",
+      "known_at": 6
+    },
+    {
+      "name": "Lord Kitchener",
+      "facet": "Britain in the First World War",
+      "known_at": 10
+    },
+    {
+      "name": "Your Country Needs You",
+      "facet": "Britain in the First World War",
+      "known_at": 9
+    },
+    {
+      "name": "Christmas truce",
+      "facet": "Britain in the First World War",
+      "known_at": 7
+    },
+    {
+      "name": "Western Front",
+      "facet": "Britain in the First World War",
+      "known_at": 9
+    },
+    {
+      "name": "Gallipoli",
+      "facet": "Britain in the First World War",
+      "known_at": 11
+    },
+    {
+      "name": "Passchendaele",
+      "facet": "Britain in the First World War",
+      "known_at": 11
+    },
+    {
+      "name": "Tank",
+      "facet": "Britain in the First World War",
+      "known_at": 7
+    },
+    {
+      "name": "Zeppelin raids",
+      "facet": "Britain in the First World War",
+      "known_at": 10
+    },
+    {
+      "name": "Wilfred Owen",
+      "facet": "Britain in the First World War",
+      "known_at": 11
+    },
+    {
+      "name": "Dulce et Decorum Est",
+      "facet": "Britain in the First World War",
+      "known_at": 12
+    },
+    {
+      "name": "Tommy",
+      "facet": "Britain in the First World War",
+      "known_at": 10
+    },
+    {
+      "name": "Pals battalions",
+      "facet": "Britain in the First World War",
+      "known_at": 13
+    },
+    {
+      "name": "Unknown Warrior",
+      "facet": "Britain in the First World War",
+      "known_at": 11
+    },
+    {
+      "name": "Cenotaph",
+      "facet": "Britain in the First World War",
+      "known_at": 9
+    },
+    {
+      "name": "Two-minute silence",
+      "facet": "Britain in the First World War",
+      "known_at": 7
+    },
+    {
+      "name": "Munitionettes",
+      "facet": "Britain in the First World War",
+      "known_at": 12
+    },
+    {
+      "name": "Edith Cavell",
+      "facet": "Britain in the First World War",
+      "known_at": 12
+    },
+    {
+      "name": "Lusitania",
+      "facet": "Britain in the First World War",
+      "known_at": 11
+    },
+    {
+      "name": "War Horse",
+      "facet": "Britain in the First World War",
+      "known_at": 8
+    },
+    {
+      "name": "Sopwith Camel",
+      "facet": "Britain in the First World War",
+      "known_at": 11
+    },
+    {
+      "name": "Evacuees",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 6
+    },
+    {
+      "name": "Ration book",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 7
+    },
+    {
+      "name": "Anderson shelter",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 9
+    },
+    {
+      "name": "Morrison shelter",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 13
+    },
+    {
+      "name": "Gas mask",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 6
+    },
+    {
+      "name": "Blackout",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 8
+    },
+    {
+      "name": "Land Girls",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 10
+    },
+    {
+      "name": "Home Guard",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 10
+    },
+    {
+      "name": "Dad's Army",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 10
+    },
+    {
+      "name": "Spitfire",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 7
+    },
+    {
+      "name": "Battle of Britain",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 8
+    },
+    {
+      "name": "Dunkirk evacuation",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 9
+    },
+    {
+      "name": "Keep Calm and Carry On",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 7
+    },
+    {
+      "name": "Bletchley Park",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 10
+    },
+    {
+      "name": "Alan Turing",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 9
+    },
+    {
+      "name": "Enigma machine",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 9
+    },
+    {
+      "name": "ARP warden",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 12
+    },
+    {
+      "name": "Vera Lynn",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 11
+    },
+    {
+      "name": "Coventry Blitz",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 12
+    },
+    {
+      "name": "Make Do and Mend",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 12
+    },
+    {
+      "name": "Air raid siren",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 6
+    },
+    {
+      "name": "Doodlebug",
+      "facet": "The Home Front in the Second World War",
+      "known_at": 12
+    },
+    {
+      "name": "Margaret Thatcher",
+      "facet": "Prime Ministers and politics",
+      "known_at": 7
+    },
+    {
+      "name": "Tony Blair",
+      "facet": "Prime Ministers and politics",
+      "known_at": 9
+    },
+    {
+      "name": "Clement Attlee",
+      "facet": "Prime Ministers and politics",
+      "known_at": 11
+    },
+    {
+      "name": "David Lloyd George",
+      "facet": "Prime Ministers and politics",
+      "known_at": 11
+    },
+    {
+      "name": "Neville Chamberlain",
+      "facet": "Prime Ministers and politics",
+      "known_at": 11
+    },
+    {
+      "name": "Harold Wilson",
+      "facet": "Prime Ministers and politics",
+      "known_at": 12
+    },
+    {
+      "name": "John Major",
+      "facet": "Prime Ministers and politics",
+      "known_at": 11
+    },
+    {
+      "name": "Edward Heath",
+      "facet": "Prime Ministers and politics",
+      "known_at": 13
+    },
+    {
+      "name": "Anthony Eden",
+      "facet": "Prime Ministers and politics",
+      "known_at": 13
+    },
+    {
+      "name": "Harold Macmillan",
+      "facet": "Prime Ministers and politics",
+      "known_at": 12
+    },
+    {
+      "name": "Ramsay MacDonald",
+      "facet": "Prime Ministers and politics",
+      "known_at": 13
+    },
+    {
+      "name": "Stanley Baldwin",
+      "facet": "Prime Ministers and politics",
+      "known_at": 13
+    },
+    {
+      "name": "James Callaghan",
+      "facet": "Prime Ministers and politics",
+      "known_at": 13
+    },
+    {
+      "name": "Alec Douglas-Home",
+      "facet": "Prime Ministers and politics",
+      "known_at": 14
+    },
+    {
+      "name": "Labour Party",
+      "facet": "Prime Ministers and politics",
+      "known_at": 8
+    },
+    {
+      "name": "Conservative Party",
+      "facet": "Prime Ministers and politics",
+      "known_at": 8
+    },
+    {
+      "name": "Liberal Party",
+      "facet": "Prime Ministers and politics",
+      "known_at": 11
+    },
+    {
+      "name": "Iron Lady",
+      "facet": "Prime Ministers and politics",
+      "known_at": 9
+    },
+    {
+      "name": "Peace for our time",
+      "facet": "Prime Ministers and politics",
+      "known_at": 12
+    },
+    {
+      "name": "New Labour",
+      "facet": "Prime Ministers and politics",
+      "known_at": 11
+    },
+    {
+      "name": "Prime Minister's Questions",
+      "facet": "Prime Ministers and politics",
+      "known_at": 11
+    },
+    {
+      "name": "Keir Hardie",
+      "facet": "Prime Ministers and politics",
+      "known_at": 13
+    },
+    {
+      "name": "NHS",
+      "facet": "The NHS and the welfare state",
+      "known_at": 5
+    },
+    {
+      "name": "Aneurin Bevan",
+      "facet": "The NHS and the welfare state",
+      "known_at": 11
+    },
+    {
+      "name": "Beveridge Report",
+      "facet": "The NHS and the welfare state",
+      "known_at": 12
+    },
+    {
+      "name": "Five Giants",
+      "facet": "The NHS and the welfare state",
+      "known_at": 13
+    },
+    {
+      "name": "Old-age pension",
+      "facet": "The NHS and the welfare state",
+      "known_at": 12
+    },
+    {
+      "name": "National Insurance",
+      "facet": "The NHS and the welfare state",
+      "known_at": 10
+    },
+    {
+      "name": "Free school milk",
+      "facet": "The NHS and the welfare state",
+      "known_at": 11
+    },
+    {
+      "name": "Milk snatcher",
+      "facet": "The NHS and the welfare state",
+      "known_at": 12
+    },
+    {
+      "name": "Prescription charges",
+      "facet": "The NHS and the welfare state",
+      "known_at": 12
+    },
+    {
+      "name": "Family Allowance",
+      "facet": "The NHS and the welfare state",
+      "known_at": 14
+    },
+    {
+      "name": "Child Benefit",
+      "facet": "The NHS and the welfare state",
+      "known_at": 11
+    },
+    {
+      "name": "Council houses",
+      "facet": "The NHS and the welfare state",
+      "known_at": 9
+    },
+    {
+      "name": "Comprehensive schools",
+      "facet": "The NHS and the welfare state",
+      "known_at": 11
+    },
+    {
+      "name": "Eleven-plus",
+      "facet": "The NHS and the welfare state",
+      "known_at": 9
+    },
+    {
+      "name": "Open University",
+      "facet": "The NHS and the welfare state",
+      "known_at": 11
+    },
+    {
+      "name": "Welfare state",
+      "facet": "The NHS and the welfare state",
+      "known_at": 10
+    },
+    {
+      "name": "Park Hospital, Trafford",
+      "facet": "The NHS and the welfare state",
+      "known_at": 13
+    },
+    {
+      "name": "Education Act 1944",
+      "facet": "The NHS and the welfare state",
+      "known_at": 13
+    },
+    {
+      "name": "The dole",
+      "facet": "The NHS and the welfare state",
+      "known_at": 9
+    },
+    {
+      "name": "Queen Elizabeth II",
+      "facet": "The royal family's century",
+      "known_at": 2
+    },
+    {
+      "name": "Edward VIII",
+      "facet": "The royal family's century",
+      "known_at": 10
+    },
+    {
+      "name": "Abdication crisis",
+      "facet": "The royal family's century",
+      "known_at": 11
+    },
+    {
+      "name": "Wallis Simpson",
+      "facet": "The royal family's century",
+      "known_at": 11
+    },
+    {
+      "name": "George VI",
+      "facet": "The royal family's century",
+      "known_at": 9
+    },
+    {
+      "name": "The King's Speech",
+      "facet": "The royal family's century",
+      "known_at": 11
+    },
+    {
+      "name": "George V",
+      "facet": "The royal family's century",
+      "known_at": 11
+    },
+    {
+      "name": "House of Windsor",
+      "facet": "The royal family's century",
+      "known_at": 9
+    },
+    {
+      "name": "Charles III",
+      "facet": "The royal family's century",
+      "known_at": 3
+    },
+    {
+      "name": "Princess Diana",
+      "facet": "The royal family's century",
+      "known_at": 6
+    },
+    {
+      "name": "Wedding of Charles and Diana",
+      "facet": "The royal family's century",
+      "known_at": 9
+    },
+    {
+      "name": "Princess Margaret",
+      "facet": "The royal family's century",
+      "known_at": 11
+    },
+    {
+      "name": "Prince Philip",
+      "facet": "The royal family's century",
+      "known_at": 7
+    },
+    {
+      "name": "Queen Mother",
+      "facet": "The royal family's century",
+      "known_at": 9
+    },
+    {
+      "name": "Princess Anne",
+      "facet": "The royal family's century",
+      "known_at": 9
+    },
+    {
+      "name": "Silver Jubilee",
+      "facet": "The royal family's century",
+      "known_at": 11
+    },
+    {
+      "name": "Royal Christmas message",
+      "facet": "The royal family's century",
+      "known_at": 8
+    },
+    {
+      "name": "Investiture of the Prince of Wales",
+      "facet": "The royal family's century",
+      "known_at": 13
+    },
+    {
+      "name": "Windsor Castle fire",
+      "facet": "The royal family's century",
+      "known_at": 12
+    },
+    {
+      "name": "Annus horribilis",
+      "facet": "The royal family's century",
+      "known_at": 13
+    },
+    {
+      "name": "Balmoral",
+      "facet": "The royal family's century",
+      "known_at": 9
+    },
+    {
+      "name": "Royal Yacht Britannia",
+      "facet": "The royal family's century",
+      "known_at": 11
+    },
+    {
+      "name": "Indian independence",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 10
+    },
+    {
+      "name": "Partition of India",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 12
+    },
+    {
+      "name": "Mahatma Gandhi",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 7
+    },
+    {
+      "name": "Lord Mountbatten",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 12
+    },
+    {
+      "name": "Commonwealth of Nations",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 9
+    },
+    {
+      "name": "Commonwealth Games",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 7
+    },
+    {
+      "name": "Commonwealth Day",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 11
+    },
+    {
+      "name": "Suez Crisis",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 12
+    },
+    {
+      "name": "Windrush generation",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 10
+    },
+    {
+      "name": "HMT Empire Windrush",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 11
+    },
+    {
+      "name": "Hong Kong handover",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 10
+    },
+    {
+      "name": "Falklands War",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 10
+    },
+    {
+      "name": "Mau Mau uprising",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 13
+    },
+    {
+      "name": "Jomo Kenyatta",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 13
+    },
+    {
+      "name": "Wind of Change speech",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 13
+    },
+    {
+      "name": "Irish Free State",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 12
+    },
+    {
+      "name": "Ghana independence",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 13
+    },
+    {
+      "name": "Kwame Nkrumah",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 14
+    },
+    {
+      "name": "Rhodesia",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 13
+    },
+    {
+      "name": "Statute of Westminster",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 14
+    },
+    {
+      "name": "Empire Day",
+      "facet": "End of Empire and the Commonwealth",
+      "known_at": 13
+    },
+    {
+      "name": "The Beatles",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 3,
+      "retired": "used_up: The Beatles already has four questions (Abbey Road, songs, Beatlemania); the remaining options would only give a forced decade question that isn't a 2 for kids."
+    },
+    {
+      "name": "The Rolling Stones",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 7
+    },
+    {
+      "name": "Beatlemania",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 9
+    },
+    {
+      "name": "Abbey Road",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 8
+    },
+    {
+      "name": "Cavern Club",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 11
+    },
+    {
+      "name": "Mary Quant",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 12
+    },
+    {
+      "name": "Miniskirt",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 7
+    },
+    {
+      "name": "Twiggy",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 11
+    },
+    {
+      "name": "Mods and Rockers",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 11
+    },
+    {
+      "name": "Pirate radio",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 11
+    },
+    {
+      "name": "Doctor Who",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 4
+    },
+    {
+      "name": "James Bond",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 4
+    },
+    {
+      "name": "Top of the Pops",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 10
+    },
+    {
+      "name": "Blue Peter",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 8
+    },
+    {
+      "name": "Monty Python's Flying Circus",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 10
+    },
+    {
+      "name": "The Who",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 11
+    },
+    {
+      "name": "The Kinks",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 12
+    },
+    {
+      "name": "Queen",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 6
+    },
+    {
+      "name": "Punk",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 9
+    },
+    {
+      "name": "Sex Pistols",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 11
+    },
+    {
+      "name": "Live Aid",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 9
+    },
+    {
+      "name": "Spice Girls",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 6
+    },
+    {
+      "name": "Britpop",
+      "facet": "Swinging Sixties and British pop culture",
+      "known_at": 11
+    },
+    {
+      "name": "General Strike of 1926",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 11
+    },
+    {
+      "name": "Miners' strike",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 11
+    },
+    {
+      "name": "Arthur Scargill",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 13
+    },
+    {
+      "name": "Winter of Discontent",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 12
+    },
+    {
+      "name": "Three-day week",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 12
+    },
+    {
+      "name": "Jarrow March",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Cable Street",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 13
+    },
+    {
+      "name": "Poll tax riots",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 12
+    },
+    {
+      "name": "Greenham Common",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 13
+    },
+    {
+      "name": "Aldermaston marches",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 13
+    },
+    {
+      "name": "The Troubles",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 10
+    },
+    {
+      "name": "Good Friday Agreement",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 11
+    },
+    {
+      "name": "Bloody Sunday",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 11
+    },
+    {
+      "name": "Peace walls",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 12
+    },
+    {
+      "name": "Easter Rising",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 11
+    },
+    {
+      "name": "Bristol Bus Boycott",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 13
+    },
+    {
+      "name": "Dagenham sewing machinists' strike",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 13
+    },
+    {
+      "name": "Grunwick dispute",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 14
+    },
+    {
+      "name": "Brixton riots",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 13
+    },
+    {
+      "name": "Bobby Sands",
+      "facet": "Strikes, protests and the Troubles",
+      "known_at": 13
+    },
+    {
+      "name": "John Logie Baird",
+      "facet": "British inventions and engineering",
+      "known_at": 9
+    },
+    {
+      "name": "Frank Whittle",
+      "facet": "British inventions and engineering",
+      "known_at": 11
+    },
+    {
+      "name": "Concorde",
+      "facet": "British inventions and engineering",
+      "known_at": 8
+    },
+    {
+      "name": "Hovercraft",
+      "facet": "British inventions and engineering",
+      "known_at": 9
+    },
+    {
+      "name": "Mini",
+      "facet": "British inventions and engineering",
+      "known_at": 7
+    },
+    {
+      "name": "Catseyes",
+      "facet": "British inventions and engineering",
+      "known_at": 10
+    },
+    {
+      "name": "World Wide Web",
+      "facet": "British inventions and engineering",
+      "known_at": 6
+    },
+    {
+      "name": "Tim Berners-Lee",
+      "facet": "British inventions and engineering",
+      "known_at": 12
+    },
+    {
+      "name": "Radar",
+      "facet": "British inventions and engineering",
+      "known_at": 10
+    },
+    {
+      "name": "Dolly the sheep",
+      "facet": "British inventions and engineering",
+      "known_at": 9
+    },
+    {
+      "name": "Alexander Fleming",
+      "facet": "British inventions and engineering",
+      "known_at": 8
+    },
+    {
+      "name": "DNA double helix",
+      "facet": "British inventions and engineering",
+      "known_at": 12
+    },
+    {
+      "name": "Jodrell Bank",
+      "facet": "British inventions and engineering",
+      "known_at": 13
+    },
+    {
+      "name": "Bouncing bomb",
+      "facet": "British inventions and engineering",
+      "known_at": 11
+    },
+    {
+      "name": "Harrier jump jet",
+      "facet": "British inventions and engineering",
+      "known_at": 12
+    },
+    {
+      "name": "Colossus computer",
+      "facet": "British inventions and engineering",
+      "known_at": 13
+    },
+    {
+      "name": "ZX Spectrum",
+      "facet": "British inventions and engineering",
+      "known_at": 12
+    },
+    {
+      "name": "Dyson vacuum cleaner",
+      "facet": "British inventions and engineering",
+      "known_at": 9
+    },
+    {
+      "name": "IVF",
+      "facet": "British inventions and engineering",
+      "known_at": 13
+    },
+    {
+      "name": "Wind-up radio",
+      "facet": "British inventions and engineering",
+      "known_at": 13
+    },
+    {
+      "name": "Red telephone box",
+      "facet": "British inventions and engineering",
+      "known_at": 5
+    },
+    {
+      "name": "Decimalisation",
+      "facet": "Everyday life, money and homes",
+      "known_at": 11
+    },
+    {
+      "name": "Shilling",
+      "facet": "Everyday life, money and homes",
+      "known_at": 10
+    },
+    {
+      "name": "Half-crown",
+      "facet": "Everyday life, money and homes",
+      "known_at": 13
+    },
+    {
+      "name": "Old penny",
+      "facet": "Everyday life, money and homes",
+      "known_at": 12
+    },
+    {
+      "name": "Ten-shilling note",
+      "facet": "Everyday life, money and homes",
+      "known_at": 13
+    },
+    {
+      "name": "Pound coin",
+      "facet": "Everyday life, money and homes",
+      "known_at": 10
+    },
+    {
+      "name": "Milkman",
+      "facet": "Everyday life, money and homes",
+      "known_at": 6
+    },
+    {
+      "name": "Terraced house",
+      "facet": "Everyday life, money and homes",
+      "known_at": 8
+    },
+    {
+      "name": "Semi-detached house",
+      "facet": "Everyday life, money and homes",
+      "known_at": 9
+    },
+    {
+      "name": "Prefabs",
+      "facet": "Everyday life, money and homes",
+      "known_at": 12
+    },
+    {
+      "name": "Tower blocks",
+      "facet": "Everyday life, money and homes",
+      "known_at": 11
+    },
+    {
+      "name": "New towns",
+      "facet": "Everyday life, money and homes",
+      "known_at": 12
+    },
+    {
+      "name": "Outside toilet",
+      "facet": "Everyday life, money and homes",
+      "known_at": 10
+    },
+    {
+      "name": "Tin bath",
+      "facet": "Everyday life, money and homes",
+      "known_at": 10
+    },
+    {
+      "name": "Coal fire",
+      "facet": "Everyday life, money and homes",
+      "known_at": 8
+    },
+    {
+      "name": "Green Shield Stamps",
+      "facet": "Everyday life, money and homes",
+      "known_at": 13
+    },
+    {
+      "name": "Woolworths",
+      "facet": "Everyday life, money and homes",
+      "known_at": 9
+    },
+    {
+      "name": "Butlins",
+      "facet": "Everyday life, money and homes",
+      "known_at": 10
+    },
+    {
+      "name": "TV licence",
+      "facet": "Everyday life, money and homes",
+      "known_at": 10
+    },
+    {
+      "name": "Premium Bonds",
+      "facet": "Everyday life, money and homes",
+      "known_at": 12
+    },
+    {
+      "name": "Corner shop",
+      "facet": "Everyday life, money and homes",
+      "known_at": 7
+    },
+    {
+      "name": "Green Cross Code",
+      "facet": "Everyday life, money and homes",
+      "known_at": 9
+    },
+    {
+      "name": "Routemaster bus",
+      "facet": "Everyday life, money and homes",
+      "known_at": 8
+    },
+    {
+      "name": "1966 World Cup",
+      "facet": "Great sporting and national events",
+      "known_at": 7
+    },
+    {
+      "name": "Bobby Moore",
+      "facet": "Great sporting and national events",
+      "known_at": 11
+    },
+    {
+      "name": "Geoff Hurst",
+      "facet": "Great sporting and national events",
+      "known_at": 11
+    },
+    {
+      "name": "They think it's all over",
+      "facet": "Great sporting and national events",
+      "known_at": 11
+    },
+    {
+      "name": "1948 London Olympics",
+      "facet": "Great sporting and national events",
+      "known_at": 11
+    },
+    {
+      "name": "Four-minute mile",
+      "facet": "Great sporting and national events",
+      "known_at": 11
+    },
+    {
+      "name": "First ascent of Everest",
+      "facet": "Great sporting and national events",
+      "known_at": 10
+    },
+    {
+      "name": "Virginia Wade",
+      "facet": "Great sporting and national events",
+      "known_at": 13
+    },
+    {
+      "name": "Fred Perry",
+      "facet": "Great sporting and national events",
+      "known_at": 12
+    },
+    {
+      "name": "Torvill and Dean",
+      "facet": "Great sporting and national events",
+      "known_at": 12
+    },
+    {
+      "name": "Red Rum",
+      "facet": "Great sporting and national events",
+      "known_at": 12
+    },
+    {
+      "name": "Euro 96",
+      "facet": "Great sporting and national events",
+      "known_at": 11
+    },
+    {
+      "name": "Paul Gascoigne",
+      "facet": "Great sporting and national events",
+      "known_at": 11
+    },
+    {
+      "name": "Steve Redgrave",
+      "facet": "Great sporting and national events",
+      "known_at": 12
+    },
+    {
+      "name": "Daley Thompson",
+      "facet": "Great sporting and national events",
+      "known_at": 13
+    },
+    {
+      "name": "Eddie the Eagle",
+      "facet": "Great sporting and national events",
+      "known_at": 11
+    },
+    {
+      "name": "British Empire Exhibition",
+      "facet": "Great sporting and national events",
+      "known_at": 14
+    }
+  ]
+}

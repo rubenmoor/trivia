@@ -1,0 +1,807 @@
+{
+  "subcategory": "regional-specialities",
+  "facets": [
+    "Scottish dishes and sweets",
+    "Welsh food and bakes",
+    "Northern Irish specialities",
+    "Northern English classics",
+    "Midlands and East Anglian specialities",
+    "West Country food",
+    "London and South East favourites",
+    "Cheeses named after places",
+    "Seaside and fishing-town foods",
+    "Regional drinks and brews",
+    "Regional words for food",
+    "Food festivals and customs"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Tunnock's Teacake",
+      "facet": "Scottish dishes and sweets",
+      "known_at": 6
+    },
+    {
+      "name": "Dundee marmalade",
+      "facet": "Scottish dishes and sweets",
+      "known_at": 11
+    },
+    {
+      "name": "Black bun",
+      "facet": "Scottish dishes and sweets",
+      "known_at": 14
+    },
+    {
+      "name": "Tattie scones",
+      "facet": "Scottish dishes and sweets",
+      "known_at": 10
+    },
+    {
+      "name": "Edinburgh rock",
+      "facet": "Scottish dishes and sweets",
+      "known_at": 13
+    },
+    {
+      "name": "Selkirk bannock",
+      "facet": "Scottish dishes and sweets",
+      "known_at": 14
+    },
+    {
+      "name": "Rumbledethumps",
+      "facet": "Scottish dishes and sweets",
+      "known_at": 14
+    },
+    {
+      "name": "Welsh lamb",
+      "facet": "Welsh food and bakes",
+      "known_at": 7
+    },
+    {
+      "name": "Tiesen lap",
+      "facet": "Welsh food and bakes",
+      "known_at": 14
+    },
+    {
+      "name": "Crempog",
+      "facet": "Welsh food and bakes",
+      "known_at": 14
+    },
+    {
+      "name": "Halen Môn",
+      "facet": "Welsh food and bakes",
+      "known_at": 14
+    },
+    {
+      "name": "Snowdon pudding",
+      "facet": "Welsh food and bakes",
+      "known_at": 14
+    },
+    {
+      "name": "Monmouth pudding",
+      "facet": "Welsh food and bakes",
+      "known_at": 15
+    },
+    {
+      "name": "Anglesey eggs",
+      "facet": "Welsh food and bakes",
+      "known_at": 15
+    },
+    {
+      "name": "Welsh Black cattle",
+      "facet": "Welsh food and bakes",
+      "known_at": 13
+    },
+    {
+      "name": "Soda farl",
+      "facet": "Northern Irish specialities",
+      "known_at": 11
+    },
+    {
+      "name": "Potato bread",
+      "facet": "Northern Irish specialities",
+      "known_at": 10
+    },
+    {
+      "name": "Dulse",
+      "facet": "Northern Irish specialities",
+      "known_at": 14
+    },
+    {
+      "name": "Fifteens",
+      "facet": "Northern Irish specialities",
+      "known_at": 13
+    },
+    {
+      "name": "Tayto crisps",
+      "facet": "Northern Irish specialities",
+      "known_at": 10
+    },
+    {
+      "name": "Comber potatoes",
+      "facet": "Northern Irish specialities",
+      "known_at": 14
+    },
+    {
+      "name": "Armagh Bramley apples",
+      "facet": "Northern Irish specialities",
+      "known_at": 13
+    },
+    {
+      "name": "Lough Neagh eels",
+      "facet": "Northern Irish specialities",
+      "known_at": 14
+    },
+    {
+      "name": "Belfast bap",
+      "facet": "Northern Irish specialities",
+      "known_at": 13
+    },
+    {
+      "name": "Veda bread",
+      "facet": "Northern Irish specialities",
+      "known_at": 14
+    },
+    {
+      "name": "Paris bun",
+      "facet": "Northern Irish specialities",
+      "known_at": 14
+    },
+    {
+      "name": "Wheaten bread",
+      "facet": "Northern Irish specialities",
+      "known_at": 12
+    },
+    {
+      "name": "Gravy ring",
+      "facet": "Northern Irish specialities",
+      "known_at": 14
+    },
+    {
+      "name": "Pastie supper",
+      "facet": "Northern Irish specialities",
+      "known_at": 14
+    },
+    {
+      "name": "Boxty",
+      "facet": "Northern Irish specialities",
+      "known_at": 13
+    },
+    {
+      "name": "Pan haggerty",
+      "facet": "Northern English classics",
+      "known_at": 14
+    },
+    {
+      "name": "Yorkshire curd tart",
+      "facet": "Northern English classics",
+      "known_at": 13
+    },
+    {
+      "name": "Butter pie",
+      "facet": "Northern English classics",
+      "known_at": 14
+    },
+    {
+      "name": "Pontefract cakes",
+      "facet": "Northern English classics",
+      "known_at": 12
+    },
+    {
+      "name": "Yorkshire forced rhubarb",
+      "facet": "Northern English classics",
+      "known_at": 13
+    },
+    {
+      "name": "Fat Rascal",
+      "facet": "Northern English classics",
+      "known_at": 13
+    },
+    {
+      "name": "Henderson's Relish",
+      "facet": "Northern English classics",
+      "known_at": 13
+    },
+    {
+      "name": "Tripe and onions",
+      "facet": "Northern English classics",
+      "known_at": 12
+    },
+    {
+      "name": "Pikelet",
+      "facet": "Midlands and East Anglian specialities",
+      "known_at": 11
+    },
+    {
+      "name": "Norfolk turkey",
+      "facet": "Midlands and East Anglian specialities",
+      "known_at": 11
+    },
+    {
+      "name": "Grantham gingerbread",
+      "facet": "Midlands and East Anglian specialities",
+      "known_at": 14
+    },
+    {
+      "name": "Haslet",
+      "facet": "Midlands and East Anglian specialities",
+      "known_at": 13
+    },
+    {
+      "name": "Lincolnshire plum bread",
+      "facet": "Midlands and East Anglian specialities",
+      "known_at": 14
+    },
+    {
+      "name": "Norfolk dumpling",
+      "facet": "Midlands and East Anglian specialities",
+      "known_at": 13
+    },
+    {
+      "name": "Colman's Mustard",
+      "facet": "Midlands and East Anglian specialities",
+      "known_at": 10
+    },
+    {
+      "name": "Pershore plums",
+      "facet": "Midlands and East Anglian specialities",
+      "known_at": 14
+    },
+    {
+      "name": "Faggots and peas",
+      "facet": "Midlands and East Anglian specialities",
+      "known_at": 11
+    },
+    {
+      "name": "Fidget pie",
+      "facet": "Midlands and East Anglian specialities",
+      "known_at": 15
+    },
+    {
+      "name": "Lincolnshire stuffed chine",
+      "facet": "Midlands and East Anglian specialities",
+      "known_at": 15
+    },
+    {
+      "name": "Sally Lunn bun",
+      "facet": "West Country food",
+      "known_at": 13
+    },
+    {
+      "name": "Bath Oliver",
+      "facet": "West Country food",
+      "known_at": 14
+    },
+    {
+      "name": "Saffron bun",
+      "facet": "West Country food",
+      "known_at": 11
+    },
+    {
+      "name": "Hevva cake",
+      "facet": "West Country food",
+      "known_at": 14
+    },
+    {
+      "name": "Cornish fairings",
+      "facet": "West Country food",
+      "known_at": 13
+    },
+    {
+      "name": "Dorset apple cake",
+      "facet": "West Country food",
+      "known_at": 12
+    },
+    {
+      "name": "Devon split",
+      "facet": "West Country food",
+      "known_at": 13
+    },
+    {
+      "name": "Dorset knob",
+      "facet": "West Country food",
+      "known_at": 14
+    },
+    {
+      "name": "Bath chap",
+      "facet": "West Country food",
+      "known_at": 15
+    },
+    {
+      "name": "Wiltshire ham",
+      "facet": "West Country food",
+      "known_at": 12
+    },
+    {
+      "name": "Cornish Yarg",
+      "facet": "West Country food",
+      "known_at": 13
+    },
+    {
+      "name": "Dorset Blue Vinny",
+      "facet": "West Country food",
+      "known_at": 14
+    },
+    {
+      "name": "Hog's pudding",
+      "facet": "West Country food",
+      "known_at": 14
+    },
+    {
+      "name": "Cornish ice cream",
+      "facet": "West Country food",
+      "known_at": 6
+    },
+    {
+      "name": "Parsley liquor",
+      "facet": "London and South East favourites",
+      "known_at": 12
+    },
+    {
+      "name": "Brick Lane beigel",
+      "facet": "London and South East favourites",
+      "known_at": 12
+    },
+    {
+      "name": "Maids of Honour",
+      "facet": "London and South East favourites",
+      "known_at": 14
+    },
+    {
+      "name": "Kentish cobnuts",
+      "facet": "London and South East favourites",
+      "known_at": 13
+    },
+    {
+      "name": "Aylesbury duck",
+      "facet": "London and South East favourites",
+      "known_at": 12
+    },
+    {
+      "name": "Bedfordshire clanger",
+      "facet": "London and South East favourites",
+      "known_at": 13
+    },
+    {
+      "name": "Huffkin",
+      "facet": "London and South East favourites",
+      "known_at": 15
+    },
+    {
+      "name": "Gypsy tart",
+      "facet": "London and South East favourites",
+      "known_at": 12
+    },
+    {
+      "name": "Isle of Wight garlic",
+      "facet": "London and South East favourites",
+      "known_at": 13
+    },
+    {
+      "name": "Oxford marmalade",
+      "facet": "London and South East favourites",
+      "known_at": 13
+    },
+    {
+      "name": "Kentish cherries",
+      "facet": "London and South East favourites",
+      "known_at": 11
+    },
+    {
+      "name": "Caerphilly",
+      "facet": "Cheeses named after places",
+      "known_at": 11
+    },
+    {
+      "name": "Red Leicester",
+      "facet": "Cheeses named after places",
+      "known_at": 6
+    },
+    {
+      "name": "Double Gloucester",
+      "facet": "Cheeses named after places",
+      "known_at": 8
+    },
+    {
+      "name": "Lancashire cheese",
+      "facet": "Cheeses named after places",
+      "known_at": 10
+    },
+    {
+      "name": "Cheshire cheese",
+      "facet": "Cheeses named after places",
+      "known_at": 10
+    },
+    {
+      "name": "Shropshire Blue",
+      "facet": "Cheeses named after places",
+      "known_at": 12
+    },
+    {
+      "name": "Derby cheese",
+      "facet": "Cheeses named after places",
+      "known_at": 13
+    },
+    {
+      "name": "Swaledale cheese",
+      "facet": "Cheeses named after places",
+      "known_at": 14
+    },
+    {
+      "name": "Buxton Blue",
+      "facet": "Cheeses named after places",
+      "known_at": 14
+    },
+    {
+      "name": "Dunlop cheese",
+      "facet": "Cheeses named after places",
+      "known_at": 14
+    },
+    {
+      "name": "Lanark Blue",
+      "facet": "Cheeses named after places",
+      "known_at": 14
+    },
+    {
+      "name": "Coquetdale cheese",
+      "facet": "Cheeses named after places",
+      "known_at": 15
+    },
+    {
+      "name": "Cotherstone cheese",
+      "facet": "Cheeses named after places",
+      "known_at": 15
+    },
+    {
+      "name": "Craster kippers",
+      "facet": "Seaside and fishing-town foods",
+      "known_at": 13
+    },
+    {
+      "name": "Cromer crab",
+      "facet": "Seaside and fishing-town foods",
+      "known_at": 12
+    },
+    {
+      "name": "Penclawdd cockles",
+      "facet": "Seaside and fishing-town foods",
+      "known_at": 14
+    },
+    {
+      "name": "Seaside rock",
+      "facet": "Seaside and fishing-town foods",
+      "known_at": 3
+    },
+    {
+      "name": "Whelks",
+      "facet": "Seaside and fishing-town foods",
+      "known_at": 9
+    },
+    {
+      "name": "Grimsby smoked fish",
+      "facet": "Seaside and fishing-town foods",
+      "known_at": 13
+    },
+    {
+      "name": "Loch Fyne oysters",
+      "facet": "Seaside and fishing-town foods",
+      "known_at": 13
+    },
+    {
+      "name": "Cornish sardines",
+      "facet": "Seaside and fishing-town foods",
+      "known_at": 12
+    },
+    {
+      "name": "Partan bree",
+      "facet": "Seaside and fishing-town foods",
+      "known_at": 15
+    },
+    {
+      "name": "Portavogie prawns",
+      "facet": "Seaside and fishing-town foods",
+      "known_at": 15
+    },
+    {
+      "name": "Whitby scampi",
+      "facet": "Seaside and fishing-town foods",
+      "known_at": 12
+    },
+    {
+      "name": "Scotch whisky",
+      "facet": "Regional drinks and brews",
+      "known_at": 8
+    },
+    {
+      "name": "Penderyn whisky",
+      "facet": "Regional drinks and brews",
+      "known_at": 14
+    },
+    {
+      "name": "Bushmills whiskey",
+      "facet": "Regional drinks and brews",
+      "known_at": 12
+    },
+    {
+      "name": "Scrumpy",
+      "facet": "Regional drinks and brews",
+      "known_at": 11
+    },
+    {
+      "name": "Newcastle Brown Ale",
+      "facet": "Regional drinks and brews",
+      "known_at": 11
+    },
+    {
+      "name": "Vimto",
+      "facet": "Regional drinks and brews",
+      "known_at": 5
+    },
+    {
+      "name": "Plymouth Gin",
+      "facet": "Regional drinks and brews",
+      "known_at": 13
+    },
+    {
+      "name": "Buckfast",
+      "facet": "Regional drinks and brews",
+      "known_at": 13
+    },
+    {
+      "name": "Yorkshire Tea",
+      "facet": "Regional drinks and brews",
+      "known_at": 5
+    },
+    {
+      "name": "Lindisfarne mead",
+      "facet": "Regional drinks and brews",
+      "known_at": 14
+    },
+    {
+      "name": "Perry",
+      "facet": "Regional drinks and brews",
+      "known_at": 13
+    },
+    {
+      "name": "Somerset cider brandy",
+      "facet": "Regional drinks and brews",
+      "known_at": 15
+    },
+    {
+      "name": "Burton upon Trent brewing",
+      "facet": "Regional drinks and brews",
+      "known_at": 13
+    },
+    {
+      "name": "Theakston Old Peculier",
+      "facet": "Regional drinks and brews",
+      "known_at": 14
+    },
+    {
+      "name": "Islay whisky",
+      "facet": "Regional drinks and brews",
+      "known_at": 13
+    },
+    {
+      "name": "Drambuie",
+      "facet": "Regional drinks and brews",
+      "known_at": 13
+    },
+    {
+      "name": "Tizer",
+      "facet": "Regional drinks and brews",
+      "known_at": 10
+    },
+    {
+      "name": "London Pride",
+      "facet": "Regional drinks and brews",
+      "known_at": 12
+    },
+    {
+      "name": "Bap",
+      "facet": "Regional words for food",
+      "known_at": 6
+    },
+    {
+      "name": "Barm cake",
+      "facet": "Regional words for food",
+      "known_at": 10
+    },
+    {
+      "name": "Cob",
+      "facet": "Regional words for food",
+      "known_at": 10
+    },
+    {
+      "name": "Batch",
+      "facet": "Regional words for food",
+      "known_at": 12
+    },
+    {
+      "name": "Breadcake",
+      "facet": "Regional words for food",
+      "known_at": 12
+    },
+    {
+      "name": "Butty",
+      "facet": "Regional words for food",
+      "known_at": 6
+    },
+    {
+      "name": "Scran",
+      "facet": "Regional words for food",
+      "known_at": 10
+    },
+    {
+      "name": "Bait",
+      "facet": "Regional words for food",
+      "known_at": 13
+    },
+    {
+      "name": "Snap",
+      "facet": "Regional words for food",
+      "known_at": 13
+    },
+    {
+      "name": "Piece",
+      "facet": "Regional words for food",
+      "known_at": 12
+    },
+    {
+      "name": "Tea",
+      "facet": "Regional words for food",
+      "known_at": 5
+    },
+    {
+      "name": "Fish supper",
+      "facet": "Regional words for food",
+      "known_at": 11
+    },
+    {
+      "name": "Ginger",
+      "facet": "Regional words for food",
+      "known_at": 12
+    },
+    {
+      "name": "Spice",
+      "facet": "Regional words for food",
+      "known_at": 13
+    },
+    {
+      "name": "Kets",
+      "facet": "Regional words for food",
+      "known_at": 14
+    },
+    {
+      "name": "Scallop",
+      "facet": "Regional words for food",
+      "known_at": 13
+    },
+    {
+      "name": "Oggy",
+      "facet": "Regional words for food",
+      "known_at": 13
+    },
+    {
+      "name": "Tattie",
+      "facet": "Regional words for food",
+      "known_at": 7
+    },
+    {
+      "name": "Pop",
+      "facet": "Regional words for food",
+      "known_at": 6
+    },
+    {
+      "name": "Sarnie",
+      "facet": "Regional words for food",
+      "known_at": 5
+    },
+    {
+      "name": "Burns Night",
+      "facet": "Food festivals and customs",
+      "known_at": 8
+    },
+    {
+      "name": "Address to a Haggis",
+      "facet": "Food festivals and customs",
+      "known_at": 12
+    },
+    {
+      "name": "Olney Pancake Race",
+      "facet": "Food festivals and customs",
+      "known_at": 12
+    },
+    {
+      "name": "First-footing",
+      "facet": "Food festivals and customs",
+      "known_at": 12
+    },
+    {
+      "name": "Hot cross buns",
+      "facet": "Food festivals and customs",
+      "known_at": 3
+    },
+    {
+      "name": "Bonfire Night toffee apples",
+      "facet": "Food festivals and customs",
+      "known_at": 5
+    },
+    {
+      "name": "Ludlow Food Festival",
+      "facet": "Food festivals and customs",
+      "known_at": 14
+    },
+    {
+      "name": "Abergavenny Food Festival",
+      "facet": "Food festivals and customs",
+      "known_at": 14
+    },
+    {
+      "name": "Egremont Crab Fair",
+      "facet": "Food festivals and customs",
+      "known_at": 13
+    },
+    {
+      "name": "Ould Lammas Fair",
+      "facet": "Food festivals and customs",
+      "known_at": 14
+    },
+    {
+      "name": "Whitstable Oyster Festival",
+      "facet": "Food festivals and customs",
+      "known_at": 13
+    },
+    {
+      "name": "Hallaton Bottle Kicking",
+      "facet": "Food festivals and customs",
+      "known_at": 14
+    },
+    {
+      "name": "Wimbledon strawberries and cream",
+      "facet": "Food festivals and customs",
+      "known_at": 6
+    }
+  ]
+}

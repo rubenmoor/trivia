@@ -1,0 +1,794 @@
+{
+  "subcategory": "landmarks-and-castles",
+  "facets": [
+    "Castles of England",
+    "Castles of Scotland",
+    "Castles of Wales",
+    "Castles of Northern Ireland",
+    "Royal palaces and residences",
+    "Cathedrals, abbeys and churches",
+    "Prehistoric and Roman sites",
+    "London landmarks and towers",
+    "Bridges, piers and seaside landmarks",
+    "Natural landmarks and coastlines",
+    "Stately homes and gardens",
+    "Modern landmarks and monuments"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Warwick Castle",
+      "facet": "Castles of England",
+      "known_at": 6
+    },
+    {
+      "name": "Dover Castle",
+      "facet": "Castles of England",
+      "known_at": 7
+    },
+    {
+      "name": "Leeds Castle",
+      "facet": "Castles of England",
+      "known_at": 9
+    },
+    {
+      "name": "Alnwick Castle",
+      "facet": "Castles of England",
+      "known_at": 8
+    },
+    {
+      "name": "Lindisfarne Castle",
+      "facet": "Castles of England",
+      "known_at": 12
+    },
+    {
+      "name": "Corfe Castle",
+      "facet": "Castles of England",
+      "known_at": 10
+    },
+    {
+      "name": "Durham Castle",
+      "facet": "Castles of England",
+      "known_at": 12
+    },
+    {
+      "name": "Bodiam Castle",
+      "facet": "Castles of England",
+      "known_at": 12
+    },
+    {
+      "name": "Kenilworth Castle",
+      "facet": "Castles of England",
+      "known_at": 12
+    },
+    {
+      "name": "Arundel Castle",
+      "facet": "Castles of England",
+      "known_at": 12
+    },
+    {
+      "name": "Lancaster Castle",
+      "facet": "Castles of England",
+      "known_at": 12
+    },
+    {
+      "name": "Lincoln Castle",
+      "facet": "Castles of England",
+      "known_at": 12
+    },
+    {
+      "name": "Hever Castle",
+      "facet": "Castles of England",
+      "known_at": 13
+    },
+    {
+      "name": "Dunstanburgh Castle",
+      "facet": "Castles of England",
+      "known_at": 13
+    },
+    {
+      "name": "Pevensey Castle",
+      "facet": "Castles of England",
+      "known_at": 13
+    },
+    {
+      "name": "Clifford's Tower",
+      "facet": "Castles of England",
+      "known_at": 12
+    },
+    {
+      "name": "Nottingham Castle",
+      "facet": "Castles of England",
+      "known_at": 9
+    },
+    {
+      "name": "Carlisle Castle",
+      "facet": "Castles of England",
+      "known_at": 12
+    },
+    {
+      "name": "Pendennis Castle",
+      "facet": "Castles of England",
+      "known_at": 14
+    },
+    {
+      "name": "Stirling Castle",
+      "facet": "Castles of Scotland",
+      "known_at": 9
+    },
+    {
+      "name": "Eilean Donan",
+      "facet": "Castles of Scotland",
+      "known_at": 10
+    },
+    {
+      "name": "Urquhart Castle",
+      "facet": "Castles of Scotland",
+      "known_at": 10
+    },
+    {
+      "name": "Glamis Castle",
+      "facet": "Castles of Scotland",
+      "known_at": 12
+    },
+    {
+      "name": "Dunnottar Castle",
+      "facet": "Castles of Scotland",
+      "known_at": 12
+    },
+    {
+      "name": "Inveraray Castle",
+      "facet": "Castles of Scotland",
+      "known_at": 13
+    },
+    {
+      "name": "Cawdor Castle",
+      "facet": "Castles of Scotland",
+      "known_at": 12
+    },
+    {
+      "name": "Caerlaverock Castle",
+      "facet": "Castles of Scotland",
+      "known_at": 14
+    },
+    {
+      "name": "Blair Castle",
+      "facet": "Castles of Scotland",
+      "known_at": 14
+    },
+    {
+      "name": "Dunrobin Castle",
+      "facet": "Castles of Scotland",
+      "known_at": 14
+    },
+    {
+      "name": "Doune Castle",
+      "facet": "Castles of Scotland",
+      "known_at": 12
+    },
+    {
+      "name": "Craigievar Castle",
+      "facet": "Castles of Scotland",
+      "known_at": 14
+    },
+    {
+      "name": "Culzean Castle",
+      "facet": "Castles of Scotland",
+      "known_at": 13
+    },
+    {
+      "name": "Tantallon Castle",
+      "facet": "Castles of Scotland",
+      "known_at": 14
+    },
+    {
+      "name": "Castle Rock",
+      "facet": "Castles of Scotland",
+      "known_at": 10
+    },
+    {
+      "name": "One O'Clock Gun",
+      "facet": "Castles of Scotland",
+      "known_at": 12
+    },
+    {
+      "name": "Harlech Castle",
+      "facet": "Castles of Wales",
+      "known_at": 11
+    },
+    {
+      "name": "Beaumaris Castle",
+      "facet": "Castles of Wales",
+      "known_at": 12
+    },
+    {
+      "name": "Cardiff Castle",
+      "facet": "Castles of Wales",
+      "known_at": 7
+    },
+    {
+      "name": "Caerphilly Castle",
+      "facet": "Castles of Wales",
+      "known_at": 11
+    },
+    {
+      "name": "Pembroke Castle",
+      "facet": "Castles of Wales",
+      "known_at": 12
+    },
+    {
+      "name": "Castell Coch",
+      "facet": "Castles of Wales",
+      "known_at": 12
+    },
+    {
+      "name": "Chepstow Castle",
+      "facet": "Castles of Wales",
+      "known_at": 13
+    },
+    {
+      "name": "Raglan Castle",
+      "facet": "Castles of Wales",
+      "known_at": 13
+    },
+    {
+      "name": "Kidwelly Castle",
+      "facet": "Castles of Wales",
+      "known_at": 14
+    },
+    {
+      "name": "Powis Castle",
+      "facet": "Castles of Wales",
+      "known_at": 13
+    },
+    {
+      "name": "Carreg Cennen Castle",
+      "facet": "Castles of Wales",
+      "known_at": 14
+    },
+    {
+      "name": "Rhuddlan Castle",
+      "facet": "Castles of Wales",
+      "known_at": 14
+    },
+    {
+      "name": "Criccieth Castle",
+      "facet": "Castles of Wales",
+      "known_at": 14
+    },
+    {
+      "name": "Penrhyn Castle",
+      "facet": "Castles of Wales",
+      "known_at": 14
+    },
+    {
+      "name": "Dolbadarn Castle",
+      "facet": "Castles of Wales",
+      "known_at": 15
+    },
+    {
+      "name": "Iron Ring of castles",
+      "facet": "Castles of Wales",
+      "known_at": 13
+    },
+    {
+      "name": "Carrickfergus Castle",
+      "facet": "Castles of Northern Ireland",
+      "known_at": 10
+    },
+    {
+      "name": "Belfast Castle",
+      "facet": "Castles of Northern Ireland",
+      "known_at": 11
+    },
+    {
+      "name": "Enniskillen Castle",
+      "facet": "Castles of Northern Ireland",
+      "known_at": 13
+    },
+    {
+      "name": "Castle Ward",
+      "facet": "Castles of Northern Ireland",
+      "known_at": 13
+    },
+    {
+      "name": "Dundrum Castle",
+      "facet": "Castles of Northern Ireland",
+      "known_at": 14
+    },
+    {
+      "name": "Kinbane Castle",
+      "facet": "Castles of Northern Ireland",
+      "known_at": 15,
+      "retired": "unaskable: Kinbane Castle is too obscure for any fair multiple-choice question."
+    },
+    {
+      "name": "Gosford Castle",
+      "facet": "Castles of Northern Ireland",
+      "known_at": 15
+    },
+    {
+      "name": "Castle Coole",
+      "facet": "Castles of Northern Ireland",
+      "known_at": 14
+    },
+    {
+      "name": "Narrow Water Castle",
+      "facet": "Castles of Northern Ireland",
+      "known_at": 15
+    },
+    {
+      "name": "Olderfleet Castle",
+      "facet": "Castles of Northern Ireland",
+      "known_at": 15
+    },
+    {
+      "name": "Dunseverick Castle",
+      "facet": "Castles of Northern Ireland",
+      "known_at": 15,
+      "retired": "unaskable: Dunseverick Castle is too obscure, and its legends are too uncertain for a fair question."
+    },
+    {
+      "name": "Killyleagh Castle",
+      "facet": "Castles of Northern Ireland",
+      "known_at": 15
+    },
+    {
+      "name": "Harry Avery's Castle",
+      "facet": "Castles of Northern Ireland",
+      "known_at": 15
+    },
+    {
+      "name": "Monea Castle",
+      "facet": "Castles of Northern Ireland",
+      "known_at": 15
+    },
+    {
+      "name": "Windsor Castle",
+      "facet": "Royal palaces and residences",
+      "known_at": 4
+    },
+    {
+      "name": "Balmoral Castle",
+      "facet": "Royal palaces and residences",
+      "known_at": 7
+    },
+    {
+      "name": "Sandringham House",
+      "facet": "Royal palaces and residences",
+      "known_at": 9
+    },
+    {
+      "name": "Palace of Holyroodhouse",
+      "facet": "Royal palaces and residences",
+      "known_at": 10
+    },
+    {
+      "name": "Kew Palace",
+      "facet": "Royal palaces and residences",
+      "known_at": 13
+    },
+    {
+      "name": "Highgrove House",
+      "facet": "Royal palaces and residences",
+      "known_at": 12
+    },
+    {
+      "name": "Frogmore Cottage",
+      "facet": "Royal palaces and residences",
+      "known_at": 11
+    },
+    {
+      "name": "Hillsborough Castle",
+      "facet": "Royal palaces and residences",
+      "known_at": 13
+    },
+    {
+      "name": "Castle of Mey",
+      "facet": "Royal palaces and residences",
+      "known_at": 14
+    },
+    {
+      "name": "Royal Standard",
+      "facet": "Royal palaces and residences",
+      "known_at": 11
+    },
+    {
+      "name": "Canterbury Cathedral",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 9
+    },
+    {
+      "name": "York Minster",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 9
+    },
+    {
+      "name": "Durham Cathedral",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 11
+    },
+    {
+      "name": "Salisbury Cathedral",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 11
+    },
+    {
+      "name": "Lincoln Cathedral",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 13
+    },
+    {
+      "name": "Ely Cathedral",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 13
+    },
+    {
+      "name": "Wells Cathedral",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 13
+    },
+    {
+      "name": "Coventry Cathedral",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 11
+    },
+    {
+      "name": "Liverpool Cathedral",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 12
+    },
+    {
+      "name": "St Giles' Cathedral",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 13
+    },
+    {
+      "name": "St Davids Cathedral",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 13
+    },
+    {
+      "name": "Bath Abbey",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 12
+    },
+    {
+      "name": "Whitby Abbey",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 10
+    },
+    {
+      "name": "Fountains Abbey",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 13
+    },
+    {
+      "name": "Tintern Abbey",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 12
+    },
+    {
+      "name": "Rievaulx Abbey",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 14
+    },
+    {
+      "name": "Lindisfarne Priory",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 11
+    },
+    {
+      "name": "Iona Abbey",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 13
+    },
+    {
+      "name": "Rosslyn Chapel",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 12
+    },
+    {
+      "name": "Melrose Abbey",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 14
+    },
+    {
+      "name": "St Patrick's Cathedral, Armagh",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 14
+    },
+    {
+      "name": "Hereford Mappa Mundi",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 14
+    },
+    {
+      "name": "Stonehenge",
+      "facet": "Prehistoric and Roman sites",
+      "known_at": 3
+    },
+    {
+      "name": "Roman Baths",
+      "facet": "Prehistoric and Roman sites",
+      "known_at": 7
+    },
+    {
+      "name": "Callanish Stones",
+      "facet": "Prehistoric and Roman sites",
+      "known_at": 14
+    },
+    {
+      "name": "Sutton Hoo",
+      "facet": "Prehistoric and Roman sites",
+      "known_at": 10
+    },
+    {
+      "name": "Fishbourne Roman Palace",
+      "facet": "Prehistoric and Roman sites",
+      "known_at": 13
+    },
+    {
+      "name": "Vindolanda",
+      "facet": "Prehistoric and Roman sites",
+      "known_at": 12
+    },
+    {
+      "name": "Caerleon",
+      "facet": "Prehistoric and Roman sites",
+      "known_at": 13
+    },
+    {
+      "name": "Housesteads Roman Fort",
+      "facet": "Prehistoric and Roman sites",
+      "known_at": 13
+    },
+    {
+      "name": "Grime's Graves",
+      "facet": "Prehistoric and Roman sites",
+      "known_at": 14
+    },
+    {
+      "name": "Maeshowe",
+      "facet": "Prehistoric and Roman sites",
+      "known_at": 15
+    },
+    {
+      "name": "Bryn Celli Ddu",
+      "facet": "Prehistoric and Roman sites",
+      "known_at": 15
+    },
+    {
+      "name": "Palace of Westminster",
+      "facet": "London landmarks and towers",
+      "known_at": 7
+    },
+    {
+      "name": "Tower of London ravens",
+      "facet": "London landmarks and towers",
+      "known_at": 8
+    },
+    {
+      "name": "Walkie-Talkie",
+      "facet": "London landmarks and towers",
+      "known_at": 12
+    },
+    {
+      "name": "Menai Suspension Bridge",
+      "facet": "Bridges, piers and seaside landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Iron Bridge",
+      "facet": "Bridges, piers and seaside landmarks",
+      "known_at": 11
+    },
+    {
+      "name": "Tyne Bridge",
+      "facet": "Bridges, piers and seaside landmarks",
+      "known_at": 10
+    },
+    {
+      "name": "Gateshead Millennium Bridge",
+      "facet": "Bridges, piers and seaside landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "West Pier",
+      "facet": "Bridges, piers and seaside landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Llandudno Pier",
+      "facet": "Bridges, piers and seaside landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Wookey Hole",
+      "facet": "Natural landmarks and coastlines",
+      "known_at": 12
+    },
+    {
+      "name": "Blenheim Palace",
+      "facet": "Stately homes and gardens",
+      "known_at": 10
+    },
+    {
+      "name": "Castle Howard",
+      "facet": "Stately homes and gardens",
+      "known_at": 12
+    },
+    {
+      "name": "Highclere Castle",
+      "facet": "Stately homes and gardens",
+      "known_at": 11
+    },
+    {
+      "name": "Longleat",
+      "facet": "Stately homes and gardens",
+      "known_at": 7
+    },
+    {
+      "name": "Stourhead",
+      "facet": "Stately homes and gardens",
+      "known_at": 13
+    },
+    {
+      "name": "Sissinghurst Castle Garden",
+      "facet": "Stately homes and gardens",
+      "known_at": 13
+    },
+    {
+      "name": "Waddesdon Manor",
+      "facet": "Stately homes and gardens",
+      "known_at": 14
+    },
+    {
+      "name": "Burghley House",
+      "facet": "Stately homes and gardens",
+      "known_at": 13
+    },
+    {
+      "name": "Hatfield House",
+      "facet": "Stately homes and gardens",
+      "known_at": 13
+    },
+    {
+      "name": "Stowe",
+      "facet": "Stately homes and gardens",
+      "known_at": 14
+    },
+    {
+      "name": "Knole",
+      "facet": "Stately homes and gardens",
+      "known_at": 14
+    },
+    {
+      "name": "Harewood House",
+      "facet": "Stately homes and gardens",
+      "known_at": 14
+    },
+    {
+      "name": "Bodnant Garden",
+      "facet": "Stately homes and gardens",
+      "known_at": 14
+    },
+    {
+      "name": "Mount Stewart",
+      "facet": "Stately homes and gardens",
+      "known_at": 14
+    },
+    {
+      "name": "Lost Gardens of Heligan",
+      "facet": "Stately homes and gardens",
+      "known_at": 12
+    },
+    {
+      "name": "Capability Brown",
+      "facet": "Stately homes and gardens",
+      "known_at": 12
+    },
+    {
+      "name": "Holkham Hall",
+      "facet": "Stately homes and gardens",
+      "known_at": 14
+    },
+    {
+      "name": "Lyme Park",
+      "facet": "Stately homes and gardens",
+      "known_at": 13
+    },
+    {
+      "name": "Eden Project",
+      "facet": "Modern landmarks and monuments",
+      "known_at": 7
+    },
+    {
+      "name": "Scottish Parliament Building",
+      "facet": "Modern landmarks and monuments",
+      "known_at": 12
+    },
+    {
+      "name": "Wembley Stadium arch",
+      "facet": "Modern landmarks and monuments",
+      "known_at": 5
+    },
+    {
+      "name": "Senedd",
+      "facet": "Modern landmarks and monuments",
+      "known_at": 12
+    },
+    {
+      "name": "The Cenotaph",
+      "facet": "Modern landmarks and monuments",
+      "known_at": 9
+    },
+    {
+      "name": "Wallace Monument",
+      "facet": "Modern landmarks and monuments",
+      "known_at": 11
+    },
+    {
+      "name": "Scott Monument",
+      "facet": "Modern landmarks and monuments",
+      "known_at": 12
+    },
+    {
+      "name": "Fourth Plinth",
+      "facet": "Modern landmarks and monuments",
+      "known_at": 12
+    },
+    {
+      "name": "Antony Gormley",
+      "facet": "Modern landmarks and monuments",
+      "known_at": 12
+    },
+    {
+      "name": "Big One",
+      "facet": "Modern landmarks and monuments",
+      "known_at": 12
+    }
+  ]
+}

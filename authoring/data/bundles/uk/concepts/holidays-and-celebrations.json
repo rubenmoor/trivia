@@ -1,0 +1,742 @@
+{
+  "subcategory": "holidays-and-celebrations",
+  "facets": [
+    "Bonfire Night and Guy Fawkes",
+    "Christmas and Boxing Day traditions",
+    "Pancake Day and Easter customs",
+    "Bank holidays and the calendar",
+    "Royal occasions and jubilees",
+    "Remembrance and national commemorations",
+    "Patron saints' days",
+    "Scottish New Year and Burns Night",
+    "May Day and seasonal folk customs",
+    "Mothering Sunday and family celebrations",
+    "Holiday food and treats",
+    "Celebrations on screen and in song"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "King James I",
+      "facet": "Bonfire Night and Guy Fawkes",
+      "known_at": 8
+    },
+    {
+      "name": "Catherine wheel",
+      "facet": "Bonfire Night and Guy Fawkes",
+      "known_at": 6
+    },
+    {
+      "name": "Rocket firework",
+      "facet": "Bonfire Night and Guy Fawkes",
+      "known_at": 1
+    },
+    {
+      "name": "Guy effigy",
+      "facet": "Bonfire Night and Guy Fawkes",
+      "known_at": 4
+    },
+    {
+      "name": "Search of the Parliament cellars",
+      "facet": "Bonfire Night and Guy Fawkes",
+      "known_at": 13
+    },
+    {
+      "name": "Yeomen of the Guard",
+      "facet": "Bonfire Night and Guy Fawkes",
+      "known_at": 11
+    },
+    {
+      "name": "Paper crown",
+      "facet": "Christmas and Boxing Day traditions",
+      "known_at": 1
+    },
+    {
+      "name": "King's Christmas Message",
+      "facet": "Christmas and Boxing Day traditions",
+      "known_at": 5
+    },
+    {
+      "name": "Christmas stocking",
+      "facet": "Christmas and Boxing Day traditions",
+      "known_at": 1
+    },
+    {
+      "name": "Father Christmas",
+      "facet": "Christmas and Boxing Day traditions",
+      "known_at": 1
+    },
+    {
+      "name": "Pantomime dame",
+      "facet": "Christmas and Boxing Day traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Boxing Day sales",
+      "facet": "Christmas and Boxing Day traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Boxing Day football",
+      "facet": "Christmas and Boxing Day traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Nativity play",
+      "facet": "Christmas and Boxing Day traditions",
+      "known_at": 2
+    },
+    {
+      "name": "Carol singing",
+      "facet": "Christmas and Boxing Day traditions",
+      "known_at": 2
+    },
+    {
+      "name": "Christmas jumper",
+      "facet": "Christmas and Boxing Day traditions",
+      "known_at": 2
+    },
+    {
+      "name": "Twelfth Night",
+      "facet": "Christmas and Boxing Day traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Christmas Day swim",
+      "facet": "Christmas and Boxing Day traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Christmas Eve",
+      "facet": "Christmas and Boxing Day traditions",
+      "known_at": 1
+    },
+    {
+      "name": "Shrove Tuesday",
+      "facet": "Pancake Day and Easter customs",
+      "known_at": 4
+    },
+    {
+      "name": "Pancake race",
+      "facet": "Pancake Day and Easter customs",
+      "known_at": 5
+    },
+    {
+      "name": "Ash Wednesday",
+      "facet": "Pancake Day and Easter customs",
+      "known_at": 8
+    },
+    {
+      "name": "Lent",
+      "facet": "Pancake Day and Easter customs",
+      "known_at": 5
+    },
+    {
+      "name": "Good Friday",
+      "facet": "Pancake Day and Easter customs",
+      "known_at": 3
+    },
+    {
+      "name": "Easter Monday",
+      "facet": "Pancake Day and Easter customs",
+      "known_at": 3
+    },
+    {
+      "name": "Easter egg hunt",
+      "facet": "Pancake Day and Easter customs",
+      "known_at": 1
+    },
+    {
+      "name": "Egg rolling",
+      "facet": "Pancake Day and Easter customs",
+      "known_at": 7
+    },
+    {
+      "name": "Royal Maundy",
+      "facet": "Pancake Day and Easter customs",
+      "known_at": 12
+    },
+    {
+      "name": "Maundy money",
+      "facet": "Pancake Day and Easter customs",
+      "known_at": 12
+    },
+    {
+      "name": "Easter bonnet",
+      "facet": "Pancake Day and Easter customs",
+      "known_at": 3
+    },
+    {
+      "name": "Palm Sunday",
+      "facet": "Pancake Day and Easter customs",
+      "known_at": 7
+    },
+    {
+      "name": "Pace egging",
+      "facet": "Pancake Day and Easter customs",
+      "known_at": 13
+    },
+    {
+      "name": "Easter Bunny",
+      "facet": "Pancake Day and Easter customs",
+      "known_at": 1
+    },
+    {
+      "name": "Sir John Lubbock",
+      "facet": "Bank holidays and the calendar",
+      "known_at": 14
+    },
+    {
+      "name": "Bank Holidays Act 1871",
+      "facet": "Bank holidays and the calendar",
+      "known_at": 13
+    },
+    {
+      "name": "Early May bank holiday",
+      "facet": "Bank holidays and the calendar",
+      "known_at": 5
+    },
+    {
+      "name": "Spring bank holiday",
+      "facet": "Bank holidays and the calendar",
+      "known_at": 6
+    },
+    {
+      "name": "August bank holiday",
+      "facet": "Bank holidays and the calendar",
+      "known_at": 5
+    },
+    {
+      "name": "St Andrew's Day bank holiday",
+      "facet": "Bank holidays and the calendar",
+      "known_at": 11
+    },
+    {
+      "name": "Twelfth of July",
+      "facet": "Bank holidays and the calendar",
+      "known_at": 12
+    },
+    {
+      "name": "2 January bank holiday",
+      "facet": "Bank holidays and the calendar",
+      "known_at": 10
+    },
+    {
+      "name": "British Summer Time",
+      "facet": "Bank holidays and the calendar",
+      "known_at": 6
+    },
+    {
+      "name": "Clocks going back",
+      "facet": "Bank holidays and the calendar",
+      "known_at": 4
+    },
+    {
+      "name": "Quarter days",
+      "facet": "Bank holidays and the calendar",
+      "known_at": 14
+    },
+    {
+      "name": "Lady Day",
+      "facet": "Bank holidays and the calendar",
+      "known_at": 14
+    },
+    {
+      "name": "Michaelmas",
+      "facet": "Bank holidays and the calendar",
+      "known_at": 12
+    },
+    {
+      "name": "Half-term",
+      "facet": "Bank holidays and the calendar",
+      "known_at": 2
+    },
+    {
+      "name": "Tax year",
+      "facet": "Bank holidays and the calendar",
+      "known_at": 12
+    },
+    {
+      "name": "King's Official Birthday",
+      "facet": "Royal occasions and jubilees",
+      "known_at": 9
+    },
+    {
+      "name": "Coronation of Elizabeth II",
+      "facet": "Royal occasions and jubilees",
+      "known_at": 8
+    },
+    {
+      "name": "Platinum Jubilee",
+      "facet": "Royal occasions and jubilees",
+      "known_at": 5
+    },
+    {
+      "name": "Diamond Jubilee",
+      "facet": "Royal occasions and jubilees",
+      "known_at": 7
+    },
+    {
+      "name": "Wedding of Prince William and Catherine Middleton",
+      "facet": "Royal occasions and jubilees",
+      "known_at": 6
+    },
+    {
+      "name": "Street party",
+      "facet": "Royal occasions and jubilees",
+      "known_at": 3
+    },
+    {
+      "name": "Garter Day",
+      "facet": "Royal occasions and jubilees",
+      "known_at": 14
+    },
+    {
+      "name": "Jubilee beacons",
+      "facet": "Royal occasions and jubilees",
+      "known_at": 11
+    },
+    {
+      "name": "King's Birthday Honours",
+      "facet": "Royal occasions and jubilees",
+      "known_at": 11
+    },
+    {
+      "name": "Red Arrows flypast",
+      "facet": "Royal occasions and jubilees",
+      "known_at": 5
+    },
+    {
+      "name": "Remembrance Sunday",
+      "facet": "Remembrance and national commemorations",
+      "known_at": 5
+    },
+    {
+      "name": "Royal British Legion",
+      "facet": "Remembrance and national commemorations",
+      "known_at": 9
+    },
+    {
+      "name": "Last Post",
+      "facet": "Remembrance and national commemorations",
+      "known_at": 9
+    },
+    {
+      "name": "Tomb of the Unknown Warrior",
+      "facet": "Remembrance and national commemorations",
+      "known_at": 12
+    },
+    {
+      "name": "Poppy Appeal",
+      "facet": "Remembrance and national commemorations",
+      "known_at": 6
+    },
+    {
+      "name": "Tower of London poppies",
+      "facet": "Remembrance and national commemorations",
+      "known_at": 10
+    },
+    {
+      "name": "D-Day anniversary",
+      "facet": "Remembrance and national commemorations",
+      "known_at": 8
+    },
+    {
+      "name": "Battle of Britain Day",
+      "facet": "Remembrance and national commemorations",
+      "known_at": 11
+    },
+    {
+      "name": "For the Fallen",
+      "facet": "Remembrance and national commemorations",
+      "known_at": 11
+    },
+    {
+      "name": "In Flanders Fields",
+      "facet": "Remembrance and national commemorations",
+      "known_at": 11
+    },
+    {
+      "name": "Festival of Remembrance",
+      "facet": "Remembrance and national commemorations",
+      "known_at": 11
+    },
+    {
+      "name": "St George's Day",
+      "facet": "Patron saints' days",
+      "known_at": 5
+    },
+    {
+      "name": "St George",
+      "facet": "Patron saints' days",
+      "known_at": 3
+    },
+    {
+      "name": "St Andrew's Day",
+      "facet": "Patron saints' days",
+      "known_at": 8
+    },
+    {
+      "name": "St Andrew",
+      "facet": "Patron saints' days",
+      "known_at": 7
+    },
+    {
+      "name": "Saltire",
+      "facet": "Patron saints' days",
+      "known_at": 10
+    },
+    {
+      "name": "St Patrick's Day",
+      "facet": "Patron saints' days",
+      "known_at": 4
+    },
+    {
+      "name": "St Piran's Day",
+      "facet": "Patron saints' days",
+      "known_at": 13
+    },
+    {
+      "name": "St Dwynwen's Day",
+      "facet": "Patron saints' days",
+      "known_at": 13
+    },
+    {
+      "name": "Union Jack",
+      "facet": "Patron saints' days",
+      "known_at": 2
+    },
+    {
+      "name": "St George's Cross",
+      "facet": "Patron saints' days",
+      "known_at": 4
+    },
+    {
+      "name": "Auld Lang Syne",
+      "facet": "Scottish New Year and Burns Night",
+      "known_at": 6
+    },
+    {
+      "name": "Robert Burns",
+      "facet": "Scottish New Year and Burns Night",
+      "known_at": 8
+    },
+    {
+      "name": "Bagpipes",
+      "facet": "Scottish New Year and Burns Night",
+      "known_at": 2
+    },
+    {
+      "name": "Edinburgh Hogmanay",
+      "facet": "Scottish New Year and Burns Night",
+      "known_at": 9
+    },
+    {
+      "name": "Loony Dook",
+      "facet": "Scottish New Year and Burns Night",
+      "known_at": 13
+    },
+    {
+      "name": "Stonehaven Fireballs",
+      "facet": "Scottish New Year and Burns Night",
+      "known_at": 14
+    },
+    {
+      "name": "Ceilidh",
+      "facet": "Scottish New Year and Burns Night",
+      "known_at": 9
+    },
+    {
+      "name": "Selkirk Grace",
+      "facet": "Scottish New Year and Burns Night",
+      "known_at": 14
+    },
+    {
+      "name": "Kilt",
+      "facet": "Scottish New Year and Burns Night",
+      "known_at": 2
+    },
+    {
+      "name": "May Queen",
+      "facet": "May Day and seasonal folk customs",
+      "known_at": 7
+    },
+    {
+      "name": "Padstow 'Obby 'Oss",
+      "facet": "May Day and seasonal folk customs",
+      "known_at": 13
+    },
+    {
+      "name": "Summer solstice at Stonehenge",
+      "facet": "May Day and seasonal folk customs",
+      "known_at": 8
+    },
+    {
+      "name": "Oxford May Morning",
+      "facet": "May Day and seasonal folk customs",
+      "known_at": 13
+    },
+    {
+      "name": "Plough Monday",
+      "facet": "May Day and seasonal folk customs",
+      "known_at": 14
+    },
+    {
+      "name": "Bog snorkelling",
+      "facet": "May Day and seasonal folk customs",
+      "known_at": 11
+    },
+    {
+      "name": "Gurning",
+      "facet": "May Day and seasonal folk customs",
+      "known_at": 11
+    },
+    {
+      "name": "Turnip lantern",
+      "facet": "May Day and seasonal folk customs",
+      "known_at": 10
+    },
+    {
+      "name": "Mothering Sunday",
+      "facet": "Mothering Sunday and family celebrations",
+      "known_at": 4
+    },
+    {
+      "name": "Mother church",
+      "facet": "Mothering Sunday and family celebrations",
+      "known_at": 13
+    },
+    {
+      "name": "Father's Day",
+      "facet": "Mothering Sunday and family celebrations",
+      "known_at": 2
+    },
+    {
+      "name": "Valentine's Day",
+      "facet": "Mothering Sunday and family celebrations",
+      "known_at": 2
+    },
+    {
+      "name": "Christening",
+      "facet": "Mothering Sunday and family celebrations",
+      "known_at": 5
+    },
+    {
+      "name": "Hen do",
+      "facet": "Mothering Sunday and family celebrations",
+      "known_at": 9
+    },
+    {
+      "name": "Stag do",
+      "facet": "Mothering Sunday and family celebrations",
+      "known_at": 9
+    },
+    {
+      "name": "Something old, something new",
+      "facet": "Mothering Sunday and family celebrations",
+      "known_at": 8
+    },
+    {
+      "name": "Best man's speech",
+      "facet": "Mothering Sunday and family celebrations",
+      "known_at": 8
+    },
+    {
+      "name": "Golden wedding anniversary",
+      "facet": "Mothering Sunday and family celebrations",
+      "known_at": 7
+    },
+    {
+      "name": "Birthday card from the King",
+      "facet": "Mothering Sunday and family celebrations",
+      "known_at": 7
+    },
+    {
+      "name": "Key of the door (21st birthday)",
+      "facet": "Mothering Sunday and family celebrations",
+      "known_at": 12
+    },
+    {
+      "name": "Birthday bumps",
+      "facet": "Mothering Sunday and family celebrations",
+      "known_at": 5
+    },
+    {
+      "name": "Pass the parcel",
+      "facet": "Mothering Sunday and family celebrations",
+      "known_at": 1
+    },
+    {
+      "name": "Party bag",
+      "facet": "Mothering Sunday and family celebrations",
+      "known_at": 1
+    },
+    {
+      "name": "Musical chairs",
+      "facet": "Mothering Sunday and family celebrations",
+      "known_at": 1
+    },
+    {
+      "name": "Fairy cake",
+      "facet": "Mothering Sunday and family celebrations",
+      "known_at": 2
+    },
+    {
+      "name": "Pancake with lemon and sugar",
+      "facet": "Holiday food and treats",
+      "known_at": 3
+    },
+    {
+      "name": "Sixpence in the pudding",
+      "facet": "Holiday food and treats",
+      "known_at": 10
+    },
+    {
+      "name": "Platinum Pudding",
+      "facet": "Holiday food and treats",
+      "known_at": 12
+    },
+    {
+      "name": "Christmas Number One",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 6
+    },
+    {
+      "name": "Do They Know It's Christmas?",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 8
+    },
+    {
+      "name": "Band Aid",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 9
+    },
+    {
+      "name": "Last Christmas",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 5
+    },
+    {
+      "name": "Fairytale of New York",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 9
+    },
+    {
+      "name": "Merry Xmas Everybody",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 9
+    },
+    {
+      "name": "I Wish It Could Be Christmas Everyday",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 10
+    },
+    {
+      "name": "Mistletoe and Wine",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 11
+    },
+    {
+      "name": "Stay Another Day",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 12
+    },
+    {
+      "name": "LadBaby",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 9
+    },
+    {
+      "name": "Killing in the Name Christmas Number One",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 12
+    },
+    {
+      "name": "John Lewis Christmas advert",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 6
+    },
+    {
+      "name": "Kevin the Carrot",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 5
+    },
+    {
+      "name": "The Snowman",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 3
+    },
+    {
+      "name": "Walking in the Air",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 7
+    },
+    {
+      "name": "Doctor Who Christmas special",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 8
+    },
+    {
+      "name": "Gavin & Stacey Christmas special",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 10
+    },
+    {
+      "name": "Morecambe and Wise Christmas Show",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 13
+    },
+    {
+      "name": "Top of the Pops Christmas special",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 11
+    },
+    {
+      "name": "Land of Hope and Glory",
+      "facet": "Celebrations on screen and in song",
+      "known_at": 10
+    }
+  ]
+}

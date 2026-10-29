@@ -1,0 +1,892 @@
+{
+  "subcategory": "weather-and-seasons",
+  "facets": [
+    "Weather sayings and folklore",
+    "The Shipping Forecast",
+    "Famous storms and floods",
+    "Record-breaking British weather",
+    "Fog, smog and haar",
+    "Rain, drizzle and dialect words",
+    "Snow and white Christmases",
+    "Heatwaves and summer washouts",
+    "Weather forecasting and the Met Office",
+    "Weather at British events",
+    "Regional climates and the Gulf Stream",
+    "Weather in British culture and media"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "St Swithin's Day",
+      "facet": "Weather sayings and folklore",
+      "known_at": 8
+    },
+    {
+      "name": "Red sky at night, shepherd's delight",
+      "facet": "Weather sayings and folklore",
+      "known_at": 5
+    },
+    {
+      "name": "March comes in like a lion",
+      "facet": "Weather sayings and folklore",
+      "known_at": 9
+    },
+    {
+      "name": "April showers",
+      "facet": "Weather sayings and folklore",
+      "known_at": 5
+    },
+    {
+      "name": "Raining cats and dogs",
+      "facet": "Weather sayings and folklore",
+      "known_at": 4
+    },
+    {
+      "name": "Cows lying down before rain",
+      "facet": "Weather sayings and folklore",
+      "known_at": 7
+    },
+    {
+      "name": "Candlemas Day",
+      "facet": "Weather sayings and folklore",
+      "known_at": 13
+    },
+    {
+      "name": "Pine cone weather forecasting",
+      "facet": "Weather sayings and folklore",
+      "known_at": 9
+    },
+    {
+      "name": "Seaweed weather forecasting",
+      "facet": "Weather sayings and folklore",
+      "known_at": 10
+    },
+    {
+      "name": "St Luke's Little Summer",
+      "facet": "Weather sayings and folklore",
+      "known_at": 14
+    },
+    {
+      "name": "Halcyon days",
+      "facet": "Weather sayings and folklore",
+      "known_at": 13
+    },
+    {
+      "name": "Mackerel sky",
+      "facet": "Weather sayings and folklore",
+      "known_at": 12
+    },
+    {
+      "name": "Rain before seven, fine by eleven",
+      "facet": "Weather sayings and folklore",
+      "known_at": 11
+    },
+    {
+      "name": "Blackthorn winter",
+      "facet": "Weather sayings and folklore",
+      "known_at": 14
+    },
+    {
+      "name": "Dog days",
+      "facet": "Weather sayings and folklore",
+      "known_at": 12
+    },
+    {
+      "name": "Nice weather for ducks",
+      "facet": "Weather sayings and folklore",
+      "known_at": 6
+    },
+    {
+      "name": "BBC Radio 4",
+      "facet": "The Shipping Forecast",
+      "known_at": 9
+    },
+    {
+      "name": "Sailing By",
+      "facet": "The Shipping Forecast",
+      "known_at": 13
+    },
+    {
+      "name": "Dogger",
+      "facet": "The Shipping Forecast",
+      "known_at": 11
+    },
+    {
+      "name": "German Bight",
+      "facet": "The Shipping Forecast",
+      "known_at": 12
+    },
+    {
+      "name": "Fisher",
+      "facet": "The Shipping Forecast",
+      "known_at": 12
+    },
+    {
+      "name": "FitzRoy (sea area)",
+      "facet": "The Shipping Forecast",
+      "known_at": 12
+    },
+    {
+      "name": "Finisterre",
+      "facet": "The Shipping Forecast",
+      "known_at": 14
+    },
+    {
+      "name": "Rockall",
+      "facet": "The Shipping Forecast",
+      "known_at": 12
+    },
+    {
+      "name": "Viking",
+      "facet": "The Shipping Forecast",
+      "known_at": 12
+    },
+    {
+      "name": "Utsire",
+      "facet": "The Shipping Forecast",
+      "known_at": 13
+    },
+    {
+      "name": "Malin",
+      "facet": "The Shipping Forecast",
+      "known_at": 12
+    },
+    {
+      "name": "Trafalgar",
+      "facet": "The Shipping Forecast",
+      "known_at": 12
+    },
+    {
+      "name": "Gale warning",
+      "facet": "The Shipping Forecast",
+      "known_at": 10
+    },
+    {
+      "name": "Beaufort scale",
+      "facet": "The Shipping Forecast",
+      "known_at": 10
+    },
+    {
+      "name": "Long wave",
+      "facet": "The Shipping Forecast",
+      "known_at": 13
+    },
+    {
+      "name": "Southeast Iceland",
+      "facet": "The Shipping Forecast",
+      "known_at": 14
+    },
+    {
+      "name": "Fastnet",
+      "facet": "The Shipping Forecast",
+      "known_at": 13
+    },
+    {
+      "name": "Cromarty",
+      "facet": "The Shipping Forecast",
+      "known_at": 13
+    },
+    {
+      "name": "Great Storm of 1987",
+      "facet": "Famous storms and floods",
+      "known_at": 10
+    },
+    {
+      "name": "Burns' Day Storm",
+      "facet": "Famous storms and floods",
+      "known_at": 14
+    },
+    {
+      "name": "Storm Arwen",
+      "facet": "Famous storms and floods",
+      "known_at": 13
+    },
+    {
+      "name": "Storm Eunice",
+      "facet": "Famous storms and floods",
+      "known_at": 12
+    },
+    {
+      "name": "Great Storm of 1703",
+      "facet": "Famous storms and floods",
+      "known_at": 14
+    },
+    {
+      "name": "Tay Bridge disaster",
+      "facet": "Famous storms and floods",
+      "known_at": 13
+    },
+    {
+      "name": "Cockermouth floods",
+      "facet": "Famous storms and floods",
+      "known_at": 14
+    },
+    {
+      "name": "Storm naming",
+      "facet": "Famous storms and floods",
+      "known_at": 11
+    },
+    {
+      "name": "Protestant Wind",
+      "facet": "Famous storms and floods",
+      "known_at": 14
+    },
+    {
+      "name": "Storm Ciarán",
+      "facet": "Famous storms and floods",
+      "known_at": 13
+    },
+    {
+      "name": "Heatwave of July 2022",
+      "facet": "Record-breaking British weather",
+      "known_at": 11
+    },
+    {
+      "name": "Coningsby",
+      "facet": "Record-breaking British weather",
+      "known_at": 13
+    },
+    {
+      "name": "Braemar",
+      "facet": "Record-breaking British weather",
+      "known_at": 14
+    },
+    {
+      "name": "Altnaharra",
+      "facet": "Record-breaking British weather",
+      "known_at": 14
+    },
+    {
+      "name": "Cairn Gorm wind gust record",
+      "facet": "Record-breaking British weather",
+      "known_at": 14
+    },
+    {
+      "name": "Seathwaite",
+      "facet": "Record-breaking British weather",
+      "known_at": 14
+    },
+    {
+      "name": "Yr Wyddfa (Snowdon)",
+      "facet": "Record-breaking British weather",
+      "known_at": 8
+    },
+    {
+      "name": "Big Freeze of 1963",
+      "facet": "Record-breaking British weather",
+      "known_at": 13
+    },
+    {
+      "name": "Birmingham tornado",
+      "facet": "Record-breaking British weather",
+      "known_at": 13
+    },
+    {
+      "name": "Tiree",
+      "facet": "Record-breaking British weather",
+      "known_at": 14
+    },
+    {
+      "name": "Great Frost of 1683–84",
+      "facet": "Record-breaking British weather",
+      "known_at": 14
+    },
+    {
+      "name": "Shanklin",
+      "facet": "Record-breaking British weather",
+      "known_at": 14
+    },
+    {
+      "name": "Great Smog of London",
+      "facet": "Fog, smog and haar",
+      "known_at": 11
+    },
+    {
+      "name": "Pea-souper",
+      "facet": "Fog, smog and haar",
+      "known_at": 10
+    },
+    {
+      "name": "Haar",
+      "facet": "Fog, smog and haar",
+      "known_at": 13
+    },
+    {
+      "name": "Clean Air Act 1956",
+      "facet": "Fog, smog and haar",
+      "known_at": 13
+    },
+    {
+      "name": "Sea fret",
+      "facet": "Fog, smog and haar",
+      "known_at": 13
+    },
+    {
+      "name": "Foghorn",
+      "facet": "Fog, smog and haar",
+      "known_at": 6
+    },
+    {
+      "name": "Mist",
+      "facet": "Fog, smog and haar",
+      "known_at": 3
+    },
+    {
+      "name": "Smog",
+      "facet": "Fog, smog and haar",
+      "known_at": 8
+    },
+    {
+      "name": "Temperature inversion",
+      "facet": "Fog, smog and haar",
+      "known_at": 13
+    },
+    {
+      "name": "Freezing fog",
+      "facet": "Fog, smog and haar",
+      "known_at": 8
+    },
+    {
+      "name": "Radiation fog",
+      "facet": "Fog, smog and haar",
+      "known_at": 14
+    },
+    {
+      "name": "Monet's Houses of Parliament paintings",
+      "facet": "Fog, smog and haar",
+      "known_at": 13
+    },
+    {
+      "name": "Fog in Channel; Continent cut off",
+      "facet": "Fog, smog and haar",
+      "known_at": 13
+    },
+    {
+      "name": "Coal fires",
+      "facet": "Fog, smog and haar",
+      "known_at": 9
+    },
+    {
+      "name": "Gaslight London fog",
+      "facet": "Fog, smog and haar",
+      "known_at": 10
+    },
+    {
+      "name": "Drizzle",
+      "facet": "Rain, drizzle and dialect words",
+      "known_at": 3
+    },
+    {
+      "name": "Mizzle",
+      "facet": "Rain, drizzle and dialect words",
+      "known_at": 13
+    },
+    {
+      "name": "Dreich",
+      "facet": "Rain, drizzle and dialect words",
+      "known_at": 12
+    },
+    {
+      "name": "Spitting",
+      "facet": "Rain, drizzle and dialect words",
+      "known_at": 7
+    },
+    {
+      "name": "Chucking it down",
+      "facet": "Rain, drizzle and dialect words",
+      "known_at": 8
+    },
+    {
+      "name": "Bucketing down",
+      "facet": "Rain, drizzle and dialect words",
+      "known_at": 8
+    },
+    {
+      "name": "Smirr",
+      "facet": "Rain, drizzle and dialect words",
+      "known_at": 15
+    },
+    {
+      "name": "Mackintosh",
+      "facet": "Rain, drizzle and dialect words",
+      "known_at": 9
+    },
+    {
+      "name": "Wellington boots",
+      "facet": "Rain, drizzle and dialect words",
+      "known_at": 3
+    },
+    {
+      "name": "Brolly",
+      "facet": "Rain, drizzle and dialect words",
+      "known_at": 8
+    },
+    {
+      "name": "Petrichor",
+      "facet": "Rain, drizzle and dialect words",
+      "known_at": 13
+    },
+    {
+      "name": "Manchester rain",
+      "facet": "Rain, drizzle and dialect words",
+      "known_at": 7
+    },
+    {
+      "name": "Siling",
+      "facet": "Rain, drizzle and dialect words",
+      "known_at": 14
+    },
+    {
+      "name": "Lashing",
+      "facet": "Rain, drizzle and dialect words",
+      "known_at": 10
+    },
+    {
+      "name": "Pelting",
+      "facet": "Rain, drizzle and dialect words",
+      "known_at": 8
+    },
+    {
+      "name": "Cagoule",
+      "facet": "Rain, drizzle and dialect words",
+      "known_at": 9
+    },
+    {
+      "name": "Puddle",
+      "facet": "Rain, drizzle and dialect words",
+      "known_at": 1
+    },
+    {
+      "name": "White Christmas",
+      "facet": "Snow and white Christmases",
+      "known_at": 5
+    },
+    {
+      "name": "Snowman",
+      "facet": "Snow and white Christmases",
+      "known_at": 1
+    },
+    {
+      "name": "Beast from the East",
+      "facet": "Snow and white Christmases",
+      "known_at": 10
+    },
+    {
+      "name": "Winter of 2010",
+      "facet": "Snow and white Christmases",
+      "known_at": 13
+    },
+    {
+      "name": "Sledging",
+      "facet": "Snow and white Christmases",
+      "known_at": 3
+    },
+    {
+      "name": "Snow day",
+      "facet": "Snow and white Christmases",
+      "known_at": 4
+    },
+    {
+      "name": "Gritting lorry",
+      "facet": "Snow and white Christmases",
+      "known_at": 8
+    },
+    {
+      "name": "White Christmas betting",
+      "facet": "Snow and white Christmases",
+      "known_at": 11
+    },
+    {
+      "name": "Aviemore",
+      "facet": "Snow and white Christmases",
+      "known_at": 12
+    },
+    {
+      "name": "Black ice",
+      "facet": "Snow and white Christmases",
+      "known_at": 9
+    },
+    {
+      "name": "Wrong kind of snow",
+      "facet": "Snow and white Christmases",
+      "known_at": 12
+    },
+    {
+      "name": "Winter of 1947",
+      "facet": "Snow and white Christmases",
+      "known_at": 14
+    },
+    {
+      "name": "Snowball fight",
+      "facet": "Snow and white Christmases",
+      "known_at": 2
+    },
+    {
+      "name": "Frost",
+      "facet": "Snow and white Christmases",
+      "known_at": 3
+    },
+    {
+      "name": "Summer of 1976",
+      "facet": "Heatwaves and summer washouts",
+      "known_at": 12
+    },
+    {
+      "name": "Hosepipe ban",
+      "facet": "Heatwaves and summer washouts",
+      "known_at": 10
+    },
+    {
+      "name": "Minister for Drought",
+      "facet": "Heatwaves and summer washouts",
+      "known_at": 15
+    },
+    {
+      "name": "Summer of 2018",
+      "facet": "Heatwaves and summer washouts",
+      "known_at": 12
+    },
+    {
+      "name": "Ice cream van",
+      "facet": "Heatwaves and summer washouts",
+      "known_at": 3
+    },
+    {
+      "name": "99 Flake",
+      "facet": "Heatwaves and summer washouts",
+      "known_at": 8
+    },
+    {
+      "name": "Sunburn",
+      "facet": "Heatwaves and summer washouts",
+      "known_at": 3
+    },
+    {
+      "name": "Staycation",
+      "facet": "Heatwaves and summer washouts",
+      "known_at": 11
+    },
+    {
+      "name": "Barbecue summer",
+      "facet": "Heatwaves and summer washouts",
+      "known_at": 13
+    },
+    {
+      "name": "Heat-health alert",
+      "facet": "Heatwaves and summer washouts",
+      "known_at": 11
+    },
+    {
+      "name": "Knotted handkerchief hat",
+      "facet": "Heatwaves and summer washouts",
+      "known_at": 10
+    },
+    {
+      "name": "Paddling pool",
+      "facet": "Heatwaves and summer washouts",
+      "known_at": 3
+    },
+    {
+      "name": "Summer 2007 floods",
+      "facet": "Heatwaves and summer washouts",
+      "known_at": 13
+    },
+    {
+      "name": "Bank holiday weather",
+      "facet": "Heatwaves and summer washouts",
+      "known_at": 9
+    },
+    {
+      "name": "Sun cream",
+      "facet": "Heatwaves and summer washouts",
+      "known_at": 3
+    },
+    {
+      "name": "Deckchair",
+      "facet": "Heatwaves and summer washouts",
+      "known_at": 4
+    },
+    {
+      "name": "Met Office",
+      "facet": "Weather forecasting and the Met Office",
+      "known_at": 9
+    },
+    {
+      "name": "Michael Fish",
+      "facet": "Weather forecasting and the Met Office",
+      "known_at": 11
+    },
+    {
+      "name": "Robert FitzRoy",
+      "facet": "Weather forecasting and the Met Office",
+      "known_at": 13
+    },
+    {
+      "name": "Weather map",
+      "facet": "Weather forecasting and the Met Office",
+      "known_at": 4
+    },
+    {
+      "name": "Isobar",
+      "facet": "Weather forecasting and the Met Office",
+      "known_at": 11
+    },
+    {
+      "name": "Weather warning colours",
+      "facet": "Weather forecasting and the Met Office",
+      "known_at": 9
+    },
+    {
+      "name": "Carol Kirkwood",
+      "facet": "Weather forecasting and the Met Office",
+      "known_at": 12
+    },
+    {
+      "name": "Ian McCaskill",
+      "facet": "Weather forecasting and the Met Office",
+      "known_at": 14
+    },
+    {
+      "name": "BBC Weather",
+      "facet": "Weather forecasting and the Met Office",
+      "known_at": 8
+    },
+    {
+      "name": "Weather vane",
+      "facet": "Weather forecasting and the Met Office",
+      "known_at": 5
+    },
+    {
+      "name": "Barometer",
+      "facet": "Weather forecasting and the Met Office",
+      "known_at": 9
+    },
+    {
+      "name": "Rain gauge",
+      "facet": "Weather forecasting and the Met Office",
+      "known_at": 7
+    },
+    {
+      "name": "Met Office supercomputer",
+      "facet": "Weather forecasting and the Met Office",
+      "known_at": 12
+    },
+    {
+      "name": "Lewis Fry Richardson",
+      "facet": "Weather forecasting and the Met Office",
+      "known_at": 15
+    },
+    {
+      "name": "Weather balloon",
+      "facet": "Weather forecasting and the Met Office",
+      "known_at": 9
+    },
+    {
+      "name": "D-Day weather forecast",
+      "facet": "Weather forecasting and the Met Office",
+      "known_at": 14
+    },
+    {
+      "name": "Weather symbols",
+      "facet": "Weather forecasting and the Met Office",
+      "known_at": 5
+    },
+    {
+      "name": "Centre Court roof",
+      "facet": "Weather at British events",
+      "known_at": 11
+    },
+    {
+      "name": "Duckworth-Lewis method",
+      "facet": "Weather at British events",
+      "known_at": 12
+    },
+    {
+      "name": "Rain stopped play",
+      "facet": "Weather at British events",
+      "known_at": 9
+    },
+    {
+      "name": "Bonfire Night",
+      "facet": "Weather at British events",
+      "known_at": 8
+    },
+    {
+      "name": "London 2012 Olympics opening ceremony",
+      "facet": "Weather at British events",
+      "known_at": 10
+    },
+    {
+      "name": "Coronation of 1953",
+      "facet": "Weather at British events",
+      "known_at": 14
+    },
+    {
+      "name": "British Grand Prix",
+      "facet": "Weather at British events",
+      "known_at": 11
+    },
+    {
+      "name": "The Open Championship",
+      "facet": "Weather at British events",
+      "known_at": 12
+    },
+    {
+      "name": "North Atlantic Drift",
+      "facet": "Regional climates and the Gulf Stream",
+      "known_at": 13
+    },
+    {
+      "name": "Tresco Abbey Garden",
+      "facet": "Regional climates and the Gulf Stream",
+      "known_at": 14
+    },
+    {
+      "name": "Prevailing south-westerly wind",
+      "facet": "Regional climates and the Gulf Stream",
+      "known_at": 12
+    },
+    {
+      "name": "Rain shadow",
+      "facet": "Regional climates and the Gulf Stream",
+      "known_at": 13
+    },
+    {
+      "name": "Jet stream",
+      "facet": "Regional climates and the Gulf Stream",
+      "known_at": 11
+    },
+    {
+      "name": "Eryri (Snowdonia)",
+      "facet": "Regional climates and the Gulf Stream",
+      "known_at": 9
+    },
+    {
+      "name": "Temperate maritime climate",
+      "facet": "Regional climates and the Gulf Stream",
+      "known_at": 13
+    },
+    {
+      "name": "Northern Lights",
+      "facet": "Regional climates and the Gulf Stream",
+      "known_at": 8
+    },
+    {
+      "name": "Weather small talk",
+      "facet": "Weather in British culture and media",
+      "known_at": 8
+    },
+    {
+      "name": "Here Comes the Sun",
+      "facet": "Weather in British culture and media",
+      "known_at": 8
+    },
+    {
+      "name": "Rain, Steam and Speed",
+      "facet": "Weather in British culture and media",
+      "known_at": 13
+    },
+    {
+      "name": "Constable's cloud studies",
+      "facet": "Weather in British culture and media",
+      "known_at": 14
+    },
+    {
+      "name": "The Snowman (Raymond Briggs)",
+      "facet": "Weather in British culture and media",
+      "known_at": 5
+    },
+    {
+      "name": "Fog on the Tyne",
+      "facet": "Weather in British culture and media",
+      "known_at": 14
+    },
+    {
+      "name": "Rain, Rain, Go Away",
+      "facet": "Weather in British culture and media",
+      "known_at": 2
+    },
+    {
+      "name": "Doctor Foster went to Gloucester",
+      "facet": "Weather in British culture and media",
+      "known_at": 7
+    },
+    {
+      "name": "Peppa Pig muddy puddles",
+      "facet": "Weather in British culture and media",
+      "known_at": 1
+    },
+    {
+      "name": "Why Does It Always Rain on Me?",
+      "facet": "Weather in British culture and media",
+      "known_at": 13
+    },
+    {
+      "name": "Pathetic fallacy",
+      "facet": "Weather in British culture and media",
+      "known_at": 13
+    },
+    {
+      "name": "Mr. Blue Sky",
+      "facet": "Weather in British culture and media",
+      "known_at": 10
+    },
+    {
+      "name": "King Lear storm scene",
+      "facet": "Weather in British culture and media",
+      "known_at": 14
+    },
+    {
+      "name": "The Tempest",
+      "facet": "Weather in British culture and media",
+      "known_at": 10
+    },
+    {
+      "name": "Cloudbusting",
+      "facet": "Weather in British culture and media",
+      "known_at": 14
+    }
+  ]
+}

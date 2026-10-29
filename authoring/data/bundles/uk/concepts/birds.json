@@ -1,0 +1,642 @@
+{
+  "subcategory": "birds",
+  "facets": [
+    "Garden and feeder birds",
+    "Birds of prey and owls",
+    "Seabirds and coastal cliffs",
+    "Waterbirds, ducks and swans",
+    "Moorland and game birds",
+    "Migrants and seasonal visitors",
+    "Birdsong and calls",
+    "Rare birds and conservation comebacks",
+    "Birds in British folklore and sayings",
+    "Birds in British culture and royal traditions",
+    "Birdwatching in Britain",
+    "Bird names and local words"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 4,
+      "video": 3
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Greenfinch",
+      "facet": "Garden and feeder birds",
+      "known_at": 8
+    },
+    {
+      "name": "Collared dove",
+      "facet": "Garden and feeder birds",
+      "known_at": 8
+    },
+    {
+      "name": "Coal tit",
+      "facet": "Garden and feeder birds",
+      "known_at": 9
+    },
+    {
+      "name": "Nuthatch",
+      "facet": "Garden and feeder birds",
+      "known_at": 9
+    },
+    {
+      "name": "Pied wagtail",
+      "facet": "Garden and feeder birds",
+      "known_at": 8
+    },
+    {
+      "name": "Jackdaw",
+      "facet": "Garden and feeder birds",
+      "known_at": 7
+    },
+    {
+      "name": "Snowy owl",
+      "facet": "Birds of prey and owls",
+      "known_at": 3
+    },
+    {
+      "name": "Great black-backed gull",
+      "facet": "Seabirds and coastal cliffs",
+      "known_at": 12
+    },
+    {
+      "name": "Storm petrel",
+      "facet": "Seabirds and coastal cliffs",
+      "known_at": 13
+    },
+    {
+      "name": "Whooper swan",
+      "facet": "Waterbirds, ducks and swans",
+      "known_at": 12
+    },
+    {
+      "name": "Bewick's swan",
+      "facet": "Waterbirds, ducks and swans",
+      "known_at": 13
+    },
+    {
+      "name": "Mandarin duck",
+      "facet": "Waterbirds, ducks and swans",
+      "known_at": 8
+    },
+    {
+      "name": "Tufted duck",
+      "facet": "Waterbirds, ducks and swans",
+      "known_at": 10
+    },
+    {
+      "name": "Eider",
+      "facet": "Waterbirds, ducks and swans",
+      "known_at": 10
+    },
+    {
+      "name": "Shelduck",
+      "facet": "Waterbirds, ducks and swans",
+      "known_at": 12
+    },
+    {
+      "name": "Teal",
+      "facet": "Waterbirds, ducks and swans",
+      "known_at": 11
+    },
+    {
+      "name": "Wigeon",
+      "facet": "Waterbirds, ducks and swans",
+      "known_at": 13
+    },
+    {
+      "name": "Great crested grebe",
+      "facet": "Waterbirds, ducks and swans",
+      "known_at": 10
+    },
+    {
+      "name": "Canada goose",
+      "facet": "Waterbirds, ducks and swans",
+      "known_at": 6
+    },
+    {
+      "name": "Greylag goose",
+      "facet": "Waterbirds, ducks and swans",
+      "known_at": 11
+    },
+    {
+      "name": "Little egret",
+      "facet": "Waterbirds, ducks and swans",
+      "known_at": 11
+    },
+    {
+      "name": "Black grouse",
+      "facet": "Moorland and game birds",
+      "known_at": 12
+    },
+    {
+      "name": "Capercaillie",
+      "facet": "Moorland and game birds",
+      "known_at": 12
+    },
+    {
+      "name": "Grey partridge",
+      "facet": "Moorland and game birds",
+      "known_at": 9
+    },
+    {
+      "name": "Red-legged partridge",
+      "facet": "Moorland and game birds",
+      "known_at": 12
+    },
+    {
+      "name": "Golden plover",
+      "facet": "Moorland and game birds",
+      "known_at": 12
+    },
+    {
+      "name": "Lapwing",
+      "facet": "Moorland and game birds",
+      "known_at": 10
+    },
+    {
+      "name": "Snipe",
+      "facet": "Moorland and game birds",
+      "known_at": 11
+    },
+    {
+      "name": "Woodcock",
+      "facet": "Moorland and game birds",
+      "known_at": 11
+    },
+    {
+      "name": "Meadow pipit",
+      "facet": "Moorland and game birds",
+      "known_at": 12
+    },
+    {
+      "name": "Heather moorland",
+      "facet": "Moorland and game birds",
+      "known_at": 8
+    },
+    {
+      "name": "Ring ouzel",
+      "facet": "Moorland and game birds",
+      "known_at": 14
+    },
+    {
+      "name": "Stonechat",
+      "facet": "Moorland and game birds",
+      "known_at": 12
+    },
+    {
+      "name": "Barn swallow",
+      "facet": "Migrants and seasonal visitors",
+      "known_at": 3
+    },
+    {
+      "name": "House martin",
+      "facet": "Migrants and seasonal visitors",
+      "known_at": 8
+    },
+    {
+      "name": "Common swift",
+      "facet": "Migrants and seasonal visitors",
+      "known_at": 7
+    },
+    {
+      "name": "Sand martin",
+      "facet": "Migrants and seasonal visitors",
+      "known_at": 11
+    },
+    {
+      "name": "Chiffchaff",
+      "facet": "Migrants and seasonal visitors",
+      "known_at": 11
+    },
+    {
+      "name": "Willow warbler",
+      "facet": "Migrants and seasonal visitors",
+      "known_at": 12
+    },
+    {
+      "name": "Blackcap",
+      "facet": "Migrants and seasonal visitors",
+      "known_at": 12
+    },
+    {
+      "name": "Redwing",
+      "facet": "Migrants and seasonal visitors",
+      "known_at": 11
+    },
+    {
+      "name": "Fieldfare",
+      "facet": "Migrants and seasonal visitors",
+      "known_at": 12
+    },
+    {
+      "name": "Waxwing",
+      "facet": "Migrants and seasonal visitors",
+      "known_at": 11
+    },
+    {
+      "name": "Brambling",
+      "facet": "Migrants and seasonal visitors",
+      "known_at": 13
+    },
+    {
+      "name": "Pink-footed goose",
+      "facet": "Migrants and seasonal visitors",
+      "known_at": 13
+    },
+    {
+      "name": "Barnacle goose",
+      "facet": "Migrants and seasonal visitors",
+      "known_at": 12
+    },
+    {
+      "name": "Spotted flycatcher",
+      "facet": "Migrants and seasonal visitors",
+      "known_at": 13
+    },
+    {
+      "name": "Wheatear",
+      "facet": "Migrants and seasonal visitors",
+      "known_at": 13
+    },
+    {
+      "name": "Bird migration to Africa",
+      "facet": "Migrants and seasonal visitors",
+      "known_at": 5
+    },
+    {
+      "name": "International Dawn Chorus Day",
+      "facet": "Birdsong and calls",
+      "known_at": 13
+    },
+    {
+      "name": "Cuckoo call",
+      "facet": "Birdsong and calls",
+      "known_at": 2
+    },
+    {
+      "name": "Tawny owl hoot",
+      "facet": "Birdsong and calls",
+      "known_at": 3
+    },
+    {
+      "name": "Wood pigeon coo",
+      "facet": "Birdsong and calls",
+      "known_at": 5
+    },
+    {
+      "name": "Robin song",
+      "facet": "Birdsong and calls",
+      "known_at": 6
+    },
+    {
+      "name": "Blackbird song",
+      "facet": "Birdsong and calls",
+      "known_at": 6
+    },
+    {
+      "name": "Skylark song",
+      "facet": "Birdsong and calls",
+      "known_at": 9
+    },
+    {
+      "name": "Nightingale song",
+      "facet": "Birdsong and calls",
+      "known_at": 8
+    },
+    {
+      "name": "Wren song",
+      "facet": "Birdsong and calls",
+      "known_at": 10
+    },
+    {
+      "name": "Chiffchaff song",
+      "facet": "Birdsong and calls",
+      "known_at": 12
+    },
+    {
+      "name": "Curlew call",
+      "facet": "Birdsong and calls",
+      "known_at": 12
+    },
+    {
+      "name": "Great tit “teacher, teacher” song",
+      "facet": "Birdsong and calls",
+      "known_at": 11
+    },
+    {
+      "name": "Herring gull call",
+      "facet": "Birdsong and calls",
+      "known_at": 4
+    },
+    {
+      "name": "Starling mimicry",
+      "facet": "Birdsong and calls",
+      "known_at": 9
+    },
+    {
+      "name": "Pheasant call",
+      "facet": "Birdsong and calls",
+      "known_at": 9
+    },
+    {
+      "name": "Woodpecker drumming",
+      "facet": "Birdsong and calls",
+      "known_at": 5
+    },
+    {
+      "name": "Beatrice Harrison nightingale broadcast",
+      "facet": "Birdsong and calls",
+      "known_at": 14
+    },
+    {
+      "name": "Ludwig Koch",
+      "facet": "Birdsong and calls",
+      "known_at": 15
+    },
+    {
+      "name": "Bittern",
+      "facet": "Rare birds and conservation comebacks",
+      "known_at": 11
+    },
+    {
+      "name": "Corncrake",
+      "facet": "Rare birds and conservation comebacks",
+      "known_at": 13
+    },
+    {
+      "name": "Chough",
+      "facet": "Rare birds and conservation comebacks",
+      "known_at": 12
+    },
+    {
+      "name": "Cirl bunting",
+      "facet": "Rare birds and conservation comebacks",
+      "known_at": 14
+    },
+    {
+      "name": "Stone-curlew",
+      "facet": "Rare birds and conservation comebacks",
+      "known_at": 14
+    },
+    {
+      "name": "Turtle dove",
+      "facet": "Rare birds and conservation comebacks",
+      "known_at": 9
+    },
+    {
+      "name": "Loch Garten",
+      "facet": "Rare birds and conservation comebacks",
+      "known_at": 13
+    },
+    {
+      "name": "Bearded tit",
+      "facet": "Rare birds and conservation comebacks",
+      "known_at": 13
+    },
+    {
+      "name": "Spoonbill",
+      "facet": "Rare birds and conservation comebacks",
+      "known_at": 10
+    },
+    {
+      "name": "Red-backed shrike",
+      "facet": "Rare birds and conservation comebacks",
+      "known_at": 14
+    },
+    {
+      "name": "Montagu's harrier",
+      "facet": "Rare birds and conservation comebacks",
+      "known_at": 15
+    },
+    {
+      "name": "Slavonian grebe",
+      "facet": "Rare birds and conservation comebacks",
+      "known_at": 15
+    },
+    {
+      "name": "Red List of birds",
+      "facet": "Rare birds and conservation comebacks",
+      "known_at": 11
+    },
+    {
+      "name": "DDT pesticide ban",
+      "facet": "Rare birds and conservation comebacks",
+      "known_at": 13
+    },
+    {
+      "name": "“One for sorrow” magpie rhyme",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Saluting a magpie",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "“One swallow doesn't make a summer”",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "“The early bird catches the worm”",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 5
+    },
+    {
+      "name": "“A bird in the hand is worth two in the bush”",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "“Birds of a feather flock together”",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "“Who Killed Cock Robin?”",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "“Sing a Song of Sixpence”",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Robin redbreast legend",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Hunting the Wren",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 14
+    },
+    {
+      "name": "First cuckoo letter to The Times",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 14
+    },
+    {
+      "name": "Heathfield Cuckoo Fair",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 15
+    },
+    {
+      "name": "“Cuckoo in the nest”",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Albatross around the neck",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Swallows flying low before rain",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Raven legend of the Tower",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "“Don't count your chickens before they hatch”",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "“Something to crow about”",
+      "facet": "Birds in British folklore and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Royal ownership of mute swans",
+      "facet": "Birds in British culture and royal traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Ravenmaster",
+      "facet": "Birds in British culture and royal traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Robin as Britain's national bird",
+      "facet": "Birds in British culture and royal traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Liver Bird",
+      "facet": "Birds in British culture and royal traditions",
+      "known_at": 10
+    },
+    {
+      "name": "“The Lark Ascending”",
+      "facet": "Birds in British culture and royal traditions",
+      "known_at": 13
+    },
+    {
+      "name": "“A Nightingale Sang in Berkeley Square”",
+      "facet": "Birds in British culture and royal traditions",
+      "known_at": 13
+    },
+    {
+      "name": "“Ode to a Nightingale”",
+      "facet": "Birds in British culture and royal traditions",
+      "known_at": 13
+    },
+    {
+      "name": "“Feed the Birds”",
+      "facet": "Birds in British culture and royal traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Robins on Christmas cards",
+      "facet": "Birds in British culture and royal traditions",
+      "known_at": 5
+    },
+    {
+      "name": "Wren farthing",
+      "facet": "Birds in British culture and royal traditions",
+      "known_at": 14
+    },
+    {
+      "name": "Dead Parrot sketch",
+      "facet": "Birds in British culture and royal traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Norwich City “The Canaries”",
+      "facet": "Birds in British culture and royal traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Newcastle United “The Magpies”",
+      "facet": "Birds in British culture and royal traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Sheffield Wednesday “The Owls”",
+      "facet": "Birds in British culture and royal traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Crystal Palace “The Eagles”",
+      "facet": "Birds in British culture and royal traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Puffin Books",
+      "facet": "Birds in British culture and royal traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Pingu? no",
+      "facet": "Birds in British culture and royal traditions",
+      "known_at": 15
+    }
+  ]
+}

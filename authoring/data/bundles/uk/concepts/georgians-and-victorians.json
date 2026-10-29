@@ -1,0 +1,1187 @@
+{
+  "subcategory": "georgians-and-victorians",
+  "facets": [
+    "Georgian kings and the Regency",
+    "Queen Victoria and her family",
+    "Prime ministers and reform",
+    "Industrial Revolution and railways",
+    "Victorian engineering and landmarks",
+    "Napoleonic and Crimean wars",
+    "Work, poverty and social reform",
+    "Writers, artists and their characters",
+    "Scientists, inventors and medicine",
+    "Victorian Christmas, leisure and seaside",
+    "Empire and exploration",
+    "Fashion, food and manners"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 3,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "George I",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 11
+    },
+    {
+      "name": "George II",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 12
+    },
+    {
+      "name": "George III",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 8
+    },
+    {
+      "name": "George IV",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 10
+    },
+    {
+      "name": "William IV",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 12
+    },
+    {
+      "name": "Prince Regent",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 9
+    },
+    {
+      "name": "Regency era",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 9
+    },
+    {
+      "name": "Royal Pavilion, Brighton",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 8
+    },
+    {
+      "name": "House of Hanover",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 11
+    },
+    {
+      "name": "The Madness of King George",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 10
+    },
+    {
+      "name": "Caroline of Brunswick",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 13
+    },
+    {
+      "name": "Maria Fitzherbert",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 14
+    },
+    {
+      "name": "Princess Charlotte of Wales",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 13
+    },
+    {
+      "name": "Beau Brummell",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 12
+    },
+    {
+      "name": "Bonnie Prince Charlie",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 8
+    },
+    {
+      "name": "Battle of Culloden",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 10
+    },
+    {
+      "name": "Act of Union 1801",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 12
+    },
+    {
+      "name": "American War of Independence",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 9
+    },
+    {
+      "name": "Zadok the Priest",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 12
+    },
+    {
+      "name": "Music for the Royal Fireworks",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 13
+    },
+    {
+      "name": "Royal Crescent, Bath",
+      "facet": "Georgian kings and the Regency",
+      "known_at": 10
+    },
+    {
+      "name": "Queen Victoria",
+      "facet": "Queen Victoria and her family",
+      "known_at": 2
+    },
+    {
+      "name": "Prince Albert",
+      "facet": "Queen Victoria and her family",
+      "known_at": 6
+    },
+    {
+      "name": "Diamond Jubilee of 1897",
+      "facet": "Queen Victoria and her family",
+      "known_at": 10
+    },
+    {
+      "name": "Edward VII",
+      "facet": "Queen Victoria and her family",
+      "known_at": 9
+    },
+    {
+      "name": "We are not amused",
+      "facet": "Queen Victoria and her family",
+      "known_at": 8
+    },
+    {
+      "name": "Widow of Windsor",
+      "facet": "Queen Victoria and her family",
+      "known_at": 12
+    },
+    {
+      "name": "John Brown",
+      "facet": "Queen Victoria and her family",
+      "known_at": 13
+    },
+    {
+      "name": "Abdul Karim",
+      "facet": "Queen Victoria and her family",
+      "known_at": 13
+    },
+    {
+      "name": "Empress of India",
+      "facet": "Queen Victoria and her family",
+      "known_at": 10
+    },
+    {
+      "name": "Albert Memorial",
+      "facet": "Queen Victoria and her family",
+      "known_at": 9
+    },
+    {
+      "name": "Victoria Cross",
+      "facet": "Queen Victoria and her family",
+      "known_at": 8
+    },
+    {
+      "name": "Grandmother of Europe",
+      "facet": "Queen Victoria and her family",
+      "known_at": 12
+    },
+    {
+      "name": "Kaiser Wilhelm II",
+      "facet": "Queen Victoria and her family",
+      "known_at": 11
+    },
+    {
+      "name": "Duchess of Kent",
+      "facet": "Queen Victoria and her family",
+      "known_at": 14
+    },
+    {
+      "name": "Frogmore Mausoleum",
+      "facet": "Queen Victoria and her family",
+      "known_at": 14
+    },
+    {
+      "name": "Robert Walpole",
+      "facet": "Prime ministers and reform",
+      "known_at": 11
+    },
+    {
+      "name": "William Pitt the Younger",
+      "facet": "Prime ministers and reform",
+      "known_at": 10
+    },
+    {
+      "name": "Spencer Perceval",
+      "facet": "Prime ministers and reform",
+      "known_at": 12
+    },
+    {
+      "name": "Robert Peel",
+      "facet": "Prime ministers and reform",
+      "known_at": 9
+    },
+    {
+      "name": "Metropolitan Police",
+      "facet": "Prime ministers and reform",
+      "known_at": 7
+    },
+    {
+      "name": "Benjamin Disraeli",
+      "facet": "Prime ministers and reform",
+      "known_at": 10
+    },
+    {
+      "name": "William Gladstone",
+      "facet": "Prime ministers and reform",
+      "known_at": 10
+    },
+    {
+      "name": "Lord Melbourne",
+      "facet": "Prime ministers and reform",
+      "known_at": 12
+    },
+    {
+      "name": "Lord Palmerston",
+      "facet": "Prime ministers and reform",
+      "known_at": 12
+    },
+    {
+      "name": "Lord Salisbury",
+      "facet": "Prime ministers and reform",
+      "known_at": 13
+    },
+    {
+      "name": "Great Reform Act",
+      "facet": "Prime ministers and reform",
+      "known_at": 11
+    },
+    {
+      "name": "Repeal of the Corn Laws",
+      "facet": "Prime ministers and reform",
+      "known_at": 12
+    },
+    {
+      "name": "Chartists",
+      "facet": "Prime ministers and reform",
+      "known_at": 11
+    },
+    {
+      "name": "Peterloo Massacre",
+      "facet": "Prime ministers and reform",
+      "known_at": 11
+    },
+    {
+      "name": "Secret ballot",
+      "facet": "Prime ministers and reform",
+      "known_at": 11
+    },
+    {
+      "name": "Tolpuddle Martyrs",
+      "facet": "Prime ministers and reform",
+      "known_at": 12
+    },
+    {
+      "name": "William Wilberforce",
+      "facet": "Prime ministers and reform",
+      "known_at": 9
+    },
+    {
+      "name": "Abolition of the slave trade",
+      "facet": "Prime ministers and reform",
+      "known_at": 10
+    },
+    {
+      "name": "Millicent Fawcett",
+      "facet": "Prime ministers and reform",
+      "known_at": 11
+    },
+    {
+      "name": "Gladstone bag",
+      "facet": "Prime ministers and reform",
+      "known_at": 12
+    },
+    {
+      "name": "Steam engine",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 4
+    },
+    {
+      "name": "James Watt",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 8
+    },
+    {
+      "name": "Spinning jenny",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 9
+    },
+    {
+      "name": "Richard Arkwright",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 11
+    },
+    {
+      "name": "Cotton mill",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 7
+    },
+    {
+      "name": "Luddites",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 10
+    },
+    {
+      "name": "George Stephenson",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 8
+    },
+    {
+      "name": "Stephenson's Rocket",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 7
+    },
+    {
+      "name": "Puffing Billy",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 10
+    },
+    {
+      "name": "Richard Trevithick",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 12
+    },
+    {
+      "name": "Stockton and Darlington Railway",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 10
+    },
+    {
+      "name": "Liverpool and Manchester Railway",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 11
+    },
+    {
+      "name": "Rainhill Trials",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 13
+    },
+    {
+      "name": "Abraham Darby",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 13
+    },
+    {
+      "name": "Great Western Railway",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 8
+    },
+    {
+      "name": "Railway time",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 12
+    },
+    {
+      "name": "Penny Black",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 9
+    },
+    {
+      "name": "Pit pony",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 9
+    },
+    {
+      "name": "Josiah Wedgwood",
+      "facet": "Industrial Revolution and railways",
+      "known_at": 11
+    },
+    {
+      "name": "Metropolitan Railway",
+      "facet": "Victorian engineering and landmarks",
+      "known_at": 11
+    },
+    {
+      "name": "Joseph Bazalgette",
+      "facet": "Victorian engineering and landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "St Pancras station",
+      "facet": "Victorian engineering and landmarks",
+      "known_at": 8
+    },
+    {
+      "name": "Box Tunnel",
+      "facet": "Victorian engineering and landmarks",
+      "known_at": 14
+    },
+    {
+      "name": "Battle of Trafalgar",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 7
+    },
+    {
+      "name": "Horatio Nelson",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 6
+    },
+    {
+      "name": "England expects",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 11
+    },
+    {
+      "name": "Duke of Wellington",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 7
+    },
+    {
+      "name": "Battle of Waterloo",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 6
+    },
+    {
+      "name": "Napoleon Bonaparte",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 3
+    },
+    {
+      "name": "Wellington boot",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 5
+    },
+    {
+      "name": "Copenhagen (Wellington's horse)",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 14
+    },
+    {
+      "name": "Peninsular War",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 13
+    },
+    {
+      "name": "Martello tower",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 13
+    },
+    {
+      "name": "Crimean War",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 9
+    },
+    {
+      "name": "Battle of Balaclava",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 12
+    },
+    {
+      "name": "Charge of the Light Brigade",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 10
+    },
+    {
+      "name": "Thin Red Line",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 13
+    },
+    {
+      "name": "Lady with the Lamp",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 6
+    },
+    {
+      "name": "Scutari",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 13
+    },
+    {
+      "name": "Sevastopol",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 13
+    },
+    {
+      "name": "Lord Raglan",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 14
+    },
+    {
+      "name": "Balaclava hat",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 9
+    },
+    {
+      "name": "Cardigan",
+      "facet": "Napoleonic and Crimean wars",
+      "known_at": 11
+    },
+    {
+      "name": "Workhouse",
+      "facet": "Work, poverty and social reform",
+      "known_at": 7
+    },
+    {
+      "name": "Chimney sweep",
+      "facet": "Work, poverty and social reform",
+      "known_at": 6
+    },
+    {
+      "name": "Child labour",
+      "facet": "Work, poverty and social reform",
+      "known_at": 6
+    },
+    {
+      "name": "Factory Acts",
+      "facet": "Work, poverty and social reform",
+      "known_at": 11
+    },
+    {
+      "name": "Lord Shaftesbury",
+      "facet": "Work, poverty and social reform",
+      "known_at": 13
+    },
+    {
+      "name": "Elizabeth Fry",
+      "facet": "Work, poverty and social reform",
+      "known_at": 11
+    },
+    {
+      "name": "Thomas Barnardo",
+      "facet": "Work, poverty and social reform",
+      "known_at": 10
+    },
+    {
+      "name": "Poor Law of 1834",
+      "facet": "Work, poverty and social reform",
+      "known_at": 13
+    },
+    {
+      "name": "Ragged schools",
+      "facet": "Work, poverty and social reform",
+      "known_at": 12
+    },
+    {
+      "name": "Matchgirls' strike",
+      "facet": "Work, poverty and social reform",
+      "known_at": 12
+    },
+    {
+      "name": "Mudlarks",
+      "facet": "Work, poverty and social reform",
+      "known_at": 11
+    },
+    {
+      "name": "Debtors' prison",
+      "facet": "Work, poverty and social reform",
+      "known_at": 11
+    },
+    {
+      "name": "Penal transportation to Australia",
+      "facet": "Work, poverty and social reform",
+      "known_at": 10
+    },
+    {
+      "name": "Prison hulks",
+      "facet": "Work, poverty and social reform",
+      "known_at": 13
+    },
+    {
+      "name": "Edwin Chadwick",
+      "facet": "Work, poverty and social reform",
+      "known_at": 14
+    },
+    {
+      "name": "Robert Owen",
+      "facet": "Work, poverty and social reform",
+      "known_at": 13
+    },
+    {
+      "name": "Salvation Army",
+      "facet": "Work, poverty and social reform",
+      "known_at": 9
+    },
+    {
+      "name": "William Booth",
+      "facet": "Work, poverty and social reform",
+      "known_at": 12
+    },
+    {
+      "name": "Prison treadmill",
+      "facet": "Work, poverty and social reform",
+      "known_at": 12
+    },
+    {
+      "name": "Costermongers",
+      "facet": "Work, poverty and social reform",
+      "known_at": 13
+    },
+    {
+      "name": "Elementary Education Act 1870",
+      "facet": "Work, poverty and social reform",
+      "known_at": 12
+    },
+    {
+      "name": "Ebenezer Scrooge",
+      "facet": "Writers, artists and their characters",
+      "known_at": 4
+    },
+    {
+      "name": "Tiny Tim",
+      "facet": "Writers, artists and their characters",
+      "known_at": 6
+    },
+    {
+      "name": "Artful Dodger",
+      "facet": "Writers, artists and their characters",
+      "known_at": 8
+    },
+    {
+      "name": "Miss Havisham",
+      "facet": "Writers, artists and their characters",
+      "known_at": 11
+    },
+    {
+      "name": "Jane Austen",
+      "facet": "Writers, artists and their characters",
+      "known_at": 7
+    },
+    {
+      "name": "Mr Darcy",
+      "facet": "Writers, artists and their characters",
+      "known_at": 9
+    },
+    {
+      "name": "Jane Eyre",
+      "facet": "Writers, artists and their characters",
+      "known_at": 10
+    },
+    {
+      "name": "Arthur Conan Doyle",
+      "facet": "Writers, artists and their characters",
+      "known_at": 8
+    },
+    {
+      "name": "Lewis Carroll",
+      "facet": "Writers, artists and their characters",
+      "known_at": 8
+    },
+    {
+      "name": "Mad Hatter",
+      "facet": "Writers, artists and their characters",
+      "known_at": 5
+    },
+    {
+      "name": "Mary Shelley",
+      "facet": "Writers, artists and their characters",
+      "known_at": 10
+    },
+    {
+      "name": "Lord Byron",
+      "facet": "Writers, artists and their characters",
+      "known_at": 11
+    },
+    {
+      "name": "Thomas Hardy",
+      "facet": "Writers, artists and their characters",
+      "known_at": 12
+    },
+    {
+      "name": "Robert Louis Stevenson",
+      "facet": "Writers, artists and their characters",
+      "known_at": 9
+    },
+    {
+      "name": "Bram Stoker",
+      "facet": "Writers, artists and their characters",
+      "known_at": 9
+    },
+    {
+      "name": "Edward Lear",
+      "facet": "Writers, artists and their characters",
+      "known_at": 11
+    },
+    {
+      "name": "J. M. W. Turner",
+      "facet": "Writers, artists and their characters",
+      "known_at": 10
+    },
+    {
+      "name": "John Constable",
+      "facet": "Writers, artists and their characters",
+      "known_at": 11
+    },
+    {
+      "name": "Pre-Raphaelite Brotherhood",
+      "facet": "Writers, artists and their characters",
+      "known_at": 13
+    },
+    {
+      "name": "Gilbert and Sullivan",
+      "facet": "Writers, artists and their characters",
+      "known_at": 12
+    },
+    {
+      "name": "Charles Darwin",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 6
+    },
+    {
+      "name": "On the Origin of Species",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 10
+    },
+    {
+      "name": "HMS Beagle",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 9
+    },
+    {
+      "name": "Charles Babbage",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 12
+    },
+    {
+      "name": "Difference Engine",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 13
+    },
+    {
+      "name": "Edward Jenner",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 9
+    },
+    {
+      "name": "Smallpox vaccine",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 8
+    },
+    {
+      "name": "John Snow",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 12
+    },
+    {
+      "name": "Broad Street pump",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 13
+    },
+    {
+      "name": "Joseph Lister",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 12
+    },
+    {
+      "name": "Chloroform",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 12
+    },
+    {
+      "name": "Mary Anning",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 8
+    },
+    {
+      "name": "Richard Owen",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 13
+    },
+    {
+      "name": "Alexander Graham Bell",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 7
+    },
+    {
+      "name": "Humphry Davy",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 12
+    },
+    {
+      "name": "Davy lamp",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 12
+    },
+    {
+      "name": "Elizabeth Garrett Anderson",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 12
+    },
+    {
+      "name": "James Clerk Maxwell",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 13
+    },
+    {
+      "name": "Lord Kelvin",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 12
+    },
+    {
+      "name": "William Herschel",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 12
+    },
+    {
+      "name": "William Henry Fox Talbot",
+      "facet": "Scientists, inventors and medicine",
+      "known_at": 13
+    },
+    {
+      "name": "Christmas tree",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 6
+    },
+    {
+      "name": "Christmas card",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 8
+    },
+    {
+      "name": "Christmas cracker",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 5
+    },
+    {
+      "name": "Tom Smith",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 13
+    },
+    {
+      "name": "Christmas pudding",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 5
+    },
+    {
+      "name": "Boxing Day",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 5
+    },
+    {
+      "name": "Pantomime",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 5
+    },
+    {
+      "name": "Good King Wenceslas",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 8
+    },
+    {
+      "name": "Seaside pier",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 4
+    },
+    {
+      "name": "Bathing machine",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 10
+    },
+    {
+      "name": "Penny-farthing",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 6
+    },
+    {
+      "name": "Music hall",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 11
+    },
+    {
+      "name": "Football Association",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 11
+    },
+    {
+      "name": "FA Cup",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 6
+    },
+    {
+      "name": "W. G. Grace",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 12
+    },
+    {
+      "name": "The Ashes",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 9
+    },
+    {
+      "name": "Thomas Cook",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 11
+    },
+    {
+      "name": "Bank holiday",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 11
+    },
+    {
+      "name": "Magic lantern",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 11
+    },
+    {
+      "name": "Brass band",
+      "facet": "Victorian Christmas, leisure and seaside",
+      "known_at": 10
+    },
+    {
+      "name": "British Empire",
+      "facet": "Empire and exploration",
+      "known_at": 6
+    },
+    {
+      "name": "The empire on which the sun never sets",
+      "facet": "Empire and exploration",
+      "known_at": 11
+    },
+    {
+      "name": "British Raj",
+      "facet": "Empire and exploration",
+      "known_at": 10
+    },
+    {
+      "name": "Indian Rebellion of 1857",
+      "facet": "Empire and exploration",
+      "known_at": 13
+    },
+    {
+      "name": "Captain James Cook",
+      "facet": "Empire and exploration",
+      "known_at": 6
+    },
+    {
+      "name": "HMS Endeavour",
+      "facet": "Empire and exploration",
+      "known_at": 10
+    },
+    {
+      "name": "Botany Bay",
+      "facet": "Empire and exploration",
+      "known_at": 11
+    },
+    {
+      "name": "First Fleet",
+      "facet": "Empire and exploration",
+      "known_at": 13
+    },
+    {
+      "name": "David Livingstone",
+      "facet": "Empire and exploration",
+      "known_at": 10
+    },
+    {
+      "name": "Dr Livingstone, I presume?",
+      "facet": "Empire and exploration",
+      "known_at": 11
+    },
+    {
+      "name": "Victoria Falls",
+      "facet": "Empire and exploration",
+      "known_at": 8
+    },
+    {
+      "name": "Mungo Park",
+      "facet": "Empire and exploration",
+      "known_at": 14
+    },
+    {
+      "name": "Franklin expedition",
+      "facet": "Empire and exploration",
+      "known_at": 13
+    },
+    {
+      "name": "Cecil Rhodes",
+      "facet": "Empire and exploration",
+      "known_at": 13
+    },
+    {
+      "name": "Boer War",
+      "facet": "Empire and exploration",
+      "known_at": 12
+    },
+    {
+      "name": "Rorke's Drift",
+      "facet": "Empire and exploration",
+      "known_at": 13
+    },
+    {
+      "name": "Opium Wars",
+      "facet": "Empire and exploration",
+      "known_at": 12
+    },
+    {
+      "name": "Stamford Raffles",
+      "facet": "Empire and exploration",
+      "known_at": 13
+    },
+    {
+      "name": "Suez Canal",
+      "facet": "Empire and exploration",
+      "known_at": 10
+    },
+    {
+      "name": "Koh-i-Noor",
+      "facet": "Empire and exploration",
+      "known_at": 10
+    },
+    {
+      "name": "Elgin Marbles",
+      "facet": "Empire and exploration",
+      "known_at": 11
+    },
+    {
+      "name": "Darjeeling tea",
+      "facet": "Empire and exploration",
+      "known_at": 10
+    },
+    {
+      "name": "Top hat",
+      "facet": "Fashion, food and manners",
+      "known_at": 3
+    },
+    {
+      "name": "Bowler hat",
+      "facet": "Fashion, food and manners",
+      "known_at": 7
+    },
+    {
+      "name": "Crinoline",
+      "facet": "Fashion, food and manners",
+      "known_at": 11
+    },
+    {
+      "name": "Bustle",
+      "facet": "Fashion, food and manners",
+      "known_at": 12
+    },
+    {
+      "name": "Corset",
+      "facet": "Fashion, food and manners",
+      "known_at": 8
+    },
+    {
+      "name": "Bloomers",
+      "facet": "Fashion, food and manners",
+      "known_at": 11
+    },
+    {
+      "name": "Monocle",
+      "facet": "Fashion, food and manners",
+      "known_at": 8
+    },
+    {
+      "name": "Pocket watch",
+      "facet": "Fashion, food and manners",
+      "known_at": 6
+    },
+    {
+      "name": "Mutton chops",
+      "facet": "Fashion, food and manners",
+      "known_at": 12
+    },
+    {
+      "name": "Parasol",
+      "facet": "Fashion, food and manners",
+      "known_at": 8
+    },
+    {
+      "name": "Whitby jet",
+      "facet": "Fashion, food and manners",
+      "known_at": 13
+    },
+    {
+      "name": "Afternoon tea",
+      "facet": "Fashion, food and manners",
+      "known_at": 5
+    },
+    {
+      "name": "Anna, Duchess of Bedford",
+      "facet": "Fashion, food and manners",
+      "known_at": 13
+    },
+    {
+      "name": "Victoria sponge",
+      "facet": "Fashion, food and manners",
+      "known_at": 6
+    },
+    {
+      "name": "Sandwich",
+      "facet": "Fashion, food and manners",
+      "known_at": 8
+    },
+    {
+      "name": "Earl Grey tea",
+      "facet": "Fashion, food and manners",
+      "known_at": 8
+    },
+    {
+      "name": "Beef Wellington",
+      "facet": "Fashion, food and manners",
+      "known_at": 9
+    },
+    {
+      "name": "Bird's Custard",
+      "facet": "Fashion, food and manners",
+      "known_at": 12
+    },
+    {
+      "name": "Mrs Beeton",
+      "facet": "Fashion, food and manners",
+      "known_at": 11
+    },
+    {
+      "name": "Calling card",
+      "facet": "Fashion, food and manners",
+      "known_at": 13
+    },
+    {
+      "name": "Chaperone",
+      "facet": "Fashion, food and manners",
+      "known_at": 11
+    },
+    {
+      "name": "Language of flowers",
+      "facet": "Fashion, food and manners",
+      "known_at": 13
+    }
+  ]
+}

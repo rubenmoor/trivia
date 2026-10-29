@@ -1,0 +1,1277 @@
+{
+  "subcategory": "cities-and-towns",
+  "facets": [
+    "Capital and major cities",
+    "City nicknames and residents' names",
+    "Famous landmarks and buildings",
+    "Seaside resorts and coastal towns",
+    "Historic and cathedral cities",
+    "University and market towns",
+    "Industrial heritage towns",
+    "Football clubs and their home towns",
+    "Towns in food and drink names",
+    "Cities in songs, books and TV",
+    "Place-name origins and pronunciation",
+    "Festivals and events by town"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "London",
+      "facet": "Capital and major cities",
+      "known_at": 1
+    },
+    {
+      "name": "Edinburgh",
+      "facet": "Capital and major cities",
+      "known_at": 4
+    },
+    {
+      "name": "Cardiff",
+      "facet": "Capital and major cities",
+      "known_at": 5
+    },
+    {
+      "name": "Belfast",
+      "facet": "Capital and major cities",
+      "known_at": 6
+    },
+    {
+      "name": "Birmingham",
+      "facet": "Capital and major cities",
+      "known_at": 3
+    },
+    {
+      "name": "Manchester",
+      "facet": "Capital and major cities",
+      "known_at": 3
+    },
+    {
+      "name": "Liverpool",
+      "facet": "Capital and major cities",
+      "known_at": 3
+    },
+    {
+      "name": "Glasgow",
+      "facet": "Capital and major cities",
+      "known_at": 4
+    },
+    {
+      "name": "Leeds",
+      "facet": "Capital and major cities",
+      "known_at": 5
+    },
+    {
+      "name": "Sheffield",
+      "facet": "Capital and major cities",
+      "known_at": 5
+    },
+    {
+      "name": "Bristol",
+      "facet": "Capital and major cities",
+      "known_at": 5
+    },
+    {
+      "name": "Newcastle upon Tyne",
+      "facet": "Capital and major cities",
+      "known_at": 5
+    },
+    {
+      "name": "Nottingham",
+      "facet": "Capital and major cities",
+      "known_at": 5
+    },
+    {
+      "name": "Aberdeen",
+      "facet": "Capital and major cities",
+      "known_at": 7
+    },
+    {
+      "name": "Dundee",
+      "facet": "Capital and major cities",
+      "known_at": 8
+    },
+    {
+      "name": "Swansea",
+      "facet": "Capital and major cities",
+      "known_at": 7
+    },
+    {
+      "name": "Southampton",
+      "facet": "Capital and major cities",
+      "known_at": 6
+    },
+    {
+      "name": "Plymouth",
+      "facet": "Capital and major cities",
+      "known_at": 7
+    },
+    {
+      "name": "Inverness",
+      "facet": "Capital and major cities",
+      "known_at": 8
+    },
+    {
+      "name": "Derry",
+      "facet": "Capital and major cities",
+      "known_at": 9
+    },
+    {
+      "name": "Coventry",
+      "facet": "Capital and major cities",
+      "known_at": 7
+    },
+    {
+      "name": "Scouser",
+      "facet": "City nicknames and residents' names",
+      "known_at": 6
+    },
+    {
+      "name": "Geordie",
+      "facet": "City nicknames and residents' names",
+      "known_at": 6
+    },
+    {
+      "name": "Mancunian",
+      "facet": "City nicknames and residents' names",
+      "known_at": 9
+    },
+    {
+      "name": "Brummie",
+      "facet": "City nicknames and residents' names",
+      "known_at": 7
+    },
+    {
+      "name": "Glaswegian",
+      "facet": "City nicknames and residents' names",
+      "known_at": 8
+    },
+    {
+      "name": "Cockney",
+      "facet": "City nicknames and residents' names",
+      "known_at": 6
+    },
+    {
+      "name": "The Big Smoke",
+      "facet": "City nicknames and residents' names",
+      "known_at": 10
+    },
+    {
+      "name": "Granite City",
+      "facet": "City nicknames and residents' names",
+      "known_at": 11
+    },
+    {
+      "name": "Auld Reekie",
+      "facet": "City nicknames and residents' names",
+      "known_at": 13
+    },
+    {
+      "name": "Steel City",
+      "facet": "City nicknames and residents' names",
+      "known_at": 10
+    },
+    {
+      "name": "Athens of the North",
+      "facet": "City nicknames and residents' names",
+      "known_at": 13
+    },
+    {
+      "name": "Pompey",
+      "facet": "City nicknames and residents' names",
+      "known_at": 11
+    },
+    {
+      "name": "Mackem",
+      "facet": "City nicknames and residents' names",
+      "known_at": 12
+    },
+    {
+      "name": "Wulfrunian",
+      "facet": "City nicknames and residents' names",
+      "known_at": 15
+    },
+    {
+      "name": "Dundonian",
+      "facet": "City nicknames and residents' names",
+      "known_at": 12
+    },
+    {
+      "name": "Aberdonian",
+      "facet": "City nicknames and residents' names",
+      "known_at": 11
+    },
+    {
+      "name": "Cottonopolis",
+      "facet": "City nicknames and residents' names",
+      "known_at": 13
+    },
+    {
+      "name": "Second City",
+      "facet": "City nicknames and residents' names",
+      "known_at": 10
+    },
+    {
+      "name": "Bristolian",
+      "facet": "City nicknames and residents' names",
+      "known_at": 9
+    },
+    {
+      "name": "Big Ben",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 1
+    },
+    {
+      "name": "Tower Bridge",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 3
+    },
+    {
+      "name": "Buckingham Palace",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 2
+    },
+    {
+      "name": "London Eye",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 3
+    },
+    {
+      "name": "Tower of London",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 4
+    },
+    {
+      "name": "Edinburgh Castle",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 6
+    },
+    {
+      "name": "Angel of the North",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 7
+    },
+    {
+      "name": "Royal Liver Building",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 10
+    },
+    {
+      "name": "Blackpool Tower",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 6
+    },
+    {
+      "name": "The Shard",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 6
+    },
+    {
+      "name": "St Paul's Cathedral",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 6
+    },
+    {
+      "name": "Westminster Abbey",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 7
+    },
+    {
+      "name": "Clifton Suspension Bridge",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 9
+    },
+    {
+      "name": "Forth Bridge",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 10
+    },
+    {
+      "name": "Titanic Belfast",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 9
+    },
+    {
+      "name": "Royal Pavilion",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 10
+    },
+    {
+      "name": "Principality Stadium",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 9
+    },
+    {
+      "name": "The Kelpies",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 11
+    },
+    {
+      "name": "Spinnaker Tower",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 10
+    },
+    {
+      "name": "Radcliffe Camera",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 13
+    },
+    {
+      "name": "Arthur's Seat",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 10
+    },
+    {
+      "name": "Caernarfon Castle",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 10
+    },
+    {
+      "name": "Blackpool",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 3
+    },
+    {
+      "name": "Brighton",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 4
+    },
+    {
+      "name": "Scarborough",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 7
+    },
+    {
+      "name": "Whitby",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 8
+    },
+    {
+      "name": "Skegness",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 7
+    },
+    {
+      "name": "Margate",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 8
+    },
+    {
+      "name": "Bournemouth",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 7
+    },
+    {
+      "name": "Weston-super-Mare",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 8
+    },
+    {
+      "name": "Llandudno",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 10
+    },
+    {
+      "name": "Torquay",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 9
+    },
+    {
+      "name": "St Ives",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 9
+    },
+    {
+      "name": "Newquay",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 8
+    },
+    {
+      "name": "Southend-on-Sea",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 8
+    },
+    {
+      "name": "Great Yarmouth",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 9
+    },
+    {
+      "name": "Tenby",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 11
+    },
+    {
+      "name": "Portrush",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 12
+    },
+    {
+      "name": "Cromer",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 11
+    },
+    {
+      "name": "Padstow",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 11
+    },
+    {
+      "name": "Morecambe",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 10
+    },
+    {
+      "name": "Falmouth",
+      "facet": "Seaside resorts and coastal towns",
+      "known_at": 11
+    },
+    {
+      "name": "York",
+      "facet": "Historic and cathedral cities",
+      "known_at": 5
+    },
+    {
+      "name": "Canterbury",
+      "facet": "Historic and cathedral cities",
+      "known_at": 7
+    },
+    {
+      "name": "Bath",
+      "facet": "Historic and cathedral cities",
+      "known_at": 6
+    },
+    {
+      "name": "Chester",
+      "facet": "Historic and cathedral cities",
+      "known_at": 8
+    },
+    {
+      "name": "Durham",
+      "facet": "Historic and cathedral cities",
+      "known_at": 9
+    },
+    {
+      "name": "Winchester",
+      "facet": "Historic and cathedral cities",
+      "known_at": 10
+    },
+    {
+      "name": "Salisbury",
+      "facet": "Historic and cathedral cities",
+      "known_at": 9
+    },
+    {
+      "name": "Lincoln",
+      "facet": "Historic and cathedral cities",
+      "known_at": 9
+    },
+    {
+      "name": "Ely",
+      "facet": "Historic and cathedral cities",
+      "known_at": 12
+    },
+    {
+      "name": "Wells",
+      "facet": "Historic and cathedral cities",
+      "known_at": 11
+    },
+    {
+      "name": "St Davids",
+      "facet": "Historic and cathedral cities",
+      "known_at": 12
+    },
+    {
+      "name": "St Andrews",
+      "facet": "Historic and cathedral cities",
+      "known_at": 10
+    },
+    {
+      "name": "Stirling",
+      "facet": "Historic and cathedral cities",
+      "known_at": 10
+    },
+    {
+      "name": "Exeter",
+      "facet": "Historic and cathedral cities",
+      "known_at": 8
+    },
+    {
+      "name": "Norwich",
+      "facet": "Historic and cathedral cities",
+      "known_at": 8
+    },
+    {
+      "name": "Lichfield",
+      "facet": "Historic and cathedral cities",
+      "known_at": 13
+    },
+    {
+      "name": "Armagh",
+      "facet": "Historic and cathedral cities",
+      "known_at": 13
+    },
+    {
+      "name": "Colchester",
+      "facet": "Historic and cathedral cities",
+      "known_at": 10
+    },
+    {
+      "name": "Hereford",
+      "facet": "Historic and cathedral cities",
+      "known_at": 11
+    },
+    {
+      "name": "St Albans",
+      "facet": "Historic and cathedral cities",
+      "known_at": 10
+    },
+    {
+      "name": "Oxford",
+      "facet": "University and market towns",
+      "known_at": 4
+    },
+    {
+      "name": "Cambridge",
+      "facet": "University and market towns",
+      "known_at": 4
+    },
+    {
+      "name": "Oxbridge",
+      "facet": "University and market towns",
+      "known_at": 9
+    },
+    {
+      "name": "Aberystwyth",
+      "facet": "University and market towns",
+      "known_at": 11
+    },
+    {
+      "name": "Bangor",
+      "facet": "University and market towns",
+      "known_at": 12
+    },
+    {
+      "name": "Loughborough",
+      "facet": "University and market towns",
+      "known_at": 11
+    },
+    {
+      "name": "Lancaster",
+      "facet": "University and market towns",
+      "known_at": 9
+    },
+    {
+      "name": "Warwick",
+      "facet": "University and market towns",
+      "known_at": 9
+    },
+    {
+      "name": "Stratford-upon-Avon",
+      "facet": "University and market towns",
+      "known_at": 7
+    },
+    {
+      "name": "Ludlow",
+      "facet": "University and market towns",
+      "known_at": 12
+    },
+    {
+      "name": "Hay-on-Wye",
+      "facet": "University and market towns",
+      "known_at": 12
+    },
+    {
+      "name": "Bury St Edmunds",
+      "facet": "University and market towns",
+      "known_at": 12
+    },
+    {
+      "name": "Skipton",
+      "facet": "University and market towns",
+      "known_at": 12
+    },
+    {
+      "name": "Hexham",
+      "facet": "University and market towns",
+      "known_at": 13
+    },
+    {
+      "name": "Keswick",
+      "facet": "University and market towns",
+      "known_at": 11
+    },
+    {
+      "name": "Market Harborough",
+      "facet": "University and market towns",
+      "known_at": 13
+    },
+    {
+      "name": "Thirsk",
+      "facet": "University and market towns",
+      "known_at": 13
+    },
+    {
+      "name": "Shrewsbury",
+      "facet": "University and market towns",
+      "known_at": 10
+    },
+    {
+      "name": "Cirencester",
+      "facet": "University and market towns",
+      "known_at": 12
+    },
+    {
+      "name": "Totnes",
+      "facet": "University and market towns",
+      "known_at": 13
+    },
+    {
+      "name": "Ironbridge",
+      "facet": "Industrial heritage towns",
+      "known_at": 10
+    },
+    {
+      "name": "Stoke-on-Trent",
+      "facet": "Industrial heritage towns",
+      "known_at": 8
+    },
+    {
+      "name": "Saltaire",
+      "facet": "Industrial heritage towns",
+      "known_at": 13
+    },
+    {
+      "name": "New Lanark",
+      "facet": "Industrial heritage towns",
+      "known_at": 13
+    },
+    {
+      "name": "Merthyr Tydfil",
+      "facet": "Industrial heritage towns",
+      "known_at": 11
+    },
+    {
+      "name": "Middlesbrough",
+      "facet": "Industrial heritage towns",
+      "known_at": 8
+    },
+    {
+      "name": "Sunderland",
+      "facet": "Industrial heritage towns",
+      "known_at": 7
+    },
+    {
+      "name": "Bradford",
+      "facet": "Industrial heritage towns",
+      "known_at": 8
+    },
+    {
+      "name": "Huddersfield",
+      "facet": "Industrial heritage towns",
+      "known_at": 10
+    },
+    {
+      "name": "Halifax",
+      "facet": "Industrial heritage towns",
+      "known_at": 10
+    },
+    {
+      "name": "Oldham",
+      "facet": "Industrial heritage towns",
+      "known_at": 10
+    },
+    {
+      "name": "Swindon",
+      "facet": "Industrial heritage towns",
+      "known_at": 9
+    },
+    {
+      "name": "Crewe",
+      "facet": "Industrial heritage towns",
+      "known_at": 10
+    },
+    {
+      "name": "Barrow-in-Furness",
+      "facet": "Industrial heritage towns",
+      "known_at": 12
+    },
+    {
+      "name": "Port Sunlight",
+      "facet": "Industrial heritage towns",
+      "known_at": 13
+    },
+    {
+      "name": "Bournville",
+      "facet": "Industrial heritage towns",
+      "known_at": 9
+    },
+    {
+      "name": "Rhondda",
+      "facet": "Industrial heritage towns",
+      "known_at": 11
+    },
+    {
+      "name": "Blaenavon",
+      "facet": "Industrial heritage towns",
+      "known_at": 14
+    },
+    {
+      "name": "Wigan",
+      "facet": "Industrial heritage towns",
+      "known_at": 9
+    },
+    {
+      "name": "Clydebank",
+      "facet": "Industrial heritage towns",
+      "known_at": 12
+    },
+    {
+      "name": "Black Country",
+      "facet": "Industrial heritage towns",
+      "known_at": 11
+    },
+    {
+      "name": "Manchester United",
+      "facet": "Football clubs and their home towns",
+      "known_at": 2
+    },
+    {
+      "name": "Manchester City",
+      "facet": "Football clubs and their home towns",
+      "known_at": 3
+    },
+    {
+      "name": "Liverpool FC",
+      "facet": "Football clubs and their home towns",
+      "known_at": 3
+    },
+    {
+      "name": "Everton",
+      "facet": "Football clubs and their home towns",
+      "known_at": 6
+    },
+    {
+      "name": "Arsenal",
+      "facet": "Football clubs and their home towns",
+      "known_at": 3
+    },
+    {
+      "name": "Tottenham Hotspur",
+      "facet": "Football clubs and their home towns",
+      "known_at": 5
+    },
+    {
+      "name": "West Ham United",
+      "facet": "Football clubs and their home towns",
+      "known_at": 6
+    },
+    {
+      "name": "Crystal Palace",
+      "facet": "Football clubs and their home towns",
+      "known_at": 7
+    },
+    {
+      "name": "Celtic",
+      "facet": "Football clubs and their home towns",
+      "known_at": 6
+    },
+    {
+      "name": "Rangers",
+      "facet": "Football clubs and their home towns",
+      "known_at": 6
+    },
+    {
+      "name": "Newcastle United",
+      "facet": "Football clubs and their home towns",
+      "known_at": 5
+    },
+    {
+      "name": "Aston Villa",
+      "facet": "Football clubs and their home towns",
+      "known_at": 6
+    },
+    {
+      "name": "Wolverhampton Wanderers",
+      "facet": "Football clubs and their home towns",
+      "known_at": 7
+    },
+    {
+      "name": "Sheffield Wednesday",
+      "facet": "Football clubs and their home towns",
+      "known_at": 9
+    },
+    {
+      "name": "Nottingham Forest",
+      "facet": "Football clubs and their home towns",
+      "known_at": 8
+    },
+    {
+      "name": "Heart of Midlothian",
+      "facet": "Football clubs and their home towns",
+      "known_at": 11
+    },
+    {
+      "name": "Hibernian",
+      "facet": "Football clubs and their home towns",
+      "known_at": 11
+    },
+    {
+      "name": "Swansea City",
+      "facet": "Football clubs and their home towns",
+      "known_at": 9
+    },
+    {
+      "name": "Cardiff City",
+      "facet": "Football clubs and their home towns",
+      "known_at": 9
+    },
+    {
+      "name": "Wrexham AFC",
+      "facet": "Football clubs and their home towns",
+      "known_at": 8
+    },
+    {
+      "name": "Linfield",
+      "facet": "Football clubs and their home towns",
+      "known_at": 14
+    },
+    {
+      "name": "Brighton & Hove Albion",
+      "facet": "Football clubs and their home towns",
+      "known_at": 7
+    },
+    {
+      "name": "Preston North End",
+      "facet": "Football clubs and their home towns",
+      "known_at": 11
+    },
+    {
+      "name": "Bakewell tart",
+      "facet": "Towns in food and drink names",
+      "known_at": 7
+    },
+    {
+      "name": "Eccles cake",
+      "facet": "Towns in food and drink names",
+      "known_at": 10
+    },
+    {
+      "name": "Chelsea bun",
+      "facet": "Towns in food and drink names",
+      "known_at": 10
+    },
+    {
+      "name": "Melton Mowbray pork pie",
+      "facet": "Towns in food and drink names",
+      "known_at": 11
+    },
+    {
+      "name": "Cheddar cheese",
+      "facet": "Towns in food and drink names",
+      "known_at": 5
+    },
+    {
+      "name": "Stilton cheese",
+      "facet": "Towns in food and drink names",
+      "known_at": 10
+    },
+    {
+      "name": "Worcestershire sauce",
+      "facet": "Towns in food and drink names",
+      "known_at": 9
+    },
+    {
+      "name": "Kendal Mint Cake",
+      "facet": "Towns in food and drink names",
+      "known_at": 12
+    },
+    {
+      "name": "Bath bun",
+      "facet": "Towns in food and drink names",
+      "known_at": 12
+    },
+    {
+      "name": "Dundee cake",
+      "facet": "Towns in food and drink names",
+      "known_at": 11
+    },
+    {
+      "name": "Eton mess",
+      "facet": "Towns in food and drink names",
+      "known_at": 9
+    },
+    {
+      "name": "Banbury cake",
+      "facet": "Towns in food and drink names",
+      "known_at": 13
+    },
+    {
+      "name": "Pontefract cake",
+      "facet": "Towns in food and drink names",
+      "known_at": 13
+    },
+    {
+      "name": "Caerphilly cheese",
+      "facet": "Towns in food and drink names",
+      "known_at": 12
+    },
+    {
+      "name": "Arbroath smokie",
+      "facet": "Towns in food and drink names",
+      "known_at": 13
+    },
+    {
+      "name": "Chorley cake",
+      "facet": "Towns in food and drink names",
+      "known_at": 14
+    },
+    {
+      "name": "Wensleydale cheese",
+      "facet": "Towns in food and drink names",
+      "known_at": 9
+    },
+    {
+      "name": "Aberdeen Angus",
+      "facet": "Towns in food and drink names",
+      "known_at": 11
+    },
+    {
+      "name": "Forfar bridie",
+      "facet": "Towns in food and drink names",
+      "known_at": 14
+    },
+    {
+      "name": "Yorkshire pudding",
+      "facet": "Towns in food and drink names",
+      "known_at": 3
+    },
+    {
+      "name": "Penny Lane",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 9
+    },
+    {
+      "name": "Waterloo Sunset",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Streets of London",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Sunshine on Leith",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 13
+    },
+    {
+      "name": "Ghost Town",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 13
+    },
+    {
+      "name": "Coronation Street",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 7
+    },
+    {
+      "name": "EastEnders",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 6
+    },
+    {
+      "name": "Peaky Blinders",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 10
+    },
+    {
+      "name": "Gavin & Stacey",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 10
+    },
+    {
+      "name": "Derry Girls",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 10
+    },
+    {
+      "name": "Hot Fuzz",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Trainspotting",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Doc Martin",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 11
+    },
+    {
+      "name": "The Full Monty",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Inspector Morse",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Last of the Summer Wine",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 13
+    },
+    {
+      "name": "Balamory",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 6
+    },
+    {
+      "name": "Dracula",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Brassed Off",
+      "facet": "Cities in songs, books and TV",
+      "known_at": 14
+    },
+    {
+      "name": "Llanfairpwllgwyngyll",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 8
+    },
+    {
+      "name": "Leicester",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 6
+    },
+    {
+      "name": "Worcester",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 9
+    },
+    {
+      "name": "Gloucester",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 8
+    },
+    {
+      "name": "Keighley",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 13
+    },
+    {
+      "name": "Mousehole",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 12
+    },
+    {
+      "name": "Happisburgh",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 14
+    },
+    {
+      "name": "Bicester",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 12
+    },
+    {
+      "name": "Londinium",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 8
+    },
+    {
+      "name": "Eboracum",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 13
+    },
+    {
+      "name": "Jorvik",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 10
+    },
+    {
+      "name": "Aquae Sulis",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 12
+    },
+    {
+      "name": "Westward Ho!",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 12
+    },
+    {
+      "name": "-by",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 11
+    },
+    {
+      "name": "Aber-",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 12
+    },
+    {
+      "name": "Llan-",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 11
+    },
+    {
+      "name": "Inver-",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 13
+    },
+    {
+      "name": "-thorpe",
+      "facet": "Place-name origins and pronunciation",
+      "known_at": 13
+    },
+    {
+      "name": "Edinburgh Festival Fringe",
+      "facet": "Festivals and events by town",
+      "known_at": 9
+    },
+    {
+      "name": "Glastonbury Festival",
+      "facet": "Festivals and events by town",
+      "known_at": 7
+    },
+    {
+      "name": "Notting Hill Carnival",
+      "facet": "Festivals and events by town",
+      "known_at": 8
+    },
+    {
+      "name": "Hogmanay",
+      "facet": "Festivals and events by town",
+      "known_at": 8
+    },
+    {
+      "name": "Up Helly Aa",
+      "facet": "Festivals and events by town",
+      "known_at": 13
+    },
+    {
+      "name": "Lewes Bonfire",
+      "facet": "Festivals and events by town",
+      "known_at": 13
+    },
+    {
+      "name": "Cheltenham Festival",
+      "facet": "Festivals and events by town",
+      "known_at": 11
+    },
+    {
+      "name": "Royal Ascot",
+      "facet": "Festivals and events by town",
+      "known_at": 10
+    },
+    {
+      "name": "Wimbledon",
+      "facet": "Festivals and events by town",
+      "known_at": 4
+    },
+    {
+      "name": "Henley Royal Regatta",
+      "facet": "Festivals and events by town",
+      "known_at": 12
+    },
+    {
+      "name": "Isle of Man TT",
+      "facet": "Festivals and events by town",
+      "known_at": 11
+    },
+    {
+      "name": "Grand National",
+      "facet": "Festivals and events by town",
+      "known_at": 8
+    },
+    {
+      "name": "Hay Festival",
+      "facet": "Festivals and events by town",
+      "known_at": 13
+    },
+    {
+      "name": "Llangollen International Eisteddfod",
+      "facet": "Festivals and events by town",
+      "known_at": 13
+    },
+    {
+      "name": "Cooper's Hill Cheese-Rolling",
+      "facet": "Festivals and events by town",
+      "known_at": 10
+    },
+    {
+      "name": "Blackpool Illuminations",
+      "facet": "Festivals and events by town",
+      "known_at": 8
+    },
+    {
+      "name": "Whitby Goth Weekend",
+      "facet": "Festivals and events by town",
+      "known_at": 13
+    },
+    {
+      "name": "Royal Edinburgh Military Tattoo",
+      "facet": "Festivals and events by town",
+      "known_at": 11
+    },
+    {
+      "name": "Braemar Gathering",
+      "facet": "Festivals and events by town",
+      "known_at": 13
+    },
+    {
+      "name": "Reading Festival",
+      "facet": "Festivals and events by town",
+      "known_at": 10
+    }
+  ]
+}

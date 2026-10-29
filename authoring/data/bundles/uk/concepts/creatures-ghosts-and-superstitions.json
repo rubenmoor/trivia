@@ -1,0 +1,733 @@
+{
+  "subcategory": "creatures-ghosts-and-superstitions",
+  "facets": [
+    "Fairies, pixies and brownies",
+    "Water monsters and sea folk",
+    "Dragons, worms and phantom beasts",
+    "Giants, hill figures and wild men",
+    "Famous haunted places",
+    "Royal and historical ghosts",
+    "Witches and cunning folk",
+    "Everyday omens and sayings",
+    "Lucky charms and protective objects",
+    "Seasonal customs and folk beliefs",
+    "Theatre, sea and sport superstitions",
+    "Ghost stories on page and screen"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Pixie",
+      "facet": "Fairies, pixies and brownies",
+      "known_at": 2
+    },
+    {
+      "name": "Brownie",
+      "facet": "Fairies, pixies and brownies",
+      "known_at": 6
+    },
+    {
+      "name": "Puck",
+      "facet": "Fairies, pixies and brownies",
+      "known_at": 9
+    },
+    {
+      "name": "Cottingley Fairies",
+      "facet": "Fairies, pixies and brownies",
+      "known_at": 11
+    },
+    {
+      "name": "Changeling",
+      "facet": "Fairies, pixies and brownies",
+      "known_at": 11
+    },
+    {
+      "name": "Fairy ring",
+      "facet": "Fairies, pixies and brownies",
+      "known_at": 5
+    },
+    {
+      "name": "Will-o'-the-wisp",
+      "facet": "Fairies, pixies and brownies",
+      "known_at": 8
+    },
+    {
+      "name": "Boggart",
+      "facet": "Fairies, pixies and brownies",
+      "known_at": 7
+    },
+    {
+      "name": "Knocker",
+      "facet": "Fairies, pixies and brownies",
+      "known_at": 13
+    },
+    {
+      "name": "Tylwyth Teg",
+      "facet": "Fairies, pixies and brownies",
+      "known_at": 14
+    },
+    {
+      "name": "Titania",
+      "facet": "Fairies, pixies and brownies",
+      "known_at": 10
+    },
+    {
+      "name": "Oberon",
+      "facet": "Fairies, pixies and brownies",
+      "known_at": 10
+    },
+    {
+      "name": "Queen Mab",
+      "facet": "Fairies, pixies and brownies",
+      "known_at": 13
+    },
+    {
+      "name": "Spriggan",
+      "facet": "Fairies, pixies and brownies",
+      "known_at": 13
+    },
+    {
+      "name": "Redcap",
+      "facet": "Fairies, pixies and brownies",
+      "known_at": 13
+    },
+    {
+      "name": "Fairy door",
+      "facet": "Fairies, pixies and brownies",
+      "known_at": 4
+    },
+    {
+      "name": "Hob",
+      "facet": "Fairies, pixies and brownies",
+      "known_at": 13
+    },
+    {
+      "name": "The Kelpies sculpture",
+      "facet": "Water monsters and sea folk",
+      "known_at": 9
+    },
+    {
+      "name": "Mermaid of Zennor",
+      "facet": "Water monsters and sea folk",
+      "known_at": 12
+    },
+    {
+      "name": "Jenny Greenteeth",
+      "facet": "Water monsters and sea folk",
+      "known_at": 11
+    },
+    {
+      "name": "Finfolk",
+      "facet": "Water monsters and sea folk",
+      "known_at": 14
+    },
+    {
+      "name": "Blue Men of the Minch",
+      "facet": "Water monsters and sea folk",
+      "known_at": 14
+    },
+    {
+      "name": "Morgawr",
+      "facet": "Water monsters and sea folk",
+      "known_at": 14
+    },
+    {
+      "name": "Each-uisge",
+      "facet": "Water monsters and sea folk",
+      "known_at": 14
+    },
+    {
+      "name": "Afanc",
+      "facet": "Water monsters and sea folk",
+      "known_at": 14
+    },
+    {
+      "name": "Nuckelavee",
+      "facet": "Water monsters and sea folk",
+      "known_at": 14
+    },
+    {
+      "name": "Peg Powler",
+      "facet": "Water monsters and sea folk",
+      "known_at": 14
+    },
+    {
+      "name": "Grindylow",
+      "facet": "Water monsters and sea folk",
+      "known_at": 8
+    },
+    {
+      "name": "Surgeon's Photograph",
+      "facet": "Water monsters and sea folk",
+      "known_at": 12
+    },
+    {
+      "name": "Shellycoat",
+      "facet": "Water monsters and sea folk",
+      "known_at": 15
+    },
+    {
+      "name": "Black Shuck",
+      "facet": "Dragons, worms and phantom beasts",
+      "known_at": 12
+    },
+    {
+      "name": "Beast of Exmoor",
+      "facet": "Dragons, worms and phantom beasts",
+      "known_at": 12
+    },
+    {
+      "name": "Barghest",
+      "facet": "Dragons, worms and phantom beasts",
+      "known_at": 14
+    },
+    {
+      "name": "Gytrash",
+      "facet": "Dragons, worms and phantom beasts",
+      "known_at": 14
+    },
+    {
+      "name": "Owlman",
+      "facet": "Dragons, worms and phantom beasts",
+      "known_at": 14
+    },
+    {
+      "name": "Wyvern",
+      "facet": "Dragons, worms and phantom beasts",
+      "known_at": 9
+    },
+    {
+      "name": "Cù-sìth",
+      "facet": "Dragons, worms and phantom beasts",
+      "known_at": 14
+    },
+    {
+      "name": "Church Grim",
+      "facet": "Dragons, worms and phantom beasts",
+      "known_at": 14
+    },
+    {
+      "name": "Green Man",
+      "facet": "Giants, hill figures and wild men",
+      "known_at": 10
+    },
+    {
+      "name": "Woodwose",
+      "facet": "Giants, hill figures and wild men",
+      "known_at": 15
+    },
+    {
+      "name": "Wade the giant",
+      "facet": "Giants, hill figures and wild men",
+      "known_at": 15
+    },
+    {
+      "name": "Borley Rectory",
+      "facet": "Famous haunted places",
+      "known_at": 13
+    },
+    {
+      "name": "Pluckley",
+      "facet": "Famous haunted places",
+      "known_at": 13
+    },
+    {
+      "name": "Edinburgh Vaults",
+      "facet": "Famous haunted places",
+      "known_at": 11
+    },
+    {
+      "name": "Mary King's Close",
+      "facet": "Famous haunted places",
+      "known_at": 12
+    },
+    {
+      "name": "50 Berkeley Square",
+      "facet": "Famous haunted places",
+      "known_at": 14
+    },
+    {
+      "name": "Highgate Cemetery",
+      "facet": "Famous haunted places",
+      "known_at": 11
+    },
+    {
+      "name": "Chillingham Castle",
+      "facet": "Famous haunted places",
+      "known_at": 13
+    },
+    {
+      "name": "Jamaica Inn",
+      "facet": "Famous haunted places",
+      "known_at": 11
+    },
+    {
+      "name": "Raynham Hall",
+      "facet": "Famous haunted places",
+      "known_at": 13
+    },
+    {
+      "name": "Greyfriars Kirkyard",
+      "facet": "Famous haunted places",
+      "known_at": 10
+    },
+    {
+      "name": "Blickling Hall",
+      "facet": "Famous haunted places",
+      "known_at": 13
+    },
+    {
+      "name": "Skirrid Inn",
+      "facet": "Famous haunted places",
+      "known_at": 14
+    },
+    {
+      "name": "Ancient Ram Inn",
+      "facet": "Famous haunted places",
+      "known_at": 14
+    },
+    {
+      "name": "Culloden Moor",
+      "facet": "Famous haunted places",
+      "known_at": 11
+    },
+    {
+      "name": "Brown Lady of Raynham Hall",
+      "facet": "Royal and historical ghosts",
+      "known_at": 13
+    },
+    {
+      "name": "Roman soldiers of the Treasurer's House",
+      "facet": "Royal and historical ghosts",
+      "known_at": 13
+    },
+    {
+      "name": "Man in Grey of Drury Lane",
+      "facet": "Royal and historical ghosts",
+      "known_at": 14
+    },
+    {
+      "name": "Margaret Pole",
+      "facet": "Royal and historical ghosts",
+      "known_at": 14
+    },
+    {
+      "name": "Sir Walter Raleigh",
+      "facet": "Royal and historical ghosts",
+      "known_at": 10
+    },
+    {
+      "name": "Enfield Poltergeist",
+      "facet": "Royal and historical ghosts",
+      "known_at": 12
+    },
+    {
+      "name": "Wicked Lady",
+      "facet": "Royal and historical ghosts",
+      "known_at": 14
+    },
+    {
+      "name": "Grey Lady",
+      "facet": "Royal and historical ghosts",
+      "known_at": 9
+    },
+    {
+      "name": "Headless horseman",
+      "facet": "Royal and historical ghosts",
+      "known_at": 6
+    },
+    {
+      "name": "Pendle witches",
+      "facet": "Witches and cunning folk",
+      "known_at": 11
+    },
+    {
+      "name": "Mother Shipton's Cave",
+      "facet": "Witches and cunning folk",
+      "known_at": 12
+    },
+    {
+      "name": "Matthew Hopkins",
+      "facet": "Witches and cunning folk",
+      "known_at": 12
+    },
+    {
+      "name": "North Berwick witch trials",
+      "facet": "Witches and cunning folk",
+      "known_at": 13
+    },
+    {
+      "name": "Daemonologie",
+      "facet": "Witches and cunning folk",
+      "known_at": 14
+    },
+    {
+      "name": "Cunning folk",
+      "facet": "Witches and cunning folk",
+      "known_at": 13
+    },
+    {
+      "name": "Isobel Gowdie",
+      "facet": "Witches and cunning folk",
+      "known_at": 15
+    },
+    {
+      "name": "Witchcraft Act 1735",
+      "facet": "Witches and cunning folk",
+      "known_at": 14
+    },
+    {
+      "name": "Helen Duncan",
+      "facet": "Witches and cunning folk",
+      "known_at": 14
+    },
+    {
+      "name": "Gerald Gardner",
+      "facet": "Witches and cunning folk",
+      "known_at": 14
+    },
+    {
+      "name": "Weird Sisters",
+      "facet": "Witches and cunning folk",
+      "known_at": 10
+    },
+    {
+      "name": "Familiar",
+      "facet": "Witches and cunning folk",
+      "known_at": 9
+    },
+    {
+      "name": "Museum of Witchcraft and Magic",
+      "facet": "Witches and cunning folk",
+      "known_at": 14
+    },
+    {
+      "name": "Black Annis",
+      "facet": "Witches and cunning folk",
+      "known_at": 15
+    },
+    {
+      "name": "Cailleach",
+      "facet": "Witches and cunning folk",
+      "known_at": 14
+    },
+    {
+      "name": "Magpie rhyme",
+      "facet": "Everyday omens and sayings",
+      "known_at": 5
+    },
+    {
+      "name": "Spilling salt",
+      "facet": "Everyday omens and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Red sky at night",
+      "facet": "Everyday omens and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Itchy palm",
+      "facet": "Everyday omens and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Crossing on the stairs",
+      "facet": "Everyday omens and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Bird poo",
+      "facet": "Everyday omens and sayings",
+      "known_at": 5
+    },
+    {
+      "name": "Friday the 13th",
+      "facet": "Everyday omens and sayings",
+      "known_at": 4
+    },
+    {
+      "name": "Hag stone",
+      "facet": "Lucky charms and protective objects",
+      "known_at": 12
+    },
+    {
+      "name": "Witch bottle",
+      "facet": "Lucky charms and protective objects",
+      "known_at": 12
+    },
+    {
+      "name": "Witch ball",
+      "facet": "Lucky charms and protective objects",
+      "known_at": 13
+    },
+    {
+      "name": "Rowan tree",
+      "facet": "Lucky charms and protective objects",
+      "known_at": 12
+    },
+    {
+      "name": "Concealed shoes",
+      "facet": "Lucky charms and protective objects",
+      "known_at": 14
+    },
+    {
+      "name": "Witch marks",
+      "facet": "Lucky charms and protective objects",
+      "known_at": 13
+    },
+    {
+      "name": "White heather",
+      "facet": "Lucky charms and protective objects",
+      "known_at": 11
+    },
+    {
+      "name": "Fairy Flag of Dunvegan",
+      "facet": "Lucky charms and protective objects",
+      "known_at": 14
+    },
+    {
+      "name": "Christmas pudding coin",
+      "facet": "Lucky charms and protective objects",
+      "known_at": 7
+    },
+    {
+      "name": "Acorn",
+      "facet": "Lucky charms and protective objects",
+      "known_at": 12
+    },
+    {
+      "name": "Punkie Night",
+      "facet": "Seasonal customs and folk beliefs",
+      "known_at": 14
+    },
+    {
+      "name": "Mischief Night",
+      "facet": "Seasonal customs and folk beliefs",
+      "known_at": 10
+    },
+    {
+      "name": "Obby Oss",
+      "facet": "Seasonal customs and folk beliefs",
+      "known_at": 13
+    },
+    {
+      "name": "Burry Man",
+      "facet": "Seasonal customs and folk beliefs",
+      "known_at": 14
+    },
+    {
+      "name": "Apple bobbing",
+      "facet": "Seasonal customs and folk beliefs",
+      "known_at": 4
+    },
+    {
+      "name": "Break a leg",
+      "facet": "Theatre, sea and sport superstitions",
+      "known_at": 7
+    },
+    {
+      "name": "Ghost light",
+      "facet": "Theatre, sea and sport superstitions",
+      "known_at": 12
+    },
+    {
+      "name": "Whistling in a theatre",
+      "facet": "Theatre, sea and sport superstitions",
+      "known_at": 12
+    },
+    {
+      "name": "Peacock feathers",
+      "facet": "Theatre, sea and sport superstitions",
+      "known_at": 13
+    },
+    {
+      "name": "Albatross",
+      "facet": "Theatre, sea and sport superstitions",
+      "known_at": 11
+    },
+    {
+      "name": "Portland rabbit taboo",
+      "facet": "Theatre, sea and sport superstitions",
+      "known_at": 14
+    },
+    {
+      "name": "Davy Jones' Locker",
+      "facet": "Theatre, sea and sport superstitions",
+      "known_at": 8
+    },
+    {
+      "name": "Flying Dutchman",
+      "facet": "Theatre, sea and sport superstitions",
+      "known_at": 8
+    },
+    {
+      "name": "Renaming a boat",
+      "facet": "Theatre, sea and sport superstitions",
+      "known_at": 13
+    },
+    {
+      "name": "Whistling up the wind",
+      "facet": "Theatre, sea and sport superstitions",
+      "known_at": 12
+    },
+    {
+      "name": "Swallow tattoo",
+      "facet": "Theatre, sea and sport superstitions",
+      "known_at": 13
+    },
+    {
+      "name": "St Elmo's fire",
+      "facet": "Theatre, sea and sport superstitions",
+      "known_at": 13
+    },
+    {
+      "name": "Nelson (cricket)",
+      "facet": "Theatre, sea and sport superstitions",
+      "known_at": 13
+    },
+    {
+      "name": "Birmingham City gypsy curse",
+      "facet": "Theatre, sea and sport superstitions",
+      "known_at": 14
+    },
+    {
+      "name": "Lucky pants",
+      "facet": "Theatre, sea and sport superstitions",
+      "known_at": 7,
+      "retired": "unaskable: I couldn't find a well-known, checkable British person or character linked to lucky pants, so the question would be shaky."
+    },
+    {
+      "name": "Leaving the tunnel last",
+      "facet": "Theatre, sea and sport superstitions",
+      "known_at": 12
+    },
+    {
+      "name": "Mary Celeste",
+      "facet": "Theatre, sea and sport superstitions",
+      "known_at": 11
+    },
+    {
+      "name": "The Canterville Ghost",
+      "facet": "Ghost stories on page and screen",
+      "known_at": 9
+    },
+    {
+      "name": "The Woman in Black",
+      "facet": "Ghost stories on page and screen",
+      "known_at": 10
+    },
+    {
+      "name": "The Turn of the Screw",
+      "facet": "Ghost stories on page and screen",
+      "known_at": 13
+    },
+    {
+      "name": "Ghostwatch",
+      "facet": "Ghost stories on page and screen",
+      "known_at": 13
+    },
+    {
+      "name": "M. R. James",
+      "facet": "Ghost stories on page and screen",
+      "known_at": 13
+    },
+    {
+      "name": "Ghosts (BBC sitcom)",
+      "facet": "Ghost stories on page and screen",
+      "known_at": 9
+    },
+    {
+      "name": "Most Haunted",
+      "facet": "Ghost stories on page and screen",
+      "known_at": 10
+    },
+    {
+      "name": "Blithe Spirit",
+      "facet": "Ghost stories on page and screen",
+      "known_at": 13
+    },
+    {
+      "name": "Ghost of Hamlet's father",
+      "facet": "Ghost stories on page and screen",
+      "known_at": 11
+    },
+    {
+      "name": "Banquo",
+      "facet": "Ghost stories on page and screen",
+      "known_at": 11
+    },
+    {
+      "name": "Nearly Headless Nick",
+      "facet": "Ghost stories on page and screen",
+      "known_at": 5
+    },
+    {
+      "name": "Moaning Myrtle",
+      "facet": "Ghost stories on page and screen",
+      "known_at": 5
+    },
+    {
+      "name": "The Signal-Man",
+      "facet": "Ghost stories on page and screen",
+      "known_at": 14
+    },
+    {
+      "name": "Randall and Hopkirk (Deceased)",
+      "facet": "Ghost stories on page and screen",
+      "known_at": 14
+    },
+    {
+      "name": "Rentaghost",
+      "facet": "Ghost stories on page and screen",
+      "known_at": 13
+    },
+    {
+      "name": "The Wicker Man",
+      "facet": "Ghost stories on page and screen",
+      "known_at": 12
+    }
+  ]
+}

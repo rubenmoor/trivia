@@ -1,0 +1,821 @@
+{
+  "subcategory": "scientists-and-inventors",
+  "facets": [
+    "Physics and astronomy pioneers",
+    "Evolution and natural history",
+    "Medicine and public health",
+    "Chemistry and the elements",
+    "DNA and modern biology",
+    "Industrial Revolution engineers",
+    "Computing and codebreaking",
+    "Television, radio and telegraph",
+    "Transport and speed inventions",
+    "Clever inventions at home",
+    "Science institutions, places and honours"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 5,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Isaac Newton",
+      "facet": "Physics and astronomy pioneers",
+      "known_at": 4
+    },
+    {
+      "name": "Stephen Hawking",
+      "facet": "Physics and astronomy pioneers",
+      "known_at": 6
+    },
+    {
+      "name": "Caroline Herschel",
+      "facet": "Physics and astronomy pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Edmond Halley",
+      "facet": "Physics and astronomy pioneers",
+      "known_at": 9
+    },
+    {
+      "name": "Paul Dirac",
+      "facet": "Physics and astronomy pioneers",
+      "known_at": 14
+    },
+    {
+      "name": "Ernest Rutherford",
+      "facet": "Physics and astronomy pioneers",
+      "known_at": 11
+    },
+    {
+      "name": "J. J. Thomson",
+      "facet": "Physics and astronomy pioneers",
+      "known_at": 12
+    },
+    {
+      "name": "Patrick Moore",
+      "facet": "Physics and astronomy pioneers",
+      "known_at": 12
+    },
+    {
+      "name": "Jocelyn Bell Burnell",
+      "facet": "Physics and astronomy pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Peter Higgs",
+      "facet": "Physics and astronomy pioneers",
+      "known_at": 11
+    },
+    {
+      "name": "James Chadwick",
+      "facet": "Physics and astronomy pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Arthur Eddington",
+      "facet": "Physics and astronomy pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Brian Cox",
+      "facet": "Physics and astronomy pioneers",
+      "known_at": 10
+    },
+    {
+      "name": "Fred Hoyle",
+      "facet": "Physics and astronomy pioneers",
+      "known_at": 14
+    },
+    {
+      "name": "Alfred Russel Wallace",
+      "facet": "Evolution and natural history",
+      "known_at": 12
+    },
+    {
+      "name": "Jane Goodall",
+      "facet": "Evolution and natural history",
+      "known_at": 8
+    },
+    {
+      "name": "Thomas Henry Huxley",
+      "facet": "Evolution and natural history",
+      "known_at": 14
+    },
+    {
+      "name": "Charles Lyell",
+      "facet": "Evolution and natural history",
+      "known_at": 14
+    },
+    {
+      "name": "Richard Dawkins",
+      "facet": "Evolution and natural history",
+      "known_at": 12
+    },
+    {
+      "name": "William Buckland",
+      "facet": "Evolution and natural history",
+      "known_at": 14
+    },
+    {
+      "name": "Megalosaurus",
+      "facet": "Evolution and natural history",
+      "known_at": 12
+    },
+    {
+      "name": "Piltdown Man",
+      "facet": "Evolution and natural history",
+      "known_at": 13
+    },
+    {
+      "name": "Steve Backshall",
+      "facet": "Evolution and natural history",
+      "known_at": 6
+    },
+    {
+      "name": "Gilbert White",
+      "facet": "Evolution and natural history",
+      "known_at": 15
+    },
+    {
+      "name": "Penicillin",
+      "facet": "Medicine and public health",
+      "known_at": 9
+    },
+    {
+      "name": "William Harvey",
+      "facet": "Medicine and public health",
+      "known_at": 12
+    },
+    {
+      "name": "Louise Brown",
+      "facet": "Medicine and public health",
+      "known_at": 12
+    },
+    {
+      "name": "Cicely Saunders",
+      "facet": "Medicine and public health",
+      "known_at": 14
+    },
+    {
+      "name": "Ronald Ross",
+      "facet": "Medicine and public health",
+      "known_at": 14
+    },
+    {
+      "name": "James Young Simpson",
+      "facet": "Medicine and public health",
+      "known_at": 13
+    },
+    {
+      "name": "Godfrey Hounsfield",
+      "facet": "Medicine and public health",
+      "known_at": 14
+    },
+    {
+      "name": "John Charnley",
+      "facet": "Medicine and public health",
+      "known_at": 15
+    },
+    {
+      "name": "Elsie Inglis",
+      "facet": "Medicine and public health",
+      "known_at": 14
+    },
+    {
+      "name": "Sarah Gilbert",
+      "facet": "Medicine and public health",
+      "known_at": 12
+    },
+    {
+      "name": "Oxford–AstraZeneca vaccine",
+      "facet": "Medicine and public health",
+      "known_at": 8
+    },
+    {
+      "name": "John Dalton",
+      "facet": "Chemistry and the elements",
+      "known_at": 11
+    },
+    {
+      "name": "Henry Cavendish",
+      "facet": "Chemistry and the elements",
+      "known_at": 13
+    },
+    {
+      "name": "Joseph Priestley",
+      "facet": "Chemistry and the elements",
+      "known_at": 12
+    },
+    {
+      "name": "Robert Boyle",
+      "facet": "Chemistry and the elements",
+      "known_at": 11
+    },
+    {
+      "name": "William Ramsay",
+      "facet": "Chemistry and the elements",
+      "known_at": 13
+    },
+    {
+      "name": "Dorothy Hodgkin",
+      "facet": "Chemistry and the elements",
+      "known_at": 13
+    },
+    {
+      "name": "Harry Kroto",
+      "facet": "Chemistry and the elements",
+      "known_at": 14
+    },
+    {
+      "name": "Buckminsterfullerene",
+      "facet": "Chemistry and the elements",
+      "known_at": 14
+    },
+    {
+      "name": "William Perkin",
+      "facet": "Chemistry and the elements",
+      "known_at": 13
+    },
+    {
+      "name": "Mauveine",
+      "facet": "Chemistry and the elements",
+      "known_at": 14
+    },
+    {
+      "name": "Alexander Parkes",
+      "facet": "Chemistry and the elements",
+      "known_at": 14
+    },
+    {
+      "name": "Graphene",
+      "facet": "Chemistry and the elements",
+      "known_at": 11
+    },
+    {
+      "name": "Andre Geim",
+      "facet": "Chemistry and the elements",
+      "known_at": 14
+    },
+    {
+      "name": "Strontium",
+      "facet": "Chemistry and the elements",
+      "known_at": 13
+    },
+    {
+      "name": "Stainless steel",
+      "facet": "Chemistry and the elements",
+      "known_at": 10
+    },
+    {
+      "name": "Harry Brearley",
+      "facet": "Chemistry and the elements",
+      "known_at": 14
+    },
+    {
+      "name": "Kathleen Lonsdale",
+      "facet": "Chemistry and the elements",
+      "known_at": 15
+    },
+    {
+      "name": "Noble gases",
+      "facet": "Chemistry and the elements",
+      "known_at": 10
+    },
+    {
+      "name": "Francis Crick",
+      "facet": "DNA and modern biology",
+      "known_at": 10
+    },
+    {
+      "name": "Rosalind Franklin",
+      "facet": "DNA and modern biology",
+      "known_at": 10
+    },
+    {
+      "name": "James Watson",
+      "facet": "DNA and modern biology",
+      "known_at": 11
+    },
+    {
+      "name": "Maurice Wilkins",
+      "facet": "DNA and modern biology",
+      "known_at": 13
+    },
+    {
+      "name": "Double helix",
+      "facet": "DNA and modern biology",
+      "known_at": 9
+    },
+    {
+      "name": "Photo 51",
+      "facet": "DNA and modern biology",
+      "known_at": 13
+    },
+    {
+      "name": "The Eagle pub",
+      "facet": "DNA and modern biology",
+      "known_at": 14
+    },
+    {
+      "name": "Ian Wilmut",
+      "facet": "DNA and modern biology",
+      "known_at": 14
+    },
+    {
+      "name": "Roslin Institute",
+      "facet": "DNA and modern biology",
+      "known_at": 13
+    },
+    {
+      "name": "Frederick Sanger",
+      "facet": "DNA and modern biology",
+      "known_at": 14
+    },
+    {
+      "name": "Wellcome Sanger Institute",
+      "facet": "DNA and modern biology",
+      "known_at": 14
+    },
+    {
+      "name": "Human Genome Project",
+      "facet": "DNA and modern biology",
+      "known_at": 11
+    },
+    {
+      "name": "Alec Jeffreys",
+      "facet": "DNA and modern biology",
+      "known_at": 13
+    },
+    {
+      "name": "DNA fingerprinting",
+      "facet": "DNA and modern biology",
+      "known_at": 9
+    },
+    {
+      "name": "Paul Nurse",
+      "facet": "DNA and modern biology",
+      "known_at": 14
+    },
+    {
+      "name": "John Gurdon",
+      "facet": "DNA and modern biology",
+      "known_at": 15
+    },
+    {
+      "name": "Tim Hunt",
+      "facet": "DNA and modern biology",
+      "known_at": 15
+    },
+    {
+      "name": "The Selfish Gene",
+      "facet": "DNA and modern biology",
+      "known_at": 12
+    },
+    {
+      "name": "Stem cells",
+      "facet": "DNA and modern biology",
+      "known_at": 10
+    },
+    {
+      "name": "Robert Stephenson",
+      "facet": "Industrial Revolution engineers",
+      "known_at": 12
+    },
+    {
+      "name": "Thomas Telford",
+      "facet": "Industrial Revolution engineers",
+      "known_at": 12
+    },
+    {
+      "name": "Samuel Crompton",
+      "facet": "Industrial Revolution engineers",
+      "known_at": 13
+    },
+    {
+      "name": "John Kay",
+      "facet": "Industrial Revolution engineers",
+      "known_at": 13
+    },
+    {
+      "name": "Thomas Newcomen",
+      "facet": "Industrial Revolution engineers",
+      "known_at": 12
+    },
+    {
+      "name": "Matthew Boulton",
+      "facet": "Industrial Revolution engineers",
+      "known_at": 13
+    },
+    {
+      "name": "Henry Bessemer",
+      "facet": "Industrial Revolution engineers",
+      "known_at": 13
+    },
+    {
+      "name": "John Harrison",
+      "facet": "Industrial Revolution engineers",
+      "known_at": 12
+    },
+    {
+      "name": "Bombe",
+      "facet": "Computing and codebreaking",
+      "known_at": 12
+    },
+    {
+      "name": "Colossus",
+      "facet": "Computing and codebreaking",
+      "known_at": 12
+    },
+    {
+      "name": "Tommy Flowers",
+      "facet": "Computing and codebreaking",
+      "known_at": 14
+    },
+    {
+      "name": "Joan Clarke",
+      "facet": "Computing and codebreaking",
+      "known_at": 13
+    },
+    {
+      "name": "Turing test",
+      "facet": "Computing and codebreaking",
+      "known_at": 10
+    },
+    {
+      "name": "Manchester Baby",
+      "facet": "Computing and codebreaking",
+      "known_at": 14
+    },
+    {
+      "name": "LEO computer",
+      "facet": "Computing and codebreaking",
+      "known_at": 15
+    },
+    {
+      "name": "Clive Sinclair",
+      "facet": "Computing and codebreaking",
+      "known_at": 12
+    },
+    {
+      "name": "BBC Micro",
+      "facet": "Computing and codebreaking",
+      "known_at": 12
+    },
+    {
+      "name": "Raspberry Pi",
+      "facet": "Computing and codebreaking",
+      "known_at": 7
+    },
+    {
+      "name": "ARM processor",
+      "facet": "Computing and codebreaking",
+      "known_at": 13
+    },
+    {
+      "name": "DeepMind",
+      "facet": "Computing and codebreaking",
+      "known_at": 11
+    },
+    {
+      "name": "Demis Hassabis",
+      "facet": "Computing and codebreaking",
+      "known_at": 13
+    },
+    {
+      "name": "GCHQ",
+      "facet": "Computing and codebreaking",
+      "known_at": 10
+    },
+    {
+      "name": "Guglielmo Marconi",
+      "facet": "Television, radio and telegraph",
+      "known_at": 10
+    },
+    {
+      "name": "Charles Wheatstone",
+      "facet": "Television, radio and telegraph",
+      "known_at": 13
+    },
+    {
+      "name": "Cooke and Wheatstone telegraph",
+      "facet": "Television, radio and telegraph",
+      "known_at": 14
+    },
+    {
+      "name": "Transatlantic telegraph cable",
+      "facet": "Television, radio and telegraph",
+      "known_at": 12
+    },
+    {
+      "name": "BBC",
+      "facet": "Television, radio and telegraph",
+      "known_at": 2
+    },
+    {
+      "name": "Alexandra Palace",
+      "facet": "Television, radio and telegraph",
+      "known_at": 12
+    },
+    {
+      "name": "Test Card F",
+      "facet": "Television, radio and telegraph",
+      "known_at": 11
+    },
+    {
+      "name": "Ceefax",
+      "facet": "Television, radio and telegraph",
+      "known_at": 11
+    },
+    {
+      "name": "Goonhilly Earth Station",
+      "facet": "Television, radio and telegraph",
+      "known_at": 14
+    },
+    {
+      "name": "Arthur C. Clarke",
+      "facet": "Television, radio and telegraph",
+      "known_at": 12
+    },
+    {
+      "name": "Robert Watson-Watt",
+      "facet": "Television, radio and telegraph",
+      "known_at": 13
+    },
+    {
+      "name": "Giles Gilbert Scott",
+      "facet": "Television, radio and telegraph",
+      "known_at": 14
+    },
+    {
+      "name": "Greenwich Time Signal",
+      "facet": "Television, radio and telegraph",
+      "known_at": 10
+    },
+    {
+      "name": "Speaking clock",
+      "facet": "Television, radio and telegraph",
+      "known_at": 11
+    },
+    {
+      "name": "Oliver Heaviside",
+      "facet": "Television, radio and telegraph",
+      "known_at": 15
+    },
+    {
+      "name": "Alan Blumlein",
+      "facet": "Television, radio and telegraph",
+      "known_at": 15
+    },
+    {
+      "name": "Christopher Cockerell",
+      "facet": "Transport and speed inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Flying Scotsman",
+      "facet": "Transport and speed inventions",
+      "known_at": 6
+    },
+    {
+      "name": "Thrust SSC",
+      "facet": "Transport and speed inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Donald Campbell",
+      "facet": "Transport and speed inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Bluebird K7",
+      "facet": "Transport and speed inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Alec Issigonis",
+      "facet": "Transport and speed inventions",
+      "known_at": 13
+    },
+    {
+      "name": "John Boyd Dunlop",
+      "facet": "Transport and speed inventions",
+      "known_at": 12
+    },
+    {
+      "name": "John Loudon McAdam",
+      "facet": "Transport and speed inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Cat's eyes",
+      "facet": "Transport and speed inventions",
+      "known_at": 6
+    },
+    {
+      "name": "Percy Shaw",
+      "facet": "Transport and speed inventions",
+      "known_at": 13
+    },
+    {
+      "name": "R. J. Mitchell",
+      "facet": "Transport and speed inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Kirkpatrick Macmillan",
+      "facet": "Transport and speed inventions",
+      "known_at": 14
+    },
+    {
+      "name": "Flushing toilet",
+      "facet": "Clever inventions at home",
+      "known_at": 6
+    },
+    {
+      "name": "Thomas Crapper",
+      "facet": "Clever inventions at home",
+      "known_at": 11
+    },
+    {
+      "name": "Joseph Swan",
+      "facet": "Clever inventions at home",
+      "known_at": 12
+    },
+    {
+      "name": "Hubert Cecil Booth",
+      "facet": "Clever inventions at home",
+      "known_at": 14
+    },
+    {
+      "name": "James Dyson",
+      "facet": "Clever inventions at home",
+      "known_at": 7
+    },
+    {
+      "name": "Lawnmower",
+      "facet": "Clever inventions at home",
+      "known_at": 10
+    },
+    {
+      "name": "Rowland Hill",
+      "facet": "Clever inventions at home",
+      "known_at": 13
+    },
+    {
+      "name": "Jigsaw puzzle",
+      "facet": "Clever inventions at home",
+      "known_at": 9
+    },
+    {
+      "name": "Trevor Baylis",
+      "facet": "Clever inventions at home",
+      "known_at": 13
+    },
+    {
+      "name": "Cash machine",
+      "facet": "Clever inventions at home",
+      "known_at": 9
+    },
+    {
+      "name": "Toothbrush",
+      "facet": "Clever inventions at home",
+      "known_at": 7
+    },
+    {
+      "name": "Friction match",
+      "facet": "Clever inventions at home",
+      "known_at": 11
+    },
+    {
+      "name": "Mackintosh raincoat",
+      "facet": "Clever inventions at home",
+      "known_at": 9
+    },
+    {
+      "name": "Tin can",
+      "facet": "Clever inventions at home",
+      "known_at": 10
+    },
+    {
+      "name": "Vacuum flask",
+      "facet": "Clever inventions at home",
+      "known_at": 11
+    },
+    {
+      "name": "Chocolate bar",
+      "facet": "Clever inventions at home",
+      "known_at": 8
+    },
+    {
+      "name": "Teasmade",
+      "facet": "Clever inventions at home",
+      "known_at": 13
+    },
+    {
+      "name": "Royal Institution",
+      "facet": "Science institutions, places and honours",
+      "known_at": 12
+    },
+    {
+      "name": "Royal Institution Christmas Lectures",
+      "facet": "Science institutions, places and honours",
+      "known_at": 12
+    },
+    {
+      "name": "Greenwich Mean Time",
+      "facet": "Science institutions, places and honours",
+      "known_at": 7
+    },
+    {
+      "name": "Dippy the Diplodocus",
+      "facet": "Science institutions, places and honours",
+      "known_at": 7
+    },
+    {
+      "name": "Millennium Seed Bank",
+      "facet": "Science institutions, places and honours",
+      "known_at": 14
+    },
+    {
+      "name": "Cavendish Laboratory",
+      "facet": "Science institutions, places and honours",
+      "known_at": 14
+    },
+    {
+      "name": "Francis Crick Institute",
+      "facet": "Science institutions, places and honours",
+      "known_at": 13
+    },
+    {
+      "name": "Woolsthorpe Manor",
+      "facet": "Science institutions, places and honours",
+      "known_at": 14
+    },
+    {
+      "name": "Down House",
+      "facet": "Science institutions, places and honours",
+      "known_at": 14
+    },
+    {
+      "name": "Longitude Prize",
+      "facet": "Science institutions, places and honours",
+      "known_at": 13
+    },
+    {
+      "name": "Bank of England £50 note",
+      "facet": "Science institutions, places and honours",
+      "known_at": 10
+    },
+    {
+      "name": "National Space Centre",
+      "facet": "Science institutions, places and honours",
+      "known_at": 10
+    },
+    {
+      "name": "Copley Medal",
+      "facet": "Science institutions, places and honours",
+      "known_at": 15
+    }
+  ]
+}

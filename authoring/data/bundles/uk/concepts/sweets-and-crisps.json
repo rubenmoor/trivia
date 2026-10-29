@@ -1,0 +1,906 @@
+{
+  "subcategory": "sweets-and-crisps",
+  "facets": [
+    "Chocolate bars and brands",
+    "Crisps brands and flavours",
+    "Savoury pub and party snacks",
+    "Chewy, jelly and fruity sweets",
+    "Seaside and boiled sweets",
+    "Regional sweet specialities",
+    "Christmas, Easter and seasonal treats",
+    "Confectionery makers and their history",
+    "Renamed and discontinued favourites",
+    "Famous adverts, slogans and mascots",
+    "Sweet shop and tuck shop culture"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Twix",
+      "facet": "Chocolate bars and brands",
+      "known_at": 2
+    },
+    {
+      "name": "Kit Kat",
+      "facet": "Chocolate bars and brands",
+      "known_at": 1
+    },
+    {
+      "name": "Crunchie",
+      "facet": "Chocolate bars and brands",
+      "known_at": 4
+    },
+    {
+      "name": "Flake",
+      "facet": "Chocolate bars and brands",
+      "known_at": 3
+    },
+    {
+      "name": "Twirl",
+      "facet": "Chocolate bars and brands",
+      "known_at": 4
+    },
+    {
+      "name": "Double Decker",
+      "facet": "Chocolate bars and brands",
+      "known_at": 5
+    },
+    {
+      "name": "Boost",
+      "facet": "Chocolate bars and brands",
+      "known_at": 7
+    },
+    {
+      "name": "Yorkie",
+      "facet": "Chocolate bars and brands",
+      "known_at": 7
+    },
+    {
+      "name": "Galaxy",
+      "facet": "Chocolate bars and brands",
+      "known_at": 4
+    },
+    {
+      "name": "Aero",
+      "facet": "Chocolate bars and brands",
+      "known_at": 4
+    },
+    {
+      "name": "Toffee Crisp",
+      "facet": "Chocolate bars and brands",
+      "known_at": 7
+    },
+    {
+      "name": "Freddo",
+      "facet": "Chocolate bars and brands",
+      "known_at": 2
+    },
+    {
+      "name": "Caramac",
+      "facet": "Chocolate bars and brands",
+      "known_at": 9
+    },
+    {
+      "name": "Fry's Turkish Delight",
+      "facet": "Chocolate bars and brands",
+      "known_at": 9
+    },
+    {
+      "name": "Lion Bar",
+      "facet": "Chocolate bars and brands",
+      "known_at": 6
+    },
+    {
+      "name": "Milkybar",
+      "facet": "Chocolate bars and brands",
+      "known_at": 3
+    },
+    {
+      "name": "Fudge bar",
+      "facet": "Chocolate bars and brands",
+      "known_at": 6
+    },
+    {
+      "name": "Walkers",
+      "facet": "Crisps brands and flavours",
+      "known_at": 2
+    },
+    {
+      "name": "Golden Wonder",
+      "facet": "Crisps brands and flavours",
+      "known_at": 9
+    },
+    {
+      "name": "Monster Munch",
+      "facet": "Crisps brands and flavours",
+      "known_at": 3
+    },
+    {
+      "name": "Wotsits",
+      "facet": "Crisps brands and flavours",
+      "known_at": 3
+    },
+    {
+      "name": "Quavers",
+      "facet": "Crisps brands and flavours",
+      "known_at": 4
+    },
+    {
+      "name": "Skips",
+      "facet": "Crisps brands and flavours",
+      "known_at": 5
+    },
+    {
+      "name": "Hula Hoops",
+      "facet": "Crisps brands and flavours",
+      "known_at": 2
+    },
+    {
+      "name": "Frazzles",
+      "facet": "Crisps brands and flavours",
+      "known_at": 7
+    },
+    {
+      "name": "Space Raiders",
+      "facet": "Crisps brands and flavours",
+      "known_at": 7
+    },
+    {
+      "name": "McCoy's",
+      "facet": "Crisps brands and flavours",
+      "known_at": 6
+    },
+    {
+      "name": "Tyrrells",
+      "facet": "Crisps brands and flavours",
+      "known_at": 10
+    },
+    {
+      "name": "Seabrook",
+      "facet": "Crisps brands and flavours",
+      "known_at": 11
+    },
+    {
+      "name": "Tayto",
+      "facet": "Crisps brands and flavours",
+      "known_at": 10
+    },
+    {
+      "name": "Nik Naks",
+      "facet": "Crisps brands and flavours",
+      "known_at": 7
+    },
+    {
+      "name": "Prawn cocktail flavour",
+      "facet": "Crisps brands and flavours",
+      "known_at": 5
+    },
+    {
+      "name": "Cheese and onion flavour",
+      "facet": "Crisps brands and flavours",
+      "known_at": 2
+    },
+    {
+      "name": "Salt and vinegar flavour",
+      "facet": "Crisps brands and flavours",
+      "known_at": 2
+    },
+    {
+      "name": "Smoky bacon flavour",
+      "facet": "Crisps brands and flavours",
+      "known_at": 6
+    },
+    {
+      "name": "Pickled onion flavour",
+      "facet": "Crisps brands and flavours",
+      "known_at": 6
+    },
+    {
+      "name": "Worcester sauce flavour",
+      "facet": "Crisps brands and flavours",
+      "known_at": 9
+    },
+    {
+      "name": "Ready salted",
+      "facet": "Crisps brands and flavours",
+      "known_at": 3
+    },
+    {
+      "name": "Salt 'n' Shake",
+      "facet": "Crisps brands and flavours",
+      "known_at": 11
+    },
+    {
+      "name": "Pom-Bear",
+      "facet": "Crisps brands and flavours",
+      "known_at": 4
+    },
+    {
+      "name": "Scampi Fries",
+      "facet": "Savoury pub and party snacks",
+      "known_at": 11
+    },
+    {
+      "name": "Bacon Fries",
+      "facet": "Savoury pub and party snacks",
+      "known_at": 10
+    },
+    {
+      "name": "Twiglets",
+      "facet": "Savoury pub and party snacks",
+      "known_at": 8
+    },
+    {
+      "name": "Cheese and pineapple on sticks",
+      "facet": "Savoury pub and party snacks",
+      "known_at": 9
+    },
+    {
+      "name": "Mini Cheddars",
+      "facet": "Savoury pub and party snacks",
+      "known_at": 4
+    },
+    {
+      "name": "Cheese straws",
+      "facet": "Savoury pub and party snacks",
+      "known_at": 7
+    },
+    {
+      "name": "Cocktail sausages",
+      "facet": "Savoury pub and party snacks",
+      "known_at": 4
+    },
+    {
+      "name": "Vol-au-vent",
+      "facet": "Savoury pub and party snacks",
+      "known_at": 11
+    },
+    {
+      "name": "Dry roasted peanuts",
+      "facet": "Savoury pub and party snacks",
+      "known_at": 8
+    },
+    {
+      "name": "KP Nuts",
+      "facet": "Savoury pub and party snacks",
+      "known_at": 9
+    },
+    {
+      "name": "Pickled onions",
+      "facet": "Savoury pub and party snacks",
+      "known_at": 6
+    },
+    {
+      "name": "Cheese footballs",
+      "facet": "Savoury pub and party snacks",
+      "known_at": 9
+    },
+    {
+      "name": "Bombay mix",
+      "facet": "Savoury pub and party snacks",
+      "known_at": 9
+    },
+    {
+      "name": "Fruit Gums",
+      "facet": "Chewy, jelly and fruity sweets",
+      "known_at": 7
+    },
+    {
+      "name": "Jelly Tots",
+      "facet": "Chewy, jelly and fruity sweets",
+      "known_at": 4
+    },
+    {
+      "name": "Chewits",
+      "facet": "Chewy, jelly and fruity sweets",
+      "known_at": 6
+    },
+    {
+      "name": "Refreshers",
+      "facet": "Chewy, jelly and fruity sweets",
+      "known_at": 6
+    },
+    {
+      "name": "Drumstick lolly",
+      "facet": "Chewy, jelly and fruity sweets",
+      "known_at": 5
+    },
+    {
+      "name": "Black Jack",
+      "facet": "Chewy, jelly and fruity sweets",
+      "known_at": 7
+    },
+    {
+      "name": "Fruit Salad chew",
+      "facet": "Chewy, jelly and fruity sweets",
+      "known_at": 7
+    },
+    {
+      "name": "Fizzy cola bottles",
+      "facet": "Chewy, jelly and fruity sweets",
+      "known_at": 3
+    },
+    {
+      "name": "Foam bananas",
+      "facet": "Chewy, jelly and fruity sweets",
+      "known_at": 5
+    },
+    {
+      "name": "Midget Gems",
+      "facet": "Chewy, jelly and fruity sweets",
+      "known_at": 9
+    },
+    {
+      "name": "Strawberry laces",
+      "facet": "Chewy, jelly and fruity sweets",
+      "known_at": 3
+    },
+    {
+      "name": "Milk bottles",
+      "facet": "Chewy, jelly and fruity sweets",
+      "known_at": 4
+    },
+    {
+      "name": "Parma Violets",
+      "facet": "Chewy, jelly and fruity sweets",
+      "known_at": 8
+    },
+    {
+      "name": "Sherbet Fountain",
+      "facet": "Chewy, jelly and fruity sweets",
+      "known_at": 8
+    },
+    {
+      "name": "Dip Dab",
+      "facet": "Chewy, jelly and fruity sweets",
+      "known_at": 7
+    },
+    {
+      "name": "Blackpool rock",
+      "facet": "Seaside and boiled sweets",
+      "known_at": 7
+    },
+    {
+      "name": "Humbugs",
+      "facet": "Seaside and boiled sweets",
+      "known_at": 8
+    },
+    {
+      "name": "Mint imperials",
+      "facet": "Seaside and boiled sweets",
+      "known_at": 9
+    },
+    {
+      "name": "Pear drops",
+      "facet": "Seaside and boiled sweets",
+      "known_at": 9
+    },
+    {
+      "name": "Kola cubes",
+      "facet": "Seaside and boiled sweets",
+      "known_at": 10
+    },
+    {
+      "name": "Aniseed balls",
+      "facet": "Seaside and boiled sweets",
+      "known_at": 10
+    },
+    {
+      "name": "Gobstopper",
+      "facet": "Seaside and boiled sweets",
+      "known_at": 5
+    },
+    {
+      "name": "Candyfloss",
+      "facet": "Seaside and boiled sweets",
+      "known_at": 1
+    },
+    {
+      "name": "Fudge",
+      "facet": "Seaside and boiled sweets",
+      "known_at": 3
+    },
+    {
+      "name": "Everton mints",
+      "facet": "Seaside and boiled sweets",
+      "known_at": 11
+    },
+    {
+      "name": "Barley sugar",
+      "facet": "Seaside and boiled sweets",
+      "known_at": 10
+    },
+    {
+      "name": "Butterscotch",
+      "facet": "Seaside and boiled sweets",
+      "known_at": 8
+    },
+    {
+      "name": "Brighton rock",
+      "facet": "Seaside and boiled sweets",
+      "known_at": 10
+    },
+    {
+      "name": "Cinder toffee",
+      "facet": "Seaside and boiled sweets",
+      "known_at": 9
+    },
+    {
+      "name": "Murray Mints",
+      "facet": "Seaside and boiled sweets",
+      "known_at": 11
+    },
+    {
+      "name": "Fox's Glacier Mints",
+      "facet": "Seaside and boiled sweets",
+      "known_at": 11
+    },
+    {
+      "name": "Scottish tablet",
+      "facet": "Regional sweet specialities",
+      "known_at": 10
+    },
+    {
+      "name": "Tunnock's Caramel Wafer",
+      "facet": "Regional sweet specialities",
+      "known_at": 9
+    },
+    {
+      "name": "Cornish clotted cream fudge",
+      "facet": "Regional sweet specialities",
+      "known_at": 9
+    },
+    {
+      "name": "Jethart Snails",
+      "facet": "Regional sweet specialities",
+      "known_at": 15
+    },
+    {
+      "name": "Soor plooms",
+      "facet": "Regional sweet specialities",
+      "known_at": 14
+    },
+    {
+      "name": "Hawick Balls",
+      "facet": "Regional sweet specialities",
+      "known_at": 15
+    },
+    {
+      "name": "Cadbury Creme Egg",
+      "facet": "Christmas, Easter and seasonal treats",
+      "known_at": 2
+    },
+    {
+      "name": "Mini Eggs",
+      "facet": "Christmas, Easter and seasonal treats",
+      "known_at": 2
+    },
+    {
+      "name": "Roses",
+      "facet": "Christmas, Easter and seasonal treats",
+      "known_at": 6
+    },
+    {
+      "name": "Celebrations",
+      "facet": "Christmas, Easter and seasonal treats",
+      "known_at": 4
+    },
+    {
+      "name": "Heroes",
+      "facet": "Christmas, Easter and seasonal treats",
+      "known_at": 5
+    },
+    {
+      "name": "Chocolate coins",
+      "facet": "Christmas, Easter and seasonal treats",
+      "known_at": 2
+    },
+    {
+      "name": "After Eight",
+      "facet": "Christmas, Easter and seasonal treats",
+      "known_at": 7
+    },
+    {
+      "name": "Matchmakers",
+      "facet": "Christmas, Easter and seasonal treats",
+      "known_at": 9
+    },
+    {
+      "name": "Cadbury",
+      "facet": "Confectionery makers and their history",
+      "known_at": 2
+    },
+    {
+      "name": "Rowntree's",
+      "facet": "Confectionery makers and their history",
+      "known_at": 7
+    },
+    {
+      "name": "Fry's",
+      "facet": "Confectionery makers and their history",
+      "known_at": 11
+    },
+    {
+      "name": "Terry's",
+      "facet": "Confectionery makers and their history",
+      "known_at": 9
+    },
+    {
+      "name": "Mackintosh's",
+      "facet": "Confectionery makers and their history",
+      "known_at": 12
+    },
+    {
+      "name": "Bassett's",
+      "facet": "Confectionery makers and their history",
+      "known_at": 9
+    },
+    {
+      "name": "Maynards",
+      "facet": "Confectionery makers and their history",
+      "known_at": 9
+    },
+    {
+      "name": "Swizzels",
+      "facet": "Confectionery makers and their history",
+      "known_at": 9
+    },
+    {
+      "name": "Barratt",
+      "facet": "Confectionery makers and their history",
+      "known_at": 12
+    },
+    {
+      "name": "Thorntons",
+      "facet": "Confectionery makers and their history",
+      "known_at": 7
+    },
+    {
+      "name": "Tunnock's",
+      "facet": "Confectionery makers and their history",
+      "known_at": 9
+    },
+    {
+      "name": "John Cadbury",
+      "facet": "Confectionery makers and their history",
+      "known_at": 10
+    },
+    {
+      "name": "Joseph Rowntree",
+      "facet": "Confectionery makers and their history",
+      "known_at": 12
+    },
+    {
+      "name": "Quaker chocolate makers",
+      "facet": "Confectionery makers and their history",
+      "known_at": 13
+    },
+    {
+      "name": "Bournville village",
+      "facet": "Confectionery makers and their history",
+      "known_at": 11
+    },
+    {
+      "name": "Cadbury World",
+      "facet": "Confectionery makers and their history",
+      "known_at": 6
+    },
+    {
+      "name": "York chocolate industry",
+      "facet": "Confectionery makers and their history",
+      "known_at": 12
+    },
+    {
+      "name": "Kraft takeover of Cadbury",
+      "facet": "Confectionery makers and their history",
+      "known_at": 12
+    },
+    {
+      "name": "Nestlé takeover of Rowntree",
+      "facet": "Confectionery makers and their history",
+      "known_at": 13
+    },
+    {
+      "name": "Forrest Mars",
+      "facet": "Confectionery makers and their history",
+      "known_at": 14
+    },
+    {
+      "name": "Green & Black's",
+      "facet": "Confectionery makers and their history",
+      "known_at": 11
+    },
+    {
+      "name": "Hotel Chocolat",
+      "facet": "Confectionery makers and their history",
+      "known_at": 9
+    },
+    {
+      "name": "Opal Fruits",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 9
+    },
+    {
+      "name": "Marathon",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 9
+    },
+    {
+      "name": "Spangles",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 12
+    },
+    {
+      "name": "Texan bar",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 13
+    },
+    {
+      "name": "Fuse",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 11
+    },
+    {
+      "name": "Aztec",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 14
+    },
+    {
+      "name": "Cabana",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 14
+    },
+    {
+      "name": "Spira",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 13
+    },
+    {
+      "name": "Dime bar",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 11
+    },
+    {
+      "name": "Treets",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 13
+    },
+    {
+      "name": "Secret",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 13
+    },
+    {
+      "name": "Toffo",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 13
+    },
+    {
+      "name": "Pacers",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 14
+    },
+    {
+      "name": "Topic",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 12
+    },
+    {
+      "name": "Tooty Frooties",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 13
+    },
+    {
+      "name": "Bar Six",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 14
+    },
+    {
+      "name": "Banjo",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 14
+    },
+    {
+      "name": "Fry's Five Centres",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 15
+    },
+    {
+      "name": "Galaxy Counters",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 11
+    },
+    {
+      "name": "Wispa Gold",
+      "facet": "Renamed and discontinued favourites",
+      "known_at": 10
+    },
+    {
+      "name": "Milkybar Kid",
+      "facet": "Famous adverts, slogans and mascots",
+      "known_at": 7
+    },
+    {
+      "name": "Have a break, have a Kit Kat",
+      "facet": "Famous adverts, slogans and mascots",
+      "known_at": 5
+    },
+    {
+      "name": "A Mars a day helps you work, rest and play",
+      "facet": "Famous adverts, slogans and mascots",
+      "known_at": 10
+    },
+    {
+      "name": "Flake girl",
+      "facet": "Famous adverts, slogans and mascots",
+      "known_at": 12
+    },
+    {
+      "name": "Milk Tray Man",
+      "facet": "Famous adverts, slogans and mascots",
+      "known_at": 12
+    },
+    {
+      "name": "Only the crumbliest, flakiest chocolate",
+      "facet": "Famous adverts, slogans and mascots",
+      "known_at": 11
+    },
+    {
+      "name": "Gary Lineker",
+      "facet": "Famous adverts, slogans and mascots",
+      "known_at": 8
+    },
+    {
+      "name": "Bertie Bassett",
+      "facet": "Famous adverts, slogans and mascots",
+      "known_at": 10
+    },
+    {
+      "name": "Yorkie lorry driver advert",
+      "facet": "Famous adverts, slogans and mascots",
+      "known_at": 12
+    },
+    {
+      "name": "Made to make your mouth water",
+      "facet": "Famous adverts, slogans and mascots",
+      "known_at": 12
+    },
+    {
+      "name": "Full of Eastern promise",
+      "facet": "Famous adverts, slogans and mascots",
+      "known_at": 13
+    },
+    {
+      "name": "Glass and a half of full cream milk",
+      "facet": "Famous adverts, slogans and mascots",
+      "known_at": 10
+    },
+    {
+      "name": "Too good to hurry mints",
+      "facet": "Famous adverts, slogans and mascots",
+      "known_at": 14
+    },
+    {
+      "name": "Ferrero Rocher Ambassador's reception advert",
+      "facet": "Famous adverts, slogans and mascots",
+      "known_at": 11
+    },
+    {
+      "name": "Monster Munch monsters",
+      "facet": "Famous adverts, slogans and mascots",
+      "known_at": 7
+    },
+    {
+      "name": "Hula Hoops on fingers",
+      "facet": "Famous adverts, slogans and mascots",
+      "known_at": 4
+    },
+    {
+      "name": "Pick 'n' mix",
+      "facet": "Sweet shop and tuck shop culture",
+      "known_at": 2
+    },
+    {
+      "name": "Penny sweets",
+      "facet": "Sweet shop and tuck shop culture",
+      "known_at": 6
+    },
+    {
+      "name": "Quarter of sweets",
+      "facet": "Sweet shop and tuck shop culture",
+      "known_at": 10
+    },
+    {
+      "name": "Sweet jars",
+      "facet": "Sweet shop and tuck shop culture",
+      "known_at": 5
+    },
+    {
+      "name": "Tuck box",
+      "facet": "Sweet shop and tuck shop culture",
+      "known_at": 10
+    },
+    {
+      "name": "Ten-pence mix-up",
+      "facet": "Sweet shop and tuck shop culture",
+      "known_at": 8
+    },
+    {
+      "name": "Newsagent",
+      "facet": "Sweet shop and tuck shop culture",
+      "known_at": 5
+    },
+    {
+      "name": "Sweet rationing",
+      "facet": "Sweet shop and tuck shop culture",
+      "known_at": 11
+    },
+    {
+      "name": "Sweet cigarettes",
+      "facet": "Sweet shop and tuck shop culture",
+      "known_at": 11
+    },
+    {
+      "name": "Billy Bunter",
+      "facet": "Sweet shop and tuck shop culture",
+      "known_at": 13
+    },
+    {
+      "name": "Midnight feast",
+      "facet": "Sweet shop and tuck shop culture",
+      "known_at": 7
+    },
+    {
+      "name": "Charlie and the Chocolate Factory",
+      "facet": "Sweet shop and tuck shop culture",
+      "known_at": 3
+    },
+    {
+      "name": "Roald Dahl",
+      "facet": "Sweet shop and tuck shop culture",
+      "known_at": 5
+    }
+  ]
+}

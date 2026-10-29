@@ -1,0 +1,1227 @@
+{
+  "subcategory": "wildlife",
+  "facets": [
+    "Garden and hedgerow birds",
+    "Birds of prey and owls",
+    "Seabirds and coastal birds",
+    "Countryside and woodland mammals",
+    "Seas, seals and marine life",
+    "Insects, spiders and minibeasts",
+    "Ponds, reptiles and amphibians",
+    "Wild flowers and plants",
+    "Trees, woodlands and fungi",
+    "Lost, returning and invasive species",
+    "Wildlife in British books and TV",
+    "Animal customs, symbols and sayings"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 3,
+      "map_outline": 1,
+      "sound": 4,
+      "video": 3
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Robin",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 2
+    },
+    {
+      "name": "Blackbird",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 3
+    },
+    {
+      "name": "Blue tit",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 4
+    },
+    {
+      "name": "Great tit",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 7
+    },
+    {
+      "name": "House sparrow",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 4
+    },
+    {
+      "name": "Starling",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 6
+    },
+    {
+      "name": "Wren",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 6
+    },
+    {
+      "name": "Song thrush",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 8
+    },
+    {
+      "name": "Chaffinch",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 8
+    },
+    {
+      "name": "Goldfinch",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 7
+    },
+    {
+      "name": "Bullfinch",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 9
+    },
+    {
+      "name": "Long-tailed tit",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 10
+    },
+    {
+      "name": "Dunnock",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 12
+    },
+    {
+      "name": "Magpie",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 4
+    },
+    {
+      "name": "Wood pigeon",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 5
+    },
+    {
+      "name": "Jay",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 9
+    },
+    {
+      "name": "Yellowhammer",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 11
+    },
+    {
+      "name": "Swallow",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 5
+    },
+    {
+      "name": "Swift",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 8
+    },
+    {
+      "name": "Cuckoo",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 5
+    },
+    {
+      "name": "Nightingale",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 7
+    },
+    {
+      "name": "Skylark",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 9
+    },
+    {
+      "name": "Great spotted woodpecker",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 7
+    },
+    {
+      "name": "Pheasant",
+      "facet": "Garden and hedgerow birds",
+      "known_at": 7
+    },
+    {
+      "name": "Barn owl",
+      "facet": "Birds of prey and owls",
+      "known_at": 4
+    },
+    {
+      "name": "Tawny owl",
+      "facet": "Birds of prey and owls",
+      "known_at": 7
+    },
+    {
+      "name": "Little owl",
+      "facet": "Birds of prey and owls",
+      "known_at": 9
+    },
+    {
+      "name": "Short-eared owl",
+      "facet": "Birds of prey and owls",
+      "known_at": 12
+    },
+    {
+      "name": "Long-eared owl",
+      "facet": "Birds of prey and owls",
+      "known_at": 12
+    },
+    {
+      "name": "Red kite",
+      "facet": "Birds of prey and owls",
+      "known_at": 9
+    },
+    {
+      "name": "Common buzzard",
+      "facet": "Birds of prey and owls",
+      "known_at": 8
+    },
+    {
+      "name": "Kestrel",
+      "facet": "Birds of prey and owls",
+      "known_at": 7
+    },
+    {
+      "name": "Sparrowhawk",
+      "facet": "Birds of prey and owls",
+      "known_at": 9
+    },
+    {
+      "name": "Peregrine falcon",
+      "facet": "Birds of prey and owls",
+      "known_at": 6
+    },
+    {
+      "name": "White-tailed eagle",
+      "facet": "Birds of prey and owls",
+      "known_at": 11
+    },
+    {
+      "name": "Marsh harrier",
+      "facet": "Birds of prey and owls",
+      "known_at": 13
+    },
+    {
+      "name": "Hobby",
+      "facet": "Birds of prey and owls",
+      "known_at": 14
+    },
+    {
+      "name": "Goshawk",
+      "facet": "Birds of prey and owls",
+      "known_at": 12
+    },
+    {
+      "name": "Black-headed gull",
+      "facet": "Seabirds and coastal birds",
+      "known_at": 10
+    },
+    {
+      "name": "Guillemot",
+      "facet": "Seabirds and coastal birds",
+      "known_at": 11
+    },
+    {
+      "name": "Fulmar",
+      "facet": "Seabirds and coastal birds",
+      "known_at": 12
+    },
+    {
+      "name": "Shag",
+      "facet": "Seabirds and coastal birds",
+      "known_at": 12
+    },
+    {
+      "name": "Arctic tern",
+      "facet": "Seabirds and coastal birds",
+      "known_at": 9
+    },
+    {
+      "name": "Great skua",
+      "facet": "Seabirds and coastal birds",
+      "known_at": 13
+    },
+    {
+      "name": "Manx shearwater",
+      "facet": "Seabirds and coastal birds",
+      "known_at": 13
+    },
+    {
+      "name": "Brent goose",
+      "facet": "Seabirds and coastal birds",
+      "known_at": 13
+    },
+    {
+      "name": "Bass Rock",
+      "facet": "Seabirds and coastal birds",
+      "known_at": 12
+    },
+    {
+      "name": "Hedgehog",
+      "facet": "Countryside and woodland mammals",
+      "known_at": 1
+    },
+    {
+      "name": "Red fox",
+      "facet": "Countryside and woodland mammals",
+      "known_at": 2
+    },
+    {
+      "name": "Badger",
+      "facet": "Countryside and woodland mammals",
+      "known_at": 3
+    },
+    {
+      "name": "Red squirrel",
+      "facet": "Countryside and woodland mammals",
+      "known_at": 4
+    },
+    {
+      "name": "Brown hare",
+      "facet": "Countryside and woodland mammals",
+      "known_at": 5
+    },
+    {
+      "name": "Rabbit",
+      "facet": "Countryside and woodland mammals",
+      "known_at": 1
+    },
+    {
+      "name": "Roe deer",
+      "facet": "Countryside and woodland mammals",
+      "known_at": 9
+    },
+    {
+      "name": "Fallow deer",
+      "facet": "Countryside and woodland mammals",
+      "known_at": 10
+    },
+    {
+      "name": "Hazel dormouse",
+      "facet": "Countryside and woodland mammals",
+      "known_at": 8
+    },
+    {
+      "name": "Stoat",
+      "facet": "Countryside and woodland mammals",
+      "known_at": 8
+    },
+    {
+      "name": "Weasel",
+      "facet": "Countryside and woodland mammals",
+      "known_at": 6
+    },
+    {
+      "name": "Mole",
+      "facet": "Countryside and woodland mammals",
+      "known_at": 3
+    },
+    {
+      "name": "Pipistrelle bat",
+      "facet": "Countryside and woodland mammals",
+      "known_at": 9
+    },
+    {
+      "name": "Wood mouse",
+      "facet": "Countryside and woodland mammals",
+      "known_at": 7
+    },
+    {
+      "name": "Common shrew",
+      "facet": "Countryside and woodland mammals",
+      "known_at": 8
+    },
+    {
+      "name": "Polecat",
+      "facet": "Countryside and woodland mammals",
+      "known_at": 12
+    },
+    {
+      "name": "Harbour porpoise",
+      "facet": "Seas, seals and marine life",
+      "known_at": 10
+    },
+    {
+      "name": "Humpback whale",
+      "facet": "Seas, seals and marine life",
+      "known_at": 6
+    },
+    {
+      "name": "Mackerel",
+      "facet": "Seas, seals and marine life",
+      "known_at": 7
+    },
+    {
+      "name": "Atlantic cod",
+      "facet": "Seas, seals and marine life",
+      "known_at": 6
+    },
+    {
+      "name": "Edible crab",
+      "facet": "Seas, seals and marine life",
+      "known_at": 8
+    },
+    {
+      "name": "European lobster",
+      "facet": "Seas, seals and marine life",
+      "known_at": 7
+    },
+    {
+      "name": "Common starfish",
+      "facet": "Seas, seals and marine life",
+      "known_at": 3
+    },
+    {
+      "name": "Beadlet anemone",
+      "facet": "Seas, seals and marine life",
+      "known_at": 11
+    },
+    {
+      "name": "Cuttlefish",
+      "facet": "Seas, seals and marine life",
+      "known_at": 9
+    },
+    {
+      "name": "Short-snouted seahorse",
+      "facet": "Seas, seals and marine life",
+      "known_at": 10
+    },
+    {
+      "name": "Leatherback turtle",
+      "facet": "Seas, seals and marine life",
+      "known_at": 11
+    },
+    {
+      "name": "Common mussel",
+      "facet": "Seas, seals and marine life",
+      "known_at": 6
+    },
+    {
+      "name": "Ladybird",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 1
+    },
+    {
+      "name": "Stag beetle",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 5
+    },
+    {
+      "name": "Bumblebee",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 2
+    },
+    {
+      "name": "Honeybee",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 2
+    },
+    {
+      "name": "Red admiral",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 8
+    },
+    {
+      "name": "Peacock butterfly",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 6
+    },
+    {
+      "name": "Small tortoiseshell",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 9
+    },
+    {
+      "name": "Cabbage white",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 7
+    },
+    {
+      "name": "Painted lady",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 9
+    },
+    {
+      "name": "Purple emperor",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 13
+    },
+    {
+      "name": "Emperor dragonfly",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 8
+    },
+    {
+      "name": "Damselfly",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 8
+    },
+    {
+      "name": "Garden spider",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 4
+    },
+    {
+      "name": "House spider",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 4
+    },
+    {
+      "name": "Woodlouse",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 3
+    },
+    {
+      "name": "Earthworm",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 1
+    },
+    {
+      "name": "Garden snail",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 1
+    },
+    {
+      "name": "Glow-worm",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 8
+    },
+    {
+      "name": "Crane fly",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 6
+    },
+    {
+      "name": "Common wasp",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 3
+    },
+    {
+      "name": "European hornet",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 7
+    },
+    {
+      "name": "Elephant hawk-moth",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 11
+    },
+    {
+      "name": "Highland midge",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 10
+    },
+    {
+      "name": "Cockchafer",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 12
+    },
+    {
+      "name": "Earwig",
+      "facet": "Insects, spiders and minibeasts",
+      "known_at": 5
+    },
+    {
+      "name": "Common frog",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 2
+    },
+    {
+      "name": "Common toad",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 3
+    },
+    {
+      "name": "Natterjack toad",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 11
+    },
+    {
+      "name": "Great crested newt",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 8
+    },
+    {
+      "name": "Smooth newt",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 9
+    },
+    {
+      "name": "Frogspawn",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 3
+    },
+    {
+      "name": "Tadpole",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 2
+    },
+    {
+      "name": "Grass snake",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 7
+    },
+    {
+      "name": "Smooth snake",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 12
+    },
+    {
+      "name": "Slow worm",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 8
+    },
+    {
+      "name": "Common lizard",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 7
+    },
+    {
+      "name": "Sand lizard",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 12
+    },
+    {
+      "name": "Water boatman",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 8
+    },
+    {
+      "name": "Pond skater",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 7
+    },
+    {
+      "name": "Water vole",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 9
+    },
+    {
+      "name": "Mute swan",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 4
+    },
+    {
+      "name": "Mallard",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 4
+    },
+    {
+      "name": "Moorhen",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 8
+    },
+    {
+      "name": "Coot",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 8
+    },
+    {
+      "name": "Kingfisher",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 5
+    },
+    {
+      "name": "Grey heron",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 6
+    },
+    {
+      "name": "Dipper",
+      "facet": "Ponds, reptiles and amphibians",
+      "known_at": 12
+    },
+    {
+      "name": "Bluebell",
+      "facet": "Wild flowers and plants",
+      "known_at": 4
+    },
+    {
+      "name": "Daisy",
+      "facet": "Wild flowers and plants",
+      "known_at": 1
+    },
+    {
+      "name": "Dandelion",
+      "facet": "Wild flowers and plants",
+      "known_at": 1
+    },
+    {
+      "name": "Buttercup",
+      "facet": "Wild flowers and plants",
+      "known_at": 2
+    },
+    {
+      "name": "Primrose",
+      "facet": "Wild flowers and plants",
+      "known_at": 6
+    },
+    {
+      "name": "Foxglove",
+      "facet": "Wild flowers and plants",
+      "known_at": 7
+    },
+    {
+      "name": "Common poppy",
+      "facet": "Wild flowers and plants",
+      "known_at": 4
+    },
+    {
+      "name": "Snowdrop",
+      "facet": "Wild flowers and plants",
+      "known_at": 4
+    },
+    {
+      "name": "Stinging nettle",
+      "facet": "Wild flowers and plants",
+      "known_at": 3
+    },
+    {
+      "name": "Dock leaf",
+      "facet": "Wild flowers and plants",
+      "known_at": 5
+    },
+    {
+      "name": "Bramble",
+      "facet": "Wild flowers and plants",
+      "known_at": 5
+    },
+    {
+      "name": "Cowslip",
+      "facet": "Wild flowers and plants",
+      "known_at": 10
+    },
+    {
+      "name": "Thistle",
+      "facet": "Wild flowers and plants",
+      "known_at": 4
+    },
+    {
+      "name": "Wild daffodil",
+      "facet": "Wild flowers and plants",
+      "known_at": 5
+    },
+    {
+      "name": "Honeysuckle",
+      "facet": "Wild flowers and plants",
+      "known_at": 8
+    },
+    {
+      "name": "Ivy",
+      "facet": "Wild flowers and plants",
+      "known_at": 5
+    },
+    {
+      "name": "Mistletoe",
+      "facet": "Wild flowers and plants",
+      "known_at": 5
+    },
+    {
+      "name": "White clover",
+      "facet": "Wild flowers and plants",
+      "known_at": 4
+    },
+    {
+      "name": "Lords-and-ladies",
+      "facet": "Wild flowers and plants",
+      "known_at": 13
+    },
+    {
+      "name": "Ragwort",
+      "facet": "Wild flowers and plants",
+      "known_at": 12
+    },
+    {
+      "name": "Bee orchid",
+      "facet": "Wild flowers and plants",
+      "known_at": 12
+    },
+    {
+      "name": "English oak",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 3
+    },
+    {
+      "name": "Horse chestnut",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 5
+    },
+    {
+      "name": "Silver birch",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 7
+    },
+    {
+      "name": "Ash",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 8
+    },
+    {
+      "name": "Beech",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 8
+    },
+    {
+      "name": "Yew",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 9
+    },
+    {
+      "name": "Scots pine",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 9
+    },
+    {
+      "name": "Rowan",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 11
+    },
+    {
+      "name": "Hawthorn",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 9
+    },
+    {
+      "name": "Sycamore",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 7
+    },
+    {
+      "name": "Holly",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 3
+    },
+    {
+      "name": "Elder",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 10
+    },
+    {
+      "name": "Hazel",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 9
+    },
+    {
+      "name": "Major Oak",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 10
+    },
+    {
+      "name": "Fortingall Yew",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 14
+    },
+    {
+      "name": "Sycamore Gap tree",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 11
+    },
+    {
+      "name": "Sherwood Forest",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 5
+    },
+    {
+      "name": "Caledonian Forest",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 13
+    },
+    {
+      "name": "Fly agaric",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 6
+    },
+    {
+      "name": "Giant puffball",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 10
+    },
+    {
+      "name": "Bracket fungus",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 11
+    },
+    {
+      "name": "Coppicing",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 12
+    },
+    {
+      "name": "Dutch elm disease",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 12
+    },
+    {
+      "name": "Ash dieback",
+      "facet": "Trees, woodlands and fungi",
+      "known_at": 12
+    },
+    {
+      "name": "Grey squirrel",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 3
+    },
+    {
+      "name": "Eurasian beaver",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 8
+    },
+    {
+      "name": "Grey wolf",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 6
+    },
+    {
+      "name": "Brown bear",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 7
+    },
+    {
+      "name": "Eurasian lynx",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 10
+    },
+    {
+      "name": "Wild boar",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 8
+    },
+    {
+      "name": "European bison",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 11
+    },
+    {
+      "name": "Aurochs",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 13
+    },
+    {
+      "name": "Great auk",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 13
+    },
+    {
+      "name": "Great bustard",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 13
+    },
+    {
+      "name": "White stork",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 11
+    },
+    {
+      "name": "Common crane",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 12
+    },
+    {
+      "name": "Large blue butterfly",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 13
+    },
+    {
+      "name": "Japanese knotweed",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 10
+    },
+    {
+      "name": "Himalayan balsam",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 12
+    },
+    {
+      "name": "Rhododendron",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 11
+    },
+    {
+      "name": "American mink",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 11
+    },
+    {
+      "name": "Signal crayfish",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 12
+    },
+    {
+      "name": "Harlequin ladybird",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 11
+    },
+    {
+      "name": "Asian hornet",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 10
+    },
+    {
+      "name": "Muntjac deer",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 11
+    },
+    {
+      "name": "Knepp Estate",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 14
+    },
+    {
+      "name": "Rewilding",
+      "facet": "Lost, returning and invasive species",
+      "known_at": 10
+    },
+    {
+      "name": "Squirrel Nutkin",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 7
+    },
+    {
+      "name": "Jemima Puddle-Duck",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 6
+    },
+    {
+      "name": "Mrs. Tiggy-Winkle",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 7
+    },
+    {
+      "name": "The Wind in the Willows",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 6
+    },
+    {
+      "name": "Mr. Toad",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 7
+    },
+    {
+      "name": "Ratty",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 9
+    },
+    {
+      "name": "Watership Down",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 9
+    },
+    {
+      "name": "Fantastic Mr Fox",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 4
+    },
+    {
+      "name": "The Gruffalo",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 2
+    },
+    {
+      "name": "Brambly Hedge",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 10
+    },
+    {
+      "name": "The Animals of Farthing Wood",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Tarka the Otter",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Ring of Bright Water",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 13
+    },
+    {
+      "name": "Kes",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 12
+    },
+    {
+      "name": "H Is for Hawk",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 14
+    },
+    {
+      "name": "Springwatch",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 8
+    },
+    {
+      "name": "David Attenborough",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 4
+    },
+    {
+      "name": "Chris Packham",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 9
+    },
+    {
+      "name": "Bill Oddie",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Michaela Strachan",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Iolo Williams",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 13
+    },
+    {
+      "name": "Owl Babies",
+      "facet": "Wildlife in British books and TV",
+      "known_at": 4
+    },
+    {
+      "name": "Ravens of the Tower of London",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Three Lions",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 5
+    },
+    {
+      "name": "Unicorn of Scotland",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Red Dragon of Wales",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 4
+    },
+    {
+      "name": "Tudor rose",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Leek",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Shamrock",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Robin on Christmas cards",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 5
+    },
+    {
+      "name": "One for Sorrow",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Mad as a March hare",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "One swallow does not make a summer",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "First cuckoo of spring",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Dawn chorus",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Big Garden Birdwatch",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Britain's national bird vote",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Corgi",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 5
+    },
+    {
+      "name": "Abbots Bromley Horn Dance",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 14
+    },
+    {
+      "name": "Wassailing",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Royal Oak",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Rabbit rabbit",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Kissing under the mistletoe",
+      "facet": "Animal customs, symbols and sayings",
+      "known_at": 4
+    }
+  ]
+}
