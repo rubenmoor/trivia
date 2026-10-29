@@ -1,7 +1,41 @@
 {
   "version": 1,
-  "hash": "b333fbf0",
+  "hash": "fb3f1474",
   "questions": [
+    {
+      "id": "q-8833",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "candy-and-snacks",
+      "bundle": "usa",
+      "description": "An alien's first snack review: five stars, would follow the trail again.",
+      "question": "In the film E.T., Elliott lays a trail of candy to lure the alien into the house. What's inside those crunchy candies?",
+      "answer": "Peanut butter",
+      "wrong_answers": [
+        "Milk chocolate",
+        "Caramel",
+        "Nougat"
+      ],
+      "hints": [
+        "The candies in the trail were orange, brown and yellow.",
+        "M&M's reportedly turned down the part, so a rival brand got it.",
+        "The brand is famous for cups that pair this filling with chocolate."
+      ],
+      "fun_fact": "The candy in the trail was Reese's Pieces, and their sales shot up after E.T. came out in 1982.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Stonybrook_Shines_2021%2C_Lancaster%2C_New_York_-_20211223.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStonybrook_Shines_2021%2C_Lancaster%2C_New_York_-_20211223.jpg",
+        "credit": "Andre Carrotflower · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Andre Carrotflower",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Andre_Carrotflower"
+      },
+      "background": null
+    },
     {
       "id": "q-8834",
       "status": "approved",
@@ -237,6 +271,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Eden, Janine and Jim",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8841",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "cities-and-towns",
+      "bundle": "usa",
+      "description": "A whole town moved out without saying goodbye and left only a one-word note.",
+      "question": "If you visit Roanoke Island, you can watch a play about colonists who vanished, leaving only the word “CROATOAN” carved on a post. When did they arrive?",
+      "answer": "1580s",
+      "wrong_answers": [
+        "1550s",
+        "1620s",
+        "1690s"
+      ],
+      "hints": [
+        "Sir Walter Raleigh sponsored the voyage.",
+        "It was before Jamestown, the first lasting English colony.",
+        "Queen Elizabeth I had already ruled England for more than 20 years."
+      ],
+      "fun_fact": "Virginia Dare, born at Roanoke in 1587, was the first English child born in the Americas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Bridge_to_Roanoke_Island%2C_Soundside_View_from_%22Beach_Treasure%22%2C_Nags_Head%2C_North_Carolina_%2814453294203%29.jpg/3840px-Bridge_to_Roanoke_Island%2C_Soundside_View_from_%22Beach_Treasure%22%2C_Nags_Head%2C_North_Carolina_%2814453294203%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABridge_to_Roanoke_Island%2C_Soundside_View_from_%22Beach_Treasure%22%2C_Nags_Head%2C_North_Carolina_%2814453294203%29.jpg",
+        "credit": "Ken Lund from Reno, Nevada, USA · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Ken Lund from Reno, Nevada, USA",
+        "author_url": "https://www.flickr.com/people/75683070@N00"
       },
       "background": null
     },
@@ -513,6 +581,40 @@
       "background": null
     },
     {
+      "id": "q-8850",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "civics",
+      "bundle": "usa",
+      "description": "A group of strangers stuck in a room until they agree on something. No, not a family vacation.",
+      "question": "How many jurors decide the verdict in a US federal criminal trial?",
+      "answer": "12",
+      "wrong_answers": [
+        "6",
+        "9",
+        "15"
+      ],
+      "hints": [
+        "It's an even number.",
+        "The Sixth Amendment guarantees the right to a trial by jury.",
+        "A famous old film calls them “Angry Men”."
+      ],
+      "fun_fact": "In federal criminal trials, all the jurors must agree for a verdict.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Jury_box_in_the_courtroom_of_the_Van_Buren_County_Courthouse_in_Clinton%2C_Arkansas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJury_box_in_the_courtroom_of_the_Van_Buren_County_Courthouse_in_Clinton%2C_Arkansas.jpg",
+        "credit": "Brandonrush · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Brandonrush",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Brandonrush"
+      },
+      "background": null
+    },
+    {
       "id": "q-8851",
       "status": "approved",
       "difficulty": 14,
@@ -543,6 +645,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Ken Lund from Reno, Nevada, USA",
         "author_url": "https://www.flickr.com/people/75683070@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8852",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "civics",
+      "bundle": "usa",
+      "description": "Nine judges in black robes stepped into an argument about a movie and came out with a landmark case.",
+      "question": "In 2010, the Supreme Court decided Citizens United v. FEC, a case that began over a film criticizing Hillary Clinton. What did the ruling allow?",
+      "answer": "Unlimited corporate spending on independent political ads",
+      "wrong_answers": [
+        "Unlimited corporate donations straight to candidates",
+        "Companies to run their own candidates for office",
+        "A ban on political ads in the final month"
+      ],
+      "hints": [
+        "The court said the case was about free speech.",
+        "The money can't be handed directly to a candidate's campaign.",
+        "It opened the door to “super PACs”."
+      ],
+      "fun_fact": "The decision was 5 to 4, and the film at the center of it was called “Hillary: The Movie”.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/US_Supreme_Court.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUS_Supreme_Court.JPG",
+        "credit": "Photo by Mr. Kjetil Ree. · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Photo by Mr. Kjetil Ree.",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kjetil_r"
       },
       "background": null
     },
@@ -853,6 +989,40 @@
       "background": null
     },
     {
+      "id": "q-8862",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "colonies-and-founding",
+      "bundle": "usa",
+      "description": "The pancake's rugged, corn-fed great-great-grandparent.",
+      "question": "Johnnycakes, like these, are cornmeal flatbreads that colonists learned to make from Native Americans. Which US region are they a classic of?",
+      "answer": "New England",
+      "wrong_answers": [
+        "The Southwest",
+        "The Pacific Northwest",
+        "The Midwest"
+      ],
+      "hints": [
+        "Corn was a Native American crop long before the colonists arrived.",
+        "The same region is famous for clam chowder and lobster rolls.",
+        "Rhode Island loves them so much it has a society to protect the recipe."
+      ],
+      "fun_fact": "Rhode Island's Society for the Propagation of the Jonnycake Tradition spells the name without an “h.”",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Johnnycakes_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJohnnycakes_%28cropped%29.jpg",
+        "credit": "Shockingly Tasty's photostream · CC BY-SA 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": "Shockingly Tasty's photostream",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-8863",
       "status": "approved",
       "difficulty": 6,
@@ -917,6 +1087,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Pbjamesphoto",
         "author_url": "https://commons.wikimedia.org/wiki/User:Pbjamesphoto"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8865",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "colonies-and-founding",
+      "bundle": "usa",
+      "description": "The most patriotic garage band in history, frozen mid-march.",
+      "question": "In which decade was “The Spirit of '76,” with its two drummers and a fifer marching under the flag, painted?",
+      "answer": "The 1870s",
+      "wrong_answers": [
+        "The 1770s",
+        "The 1820s",
+        "The 1920s"
+      ],
+      "hints": [
+        "The artist, Archibald Willard, was born in 1836.",
+        "It was shown at a huge world's fair in Philadelphia.",
+        "It was made for the nation's 100th birthday."
+      ],
+      "fun_fact": "Willard first planned a funny painting called “Yankee Doodle” before turning it into a serious patriotic scene.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/The_Spirit-of-1776_Abbot_Hall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Spirit-of-1776_Abbot_Hall.jpg",
+        "credit": "Archibald Willard · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Archibald Willard",
+        "author_url": "https://en.wikipedia.org/wiki/en:Archibald_Willard"
       },
       "background": null
     },
@@ -1325,6 +1529,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "BruceSchaff",
         "author_url": "https://commons.wikimedia.org/wiki/User:BruceSchaff"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8879",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "fairs-and-festivals",
+      "bundle": "usa",
+      "description": "Chicago had a rival to beat, and it wasn't planning to lose quietly.",
+      "question": "The very first Ferris wheel was built for the 1893 World's Fair in Chicago. Which famous structure was it meant to outdo?",
+      "answer": "The Eiffel Tower",
+      "wrong_answers": [
+        "Big Ben",
+        "The Leaning Tower of Pisa",
+        "The Statue of Liberty"
+      ],
+      "hints": [
+        "It was the star of the previous big world's fair, four years earlier.",
+        "It is made of iron and stands in Europe.",
+        "It was built for the 1889 fair in Paris."
+      ],
+      "fun_fact": "The original Ferris wheel was about 264 ft (80 m) tall, and each of its 36 cars could hold about 60 people.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Ferris_wheel_at_night_at_the_2007_state_fair%2C_NM.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFerris_wheel_at_night_at_the_2007_state_fair%2C_NM.jpg",
+        "credit": "frank drewett · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "frank drewett",
+        "author_url": null
       },
       "background": null
     },
@@ -1907,6 +2145,40 @@
       "background": null
     },
     {
+      "id": "q-8898",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "folk-heroes-and-tall-tales",
+      "bundle": "usa",
+      "description": "A newspaperman whose biggest scoop came from a rabbit.",
+      "question": "Which Georgia newspaperman collected Br'er Rabbit tales into a best-selling book in 1880?",
+      "answer": "Joel Chandler Harris",
+      "wrong_answers": [
+        "Thomas Nelson Page",
+        "George Washington Cable",
+        "Henry W. Grady"
+      ],
+      "hints": [
+        "He worked for the Atlanta Constitution newspaper.",
+        "His stories are told by a fictional old storyteller.",
+        "That storyteller is called Uncle Remus."
+      ],
+      "fun_fact": "His home in Atlanta, the Wren's Nest, is now a museum where storytellers still tell the Br'er Rabbit tales.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Warming_in_the_winter_sun._-_Flickr_-_Charos_Pix.jpg/3840px-Warming_in_the_winter_sun._-_Flickr_-_Charos_Pix.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWarming_in_the_winter_sun._-_Flickr_-_Charos_Pix.jpg",
+        "credit": "Charos Pix · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Charos Pix",
+        "author_url": "https://www.flickr.com/people/98609459@N08"
+      },
+      "background": null
+    },
+    {
       "id": "q-8899",
       "status": "approved",
       "difficulty": 8,
@@ -2277,6 +2549,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Віра Єрифа",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:%D0%92%D1%96%D1%80%D0%B0_%D0%84%D1%80%D0%B8%D1%84%D0%B0&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8910",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "home-cooking",
+      "bundle": "usa",
+      "description": "A loaf of bread that went to the butcher instead of the bakery.",
+      "question": "Before an American meatloaf goes into the oven, what is often spread on top as a shiny glaze?",
+      "answer": "Ketchup",
+      "wrong_answers": [
+        "Mustard",
+        "Mayonnaise",
+        "Ranch dressing"
+      ],
+      "hints": [
+        "You'll find it on almost every diner table.",
+        "It usually comes in a squeeze bottle.",
+        "Fries love to be dipped in it."
+      ],
+      "fun_fact": "Meatloaf became popular in the US during the Great Depression, because bread crumbs helped a little meat feed a whole family.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Dinner_table_arrangement_with_food_of_a_middle_class_Bangladeshi_family_01.jpg/3840px-Dinner_table_arrangement_with_food_of_a_middle_class_Bangladeshi_family_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADinner_table_arrangement_with_food_of_a_middle_class_Bangladeshi_family_01.jpg",
+        "credit": "Afifa Afrin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Afifa Afrin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Afifa_Afrin"
       },
       "background": null
     },
@@ -3675,6 +3981,40 @@
       "background": null
     },
     {
+      "id": "q-8954",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "plants-and-trees",
+      "bundle": "usa",
+      "description": "Hikers have a rhyme for it, and it's not a love song.",
+      "question": "Hikers in the US warn each other about poison ivy with a rhyme. How many leaflets does each poison ivy leaf have?",
+      "answer": "3",
+      "wrong_answers": [
+        "5",
+        "7",
+        "2"
+      ],
+      "hints": [
+        "Its leaves are often shiny and can turn red in the fall.",
+        "It's fewer than the fingers on one hand.",
+        "The rhyme ends with “let it be.”"
+      ],
+      "fun_fact": "The rash comes from an oil called urushiol, which can stay on clothes and tools for years.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Woodland_path_-_Flickr_-_Frank_Shepherd.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWoodland_path_-_Flickr_-_Frank_Shepherd.jpg",
+        "credit": "Frank Shepherd · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Frank Shepherd",
+        "author_url": "https://www.flickr.com/people/142252831@N04"
+      },
+      "background": null
+    },
+    {
       "id": "q-8955",
       "status": "approved",
       "difficulty": 8,
@@ -3875,6 +4215,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Humphrey Bolton",
         "author_url": "https://www.geograph.org.uk/profile/1712"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8961",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "regional-dishes",
+      "bundle": "usa",
+      "description": "In Philadelphia, ordering lunch comes with its own secret vocabulary.",
+      "question": "In Philadelphia, what do you get if you order a hoagie?",
+      "answer": "A long sandwich on an Italian roll",
+      "wrong_answers": [
+        "A soft pretzel with mustard",
+        "A thin slice of pizza",
+        "A bowl of pepper soup"
+      ],
+      "hints": [
+        "You eat it with your hands.",
+        "Delis and corner stores all over the city sell it at lunchtime.",
+        "Other cities call it a sub or a hero."
+      ],
+      "fun_fact": "In 1992, Philadelphia named the hoagie its official sandwich.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/City_Hall%2C_Philadelphia_PA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACity_Hall%2C_Philadelphia_PA.jpg",
+        "credit": "John Phelan · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "John Phelan",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Faolin42"
       },
       "background": null
     },
@@ -4967,6 +5341,40 @@
       "background": null
     },
     {
+      "id": "q-8994",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "family-and-school-traditions",
+      "bundle": "usa",
+      "description": "A broom finally steps out of the closet and into the spotlight.",
+      "question": "The American phrase “jumping the broom” comes from a custom that enslaved African Americans kept alive. What does it mean?",
+      "answer": "Getting married",
+      "wrong_answers": [
+        "Moving into a new house",
+        "Cleaning up before a holiday",
+        "Graduating from school"
+      ],
+      "hints": [
+        "It's about a big day in someone's life.",
+        "Two people usually jump over the broom together, holding hands.",
+        "A 2011 movie with this title is a comedy about two families meeting at a wedding."
+      ],
+      "fun_fact": "Enslaved people in the US weren't allowed to marry legally, so jumping over a broom together became a way to show they were married; the 1977 TV series “Roots” made the custom popular again.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Broom%2C_doll%27s_%28AM_2013.51.8.1-1%29.jpg/3840px-Broom%2C_doll%27s_%28AM_2013.51.8.1-1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABroom%2C_doll%27s_%28AM_2013.51.8.1-1%29.jpg",
+        "credit": "Unknown authorUnknown author · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Unknown authorUnknown author",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-8995",
       "status": "approved",
       "difficulty": 6,
@@ -5953,6 +6361,40 @@
       "background": null
     },
     {
+      "id": "q-9024",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "plants-and-trees",
+      "bundle": "usa",
+      "description": "Sandy, brown and sweet: a beach you could sprinkle on your oatmeal.",
+      "question": "What sweet, tan crystals were a main sweetener of Native Americans in the Northeast long before stores sold white sugar?",
+      "answer": "Maple sugar",
+      "wrong_answers": [
+        "Cane sugar",
+        "Date sugar",
+        "Beet sugar"
+      ],
+      "hints": [
+        "They were made in early spring, when the snow starts melting.",
+        "People boiled a tree's watery juice in pots until only crystals were left.",
+        "It's the same tree whose syrup ends up on pancakes."
+      ],
+      "fun_fact": "Vermont makes more maple syrup and sugar than any other US state.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Snowy_forest_at_Black_River_Falls_Rest_Area_54.jpg/3840px-Snowy_forest_at_Black_River_Falls_Rest_Area_54.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASnowy_forest_at_Black_River_Falls_Rest_Area_54.jpg",
+        "credit": "PinchyCC · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "PinchyCC",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PinchyCC"
+      },
+      "background": null
+    },
+    {
       "id": "q-9025",
       "status": "approved",
       "difficulty": 5,
@@ -6225,6 +6667,40 @@
       "background": null
     },
     {
+      "id": "q-9033",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "restaurant-chains",
+      "bundle": "usa",
+      "description": "A fast-food face you'd recognize faster than your own neighbor's.",
+      "question": "I'm a fast-food mascot with a big frozen smile, and my restaurants grill their burgers over flames. Who am I?",
+      "answer": "The Burger King",
+      "wrong_answers": [
+        "Ronald McDonald",
+        "Colonel Sanders",
+        "Wendy"
+      ],
+      "hints": [
+        "My chain grew up in Miami, Florida, in the 1950s.",
+        "In many of my TV ads, I just show up and never say a word.",
+        "I wear a golden crown, and my restaurants sell the Whopper."
+      ],
+      "fun_fact": "When the Whopper first came out in 1957, it cost 37 cents.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Dairy_Queen_FlameThrower_GrillBurger_2017_Edmonton.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADairy_Queen_FlameThrower_GrillBurger_2017_Edmonton.jpg",
+        "credit": "Rowanswiki · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Rowanswiki",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Rowanswiki&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-9034",
       "status": "approved",
       "difficulty": 8,
@@ -6463,6 +6939,40 @@
       "background": null
     },
     {
+      "id": "q-9041",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "rivers-lakes-and-mountains",
+      "bundle": "usa",
+      "description": "Alaska once threw a party so wild that the ash kept falling for days.",
+      "question": "In 1912, an Alaskan volcano produced the largest eruption of the 20th century. Which volcano?",
+      "answer": "Novarupta",
+      "wrong_answers": [
+        "Mount Katmai",
+        "Mount Redoubt",
+        "Mount Spurr"
+      ],
+      "hints": [
+        "Its ash turned day into night on Kodiak Island for about two days.",
+        "It sits beside the Valley of Ten Thousand Smokes.",
+        "Its name is Latin for “newly erupted.”"
+      ],
+      "fun_fact": "It threw out about 30 times as much magma as Mount St. Helens did in 1980.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/The_ash_and_brush-dappled_backcountry_of_Katmai_National_Park%2C_Alaska_%2827990982232%29.jpg/3840px-The_ash_and_brush-dappled_backcountry_of_Katmai_National_Park%2C_Alaska_%2827990982232%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_ash_and_brush-dappled_backcountry_of_Katmai_National_Park%2C_Alaska_%2827990982232%29.jpg",
+        "credit": "Paxson Woelber · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Paxson Woelber",
+        "author_url": "https://www.flickr.com/people/59306007@N08"
+      },
+      "background": null
+    },
+    {
       "id": "q-9042",
       "status": "approved",
       "difficulty": 6,
@@ -6527,6 +7037,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Dougtone",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-9044",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "states-and-capitals",
+      "bundle": "usa",
+      "description": "A state named by people who clearly had strong opinions about rivers.",
+      "question": "Which US state takes its name from the river on its southern border, from a Seneca word meaning “good river”?",
+      "answer": "Ohio",
+      "wrong_answers": [
+        "Indiana",
+        "Kentucky",
+        "Pennsylvania"
+      ],
+      "hints": [
+        "Its northern edge sits on one of the Great Lakes, Lake Erie.",
+        "It is the birthplace of seven US presidents, more than almost any other state.",
+        "Its capital is Columbus, and Cleveland and Cincinnati are its other big cities."
+      ],
+      "fun_fact": "Ohio's state flag is the only US state flag that isn't a rectangle: it's shaped like a swallowtail pennant.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Flickr_-_USDAgov_-_20130501-NRCS-LSC-0605.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFlickr_-_USDAgov_-_20130501-NRCS-LSC-0605.jpg",
+        "credit": "U.S. Department of Agriculture · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Department of Agriculture",
+        "author_url": "https://www.flickr.com/people/41284017@N08"
       },
       "background": null
     },
@@ -7891,6 +8435,40 @@
       "background": null
     },
     {
+      "id": "q-9088",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "trailblazers",
+      "bundle": "usa",
+      "description": "Finally, a teacher whose lesson plan went way beyond the chalkboard.",
+      "question": "In 1985, NASA picked a New Hampshire social studies teacher as the first “Teacher in Space.” Who was she?",
+      "answer": "Christa McAuliffe",
+      "wrong_answers": [
+        "Sally Ride",
+        "Barbara Morgan",
+        "Eileen Collins"
+      ],
+      "hints": [
+        "She taught at Concord High School.",
+        "She was set to fly on the space shuttle Challenger.",
+        "Her first name rhymes with “vista,” and her last name starts with “Mc.”"
+      ],
+      "fun_fact": "More than 11,000 teachers applied to be NASA's first Teacher in Space.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/%E6%95%99%E5%AE%A4_%E5%90%91%E3%81%8B%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B_%285581788977%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%E6%95%99%E5%AE%A4_%E5%90%91%E3%81%8B%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B_%285581788977%29.jpg",
+        "credit": "Tomo · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Tomo",
+        "author_url": "https://www.flickr.com/people/71552575@N00"
+      },
+      "background": null
+    },
+    {
       "id": "q-9089",
       "status": "approved",
       "difficulty": 15,
@@ -8669,6 +9247,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "rbaire from El Paso, Texas, USA",
         "author_url": "https://www.flickr.com/people/100915178@N06"
+      },
+      "background": null
+    },
+    {
+      "id": "q-9113",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "wildlife",
+      "bundle": "usa",
+      "description": "Yellowstone's traffic jams have horns, and not the car kind.",
+      "question": "A huge, shaggy bison blocks a road in Yellowstone. Which group does it NOT belong to?",
+      "answer": "Hibernators",
+      "wrong_answers": [
+        "Mammals",
+        "Plant-eaters",
+        "Cattle relatives"
+      ],
+      "hints": [
+        "Bison are the heaviest land animals in North America.",
+        "A bison's thick, shaggy coat works like a big winter jacket.",
+        "Bison never take a long winter sleep."
+      ],
+      "fun_fact": "In winter, bison swing their huge heads like snowplows to sweep snow off the grass.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/2003-08-18_Yellowstone_bison_hogging_the_road.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2003-08-18_Yellowstone_bison_hogging_the_road.jpg",
+        "credit": "Ildar Sagdejev (Specious) · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ildar Sagdejev (Specious)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Specious"
       },
       "background": null
     },
