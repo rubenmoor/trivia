@@ -399323,7 +399323,8 @@
         "previous": null
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-5173",
@@ -399486,7 +399487,8 @@
           ]
         },
         "revised_on": "2026-10-21"
-      }
+      },
+      "translatable": false
     },
     {
       "id": "q-5175",
@@ -570578,7 +570580,8 @@
         "previous": null
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-7382",
