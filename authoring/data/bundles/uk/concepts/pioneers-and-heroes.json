@@ -1,0 +1,667 @@
+{
+  "subcategory": "pioneers-and-heroes",
+  "facets": [
+    "Polar and world explorers",
+    "Inventors and engineers",
+    "Scientists and naturalists",
+    "Medical and nursing pioneers",
+    "Campaigners and social reformers",
+    "Wartime heroes and codebreakers",
+    "Legendary and folk heroes",
+    "Aviation and space pioneers",
+    "Sporting trailblazers",
+    "Speed and endurance record breakers",
+    "Lifeboat crews and everyday bravery",
+    "Women's firsts in public life"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 1,
+      "count": 2,
+      "estimate": 2,
+      "record": 4,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 3,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 3,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Robert Falcon Scott",
+      "facet": "Polar and world explorers",
+      "known_at": 6
+    },
+    {
+      "name": "Ernest Shackleton",
+      "facet": "Polar and world explorers",
+      "known_at": 8
+    },
+    {
+      "name": "Henry Morton Stanley",
+      "facet": "Polar and world explorers",
+      "known_at": 12
+    },
+    {
+      "name": "George Mallory",
+      "facet": "Polar and world explorers",
+      "known_at": 12
+    },
+    {
+      "name": "Ranulph Fiennes",
+      "facet": "Polar and world explorers",
+      "known_at": 11
+    },
+    {
+      "name": "Lawrence Oates",
+      "facet": "Polar and world explorers",
+      "known_at": 11
+    },
+    {
+      "name": "Endurance",
+      "facet": "Polar and world explorers",
+      "known_at": 10
+    },
+    {
+      "name": "Terra Nova Expedition",
+      "facet": "Polar and world explorers",
+      "known_at": 12
+    },
+    {
+      "name": "John Franklin",
+      "facet": "Polar and world explorers",
+      "known_at": 13
+    },
+    {
+      "name": "Gertrude Bell",
+      "facet": "Polar and world explorers",
+      "known_at": 13
+    },
+    {
+      "name": "Isabella Bird",
+      "facet": "Polar and world explorers",
+      "known_at": 14
+    },
+    {
+      "name": "Mary Kingsley",
+      "facet": "Polar and world explorers",
+      "known_at": 14
+    },
+    {
+      "name": "Richard Francis Burton",
+      "facet": "Polar and world explorers",
+      "known_at": 14
+    },
+    {
+      "name": "John Hanning Speke",
+      "facet": "Polar and world explorers",
+      "known_at": 14
+    },
+    {
+      "name": "Chris Bonington",
+      "facet": "Polar and world explorers",
+      "known_at": 13
+    },
+    {
+      "name": "Bear Grylls",
+      "facet": "Polar and world explorers",
+      "known_at": 7
+    },
+    {
+      "name": "Charles Macintosh",
+      "facet": "Inventors and engineers",
+      "known_at": 12
+    },
+    {
+      "name": "Gerald Durrell",
+      "facet": "Scientists and naturalists",
+      "known_at": 12
+    },
+    {
+      "name": "Sophia Jex-Blake",
+      "facet": "Medical and nursing pioneers",
+      "known_at": 14
+    },
+    {
+      "name": "James Barry",
+      "facet": "Medical and nursing pioneers",
+      "known_at": 14
+    },
+    {
+      "name": "Ludwig Guttmann",
+      "facet": "Medical and nursing pioneers",
+      "known_at": 12
+    },
+    {
+      "name": "Thomas Clarkson",
+      "facet": "Campaigners and social reformers",
+      "known_at": 14
+    },
+    {
+      "name": "Olaudah Equiano",
+      "facet": "Campaigners and social reformers",
+      "known_at": 12
+    },
+    {
+      "name": "Octavia Hill",
+      "facet": "Campaigners and social reformers",
+      "known_at": 13
+    },
+    {
+      "name": "Josephine Butler",
+      "facet": "Campaigners and social reformers",
+      "known_at": 14
+    },
+    {
+      "name": "Doreen Lawrence",
+      "facet": "Campaigners and social reformers",
+      "known_at": 12
+    },
+    {
+      "name": "Marcus Rashford",
+      "facet": "Campaigners and social reformers",
+      "known_at": 6
+    },
+    {
+      "name": "Noor Inayat Khan",
+      "facet": "Wartime heroes and codebreakers",
+      "known_at": 12
+    },
+    {
+      "name": "Violette Szabo",
+      "facet": "Wartime heroes and codebreakers",
+      "known_at": 13
+    },
+    {
+      "name": "Douglas Bader",
+      "facet": "Wartime heroes and codebreakers",
+      "known_at": 12
+    },
+    {
+      "name": "Guy Gibson",
+      "facet": "Wartime heroes and codebreakers",
+      "known_at": 13
+    },
+    {
+      "name": "Barnes Wallis",
+      "facet": "Wartime heroes and codebreakers",
+      "known_at": 11
+    },
+    {
+      "name": "Dambusters",
+      "facet": "Wartime heroes and codebreakers",
+      "known_at": 10
+    },
+    {
+      "name": "George Cross",
+      "facet": "Wartime heroes and codebreakers",
+      "known_at": 11
+    },
+    {
+      "name": "Dunkirk little ships",
+      "facet": "Wartime heroes and codebreakers",
+      "known_at": 10
+    },
+    {
+      "name": "Nicholas Winton",
+      "facet": "Wartime heroes and codebreakers",
+      "known_at": 12
+    },
+    {
+      "name": "Rob Roy",
+      "facet": "Legendary and folk heroes",
+      "known_at": 12
+    },
+    {
+      "name": "Flora MacDonald",
+      "facet": "Legendary and folk heroes",
+      "known_at": 13
+    },
+    {
+      "name": "Finn McCool",
+      "facet": "Legendary and folk heroes",
+      "known_at": 9
+    },
+    {
+      "name": "Amy Johnson",
+      "facet": "Aviation and space pioneers",
+      "known_at": 8
+    },
+    {
+      "name": "Helen Sharman",
+      "facet": "Aviation and space pioneers",
+      "known_at": 11
+    },
+    {
+      "name": "Tim Peake",
+      "facet": "Aviation and space pioneers",
+      "known_at": 7
+    },
+    {
+      "name": "Alcock and Brown",
+      "facet": "Aviation and space pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Supermarine Spitfire",
+      "facet": "Aviation and space pioneers",
+      "known_at": 7
+    },
+    {
+      "name": "Geoffrey de Havilland",
+      "facet": "Aviation and space pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "de Havilland Comet",
+      "facet": "Aviation and space pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Charles Rolls",
+      "facet": "Aviation and space pioneers",
+      "known_at": 12
+    },
+    {
+      "name": "Samuel Cody",
+      "facet": "Aviation and space pioneers",
+      "known_at": 14
+    },
+    {
+      "name": "Hilda Hewlett",
+      "facet": "Aviation and space pioneers",
+      "known_at": 15
+    },
+    {
+      "name": "Beryl Markham",
+      "facet": "Aviation and space pioneers",
+      "known_at": 14
+    },
+    {
+      "name": "Eric \"Winkle\" Brown",
+      "facet": "Aviation and space pioneers",
+      "known_at": 14
+    },
+    {
+      "name": "Michael Foale",
+      "facet": "Aviation and space pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Beagle 2",
+      "facet": "Aviation and space pioneers",
+      "known_at": 12
+    },
+    {
+      "name": "Black Arrow",
+      "facet": "Aviation and space pioneers",
+      "known_at": 14
+    },
+    {
+      "name": "Bernard Lovell",
+      "facet": "Aviation and space pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Jessica Ennis-Hill",
+      "facet": "Sporting trailblazers",
+      "known_at": 7
+    },
+    {
+      "name": "Andy Murray",
+      "facet": "Sporting trailblazers",
+      "known_at": 5
+    },
+    {
+      "name": "Mo Farah",
+      "facet": "Sporting trailblazers",
+      "known_at": 5
+    },
+    {
+      "name": "Kelly Holmes",
+      "facet": "Sporting trailblazers",
+      "known_at": 8
+    },
+    {
+      "name": "Tanni Grey-Thompson",
+      "facet": "Sporting trailblazers",
+      "known_at": 10
+    },
+    {
+      "name": "Lily Parr",
+      "facet": "Sporting trailblazers",
+      "known_at": 13
+    },
+    {
+      "name": "Dick, Kerr Ladies",
+      "facet": "Sporting trailblazers",
+      "known_at": 13
+    },
+    {
+      "name": "Walter Tull",
+      "facet": "Sporting trailblazers",
+      "known_at": 11
+    },
+    {
+      "name": "Arthur Wharton",
+      "facet": "Sporting trailblazers",
+      "known_at": 14
+    },
+    {
+      "name": "Viv Anderson",
+      "facet": "Sporting trailblazers",
+      "known_at": 13
+    },
+    {
+      "name": "Nicola Adams",
+      "facet": "Sporting trailblazers",
+      "known_at": 10
+    },
+    {
+      "name": "Ellie Simmonds",
+      "facet": "Sporting trailblazers",
+      "known_at": 8
+    },
+    {
+      "name": "Lewis Hamilton",
+      "facet": "Sporting trailblazers",
+      "known_at": 4
+    },
+    {
+      "name": "Bradley Wiggins",
+      "facet": "Sporting trailblazers",
+      "known_at": 9
+    },
+    {
+      "name": "Chris Hoy",
+      "facet": "Sporting trailblazers",
+      "known_at": 8
+    },
+    {
+      "name": "Lionesses",
+      "facet": "Sporting trailblazers",
+      "known_at": 4
+    },
+    {
+      "name": "Tom Daley",
+      "facet": "Sporting trailblazers",
+      "known_at": 5
+    },
+    {
+      "name": "Roger Bannister",
+      "facet": "Speed and endurance record breakers",
+      "known_at": 10
+    },
+    {
+      "name": "Malcolm Campbell",
+      "facet": "Speed and endurance record breakers",
+      "known_at": 13
+    },
+    {
+      "name": "Bluebird",
+      "facet": "Speed and endurance record breakers",
+      "known_at": 12
+    },
+    {
+      "name": "Andy Green",
+      "facet": "Speed and endurance record breakers",
+      "known_at": 13
+    },
+    {
+      "name": "Richard Noble",
+      "facet": "Speed and endurance record breakers",
+      "known_at": 14
+    },
+    {
+      "name": "Henry Segrave",
+      "facet": "Speed and endurance record breakers",
+      "known_at": 15
+    },
+    {
+      "name": "Ellen MacArthur",
+      "facet": "Speed and endurance record breakers",
+      "known_at": 10
+    },
+    {
+      "name": "Francis Chichester",
+      "facet": "Speed and endurance record breakers",
+      "known_at": 13
+    },
+    {
+      "name": "Robin Knox-Johnston",
+      "facet": "Speed and endurance record breakers",
+      "known_at": 13
+    },
+    {
+      "name": "Chay Blyth",
+      "facet": "Speed and endurance record breakers",
+      "known_at": 14
+    },
+    {
+      "name": "Matthew Webb",
+      "facet": "Speed and endurance record breakers",
+      "known_at": 12
+    },
+    {
+      "name": "Alison Streeter",
+      "facet": "Speed and endurance record breakers",
+      "known_at": 14
+    },
+    {
+      "name": "Lewis Pugh",
+      "facet": "Speed and endurance record breakers",
+      "known_at": 14
+    },
+    {
+      "name": "Paula Radcliffe",
+      "facet": "Speed and endurance record breakers",
+      "known_at": 9
+    },
+    {
+      "name": "Jonathan Edwards",
+      "facet": "Speed and endurance record breakers",
+      "known_at": 11
+    },
+    {
+      "name": "Eddie Izzard",
+      "facet": "Speed and endurance record breakers",
+      "known_at": 12
+    },
+    {
+      "name": "Grace Darling",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 6
+    },
+    {
+      "name": "Longstone Lighthouse",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 12
+    },
+    {
+      "name": "RNLI",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 6
+    },
+    {
+      "name": "William Hillary",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 14
+    },
+    {
+      "name": "Henry Blogg",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 14
+    },
+    {
+      "name": "Coxswain",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 12
+    },
+    {
+      "name": "Lifeboat station",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 5
+    },
+    {
+      "name": "Lifeguard",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 2
+    },
+    {
+      "name": "HM Coastguard",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 7
+    },
+    {
+      "name": "Air ambulance",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 5
+    },
+    {
+      "name": "Lighthouse keeper",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 4
+    },
+    {
+      "name": "999",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 1
+    },
+    {
+      "name": "St John Ambulance",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 7
+    },
+    {
+      "name": "Fire brigade",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 1
+    },
+    {
+      "name": "Captain Tom Moore",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 5
+    },
+    {
+      "name": "George Medal",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 13
+    },
+    {
+      "name": "Queen's Gallantry Medal",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 14
+    },
+    {
+      "name": "Pride of Britain Awards",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 9
+    },
+    {
+      "name": "Blue Peter badge",
+      "facet": "Lifeboat crews and everyday bravery",
+      "known_at": 5
+    },
+    {
+      "name": "Margaret Bondfield",
+      "facet": "Women's firsts in public life",
+      "known_at": 15
+    },
+    {
+      "name": "Betty Boothroyd",
+      "facet": "Women's firsts in public life",
+      "known_at": 13
+    },
+    {
+      "name": "Diane Abbott",
+      "facet": "Women's firsts in public life",
+      "known_at": 12
+    },
+    {
+      "name": "Barbara Castle",
+      "facet": "Women's firsts in public life",
+      "known_at": 13
+    },
+    {
+      "name": "Stella Rimington",
+      "facet": "Women's firsts in public life",
+      "known_at": 14
+    },
+    {
+      "name": "Cressida Dick",
+      "facet": "Women's firsts in public life",
+      "known_at": 13
+    },
+    {
+      "name": "Brenda Hale",
+      "facet": "Women's firsts in public life",
+      "known_at": 13
+    },
+    {
+      "name": "Moira Stuart",
+      "facet": "Women's firsts in public life",
+      "known_at": 13
+    },
+    {
+      "name": "Rachel Reeves",
+      "facet": "Women's firsts in public life",
+      "known_at": 12
+    },
+    {
+      "name": "Margaret Beckett",
+      "facet": "Women's firsts in public life",
+      "known_at": 14
+    },
+    {
+      "name": "Jacqui Smith",
+      "facet": "Women's firsts in public life",
+      "known_at": 14
+    },
+    {
+      "name": "Laura Kuenssberg",
+      "facet": "Women's firsts in public life",
+      "known_at": 13
+    },
+    {
+      "name": "Ellen Wilkinson",
+      "facet": "Women's firsts in public life",
+      "known_at": 14
+    },
+    {
+      "name": "Mo Mowlam",
+      "facet": "Women's firsts in public life",
+      "known_at": 14
+    }
+  ]
+}

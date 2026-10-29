@@ -1,0 +1,880 @@
+{
+  "subcategory": "plants-and-gardens",
+  "facets": [
+    "Wildflowers and bluebell woods",
+    "Trees and ancient woodland",
+    "Hedgerows, heath and moorland",
+    "National and regional plant emblems",
+    "Famous gardens and estates",
+    "Flower shows and garden traditions",
+    "Allotments and growing vegetables",
+    "Foraging and wild food",
+    "Plant folklore and customs",
+    "Gardeners, designers and botanists",
+    "Gardening on TV and radio",
+    "Plant names and sayings"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Wood anemone",
+      "facet": "Wildflowers and bluebell woods",
+      "known_at": 12
+    },
+    {
+      "name": "Red campion",
+      "facet": "Wildflowers and bluebell woods",
+      "known_at": 12
+    },
+    {
+      "name": "Lesser celandine",
+      "facet": "Wildflowers and bluebell woods",
+      "known_at": 12
+    },
+    {
+      "name": "Ox-eye daisy",
+      "facet": "Wildflowers and bluebell woods",
+      "known_at": 8
+    },
+    {
+      "name": "Snake's head fritillary",
+      "facet": "Wildflowers and bluebell woods",
+      "known_at": 13
+    },
+    {
+      "name": "Spanish bluebell",
+      "facet": "Wildflowers and bluebell woods",
+      "known_at": 11
+    },
+    {
+      "name": "Greater stitchwort",
+      "facet": "Wildflowers and bluebell woods",
+      "known_at": 14
+    },
+    {
+      "name": "Meadowsweet",
+      "facet": "Wildflowers and bluebell woods",
+      "known_at": 12
+    },
+    {
+      "name": "Cornflower",
+      "facet": "Wildflowers and bluebell woods",
+      "known_at": 9
+    },
+    {
+      "name": "Common dog violet",
+      "facet": "Wildflowers and bluebell woods",
+      "known_at": 11
+    },
+    {
+      "name": "Cuckooflower",
+      "facet": "Wildflowers and bluebell woods",
+      "known_at": 13
+    },
+    {
+      "name": "Forest of Dean",
+      "facet": "Trees and ancient woodland",
+      "known_at": 10
+    },
+    {
+      "name": "Ankerwycke Yew",
+      "facet": "Trees and ancient woodland",
+      "known_at": 15
+    },
+    {
+      "name": "Wistman's Wood",
+      "facet": "Trees and ancient woodland",
+      "known_at": 14
+    },
+    {
+      "name": "Epping Forest",
+      "facet": "Trees and ancient woodland",
+      "known_at": 10
+    },
+    {
+      "name": "Kielder Forest",
+      "facet": "Trees and ancient woodland",
+      "known_at": 12
+    },
+    {
+      "name": "Woodland Trust",
+      "facet": "Trees and ancient woodland",
+      "known_at": 11
+    },
+    {
+      "name": "Blackthorn",
+      "facet": "Hedgerows, heath and moorland",
+      "known_at": 10
+    },
+    {
+      "name": "Hedge laying",
+      "facet": "Hedgerows, heath and moorland",
+      "known_at": 12
+    },
+    {
+      "name": "Cotton grass",
+      "facet": "Hedgerows, heath and moorland",
+      "known_at": 12
+    },
+    {
+      "name": "Dog rose",
+      "facet": "Hedgerows, heath and moorland",
+      "known_at": 10
+    },
+    {
+      "name": "Cow parsley",
+      "facet": "Hedgerows, heath and moorland",
+      "known_at": 10
+    },
+    {
+      "name": "Daffodil",
+      "facet": "National and regional plant emblems",
+      "known_at": 3
+    },
+    {
+      "name": "Flax",
+      "facet": "National and regional plant emblems",
+      "known_at": 13
+    },
+    {
+      "name": "Red rose of Lancaster",
+      "facet": "National and regional plant emblems",
+      "known_at": 9
+    },
+    {
+      "name": "White rose of York",
+      "facet": "National and regional plant emblems",
+      "known_at": 9
+    },
+    {
+      "name": "Wars of the Roses",
+      "facet": "National and regional plant emblems",
+      "known_at": 8
+    },
+    {
+      "name": "Harebell",
+      "facet": "National and regional plant emblems",
+      "known_at": 12
+    },
+    {
+      "name": "Order of the Thistle",
+      "facet": "National and regional plant emblems",
+      "known_at": 13
+    },
+    {
+      "name": "Broom",
+      "facet": "National and regional plant emblems",
+      "known_at": 13
+    },
+    {
+      "name": "England rugby rose",
+      "facet": "National and regional plant emblems",
+      "known_at": 7
+    },
+    {
+      "name": "Twelve-sided pound coin",
+      "facet": "National and regional plant emblems",
+      "known_at": 7
+    },
+    {
+      "name": "St David's Day",
+      "facet": "National and regional plant emblems",
+      "known_at": 7
+    },
+    {
+      "name": "RHS Wisley",
+      "facet": "Famous gardens and estates",
+      "known_at": 12
+    },
+    {
+      "name": "Great Dixter",
+      "facet": "Famous gardens and estates",
+      "known_at": 14
+    },
+    {
+      "name": "Hampton Court Maze",
+      "facet": "Famous gardens and estates",
+      "known_at": 8
+    },
+    {
+      "name": "Inverewe Garden",
+      "facet": "Famous gardens and estates",
+      "known_at": 14
+    },
+    {
+      "name": "Royal Botanic Garden Edinburgh",
+      "facet": "Famous gardens and estates",
+      "known_at": 11
+    },
+    {
+      "name": "Alnwick Poison Garden",
+      "facet": "Famous gardens and estates",
+      "known_at": 11
+    },
+    {
+      "name": "Palm House at Kew",
+      "facet": "Famous gardens and estates",
+      "known_at": 11
+    },
+    {
+      "name": "Hidcote",
+      "facet": "Famous gardens and estates",
+      "known_at": 13
+    },
+    {
+      "name": "Highgrove",
+      "facet": "Famous gardens and estates",
+      "known_at": 12
+    },
+    {
+      "name": "Levens Hall",
+      "facet": "Famous gardens and estates",
+      "known_at": 14
+    },
+    {
+      "name": "Studley Royal",
+      "facet": "Famous gardens and estates",
+      "known_at": 14
+    },
+    {
+      "name": "Hampton Court Garden Festival",
+      "facet": "Flower shows and garden traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Royal Horticultural Society",
+      "facet": "Flower shows and garden traditions",
+      "known_at": 10
+    },
+    {
+      "name": "National Garden Scheme",
+      "facet": "Flower shows and garden traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Garden gnome",
+      "facet": "Flower shows and garden traditions",
+      "known_at": 3
+    },
+    {
+      "name": "Chelsea chop",
+      "facet": "Flower shows and garden traditions",
+      "known_at": 14
+    },
+    {
+      "name": "Southport Flower Show",
+      "facet": "Flower shows and garden traditions",
+      "known_at": 14
+    },
+    {
+      "name": "Britain in Bloom",
+      "facet": "Flower shows and garden traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Village produce show",
+      "facet": "Flower shows and garden traditions",
+      "known_at": 9
+    },
+    {
+      "name": "RHS Gold Medal",
+      "facet": "Flower shows and garden traditions",
+      "known_at": 11
+    },
+    {
+      "name": "RHS Malvern Spring Festival",
+      "facet": "Flower shows and garden traditions",
+      "known_at": 14,
+      "retired": "unaskable: None of the options works: a 'when' question about a spring festival gives itself away, and no famous person goes with it."
+    },
+    {
+      "name": "Tatton Park Flower Show",
+      "facet": "Flower shows and garden traditions",
+      "known_at": 14
+    },
+    {
+      "name": "Garden centre",
+      "facet": "Flower shows and garden traditions",
+      "known_at": 4
+    },
+    {
+      "name": "Sweet pea",
+      "facet": "Flower shows and garden traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Herbaceous border",
+      "facet": "Flower shows and garden traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Cottage garden",
+      "facet": "Flower shows and garden traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Lawn stripes",
+      "facet": "Flower shows and garden traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Topiary",
+      "facet": "Flower shows and garden traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Allotment",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 7
+    },
+    {
+      "name": "Runner bean",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 7
+    },
+    {
+      "name": "Rhubarb Triangle",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 13
+    },
+    {
+      "name": "Dig for Victory",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 9
+    },
+    {
+      "name": "Giant leek",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 12
+    },
+    {
+      "name": "Marrow",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 8
+    },
+    {
+      "name": "Broad bean",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 9
+    },
+    {
+      "name": "Maris Piper",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 10
+    },
+    {
+      "name": "Jersey Royal",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 11
+    },
+    {
+      "name": "Brussels sprout",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 4
+    },
+    {
+      "name": "Parsnip",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 6
+    },
+    {
+      "name": "Swede",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 8
+    },
+    {
+      "name": "Garden shed",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 3,
+      "retired": "unaskable: Naming a shed from a photo is too easy and not specific to the UK; the other options don't fit."
+    },
+    {
+      "name": "Compost heap",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 5
+    },
+    {
+      "name": "Cold frame",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 12
+    },
+    {
+      "name": "Slug",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 3
+    },
+    {
+      "name": "Water butt",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 10
+    },
+    {
+      "name": "Purple sprouting broccoli",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 11
+    },
+    {
+      "name": "Courgette",
+      "facet": "Allotments and growing vegetables",
+      "known_at": 6
+    },
+    {
+      "name": "Blackberry",
+      "facet": "Foraging and wild food",
+      "known_at": 3
+    },
+    {
+      "name": "Elderflower",
+      "facet": "Foraging and wild food",
+      "known_at": 7
+    },
+    {
+      "name": "Sloe gin",
+      "facet": "Foraging and wild food",
+      "known_at": 11
+    },
+    {
+      "name": "Wild garlic",
+      "facet": "Foraging and wild food",
+      "known_at": 9
+    },
+    {
+      "name": "Nettle soup",
+      "facet": "Foraging and wild food",
+      "known_at": 9
+    },
+    {
+      "name": "Samphire",
+      "facet": "Foraging and wild food",
+      "known_at": 12
+    },
+    {
+      "name": "Dandelion and burdock",
+      "facet": "Foraging and wild food",
+      "known_at": 10
+    },
+    {
+      "name": "Rosehip syrup",
+      "facet": "Foraging and wild food",
+      "known_at": 12
+    },
+    {
+      "name": "Crab apple",
+      "facet": "Foraging and wild food",
+      "known_at": 8
+    },
+    {
+      "name": "Sweet chestnut",
+      "facet": "Foraging and wild food",
+      "known_at": 8
+    },
+    {
+      "name": "Kentish cobnut",
+      "facet": "Foraging and wild food",
+      "known_at": 13
+    },
+    {
+      "name": "Damson",
+      "facet": "Foraging and wild food",
+      "known_at": 10
+    },
+    {
+      "name": "Watercress",
+      "facet": "Foraging and wild food",
+      "known_at": 8
+    },
+    {
+      "name": "Sea buckthorn",
+      "facet": "Foraging and wild food",
+      "known_at": 13
+    },
+    {
+      "name": "Common sorrel",
+      "facet": "Foraging and wild food",
+      "known_at": 12
+    },
+    {
+      "name": "The Holly and the Ivy",
+      "facet": "Plant folklore and customs",
+      "known_at": 7
+    },
+    {
+      "name": "Conkers",
+      "facet": "Plant folklore and customs",
+      "known_at": 5
+    },
+    {
+      "name": "Remembrance poppy",
+      "facet": "Plant folklore and customs",
+      "known_at": 5
+    },
+    {
+      "name": "Maypole",
+      "facet": "Plant folklore and customs",
+      "known_at": 6
+    },
+    {
+      "name": "Oak Apple Day",
+      "facet": "Plant folklore and customs",
+      "known_at": 13
+    },
+    {
+      "name": "Glastonbury Thorn",
+      "facet": "Plant folklore and customs",
+      "known_at": 13
+    },
+    {
+      "name": "Daisy chain",
+      "facet": "Plant folklore and customs",
+      "known_at": 3
+    },
+    {
+      "name": "Dandelion clock",
+      "facet": "Plant folklore and customs",
+      "known_at": 4
+    },
+    {
+      "name": "Four-leaf clover",
+      "facet": "Plant folklore and customs",
+      "known_at": 4,
+      "retired": "used_up: Its only good fact, that it brings luck, is already in the pool, and the four-leaf clover is a custom found all over the world, not a British one."
+    },
+    {
+      "name": "Jack in the Green",
+      "facet": "Plant folklore and customs",
+      "known_at": 13
+    },
+    {
+      "name": "Harvest festival",
+      "facet": "Plant folklore and customs",
+      "known_at": 6
+    },
+    {
+      "name": "Corn dolly",
+      "facet": "Plant folklore and customs",
+      "known_at": 12
+    },
+    {
+      "name": "Rushbearing",
+      "facet": "Plant folklore and customs",
+      "known_at": 15
+    },
+    {
+      "name": "Primrose Day",
+      "facet": "Plant folklore and customs",
+      "known_at": 15
+    },
+    {
+      "name": "Old Michaelmas Day blackberry legend",
+      "facet": "Plant folklore and customs",
+      "known_at": 13
+    },
+    {
+      "name": "Hop picking",
+      "facet": "Plant folklore and customs",
+      "known_at": 12
+    },
+    {
+      "name": "Gertrude Jekyll",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 13
+    },
+    {
+      "name": "Joseph Banks",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 12
+    },
+    {
+      "name": "Joseph Paxton",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 13
+    },
+    {
+      "name": "Vita Sackville-West",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 13
+    },
+    {
+      "name": "Monty Don",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 10
+    },
+    {
+      "name": "Alan Titchmarsh",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 10
+    },
+    {
+      "name": "Charlie Dimmock",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 12
+    },
+    {
+      "name": "Percy Thrower",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 14
+    },
+    {
+      "name": "Christopher Lloyd",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 14
+    },
+    {
+      "name": "Beth Chatto",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 14
+    },
+    {
+      "name": "Tim Smit",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 13
+    },
+    {
+      "name": "John Tradescant",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 14
+    },
+    {
+      "name": "Joseph Hooker",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 14
+    },
+    {
+      "name": "Marianne North",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 14
+    },
+    {
+      "name": "Humphry Repton",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 14
+    },
+    {
+      "name": "Geoff Hamilton",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 13
+    },
+    {
+      "name": "Carol Klein",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 13
+    },
+    {
+      "name": "Diarmuid Gavin",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 13
+    },
+    {
+      "name": "Robert Fortune",
+      "facet": "Gardeners, designers and botanists",
+      "known_at": 15
+    },
+    {
+      "name": "Gardeners' World",
+      "facet": "Gardening on TV and radio",
+      "known_at": 9
+    },
+    {
+      "name": "Gardeners' Question Time",
+      "facet": "Gardening on TV and radio",
+      "known_at": 12
+    },
+    {
+      "name": "Ground Force",
+      "facet": "Gardening on TV and radio",
+      "known_at": 12
+    },
+    {
+      "name": "Love Your Garden",
+      "facet": "Gardening on TV and radio",
+      "known_at": 12
+    },
+    {
+      "name": "Beechgrove",
+      "facet": "Gardening on TV and radio",
+      "known_at": 14
+    },
+    {
+      "name": "The Big Allotment Challenge",
+      "facet": "Gardening on TV and radio",
+      "known_at": 14
+    },
+    {
+      "name": "Bill and Ben the Flowerpot Men",
+      "facet": "Gardening on TV and radio",
+      "known_at": 9
+    },
+    {
+      "name": "Rosemary and Thyme",
+      "facet": "Gardening on TV and radio",
+      "known_at": 13
+    },
+    {
+      "name": "The Good Life",
+      "facet": "Gardening on TV and radio",
+      "known_at": 12
+    },
+    {
+      "name": "Garden Rescue",
+      "facet": "Gardening on TV and radio",
+      "known_at": 13
+    },
+    {
+      "name": "Big Dreams Small Spaces",
+      "facet": "Gardening on TV and radio",
+      "known_at": 13
+    },
+    {
+      "name": "Nigel the golden retriever",
+      "facet": "Gardening on TV and radio",
+      "known_at": 12
+    },
+    {
+      "name": "In the Night Garden",
+      "facet": "Gardening on TV and radio",
+      "known_at": 3
+    },
+    {
+      "name": "Mr Bloom's Nursery",
+      "facet": "Gardening on TV and radio",
+      "known_at": 4
+    },
+    {
+      "name": "Blue Peter garden",
+      "facet": "Gardening on TV and radio",
+      "known_at": 9
+    },
+    {
+      "name": "The Victorian Kitchen Garden",
+      "facet": "Gardening on TV and radio",
+      "known_at": 15
+    },
+    {
+      "name": "Up the garden path",
+      "facet": "Plant names and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Pushing up the daisies",
+      "facet": "Plant names and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Fresh as a daisy",
+      "facet": "Plant names and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Playing gooseberry",
+      "facet": "Plant names and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Salad days",
+      "facet": "Plant names and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Ne'er cast a clout till May be out",
+      "facet": "Plant names and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Oak before ash",
+      "facet": "Plant names and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Jack-by-the-hedge",
+      "facet": "Plant names and sayings",
+      "known_at": 14
+    },
+    {
+      "name": "Love-in-a-mist",
+      "facet": "Plant names and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Old man's beard",
+      "facet": "Plant names and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Granny's bonnet",
+      "facet": "Plant names and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Sticky willy",
+      "facet": "Plant names and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Forget-me-not",
+      "facet": "Plant names and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Herb Robert",
+      "facet": "Plant names and sayings",
+      "known_at": 14
+    },
+    {
+      "name": "Shepherd's purse",
+      "facet": "Plant names and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Eggs and bacon",
+      "facet": "Plant names and sayings",
+      "known_at": 14
+    },
+    {
+      "name": "Gone to seed",
+      "facet": "Plant names and sayings",
+      "known_at": 10
+    }
+  ]
+}

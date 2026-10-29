@@ -1,0 +1,552 @@
+{
+  "subcategory": "customs-and-ceremonies",
+  "facets": [
+    "Royal pageantry and coronations",
+    "Parliament and state rituals",
+    "Remembrance and Bonfire Night",
+    "Christmas and Hogmanay customs",
+    "Easter, May Day and spring customs",
+    "Quirky village contests and folk customs",
+    "Weddings, christenings and life events",
+    "Scottish, Welsh and Irish ceremonies",
+    "Everyday manners and pub etiquette",
+    "Superstitions and lucky charms",
+    "School and university traditions",
+    "Sporting occasions and their rituals"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "St Edward's Crown",
+      "facet": "Royal pageantry and coronations",
+      "known_at": 11
+    },
+    {
+      "name": "Birthday Honours",
+      "facet": "Royal pageantry and coronations",
+      "known_at": 11
+    },
+    {
+      "name": "Buckingham Palace balcony appearance",
+      "facet": "Royal pageantry and coronations",
+      "known_at": 6
+    },
+    {
+      "name": "Knighthood investiture",
+      "facet": "Royal pageantry and coronations",
+      "known_at": 10
+    },
+    {
+      "name": "Ceremonial Mace",
+      "facet": "Parliament and state rituals",
+      "known_at": 12
+    },
+    {
+      "name": "Division lobby",
+      "facet": "Parliament and state rituals",
+      "known_at": 13
+    },
+    {
+      "name": "Two sword lengths",
+      "facet": "Parliament and state rituals",
+      "known_at": 13
+    },
+    {
+      "name": "Door of 10 Downing Street",
+      "facet": "Parliament and state rituals",
+      "known_at": 6
+    },
+    {
+      "name": "Oath of allegiance",
+      "facet": "Parliament and state rituals",
+      "known_at": 12
+    },
+    {
+      "name": "Ottery St Mary tar barrels",
+      "facet": "Remembrance and Bonfire Night",
+      "known_at": 14
+    },
+    {
+      "name": "Maypole dancing",
+      "facet": "Easter, May Day and spring customs",
+      "known_at": 6
+    },
+    {
+      "name": "Easter bonnet parade",
+      "facet": "Easter, May Day and spring customs",
+      "known_at": 8
+    },
+    {
+      "name": "Helston Furry Dance",
+      "facet": "Easter, May Day and spring customs",
+      "known_at": 14
+    },
+    {
+      "name": "World Conker Championships",
+      "facet": "Quirky village contests and folk customs",
+      "known_at": 8
+    },
+    {
+      "name": "Haxey Hood",
+      "facet": "Quirky village contests and folk customs",
+      "known_at": 14
+    },
+    {
+      "name": "Ashbourne Shrovetide Football",
+      "facet": "Quirky village contests and folk customs",
+      "known_at": 13
+    },
+    {
+      "name": "Toe wrestling",
+      "facet": "Quirky village contests and folk customs",
+      "known_at": 12
+    },
+    {
+      "name": "Worm charming",
+      "facet": "Quirky village contests and folk customs",
+      "known_at": 11
+    },
+    {
+      "name": "Poohsticks",
+      "facet": "Quirky village contests and folk customs",
+      "known_at": 6
+    },
+    {
+      "name": "Whittlesea Straw Bear",
+      "facet": "Quirky village contests and folk customs",
+      "known_at": 14
+    },
+    {
+      "name": "Black pudding throwing",
+      "facet": "Quirky village contests and folk customs",
+      "known_at": 12
+    },
+    {
+      "name": "Scarecrow festival",
+      "facet": "Quirky village contests and folk customs",
+      "known_at": 8
+    },
+    {
+      "name": "Welly wanging",
+      "facet": "Quirky village contests and folk customs",
+      "known_at": 10
+    },
+    {
+      "name": "Pea shooting championship",
+      "facet": "Quirky village contests and folk customs",
+      "known_at": 13
+    },
+    {
+      "name": "Coal carrying race",
+      "facet": "Quirky village contests and folk customs",
+      "known_at": 14
+    },
+    {
+      "name": "Village fete",
+      "facet": "Quirky village contests and folk customs",
+      "known_at": 6
+    },
+    {
+      "name": "Tombola",
+      "facet": "Quirky village contests and folk customs",
+      "known_at": 7
+    },
+    {
+      "name": "Coconut shy",
+      "facet": "Quirky village contests and folk customs",
+      "known_at": 7
+    },
+    {
+      "name": "Hen party",
+      "facet": "Weddings, christenings and life events",
+      "known_at": 9
+    },
+    {
+      "name": "Wedding fruitcake",
+      "facet": "Weddings, christenings and life events",
+      "known_at": 10
+    },
+    {
+      "name": "Christening cake",
+      "facet": "Weddings, christenings and life events",
+      "known_at": 13
+    },
+    {
+      "name": "Confetti",
+      "facet": "Weddings, christenings and life events",
+      "known_at": 4
+    },
+    {
+      "name": "Giving away the bride",
+      "facet": "Weddings, christenings and life events",
+      "known_at": 9
+    },
+    {
+      "name": "Morning suit",
+      "facet": "Weddings, christenings and life events",
+      "known_at": 11
+    },
+    {
+      "name": "Fascinator",
+      "facet": "Weddings, christenings and life events",
+      "known_at": 9
+    },
+    {
+      "name": "Godparents",
+      "facet": "Weddings, christenings and life events",
+      "known_at": 6
+    },
+    {
+      "name": "Gretna Green",
+      "facet": "Weddings, christenings and life events",
+      "known_at": 10
+    },
+    {
+      "name": "Banns of marriage",
+      "facet": "Weddings, christenings and life events",
+      "known_at": 13
+    },
+    {
+      "name": "Wake",
+      "facet": "Weddings, christenings and life events",
+      "known_at": 11
+    },
+    {
+      "name": "Silver wedding anniversary",
+      "facet": "Weddings, christenings and life events",
+      "known_at": 8
+    },
+    {
+      "name": "Key of the door",
+      "facet": "Weddings, christenings and life events",
+      "known_at": 11
+    },
+    {
+      "name": "Leaving do",
+      "facet": "Weddings, christenings and life events",
+      "known_at": 10
+    },
+    {
+      "name": "Register office",
+      "facet": "Weddings, christenings and life events",
+      "known_at": 11
+    },
+    {
+      "name": "Handfasting",
+      "facet": "Weddings, christenings and life events",
+      "known_at": 13
+    },
+    {
+      "name": "Welsh love spoon",
+      "facet": "Scottish, Welsh and Irish ceremonies",
+      "known_at": 11
+    },
+    {
+      "name": "Tartan",
+      "facet": "Scottish, Welsh and Irish ceremonies",
+      "known_at": 5
+    },
+    {
+      "name": "Gorsedd of Bards",
+      "facet": "Scottish, Welsh and Irish ceremonies",
+      "known_at": 14
+    },
+    {
+      "name": "Guising",
+      "facet": "Scottish, Welsh and Irish ceremonies",
+      "known_at": 12
+    },
+    {
+      "name": "Edinburgh Military Tattoo",
+      "facet": "Scottish, Welsh and Irish ceremonies",
+      "known_at": 9
+    },
+    {
+      "name": "Sgian-dubh",
+      "facet": "Scottish, Welsh and Irish ceremonies",
+      "known_at": 12
+    },
+    {
+      "name": "Queueing",
+      "facet": "Everyday manners and pub etiquette",
+      "known_at": 4
+    },
+    {
+      "name": "Buying a round",
+      "facet": "Everyday manners and pub etiquette",
+      "known_at": 10
+    },
+    {
+      "name": "Cup of tea",
+      "facet": "Everyday manners and pub etiquette",
+      "known_at": 2
+    },
+    {
+      "name": "Saying sorry",
+      "facet": "Everyday manners and pub etiquette",
+      "known_at": 5
+    },
+    {
+      "name": "Talking about the weather",
+      "facet": "Everyday manners and pub etiquette",
+      "known_at": 6
+    },
+    {
+      "name": "Standing on the right",
+      "facet": "Everyday manners and pub etiquette",
+      "known_at": 11
+    },
+    {
+      "name": "Black cat",
+      "facet": "Superstitions and lucky charms",
+      "known_at": 5
+    },
+    {
+      "name": "Horseshoe",
+      "facet": "Superstitions and lucky charms",
+      "known_at": 5
+    },
+    {
+      "name": "Walking under a ladder",
+      "facet": "Superstitions and lucky charms",
+      "known_at": 5
+    },
+    {
+      "name": "Breaking a mirror",
+      "facet": "Superstitions and lucky charms",
+      "known_at": 5
+    },
+    {
+      "name": "Touch wood",
+      "facet": "Superstitions and lucky charms",
+      "known_at": 6
+    },
+    {
+      "name": "Lucky heather",
+      "facet": "Superstitions and lucky charms",
+      "known_at": 11
+    },
+    {
+      "name": "Rabbit's foot",
+      "facet": "Superstitions and lucky charms",
+      "known_at": 8
+    },
+    {
+      "name": "White rabbits",
+      "facet": "Superstitions and lucky charms",
+      "known_at": 12
+    },
+    {
+      "name": "Throwing salt over your shoulder",
+      "facet": "Superstitions and lucky charms",
+      "known_at": 8
+    },
+    {
+      "name": "Umbrella indoors",
+      "facet": "Superstitions and lucky charms",
+      "known_at": 6
+    },
+    {
+      "name": "New shoes on the table",
+      "facet": "Superstitions and lucky charms",
+      "known_at": 12
+    },
+    {
+      "name": "The Scottish Play",
+      "facet": "Superstitions and lucky charms",
+      "known_at": 11
+    },
+    {
+      "name": "Find a penny, pick it up",
+      "facet": "Superstitions and lucky charms",
+      "known_at": 9
+    },
+    {
+      "name": "Crossed fingers",
+      "facet": "Superstitions and lucky charms",
+      "known_at": 4
+    },
+    {
+      "name": "Cracks in the pavement",
+      "facet": "Superstitions and lucky charms",
+      "known_at": 5
+    },
+    {
+      "name": "School uniform",
+      "facet": "School and university traditions",
+      "known_at": 2
+    },
+    {
+      "name": "School tie",
+      "facet": "School and university traditions",
+      "known_at": 5
+    },
+    {
+      "name": "Prefect",
+      "facet": "School and university traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Head boy and head girl",
+      "facet": "School and university traditions",
+      "known_at": 8
+    },
+    {
+      "name": "House points",
+      "facet": "School and university traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Sports day",
+      "facet": "School and university traditions",
+      "known_at": 3
+    },
+    {
+      "name": "Egg-and-spoon race",
+      "facet": "School and university traditions",
+      "known_at": 3
+    },
+    {
+      "name": "Eton wall game",
+      "facet": "School and university traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Matriculation",
+      "facet": "School and university traditions",
+      "known_at": 13
+    },
+    {
+      "name": "May Morning",
+      "facet": "School and university traditions",
+      "known_at": 13
+    },
+    {
+      "name": "May Ball",
+      "facet": "School and university traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Punting",
+      "facet": "School and university traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Gap year",
+      "facet": "School and university traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Freshers' Week",
+      "facet": "School and university traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Rag Week",
+      "facet": "School and university traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Subfusc",
+      "facet": "School and university traditions",
+      "known_at": 14
+    },
+    {
+      "name": "Formal hall",
+      "facet": "School and university traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Non-uniform day",
+      "facet": "School and university traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Red Nose Day",
+      "facet": "School and university traditions",
+      "known_at": 6
+    },
+    {
+      "name": "School assembly",
+      "facet": "School and university traditions",
+      "known_at": 4
+    },
+    {
+      "name": "FA Cup Final",
+      "facet": "Sporting occasions and their rituals",
+      "known_at": 6
+    },
+    {
+      "name": "Abide with Me",
+      "facet": "Sporting occasions and their rituals",
+      "known_at": 13
+    },
+    {
+      "name": "Cricket tea interval",
+      "facet": "Sporting occasions and their rituals",
+      "known_at": 10
+    },
+    {
+      "name": "The Queue at Wimbledon",
+      "facet": "Sporting occasions and their rituals",
+      "known_at": 10
+    },
+    {
+      "name": "Henman Hill",
+      "facet": "Sporting occasions and their rituals",
+      "known_at": 11
+    },
+    {
+      "name": "Swing Low, Sweet Chariot",
+      "facet": "Sporting occasions and their rituals",
+      "known_at": 12
+    },
+    {
+      "name": "Claret Jug",
+      "facet": "Sporting occasions and their rituals",
+      "known_at": 12
+    }
+  ]
+}

@@ -1,0 +1,1228 @@
+{
+  "subcategory": "tudors-and-stuarts",
+  "facets": [
+    "Henry VIII and his wives",
+    "Tudor monarchs and rivals",
+    "Elizabeth I and her court",
+    "The Reformation and religious conflict",
+    "Stuart kings and queens",
+    "The Gunpowder Plot",
+    "The English Civil War",
+    "Cromwell and the Commonwealth",
+    "Restoration London: plague and fire",
+    "Explorers, ships and the Armada",
+    "Tudor and Stuart daily life",
+    "Shakespeare, theatre and the arts",
+    "Palaces, castles and buildings"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 5,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Henry VIII",
+      "facet": "Henry VIII and his wives",
+      "known_at": 3
+    },
+    {
+      "name": "Catherine of Aragon",
+      "facet": "Henry VIII and his wives",
+      "known_at": 7
+    },
+    {
+      "name": "Anne Boleyn",
+      "facet": "Henry VIII and his wives",
+      "known_at": 6
+    },
+    {
+      "name": "Jane Seymour",
+      "facet": "Henry VIII and his wives",
+      "known_at": 8
+    },
+    {
+      "name": "Anne of Cleves",
+      "facet": "Henry VIII and his wives",
+      "known_at": 8
+    },
+    {
+      "name": "Catherine Howard",
+      "facet": "Henry VIII and his wives",
+      "known_at": 9
+    },
+    {
+      "name": "Catherine Parr",
+      "facet": "Henry VIII and his wives",
+      "known_at": 8
+    },
+    {
+      "name": "Divorced, beheaded, died rhyme",
+      "facet": "Henry VIII and his wives",
+      "known_at": 6
+    },
+    {
+      "name": "Prince Arthur",
+      "facet": "Henry VIII and his wives",
+      "known_at": 11
+    },
+    {
+      "name": "Cardinal Wolsey",
+      "facet": "Henry VIII and his wives",
+      "known_at": 10
+    },
+    {
+      "name": "Thomas Cromwell",
+      "facet": "Henry VIII and his wives",
+      "known_at": 11
+    },
+    {
+      "name": "Thomas More",
+      "facet": "Henry VIII and his wives",
+      "known_at": 11
+    },
+    {
+      "name": "Field of the Cloth of Gold",
+      "facet": "Henry VIII and his wives",
+      "known_at": 12
+    },
+    {
+      "name": "Annulment",
+      "facet": "Henry VIII and his wives",
+      "known_at": 9
+    },
+    {
+      "name": "Henry VIII's jousting accident",
+      "facet": "Henry VIII and his wives",
+      "known_at": 11
+    },
+    {
+      "name": "Anne Boleyn's B necklace",
+      "facet": "Henry VIII and his wives",
+      "known_at": 11
+    },
+    {
+      "name": "Six (musical)",
+      "facet": "Henry VIII and his wives",
+      "known_at": 9
+    },
+    {
+      "name": "Wolf Hall",
+      "facet": "Henry VIII and his wives",
+      "known_at": 12
+    },
+    {
+      "name": "Henry VIII's armour",
+      "facet": "Henry VIII and his wives",
+      "known_at": 8
+    },
+    {
+      "name": "Henry VII",
+      "facet": "Tudor monarchs and rivals",
+      "known_at": 7
+    },
+    {
+      "name": "Richard III's car park grave",
+      "facet": "Tudor monarchs and rivals",
+      "known_at": 10
+    },
+    {
+      "name": "Elizabeth of York",
+      "facet": "Tudor monarchs and rivals",
+      "known_at": 12
+    },
+    {
+      "name": "Edward VI",
+      "facet": "Tudor monarchs and rivals",
+      "known_at": 8
+    },
+    {
+      "name": "Lady Jane Grey",
+      "facet": "Tudor monarchs and rivals",
+      "known_at": 9
+    },
+    {
+      "name": "Mary I",
+      "facet": "Tudor monarchs and rivals",
+      "known_at": 7
+    },
+    {
+      "name": "Bloody Mary",
+      "facet": "Tudor monarchs and rivals",
+      "known_at": 7
+    },
+    {
+      "name": "Philip II of Spain",
+      "facet": "Tudor monarchs and rivals",
+      "known_at": 11
+    },
+    {
+      "name": "Mary, Queen of Scots",
+      "facet": "Tudor monarchs and rivals",
+      "known_at": 8
+    },
+    {
+      "name": "Perkin Warbeck",
+      "facet": "Tudor monarchs and rivals",
+      "known_at": 13
+    },
+    {
+      "name": "Lambert Simnel",
+      "facet": "Tudor monarchs and rivals",
+      "known_at": 13
+    },
+    {
+      "name": "Margaret Tudor",
+      "facet": "Tudor monarchs and rivals",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Flodden",
+      "facet": "Tudor monarchs and rivals",
+      "known_at": 12
+    },
+    {
+      "name": "Wyatt's Rebellion",
+      "facet": "Tudor monarchs and rivals",
+      "known_at": 13
+    },
+    {
+      "name": "Owen Tudor",
+      "facet": "Tudor monarchs and rivals",
+      "known_at": 13
+    },
+    {
+      "name": "Elizabeth I",
+      "facet": "Elizabeth I and her court",
+      "known_at": 4
+    },
+    {
+      "name": "The Virgin Queen",
+      "facet": "Elizabeth I and her court",
+      "known_at": 8
+    },
+    {
+      "name": "Gloriana",
+      "facet": "Elizabeth I and her court",
+      "known_at": 13
+    },
+    {
+      "name": "Robert Dudley",
+      "facet": "Elizabeth I and her court",
+      "known_at": 11
+    },
+    {
+      "name": "Earl of Essex",
+      "facet": "Elizabeth I and her court",
+      "known_at": 12
+    },
+    {
+      "name": "William Cecil",
+      "facet": "Elizabeth I and her court",
+      "known_at": 12
+    },
+    {
+      "name": "Francis Walsingham",
+      "facet": "Elizabeth I and her court",
+      "known_at": 12
+    },
+    {
+      "name": "Babington Plot",
+      "facet": "Elizabeth I and her court",
+      "known_at": 12
+    },
+    {
+      "name": "Tilbury speech",
+      "facet": "Elizabeth I and her court",
+      "known_at": 11
+    },
+    {
+      "name": "Armada Portrait",
+      "facet": "Elizabeth I and her court",
+      "known_at": 11
+    },
+    {
+      "name": "Ditchley Portrait",
+      "facet": "Elizabeth I and her court",
+      "known_at": 14
+    },
+    {
+      "name": "Rainbow Portrait",
+      "facet": "Elizabeth I and her court",
+      "known_at": 14
+    },
+    {
+      "name": "Elizabeth I's white make-up",
+      "facet": "Elizabeth I and her court",
+      "known_at": 7
+    },
+    {
+      "name": "Elizabethan Golden Age",
+      "facet": "Elizabeth I and her court",
+      "known_at": 10
+    },
+    {
+      "name": "John Dee",
+      "facet": "Elizabeth I and her court",
+      "known_at": 13
+    },
+    {
+      "name": "Bess of Hardwick",
+      "facet": "Elizabeth I and her court",
+      "known_at": 14
+    },
+    {
+      "name": "Royal progress",
+      "facet": "Elizabeth I and her court",
+      "known_at": 12
+    },
+    {
+      "name": "Martin Luther",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 10
+    },
+    {
+      "name": "Break with Rome",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 9
+    },
+    {
+      "name": "Act of Supremacy",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 11
+    },
+    {
+      "name": "Church of England",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 7
+    },
+    {
+      "name": "Dissolution of the Monasteries",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 10
+    },
+    {
+      "name": "Pilgrimage of Grace",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 13
+    },
+    {
+      "name": "Book of Common Prayer",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 12
+    },
+    {
+      "name": "Thomas Cranmer",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 12
+    },
+    {
+      "name": "Oxford Martyrs",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 13
+    },
+    {
+      "name": "Foxe's Book of Martyrs",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 14
+    },
+    {
+      "name": "Elizabethan Religious Settlement",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 12
+    },
+    {
+      "name": "Puritans",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 9
+    },
+    {
+      "name": "Recusants",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 13
+    },
+    {
+      "name": "Priest hole",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 10
+    },
+    {
+      "name": "William Tyndale",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 13
+    },
+    {
+      "name": "King James Bible",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 10
+    },
+    {
+      "name": "Defender of the Faith",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 12
+    },
+    {
+      "name": "Pope Clement VII",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 13
+    },
+    {
+      "name": "John Knox",
+      "facet": "The Reformation and religious conflict",
+      "known_at": 13
+    },
+    {
+      "name": "James I",
+      "facet": "Stuart kings and queens",
+      "known_at": 8
+    },
+    {
+      "name": "Charles I",
+      "facet": "Stuart kings and queens",
+      "known_at": 7
+    },
+    {
+      "name": "Charles II",
+      "facet": "Stuart kings and queens",
+      "known_at": 8
+    },
+    {
+      "name": "The Merry Monarch",
+      "facet": "Stuart kings and queens",
+      "known_at": 11
+    },
+    {
+      "name": "James II",
+      "facet": "Stuart kings and queens",
+      "known_at": 11
+    },
+    {
+      "name": "William III",
+      "facet": "Stuart kings and queens",
+      "known_at": 10
+    },
+    {
+      "name": "Mary II",
+      "facet": "Stuart kings and queens",
+      "known_at": 11
+    },
+    {
+      "name": "Queen Anne",
+      "facet": "Stuart kings and queens",
+      "known_at": 10
+    },
+    {
+      "name": "Union of the Crowns",
+      "facet": "Stuart kings and queens",
+      "known_at": 11
+    },
+    {
+      "name": "Glorious Revolution",
+      "facet": "Stuart kings and queens",
+      "known_at": 11
+    },
+    {
+      "name": "Bill of Rights 1689",
+      "facet": "Stuart kings and queens",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of the Boyne",
+      "facet": "Stuart kings and queens",
+      "known_at": 11
+    },
+    {
+      "name": "Divine right of kings",
+      "facet": "Stuart kings and queens",
+      "known_at": 10
+    },
+    {
+      "name": "Nell Gwyn",
+      "facet": "Stuart kings and queens",
+      "known_at": 11
+    },
+    {
+      "name": "Monmouth Rebellion",
+      "facet": "Stuart kings and queens",
+      "known_at": 13
+    },
+    {
+      "name": "Jacobites",
+      "facet": "Stuart kings and queens",
+      "known_at": 11
+    },
+    {
+      "name": "Duke of Marlborough",
+      "facet": "Stuart kings and queens",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Blenheim",
+      "facet": "Stuart kings and queens",
+      "known_at": 13
+    },
+    {
+      "name": "King Charles spaniel",
+      "facet": "Stuart kings and queens",
+      "known_at": 7
+    },
+    {
+      "name": "Guy Fawkes",
+      "facet": "The Gunpowder Plot",
+      "known_at": 3
+    },
+    {
+      "name": "5 November 1605",
+      "facet": "The Gunpowder Plot",
+      "known_at": 6
+    },
+    {
+      "name": "Robert Catesby",
+      "facet": "The Gunpowder Plot",
+      "known_at": 11
+    },
+    {
+      "name": "Thomas Percy",
+      "facet": "The Gunpowder Plot",
+      "known_at": 13
+    },
+    {
+      "name": "Thomas Wintour",
+      "facet": "The Gunpowder Plot",
+      "known_at": 14
+    },
+    {
+      "name": "Monteagle letter",
+      "facet": "The Gunpowder Plot",
+      "known_at": 12
+    },
+    {
+      "name": "Undercroft",
+      "facet": "The Gunpowder Plot",
+      "known_at": 10
+    },
+    {
+      "name": "Barrels of gunpowder",
+      "facet": "The Gunpowder Plot",
+      "known_at": 5
+    },
+    {
+      "name": "Remember, remember the fifth of November",
+      "facet": "The Gunpowder Plot",
+      "known_at": 5
+    },
+    {
+      "name": "The Guy",
+      "facet": "The Gunpowder Plot",
+      "known_at": 5
+    },
+    {
+      "name": "Penny for the Guy",
+      "facet": "The Gunpowder Plot",
+      "known_at": 9
+    },
+    {
+      "name": "Searching of the cellars",
+      "facet": "The Gunpowder Plot",
+      "known_at": 11
+    },
+    {
+      "name": "Bonfire toffee",
+      "facet": "The Gunpowder Plot",
+      "known_at": 6
+    },
+    {
+      "name": "Fireworks",
+      "facet": "The Gunpowder Plot",
+      "known_at": 1
+    },
+    {
+      "name": "Guido Fawkes",
+      "facet": "The Gunpowder Plot",
+      "known_at": 10
+    },
+    {
+      "name": "Holbeche House",
+      "facet": "The Gunpowder Plot",
+      "known_at": 14
+    },
+    {
+      "name": "Roundheads",
+      "facet": "The English Civil War",
+      "known_at": 8
+    },
+    {
+      "name": "Cavaliers",
+      "facet": "The English Civil War",
+      "known_at": 8
+    },
+    {
+      "name": "Battle of Edgehill",
+      "facet": "The English Civil War",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Marston Moor",
+      "facet": "The English Civil War",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Naseby",
+      "facet": "The English Civil War",
+      "known_at": 11
+    },
+    {
+      "name": "Battle of Worcester",
+      "facet": "The English Civil War",
+      "known_at": 12
+    },
+    {
+      "name": "New Model Army",
+      "facet": "The English Civil War",
+      "known_at": 11
+    },
+    {
+      "name": "Prince Rupert",
+      "facet": "The English Civil War",
+      "known_at": 12
+    },
+    {
+      "name": "Boy (Prince Rupert's dog)",
+      "facet": "The English Civil War",
+      "known_at": 12
+    },
+    {
+      "name": "Thomas Fairfax",
+      "facet": "The English Civil War",
+      "known_at": 12
+    },
+    {
+      "name": "Ship money",
+      "facet": "The English Civil War",
+      "known_at": 12
+    },
+    {
+      "name": "Long Parliament",
+      "facet": "The English Civil War",
+      "known_at": 12
+    },
+    {
+      "name": "Five Members",
+      "facet": "The English Civil War",
+      "known_at": 13
+    },
+    {
+      "name": "Raising of the standard at Nottingham",
+      "facet": "The English Civil War",
+      "known_at": 12
+    },
+    {
+      "name": "Execution of Charles I",
+      "facet": "The English Civil War",
+      "known_at": 9
+    },
+    {
+      "name": "Siege of Colchester",
+      "facet": "The English Civil War",
+      "known_at": 14
+    },
+    {
+      "name": "Lobster-pot helmet",
+      "facet": "The English Civil War",
+      "known_at": 10
+    },
+    {
+      "name": "Pikemen",
+      "facet": "The English Civil War",
+      "known_at": 9
+    },
+    {
+      "name": "Levellers",
+      "facet": "The English Civil War",
+      "known_at": 13
+    },
+    {
+      "name": "Sealed Knot",
+      "facet": "The English Civil War",
+      "known_at": 13
+    },
+    {
+      "name": "Oliver Cromwell",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 7
+    },
+    {
+      "name": "Lord Protector",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 10
+    },
+    {
+      "name": "Commonwealth of England",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 11
+    },
+    {
+      "name": "Interregnum",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 12
+    },
+    {
+      "name": "Rump Parliament",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 12
+    },
+    {
+      "name": "Barebone's Parliament",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 14
+    },
+    {
+      "name": "Banning of Christmas",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 8
+    },
+    {
+      "name": "Closing of the theatres",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 11
+    },
+    {
+      "name": "Warts and all",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 11
+    },
+    {
+      "name": "Richard Cromwell",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 12
+    },
+    {
+      "name": "Rule of the Major-Generals",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 14
+    },
+    {
+      "name": "Readmission of the Jews",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 14
+    },
+    {
+      "name": "Instrument of Government",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 14
+    },
+    {
+      "name": "Cromwell's head",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 13
+    },
+    {
+      "name": "Take away that bauble",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 13
+    },
+    {
+      "name": "Diggers",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 14
+    },
+    {
+      "name": "George Monck",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 14
+    },
+    {
+      "name": "Restoration of the monarchy",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 10
+    },
+    {
+      "name": "Cromwell statue at Westminster",
+      "facet": "Cromwell and the Commonwealth",
+      "known_at": 12
+    },
+    {
+      "name": "Thomas Farriner",
+      "facet": "Restoration London: plague and fire",
+      "known_at": 9
+    },
+    {
+      "name": "Pepys's buried Parmesan cheese",
+      "facet": "Restoration London: plague and fire",
+      "known_at": 10
+    },
+    {
+      "name": "Old St Paul's",
+      "facet": "Restoration London: plague and fire",
+      "known_at": 11
+    },
+    {
+      "name": "Eyam",
+      "facet": "Restoration London: plague and fire",
+      "known_at": 10
+    },
+    {
+      "name": "Ring a Ring o' Roses",
+      "facet": "Restoration London: plague and fire",
+      "known_at": 4
+    },
+    {
+      "name": "Bring out your dead",
+      "facet": "Restoration London: plague and fire",
+      "known_at": 9
+    },
+    {
+      "name": "Red cross on plague doors",
+      "facet": "Restoration London: plague and fire",
+      "known_at": 8
+    },
+    {
+      "name": "John Evelyn",
+      "facet": "Restoration London: plague and fire",
+      "known_at": 13
+    },
+    {
+      "name": "Royal Society",
+      "facet": "Restoration London: plague and fire",
+      "known_at": 12
+    },
+    {
+      "name": "Robert Hooke",
+      "facet": "Restoration London: plague and fire",
+      "known_at": 12
+    },
+    {
+      "name": "Firebreaks",
+      "facet": "Restoration London: plague and fire",
+      "known_at": 8
+    },
+    {
+      "name": "Leather fire buckets",
+      "facet": "Restoration London: plague and fire",
+      "known_at": 7
+    },
+    {
+      "name": "Pie Corner",
+      "facet": "Restoration London: plague and fire",
+      "known_at": 13
+    },
+    {
+      "name": "Spanish Armada",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 8
+    },
+    {
+      "name": "Francis Drake",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 7
+    },
+    {
+      "name": "Golden Hind",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 9
+    },
+    {
+      "name": "Drake's game of bowls",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 10
+    },
+    {
+      "name": "Plymouth Hoe",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 11
+    },
+    {
+      "name": "Armada beacons",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 10
+    },
+    {
+      "name": "Fireships",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 10
+    },
+    {
+      "name": "Duke of Medina Sidonia",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 14
+    },
+    {
+      "name": "Walter Raleigh",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 8
+    },
+    {
+      "name": "Raleigh's cloak in the puddle",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 9
+    },
+    {
+      "name": "Roanoke Colony",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 12
+    },
+    {
+      "name": "Virginia",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 11
+    },
+    {
+      "name": "Jamestown",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 12
+    },
+    {
+      "name": "Pocahontas",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 6
+    },
+    {
+      "name": "Mayflower",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 8
+    },
+    {
+      "name": "John Cabot",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 12
+    },
+    {
+      "name": "Henry Hudson",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 12
+    },
+    {
+      "name": "Martin Frobisher",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 13
+    },
+    {
+      "name": "John Hawkins",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 13
+    },
+    {
+      "name": "East India Company",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 10
+    },
+    {
+      "name": "Northwest Passage",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 12
+    },
+    {
+      "name": "Sea Dogs",
+      "facet": "Explorers, ships and the Armada",
+      "known_at": 11
+    },
+    {
+      "name": "Ruff",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 7
+    },
+    {
+      "name": "Codpiece",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 10
+    },
+    {
+      "name": "Sumptuary laws",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 13
+    },
+    {
+      "name": "Wattle and daub",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 8
+    },
+    {
+      "name": "Half-timbered house",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 6
+    },
+    {
+      "name": "Thatched roof",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 4
+    },
+    {
+      "name": "Trencher",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 10
+    },
+    {
+      "name": "Marchpane",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 12
+    },
+    {
+      "name": "Pomander",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 11
+    },
+    {
+      "name": "Chamber pot",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 6
+    },
+    {
+      "name": "Gong farmer",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 9
+    },
+    {
+      "name": "Groom of the Stool",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 10
+    },
+    {
+      "name": "Whipping boy",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 10
+    },
+    {
+      "name": "Hornbook",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 10
+    },
+    {
+      "name": "Grammar school",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 9
+    },
+    {
+      "name": "Real tennis",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 11
+    },
+    {
+      "name": "Elizabethan Poor Law",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 12
+    },
+    {
+      "name": "Coffee house",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 11
+    },
+    {
+      "name": "Catherine of Braganza and tea",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 12
+    },
+    {
+      "name": "Mob football",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 9
+    },
+    {
+      "name": "Tobacco pipe",
+      "facet": "Tudor and Stuart daily life",
+      "known_at": 8
+    },
+    {
+      "name": "Globe Theatre",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 6
+    },
+    {
+      "name": "Anne Hathaway (Shakespeare's wife)",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 10
+    },
+    {
+      "name": "Romeo and Juliet",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 5
+    },
+    {
+      "name": "Hamlet",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 8
+    },
+    {
+      "name": "A Midsummer Night's Dream",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 7
+    },
+    {
+      "name": "First Folio",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 12
+    },
+    {
+      "name": "Groundlings",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 10
+    },
+    {
+      "name": "Boy actors",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 9
+    },
+    {
+      "name": "The King's Men",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 12
+    },
+    {
+      "name": "Shakespeare's sonnets",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 10
+    },
+    {
+      "name": "Second-best bed",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 12
+    },
+    {
+      "name": "Christopher Marlowe",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 12
+    },
+    {
+      "name": "Ben Jonson",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 13
+    },
+    {
+      "name": "Hans Holbein",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 12
+    },
+    {
+      "name": "Nicholas Hilliard",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 14
+    },
+    {
+      "name": "Anthony van Dyck",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 13
+    },
+    {
+      "name": "Greensleeves",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 8
+    },
+    {
+      "name": "Thomas Tallis",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 14
+    },
+    {
+      "name": "Henry Purcell",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 13
+    },
+    {
+      "name": "John Milton",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 12
+    },
+    {
+      "name": "Masque",
+      "facet": "Shakespeare, theatre and the arts",
+      "known_at": 13
+    },
+    {
+      "name": "Traitors' Gate",
+      "facet": "Palaces, castles and buildings",
+      "known_at": 8
+    },
+    {
+      "name": "Yeoman Warders",
+      "facet": "Palaces, castles and buildings",
+      "known_at": 7
+    },
+    {
+      "name": "Palace of Whitehall",
+      "facet": "Palaces, castles and buildings",
+      "known_at": 12
+    },
+    {
+      "name": "Queen's House, Greenwich",
+      "facet": "Palaces, castles and buildings",
+      "known_at": 13
+    },
+    {
+      "name": "Sudeley Castle",
+      "facet": "Palaces, castles and buildings",
+      "known_at": 14
+    },
+    {
+      "name": "Fotheringhay Castle",
+      "facet": "Palaces, castles and buildings",
+      "known_at": 13
+    },
+    {
+      "name": "Hardwick Hall",
+      "facet": "Palaces, castles and buildings",
+      "known_at": 14
+    },
+    {
+      "name": "Nonsuch Palace",
+      "facet": "Palaces, castles and buildings",
+      "known_at": 14
+    },
+    {
+      "name": "Little Moreton Hall",
+      "facet": "Palaces, castles and buildings",
+      "known_at": 13
+    },
+    {
+      "name": "St George's Chapel, Windsor",
+      "facet": "Palaces, castles and buildings",
+      "known_at": 11
+    },
+    {
+      "name": "Royal Hospital Chelsea",
+      "facet": "Palaces, castles and buildings",
+      "known_at": 11
+    },
+    {
+      "name": "Shakespeare's Birthplace",
+      "facet": "Palaces, castles and buildings",
+      "known_at": 9
+    }
+  ]
+}

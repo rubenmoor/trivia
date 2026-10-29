@@ -1,0 +1,1012 @@
+{
+  "subcategory": "early-britain",
+  "facets": [
+    "Stone Age Britain",
+    "Stonehenge and ancient monuments",
+    "Celts and Iron Age life",
+    "Roman invasion and revolts",
+    "Roman roads, walls and towns",
+    "Anglo-Saxon kings and kingdoms",
+    "Anglo-Saxon treasures and daily life",
+    "Vikings in Britain",
+    "Early saints, monks and books",
+    "Picts, Scots and early Wales",
+    "Legends of early Britain",
+    "1066 and the Norman Conquest"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 3,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 4,
+      "educational_media": 5,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Cheddar Man",
+      "facet": "Stone Age Britain",
+      "known_at": 10
+    },
+    {
+      "name": "Boxgrove Man",
+      "facet": "Stone Age Britain",
+      "known_at": 13
+    },
+    {
+      "name": "Happisburgh footprints",
+      "facet": "Stone Age Britain",
+      "known_at": 13
+    },
+    {
+      "name": "Grimes Graves",
+      "facet": "Stone Age Britain",
+      "known_at": 12
+    },
+    {
+      "name": "Star Carr",
+      "facet": "Stone Age Britain",
+      "known_at": 13
+    },
+    {
+      "name": "Mesolithic",
+      "facet": "Stone Age Britain",
+      "known_at": 9
+    },
+    {
+      "name": "Neolithic",
+      "facet": "Stone Age Britain",
+      "known_at": 8
+    },
+    {
+      "name": "Flint axe",
+      "facet": "Stone Age Britain",
+      "known_at": 5
+    },
+    {
+      "name": "Woolly mammoth",
+      "facet": "Stone Age Britain",
+      "known_at": 2
+    },
+    {
+      "name": "Bronze Age",
+      "facet": "Stone Age Britain",
+      "known_at": 6
+    },
+    {
+      "name": "Amesbury Archer",
+      "facet": "Stone Age Britain",
+      "known_at": 12
+    },
+    {
+      "name": "Beaker people",
+      "facet": "Stone Age Britain",
+      "known_at": 12
+    },
+    {
+      "name": "Creswell Crags",
+      "facet": "Stone Age Britain",
+      "known_at": 12
+    },
+    {
+      "name": "Red Lady of Paviland",
+      "facet": "Stone Age Britain",
+      "known_at": 13
+    },
+    {
+      "name": "Must Farm",
+      "facet": "Stone Age Britain",
+      "known_at": 13
+    },
+    {
+      "name": "Hunter-gatherers",
+      "facet": "Stone Age Britain",
+      "known_at": 5
+    },
+    {
+      "name": "Bluestones",
+      "facet": "Stonehenge and ancient monuments",
+      "known_at": 9
+    },
+    {
+      "name": "Sarsen stones",
+      "facet": "Stonehenge and ancient monuments",
+      "known_at": 10
+    },
+    {
+      "name": "Preseli Hills",
+      "facet": "Stonehenge and ancient monuments",
+      "known_at": 11
+    },
+    {
+      "name": "Summer solstice",
+      "facet": "Stonehenge and ancient monuments",
+      "known_at": 6
+    },
+    {
+      "name": "Durrington Walls",
+      "facet": "Stonehenge and ancient monuments",
+      "known_at": 13
+    },
+    {
+      "name": "West Kennet Long Barrow",
+      "facet": "Stonehenge and ancient monuments",
+      "known_at": 13
+    },
+    {
+      "name": "Seahenge",
+      "facet": "Stonehenge and ancient monuments",
+      "known_at": 12
+    },
+    {
+      "name": "Celts",
+      "facet": "Celts and Iron Age life",
+      "known_at": 5
+    },
+    {
+      "name": "Druids",
+      "facet": "Celts and Iron Age life",
+      "known_at": 6
+    },
+    {
+      "name": "Hill fort",
+      "facet": "Celts and Iron Age life",
+      "known_at": 7
+    },
+    {
+      "name": "Roundhouse",
+      "facet": "Celts and Iron Age life",
+      "known_at": 5
+    },
+    {
+      "name": "Torc",
+      "facet": "Celts and Iron Age life",
+      "known_at": 10
+    },
+    {
+      "name": "Battersea Shield",
+      "facet": "Celts and Iron Age life",
+      "known_at": 12
+    },
+    {
+      "name": "Woad",
+      "facet": "Celts and Iron Age life",
+      "known_at": 8
+    },
+    {
+      "name": "Chariot",
+      "facet": "Celts and Iron Age life",
+      "known_at": 4
+    },
+    {
+      "name": "Iron Age",
+      "facet": "Celts and Iron Age life",
+      "known_at": 6
+    },
+    {
+      "name": "Lindow Man",
+      "facet": "Celts and Iron Age life",
+      "known_at": 11
+    },
+    {
+      "name": "Broch",
+      "facet": "Celts and Iron Age life",
+      "known_at": 12
+    },
+    {
+      "name": "Crannog",
+      "facet": "Celts and Iron Age life",
+      "known_at": 12
+    },
+    {
+      "name": "Snettisham Hoard",
+      "facet": "Celts and Iron Age life",
+      "known_at": 13
+    },
+    {
+      "name": "Catuvellauni",
+      "facet": "Celts and Iron Age life",
+      "known_at": 13
+    },
+    {
+      "name": "Brigantes",
+      "facet": "Celts and Iron Age life",
+      "known_at": 12
+    },
+    {
+      "name": "Cunobelinus",
+      "facet": "Celts and Iron Age life",
+      "known_at": 13
+    },
+    {
+      "name": "Beltane",
+      "facet": "Celts and Iron Age life",
+      "known_at": 11
+    },
+    {
+      "name": "Samhain",
+      "facet": "Celts and Iron Age life",
+      "known_at": 9
+    },
+    {
+      "name": "Julius Caesar",
+      "facet": "Roman invasion and revolts",
+      "known_at": 5
+    },
+    {
+      "name": "Claudius",
+      "facet": "Roman invasion and revolts",
+      "known_at": 9
+    },
+    {
+      "name": "Iceni",
+      "facet": "Roman invasion and revolts",
+      "known_at": 7
+    },
+    {
+      "name": "Caratacus",
+      "facet": "Roman invasion and revolts",
+      "known_at": 11
+    },
+    {
+      "name": "Cartimandua",
+      "facet": "Roman invasion and revolts",
+      "known_at": 12
+    },
+    {
+      "name": "Roman legion",
+      "facet": "Roman invasion and revolts",
+      "known_at": 6
+    },
+    {
+      "name": "Agricola",
+      "facet": "Roman invasion and revolts",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Watling Street",
+      "facet": "Roman invasion and revolts",
+      "known_at": 12
+    },
+    {
+      "name": "Camulodunum",
+      "facet": "Roman invasion and revolts",
+      "known_at": 10
+    },
+    {
+      "name": "Claudius's elephants",
+      "facet": "Roman invasion and revolts",
+      "known_at": 11
+    },
+    {
+      "name": "Battle of Mons Graupius",
+      "facet": "Roman invasion and revolts",
+      "known_at": 14
+    },
+    {
+      "name": "Aulus Plautius",
+      "facet": "Roman invasion and revolts",
+      "known_at": 14
+    },
+    {
+      "name": "Ninth Legion",
+      "facet": "Roman invasion and revolts",
+      "known_at": 12
+    },
+    {
+      "name": "Tacitus",
+      "facet": "Roman invasion and revolts",
+      "known_at": 13
+    },
+    {
+      "name": "Togidubnus",
+      "facet": "Roman invasion and revolts",
+      "known_at": 14
+    },
+    {
+      "name": "Testudo",
+      "facet": "Roman invasion and revolts",
+      "known_at": 9
+    },
+    {
+      "name": "Watling Street",
+      "facet": "Roman roads, walls and towns",
+      "known_at": 10
+    },
+    {
+      "name": "Fosse Way",
+      "facet": "Roman roads, walls and towns",
+      "known_at": 11
+    },
+    {
+      "name": "Vindolanda tablets",
+      "facet": "Roman roads, walls and towns",
+      "known_at": 11
+    },
+    {
+      "name": "Housesteads Fort",
+      "facet": "Roman roads, walls and towns",
+      "known_at": 12
+    },
+    {
+      "name": "Deva",
+      "facet": "Roman roads, walls and towns",
+      "known_at": 11
+    },
+    {
+      "name": "Verulamium",
+      "facet": "Roman roads, walls and towns",
+      "known_at": 11
+    },
+    {
+      "name": "Hypocaust",
+      "facet": "Roman roads, walls and towns",
+      "known_at": 8
+    },
+    {
+      "name": "Mosaic",
+      "facet": "Roman roads, walls and towns",
+      "known_at": 5
+    },
+    {
+      "name": "Roman villa",
+      "facet": "Roman roads, walls and towns",
+      "known_at": 5
+    },
+    {
+      "name": "Ermine Street",
+      "facet": "Roman roads, walls and towns",
+      "known_at": 12
+    },
+    {
+      "name": "Saxon Shore forts",
+      "facet": "Roman roads, walls and towns",
+      "known_at": 13
+    },
+    {
+      "name": "Constantine the Great",
+      "facet": "Roman roads, walls and towns",
+      "known_at": 11
+    },
+    {
+      "name": "London Mithraeum",
+      "facet": "Roman roads, walls and towns",
+      "known_at": 13
+    },
+    {
+      "name": "Alfred the Great",
+      "facet": "Anglo-Saxon kings and kingdoms",
+      "known_at": 5
+    },
+    {
+      "name": "Offa",
+      "facet": "Anglo-Saxon kings and kingdoms",
+      "known_at": 10
+    },
+    {
+      "name": "Athelstan",
+      "facet": "Anglo-Saxon kings and kingdoms",
+      "known_at": 11
+    },
+    {
+      "name": "Kingdom of Kent",
+      "facet": "Anglo-Saxon kings and kingdoms",
+      "known_at": 10
+    },
+    {
+      "name": "Heptarchy",
+      "facet": "Anglo-Saxon kings and kingdoms",
+      "known_at": 13
+    },
+    {
+      "name": "Æthelflæd",
+      "facet": "Anglo-Saxon kings and kingdoms",
+      "known_at": 12
+    },
+    {
+      "name": "Edward the Confessor",
+      "facet": "Anglo-Saxon kings and kingdoms",
+      "known_at": 10
+    },
+    {
+      "name": "Æthelred the Unready",
+      "facet": "Anglo-Saxon kings and kingdoms",
+      "known_at": 10
+    },
+    {
+      "name": "Edgar the Peaceful",
+      "facet": "Anglo-Saxon kings and kingdoms",
+      "known_at": 13
+    },
+    {
+      "name": "Penda",
+      "facet": "Anglo-Saxon kings and kingdoms",
+      "known_at": 13
+    },
+    {
+      "name": "Rædwald",
+      "facet": "Anglo-Saxon kings and kingdoms",
+      "known_at": 12
+    },
+    {
+      "name": "Witan",
+      "facet": "Anglo-Saxon kings and kingdoms",
+      "known_at": 12
+    },
+    {
+      "name": "Burh",
+      "facet": "Anglo-Saxon kings and kingdoms",
+      "known_at": 12
+    },
+    {
+      "name": "Hengist and Horsa",
+      "facet": "Anglo-Saxon kings and kingdoms",
+      "known_at": 13
+    },
+    {
+      "name": "Sutton Hoo helmet",
+      "facet": "Anglo-Saxon treasures and daily life",
+      "known_at": 8
+    },
+    {
+      "name": "Staffordshire Hoard",
+      "facet": "Anglo-Saxon treasures and daily life",
+      "known_at": 11
+    },
+    {
+      "name": "Mead hall",
+      "facet": "Anglo-Saxon treasures and daily life",
+      "known_at": 10
+    },
+    {
+      "name": "Mead",
+      "facet": "Anglo-Saxon treasures and daily life",
+      "known_at": 8
+    },
+    {
+      "name": "Wergild",
+      "facet": "Anglo-Saxon treasures and daily life",
+      "known_at": 12
+    },
+    {
+      "name": "Thegn",
+      "facet": "Anglo-Saxon treasures and daily life",
+      "known_at": 12
+    },
+    {
+      "name": "Ceorl",
+      "facet": "Anglo-Saxon treasures and daily life",
+      "known_at": 13
+    },
+    {
+      "name": "Shire",
+      "facet": "Anglo-Saxon treasures and daily life",
+      "known_at": 8
+    },
+    {
+      "name": "Anglo-Saxon runes",
+      "facet": "Anglo-Saxon treasures and daily life",
+      "known_at": 8
+    },
+    {
+      "name": "Alfred Jewel",
+      "facet": "Anglo-Saxon treasures and daily life",
+      "known_at": 12
+    },
+    {
+      "name": "Old English",
+      "facet": "Anglo-Saxon treasures and daily life",
+      "known_at": 9
+    },
+    {
+      "name": "Woden",
+      "facet": "Anglo-Saxon treasures and daily life",
+      "known_at": 9
+    },
+    {
+      "name": "West Stow Anglo-Saxon Village",
+      "facet": "Anglo-Saxon treasures and daily life",
+      "known_at": 13
+    },
+    {
+      "name": "Prittlewell princely burial",
+      "facet": "Anglo-Saxon treasures and daily life",
+      "known_at": 14
+    },
+    {
+      "name": "Moot",
+      "facet": "Anglo-Saxon treasures and daily life",
+      "known_at": 13
+    },
+    {
+      "name": "Sunken-featured building",
+      "facet": "Anglo-Saxon treasures and daily life",
+      "known_at": 13
+    },
+    {
+      "name": "Franks Casket",
+      "facet": "Anglo-Saxon treasures and daily life",
+      "known_at": 14
+    },
+    {
+      "name": "Lindisfarne raid",
+      "facet": "Vikings in Britain",
+      "known_at": 8
+    },
+    {
+      "name": "Great Heathen Army",
+      "facet": "Vikings in Britain",
+      "known_at": 11
+    },
+    {
+      "name": "Ivar the Boneless",
+      "facet": "Vikings in Britain",
+      "known_at": 11
+    },
+    {
+      "name": "Cnut",
+      "facet": "Vikings in Britain",
+      "known_at": 8
+    },
+    {
+      "name": "Danegeld",
+      "facet": "Vikings in Britain",
+      "known_at": 11
+    },
+    {
+      "name": "Longship",
+      "facet": "Vikings in Britain",
+      "known_at": 4
+    },
+    {
+      "name": "Battle of Edington",
+      "facet": "Vikings in Britain",
+      "known_at": 13
+    },
+    {
+      "name": "Eric Bloodaxe",
+      "facet": "Vikings in Britain",
+      "known_at": 12
+    },
+    {
+      "name": "Sweyn Forkbeard",
+      "facet": "Vikings in Britain",
+      "known_at": 12
+    },
+    {
+      "name": "Coppergate",
+      "facet": "Vikings in Britain",
+      "known_at": 13
+    },
+    {
+      "name": "Cuerdale Hoard",
+      "facet": "Vikings in Britain",
+      "known_at": 14
+    },
+    {
+      "name": "Battle of Brunanburh",
+      "facet": "Vikings in Britain",
+      "known_at": 13
+    },
+    {
+      "name": "Edmund the Martyr",
+      "facet": "Vikings in Britain",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Maldon",
+      "facet": "Vikings in Britain",
+      "known_at": 13
+    },
+    {
+      "name": "Ragnar Lodbrok",
+      "facet": "Vikings in Britain",
+      "known_at": 11
+    },
+    {
+      "name": "Viking place names",
+      "facet": "Vikings in Britain",
+      "known_at": 10
+    },
+    {
+      "name": "St Patrick",
+      "facet": "Early saints, monks and books",
+      "known_at": 5
+    },
+    {
+      "name": "St Columba",
+      "facet": "Early saints, monks and books",
+      "known_at": 11
+    },
+    {
+      "name": "Lindisfarne Gospels",
+      "facet": "Early saints, monks and books",
+      "known_at": 10
+    },
+    {
+      "name": "Book of Kells",
+      "facet": "Early saints, monks and books",
+      "known_at": 10
+    },
+    {
+      "name": "Bede",
+      "facet": "Early saints, monks and books",
+      "known_at": 11
+    },
+    {
+      "name": "St Cuthbert",
+      "facet": "Early saints, monks and books",
+      "known_at": 11
+    },
+    {
+      "name": "St Augustine of Canterbury",
+      "facet": "Early saints, monks and books",
+      "known_at": 11
+    },
+    {
+      "name": "Pope Gregory the Great",
+      "facet": "Early saints, monks and books",
+      "known_at": 12
+    },
+    {
+      "name": "St David",
+      "facet": "Early saints, monks and books",
+      "known_at": 6
+    },
+    {
+      "name": "St Alban",
+      "facet": "Early saints, monks and books",
+      "known_at": 11
+    },
+    {
+      "name": "St Hilda of Whitby",
+      "facet": "Early saints, monks and books",
+      "known_at": 13
+    },
+    {
+      "name": "Synod of Whitby",
+      "facet": "Early saints, monks and books",
+      "known_at": 13
+    },
+    {
+      "name": "Cædmon",
+      "facet": "Early saints, monks and books",
+      "known_at": 14
+    },
+    {
+      "name": "Illuminated manuscript",
+      "facet": "Early saints, monks and books",
+      "known_at": 9
+    },
+    {
+      "name": "Beowulf",
+      "facet": "Early saints, monks and books",
+      "known_at": 10
+    },
+    {
+      "name": "Anglo-Saxon Chronicle",
+      "facet": "Early saints, monks and books",
+      "known_at": 11
+    },
+    {
+      "name": "Jarrow",
+      "facet": "Early saints, monks and books",
+      "known_at": 12
+    },
+    {
+      "name": "St Aidan",
+      "facet": "Early saints, monks and books",
+      "known_at": 13
+    },
+    {
+      "name": "Gildas",
+      "facet": "Early saints, monks and books",
+      "known_at": 14
+    },
+    {
+      "name": "Picts",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 8
+    },
+    {
+      "name": "Pictish stones",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 12
+    },
+    {
+      "name": "Kenneth MacAlpin",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 12
+    },
+    {
+      "name": "Dál Riata",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 13
+    },
+    {
+      "name": "Kingdom of Alba",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 12
+    },
+    {
+      "name": "Stone of Scone",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 10
+    },
+    {
+      "name": "Dunadd",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 14
+    },
+    {
+      "name": "Macbeth",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 8
+    },
+    {
+      "name": "Duncan I",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 11
+    },
+    {
+      "name": "Y Gododdin",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 14
+    },
+    {
+      "name": "Hywel Dda",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 13
+    },
+    {
+      "name": "Rhodri the Great",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 13
+    },
+    {
+      "name": "Gruffudd ap Llywelyn",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 14
+    },
+    {
+      "name": "Kingdom of Strathclyde",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 13
+    },
+    {
+      "name": "Dumbarton Rock",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Dun Nechtain",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 14
+    },
+    {
+      "name": "Taliesin",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 13
+    },
+    {
+      "name": "Kingdom of Gwynedd",
+      "facet": "Picts, Scots and early Wales",
+      "known_at": 12
+    },
+    {
+      "name": "Excalibur",
+      "facet": "Legends of early Britain",
+      "known_at": 4
+    },
+    {
+      "name": "Camelot",
+      "facet": "Legends of early Britain",
+      "known_at": 6
+    },
+    {
+      "name": "Lady of the Lake",
+      "facet": "Legends of early Britain",
+      "known_at": 7
+    },
+    {
+      "name": "Round Table",
+      "facet": "Legends of early Britain",
+      "known_at": 5
+    },
+    {
+      "name": "Tintagel",
+      "facet": "Legends of early Britain",
+      "known_at": 11
+    },
+    {
+      "name": "Avalon",
+      "facet": "Legends of early Britain",
+      "known_at": 10
+    },
+    {
+      "name": "Brutus of Troy",
+      "facet": "Legends of early Britain",
+      "known_at": 14
+    },
+    {
+      "name": "King Lear",
+      "facet": "Legends of early Britain",
+      "known_at": 10
+    },
+    {
+      "name": "Gog and Magog",
+      "facet": "Legends of early Britain",
+      "known_at": 13
+    },
+    {
+      "name": "Vortigern",
+      "facet": "Legends of early Britain",
+      "known_at": 13
+    },
+    {
+      "name": "Guinevere",
+      "facet": "Legends of early Britain",
+      "known_at": 8
+    },
+    {
+      "name": "Sir Lancelot",
+      "facet": "Legends of early Britain",
+      "known_at": 8
+    },
+    {
+      "name": "Holy Grail",
+      "facet": "Legends of early Britain",
+      "known_at": 8
+    },
+    {
+      "name": "Mabinogion",
+      "facet": "Legends of early Britain",
+      "known_at": 13
+    },
+    {
+      "name": "Geoffrey of Monmouth",
+      "facet": "Legends of early Britain",
+      "known_at": 13
+    },
+    {
+      "name": "Lady Godiva",
+      "facet": "Legends of early Britain",
+      "known_at": 10
+    },
+    {
+      "name": "Old King Cole",
+      "facet": "Legends of early Britain",
+      "known_at": 5
+    },
+    {
+      "name": "Battle of Hastings",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 5
+    },
+    {
+      "name": "William the Conqueror",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 5
+    },
+    {
+      "name": "Harold Godwinson",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 7
+    },
+    {
+      "name": "Bayeux Tapestry",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 7
+    },
+    {
+      "name": "Harald Hardrada",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 10
+    },
+    {
+      "name": "Battle of Stamford Bridge",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 10
+    },
+    {
+      "name": "Battle of Fulford",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 13
+    },
+    {
+      "name": "Halley's Comet",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 9
+    },
+    {
+      "name": "Edgar Ætheling",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 13
+    },
+    {
+      "name": "White Tower",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 9
+    },
+    {
+      "name": "Motte-and-bailey castle",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 8
+    },
+    {
+      "name": "Harrying of the North",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 12
+    },
+    {
+      "name": "Hereward the Wake",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 13
+    },
+    {
+      "name": "Feudal system",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 9
+    },
+    {
+      "name": "Battle Abbey",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 11
+    },
+    {
+      "name": "Pevensey",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 12
+    },
+    {
+      "name": "Odo of Bayeux",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 13
+    },
+    {
+      "name": "Normandy",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 6
+    },
+    {
+      "name": "Senlac Hill",
+      "facet": "1066 and the Norman Conquest",
+      "known_at": 13
+    }
+  ]
+}

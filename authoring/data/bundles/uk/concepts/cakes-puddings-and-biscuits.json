@@ -1,0 +1,772 @@
+{
+  "subcategory": "cakes-puddings-and-biscuits",
+  "facets": [
+    "Classic British cakes",
+    "Traditional steamed and baked puddings",
+    "Biscuits and biscuit brands",
+    "Regional bakes and their towns",
+    "Christmas and festive bakes",
+    "Scones and afternoon tea",
+    "Cold desserts, trifles and fools",
+    "Pies, tarts and crumbles",
+    "Buns, teacakes and griddle bakes",
+    "Sweets in shops, brands and adverts",
+    "Baking on TV and in books",
+    "Dessert names, sayings and history"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Fairy cakes",
+      "facet": "Classic British cakes",
+      "known_at": 3
+    },
+    {
+      "name": "Butterfly cakes",
+      "facet": "Classic British cakes",
+      "known_at": 5
+    },
+    {
+      "name": "Rock cakes",
+      "facet": "Classic British cakes",
+      "known_at": 6
+    },
+    {
+      "name": "Fruit cake",
+      "facet": "Classic British cakes",
+      "known_at": 4
+    },
+    {
+      "name": "Angel cake",
+      "facet": "Classic British cakes",
+      "known_at": 8
+    },
+    {
+      "name": "Marble cake",
+      "facet": "Classic British cakes",
+      "known_at": 5
+    },
+    {
+      "name": "Ginger cake",
+      "facet": "Classic British cakes",
+      "known_at": 6
+    },
+    {
+      "name": "Tottenham cake",
+      "facet": "Classic British cakes",
+      "known_at": 13
+    },
+    {
+      "name": "Rocky road",
+      "facet": "Classic British cakes",
+      "known_at": 5
+    },
+    {
+      "name": "Chocolate fridge cake",
+      "facet": "Classic British cakes",
+      "known_at": 7
+    },
+    {
+      "name": "Treacle sponge",
+      "facet": "Traditional steamed and baked puddings",
+      "known_at": 7
+    },
+    {
+      "name": "Semolina",
+      "facet": "Traditional steamed and baked puddings",
+      "known_at": 7
+    },
+    {
+      "name": "Tapioca",
+      "facet": "Traditional steamed and baked puddings",
+      "known_at": 8
+    },
+    {
+      "name": "Bread pudding",
+      "facet": "Traditional steamed and baked puddings",
+      "known_at": 10
+    },
+    {
+      "name": "Suet",
+      "facet": "Traditional steamed and baked puddings",
+      "known_at": 9
+    },
+    {
+      "name": "Cabinet pudding",
+      "facet": "Traditional steamed and baked puddings",
+      "known_at": 14
+    },
+    {
+      "name": "Lemon sponge pudding",
+      "facet": "Traditional steamed and baked puddings",
+      "known_at": 10
+    },
+    {
+      "name": "Chocolate concrete",
+      "facet": "Traditional steamed and baked puddings",
+      "known_at": 9
+    },
+    {
+      "name": "Pudding basin",
+      "facet": "Traditional steamed and baked puddings",
+      "known_at": 8
+    },
+    {
+      "name": "Chocolate sponge",
+      "facet": "Traditional steamed and baked puddings",
+      "known_at": 4
+    },
+    {
+      "name": "Rich Tea",
+      "facet": "Biscuits and biscuit brands",
+      "known_at": 5
+    },
+    {
+      "name": "Bourbon biscuit",
+      "facet": "Biscuits and biscuit brands",
+      "known_at": 5
+    },
+    {
+      "name": "Jammie Dodger",
+      "facet": "Biscuits and biscuit brands",
+      "known_at": 4
+    },
+    {
+      "name": "Hobnob",
+      "facet": "Biscuits and biscuit brands",
+      "known_at": 6
+    },
+    {
+      "name": "Garibaldi biscuit",
+      "facet": "Biscuits and biscuit brands",
+      "known_at": 9
+    },
+    {
+      "name": "Ginger nut",
+      "facet": "Biscuits and biscuit brands",
+      "known_at": 5
+    },
+    {
+      "name": "Party Rings",
+      "facet": "Biscuits and biscuit brands",
+      "known_at": 5
+    },
+    {
+      "name": "Penguin biscuit",
+      "facet": "Biscuits and biscuit brands",
+      "known_at": 6
+    },
+    {
+      "name": "McVitie's",
+      "facet": "Biscuits and biscuit brands",
+      "known_at": 6
+    },
+    {
+      "name": "Fig roll",
+      "facet": "Biscuits and biscuit brands",
+      "known_at": 7
+    },
+    {
+      "name": "Malted Milk",
+      "facet": "Biscuits and biscuit brands",
+      "known_at": 8
+    },
+    {
+      "name": "Pink wafer",
+      "facet": "Biscuits and biscuit brands",
+      "known_at": 7
+    },
+    {
+      "name": "Viennese whirl",
+      "facet": "Biscuits and biscuit brands",
+      "known_at": 8
+    },
+    {
+      "name": "Nice biscuit",
+      "facet": "Biscuits and biscuit brands",
+      "known_at": 9
+    },
+    {
+      "name": "Wagon Wheel",
+      "facet": "Biscuits and biscuit brands",
+      "known_at": 6
+    },
+    {
+      "name": "Club biscuit",
+      "facet": "Biscuits and biscuit brands",
+      "known_at": 8
+    },
+    {
+      "name": "Abernethy biscuit",
+      "facet": "Biscuits and biscuit brands",
+      "known_at": 13
+    },
+    {
+      "name": "Ecclefechan tart",
+      "facet": "Regional bakes and their towns",
+      "known_at": 13
+    },
+    {
+      "name": "Shrewsbury biscuit",
+      "facet": "Regional bakes and their towns",
+      "known_at": 12
+    },
+    {
+      "name": "Twelfth cake",
+      "facet": "Christmas and festive bakes",
+      "known_at": 13
+    },
+    {
+      "name": "Silver sixpence",
+      "facet": "Christmas and festive bakes",
+      "known_at": 9
+    },
+    {
+      "name": "Marzipan",
+      "facet": "Christmas and festive bakes",
+      "known_at": 5
+    },
+    {
+      "name": "Royal icing",
+      "facet": "Christmas and festive bakes",
+      "known_at": 8
+    },
+    {
+      "name": "Soul cake",
+      "facet": "Christmas and festive bakes",
+      "known_at": 13
+    },
+    {
+      "name": "Figgy pudding",
+      "facet": "Christmas and festive bakes",
+      "known_at": 9
+    },
+    {
+      "name": "Mincemeat",
+      "facet": "Christmas and festive bakes",
+      "known_at": 7
+    },
+    {
+      "name": "Sugar mice",
+      "facet": "Christmas and festive bakes",
+      "known_at": 8
+    },
+    {
+      "name": "Selection box",
+      "facet": "Christmas and festive bakes",
+      "known_at": 6
+    },
+    {
+      "name": "Anna Maria Russell, Duchess of Bedford",
+      "facet": "Scones and afternoon tea",
+      "known_at": 13
+    },
+    {
+      "name": "Cake stand",
+      "facet": "Scones and afternoon tea",
+      "known_at": 7
+    },
+    {
+      "name": "Earl Grey",
+      "facet": "Scones and afternoon tea",
+      "known_at": 7
+    },
+    {
+      "name": "Bettys Tea Rooms",
+      "facet": "Scones and afternoon tea",
+      "known_at": 11
+    },
+    {
+      "name": "The Ritz London",
+      "facet": "Scones and afternoon tea",
+      "known_at": 9
+    },
+    {
+      "name": "High tea",
+      "facet": "Scones and afternoon tea",
+      "known_at": 9
+    },
+    {
+      "name": "Cheese scone",
+      "facet": "Scones and afternoon tea",
+      "known_at": 5
+    },
+    {
+      "name": "Elevenses",
+      "facet": "Scones and afternoon tea",
+      "known_at": 9
+    },
+    {
+      "name": "Builder's tea",
+      "facet": "Scones and afternoon tea",
+      "known_at": 8
+    },
+    {
+      "name": "Cornish split",
+      "facet": "Scones and afternoon tea",
+      "known_at": 13
+    },
+    {
+      "name": "Lyons Corner House",
+      "facet": "Scones and afternoon tea",
+      "known_at": 14
+    },
+    {
+      "name": "Strawberry jam",
+      "facet": "Scones and afternoon tea",
+      "known_at": 2
+    },
+    {
+      "name": "Blancmange",
+      "facet": "Cold desserts, trifles and fools",
+      "known_at": 9
+    },
+    {
+      "name": "Raspberry ripple",
+      "facet": "Cold desserts, trifles and fools",
+      "known_at": 6
+    },
+    {
+      "name": "Viennetta",
+      "facet": "Cold desserts, trifles and fools",
+      "known_at": 6
+    },
+    {
+      "name": "Mr Whippy",
+      "facet": "Cold desserts, trifles and fools",
+      "known_at": 6
+    },
+    {
+      "name": "Zoom lolly",
+      "facet": "Cold desserts, trifles and fools",
+      "known_at": 9
+    },
+    {
+      "name": "Jam tart",
+      "facet": "Pies, tarts and crumbles",
+      "known_at": 3
+    },
+    {
+      "name": "Custard tart",
+      "facet": "Pies, tarts and crumbles",
+      "known_at": 6
+    },
+    {
+      "name": "Lemon meringue pie",
+      "facet": "Pies, tarts and crumbles",
+      "known_at": 5
+    },
+    {
+      "name": "Bramley apple",
+      "facet": "Pies, tarts and crumbles",
+      "known_at": 10
+    },
+    {
+      "name": "The Hungry Monk",
+      "facet": "Pies, tarts and crumbles",
+      "known_at": 14
+    },
+    {
+      "name": "The Queen of Hearts",
+      "facet": "Pies, tarts and crumbles",
+      "known_at": 5
+    },
+    {
+      "name": "Blind baking",
+      "facet": "Pies, tarts and crumbles",
+      "known_at": 11
+    },
+    {
+      "name": "Belgian bun",
+      "facet": "Buns, teacakes and griddle bakes",
+      "known_at": 7
+    },
+    {
+      "name": "Currant bun",
+      "facet": "Buns, teacakes and griddle bakes",
+      "known_at": 5
+    },
+    {
+      "name": "Drop scone",
+      "facet": "Buns, teacakes and griddle bakes",
+      "known_at": 8
+    },
+    {
+      "name": "English muffin",
+      "facet": "Buns, teacakes and griddle bakes",
+      "known_at": 6
+    },
+    {
+      "name": "Potato scone",
+      "facet": "Buns, teacakes and griddle bakes",
+      "known_at": 10
+    },
+    {
+      "name": "Bakestone",
+      "facet": "Buns, teacakes and griddle bakes",
+      "known_at": 11
+    },
+    {
+      "name": "The Muffin Man",
+      "facet": "Buns, teacakes and griddle bakes",
+      "known_at": 6
+    },
+    {
+      "name": "Iced finger",
+      "facet": "Buns, teacakes and griddle bakes",
+      "known_at": 8
+    },
+    {
+      "name": "Singing hinny",
+      "facet": "Buns, teacakes and griddle bakes",
+      "known_at": 14
+    },
+    {
+      "name": "Toasting fork",
+      "facet": "Buns, teacakes and griddle bakes",
+      "known_at": 9
+    },
+    {
+      "name": "Cream bun",
+      "facet": "Buns, teacakes and griddle bakes",
+      "known_at": 5
+    },
+    {
+      "name": "Cadbury Dairy Milk",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 3
+    },
+    {
+      "name": "Creme Egg",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 4
+    },
+    {
+      "name": "Mars bar",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 3
+    },
+    {
+      "name": "Maltesers",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 3
+    },
+    {
+      "name": "Quality Street",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 6
+    },
+    {
+      "name": "Terry's Chocolate Orange",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 5
+    },
+    {
+      "name": "Jelly Babies",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 4
+    },
+    {
+      "name": "Dolly Mixtures",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 8
+    },
+    {
+      "name": "Liquorice Allsorts",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 6
+    },
+    {
+      "name": "Rhubarb and custards",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 8
+    },
+    {
+      "name": "Sherbet lemons",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 7
+    },
+    {
+      "name": "Flying saucers",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 7
+    },
+    {
+      "name": "Fruit Pastilles",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 6
+    },
+    {
+      "name": "Wine gums",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 6
+    },
+    {
+      "name": "Curly Wurly",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 6
+    },
+    {
+      "name": "Wispa",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 7
+    },
+    {
+      "name": "Polo mints",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 5
+    },
+    {
+      "name": "Mr Kipling",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 7
+    },
+    {
+      "name": "Milk Tray",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 8
+    },
+    {
+      "name": "Love Hearts",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 6
+    },
+    {
+      "name": "Black Jacks",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 9
+    },
+    {
+      "name": "Fry's Chocolate Cream",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 12
+    },
+    {
+      "name": "Pick and mix",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 5
+    },
+    {
+      "name": "Cadbury gorilla advert",
+      "facet": "Sweets in shops, brands and adverts",
+      "known_at": 10
+    },
+    {
+      "name": "The Great British Bake Off",
+      "facet": "Baking on TV and in books",
+      "known_at": 3
+    },
+    {
+      "name": "Mary Berry",
+      "facet": "Baking on TV and in books",
+      "known_at": 5
+    },
+    {
+      "name": "Paul Hollywood",
+      "facet": "Baking on TV and in books",
+      "known_at": 6
+    },
+    {
+      "name": "Hollywood handshake",
+      "facet": "Baking on TV and in books",
+      "known_at": 8
+    },
+    {
+      "name": "Prue Leith",
+      "facet": "Baking on TV and in books",
+      "known_at": 9
+    },
+    {
+      "name": "Noel Fielding",
+      "facet": "Baking on TV and in books",
+      "known_at": 8
+    },
+    {
+      "name": "Mel and Sue",
+      "facet": "Baking on TV and in books",
+      "known_at": 9
+    },
+    {
+      "name": "Showstopper challenge",
+      "facet": "Baking on TV and in books",
+      "known_at": 8
+    },
+    {
+      "name": "Technical challenge",
+      "facet": "Baking on TV and in books",
+      "known_at": 8
+    },
+    {
+      "name": "Signature challenge",
+      "facet": "Baking on TV and in books",
+      "known_at": 8
+    },
+    {
+      "name": "Star Baker",
+      "facet": "Baking on TV and in books",
+      "known_at": 6
+    },
+    {
+      "name": "Soggy bottom",
+      "facet": "Baking on TV and in books",
+      "known_at": 7
+    },
+    {
+      "name": "Delia Smith",
+      "facet": "Baking on TV and in books",
+      "known_at": 10
+    },
+    {
+      "name": "Fanny Cradock",
+      "facet": "Baking on TV and in books",
+      "known_at": 13
+    },
+    {
+      "name": "Nigella Lawson",
+      "facet": "Baking on TV and in books",
+      "known_at": 8
+    },
+    {
+      "name": "Nadiya Hussain",
+      "facet": "Baking on TV and in books",
+      "known_at": 9
+    },
+    {
+      "name": "Bingate",
+      "facet": "Baking on TV and in books",
+      "known_at": 12
+    },
+    {
+      "name": "Bruce Bogtrotter",
+      "facet": "Baking on TV and in books",
+      "known_at": 6
+    },
+    {
+      "name": "The Tiger Who Came to Tea",
+      "facet": "Baking on TV and in books",
+      "known_at": 5
+    },
+    {
+      "name": "Matt Lucas",
+      "facet": "Baking on TV and in books",
+      "known_at": 8
+    },
+    {
+      "name": "Afters",
+      "facet": "Dessert names, sayings and history",
+      "known_at": 8
+    },
+    {
+      "name": "The proof of the pudding is in the eating",
+      "facet": "Dessert names, sayings and history",
+      "known_at": 11
+    },
+    {
+      "name": "Takes the biscuit",
+      "facet": "Dessert names, sayings and history",
+      "known_at": 9
+    },
+    {
+      "name": "Pudding club",
+      "facet": "Dessert names, sayings and history",
+      "known_at": 12
+    },
+    {
+      "name": "Jaffa Cakes VAT case",
+      "facet": "Dessert names, sayings and history",
+      "known_at": 11
+    },
+    {
+      "name": "Lyle's Golden Syrup",
+      "facet": "Dessert names, sayings and history",
+      "known_at": 7
+    },
+    {
+      "name": "Tate & Lyle",
+      "facet": "Dessert names, sayings and history",
+      "known_at": 11
+    },
+    {
+      "name": "Rationing",
+      "facet": "Dessert names, sayings and history",
+      "known_at": 10
+    },
+    {
+      "name": "Tuck shop",
+      "facet": "Dessert names, sayings and history",
+      "known_at": 7
+    },
+    {
+      "name": "Jam tomorrow",
+      "facet": "Dessert names, sayings and history",
+      "known_at": 13
+    },
+    {
+      "name": "Cake hole",
+      "facet": "Dessert names, sayings and history",
+      "known_at": 9
+    },
+    {
+      "name": "Hundreds and thousands",
+      "facet": "Dessert names, sayings and history",
+      "known_at": 5
+    },
+    {
+      "name": "Mock cream",
+      "facet": "Dessert names, sayings and history",
+      "known_at": 13
+    },
+    {
+      "name": "Pudding-basin haircut",
+      "facet": "Dessert names, sayings and history",
+      "known_at": 10
+    },
+    {
+      "name": "Dunking",
+      "facet": "Dessert names, sayings and history",
+      "known_at": 5
+    }
+  ]
+}

@@ -1,0 +1,767 @@
+{
+  "subcategory": "christmas-in-britain",
+  "facets": [
+    "Christmas dinner and puddings",
+    "Crackers, crowns and table customs",
+    "Father Christmas and stockings",
+    "Boxing Day and the twelve days",
+    "The monarch's Christmas broadcast",
+    "Christmas telly and specials",
+    "Christmas number one singles",
+    "Pantomime season",
+    "Carols, church and nativity plays",
+    "Victorian and older Christmas history",
+    "Lights, shops and Christmas adverts",
+    "Christmas sport and regional customs"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Stuffing",
+      "facet": "Christmas dinner and puddings",
+      "known_at": 3
+    },
+    {
+      "name": "Flaming the Christmas pudding",
+      "facet": "Christmas dinner and puddings",
+      "known_at": 6
+    },
+    {
+      "name": "Goose",
+      "facet": "Christmas dinner and puddings",
+      "known_at": 7
+    },
+    {
+      "name": "Parsnips",
+      "facet": "Christmas dinner and puddings",
+      "known_at": 4
+    },
+    {
+      "name": "Cracker joke",
+      "facet": "Crackers, crowns and table customs",
+      "known_at": 2
+    },
+    {
+      "name": "Cracker snap",
+      "facet": "Crackers, crowns and table customs",
+      "known_at": 5
+    },
+    {
+      "name": "Cracker gift",
+      "facet": "Crackers, crowns and table customs",
+      "known_at": 2
+    },
+    {
+      "name": "Bon-bon",
+      "facet": "Crackers, crowns and table customs",
+      "known_at": 12
+    },
+    {
+      "name": "Cracker motto",
+      "facet": "Crackers, crowns and table customs",
+      "known_at": 12
+    },
+    {
+      "name": "Wishbone",
+      "facet": "Crackers, crowns and table customs",
+      "known_at": 6
+    },
+    {
+      "name": "Charades",
+      "facet": "Crackers, crowns and table customs",
+      "known_at": 6
+    },
+    {
+      "name": "Christmas Jumper Day",
+      "facet": "Crackers, crowns and table customs",
+      "known_at": 4
+    },
+    {
+      "name": "Advent calendar",
+      "facet": "Crackers, crowns and table customs",
+      "known_at": 2
+    },
+    {
+      "name": "Christmas Day walk",
+      "facet": "Crackers, crowns and table customs",
+      "known_at": 5
+    },
+    {
+      "name": "Satsuma in the stocking",
+      "facet": "Father Christmas and stockings",
+      "known_at": 5
+    },
+    {
+      "name": "Mince pie and sherry for Father Christmas",
+      "facet": "Father Christmas and stockings",
+      "known_at": 4
+    },
+    {
+      "name": "Carrot for the reindeer",
+      "facet": "Father Christmas and stockings",
+      "known_at": 2
+    },
+    {
+      "name": "Rudolph",
+      "facet": "Father Christmas and stockings",
+      "known_at": 1
+    },
+    {
+      "name": "Chimney",
+      "facet": "Father Christmas and stockings",
+      "known_at": 1
+    },
+    {
+      "name": "Letter to Father Christmas",
+      "facet": "Father Christmas and stockings",
+      "known_at": 2
+    },
+    {
+      "name": "Santa's grotto",
+      "facet": "Father Christmas and stockings",
+      "known_at": 3
+    },
+    {
+      "name": "Lapland UK",
+      "facet": "Father Christmas and stockings",
+      "known_at": 7
+    },
+    {
+      "name": "Elves",
+      "facet": "Father Christmas and stockings",
+      "known_at": 1
+    },
+    {
+      "name": "Sleigh",
+      "facet": "Father Christmas and stockings",
+      "known_at": 1
+    },
+    {
+      "name": "North Pole",
+      "facet": "Father Christmas and stockings",
+      "known_at": 2
+    },
+    {
+      "name": "Reindeerland XM4 5HQ",
+      "facet": "Father Christmas and stockings",
+      "known_at": 11
+    },
+    {
+      "name": "Green-robed Father Christmas",
+      "facet": "Father Christmas and stockings",
+      "known_at": 11
+    },
+    {
+      "name": "St Stephen's Day",
+      "facet": "Boxing Day and the twelve days",
+      "known_at": 10
+    },
+    {
+      "name": "Christmas box",
+      "facet": "Boxing Day and the twelve days",
+      "known_at": 9
+    },
+    {
+      "name": "Boxing Day hunt",
+      "facet": "Boxing Day and the twelve days",
+      "known_at": 9
+    },
+    {
+      "name": "Turkey sandwich",
+      "facet": "Boxing Day and the twelve days",
+      "known_at": 3
+    },
+    {
+      "name": "Epiphany",
+      "facet": "Boxing Day and the twelve days",
+      "known_at": 9
+    },
+    {
+      "name": "The Twelve Days of Christmas",
+      "facet": "Boxing Day and the twelve days",
+      "known_at": 3
+    },
+    {
+      "name": "Partridge in a pear tree",
+      "facet": "Boxing Day and the twelve days",
+      "known_at": 4
+    },
+    {
+      "name": "Five gold rings",
+      "facet": "Boxing Day and the twelve days",
+      "known_at": 5
+    },
+    {
+      "name": "Taking down the decorations",
+      "facet": "Boxing Day and the twelve days",
+      "known_at": 6
+    },
+    {
+      "name": "Queen's Christmas Message",
+      "facet": "The monarch's Christmas broadcast",
+      "known_at": 4
+    },
+    {
+      "name": "1932 royal Christmas broadcast",
+      "facet": "The monarch's Christmas broadcast",
+      "known_at": 12
+    },
+    {
+      "name": "Rudyard Kipling",
+      "facet": "The monarch's Christmas broadcast",
+      "known_at": 10
+    },
+    {
+      "name": "Sandringham",
+      "facet": "The monarch's Christmas broadcast",
+      "known_at": 9
+    },
+    {
+      "name": "Elizabeth II",
+      "facet": "The monarch's Christmas broadcast",
+      "known_at": 2
+    },
+    {
+      "name": "1957 televised Christmas broadcast",
+      "facet": "The monarch's Christmas broadcast",
+      "known_at": 12
+    },
+    {
+      "name": "Three o'clock",
+      "facet": "The monarch's Christmas broadcast",
+      "known_at": 6
+    },
+    {
+      "name": "The Gate of the Year",
+      "facet": "The monarch's Christmas broadcast",
+      "known_at": 14
+    },
+    {
+      "name": "Commonwealth",
+      "facet": "The monarch's Christmas broadcast",
+      "known_at": 8
+    },
+    {
+      "name": "Empire Service",
+      "facet": "The monarch's Christmas broadcast",
+      "known_at": 14
+    },
+    {
+      "name": "St Mary Magdalene Church, Sandringham",
+      "facet": "The monarch's Christmas broadcast",
+      "known_at": 12
+    },
+    {
+      "name": "Raymond Briggs",
+      "facet": "Christmas telly and specials",
+      "known_at": 8
+    },
+    {
+      "name": "The Snowman and the Snowdog",
+      "facet": "Christmas telly and specials",
+      "known_at": 3
+    },
+    {
+      "name": "Wallace and Gromit",
+      "facet": "Christmas telly and specials",
+      "known_at": 2
+    },
+    {
+      "name": "Stick Man",
+      "facet": "Christmas telly and specials",
+      "known_at": 2
+    },
+    {
+      "name": "EastEnders Christmas episode",
+      "facet": "Christmas telly and specials",
+      "known_at": 7
+    },
+    {
+      "name": "Strictly Come Dancing Christmas special",
+      "facet": "Christmas telly and specials",
+      "known_at": 5
+    },
+    {
+      "name": "The Vicar of Dibley",
+      "facet": "Christmas telly and specials",
+      "known_at": 10
+    },
+    {
+      "name": "Blackadder's Christmas Carol",
+      "facet": "Christmas telly and specials",
+      "known_at": 12
+    },
+    {
+      "name": "Radio Times Christmas double issue",
+      "facet": "Christmas telly and specials",
+      "known_at": 8
+    },
+    {
+      "name": "Cliff Richard",
+      "facet": "Christmas number one singles",
+      "known_at": 8
+    },
+    {
+      "name": "Slade",
+      "facet": "Christmas number one singles",
+      "known_at": 9
+    },
+    {
+      "name": "Bohemian Rhapsody",
+      "facet": "Christmas number one singles",
+      "known_at": 6
+    },
+    {
+      "name": "Killing in the Name",
+      "facet": "Christmas number one singles",
+      "known_at": 11
+    },
+    {
+      "name": "Mr Blobby",
+      "facet": "Christmas number one singles",
+      "known_at": 11
+    },
+    {
+      "name": "Can We Fix It?",
+      "facet": "Christmas number one singles",
+      "known_at": 6
+    },
+    {
+      "name": "Merry Christmas Everyone",
+      "facet": "Christmas number one singles",
+      "known_at": 8
+    },
+    {
+      "name": "X Factor winner's single",
+      "facet": "Christmas number one singles",
+      "known_at": 8
+    },
+    {
+      "name": "Mad World",
+      "facet": "Christmas number one singles",
+      "known_at": 12
+    },
+    {
+      "name": "Lonely This Christmas",
+      "facet": "Christmas number one singles",
+      "known_at": 12
+    },
+    {
+      "name": "He's behind you!",
+      "facet": "Pantomime season",
+      "known_at": 2
+    },
+    {
+      "name": "Oh no it isn't!",
+      "facet": "Pantomime season",
+      "known_at": 3
+    },
+    {
+      "name": "Principal boy",
+      "facet": "Pantomime season",
+      "known_at": 10
+    },
+    {
+      "name": "Cinderella",
+      "facet": "Pantomime season",
+      "known_at": 1
+    },
+    {
+      "name": "Buttons",
+      "facet": "Pantomime season",
+      "known_at": 7
+    },
+    {
+      "name": "Ugly Sisters",
+      "facet": "Pantomime season",
+      "known_at": 3
+    },
+    {
+      "name": "Aladdin",
+      "facet": "Pantomime season",
+      "known_at": 2
+    },
+    {
+      "name": "Widow Twankey",
+      "facet": "Pantomime season",
+      "known_at": 9
+    },
+    {
+      "name": "Jack and the Beanstalk",
+      "facet": "Pantomime season",
+      "known_at": 1
+    },
+    {
+      "name": "Puss in Boots",
+      "facet": "Pantomime season",
+      "known_at": 3
+    },
+    {
+      "name": "Mother Goose",
+      "facet": "Pantomime season",
+      "known_at": 6
+    },
+    {
+      "name": "Pantomime horse",
+      "facet": "Pantomime season",
+      "known_at": 4
+    },
+    {
+      "name": "Fairy Godmother",
+      "facet": "Pantomime season",
+      "known_at": 2
+    },
+    {
+      "name": "Slosh scene",
+      "facet": "Pantomime season",
+      "known_at": 12
+    },
+    {
+      "name": "Harlequin",
+      "facet": "Pantomime season",
+      "known_at": 12
+    },
+    {
+      "name": "Joseph Grimaldi",
+      "facet": "Pantomime season",
+      "known_at": 14
+    },
+    {
+      "name": "Commedia dell'arte",
+      "facet": "Pantomime season",
+      "known_at": 13
+    },
+    {
+      "name": "London Palladium",
+      "facet": "Pantomime season",
+      "known_at": 11
+    },
+    {
+      "name": "Nine Lessons and Carols",
+      "facet": "Carols, church and nativity plays",
+      "known_at": 10
+    },
+    {
+      "name": "King's College Chapel",
+      "facet": "Carols, church and nativity plays",
+      "known_at": 11
+    },
+    {
+      "name": "Once in Royal David's City",
+      "facet": "Carols, church and nativity plays",
+      "known_at": 8
+    },
+    {
+      "name": "Christingle",
+      "facet": "Carols, church and nativity plays",
+      "known_at": 7
+    },
+    {
+      "name": "Midnight Mass",
+      "facet": "Carols, church and nativity plays",
+      "known_at": 6
+    },
+    {
+      "name": "Tea towel headdress",
+      "facet": "Carols, church and nativity plays",
+      "known_at": 4
+    },
+    {
+      "name": "Hark! The Herald Angels Sing",
+      "facet": "Carols, church and nativity plays",
+      "known_at": 5
+    },
+    {
+      "name": "In the Bleak Midwinter",
+      "facet": "Carols, church and nativity plays",
+      "known_at": 9
+    },
+    {
+      "name": "Christina Rossetti",
+      "facet": "Carols, church and nativity plays",
+      "known_at": 13
+    },
+    {
+      "name": "Gustav Holst",
+      "facet": "Carols, church and nativity plays",
+      "known_at": 13
+    },
+    {
+      "name": "Ding Dong Merrily on High",
+      "facet": "Carols, church and nativity plays",
+      "known_at": 7
+    },
+    {
+      "name": "We Wish You a Merry Christmas",
+      "facet": "Carols, church and nativity plays",
+      "known_at": 2
+    },
+    {
+      "name": "Away in a Manger",
+      "facet": "Carols, church and nativity plays",
+      "known_at": 3
+    },
+    {
+      "name": "Three Wise Men",
+      "facet": "Carols, church and nativity plays",
+      "known_at": 2
+    },
+    {
+      "name": "Angel Gabriel",
+      "facet": "Carols, church and nativity plays",
+      "known_at": 4
+    },
+    {
+      "name": "Advent",
+      "facet": "Carols, church and nativity plays",
+      "known_at": 5
+    },
+    {
+      "name": "Jacob Marley",
+      "facet": "Victorian and older Christmas history",
+      "known_at": 9
+    },
+    {
+      "name": "Ghost of Christmas Yet to Come",
+      "facet": "Victorian and older Christmas history",
+      "known_at": 7
+    },
+    {
+      "name": "Humbug",
+      "facet": "Victorian and older Christmas history",
+      "known_at": 6
+    },
+    {
+      "name": "Queen Charlotte",
+      "facet": "Victorian and older Christmas history",
+      "known_at": 13
+    },
+    {
+      "name": "Henry Cole",
+      "facet": "Victorian and older Christmas history",
+      "known_at": 13
+    },
+    {
+      "name": "First Christmas card",
+      "facet": "Victorian and older Christmas history",
+      "known_at": 10
+    },
+    {
+      "name": "Penny Post",
+      "facet": "Victorian and older Christmas history",
+      "known_at": 11
+    },
+    {
+      "name": "Puritan ban on Christmas",
+      "facet": "Victorian and older Christmas history",
+      "known_at": 10
+    },
+    {
+      "name": "Lord of Misrule",
+      "facet": "Victorian and older Christmas history",
+      "known_at": 13
+    },
+    {
+      "name": "Boar's head feast",
+      "facet": "Victorian and older Christmas history",
+      "known_at": 13
+    },
+    {
+      "name": "Mummers' play",
+      "facet": "Victorian and older Christmas history",
+      "known_at": 13
+    },
+    {
+      "name": "Christmas truce of 1914",
+      "facet": "Victorian and older Christmas history",
+      "known_at": 8
+    },
+    {
+      "name": "Yule",
+      "facet": "Victorian and older Christmas history",
+      "known_at": 9
+    },
+    {
+      "name": "Monty the Penguin",
+      "facet": "Lights, shops and Christmas adverts",
+      "known_at": 7
+    },
+    {
+      "name": "The Man on the Moon",
+      "facet": "Lights, shops and Christmas adverts",
+      "known_at": 10
+    },
+    {
+      "name": "Excitable Edgar",
+      "facet": "Lights, shops and Christmas adverts",
+      "known_at": 7
+    },
+    {
+      "name": "Aldi",
+      "facet": "Lights, shops and Christmas adverts",
+      "known_at": 3
+    },
+    {
+      "name": "Coca-Cola Christmas truck",
+      "facet": "Lights, shops and Christmas adverts",
+      "known_at": 5
+    },
+    {
+      "name": "Marks & Spencer Christmas food",
+      "facet": "Lights, shops and Christmas adverts",
+      "known_at": 8
+    },
+    {
+      "name": "Sainsbury's Christmas truce advert",
+      "facet": "Lights, shops and Christmas adverts",
+      "known_at": 11
+    },
+    {
+      "name": "Oxford Street Christmas lights",
+      "facet": "Lights, shops and Christmas adverts",
+      "known_at": 7
+    },
+    {
+      "name": "Regent Street Christmas lights",
+      "facet": "Lights, shops and Christmas adverts",
+      "known_at": 9
+    },
+    {
+      "name": "Norway",
+      "facet": "Lights, shops and Christmas adverts",
+      "known_at": 9
+    },
+    {
+      "name": "Hyde Park Winter Wonderland",
+      "facet": "Lights, shops and Christmas adverts",
+      "known_at": 7
+    },
+    {
+      "name": "Birmingham Frankfurt Christmas Market",
+      "facet": "Lights, shops and Christmas adverts",
+      "known_at": 11
+    },
+    {
+      "name": "Royal Mail Christmas stamps",
+      "facet": "Lights, shops and Christmas adverts",
+      "known_at": 8
+    },
+    {
+      "name": "Last posting dates",
+      "facet": "Lights, shops and Christmas adverts",
+      "known_at": 9
+    },
+    {
+      "name": "Christmas lights switch-on",
+      "facet": "Lights, shops and Christmas adverts",
+      "known_at": 4
+    },
+    {
+      "name": "King George VI Chase",
+      "facet": "Christmas sport and regional customs",
+      "known_at": 13
+    },
+    {
+      "name": "Kempton Park",
+      "facet": "Christmas sport and regional customs",
+      "known_at": 13
+    },
+    {
+      "name": "PDC World Darts Championship",
+      "facet": "Christmas sport and regional customs",
+      "known_at": 9
+    },
+    {
+      "name": "Peter Pan Cup",
+      "facet": "Christmas sport and regional customs",
+      "known_at": 13
+    },
+    {
+      "name": "Serpentine",
+      "facet": "Christmas sport and regional customs",
+      "known_at": 11
+    },
+    {
+      "name": "Boxing Day dip",
+      "facet": "Christmas sport and regional customs",
+      "known_at": 7
+    },
+    {
+      "name": "Edinburgh's Hogmanay street party",
+      "facet": "Christmas sport and regional customs",
+      "known_at": 8
+    },
+    {
+      "name": "Burning of the Clavie",
+      "facet": "Christmas sport and regional customs",
+      "known_at": 15
+    },
+    {
+      "name": "Allendale Tar Barrels",
+      "facet": "Christmas sport and regional customs",
+      "known_at": 14
+    },
+    {
+      "name": "Mari Lwyd",
+      "facet": "Christmas sport and regional customs",
+      "known_at": 12
+    },
+    {
+      "name": "Plygain",
+      "facet": "Christmas sport and regional customs",
+      "known_at": 14
+    },
+    {
+      "name": "Calennig",
+      "facet": "Christmas sport and regional customs",
+      "known_at": 13
+    },
+    {
+      "name": "Somerset House ice rink",
+      "facet": "Christmas sport and regional customs",
+      "known_at": 10
+    }
+  ]
+}

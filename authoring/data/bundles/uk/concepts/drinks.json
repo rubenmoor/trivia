@@ -1,0 +1,1007 @@
+{
+  "subcategory": "drinks",
+  "facets": [
+    "Tea and tea customs",
+    "Real ale and bitter",
+    "Pubs and pub culture",
+    "Scotch whisky regions",
+    "Gin and London dry gin",
+    "Cider and perry",
+    "Soft drinks and squash",
+    "Hot drinks beyond tea",
+    "Breweries and drink brands",
+    "Drinking words and slang",
+    "Festive and traditional drinks",
+    "Drinks in British history"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "English Breakfast tea",
+      "facet": "Tea and tea customs",
+      "known_at": 6
+    },
+    {
+      "name": "PG Tips",
+      "facet": "Tea and tea customs",
+      "known_at": 7
+    },
+    {
+      "name": "Tetley",
+      "facet": "Tea and tea customs",
+      "known_at": 7
+    },
+    {
+      "name": "Twinings",
+      "facet": "Tea and tea customs",
+      "known_at": 10
+    },
+    {
+      "name": "Tea cosy",
+      "facet": "Tea and tea customs",
+      "known_at": 6
+    },
+    {
+      "name": "Teapot",
+      "facet": "Tea and tea customs",
+      "known_at": 1
+    },
+    {
+      "name": "Milk in first",
+      "facet": "Tea and tea customs",
+      "known_at": 9
+    },
+    {
+      "name": "Dunking biscuits",
+      "facet": "Tea and tea customs",
+      "known_at": 3
+    },
+    {
+      "name": "Tea break",
+      "facet": "Tea and tea customs",
+      "known_at": 5
+    },
+    {
+      "name": "Tea lady",
+      "facet": "Tea and tea customs",
+      "known_at": 11
+    },
+    {
+      "name": "Tea trolley",
+      "facet": "Tea and tea customs",
+      "known_at": 9
+    },
+    {
+      "name": "Assam",
+      "facet": "Tea and tea customs",
+      "known_at": 11
+    },
+    {
+      "name": "Darjeeling",
+      "facet": "Tea and tea customs",
+      "known_at": 11
+    },
+    {
+      "name": "Tea dance",
+      "facet": "Tea and tea customs",
+      "known_at": 12
+    },
+    {
+      "name": "Bitter",
+      "facet": "Real ale and bitter",
+      "known_at": 10
+    },
+    {
+      "name": "Mild",
+      "facet": "Real ale and bitter",
+      "known_at": 12
+    },
+    {
+      "name": "Porter",
+      "facet": "Real ale and bitter",
+      "known_at": 12
+    },
+    {
+      "name": "Stout",
+      "facet": "Real ale and bitter",
+      "known_at": 10
+    },
+    {
+      "name": "India Pale Ale",
+      "facet": "Real ale and bitter",
+      "known_at": 11
+    },
+    {
+      "name": "Golden ale",
+      "facet": "Real ale and bitter",
+      "known_at": 12
+    },
+    {
+      "name": "Barley wine",
+      "facet": "Real ale and bitter",
+      "known_at": 13
+    },
+    {
+      "name": "CAMRA",
+      "facet": "Real ale and bitter",
+      "known_at": 12
+    },
+    {
+      "name": "Cask ale",
+      "facet": "Real ale and bitter",
+      "known_at": 11
+    },
+    {
+      "name": "Hand pump",
+      "facet": "Real ale and bitter",
+      "known_at": 10
+    },
+    {
+      "name": "Sparkler",
+      "facet": "Real ale and bitter",
+      "known_at": 14
+    },
+    {
+      "name": "Firkin",
+      "facet": "Real ale and bitter",
+      "known_at": 13
+    },
+    {
+      "name": "Hops",
+      "facet": "Real ale and bitter",
+      "known_at": 9
+    },
+    {
+      "name": "Oast house",
+      "facet": "Real ale and bitter",
+      "known_at": 11
+    },
+    {
+      "name": "Burton upon Trent",
+      "facet": "Real ale and bitter",
+      "known_at": 13
+    },
+    {
+      "name": "Great British Beer Festival",
+      "facet": "Real ale and bitter",
+      "known_at": 13
+    },
+    {
+      "name": "Shandy",
+      "facet": "Real ale and bitter",
+      "known_at": 8
+    },
+    {
+      "name": "Session beer",
+      "facet": "Real ale and bitter",
+      "known_at": 13
+    },
+    {
+      "name": "Pub quiz",
+      "facet": "Pubs and pub culture",
+      "known_at": 6
+    },
+    {
+      "name": "Last orders",
+      "facet": "Pubs and pub culture",
+      "known_at": 9
+    },
+    {
+      "name": "Pub sign",
+      "facet": "Pubs and pub culture",
+      "known_at": 6
+    },
+    {
+      "name": "Darts",
+      "facet": "Pubs and pub culture",
+      "known_at": 4
+    },
+    {
+      "name": "Beer garden",
+      "facet": "Pubs and pub culture",
+      "known_at": 6
+    },
+    {
+      "name": "Skittles",
+      "facet": "Pubs and pub culture",
+      "known_at": 7
+    },
+    {
+      "name": "Bar billiards",
+      "facet": "Pubs and pub culture",
+      "known_at": 13
+    },
+    {
+      "name": "Snug",
+      "facet": "Pubs and pub culture",
+      "known_at": 13
+    },
+    {
+      "name": "The Red Lion",
+      "facet": "Pubs and pub culture",
+      "known_at": 10
+    },
+    {
+      "name": "The Queen Vic",
+      "facet": "Pubs and pub culture",
+      "known_at": 7
+    },
+    {
+      "name": "The Rovers Return",
+      "facet": "Pubs and pub culture",
+      "known_at": 9
+    },
+    {
+      "name": "The Woolpack",
+      "facet": "Pubs and pub culture",
+      "known_at": 11
+    },
+    {
+      "name": "Ye Olde Trip to Jerusalem",
+      "facet": "Pubs and pub culture",
+      "known_at": 14
+    },
+    {
+      "name": "Free house",
+      "facet": "Pubs and pub culture",
+      "known_at": 12
+    },
+    {
+      "name": "Lock-in",
+      "facet": "Pubs and pub culture",
+      "known_at": 12
+    },
+    {
+      "name": "Gastropub",
+      "facet": "Pubs and pub culture",
+      "known_at": 11
+    },
+    {
+      "name": "Landlord",
+      "facet": "Pubs and pub culture",
+      "known_at": 8
+    },
+    {
+      "name": "Wetherspoons",
+      "facet": "Pubs and pub culture",
+      "known_at": 9
+    },
+    {
+      "name": "Pint glass",
+      "facet": "Pubs and pub culture",
+      "known_at": 7
+    },
+    {
+      "name": "Speyside",
+      "facet": "Scotch whisky regions",
+      "known_at": 12
+    },
+    {
+      "name": "Highlands",
+      "facet": "Scotch whisky regions",
+      "known_at": 8
+    },
+    {
+      "name": "Lowlands",
+      "facet": "Scotch whisky regions",
+      "known_at": 11
+    },
+    {
+      "name": "Campbeltown",
+      "facet": "Scotch whisky regions",
+      "known_at": 14
+    },
+    {
+      "name": "Single malt",
+      "facet": "Scotch whisky regions",
+      "known_at": 11
+    },
+    {
+      "name": "Blended Scotch",
+      "facet": "Scotch whisky regions",
+      "known_at": 12
+    },
+    {
+      "name": "Peat",
+      "facet": "Scotch whisky regions",
+      "known_at": 11
+    },
+    {
+      "name": "Glenfiddich",
+      "facet": "Scotch whisky regions",
+      "known_at": 12
+    },
+    {
+      "name": "Laphroaig",
+      "facet": "Scotch whisky regions",
+      "known_at": 13
+    },
+    {
+      "name": "The Macallan",
+      "facet": "Scotch whisky regions",
+      "known_at": 13
+    },
+    {
+      "name": "Talisker",
+      "facet": "Scotch whisky regions",
+      "known_at": 13
+    },
+    {
+      "name": "Johnnie Walker",
+      "facet": "Scotch whisky regions",
+      "known_at": 10
+    },
+    {
+      "name": "The Famous Grouse",
+      "facet": "Scotch whisky regions",
+      "known_at": 11
+    },
+    {
+      "name": "Glenlivet",
+      "facet": "Scotch whisky regions",
+      "known_at": 13
+    },
+    {
+      "name": "Uisge beatha",
+      "facet": "Scotch whisky regions",
+      "known_at": 14
+    },
+    {
+      "name": "Dram",
+      "facet": "Scotch whisky regions",
+      "known_at": 10
+    },
+    {
+      "name": "Quaich",
+      "facet": "Scotch whisky regions",
+      "known_at": 14
+    },
+    {
+      "name": "Angel's share",
+      "facet": "Scotch whisky regions",
+      "known_at": 13
+    },
+    {
+      "name": "Juniper",
+      "facet": "Gin and London dry gin",
+      "known_at": 11
+    },
+    {
+      "name": "Gin and tonic",
+      "facet": "Gin and London dry gin",
+      "known_at": 8
+    },
+    {
+      "name": "Gin Craze",
+      "facet": "Gin and London dry gin",
+      "known_at": 12
+    },
+    {
+      "name": "Gin Lane",
+      "facet": "Gin and London dry gin",
+      "known_at": 13
+    },
+    {
+      "name": "Gordon's",
+      "facet": "Gin and London dry gin",
+      "known_at": 10
+    },
+    {
+      "name": "Tanqueray",
+      "facet": "Gin and London dry gin",
+      "known_at": 13
+    },
+    {
+      "name": "Beefeater",
+      "facet": "Gin and London dry gin",
+      "known_at": 10
+    },
+    {
+      "name": "Bombay Sapphire",
+      "facet": "Gin and London dry gin",
+      "known_at": 11
+    },
+    {
+      "name": "Hendrick's",
+      "facet": "Gin and London dry gin",
+      "known_at": 12
+    },
+    {
+      "name": "Sipsmith",
+      "facet": "Gin and London dry gin",
+      "known_at": 14
+    },
+    {
+      "name": "Bathtub gin",
+      "facet": "Gin and London dry gin",
+      "known_at": 13
+    },
+    {
+      "name": "Botanicals",
+      "facet": "Gin and London dry gin",
+      "known_at": 12
+    },
+    {
+      "name": "Navy strength",
+      "facet": "Gin and London dry gin",
+      "known_at": 14
+    },
+    {
+      "name": "Pink gin",
+      "facet": "Gin and London dry gin",
+      "known_at": 11
+    },
+    {
+      "name": "Tonic water",
+      "facet": "Gin and London dry gin",
+      "known_at": 8
+    },
+    {
+      "name": "Herefordshire",
+      "facet": "Cider and perry",
+      "known_at": 12
+    },
+    {
+      "name": "Bulmers",
+      "facet": "Cider and perry",
+      "known_at": 11
+    },
+    {
+      "name": "Strongbow",
+      "facet": "Cider and perry",
+      "known_at": 10
+    },
+    {
+      "name": "Thatchers",
+      "facet": "Cider and perry",
+      "known_at": 11
+    },
+    {
+      "name": "Westons",
+      "facet": "Cider and perry",
+      "known_at": 13
+    },
+    {
+      "name": "Babycham",
+      "facet": "Cider and perry",
+      "known_at": 12
+    },
+    {
+      "name": "Kingston Black",
+      "facet": "Cider and perry",
+      "known_at": 15
+    },
+    {
+      "name": "Cider press",
+      "facet": "Cider and perry",
+      "known_at": 7
+    },
+    {
+      "name": "Cider apple",
+      "facet": "Cider and perry",
+      "known_at": 8
+    },
+    {
+      "name": "The Wurzels",
+      "facet": "Cider and perry",
+      "known_at": 12
+    },
+    {
+      "name": "Orchard",
+      "facet": "Cider and perry",
+      "known_at": 4
+    },
+    {
+      "name": "Ribena",
+      "facet": "Soft drinks and squash",
+      "known_at": 4
+    },
+    {
+      "name": "Robinsons",
+      "facet": "Soft drinks and squash",
+      "known_at": 5
+    },
+    {
+      "name": "Barley water",
+      "facet": "Soft drinks and squash",
+      "known_at": 10
+    },
+    {
+      "name": "Lucozade",
+      "facet": "Soft drinks and squash",
+      "known_at": 5
+    },
+    {
+      "name": "Ginger beer",
+      "facet": "Soft drinks and squash",
+      "known_at": 6
+    },
+    {
+      "name": "Orange squash",
+      "facet": "Soft drinks and squash",
+      "known_at": 2
+    },
+    {
+      "name": "Elderflower cordial",
+      "facet": "Soft drinks and squash",
+      "known_at": 9
+    },
+    {
+      "name": "Panda Pop",
+      "facet": "Soft drinks and squash",
+      "known_at": 10
+    },
+    {
+      "name": "Fentimans",
+      "facet": "Soft drinks and squash",
+      "known_at": 13
+    },
+    {
+      "name": "Schweppes",
+      "facet": "Soft drinks and squash",
+      "known_at": 8
+    },
+    {
+      "name": "Shloer",
+      "facet": "Soft drinks and squash",
+      "known_at": 9
+    },
+    {
+      "name": "Fruit Shoot",
+      "facet": "Soft drinks and squash",
+      "known_at": 3
+    },
+    {
+      "name": "R. White's Lemonade",
+      "facet": "Soft drinks and squash",
+      "known_at": 12
+    },
+    {
+      "name": "J2O",
+      "facet": "Soft drinks and squash",
+      "known_at": 9
+    },
+    {
+      "name": "Soft Drinks Industry Levy",
+      "facet": "Soft drinks and squash",
+      "known_at": 12
+    },
+    {
+      "name": "Horlicks",
+      "facet": "Hot drinks beyond tea",
+      "known_at": 8
+    },
+    {
+      "name": "Ovaltine",
+      "facet": "Hot drinks beyond tea",
+      "known_at": 9
+    },
+    {
+      "name": "Bovril",
+      "facet": "Hot drinks beyond tea",
+      "known_at": 10
+    },
+    {
+      "name": "Hot chocolate",
+      "facet": "Hot drinks beyond tea",
+      "known_at": 1
+    },
+    {
+      "name": "Cadbury hot chocolate",
+      "facet": "Hot drinks beyond tea",
+      "known_at": 4
+    },
+    {
+      "name": "Camp Coffee",
+      "facet": "Hot drinks beyond tea",
+      "known_at": 13
+    },
+    {
+      "name": "Instant coffee",
+      "facet": "Hot drinks beyond tea",
+      "known_at": 6
+    },
+    {
+      "name": "Costa Coffee",
+      "facet": "Hot drinks beyond tea",
+      "known_at": 5
+    },
+    {
+      "name": "Cocoa",
+      "facet": "Hot drinks beyond tea",
+      "known_at": 5
+    },
+    {
+      "name": "Fry's cocoa",
+      "facet": "Hot drinks beyond tea",
+      "known_at": 13
+    },
+    {
+      "name": "Lemsip",
+      "facet": "Hot drinks beyond tea",
+      "known_at": 8
+    },
+    {
+      "name": "Hot Ribena",
+      "facet": "Hot drinks beyond tea",
+      "known_at": 9
+    },
+    {
+      "name": "Warm milk",
+      "facet": "Hot drinks beyond tea",
+      "known_at": 2
+    },
+    {
+      "name": "Milky coffee",
+      "facet": "Hot drinks beyond tea",
+      "known_at": 7
+    },
+    {
+      "name": "Oxo",
+      "facet": "Hot drinks beyond tea",
+      "known_at": 9
+    },
+    {
+      "name": "Hot toddy",
+      "facet": "Hot drinks beyond tea",
+      "known_at": 11
+    },
+    {
+      "name": "Fuller's",
+      "facet": "Breweries and drink brands",
+      "known_at": 12
+    },
+    {
+      "name": "Young's",
+      "facet": "Breweries and drink brands",
+      "known_at": 13
+    },
+    {
+      "name": "Shepherd Neame",
+      "facet": "Breweries and drink brands",
+      "known_at": 13
+    },
+    {
+      "name": "Greene King",
+      "facet": "Breweries and drink brands",
+      "known_at": 12
+    },
+    {
+      "name": "Adnams",
+      "facet": "Breweries and drink brands",
+      "known_at": 13
+    },
+    {
+      "name": "Theakston",
+      "facet": "Breweries and drink brands",
+      "known_at": 13
+    },
+    {
+      "name": "Samuel Smith",
+      "facet": "Breweries and drink brands",
+      "known_at": 13
+    },
+    {
+      "name": "Marston's",
+      "facet": "Breweries and drink brands",
+      "known_at": 13
+    },
+    {
+      "name": "Bass",
+      "facet": "Breweries and drink brands",
+      "known_at": 12
+    },
+    {
+      "name": "BrewDog",
+      "facet": "Breweries and drink brands",
+      "known_at": 11
+    },
+    {
+      "name": "Boddingtons",
+      "facet": "Breweries and drink brands",
+      "known_at": 12
+    },
+    {
+      "name": "Tennent's",
+      "facet": "Breweries and drink brands",
+      "known_at": 11
+    },
+    {
+      "name": "Old Speckled Hen",
+      "facet": "Breweries and drink brands",
+      "known_at": 13
+    },
+    {
+      "name": "Hobgoblin",
+      "facet": "Breweries and drink brands",
+      "known_at": 13
+    },
+    {
+      "name": "Timothy Taylor's Landlord",
+      "facet": "Breweries and drink brands",
+      "known_at": 14
+    },
+    {
+      "name": "Brains",
+      "facet": "Breweries and drink brands",
+      "known_at": 13
+    },
+    {
+      "name": "Belhaven",
+      "facet": "Breweries and drink brands",
+      "known_at": 14
+    },
+    {
+      "name": "Cuppa",
+      "facet": "Drinking words and slang",
+      "known_at": 4
+    },
+    {
+      "name": "Rosie Lee",
+      "facet": "Drinking words and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Char",
+      "facet": "Drinking words and slang",
+      "known_at": 13
+    },
+    {
+      "name": "Pint",
+      "facet": "Drinking words and slang",
+      "known_at": 6
+    },
+    {
+      "name": "Round",
+      "facet": "Drinking words and slang",
+      "known_at": 9
+    },
+    {
+      "name": "Tipple",
+      "facet": "Drinking words and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Plonk",
+      "facet": "Drinking words and slang",
+      "known_at": 12
+    },
+    {
+      "name": "Bevvy",
+      "facet": "Drinking words and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Tiddly",
+      "facet": "Drinking words and slang",
+      "known_at": 12
+    },
+    {
+      "name": "Hair of the dog",
+      "facet": "Drinking words and slang",
+      "known_at": 12
+    },
+    {
+      "name": "One for the road",
+      "facet": "Drinking words and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Mother's ruin",
+      "facet": "Drinking words and slang",
+      "known_at": 12
+    },
+    {
+      "name": "Dutch courage",
+      "facet": "Drinking words and slang",
+      "known_at": 12
+    },
+    {
+      "name": "Wet your whistle",
+      "facet": "Drinking words and slang",
+      "known_at": 10
+    },
+    {
+      "name": "Cheers",
+      "facet": "Drinking words and slang",
+      "known_at": 3
+    },
+    {
+      "name": "Bottoms up",
+      "facet": "Drinking words and slang",
+      "known_at": 9
+    },
+    {
+      "name": "Chin-chin",
+      "facet": "Drinking words and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Teetotal",
+      "facet": "Drinking words and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Lager top",
+      "facet": "Drinking words and slang",
+      "known_at": 13
+    },
+    {
+      "name": "Snowball",
+      "facet": "Festive and traditional drinks",
+      "known_at": 12
+    },
+    {
+      "name": "Advocaat",
+      "facet": "Festive and traditional drinks",
+      "known_at": 13
+    },
+    {
+      "name": "Sherry",
+      "facet": "Festive and traditional drinks",
+      "known_at": 9
+    },
+    {
+      "name": "Port",
+      "facet": "Festive and traditional drinks",
+      "known_at": 10
+    },
+    {
+      "name": "Pimm's",
+      "facet": "Festive and traditional drinks",
+      "known_at": 10
+    },
+    {
+      "name": "Buck's Fizz",
+      "facet": "Festive and traditional drinks",
+      "known_at": 11
+    },
+    {
+      "name": "Eggnog",
+      "facet": "Festive and traditional drinks",
+      "known_at": 9
+    },
+    {
+      "name": "Atholl brose",
+      "facet": "Festive and traditional drinks",
+      "known_at": 15
+    },
+    {
+      "name": "Lambswool",
+      "facet": "Festive and traditional drinks",
+      "known_at": 15
+    },
+    {
+      "name": "Stone's Ginger Wine",
+      "facet": "Festive and traditional drinks",
+      "known_at": 13
+    },
+    {
+      "name": "Loving cup",
+      "facet": "Festive and traditional drinks",
+      "known_at": 14
+    },
+    {
+      "name": "Champagne at Wimbledon",
+      "facet": "Festive and traditional drinks",
+      "known_at": 11
+    },
+    {
+      "name": "Sherry for Father Christmas",
+      "facet": "Festive and traditional drinks",
+      "known_at": 5
+    },
+    {
+      "name": "Boston Tea Party",
+      "facet": "Drinks in British history",
+      "known_at": 9
+    },
+    {
+      "name": "Gin Act",
+      "facet": "Drinks in British history",
+      "known_at": 14
+    },
+    {
+      "name": "Rum ration",
+      "facet": "Drinks in British history",
+      "known_at": 11
+    },
+    {
+      "name": "Grog",
+      "facet": "Drinks in British history",
+      "known_at": 12
+    },
+    {
+      "name": "Black Tot Day",
+      "facet": "Drinks in British history",
+      "known_at": 15
+    },
+    {
+      "name": "Temperance movement",
+      "facet": "Drinks in British history",
+      "known_at": 13
+    },
+    {
+      "name": "Lloyd's Coffee House",
+      "facet": "Drinks in British history",
+      "known_at": 14
+    },
+    {
+      "name": "Tea clipper",
+      "facet": "Drinks in British history",
+      "known_at": 11
+    },
+    {
+      "name": "Catherine of Braganza",
+      "facet": "Drinks in British history",
+      "known_at": 14
+    },
+    {
+      "name": "Defence of the Realm Act",
+      "facet": "Drinks in British history",
+      "known_at": 14
+    },
+    {
+      "name": "Small beer",
+      "facet": "Drinks in British history",
+      "known_at": 13
+    },
+    {
+      "name": "Limey",
+      "facet": "Drinks in British history",
+      "known_at": 12
+    },
+    {
+      "name": "Tea tax",
+      "facet": "Drinks in British history",
+      "known_at": 11
+    },
+    {
+      "name": "Tea rationing",
+      "facet": "Drinks in British history",
+      "known_at": 10
+    }
+  ]
+}

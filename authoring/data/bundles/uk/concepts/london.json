@@ -1,0 +1,1287 @@
+{
+  "subcategory": "london",
+  "facets": [
+    "Famous landmarks and buildings",
+    "Royal palaces and ceremonies",
+    "The Tube and London transport",
+    "Boroughs, districts and neighbourhoods",
+    "The Thames and its bridges",
+    "Parks, gardens and wildlife",
+    "Museums and galleries",
+    "Markets, shops and food",
+    "London history and great events",
+    "Famous Londoners and characters",
+    "London in films, books and TV",
+    "Sport, festivals and London traditions"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Houses of Parliament",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 4
+    },
+    {
+      "name": "Trafalgar Square",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 5
+    },
+    {
+      "name": "Nelson's Column",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 6
+    },
+    {
+      "name": "The Gherkin",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 8
+    },
+    {
+      "name": "Piccadilly Circus",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 6
+    },
+    {
+      "name": "Marble Arch",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 8
+    },
+    {
+      "name": "The Monument",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 11
+    },
+    {
+      "name": "10 Downing Street",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 5
+    },
+    {
+      "name": "Royal Albert Hall",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 9
+    },
+    {
+      "name": "Battersea Power Station",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 10
+    },
+    {
+      "name": "Shakespeare's Globe",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 8
+    },
+    {
+      "name": "BT Tower",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 11
+    },
+    {
+      "name": "Walkie-Talkie building",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 12
+    },
+    {
+      "name": "Cleopatra's Needle",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 12
+    },
+    {
+      "name": "Admiralty Arch",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 13
+    },
+    {
+      "name": "The O2",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 7
+    },
+    {
+      "name": "ArcelorMittal Orbit",
+      "facet": "Famous landmarks and buildings",
+      "known_at": 13
+    },
+    {
+      "name": "Changing of the Guard",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 4
+    },
+    {
+      "name": "Trooping the Colour",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 9
+    },
+    {
+      "name": "Kensington Palace",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 9
+    },
+    {
+      "name": "St James's Palace",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 12
+    },
+    {
+      "name": "Hampton Court Palace",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 9
+    },
+    {
+      "name": "Clarence House",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 13
+    },
+    {
+      "name": "Beefeaters",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 5
+    },
+    {
+      "name": "Crown Jewels",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 4
+    },
+    {
+      "name": "Ceremony of the Keys",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 14
+    },
+    {
+      "name": "State Opening of Parliament",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 11
+    },
+    {
+      "name": "Coronation of Charles III",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 6
+    },
+    {
+      "name": "Bearskin hat",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 4
+    },
+    {
+      "name": "Gold State Coach",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 10
+    },
+    {
+      "name": "Banqueting House",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 14
+    },
+    {
+      "name": "Household Cavalry",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 11
+    },
+    {
+      "name": "Royal Mews",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 13
+    },
+    {
+      "name": "Royal gun salute",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 11
+    },
+    {
+      "name": "Buckingham Palace balcony",
+      "facet": "Royal palaces and ceremonies",
+      "known_at": 7
+    },
+    {
+      "name": "London Underground",
+      "facet": "The Tube and London transport",
+      "known_at": 2
+    },
+    {
+      "name": "Tube map",
+      "facet": "The Tube and London transport",
+      "known_at": 5
+    },
+    {
+      "name": "Harry Beck",
+      "facet": "The Tube and London transport",
+      "known_at": 13
+    },
+    {
+      "name": "Mind the gap",
+      "facet": "The Tube and London transport",
+      "known_at": 4
+    },
+    {
+      "name": "Oyster card",
+      "facet": "The Tube and London transport",
+      "known_at": 6
+    },
+    {
+      "name": "Red double-decker bus",
+      "facet": "The Tube and London transport",
+      "known_at": 1
+    },
+    {
+      "name": "Routemaster",
+      "facet": "The Tube and London transport",
+      "known_at": 11
+    },
+    {
+      "name": "Black cab",
+      "facet": "The Tube and London transport",
+      "known_at": 3
+    },
+    {
+      "name": "The Knowledge",
+      "facet": "The Tube and London transport",
+      "known_at": 12
+    },
+    {
+      "name": "Elizabeth line",
+      "facet": "The Tube and London transport",
+      "known_at": 8
+    },
+    {
+      "name": "Circle line",
+      "facet": "The Tube and London transport",
+      "known_at": 7
+    },
+    {
+      "name": "Central line",
+      "facet": "The Tube and London transport",
+      "known_at": 8
+    },
+    {
+      "name": "Northern line",
+      "facet": "The Tube and London transport",
+      "known_at": 8
+    },
+    {
+      "name": "Victoria line",
+      "facet": "The Tube and London transport",
+      "known_at": 9
+    },
+    {
+      "name": "Metropolitan line",
+      "facet": "The Tube and London transport",
+      "known_at": 11
+    },
+    {
+      "name": "Docklands Light Railway",
+      "facet": "The Tube and London transport",
+      "known_at": 10
+    },
+    {
+      "name": "Thames cable car",
+      "facet": "The Tube and London transport",
+      "known_at": 11
+    },
+    {
+      "name": "Santander Cycles",
+      "facet": "The Tube and London transport",
+      "known_at": 10
+    },
+    {
+      "name": "King's Cross station",
+      "facet": "The Tube and London transport",
+      "known_at": 5
+    },
+    {
+      "name": "Paddington station",
+      "facet": "The Tube and London transport",
+      "known_at": 4
+    },
+    {
+      "name": "St Pancras International",
+      "facet": "The Tube and London transport",
+      "known_at": 9
+    },
+    {
+      "name": "Heathrow Airport",
+      "facet": "The Tube and London transport",
+      "known_at": 5
+    },
+    {
+      "name": "Congestion Charge",
+      "facet": "The Tube and London transport",
+      "known_at": 11
+    },
+    {
+      "name": "Roundel",
+      "facet": "The Tube and London transport",
+      "known_at": 12
+    },
+    {
+      "name": "City of London",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 9
+    },
+    {
+      "name": "Westminster",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 6
+    },
+    {
+      "name": "Camden Town",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 8
+    },
+    {
+      "name": "Notting Hill",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 7
+    },
+    {
+      "name": "Soho",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 10
+    },
+    {
+      "name": "Covent Garden",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 7
+    },
+    {
+      "name": "Greenwich",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 6
+    },
+    {
+      "name": "Shoreditch",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 11
+    },
+    {
+      "name": "Brixton",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 10
+    },
+    {
+      "name": "Canary Wharf",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 9
+    },
+    {
+      "name": "Mayfair",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 7
+    },
+    {
+      "name": "Chelsea",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 8
+    },
+    {
+      "name": "Hackney",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 11
+    },
+    {
+      "name": "Stratford",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 9
+    },
+    {
+      "name": "Islington",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 11
+    },
+    {
+      "name": "Croydon",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 10
+    },
+    {
+      "name": "Hampstead",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 12
+    },
+    {
+      "name": "Chinatown",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 7
+    },
+    {
+      "name": "Bloomsbury",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 13
+    },
+    {
+      "name": "Whitechapel",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 11
+    },
+    {
+      "name": "Peckham",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 11
+    },
+    {
+      "name": "Bow Bells",
+      "facet": "Boroughs, districts and neighbourhoods",
+      "known_at": 12
+    },
+    {
+      "name": "River Thames",
+      "facet": "The Thames and its bridges",
+      "known_at": 2
+    },
+    {
+      "name": "London Bridge",
+      "facet": "The Thames and its bridges",
+      "known_at": 3
+    },
+    {
+      "name": "Millennium Bridge",
+      "facet": "The Thames and its bridges",
+      "known_at": 9
+    },
+    {
+      "name": "Westminster Bridge",
+      "facet": "The Thames and its bridges",
+      "known_at": 8
+    },
+    {
+      "name": "Waterloo Bridge",
+      "facet": "The Thames and its bridges",
+      "known_at": 10
+    },
+    {
+      "name": "Albert Bridge",
+      "facet": "The Thames and its bridges",
+      "known_at": 13
+    },
+    {
+      "name": "Blackfriars Bridge",
+      "facet": "The Thames and its bridges",
+      "known_at": 13
+    },
+    {
+      "name": "Hammersmith Bridge",
+      "facet": "The Thames and its bridges",
+      "known_at": 13
+    },
+    {
+      "name": "Thames Barrier",
+      "facet": "The Thames and its bridges",
+      "known_at": 10
+    },
+    {
+      "name": "HMS Belfast",
+      "facet": "The Thames and its bridges",
+      "known_at": 10
+    },
+    {
+      "name": "Cutty Sark",
+      "facet": "The Thames and its bridges",
+      "known_at": 9
+    },
+    {
+      "name": "Golden Hinde",
+      "facet": "The Thames and its bridges",
+      "known_at": 12
+    },
+    {
+      "name": "South Bank",
+      "facet": "The Thames and its bridges",
+      "known_at": 9
+    },
+    {
+      "name": "Mudlarking",
+      "facet": "The Thames and its bridges",
+      "known_at": 13
+    },
+    {
+      "name": "Thames Clippers",
+      "facet": "The Thames and its bridges",
+      "known_at": 11
+    },
+    {
+      "name": "Thames Estuary",
+      "facet": "The Thames and its bridges",
+      "known_at": 10
+    },
+    {
+      "name": "Thames whale",
+      "facet": "The Thames and its bridges",
+      "known_at": 11
+    },
+    {
+      "name": "Thames Path",
+      "facet": "The Thames and its bridges",
+      "known_at": 12
+    },
+    {
+      "name": "Hyde Park",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 5
+    },
+    {
+      "name": "Regent's Park",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 8
+    },
+    {
+      "name": "St James's Park",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 9
+    },
+    {
+      "name": "Green Park",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 9
+    },
+    {
+      "name": "Richmond Park",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 9
+    },
+    {
+      "name": "Hampstead Heath",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 10
+    },
+    {
+      "name": "Kew Gardens",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 8
+    },
+    {
+      "name": "Kensington Gardens",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 10
+    },
+    {
+      "name": "Greenwich Park",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 10
+    },
+    {
+      "name": "Battersea Park",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 11
+    },
+    {
+      "name": "London Zoo",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 4
+    },
+    {
+      "name": "Speakers' Corner",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 11
+    },
+    {
+      "name": "The Serpentine",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 10
+    },
+    {
+      "name": "Peter Pan statue",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 10
+    },
+    {
+      "name": "Ravens of the Tower",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 6
+    },
+    {
+      "name": "Pelicans of St James's Park",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 11
+    },
+    {
+      "name": "Red deer of Richmond Park",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 9
+    },
+    {
+      "name": "Ring-necked parakeet",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 10
+    },
+    {
+      "name": "Urban fox",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 5
+    },
+    {
+      "name": "Diana Memorial Fountain",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 12
+    },
+    {
+      "name": "Queen Elizabeth Olympic Park",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 9
+    },
+    {
+      "name": "Primrose Hill",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 12
+    },
+    {
+      "name": "Trafalgar Square pigeons",
+      "facet": "Parks, gardens and wildlife",
+      "known_at": 6
+    },
+    {
+      "name": "British Museum",
+      "facet": "Museums and galleries",
+      "known_at": 6
+    },
+    {
+      "name": "Natural History Museum",
+      "facet": "Museums and galleries",
+      "known_at": 4
+    },
+    {
+      "name": "Science Museum",
+      "facet": "Museums and galleries",
+      "known_at": 5
+    },
+    {
+      "name": "Victoria and Albert Museum",
+      "facet": "Museums and galleries",
+      "known_at": 10
+    },
+    {
+      "name": "National Gallery",
+      "facet": "Museums and galleries",
+      "known_at": 9
+    },
+    {
+      "name": "Tate Modern",
+      "facet": "Museums and galleries",
+      "known_at": 9
+    },
+    {
+      "name": "Tate Britain",
+      "facet": "Museums and galleries",
+      "known_at": 12
+    },
+    {
+      "name": "Madame Tussauds",
+      "facet": "Museums and galleries",
+      "known_at": 5
+    },
+    {
+      "name": "Imperial War Museum",
+      "facet": "Museums and galleries",
+      "known_at": 10
+    },
+    {
+      "name": "Churchill War Rooms",
+      "facet": "Museums and galleries",
+      "known_at": 11
+    },
+    {
+      "name": "National Portrait Gallery",
+      "facet": "Museums and galleries",
+      "known_at": 12
+    },
+    {
+      "name": "Royal Observatory Greenwich",
+      "facet": "Museums and galleries",
+      "known_at": 9
+    },
+    {
+      "name": "Prime Meridian",
+      "facet": "Museums and galleries",
+      "known_at": 9
+    },
+    {
+      "name": "Sherlock Holmes Museum",
+      "facet": "Museums and galleries",
+      "known_at": 10
+    },
+    {
+      "name": "Rosetta Stone",
+      "facet": "Museums and galleries",
+      "known_at": 10
+    },
+    {
+      "name": "Hope the blue whale",
+      "facet": "Museums and galleries",
+      "known_at": 7
+    },
+    {
+      "name": "Dippy the dinosaur",
+      "facet": "Museums and galleries",
+      "known_at": 6
+    },
+    {
+      "name": "Museum of London",
+      "facet": "Museums and galleries",
+      "known_at": 11
+    },
+    {
+      "name": "London Transport Museum",
+      "facet": "Museums and galleries",
+      "known_at": 10
+    },
+    {
+      "name": "Sir John Soane's Museum",
+      "facet": "Museums and galleries",
+      "known_at": 14
+    },
+    {
+      "name": "Wallace Collection",
+      "facet": "Museums and galleries",
+      "known_at": 14
+    },
+    {
+      "name": "Parthenon Marbles",
+      "facet": "Museums and galleries",
+      "known_at": 12
+    },
+    {
+      "name": "Turbine Hall",
+      "facet": "Museums and galleries",
+      "known_at": 12
+    },
+    {
+      "name": "Borough Market",
+      "facet": "Markets, shops and food",
+      "known_at": 10
+    },
+    {
+      "name": "Camden Market",
+      "facet": "Markets, shops and food",
+      "known_at": 8
+    },
+    {
+      "name": "Portobello Road Market",
+      "facet": "Markets, shops and food",
+      "known_at": 9
+    },
+    {
+      "name": "Columbia Road Flower Market",
+      "facet": "Markets, shops and food",
+      "known_at": 13
+    },
+    {
+      "name": "Brick Lane",
+      "facet": "Markets, shops and food",
+      "known_at": 10
+    },
+    {
+      "name": "Spitalfields Market",
+      "facet": "Markets, shops and food",
+      "known_at": 12
+    },
+    {
+      "name": "Leadenhall Market",
+      "facet": "Markets, shops and food",
+      "known_at": 12
+    },
+    {
+      "name": "Billingsgate Market",
+      "facet": "Markets, shops and food",
+      "known_at": 13
+    },
+    {
+      "name": "Smithfield Market",
+      "facet": "Markets, shops and food",
+      "known_at": 13
+    },
+    {
+      "name": "Harrods",
+      "facet": "Markets, shops and food",
+      "known_at": 6
+    },
+    {
+      "name": "Hamleys",
+      "facet": "Markets, shops and food",
+      "known_at": 5
+    },
+    {
+      "name": "Liberty",
+      "facet": "Markets, shops and food",
+      "known_at": 12
+    },
+    {
+      "name": "Selfridges",
+      "facet": "Markets, shops and food",
+      "known_at": 9
+    },
+    {
+      "name": "Fortnum & Mason",
+      "facet": "Markets, shops and food",
+      "known_at": 12
+    },
+    {
+      "name": "Oxford Street",
+      "facet": "Markets, shops and food",
+      "known_at": 6
+    },
+    {
+      "name": "Regent Street",
+      "facet": "Markets, shops and food",
+      "known_at": 9
+    },
+    {
+      "name": "Carnaby Street",
+      "facet": "Markets, shops and food",
+      "known_at": 11
+    },
+    {
+      "name": "Savile Row",
+      "facet": "Markets, shops and food",
+      "known_at": 12
+    },
+    {
+      "name": "Pie and mash",
+      "facet": "Markets, shops and food",
+      "known_at": 9
+    },
+    {
+      "name": "Jellied eels",
+      "facet": "Markets, shops and food",
+      "known_at": 9
+    },
+    {
+      "name": "The Ritz",
+      "facet": "Markets, shops and food",
+      "known_at": 9
+    },
+    {
+      "name": "Great Fire of London",
+      "facet": "London history and great events",
+      "known_at": 4
+    },
+    {
+      "name": "Pudding Lane",
+      "facet": "London history and great events",
+      "known_at": 7
+    },
+    {
+      "name": "Great Plague of London",
+      "facet": "London history and great events",
+      "known_at": 8
+    },
+    {
+      "name": "The Blitz",
+      "facet": "London history and great events",
+      "known_at": 8
+    },
+    {
+      "name": "Gunpowder Plot",
+      "facet": "London history and great events",
+      "known_at": 6
+    },
+    {
+      "name": "Boudica",
+      "facet": "London history and great events",
+      "known_at": 9
+    },
+    {
+      "name": "Great Exhibition",
+      "facet": "London history and great events",
+      "known_at": 11
+    },
+    {
+      "name": "Great Stink",
+      "facet": "London history and great events",
+      "known_at": 12
+    },
+    {
+      "name": "Thames frost fairs",
+      "facet": "London history and great events",
+      "known_at": 11
+    },
+    {
+      "name": "Peasants' Revolt",
+      "facet": "London history and great events",
+      "known_at": 12
+    },
+    {
+      "name": "Festival of Britain",
+      "facet": "London history and great events",
+      "known_at": 13
+    },
+    {
+      "name": "Great Smog of 1952",
+      "facet": "London history and great events",
+      "known_at": 13
+    },
+    {
+      "name": "VE Day",
+      "facet": "London history and great events",
+      "known_at": 9
+    },
+    {
+      "name": "London Wall",
+      "facet": "London history and great events",
+      "known_at": 12
+    },
+    {
+      "name": "Millennium Dome",
+      "facet": "London history and great events",
+      "known_at": 11
+    },
+    {
+      "name": "Bazalgette's sewers",
+      "facet": "London history and great events",
+      "known_at": 13
+    },
+    {
+      "name": "Evacuation of children",
+      "facet": "London history and great events",
+      "known_at": 8
+    },
+    {
+      "name": "Charles Dickens",
+      "facet": "Famous Londoners and characters",
+      "known_at": 7
+    },
+    {
+      "name": "William Shakespeare",
+      "facet": "Famous Londoners and characters",
+      "known_at": 5
+    },
+    {
+      "name": "Samuel Pepys",
+      "facet": "Famous Londoners and characters",
+      "known_at": 9
+    },
+    {
+      "name": "Christopher Wren",
+      "facet": "Famous Londoners and characters",
+      "known_at": 11
+    },
+    {
+      "name": "Dick Whittington",
+      "facet": "Famous Londoners and characters",
+      "known_at": 8
+    },
+    {
+      "name": "Florence Nightingale",
+      "facet": "Famous Londoners and characters",
+      "known_at": 6
+    },
+    {
+      "name": "Winston Churchill",
+      "facet": "Famous Londoners and characters",
+      "known_at": 6
+    },
+    {
+      "name": "Mayor of London",
+      "facet": "Famous Londoners and characters",
+      "known_at": 8
+    },
+    {
+      "name": "Lord Mayor of London",
+      "facet": "Famous Londoners and characters",
+      "known_at": 12
+    },
+    {
+      "name": "David Bowie",
+      "facet": "Famous Londoners and characters",
+      "known_at": 11
+    },
+    {
+      "name": "Adele",
+      "facet": "Famous Londoners and characters",
+      "known_at": 8
+    },
+    {
+      "name": "Charlie Chaplin",
+      "facet": "Famous Londoners and characters",
+      "known_at": 10
+    },
+    {
+      "name": "Amy Winehouse",
+      "facet": "Famous Londoners and characters",
+      "known_at": 11
+    },
+    {
+      "name": "David Beckham",
+      "facet": "Famous Londoners and characters",
+      "known_at": 6
+    },
+    {
+      "name": "Isambard Kingdom Brunel",
+      "facet": "Famous Londoners and characters",
+      "known_at": 10
+    },
+    {
+      "name": "William Blake",
+      "facet": "Famous Londoners and characters",
+      "known_at": 13
+    },
+    {
+      "name": "Virginia Woolf",
+      "facet": "Famous Londoners and characters",
+      "known_at": 13
+    },
+    {
+      "name": "Michael Faraday",
+      "facet": "Famous Londoners and characters",
+      "known_at": 12
+    },
+    {
+      "name": "Ada Lovelace",
+      "facet": "Famous Londoners and characters",
+      "known_at": 11
+    },
+    {
+      "name": "Mary Seacole",
+      "facet": "Famous Londoners and characters",
+      "known_at": 8
+    },
+    {
+      "name": "Alfred Hitchcock",
+      "facet": "Famous Londoners and characters",
+      "known_at": 12
+    },
+    {
+      "name": "Stormzy",
+      "facet": "Famous Londoners and characters",
+      "known_at": 9
+    },
+    {
+      "name": "Paddington Bear",
+      "facet": "London in films, books and TV",
+      "known_at": 1
+    },
+    {
+      "name": "Mary Poppins",
+      "facet": "London in films, books and TV",
+      "known_at": 3
+    },
+    {
+      "name": "Peter Pan",
+      "facet": "London in films, books and TV",
+      "known_at": 2
+    },
+    {
+      "name": "Sherlock Holmes",
+      "facet": "London in films, books and TV",
+      "known_at": 6
+    },
+    {
+      "name": "Platform 9¾",
+      "facet": "London in films, books and TV",
+      "known_at": 4
+    },
+    {
+      "name": "Notting Hill (film)",
+      "facet": "London in films, books and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Oliver Twist",
+      "facet": "London in films, books and TV",
+      "known_at": 7
+    },
+    {
+      "name": "A Christmas Carol",
+      "facet": "London in films, books and TV",
+      "known_at": 5
+    },
+    {
+      "name": "101 Dalmatians",
+      "facet": "London in films, books and TV",
+      "known_at": 4
+    },
+    {
+      "name": "Love Actually",
+      "facet": "London in films, books and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Bridget Jones's Diary",
+      "facet": "London in films, books and TV",
+      "known_at": 12
+    },
+    {
+      "name": "TARDIS",
+      "facet": "London in films, books and TV",
+      "known_at": 6
+    },
+    {
+      "name": "Eliza Doolittle",
+      "facet": "London in films, books and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Mrs Dalloway",
+      "facet": "London in films, books and TV",
+      "known_at": 14
+    },
+    {
+      "name": "MI6 Building",
+      "facet": "London in films, books and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Only Fools and Horses",
+      "facet": "London in films, books and TV",
+      "known_at": 10
+    },
+    {
+      "name": "Call the Midwife",
+      "facet": "London in films, books and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Fagin",
+      "facet": "London in films, books and TV",
+      "known_at": 10
+    },
+    {
+      "name": "Bert the chimney sweep",
+      "facet": "London in films, books and TV",
+      "known_at": 7
+    },
+    {
+      "name": "Diagon Alley",
+      "facet": "London in films, books and TV",
+      "known_at": 5
+    },
+    {
+      "name": "Basil of Baker Street",
+      "facet": "London in films, books and TV",
+      "known_at": 11
+    },
+    {
+      "name": "London Marathon",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Wimbledon Championships",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 5
+    },
+    {
+      "name": "The Boat Race",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Wembley Stadium",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 4
+    },
+    {
+      "name": "Lord's Cricket Ground",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 10
+    },
+    {
+      "name": "The Oval",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Twickenham Stadium",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Chelsea FC",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 4
+    },
+    {
+      "name": "Crystal Palace FC",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 8
+    },
+    {
+      "name": "London 2012 Olympic Games",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 7
+    },
+    {
+      "name": "New Year's Eve fireworks",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 5
+    },
+    {
+      "name": "Lord Mayor's Show",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Pearly Kings and Queens",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Chinese New Year in Trafalgar Square",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Chelsea Flower Show",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Last Night of the Proms",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Swan Upping",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 14
+    },
+    {
+      "name": "Trafalgar Square Christmas tree",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Winter Wonderland",
+      "facet": "Sport, festivals and London traditions",
+      "known_at": 8
+    }
+  ]
+}

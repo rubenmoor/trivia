@@ -1,0 +1,1272 @@
+{
+  "subcategory": "counties-and-regions",
+  "facets": [
+    "Historic counties of England",
+    "Scottish council areas and regions",
+    "Welsh counties and regions",
+    "Counties of Northern Ireland",
+    "County towns and cities",
+    "County nicknames and symbols",
+    "Regional food and drink",
+    "Regional accents and dialects",
+    "National parks and landscapes",
+    "Coasts, islands and peninsulas",
+    "County sport and rivalries",
+    "Regions in history and boundaries"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 4,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Yorkshire",
+      "facet": "Historic counties of England",
+      "known_at": 3
+    },
+    {
+      "name": "Cornwall",
+      "facet": "Historic counties of England",
+      "known_at": 3
+    },
+    {
+      "name": "Kent",
+      "facet": "Historic counties of England",
+      "known_at": 4
+    },
+    {
+      "name": "Devon",
+      "facet": "Historic counties of England",
+      "known_at": 4
+    },
+    {
+      "name": "Essex",
+      "facet": "Historic counties of England",
+      "known_at": 4
+    },
+    {
+      "name": "Lancashire",
+      "facet": "Historic counties of England",
+      "known_at": 5
+    },
+    {
+      "name": "Norfolk",
+      "facet": "Historic counties of England",
+      "known_at": 5
+    },
+    {
+      "name": "Somerset",
+      "facet": "Historic counties of England",
+      "known_at": 5
+    },
+    {
+      "name": "Sussex",
+      "facet": "Historic counties of England",
+      "known_at": 5
+    },
+    {
+      "name": "Surrey",
+      "facet": "Historic counties of England",
+      "known_at": 5
+    },
+    {
+      "name": "Hampshire",
+      "facet": "Historic counties of England",
+      "known_at": 5
+    },
+    {
+      "name": "Suffolk",
+      "facet": "Historic counties of England",
+      "known_at": 6
+    },
+    {
+      "name": "Dorset",
+      "facet": "Historic counties of England",
+      "known_at": 6
+    },
+    {
+      "name": "Cheshire",
+      "facet": "Historic counties of England",
+      "known_at": 6
+    },
+    {
+      "name": "Oxfordshire",
+      "facet": "Historic counties of England",
+      "known_at": 6
+    },
+    {
+      "name": "Northumberland",
+      "facet": "Historic counties of England",
+      "known_at": 7
+    },
+    {
+      "name": "Lincolnshire",
+      "facet": "Historic counties of England",
+      "known_at": 7
+    },
+    {
+      "name": "Wiltshire",
+      "facet": "Historic counties of England",
+      "known_at": 7
+    },
+    {
+      "name": "Gloucestershire",
+      "facet": "Historic counties of England",
+      "known_at": 7
+    },
+    {
+      "name": "Shropshire",
+      "facet": "Historic counties of England",
+      "known_at": 8
+    },
+    {
+      "name": "Cumberland",
+      "facet": "Historic counties of England",
+      "known_at": 8
+    },
+    {
+      "name": "Rutland",
+      "facet": "Historic counties of England",
+      "known_at": 9
+    },
+    {
+      "name": "Middlesex",
+      "facet": "Historic counties of England",
+      "known_at": 9
+    },
+    {
+      "name": "Westmorland",
+      "facet": "Historic counties of England",
+      "known_at": 11
+    },
+    {
+      "name": "Huntingdonshire",
+      "facet": "Historic counties of England",
+      "known_at": 12
+    },
+    {
+      "name": "Highland",
+      "facet": "Scottish council areas and regions",
+      "known_at": 4
+    },
+    {
+      "name": "Fife",
+      "facet": "Scottish council areas and regions",
+      "known_at": 6
+    },
+    {
+      "name": "Aberdeenshire",
+      "facet": "Scottish council areas and regions",
+      "known_at": 7
+    },
+    {
+      "name": "Scottish Borders",
+      "facet": "Scottish council areas and regions",
+      "known_at": 8
+    },
+    {
+      "name": "Ayrshire",
+      "facet": "Scottish council areas and regions",
+      "known_at": 8
+    },
+    {
+      "name": "Dumfries and Galloway",
+      "facet": "Scottish council areas and regions",
+      "known_at": 9
+    },
+    {
+      "name": "Lothian",
+      "facet": "Scottish council areas and regions",
+      "known_at": 9
+    },
+    {
+      "name": "Lanarkshire",
+      "facet": "Scottish council areas and regions",
+      "known_at": 9
+    },
+    {
+      "name": "Central Belt",
+      "facet": "Scottish council areas and regions",
+      "known_at": 9
+    },
+    {
+      "name": "Argyll and Bute",
+      "facet": "Scottish council areas and regions",
+      "known_at": 10
+    },
+    {
+      "name": "Perth and Kinross",
+      "facet": "Scottish council areas and regions",
+      "known_at": 10
+    },
+    {
+      "name": "Strathclyde",
+      "facet": "Scottish council areas and regions",
+      "known_at": 10
+    },
+    {
+      "name": "Moray",
+      "facet": "Scottish council areas and regions",
+      "known_at": 10
+    },
+    {
+      "name": "Angus",
+      "facet": "Scottish council areas and regions",
+      "known_at": 10
+    },
+    {
+      "name": "Caithness",
+      "facet": "Scottish council areas and regions",
+      "known_at": 10
+    },
+    {
+      "name": "Sutherland",
+      "facet": "Scottish council areas and regions",
+      "known_at": 11
+    },
+    {
+      "name": "Grampian",
+      "facet": "Scottish council areas and regions",
+      "known_at": 11
+    },
+    {
+      "name": "Clackmannanshire",
+      "facet": "Scottish council areas and regions",
+      "known_at": 12
+    },
+    {
+      "name": "Na h-Eileanan Siar",
+      "facet": "Scottish council areas and regions",
+      "known_at": 13
+    },
+    {
+      "name": "North Wales",
+      "facet": "Welsh counties and regions",
+      "known_at": 4
+    },
+    {
+      "name": "South Wales",
+      "facet": "Welsh counties and regions",
+      "known_at": 4
+    },
+    {
+      "name": "The Valleys",
+      "facet": "Welsh counties and regions",
+      "known_at": 7
+    },
+    {
+      "name": "Pembrokeshire",
+      "facet": "Welsh counties and regions",
+      "known_at": 7
+    },
+    {
+      "name": "Glamorgan",
+      "facet": "Welsh counties and regions",
+      "known_at": 8
+    },
+    {
+      "name": "Mid Wales",
+      "facet": "Welsh counties and regions",
+      "known_at": 8
+    },
+    {
+      "name": "Gwynedd",
+      "facet": "Welsh counties and regions",
+      "known_at": 9
+    },
+    {
+      "name": "Powys",
+      "facet": "Welsh counties and regions",
+      "known_at": 9
+    },
+    {
+      "name": "Carmarthenshire",
+      "facet": "Welsh counties and regions",
+      "known_at": 9
+    },
+    {
+      "name": "Conwy",
+      "facet": "Welsh counties and regions",
+      "known_at": 9
+    },
+    {
+      "name": "Ceredigion",
+      "facet": "Welsh counties and regions",
+      "known_at": 10
+    },
+    {
+      "name": "Monmouthshire",
+      "facet": "Welsh counties and regions",
+      "known_at": 10
+    },
+    {
+      "name": "Flintshire",
+      "facet": "Welsh counties and regions",
+      "known_at": 10
+    },
+    {
+      "name": "Gwent",
+      "facet": "Welsh counties and regions",
+      "known_at": 10
+    },
+    {
+      "name": "Rhondda Cynon Taf",
+      "facet": "Welsh counties and regions",
+      "known_at": 10
+    },
+    {
+      "name": "Denbighshire",
+      "facet": "Welsh counties and regions",
+      "known_at": 11
+    },
+    {
+      "name": "Clwyd",
+      "facet": "Welsh counties and regions",
+      "known_at": 11
+    },
+    {
+      "name": "Dyfed",
+      "facet": "Welsh counties and regions",
+      "known_at": 12
+    },
+    {
+      "name": "Brecknockshire",
+      "facet": "Welsh counties and regions",
+      "known_at": 12
+    },
+    {
+      "name": "Antrim",
+      "facet": "Counties of Northern Ireland",
+      "known_at": 6
+    },
+    {
+      "name": "Ulster",
+      "facet": "Counties of Northern Ireland",
+      "known_at": 6
+    },
+    {
+      "name": "Down",
+      "facet": "Counties of Northern Ireland",
+      "known_at": 7
+    },
+    {
+      "name": "Londonderry",
+      "facet": "Counties of Northern Ireland",
+      "known_at": 8
+    },
+    {
+      "name": "Lough Neagh",
+      "facet": "Counties of Northern Ireland",
+      "known_at": 8
+    },
+    {
+      "name": "Fermanagh",
+      "facet": "Counties of Northern Ireland",
+      "known_at": 9
+    },
+    {
+      "name": "Tyrone",
+      "facet": "Counties of Northern Ireland",
+      "known_at": 9
+    },
+    {
+      "name": "Six Counties",
+      "facet": "Counties of Northern Ireland",
+      "known_at": 9
+    },
+    {
+      "name": "Mourne Mountains",
+      "facet": "Counties of Northern Ireland",
+      "known_at": 9
+    },
+    {
+      "name": "Glens of Antrim",
+      "facet": "Counties of Northern Ireland",
+      "known_at": 10
+    },
+    {
+      "name": "Lough Erne",
+      "facet": "Counties of Northern Ireland",
+      "known_at": 10
+    },
+    {
+      "name": "Causeway Coast",
+      "facet": "Counties of Northern Ireland",
+      "known_at": 10
+    },
+    {
+      "name": "Strangford Lough",
+      "facet": "Counties of Northern Ireland",
+      "known_at": 11
+    },
+    {
+      "name": "Sperrin Mountains",
+      "facet": "Counties of Northern Ireland",
+      "known_at": 12
+    },
+    {
+      "name": "Ipswich",
+      "facet": "County towns and cities",
+      "known_at": 7
+    },
+    {
+      "name": "Derby",
+      "facet": "County towns and cities",
+      "known_at": 7
+    },
+    {
+      "name": "Truro",
+      "facet": "County towns and cities",
+      "known_at": 8
+    },
+    {
+      "name": "Reading",
+      "facet": "County towns and cities",
+      "known_at": 8
+    },
+    {
+      "name": "Maidstone",
+      "facet": "County towns and cities",
+      "known_at": 9
+    },
+    {
+      "name": "Chelmsford",
+      "facet": "County towns and cities",
+      "known_at": 9
+    },
+    {
+      "name": "Taunton",
+      "facet": "County towns and cities",
+      "known_at": 9
+    },
+    {
+      "name": "Carlisle",
+      "facet": "County towns and cities",
+      "known_at": 9
+    },
+    {
+      "name": "Stafford",
+      "facet": "County towns and cities",
+      "known_at": 9
+    },
+    {
+      "name": "Dorchester",
+      "facet": "County towns and cities",
+      "known_at": 10
+    },
+    {
+      "name": "Lewes",
+      "facet": "County towns and cities",
+      "known_at": 11
+    },
+    {
+      "name": "Aylesbury",
+      "facet": "County towns and cities",
+      "known_at": 11
+    },
+    {
+      "name": "Hertford",
+      "facet": "County towns and cities",
+      "known_at": 11
+    },
+    {
+      "name": "Oakham",
+      "facet": "County towns and cities",
+      "known_at": 13
+    },
+    {
+      "name": "Welsh dragon",
+      "facet": "County nicknames and symbols",
+      "known_at": 4
+    },
+    {
+      "name": "Cheshire Cat",
+      "facet": "County nicknames and symbols",
+      "known_at": 5
+    },
+    {
+      "name": "White Rose of Yorkshire",
+      "facet": "County nicknames and symbols",
+      "known_at": 6
+    },
+    {
+      "name": "Red Rose of Lancashire",
+      "facet": "County nicknames and symbols",
+      "known_at": 7
+    },
+    {
+      "name": "Garden of England",
+      "facet": "County nicknames and symbols",
+      "known_at": 8
+    },
+    {
+      "name": "St Piran's Flag",
+      "facet": "County nicknames and symbols",
+      "known_at": 8
+    },
+    {
+      "name": "Kernow",
+      "facet": "County nicknames and symbols",
+      "known_at": 9
+    },
+    {
+      "name": "God's Own County",
+      "facet": "County nicknames and symbols",
+      "known_at": 9
+    },
+    {
+      "name": "Invicta",
+      "facet": "County nicknames and symbols",
+      "known_at": 10
+    },
+    {
+      "name": "Yorkshire Day",
+      "facet": "County nicknames and symbols",
+      "known_at": 10
+    },
+    {
+      "name": "Red Hand of Ulster",
+      "facet": "County nicknames and symbols",
+      "known_at": 10
+    },
+    {
+      "name": "Leicestershire fox",
+      "facet": "County nicknames and symbols",
+      "known_at": 10
+    },
+    {
+      "name": "Staffordshire knot",
+      "facet": "County nicknames and symbols",
+      "known_at": 11
+    },
+    {
+      "name": "Devon flag",
+      "facet": "County nicknames and symbols",
+      "known_at": 11
+    },
+    {
+      "name": "Salop",
+      "facet": "County nicknames and symbols",
+      "known_at": 12
+    },
+    {
+      "name": "Silly Suffolk",
+      "facet": "County nicknames and symbols",
+      "known_at": 12
+    },
+    {
+      "name": "Lincolnshire Poacher",
+      "facet": "County nicknames and symbols",
+      "known_at": 12
+    },
+    {
+      "name": "Sussex martlets",
+      "facet": "County nicknames and symbols",
+      "known_at": 13
+    },
+    {
+      "name": "Multum in Parvo",
+      "facet": "County nicknames and symbols",
+      "known_at": 14
+    },
+    {
+      "name": "Cornish pasty",
+      "facet": "Regional food and drink",
+      "known_at": 3
+    },
+    {
+      "name": "Cheddar",
+      "facet": "Regional food and drink",
+      "known_at": 4
+    },
+    {
+      "name": "Haggis",
+      "facet": "Regional food and drink",
+      "known_at": 4
+    },
+    {
+      "name": "Shortbread",
+      "facet": "Regional food and drink",
+      "known_at": 4
+    },
+    {
+      "name": "Cream tea",
+      "facet": "Regional food and drink",
+      "known_at": 5
+    },
+    {
+      "name": "Irn-Bru",
+      "facet": "Regional food and drink",
+      "known_at": 6
+    },
+    {
+      "name": "Cumberland sausage",
+      "facet": "Regional food and drink",
+      "known_at": 7
+    },
+    {
+      "name": "Wensleydale",
+      "facet": "Regional food and drink",
+      "known_at": 7
+    },
+    {
+      "name": "Welsh cakes",
+      "facet": "Regional food and drink",
+      "known_at": 7
+    },
+    {
+      "name": "Black pudding",
+      "facet": "Regional food and drink",
+      "known_at": 7
+    },
+    {
+      "name": "Lancashire hotpot",
+      "facet": "Regional food and drink",
+      "known_at": 8
+    },
+    {
+      "name": "Stilton",
+      "facet": "Regional food and drink",
+      "known_at": 8
+    },
+    {
+      "name": "Welsh rarebit",
+      "facet": "Regional food and drink",
+      "known_at": 8
+    },
+    {
+      "name": "Bara brith",
+      "facet": "Regional food and drink",
+      "known_at": 10
+    },
+    {
+      "name": "Balti",
+      "facet": "Regional food and drink",
+      "known_at": 10
+    },
+    {
+      "name": "Ulster fry",
+      "facet": "Regional food and drink",
+      "known_at": 10
+    },
+    {
+      "name": "Cullen skink",
+      "facet": "Regional food and drink",
+      "known_at": 11
+    },
+    {
+      "name": "Stottie cake",
+      "facet": "Regional food and drink",
+      "known_at": 11
+    },
+    {
+      "name": "Parkin",
+      "facet": "Regional food and drink",
+      "known_at": 11
+    },
+    {
+      "name": "Laverbread",
+      "facet": "Regional food and drink",
+      "known_at": 12
+    },
+    {
+      "name": "Welsh language",
+      "facet": "Regional accents and dialects",
+      "known_at": 5
+    },
+    {
+      "name": "Scouse",
+      "facet": "Regional accents and dialects",
+      "known_at": 6
+    },
+    {
+      "name": "Wee",
+      "facet": "Regional accents and dialects",
+      "known_at": 6
+    },
+    {
+      "name": "West Country accent",
+      "facet": "Regional accents and dialects",
+      "known_at": 7
+    },
+    {
+      "name": "Yorkshire dialect",
+      "facet": "Regional accents and dialects",
+      "known_at": 7
+    },
+    {
+      "name": "Scottish Gaelic",
+      "facet": "Regional accents and dialects",
+      "known_at": 8
+    },
+    {
+      "name": "Scots language",
+      "facet": "Regional accents and dialects",
+      "known_at": 10
+    },
+    {
+      "name": "Cornish language",
+      "facet": "Regional accents and dialects",
+      "known_at": 10
+    },
+    {
+      "name": "Ey up",
+      "facet": "Regional accents and dialects",
+      "known_at": 10
+    },
+    {
+      "name": "Received Pronunciation",
+      "facet": "Regional accents and dialects",
+      "known_at": 11
+    },
+    {
+      "name": "Bairn",
+      "facet": "Regional accents and dialects",
+      "known_at": 11
+    },
+    {
+      "name": "Mardy",
+      "facet": "Regional accents and dialects",
+      "known_at": 11
+    },
+    {
+      "name": "Lush",
+      "facet": "Regional accents and dialects",
+      "known_at": 11
+    },
+    {
+      "name": "Black Country dialect",
+      "facet": "Regional accents and dialects",
+      "known_at": 12
+    },
+    {
+      "name": "Estuary English",
+      "facet": "Regional accents and dialects",
+      "known_at": 13
+    },
+    {
+      "name": "Doric",
+      "facet": "Regional accents and dialects",
+      "known_at": 13
+    },
+    {
+      "name": "Ulster Scots",
+      "facet": "Regional accents and dialects",
+      "known_at": 13
+    },
+    {
+      "name": "Loch Ness",
+      "facet": "National parks and landscapes",
+      "known_at": 3
+    },
+    {
+      "name": "Lake District",
+      "facet": "National parks and landscapes",
+      "known_at": 4
+    },
+    {
+      "name": "Ben Nevis",
+      "facet": "National parks and landscapes",
+      "known_at": 5
+    },
+    {
+      "name": "Peak District",
+      "facet": "National parks and landscapes",
+      "known_at": 6
+    },
+    {
+      "name": "Snowdonia",
+      "facet": "National parks and landscapes",
+      "known_at": 6
+    },
+    {
+      "name": "Dartmoor",
+      "facet": "National parks and landscapes",
+      "known_at": 6
+    },
+    {
+      "name": "Yorkshire Dales",
+      "facet": "National parks and landscapes",
+      "known_at": 6
+    },
+    {
+      "name": "New Forest",
+      "facet": "National parks and landscapes",
+      "known_at": 7
+    },
+    {
+      "name": "Cotswolds",
+      "facet": "National parks and landscapes",
+      "known_at": 7
+    },
+    {
+      "name": "Exmoor",
+      "facet": "National parks and landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "North York Moors",
+      "facet": "National parks and landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "South Downs",
+      "facet": "National parks and landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "Brecon Beacons",
+      "facet": "National parks and landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "Cairngorms",
+      "facet": "National parks and landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "The Broads",
+      "facet": "National parks and landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "Scafell Pike",
+      "facet": "National parks and landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "Pennines",
+      "facet": "National parks and landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "Cheddar Gorge",
+      "facet": "National parks and landscapes",
+      "known_at": 8
+    },
+    {
+      "name": "Loch Lomond and the Trossachs",
+      "facet": "National parks and landscapes",
+      "known_at": 9
+    },
+    {
+      "name": "The Fens",
+      "facet": "National parks and landscapes",
+      "known_at": 9
+    },
+    {
+      "name": "Glen Coe",
+      "facet": "National parks and landscapes",
+      "known_at": 10
+    },
+    {
+      "name": "Chiltern Hills",
+      "facet": "National parks and landscapes",
+      "known_at": 10
+    },
+    {
+      "name": "Northumberland National Park",
+      "facet": "National parks and landscapes",
+      "known_at": 10
+    },
+    {
+      "name": "Malvern Hills",
+      "facet": "National parks and landscapes",
+      "known_at": 11
+    },
+    {
+      "name": "White Cliffs of Dover",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 4
+    },
+    {
+      "name": "Isle of Wight",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 5
+    },
+    {
+      "name": "Land's End",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 5
+    },
+    {
+      "name": "Isle of Man",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 6
+    },
+    {
+      "name": "John o' Groats",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 6
+    },
+    {
+      "name": "Giant's Causeway",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 6
+    },
+    {
+      "name": "Isle of Skye",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 7
+    },
+    {
+      "name": "Jurassic Coast",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 7
+    },
+    {
+      "name": "Jersey",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 7
+    },
+    {
+      "name": "Anglesey",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 8
+    },
+    {
+      "name": "Orkney",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 8
+    },
+    {
+      "name": "Shetland",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 8
+    },
+    {
+      "name": "Durdle Door",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 8
+    },
+    {
+      "name": "St Michael's Mount",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 8
+    },
+    {
+      "name": "Outer Hebrides",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 9
+    },
+    {
+      "name": "Isles of Scilly",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 9
+    },
+    {
+      "name": "Lindisfarne",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 9
+    },
+    {
+      "name": "Severn Estuary",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 9
+    },
+    {
+      "name": "Gower Peninsula",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 10
+    },
+    {
+      "name": "The Wash",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 10
+    },
+    {
+      "name": "Morecambe Bay",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 10
+    },
+    {
+      "name": "Wirral",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 10
+    },
+    {
+      "name": "Lizard Point",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 10
+    },
+    {
+      "name": "Kintyre",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 11
+    },
+    {
+      "name": "Farne Islands",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 11
+    },
+    {
+      "name": "Iona",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 11
+    },
+    {
+      "name": "St Kilda",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 12
+    },
+    {
+      "name": "Lundy",
+      "facet": "Coasts, islands and peninsulas",
+      "known_at": 12
+    },
+    {
+      "name": "Highland Games",
+      "facet": "County sport and rivalries",
+      "known_at": 6
+    },
+    {
+      "name": "Caber toss",
+      "facet": "County sport and rivalries",
+      "known_at": 6
+    },
+    {
+      "name": "Manchester derby",
+      "facet": "County sport and rivalries",
+      "known_at": 7
+    },
+    {
+      "name": "Six Nations",
+      "facet": "County sport and rivalries",
+      "known_at": 7
+    },
+    {
+      "name": "Merseyside derby",
+      "facet": "County sport and rivalries",
+      "known_at": 8
+    },
+    {
+      "name": "Old Firm",
+      "facet": "County sport and rivalries",
+      "known_at": 8
+    },
+    {
+      "name": "North London derby",
+      "facet": "County sport and rivalries",
+      "known_at": 8
+    },
+    {
+      "name": "Yorkshire County Cricket Club",
+      "facet": "County sport and rivalries",
+      "known_at": 8
+    },
+    {
+      "name": "Boat Race",
+      "facet": "County sport and rivalries",
+      "known_at": 8
+    },
+    {
+      "name": "Tyne–Wear derby",
+      "facet": "County sport and rivalries",
+      "known_at": 9
+    },
+    {
+      "name": "Lancashire County Cricket Club",
+      "facet": "County sport and rivalries",
+      "known_at": 9
+    },
+    {
+      "name": "County Championship",
+      "facet": "County sport and rivalries",
+      "known_at": 10
+    },
+    {
+      "name": "Calcutta Cup",
+      "facet": "County sport and rivalries",
+      "known_at": 10
+    },
+    {
+      "name": "Roses Match",
+      "facet": "County sport and rivalries",
+      "known_at": 11
+    },
+    {
+      "name": "Shinty",
+      "facet": "County sport and rivalries",
+      "known_at": 11
+    },
+    {
+      "name": "Edinburgh derby",
+      "facet": "County sport and rivalries",
+      "known_at": 11
+    },
+    {
+      "name": "Ashbourne Royal Shrovetide Football",
+      "facet": "County sport and rivalries",
+      "known_at": 12
+    },
+    {
+      "name": "Cornish wrestling",
+      "facet": "County sport and rivalries",
+      "known_at": 13
+    },
+    {
+      "name": "Hadrian's Wall",
+      "facet": "Regions in history and boundaries",
+      "known_at": 6
+    },
+    {
+      "name": "West Midlands",
+      "facet": "Regions in history and boundaries",
+      "known_at": 6
+    },
+    {
+      "name": "Greater Manchester",
+      "facet": "Regions in history and boundaries",
+      "known_at": 6
+    },
+    {
+      "name": "East Anglia",
+      "facet": "Regions in history and boundaries",
+      "known_at": 7
+    },
+    {
+      "name": "Merseyside",
+      "facet": "Regions in history and boundaries",
+      "known_at": 7
+    },
+    {
+      "name": "Domesday Book",
+      "facet": "Regions in history and boundaries",
+      "known_at": 8
+    },
+    {
+      "name": "Tyne and Wear",
+      "facet": "Regions in history and boundaries",
+      "known_at": 8
+    },
+    {
+      "name": "Wessex",
+      "facet": "Regions in history and boundaries",
+      "known_at": 9
+    },
+    {
+      "name": "Home Counties",
+      "facet": "Regions in history and boundaries",
+      "known_at": 9
+    },
+    {
+      "name": "Shires",
+      "facet": "Regions in history and boundaries",
+      "known_at": 9
+    },
+    {
+      "name": "Mercia",
+      "facet": "Regions in history and boundaries",
+      "known_at": 10
+    },
+    {
+      "name": "Northumbria",
+      "facet": "Regions in history and boundaries",
+      "known_at": 10
+    },
+    {
+      "name": "Offa's Dyke",
+      "facet": "Regions in history and boundaries",
+      "known_at": 10
+    },
+    {
+      "name": "North–South divide",
+      "facet": "Regions in history and boundaries",
+      "known_at": 10
+    },
+    {
+      "name": "Danelaw",
+      "facet": "Regions in history and boundaries",
+      "known_at": 11
+    },
+    {
+      "name": "Watford Gap",
+      "facet": "Regions in history and boundaries",
+      "known_at": 11
+    },
+    {
+      "name": "Act of Union 1707",
+      "facet": "Regions in history and boundaries",
+      "known_at": 11
+    },
+    {
+      "name": "Partition of Ireland",
+      "facet": "Regions in history and boundaries",
+      "known_at": 11
+    },
+    {
+      "name": "Antonine Wall",
+      "facet": "Regions in history and boundaries",
+      "known_at": 12
+    },
+    {
+      "name": "Ridings of Yorkshire",
+      "facet": "Regions in history and boundaries",
+      "known_at": 12
+    },
+    {
+      "name": "Avon",
+      "facet": "Regions in history and boundaries",
+      "known_at": 12
+    },
+    {
+      "name": "Humberside",
+      "facet": "Regions in history and boundaries",
+      "known_at": 12
+    },
+    {
+      "name": "Metropolitan county",
+      "facet": "Regions in history and boundaries",
+      "known_at": 13
+    },
+    {
+      "name": "Welsh Marches",
+      "facet": "Regions in history and boundaries",
+      "known_at": 13
+    },
+    {
+      "name": "Local Government Act 1974",
+      "facet": "Regions in history and boundaries",
+      "known_at": 14
+    }
+  ]
+}

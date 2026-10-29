@@ -1,0 +1,1112 @@
+{
+  "subcategory": "parliament-and-prime-ministers",
+  "facets": [
+    "Famous prime ministers",
+    "Palace of Westminster and Big Ben",
+    "House of Commons customs",
+    "House of Lords and peers",
+    "Downing Street and Chequers",
+    "Elections and voting rights",
+    "Political parties and their colours",
+    "Landmark Acts of Parliament",
+    "Royal role in Parliament",
+    "Parliamentary words and jargon",
+    "Plots, scandals and dramatic moments",
+    "Devolved parliaments and assemblies"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Boris Johnson",
+      "facet": "Famous prime ministers",
+      "known_at": 5
+    },
+    {
+      "name": "Rishi Sunak",
+      "facet": "Famous prime ministers",
+      "known_at": 6
+    },
+    {
+      "name": "Keir Starmer",
+      "facet": "Famous prime ministers",
+      "known_at": 6
+    },
+    {
+      "name": "Liz Truss",
+      "facet": "Famous prime ministers",
+      "known_at": 7
+    },
+    {
+      "name": "Theresa May",
+      "facet": "Famous prime ministers",
+      "known_at": 8
+    },
+    {
+      "name": "David Cameron",
+      "facet": "Famous prime ministers",
+      "known_at": 8
+    },
+    {
+      "name": "Gordon Brown",
+      "facet": "Famous prime ministers",
+      "known_at": 9
+    },
+    {
+      "name": "Elizabeth Tower",
+      "facet": "Palace of Westminster and Big Ben",
+      "known_at": 7
+    },
+    {
+      "name": "Parliament Square",
+      "facet": "Palace of Westminster and Big Ben",
+      "known_at": 8
+    },
+    {
+      "name": "Great Clock of Westminster",
+      "facet": "Palace of Westminster and Big Ben",
+      "known_at": 9
+    },
+    {
+      "name": "Portcullis emblem",
+      "facet": "Palace of Westminster and Big Ben",
+      "known_at": 10
+    },
+    {
+      "name": "Great Fire of 1834",
+      "facet": "Palace of Westminster and Big Ben",
+      "known_at": 12
+    },
+    {
+      "name": "Gothic Revival",
+      "facet": "Palace of Westminster and Big Ben",
+      "known_at": 12
+    },
+    {
+      "name": "Oliver Cromwell statue",
+      "facet": "Palace of Westminster and Big Ben",
+      "known_at": 12
+    },
+    {
+      "name": "Victoria Tower",
+      "facet": "Palace of Westminster and Big Ben",
+      "known_at": 13
+    },
+    {
+      "name": "Central Lobby",
+      "facet": "Palace of Westminster and Big Ben",
+      "known_at": 13
+    },
+    {
+      "name": "Whitechapel Bell Foundry",
+      "facet": "Palace of Westminster and Big Ben",
+      "known_at": 13
+    },
+    {
+      "name": "Charles Barry",
+      "facet": "Palace of Westminster and Big Ben",
+      "known_at": 14
+    },
+    {
+      "name": "Augustus Pugin",
+      "facet": "Palace of Westminster and Big Ben",
+      "known_at": 14
+    },
+    {
+      "name": "Ayrton Light",
+      "facet": "Palace of Westminster and Big Ben",
+      "known_at": 14
+    },
+    {
+      "name": "Jewel Tower",
+      "facet": "Palace of Westminster and Big Ben",
+      "known_at": 14
+    },
+    {
+      "name": "Restoration and Renewal",
+      "facet": "Palace of Westminster and Big Ben",
+      "known_at": 14
+    },
+    {
+      "name": "Order! Order!",
+      "facet": "House of Commons customs",
+      "known_at": 8
+    },
+    {
+      "name": "Leader of the Opposition",
+      "facet": "House of Commons customs",
+      "known_at": 8
+    },
+    {
+      "name": "Green benches",
+      "facet": "House of Commons customs",
+      "known_at": 9
+    },
+    {
+      "name": "Hear, hear",
+      "facet": "House of Commons customs",
+      "known_at": 9
+    },
+    {
+      "name": "Ayes and Noes",
+      "facet": "House of Commons customs",
+      "known_at": 10
+    },
+    {
+      "name": "Front bench",
+      "facet": "House of Commons customs",
+      "known_at": 10
+    },
+    {
+      "name": "Mace",
+      "facet": "House of Commons customs",
+      "known_at": 11
+    },
+    {
+      "name": "Despatch Box",
+      "facet": "House of Commons customs",
+      "known_at": 11
+    },
+    {
+      "name": "Maiden speech",
+      "facet": "House of Commons customs",
+      "known_at": 11
+    },
+    {
+      "name": "Sword lines",
+      "facet": "House of Commons customs",
+      "known_at": 12
+    },
+    {
+      "name": "Dragging the Speaker to the chair",
+      "facet": "House of Commons customs",
+      "known_at": 12
+    },
+    {
+      "name": "Division lobbies",
+      "facet": "House of Commons customs",
+      "known_at": 12
+    },
+    {
+      "name": "Unparliamentary language",
+      "facet": "House of Commons customs",
+      "known_at": 12
+    },
+    {
+      "name": "Prayers before a sitting",
+      "facet": "House of Commons customs",
+      "known_at": 13
+    },
+    {
+      "name": "Tellers",
+      "facet": "House of Commons customs",
+      "known_at": 13
+    },
+    {
+      "name": "Pairing",
+      "facet": "House of Commons customs",
+      "known_at": 14
+    },
+    {
+      "name": "Ten Minute Rule",
+      "facet": "House of Commons customs",
+      "known_at": 14
+    },
+    {
+      "name": "Snuff box at the door",
+      "facet": "House of Commons customs",
+      "known_at": 15
+    },
+    {
+      "name": "Opera hat for points of order",
+      "facet": "House of Commons customs",
+      "known_at": 15
+    },
+    {
+      "name": "Duke",
+      "facet": "House of Lords and peers",
+      "known_at": 6
+    },
+    {
+      "name": "Earl",
+      "facet": "House of Lords and peers",
+      "known_at": 9
+    },
+    {
+      "name": "Baron",
+      "facet": "House of Lords and peers",
+      "known_at": 9
+    },
+    {
+      "name": "Red benches",
+      "facet": "House of Lords and peers",
+      "known_at": 10
+    },
+    {
+      "name": "Coronet",
+      "facet": "House of Lords and peers",
+      "known_at": 10
+    },
+    {
+      "name": "Viscount",
+      "facet": "House of Lords and peers",
+      "known_at": 11
+    },
+    {
+      "name": "Ermine robes",
+      "facet": "House of Lords and peers",
+      "known_at": 11
+    },
+    {
+      "name": "Peerage",
+      "facet": "House of Lords and peers",
+      "known_at": 11
+    },
+    {
+      "name": "Supreme Court of the United Kingdom",
+      "facet": "House of Lords and peers",
+      "known_at": 11
+    },
+    {
+      "name": "Marquess",
+      "facet": "House of Lords and peers",
+      "known_at": 12
+    },
+    {
+      "name": "Hereditary peers",
+      "facet": "House of Lords and peers",
+      "known_at": 12
+    },
+    {
+      "name": "Life peers",
+      "facet": "House of Lords and peers",
+      "known_at": 12
+    },
+    {
+      "name": "Lord Chancellor",
+      "facet": "House of Lords and peers",
+      "known_at": 12
+    },
+    {
+      "name": "Lords Spiritual",
+      "facet": "House of Lords and peers",
+      "known_at": 13
+    },
+    {
+      "name": "Lord Speaker",
+      "facet": "House of Lords and peers",
+      "known_at": 13
+    },
+    {
+      "name": "Crossbenchers",
+      "facet": "House of Lords and peers",
+      "known_at": 13
+    },
+    {
+      "name": "Law Lords",
+      "facet": "House of Lords and peers",
+      "known_at": 14
+    },
+    {
+      "name": "Resignation Honours",
+      "facet": "House of Lords and peers",
+      "known_at": 14
+    },
+    {
+      "name": "Larry the cat",
+      "facet": "Downing Street and Chequers",
+      "known_at": 5
+    },
+    {
+      "name": "Downing Street front door",
+      "facet": "Downing Street and Chequers",
+      "known_at": 5
+    },
+    {
+      "name": "Downing Street Christmas tree",
+      "facet": "Downing Street and Chequers",
+      "known_at": 7
+    },
+    {
+      "name": "Chief Mouser to the Cabinet Office",
+      "facet": "Downing Street and Chequers",
+      "known_at": 8
+    },
+    {
+      "name": "Whitehall",
+      "facet": "Downing Street and Chequers",
+      "known_at": 8
+    },
+    {
+      "name": "Cabinet",
+      "facet": "Downing Street and Chequers",
+      "known_at": 8
+    },
+    {
+      "name": "Downing Street lectern",
+      "facet": "Downing Street and Chequers",
+      "known_at": 8
+    },
+    {
+      "name": "11 Downing Street",
+      "facet": "Downing Street and Chequers",
+      "known_at": 9
+    },
+    {
+      "name": "Chancellor of the Exchequer",
+      "facet": "Downing Street and Chequers",
+      "known_at": 9
+    },
+    {
+      "name": "Budget red box",
+      "facet": "Downing Street and Chequers",
+      "known_at": 9
+    },
+    {
+      "name": "Removal van",
+      "facet": "Downing Street and Chequers",
+      "known_at": 9
+    },
+    {
+      "name": "Palmerston the cat",
+      "facet": "Downing Street and Chequers",
+      "known_at": 10
+    },
+    {
+      "name": "Chequers",
+      "facet": "Downing Street and Chequers",
+      "known_at": 11
+    },
+    {
+      "name": "Cabinet Room",
+      "facet": "Downing Street and Chequers",
+      "known_at": 11
+    },
+    {
+      "name": "Downing Street gates",
+      "facet": "Downing Street and Chequers",
+      "known_at": 11
+    },
+    {
+      "name": "George Downing",
+      "facet": "Downing Street and Chequers",
+      "known_at": 14
+    },
+    {
+      "name": "Dorneywood",
+      "facet": "Downing Street and Chequers",
+      "known_at": 14
+    },
+    {
+      "name": "Chevening",
+      "facet": "Downing Street and Chequers",
+      "known_at": 14
+    },
+    {
+      "name": "General election",
+      "facet": "Elections and voting rights",
+      "known_at": 5
+    },
+    {
+      "name": "Polling station",
+      "facet": "Elections and voting rights",
+      "known_at": 6
+    },
+    {
+      "name": "Ballot paper",
+      "facet": "Elections and voting rights",
+      "known_at": 6
+    },
+    {
+      "name": "Brexit referendum",
+      "facet": "Elections and voting rights",
+      "known_at": 6
+    },
+    {
+      "name": "Polling day Thursday",
+      "facet": "Elections and voting rights",
+      "known_at": 8
+    },
+    {
+      "name": "Postal vote",
+      "facet": "Elections and voting rights",
+      "known_at": 8
+    },
+    {
+      "name": "Dogs at polling stations",
+      "facet": "Elections and voting rights",
+      "known_at": 8
+    },
+    {
+      "name": "Voting age",
+      "facet": "Elections and voting rights",
+      "known_at": 8
+    },
+    {
+      "name": "Constituency",
+      "facet": "Elections and voting rights",
+      "known_at": 9
+    },
+    {
+      "name": "Exit poll",
+      "facet": "Elections and voting rights",
+      "known_at": 10
+    },
+    {
+      "name": "By-election",
+      "facet": "Elections and voting rights",
+      "known_at": 10
+    },
+    {
+      "name": "First past the post",
+      "facet": "Elections and voting rights",
+      "known_at": 11
+    },
+    {
+      "name": "Hung parliament",
+      "facet": "Elections and voting rights",
+      "known_at": 11
+    },
+    {
+      "name": "Swingometer",
+      "facet": "Elections and voting rights",
+      "known_at": 11
+    },
+    {
+      "name": "Returning officer",
+      "facet": "Elections and voting rights",
+      "known_at": 11
+    },
+    {
+      "name": "Rotten boroughs",
+      "facet": "Elections and voting rights",
+      "known_at": 12
+    },
+    {
+      "name": "Hustings",
+      "facet": "Elections and voting rights",
+      "known_at": 12
+    },
+    {
+      "name": "Conservative blue",
+      "facet": "Political parties and their colours",
+      "known_at": 6
+    },
+    {
+      "name": "Labour red",
+      "facet": "Political parties and their colours",
+      "known_at": 6
+    },
+    {
+      "name": "Green Party",
+      "facet": "Political parties and their colours",
+      "known_at": 7
+    },
+    {
+      "name": "Liberal Democrats",
+      "facet": "Political parties and their colours",
+      "known_at": 8
+    },
+    {
+      "name": "Tories",
+      "facet": "Political parties and their colours",
+      "known_at": 8
+    },
+    {
+      "name": "Rosette",
+      "facet": "Political parties and their colours",
+      "known_at": 8
+    },
+    {
+      "name": "Lib Dem orange",
+      "facet": "Political parties and their colours",
+      "known_at": 9
+    },
+    {
+      "name": "Scottish National Party",
+      "facet": "Political parties and their colours",
+      "known_at": 9
+    },
+    {
+      "name": "Reform UK",
+      "facet": "Political parties and their colours",
+      "known_at": 9
+    },
+    {
+      "name": "UKIP",
+      "facet": "Political parties and their colours",
+      "known_at": 10
+    },
+    {
+      "name": "Party conference",
+      "facet": "Political parties and their colours",
+      "known_at": 10
+    },
+    {
+      "name": "Coalition government",
+      "facet": "Political parties and their colours",
+      "known_at": 10
+    },
+    {
+      "name": "Whigs",
+      "facet": "Political parties and their colours",
+      "known_at": 11
+    },
+    {
+      "name": "Plaid Cymru",
+      "facet": "Political parties and their colours",
+      "known_at": 11
+    },
+    {
+      "name": "Sinn Féin",
+      "facet": "Political parties and their colours",
+      "known_at": 11
+    },
+    {
+      "name": "Democratic Unionist Party",
+      "facet": "Political parties and their colours",
+      "known_at": 11
+    },
+    {
+      "name": "Red rose",
+      "facet": "Political parties and their colours",
+      "known_at": 11
+    },
+    {
+      "name": "Conservative oak tree logo",
+      "facet": "Political parties and their colours",
+      "known_at": 13
+    },
+    {
+      "name": "Social Democratic Party",
+      "facet": "Political parties and their colours",
+      "known_at": 13
+    },
+    {
+      "name": "National Health Service Act 1946",
+      "facet": "Landmark Acts of Parliament",
+      "known_at": 10
+    },
+    {
+      "name": "Acts of Union 1707",
+      "facet": "Landmark Acts of Parliament",
+      "known_at": 11
+    },
+    {
+      "name": "Slave Trade Act 1807",
+      "facet": "Landmark Acts of Parliament",
+      "known_at": 11
+    },
+    {
+      "name": "Slavery Abolition Act 1833",
+      "facet": "Landmark Acts of Parliament",
+      "known_at": 11
+    },
+    {
+      "name": "Equal Pay Act 1970",
+      "facet": "Landmark Acts of Parliament",
+      "known_at": 11
+    },
+    {
+      "name": "Human Rights Act 1998",
+      "facet": "Landmark Acts of Parliament",
+      "known_at": 11
+    },
+    {
+      "name": "Marriage (Same Sex Couples) Act 2013",
+      "facet": "Landmark Acts of Parliament",
+      "known_at": 11
+    },
+    {
+      "name": "Great Reform Act 1832",
+      "facet": "Landmark Acts of Parliament",
+      "known_at": 12
+    },
+    {
+      "name": "Sex Discrimination Act 1975",
+      "facet": "Landmark Acts of Parliament",
+      "known_at": 12
+    },
+    {
+      "name": "Smoking ban 2007",
+      "facet": "Landmark Acts of Parliament",
+      "known_at": 12
+    },
+    {
+      "name": "Act of Union 1800",
+      "facet": "Landmark Acts of Parliament",
+      "known_at": 13
+    },
+    {
+      "name": "Factory Act 1833",
+      "facet": "Landmark Acts of Parliament",
+      "known_at": 13
+    },
+    {
+      "name": "Mines Act 1842",
+      "facet": "Landmark Acts of Parliament",
+      "known_at": 13
+    },
+    {
+      "name": "Ballot Act 1872",
+      "facet": "Landmark Acts of Parliament",
+      "known_at": 13
+    },
+    {
+      "name": "Parliament Act 1911",
+      "facet": "Landmark Acts of Parliament",
+      "known_at": 13
+    },
+    {
+      "name": "Climate Change Act 2008",
+      "facet": "Landmark Acts of Parliament",
+      "known_at": 13
+    },
+    {
+      "name": "Life Peerages Act 1958",
+      "facet": "Landmark Acts of Parliament",
+      "known_at": 14
+    },
+    {
+      "name": "King's Speech",
+      "facet": "Royal role in Parliament",
+      "known_at": 8
+    },
+    {
+      "name": "Imperial State Crown",
+      "facet": "Royal role in Parliament",
+      "known_at": 8
+    },
+    {
+      "name": "Throne in the House of Lords",
+      "facet": "Royal role in Parliament",
+      "known_at": 9
+    },
+    {
+      "name": "Black Rod",
+      "facet": "Royal role in Parliament",
+      "known_at": 10
+    },
+    {
+      "name": "Monarch barred from the Commons",
+      "facet": "Royal role in Parliament",
+      "known_at": 10
+    },
+    {
+      "name": "Weekly audience with the Prime Minister",
+      "facet": "Royal role in Parliament",
+      "known_at": 10
+    },
+    {
+      "name": "Constitutional monarchy",
+      "facet": "Royal role in Parliament",
+      "known_at": 10
+    },
+    {
+      "name": "Royal Assent",
+      "facet": "Royal role in Parliament",
+      "known_at": 11
+    },
+    {
+      "name": "Dissolution of Parliament",
+      "facet": "Royal role in Parliament",
+      "known_at": 11
+    },
+    {
+      "name": "Prorogation",
+      "facet": "Royal role in Parliament",
+      "known_at": 12
+    },
+    {
+      "name": "Privy Council",
+      "facet": "Royal role in Parliament",
+      "known_at": 12
+    },
+    {
+      "name": "Kissing hands",
+      "facet": "Royal role in Parliament",
+      "known_at": 13
+    },
+    {
+      "name": "Royal prerogative",
+      "facet": "Royal role in Parliament",
+      "known_at": 13
+    },
+    {
+      "name": "Irish State Coach",
+      "facet": "Royal role in Parliament",
+      "known_at": 13
+    },
+    {
+      "name": "Hostage MP",
+      "facet": "Royal role in Parliament",
+      "known_at": 14
+    },
+    {
+      "name": "Robing Room",
+      "facet": "Royal role in Parliament",
+      "known_at": 14
+    },
+    {
+      "name": "Sword of State",
+      "facet": "Royal role in Parliament",
+      "known_at": 14
+    },
+    {
+      "name": "Le Roy le veult",
+      "facet": "Royal role in Parliament",
+      "known_at": 15
+    },
+    {
+      "name": "MP",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 5
+    },
+    {
+      "name": "Minister",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 7
+    },
+    {
+      "name": "Act of Parliament",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 8
+    },
+    {
+      "name": "Opposition",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 8
+    },
+    {
+      "name": "Bill",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 9
+    },
+    {
+      "name": "Backbencher",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 10
+    },
+    {
+      "name": "Shadow Cabinet",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 10
+    },
+    {
+      "name": "Honourable Member",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 10
+    },
+    {
+      "name": "Manifesto",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 10
+    },
+    {
+      "name": "Whip",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 11
+    },
+    {
+      "name": "Right Honourable",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 11
+    },
+    {
+      "name": "Recess",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 11
+    },
+    {
+      "name": "Hansard",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 12
+    },
+    {
+      "name": "Filibuster",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 12
+    },
+    {
+      "name": "Second reading",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 12
+    },
+    {
+      "name": "Select committee",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 12
+    },
+    {
+      "name": "Crossing the floor",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 12
+    },
+    {
+      "name": "Three-line whip",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 13
+    },
+    {
+      "name": "White paper",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 13
+    },
+    {
+      "name": "Green paper",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 13
+    },
+    {
+      "name": "Quorum",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 13
+    },
+    {
+      "name": "Chiltern Hundreds",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 14
+    },
+    {
+      "name": "The other place",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 14
+    },
+    {
+      "name": "Early day motion",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 14
+    },
+    {
+      "name": "Ping-pong",
+      "facet": "Parliamentary words and jargon",
+      "known_at": 14
+    },
+    {
+      "name": "Liz Truss lettuce",
+      "facet": "Plots, scandals and dramatic moments",
+      "known_at": 7
+    },
+    {
+      "name": "English Civil War",
+      "facet": "Plots, scandals and dramatic moments",
+      "known_at": 8
+    },
+    {
+      "name": "Partygate",
+      "facet": "Plots, scandals and dramatic moments",
+      "known_at": 9
+    },
+    {
+      "name": "Parliamentary expenses scandal",
+      "facet": "Plots, scandals and dramatic moments",
+      "known_at": 11
+    },
+    {
+      "name": "Resignation of Margaret Thatcher",
+      "facet": "Plots, scandals and dramatic moments",
+      "known_at": 11
+    },
+    {
+      "name": "Brexit meaningful votes",
+      "facet": "Plots, scandals and dramatic moments",
+      "known_at": 11
+    },
+    {
+      "name": "Black Wednesday",
+      "facet": "Plots, scandals and dramatic moments",
+      "known_at": 12
+    },
+    {
+      "name": "Thatcher the Milk Snatcher",
+      "facet": "Plots, scandals and dramatic moments",
+      "known_at": 12
+    },
+    {
+      "name": "2019 prorogation case",
+      "facet": "Plots, scandals and dramatic moments",
+      "known_at": 12
+    },
+    {
+      "name": "Profumo affair",
+      "facet": "Plots, scandals and dramatic moments",
+      "known_at": 13
+    },
+    {
+      "name": "Cash for questions",
+      "facet": "Plots, scandals and dramatic moments",
+      "known_at": 13
+    },
+    {
+      "name": "Michael Heseltine and the mace",
+      "facet": "Plots, scandals and dramatic moments",
+      "known_at": 13
+    },
+    {
+      "name": "Gina Miller",
+      "facet": "Plots, scandals and dramatic moments",
+      "known_at": 13
+    },
+    {
+      "name": "Wellington–Winchilsea duel",
+      "facet": "Plots, scandals and dramatic moments",
+      "known_at": 13
+    },
+    {
+      "name": "Suffragettes chained to the Ladies' Gallery grille",
+      "facet": "Plots, scandals and dramatic moments",
+      "known_at": 13
+    },
+    {
+      "name": "Pride's Purge",
+      "facet": "Plots, scandals and dramatic moments",
+      "known_at": 14
+    },
+    {
+      "name": "Emily Davison in the broom cupboard",
+      "facet": "Plots, scandals and dramatic moments",
+      "known_at": 14
+    },
+    {
+      "name": "Scottish Parliament",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 7
+    },
+    {
+      "name": "Nicola Sturgeon",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 8
+    },
+    {
+      "name": "Holyrood",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 9
+    },
+    {
+      "name": "Scottish independence referendum 2014",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 9
+    },
+    {
+      "name": "Northern Ireland Assembly",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 10
+    },
+    {
+      "name": "First Minister of Scotland",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 10
+    },
+    {
+      "name": "Alex Salmond",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 10
+    },
+    {
+      "name": "Stormont",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 11
+    },
+    {
+      "name": "First Minister of Wales",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 11
+    },
+    {
+      "name": "London Assembly",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 12
+    },
+    {
+      "name": "Ian Paisley",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 12
+    },
+    {
+      "name": "Michelle O'Neill",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 12
+    },
+    {
+      "name": "Mark Drakeford",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 12
+    },
+    {
+      "name": "Donald Dewar",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 13
+    },
+    {
+      "name": "Martin McGuinness",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 13
+    },
+    {
+      "name": "Scotland Act 1998",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 13
+    },
+    {
+      "name": "West Lothian question",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 14
+    },
+    {
+      "name": "Rhodri Morgan",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 14
+    },
+    {
+      "name": "Enric Miralles",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 15
+    },
+    {
+      "name": "Barnett formula",
+      "facet": "Devolved parliaments and assemblies",
+      "known_at": 15
+    }
+  ]
+}

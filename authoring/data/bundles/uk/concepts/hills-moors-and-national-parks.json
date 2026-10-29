@@ -1,0 +1,1042 @@
+{
+  "subcategory": "hills-moors-and-national-parks",
+  "facets": [
+    "Mountains and highest peaks",
+    "Lake District and the Lakes",
+    "Scottish Highlands and islands",
+    "Welsh mountains and Snowdonia",
+    "Moors and the Peak District",
+    "National parks and their landmarks",
+    "Downs, chalk hills and white horses",
+    "Hill walking and long-distance trails",
+    "Moorland wildlife and plants",
+    "Hill words and place names",
+    "Legends, writers and hills on screen",
+    "Hill farming, history and customs"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Slieve Donard",
+      "facet": "Mountains and highest peaks",
+      "known_at": 11
+    },
+    {
+      "name": "Ben Macdui",
+      "facet": "Mountains and highest peaks",
+      "known_at": 13
+    },
+    {
+      "name": "Cairn Gorm",
+      "facet": "Mountains and highest peaks",
+      "known_at": 11
+    },
+    {
+      "name": "Ben Lomond",
+      "facet": "Mountains and highest peaks",
+      "known_at": 11
+    },
+    {
+      "name": "Schiehallion",
+      "facet": "Mountains and highest peaks",
+      "known_at": 13
+    },
+    {
+      "name": "Ben Lawers",
+      "facet": "Mountains and highest peaks",
+      "known_at": 14
+    },
+    {
+      "name": "Cheviot Hills",
+      "facet": "Mountains and highest peaks",
+      "known_at": 12
+    },
+    {
+      "name": "Grampian Mountains",
+      "facet": "Mountains and highest peaks",
+      "known_at": 10
+    },
+    {
+      "name": "Cross Fell",
+      "facet": "Mountains and highest peaks",
+      "known_at": 14
+    },
+    {
+      "name": "The Wrekin",
+      "facet": "Mountains and highest peaks",
+      "known_at": 12
+    },
+    {
+      "name": "Southern Uplands",
+      "facet": "Mountains and highest peaks",
+      "known_at": 12
+    },
+    {
+      "name": "Helvellyn",
+      "facet": "Lake District and the Lakes",
+      "known_at": 9
+    },
+    {
+      "name": "Buttermere",
+      "facet": "Lake District and the Lakes",
+      "known_at": 11
+    },
+    {
+      "name": "Bassenthwaite Lake",
+      "facet": "Lake District and the Lakes",
+      "known_at": 13
+    },
+    {
+      "name": "Haweswater",
+      "facet": "Lake District and the Lakes",
+      "known_at": 13
+    },
+    {
+      "name": "Ambleside",
+      "facet": "Lake District and the Lakes",
+      "known_at": 11
+    },
+    {
+      "name": "Grasmere",
+      "facet": "Lake District and the Lakes",
+      "known_at": 11
+    },
+    {
+      "name": "Striding Edge",
+      "facet": "Lake District and the Lakes",
+      "known_at": 12
+    },
+    {
+      "name": "Skiddaw",
+      "facet": "Lake District and the Lakes",
+      "known_at": 11
+    },
+    {
+      "name": "Great Gable",
+      "facet": "Lake District and the Lakes",
+      "known_at": 13
+    },
+    {
+      "name": "Catbells",
+      "facet": "Lake District and the Lakes",
+      "known_at": 12
+    },
+    {
+      "name": "Castlerigg Stone Circle",
+      "facet": "Lake District and the Lakes",
+      "known_at": 12
+    },
+    {
+      "name": "Honister Pass",
+      "facet": "Lake District and the Lakes",
+      "known_at": 13
+    },
+    {
+      "name": "Glencoe",
+      "facet": "Scottish Highlands and islands",
+      "known_at": 9
+    },
+    {
+      "name": "Isle of Lewis",
+      "facet": "Scottish Highlands and islands",
+      "known_at": 11
+    },
+    {
+      "name": "The Cuillin",
+      "facet": "Scottish Highlands and islands",
+      "known_at": 12
+    },
+    {
+      "name": "Old Man of Storr",
+      "facet": "Scottish Highlands and islands",
+      "known_at": 11
+    },
+    {
+      "name": "Great Glen",
+      "facet": "Scottish Highlands and islands",
+      "known_at": 12
+    },
+    {
+      "name": "Buachaille Etive Mòr",
+      "facet": "Scottish Highlands and islands",
+      "known_at": 13
+    },
+    {
+      "name": "Quiraing",
+      "facet": "Scottish Highlands and islands",
+      "known_at": 13
+    },
+    {
+      "name": "Snowdon",
+      "facet": "Welsh mountains and Snowdonia",
+      "known_at": 4
+    },
+    {
+      "name": "Snowdon Mountain Railway",
+      "facet": "Welsh mountains and Snowdonia",
+      "known_at": 9
+    },
+    {
+      "name": "Pen y Fan",
+      "facet": "Welsh mountains and Snowdonia",
+      "known_at": 10
+    },
+    {
+      "name": "Tryfan",
+      "facet": "Welsh mountains and Snowdonia",
+      "known_at": 13
+    },
+    {
+      "name": "Cadair Idris",
+      "facet": "Welsh mountains and Snowdonia",
+      "known_at": 12
+    },
+    {
+      "name": "Cambrian Mountains",
+      "facet": "Welsh mountains and Snowdonia",
+      "known_at": 12
+    },
+    {
+      "name": "Crib Goch",
+      "facet": "Welsh mountains and Snowdonia",
+      "known_at": 13
+    },
+    {
+      "name": "Glyderau",
+      "facet": "Welsh mountains and Snowdonia",
+      "known_at": 14
+    },
+    {
+      "name": "Carneddau",
+      "facet": "Welsh mountains and Snowdonia",
+      "known_at": 14
+    },
+    {
+      "name": "Llanberis",
+      "facet": "Welsh mountains and Snowdonia",
+      "known_at": 11
+    },
+    {
+      "name": "Pyg Track",
+      "facet": "Welsh mountains and Snowdonia",
+      "known_at": 13
+    },
+    {
+      "name": "Betws-y-Coed",
+      "facet": "Welsh mountains and Snowdonia",
+      "known_at": 11
+    },
+    {
+      "name": "Black Mountains",
+      "facet": "Welsh mountains and Snowdonia",
+      "known_at": 13
+    },
+    {
+      "name": "Electric Mountain",
+      "facet": "Welsh mountains and Snowdonia",
+      "known_at": 13
+    },
+    {
+      "name": "Sugar Loaf",
+      "facet": "Welsh mountains and Snowdonia",
+      "known_at": 13
+    },
+    {
+      "name": "Clwydian Range",
+      "facet": "Welsh mountains and Snowdonia",
+      "known_at": 13
+    },
+    {
+      "name": "Bala Lake",
+      "facet": "Welsh mountains and Snowdonia",
+      "known_at": 13
+    },
+    {
+      "name": "Bodmin Moor",
+      "facet": "Moors and the Peak District",
+      "known_at": 10
+    },
+    {
+      "name": "Kinder Scout",
+      "facet": "Moors and the Peak District",
+      "known_at": 11
+    },
+    {
+      "name": "Mam Tor",
+      "facet": "Moors and the Peak District",
+      "known_at": 11
+    },
+    {
+      "name": "Stanage Edge",
+      "facet": "Moors and the Peak District",
+      "known_at": 12
+    },
+    {
+      "name": "Ilkley Moor",
+      "facet": "Moors and the Peak District",
+      "known_at": 12
+    },
+    {
+      "name": "Saddleworth Moor",
+      "facet": "Moors and the Peak District",
+      "known_at": 13
+    },
+    {
+      "name": "Dovedale",
+      "facet": "Moors and the Peak District",
+      "known_at": 12
+    },
+    {
+      "name": "Castleton",
+      "facet": "Moors and the Peak District",
+      "known_at": 12
+    },
+    {
+      "name": "Chatsworth House",
+      "facet": "Moors and the Peak District",
+      "known_at": 10
+    },
+    {
+      "name": "Blue John Cavern",
+      "facet": "Moors and the Peak District",
+      "known_at": 12
+    },
+    {
+      "name": "Ladybower Reservoir",
+      "facet": "Moors and the Peak District",
+      "known_at": 12
+    },
+    {
+      "name": "Haytor",
+      "facet": "Moors and the Peak District",
+      "known_at": 11
+    },
+    {
+      "name": "High Willhays",
+      "facet": "Moors and the Peak District",
+      "known_at": 14
+    },
+    {
+      "name": "Rannoch Moor",
+      "facet": "Moors and the Peak District",
+      "known_at": 13
+    },
+    {
+      "name": "Flow Country",
+      "facet": "Moors and the Peak District",
+      "known_at": 14
+    },
+    {
+      "name": "The Roaches",
+      "facet": "Moors and the Peak District",
+      "known_at": 13
+    },
+    {
+      "name": "Cairngorms National Park",
+      "facet": "National parks and their landmarks",
+      "known_at": 9
+    },
+    {
+      "name": "Loch Lomond and the Trossachs National Park",
+      "facet": "National parks and their landmarks",
+      "known_at": 11
+    },
+    {
+      "name": "Pembrokeshire Coast National Park",
+      "facet": "National parks and their landmarks",
+      "known_at": 11
+    },
+    {
+      "name": "South Downs National Park",
+      "facet": "National parks and their landmarks",
+      "known_at": 11
+    },
+    {
+      "name": "Sycamore Gap",
+      "facet": "National parks and their landmarks",
+      "known_at": 9
+    },
+    {
+      "name": "Malham Cove",
+      "facet": "National parks and their landmarks",
+      "known_at": 10
+    },
+    {
+      "name": "Ribblehead Viaduct",
+      "facet": "National parks and their landmarks",
+      "known_at": 11
+    },
+    {
+      "name": "Aysgarth Falls",
+      "facet": "National parks and their landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Ingleborough",
+      "facet": "National parks and their landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Gordale Scar",
+      "facet": "National parks and their landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Galloway Forest Park",
+      "facet": "National parks and their landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "National Trust",
+      "facet": "National parks and their landmarks",
+      "known_at": 7
+    },
+    {
+      "name": "Uffington White Horse",
+      "facet": "Downs, chalk hills and white horses",
+      "known_at": 9
+    },
+    {
+      "name": "Cerne Abbas Giant",
+      "facet": "Downs, chalk hills and white horses",
+      "known_at": 10
+    },
+    {
+      "name": "Long Man of Wilmington",
+      "facet": "Downs, chalk hills and white horses",
+      "known_at": 12
+    },
+    {
+      "name": "Westbury White Horse",
+      "facet": "Downs, chalk hills and white horses",
+      "known_at": 12
+    },
+    {
+      "name": "Kilburn White Horse",
+      "facet": "Downs, chalk hills and white horses",
+      "known_at": 13
+    },
+    {
+      "name": "North Downs",
+      "facet": "Downs, chalk hills and white horses",
+      "known_at": 11
+    },
+    {
+      "name": "Box Hill",
+      "facet": "Downs, chalk hills and white horses",
+      "known_at": 10
+    },
+    {
+      "name": "Silbury Hill",
+      "facet": "Downs, chalk hills and white horses",
+      "known_at": 12
+    },
+    {
+      "name": "Avebury",
+      "facet": "Downs, chalk hills and white horses",
+      "known_at": 11
+    },
+    {
+      "name": "Dragon Hill",
+      "facet": "Downs, chalk hills and white horses",
+      "known_at": 14
+    },
+    {
+      "name": "Salisbury Plain",
+      "facet": "Downs, chalk hills and white horses",
+      "known_at": 10
+    },
+    {
+      "name": "Devil's Dyke",
+      "facet": "Downs, chalk hills and white horses",
+      "known_at": 12
+    },
+    {
+      "name": "Lincolnshire Wolds",
+      "facet": "Downs, chalk hills and white horses",
+      "known_at": 13
+    },
+    {
+      "name": "Pennine Way",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 9
+    },
+    {
+      "name": "West Highland Way",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 10
+    },
+    {
+      "name": "Coast to Coast Walk",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 10
+    },
+    {
+      "name": "South West Coast Path",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 10
+    },
+    {
+      "name": "Offa's Dyke Path",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 11
+    },
+    {
+      "name": "Hadrian's Wall Path",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 11
+    },
+    {
+      "name": "The Ridgeway",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 12
+    },
+    {
+      "name": "Cotswold Way",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 12
+    },
+    {
+      "name": "South Downs Way",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 11
+    },
+    {
+      "name": "Great Glen Way",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 13
+    },
+    {
+      "name": "Cleveland Way",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 13
+    },
+    {
+      "name": "Alfred Wainwright",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 11
+    },
+    {
+      "name": "National Three Peaks Challenge",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 8
+    },
+    {
+      "name": "Yorkshire Three Peaks",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 11
+    },
+    {
+      "name": "Ordnance Survey map",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 6
+    },
+    {
+      "name": "Trig point",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 9
+    },
+    {
+      "name": "Mountain rescue",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 6
+    },
+    {
+      "name": "Right to roam",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 11
+    },
+    {
+      "name": "Countryside Code",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 7
+    },
+    {
+      "name": "Duke of Edinburgh's Award",
+      "facet": "Hill walking and long-distance trails",
+      "known_at": 7
+    },
+    {
+      "name": "Heather",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 4
+    },
+    {
+      "name": "Red grouse",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 9
+    },
+    {
+      "name": "Golden eagle",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 6
+    },
+    {
+      "name": "Red deer",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 4
+    },
+    {
+      "name": "Highland cow",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 2
+    },
+    {
+      "name": "Dartmoor pony",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 4
+    },
+    {
+      "name": "Exmoor pony",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 8
+    },
+    {
+      "name": "Mountain hare",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 8
+    },
+    {
+      "name": "Bracken",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 8
+    },
+    {
+      "name": "Gorse",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 7
+    },
+    {
+      "name": "Bilberry",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 9
+    },
+    {
+      "name": "Peat bog",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 9
+    },
+    {
+      "name": "Sphagnum moss",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 12
+    },
+    {
+      "name": "Curlew",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 10
+    },
+    {
+      "name": "Osprey",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 9
+    },
+    {
+      "name": "Scottish wildcat",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 9
+    },
+    {
+      "name": "Pine marten",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 10
+    },
+    {
+      "name": "Ptarmigan",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 12
+    },
+    {
+      "name": "Sundew",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 11
+    },
+    {
+      "name": "Adder",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 7
+    },
+    {
+      "name": "Hen harrier",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 12
+    },
+    {
+      "name": "Cottongrass",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 12
+    },
+    {
+      "name": "Merlin",
+      "facet": "Moorland wildlife and plants",
+      "known_at": 12
+    },
+    {
+      "name": "Munro",
+      "facet": "Hill words and place names",
+      "known_at": 9
+    },
+    {
+      "name": "Corbett",
+      "facet": "Hill words and place names",
+      "known_at": 13
+    },
+    {
+      "name": "Fell",
+      "facet": "Hill words and place names",
+      "known_at": 9
+    },
+    {
+      "name": "Tor",
+      "facet": "Hill words and place names",
+      "known_at": 9
+    },
+    {
+      "name": "Pike",
+      "facet": "Hill words and place names",
+      "known_at": 12
+    },
+    {
+      "name": "Ben",
+      "facet": "Hill words and place names",
+      "known_at": 7
+    },
+    {
+      "name": "Glen",
+      "facet": "Hill words and place names",
+      "known_at": 6
+    },
+    {
+      "name": "Loch",
+      "facet": "Hill words and place names",
+      "known_at": 4
+    },
+    {
+      "name": "Beck",
+      "facet": "Hill words and place names",
+      "known_at": 11
+    },
+    {
+      "name": "Cwm",
+      "facet": "Hill words and place names",
+      "known_at": 12
+    },
+    {
+      "name": "Llyn",
+      "facet": "Hill words and place names",
+      "known_at": 11
+    },
+    {
+      "name": "Corrie",
+      "facet": "Hill words and place names",
+      "known_at": 12
+    },
+    {
+      "name": "Brae",
+      "facet": "Hill words and place names",
+      "known_at": 11
+    },
+    {
+      "name": "Bothy",
+      "facet": "Hill words and place names",
+      "known_at": 11
+    },
+    {
+      "name": "Scree",
+      "facet": "Hill words and place names",
+      "known_at": 10
+    },
+    {
+      "name": "Dale",
+      "facet": "Hill words and place names",
+      "known_at": 8
+    },
+    {
+      "name": "Cairn",
+      "facet": "Hill words and place names",
+      "known_at": 8
+    },
+    {
+      "name": "Wold",
+      "facet": "Hill words and place names",
+      "known_at": 12
+    },
+    {
+      "name": "Coombe",
+      "facet": "Hill words and place names",
+      "known_at": 13
+    },
+    {
+      "name": "Ghyll",
+      "facet": "Hill words and place names",
+      "known_at": 13
+    },
+    {
+      "name": "Strath",
+      "facet": "Hill words and place names",
+      "known_at": 13
+    },
+    {
+      "name": "Crag",
+      "facet": "Hill words and place names",
+      "known_at": 9
+    },
+    {
+      "name": "Mynydd",
+      "facet": "Hill words and place names",
+      "known_at": 13
+    },
+    {
+      "name": "Sgurr",
+      "facet": "Hill words and place names",
+      "known_at": 14
+    },
+    {
+      "name": "The Hound of the Baskervilles",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 8
+    },
+    {
+      "name": "Wuthering Heights",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 9
+    },
+    {
+      "name": "Brontë sisters",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 9
+    },
+    {
+      "name": "William Wordsworth",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 7
+    },
+    {
+      "name": "Daffodils (poem)",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 8
+    },
+    {
+      "name": "Beatrix Potter",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 4
+    },
+    {
+      "name": "Peter Rabbit",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 2
+    },
+    {
+      "name": "Hill Top",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 11
+    },
+    {
+      "name": "Swallows and Amazons",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 10
+    },
+    {
+      "name": "Lorna Doone",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 13
+    },
+    {
+      "name": "Beast of Bodmin Moor",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 10
+    },
+    {
+      "name": "King Arthur",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 4
+    },
+    {
+      "name": "Glastonbury Tor",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 10
+    },
+    {
+      "name": "Glenfinnan Viaduct",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 7
+    },
+    {
+      "name": "Gelert",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 12
+    },
+    {
+      "name": "On Ilkla Moor Baht 'at",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 12
+    },
+    {
+      "name": "Postman Pat",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 3
+    },
+    {
+      "name": "All Creatures Great and Small",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 8
+    },
+    {
+      "name": "Heartbeat",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 12
+    },
+    {
+      "name": "Emmerdale",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 7
+    },
+    {
+      "name": "Braveheart",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 9
+    },
+    {
+      "name": "Outlander",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 11
+    },
+    {
+      "name": "Samuel Taylor Coleridge",
+      "facet": "Legends, writers and hills on screen",
+      "known_at": 12
+    },
+    {
+      "name": "Herdwick sheep",
+      "facet": "Hill farming, history and customs",
+      "known_at": 9
+    },
+    {
+      "name": "Swaledale sheep",
+      "facet": "Hill farming, history and customs",
+      "known_at": 12
+    },
+    {
+      "name": "Sheepdog trials",
+      "facet": "Hill farming, history and customs",
+      "known_at": 7
+    },
+    {
+      "name": "One Man and His Dog",
+      "facet": "Hill farming, history and customs",
+      "known_at": 11
+    },
+    {
+      "name": "Border collie",
+      "facet": "Hill farming, history and customs",
+      "known_at": 4
+    },
+    {
+      "name": "Dry stone wall",
+      "facet": "Hill farming, history and customs",
+      "known_at": 7
+    },
+    {
+      "name": "Highland Clearances",
+      "facet": "Hill farming, history and customs",
+      "known_at": 12
+    },
+    {
+      "name": "Kinder Scout Mass Trespass",
+      "facet": "Hill farming, history and customs",
+      "known_at": 13
+    },
+    {
+      "name": "Fell running",
+      "facet": "Hill farming, history and customs",
+      "known_at": 11
+    },
+    {
+      "name": "Maiden Castle",
+      "facet": "Hill farming, history and customs",
+      "known_at": 12
+    },
+    {
+      "name": "Peat cutting",
+      "facet": "Hill farming, history and customs",
+      "known_at": 12
+    },
+    {
+      "name": "Croft",
+      "facet": "Hill farming, history and customs",
+      "known_at": 11
+    },
+    {
+      "name": "Well dressing",
+      "facet": "Hill farming, history and customs",
+      "known_at": 12
+    },
+    {
+      "name": "Lambing",
+      "facet": "Hill farming, history and customs",
+      "known_at": 5
+    },
+    {
+      "name": "Bakewell pudding",
+      "facet": "Hill farming, history and customs",
+      "known_at": 9
+    },
+    {
+      "name": "Grasmere gingerbread",
+      "facet": "Hill farming, history and customs",
+      "known_at": 12
+    },
+    {
+      "name": "Glorious Twelfth",
+      "facet": "Hill farming, history and customs",
+      "known_at": 12
+    },
+    {
+      "name": "Blackhouse",
+      "facet": "Hill farming, history and customs",
+      "known_at": 13
+    }
+  ]
+}
