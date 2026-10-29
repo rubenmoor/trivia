@@ -1,0 +1,1072 @@
+{
+  "subcategory": "plants-and-forests",
+  "facets": [
+    "Heimische Laubbäume",
+    "Nadelbäume und Forstwirtschaft",
+    "Wildblumen und Wiesenpflanzen",
+    "Pilze im deutschen Wald",
+    "Beeren, Nüsse und Wildfrüchte",
+    "Giftpflanzen und Heilkräuter",
+    "Berühmte Wälder und Nationalparks",
+    "Waldnutzung, Jagd und Förster",
+    "Bäume in Bräuchen und Sagen",
+    "Pflanzen in Sprache und Redensarten",
+    "Waldsterben, Klima und Naturschutz",
+    "Garten, Feld und Nutzpflanzen"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 3,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Eiche",
+      "facet": "Heimische Laubbäume",
+      "known_at": 2
+    },
+    {
+      "name": "Rotbuche",
+      "facet": "Heimische Laubbäume",
+      "known_at": 5
+    },
+    {
+      "name": "Linde",
+      "facet": "Heimische Laubbäume",
+      "known_at": 5
+    },
+    {
+      "name": "Birke",
+      "facet": "Heimische Laubbäume",
+      "known_at": 3
+    },
+    {
+      "name": "Bergahorn",
+      "facet": "Heimische Laubbäume",
+      "known_at": 4
+    },
+    {
+      "name": "Rosskastanie",
+      "facet": "Heimische Laubbäume",
+      "known_at": 2
+    },
+    {
+      "name": "Esche",
+      "facet": "Heimische Laubbäume",
+      "known_at": 8
+    },
+    {
+      "name": "Schwarzerle",
+      "facet": "Heimische Laubbäume",
+      "known_at": 10
+    },
+    {
+      "name": "Pappel",
+      "facet": "Heimische Laubbäume",
+      "known_at": 6
+    },
+    {
+      "name": "Salweide",
+      "facet": "Heimische Laubbäume",
+      "known_at": 7
+    },
+    {
+      "name": "Trauerweide",
+      "facet": "Heimische Laubbäume",
+      "known_at": 5
+    },
+    {
+      "name": "Eberesche",
+      "facet": "Heimische Laubbäume",
+      "known_at": 8
+    },
+    {
+      "name": "Hainbuche",
+      "facet": "Heimische Laubbäume",
+      "known_at": 10
+    },
+    {
+      "name": "Feldulme",
+      "facet": "Heimische Laubbäume",
+      "known_at": 11
+    },
+    {
+      "name": "Elsbeere",
+      "facet": "Heimische Laubbäume",
+      "known_at": 14
+    },
+    {
+      "name": "Vogelkirsche",
+      "facet": "Heimische Laubbäume",
+      "known_at": 10
+    },
+    {
+      "name": "Espe",
+      "facet": "Heimische Laubbäume",
+      "known_at": 11
+    },
+    {
+      "name": "Feldahorn",
+      "facet": "Heimische Laubbäume",
+      "known_at": 10
+    },
+    {
+      "name": "Fichte",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 4
+    },
+    {
+      "name": "Kiefer",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 5
+    },
+    {
+      "name": "Weißtanne",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 6
+    },
+    {
+      "name": "Lärche",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 8
+    },
+    {
+      "name": "Eibe",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 9
+    },
+    {
+      "name": "Douglasie",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 12
+    },
+    {
+      "name": "Wacholder",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 9
+    },
+    {
+      "name": "Nordmanntanne",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 8
+    },
+    {
+      "name": "Tannenzapfen",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 2
+    },
+    {
+      "name": "Monokultur",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 10
+    },
+    {
+      "name": "Nachhaltigkeit",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 8
+    },
+    {
+      "name": "Hans Carl von Carlowitz",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 14
+    },
+    {
+      "name": "Baumharz",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 4
+    },
+    {
+      "name": "Festmeter",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 13
+    },
+    {
+      "name": "Jahresringe",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 3
+    },
+    {
+      "name": "Mischwald",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 6
+    },
+    {
+      "name": "Plenterwald",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 14
+    },
+    {
+      "name": "Kahlschlag",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 10
+    },
+    {
+      "name": "Aufforstung",
+      "facet": "Nadelbäume und Forstwirtschaft",
+      "known_at": 8
+    },
+    {
+      "name": "Gänseblümchen",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 1
+    },
+    {
+      "name": "Löwenzahn",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 1
+    },
+    {
+      "name": "Klatschmohn",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 4
+    },
+    {
+      "name": "Kornblume",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 6
+    },
+    {
+      "name": "Margerite",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 6
+    },
+    {
+      "name": "Hahnenfuß",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 9
+    },
+    {
+      "name": "Wiesenschaumkraut",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 11
+    },
+    {
+      "name": "Buschwindröschen",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 10
+    },
+    {
+      "name": "Schneeglöckchen",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 3
+    },
+    {
+      "name": "Veilchen",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 5
+    },
+    {
+      "name": "Klee",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 2
+    },
+    {
+      "name": "Vergissmeinnicht",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 5
+    },
+    {
+      "name": "Glockenblume",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 5
+    },
+    {
+      "name": "Edelweiß",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 7
+    },
+    {
+      "name": "Enzian",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 9
+    },
+    {
+      "name": "Schafgarbe",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 11
+    },
+    {
+      "name": "Wegwarte",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 12
+    },
+    {
+      "name": "Leberblümchen",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 12
+    },
+    {
+      "name": "Besenheide",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 9
+    },
+    {
+      "name": "Distel",
+      "facet": "Wildblumen und Wiesenpflanzen",
+      "known_at": 4
+    },
+    {
+      "name": "Fliegenpilz",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 1
+    },
+    {
+      "name": "Steinpilz",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 6
+    },
+    {
+      "name": "Pfifferling",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 6
+    },
+    {
+      "name": "Champignon",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 3
+    },
+    {
+      "name": "Grüner Knollenblätterpilz",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 10
+    },
+    {
+      "name": "Maronenröhrling",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 11
+    },
+    {
+      "name": "Parasol",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 11
+    },
+    {
+      "name": "Hallimasch",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 12
+    },
+    {
+      "name": "Krause Glucke",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 13
+    },
+    {
+      "name": "Birkenpilz",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 11
+    },
+    {
+      "name": "Schopftintling",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 13
+    },
+    {
+      "name": "Zunderschwamm",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 12
+    },
+    {
+      "name": "Satansröhrling",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 12
+    },
+    {
+      "name": "Gallenröhrling",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 13
+    },
+    {
+      "name": "Myzel",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 10
+    },
+    {
+      "name": "Pilzsachverständiger",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 10
+    },
+    {
+      "name": "Hexenring",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 9
+    },
+    {
+      "name": "Morchel",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 11
+    },
+    {
+      "name": "Riesenbovist",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 11
+    },
+    {
+      "name": "Burgundertrüffel",
+      "facet": "Pilze im deutschen Wald",
+      "known_at": 14
+    },
+    {
+      "name": "Heidelbeere",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 2
+    },
+    {
+      "name": "Brombeere",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 2
+    },
+    {
+      "name": "Himbeere",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 1
+    },
+    {
+      "name": "Walderdbeere",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 3
+    },
+    {
+      "name": "Preiselbeere",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 8
+    },
+    {
+      "name": "Schwarzer Holunder",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 7
+    },
+    {
+      "name": "Hagebutte",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 6
+    },
+    {
+      "name": "Schlehe",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 11
+    },
+    {
+      "name": "Haselnuss",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 2
+    },
+    {
+      "name": "Bucheckern",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 7
+    },
+    {
+      "name": "Eicheln",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 2
+    },
+    {
+      "name": "Esskastanie",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 6
+    },
+    {
+      "name": "Walnuss",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 3
+    },
+    {
+      "name": "Sanddorn",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 9
+    },
+    {
+      "name": "Mehlbeere",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 14
+    },
+    {
+      "name": "Kornelkirsche",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 13
+    },
+    {
+      "name": "Johannisbeere",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 4
+    },
+    {
+      "name": "Stachelbeere",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 5
+    },
+    {
+      "name": "Mispel",
+      "facet": "Beeren, Nüsse und Wildfrüchte",
+      "known_at": 13
+    },
+    {
+      "name": "Tollkirsche",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 8
+    },
+    {
+      "name": "Eisenhut",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 11
+    },
+    {
+      "name": "Fingerhut",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 9
+    },
+    {
+      "name": "Maiglöckchen",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 5
+    },
+    {
+      "name": "Herbstzeitlose",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 12
+    },
+    {
+      "name": "Riesenbärenklau",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 10
+    },
+    {
+      "name": "Gefleckter Schierling",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 12
+    },
+    {
+      "name": "Stechapfel",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 13
+    },
+    {
+      "name": "Goldregen",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 11
+    },
+    {
+      "name": "Jakobskreuzkraut",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 14
+    },
+    {
+      "name": "Brennnessel",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 2
+    },
+    {
+      "name": "Bärlauch",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 8
+    },
+    {
+      "name": "Kamille",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 4
+    },
+    {
+      "name": "Johanniskraut",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 11
+    },
+    {
+      "name": "Arnika",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 10
+    },
+    {
+      "name": "Spitzwegerich",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 10
+    },
+    {
+      "name": "Baldrian",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 10
+    },
+    {
+      "name": "Pfefferminze",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 3
+    },
+    {
+      "name": "Ringelblume",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 8
+    },
+    {
+      "name": "Hildegard von Bingen",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 11
+    },
+    {
+      "name": "Sebastian Kneipp",
+      "facet": "Giftpflanzen und Heilkräuter",
+      "known_at": 11
+    },
+    {
+      "name": "Urwald Sababurg",
+      "facet": "Berühmte Wälder und Nationalparks",
+      "known_at": 13
+    },
+    {
+      "name": "Förster",
+      "facet": "Waldnutzung, Jagd und Förster",
+      "known_at": 2
+    },
+    {
+      "name": "Jäger",
+      "facet": "Waldnutzung, Jagd und Förster",
+      "known_at": 2
+    },
+    {
+      "name": "Jagdhorn",
+      "facet": "Waldnutzung, Jagd und Förster",
+      "known_at": 6
+    },
+    {
+      "name": "Holzfäller",
+      "facet": "Waldnutzung, Jagd und Förster",
+      "known_at": 3
+    },
+    {
+      "name": "Köhler",
+      "facet": "Waldnutzung, Jagd und Förster",
+      "known_at": 11
+    },
+    {
+      "name": "Brennholz",
+      "facet": "Waldnutzung, Jagd und Förster",
+      "known_at": 3
+    },
+    {
+      "name": "Lodenmantel",
+      "facet": "Waldnutzung, Jagd und Förster",
+      "known_at": 12
+    },
+    {
+      "name": "Waldkindergarten",
+      "facet": "Waldnutzung, Jagd und Förster",
+      "known_at": 5
+    },
+    {
+      "name": "Harvester",
+      "facet": "Waldnutzung, Jagd und Förster",
+      "known_at": 10
+    },
+    {
+      "name": "Rückepferd",
+      "facet": "Waldnutzung, Jagd und Förster",
+      "known_at": 12
+    },
+    {
+      "name": "Futterkrippe",
+      "facet": "Waldnutzung, Jagd und Förster",
+      "known_at": 4
+    },
+    {
+      "name": "Jagdschein",
+      "facet": "Waldnutzung, Jagd und Förster",
+      "known_at": 9
+    },
+    {
+      "name": "Treibjagd",
+      "facet": "Waldnutzung, Jagd und Förster",
+      "known_at": 10
+    },
+    {
+      "name": "Sägewerk",
+      "facet": "Waldnutzung, Jagd und Förster",
+      "known_at": 5
+    },
+    {
+      "name": "Flößerei",
+      "facet": "Waldnutzung, Jagd und Förster",
+      "known_at": 11
+    },
+    {
+      "name": "Weihnachtsbaum",
+      "facet": "Bäume in Bräuchen und Sagen",
+      "known_at": 1
+    },
+    {
+      "name": "Adventskranz",
+      "facet": "Bäume in Bräuchen und Sagen",
+      "known_at": 2
+    },
+    {
+      "name": "Irminsul",
+      "facet": "Bäume in Bräuchen und Sagen",
+      "known_at": 14
+    },
+    {
+      "name": "Donareiche",
+      "facet": "Bäume in Bräuchen und Sagen",
+      "known_at": 13
+    },
+    {
+      "name": "Bonifatius",
+      "facet": "Bäume in Bräuchen und Sagen",
+      "known_at": 11
+    },
+    {
+      "name": "Dorflinde",
+      "facet": "Bäume in Bräuchen und Sagen",
+      "known_at": 11
+    },
+    {
+      "name": "Yggdrasil",
+      "facet": "Bäume in Bräuchen und Sagen",
+      "known_at": 11
+    },
+    {
+      "name": "Barbarazweig",
+      "facet": "Bäume in Bräuchen und Sagen",
+      "known_at": 11
+    },
+    {
+      "name": "Osterstrauch",
+      "facet": "Bäume in Bräuchen und Sagen",
+      "known_at": 5
+    },
+    {
+      "name": "Hänsel und Gretel",
+      "facet": "Bäume in Bräuchen und Sagen",
+      "known_at": 2
+    },
+    {
+      "name": "Erlkönig",
+      "facet": "Bäume in Bräuchen und Sagen",
+      "known_at": 10
+    },
+    {
+      "name": "Siegfried",
+      "facet": "Bäume in Bräuchen und Sagen",
+      "known_at": 10
+    },
+    {
+      "name": "Richtfest",
+      "facet": "Bäume in Bräuchen und Sagen",
+      "known_at": 9
+    },
+    {
+      "name": "O Tannenbaum",
+      "facet": "Bäume in Bräuchen und Sagen",
+      "known_at": 2
+    },
+    {
+      "name": "Eichenlaub auf Cent-Münzen",
+      "facet": "Bäume in Bräuchen und Sagen",
+      "known_at": 8
+    },
+    {
+      "name": "Der Lindenbaum",
+      "facet": "Bäume in Bräuchen und Sagen",
+      "known_at": 13
+    },
+    {
+      "name": "Den Wald vor lauter Bäumen nicht sehen",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 7
+    },
+    {
+      "name": "Auf dem Holzweg sein",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 6
+    },
+    {
+      "name": "Durch die Blume sagen",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 8
+    },
+    {
+      "name": "Mauerblümchen",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 9
+    },
+    {
+      "name": "Gras über etwas wachsen lassen",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 9
+    },
+    {
+      "name": "Wie Pilze aus dem Boden schießen",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 8
+    },
+    {
+      "name": "Unkraut vergeht nicht",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 7
+    },
+    {
+      "name": "Wie die Axt im Walde",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 7
+    },
+    {
+      "name": "Eine harte Nuss",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 5
+    },
+    {
+      "name": "Sauregurkenzeit",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 11
+    },
+    {
+      "name": "Rosinen picken",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 8
+    },
+    {
+      "name": "Tomaten auf den Augen haben",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 5
+    },
+    {
+      "name": "Nicht auf meinem Mist gewachsen",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 10
+    },
+    {
+      "name": "Die Kastanien aus dem Feuer holen",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 11
+    },
+    {
+      "name": "Das Gras wachsen hören",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 10
+    },
+    {
+      "name": "Mit jemandem ist nicht gut Kirschen essen",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 10
+    },
+    {
+      "name": "Auf keinen grünen Zweig kommen",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 10
+    },
+    {
+      "name": "Der Apfel fällt nicht weit vom Stamm",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 6
+    },
+    {
+      "name": "Wie man in den Wald hineinruft, so schallt es heraus",
+      "facet": "Pflanzen in Sprache und Redensarten",
+      "known_at": 6
+    },
+    {
+      "name": "Saurer Regen",
+      "facet": "Waldsterben, Klima und Naturschutz",
+      "known_at": 9
+    },
+    {
+      "name": "Dürre",
+      "facet": "Waldsterben, Klima und Naturschutz",
+      "known_at": 6
+    },
+    {
+      "name": "Waldbrand",
+      "facet": "Waldsterben, Klima und Naturschutz",
+      "known_at": 3
+    },
+    {
+      "name": "Orkan Kyrill",
+      "facet": "Waldsterben, Klima und Naturschutz",
+      "known_at": 12
+    },
+    {
+      "name": "Orkan Lothar",
+      "facet": "Waldsterben, Klima und Naturschutz",
+      "known_at": 13
+    },
+    {
+      "name": "Naturschutzgebiet",
+      "facet": "Waldsterben, Klima und Naturschutz",
+      "known_at": 5
+    },
+    {
+      "name": "Totholz",
+      "facet": "Waldsterben, Klima und Naturschutz",
+      "known_at": 9
+    },
+    {
+      "name": "Waldumbau",
+      "facet": "Waldsterben, Klima und Naturschutz",
+      "known_at": 12
+    },
+    {
+      "name": "BUND",
+      "facet": "Waldsterben, Klima und Naturschutz",
+      "known_at": 11
+    },
+    {
+      "name": "Hambacher Forst",
+      "facet": "Waldsterben, Klima und Naturschutz",
+      "known_at": 11
+    },
+    {
+      "name": "Baum des Jahres",
+      "facet": "Waldsterben, Klima und Naturschutz",
+      "known_at": 9
+    },
+    {
+      "name": "Eschentriebsterben",
+      "facet": "Waldsterben, Klima und Naturschutz",
+      "known_at": 14
+    },
+    {
+      "name": "Waldbaden",
+      "facet": "Waldsterben, Klima und Naturschutz",
+      "known_at": 10
+    },
+    {
+      "name": "Kartoffel",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 1
+    },
+    {
+      "name": "Raps",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 6
+    },
+    {
+      "name": "Roggen",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 8
+    },
+    {
+      "name": "Weizen",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 4
+    },
+    {
+      "name": "Spargel",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 5
+    },
+    {
+      "name": "Hopfen",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 9
+    },
+    {
+      "name": "Riesling",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 12
+    },
+    {
+      "name": "Zuckerrübe",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 8
+    },
+    {
+      "name": "Grünkohl",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 7
+    },
+    {
+      "name": "Rotkohl",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 5
+    },
+    {
+      "name": "Spreewaldgurke",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 9
+    },
+    {
+      "name": "Boskoop",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 11
+    },
+    {
+      "name": "Weißkohl",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 6
+    },
+    {
+      "name": "Schrebergarten",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 7
+    },
+    {
+      "name": "Gartenzwerg",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 2
+    },
+    {
+      "name": "Sonnenblume",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 1
+    },
+    {
+      "name": "Mais",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 2
+    },
+    {
+      "name": "Dinkel",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 9
+    },
+    {
+      "name": "Flachs",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 11
+    },
+    {
+      "name": "Kohlrabi",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 6
+    },
+    {
+      "name": "Rhabarber",
+      "facet": "Garten, Feld und Nutzpflanzen",
+      "known_at": 6
+    }
+  ]
+}

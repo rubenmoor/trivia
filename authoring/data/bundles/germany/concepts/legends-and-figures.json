@@ -1,0 +1,647 @@
+{
+  "subcategory": "legends-and-figures",
+  "facets": [
+    "Rhein- und Flusssagen",
+    "Harz, Brocken und Hexensagen",
+    "Nibelungen und Heldensagen",
+    "Kaiser- und Rittersagen",
+    "Stadtsagen und Wahrzeichen",
+    "Hausgeister und Kobolde",
+    "Wassergeister und Nixen",
+    "Riesen, Zwerge und Berggeister",
+    "Schelme und Lügengeschichten",
+    "Teufel, Spuk und Wilde Jagd",
+    "Sagengestalten in Bräuchen",
+    "Sagensammler und Sagen in Kunst"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 1,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Rheingold",
+      "facet": "Rhein- und Flusssagen",
+      "known_at": 10
+    },
+    {
+      "name": "Mäuseturm von Bingen",
+      "facet": "Rhein- und Flusssagen",
+      "known_at": 11
+    },
+    {
+      "name": "Bischof Hatto",
+      "facet": "Rhein- und Flusssagen",
+      "known_at": 13
+    },
+    {
+      "name": "Sieben Jungfrauen von Oberwesel",
+      "facet": "Rhein- und Flusssagen",
+      "known_at": 14
+    },
+    {
+      "name": "Feindliche Brüder",
+      "facet": "Rhein- und Flusssagen",
+      "known_at": 14
+    },
+    {
+      "name": "Rolandsbogen",
+      "facet": "Rhein- und Flusssagen",
+      "known_at": 14
+    },
+    {
+      "name": "Burg Katz und Burg Maus",
+      "facet": "Rhein- und Flusssagen",
+      "known_at": 12
+    },
+    {
+      "name": "Bacharach",
+      "facet": "Rhein- und Flusssagen",
+      "known_at": 13
+    },
+    {
+      "name": "Pfalzgrafenstein",
+      "facet": "Rhein- und Flusssagen",
+      "known_at": 13
+    },
+    {
+      "name": "Hexenbesen",
+      "facet": "Harz, Brocken und Hexensagen",
+      "known_at": 1
+    },
+    {
+      "name": "Bibi Blocksberg",
+      "facet": "Harz, Brocken und Hexensagen",
+      "known_at": 2
+    },
+    {
+      "name": "Die kleine Hexe",
+      "facet": "Harz, Brocken und Hexensagen",
+      "known_at": 3
+    },
+    {
+      "name": "Hexenschuss",
+      "facet": "Harz, Brocken und Hexensagen",
+      "known_at": 7
+    },
+    {
+      "name": "Prinzessin Ilse",
+      "facet": "Harz, Brocken und Hexensagen",
+      "known_at": 14
+    },
+    {
+      "name": "Teufelskanzel",
+      "facet": "Harz, Brocken und Hexensagen",
+      "known_at": 13
+    },
+    {
+      "name": "Gunther",
+      "facet": "Nibelungen und Heldensagen",
+      "known_at": 11
+    },
+    {
+      "name": "Fafner",
+      "facet": "Nibelungen und Heldensagen",
+      "known_at": 12
+    },
+    {
+      "name": "Drachenblut",
+      "facet": "Nibelungen und Heldensagen",
+      "known_at": 7
+    },
+    {
+      "name": "Lindenblatt",
+      "facet": "Nibelungen und Heldensagen",
+      "known_at": 8
+    },
+    {
+      "name": "Balmung",
+      "facet": "Nibelungen und Heldensagen",
+      "known_at": 13
+    },
+    {
+      "name": "Alberich",
+      "facet": "Nibelungen und Heldensagen",
+      "known_at": 12
+    },
+    {
+      "name": "Etzel",
+      "facet": "Nibelungen und Heldensagen",
+      "known_at": 13
+    },
+    {
+      "name": "Dietrich von Bern",
+      "facet": "Nibelungen und Heldensagen",
+      "known_at": 13
+    },
+    {
+      "name": "Wieland der Schmied",
+      "facet": "Nibelungen und Heldensagen",
+      "known_at": 13
+    },
+    {
+      "name": "Burgunder",
+      "facet": "Nibelungen und Heldensagen",
+      "known_at": 11
+    },
+    {
+      "name": "Kudrun",
+      "facet": "Nibelungen und Heldensagen",
+      "known_at": 14
+    },
+    {
+      "name": "Raben am Kyffhäuser",
+      "facet": "Kaiser- und Rittersagen",
+      "known_at": 12
+    },
+    {
+      "name": "Venusberg",
+      "facet": "Kaiser- und Rittersagen",
+      "known_at": 13
+    },
+    {
+      "name": "Heilige Elisabeth",
+      "facet": "Kaiser- und Rittersagen",
+      "known_at": 11
+    },
+    {
+      "name": "Rosenwunder",
+      "facet": "Kaiser- und Rittersagen",
+      "known_at": 13
+    },
+    {
+      "name": "Heinrich der Löwe",
+      "facet": "Kaiser- und Rittersagen",
+      "known_at": 10
+    },
+    {
+      "name": "Braunschweiger Löwe",
+      "facet": "Kaiser- und Rittersagen",
+      "known_at": 11
+    },
+    {
+      "name": "Eiserne Hand",
+      "facet": "Kaiser- und Rittersagen",
+      "known_at": 11
+    },
+    {
+      "name": "Heinrich der Vogler",
+      "facet": "Kaiser- und Rittersagen",
+      "known_at": 13
+    },
+    {
+      "name": "Ulmer Spatz",
+      "facet": "Stadtsagen und Wahrzeichen",
+      "known_at": 10
+    },
+    {
+      "name": "Weibertreu",
+      "facet": "Stadtsagen und Wahrzeichen",
+      "known_at": 12
+    },
+    {
+      "name": "Frankenfurt",
+      "facet": "Stadtsagen und Wahrzeichen",
+      "known_at": 12
+    },
+    {
+      "name": "Hummel Hummel",
+      "facet": "Stadtsagen und Wahrzeichen",
+      "known_at": 9
+    },
+    {
+      "name": "Schöner Brunnen",
+      "facet": "Stadtsagen und Wahrzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Perkeo",
+      "facet": "Stadtsagen und Wahrzeichen",
+      "known_at": 13
+    },
+    {
+      "name": "Kinderzeche",
+      "facet": "Stadtsagen und Wahrzeichen",
+      "known_at": 14
+    },
+    {
+      "name": "Dukatenmännchen",
+      "facet": "Stadtsagen und Wahrzeichen",
+      "known_at": 14
+    },
+    {
+      "name": "Münchner Kindl",
+      "facet": "Stadtsagen und Wahrzeichen",
+      "known_at": 8
+    },
+    {
+      "name": "Jan von Werth",
+      "facet": "Stadtsagen und Wahrzeichen",
+      "known_at": 14
+    },
+    {
+      "name": "Heinzelmännchen",
+      "facet": "Hausgeister und Kobolde",
+      "known_at": 4
+    },
+    {
+      "name": "Kobold",
+      "facet": "Hausgeister und Kobolde",
+      "known_at": 3
+    },
+    {
+      "name": "Poltergeist",
+      "facet": "Hausgeister und Kobolde",
+      "known_at": 6
+    },
+    {
+      "name": "Hinzelmann",
+      "facet": "Hausgeister und Kobolde",
+      "known_at": 14
+    },
+    {
+      "name": "Wichtel",
+      "facet": "Hausgeister und Kobolde",
+      "known_at": 3
+    },
+    {
+      "name": "Butzemann",
+      "facet": "Hausgeister und Kobolde",
+      "known_at": 4
+    },
+    {
+      "name": "Alp",
+      "facet": "Hausgeister und Kobolde",
+      "known_at": 11
+    },
+    {
+      "name": "Hödeken",
+      "facet": "Hausgeister und Kobolde",
+      "known_at": 15
+    },
+    {
+      "name": "Drak",
+      "facet": "Hausgeister und Kobolde",
+      "known_at": 15
+    },
+    {
+      "name": "Kobalt",
+      "facet": "Hausgeister und Kobolde",
+      "known_at": 12
+    },
+    {
+      "name": "Nickel",
+      "facet": "Hausgeister und Kobolde",
+      "known_at": 12
+    },
+    {
+      "name": "Das Sams",
+      "facet": "Hausgeister und Kobolde",
+      "known_at": 3
+    },
+    {
+      "name": "Rumpelstilzchen",
+      "facet": "Hausgeister und Kobolde",
+      "known_at": 2
+    },
+    {
+      "name": "Nixe",
+      "facet": "Wassergeister und Nixen",
+      "known_at": 3
+    },
+    {
+      "name": "Wassermann",
+      "facet": "Wassergeister und Nixen",
+      "known_at": 4
+    },
+    {
+      "name": "Der kleine Wassermann",
+      "facet": "Wassergeister und Nixen",
+      "known_at": 4
+    },
+    {
+      "name": "Undine",
+      "facet": "Wassergeister und Nixen",
+      "known_at": 11
+    },
+    {
+      "name": "Melusine",
+      "facet": "Wassergeister und Nixen",
+      "known_at": 13
+    },
+    {
+      "name": "Nöck",
+      "facet": "Wassergeister und Nixen",
+      "known_at": 14
+    },
+    {
+      "name": "Hakemann",
+      "facet": "Wassergeister und Nixen",
+      "known_at": 14
+    },
+    {
+      "name": "Schöne Lau",
+      "facet": "Wassergeister und Nixen",
+      "known_at": 13
+    },
+    {
+      "name": "Rheintöchter",
+      "facet": "Wassergeister und Nixen",
+      "known_at": 12
+    },
+    {
+      "name": "Schlangenkönig",
+      "facet": "Wassergeister und Nixen",
+      "known_at": 12
+    },
+    {
+      "name": "Die Nixe im Teich",
+      "facet": "Wassergeister und Nixen",
+      "known_at": 10
+    },
+    {
+      "name": "Riesengebirge",
+      "facet": "Riesen, Zwerge und Berggeister",
+      "known_at": 9
+    },
+    {
+      "name": "Riese",
+      "facet": "Riesen, Zwerge und Berggeister",
+      "known_at": 1
+    },
+    {
+      "name": "Zwerg",
+      "facet": "Riesen, Zwerge und Berggeister",
+      "known_at": 1
+    },
+    {
+      "name": "Berggeist",
+      "facet": "Riesen, Zwerge und Berggeister",
+      "known_at": 8
+    },
+    {
+      "name": "Hünengrab",
+      "facet": "Riesen, Zwerge und Berggeister",
+      "known_at": 10
+    },
+    {
+      "name": "Riesenspielzeug",
+      "facet": "Riesen, Zwerge und Berggeister",
+      "known_at": 14
+    },
+    {
+      "name": "Das kalte Herz",
+      "facet": "Riesen, Zwerge und Berggeister",
+      "known_at": 10
+    },
+    {
+      "name": "Holländer-Michel",
+      "facet": "Riesen, Zwerge und Berggeister",
+      "known_at": 12
+    },
+    {
+      "name": "Glasmännlein",
+      "facet": "Riesen, Zwerge und Berggeister",
+      "known_at": 12
+    },
+    {
+      "name": "Goldemar",
+      "facet": "Riesen, Zwerge und Berggeister",
+      "known_at": 15
+    },
+    {
+      "name": "Erdmännchen",
+      "facet": "Riesen, Zwerge und Berggeister",
+      "known_at": 3
+    },
+    {
+      "name": "Ritt auf der Kanonenkugel",
+      "facet": "Schelme und Lügengeschichten",
+      "known_at": 6
+    },
+    {
+      "name": "Schildbürger",
+      "facet": "Schelme und Lügengeschichten",
+      "known_at": 8
+    },
+    {
+      "name": "Schneider von Ulm",
+      "facet": "Schelme und Lügengeschichten",
+      "known_at": 11
+    },
+    {
+      "name": "Schinderhannes",
+      "facet": "Schelme und Lügengeschichten",
+      "known_at": 12
+    },
+    {
+      "name": "Nürnberger Trichter",
+      "facet": "Schelme und Lügengeschichten",
+      "known_at": 12
+    },
+    {
+      "name": "Die sieben Schwaben",
+      "facet": "Schelme und Lügengeschichten",
+      "known_at": 11
+    },
+    {
+      "name": "Schlaraffenland",
+      "facet": "Schelme und Lügengeschichten",
+      "known_at": 6
+    },
+    {
+      "name": "Räuber Hotzenplotz",
+      "facet": "Schelme und Lügengeschichten",
+      "known_at": 2
+    },
+    {
+      "name": "Kasperle",
+      "facet": "Schelme und Lügengeschichten",
+      "known_at": 2
+    },
+    {
+      "name": "Hackelberg",
+      "facet": "Teufel, Spuk und Wilde Jagd",
+      "known_at": 14
+    },
+    {
+      "name": "Teufelstritt",
+      "facet": "Teufel, Spuk und Wilde Jagd",
+      "known_at": 11
+    },
+    {
+      "name": "Wolfstür",
+      "facet": "Teufel, Spuk und Wilde Jagd",
+      "known_at": 13
+    },
+    {
+      "name": "Steinerne Brücke Regensburg",
+      "facet": "Teufel, Spuk und Wilde Jagd",
+      "known_at": 12
+    },
+    {
+      "name": "Kölner Dombaumeister",
+      "facet": "Teufel, Spuk und Wilde Jagd",
+      "known_at": 13
+    },
+    {
+      "name": "Doktor Faust",
+      "facet": "Teufel, Spuk und Wilde Jagd",
+      "known_at": 9
+    },
+    {
+      "name": "Mephisto",
+      "facet": "Teufel, Spuk und Wilde Jagd",
+      "known_at": 10
+    },
+    {
+      "name": "Auerbachs Keller",
+      "facet": "Teufel, Spuk und Wilde Jagd",
+      "known_at": 12
+    },
+    {
+      "name": "Weiße Frau",
+      "facet": "Teufel, Spuk und Wilde Jagd",
+      "known_at": 10
+    },
+    {
+      "name": "Fliegender Holländer",
+      "facet": "Teufel, Spuk und Wilde Jagd",
+      "known_at": 9
+    },
+    {
+      "name": "Hui Buh",
+      "facet": "Teufel, Spuk und Wilde Jagd",
+      "known_at": 3
+    },
+    {
+      "name": "Das kleine Gespenst",
+      "facet": "Teufel, Spuk und Wilde Jagd",
+      "known_at": 3
+    },
+    {
+      "name": "Irrlicht",
+      "facet": "Teufel, Spuk und Wilde Jagd",
+      "known_at": 8
+    },
+    {
+      "name": "Werwolf",
+      "facet": "Teufel, Spuk und Wilde Jagd",
+      "known_at": 5
+    },
+    {
+      "name": "Burg Frankenstein",
+      "facet": "Teufel, Spuk und Wilde Jagd",
+      "known_at": 11
+    },
+    {
+      "name": "Schwarzer Mann",
+      "facet": "Teufel, Spuk und Wilde Jagd",
+      "known_at": 4
+    },
+    {
+      "name": "Nubbel",
+      "facet": "Sagengestalten in Bräuchen",
+      "known_at": 13
+    },
+    {
+      "name": "Hoppeditz",
+      "facet": "Sagengestalten in Bräuchen",
+      "known_at": 13
+    },
+    {
+      "name": "Strohbär",
+      "facet": "Sagengestalten in Bräuchen",
+      "known_at": 14
+    },
+    {
+      "name": "Deutsche Sagen",
+      "facet": "Sagensammler und Sagen in Kunst",
+      "known_at": 12
+    },
+    {
+      "name": "Ludwig Bechstein",
+      "facet": "Sagensammler und Sagen in Kunst",
+      "known_at": 13
+    },
+    {
+      "name": "Clemens Brentano",
+      "facet": "Sagensammler und Sagen in Kunst",
+      "known_at": 13
+    },
+    {
+      "name": "Des Knaben Wunderhorn",
+      "facet": "Sagensammler und Sagen in Kunst",
+      "known_at": 13
+    },
+    {
+      "name": "Otfried Preußler",
+      "facet": "Sagensammler und Sagen in Kunst",
+      "known_at": 7
+    },
+    {
+      "name": "Krabat",
+      "facet": "Sagensammler und Sagen in Kunst",
+      "known_at": 8
+    },
+    {
+      "name": "Gottfried August Bürger",
+      "facet": "Sagensammler und Sagen in Kunst",
+      "known_at": 13
+    },
+    {
+      "name": "Johann Karl August Musäus",
+      "facet": "Sagensammler und Sagen in Kunst",
+      "known_at": 14
+    },
+    {
+      "name": "Gustav Schwab",
+      "facet": "Sagensammler und Sagen in Kunst",
+      "known_at": 13
+    },
+    {
+      "name": "Eduard Mörike",
+      "facet": "Sagensammler und Sagen in Kunst",
+      "known_at": 13
+    }
+  ]
+}

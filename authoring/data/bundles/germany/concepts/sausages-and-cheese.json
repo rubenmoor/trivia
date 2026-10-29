@@ -1,0 +1,976 @@
+{
+  "subcategory": "sausages-and-cheese",
+  "facets": [
+    "Regionale Wurstspezialitäten",
+    "Rohwurst, Schinken und Aufschnitt",
+    "Deutsche Käsesorten",
+    "Brot und Brötchen",
+    "Brotzeit, Vesper und Abendbrot",
+    "Belegte Brötchen und Imbiss",
+    "Senf, Gurken und Beilagen",
+    "Metzgerei, Bäckerei und Käseherstellung",
+    "Wörter, Redensarten und Namen rund um Wurst und Brot",
+    "Geschichte und Bräuche von Wurst und Brot",
+    "Wurst, Käse und Brot in Medien und Werbung"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Leberwurst",
+      "facet": "Regionale Wurstspezialitäten",
+      "known_at": 3
+    },
+    {
+      "name": "Blutwurst",
+      "facet": "Regionale Wurstspezialitäten",
+      "known_at": 6
+    },
+    {
+      "name": "Teewurst",
+      "facet": "Regionale Wurstspezialitäten",
+      "known_at": 6
+    },
+    {
+      "name": "Fleischwurst",
+      "facet": "Regionale Wurstspezialitäten",
+      "known_at": 5
+    },
+    {
+      "name": "Knackwurst",
+      "facet": "Regionale Wurstspezialitäten",
+      "known_at": 7
+    },
+    {
+      "name": "Landjäger",
+      "facet": "Regionale Wurstspezialitäten",
+      "known_at": 7
+    },
+    {
+      "name": "Gelbwurst",
+      "facet": "Regionale Wurstspezialitäten",
+      "known_at": 8
+    },
+    {
+      "name": "Pinkel",
+      "facet": "Regionale Wurstspezialitäten",
+      "known_at": 10
+    },
+    {
+      "name": "Coburger Bratwurst",
+      "facet": "Regionale Wurstspezialitäten",
+      "known_at": 10
+    },
+    {
+      "name": "Regensburger Wurst",
+      "facet": "Regionale Wurstspezialitäten",
+      "known_at": 11
+    },
+    {
+      "name": "Rote Wurst",
+      "facet": "Regionale Wurstspezialitäten",
+      "known_at": 11
+    },
+    {
+      "name": "Bregenwurst",
+      "facet": "Regionale Wurstspezialitäten",
+      "known_at": 12
+    },
+    {
+      "name": "Knipp",
+      "facet": "Regionale Wurstspezialitäten",
+      "known_at": 13
+    },
+    {
+      "name": "Salami",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 2
+    },
+    {
+      "name": "Speck",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 3
+    },
+    {
+      "name": "Kochschinken",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 4
+    },
+    {
+      "name": "Mett",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 5
+    },
+    {
+      "name": "Mettwurst",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 5
+    },
+    {
+      "name": "Aufschnitt",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 5
+    },
+    {
+      "name": "Kassler",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 6
+    },
+    {
+      "name": "Jagdwurst",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 6
+    },
+    {
+      "name": "Fleischsalat",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 6
+    },
+    {
+      "name": "Sülze",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 8
+    },
+    {
+      "name": "Cervelatwurst",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 9
+    },
+    {
+      "name": "Bierschinken",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 9
+    },
+    {
+      "name": "Lachsschinken",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 10
+    },
+    {
+      "name": "Zwiebelmettwurst",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 10
+    },
+    {
+      "name": "Plockwurst",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 11
+    },
+    {
+      "name": "Presskopf",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 12
+    },
+    {
+      "name": "Ammerländer Schinken",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 13
+    },
+    {
+      "name": "Göttinger Feldkieker",
+      "facet": "Rohwurst, Schinken und Aufschnitt",
+      "known_at": 14
+    },
+    {
+      "name": "Quark",
+      "facet": "Deutsche Käsesorten",
+      "known_at": 3
+    },
+    {
+      "name": "Frischkäse",
+      "facet": "Deutsche Käsesorten",
+      "known_at": 3
+    },
+    {
+      "name": "Hüttenkäse",
+      "facet": "Deutsche Käsesorten",
+      "known_at": 5
+    },
+    {
+      "name": "Butterkäse",
+      "facet": "Deutsche Käsesorten",
+      "known_at": 6
+    },
+    {
+      "name": "Schmelzkäse",
+      "facet": "Deutsche Käsesorten",
+      "known_at": 6
+    },
+    {
+      "name": "Bergkäse",
+      "facet": "Deutsche Käsesorten",
+      "known_at": 7
+    },
+    {
+      "name": "Handkäse",
+      "facet": "Deutsche Käsesorten",
+      "known_at": 8
+    },
+    {
+      "name": "Allgäuer Emmentaler",
+      "facet": "Deutsche Käsesorten",
+      "known_at": 9
+    },
+    {
+      "name": "Tilsiter",
+      "facet": "Deutsche Käsesorten",
+      "known_at": 10
+    },
+    {
+      "name": "Limburger",
+      "facet": "Deutsche Käsesorten",
+      "known_at": 10
+    },
+    {
+      "name": "Cambozola",
+      "facet": "Deutsche Käsesorten",
+      "known_at": 11
+    },
+    {
+      "name": "Kochkäse",
+      "facet": "Deutsche Käsesorten",
+      "known_at": 11
+    },
+    {
+      "name": "Edelpilzkäse",
+      "facet": "Deutsche Käsesorten",
+      "known_at": 12
+    },
+    {
+      "name": "Romadur",
+      "facet": "Deutsche Käsesorten",
+      "known_at": 13
+    },
+    {
+      "name": "Weißlacker",
+      "facet": "Deutsche Käsesorten",
+      "known_at": 13
+    },
+    {
+      "name": "Steppenkäse",
+      "facet": "Deutsche Käsesorten",
+      "known_at": 13
+    },
+    {
+      "name": "Nieheimer Käse",
+      "facet": "Deutsche Käsesorten",
+      "known_at": 14
+    },
+    {
+      "name": "Brötchen",
+      "facet": "Brot und Brötchen",
+      "known_at": 1
+    },
+    {
+      "name": "Toastbrot",
+      "facet": "Brot und Brötchen",
+      "known_at": 2
+    },
+    {
+      "name": "Vollkornbrot",
+      "facet": "Brot und Brötchen",
+      "known_at": 4
+    },
+    {
+      "name": "Schwarzbrot",
+      "facet": "Brot und Brötchen",
+      "known_at": 4
+    },
+    {
+      "name": "Laugenbrötchen",
+      "facet": "Brot und Brötchen",
+      "known_at": 4
+    },
+    {
+      "name": "Rosinenbrötchen",
+      "facet": "Brot und Brötchen",
+      "known_at": 4
+    },
+    {
+      "name": "Knäckebrot",
+      "facet": "Brot und Brötchen",
+      "known_at": 4
+    },
+    {
+      "name": "Roggenbrot",
+      "facet": "Brot und Brötchen",
+      "known_at": 5
+    },
+    {
+      "name": "Hefezopf",
+      "facet": "Brot und Brötchen",
+      "known_at": 5
+    },
+    {
+      "name": "Mehrkornbrötchen",
+      "facet": "Brot und Brötchen",
+      "known_at": 5
+    },
+    {
+      "name": "Kaiserbrötchen",
+      "facet": "Brot und Brötchen",
+      "known_at": 6
+    },
+    {
+      "name": "Bauernbrot",
+      "facet": "Brot und Brötchen",
+      "known_at": 6
+    },
+    {
+      "name": "Krustenbrot",
+      "facet": "Brot und Brötchen",
+      "known_at": 6
+    },
+    {
+      "name": "Mischbrot",
+      "facet": "Brot und Brötchen",
+      "known_at": 7
+    },
+    {
+      "name": "Dinkelbrot",
+      "facet": "Brot und Brötchen",
+      "known_at": 7
+    },
+    {
+      "name": "Stuten",
+      "facet": "Brot und Brötchen",
+      "known_at": 9
+    },
+    {
+      "name": "Schwäbische Seelen",
+      "facet": "Brot und Brötchen",
+      "known_at": 12
+    },
+    {
+      "name": "Kommissbrot",
+      "facet": "Brot und Brötchen",
+      "known_at": 12
+    },
+    {
+      "name": "Paderborner Landbrot",
+      "facet": "Brot und Brötchen",
+      "known_at": 13
+    },
+    {
+      "name": "Brotdose",
+      "facet": "Brotzeit, Vesper und Abendbrot",
+      "known_at": 1
+    },
+    {
+      "name": "Butterbrot",
+      "facet": "Brotzeit, Vesper und Abendbrot",
+      "known_at": 2
+    },
+    {
+      "name": "Pausenbrot",
+      "facet": "Brotzeit, Vesper und Abendbrot",
+      "known_at": 2
+    },
+    {
+      "name": "Abendbrot",
+      "facet": "Brotzeit, Vesper und Abendbrot",
+      "known_at": 4
+    },
+    {
+      "name": "Brotzeit",
+      "facet": "Brotzeit, Vesper und Abendbrot",
+      "known_at": 5
+    },
+    {
+      "name": "Biergarten",
+      "facet": "Brotzeit, Vesper und Abendbrot",
+      "known_at": 6
+    },
+    {
+      "name": "Schmalzbrot",
+      "facet": "Brotzeit, Vesper und Abendbrot",
+      "known_at": 6
+    },
+    {
+      "name": "Schnittchen",
+      "facet": "Brotzeit, Vesper und Abendbrot",
+      "known_at": 7
+    },
+    {
+      "name": "Vesper",
+      "facet": "Brotzeit, Vesper und Abendbrot",
+      "known_at": 8
+    },
+    {
+      "name": "Brotzeitbrett",
+      "facet": "Brotzeit, Vesper und Abendbrot",
+      "known_at": 8
+    },
+    {
+      "name": "Kniffte",
+      "facet": "Brotzeit, Vesper und Abendbrot",
+      "known_at": 12
+    },
+    {
+      "name": "Käsebrötchen",
+      "facet": "Belegte Brötchen und Imbiss",
+      "known_at": 2
+    },
+    {
+      "name": "Schinkenbrötchen",
+      "facet": "Belegte Brötchen und Imbiss",
+      "known_at": 3
+    },
+    {
+      "name": "Imbissbude",
+      "facet": "Belegte Brötchen und Imbiss",
+      "known_at": 4
+    },
+    {
+      "name": "Frikadelle",
+      "facet": "Belegte Brötchen und Imbiss",
+      "known_at": 4
+    },
+    {
+      "name": "Laugenstange",
+      "facet": "Belegte Brötchen und Imbiss",
+      "known_at": 5
+    },
+    {
+      "name": "Halbes Hähnchen",
+      "facet": "Belegte Brötchen und Imbiss",
+      "known_at": 6
+    },
+    {
+      "name": "Leberkässemmel",
+      "facet": "Belegte Brötchen und Imbiss",
+      "known_at": 7
+    },
+    {
+      "name": "Mettbrötchen",
+      "facet": "Belegte Brötchen und Imbiss",
+      "known_at": 7
+    },
+    {
+      "name": "Butterbrezel",
+      "facet": "Belegte Brötchen und Imbiss",
+      "known_at": 7
+    },
+    {
+      "name": "Matjesbrötchen",
+      "facet": "Belegte Brötchen und Imbiss",
+      "known_at": 9
+    },
+    {
+      "name": "Krabbenbrötchen",
+      "facet": "Belegte Brötchen und Imbiss",
+      "known_at": 9
+    },
+    {
+      "name": "Drei im Weggla",
+      "facet": "Belegte Brötchen und Imbiss",
+      "known_at": 12
+    },
+    {
+      "name": "Kartoffelsalat",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 2
+    },
+    {
+      "name": "Gewürzgurke",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 3
+    },
+    {
+      "name": "Sauerkraut",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 3
+    },
+    {
+      "name": "Bratkartoffeln",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 3
+    },
+    {
+      "name": "Radieschen",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 3
+    },
+    {
+      "name": "Schnittlauch",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 4
+    },
+    {
+      "name": "Süßer Senf",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 5
+    },
+    {
+      "name": "Krautsalat",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 5
+    },
+    {
+      "name": "Rote Bete",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 5
+    },
+    {
+      "name": "Mittelscharfer Senf",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 6
+    },
+    {
+      "name": "Meerrettich",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 6
+    },
+    {
+      "name": "Senfkörner",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 8
+    },
+    {
+      "name": "Kühne",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 8
+    },
+    {
+      "name": "Senfgurke",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 9
+    },
+    {
+      "name": "Mixed Pickles",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 9
+    },
+    {
+      "name": "Silberzwiebeln",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 9
+    },
+    {
+      "name": "Düsseldorfer Löwensenf",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 11
+    },
+    {
+      "name": "Händlmaier",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 12
+    },
+    {
+      "name": "Born Senf",
+      "facet": "Senf, Gurken und Beilagen",
+      "known_at": 13
+    },
+    {
+      "name": "Bäcker",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 1
+    },
+    {
+      "name": "Metzger",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 4
+    },
+    {
+      "name": "Hefe",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 5
+    },
+    {
+      "name": "Frischetheke",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 5
+    },
+    {
+      "name": "Backstube",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 6
+    },
+    {
+      "name": "Steinofen",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 6
+    },
+    {
+      "name": "Fleischwolf",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 6
+    },
+    {
+      "name": "Käselaib",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 6
+    },
+    {
+      "name": "Räuchern",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 6
+    },
+    {
+      "name": "Sauerteig",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 7
+    },
+    {
+      "name": "Metzgermeister",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 8
+    },
+    {
+      "name": "Molke",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 9
+    },
+    {
+      "name": "Wurstküche",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 9
+    },
+    {
+      "name": "Pökeln",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 10
+    },
+    {
+      "name": "Naturdarm",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 10
+    },
+    {
+      "name": "Brühwurst",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 10
+    },
+    {
+      "name": "Käsereifung",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 10
+    },
+    {
+      "name": "Kochwurst",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 11
+    },
+    {
+      "name": "Laugenbad",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 11
+    },
+    {
+      "name": "Meisterbrief",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 11
+    },
+    {
+      "name": "Lab",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 12
+    },
+    {
+      "name": "Käseharfe",
+      "facet": "Metzgerei, Bäckerei und Käseherstellung",
+      "known_at": 14
+    },
+    {
+      "name": "Das ist mir Wurst",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 5
+    },
+    {
+      "name": "Es geht um die Wurst",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 6
+    },
+    {
+      "name": "Alles hat ein Ende, nur die Wurst hat zwei",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 6
+    },
+    {
+      "name": "Extrawurst",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 6
+    },
+    {
+      "name": "Käse (Unsinn)",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 6
+    },
+    {
+      "name": "Wurstfinger",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 7
+    },
+    {
+      "name": "Hanswurst",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 9
+    },
+    {
+      "name": "Brötchen verdienen",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 9
+    },
+    {
+      "name": "Wie warme Semmeln weggehen",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 9
+    },
+    {
+      "name": "Butter bei die Fische",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 9
+    },
+    {
+      "name": "Kleine Brötchen backen",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 10
+    },
+    {
+      "name": "Jemandem die Butter vom Brot nehmen",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 10
+    },
+    {
+      "name": "Zuckerbrot und Peitsche",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 10
+    },
+    {
+      "name": "Weck",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 10
+    },
+    {
+      "name": "Brotlose Kunst",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 11
+    },
+    {
+      "name": "Käseblatt",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 11
+    },
+    {
+      "name": "Knust",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 11
+    },
+    {
+      "name": "Wurstigkeit",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 13
+    },
+    {
+      "name": "Mit der Wurst nach der Speckseite werfen",
+      "facet": "Wörter, Redensarten und Namen rund um Wurst und Brot",
+      "known_at": 13
+    },
+    {
+      "name": "Erntedankfest",
+      "facet": "Geschichte und Bräuche von Wurst und Brot",
+      "known_at": 5
+    },
+    {
+      "name": "Brot und Salz",
+      "facet": "Geschichte und Bräuche von Wurst und Brot",
+      "known_at": 8
+    },
+    {
+      "name": "Weißwurstäquator",
+      "facet": "Geschichte und Bräuche von Wurst und Brot",
+      "known_at": 9
+    },
+    {
+      "name": "Osterbrot",
+      "facet": "Geschichte und Bräuche von Wurst und Brot",
+      "known_at": 9
+    },
+    {
+      "name": "Zwölfuhrläuten",
+      "facet": "Geschichte und Bräuche von Wurst und Brot",
+      "known_at": 10
+    },
+    {
+      "name": "Schlachtfest",
+      "facet": "Geschichte und Bräuche von Wurst und Brot",
+      "known_at": 10
+    },
+    {
+      "name": "Fastenbrezel",
+      "facet": "Geschichte und Bräuche von Wurst und Brot",
+      "known_at": 11
+    },
+    {
+      "name": "Deutsche Brotkultur",
+      "facet": "Geschichte und Bräuche von Wurst und Brot",
+      "known_at": 12
+    },
+    {
+      "name": "Wurstmarkt Bad Dürkheim",
+      "facet": "Geschichte und Bräuche von Wurst und Brot",
+      "known_at": 12
+    },
+    {
+      "name": "Deutsches Bratwurstmuseum",
+      "facet": "Geschichte und Bräuche von Wurst und Brot",
+      "known_at": 12
+    },
+    {
+      "name": "Sepp Moser",
+      "facet": "Geschichte und Bräuche von Wurst und Brot",
+      "known_at": 13
+    },
+    {
+      "name": "Arnstadt",
+      "facet": "Geschichte und Bräuche von Wurst und Brot",
+      "known_at": 13
+    },
+    {
+      "name": "Gebildbrote",
+      "facet": "Geschichte und Bräuche von Wurst und Brot",
+      "known_at": 13
+    },
+    {
+      "name": "K-Brot",
+      "facet": "Geschichte und Bräuche von Wurst und Brot",
+      "known_at": 13
+    },
+    {
+      "name": "Deutsches Brotinstitut",
+      "facet": "Geschichte und Bräuche von Wurst und Brot",
+      "known_at": 13
+    },
+    {
+      "name": "Bratwurstglöcklein",
+      "facet": "Geschichte und Bräuche von Wurst und Brot",
+      "known_at": 14
+    },
+    {
+      "name": "Bärchenwurst",
+      "facet": "Wurst, Käse und Brot in Medien und Werbung",
+      "known_at": 3
+    },
+    {
+      "name": "Bernd das Brot",
+      "facet": "Wurst, Käse und Brot in Medien und Werbung",
+      "known_at": 4
+    },
+    {
+      "name": "Rügenwalder Mühle",
+      "facet": "Wurst, Käse und Brot in Medien und Werbung",
+      "known_at": 7
+    },
+    {
+      "name": "Golden Toast",
+      "facet": "Wurst, Käse und Brot in Medien und Werbung",
+      "known_at": 7
+    },
+    {
+      "name": "Wiesenhof",
+      "facet": "Wurst, Käse und Brot in Medien und Werbung",
+      "known_at": 8
+    },
+    {
+      "name": "Rama",
+      "facet": "Wurst, Käse und Brot in Medien und Werbung",
+      "known_at": 8
+    },
+    {
+      "name": "Harry Brot",
+      "facet": "Wurst, Käse und Brot in Medien und Werbung",
+      "known_at": 9
+    },
+    {
+      "name": "Milram",
+      "facet": "Wurst, Käse und Brot in Medien und Werbung",
+      "known_at": 9
+    },
+    {
+      "name": "Bresso",
+      "facet": "Wurst, Käse und Brot in Medien und Werbung",
+      "known_at": 9
+    },
+    {
+      "name": "Brot für die Welt",
+      "facet": "Wurst, Käse und Brot in Medien und Werbung",
+      "known_at": 9
+    },
+    {
+      "name": "Herbert Grönemeyer",
+      "facet": "Wurst, Käse und Brot in Medien und Werbung",
+      "known_at": 10
+    },
+    {
+      "name": "Grünländer",
+      "facet": "Wurst, Käse und Brot in Medien und Werbung",
+      "known_at": 10
+    },
+    {
+      "name": "Du darfst",
+      "facet": "Wurst, Käse und Brot in Medien und Werbung",
+      "known_at": 10
+    },
+    {
+      "name": "Lieken Urkorn",
+      "facet": "Wurst, Käse und Brot in Medien und Werbung",
+      "known_at": 11
+    },
+    {
+      "name": "Deutsches Currywurst Museum",
+      "facet": "Wurst, Käse und Brot in Medien und Werbung",
+      "known_at": 11
+    },
+    {
+      "name": "Develey",
+      "facet": "Wurst, Käse und Brot in Medien und Werbung",
+      "known_at": 11
+    },
+    {
+      "name": "Dittsche",
+      "facet": "Wurst, Käse und Brot in Medien und Werbung",
+      "known_at": 12
+    }
+  ]
+}

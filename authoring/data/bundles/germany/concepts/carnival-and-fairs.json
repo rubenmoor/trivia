@@ -1,0 +1,1032 @@
+{
+  "subcategory": "carnival-and-fairs",
+  "facets": [
+    "Rheinischer Karneval und seine Hochburgen",
+    "Narrenrufe, Karnevalssprache und Büttenrede",
+    "Schwäbisch-alemannische Fastnacht und Masken",
+    "Prinzenpaar, Dreigestirn und Garden",
+    "Termine der Session vom 11.11. bis Aschermittwoch",
+    "Umzüge, Kostüme und Kamelle",
+    "Krapfen, Festessen und Kirmesleckereien",
+    "Oktoberfest und Wiesn-Bräuche",
+    "Große Volksfeste und Jahrmärkte in Deutschland",
+    "Fahrgeschäfte und Buden auf der Kirmes",
+    "Schützenfeste, Kirchweih und Dorffeste",
+    "Karnevalslieder und Stimmungsmusik"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 3,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Düsseldorfer Karneval",
+      "facet": "Rheinischer Karneval und seine Hochburgen",
+      "known_at": 7
+    },
+    {
+      "name": "Rheinland",
+      "facet": "Rheinischer Karneval und seine Hochburgen",
+      "known_at": 8
+    },
+    {
+      "name": "Mainz bleibt Mainz, wie es singt und lacht",
+      "facet": "Rheinischer Karneval und seine Hochburgen",
+      "known_at": 10
+    },
+    {
+      "name": "Orden wider den tierischen Ernst",
+      "facet": "Rheinischer Karneval und seine Hochburgen",
+      "known_at": 11
+    },
+    {
+      "name": "Beueler Weiberfastnacht",
+      "facet": "Rheinischer Karneval und seine Hochburgen",
+      "known_at": 13
+    },
+    {
+      "name": "Festkomitee Kölner Karneval",
+      "facet": "Rheinischer Karneval und seine Hochburgen",
+      "known_at": 13
+    },
+    {
+      "name": "Sitzungskarneval",
+      "facet": "Rheinischer Karneval und seine Hochburgen",
+      "known_at": 11
+    },
+    {
+      "name": "Prunksitzung",
+      "facet": "Rheinischer Karneval und seine Hochburgen",
+      "known_at": 10
+    },
+    {
+      "name": "Straßenkarneval",
+      "facet": "Rheinischer Karneval und seine Hochburgen",
+      "known_at": 8
+    },
+    {
+      "name": "Karnevalsverein",
+      "facet": "Rheinischer Karneval und seine Hochburgen",
+      "known_at": 6
+    },
+    {
+      "name": "Tünnes und Schäl",
+      "facet": "Rheinischer Karneval und seine Hochburgen",
+      "known_at": 11
+    },
+    {
+      "name": "Alter Markt",
+      "facet": "Rheinischer Karneval und seine Hochburgen",
+      "known_at": 12
+    },
+    {
+      "name": "Zülpicher Straße",
+      "facet": "Rheinischer Karneval und seine Hochburgen",
+      "known_at": 12
+    },
+    {
+      "name": "Sessionsmotto",
+      "facet": "Rheinischer Karneval und seine Hochburgen",
+      "known_at": 11
+    },
+    {
+      "name": "Mainzer Zugplakette",
+      "facet": "Rheinischer Karneval und seine Hochburgen",
+      "known_at": 13
+    },
+    {
+      "name": "Mainzer Fastnachtsbrunnen",
+      "facet": "Rheinischer Karneval und seine Hochburgen",
+      "known_at": 14
+    },
+    {
+      "name": "Alaaf",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 4
+    },
+    {
+      "name": "Helau",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 4
+    },
+    {
+      "name": "Narr",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 3
+    },
+    {
+      "name": "Jeck",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 6
+    },
+    {
+      "name": "Büttenrede",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 8
+    },
+    {
+      "name": "Tusch",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 9
+    },
+    {
+      "name": "Schunkeln",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 6
+    },
+    {
+      "name": "Bützchen",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 10
+    },
+    {
+      "name": "Pappnase",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 6
+    },
+    {
+      "name": "Narrenkappe",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 7
+    },
+    {
+      "name": "Rakete (Applaus)",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 11
+    },
+    {
+      "name": "Narrenfreiheit",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 9
+    },
+    {
+      "name": "Fastelovend",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 12
+    },
+    {
+      "name": "Kölsches Grundgesetz",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 11
+    },
+    {
+      "name": "Jedem Jeck sing Pappnas",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 12
+    },
+    {
+      "name": "Karneval",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 2
+    },
+    {
+      "name": "Fasching",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 3
+    },
+    {
+      "name": "Session",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 10
+    },
+    {
+      "name": "Kölsch (Mundart)",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 10
+    },
+    {
+      "name": "Dreimol vun Hätze",
+      "facet": "Narrenrufe, Karnevalssprache und Büttenrede",
+      "known_at": 13
+    },
+    {
+      "name": "Fasnet",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 9
+    },
+    {
+      "name": "Narri Narro",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 10
+    },
+    {
+      "name": "Häs",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 12
+    },
+    {
+      "name": "Larve",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 12
+    },
+    {
+      "name": "Holzmaske",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 7
+    },
+    {
+      "name": "Fastnachtshexe",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 8
+    },
+    {
+      "name": "Narrensprung",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 11
+    },
+    {
+      "name": "Rottweil",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 11
+    },
+    {
+      "name": "Villingen-Schwenningen",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 12
+    },
+    {
+      "name": "Schmotziger Donnerstag",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 11
+    },
+    {
+      "name": "Hemdglonker",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 13
+    },
+    {
+      "name": "Federahannes",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 14
+    },
+    {
+      "name": "Weißnarr",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 13
+    },
+    {
+      "name": "Hansele",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 13
+    },
+    {
+      "name": "Schuttig",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 14
+    },
+    {
+      "name": "Narrenzunft",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 11
+    },
+    {
+      "name": "Narrenschelle",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 10
+    },
+    {
+      "name": "Funkenfeuer",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 13
+    },
+    {
+      "name": "Narrensamen",
+      "facet": "Schwäbisch-alemannische Fastnacht und Masken",
+      "known_at": 14
+    },
+    {
+      "name": "Kölner Dreigestirn",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 8
+    },
+    {
+      "name": "Prinz Karneval",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 6
+    },
+    {
+      "name": "Bauer (Dreigestirn)",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 11
+    },
+    {
+      "name": "Jungfrau (Dreigestirn)",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 10
+    },
+    {
+      "name": "Prinzenpaar",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 7
+    },
+    {
+      "name": "Kinderprinzenpaar",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 9
+    },
+    {
+      "name": "Venetia",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 13
+    },
+    {
+      "name": "Tollität",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 13
+    },
+    {
+      "name": "Proklamation",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 11
+    },
+    {
+      "name": "Elferrat",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 9
+    },
+    {
+      "name": "Sitzungspräsident",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 11
+    },
+    {
+      "name": "Tanzmariechen",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 7
+    },
+    {
+      "name": "Gardetanz",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 9
+    },
+    {
+      "name": "Rote Funken",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 11
+    },
+    {
+      "name": "Prinzengarde",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 11
+    },
+    {
+      "name": "Stadtsoldaten",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 12
+    },
+    {
+      "name": "Stippeföttche",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 13
+    },
+    {
+      "name": "Karnevalsorden",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 9
+    },
+    {
+      "name": "Pritsche",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 13
+    },
+    {
+      "name": "Dreispitz",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 10
+    },
+    {
+      "name": "Adjutant",
+      "facet": "Prinzenpaar, Dreigestirn und Garden",
+      "known_at": 13
+    },
+    {
+      "name": "11. November",
+      "facet": "Termine der Session vom 11.11. bis Aschermittwoch",
+      "known_at": 3
+    },
+    {
+      "name": "11:11 Uhr",
+      "facet": "Termine der Session vom 11.11. bis Aschermittwoch",
+      "known_at": 4
+    },
+    {
+      "name": "Faschingsdienstag",
+      "facet": "Termine der Session vom 11.11. bis Aschermittwoch",
+      "known_at": 7
+    },
+    {
+      "name": "Aschermittwoch",
+      "facet": "Termine der Session vom 11.11. bis Aschermittwoch",
+      "known_at": 6
+    },
+    {
+      "name": "Nelkensamstag",
+      "facet": "Termine der Session vom 11.11. bis Aschermittwoch",
+      "known_at": 13
+    },
+    {
+      "name": "Tulpensonntag",
+      "facet": "Termine der Session vom 11.11. bis Aschermittwoch",
+      "known_at": 13
+    },
+    {
+      "name": "Veilchendienstag",
+      "facet": "Termine der Session vom 11.11. bis Aschermittwoch",
+      "known_at": 12
+    },
+    {
+      "name": "Fastenzeit",
+      "facet": "Termine der Session vom 11.11. bis Aschermittwoch",
+      "known_at": 7
+    },
+    {
+      "name": "Ostern",
+      "facet": "Termine der Session vom 11.11. bis Aschermittwoch",
+      "known_at": 2
+    },
+    {
+      "name": "Rathaussturm",
+      "facet": "Termine der Session vom 11.11. bis Aschermittwoch",
+      "known_at": 9
+    },
+    {
+      "name": "Krawattenabschneiden",
+      "facet": "Termine der Session vom 11.11. bis Aschermittwoch",
+      "known_at": 9
+    },
+    {
+      "name": "Nubbelverbrennung",
+      "facet": "Termine der Session vom 11.11. bis Aschermittwoch",
+      "known_at": 11
+    },
+    {
+      "name": "Hoppeditz-Erwachen",
+      "facet": "Termine der Session vom 11.11. bis Aschermittwoch",
+      "known_at": 12
+    },
+    {
+      "name": "Aschekreuz",
+      "facet": "Termine der Session vom 11.11. bis Aschermittwoch",
+      "known_at": 10
+    },
+    {
+      "name": "Dreikönigstag",
+      "facet": "Termine der Session vom 11.11. bis Aschermittwoch",
+      "known_at": 10
+    },
+    {
+      "name": "Fischessen am Aschermittwoch",
+      "facet": "Termine der Session vom 11.11. bis Aschermittwoch",
+      "known_at": 11
+    },
+    {
+      "name": "Rosenmontagszug",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 5
+    },
+    {
+      "name": "Strüßjer",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 12
+    },
+    {
+      "name": "Mottowagen",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 9
+    },
+    {
+      "name": "Persiflagewagen",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 11
+    },
+    {
+      "name": "Jacques Tilly",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 12
+    },
+    {
+      "name": "Pappmaché",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 8
+    },
+    {
+      "name": "Konfetti",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 2
+    },
+    {
+      "name": "Luftschlangen",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 3
+    },
+    {
+      "name": "Clownskostüm",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 1
+    },
+    {
+      "name": "Piratenkostüm",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 1
+    },
+    {
+      "name": "Kinderschminke",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 2
+    },
+    {
+      "name": "Kostümball",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 7
+    },
+    {
+      "name": "Fußgruppe",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 10
+    },
+    {
+      "name": "Spielmannszug",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 11
+    },
+    {
+      "name": "Zugweg",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 11
+    },
+    {
+      "name": "Schull- und Veedelszöch",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 13
+    },
+    {
+      "name": "Geisterzug",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 13
+    },
+    {
+      "name": "Wurfmaterial",
+      "facet": "Umzüge, Kostüme und Kamelle",
+      "known_at": 12
+    },
+    {
+      "name": "Mutzen",
+      "facet": "Krapfen, Festessen und Kirmesleckereien",
+      "known_at": 12
+    },
+    {
+      "name": "Fasnetsküchle",
+      "facet": "Krapfen, Festessen und Kirmesleckereien",
+      "known_at": 13
+    },
+    {
+      "name": "Wiesn",
+      "facet": "Oktoberfest und Wiesn-Bräuche",
+      "known_at": 6
+    },
+    {
+      "name": "Dirndl",
+      "facet": "Oktoberfest und Wiesn-Bräuche",
+      "known_at": 4
+    },
+    {
+      "name": "Dirndlschleife",
+      "facet": "Oktoberfest und Wiesn-Bräuche",
+      "known_at": 10
+    },
+    {
+      "name": "Brezn",
+      "facet": "Oktoberfest und Wiesn-Bräuche",
+      "known_at": 2
+    },
+    {
+      "name": "Wiesnhendl",
+      "facet": "Oktoberfest und Wiesn-Bräuche",
+      "known_at": 8
+    },
+    {
+      "name": "Festzelt",
+      "facet": "Oktoberfest und Wiesn-Bräuche",
+      "known_at": 5
+    },
+    {
+      "name": "Schottenhamel",
+      "facet": "Oktoberfest und Wiesn-Bräuche",
+      "known_at": 13
+    },
+    {
+      "name": "Trachten- und Schützenzug",
+      "facet": "Oktoberfest und Wiesn-Bräuche",
+      "known_at": 11
+    },
+    {
+      "name": "Einzug der Wiesnwirte",
+      "facet": "Oktoberfest und Wiesn-Bräuche",
+      "known_at": 12
+    },
+    {
+      "name": "Kronprinz Ludwig",
+      "facet": "Oktoberfest und Wiesn-Bräuche",
+      "known_at": 12
+    },
+    {
+      "name": "Therese von Sachsen-Hildburghausen",
+      "facet": "Oktoberfest und Wiesn-Bräuche",
+      "known_at": 14
+    },
+    {
+      "name": "Oide Wiesn",
+      "facet": "Oktoberfest und Wiesn-Bräuche",
+      "known_at": 13
+    },
+    {
+      "name": "Schichtl",
+      "facet": "Oktoberfest und Wiesn-Bräuche",
+      "known_at": 14
+    },
+    {
+      "name": "Augustiner-Bräu",
+      "facet": "Oktoberfest und Wiesn-Bräuche",
+      "known_at": 12
+    },
+    {
+      "name": "Cranger Kirmes",
+      "facet": "Große Volksfeste und Jahrmärkte in Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Rheinkirmes",
+      "facet": "Große Volksfeste und Jahrmärkte in Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Pützchens Markt",
+      "facet": "Große Volksfeste und Jahrmärkte in Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Gäubodenvolksfest",
+      "facet": "Große Volksfeste und Jahrmärkte in Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Send",
+      "facet": "Große Volksfeste und Jahrmärkte in Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Annakirmes",
+      "facet": "Große Volksfeste und Jahrmärkte in Deutschland",
+      "known_at": 14
+    },
+    {
+      "name": "Libori",
+      "facet": "Große Volksfeste und Jahrmärkte in Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Fruchtsäule",
+      "facet": "Große Volksfeste und Jahrmärkte in Deutschland",
+      "known_at": 14
+    },
+    {
+      "name": "Allerheiligenkirmes",
+      "facet": "Große Volksfeste und Jahrmärkte in Deutschland",
+      "known_at": 14
+    },
+    {
+      "name": "Augsburger Plärrer",
+      "facet": "Große Volksfeste und Jahrmärkte in Deutschland",
+      "known_at": 14
+    },
+    {
+      "name": "Frühlingsfest",
+      "facet": "Große Volksfeste und Jahrmärkte in Deutschland",
+      "known_at": 7
+    },
+    {
+      "name": "Riesenrad",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 1
+    },
+    {
+      "name": "Karussell",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 1
+    },
+    {
+      "name": "Autoscooter",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 2
+    },
+    {
+      "name": "Achterbahn",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 1
+    },
+    {
+      "name": "Geisterbahn",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 2
+    },
+    {
+      "name": "Kettenkarussell",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 3
+    },
+    {
+      "name": "Losbude",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 4
+    },
+    {
+      "name": "Schießbude",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 4
+    },
+    {
+      "name": "Spiegelkabinett",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 4
+    },
+    {
+      "name": "Wilde Maus",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 9
+    },
+    {
+      "name": "Break Dance",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 9
+    },
+    {
+      "name": "Olympia Looping",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 12
+    },
+    {
+      "name": "Teufelsrad",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 11
+    },
+    {
+      "name": "Krinoline",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 13
+    },
+    {
+      "name": "Hau den Lukas",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 6
+    },
+    {
+      "name": "Dosenwerfen",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 3
+    },
+    {
+      "name": "Entenangeln",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 3
+    },
+    {
+      "name": "Toboggan",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 13
+    },
+    {
+      "name": "Schiffsschaukel",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 5
+    },
+    {
+      "name": "Freifallturm",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 7
+    },
+    {
+      "name": "Schausteller",
+      "facet": "Fahrgeschäfte und Buden auf der Kirmes",
+      "known_at": 9
+    },
+    {
+      "name": "Schützenkönig",
+      "facet": "Schützenfeste, Kirchweih und Dorffeste",
+      "known_at": 7
+    },
+    {
+      "name": "Vogelschießen",
+      "facet": "Schützenfeste, Kirchweih und Dorffeste",
+      "known_at": 10
+    },
+    {
+      "name": "Königsschuss",
+      "facet": "Schützenfeste, Kirchweih und Dorffeste",
+      "known_at": 11
+    },
+    {
+      "name": "Schützenbruderschaft",
+      "facet": "Schützenfeste, Kirchweih und Dorffeste",
+      "known_at": 13
+    },
+    {
+      "name": "Schützenschnur",
+      "facet": "Schützenfeste, Kirchweih und Dorffeste",
+      "known_at": 13
+    },
+    {
+      "name": "Schützenfest Hannover",
+      "facet": "Schützenfeste, Kirchweih und Dorffeste",
+      "known_at": 12
+    },
+    {
+      "name": "Kirchweih",
+      "facet": "Schützenfeste, Kirchweih und Dorffeste",
+      "known_at": 8
+    },
+    {
+      "name": "Kerwa",
+      "facet": "Schützenfeste, Kirchweih und Dorffeste",
+      "known_at": 11
+    },
+    {
+      "name": "Kerb",
+      "facet": "Schützenfeste, Kirchweih und Dorffeste",
+      "known_at": 12
+    },
+    {
+      "name": "Maibaumklau",
+      "facet": "Schützenfeste, Kirchweih und Dorffeste",
+      "known_at": 11
+    },
+    {
+      "name": "Tanz in den Mai",
+      "facet": "Schützenfeste, Kirchweih und Dorffeste",
+      "known_at": 7
+    },
+    {
+      "name": "Erntekrone",
+      "facet": "Schützenfeste, Kirchweih und Dorffeste",
+      "known_at": 10
+    },
+    {
+      "name": "Feuerwehrfest",
+      "facet": "Schützenfeste, Kirchweih und Dorffeste",
+      "known_at": 5
+    },
+    {
+      "name": "Zapfenstreich",
+      "facet": "Schützenfeste, Kirchweih und Dorffeste",
+      "known_at": 11
+    },
+    {
+      "name": "Pfingstochse",
+      "facet": "Schützenfeste, Kirchweih und Dorffeste",
+      "known_at": 14
+    },
+    {
+      "name": "Bläck Fööss",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 10
+    },
+    {
+      "name": "Höhner",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 9
+    },
+    {
+      "name": "Brings",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 10
+    },
+    {
+      "name": "Cat Ballou",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 12
+    },
+    {
+      "name": "Kasalla",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 12
+    },
+    {
+      "name": "Viva Colonia",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 8
+    },
+    {
+      "name": "Superjeilezick",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 10
+    },
+    {
+      "name": "Mer losse d'r Dom en Kölle",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 11
+    },
+    {
+      "name": "Humba Täterä",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 10
+    },
+    {
+      "name": "Polonäse Blankenese",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 9
+    },
+    {
+      "name": "Am Rosenmontag bin ich geboren",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 12
+    },
+    {
+      "name": "Heidewitzka, Herr Kapitän",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 12
+    },
+    {
+      "name": "Willy Millowitsch",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 12
+    },
+    {
+      "name": "Ernst Neger",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 13
+    },
+    {
+      "name": "Margit Sponheimer",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 14
+    },
+    {
+      "name": "Ein Prosit der Gemütlichkeit",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 8
+    },
+    {
+      "name": "Fliegerlied",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 6
+    },
+    {
+      "name": "Narrhallamarsch",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 12
+    },
+    {
+      "name": "Die Karawane zieht weiter",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 12
+    },
+    {
+      "name": "Echte Fründe",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 12
+    },
+    {
+      "name": "Cordula Grün",
+      "facet": "Karnevalslieder und Stimmungsmusik",
+      "known_at": 11
+    }
+  ]
+}

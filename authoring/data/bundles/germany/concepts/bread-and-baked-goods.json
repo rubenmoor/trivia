@@ -1,0 +1,777 @@
+{
+  "subcategory": "bread-and-baked-goods",
+  "facets": [
+    "Brotsorten und Laibe",
+    "Brötchen und regionale Namen",
+    "Brezeln und Laugengebäck",
+    "Kuchen und Torten",
+    "Weihnachtsgebäck und Stollen",
+    "Festtags- und Brauchtumsgebäck",
+    "Süße Teilchen vom Bäcker",
+    "Zutaten, Teige und Mehltypen",
+    "Bäckerhandwerk und Bäckerei-Alltag",
+    "Brotzeit, Abendbrot und Belag",
+    "Redewendungen rund ums Brot",
+    "Gebäck in Märchen, Geschichte und Medien"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Graubrot",
+      "facet": "Brotsorten und Laibe",
+      "known_at": 7
+    },
+    {
+      "name": "Sauerteigbrot",
+      "facet": "Brotsorten und Laibe",
+      "known_at": 7
+    },
+    {
+      "name": "Weißbrot",
+      "facet": "Brotsorten und Laibe",
+      "known_at": 2
+    },
+    {
+      "name": "Sonnenblumenkernbrot",
+      "facet": "Brotsorten und Laibe",
+      "known_at": 4
+    },
+    {
+      "name": "Kastenbrot",
+      "facet": "Brotsorten und Laibe",
+      "known_at": 7
+    },
+    {
+      "name": "Holzofenbrot",
+      "facet": "Brotsorten und Laibe",
+      "known_at": 7
+    },
+    {
+      "name": "Mehrkornbrot",
+      "facet": "Brotsorten und Laibe",
+      "known_at": 5
+    },
+    {
+      "name": "Fladenbrot",
+      "facet": "Brotsorten und Laibe",
+      "known_at": 4
+    },
+    {
+      "name": "Zwiebelbrot",
+      "facet": "Brotsorten und Laibe",
+      "known_at": 6
+    },
+    {
+      "name": "Schusterjunge",
+      "facet": "Brötchen und regionale Namen",
+      "known_at": 12
+    },
+    {
+      "name": "Mohnbrötchen",
+      "facet": "Brötchen und regionale Namen",
+      "known_at": 3
+    },
+    {
+      "name": "Sesambrötchen",
+      "facet": "Brötchen und regionale Namen",
+      "known_at": 3
+    },
+    {
+      "name": "Kürbiskernbrötchen",
+      "facet": "Brötchen und regionale Namen",
+      "known_at": 5
+    },
+    {
+      "name": "Doppelbrötchen",
+      "facet": "Brötchen und regionale Namen",
+      "known_at": 8
+    },
+    {
+      "name": "Röggelchen",
+      "facet": "Brötchen und regionale Namen",
+      "known_at": 12
+    },
+    {
+      "name": "Schnittbrötchen",
+      "facet": "Brötchen und regionale Namen",
+      "known_at": 8
+    },
+    {
+      "name": "Aufbackbrötchen",
+      "facet": "Brötchen und regionale Namen",
+      "known_at": 4
+    },
+    {
+      "name": "Schwäbische Seele",
+      "facet": "Brötchen und regionale Namen",
+      "known_at": 12
+    },
+    {
+      "name": "Splitterbrötchen",
+      "facet": "Brötchen und regionale Namen",
+      "known_at": 12
+    },
+    {
+      "name": "Knüppel",
+      "facet": "Brötchen und regionale Namen",
+      "known_at": 12
+    },
+    {
+      "name": "Laugencroissant",
+      "facet": "Brezeln und Laugengebäck",
+      "known_at": 6
+    },
+    {
+      "name": "Laugenknoten",
+      "facet": "Brezeln und Laugengebäck",
+      "known_at": 7
+    },
+    {
+      "name": "Laugenzopf",
+      "facet": "Brezeln und Laugengebäck",
+      "known_at": 8
+    },
+    {
+      "name": "Laugenecke",
+      "facet": "Brezeln und Laugengebäck",
+      "known_at": 8
+    },
+    {
+      "name": "Natronlauge",
+      "facet": "Brezeln und Laugengebäck",
+      "known_at": 10
+    },
+    {
+      "name": "Hagelsalz",
+      "facet": "Brezeln und Laugengebäck",
+      "known_at": 9
+    },
+    {
+      "name": "Schwäbische Brezel",
+      "facet": "Brezeln und Laugengebäck",
+      "known_at": 10
+    },
+    {
+      "name": "Brezelfest Speyer",
+      "facet": "Brezeln und Laugengebäck",
+      "known_at": 13
+    },
+    {
+      "name": "Brezelbauch",
+      "facet": "Brezeln und Laugengebäck",
+      "known_at": 11
+    },
+    {
+      "name": "Laugenkonfekt",
+      "facet": "Brezeln und Laugengebäck",
+      "known_at": 9
+    },
+    {
+      "name": "Käsekuchen",
+      "facet": "Kuchen und Torten",
+      "known_at": 2
+    },
+    {
+      "name": "Marmorkuchen",
+      "facet": "Kuchen und Torten",
+      "known_at": 2
+    },
+    {
+      "name": "Zwetschgenkuchen",
+      "facet": "Kuchen und Torten",
+      "known_at": 5
+    },
+    {
+      "name": "Rhabarberkuchen",
+      "facet": "Kuchen und Torten",
+      "known_at": 6
+    },
+    {
+      "name": "Gugelhupf",
+      "facet": "Kuchen und Torten",
+      "known_at": 6
+    },
+    {
+      "name": "Russischer Zupfkuchen",
+      "facet": "Kuchen und Torten",
+      "known_at": 8
+    },
+    {
+      "name": "Mohnkuchen",
+      "facet": "Kuchen und Torten",
+      "known_at": 6
+    },
+    {
+      "name": "Apfelkuchen",
+      "facet": "Kuchen und Torten",
+      "known_at": 1
+    },
+    {
+      "name": "Christstollen",
+      "facet": "Weihnachtsgebäck und Stollen",
+      "known_at": 4
+    },
+    {
+      "name": "Dresdner Stollenfest",
+      "facet": "Weihnachtsgebäck und Stollen",
+      "known_at": 12
+    },
+    {
+      "name": "Zimtsterne",
+      "facet": "Weihnachtsgebäck und Stollen",
+      "known_at": 3
+    },
+    {
+      "name": "Dominosteine",
+      "facet": "Weihnachtsgebäck und Stollen",
+      "known_at": 5
+    },
+    {
+      "name": "Spritzgebäck",
+      "facet": "Weihnachtsgebäck und Stollen",
+      "known_at": 6
+    },
+    {
+      "name": "Butterplätzchen",
+      "facet": "Weihnachtsgebäck und Stollen",
+      "known_at": 2
+    },
+    {
+      "name": "Magenbrot",
+      "facet": "Weihnachtsgebäck und Stollen",
+      "known_at": 10
+    },
+    {
+      "name": "Kokosmakronen",
+      "facet": "Weihnachtsgebäck und Stollen",
+      "known_at": 6
+    },
+    {
+      "name": "Heidesand",
+      "facet": "Weihnachtsgebäck und Stollen",
+      "known_at": 10
+    },
+    {
+      "name": "Florentiner",
+      "facet": "Weihnachtsgebäck und Stollen",
+      "known_at": 8
+    },
+    {
+      "name": "Ausstechplätzchen",
+      "facet": "Weihnachtsgebäck und Stollen",
+      "known_at": 3
+    },
+    {
+      "name": "Berliner",
+      "facet": "Festtags- und Brauchtumsgebäck",
+      "known_at": 3
+    },
+    {
+      "name": "Osterzopf",
+      "facet": "Festtags- und Brauchtumsgebäck",
+      "known_at": 5
+    },
+    {
+      "name": "Lebkuchenherz",
+      "facet": "Festtags- und Brauchtumsgebäck",
+      "known_at": 3
+    },
+    {
+      "name": "Mutzenmandeln",
+      "facet": "Festtags- und Brauchtumsgebäck",
+      "known_at": 12
+    },
+    {
+      "name": "Allerseelenzopf",
+      "facet": "Festtags- und Brauchtumsgebäck",
+      "known_at": 13
+    },
+    {
+      "name": "Hochzeitstorte",
+      "facet": "Festtags- und Brauchtumsgebäck",
+      "known_at": 3
+    },
+    {
+      "name": "Schmalzkuchen",
+      "facet": "Festtags- und Brauchtumsgebäck",
+      "known_at": 9
+    },
+    {
+      "name": "Kirchweihnudeln",
+      "facet": "Festtags- und Brauchtumsgebäck",
+      "known_at": 13
+    },
+    {
+      "name": "Fastnachtsküchle",
+      "facet": "Festtags- und Brauchtumsgebäck",
+      "known_at": 12
+    },
+    {
+      "name": "Erntedankbrot",
+      "facet": "Festtags- und Brauchtumsgebäck",
+      "known_at": 10
+    },
+    {
+      "name": "Gebildbrot",
+      "facet": "Festtags- und Brauchtumsgebäck",
+      "known_at": 14
+    },
+    {
+      "name": "Geburtstagskuchen",
+      "facet": "Festtags- und Brauchtumsgebäck",
+      "known_at": 1
+    },
+    {
+      "name": "Senfberliner",
+      "facet": "Festtags- und Brauchtumsgebäck",
+      "known_at": 7
+    },
+    {
+      "name": "Amerikaner",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 5
+    },
+    {
+      "name": "Zimtschnecke",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 3
+    },
+    {
+      "name": "Nussschnecke",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 5
+    },
+    {
+      "name": "Plundergebäck",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 9
+    },
+    {
+      "name": "Kopenhagener",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 11
+    },
+    {
+      "name": "Quarkbällchen",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 5
+    },
+    {
+      "name": "Windbeutel",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 5
+    },
+    {
+      "name": "Liebesknochen",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 10
+    },
+    {
+      "name": "Schweineohr",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 5
+    },
+    {
+      "name": "Mandelhörnchen",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 8
+    },
+    {
+      "name": "Apfeltasche",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 3
+    },
+    {
+      "name": "Kameruner",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 12
+    },
+    {
+      "name": "Spritzkuchen",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 10
+    },
+    {
+      "name": "Nussecke",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 6
+    },
+    {
+      "name": "Rumkugel",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 9
+    },
+    {
+      "name": "Streuselschnecke",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 6
+    },
+    {
+      "name": "Quarktasche",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 5
+    },
+    {
+      "name": "Puddingteilchen",
+      "facet": "Süße Teilchen vom Bäcker",
+      "known_at": 5
+    },
+    {
+      "name": "Mehltype 405",
+      "facet": "Zutaten, Teige und Mehltypen",
+      "known_at": 10
+    },
+    {
+      "name": "Mehltype 1050",
+      "facet": "Zutaten, Teige und Mehltypen",
+      "known_at": 13
+    },
+    {
+      "name": "Roggenmehl",
+      "facet": "Zutaten, Teige und Mehltypen",
+      "known_at": 7
+    },
+    {
+      "name": "Dinkelmehl",
+      "facet": "Zutaten, Teige und Mehltypen",
+      "known_at": 7
+    },
+    {
+      "name": "Vollkornmehl",
+      "facet": "Zutaten, Teige und Mehltypen",
+      "known_at": 5
+    },
+    {
+      "name": "Hirschhornsalz",
+      "facet": "Zutaten, Teige und Mehltypen",
+      "known_at": 12
+    },
+    {
+      "name": "Pottasche",
+      "facet": "Zutaten, Teige und Mehltypen",
+      "known_at": 13
+    },
+    {
+      "name": "Mürbeteig",
+      "facet": "Zutaten, Teige und Mehltypen",
+      "known_at": 8
+    },
+    {
+      "name": "Blätterteig",
+      "facet": "Zutaten, Teige und Mehltypen",
+      "known_at": 6
+    },
+    {
+      "name": "Hefeteig",
+      "facet": "Zutaten, Teige und Mehltypen",
+      "known_at": 6
+    },
+    {
+      "name": "Brandteig",
+      "facet": "Zutaten, Teige und Mehltypen",
+      "known_at": 11
+    },
+    {
+      "name": "Rührteig",
+      "facet": "Zutaten, Teige und Mehltypen",
+      "known_at": 8
+    },
+    {
+      "name": "Biskuitteig",
+      "facet": "Zutaten, Teige und Mehltypen",
+      "known_at": 8
+    },
+    {
+      "name": "Gluten",
+      "facet": "Zutaten, Teige und Mehltypen",
+      "known_at": 8
+    },
+    {
+      "name": "Vanillezucker",
+      "facet": "Zutaten, Teige und Mehltypen",
+      "known_at": 4
+    },
+    {
+      "name": "Streusel",
+      "facet": "Zutaten, Teige und Mehltypen",
+      "known_at": 4
+    },
+    {
+      "name": "Zuckerguss",
+      "facet": "Zutaten, Teige und Mehltypen",
+      "known_at": 3
+    },
+    {
+      "name": "Bäckermeister",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 5
+    },
+    {
+      "name": "Konditor",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 7
+    },
+    {
+      "name": "Deutsche Brotkultur als Kulturerbe",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 12
+    },
+    {
+      "name": "Bäckerzunftzeichen",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 11
+    },
+    {
+      "name": "Sonntagsbrötchen",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 4
+    },
+    {
+      "name": "Brotschneidemaschine",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 4
+    },
+    {
+      "name": "Holzbackofen",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 6
+    },
+    {
+      "name": "Bäckerinnung",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 13
+    },
+    {
+      "name": "Brotschieber",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 10
+    },
+    {
+      "name": "Gärkorb",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 12
+    },
+    {
+      "name": "Brotbackautomat",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 7
+    },
+    {
+      "name": "Backshop",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 5
+    },
+    {
+      "name": "Brötchenlieferdienst",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 8
+    },
+    {
+      "name": "Bäckerblume",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 12
+    },
+    {
+      "name": "Museum Brot und Kunst Ulm",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 14
+    },
+    {
+      "name": "Brotsommelier",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 13
+    },
+    {
+      "name": "Brot vom Vortag",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 5
+    },
+    {
+      "name": "Bäckerdutzend",
+      "facet": "Bäckerhandwerk und Bäckerei-Alltag",
+      "known_at": 13
+    },
+    {
+      "name": "Obazda",
+      "facet": "Brotzeit, Abendbrot und Belag",
+      "known_at": 10
+    },
+    {
+      "name": "Butterbrotpapier",
+      "facet": "Brotzeit, Abendbrot und Belag",
+      "known_at": 6
+    },
+    {
+      "name": "Wes Brot ich ess, des Lied ich sing",
+      "facet": "Redewendungen rund ums Brot",
+      "known_at": 13
+    },
+    {
+      "name": "Weggehen wie warme Semmeln",
+      "facet": "Redewendungen rund ums Brot",
+      "known_at": 8
+    },
+    {
+      "name": "Das tägliche Brot",
+      "facet": "Redewendungen rund ums Brot",
+      "known_at": 9
+    },
+    {
+      "name": "Der Mensch lebt nicht vom Brot allein",
+      "facet": "Redewendungen rund ums Brot",
+      "known_at": 11
+    },
+    {
+      "name": "Brot und Spiele",
+      "facet": "Redewendungen rund ums Brot",
+      "known_at": 12
+    },
+    {
+      "name": "Ein hartes Brot",
+      "facet": "Redewendungen rund ums Brot",
+      "known_at": 11
+    },
+    {
+      "name": "Sich nicht die Butter vom Brot nehmen lassen",
+      "facet": "Redewendungen rund ums Brot",
+      "known_at": 10
+    },
+    {
+      "name": "Für ein Butterbrot",
+      "facet": "Redewendungen rund ums Brot",
+      "known_at": 10
+    },
+    {
+      "name": "Aufs Butterbrot schmieren",
+      "facet": "Redewendungen rund ums Brot",
+      "known_at": 11
+    },
+    {
+      "name": "Ein Stück vom Kuchen abhaben",
+      "facet": "Redewendungen rund ums Brot",
+      "known_at": 9
+    },
+    {
+      "name": "Brötchengeber",
+      "facet": "Redewendungen rund ums Brot",
+      "known_at": 11
+    },
+    {
+      "name": "Pustekuchen",
+      "facet": "Redewendungen rund ums Brot",
+      "known_at": 7
+    },
+    {
+      "name": "Auf den Keks gehen",
+      "facet": "Redewendungen rund ums Brot",
+      "known_at": 5
+    },
+    {
+      "name": "Krümelkacker",
+      "facet": "Redewendungen rund ums Brot",
+      "known_at": 10
+    },
+    {
+      "name": "Semmelblond",
+      "facet": "Redewendungen rund ums Brot",
+      "known_at": 10
+    },
+    {
+      "name": "Altbacken",
+      "facet": "Redewendungen rund ums Brot",
+      "known_at": 10
+    },
+    {
+      "name": "Bahlsen",
+      "facet": "Gebäck in Märchen, Geschichte und Medien",
+      "known_at": 9
+    },
+    {
+      "name": "Das große Backen",
+      "facet": "Gebäck in Märchen, Geschichte und Medien",
+      "known_at": 8
+    },
+    {
+      "name": "Brotmarken",
+      "facet": "Gebäck in Märchen, Geschichte und Medien",
+      "known_at": 12
+    },
+    {
+      "name": "Butterbrief",
+      "facet": "Gebäck in Märchen, Geschichte und Medien",
+      "known_at": 14
+    },
+    {
+      "name": "Clemens Wilmenrod",
+      "facet": "Gebäck in Märchen, Geschichte und Medien",
+      "known_at": 14
+    },
+    {
+      "name": "Backe, backe Kuchen",
+      "facet": "Gebäck in Märchen, Geschichte und Medien",
+      "known_at": 2
+    },
+    {
+      "name": "In der Weihnachtsbäckerei",
+      "facet": "Gebäck in Märchen, Geschichte und Medien",
+      "known_at": 3
+    },
+    {
+      "name": "Krümelmonster",
+      "facet": "Gebäck in Märchen, Geschichte und Medien",
+      "known_at": 2
+    },
+    {
+      "name": "Prinzenrolle",
+      "facet": "Gebäck in Märchen, Geschichte und Medien",
+      "known_at": 5
+    },
+    {
+      "name": "Brezellegende",
+      "facet": "Gebäck in Märchen, Geschichte und Medien",
+      "known_at": 13
+    }
+  ]
+}

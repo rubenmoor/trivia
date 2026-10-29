@@ -1,0 +1,957 @@
+{
+  "subcategory": "mountains-and-landscapes",
+  "facets": [
+    "Alpen und Zugspitze",
+    "Mittelgebirge",
+    "Küsten, Inseln und Wattenmeer",
+    "Flusstäler und Schluchten",
+    "Seen und Moore",
+    "Felsen und Naturdenkmäler",
+    "Höhlen und Karst",
+    "Vulkane und Erdgeschichte",
+    "Tiefland, Heiden und Ebenen",
+    "Wälder und Nationalparks",
+    "Bergsagen und Sagengestalten",
+    "Wandern, Bergsport und Skigebiete"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 1,
+      "estimate": 4,
+      "record": 5,
+      "origin": 2,
+      "made_of": 4,
+      "purpose": 2,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Watzmann",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 8
+    },
+    {
+      "name": "Berchtesgadener Alpen",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 10
+    },
+    {
+      "name": "Allgäuer Alpen",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 10
+    },
+    {
+      "name": "Wettersteingebirge",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 13
+    },
+    {
+      "name": "Karwendel",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 12
+    },
+    {
+      "name": "Alpspitze",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 12
+    },
+    {
+      "name": "Wendelstein",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 11
+    },
+    {
+      "name": "Herzogstand",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 13
+    },
+    {
+      "name": "Kehlsteinhaus",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 10
+    },
+    {
+      "name": "Nebelhorn",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 11
+    },
+    {
+      "name": "Ammergauer Alpen",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 13
+    },
+    {
+      "name": "Chiemgauer Alpen",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 12
+    },
+    {
+      "name": "Mittenwald",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 11
+    },
+    {
+      "name": "Schneeferner",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 14
+    },
+    {
+      "name": "Höllentalferner",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 14
+    },
+    {
+      "name": "Blaueis",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 14
+    },
+    {
+      "name": "Föhn",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 9
+    },
+    {
+      "name": "Alpenvorland",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 10
+    },
+    {
+      "name": "Alm",
+      "facet": "Alpen und Zugspitze",
+      "known_at": 5
+    },
+    {
+      "name": "Thüringer Wald",
+      "facet": "Mittelgebirge",
+      "known_at": 8
+    },
+    {
+      "name": "Bayerischer Wald",
+      "facet": "Mittelgebirge",
+      "known_at": 8
+    },
+    {
+      "name": "Großer Arber",
+      "facet": "Mittelgebirge",
+      "known_at": 11
+    },
+    {
+      "name": "Rhön",
+      "facet": "Mittelgebirge",
+      "known_at": 10
+    },
+    {
+      "name": "Wasserkuppe",
+      "facet": "Mittelgebirge",
+      "known_at": 11
+    },
+    {
+      "name": "Eifel",
+      "facet": "Mittelgebirge",
+      "known_at": 8
+    },
+    {
+      "name": "Hunsrück",
+      "facet": "Mittelgebirge",
+      "known_at": 11
+    },
+    {
+      "name": "Taunus",
+      "facet": "Mittelgebirge",
+      "known_at": 9
+    },
+    {
+      "name": "Odenwald",
+      "facet": "Mittelgebirge",
+      "known_at": 9
+    },
+    {
+      "name": "Spessart",
+      "facet": "Mittelgebirge",
+      "known_at": 10
+    },
+    {
+      "name": "Schwäbische Alb",
+      "facet": "Mittelgebirge",
+      "known_at": 8
+    },
+    {
+      "name": "Fränkische Schweiz",
+      "facet": "Mittelgebirge",
+      "known_at": 11
+    },
+    {
+      "name": "Sauerland",
+      "facet": "Mittelgebirge",
+      "known_at": 8
+    },
+    {
+      "name": "Vogelsberg",
+      "facet": "Mittelgebirge",
+      "known_at": 12
+    },
+    {
+      "name": "Kahler Asten",
+      "facet": "Mittelgebirge",
+      "known_at": 12
+    },
+    {
+      "name": "Fichtelgebirge",
+      "facet": "Mittelgebirge",
+      "known_at": 11
+    },
+    {
+      "name": "Teutoburger Wald",
+      "facet": "Mittelgebirge",
+      "known_at": 9
+    },
+    {
+      "name": "Halligen",
+      "facet": "Küsten, Inseln und Wattenmeer",
+      "known_at": 11
+    },
+    {
+      "name": "Darß",
+      "facet": "Küsten, Inseln und Wattenmeer",
+      "known_at": 11
+    },
+    {
+      "name": "Mittelrheintal",
+      "facet": "Flusstäler und Schluchten",
+      "known_at": 10
+    },
+    {
+      "name": "Moseltal",
+      "facet": "Flusstäler und Schluchten",
+      "known_at": 8
+    },
+    {
+      "name": "Partnachklamm",
+      "facet": "Flusstäler und Schluchten",
+      "known_at": 11
+    },
+    {
+      "name": "Höllentalklamm",
+      "facet": "Flusstäler und Schluchten",
+      "known_at": 12
+    },
+    {
+      "name": "Breitachklamm",
+      "facet": "Flusstäler und Schluchten",
+      "known_at": 12
+    },
+    {
+      "name": "Altmühltal",
+      "facet": "Flusstäler und Schluchten",
+      "known_at": 11
+    },
+    {
+      "name": "Elbtal",
+      "facet": "Flusstäler und Schluchten",
+      "known_at": 8
+    },
+    {
+      "name": "Bodetal",
+      "facet": "Flusstäler und Schluchten",
+      "known_at": 12
+    },
+    {
+      "name": "Wutachschlucht",
+      "facet": "Flusstäler und Schluchten",
+      "known_at": 13
+    },
+    {
+      "name": "Neckartal",
+      "facet": "Flusstäler und Schluchten",
+      "known_at": 9
+    },
+    {
+      "name": "Ahrtal",
+      "facet": "Flusstäler und Schluchten",
+      "known_at": 9
+    },
+    {
+      "name": "Lahntal",
+      "facet": "Flusstäler und Schluchten",
+      "known_at": 11
+    },
+    {
+      "name": "Oberes Donautal",
+      "facet": "Flusstäler und Schluchten",
+      "known_at": 12
+    },
+    {
+      "name": "Rheingau",
+      "facet": "Flusstäler und Schluchten",
+      "known_at": 11
+    },
+    {
+      "name": "Titisee",
+      "facet": "Seen und Moore",
+      "known_at": 9
+    },
+    {
+      "name": "Möhnesee",
+      "facet": "Seen und Moore",
+      "known_at": 11
+    },
+    {
+      "name": "Mainau",
+      "facet": "Seen und Moore",
+      "known_at": 8
+    },
+    {
+      "name": "Teufelsmoor",
+      "facet": "Seen und Moore",
+      "known_at": 11
+    },
+    {
+      "name": "Federsee",
+      "facet": "Seen und Moore",
+      "known_at": 12
+    },
+    {
+      "name": "Wurzacher Ried",
+      "facet": "Seen und Moore",
+      "known_at": 13
+    },
+    {
+      "name": "Hochmoor",
+      "facet": "Seen und Moore",
+      "known_at": 9
+    },
+    {
+      "name": "Torf",
+      "facet": "Seen und Moore",
+      "known_at": 8
+    },
+    {
+      "name": "Externsteine",
+      "facet": "Felsen und Naturdenkmäler",
+      "known_at": 10
+    },
+    {
+      "name": "Teufelsmauer",
+      "facet": "Felsen und Naturdenkmäler",
+      "known_at": 12
+    },
+    {
+      "name": "Barbarine",
+      "facet": "Felsen und Naturdenkmäler",
+      "known_at": 13
+    },
+    {
+      "name": "Lilienstein",
+      "facet": "Felsen und Naturdenkmäler",
+      "known_at": 12
+    },
+    {
+      "name": "Schrammsteine",
+      "facet": "Felsen und Naturdenkmäler",
+      "known_at": 12
+    },
+    {
+      "name": "Bruchhauser Steine",
+      "facet": "Felsen und Naturdenkmäler",
+      "known_at": 13
+    },
+    {
+      "name": "Drachenfels",
+      "facet": "Felsen und Naturdenkmäler",
+      "known_at": 10
+    },
+    {
+      "name": "Felsenmeer im Odenwald",
+      "facet": "Felsen und Naturdenkmäler",
+      "known_at": 11
+    },
+    {
+      "name": "Luisenburg-Felsenlabyrinth",
+      "facet": "Felsen und Naturdenkmäler",
+      "known_at": 13
+    },
+    {
+      "name": "Ivenacker Eichen",
+      "facet": "Felsen und Naturdenkmäler",
+      "known_at": 13
+    },
+    {
+      "name": "Pfahl",
+      "facet": "Felsen und Naturdenkmäler",
+      "known_at": 14
+    },
+    {
+      "name": "Rotes Kliff",
+      "facet": "Felsen und Naturdenkmäler",
+      "known_at": 12
+    },
+    {
+      "name": "Loreley-Felsen",
+      "facet": "Felsen und Naturdenkmäler",
+      "known_at": 8
+    },
+    {
+      "name": "Tropfsteinhöhle",
+      "facet": "Höhlen und Karst",
+      "known_at": 5
+    },
+    {
+      "name": "Attahöhle",
+      "facet": "Höhlen und Karst",
+      "known_at": 11
+    },
+    {
+      "name": "Dechenhöhle",
+      "facet": "Höhlen und Karst",
+      "known_at": 12
+    },
+    {
+      "name": "Bärenhöhle",
+      "facet": "Höhlen und Karst",
+      "known_at": 11
+    },
+    {
+      "name": "Nebelhöhle",
+      "facet": "Höhlen und Karst",
+      "known_at": 12
+    },
+    {
+      "name": "Charlottenhöhle",
+      "facet": "Höhlen und Karst",
+      "known_at": 13
+    },
+    {
+      "name": "Teufelshöhle",
+      "facet": "Höhlen und Karst",
+      "known_at": 11
+    },
+    {
+      "name": "Hohle Fels",
+      "facet": "Höhlen und Karst",
+      "known_at": 12
+    },
+    {
+      "name": "Vogelherdhöhle",
+      "facet": "Höhlen und Karst",
+      "known_at": 13
+    },
+    {
+      "name": "Löwenmensch",
+      "facet": "Höhlen und Karst",
+      "known_at": 11
+    },
+    {
+      "name": "Venus vom Hohle Fels",
+      "facet": "Höhlen und Karst",
+      "known_at": 12
+    },
+    {
+      "name": "Baumannshöhle",
+      "facet": "Höhlen und Karst",
+      "known_at": 12
+    },
+    {
+      "name": "Hermannshöhle",
+      "facet": "Höhlen und Karst",
+      "known_at": 13
+    },
+    {
+      "name": "Barbarossahöhle",
+      "facet": "Höhlen und Karst",
+      "known_at": 12
+    },
+    {
+      "name": "Stalaktit",
+      "facet": "Höhlen und Karst",
+      "known_at": 6
+    },
+    {
+      "name": "Stalagmit",
+      "facet": "Höhlen und Karst",
+      "known_at": 6
+    },
+    {
+      "name": "Karst",
+      "facet": "Höhlen und Karst",
+      "known_at": 10
+    },
+    {
+      "name": "Doline",
+      "facet": "Höhlen und Karst",
+      "known_at": 12
+    },
+    {
+      "name": "Riesending-Schachthöhle",
+      "facet": "Höhlen und Karst",
+      "known_at": 12
+    },
+    {
+      "name": "Laacher See",
+      "facet": "Vulkane und Erdgeschichte",
+      "known_at": 10
+    },
+    {
+      "name": "Maar",
+      "facet": "Vulkane und Erdgeschichte",
+      "known_at": 10
+    },
+    {
+      "name": "Vulkaneifel",
+      "facet": "Vulkane und Erdgeschichte",
+      "known_at": 9
+    },
+    {
+      "name": "Pulvermaar",
+      "facet": "Vulkane und Erdgeschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Kaiserstuhl",
+      "facet": "Vulkane und Erdgeschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Siebengebirge",
+      "facet": "Vulkane und Erdgeschichte",
+      "known_at": 10
+    },
+    {
+      "name": "Hegau",
+      "facet": "Vulkane und Erdgeschichte",
+      "known_at": 12
+    },
+    {
+      "name": "Nördlinger Ries",
+      "facet": "Vulkane und Erdgeschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Steinheimer Becken",
+      "facet": "Vulkane und Erdgeschichte",
+      "known_at": 14
+    },
+    {
+      "name": "Grube Messel",
+      "facet": "Vulkane und Erdgeschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Holzmaden",
+      "facet": "Vulkane und Erdgeschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Solnhofen",
+      "facet": "Vulkane und Erdgeschichte",
+      "known_at": 12
+    },
+    {
+      "name": "Archaeopteryx",
+      "facet": "Vulkane und Erdgeschichte",
+      "known_at": 8
+    },
+    {
+      "name": "Geysir Andernach",
+      "facet": "Vulkane und Erdgeschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Oberrheingraben",
+      "facet": "Vulkane und Erdgeschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Basalt",
+      "facet": "Vulkane und Erdgeschichte",
+      "known_at": 8
+    },
+    {
+      "name": "Dinosaurierpark Münchehagen",
+      "facet": "Vulkane und Erdgeschichte",
+      "known_at": 14
+    },
+    {
+      "name": "Heidschnucke",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 9
+    },
+    {
+      "name": "Norddeutsches Tiefland",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 9
+    },
+    {
+      "name": "Oderbruch",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 12
+    },
+    {
+      "name": "Magdeburger Börde",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 11
+    },
+    {
+      "name": "Marsch",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 11
+    },
+    {
+      "name": "Geest",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 12
+    },
+    {
+      "name": "Emsland",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 10
+    },
+    {
+      "name": "Altes Land",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 10
+    },
+    {
+      "name": "Uckermark",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 11
+    },
+    {
+      "name": "Fläming",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 13
+    },
+    {
+      "name": "Münsterland",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 9
+    },
+    {
+      "name": "Niederrhein",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 10
+    },
+    {
+      "name": "Wendland",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 12
+    },
+    {
+      "name": "Lausitz",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 10
+    },
+    {
+      "name": "Findling",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 8
+    },
+    {
+      "name": "Urstromtal",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 12
+    },
+    {
+      "name": "Kölner Bucht",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 12
+    },
+    {
+      "name": "Heideblüte",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 8
+    },
+    {
+      "name": "Wilseder Berg",
+      "facet": "Tiefland, Heiden und Ebenen",
+      "known_at": 13
+    },
+    {
+      "name": "Nationalpark Bayerischer Wald",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 8
+    },
+    {
+      "name": "Nationalpark Berchtesgaden",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 10
+    },
+    {
+      "name": "Nationalpark Harz",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 9
+    },
+    {
+      "name": "Nationalpark Sächsische Schweiz",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 10
+    },
+    {
+      "name": "Nationalpark Hainich",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 12
+    },
+    {
+      "name": "Nationalpark Kellerwald-Edersee",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 13
+    },
+    {
+      "name": "Nationalpark Eifel",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 11
+    },
+    {
+      "name": "Nationalpark Schwarzwald",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 11
+    },
+    {
+      "name": "Nationalpark Unteres Odertal",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 13
+    },
+    {
+      "name": "Müritz-Nationalpark",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 12
+    },
+    {
+      "name": "Nationalpark Hunsrück-Hochwald",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 13
+    },
+    {
+      "name": "Nationalpark Vorpommersche Boddenlandschaft",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 13
+    },
+    {
+      "name": "Pfälzerwald",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 10
+    },
+    {
+      "name": "Reinhardswald",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 12
+    },
+    {
+      "name": "Sachsenwald",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 13
+    },
+    {
+      "name": "Grunewald",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 9
+    },
+    {
+      "name": "Luchs",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 6
+    },
+    {
+      "name": "Waldsterben",
+      "facet": "Wälder und Nationalparks",
+      "known_at": 11
+    },
+    {
+      "name": "Rübezahl",
+      "facet": "Bergsagen und Sagengestalten",
+      "known_at": 8
+    },
+    {
+      "name": "Barbarossa im Kyffhäuser",
+      "facet": "Bergsagen und Sagengestalten",
+      "known_at": 11
+    },
+    {
+      "name": "Brockengespenst",
+      "facet": "Bergsagen und Sagengestalten",
+      "known_at": 11
+    },
+    {
+      "name": "Frau Holle",
+      "facet": "Bergsagen und Sagengestalten",
+      "known_at": 5
+    },
+    {
+      "name": "Tannhäuser im Hörselberg",
+      "facet": "Bergsagen und Sagengestalten",
+      "known_at": 13
+    },
+    {
+      "name": "Untersberg",
+      "facet": "Bergsagen und Sagengestalten",
+      "known_at": 13
+    },
+    {
+      "name": "König Watzmann",
+      "facet": "Bergsagen und Sagengestalten",
+      "known_at": 12
+    },
+    {
+      "name": "Wolpertinger",
+      "facet": "Bergsagen und Sagengestalten",
+      "known_at": 9
+    },
+    {
+      "name": "Tatzelwurm",
+      "facet": "Bergsagen und Sagengestalten",
+      "known_at": 13
+    },
+    {
+      "name": "Rosstrappe",
+      "facet": "Bergsagen und Sagengestalten",
+      "known_at": 13
+    },
+    {
+      "name": "Siegfried der Drachentöter",
+      "facet": "Bergsagen und Sagengestalten",
+      "known_at": 9
+    },
+    {
+      "name": "Mummelsee",
+      "facet": "Bergsagen und Sagengestalten",
+      "known_at": 12
+    },
+    {
+      "name": "Heinzelmännchen von Köln",
+      "facet": "Bergsagen und Sagengestalten",
+      "known_at": 8
+    },
+    {
+      "name": "Bergmönch",
+      "facet": "Bergsagen und Sagengestalten",
+      "known_at": 14
+    },
+    {
+      "name": "Rennsteig",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 11
+    },
+    {
+      "name": "Malerweg",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 11
+    },
+    {
+      "name": "Rheinsteig",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 12
+    },
+    {
+      "name": "Westweg",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 13
+    },
+    {
+      "name": "Zugspitzbahn",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 9
+    },
+    {
+      "name": "Brockenbahn",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 10
+    },
+    {
+      "name": "Vierschanzentournee",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 8
+    },
+    {
+      "name": "Neujahrsspringen",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 10
+    },
+    {
+      "name": "Winterberg",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 9
+    },
+    {
+      "name": "Willingen",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 11
+    },
+    {
+      "name": "Oberhof",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 9
+    },
+    {
+      "name": "Klingenthal",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 12
+    },
+    {
+      "name": "Altenberg",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 12
+    },
+    {
+      "name": "Deutscher Alpenverein",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 10
+    },
+    {
+      "name": "Gipfelkreuz",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 4
+    },
+    {
+      "name": "Gipfelbuch",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 8
+    },
+    {
+      "name": "Sommerrodelbahn",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 6
+    },
+    {
+      "name": "Harzer Wandernadel",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 13
+    },
+    {
+      "name": "Das Wandern ist des Müllers Lust",
+      "facet": "Wandern, Bergsport und Skigebiete",
+      "known_at": 7
+    }
+  ]
+}

@@ -1,0 +1,1097 @@
+{
+  "subcategory": "schlager-and-folk-music",
+  "facets": [
+    "Schlagerstars der Gegenwart",
+    "Schlagerlegenden der 50er bis 80er",
+    "Berühmte Schlagerhits und Refrains",
+    "Ballermann- und Partyschlager",
+    "Volkstümliche Musik und Musikantenstadl",
+    "Traditionelle Volkslieder",
+    "Kinder- und Wanderlieder",
+    "Instrumente der Volksmusik",
+    "Schlager im Fernsehen und Shows",
+    "Schlager beim Eurovision Song Contest",
+    "Volksfeste, Trachten und Bräuche",
+    "Regionale Musiktraditionen in Deutschland"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Helene Fischer",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 4
+    },
+    {
+      "name": "Florian Silbereisen",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 6
+    },
+    {
+      "name": "Andrea Berg",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 9
+    },
+    {
+      "name": "Vanessa Mai",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 9
+    },
+    {
+      "name": "Giovanni Zarrella",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 10
+    },
+    {
+      "name": "Ben Zucker",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 11
+    },
+    {
+      "name": "Kerstin Ott",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 10
+    },
+    {
+      "name": "Matthias Reim",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 10
+    },
+    {
+      "name": "Michelle",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 11
+    },
+    {
+      "name": "Maite Kelly",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 11
+    },
+    {
+      "name": "Ross Antony",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 10
+    },
+    {
+      "name": "Anna-Maria Zimmermann",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 12
+    },
+    {
+      "name": "Fantasy",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 12
+    },
+    {
+      "name": "Die Amigos",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 12
+    },
+    {
+      "name": "Nino de Angelo",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 12
+    },
+    {
+      "name": "Santiano",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 10
+    },
+    {
+      "name": "Voxxclub",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 13
+    },
+    {
+      "name": "Daniela Alfinito",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 13
+    },
+    {
+      "name": "Eloy de Jong",
+      "facet": "Schlagerstars der Gegenwart",
+      "known_at": 13
+    },
+    {
+      "name": "Roy Black",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 11
+    },
+    {
+      "name": "Roland Kaiser",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 9
+    },
+    {
+      "name": "Howard Carpendale",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 10
+    },
+    {
+      "name": "Wolfgang Petry",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 9
+    },
+    {
+      "name": "Marianne Rosenberg",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 11
+    },
+    {
+      "name": "Rex Gildo",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 12
+    },
+    {
+      "name": "Costa Cordalis",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 12
+    },
+    {
+      "name": "Tony Marshall",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 11
+    },
+    {
+      "name": "Vicky Leandros",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 11
+    },
+    {
+      "name": "Karel Gott",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 9
+    },
+    {
+      "name": "Caterina Valente",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 13
+    },
+    {
+      "name": "Conny Froboess",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 13
+    },
+    {
+      "name": "Drafi Deutscher",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 13
+    },
+    {
+      "name": "Michael Holm",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 13
+    },
+    {
+      "name": "Katja Ebstein",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 13
+    },
+    {
+      "name": "Juliane Werding",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 13
+    },
+    {
+      "name": "Mary Roos",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 13
+    },
+    {
+      "name": "Frank Zander",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 11
+    },
+    {
+      "name": "Heintje",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 12
+    },
+    {
+      "name": "Gitte Hænning",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 13
+    },
+    {
+      "name": "Wencke Myhre",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 13
+    },
+    {
+      "name": "Bernd Clüver",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 14
+    },
+    {
+      "name": "Lale Andersen",
+      "facet": "Schlagerlegenden der 50er bis 80er",
+      "known_at": 13
+    },
+    {
+      "name": "Atemlos durch die Nacht",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 4
+    },
+    {
+      "name": "Marmor, Stein und Eisen bricht",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 9
+    },
+    {
+      "name": "Wahnsinn",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 8
+    },
+    {
+      "name": "Ein Stern (… der deinen Namen trägt)",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 8
+    },
+    {
+      "name": "Biene Maja (Lied)",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 5
+    },
+    {
+      "name": "Ein Bett im Kornfeld",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 9
+    },
+    {
+      "name": "Verdammt, ich lieb' dich",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 10
+    },
+    {
+      "name": "Du hast mich tausendmal belogen",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 10
+    },
+    {
+      "name": "Schöne Maid",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 12
+    },
+    {
+      "name": "Er gehört zu mir",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 11
+    },
+    {
+      "name": "Santa Maria",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 11
+    },
+    {
+      "name": "Fiesta Mexicana",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 11
+    },
+    {
+      "name": "Herzilein",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 11
+    },
+    {
+      "name": "Theo, wir fahr'n nach Lodz",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 12
+    },
+    {
+      "name": "Ganz in Weiß",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 12
+    },
+    {
+      "name": "Sieben Fässer Wein",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 13
+    },
+    {
+      "name": "Anita",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 13
+    },
+    {
+      "name": "Zwei kleine Italiener",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 13
+    },
+    {
+      "name": "Mendocino",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 13
+    },
+    {
+      "name": "Schuld war nur der Bossa Nova",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 13
+    },
+    {
+      "name": "Ich will 'nen Cowboy als Mann",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 13
+    },
+    {
+      "name": "Lili Marleen",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 12
+    },
+    {
+      "name": "Rote Lippen soll man küssen",
+      "facet": "Berühmte Schlagerhits und Refrains",
+      "known_at": 12
+    },
+    {
+      "name": "Ballermann",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 8
+    },
+    {
+      "name": "Mickie Krause",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 10
+    },
+    {
+      "name": "Jürgen Drews",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 9
+    },
+    {
+      "name": "Ikke Hüftgold",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 12
+    },
+    {
+      "name": "Mia Julia",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 12
+    },
+    {
+      "name": "Peter Wackel",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 13
+    },
+    {
+      "name": "Layla",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 8
+    },
+    {
+      "name": "Mama Laudaaa",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 11
+    },
+    {
+      "name": "Schatzi, schenk mir ein Foto",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 11
+    },
+    {
+      "name": "Das rote Pferd",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 11
+    },
+    {
+      "name": "Hey, wir wollen die Eisbär'n sehn",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 12
+    },
+    {
+      "name": "Johnny Däpp",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 13
+    },
+    {
+      "name": "Komm hol das Lasso raus",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 13
+    },
+    {
+      "name": "Helikopter 117",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 12
+    },
+    {
+      "name": "Bierkönig",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 12
+    },
+    {
+      "name": "Megapark",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 12
+    },
+    {
+      "name": "Schlagermove",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 12
+    },
+    {
+      "name": "Polonaise",
+      "facet": "Ballermann- und Partyschlager",
+      "known_at": 7
+    },
+    {
+      "name": "Musikantenstadl",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 10
+    },
+    {
+      "name": "Volkstümlicher Schlager",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 12
+    },
+    {
+      "name": "Kastelruther Spatzen",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 11
+    },
+    {
+      "name": "Wildecker Herzbuben",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 11
+    },
+    {
+      "name": "Stefanie Hertel",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 11
+    },
+    {
+      "name": "Stefan Mross",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 11
+    },
+    {
+      "name": "Marianne & Michael",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 12
+    },
+    {
+      "name": "Patrick Lindner",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 12
+    },
+    {
+      "name": "Original Naabtal Duo",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 13
+    },
+    {
+      "name": "Patrona Bavariae",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 14
+    },
+    {
+      "name": "Maria und Margot Hellwig",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 13
+    },
+    {
+      "name": "Grand Prix der Volksmusik",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 12
+    },
+    {
+      "name": "Ernst Mosch",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 13
+    },
+    {
+      "name": "Egerländer Musikanten",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 13
+    },
+    {
+      "name": "Slavko Avsenik",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 14
+    },
+    {
+      "name": "Trompetenecho",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 14
+    },
+    {
+      "name": "Polka",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 5
+    },
+    {
+      "name": "Rosamunde",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 12
+    },
+    {
+      "name": "Schneewalzer",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 11
+    },
+    {
+      "name": "Blasmusik",
+      "facet": "Volkstümliche Musik und Musikantenstadl",
+      "known_at": 6
+    },
+    {
+      "name": "Die Gedanken sind frei",
+      "facet": "Traditionelle Volkslieder",
+      "known_at": 10
+    },
+    {
+      "name": "Guten Abend, gut' Nacht",
+      "facet": "Traditionelle Volkslieder",
+      "known_at": 4
+    },
+    {
+      "name": "Weißt du, wie viel Sternlein stehen",
+      "facet": "Traditionelle Volkslieder",
+      "known_at": 6
+    },
+    {
+      "name": "Kein schöner Land",
+      "facet": "Traditionelle Volkslieder",
+      "known_at": 12
+    },
+    {
+      "name": "Am Brunnen vor dem Tore",
+      "facet": "Traditionelle Volkslieder",
+      "known_at": 12
+    },
+    {
+      "name": "Hoch auf dem gelben Wagen",
+      "facet": "Traditionelle Volkslieder",
+      "known_at": 11
+    },
+    {
+      "name": "Muss i denn zum Städtele hinaus",
+      "facet": "Traditionelle Volkslieder",
+      "known_at": 11
+    },
+    {
+      "name": "Heidenröslein",
+      "facet": "Traditionelle Volkslieder",
+      "known_at": 11
+    },
+    {
+      "name": "Schwarzbraun ist die Haselnuss",
+      "facet": "Traditionelle Volkslieder",
+      "known_at": 12
+    },
+    {
+      "name": "Ein Jäger aus Kurpfalz",
+      "facet": "Traditionelle Volkslieder",
+      "known_at": 12
+    },
+    {
+      "name": "Horch, was kommt von draußen rein",
+      "facet": "Traditionelle Volkslieder",
+      "known_at": 12
+    },
+    {
+      "name": "Wenn ich ein Vöglein wär",
+      "facet": "Traditionelle Volkslieder",
+      "known_at": 12
+    },
+    {
+      "name": "Ännchen von Tharau",
+      "facet": "Traditionelle Volkslieder",
+      "known_at": 14
+    },
+    {
+      "name": "Bunt sind schon die Wälder",
+      "facet": "Traditionelle Volkslieder",
+      "known_at": 10
+    },
+    {
+      "name": "Ade zur guten Nacht",
+      "facet": "Traditionelle Volkslieder",
+      "known_at": 14
+    },
+    {
+      "name": "Alle meine Entchen",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 1
+    },
+    {
+      "name": "Hänschen klein",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 2
+    },
+    {
+      "name": "Fuchs, du hast die Gans gestohlen",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 3
+    },
+    {
+      "name": "Bruder Jakob",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 2
+    },
+    {
+      "name": "Alle Vögel sind schon da",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 3
+    },
+    {
+      "name": "Summ, summ, summ",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 4
+    },
+    {
+      "name": "Ein Männlein steht im Walde",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 6
+    },
+    {
+      "name": "Kommt ein Vogel geflogen",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 6
+    },
+    {
+      "name": "Mein Hut, der hat drei Ecken",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 4
+    },
+    {
+      "name": "Grün, grün, grün sind alle meine Kleider",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 4
+    },
+    {
+      "name": "Laterne, Laterne",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 3
+    },
+    {
+      "name": "Häschen in der Grube",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 5
+    },
+    {
+      "name": "Auf der Mauer, auf der Lauer",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 4
+    },
+    {
+      "name": "Eine Insel mit zwei Bergen",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 8
+    },
+    {
+      "name": "Detlev Jöcker",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 11
+    },
+    {
+      "name": "Ein Vogel wollte Hochzeit machen",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 7
+    },
+    {
+      "name": "Meine Oma fährt im Hühnerstall Motorrad",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 6
+    },
+    {
+      "name": "Im Frühtau zu Berge",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 12
+    },
+    {
+      "name": "Hejo, spann den Wagen an",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 9
+    },
+    {
+      "name": "Mein Vater war ein Wandersmann",
+      "facet": "Kinder- und Wanderlieder",
+      "known_at": 11
+    },
+    {
+      "name": "Akkordeon",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 3
+    },
+    {
+      "name": "Trompete",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 1
+    },
+    {
+      "name": "Tuba",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 3
+    },
+    {
+      "name": "Klarinette",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 4
+    },
+    {
+      "name": "Posaune",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 4
+    },
+    {
+      "name": "Blockflöte",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 2
+    },
+    {
+      "name": "Kontrabass",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 5
+    },
+    {
+      "name": "Glockenspiel",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 4
+    },
+    {
+      "name": "Zither",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 10
+    },
+    {
+      "name": "Hackbrett",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 12
+    },
+    {
+      "name": "Tenorhorn",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 11
+    },
+    {
+      "name": "Flügelhorn",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 11
+    },
+    {
+      "name": "Drehorgel",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 7
+    },
+    {
+      "name": "Bandoneon",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 13
+    },
+    {
+      "name": "Schifferklavier",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 10
+    },
+    {
+      "name": "Teufelsgeige",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 13
+    },
+    {
+      "name": "Waschbrett",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 8
+    },
+    {
+      "name": "Maultrommel",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 11
+    },
+    {
+      "name": "Schellenbaum",
+      "facet": "Instrumente der Volksmusik",
+      "known_at": 14
+    },
+    {
+      "name": "ZDF-Hitparade",
+      "facet": "Schlager im Fernsehen und Shows",
+      "known_at": 11
+    },
+    {
+      "name": "Dieter Thomas Heck",
+      "facet": "Schlager im Fernsehen und Shows",
+      "known_at": 12
+    },
+    {
+      "name": "Feste der Volksmusik",
+      "facet": "Schlager im Fernsehen und Shows",
+      "known_at": 12
+    },
+    {
+      "name": "Schlagerboom",
+      "facet": "Schlager im Fernsehen und Shows",
+      "known_at": 12
+    },
+    {
+      "name": "Die Helene Fischer Show",
+      "facet": "Schlager im Fernsehen und Shows",
+      "known_at": 8
+    },
+    {
+      "name": "Immer wieder sonntags",
+      "facet": "Schlager im Fernsehen und Shows",
+      "known_at": 11
+    },
+    {
+      "name": "ZDF-Fernsehgarten",
+      "facet": "Schlager im Fernsehen und Shows",
+      "known_at": 9
+    },
+    {
+      "name": "Andrea Kiewel",
+      "facet": "Schlager im Fernsehen und Shows",
+      "known_at": 12
+    },
+    {
+      "name": "Carmen Nebel",
+      "facet": "Schlager im Fernsehen und Shows",
+      "known_at": 12
+    },
+    {
+      "name": "Die Schlagerchampions",
+      "facet": "Schlager im Fernsehen und Shows",
+      "known_at": 13
+    },
+    {
+      "name": "Musikladen",
+      "facet": "Schlager im Fernsehen und Shows",
+      "known_at": 13
+    },
+    {
+      "name": "Disco (ZDF)",
+      "facet": "Schlager im Fernsehen und Shows",
+      "known_at": 13
+    },
+    {
+      "name": "Ilja Richter",
+      "facet": "Schlager im Fernsehen und Shows",
+      "known_at": 13
+    },
+    {
+      "name": "Lustige Musikanten",
+      "facet": "Schlager im Fernsehen und Shows",
+      "known_at": 13
+    },
+    {
+      "name": "Zum Blauen Bock",
+      "facet": "Schlager im Fernsehen und Shows",
+      "known_at": 14
+    },
+    {
+      "name": "Heinz Schenk",
+      "facet": "Schlager im Fernsehen und Shows",
+      "known_at": 14
+    },
+    {
+      "name": "Ein Kessel Buntes",
+      "facet": "Schlager im Fernsehen und Shows",
+      "known_at": 13
+    },
+    {
+      "name": "Nicole",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 9
+    },
+    {
+      "name": "Ein bisschen Frieden",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 9
+    },
+    {
+      "name": "Lena Meyer-Landrut",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 7
+    },
+    {
+      "name": "Satellite",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 8
+    },
+    {
+      "name": "Ralph Siegel",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 12
+    },
+    {
+      "name": "Guildo Horn",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 11
+    },
+    {
+      "name": "Guildo hat euch lieb!",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 12
+    },
+    {
+      "name": "Dschinghis Khan",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 11
+    },
+    {
+      "name": "Stefan Raab",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 8
+    },
+    {
+      "name": "Wadde hadde dudde da?",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 11
+    },
+    {
+      "name": "Max Mutzke",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 12
+    },
+    {
+      "name": "Roger Cicero",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 12
+    },
+    {
+      "name": "Texas Lightning",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 13
+    },
+    {
+      "name": "Michael Schulte",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 12
+    },
+    {
+      "name": "Lord of the Lost",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 12
+    },
+    {
+      "name": "Joy Fleming",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 13
+    },
+    {
+      "name": "Lena Valaitis",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 14
+    },
+    {
+      "name": "Grand Prix Eurovision de la Chanson",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 12
+    },
+    {
+      "name": "Eurovision Song Contest 2011 in Düsseldorf",
+      "facet": "Schlager beim Eurovision Song Contest",
+      "known_at": 11
+    },
+    {
+      "name": "Schuhplattler",
+      "facet": "Volksfeste, Trachten und Bräuche",
+      "known_at": 10
+    },
+    {
+      "name": "In München steht ein Hofbräuhaus",
+      "facet": "Regionale Musiktraditionen in Deutschland",
+      "known_at": 10
+    },
+    {
+      "name": "Bayerischer Defiliermarsch",
+      "facet": "Regionale Musiktraditionen in Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "LaBrassBanda",
+      "facet": "Regionale Musiktraditionen in Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Haindling",
+      "facet": "Regionale Musiktraditionen in Deutschland",
+      "known_at": 14
+    },
+    {
+      "name": "Jodeln",
+      "facet": "Regionale Musiktraditionen in Deutschland",
+      "known_at": 6
+    },
+    {
+      "name": "Hans Albers",
+      "facet": "Regionale Musiktraditionen in Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Auf der Reeperbahn nachts um halb eins",
+      "facet": "Regionale Musiktraditionen in Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Wir lagen vor Madagaskar",
+      "facet": "Regionale Musiktraditionen in Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Hamborger Veermaster",
+      "facet": "Regionale Musiktraditionen in Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Dat du min Leevsten büst",
+      "facet": "Regionale Musiktraditionen in Deutschland",
+      "known_at": 14
+    },
+    {
+      "name": "Steigerlied",
+      "facet": "Regionale Musiktraditionen in Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Westerwaldlied",
+      "facet": "Regionale Musiktraditionen in Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Rennsteiglied",
+      "facet": "Regionale Musiktraditionen in Deutschland",
+      "known_at": 13
+    }
+  ]
+}

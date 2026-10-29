@@ -1,0 +1,1022 @@
+{
+  "subcategory": "founders-and-entrepreneurs",
+  "facets": [
+    "Autopioniere und Autobauer",
+    "Erfinder als Firmengründer",
+    "Lebensmittel und Süßwaren",
+    "Handel und Discounter",
+    "Sportartikel und Mode",
+    "Technik- und Elektrokonzerne",
+    "Chemie und Pharma",
+    "Industriedynastien der Kaiserzeit",
+    "Gründer der Nachkriegszeit",
+    "Medien und Verlage",
+    "Software- und Internetgründer",
+    "Spielzeug und Haushaltswaren"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Ferry Porsche",
+      "facet": "Autopioniere und Autobauer",
+      "known_at": 12
+    },
+    {
+      "name": "Ferdinand Piëch",
+      "facet": "Autopioniere und Autobauer",
+      "known_at": 13
+    },
+    {
+      "name": "Adam Opel",
+      "facet": "Autopioniere und Autobauer",
+      "known_at": 9
+    },
+    {
+      "name": "Carl F. W. Borgward",
+      "facet": "Autopioniere und Autobauer",
+      "known_at": 12
+    },
+    {
+      "name": "Herbert Quandt",
+      "facet": "Autopioniere und Autobauer",
+      "known_at": 13
+    },
+    {
+      "name": "Emil Jellinek",
+      "facet": "Autopioniere und Autobauer",
+      "known_at": 14
+    },
+    {
+      "name": "Mercedes-Stern",
+      "facet": "Autopioniere und Autobauer",
+      "known_at": 5
+    },
+    {
+      "name": "Porsche 911",
+      "facet": "Autopioniere und Autobauer",
+      "known_at": 6
+    },
+    {
+      "name": "Vier Ringe von Audi",
+      "facet": "Autopioniere und Autobauer",
+      "known_at": 5
+    },
+    {
+      "name": "Ferdinand von Zeppelin",
+      "facet": "Erfinder als Firmengründer",
+      "known_at": 8
+    },
+    {
+      "name": "Carl Zeiss",
+      "facet": "Erfinder als Firmengründer",
+      "known_at": 9
+    },
+    {
+      "name": "Ernst Abbe",
+      "facet": "Erfinder als Firmengründer",
+      "known_at": 13
+    },
+    {
+      "name": "Ernst Leitz",
+      "facet": "Erfinder als Firmengründer",
+      "known_at": 12
+    },
+    {
+      "name": "Fischer-Dübel",
+      "facet": "Erfinder als Firmengründer",
+      "known_at": 6
+    },
+    {
+      "name": "Emil Berliner",
+      "facet": "Erfinder als Firmengründer",
+      "known_at": 13
+    },
+    {
+      "name": "Friedrich Soennecken",
+      "facet": "Erfinder als Firmengründer",
+      "known_at": 14
+    },
+    {
+      "name": "Haribo",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 2
+    },
+    {
+      "name": "Goldbären",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 2
+    },
+    {
+      "name": "Ritter Sport",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 3
+    },
+    {
+      "name": "Clara Ritter",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 12
+    },
+    {
+      "name": "Hermann Bahlsen",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 11
+    },
+    {
+      "name": "August Oetker",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 9
+    },
+    {
+      "name": "Dr. Oetker",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 4
+    },
+    {
+      "name": "Backpulver",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 6
+    },
+    {
+      "name": "Capri-Sonne",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 3
+    },
+    {
+      "name": "Rudolf Wild",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 13
+    },
+    {
+      "name": "Fanta",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 2
+    },
+    {
+      "name": "Max Keith",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 13
+    },
+    {
+      "name": "Tchibo",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 6
+    },
+    {
+      "name": "Johann Jacobs",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 12
+    },
+    {
+      "name": "Ludwig Roselius",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 14
+    },
+    {
+      "name": "Carl Heinrich Knorr",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 12
+    },
+    {
+      "name": "Georg Hipp",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 13
+    },
+    {
+      "name": "Theo Müller",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 12
+    },
+    {
+      "name": "Werther's Original",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 6
+    },
+    {
+      "name": "Bionade",
+      "facet": "Lebensmittel und Süßwaren",
+      "known_at": 11
+    },
+    {
+      "name": "Aldi",
+      "facet": "Handel und Discounter",
+      "known_at": 2
+    },
+    {
+      "name": "Albrecht-Brüder",
+      "facet": "Handel und Discounter",
+      "known_at": 10
+    },
+    {
+      "name": "Lidl",
+      "facet": "Handel und Discounter",
+      "known_at": 2
+    },
+    {
+      "name": "Dieter Schwarz",
+      "facet": "Handel und Discounter",
+      "known_at": 12
+    },
+    {
+      "name": "dm",
+      "facet": "Handel und Discounter",
+      "known_at": 3
+    },
+    {
+      "name": "Götz Werner",
+      "facet": "Handel und Discounter",
+      "known_at": 11
+    },
+    {
+      "name": "Rossmann",
+      "facet": "Handel und Discounter",
+      "known_at": 3
+    },
+    {
+      "name": "Dirk Roßmann",
+      "facet": "Handel und Discounter",
+      "known_at": 11
+    },
+    {
+      "name": "Otto Versand",
+      "facet": "Handel und Discounter",
+      "known_at": 6
+    },
+    {
+      "name": "Werner Otto",
+      "facet": "Handel und Discounter",
+      "known_at": 11
+    },
+    {
+      "name": "Josef Neckermann",
+      "facet": "Handel und Discounter",
+      "known_at": 12
+    },
+    {
+      "name": "Quelle",
+      "facet": "Handel und Discounter",
+      "known_at": 9
+    },
+    {
+      "name": "Gustav Schickedanz",
+      "facet": "Handel und Discounter",
+      "known_at": 13
+    },
+    {
+      "name": "Rudolph Karstadt",
+      "facet": "Handel und Discounter",
+      "known_at": 13
+    },
+    {
+      "name": "KaDeWe",
+      "facet": "Handel und Discounter",
+      "known_at": 8
+    },
+    {
+      "name": "Hermann Tietz",
+      "facet": "Handel und Discounter",
+      "known_at": 14
+    },
+    {
+      "name": "Edeka",
+      "facet": "Handel und Discounter",
+      "known_at": 3
+    },
+    {
+      "name": "Media Markt",
+      "facet": "Handel und Discounter",
+      "known_at": 4
+    },
+    {
+      "name": "Günther Fielmann",
+      "facet": "Handel und Discounter",
+      "known_at": 11
+    },
+    {
+      "name": "Obi",
+      "facet": "Handel und Discounter",
+      "known_at": 4
+    },
+    {
+      "name": "Adidas",
+      "facet": "Sportartikel und Mode",
+      "known_at": 2
+    },
+    {
+      "name": "Puma",
+      "facet": "Sportartikel und Mode",
+      "known_at": 2
+    },
+    {
+      "name": "Herzogenaurach",
+      "facet": "Sportartikel und Mode",
+      "known_at": 10
+    },
+    {
+      "name": "Drei Streifen",
+      "facet": "Sportartikel und Mode",
+      "known_at": 4
+    },
+    {
+      "name": "Schraubstollen",
+      "facet": "Sportartikel und Mode",
+      "known_at": 11
+    },
+    {
+      "name": "Hugo Boss",
+      "facet": "Sportartikel und Mode",
+      "known_at": 7
+    },
+    {
+      "name": "Karl Lagerfeld",
+      "facet": "Sportartikel und Mode",
+      "known_at": 7
+    },
+    {
+      "name": "Jil Sander",
+      "facet": "Sportartikel und Mode",
+      "known_at": 11
+    },
+    {
+      "name": "Wolfgang Joop",
+      "facet": "Sportartikel und Mode",
+      "known_at": 10
+    },
+    {
+      "name": "Birkenstock",
+      "facet": "Sportartikel und Mode",
+      "known_at": 6
+    },
+    {
+      "name": "Jack Wolfskin",
+      "facet": "Sportartikel und Mode",
+      "known_at": 6
+    },
+    {
+      "name": "Wolfgang Grupp",
+      "facet": "Sportartikel und Mode",
+      "known_at": 11
+    },
+    {
+      "name": "s.Oliver",
+      "facet": "Sportartikel und Mode",
+      "known_at": 6
+    },
+    {
+      "name": "Deuter",
+      "facet": "Sportartikel und Mode",
+      "known_at": 11
+    },
+    {
+      "name": "Siemens",
+      "facet": "Technik- und Elektrokonzerne",
+      "known_at": 4
+    },
+    {
+      "name": "Bosch",
+      "facet": "Technik- und Elektrokonzerne",
+      "known_at": 4
+    },
+    {
+      "name": "Emil Rathenau",
+      "facet": "Technik- und Elektrokonzerne",
+      "known_at": 14
+    },
+    {
+      "name": "AEG",
+      "facet": "Technik- und Elektrokonzerne",
+      "known_at": 10
+    },
+    {
+      "name": "Max Grundig",
+      "facet": "Technik- und Elektrokonzerne",
+      "known_at": 11
+    },
+    {
+      "name": "Grundig",
+      "facet": "Technik- und Elektrokonzerne",
+      "known_at": 9
+    },
+    {
+      "name": "Miele",
+      "facet": "Technik- und Elektrokonzerne",
+      "known_at": 6
+    },
+    {
+      "name": "Carl Miele",
+      "facet": "Technik- und Elektrokonzerne",
+      "known_at": 12
+    },
+    {
+      "name": "Braun",
+      "facet": "Technik- und Elektrokonzerne",
+      "known_at": 6
+    },
+    {
+      "name": "Max Braun",
+      "facet": "Technik- und Elektrokonzerne",
+      "known_at": 13
+    },
+    {
+      "name": "Telefunken",
+      "facet": "Technik- und Elektrokonzerne",
+      "known_at": 12
+    },
+    {
+      "name": "Sennheiser",
+      "facet": "Technik- und Elektrokonzerne",
+      "known_at": 9
+    },
+    {
+      "name": "Kärcher",
+      "facet": "Technik- und Elektrokonzerne",
+      "known_at": 7
+    },
+    {
+      "name": "Alfred Kärcher",
+      "facet": "Technik- und Elektrokonzerne",
+      "known_at": 12
+    },
+    {
+      "name": "Stihl",
+      "facet": "Technik- und Elektrokonzerne",
+      "known_at": 9
+    },
+    {
+      "name": "Leica",
+      "facet": "Technik- und Elektrokonzerne",
+      "known_at": 9
+    },
+    {
+      "name": "Friedrich Bayer",
+      "facet": "Chemie und Pharma",
+      "known_at": 10
+    },
+    {
+      "name": "Bayer",
+      "facet": "Chemie und Pharma",
+      "known_at": 5
+    },
+    {
+      "name": "Oskar Troplowitz",
+      "facet": "Chemie und Pharma",
+      "known_at": 13
+    },
+    {
+      "name": "Paul Carl Beiersdorf",
+      "facet": "Chemie und Pharma",
+      "known_at": 14
+    },
+    {
+      "name": "Labello",
+      "facet": "Chemie und Pharma",
+      "known_at": 4
+    },
+    {
+      "name": "Fritz Henkel",
+      "facet": "Chemie und Pharma",
+      "known_at": 12
+    },
+    {
+      "name": "Persil",
+      "facet": "Chemie und Pharma",
+      "known_at": 4
+    },
+    {
+      "name": "Pritt",
+      "facet": "Chemie und Pharma",
+      "known_at": 4
+    },
+    {
+      "name": "BASF",
+      "facet": "Chemie und Pharma",
+      "known_at": 8
+    },
+    {
+      "name": "Hoechst",
+      "facet": "Chemie und Pharma",
+      "known_at": 12
+    },
+    {
+      "name": "Merck",
+      "facet": "Chemie und Pharma",
+      "known_at": 11
+    },
+    {
+      "name": "Hans Schwarzkopf",
+      "facet": "Chemie und Pharma",
+      "known_at": 12
+    },
+    {
+      "name": "Odol",
+      "facet": "Chemie und Pharma",
+      "known_at": 9
+    },
+    {
+      "name": "Karl August Lingner",
+      "facet": "Chemie und Pharma",
+      "known_at": 14
+    },
+    {
+      "name": "Ernst Schering",
+      "facet": "Chemie und Pharma",
+      "known_at": 13
+    },
+    {
+      "name": "Tempo",
+      "facet": "Chemie und Pharma",
+      "known_at": 4
+    },
+    {
+      "name": "Friedrich Krupp",
+      "facet": "Industriedynastien der Kaiserzeit",
+      "known_at": 12
+    },
+    {
+      "name": "Bertha Krupp",
+      "facet": "Industriedynastien der Kaiserzeit",
+      "known_at": 13
+    },
+    {
+      "name": "Villa Hügel",
+      "facet": "Industriedynastien der Kaiserzeit",
+      "known_at": 12
+    },
+    {
+      "name": "August Thyssen",
+      "facet": "Industriedynastien der Kaiserzeit",
+      "known_at": 11
+    },
+    {
+      "name": "Hugo Stinnes",
+      "facet": "Industriedynastien der Kaiserzeit",
+      "known_at": 14
+    },
+    {
+      "name": "Franz Haniel",
+      "facet": "Industriedynastien der Kaiserzeit",
+      "known_at": 14
+    },
+    {
+      "name": "Gebrüder Mannesmann",
+      "facet": "Industriedynastien der Kaiserzeit",
+      "known_at": 13
+    },
+    {
+      "name": "Albert Ballin",
+      "facet": "Industriedynastien der Kaiserzeit",
+      "known_at": 13
+    },
+    {
+      "name": "Henschel",
+      "facet": "Industriedynastien der Kaiserzeit",
+      "known_at": 14
+    },
+    {
+      "name": "Mayer Amschel Rothschild",
+      "facet": "Industriedynastien der Kaiserzeit",
+      "known_at": 11
+    },
+    {
+      "name": "Jakob Fugger",
+      "facet": "Industriedynastien der Kaiserzeit",
+      "known_at": 9
+    },
+    {
+      "name": "Fuggerei",
+      "facet": "Industriedynastien der Kaiserzeit",
+      "known_at": 10
+    },
+    {
+      "name": "Welser",
+      "facet": "Industriedynastien der Kaiserzeit",
+      "known_at": 14
+    },
+    {
+      "name": "Heinz Nixdorf",
+      "facet": "Gründer der Nachkriegszeit",
+      "known_at": 12
+    },
+    {
+      "name": "Reinhold Würth",
+      "facet": "Gründer der Nachkriegszeit",
+      "known_at": 11
+    },
+    {
+      "name": "Würth",
+      "facet": "Gründer der Nachkriegszeit",
+      "known_at": 9
+    },
+    {
+      "name": "Hans Liebherr",
+      "facet": "Gründer der Nachkriegszeit",
+      "known_at": 13
+    },
+    {
+      "name": "Liebherr",
+      "facet": "Gründer der Nachkriegszeit",
+      "known_at": 8
+    },
+    {
+      "name": "Hans Glas",
+      "facet": "Gründer der Nachkriegszeit",
+      "known_at": 13
+    },
+    {
+      "name": "Goggomobil",
+      "facet": "Gründer der Nachkriegszeit",
+      "known_at": 11
+    },
+    {
+      "name": "Messerschmitt Kabinenroller",
+      "facet": "Gründer der Nachkriegszeit",
+      "known_at": 12
+    },
+    {
+      "name": "Heinrich Nordhoff",
+      "facet": "Gründer der Nachkriegszeit",
+      "known_at": 13
+    },
+    {
+      "name": "Max Herz",
+      "facet": "Gründer der Nachkriegszeit",
+      "known_at": 13
+    },
+    {
+      "name": "Rudolf-August Oetker",
+      "facet": "Gründer der Nachkriegszeit",
+      "known_at": 13
+    },
+    {
+      "name": "Berthold Beitz",
+      "facet": "Gründer der Nachkriegszeit",
+      "known_at": 14
+    },
+    {
+      "name": "Hans-Werner Aufrecht",
+      "facet": "Gründer der Nachkriegszeit",
+      "known_at": 14
+    },
+    {
+      "name": "Sixt",
+      "facet": "Gründer der Nachkriegszeit",
+      "known_at": 7
+    },
+    {
+      "name": "Mittelstand",
+      "facet": "Gründer der Nachkriegszeit",
+      "known_at": 10
+    },
+    {
+      "name": "Hidden Champions",
+      "facet": "Gründer der Nachkriegszeit",
+      "known_at": 14
+    },
+    {
+      "name": "Axel Springer",
+      "facet": "Medien und Verlage",
+      "known_at": 10
+    },
+    {
+      "name": "Bild-Zeitung",
+      "facet": "Medien und Verlage",
+      "known_at": 5
+    },
+    {
+      "name": "Reinhard Mohn",
+      "facet": "Medien und Verlage",
+      "known_at": 13
+    },
+    {
+      "name": "Bertelsmann",
+      "facet": "Medien und Verlage",
+      "known_at": 9
+    },
+    {
+      "name": "Rudolf Augstein",
+      "facet": "Medien und Verlage",
+      "known_at": 12
+    },
+    {
+      "name": "Der Spiegel",
+      "facet": "Medien und Verlage",
+      "known_at": 8
+    },
+    {
+      "name": "Gerd Bucerius",
+      "facet": "Medien und Verlage",
+      "known_at": 14
+    },
+    {
+      "name": "Die Zeit",
+      "facet": "Medien und Verlage",
+      "known_at": 9
+    },
+    {
+      "name": "Henri Nannen",
+      "facet": "Medien und Verlage",
+      "known_at": 13
+    },
+    {
+      "name": "Leo Kirch",
+      "facet": "Medien und Verlage",
+      "known_at": 13
+    },
+    {
+      "name": "Hubert Burda",
+      "facet": "Medien und Verlage",
+      "known_at": 12
+    },
+    {
+      "name": "Aenne Burda",
+      "facet": "Medien und Verlage",
+      "known_at": 12
+    },
+    {
+      "name": "Ernst Litfaß",
+      "facet": "Medien und Verlage",
+      "known_at": 12
+    },
+    {
+      "name": "Karl Baedeker",
+      "facet": "Medien und Verlage",
+      "known_at": 12
+    },
+    {
+      "name": "Brockhaus",
+      "facet": "Medien und Verlage",
+      "known_at": 11
+    },
+    {
+      "name": "Langenscheidt",
+      "facet": "Medien und Verlage",
+      "known_at": 10
+    },
+    {
+      "name": "Reclam",
+      "facet": "Medien und Verlage",
+      "known_at": 10
+    },
+    {
+      "name": "Paul Julius Reuter",
+      "facet": "Medien und Verlage",
+      "known_at": 13
+    },
+    {
+      "name": "SAP",
+      "facet": "Software- und Internetgründer",
+      "known_at": 8
+    },
+    {
+      "name": "Hasso Plattner",
+      "facet": "Software- und Internetgründer",
+      "known_at": 12
+    },
+    {
+      "name": "Dietmar Hopp",
+      "facet": "Software- und Internetgründer",
+      "known_at": 11
+    },
+    {
+      "name": "Klaus Tschira",
+      "facet": "Software- und Internetgründer",
+      "known_at": 14
+    },
+    {
+      "name": "Software AG",
+      "facet": "Software- und Internetgründer",
+      "known_at": 12
+    },
+    {
+      "name": "Zalando",
+      "facet": "Software- und Internetgründer",
+      "known_at": 4
+    },
+    {
+      "name": "Samwer-Brüder",
+      "facet": "Software- und Internetgründer",
+      "known_at": 12
+    },
+    {
+      "name": "Rocket Internet",
+      "facet": "Software- und Internetgründer",
+      "known_at": 13
+    },
+    {
+      "name": "Jamba",
+      "facet": "Software- und Internetgründer",
+      "known_at": 10
+    },
+    {
+      "name": "Delivery Hero",
+      "facet": "Software- und Internetgründer",
+      "known_at": 9
+    },
+    {
+      "name": "N26",
+      "facet": "Software- und Internetgründer",
+      "known_at": 9
+    },
+    {
+      "name": "Celonis",
+      "facet": "Software- und Internetgründer",
+      "known_at": 14
+    },
+    {
+      "name": "DeepL",
+      "facet": "Software- und Internetgründer",
+      "known_at": 8
+    },
+    {
+      "name": "XING",
+      "facet": "Software- und Internetgründer",
+      "known_at": 10
+    },
+    {
+      "name": "StudiVZ",
+      "facet": "Software- und Internetgründer",
+      "known_at": 10
+    },
+    {
+      "name": "Ecosia",
+      "facet": "Software- und Internetgründer",
+      "known_at": 8
+    },
+    {
+      "name": "Christian Kroll",
+      "facet": "Software- und Internetgründer",
+      "known_at": 13
+    },
+    {
+      "name": "Flixbus",
+      "facet": "Software- und Internetgründer",
+      "known_at": 4
+    },
+    {
+      "name": "Crytek",
+      "facet": "Software- und Internetgründer",
+      "known_at": 11
+    },
+    {
+      "name": "Trivago",
+      "facet": "Software- und Internetgründer",
+      "known_at": 8
+    },
+    {
+      "name": "HelloFresh",
+      "facet": "Software- und Internetgründer",
+      "known_at": 8
+    },
+    {
+      "name": "TeamViewer",
+      "facet": "Software- und Internetgründer",
+      "known_at": 10
+    },
+    {
+      "name": "Frank Thelen",
+      "facet": "Software- und Internetgründer",
+      "known_at": 9
+    },
+    {
+      "name": "Die Höhle der Löwen",
+      "facet": "Software- und Internetgründer",
+      "known_at": 6
+    },
+    {
+      "name": "Steiff",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 4
+    },
+    {
+      "name": "Knopf im Ohr",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 6
+    },
+    {
+      "name": "Ravensburger",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 5
+    },
+    {
+      "name": "Otto Maier",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 14
+    },
+    {
+      "name": "Märklin",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 8
+    },
+    {
+      "name": "Schleich",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 6
+    },
+    {
+      "name": "Bobby-Car",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 2
+    },
+    {
+      "name": "Kettcar",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 4
+    },
+    {
+      "name": "Heinz Kettler",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 12
+    },
+    {
+      "name": "Mensch ärgere dich nicht",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 3
+    },
+    {
+      "name": "Fischertechnik",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 8
+    },
+    {
+      "name": "Carrera-Bahn",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 8
+    },
+    {
+      "name": "Thermomix",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 5
+    },
+    {
+      "name": "Vorwerk",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 8
+    },
+    {
+      "name": "WMF",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 8
+    },
+    {
+      "name": "Zwilling",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 9
+    },
+    {
+      "name": "Villeroy & Boch",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 10
+    },
+    {
+      "name": "Faber-Castell",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 7
+    },
+    {
+      "name": "Pelikan",
+      "facet": "Spielzeug und Haushaltswaren",
+      "known_at": 6
+    }
+  ]
+}

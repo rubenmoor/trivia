@@ -1,0 +1,1177 @@
+{
+  "subcategory": "native-animals",
+  "facets": [
+    "Wildtiere im deutschen Wald",
+    "Vögel in Garten und Stadt",
+    "Tiere an Nord- und Ostsee",
+    "Tiere in Flüssen, Seen und Mooren",
+    "Heimkehrer wie Wolf, Luchs und Biber",
+    "Insekten, Spinnen und Krabbeltiere",
+    "Bauernhof- und Nutztierrassen",
+    "Tiere in Wappen, Märchen und Sagen",
+    "Tiere in deutschen Redewendungen",
+    "Berühmte Tiere aus Zoo, Film und Fernsehen",
+    "Naturschutz und Nationalparks",
+    "Jagd, Wildwechsel und Tierwörter"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 4,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Reh",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 1
+    },
+    {
+      "name": "Rothirsch",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 3
+    },
+    {
+      "name": "Wildschwein",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 1
+    },
+    {
+      "name": "Rotfuchs",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 1
+    },
+    {
+      "name": "Dachs",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 4
+    },
+    {
+      "name": "Eichhörnchen",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 1
+    },
+    {
+      "name": "Igel",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 1
+    },
+    {
+      "name": "Feldhase",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 2
+    },
+    {
+      "name": "Waldkauz",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 7
+    },
+    {
+      "name": "Uhu",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 4
+    },
+    {
+      "name": "Buntspecht",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 4
+    },
+    {
+      "name": "Schwarzspecht",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 9
+    },
+    {
+      "name": "Baummarder",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 8
+    },
+    {
+      "name": "Waschbär",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 3
+    },
+    {
+      "name": "Damhirsch",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 8
+    },
+    {
+      "name": "Siebenschläfer",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 7
+    },
+    {
+      "name": "Haselmaus",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 8
+    },
+    {
+      "name": "Feuersalamander",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 6
+    },
+    {
+      "name": "Kreuzotter",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 8
+    },
+    {
+      "name": "Mufflon",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 11
+    },
+    {
+      "name": "Eichelhäher",
+      "facet": "Wildtiere im deutschen Wald",
+      "known_at": 8
+    },
+    {
+      "name": "Amsel",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 2
+    },
+    {
+      "name": "Kohlmeise",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 4
+    },
+    {
+      "name": "Blaumeise",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 3
+    },
+    {
+      "name": "Haussperling",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 3
+    },
+    {
+      "name": "Rotkehlchen",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 3
+    },
+    {
+      "name": "Buchfink",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 6
+    },
+    {
+      "name": "Elster",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 4
+    },
+    {
+      "name": "Rabenkrähe",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 5
+    },
+    {
+      "name": "Stadttaube",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 1
+    },
+    {
+      "name": "Mauersegler",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 9
+    },
+    {
+      "name": "Rauchschwalbe",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 6
+    },
+    {
+      "name": "Star",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 6
+    },
+    {
+      "name": "Zaunkönig",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 8
+    },
+    {
+      "name": "Weißstorch",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 2
+    },
+    {
+      "name": "Turmfalke",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 7
+    },
+    {
+      "name": "Gimpel",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 9
+    },
+    {
+      "name": "Stieglitz",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 9
+    },
+    {
+      "name": "Halsbandsittich",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 11
+    },
+    {
+      "name": "Kleiber",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 10
+    },
+    {
+      "name": "Grünfink",
+      "facet": "Vögel in Garten und Stadt",
+      "known_at": 8
+    },
+    {
+      "name": "Schweinswal",
+      "facet": "Tiere an Nord- und Ostsee",
+      "known_at": 8
+    },
+    {
+      "name": "Nordseegarnele",
+      "facet": "Tiere an Nord- und Ostsee",
+      "known_at": 7
+    },
+    {
+      "name": "Strandkrabbe",
+      "facet": "Tiere an Nord- und Ostsee",
+      "known_at": 3
+    },
+    {
+      "name": "Miesmuschel",
+      "facet": "Tiere an Nord- und Ostsee",
+      "known_at": 5
+    },
+    {
+      "name": "Herzmuschel",
+      "facet": "Tiere an Nord- und Ostsee",
+      "known_at": 8
+    },
+    {
+      "name": "Ohrenqualle",
+      "facet": "Tiere an Nord- und Ostsee",
+      "known_at": 6
+    },
+    {
+      "name": "Feuerqualle",
+      "facet": "Tiere an Nord- und Ostsee",
+      "known_at": 6
+    },
+    {
+      "name": "Seestern",
+      "facet": "Tiere an Nord- und Ostsee",
+      "known_at": 2
+    },
+    {
+      "name": "Silbermöwe",
+      "facet": "Tiere an Nord- und Ostsee",
+      "known_at": 5
+    },
+    {
+      "name": "Basstölpel",
+      "facet": "Tiere an Nord- und Ostsee",
+      "known_at": 10
+    },
+    {
+      "name": "Trottellumme",
+      "facet": "Tiere an Nord- und Ostsee",
+      "known_at": 11
+    },
+    {
+      "name": "Säbelschnäbler",
+      "facet": "Tiere an Nord- und Ostsee",
+      "known_at": 11
+    },
+    {
+      "name": "Brandgans",
+      "facet": "Tiere an Nord- und Ostsee",
+      "known_at": 12
+    },
+    {
+      "name": "Hering",
+      "facet": "Tiere an Nord- und Ostsee",
+      "known_at": 5
+    },
+    {
+      "name": "Scholle",
+      "facet": "Tiere an Nord- und Ostsee",
+      "known_at": 7
+    },
+    {
+      "name": "Dorsch",
+      "facet": "Tiere an Nord- und Ostsee",
+      "known_at": 8
+    },
+    {
+      "name": "Forelle",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 4
+    },
+    {
+      "name": "Hecht",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 5
+    },
+    {
+      "name": "Karpfen",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 4
+    },
+    {
+      "name": "Europäischer Aal",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 6
+    },
+    {
+      "name": "Atlantischer Lachs",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 5
+    },
+    {
+      "name": "Wels",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 7
+    },
+    {
+      "name": "Zander",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 9
+    },
+    {
+      "name": "Stichling",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 9
+    },
+    {
+      "name": "Eisvogel",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 5
+    },
+    {
+      "name": "Graureiher",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 5
+    },
+    {
+      "name": "Stockente",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 2
+    },
+    {
+      "name": "Höckerschwan",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 3
+    },
+    {
+      "name": "Haubentaucher",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 9
+    },
+    {
+      "name": "Kormoran",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 9
+    },
+    {
+      "name": "Kranich",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 6
+    },
+    {
+      "name": "Bekassine",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 13
+    },
+    {
+      "name": "Laubfrosch",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 4
+    },
+    {
+      "name": "Erdkröte",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 5
+    },
+    {
+      "name": "Moorfrosch",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 11
+    },
+    {
+      "name": "Ringelnatter",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 8
+    },
+    {
+      "name": "Bisamratte",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 10
+    },
+    {
+      "name": "Flussperlmuschel",
+      "facet": "Tiere in Flüssen, Seen und Mooren",
+      "known_at": 13
+    },
+    {
+      "name": "Wolf",
+      "facet": "Heimkehrer wie Wolf, Luchs und Biber",
+      "known_at": 1
+    },
+    {
+      "name": "Europäischer Biber",
+      "facet": "Heimkehrer wie Wolf, Luchs und Biber",
+      "known_at": 3
+    },
+    {
+      "name": "Europäische Wildkatze",
+      "facet": "Heimkehrer wie Wolf, Luchs und Biber",
+      "known_at": 7
+    },
+    {
+      "name": "Fischotter",
+      "facet": "Heimkehrer wie Wolf, Luchs und Biber",
+      "known_at": 5
+    },
+    {
+      "name": "Seeadler",
+      "facet": "Heimkehrer wie Wolf, Luchs und Biber",
+      "known_at": 7
+    },
+    {
+      "name": "Braunbär",
+      "facet": "Heimkehrer wie Wolf, Luchs und Biber",
+      "known_at": 3
+    },
+    {
+      "name": "Elch",
+      "facet": "Heimkehrer wie Wolf, Luchs und Biber",
+      "known_at": 3
+    },
+    {
+      "name": "Wisent",
+      "facet": "Heimkehrer wie Wolf, Luchs und Biber",
+      "known_at": 9
+    },
+    {
+      "name": "Wanderfalke",
+      "facet": "Heimkehrer wie Wolf, Luchs und Biber",
+      "known_at": 8
+    },
+    {
+      "name": "Kolkrabe",
+      "facet": "Heimkehrer wie Wolf, Luchs und Biber",
+      "known_at": 9
+    },
+    {
+      "name": "Bartgeier",
+      "facet": "Heimkehrer wie Wolf, Luchs und Biber",
+      "known_at": 11
+    },
+    {
+      "name": "Goldschakal",
+      "facet": "Heimkehrer wie Wolf, Luchs und Biber",
+      "known_at": 12
+    },
+    {
+      "name": "Schwarzstorch",
+      "facet": "Heimkehrer wie Wolf, Luchs und Biber",
+      "known_at": 9
+    },
+    {
+      "name": "Waldrapp",
+      "facet": "Heimkehrer wie Wolf, Luchs und Biber",
+      "known_at": 13
+    },
+    {
+      "name": "Alpensteinbock",
+      "facet": "Heimkehrer wie Wolf, Luchs und Biber",
+      "known_at": 7
+    },
+    {
+      "name": "Wolfsrudel in der Lausitz",
+      "facet": "Heimkehrer wie Wolf, Luchs und Biber",
+      "known_at": 11
+    },
+    {
+      "name": "Herdenschutzhund",
+      "facet": "Heimkehrer wie Wolf, Luchs und Biber",
+      "known_at": 11
+    },
+    {
+      "name": "Maikäfer",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 4
+    },
+    {
+      "name": "Marienkäfer",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 1
+    },
+    {
+      "name": "Hirschkäfer",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 5
+    },
+    {
+      "name": "Honigbiene",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 1
+    },
+    {
+      "name": "Hummel",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 2
+    },
+    {
+      "name": "Wespe",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 1
+    },
+    {
+      "name": "Hornisse",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 4
+    },
+    {
+      "name": "Asiatische Hornisse",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 11
+    },
+    {
+      "name": "Zecke",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 3
+    },
+    {
+      "name": "Kreuzspinne",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 5
+    },
+    {
+      "name": "Weberknecht",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 6
+    },
+    {
+      "name": "Regenwurm",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 1
+    },
+    {
+      "name": "Weinbergschnecke",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 4
+    },
+    {
+      "name": "Zitronenfalter",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 5
+    },
+    {
+      "name": "Tagpfauenauge",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 6
+    },
+    {
+      "name": "Glühwürmchen",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 3
+    },
+    {
+      "name": "Rote Waldameise",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 5
+    },
+    {
+      "name": "Feuerwanze",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 7
+    },
+    {
+      "name": "Stechmücke",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 2
+    },
+    {
+      "name": "Kartoffelkäfer",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 9
+    },
+    {
+      "name": "Eichenprozessionsspinner",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 11
+    },
+    {
+      "name": "Ohrwurm",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 5
+    },
+    {
+      "name": "Borkenkäfer",
+      "facet": "Insekten, Spinnen und Krabbeltiere",
+      "known_at": 9
+    },
+    {
+      "name": "Deutsche Schwarzbunte",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 8
+    },
+    {
+      "name": "Fleckvieh",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 10
+    },
+    {
+      "name": "Hinterwälder Rind",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 13
+    },
+    {
+      "name": "Angler Rind",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 13
+    },
+    {
+      "name": "Rotes Höhenvieh",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 14
+    },
+    {
+      "name": "Deutsches Edelschwein",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 12
+    },
+    {
+      "name": "Bunte Bentheimer",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 13
+    },
+    {
+      "name": "Schwäbisch-Hällisches Landschwein",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 13
+    },
+    {
+      "name": "Rhönschaf",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 13
+    },
+    {
+      "name": "Merinolandschaf",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 12
+    },
+    {
+      "name": "Trakehner",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 11
+    },
+    {
+      "name": "Hannoveraner",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 10
+    },
+    {
+      "name": "Holsteiner",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 11
+    },
+    {
+      "name": "Schwarzwälder Fuchs",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 13
+    },
+    {
+      "name": "Dülmener Wildpferd",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 12
+    },
+    {
+      "name": "Deutscher Schäferhund",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 3
+    },
+    {
+      "name": "Emder Gans",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 14
+    },
+    {
+      "name": "Thüringer Waldziege",
+      "facet": "Bauernhof- und Nutztierrassen",
+      "known_at": 14
+    },
+    {
+      "name": "Bundesadler",
+      "facet": "Tiere in Wappen, Märchen und Sagen",
+      "known_at": 4
+    },
+    {
+      "name": "Bayerischer Löwe",
+      "facet": "Tiere in Wappen, Märchen und Sagen",
+      "known_at": 9
+    },
+    {
+      "name": "Stuttgarter Rössle",
+      "facet": "Tiere in Wappen, Märchen und Sagen",
+      "known_at": 10
+    },
+    {
+      "name": "Der Froschkönig",
+      "facet": "Tiere in Wappen, Märchen und Sagen",
+      "known_at": 3
+    },
+    {
+      "name": "Der Wolf und die sieben Geißlein",
+      "facet": "Tiere in Wappen, Märchen und Sagen",
+      "known_at": 2
+    },
+    {
+      "name": "Rotkäppchen",
+      "facet": "Tiere in Wappen, Märchen und Sagen",
+      "known_at": 1
+    },
+    {
+      "name": "Der Hase und der Igel",
+      "facet": "Tiere in Wappen, Märchen und Sagen",
+      "known_at": 5
+    },
+    {
+      "name": "Die goldene Gans",
+      "facet": "Tiere in Wappen, Märchen und Sagen",
+      "known_at": 8
+    },
+    {
+      "name": "Die sieben Raben",
+      "facet": "Tiere in Wappen, Märchen und Sagen",
+      "known_at": 9
+    },
+    {
+      "name": "Reineke Fuchs",
+      "facet": "Tiere in Wappen, Märchen und Sagen",
+      "known_at": 10
+    },
+    {
+      "name": "Isegrim",
+      "facet": "Tiere in Wappen, Märchen und Sagen",
+      "known_at": 11
+    },
+    {
+      "name": "Meister Lampe",
+      "facet": "Tiere in Wappen, Märchen und Sagen",
+      "known_at": 10
+    },
+    {
+      "name": "Fafnir",
+      "facet": "Tiere in Wappen, Märchen und Sagen",
+      "known_at": 12
+    },
+    {
+      "name": "Schwanenritter Lohengrin",
+      "facet": "Tiere in Wappen, Märchen und Sagen",
+      "known_at": 13
+    },
+    {
+      "name": "Klapperstorch",
+      "facet": "Tiere in Wappen, Märchen und Sagen",
+      "known_at": 4
+    },
+    {
+      "name": "Da steppt der Bär",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 6
+    },
+    {
+      "name": "Schwein haben",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 5
+    },
+    {
+      "name": "Den Vogel abschießen",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Einen Kater haben",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 9
+    },
+    {
+      "name": "Da liegt der Hund begraben",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 9
+    },
+    {
+      "name": "Die Katze im Sack kaufen",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Eulen nach Athen tragen",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 12
+    },
+    {
+      "name": "Pechvogel",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 5
+    },
+    {
+      "name": "Angsthase",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 2
+    },
+    {
+      "name": "Bärendienst",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 11
+    },
+    {
+      "name": "Fuchsteufelswild",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 7
+    },
+    {
+      "name": "Eselsbrücke",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 6
+    },
+    {
+      "name": "Wie ein begossener Pudel",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 9
+    },
+    {
+      "name": "Die Kuh vom Eis holen",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 10
+    },
+    {
+      "name": "Einen Frosch im Hals haben",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 6
+    },
+    {
+      "name": "Leben wie die Made im Speck",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 9
+    },
+    {
+      "name": "Aus einer Mücke einen Elefanten machen",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 6
+    },
+    {
+      "name": "Hahn im Korb",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Den Bock zum Gärtner machen",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 12
+    },
+    {
+      "name": "Lieber den Spatz in der Hand als die Taube auf dem Dach",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 7
+    },
+    {
+      "name": "Mit den Hühnern ins Bett gehen",
+      "facet": "Tiere in deutschen Redewendungen",
+      "known_at": 7
+    },
+    {
+      "name": "Knut",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 6
+    },
+    {
+      "name": "Krake Paul",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 9
+    },
+    {
+      "name": "Die Maus",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 1
+    },
+    {
+      "name": "Biene Maja",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 1
+    },
+    {
+      "name": "Benjamin Blümchen",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 1
+    },
+    {
+      "name": "Problembär Bruno",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 11
+    },
+    {
+      "name": "Urmel aus dem Eis",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 8
+    },
+    {
+      "name": "Tigerente",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 4
+    },
+    {
+      "name": "Der kleine Eisbär",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 3
+    },
+    {
+      "name": "Tabaluga",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 6
+    },
+    {
+      "name": "Schnatterinchen",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 10
+    },
+    {
+      "name": "Moppi",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 11
+    },
+    {
+      "name": "Elefant Tuffi",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 12
+    },
+    {
+      "name": "Gorilla Bobby",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 14
+    },
+    {
+      "name": "Opossum Heidi",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 11
+    },
+    {
+      "name": "Eisbär Flocke",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 11
+    },
+    {
+      "name": "Ottifant",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 8
+    },
+    {
+      "name": "Rudi Rüssel",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 10
+    },
+    {
+      "name": "Haribo-Goldbär",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 2
+    },
+    {
+      "name": "Bärenmarke-Bär",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 9
+    },
+    {
+      "name": "Hase Felix",
+      "facet": "Berühmte Tiere aus Zoo, Film und Fernsehen",
+      "known_at": 5
+    },
+    {
+      "name": "Grünes Band",
+      "facet": "Naturschutz und Nationalparks",
+      "known_at": 12
+    },
+    {
+      "name": "Vogel des Jahres",
+      "facet": "Naturschutz und Nationalparks",
+      "known_at": 9
+    },
+    {
+      "name": "NABU",
+      "facet": "Naturschutz und Nationalparks",
+      "known_at": 9
+    },
+    {
+      "name": "Rote Liste",
+      "facet": "Naturschutz und Nationalparks",
+      "known_at": 9
+    },
+    {
+      "name": "Krötenwanderung",
+      "facet": "Naturschutz und Nationalparks",
+      "known_at": 7
+    },
+    {
+      "name": "Biosphärenreservat",
+      "facet": "Naturschutz und Nationalparks",
+      "known_at": 11
+    },
+    {
+      "name": "Bernhard Grzimek",
+      "facet": "Naturschutz und Nationalparks",
+      "known_at": 11
+    },
+    {
+      "name": "Heinz Sielmann",
+      "facet": "Naturschutz und Nationalparks",
+      "known_at": 13
+    },
+    {
+      "name": "Wildwechsel",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 6
+    },
+    {
+      "name": "Hochsitz",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 5
+    },
+    {
+      "name": "Jägerlatein",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 10
+    },
+    {
+      "name": "Waidmannsheil",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 11
+    },
+    {
+      "name": "Halali",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 12
+    },
+    {
+      "name": "Geweih",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 3
+    },
+    {
+      "name": "Löffel",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 9
+    },
+    {
+      "name": "Lauscher",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 11
+    },
+    {
+      "name": "Lunte",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 12
+    },
+    {
+      "name": "Rotte",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 10
+    },
+    {
+      "name": "Rudel",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 5
+    },
+    {
+      "name": "Frischling",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 6
+    },
+    {
+      "name": "Bache",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 9
+    },
+    {
+      "name": "Keiler",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 8
+    },
+    {
+      "name": "Ricke",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 10
+    },
+    {
+      "name": "Kitz",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 5
+    },
+    {
+      "name": "Rammler",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 8
+    },
+    {
+      "name": "Fähe",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 12
+    },
+    {
+      "name": "Hirschbrunft",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 10
+    },
+    {
+      "name": "Dackel",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 2
+    },
+    {
+      "name": "Heiliger Hubertus",
+      "facet": "Jagd, Wildwechsel und Tierwörter",
+      "known_at": 12
+    }
+  ]
+}

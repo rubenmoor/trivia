@@ -1,0 +1,1023 @@
+{
+  "subcategory": "inventors-and-scientists",
+  "facets": [
+    "Auto, Motor und Fahrrad",
+    "Pioniere der Luft- und Raumfahrt",
+    "Physiker und Nobelpreisträger",
+    "Chemie und Medizin",
+    "Erfindungen für Haushalt und Alltag",
+    "Strom, Technik und Computer",
+    "Buchdruck und frühe Erfindungen",
+    "Entdecker und Forschungsreisende",
+    "Mathematiker und Astronomen",
+    "Forscherinnen und Erfinderinnen",
+    "Begriffe nach deutschen Erfindern",
+    "Forschung in Deutschland heute"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 4,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Wilhelm Maybach",
+      "facet": "Auto, Motor und Fahrrad",
+      "known_at": 12
+    },
+    {
+      "name": "Nikolaus August Otto",
+      "facet": "Auto, Motor und Fahrrad",
+      "known_at": 11
+    },
+    {
+      "name": "Ferdinand Porsche",
+      "facet": "Auto, Motor und Fahrrad",
+      "known_at": 7
+    },
+    {
+      "name": "Felix Wankel",
+      "facet": "Auto, Motor und Fahrrad",
+      "known_at": 13
+    },
+    {
+      "name": "Robert Bosch",
+      "facet": "Auto, Motor und Fahrrad",
+      "known_at": 9
+    },
+    {
+      "name": "Zündkerze",
+      "facet": "Auto, Motor und Fahrrad",
+      "known_at": 10
+    },
+    {
+      "name": "Bertha Benz Memorial Route",
+      "facet": "Auto, Motor und Fahrrad",
+      "known_at": 13
+    },
+    {
+      "name": "Mercedes Jellinek",
+      "facet": "Auto, Motor und Fahrrad",
+      "known_at": 13,
+      "retired": "used_up: Die Namensherkunft von Mercedes ist schon gefragt; die Foto-Optionen bräuchten Marke oder Logo als zentrales Bild."
+    },
+    {
+      "name": "August Horch",
+      "facet": "Auto, Motor und Fahrrad",
+      "known_at": 13
+    },
+    {
+      "name": "Flocken Elektrowagen",
+      "facet": "Auto, Motor und Fahrrad",
+      "known_at": 15
+    },
+    {
+      "name": "AVUS",
+      "facet": "Auto, Motor und Fahrrad",
+      "known_at": 13
+    },
+    {
+      "name": "Normalsegelapparat",
+      "facet": "Pioniere der Luft- und Raumfahrt",
+      "known_at": 14
+    },
+    {
+      "name": "Hugo Junkers",
+      "facet": "Pioniere der Luft- und Raumfahrt",
+      "known_at": 12
+    },
+    {
+      "name": "Junkers Ju 52",
+      "facet": "Pioniere der Luft- und Raumfahrt",
+      "known_at": 13
+    },
+    {
+      "name": "Claude Dornier",
+      "facet": "Pioniere der Luft- und Raumfahrt",
+      "known_at": 13
+    },
+    {
+      "name": "Hans von Ohain",
+      "facet": "Pioniere der Luft- und Raumfahrt",
+      "known_at": 14
+    },
+    {
+      "name": "Gustav Weißkopf",
+      "facet": "Pioniere der Luft- und Raumfahrt",
+      "known_at": 14
+    },
+    {
+      "name": "Wernher von Braun",
+      "facet": "Pioniere der Luft- und Raumfahrt",
+      "known_at": 11
+    },
+    {
+      "name": "Hermann Oberth",
+      "facet": "Pioniere der Luft- und Raumfahrt",
+      "known_at": 13
+    },
+    {
+      "name": "Ulf Merbold",
+      "facet": "Pioniere der Luft- und Raumfahrt",
+      "known_at": 12
+    },
+    {
+      "name": "Thomas Reiter",
+      "facet": "Pioniere der Luft- und Raumfahrt",
+      "known_at": 12
+    },
+    {
+      "name": "Alexander Gerst",
+      "facet": "Pioniere der Luft- und Raumfahrt",
+      "known_at": 6
+    },
+    {
+      "name": "Matthias Maurer",
+      "facet": "Pioniere der Luft- und Raumfahrt",
+      "known_at": 9
+    },
+    {
+      "name": "Columbus-Labor",
+      "facet": "Pioniere der Luft- und Raumfahrt",
+      "known_at": 12
+    },
+    {
+      "name": "Saturn V",
+      "facet": "Pioniere der Luft- und Raumfahrt",
+      "known_at": 10
+    },
+    {
+      "name": "Relativitätstheorie",
+      "facet": "Physiker und Nobelpreisträger",
+      "known_at": 8
+    },
+    {
+      "name": "E = mc²",
+      "facet": "Physiker und Nobelpreisträger",
+      "known_at": 7
+    },
+    {
+      "name": "Röntgenstrahlen",
+      "facet": "Physiker und Nobelpreisträger",
+      "known_at": 5
+    },
+    {
+      "name": "Werner Heisenberg",
+      "facet": "Physiker und Nobelpreisträger",
+      "known_at": 12
+    },
+    {
+      "name": "Unschärferelation",
+      "facet": "Physiker und Nobelpreisträger",
+      "known_at": 13
+    },
+    {
+      "name": "Heinrich Hertz",
+      "facet": "Physiker und Nobelpreisträger",
+      "known_at": 11
+    },
+    {
+      "name": "Otto Hahn",
+      "facet": "Physiker und Nobelpreisträger",
+      "known_at": 11
+    },
+    {
+      "name": "Kernspaltung",
+      "facet": "Physiker und Nobelpreisträger",
+      "known_at": 10
+    },
+    {
+      "name": "Max Born",
+      "facet": "Physiker und Nobelpreisträger",
+      "known_at": 14
+    },
+    {
+      "name": "Gustav Kirchhoff",
+      "facet": "Physiker und Nobelpreisträger",
+      "known_at": 13
+    },
+    {
+      "name": "Hermann von Helmholtz",
+      "facet": "Physiker und Nobelpreisträger",
+      "known_at": 13
+    },
+    {
+      "name": "Karl Ferdinand Braun",
+      "facet": "Physiker und Nobelpreisträger",
+      "known_at": 14
+    },
+    {
+      "name": "Klaus von Klitzing",
+      "facet": "Physiker und Nobelpreisträger",
+      "known_at": 14
+    },
+    {
+      "name": "Gerd Binnig",
+      "facet": "Physiker und Nobelpreisträger",
+      "known_at": 14
+    },
+    {
+      "name": "Ernst Ruska",
+      "facet": "Physiker und Nobelpreisträger",
+      "known_at": 14
+    },
+    {
+      "name": "Reinhard Genzel",
+      "facet": "Physiker und Nobelpreisträger",
+      "known_at": 13
+    },
+    {
+      "name": "Tuberkulose-Erreger",
+      "facet": "Chemie und Medizin",
+      "known_at": 11
+    },
+    {
+      "name": "Emil von Behring",
+      "facet": "Chemie und Medizin",
+      "known_at": 12
+    },
+    {
+      "name": "Felix Hoffmann",
+      "facet": "Chemie und Medizin",
+      "known_at": 13
+    },
+    {
+      "name": "Fritz Haber",
+      "facet": "Chemie und Medizin",
+      "known_at": 12
+    },
+    {
+      "name": "Haber-Bosch-Verfahren",
+      "facet": "Chemie und Medizin",
+      "known_at": 12
+    },
+    {
+      "name": "Liebigs Fleischextrakt",
+      "facet": "Chemie und Medizin",
+      "known_at": 14
+    },
+    {
+      "name": "Robert Bunsen",
+      "facet": "Chemie und Medizin",
+      "known_at": 11
+    },
+    {
+      "name": "Friedrich Wöhler",
+      "facet": "Chemie und Medizin",
+      "known_at": 14
+    },
+    {
+      "name": "Rudolf Virchow",
+      "facet": "Chemie und Medizin",
+      "known_at": 12
+    },
+    {
+      "name": "Gerhard Domagk",
+      "facet": "Chemie und Medizin",
+      "known_at": 14
+    },
+    {
+      "name": "Werner Forßmann",
+      "facet": "Chemie und Medizin",
+      "known_at": 14
+    },
+    {
+      "name": "August Kekulé",
+      "facet": "Chemie und Medizin",
+      "known_at": 13
+    },
+    {
+      "name": "Benzolring",
+      "facet": "Chemie und Medizin",
+      "known_at": 12
+    },
+    {
+      "name": "Emil Fischer",
+      "facet": "Chemie und Medizin",
+      "known_at": 14
+    },
+    {
+      "name": "Hans Riegel",
+      "facet": "Erfindungen für Haushalt und Alltag",
+      "known_at": 9
+    },
+    {
+      "name": "Gummibärchen",
+      "facet": "Erfindungen für Haushalt und Alltag",
+      "known_at": 2
+    },
+    {
+      "name": "Artur Fischer",
+      "facet": "Erfindungen für Haushalt und Alltag",
+      "known_at": 12
+    },
+    {
+      "name": "Dübel",
+      "facet": "Erfindungen für Haushalt und Alltag",
+      "known_at": 7
+    },
+    {
+      "name": "Teebeutel",
+      "facet": "Erfindungen für Haushalt und Alltag",
+      "known_at": 5
+    },
+    {
+      "name": "Thermoskanne",
+      "facet": "Erfindungen für Haushalt und Alltag",
+      "known_at": 5
+    },
+    {
+      "name": "Carl von Linde",
+      "facet": "Erfindungen für Haushalt und Alltag",
+      "known_at": 13
+    },
+    {
+      "name": "Kühlschrank",
+      "facet": "Erfindungen für Haushalt und Alltag",
+      "known_at": 2
+    },
+    {
+      "name": "Nivea",
+      "facet": "Erfindungen für Haushalt und Alltag",
+      "known_at": 4
+    },
+    {
+      "name": "Tesafilm",
+      "facet": "Erfindungen für Haushalt und Alltag",
+      "known_at": 4
+    },
+    {
+      "name": "Pritt-Klebestift",
+      "facet": "Erfindungen für Haushalt und Alltag",
+      "known_at": 4
+    },
+    {
+      "name": "Mundharmonika",
+      "facet": "Erfindungen für Haushalt und Alltag",
+      "known_at": 4
+    },
+    {
+      "name": "Adi Dassler",
+      "facet": "Erfindungen für Haushalt und Alltag",
+      "known_at": 9
+    },
+    {
+      "name": "Rudolf Dassler",
+      "facet": "Erfindungen für Haushalt und Alltag",
+      "known_at": 11
+    },
+    {
+      "name": "Hans Beck",
+      "facet": "Erfindungen für Haushalt und Alltag",
+      "known_at": 12
+    },
+    {
+      "name": "Christbaumkugel",
+      "facet": "Erfindungen für Haushalt und Alltag",
+      "known_at": 3
+    },
+    {
+      "name": "Konrad Zuse",
+      "facet": "Strom, Technik und Computer",
+      "known_at": 10
+    },
+    {
+      "name": "Z3",
+      "facet": "Strom, Technik und Computer",
+      "known_at": 12
+    },
+    {
+      "name": "Dynamo",
+      "facet": "Strom, Technik und Computer",
+      "known_at": 6
+    },
+    {
+      "name": "Elektrische Straßenbahn",
+      "facet": "Strom, Technik und Computer",
+      "known_at": 10
+    },
+    {
+      "name": "Karlheinz Brandenburg",
+      "facet": "Strom, Technik und Computer",
+      "known_at": 13
+    },
+    {
+      "name": "MP3",
+      "facet": "Strom, Technik und Computer",
+      "known_at": 7
+    },
+    {
+      "name": "Heinrich Göbel",
+      "facet": "Strom, Technik und Computer",
+      "known_at": 14
+    },
+    {
+      "name": "Paul Nipkow",
+      "facet": "Strom, Technik und Computer",
+      "known_at": 14
+    },
+    {
+      "name": "Manfred von Ardenne",
+      "facet": "Strom, Technik und Computer",
+      "known_at": 14
+    },
+    {
+      "name": "Chipkarte",
+      "facet": "Strom, Technik und Computer",
+      "known_at": 11
+    },
+    {
+      "name": "Walter Bruch",
+      "facet": "Strom, Technik und Computer",
+      "known_at": 14
+    },
+    {
+      "name": "PAL-Farbfernsehen",
+      "facet": "Strom, Technik und Computer",
+      "known_at": 13
+    },
+    {
+      "name": "Magnettonband",
+      "facet": "Strom, Technik und Computer",
+      "known_at": 13
+    },
+    {
+      "name": "Rudolf Hell",
+      "facet": "Strom, Technik und Computer",
+      "known_at": 15
+    },
+    {
+      "name": "Oskar von Miller",
+      "facet": "Strom, Technik und Computer",
+      "known_at": 13
+    },
+    {
+      "name": "Johannes Gutenberg",
+      "facet": "Buchdruck und frühe Erfindungen",
+      "known_at": 6
+    },
+    {
+      "name": "Gutenberg-Bibel",
+      "facet": "Buchdruck und frühe Erfindungen",
+      "known_at": 9
+    },
+    {
+      "name": "Bewegliche Lettern",
+      "facet": "Buchdruck und frühe Erfindungen",
+      "known_at": 10
+    },
+    {
+      "name": "Peter Henlein",
+      "facet": "Buchdruck und frühe Erfindungen",
+      "known_at": 12
+    },
+    {
+      "name": "Taschenuhr",
+      "facet": "Buchdruck und frühe Erfindungen",
+      "known_at": 5
+    },
+    {
+      "name": "Martin Behaim",
+      "facet": "Buchdruck und frühe Erfindungen",
+      "known_at": 13
+    },
+    {
+      "name": "Erdapfel (Behaim-Globus)",
+      "facet": "Buchdruck und frühe Erfindungen",
+      "known_at": 13
+    },
+    {
+      "name": "Otto von Guericke",
+      "facet": "Buchdruck und frühe Erfindungen",
+      "known_at": 12
+    },
+    {
+      "name": "Magdeburger Halbkugeln",
+      "facet": "Buchdruck und frühe Erfindungen",
+      "known_at": 11
+    },
+    {
+      "name": "Wilhelm Schickard",
+      "facet": "Buchdruck und frühe Erfindungen",
+      "known_at": 14
+    },
+    {
+      "name": "Rechenmaschine",
+      "facet": "Buchdruck und frühe Erfindungen",
+      "known_at": 10
+    },
+    {
+      "name": "Berthold Schwarz",
+      "facet": "Buchdruck und frühe Erfindungen",
+      "known_at": 14
+    },
+    {
+      "name": "Meißner Porzellan",
+      "facet": "Buchdruck und frühe Erfindungen",
+      "known_at": 10
+    },
+    {
+      "name": "Albrecht Dürer",
+      "facet": "Buchdruck und frühe Erfindungen",
+      "known_at": 9
+    },
+    {
+      "name": "Hans Lipperhey",
+      "facet": "Buchdruck und frühe Erfindungen",
+      "known_at": 15
+    },
+    {
+      "name": "Georgius Agricola",
+      "facet": "Buchdruck und frühe Erfindungen",
+      "known_at": 14
+    },
+    {
+      "name": "Schedelsche Weltchronik",
+      "facet": "Buchdruck und frühe Erfindungen",
+      "known_at": 15
+    },
+    {
+      "name": "Georg Forster",
+      "facet": "Entdecker und Forschungsreisende",
+      "known_at": 13
+    },
+    {
+      "name": "Heinrich Barth",
+      "facet": "Entdecker und Forschungsreisende",
+      "known_at": 14
+    },
+    {
+      "name": "Gerhard Rohlfs",
+      "facet": "Entdecker und Forschungsreisende",
+      "known_at": 14
+    },
+    {
+      "name": "Ferdinand von Richthofen",
+      "facet": "Entdecker und Forschungsreisende",
+      "known_at": 14
+    },
+    {
+      "name": "Alfred Wegener",
+      "facet": "Entdecker und Forschungsreisende",
+      "known_at": 11
+    },
+    {
+      "name": "Kontinentaldrift",
+      "facet": "Entdecker und Forschungsreisende",
+      "known_at": 9
+    },
+    {
+      "name": "Heinrich Schliemann",
+      "facet": "Entdecker und Forschungsreisende",
+      "known_at": 11
+    },
+    {
+      "name": "Troja",
+      "facet": "Entdecker und Forschungsreisende",
+      "known_at": 7
+    },
+    {
+      "name": "Ludwig Leichhardt",
+      "facet": "Entdecker und Forschungsreisende",
+      "known_at": 14
+    },
+    {
+      "name": "Hans Meyer",
+      "facet": "Entdecker und Forschungsreisende",
+      "known_at": 14
+    },
+    {
+      "name": "Carsten Niebuhr",
+      "facet": "Entdecker und Forschungsreisende",
+      "known_at": 15
+    },
+    {
+      "name": "Philipp Franz von Siebold",
+      "facet": "Entdecker und Forschungsreisende",
+      "known_at": 14
+    },
+    {
+      "name": "Gustav Nachtigal",
+      "facet": "Entdecker und Forschungsreisende",
+      "known_at": 15
+    },
+    {
+      "name": "Wilhelm Filchner",
+      "facet": "Entdecker und Forschungsreisende",
+      "known_at": 15
+    },
+    {
+      "name": "Arved Fuchs",
+      "facet": "Entdecker und Forschungsreisende",
+      "known_at": 12
+    },
+    {
+      "name": "Engelbert Kaempfer",
+      "facet": "Entdecker und Forschungsreisende",
+      "known_at": 15
+    },
+    {
+      "name": "Johannes Kepler",
+      "facet": "Mathematiker und Astronomen",
+      "known_at": 10
+    },
+    {
+      "name": "Keplersche Gesetze",
+      "facet": "Mathematiker und Astronomen",
+      "known_at": 11
+    },
+    {
+      "name": "Gottfried Wilhelm Leibniz",
+      "facet": "Mathematiker und Astronomen",
+      "known_at": 10
+    },
+    {
+      "name": "Binärsystem",
+      "facet": "Mathematiker und Astronomen",
+      "known_at": 8
+    },
+    {
+      "name": "Adam Ries",
+      "facet": "Mathematiker und Astronomen",
+      "known_at": 9
+    },
+    {
+      "name": "Bernhard Riemann",
+      "facet": "Mathematiker und Astronomen",
+      "known_at": 13
+    },
+    {
+      "name": "David Hilbert",
+      "facet": "Mathematiker und Astronomen",
+      "known_at": 13
+    },
+    {
+      "name": "Georg Cantor",
+      "facet": "Mathematiker und Astronomen",
+      "known_at": 13
+    },
+    {
+      "name": "Felix Klein",
+      "facet": "Mathematiker und Astronomen",
+      "known_at": 14
+    },
+    {
+      "name": "Wilhelm Herschel",
+      "facet": "Mathematiker und Astronomen",
+      "known_at": 12
+    },
+    {
+      "name": "Uranus",
+      "facet": "Mathematiker und Astronomen",
+      "known_at": 3
+    },
+    {
+      "name": "Johann Gottfried Galle",
+      "facet": "Mathematiker und Astronomen",
+      "known_at": 14
+    },
+    {
+      "name": "Neptun",
+      "facet": "Mathematiker und Astronomen",
+      "known_at": 3
+    },
+    {
+      "name": "Friedrich Wilhelm Bessel",
+      "facet": "Mathematiker und Astronomen",
+      "known_at": 14
+    },
+    {
+      "name": "Regiomontanus",
+      "facet": "Mathematiker und Astronomen",
+      "known_at": 14
+    },
+    {
+      "name": "Karl Schwarzschild",
+      "facet": "Mathematiker und Astronomen",
+      "known_at": 13
+    },
+    {
+      "name": "10-Mark-Schein",
+      "facet": "Mathematiker und Astronomen",
+      "known_at": 11
+    },
+    {
+      "name": "Kaffeefilter",
+      "facet": "Forscherinnen und Erfinderinnen",
+      "known_at": 5
+    },
+    {
+      "name": "Herta Heuwer",
+      "facet": "Forscherinnen und Erfinderinnen",
+      "known_at": 12
+    },
+    {
+      "name": "Maria Sibylla Merian",
+      "facet": "Forscherinnen und Erfinderinnen",
+      "known_at": 12
+    },
+    {
+      "name": "Emmy Noether",
+      "facet": "Forscherinnen und Erfinderinnen",
+      "known_at": 13
+    },
+    {
+      "name": "Christiane Nüsslein-Volhard",
+      "facet": "Forscherinnen und Erfinderinnen",
+      "known_at": 13
+    },
+    {
+      "name": "Caroline Herschel",
+      "facet": "Forscherinnen und Erfinderinnen",
+      "known_at": 13
+    },
+    {
+      "name": "Dorothea Erxleben",
+      "facet": "Forscherinnen und Erfinderinnen",
+      "known_at": 14
+    },
+    {
+      "name": "Clara Immerwahr",
+      "facet": "Forscherinnen und Erfinderinnen",
+      "known_at": 14
+    },
+    {
+      "name": "Agnes Pockels",
+      "facet": "Forscherinnen und Erfinderinnen",
+      "known_at": 15
+    },
+    {
+      "name": "Ida Noddack",
+      "facet": "Forscherinnen und Erfinderinnen",
+      "known_at": 15
+    },
+    {
+      "name": "Maria Kirch",
+      "facet": "Forscherinnen und Erfinderinnen",
+      "known_at": 15
+    },
+    {
+      "name": "Käthe Kruse",
+      "facet": "Forscherinnen und Erfinderinnen",
+      "known_at": 12
+    },
+    {
+      "name": "Özlem Türeci",
+      "facet": "Forscherinnen und Erfinderinnen",
+      "known_at": 11
+    },
+    {
+      "name": "Antje Boetius",
+      "facet": "Forscherinnen und Erfinderinnen",
+      "known_at": 13
+    },
+    {
+      "name": "Rabea Rogge",
+      "facet": "Forscherinnen und Erfinderinnen",
+      "known_at": 12
+    },
+    {
+      "name": "Insa Thiele-Eich",
+      "facet": "Forscherinnen und Erfinderinnen",
+      "known_at": 13
+    },
+    {
+      "name": "Diesel",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 5
+    },
+    {
+      "name": "Ottomotor",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 10
+    },
+    {
+      "name": "Wankelmotor",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 12
+    },
+    {
+      "name": "Zeppelin",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 5
+    },
+    {
+      "name": "Erlenmeyerkolben",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 11
+    },
+    {
+      "name": "Petrischale",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 10
+    },
+    {
+      "name": "Geigerzähler",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 9
+    },
+    {
+      "name": "Braunsche Röhre",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 13
+    },
+    {
+      "name": "Hertz (Einheit)",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 9
+    },
+    {
+      "name": "Ohm (Einheit)",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 9
+    },
+    {
+      "name": "Siemens (Einheit)",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 13
+    },
+    {
+      "name": "Grad Fahrenheit",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 8
+    },
+    {
+      "name": "Alzheimer-Krankheit",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 9
+    },
+    {
+      "name": "Kneipp-Kur",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 10
+    },
+    {
+      "name": "Gaußsche Glockenkurve",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 12
+    },
+    {
+      "name": "Möbiusband",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 11
+    },
+    {
+      "name": "Humboldtstrom",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 11
+    },
+    {
+      "name": "Nach Adam Riese",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 8
+    },
+    {
+      "name": "Fraunhofer-Linien",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 14
+    },
+    {
+      "name": "Kirchhoffsche Regeln",
+      "facet": "Begriffe nach deutschen Erfindern",
+      "known_at": 12
+    },
+    {
+      "name": "Max-Planck-Gesellschaft",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 11
+    },
+    {
+      "name": "Fraunhofer-Gesellschaft",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 12
+    },
+    {
+      "name": "Helmholtz-Gemeinschaft",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 13
+    },
+    {
+      "name": "Leopoldina",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 13
+    },
+    {
+      "name": "DLR",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 11
+    },
+    {
+      "name": "ESOC Darmstadt",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 13
+    },
+    {
+      "name": "BioNTech",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 7
+    },
+    {
+      "name": "Uğur Şahin",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 10
+    },
+    {
+      "name": "Polarstern",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 10
+    },
+    {
+      "name": "MOSAiC-Expedition",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 12
+    },
+    {
+      "name": "Wendelstein 7-X",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 14
+    },
+    {
+      "name": "DESY",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 14
+    },
+    {
+      "name": "Jugend forscht",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 8
+    },
+    {
+      "name": "Svante Pääbo",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 14
+    },
+    {
+      "name": "Benjamin List",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 14
+    },
+    {
+      "name": "Stefan Hell",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 14
+    },
+    {
+      "name": "Karlsruher Institut für Technologie",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 12
+    },
+    {
+      "name": "Mai Thi Nguyen-Kim",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 9
+    },
+    {
+      "name": "Harald Lesch",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 10
+    },
+    {
+      "name": "Ranga Yogeshwar",
+      "facet": "Forschung in Deutschland heute",
+      "known_at": 11
+    }
+  ]
+}

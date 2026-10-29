@@ -1,0 +1,932 @@
+{
+  "subcategory": "family-customs-and-dress",
+  "facets": [
+    "Hochzeitsbräuche",
+    "Taufe, Einschulung und Jugendfeste",
+    "Geburtstage und Jubiläen",
+    "Hausbau und Nachbarschaftsbräuche",
+    "Regionale Trachten",
+    "Trachtenzubehör und Trachtenschmuck",
+    "Traditionelle Handwerksberufe",
+    "Zünfte, Walz und Meister",
+    "Volkskunst aus Holz und Glas",
+    "Glücksbringer und Aberglaube",
+    "Familienalltag und Tischsitten",
+    "Handwerk in Sprache und Namen"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Baumstamm sägen",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 10
+    },
+    {
+      "name": "Brautstrauß werfen",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 5
+    },
+    {
+      "name": "Brautkleid",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 2
+    },
+    {
+      "name": "Ehering",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 3
+    },
+    {
+      "name": "Standesamt",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 8
+    },
+    {
+      "name": "Trauzeuge",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 9
+    },
+    {
+      "name": "Brautschleier",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 4
+    },
+    {
+      "name": "Reis werfen",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 8
+    },
+    {
+      "name": "Spalier",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 10
+    },
+    {
+      "name": "Über die Schwelle tragen",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 8
+    },
+    {
+      "name": "Hochzeitslader",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 14
+    },
+    {
+      "name": "Brautschuhe aus Münzen",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 12
+    },
+    {
+      "name": "Hochzeitstanz",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 5
+    },
+    {
+      "name": "Herz aus dem Bettlaken schneiden",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 11
+    },
+    {
+      "name": "Blechdosen am Hochzeitsauto",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 6
+    },
+    {
+      "name": "Blumenkinder",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 5
+    },
+    {
+      "name": "Aussteuer",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 12
+    },
+    {
+      "name": "Hochzeitssuppe",
+      "facet": "Hochzeitsbräuche",
+      "known_at": 12
+    },
+    {
+      "name": "Schulranzen",
+      "facet": "Taufe, Einschulung und Jugendfeste",
+      "known_at": 1
+    },
+    {
+      "name": "Taufpate",
+      "facet": "Taufe, Einschulung und Jugendfeste",
+      "known_at": 5
+    },
+    {
+      "name": "Taufkerze",
+      "facet": "Taufe, Einschulung und Jugendfeste",
+      "known_at": 7
+    },
+    {
+      "name": "Taufkleid",
+      "facet": "Taufe, Einschulung und Jugendfeste",
+      "known_at": 8
+    },
+    {
+      "name": "Taufbecken",
+      "facet": "Taufe, Einschulung und Jugendfeste",
+      "known_at": 7
+    },
+    {
+      "name": "Taufspruch",
+      "facet": "Taufe, Einschulung und Jugendfeste",
+      "known_at": 11
+    },
+    {
+      "name": "Abistreich",
+      "facet": "Taufe, Einschulung und Jugendfeste",
+      "known_at": 9
+    },
+    {
+      "name": "Mottowoche",
+      "facet": "Taufe, Einschulung und Jugendfeste",
+      "known_at": 10
+    },
+    {
+      "name": "Abschlussball der Tanzschule",
+      "facet": "Taufe, Einschulung und Jugendfeste",
+      "known_at": 10
+    },
+    {
+      "name": "Abitur",
+      "facet": "Taufe, Einschulung und Jugendfeste",
+      "known_at": 7
+    },
+    {
+      "name": "Kerzen auspusten",
+      "facet": "Geburtstage und Jubiläen",
+      "known_at": 1
+    },
+    {
+      "name": "Reise nach Jerusalem",
+      "facet": "Geburtstage und Jubiläen",
+      "known_at": 3
+    },
+    {
+      "name": "Sackhüpfen",
+      "facet": "Geburtstage und Jubiläen",
+      "known_at": 2
+    },
+    {
+      "name": "Stopptanz",
+      "facet": "Geburtstage und Jubiläen",
+      "known_at": 2
+    },
+    {
+      "name": "Schnitzeljagd",
+      "facet": "Geburtstage und Jubiläen",
+      "known_at": 3
+    },
+    {
+      "name": "Kindergeburtstag",
+      "facet": "Geburtstage und Jubiläen",
+      "known_at": 1
+    },
+    {
+      "name": "Vor dem Geburtstag gratulieren",
+      "facet": "Geburtstage und Jubiläen",
+      "known_at": 8
+    },
+    {
+      "name": "Treppe fegen zum 30. Geburtstag",
+      "facet": "Geburtstage und Jubiläen",
+      "known_at": 11
+    },
+    {
+      "name": "Klinkenputzen zum 30. Geburtstag",
+      "facet": "Geburtstage und Jubiläen",
+      "known_at": 12
+    },
+    {
+      "name": "Diamantene Hochzeit",
+      "facet": "Geburtstage und Jubiläen",
+      "known_at": 10
+    },
+    {
+      "name": "Eiserne Hochzeit",
+      "facet": "Geburtstage und Jubiläen",
+      "known_at": 13
+    },
+    {
+      "name": "„Zum Geburtstag viel Glück“",
+      "facet": "Geburtstage und Jubiläen",
+      "known_at": 1
+    },
+    {
+      "name": "„Wie schön, dass du geboren bist“",
+      "facet": "Geburtstage und Jubiläen",
+      "known_at": 3
+    },
+    {
+      "name": "Runder Geburtstag",
+      "facet": "Geburtstage und Jubiläen",
+      "known_at": 6
+    },
+    {
+      "name": "Richtkranz",
+      "facet": "Hausbau und Nachbarschaftsbräuche",
+      "known_at": 11
+    },
+    {
+      "name": "Richtspruch",
+      "facet": "Hausbau und Nachbarschaftsbräuche",
+      "known_at": 12
+    },
+    {
+      "name": "Grundsteinlegung",
+      "facet": "Hausbau und Nachbarschaftsbräuche",
+      "known_at": 9
+    },
+    {
+      "name": "Einweihungsfeier",
+      "facet": "Hausbau und Nachbarschaftsbräuche",
+      "known_at": 7
+    },
+    {
+      "name": "Kehrwoche",
+      "facet": "Hausbau und Nachbarschaftsbräuche",
+      "known_at": 10
+    },
+    {
+      "name": "Straßenfest",
+      "facet": "Hausbau und Nachbarschaftsbräuche",
+      "known_at": 5
+    },
+    {
+      "name": "Hausinschrift",
+      "facet": "Hausbau und Nachbarschaftsbräuche",
+      "known_at": 12
+    },
+    {
+      "name": "Reetdach",
+      "facet": "Hausbau und Nachbarschaftsbräuche",
+      "known_at": 8
+    },
+    {
+      "name": "Mittagsruhe",
+      "facet": "Hausbau und Nachbarschaftsbräuche",
+      "known_at": 7
+    },
+    {
+      "name": "Sonntagsruhe",
+      "facet": "Hausbau und Nachbarschaftsbräuche",
+      "known_at": 8
+    },
+    {
+      "name": "Sperrmüll",
+      "facet": "Hausbau und Nachbarschaftsbräuche",
+      "known_at": 8
+    },
+    {
+      "name": "Hausmeister",
+      "facet": "Hausbau und Nachbarschaftsbräuche",
+      "known_at": 4
+    },
+    {
+      "name": "Schwarzwaldtracht",
+      "facet": "Regionale Trachten",
+      "known_at": 8
+    },
+    {
+      "name": "Spreewaldtracht",
+      "facet": "Regionale Trachten",
+      "known_at": 11
+    },
+    {
+      "name": "Sorben",
+      "facet": "Regionale Trachten",
+      "known_at": 11
+    },
+    {
+      "name": "Friesentracht",
+      "facet": "Regionale Trachten",
+      "known_at": 12
+    },
+    {
+      "name": "Schwälmer Tracht",
+      "facet": "Regionale Trachten",
+      "known_at": 14
+    },
+    {
+      "name": "Schaumburger Tracht",
+      "facet": "Regionale Trachten",
+      "known_at": 14
+    },
+    {
+      "name": "Altländer Tracht",
+      "facet": "Regionale Trachten",
+      "known_at": 14
+    },
+    {
+      "name": "Trachtenjanker",
+      "facet": "Regionale Trachten",
+      "known_at": 10
+    },
+    {
+      "name": "Kniebundhose",
+      "facet": "Regionale Trachten",
+      "known_at": 9
+    },
+    {
+      "name": "Miesbacher Tracht",
+      "facet": "Regionale Trachten",
+      "known_at": 13
+    },
+    {
+      "name": "Bergmannshabit",
+      "facet": "Regionale Trachten",
+      "known_at": 13
+    },
+    {
+      "name": "Fischerkittel",
+      "facet": "Regionale Trachten",
+      "known_at": 10
+    },
+    {
+      "name": "Trachtenhemd",
+      "facet": "Regionale Trachten",
+      "known_at": 6
+    },
+    {
+      "name": "Trachtenverein",
+      "facet": "Regionale Trachten",
+      "known_at": 9
+    },
+    {
+      "name": "Trachtenumzug",
+      "facet": "Regionale Trachten",
+      "known_at": 8
+    },
+    {
+      "name": "Bollenhut",
+      "facet": "Trachtenzubehör und Trachtenschmuck",
+      "known_at": 8
+    },
+    {
+      "name": "Gamsbart",
+      "facet": "Trachtenzubehör und Trachtenschmuck",
+      "known_at": 10
+    },
+    {
+      "name": "Haferlschuhe",
+      "facet": "Trachtenzubehör und Trachtenschmuck",
+      "known_at": 11
+    },
+    {
+      "name": "Hosenträger",
+      "facet": "Trachtenzubehör und Trachtenschmuck",
+      "known_at": 3
+    },
+    {
+      "name": "Charivari",
+      "facet": "Trachtenzubehör und Trachtenschmuck",
+      "known_at": 13
+    },
+    {
+      "name": "Dirndlbluse",
+      "facet": "Trachtenzubehör und Trachtenschmuck",
+      "known_at": 7
+    },
+    {
+      "name": "Dirndlschürze",
+      "facet": "Trachtenzubehör und Trachtenschmuck",
+      "known_at": 5
+    },
+    {
+      "name": "Loferl",
+      "facet": "Trachtenzubehör und Trachtenschmuck",
+      "known_at": 13
+    },
+    {
+      "name": "Hirschhornknöpfe",
+      "facet": "Trachtenzubehör und Trachtenschmuck",
+      "known_at": 11
+    },
+    {
+      "name": "Riegelhaube",
+      "facet": "Trachtenzubehör und Trachtenschmuck",
+      "known_at": 14
+    },
+    {
+      "name": "Spreewälder Haube",
+      "facet": "Trachtenzubehör und Trachtenschmuck",
+      "known_at": 13
+    },
+    {
+      "name": "Schäppel",
+      "facet": "Trachtenzubehör und Trachtenschmuck",
+      "known_at": 14
+    },
+    {
+      "name": "Elbsegler",
+      "facet": "Trachtenzubehör und Trachtenschmuck",
+      "known_at": 11
+    },
+    {
+      "name": "Kropfkette",
+      "facet": "Trachtenzubehör und Trachtenschmuck",
+      "known_at": 14
+    },
+    {
+      "name": "Trachtenhut",
+      "facet": "Trachtenzubehör und Trachtenschmuck",
+      "known_at": 5
+    },
+    {
+      "name": "Zimmermann",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 5
+    },
+    {
+      "name": "Tischler",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 4
+    },
+    {
+      "name": "Böttcher",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 12
+    },
+    {
+      "name": "Steinmetz",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 8
+    },
+    {
+      "name": "Dachdecker",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 4
+    },
+    {
+      "name": "Uhrmacher",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 5
+    },
+    {
+      "name": "Goldschmied",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 6
+    },
+    {
+      "name": "Sattler",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 10
+    },
+    {
+      "name": "Schuhmacher",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 4
+    },
+    {
+      "name": "Töpfer",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 4
+    },
+    {
+      "name": "Korbflechter",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 7
+    },
+    {
+      "name": "Drechsler",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 12
+    },
+    {
+      "name": "Seiler",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 12
+    },
+    {
+      "name": "Gerber",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 12
+    },
+    {
+      "name": "Geigenbauer",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 9
+    },
+    {
+      "name": "Orgelbauer",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 11
+    },
+    {
+      "name": "Buchbinder",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 10
+    },
+    {
+      "name": "Glasbläser",
+      "facet": "Traditionelle Handwerksberufe",
+      "known_at": 7
+    },
+    {
+      "name": "Gilde",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 10
+    },
+    {
+      "name": "Meisterstück",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 8
+    },
+    {
+      "name": "Gesellenstück",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 11
+    },
+    {
+      "name": "Geselle",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 8
+    },
+    {
+      "name": "Lehrling",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 6
+    },
+    {
+      "name": "Gesellenbrief",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 11
+    },
+    {
+      "name": "Zimmermannskluft",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 10
+    },
+    {
+      "name": "Charlottenburger",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 13
+    },
+    {
+      "name": "Stenz",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 14
+    },
+    {
+      "name": "Bannmeile der Wandergesellen",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 13
+    },
+    {
+      "name": "Wanderbuch",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 13
+    },
+    {
+      "name": "Ehrbarkeit",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 14
+    },
+    {
+      "name": "Zunftzeichen",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 11
+    },
+    {
+      "name": "Zunftbaum",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 12
+    },
+    {
+      "name": "Freisprechung",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 13
+    },
+    {
+      "name": "Innung",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 12
+    },
+    {
+      "name": "Handwerkskammer",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 11
+    },
+    {
+      "name": "Schäfflertanz",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 13
+    },
+    {
+      "name": "Zunfthaus",
+      "facet": "Zünfte, Walz und Meister",
+      "known_at": 12
+    },
+    {
+      "name": "Lichterengel und Bergmann",
+      "facet": "Volkskunst aus Holz und Glas",
+      "known_at": 11
+    },
+    {
+      "name": "Oberammergauer Holzschnitzerei",
+      "facet": "Volkskunst aus Holz und Glas",
+      "known_at": 13
+    },
+    {
+      "name": "Hinterglasmalerei",
+      "facet": "Volkskunst aus Holz und Glas",
+      "known_at": 13
+    },
+    {
+      "name": "Bleiglasfenster",
+      "facet": "Volkskunst aus Holz und Glas",
+      "known_at": 9
+    },
+    {
+      "name": "Bauernmalerei",
+      "facet": "Volkskunst aus Holz und Glas",
+      "known_at": 11
+    },
+    {
+      "name": "Lüftlmalerei",
+      "facet": "Volkskunst aus Holz und Glas",
+      "known_at": 14
+    },
+    {
+      "name": "Waldglas",
+      "facet": "Volkskunst aus Holz und Glas",
+      "known_at": 14
+    },
+    {
+      "name": "Hufeisen",
+      "facet": "Glücksbringer und Aberglaube",
+      "known_at": 3
+    },
+    {
+      "name": "Glückspfennig",
+      "facet": "Glücksbringer und Aberglaube",
+      "known_at": 7
+    },
+    {
+      "name": "Freitag der 13.",
+      "facet": "Glücksbringer und Aberglaube",
+      "known_at": 6
+    },
+    {
+      "name": "Schwarze Katze",
+      "facet": "Glücksbringer und Aberglaube",
+      "known_at": 4
+    },
+    {
+      "name": "Auf Holz klopfen",
+      "facet": "Glücksbringer und Aberglaube",
+      "known_at": 6
+    },
+    {
+      "name": "„Toi, toi, toi“",
+      "facet": "Glücksbringer und Aberglaube",
+      "known_at": 6
+    },
+    {
+      "name": "Daumen drücken",
+      "facet": "Glücksbringer und Aberglaube",
+      "known_at": 2
+    },
+    {
+      "name": "Zerbrochener Spiegel",
+      "facet": "Glücksbringer und Aberglaube",
+      "known_at": 7
+    },
+    {
+      "name": "„Scherben bringen Glück“",
+      "facet": "Glücksbringer und Aberglaube",
+      "known_at": 6
+    },
+    {
+      "name": "Unter einer Leiter durchgehen",
+      "facet": "Glücksbringer und Aberglaube",
+      "known_at": 8
+    },
+    {
+      "name": "Sternschnuppe",
+      "facet": "Glücksbringer und Aberglaube",
+      "known_at": 2
+    },
+    {
+      "name": "Verschüttetes Salz",
+      "facet": "Glücksbringer und Aberglaube",
+      "known_at": 10
+    },
+    {
+      "name": "„Hals- und Beinbruch“",
+      "facet": "Glücksbringer und Aberglaube",
+      "known_at": 8
+    },
+    {
+      "name": "Sonntagsbraten",
+      "facet": "Familienalltag und Tischsitten",
+      "known_at": 6
+    },
+    {
+      "name": "„Mahlzeit“",
+      "facet": "Familienalltag und Tischsitten",
+      "known_at": 8
+    },
+    {
+      "name": "„Guten Appetit“",
+      "facet": "Familienalltag und Tischsitten",
+      "known_at": 1
+    },
+    {
+      "name": "Tischgebet",
+      "facet": "Familienalltag und Tischsitten",
+      "known_at": 6
+    },
+    {
+      "name": "Mittagsschlaf",
+      "facet": "Familienalltag und Tischsitten",
+      "known_at": 2
+    },
+    {
+      "name": "„Der Mond ist aufgegangen“",
+      "facet": "Familienalltag und Tischsitten",
+      "known_at": 8
+    },
+    {
+      "name": "Taschengeld",
+      "facet": "Familienalltag und Tischsitten",
+      "known_at": 3
+    },
+    {
+      "name": "Hausschuhe",
+      "facet": "Familienalltag und Tischsitten",
+      "known_at": 2
+    },
+    {
+      "name": "Mülltrennung",
+      "facet": "Familienalltag und Tischsitten",
+      "known_at": 4
+    },
+    {
+      "name": "Pfandflasche",
+      "facet": "Familienalltag und Tischsitten",
+      "known_at": 5
+    },
+    {
+      "name": "Sonntagsspaziergang",
+      "facet": "Familienalltag und Tischsitten",
+      "known_at": 5
+    },
+    {
+      "name": "Frühstücksei",
+      "facet": "Familienalltag und Tischsitten",
+      "known_at": 2
+    },
+    {
+      "name": "Tupperparty",
+      "facet": "Familienalltag und Tischsitten",
+      "known_at": 11
+    },
+    {
+      "name": "Duzen und Siezen",
+      "facet": "Familienalltag und Tischsitten",
+      "known_at": 7
+    },
+    {
+      "name": "Schmidt",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 7
+    },
+    {
+      "name": "Schneider",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 5
+    },
+    {
+      "name": "Fischer",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 5
+    },
+    {
+      "name": "Weber",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 9
+    },
+    {
+      "name": "Meyer",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 12
+    },
+    {
+      "name": "Wagner",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 11
+    },
+    {
+      "name": "Becker",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 7
+    },
+    {
+      "name": "Meister Eder",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 5
+    },
+    {
+      "name": "„Handwerk hat goldenen Boden“",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 10
+    },
+    {
+      "name": "„Jeder ist seines Glückes Schmied“",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 8
+    },
+    {
+      "name": "„Schuster, bleib bei deinen Leisten“",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 11
+    },
+    {
+      "name": "„Man muss das Eisen schmieden, solange es heiß ist“",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 9
+    },
+    {
+      "name": "„Den Nagel auf den Kopf treffen“",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 6
+    },
+    {
+      "name": "„Blau machen“",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 9
+    },
+    {
+      "name": "„Auf den Leim gehen“",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 10
+    },
+    {
+      "name": "„Hopfen und Malz verloren“",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 11
+    },
+    {
+      "name": "„Es ist noch kein Meister vom Himmel gefallen“",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 7
+    },
+    {
+      "name": "„Mit heißer Nadel gestrickt“",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 12
+    },
+    {
+      "name": "„Den Faden verlieren“",
+      "facet": "Handwerk in Sprache und Namen",
+      "known_at": 7
+    }
+  ]
+}

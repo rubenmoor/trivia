@@ -1,0 +1,1122 @@
+{
+  "subcategory": "early-history",
+  "facets": [
+    "Germanische Stämme und Götter",
+    "Römer am Rhein und Limes",
+    "Varusschlacht und Arminius",
+    "Römerstädte in Deutschland",
+    "Karl der Große und Franken",
+    "Kaiser und Könige im Reich",
+    "Burgen und Ritter",
+    "Klöster, Kirche und Dome",
+    "Mittelalterliche Städte und Hanse",
+    "Alltag, Handwerk und Essen",
+    "Sagen, Lieder und Dichtung",
+    "Wörter und Bräuche aus alter Zeit"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Wodan",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 7
+    },
+    {
+      "name": "Donar",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 10
+    },
+    {
+      "name": "Frija",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 12
+    },
+    {
+      "name": "Walhall",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 8
+    },
+    {
+      "name": "Runen",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 7
+    },
+    {
+      "name": "Thing",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 11
+    },
+    {
+      "name": "Nerthus",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 14
+    },
+    {
+      "name": "Germanen",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 4
+    },
+    {
+      "name": "Sachsen (Stamm)",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 8
+    },
+    {
+      "name": "Alemannen",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 9
+    },
+    {
+      "name": "Bajuwaren",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 10
+    },
+    {
+      "name": "Friesen",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 8
+    },
+    {
+      "name": "Goten",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 9
+    },
+    {
+      "name": "Vandalen",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 9
+    },
+    {
+      "name": "Langobarden",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 11
+    },
+    {
+      "name": "Chatten",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 12
+    },
+    {
+      "name": "Sueben",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 12
+    },
+    {
+      "name": "Tacitus",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 12
+    },
+    {
+      "name": "Völkerwanderung",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 8
+    },
+    {
+      "name": "Moorleiche",
+      "facet": "Germanische Stämme und Götter",
+      "known_at": 11
+    },
+    {
+      "name": "Saalburg",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 10
+    },
+    {
+      "name": "Kastell",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 8
+    },
+    {
+      "name": "Legionär",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 5
+    },
+    {
+      "name": "Legion",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 6
+    },
+    {
+      "name": "Centurio",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 8
+    },
+    {
+      "name": "Wachturm",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 4
+    },
+    {
+      "name": "Augustus",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 7
+    },
+    {
+      "name": "Drusus",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 12
+    },
+    {
+      "name": "Germania Inferior",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 12
+    },
+    {
+      "name": "Germania Superior",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 12
+    },
+    {
+      "name": "Raetien",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 13
+    },
+    {
+      "name": "Römerstraße",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 7
+    },
+    {
+      "name": "Hypokaustum",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 11
+    },
+    {
+      "name": "Thermen",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 8
+    },
+    {
+      "name": "Aquädukt",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 8
+    },
+    {
+      "name": "Eifelwasserleitung",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 12
+    },
+    {
+      "name": "Ubier",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 13
+    },
+    {
+      "name": "Pfahlgraben",
+      "facet": "Römer am Rhein und Limes",
+      "known_at": 13
+    },
+    {
+      "name": "Arminius",
+      "facet": "Varusschlacht und Arminius",
+      "known_at": 9
+    },
+    {
+      "name": "Varus",
+      "facet": "Varusschlacht und Arminius",
+      "known_at": 9
+    },
+    {
+      "name": "Kalkriese",
+      "facet": "Varusschlacht und Arminius",
+      "known_at": 12
+    },
+    {
+      "name": "Gesichtsmaske von Kalkriese",
+      "facet": "Varusschlacht und Arminius",
+      "known_at": 13
+    },
+    {
+      "name": "Cherusker",
+      "facet": "Varusschlacht und Arminius",
+      "known_at": 10
+    },
+    {
+      "name": "Thusnelda",
+      "facet": "Varusschlacht und Arminius",
+      "known_at": 13
+    },
+    {
+      "name": "Segestes",
+      "facet": "Varusschlacht und Arminius",
+      "known_at": 14
+    },
+    {
+      "name": "Germanicus",
+      "facet": "Varusschlacht und Arminius",
+      "known_at": 12
+    },
+    {
+      "name": "Marbod",
+      "facet": "Varusschlacht und Arminius",
+      "known_at": 14
+    },
+    {
+      "name": "Tiberius",
+      "facet": "Varusschlacht und Arminius",
+      "known_at": 12
+    },
+    {
+      "name": "Ernst von Bandel",
+      "facet": "Varusschlacht und Arminius",
+      "known_at": 14
+    },
+    {
+      "name": "Die Hermannsschlacht",
+      "facet": "Varusschlacht und Arminius",
+      "known_at": 14
+    },
+    {
+      "name": "Detmold",
+      "facet": "Varusschlacht und Arminius",
+      "known_at": 11
+    },
+    {
+      "name": "Legionsadler",
+      "facet": "Varusschlacht und Arminius",
+      "known_at": 12
+    },
+    {
+      "name": "„Varus, gib mir meine Legionen wieder!“",
+      "facet": "Varusschlacht und Arminius",
+      "known_at": 12
+    },
+    {
+      "name": "Neuss",
+      "facet": "Römerstädte in Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Kempten",
+      "facet": "Römerstädte in Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Kaiserthermen Trier",
+      "facet": "Römerstädte in Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Konstantinbasilika",
+      "facet": "Römerstädte in Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Amphitheater Trier",
+      "facet": "Römerstädte in Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Römerbrücke Trier",
+      "facet": "Römerstädte in Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Konstantin der Große",
+      "facet": "Römerstädte in Deutschland",
+      "known_at": 10
+    },
+    {
+      "name": "Dionysosmosaik",
+      "facet": "Römerstädte in Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Archäologischer Park Xanten",
+      "facet": "Römerstädte in Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Igeler Säule",
+      "facet": "Römerstädte in Deutschland",
+      "known_at": 14
+    },
+    {
+      "name": "Neumagener Weinschiff",
+      "facet": "Römerstädte in Deutschland",
+      "known_at": 14
+    },
+    {
+      "name": "Karl der Große",
+      "facet": "Karl der Große und Franken",
+      "known_at": 5
+    },
+    {
+      "name": "Frankenreich",
+      "facet": "Karl der Große und Franken",
+      "known_at": 8
+    },
+    {
+      "name": "Karlsthron",
+      "facet": "Karl der Große und Franken",
+      "known_at": 12
+    },
+    {
+      "name": "Kaiserkrönung im Jahr 800",
+      "facet": "Karl der Große und Franken",
+      "known_at": 9
+    },
+    {
+      "name": "Papst Leo III.",
+      "facet": "Karl der Große und Franken",
+      "known_at": 13
+    },
+    {
+      "name": "Pippin der Kurze",
+      "facet": "Karl der Große und Franken",
+      "known_at": 12
+    },
+    {
+      "name": "Chlodwig",
+      "facet": "Karl der Große und Franken",
+      "known_at": 12
+    },
+    {
+      "name": "Merowinger",
+      "facet": "Karl der Große und Franken",
+      "known_at": 11
+    },
+    {
+      "name": "Karolinger",
+      "facet": "Karl der Große und Franken",
+      "known_at": 10
+    },
+    {
+      "name": "Ludwig der Fromme",
+      "facet": "Karl der Große und Franken",
+      "known_at": 13
+    },
+    {
+      "name": "Vertrag von Verdun",
+      "facet": "Karl der Große und Franken",
+      "known_at": 12
+    },
+    {
+      "name": "Sachsenkriege",
+      "facet": "Karl der Große und Franken",
+      "known_at": 12
+    },
+    {
+      "name": "Widukind",
+      "facet": "Karl der Große und Franken",
+      "known_at": 12
+    },
+    {
+      "name": "Einhard",
+      "facet": "Karl der Große und Franken",
+      "known_at": 14
+    },
+    {
+      "name": "Pfalz",
+      "facet": "Karl der Große und Franken",
+      "known_at": 11
+    },
+    {
+      "name": "Kaiserpfalz Ingelheim",
+      "facet": "Karl der Große und Franken",
+      "known_at": 13
+    },
+    {
+      "name": "Abul Abbas",
+      "facet": "Karl der Große und Franken",
+      "known_at": 13
+    },
+    {
+      "name": "Karlspreis",
+      "facet": "Karl der Große und Franken",
+      "known_at": 11
+    },
+    {
+      "name": "Paderborn",
+      "facet": "Karl der Große und Franken",
+      "known_at": 10
+    },
+    {
+      "name": "Karolingische Minuskel",
+      "facet": "Karl der Große und Franken",
+      "known_at": 14
+    },
+    {
+      "name": "Heiliges Römisches Reich",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 8
+    },
+    {
+      "name": "Otto der Große",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 9
+    },
+    {
+      "name": "Schlacht auf dem Lechfeld",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 12
+    },
+    {
+      "name": "Friedrich Barbarossa",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 8
+    },
+    {
+      "name": "Friedrich II. (Staufer)",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 12
+    },
+    {
+      "name": "Heinrich I.",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 12
+    },
+    {
+      "name": "Heinrich IV.",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 11
+    },
+    {
+      "name": "Gang nach Canossa",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 10
+    },
+    {
+      "name": "Investiturstreit",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 12
+    },
+    {
+      "name": "Wormser Konkordat",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 13
+    },
+    {
+      "name": "Reichskrone",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 10
+    },
+    {
+      "name": "Reichsapfel",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 11
+    },
+    {
+      "name": "Kurfürsten",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 10
+    },
+    {
+      "name": "Goldene Bulle",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 12
+    },
+    {
+      "name": "Ottonen",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 12
+    },
+    {
+      "name": "Salier",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 12
+    },
+    {
+      "name": "Staufer",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 11
+    },
+    {
+      "name": "Habsburger",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 9
+    },
+    {
+      "name": "Rudolf von Habsburg",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 12
+    },
+    {
+      "name": "Maximilian I.",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 12
+    },
+    {
+      "name": "Theophanu",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 13
+    },
+    {
+      "name": "Reisekönigtum",
+      "facet": "Kaiser und Könige im Reich",
+      "known_at": 12
+    },
+    {
+      "name": "Ritter",
+      "facet": "Burgen und Ritter",
+      "known_at": 1
+    },
+    {
+      "name": "Burg",
+      "facet": "Burgen und Ritter",
+      "known_at": 1
+    },
+    {
+      "name": "Marienburg",
+      "facet": "Burgen und Ritter",
+      "known_at": 12
+    },
+    {
+      "name": "Bergfried",
+      "facet": "Burgen und Ritter",
+      "known_at": 10
+    },
+    {
+      "name": "Zugbrücke",
+      "facet": "Burgen und Ritter",
+      "known_at": 4
+    },
+    {
+      "name": "Burggraben",
+      "facet": "Burgen und Ritter",
+      "known_at": 4
+    },
+    {
+      "name": "Zinnen",
+      "facet": "Burgen und Ritter",
+      "known_at": 8
+    },
+    {
+      "name": "Pechnase",
+      "facet": "Burgen und Ritter",
+      "known_at": 11
+    },
+    {
+      "name": "Wehrgang",
+      "facet": "Burgen und Ritter",
+      "known_at": 9
+    },
+    {
+      "name": "Palas",
+      "facet": "Burgen und Ritter",
+      "known_at": 12
+    },
+    {
+      "name": "Rüstung",
+      "facet": "Burgen und Ritter",
+      "known_at": 3
+    },
+    {
+      "name": "Kettenhemd",
+      "facet": "Burgen und Ritter",
+      "known_at": 6
+    },
+    {
+      "name": "Turnier",
+      "facet": "Burgen und Ritter",
+      "known_at": 5
+    },
+    {
+      "name": "Knappe",
+      "facet": "Burgen und Ritter",
+      "known_at": 6
+    },
+    {
+      "name": "Ritterschlag",
+      "facet": "Burgen und Ritter",
+      "known_at": 6
+    },
+    {
+      "name": "Wappen",
+      "facet": "Burgen und Ritter",
+      "known_at": 5
+    },
+    {
+      "name": "Raubritter",
+      "facet": "Burgen und Ritter",
+      "known_at": 9
+    },
+    {
+      "name": "Götz von Berlichingen",
+      "facet": "Burgen und Ritter",
+      "known_at": 10
+    },
+    {
+      "name": "Deutscher Orden",
+      "facet": "Burgen und Ritter",
+      "known_at": 11
+    },
+    {
+      "name": "Kreuzzüge",
+      "facet": "Burgen und Ritter",
+      "known_at": 8
+    },
+    {
+      "name": "Uta von Naumburg",
+      "facet": "Klöster, Kirche und Dome",
+      "known_at": 12
+    },
+    {
+      "name": "Dreikönigsschrein",
+      "facet": "Klöster, Kirche und Dome",
+      "known_at": 10
+    },
+    {
+      "name": "Bernwardstür",
+      "facet": "Klöster, Kirche und Dome",
+      "known_at": 14
+    },
+    {
+      "name": "Tausendjähriger Rosenstock",
+      "facet": "Klöster, Kirche und Dome",
+      "known_at": 13
+    },
+    {
+      "name": "Kloster Lorsch",
+      "facet": "Klöster, Kirche und Dome",
+      "known_at": 13
+    },
+    {
+      "name": "Klosterinsel Reichenau",
+      "facet": "Klöster, Kirche und Dome",
+      "known_at": 12
+    },
+    {
+      "name": "Benediktiner",
+      "facet": "Klöster, Kirche und Dome",
+      "known_at": 9
+    },
+    {
+      "name": "Mönch",
+      "facet": "Klöster, Kirche und Dome",
+      "known_at": 2
+    },
+    {
+      "name": "Nonne",
+      "facet": "Klöster, Kirche und Dome",
+      "known_at": 3
+    },
+    {
+      "name": "Ora et labora",
+      "facet": "Klöster, Kirche und Dome",
+      "known_at": 10
+    },
+    {
+      "name": "Kreuzgang",
+      "facet": "Klöster, Kirche und Dome",
+      "known_at": 9
+    },
+    {
+      "name": "Gotik",
+      "facet": "Klöster, Kirche und Dome",
+      "known_at": 8
+    },
+    {
+      "name": "Romanik",
+      "facet": "Klöster, Kirche und Dome",
+      "known_at": 9
+    },
+    {
+      "name": "Lüneburg",
+      "facet": "Mittelalterliche Städte und Hanse",
+      "known_at": 9
+    },
+    {
+      "name": "Kogge",
+      "facet": "Mittelalterliche Städte und Hanse",
+      "known_at": 8
+    },
+    {
+      "name": "Vitalienbrüder",
+      "facet": "Mittelalterliche Städte und Hanse",
+      "known_at": 12
+    },
+    {
+      "name": "Bryggen",
+      "facet": "Mittelalterliche Städte und Hanse",
+      "known_at": 13
+    },
+    {
+      "name": "Stalhof",
+      "facet": "Mittelalterliche Städte und Hanse",
+      "known_at": 14
+    },
+    {
+      "name": "Visby",
+      "facet": "Mittelalterliche Städte und Hanse",
+      "known_at": 13
+    },
+    {
+      "name": "Freie Reichsstadt",
+      "facet": "Mittelalterliche Städte und Hanse",
+      "known_at": 11
+    },
+    {
+      "name": "Stadtrecht",
+      "facet": "Mittelalterliche Städte und Hanse",
+      "known_at": 10
+    },
+    {
+      "name": "Stadtmauer",
+      "facet": "Mittelalterliche Städte und Hanse",
+      "known_at": 4
+    },
+    {
+      "name": "Zunft",
+      "facet": "Mittelalterliche Städte und Hanse",
+      "known_at": 8
+    },
+    {
+      "name": "Fachwerkhaus",
+      "facet": "Mittelalterliche Städte und Hanse",
+      "known_at": 5
+    },
+    {
+      "name": "Alte Salzstraße",
+      "facet": "Mittelalterliche Städte und Hanse",
+      "known_at": 12
+    },
+    {
+      "name": "Reinheitsgebot",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 9
+    },
+    {
+      "name": "Met",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 8
+    },
+    {
+      "name": "Hirsebrei",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 9
+    },
+    {
+      "name": "Lebkuchen",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 4
+    },
+    {
+      "name": "Trinkhorn",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 5
+    },
+    {
+      "name": "Schmied",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 3
+    },
+    {
+      "name": "Müller",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 5
+    },
+    {
+      "name": "Wassermühle",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 4
+    },
+    {
+      "name": "Spinnrad",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 4
+    },
+    {
+      "name": "Bader",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 11
+    },
+    {
+      "name": "Badestube",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 10
+    },
+    {
+      "name": "Gaukler",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 7
+    },
+    {
+      "name": "Leibeigenschaft",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 9
+    },
+    {
+      "name": "Frondienst",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 11
+    },
+    {
+      "name": "Zehnt",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 10
+    },
+    {
+      "name": "Dreifelderwirtschaft",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 10
+    },
+    {
+      "name": "Pranger",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 7
+    },
+    {
+      "name": "Pfennig",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 6
+    },
+    {
+      "name": "Heller",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 9
+    },
+    {
+      "name": "Walz",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 9
+    },
+    {
+      "name": "Kienspan",
+      "facet": "Alltag, Handwerk und Essen",
+      "known_at": 12
+    },
+    {
+      "name": "Nibelungenlied",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 9
+    },
+    {
+      "name": "Kriemhild",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 11
+    },
+    {
+      "name": "Brünhild",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 11
+    },
+    {
+      "name": "Hagen von Tronje",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 11
+    },
+    {
+      "name": "Tarnkappe",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 8
+    },
+    {
+      "name": "Till Eulenspiegel",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 5
+    },
+    {
+      "name": "Walther von der Vogelweide",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 11
+    },
+    {
+      "name": "Minnesang",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 10
+    },
+    {
+      "name": "Wolfram von Eschenbach",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 13
+    },
+    {
+      "name": "Parzival",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 12
+    },
+    {
+      "name": "Hartmann von Aue",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 14
+    },
+    {
+      "name": "Tristan und Isolde",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 11
+    },
+    {
+      "name": "Hildebrandslied",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 13
+    },
+    {
+      "name": "Merseburger Zaubersprüche",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 13
+    },
+    {
+      "name": "Tannhäuser",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 12
+    },
+    {
+      "name": "Sängerkrieg auf der Wartburg",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 13
+    },
+    {
+      "name": "Lohengrin",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 12
+    },
+    {
+      "name": "Carmina Burana",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 12
+    },
+    {
+      "name": "Heliand",
+      "facet": "Sagen, Lieder und Dichtung",
+      "known_at": 14
+    },
+    {
+      "name": "Donnerstag",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 7
+    },
+    {
+      "name": "Freitag",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 9
+    },
+    {
+      "name": "Osterfeuer",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 6
+    },
+    {
+      "name": "Sonnwendfeuer",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 9
+    },
+    {
+      "name": "Martinsumzug",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 3
+    },
+    {
+      "name": "Fastnacht",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 6
+    },
+    {
+      "name": "Julfest",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 11
+    },
+    {
+      "name": "Ostara",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 12
+    },
+    {
+      "name": "Gottesurteil",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 11
+    },
+    {
+      "name": "Lehen",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 11
+    },
+    {
+      "name": "Etwas auf dem Kerbholz haben",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 11
+    },
+    {
+      "name": "Etwas im Schilde führen",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 9
+    },
+    {
+      "name": "Den Fehdehandschuh hinwerfen",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 10
+    },
+    {
+      "name": "Für jemanden eine Lanze brechen",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 10
+    },
+    {
+      "name": "Mit offenem Visier kämpfen",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 10
+    },
+    {
+      "name": "Die Hand ins Feuer legen",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 7
+    },
+    {
+      "name": "Etwas ausbaden müssen",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 9
+    },
+    {
+      "name": "Torschlusspanik",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 9
+    },
+    {
+      "name": "Gang und gäbe",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 10
+    },
+    {
+      "name": "Hänseln",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 12
+    },
+    {
+      "name": "Spießbürger",
+      "facet": "Wörter und Bräuche aus alter Zeit",
+      "known_at": 11
+    }
+  ]
+}
