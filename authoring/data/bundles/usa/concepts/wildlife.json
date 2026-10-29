@@ -1,0 +1,1137 @@
+{
+  "subcategory": "wildlife",
+  "facets": [
+    "National symbols and state animals",
+    "Big mammals of the West",
+    "Forest and backyard critters",
+    "Birds of North America",
+    "Reptiles and amphibians",
+    "Ocean and coastal wildlife",
+    "Fish and river life",
+    "Insects and creepy-crawlies",
+    "Endangered species and comebacks",
+    "Wildlife in national parks",
+    "Animals in American history and lore",
+    "Mascots and wildlife in pop culture"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 4,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Bald eagle",
+      "facet": "National symbols and state animals",
+      "known_at": 2
+    },
+    {
+      "name": "American bison",
+      "facet": "National symbols and state animals",
+      "known_at": 5
+    },
+    {
+      "name": "Wild turkey",
+      "facet": "National symbols and state animals",
+      "known_at": 4
+    },
+    {
+      "name": "Great Seal of the United States",
+      "facet": "National symbols and state animals",
+      "known_at": 9
+    },
+    {
+      "name": "California grizzly bear",
+      "facet": "National symbols and state animals",
+      "known_at": 9
+    },
+    {
+      "name": "Northern mockingbird",
+      "facet": "National symbols and state animals",
+      "known_at": 9
+    },
+    {
+      "name": "Brown pelican",
+      "facet": "National symbols and state animals",
+      "known_at": 7
+    },
+    {
+      "name": "Blue Hen chicken",
+      "facet": "National symbols and state animals",
+      "known_at": 13
+    },
+    {
+      "name": "Badger",
+      "facet": "National symbols and state animals",
+      "known_at": 8
+    },
+    {
+      "name": "Wolverine",
+      "facet": "National symbols and state animals",
+      "known_at": 8
+    },
+    {
+      "name": "Florida panther",
+      "facet": "National symbols and state animals",
+      "known_at": 9
+    },
+    {
+      "name": "Common loon",
+      "facet": "National symbols and state animals",
+      "known_at": 11
+    },
+    {
+      "name": "Mountain bluebird",
+      "facet": "National symbols and state animals",
+      "known_at": 12
+    },
+    {
+      "name": "California quail",
+      "facet": "National symbols and state animals",
+      "known_at": 12
+    },
+    {
+      "name": "Ruffed grouse",
+      "facet": "National symbols and state animals",
+      "known_at": 13
+    },
+    {
+      "name": "State bird",
+      "facet": "National symbols and state animals",
+      "known_at": 6
+    },
+    {
+      "name": "Black bear",
+      "facet": "Big mammals of the West",
+      "known_at": 4
+    },
+    {
+      "name": "Mountain lion",
+      "facet": "Big mammals of the West",
+      "known_at": 4
+    },
+    {
+      "name": "Moose",
+      "facet": "Big mammals of the West",
+      "known_at": 3
+    },
+    {
+      "name": "Pronghorn",
+      "facet": "Big mammals of the West",
+      "known_at": 10
+    },
+    {
+      "name": "Mountain goat",
+      "facet": "Big mammals of the West",
+      "known_at": 6
+    },
+    {
+      "name": "Mule deer",
+      "facet": "Big mammals of the West",
+      "known_at": 9
+    },
+    {
+      "name": "Coyote",
+      "facet": "Big mammals of the West",
+      "known_at": 4
+    },
+    {
+      "name": "Bobcat",
+      "facet": "Big mammals of the West",
+      "known_at": 6
+    },
+    {
+      "name": "Canada lynx",
+      "facet": "Big mammals of the West",
+      "known_at": 9
+    },
+    {
+      "name": "Javelina",
+      "facet": "Big mammals of the West",
+      "known_at": 11
+    },
+    {
+      "name": "Kodiak bear",
+      "facet": "Big mammals of the West",
+      "known_at": 9
+    },
+    {
+      "name": "Caribou",
+      "facet": "Big mammals of the West",
+      "known_at": 6
+    },
+    {
+      "name": "Musk ox",
+      "facet": "Big mammals of the West",
+      "known_at": 9
+    },
+    {
+      "name": "Polar bear",
+      "facet": "Big mammals of the West",
+      "known_at": 2
+    },
+    {
+      "name": "Dall sheep",
+      "facet": "Big mammals of the West",
+      "known_at": 13
+    },
+    {
+      "name": "Raccoon",
+      "facet": "Forest and backyard critters",
+      "known_at": 1
+    },
+    {
+      "name": "Virginia opossum",
+      "facet": "Forest and backyard critters",
+      "known_at": 5
+    },
+    {
+      "name": "Striped skunk",
+      "facet": "Forest and backyard critters",
+      "known_at": 3
+    },
+    {
+      "name": "Eastern gray squirrel",
+      "facet": "Forest and backyard critters",
+      "known_at": 3
+    },
+    {
+      "name": "Eastern chipmunk",
+      "facet": "Forest and backyard critters",
+      "known_at": 3
+    },
+    {
+      "name": "Groundhog",
+      "facet": "Forest and backyard critters",
+      "known_at": 5
+    },
+    {
+      "name": "White-tailed deer",
+      "facet": "Forest and backyard critters",
+      "known_at": 5
+    },
+    {
+      "name": "Red fox",
+      "facet": "Forest and backyard critters",
+      "known_at": 3
+    },
+    {
+      "name": "Nine-banded armadillo",
+      "facet": "Forest and backyard critters",
+      "known_at": 6
+    },
+    {
+      "name": "North American porcupine",
+      "facet": "Forest and backyard critters",
+      "known_at": 5
+    },
+    {
+      "name": "American beaver",
+      "facet": "Forest and backyard critters",
+      "known_at": 3
+    },
+    {
+      "name": "Eastern cottontail",
+      "facet": "Forest and backyard critters",
+      "known_at": 5
+    },
+    {
+      "name": "Little brown bat",
+      "facet": "Forest and backyard critters",
+      "known_at": 8
+    },
+    {
+      "name": "Flying squirrel",
+      "facet": "Forest and backyard critters",
+      "known_at": 7
+    },
+    {
+      "name": "Fisher",
+      "facet": "Forest and backyard critters",
+      "known_at": 13
+    },
+    {
+      "name": "Mink",
+      "facet": "Forest and backyard critters",
+      "known_at": 8
+    },
+    {
+      "name": "North American river otter",
+      "facet": "Forest and backyard critters",
+      "known_at": 5
+    },
+    {
+      "name": "Star-nosed mole",
+      "facet": "Forest and backyard critters",
+      "known_at": 11
+    },
+    {
+      "name": "Black-tailed prairie dog",
+      "facet": "Forest and backyard critters",
+      "known_at": 6
+    },
+    {
+      "name": "American robin",
+      "facet": "Birds of North America",
+      "known_at": 4
+    },
+    {
+      "name": "Blue jay",
+      "facet": "Birds of North America",
+      "known_at": 4
+    },
+    {
+      "name": "Greater roadrunner",
+      "facet": "Birds of North America",
+      "known_at": 5
+    },
+    {
+      "name": "Ruby-throated hummingbird",
+      "facet": "Birds of North America",
+      "known_at": 6
+    },
+    {
+      "name": "Great horned owl",
+      "facet": "Birds of North America",
+      "known_at": 6
+    },
+    {
+      "name": "Red-tailed hawk",
+      "facet": "Birds of North America",
+      "known_at": 8
+    },
+    {
+      "name": "Canada goose",
+      "facet": "Birds of North America",
+      "known_at": 4
+    },
+    {
+      "name": "Mallard",
+      "facet": "Birds of North America",
+      "known_at": 5
+    },
+    {
+      "name": "Turkey vulture",
+      "facet": "Birds of North America",
+      "known_at": 7
+    },
+    {
+      "name": "Pileated woodpecker",
+      "facet": "Birds of North America",
+      "known_at": 9
+    },
+    {
+      "name": "Sandhill crane",
+      "facet": "Birds of North America",
+      "known_at": 10
+    },
+    {
+      "name": "Snowy owl",
+      "facet": "Birds of North America",
+      "known_at": 5
+    },
+    {
+      "name": "Belted kingfisher",
+      "facet": "Birds of North America",
+      "known_at": 11
+    },
+    {
+      "name": "Black-capped chickadee",
+      "facet": "Birds of North America",
+      "known_at": 8
+    },
+    {
+      "name": "American goldfinch",
+      "facet": "Birds of North America",
+      "known_at": 9
+    },
+    {
+      "name": "Osprey",
+      "facet": "Birds of North America",
+      "known_at": 8
+    },
+    {
+      "name": "Greater sage-grouse",
+      "facet": "Birds of North America",
+      "known_at": 12
+    },
+    {
+      "name": "Common raven",
+      "facet": "Birds of North America",
+      "known_at": 7
+    },
+    {
+      "name": "American alligator",
+      "facet": "Reptiles and amphibians",
+      "known_at": 2
+    },
+    {
+      "name": "American crocodile",
+      "facet": "Reptiles and amphibians",
+      "known_at": 9
+    },
+    {
+      "name": "Gila monster",
+      "facet": "Reptiles and amphibians",
+      "known_at": 9
+    },
+    {
+      "name": "Western diamondback rattlesnake",
+      "facet": "Reptiles and amphibians",
+      "known_at": 5
+    },
+    {
+      "name": "Copperhead",
+      "facet": "Reptiles and amphibians",
+      "known_at": 8
+    },
+    {
+      "name": "Cottonmouth",
+      "facet": "Reptiles and amphibians",
+      "known_at": 8
+    },
+    {
+      "name": "Coral snake",
+      "facet": "Reptiles and amphibians",
+      "known_at": 8
+    },
+    {
+      "name": "Eastern box turtle",
+      "facet": "Reptiles and amphibians",
+      "known_at": 6
+    },
+    {
+      "name": "Snapping turtle",
+      "facet": "Reptiles and amphibians",
+      "known_at": 5
+    },
+    {
+      "name": "Desert tortoise",
+      "facet": "Reptiles and amphibians",
+      "known_at": 8
+    },
+    {
+      "name": "Texas horned lizard",
+      "facet": "Reptiles and amphibians",
+      "known_at": 9
+    },
+    {
+      "name": "Green anole",
+      "facet": "Reptiles and amphibians",
+      "known_at": 8
+    },
+    {
+      "name": "American bullfrog",
+      "facet": "Reptiles and amphibians",
+      "known_at": 5
+    },
+    {
+      "name": "Spring peeper",
+      "facet": "Reptiles and amphibians",
+      "known_at": 11
+    },
+    {
+      "name": "Hellbender",
+      "facet": "Reptiles and amphibians",
+      "known_at": 12
+    },
+    {
+      "name": "Spotted salamander",
+      "facet": "Reptiles and amphibians",
+      "known_at": 10
+    },
+    {
+      "name": "Garter snake",
+      "facet": "Reptiles and amphibians",
+      "known_at": 6
+    },
+    {
+      "name": "Gopher tortoise",
+      "facet": "Reptiles and amphibians",
+      "known_at": 12
+    },
+    {
+      "name": "Burmese python",
+      "facet": "Reptiles and amphibians",
+      "known_at": 9
+    },
+    {
+      "name": "Florida manatee",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 5
+    },
+    {
+      "name": "Sea otter",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 4
+    },
+    {
+      "name": "California sea lion",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 5
+    },
+    {
+      "name": "Humpback whale",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 4
+    },
+    {
+      "name": "Gray whale",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 8
+    },
+    {
+      "name": "Orca",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 2
+    },
+    {
+      "name": "Northern elephant seal",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 9
+    },
+    {
+      "name": "Walrus",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 3
+    },
+    {
+      "name": "Bottlenose dolphin",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 3
+    },
+    {
+      "name": "Atlantic horseshoe crab",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 8
+    },
+    {
+      "name": "Blue crab",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 8
+    },
+    {
+      "name": "American lobster",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 5
+    },
+    {
+      "name": "Great white shark",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 3
+    },
+    {
+      "name": "Loggerhead sea turtle",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 7
+    },
+    {
+      "name": "Dungeness crab",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 10
+    },
+    {
+      "name": "Steller sea lion",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 12
+    },
+    {
+      "name": "Giant Pacific octopus",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 8
+    },
+    {
+      "name": "Atlantic puffin",
+      "facet": "Ocean and coastal wildlife",
+      "known_at": 6
+    },
+    {
+      "name": "Largemouth bass",
+      "facet": "Fish and river life",
+      "known_at": 7
+    },
+    {
+      "name": "Rainbow trout",
+      "facet": "Fish and river life",
+      "known_at": 6
+    },
+    {
+      "name": "Chinook salmon",
+      "facet": "Fish and river life",
+      "known_at": 8
+    },
+    {
+      "name": "Sockeye salmon",
+      "facet": "Fish and river life",
+      "known_at": 8
+    },
+    {
+      "name": "Channel catfish",
+      "facet": "Fish and river life",
+      "known_at": 6
+    },
+    {
+      "name": "Alligator gar",
+      "facet": "Fish and river life",
+      "known_at": 10
+    },
+    {
+      "name": "American paddlefish",
+      "facet": "Fish and river life",
+      "known_at": 12
+    },
+    {
+      "name": "Lake sturgeon",
+      "facet": "Fish and river life",
+      "known_at": 11
+    },
+    {
+      "name": "Muskellunge",
+      "facet": "Fish and river life",
+      "known_at": 12
+    },
+    {
+      "name": "Walleye",
+      "facet": "Fish and river life",
+      "known_at": 10
+    },
+    {
+      "name": "Bluegill",
+      "facet": "Fish and river life",
+      "known_at": 9
+    },
+    {
+      "name": "Brook trout",
+      "facet": "Fish and river life",
+      "known_at": 10
+    },
+    {
+      "name": "Crawfish",
+      "facet": "Fish and river life",
+      "known_at": 5
+    },
+    {
+      "name": "Asian carp",
+      "facet": "Fish and river life",
+      "known_at": 10
+    },
+    {
+      "name": "Striped bass",
+      "facet": "Fish and river life",
+      "known_at": 10
+    },
+    {
+      "name": "Northern pike",
+      "facet": "Fish and river life",
+      "known_at": 9
+    },
+    {
+      "name": "Sea lamprey",
+      "facet": "Fish and river life",
+      "known_at": 11
+    },
+    {
+      "name": "Yellow perch",
+      "facet": "Fish and river life",
+      "known_at": 11
+    },
+    {
+      "name": "Humuhumunukunukuāpuaʻa",
+      "facet": "Fish and river life",
+      "known_at": 11
+    },
+    {
+      "name": "Monarch butterfly",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 4
+    },
+    {
+      "name": "Firefly",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 2
+    },
+    {
+      "name": "Periodical cicada",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 7
+    },
+    {
+      "name": "Honeybee",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 2
+    },
+    {
+      "name": "Red imported fire ant",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 7
+    },
+    {
+      "name": "Black widow spider",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 6
+    },
+    {
+      "name": "Brown recluse spider",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 9
+    },
+    {
+      "name": "Texas brown tarantula",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 6
+    },
+    {
+      "name": "Arizona bark scorpion",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 9
+    },
+    {
+      "name": "Praying mantis",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 4
+    },
+    {
+      "name": "Mosquito",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 2
+    },
+    {
+      "name": "Luna moth",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 10
+    },
+    {
+      "name": "Katydid",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 9
+    },
+    {
+      "name": "Dragonfly",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 3
+    },
+    {
+      "name": "Ladybug",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 2
+    },
+    {
+      "name": "Deer tick",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 10
+    },
+    {
+      "name": "Japanese beetle",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 10
+    },
+    {
+      "name": "Spotted lanternfly",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 11
+    },
+    {
+      "name": "Asian giant hornet",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 10
+    },
+    {
+      "name": "Daddy longlegs",
+      "facet": "Insects and creepy-crawlies",
+      "known_at": 5
+    },
+    {
+      "name": "California condor",
+      "facet": "Endangered species and comebacks",
+      "known_at": 8
+    },
+    {
+      "name": "Whooping crane",
+      "facet": "Endangered species and comebacks",
+      "known_at": 10
+    },
+    {
+      "name": "Gray wolf",
+      "facet": "Endangered species and comebacks",
+      "known_at": 4
+    },
+    {
+      "name": "Black-footed ferret",
+      "facet": "Endangered species and comebacks",
+      "known_at": 11
+    },
+    {
+      "name": "Peregrine falcon",
+      "facet": "Endangered species and comebacks",
+      "known_at": 7
+    },
+    {
+      "name": "Ivory-billed woodpecker",
+      "facet": "Endangered species and comebacks",
+      "known_at": 12
+    },
+    {
+      "name": "Red wolf",
+      "facet": "Endangered species and comebacks",
+      "known_at": 11
+    },
+    {
+      "name": "Mexican gray wolf",
+      "facet": "Endangered species and comebacks",
+      "known_at": 11
+    },
+    {
+      "name": "Hawaiian monk seal",
+      "facet": "Endangered species and comebacks",
+      "known_at": 10
+    },
+    {
+      "name": "North Atlantic right whale",
+      "facet": "Endangered species and comebacks",
+      "known_at": 11
+    },
+    {
+      "name": "Kemp's ridley sea turtle",
+      "facet": "Endangered species and comebacks",
+      "known_at": 12
+    },
+    {
+      "name": "Endangered Species Act",
+      "facet": "Endangered species and comebacks",
+      "known_at": 11
+    },
+    {
+      "name": "DDT",
+      "facet": "Endangered species and comebacks",
+      "known_at": 12
+    },
+    {
+      "name": "Rachel Carson",
+      "facet": "Endangered species and comebacks",
+      "known_at": 12
+    },
+    {
+      "name": "Northern spotted owl",
+      "facet": "Endangered species and comebacks",
+      "known_at": 12
+    },
+    {
+      "name": "Key deer",
+      "facet": "Endangered species and comebacks",
+      "known_at": 11
+    },
+    {
+      "name": "Devils Hole pupfish",
+      "facet": "Endangered species and comebacks",
+      "known_at": 14
+    },
+    {
+      "name": "American burying beetle",
+      "facet": "Endangered species and comebacks",
+      "known_at": 14
+    },
+    {
+      "name": "Everglades National Park",
+      "facet": "Wildlife in national parks",
+      "known_at": 7
+    },
+    {
+      "name": "Denali National Park",
+      "facet": "Wildlife in national parks",
+      "known_at": 10
+    },
+    {
+      "name": "Synchronous fireflies",
+      "facet": "Wildlife in national parks",
+      "known_at": 12
+    },
+    {
+      "name": "Katmai National Park",
+      "facet": "Wildlife in national parks",
+      "known_at": 12
+    },
+    {
+      "name": "Fantastic Bear Week",
+      "facet": "Wildlife in national parks",
+      "known_at": 11
+    },
+    {
+      "name": "Olympic National Park",
+      "facet": "Wildlife in national parks",
+      "known_at": 12
+    },
+    {
+      "name": "Island fox",
+      "facet": "Wildlife in national parks",
+      "known_at": 13
+    },
+    {
+      "name": "Joshua Tree National Park",
+      "facet": "Wildlife in national parks",
+      "known_at": 8
+    },
+    {
+      "name": "Grand Canyon National Park",
+      "facet": "Wildlife in national parks",
+      "known_at": 4
+    },
+    {
+      "name": "Isle Royale National Park",
+      "facet": "Wildlife in national parks",
+      "known_at": 14
+    },
+    {
+      "name": "Redwood National Park",
+      "facet": "Wildlife in national parks",
+      "known_at": 9
+    },
+    {
+      "name": "Carlsbad Caverns National Park",
+      "facet": "Wildlife in national parks",
+      "known_at": 11
+    },
+    {
+      "name": "Saguaro National Park",
+      "facet": "Wildlife in national parks",
+      "known_at": 9
+    },
+    {
+      "name": "Lamar Valley",
+      "facet": "Wildlife in national parks",
+      "known_at": 14
+    },
+    {
+      "name": "Park ranger",
+      "facet": "Wildlife in national parks",
+      "known_at": 4
+    },
+    {
+      "name": "Smokey Bear",
+      "facet": "Animals in American history and lore",
+      "known_at": 5
+    },
+    {
+      "name": "Teddy bear",
+      "facet": "Animals in American history and lore",
+      "known_at": 3
+    },
+    {
+      "name": "Passenger pigeon",
+      "facet": "Animals in American history and lore",
+      "known_at": 11
+    },
+    {
+      "name": "Punxsutawney Phil",
+      "facet": "Animals in American history and lore",
+      "known_at": 5
+    },
+    {
+      "name": "Mustang",
+      "facet": "Animals in American history and lore",
+      "known_at": 6
+    },
+    {
+      "name": "Seaman",
+      "facet": "Animals in American history and lore",
+      "known_at": 14
+    },
+    {
+      "name": "Balto",
+      "facet": "Animals in American history and lore",
+      "known_at": 8
+    },
+    {
+      "name": "Jackalope",
+      "facet": "Animals in American history and lore",
+      "known_at": 10
+    },
+    {
+      "name": "Gadsden flag",
+      "facet": "Animals in American history and lore",
+      "known_at": 11
+    },
+    {
+      "name": "Old Abe",
+      "facet": "Animals in American history and lore",
+      "known_at": 14
+    },
+    {
+      "name": "Sergeant Stubby",
+      "facet": "Animals in American history and lore",
+      "known_at": 12
+    },
+    {
+      "name": "Buffalo nickel",
+      "facet": "Animals in American history and lore",
+      "known_at": 11
+    },
+    {
+      "name": "Buffalo Bill",
+      "facet": "Animals in American history and lore",
+      "known_at": 10
+    },
+    {
+      "name": "Presidential turkey pardon",
+      "facet": "Animals in American history and lore",
+      "known_at": 7
+    },
+    {
+      "name": "Republican elephant",
+      "facet": "Animals in American history and lore",
+      "known_at": 9
+    },
+    {
+      "name": "Democratic donkey",
+      "facet": "Animals in American history and lore",
+      "known_at": 9
+    },
+    {
+      "name": "Mothman",
+      "facet": "Animals in American history and lore",
+      "known_at": 13
+    },
+    {
+      "name": "Jersey Devil",
+      "facet": "Animals in American history and lore",
+      "known_at": 12
+    },
+    {
+      "name": "Bull Moose Party",
+      "facet": "Animals in American history and lore",
+      "known_at": 13
+    },
+    {
+      "name": "Bugs Bunny",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 2
+    },
+    {
+      "name": "Wile E. Coyote",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 5
+    },
+    {
+      "name": "Road Runner",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 4
+    },
+    {
+      "name": "Yogi Bear",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 5
+    },
+    {
+      "name": "Rocky the Flying Squirrel",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 12
+    },
+    {
+      "name": "Bullwinkle",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 12
+    },
+    {
+      "name": "Bambi",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 3
+    },
+    {
+      "name": "Pepé Le Pew",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 8
+    },
+    {
+      "name": "Foghorn Leghorn",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 9
+    },
+    {
+      "name": "Br'er Rabbit",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 12
+    },
+    {
+      "name": "Woodsy Owl",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 13
+    },
+    {
+      "name": "Spirit: Stallion of the Cimarron",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 8
+    },
+    {
+      "name": "Philadelphia Eagles",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 8
+    },
+    {
+      "name": "Miami Dolphins",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 8
+    },
+    {
+      "name": "Baltimore Orioles",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 9
+    },
+    {
+      "name": "St. Louis Cardinals",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 9
+    },
+    {
+      "name": "Florida Gators",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 10
+    },
+    {
+      "name": "Bucky Badger",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 13
+    },
+    {
+      "name": "Uga",
+      "facet": "Mascots and wildlife in pop culture",
+      "known_at": 13
+    }
+  ]
+}

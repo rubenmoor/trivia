@@ -1,0 +1,898 @@
+{
+  "subcategory": "desserts-and-baking",
+  "facets": [
+    "Classic American pies",
+    "Cookies and bars",
+    "Cakes and cupcakes",
+    "Holiday and seasonal treats",
+    "Regional and state desserts",
+    "Ice cream and soda fountain treats",
+    "Packaged snacks and candy bars",
+    "Breakfast pastries and donuts",
+    "Fair, campfire and diner sweets",
+    "Baking brands, mascots and inventors",
+    "Baking words and sayings",
+    "Dessert history and famous firsts"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Coconut cream pie",
+      "facet": "Classic American pies",
+      "known_at": 7
+    },
+    {
+      "name": "Lemon meringue pie",
+      "facet": "Classic American pies",
+      "known_at": 6
+    },
+    {
+      "name": "Blueberry pie",
+      "facet": "Classic American pies",
+      "known_at": 3
+    },
+    {
+      "name": "Grasshopper pie",
+      "facet": "Classic American pies",
+      "known_at": 12
+    },
+    {
+      "name": "Chocolate cream pie",
+      "facet": "Classic American pies",
+      "known_at": 5
+    },
+    {
+      "name": "Strawberry rhubarb pie",
+      "facet": "Classic American pies",
+      "known_at": 9
+    },
+    {
+      "name": "Lattice crust",
+      "facet": "Classic American pies",
+      "known_at": 8
+    },
+    {
+      "name": "Graham cracker crust",
+      "facet": "Classic American pies",
+      "known_at": 8
+    },
+    {
+      "name": "Peach pie",
+      "facet": "Classic American pies",
+      "known_at": 5
+    },
+    {
+      "name": "Brownie",
+      "facet": "Cookies and bars",
+      "known_at": 2
+    },
+    {
+      "name": "Blondie",
+      "facet": "Cookies and bars",
+      "known_at": 9
+    },
+    {
+      "name": "Rice Krispies Treat",
+      "facet": "Cookies and bars",
+      "known_at": 4
+    },
+    {
+      "name": "Fortune cookie",
+      "facet": "Cookies and bars",
+      "known_at": 5
+    },
+    {
+      "name": "Lemon bar",
+      "facet": "Cookies and bars",
+      "known_at": 8
+    },
+    {
+      "name": "Sugar cookie",
+      "facet": "Cookies and bars",
+      "known_at": 3
+    },
+    {
+      "name": "Seven-layer bar",
+      "facet": "Cookies and bars",
+      "known_at": 11
+    },
+    {
+      "name": "Molasses cookie",
+      "facet": "Cookies and bars",
+      "known_at": 10
+    },
+    {
+      "name": "Girl Scout Cookies",
+      "facet": "Cookies and bars",
+      "known_at": 4
+    },
+    {
+      "name": "Thin Mints",
+      "facet": "Cookies and bars",
+      "known_at": 6
+    },
+    {
+      "name": "Cowboy cookie",
+      "facet": "Cookies and bars",
+      "known_at": 12
+    },
+    {
+      "name": "No-bake cookie",
+      "facet": "Cookies and bars",
+      "known_at": 9
+    },
+    {
+      "name": "Thumbprint cookie",
+      "facet": "Cookies and bars",
+      "known_at": 10
+    },
+    {
+      "name": "Monster cookie",
+      "facet": "Cookies and bars",
+      "known_at": 10
+    },
+    {
+      "name": "German chocolate cake",
+      "facet": "Cakes and cupcakes",
+      "known_at": 9
+    },
+    {
+      "name": "Devil's food cake",
+      "facet": "Cakes and cupcakes",
+      "known_at": 8
+    },
+    {
+      "name": "Carrot cake",
+      "facet": "Cakes and cupcakes",
+      "known_at": 4
+    },
+    {
+      "name": "Chiffon cake",
+      "facet": "Cakes and cupcakes",
+      "known_at": 12
+    },
+    {
+      "name": "Lady Baltimore cake",
+      "facet": "Cakes and cupcakes",
+      "known_at": 14
+    },
+    {
+      "name": "Bundt cake",
+      "facet": "Cakes and cupcakes",
+      "known_at": 8
+    },
+    {
+      "name": "Funfetti cake",
+      "facet": "Cakes and cupcakes",
+      "known_at": 5
+    },
+    {
+      "name": "Cupcake",
+      "facet": "Cakes and cupcakes",
+      "known_at": 1
+    },
+    {
+      "name": "Coca-Cola cake",
+      "facet": "Cakes and cupcakes",
+      "known_at": 12
+    },
+    {
+      "name": "Icebox cake",
+      "facet": "Cakes and cupcakes",
+      "known_at": 12
+    },
+    {
+      "name": "Dump cake",
+      "facet": "Cakes and cupcakes",
+      "known_at": 11
+    },
+    {
+      "name": "Peeps",
+      "facet": "Holiday and seasonal treats",
+      "known_at": 4
+    },
+    {
+      "name": "Candy cane",
+      "facet": "Holiday and seasonal treats",
+      "known_at": 1
+    },
+    {
+      "name": "Cookies for Santa",
+      "facet": "Holiday and seasonal treats",
+      "known_at": 1
+    },
+    {
+      "name": "Trick-or-treating",
+      "facet": "Holiday and seasonal treats",
+      "known_at": 1
+    },
+    {
+      "name": "Caramel apple",
+      "facet": "Holiday and seasonal treats",
+      "known_at": 4
+    },
+    {
+      "name": "Conversation hearts",
+      "facet": "Holiday and seasonal treats",
+      "known_at": 5
+    },
+    {
+      "name": "Chocolate Easter bunny",
+      "facet": "Holiday and seasonal treats",
+      "known_at": 2
+    },
+    {
+      "name": "Jelly beans",
+      "facet": "Holiday and seasonal treats",
+      "known_at": 2
+    },
+    {
+      "name": "Peppermint bark",
+      "facet": "Holiday and seasonal treats",
+      "known_at": 8
+    },
+    {
+      "name": "Popcorn ball",
+      "facet": "Holiday and seasonal treats",
+      "known_at": 8
+    },
+    {
+      "name": "Divinity",
+      "facet": "Holiday and seasonal treats",
+      "known_at": 13
+    },
+    {
+      "name": "Thanksgiving dessert table",
+      "facet": "Holiday and seasonal treats",
+      "known_at": 5
+    },
+    {
+      "name": "Fourth of July flag cake",
+      "facet": "Holiday and seasonal treats",
+      "known_at": 5
+    },
+    {
+      "name": "Black and white cookie",
+      "facet": "Regional and state desserts",
+      "known_at": 9
+    },
+    {
+      "name": "Smith Island cake",
+      "facet": "Regional and state desserts",
+      "known_at": 14
+    },
+    {
+      "name": "Kringle",
+      "facet": "Regional and state desserts",
+      "known_at": 13
+    },
+    {
+      "name": "Hoosier sugar cream pie",
+      "facet": "Regional and state desserts",
+      "known_at": 14
+    },
+    {
+      "name": "Saltwater taffy",
+      "facet": "Regional and state desserts",
+      "known_at": 8
+    },
+    {
+      "name": "Buckeye candy",
+      "facet": "Regional and state desserts",
+      "known_at": 12
+    },
+    {
+      "name": "Sopaipilla",
+      "facet": "Regional and state desserts",
+      "known_at": 11
+    },
+    {
+      "name": "Frozen custard",
+      "facet": "Regional and state desserts",
+      "known_at": 10
+    },
+    {
+      "name": "Banana split",
+      "facet": "Ice cream and soda fountain treats",
+      "known_at": 3
+    },
+    {
+      "name": "Ice cream sundae",
+      "facet": "Ice cream and soda fountain treats",
+      "known_at": 3
+    },
+    {
+      "name": "Root beer float",
+      "facet": "Ice cream and soda fountain treats",
+      "known_at": 4
+    },
+    {
+      "name": "Milkshake",
+      "facet": "Ice cream and soda fountain treats",
+      "known_at": 1
+    },
+    {
+      "name": "Ice cream cone",
+      "facet": "Ice cream and soda fountain treats",
+      "known_at": 1
+    },
+    {
+      "name": "Hot fudge",
+      "facet": "Ice cream and soda fountain treats",
+      "known_at": 4
+    },
+    {
+      "name": "Rocky road",
+      "facet": "Ice cream and soda fountain treats",
+      "known_at": 7
+    },
+    {
+      "name": "Cookies and cream",
+      "facet": "Ice cream and soda fountain treats",
+      "known_at": 4
+    },
+    {
+      "name": "Soda jerk",
+      "facet": "Ice cream and soda fountain treats",
+      "known_at": 11
+    },
+    {
+      "name": "Malted milk",
+      "facet": "Ice cream and soda fountain treats",
+      "known_at": 9
+    },
+    {
+      "name": "Ice cream truck",
+      "facet": "Ice cream and soda fountain treats",
+      "known_at": 1
+    },
+    {
+      "name": "Ice cream sandwich",
+      "facet": "Ice cream and soda fountain treats",
+      "known_at": 3
+    },
+    {
+      "name": "Baskin-Robbins",
+      "facet": "Ice cream and soda fountain treats",
+      "known_at": 6
+    },
+    {
+      "name": "Dairy Queen Blizzard",
+      "facet": "Ice cream and soda fountain treats",
+      "known_at": 5
+    },
+    {
+      "name": "Klondike bar",
+      "facet": "Ice cream and soda fountain treats",
+      "known_at": 8
+    },
+    {
+      "name": "Eskimo Pie",
+      "facet": "Ice cream and soda fountain treats",
+      "known_at": 11
+    },
+    {
+      "name": "Ice cream cake",
+      "facet": "Ice cream and soda fountain treats",
+      "known_at": 3
+    },
+    {
+      "name": "Hostess CupCake",
+      "facet": "Packaged snacks and candy bars",
+      "known_at": 8
+    },
+    {
+      "name": "Oreo",
+      "facet": "Packaged snacks and candy bars",
+      "known_at": 1
+    },
+    {
+      "name": "Reese's Peanut Butter Cups",
+      "facet": "Packaged snacks and candy bars",
+      "known_at": 3
+    },
+    {
+      "name": "Snickers",
+      "facet": "Packaged snacks and candy bars",
+      "known_at": 3
+    },
+    {
+      "name": "M&M's",
+      "facet": "Packaged snacks and candy bars",
+      "known_at": 1
+    },
+    {
+      "name": "Tootsie Roll",
+      "facet": "Packaged snacks and candy bars",
+      "known_at": 6
+    },
+    {
+      "name": "Little Debbie Oatmeal Creme Pie",
+      "facet": "Packaged snacks and candy bars",
+      "known_at": 7
+    },
+    {
+      "name": "Ding Dong",
+      "facet": "Packaged snacks and candy bars",
+      "known_at": 9
+    },
+    {
+      "name": "Fig Newton",
+      "facet": "Packaged snacks and candy bars",
+      "known_at": 8
+    },
+    {
+      "name": "Chips Ahoy!",
+      "facet": "Packaged snacks and candy bars",
+      "known_at": 5
+    },
+    {
+      "name": "Nutter Butter",
+      "facet": "Packaged snacks and candy bars",
+      "known_at": 8
+    },
+    {
+      "name": "Baby Ruth",
+      "facet": "Packaged snacks and candy bars",
+      "known_at": 10
+    },
+    {
+      "name": "Butterfinger",
+      "facet": "Packaged snacks and candy bars",
+      "known_at": 7
+    },
+    {
+      "name": "3 Musketeers",
+      "facet": "Packaged snacks and candy bars",
+      "known_at": 8
+    },
+    {
+      "name": "Cracker Jack",
+      "facet": "Packaged snacks and candy bars",
+      "known_at": 7
+    },
+    {
+      "name": "Twizzlers",
+      "facet": "Packaged snacks and candy bars",
+      "known_at": 6
+    },
+    {
+      "name": "Hostess Sno Balls",
+      "facet": "Packaged snacks and candy bars",
+      "known_at": 11
+    },
+    {
+      "name": "Glazed donut",
+      "facet": "Breakfast pastries and donuts",
+      "known_at": 1
+    },
+    {
+      "name": "Boston cream donut",
+      "facet": "Breakfast pastries and donuts",
+      "known_at": 7
+    },
+    {
+      "name": "Donut hole",
+      "facet": "Breakfast pastries and donuts",
+      "known_at": 3
+    },
+    {
+      "name": "Cronut",
+      "facet": "Breakfast pastries and donuts",
+      "known_at": 11
+    },
+    {
+      "name": "Bear claw",
+      "facet": "Breakfast pastries and donuts",
+      "known_at": 9
+    },
+    {
+      "name": "Cinnamon roll",
+      "facet": "Breakfast pastries and donuts",
+      "known_at": 2
+    },
+    {
+      "name": "Apple fritter",
+      "facet": "Breakfast pastries and donuts",
+      "known_at": 8
+    },
+    {
+      "name": "Pop-Tarts",
+      "facet": "Breakfast pastries and donuts",
+      "known_at": 3
+    },
+    {
+      "name": "Coffee cake",
+      "facet": "Breakfast pastries and donuts",
+      "known_at": 7
+    },
+    {
+      "name": "Blueberry muffin",
+      "facet": "Breakfast pastries and donuts",
+      "known_at": 3
+    },
+    {
+      "name": "Cruller",
+      "facet": "Breakfast pastries and donuts",
+      "known_at": 11
+    },
+    {
+      "name": "Sticky bun",
+      "facet": "Breakfast pastries and donuts",
+      "known_at": 9
+    },
+    {
+      "name": "Dunkin'",
+      "facet": "Breakfast pastries and donuts",
+      "known_at": 4
+    },
+    {
+      "name": "Krispy Kreme",
+      "facet": "Breakfast pastries and donuts",
+      "known_at": 5
+    },
+    {
+      "name": "Jelly donut",
+      "facet": "Breakfast pastries and donuts",
+      "known_at": 4
+    },
+    {
+      "name": "Homer Simpson's pink donut",
+      "facet": "Breakfast pastries and donuts",
+      "known_at": 3,
+      "retired": "used_up: The pool already has the pink donut and Homer; any riddle or detail question would repeat it."
+    },
+    {
+      "name": "Toaster Strudel",
+      "facet": "Breakfast pastries and donuts",
+      "known_at": 8
+    },
+    {
+      "name": "Kettle corn",
+      "facet": "Fair, campfire and diner sweets",
+      "known_at": 6
+    },
+    {
+      "name": "Elephant ear",
+      "facet": "Fair, campfire and diner sweets",
+      "known_at": 10
+    },
+    {
+      "name": "Snow cone",
+      "facet": "Fair, campfire and diner sweets",
+      "known_at": 3
+    },
+    {
+      "name": "Dippin' Dots",
+      "facet": "Fair, campfire and diner sweets",
+      "known_at": 5
+    },
+    {
+      "name": "Fudge",
+      "facet": "Fair, campfire and diner sweets",
+      "known_at": 4
+    },
+    {
+      "name": "Marshmallow",
+      "facet": "Fair, campfire and diner sweets",
+      "known_at": 1
+    },
+    {
+      "name": "Caramel corn",
+      "facet": "Fair, campfire and diner sweets",
+      "known_at": 5
+    },
+    {
+      "name": "Iowa State Fair butter cow",
+      "facet": "Fair, campfire and diner sweets",
+      "known_at": 12
+    },
+    {
+      "name": "Blue-ribbon pie contest",
+      "facet": "Fair, campfire and diner sweets",
+      "known_at": 7
+    },
+    {
+      "name": "Diner pie case",
+      "facet": "Fair, campfire and diner sweets",
+      "known_at": 8
+    },
+    {
+      "name": "Short stack of pancakes",
+      "facet": "Fair, campfire and diner sweets",
+      "known_at": 8
+    },
+    {
+      "name": "Milton S. Hershey",
+      "facet": "Baking brands, mascots and inventors",
+      "known_at": 8
+    },
+    {
+      "name": "Little Debbie",
+      "facet": "Baking brands, mascots and inventors",
+      "known_at": 7
+    },
+    {
+      "name": "Sara Lee",
+      "facet": "Baking brands, mascots and inventors",
+      "known_at": 11
+    },
+    {
+      "name": "Nabisco",
+      "facet": "Baking brands, mascots and inventors",
+      "known_at": 9
+    },
+    {
+      "name": "Keebler Elves",
+      "facet": "Baking brands, mascots and inventors",
+      "known_at": 7
+    },
+    {
+      "name": "Hostess",
+      "facet": "Baking brands, mascots and inventors",
+      "known_at": 7
+    },
+    {
+      "name": "Arm & Hammer baking soda",
+      "facet": "Baking brands, mascots and inventors",
+      "known_at": 8
+    },
+    {
+      "name": "Nestlé Toll House",
+      "facet": "Baking brands, mascots and inventors",
+      "known_at": 9
+    },
+    {
+      "name": "Easy-Bake Oven",
+      "facet": "Baking brands, mascots and inventors",
+      "known_at": 5
+    },
+    {
+      "name": "Mrs. Fields",
+      "facet": "Baking brands, mascots and inventors",
+      "known_at": 11
+    },
+    {
+      "name": "Famous Amos",
+      "facet": "Baking brands, mascots and inventors",
+      "known_at": 11
+    },
+    {
+      "name": "Cookie Monster",
+      "facet": "Baking brands, mascots and inventors",
+      "known_at": 1
+    },
+    {
+      "name": "Cake Boss",
+      "facet": "Baking brands, mascots and inventors",
+      "known_at": 9
+    },
+    {
+      "name": "As American as apple pie",
+      "facet": "Baking words and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Easy as pie",
+      "facet": "Baking words and sayings",
+      "known_at": 5
+    },
+    {
+      "name": "Smart cookie",
+      "facet": "Baking words and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Tough cookie",
+      "facet": "Baking words and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "That's the way the cookie crumbles",
+      "facet": "Baking words and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Hand in the cookie jar",
+      "facet": "Baking words and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Cookie-cutter",
+      "facet": "Baking words and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Cakewalk",
+      "facet": "Baking words and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Brownie points",
+      "facet": "Baking words and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Cutie pie",
+      "facet": "Baking words and sayings",
+      "known_at": 3
+    },
+    {
+      "name": "Jimmies",
+      "facet": "Baking words and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Frosting",
+      "facet": "Baking words and sayings",
+      "known_at": 4
+    },
+    {
+      "name": "Shortening",
+      "facet": "Baking words and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Cobbler",
+      "facet": "Baking words and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Brown Betty",
+      "facet": "Baking words and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Pandowdy",
+      "facet": "Baking words and sayings",
+      "known_at": 14
+    },
+    {
+      "name": "Grunt",
+      "facet": "Baking words and sayings",
+      "known_at": 15
+    },
+    {
+      "name": "Cookie (word origin)",
+      "facet": "Baking words and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Half-baked",
+      "facet": "Baking words and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Pie in the sky",
+      "facet": "Baking words and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "1904 St. Louis World's Fair",
+      "facet": "Dessert history and famous firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Frank Epperson",
+      "facet": "Dessert history and famous firsts",
+      "known_at": 13
+    },
+    {
+      "name": "Thomas Jefferson's ice cream recipe",
+      "facet": "Dessert history and famous firsts",
+      "known_at": 12
+    },
+    {
+      "name": "American Cookery",
+      "facet": "Dessert history and famous firsts",
+      "known_at": 14
+    },
+    {
+      "name": "Palmer House Hotel",
+      "facet": "Dessert history and famous firsts",
+      "known_at": 14
+    },
+    {
+      "name": "Hershey's Milk Chocolate bar",
+      "facet": "Dessert history and famous firsts",
+      "known_at": 6
+    },
+    {
+      "name": "Pillsbury Bake-Off",
+      "facet": "Dessert history and famous firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Nancy Johnson's ice cream freezer",
+      "facet": "Dessert history and famous firsts",
+      "known_at": 15
+    },
+    {
+      "name": "Toll House Inn",
+      "facet": "Dessert history and famous firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Latrobe banana split",
+      "facet": "Dessert history and famous firsts",
+      "known_at": 14
+    },
+    {
+      "name": "Hershey, Pennsylvania",
+      "facet": "Dessert history and famous firsts",
+      "known_at": 9
+    },
+    {
+      "name": "Donut Lassies",
+      "facet": "Dessert history and famous firsts",
+      "known_at": 14
+    },
+    {
+      "name": "National Donut Day",
+      "facet": "Dessert history and famous firsts",
+      "known_at": 8
+    },
+    {
+      "name": "Hostess bankruptcy of 2012",
+      "facet": "Dessert history and famous firsts",
+      "known_at": 11
+    },
+    {
+      "name": "World War II sugar rationing",
+      "facet": "Dessert history and famous firsts",
+      "known_at": 11
+    },
+    {
+      "name": "Ice cream sundae origin dispute",
+      "facet": "Dessert history and famous firsts",
+      "known_at": 14
+    },
+    {
+      "name": "Election cake",
+      "facet": "Dessert history and famous firsts",
+      "known_at": 15
+    }
+  ]
+}

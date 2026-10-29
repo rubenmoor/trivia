@@ -1,0 +1,1139 @@
+{
+  "subcategory": "restaurant-chains",
+  "facets": [
+    "Burger chains",
+    "Fried chicken chains",
+    "Pizza chains",
+    "Coffee, donut and breakfast chains",
+    "Casual sit-down restaurants",
+    "Tacos, subs and other fast food",
+    "Regional cult favorites",
+    "Mascots and logos",
+    "Famous menu items",
+    "Founders and chain history",
+    "Slogans, jingles and ad campaigns",
+    "Drive-thrus, kids' meals and fast-food culture"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Burger King",
+      "facet": "Burger chains",
+      "known_at": 2
+    },
+    {
+      "name": "Wendy's",
+      "facet": "Burger chains",
+      "known_at": 4
+    },
+    {
+      "name": "In-N-Out Burger",
+      "facet": "Burger chains",
+      "known_at": 7
+    },
+    {
+      "name": "Five Guys",
+      "facet": "Burger chains",
+      "known_at": 8
+    },
+    {
+      "name": "Shake Shack",
+      "facet": "Burger chains",
+      "known_at": 9
+    },
+    {
+      "name": "White Castle",
+      "facet": "Burger chains",
+      "known_at": 8
+    },
+    {
+      "name": "Sonic Drive-In",
+      "facet": "Burger chains",
+      "known_at": 8
+    },
+    {
+      "name": "Jack in the Box",
+      "facet": "Burger chains",
+      "known_at": 8
+    },
+    {
+      "name": "Carl's Jr.",
+      "facet": "Burger chains",
+      "known_at": 9
+    },
+    {
+      "name": "Hardee's",
+      "facet": "Burger chains",
+      "known_at": 10
+    },
+    {
+      "name": "Whataburger",
+      "facet": "Burger chains",
+      "known_at": 9
+    },
+    {
+      "name": "Culver's",
+      "facet": "Burger chains",
+      "known_at": 10
+    },
+    {
+      "name": "Steak 'n Shake",
+      "facet": "Burger chains",
+      "known_at": 11
+    },
+    {
+      "name": "Checkers",
+      "facet": "Burger chains",
+      "known_at": 12
+    },
+    {
+      "name": "Smashburger",
+      "facet": "Burger chains",
+      "known_at": 12
+    },
+    {
+      "name": "Krystal",
+      "facet": "Burger chains",
+      "known_at": 12
+    },
+    {
+      "name": "KFC",
+      "facet": "Fried chicken chains",
+      "known_at": 2
+    },
+    {
+      "name": "Popeyes",
+      "facet": "Fried chicken chains",
+      "known_at": 6
+    },
+    {
+      "name": "Chick-fil-A",
+      "facet": "Fried chicken chains",
+      "known_at": 5
+    },
+    {
+      "name": "Church's Chicken",
+      "facet": "Fried chicken chains",
+      "known_at": 10
+    },
+    {
+      "name": "Raising Cane's",
+      "facet": "Fried chicken chains",
+      "known_at": 8
+    },
+    {
+      "name": "Bojangles",
+      "facet": "Fried chicken chains",
+      "known_at": 10
+    },
+    {
+      "name": "Wingstop",
+      "facet": "Fried chicken chains",
+      "known_at": 8
+    },
+    {
+      "name": "Buffalo Wild Wings",
+      "facet": "Fried chicken chains",
+      "known_at": 9
+    },
+    {
+      "name": "El Pollo Loco",
+      "facet": "Fried chicken chains",
+      "known_at": 11
+    },
+    {
+      "name": "Zaxby's",
+      "facet": "Fried chicken chains",
+      "known_at": 11
+    },
+    {
+      "name": "Boston Market",
+      "facet": "Fried chicken chains",
+      "known_at": 11
+    },
+    {
+      "name": "Dave's Hot Chicken",
+      "facet": "Fried chicken chains",
+      "known_at": 11
+    },
+    {
+      "name": "Slim Chickens",
+      "facet": "Fried chicken chains",
+      "known_at": 12
+    },
+    {
+      "name": "Lee's Famous Recipe Chicken",
+      "facet": "Fried chicken chains",
+      "known_at": 13
+    },
+    {
+      "name": "Golden Chick",
+      "facet": "Fried chicken chains",
+      "known_at": 14
+    },
+    {
+      "name": "Pizza Hut",
+      "facet": "Pizza chains",
+      "known_at": 3
+    },
+    {
+      "name": "Domino's",
+      "facet": "Pizza chains",
+      "known_at": 3
+    },
+    {
+      "name": "Papa John's",
+      "facet": "Pizza chains",
+      "known_at": 6
+    },
+    {
+      "name": "Little Caesars",
+      "facet": "Pizza chains",
+      "known_at": 6
+    },
+    {
+      "name": "Chuck E. Cheese",
+      "facet": "Pizza chains",
+      "known_at": 4
+    },
+    {
+      "name": "Sbarro",
+      "facet": "Pizza chains",
+      "known_at": 9
+    },
+    {
+      "name": "Papa Murphy's",
+      "facet": "Pizza chains",
+      "known_at": 11
+    },
+    {
+      "name": "Marco's Pizza",
+      "facet": "Pizza chains",
+      "known_at": 12
+    },
+    {
+      "name": "Round Table Pizza",
+      "facet": "Pizza chains",
+      "known_at": 12
+    },
+    {
+      "name": "Uno Pizzeria & Grill",
+      "facet": "Pizza chains",
+      "known_at": 12
+    },
+    {
+      "name": "Godfather's Pizza",
+      "facet": "Pizza chains",
+      "known_at": 13
+    },
+    {
+      "name": "Hungry Howie's",
+      "facet": "Pizza chains",
+      "known_at": 12
+    },
+    {
+      "name": "CiCi's Pizza",
+      "facet": "Pizza chains",
+      "known_at": 11
+    },
+    {
+      "name": "Blaze Pizza",
+      "facet": "Pizza chains",
+      "known_at": 11
+    },
+    {
+      "name": "MOD Pizza",
+      "facet": "Pizza chains",
+      "known_at": 12
+    },
+    {
+      "name": "Jet's Pizza",
+      "facet": "Pizza chains",
+      "known_at": 12
+    },
+    {
+      "name": "IHOP",
+      "facet": "Coffee, donut and breakfast chains",
+      "known_at": 5
+    },
+    {
+      "name": "Denny's",
+      "facet": "Coffee, donut and breakfast chains",
+      "known_at": 7
+    },
+    {
+      "name": "Cracker Barrel",
+      "facet": "Coffee, donut and breakfast chains",
+      "known_at": 9
+    },
+    {
+      "name": "Bob Evans",
+      "facet": "Coffee, donut and breakfast chains",
+      "known_at": 11
+    },
+    {
+      "name": "Peet's Coffee",
+      "facet": "Coffee, donut and breakfast chains",
+      "known_at": 12
+    },
+    {
+      "name": "Dutch Bros",
+      "facet": "Coffee, donut and breakfast chains",
+      "known_at": 10
+    },
+    {
+      "name": "Einstein Bros. Bagels",
+      "facet": "Coffee, donut and breakfast chains",
+      "known_at": 11
+    },
+    {
+      "name": "Panera Bread",
+      "facet": "Coffee, donut and breakfast chains",
+      "known_at": 8
+    },
+    {
+      "name": "Caribou Coffee",
+      "facet": "Coffee, donut and breakfast chains",
+      "known_at": 12
+    },
+    {
+      "name": "Perkins",
+      "facet": "Coffee, donut and breakfast chains",
+      "known_at": 12
+    },
+    {
+      "name": "First Watch",
+      "facet": "Coffee, donut and breakfast chains",
+      "known_at": 12
+    },
+    {
+      "name": "Shipley Do-Nuts",
+      "facet": "Coffee, donut and breakfast chains",
+      "known_at": 13
+    },
+    {
+      "name": "Applebee's",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 6
+    },
+    {
+      "name": "Olive Garden",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 6
+    },
+    {
+      "name": "Red Lobster",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 7
+    },
+    {
+      "name": "Chili's",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 7
+    },
+    {
+      "name": "TGI Fridays",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 7
+    },
+    {
+      "name": "Outback Steakhouse",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 7
+    },
+    {
+      "name": "The Cheesecake Factory",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 8
+    },
+    {
+      "name": "Texas Roadhouse",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 8
+    },
+    {
+      "name": "Red Robin",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 8
+    },
+    {
+      "name": "Ruby Tuesday",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 10
+    },
+    {
+      "name": "P.F. Chang's",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 10
+    },
+    {
+      "name": "Benihana",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 10
+    },
+    {
+      "name": "Rainforest Cafe",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 6
+    },
+    {
+      "name": "Hard Rock Cafe",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 7
+    },
+    {
+      "name": "LongHorn Steakhouse",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 10
+    },
+    {
+      "name": "Golden Corral",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 9
+    },
+    {
+      "name": "Bubba Gump Shrimp Co.",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 8
+    },
+    {
+      "name": "Dave & Buster's",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 8
+    },
+    {
+      "name": "Buca di Beppo",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 12
+    },
+    {
+      "name": "Cheddar's",
+      "facet": "Casual sit-down restaurants",
+      "known_at": 13,
+      "retired": "unaskable: Cheddar's is too little known to support a fair question with these options."
+    },
+    {
+      "name": "Taco Bell",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 3
+    },
+    {
+      "name": "Chipotle",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 6
+    },
+    {
+      "name": "Subway",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 2
+    },
+    {
+      "name": "Jersey Mike's",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 9
+    },
+    {
+      "name": "Jimmy John's",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 9
+    },
+    {
+      "name": "Firehouse Subs",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 10
+    },
+    {
+      "name": "Quiznos",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 11
+    },
+    {
+      "name": "Arby's",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 7
+    },
+    {
+      "name": "Panda Express",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 6
+    },
+    {
+      "name": "Del Taco",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 11
+    },
+    {
+      "name": "Qdoba",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 11
+    },
+    {
+      "name": "Moe's Southwest Grill",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 12
+    },
+    {
+      "name": "Long John Silver's",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 10
+    },
+    {
+      "name": "Nathan's Famous",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 10
+    },
+    {
+      "name": "Wienerschnitzel",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 12
+    },
+    {
+      "name": "Auntie Anne's",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 7
+    },
+    {
+      "name": "Cinnabon",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 6
+    },
+    {
+      "name": "Dairy Queen",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 6
+    },
+    {
+      "name": "Jamba",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 9
+    },
+    {
+      "name": "Potbelly",
+      "facet": "Tacos, subs and other fast food",
+      "known_at": 12
+    },
+    {
+      "name": "Skyline Chili",
+      "facet": "Regional cult favorites",
+      "known_at": 11
+    },
+    {
+      "name": "Gold Star Chili",
+      "facet": "Regional cult favorites",
+      "known_at": 13
+    },
+    {
+      "name": "Portillo's",
+      "facet": "Regional cult favorites",
+      "known_at": 11
+    },
+    {
+      "name": "Cook Out",
+      "facet": "Regional cult favorites",
+      "known_at": 12
+    },
+    {
+      "name": "Pal's Sudden Service",
+      "facet": "Regional cult favorites",
+      "known_at": 14
+    },
+    {
+      "name": "Taco John's",
+      "facet": "Regional cult favorites",
+      "known_at": 12
+    },
+    {
+      "name": "Blake's Lotaburger",
+      "facet": "Regional cult favorites",
+      "known_at": 13
+    },
+    {
+      "name": "Sheetz",
+      "facet": "Regional cult favorites",
+      "known_at": 10
+    },
+    {
+      "name": "Wawa",
+      "facet": "Regional cult favorites",
+      "known_at": 10
+    },
+    {
+      "name": "Primanti Bros.",
+      "facet": "Regional cult favorites",
+      "known_at": 12
+    },
+    {
+      "name": "Lou Malnati's",
+      "facet": "Regional cult favorites",
+      "known_at": 12
+    },
+    {
+      "name": "Giordano's",
+      "facet": "Regional cult favorites",
+      "known_at": 12
+    },
+    {
+      "name": "Pink's Hot Dogs",
+      "facet": "Regional cult favorites",
+      "known_at": 13
+    },
+    {
+      "name": "Ben's Chili Bowl",
+      "facet": "Regional cult favorites",
+      "known_at": 12
+    },
+    {
+      "name": "Harold's Chicken",
+      "facet": "Regional cult favorites",
+      "known_at": 13
+    },
+    {
+      "name": "Freddy's Frozen Custard",
+      "facet": "Regional cult favorites",
+      "known_at": 12
+    },
+    {
+      "name": "Dick's Drive-In",
+      "facet": "Regional cult favorites",
+      "known_at": 13
+    },
+    {
+      "name": "Zippy's",
+      "facet": "Regional cult favorites",
+      "known_at": 13
+    },
+    {
+      "name": "Biscuitville",
+      "facet": "Regional cult favorites",
+      "known_at": 14
+    },
+    {
+      "name": "Ronald McDonald",
+      "facet": "Mascots and logos",
+      "known_at": 2
+    },
+    {
+      "name": "Golden Arches",
+      "facet": "Mascots and logos",
+      "known_at": 2
+    },
+    {
+      "name": "The Burger King mascot",
+      "facet": "Mascots and logos",
+      "known_at": 7
+    },
+    {
+      "name": "Wendy",
+      "facet": "Mascots and logos",
+      "known_at": 6
+    },
+    {
+      "name": "Hamburglar",
+      "facet": "Mascots and logos",
+      "known_at": 6
+    },
+    {
+      "name": "Grimace",
+      "facet": "Mascots and logos",
+      "known_at": 5
+    },
+    {
+      "name": "Birdie the Early Bird",
+      "facet": "Mascots and logos",
+      "known_at": 11
+    },
+    {
+      "name": "Mayor McCheese",
+      "facet": "Mascots and logos",
+      "known_at": 11
+    },
+    {
+      "name": "Chick-fil-A Cows",
+      "facet": "Mascots and logos",
+      "known_at": 9
+    },
+    {
+      "name": "Jack Box",
+      "facet": "Mascots and logos",
+      "known_at": 10
+    },
+    {
+      "name": "Big Boy",
+      "facet": "Mascots and logos",
+      "known_at": 11
+    },
+    {
+      "name": "Taco Bell Chihuahua",
+      "facet": "Mascots and logos",
+      "known_at": 11
+    },
+    {
+      "name": "Little Caesar",
+      "facet": "Mascots and logos",
+      "known_at": 9
+    },
+    {
+      "name": "Starbucks Siren",
+      "facet": "Mascots and logos",
+      "known_at": 7
+    },
+    {
+      "name": "The Noid",
+      "facet": "Mascots and logos",
+      "known_at": 12
+    },
+    {
+      "name": "Pizza Hut red roof",
+      "facet": "Mascots and logos",
+      "known_at": 9
+    },
+    {
+      "name": "Speedee",
+      "facet": "Mascots and logos",
+      "known_at": 13
+    },
+    {
+      "name": "Happy Star",
+      "facet": "Mascots and logos",
+      "known_at": 12
+    },
+    {
+      "name": "Krispy Kreme Hot Now sign",
+      "facet": "Mascots and logos",
+      "known_at": 10
+    },
+    {
+      "name": "Big Mac",
+      "facet": "Famous menu items",
+      "known_at": 3
+    },
+    {
+      "name": "Whopper",
+      "facet": "Famous menu items",
+      "known_at": 4
+    },
+    {
+      "name": "Chicken McNuggets",
+      "facet": "Famous menu items",
+      "known_at": 2
+    },
+    {
+      "name": "Frosty",
+      "facet": "Famous menu items",
+      "known_at": 6
+    },
+    {
+      "name": "Baconator",
+      "facet": "Famous menu items",
+      "known_at": 9
+    },
+    {
+      "name": "Crunchwrap Supreme",
+      "facet": "Famous menu items",
+      "known_at": 8
+    },
+    {
+      "name": "Doritos Locos Tacos",
+      "facet": "Famous menu items",
+      "known_at": 9
+    },
+    {
+      "name": "Egg McMuffin",
+      "facet": "Famous menu items",
+      "known_at": 8
+    },
+    {
+      "name": "McRib",
+      "facet": "Famous menu items",
+      "known_at": 9
+    },
+    {
+      "name": "Filet-O-Fish",
+      "facet": "Famous menu items",
+      "known_at": 7
+    },
+    {
+      "name": "Quarter Pounder",
+      "facet": "Famous menu items",
+      "known_at": 7
+    },
+    {
+      "name": "Bloomin' Onion",
+      "facet": "Famous menu items",
+      "known_at": 10
+    },
+    {
+      "name": "Original Glazed doughnut",
+      "facet": "Famous menu items",
+      "known_at": 9
+    },
+    {
+      "name": "Frappuccino",
+      "facet": "Famous menu items",
+      "known_at": 7
+    },
+    {
+      "name": "Munchkins",
+      "facet": "Famous menu items",
+      "known_at": 9
+    },
+    {
+      "name": "Grand Slam",
+      "facet": "Famous menu items",
+      "known_at": 11
+    },
+    {
+      "name": "Shamrock Shake",
+      "facet": "Famous menu items",
+      "known_at": 9
+    },
+    {
+      "name": "Chick-fil-A Sauce",
+      "facet": "Famous menu items",
+      "known_at": 9
+    },
+    {
+      "name": "Footlong",
+      "facet": "Famous menu items",
+      "known_at": 6
+    },
+    {
+      "name": "Olive Garden breadsticks",
+      "facet": "Famous menu items",
+      "known_at": 9
+    },
+    {
+      "name": "Richard and Maurice McDonald",
+      "facet": "Founders and chain history",
+      "known_at": 10
+    },
+    {
+      "name": "Truett Cathy",
+      "facet": "Founders and chain history",
+      "known_at": 13
+    },
+    {
+      "name": "Glen Bell",
+      "facet": "Founders and chain history",
+      "known_at": 13
+    },
+    {
+      "name": "Howard Schultz",
+      "facet": "Founders and chain history",
+      "known_at": 12
+    },
+    {
+      "name": "Fred DeLuca",
+      "facet": "Founders and chain history",
+      "known_at": 13
+    },
+    {
+      "name": "Tom Monaghan",
+      "facet": "Founders and chain history",
+      "known_at": 13
+    },
+    {
+      "name": "John Schnatter",
+      "facet": "Founders and chain history",
+      "known_at": 12
+    },
+    {
+      "name": "Mike Ilitch",
+      "facet": "Founders and chain history",
+      "known_at": 13
+    },
+    {
+      "name": "Walter Anderson and Billy Ingram",
+      "facet": "Founders and chain history",
+      "known_at": 14
+    },
+    {
+      "name": "Harry and Esther Snyder",
+      "facet": "Founders and chain history",
+      "known_at": 13
+    },
+    {
+      "name": "Herb Peterson",
+      "facet": "Founders and chain history",
+      "known_at": 14
+    },
+    {
+      "name": "Dan and Frank Carney",
+      "facet": "Founders and chain history",
+      "known_at": 14
+    },
+    {
+      "name": "Steve Ells",
+      "facet": "Founders and chain history",
+      "known_at": 13
+    },
+    {
+      "name": "The Founder",
+      "facet": "Founders and chain history",
+      "known_at": 10
+    },
+    {
+      "name": "Speedee Service System",
+      "facet": "Founders and chain history",
+      "known_at": 13
+    },
+    {
+      "name": "San Bernardino",
+      "facet": "Founders and chain history",
+      "known_at": 13
+    },
+    {
+      "name": "Corbin, Kentucky",
+      "facet": "Founders and chain history",
+      "known_at": 13
+    },
+    {
+      "name": "I'm Lovin' It",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 3
+    },
+    {
+      "name": "Have It Your Way",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 9
+    },
+    {
+      "name": "Where's the Beef?",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 12
+    },
+    {
+      "name": "Finger Lickin' Good",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 7
+    },
+    {
+      "name": "Eat Fresh",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 9
+    },
+    {
+      "name": "Think Outside the Bun",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 11
+    },
+    {
+      "name": "Eat Mor Chikin",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 10
+    },
+    {
+      "name": "Big Mac jingle",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 12
+    },
+    {
+      "name": "Live Más",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 11
+    },
+    {
+      "name": "America Runs on Dunkin'",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 10
+    },
+    {
+      "name": "Better Ingredients. Better Pizza.",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 11
+    },
+    {
+      "name": "Pizza! Pizza!",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 9
+    },
+    {
+      "name": "Yo Quiero Taco Bell",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 12
+    },
+    {
+      "name": "Love That Chicken from Popeyes",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 13
+    },
+    {
+      "name": "Welcome to Moe's",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 13
+    },
+    {
+      "name": "We Have the Meats",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 11
+    },
+    {
+      "name": "Eatin' Good in the Neighborhood",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 12
+    },
+    {
+      "name": "When You're Here, You're Family",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 12
+    },
+    {
+      "name": "You Deserve a Break Today",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 13
+    },
+    {
+      "name": "Time to Make the Donuts",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 13
+    },
+    {
+      "name": "Subservient Chicken",
+      "facet": "Slogans, jingles and ad campaigns",
+      "known_at": 14
+    },
+    {
+      "name": "Drive-thru",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 2
+    },
+    {
+      "name": "Happy Meal",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 2
+    },
+    {
+      "name": "Kids' meal toy",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 3
+    },
+    {
+      "name": "PlayPlace",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 5
+    },
+    {
+      "name": "Ball pit",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 4
+    },
+    {
+      "name": "Paper crown",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 5
+    },
+    {
+      "name": "Combo meal",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 5,
+      "retired": "used_up: The existing question already gives away what a combo meal is made of and how many items it has."
+    },
+    {
+      "name": "Dollar Menu",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 8
+    },
+    {
+      "name": "Supersize",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 10
+    },
+    {
+      "name": "Super Size Me",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 11
+    },
+    {
+      "name": "Secret menu",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 9
+    },
+    {
+      "name": "Drive-in restaurant",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 9
+    },
+    {
+      "name": "Fast casual",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 12
+    },
+    {
+      "name": "Free refills",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 6
+    },
+    {
+      "name": "Ketchup packet",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 4
+    },
+    {
+      "name": "Food court",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 7
+    },
+    {
+      "name": "Franchise",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 9
+    },
+    {
+      "name": "Waffle House Index",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 12
+    },
+    {
+      "name": "All Day Breakfast",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 10
+    },
+    {
+      "name": "Mobile ordering",
+      "facet": "Drive-thrus, kids' meals and fast-food culture",
+      "known_at": 8
+    }
+  ]
+}

@@ -1,0 +1,876 @@
+{
+  "subcategory": "weather-and-seasons",
+  "facets": [
+    "Tornadoes and Tornado Alley",
+    "Hurricanes and tropical storms",
+    "Blizzards, nor'easters and lake-effect snow",
+    "Heat waves, deserts and drought",
+    "Famous storms and disasters in history",
+    "Weather records and extremes by state",
+    "Groundhog Day and weather folklore",
+    "Fall foliage and seasonal traditions",
+    "Forecasting, NOAA and storm chasers",
+    "Regional winds and weather words",
+    "Weather in American movies and songs"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 4,
+      "record": 5,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Dixie Alley",
+      "facet": "Tornadoes and Tornado Alley",
+      "known_at": 13
+    },
+    {
+      "name": "Enhanced Fujita Scale",
+      "facet": "Tornadoes and Tornado Alley",
+      "known_at": 10
+    },
+    {
+      "name": "Funnel cloud",
+      "facet": "Tornadoes and Tornado Alley",
+      "known_at": 5
+    },
+    {
+      "name": "Supercell",
+      "facet": "Tornadoes and Tornado Alley",
+      "known_at": 10
+    },
+    {
+      "name": "Wall cloud",
+      "facet": "Tornadoes and Tornado Alley",
+      "known_at": 12
+    },
+    {
+      "name": "Mesocyclone",
+      "facet": "Tornadoes and Tornado Alley",
+      "known_at": 13
+    },
+    {
+      "name": "Waterspout",
+      "facet": "Tornadoes and Tornado Alley",
+      "known_at": 7
+    },
+    {
+      "name": "Hailstone",
+      "facet": "Tornadoes and Tornado Alley",
+      "known_at": 3
+    },
+    {
+      "name": "Tornado watch",
+      "facet": "Tornadoes and Tornado Alley",
+      "known_at": 7
+    },
+    {
+      "name": "Tornado warning",
+      "facet": "Tornadoes and Tornado Alley",
+      "known_at": 6
+    },
+    {
+      "name": "Storm cellar",
+      "facet": "Tornadoes and Tornado Alley",
+      "known_at": 5
+    },
+    {
+      "name": "Tornado siren",
+      "facet": "Tornadoes and Tornado Alley",
+      "known_at": 4
+    },
+    {
+      "name": "Safe room",
+      "facet": "Tornadoes and Tornado Alley",
+      "known_at": 8
+    },
+    {
+      "name": "Wedge tornado",
+      "facet": "Tornadoes and Tornado Alley",
+      "known_at": 12
+    },
+    {
+      "name": "Multiple-vortex tornado",
+      "facet": "Tornadoes and Tornado Alley",
+      "known_at": 13
+    },
+    {
+      "name": "Kansas",
+      "facet": "Tornadoes and Tornado Alley",
+      "known_at": 4
+    },
+    {
+      "name": "Hurricane",
+      "facet": "Hurricanes and tropical storms",
+      "known_at": 2
+    },
+    {
+      "name": "Eye of the storm",
+      "facet": "Hurricanes and tropical storms",
+      "known_at": 5
+    },
+    {
+      "name": "Eyewall",
+      "facet": "Hurricanes and tropical storms",
+      "known_at": 10
+    },
+    {
+      "name": "Saffir-Simpson scale",
+      "facet": "Hurricanes and tropical storms",
+      "known_at": 11
+    },
+    {
+      "name": "Category 5 hurricane",
+      "facet": "Hurricanes and tropical storms",
+      "known_at": 7
+    },
+    {
+      "name": "Storm surge",
+      "facet": "Hurricanes and tropical storms",
+      "known_at": 9
+    },
+    {
+      "name": "Atlantic hurricane season",
+      "facet": "Hurricanes and tropical storms",
+      "known_at": 8
+    },
+    {
+      "name": "Retired hurricane names",
+      "facet": "Hurricanes and tropical storms",
+      "known_at": 10
+    },
+    {
+      "name": "Tropical storm",
+      "facet": "Hurricanes and tropical storms",
+      "known_at": 6
+    },
+    {
+      "name": "Tropical depression",
+      "facet": "Hurricanes and tropical storms",
+      "known_at": 10
+    },
+    {
+      "name": "Outer Banks",
+      "facet": "Hurricanes and tropical storms",
+      "known_at": 11
+    },
+    {
+      "name": "Hurricane shutters",
+      "facet": "Hurricanes and tropical storms",
+      "known_at": 8
+    },
+    {
+      "name": "Hurricane evacuation route",
+      "facet": "Hurricanes and tropical storms",
+      "known_at": 9
+    },
+    {
+      "name": "Cape Verde hurricane",
+      "facet": "Hurricanes and tropical storms",
+      "known_at": 14
+    },
+    {
+      "name": "Blizzard",
+      "facet": "Blizzards, nor'easters and lake-effect snow",
+      "known_at": 3
+    },
+    {
+      "name": "Nor'easter",
+      "facet": "Blizzards, nor'easters and lake-effect snow",
+      "known_at": 8
+    },
+    {
+      "name": "Great Lakes",
+      "facet": "Blizzards, nor'easters and lake-effect snow",
+      "known_at": 5
+    },
+    {
+      "name": "Buffalo, New York",
+      "facet": "Blizzards, nor'easters and lake-effect snow",
+      "known_at": 8
+    },
+    {
+      "name": "Snow day",
+      "facet": "Blizzards, nor'easters and lake-effect snow",
+      "known_at": 2
+    },
+    {
+      "name": "Whiteout",
+      "facet": "Blizzards, nor'easters and lake-effect snow",
+      "known_at": 7
+    },
+    {
+      "name": "Polar vortex",
+      "facet": "Blizzards, nor'easters and lake-effect snow",
+      "known_at": 9
+    },
+    {
+      "name": "Wind chill",
+      "facet": "Blizzards, nor'easters and lake-effect snow",
+      "known_at": 7
+    },
+    {
+      "name": "Ice storm",
+      "facet": "Blizzards, nor'easters and lake-effect snow",
+      "known_at": 6
+    },
+    {
+      "name": "Bomb cyclone",
+      "facet": "Blizzards, nor'easters and lake-effect snow",
+      "known_at": 11
+    },
+    {
+      "name": "Snow belt",
+      "facet": "Blizzards, nor'easters and lake-effect snow",
+      "known_at": 11
+    },
+    {
+      "name": "Tug Hill Plateau",
+      "facet": "Blizzards, nor'easters and lake-effect snow",
+      "known_at": 14
+    },
+    {
+      "name": "Freezing rain",
+      "facet": "Blizzards, nor'easters and lake-effect snow",
+      "known_at": 6
+    },
+    {
+      "name": "Rock salt",
+      "facet": "Blizzards, nor'easters and lake-effect snow",
+      "known_at": 5
+    },
+    {
+      "name": "Snowplow",
+      "facet": "Blizzards, nor'easters and lake-effect snow",
+      "known_at": 2
+    },
+    {
+      "name": "Snowblower",
+      "facet": "Blizzards, nor'easters and lake-effect snow",
+      "known_at": 4
+    },
+    {
+      "name": "Black ice",
+      "facet": "Blizzards, nor'easters and lake-effect snow",
+      "known_at": 8
+    },
+    {
+      "name": "Great Basin Desert",
+      "facet": "Heat waves, deserts and drought",
+      "known_at": 12
+    },
+    {
+      "name": "Saguaro cactus",
+      "facet": "Heat waves, deserts and drought",
+      "known_at": 5
+    },
+    {
+      "name": "Heat dome",
+      "facet": "Heat waves, deserts and drought",
+      "known_at": 11
+    },
+    {
+      "name": "Heat index",
+      "facet": "Heat waves, deserts and drought",
+      "known_at": 9
+    },
+    {
+      "name": "Dog days of summer",
+      "facet": "Heat waves, deserts and drought",
+      "known_at": 8
+    },
+    {
+      "name": "North American monsoon",
+      "facet": "Heat waves, deserts and drought",
+      "known_at": 12
+    },
+    {
+      "name": "Dust devil",
+      "facet": "Heat waves, deserts and drought",
+      "known_at": 6
+    },
+    {
+      "name": "Wildfire",
+      "facet": "Heat waves, deserts and drought",
+      "known_at": 4
+    },
+    {
+      "name": "Drought",
+      "facet": "Heat waves, deserts and drought",
+      "known_at": 4
+    },
+    {
+      "name": "Mirage",
+      "facet": "Heat waves, deserts and drought",
+      "known_at": 5
+    },
+    {
+      "name": "Hurricane Katrina",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 8
+    },
+    {
+      "name": "Hurricane Andrew",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 12
+    },
+    {
+      "name": "Hurricane Sandy",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 10
+    },
+    {
+      "name": "Hurricane Harvey",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 10
+    },
+    {
+      "name": "Hurricane Maria",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 11
+    },
+    {
+      "name": "Hurricane Camille",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 14
+    },
+    {
+      "name": "Galveston hurricane of 1900",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 12
+    },
+    {
+      "name": "1938 New England hurricane",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 14
+    },
+    {
+      "name": "Tri-State Tornado",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 13
+    },
+    {
+      "name": "Joplin tornado",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 12
+    },
+    {
+      "name": "1974 Super Outbreak",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 13
+    },
+    {
+      "name": "Great Blizzard of 1888",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 13
+    },
+    {
+      "name": "Blizzard of 1978",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 13
+    },
+    {
+      "name": "1993 Storm of the Century",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 13
+    },
+    {
+      "name": "Dust Bowl",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 9
+    },
+    {
+      "name": "Black Sunday (1935)",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 13
+    },
+    {
+      "name": "Johnstown Flood",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 13
+    },
+    {
+      "name": "Children's Blizzard",
+      "facet": "Famous storms and disasters in history",
+      "known_at": 14
+    },
+    {
+      "name": "Prospect Creek, Alaska",
+      "facet": "Weather records and extremes by state",
+      "known_at": 14
+    },
+    {
+      "name": "Mount Waialeale",
+      "facet": "Weather records and extremes by state",
+      "known_at": 13
+    },
+    {
+      "name": "Rogers Pass, Montana",
+      "facet": "Weather records and extremes by state",
+      "known_at": 15
+    },
+    {
+      "name": "Loma, Montana",
+      "facet": "Weather records and extremes by state",
+      "known_at": 15
+    },
+    {
+      "name": "Spearfish, South Dakota",
+      "facet": "Weather records and extremes by state",
+      "known_at": 14
+    },
+    {
+      "name": "Vivian, South Dakota hailstone",
+      "facet": "Weather records and extremes by state",
+      "known_at": 14
+    },
+    {
+      "name": "Yuma, Arizona",
+      "facet": "Weather records and extremes by state",
+      "known_at": 13
+    },
+    {
+      "name": "Groundhog Day",
+      "facet": "Groundhog Day and weather folklore",
+      "known_at": 3
+    },
+    {
+      "name": "Gobbler's Knob",
+      "facet": "Groundhog Day and weather folklore",
+      "known_at": 13
+    },
+    {
+      "name": "Inner Circle (Punxsutawney Groundhog Club)",
+      "facet": "Groundhog Day and weather folklore",
+      "known_at": 14
+    },
+    {
+      "name": "Six more weeks of winter",
+      "facet": "Groundhog Day and weather folklore",
+      "known_at": 4
+    },
+    {
+      "name": "Staten Island Chuck",
+      "facet": "Groundhog Day and weather folklore",
+      "known_at": 13
+    },
+    {
+      "name": "General Beauregard Lee",
+      "facet": "Groundhog Day and weather folklore",
+      "known_at": 14
+    },
+    {
+      "name": "Woolly bear caterpillar",
+      "facet": "Groundhog Day and weather folklore",
+      "known_at": 9
+    },
+    {
+      "name": "Old Farmer's Almanac",
+      "facet": "Groundhog Day and weather folklore",
+      "known_at": 10
+    },
+    {
+      "name": "Persimmon seed forecast",
+      "facet": "Groundhog Day and weather folklore",
+      "known_at": 14
+    },
+    {
+      "name": "Indian summer",
+      "facet": "Groundhog Day and weather folklore",
+      "known_at": 11
+    },
+    {
+      "name": "Blackberry winter",
+      "facet": "Groundhog Day and weather folklore",
+      "known_at": 14
+    },
+    {
+      "name": "Dogwood winter",
+      "facet": "Groundhog Day and weather folklore",
+      "known_at": 14
+    },
+    {
+      "name": "Swallows of Capistrano",
+      "facet": "Groundhog Day and weather folklore",
+      "known_at": 13
+    },
+    {
+      "name": "Buzzard Day",
+      "facet": "Groundhog Day and weather folklore",
+      "known_at": 15
+    },
+    {
+      "name": "Sugarhouse",
+      "facet": "Fall foliage and seasonal traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Thanksgiving",
+      "facet": "Fall foliage and seasonal traditions",
+      "known_at": 2
+    },
+    {
+      "name": "Halloween",
+      "facet": "Fall foliage and seasonal traditions",
+      "known_at": 1
+    },
+    {
+      "name": "Pumpkin patch",
+      "facet": "Fall foliage and seasonal traditions",
+      "known_at": 2
+    },
+    {
+      "name": "Corn maze",
+      "facet": "Fall foliage and seasonal traditions",
+      "known_at": 3
+    },
+    {
+      "name": "Hayride",
+      "facet": "Fall foliage and seasonal traditions",
+      "known_at": 4
+    },
+    {
+      "name": "Apple picking",
+      "facet": "Fall foliage and seasonal traditions",
+      "known_at": 3
+    },
+    {
+      "name": "Pumpkin spice latte",
+      "facet": "Fall foliage and seasonal traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Daylight saving time",
+      "facet": "Fall foliage and seasonal traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Labor Day",
+      "facet": "Fall foliage and seasonal traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Memorial Day",
+      "facet": "Fall foliage and seasonal traditions",
+      "known_at": 6
+    },
+    {
+      "name": "National Cherry Blossom Festival",
+      "facet": "Fall foliage and seasonal traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Spring break",
+      "facet": "Fall foliage and seasonal traditions",
+      "known_at": 4
+    },
+    {
+      "name": "NOAA",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 10
+    },
+    {
+      "name": "National Weather Service",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 7
+    },
+    {
+      "name": "National Hurricane Center",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 9
+    },
+    {
+      "name": "Storm Prediction Center",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 12
+    },
+    {
+      "name": "Norman, Oklahoma",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 13
+    },
+    {
+      "name": "Doppler radar",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 7
+    },
+    {
+      "name": "NEXRAD",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 14
+    },
+    {
+      "name": "Weather balloon",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 5
+    },
+    {
+      "name": "GOES satellite",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 13
+    },
+    {
+      "name": "Hurricane Hunters",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 10
+    },
+    {
+      "name": "Storm chaser",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 5
+    },
+    {
+      "name": "The Weather Channel",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 6
+    },
+    {
+      "name": "Jim Cantore",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 11
+    },
+    {
+      "name": "Al Roker",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 10
+    },
+    {
+      "name": "Ted Fujita",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 13
+    },
+    {
+      "name": "Weather Bureau",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 13
+    },
+    {
+      "name": "NOAA Weather Radio",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 11
+    },
+    {
+      "name": "Doppler on Wheels",
+      "facet": "Forecasting, NOAA and storm chasers",
+      "known_at": 14
+    },
+    {
+      "name": "Santa Ana winds",
+      "facet": "Regional winds and weather words",
+      "known_at": 10
+    },
+    {
+      "name": "Diablo winds",
+      "facet": "Regional winds and weather words",
+      "known_at": 14
+    },
+    {
+      "name": "The Hawk (Chicago wind)",
+      "facet": "Regional winds and weather words",
+      "known_at": 14
+    },
+    {
+      "name": "Windy City",
+      "facet": "Regional winds and weather words",
+      "known_at": 6
+    },
+    {
+      "name": "Derecho",
+      "facet": "Regional winds and weather words",
+      "known_at": 12
+    },
+    {
+      "name": "Haboob",
+      "facet": "Regional winds and weather words",
+      "known_at": 12
+    },
+    {
+      "name": "Pineapple Express",
+      "facet": "Regional winds and weather words",
+      "known_at": 13
+    },
+    {
+      "name": "Atmospheric river",
+      "facet": "Regional winds and weather words",
+      "known_at": 11
+    },
+    {
+      "name": "Blue norther",
+      "facet": "Regional winds and weather words",
+      "known_at": 14
+    },
+    {
+      "name": "Alberta clipper",
+      "facet": "Regional winds and weather words",
+      "known_at": 12
+    },
+    {
+      "name": "June Gloom",
+      "facet": "Regional winds and weather words",
+      "known_at": 12
+    },
+    {
+      "name": "Marine layer",
+      "facet": "Regional winds and weather words",
+      "known_at": 12
+    },
+    {
+      "name": "Tule fog",
+      "facet": "Regional winds and weather words",
+      "known_at": 14
+    },
+    {
+      "name": "Thundersnow",
+      "facet": "Regional winds and weather words",
+      "known_at": 9
+    },
+    {
+      "name": "Gully washer",
+      "facet": "Regional winds and weather words",
+      "known_at": 12
+    },
+    {
+      "name": "Frog strangler",
+      "facet": "Regional winds and weather words",
+      "known_at": 13
+    },
+    {
+      "name": "Squall line",
+      "facet": "Regional winds and weather words",
+      "known_at": 12
+    },
+    {
+      "name": "Twister (film)",
+      "facet": "Weather in American movies and songs",
+      "known_at": 8
+    },
+    {
+      "name": "Twisters (film)",
+      "facet": "Weather in American movies and songs",
+      "known_at": 8
+    },
+    {
+      "name": "The Wizard of Oz",
+      "facet": "Weather in American movies and songs",
+      "known_at": 4
+    },
+    {
+      "name": "Dorothy Gale",
+      "facet": "Weather in American movies and songs",
+      "known_at": 4
+    },
+    {
+      "name": "Groundhog Day (film)",
+      "facet": "Weather in American movies and songs",
+      "known_at": 9
+    },
+    {
+      "name": "The Day After Tomorrow",
+      "facet": "Weather in American movies and songs",
+      "known_at": 10
+    },
+    {
+      "name": "The Perfect Storm",
+      "facet": "Weather in American movies and songs",
+      "known_at": 12
+    },
+    {
+      "name": "Cloudy with a Chance of Meatballs",
+      "facet": "Weather in American movies and songs",
+      "known_at": 3
+    },
+    {
+      "name": "Sharknado",
+      "facet": "Weather in American movies and songs",
+      "known_at": 9
+    },
+    {
+      "name": "Singin' in the Rain",
+      "facet": "Weather in American movies and songs",
+      "known_at": 9
+    },
+    {
+      "name": "White Christmas",
+      "facet": "Weather in American movies and songs",
+      "known_at": 7
+    },
+    {
+      "name": "Let It Snow! Let It Snow! Let It Snow!",
+      "facet": "Weather in American movies and songs",
+      "known_at": 5
+    },
+    {
+      "name": "Winter Wonderland",
+      "facet": "Weather in American movies and songs",
+      "known_at": 6
+    },
+    {
+      "name": "Over the Rainbow",
+      "facet": "Weather in American movies and songs",
+      "known_at": 6
+    },
+    {
+      "name": "Stormy Weather",
+      "facet": "Weather in American movies and songs",
+      "known_at": 14
+    },
+    {
+      "name": "Summertime (Gershwin)",
+      "facet": "Weather in American movies and songs",
+      "known_at": 13
+    },
+    {
+      "name": "Purple Rain",
+      "facet": "Weather in American movies and songs",
+      "known_at": 11
+    },
+    {
+      "name": "Riders on the Storm",
+      "facet": "Weather in American movies and songs",
+      "known_at": 13
+    },
+    {
+      "name": "Who'll Stop the Rain",
+      "facet": "Weather in American movies and songs",
+      "known_at": 14
+    }
+  ]
+}

@@ -1,0 +1,1348 @@
+{
+  "subcategory": "states-and-capitals",
+  "facets": [
+    "State capitals",
+    "State nicknames",
+    "State names and their origins",
+    "State shapes and borders",
+    "Regions and neighboring states",
+    "Statehood and admission dates",
+    "State symbols and mottos",
+    "Capitol buildings",
+    "Largest cities vs. capitals",
+    "Washington, D.C. and the territories",
+    "State records and superlatives",
+    "Famous landmarks by state"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 3,
+      "record": 5,
+      "origin": 4,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 3,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 5,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sacramento",
+      "facet": "State capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Austin",
+      "facet": "State capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Albany",
+      "facet": "State capitals",
+      "known_at": 8
+    },
+    {
+      "name": "Tallahassee",
+      "facet": "State capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Springfield",
+      "facet": "State capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Honolulu",
+      "facet": "State capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Juneau",
+      "facet": "State capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Denver",
+      "facet": "State capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Boston",
+      "facet": "State capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Atlanta",
+      "facet": "State capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Phoenix",
+      "facet": "State capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Nashville",
+      "facet": "State capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Harrisburg",
+      "facet": "State capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Carson City",
+      "facet": "State capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Montpelier",
+      "facet": "State capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Olympia",
+      "facet": "State capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Salt Lake City",
+      "facet": "State capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Santa Fe",
+      "facet": "State capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Baton Rouge",
+      "facet": "State capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Annapolis",
+      "facet": "State capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Frankfort",
+      "facet": "State capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Pierre",
+      "facet": "State capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Bismarck",
+      "facet": "State capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Cheyenne",
+      "facet": "State capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Boise",
+      "facet": "State capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Sunshine State",
+      "facet": "State nicknames",
+      "known_at": 4
+    },
+    {
+      "name": "Lone Star State",
+      "facet": "State nicknames",
+      "known_at": 5
+    },
+    {
+      "name": "Golden State",
+      "facet": "State nicknames",
+      "known_at": 6
+    },
+    {
+      "name": "Empire State",
+      "facet": "State nicknames",
+      "known_at": 7
+    },
+    {
+      "name": "Aloha State",
+      "facet": "State nicknames",
+      "known_at": 5
+    },
+    {
+      "name": "Garden State",
+      "facet": "State nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Show-Me State",
+      "facet": "State nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "Land of Lincoln",
+      "facet": "State nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Last Frontier",
+      "facet": "State nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Evergreen State",
+      "facet": "State nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "Keystone State",
+      "facet": "State nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "Bluegrass State",
+      "facet": "State nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "Grand Canyon State",
+      "facet": "State nicknames",
+      "known_at": 6
+    },
+    {
+      "name": "Peach State",
+      "facet": "State nicknames",
+      "known_at": 7
+    },
+    {
+      "name": "Hoosier State",
+      "facet": "State nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "Buckeye State",
+      "facet": "State nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "Sooner State",
+      "facet": "State nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "Badger State",
+      "facet": "State nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "Volunteer State",
+      "facet": "State nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "Green Mountain State",
+      "facet": "State nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "Old Dominion",
+      "facet": "State nicknames",
+      "known_at": 13
+    },
+    {
+      "name": "First State",
+      "facet": "State nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "Land of 10,000 Lakes",
+      "facet": "State nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Big Sky Country",
+      "facet": "State nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "Silver State",
+      "facet": "State nicknames",
+      "known_at": 12
+    },
+    {
+      "name": "Virginia",
+      "facet": "State names and their origins",
+      "known_at": 7
+    },
+    {
+      "name": "Pennsylvania",
+      "facet": "State names and their origins",
+      "known_at": 9
+    },
+    {
+      "name": "Georgia",
+      "facet": "State names and their origins",
+      "known_at": 8
+    },
+    {
+      "name": "Louisiana",
+      "facet": "State names and their origins",
+      "known_at": 9
+    },
+    {
+      "name": "Maryland",
+      "facet": "State names and their origins",
+      "known_at": 11
+    },
+    {
+      "name": "Washington (state)",
+      "facet": "State names and their origins",
+      "known_at": 5
+    },
+    {
+      "name": "Indiana",
+      "facet": "State names and their origins",
+      "known_at": 8
+    },
+    {
+      "name": "Colorado",
+      "facet": "State names and their origins",
+      "known_at": 9
+    },
+    {
+      "name": "Montana",
+      "facet": "State names and their origins",
+      "known_at": 9
+    },
+    {
+      "name": "Nevada",
+      "facet": "State names and their origins",
+      "known_at": 10
+    },
+    {
+      "name": "Florida",
+      "facet": "State names and their origins",
+      "known_at": 8
+    },
+    {
+      "name": "Vermont",
+      "facet": "State names and their origins",
+      "known_at": 10
+    },
+    {
+      "name": "Massachusetts",
+      "facet": "State names and their origins",
+      "known_at": 11
+    },
+    {
+      "name": "Connecticut",
+      "facet": "State names and their origins",
+      "known_at": 12
+    },
+    {
+      "name": "Minnesota",
+      "facet": "State names and their origins",
+      "known_at": 11
+    },
+    {
+      "name": "Oklahoma",
+      "facet": "State names and their origins",
+      "known_at": 11
+    },
+    {
+      "name": "Texas",
+      "facet": "State names and their origins",
+      "known_at": 10
+    },
+    {
+      "name": "Alaska",
+      "facet": "State names and their origins",
+      "known_at": 10
+    },
+    {
+      "name": "New Mexico",
+      "facet": "State names and their origins",
+      "known_at": 6
+    },
+    {
+      "name": "New Jersey",
+      "facet": "State names and their origins",
+      "known_at": 9
+    },
+    {
+      "name": "Delaware",
+      "facet": "State names and their origins",
+      "known_at": 11
+    },
+    {
+      "name": "Ohio",
+      "facet": "State names and their origins",
+      "known_at": 11
+    },
+    {
+      "name": "Carolina",
+      "facet": "State names and their origins",
+      "known_at": 10
+    },
+    {
+      "name": "Four Corners",
+      "facet": "State shapes and borders",
+      "known_at": 7
+    },
+    {
+      "name": "Oklahoma Panhandle",
+      "facet": "State shapes and borders",
+      "known_at": 10
+    },
+    {
+      "name": "Texas Panhandle",
+      "facet": "State shapes and borders",
+      "known_at": 10
+    },
+    {
+      "name": "Florida Panhandle",
+      "facet": "State shapes and borders",
+      "known_at": 9
+    },
+    {
+      "name": "Mason–Dixon line",
+      "facet": "State shapes and borders",
+      "known_at": 10
+    },
+    {
+      "name": "Upper Peninsula",
+      "facet": "State shapes and borders",
+      "known_at": 9
+    },
+    {
+      "name": "Lower Peninsula of Michigan",
+      "facet": "State shapes and borders",
+      "known_at": 5
+    },
+    {
+      "name": "Northwest Angle",
+      "facet": "State shapes and borders",
+      "known_at": 13
+    },
+    {
+      "name": "Delmarva Peninsula",
+      "facet": "State shapes and borders",
+      "known_at": 12
+    },
+    {
+      "name": "Missouri Bootheel",
+      "facet": "State shapes and borders",
+      "known_at": 12
+    },
+    {
+      "name": "Kentucky Bend",
+      "facet": "State shapes and borders",
+      "known_at": 14
+    },
+    {
+      "name": "Rio Grande",
+      "facet": "State shapes and borders",
+      "known_at": 8
+    },
+    {
+      "name": "Mississippi River",
+      "facet": "State shapes and borders",
+      "known_at": 5
+    },
+    {
+      "name": "Ohio River",
+      "facet": "State shapes and borders",
+      "known_at": 9
+    },
+    {
+      "name": "Point Roberts",
+      "facet": "State shapes and borders",
+      "known_at": 14
+    },
+    {
+      "name": "Chesapeake Bay",
+      "facet": "State shapes and borders",
+      "known_at": 9
+    },
+    {
+      "name": "Cape Cod",
+      "facet": "State shapes and borders",
+      "known_at": 8
+    },
+    {
+      "name": "49th parallel",
+      "facet": "State shapes and borders",
+      "known_at": 11
+    },
+    {
+      "name": "Lake Tahoe",
+      "facet": "State shapes and borders",
+      "known_at": 9
+    },
+    {
+      "name": "Long Island",
+      "facet": "State shapes and borders",
+      "known_at": 8
+    },
+    {
+      "name": "New England",
+      "facet": "Regions and neighboring states",
+      "known_at": 6
+    },
+    {
+      "name": "Midwest",
+      "facet": "Regions and neighboring states",
+      "known_at": 6
+    },
+    {
+      "name": "Deep South",
+      "facet": "Regions and neighboring states",
+      "known_at": 8
+    },
+    {
+      "name": "Pacific Northwest",
+      "facet": "Regions and neighboring states",
+      "known_at": 7
+    },
+    {
+      "name": "Great Plains",
+      "facet": "Regions and neighboring states",
+      "known_at": 7
+    },
+    {
+      "name": "Rust Belt",
+      "facet": "Regions and neighboring states",
+      "known_at": 11
+    },
+    {
+      "name": "Sun Belt",
+      "facet": "Regions and neighboring states",
+      "known_at": 11
+    },
+    {
+      "name": "Bible Belt",
+      "facet": "Regions and neighboring states",
+      "known_at": 11
+    },
+    {
+      "name": "Corn Belt",
+      "facet": "Regions and neighboring states",
+      "known_at": 10
+    },
+    {
+      "name": "Tornado Alley",
+      "facet": "Regions and neighboring states",
+      "known_at": 6
+    },
+    {
+      "name": "Mid-Atlantic",
+      "facet": "Regions and neighboring states",
+      "known_at": 9
+    },
+    {
+      "name": "Southwest",
+      "facet": "Regions and neighboring states",
+      "known_at": 6
+    },
+    {
+      "name": "Mountain West",
+      "facet": "Regions and neighboring states",
+      "known_at": 9
+    },
+    {
+      "name": "Great Lakes region",
+      "facet": "Regions and neighboring states",
+      "known_at": 7
+    },
+    {
+      "name": "Appalachia",
+      "facet": "Regions and neighboring states",
+      "known_at": 9
+    },
+    {
+      "name": "Gulf Coast",
+      "facet": "Regions and neighboring states",
+      "known_at": 7
+    },
+    {
+      "name": "Lower 48",
+      "facet": "Regions and neighboring states",
+      "known_at": 9
+    },
+    {
+      "name": "Dixie",
+      "facet": "Regions and neighboring states",
+      "known_at": 10
+    },
+    {
+      "name": "Tri-State Area",
+      "facet": "Regions and neighboring states",
+      "known_at": 10
+    },
+    {
+      "name": "Dakotas",
+      "facet": "Regions and neighboring states",
+      "known_at": 7
+    },
+    {
+      "name": "Thirteen Colonies",
+      "facet": "Statehood and admission dates",
+      "known_at": 6
+    },
+    {
+      "name": "Hawaii statehood",
+      "facet": "Statehood and admission dates",
+      "known_at": 10
+    },
+    {
+      "name": "Alaska Statehood Act",
+      "facet": "Statehood and admission dates",
+      "known_at": 11
+    },
+    {
+      "name": "Louisiana Purchase",
+      "facet": "Statehood and admission dates",
+      "known_at": 8
+    },
+    {
+      "name": "Alaska Purchase",
+      "facet": "Statehood and admission dates",
+      "known_at": 10
+    },
+    {
+      "name": "Missouri Compromise",
+      "facet": "Statehood and admission dates",
+      "known_at": 11
+    },
+    {
+      "name": "Texas annexation",
+      "facet": "Statehood and admission dates",
+      "known_at": 11
+    },
+    {
+      "name": "Republic of Texas",
+      "facet": "Statehood and admission dates",
+      "known_at": 9
+    },
+    {
+      "name": "California Gold Rush",
+      "facet": "Statehood and admission dates",
+      "known_at": 7
+    },
+    {
+      "name": "Gadsden Purchase",
+      "facet": "Statehood and admission dates",
+      "known_at": 13
+    },
+    {
+      "name": "Northwest Ordinance",
+      "facet": "Statehood and admission dates",
+      "known_at": 13
+    },
+    {
+      "name": "Oregon Trail",
+      "facet": "Statehood and admission dates",
+      "known_at": 7
+    },
+    {
+      "name": "Vermont Republic",
+      "facet": "Statehood and admission dates",
+      "known_at": 13
+    },
+    {
+      "name": "Kingdom of Hawaii",
+      "facet": "Statehood and admission dates",
+      "known_at": 10
+    },
+    {
+      "name": "West Virginia statehood",
+      "facet": "Statehood and admission dates",
+      "known_at": 11
+    },
+    {
+      "name": "Oklahoma Land Rush",
+      "facet": "Statehood and admission dates",
+      "known_at": 11
+    },
+    {
+      "name": "50-star flag",
+      "facet": "Statehood and admission dates",
+      "known_at": 5
+    },
+    {
+      "name": "Compromise of 1850",
+      "facet": "Statehood and admission dates",
+      "known_at": 12
+    },
+    {
+      "name": "Mexican Cession",
+      "facet": "Statehood and admission dates",
+      "known_at": 12
+    },
+    {
+      "name": "Indian Territory",
+      "facet": "Statehood and admission dates",
+      "known_at": 11
+    },
+    {
+      "name": "Ratification of the Constitution",
+      "facet": "Statehood and admission dates",
+      "known_at": 9
+    },
+    {
+      "name": "Eureka",
+      "facet": "State symbols and mottos",
+      "known_at": 11
+    },
+    {
+      "name": "Live Free or Die",
+      "facet": "State symbols and mottos",
+      "known_at": 10
+    },
+    {
+      "name": "Don't Mess with Texas",
+      "facet": "State symbols and mottos",
+      "known_at": 8
+    },
+    {
+      "name": "Bear Flag",
+      "facet": "State symbols and mottos",
+      "known_at": 7
+    },
+    {
+      "name": "Lone Star Flag",
+      "facet": "State symbols and mottos",
+      "known_at": 5
+    },
+    {
+      "name": "Zia sun symbol",
+      "facet": "State symbols and mottos",
+      "known_at": 11
+    },
+    {
+      "name": "Nēnē",
+      "facet": "State symbols and mottos",
+      "known_at": 12
+    },
+    {
+      "name": "Northern cardinal",
+      "facet": "State symbols and mottos",
+      "known_at": 7
+    },
+    {
+      "name": "Western meadowlark",
+      "facet": "State symbols and mottos",
+      "known_at": 12
+    },
+    {
+      "name": "Orange blossom",
+      "facet": "State symbols and mottos",
+      "known_at": 9
+    },
+    {
+      "name": "Bluebonnet",
+      "facet": "State symbols and mottos",
+      "known_at": 9
+    },
+    {
+      "name": "Magnolia",
+      "facet": "State symbols and mottos",
+      "known_at": 9
+    },
+    {
+      "name": "Yellow hibiscus",
+      "facet": "State symbols and mottos",
+      "known_at": 10
+    },
+    {
+      "name": "Sugar maple",
+      "facet": "State symbols and mottos",
+      "known_at": 9
+    },
+    {
+      "name": "State quarters",
+      "facet": "State symbols and mottos",
+      "known_at": 6
+    },
+    {
+      "name": "Alaska flag",
+      "facet": "State symbols and mottos",
+      "known_at": 10
+    },
+    {
+      "name": "Maryland flag",
+      "facet": "State symbols and mottos",
+      "known_at": 11
+    },
+    {
+      "name": "Ohio burgee",
+      "facet": "State symbols and mottos",
+      "known_at": 11
+    },
+    {
+      "name": "Excelsior",
+      "facet": "State symbols and mottos",
+      "known_at": 13
+    },
+    {
+      "name": "Ad astra per aspera",
+      "facet": "State symbols and mottos",
+      "known_at": 13
+    },
+    {
+      "name": "Battle Born",
+      "facet": "State symbols and mottos",
+      "known_at": 13
+    },
+    {
+      "name": "Peach",
+      "facet": "State symbols and mottos",
+      "known_at": 4
+    },
+    {
+      "name": "Texas State Capitol",
+      "facet": "Capitol buildings",
+      "known_at": 10
+    },
+    {
+      "name": "Louisiana State Capitol",
+      "facet": "Capitol buildings",
+      "known_at": 12
+    },
+    {
+      "name": "Nebraska State Capitol",
+      "facet": "Capitol buildings",
+      "known_at": 13
+    },
+    {
+      "name": "ʻIolani Palace",
+      "facet": "Capitol buildings",
+      "known_at": 12
+    },
+    {
+      "name": "Hawaii State Capitol",
+      "facet": "Capitol buildings",
+      "known_at": 13
+    },
+    {
+      "name": "New Mexico State Capitol",
+      "facet": "Capitol buildings",
+      "known_at": 13
+    },
+    {
+      "name": "Florida State Capitol",
+      "facet": "Capitol buildings",
+      "known_at": 12
+    },
+    {
+      "name": "Massachusetts State House",
+      "facet": "Capitol buildings",
+      "known_at": 11
+    },
+    {
+      "name": "Colorado State Capitol",
+      "facet": "Capitol buildings",
+      "known_at": 11
+    },
+    {
+      "name": "Minnesota State Capitol",
+      "facet": "Capitol buildings",
+      "known_at": 13
+    },
+    {
+      "name": "Rhode Island State House",
+      "facet": "Capitol buildings",
+      "known_at": 13
+    },
+    {
+      "name": "Wisconsin State Capitol",
+      "facet": "Capitol buildings",
+      "known_at": 13
+    },
+    {
+      "name": "California State Capitol",
+      "facet": "Capitol buildings",
+      "known_at": 11
+    },
+    {
+      "name": "Virginia State Capitol",
+      "facet": "Capitol buildings",
+      "known_at": 12
+    },
+    {
+      "name": "Pennsylvania State Capitol",
+      "facet": "Capitol buildings",
+      "known_at": 13
+    },
+    {
+      "name": "North Dakota State Capitol",
+      "facet": "Capitol buildings",
+      "known_at": 14
+    },
+    {
+      "name": "Capitol dome",
+      "facet": "Capitol buildings",
+      "known_at": 6
+    },
+    {
+      "name": "New York City",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 2
+    },
+    {
+      "name": "Los Angeles",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 4
+    },
+    {
+      "name": "Chicago",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Houston",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Miami",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 5
+    },
+    {
+      "name": "Las Vegas",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Seattle",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 6
+    },
+    {
+      "name": "Philadelphia",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Detroit",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 8
+    },
+    {
+      "name": "New Orleans",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 7
+    },
+    {
+      "name": "Jacksonville",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Anchorage",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Louisville",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Milwaukee",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 10
+    },
+    {
+      "name": "Portland, Oregon",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Kansas City",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Charlotte",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Baltimore",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 9
+    },
+    {
+      "name": "Birmingham, Alabama",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Wichita",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 12
+    },
+    {
+      "name": "Omaha",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 11
+    },
+    {
+      "name": "Billings",
+      "facet": "Largest cities vs. capitals",
+      "known_at": 13
+    },
+    {
+      "name": "Washington, D.C.",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 3
+    },
+    {
+      "name": "Puerto Rico",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 6
+    },
+    {
+      "name": "Guam",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 9
+    },
+    {
+      "name": "U.S. Virgin Islands",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 10
+    },
+    {
+      "name": "American Samoa",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 11
+    },
+    {
+      "name": "Northern Mariana Islands",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 13
+    },
+    {
+      "name": "San Juan",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 9
+    },
+    {
+      "name": "National Mall",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 8
+    },
+    {
+      "name": "White House",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 2
+    },
+    {
+      "name": "United States Capitol",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 6
+    },
+    {
+      "name": "Washington Monument",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 5
+    },
+    {
+      "name": "Lincoln Memorial",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 5
+    },
+    {
+      "name": "Potomac River",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 10
+    },
+    {
+      "name": "Pierre L'Enfant",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 13
+    },
+    {
+      "name": "Benjamin Banneker",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 12
+    },
+    {
+      "name": "Residence Act",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 14
+    },
+    {
+      "name": "Taxation without representation",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 10
+    },
+    {
+      "name": "Smithsonian Institution",
+      "facet": "Washington, D.C. and the territories",
+      "known_at": 8
+    },
+    {
+      "name": "Rhode Island",
+      "facet": "State records and superlatives",
+      "known_at": 7
+    },
+    {
+      "name": "California",
+      "facet": "State records and superlatives",
+      "known_at": 5
+    },
+    {
+      "name": "Wyoming",
+      "facet": "State records and superlatives",
+      "known_at": 10
+    },
+    {
+      "name": "Hawaii",
+      "facet": "State records and superlatives",
+      "known_at": 4
+    },
+    {
+      "name": "Denali",
+      "facet": "State records and superlatives",
+      "known_at": 9
+    },
+    {
+      "name": "Death Valley",
+      "facet": "State records and superlatives",
+      "known_at": 7
+    },
+    {
+      "name": "Mount Whitney",
+      "facet": "State records and superlatives",
+      "known_at": 11
+    },
+    {
+      "name": "Lake Superior",
+      "facet": "State records and superlatives",
+      "known_at": 8
+    },
+    {
+      "name": "Lake Michigan",
+      "facet": "State records and superlatives",
+      "known_at": 8
+    },
+    {
+      "name": "Great Salt Lake",
+      "facet": "State records and superlatives",
+      "known_at": 8
+    },
+    {
+      "name": "Missouri River",
+      "facet": "State records and superlatives",
+      "known_at": 10
+    },
+    {
+      "name": "Crater Lake",
+      "facet": "State records and superlatives",
+      "known_at": 11
+    },
+    {
+      "name": "Mauna Kea",
+      "facet": "State records and superlatives",
+      "known_at": 12
+    },
+    {
+      "name": "Utqiagvik",
+      "facet": "State records and superlatives",
+      "known_at": 13
+    },
+    {
+      "name": "Key West",
+      "facet": "State records and superlatives",
+      "known_at": 8
+    },
+    {
+      "name": "Mount Washington",
+      "facet": "State records and superlatives",
+      "known_at": 12
+    },
+    {
+      "name": "General Sherman tree",
+      "facet": "State records and superlatives",
+      "known_at": 11
+    },
+    {
+      "name": "Hyperion (tree)",
+      "facet": "State records and superlatives",
+      "known_at": 13
+    },
+    {
+      "name": "Maine",
+      "facet": "State records and superlatives",
+      "known_at": 8
+    },
+    {
+      "name": "Statue of Liberty",
+      "facet": "Famous landmarks by state",
+      "known_at": 2
+    },
+    {
+      "name": "Golden Gate Bridge",
+      "facet": "Famous landmarks by state",
+      "known_at": 3
+    },
+    {
+      "name": "Grand Canyon",
+      "facet": "Famous landmarks by state",
+      "known_at": 3
+    },
+    {
+      "name": "Mount Rushmore",
+      "facet": "Famous landmarks by state",
+      "known_at": 4
+    },
+    {
+      "name": "Yellowstone National Park",
+      "facet": "Famous landmarks by state",
+      "known_at": 4
+    },
+    {
+      "name": "Niagara Falls",
+      "facet": "Famous landmarks by state",
+      "known_at": 5
+    },
+    {
+      "name": "Gateway Arch",
+      "facet": "Famous landmarks by state",
+      "known_at": 8
+    },
+    {
+      "name": "Space Needle",
+      "facet": "Famous landmarks by state",
+      "known_at": 7,
+      "retired": "used_up: The pool already asks where the Space Needle is and that it was built for the 1962 World's Fair; the options left (counting legs from a photo, a record-word question) would be forced or uncertain."
+    },
+    {
+      "name": "The Alamo",
+      "facet": "Famous landmarks by state",
+      "known_at": 8
+    },
+    {
+      "name": "Hollywood Sign",
+      "facet": "Famous landmarks by state",
+      "known_at": 3
+    },
+    {
+      "name": "Empire State Building",
+      "facet": "Famous landmarks by state",
+      "known_at": 4
+    },
+    {
+      "name": "Liberty Bell",
+      "facet": "Famous landmarks by state",
+      "known_at": 6
+    },
+    {
+      "name": "Independence Hall",
+      "facet": "Famous landmarks by state",
+      "known_at": 9
+    },
+    {
+      "name": "Pearl Harbor",
+      "facet": "Famous landmarks by state",
+      "known_at": 8
+    },
+    {
+      "name": "Graceland",
+      "facet": "Famous landmarks by state",
+      "known_at": 10
+    },
+    {
+      "name": "Devils Tower",
+      "facet": "Famous landmarks by state",
+      "known_at": 11
+    },
+    {
+      "name": "Arches National Park",
+      "facet": "Famous landmarks by state",
+      "known_at": 10
+    },
+    {
+      "name": "Everglades",
+      "facet": "Famous landmarks by state",
+      "known_at": 7
+    },
+    {
+      "name": "Kennedy Space Center",
+      "facet": "Famous landmarks by state",
+      "known_at": 7
+    },
+    {
+      "name": "Hoover Dam",
+      "facet": "Famous landmarks by state",
+      "known_at": 9
+    },
+    {
+      "name": "Walt Disney World",
+      "facet": "Famous landmarks by state",
+      "known_at": 3
+    },
+    {
+      "name": "Plymouth Rock",
+      "facet": "Famous landmarks by state",
+      "known_at": 8
+    },
+    {
+      "name": "Carlsbad Caverns",
+      "facet": "Famous landmarks by state",
+      "known_at": 11
+    },
+    {
+      "name": "Yosemite National Park",
+      "facet": "Famous landmarks by state",
+      "known_at": 7
+    },
+    {
+      "name": "Monument Valley",
+      "facet": "Famous landmarks by state",
+      "known_at": 10
+    }
+  ]
+}

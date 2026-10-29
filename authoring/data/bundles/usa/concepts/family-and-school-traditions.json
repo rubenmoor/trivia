@@ -1,0 +1,948 @@
+{
+  "subcategory": "family-and-school-traditions",
+  "facets": [
+    "School day rituals",
+    "School dances and prom",
+    "Homecoming and school spirit",
+    "Graduation and yearbooks",
+    "College campus traditions",
+    "Childhood milestones and rites",
+    "Birthday and party customs",
+    "Wedding and baby customs",
+    "Family holiday rituals",
+    "Summer camp and vacations",
+    "Family food and gatherings",
+    "Kids' fundraisers and clubs"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 1,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Show and tell",
+      "facet": "School day rituals",
+      "known_at": 3
+    },
+    {
+      "name": "Yellow school bus",
+      "facet": "School day rituals",
+      "known_at": 2
+    },
+    {
+      "name": "Recess",
+      "facet": "School day rituals",
+      "known_at": 2
+    },
+    {
+      "name": "Hall pass",
+      "facet": "School day rituals",
+      "known_at": 6
+    },
+    {
+      "name": "Lunch box",
+      "facet": "School day rituals",
+      "known_at": 2
+    },
+    {
+      "name": "Spelling bee",
+      "facet": "School day rituals",
+      "known_at": 5
+    },
+    {
+      "name": "Field trip",
+      "facet": "School day rituals",
+      "known_at": 3
+    },
+    {
+      "name": "Field day",
+      "facet": "School day rituals",
+      "known_at": 4
+    },
+    {
+      "name": "Picture day",
+      "facet": "School day rituals",
+      "known_at": 4
+    },
+    {
+      "name": "Morning announcements",
+      "facet": "School day rituals",
+      "known_at": 5
+    },
+    {
+      "name": "Fire drill",
+      "facet": "School day rituals",
+      "known_at": 3
+    },
+    {
+      "name": "Detention",
+      "facet": "School day rituals",
+      "known_at": 6
+    },
+    {
+      "name": "Homeroom",
+      "facet": "School day rituals",
+      "known_at": 7
+    },
+    {
+      "name": "Report card",
+      "facet": "School day rituals",
+      "known_at": 4
+    },
+    {
+      "name": "Lunch lady",
+      "facet": "School day rituals",
+      "known_at": 5
+    },
+    {
+      "name": "Permission slip",
+      "facet": "School day rituals",
+      "known_at": 5
+    },
+    {
+      "name": "Science fair",
+      "facet": "School day rituals",
+      "known_at": 5
+    },
+    {
+      "name": "Scholastic Book Fair",
+      "facet": "School day rituals",
+      "known_at": 4
+    },
+    {
+      "name": "Prom",
+      "facet": "School dances and prom",
+      "known_at": 5
+    },
+    {
+      "name": "Corsage",
+      "facet": "School dances and prom",
+      "known_at": 9
+    },
+    {
+      "name": "Boutonniere",
+      "facet": "School dances and prom",
+      "known_at": 10
+    },
+    {
+      "name": "Promposal",
+      "facet": "School dances and prom",
+      "known_at": 9
+    },
+    {
+      "name": "Prom king and queen",
+      "facet": "School dances and prom",
+      "known_at": 6
+    },
+    {
+      "name": "Limousine",
+      "facet": "School dances and prom",
+      "known_at": 6
+    },
+    {
+      "name": "Sadie Hawkins dance",
+      "facet": "School dances and prom",
+      "known_at": 11
+    },
+    {
+      "name": "Winter formal",
+      "facet": "School dances and prom",
+      "known_at": 9
+    },
+    {
+      "name": "Junior prom",
+      "facet": "School dances and prom",
+      "known_at": 10
+    },
+    {
+      "name": "After-prom party",
+      "facet": "School dances and prom",
+      "known_at": 10
+    },
+    {
+      "name": "Chaperone",
+      "facet": "School dances and prom",
+      "known_at": 8
+    },
+    {
+      "name": "Slow dance",
+      "facet": "School dances and prom",
+      "known_at": 6
+    },
+    {
+      "name": "Tuxedo rental",
+      "facet": "School dances and prom",
+      "known_at": 8
+    },
+    {
+      "name": "Prom dress",
+      "facet": "School dances and prom",
+      "known_at": 5
+    },
+    {
+      "name": "Grand march",
+      "facet": "School dances and prom",
+      "known_at": 13
+    },
+    {
+      "name": "Daddy-daughter dance",
+      "facet": "School dances and prom",
+      "known_at": 8
+    },
+    {
+      "name": "Homecoming",
+      "facet": "Homecoming and school spirit",
+      "known_at": 6
+    },
+    {
+      "name": "Homecoming queen",
+      "facet": "Homecoming and school spirit",
+      "known_at": 7
+    },
+    {
+      "name": "Homecoming mum",
+      "facet": "Homecoming and school spirit",
+      "known_at": 12
+    },
+    {
+      "name": "Pep rally",
+      "facet": "Homecoming and school spirit",
+      "known_at": 7
+    },
+    {
+      "name": "Spirit week",
+      "facet": "Homecoming and school spirit",
+      "known_at": 8
+    },
+    {
+      "name": "Mascot",
+      "facet": "Homecoming and school spirit",
+      "known_at": 4
+    },
+    {
+      "name": "Cheerleader",
+      "facet": "Homecoming and school spirit",
+      "known_at": 3
+    },
+    {
+      "name": "Homecoming bonfire",
+      "facet": "Homecoming and school spirit",
+      "known_at": 8
+    },
+    {
+      "name": "Homecoming parade",
+      "facet": "Homecoming and school spirit",
+      "known_at": 7
+    },
+    {
+      "name": "Pajama day",
+      "facet": "Homecoming and school spirit",
+      "known_at": 4
+    },
+    {
+      "name": "Letterman jacket",
+      "facet": "Homecoming and school spirit",
+      "known_at": 8
+    },
+    {
+      "name": "Friday night football",
+      "facet": "Homecoming and school spirit",
+      "known_at": 8
+    },
+    {
+      "name": "Fight song",
+      "facet": "Homecoming and school spirit",
+      "known_at": 9
+    },
+    {
+      "name": "School colors",
+      "facet": "Homecoming and school spirit",
+      "known_at": 5
+    },
+    {
+      "name": "Powder puff football",
+      "facet": "Homecoming and school spirit",
+      "known_at": 11
+    },
+    {
+      "name": "Drumline",
+      "facet": "Homecoming and school spirit",
+      "known_at": 8
+    },
+    {
+      "name": "Twin day",
+      "facet": "Homecoming and school spirit",
+      "known_at": 7
+    },
+    {
+      "name": "Cap and gown",
+      "facet": "Graduation and yearbooks",
+      "known_at": 5
+    },
+    {
+      "name": "Mortarboard",
+      "facet": "Graduation and yearbooks",
+      "known_at": 10
+    },
+    {
+      "name": "Tassel",
+      "facet": "Graduation and yearbooks",
+      "known_at": 7
+    },
+    {
+      "name": "Valedictorian",
+      "facet": "Graduation and yearbooks",
+      "known_at": 9
+    },
+    {
+      "name": "Salutatorian",
+      "facet": "Graduation and yearbooks",
+      "known_at": 12
+    },
+    {
+      "name": "Commencement speech",
+      "facet": "Graduation and yearbooks",
+      "known_at": 10
+    },
+    {
+      "name": "Pomp and Circumstance",
+      "facet": "Graduation and yearbooks",
+      "known_at": 11
+    },
+    {
+      "name": "Diploma",
+      "facet": "Graduation and yearbooks",
+      "known_at": 5
+    },
+    {
+      "name": "Yearbook",
+      "facet": "Graduation and yearbooks",
+      "known_at": 5
+    },
+    {
+      "name": "Yearbook signing",
+      "facet": "Graduation and yearbooks",
+      "known_at": 7
+    },
+    {
+      "name": "Senior superlatives",
+      "facet": "Graduation and yearbooks",
+      "known_at": 9
+    },
+    {
+      "name": "Class ring",
+      "facet": "Graduation and yearbooks",
+      "known_at": 9
+    },
+    {
+      "name": "Senior prank",
+      "facet": "Graduation and yearbooks",
+      "known_at": 9
+    },
+    {
+      "name": "Kindergarten graduation",
+      "facet": "Graduation and yearbooks",
+      "known_at": 5
+    },
+    {
+      "name": "Senior skip day",
+      "facet": "Graduation and yearbooks",
+      "known_at": 10
+    },
+    {
+      "name": "Graduation party",
+      "facet": "Graduation and yearbooks",
+      "known_at": 7
+    },
+    {
+      "name": "Cap toss",
+      "facet": "Graduation and yearbooks",
+      "known_at": 6
+    },
+    {
+      "name": "Senior portrait",
+      "facet": "Graduation and yearbooks",
+      "known_at": 9
+    },
+    {
+      "name": "Honor cords",
+      "facet": "Graduation and yearbooks",
+      "known_at": 12
+    },
+    {
+      "name": "Fraternity",
+      "facet": "College campus traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Sorority",
+      "facet": "College campus traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Rush week",
+      "facet": "College campus traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Greek letters",
+      "facet": "College campus traditions",
+      "known_at": 10
+    },
+    {
+      "name": "March Madness",
+      "facet": "College campus traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Freshman orientation",
+      "facet": "College campus traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Dorm",
+      "facet": "College campus traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Harvard–Yale Game",
+      "facet": "College campus traditions",
+      "known_at": 14
+    },
+    {
+      "name": "Ivy League",
+      "facet": "College campus traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Midnight Madness",
+      "facet": "College campus traditions",
+      "known_at": 14
+    },
+    {
+      "name": "Finals week",
+      "facet": "College campus traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Freshman 15",
+      "facet": "College campus traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Aggie Ring",
+      "facet": "College campus traditions",
+      "known_at": 14
+    },
+    {
+      "name": "Script Ohio",
+      "facet": "College campus traditions",
+      "known_at": 14
+    },
+    {
+      "name": "John Harvard statue",
+      "facet": "College campus traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Tooth Fairy",
+      "facet": "Childhood milestones and rites",
+      "known_at": 2
+    },
+    {
+      "name": "First day of kindergarten",
+      "facet": "Childhood milestones and rites",
+      "known_at": 3
+    },
+    {
+      "name": "Lemonade stand",
+      "facet": "Childhood milestones and rites",
+      "known_at": 3
+    },
+    {
+      "name": "Learner's permit",
+      "facet": "Childhood milestones and rites",
+      "known_at": 11
+    },
+    {
+      "name": "Driver's ed",
+      "facet": "Childhood milestones and rites",
+      "known_at": 9
+    },
+    {
+      "name": "Sweet sixteen",
+      "facet": "Childhood milestones and rites",
+      "known_at": 8
+    },
+    {
+      "name": "Bar mitzvah",
+      "facet": "Childhood milestones and rites",
+      "known_at": 9
+    },
+    {
+      "name": "Quinceañera",
+      "facet": "Childhood milestones and rites",
+      "known_at": 9
+    },
+    {
+      "name": "First Communion",
+      "facet": "Childhood milestones and rites",
+      "known_at": 9
+    },
+    {
+      "name": "Training wheels",
+      "facet": "Childhood milestones and rites",
+      "known_at": 2
+    },
+    {
+      "name": "Allowance",
+      "facet": "Childhood milestones and rites",
+      "known_at": 5
+    },
+    {
+      "name": "Sleepover",
+      "facet": "Childhood milestones and rites",
+      "known_at": 3
+    },
+    {
+      "name": "Growth chart",
+      "facet": "Childhood milestones and rites",
+      "known_at": 6
+    },
+    {
+      "name": "Braces",
+      "facet": "Childhood milestones and rites",
+      "known_at": 6
+    },
+    {
+      "name": "Cooties",
+      "facet": "Childhood milestones and rites",
+      "known_at": 6
+    },
+    {
+      "name": "Paper route",
+      "facet": "Childhood milestones and rites",
+      "known_at": 9
+    },
+    {
+      "name": "Babysitting",
+      "facet": "Childhood milestones and rites",
+      "known_at": 5
+    },
+    {
+      "name": "Happy Birthday to You",
+      "facet": "Birthday and party customs",
+      "known_at": 1
+    },
+    {
+      "name": "Birthday candles",
+      "facet": "Birthday and party customs",
+      "known_at": 1
+    },
+    {
+      "name": "Piñata",
+      "facet": "Birthday and party customs",
+      "known_at": 3,
+      "retired": "used_up: The pool already asks what a piñata is made of and what falls out of it; the remaining made_of angle (a clay pot core) is Mexican, not American, and much harder than 4."
+    },
+    {
+      "name": "Party hat",
+      "facet": "Birthday and party customs",
+      "known_at": 2
+    },
+    {
+      "name": "Goody bag",
+      "facet": "Birthday and party customs",
+      "known_at": 5
+    },
+    {
+      "name": "Pin the tail on the donkey",
+      "facet": "Birthday and party customs",
+      "known_at": 5
+    },
+    {
+      "name": "Musical chairs",
+      "facet": "Birthday and party customs",
+      "known_at": 3
+    },
+    {
+      "name": "Bounce house",
+      "facet": "Birthday and party customs",
+      "known_at": 3
+    },
+    {
+      "name": "Birthday wish",
+      "facet": "Birthday and party customs",
+      "known_at": 2
+    },
+    {
+      "name": "Surprise party",
+      "facet": "Birthday and party customs",
+      "known_at": 4
+    },
+    {
+      "name": "Smash cake",
+      "facet": "Birthday and party customs",
+      "known_at": 9
+    },
+    {
+      "name": "Over-the-hill party",
+      "facet": "Birthday and party customs",
+      "known_at": 11
+    },
+    {
+      "name": "Pizza party",
+      "facet": "Birthday and party customs",
+      "known_at": 3
+    },
+    {
+      "name": "Balloon animals",
+      "facet": "Birthday and party customs",
+      "known_at": 3
+    },
+    {
+      "name": "Hot potato",
+      "facet": "Birthday and party customs",
+      "known_at": 4
+    },
+    {
+      "name": "Freeze dance",
+      "facet": "Birthday and party customs",
+      "known_at": 4
+    },
+    {
+      "name": "Golden birthday",
+      "facet": "Birthday and party customs",
+      "known_at": 12
+    },
+    {
+      "name": "Baby shower",
+      "facet": "Wedding and baby customs",
+      "known_at": 6
+    },
+    {
+      "name": "Gender reveal party",
+      "facet": "Wedding and baby customs",
+      "known_at": 8
+    },
+    {
+      "name": "Bridal shower",
+      "facet": "Wedding and baby customs",
+      "known_at": 9
+    },
+    {
+      "name": "Bachelor party",
+      "facet": "Wedding and baby customs",
+      "known_at": 9
+    },
+    {
+      "name": "Rehearsal dinner",
+      "facet": "Wedding and baby customs",
+      "known_at": 11
+    },
+    {
+      "name": "Something old, something new",
+      "facet": "Wedding and baby customs",
+      "known_at": 10
+    },
+    {
+      "name": "Bouquet toss",
+      "facet": "Wedding and baby customs",
+      "known_at": 6
+    },
+    {
+      "name": "Garter toss",
+      "facet": "Wedding and baby customs",
+      "known_at": 11
+    },
+    {
+      "name": "Wedding cake top tier",
+      "facet": "Wedding and baby customs",
+      "known_at": 12
+    },
+    {
+      "name": "Ring bearer",
+      "facet": "Wedding and baby customs",
+      "known_at": 7
+    },
+    {
+      "name": "Flower girl",
+      "facet": "Wedding and baby customs",
+      "known_at": 5
+    },
+    {
+      "name": "Best man",
+      "facet": "Wedding and baby customs",
+      "known_at": 6
+    },
+    {
+      "name": "Maid of honor",
+      "facet": "Wedding and baby customs",
+      "known_at": 7
+    },
+    {
+      "name": "Groom's cake",
+      "facet": "Wedding and baby customs",
+      "known_at": 13
+    },
+    {
+      "name": "Here Comes the Bride",
+      "facet": "Wedding and baby customs",
+      "known_at": 5
+    },
+    {
+      "name": "Engagement ring",
+      "facet": "Wedding and baby customs",
+      "known_at": 6
+    },
+    {
+      "name": "Jumping the broom",
+      "facet": "Wedding and baby customs",
+      "known_at": 12
+    },
+    {
+      "name": "Just Married cans",
+      "facet": "Wedding and baby customs",
+      "known_at": 6
+    },
+    {
+      "name": "Diaper cake",
+      "facet": "Wedding and baby customs",
+      "known_at": 11
+    },
+    {
+      "name": "Honeymoon",
+      "facet": "Wedding and baby customs",
+      "known_at": 6
+    },
+    {
+      "name": "Easter egg hunt",
+      "facet": "Family holiday rituals",
+      "known_at": 3
+    },
+    {
+      "name": "Milk and cookies for Santa",
+      "facet": "Family holiday rituals",
+      "known_at": 2
+    },
+    {
+      "name": "Fourth of July fireworks",
+      "facet": "Family holiday rituals",
+      "known_at": 3
+    },
+    {
+      "name": "Valentine's Day cards",
+      "facet": "Family holiday rituals",
+      "known_at": 3
+    },
+    {
+      "name": "Leprechaun trap",
+      "facet": "Family holiday rituals",
+      "known_at": 8
+    },
+    {
+      "name": "Memorial Day barbecue",
+      "facet": "Family holiday rituals",
+      "known_at": 8
+    },
+    {
+      "name": "Summer camp",
+      "facet": "Summer camp and vacations",
+      "known_at": 4
+    },
+    {
+      "name": "Campfire songs",
+      "facet": "Summer camp and vacations",
+      "known_at": 5
+    },
+    {
+      "name": "Sleepaway camp",
+      "facet": "Summer camp and vacations",
+      "known_at": 8
+    },
+    {
+      "name": "Camp counselor",
+      "facet": "Summer camp and vacations",
+      "known_at": 6
+    },
+    {
+      "name": "Color war",
+      "facet": "Summer camp and vacations",
+      "known_at": 11
+    },
+    {
+      "name": "Bug juice",
+      "facet": "Summer camp and vacations",
+      "known_at": 13
+    },
+    {
+      "name": "Friendship bracelet",
+      "facet": "Summer camp and vacations",
+      "known_at": 5
+    },
+    {
+      "name": "Lake cabin",
+      "facet": "Summer camp and vacations",
+      "known_at": 5
+    },
+    {
+      "name": "Lanyard",
+      "facet": "Summer camp and vacations",
+      "known_at": 10
+    },
+    {
+      "name": "Care package",
+      "facet": "Summer camp and vacations",
+      "known_at": 8
+    },
+    {
+      "name": "Family reunion",
+      "facet": "Family food and gatherings",
+      "known_at": 6
+    },
+    {
+      "name": "Sunday dinner",
+      "facet": "Family food and gatherings",
+      "known_at": 7
+    },
+    {
+      "name": "Mac and cheese",
+      "facet": "Family food and gatherings",
+      "known_at": 2
+    },
+    {
+      "name": "Fish fry",
+      "facet": "Family food and gatherings",
+      "known_at": 11
+    },
+    {
+      "name": "Hotdish",
+      "facet": "Family food and gatherings",
+      "known_at": 13
+    },
+    {
+      "name": "Boy Scouts",
+      "facet": "Kids' fundraisers and clubs",
+      "known_at": 5
+    },
+    {
+      "name": "Cub Scouts",
+      "facet": "Kids' fundraisers and clubs",
+      "known_at": 7
+    },
+    {
+      "name": "Eagle Scout",
+      "facet": "Kids' fundraisers and clubs",
+      "known_at": 10
+    },
+    {
+      "name": "Pinewood Derby",
+      "facet": "Kids' fundraisers and clubs",
+      "known_at": 10
+    },
+    {
+      "name": "Car wash fundraiser",
+      "facet": "Kids' fundraisers and clubs",
+      "known_at": 6
+    },
+    {
+      "name": "Little League",
+      "facet": "Kids' fundraisers and clubs",
+      "known_at": 6
+    },
+    {
+      "name": "Future Farmers of America",
+      "facet": "Kids' fundraisers and clubs",
+      "known_at": 12
+    },
+    {
+      "name": "Merit badge",
+      "facet": "Kids' fundraisers and clubs",
+      "known_at": 8
+    },
+    {
+      "name": "Read-a-thon",
+      "facet": "Kids' fundraisers and clubs",
+      "known_at": 8
+    },
+    {
+      "name": "Jog-a-thon",
+      "facet": "Kids' fundraisers and clubs",
+      "known_at": 9
+    },
+    {
+      "name": "Wrapping paper sale",
+      "facet": "Kids' fundraisers and clubs",
+      "known_at": 10
+    },
+    {
+      "name": "Scout popcorn",
+      "facet": "Kids' fundraisers and clubs",
+      "known_at": 11
+    },
+    {
+      "name": "PTA",
+      "facet": "Kids' fundraisers and clubs",
+      "known_at": 9
+    },
+    {
+      "name": "Box Tops for Education",
+      "facet": "Kids' fundraisers and clubs",
+      "known_at": 10
+    },
+    {
+      "name": "Model UN",
+      "facet": "Kids' fundraisers and clubs",
+      "known_at": 11
+    },
+    {
+      "name": "Student council",
+      "facet": "Kids' fundraisers and clubs",
+      "known_at": 7
+    },
+    {
+      "name": "Key Club",
+      "facet": "Kids' fundraisers and clubs",
+      "known_at": 13
+    }
+  ]
+}

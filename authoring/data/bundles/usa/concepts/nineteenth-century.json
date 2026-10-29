@@ -1,0 +1,1067 @@
+{
+  "subcategory": "nineteenth-century",
+  "facets": [
+    "Louisiana Purchase and explorers",
+    "Trails, wagons and pioneers",
+    "Gold Rush and boomtowns",
+    "Native nations and the frontier",
+    "Cowboys and Wild West legends",
+    "Railroads, Pony Express and telegraph",
+    "Slavery and the Underground Railroad",
+    "Road to war and secession",
+    "Civil War battles and generals",
+    "Lincoln and the Union home front",
+    "Soldiers' life, weapons and inventions",
+    "Reconstruction and the war's legacy"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Napoleon Bonaparte",
+      "facet": "Louisiana Purchase and explorers",
+      "known_at": 5
+    },
+    {
+      "name": "Meriwether Lewis",
+      "facet": "Louisiana Purchase and explorers",
+      "known_at": 7
+    },
+    {
+      "name": "William Clark",
+      "facet": "Louisiana Purchase and explorers",
+      "known_at": 7
+    },
+    {
+      "name": "York (explorer)",
+      "facet": "Louisiana Purchase and explorers",
+      "known_at": 12
+    },
+    {
+      "name": "Corps of Discovery",
+      "facet": "Louisiana Purchase and explorers",
+      "known_at": 10
+    },
+    {
+      "name": "Manifest Destiny",
+      "facet": "Louisiana Purchase and explorers",
+      "known_at": 9
+    },
+    {
+      "name": "Mountain men",
+      "facet": "Louisiana Purchase and explorers",
+      "known_at": 9
+    },
+    {
+      "name": "Jedediah Smith",
+      "facet": "Louisiana Purchase and explorers",
+      "known_at": 13
+    },
+    {
+      "name": "John C. Frémont",
+      "facet": "Louisiana Purchase and explorers",
+      "known_at": 13
+    },
+    {
+      "name": "Covered wagon",
+      "facet": "Trails, wagons and pioneers",
+      "known_at": 3
+    },
+    {
+      "name": "Conestoga wagon",
+      "facet": "Trails, wagons and pioneers",
+      "known_at": 9
+    },
+    {
+      "name": "Prairie schooner",
+      "facet": "Trails, wagons and pioneers",
+      "known_at": 11
+    },
+    {
+      "name": "Wagon train",
+      "facet": "Trails, wagons and pioneers",
+      "known_at": 6
+    },
+    {
+      "name": "Homestead Act",
+      "facet": "Trails, wagons and pioneers",
+      "known_at": 9
+    },
+    {
+      "name": "Sod house",
+      "facet": "Trails, wagons and pioneers",
+      "known_at": 9
+    },
+    {
+      "name": "Little House on the Prairie",
+      "facet": "Trails, wagons and pioneers",
+      "known_at": 6
+    },
+    {
+      "name": "Laura Ingalls Wilder",
+      "facet": "Trails, wagons and pioneers",
+      "known_at": 7
+    },
+    {
+      "name": "Mormon Trail",
+      "facet": "Trails, wagons and pioneers",
+      "known_at": 11
+    },
+    {
+      "name": "Brigham Young",
+      "facet": "Trails, wagons and pioneers",
+      "known_at": 10
+    },
+    {
+      "name": "Independence, Missouri",
+      "facet": "Trails, wagons and pioneers",
+      "known_at": 11
+    },
+    {
+      "name": "Chimney Rock",
+      "facet": "Trails, wagons and pioneers",
+      "known_at": 11
+    },
+    {
+      "name": "Dysentery",
+      "facet": "Trails, wagons and pioneers",
+      "known_at": 8
+    },
+    {
+      "name": "Oxen",
+      "facet": "Trails, wagons and pioneers",
+      "known_at": 5
+    },
+    {
+      "name": "Forty-Niners",
+      "facet": "Gold Rush and boomtowns",
+      "known_at": 6
+    },
+    {
+      "name": "James W. Marshall",
+      "facet": "Gold Rush and boomtowns",
+      "known_at": 12
+    },
+    {
+      "name": "Gold panning",
+      "facet": "Gold Rush and boomtowns",
+      "known_at": 4
+    },
+    {
+      "name": "Levi Strauss",
+      "facet": "Gold Rush and boomtowns",
+      "known_at": 7
+    },
+    {
+      "name": "Blue jeans",
+      "facet": "Gold Rush and boomtowns",
+      "known_at": 3
+    },
+    {
+      "name": "Ghost town",
+      "facet": "Gold Rush and boomtowns",
+      "known_at": 5
+    },
+    {
+      "name": "Pickaxe",
+      "facet": "Gold Rush and boomtowns",
+      "known_at": 3
+    },
+    {
+      "name": "Sluice box",
+      "facet": "Gold Rush and boomtowns",
+      "known_at": 10
+    },
+    {
+      "name": "Prospector",
+      "facet": "Gold Rush and boomtowns",
+      "known_at": 7
+    },
+    {
+      "name": "Comstock Lode",
+      "facet": "Gold Rush and boomtowns",
+      "known_at": 13
+    },
+    {
+      "name": "Boomtown",
+      "facet": "Gold Rush and boomtowns",
+      "known_at": 9
+    },
+    {
+      "name": "Fool's gold",
+      "facet": "Gold Rush and boomtowns",
+      "known_at": 6
+    },
+    {
+      "name": "Black Hills Gold Rush",
+      "facet": "Gold Rush and boomtowns",
+      "known_at": 12
+    },
+    {
+      "name": "Saloon",
+      "facet": "Gold Rush and boomtowns",
+      "known_at": 6
+    },
+    {
+      "name": "Andrew Jackson",
+      "facet": "Native nations and the frontier",
+      "known_at": 7
+    },
+    {
+      "name": "Davy Crockett",
+      "facet": "Native nations and the frontier",
+      "known_at": 6
+    },
+    {
+      "name": "Cowboy",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 1
+    },
+    {
+      "name": "Lasso",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 3
+    },
+    {
+      "name": "Cowboy hat",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 1
+    },
+    {
+      "name": "Spurs",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 4
+    },
+    {
+      "name": "Billy the Kid",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 7
+    },
+    {
+      "name": "Wild Bill Hickok",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 9
+    },
+    {
+      "name": "Calamity Jane",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 9
+    },
+    {
+      "name": "Annie Oakley",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 8
+    },
+    {
+      "name": "Buffalo Bill Cody",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 8
+    },
+    {
+      "name": "Jesse James",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 8
+    },
+    {
+      "name": "Wyatt Earp",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 9
+    },
+    {
+      "name": "Gunfight at the O.K. Corral",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 9
+    },
+    {
+      "name": "Doc Holliday",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 11
+    },
+    {
+      "name": "Butch Cassidy",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 10
+    },
+    {
+      "name": "Cattle drive",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 7
+    },
+    {
+      "name": "Texas Longhorn",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 5
+    },
+    {
+      "name": "Sheriff",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 3
+    },
+    {
+      "name": "Wanted poster",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 4
+    },
+    {
+      "name": "Stagecoach",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 5
+    },
+    {
+      "name": "Rodeo",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 4
+    },
+    {
+      "name": "Bass Reeves",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 12
+    },
+    {
+      "name": "Vaquero",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 10
+    },
+    {
+      "name": "Chuck wagon",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 8
+    },
+    {
+      "name": "Bandana",
+      "facet": "Cowboys and Wild West legends",
+      "known_at": 3
+    },
+    {
+      "name": "Union Pacific Railroad",
+      "facet": "Railroads, Pony Express and telegraph",
+      "known_at": 9
+    },
+    {
+      "name": "Central Pacific Railroad",
+      "facet": "Railroads, Pony Express and telegraph",
+      "known_at": 11
+    },
+    {
+      "name": "Steam locomotive",
+      "facet": "Railroads, Pony Express and telegraph",
+      "known_at": 3
+    },
+    {
+      "name": "Telegraph",
+      "facet": "Railroads, Pony Express and telegraph",
+      "known_at": 6
+    },
+    {
+      "name": "Morse code",
+      "facet": "Railroads, Pony Express and telegraph",
+      "known_at": 5
+    },
+    {
+      "name": "Samuel Morse",
+      "facet": "Railroads, Pony Express and telegraph",
+      "known_at": 8
+    },
+    {
+      "name": "Chinese railroad workers",
+      "facet": "Railroads, Pony Express and telegraph",
+      "known_at": 10
+    },
+    {
+      "name": "Irish railroad workers",
+      "facet": "Railroads, Pony Express and telegraph",
+      "known_at": 12
+    },
+    {
+      "name": "Leland Stanford",
+      "facet": "Railroads, Pony Express and telegraph",
+      "known_at": 13
+    },
+    {
+      "name": "Wells Fargo",
+      "facet": "Railroads, Pony Express and telegraph",
+      "known_at": 10
+    },
+    {
+      "name": "Butterfield Overland Mail",
+      "facet": "Railroads, Pony Express and telegraph",
+      "known_at": 14
+    },
+    {
+      "name": "Time zones",
+      "facet": "Railroads, Pony Express and telegraph",
+      "known_at": 9
+    },
+    {
+      "name": "Caboose",
+      "facet": "Railroads, Pony Express and telegraph",
+      "known_at": 6
+    },
+    {
+      "name": "Cowcatcher",
+      "facet": "Railroads, Pony Express and telegraph",
+      "known_at": 8
+    },
+    {
+      "name": "Train robbery",
+      "facet": "Railroads, Pony Express and telegraph",
+      "known_at": 6
+    },
+    {
+      "name": "What hath God wrought",
+      "facet": "Railroads, Pony Express and telegraph",
+      "known_at": 12
+    },
+    {
+      "name": "First Transcontinental Telegraph",
+      "facet": "Railroads, Pony Express and telegraph",
+      "known_at": 12
+    },
+    {
+      "name": "Harriet Tubman",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 5
+    },
+    {
+      "name": "Underground Railroad",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 6
+    },
+    {
+      "name": "Frederick Douglass",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 7
+    },
+    {
+      "name": "Sojourner Truth",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 9
+    },
+    {
+      "name": "Uncle Tom's Cabin",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 9
+    },
+    {
+      "name": "Harriet Beecher Stowe",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 10
+    },
+    {
+      "name": "Abolitionists",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 9
+    },
+    {
+      "name": "North Star",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 8
+    },
+    {
+      "name": "Follow the Drinking Gourd",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 11
+    },
+    {
+      "name": "Quilt codes",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 12
+    },
+    {
+      "name": "Fugitive Slave Act",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 10
+    },
+    {
+      "name": "Plantation",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 6
+    },
+    {
+      "name": "Cotton gin",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 8
+    },
+    {
+      "name": "Eli Whitney",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 9
+    },
+    {
+      "name": "Nat Turner",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 11
+    },
+    {
+      "name": "Henry \"Box\" Brown",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 12
+    },
+    {
+      "name": "Levi Coffin",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 14
+    },
+    {
+      "name": "William Lloyd Garrison",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 12
+    },
+    {
+      "name": "The Liberator",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 13
+    },
+    {
+      "name": "Spirituals",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 9
+    },
+    {
+      "name": "Cotton",
+      "facet": "Slavery and the Underground Railroad",
+      "known_at": 3
+    },
+    {
+      "name": "Kansas–Nebraska Act",
+      "facet": "Road to war and secession",
+      "known_at": 11
+    },
+    {
+      "name": "Bleeding Kansas",
+      "facet": "Road to war and secession",
+      "known_at": 11
+    },
+    {
+      "name": "John Brown",
+      "facet": "Road to war and secession",
+      "known_at": 9
+    },
+    {
+      "name": "Dred Scott",
+      "facet": "Road to war and secession",
+      "known_at": 10
+    },
+    {
+      "name": "Lincoln–Douglas debates",
+      "facet": "Road to war and secession",
+      "known_at": 10
+    },
+    {
+      "name": "Stephen A. Douglas",
+      "facet": "Road to war and secession",
+      "known_at": 11
+    },
+    {
+      "name": "Election of 1860",
+      "facet": "Road to war and secession",
+      "known_at": 9
+    },
+    {
+      "name": "Secession",
+      "facet": "Road to war and secession",
+      "known_at": 8
+    },
+    {
+      "name": "South Carolina",
+      "facet": "Road to war and secession",
+      "known_at": 7
+    },
+    {
+      "name": "Confederate States of America",
+      "facet": "Road to war and secession",
+      "known_at": 6
+    },
+    {
+      "name": "Jefferson Davis",
+      "facet": "Road to war and secession",
+      "known_at": 8
+    },
+    {
+      "name": "Caning of Charles Sumner",
+      "facet": "Road to war and secession",
+      "known_at": 13
+    },
+    {
+      "name": "Wilmot Proviso",
+      "facet": "Road to war and secession",
+      "known_at": 14
+    },
+    {
+      "name": "Popular sovereignty",
+      "facet": "Road to war and secession",
+      "known_at": 12
+    },
+    {
+      "name": "Mexican–American War",
+      "facet": "Road to war and secession",
+      "known_at": 10
+    },
+    {
+      "name": "Republican Party",
+      "facet": "Road to war and secession",
+      "known_at": 7
+    },
+    {
+      "name": "Henry Clay",
+      "facet": "Road to war and secession",
+      "known_at": 11
+    },
+    {
+      "name": "Free states",
+      "facet": "Road to war and secession",
+      "known_at": 8
+    },
+    {
+      "name": "States' rights",
+      "facet": "Road to war and secession",
+      "known_at": 9
+    },
+    {
+      "name": "Battle of Gettysburg",
+      "facet": "Civil War battles and generals",
+      "known_at": 6
+    },
+    {
+      "name": "Robert E. Lee",
+      "facet": "Civil War battles and generals",
+      "known_at": 6
+    },
+    {
+      "name": "Stonewall Jackson",
+      "facet": "Civil War battles and generals",
+      "known_at": 8
+    },
+    {
+      "name": "William Tecumseh Sherman",
+      "facet": "Civil War battles and generals",
+      "known_at": 9
+    },
+    {
+      "name": "Sherman's March to the Sea",
+      "facet": "Civil War battles and generals",
+      "known_at": 10
+    },
+    {
+      "name": "Battle of Antietam",
+      "facet": "Civil War battles and generals",
+      "known_at": 10
+    },
+    {
+      "name": "First Battle of Bull Run",
+      "facet": "Civil War battles and generals",
+      "known_at": 10
+    },
+    {
+      "name": "Siege of Vicksburg",
+      "facet": "Civil War battles and generals",
+      "known_at": 10
+    },
+    {
+      "name": "Pickett's Charge",
+      "facet": "Civil War battles and generals",
+      "known_at": 11
+    },
+    {
+      "name": "Appomattox Court House",
+      "facet": "Civil War battles and generals",
+      "known_at": 9
+    },
+    {
+      "name": "George B. McClellan",
+      "facet": "Civil War battles and generals",
+      "known_at": 11
+    },
+    {
+      "name": "J.E.B. Stuart",
+      "facet": "Civil War battles and generals",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Shiloh",
+      "facet": "Civil War battles and generals",
+      "known_at": 11
+    },
+    {
+      "name": "Battle of Fredericksburg",
+      "facet": "Civil War battles and generals",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Hampton Roads",
+      "facet": "Civil War battles and generals",
+      "known_at": 10
+    },
+    {
+      "name": "Anaconda Plan",
+      "facet": "Civil War battles and generals",
+      "known_at": 11
+    },
+    {
+      "name": "Little Round Top",
+      "facet": "Civil War battles and generals",
+      "known_at": 13
+    },
+    {
+      "name": "Joshua Chamberlain",
+      "facet": "Civil War battles and generals",
+      "known_at": 14
+    },
+    {
+      "name": "George Meade",
+      "facet": "Civil War battles and generals",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Chancellorsville",
+      "facet": "Civil War battles and generals",
+      "known_at": 13
+    },
+    {
+      "name": "David Farragut",
+      "facet": "Civil War battles and generals",
+      "known_at": 13
+    },
+    {
+      "name": "54th Massachusetts Infantry",
+      "facet": "Civil War battles and generals",
+      "known_at": 12
+    },
+    {
+      "name": "Gettysburg Address",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 7
+    },
+    {
+      "name": "Emancipation Proclamation",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 7
+    },
+    {
+      "name": "Stovepipe hat",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 4
+    },
+    {
+      "name": "Mary Todd Lincoln",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 10
+    },
+    {
+      "name": "Ford's Theatre",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 8
+    },
+    {
+      "name": "John Wilkes Booth",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 9
+    },
+    {
+      "name": "Penny",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 3
+    },
+    {
+      "name": "Five-dollar bill",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 5
+    },
+    {
+      "name": "House Divided speech",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 11
+    },
+    {
+      "name": "Clara Barton",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 9
+    },
+    {
+      "name": "American Red Cross",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 8
+    },
+    {
+      "name": "Greenbacks",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 11
+    },
+    {
+      "name": "New York City draft riots",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 13
+    },
+    {
+      "name": "Walt Whitman",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 12
+    },
+    {
+      "name": "Mathew Brady",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 13
+    },
+    {
+      "name": "Copperheads",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 14
+    },
+    {
+      "name": "Sarah Josepha Hale",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 14
+    },
+    {
+      "name": "Income tax",
+      "facet": "Lincoln and the Union home front",
+      "known_at": 12
+    },
+    {
+      "name": "Blue and gray uniforms",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 4
+    },
+    {
+      "name": "Hardtack",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 10
+    },
+    {
+      "name": "Minié ball",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Springfield rifle",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Gatling gun",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 11
+    },
+    {
+      "name": "Ironclad warship",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 10
+    },
+    {
+      "name": "H.L. Hunley",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Union Army Balloon Corps",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Drummer boy",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 7
+    },
+    {
+      "name": "Bugle",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 5
+    },
+    {
+      "name": "Taps",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 8
+    },
+    {
+      "name": "Rebel yell",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 11
+    },
+    {
+      "name": "Field hospital",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 8
+    },
+    {
+      "name": "Canteen",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 5
+    },
+    {
+      "name": "Cannon",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 3
+    },
+    {
+      "name": "Kepi",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Medal of Honor",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 9
+    },
+    {
+      "name": "Battle Hymn of the Republic",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 9
+    },
+    {
+      "name": "Dixie (song)",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 10
+    },
+    {
+      "name": "When Johnny Comes Marching Home",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 11
+    },
+    {
+      "name": "Bayonet",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 7
+    },
+    {
+      "name": "Ambulance Corps",
+      "facet": "Soldiers' life, weapons and inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Reconstruction",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 9
+    },
+    {
+      "name": "13th Amendment",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 9
+    },
+    {
+      "name": "14th Amendment",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 11
+    },
+    {
+      "name": "15th Amendment",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 11
+    },
+    {
+      "name": "Freedmen's Bureau",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 12
+    },
+    {
+      "name": "Forty acres and a mule",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 12
+    },
+    {
+      "name": "Andrew Johnson",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 10
+    },
+    {
+      "name": "Impeachment of Andrew Johnson",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 12
+    },
+    {
+      "name": "Carpetbaggers",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 12
+    },
+    {
+      "name": "Sharecropping",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 11
+    },
+    {
+      "name": "Jim Crow laws",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 9
+    },
+    {
+      "name": "Hiram Revels",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 14
+    },
+    {
+      "name": "Juneteenth",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 6
+    },
+    {
+      "name": "Arlington National Cemetery",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 7
+    },
+    {
+      "name": "Compromise of 1877",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 14
+    },
+    {
+      "name": "Black Codes",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 13
+    },
+    {
+      "name": "Gone with the Wind",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 10
+    },
+    {
+      "name": "Robert Smalls",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 14
+    },
+    {
+      "name": "Howard University",
+      "facet": "Reconstruction and the war's legacy",
+      "known_at": 11
+    }
+  ]
+}

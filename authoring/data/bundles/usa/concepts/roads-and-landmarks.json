@@ -1,0 +1,901 @@
+{
+  "subcategory": "roads-and-landmarks",
+  "facets": [
+    "Interstates and highway numbering",
+    "Route 66 and historic roads",
+    "Famous bridges and tunnels",
+    "Monuments and memorials",
+    "National parks and natural landmarks",
+    "Skyscrapers and city skylines",
+    "Dams, canals and engineering feats",
+    "Roadside attractions and road trip culture",
+    "Famous streets and boulevards",
+    "Historic sites and buildings",
+    "Landmarks in movies and TV"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 4,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Interstate Highway System",
+      "facet": "Interstates and highway numbering",
+      "known_at": 6
+    },
+    {
+      "name": "Interstate 95",
+      "facet": "Interstates and highway numbering",
+      "known_at": 9
+    },
+    {
+      "name": "Interstate 10",
+      "facet": "Interstates and highway numbering",
+      "known_at": 11
+    },
+    {
+      "name": "Interstate 80",
+      "facet": "Interstates and highway numbering",
+      "known_at": 11
+    },
+    {
+      "name": "Interstate 5",
+      "facet": "Interstates and highway numbering",
+      "known_at": 10
+    },
+    {
+      "name": "Interstate 90",
+      "facet": "Interstates and highway numbering",
+      "known_at": 11
+    },
+    {
+      "name": "Interstate 405",
+      "facet": "Interstates and highway numbering",
+      "known_at": 11
+    },
+    {
+      "name": "Interstate H-1",
+      "facet": "Interstates and highway numbering",
+      "known_at": 13
+    },
+    {
+      "name": "Federal-Aid Highway Act of 1956",
+      "facet": "Interstates and highway numbering",
+      "known_at": 12
+    },
+    {
+      "name": "Odd and even interstate numbers",
+      "facet": "Interstates and highway numbering",
+      "known_at": 11
+    },
+    {
+      "name": "Three-digit interstate",
+      "facet": "Interstates and highway numbering",
+      "known_at": 12
+    },
+    {
+      "name": "Interstate shield",
+      "facet": "Interstates and highway numbering",
+      "known_at": 9
+    },
+    {
+      "name": "Mile marker",
+      "facet": "Interstates and highway numbering",
+      "known_at": 8
+    },
+    {
+      "name": "Beltway",
+      "facet": "Interstates and highway numbering",
+      "known_at": 10
+    },
+    {
+      "name": "Turnpike",
+      "facet": "Interstates and highway numbering",
+      "known_at": 10
+    },
+    {
+      "name": "New Jersey Turnpike",
+      "facet": "Interstates and highway numbering",
+      "known_at": 10
+    },
+    {
+      "name": "Pennsylvania Turnpike",
+      "facet": "Interstates and highway numbering",
+      "known_at": 12
+    },
+    {
+      "name": "Toll road",
+      "facet": "Interstates and highway numbering",
+      "known_at": 6
+    },
+    {
+      "name": "Cloverleaf interchange",
+      "facet": "Interstates and highway numbering",
+      "known_at": 11
+    },
+    {
+      "name": "HOV lane",
+      "facet": "Interstates and highway numbering",
+      "known_at": 10
+    },
+    {
+      "name": "Rest area",
+      "facet": "Interstates and highway numbering",
+      "known_at": 6
+    },
+    {
+      "name": "U.S. Route 1",
+      "facet": "Interstates and highway numbering",
+      "known_at": 12
+    },
+    {
+      "name": "Alaska Highway",
+      "facet": "Interstates and highway numbering",
+      "known_at": 12
+    },
+    {
+      "name": "Route 66",
+      "facet": "Route 66 and historic roads",
+      "known_at": 5
+    },
+    {
+      "name": "Santa Monica Pier",
+      "facet": "Route 66 and historic roads",
+      "known_at": 9
+    },
+    {
+      "name": "Get Your Kicks on Route 66",
+      "facet": "Route 66 and historic roads",
+      "known_at": 10
+    },
+    {
+      "name": "The Grapes of Wrath",
+      "facet": "Route 66 and historic roads",
+      "known_at": 12
+    },
+    {
+      "name": "Lincoln Highway",
+      "facet": "Route 66 and historic roads",
+      "known_at": 12
+    },
+    {
+      "name": "Santa Fe Trail",
+      "facet": "Route 66 and historic roads",
+      "known_at": 11
+    },
+    {
+      "name": "Natchez Trace Parkway",
+      "facet": "Route 66 and historic roads",
+      "known_at": 13
+    },
+    {
+      "name": "Pacific Coast Highway",
+      "facet": "Route 66 and historic roads",
+      "known_at": 8
+    },
+    {
+      "name": "Overseas Highway",
+      "facet": "Route 66 and historic roads",
+      "known_at": 11
+    },
+    {
+      "name": "Pony Express",
+      "facet": "Route 66 and historic roads",
+      "known_at": 8
+    },
+    {
+      "name": "Lewis and Clark Trail",
+      "facet": "Route 66 and historic roads",
+      "known_at": 9
+    },
+    {
+      "name": "Trail of Tears",
+      "facet": "Route 66 and historic roads",
+      "known_at": 10
+    },
+    {
+      "name": "National Road",
+      "facet": "Route 66 and historic roads",
+      "known_at": 13
+    },
+    {
+      "name": "El Camino Real",
+      "facet": "Route 66 and historic roads",
+      "known_at": 12
+    },
+    {
+      "name": "Boston Post Road",
+      "facet": "Route 66 and historic roads",
+      "known_at": 14
+    },
+    {
+      "name": "Chisholm Trail",
+      "facet": "Route 66 and historic roads",
+      "known_at": 12
+    },
+    {
+      "name": "Million Dollar Highway",
+      "facet": "Route 66 and historic roads",
+      "known_at": 14
+    },
+    {
+      "name": "Chesapeake Bay Bridge-Tunnel",
+      "facet": "Famous bridges and tunnels",
+      "known_at": 13
+    },
+    {
+      "name": "George Washington Bridge",
+      "facet": "Famous bridges and tunnels",
+      "known_at": 10
+    },
+    {
+      "name": "Verrazzano-Narrows Bridge",
+      "facet": "Famous bridges and tunnels",
+      "known_at": 12
+    },
+    {
+      "name": "Lincoln Tunnel",
+      "facet": "Famous bridges and tunnels",
+      "known_at": 10
+    },
+    {
+      "name": "Holland Tunnel",
+      "facet": "Famous bridges and tunnels",
+      "known_at": 11
+    },
+    {
+      "name": "Seven Mile Bridge",
+      "facet": "Famous bridges and tunnels",
+      "known_at": 12
+    },
+    {
+      "name": "Lake Pontchartrain Causeway",
+      "facet": "Famous bridges and tunnels",
+      "known_at": 13
+    },
+    {
+      "name": "Tacoma Narrows Bridge",
+      "facet": "Famous bridges and tunnels",
+      "known_at": 13
+    },
+    {
+      "name": "San Francisco–Oakland Bay Bridge",
+      "facet": "Famous bridges and tunnels",
+      "known_at": 10
+    },
+    {
+      "name": "Royal Gorge Bridge",
+      "facet": "Famous bridges and tunnels",
+      "known_at": 13
+    },
+    {
+      "name": "New River Gorge Bridge",
+      "facet": "Famous bridges and tunnels",
+      "known_at": 13
+    },
+    {
+      "name": "Eisenhower Tunnel",
+      "facet": "Famous bridges and tunnels",
+      "known_at": 14
+    },
+    {
+      "name": "Big Dig",
+      "facet": "Famous bridges and tunnels",
+      "known_at": 13
+    },
+    {
+      "name": "Covered bridge",
+      "facet": "Famous bridges and tunnels",
+      "known_at": 8
+    },
+    {
+      "name": "London Bridge in Lake Havasu City",
+      "facet": "Famous bridges and tunnels",
+      "known_at": 12
+    },
+    {
+      "name": "Sunshine Skyway Bridge",
+      "facet": "Famous bridges and tunnels",
+      "known_at": 13
+    },
+    {
+      "name": "Queensboro Bridge",
+      "facet": "Famous bridges and tunnels",
+      "known_at": 13
+    },
+    {
+      "name": "Jefferson Memorial",
+      "facet": "Monuments and memorials",
+      "known_at": 9
+    },
+    {
+      "name": "Vietnam Veterans Memorial",
+      "facet": "Monuments and memorials",
+      "known_at": 10
+    },
+    {
+      "name": "Martin Luther King Jr. Memorial",
+      "facet": "Monuments and memorials",
+      "known_at": 10
+    },
+    {
+      "name": "National September 11 Memorial",
+      "facet": "Monuments and memorials",
+      "known_at": 9
+    },
+    {
+      "name": "USS Arizona Memorial",
+      "facet": "Monuments and memorials",
+      "known_at": 11
+    },
+    {
+      "name": "Marine Corps War Memorial",
+      "facet": "Monuments and memorials",
+      "known_at": 12
+    },
+    {
+      "name": "Tomb of the Unknown Soldier",
+      "facet": "Monuments and memorials",
+      "known_at": 11
+    },
+    {
+      "name": "Korean War Veterans Memorial",
+      "facet": "Monuments and memorials",
+      "known_at": 13
+    },
+    {
+      "name": "World War II Memorial",
+      "facet": "Monuments and memorials",
+      "known_at": 11
+    },
+    {
+      "name": "Franklin Delano Roosevelt Memorial",
+      "facet": "Monuments and memorials",
+      "known_at": 13
+    },
+    {
+      "name": "Statue of Freedom",
+      "facet": "Monuments and memorials",
+      "known_at": 14
+    },
+    {
+      "name": "Maya Lin",
+      "facet": "Monuments and memorials",
+      "known_at": 13
+    },
+    {
+      "name": "Gutzon Borglum",
+      "facet": "Monuments and memorials",
+      "known_at": 13
+    },
+    {
+      "name": "Frédéric Auguste Bartholdi",
+      "facet": "Monuments and memorials",
+      "known_at": 12
+    },
+    {
+      "name": "Great Smoky Mountains National Park",
+      "facet": "National parks and natural landmarks",
+      "known_at": 10
+    },
+    {
+      "name": "Grand Teton",
+      "facet": "National parks and natural landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Mammoth Cave",
+      "facet": "National parks and natural landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "One World Trade Center",
+      "facet": "Skyscrapers and city skylines",
+      "known_at": 8
+    },
+    {
+      "name": "Transamerica Pyramid",
+      "facet": "Skyscrapers and city skylines",
+      "known_at": 12
+    },
+    {
+      "name": "Flatiron Building",
+      "facet": "Skyscrapers and city skylines",
+      "known_at": 11
+    },
+    {
+      "name": "Rockefeller Center",
+      "facet": "Skyscrapers and city skylines",
+      "known_at": 8
+    },
+    {
+      "name": "Woolworth Building",
+      "facet": "Skyscrapers and city skylines",
+      "known_at": 14
+    },
+    {
+      "name": "Home Insurance Building",
+      "facet": "Skyscrapers and city skylines",
+      "known_at": 14
+    },
+    {
+      "name": "John Hancock Center",
+      "facet": "Skyscrapers and city skylines",
+      "known_at": 13
+    },
+    {
+      "name": "The Strat",
+      "facet": "Skyscrapers and city skylines",
+      "known_at": 12
+    },
+    {
+      "name": "Central Park Tower",
+      "facet": "Skyscrapers and city skylines",
+      "known_at": 14
+    },
+    {
+      "name": "Manhattan skyline",
+      "facet": "Skyscrapers and city skylines",
+      "known_at": 5
+    },
+    {
+      "name": "Reunion Tower",
+      "facet": "Skyscrapers and city skylines",
+      "known_at": 13
+    },
+    {
+      "name": "Salesforce Tower",
+      "facet": "Skyscrapers and city skylines",
+      "known_at": 13
+    },
+    {
+      "name": "Elisha Otis",
+      "facet": "Skyscrapers and city skylines",
+      "known_at": 12
+    },
+    {
+      "name": "Skyscraper",
+      "facet": "Skyscrapers and city skylines",
+      "known_at": 5
+    },
+    {
+      "name": "Lunch atop a Skyscraper",
+      "facet": "Skyscrapers and city skylines",
+      "known_at": 11
+    },
+    {
+      "name": "Louis Sullivan",
+      "facet": "Skyscrapers and city skylines",
+      "known_at": 14
+    },
+    {
+      "name": "Panama Canal",
+      "facet": "Dams, canals and engineering feats",
+      "known_at": 9
+    },
+    {
+      "name": "Transcontinental Railroad",
+      "facet": "Dams, canals and engineering feats",
+      "known_at": 10
+    },
+    {
+      "name": "Golden Spike",
+      "facet": "Dams, canals and engineering feats",
+      "known_at": 11
+    },
+    {
+      "name": "Trans-Alaska Pipeline",
+      "facet": "Dams, canals and engineering feats",
+      "known_at": 13
+    },
+    {
+      "name": "Reversal of the Chicago River",
+      "facet": "Dams, canals and engineering feats",
+      "known_at": 14
+    },
+    {
+      "name": "Los Angeles Aqueduct",
+      "facet": "Dams, canals and engineering feats",
+      "known_at": 14
+    },
+    {
+      "name": "Intracoastal Waterway",
+      "facet": "Dams, canals and engineering feats",
+      "known_at": 13
+    },
+    {
+      "name": "St. Lawrence Seaway",
+      "facet": "Dams, canals and engineering feats",
+      "known_at": 13
+    },
+    {
+      "name": "Canal lock",
+      "facet": "Dams, canals and engineering feats",
+      "known_at": 11
+    },
+    {
+      "name": "Cadillac Ranch",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 11
+    },
+    {
+      "name": "Wall Drug",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 12
+    },
+    {
+      "name": "World's Largest Ball of Twine",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 12
+    },
+    {
+      "name": "Carhenge",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 13
+    },
+    {
+      "name": "Corn Palace",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 13
+    },
+    {
+      "name": "Wigwam Motel",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 12
+    },
+    {
+      "name": "South of the Border",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 13
+    },
+    {
+      "name": "Mystery Spot",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 13
+    },
+    {
+      "name": "Paul Bunyan statue",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 9
+    },
+    {
+      "name": "Big Texan Steak Ranch",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 13
+    },
+    {
+      "name": "Cabazon Dinosaurs",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 13
+    },
+    {
+      "name": "Muffler Man",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 14
+    },
+    {
+      "name": "Randy's Donuts",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 12
+    },
+    {
+      "name": "Welcome to Fabulous Las Vegas sign",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 8
+    },
+    {
+      "name": "Four Corners Monument",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 9
+    },
+    {
+      "name": "Truck stop",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 7
+    },
+    {
+      "name": "Diner",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 5
+    },
+    {
+      "name": "Drive-in theater",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 7
+    },
+    {
+      "name": "Motel",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 5
+    },
+    {
+      "name": "Buc-ee's",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 10
+    },
+    {
+      "name": "Waffle House",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 10
+    },
+    {
+      "name": "License plate game",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 8
+    },
+    {
+      "name": "Gas station",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 3
+    },
+    {
+      "name": "On the Road",
+      "facet": "Roadside attractions and road trip culture",
+      "known_at": 13
+    },
+    {
+      "name": "Broadway",
+      "facet": "Famous streets and boulevards",
+      "known_at": 7
+    },
+    {
+      "name": "Fifth Avenue",
+      "facet": "Famous streets and boulevards",
+      "known_at": 10
+    },
+    {
+      "name": "Pennsylvania Avenue",
+      "facet": "Famous streets and boulevards",
+      "known_at": 10
+    },
+    {
+      "name": "Bourbon Street",
+      "facet": "Famous streets and boulevards",
+      "known_at": 11
+    },
+    {
+      "name": "Lombard Street",
+      "facet": "Famous streets and boulevards",
+      "known_at": 11
+    },
+    {
+      "name": "Sunset Boulevard",
+      "facet": "Famous streets and boulevards",
+      "known_at": 11
+    },
+    {
+      "name": "Rodeo Drive",
+      "facet": "Famous streets and boulevards",
+      "known_at": 11
+    },
+    {
+      "name": "Magnificent Mile",
+      "facet": "Famous streets and boulevards",
+      "known_at": 13
+    },
+    {
+      "name": "Main Street, U.S.A.",
+      "facet": "Famous streets and boulevards",
+      "known_at": 6
+    },
+    {
+      "name": "Ocean Drive",
+      "facet": "Famous streets and boulevards",
+      "known_at": 12
+    },
+    {
+      "name": "Mulholland Drive",
+      "facet": "Famous streets and boulevards",
+      "known_at": 13
+    },
+    {
+      "name": "Park Avenue",
+      "facet": "Famous streets and boulevards",
+      "known_at": 10
+    },
+    {
+      "name": "Atlantic City Boardwalk",
+      "facet": "Famous streets and boulevards",
+      "known_at": 7
+    },
+    {
+      "name": "Peachtree Street",
+      "facet": "Famous streets and boulevards",
+      "known_at": 13
+    },
+    {
+      "name": "Madison Avenue",
+      "facet": "Famous streets and boulevards",
+      "known_at": 12
+    },
+    {
+      "name": "U.S. Capitol",
+      "facet": "Historic sites and buildings",
+      "known_at": 6
+    },
+    {
+      "name": "Oval Office",
+      "facet": "Historic sites and buildings",
+      "known_at": 6
+    },
+    {
+      "name": "Alamo",
+      "facet": "Historic sites and buildings",
+      "known_at": 9
+    },
+    {
+      "name": "Pentagon",
+      "facet": "Historic sites and buildings",
+      "known_at": 9
+    },
+    {
+      "name": "Ellis Island",
+      "facet": "Historic sites and buildings",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Vernon",
+      "facet": "Historic sites and buildings",
+      "known_at": 11
+    },
+    {
+      "name": "Monticello",
+      "facet": "Historic sites and buildings",
+      "known_at": 12
+    },
+    {
+      "name": "Fort Sumter",
+      "facet": "Historic sites and buildings",
+      "known_at": 12
+    },
+    {
+      "name": "Mesa Verde",
+      "facet": "Historic sites and buildings",
+      "known_at": 13
+    },
+    {
+      "name": "Cahokia Mounds",
+      "facet": "Historic sites and buildings",
+      "known_at": 14
+    },
+    {
+      "name": "Hearst Castle",
+      "facet": "Historic sites and buildings",
+      "known_at": 13
+    },
+    {
+      "name": "Biltmore Estate",
+      "facet": "Historic sites and buildings",
+      "known_at": 13
+    },
+    {
+      "name": "Fallingwater",
+      "facet": "Historic sites and buildings",
+      "known_at": 13
+    },
+    {
+      "name": "Fort Knox",
+      "facet": "Historic sites and buildings",
+      "known_at": 10
+    },
+    {
+      "name": "Rocky Steps",
+      "facet": "Landmarks in movies and TV",
+      "known_at": 10
+    },
+    {
+      "name": "Painted Ladies",
+      "facet": "Landmarks in movies and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Griffith Observatory",
+      "facet": "Landmarks in movies and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Stanley Hotel",
+      "facet": "Landmarks in movies and TV",
+      "known_at": 13
+    },
+    {
+      "name": "Ghostbusters firehouse",
+      "facet": "Landmarks in movies and TV",
+      "known_at": 13
+    },
+    {
+      "name": "Field of Dreams",
+      "facet": "Landmarks in movies and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Area 51",
+      "facet": "Landmarks in movies and TV",
+      "known_at": 9
+    },
+    {
+      "name": "Friends apartment building",
+      "facet": "Landmarks in movies and TV",
+      "known_at": 11
+    },
+    {
+      "name": "TCL Chinese Theatre",
+      "facet": "Landmarks in movies and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Home Alone house",
+      "facet": "Landmarks in movies and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Tom's Restaurant",
+      "facet": "Landmarks in movies and TV",
+      "known_at": 13
+    },
+    {
+      "name": "American Museum of Natural History",
+      "facet": "Landmarks in movies and TV",
+      "known_at": 7
+    },
+    {
+      "name": "Universal Studios Hollywood",
+      "facet": "Landmarks in movies and TV",
+      "known_at": 8
+    },
+    {
+      "name": "Cinderella Castle",
+      "facet": "Landmarks in movies and TV",
+      "known_at": 4
+    },
+    {
+      "name": "Cheers bar",
+      "facet": "Landmarks in movies and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Forks, Washington",
+      "facet": "Landmarks in movies and TV",
+      "known_at": 13
+    }
+  ]
+}

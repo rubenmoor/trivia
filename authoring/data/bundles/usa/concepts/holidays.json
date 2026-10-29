@@ -1,0 +1,792 @@
+{
+  "subcategory": "holidays",
+  "facets": [
+    "Thanksgiving traditions",
+    "Fourth of July celebrations",
+    "Halloween customs and costumes",
+    "Federal holidays and their origins",
+    "Days honoring veterans and the fallen",
+    "Holiday foods and treats",
+    "Quirky and unofficial holidays",
+    "Holiday parades and public events",
+    "Heritage and cultural celebrations",
+    "Holiday shopping and sales days",
+    "Holidays in movies and TV specials",
+    "Holiday symbols, mascots and characters"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "First Thanksgiving of 1621",
+      "facet": "Thanksgiving traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Turkey Trot",
+      "facet": "Thanksgiving traditions",
+      "known_at": 8
+    },
+    {
+      "name": "NFL Thanksgiving Day games",
+      "facet": "Thanksgiving traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Detroit Lions",
+      "facet": "Thanksgiving traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Franksgiving",
+      "facet": "Thanksgiving traditions",
+      "known_at": 14
+    },
+    {
+      "name": "Kids' table",
+      "facet": "Thanksgiving traditions",
+      "known_at": 3
+    },
+    {
+      "name": "Butterball Turkey Talk-Line",
+      "facet": "Thanksgiving traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Fourth Thursday of November",
+      "facet": "Thanksgiving traditions",
+      "known_at": 5
+    },
+    {
+      "name": "Fireworks",
+      "facet": "Fourth of July celebrations",
+      "known_at": 1
+    },
+    {
+      "name": "Joey Chestnut",
+      "facet": "Fourth of July celebrations",
+      "known_at": 11
+    },
+    {
+      "name": "Coney Island",
+      "facet": "Fourth of July celebrations",
+      "known_at": 8
+    },
+    {
+      "name": "Macy's Fourth of July Fireworks",
+      "facet": "Fourth of July celebrations",
+      "known_at": 9
+    },
+    {
+      "name": "Sparklers",
+      "facet": "Fourth of July celebrations",
+      "known_at": 2
+    },
+    {
+      "name": "Backyard barbecue",
+      "facet": "Fourth of July celebrations",
+      "known_at": 2
+    },
+    {
+      "name": "The Stars and Stripes Forever",
+      "facet": "Fourth of July celebrations",
+      "known_at": 12
+    },
+    {
+      "name": "Boston Pops Fireworks Spectacular",
+      "facet": "Fourth of July celebrations",
+      "known_at": 12
+    },
+    {
+      "name": "National Mall fireworks",
+      "facet": "Fourth of July celebrations",
+      "known_at": 9
+    },
+    {
+      "name": "Jack-o'-lantern",
+      "facet": "Halloween customs and costumes",
+      "known_at": 2
+    },
+    {
+      "name": "Haunted house",
+      "facet": "Halloween customs and costumes",
+      "known_at": 2
+    },
+    {
+      "name": "Bobbing for apples",
+      "facet": "Halloween customs and costumes",
+      "known_at": 4
+    },
+    {
+      "name": "Samhain",
+      "facet": "Halloween customs and costumes",
+      "known_at": 11
+    },
+    {
+      "name": "Turnip lantern",
+      "facet": "Halloween customs and costumes",
+      "known_at": 11
+    },
+    {
+      "name": "Trunk-or-treat",
+      "facet": "Halloween customs and costumes",
+      "known_at": 6
+    },
+    {
+      "name": "Teal Pumpkin Project",
+      "facet": "Halloween customs and costumes",
+      "known_at": 11
+    },
+    {
+      "name": "Headless Horseman",
+      "facet": "Halloween customs and costumes",
+      "known_at": 6
+    },
+    {
+      "name": "The Legend of Sleepy Hollow",
+      "facet": "Halloween customs and costumes",
+      "known_at": 9
+    },
+    {
+      "name": "Salem, Massachusetts",
+      "facet": "Halloween customs and costumes",
+      "known_at": 9
+    },
+    {
+      "name": "Mischief Night",
+      "facet": "Halloween customs and costumes",
+      "known_at": 12
+    },
+    {
+      "name": "Witch costume",
+      "facet": "Halloween customs and costumes",
+      "known_at": 1
+    },
+    {
+      "name": "Monster Mash",
+      "facet": "Halloween customs and costumes",
+      "known_at": 8
+    },
+    {
+      "name": "Full-size candy bar",
+      "facet": "Halloween customs and costumes",
+      "known_at": 4
+    },
+    {
+      "name": "Toilet papering",
+      "facet": "Halloween customs and costumes",
+      "known_at": 7
+    },
+    {
+      "name": "General Order No. 3",
+      "facet": "Federal holidays and their origins",
+      "known_at": 14
+    },
+    {
+      "name": "Galveston, Texas",
+      "facet": "Federal holidays and their origins",
+      "known_at": 12
+    },
+    {
+      "name": "Grover Cleveland",
+      "facet": "Federal holidays and their origins",
+      "known_at": 13
+    },
+    {
+      "name": "Columbus Day",
+      "facet": "Federal holidays and their origins",
+      "known_at": 5
+    },
+    {
+      "name": "New Year's Day",
+      "facet": "Federal holidays and their origins",
+      "known_at": 1
+    },
+    {
+      "name": "Uniform Monday Holiday Act",
+      "facet": "Federal holidays and their origins",
+      "known_at": 14
+    },
+    {
+      "name": "Coretta Scott King",
+      "facet": "Federal holidays and their origins",
+      "known_at": 10
+    },
+    {
+      "name": "Abraham Lincoln's Thanksgiving Proclamation",
+      "facet": "Federal holidays and their origins",
+      "known_at": 12
+    },
+    {
+      "name": "Christmas Day",
+      "facet": "Federal holidays and their origins",
+      "known_at": 1
+    },
+    {
+      "name": "Long weekend",
+      "facet": "Federal holidays and their origins",
+      "known_at": 5
+    },
+    {
+      "name": "Armistice Day",
+      "facet": "Days honoring veterans and the fallen",
+      "known_at": 11
+    },
+    {
+      "name": "Decoration Day",
+      "facet": "Days honoring veterans and the fallen",
+      "known_at": 13
+    },
+    {
+      "name": "Red poppy",
+      "facet": "Days honoring veterans and the fallen",
+      "known_at": 9
+    },
+    {
+      "name": "Moina Michael",
+      "facet": "Days honoring veterans and the fallen",
+      "known_at": 15
+    },
+    {
+      "name": "Flag at half-staff",
+      "facet": "Days honoring veterans and the fallen",
+      "known_at": 6
+    },
+    {
+      "name": "Pearl Harbor Remembrance Day",
+      "facet": "Days honoring veterans and the fallen",
+      "known_at": 10
+    },
+    {
+      "name": "Patriot Day",
+      "facet": "Days honoring veterans and the fallen",
+      "known_at": 10
+    },
+    {
+      "name": "Gold Star families",
+      "facet": "Days honoring veterans and the fallen",
+      "known_at": 13
+    },
+    {
+      "name": "Wreaths Across America",
+      "facet": "Days honoring veterans and the fallen",
+      "known_at": 12
+    },
+    {
+      "name": "Armed Forces Day",
+      "facet": "Days honoring veterans and the fallen",
+      "known_at": 10
+    },
+    {
+      "name": "Honor Flight",
+      "facet": "Days honoring veterans and the fallen",
+      "known_at": 13
+    },
+    {
+      "name": "Eleventh hour of the eleventh day",
+      "facet": "Days honoring veterans and the fallen",
+      "known_at": 11
+    },
+    {
+      "name": "Sweet potato casserole with marshmallows",
+      "facet": "Holiday foods and treats",
+      "known_at": 6
+    },
+    {
+      "name": "Sweethearts conversation hearts",
+      "facet": "Holiday foods and treats",
+      "known_at": 5
+    },
+    {
+      "name": "Corned beef and cabbage",
+      "facet": "Holiday foods and treats",
+      "known_at": 10
+    },
+    {
+      "name": "Reese's Peanut Butter Pumpkins",
+      "facet": "Holiday foods and treats",
+      "known_at": 6
+    },
+    {
+      "name": "Festivus",
+      "facet": "Quirky and unofficial holidays",
+      "known_at": 12
+    },
+    {
+      "name": "Pi Day",
+      "facet": "Quirky and unofficial holidays",
+      "known_at": 7
+    },
+    {
+      "name": "Talk Like a Pirate Day",
+      "facet": "Quirky and unofficial holidays",
+      "known_at": 9
+    },
+    {
+      "name": "Sadie Hawkins Day",
+      "facet": "Quirky and unofficial holidays",
+      "known_at": 13
+    },
+    {
+      "name": "National Ice Cream Day",
+      "facet": "Quirky and unofficial holidays",
+      "known_at": 6
+    },
+    {
+      "name": "Super Bowl Sunday",
+      "facet": "Quirky and unofficial holidays",
+      "known_at": 4
+    },
+    {
+      "name": "Sweetest Day",
+      "facet": "Quirky and unofficial holidays",
+      "known_at": 12
+    },
+    {
+      "name": "National Hot Dog Day",
+      "facet": "Quirky and unofficial holidays",
+      "known_at": 7
+    },
+    {
+      "name": "Earth Day",
+      "facet": "Quirky and unofficial holidays",
+      "known_at": 4
+    },
+    {
+      "name": "Leap Day",
+      "facet": "Quirky and unofficial holidays",
+      "known_at": 6
+    },
+    {
+      "name": "National Pancake Day",
+      "facet": "Quirky and unofficial holidays",
+      "known_at": 7
+    },
+    {
+      "name": "Macy's Thanksgiving Day Parade",
+      "facet": "Holiday parades and public events",
+      "known_at": 3
+    },
+    {
+      "name": "Giant character balloons",
+      "facet": "Holiday parades and public events",
+      "known_at": 4
+    },
+    {
+      "name": "Rose Parade",
+      "facet": "Holiday parades and public events",
+      "known_at": 9
+    },
+    {
+      "name": "Pasadena, California",
+      "facet": "Holiday parades and public events",
+      "known_at": 11
+    },
+    {
+      "name": "Rose Bowl",
+      "facet": "Holiday parades and public events",
+      "known_at": 9
+    },
+    {
+      "name": "Times Square Ball Drop",
+      "facet": "Holiday parades and public events",
+      "known_at": 4
+    },
+    {
+      "name": "New Orleans Mardi Gras",
+      "facet": "Holiday parades and public events",
+      "known_at": 7
+    },
+    {
+      "name": "Mardi Gras beads",
+      "facet": "Holiday parades and public events",
+      "known_at": 8
+    },
+    {
+      "name": "Krewe",
+      "facet": "Holiday parades and public events",
+      "known_at": 13
+    },
+    {
+      "name": "St. Patrick's Day Parade in New York City",
+      "facet": "Holiday parades and public events",
+      "known_at": 9
+    },
+    {
+      "name": "Chicago River dyed green",
+      "facet": "Holiday parades and public events",
+      "known_at": 9
+    },
+    {
+      "name": "Village Halloween Parade",
+      "facet": "Holiday parades and public events",
+      "known_at": 13
+    },
+    {
+      "name": "Mummers Parade",
+      "facet": "Holiday parades and public events",
+      "known_at": 13
+    },
+    {
+      "name": "Bristol Fourth of July Parade",
+      "facet": "Holiday parades and public events",
+      "known_at": 14
+    },
+    {
+      "name": "San Francisco Chinese New Year Parade",
+      "facet": "Holiday parades and public events",
+      "known_at": 11
+    },
+    {
+      "name": "Kwanzaa",
+      "facet": "Heritage and cultural celebrations",
+      "known_at": 6
+    },
+    {
+      "name": "Kinara",
+      "facet": "Heritage and cultural celebrations",
+      "known_at": 11
+    },
+    {
+      "name": "Maulana Karenga",
+      "facet": "Heritage and cultural celebrations",
+      "known_at": 14
+    },
+    {
+      "name": "Cinco de Mayo",
+      "facet": "Heritage and cultural celebrations",
+      "known_at": 5
+    },
+    {
+      "name": "Battle of Puebla",
+      "facet": "Heritage and cultural celebrations",
+      "known_at": 12
+    },
+    {
+      "name": "St. Patrick's Day",
+      "facet": "Heritage and cultural celebrations",
+      "known_at": 3
+    },
+    {
+      "name": "Black History Month",
+      "facet": "Heritage and cultural celebrations",
+      "known_at": 5
+    },
+    {
+      "name": "Carter G. Woodson",
+      "facet": "Heritage and cultural celebrations",
+      "known_at": 13
+    },
+    {
+      "name": "Hispanic Heritage Month",
+      "facet": "Heritage and cultural celebrations",
+      "known_at": 9
+    },
+    {
+      "name": "Lei Day",
+      "facet": "Heritage and cultural celebrations",
+      "known_at": 12
+    },
+    {
+      "name": "Asian American and Pacific Islander Heritage Month",
+      "facet": "Heritage and cultural celebrations",
+      "known_at": 11
+    },
+    {
+      "name": "Women's History Month",
+      "facet": "Heritage and cultural celebrations",
+      "known_at": 7
+    },
+    {
+      "name": "Día de los Muertos",
+      "facet": "Heritage and cultural celebrations",
+      "known_at": 5
+    },
+    {
+      "name": "Lunar New Year",
+      "facet": "Heritage and cultural celebrations",
+      "known_at": 5
+    },
+    {
+      "name": "Pennsylvania Dutch Christmas",
+      "facet": "Heritage and cultural celebrations",
+      "known_at": 14
+    },
+    {
+      "name": "Black Friday",
+      "facet": "Holiday shopping and sales days",
+      "known_at": 4
+    },
+    {
+      "name": "Cyber Monday",
+      "facet": "Holiday shopping and sales days",
+      "known_at": 6
+    },
+    {
+      "name": "Small Business Saturday",
+      "facet": "Holiday shopping and sales days",
+      "known_at": 10
+    },
+    {
+      "name": "Giving Tuesday",
+      "facet": "Holiday shopping and sales days",
+      "known_at": 10
+    },
+    {
+      "name": "Doorbuster",
+      "facet": "Holiday shopping and sales days",
+      "known_at": 9
+    },
+    {
+      "name": "Layaway",
+      "facet": "Holiday shopping and sales days",
+      "known_at": 11
+    },
+    {
+      "name": "Sears Wish Book",
+      "facet": "Holiday shopping and sales days",
+      "known_at": 13
+    },
+    {
+      "name": "Christmas in July",
+      "facet": "Holiday shopping and sales days",
+      "known_at": 8
+    },
+    {
+      "name": "Amazon Prime Day",
+      "facet": "Holiday shopping and sales days",
+      "known_at": 7
+    },
+    {
+      "name": "Sales tax holiday",
+      "facet": "Holiday shopping and sales days",
+      "known_at": 12
+    },
+    {
+      "name": "Super Saturday",
+      "facet": "Holiday shopping and sales days",
+      "known_at": 13
+    },
+    {
+      "name": "Mall Santa",
+      "facet": "Holiday shopping and sales days",
+      "known_at": 3
+    },
+    {
+      "name": "Gift card",
+      "facet": "Holiday shopping and sales days",
+      "known_at": 3
+    },
+    {
+      "name": "Presidents' Day mattress sale",
+      "facet": "Holiday shopping and sales days",
+      "known_at": 11
+    },
+    {
+      "name": "Back-to-school shopping",
+      "facet": "Holiday shopping and sales days",
+      "known_at": 4
+    },
+    {
+      "name": "Gray Thursday",
+      "facet": "Holiday shopping and sales days",
+      "known_at": 13
+    },
+    {
+      "name": "In the black",
+      "facet": "Holiday shopping and sales days",
+      "known_at": 11
+    },
+    {
+      "name": "A Charlie Brown Christmas",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 5
+    },
+    {
+      "name": "It's the Great Pumpkin, Charlie Brown",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 7
+    },
+    {
+      "name": "A Charlie Brown Thanksgiving",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 7
+    },
+    {
+      "name": "How the Grinch Stole Christmas!",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 3
+    },
+    {
+      "name": "Home Alone",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 3
+    },
+    {
+      "name": "Elf",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 5
+    },
+    {
+      "name": "A Christmas Story",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 9
+    },
+    {
+      "name": "It's a Wonderful Life",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 10
+    },
+    {
+      "name": "Miracle on 34th Street",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 9
+    },
+    {
+      "name": "National Lampoon's Christmas Vacation",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 11
+    },
+    {
+      "name": "Hocus Pocus",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 6
+    },
+    {
+      "name": "Independence Day (1996 film)",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 10
+    },
+    {
+      "name": "The Nightmare Before Christmas",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 5
+    },
+    {
+      "name": "Planes, Trains and Automobiles",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 12
+    },
+    {
+      "name": "The Polar Express",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 3
+    },
+    {
+      "name": "Halloweentown",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 9
+    },
+    {
+      "name": "The Santa Clause",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 6
+    },
+    {
+      "name": "Linus van Pelt",
+      "facet": "Holidays in movies and TV specials",
+      "known_at": 7
+    },
+    {
+      "name": "Stars and Stripes",
+      "facet": "Holiday symbols, mascots and characters",
+      "known_at": 3
+    },
+    {
+      "name": "Tom Turkey",
+      "facet": "Holiday symbols, mascots and characters",
+      "known_at": 3
+    },
+    {
+      "name": "Cornucopia",
+      "facet": "Holiday symbols, mascots and characters",
+      "known_at": 7
+    },
+    {
+      "name": "Rudolph the Red-Nosed Reindeer",
+      "facet": "Holiday symbols, mascots and characters",
+      "known_at": 1
+    },
+    {
+      "name": "Frosty the Snowman",
+      "facet": "Holiday symbols, mascots and characters",
+      "known_at": 2
+    },
+    {
+      "name": "The Grinch",
+      "facet": "Holiday symbols, mascots and characters",
+      "known_at": 2
+    },
+    {
+      "name": "Elf on the Shelf",
+      "facet": "Holiday symbols, mascots and characters",
+      "known_at": 3
+    },
+    {
+      "name": "A Visit from St. Nicholas",
+      "facet": "Holiday symbols, mascots and characters",
+      "known_at": 6
+    },
+    {
+      "name": "Coca-Cola Santa Claus",
+      "facet": "Holiday symbols, mascots and characters",
+      "known_at": 9
+    },
+    {
+      "name": "Christmas pickle",
+      "facet": "Holiday symbols, mascots and characters",
+      "known_at": 11
+    },
+    {
+      "name": "Leprechaun",
+      "facet": "Holiday symbols, mascots and characters",
+      "known_at": 4
+    },
+    {
+      "name": "Easter Bunny",
+      "facet": "Holiday symbols, mascots and characters",
+      "known_at": 1
+    }
+  ]
+}

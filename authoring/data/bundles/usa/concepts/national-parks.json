@@ -1,0 +1,837 @@
+{
+  "subcategory": "national-parks",
+  "facets": [
+    "Famous parks and their landmarks",
+    "Geysers, hot springs and volcanoes",
+    "Canyons, arches and rock formations",
+    "Mountains, glaciers and peaks",
+    "Caves, deserts and dunes",
+    "Forests, giant trees and plants",
+    "Park wildlife",
+    "Rivers, waterfalls, lakes and coasts",
+    "History and founders of the parks",
+    "Rangers, rules and park traditions",
+    "Visiting: trails, roads and camping",
+    "Parks in films, cartoons and games"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 5,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Acadia National Park",
+      "facet": "Famous parks and their landmarks",
+      "known_at": 11
+    },
+    {
+      "name": "Bryce Canyon National Park",
+      "facet": "Famous parks and their landmarks",
+      "known_at": 9
+    },
+    {
+      "name": "Badlands National Park",
+      "facet": "Famous parks and their landmarks",
+      "known_at": 10
+    },
+    {
+      "name": "Gateway Arch National Park",
+      "facet": "Famous parks and their landmarks",
+      "known_at": 9
+    },
+    {
+      "name": "Big Bend National Park",
+      "facet": "Famous parks and their landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Mount Rainier National Park",
+      "facet": "Famous parks and their landmarks",
+      "known_at": 11
+    },
+    {
+      "name": "Haleakalā National Park",
+      "facet": "Famous parks and their landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Dry Tortugas National Park",
+      "facet": "Famous parks and their landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Grand Prismatic Spring",
+      "facet": "Geysers, hot springs and volcanoes",
+      "known_at": 7
+    },
+    {
+      "name": "Steamboat Geyser",
+      "facet": "Geysers, hot springs and volcanoes",
+      "known_at": 12
+    },
+    {
+      "name": "Mammoth Hot Springs",
+      "facet": "Geysers, hot springs and volcanoes",
+      "known_at": 11
+    },
+    {
+      "name": "Yellowstone Caldera",
+      "facet": "Geysers, hot springs and volcanoes",
+      "known_at": 9
+    },
+    {
+      "name": "Lassen Peak",
+      "facet": "Geysers, hot springs and volcanoes",
+      "known_at": 13
+    },
+    {
+      "name": "Mud pot",
+      "facet": "Geysers, hot springs and volcanoes",
+      "known_at": 10
+    },
+    {
+      "name": "Fumarole",
+      "facet": "Geysers, hot springs and volcanoes",
+      "known_at": 12
+    },
+    {
+      "name": "Lava tube",
+      "facet": "Geysers, hot springs and volcanoes",
+      "known_at": 10
+    },
+    {
+      "name": "Norris Geyser Basin",
+      "facet": "Geysers, hot springs and volcanoes",
+      "known_at": 13
+    },
+    {
+      "name": "Hot Springs National Park",
+      "facet": "Geysers, hot springs and volcanoes",
+      "known_at": 11
+    },
+    {
+      "name": "Morning Glory Pool",
+      "facet": "Geysers, hot springs and volcanoes",
+      "known_at": 13
+    },
+    {
+      "name": "Thermophile",
+      "facet": "Geysers, hot springs and volcanoes",
+      "known_at": 13
+    },
+    {
+      "name": "Delicate Arch",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 8
+    },
+    {
+      "name": "Landscape Arch",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 12
+    },
+    {
+      "name": "Hoodoo",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 9
+    },
+    {
+      "name": "Thor's Hammer",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 13
+    },
+    {
+      "name": "Grand Canyon of the Yellowstone",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 11
+    },
+    {
+      "name": "The Narrows",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 11
+    },
+    {
+      "name": "Balanced Rock",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 10
+    },
+    {
+      "name": "Double Arch",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 12
+    },
+    {
+      "name": "Natural bridge",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 10
+    },
+    {
+      "name": "Petroglyph",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 10
+    },
+    {
+      "name": "Sandstone",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 6
+    },
+    {
+      "name": "Erosion",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 5
+    },
+    {
+      "name": "Rock strata",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 9
+    },
+    {
+      "name": "Mesa",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 8
+    },
+    {
+      "name": "Butte",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 9
+    },
+    {
+      "name": "Bryce Amphitheater",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 13
+    },
+    {
+      "name": "Desert varnish",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 13
+    },
+    {
+      "name": "Vishnu Schist",
+      "facet": "Canyons, arches and rock formations",
+      "known_at": 15
+    },
+    {
+      "name": "Cadillac Mountain",
+      "facet": "Mountains, glaciers and peaks",
+      "known_at": 13
+    },
+    {
+      "name": "Glacier",
+      "facet": "Mountains, glaciers and peaks",
+      "known_at": 5
+    },
+    {
+      "name": "Grinnell Glacier",
+      "facet": "Mountains, glaciers and peaks",
+      "known_at": 13
+    },
+    {
+      "name": "Glacier Bay",
+      "facet": "Mountains, glaciers and peaks",
+      "known_at": 11
+    },
+    {
+      "name": "Margerie Glacier",
+      "facet": "Mountains, glaciers and peaks",
+      "known_at": 13
+    },
+    {
+      "name": "Wrangell–St. Elias National Park",
+      "facet": "Mountains, glaciers and peaks",
+      "known_at": 13
+    },
+    {
+      "name": "Tree line",
+      "facet": "Mountains, glaciers and peaks",
+      "known_at": 9
+    },
+    {
+      "name": "Alpine tundra",
+      "facet": "Mountains, glaciers and peaks",
+      "known_at": 10
+    },
+    {
+      "name": "Moraine",
+      "facet": "Mountains, glaciers and peaks",
+      "known_at": 12
+    },
+    {
+      "name": "Stalactite",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 5
+    },
+    {
+      "name": "Stalagmite",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 6
+    },
+    {
+      "name": "Big Room",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 13
+    },
+    {
+      "name": "Wind Cave",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 12
+    },
+    {
+      "name": "Jewel Cave",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 13
+    },
+    {
+      "name": "Lechuguilla Cave",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 14
+    },
+    {
+      "name": "Boxwork",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 14
+    },
+    {
+      "name": "Badwater Basin",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 11
+    },
+    {
+      "name": "Furnace Creek",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 13
+    },
+    {
+      "name": "Zabriskie Point",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 13
+    },
+    {
+      "name": "Racetrack Playa",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 12
+    },
+    {
+      "name": "Mojave Desert",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 8
+    },
+    {
+      "name": "Sonoran Desert",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 9
+    },
+    {
+      "name": "Chihuahuan Desert",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 12
+    },
+    {
+      "name": "Great Sand Dunes",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 11
+    },
+    {
+      "name": "White Sands",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 9
+    },
+    {
+      "name": "Gypsum",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 10
+    },
+    {
+      "name": "Superbloom",
+      "facet": "Caves, deserts and dunes",
+      "known_at": 11
+    },
+    {
+      "name": "Petrified Forest",
+      "facet": "Forests, giant trees and plants",
+      "known_at": 9
+    },
+    {
+      "name": "Lodgepole pine",
+      "facet": "Forests, giant trees and plants",
+      "known_at": 12
+    },
+    {
+      "name": "Rhododendron",
+      "facet": "Forests, giant trees and plants",
+      "known_at": 12
+    },
+    {
+      "name": "American black bear",
+      "facet": "Park wildlife",
+      "known_at": 3
+    },
+    {
+      "name": "Manatee",
+      "facet": "Park wildlife",
+      "known_at": 5
+    },
+    {
+      "name": "Prairie dog",
+      "facet": "Park wildlife",
+      "known_at": 5
+    },
+    {
+      "name": "Mexican free-tailed bat",
+      "facet": "Park wildlife",
+      "known_at": 11
+    },
+    {
+      "name": "Pika",
+      "facet": "Park wildlife",
+      "known_at": 9
+    },
+    {
+      "name": "Marmot",
+      "facet": "Park wildlife",
+      "known_at": 9
+    },
+    {
+      "name": "Roadrunner",
+      "facet": "Park wildlife",
+      "known_at": 4
+    },
+    {
+      "name": "Horsetail Fall",
+      "facet": "Rivers, waterfalls, lakes and coasts",
+      "known_at": 12
+    },
+    {
+      "name": "Lower Falls of the Yellowstone",
+      "facet": "Rivers, waterfalls, lakes and coasts",
+      "known_at": 13
+    },
+    {
+      "name": "Wizard Island",
+      "facet": "Rivers, waterfalls, lakes and coasts",
+      "known_at": 13
+    },
+    {
+      "name": "Jenny Lake",
+      "facet": "Rivers, waterfalls, lakes and coasts",
+      "known_at": 13
+    },
+    {
+      "name": "Virgin River",
+      "facet": "Rivers, waterfalls, lakes and coasts",
+      "known_at": 13
+    },
+    {
+      "name": "Firehole River",
+      "facet": "Rivers, waterfalls, lakes and coasts",
+      "known_at": 14
+    },
+    {
+      "name": "Florida Bay",
+      "facet": "Rivers, waterfalls, lakes and coasts",
+      "known_at": 12
+    },
+    {
+      "name": "Kenai Fjords",
+      "facet": "Rivers, waterfalls, lakes and coasts",
+      "known_at": 13
+    },
+    {
+      "name": "Thunder Hole",
+      "facet": "Rivers, waterfalls, lakes and coasts",
+      "known_at": 13
+    },
+    {
+      "name": "Ruby Beach",
+      "facet": "Rivers, waterfalls, lakes and coasts",
+      "known_at": 13
+    },
+    {
+      "name": "Channel Islands",
+      "facet": "Rivers, waterfalls, lakes and coasts",
+      "known_at": 12
+    },
+    {
+      "name": "Cape Hatteras Lighthouse",
+      "facet": "Rivers, waterfalls, lakes and coasts",
+      "known_at": 11
+    },
+    {
+      "name": "Cape Cod National Seashore",
+      "facet": "Rivers, waterfalls, lakes and coasts",
+      "known_at": 11
+    },
+    {
+      "name": "Ulysses S. Grant",
+      "facet": "History and founders of the parks",
+      "known_at": 8
+    },
+    {
+      "name": "Woodrow Wilson",
+      "facet": "History and founders of the parks",
+      "known_at": 10
+    },
+    {
+      "name": "Abraham Lincoln",
+      "facet": "History and founders of the parks",
+      "known_at": 3
+    },
+    {
+      "name": "National Park Service",
+      "facet": "History and founders of the parks",
+      "known_at": 7
+    },
+    {
+      "name": "Yellowstone Act",
+      "facet": "History and founders of the parks",
+      "known_at": 12
+    },
+    {
+      "name": "Yosemite Grant",
+      "facet": "History and founders of the parks",
+      "known_at": 12
+    },
+    {
+      "name": "Antiquities Act",
+      "facet": "History and founders of the parks",
+      "known_at": 13
+    },
+    {
+      "name": "Civilian Conservation Corps",
+      "facet": "History and founders of the parks",
+      "known_at": 12
+    },
+    {
+      "name": "Stephen Mather",
+      "facet": "History and founders of the parks",
+      "known_at": 14
+    },
+    {
+      "name": "Ansel Adams",
+      "facet": "History and founders of the parks",
+      "known_at": 12
+    },
+    {
+      "name": "Buffalo Soldiers",
+      "facet": "History and founders of the parks",
+      "known_at": 12
+    },
+    {
+      "name": "Hayden Expedition",
+      "facet": "History and founders of the parks",
+      "known_at": 14
+    },
+    {
+      "name": "Thomas Moran",
+      "facet": "History and founders of the parks",
+      "known_at": 14
+    },
+    {
+      "name": "Ancestral Puebloans",
+      "facet": "History and founders of the parks",
+      "known_at": 11
+    },
+    {
+      "name": "Marjory Stoneman Douglas",
+      "facet": "History and founders of the parks",
+      "known_at": 13
+    },
+    {
+      "name": "America's Best Idea",
+      "facet": "History and founders of the parks",
+      "known_at": 13
+    },
+    {
+      "name": "Campaign hat",
+      "facet": "Rangers, rules and park traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Junior Ranger badge",
+      "facet": "Rangers, rules and park traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Leave No Trace",
+      "facet": "Rangers, rules and park traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Bear-proof food locker",
+      "facet": "Rangers, rules and park traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Bear spray",
+      "facet": "Rangers, rules and park traditions",
+      "known_at": 9
+    },
+    {
+      "name": "NPS arrowhead emblem",
+      "facet": "Rangers, rules and park traditions",
+      "known_at": 12
+    },
+    {
+      "name": "America the Beautiful Pass",
+      "facet": "Rangers, rules and park traditions",
+      "known_at": 12
+    },
+    {
+      "name": "National Parks Passport stamp",
+      "facet": "Rangers, rules and park traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Fee-free day",
+      "facet": "Rangers, rules and park traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Fat Bear Week",
+      "facet": "Rangers, rules and park traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Dark Sky Park",
+      "facet": "Rangers, rules and park traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Ranger campfire talk",
+      "facet": "Rangers, rules and park traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Wildlife feeding ban",
+      "facet": "Rangers, rules and park traditions",
+      "known_at": 4
+    },
+    {
+      "name": "Visitor center",
+      "facet": "Rangers, rules and park traditions",
+      "known_at": 4
+    },
+    {
+      "name": "Prescribed burn",
+      "facet": "Rangers, rules and park traditions",
+      "known_at": 12
+    },
+    {
+      "name": "National Park Week",
+      "facet": "Rangers, rules and park traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Pacific Crest Trail",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 12
+    },
+    {
+      "name": "John Muir Trail",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 13
+    },
+    {
+      "name": "Angels Landing",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 12
+    },
+    {
+      "name": "Bright Angel Trail",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 13
+    },
+    {
+      "name": "Tioga Pass",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 14
+    },
+    {
+      "name": "Tunnel View",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 11
+    },
+    {
+      "name": "Grand Canyon Skywalk",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 9
+    },
+    {
+      "name": "Grand Canyon mule ride",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 9
+    },
+    {
+      "name": "Old Faithful Inn",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 12
+    },
+    {
+      "name": "Ahwahnee Hotel",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 13
+    },
+    {
+      "name": "RV",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 5
+    },
+    {
+      "name": "S'mores",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 3
+    },
+    {
+      "name": "Tent",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 1
+    },
+    {
+      "name": "Road trip",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 4
+    },
+    {
+      "name": "Backcountry permit",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 11
+    },
+    {
+      "name": "Switchback",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 9
+    },
+    {
+      "name": "Trail blaze",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 11
+    },
+    {
+      "name": "Cairn",
+      "facet": "Visiting: trails, roads and camping",
+      "known_at": 10
+    },
+    {
+      "name": "Jellystone Park",
+      "facet": "Parks in films, cartoons and games",
+      "known_at": 5
+    },
+    {
+      "name": "Ranger Smith",
+      "facet": "Parks in films, cartoons and games",
+      "known_at": 9
+    },
+    {
+      "name": "Endor",
+      "facet": "Parks in films, cartoons and games",
+      "known_at": 9
+    },
+    {
+      "name": "Close Encounters of the Third Kind",
+      "facet": "Parks in films, cartoons and games",
+      "known_at": 12
+    },
+    {
+      "name": "Indiana Jones and the Last Crusade",
+      "facet": "Parks in films, cartoons and games",
+      "known_at": 12
+    },
+    {
+      "name": "Thelma & Louise",
+      "facet": "Parks in films, cartoons and games",
+      "known_at": 13
+    },
+    {
+      "name": "127 Hours",
+      "facet": "Parks in films, cartoons and games",
+      "known_at": 12
+    },
+    {
+      "name": "Into the Wild",
+      "facet": "Parks in films, cartoons and games",
+      "known_at": 13
+    },
+    {
+      "name": "The Shining",
+      "facet": "Parks in films, cartoons and games",
+      "known_at": 12
+    },
+    {
+      "name": "Free Solo",
+      "facet": "Parks in films, cartoons and games",
+      "known_at": 12
+    },
+    {
+      "name": "Wild",
+      "facet": "Parks in films, cartoons and games",
+      "known_at": 13
+    },
+    {
+      "name": "North by Northwest",
+      "facet": "Parks in films, cartoons and games",
+      "known_at": 13
+    },
+    {
+      "name": "National Treasure: Book of Secrets",
+      "facet": "Parks in films, cartoons and games",
+      "known_at": 11
+    },
+    {
+      "name": "Star Trek V: The Final Frontier",
+      "facet": "Parks in films, cartoons and games",
+      "known_at": 14
+    },
+    {
+      "name": "The National Parks: America's Best Idea",
+      "facet": "Parks in films, cartoons and games",
+      "known_at": 13
+    },
+    {
+      "name": "Ranger Rick",
+      "facet": "Parks in films, cartoons and games",
+      "known_at": 12
+    },
+    {
+      "name": "Yellowstone (TV series)",
+      "facet": "Parks in films, cartoons and games",
+      "known_at": 11
+    }
+  ]
+}

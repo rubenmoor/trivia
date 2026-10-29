@@ -1,0 +1,1052 @@
+{
+  "subcategory": "colonies-and-founding",
+  "facets": [
+    "Jamestown and early Virginia",
+    "Pilgrims and Plymouth Colony",
+    "The thirteen colonies",
+    "Native nations and colonists",
+    "Colonial daily life and trades",
+    "Road to revolution",
+    "Revolutionary War battles",
+    "Founding Fathers and Mothers",
+    "Declaration of Independence",
+    "Constitution and Bill of Rights",
+    "Founding symbols and landmarks",
+    "Founding era words and sayings"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Starving Time",
+      "facet": "Jamestown and early Virginia",
+      "known_at": 10
+    },
+    {
+      "name": "Virginia Company",
+      "facet": "Jamestown and early Virginia",
+      "known_at": 9
+    },
+    {
+      "name": "House of Burgesses",
+      "facet": "Jamestown and early Virginia",
+      "known_at": 9
+    },
+    {
+      "name": "Susan Constant",
+      "facet": "Jamestown and early Virginia",
+      "known_at": 12
+    },
+    {
+      "name": "Bacon's Rebellion",
+      "facet": "Jamestown and early Virginia",
+      "known_at": 11
+    },
+    {
+      "name": "Croatoan",
+      "facet": "Jamestown and early Virginia",
+      "known_at": 10
+    },
+    {
+      "name": "Indentured servant",
+      "facet": "Jamestown and early Virginia",
+      "known_at": 9
+    },
+    {
+      "name": "Point Comfort",
+      "facet": "Jamestown and early Virginia",
+      "known_at": 13
+    },
+    {
+      "name": "Walter Raleigh",
+      "facet": "Jamestown and early Virginia",
+      "known_at": 11
+    },
+    {
+      "name": "Mayflower Compact",
+      "facet": "Pilgrims and Plymouth Colony",
+      "known_at": 7
+    },
+    {
+      "name": "William Bradford",
+      "facet": "Pilgrims and Plymouth Colony",
+      "known_at": 9
+    },
+    {
+      "name": "Myles Standish",
+      "facet": "Pilgrims and Plymouth Colony",
+      "known_at": 11
+    },
+    {
+      "name": "Separatists",
+      "facet": "Pilgrims and Plymouth Colony",
+      "known_at": 10
+    },
+    {
+      "name": "Provincetown",
+      "facet": "Pilgrims and Plymouth Colony",
+      "known_at": 12
+    },
+    {
+      "name": "Leiden",
+      "facet": "Pilgrims and Plymouth Colony",
+      "known_at": 13
+    },
+    {
+      "name": "John Alden",
+      "facet": "Pilgrims and Plymouth Colony",
+      "known_at": 13
+    },
+    {
+      "name": "Samoset",
+      "facet": "Pilgrims and Plymouth Colony",
+      "known_at": 11
+    },
+    {
+      "name": "Speedwell",
+      "facet": "Pilgrims and Plymouth Colony",
+      "known_at": 14
+    },
+    {
+      "name": "Plimoth Patuxet Museums",
+      "facet": "Pilgrims and Plymouth Colony",
+      "known_at": 11
+    },
+    {
+      "name": "Of Plymouth Plantation",
+      "facet": "Pilgrims and Plymouth Colony",
+      "known_at": 13
+    },
+    {
+      "name": "Massachusetts Bay Colony",
+      "facet": "The thirteen colonies",
+      "known_at": 8
+    },
+    {
+      "name": "Puritans",
+      "facet": "The thirteen colonies",
+      "known_at": 7
+    },
+    {
+      "name": "Roger Williams",
+      "facet": "The thirteen colonies",
+      "known_at": 10
+    },
+    {
+      "name": "Anne Hutchinson",
+      "facet": "The thirteen colonies",
+      "known_at": 11
+    },
+    {
+      "name": "William Penn",
+      "facet": "The thirteen colonies",
+      "known_at": 8
+    },
+    {
+      "name": "Quakers",
+      "facet": "The thirteen colonies",
+      "known_at": 7
+    },
+    {
+      "name": "Lord Baltimore",
+      "facet": "The thirteen colonies",
+      "known_at": 11
+    },
+    {
+      "name": "Georgia Colony",
+      "facet": "The thirteen colonies",
+      "known_at": 8
+    },
+    {
+      "name": "James Oglethorpe",
+      "facet": "The thirteen colonies",
+      "known_at": 11
+    },
+    {
+      "name": "Peter Stuyvesant",
+      "facet": "The thirteen colonies",
+      "known_at": 12
+    },
+    {
+      "name": "Carolina Colony",
+      "facet": "The thirteen colonies",
+      "known_at": 9
+    },
+    {
+      "name": "Fundamental Orders of Connecticut",
+      "facet": "The thirteen colonies",
+      "known_at": 13
+    },
+    {
+      "name": "New England Colonies",
+      "facet": "The thirteen colonies",
+      "known_at": 7
+    },
+    {
+      "name": "Middle Colonies",
+      "facet": "The thirteen colonies",
+      "known_at": 8
+    },
+    {
+      "name": "Southern Colonies",
+      "facet": "The thirteen colonies",
+      "known_at": 8
+    },
+    {
+      "name": "Great Law of Peace",
+      "facet": "Native nations and colonists",
+      "known_at": 13
+    },
+    {
+      "name": "Lenape",
+      "facet": "Native nations and colonists",
+      "known_at": 10
+    },
+    {
+      "name": "Pequot War",
+      "facet": "Native nations and colonists",
+      "known_at": 12
+    },
+    {
+      "name": "Pontiac's War",
+      "facet": "Native nations and colonists",
+      "known_at": 11
+    },
+    {
+      "name": "Joseph Brant",
+      "facet": "Native nations and colonists",
+      "known_at": 13
+    },
+    {
+      "name": "Penn's Treaty with the Lenape",
+      "facet": "Native nations and colonists",
+      "known_at": 13
+    },
+    {
+      "name": "Algonquian languages",
+      "facet": "Native nations and colonists",
+      "known_at": 11
+    },
+    {
+      "name": "Blacksmith",
+      "facet": "Colonial daily life and trades",
+      "known_at": 3
+    },
+    {
+      "name": "Cooper",
+      "facet": "Colonial daily life and trades",
+      "known_at": 9
+    },
+    {
+      "name": "Silversmith",
+      "facet": "Colonial daily life and trades",
+      "known_at": 7
+    },
+    {
+      "name": "Hornbook",
+      "facet": "Colonial daily life and trades",
+      "known_at": 11
+    },
+    {
+      "name": "New England Primer",
+      "facet": "Colonial daily life and trades",
+      "known_at": 12
+    },
+    {
+      "name": "Apprentice",
+      "facet": "Colonial daily life and trades",
+      "known_at": 6
+    },
+    {
+      "name": "Candle dipping",
+      "facet": "Colonial daily life and trades",
+      "known_at": 5
+    },
+    {
+      "name": "Butter churn",
+      "facet": "Colonial daily life and trades",
+      "known_at": 4
+    },
+    {
+      "name": "Spinning wheel",
+      "facet": "Colonial daily life and trades",
+      "known_at": 4
+    },
+    {
+      "name": "Town crier",
+      "facet": "Colonial daily life and trades",
+      "known_at": 6
+    },
+    {
+      "name": "Stocks and pillory",
+      "facet": "Colonial daily life and trades",
+      "known_at": 7
+    },
+    {
+      "name": "One-room schoolhouse",
+      "facet": "Colonial daily life and trades",
+      "known_at": 5
+    },
+    {
+      "name": "Salem witch trials",
+      "facet": "Colonial daily life and trades",
+      "known_at": 7
+    },
+    {
+      "name": "Tricorne hat",
+      "facet": "Colonial daily life and trades",
+      "known_at": 6
+    },
+    {
+      "name": "Powdered wig",
+      "facet": "Colonial daily life and trades",
+      "known_at": 4
+    },
+    {
+      "name": "Johnnycake",
+      "facet": "Colonial daily life and trades",
+      "known_at": 11
+    },
+    {
+      "name": "Quill pen",
+      "facet": "Colonial daily life and trades",
+      "known_at": 4
+    },
+    {
+      "name": "Harvard College",
+      "facet": "Colonial daily life and trades",
+      "known_at": 8
+    },
+    {
+      "name": "Poor Richard's Almanack",
+      "facet": "Colonial daily life and trades",
+      "known_at": 10
+    },
+    {
+      "name": "Triangular trade",
+      "facet": "Colonial daily life and trades",
+      "known_at": 10
+    },
+    {
+      "name": "Nantucket whaling",
+      "facet": "Colonial daily life and trades",
+      "known_at": 11
+    },
+    {
+      "name": "Proclamation of 1763",
+      "facet": "Road to revolution",
+      "known_at": 11
+    },
+    {
+      "name": "Stamp Act",
+      "facet": "Road to revolution",
+      "known_at": 8
+    },
+    {
+      "name": "Sugar Act",
+      "facet": "Road to revolution",
+      "known_at": 10
+    },
+    {
+      "name": "Townshend Acts",
+      "facet": "Road to revolution",
+      "known_at": 11
+    },
+    {
+      "name": "Boston Massacre",
+      "facet": "Road to revolution",
+      "known_at": 7
+    },
+    {
+      "name": "Crispus Attucks",
+      "facet": "Road to revolution",
+      "known_at": 10
+    },
+    {
+      "name": "Boston Tea Party",
+      "facet": "Road to revolution",
+      "known_at": 3
+    },
+    {
+      "name": "Intolerable Acts",
+      "facet": "Road to revolution",
+      "known_at": 10
+    },
+    {
+      "name": "Sons of Liberty",
+      "facet": "Road to revolution",
+      "known_at": 7
+    },
+    {
+      "name": "First Continental Congress",
+      "facet": "Road to revolution",
+      "known_at": 9
+    },
+    {
+      "name": "Second Continental Congress",
+      "facet": "Road to revolution",
+      "known_at": 9
+    },
+    {
+      "name": "Paul Revere's Midnight Ride",
+      "facet": "Road to revolution",
+      "known_at": 4
+    },
+    {
+      "name": "William Dawes",
+      "facet": "Road to revolution",
+      "known_at": 12
+    },
+    {
+      "name": "Committees of Correspondence",
+      "facet": "Road to revolution",
+      "known_at": 12
+    },
+    {
+      "name": "Common Sense",
+      "facet": "Road to revolution",
+      "known_at": 9
+    },
+    {
+      "name": "Quartering Act",
+      "facet": "Road to revolution",
+      "known_at": 10
+    },
+    {
+      "name": "Tea Act",
+      "facet": "Road to revolution",
+      "known_at": 10
+    },
+    {
+      "name": "Gaspee Affair",
+      "facet": "Road to revolution",
+      "known_at": 14
+    },
+    {
+      "name": "Olive Branch Petition",
+      "facet": "Road to revolution",
+      "known_at": 12
+    },
+    {
+      "name": "Loyalists",
+      "facet": "Road to revolution",
+      "known_at": 8
+    },
+    {
+      "name": "Battles of Lexington and Concord",
+      "facet": "Revolutionary War battles",
+      "known_at": 6
+    },
+    {
+      "name": "Battle of Bunker Hill",
+      "facet": "Revolutionary War battles",
+      "known_at": 7
+    },
+    {
+      "name": "Washington's crossing of the Delaware",
+      "facet": "Revolutionary War battles",
+      "known_at": 6
+    },
+    {
+      "name": "Battle of Trenton",
+      "facet": "Revolutionary War battles",
+      "known_at": 9
+    },
+    {
+      "name": "Battle of Saratoga",
+      "facet": "Revolutionary War battles",
+      "known_at": 9
+    },
+    {
+      "name": "Valley Forge",
+      "facet": "Revolutionary War battles",
+      "known_at": 7
+    },
+    {
+      "name": "Siege of Yorktown",
+      "facet": "Revolutionary War battles",
+      "known_at": 8
+    },
+    {
+      "name": "Battle of Princeton",
+      "facet": "Revolutionary War battles",
+      "known_at": 11
+    },
+    {
+      "name": "Fort Ticonderoga",
+      "facet": "Revolutionary War battles",
+      "known_at": 11
+    },
+    {
+      "name": "Battle of Long Island",
+      "facet": "Revolutionary War battles",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Cowpens",
+      "facet": "Revolutionary War battles",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Kings Mountain",
+      "facet": "Revolutionary War battles",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Monmouth",
+      "facet": "Revolutionary War battles",
+      "known_at": 12
+    },
+    {
+      "name": "Molly Pitcher",
+      "facet": "Revolutionary War battles",
+      "known_at": 8
+    },
+    {
+      "name": "Nathan Hale",
+      "facet": "Revolutionary War battles",
+      "known_at": 9
+    },
+    {
+      "name": "Benedict Arnold",
+      "facet": "Revolutionary War battles",
+      "known_at": 8
+    },
+    {
+      "name": "Marquis de Lafayette",
+      "facet": "Revolutionary War battles",
+      "known_at": 7
+    },
+    {
+      "name": "Baron von Steuben",
+      "facet": "Revolutionary War battles",
+      "known_at": 12
+    },
+    {
+      "name": "Charles Cornwallis",
+      "facet": "Revolutionary War battles",
+      "known_at": 10
+    },
+    {
+      "name": "Hessians",
+      "facet": "Revolutionary War battles",
+      "known_at": 10
+    },
+    {
+      "name": "Redcoats",
+      "facet": "Revolutionary War battles",
+      "known_at": 4
+    },
+    {
+      "name": "Minutemen",
+      "facet": "Revolutionary War battles",
+      "known_at": 5
+    },
+    {
+      "name": "Continental Army",
+      "facet": "Revolutionary War battles",
+      "known_at": 7
+    },
+    {
+      "name": "John Paul Jones",
+      "facet": "Revolutionary War battles",
+      "known_at": 10
+    },
+    {
+      "name": "Treaty of Paris (1783)",
+      "facet": "Revolutionary War battles",
+      "known_at": 10
+    },
+    {
+      "name": "George Washington",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 1
+    },
+    {
+      "name": "Benjamin Franklin",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 2
+    },
+    {
+      "name": "John Adams",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 6
+    },
+    {
+      "name": "Abigail Adams",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 8
+    },
+    {
+      "name": "Alexander Hamilton",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 5
+    },
+    {
+      "name": "James Madison",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 7
+    },
+    {
+      "name": "Dolley Madison",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 9
+    },
+    {
+      "name": "John Hancock",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 6
+    },
+    {
+      "name": "Samuel Adams",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 8
+    },
+    {
+      "name": "Patrick Henry",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 8
+    },
+    {
+      "name": "John Jay",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 11
+    },
+    {
+      "name": "Martha Washington",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 5
+    },
+    {
+      "name": "Mercy Otis Warren",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 13
+    },
+    {
+      "name": "Phillis Wheatley",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 10
+    },
+    {
+      "name": "Gouverneur Morris",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 13
+    },
+    {
+      "name": "Eliza Hamilton",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 8
+    },
+    {
+      "name": "Aaron Burr",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 8
+    },
+    {
+      "name": "Thomas Paine",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 9
+    },
+    {
+      "name": "George Mason",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 12
+    },
+    {
+      "name": "Deborah Sampson",
+      "facet": "Founding Fathers and Mothers",
+      "known_at": 11
+    },
+    {
+      "name": "Declaration of Independence",
+      "facet": "Declaration of Independence",
+      "known_at": 3
+    },
+    {
+      "name": "Independence Day",
+      "facet": "Declaration of Independence",
+      "known_at": 1
+    },
+    {
+      "name": "Committee of Five",
+      "facet": "Declaration of Independence",
+      "known_at": 11
+    },
+    {
+      "name": "Lee Resolution",
+      "facet": "Declaration of Independence",
+      "known_at": 13
+    },
+    {
+      "name": "King George III",
+      "facet": "Declaration of Independence",
+      "known_at": 6
+    },
+    {
+      "name": "Dunlap broadside",
+      "facet": "Declaration of Independence",
+      "known_at": 14
+    },
+    {
+      "name": "National Archives",
+      "facet": "Declaration of Independence",
+      "known_at": 8
+    },
+    {
+      "name": "Trumbull's Declaration of Independence painting",
+      "facet": "Declaration of Independence",
+      "known_at": 12
+    },
+    {
+      "name": "Unalienable rights",
+      "facet": "Declaration of Independence",
+      "known_at": 10
+    },
+    {
+      "name": "Consent of the governed",
+      "facet": "Declaration of Independence",
+      "known_at": 12
+    },
+    {
+      "name": "List of grievances",
+      "facet": "Declaration of Independence",
+      "known_at": 11
+    },
+    {
+      "name": "Signers of the Declaration",
+      "facet": "Declaration of Independence",
+      "known_at": 7
+    },
+    {
+      "name": "Button Gwinnett",
+      "facet": "Declaration of Independence",
+      "known_at": 14
+    },
+    {
+      "name": "Charles Carroll of Carrollton",
+      "facet": "Declaration of Independence",
+      "known_at": 14
+    },
+    {
+      "name": "Syng inkstand",
+      "facet": "Declaration of Independence",
+      "known_at": 15
+    },
+    {
+      "name": "Two-dollar bill",
+      "facet": "Declaration of Independence",
+      "known_at": 9
+    },
+    {
+      "name": "July 2, 1776",
+      "facet": "Declaration of Independence",
+      "known_at": 13
+    },
+    {
+      "name": "United States Constitution",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 5
+    },
+    {
+      "name": "Constitutional Convention",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 9
+    },
+    {
+      "name": "Articles of Confederation",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 9
+    },
+    {
+      "name": "Shays' Rebellion",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 12
+    },
+    {
+      "name": "Preamble to the Constitution",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 8
+    },
+    {
+      "name": "Bill of Rights",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 6
+    },
+    {
+      "name": "First Amendment",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 7
+    },
+    {
+      "name": "Second Amendment",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 8
+    },
+    {
+      "name": "Fifth Amendment",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 10
+    },
+    {
+      "name": "Tenth Amendment",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 12
+    },
+    {
+      "name": "Federalist Papers",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 10
+    },
+    {
+      "name": "Great Compromise",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 10
+    },
+    {
+      "name": "Three-Fifths Compromise",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 11
+    },
+    {
+      "name": "Separation of powers",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 8
+    },
+    {
+      "name": "Checks and balances",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 7
+    },
+    {
+      "name": "Electoral College",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 9
+    },
+    {
+      "name": "Anti-Federalists",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 11
+    },
+    {
+      "name": "Ratification",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 10
+    },
+    {
+      "name": "Virginia Plan",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 12
+    },
+    {
+      "name": "New Jersey Plan",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 12
+    },
+    {
+      "name": "Supreme Court",
+      "facet": "Constitution and Bill of Rights",
+      "known_at": 6
+    },
+    {
+      "name": "Betsy Ross flag",
+      "facet": "Founding symbols and landmarks",
+      "known_at": 5
+    },
+    {
+      "name": "Old North Church",
+      "facet": "Founding symbols and landmarks",
+      "known_at": 9
+    },
+    {
+      "name": "Faneuil Hall",
+      "facet": "Founding symbols and landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "USS Constitution",
+      "facet": "Founding symbols and landmarks",
+      "known_at": 10
+    },
+    {
+      "name": "Bunker Hill Monument",
+      "facet": "Founding symbols and landmarks",
+      "known_at": 11
+    },
+    {
+      "name": "Federal Hall",
+      "facet": "Founding symbols and landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Join, or Die cartoon",
+      "facet": "Founding symbols and landmarks",
+      "known_at": 10
+    },
+    {
+      "name": "Washington Crossing the Delaware painting",
+      "facet": "Founding symbols and landmarks",
+      "known_at": 8
+    },
+    {
+      "name": "The Spirit of '76 painting",
+      "facet": "Founding symbols and landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Minute Man statue",
+      "facet": "Founding symbols and landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "No taxation without representation",
+      "facet": "Founding era words and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Give me liberty, or give me death!",
+      "facet": "Founding era words and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "One if by land, two if by sea",
+      "facet": "Founding era words and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "The British are coming!",
+      "facet": "Founding era words and sayings",
+      "known_at": 5
+    },
+    {
+      "name": "Don't fire until you see the whites of their eyes",
+      "facet": "Founding era words and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "I only regret that I have but one life to lose for my country",
+      "facet": "Founding era words and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "I have not yet begun to fight",
+      "facet": "Founding era words and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "These are the times that try men's souls",
+      "facet": "Founding era words and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "We the People",
+      "facet": "Founding era words and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Life, liberty and the pursuit of happiness",
+      "facet": "Founding era words and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "All men are created equal",
+      "facet": "Founding era words and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "E pluribus unum",
+      "facet": "Founding era words and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Remember the ladies",
+      "facet": "Founding era words and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Don't Tread on Me",
+      "facet": "Founding era words and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Yankee Doodle",
+      "facet": "Founding era words and sayings",
+      "known_at": 3
+    },
+    {
+      "name": "Shot heard round the world",
+      "facet": "Founding era words and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "A penny saved is a penny earned",
+      "facet": "Founding era words and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Early to bed and early to rise",
+      "facet": "Founding era words and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Not worth a Continental",
+      "facet": "Founding era words and sayings",
+      "known_at": 14
+    },
+    {
+      "name": "Put your John Hancock",
+      "facet": "Founding era words and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Patriots",
+      "facet": "Founding era words and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Tory",
+      "facet": "Founding era words and sayings",
+      "known_at": 11
+    }
+  ]
+}

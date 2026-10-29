@@ -1,0 +1,1137 @@
+{
+  "subcategory": "twentieth-century",
+  "facets": [
+    "Presidents and the White House",
+    "World Wars on the home front",
+    "Roaring Twenties and Prohibition",
+    "Great Depression and New Deal",
+    "Civil rights movement",
+    "Cold War and space race",
+    "Inventions and big companies",
+    "Music, movies and stars",
+    "Sports legends and milestones",
+    "Cars, roads and suburbs",
+    "Landmarks and great building projects",
+    "Fads, foods and everyday life"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Franklin D. Roosevelt",
+      "facet": "Presidents and the White House",
+      "known_at": 6
+    },
+    {
+      "name": "John F. Kennedy",
+      "facet": "Presidents and the White House",
+      "known_at": 6
+    },
+    {
+      "name": "Harry S. Truman",
+      "facet": "Presidents and the White House",
+      "known_at": 10
+    },
+    {
+      "name": "Dwight D. Eisenhower",
+      "facet": "Presidents and the White House",
+      "known_at": 9
+    },
+    {
+      "name": "Richard Nixon",
+      "facet": "Presidents and the White House",
+      "known_at": 8
+    },
+    {
+      "name": "Ronald Reagan",
+      "facet": "Presidents and the White House",
+      "known_at": 7
+    },
+    {
+      "name": "Jimmy Carter",
+      "facet": "Presidents and the White House",
+      "known_at": 9
+    },
+    {
+      "name": "Lyndon B. Johnson",
+      "facet": "Presidents and the White House",
+      "known_at": 10
+    },
+    {
+      "name": "Herbert Hoover",
+      "facet": "Presidents and the White House",
+      "known_at": 10
+    },
+    {
+      "name": "Calvin Coolidge",
+      "facet": "Presidents and the White House",
+      "known_at": 12
+    },
+    {
+      "name": "Gerald Ford",
+      "facet": "Presidents and the White House",
+      "known_at": 11
+    },
+    {
+      "name": "Bill Clinton",
+      "facet": "Presidents and the White House",
+      "known_at": 8
+    },
+    {
+      "name": "Eleanor Roosevelt",
+      "facet": "Presidents and the White House",
+      "known_at": 8
+    },
+    {
+      "name": "Jacqueline Kennedy",
+      "facet": "Presidents and the White House",
+      "known_at": 9
+    },
+    {
+      "name": "Watergate scandal",
+      "facet": "Presidents and the White House",
+      "known_at": 10
+    },
+    {
+      "name": "Camp David",
+      "facet": "Presidents and the White House",
+      "known_at": 11
+    },
+    {
+      "name": "Air Force One",
+      "facet": "Presidents and the White House",
+      "known_at": 6
+    },
+    {
+      "name": "22nd Amendment",
+      "facet": "Presidents and the White House",
+      "known_at": 12
+    },
+    {
+      "name": "Rosie the Riveter",
+      "facet": "World Wars on the home front",
+      "known_at": 7
+    },
+    {
+      "name": "Victory garden",
+      "facet": "World Wars on the home front",
+      "known_at": 9
+    },
+    {
+      "name": "Rationing",
+      "facet": "World Wars on the home front",
+      "known_at": 8
+    },
+    {
+      "name": "War bonds",
+      "facet": "World Wars on the home front",
+      "known_at": 9
+    },
+    {
+      "name": "Uncle Sam",
+      "facet": "World Wars on the home front",
+      "known_at": 4
+    },
+    {
+      "name": "Japanese American internment",
+      "facet": "World Wars on the home front",
+      "known_at": 10
+    },
+    {
+      "name": "Liberty ship",
+      "facet": "World Wars on the home front",
+      "known_at": 12
+    },
+    {
+      "name": "Manhattan Project",
+      "facet": "World Wars on the home front",
+      "known_at": 10
+    },
+    {
+      "name": "Tuskegee Airmen",
+      "facet": "World Wars on the home front",
+      "known_at": 9
+    },
+    {
+      "name": "Scrap drive",
+      "facet": "World Wars on the home front",
+      "known_at": 11
+    },
+    {
+      "name": "Doughboys",
+      "facet": "World Wars on the home front",
+      "known_at": 12
+    },
+    {
+      "name": "Women Airforce Service Pilots",
+      "facet": "World Wars on the home front",
+      "known_at": 12
+    },
+    {
+      "name": "D-Day",
+      "facet": "World Wars on the home front",
+      "known_at": 7
+    },
+    {
+      "name": "V-J Day",
+      "facet": "World Wars on the home front",
+      "known_at": 10
+    },
+    {
+      "name": "Kilroy was here",
+      "facet": "World Wars on the home front",
+      "known_at": 12
+    },
+    {
+      "name": "G.I. Bill",
+      "facet": "World Wars on the home front",
+      "known_at": 11
+    },
+    {
+      "name": "USO",
+      "facet": "World Wars on the home front",
+      "known_at": 11
+    },
+    {
+      "name": "RMS Lusitania",
+      "facet": "World Wars on the home front",
+      "known_at": 11
+    },
+    {
+      "name": "Zimmermann Telegram",
+      "facet": "World Wars on the home front",
+      "known_at": 13
+    },
+    {
+      "name": "Prohibition",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 7
+    },
+    {
+      "name": "Speakeasy",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 9
+    },
+    {
+      "name": "Flapper",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 9
+    },
+    {
+      "name": "Al Capone",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 8
+    },
+    {
+      "name": "Jazz Age",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 9
+    },
+    {
+      "name": "19th Amendment",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 9
+    },
+    {
+      "name": "Bootlegger",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 10
+    },
+    {
+      "name": "Harlem Renaissance",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 10
+    },
+    {
+      "name": "The Great Gatsby",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 9
+    },
+    {
+      "name": "Charles Lindbergh",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 9
+    },
+    {
+      "name": "Amelia Earhart",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 6
+    },
+    {
+      "name": "Scopes Trial",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 12
+    },
+    {
+      "name": "Eliot Ness",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 12
+    },
+    {
+      "name": "21st Amendment",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 12
+    },
+    {
+      "name": "Moonshine",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 9
+    },
+    {
+      "name": "Langston Hughes",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 10
+    },
+    {
+      "name": "Cotton Club",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 12
+    },
+    {
+      "name": "Volstead Act",
+      "facet": "Roaring Twenties and Prohibition",
+      "known_at": 14
+    },
+    {
+      "name": "Black Tuesday",
+      "facet": "Great Depression and New Deal",
+      "known_at": 10
+    },
+    {
+      "name": "Wall Street Crash of 1929",
+      "facet": "Great Depression and New Deal",
+      "known_at": 8
+    },
+    {
+      "name": "New Deal",
+      "facet": "Great Depression and New Deal",
+      "known_at": 9
+    },
+    {
+      "name": "Fireside chats",
+      "facet": "Great Depression and New Deal",
+      "known_at": 10
+    },
+    {
+      "name": "Social Security",
+      "facet": "Great Depression and New Deal",
+      "known_at": 9
+    },
+    {
+      "name": "Hooverville",
+      "facet": "Great Depression and New Deal",
+      "known_at": 11
+    },
+    {
+      "name": "Bread line",
+      "facet": "Great Depression and New Deal",
+      "known_at": 9
+    },
+    {
+      "name": "Works Progress Administration",
+      "facet": "Great Depression and New Deal",
+      "known_at": 12
+    },
+    {
+      "name": "Migrant Mother",
+      "facet": "Great Depression and New Deal",
+      "known_at": 12
+    },
+    {
+      "name": "Dorothea Lange",
+      "facet": "Great Depression and New Deal",
+      "known_at": 13
+    },
+    {
+      "name": "Bank holiday of 1933",
+      "facet": "Great Depression and New Deal",
+      "known_at": 13
+    },
+    {
+      "name": "FDIC",
+      "facet": "Great Depression and New Deal",
+      "known_at": 12
+    },
+    {
+      "name": "Okies",
+      "facet": "Great Depression and New Deal",
+      "known_at": 12
+    },
+    {
+      "name": "Woody Guthrie",
+      "facet": "Great Depression and New Deal",
+      "known_at": 11
+    },
+    {
+      "name": "Hobo",
+      "facet": "Great Depression and New Deal",
+      "known_at": 8
+    },
+    {
+      "name": "Martin Luther King Jr.",
+      "facet": "Civil rights movement",
+      "known_at": 3
+    },
+    {
+      "name": "Rosa Parks",
+      "facet": "Civil rights movement",
+      "known_at": 4
+    },
+    {
+      "name": "Montgomery bus boycott",
+      "facet": "Civil rights movement",
+      "known_at": 7
+    },
+    {
+      "name": "I Have a Dream",
+      "facet": "Civil rights movement",
+      "known_at": 5
+    },
+    {
+      "name": "March on Washington",
+      "facet": "Civil rights movement",
+      "known_at": 8
+    },
+    {
+      "name": "Brown v. Board of Education",
+      "facet": "Civil rights movement",
+      "known_at": 9
+    },
+    {
+      "name": "Little Rock Nine",
+      "facet": "Civil rights movement",
+      "known_at": 9
+    },
+    {
+      "name": "Ruby Bridges",
+      "facet": "Civil rights movement",
+      "known_at": 5
+    },
+    {
+      "name": "Malcolm X",
+      "facet": "Civil rights movement",
+      "known_at": 8
+    },
+    {
+      "name": "Selma to Montgomery marches",
+      "facet": "Civil rights movement",
+      "known_at": 10
+    },
+    {
+      "name": "Civil Rights Act of 1964",
+      "facet": "Civil rights movement",
+      "known_at": 9
+    },
+    {
+      "name": "Voting Rights Act of 1965",
+      "facet": "Civil rights movement",
+      "known_at": 11
+    },
+    {
+      "name": "Greensboro sit-ins",
+      "facet": "Civil rights movement",
+      "known_at": 10
+    },
+    {
+      "name": "Freedom Riders",
+      "facet": "Civil rights movement",
+      "known_at": 10
+    },
+    {
+      "name": "Thurgood Marshall",
+      "facet": "Civil rights movement",
+      "known_at": 11
+    },
+    {
+      "name": "NAACP",
+      "facet": "Civil rights movement",
+      "known_at": 10
+    },
+    {
+      "name": "Martin Luther King Jr. Day",
+      "facet": "Civil rights movement",
+      "known_at": 3
+    },
+    {
+      "name": "John Lewis",
+      "facet": "Civil rights movement",
+      "known_at": 11
+    },
+    {
+      "name": "Cesar Chavez",
+      "facet": "Civil rights movement",
+      "known_at": 9
+    },
+    {
+      "name": "Sputnik",
+      "facet": "Cold War and space race",
+      "known_at": 9
+    },
+    {
+      "name": "Apollo 11",
+      "facet": "Cold War and space race",
+      "known_at": 5
+    },
+    {
+      "name": "Neil Armstrong",
+      "facet": "Cold War and space race",
+      "known_at": 3
+    },
+    {
+      "name": "Buzz Aldrin",
+      "facet": "Cold War and space race",
+      "known_at": 5
+    },
+    {
+      "name": "NASA",
+      "facet": "Cold War and space race",
+      "known_at": 3
+    },
+    {
+      "name": "Cuban Missile Crisis",
+      "facet": "Cold War and space race",
+      "known_at": 10
+    },
+    {
+      "name": "Berlin Airlift",
+      "facet": "Cold War and space race",
+      "known_at": 12
+    },
+    {
+      "name": "Duck and cover",
+      "facet": "Cold War and space race",
+      "known_at": 11
+    },
+    {
+      "name": "Fallout shelter",
+      "facet": "Cold War and space race",
+      "known_at": 10
+    },
+    {
+      "name": "Mercury Seven",
+      "facet": "Cold War and space race",
+      "known_at": 12
+    },
+    {
+      "name": "John Glenn",
+      "facet": "Cold War and space race",
+      "known_at": 9
+    },
+    {
+      "name": "Alan Shepard",
+      "facet": "Cold War and space race",
+      "known_at": 11
+    },
+    {
+      "name": "Apollo 13",
+      "facet": "Cold War and space race",
+      "known_at": 8
+    },
+    {
+      "name": "Space Shuttle",
+      "facet": "Cold War and space race",
+      "known_at": 5
+    },
+    {
+      "name": "Korean War",
+      "facet": "Cold War and space race",
+      "known_at": 10
+    },
+    {
+      "name": "Vietnam War",
+      "facet": "Cold War and space race",
+      "known_at": 8
+    },
+    {
+      "name": "McCarthyism",
+      "facet": "Cold War and space race",
+      "known_at": 12
+    },
+    {
+      "name": "Sally Ride",
+      "facet": "Cold War and space race",
+      "known_at": 7
+    },
+    {
+      "name": "Tear down this wall",
+      "facet": "Cold War and space race",
+      "known_at": 10
+    },
+    {
+      "name": "Lunar Module Eagle",
+      "facet": "Cold War and space race",
+      "known_at": 9
+    },
+    {
+      "name": "We choose to go to the Moon",
+      "facet": "Cold War and space race",
+      "known_at": 10
+    },
+    {
+      "name": "Wright brothers",
+      "facet": "Inventions and big companies",
+      "known_at": 4
+    },
+    {
+      "name": "Henry Ford",
+      "facet": "Inventions and big companies",
+      "known_at": 6
+    },
+    {
+      "name": "Assembly line",
+      "facet": "Inventions and big companies",
+      "known_at": 7
+    },
+    {
+      "name": "Thomas Edison",
+      "facet": "Inventions and big companies",
+      "known_at": 4
+    },
+    {
+      "name": "Coca-Cola",
+      "facet": "Inventions and big companies",
+      "known_at": 3
+    },
+    {
+      "name": "Walt Disney",
+      "facet": "Inventions and big companies",
+      "known_at": 3
+    },
+    {
+      "name": "Microsoft",
+      "facet": "Inventions and big companies",
+      "known_at": 5
+    },
+    {
+      "name": "Apple",
+      "facet": "Inventions and big companies",
+      "known_at": 4
+    },
+    {
+      "name": "IBM",
+      "facet": "Inventions and big companies",
+      "known_at": 10
+    },
+    {
+      "name": "Boeing 747",
+      "facet": "Inventions and big companies",
+      "known_at": 9
+    },
+    {
+      "name": "Polaroid camera",
+      "facet": "Inventions and big companies",
+      "known_at": 7
+    },
+    {
+      "name": "Microwave oven",
+      "facet": "Inventions and big companies",
+      "known_at": 4
+    },
+    {
+      "name": "Transistor",
+      "facet": "Inventions and big companies",
+      "known_at": 12
+    },
+    {
+      "name": "Kellogg's Corn Flakes",
+      "facet": "Inventions and big companies",
+      "known_at": 6
+    },
+    {
+      "name": "McDonald's",
+      "facet": "Inventions and big companies",
+      "known_at": 2
+    },
+    {
+      "name": "Bell Labs",
+      "facet": "Inventions and big companies",
+      "known_at": 13
+    },
+    {
+      "name": "ENIAC",
+      "facet": "Inventions and big companies",
+      "known_at": 13
+    },
+    {
+      "name": "ARPANET",
+      "facet": "Inventions and big companies",
+      "known_at": 13
+    },
+    {
+      "name": "Kodak Brownie",
+      "facet": "Inventions and big companies",
+      "known_at": 12
+    },
+    {
+      "name": "Nylon",
+      "facet": "Inventions and big companies",
+      "known_at": 11
+    },
+    {
+      "name": "Air conditioning",
+      "facet": "Inventions and big companies",
+      "known_at": 8
+    },
+    {
+      "name": "Bill Gates",
+      "facet": "Inventions and big companies",
+      "known_at": 6
+    },
+    {
+      "name": "Steve Jobs",
+      "facet": "Inventions and big companies",
+      "known_at": 6
+    },
+    {
+      "name": "Elvis Presley",
+      "facet": "Music, movies and stars",
+      "known_at": 5
+    },
+    {
+      "name": "Louis Armstrong",
+      "facet": "Music, movies and stars",
+      "known_at": 7
+    },
+    {
+      "name": "Marilyn Monroe",
+      "facet": "Music, movies and stars",
+      "known_at": 7
+    },
+    {
+      "name": "Charlie Chaplin",
+      "facet": "Music, movies and stars",
+      "known_at": 7
+    },
+    {
+      "name": "Mickey Mouse",
+      "facet": "Music, movies and stars",
+      "known_at": 1
+    },
+    {
+      "name": "Steamboat Willie",
+      "facet": "Music, movies and stars",
+      "known_at": 8
+    },
+    {
+      "name": "Frank Sinatra",
+      "facet": "Music, movies and stars",
+      "known_at": 9
+    },
+    {
+      "name": "Michael Jackson",
+      "facet": "Music, movies and stars",
+      "known_at": 4
+    },
+    {
+      "name": "Johnny Cash",
+      "facet": "Music, movies and stars",
+      "known_at": 10
+    },
+    {
+      "name": "Bob Dylan",
+      "facet": "Music, movies and stars",
+      "known_at": 10
+    },
+    {
+      "name": "The Jazz Singer",
+      "facet": "Music, movies and stars",
+      "known_at": 13
+    },
+    {
+      "name": "Snow White and the Seven Dwarfs",
+      "facet": "Music, movies and stars",
+      "known_at": 3
+    },
+    {
+      "name": "Star Wars",
+      "facet": "Music, movies and stars",
+      "known_at": 3
+    },
+    {
+      "name": "Shirley Temple",
+      "facet": "Music, movies and stars",
+      "known_at": 10
+    },
+    {
+      "name": "Academy Awards",
+      "facet": "Music, movies and stars",
+      "known_at": 6
+    },
+    {
+      "name": "Aretha Franklin",
+      "facet": "Music, movies and stars",
+      "known_at": 10
+    },
+    {
+      "name": "Ella Fitzgerald",
+      "facet": "Music, movies and stars",
+      "known_at": 11
+    },
+    {
+      "name": "I Love Lucy",
+      "facet": "Music, movies and stars",
+      "known_at": 10
+    },
+    {
+      "name": "The Ed Sullivan Show",
+      "facet": "Music, movies and stars",
+      "known_at": 12
+    },
+    {
+      "name": "Babe Ruth",
+      "facet": "Sports legends and milestones",
+      "known_at": 5
+    },
+    {
+      "name": "Jackie Robinson",
+      "facet": "Sports legends and milestones",
+      "known_at": 5
+    },
+    {
+      "name": "Jesse Owens",
+      "facet": "Sports legends and milestones",
+      "known_at": 8
+    },
+    {
+      "name": "Muhammad Ali",
+      "facet": "Sports legends and milestones",
+      "known_at": 6
+    },
+    {
+      "name": "Michael Jordan",
+      "facet": "Sports legends and milestones",
+      "known_at": 3
+    },
+    {
+      "name": "Joe DiMaggio",
+      "facet": "Sports legends and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Babe Didrikson Zaharias",
+      "facet": "Sports legends and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Miracle on Ice",
+      "facet": "Sports legends and milestones",
+      "known_at": 9
+    },
+    {
+      "name": "Super Bowl I",
+      "facet": "Sports legends and milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Lou Gehrig",
+      "facet": "Sports legends and milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Hank Aaron",
+      "facet": "Sports legends and milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Billie Jean King",
+      "facet": "Sports legends and milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Battle of the Sexes",
+      "facet": "Sports legends and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Wilt Chamberlain",
+      "facet": "Sports legends and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Secretariat",
+      "facet": "Sports legends and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Dream Team",
+      "facet": "Sports legends and milestones",
+      "known_at": 9
+    },
+    {
+      "name": "Mark Spitz",
+      "facet": "Sports legends and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Joe Louis",
+      "facet": "Sports legends and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Title IX",
+      "facet": "Sports legends and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Harlem Globetrotters",
+      "facet": "Sports legends and milestones",
+      "known_at": 7
+    },
+    {
+      "name": "1999 Women's World Cup",
+      "facet": "Sports legends and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Model T",
+      "facet": "Cars, roads and suburbs",
+      "known_at": 7
+    },
+    {
+      "name": "Drive-through",
+      "facet": "Cars, roads and suburbs",
+      "known_at": 3
+    },
+    {
+      "name": "Ford Mustang",
+      "facet": "Cars, roads and suburbs",
+      "known_at": 6
+    },
+    {
+      "name": "Chevrolet Corvette",
+      "facet": "Cars, roads and suburbs",
+      "known_at": 9
+    },
+    {
+      "name": "Cadillac tailfins",
+      "facet": "Cars, roads and suburbs",
+      "known_at": 11
+    },
+    {
+      "name": "Greyhound bus",
+      "facet": "Cars, roads and suburbs",
+      "known_at": 8
+    },
+    {
+      "name": "Shopping mall",
+      "facet": "Cars, roads and suburbs",
+      "known_at": 4
+    },
+    {
+      "name": "Station wagon",
+      "facet": "Cars, roads and suburbs",
+      "known_at": 8
+    },
+    {
+      "name": "Carhop",
+      "facet": "Cars, roads and suburbs",
+      "known_at": 11
+    },
+    {
+      "name": "Jeep",
+      "facet": "Cars, roads and suburbs",
+      "known_at": 5
+    },
+    {
+      "name": "Burma-Shave signs",
+      "facet": "Cars, roads and suburbs",
+      "known_at": 14
+    },
+    {
+      "name": "Cul-de-sac",
+      "facet": "Cars, roads and suburbs",
+      "known_at": 8
+    },
+    {
+      "name": "White picket fence",
+      "facet": "Cars, roads and suburbs",
+      "known_at": 7
+    },
+    {
+      "name": "World Trade Center",
+      "facet": "Landmarks and great building projects",
+      "known_at": 7
+    },
+    {
+      "name": "Guggenheim Museum",
+      "facet": "Landmarks and great building projects",
+      "known_at": 11
+    },
+    {
+      "name": "Frank Lloyd Wright",
+      "facet": "Landmarks and great building projects",
+      "known_at": 10
+    },
+    {
+      "name": "Alcatraz",
+      "facet": "Landmarks and great building projects",
+      "known_at": 7
+    },
+    {
+      "name": "Hula hoop",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 3
+    },
+    {
+      "name": "Frisbee",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 3
+    },
+    {
+      "name": "Slinky",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 3
+    },
+    {
+      "name": "Barbie",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 2
+    },
+    {
+      "name": "Etch A Sketch",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 5
+    },
+    {
+      "name": "Mr. Potato Head",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 2
+    },
+    {
+      "name": "TV dinner",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 7
+    },
+    {
+      "name": "Jell-O",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 4
+    },
+    {
+      "name": "Twinkie",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 5
+    },
+    {
+      "name": "Chocolate chip cookie",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 2
+    },
+    {
+      "name": "Sock hop",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 11
+    },
+    {
+      "name": "Poodle skirt",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 9
+    },
+    {
+      "name": "Pet Rock",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 11
+    },
+    {
+      "name": "Tupperware party",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 11
+    },
+    {
+      "name": "Soda fountain",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 9
+    },
+    {
+      "name": "Jukebox",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 7
+    },
+    {
+      "name": "Cabbage Patch Kids",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 9
+    },
+    {
+      "name": "Monopoly",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 3
+    },
+    {
+      "name": "Silly Putty",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 5
+    },
+    {
+      "name": "Crayola crayons",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 2
+    },
+    {
+      "name": "Lincoln Logs",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 7
+    },
+    {
+      "name": "Mood ring",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 10
+    },
+    {
+      "name": "Popsicle",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 2
+    },
+    {
+      "name": "Cotton candy",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 2
+    },
+    {
+      "name": "Sears catalog",
+      "facet": "Fads, foods and everyday life",
+      "known_at": 12
+    }
+  ]
+}

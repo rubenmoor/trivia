@@ -1,0 +1,677 @@
+{
+  "subcategory": "winter-holidays",
+  "facets": [
+    "Thanksgiving dinner table",
+    "Thanksgiving Day parades and balloons",
+    "Presidents and holiday history",
+    "Black Friday and holiday shopping",
+    "American Santa Claus lore",
+    "Christmas movies and TV specials",
+    "American holiday songs and singers",
+    "Famous trees, lights and landmarks",
+    "Hanukkah and Kwanzaa in America",
+    "Modern family holiday customs",
+    "Holiday football and bowl games",
+    "New Year's Eve and New Year's Day"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Tryptophan",
+      "facet": "Thanksgiving dinner table",
+      "known_at": 11
+    },
+    {
+      "name": "Pikachu balloon",
+      "facet": "Thanksgiving Day parades and balloons",
+      "known_at": 3
+    },
+    {
+      "name": "SpongeBob SquarePants balloon",
+      "facet": "Thanksgiving Day parades and balloons",
+      "known_at": 4
+    },
+    {
+      "name": "Snoopy balloon",
+      "facet": "Thanksgiving Day parades and balloons",
+      "known_at": 5
+    },
+    {
+      "name": "Helium",
+      "facet": "Thanksgiving Day parades and balloons",
+      "known_at": 5,
+      "retired": "used_up: Helium in floating balloons is already asked, and the name's Greek origin isn't a US topic."
+    },
+    {
+      "name": "Marching bands",
+      "facet": "Thanksgiving Day parades and balloons",
+      "known_at": 5
+    },
+    {
+      "name": "Tom Turkey float",
+      "facet": "Thanksgiving Day parades and balloons",
+      "known_at": 8
+    },
+    {
+      "name": "Rockettes",
+      "facet": "Thanksgiving Day parades and balloons",
+      "known_at": 8
+    },
+    {
+      "name": "Balloon handlers",
+      "facet": "Thanksgiving Day parades and balloons",
+      "known_at": 10
+    },
+    {
+      "name": "Herald Square",
+      "facet": "Thanksgiving Day parades and balloons",
+      "known_at": 11
+    },
+    {
+      "name": "Central Park West",
+      "facet": "Thanksgiving Day parades and balloons",
+      "known_at": 11
+    },
+    {
+      "name": "National Dog Show",
+      "facet": "Thanksgiving Day parades and balloons",
+      "known_at": 11
+    },
+    {
+      "name": "Felix the Cat balloon",
+      "facet": "Thanksgiving Day parades and balloons",
+      "known_at": 13
+    },
+    {
+      "name": "America's Thanksgiving Parade",
+      "facet": "Thanksgiving Day parades and balloons",
+      "known_at": 13
+    },
+    {
+      "name": "Philadelphia Thanksgiving Day Parade",
+      "facet": "Thanksgiving Day parades and balloons",
+      "known_at": 14
+    },
+    {
+      "name": "Tony Sarg",
+      "facet": "Thanksgiving Day parades and balloons",
+      "known_at": 15
+    },
+    {
+      "name": "Plymouth Colony",
+      "facet": "Presidents and holiday history",
+      "known_at": 8
+    },
+    {
+      "name": "Gift receipt",
+      "facet": "Black Friday and holiday shopping",
+      "known_at": 9
+    },
+    {
+      "name": "Furby",
+      "facet": "Black Friday and holiday shopping",
+      "known_at": 9
+    },
+    {
+      "name": "Tickle Me Elmo",
+      "facet": "Black Friday and holiday shopping",
+      "known_at": 12
+    },
+    {
+      "name": "Santa Claus",
+      "facet": "American Santa Claus lore",
+      "known_at": 1
+    },
+    {
+      "name": "North Pole",
+      "facet": "American Santa Claus lore",
+      "known_at": 1,
+      "retired": "used_up: The pool already says Santa lives at the North Pole, which answers the riddle option."
+    },
+    {
+      "name": "Elves",
+      "facet": "American Santa Claus lore",
+      "known_at": 1
+    },
+    {
+      "name": "Reindeer",
+      "facet": "American Santa Claus lore",
+      "known_at": 1
+    },
+    {
+      "name": "Sleigh",
+      "facet": "American Santa Claus lore",
+      "known_at": 1,
+      "retired": "used_up: Santa's sleigh is already asked, and a riddle answered with Santa would repeat it."
+    },
+    {
+      "name": "Santa's workshop",
+      "facet": "American Santa Claus lore",
+      "known_at": 2
+    },
+    {
+      "name": "Milk and cookies",
+      "facet": "American Santa Claus lore",
+      "known_at": 2
+    },
+    {
+      "name": "Chimney",
+      "facet": "American Santa Claus lore",
+      "known_at": 2
+    },
+    {
+      "name": "Naughty or nice list",
+      "facet": "American Santa Claus lore",
+      "known_at": 2
+    },
+    {
+      "name": "Mrs. Claus",
+      "facet": "American Santa Claus lore",
+      "known_at": 3
+    },
+    {
+      "name": "Dasher",
+      "facet": "American Santa Claus lore",
+      "known_at": 6
+    },
+    {
+      "name": "Kris Kringle",
+      "facet": "American Santa Claus lore",
+      "known_at": 8
+    },
+    {
+      "name": "NORAD Tracks Santa",
+      "facet": "American Santa Claus lore",
+      "known_at": 9
+    },
+    {
+      "name": "Sinterklaas",
+      "facet": "American Santa Claus lore",
+      "known_at": 11
+    },
+    {
+      "name": "Yes, Virginia, There Is a Santa Claus",
+      "facet": "American Santa Claus lore",
+      "known_at": 12
+    },
+    {
+      "name": "Clement Clarke Moore",
+      "facet": "American Santa Claus lore",
+      "known_at": 13
+    },
+    {
+      "name": "Robert L. May",
+      "facet": "American Santa Claus lore",
+      "known_at": 14
+    },
+    {
+      "name": "Haddon Sundblom",
+      "facet": "American Santa Claus lore",
+      "known_at": 15
+    },
+    {
+      "name": "Kevin McCallister",
+      "facet": "Christmas movies and TV specials",
+      "known_at": 5
+    },
+    {
+      "name": "Tim Allen",
+      "facet": "Christmas movies and TV specials",
+      "known_at": 10
+    },
+    {
+      "name": "Jingle All the Way",
+      "facet": "Christmas movies and TV specials",
+      "known_at": 11
+    },
+    {
+      "name": "Leg lamp",
+      "facet": "Christmas movies and TV specials",
+      "known_at": 12
+    },
+    {
+      "name": "George Bailey",
+      "facet": "Christmas movies and TV specials",
+      "known_at": 13
+    },
+    {
+      "name": "Rankin/Bass",
+      "facet": "Christmas movies and TV specials",
+      "known_at": 14
+    },
+    {
+      "name": "Jingle Bells",
+      "facet": "American holiday songs and singers",
+      "known_at": 1
+    },
+    {
+      "name": "Santa Claus Is Comin' to Town",
+      "facet": "American holiday songs and singers",
+      "known_at": 4
+    },
+    {
+      "name": "All I Want for Christmas Is You",
+      "facet": "American holiday songs and singers",
+      "known_at": 5
+    },
+    {
+      "name": "Mariah Carey",
+      "facet": "American holiday songs and singers",
+      "known_at": 6
+    },
+    {
+      "name": "Feliz Navidad",
+      "facet": "American holiday songs and singers",
+      "known_at": 6
+    },
+    {
+      "name": "Rockin' Around the Christmas Tree",
+      "facet": "American holiday songs and singers",
+      "known_at": 8
+    },
+    {
+      "name": "Jingle Bell Rock",
+      "facet": "American holiday songs and singers",
+      "known_at": 8
+    },
+    {
+      "name": "Alvin and the Chipmunks",
+      "facet": "American holiday songs and singers",
+      "known_at": 8
+    },
+    {
+      "name": "The Christmas Song",
+      "facet": "American holiday songs and singers",
+      "known_at": 11
+    },
+    {
+      "name": "Bing Crosby",
+      "facet": "American holiday songs and singers",
+      "known_at": 12
+    },
+    {
+      "name": "Have Yourself a Merry Little Christmas",
+      "facet": "American holiday songs and singers",
+      "known_at": 12
+    },
+    {
+      "name": "Judy Garland",
+      "facet": "American holiday songs and singers",
+      "known_at": 12
+    },
+    {
+      "name": "Nat King Cole",
+      "facet": "American holiday songs and singers",
+      "known_at": 12
+    },
+    {
+      "name": "José Feliciano",
+      "facet": "American holiday songs and singers",
+      "known_at": 12
+    },
+    {
+      "name": "Brenda Lee",
+      "facet": "American holiday songs and singers",
+      "known_at": 13
+    },
+    {
+      "name": "Irving Berlin",
+      "facet": "American holiday songs and singers",
+      "known_at": 14
+    },
+    {
+      "name": "Gene Autry",
+      "facet": "American holiday songs and singers",
+      "known_at": 14
+    },
+    {
+      "name": "Christmas lights",
+      "facet": "Famous trees, lights and landmarks",
+      "known_at": 1,
+      "retired": "used_up: Two existing questions already have Christmas lights as the answer, and no easy new fact is left."
+    },
+    {
+      "name": "The Rink at Rockefeller Center",
+      "facet": "Famous trees, lights and landmarks",
+      "known_at": 8
+    },
+    {
+      "name": "Norway spruce",
+      "facet": "Famous trees, lights and landmarks",
+      "known_at": 10
+    },
+    {
+      "name": "Radio City Christmas Spectacular",
+      "facet": "Famous trees, lights and landmarks",
+      "known_at": 11
+    },
+    {
+      "name": "North Pole, Alaska",
+      "facet": "Famous trees, lights and landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "San Antonio River Walk",
+      "facet": "Famous trees, lights and landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Capitol Christmas Tree",
+      "facet": "Famous trees, lights and landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Dyker Heights",
+      "facet": "Famous trees, lights and landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Farolitos",
+      "facet": "Famous trees, lights and landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Bethlehem, Pennsylvania",
+      "facet": "Famous trees, lights and landmarks",
+      "known_at": 14
+    },
+    {
+      "name": "Edward H. Johnson",
+      "facet": "Famous trees, lights and landmarks",
+      "known_at": 15
+    },
+    {
+      "name": "Hanukkah",
+      "facet": "Hanukkah and Kwanzaa in America",
+      "known_at": 5
+    },
+    {
+      "name": "Menorah",
+      "facet": "Hanukkah and Kwanzaa in America",
+      "known_at": 6
+    },
+    {
+      "name": "Dreidel",
+      "facet": "Hanukkah and Kwanzaa in America",
+      "known_at": 6
+    },
+    {
+      "name": "Latkes",
+      "facet": "Hanukkah and Kwanzaa in America",
+      "known_at": 9
+    },
+    {
+      "name": "Gelt",
+      "facet": "Hanukkah and Kwanzaa in America",
+      "known_at": 10
+    },
+    {
+      "name": "Swahili",
+      "facet": "Hanukkah and Kwanzaa in America",
+      "known_at": 11
+    },
+    {
+      "name": "The Hanukkah Song",
+      "facet": "Hanukkah and Kwanzaa in America",
+      "known_at": 12
+    },
+    {
+      "name": "Chrismukkah",
+      "facet": "Hanukkah and Kwanzaa in America",
+      "known_at": 12
+    },
+    {
+      "name": "Shamash",
+      "facet": "Hanukkah and Kwanzaa in America",
+      "known_at": 13
+    },
+    {
+      "name": "Sufganiyot",
+      "facet": "Hanukkah and Kwanzaa in America",
+      "known_at": 13
+    },
+    {
+      "name": "National Menorah",
+      "facet": "Hanukkah and Kwanzaa in America",
+      "known_at": 13
+    },
+    {
+      "name": "Nguzo Saba",
+      "facet": "Hanukkah and Kwanzaa in America",
+      "known_at": 14
+    },
+    {
+      "name": "Umoja",
+      "facet": "Hanukkah and Kwanzaa in America",
+      "known_at": 14
+    },
+    {
+      "name": "Mkeka",
+      "facet": "Hanukkah and Kwanzaa in America",
+      "known_at": 15
+    },
+    {
+      "name": "Karamu",
+      "facet": "Hanukkah and Kwanzaa in America",
+      "known_at": 15
+    },
+    {
+      "name": "Christmas stocking",
+      "facet": "Modern family holiday customs",
+      "known_at": 2
+    },
+    {
+      "name": "Ugly Christmas sweater",
+      "facet": "Modern family holiday customs",
+      "known_at": 5
+    },
+    {
+      "name": "Inflatable yard decorations",
+      "facet": "Modern family holiday customs",
+      "known_at": 6
+    },
+    {
+      "name": "Secret Santa",
+      "facet": "Modern family holiday customs",
+      "known_at": 7
+    },
+    {
+      "name": "Matching family pajamas",
+      "facet": "Modern family holiday customs",
+      "known_at": 8,
+      "retired": "unaskable: Matching pajamas only give a trivial naming question with no real fact behind it."
+    },
+    {
+      "name": "White Elephant gift exchange",
+      "facet": "Modern family holiday customs",
+      "known_at": 10
+    },
+    {
+      "name": "Hallmark Christmas movies",
+      "facet": "Modern family holiday customs",
+      "known_at": 10
+    },
+    {
+      "name": "Holiday newsletter",
+      "facet": "Modern family holiday customs",
+      "known_at": 12
+    },
+    {
+      "name": "Feast of the Seven Fishes",
+      "facet": "Modern family holiday customs",
+      "known_at": 13
+    },
+    {
+      "name": "Christmas Day NFL games",
+      "facet": "Holiday football and bowl games",
+      "known_at": 11
+    },
+    {
+      "name": "Heisman Trophy",
+      "facet": "Holiday football and bowl games",
+      "known_at": 11
+    },
+    {
+      "name": "John Madden",
+      "facet": "Holiday football and bowl games",
+      "known_at": 12
+    },
+    {
+      "name": "Pasadena",
+      "facet": "Holiday football and bowl games",
+      "known_at": 12
+    },
+    {
+      "name": "Sugar Bowl",
+      "facet": "Holiday football and bowl games",
+      "known_at": 12
+    },
+    {
+      "name": "Orange Bowl",
+      "facet": "Holiday football and bowl games",
+      "known_at": 12
+    },
+    {
+      "name": "Cotton Bowl",
+      "facet": "Holiday football and bowl games",
+      "known_at": 12
+    },
+    {
+      "name": "College Football Playoff",
+      "facet": "Holiday football and bowl games",
+      "known_at": 12
+    },
+    {
+      "name": "Army–Navy Game",
+      "facet": "Holiday football and bowl games",
+      "known_at": 12
+    },
+    {
+      "name": "Fiesta Bowl",
+      "facet": "Holiday football and bowl games",
+      "known_at": 13
+    },
+    {
+      "name": "Peach Bowl",
+      "facet": "Holiday football and bowl games",
+      "known_at": 13
+    },
+    {
+      "name": "Rivalry Week",
+      "facet": "Holiday football and bowl games",
+      "known_at": 13
+    },
+    {
+      "name": "Iron Bowl",
+      "facet": "Holiday football and bowl games",
+      "known_at": 14
+    },
+    {
+      "name": "Duke's Mayo Bowl",
+      "facet": "Holiday football and bowl games",
+      "known_at": 14
+    },
+    {
+      "name": "Times Square Ball",
+      "facet": "New Year's Eve and New Year's Day",
+      "known_at": 5
+    },
+    {
+      "name": "Times Square confetti",
+      "facet": "New Year's Eve and New Year's Day",
+      "known_at": 7
+    },
+    {
+      "name": "Tournament of Roses Parade",
+      "facet": "New Year's Eve and New Year's Day",
+      "known_at": 9
+    },
+    {
+      "name": "Polar Bear Plunge",
+      "facet": "New Year's Eve and New Year's Day",
+      "known_at": 9
+    },
+    {
+      "name": "Dick Clark's New Year's Rockin' Eve",
+      "facet": "New Year's Eve and New Year's Day",
+      "known_at": 11
+    },
+    {
+      "name": "Ryan Seacrest",
+      "facet": "New Year's Eve and New Year's Day",
+      "known_at": 11
+    },
+    {
+      "name": "Dick Clark",
+      "facet": "New Year's Eve and New Year's Day",
+      "known_at": 12
+    },
+    {
+      "name": "One Times Square",
+      "facet": "New Year's Eve and New Year's Day",
+      "known_at": 13
+    },
+    {
+      "name": "Peach Drop",
+      "facet": "New Year's Eve and New Year's Day",
+      "known_at": 13
+    },
+    {
+      "name": "Waterford Crystal",
+      "facet": "New Year's Eve and New Year's Day",
+      "known_at": 14
+    },
+    {
+      "name": "Pork and sauerkraut",
+      "facet": "New Year's Eve and New Year's Day",
+      "known_at": 14
+    },
+    {
+      "name": "Adolph Ochs",
+      "facet": "New Year's Eve and New Year's Day",
+      "known_at": 15
+    }
+  ]
+}

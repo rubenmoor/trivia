@@ -1,0 +1,994 @@
+{
+  "subcategory": "native-nations",
+  "facets": [
+    "Nations and their homelands",
+    "Famous leaders and chiefs",
+    "Homes and villages",
+    "Food and farming",
+    "Crafts, art and clothing",
+    "Native words in American English",
+    "Place names from Native languages",
+    "Wars, treaties and removal",
+    "Explorers, settlers and first contact",
+    "Ceremonies, dances and powwows",
+    "Sacred sites and ancient cities",
+    "Native Americans today and in pop culture"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Cherokee",
+      "facet": "Nations and their homelands",
+      "known_at": 6
+    },
+    {
+      "name": "Navajo",
+      "facet": "Nations and their homelands",
+      "known_at": 6
+    },
+    {
+      "name": "Sioux",
+      "facet": "Nations and their homelands",
+      "known_at": 6
+    },
+    {
+      "name": "Apache",
+      "facet": "Nations and their homelands",
+      "known_at": 6
+    },
+    {
+      "name": "Inuit",
+      "facet": "Nations and their homelands",
+      "known_at": 6
+    },
+    {
+      "name": "Lakota",
+      "facet": "Nations and their homelands",
+      "known_at": 9
+    },
+    {
+      "name": "Comanche",
+      "facet": "Nations and their homelands",
+      "known_at": 9
+    },
+    {
+      "name": "Iroquois Confederacy",
+      "facet": "Nations and their homelands",
+      "known_at": 9
+    },
+    {
+      "name": "Mohawk",
+      "facet": "Nations and their homelands",
+      "known_at": 9
+    },
+    {
+      "name": "Wampanoag",
+      "facet": "Nations and their homelands",
+      "known_at": 8
+    },
+    {
+      "name": "Powhatan",
+      "facet": "Nations and their homelands",
+      "known_at": 9
+    },
+    {
+      "name": "Seminole",
+      "facet": "Nations and their homelands",
+      "known_at": 9
+    },
+    {
+      "name": "Pueblo peoples",
+      "facet": "Nations and their homelands",
+      "known_at": 9
+    },
+    {
+      "name": "Hopi",
+      "facet": "Nations and their homelands",
+      "known_at": 10
+    },
+    {
+      "name": "Shoshone",
+      "facet": "Nations and their homelands",
+      "known_at": 10
+    },
+    {
+      "name": "Ojibwe",
+      "facet": "Nations and their homelands",
+      "known_at": 10
+    },
+    {
+      "name": "Blackfeet",
+      "facet": "Nations and their homelands",
+      "known_at": 10
+    },
+    {
+      "name": "Choctaw",
+      "facet": "Nations and their homelands",
+      "known_at": 10
+    },
+    {
+      "name": "Nez Perce",
+      "facet": "Nations and their homelands",
+      "known_at": 11
+    },
+    {
+      "name": "Crow Nation",
+      "facet": "Nations and their homelands",
+      "known_at": 11
+    },
+    {
+      "name": "Muscogee (Creek)",
+      "facet": "Nations and their homelands",
+      "known_at": 11
+    },
+    {
+      "name": "Osage",
+      "facet": "Nations and their homelands",
+      "known_at": 12
+    },
+    {
+      "name": "Tlingit",
+      "facet": "Nations and their homelands",
+      "known_at": 12
+    },
+    {
+      "name": "Sitting Bull",
+      "facet": "Famous leaders and chiefs",
+      "known_at": 7
+    },
+    {
+      "name": "Geronimo",
+      "facet": "Famous leaders and chiefs",
+      "known_at": 7
+    },
+    {
+      "name": "Crazy Horse",
+      "facet": "Famous leaders and chiefs",
+      "known_at": 8
+    },
+    {
+      "name": "Hiawatha",
+      "facet": "Famous leaders and chiefs",
+      "known_at": 10
+    },
+    {
+      "name": "Chief Joseph",
+      "facet": "Famous leaders and chiefs",
+      "known_at": 10
+    },
+    {
+      "name": "Tecumseh",
+      "facet": "Famous leaders and chiefs",
+      "known_at": 10
+    },
+    {
+      "name": "Red Cloud",
+      "facet": "Famous leaders and chiefs",
+      "known_at": 11
+    },
+    {
+      "name": "Massasoit",
+      "facet": "Famous leaders and chiefs",
+      "known_at": 11
+    },
+    {
+      "name": "Pontiac",
+      "facet": "Famous leaders and chiefs",
+      "known_at": 11
+    },
+    {
+      "name": "Sequoyah",
+      "facet": "Famous leaders and chiefs",
+      "known_at": 11
+    },
+    {
+      "name": "Cochise",
+      "facet": "Famous leaders and chiefs",
+      "known_at": 11
+    },
+    {
+      "name": "Chief Seattle",
+      "facet": "Famous leaders and chiefs",
+      "known_at": 11
+    },
+    {
+      "name": "Black Hawk",
+      "facet": "Famous leaders and chiefs",
+      "known_at": 12
+    },
+    {
+      "name": "Osceola",
+      "facet": "Famous leaders and chiefs",
+      "known_at": 12
+    },
+    {
+      "name": "Quanah Parker",
+      "facet": "Famous leaders and chiefs",
+      "known_at": 12
+    },
+    {
+      "name": "Metacom (King Philip)",
+      "facet": "Famous leaders and chiefs",
+      "known_at": 13
+    },
+    {
+      "name": "Wilma Mankiller",
+      "facet": "Famous leaders and chiefs",
+      "known_at": 13
+    },
+    {
+      "name": "Tipi",
+      "facet": "Homes and villages",
+      "known_at": 2
+    },
+    {
+      "name": "Igloo",
+      "facet": "Homes and villages",
+      "known_at": 3
+    },
+    {
+      "name": "Wigwam",
+      "facet": "Homes and villages",
+      "known_at": 6
+    },
+    {
+      "name": "Longhouse",
+      "facet": "Homes and villages",
+      "known_at": 8
+    },
+    {
+      "name": "Adobe",
+      "facet": "Homes and villages",
+      "known_at": 8
+    },
+    {
+      "name": "Cliff dwelling",
+      "facet": "Homes and villages",
+      "known_at": 9
+    },
+    {
+      "name": "Hogan",
+      "facet": "Homes and villages",
+      "known_at": 11
+    },
+    {
+      "name": "Earth lodge",
+      "facet": "Homes and villages",
+      "known_at": 11
+    },
+    {
+      "name": "Travois",
+      "facet": "Homes and villages",
+      "known_at": 11
+    },
+    {
+      "name": "Palisade",
+      "facet": "Homes and villages",
+      "known_at": 11
+    },
+    {
+      "name": "Plank house",
+      "facet": "Homes and villages",
+      "known_at": 12
+    },
+    {
+      "name": "Grass house",
+      "facet": "Homes and villages",
+      "known_at": 12
+    },
+    {
+      "name": "Wickiup",
+      "facet": "Homes and villages",
+      "known_at": 13
+    },
+    {
+      "name": "Chickee",
+      "facet": "Homes and villages",
+      "known_at": 13
+    },
+    {
+      "name": "Pit house",
+      "facet": "Homes and villages",
+      "known_at": 13
+    },
+    {
+      "name": "Turkey",
+      "facet": "Food and farming",
+      "known_at": 2
+    },
+    {
+      "name": "Bison",
+      "facet": "Food and farming",
+      "known_at": 4
+    },
+    {
+      "name": "Salmon",
+      "facet": "Food and farming",
+      "known_at": 4
+    },
+    {
+      "name": "Acorn",
+      "facet": "Food and farming",
+      "known_at": 5
+    },
+    {
+      "name": "Jerky",
+      "facet": "Food and farming",
+      "known_at": 6
+    },
+    {
+      "name": "Cornbread",
+      "facet": "Food and farming",
+      "known_at": 7
+    },
+    {
+      "name": "Tobacco",
+      "facet": "Food and farming",
+      "known_at": 7
+    },
+    {
+      "name": "Pemmican",
+      "facet": "Food and farming",
+      "known_at": 11
+    },
+    {
+      "name": "Frybread",
+      "facet": "Food and farming",
+      "known_at": 11
+    },
+    {
+      "name": "Bow and arrow",
+      "facet": "Crafts, art and clothing",
+      "known_at": 2
+    },
+    {
+      "name": "Dreamcatcher",
+      "facet": "Crafts, art and clothing",
+      "known_at": 4
+    },
+    {
+      "name": "Totem pole",
+      "facet": "Crafts, art and clothing",
+      "known_at": 5
+    },
+    {
+      "name": "Feather headdress",
+      "facet": "Crafts, art and clothing",
+      "known_at": 5
+    },
+    {
+      "name": "Pottery",
+      "facet": "Crafts, art and clothing",
+      "known_at": 5
+    },
+    {
+      "name": "Moccasins",
+      "facet": "Crafts, art and clothing",
+      "known_at": 6
+    },
+    {
+      "name": "Tomahawk",
+      "facet": "Crafts, art and clothing",
+      "known_at": 6
+    },
+    {
+      "name": "Kayak",
+      "facet": "Crafts, art and clothing",
+      "known_at": 6
+    },
+    {
+      "name": "Peace pipe",
+      "facet": "Crafts, art and clothing",
+      "known_at": 7
+    },
+    {
+      "name": "Snowshoes",
+      "facet": "Crafts, art and clothing",
+      "known_at": 7
+    },
+    {
+      "name": "Basket weaving",
+      "facet": "Crafts, art and clothing",
+      "known_at": 7
+    },
+    {
+      "name": "Birchbark canoe",
+      "facet": "Crafts, art and clothing",
+      "known_at": 8
+    },
+    {
+      "name": "Beadwork",
+      "facet": "Crafts, art and clothing",
+      "known_at": 8
+    },
+    {
+      "name": "Buckskin",
+      "facet": "Crafts, art and clothing",
+      "known_at": 9
+    },
+    {
+      "name": "Wampum",
+      "facet": "Crafts, art and clothing",
+      "known_at": 10
+    },
+    {
+      "name": "Turquoise jewelry",
+      "facet": "Crafts, art and clothing",
+      "known_at": 10
+    },
+    {
+      "name": "Navajo rug",
+      "facet": "Crafts, art and clothing",
+      "known_at": 11
+    },
+    {
+      "name": "Kachina doll",
+      "facet": "Crafts, art and clothing",
+      "known_at": 11
+    },
+    {
+      "name": "Porcupine quillwork",
+      "facet": "Crafts, art and clothing",
+      "known_at": 12
+    },
+    {
+      "name": "Skunk",
+      "facet": "Native words in American English",
+      "known_at": 3
+    },
+    {
+      "name": "Chipmunk",
+      "facet": "Native words in American English",
+      "known_at": 3
+    },
+    {
+      "name": "Opossum",
+      "facet": "Native words in American English",
+      "known_at": 6
+    },
+    {
+      "name": "Woodchuck",
+      "facet": "Native words in American English",
+      "known_at": 7
+    },
+    {
+      "name": "Toboggan",
+      "facet": "Native words in American English",
+      "known_at": 9
+    },
+    {
+      "name": "Muskrat",
+      "facet": "Native words in American English",
+      "known_at": 9
+    },
+    {
+      "name": "Bayou",
+      "facet": "Native words in American English",
+      "known_at": 10
+    },
+    {
+      "name": "Persimmon",
+      "facet": "Native words in American English",
+      "known_at": 11
+    },
+    {
+      "name": "Papoose",
+      "facet": "Native words in American English",
+      "known_at": 12
+    },
+    {
+      "name": "Terrapin",
+      "facet": "Native words in American English",
+      "known_at": 12
+    },
+    {
+      "name": "Caucus",
+      "facet": "Native words in American English",
+      "known_at": 13
+    },
+    {
+      "name": "Wapiti",
+      "facet": "Native words in American English",
+      "known_at": 13
+    },
+    {
+      "name": "Hooch",
+      "facet": "Native words in American English",
+      "known_at": 13
+    },
+    {
+      "name": "Podunk",
+      "facet": "Native words in American English",
+      "known_at": 13
+    },
+    {
+      "name": "Sachem",
+      "facet": "Native words in American English",
+      "known_at": 14
+    },
+    {
+      "name": "Mugwump",
+      "facet": "Native words in American English",
+      "known_at": 15
+    },
+    {
+      "name": "Mississippi",
+      "facet": "Place names from Native languages",
+      "known_at": 4
+    },
+    {
+      "name": "Kentucky",
+      "facet": "Place names from Native languages",
+      "known_at": 7
+    },
+    {
+      "name": "Tennessee",
+      "facet": "Place names from Native languages",
+      "known_at": 7
+    },
+    {
+      "name": "Dakota",
+      "facet": "Place names from Native languages",
+      "known_at": 8
+    },
+    {
+      "name": "Utah",
+      "facet": "Place names from Native languages",
+      "known_at": 8
+    },
+    {
+      "name": "Missouri",
+      "facet": "Place names from Native languages",
+      "known_at": 8
+    },
+    {
+      "name": "Manhattan",
+      "facet": "Place names from Native languages",
+      "known_at": 9
+    },
+    {
+      "name": "Yosemite",
+      "facet": "Place names from Native languages",
+      "known_at": 10
+    },
+    {
+      "name": "Battle of the Little Bighorn",
+      "facet": "Wars, treaties and removal",
+      "known_at": 9
+    },
+    {
+      "name": "George Armstrong Custer",
+      "facet": "Wars, treaties and removal",
+      "known_at": 9
+    },
+    {
+      "name": "Purchase of Manhattan",
+      "facet": "Wars, treaties and removal",
+      "known_at": 9
+    },
+    {
+      "name": "French and Indian War",
+      "facet": "Wars, treaties and removal",
+      "known_at": 10
+    },
+    {
+      "name": "Navajo code talkers",
+      "facet": "Wars, treaties and removal",
+      "known_at": 10
+    },
+    {
+      "name": "Indian Wars",
+      "facet": "Wars, treaties and removal",
+      "known_at": 10
+    },
+    {
+      "name": "Indian Removal Act",
+      "facet": "Wars, treaties and removal",
+      "known_at": 11
+    },
+    {
+      "name": "Wounded Knee",
+      "facet": "Wars, treaties and removal",
+      "known_at": 12
+    },
+    {
+      "name": "King Philip's War",
+      "facet": "Wars, treaties and removal",
+      "known_at": 13
+    },
+    {
+      "name": "Treaty of Fort Laramie",
+      "facet": "Wars, treaties and removal",
+      "known_at": 13
+    },
+    {
+      "name": "Seminole Wars",
+      "facet": "Wars, treaties and removal",
+      "known_at": 13
+    },
+    {
+      "name": "Pueblo Revolt",
+      "facet": "Wars, treaties and removal",
+      "known_at": 13
+    },
+    {
+      "name": "Long Walk of the Navajo",
+      "facet": "Wars, treaties and removal",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Tippecanoe",
+      "facet": "Wars, treaties and removal",
+      "known_at": 13
+    },
+    {
+      "name": "Indian Citizenship Act",
+      "facet": "Wars, treaties and removal",
+      "known_at": 13
+    },
+    {
+      "name": "Dawes Act",
+      "facet": "Wars, treaties and removal",
+      "known_at": 14
+    },
+    {
+      "name": "Worcester v. Georgia",
+      "facet": "Wars, treaties and removal",
+      "known_at": 14
+    },
+    {
+      "name": "Pocahontas",
+      "facet": "Explorers, settlers and first contact",
+      "known_at": 3
+    },
+    {
+      "name": "First Thanksgiving",
+      "facet": "Explorers, settlers and first contact",
+      "known_at": 5
+    },
+    {
+      "name": "Pilgrims",
+      "facet": "Explorers, settlers and first contact",
+      "known_at": 6
+    },
+    {
+      "name": "John Smith",
+      "facet": "Explorers, settlers and first contact",
+      "known_at": 7
+    },
+    {
+      "name": "Squanto",
+      "facet": "Explorers, settlers and first contact",
+      "known_at": 9
+    },
+    {
+      "name": "Daniel Boone",
+      "facet": "Explorers, settlers and first contact",
+      "known_at": 9
+    },
+    {
+      "name": "Fur trade",
+      "facet": "Explorers, settlers and first contact",
+      "known_at": 10
+    },
+    {
+      "name": "John Rolfe",
+      "facet": "Explorers, settlers and first contact",
+      "known_at": 11
+    },
+    {
+      "name": "Spanish missions of California",
+      "facet": "Explorers, settlers and first contact",
+      "known_at": 11
+    },
+    {
+      "name": "Hernando de Soto",
+      "facet": "Explorers, settlers and first contact",
+      "known_at": 12
+    },
+    {
+      "name": "Francisco Vásquez de Coronado",
+      "facet": "Explorers, settlers and first contact",
+      "known_at": 13
+    },
+    {
+      "name": "Peter Minuit",
+      "facet": "Explorers, settlers and first contact",
+      "known_at": 13
+    },
+    {
+      "name": "Virginia Dare",
+      "facet": "Explorers, settlers and first contact",
+      "known_at": 13
+    },
+    {
+      "name": "Powwow",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 6
+    },
+    {
+      "name": "Rain dance",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 6
+    },
+    {
+      "name": "Lacrosse",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 8
+    },
+    {
+      "name": "Powwow drum",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 9
+    },
+    {
+      "name": "Sweat lodge",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 10
+    },
+    {
+      "name": "Hoop dance",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 10
+    },
+    {
+      "name": "Talking stick",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 10
+    },
+    {
+      "name": "Vision quest",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 10
+    },
+    {
+      "name": "Sun Dance",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 11
+    },
+    {
+      "name": "Naming ceremony",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 11,
+      "retired": "unaskable: Naming ceremonies differ from nation to nation; there's no single clear fact to ask without being vague or arguable."
+    },
+    {
+      "name": "Ghost Dance",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 12
+    },
+    {
+      "name": "Smudging",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 12
+    },
+    {
+      "name": "Potlatch",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 13
+    },
+    {
+      "name": "Jingle dress dance",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 13
+    },
+    {
+      "name": "Grass dance",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 13
+    },
+    {
+      "name": "Fancy dance",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 13
+    },
+    {
+      "name": "Green Corn Ceremony",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 13
+    },
+    {
+      "name": "Hopi Snake Dance",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 13
+    },
+    {
+      "name": "Stickball",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 13
+    },
+    {
+      "name": "Gourd dance",
+      "facet": "Ceremonies, dances and powwows",
+      "known_at": 14
+    },
+    {
+      "name": "Black Hills",
+      "facet": "Sacred sites and ancient cities",
+      "known_at": 9
+    },
+    {
+      "name": "Kiva",
+      "facet": "Sacred sites and ancient cities",
+      "known_at": 11
+    },
+    {
+      "name": "Chaco Canyon",
+      "facet": "Sacred sites and ancient cities",
+      "known_at": 12
+    },
+    {
+      "name": "Serpent Mound",
+      "facet": "Sacred sites and ancient cities",
+      "known_at": 12
+    },
+    {
+      "name": "Mound Builders",
+      "facet": "Sacred sites and ancient cities",
+      "known_at": 12
+    },
+    {
+      "name": "Medicine wheel",
+      "facet": "Sacred sites and ancient cities",
+      "known_at": 12
+    },
+    {
+      "name": "Bears Ears",
+      "facet": "Sacred sites and ancient cities",
+      "known_at": 13
+    },
+    {
+      "name": "Clovis culture",
+      "facet": "Sacred sites and ancient cities",
+      "known_at": 13
+    },
+    {
+      "name": "Effigy mounds",
+      "facet": "Sacred sites and ancient cities",
+      "known_at": 13
+    },
+    {
+      "name": "Reservation",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 7
+    },
+    {
+      "name": "Tiger Lily",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 8
+    },
+    {
+      "name": "Indigenous Peoples' Day",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 9
+    },
+    {
+      "name": "Native American Heritage Month",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 11
+    },
+    {
+      "name": "Dances with Wolves",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 11
+    },
+    {
+      "name": "The Last of the Mohicans",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 11
+    },
+    {
+      "name": "Tonto",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 11
+    },
+    {
+      "name": "Jim Thorpe",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 12
+    },
+    {
+      "name": "Killers of the Flower Moon",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 12
+    },
+    {
+      "name": "Prey",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 12,
+      "retired": "unaskable: Prey (2022) is an R-rated Predator horror film, so it isn't family-friendly for this game."
+    },
+    {
+      "name": "Tribal casino",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 12
+    },
+    {
+      "name": "Tribal sovereignty",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 13
+    },
+    {
+      "name": "Reservation Dogs",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 13
+    },
+    {
+      "name": "Lily Gladstone",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 13
+    },
+    {
+      "name": "Deb Haaland",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 13
+    },
+    {
+      "name": "Will Rogers",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 13
+    },
+    {
+      "name": "Standing Rock",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 13
+    },
+    {
+      "name": "Maria Tallchief",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 14
+    },
+    {
+      "name": "Billy Mills",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 14
+    },
+    {
+      "name": "Joy Harjo",
+      "facet": "Native Americans today and in pop culture",
+      "known_at": 14
+    }
+  ]
+}

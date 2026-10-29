@@ -1,0 +1,1062 @@
+{
+  "subcategory": "cities-and-towns",
+  "facets": [
+    "State capitals",
+    "Big cities and skylines",
+    "City nicknames and slogans",
+    "Famous landmarks by city",
+    "City foods and signature dishes",
+    "Sports teams' hometowns",
+    "Music cities and sounds",
+    "Small towns and odd town names",
+    "Historic and colonial towns",
+    "Cities in movies and TV",
+    "Neighborhoods and districts",
+    "Boomtowns, ghost towns and city origins"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Springfield, Illinois",
+      "facet": "State capitals",
+      "known_at": 10
+    },
+    {
+      "name": "San Antonio",
+      "facet": "Big cities and skylines",
+      "known_at": 8
+    },
+    {
+      "name": "San Diego",
+      "facet": "Big cities and skylines",
+      "known_at": 6
+    },
+    {
+      "name": "Dallas",
+      "facet": "Big cities and skylines",
+      "known_at": 5
+    },
+    {
+      "name": "San Jose",
+      "facet": "Big cities and skylines",
+      "known_at": 10
+    },
+    {
+      "name": "San Francisco",
+      "facet": "Big cities and skylines",
+      "known_at": 4
+    },
+    {
+      "name": "Pittsburgh",
+      "facet": "Big cities and skylines",
+      "known_at": 8
+    },
+    {
+      "name": "Minneapolis",
+      "facet": "Big cities and skylines",
+      "known_at": 9
+    },
+    {
+      "name": "Orlando",
+      "facet": "Big cities and skylines",
+      "known_at": 4
+    },
+    {
+      "name": "The Big Apple",
+      "facet": "City nicknames and slogans",
+      "known_at": 4
+    },
+    {
+      "name": "The Windy City",
+      "facet": "City nicknames and slogans",
+      "known_at": 6
+    },
+    {
+      "name": "The Big Easy",
+      "facet": "City nicknames and slogans",
+      "known_at": 10
+    },
+    {
+      "name": "Sin City",
+      "facet": "City nicknames and slogans",
+      "known_at": 10
+    },
+    {
+      "name": "City of Angels",
+      "facet": "City nicknames and slogans",
+      "known_at": 8
+    },
+    {
+      "name": "The Motor City",
+      "facet": "City nicknames and slogans",
+      "known_at": 8
+    },
+    {
+      "name": "The Mile High City",
+      "facet": "City nicknames and slogans",
+      "known_at": 8
+    },
+    {
+      "name": "The Emerald City",
+      "facet": "City nicknames and slogans",
+      "known_at": 11
+    },
+    {
+      "name": "City of Brotherly Love",
+      "facet": "City nicknames and slogans",
+      "known_at": 9
+    },
+    {
+      "name": "Music City",
+      "facet": "City nicknames and slogans",
+      "known_at": 9
+    },
+    {
+      "name": "The Magic City",
+      "facet": "City nicknames and slogans",
+      "known_at": 12
+    },
+    {
+      "name": "Beantown",
+      "facet": "City nicknames and slogans",
+      "known_at": 10
+    },
+    {
+      "name": "The Steel City",
+      "facet": "City nicknames and slogans",
+      "known_at": 10
+    },
+    {
+      "name": "Twin Cities",
+      "facet": "City nicknames and slogans",
+      "known_at": 10
+    },
+    {
+      "name": "Keep Austin Weird",
+      "facet": "City nicknames and slogans",
+      "known_at": 12
+    },
+    {
+      "name": "What happens in Vegas stays in Vegas",
+      "facet": "City nicknames and slogans",
+      "known_at": 9
+    },
+    {
+      "name": "I Love New York",
+      "facet": "City nicknames and slogans",
+      "known_at": 6
+    },
+    {
+      "name": "The City That Never Sleeps",
+      "facet": "City nicknames and slogans",
+      "known_at": 7
+    },
+    {
+      "name": "Charm City",
+      "facet": "City nicknames and slogans",
+      "known_at": 13
+    },
+    {
+      "name": "Rose City",
+      "facet": "City nicknames and slogans",
+      "known_at": 13
+    },
+    {
+      "name": "Queen City",
+      "facet": "City nicknames and slogans",
+      "known_at": 14
+    },
+    {
+      "name": "Gotham",
+      "facet": "City nicknames and slogans",
+      "known_at": 9
+    },
+    {
+      "name": "Willis Tower",
+      "facet": "Famous landmarks by city",
+      "known_at": 9
+    },
+    {
+      "name": "Las Vegas Strip",
+      "facet": "Famous landmarks by city",
+      "known_at": 7
+    },
+    {
+      "name": "Cloud Gate",
+      "facet": "Famous landmarks by city",
+      "known_at": 10
+    },
+    {
+      "name": "Alcatraz Island",
+      "facet": "Famous landmarks by city",
+      "known_at": 7
+    },
+    {
+      "name": "Pike Place Market",
+      "facet": "Famous landmarks by city",
+      "known_at": 11
+    },
+    {
+      "name": "Brooklyn Bridge",
+      "facet": "Famous landmarks by city",
+      "known_at": 6
+    },
+    {
+      "name": "Central Park",
+      "facet": "Famous landmarks by city",
+      "known_at": 4
+    },
+    {
+      "name": "Hollywood Walk of Fame",
+      "facet": "Famous landmarks by city",
+      "known_at": 6
+    },
+    {
+      "name": "Freedom Trail",
+      "facet": "Famous landmarks by city",
+      "known_at": 11
+    },
+    {
+      "name": "Chrysler Building",
+      "facet": "Famous landmarks by city",
+      "known_at": 11
+    },
+    {
+      "name": "Disneyland",
+      "facet": "Famous landmarks by city",
+      "known_at": 2
+    },
+    {
+      "name": "Philly cheesesteak",
+      "facet": "City foods and signature dishes",
+      "known_at": 6
+    },
+    {
+      "name": "Deep-dish pizza",
+      "facet": "City foods and signature dishes",
+      "known_at": 5
+    },
+    {
+      "name": "New York-style pizza",
+      "facet": "City foods and signature dishes",
+      "known_at": 5
+    },
+    {
+      "name": "Buffalo wings",
+      "facet": "City foods and signature dishes",
+      "known_at": 6
+    },
+    {
+      "name": "New England clam chowder",
+      "facet": "City foods and signature dishes",
+      "known_at": 8
+    },
+    {
+      "name": "Beignet",
+      "facet": "City foods and signature dishes",
+      "known_at": 7
+    },
+    {
+      "name": "Gumbo",
+      "facet": "City foods and signature dishes",
+      "known_at": 8
+    },
+    {
+      "name": "Po' boy",
+      "facet": "City foods and signature dishes",
+      "known_at": 11
+    },
+    {
+      "name": "Key lime pie",
+      "facet": "City foods and signature dishes",
+      "known_at": 8
+    },
+    {
+      "name": "Cuban sandwich",
+      "facet": "City foods and signature dishes",
+      "known_at": 10
+    },
+    {
+      "name": "Kansas City barbecue",
+      "facet": "City foods and signature dishes",
+      "known_at": 9
+    },
+    {
+      "name": "Nashville hot chicken",
+      "facet": "City foods and signature dishes",
+      "known_at": 9
+    },
+    {
+      "name": "Cincinnati chili",
+      "facet": "City foods and signature dishes",
+      "known_at": 12
+    },
+    {
+      "name": "Chicago-style hot dog",
+      "facet": "City foods and signature dishes",
+      "known_at": 9
+    },
+    {
+      "name": "Sourdough bread",
+      "facet": "City foods and signature dishes",
+      "known_at": 9
+    },
+    {
+      "name": "Lobster roll",
+      "facet": "City foods and signature dishes",
+      "known_at": 9
+    },
+    {
+      "name": "Crab cake",
+      "facet": "City foods and signature dishes",
+      "known_at": 10
+    },
+    {
+      "name": "Detroit-style pizza",
+      "facet": "City foods and signature dishes",
+      "known_at": 11
+    },
+    {
+      "name": "Mission burrito",
+      "facet": "City foods and signature dishes",
+      "known_at": 12
+    },
+    {
+      "name": "Toasted ravioli",
+      "facet": "City foods and signature dishes",
+      "known_at": 13
+    },
+    {
+      "name": "Boston cream pie",
+      "facet": "City foods and signature dishes",
+      "known_at": 8
+    },
+    {
+      "name": "Philadelphia soft pretzel",
+      "facet": "City foods and signature dishes",
+      "known_at": 10
+    },
+    {
+      "name": "New York bagel",
+      "facet": "City foods and signature dishes",
+      "known_at": 6
+    },
+    {
+      "name": "Green Bay Packers",
+      "facet": "Sports teams' hometowns",
+      "known_at": 6
+    },
+    {
+      "name": "Dallas Cowboys",
+      "facet": "Sports teams' hometowns",
+      "known_at": 4
+    },
+    {
+      "name": "New York Yankees",
+      "facet": "Sports teams' hometowns",
+      "known_at": 4
+    },
+    {
+      "name": "Boston Red Sox",
+      "facet": "Sports teams' hometowns",
+      "known_at": 5
+    },
+    {
+      "name": "Chicago Cubs",
+      "facet": "Sports teams' hometowns",
+      "known_at": 6
+    },
+    {
+      "name": "Los Angeles Lakers",
+      "facet": "Sports teams' hometowns",
+      "known_at": 5
+    },
+    {
+      "name": "Golden State Warriors",
+      "facet": "Sports teams' hometowns",
+      "known_at": 7
+    },
+    {
+      "name": "Pittsburgh Steelers",
+      "facet": "Sports teams' hometowns",
+      "known_at": 7
+    },
+    {
+      "name": "Seattle Seahawks",
+      "facet": "Sports teams' hometowns",
+      "known_at": 7
+    },
+    {
+      "name": "Utah Jazz",
+      "facet": "Sports teams' hometowns",
+      "known_at": 9
+    },
+    {
+      "name": "Los Angeles Dodgers",
+      "facet": "Sports teams' hometowns",
+      "known_at": 6
+    },
+    {
+      "name": "Kansas City Chiefs",
+      "facet": "Sports teams' hometowns",
+      "known_at": 6
+    },
+    {
+      "name": "Miami Heat",
+      "facet": "Sports teams' hometowns",
+      "known_at": 7
+    },
+    {
+      "name": "Denver Broncos",
+      "facet": "Sports teams' hometowns",
+      "known_at": 7
+    },
+    {
+      "name": "Las Vegas Raiders",
+      "facet": "Sports teams' hometowns",
+      "known_at": 9
+    },
+    {
+      "name": "Oklahoma City Thunder",
+      "facet": "Sports teams' hometowns",
+      "known_at": 10
+    },
+    {
+      "name": "Indianapolis Colts",
+      "facet": "Sports teams' hometowns",
+      "known_at": 9
+    },
+    {
+      "name": "Detroit Red Wings",
+      "facet": "Sports teams' hometowns",
+      "known_at": 10
+    },
+    {
+      "name": "Chicago Bulls",
+      "facet": "Sports teams' hometowns",
+      "known_at": 5
+    },
+    {
+      "name": "Memphis",
+      "facet": "Music cities and sounds",
+      "known_at": 8
+    },
+    {
+      "name": "New Orleans jazz",
+      "facet": "Music cities and sounds",
+      "known_at": 7
+    },
+    {
+      "name": "Motown",
+      "facet": "Music cities and sounds",
+      "known_at": 9
+    },
+    {
+      "name": "Grand Ole Opry",
+      "facet": "Music cities and sounds",
+      "known_at": 10
+    },
+    {
+      "name": "Beale Street",
+      "facet": "Music cities and sounds",
+      "known_at": 12
+    },
+    {
+      "name": "Grunge",
+      "facet": "Music cities and sounds",
+      "known_at": 11
+    },
+    {
+      "name": "Sun Studio",
+      "facet": "Music cities and sounds",
+      "known_at": 13
+    },
+    {
+      "name": "Delta blues",
+      "facet": "Music cities and sounds",
+      "known_at": 12
+    },
+    {
+      "name": "Chicago blues",
+      "facet": "Music cities and sounds",
+      "known_at": 12
+    },
+    {
+      "name": "Branson",
+      "facet": "Music cities and sounds",
+      "known_at": 13
+    },
+    {
+      "name": "Bakersfield sound",
+      "facet": "Music cities and sounds",
+      "known_at": 15
+    },
+    {
+      "name": "Preservation Hall",
+      "facet": "Music cities and sounds",
+      "known_at": 14
+    },
+    {
+      "name": "Woodstock",
+      "facet": "Music cities and sounds",
+      "known_at": 10
+    },
+    {
+      "name": "Muscle Shoals",
+      "facet": "Music cities and sounds",
+      "known_at": 14
+    },
+    {
+      "name": "Apollo Theater",
+      "facet": "Music cities and sounds",
+      "known_at": 11
+    },
+    {
+      "name": "Tin Pan Alley",
+      "facet": "Music cities and sounds",
+      "known_at": 13
+    },
+    {
+      "name": "Rock and Roll Hall of Fame",
+      "facet": "Music cities and sounds",
+      "known_at": 10
+    },
+    {
+      "name": "Austin City Limits",
+      "facet": "Music cities and sounds",
+      "known_at": 12
+    },
+    {
+      "name": "Punxsutawney",
+      "facet": "Small towns and odd town names",
+      "known_at": 7
+    },
+    {
+      "name": "Roswell",
+      "facet": "Small towns and odd town names",
+      "known_at": 8
+    },
+    {
+      "name": "Hershey",
+      "facet": "Small towns and odd town names",
+      "known_at": 6
+    },
+    {
+      "name": "Kitty Hawk",
+      "facet": "Small towns and odd town names",
+      "known_at": 8
+    },
+    {
+      "name": "Cooperstown",
+      "facet": "Small towns and odd town names",
+      "known_at": 11
+    },
+    {
+      "name": "Truth or Consequences",
+      "facet": "Small towns and odd town names",
+      "known_at": 12
+    },
+    {
+      "name": "Santa Claus, Indiana",
+      "facet": "Small towns and odd town names",
+      "known_at": 8
+    },
+    {
+      "name": "Boring, Oregon",
+      "facet": "Small towns and odd town names",
+      "known_at": 10
+    },
+    {
+      "name": "Kalamazoo",
+      "facet": "Small towns and odd town names",
+      "known_at": 10
+    },
+    {
+      "name": "Walla Walla",
+      "facet": "Small towns and odd town names",
+      "known_at": 11
+    },
+    {
+      "name": "Chicken, Alaska",
+      "facet": "Small towns and odd town names",
+      "known_at": 12
+    },
+    {
+      "name": "Why, Arizona",
+      "facet": "Small towns and odd town names",
+      "known_at": 13
+    },
+    {
+      "name": "Peculiar, Missouri",
+      "facet": "Small towns and odd town names",
+      "known_at": 13
+    },
+    {
+      "name": "Paris, Texas",
+      "facet": "Small towns and odd town names",
+      "known_at": 10
+    },
+    {
+      "name": "Mars, Pennsylvania",
+      "facet": "Small towns and odd town names",
+      "known_at": 13
+    },
+    {
+      "name": "Hot Coffee, Mississippi",
+      "facet": "Small towns and odd town names",
+      "known_at": 13
+    },
+    {
+      "name": "Toad Suck, Arkansas",
+      "facet": "Small towns and odd town names",
+      "known_at": 14
+    },
+    {
+      "name": "Bird-in-Hand, Pennsylvania",
+      "facet": "Small towns and odd town names",
+      "known_at": 14
+    },
+    {
+      "name": "Sturgis",
+      "facet": "Small towns and odd town names",
+      "known_at": 12
+    },
+    {
+      "name": "Frankenmuth",
+      "facet": "Small towns and odd town names",
+      "known_at": 14
+    },
+    {
+      "name": "Jamestown",
+      "facet": "Historic and colonial towns",
+      "known_at": 8
+    },
+    {
+      "name": "Plymouth",
+      "facet": "Historic and colonial towns",
+      "known_at": 6
+    },
+    {
+      "name": "St. Augustine",
+      "facet": "Historic and colonial towns",
+      "known_at": 10
+    },
+    {
+      "name": "Colonial Williamsburg",
+      "facet": "Historic and colonial towns",
+      "known_at": 10
+    },
+    {
+      "name": "Salem",
+      "facet": "Historic and colonial towns",
+      "known_at": 8
+    },
+    {
+      "name": "Charleston",
+      "facet": "Historic and colonial towns",
+      "known_at": 10
+    },
+    {
+      "name": "Savannah",
+      "facet": "Historic and colonial towns",
+      "known_at": 10
+    },
+    {
+      "name": "Lexington and Concord",
+      "facet": "Historic and colonial towns",
+      "known_at": 9
+    },
+    {
+      "name": "Gettysburg",
+      "facet": "Historic and colonial towns",
+      "known_at": 8
+    },
+    {
+      "name": "Yorktown",
+      "facet": "Historic and colonial towns",
+      "known_at": 11
+    },
+    {
+      "name": "Roanoke Colony",
+      "facet": "Historic and colonial towns",
+      "known_at": 10
+    },
+    {
+      "name": "New Amsterdam",
+      "facet": "Historic and colonial towns",
+      "known_at": 10
+    },
+    {
+      "name": "Taos Pueblo",
+      "facet": "Historic and colonial towns",
+      "known_at": 13
+    },
+    {
+      "name": "Nantucket",
+      "facet": "Historic and colonial towns",
+      "known_at": 11
+    },
+    {
+      "name": "Appomattox",
+      "facet": "Historic and colonial towns",
+      "known_at": 11
+    },
+    {
+      "name": "Harpers Ferry",
+      "facet": "Historic and colonial towns",
+      "known_at": 12
+    },
+    {
+      "name": "Cahokia",
+      "facet": "Historic and colonial towns",
+      "known_at": 13
+    },
+    {
+      "name": "Acoma Pueblo",
+      "facet": "Historic and colonial towns",
+      "known_at": 14
+    },
+    {
+      "name": "Mystic Seaport",
+      "facet": "Historic and colonial towns",
+      "known_at": 14
+    },
+    {
+      "name": "Springfield (The Simpsons)",
+      "facet": "Cities in movies and TV",
+      "known_at": 4
+    },
+    {
+      "name": "Gotham City",
+      "facet": "Cities in movies and TV",
+      "known_at": 4
+    },
+    {
+      "name": "Metropolis",
+      "facet": "Cities in movies and TV",
+      "known_at": 5
+    },
+    {
+      "name": "Hawkins",
+      "facet": "Cities in movies and TV",
+      "known_at": 7
+    },
+    {
+      "name": "Hill Valley",
+      "facet": "Cities in movies and TV",
+      "known_at": 10
+    },
+    {
+      "name": "Bedrock",
+      "facet": "Cities in movies and TV",
+      "known_at": 8
+    },
+    {
+      "name": "Mayberry",
+      "facet": "Cities in movies and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Twin Peaks",
+      "facet": "Cities in movies and TV",
+      "known_at": 13
+    },
+    {
+      "name": "Amity Island",
+      "facet": "Cities in movies and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Radiator Springs",
+      "facet": "Cities in movies and TV",
+      "known_at": 4
+    },
+    {
+      "name": "Pawnee",
+      "facet": "Cities in movies and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Scranton",
+      "facet": "Cities in movies and TV",
+      "known_at": 9
+    },
+    {
+      "name": "Albuquerque",
+      "facet": "Cities in movies and TV",
+      "known_at": 10
+    },
+    {
+      "name": "South Park",
+      "facet": "Cities in movies and TV",
+      "known_at": 9
+    },
+    {
+      "name": "Stars Hollow",
+      "facet": "Cities in movies and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Riverdale",
+      "facet": "Cities in movies and TV",
+      "known_at": 9
+    },
+    {
+      "name": "Quahog",
+      "facet": "Cities in movies and TV",
+      "known_at": 10
+    },
+    {
+      "name": "Smallville",
+      "facet": "Cities in movies and TV",
+      "known_at": 8
+    },
+    {
+      "name": "Derry",
+      "facet": "Cities in movies and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Bedford Falls",
+      "facet": "Cities in movies and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Harlem",
+      "facet": "Neighborhoods and districts",
+      "known_at": 7
+    },
+    {
+      "name": "Brooklyn",
+      "facet": "Neighborhoods and districts",
+      "known_at": 4
+    },
+    {
+      "name": "Greenwich Village",
+      "facet": "Neighborhoods and districts",
+      "known_at": 11
+    },
+    {
+      "name": "San Francisco Chinatown",
+      "facet": "Neighborhoods and districts",
+      "known_at": 9
+    },
+    {
+      "name": "Haight-Ashbury",
+      "facet": "Neighborhoods and districts",
+      "known_at": 12
+    },
+    {
+      "name": "French Quarter",
+      "facet": "Neighborhoods and districts",
+      "known_at": 9
+    },
+    {
+      "name": "Beverly Hills",
+      "facet": "Neighborhoods and districts",
+      "known_at": 6
+    },
+    {
+      "name": "Times Square",
+      "facet": "Neighborhoods and districts",
+      "known_at": 4
+    },
+    {
+      "name": "Wall Street",
+      "facet": "Neighborhoods and districts",
+      "known_at": 7
+    },
+    {
+      "name": "SoHo",
+      "facet": "Neighborhoods and districts",
+      "known_at": 12
+    },
+    {
+      "name": "Little Havana",
+      "facet": "Neighborhoods and districts",
+      "known_at": 11
+    },
+    {
+      "name": "South Beach",
+      "facet": "Neighborhoods and districts",
+      "known_at": 9
+    },
+    {
+      "name": "Georgetown",
+      "facet": "Neighborhoods and districts",
+      "known_at": 12
+    },
+    {
+      "name": "The Bronx",
+      "facet": "Neighborhoods and districts",
+      "known_at": 6
+    },
+    {
+      "name": "Queens",
+      "facet": "Neighborhoods and districts",
+      "known_at": 7
+    },
+    {
+      "name": "Staten Island",
+      "facet": "Neighborhoods and districts",
+      "known_at": 8
+    },
+    {
+      "name": "Fisherman's Wharf",
+      "facet": "Neighborhoods and districts",
+      "known_at": 10
+    },
+    {
+      "name": "Venice Beach",
+      "facet": "Neighborhoods and districts",
+      "known_at": 9
+    },
+    {
+      "name": "Garden District",
+      "facet": "Neighborhoods and districts",
+      "known_at": 13
+    },
+    {
+      "name": "Little Italy",
+      "facet": "Neighborhoods and districts",
+      "known_at": 8
+    },
+    {
+      "name": "Back Bay",
+      "facet": "Neighborhoods and districts",
+      "known_at": 13
+    },
+    {
+      "name": "Tombstone",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 9
+    },
+    {
+      "name": "Deadwood",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 11
+    },
+    {
+      "name": "Virginia City",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 13
+    },
+    {
+      "name": "Bodie",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 13
+    },
+    {
+      "name": "Centralia",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 12
+    },
+    {
+      "name": "Klondike Gold Rush",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 11
+    },
+    {
+      "name": "Skagway",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 13
+    },
+    {
+      "name": "Dodge City",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 10
+    },
+    {
+      "name": "Great Chicago Fire",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 9
+    },
+    {
+      "name": "Levittown",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 13
+    },
+    {
+      "name": "Celebration, Florida",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 14
+    },
+    {
+      "name": "Calico Ghost Town",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 12
+    },
+    {
+      "name": "Silicon Valley",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 8
+    },
+    {
+      "name": "Promontory Summit",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 12
+    },
+    {
+      "name": "Oatman",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 14
+    },
+    {
+      "name": "Cripple Creek",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 14
+    },
+    {
+      "name": "Gary, Indiana",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 13
+    },
+    {
+      "name": "Seattle Underground",
+      "facet": "Boomtowns, ghost towns and city origins",
+      "known_at": 13
+    }
+  ]
+}
