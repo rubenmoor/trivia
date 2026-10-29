@@ -737392,7 +737392,7 @@
     },
     {
       "id": "q-9540",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "A mountain so tall that it often wears a cloud as a hat.",
       "question": "What is the highest mountain in the United Kingdom?",
@@ -737404,8 +737404,8 @@
       ],
       "hints": [
         "Thousands of walkers climb it every year.",
-        "It's in Scotland, near the town of Fort William.",
-        "Its name starts with the Scottish word for a mountain."
+        "It is more than 1,300 metres high.",
+        "It's in Scotland, near the town of Fort William."
       ],
       "media": {
         "type": "image",
@@ -737450,26 +737450,34 @@
       "needs_media": false,
       "batch": "batch-29",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"It's in Scotland, near the town of Fort William\") gives the answer away: each option is in a different UK nation (Snowdon is in Wales, Scafell Pike in England, Slieve Donard in Northern Ireland), so naming Scotland rules out all three wrong answers. Hint 2 should be vaguer, for example about its height or the cloud on its summit, and Scotland can go in hint 3 instead.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"It's in Scotland, near the town of Fort William\") gives the answer away: each option is in a different UK nation (Snowdon is in Wales, Scafell Pike in England, Slieve Donard in Northern Ireland), so naming Scotland rules out all three wrong answers. Hint 2 should be vaguer, for example about its height or the cloud on its summit, and Scotland can go in hint 3 instead.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 1 named Scotland, which left only one option, so it is now a vague hint and Scotland joins the Fort William clue in hint 2.",
+        "reason": "Hint 2 named Scotland, which ruled out all three wrong answers, so it now gives the height and Scotland moves to hint 3.",
         "previous": {
           "hints": [
-            "It's in Scotland.",
-            "It stands near the town of Fort William.",
+            "Thousands of walkers climb it every year.",
+            "It's in Scotland, near the town of Fort William.",
             "Its name starts with the Scottish word for a mountain."
           ]
         },
@@ -738069,10 +738077,10 @@
     },
     {
       "id": "q-9549",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Photo editing, 1917 style.",
-      "question": "This photo, taken by two young cousins in Yorkshire in 1917, fooled many people. By what name is this famous fairy hoax known?",
+      "question": "In 1917, two young cousins in Yorkshire took photos of “fairies” that fooled many people. By what name is this famous hoax known?",
       "answer": "The Cottingley Fairies",
       "wrong_answers": [
         "The Pendle Sprites",
@@ -738086,12 +738094,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Cottingley Fairies 1.jpg",
-        "note": "Show the 1917 photo of Frances Griffiths with the paper fairies, with no caption or title text visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "woodland stream beck",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATrack_and_stream_in_Post_Hill_nature_reserve%2C_Leeds.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Track_and_stream_in_Post_Hill_nature_reserve%2C_Leeds.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "LeedsTracker · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "LeedsTracker",
+        "author_url": "https://commons.wikimedia.org/wiki/User:LeedsTracker",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "In 1983 the cousins admitted the fairies were paper cut-outs copied from a children's book and held up with hatpins.",
       "subcategory": "creatures-ghosts-and-superstitions",
@@ -738117,27 +738132,45 @@
         "notes": "Calling them 'two Yorkshire girls' is loose: Frances Griffiths had come from South Africa and was only staying in Yorkshire. Hint 3 ('Cott') basically spells the answer out. The photo is on Commons and is fine as essential media."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-29",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The essential slot needs the 1917 Cottingley Fairies photo (Frances Griffiths with the paper fairies), but none of the candidates show it, and no new search is allowed. Fetch the Commons file directly (e.g. \"File:Cottingley Fairies 1.jpg\") or change the media role. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential slot needs the 1917 Cottingley Fairies photo (Frances Griffiths with the paper fairies), but none of the candidates show it, and no new search is allowed. Fetch the Commons file directly (e.g. \"File:Cottingley Fairies 1.jpg\") or change the media role. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Fixed the fact: Frances Griffiths came from South Africa, not Yorkshire, so the girls are now “two young cousins in Yorkshire”.",
+        "reason": "The essential 1917 photo could not be found, so the question no longer refers to the photo and the media is now a decorative woodland stream.",
         "previous": {
-          "question": "This photo, taken by two Yorkshire girls in 1917, fooled many people. By what name is this famous fairy hoax known?"
+          "question": "This photo, taken by two young cousins in Yorkshire in 1917, fooled many people. By what name is this famous fairy hoax known?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Cottingley Fairies 1.jpg",
+            "note": "Show the 1917 photo of Frances Griffiths with the paper fairies, with no caption or title text visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-10-29"
       }
@@ -738700,7 +738733,7 @@
     },
     {
       "id": "q-9557",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "No church, no organ, just a lot of very careful signatures.",
       "question": "For a wedding at a register office in England, how many witnesses are legally needed?",
@@ -738718,11 +738751,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "wedding couple signing register",
+        "query": "marriage certificate pen",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHill%27s_album_of_biography_and_art_-_containing_portraits_and_pen-sketches_of_many_persons_who_have_been_and_are_prominent_as_religionists%2C_military_heroes%2C_inventors%2C_financiers%2C_scientists%2C_%2814784848252%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Hill%27s_album_of_biography_and_art_-_containing_portraits_and_pen-sketches_of_many_persons_who_have_been_and_are_prominent_as_religionists%2C_military_heroes%2C_inventors%2C_financiers%2C_scientists%2C_%2814784848252%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Internet Archive Book Images",
+        "author_url": "https://www.flickr.com/people/126377022@N07",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Its official name is the “register office”, even though most Britons call it the “registry office”.",
       "subcategory": "customs-and-ceremonies",
@@ -738751,24 +738791,40 @@
       "needs_media": false,
       "batch": "batch-29",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate fits. Candidates 1 and 2 show robed clergy signing a register in a church. That contradicts the register-office setting (the description even says \"no church\"). Candidate 1 also shows exactly two people signing, which hints at the answer \"2\". Candidates 3–6 are an old French newspaper and 17th-century ship paintings, which have nothing to do with the question. The text itself is fine. It needs a neutral register-office image, for example \"register office wedding room\" or \"marriage certificate pen\", with no visible count of signers. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate fits. Candidates 1 and 2 show robed clergy signing a register in a church. That contradicts the register-office setting (the description even says \"no church\"). Candidate 1 also shows exactly two people signing, which hints at the answer \"2\". Candidates 3–6 are an old French newspaper and 17th-century ship paintings, which have nothing to do with the question. The text itself is fine. It needs a neutral register-office image, for example \"register office wedding room\" or \"marriage certificate pen\", with no visible count of signers. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Reworded the question so it stays true after the 2021 reform, which ended signing a register book; the answer and options are unchanged.",
+        "reason": "New media query for a neutral image without clergy, a church or a visible number of people signing.",
         "previous": {
-          "question": "For a wedding at a register office in England, how many witnesses must sign the marriage register?"
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "wedding couple signing register",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-29"
       }
@@ -739053,19 +739109,29 @@
         "difficulty_estimate": 2,
         "notes": "The sack race and the parents' race make the answer very easy, and there is little surprise."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-29",
       "review": {
         "decision": "needs_work",
-        "feedback": "Overlaps q-9560 (draft, same subcategory), whose question text reads \"You're running an egg-and-spoon race at school sports day\": anyone who sees that one first is handed this answer. Keep only one of them, or reword q-9560 so it doesn't say \"sports day\".",
+        "feedback": "The description gives the answer away. Read against the four options alone, \"the one day a year your PE teacher gets to use a megaphone\" points straight to Sports day and rules out Open day, Prize day and Speech day. Rewrite it to joke about school life in general, with no PE or sport.",
         "problems": [
-          "overlap"
+          "giveaway"
         ],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Overlaps q-9560 (draft, same subcategory), whose question text reads \"You're running an egg-and-spoon race at school sports day\": anyone who sees that one first is handed this answer. Keep only one of them, or reword q-9560 so it doesn't say \"sports day\".",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
@@ -739153,7 +739219,7 @@
     },
     {
       "id": "q-9563",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "A purple drink that has been staining school shirts for generations.",
       "question": "Ribena's name comes from the Latin “Ribes nigrum”, and in the Second World War it was given to children for vitamin C. Which fruit is it made from?",
@@ -739171,11 +739237,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "glass jug fruit squash",
+        "query": "blackcurrant bush berries",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APluck_the_berries_invitation_sign_in_community_gardens_Langen%C3%A6s_Aarhus_Denmark_04.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pluck_the_berries_invitation_sign_in_community_gardens_Langen%C3%A6s_Aarhus_Denmark_04.jpg/3840px-Pluck_the_berries_invitation_sign_in_community_gardens_Langen%C3%A6s_Aarhus_Denmark_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Ciara Ní Riain · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ciara Ní Riain",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ciara_N%C3%AD_Riain",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "During the Second World War, the British government bought almost the whole blackcurrant crop to turn it into syrup for children.",
       "subcategory": "drinks",
@@ -739204,19 +739277,43 @@
       "needs_media": false,
       "batch": "batch-29",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but none of the image candidates fit a question about a British fruit drink, and a new search isn't allowed. The slot needs a new search, for example \"blackcurrant cordial glass\" or \"fruit squash jug\". A bush or bunch of blackcurrants would also work, since the image is shown blurred. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but none of the image candidates fit a question about a British fruit drink, and a new search isn't allowed. The slot needs a new search, for example \"blackcurrant cordial glass\" or \"fruit squash jug\". A bush or bunch of blackcurrants would also work, since the image is shown blurred. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New decorative media query, since no earlier candidate fitted.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "glass jug fruit squash",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9564",
@@ -739545,7 +739642,7 @@
     },
     {
       "id": "q-9568",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "A dram that tastes like a windy day at the seaside, in a good way.",
       "question": "Talisker, a smoky, peppery single malt whisky, has been made since 1830 on which Scottish island?",
@@ -739563,11 +739660,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "whisky tumbler glass",
+        "query": "glass of whisky dram",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARedbreast15.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Redbreast15.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Laser brain · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Laser brain",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Laser_brain",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "For many years Talisker was the only whisky distillery on its island.",
       "subcategory": "drinks",
@@ -739596,19 +739700,43 @@
       "needs_media": false,
       "batch": "batch-29",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but no media candidate fits. None of them shows whisky or a whisky glass: there is a melon still life, antique engraved beakers with German text, a Victorian pink tumbler and a red wine splash. A new search (e.g. \"Talisker distillery\" or \"whisky glass dram\") is needed, but no further search is allowed here. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but no media candidate fits. None of them shows whisky or a whisky glass: there is a melon still life, antique engraved beakers with German text, a Victorian pink tumbler and a red wine splash. A new search (e.g. \"Talisker distillery\" or \"whisky glass dram\") is needed, but no further search is allowed here. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New media query for a plain glass of whisky, since the old candidates didn't show whisky and a distillery sign could name the island.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "whisky tumbler glass",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9569",
@@ -741170,7 +741298,7 @@
     },
     {
       "id": "q-9590",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "What happens in the polling booth stays in the polling booth.",
       "question": "Britain brought in secret voting with the Ballot Act of 1872. The secret ballot is still nicknamed after which country, where its modern form began?",
@@ -741187,12 +741315,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "ballot paper pencil cross",
-        "note": "Close-up of a paper ballot with a pencil cross in a box; no country names, flags or party names visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "ballot box polling station",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABallot_box_at_the_No._490_polling_station%2C_Astana%2C_August_2026.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Ballot_box_at_the_No._490_polling_station%2C_Astana%2C_August_2026.jpg/3840px-Ballot_box_at_the_No._490_polling_station%2C_Astana%2C_August_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Nurken · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Nurken",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Nurken",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The first British election held with a secret ballot was a by-election in Pontefract in August 1872.",
       "subcategory": "georgians-and-victorians",
@@ -741218,31 +741353,44 @@
         "notes": "The ballot-paper image is labelled essential but is really illustrative; nothing in the question depends on it."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-29",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows a ballot paper: the sheet has two painted decorative crosses, a pencil sketch of Dante, a wayside cross landscape, a Civil War sutler-cart sketch and a medieval lead pencil. A new search isn't allowed. The slot also shouldn't be essential. An illustrative image would do, for example a ballot box or a polling station, or a ballot paper with no country text on it. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a ballot paper: the sheet has two painted decorative crosses, a pencil sketch of Dante, a wayside cross landscape, a Civil War sutler-cart sketch and a medieval lead pencil. A new search isn't allowed. The slot also shouldn't be essential. An illustrative image would do, for example a ballot box or a polling station, or a ballot paper with no country text on it. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which ruled out every option except Australia, with a vaguer hint about a gold-rush era.",
+        "reason": "The media is changed from essential to an illustrative ballot box, since the question doesn't depend on the image and no ballot paper was found.",
         "previous": {
-          "hints": [
-            "Before 1872, British voters often called out their choice in public.",
-            "The idea came from British colonies far across the world, first used in 1856.",
-            "That country is also a whole continent."
-          ]
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "ballot paper pencil cross",
+            "note": "Close-up of a paper ballot with a pencil cross in a box; no country names, flags or party names visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-10-29"
       }
@@ -741982,9 +742130,9 @@
     },
     {
       "id": "q-9601",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
-      "description": "Some things grow so slowly that even a snail would get bored watching.",
+      "description": "A fire that comes out of the ground, one spadeful at a time.",
       "question": "For centuries, island families in Scotland have cut peat from the moors to burn. Roughly how much does a peat bog grow each year?",
       "answer": "About 1 mm",
       "wrong_answers": [
@@ -742040,28 +742188,32 @@
       "needs_media": false,
       "batch": "batch-29",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description gives the answer away. “Grow so slowly that even a snail would get bored” states the answer's defining trait (extreme slowness), and when all four options are growth rates, that points straight to the smallest one, About 1 mm. Rewrite it to play on peat, moors or island fires without saying how fast peat grows.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description gives the answer away. “Grow so slowly that even a snail would get bored” states the answer's defining trait (extreme slowness), and when all four options are growth rates, that points straight to the smallest one, About 1 mm. Rewrite it to play on peat, moors or island fires without saying how fast peat grows.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which allowed a direct calculation of the answer, with a vaguer one about slow growth.",
+        "reason": "The old description pointed to the slowest option, so the new one plays on peat fires without hinting at the growth rate.",
         "previous": {
-          "hints": [
-            "It’s much slower than grass or moss grows.",
-            "A metre-deep peat bank can take around a thousand years to form.",
-            "Think of the thickness of a bank card."
-          ]
+          "description": "Some things grow so slowly that even a snail would get bored watching."
         },
         "revised_on": "2026-10-29"
       }
@@ -743725,7 +743877,7 @@
     },
     {
       "id": "q-9624",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Scotland's most famous cattle thief, who now also has a cocktail named after him.",
       "question": "The Scottish outlaw Rob Roy MacGregor, played by Liam Neeson in a 1995 film, lived around which time?",
@@ -743743,21 +743895,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Loch Katrine Trossachs",
+        "query": "Trossachs hills Scotland",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALoch_Katrine_path_by_the_Loch%2C_Trossachs%2C_Scotland-LCCN2002695065.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Loch_Katrine_path_by_the_Loch%2C_Trossachs%2C_Scotland-LCCN2002695065.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Photochrom Print Collection · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AView_from_Ben_A%27an_facing_East.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/View_from_Ben_A%27an_facing_East.jpg/3840px-View_from_Ben_A%27an_facing_East.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Aais6 · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Photochrom Print Collection",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Aais6",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Aais6",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-1923",
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "He is buried at Balquhidder, and his gravestone reads “MacGregor despite them”.",
       "subcategory": "legendary-heroes",
@@ -743786,19 +743935,53 @@
       "needs_media": false,
       "batch": "batch-29",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-1923, PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-1923, PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New media query so a picture with a suitable licence can be picked instead of the US-only public-domain photochrom.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Loch Katrine Trossachs",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ALoch_Katrine_path_by_the_Loch%2C_Trossachs%2C_Scotland-LCCN2002695065.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Loch_Katrine_path_by_the_Loch%2C_Trossachs%2C_Scotland-LCCN2002695065.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Photochrom Print Collection · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Photochrom Print Collection",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-1923",
+              "PD-US-expired"
+            ]
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9625",
@@ -744434,14 +744617,14 @@
         "16"
       ],
       "hints": [
+        "The towers are masts that hold up the dome's tent-like roof.",
         "The number was chosen on purpose to match something about time.",
-        "The dome stands in Greenwich, home of world time.",
         "Think of the hours on a clock face, or the months in a year."
       ],
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "O2 Arena Greenwich aerial",
+        "query": "Millennium Dome from above",
         "note": "An aerial photo of the O2 (Millennium Dome) in Greenwich where all twelve yellow towers are clearly visible.",
         "source_url": "https://commons.wikimedia.org/wiki/File%3AAerial_view_of_London_from_LHR_approach_%2802%29.jpg",
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Aerial_view_of_London_from_LHR_approach_%2802%29.jpg/3840px-Aerial_view_of_London_from_LHR_approach_%2802%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -744482,18 +744665,40 @@
       "batch": "batch-29",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 1 gives the answer away: with the options 8, 10, 12 and 16, \"chosen on purpose to match something about time\" points straight to 12 (hours, months), so hint 2 and hint 3 add nothing. Hint 1 should be vague, for example about the dome's tent-like build or the masts holding up the roof, and the time link should move to hint 2 or 3. The facts are confirmed (12 masts of about 100 m, a 365 m dome that is 52 m high).",
+        "feedback": "The essential photo must show all 12 yellow masts so players can count them, and no candidate does. #1 is a side view where several masts are hidden or overlap, so players would likely count about 10, which is one of the wrong answers. #4 is a close-up that shows only part of the dome. #3, #5 and #6 are distant panoramas where the masts are tiny. #2 is the Wales Millennium Centre in Cardiff. A new search can't be run, so this needs an aerial or top-down photo of the O2 where all 12 masts are clearly visible. No suitable picture found for this question.",
         "problems": [
-          "giveaway"
+          "media"
         ],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 gives the answer away: with the options 8, 10, 12 and 16, \"chosen on purpose to match something about time\" points straight to 12 (hours, months), so hint 2 and hint 3 add nothing. Hint 1 should be vague, for example about the dome's tent-like build or the masts holding up the roof, and the time link should move to hint 2 or 3. The facts are confirmed (12 masts of about 100 m, a 365 m dome that is 52 m high).",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Hint 1 gave away the link to time, so it now describes the masts and the time link moves to hint 2.",
+        "previous": {
+          "hints": [
+            "The number was chosen on purpose to match something about time.",
+            "The dome stands in Greenwich, home of world time.",
+            "Think of the hours on a clock face, or the months in a year."
+          ]
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9634",
@@ -747174,7 +747379,7 @@
     },
     {
       "id": "q-9669",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "A walk round the garden that turned into one of the biggest whip-rounds in British history.",
       "question": "In 2020, aged 99, Captain Tom Moore walked 100 laps of his garden and raised more than £30 million. Who was the money for?",
@@ -747192,11 +747397,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "walking frame elderly",
+        "query": "English back garden lawn",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_lawn_and_garden_bench_at_Gibberd_Garden_Essex_England.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/A_lawn_and_garden_bench_at_Gibberd_Garden_Essex_England.JPG/3840px-A_lawn_and_garden_bench_at_Gibberd_Garden_Essex_England.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Acabashi · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Acabashi",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Acabashi",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Captain Tom also had a number one hit, singing “You'll Never Walk Alone” with Michael Ball, and was knighted by the Queen.",
       "subcategory": "pioneers-and-heroes",
@@ -747225,28 +747437,40 @@
       "needs_media": false,
       "batch": "batch-29",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates works. #1 (a patient in a hospital gown with a walking frame beside a hospital bed) is shown sharp, and the hospital setting points straight at the NHS and rules out the three charity distractors. #2–6 (a stone house, an old general store, two moths and a US politician) have nothing to do with the topic. A neutral image is needed, such as an English back garden lawn or a walking frame on a garden path with no hospital in view. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates works. #1 (a patient in a hospital gown with a walking frame beside a hospital bed) is shown sharp, and the hospital setting points straight at the NHS and rules out the three charity distractors. #2–6 (a stone house, an old general store, two moths and a US politician) have nothing to do with the topic. A neutral image is needed, such as an English back garden lawn or a walking frame on a garden path with no hospital in view. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which mentioned hospitals and gave the answer away, with a medium hint about why he did it.",
+        "reason": "Changed the image search to a plain garden lawn that doesn't point to the NHS.",
         "previous": {
-          "hints": [
-            "It was during the first Covid lockdown.",
-            "The money helped the people working on hospital wards.",
-            "Many people clapped for them on their doorsteps every Thursday."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "walking frame elderly",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-29"
       }
@@ -747640,7 +747864,7 @@
     },
     {
       "id": "q-9675",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "A foreign visitor that came for the garden party and never went home.",
       "question": "Garden owners in Britain have planted this upright bluebell since the 1600s, and now it crosses with the native kind. Where did it first come from?",
@@ -747652,7 +747876,7 @@
       ],
       "hints": [
         "It comes from somewhere warmer and sunnier than Britain.",
-        "Its home is in south-western Europe.",
+        "Its home is a large peninsula.",
         "Its common name comes from a country where holidaymakers enjoy paella."
       ],
       "media": {
@@ -747698,27 +747922,35 @@
       "needs_media": true,
       "batch": "batch-29",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“Its home is in south-western Europe”) gives the answer away: of the four options, only the Iberian Peninsula is in south-western Europe (the Netherlands is north-west, the Balkans south-east, Scandinavia north). Replace it with a hint that still leaves at least two options open, for example one about its long flowering season or its tough, sturdy growth.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“Its home is in south-western Europe”) gives the answer away: of the four options, only the Iberian Peninsula is in south-western Europe (the Netherlands is north-west, the Balkans south-east, Scandinavia north). Replace it with a hint that still leaves at least two options open, for example one about its long flowering season or its tough, sturdy growth.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Reworded hint 3 so it's accurate: the common name comes from a country rather than being one.",
+        "reason": "Replaced hint 2, which gave the answer away, with a peninsula hint that still fits three options.",
         "previous": {
           "hints": [
             "It comes from somewhere warmer and sunnier than Britain.",
             "Its home is in south-western Europe.",
-            "Its common name is the name of a country where holidaymakers enjoy paella."
+            "Its common name comes from a country where holidaymakers enjoy paella."
           ]
         },
         "revised_on": "2026-10-29"
@@ -750535,7 +750767,7 @@
     },
     {
       "id": "q-9713",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "A pint can go flat during a long enough chat at the bar.",
       "question": "In a British pub, regulars often chat with “the landlord”. Who is that?",
@@ -750547,7 +750779,7 @@
       ],
       "hints": [
         "It isn't a company or a neighbour.",
-        "The title is old and has nothing to do with owning fields or farmland.",
+        "In old inns, this person also let out rooms to travellers.",
         "If the pub had a captain, it would be them."
       ],
       "media": {
@@ -750589,31 +750821,38 @@
         "difficulty_estimate": 6,
         "notes": "Dry vocabulary question. Distractors are weak: 'the owner of the house next door' is easy to rule out. Strictly, a landlord may be a tenant or licensee, but 'runs the pub' covers that."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-29",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 is misleading. It says the title \"has nothing to do with owning fields or farmland\", but \"landlord\" does come from owning or letting out land and property. The fact check marked it wrong. Rewrite hint 2 to be accurate, for example: the title dates from when innkeepers let out rooms to lodgers. Fact check: wrong. Answer is right, but hint 2 is misleading. 'Landlord' literally means lord of land, from owning or letting property. It is not unrelated to land ownership.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 is misleading. It says the title \"has nothing to do with owning fields or farmland\", but \"landlord\" does come from owning or letting out land and property. The fact check marked it wrong. Rewrite hint 2 to be accurate, for example: the title dates from when innkeepers let out rooms to lodgers. Fact check: wrong. Answer is right, but hint 2 is misleading. 'Landlord' literally means lord of land, from owning or letting property. It is not unrelated to land ownership.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description and hint 2 so that neither says who is in charge of the pub.",
+        "reason": "Rewrote hint 2, which was wrong, with an accurate fact about innkeepers letting out rooms.",
         "previous": {
-          "description": "Lord of the land, or at least of the bar towels.",
           "hints": [
             "It isn't a company or a neighbour.",
-            "This person is in charge behind the bar every day.",
+            "The title is old and has nothing to do with owning fields or farmland.",
             "If the pub had a captain, it would be them."
           ]
         },
@@ -752931,7 +753170,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "12-sided pound coin",
+        "query": "2017 one pound coin",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -752965,18 +753204,44 @@
       "batch": "batch-29",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows the 12-sided £1 coin that the question names. Five are George III gold guineas and half-guineas (1778–1803), and one is a Korean War bomb photo. No new search is allowed, so this needs a manual media pick, for example the Wikimedia Commons file of the 2017 £1 coin, with either side shown (search \"2017 one pound coin\"). No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows the 12-sided £1 coin that the question names. Five are George III gold guineas and half-guineas (1778–1803), and one is a Korean War bomb photo. No new search is allowed, so this needs a manual media pick, for example the Wikimedia Commons file of the 2017 £1 coin, with either side shown (search \"2017 one pound coin\"). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the image search to the 2017 £1 coin, which the question names.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "12-sided pound coin",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9746",
@@ -755502,7 +755767,7 @@
       "status": "needs_work",
       "difficulty": 8,
       "description": "A prisoner with a lot of time on his hands, and something stuck in his teeth.",
-      "question": "Around 1770, William Addis made one of the first modern toothbrushes in a London prison. What did he use for the handle?",
+      "question": "Around 1780, the story goes, William Addis made one of the first modern toothbrushes in a London prison. What did he use for the handle?",
       "answer": "A bone from his dinner",
       "wrong_answers": [
         "A wooden peg",
@@ -755553,33 +755818,38 @@
         "difficulty_estimate": 8,
         "notes": "Sources differ on the date: some put Addis's prison toothbrush at around 1770, others at 1780. Hints 1 and 3 say much the same thing."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-29",
       "review": {
         "decision": "needs_work",
-        "feedback": "Fact check: uncertain. The bone-handle story is traditional, but sources differ on the date. Some say about 1770, while Wikipedia and others give 1780. The prison origin is also partly legend.",
+        "feedback": "Hint 1 (“He found it after a meal.”) gives the answer away: of the four options, only “A bone from his dinner” has anything to do with a meal. Hint 3 also says much the same thing. Hint 1 should be vague, for example about saving scraps or what a prisoner could get hold of. Hint 3 can then point to the bone.",
         "problems": [
-          "fact"
+          "giveaway"
         ],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. The bone-handle story is traditional, but sources differ on the date. Some say about 1770, while Wikipedia and others give 1780. The prison origin is also partly legend.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Changed the disputed year 1780 to “around 1770”, and made hint 3 stronger so it no longer repeats hint 1.",
+        "reason": "Changed the date to around 1780 and marked the prison story as legend.",
         "previous": {
-          "question": "William Addis made one of the first modern toothbrushes in a London prison in 1780. What did he use for the handle?",
-          "hints": [
-            "He found it after a meal.",
-            "He drilled small holes in it and tied in bristles.",
-            "It was left over from some meat."
-          ]
+          "question": "Around 1770, William Addis made one of the first modern toothbrushes in a London prison. What did he use for the handle?"
         },
         "revised_on": "2026-10-29"
       }
@@ -757799,7 +758069,7 @@
     },
     {
       "id": "q-9809",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Coming last has never made anyone so famous, or so many officials so nervous.",
       "question": "Eddie the Eagle became a hero at the 1988 Calgary Olympics despite finishing last in ski jumping. What did the “Eddie the Eagle rule” then require?",
@@ -757810,8 +758080,8 @@
         "A minimum age of 21 for jumpers"
       ],
       "hints": [
-        "Eddie had been Britain's only ski jumper, so he got in easily.",
         "The rule was brought in by the sport's international federation and the Olympic organisers in the years after 1988.",
+        "Eddie had been Britain's only ski jumper, so he got in easily.",
         "Since then, athletes must prove themselves in international events before the Games."
       ],
       "media": {
@@ -757819,18 +758089,20 @@
         "role": "illustrative",
         "query": "ski jumping hill",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALahti_Ski_Jumping_Hills_4.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Lahti_Ski_Jumping_Hills_4.jpg/3840px-Lahti_Ski_Jumping_Hills_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "kallerna · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2020-01-22_Ski_Jumping_Competition_Round_Nordic_Mixed_Team_%282020_Winter_Youth_Olympics%29_by_Sandro_Halank%E2%80%93166.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/2020-01-22_Ski_Jumping_Competition_Round_Nordic_Mixed_Team_%282020_Winter_Youth_Olympics%29_by_Sandro_Halank%E2%80%93166.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Sandro Halank, Wikimedia Commons · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "kallerna",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Kallerna",
-        "restrictions": [],
+        "author": "Sandro Halank, Wikimedia Commons",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Sandro_Halank",
+        "restrictions": [
+          "personality"
+        ],
         "pd_reasons": []
       },
-      "fun_fact": "Eddie was so short-sighted that he wore thick glasses under his goggles, which often fogged up during his jumps.",
+      "fun_fact": "Eddie was so long-sighted that he wore thick glasses under his goggles, which often fogged up during his jumps.",
       "subcategory": "twentieth-century",
       "style": null,
       "concept": "Eddie the Eagle",
@@ -757857,29 +758129,38 @@
       "needs_media": false,
       "batch": "batch-29",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact says Eddie was short-sighted, but the usual sources (Wikipedia, BBC) say he was far-sighted (long-sighted) and wore thick glasses that fogged up, so the fact as written is likely wrong. Hint 1 (\"Britain's only ski jumper, so he got in easily\") also comes close to giving the answer away. It points straight at entry requirements, so the only qualifying-results option stands out before the stronger hints.",
-        "problems": [
-          "giveaway",
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact says Eddie was short-sighted, but the usual sources (Wikipedia, BBC) say he was far-sighted (long-sighted) and wore thick glasses that fogged up, so the fact as written is likely wrong. Hint 1 (\"Britain's only ski jumper, so he got in easily\") also comes close to giving the answer away. It points straight at entry requirements, so the only qualifying-results option stands out before the stronger hints.",
+          "problems": [
+            "giveaway",
+            "fact"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave away what the rule was for, with a vaguer hint about who brought it in.",
+        "reason": "Fixed the fun fact to long-sighted and moved the giveaway hint to second place behind a vaguer one.",
         "previous": {
           "hints": [
             "Eddie had been Britain's only ski jumper, so he got in easily.",
-            "Officials wanted to make sure every jumper was good enough to be there.",
+            "The rule was brought in by the sport's international federation and the Olympic organisers in the years after 1988.",
             "Since then, athletes must prove themselves in international events before the Games."
-          ]
+          ],
+          "fun_fact": "Eddie was so short-sighted that he wore thick glasses under his goggles, which often fogged up during his jumps."
         },
         "revised_on": "2026-10-29"
       }
@@ -758118,7 +758399,7 @@
     },
     {
       "id": "q-9813",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Fifty-six countries, one family gathering, and somebody has to book the venue.",
       "question": "Every Commonwealth Day, on the second Monday in March, the King and Commonwealth guests attend a big service in a London church. Which one?",
@@ -758129,9 +758410,9 @@
         "Southwark Cathedral"
       ],
       "hints": [
-        "It's right next to the Houses of Parliament.",
-        "Kings and queens are crowned there.",
-        "Poets' Corner, where many famous writers are buried or remembered, is inside it."
+        "Most of its Gothic building dates from the 1200s.",
+        "It has hosted many royal weddings.",
+        "Kings and queens are crowned there."
       ],
       "media": {
         "type": "image",
@@ -758176,27 +758457,35 @@
       "needs_media": false,
       "batch": "batch-29",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hints 1 and 2 each give the answer away to UK players: \"right next to the Houses of Parliament\" and \"Kings and queens are crowned there\" both point straight to Westminster Abbey. Hint 1 should be vague (e.g. its age or its Gothic style, without the location), and hint 2 should be more indirect. The coronation fact or Poets' Corner could serve as hint 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hints 1 and 2 each give the answer away to UK players: \"right next to the Houses of Parliament\" and \"Kings and queens are crowned there\" both point straight to Westminster Abbey. Hint 1 should be vague (e.g. its age or its Gothic style, without the location), and hint 2 should be more indirect. The coronation fact or Poets' Corner could serve as hint 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 3 so it no longer repeats the royal wedding fact used in another question.",
+        "reason": "Made hints 1 and 2 vaguer (Gothic 1200s building, royal weddings), each leaving two options open, and moved the coronation fact to hint 3.",
         "previous": {
           "hints": [
             "It's right next to the Houses of Parliament.",
             "Kings and queens are crowned there.",
-            "It's the church where William and Catherine married in 2011."
+            "Poets' Corner, where many famous writers are buried or remembered, is inside it."
           ]
         },
         "revised_on": "2026-10-29"
@@ -758502,10 +758791,10 @@
     },
     {
       "id": "q-9818",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Britain's favourite winter sport needs just a tea tray and a brave bottom.",
-      "question": "When snow falls in Britain, children grab a sledge, wrap up warm and head off to go sledging. Where do they go?",
+      "question": "When snow falls in Britain, children grab a sledge and go sledging. Where do they go?",
       "answer": "A steep hill",
       "wrong_answers": [
         "A flat field",
@@ -758514,17 +758803,24 @@
       ],
       "hints": [
         "You need to go fast for this to be fun.",
-        "The sledge slides down, then you walk back up.",
+        "Gravity does all the work.",
         "Think up and down."
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "wooden sled closeup",
+        "role": "decorative",
+        "query": "snowy English village",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASnowy_Clee_Hill_Village_-_geograph.org.uk_-_1772817.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Snowy_Clee_Hill_Village_-_geograph.org.uk_-_1772817.jpg/3840px-Snowy_Clee_Hill_Village_-_geograph.org.uk_-_1772817.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Mr M Evison · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Mr M Evison",
+        "author_url": "https://www.geograph.org.uk/profile/2305",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "When there's no sledge, lots of British children slide down the hill on a tea tray or a bin bag.",
       "subcategory": "weather-and-seasons",
@@ -758549,28 +758845,58 @@
         "difficulty_estimate": 2,
         "notes": "Very obvious, and the options are weak (a beach, a flat field). The fun fact repeats the tea-tray joke from the description. Easier than the stated 3."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-29",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates works: the results show a rocket sled, a rocket test track, a sea shell, a butterfly wing and sled dogs in Alaska. None shows a child's sledge or snowy British hills, and #6 shows a flat snowy field, which hints at a wrong option. Also, hint 2 (“slides down, then you walk back up”) gives the answer away almost as much as hint 3. It should be made vaguer, and the padding in the question (“wrap up warm and head off”) could be cut. No suitable picture found for this question.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates works: the results show a rocket sled, a rocket test track, a sea shell, a butterfly wing and sled dogs in Alaska. None shows a child's sledge or snowy British hills, and #6 shows a flat snowy field, which hints at a wrong option. Also, hint 2 (“slides down, then you walk back up”) gives the answer away almost as much as hint 3. It should be made vaguer, and the padding in the question (“wrap up warm and head off”) could be cut. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Cut padding from the question, made hint 2 vaguer, and switched to a decorative snowy-village image so no hill or flat field is shown sharp.",
+        "previous": {
+          "question": "When snow falls in Britain, children grab a sledge, wrap up warm and head off to go sledging. Where do they go?",
+          "hints": [
+            "You need to go fast for this to be fun.",
+            "The sledge slides down, then you walk back up.",
+            "Think up and down."
+          ],
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "wooden sled closeup",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9819",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "A visitor who paints every car window and never leaves a note.",
       "question": "You wake up on a winter morning, the grass is white and crunchy, and someone says “Jack Frost has been!”. When did he come?",
@@ -758581,7 +758907,7 @@
         "Yesterday morning"
       ],
       "hints": [
-        "You were asleep when it happened.",
+        "Frost needs very cold air and a clear sky.",
         "The coldest time is when the sun is gone.",
         "It was dark when he visited."
       ],
@@ -758628,27 +758954,35 @@
       "needs_media": false,
       "batch": "batch-29",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (“You were asleep when it happened.”) solves the question: of the four options, only “During the night” is a time when you'd be asleep. Hint 2 (“when the sun is gone”) also points straight to night. Hint 1 needs to become vague (for example about frost needing very cold air or a clear sky), and the night clues should only come in hints 2 and 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (“You were asleep when it happened.”) solves the question: of the four options, only “During the night” is a time when you'd be asleep. Hint 2 (“when the sun is gone”) also points straight to night. Hint 1 needs to become vague (for example about frost needing very cold air or a clear sky), and the night clues should only come in hints 2 and 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the evening wrong answer “Just after tea” with a clear daytime option.",
+        "reason": "Made hint 1 vague (cold air, clear sky) so the night clues come only in hints 2 and 3.",
         "previous": {
-          "wrong_answers": [
-            "At lunchtime",
-            "Yesterday afternoon",
-            "Just after tea"
+          "hints": [
+            "You were asleep when it happened.",
+            "The coldest time is when the sun is gone.",
+            "It was dark when he visited."
           ]
         },
         "revised_on": "2026-10-29"

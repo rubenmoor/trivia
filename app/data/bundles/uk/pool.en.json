@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "7a8a17b9",
+  "hash": "eb129b7c",
   "questions": [
     {
       "id": "q-9487",
@@ -1823,6 +1823,40 @@
       "background": null
     },
     {
+      "id": "q-9540",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "counties-and-regions",
+      "bundle": "uk",
+      "description": "A mountain so tall that it often wears a cloud as a hat.",
+      "question": "What is the highest mountain in the United Kingdom?",
+      "answer": "Ben Nevis",
+      "wrong_answers": [
+        "Snowdon",
+        "Scafell Pike",
+        "Slieve Donard"
+      ],
+      "hints": [
+        "Thousands of walkers climb it every year.",
+        "It is more than 1,300 metres high.",
+        "It's in Scotland, near the town of Fort William."
+      ],
+      "fun_fact": "Ben Nevis is 1,345 metres (4,413 ft) high, and its summit is in cloud most days of the year.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Glen_Coe_Rainbow.jpg/3840px-Glen_Coe_Rainbow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGlen_Coe_Rainbow.jpg",
+        "credit": "Colin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Colin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Colin"
+      },
+      "background": null
+    },
+    {
       "id": "q-9541",
       "status": "approved",
       "difficulty": 7,
@@ -2095,6 +2129,40 @@
       "background": null
     },
     {
+      "id": "q-9549",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "creatures-ghosts-and-superstitions",
+      "bundle": "uk",
+      "description": "Photo editing, 1917 style.",
+      "question": "In 1917, two young cousins in Yorkshire took photos of “fairies” that fooled many people. By what name is this famous hoax known?",
+      "answer": "The Cottingley Fairies",
+      "wrong_answers": [
+        "The Pendle Sprites",
+        "The Whitby Pixies",
+        "The Glastonbury Elves"
+      ],
+      "hints": [
+        "The photos were taken in a village near Bradford.",
+        "Sherlock Holmes author Arthur Conan Doyle wrote about them in 1920.",
+        "The village name starts with “Cott”."
+      ],
+      "fun_fact": "In 1983 the cousins admitted the fairies were paper cut-outs copied from a children's book and held up with hatpins.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Track_and_stream_in_Post_Hill_nature_reserve%2C_Leeds.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATrack_and_stream_in_Post_Hill_nature_reserve%2C_Leeds.jpg",
+        "credit": "LeedsTracker · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "LeedsTracker",
+        "author_url": "https://commons.wikimedia.org/wiki/User:LeedsTracker"
+      },
+      "background": null
+    },
+    {
       "id": "q-9550",
       "status": "approved",
       "difficulty": 12,
@@ -2333,6 +2401,40 @@
       "background": null
     },
     {
+      "id": "q-9557",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "customs-and-ceremonies",
+      "bundle": "uk",
+      "description": "No church, no organ, just a lot of very careful signatures.",
+      "question": "For a wedding at a register office in England, how many witnesses are legally needed?",
+      "answer": "2",
+      "wrong_answers": [
+        "1",
+        "3",
+        "4"
+      ],
+      "hints": [
+        "It's fewer than the number of bridesmaids at most big weddings.",
+        "It's more than one.",
+        "It's the same as the number of people getting married."
+      ],
+      "fun_fact": "Its official name is the “register office”, even though most Britons call it the “registry office”.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Hill%27s_album_of_biography_and_art_-_containing_portraits_and_pen-sketches_of_many_persons_who_have_been_and_are_prominent_as_religionists%2C_military_heroes%2C_inventors%2C_financiers%2C_scientists%2C_%2814784848252%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHill%27s_album_of_biography_and_art_-_containing_portraits_and_pen-sketches_of_many_persons_who_have_been_and_are_prominent_as_religionists%2C_military_heroes%2C_inventors%2C_financiers%2C_scientists%2C_%2814784848252%29.jpg",
+        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Internet Archive Book Images",
+        "author_url": "https://www.flickr.com/people/126377022@N07"
+      },
+      "background": null
+    },
+    {
       "id": "q-9558",
       "status": "approved",
       "difficulty": 2,
@@ -2469,6 +2571,40 @@
       "background": null
     },
     {
+      "id": "q-9563",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "drinks",
+      "bundle": "uk",
+      "description": "A purple drink that has been staining school shirts for generations.",
+      "question": "Ribena's name comes from the Latin “Ribes nigrum”, and in the Second World War it was given to children for vitamin C. Which fruit is it made from?",
+      "answer": "Blackcurrant",
+      "wrong_answers": [
+        "Blackberry",
+        "Grape",
+        "Raspberry"
+      ],
+      "hints": [
+        "The fruit is small, round and very dark.",
+        "It grows in bunches on bushes, not on vines.",
+        "“Nigrum” means black in Latin."
+      ],
+      "fun_fact": "During the Second World War, the British government bought almost the whole blackcurrant crop to turn it into syrup for children.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Pluck_the_berries_invitation_sign_in_community_gardens_Langen%C3%A6s_Aarhus_Denmark_04.jpg/3840px-Pluck_the_berries_invitation_sign_in_community_gardens_Langen%C3%A6s_Aarhus_Denmark_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APluck_the_berries_invitation_sign_in_community_gardens_Langen%C3%A6s_Aarhus_Denmark_04.jpg",
+        "credit": "Ciara Ní Riain · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ciara Ní Riain",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ciara_N%C3%AD_Riain"
+      },
+      "background": null
+    },
+    {
       "id": "q-9564",
       "status": "approved",
       "difficulty": 6,
@@ -2601,6 +2737,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Dave Pickersgill",
         "author_url": "https://www.geograph.org.uk/profile/13635"
+      },
+      "background": null
+    },
+    {
+      "id": "q-9568",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "drinks",
+      "bundle": "uk",
+      "description": "A dram that tastes like a windy day at the seaside, in a good way.",
+      "question": "Talisker, a smoky, peppery single malt whisky, has been made since 1830 on which Scottish island?",
+      "answer": "Skye",
+      "wrong_answers": [
+        "Islay",
+        "Orkney",
+        "Mull"
+      ],
+      "hints": [
+        "It is in the Inner Hebrides.",
+        "It is famous for the jagged Cuillin mountains.",
+        "A bridge has linked it to the mainland since 1995."
+      ],
+      "fun_fact": "For many years Talisker was the only whisky distillery on its island.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Redbreast15.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARedbreast15.JPG",
+        "credit": "Laser brain · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Laser brain",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Laser_brain"
       },
       "background": null
     },
@@ -3319,6 +3489,40 @@
       "background": null
     },
     {
+      "id": "q-9590",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "georgians-and-victorians",
+      "bundle": "uk",
+      "description": "What happens in the polling booth stays in the polling booth.",
+      "question": "Britain brought in secret voting with the Ballot Act of 1872. The secret ballot is still nicknamed after which country, where its modern form began?",
+      "answer": "Australia",
+      "wrong_answers": [
+        "The United States",
+        "France",
+        "Switzerland"
+      ],
+      "hints": [
+        "Before 1872, British voters often called out their choice in public.",
+        "It was first used in 1856, in a land caught up in a gold rush.",
+        "That country is also a whole continent."
+      ],
+      "fun_fact": "The first British election held with a secret ballot was a by-election in Pontefract in August 1872.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Ballot_box_at_the_No._490_polling_station%2C_Astana%2C_August_2026.jpg/3840px-Ballot_box_at_the_No._490_polling_station%2C_Astana%2C_August_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABallot_box_at_the_No._490_polling_station%2C_Astana%2C_August_2026.jpg",
+        "credit": "Nurken · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Nurken",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Nurken"
+      },
+      "background": null
+    },
+    {
       "id": "q-9591",
       "status": "approved",
       "difficulty": 10,
@@ -3655,6 +3859,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Bill Boaden",
         "author_url": "https://www.geograph.org.uk/profile/42541"
+      },
+      "background": null
+    },
+    {
+      "id": "q-9601",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "hills-moors-and-national-parks",
+      "bundle": "uk",
+      "description": "A fire that comes out of the ground, one spadeful at a time.",
+      "question": "For centuries, island families in Scotland have cut peat from the moors to burn. Roughly how much does a peat bog grow each year?",
+      "answer": "About 1 mm",
+      "wrong_answers": [
+        "About 1 cm",
+        "About 10 cm",
+        "About 1 m"
+      ],
+      "hints": [
+        "It’s much slower than grass or moss grows.",
+        "The peat a family burns in one winter may have taken thousands of years to build up.",
+        "Think of the thickness of a bank card."
+      ],
+      "fun_fact": "Peat bogs store huge amounts of carbon, which is why many groups now ask gardeners to use peat-free compost.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Peat_Stacks_-_geograph.org.uk_-_2633598.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APeat_Stacks_-_geograph.org.uk_-_2633598.jpg",
+        "credit": "Colin Smith · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Colin Smith",
+        "author_url": "https://www.geograph.org.uk/profile/3972"
       },
       "background": null
     },
@@ -4403,6 +4641,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "M J Richardson",
         "author_url": "https://www.geograph.org.uk/profile/15498"
+      },
+      "background": null
+    },
+    {
+      "id": "q-9624",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "legendary-heroes",
+      "bundle": "uk",
+      "description": "Scotland's most famous cattle thief, who now also has a cocktail named after him.",
+      "question": "The Scottish outlaw Rob Roy MacGregor, played by Liam Neeson in a 1995 film, lived around which time?",
+      "answer": "Around 1700",
+      "wrong_answers": [
+        "Around 1300",
+        "Around 1500",
+        "Around 1850"
+      ],
+      "hints": [
+        "He lived long after William Wallace and Robert the Bruce.",
+        "He took part in the Jacobite risings.",
+        "Sir Walter Scott wrote a novel about him in 1817, more than 80 years after he died."
+      ],
+      "fun_fact": "He is buried at Balquhidder, and his gravestone reads “MacGregor despite them”.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/View_from_Ben_A%27an_facing_East.jpg/3840px-View_from_Ben_A%27an_facing_East.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AView_from_Ben_A%27an_facing_East.jpg",
+        "credit": "Aais6 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Aais6",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Aais6"
       },
       "background": null
     },
@@ -5869,6 +6141,40 @@
       "background": null
     },
     {
+      "id": "q-9669",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "pioneers-and-heroes",
+      "bundle": "uk",
+      "description": "A walk round the garden that turned into one of the biggest whip-rounds in British history.",
+      "question": "In 2020, aged 99, Captain Tom Moore walked 100 laps of his garden and raised more than £30 million. Who was the money for?",
+      "answer": "NHS charities",
+      "wrong_answers": [
+        "The RNLI",
+        "The Royal British Legion",
+        "Help for Heroes"
+      ],
+      "hints": [
+        "It was during the first Covid lockdown.",
+        "He wanted to thank the people who had cared for him after a broken hip and cancer treatment.",
+        "Many people clapped for them on their doorsteps every Thursday."
+      ],
+      "fun_fact": "Captain Tom also had a number one hit, singing “You'll Never Walk Alone” with Michael Ball, and was knighted by the Queen.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/A_lawn_and_garden_bench_at_Gibberd_Garden_Essex_England.JPG/3840px-A_lawn_and_garden_bench_at_Gibberd_Garden_Essex_England.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_lawn_and_garden_bench_at_Gibberd_Garden_Essex_England.JPG",
+        "credit": "Acabashi · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Acabashi",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Acabashi"
+      },
+      "background": null
+    },
+    {
       "id": "q-9670",
       "status": "approved",
       "difficulty": 8,
@@ -6035,6 +6341,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "0x010C",
         "author_url": "https://commons.wikimedia.org/wiki/User:0x010C"
+      },
+      "background": null
+    },
+    {
+      "id": "q-9675",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "plants-and-gardens",
+      "bundle": "uk",
+      "description": "A foreign visitor that came for the garden party and never went home.",
+      "question": "Garden owners in Britain have planted this upright bluebell since the 1600s, and now it crosses with the native kind. Where did it first come from?",
+      "answer": "The Iberian Peninsula",
+      "wrong_answers": [
+        "The Netherlands",
+        "The Balkans",
+        "Scandinavia"
+      ],
+      "hints": [
+        "It comes from somewhere warmer and sunnier than Britain.",
+        "Its home is a large peninsula.",
+        "Its common name comes from a country where holidaymakers enjoy paella."
+      ],
+      "fun_fact": "Native British bluebells droop to one side and smell sweet, but the Spanish ones stand up straight and hardly smell at all.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Hyacinthoides_hispanica_flower_%2831%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHyacinthoides_hispanica_flower_%2831%29.jpg",
+        "credit": "Andrea Moro · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Andrea Moro",
+        "author_url": null
       },
       "background": null
     },
@@ -7302,6 +7642,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Acabashi",
         "author_url": "https://commons.wikimedia.org/wiki/User:Acabashi"
+      },
+      "background": null
+    },
+    {
+      "id": "q-9713",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "drinks",
+      "bundle": "uk",
+      "description": "A pint can go flat during a long enough chat at the bar.",
+      "question": "In a British pub, regulars often chat with “the landlord”. Who is that?",
+      "answer": "The person who runs the pub",
+      "wrong_answers": [
+        "The brewery that supplies the beer",
+        "The owner of the house next door",
+        "The barman on the night shift"
+      ],
+      "hints": [
+        "It isn't a company or a neighbour.",
+        "In old inns, this person also let out rooms to travellers.",
+        "If the pub had a captain, it would be them."
+      ],
+      "fun_fact": "A woman who runs a pub is traditionally called the landlady.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Windsor_Castle%2C_Marylebone%2C_W1.jpg/3840px-Windsor_Castle%2C_Marylebone%2C_W1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWindsor_Castle%2C_Marylebone%2C_W1.jpg",
+        "credit": "Ewan-M · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Ewan-M",
+        "author_url": null
       },
       "background": null
     },
@@ -10468,6 +10842,40 @@
       "background": null
     },
     {
+      "id": "q-9809",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "twentieth-century",
+      "bundle": "uk",
+      "description": "Coming last has never made anyone so famous, or so many officials so nervous.",
+      "question": "Eddie the Eagle became a hero at the 1988 Calgary Olympics despite finishing last in ski jumping. What did the “Eddie the Eagle rule” then require?",
+      "answer": "Minimum qualifying results to compete",
+      "wrong_answers": [
+        "Every country to send two jumpers",
+        "Skis no longer than 2 metres",
+        "A minimum age of 21 for jumpers"
+      ],
+      "hints": [
+        "The rule was brought in by the sport's international federation and the Olympic organisers in the years after 1988.",
+        "Eddie had been Britain's only ski jumper, so he got in easily.",
+        "Since then, athletes must prove themselves in international events before the Games."
+      ],
+      "fun_fact": "Eddie was so long-sighted that he wore thick glasses under his goggles, which often fogged up during his jumps.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/2020-01-22_Ski_Jumping_Competition_Round_Nordic_Mixed_Team_%282020_Winter_Youth_Olympics%29_by_Sandro_Halank%E2%80%93166.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2020-01-22_Ski_Jumping_Competition_Round_Nordic_Mixed_Team_%282020_Winter_Youth_Olympics%29_by_Sandro_Halank%E2%80%93166.jpg",
+        "credit": "Sandro Halank, Wikimedia Commons · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Sandro Halank, Wikimedia Commons",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Sandro_Halank"
+      },
+      "background": null
+    },
+    {
       "id": "q-9810",
       "status": "approved",
       "difficulty": 6,
@@ -10566,6 +10974,40 @@
         "license_url": null,
         "author": "New York Times Paris Bureau Collection.",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-9813",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "twentieth-century",
+      "bundle": "uk",
+      "description": "Fifty-six countries, one family gathering, and somebody has to book the venue.",
+      "question": "Every Commonwealth Day, on the second Monday in March, the King and Commonwealth guests attend a big service in a London church. Which one?",
+      "answer": "Westminster Abbey",
+      "wrong_answers": [
+        "St Paul's Cathedral",
+        "Westminster Cathedral",
+        "Southwark Cathedral"
+      ],
+      "hints": [
+        "Most of its Gothic building dates from the 1200s.",
+        "It has hosted many royal weddings.",
+        "Kings and queens are crowned there."
+      ],
+      "fun_fact": "Commonwealth Day grew out of Empire Day, which was celebrated on 24 May, Queen Victoria's birthday.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/International_Flag_Display_at_Commonwealth_Place%2C_Canberra%2C_Jan_2026_01.jpg/3840px-International_Flag_Display_at_Commonwealth_Place%2C_Canberra%2C_Jan_2026_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AInternational_Flag_Display_at_Commonwealth_Place%2C_Canberra%2C_Jan_2026_01.jpg",
+        "credit": "DaHuzyBru · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "DaHuzyBru",
+        "author_url": "https://commons.wikimedia.org/wiki/User:DaHuzyBru"
       },
       "background": null
     },
@@ -10702,6 +11144,74 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Theactivistuk",
         "author_url": "https://commons.wikimedia.org/wiki/User:Theactivistuk"
+      },
+      "background": null
+    },
+    {
+      "id": "q-9818",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "weather-and-seasons",
+      "bundle": "uk",
+      "description": "Britain's favourite winter sport needs just a tea tray and a brave bottom.",
+      "question": "When snow falls in Britain, children grab a sledge and go sledging. Where do they go?",
+      "answer": "A steep hill",
+      "wrong_answers": [
+        "A flat field",
+        "A sandy beach",
+        "A frozen pond"
+      ],
+      "hints": [
+        "You need to go fast for this to be fun.",
+        "Gravity does all the work.",
+        "Think up and down."
+      ],
+      "fun_fact": "When there's no sledge, lots of British children slide down the hill on a tea tray or a bin bag.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Snowy_Clee_Hill_Village_-_geograph.org.uk_-_1772817.jpg/3840px-Snowy_Clee_Hill_Village_-_geograph.org.uk_-_1772817.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASnowy_Clee_Hill_Village_-_geograph.org.uk_-_1772817.jpg",
+        "credit": "Mr M Evison · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Mr M Evison",
+        "author_url": "https://www.geograph.org.uk/profile/2305"
+      },
+      "background": null
+    },
+    {
+      "id": "q-9819",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "weather-and-seasons",
+      "bundle": "uk",
+      "description": "A visitor who paints every car window and never leaves a note.",
+      "question": "You wake up on a winter morning, the grass is white and crunchy, and someone says “Jack Frost has been!”. When did he come?",
+      "answer": "During the night",
+      "wrong_answers": [
+        "At lunchtime",
+        "Yesterday afternoon",
+        "Yesterday morning"
+      ],
+      "hints": [
+        "Frost needs very cold air and a clear sky.",
+        "The coldest time is when the sun is gone.",
+        "It was dark when he visited."
+      ],
+      "fun_fact": "Frost forms most easily on clear nights, because without clouds the ground loses its warmth into the sky.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Frosty_grass_%285410681106%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFrosty_grass_%285410681106%29.jpg",
+        "credit": "Weldon Kennedy from London, UK · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Weldon Kennedy from London, UK",
+        "author_url": "https://www.flickr.com/people/99123936@N00"
       },
       "background": null
     },
