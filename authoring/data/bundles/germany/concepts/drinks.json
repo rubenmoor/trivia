@@ -1,0 +1,1013 @@
+{
+  "subcategory": "drinks",
+  "facets": [
+    "Bierstile und Biersorten",
+    "Brauereien und Reinheitsgebot",
+    "Biermischgetränke",
+    "Weinregionen und Rebsorten",
+    "Apfelwein, Sekt und Obstweine",
+    "Schnäpse und Kräuterliköre",
+    "Limonaden und Softdrinks",
+    "Mineralwasser und Heilquellen",
+    "Kaffee- und Teekultur",
+    "Heiße Wintergetränke",
+    "Trinkbräuche und Feste",
+    "Gläser, Flaschen und Pfand"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Pils",
+      "facet": "Bierstile und Biersorten",
+      "known_at": 8
+    },
+    {
+      "name": "Weißbier",
+      "facet": "Bierstile und Biersorten",
+      "known_at": 8
+    },
+    {
+      "name": "Helles",
+      "facet": "Bierstile und Biersorten",
+      "known_at": 10
+    },
+    {
+      "name": "Dunkles",
+      "facet": "Bierstile und Biersorten",
+      "known_at": 11
+    },
+    {
+      "name": "Bockbier",
+      "facet": "Bierstile und Biersorten",
+      "known_at": 11
+    },
+    {
+      "name": "Doppelbock",
+      "facet": "Bierstile und Biersorten",
+      "known_at": 13
+    },
+    {
+      "name": "Maibock",
+      "facet": "Bierstile und Biersorten",
+      "known_at": 13
+    },
+    {
+      "name": "Rauchbier",
+      "facet": "Bierstile und Biersorten",
+      "known_at": 13
+    },
+    {
+      "name": "Gose",
+      "facet": "Bierstile und Biersorten",
+      "known_at": 14
+    },
+    {
+      "name": "Märzen",
+      "facet": "Bierstile und Biersorten",
+      "known_at": 13
+    },
+    {
+      "name": "Schwarzbier",
+      "facet": "Bierstile und Biersorten",
+      "known_at": 11
+    },
+    {
+      "name": "Export",
+      "facet": "Bierstile und Biersorten",
+      "known_at": 12
+    },
+    {
+      "name": "Kellerbier",
+      "facet": "Bierstile und Biersorten",
+      "known_at": 12
+    },
+    {
+      "name": "Zwickelbier",
+      "facet": "Bierstile und Biersorten",
+      "known_at": 14
+    },
+    {
+      "name": "Festbier",
+      "facet": "Bierstile und Biersorten",
+      "known_at": 12
+    },
+    {
+      "name": "Alkoholfreies Bier",
+      "facet": "Bierstile und Biersorten",
+      "known_at": 7
+    },
+    {
+      "name": "Malz",
+      "facet": "Brauereien und Reinheitsgebot",
+      "known_at": 8
+    },
+    {
+      "name": "Wilhelm IV.",
+      "facet": "Brauereien und Reinheitsgebot",
+      "known_at": 14
+    },
+    {
+      "name": "Hallertau",
+      "facet": "Brauereien und Reinheitsgebot",
+      "known_at": 13
+    },
+    {
+      "name": "Weihenstephan",
+      "facet": "Brauereien und Reinheitsgebot",
+      "known_at": 12
+    },
+    {
+      "name": "Hofbräuhaus",
+      "facet": "Brauereien und Reinheitsgebot",
+      "known_at": 9
+    },
+    {
+      "name": "Paulaner",
+      "facet": "Brauereien und Reinheitsgebot",
+      "known_at": 10
+    },
+    {
+      "name": "Augustiner",
+      "facet": "Brauereien und Reinheitsgebot",
+      "known_at": 11
+    },
+    {
+      "name": "Beck's",
+      "facet": "Brauereien und Reinheitsgebot",
+      "known_at": 10
+    },
+    {
+      "name": "Krombacher",
+      "facet": "Brauereien und Reinheitsgebot",
+      "known_at": 10
+    },
+    {
+      "name": "Bitburger",
+      "facet": "Brauereien und Reinheitsgebot",
+      "known_at": 11
+    },
+    {
+      "name": "Erdinger",
+      "facet": "Brauereien und Reinheitsgebot",
+      "known_at": 11
+    },
+    {
+      "name": "Warsteiner",
+      "facet": "Brauereien und Reinheitsgebot",
+      "known_at": 11
+    },
+    {
+      "name": "Radeberger",
+      "facet": "Brauereien und Reinheitsgebot",
+      "known_at": 12
+    },
+    {
+      "name": "Jever",
+      "facet": "Brauereien und Reinheitsgebot",
+      "known_at": 12
+    },
+    {
+      "name": "Flensburger",
+      "facet": "Brauereien und Reinheitsgebot",
+      "known_at": 11
+    },
+    {
+      "name": "Bierbrauer",
+      "facet": "Brauereien und Reinheitsgebot",
+      "known_at": 6
+    },
+    {
+      "name": "Radler",
+      "facet": "Biermischgetränke",
+      "known_at": 8
+    },
+    {
+      "name": "Alsterwasser",
+      "facet": "Biermischgetränke",
+      "known_at": 10
+    },
+    {
+      "name": "Russ",
+      "facet": "Biermischgetränke",
+      "known_at": 12
+    },
+    {
+      "name": "Krefelder",
+      "facet": "Biermischgetränke",
+      "known_at": 14
+    },
+    {
+      "name": "Bananenweizen",
+      "facet": "Biermischgetränke",
+      "known_at": 13
+    },
+    {
+      "name": "Goaßmaß",
+      "facet": "Biermischgetränke",
+      "known_at": 14
+    },
+    {
+      "name": "Herrengedeck",
+      "facet": "Biermischgetränke",
+      "known_at": 13
+    },
+    {
+      "name": "Mixery",
+      "facet": "Biermischgetränke",
+      "known_at": 12
+    },
+    {
+      "name": "Altbierbowle",
+      "facet": "Biermischgetränke",
+      "known_at": 14
+    },
+    {
+      "name": "Berliner Weisse mit Schuss",
+      "facet": "Biermischgetränke",
+      "known_at": 11
+    },
+    {
+      "name": "Waldmeistersirup",
+      "facet": "Biermischgetränke",
+      "known_at": 9
+    },
+    {
+      "name": "Himbeersirup",
+      "facet": "Biermischgetränke",
+      "known_at": 6
+    },
+    {
+      "name": "Cola-Weizen",
+      "facet": "Biermischgetränke",
+      "known_at": 13
+    },
+    {
+      "name": "Zitronenlimonade",
+      "facet": "Biermischgetränke",
+      "known_at": 3
+    },
+    {
+      "name": "Rheinhessen",
+      "facet": "Weinregionen und Rebsorten",
+      "known_at": 12
+    },
+    {
+      "name": "Franken",
+      "facet": "Weinregionen und Rebsorten",
+      "known_at": 11
+    },
+    {
+      "name": "Baden",
+      "facet": "Weinregionen und Rebsorten",
+      "known_at": 11
+    },
+    {
+      "name": "Ahr",
+      "facet": "Weinregionen und Rebsorten",
+      "known_at": 12
+    },
+    {
+      "name": "Württemberg",
+      "facet": "Weinregionen und Rebsorten",
+      "known_at": 12
+    },
+    {
+      "name": "Saale-Unstrut",
+      "facet": "Weinregionen und Rebsorten",
+      "known_at": 13
+    },
+    {
+      "name": "Mittelrhein",
+      "facet": "Weinregionen und Rebsorten",
+      "known_at": 12
+    },
+    {
+      "name": "Müller-Thurgau",
+      "facet": "Weinregionen und Rebsorten",
+      "known_at": 12
+    },
+    {
+      "name": "Silvaner",
+      "facet": "Weinregionen und Rebsorten",
+      "known_at": 12
+    },
+    {
+      "name": "Spätburgunder",
+      "facet": "Weinregionen und Rebsorten",
+      "known_at": 12
+    },
+    {
+      "name": "Dornfelder",
+      "facet": "Weinregionen und Rebsorten",
+      "known_at": 12
+    },
+    {
+      "name": "Trollinger",
+      "facet": "Weinregionen und Rebsorten",
+      "known_at": 13
+    },
+    {
+      "name": "Eiswein",
+      "facet": "Weinregionen und Rebsorten",
+      "known_at": 11
+    },
+    {
+      "name": "Spätlese",
+      "facet": "Weinregionen und Rebsorten",
+      "known_at": 11
+    },
+    {
+      "name": "Liebfrauenmilch",
+      "facet": "Weinregionen und Rebsorten",
+      "known_at": 14
+    },
+    {
+      "name": "Weinlese",
+      "facet": "Weinregionen und Rebsorten",
+      "known_at": 7
+    },
+    {
+      "name": "Viez",
+      "facet": "Apfelwein, Sekt und Obstweine",
+      "known_at": 14
+    },
+    {
+      "name": "Sauergespritzter",
+      "facet": "Apfelwein, Sekt und Obstweine",
+      "known_at": 13
+    },
+    {
+      "name": "Frankfurt-Sachsenhausen",
+      "facet": "Apfelwein, Sekt und Obstweine",
+      "known_at": 12
+    },
+    {
+      "name": "Apfelweinwirtschaft",
+      "facet": "Apfelwein, Sekt und Obstweine",
+      "known_at": 12
+    },
+    {
+      "name": "Speierling",
+      "facet": "Apfelwein, Sekt und Obstweine",
+      "known_at": 15
+    },
+    {
+      "name": "Sekt",
+      "facet": "Apfelwein, Sekt und Obstweine",
+      "known_at": 8
+    },
+    {
+      "name": "Henkell",
+      "facet": "Apfelwein, Sekt und Obstweine",
+      "known_at": 12
+    },
+    {
+      "name": "Kupferberg",
+      "facet": "Apfelwein, Sekt und Obstweine",
+      "known_at": 13
+    },
+    {
+      "name": "Söhnlein Brillant",
+      "facet": "Apfelwein, Sekt und Obstweine",
+      "known_at": 13
+    },
+    {
+      "name": "Schaumweinsteuer",
+      "facet": "Apfelwein, Sekt und Obstweine",
+      "known_at": 13
+    },
+    {
+      "name": "Johannisbeerwein",
+      "facet": "Apfelwein, Sekt und Obstweine",
+      "known_at": 12
+    },
+    {
+      "name": "Heidelbeerwein",
+      "facet": "Apfelwein, Sekt und Obstweine",
+      "known_at": 12
+    },
+    {
+      "name": "Kirschwein",
+      "facet": "Apfelwein, Sekt und Obstweine",
+      "known_at": 12
+    },
+    {
+      "name": "Erdbeerbowle",
+      "facet": "Apfelwein, Sekt und Obstweine",
+      "known_at": 10
+    },
+    {
+      "name": "Kelterei",
+      "facet": "Apfelwein, Sekt und Obstweine",
+      "known_at": 11
+    },
+    {
+      "name": "Jägermeister",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 9
+    },
+    {
+      "name": "Underberg",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 12
+    },
+    {
+      "name": "Kümmerling",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 12
+    },
+    {
+      "name": "Asbach Uralt",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 12
+    },
+    {
+      "name": "Korn",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 10
+    },
+    {
+      "name": "Doppelkorn",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 12
+    },
+    {
+      "name": "Steinhäger",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 14
+    },
+    {
+      "name": "Schwarzwälder Kirschwasser",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 11
+    },
+    {
+      "name": "Obstler",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 12
+    },
+    {
+      "name": "Himbeergeist",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 12
+    },
+    {
+      "name": "Kleiner Feigling",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 11,
+      "retired": "unaskable: Party-Schnaps; keine der Optionen ergibt eine familientaugliche, sinnvolle Frage."
+    },
+    {
+      "name": "Ratzeputz",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 14
+    },
+    {
+      "name": "Klosterfrau Melissengeist",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 12
+    },
+    {
+      "name": "Eierlikör",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 9
+    },
+    {
+      "name": "Verpoorten",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 13
+    },
+    {
+      "name": "Killepitsch",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 14
+    },
+    {
+      "name": "Bärwurz",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 14
+    },
+    {
+      "name": "Sechsämtertropfen",
+      "facet": "Schnäpse und Kräuterliköre",
+      "known_at": 15
+    },
+    {
+      "name": "Spezi",
+      "facet": "Limonaden und Softdrinks",
+      "known_at": 5
+    },
+    {
+      "name": "Bluna",
+      "facet": "Limonaden und Softdrinks",
+      "known_at": 11
+    },
+    {
+      "name": "Sinalco",
+      "facet": "Limonaden und Softdrinks",
+      "known_at": 11
+    },
+    {
+      "name": "Afri-Cola",
+      "facet": "Limonaden und Softdrinks",
+      "known_at": 12
+    },
+    {
+      "name": "Club-Mate",
+      "facet": "Limonaden und Softdrinks",
+      "known_at": 10
+    },
+    {
+      "name": "Fritz-Kola",
+      "facet": "Limonaden und Softdrinks",
+      "known_at": 9
+    },
+    {
+      "name": "Apfelschorle",
+      "facet": "Limonaden und Softdrinks",
+      "known_at": 2
+    },
+    {
+      "name": "Fassbrause",
+      "facet": "Limonaden und Softdrinks",
+      "known_at": 10
+    },
+    {
+      "name": "Mezzo Mix",
+      "facet": "Limonaden und Softdrinks",
+      "known_at": 6
+    },
+    {
+      "name": "Schwip Schwap",
+      "facet": "Limonaden und Softdrinks",
+      "known_at": 10
+    },
+    {
+      "name": "Vita Cola",
+      "facet": "Limonaden und Softdrinks",
+      "known_at": 11
+    },
+    {
+      "name": "Waldmeisterbrause",
+      "facet": "Limonaden und Softdrinks",
+      "known_at": 8
+    },
+    {
+      "name": "Kaba",
+      "facet": "Limonaden und Softdrinks",
+      "known_at": 6
+    },
+    {
+      "name": "Frucade",
+      "facet": "Limonaden und Softdrinks",
+      "known_at": 13
+    },
+    {
+      "name": "Tri Top",
+      "facet": "Limonaden und Softdrinks",
+      "known_at": 12
+    },
+    {
+      "name": "Hohes C",
+      "facet": "Limonaden und Softdrinks",
+      "known_at": 7
+    },
+    {
+      "name": "Sprudel",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 3
+    },
+    {
+      "name": "Stilles Wasser",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 3
+    },
+    {
+      "name": "Medium",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 6
+    },
+    {
+      "name": "Kohlensäure",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 5
+    },
+    {
+      "name": "Leitungswasser",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 3
+    },
+    {
+      "name": "Gerolsteiner",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 9
+    },
+    {
+      "name": "Apollinaris",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 11
+    },
+    {
+      "name": "Selters",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 10
+    },
+    {
+      "name": "Staatl. Fachingen",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 13
+    },
+    {
+      "name": "Adelholzener",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 12
+    },
+    {
+      "name": "Vilsa",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 12
+    },
+    {
+      "name": "Heilwasser",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 10
+    },
+    {
+      "name": "Trinkkur",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 12
+    },
+    {
+      "name": "Kurort",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 9
+    },
+    {
+      "name": "Baden-Baden",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 10
+    },
+    {
+      "name": "Bad Kissingen",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 12
+    },
+    {
+      "name": "Elisenbrunnen",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 13
+    },
+    {
+      "name": "Bad Ems",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 13
+    },
+    {
+      "name": "Bad Pyrmont",
+      "facet": "Mineralwasser und Heilquellen",
+      "known_at": 13
+    },
+    {
+      "name": "Eduscho",
+      "facet": "Kaffee- und Teekultur",
+      "known_at": 12
+    },
+    {
+      "name": "Jacobs Krönung",
+      "facet": "Kaffee- und Teekultur",
+      "known_at": 10
+    },
+    {
+      "name": "Dallmayr",
+      "facet": "Kaffee- und Teekultur",
+      "known_at": 11
+    },
+    {
+      "name": "Muckefuck",
+      "facet": "Kaffee- und Teekultur",
+      "known_at": 11
+    },
+    {
+      "name": "Bärenmarke",
+      "facet": "Kaffee- und Teekultur",
+      "known_at": 9
+    },
+    {
+      "name": "Teekanne",
+      "facet": "Kaffee- und Teekultur",
+      "known_at": 8
+    },
+    {
+      "name": "Rüdesheimer Kaffee",
+      "facet": "Kaffee- und Teekultur",
+      "known_at": 13
+    },
+    {
+      "name": "Kaffeefahrt",
+      "facet": "Kaffee- und Teekultur",
+      "known_at": 10
+    },
+    {
+      "name": "Kaffeekantate",
+      "facet": "Kaffee- und Teekultur",
+      "known_at": 14
+    },
+    {
+      "name": "Pfefferminztee",
+      "facet": "Kaffee- und Teekultur",
+      "known_at": 3
+    },
+    {
+      "name": "Kamillentee",
+      "facet": "Kaffee- und Teekultur",
+      "known_at": 4
+    },
+    {
+      "name": "Hagebuttentee",
+      "facet": "Kaffee- und Teekultur",
+      "known_at": 7
+    },
+    {
+      "name": "Kinderpunsch",
+      "facet": "Heiße Wintergetränke",
+      "known_at": 3
+    },
+    {
+      "name": "Heinz Rühmann",
+      "facet": "Heiße Wintergetränke",
+      "known_at": 12
+    },
+    {
+      "name": "Grog",
+      "facet": "Heiße Wintergetränke",
+      "known_at": 10
+    },
+    {
+      "name": "Eierpunsch",
+      "facet": "Heiße Wintergetränke",
+      "known_at": 10
+    },
+    {
+      "name": "Lumumba",
+      "facet": "Heiße Wintergetränke",
+      "known_at": 12
+    },
+    {
+      "name": "Heiße Schokolade",
+      "facet": "Heiße Wintergetränke",
+      "known_at": 1
+    },
+    {
+      "name": "Heißer Apfelwein",
+      "facet": "Heiße Wintergetränke",
+      "known_at": 12
+    },
+    {
+      "name": "Weißer Glühwein",
+      "facet": "Heiße Wintergetränke",
+      "known_at": 11
+    },
+    {
+      "name": "Heidelbeerglühwein",
+      "facet": "Heiße Wintergetränke",
+      "known_at": 11
+    },
+    {
+      "name": "Heiße Zitrone",
+      "facet": "Heiße Wintergetränke",
+      "known_at": 5
+    },
+    {
+      "name": "Zimtstange",
+      "facet": "Heiße Wintergetränke",
+      "known_at": 4
+    },
+    {
+      "name": "Gewürznelke",
+      "facet": "Heiße Wintergetränke",
+      "known_at": 6
+    },
+    {
+      "name": "Sternanis",
+      "facet": "Heiße Wintergetränke",
+      "known_at": 8
+    },
+    {
+      "name": "Maß",
+      "facet": "Trinkbräuche und Feste",
+      "known_at": 8
+    },
+    {
+      "name": "O'zapft is!",
+      "facet": "Trinkbräuche und Feste",
+      "known_at": 10
+    },
+    {
+      "name": "Fassanstich",
+      "facet": "Trinkbräuche und Feste",
+      "known_at": 11
+    },
+    {
+      "name": "Bergkirchweih",
+      "facet": "Trinkbräuche und Feste",
+      "known_at": 14
+    },
+    {
+      "name": "Weinkönigin",
+      "facet": "Trinkbräuche und Feste",
+      "known_at": 11
+    },
+    {
+      "name": "Starkbierfest",
+      "facet": "Trinkbräuche und Feste",
+      "known_at": 13
+    },
+    {
+      "name": "Prost",
+      "facet": "Trinkbräuche und Feste",
+      "known_at": 4
+    },
+    {
+      "name": "Anstoßen",
+      "facet": "Trinkbräuche und Feste",
+      "known_at": 5
+    },
+    {
+      "name": "Brüderschaft trinken",
+      "facet": "Trinkbräuche und Feste",
+      "known_at": 12
+    },
+    {
+      "name": "Köbes",
+      "facet": "Trinkbräuche und Feste",
+      "known_at": 12
+    },
+    {
+      "name": "Vatertag",
+      "facet": "Trinkbräuche und Feste",
+      "known_at": 6
+    },
+    {
+      "name": "Bollerwagen",
+      "facet": "Trinkbräuche und Feste",
+      "known_at": 7
+    },
+    {
+      "name": "Stammtisch",
+      "facet": "Trinkbräuche und Feste",
+      "known_at": 9
+    },
+    {
+      "name": "Frühschoppen",
+      "facet": "Trinkbräuche und Feste",
+      "known_at": 12
+    },
+    {
+      "name": "Lokalrunde",
+      "facet": "Trinkbräuche und Feste",
+      "known_at": 12
+    },
+    {
+      "name": "Pfand",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 4
+    },
+    {
+      "name": "Pfandautomat",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 4
+    },
+    {
+      "name": "Mehrwegflasche",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 7
+    },
+    {
+      "name": "Einwegpfand",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 8
+    },
+    {
+      "name": "Getränkekasten",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 3
+    },
+    {
+      "name": "Bügelverschluss",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 8
+    },
+    {
+      "name": "Kronkorken",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 7
+    },
+    {
+      "name": "Maßkrug",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 8
+    },
+    {
+      "name": "Kölschstange",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 11
+    },
+    {
+      "name": "Kölschkranz",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 13
+    },
+    {
+      "name": "Weizenglas",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 9
+    },
+    {
+      "name": "Willi-Becher",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 13
+    },
+    {
+      "name": "Bocksbeutel",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 12
+    },
+    {
+      "name": "Geripptes",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 13
+    },
+    {
+      "name": "Römer",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 13
+    },
+    {
+      "name": "Bierstiefel",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 10
+    },
+    {
+      "name": "Piccolo",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 11
+    },
+    {
+      "name": "Perlenflasche",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 13
+    },
+    {
+      "name": "Bierdeckel",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 7
+    },
+    {
+      "name": "Pfandbon",
+      "facet": "Gläser, Flaschen und Pfand",
+      "known_at": 6
+    }
+  ]
+}

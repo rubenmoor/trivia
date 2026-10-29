@@ -1,0 +1,762 @@
+{
+  "subcategory": "sights-and-landmarks",
+  "facets": [
+    "Burgen und Schlösser",
+    "Dome, Kirchen und Klöster",
+    "Berliner Wahrzeichen",
+    "Tore, Türme und Stadtmauern",
+    "Altstädte und Fachwerk",
+    "Denkmäler und Statuen",
+    "Brücken, Bahnen und Technikbauten",
+    "Naturwunder und Landschaften",
+    "Küsten, Inseln und Leuchttürme",
+    "Museen und Erlebnisorte",
+    "Freizeitparks und Zoos",
+    "Industriekultur und moderne Bauten"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 2,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 5,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Schloss Schwerin",
+      "facet": "Burgen und Schlösser",
+      "known_at": 11
+    },
+    {
+      "name": "Schloss Wernigerode",
+      "facet": "Burgen und Schlösser",
+      "known_at": 12
+    },
+    {
+      "name": "Albrechtsburg",
+      "facet": "Burgen und Schlösser",
+      "known_at": 13
+    },
+    {
+      "name": "Frauenkirche München",
+      "facet": "Dome, Kirchen und Klöster",
+      "known_at": 8
+    },
+    {
+      "name": "Aachener Dom",
+      "facet": "Dome, Kirchen und Klöster",
+      "known_at": 10
+    },
+    {
+      "name": "Freiburger Münster",
+      "facet": "Dome, Kirchen und Klöster",
+      "known_at": 11
+    },
+    {
+      "name": "Thomaskirche Leipzig",
+      "facet": "Dome, Kirchen und Klöster",
+      "known_at": 11
+    },
+    {
+      "name": "Magdeburger Dom",
+      "facet": "Dome, Kirchen und Klöster",
+      "known_at": 12
+    },
+    {
+      "name": "Kloster Andechs",
+      "facet": "Dome, Kirchen und Klöster",
+      "known_at": 12
+    },
+    {
+      "name": "Wieskirche",
+      "facet": "Dome, Kirchen und Klöster",
+      "known_at": 13
+    },
+    {
+      "name": "Kloster Maulbronn",
+      "facet": "Dome, Kirchen und Klöster",
+      "known_at": 13
+    },
+    {
+      "name": "Naumburger Dom",
+      "facet": "Dome, Kirchen und Klöster",
+      "known_at": 13
+    },
+    {
+      "name": "Bamberger Dom",
+      "facet": "Dome, Kirchen und Klöster",
+      "known_at": 13
+    },
+    {
+      "name": "Wormser Dom",
+      "facet": "Dome, Kirchen und Klöster",
+      "known_at": 13
+    },
+    {
+      "name": "Kloster Ettal",
+      "facet": "Dome, Kirchen und Klöster",
+      "known_at": 13
+    },
+    {
+      "name": "Kloster Eberbach",
+      "facet": "Dome, Kirchen und Klöster",
+      "known_at": 14
+    },
+    {
+      "name": "Hildesheimer Dom",
+      "facet": "Dome, Kirchen und Klöster",
+      "known_at": 14
+    },
+    {
+      "name": "Ampelmännchen",
+      "facet": "Berliner Wahrzeichen",
+      "known_at": 7
+    },
+    {
+      "name": "East Side Gallery",
+      "facet": "Berliner Wahrzeichen",
+      "known_at": 8
+    },
+    {
+      "name": "Berliner Dom",
+      "facet": "Berliner Wahrzeichen",
+      "known_at": 8
+    },
+    {
+      "name": "Rotes Rathaus",
+      "facet": "Berliner Wahrzeichen",
+      "known_at": 9
+    },
+    {
+      "name": "Museumsinsel",
+      "facet": "Berliner Wahrzeichen",
+      "known_at": 9
+    },
+    {
+      "name": "Bundeskanzleramt",
+      "facet": "Berliner Wahrzeichen",
+      "known_at": 9
+    },
+    {
+      "name": "Weltzeituhr",
+      "facet": "Berliner Wahrzeichen",
+      "known_at": 10
+    },
+    {
+      "name": "Tempelhofer Feld",
+      "facet": "Berliner Wahrzeichen",
+      "known_at": 10
+    },
+    {
+      "name": "Oberbaumbrücke",
+      "facet": "Berliner Wahrzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Humboldt Forum",
+      "facet": "Berliner Wahrzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Berliner Funkturm",
+      "facet": "Berliner Wahrzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Olympiaturm",
+      "facet": "Tore, Türme und Stadtmauern",
+      "known_at": 8
+    },
+    {
+      "name": "Siegestor",
+      "facet": "Tore, Türme und Stadtmauern",
+      "known_at": 11
+    },
+    {
+      "name": "Alter Peter",
+      "facet": "Tore, Türme und Stadtmauern",
+      "known_at": 11
+    },
+    {
+      "name": "Nördlinger Stadtmauer",
+      "facet": "Tore, Türme und Stadtmauern",
+      "known_at": 12
+    },
+    {
+      "name": "Isartor",
+      "facet": "Tore, Türme und Stadtmauern",
+      "known_at": 12
+    },
+    {
+      "name": "Sendlinger Tor",
+      "facet": "Tore, Türme und Stadtmauern",
+      "known_at": 12
+    },
+    {
+      "name": "Heinrich-Hertz-Turm",
+      "facet": "Tore, Türme und Stadtmauern",
+      "known_at": 13
+    },
+    {
+      "name": "Schiefer Turm von Suurhusen",
+      "facet": "Tore, Türme und Stadtmauern",
+      "known_at": 13
+    },
+    {
+      "name": "Perlachturm",
+      "facet": "Tore, Türme und Stadtmauern",
+      "known_at": 13
+    },
+    {
+      "name": "Eschenheimer Turm",
+      "facet": "Tore, Türme und Stadtmauern",
+      "known_at": 14
+    },
+    {
+      "name": "Schiefer Turm von Bad Frankenhausen",
+      "facet": "Tore, Türme und Stadtmauern",
+      "known_at": 14
+    },
+    {
+      "name": "Neubrandenburger Stadttore",
+      "facet": "Tore, Türme und Stadtmauern",
+      "known_at": 14
+    },
+    {
+      "name": "Severinstorburg",
+      "facet": "Tore, Türme und Stadtmauern",
+      "known_at": 14
+    },
+    {
+      "name": "Roter Turm Halle",
+      "facet": "Tore, Türme und Stadtmauern",
+      "known_at": 14
+    },
+    {
+      "name": "Hameln",
+      "facet": "Altstädte und Fachwerk",
+      "known_at": 7
+    },
+    {
+      "name": "Lübecker Altstadt",
+      "facet": "Altstädte und Fachwerk",
+      "known_at": 9
+    },
+    {
+      "name": "Regensburger Altstadt",
+      "facet": "Altstädte und Fachwerk",
+      "known_at": 9
+    },
+    {
+      "name": "Schnoorviertel",
+      "facet": "Altstädte und Fachwerk",
+      "known_at": 12
+    },
+    {
+      "name": "Freudenberg",
+      "facet": "Altstädte und Fachwerk",
+      "known_at": 13
+    },
+    {
+      "name": "Bavaria",
+      "facet": "Denkmäler und Statuen",
+      "known_at": 11
+    },
+    {
+      "name": "Niederwalddenkmal",
+      "facet": "Denkmäler und Statuen",
+      "known_at": 11
+    },
+    {
+      "name": "Goethe-Schiller-Denkmal",
+      "facet": "Denkmäler und Statuen",
+      "known_at": 11
+    },
+    {
+      "name": "Kyffhäuserdenkmal",
+      "facet": "Denkmäler und Statuen",
+      "known_at": 12
+    },
+    {
+      "name": "Kaiser-Wilhelm-Denkmal Porta Westfalica",
+      "facet": "Denkmäler und Statuen",
+      "known_at": 12
+    },
+    {
+      "name": "Heinzelmännchenbrunnen",
+      "facet": "Denkmäler und Statuen",
+      "known_at": 12
+    },
+    {
+      "name": "Gänseliesel",
+      "facet": "Denkmäler und Statuen",
+      "known_at": 12
+    },
+    {
+      "name": "Bamberger Reiter",
+      "facet": "Denkmäler und Statuen",
+      "known_at": 13
+    },
+    {
+      "name": "Bismarck-Denkmal Hamburg",
+      "facet": "Denkmäler und Statuen",
+      "known_at": 13
+    },
+    {
+      "name": "Lutherdenkmal Worms",
+      "facet": "Denkmäler und Statuen",
+      "known_at": 13
+    },
+    {
+      "name": "Eulenspiegel-Brunnen Mölln",
+      "facet": "Denkmäler und Statuen",
+      "known_at": 13
+    },
+    {
+      "name": "Befreiungshalle",
+      "facet": "Denkmäler und Statuen",
+      "known_at": 14
+    },
+    {
+      "name": "Hohenzollernbrücke",
+      "facet": "Brücken, Bahnen und Technikbauten",
+      "known_at": 9
+    },
+    {
+      "name": "Göltzschtalbrücke",
+      "facet": "Brücken, Bahnen und Technikbauten",
+      "known_at": 11
+    },
+    {
+      "name": "Köhlbrandbrücke",
+      "facet": "Brücken, Bahnen und Technikbauten",
+      "known_at": 11
+    },
+    {
+      "name": "Alte Brücke Heidelberg",
+      "facet": "Brücken, Bahnen und Technikbauten",
+      "known_at": 11
+    },
+    {
+      "name": "Rakotzbrücke",
+      "facet": "Brücken, Bahnen und Technikbauten",
+      "known_at": 11
+    },
+    {
+      "name": "Müngstener Brücke",
+      "facet": "Brücken, Bahnen und Technikbauten",
+      "known_at": 12
+    },
+    {
+      "name": "Molli",
+      "facet": "Brücken, Bahnen und Technikbauten",
+      "known_at": 12
+    },
+    {
+      "name": "Kanalbrücke Magdeburg",
+      "facet": "Brücken, Bahnen und Technikbauten",
+      "known_at": 12
+    },
+    {
+      "name": "Drachenfelsbahn",
+      "facet": "Brücken, Bahnen und Technikbauten",
+      "known_at": 13
+    },
+    {
+      "name": "Rendsburger Hochbrücke",
+      "facet": "Brücken, Bahnen und Technikbauten",
+      "known_at": 14
+    },
+    {
+      "name": "Triberger Wasserfälle",
+      "facet": "Naturwunder und Landschaften",
+      "known_at": 11
+    },
+    {
+      "name": "Leuchtturm Roter Sand",
+      "facet": "Küsten, Inseln und Leuchttürme",
+      "known_at": 12
+    },
+    {
+      "name": "Seebrücke Heringsdorf",
+      "facet": "Küsten, Inseln und Leuchttürme",
+      "known_at": 12
+    },
+    {
+      "name": "Insel Reichenau",
+      "facet": "Küsten, Inseln und Leuchttürme",
+      "known_at": 12
+    },
+    {
+      "name": "Fischland-Darß",
+      "facet": "Küsten, Inseln und Leuchttürme",
+      "known_at": 12
+    },
+    {
+      "name": "Miniatur Wunderland",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 5
+    },
+    {
+      "name": "Deutsches Museum",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 7
+    },
+    {
+      "name": "Mercedes-Benz Museum",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 8
+    },
+    {
+      "name": "Schokoladenmuseum Köln",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 8
+    },
+    {
+      "name": "Porsche Museum",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 9
+    },
+    {
+      "name": "Autostadt",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 9
+    },
+    {
+      "name": "BMW Welt",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 9
+    },
+    {
+      "name": "Pergamonmuseum",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 10
+    },
+    {
+      "name": "Ozeaneum",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 10
+    },
+    {
+      "name": "Beethoven-Haus",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 10
+    },
+    {
+      "name": "Phaeno",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 11
+    },
+    {
+      "name": "Gutenberg-Museum",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 11
+    },
+    {
+      "name": "Senckenberg Naturmuseum",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 11
+    },
+    {
+      "name": "Klimahaus Bremerhaven",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 11
+    },
+    {
+      "name": "Haus der Geschichte",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 11
+    },
+    {
+      "name": "Universum Bremen",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 11
+    },
+    {
+      "name": "Goethe-Haus Frankfurt",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 11
+    },
+    {
+      "name": "Grünes Gewölbe",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 12
+    },
+    {
+      "name": "Alte Pinakothek",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 12
+    },
+    {
+      "name": "Lutherhaus Wittenberg",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 12
+    },
+    {
+      "name": "Römisch-Germanisches Museum",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 13
+    },
+    {
+      "name": "Deutsches Auswandererhaus",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 13
+    },
+    {
+      "name": "Gläserne Manufaktur",
+      "facet": "Museen und Erlebnisorte",
+      "known_at": 13
+    },
+    {
+      "name": "Europa-Park",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 4
+    },
+    {
+      "name": "Legoland Deutschland",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 4
+    },
+    {
+      "name": "Phantasialand",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 6
+    },
+    {
+      "name": "Heide Park",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 6
+    },
+    {
+      "name": "Playmobil-FunPark",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 6
+    },
+    {
+      "name": "Zoo Berlin",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 6
+    },
+    {
+      "name": "Tierpark Hagenbeck",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 8
+    },
+    {
+      "name": "Tropical Islands",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 8
+    },
+    {
+      "name": "Ravensburger Spieleland",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 8
+    },
+    {
+      "name": "Serengeti-Park",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 8
+    },
+    {
+      "name": "Eisbär Knut",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 8
+    },
+    {
+      "name": "Hansa-Park",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 9
+    },
+    {
+      "name": "Movie Park Germany",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 9
+    },
+    {
+      "name": "Wilhelma",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 9
+    },
+    {
+      "name": "Zoo Leipzig",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 9
+    },
+    {
+      "name": "Erlebnis-Zoo Hannover",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 9
+    },
+    {
+      "name": "Karls Erlebnis-Dorf",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 9
+    },
+    {
+      "name": "Erlebnispark Tripsdrill",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 10
+    },
+    {
+      "name": "Holiday Park",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 10
+    },
+    {
+      "name": "Tierpark Hellabrunn",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 10
+    },
+    {
+      "name": "Silver Star",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 10
+    },
+    {
+      "name": "Belantis",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 11
+    },
+    {
+      "name": "Fort Fun Abenteuerland",
+      "facet": "Freizeitparks und Zoos",
+      "known_at": 13
+    },
+    {
+      "name": "Allianz Arena",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 4
+    },
+    {
+      "name": "Signal Iduna Park",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 6
+    },
+    {
+      "name": "Hamburger Hafen",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 6
+    },
+    {
+      "name": "Olympiapark München",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 8
+    },
+    {
+      "name": "Frankfurter Skyline",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 9
+    },
+    {
+      "name": "Gasometer Oberhausen",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 11
+    },
+    {
+      "name": "Bauhaus Dessau",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 11
+    },
+    {
+      "name": "HafenCity",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 11
+    },
+    {
+      "name": "Völklinger Hütte",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 12
+    },
+    {
+      "name": "Landschaftspark Duisburg-Nord",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 12
+    },
+    {
+      "name": "Commerzbank Tower",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 12
+    },
+    {
+      "name": "Dortmunder U",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 12
+    },
+    {
+      "name": "Tetraeder Bottrop",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 13
+    },
+    {
+      "name": "Tiger & Turtle",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 13
+    },
+    {
+      "name": "Kranhäuser Köln",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 13
+    },
+    {
+      "name": "Erzbergwerk Rammelsberg",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 13
+    },
+    {
+      "name": "Einsteinturm",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 14
+    },
+    {
+      "name": "Fagus-Werk",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 14
+    },
+    {
+      "name": "Ferropolis",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 14
+    },
+    {
+      "name": "Weißenhofsiedlung",
+      "facet": "Industriekultur und moderne Bauten",
+      "known_at": 14
+    }
+  ]
+}

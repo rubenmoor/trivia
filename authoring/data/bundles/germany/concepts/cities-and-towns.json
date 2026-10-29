@@ -1,0 +1,967 @@
+{
+  "subcategory": "cities-and-towns",
+  "facets": [
+    "Hauptstädte der Bundesländer",
+    "Großstädte und ihre Spitznamen",
+    "Wahrzeichen und berühmte Bauwerke",
+    "Kleinstädte und Fachwerkstädte",
+    "Hafenstädte und Orte an Küste",
+    "Burgen, Schlösser und Residenzen",
+    "Städte und ihre Spezialitäten",
+    "Ortsnamen und kuriose Ortsnamen",
+    "Städte in Märchen, Sagen und Filmen",
+    "Stadtgeschichte und historische Orte",
+    "Feste, Märkte und Stadtbräuche",
+    "Stadtviertel, Plätze und Straßen"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Köln",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 2
+    },
+    {
+      "name": "Frankfurt am Main",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 4
+    },
+    {
+      "name": "Leipzig",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 6
+    },
+    {
+      "name": "Dortmund",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 4
+    },
+    {
+      "name": "Essen",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 6
+    },
+    {
+      "name": "Nürnberg",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 5
+    },
+    {
+      "name": "Wuppertal",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 8
+    },
+    {
+      "name": "Gelsenkirchen",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 6
+    },
+    {
+      "name": "Karlsruhe",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 8
+    },
+    {
+      "name": "Mannheim",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 9
+    },
+    {
+      "name": "Augsburg",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 8
+    },
+    {
+      "name": "Münster",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 8
+    },
+    {
+      "name": "Braunschweig",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 9
+    },
+    {
+      "name": "Freiburg im Breisgau",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 8
+    },
+    {
+      "name": "Heidelberg",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 7
+    },
+    {
+      "name": "Aachen",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 8
+    },
+    {
+      "name": "Kassel",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 9
+    },
+    {
+      "name": "Wolfsburg",
+      "facet": "Großstädte und ihre Spitznamen",
+      "known_at": 6
+    },
+    {
+      "name": "Kölner Dom",
+      "facet": "Wahrzeichen und berühmte Bauwerke",
+      "known_at": 3
+    },
+    {
+      "name": "Michel",
+      "facet": "Wahrzeichen und berühmte Bauwerke",
+      "known_at": 9
+    },
+    {
+      "name": "Holstentor",
+      "facet": "Wahrzeichen und berühmte Bauwerke",
+      "known_at": 9
+    },
+    {
+      "name": "Siegessäule",
+      "facet": "Wahrzeichen und berühmte Bauwerke",
+      "known_at": 8
+    },
+    {
+      "name": "Hermannsdenkmal",
+      "facet": "Wahrzeichen und berühmte Bauwerke",
+      "known_at": 11
+    },
+    {
+      "name": "Völkerschlachtdenkmal",
+      "facet": "Wahrzeichen und berühmte Bauwerke",
+      "known_at": 11
+    },
+    {
+      "name": "Ulmer Münster",
+      "facet": "Wahrzeichen und berühmte Bauwerke",
+      "known_at": 10
+    },
+    {
+      "name": "Porta Nigra",
+      "facet": "Wahrzeichen und berühmte Bauwerke",
+      "known_at": 11
+    },
+    {
+      "name": "Kaiser-Wilhelm-Gedächtniskirche",
+      "facet": "Wahrzeichen und berühmte Bauwerke",
+      "known_at": 10
+    },
+    {
+      "name": "Chilehaus",
+      "facet": "Wahrzeichen und berühmte Bauwerke",
+      "known_at": 13
+    },
+    {
+      "name": "Herkules-Monument Kassel",
+      "facet": "Wahrzeichen und berühmte Bauwerke",
+      "known_at": 12
+    },
+    {
+      "name": "Deutsches Eck",
+      "facet": "Wahrzeichen und berühmte Bauwerke",
+      "known_at": 11
+    },
+    {
+      "name": "Bavaria-Statue",
+      "facet": "Wahrzeichen und berühmte Bauwerke",
+      "known_at": 12
+    },
+    {
+      "name": "Wuppertaler Schwebebahn",
+      "facet": "Wahrzeichen und berühmte Bauwerke",
+      "known_at": 7
+    },
+    {
+      "name": "Rothenburg ob der Tauber",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 7
+    },
+    {
+      "name": "Quedlinburg",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 11
+    },
+    {
+      "name": "Goslar",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 11
+    },
+    {
+      "name": "Wernigerode",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 10
+    },
+    {
+      "name": "Celle",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 11
+    },
+    {
+      "name": "Dinkelsbühl",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 11
+    },
+    {
+      "name": "Bamberg",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 9
+    },
+    {
+      "name": "Monschau",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 12
+    },
+    {
+      "name": "Tübingen",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 9
+    },
+    {
+      "name": "Marburg",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 10
+    },
+    {
+      "name": "Meersburg",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 12
+    },
+    {
+      "name": "Lindau",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 9
+    },
+    {
+      "name": "Füssen",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 10
+    },
+    {
+      "name": "Oberammergau",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 11
+    },
+    {
+      "name": "Garmisch-Partenkirchen",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 7
+    },
+    {
+      "name": "Berchtesgaden",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 8
+    },
+    {
+      "name": "Michelstadt",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 13
+    },
+    {
+      "name": "Limburg an der Lahn",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 11
+    },
+    {
+      "name": "Eisenach",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 10
+    },
+    {
+      "name": "Hann. Münden",
+      "facet": "Kleinstädte und Fachwerkstädte",
+      "known_at": 13
+    },
+    {
+      "name": "Rostock",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 6
+    },
+    {
+      "name": "Lübeck",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 7
+    },
+    {
+      "name": "Stralsund",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 9
+    },
+    {
+      "name": "Wismar",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 11
+    },
+    {
+      "name": "Cuxhaven",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 9
+    },
+    {
+      "name": "Wilhelmshaven",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 10
+    },
+    {
+      "name": "Flensburg",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 7
+    },
+    {
+      "name": "Emden",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 11
+    },
+    {
+      "name": "Warnemünde",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 10
+    },
+    {
+      "name": "Helgoland",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 6
+    },
+    {
+      "name": "Usedom",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 7
+    },
+    {
+      "name": "Norderney",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 9
+    },
+    {
+      "name": "Borkum",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 10
+    },
+    {
+      "name": "Travemünde",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 10
+    },
+    {
+      "name": "Sankt Peter-Ording",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 10
+    },
+    {
+      "name": "Speicherstadt",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 9
+    },
+    {
+      "name": "Kap Arkona",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 12
+    },
+    {
+      "name": "Husum",
+      "facet": "Hafenstädte und Orte an Küste",
+      "known_at": 12
+    },
+    {
+      "name": "Schloss Neuschwanstein",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 3
+    },
+    {
+      "name": "Wartburg",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 9
+    },
+    {
+      "name": "Burg Hohenzollern",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 11
+    },
+    {
+      "name": "Heidelberger Schloss",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 10
+    },
+    {
+      "name": "Burg Eltz",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 11
+    },
+    {
+      "name": "Dresdner Zwinger",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 10
+    },
+    {
+      "name": "Schloss Linderhof",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 12
+    },
+    {
+      "name": "Schloss Herrenchiemsee",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 11
+    },
+    {
+      "name": "Würzburger Residenz",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 12
+    },
+    {
+      "name": "Schloss Nymphenburg",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 11
+    },
+    {
+      "name": "Schloss Charlottenburg",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 10
+    },
+    {
+      "name": "Schloss Moritzburg",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 10
+    },
+    {
+      "name": "Marksburg",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 13
+    },
+    {
+      "name": "Reichsburg Cochem",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 12
+    },
+    {
+      "name": "Festung Königstein",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 12
+    },
+    {
+      "name": "Schloss Lichtenstein",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 13
+    },
+    {
+      "name": "Burg zu Burghausen",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 13
+    },
+    {
+      "name": "Schloss Drachenburg",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 13
+    },
+    {
+      "name": "Nürnberger Lebkuchen",
+      "facet": "Städte und ihre Spezialitäten",
+      "known_at": 5
+    },
+    {
+      "name": "Nürnberger Rostbratwürstchen",
+      "facet": "Städte und ihre Spezialitäten",
+      "known_at": 6
+    },
+    {
+      "name": "Altbier",
+      "facet": "Städte und ihre Spezialitäten",
+      "known_at": 11
+    },
+    {
+      "name": "Bamberger Rauchbier",
+      "facet": "Städte und ihre Spezialitäten",
+      "known_at": 13
+    },
+    {
+      "name": "Halloren-Kugeln",
+      "facet": "Städte und ihre Spezialitäten",
+      "known_at": 11
+    },
+    {
+      "name": "Münchner Weißwurst",
+      "facet": "Städte und ihre Spezialitäten",
+      "known_at": 5
+    },
+    {
+      "name": "Bethmännchen",
+      "facet": "Städte und ihre Spezialitäten",
+      "known_at": 13
+    },
+    {
+      "name": "Frankfurter Würstchen",
+      "facet": "Städte und ihre Spezialitäten",
+      "known_at": 4
+    },
+    {
+      "name": "Salzwedeler Baumkuchen",
+      "facet": "Städte und ihre Spezialitäten",
+      "known_at": 13
+    },
+    {
+      "name": "Leipziger Lerche",
+      "facet": "Städte und ihre Spezialitäten",
+      "known_at": 13
+    },
+    {
+      "name": "Bielefeld",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 8
+    },
+    {
+      "name": "Wanne-Eickel",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 11
+    },
+    {
+      "name": "Castrop-Rauxel",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 11
+    },
+    {
+      "name": "Buxtehude",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 8
+    },
+    {
+      "name": "Elend",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 13
+    },
+    {
+      "name": "Sorge",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 14
+    },
+    {
+      "name": "Himmelpforten",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 12
+    },
+    {
+      "name": "Himmelstadt",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 12
+    },
+    {
+      "name": "Engelskirchen",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 12
+    },
+    {
+      "name": "Linsengericht",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 14
+    },
+    {
+      "name": "Katzenelnbogen",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 13
+    },
+    {
+      "name": "Neandertal",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 9
+    },
+    {
+      "name": "Lederhose",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 14
+    },
+    {
+      "name": "Frankfurt (Oder)",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 9
+    },
+    {
+      "name": "Halle (Saale)",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 9
+    },
+    {
+      "name": "Kleinkleckersdorf",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 10
+    },
+    {
+      "name": "Bad",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 7
+    },
+    {
+      "name": "Wurzen",
+      "facet": "Ortsnamen und kuriose Ortsnamen",
+      "known_at": 13
+    },
+    {
+      "name": "Rattenfänger von Hameln",
+      "facet": "Städte in Märchen, Sagen und Filmen",
+      "known_at": 5
+    },
+    {
+      "name": "Kyffhäuser",
+      "facet": "Städte in Märchen, Sagen und Filmen",
+      "known_at": 12
+    },
+    {
+      "name": "Schilda",
+      "facet": "Städte in Märchen, Sagen und Filmen",
+      "known_at": 11
+    },
+    {
+      "name": "Bodenwerder",
+      "facet": "Städte in Märchen, Sagen und Filmen",
+      "known_at": 13
+    },
+    {
+      "name": "Deutsche Märchenstraße",
+      "facet": "Städte in Märchen, Sagen und Filmen",
+      "known_at": 10
+    },
+    {
+      "name": "Sababurg",
+      "facet": "Städte in Märchen, Sagen und Filmen",
+      "known_at": 13
+    },
+    {
+      "name": "Steinau an der Straße",
+      "facet": "Städte in Märchen, Sagen und Filmen",
+      "known_at": 14
+    },
+    {
+      "name": "Xanten",
+      "facet": "Städte in Märchen, Sagen und Filmen",
+      "known_at": 12
+    },
+    {
+      "name": "Worms",
+      "facet": "Städte in Märchen, Sagen und Filmen",
+      "known_at": 10
+    },
+    {
+      "name": "Görlitz",
+      "facet": "Städte in Märchen, Sagen und Filmen",
+      "known_at": 12
+    },
+    {
+      "name": "Babelsberg",
+      "facet": "Städte in Märchen, Sagen und Filmen",
+      "known_at": 10
+    },
+    {
+      "name": "Bad Segeberg",
+      "facet": "Städte in Märchen, Sagen und Filmen",
+      "known_at": 10
+    },
+    {
+      "name": "Mölln",
+      "facet": "Städte in Märchen, Sagen und Filmen",
+      "known_at": 12
+    },
+    {
+      "name": "Hexentanzplatz",
+      "facet": "Städte in Märchen, Sagen und Filmen",
+      "known_at": 11
+    },
+    {
+      "name": "Entenhausen",
+      "facet": "Städte in Märchen, Sagen und Filmen",
+      "known_at": 5
+    },
+    {
+      "name": "Lummerland",
+      "facet": "Städte in Märchen, Sagen und Filmen",
+      "known_at": 5
+    },
+    {
+      "name": "Berliner Mauer",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 5
+    },
+    {
+      "name": "Checkpoint Charlie",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 9
+    },
+    {
+      "name": "Lutherstadt Wittenberg",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 8
+    },
+    {
+      "name": "Weimar",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 9
+    },
+    {
+      "name": "Trier",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 10
+    },
+    {
+      "name": "Leipziger Montagsdemonstrationen",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 10
+    },
+    {
+      "name": "Paulskirche",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 11
+    },
+    {
+      "name": "Hambacher Schloss",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 12
+    },
+    {
+      "name": "Limes",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 9
+    },
+    {
+      "name": "Varusschlacht",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 11
+    },
+    {
+      "name": "Regensburg",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 9
+    },
+    {
+      "name": "Speyerer Dom",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 12
+    },
+    {
+      "name": "Zeche Zollverein",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 11
+    },
+    {
+      "name": "Westfälischer Friede",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 11
+    },
+    {
+      "name": "Glienicker Brücke",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 12
+    },
+    {
+      "name": "Karl-Marx-Stadt",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 11
+    },
+    {
+      "name": "Konstanz",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 10
+    },
+    {
+      "name": "Eisleben",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 13
+    },
+    {
+      "name": "Ruhrgebiet",
+      "facet": "Stadtgeschichte und historische Orte",
+      "known_at": 6
+    },
+    {
+      "name": "Hafengeburtstag",
+      "facet": "Feste, Märkte und Stadtbräuche",
+      "known_at": 9
+    },
+    {
+      "name": "Hamburger Dom",
+      "facet": "Feste, Märkte und Stadtbräuche",
+      "known_at": 10
+    },
+    {
+      "name": "Landshuter Hochzeit",
+      "facet": "Feste, Märkte und Stadtbräuche",
+      "known_at": 13
+    },
+    {
+      "name": "Meistertrunk",
+      "facet": "Feste, Märkte und Stadtbräuche",
+      "known_at": 14
+    },
+    {
+      "name": "Weiberfastnacht",
+      "facet": "Feste, Märkte und Stadtbräuche",
+      "known_at": 8
+    },
+    {
+      "name": "Hanse Sail",
+      "facet": "Feste, Märkte und Stadtbräuche",
+      "known_at": 12
+    },
+    {
+      "name": "Wacken Open Air",
+      "facet": "Feste, Märkte und Stadtbräuche",
+      "known_at": 10
+    },
+    {
+      "name": "Dürkheimer Wurstmarkt",
+      "facet": "Feste, Märkte und Stadtbräuche",
+      "known_at": 13
+    },
+    {
+      "name": "Further Drachenstich",
+      "facet": "Feste, Märkte und Stadtbräuche",
+      "known_at": 14
+    },
+    {
+      "name": "Kurfürstendamm",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 8
+    },
+    {
+      "name": "Unter den Linden",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 9
+    },
+    {
+      "name": "Alexanderplatz",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 7
+    },
+    {
+      "name": "Potsdamer Platz",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 9
+    },
+    {
+      "name": "Reeperbahn",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 9
+    },
+    {
+      "name": "Königsallee",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 11
+    },
+    {
+      "name": "Marienplatz",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 8
+    },
+    {
+      "name": "Viktualienmarkt",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 11
+    },
+    {
+      "name": "Kreuzberg",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 9
+    },
+    {
+      "name": "Prenzlauer Berg",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 11
+    },
+    {
+      "name": "Schanzenviertel",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 12
+    },
+    {
+      "name": "Blankenese",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 11
+    },
+    {
+      "name": "St. Pauli",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 7
+    },
+    {
+      "name": "Römerberg",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 12
+    },
+    {
+      "name": "Jungfernstieg",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 12
+    },
+    {
+      "name": "Gendarmenmarkt",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 12
+    },
+    {
+      "name": "Karl-Marx-Allee",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 12
+    },
+    {
+      "name": "Böttcherstraße",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 14
+    },
+    {
+      "name": "Schnoor",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 13
+    },
+    {
+      "name": "Hackesche Höfe",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 13
+    },
+    {
+      "name": "Prinzipalmarkt",
+      "facet": "Stadtviertel, Plätze und Straßen",
+      "known_at": 13
+    }
+  ]
+}

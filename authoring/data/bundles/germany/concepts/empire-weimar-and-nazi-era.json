@@ -1,0 +1,1161 @@
+{
+  "subcategory": "empire-weimar-and-nazi-era",
+  "facets": [
+    "Reichsgründung und Kaiser",
+    "Erfindungen und Alltag im Kaiserreich",
+    "Erster Weltkrieg und Novemberrevolution",
+    "Weimarer Verfassung und Politiker",
+    "Inflation und Weltwirtschaftskrise",
+    "Goldene Zwanziger: Kunst und Kultur",
+    "Machtergreifung und NS-Diktatur",
+    "Verfolgung und Erinnerungskultur",
+    "Widerstand gegen den Nationalsozialismus",
+    "Zweiter Weltkrieg und Kriegsende",
+    "Orte und Bauwerke der Epoche"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Wilhelm II.",
+      "facet": "Reichsgründung und Kaiser",
+      "known_at": 8
+    },
+    {
+      "name": "Friedrich III.",
+      "facet": "Reichsgründung und Kaiser",
+      "known_at": 13
+    },
+    {
+      "name": "Dreikaiserjahr",
+      "facet": "Reichsgründung und Kaiser",
+      "known_at": 13
+    },
+    {
+      "name": "Spiegelsaal von Versailles",
+      "facet": "Reichsgründung und Kaiser",
+      "known_at": 11
+    },
+    {
+      "name": "Reichsgründung 1871",
+      "facet": "Reichsgründung und Kaiser",
+      "known_at": 9
+    },
+    {
+      "name": "Hohenzollern",
+      "facet": "Reichsgründung und Kaiser",
+      "known_at": 9
+    },
+    {
+      "name": "Reichskanzler",
+      "facet": "Reichsgründung und Kaiser",
+      "known_at": 10
+    },
+    {
+      "name": "Auguste Victoria",
+      "facet": "Reichsgründung und Kaiser",
+      "known_at": 14
+    },
+    {
+      "name": "Ludwig II. von Bayern",
+      "facet": "Reichsgründung und Kaiser",
+      "known_at": 8
+    },
+    {
+      "name": "Flottenpolitik",
+      "facet": "Reichsgründung und Kaiser",
+      "known_at": 13
+    },
+    {
+      "name": "Deutsch-Südwestafrika",
+      "facet": "Reichsgründung und Kaiser",
+      "known_at": 12
+    },
+    {
+      "name": "Es-ist-erreicht-Bart",
+      "facet": "Reichsgründung und Kaiser",
+      "known_at": 13
+    },
+    {
+      "name": "Carl Benz",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 7
+    },
+    {
+      "name": "Benz Patent-Motorwagen",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 9
+    },
+    {
+      "name": "Bertha Benz",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 10
+    },
+    {
+      "name": "Gottlieb Daimler",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 10
+    },
+    {
+      "name": "Rudolf Diesel",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 9
+    },
+    {
+      "name": "Wilhelm Conrad Röntgen",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 8
+    },
+    {
+      "name": "Robert Koch",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 11
+    },
+    {
+      "name": "Ferdinand Graf von Zeppelin",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 9
+    },
+    {
+      "name": "Otto Lilienthal",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 10
+    },
+    {
+      "name": "Aspirin",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 8
+    },
+    {
+      "name": "Melitta Bentz",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 9
+    },
+    {
+      "name": "Margarete Steiff",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 9
+    },
+    {
+      "name": "Teddybär",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 3
+    },
+    {
+      "name": "Albert Einstein",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 6
+    },
+    {
+      "name": "Max Planck",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 11
+    },
+    {
+      "name": "Leibniz-Keks",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 8
+    },
+    {
+      "name": "Märklin-Modelleisenbahn",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 9
+    },
+    {
+      "name": "Hauptmann von Köpenick",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 11
+    },
+    {
+      "name": "Deutscher Fußball-Bund",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 9
+    },
+    {
+      "name": "Matrosenanzug",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 10
+    },
+    {
+      "name": "Wandervogel",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 13
+    },
+    {
+      "name": "Paul Ehrlich",
+      "facet": "Erfindungen und Alltag im Kaiserreich",
+      "known_at": 14
+    },
+    {
+      "name": "Attentat von Sarajevo",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 9
+    },
+    {
+      "name": "Franz Ferdinand",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 10
+    },
+    {
+      "name": "Schlieffen-Plan",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 12
+    },
+    {
+      "name": "Schlacht um Verdun",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 11
+    },
+    {
+      "name": "Schlacht an der Somme",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 12
+    },
+    {
+      "name": "Stellungskrieg",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 10
+    },
+    {
+      "name": "Paul von Hindenburg",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 10
+    },
+    {
+      "name": "Erich Ludendorff",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 13
+    },
+    {
+      "name": "Manfred von Richthofen",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 9
+    },
+    {
+      "name": "Weihnachtsfrieden 1914",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 10
+    },
+    {
+      "name": "U-Boot-Krieg",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 11
+    },
+    {
+      "name": "Steckrübenwinter",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 12
+    },
+    {
+      "name": "Kieler Matrosenaufstand",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 12
+    },
+    {
+      "name": "Novemberrevolution",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 11
+    },
+    {
+      "name": "Philipp Scheidemann",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 12
+    },
+    {
+      "name": "Waffenstillstand von Compiègne",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 12
+    },
+    {
+      "name": "Versailler Vertrag",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 10
+    },
+    {
+      "name": "Kriegsschuldartikel",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 13
+    },
+    {
+      "name": "Dolchstoßlegende",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 12
+    },
+    {
+      "name": "Rosa Luxemburg",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 11
+    },
+    {
+      "name": "Karl Liebknecht",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 12
+    },
+    {
+      "name": "Spartakusbund",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 12
+    },
+    {
+      "name": "Im Westen nichts Neues",
+      "facet": "Erster Weltkrieg und Novemberrevolution",
+      "known_at": 10
+    },
+    {
+      "name": "Friedrich Ebert",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 9
+    },
+    {
+      "name": "Weimarer Verfassung",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 10
+    },
+    {
+      "name": "Nationalversammlung in Weimar",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 11
+    },
+    {
+      "name": "Frauenwahlrecht",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 9
+    },
+    {
+      "name": "Marie Juchacz",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 13
+    },
+    {
+      "name": "Artikel 48",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 13
+    },
+    {
+      "name": "Reichspräsident",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 11
+    },
+    {
+      "name": "Gustav Stresemann",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 11
+    },
+    {
+      "name": "Walther Rathenau",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 12
+    },
+    {
+      "name": "Matthias Erzberger",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 14
+    },
+    {
+      "name": "Kapp-Putsch",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 13
+    },
+    {
+      "name": "Hitlerputsch",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 10
+    },
+    {
+      "name": "Verträge von Locarno",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 14
+    },
+    {
+      "name": "Völkerbund",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 11
+    },
+    {
+      "name": "Heinrich Brüning",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 13
+    },
+    {
+      "name": "Franz von Papen",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 13
+    },
+    {
+      "name": "Kurt von Schleicher",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 14
+    },
+    {
+      "name": "Deutschlandlied",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 9
+    },
+    {
+      "name": "Verhältniswahlrecht",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 13
+    },
+    {
+      "name": "SPD",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 8
+    },
+    {
+      "name": "Zentrumspartei",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 13
+    },
+    {
+      "name": "KPD",
+      "facet": "Weimarer Verfassung und Politiker",
+      "known_at": 11
+    },
+    {
+      "name": "Hyperinflation 1923",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 10
+    },
+    {
+      "name": "Billionen-Mark-Schein",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 10
+    },
+    {
+      "name": "Notgeld",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 12
+    },
+    {
+      "name": "Rentenmark",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 12
+    },
+    {
+      "name": "Reichsmark",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 10
+    },
+    {
+      "name": "Ruhrbesetzung",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 12
+    },
+    {
+      "name": "Ruhrkampf",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 14
+    },
+    {
+      "name": "Reparationen",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 11
+    },
+    {
+      "name": "Dawes-Plan",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 14
+    },
+    {
+      "name": "Young-Plan",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 14
+    },
+    {
+      "name": "Schwarzer Freitag 1929",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 11
+    },
+    {
+      "name": "Weltwirtschaftskrise",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 10
+    },
+    {
+      "name": "Massenarbeitslosigkeit",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 10
+    },
+    {
+      "name": "Hjalmar Schacht",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 14
+    },
+    {
+      "name": "Notverordnung",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 13
+    },
+    {
+      "name": "Bankenkrise 1931",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 14
+    },
+    {
+      "name": "Suppenküche",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 9
+    },
+    {
+      "name": "Tauschhandel",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 9
+    },
+    {
+      "name": "Deflationspolitik",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 14
+    },
+    {
+      "name": "Lohntüte",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 12
+    },
+    {
+      "name": "Kleiner Mann – was nun?",
+      "facet": "Inflation und Weltwirtschaftskrise",
+      "known_at": 13
+    },
+    {
+      "name": "Bauhaus",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 9
+    },
+    {
+      "name": "Walter Gropius",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 12
+    },
+    {
+      "name": "Marlene Dietrich",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 10
+    },
+    {
+      "name": "Der blaue Engel",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 12
+    },
+    {
+      "name": "Metropolis",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 11
+    },
+    {
+      "name": "Fritz Lang",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 13
+    },
+    {
+      "name": "Nosferatu",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 11
+    },
+    {
+      "name": "Das Cabinet des Dr. Caligari",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 14
+    },
+    {
+      "name": "Bertolt Brecht",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 10
+    },
+    {
+      "name": "Die Dreigroschenoper",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 12
+    },
+    {
+      "name": "Kurt Weill",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 14
+    },
+    {
+      "name": "Charleston",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 9
+    },
+    {
+      "name": "Bubikopf",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 10
+    },
+    {
+      "name": "Comedian Harmonists",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 11
+    },
+    {
+      "name": "Josephine Baker",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 12
+    },
+    {
+      "name": "Otto Dix",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 13
+    },
+    {
+      "name": "George Grosz",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 14
+    },
+    {
+      "name": "Neue Sachlichkeit",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 14
+    },
+    {
+      "name": "Thomas Mann",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 10
+    },
+    {
+      "name": "Der Zauberberg",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 13
+    },
+    {
+      "name": "Erich Kästner",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 8
+    },
+    {
+      "name": "Emil und die Detektive",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 6
+    },
+    {
+      "name": "Berlin Alexanderplatz",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 13
+    },
+    {
+      "name": "Max Schmeling",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 11
+    },
+    {
+      "name": "Wassily Kandinsky",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 11
+    },
+    {
+      "name": "Babylon Berlin",
+      "facet": "Goldene Zwanziger: Kunst und Kultur",
+      "known_at": 10
+    },
+    {
+      "name": "Adolf Hitler",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 6
+    },
+    {
+      "name": "Machtergreifung",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 10
+    },
+    {
+      "name": "Reichstagsbrand",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 11
+    },
+    {
+      "name": "Ermächtigungsgesetz",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 12
+    },
+    {
+      "name": "Gleichschaltung",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 12
+    },
+    {
+      "name": "NSDAP",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 9
+    },
+    {
+      "name": "Joseph Goebbels",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 11
+    },
+    {
+      "name": "Hermann Göring",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 11
+    },
+    {
+      "name": "Heinrich Himmler",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 12
+    },
+    {
+      "name": "SA",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 11
+    },
+    {
+      "name": "SS",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 10
+    },
+    {
+      "name": "Gestapo",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 10
+    },
+    {
+      "name": "Hakenkreuz",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 8
+    },
+    {
+      "name": "Bücherverbrennung",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 10
+    },
+    {
+      "name": "Hitlerjugend",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 9
+    },
+    {
+      "name": "Bund Deutscher Mädel",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 11
+    },
+    {
+      "name": "Volksempfänger",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 11
+    },
+    {
+      "name": "Röhm-Putsch",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 13
+    },
+    {
+      "name": "Olympische Sommerspiele 1936",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 10
+    },
+    {
+      "name": "Jesse Owens",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 10
+    },
+    {
+      "name": "Leni Riefenstahl",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 13
+    },
+    {
+      "name": "KdF-Wagen",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 12
+    },
+    {
+      "name": "Reichsautobahn",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 10
+    },
+    {
+      "name": "Mein Kampf",
+      "facet": "Machtergreifung und NS-Diktatur",
+      "known_at": 10
+    },
+    {
+      "name": "Anne Frank",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 7
+    },
+    {
+      "name": "Holocaust",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 9
+    },
+    {
+      "name": "Novemberpogrome 1938",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 11
+    },
+    {
+      "name": "Nürnberger Gesetze",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 12
+    },
+    {
+      "name": "Judenstern",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 9
+    },
+    {
+      "name": "Auschwitz",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 9
+    },
+    {
+      "name": "KZ Dachau",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 11
+    },
+    {
+      "name": "KZ Buchenwald",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 12
+    },
+    {
+      "name": "KZ Bergen-Belsen",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 13
+    },
+    {
+      "name": "Wannseekonferenz",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 13
+    },
+    {
+      "name": "Stolpersteine",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 9
+    },
+    {
+      "name": "Gunter Demnig",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 14
+    },
+    {
+      "name": "Denkmal für die ermordeten Juden Europas",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 10
+    },
+    {
+      "name": "Oskar Schindler",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 10
+    },
+    {
+      "name": "Kindertransport",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 12
+    },
+    {
+      "name": "Nürnberger Prozesse",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 11
+    },
+    {
+      "name": "Kniefall von Warschau",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 12
+    },
+    {
+      "name": "Holocaust-Gedenktag 27. Januar",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 12
+    },
+    {
+      "name": "Sinti und Roma",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 12
+    },
+    {
+      "name": "Topographie des Terrors",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 14
+    },
+    {
+      "name": "Yad Vashem",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 13
+    },
+    {
+      "name": "Als Hitler das rosa Kaninchen stahl",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 11
+    },
+    {
+      "name": "Die Bücherdiebin",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 11
+    },
+    {
+      "name": "Der Junge im gestreiften Pyjama",
+      "facet": "Verfolgung und Erinnerungskultur",
+      "known_at": 10
+    },
+    {
+      "name": "Weiße Rose",
+      "facet": "Widerstand gegen den Nationalsozialismus",
+      "known_at": 10
+    },
+    {
+      "name": "Sophie Scholl",
+      "facet": "Widerstand gegen den Nationalsozialismus",
+      "known_at": 9
+    },
+    {
+      "name": "Claus Schenk Graf von Stauffenberg",
+      "facet": "Widerstand gegen den Nationalsozialismus",
+      "known_at": 10
+    },
+    {
+      "name": "Attentat vom 20. Juli 1944",
+      "facet": "Widerstand gegen den Nationalsozialismus",
+      "known_at": 10
+    },
+    {
+      "name": "Wolfsschanze",
+      "facet": "Widerstand gegen den Nationalsozialismus",
+      "known_at": 12
+    },
+    {
+      "name": "Georg Elser",
+      "facet": "Widerstand gegen den Nationalsozialismus",
+      "known_at": 12
+    },
+    {
+      "name": "Dietrich Bonhoeffer",
+      "facet": "Widerstand gegen den Nationalsozialismus",
+      "known_at": 12
+    },
+    {
+      "name": "Kreisauer Kreis",
+      "facet": "Widerstand gegen den Nationalsozialismus",
+      "known_at": 14
+    },
+    {
+      "name": "Edelweißpiraten",
+      "facet": "Widerstand gegen den Nationalsozialismus",
+      "known_at": 13
+    },
+    {
+      "name": "Swingjugend",
+      "facet": "Widerstand gegen den Nationalsozialismus",
+      "known_at": 13
+    },
+    {
+      "name": "Rote Kapelle",
+      "facet": "Widerstand gegen den Nationalsozialismus",
+      "known_at": 14
+    },
+    {
+      "name": "Otto und Elise Hampel",
+      "facet": "Widerstand gegen den Nationalsozialismus",
+      "known_at": 14
+    },
+    {
+      "name": "Clemens August Graf von Galen",
+      "facet": "Widerstand gegen den Nationalsozialismus",
+      "known_at": 14
+    },
+    {
+      "name": "Martin Niemöller",
+      "facet": "Widerstand gegen den Nationalsozialismus",
+      "known_at": 13
+    },
+    {
+      "name": "Bendlerblock",
+      "facet": "Widerstand gegen den Nationalsozialismus",
+      "known_at": 14
+    },
+    {
+      "name": "Rosenstraße-Protest",
+      "facet": "Widerstand gegen den Nationalsozialismus",
+      "known_at": 14
+    },
+    {
+      "name": "Flugblätter",
+      "facet": "Widerstand gegen den Nationalsozialismus",
+      "known_at": 10
+    },
+    {
+      "name": "Überfall auf Polen",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 10
+    },
+    {
+      "name": "Blitzkrieg",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 11
+    },
+    {
+      "name": "Hitler-Stalin-Pakt",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 12
+    },
+    {
+      "name": "Luftschlacht um England",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 12
+    },
+    {
+      "name": "Unternehmen Barbarossa",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 12
+    },
+    {
+      "name": "Schlacht von Stalingrad",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 11
+    },
+    {
+      "name": "D-Day",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 9
+    },
+    {
+      "name": "Erwin Rommel",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 12
+    },
+    {
+      "name": "Enigma",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 10
+    },
+    {
+      "name": "Alan Turing",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 11
+    },
+    {
+      "name": "V2-Rakete",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 12
+    },
+    {
+      "name": "Luftangriffe auf Dresden",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 12
+    },
+    {
+      "name": "Luftschutzbunker",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 10
+    },
+    {
+      "name": "Lebensmittelkarte",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 11
+    },
+    {
+      "name": "Kinderlandverschickung",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 13
+    },
+    {
+      "name": "Wilhelm Gustloff",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 13
+    },
+    {
+      "name": "Flucht und Vertreibung",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 12
+    },
+    {
+      "name": "Begegnung an der Elbe",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 14
+    },
+    {
+      "name": "Führerbunker",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 11
+    },
+    {
+      "name": "Kapitulation am 8. Mai 1945",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 10
+    },
+    {
+      "name": "Stunde Null",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 11
+    },
+    {
+      "name": "Trümmerfrauen",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 10
+    },
+    {
+      "name": "Potsdamer Konferenz",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 12
+    },
+    {
+      "name": "Winston Churchill",
+      "facet": "Zweiter Weltkrieg und Kriegsende",
+      "known_at": 9
+    },
+    {
+      "name": "Olympiastadion Berlin",
+      "facet": "Orte und Bauwerke der Epoche",
+      "known_at": 9
+    },
+    {
+      "name": "Flughafen Tempelhof",
+      "facet": "Orte und Bauwerke der Epoche",
+      "known_at": 10
+    },
+    {
+      "name": "Reichsparteitagsgelände",
+      "facet": "Orte und Bauwerke der Epoche",
+      "known_at": 12
+    },
+    {
+      "name": "Prora",
+      "facet": "Orte und Bauwerke der Epoche",
+      "known_at": 13
+    },
+    {
+      "name": "Deutsches Nationaltheater Weimar",
+      "facet": "Orte und Bauwerke der Epoche",
+      "known_at": 13
+    }
+  ]
+}

@@ -1,0 +1,941 @@
+{
+  "subcategory": "regional-dishes",
+  "facets": [
+    "Bayern und Franken",
+    "Schwaben und Baden",
+    "Hessen, Pfalz und Saarland",
+    "Rheinland, Westfalen und Ruhrgebiet",
+    "Norddeutsche Küste und Fisch",
+    "Berlin und Brandenburg",
+    "Sachsen, Thüringen und Sachsen-Anhalt",
+    "Regionale Kuchen, Gebäck und Süßes",
+    "Festtags- und Saisongerichte",
+    "Imbiss und Straßenküche",
+    "Namen und Spitznamen der Gerichte"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 4,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Schweinshaxe",
+      "facet": "Bayern und Franken",
+      "known_at": 7
+    },
+    {
+      "name": "Leberkäse",
+      "facet": "Bayern und Franken",
+      "known_at": 6
+    },
+    {
+      "name": "Obatzda",
+      "facet": "Bayern und Franken",
+      "known_at": 10
+    },
+    {
+      "name": "Nürnberger Rostbratwurst",
+      "facet": "Bayern und Franken",
+      "known_at": 6
+    },
+    {
+      "name": "Schäufele",
+      "facet": "Bayern und Franken",
+      "known_at": 12
+    },
+    {
+      "name": "Semmelknödel",
+      "facet": "Bayern und Franken",
+      "known_at": 6
+    },
+    {
+      "name": "Schweinsbraten",
+      "facet": "Bayern und Franken",
+      "known_at": 7
+    },
+    {
+      "name": "Kaiserschmarrn",
+      "facet": "Bayern und Franken",
+      "known_at": 7
+    },
+    {
+      "name": "Radi",
+      "facet": "Bayern und Franken",
+      "known_at": 11
+    },
+    {
+      "name": "Blaue Zipfel",
+      "facet": "Bayern und Franken",
+      "known_at": 13
+    },
+    {
+      "name": "Steckerlfisch",
+      "facet": "Bayern und Franken",
+      "known_at": 12
+    },
+    {
+      "name": "Auszogne",
+      "facet": "Bayern und Franken",
+      "known_at": 13
+    },
+    {
+      "name": "Fleischpflanzerl",
+      "facet": "Bayern und Franken",
+      "known_at": 11
+    },
+    {
+      "name": "Wurstsalat",
+      "facet": "Bayern und Franken",
+      "known_at": 8
+    },
+    {
+      "name": "Krautwickel",
+      "facet": "Bayern und Franken",
+      "known_at": 10
+    },
+    {
+      "name": "Fränkischer Karpfen",
+      "facet": "Bayern und Franken",
+      "known_at": 12
+    },
+    {
+      "name": "Weißwurstfrühstück",
+      "facet": "Bayern und Franken",
+      "known_at": 8
+    },
+    {
+      "name": "Käsespätzle",
+      "facet": "Schwaben und Baden",
+      "known_at": 5
+    },
+    {
+      "name": "Linsen mit Spätzle",
+      "facet": "Schwaben und Baden",
+      "known_at": 10
+    },
+    {
+      "name": "Schupfnudeln",
+      "facet": "Schwaben und Baden",
+      "known_at": 9
+    },
+    {
+      "name": "Flädlesuppe",
+      "facet": "Schwaben und Baden",
+      "known_at": 12
+    },
+    {
+      "name": "Zwiebelrostbraten",
+      "facet": "Schwaben und Baden",
+      "known_at": 11
+    },
+    {
+      "name": "Schwarzwälder Schinken",
+      "facet": "Schwaben und Baden",
+      "known_at": 8
+    },
+    {
+      "name": "Gaisburger Marsch",
+      "facet": "Schwaben und Baden",
+      "known_at": 13
+    },
+    {
+      "name": "Saure Kutteln",
+      "facet": "Schwaben und Baden",
+      "known_at": 13
+    },
+    {
+      "name": "Flammkuchen",
+      "facet": "Schwaben und Baden",
+      "known_at": 7
+    },
+    {
+      "name": "Zwiebelkuchen",
+      "facet": "Schwaben und Baden",
+      "known_at": 9
+    },
+    {
+      "name": "Ofenschlupfer",
+      "facet": "Schwaben und Baden",
+      "known_at": 13
+    },
+    {
+      "name": "Dinnede",
+      "facet": "Schwaben und Baden",
+      "known_at": 14
+    },
+    {
+      "name": "Brägele",
+      "facet": "Schwaben und Baden",
+      "known_at": 14
+    },
+    {
+      "name": "Spätzlehobel",
+      "facet": "Schwaben und Baden",
+      "known_at": 8
+    },
+    {
+      "name": "Schwäbischer Kartoffelsalat",
+      "facet": "Schwaben und Baden",
+      "known_at": 10
+    },
+    {
+      "name": "Leberspätzle",
+      "facet": "Schwaben und Baden",
+      "known_at": 13
+    },
+    {
+      "name": "Wibele",
+      "facet": "Schwaben und Baden",
+      "known_at": 14
+    },
+    {
+      "name": "Grüne Soße",
+      "facet": "Hessen, Pfalz und Saarland",
+      "known_at": 9
+    },
+    {
+      "name": "Apfelwein",
+      "facet": "Hessen, Pfalz und Saarland",
+      "known_at": 9
+    },
+    {
+      "name": "Bembel",
+      "facet": "Hessen, Pfalz und Saarland",
+      "known_at": 12
+    },
+    {
+      "name": "Rippchen mit Kraut",
+      "facet": "Hessen, Pfalz und Saarland",
+      "known_at": 12
+    },
+    {
+      "name": "Dampfnudel",
+      "facet": "Hessen, Pfalz und Saarland",
+      "known_at": 7
+    },
+    {
+      "name": "Pfälzer Leberknödel",
+      "facet": "Hessen, Pfalz und Saarland",
+      "known_at": 12
+    },
+    {
+      "name": "Dibbelabbes",
+      "facet": "Hessen, Pfalz und Saarland",
+      "known_at": 14
+    },
+    {
+      "name": "Hoorische",
+      "facet": "Hessen, Pfalz und Saarland",
+      "known_at": 14
+    },
+    {
+      "name": "Schwenker",
+      "facet": "Hessen, Pfalz und Saarland",
+      "known_at": 12
+    },
+    {
+      "name": "Spundekäs",
+      "facet": "Hessen, Pfalz und Saarland",
+      "known_at": 13
+    },
+    {
+      "name": "Worscht, Weck un Woi",
+      "facet": "Hessen, Pfalz und Saarland",
+      "known_at": 13
+    },
+    {
+      "name": "Ahle Wurscht",
+      "facet": "Hessen, Pfalz und Saarland",
+      "known_at": 13
+    },
+    {
+      "name": "Gefillde",
+      "facet": "Hessen, Pfalz und Saarland",
+      "known_at": 14
+    },
+    {
+      "name": "Rheinischer Sauerbraten",
+      "facet": "Rheinland, Westfalen und Ruhrgebiet",
+      "known_at": 9
+    },
+    {
+      "name": "Halve Hahn",
+      "facet": "Rheinland, Westfalen und Ruhrgebiet",
+      "known_at": 11
+    },
+    {
+      "name": "Reibekuchen",
+      "facet": "Rheinland, Westfalen und Ruhrgebiet",
+      "known_at": 5
+    },
+    {
+      "name": "Pumpernickel",
+      "facet": "Rheinland, Westfalen und Ruhrgebiet",
+      "known_at": 9
+    },
+    {
+      "name": "Westfälischer Schinken",
+      "facet": "Rheinland, Westfalen und Ruhrgebiet",
+      "known_at": 9
+    },
+    {
+      "name": "Pfefferpotthast",
+      "facet": "Rheinland, Westfalen und Ruhrgebiet",
+      "known_at": 13
+    },
+    {
+      "name": "Töttchen",
+      "facet": "Rheinland, Westfalen und Ruhrgebiet",
+      "known_at": 14
+    },
+    {
+      "name": "Panhas",
+      "facet": "Rheinland, Westfalen und Ruhrgebiet",
+      "known_at": 13
+    },
+    {
+      "name": "Pickert",
+      "facet": "Rheinland, Westfalen und Ruhrgebiet",
+      "known_at": 13
+    },
+    {
+      "name": "Stielmus",
+      "facet": "Rheinland, Westfalen und Ruhrgebiet",
+      "known_at": 13
+    },
+    {
+      "name": "Düsseldorfer Senf",
+      "facet": "Rheinland, Westfalen und Ruhrgebiet",
+      "known_at": 10
+    },
+    {
+      "name": "Muscheln rheinische Art",
+      "facet": "Rheinland, Westfalen und Ruhrgebiet",
+      "known_at": 12
+    },
+    {
+      "name": "Dicke Bohnen mit Speck",
+      "facet": "Rheinland, Westfalen und Ruhrgebiet",
+      "known_at": 11
+    },
+    {
+      "name": "Westfälisches Blindhuhn",
+      "facet": "Rheinland, Westfalen und Ruhrgebiet",
+      "known_at": 14
+    },
+    {
+      "name": "Döppekuchen",
+      "facet": "Rheinland, Westfalen und Ruhrgebiet",
+      "known_at": 14
+    },
+    {
+      "name": "Struwen",
+      "facet": "Rheinland, Westfalen und Ruhrgebiet",
+      "known_at": 14
+    },
+    {
+      "name": "Matjes",
+      "facet": "Norddeutsche Küste und Fisch",
+      "known_at": 9
+    },
+    {
+      "name": "Rollmops",
+      "facet": "Norddeutsche Küste und Fisch",
+      "known_at": 8
+    },
+    {
+      "name": "Brathering",
+      "facet": "Norddeutsche Küste und Fisch",
+      "known_at": 10
+    },
+    {
+      "name": "Nordseekrabben",
+      "facet": "Norddeutsche Küste und Fisch",
+      "known_at": 7
+    },
+    {
+      "name": "Birnen, Bohnen und Speck",
+      "facet": "Norddeutsche Küste und Fisch",
+      "known_at": 12
+    },
+    {
+      "name": "Rote Grütze",
+      "facet": "Norddeutsche Küste und Fisch",
+      "known_at": 7
+    },
+    {
+      "name": "Finkenwerder Scholle",
+      "facet": "Norddeutsche Küste und Fisch",
+      "known_at": 12
+    },
+    {
+      "name": "Hamburger Aalsuppe",
+      "facet": "Norddeutsche Küste und Fisch",
+      "known_at": 13
+    },
+    {
+      "name": "Bremer Knipp",
+      "facet": "Norddeutsche Küste und Fisch",
+      "known_at": 14
+    },
+    {
+      "name": "Pannfisch",
+      "facet": "Norddeutsche Küste und Fisch",
+      "known_at": 12
+    },
+    {
+      "name": "Backfisch",
+      "facet": "Norddeutsche Küste und Fisch",
+      "known_at": 7
+    },
+    {
+      "name": "Ostfriesentee",
+      "facet": "Norddeutsche Küste und Fisch",
+      "known_at": 10
+    },
+    {
+      "name": "Stint",
+      "facet": "Norddeutsche Küste und Fisch",
+      "known_at": 13
+    },
+    {
+      "name": "Holsteiner Katenschinken",
+      "facet": "Norddeutsche Küste und Fisch",
+      "known_at": 13
+    },
+    {
+      "name": "Mecklenburger Rippenbraten",
+      "facet": "Norddeutsche Küste und Fisch",
+      "known_at": 14
+    },
+    {
+      "name": "Eisbein mit Sauerkraut",
+      "facet": "Berlin und Brandenburg",
+      "known_at": 8
+    },
+    {
+      "name": "Bulette",
+      "facet": "Berlin und Brandenburg",
+      "known_at": 7
+    },
+    {
+      "name": "Königsberger Klopse",
+      "facet": "Berlin und Brandenburg",
+      "known_at": 9
+    },
+    {
+      "name": "Kasseler",
+      "facet": "Berlin und Brandenburg",
+      "known_at": 10
+    },
+    {
+      "name": "Berliner Weiße",
+      "facet": "Berlin und Brandenburg",
+      "known_at": 11
+    },
+    {
+      "name": "Senfeier",
+      "facet": "Berlin und Brandenburg",
+      "known_at": 10
+    },
+    {
+      "name": "Pellkartoffeln mit Quark und Leinöl",
+      "facet": "Berlin und Brandenburg",
+      "known_at": 10
+    },
+    {
+      "name": "Hoppelpoppel",
+      "facet": "Berlin und Brandenburg",
+      "known_at": 13
+    },
+    {
+      "name": "Teltower Rübchen",
+      "facet": "Berlin und Brandenburg",
+      "known_at": 13
+    },
+    {
+      "name": "Schmorgurken",
+      "facet": "Berlin und Brandenburg",
+      "known_at": 12
+    },
+    {
+      "name": "Konnopke's Imbiss",
+      "facet": "Berlin und Brandenburg",
+      "known_at": 13
+    },
+    {
+      "name": "Aal grün",
+      "facet": "Berlin und Brandenburg",
+      "known_at": 14
+    },
+    {
+      "name": "Ketwurst",
+      "facet": "Berlin und Brandenburg",
+      "known_at": 13
+    },
+    {
+      "name": "Plinsen",
+      "facet": "Berlin und Brandenburg",
+      "known_at": 12
+    },
+    {
+      "name": "Berliner Kartoffelsuppe",
+      "facet": "Berlin und Brandenburg",
+      "known_at": 10
+    },
+    {
+      "name": "Quarkkeulchen",
+      "facet": "Sachsen, Thüringen und Sachsen-Anhalt",
+      "known_at": 12
+    },
+    {
+      "name": "Sächsischer Sauerbraten",
+      "facet": "Sachsen, Thüringen und Sachsen-Anhalt",
+      "known_at": 12
+    },
+    {
+      "name": "Harzer Käse",
+      "facet": "Sachsen, Thüringen und Sachsen-Anhalt",
+      "known_at": 10
+    },
+    {
+      "name": "Soljanka",
+      "facet": "Sachsen, Thüringen und Sachsen-Anhalt",
+      "known_at": 11
+    },
+    {
+      "name": "Würzfleisch",
+      "facet": "Sachsen, Thüringen und Sachsen-Anhalt",
+      "known_at": 12
+    },
+    {
+      "name": "Mutzbraten",
+      "facet": "Sachsen, Thüringen und Sachsen-Anhalt",
+      "known_at": 13
+    },
+    {
+      "name": "Bautz'ner Senf",
+      "facet": "Sachsen, Thüringen und Sachsen-Anhalt",
+      "known_at": 11
+    },
+    {
+      "name": "Halberstädter Würstchen",
+      "facet": "Sachsen, Thüringen und Sachsen-Anhalt",
+      "known_at": 13
+    },
+    {
+      "name": "Altenburger Ziegenkäse",
+      "facet": "Sachsen, Thüringen und Sachsen-Anhalt",
+      "known_at": 14
+    },
+    {
+      "name": "Bambes",
+      "facet": "Sachsen, Thüringen und Sachsen-Anhalt",
+      "known_at": 14
+    },
+    {
+      "name": "Köthener Schusterpfanne",
+      "facet": "Sachsen, Thüringen und Sachsen-Anhalt",
+      "known_at": 15
+    },
+    {
+      "name": "Thüringer Mett",
+      "facet": "Sachsen, Thüringen und Sachsen-Anhalt",
+      "known_at": 12
+    },
+    {
+      "name": "Jägerschnitzel mit Jagdwurst",
+      "facet": "Sachsen, Thüringen und Sachsen-Anhalt",
+      "known_at": 12
+    },
+    {
+      "name": "Sächsische Kartoffelsuppe",
+      "facet": "Sachsen, Thüringen und Sachsen-Anhalt",
+      "known_at": 12
+    },
+    {
+      "name": "Frankfurter Kranz",
+      "facet": "Regionale Kuchen, Gebäck und Süßes",
+      "known_at": 9
+    },
+    {
+      "name": "Bienenstich",
+      "facet": "Regionale Kuchen, Gebäck und Süßes",
+      "known_at": 7
+    },
+    {
+      "name": "Berliner Pfannkuchen",
+      "facet": "Regionale Kuchen, Gebäck und Süßes",
+      "known_at": 3
+    },
+    {
+      "name": "Eierschecke",
+      "facet": "Regionale Kuchen, Gebäck und Süßes",
+      "known_at": 12
+    },
+    {
+      "name": "Baumkuchen",
+      "facet": "Regionale Kuchen, Gebäck und Süßes",
+      "known_at": 8
+    },
+    {
+      "name": "Prinzregententorte",
+      "facet": "Regionale Kuchen, Gebäck und Süßes",
+      "known_at": 13
+    },
+    {
+      "name": "Zwetschgendatschi",
+      "facet": "Regionale Kuchen, Gebäck und Süßes",
+      "known_at": 10
+    },
+    {
+      "name": "Hallorenkugeln",
+      "facet": "Regionale Kuchen, Gebäck und Süßes",
+      "known_at": 11
+    },
+    {
+      "name": "Friesentorte",
+      "facet": "Regionale Kuchen, Gebäck und Süßes",
+      "known_at": 12
+    },
+    {
+      "name": "Springerle",
+      "facet": "Regionale Kuchen, Gebäck und Süßes",
+      "known_at": 12
+    },
+    {
+      "name": "Butterkuchen",
+      "facet": "Regionale Kuchen, Gebäck und Süßes",
+      "known_at": 6
+    },
+    {
+      "name": "Streuselkuchen",
+      "facet": "Regionale Kuchen, Gebäck und Süßes",
+      "known_at": 4
+    },
+    {
+      "name": "Donauwelle",
+      "facet": "Regionale Kuchen, Gebäck und Süßes",
+      "known_at": 8
+    },
+    {
+      "name": "Bremer Klaben",
+      "facet": "Regionale Kuchen, Gebäck und Süßes",
+      "known_at": 14
+    },
+    {
+      "name": "Pulsnitzer Pfefferkuchen",
+      "facet": "Regionale Kuchen, Gebäck und Süßes",
+      "known_at": 13
+    },
+    {
+      "name": "Weihnachtsgans",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 5
+    },
+    {
+      "name": "Martinsgans",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 8
+    },
+    {
+      "name": "Silvesterkarpfen",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 11
+    },
+    {
+      "name": "Kartoffelsalat mit Würstchen",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 5
+    },
+    {
+      "name": "Kohlfahrt",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 11
+    },
+    {
+      "name": "Federweißer",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 11
+    },
+    {
+      "name": "Glühwein",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 6
+    },
+    {
+      "name": "Gebrannte Mandeln",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 3
+    },
+    {
+      "name": "Heringsessen am Aschermittwoch",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 12
+    },
+    {
+      "name": "Weckmann",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 7
+    },
+    {
+      "name": "Spekulatius",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 5
+    },
+    {
+      "name": "Vanillekipferl",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 6
+    },
+    {
+      "name": "Maibowle",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 12
+    },
+    {
+      "name": "Osterlamm",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 5
+    },
+    {
+      "name": "Neujahrsbrezel",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 12
+    },
+    {
+      "name": "Bratapfel",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 5
+    },
+    {
+      "name": "Feuerzangenbowle",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 10
+    },
+    {
+      "name": "Raclette",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 6
+    },
+    {
+      "name": "Pfeffernüsse",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 6
+    },
+    {
+      "name": "Gründonnerstagsessen",
+      "facet": "Festtags- und Saisongerichte",
+      "known_at": 10
+    },
+    {
+      "name": "Döner Kebab",
+      "facet": "Imbiss und Straßenküche",
+      "known_at": 3
+    },
+    {
+      "name": "Dürüm",
+      "facet": "Imbiss und Straßenküche",
+      "known_at": 8
+    },
+    {
+      "name": "Lahmacun",
+      "facet": "Imbiss und Straßenküche",
+      "known_at": 9
+    },
+    {
+      "name": "Falafel",
+      "facet": "Imbiss und Straßenküche",
+      "known_at": 8
+    },
+    {
+      "name": "Pommes rot-weiß",
+      "facet": "Imbiss und Straßenküche",
+      "known_at": 4
+    },
+    {
+      "name": "Bockwurst",
+      "facet": "Imbiss und Straßenküche",
+      "known_at": 5
+    },
+    {
+      "name": "Krakauer",
+      "facet": "Imbiss und Straßenküche",
+      "known_at": 10
+    },
+    {
+      "name": "Frikadellenbrötchen",
+      "facet": "Imbiss und Straßenküche",
+      "known_at": 7
+    },
+    {
+      "name": "Schaschlik",
+      "facet": "Imbiss und Straßenküche",
+      "known_at": 9
+    },
+    {
+      "name": "Fischbrötchen",
+      "facet": "Imbiss und Straßenküche",
+      "known_at": 5
+    },
+    {
+      "name": "Pommesbude",
+      "facet": "Imbiss und Straßenküche",
+      "known_at": 5
+    },
+    {
+      "name": "Bratwurst im Brötchen",
+      "facet": "Imbiss und Straßenküche",
+      "known_at": 3
+    },
+    {
+      "name": "Langos",
+      "facet": "Imbiss und Straßenküche",
+      "known_at": 10
+    },
+    {
+      "name": "Schnitzelbrötchen",
+      "facet": "Imbiss und Straßenküche",
+      "known_at": 7
+    },
+    {
+      "name": "Champignonpfanne",
+      "facet": "Imbiss und Straßenküche",
+      "known_at": 9
+    },
+    {
+      "name": "Wiener Würstchen",
+      "facet": "Imbiss und Straßenküche",
+      "known_at": 4
+    },
+    {
+      "name": "Imbisswagen",
+      "facet": "Imbiss und Straßenküche",
+      "known_at": 5
+    },
+    {
+      "name": "Rundstück",
+      "facet": "Namen und Spitznamen der Gerichte",
+      "known_at": 12
+    },
+    {
+      "name": "Bemme",
+      "facet": "Namen und Spitznamen der Gerichte",
+      "known_at": 11
+    },
+    {
+      "name": "Stulle",
+      "facet": "Namen und Spitznamen der Gerichte",
+      "known_at": 8
+    },
+    {
+      "name": "Knifte",
+      "facet": "Namen und Spitznamen der Gerichte",
+      "known_at": 13
+    },
+    {
+      "name": "Mostrich",
+      "facet": "Namen und Spitznamen der Gerichte",
+      "known_at": 11
+    },
+    {
+      "name": "Hackepeter",
+      "facet": "Namen und Spitznamen der Gerichte",
+      "known_at": 11
+    },
+    {
+      "name": "Mettigel",
+      "facet": "Namen und Spitznamen der Gerichte",
+      "known_at": 8
+    },
+    {
+      "name": "Mantaplatte",
+      "facet": "Namen und Spitznamen der Gerichte",
+      "known_at": 13
+    },
+    {
+      "name": "Pommes Schranke",
+      "facet": "Namen und Spitznamen der Gerichte",
+      "known_at": 11
+    },
+    {
+      "name": "Grumbeere",
+      "facet": "Namen und Spitznamen der Gerichte",
+      "known_at": 13
+    },
+    {
+      "name": "Herrgottsbscheißerle",
+      "facet": "Namen und Spitznamen der Gerichte",
+      "known_at": 12
+    },
+    {
+      "name": "Kalter Hund",
+      "facet": "Namen und Spitznamen der Gerichte",
+      "known_at": 7
+    },
+    {
+      "name": "Arme Ritter",
+      "facet": "Namen und Spitznamen der Gerichte",
+      "known_at": 7
+    },
+    {
+      "name": "Strammer Max",
+      "facet": "Namen und Spitznamen der Gerichte",
+      "known_at": 9
+    },
+    {
+      "name": "Falscher Hase",
+      "facet": "Namen und Spitznamen der Gerichte",
+      "known_at": 8
+    },
+    {
+      "name": "Pharisäer",
+      "facet": "Namen und Spitznamen der Gerichte",
+      "known_at": 13
+    },
+    {
+      "name": "Kluntje",
+      "facet": "Namen und Spitznamen der Gerichte",
+      "known_at": 12
+    }
+  ]
+}

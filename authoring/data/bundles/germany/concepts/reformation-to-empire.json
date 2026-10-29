@@ -1,0 +1,1237 @@
+{
+  "subcategory": "reformation-to-empire",
+  "facets": [
+    "Luther und die Reformation",
+    "Bauernkrieg und Glaubensstreit",
+    "Dreißigjähriger Krieg und Westfälischer Frieden",
+    "Preußens Aufstieg und Friedrich der Große",
+    "Fürstenhöfe, Schlösser und Absolutismus",
+    "Aufklärung, Klassik und Romantik",
+    "Musik von Bach bis Wagner",
+    "Napoleon und die Befreiungskriege",
+    "Erfindungen und Industrialisierung",
+    "Vormärz und Revolution 1848",
+    "Bismarck und die Reichsgründung",
+    "Alltag, Bräuche und Auswanderung"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Martin Luther",
+      "facet": "Luther und die Reformation",
+      "known_at": 4
+    },
+    {
+      "name": "95 Thesen",
+      "facet": "Luther und die Reformation",
+      "known_at": 7
+    },
+    {
+      "name": "Thesenanschlag",
+      "facet": "Luther und die Reformation",
+      "known_at": 9
+    },
+    {
+      "name": "Wittenberg",
+      "facet": "Luther und die Reformation",
+      "known_at": 8
+    },
+    {
+      "name": "Schlosskirche Wittenberg",
+      "facet": "Luther und die Reformation",
+      "known_at": 11
+    },
+    {
+      "name": "Lutherbibel",
+      "facet": "Luther und die Reformation",
+      "known_at": 7
+    },
+    {
+      "name": "Reichstag zu Worms",
+      "facet": "Luther und die Reformation",
+      "known_at": 10
+    },
+    {
+      "name": "Ablasshandel",
+      "facet": "Luther und die Reformation",
+      "known_at": 9
+    },
+    {
+      "name": "Johann Tetzel",
+      "facet": "Luther und die Reformation",
+      "known_at": 13
+    },
+    {
+      "name": "Philipp Melanchthon",
+      "facet": "Luther und die Reformation",
+      "known_at": 12
+    },
+    {
+      "name": "Katharina von Bora",
+      "facet": "Luther und die Reformation",
+      "known_at": 11
+    },
+    {
+      "name": "Reichsacht",
+      "facet": "Luther und die Reformation",
+      "known_at": 12
+    },
+    {
+      "name": "Junker Jörg",
+      "facet": "Luther und die Reformation",
+      "known_at": 12
+    },
+    {
+      "name": "Reformationstag",
+      "facet": "Luther und die Reformation",
+      "known_at": 6
+    },
+    {
+      "name": "Lutherrose",
+      "facet": "Luther und die Reformation",
+      "known_at": 12
+    },
+    {
+      "name": "Karl V.",
+      "facet": "Luther und die Reformation",
+      "known_at": 10
+    },
+    {
+      "name": "Friedrich der Weise",
+      "facet": "Luther und die Reformation",
+      "known_at": 12
+    },
+    {
+      "name": "Evangelische Kirche",
+      "facet": "Luther und die Reformation",
+      "known_at": 6
+    },
+    {
+      "name": "Ein feste Burg ist unser Gott",
+      "facet": "Luther und die Reformation",
+      "known_at": 12
+    },
+    {
+      "name": "Lucas Cranach der Ältere",
+      "facet": "Luther und die Reformation",
+      "known_at": 11
+    },
+    {
+      "name": "Deutscher Bauernkrieg",
+      "facet": "Bauernkrieg und Glaubensstreit",
+      "known_at": 9
+    },
+    {
+      "name": "Thomas Müntzer",
+      "facet": "Bauernkrieg und Glaubensstreit",
+      "known_at": 12
+    },
+    {
+      "name": "Zwölf Artikel",
+      "facet": "Bauernkrieg und Glaubensstreit",
+      "known_at": 13
+    },
+    {
+      "name": "Schlacht bei Frankenhausen",
+      "facet": "Bauernkrieg und Glaubensstreit",
+      "known_at": 14
+    },
+    {
+      "name": "Bundschuh",
+      "facet": "Bauernkrieg und Glaubensstreit",
+      "known_at": 13
+    },
+    {
+      "name": "Florian Geyer",
+      "facet": "Bauernkrieg und Glaubensstreit",
+      "known_at": 14
+    },
+    {
+      "name": "Tilman Riemenschneider",
+      "facet": "Bauernkrieg und Glaubensstreit",
+      "known_at": 13
+    },
+    {
+      "name": "Augsburger Religionsfrieden",
+      "facet": "Bauernkrieg und Glaubensstreit",
+      "known_at": 11
+    },
+    {
+      "name": "Cuius regio, eius religio",
+      "facet": "Bauernkrieg und Glaubensstreit",
+      "known_at": 13
+    },
+    {
+      "name": "Augsburger Bekenntnis",
+      "facet": "Bauernkrieg und Glaubensstreit",
+      "known_at": 13
+    },
+    {
+      "name": "Schmalkaldischer Bund",
+      "facet": "Bauernkrieg und Glaubensstreit",
+      "known_at": 14
+    },
+    {
+      "name": "Täuferreich von Münster",
+      "facet": "Bauernkrieg und Glaubensstreit",
+      "known_at": 14
+    },
+    {
+      "name": "Jesuiten",
+      "facet": "Bauernkrieg und Glaubensstreit",
+      "known_at": 11
+    },
+    {
+      "name": "Gegenreformation",
+      "facet": "Bauernkrieg und Glaubensstreit",
+      "known_at": 11
+    },
+    {
+      "name": "Konzil von Trient",
+      "facet": "Bauernkrieg und Glaubensstreit",
+      "known_at": 13
+    },
+    {
+      "name": "Hexenverfolgung",
+      "facet": "Bauernkrieg und Glaubensstreit",
+      "known_at": 9
+    },
+    {
+      "name": "Dreißigjähriger Krieg",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 7
+    },
+    {
+      "name": "Prager Fenstersturz",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 10
+    },
+    {
+      "name": "Westfälischer Frieden",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 10
+    },
+    {
+      "name": "Osnabrück",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 10
+    },
+    {
+      "name": "Friedenssaal Münster",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 13
+    },
+    {
+      "name": "Wallenstein",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 11
+    },
+    {
+      "name": "Gustav II. Adolf",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 11
+    },
+    {
+      "name": "Tilly",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 13
+    },
+    {
+      "name": "Zerstörung Magdeburgs",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 13
+    },
+    {
+      "name": "Schlacht bei Lützen",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 13
+    },
+    {
+      "name": "Ferdinand II.",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 14
+    },
+    {
+      "name": "Mutter Courage",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 12
+    },
+    {
+      "name": "Simplicissimus",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 13
+    },
+    {
+      "name": "Grimmelshausen",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 14
+    },
+    {
+      "name": "Landsknecht",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 10
+    },
+    {
+      "name": "Söldner",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 8
+    },
+    {
+      "name": "Pest",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 6
+    },
+    {
+      "name": "Oberammergauer Passionsspiele",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 11
+    },
+    {
+      "name": "Rothenburger Meistertrunk",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 12
+    },
+    {
+      "name": "Kipper und Wipper",
+      "facet": "Dreißigjähriger Krieg und Westfälischer Frieden",
+      "known_at": 15
+    },
+    {
+      "name": "Friedrich der Große",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 7
+    },
+    {
+      "name": "Kartoffelbefehl",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 10
+    },
+    {
+      "name": "Friedrich Wilhelm I.",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 12
+    },
+    {
+      "name": "Lange Kerls",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 12
+    },
+    {
+      "name": "Großer Kurfürst",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 13
+    },
+    {
+      "name": "Edikt von Potsdam",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 13
+    },
+    {
+      "name": "Hugenotten",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 11
+    },
+    {
+      "name": "Siebenjähriger Krieg",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 10
+    },
+    {
+      "name": "Schlesien",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 10
+    },
+    {
+      "name": "Maria Theresia",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 9
+    },
+    {
+      "name": "Königsberg",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 11
+    },
+    {
+      "name": "Friedrich I. in Preußen",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 13
+    },
+    {
+      "name": "Flötenkonzert in Sanssouci",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 13
+    },
+    {
+      "name": "Adolph Menzel",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 13
+    },
+    {
+      "name": "Voltaire",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 11
+    },
+    {
+      "name": "Historische Mühle von Sanssouci",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 13
+    },
+    {
+      "name": "Hans Hermann von Katte",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 13
+    },
+    {
+      "name": "Preußische Tugenden",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 11
+    },
+    {
+      "name": "Allgemeine Schulpflicht",
+      "facet": "Preußens Aufstieg und Friedrich der Große",
+      "known_at": 10
+    },
+    {
+      "name": "August der Starke",
+      "facet": "Fürstenhöfe, Schlösser und Absolutismus",
+      "known_at": 10
+    },
+    {
+      "name": "Meissener Porzellan",
+      "facet": "Fürstenhöfe, Schlösser und Absolutismus",
+      "known_at": 9
+    },
+    {
+      "name": "Johann Friedrich Böttger",
+      "facet": "Fürstenhöfe, Schlösser und Absolutismus",
+      "known_at": 13
+    },
+    {
+      "name": "Gräfin Cosel",
+      "facet": "Fürstenhöfe, Schlösser und Absolutismus",
+      "known_at": 13
+    },
+    {
+      "name": "Balthasar Neumann",
+      "facet": "Fürstenhöfe, Schlösser und Absolutismus",
+      "known_at": 14
+    },
+    {
+      "name": "Herkules Kassel",
+      "facet": "Fürstenhöfe, Schlösser und Absolutismus",
+      "known_at": 12
+    },
+    {
+      "name": "Barock",
+      "facet": "Fürstenhöfe, Schlösser und Absolutismus",
+      "known_at": 9
+    },
+    {
+      "name": "Rokoko",
+      "facet": "Fürstenhöfe, Schlösser und Absolutismus",
+      "known_at": 11
+    },
+    {
+      "name": "Kurfürst",
+      "facet": "Fürstenhöfe, Schlösser und Absolutismus",
+      "known_at": 10
+    },
+    {
+      "name": "Hofnarr",
+      "facet": "Fürstenhöfe, Schlösser und Absolutismus",
+      "known_at": 6
+    },
+    {
+      "name": "Perücke",
+      "facet": "Fürstenhöfe, Schlösser und Absolutismus",
+      "known_at": 5
+    },
+    {
+      "name": "Johann Wolfgang von Goethe",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 6
+    },
+    {
+      "name": "Friedrich Schiller",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 8
+    },
+    {
+      "name": "Faust",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 9
+    },
+    {
+      "name": "Die Räuber",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 12
+    },
+    {
+      "name": "Wilhelm Tell",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 10
+    },
+    {
+      "name": "Die Leiden des jungen Werthers",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 12
+    },
+    {
+      "name": "Der Zauberlehrling",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 9
+    },
+    {
+      "name": "Sturm und Drang",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 11
+    },
+    {
+      "name": "Immanuel Kant",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 11
+    },
+    {
+      "name": "Kategorischer Imperativ",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 13
+    },
+    {
+      "name": "Gotthold Ephraim Lessing",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 11
+    },
+    {
+      "name": "Nathan der Weise",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 12
+    },
+    {
+      "name": "Moses Mendelssohn",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 13
+    },
+    {
+      "name": "Brüder Grimm",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 3
+    },
+    {
+      "name": "Kinder- und Hausmärchen",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 6
+    },
+    {
+      "name": "Baron Münchhausen",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 6
+    },
+    {
+      "name": "Wilhelm Hauff",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 12
+    },
+    {
+      "name": "E. T. A. Hoffmann",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 12
+    },
+    {
+      "name": "Novalis",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 13
+    },
+    {
+      "name": "Blaue Blume",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 13
+    },
+    {
+      "name": "Joseph von Eichendorff",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 13
+    },
+    {
+      "name": "Der Wanderer über dem Nebelmeer",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 10
+    },
+    {
+      "name": "Alexander von Humboldt",
+      "facet": "Aufklärung, Klassik und Romantik",
+      "known_at": 10
+    },
+    {
+      "name": "Johann Sebastian Bach",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 6
+    },
+    {
+      "name": "Thomanerchor",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 12
+    },
+    {
+      "name": "Matthäuspassion",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 12
+    },
+    {
+      "name": "Weihnachtsoratorium",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 10
+    },
+    {
+      "name": "Brandenburgische Konzerte",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 12
+    },
+    {
+      "name": "Georg Philipp Telemann",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 13
+    },
+    {
+      "name": "Georg Friedrich Händel",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 10
+    },
+    {
+      "name": "Wassermusik",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 13
+    },
+    {
+      "name": "Ludwig van Beethoven",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 4
+    },
+    {
+      "name": "Für Elise",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 4
+    },
+    {
+      "name": "Ode an die Freude",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 6
+    },
+    {
+      "name": "Mondscheinsonate",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 9
+    },
+    {
+      "name": "Beethoven-Haus Bonn",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 11
+    },
+    {
+      "name": "Robert Schumann",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 11
+    },
+    {
+      "name": "Clara Schumann",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 11
+    },
+    {
+      "name": "Felix Mendelssohn Bartholdy",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 11
+    },
+    {
+      "name": "Hochzeitsmarsch",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 9
+    },
+    {
+      "name": "Carl Maria von Weber",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 13
+    },
+    {
+      "name": "Der Freischütz",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 12
+    },
+    {
+      "name": "Johannes Brahms",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 10
+    },
+    {
+      "name": "Richard Wagner",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 10
+    },
+    {
+      "name": "Der Ring des Nibelungen",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 11
+    },
+    {
+      "name": "Walkürenritt",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 10
+    },
+    {
+      "name": "Bayreuther Festspiele",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 11
+    },
+    {
+      "name": "Engelbert Humperdinck",
+      "facet": "Musik von Bach bis Wagner",
+      "known_at": 13
+    },
+    {
+      "name": "Napoleon Bonaparte",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 5
+    },
+    {
+      "name": "Völkerschlacht bei Leipzig",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 9
+    },
+    {
+      "name": "Schlacht bei Waterloo",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 9
+    },
+    {
+      "name": "Gebhard Leberecht von Blücher",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 11
+    },
+    {
+      "name": "Königin Luise",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 11
+    },
+    {
+      "name": "Heiliges Römisches Reich Deutscher Nation",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 10
+    },
+    {
+      "name": "Rheinbund",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 12
+    },
+    {
+      "name": "Schlacht bei Jena und Auerstedt",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 12
+    },
+    {
+      "name": "Frieden von Tilsit",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 14
+    },
+    {
+      "name": "Quadriga",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 9
+    },
+    {
+      "name": "Kontinentalsperre",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 13
+    },
+    {
+      "name": "Code civil",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 12
+    },
+    {
+      "name": "Freiherr vom Stein",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 12
+    },
+    {
+      "name": "Gerhard von Scharnhorst",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 13
+    },
+    {
+      "name": "Carl von Clausewitz",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 13
+    },
+    {
+      "name": "Eisernes Kreuz",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 10
+    },
+    {
+      "name": "Lützowsches Freikorps",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 13
+    },
+    {
+      "name": "Theodor Körner",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 14
+    },
+    {
+      "name": "Turnvater Jahn",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 11
+    },
+    {
+      "name": "Wiener Kongress",
+      "facet": "Napoleon und die Befreiungskriege",
+      "known_at": 11
+    },
+    {
+      "name": "Adler",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 10
+    },
+    {
+      "name": "Ludwigseisenbahn",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 11
+    },
+    {
+      "name": "Draisine",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 9
+    },
+    {
+      "name": "Karl Drais",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 11
+    },
+    {
+      "name": "Werner von Siemens",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 10
+    },
+    {
+      "name": "Dynamomaschine",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 11
+    },
+    {
+      "name": "Alfred Krupp",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 11
+    },
+    {
+      "name": "August Borsig",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 14
+    },
+    {
+      "name": "Steinkohle",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 7
+    },
+    {
+      "name": "Dampfmaschine",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 6
+    },
+    {
+      "name": "Kinderarbeit",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 7
+    },
+    {
+      "name": "Justus von Liebig",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 12
+    },
+    {
+      "name": "Bunsenbrenner",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 10
+    },
+    {
+      "name": "Carl Friedrich Gauß",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 11
+    },
+    {
+      "name": "Joseph von Fraunhofer",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 13
+    },
+    {
+      "name": "Philipp Reis",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 12
+    },
+    {
+      "name": "Litfaßsäule",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 8
+    },
+    {
+      "name": "Hohner-Mundharmonika",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 13
+    },
+    {
+      "name": "Friedrich Wilhelm Raiffeisen",
+      "facet": "Erfindungen und Industrialisierung",
+      "known_at": 12
+    },
+    {
+      "name": "Märzrevolution",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 11
+    },
+    {
+      "name": "Frankfurter Nationalversammlung",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 11
+    },
+    {
+      "name": "Paulskirchenverfassung",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 12
+    },
+    {
+      "name": "Hambacher Fest",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 11
+    },
+    {
+      "name": "Wartburgfest",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 12
+    },
+    {
+      "name": "Burschenschaft",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 12
+    },
+    {
+      "name": "Lied der Deutschen",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 8
+    },
+    {
+      "name": "Hoffmann von Fallersleben",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 11
+    },
+    {
+      "name": "Deutschland. Ein Wintermärchen",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 13
+    },
+    {
+      "name": "Karlsbader Beschlüsse",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 13
+    },
+    {
+      "name": "Zensur",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 9
+    },
+    {
+      "name": "Göttinger Sieben",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 13
+    },
+    {
+      "name": "Schlesischer Weberaufstand",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 12
+    },
+    {
+      "name": "Georg Büchner",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 12
+    },
+    {
+      "name": "Der Hessische Landbote",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 14
+    },
+    {
+      "name": "Karl Marx",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 9
+    },
+    {
+      "name": "Friedrich Engels",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 12
+    },
+    {
+      "name": "Kommunistisches Manifest",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 11
+    },
+    {
+      "name": "Biedermeier",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 11
+    },
+    {
+      "name": "Deutscher Zollverein",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 12
+    },
+    {
+      "name": "Robert Blum",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 14
+    },
+    {
+      "name": "Friedrich Wilhelm IV.",
+      "facet": "Vormärz und Revolution 1848",
+      "known_at": 13
+    },
+    {
+      "name": "Otto von Bismarck",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 8
+    },
+    {
+      "name": "Wilhelm I.",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 10
+    },
+    {
+      "name": "Kaiserproklamation in Versailles",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 11
+    },
+    {
+      "name": "Deutsch-Französischer Krieg",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 10
+    },
+    {
+      "name": "Emser Depesche",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 12
+    },
+    {
+      "name": "Schlacht bei Sedan",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 13
+    },
+    {
+      "name": "Sedantag",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 14
+    },
+    {
+      "name": "Deutsch-Dänischer Krieg",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 13
+    },
+    {
+      "name": "Schlacht bei Königgrätz",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 13
+    },
+    {
+      "name": "Norddeutscher Bund",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 13
+    },
+    {
+      "name": "Blut und Eisen",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 13
+    },
+    {
+      "name": "Helmuth von Moltke",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 13
+    },
+    {
+      "name": "Elsass-Lothringen",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 12
+    },
+    {
+      "name": "Deutsches Kaiserreich",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 9
+    },
+    {
+      "name": "Reichstag",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 9
+    },
+    {
+      "name": "Pickelhaube",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 7
+    },
+    {
+      "name": "Bismarckhering",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 9
+    },
+    {
+      "name": "Bismarckturm",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 12
+    },
+    {
+      "name": "Kulturkampf",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 13
+    },
+    {
+      "name": "Sozialistengesetz",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 14
+    },
+    {
+      "name": "Sozialversicherung",
+      "facet": "Bismarck und die Reichsgründung",
+      "known_at": 12
+    },
+    {
+      "name": "Johann Hinrich Wichern",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 13
+    },
+    {
+      "name": "Osterhase",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 3
+    },
+    {
+      "name": "Theresienwiese",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 9
+    },
+    {
+      "name": "Struwwelpeter",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 7
+    },
+    {
+      "name": "Max und Moritz",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 6
+    },
+    {
+      "name": "Wilhelm Busch",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 9
+    },
+    {
+      "name": "Kindergarten",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 4
+    },
+    {
+      "name": "Friedrich Fröbel",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 12
+    },
+    {
+      "name": "Schultüte",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 4
+    },
+    {
+      "name": "Kuckucksuhr",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 4
+    },
+    {
+      "name": "Nachtwächter",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 8
+    },
+    {
+      "name": "Postkutsche",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 6
+    },
+    {
+      "name": "Thurn und Taxis",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 11
+    },
+    {
+      "name": "Turnverein",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 9
+    },
+    {
+      "name": "Schützenverein",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 8
+    },
+    {
+      "name": "Kaspar Hauser",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 12
+    },
+    {
+      "name": "BallinStadt",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 14
+    },
+    {
+      "name": "Levi Strauss",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 9
+    },
+    {
+      "name": "Amische",
+      "facet": "Alltag, Bräuche und Auswanderung",
+      "known_at": 13
+    }
+  ]
+}

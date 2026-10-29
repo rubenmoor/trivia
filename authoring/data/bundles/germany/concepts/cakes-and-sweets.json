@@ -1,0 +1,728 @@
+{
+  "subcategory": "cakes-and-sweets",
+  "facets": [
+    "Klassische Torten",
+    "Blechkuchen und Hefegebäck",
+    "Weihnachtsgebäck",
+    "Gebäck zu Festen und Bräuchen",
+    "Regionale Spezialitäten",
+    "Süßwarenmarken und Klassiker",
+    "Fruchtgummi, Bonbons und Lakritz",
+    "Desserts und Süßspeisen",
+    "Backen zu Hause",
+    "Naschereien auf Jahrmarkt und Volksfest",
+    "Geschichte der Süßwaren",
+    "Wörter und Redensarten rund ums Süße"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Käsesahnetorte",
+      "facet": "Klassische Torten",
+      "known_at": 9
+    },
+    {
+      "name": "Buttercremetorte",
+      "facet": "Klassische Torten",
+      "known_at": 6
+    },
+    {
+      "name": "Eierlikörtorte",
+      "facet": "Klassische Torten",
+      "known_at": 10
+    },
+    {
+      "name": "Fürst-Pückler-Torte",
+      "facet": "Klassische Torten",
+      "known_at": 11
+    },
+    {
+      "name": "Erdbeertorte",
+      "facet": "Klassische Torten",
+      "known_at": 3
+    },
+    {
+      "name": "Herrentorte",
+      "facet": "Klassische Torten",
+      "known_at": 13
+    },
+    {
+      "name": "Spanische Vanilletorte",
+      "facet": "Klassische Torten",
+      "known_at": 13
+    },
+    {
+      "name": "Stachelbeer-Baiser-Torte",
+      "facet": "Klassische Torten",
+      "known_at": 11
+    },
+    {
+      "name": "Holländer Kirschtorte",
+      "facet": "Klassische Torten",
+      "known_at": 13
+    },
+    {
+      "name": "Nusstorte",
+      "facet": "Klassische Torten",
+      "known_at": 7
+    },
+    {
+      "name": "Rosinenschnecke",
+      "facet": "Blechkuchen und Hefegebäck",
+      "known_at": 5
+    },
+    {
+      "name": "Puddingschnecke",
+      "facet": "Blechkuchen und Hefegebäck",
+      "known_at": 5
+    },
+    {
+      "name": "Zuckerkuchen",
+      "facet": "Blechkuchen und Hefegebäck",
+      "known_at": 8
+    },
+    {
+      "name": "Buchteln",
+      "facet": "Blechkuchen und Hefegebäck",
+      "known_at": 10
+    },
+    {
+      "name": "Plunderteilchen",
+      "facet": "Blechkuchen und Hefegebäck",
+      "known_at": 9
+    },
+    {
+      "name": "Stollen",
+      "facet": "Weihnachtsgebäck",
+      "known_at": 5
+    },
+    {
+      "name": "Lebkuchenhaus",
+      "facet": "Weihnachtsgebäck",
+      "known_at": 3
+    },
+    {
+      "name": "Elisenlebkuchen",
+      "facet": "Weihnachtsgebäck",
+      "known_at": 12
+    },
+    {
+      "name": "Spitzbuben",
+      "facet": "Weihnachtsgebäck",
+      "known_at": 10
+    },
+    {
+      "name": "Engelsaugen",
+      "facet": "Weihnachtsgebäck",
+      "known_at": 9
+    },
+    {
+      "name": "Adventskalender",
+      "facet": "Gebäck zu Festen und Bräuchen",
+      "known_at": 2
+    },
+    {
+      "name": "Schokoladen-Weihnachtsmann",
+      "facet": "Gebäck zu Festen und Bräuchen",
+      "known_at": 2
+    },
+    {
+      "name": "Schokoladen-Osterhase",
+      "facet": "Gebäck zu Festen und Bräuchen",
+      "known_at": 1
+    },
+    {
+      "name": "Glücksschwein aus Marzipan",
+      "facet": "Gebäck zu Festen und Bräuchen",
+      "known_at": 6
+    },
+    {
+      "name": "Kaffee und Kuchen",
+      "facet": "Gebäck zu Festen und Bräuchen",
+      "known_at": 3
+    },
+    {
+      "name": "Nikolausstiefel",
+      "facet": "Gebäck zu Festen und Bräuchen",
+      "known_at": 3
+    },
+    {
+      "name": "Martinshörnchen",
+      "facet": "Gebäck zu Festen und Bräuchen",
+      "known_at": 13
+    },
+    {
+      "name": "Ausgezogene",
+      "facet": "Gebäck zu Festen und Bräuchen",
+      "known_at": 12
+    },
+    {
+      "name": "Kamelle",
+      "facet": "Gebäck zu Festen und Bräuchen",
+      "known_at": 8
+    },
+    {
+      "name": "Liegnitzer Bombe",
+      "facet": "Regionale Spezialitäten",
+      "known_at": 14
+    },
+    {
+      "name": "Bergische Waffeln",
+      "facet": "Regionale Spezialitäten",
+      "known_at": 12
+    },
+    {
+      "name": "Mohnstriezel",
+      "facet": "Regionale Spezialitäten",
+      "known_at": 12
+    },
+    {
+      "name": "Heidelberger Studentenkuss",
+      "facet": "Regionale Spezialitäten",
+      "known_at": 13
+    },
+    {
+      "name": "Milka",
+      "facet": "Süßwarenmarken und Klassiker",
+      "known_at": 2,
+      "retired": "used_up: Die lila Kuh und der Name stehen schon im Pool; jede Frage für ganz Kleine würde sich wiederholen."
+    },
+    {
+      "name": "Überraschungsei",
+      "facet": "Süßwarenmarken und Klassiker",
+      "known_at": 2
+    },
+    {
+      "name": "Duplo",
+      "facet": "Süßwarenmarken und Klassiker",
+      "known_at": 5
+    },
+    {
+      "name": "Hanuta",
+      "facet": "Süßwarenmarken und Klassiker",
+      "known_at": 6
+    },
+    {
+      "name": "Knoppers",
+      "facet": "Süßwarenmarken und Klassiker",
+      "known_at": 6
+    },
+    {
+      "name": "Toffifee",
+      "facet": "Süßwarenmarken und Klassiker",
+      "known_at": 5
+    },
+    {
+      "name": "Merci",
+      "facet": "Süßwarenmarken und Klassiker",
+      "known_at": 6
+    },
+    {
+      "name": "Katjes",
+      "facet": "Süßwarenmarken und Klassiker",
+      "known_at": 6
+    },
+    {
+      "name": "Trolli",
+      "facet": "Süßwarenmarken und Klassiker",
+      "known_at": 8
+    },
+    {
+      "name": "Werther's Echte",
+      "facet": "Süßwarenmarken und Klassiker",
+      "known_at": 6
+    },
+    {
+      "name": "Mamba",
+      "facet": "Süßwarenmarken und Klassiker",
+      "known_at": 7
+    },
+    {
+      "name": "Ahoj-Brause",
+      "facet": "Süßwarenmarken und Klassiker",
+      "known_at": 9
+    },
+    {
+      "name": "Schaumkuss",
+      "facet": "Süßwarenmarken und Klassiker",
+      "known_at": 3
+    },
+    {
+      "name": "Yogurette",
+      "facet": "Süßwarenmarken und Klassiker",
+      "known_at": 7
+    },
+    {
+      "name": "Kinderriegel",
+      "facet": "Süßwarenmarken und Klassiker",
+      "known_at": 4
+    },
+    {
+      "name": "Schogetten",
+      "facet": "Süßwarenmarken und Klassiker",
+      "known_at": 9
+    },
+    {
+      "name": "Mr. Tom",
+      "facet": "Süßwarenmarken und Klassiker",
+      "known_at": 10
+    },
+    {
+      "name": "Lakritzschnecke",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 5
+    },
+    {
+      "name": "Lakritz",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 3
+    },
+    {
+      "name": "Brausepulver",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 6
+    },
+    {
+      "name": "Eiskonfekt",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 9
+    },
+    {
+      "name": "Weingummi",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 7
+    },
+    {
+      "name": "Colafläschchen",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 3
+    },
+    {
+      "name": "Kandis",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 7
+    },
+    {
+      "name": "Hustenbonbon",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 3
+    },
+    {
+      "name": "Lutscher",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 1
+    },
+    {
+      "name": "Malzbonbon",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 7
+    },
+    {
+      "name": "Zuckerstange",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 3
+    },
+    {
+      "name": "Waldmeister",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 9
+    },
+    {
+      "name": "Salmiakpastille",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 10
+    },
+    {
+      "name": "Veilchenpastillen",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 13
+    },
+    {
+      "name": "Bärendreck",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 13
+    },
+    {
+      "name": "Karamellbonbon",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 4
+    },
+    {
+      "name": "Pfefferminzbonbon",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 4
+    },
+    {
+      "name": "Schaumzucker",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 8
+    },
+    {
+      "name": "Esspapier",
+      "facet": "Fruchtgummi, Bonbons und Lakritz",
+      "known_at": 8
+    },
+    {
+      "name": "Bayerische Creme",
+      "facet": "Desserts und Süßspeisen",
+      "known_at": 11
+    },
+    {
+      "name": "Pudding",
+      "facet": "Desserts und Süßspeisen",
+      "known_at": 2
+    },
+    {
+      "name": "Grießbrei",
+      "facet": "Desserts und Süßspeisen",
+      "known_at": 5
+    },
+    {
+      "name": "Milchreis",
+      "facet": "Desserts und Süßspeisen",
+      "known_at": 3
+    },
+    {
+      "name": "Germknödel",
+      "facet": "Desserts und Süßspeisen",
+      "known_at": 9
+    },
+    {
+      "name": "Herrencreme",
+      "facet": "Desserts und Süßspeisen",
+      "known_at": 12
+    },
+    {
+      "name": "Welfenspeise",
+      "facet": "Desserts und Süßspeisen",
+      "known_at": 13
+    },
+    {
+      "name": "Berliner Luft",
+      "facet": "Desserts und Süßspeisen",
+      "known_at": 12
+    },
+    {
+      "name": "Götterspeise",
+      "facet": "Desserts und Süßspeisen",
+      "known_at": 6
+    },
+    {
+      "name": "Quarkspeise",
+      "facet": "Desserts und Süßspeisen",
+      "known_at": 6
+    },
+    {
+      "name": "Apfelmus",
+      "facet": "Desserts und Süßspeisen",
+      "known_at": 2
+    },
+    {
+      "name": "Kirschmichel",
+      "facet": "Desserts und Süßspeisen",
+      "known_at": 13
+    },
+    {
+      "name": "Vanillesoße",
+      "facet": "Desserts und Süßspeisen",
+      "known_at": 4
+    },
+    {
+      "name": "Spaghettieis",
+      "facet": "Desserts und Süßspeisen",
+      "known_at": 4
+    },
+    {
+      "name": "Zwetschgenknödel",
+      "facet": "Desserts und Süßspeisen",
+      "known_at": 10
+    },
+    {
+      "name": "Mohnklöße",
+      "facet": "Desserts und Süßspeisen",
+      "known_at": 13
+    },
+    {
+      "name": "Puderzucker",
+      "facet": "Backen zu Hause",
+      "known_at": 3
+    },
+    {
+      "name": "Springform",
+      "facet": "Backen zu Hause",
+      "known_at": 6
+    },
+    {
+      "name": "Nudelholz",
+      "facet": "Backen zu Hause",
+      "known_at": 2
+    },
+    {
+      "name": "Ausstechform",
+      "facet": "Backen zu Hause",
+      "known_at": 3
+    },
+    {
+      "name": "Spritzbeutel",
+      "facet": "Backen zu Hause",
+      "known_at": 5
+    },
+    {
+      "name": "Tortenguss",
+      "facet": "Backen zu Hause",
+      "known_at": 7
+    },
+    {
+      "name": "Stäbchenprobe",
+      "facet": "Backen zu Hause",
+      "known_at": 9
+    },
+    {
+      "name": "Schmand",
+      "facet": "Backen zu Hause",
+      "known_at": 9
+    },
+    {
+      "name": "Eischnee",
+      "facet": "Backen zu Hause",
+      "known_at": 7
+    },
+    {
+      "name": "Teigschaber",
+      "facet": "Backen zu Hause",
+      "known_at": 6
+    },
+    {
+      "name": "Zuckerwatte",
+      "facet": "Naschereien auf Jahrmarkt und Volksfest",
+      "known_at": 1
+    },
+    {
+      "name": "Liebesapfel",
+      "facet": "Naschereien auf Jahrmarkt und Volksfest",
+      "known_at": 7
+    },
+    {
+      "name": "Schokofrüchte",
+      "facet": "Naschereien auf Jahrmarkt und Volksfest",
+      "known_at": 5
+    },
+    {
+      "name": "Türkischer Honig",
+      "facet": "Naschereien auf Jahrmarkt und Volksfest",
+      "known_at": 9
+    },
+    {
+      "name": "Schokobanane",
+      "facet": "Naschereien auf Jahrmarkt und Volksfest",
+      "known_at": 6
+    },
+    {
+      "name": "Kirmes",
+      "facet": "Naschereien auf Jahrmarkt und Volksfest",
+      "known_at": 6
+    },
+    {
+      "name": "Weihnachtsmarkt",
+      "facet": "Naschereien auf Jahrmarkt und Volksfest",
+      "known_at": 2
+    },
+    {
+      "name": "Waffel",
+      "facet": "Naschereien auf Jahrmarkt und Volksfest",
+      "known_at": 3
+    },
+    {
+      "name": "Rübenzucker",
+      "facet": "Geschichte der Süßwaren",
+      "known_at": 11
+    },
+    {
+      "name": "Andreas Sigismund Marggraf",
+      "facet": "Geschichte der Süßwaren",
+      "known_at": 14
+    },
+    {
+      "name": "Franz Carl Achard",
+      "facet": "Geschichte der Süßwaren",
+      "known_at": 14
+    },
+    {
+      "name": "Kolonialwarenladen",
+      "facet": "Geschichte der Süßwaren",
+      "known_at": 12
+    },
+    {
+      "name": "Zuckerhut",
+      "facet": "Geschichte der Süßwaren",
+      "known_at": 9
+    },
+    {
+      "name": "Halloren Schokoladenfabrik",
+      "facet": "Geschichte der Süßwaren",
+      "known_at": 12
+    },
+    {
+      "name": "Tanzbär",
+      "facet": "Geschichte der Süßwaren",
+      "known_at": 12
+    },
+    {
+      "name": "Stollen-Butterbrief",
+      "facet": "Geschichte der Süßwaren",
+      "known_at": 14
+    },
+    {
+      "name": "Constantin Fahlberg",
+      "facet": "Geschichte der Süßwaren",
+      "known_at": 14
+    },
+    {
+      "name": "Dario Fontanella",
+      "facet": "Geschichte der Süßwaren",
+      "known_at": 12
+    },
+    {
+      "name": "Stollwerck",
+      "facet": "Geschichte der Süßwaren",
+      "known_at": 12
+    },
+    {
+      "name": "Rübensirup",
+      "facet": "Geschichte der Süßwaren",
+      "known_at": 9
+    },
+    {
+      "name": "Honig",
+      "facet": "Geschichte der Süßwaren",
+      "known_at": 4
+    },
+    {
+      "name": "Zuckerbäcker",
+      "facet": "Geschichte der Süßwaren",
+      "known_at": 8
+    },
+    {
+      "name": "Kein Zuckerschlecken",
+      "facet": "Wörter und Redensarten rund ums Süße",
+      "known_at": 6
+    },
+    {
+      "name": "Naschkatze",
+      "facet": "Wörter und Redensarten rund ums Süße",
+      "known_at": 4
+    },
+    {
+      "name": "Zucker in den Hintern blasen",
+      "facet": "Wörter und Redensarten rund ums Süße",
+      "known_at": 10
+    },
+    {
+      "name": "Honig ums Maul schmieren",
+      "facet": "Wörter und Redensarten rund ums Süße",
+      "known_at": 9
+    },
+    {
+      "name": "Sahnehäubchen",
+      "facet": "Wörter und Redensarten rund ums Süße",
+      "known_at": 8
+    },
+    {
+      "name": "Leckermaul",
+      "facet": "Wörter und Redensarten rund ums Süße",
+      "known_at": 6
+    },
+    {
+      "name": "Zuckerschnute",
+      "facet": "Wörter und Redensarten rund ums Süße",
+      "known_at": 5
+    },
+    {
+      "name": "Harte Nuss",
+      "facet": "Wörter und Redensarten rund ums Süße",
+      "known_at": 6
+    },
+    {
+      "name": "Rosinen herauspicken",
+      "facet": "Wörter und Redensarten rund ums Süße",
+      "known_at": 8
+    },
+    {
+      "name": "Pfannkuchen",
+      "facet": "Wörter und Redensarten rund ums Süße",
+      "known_at": 10
+    },
+    {
+      "name": "Krapfen",
+      "facet": "Wörter und Redensarten rund ums Süße",
+      "known_at": 8
+    },
+    {
+      "name": "Kaffeeklatsch",
+      "facet": "Wörter und Redensarten rund ums Süße",
+      "known_at": 9
+    },
+    {
+      "name": "Süßholz raspeln",
+      "facet": "Wörter und Redensarten rund ums Süße",
+      "known_at": 9
+    },
+    {
+      "name": "Kalorienbombe",
+      "facet": "Wörter und Redensarten rund ums Süße",
+      "known_at": 8
+    },
+    {
+      "name": "Hüftgold",
+      "facet": "Wörter und Redensarten rund ums Süße",
+      "known_at": 9
+    },
+    {
+      "name": "Plätzchen",
+      "facet": "Wörter und Redensarten rund ums Süße",
+      "known_at": 4
+    }
+  ]
+}

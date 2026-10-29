@@ -1,0 +1,1217 @@
+{
+  "subcategory": "states-and-capitals",
+  "facets": [
+    "Landeshauptstädte",
+    "Stadtstaaten und Flächenländer",
+    "Lage, Grenzen und Nachbarländer",
+    "Wappen, Flaggen und Landessymbole",
+    "Wahrzeichen der Landeshauptstädte",
+    "Spitznamen und Landesbewohner",
+    "Landesküche und Spezialitäten",
+    "Dialekte der Bundesländer",
+    "Geschichte und Gründung der Länder",
+    "Landesparlamente und Ministerpräsidenten",
+    "Feste und Bräuche der Länder",
+    "Flüsse, Berge und Landschaften der Länder"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 5,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 5,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Berlin",
+      "facet": "Landeshauptstädte",
+      "known_at": 1
+    },
+    {
+      "name": "Hamburg",
+      "facet": "Landeshauptstädte",
+      "known_at": 2
+    },
+    {
+      "name": "München",
+      "facet": "Landeshauptstädte",
+      "known_at": 2
+    },
+    {
+      "name": "Bremen",
+      "facet": "Landeshauptstädte",
+      "known_at": 4
+    },
+    {
+      "name": "Stuttgart",
+      "facet": "Landeshauptstädte",
+      "known_at": 5
+    },
+    {
+      "name": "Dresden",
+      "facet": "Landeshauptstädte",
+      "known_at": 6
+    },
+    {
+      "name": "Düsseldorf",
+      "facet": "Landeshauptstädte",
+      "known_at": 7
+    },
+    {
+      "name": "Hannover",
+      "facet": "Landeshauptstädte",
+      "known_at": 6
+    },
+    {
+      "name": "Kiel",
+      "facet": "Landeshauptstädte",
+      "known_at": 7
+    },
+    {
+      "name": "Mainz",
+      "facet": "Landeshauptstädte",
+      "known_at": 8
+    },
+    {
+      "name": "Wiesbaden",
+      "facet": "Landeshauptstädte",
+      "known_at": 9
+    },
+    {
+      "name": "Saarbrücken",
+      "facet": "Landeshauptstädte",
+      "known_at": 9
+    },
+    {
+      "name": "Potsdam",
+      "facet": "Landeshauptstädte",
+      "known_at": 8
+    },
+    {
+      "name": "Erfurt",
+      "facet": "Landeshauptstädte",
+      "known_at": 9
+    },
+    {
+      "name": "Magdeburg",
+      "facet": "Landeshauptstädte",
+      "known_at": 9
+    },
+    {
+      "name": "Schwerin",
+      "facet": "Landeshauptstädte",
+      "known_at": 10
+    },
+    {
+      "name": "Bonn",
+      "facet": "Landeshauptstädte",
+      "known_at": 9
+    },
+    {
+      "name": "Stadtstaat",
+      "facet": "Stadtstaaten und Flächenländer",
+      "known_at": 7
+    },
+    {
+      "name": "Flächenland",
+      "facet": "Stadtstaaten und Flächenländer",
+      "known_at": 10
+    },
+    {
+      "name": "Freistaat",
+      "facet": "Stadtstaaten und Flächenländer",
+      "known_at": 8
+    },
+    {
+      "name": "Bremerhaven",
+      "facet": "Stadtstaaten und Flächenländer",
+      "known_at": 8
+    },
+    {
+      "name": "Bayern",
+      "facet": "Stadtstaaten und Flächenländer",
+      "known_at": 2
+    },
+    {
+      "name": "Baden-Württemberg",
+      "facet": "Stadtstaaten und Flächenländer",
+      "known_at": 5
+    },
+    {
+      "name": "Nordrhein-Westfalen",
+      "facet": "Stadtstaaten und Flächenländer",
+      "known_at": 5
+    },
+    {
+      "name": "Niedersachsen",
+      "facet": "Stadtstaaten und Flächenländer",
+      "known_at": 5
+    },
+    {
+      "name": "Hessen",
+      "facet": "Stadtstaaten und Flächenländer",
+      "known_at": 5
+    },
+    {
+      "name": "Sachsen",
+      "facet": "Stadtstaaten und Flächenländer",
+      "known_at": 5
+    },
+    {
+      "name": "Rheinland-Pfalz",
+      "facet": "Stadtstaaten und Flächenländer",
+      "known_at": 6
+    },
+    {
+      "name": "Schleswig-Holstein",
+      "facet": "Stadtstaaten und Flächenländer",
+      "known_at": 6
+    },
+    {
+      "name": "Brandenburg",
+      "facet": "Stadtstaaten und Flächenländer",
+      "known_at": 6
+    },
+    {
+      "name": "Thüringen",
+      "facet": "Stadtstaaten und Flächenländer",
+      "known_at": 6
+    },
+    {
+      "name": "Sachsen-Anhalt",
+      "facet": "Stadtstaaten und Flächenländer",
+      "known_at": 7
+    },
+    {
+      "name": "Mecklenburg-Vorpommern",
+      "facet": "Stadtstaaten und Flächenländer",
+      "known_at": 6
+    },
+    {
+      "name": "Saarland",
+      "facet": "Stadtstaaten und Flächenländer",
+      "known_at": 6
+    },
+    {
+      "name": "Nordsee",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 2
+    },
+    {
+      "name": "Ostsee",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 3
+    },
+    {
+      "name": "Bodensee",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 5
+    },
+    {
+      "name": "Dänemark",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 4
+    },
+    {
+      "name": "Polen",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 4
+    },
+    {
+      "name": "Tschechien",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 6
+    },
+    {
+      "name": "Österreich",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 3
+    },
+    {
+      "name": "Schweiz",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 3
+    },
+    {
+      "name": "Frankreich",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 3
+    },
+    {
+      "name": "Luxemburg",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 7
+    },
+    {
+      "name": "Belgien",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 6
+    },
+    {
+      "name": "Niederlande",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 4
+    },
+    {
+      "name": "Oder-Neiße-Grenze",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 11
+    },
+    {
+      "name": "Neue Bundesländer",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 9
+    },
+    {
+      "name": "Mittelpunkt Deutschlands",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 11
+    },
+    {
+      "name": "List auf Sylt",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 11
+    },
+    {
+      "name": "Oberstdorf",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 11
+    },
+    {
+      "name": "Dreiländereck",
+      "facet": "Lage, Grenzen und Nachbarländer",
+      "known_at": 8
+    },
+    {
+      "name": "Bayerische Rauten",
+      "facet": "Wappen, Flaggen und Landessymbole",
+      "known_at": 5
+    },
+    {
+      "name": "Berliner Bär",
+      "facet": "Wappen, Flaggen und Landessymbole",
+      "known_at": 3
+    },
+    {
+      "name": "Bremer Schlüssel",
+      "facet": "Wappen, Flaggen und Landessymbole",
+      "known_at": 10
+    },
+    {
+      "name": "Hamburger Wappenburg",
+      "facet": "Wappen, Flaggen und Landessymbole",
+      "known_at": 10
+    },
+    {
+      "name": "Sachsenross",
+      "facet": "Wappen, Flaggen und Landessymbole",
+      "known_at": 10
+    },
+    {
+      "name": "Brandenburger Adler",
+      "facet": "Wappen, Flaggen und Landessymbole",
+      "known_at": 11
+    },
+    {
+      "name": "Mecklenburger Stierkopf",
+      "facet": "Wappen, Flaggen und Landessymbole",
+      "known_at": 12
+    },
+    {
+      "name": "Hessischer Löwe",
+      "facet": "Wappen, Flaggen und Landessymbole",
+      "known_at": 12
+    },
+    {
+      "name": "Staufer-Löwen",
+      "facet": "Wappen, Flaggen und Landessymbole",
+      "known_at": 12
+    },
+    {
+      "name": "Sächsischer Rautenkranz",
+      "facet": "Wappen, Flaggen und Landessymbole",
+      "known_at": 13
+    },
+    {
+      "name": "Mainzer Rad",
+      "facet": "Wappen, Flaggen und Landessymbole",
+      "known_at": 12
+    },
+    {
+      "name": "Holsteiner Nesselblatt",
+      "facet": "Wappen, Flaggen und Landessymbole",
+      "known_at": 13
+    },
+    {
+      "name": "Weiß-Blau",
+      "facet": "Wappen, Flaggen und Landessymbole",
+      "known_at": 4
+    },
+    {
+      "name": "Schwarz-Rot-Gold",
+      "facet": "Wappen, Flaggen und Landessymbole",
+      "known_at": 2
+    },
+    {
+      "name": "Badnerlied",
+      "facet": "Wappen, Flaggen und Landessymbole",
+      "known_at": 12
+    },
+    {
+      "name": "Bayernhymne",
+      "facet": "Wappen, Flaggen und Landessymbole",
+      "known_at": 11
+    },
+    {
+      "name": "Niedersachsenlied",
+      "facet": "Wappen, Flaggen und Landessymbole",
+      "known_at": 13
+    },
+    {
+      "name": "Brandenburger Tor",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 2
+    },
+    {
+      "name": "Reichstagsgebäude",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 6
+    },
+    {
+      "name": "Berliner Fernsehturm",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 4
+    },
+    {
+      "name": "Elbphilharmonie",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 5
+    },
+    {
+      "name": "Hamburger Michel",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 9
+    },
+    {
+      "name": "Bremer Stadtmusikanten",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 2
+    },
+    {
+      "name": "Bremer Roland",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 10
+    },
+    {
+      "name": "Frauenkirche Dresden",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 7
+    },
+    {
+      "name": "Zwinger",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 9
+    },
+    {
+      "name": "Semperoper",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 9
+    },
+    {
+      "name": "Münchner Frauenkirche",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 8
+    },
+    {
+      "name": "Neues Rathaus München",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 8
+    },
+    {
+      "name": "Schloss Sanssouci",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 9
+    },
+    {
+      "name": "Schweriner Schloss",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 11
+    },
+    {
+      "name": "Rheinturm",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 10
+    },
+    {
+      "name": "Krämerbrücke",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 12
+    },
+    {
+      "name": "Mainzer Dom",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 11
+    },
+    {
+      "name": "Stuttgarter Fernsehturm",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 11
+    },
+    {
+      "name": "Grüne Zitadelle",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 12
+    },
+    {
+      "name": "Herrenhäuser Gärten",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 12
+    },
+    {
+      "name": "Ludwigskirche Saarbrücken",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 13
+    },
+    {
+      "name": "Kurhaus Wiesbaden",
+      "facet": "Wahrzeichen der Landeshauptstädte",
+      "known_at": 13
+    },
+    {
+      "name": "Nordlichter",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 8
+    },
+    {
+      "name": "Fischköppe",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 8
+    },
+    {
+      "name": "Ossis und Wessis",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 8
+    },
+    {
+      "name": "Saupreiß",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 10
+    },
+    {
+      "name": "Schwaben",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 5
+    },
+    {
+      "name": "Badener",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 9
+    },
+    {
+      "name": "Pfälzer",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 9
+    },
+    {
+      "name": "Saarländer",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 7
+    },
+    {
+      "name": "Westfalen",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 9
+    },
+    {
+      "name": "Rheinländer",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 8
+    },
+    {
+      "name": "Ruhrpott",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 7
+    },
+    {
+      "name": "Ländle",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 9
+    },
+    {
+      "name": "Elbflorenz",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 11
+    },
+    {
+      "name": "Spree-Athen",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 13
+    },
+    {
+      "name": "Weltstadt mit Herz",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 12
+    },
+    {
+      "name": "Tor zur Welt",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 9
+    },
+    {
+      "name": "Wir können alles. Außer Hochdeutsch.",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 10
+    },
+    {
+      "name": "Land der Frühaufsteher",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 12
+    },
+    {
+      "name": "Mia san mia",
+      "facet": "Spitznamen und Landesbewohner",
+      "known_at": 8
+    },
+    {
+      "name": "Weißwurst",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 4
+    },
+    {
+      "name": "Brezel",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 2
+    },
+    {
+      "name": "Maultaschen",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 6
+    },
+    {
+      "name": "Spätzle",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 4
+    },
+    {
+      "name": "Labskaus",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 10
+    },
+    {
+      "name": "Franzbrötchen",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 7
+    },
+    {
+      "name": "Currywurst",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 2
+    },
+    {
+      "name": "Thüringer Rostbratwurst",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 5
+    },
+    {
+      "name": "Thüringer Klöße",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 8
+    },
+    {
+      "name": "Dresdner Christstollen",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 7
+    },
+    {
+      "name": "Frankfurter Grüne Soße",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 11
+    },
+    {
+      "name": "Handkäs mit Musik",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 12
+    },
+    {
+      "name": "Saumagen",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 11
+    },
+    {
+      "name": "Lyoner",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 10
+    },
+    {
+      "name": "Himmel un Ääd",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 11
+    },
+    {
+      "name": "Grünkohl mit Pinkel",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 10
+    },
+    {
+      "name": "Spreewaldgurken",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 8
+    },
+    {
+      "name": "Leipziger Allerlei",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 10
+    },
+    {
+      "name": "Schwarzwälder Kirschtorte",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 4
+    },
+    {
+      "name": "Lübecker Marzipan",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 7
+    },
+    {
+      "name": "Kieler Sprotten",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 12
+    },
+    {
+      "name": "Aachener Printen",
+      "facet": "Landesküche und Spezialitäten",
+      "known_at": 10
+    },
+    {
+      "name": "Bairisch",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 4
+    },
+    {
+      "name": "Schwäbisch",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 6
+    },
+    {
+      "name": "Sächsisch",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 6
+    },
+    {
+      "name": "Berlinerisch",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 6
+    },
+    {
+      "name": "Plattdeutsch",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 7
+    },
+    {
+      "name": "Kölsch",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 8
+    },
+    {
+      "name": "Hessisch",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 8
+    },
+    {
+      "name": "Fränkisch",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 9
+    },
+    {
+      "name": "Pfälzisch",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 10
+    },
+    {
+      "name": "Badisch",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 10
+    },
+    {
+      "name": "Ruhrdeutsch",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 10
+    },
+    {
+      "name": "Nordfriesisch",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 12
+    },
+    {
+      "name": "Sorbisch",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 12
+    },
+    {
+      "name": "Moin",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 4
+    },
+    {
+      "name": "Servus",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 4
+    },
+    {
+      "name": "Grüß Gott",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 5
+    },
+    {
+      "name": "Gell",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 7
+    },
+    {
+      "name": "Schrippe",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 8
+    },
+    {
+      "name": "Semmel",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 6
+    },
+    {
+      "name": "Weckle",
+      "facet": "Dialekte der Bundesländer",
+      "known_at": 10
+    },
+    {
+      "name": "Grundgesetz",
+      "facet": "Geschichte und Gründung der Länder",
+      "known_at": 7
+    },
+    {
+      "name": "Gründung der Bundesrepublik",
+      "facet": "Geschichte und Gründung der Länder",
+      "known_at": 9
+    },
+    {
+      "name": "Wiedervereinigung",
+      "facet": "Geschichte und Gründung der Länder",
+      "known_at": 6
+    },
+    {
+      "name": "Tag der Deutschen Einheit",
+      "facet": "Geschichte und Gründung der Länder",
+      "known_at": 5
+    },
+    {
+      "name": "DDR",
+      "facet": "Geschichte und Gründung der Länder",
+      "known_at": 7
+    },
+    {
+      "name": "Bezirke der DDR",
+      "facet": "Geschichte und Gründung der Länder",
+      "known_at": 12
+    },
+    {
+      "name": "Besatzungszonen",
+      "facet": "Geschichte und Gründung der Länder",
+      "known_at": 10
+    },
+    {
+      "name": "Preußen",
+      "facet": "Geschichte und Gründung der Länder",
+      "known_at": 9
+    },
+    {
+      "name": "Auflösung Preußens",
+      "facet": "Geschichte und Gründung der Länder",
+      "known_at": 13
+    },
+    {
+      "name": "Königreich Bayern",
+      "facet": "Geschichte und Gründung der Länder",
+      "known_at": 10
+    },
+    {
+      "name": "Ludwig II.",
+      "facet": "Geschichte und Gründung der Länder",
+      "known_at": 8
+    },
+    {
+      "name": "Südweststaat",
+      "facet": "Geschichte und Gründung der Länder",
+      "known_at": 13
+    },
+    {
+      "name": "Saarabstimmung 1955",
+      "facet": "Geschichte und Gründung der Länder",
+      "known_at": 13
+    },
+    {
+      "name": "Volksabstimmung Berlin-Brandenburg 1996",
+      "facet": "Geschichte und Gründung der Länder",
+      "known_at": 13
+    },
+    {
+      "name": "Hanse",
+      "facet": "Geschichte und Gründung der Länder",
+      "known_at": 9
+    },
+    {
+      "name": "Operation Marriage",
+      "facet": "Geschichte und Gründung der Länder",
+      "known_at": 15
+    },
+    {
+      "name": "Landtag",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 8
+    },
+    {
+      "name": "Bürgerschaft",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 11
+    },
+    {
+      "name": "Abgeordnetenhaus",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 11
+    },
+    {
+      "name": "Ministerpräsident",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 8
+    },
+    {
+      "name": "Regierender Bürgermeister",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 10
+    },
+    {
+      "name": "Erster Bürgermeister",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 11
+    },
+    {
+      "name": "Bundesrat",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 10
+    },
+    {
+      "name": "Föderalismus",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 10
+    },
+    {
+      "name": "Kulturhoheit der Länder",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 12
+    },
+    {
+      "name": "Kultusministerkonferenz",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 12
+    },
+    {
+      "name": "Maximilianeum",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 13
+    },
+    {
+      "name": "Leineschloss",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 14
+    },
+    {
+      "name": "Franz Josef Strauß",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 11
+    },
+    {
+      "name": "Johannes Rau",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 12
+    },
+    {
+      "name": "Winfried Kretschmann",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 11
+    },
+    {
+      "name": "Markus Söder",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 9
+    },
+    {
+      "name": "Bodo Ramelow",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 12
+    },
+    {
+      "name": "Klaus Wowereit",
+      "facet": "Landesparlamente und Ministerpräsidenten",
+      "known_at": 12
+    },
+    {
+      "name": "Oktoberfest",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 2
+    },
+    {
+      "name": "Cannstatter Wasen",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 9
+    },
+    {
+      "name": "Kieler Woche",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 9
+    },
+    {
+      "name": "Hamburger Hafengeburtstag",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 10
+    },
+    {
+      "name": "Bremer Freimarkt",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 12
+    },
+    {
+      "name": "Kölner Karneval",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 5
+    },
+    {
+      "name": "Mainzer Fastnacht",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 9
+    },
+    {
+      "name": "Schwäbisch-alemannische Fastnacht",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 11
+    },
+    {
+      "name": "Rosenmontag",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 5
+    },
+    {
+      "name": "Dresdner Striezelmarkt",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 11
+    },
+    {
+      "name": "Nürnberger Christkindlesmarkt",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 8
+    },
+    {
+      "name": "Walpurgisnacht",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 8
+    },
+    {
+      "name": "Maibaum",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 5
+    },
+    {
+      "name": "Almabtrieb",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 9
+    },
+    {
+      "name": "Schützenfest",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 7
+    },
+    {
+      "name": "Biikebrennen",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 13
+    },
+    {
+      "name": "Rhein in Flammen",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 11
+    },
+    {
+      "name": "Hessentag",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 12
+    },
+    {
+      "name": "Karneval der Kulturen",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 11
+    },
+    {
+      "name": "Leonhardifahrt",
+      "facet": "Feste und Bräuche der Länder",
+      "known_at": 13
+    },
+    {
+      "name": "Rhein",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 3
+    },
+    {
+      "name": "Elbe",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 4
+    },
+    {
+      "name": "Donau",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 4
+    },
+    {
+      "name": "Main",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 6
+    },
+    {
+      "name": "Spree",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 6
+    },
+    {
+      "name": "Isar",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 7
+    },
+    {
+      "name": "Neckar",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 8
+    },
+    {
+      "name": "Weser",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 7
+    },
+    {
+      "name": "Mosel",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 8
+    },
+    {
+      "name": "Saar",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 9
+    },
+    {
+      "name": "Zugspitze",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 4
+    },
+    {
+      "name": "Brocken",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 9
+    },
+    {
+      "name": "Feldberg",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 11
+    },
+    {
+      "name": "Fichtelberg",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 12
+    },
+    {
+      "name": "Schwarzwald",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 4
+    },
+    {
+      "name": "Harz",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 7
+    },
+    {
+      "name": "Lüneburger Heide",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 8
+    },
+    {
+      "name": "Sächsische Schweiz",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 9
+    },
+    {
+      "name": "Spreewald",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 8
+    },
+    {
+      "name": "Rügen",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 7
+    },
+    {
+      "name": "Sylt",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 6
+    },
+    {
+      "name": "Wattenmeer",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 5
+    },
+    {
+      "name": "Müritz",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 11
+    },
+    {
+      "name": "Erzgebirge",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 9
+    },
+    {
+      "name": "Loreley",
+      "facet": "Flüsse, Berge und Landschaften der Länder",
+      "known_at": 9
+    }
+  ]
+}

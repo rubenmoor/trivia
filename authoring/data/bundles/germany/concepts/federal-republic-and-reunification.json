@@ -1,0 +1,1197 @@
+{
+  "subcategory": "federal-republic-and-reunification",
+  "facets": [
+    "Gründung und Grundgesetz",
+    "Kanzler und Politikerinnen",
+    "Wirtschaftswunder und D-Mark",
+    "Westbindung und Ostpolitik",
+    "Mauerbau und geteiltes Berlin",
+    "Alltag in der DDR",
+    "Friedliche Revolution und Mauerfall",
+    "Deutsche Einheit 1990",
+    "Alltag und Popkultur der Bonner Republik",
+    "Gesellschaftswandel und Protestbewegungen",
+    "Staatssymbole, Feiertage und Erinnerungsorte",
+    "Sportmomente der Nachkriegszeit"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Parlamentarischer Rat",
+      "facet": "Gründung und Grundgesetz",
+      "known_at": 12
+    },
+    {
+      "name": "Verfassungskonvent auf Herrenchiemsee",
+      "facet": "Gründung und Grundgesetz",
+      "known_at": 14
+    },
+    {
+      "name": "Menschenwürde",
+      "facet": "Gründung und Grundgesetz",
+      "known_at": 9
+    },
+    {
+      "name": "23. Mai 1949",
+      "facet": "Gründung und Grundgesetz",
+      "known_at": 11
+    },
+    {
+      "name": "Bundestag",
+      "facet": "Gründung und Grundgesetz",
+      "known_at": 6
+    },
+    {
+      "name": "Bundesverfassungsgericht",
+      "facet": "Gründung und Grundgesetz",
+      "known_at": 9
+    },
+    {
+      "name": "Bundespräsident",
+      "facet": "Gründung und Grundgesetz",
+      "known_at": 7
+    },
+    {
+      "name": "Theodor Heuss",
+      "facet": "Gründung und Grundgesetz",
+      "known_at": 11
+    },
+    {
+      "name": "Bundesländer",
+      "facet": "Gründung und Grundgesetz",
+      "known_at": 5
+    },
+    {
+      "name": "Elisabeth Selbert",
+      "facet": "Gründung und Grundgesetz",
+      "known_at": 13
+    },
+    {
+      "name": "Trizone",
+      "facet": "Gründung und Grundgesetz",
+      "known_at": 13
+    },
+    {
+      "name": "Berliner Luftbrücke",
+      "facet": "Gründung und Grundgesetz",
+      "known_at": 9
+    },
+    {
+      "name": "Rosinenbomber",
+      "facet": "Gründung und Grundgesetz",
+      "known_at": 8
+    },
+    {
+      "name": "Fünf-Prozent-Hürde",
+      "facet": "Gründung und Grundgesetz",
+      "known_at": 11
+    },
+    {
+      "name": "Konstruktives Misstrauensvotum",
+      "facet": "Gründung und Grundgesetz",
+      "known_at": 13
+    },
+    {
+      "name": "Grundrechte",
+      "facet": "Gründung und Grundgesetz",
+      "known_at": 8
+    },
+    {
+      "name": "Ewigkeitsklausel",
+      "facet": "Gründung und Grundgesetz",
+      "known_at": 14
+    },
+    {
+      "name": "Konrad Adenauer",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 8
+    },
+    {
+      "name": "Ludwig Erhard",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 10
+    },
+    {
+      "name": "Kurt Georg Kiesinger",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 13
+    },
+    {
+      "name": "Willy Brandt",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 9
+    },
+    {
+      "name": "Helmut Kohl",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 8
+    },
+    {
+      "name": "Gerhard Schröder",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 9
+    },
+    {
+      "name": "Angela Merkel",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 4
+    },
+    {
+      "name": "Olaf Scholz",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 6
+    },
+    {
+      "name": "Friedrich Merz",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 7
+    },
+    {
+      "name": "Richard von Weizsäcker",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 11
+    },
+    {
+      "name": "Hans-Dietrich Genscher",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 11
+    },
+    {
+      "name": "Hildegard Hamm-Brücher",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 14
+    },
+    {
+      "name": "Annemarie Renger",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 14
+    },
+    {
+      "name": "Rita Süssmuth",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 13
+    },
+    {
+      "name": "Petra Kelly",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 13
+    },
+    {
+      "name": "Joschka Fischer",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 11
+    },
+    {
+      "name": "Regine Hildebrandt",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 14
+    },
+    {
+      "name": "Herbert Wehner",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 13
+    },
+    {
+      "name": "Walter Scheel",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 13
+    },
+    {
+      "name": "Roman Herzog",
+      "facet": "Kanzler und Politikerinnen",
+      "known_at": 12
+    },
+    {
+      "name": "D-Mark",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 6
+    },
+    {
+      "name": "Währungsreform 1948",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 10
+    },
+    {
+      "name": "Soziale Marktwirtschaft",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 10
+    },
+    {
+      "name": "Wirtschaftswunder",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 8
+    },
+    {
+      "name": "VW Käfer",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 4
+    },
+    {
+      "name": "Gastarbeiter",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 9
+    },
+    {
+      "name": "Marshallplan",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 10
+    },
+    {
+      "name": "Groschen",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 8
+    },
+    {
+      "name": "Fünfmarkstück",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 9
+    },
+    {
+      "name": "Deutsche Bundesbank",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 9
+    },
+    {
+      "name": "Sparbuch",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 8
+    },
+    {
+      "name": "Kopfgeld",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 14
+    },
+    {
+      "name": "Anwerbeabkommen",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 13
+    },
+    {
+      "name": "Armando Rodrigues de Sá",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 14
+    },
+    {
+      "name": "Quelle-Katalog",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 11
+    },
+    {
+      "name": "Neckermann",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 12
+    },
+    {
+      "name": "Fresswelle",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 13
+    },
+    {
+      "name": "BMW Isetta",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 11
+    },
+    {
+      "name": "Lastenausgleich",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 14
+    },
+    {
+      "name": "Euro-Bargeldeinführung",
+      "facet": "Wirtschaftswunder und D-Mark",
+      "known_at": 7
+    },
+    {
+      "name": "NATO-Beitritt 1955",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 11
+    },
+    {
+      "name": "Bundeswehr",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 6
+    },
+    {
+      "name": "Wiederbewaffnung",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 12
+    },
+    {
+      "name": "Élysée-Vertrag",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 12
+    },
+    {
+      "name": "Charles de Gaulle",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 10
+    },
+    {
+      "name": "Deutsch-Französisches Jugendwerk",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 12
+    },
+    {
+      "name": "Montanunion",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 12
+    },
+    {
+      "name": "Römische Verträge",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 12
+    },
+    {
+      "name": "Heimkehr der Zehntausend",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 13
+    },
+    {
+      "name": "Hallstein-Doktrin",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 14
+    },
+    {
+      "name": "Moskauer Vertrag",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 13
+    },
+    {
+      "name": "Grundlagenvertrag",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 13
+    },
+    {
+      "name": "Wandel durch Annäherung",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 13
+    },
+    {
+      "name": "Egon Bahr",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 14
+    },
+    {
+      "name": "Viermächteabkommen über Berlin",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 14
+    },
+    {
+      "name": "KSZE-Schlussakte von Helsinki",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 14
+    },
+    {
+      "name": "NATO-Doppelbeschluss",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 13
+    },
+    {
+      "name": "Friedensnobelpreis für Willy Brandt",
+      "facet": "Westbindung und Ostpolitik",
+      "known_at": 11
+    },
+    {
+      "name": "13. August 1961",
+      "facet": "Mauerbau und geteiltes Berlin",
+      "known_at": 9
+    },
+    {
+      "name": "Walter Ulbricht",
+      "facet": "Mauerbau und geteiltes Berlin",
+      "known_at": 11
+    },
+    {
+      "name": "„Niemand hat die Absicht, eine Mauer zu errichten“",
+      "facet": "Mauerbau und geteiltes Berlin",
+      "known_at": 11
+    },
+    {
+      "name": "John F. Kennedy",
+      "facet": "Mauerbau und geteiltes Berlin",
+      "known_at": 8
+    },
+    {
+      "name": "„Ich bin ein Berliner“",
+      "facet": "Mauerbau und geteiltes Berlin",
+      "known_at": 8
+    },
+    {
+      "name": "Conrad Schumann",
+      "facet": "Mauerbau und geteiltes Berlin",
+      "known_at": 11
+    },
+    {
+      "name": "Tränenpalast",
+      "facet": "Mauerbau und geteiltes Berlin",
+      "known_at": 13
+    },
+    {
+      "name": "Fluchttunnel",
+      "facet": "Mauerbau und geteiltes Berlin",
+      "known_at": 11
+    },
+    {
+      "name": "West-Berlin",
+      "facet": "Mauerbau und geteiltes Berlin",
+      "known_at": 8
+    },
+    {
+      "name": "Bernauer Straße",
+      "facet": "Mauerbau und geteiltes Berlin",
+      "known_at": 12
+    },
+    {
+      "name": "Grenzübergang Bornholmer Straße",
+      "facet": "Mauerbau und geteiltes Berlin",
+      "known_at": 13
+    },
+    {
+      "name": "Transitautobahn",
+      "facet": "Mauerbau und geteiltes Berlin",
+      "known_at": 13
+    },
+    {
+      "name": "„Tear down this wall!“",
+      "facet": "Mauerbau und geteiltes Berlin",
+      "known_at": 10
+    },
+    {
+      "name": "Innerdeutsche Grenze",
+      "facet": "Mauerbau und geteiltes Berlin",
+      "known_at": 10
+    },
+    {
+      "name": "Zonenrandgebiet",
+      "facet": "Mauerbau und geteiltes Berlin",
+      "known_at": 14
+    },
+    {
+      "name": "Ballonflucht",
+      "facet": "Mauerbau und geteiltes Berlin",
+      "known_at": 11
+    },
+    {
+      "name": "Trabant",
+      "facet": "Alltag in der DDR",
+      "known_at": 6
+    },
+    {
+      "name": "Sandmännchen",
+      "facet": "Alltag in der DDR",
+      "known_at": 4
+    },
+    {
+      "name": "FDJ",
+      "facet": "Alltag in der DDR",
+      "known_at": 11
+    },
+    {
+      "name": "Junge Pioniere",
+      "facet": "Alltag in der DDR",
+      "known_at": 10
+    },
+    {
+      "name": "Stasi",
+      "facet": "Alltag in der DDR",
+      "known_at": 9
+    },
+    {
+      "name": "Rotkäppchen-Sekt",
+      "facet": "Alltag in der DDR",
+      "known_at": 12
+    },
+    {
+      "name": "Club-Cola",
+      "facet": "Alltag in der DDR",
+      "known_at": 13
+    },
+    {
+      "name": "Nudossi",
+      "facet": "Alltag in der DDR",
+      "known_at": 13
+    },
+    {
+      "name": "Plattenbau",
+      "facet": "Alltag in der DDR",
+      "known_at": 8
+    },
+    {
+      "name": "Intershop",
+      "facet": "Alltag in der DDR",
+      "known_at": 12
+    },
+    {
+      "name": "Westpaket",
+      "facet": "Alltag in der DDR",
+      "known_at": 11
+    },
+    {
+      "name": "Simson",
+      "facet": "Alltag in der DDR",
+      "known_at": 12
+    },
+    {
+      "name": "Jugendweihe",
+      "facet": "Alltag in der DDR",
+      "known_at": 11
+    },
+    {
+      "name": "Palast der Republik",
+      "facet": "Alltag in der DDR",
+      "known_at": 12
+    },
+    {
+      "name": "Erich Honecker",
+      "facet": "Alltag in der DDR",
+      "known_at": 9
+    },
+    {
+      "name": "Pittiplatsch",
+      "facet": "Alltag in der DDR",
+      "known_at": 10
+    },
+    {
+      "name": "Broiler",
+      "facet": "Alltag in der DDR",
+      "known_at": 11
+    },
+    {
+      "name": "Datsche",
+      "facet": "Alltag in der DDR",
+      "known_at": 11
+    },
+    {
+      "name": "Sigmund Jähn",
+      "facet": "Alltag in der DDR",
+      "known_at": 11
+    },
+    {
+      "name": "Puhdys",
+      "facet": "Alltag in der DDR",
+      "known_at": 13
+    },
+    {
+      "name": "Mark der DDR",
+      "facet": "Alltag in der DDR",
+      "known_at": 10
+    },
+    {
+      "name": "Montagsdemonstrationen",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 9
+    },
+    {
+      "name": "Nikolaikirche Leipzig",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 12
+    },
+    {
+      "name": "„Wir sind das Volk“",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 9
+    },
+    {
+      "name": "Günter Schabowski",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 11
+    },
+    {
+      "name": "„Sofort, unverzüglich“",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 12
+    },
+    {
+      "name": "9. November 1989",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 6
+    },
+    {
+      "name": "Prager Botschaft",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 12
+    },
+    {
+      "name": "Paneuropäisches Picknick",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 14
+    },
+    {
+      "name": "Begrüßungsgeld",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 11
+    },
+    {
+      "name": "Neues Forum",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 13
+    },
+    {
+      "name": "Runder Tisch",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 13
+    },
+    {
+      "name": "Mauerspechte",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 11
+    },
+    {
+      "name": "David Hasselhoff",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 10
+    },
+    {
+      "name": "„Wind of Change“",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 9
+    },
+    {
+      "name": "Michail Gorbatschow",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 9
+    },
+    {
+      "name": "Egon Krenz",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 12
+    },
+    {
+      "name": "„Schwerter zu Pflugscharen“",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 13
+    },
+    {
+      "name": "Besetzung der Stasi-Zentrale",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 13
+    },
+    {
+      "name": "Mstislaw Rostropowitsch",
+      "facet": "Friedliche Revolution und Mauerfall",
+      "known_at": 14
+    },
+    {
+      "name": "3. Oktober 1990",
+      "facet": "Deutsche Einheit 1990",
+      "known_at": 7
+    },
+    {
+      "name": "Zwei-plus-Vier-Vertrag",
+      "facet": "Deutsche Einheit 1990",
+      "known_at": 12
+    },
+    {
+      "name": "Währungsunion 1990",
+      "facet": "Deutsche Einheit 1990",
+      "known_at": 12
+    },
+    {
+      "name": "Einigungsvertrag",
+      "facet": "Deutsche Einheit 1990",
+      "known_at": 12
+    },
+    {
+      "name": "Lothar de Maizière",
+      "facet": "Deutsche Einheit 1990",
+      "known_at": 13
+    },
+    {
+      "name": "Volkskammerwahl 1990",
+      "facet": "Deutsche Einheit 1990",
+      "known_at": 13
+    },
+    {
+      "name": "Treuhandanstalt",
+      "facet": "Deutsche Einheit 1990",
+      "known_at": 12
+    },
+    {
+      "name": "„Blühende Landschaften“",
+      "facet": "Deutsche Einheit 1990",
+      "known_at": 12
+    },
+    {
+      "name": "Solidaritätszuschlag",
+      "facet": "Deutsche Einheit 1990",
+      "known_at": 10
+    },
+    {
+      "name": "Hauptstadtbeschluss 1991",
+      "facet": "Deutsche Einheit 1990",
+      "known_at": 13
+    },
+    {
+      "name": "Verhüllter Reichstag",
+      "facet": "Deutsche Einheit 1990",
+      "known_at": 12
+    },
+    {
+      "name": "Wolfgang Schäuble",
+      "facet": "Deutsche Einheit 1990",
+      "known_at": 12
+    },
+    {
+      "name": "Ostalgie",
+      "facet": "Deutsche Einheit 1990",
+      "known_at": 11
+    },
+    {
+      "name": "Good Bye, Lenin!",
+      "facet": "Deutsche Einheit 1990",
+      "known_at": 10
+    },
+    {
+      "name": "Stasi-Unterlagen-Behörde",
+      "facet": "Deutsche Einheit 1990",
+      "known_at": 13
+    },
+    {
+      "name": "Joachim Gauck",
+      "facet": "Deutsche Einheit 1990",
+      "known_at": 11
+    },
+    {
+      "name": "Die Sendung mit der Maus",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 3
+    },
+    {
+      "name": "Wetten, dass..?",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 9
+    },
+    {
+      "name": "Thomas Gottschalk",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 9
+    },
+    {
+      "name": "Tatort",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 8
+    },
+    {
+      "name": "Nena",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 7
+    },
+    {
+      "name": "Neue Deutsche Welle",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 12
+    },
+    {
+      "name": "Kraftwerk",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 12
+    },
+    {
+      "name": "Udo Lindenberg",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 10
+    },
+    {
+      "name": "Heino",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 10
+    },
+    {
+      "name": "Loriot",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 9
+    },
+    {
+      "name": "Otto Waalkes",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 7
+    },
+    {
+      "name": "Winnetou-Filme",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 9
+    },
+    {
+      "name": "Pierre Brice",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 12
+    },
+    {
+      "name": "Pumuckl",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 5
+    },
+    {
+      "name": "Playmobil",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 2
+    },
+    {
+      "name": "Die drei ???",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 6
+    },
+    {
+      "name": "Mainzelmännchen",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 6
+    },
+    {
+      "name": "Dalli Dalli",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 13
+    },
+    {
+      "name": "Rudi Carrell",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 12
+    },
+    {
+      "name": "Lindenstraße",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 12
+    },
+    {
+      "name": "Bravo",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 10
+    },
+    {
+      "name": "Toast Hawaii",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 10
+    },
+    {
+      "name": "Das Boot",
+      "facet": "Alltag und Popkultur der Bonner Republik",
+      "known_at": 12
+    },
+    {
+      "name": "68er-Bewegung",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 11
+    },
+    {
+      "name": "Rudi Dutschke",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 13
+    },
+    {
+      "name": "Außerparlamentarische Opposition",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 13
+    },
+    {
+      "name": "Kommune 1",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 13
+    },
+    {
+      "name": "Die Grünen",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 7
+    },
+    {
+      "name": "Anti-Atomkraft-Bewegung",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 11
+    },
+    {
+      "name": "„Atomkraft? Nein danke“",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 10
+    },
+    {
+      "name": "Gorleben",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 13
+    },
+    {
+      "name": "Startbahn West",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 14
+    },
+    {
+      "name": "Friedensbewegung",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 11
+    },
+    {
+      "name": "Ostermarsch",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 12
+    },
+    {
+      "name": "Alice Schwarzer",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 11
+    },
+    {
+      "name": "Emma",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 12
+    },
+    {
+      "name": "Gleichberechtigungsgesetz",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 14
+    },
+    {
+      "name": "Zivildienst",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 10
+    },
+    {
+      "name": "Grüner Punkt",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 8
+    },
+    {
+      "name": "Gelber Sack",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 6
+    },
+    {
+      "name": "Hausbesetzer",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 12
+    },
+    {
+      "name": "Volkszählungsboykott 1987",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 14
+    },
+    {
+      "name": "Ehe für alle",
+      "facet": "Gesellschaftswandel und Protestbewegungen",
+      "known_at": 10
+    },
+    {
+      "name": "„Einigkeit und Recht und Freiheit“",
+      "facet": "Staatssymbole, Feiertage und Erinnerungsorte",
+      "known_at": 9
+    },
+    {
+      "name": "Joseph Haydn",
+      "facet": "Staatssymbole, Feiertage und Erinnerungsorte",
+      "known_at": 12
+    },
+    {
+      "name": "Volksaufstand vom 17. Juni 1953",
+      "facet": "Staatssymbole, Feiertage und Erinnerungsorte",
+      "known_at": 12
+    },
+    {
+      "name": "Straße des 17. Juni",
+      "facet": "Staatssymbole, Feiertage und Erinnerungsorte",
+      "known_at": 12
+    },
+    {
+      "name": "Gedenkstätte Berliner Mauer",
+      "facet": "Staatssymbole, Feiertage und Erinnerungsorte",
+      "known_at": 12
+    },
+    {
+      "name": "Reichstagskuppel",
+      "facet": "Staatssymbole, Feiertage und Erinnerungsorte",
+      "known_at": 8
+    },
+    {
+      "name": "Schloss Bellevue",
+      "facet": "Staatssymbole, Feiertage und Erinnerungsorte",
+      "known_at": 11
+    },
+    {
+      "name": "Palais Schaumburg",
+      "facet": "Staatssymbole, Feiertage und Erinnerungsorte",
+      "known_at": 14
+    },
+    {
+      "name": "Villa Hammerschmidt",
+      "facet": "Staatssymbole, Feiertage und Erinnerungsorte",
+      "known_at": 14
+    },
+    {
+      "name": "Kanzlerbungalow",
+      "facet": "Staatssymbole, Feiertage und Erinnerungsorte",
+      "known_at": 15
+    },
+    {
+      "name": "Bundesverdienstkreuz",
+      "facet": "Staatssymbole, Feiertage und Erinnerungsorte",
+      "known_at": 10
+    },
+    {
+      "name": "Point Alpha",
+      "facet": "Staatssymbole, Feiertage und Erinnerungsorte",
+      "known_at": 14
+    },
+    {
+      "name": "Wunder von Bern",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 9
+    },
+    {
+      "name": "Helmut Rahn",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 13
+    },
+    {
+      "name": "Fritz Walter",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 12
+    },
+    {
+      "name": "Sepp Herberger",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 12
+    },
+    {
+      "name": "„Der Ball ist rund“",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 10
+    },
+    {
+      "name": "Franz Beckenbauer",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 7
+    },
+    {
+      "name": "Gerd Müller",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 10
+    },
+    {
+      "name": "Fußball-WM 1974",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 11
+    },
+    {
+      "name": "Jürgen Sparwasser",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 14
+    },
+    {
+      "name": "Fußball-WM 1990",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 9
+    },
+    {
+      "name": "Andreas Brehme",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 12
+    },
+    {
+      "name": "Lothar Matthäus",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 9
+    },
+    {
+      "name": "Sommermärchen 2006",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 8
+    },
+    {
+      "name": "Mario Götze",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 8
+    },
+    {
+      "name": "Olympische Spiele München 1972",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 10
+    },
+    {
+      "name": "Olympiastadion München",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 10
+    },
+    {
+      "name": "Boris Becker",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 8
+    },
+    {
+      "name": "Steffi Graf",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 8
+    },
+    {
+      "name": "Golden Slam",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 13
+    },
+    {
+      "name": "Michael Schumacher",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 5
+    },
+    {
+      "name": "Katarina Witt",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 11
+    },
+    {
+      "name": "Henry Maske",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 12
+    },
+    {
+      "name": "Ulrike Meyfarth",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 14
+    },
+    {
+      "name": "Rosi Mittermaier",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 13
+    },
+    {
+      "name": "Dirk Nowitzki",
+      "facet": "Sportmomente der Nachkriegszeit",
+      "known_at": 8
+    }
+  ]
+}

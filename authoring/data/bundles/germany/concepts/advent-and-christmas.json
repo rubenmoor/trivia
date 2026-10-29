@@ -1,0 +1,992 @@
+{
+  "subcategory": "advent-and-christmas",
+  "facets": [
+    "Adventskranz und Adventskalender",
+    "Nikolaustag und Knecht Ruprecht",
+    "Weihnachtsmärkte und ihre Städte",
+    "Weihnachtsgebäck und Süßes",
+    "Festessen an Heiligabend und Feiertagen",
+    "Weihnachtsbaum und Baumschmuck",
+    "Weihnachtslieder und Weihnachtsmusik",
+    "Christkind, Weihnachtsmann und Bescherung",
+    "Erzgebirgische Volkskunst und Deko",
+    "Weihnachtsfilme und TV-Traditionen",
+    "Geschichte deutscher Weihnachtsbräuche",
+    "Rund um Silvester bis Dreikönig"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 3,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Adventskerze",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 2
+    },
+    {
+      "name": "„Advent, Advent, ein Lichtlein brennt“",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 2
+    },
+    {
+      "name": "Erster Advent",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 3
+    },
+    {
+      "name": "Adventssonntag",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 3
+    },
+    {
+      "name": "Rauhes Haus",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 14
+    },
+    {
+      "name": "Wagenrad-Adventskranz",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 13
+    },
+    {
+      "name": "Tannengrün",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 4
+    },
+    {
+      "name": "Adventsgesteck",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 6
+    },
+    {
+      "name": "Rosa Adventskerze",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 13
+    },
+    {
+      "name": "Schokoladen-Adventskalender",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 1
+    },
+    {
+      "name": "Türchen",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 1
+    },
+    {
+      "name": "Selbstgebastelter Säckchen-Kalender",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 4
+    },
+    {
+      "name": "Gerhard Lang",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 14
+    },
+    {
+      "name": "Lebendiger Adventskalender",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 11
+    },
+    {
+      "name": "Gengenbacher Adventskalenderhaus",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 13
+    },
+    {
+      "name": "Adventskaffee",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 6
+    },
+    {
+      "name": "Totensonntag",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 11
+    },
+    {
+      "name": "Kirchenjahr",
+      "facet": "Adventskranz und Adventskalender",
+      "known_at": 10
+    },
+    {
+      "name": "Nikolaustag",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 1
+    },
+    {
+      "name": "6. Dezember",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 2
+    },
+    {
+      "name": "Schokoladennikolaus",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 1
+    },
+    {
+      "name": "Nikolaus von Myra",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 8
+    },
+    {
+      "name": "Myra",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 13
+    },
+    {
+      "name": "Bari",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 14
+    },
+    {
+      "name": "Bischofsstab",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 5
+    },
+    {
+      "name": "Mitra",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 10
+    },
+    {
+      "name": "Goldenes Buch",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 6
+    },
+    {
+      "name": "Knecht Ruprecht",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 4
+    },
+    {
+      "name": "Rute",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 5
+    },
+    {
+      "name": "Krampus",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 9
+    },
+    {
+      "name": "Pelzmärtel",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 14
+    },
+    {
+      "name": "Belsnickel",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 13
+    },
+    {
+      "name": "Hans Muff",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 14
+    },
+    {
+      "name": "„Von drauß' vom Walde komm ich her“",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 9
+    },
+    {
+      "name": "Nikolausgedicht",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 3
+    },
+    {
+      "name": "Schutzpatron der Seefahrer",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 12
+    },
+    {
+      "name": "Drei goldene Kugeln",
+      "facet": "Nikolaustag und Knecht Ruprecht",
+      "known_at": 14
+    },
+    {
+      "name": "Nürnberger Christkind",
+      "facet": "Weihnachtsmärkte und ihre Städte",
+      "known_at": 8
+    },
+    {
+      "name": "Kölner Weihnachtsmarkt am Dom",
+      "facet": "Weihnachtsmärkte und ihre Städte",
+      "known_at": 7
+    },
+    {
+      "name": "Aachener Weihnachtsmarkt",
+      "facet": "Weihnachtsmärkte und ihre Städte",
+      "known_at": 11
+    },
+    {
+      "name": "Reiterlesmarkt Rothenburg ob der Tauber",
+      "facet": "Weihnachtsmärkte und ihre Städte",
+      "known_at": 11
+    },
+    {
+      "name": "Frankfurter Weihnachtsmarkt",
+      "facet": "Weihnachtsmärkte und ihre Städte",
+      "known_at": 10
+    },
+    {
+      "name": "Erfurter Weihnachtsmarkt",
+      "facet": "Weihnachtsmärkte und ihre Städte",
+      "known_at": 11
+    },
+    {
+      "name": "Stuttgarter Weihnachtsmarkt",
+      "facet": "Weihnachtsmärkte und ihre Städte",
+      "known_at": 11
+    },
+    {
+      "name": "Lübecker Weihnachtsmarkt",
+      "facet": "Weihnachtsmärkte und ihre Städte",
+      "known_at": 12
+    },
+    {
+      "name": "Esslinger Mittelaltermarkt",
+      "facet": "Weihnachtsmärkte und ihre Städte",
+      "known_at": 13
+    },
+    {
+      "name": "Dortmunder Riesenweihnachtsbaum",
+      "facet": "Weihnachtsmärkte und ihre Städte",
+      "known_at": 12
+    },
+    {
+      "name": "Bautzener Wenzelsmarkt",
+      "facet": "Weihnachtsmärkte und ihre Städte",
+      "known_at": 14
+    },
+    {
+      "name": "Weihnachtsmarkt in der Ravennaschlucht",
+      "facet": "Weihnachtsmärkte und ihre Städte",
+      "known_at": 14
+    },
+    {
+      "name": "Glühweintasse",
+      "facet": "Weihnachtsmärkte und ihre Städte",
+      "known_at": 6
+    },
+    {
+      "name": "Bratwurst",
+      "facet": "Weihnachtsmärkte und ihre Städte",
+      "known_at": 2
+    },
+    {
+      "name": "Kinderkarussell",
+      "facet": "Weihnachtsmärkte und ihre Städte",
+      "known_at": 2
+    },
+    {
+      "name": "Dresdner Stollen",
+      "facet": "Weihnachtsgebäck und Süßes",
+      "known_at": 8
+    },
+    {
+      "name": "Quarkstollen",
+      "facet": "Weihnachtsgebäck und Süßes",
+      "known_at": 9
+    },
+    {
+      "name": "Weihnachtsente",
+      "facet": "Festessen an Heiligabend und Feiertagen",
+      "known_at": 4
+    },
+    {
+      "name": "Würstchen mit Kartoffelsalat",
+      "facet": "Festessen an Heiligabend und Feiertagen",
+      "known_at": 5
+    },
+    {
+      "name": "Karpfen blau",
+      "facet": "Festessen an Heiligabend und Feiertagen",
+      "known_at": 10
+    },
+    {
+      "name": "Kartoffelklöße",
+      "facet": "Festessen an Heiligabend und Feiertagen",
+      "known_at": 3
+    },
+    {
+      "name": "Rehbraten",
+      "facet": "Festessen an Heiligabend und Feiertagen",
+      "known_at": 8
+    },
+    {
+      "name": "Wildschweinbraten",
+      "facet": "Festessen an Heiligabend und Feiertagen",
+      "known_at": 7
+    },
+    {
+      "name": "Sauerbraten",
+      "facet": "Festessen an Heiligabend und Feiertagen",
+      "known_at": 9
+    },
+    {
+      "name": "Rinderrouladen",
+      "facet": "Festessen an Heiligabend und Feiertagen",
+      "known_at": 6
+    },
+    {
+      "name": "Maronen",
+      "facet": "Festessen an Heiligabend und Feiertagen",
+      "known_at": 7
+    },
+    {
+      "name": "Neunerlei",
+      "facet": "Festessen an Heiligabend und Feiertagen",
+      "known_at": 14
+    },
+    {
+      "name": "Heringssalat",
+      "facet": "Festessen an Heiligabend und Feiertagen",
+      "known_at": 12
+    },
+    {
+      "name": "Erster Weihnachtsfeiertag",
+      "facet": "Festessen an Heiligabend und Feiertagen",
+      "known_at": 3
+    },
+    {
+      "name": "Blaufichte",
+      "facet": "Weihnachtsbaum und Baumschmuck",
+      "known_at": 9
+    },
+    {
+      "name": "Tannennadeln",
+      "facet": "Weihnachtsbaum und Baumschmuck",
+      "known_at": 3
+    },
+    {
+      "name": "Lauscha",
+      "facet": "Weihnachtsbaum und Baumschmuck",
+      "known_at": 12
+    },
+    {
+      "name": "Lametta",
+      "facet": "Weihnachtsbaum und Baumschmuck",
+      "known_at": 6
+    },
+    {
+      "name": "Strohstern",
+      "facet": "Weihnachtsbaum und Baumschmuck",
+      "known_at": 4
+    },
+    {
+      "name": "Baumspitze",
+      "facet": "Weihnachtsbaum und Baumschmuck",
+      "known_at": 4
+    },
+    {
+      "name": "Lichterkette",
+      "facet": "Weihnachtsbaum und Baumschmuck",
+      "known_at": 2
+    },
+    {
+      "name": "Wachskerzen am Baum",
+      "facet": "Weihnachtsbaum und Baumschmuck",
+      "known_at": 8
+    },
+    {
+      "name": "Christbaumständer",
+      "facet": "Weihnachtsbaum und Baumschmuck",
+      "known_at": 5
+    },
+    {
+      "name": "Weihnachtsgurke",
+      "facet": "Weihnachtsbaum und Baumschmuck",
+      "known_at": 11
+    },
+    {
+      "name": "Äpfel als Baumschmuck",
+      "facet": "Weihnachtsbaum und Baumschmuck",
+      "known_at": 10
+    },
+    {
+      "name": "Mistelzweig",
+      "facet": "Weihnachtsbaum und Baumschmuck",
+      "known_at": 8
+    },
+    {
+      "name": "Paradiesbaum",
+      "facet": "Weihnachtsbaum und Baumschmuck",
+      "known_at": 14
+    },
+    {
+      "name": "Straßburg",
+      "facet": "Weihnachtsbaum und Baumschmuck",
+      "known_at": 13
+    },
+    {
+      "name": "Christbaumloben",
+      "facet": "Weihnachtsbaum und Baumschmuck",
+      "known_at": 14
+    },
+    {
+      "name": "„Stille Nacht, heilige Nacht“",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 3
+    },
+    {
+      "name": "„Alle Jahre wieder“",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 3
+    },
+    {
+      "name": "„Kling, Glöckchen, klingelingeling“",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 3
+    },
+    {
+      "name": "„Morgen kommt der Weihnachtsmann“",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 3
+    },
+    {
+      "name": "„Lasst uns froh und munter sein“",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 4
+    },
+    {
+      "name": "„Leise rieselt der Schnee“",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 4
+    },
+    {
+      "name": "„Schneeflöckchen, Weißröckchen“",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 4
+    },
+    {
+      "name": "Rolf Zuckowski",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 6
+    },
+    {
+      "name": "„O du fröhliche“",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 5
+    },
+    {
+      "name": "„Ihr Kinderlein, kommet“",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 5
+    },
+    {
+      "name": "„Morgen, Kinder, wird's was geben“",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 5
+    },
+    {
+      "name": "„Süßer die Glocken nie klingen“",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 6
+    },
+    {
+      "name": "„Wir sagen euch an den lieben Advent“",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 8
+    },
+    {
+      "name": "„Vom Himmel hoch, da komm ich her“",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 9
+    },
+    {
+      "name": "„Es ist ein Ros entsprungen“",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 10
+    },
+    {
+      "name": "„Macht hoch die Tür“",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 10
+    },
+    {
+      "name": "„Tochter Zion“",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 9
+    },
+    {
+      "name": "Dresdner Kreuzchor",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 13
+    },
+    {
+      "name": "„Hänsel und Gretel“ (Oper)",
+      "facet": "Weihnachtslieder und Weihnachtsmusik",
+      "known_at": 13
+    },
+    {
+      "name": "Christkind",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 2
+    },
+    {
+      "name": "Weihnachtsmann",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 1
+    },
+    {
+      "name": "Heiligabend",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 1
+    },
+    {
+      "name": "Bescherung",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 3
+    },
+    {
+      "name": "Glöckchen zur Bescherung",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 3
+    },
+    {
+      "name": "Weihnachtszimmer",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 9
+    },
+    {
+      "name": "Wunschzettel",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 2
+    },
+    {
+      "name": "Weihnachtspostfiliale Himmelpfort",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 11
+    },
+    {
+      "name": "Himmelsthür",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 14
+    },
+    {
+      "name": "Weihnachtsengel",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 3
+    },
+    {
+      "name": "Weihnachtskrippe",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 3
+    },
+    {
+      "name": "Krippenspiel",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 5
+    },
+    {
+      "name": "Weihnachtsgedicht",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 4
+    },
+    {
+      "name": "Geschenkpapier",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 2
+    },
+    {
+      "name": "Wichteln",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 6
+    },
+    {
+      "name": "Julklapp",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 12
+    },
+    {
+      "name": "Weihnachtskarte",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 3
+    },
+    {
+      "name": "Zweiter Weihnachtsfeiertag",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 4
+    },
+    {
+      "name": "Umtauschtag",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 10
+    },
+    {
+      "name": "Weihnachtsgeld",
+      "facet": "Christkind, Weihnachtsmann und Bescherung",
+      "known_at": 11
+    },
+    {
+      "name": "Nussknacker",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 2
+    },
+    {
+      "name": "Räuchermännchen",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 6
+    },
+    {
+      "name": "Räucherkerzen",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 6
+    },
+    {
+      "name": "Weihnachtspyramide",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 6
+    },
+    {
+      "name": "Schwibbogen",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 8
+    },
+    {
+      "name": "Lichterengel",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 11
+    },
+    {
+      "name": "Bergmann als Lichterfigur",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 12
+    },
+    {
+      "name": "Seiffen",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 11
+    },
+    {
+      "name": "Annaberg-Buchholz",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 13
+    },
+    {
+      "name": "Bergbau",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 10
+    },
+    {
+      "name": "„Glück auf!“",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 12
+    },
+    {
+      "name": "Reifendrehen",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 14
+    },
+    {
+      "name": "Spanbaum",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 13
+    },
+    {
+      "name": "Holzspielzeug",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 3
+    },
+    {
+      "name": "Herrnhuter Stern",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 9
+    },
+    {
+      "name": "Herrnhut",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 13
+    },
+    {
+      "name": "Plauener Spitze",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 13
+    },
+    {
+      "name": "Weihnachtsstern (Pflanze)",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 5
+    },
+    {
+      "name": "Mettenschicht",
+      "facet": "Erzgebirgische Volkskunst und Deko",
+      "known_at": 14
+    },
+    {
+      "name": "„Drei Haselnüsse für Aschenbrödel“",
+      "facet": "Weihnachtsfilme und TV-Traditionen",
+      "known_at": 5
+    },
+    {
+      "name": "Libuše Šafránková",
+      "facet": "Weihnachtsfilme und TV-Traditionen",
+      "known_at": 13
+    },
+    {
+      "name": "„Weihnachten bei Hoppenstedts“",
+      "facet": "Weihnachtsfilme und TV-Traditionen",
+      "known_at": 11
+    },
+    {
+      "name": "„Der kleine Lord“",
+      "facet": "Weihnachtsfilme und TV-Traditionen",
+      "known_at": 8
+    },
+    {
+      "name": "„Das fliegende Klassenzimmer“",
+      "facet": "Weihnachtsfilme und TV-Traditionen",
+      "known_at": 8
+    },
+    {
+      "name": "„Drei Männer im Schnee“",
+      "facet": "Weihnachtsfilme und TV-Traditionen",
+      "known_at": 12
+    },
+    {
+      "name": "„Die Weihnachtsgans Auguste“",
+      "facet": "Weihnachtsfilme und TV-Traditionen",
+      "known_at": 13
+    },
+    {
+      "name": "„Ein Herz und eine Seele“",
+      "facet": "Weihnachtsfilme und TV-Traditionen",
+      "known_at": 12
+    },
+    {
+      "name": "ARD-Weihnachtsmärchen",
+      "facet": "Weihnachtsfilme und TV-Traditionen",
+      "known_at": 9
+    },
+    {
+      "name": "DEFA-Märchenfilme",
+      "facet": "Weihnachtsfilme und TV-Traditionen",
+      "known_at": 11
+    },
+    {
+      "name": "„Wir warten aufs Christkind“",
+      "facet": "Weihnachtsfilme und TV-Traditionen",
+      "known_at": 10
+    },
+    {
+      "name": "Augsburger Puppenkiste",
+      "facet": "Weihnachtsfilme und TV-Traditionen",
+      "known_at": 9
+    },
+    {
+      "name": "„Das Traumschiff“",
+      "facet": "Weihnachtsfilme und TV-Traditionen",
+      "known_at": 9
+    },
+    {
+      "name": "Weihnachtsansprache des Bundespräsidenten",
+      "facet": "Weihnachtsfilme und TV-Traditionen",
+      "known_at": 9
+    },
+    {
+      "name": "Barbarazweige",
+      "facet": "Geschichte deutscher Weihnachtsbräuche",
+      "known_at": 10
+    },
+    {
+      "name": "Christmette",
+      "facet": "Geschichte deutscher Weihnachtsbräuche",
+      "known_at": 8
+    },
+    {
+      "name": "Reformation",
+      "facet": "Geschichte deutscher Weihnachtsbräuche",
+      "known_at": 10
+    },
+    {
+      "name": "Paradiesspiel",
+      "facet": "Geschichte deutscher Weihnachtsbräuche",
+      "known_at": 14
+    },
+    {
+      "name": "Kurrendesänger",
+      "facet": "Geschichte deutscher Weihnachtsbräuche",
+      "known_at": 14
+    },
+    {
+      "name": "Liselotte von der Pfalz",
+      "facet": "Geschichte deutscher Weihnachtsbräuche",
+      "known_at": 14
+    },
+    {
+      "name": "Prinz Albert",
+      "facet": "Geschichte deutscher Weihnachtsbräuche",
+      "known_at": 13
+    },
+    {
+      "name": "Friedenslicht aus Bethlehem",
+      "facet": "Geschichte deutscher Weihnachtsbräuche",
+      "known_at": 11
+    },
+    {
+      "name": "Jahresendflügelfigur",
+      "facet": "Geschichte deutscher Weihnachtsbräuche",
+      "known_at": 12
+    },
+    {
+      "name": "Thomasnacht",
+      "facet": "Geschichte deutscher Weihnachtsbräuche",
+      "known_at": 14
+    },
+    {
+      "name": "Ladenschluss an Heiligabend",
+      "facet": "Geschichte deutscher Weihnachtsbräuche",
+      "known_at": 8
+    },
+    {
+      "name": "Silvester",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 1
+    },
+    {
+      "name": "Silvesterfeuerwerk",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 1
+    },
+    {
+      "name": "Wunderkerze",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 3
+    },
+    {
+      "name": "Bleigießen",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 6
+    },
+    {
+      "name": "Wachsgießen",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 8
+    },
+    {
+      "name": "Fondue",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 6
+    },
+    {
+      "name": "„Dinner for One“",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 8
+    },
+    {
+      "name": "„Same procedure as every year“",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 10
+    },
+    {
+      "name": "Freddie Frinton",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 13
+    },
+    {
+      "name": "„Guten Rutsch“",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 5
+    },
+    {
+      "name": "Glücksschwein",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 3
+    },
+    {
+      "name": "Schornsteinfeger",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 5
+    },
+    {
+      "name": "Glücksklee",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 4
+    },
+    {
+      "name": "Fliegenpilz als Glücksbringer",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 6
+    },
+    {
+      "name": "Silvesterparty am Brandenburger Tor",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 7
+    },
+    {
+      "name": "Neujahrsansprache des Bundeskanzlers",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 10
+    },
+    {
+      "name": "Neujahrsspringen in Garmisch-Partenkirchen",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 10
+    },
+    {
+      "name": "Rauhnächte",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 11
+    },
+    {
+      "name": "Heilige Drei Könige",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 4
+    },
+    {
+      "name": "Sternsinger",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 6
+    },
+    {
+      "name": "C+M+B",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 8
+    },
+    {
+      "name": "Christbaumverbrennen",
+      "facet": "Rund um Silvester bis Dreikönig",
+      "known_at": 9
+    }
+  ]
+}

@@ -1,0 +1,613 @@
+{
+  "subcategory": "holidays-through-the-year",
+  "facets": [
+    "Advent und Weihnachtszeit",
+    "Silvester und Neujahr",
+    "Karneval, Fasching und Fastnacht",
+    "Ostern und Osterbräuche",
+    "Mai- und Frühlingsbräuche",
+    "Pfingsten und Sommerfeste",
+    "Erntedank, Kirmes und Herbstfeste",
+    "Sankt Martin und Herbstumzüge",
+    "Nikolaus und Wintergestalten",
+    "Gedenk- und Nationalfeiertage",
+    "Familienfeste im Lebenslauf",
+    "Festessen und Feiertagsgebäck"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Vierblättriges Kleeblatt",
+      "facet": "Silvester und Neujahr",
+      "known_at": 3
+    },
+    {
+      "name": "Gute Vorsätze",
+      "facet": "Silvester und Neujahr",
+      "known_at": 5
+    },
+    {
+      "name": "Papst Silvester I.",
+      "facet": "Silvester und Neujahr",
+      "known_at": 12
+    },
+    {
+      "name": "Böller",
+      "facet": "Silvester und Neujahr",
+      "known_at": 4
+    },
+    {
+      "name": "Tischfeuerwerk",
+      "facet": "Silvester und Neujahr",
+      "known_at": 7
+    },
+    {
+      "name": "Silvesterlauf",
+      "facet": "Silvester und Neujahr",
+      "known_at": 11
+    },
+    {
+      "name": "Neujahrstag",
+      "facet": "Silvester und Neujahr",
+      "known_at": 2
+    },
+    {
+      "name": "Elfter Elfter",
+      "facet": "Karneval, Fasching und Fastnacht",
+      "known_at": 7
+    },
+    {
+      "name": "Kölle Alaaf",
+      "facet": "Karneval, Fasching und Fastnacht",
+      "known_at": 7
+    },
+    {
+      "name": "Funkenmariechen",
+      "facet": "Karneval, Fasching und Fastnacht",
+      "known_at": 9
+    },
+    {
+      "name": "Rottweiler Narrensprung",
+      "facet": "Karneval, Fasching und Fastnacht",
+      "known_at": 13
+    },
+    {
+      "name": "Mainz bleibt Mainz",
+      "facet": "Karneval, Fasching und Fastnacht",
+      "known_at": 11
+    },
+    {
+      "name": "Ostereier",
+      "facet": "Ostern und Osterbräuche",
+      "known_at": 1
+    },
+    {
+      "name": "Ostereiersuche",
+      "facet": "Ostern und Osterbräuche",
+      "known_at": 1
+    },
+    {
+      "name": "Karfreitag",
+      "facet": "Ostern und Osterbräuche",
+      "known_at": 6
+    },
+    {
+      "name": "Gründonnerstag",
+      "facet": "Ostern und Osterbräuche",
+      "known_at": 7
+    },
+    {
+      "name": "Ostermontag",
+      "facet": "Ostern und Osterbräuche",
+      "known_at": 4
+    },
+    {
+      "name": "Osterbrunnen",
+      "facet": "Ostern und Osterbräuche",
+      "known_at": 11
+    },
+    {
+      "name": "Eierfärben",
+      "facet": "Ostern und Osterbräuche",
+      "known_at": 2
+    },
+    {
+      "name": "Saalfelder Ostereierbaum",
+      "facet": "Ostern und Osterbräuche",
+      "known_at": 14
+    },
+    {
+      "name": "Sorbische Ostereier",
+      "facet": "Ostern und Osterbräuche",
+      "known_at": 12
+    },
+    {
+      "name": "Osterreiten",
+      "facet": "Ostern und Osterbräuche",
+      "known_at": 13
+    },
+    {
+      "name": "Eiertitschen",
+      "facet": "Ostern und Osterbräuche",
+      "known_at": 7
+    },
+    {
+      "name": "Palmsonntag",
+      "facet": "Ostern und Osterbräuche",
+      "known_at": 8
+    },
+    {
+      "name": "Karwoche",
+      "facet": "Ostern und Osterbräuche",
+      "known_at": 9
+    },
+    {
+      "name": "Glocken fliegen nach Rom",
+      "facet": "Ostern und Osterbräuche",
+      "known_at": 12
+    },
+    {
+      "name": "Osterwasser",
+      "facet": "Ostern und Osterbräuche",
+      "known_at": 13
+    },
+    {
+      "name": "Eierlauf",
+      "facet": "Ostern und Osterbräuche",
+      "known_at": 3
+    },
+    {
+      "name": "Maikönig",
+      "facet": "Mai- und Frühlingsbräuche",
+      "known_at": 11
+    },
+    {
+      "name": "Mailiebchen",
+      "facet": "Mai- und Frühlingsbräuche",
+      "known_at": 13
+    },
+    {
+      "name": "Maibaumklauen",
+      "facet": "Mai- und Frühlingsbräuche",
+      "known_at": 10
+    },
+    {
+      "name": "Muttertag",
+      "facet": "Mai- und Frühlingsbräuche",
+      "known_at": 2
+    },
+    {
+      "name": "Stuttgarter Frühlingsfest",
+      "facet": "Mai- und Frühlingsbräuche",
+      "known_at": 11,
+      "retired": "unaskable: Too regional and uncertain facts (origin/history of the Stuttgart spring fest); no fair question for most players."
+    },
+    {
+      "name": "Sommertagszug",
+      "facet": "Mai- und Frühlingsbräuche",
+      "known_at": 14
+    },
+    {
+      "name": "Eisenacher Sommergewinn",
+      "facet": "Mai- und Frühlingsbräuche",
+      "known_at": 14
+    },
+    {
+      "name": "Winteraustreiben",
+      "facet": "Mai- und Frühlingsbräuche",
+      "known_at": 11
+    },
+    {
+      "name": "Spargelzeit",
+      "facet": "Mai- und Frühlingsbräuche",
+      "known_at": 8
+    },
+    {
+      "name": "Werderaner Baumblütenfest",
+      "facet": "Mai- und Frühlingsbräuche",
+      "known_at": 13
+    },
+    {
+      "name": "Pfingstmontag",
+      "facet": "Pfingsten und Sommerfeste",
+      "known_at": 5
+    },
+    {
+      "name": "Pfingstrose",
+      "facet": "Pfingsten und Sommerfeste",
+      "known_at": 6
+    },
+    {
+      "name": "Kötztinger Pfingstritt",
+      "facet": "Pfingsten und Sommerfeste",
+      "known_at": 14
+    },
+    {
+      "name": "Pfingstl",
+      "facet": "Pfingsten und Sommerfeste",
+      "known_at": 14
+    },
+    {
+      "name": "Johannisfeuer",
+      "facet": "Pfingsten und Sommerfeste",
+      "known_at": 11
+    },
+    {
+      "name": "Fronleichnam",
+      "facet": "Pfingsten und Sommerfeste",
+      "known_at": 9
+    },
+    {
+      "name": "Blumenteppich",
+      "facet": "Pfingsten und Sommerfeste",
+      "known_at": 11
+    },
+    {
+      "name": "Kinderzeche Dinkelsbühl",
+      "facet": "Pfingsten und Sommerfeste",
+      "known_at": 14
+    },
+    {
+      "name": "Ulmer Schwörmontag",
+      "facet": "Pfingsten und Sommerfeste",
+      "known_at": 14
+    },
+    {
+      "name": "Fischerstechen",
+      "facet": "Pfingsten und Sommerfeste",
+      "known_at": 13
+    },
+    {
+      "name": "Christi Himmelfahrt",
+      "facet": "Pfingsten und Sommerfeste",
+      "known_at": 7
+    },
+    {
+      "name": "O’zapft is",
+      "facet": "Erntedank, Kirmes und Herbstfeste",
+      "known_at": 8
+    },
+    {
+      "name": "Winzerfest",
+      "facet": "Erntedank, Kirmes und Herbstfeste",
+      "known_at": 9
+    },
+    {
+      "name": "Weimarer Zwiebelmarkt",
+      "facet": "Erntedank, Kirmes und Herbstfeste",
+      "known_at": 13
+    },
+    {
+      "name": "Kartoffelfeuer",
+      "facet": "Erntedank, Kirmes und Herbstfeste",
+      "known_at": 9
+    },
+    {
+      "name": "Ludwigsburger Kürbisausstellung",
+      "facet": "Erntedank, Kirmes und Herbstfeste",
+      "known_at": 13
+    },
+    {
+      "name": "Sankt Martin",
+      "facet": "Sankt Martin und Herbstumzüge",
+      "known_at": 2
+    },
+    {
+      "name": "Laternenumzug",
+      "facet": "Sankt Martin und Herbstumzüge",
+      "known_at": 2
+    },
+    {
+      "name": "Martinsfeuer",
+      "facet": "Sankt Martin und Herbstumzüge",
+      "known_at": 6
+    },
+    {
+      "name": "Ich geh mit meiner Laterne",
+      "facet": "Sankt Martin und Herbstumzüge",
+      "known_at": 3
+    },
+    {
+      "name": "Mantelteilung",
+      "facet": "Sankt Martin und Herbstumzüge",
+      "known_at": 3
+    },
+    {
+      "name": "Martinssingen",
+      "facet": "Sankt Martin und Herbstumzüge",
+      "known_at": 7
+    },
+    {
+      "name": "Rübengeistern",
+      "facet": "Sankt Martin und Herbstumzüge",
+      "known_at": 13
+    },
+    {
+      "name": "Kürbislaterne",
+      "facet": "Sankt Martin und Herbstumzüge",
+      "known_at": 2
+    },
+    {
+      "name": "Tours",
+      "facet": "Sankt Martin und Herbstumzüge",
+      "known_at": 12
+    },
+    {
+      "name": "Martinsspiel",
+      "facet": "Sankt Martin und Herbstumzüge",
+      "known_at": 7
+    },
+    {
+      "name": "Halloween",
+      "facet": "Sankt Martin und Herbstumzüge",
+      "known_at": 2
+    },
+    {
+      "name": "Allerheiligen",
+      "facet": "Sankt Martin und Herbstumzüge",
+      "known_at": 7
+    },
+    {
+      "name": "Allerseelen",
+      "facet": "Sankt Martin und Herbstumzüge",
+      "known_at": 11
+    },
+    {
+      "name": "Hubertustag",
+      "facet": "Sankt Martin und Herbstumzüge",
+      "known_at": 13
+    },
+    {
+      "name": "Leonhardiritt",
+      "facet": "Sankt Martin und Herbstumzüge",
+      "known_at": 14
+    },
+    {
+      "name": "Lampion",
+      "facet": "Sankt Martin und Herbstumzüge",
+      "known_at": 3
+    },
+    {
+      "name": "Römischer Soldat",
+      "facet": "Sankt Martin und Herbstumzüge",
+      "known_at": 8
+    },
+    {
+      "name": "Nikolaus",
+      "facet": "Nikolaus und Wintergestalten",
+      "known_at": 1
+    },
+    {
+      "name": "Perchten",
+      "facet": "Nikolaus und Wintergestalten",
+      "known_at": 12
+    },
+    {
+      "name": "Klaasohm",
+      "facet": "Nikolaus und Wintergestalten",
+      "known_at": 15
+    },
+    {
+      "name": "Wilde Jagd",
+      "facet": "Nikolaus und Wintergestalten",
+      "known_at": 13
+    },
+    {
+      "name": "Schneemann",
+      "facet": "Nikolaus und Wintergestalten",
+      "known_at": 1
+    },
+    {
+      "name": "9. November",
+      "facet": "Gedenk- und Nationalfeiertage",
+      "known_at": 10
+    },
+    {
+      "name": "Tag der Arbeit",
+      "facet": "Gedenk- und Nationalfeiertage",
+      "known_at": 5
+    },
+    {
+      "name": "Buß- und Bettag",
+      "facet": "Gedenk- und Nationalfeiertage",
+      "known_at": 12
+    },
+    {
+      "name": "Volkstrauertag",
+      "facet": "Gedenk- und Nationalfeiertage",
+      "known_at": 11
+    },
+    {
+      "name": "Holocaust-Gedenktag",
+      "facet": "Gedenk- und Nationalfeiertage",
+      "known_at": 11
+    },
+    {
+      "name": "20. Juli 1944",
+      "facet": "Gedenk- und Nationalfeiertage",
+      "known_at": 12
+    },
+    {
+      "name": "8. Mai 1945",
+      "facet": "Gedenk- und Nationalfeiertage",
+      "known_at": 10
+    },
+    {
+      "name": "Weltkindertag",
+      "facet": "Gedenk- und Nationalfeiertage",
+      "known_at": 6
+    },
+    {
+      "name": "Internationaler Frauentag",
+      "facet": "Gedenk- und Nationalfeiertage",
+      "known_at": 8
+    },
+    {
+      "name": "Tag des Grundgesetzes",
+      "facet": "Gedenk- und Nationalfeiertage",
+      "known_at": 12
+    },
+    {
+      "name": "Mariä Himmelfahrt",
+      "facet": "Gedenk- und Nationalfeiertage",
+      "known_at": 12
+    },
+    {
+      "name": "Brückentag",
+      "facet": "Gedenk- und Nationalfeiertage",
+      "known_at": 8
+    },
+    {
+      "name": "Gesetzlicher Feiertag",
+      "facet": "Gedenk- und Nationalfeiertage",
+      "known_at": 6
+    },
+    {
+      "name": "Tanzverbot",
+      "facet": "Gedenk- und Nationalfeiertage",
+      "known_at": 11
+    },
+    {
+      "name": "Taufe",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 3
+    },
+    {
+      "name": "Erstkommunion",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 7
+    },
+    {
+      "name": "Konfirmation",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 8
+    },
+    {
+      "name": "Firmung",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 10
+    },
+    {
+      "name": "Einschulung",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 2
+    },
+    {
+      "name": "Polterabend",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 8
+    },
+    {
+      "name": "Junggesellenabschied",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 9
+    },
+    {
+      "name": "Baumstammsägen",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 11
+    },
+    {
+      "name": "Brautentführung",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 12
+    },
+    {
+      "name": "Silberhochzeit",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 7
+    },
+    {
+      "name": "Goldene Hochzeit",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 5
+    },
+    {
+      "name": "Abiball",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 9
+    },
+    {
+      "name": "Treppefegen zum 30. Geburtstag",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 11
+    },
+    {
+      "name": "Reinfeiern",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 9
+    },
+    {
+      "name": "Topfschlagen",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 3
+    },
+    {
+      "name": "Namenstag",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 9
+    },
+    {
+      "name": "Geburtstagskranz",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 7
+    },
+    {
+      "name": "Leichenschmaus",
+      "facet": "Familienfeste im Lebenslauf",
+      "known_at": 12
+    },
+    {
+      "name": "Weihnachtskarpfen",
+      "facet": "Festessen und Feiertagsgebäck",
+      "known_at": 10
+    },
+    {
+      "name": "Fischbrötchen am Karfreitag",
+      "facet": "Festessen und Feiertagsgebäck",
+      "known_at": 10
+    }
+  ]
+}

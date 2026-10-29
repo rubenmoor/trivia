@@ -1,0 +1,1207 @@
+{
+  "subcategory": "rivers-lakes-and-coasts",
+  "facets": [
+    "Große Ströme: Rhein, Elbe, Donau",
+    "Nebenflüsse und kleinere Flüsse",
+    "Quellen, Mündungen und Wasserscheiden",
+    "Seen in den Alpen und im Voralpenland",
+    "Seenplatten und Seen im Norden",
+    "Stauseen, Talsperren und Baggerseen",
+    "Nordseeküste und Wattenmeer",
+    "Ostseeküste, Bodden und Steilküsten",
+    "Deutsche Inseln und Halligen",
+    "Kanäle, Schleusen und Binnenschifffahrt",
+    "Städte an Fluss und Meer",
+    "Sagen, Lieder und Hochwasser am Wasser"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 5,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Oberes Mittelrheintal",
+      "facet": "Große Ströme: Rhein, Elbe, Donau",
+      "known_at": 10
+    },
+    {
+      "name": "Rheinknie",
+      "facet": "Große Ströme: Rhein, Elbe, Donau",
+      "known_at": 13
+    },
+    {
+      "name": "Binger Loch",
+      "facet": "Große Ströme: Rhein, Elbe, Donau",
+      "known_at": 14
+    },
+    {
+      "name": "Burg Pfalzgrafenstein",
+      "facet": "Große Ströme: Rhein, Elbe, Donau",
+      "known_at": 12
+    },
+    {
+      "name": "Rheinromantik",
+      "facet": "Große Ströme: Rhein, Elbe, Donau",
+      "known_at": 12
+    },
+    {
+      "name": "Rheinwein",
+      "facet": "Große Ströme: Rhein, Elbe, Donau",
+      "known_at": 11
+    },
+    {
+      "name": "Oberrheinische Tiefebene",
+      "facet": "Große Ströme: Rhein, Elbe, Donau",
+      "known_at": 11
+    },
+    {
+      "name": "Johann Gottfried Tulla",
+      "facet": "Große Ströme: Rhein, Elbe, Donau",
+      "known_at": 15
+    },
+    {
+      "name": "Elbsandsteingebirge",
+      "facet": "Große Ströme: Rhein, Elbe, Donau",
+      "known_at": 8
+    },
+    {
+      "name": "Bastei",
+      "facet": "Große Ströme: Rhein, Elbe, Donau",
+      "known_at": 10
+    },
+    {
+      "name": "Elbtalaue",
+      "facet": "Große Ströme: Rhein, Elbe, Donau",
+      "known_at": 13
+    },
+    {
+      "name": "Blaues Wunder",
+      "facet": "Große Ströme: Rhein, Elbe, Donau",
+      "known_at": 11
+    },
+    {
+      "name": "Donaudurchbruch bei Weltenburg",
+      "facet": "Große Ströme: Rhein, Elbe, Donau",
+      "known_at": 13
+    },
+    {
+      "name": "Kloster Weltenburg",
+      "facet": "Große Ströme: Rhein, Elbe, Donau",
+      "known_at": 13
+    },
+    {
+      "name": "Walhalla",
+      "facet": "Große Ströme: Rhein, Elbe, Donau",
+      "known_at": 12
+    },
+    {
+      "name": "Schwarzes Meer",
+      "facet": "Große Ströme: Rhein, Elbe, Donau",
+      "known_at": 7
+    },
+    {
+      "name": "Ems",
+      "facet": "Nebenflüsse und kleinere Flüsse",
+      "known_at": 9
+    },
+    {
+      "name": "Oder",
+      "facet": "Nebenflüsse und kleinere Flüsse",
+      "known_at": 7
+    },
+    {
+      "name": "Neiße",
+      "facet": "Nebenflüsse und kleinere Flüsse",
+      "known_at": 10
+    },
+    {
+      "name": "Saale",
+      "facet": "Nebenflüsse und kleinere Flüsse",
+      "known_at": 9
+    },
+    {
+      "name": "Havel",
+      "facet": "Nebenflüsse und kleinere Flüsse",
+      "known_at": 9
+    },
+    {
+      "name": "Inn",
+      "facet": "Nebenflüsse und kleinere Flüsse",
+      "known_at": 10
+    },
+    {
+      "name": "Lech",
+      "facet": "Nebenflüsse und kleinere Flüsse",
+      "known_at": 11
+    },
+    {
+      "name": "Ruhr",
+      "facet": "Nebenflüsse und kleinere Flüsse",
+      "known_at": 7
+    },
+    {
+      "name": "Lahn",
+      "facet": "Nebenflüsse und kleinere Flüsse",
+      "known_at": 12
+    },
+    {
+      "name": "Fulda",
+      "facet": "Nebenflüsse und kleinere Flüsse",
+      "known_at": 11
+    },
+    {
+      "name": "Werra",
+      "facet": "Nebenflüsse und kleinere Flüsse",
+      "known_at": 11
+    },
+    {
+      "name": "Altmühl",
+      "facet": "Nebenflüsse und kleinere Flüsse",
+      "known_at": 12
+    },
+    {
+      "name": "Saarschleife",
+      "facet": "Nebenflüsse und kleinere Flüsse",
+      "known_at": 12
+    },
+    {
+      "name": "Wupper",
+      "facet": "Nebenflüsse und kleinere Flüsse",
+      "known_at": 11
+    },
+    {
+      "name": "Nahe",
+      "facet": "Nebenflüsse und kleinere Flüsse",
+      "known_at": 13
+    },
+    {
+      "name": "Moselschleife",
+      "facet": "Nebenflüsse und kleinere Flüsse",
+      "known_at": 11
+    },
+    {
+      "name": "Donauquelle",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 9
+    },
+    {
+      "name": "Donaueschingen",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 11
+    },
+    {
+      "name": "Brigach",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 11
+    },
+    {
+      "name": "Breg",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 12
+    },
+    {
+      "name": "Donauversickerung",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 13
+    },
+    {
+      "name": "Aachtopf",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 14
+    },
+    {
+      "name": "Blautopf",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 11
+    },
+    {
+      "name": "Quelltopf",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 13
+    },
+    {
+      "name": "Weserstein",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 13
+    },
+    {
+      "name": "Elbquelle",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 12
+    },
+    {
+      "name": "Spreequelle",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 14
+    },
+    {
+      "name": "Europäische Hauptwasserscheide",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 12
+    },
+    {
+      "name": "Wasserscheide",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 10
+    },
+    {
+      "name": "Trichtermündung",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 11
+    },
+    {
+      "name": "Ästuar",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 13
+    },
+    {
+      "name": "Elbmündung",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 9
+    },
+    {
+      "name": "Dollart",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 14
+    },
+    {
+      "name": "Kugelbake",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 13
+    },
+    {
+      "name": "Mainmündung",
+      "facet": "Quellen, Mündungen und Wasserscheiden",
+      "known_at": 11
+    },
+    {
+      "name": "Chiemsee",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 7
+    },
+    {
+      "name": "Königssee",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 8
+    },
+    {
+      "name": "Starnberger See",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 9
+    },
+    {
+      "name": "Ammersee",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 11
+    },
+    {
+      "name": "Tegernsee",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 10
+    },
+    {
+      "name": "Walchensee",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 12
+    },
+    {
+      "name": "Kochelsee",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 13
+    },
+    {
+      "name": "Schliersee",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 13
+    },
+    {
+      "name": "Eibsee",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 12
+    },
+    {
+      "name": "Staffelsee",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 14
+    },
+    {
+      "name": "Obersee",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 14
+    },
+    {
+      "name": "Fraueninsel",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 11
+    },
+    {
+      "name": "Insel Mainau",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 9
+    },
+    {
+      "name": "St. Bartholomä",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 11
+    },
+    {
+      "name": "Echo am Königssee",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 11
+    },
+    {
+      "name": "Roseninsel",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 14
+    },
+    {
+      "name": "Pfahlbauten Unteruhldingen",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 11
+    },
+    {
+      "name": "Alpsee",
+      "facet": "Seen in den Alpen und im Voralpenland",
+      "known_at": 13
+    },
+    {
+      "name": "Mecklenburgische Seenplatte",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 9
+    },
+    {
+      "name": "Holsteinische Schweiz",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 12
+    },
+    {
+      "name": "Großer Plöner See",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 12
+    },
+    {
+      "name": "Schweriner See",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 11
+    },
+    {
+      "name": "Steinhuder Meer",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 10
+    },
+    {
+      "name": "Insel Wilhelmstein",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 14
+    },
+    {
+      "name": "Dümmer",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 13
+    },
+    {
+      "name": "Wannsee",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 8
+    },
+    {
+      "name": "Großer Müggelsee",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 11
+    },
+    {
+      "name": "Scharmützelsee",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 14
+    },
+    {
+      "name": "Zwischenahner Meer",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 14
+    },
+    {
+      "name": "Ratzeburger See",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 13
+    },
+    {
+      "name": "Schaalsee",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 14
+    },
+    {
+      "name": "Stechlinsee",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 14
+    },
+    {
+      "name": "Werbellinsee",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 14
+    },
+    {
+      "name": "Toteissee",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 14
+    },
+    {
+      "name": "Rinnensee",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 13
+    },
+    {
+      "name": "Eiszeit",
+      "facet": "Seenplatten und Seen im Norden",
+      "known_at": 5
+    },
+    {
+      "name": "Edersee",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 10
+    },
+    {
+      "name": "Edersee-Atlantis",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 14
+    },
+    {
+      "name": "Möhnetalsperre",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 13
+    },
+    {
+      "name": "Bleilochtalsperre",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 14
+    },
+    {
+      "name": "Rappbodetalsperre",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 13
+    },
+    {
+      "name": "Titan-RT",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 13
+    },
+    {
+      "name": "Forggensee",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 13
+    },
+    {
+      "name": "Sylvensteinspeicher",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 14
+    },
+    {
+      "name": "Biggesee",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 13
+    },
+    {
+      "name": "Rursee",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 13
+    },
+    {
+      "name": "Schluchsee",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 13
+    },
+    {
+      "name": "Großer Brombachsee",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 13
+    },
+    {
+      "name": "Fränkisches Seenland",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 12
+    },
+    {
+      "name": "Lausitzer Seenland",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 12
+    },
+    {
+      "name": "Leipziger Neuseenland",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 13
+    },
+    {
+      "name": "Cospudener See",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 14
+    },
+    {
+      "name": "Tagebausee",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 11
+    },
+    {
+      "name": "Baggersee",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 6
+    },
+    {
+      "name": "Kiesgrube",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 8
+    },
+    {
+      "name": "Staumauer",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 6
+    },
+    {
+      "name": "Talsperre",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 8
+    },
+    {
+      "name": "Trinkwassertalsperre",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 11
+    },
+    {
+      "name": "Pumpspeicherkraftwerk",
+      "facet": "Stauseen, Talsperren und Baggerseen",
+      "known_at": 11
+    },
+    {
+      "name": "Nationalpark Wattenmeer",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 8
+    },
+    {
+      "name": "Ebbe",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 3
+    },
+    {
+      "name": "Flut",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 3
+    },
+    {
+      "name": "Gezeiten",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 7
+    },
+    {
+      "name": "Priel",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 10
+    },
+    {
+      "name": "Wattwanderung",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 5
+    },
+    {
+      "name": "Wattführer",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 8
+    },
+    {
+      "name": "Wattwurm",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 5
+    },
+    {
+      "name": "Schlick",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 7
+    },
+    {
+      "name": "Seehund",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 3
+    },
+    {
+      "name": "Seehundstation Friedrichskoog",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 12
+    },
+    {
+      "name": "Kegelrobbe",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 9
+    },
+    {
+      "name": "Nordseekrabbe",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 6
+    },
+    {
+      "name": "Krabbenkutter",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 8
+    },
+    {
+      "name": "Austernfischer",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 11
+    },
+    {
+      "name": "Salzwiese",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 11
+    },
+    {
+      "name": "Deich",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 4
+    },
+    {
+      "name": "Lahnung",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 14
+    },
+    {
+      "name": "Siel",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 13
+    },
+    {
+      "name": "Leuchtturm Westerhever",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 12
+    },
+    {
+      "name": "Jadebusen",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 12
+    },
+    {
+      "name": "Ostfriesland",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 7
+    },
+    {
+      "name": "Nordfriesland",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 9
+    },
+    {
+      "name": "Dithmarschen",
+      "facet": "Nordseeküste und Wattenmeer",
+      "known_at": 13
+    },
+    {
+      "name": "Bodden",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 11
+    },
+    {
+      "name": "Fischland-Darß-Zingst",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 11
+    },
+    {
+      "name": "Weststrand Darß",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 13
+    },
+    {
+      "name": "Windflüchter",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 12
+    },
+    {
+      "name": "Kreidefelsen auf Rügen",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 8
+    },
+    {
+      "name": "Königsstuhl",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 11
+    },
+    {
+      "name": "Nationalpark Jasmund",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 12
+    },
+    {
+      "name": "Caspar David Friedrich",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 11
+    },
+    {
+      "name": "Brodtener Steilufer",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 14
+    },
+    {
+      "name": "Steilküste",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 7
+    },
+    {
+      "name": "Strandkorb",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 4
+    },
+    {
+      "name": "Bernstein",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 6
+    },
+    {
+      "name": "Seebrücke",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 8
+    },
+    {
+      "name": "Bäderarchitektur",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 13
+    },
+    {
+      "name": "Ostseebad Binz",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 11
+    },
+    {
+      "name": "Heiligendamm",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 12
+    },
+    {
+      "name": "Förde",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 10
+    },
+    {
+      "name": "Kieler Förde",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 10
+    },
+    {
+      "name": "Schlei",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 13
+    },
+    {
+      "name": "Lübecker Bucht",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 11
+    },
+    {
+      "name": "Stettiner Haff",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 13
+    },
+    {
+      "name": "Rasender Roland",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 12
+    },
+    {
+      "name": "Kranichrast",
+      "facet": "Ostseeküste, Bodden und Steilküsten",
+      "known_at": 12
+    },
+    {
+      "name": "Fehmarn",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 9
+    },
+    {
+      "name": "Lange Anna",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 11
+    },
+    {
+      "name": "Helgoländer Düne",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 13
+    },
+    {
+      "name": "Lummensprung",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 13
+    },
+    {
+      "name": "Juist",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 10
+    },
+    {
+      "name": "Langeoog",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 10
+    },
+    {
+      "name": "Spiekeroog",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 11
+    },
+    {
+      "name": "Wangerooge",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 11
+    },
+    {
+      "name": "Baltrum",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 12
+    },
+    {
+      "name": "Ostfriesische Inseln",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 8
+    },
+    {
+      "name": "Nordfriesische Inseln",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 10
+    },
+    {
+      "name": "Föhr",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 10
+    },
+    {
+      "name": "Amrum",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 10
+    },
+    {
+      "name": "Pellworm",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 12
+    },
+    {
+      "name": "Hiddensee",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 11
+    },
+    {
+      "name": "Insel Poel",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 13
+    },
+    {
+      "name": "Neuwerk",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 13
+    },
+    {
+      "name": "Hallig",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 9
+    },
+    {
+      "name": "Hallig Hooge",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 12
+    },
+    {
+      "name": "Warft",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 11
+    },
+    {
+      "name": "Hindenburgdamm",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 11
+    },
+    {
+      "name": "Fehmarnsundbrücke",
+      "facet": "Deutsche Inseln und Halligen",
+      "known_at": 12
+    },
+    {
+      "name": "Nord-Ostsee-Kanal",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 9
+    },
+    {
+      "name": "Mittellandkanal",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 11
+    },
+    {
+      "name": "Main-Donau-Kanal",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 11
+    },
+    {
+      "name": "Dortmund-Ems-Kanal",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 12
+    },
+    {
+      "name": "Elbe-Lübeck-Kanal",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 14
+    },
+    {
+      "name": "Rhein-Herne-Kanal",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 13
+    },
+    {
+      "name": "Teltowkanal",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 14
+    },
+    {
+      "name": "Ludwig-Donau-Main-Kanal",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 14
+    },
+    {
+      "name": "Fossa Carolina",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 14
+    },
+    {
+      "name": "Schleuse",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 6
+    },
+    {
+      "name": "Schleuse Kiel-Holtenau",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 13
+    },
+    {
+      "name": "Schiffshebewerk",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 10
+    },
+    {
+      "name": "Schiffshebewerk Niederfinow",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 13
+    },
+    {
+      "name": "Schiffshebewerk Scharnebeck",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 14
+    },
+    {
+      "name": "Wasserstraßenkreuz Magdeburg",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 12
+    },
+    {
+      "name": "Rendsburger Schwebefähre",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 13
+    },
+    {
+      "name": "Binnenschiff",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 7
+    },
+    {
+      "name": "Schubverband",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 13
+    },
+    {
+      "name": "Treidelpfad",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 13
+    },
+    {
+      "name": "Duisburger Hafen",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 11
+    },
+    {
+      "name": "Rheinfähre",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 8
+    },
+    {
+      "name": "Köln-Düsseldorfer",
+      "facet": "Kanäle, Schleusen und Binnenschifffahrt",
+      "known_at": 13
+    },
+    {
+      "name": "Passau",
+      "facet": "Städte an Fluss und Meer",
+      "known_at": 9
+    },
+    {
+      "name": "Koblenz",
+      "facet": "Städte an Fluss und Meer",
+      "known_at": 10
+    },
+    {
+      "name": "Steinerne Brücke",
+      "facet": "Städte an Fluss und Meer",
+      "known_at": 12
+    },
+    {
+      "name": "Ulm",
+      "facet": "Städte an Fluss und Meer",
+      "known_at": 9
+    },
+    {
+      "name": "Landungsbrücken",
+      "facet": "Städte an Fluss und Meer",
+      "known_at": 11
+    },
+    {
+      "name": "Alter Elbtunnel",
+      "facet": "Städte an Fluss und Meer",
+      "known_at": 11
+    },
+    {
+      "name": "Heinrich Heine",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 11
+    },
+    {
+      "name": "Nibelungenschatz",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 11
+    },
+    {
+      "name": "Mäuseturm",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 13
+    },
+    {
+      "name": "Vineta",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 13
+    },
+    {
+      "name": "Rungholt",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 13
+    },
+    {
+      "name": "Klabautermann",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 10
+    },
+    {
+      "name": "Klaus Störtebeker",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 9
+    },
+    {
+      "name": "Der Schimmelreiter",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 11
+    },
+    {
+      "name": "Theodor Storm",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 12
+    },
+    {
+      "name": "Deichgraf",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 12
+    },
+    {
+      "name": "Vom Fischer und seiner Frau",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 6
+    },
+    {
+      "name": "Die Wacht am Rhein",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 14
+    },
+    {
+      "name": "Shanty",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 9
+    },
+    {
+      "name": "Hummel, Hummel – Mors, Mors",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 12
+    },
+    {
+      "name": "Seemannsgarn",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 10
+    },
+    {
+      "name": "Sturmflut 1962",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 12
+    },
+    {
+      "name": "Helmut Schmidt",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 11
+    },
+    {
+      "name": "Elbhochwasser 2002",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 12
+    },
+    {
+      "name": "Oderhochwasser 1997",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 13
+    },
+    {
+      "name": "Grote Mandränke",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 14
+    },
+    {
+      "name": "Hochwassermarke",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 9
+    },
+    {
+      "name": "Sandsack",
+      "facet": "Sagen, Lieder und Hochwasser am Wasser",
+      "known_at": 5
+    }
+  ]
+}

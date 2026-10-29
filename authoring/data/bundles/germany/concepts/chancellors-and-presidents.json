@@ -1,0 +1,887 @@
+{
+  "subcategory": "chancellors-and-presidents",
+  "facets": [
+    "Kanzler der Bonner Republik",
+    "Kanzler seit der Wiedervereinigung",
+    "Bundespräsidenten und ihre Amtszeiten",
+    "Wahl, Amt und Befugnisse",
+    "Amtssitze und Orte der Macht",
+    "Berühmte Reden und Zitate",
+    "Spitznamen und Markenzeichen",
+    "Kanzler in Sternstunden der Geschichte",
+    "Rücktritte, Affären und Machtwechsel",
+    "Parteien, Koalitionen und Wahlkämpfe",
+    "Reichskanzler, Reichspräsidenten und DDR-Spitze",
+    "Kanzler und Präsidenten im Alltag"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 5,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Bonner Republik",
+      "facet": "Kanzler der Bonner Republik",
+      "known_at": 10
+    },
+    {
+      "name": "Westbindung",
+      "facet": "Kanzler der Bonner Republik",
+      "known_at": 13
+    },
+    {
+      "name": "Rückkehr der Zehntausend",
+      "facet": "Kanzler der Bonner Republik",
+      "known_at": 12
+    },
+    {
+      "name": "Ostpolitik",
+      "facet": "Kanzler der Bonner Republik",
+      "known_at": 11
+    },
+    {
+      "name": "Notstandsgesetze",
+      "facet": "Kanzler der Bonner Republik",
+      "known_at": 13
+    },
+    {
+      "name": "Deutscher Herbst",
+      "facet": "Kanzler der Bonner Republik",
+      "known_at": 12
+    },
+    {
+      "name": "Kanzlerdemokratie",
+      "facet": "Kanzler der Bonner Republik",
+      "known_at": 14
+    },
+    {
+      "name": "Rhöndorf",
+      "facet": "Kanzler der Bonner Republik",
+      "known_at": 13
+    },
+    {
+      "name": "Agenda 2010",
+      "facet": "Kanzler seit der Wiedervereinigung",
+      "known_at": 11
+    },
+    {
+      "name": "Irakkrieg 2003",
+      "facet": "Kanzler seit der Wiedervereinigung",
+      "known_at": 12
+    },
+    {
+      "name": "Finanzkrise 2008",
+      "facet": "Kanzler seit der Wiedervereinigung",
+      "known_at": 11
+    },
+    {
+      "name": "Eurokrise",
+      "facet": "Kanzler seit der Wiedervereinigung",
+      "known_at": 12
+    },
+    {
+      "name": "Flüchtlingskrise 2015",
+      "facet": "Kanzler seit der Wiedervereinigung",
+      "known_at": 9
+    },
+    {
+      "name": "Atomausstieg",
+      "facet": "Kanzler seit der Wiedervereinigung",
+      "known_at": 10
+    },
+    {
+      "name": "Corona-Pandemie",
+      "facet": "Kanzler seit der Wiedervereinigung",
+      "known_at": 4
+    },
+    {
+      "name": "Russischer Angriff auf die Ukraine",
+      "facet": "Kanzler seit der Wiedervereinigung",
+      "known_at": 8
+    },
+    {
+      "name": "Sondervermögen Bundeswehr",
+      "facet": "Kanzler seit der Wiedervereinigung",
+      "known_at": 12
+    },
+    {
+      "name": "Aussetzung der Wehrpflicht",
+      "facet": "Kanzler seit der Wiedervereinigung",
+      "known_at": 12
+    },
+    {
+      "name": "Mindestlohn",
+      "facet": "Kanzler seit der Wiedervereinigung",
+      "known_at": 9
+    },
+    {
+      "name": "Deutschlandticket",
+      "facet": "Kanzler seit der Wiedervereinigung",
+      "known_at": 6
+    },
+    {
+      "name": "Schuldenbremse",
+      "facet": "Kanzler seit der Wiedervereinigung",
+      "known_at": 12
+    },
+    {
+      "name": "Heinrich Lübke",
+      "facet": "Bundespräsidenten und ihre Amtszeiten",
+      "known_at": 13
+    },
+    {
+      "name": "Gustav Heinemann",
+      "facet": "Bundespräsidenten und ihre Amtszeiten",
+      "known_at": 13
+    },
+    {
+      "name": "Karl Carstens",
+      "facet": "Bundespräsidenten und ihre Amtszeiten",
+      "known_at": 13
+    },
+    {
+      "name": "Horst Köhler",
+      "facet": "Bundespräsidenten und ihre Amtszeiten",
+      "known_at": 11
+    },
+    {
+      "name": "Christian Wulff",
+      "facet": "Bundespräsidenten und ihre Amtszeiten",
+      "known_at": 10
+    },
+    {
+      "name": "Frank-Walter Steinmeier",
+      "facet": "Bundespräsidenten und ihre Amtszeiten",
+      "known_at": 6
+    },
+    {
+      "name": "Elly Heuss-Knapp",
+      "facet": "Bundespräsidenten und ihre Amtszeiten",
+      "known_at": 13
+    },
+    {
+      "name": "Mildred Scheel",
+      "facet": "Bundespräsidenten und ihre Amtszeiten",
+      "known_at": 13
+    },
+    {
+      "name": "Gesine Schwan",
+      "facet": "Bundespräsidenten und ihre Amtszeiten",
+      "known_at": 13
+    },
+    {
+      "name": "Bundesversammlung",
+      "facet": "Wahl, Amt und Befugnisse",
+      "known_at": 11
+    },
+    {
+      "name": "Kanzlerwahl",
+      "facet": "Wahl, Amt und Befugnisse",
+      "known_at": 9
+    },
+    {
+      "name": "Vertrauensfrage",
+      "facet": "Wahl, Amt und Befugnisse",
+      "known_at": 11
+    },
+    {
+      "name": "Richtlinienkompetenz",
+      "facet": "Wahl, Amt und Befugnisse",
+      "known_at": 13
+    },
+    {
+      "name": "Amtseid",
+      "facet": "Wahl, Amt und Befugnisse",
+      "known_at": 9
+    },
+    {
+      "name": "Gegenzeichnung",
+      "facet": "Wahl, Amt und Befugnisse",
+      "known_at": 15
+    },
+    {
+      "name": "Ausfertigung von Gesetzen",
+      "facet": "Wahl, Amt und Befugnisse",
+      "known_at": 13
+    },
+    {
+      "name": "Begnadigungsrecht",
+      "facet": "Wahl, Amt und Befugnisse",
+      "known_at": 13
+    },
+    {
+      "name": "Bundestagspräsident",
+      "facet": "Wahl, Amt und Befugnisse",
+      "known_at": 10
+    },
+    {
+      "name": "Erststimme",
+      "facet": "Wahl, Amt und Befugnisse",
+      "known_at": 9
+    },
+    {
+      "name": "Zweitstimme",
+      "facet": "Wahl, Amt und Befugnisse",
+      "known_at": 9
+    },
+    {
+      "name": "Auflösung des Bundestages",
+      "facet": "Wahl, Amt und Befugnisse",
+      "known_at": 12
+    },
+    {
+      "name": "Staatsoberhaupt",
+      "facet": "Wahl, Amt und Befugnisse",
+      "known_at": 8
+    },
+    {
+      "name": "Vizekanzler",
+      "facet": "Wahl, Amt und Befugnisse",
+      "known_at": 9
+    },
+    {
+      "name": "Bundeskabinett",
+      "facet": "Wahl, Amt und Befugnisse",
+      "known_at": 9
+    },
+    {
+      "name": "Wahlperiode",
+      "facet": "Wahl, Amt und Befugnisse",
+      "known_at": 11
+    },
+    {
+      "name": "Bundeshaus",
+      "facet": "Amtssitze und Orte der Macht",
+      "known_at": 13
+    },
+    {
+      "name": "Schloss Meseberg",
+      "facet": "Amtssitze und Orte der Macht",
+      "known_at": 13
+    },
+    {
+      "name": "Plenarsaal",
+      "facet": "Amtssitze und Orte der Macht",
+      "known_at": 10
+    },
+    {
+      "name": "Spreebogen",
+      "facet": "Amtssitze und Orte der Macht",
+      "known_at": 13
+    },
+    {
+      "name": "Reichskanzlei",
+      "facet": "Amtssitze und Orte der Macht",
+      "known_at": 12
+    },
+    {
+      "name": "Wilhelmstraße",
+      "facet": "Amtssitze und Orte der Macht",
+      "known_at": 13
+    },
+    {
+      "name": "Hauptstadtbeschluss",
+      "facet": "Amtssitze und Orte der Macht",
+      "known_at": 12
+    },
+    {
+      "name": "Regierungsflieger Konrad Adenauer",
+      "facet": "Amtssitze und Orte der Macht",
+      "known_at": 12
+    },
+    {
+      "name": "Bundespräsidialamt",
+      "facet": "Amtssitze und Orte der Macht",
+      "known_at": 13
+    },
+    {
+      "name": "Mehr Demokratie wagen",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 12
+    },
+    {
+      "name": "Wir schaffen das",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 7
+    },
+    {
+      "name": "Jetzt wächst zusammen, was zusammengehört",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 11
+    },
+    {
+      "name": "Rede zum 8. Mai 1985",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 12
+    },
+    {
+      "name": "Ruck-Rede",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 13
+    },
+    {
+      "name": "Zeitenwende",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 10
+    },
+    {
+      "name": "Doppelwumms",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 10
+    },
+    {
+      "name": "Neuland",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 9
+    },
+    {
+      "name": "Der Islam gehört zu Deutschland",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 11
+    },
+    {
+      "name": "Wer Visionen hat, sollte zum Arzt gehen",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 11
+    },
+    {
+      "name": "Basta",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 11
+    },
+    {
+      "name": "Gnade der späten Geburt",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 13
+    },
+    {
+      "name": "Neujahrsansprache",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 8
+    },
+    {
+      "name": "Weihnachtsansprache",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 8
+    },
+    {
+      "name": "Regierungserklärung",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 11
+    },
+    {
+      "name": "Sie kennen mich",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 12
+    },
+    {
+      "name": "Was interessiert mich mein Geschwätz von gestern",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 12
+    },
+    {
+      "name": "Hol mir mal 'ne Flasche Bier",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 10
+    },
+    {
+      "name": "Ich will hier rein",
+      "facet": "Berühmte Reden und Zitate",
+      "known_at": 11
+    },
+    {
+      "name": "Merkel-Raute",
+      "facet": "Spitznamen und Markenzeichen",
+      "known_at": 5
+    },
+    {
+      "name": "Mutti",
+      "facet": "Spitznamen und Markenzeichen",
+      "known_at": 7
+    },
+    {
+      "name": "Der Alte",
+      "facet": "Spitznamen und Markenzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Birne",
+      "facet": "Spitznamen und Markenzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Scholzomat",
+      "facet": "Spitznamen und Markenzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Schmidt Schnauze",
+      "facet": "Spitznamen und Markenzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Genosse der Bosse",
+      "facet": "Spitznamen und Markenzeichen",
+      "known_at": 13
+    },
+    {
+      "name": "Kanzler der Einheit",
+      "facet": "Spitznamen und Markenzeichen",
+      "known_at": 10
+    },
+    {
+      "name": "Waschmaschine",
+      "facet": "Spitznamen und Markenzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Fette Henne",
+      "facet": "Spitznamen und Markenzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Lübke-Englisch",
+      "facet": "Spitznamen und Markenzeichen",
+      "known_at": 13
+    },
+    {
+      "name": "Prinz-Heinrich-Mütze",
+      "facet": "Spitznamen und Markenzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Erhards Zigarre",
+      "facet": "Spitznamen und Markenzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Merkels Blazer",
+      "facet": "Spitznamen und Markenzeichen",
+      "known_at": 7
+    },
+    {
+      "name": "Kohls Strickjacke",
+      "facet": "Spitznamen und Markenzeichen",
+      "known_at": 12
+    },
+    {
+      "name": "Augenklappe von Olaf Scholz",
+      "facet": "Spitznamen und Markenzeichen",
+      "known_at": 10
+    },
+    {
+      "name": "Stinkefinger von Peer Steinbrück",
+      "facet": "Spitznamen und Markenzeichen",
+      "known_at": 12
+    },
+    {
+      "name": "Mauerbau",
+      "facet": "Kanzler in Sternstunden der Geschichte",
+      "known_at": 7
+    },
+    {
+      "name": "Brandt in Erfurt",
+      "facet": "Kanzler in Sternstunden der Geschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Landshut-Befreiung",
+      "facet": "Kanzler in Sternstunden der Geschichte",
+      "known_at": 12
+    },
+    {
+      "name": "Kohl und Mitterrand in Verdun",
+      "facet": "Kanzler in Sternstunden der Geschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Mauerfall",
+      "facet": "Kanzler in Sternstunden der Geschichte",
+      "known_at": 4
+    },
+    {
+      "name": "Zehn-Punkte-Programm",
+      "facet": "Kanzler in Sternstunden der Geschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Kaukasus-Treffen",
+      "facet": "Kanzler in Sternstunden der Geschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Euro-Einführung",
+      "facet": "Kanzler in Sternstunden der Geschichte",
+      "known_at": 6
+    },
+    {
+      "name": "WM-Titel 2014",
+      "facet": "Kanzler in Sternstunden der Geschichte",
+      "known_at": 6
+    },
+    {
+      "name": "G8-Gipfel Heiligendamm",
+      "facet": "Kanzler in Sternstunden der Geschichte",
+      "known_at": 12
+    },
+    {
+      "name": "Günter Guillaume",
+      "facet": "Rücktritte, Affären und Machtwechsel",
+      "known_at": 11
+    },
+    {
+      "name": "Spiegel-Affäre",
+      "facet": "Rücktritte, Affären und Machtwechsel",
+      "known_at": 11
+    },
+    {
+      "name": "CDU-Spendenaffäre",
+      "facet": "Rücktritte, Affären und Machtwechsel",
+      "known_at": 11
+    },
+    {
+      "name": "Flick-Affäre",
+      "facet": "Rücktritte, Affären und Machtwechsel",
+      "known_at": 13
+    },
+    {
+      "name": "Misstrauensvotum 1972",
+      "facet": "Rücktritte, Affären und Machtwechsel",
+      "known_at": 13
+    },
+    {
+      "name": "Misstrauensvotum 1982",
+      "facet": "Rücktritte, Affären und Machtwechsel",
+      "known_at": 12
+    },
+    {
+      "name": "Neuwahl 2005",
+      "facet": "Rücktritte, Affären und Machtwechsel",
+      "known_at": 12
+    },
+    {
+      "name": "Elefantenrunde 2005",
+      "facet": "Rücktritte, Affären und Machtwechsel",
+      "known_at": 12
+    },
+    {
+      "name": "Wulff-Affäre",
+      "facet": "Rücktritte, Affären und Machtwechsel",
+      "known_at": 11
+    },
+    {
+      "name": "Rücktritt von Horst Köhler",
+      "facet": "Rücktritte, Affären und Machtwechsel",
+      "known_at": 12
+    },
+    {
+      "name": "Rücktritt von Heinrich Lübke",
+      "facet": "Rücktritte, Affären und Machtwechsel",
+      "known_at": 14
+    },
+    {
+      "name": "Ende der Ampel",
+      "facet": "Rücktritte, Affären und Machtwechsel",
+      "known_at": 10
+    },
+    {
+      "name": "Cum-Ex-Affäre",
+      "facet": "Rücktritte, Affären und Machtwechsel",
+      "known_at": 12
+    },
+    {
+      "name": "Nord Stream",
+      "facet": "Rücktritte, Affären und Machtwechsel",
+      "known_at": 10
+    },
+    {
+      "name": "Kanzlerwahl 2025",
+      "facet": "Rücktritte, Affären und Machtwechsel",
+      "known_at": 11
+    },
+    {
+      "name": "Adenauers Rückzug 1963",
+      "facet": "Rücktritte, Affären und Machtwechsel",
+      "known_at": 13
+    },
+    {
+      "name": "CDU",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 6
+    },
+    {
+      "name": "CSU",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 7
+    },
+    {
+      "name": "FDP",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 8
+    },
+    {
+      "name": "Bündnis 90/Die Grünen",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 6
+    },
+    {
+      "name": "AfD",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 8
+    },
+    {
+      "name": "Die Linke",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 8
+    },
+    {
+      "name": "Große Koalition",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 9
+    },
+    {
+      "name": "Ampel-Koalition",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 8
+    },
+    {
+      "name": "Jamaika-Koalition",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 10
+    },
+    {
+      "name": "Sozialliberale Koalition",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 12
+    },
+    {
+      "name": "Schwarz-Gelb",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 10
+    },
+    {
+      "name": "Kanzlerkandidat",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 9
+    },
+    {
+      "name": "TV-Duell",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 9
+    },
+    {
+      "name": "Wahlplakat",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 7
+    },
+    {
+      "name": "Hochrechnung",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 9
+    },
+    {
+      "name": "Keine Experimente",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 13
+    },
+    {
+      "name": "Willy wählen",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 13
+    },
+    {
+      "name": "Edmund Stoiber",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 11
+    },
+    {
+      "name": "Rainer Barzel",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 14
+    },
+    {
+      "name": "Armin Laschet",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 9
+    },
+    {
+      "name": "Martin Schulz",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 10
+    },
+    {
+      "name": "Annalena Baerbock",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 7
+    },
+    {
+      "name": "Peer Steinbrück",
+      "facet": "Parteien, Koalitionen und Wahlkämpfe",
+      "known_at": 12
+    },
+    {
+      "name": "Weimarer Republik",
+      "facet": "Reichskanzler, Reichspräsidenten und DDR-Spitze",
+      "known_at": 9
+    },
+    {
+      "name": "Ausrufung der Republik 1918",
+      "facet": "Reichskanzler, Reichspräsidenten und DDR-Spitze",
+      "known_at": 12
+    },
+    {
+      "name": "Wilhelm Pieck",
+      "facet": "Reichskanzler, Reichspräsidenten und DDR-Spitze",
+      "known_at": 13
+    },
+    {
+      "name": "Hans Modrow",
+      "facet": "Reichskanzler, Reichspräsidenten und DDR-Spitze",
+      "known_at": 13
+    },
+    {
+      "name": "Staatsrat der DDR",
+      "facet": "Reichskanzler, Reichspräsidenten und DDR-Spitze",
+      "known_at": 13
+    },
+    {
+      "name": "Volkskammer",
+      "facet": "Reichskanzler, Reichspräsidenten und DDR-Spitze",
+      "known_at": 12
+    },
+    {
+      "name": "SED",
+      "facet": "Reichskanzler, Reichspräsidenten und DDR-Spitze",
+      "known_at": 10
+    },
+    {
+      "name": "Adenauers Rosen",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 12
+    },
+    {
+      "name": "Sojawurst",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 13
+    },
+    {
+      "name": "Mentholzigaretten",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 10
+    },
+    {
+      "name": "Pfälzer Saumagen",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 10
+    },
+    {
+      "name": "Kartoffelsuppe",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 10
+    },
+    {
+      "name": "Koni",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 11
+    },
+    {
+      "name": "Oggersheim",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 13
+    },
+    {
+      "name": "Loki Schmidt",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 11
+    },
+    {
+      "name": "Hannelore Kohl",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 12
+    },
+    {
+      "name": "Joachim Sauer",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 11
+    },
+    {
+      "name": "Doris Schröder-Köpf",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 12
+    },
+    {
+      "name": "Elke Büdenbender",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 14
+    },
+    {
+      "name": "Dienstwagen",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 9
+    },
+    {
+      "name": "Personenschutz",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 10
+    },
+    {
+      "name": "Ehrenpatenschaft des Bundespräsidenten",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 12
+    },
+    {
+      "name": "Tag der offenen Tür der Bundesregierung",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 12
+    },
+    {
+      "name": "Nierenspende von Frank-Walter Steinmeier",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 12
+    },
+    {
+      "name": "Pilotenschein von Friedrich Merz",
+      "facet": "Kanzler und Präsidenten im Alltag",
+      "known_at": 11
+    }
+  ]
+}

@@ -1,0 +1,821 @@
+{
+  "subcategory": "parks-weather-and-climate",
+  "facets": [
+    "Nationalparks an Nord- und Ostsee",
+    "Nationalparks in Mittelgebirgen und Alpen",
+    "Biosphärenreservate und Naturparks",
+    "Tiere und Pflanzen der Schutzgebiete",
+    "Wetterphänomene in Deutschland",
+    "Stürme, Fluten und Unwetter",
+    "Bauernregeln und Lostage",
+    "Wetterwörter und Redewendungen",
+    "Klima und Jahreszeiten in Deutschland",
+    "Wettervorhersage und Wetterdienst",
+    "Klimawandel in Deutschland"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 3,
+      "video": 3
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 3,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Nationalpark Schleswig-Holsteinisches Wattenmeer",
+      "facet": "Nationalparks an Nord- und Ostsee",
+      "known_at": 9
+    },
+    {
+      "name": "Nationalpark Niedersächsisches Wattenmeer",
+      "facet": "Nationalparks an Nord- und Ostsee",
+      "known_at": 9
+    },
+    {
+      "name": "Nationalpark Hamburgisches Wattenmeer",
+      "facet": "Nationalparks an Nord- und Ostsee",
+      "known_at": 12
+    },
+    {
+      "name": "Weststrand am Darß",
+      "facet": "Nationalparks an Nord- und Ostsee",
+      "known_at": 13
+    },
+    {
+      "name": "Zingst",
+      "facet": "Nationalparks an Nord- und Ostsee",
+      "known_at": 12
+    },
+    {
+      "name": "Multimar Wattforum",
+      "facet": "Nationalparks an Nord- und Ostsee",
+      "known_at": 13
+    },
+    {
+      "name": "UNESCO-Weltnaturerbe Wattenmeer",
+      "facet": "Nationalparks an Nord- und Ostsee",
+      "known_at": 10
+    },
+    {
+      "name": "Baumwipfelpfad",
+      "facet": "Nationalparks in Mittelgebirgen und Alpen",
+      "known_at": 6
+    },
+    {
+      "name": "Alte Buchenwälder Deutschlands",
+      "facet": "Nationalparks in Mittelgebirgen und Alpen",
+      "known_at": 13
+    },
+    {
+      "name": "Tierfreigelände",
+      "facet": "Nationalparks in Mittelgebirgen und Alpen",
+      "known_at": 11
+    },
+    {
+      "name": "Spreewaldkahn",
+      "facet": "Biosphärenreservate und Naturparks",
+      "known_at": 10
+    },
+    {
+      "name": "Schorfheide-Chorin",
+      "facet": "Biosphärenreservate und Naturparks",
+      "known_at": 13
+    },
+    {
+      "name": "Biosphärenreservat Mittelelbe",
+      "facet": "Biosphärenreservate und Naturparks",
+      "known_at": 13
+    },
+    {
+      "name": "Oberlausitzer Heide- und Teichlandschaft",
+      "facet": "Biosphärenreservate und Naturparks",
+      "known_at": 14
+    },
+    {
+      "name": "Bliesgau",
+      "facet": "Biosphärenreservate und Naturparks",
+      "known_at": 14
+    },
+    {
+      "name": "Biosphärenreservat Südost-Rügen",
+      "facet": "Biosphärenreservate und Naturparks",
+      "known_at": 14
+    },
+    {
+      "name": "Feldberg im Schwarzwald",
+      "facet": "Biosphärenreservate und Naturparks",
+      "known_at": 10
+    },
+    {
+      "name": "Kernzone",
+      "facet": "Biosphärenreservate und Naturparks",
+      "known_at": 12
+    },
+    {
+      "name": "Wildkatze",
+      "facet": "Tiere und Pflanzen der Schutzgebiete",
+      "known_at": 6
+    },
+    {
+      "name": "Steinadler",
+      "facet": "Tiere und Pflanzen der Schutzgebiete",
+      "known_at": 6
+    },
+    {
+      "name": "Murmeltier",
+      "facet": "Tiere und Pflanzen der Schutzgebiete",
+      "known_at": 3
+    },
+    {
+      "name": "Gämse",
+      "facet": "Tiere und Pflanzen der Schutzgebiete",
+      "known_at": 6
+    },
+    {
+      "name": "Auerhuhn",
+      "facet": "Tiere und Pflanzen der Schutzgebiete",
+      "known_at": 9
+    },
+    {
+      "name": "Biber",
+      "facet": "Tiere und Pflanzen der Schutzgebiete",
+      "known_at": 2
+    },
+    {
+      "name": "Queller",
+      "facet": "Tiere und Pflanzen der Schutzgebiete",
+      "known_at": 13
+    },
+    {
+      "name": "Sonnentau",
+      "facet": "Tiere und Pflanzen der Schutzgebiete",
+      "known_at": 10
+    },
+    {
+      "name": "Altweibersommer",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 10
+    },
+    {
+      "name": "Schafskälte",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Hundstage",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Weihnachtstauwetter",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Weiße Weihnacht",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 3
+    },
+    {
+      "name": "Nebel",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 2
+    },
+    {
+      "name": "Raureif",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 7
+    },
+    {
+      "name": "Tau",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 4
+    },
+    {
+      "name": "Glatteis",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 3
+    },
+    {
+      "name": "Blitzeis",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 9
+    },
+    {
+      "name": "Hagel",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 2
+    },
+    {
+      "name": "Graupel",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 8
+    },
+    {
+      "name": "Gewitter",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 1
+    },
+    {
+      "name": "Regenbogen",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 1
+    },
+    {
+      "name": "Polarlicht",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 6
+    },
+    {
+      "name": "Inversionswetterlage",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Saharastaub",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 9
+    },
+    {
+      "name": "Morgenrot",
+      "facet": "Wetterphänomene in Deutschland",
+      "known_at": 5
+    },
+    {
+      "name": "Hamburger Sturmflut 1962",
+      "facet": "Stürme, Fluten und Unwetter",
+      "known_at": 11
+    },
+    {
+      "name": "Elbehochwasser 2002",
+      "facet": "Stürme, Fluten und Unwetter",
+      "known_at": 11
+    },
+    {
+      "name": "Hochwasser 2013",
+      "facet": "Stürme, Fluten und Unwetter",
+      "known_at": 13
+    },
+    {
+      "name": "Flutkatastrophe im Ahrtal",
+      "facet": "Stürme, Fluten und Unwetter",
+      "known_at": 9
+    },
+    {
+      "name": "Magdalenenhochwasser",
+      "facet": "Stürme, Fluten und Unwetter",
+      "known_at": 15
+    },
+    {
+      "name": "Pfingstunwetter Ela",
+      "facet": "Stürme, Fluten und Unwetter",
+      "known_at": 13
+    },
+    {
+      "name": "Schneekatastrophe 1978/79",
+      "facet": "Stürme, Fluten und Unwetter",
+      "known_at": 13
+    },
+    {
+      "name": "Münchner Hagelsturm 1984",
+      "facet": "Stürme, Fluten und Unwetter",
+      "known_at": 14
+    },
+    {
+      "name": "Tornado",
+      "facet": "Stürme, Fluten und Unwetter",
+      "known_at": 4
+    },
+    {
+      "name": "Superzelle",
+      "facet": "Stürme, Fluten und Unwetter",
+      "known_at": 12
+    },
+    {
+      "name": "Starkregen",
+      "facet": "Stürme, Fluten und Unwetter",
+      "known_at": 7
+    },
+    {
+      "name": "Lawine",
+      "facet": "Stürme, Fluten und Unwetter",
+      "known_at": 4
+    },
+    {
+      "name": "Sperrwerk",
+      "facet": "Stürme, Fluten und Unwetter",
+      "known_at": 12
+    },
+    {
+      "name": "Landunter",
+      "facet": "Stürme, Fluten und Unwetter",
+      "known_at": 11
+    },
+    {
+      "name": "Beaufortskala",
+      "facet": "Stürme, Fluten und Unwetter",
+      "known_at": 10
+    },
+    {
+      "name": "Bauernregel",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 6
+    },
+    {
+      "name": "Lostag",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 13
+    },
+    {
+      "name": "Siebenschläfertag",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 10
+    },
+    {
+      "name": "Eisheilige",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 10
+    },
+    {
+      "name": "Kalte Sophie",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 11
+    },
+    {
+      "name": "Pankratius",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 13
+    },
+    {
+      "name": "Mariä Lichtmess",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 12
+    },
+    {
+      "name": "Martinstag",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 4
+    },
+    {
+      "name": "Johannistag",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 12
+    },
+    {
+      "name": "Medardus",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 14
+    },
+    {
+      "name": "Bartholomäustag",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 14
+    },
+    {
+      "name": "Michaelistag",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 14
+    },
+    {
+      "name": "Raunächte",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 12
+    },
+    {
+      "name": "Hundertjähriger Kalender",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 11
+    },
+    {
+      "name": "Aprilwetter",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 4
+    },
+    {
+      "name": "„Kräht der Hahn auf dem Mist“",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 7
+    },
+    {
+      "name": "„Abendrot, Gutwetterbot“",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 9
+    },
+    {
+      "name": "Tief fliegende Schwalben",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 8
+    },
+    {
+      "name": "Mondkalender",
+      "facet": "Bauernregeln und Lostage",
+      "known_at": 10
+    },
+    {
+      "name": "Kaiserwetter",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 10
+    },
+    {
+      "name": "Schmuddelwetter",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 7
+    },
+    {
+      "name": "Hundewetter",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 6
+    },
+    {
+      "name": "Schietwetter",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 9
+    },
+    {
+      "name": "Nieselregen",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 4
+    },
+    {
+      "name": "Schäfchenwolken",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 4
+    },
+    {
+      "name": "„Es regnet Bindfäden“",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 7
+    },
+    {
+      "name": "„Wie aus Eimern schütten“",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 5
+    },
+    {
+      "name": "Schnee von gestern",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Ruhe vor dem Sturm",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 7
+    },
+    {
+      "name": "Sturm im Wasserglas",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 11
+    },
+    {
+      "name": "Auf Wolke sieben",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 7
+    },
+    {
+      "name": "Wolkenkuckucksheim",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 12
+    },
+    {
+      "name": "„Den Wind aus den Segeln nehmen“",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 10
+    },
+    {
+      "name": "„Gut Wetter machen“",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 10
+    },
+    {
+      "name": "Wetterfrosch",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 5
+    },
+    {
+      "name": "Blitzableiter",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 7
+    },
+    {
+      "name": "Donnerwetter",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 6
+    },
+    {
+      "name": "„Es gibt kein schlechtes Wetter, nur falsche Kleidung“",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 6
+    },
+    {
+      "name": "Wetterfühligkeit",
+      "facet": "Wetterwörter und Redewendungen",
+      "known_at": 11
+    },
+    {
+      "name": "Gemäßigte Klimazone",
+      "facet": "Klima und Jahreszeiten in Deutschland",
+      "known_at": 8
+    },
+    {
+      "name": "Golfstrom",
+      "facet": "Klima und Jahreszeiten in Deutschland",
+      "known_at": 9
+    },
+    {
+      "name": "Westwindzone",
+      "facet": "Klima und Jahreszeiten in Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Seeklima",
+      "facet": "Klima und Jahreszeiten in Deutschland",
+      "known_at": 9
+    },
+    {
+      "name": "Kontinentalklima",
+      "facet": "Klima und Jahreszeiten in Deutschland",
+      "known_at": 10
+    },
+    {
+      "name": "Funtensee",
+      "facet": "Klima und Jahreszeiten in Deutschland",
+      "known_at": 14
+    },
+    {
+      "name": "Meteorologischer Frühlingsanfang",
+      "facet": "Klima und Jahreszeiten in Deutschland",
+      "known_at": 10
+    },
+    {
+      "name": "Sommersonnenwende",
+      "facet": "Klima und Jahreszeiten in Deutschland",
+      "known_at": 7
+    },
+    {
+      "name": "Wintersonnenwende",
+      "facet": "Klima und Jahreszeiten in Deutschland",
+      "known_at": 8
+    },
+    {
+      "name": "Tagundnachtgleiche",
+      "facet": "Klima und Jahreszeiten in Deutschland",
+      "known_at": 9
+    },
+    {
+      "name": "Sommerzeit",
+      "facet": "Klima und Jahreszeiten in Deutschland",
+      "known_at": 5
+    },
+    {
+      "name": "Phänologischer Kalender",
+      "facet": "Klima und Jahreszeiten in Deutschland",
+      "known_at": 14
+    },
+    {
+      "name": "Apfelblüte",
+      "facet": "Klima und Jahreszeiten in Deutschland",
+      "known_at": 5
+    },
+    {
+      "name": "Pollenflug",
+      "facet": "Klima und Jahreszeiten in Deutschland",
+      "known_at": 7
+    },
+    {
+      "name": "Hitzefrei",
+      "facet": "Klima und Jahreszeiten in Deutschland",
+      "known_at": 3
+    },
+    {
+      "name": "Deutscher Wetterdienst",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 9
+    },
+    {
+      "name": "Offenbach am Main",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 13
+    },
+    {
+      "name": "Hohenpeißenberg",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 14
+    },
+    {
+      "name": "Tagesschau-Wetter",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 8
+    },
+    {
+      "name": "Jörg Kachelmann",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 11
+    },
+    {
+      "name": "Sven Plöger",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 11
+    },
+    {
+      "name": "Claudia Kleinert",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 12
+    },
+    {
+      "name": "Karsten Schwanke",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 13
+    },
+    {
+      "name": "Hochdruckgebiet",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 7
+    },
+    {
+      "name": "Tiefdruckgebiet",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 7
+    },
+    {
+      "name": "Wetterpatenschaft",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 12
+    },
+    {
+      "name": "Wetterkarte",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 5
+    },
+    {
+      "name": "Isobaren",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 12
+    },
+    {
+      "name": "Barometer",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 8
+    },
+    {
+      "name": "Wetterballon",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 7
+    },
+    {
+      "name": "Meteosat",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 13
+    },
+    {
+      "name": "Unwetterwarnung",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 6
+    },
+    {
+      "name": "WarnWetter-App",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 11
+    },
+    {
+      "name": "Seewetterbericht",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 12
+    },
+    {
+      "name": "Regenradar",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 7
+    },
+    {
+      "name": "Regenwahrscheinlichkeit",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 7
+    },
+    {
+      "name": "Wetterhäuschen",
+      "facet": "Wettervorhersage und Wetterdienst",
+      "known_at": 10
+    },
+    {
+      "name": "Hitzesommer 2003",
+      "facet": "Klimawandel in Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Dürresommer 2018",
+      "facet": "Klimawandel in Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Tropennacht",
+      "facet": "Klimawandel in Deutschland",
+      "known_at": 10
+    },
+    {
+      "name": "Heißer Tag",
+      "facet": "Klimawandel in Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Nördlicher Schneeferner",
+      "facet": "Klimawandel in Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Niedrigwasser im Rhein",
+      "facet": "Klimawandel in Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Asiatische Tigermücke",
+      "facet": "Klimawandel in Deutschland",
+      "known_at": 9
+    },
+    {
+      "name": "Meeresspiegelanstieg",
+      "facet": "Klimawandel in Deutschland",
+      "known_at": 8
+    },
+    {
+      "name": "Fridays for Future",
+      "facet": "Klimawandel in Deutschland",
+      "known_at": 7
+    },
+    {
+      "name": "Luisa Neubauer",
+      "facet": "Klimawandel in Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Energiewende",
+      "facet": "Klimawandel in Deutschland",
+      "known_at": 9
+    },
+    {
+      "name": "Kohleausstieg",
+      "facet": "Klimawandel in Deutschland",
+      "known_at": 10
+    },
+    {
+      "name": "Offshore-Windpark",
+      "facet": "Klimawandel in Deutschland",
+      "known_at": 8
+    },
+    {
+      "name": "Klimaschutzgesetz",
+      "facet": "Klimawandel in Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Klimabeschluss des Bundesverfassungsgerichts",
+      "facet": "Klimawandel in Deutschland",
+      "known_at": 14
+    },
+    {
+      "name": "UN-Klimasekretariat in Bonn",
+      "facet": "Klimawandel in Deutschland",
+      "known_at": 14
+    },
+    {
+      "name": "CO2-Preis",
+      "facet": "Klimawandel in Deutschland",
+      "known_at": 11
+    }
+  ]
+}

@@ -1,0 +1,693 @@
+{
+  "subcategory": "superstitions-and-folk-beliefs",
+  "facets": [
+    "Glücksbringer",
+    "Unglückszeichen und Unglückszahlen",
+    "Silvester- und Neujahrsorakel",
+    "Rauhnächte und Lostage im Jahreslauf",
+    "Hochzeits- und Geburtsbräuche",
+    "Hexen und Walpurgisnacht",
+    "Geister und Spukgestalten",
+    "Hausgeister, Kobolde und Naturgeister",
+    "Bauern- und Wetterregeln",
+    "Redensarten aus dem Aberglauben",
+    "Schutzzauber und Abwehrzeichen",
+    "Kräuter, Heilzauber und Volksmedizin",
+    "Tiere im Volksglauben"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 3,
+      "estimate": 1,
+      "record": 1,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 5,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Marzipanschwein",
+      "facet": "Glücksbringer",
+      "known_at": 4
+    },
+    {
+      "name": "Hasenpfote",
+      "facet": "Glücksbringer",
+      "known_at": 9
+    },
+    {
+      "name": "Wunschknochen",
+      "facet": "Glücksbringer",
+      "known_at": 10
+    },
+    {
+      "name": "Pusteblume",
+      "facet": "Glücksbringer",
+      "known_at": 3
+    },
+    {
+      "name": "Glückskastanie",
+      "facet": "Glücksbringer",
+      "known_at": 8
+    },
+    {
+      "name": "Glückszahl Sieben",
+      "facet": "Glücksbringer",
+      "known_at": 5
+    },
+    {
+      "name": "Fehlende Sitzreihe 13",
+      "facet": "Unglückszeichen und Unglückszahlen",
+      "known_at": 8
+    },
+    {
+      "name": "Schwarze Katze von links",
+      "facet": "Unglückszeichen und Unglückszahlen",
+      "known_at": 3
+    },
+    {
+      "name": "Aufgespannter Regenschirm im Haus",
+      "facet": "Unglückszeichen und Unglückszahlen",
+      "known_at": 8
+    },
+    {
+      "name": "Salz verschütten",
+      "facet": "Unglückszeichen und Unglückszahlen",
+      "known_at": 7
+    },
+    {
+      "name": "Vorzeitiges Gratulieren zum Geburtstag",
+      "facet": "Unglückszeichen und Unglückszahlen",
+      "known_at": 6
+    },
+    {
+      "name": "Anstoßen mit Wasser",
+      "facet": "Unglückszeichen und Unglückszahlen",
+      "known_at": 7
+    },
+    {
+      "name": "Über Kreuz anstoßen",
+      "facet": "Unglückszeichen und Unglückszahlen",
+      "known_at": 9
+    },
+    {
+      "name": "Brot auf dem Rücken liegen lassen",
+      "facet": "Unglückszeichen und Unglückszahlen",
+      "known_at": 11
+    },
+    {
+      "name": "Hut auf dem Bett",
+      "facet": "Unglückszeichen und Unglückszahlen",
+      "known_at": 12
+    },
+    {
+      "name": "Messer verschenken",
+      "facet": "Unglückszeichen und Unglückszahlen",
+      "known_at": 9
+    },
+    {
+      "name": "Nachts pfeifen",
+      "facet": "Unglückszeichen und Unglückszahlen",
+      "known_at": 10
+    },
+    {
+      "name": "Taschentücher verschenken",
+      "facet": "Unglückszeichen und Unglückszahlen",
+      "known_at": 11
+    },
+    {
+      "name": "Schuhe verschenken",
+      "facet": "Unglückszeichen und Unglückszahlen",
+      "known_at": 11
+    },
+    {
+      "name": "Stehengebliebene Uhr",
+      "facet": "Unglückszeichen und Unglückszahlen",
+      "known_at": 12
+    },
+    {
+      "name": "Bild fällt von der Wand",
+      "facet": "Unglückszeichen und Unglückszahlen",
+      "known_at": 12
+    },
+    {
+      "name": "Schuhwerfen",
+      "facet": "Silvester- und Neujahrsorakel",
+      "known_at": 12
+    },
+    {
+      "name": "Linsen zu Neujahr",
+      "facet": "Silvester- und Neujahrsorakel",
+      "known_at": 9
+    },
+    {
+      "name": "Sauerkraut zu Neujahr",
+      "facet": "Silvester- und Neujahrsorakel",
+      "known_at": 10
+    },
+    {
+      "name": "Pfannkuchen mit Senf",
+      "facet": "Silvester- und Neujahrsorakel",
+      "known_at": 7
+    },
+    {
+      "name": "Bibelstechen",
+      "facet": "Silvester- und Neujahrsorakel",
+      "known_at": 13
+    },
+    {
+      "name": "Apfelschale werfen",
+      "facet": "Silvester- und Neujahrsorakel",
+      "known_at": 13
+    },
+    {
+      "name": "Nussschalenorakel",
+      "facet": "Silvester- und Neujahrsorakel",
+      "known_at": 13
+    },
+    {
+      "name": "Zwiebelkalender",
+      "facet": "Silvester- und Neujahrsorakel",
+      "known_at": 14
+    },
+    {
+      "name": "Guter Vorsatz",
+      "facet": "Silvester- und Neujahrsorakel",
+      "known_at": 4
+    },
+    {
+      "name": "Geld in der Tasche um Mitternacht",
+      "facet": "Silvester- und Neujahrsorakel",
+      "known_at": 9
+    },
+    {
+      "name": "Zwischen den Jahren",
+      "facet": "Rauhnächte und Lostage im Jahreslauf",
+      "known_at": 8
+    },
+    {
+      "name": "Eisheiligen",
+      "facet": "Rauhnächte und Lostage im Jahreslauf",
+      "known_at": 8
+    },
+    {
+      "name": "Andreasnacht",
+      "facet": "Rauhnächte und Lostage im Jahreslauf",
+      "known_at": 13
+    },
+    {
+      "name": "Wäscheverbot in den Rauhnächten",
+      "facet": "Rauhnächte und Lostage im Jahreslauf",
+      "known_at": 11
+    },
+    {
+      "name": "Perchtenlauf",
+      "facet": "Rauhnächte und Lostage im Jahreslauf",
+      "known_at": 12
+    },
+    {
+      "name": "Brautkleid vor der Hochzeit sehen",
+      "facet": "Hochzeits- und Geburtsbräuche",
+      "known_at": 7
+    },
+    {
+      "name": "Brautschuhe mit Münzen bezahlen",
+      "facet": "Hochzeits- und Geburtsbräuche",
+      "known_at": 12
+    },
+    {
+      "name": "Braut über die Schwelle tragen",
+      "facet": "Hochzeits- und Geburtsbräuche",
+      "known_at": 6
+    },
+    {
+      "name": "Hochzeitstorte anschneiden",
+      "facet": "Hochzeits- und Geburtsbräuche",
+      "known_at": 9
+    },
+    {
+      "name": "Spalier stehen",
+      "facet": "Hochzeits- und Geburtsbräuche",
+      "known_at": 9
+    },
+    {
+      "name": "Hochzeitskorso",
+      "facet": "Hochzeits- und Geburtsbräuche",
+      "known_at": 5
+    },
+    {
+      "name": "Ehering an der rechten Hand",
+      "facet": "Hochzeits- und Geburtsbräuche",
+      "known_at": 10
+    },
+    {
+      "name": "Brautkranz",
+      "facet": "Hochzeits- und Geburtsbräuche",
+      "known_at": 11
+    },
+    {
+      "name": "Glückshaube",
+      "facet": "Hochzeits- und Geburtsbräuche",
+      "known_at": 13
+    },
+    {
+      "name": "Sonntagskind",
+      "facet": "Hochzeits- und Geburtsbräuche",
+      "known_at": 6
+    },
+    {
+      "name": "Kinderwagen vor der Geburt kaufen",
+      "facet": "Hochzeits- und Geburtsbräuche",
+      "known_at": 11
+    },
+    {
+      "name": "Blocksberg",
+      "facet": "Hexen und Walpurgisnacht",
+      "known_at": 7
+    },
+    {
+      "name": "Knusperhäuschen",
+      "facet": "Hexen und Walpurgisnacht",
+      "known_at": 2
+    },
+    {
+      "name": "Hexenkessel",
+      "facet": "Hexen und Walpurgisnacht",
+      "known_at": 5
+    },
+    {
+      "name": "Hexenhammer",
+      "facet": "Hexen und Walpurgisnacht",
+      "known_at": 14
+    },
+    {
+      "name": "Wasserprobe",
+      "facet": "Hexen und Walpurgisnacht",
+      "known_at": 12
+    },
+    {
+      "name": "Hexeneinmaleins",
+      "facet": "Hexen und Walpurgisnacht",
+      "known_at": 14
+    },
+    {
+      "name": "Hexenfeuer",
+      "facet": "Hexen und Walpurgisnacht",
+      "known_at": 10
+    },
+    {
+      "name": "Kräuterhexe",
+      "facet": "Hexen und Walpurgisnacht",
+      "known_at": 9
+    },
+    {
+      "name": "Wiedergänger",
+      "facet": "Geister und Spukgestalten",
+      "known_at": 13
+    },
+    {
+      "name": "Nachtmahr",
+      "facet": "Geister und Spukgestalten",
+      "known_at": 12
+    },
+    {
+      "name": "Aufhocker",
+      "facet": "Geister und Spukgestalten",
+      "known_at": 14
+    },
+    {
+      "name": "Geisterstunde",
+      "facet": "Geister und Spukgestalten",
+      "known_at": 4
+    },
+    {
+      "name": "Moosweibchen",
+      "facet": "Hausgeister, Kobolde und Naturgeister",
+      "known_at": 13
+    },
+    {
+      "name": "Elfen",
+      "facet": "Hausgeister, Kobolde und Naturgeister",
+      "known_at": 3
+    },
+    {
+      "name": "Kornmuhme",
+      "facet": "Hausgeister, Kobolde und Naturgeister",
+      "known_at": 14
+    },
+    {
+      "name": "Waldschrat",
+      "facet": "Hausgeister, Kobolde und Naturgeister",
+      "known_at": 11
+    },
+    {
+      "name": "Zwerg Nase",
+      "facet": "Hausgeister, Kobolde und Naturgeister",
+      "known_at": 8
+    },
+    {
+      "name": "April, April, der macht, was er will",
+      "facet": "Bauern- und Wetterregeln",
+      "known_at": 3
+    },
+    {
+      "name": "Wetterhahn",
+      "facet": "Bauern- und Wetterregeln",
+      "known_at": 5
+    },
+    {
+      "name": "Grüne Weihnachten, weiße Ostern",
+      "facet": "Bauern- und Wetterregeln",
+      "known_at": 9
+    },
+    {
+      "name": "Mai kühl und nass",
+      "facet": "Bauern- und Wetterregeln",
+      "known_at": 10
+    },
+    {
+      "name": "Liegende Kühe auf der Weide",
+      "facet": "Bauern- und Wetterregeln",
+      "known_at": 9
+    },
+    {
+      "name": "Hof um den Mond",
+      "facet": "Bauern- und Wetterregeln",
+      "known_at": 11
+    },
+    {
+      "name": "Dicke Zwiebelschalen",
+      "facet": "Bauern- und Wetterregeln",
+      "known_at": 12
+    },
+    {
+      "name": "Kiefernzapfen als Wetteranzeiger",
+      "facet": "Bauern- und Wetterregeln",
+      "known_at": 10
+    },
+    {
+      "name": "Den Teufel an die Wand malen",
+      "facet": "Redensarten aus dem Aberglauben",
+      "known_at": 10
+    },
+    {
+      "name": "Mit dem linken Fuß aufstehen",
+      "facet": "Redensarten aus dem Aberglauben",
+      "known_at": 7
+    },
+    {
+      "name": "Unter einem guten Stern stehen",
+      "facet": "Redensarten aus dem Aberglauben",
+      "known_at": 8
+    },
+    {
+      "name": "Schwein gehabt",
+      "facet": "Redensarten aus dem Aberglauben",
+      "known_at": 4
+    },
+    {
+      "name": "Glückspilz",
+      "facet": "Redensarten aus dem Aberglauben",
+      "known_at": 3
+    },
+    {
+      "name": "Das ist wie verhext",
+      "facet": "Redensarten aus dem Aberglauben",
+      "known_at": 6
+    },
+    {
+      "name": "Wenn man vom Teufel spricht",
+      "facet": "Redensarten aus dem Aberglauben",
+      "known_at": 8
+    },
+    {
+      "name": "Spökenkieker",
+      "facet": "Redensarten aus dem Aberglauben",
+      "known_at": 13
+    },
+    {
+      "name": "Unberufen",
+      "facet": "Redensarten aus dem Aberglauben",
+      "known_at": 13
+    },
+    {
+      "name": "Etwas beschreien",
+      "facet": "Redensarten aus dem Aberglauben",
+      "known_at": 11
+    },
+    {
+      "name": "Ohrenklingeln",
+      "facet": "Redensarten aus dem Aberglauben",
+      "known_at": 9
+    },
+    {
+      "name": "Gesundheit!",
+      "facet": "Redensarten aus dem Aberglauben",
+      "known_at": 2
+    },
+    {
+      "name": "Hokuspokus",
+      "facet": "Redensarten aus dem Aberglauben",
+      "known_at": 5
+    },
+    {
+      "name": "Abrakadabra",
+      "facet": "Redensarten aus dem Aberglauben",
+      "known_at": 4
+    },
+    {
+      "name": "Drudenfuß",
+      "facet": "Schutzzauber und Abwehrzeichen",
+      "known_at": 12
+    },
+    {
+      "name": "Knoblauch",
+      "facet": "Schutzzauber und Abwehrzeichen",
+      "known_at": 5
+    },
+    {
+      "name": "Salz über die Schulter werfen",
+      "facet": "Schutzzauber und Abwehrzeichen",
+      "known_at": 8
+    },
+    {
+      "name": "Haussegen",
+      "facet": "Schutzzauber und Abwehrzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Schutzengel",
+      "facet": "Schutzzauber und Abwehrzeichen",
+      "known_at": 2
+    },
+    {
+      "name": "Wetterläuten",
+      "facet": "Schutzzauber und Abwehrzeichen",
+      "known_at": 13
+    },
+    {
+      "name": "Bannkreis",
+      "facet": "Schutzzauber und Abwehrzeichen",
+      "known_at": 9
+    },
+    {
+      "name": "Pferdeköpfe am Giebel",
+      "facet": "Schutzzauber und Abwehrzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Amulett",
+      "facet": "Schutzzauber und Abwehrzeichen",
+      "known_at": 5
+    },
+    {
+      "name": "Neidkopf",
+      "facet": "Schutzzauber und Abwehrzeichen",
+      "known_at": 14
+    },
+    {
+      "name": "Wasserspeier",
+      "facet": "Schutzzauber und Abwehrzeichen",
+      "known_at": 10
+    },
+    {
+      "name": "Palmbuschen",
+      "facet": "Schutzzauber und Abwehrzeichen",
+      "known_at": 12
+    },
+    {
+      "name": "Weihwasser",
+      "facet": "Schutzzauber und Abwehrzeichen",
+      "known_at": 8
+    },
+    {
+      "name": "Donnerkeil",
+      "facet": "Schutzzauber und Abwehrzeichen",
+      "known_at": 13
+    },
+    {
+      "name": "Hühnergott",
+      "facet": "Schutzzauber und Abwehrzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Kreuzzeichen",
+      "facet": "Schutzzauber und Abwehrzeichen",
+      "known_at": 6
+    },
+    {
+      "name": "Kräuterbuschen",
+      "facet": "Kräuter, Heilzauber und Volksmedizin",
+      "known_at": 12
+    },
+    {
+      "name": "Alraune",
+      "facet": "Kräuter, Heilzauber und Volksmedizin",
+      "known_at": 10
+    },
+    {
+      "name": "Beifuß",
+      "facet": "Kräuter, Heilzauber und Volksmedizin",
+      "known_at": 12
+    },
+    {
+      "name": "Holunder",
+      "facet": "Kräuter, Heilzauber und Volksmedizin",
+      "known_at": 6
+    },
+    {
+      "name": "Salbei",
+      "facet": "Kräuter, Heilzauber und Volksmedizin",
+      "known_at": 6
+    },
+    {
+      "name": "Zwiebelsocken",
+      "facet": "Kräuter, Heilzauber und Volksmedizin",
+      "known_at": 9
+    },
+    {
+      "name": "Zwiebelsaft",
+      "facet": "Kräuter, Heilzauber und Volksmedizin",
+      "known_at": 8
+    },
+    {
+      "name": "Wadenwickel",
+      "facet": "Kräuter, Heilzauber und Volksmedizin",
+      "known_at": 7
+    },
+    {
+      "name": "Warzen besprechen",
+      "facet": "Kräuter, Heilzauber und Volksmedizin",
+      "known_at": 11
+    },
+    {
+      "name": "Gesundbeten",
+      "facet": "Kräuter, Heilzauber und Volksmedizin",
+      "known_at": 12
+    },
+    {
+      "name": "Hühnersuppe",
+      "facet": "Kräuter, Heilzauber und Volksmedizin",
+      "known_at": 2
+    },
+    {
+      "name": "Heiße Milch mit Honig",
+      "facet": "Kräuter, Heilzauber und Volksmedizin",
+      "known_at": 2
+    },
+    {
+      "name": "Käuzchen",
+      "facet": "Tiere im Volksglauben",
+      "known_at": 9
+    },
+    {
+      "name": "Kuckuck",
+      "facet": "Tiere im Volksglauben",
+      "known_at": 8
+    },
+    {
+      "name": "Rabe",
+      "facet": "Tiere im Volksglauben",
+      "known_at": 5
+    },
+    {
+      "name": "Spinne am Morgen",
+      "facet": "Tiere im Volksglauben",
+      "known_at": 7
+    },
+    {
+      "name": "Fledermaus",
+      "facet": "Tiere im Volksglauben",
+      "known_at": 5
+    },
+    {
+      "name": "Kröte",
+      "facet": "Tiere im Volksglauben",
+      "known_at": 6
+    },
+    {
+      "name": "Lindwurm",
+      "facet": "Tiere im Volksglauben",
+      "known_at": 10
+    },
+    {
+      "name": "Totenuhr",
+      "facet": "Tiere im Volksglauben",
+      "known_at": 14
+    },
+    {
+      "name": "Schwarzer Pudel",
+      "facet": "Tiere im Volksglauben",
+      "known_at": 12
+    },
+    {
+      "name": "Unke",
+      "facet": "Tiere im Volksglauben",
+      "known_at": 10
+    },
+    {
+      "name": "Bienen",
+      "facet": "Tiere im Volksglauben",
+      "known_at": 13
+    },
+    {
+      "name": "Böser Wolf",
+      "facet": "Tiere im Volksglauben",
+      "known_at": 1
+    }
+  ]
+}
