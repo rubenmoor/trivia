@@ -80,7 +80,7 @@ or null; plans 16, 57), `licence`: per picked slot {"verdict": "ok"|"replace", "
 (providers.licence_verdict, plan 53) and `played`: per age group with played data
 [{group, n, right, rated, observed, bound}] (played.review_data, state/played/stats.json; [] without, plan 109).
 """
-import argparse, datetime, json, re, sys
+import argparse, json, re, sys
 from http.server import ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -342,24 +342,9 @@ def set_translatable(qid, value):
             q.pop("translatable", None)
         else:
             q["translatable"] = False
-            for locale in translations.LOCALES:
-                with translations.locked(locale):
-                    doc = translations.load(locale)
-                    hit = [t for t in doc["questions"] if t["id"] == qid and t.get("status") != "rejected"]
-                    for t in hit:
-                        reject(t)
-                    if hit:
-                        translations.save(locale, doc)
+            translations.reject_for_sources({qid})
         save_pool(data)
     return q
-
-
-def reject(t):
-    """A human "no viaja" rejection, D-33's shape (keeps an LLM review as previous)."""
-    old = t.get("review") or {}
-    t.update(status="rejected", review={
-        "decision": "rejected", "feedback": "no viaja", "reviewed_on": datetime.date.today().isoformat(),
-        "reviewed_at": reviews.now(), "reviewer": "human", "model": None, "previous": old if old.get("reviewer") == "llm" else old.get("previous")})
 
 
 def apply_flags():

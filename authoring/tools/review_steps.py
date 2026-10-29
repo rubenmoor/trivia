@@ -615,6 +615,7 @@ def record_translations(args, d):
     update_translations(locale, changes)
     if confirmed:
         update_pool({i: lambda q: q.update(translatable=False) for i in confirmed})
+        translations.reject_for_sources(set(confirmed), skip=(locale,))
     save_json(d / "not-travelling.json", away)
     save_json(d / "recorded.json", snapshot)
     return failed(f"{len(missing)} question(s) without a review: {', '.join(missing)}") if missing else []

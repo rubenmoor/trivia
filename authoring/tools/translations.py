@@ -5,7 +5,7 @@ the review pages and the export.
 Each entry has the translated text, its own difficulty, status, batch and review, and the
 source_hash of the source text it was made from; everything else comes from the source by id.
 """
-import hashlib, json, re
+import datetime, hashlib, json, re
 
 import atomic
 import layout
@@ -55,6 +55,33 @@ def save(locale, doc):
     rest = {k: v for k, v in doc.items() if k not in ("version", "locale", "questions")}
     doc = {"version": 1, "locale": locale, **rest, "questions": sorted(doc["questions"], key=lambda t: t["id"])}
     atomic.write_json(path(locale), doc)
+
+
+def reject(t):
+    """A human "no viaja" rejection, D-33's shape (keeps an LLM review as previous)."""
+    old = t.get("review") or {}
+    t.update(status="rejected", review={
+        "decision": "rejected", "feedback": "no viaja", "reviewed_on": datetime.date.today().isoformat(),
+        "reviewed_at": datetime.datetime.now().isoformat(timespec="seconds"), "reviewer": "human", "model": None,
+        "previous": old if old.get("reviewer") == "llm" else old.get("previous")})
+
+
+def reject_for_sources(ids, skip=()):
+    """Reject the non-rejected translations of sources `ids` (rejected or translatable: false) in every locale
+    but `skip` (validate's rule). Returns the ids rejected per locale."""
+    done = {}
+    for locale in LOCALES:
+        if locale in skip:
+            continue
+        with locked(locale):
+            doc = load(locale)
+            hit = [t for t in doc["questions"] if t["id"] in ids and t.get("status") != "rejected"]
+            for t in hit:
+                reject(t)
+            if hit:
+                save(locale, doc)
+                done[locale] = [t["id"] for t in hit]
+    return done
 
 
 def run_locale(run):
