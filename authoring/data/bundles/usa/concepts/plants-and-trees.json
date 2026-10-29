@@ -1,0 +1,1088 @@
+{
+  "subcategory": "plants-and-trees",
+  "facets": [
+    "Giant and ancient trees",
+    "State trees and flowers",
+    "Desert plants and cacti",
+    "Fall foliage and forests",
+    "Native American food crops",
+    "Fruits and nuts of America",
+    "Wildflowers and prairie plants",
+    "Swamp and wetland plants",
+    "Poisonous and prickly plants",
+    "Famous trees in history",
+    "Plant people and Johnny Appleseed",
+    "Tree products and maple syrup"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 4,
+      "record": 5,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Giant sequoia",
+      "facet": "Giant and ancient trees",
+      "known_at": 6
+    },
+    {
+      "name": "Coast redwood",
+      "facet": "Giant and ancient trees",
+      "known_at": 6
+    },
+    {
+      "name": "General Grant Tree",
+      "facet": "Giant and ancient trees",
+      "known_at": 13
+    },
+    {
+      "name": "Hyperion",
+      "facet": "Giant and ancient trees",
+      "known_at": 13
+    },
+    {
+      "name": "Bristlecone pine",
+      "facet": "Giant and ancient trees",
+      "known_at": 11
+    },
+    {
+      "name": "Methuselah tree",
+      "facet": "Giant and ancient trees",
+      "known_at": 13
+    },
+    {
+      "name": "Pando",
+      "facet": "Giant and ancient trees",
+      "known_at": 13
+    },
+    {
+      "name": "Muir Woods",
+      "facet": "Giant and ancient trees",
+      "known_at": 10
+    },
+    {
+      "name": "Mariposa Grove",
+      "facet": "Giant and ancient trees",
+      "known_at": 13
+    },
+    {
+      "name": "Avenue of the Giants",
+      "facet": "Giant and ancient trees",
+      "known_at": 13
+    },
+    {
+      "name": "Chandelier Tree",
+      "facet": "Giant and ancient trees",
+      "known_at": 11
+    },
+    {
+      "name": "Wawona Tunnel Tree",
+      "facet": "Giant and ancient trees",
+      "known_at": 13
+    },
+    {
+      "name": "Douglas fir",
+      "facet": "Giant and ancient trees",
+      "known_at": 9
+    },
+    {
+      "name": "Sitka spruce",
+      "facet": "Giant and ancient trees",
+      "known_at": 12
+    },
+    {
+      "name": "Western red cedar",
+      "facet": "Giant and ancient trees",
+      "known_at": 11
+    },
+    {
+      "name": "Tree rings",
+      "facet": "Giant and ancient trees",
+      "known_at": 5
+    },
+    {
+      "name": "The Senator (bald cypress)",
+      "facet": "Giant and ancient trees",
+      "known_at": 14
+    },
+    {
+      "name": "Texas bluebonnet",
+      "facet": "State trees and flowers",
+      "known_at": 7
+    },
+    {
+      "name": "Rose",
+      "facet": "State trees and flowers",
+      "known_at": 5
+    },
+    {
+      "name": "Oak",
+      "facet": "State trees and flowers",
+      "known_at": 4
+    },
+    {
+      "name": "Southern magnolia",
+      "facet": "State trees and flowers",
+      "known_at": 8
+    },
+    {
+      "name": "Sabal palmetto",
+      "facet": "State trees and flowers",
+      "known_at": 11
+    },
+    {
+      "name": "Peach blossom",
+      "facet": "State trees and flowers",
+      "known_at": 8
+    },
+    {
+      "name": "Rocky Mountain columbine",
+      "facet": "State trees and flowers",
+      "known_at": 12
+    },
+    {
+      "name": "Flowering dogwood",
+      "facet": "State trees and flowers",
+      "known_at": 10
+    },
+    {
+      "name": "Mountain laurel",
+      "facet": "State trees and flowers",
+      "known_at": 12
+    },
+    {
+      "name": "Lilac",
+      "facet": "State trees and flowers",
+      "known_at": 9
+    },
+    {
+      "name": "Peony",
+      "facet": "State trees and flowers",
+      "known_at": 10
+    },
+    {
+      "name": "Sego lily",
+      "facet": "State trees and flowers",
+      "known_at": 13
+    },
+    {
+      "name": "Bitterroot",
+      "facet": "State trees and flowers",
+      "known_at": 14
+    },
+    {
+      "name": "Forget-me-not",
+      "facet": "State trees and flowers",
+      "known_at": 10
+    },
+    {
+      "name": "Mayflower",
+      "facet": "State trees and flowers",
+      "known_at": 12
+    },
+    {
+      "name": "Live oak",
+      "facet": "State trees and flowers",
+      "known_at": 11
+    },
+    {
+      "name": "Ponderosa pine",
+      "facet": "State trees and flowers",
+      "known_at": 11
+    },
+    {
+      "name": "Apple blossom",
+      "facet": "State trees and flowers",
+      "known_at": 8
+    },
+    {
+      "name": "Saguaro",
+      "facet": "Desert plants and cacti",
+      "known_at": 5
+    },
+    {
+      "name": "Joshua tree",
+      "facet": "Desert plants and cacti",
+      "known_at": 8
+    },
+    {
+      "name": "Prickly pear",
+      "facet": "Desert plants and cacti",
+      "known_at": 7
+    },
+    {
+      "name": "Barrel cactus",
+      "facet": "Desert plants and cacti",
+      "known_at": 8
+    },
+    {
+      "name": "Organ pipe cactus",
+      "facet": "Desert plants and cacti",
+      "known_at": 11
+    },
+    {
+      "name": "Ocotillo",
+      "facet": "Desert plants and cacti",
+      "known_at": 12
+    },
+    {
+      "name": "Creosote bush",
+      "facet": "Desert plants and cacti",
+      "known_at": 12
+    },
+    {
+      "name": "Agave",
+      "facet": "Desert plants and cacti",
+      "known_at": 9
+    },
+    {
+      "name": "Yucca",
+      "facet": "Desert plants and cacti",
+      "known_at": 8
+    },
+    {
+      "name": "Sagebrush",
+      "facet": "Desert plants and cacti",
+      "known_at": 9
+    },
+    {
+      "name": "Tumbleweed",
+      "facet": "Desert plants and cacti",
+      "known_at": 4
+    },
+    {
+      "name": "Mesquite",
+      "facet": "Desert plants and cacti",
+      "known_at": 10
+    },
+    {
+      "name": "Palo verde",
+      "facet": "Desert plants and cacti",
+      "known_at": 13
+    },
+    {
+      "name": "Night-blooming cereus",
+      "facet": "Desert plants and cacti",
+      "known_at": 13
+    },
+    {
+      "name": "Desert superbloom",
+      "facet": "Desert plants and cacti",
+      "known_at": 11
+    },
+    {
+      "name": "Jojoba",
+      "facet": "Desert plants and cacti",
+      "known_at": 12
+    },
+    {
+      "name": "Brittlebush",
+      "facet": "Desert plants and cacti",
+      "known_at": 14,
+      "retired": "unaskable: Brittlebush holds no real-world record to ask about, and the other option (a person answer) doesn't fit it."
+    },
+    {
+      "name": "Fall foliage",
+      "facet": "Fall foliage and forests",
+      "known_at": 3
+    },
+    {
+      "name": "Leaf peeping",
+      "facet": "Fall foliage and forests",
+      "known_at": 10
+    },
+    {
+      "name": "Red maple",
+      "facet": "Fall foliage and forests",
+      "known_at": 8
+    },
+    {
+      "name": "Quaking aspen",
+      "facet": "Fall foliage and forests",
+      "known_at": 10
+    },
+    {
+      "name": "Tamarack",
+      "facet": "Fall foliage and forests",
+      "known_at": 13
+    },
+    {
+      "name": "Sweetgum",
+      "facet": "Fall foliage and forests",
+      "known_at": 11
+    },
+    {
+      "name": "Chlorophyll",
+      "facet": "Fall foliage and forests",
+      "known_at": 8
+    },
+    {
+      "name": "Anthocyanin",
+      "facet": "Fall foliage and forests",
+      "known_at": 13
+    },
+    {
+      "name": "Tongass National Forest",
+      "facet": "Fall foliage and forests",
+      "known_at": 13
+    },
+    {
+      "name": "Hoh Rain Forest",
+      "facet": "Fall foliage and forests",
+      "known_at": 12
+    },
+    {
+      "name": "National forest",
+      "facet": "Fall foliage and forests",
+      "known_at": 8
+    },
+    {
+      "name": "American chestnut",
+      "facet": "Fall foliage and forests",
+      "known_at": 11
+    },
+    {
+      "name": "Eastern hemlock",
+      "facet": "Fall foliage and forests",
+      "known_at": 13
+    },
+    {
+      "name": "Kudzu",
+      "facet": "Fall foliage and forests",
+      "known_at": 11
+    },
+    {
+      "name": "Corn",
+      "facet": "Native American food crops",
+      "known_at": 2
+    },
+    {
+      "name": "Three Sisters",
+      "facet": "Native American food crops",
+      "known_at": 9
+    },
+    {
+      "name": "Squash",
+      "facet": "Native American food crops",
+      "known_at": 5
+    },
+    {
+      "name": "Beans",
+      "facet": "Native American food crops",
+      "known_at": 4
+    },
+    {
+      "name": "Pumpkin",
+      "facet": "Native American food crops",
+      "known_at": 2
+    },
+    {
+      "name": "Wild rice",
+      "facet": "Native American food crops",
+      "known_at": 10
+    },
+    {
+      "name": "Popcorn",
+      "facet": "Native American food crops",
+      "known_at": 2
+    },
+    {
+      "name": "Hominy",
+      "facet": "Native American food crops",
+      "known_at": 11
+    },
+    {
+      "name": "Succotash",
+      "facet": "Native American food crops",
+      "known_at": 10
+    },
+    {
+      "name": "Blue corn",
+      "facet": "Native American food crops",
+      "known_at": 10
+    },
+    {
+      "name": "Jerusalem artichoke",
+      "facet": "Native American food crops",
+      "known_at": 12
+    },
+    {
+      "name": "Tepary bean",
+      "facet": "Native American food crops",
+      "known_at": 14
+    },
+    {
+      "name": "Grits",
+      "facet": "Native American food crops",
+      "known_at": 8
+    },
+    {
+      "name": "Cornmeal",
+      "facet": "Native American food crops",
+      "known_at": 7
+    },
+    {
+      "name": "Sunflower seeds",
+      "facet": "Native American food crops",
+      "known_at": 5
+    },
+    {
+      "name": "Hatch chile",
+      "facet": "Native American food crops",
+      "known_at": 12
+    },
+    {
+      "name": "Cranberry",
+      "facet": "Fruits and nuts of America",
+      "known_at": 5
+    },
+    {
+      "name": "Blueberry",
+      "facet": "Fruits and nuts of America",
+      "known_at": 2
+    },
+    {
+      "name": "Concord grape",
+      "facet": "Fruits and nuts of America",
+      "known_at": 11
+    },
+    {
+      "name": "Pecan",
+      "facet": "Fruits and nuts of America",
+      "known_at": 6
+    },
+    {
+      "name": "Black walnut",
+      "facet": "Fruits and nuts of America",
+      "known_at": 11
+    },
+    {
+      "name": "Pawpaw",
+      "facet": "Fruits and nuts of America",
+      "known_at": 12
+    },
+    {
+      "name": "American persimmon",
+      "facet": "Fruits and nuts of America",
+      "known_at": 12
+    },
+    {
+      "name": "Huckleberry",
+      "facet": "Fruits and nuts of America",
+      "known_at": 9
+    },
+    {
+      "name": "Piñon nut",
+      "facet": "Fruits and nuts of America",
+      "known_at": 12
+    },
+    {
+      "name": "Hickory nut",
+      "facet": "Fruits and nuts of America",
+      "known_at": 11
+    },
+    {
+      "name": "Florida orange",
+      "facet": "Fruits and nuts of America",
+      "known_at": 5
+    },
+    {
+      "name": "Georgia peach",
+      "facet": "Fruits and nuts of America",
+      "known_at": 6
+    },
+    {
+      "name": "Washington apple",
+      "facet": "Fruits and nuts of America",
+      "known_at": 8
+    },
+    {
+      "name": "California almond",
+      "facet": "Fruits and nuts of America",
+      "known_at": 10
+    },
+    {
+      "name": "Hawaiian pineapple",
+      "facet": "Fruits and nuts of America",
+      "known_at": 6
+    },
+    {
+      "name": "Macadamia nut",
+      "facet": "Fruits and nuts of America",
+      "known_at": 9
+    },
+    {
+      "name": "Chokecherry",
+      "facet": "Fruits and nuts of America",
+      "known_at": 13
+    },
+    {
+      "name": "Muscadine grape",
+      "facet": "Fruits and nuts of America",
+      "known_at": 13
+    },
+    {
+      "name": "Key lime",
+      "facet": "Fruits and nuts of America",
+      "known_at": 8
+    },
+    {
+      "name": "Hass avocado",
+      "facet": "Fruits and nuts of America",
+      "known_at": 11
+    },
+    {
+      "name": "Sunflower",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 2
+    },
+    {
+      "name": "Tallgrass prairie",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 10
+    },
+    {
+      "name": "Big bluestem",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 13
+    },
+    {
+      "name": "Buffalo grass",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 11
+    },
+    {
+      "name": "Purple coneflower",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 10
+    },
+    {
+      "name": "Black-eyed Susan",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 9
+    },
+    {
+      "name": "Indian paintbrush",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 11
+    },
+    {
+      "name": "Goldenrod",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 10
+    },
+    {
+      "name": "Milkweed",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 8
+    },
+    {
+      "name": "Lupine",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 10
+    },
+    {
+      "name": "Trillium",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 12
+    },
+    {
+      "name": "Bee balm",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 12
+    },
+    {
+      "name": "Compass plant",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 14
+    },
+    {
+      "name": "Fireweed",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 12
+    },
+    {
+      "name": "Lady's slipper orchid",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 12
+    },
+    {
+      "name": "Virginia bluebells",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 13
+    },
+    {
+      "name": "Prairie smoke",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 14
+    },
+    {
+      "name": "Dandelion",
+      "facet": "Wildflowers and prairie plants",
+      "known_at": 2
+    },
+    {
+      "name": "Bald cypress",
+      "facet": "Swamp and wetland plants",
+      "known_at": 10
+    },
+    {
+      "name": "Cypress knees",
+      "facet": "Swamp and wetland plants",
+      "known_at": 12
+    },
+    {
+      "name": "Spanish moss",
+      "facet": "Swamp and wetland plants",
+      "known_at": 8
+    },
+    {
+      "name": "Venus flytrap",
+      "facet": "Swamp and wetland plants",
+      "known_at": 4
+    },
+    {
+      "name": "Pitcher plant",
+      "facet": "Swamp and wetland plants",
+      "known_at": 8
+    },
+    {
+      "name": "Sundew",
+      "facet": "Swamp and wetland plants",
+      "known_at": 11
+    },
+    {
+      "name": "Sawgrass",
+      "facet": "Swamp and wetland plants",
+      "known_at": 11
+    },
+    {
+      "name": "Okefenokee Swamp",
+      "facet": "Swamp and wetland plants",
+      "known_at": 13
+    },
+    {
+      "name": "Atchafalaya Basin",
+      "facet": "Swamp and wetland plants",
+      "known_at": 14
+    },
+    {
+      "name": "Water hyacinth",
+      "facet": "Swamp and wetland plants",
+      "known_at": 12
+    },
+    {
+      "name": "Mangrove",
+      "facet": "Swamp and wetland plants",
+      "known_at": 8
+    },
+    {
+      "name": "Cattail",
+      "facet": "Swamp and wetland plants",
+      "known_at": 7
+    },
+    {
+      "name": "Water lily",
+      "facet": "Swamp and wetland plants",
+      "known_at": 4
+    },
+    {
+      "name": "American lotus",
+      "facet": "Swamp and wetland plants",
+      "known_at": 12
+    },
+    {
+      "name": "Duckweed",
+      "facet": "Swamp and wetland plants",
+      "known_at": 10
+    },
+    {
+      "name": "Water tupelo",
+      "facet": "Swamp and wetland plants",
+      "known_at": 14
+    },
+    {
+      "name": "Poison ivy",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 5
+    },
+    {
+      "name": "Poison oak",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 8
+    },
+    {
+      "name": "Poison sumac",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 11
+    },
+    {
+      "name": "Urushiol",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 14
+    },
+    {
+      "name": "Stinging nettle",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 7
+    },
+    {
+      "name": "Teddy bear cholla",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 12
+    },
+    {
+      "name": "Devil's club",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 14
+    },
+    {
+      "name": "Jimsonweed",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 13
+    },
+    {
+      "name": "Pokeweed",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 12
+    },
+    {
+      "name": "Water hemlock",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 13
+    },
+    {
+      "name": "Oleander",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 11
+    },
+    {
+      "name": "Mistletoe",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 5
+    },
+    {
+      "name": "Giant hogweed",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 12
+    },
+    {
+      "name": "Holly",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 5
+    },
+    {
+      "name": "Manchineel",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 13
+    },
+    {
+      "name": "Buckeye",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 10
+    },
+    {
+      "name": "Cocklebur",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 11
+    },
+    {
+      "name": "Thistle",
+      "facet": "Poisonous and prickly plants",
+      "known_at": 6
+    },
+    {
+      "name": "Charter Oak",
+      "facet": "Famous trees in history",
+      "known_at": 13
+    },
+    {
+      "name": "Treaty Oak",
+      "facet": "Famous trees in history",
+      "known_at": 13
+    },
+    {
+      "name": "Liberty Tree",
+      "facet": "Famous trees in history",
+      "known_at": 12
+    },
+    {
+      "name": "Washington, D.C. cherry blossoms",
+      "facet": "Famous trees in history",
+      "known_at": 8
+    },
+    {
+      "name": "Moon tree",
+      "facet": "Famous trees in history",
+      "known_at": 12
+    },
+    {
+      "name": "9/11 Survivor Tree",
+      "facet": "Famous trees in history",
+      "known_at": 11
+    },
+    {
+      "name": "National Christmas Tree",
+      "facet": "Famous trees in history",
+      "known_at": 9
+    },
+    {
+      "name": "Rockefeller Center Christmas Tree",
+      "facet": "Famous trees in history",
+      "known_at": 6
+    },
+    {
+      "name": "Lone Cypress",
+      "facet": "Famous trees in history",
+      "known_at": 12
+    },
+    {
+      "name": "Tree That Owns Itself",
+      "facet": "Famous trees in history",
+      "known_at": 13
+    },
+    {
+      "name": "Emancipation Oak",
+      "facet": "Famous trees in history",
+      "known_at": 14
+    },
+    {
+      "name": "Witness tree",
+      "facet": "Famous trees in history",
+      "known_at": 13
+    },
+    {
+      "name": "Angel Oak",
+      "facet": "Famous trees in history",
+      "known_at": 12
+    },
+    {
+      "name": "George Washington's cherry tree",
+      "facet": "Famous trees in history",
+      "known_at": 6
+    },
+    {
+      "name": "Arbor Day",
+      "facet": "Famous trees in history",
+      "known_at": 7
+    },
+    {
+      "name": "American elm",
+      "facet": "Famous trees in history",
+      "known_at": 11
+    },
+    {
+      "name": "Johnny Appleseed",
+      "facet": "Plant people and Johnny Appleseed",
+      "known_at": 5
+    },
+    {
+      "name": "Luther Burbank",
+      "facet": "Plant people and Johnny Appleseed",
+      "known_at": 13
+    },
+    {
+      "name": "George Washington Carver",
+      "facet": "Plant people and Johnny Appleseed",
+      "known_at": 8
+    },
+    {
+      "name": "John Muir",
+      "facet": "Plant people and Johnny Appleseed",
+      "known_at": 11
+    },
+    {
+      "name": "J. Sterling Morton",
+      "facet": "Plant people and Johnny Appleseed",
+      "known_at": 14
+    },
+    {
+      "name": "Theodore Roosevelt",
+      "facet": "Plant people and Johnny Appleseed",
+      "known_at": 7
+    },
+    {
+      "name": "Gifford Pinchot",
+      "facet": "Plant people and Johnny Appleseed",
+      "known_at": 14
+    },
+    {
+      "name": "Thomas Jefferson",
+      "facet": "Plant people and Johnny Appleseed",
+      "known_at": 6
+    },
+    {
+      "name": "John Bartram",
+      "facet": "Plant people and Johnny Appleseed",
+      "known_at": 15
+    },
+    {
+      "name": "Aldo Leopold",
+      "facet": "Plant people and Johnny Appleseed",
+      "known_at": 14
+    },
+    {
+      "name": "Norman Borlaug",
+      "facet": "Plant people and Johnny Appleseed",
+      "known_at": 14
+    },
+    {
+      "name": "Lady Bird Johnson",
+      "facet": "Plant people and Johnny Appleseed",
+      "known_at": 13
+    },
+    {
+      "name": "Julia Butterfly Hill",
+      "facet": "Plant people and Johnny Appleseed",
+      "known_at": 14
+    },
+    {
+      "name": "Frederick Law Olmsted",
+      "facet": "Plant people and Johnny Appleseed",
+      "known_at": 13
+    },
+    {
+      "name": "The Lorax",
+      "facet": "Plant people and Johnny Appleseed",
+      "known_at": 4
+    },
+    {
+      "name": "The Giving Tree",
+      "facet": "Plant people and Johnny Appleseed",
+      "known_at": 6
+    },
+    {
+      "name": "Maple syrup",
+      "facet": "Tree products and maple syrup",
+      "known_at": 2
+    },
+    {
+      "name": "Sugar shack",
+      "facet": "Tree products and maple syrup",
+      "known_at": 11
+    },
+    {
+      "name": "Sap",
+      "facet": "Tree products and maple syrup",
+      "known_at": 5
+    },
+    {
+      "name": "Maple tapping",
+      "facet": "Tree products and maple syrup",
+      "known_at": 8
+    },
+    {
+      "name": "Maple syrup grades",
+      "facet": "Tree products and maple syrup",
+      "known_at": 12
+    },
+    {
+      "name": "Sugar on snow",
+      "facet": "Tree products and maple syrup",
+      "known_at": 12
+    },
+    {
+      "name": "Maple sugar",
+      "facet": "Tree products and maple syrup",
+      "known_at": 9
+    },
+    {
+      "name": "Turpentine",
+      "facet": "Tree products and maple syrup",
+      "known_at": 11
+    },
+    {
+      "name": "Pine tar",
+      "facet": "Tree products and maple syrup",
+      "known_at": 12
+    },
+    {
+      "name": "Louisville Slugger",
+      "facet": "Tree products and maple syrup",
+      "known_at": 10
+    },
+    {
+      "name": "Hickory",
+      "facet": "Tree products and maple syrup",
+      "known_at": 9
+    },
+    {
+      "name": "Sassafras",
+      "facet": "Tree products and maple syrup",
+      "known_at": 12
+    },
+    {
+      "name": "Root beer",
+      "facet": "Tree products and maple syrup",
+      "known_at": 5
+    },
+    {
+      "name": "Birch beer",
+      "facet": "Tree products and maple syrup",
+      "known_at": 13
+    },
+    {
+      "name": "Filé powder",
+      "facet": "Tree products and maple syrup",
+      "known_at": 14
+    },
+    {
+      "name": "Witch hazel",
+      "facet": "Tree products and maple syrup",
+      "known_at": 12
+    },
+    {
+      "name": "Christmas tree farm",
+      "facet": "Tree products and maple syrup",
+      "known_at": 5
+    },
+    {
+      "name": "Bourbon barrel",
+      "facet": "Tree products and maple syrup",
+      "known_at": 13
+    },
+    {
+      "name": "Log cabin",
+      "facet": "Tree products and maple syrup",
+      "known_at": 4
+    }
+  ]
+}

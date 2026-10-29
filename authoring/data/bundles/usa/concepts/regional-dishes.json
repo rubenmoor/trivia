@@ -1,0 +1,1202 @@
+{
+  "subcategory": "regional-dishes",
+  "facets": [
+    "Southern and soul food classics",
+    "Cajun and Creole cooking",
+    "Barbecue styles by region",
+    "Tex-Mex and Southwestern dishes",
+    "New England seafood and chowders",
+    "Regional pizzas and sandwiches",
+    "Midwest comfort food and hot dishes",
+    "Hawaiian and West Coast dishes",
+    "Regional desserts and pies",
+    "Breakfast and diner specialties",
+    "Iconic local dishes of famous cities",
+    "Food festivals and regional food traditions"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 1,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Fried chicken",
+      "facet": "Southern and soul food classics",
+      "known_at": 1
+    },
+    {
+      "name": "Sweet tea",
+      "facet": "Southern and soul food classics",
+      "known_at": 4
+    },
+    {
+      "name": "Biscuits and gravy",
+      "facet": "Southern and soul food classics",
+      "known_at": 5
+    },
+    {
+      "name": "Chicken and waffles",
+      "facet": "Southern and soul food classics",
+      "known_at": 6
+    },
+    {
+      "name": "Black-eyed peas",
+      "facet": "Southern and soul food classics",
+      "known_at": 6
+    },
+    {
+      "name": "Collard greens",
+      "facet": "Southern and soul food classics",
+      "known_at": 7
+    },
+    {
+      "name": "Hush puppies",
+      "facet": "Southern and soul food classics",
+      "known_at": 7
+    },
+    {
+      "name": "Candied yams",
+      "facet": "Southern and soul food classics",
+      "known_at": 7
+    },
+    {
+      "name": "Fried catfish",
+      "facet": "Southern and soul food classics",
+      "known_at": 7
+    },
+    {
+      "name": "Fried green tomatoes",
+      "facet": "Southern and soul food classics",
+      "known_at": 8
+    },
+    {
+      "name": "Okra",
+      "facet": "Southern and soul food classics",
+      "known_at": 8
+    },
+    {
+      "name": "Chicken-fried steak",
+      "facet": "Southern and soul food classics",
+      "known_at": 8
+    },
+    {
+      "name": "Shrimp and grits",
+      "facet": "Southern and soul food classics",
+      "known_at": 9
+    },
+    {
+      "name": "Country ham",
+      "facet": "Southern and soul food classics",
+      "known_at": 9
+    },
+    {
+      "name": "Pimento cheese",
+      "facet": "Southern and soul food classics",
+      "known_at": 10
+    },
+    {
+      "name": "Boiled peanuts",
+      "facet": "Southern and soul food classics",
+      "known_at": 10
+    },
+    {
+      "name": "Hoppin' John",
+      "facet": "Southern and soul food classics",
+      "known_at": 11
+    },
+    {
+      "name": "Chitterlings",
+      "facet": "Southern and soul food classics",
+      "known_at": 12
+    },
+    {
+      "name": "Red-eye gravy",
+      "facet": "Southern and soul food classics",
+      "known_at": 12
+    },
+    {
+      "name": "Pot likker",
+      "facet": "Southern and soul food classics",
+      "known_at": 13
+    },
+    {
+      "name": "Jambalaya",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 7
+    },
+    {
+      "name": "Crawfish boil",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 8
+    },
+    {
+      "name": "Red beans and rice",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 8
+    },
+    {
+      "name": "Cajun seasoning",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 8
+    },
+    {
+      "name": "Étouffée",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 10
+    },
+    {
+      "name": "Dirty rice",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 10
+    },
+    {
+      "name": "Turducken",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 10
+    },
+    {
+      "name": "Boudin",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 11
+    },
+    {
+      "name": "Andouille",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 11
+    },
+    {
+      "name": "Roux",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 11
+    },
+    {
+      "name": "Shrimp Creole",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 11
+    },
+    {
+      "name": "Emeril Lagasse",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 11
+    },
+    {
+      "name": "Holy trinity (Cajun cooking)",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 12
+    },
+    {
+      "name": "Cracklins",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 12
+    },
+    {
+      "name": "Maque choux",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 13
+    },
+    {
+      "name": "Paul Prudhomme",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 13
+    },
+    {
+      "name": "Tasso ham",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 14
+    },
+    {
+      "name": "Grillades",
+      "facet": "Cajun and Creole cooking",
+      "known_at": 14
+    },
+    {
+      "name": "Barbecue sauce",
+      "facet": "Barbecue styles by region",
+      "known_at": 2
+    },
+    {
+      "name": "Baby back ribs",
+      "facet": "Barbecue styles by region",
+      "known_at": 4
+    },
+    {
+      "name": "Pulled pork",
+      "facet": "Barbecue styles by region",
+      "known_at": 5
+    },
+    {
+      "name": "Coleslaw",
+      "facet": "Barbecue styles by region",
+      "known_at": 5
+    },
+    {
+      "name": "Smoker",
+      "facet": "Barbecue styles by region",
+      "known_at": 6
+    },
+    {
+      "name": "Brisket",
+      "facet": "Barbecue styles by region",
+      "known_at": 8
+    },
+    {
+      "name": "Carolina barbecue",
+      "facet": "Barbecue styles by region",
+      "known_at": 9
+    },
+    {
+      "name": "Hickory wood",
+      "facet": "Barbecue styles by region",
+      "known_at": 9
+    },
+    {
+      "name": "Memphis dry rub ribs",
+      "facet": "Barbecue styles by region",
+      "known_at": 10
+    },
+    {
+      "name": "Texas barbecue",
+      "facet": "Barbecue styles by region",
+      "known_at": 8
+    },
+    {
+      "name": "Burnt ends",
+      "facet": "Barbecue styles by region",
+      "known_at": 11
+    },
+    {
+      "name": "St. Louis-style ribs",
+      "facet": "Barbecue styles by region",
+      "known_at": 11
+    },
+    {
+      "name": "Eastern North Carolina vinegar sauce",
+      "facet": "Barbecue styles by region",
+      "known_at": 12
+    },
+    {
+      "name": "South Carolina mustard sauce",
+      "facet": "Barbecue styles by region",
+      "known_at": 12
+    },
+    {
+      "name": "Whole-hog barbecue",
+      "facet": "Barbecue styles by region",
+      "known_at": 12
+    },
+    {
+      "name": "Alabama white sauce",
+      "facet": "Barbecue styles by region",
+      "known_at": 13
+    },
+    {
+      "name": "Santa Maria tri-tip",
+      "facet": "Barbecue styles by region",
+      "known_at": 13
+    },
+    {
+      "name": "Franklin Barbecue",
+      "facet": "Barbecue styles by region",
+      "known_at": 13
+    },
+    {
+      "name": "Kentucky mutton barbecue",
+      "facet": "Barbecue styles by region",
+      "known_at": 14
+    },
+    {
+      "name": "Lockhart, Texas",
+      "facet": "Barbecue styles by region",
+      "known_at": 14
+    },
+    {
+      "name": "Tortilla chips",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 2
+    },
+    {
+      "name": "Nachos",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 3
+    },
+    {
+      "name": "Salsa",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 3
+    },
+    {
+      "name": "Guacamole",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 3
+    },
+    {
+      "name": "Hard-shell taco",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 4
+    },
+    {
+      "name": "Chili con carne",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 6
+    },
+    {
+      "name": "Fajitas",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 6
+    },
+    {
+      "name": "Enchiladas",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 6
+    },
+    {
+      "name": "Queso",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 7
+    },
+    {
+      "name": "Breakfast burrito",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 7
+    },
+    {
+      "name": "Chimichanga",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 9
+    },
+    {
+      "name": "Sopapilla",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 10
+    },
+    {
+      "name": "Frito pie",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 11
+    },
+    {
+      "name": "Hatch green chile",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 12
+    },
+    {
+      "name": "Navajo frybread",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 12
+    },
+    {
+      "name": "Carne asada fries",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 12
+    },
+    {
+      "name": "Sonoran hot dog",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 13
+    },
+    {
+      "name": "Green chile cheeseburger",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 13
+    },
+    {
+      "name": "Christmas (New Mexico chile)",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 14
+    },
+    {
+      "name": "Puffy taco",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 14
+    },
+    {
+      "name": "Biscochito",
+      "facet": "Tex-Mex and Southwestern dishes",
+      "known_at": 14
+    },
+    {
+      "name": "Maine lobster",
+      "facet": "New England seafood and chowders",
+      "known_at": 5
+    },
+    {
+      "name": "Cod",
+      "facet": "New England seafood and chowders",
+      "known_at": 6
+    },
+    {
+      "name": "Oyster crackers",
+      "facet": "New England seafood and chowders",
+      "known_at": 7
+    },
+    {
+      "name": "Boston baked beans",
+      "facet": "New England seafood and chowders",
+      "known_at": 8
+    },
+    {
+      "name": "Scallops",
+      "facet": "New England seafood and chowders",
+      "known_at": 8
+    },
+    {
+      "name": "Manhattan clam chowder",
+      "facet": "New England seafood and chowders",
+      "known_at": 9
+    },
+    {
+      "name": "Fried clams",
+      "facet": "New England seafood and chowders",
+      "known_at": 9
+    },
+    {
+      "name": "Clambake",
+      "facet": "New England seafood and chowders",
+      "known_at": 10
+    },
+    {
+      "name": "Haddock",
+      "facet": "New England seafood and chowders",
+      "known_at": 11
+    },
+    {
+      "name": "Steamers",
+      "facet": "New England seafood and chowders",
+      "known_at": 12
+    },
+    {
+      "name": "Johnnycakes",
+      "facet": "New England seafood and chowders",
+      "known_at": 12
+    },
+    {
+      "name": "Clam cakes",
+      "facet": "New England seafood and chowders",
+      "known_at": 13
+    },
+    {
+      "name": "New England boiled dinner",
+      "facet": "New England seafood and chowders",
+      "known_at": 13
+    },
+    {
+      "name": "Stuffies",
+      "facet": "New England seafood and chowders",
+      "known_at": 14
+    },
+    {
+      "name": "Rhode Island clear clam chowder",
+      "facet": "New England seafood and chowders",
+      "known_at": 14
+    },
+    {
+      "name": "Chicago deep-dish pizza",
+      "facet": "Regional pizzas and sandwiches",
+      "known_at": 4
+    },
+    {
+      "name": "Sloppy joe",
+      "facet": "Regional pizzas and sandwiches",
+      "known_at": 4
+    },
+    {
+      "name": "French dip",
+      "facet": "Regional pizzas and sandwiches",
+      "known_at": 8
+    },
+    {
+      "name": "Hoagie",
+      "facet": "Regional pizzas and sandwiches",
+      "known_at": 8
+    },
+    {
+      "name": "Reuben sandwich",
+      "facet": "Regional pizzas and sandwiches",
+      "known_at": 9
+    },
+    {
+      "name": "Pastrami on rye",
+      "facet": "Regional pizzas and sandwiches",
+      "known_at": 9
+    },
+    {
+      "name": "Italian beef",
+      "facet": "Regional pizzas and sandwiches",
+      "known_at": 10
+    },
+    {
+      "name": "Muffuletta",
+      "facet": "Regional pizzas and sandwiches",
+      "known_at": 11
+    },
+    {
+      "name": "California-style pizza",
+      "facet": "Regional pizzas and sandwiches",
+      "known_at": 11
+    },
+    {
+      "name": "Monte Cristo sandwich",
+      "facet": "Regional pizzas and sandwiches",
+      "known_at": 11
+    },
+    {
+      "name": "New Haven apizza",
+      "facet": "Regional pizzas and sandwiches",
+      "known_at": 13
+    },
+    {
+      "name": "St. Louis-style pizza",
+      "facet": "Regional pizzas and sandwiches",
+      "known_at": 13
+    },
+    {
+      "name": "Hot Brown",
+      "facet": "Regional pizzas and sandwiches",
+      "known_at": 13
+    },
+    {
+      "name": "Primanti Bros. sandwich",
+      "facet": "Regional pizzas and sandwiches",
+      "known_at": 13
+    },
+    {
+      "name": "Loose meat sandwich",
+      "facet": "Regional pizzas and sandwiches",
+      "known_at": 13
+    },
+    {
+      "name": "Horseshoe sandwich",
+      "facet": "Regional pizzas and sandwiches",
+      "known_at": 14
+    },
+    {
+      "name": "Green bean casserole",
+      "facet": "Midwest comfort food and hot dishes",
+      "known_at": 6
+    },
+    {
+      "name": "Bratwurst",
+      "facet": "Midwest comfort food and hot dishes",
+      "known_at": 7
+    },
+    {
+      "name": "Cheese curds",
+      "facet": "Midwest comfort food and hot dishes",
+      "known_at": 8
+    },
+    {
+      "name": "Jell-O salad",
+      "facet": "Midwest comfort food and hot dishes",
+      "known_at": 8
+    },
+    {
+      "name": "Tater tot hotdish",
+      "facet": "Midwest comfort food and hot dishes",
+      "known_at": 9
+    },
+    {
+      "name": "Puppy chow",
+      "facet": "Midwest comfort food and hot dishes",
+      "known_at": 9
+    },
+    {
+      "name": "Friday fish fry",
+      "facet": "Midwest comfort food and hot dishes",
+      "known_at": 10
+    },
+    {
+      "name": "Jucy Lucy",
+      "facet": "Midwest comfort food and hot dishes",
+      "known_at": 11
+    },
+    {
+      "name": "Pork tenderloin sandwich",
+      "facet": "Midwest comfort food and hot dishes",
+      "known_at": 11
+    },
+    {
+      "name": "Beer cheese soup",
+      "facet": "Midwest comfort food and hot dishes",
+      "known_at": 11
+    },
+    {
+      "name": "Pasty",
+      "facet": "Midwest comfort food and hot dishes",
+      "known_at": 12
+    },
+    {
+      "name": "Lutefisk",
+      "facet": "Midwest comfort food and hot dishes",
+      "known_at": 12
+    },
+    {
+      "name": "Wild rice soup",
+      "facet": "Midwest comfort food and hot dishes",
+      "known_at": 12
+    },
+    {
+      "name": "Funeral potatoes",
+      "facet": "Midwest comfort food and hot dishes",
+      "known_at": 12
+    },
+    {
+      "name": "Runza",
+      "facet": "Midwest comfort food and hot dishes",
+      "known_at": 13
+    },
+    {
+      "name": "Booyah",
+      "facet": "Midwest comfort food and hot dishes",
+      "known_at": 14
+    },
+    {
+      "name": "Chislic",
+      "facet": "Midwest comfort food and hot dishes",
+      "known_at": 14
+    },
+    {
+      "name": "Luau",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 6
+    },
+    {
+      "name": "California roll",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 6
+    },
+    {
+      "name": "Poke",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 7
+    },
+    {
+      "name": "Shave ice",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 7
+    },
+    {
+      "name": "Fish tacos",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 7
+    },
+    {
+      "name": "San Francisco sourdough",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 8
+    },
+    {
+      "name": "Spam musubi",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 9
+    },
+    {
+      "name": "Cobb salad",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 9
+    },
+    {
+      "name": "Kalua pig",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 10
+    },
+    {
+      "name": "Poi",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 10
+    },
+    {
+      "name": "Animal Style",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 10
+    },
+    {
+      "name": "Cedar plank salmon",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 10
+    },
+    {
+      "name": "Loco moco",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 11
+    },
+    {
+      "name": "Plate lunch",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 11
+    },
+    {
+      "name": "Garlic fries",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 11
+    },
+    {
+      "name": "Malasada",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 12
+    },
+    {
+      "name": "Cioppino",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 12
+    },
+    {
+      "name": "Haupia",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 13
+    },
+    {
+      "name": "Huli huli chicken",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 13
+    },
+    {
+      "name": "Lomi lomi salmon",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 13
+    },
+    {
+      "name": "Seattle teriyaki",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 13
+    },
+    {
+      "name": "Saimin",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 14
+    },
+    {
+      "name": "Hangtown fry",
+      "facet": "Hawaiian and West Coast dishes",
+      "known_at": 15
+    },
+    {
+      "name": "Apple pie",
+      "facet": "Regional desserts and pies",
+      "known_at": 2
+    },
+    {
+      "name": "Pumpkin pie",
+      "facet": "Regional desserts and pies",
+      "known_at": 3
+    },
+    {
+      "name": "Red velvet cake",
+      "facet": "Regional desserts and pies",
+      "known_at": 5
+    },
+    {
+      "name": "Pecan pie",
+      "facet": "Regional desserts and pies",
+      "known_at": 6
+    },
+    {
+      "name": "Banana pudding",
+      "facet": "Regional desserts and pies",
+      "known_at": 6
+    },
+    {
+      "name": "Peach cobbler",
+      "facet": "Regional desserts and pies",
+      "known_at": 6
+    },
+    {
+      "name": "Sweet potato pie",
+      "facet": "Regional desserts and pies",
+      "known_at": 8
+    },
+    {
+      "name": "Beignets",
+      "facet": "Regional desserts and pies",
+      "known_at": 8
+    },
+    {
+      "name": "MoonPie",
+      "facet": "Regional desserts and pies",
+      "known_at": 8
+    },
+    {
+      "name": "Mississippi mud pie",
+      "facet": "Regional desserts and pies",
+      "known_at": 9
+    },
+    {
+      "name": "Whoopie pie",
+      "facet": "Regional desserts and pies",
+      "known_at": 9
+    },
+    {
+      "name": "Baked Alaska",
+      "facet": "Regional desserts and pies",
+      "known_at": 9
+    },
+    {
+      "name": "Texas sheet cake",
+      "facet": "Regional desserts and pies",
+      "known_at": 10
+    },
+    {
+      "name": "Bananas Foster",
+      "facet": "Regional desserts and pies",
+      "known_at": 11
+    },
+    {
+      "name": "Shoofly pie",
+      "facet": "Regional desserts and pies",
+      "known_at": 12
+    },
+    {
+      "name": "Hummingbird cake",
+      "facet": "Regional desserts and pies",
+      "known_at": 12
+    },
+    {
+      "name": "Huckleberry pie",
+      "facet": "Regional desserts and pies",
+      "known_at": 12
+    },
+    {
+      "name": "Chess pie",
+      "facet": "Regional desserts and pies",
+      "known_at": 13
+    },
+    {
+      "name": "Gooey butter cake",
+      "facet": "Regional desserts and pies",
+      "known_at": 13
+    },
+    {
+      "name": "Derby pie",
+      "facet": "Regional desserts and pies",
+      "known_at": 13
+    },
+    {
+      "name": "Sugar cream pie",
+      "facet": "Regional desserts and pies",
+      "known_at": 14
+    },
+    {
+      "name": "Indian pudding",
+      "facet": "Regional desserts and pies",
+      "known_at": 14
+    },
+    {
+      "name": "Hash browns",
+      "facet": "Breakfast and diner specialties",
+      "known_at": 3
+    },
+    {
+      "name": "Eggs Benedict",
+      "facet": "Breakfast and diner specialties",
+      "known_at": 7
+    },
+    {
+      "name": "Denver omelet",
+      "facet": "Breakfast and diner specialties",
+      "known_at": 8
+    },
+    {
+      "name": "Bagel and lox",
+      "facet": "Breakfast and diner specialties",
+      "known_at": 8
+    },
+    {
+      "name": "Pie à la mode",
+      "facet": "Breakfast and diner specialties",
+      "known_at": 8
+    },
+    {
+      "name": "Corned beef hash",
+      "facet": "Breakfast and diner specialties",
+      "known_at": 9
+    },
+    {
+      "name": "Silver dollar pancakes",
+      "facet": "Breakfast and diner specialties",
+      "known_at": 9
+    },
+    {
+      "name": "Monkey bread",
+      "facet": "Breakfast and diner specialties",
+      "known_at": 9
+    },
+    {
+      "name": "Breakfast tacos",
+      "facet": "Breakfast and diner specialties",
+      "known_at": 10
+    },
+    {
+      "name": "Patty melt",
+      "facet": "Breakfast and diner specialties",
+      "known_at": 11
+    },
+    {
+      "name": "Scrapple",
+      "facet": "Breakfast and diner specialties",
+      "known_at": 12
+    },
+    {
+      "name": "Pork roll",
+      "facet": "Breakfast and diner specialties",
+      "known_at": 12
+    },
+    {
+      "name": "Blue plate special",
+      "facet": "Breakfast and diner specialties",
+      "known_at": 12
+    },
+    {
+      "name": "Egg cream",
+      "facet": "Breakfast and diner specialties",
+      "known_at": 12
+    },
+    {
+      "name": "Dutch baby",
+      "facet": "Breakfast and diner specialties",
+      "known_at": 12
+    },
+    {
+      "name": "Goetta",
+      "facet": "Breakfast and diner specialties",
+      "known_at": 14
+    },
+    {
+      "name": "Soft pretzel",
+      "facet": "Iconic local dishes of famous cities",
+      "known_at": 6
+    },
+    {
+      "name": "New York cheesecake",
+      "facet": "Iconic local dishes of famous cities",
+      "known_at": 7
+    },
+    {
+      "name": "Maryland blue crab",
+      "facet": "Iconic local dishes of famous cities",
+      "known_at": 9
+    },
+    {
+      "name": "Baltimore crab cakes",
+      "facet": "Iconic local dishes of famous cities",
+      "known_at": 10
+    },
+    {
+      "name": "Old Bay seasoning",
+      "facet": "Iconic local dishes of famous cities",
+      "known_at": 11
+    },
+    {
+      "name": "Coney dog",
+      "facet": "Iconic local dishes of famous cities",
+      "known_at": 11
+    },
+    {
+      "name": "Milwaukee frozen custard",
+      "facet": "Iconic local dishes of famous cities",
+      "known_at": 11
+    },
+    {
+      "name": "Pittsburgh pierogies",
+      "facet": "Iconic local dishes of famous cities",
+      "known_at": 12
+    },
+    {
+      "name": "Fluffernutter",
+      "facet": "Iconic local dishes of famous cities",
+      "known_at": 12
+    },
+    {
+      "name": "Philadelphia water ice",
+      "facet": "Iconic local dishes of famous cities",
+      "known_at": 12
+    },
+    {
+      "name": "Garbage plate",
+      "facet": "Iconic local dishes of famous cities",
+      "known_at": 13
+    },
+    {
+      "name": "Beef on weck",
+      "facet": "Iconic local dishes of famous cities",
+      "known_at": 13
+    },
+    {
+      "name": "Half-smoke",
+      "facet": "Iconic local dishes of famous cities",
+      "known_at": 13
+    },
+    {
+      "name": "Pepperoni roll",
+      "facet": "Iconic local dishes of famous cities",
+      "known_at": 13
+    },
+    {
+      "name": "Las Vegas shrimp cocktail",
+      "facet": "Iconic local dishes of famous cities",
+      "known_at": 13
+    },
+    {
+      "name": "Springfield cashew chicken",
+      "facet": "Iconic local dishes of famous cities",
+      "known_at": 14
+    },
+    {
+      "name": "Thanksgiving turkey",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 1
+    },
+    {
+      "name": "Corn dog",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 3
+    },
+    {
+      "name": "Fourth of July cookout",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 3
+    },
+    {
+      "name": "Pie-eating contest",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 4
+    },
+    {
+      "name": "State fair",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 5
+    },
+    {
+      "name": "Funnel cake",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 5
+    },
+    {
+      "name": "Tailgating",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Potluck",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 6
+    },
+    {
+      "name": "King cake",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Nathan's Hot Dog Eating Contest",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Deep-fried Oreos",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Chili cook-off",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Maple sugaring",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Deep-fried turkey",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Ice cream social",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Deep-fried butter",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Lowcountry boil",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Butter cow",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Gilroy Garlic Festival",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Maine Lobster Festival",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Memphis in May",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Maryland crab feast",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Juneteenth red drink",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 13
+    },
+    {
+      "name": "National Cherry Festival",
+      "facet": "Food festivals and regional food traditions",
+      "known_at": 14
+    }
+  ]
+}

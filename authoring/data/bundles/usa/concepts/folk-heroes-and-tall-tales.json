@@ -1,0 +1,728 @@
+{
+  "subcategory": "folk-heroes-and-tall-tales",
+  "facets": [
+    "Paul Bunyan and lumberjack lore",
+    "Frontier and backwoods heroes",
+    "Cowboy and Wild West legends",
+    "Railroad and working-hero legends",
+    "River, sea and sailor tall tales",
+    "Heroines of American legend",
+    "Founding-era myths and stories",
+    "Fearsome critters and tall-tale beasts",
+    "Tricksters and African American folktales",
+    "Tall-tale talk and exaggeration",
+    "Folk heroes in songs and on screen",
+    "Roadside statues and legend landmarks"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Lumberjack",
+      "facet": "Paul Bunyan and lumberjack lore",
+      "known_at": 3
+    },
+    {
+      "name": "Flapjacks",
+      "facet": "Paul Bunyan and lumberjack lore",
+      "known_at": 5
+    },
+    {
+      "name": "Flannel shirt",
+      "facet": "Paul Bunyan and lumberjack lore",
+      "known_at": 4
+    },
+    {
+      "name": "Timber!",
+      "facet": "Paul Bunyan and lumberjack lore",
+      "known_at": 5
+    },
+    {
+      "name": "Minnesota's 10,000 lakes",
+      "facet": "Paul Bunyan and lumberjack lore",
+      "known_at": 9
+    },
+    {
+      "name": "Puget Sound",
+      "facet": "Paul Bunyan and lumberjack lore",
+      "known_at": 13
+    },
+    {
+      "name": "Winter of the Blue Snow",
+      "facet": "Paul Bunyan and lumberjack lore",
+      "known_at": 13
+    },
+    {
+      "name": "Johnny Inkslinger",
+      "facet": "Paul Bunyan and lumberjack lore",
+      "known_at": 14
+    },
+    {
+      "name": "Sourdough Sam",
+      "facet": "Paul Bunyan and lumberjack lore",
+      "known_at": 14
+    },
+    {
+      "name": "Paul Bunyan's griddle",
+      "facet": "Paul Bunyan and lumberjack lore",
+      "known_at": 11
+    },
+    {
+      "name": "Log rolling",
+      "facet": "Paul Bunyan and lumberjack lore",
+      "known_at": 8
+    },
+    {
+      "name": "Lumber camp",
+      "facet": "Paul Bunyan and lumberjack lore",
+      "known_at": 8
+    },
+    {
+      "name": "Crosscut saw",
+      "facet": "Paul Bunyan and lumberjack lore",
+      "known_at": 10
+    },
+    {
+      "name": "River drive",
+      "facet": "Paul Bunyan and lumberjack lore",
+      "known_at": 12
+    },
+    {
+      "name": "Peavey",
+      "facet": "Paul Bunyan and lumberjack lore",
+      "known_at": 14
+    },
+    {
+      "name": "Axe throwing",
+      "facet": "Paul Bunyan and lumberjack lore",
+      "known_at": 7
+    },
+    {
+      "name": "Coonskin cap",
+      "facet": "Frontier and backwoods heroes",
+      "known_at": 8
+    },
+    {
+      "name": "Wilderness Road",
+      "facet": "Frontier and backwoods heroes",
+      "known_at": 14
+    },
+    {
+      "name": "Kentucky long rifle",
+      "facet": "Frontier and backwoods heroes",
+      "known_at": 12
+    },
+    {
+      "name": "Old Betsy",
+      "facet": "Frontier and backwoods heroes",
+      "known_at": 14
+    },
+    {
+      "name": "Hugh Glass",
+      "facet": "Frontier and backwoods heroes",
+      "known_at": 12
+    },
+    {
+      "name": "Mountain man",
+      "facet": "Frontier and backwoods heroes",
+      "known_at": 10
+    },
+    {
+      "name": "Jeremiah Johnson",
+      "facet": "Frontier and backwoods heroes",
+      "known_at": 13
+    },
+    {
+      "name": "Natty Bumppo",
+      "facet": "Frontier and backwoods heroes",
+      "known_at": 13
+    },
+    {
+      "name": "Widowmaker",
+      "facet": "Cowboy and Wild West legends",
+      "known_at": 13
+    },
+    {
+      "name": "Butch Cassidy and the Sundance Kid",
+      "facet": "Cowboy and Wild West legends",
+      "known_at": 11
+    },
+    {
+      "name": "Ten-gallon hat",
+      "facet": "Cowboy and Wild West legends",
+      "known_at": 6
+    },
+    {
+      "name": "John Henry",
+      "facet": "Railroad and working-hero legends",
+      "known_at": 7
+    },
+    {
+      "name": "Steam drill",
+      "facet": "Railroad and working-hero legends",
+      "known_at": 10
+    },
+    {
+      "name": "Big Bend Tunnel",
+      "facet": "Railroad and working-hero legends",
+      "known_at": 14
+    },
+    {
+      "name": "Casey Jones",
+      "facet": "Railroad and working-hero legends",
+      "known_at": 10
+    },
+    {
+      "name": "Cannonball Express",
+      "facet": "Railroad and working-hero legends",
+      "known_at": 14
+    },
+    {
+      "name": "Joe Magarac",
+      "facet": "Railroad and working-hero legends",
+      "known_at": 14
+    },
+    {
+      "name": "Febold Feboldson",
+      "facet": "Railroad and working-hero legends",
+      "known_at": 15
+    },
+    {
+      "name": "Kemp Morgan",
+      "facet": "Railroad and working-hero legends",
+      "known_at": 15
+    },
+    {
+      "name": "Tony Beaver",
+      "facet": "Railroad and working-hero legends",
+      "known_at": 15
+    },
+    {
+      "name": "Iron horse",
+      "facet": "Railroad and working-hero legends",
+      "known_at": 9
+    },
+    {
+      "name": "Railroad spike",
+      "facet": "Railroad and working-hero legends",
+      "known_at": 6
+    },
+    {
+      "name": "Hobo code",
+      "facet": "Railroad and working-hero legends",
+      "known_at": 12
+    },
+    {
+      "name": "Pullman porter",
+      "facet": "Railroad and working-hero legends",
+      "known_at": 13
+    },
+    {
+      "name": "Old Stormalong",
+      "facet": "River, sea and sailor tall tales",
+      "known_at": 13
+    },
+    {
+      "name": "Keelboat",
+      "facet": "River, sea and sailor tall tales",
+      "known_at": 13
+    },
+    {
+      "name": "Paddle wheel",
+      "facet": "River, sea and sailor tall tales",
+      "known_at": 6
+    },
+    {
+      "name": "Riverboat gambler",
+      "facet": "River, sea and sailor tall tales",
+      "known_at": 11
+    },
+    {
+      "name": "Moby-Dick",
+      "facet": "River, sea and sailor tall tales",
+      "known_at": 9
+    },
+    {
+      "name": "Captain Ahab",
+      "facet": "River, sea and sailor tall tales",
+      "known_at": 10
+    },
+    {
+      "name": "Whaling",
+      "facet": "River, sea and sailor tall tales",
+      "known_at": 7
+    },
+    {
+      "name": "Blackbeard",
+      "facet": "River, sea and sailor tall tales",
+      "known_at": 6
+    },
+    {
+      "name": "Jean Lafitte",
+      "facet": "River, sea and sailor tall tales",
+      "known_at": 12
+    },
+    {
+      "name": "Captain Kidd's treasure",
+      "facet": "River, sea and sailor tall tales",
+      "known_at": 12
+    },
+    {
+      "name": "Bermuda Triangle",
+      "facet": "River, sea and sailor tall tales",
+      "known_at": 8
+    },
+    {
+      "name": "Gloucester fisherman",
+      "facet": "River, sea and sailor tall tales",
+      "known_at": 12
+    },
+    {
+      "name": "Sybil Ludington",
+      "facet": "Heroines of American legend",
+      "known_at": 13
+    },
+    {
+      "name": "Slue-Foot Sue",
+      "facet": "Heroines of American legend",
+      "known_at": 13
+    },
+    {
+      "name": "Sally Ann Thunder Ann Whirlwind",
+      "facet": "Heroines of American legend",
+      "known_at": 14
+    },
+    {
+      "name": "Annie Christmas",
+      "facet": "Heroines of American legend",
+      "known_at": 15
+    },
+    {
+      "name": "Belle Starr",
+      "facet": "Heroines of American legend",
+      "known_at": 13
+    },
+    {
+      "name": "Molly Brown",
+      "facet": "Heroines of American legend",
+      "known_at": 11
+    },
+    {
+      "name": "Parson Weems",
+      "facet": "Founding-era myths and stories",
+      "known_at": 15
+    },
+    {
+      "name": "Washington's wooden teeth",
+      "facet": "Founding-era myths and stories",
+      "known_at": 9
+    },
+    {
+      "name": "Benjamin Franklin's kite experiment",
+      "facet": "Founding-era myths and stories",
+      "known_at": 8
+    },
+    {
+      "name": "Franklin's turkey",
+      "facet": "Founding-era myths and stories",
+      "known_at": 10
+    },
+    {
+      "name": "John Hancock's signature",
+      "facet": "Founding-era myths and stories",
+      "known_at": 9
+    },
+    {
+      "name": "Lost Colony of Roanoke",
+      "facet": "Founding-era myths and stories",
+      "known_at": 12
+    },
+    {
+      "name": "Hodag",
+      "facet": "Fearsome critters and tall-tale beasts",
+      "known_at": 13
+    },
+    {
+      "name": "Hidebehind",
+      "facet": "Fearsome critters and tall-tale beasts",
+      "known_at": 14
+    },
+    {
+      "name": "Squonk",
+      "facet": "Fearsome critters and tall-tale beasts",
+      "known_at": 14
+    },
+    {
+      "name": "Snipe hunt",
+      "facet": "Fearsome critters and tall-tale beasts",
+      "known_at": 11
+    },
+    {
+      "name": "Chupacabra",
+      "facet": "Fearsome critters and tall-tale beasts",
+      "known_at": 9
+    },
+    {
+      "name": "Wampus cat",
+      "facet": "Fearsome critters and tall-tale beasts",
+      "known_at": 14
+    },
+    {
+      "name": "Sidehill gouger",
+      "facet": "Fearsome critters and tall-tale beasts",
+      "known_at": 14
+    },
+    {
+      "name": "Agropelter",
+      "facet": "Fearsome critters and tall-tale beasts",
+      "known_at": 15
+    },
+    {
+      "name": "Fur-bearing trout",
+      "facet": "Fearsome critters and tall-tale beasts",
+      "known_at": 14
+    },
+    {
+      "name": "Hoop snake",
+      "facet": "Fearsome critters and tall-tale beasts",
+      "known_at": 13
+    },
+    {
+      "name": "Goofus bird",
+      "facet": "Fearsome critters and tall-tale beasts",
+      "known_at": 15
+    },
+    {
+      "name": "Champ",
+      "facet": "Fearsome critters and tall-tale beasts",
+      "known_at": 13
+    },
+    {
+      "name": "Skunk ape",
+      "facet": "Fearsome critters and tall-tale beasts",
+      "known_at": 13
+    },
+    {
+      "name": "Br'er Fox",
+      "facet": "Tricksters and African American folktales",
+      "known_at": 10
+    },
+    {
+      "name": "Br'er Bear",
+      "facet": "Tricksters and African American folktales",
+      "known_at": 11
+    },
+    {
+      "name": "Br'er Terrapin",
+      "facet": "Tricksters and African American folktales",
+      "known_at": 15
+    },
+    {
+      "name": "Tar-Baby",
+      "facet": "Tricksters and African American folktales",
+      "known_at": 11
+    },
+    {
+      "name": "Briar patch",
+      "facet": "Tricksters and African American folktales",
+      "known_at": 10
+    },
+    {
+      "name": "Uncle Remus",
+      "facet": "Tricksters and African American folktales",
+      "known_at": 12
+    },
+    {
+      "name": "Joel Chandler Harris",
+      "facet": "Tricksters and African American folktales",
+      "known_at": 14
+    },
+    {
+      "name": "Song of the South",
+      "facet": "Tricksters and African American folktales",
+      "known_at": 12
+    },
+    {
+      "name": "Splash Mountain",
+      "facet": "Tricksters and African American folktales",
+      "known_at": 9
+    },
+    {
+      "name": "High John the Conqueror",
+      "facet": "Tricksters and African American folktales",
+      "known_at": 14
+    },
+    {
+      "name": "The People Could Fly",
+      "facet": "Tricksters and African American folktales",
+      "known_at": 13
+    },
+    {
+      "name": "Stagger Lee",
+      "facet": "Tricksters and African American folktales",
+      "known_at": 14
+    },
+    {
+      "name": "Gullah",
+      "facet": "Tricksters and African American folktales",
+      "known_at": 13
+    },
+    {
+      "name": "Raven",
+      "facet": "Tricksters and African American folktales",
+      "known_at": 12
+    },
+    {
+      "name": "Tall tale",
+      "facet": "Tall-tale talk and exaggeration",
+      "known_at": 6
+    },
+    {
+      "name": "Fish story",
+      "facet": "Tall-tale talk and exaggeration",
+      "known_at": 9
+    },
+    {
+      "name": "Spinning a yarn",
+      "facet": "Tall-tale talk and exaggeration",
+      "known_at": 9
+    },
+    {
+      "name": "Liars' contest",
+      "facet": "Tall-tale talk and exaggeration",
+      "known_at": 13
+    },
+    {
+      "name": "The Celebrated Jumping Frog of Calaveras County",
+      "facet": "Tall-tale talk and exaggeration",
+      "known_at": 12
+    },
+    {
+      "name": "Everything's bigger in Texas",
+      "facet": "Tall-tale talk and exaggeration",
+      "known_at": 8
+    },
+    {
+      "name": "Half horse, half alligator",
+      "facet": "Tall-tale talk and exaggeration",
+      "known_at": 14
+    },
+    {
+      "name": "Hornswoggle",
+      "facet": "Tall-tale talk and exaggeration",
+      "known_at": 13
+    },
+    {
+      "name": "Bodacious",
+      "facet": "Tall-tale talk and exaggeration",
+      "known_at": 12
+    },
+    {
+      "name": "Rip-roaring",
+      "facet": "Tall-tale talk and exaggeration",
+      "known_at": 11
+    },
+    {
+      "name": "Hogwash",
+      "facet": "Tall-tale talk and exaggeration",
+      "known_at": 9
+    },
+    {
+      "name": "Malarkey",
+      "facet": "Tall-tale talk and exaggeration",
+      "known_at": 11
+    },
+    {
+      "name": "Skedaddle",
+      "facet": "Tall-tale talk and exaggeration",
+      "known_at": 9
+    },
+    {
+      "name": "Humdinger",
+      "facet": "Tall-tale talk and exaggeration",
+      "known_at": 12
+    },
+    {
+      "name": "Snake oil",
+      "facet": "Tall-tale talk and exaggeration",
+      "known_at": 10
+    },
+    {
+      "name": "Shoot the breeze",
+      "facet": "Tall-tale talk and exaggeration",
+      "known_at": 10
+    },
+    {
+      "name": "Bunkum",
+      "facet": "Tall-tale talk and exaggeration",
+      "known_at": 14
+    },
+    {
+      "name": "The Ballad of Davy Crockett",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 11
+    },
+    {
+      "name": "Melody Time",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 14
+    },
+    {
+      "name": "Tall Tale (1995 film)",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 13
+    },
+    {
+      "name": "Woody",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 2
+    },
+    {
+      "name": "Jessie",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 3
+    },
+    {
+      "name": "Bullseye",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 4,
+      "retired": "used_up: The pool already names Bullseye as Woody and Jessie's horse, so a riddle about Bullseye would be answered by the earlier question."
+    },
+    {
+      "name": "The Lone Ranger",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 9
+    },
+    {
+      "name": "Hi-Yo, Silver!",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 12
+    },
+    {
+      "name": "Rango",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 8
+    },
+    {
+      "name": "An American Tail: Fievel Goes West",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 9
+    },
+    {
+      "name": "Bonanza",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 13
+    },
+    {
+      "name": "Gunsmoke",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 14
+    },
+    {
+      "name": "John Wayne",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 10
+    },
+    {
+      "name": "Back to the Future Part III",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 11
+    },
+    {
+      "name": "Red Dead Redemption",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 9
+    },
+    {
+      "name": "Home on the Range",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 9
+    },
+    {
+      "name": "Oh! Susanna",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 9
+    },
+    {
+      "name": "Big Rock Candy Mountain",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 12
+    },
+    {
+      "name": "Ghost Riders in the Sky",
+      "facet": "Folk heroes in songs and on screen",
+      "known_at": 14
+    },
+    {
+      "name": "Bemidji",
+      "facet": "Roadside statues and legend landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Muffler Men",
+      "facet": "Roadside statues and legend landmarks",
+      "known_at": 14
+    },
+    {
+      "name": "Lucy the Elephant",
+      "facet": "Roadside statues and legend landmarks",
+      "known_at": 14
+    },
+    {
+      "name": "Winchester Mystery House",
+      "facet": "Roadside statues and legend landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Coral Castle",
+      "facet": "Roadside statues and legend landmarks",
+      "known_at": 14
+    },
+    {
+      "name": "Big Duck",
+      "facet": "Roadside statues and legend landmarks",
+      "known_at": 14
+    }
+  ]
+}

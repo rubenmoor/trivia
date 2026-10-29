@@ -1,0 +1,998 @@
+{
+  "subcategory": "inventors-and-founders",
+  "facets": [
+    "Electricity and light inventors",
+    "Communication and media inventions",
+    "Flight and space pioneers",
+    "Cars and assembly lines",
+    "Household and kitchen inventions",
+    "Food and drink brand founders",
+    "Tech and computer company founders",
+    "Retail and store founders",
+    "Toy, game and entertainment founders",
+    "Gilded Age industrialists",
+    "Medicine and health innovators",
+    "Farm and factory machines"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 2,
+      "word_meaning": 1,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Light bulb",
+      "facet": "Electricity and light inventors",
+      "known_at": 2
+    },
+    {
+      "name": "Lightning rod",
+      "facet": "Electricity and light inventors",
+      "known_at": 7
+    },
+    {
+      "name": "Franklin's kite experiment",
+      "facet": "Electricity and light inventors",
+      "known_at": 5,
+      "retired": "used_up: Every option asks who flew the kite, and an existing question already names Franklin as the man with the kite in the storm."
+    },
+    {
+      "name": "Nikola Tesla",
+      "facet": "Electricity and light inventors",
+      "known_at": 7
+    },
+    {
+      "name": "George Westinghouse",
+      "facet": "Electricity and light inventors",
+      "known_at": 12
+    },
+    {
+      "name": "War of the Currents",
+      "facet": "Electricity and light inventors",
+      "known_at": 12
+    },
+    {
+      "name": "Alternating current",
+      "facet": "Electricity and light inventors",
+      "known_at": 10
+    },
+    {
+      "name": "Menlo Park",
+      "facet": "Electricity and light inventors",
+      "known_at": 11
+    },
+    {
+      "name": "Lewis Latimer",
+      "facet": "Electricity and light inventors",
+      "known_at": 12
+    },
+    {
+      "name": "Pearl Street Station",
+      "facet": "Electricity and light inventors",
+      "known_at": 14
+    },
+    {
+      "name": "General Electric",
+      "facet": "Electricity and light inventors",
+      "known_at": 9
+    },
+    {
+      "name": "Tesla coil",
+      "facet": "Electricity and light inventors",
+      "known_at": 10
+    },
+    {
+      "name": "Niagara Falls power plant",
+      "facet": "Electricity and light inventors",
+      "known_at": 12
+    },
+    {
+      "name": "Garrett Morgan",
+      "facet": "Electricity and light inventors",
+      "known_at": 9
+    },
+    {
+      "name": "Three-light traffic signal",
+      "facet": "Electricity and light inventors",
+      "known_at": 6
+    },
+    {
+      "name": "Nick Holonyak",
+      "facet": "Electricity and light inventors",
+      "known_at": 14
+    },
+    {
+      "name": "Alexander Graham Bell",
+      "facet": "Communication and media inventions",
+      "known_at": 4
+    },
+    {
+      "name": "Telephone",
+      "facet": "Communication and media inventions",
+      "known_at": 1
+    },
+    {
+      "name": "Phonograph",
+      "facet": "Communication and media inventions",
+      "known_at": 7
+    },
+    {
+      "name": "Kinetoscope",
+      "facet": "Communication and media inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Philo Farnsworth",
+      "facet": "Communication and media inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Electronic television",
+      "facet": "Communication and media inventions",
+      "known_at": 5
+    },
+    {
+      "name": "Christopher Latham Sholes",
+      "facet": "Communication and media inventions",
+      "known_at": 13
+    },
+    {
+      "name": "QWERTY keyboard",
+      "facet": "Communication and media inventions",
+      "known_at": 5
+    },
+    {
+      "name": "George Eastman",
+      "facet": "Communication and media inventions",
+      "known_at": 11
+    },
+    {
+      "name": "Kodak camera",
+      "facet": "Communication and media inventions",
+      "known_at": 6
+    },
+    {
+      "name": "Polaroid instant camera",
+      "facet": "Communication and media inventions",
+      "known_at": 6
+    },
+    {
+      "name": "Edwin Land",
+      "facet": "Communication and media inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Martin Cooper",
+      "facet": "Communication and media inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Ray Tomlinson",
+      "facet": "Communication and media inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Chester Carlson",
+      "facet": "Communication and media inventions",
+      "known_at": 14
+    },
+    {
+      "name": "Xerox photocopier",
+      "facet": "Communication and media inventions",
+      "known_at": 8
+    },
+    {
+      "name": "Wright Flyer",
+      "facet": "Flight and space pioneers",
+      "known_at": 7
+    },
+    {
+      "name": "Spirit of St. Louis",
+      "facet": "Flight and space pioneers",
+      "known_at": 10
+    },
+    {
+      "name": "Robert Goddard",
+      "facet": "Flight and space pioneers",
+      "known_at": 12
+    },
+    {
+      "name": "Liquid-fuel rocket",
+      "facet": "Flight and space pioneers",
+      "known_at": 11
+    },
+    {
+      "name": "Chuck Yeager",
+      "facet": "Flight and space pioneers",
+      "known_at": 11
+    },
+    {
+      "name": "Sound barrier",
+      "facet": "Flight and space pioneers",
+      "known_at": 7
+    },
+    {
+      "name": "Saturn V",
+      "facet": "Flight and space pioneers",
+      "known_at": 9
+    },
+    {
+      "name": "Igor Sikorsky",
+      "facet": "Flight and space pioneers",
+      "known_at": 12
+    },
+    {
+      "name": "Bessie Coleman",
+      "facet": "Flight and space pioneers",
+      "known_at": 9
+    },
+    {
+      "name": "William Boeing",
+      "facet": "Flight and space pioneers",
+      "known_at": 11
+    },
+    {
+      "name": "Howard Hughes",
+      "facet": "Flight and space pioneers",
+      "known_at": 12
+    },
+    {
+      "name": "Spruce Goose",
+      "facet": "Flight and space pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "SpaceX",
+      "facet": "Flight and space pioneers",
+      "known_at": 7
+    },
+    {
+      "name": "Katherine Johnson",
+      "facet": "Flight and space pioneers",
+      "known_at": 9
+    },
+    {
+      "name": "Moving assembly line",
+      "facet": "Cars and assembly lines",
+      "known_at": 6
+    },
+    {
+      "name": "Ford Motor Company",
+      "facet": "Cars and assembly lines",
+      "known_at": 4
+    },
+    {
+      "name": "Five-dollar day",
+      "facet": "Cars and assembly lines",
+      "known_at": 13
+    },
+    {
+      "name": "General Motors",
+      "facet": "Cars and assembly lines",
+      "known_at": 8
+    },
+    {
+      "name": "William Durant",
+      "facet": "Cars and assembly lines",
+      "known_at": 14
+    },
+    {
+      "name": "Walter Chrysler",
+      "facet": "Cars and assembly lines",
+      "known_at": 12
+    },
+    {
+      "name": "Ransom Olds",
+      "facet": "Cars and assembly lines",
+      "known_at": 13
+    },
+    {
+      "name": "Louis Chevrolet",
+      "facet": "Cars and assembly lines",
+      "known_at": 12
+    },
+    {
+      "name": "Dodge brothers",
+      "facet": "Cars and assembly lines",
+      "known_at": 12
+    },
+    {
+      "name": "Harley-Davidson",
+      "facet": "Cars and assembly lines",
+      "known_at": 5
+    },
+    {
+      "name": "Cadillac",
+      "facet": "Cars and assembly lines",
+      "known_at": 6
+    },
+    {
+      "name": "Charles Kettering",
+      "facet": "Cars and assembly lines",
+      "known_at": 14
+    },
+    {
+      "name": "Mary Anderson",
+      "facet": "Cars and assembly lines",
+      "known_at": 11
+    },
+    {
+      "name": "Windshield wiper",
+      "facet": "Cars and assembly lines",
+      "known_at": 4
+    },
+    {
+      "name": "Tesla, Inc.",
+      "facet": "Cars and assembly lines",
+      "known_at": 5
+    },
+    {
+      "name": "Percy Spencer",
+      "facet": "Household and kitchen inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Sliced bread",
+      "facet": "Household and kitchen inventions",
+      "known_at": 4
+    },
+    {
+      "name": "Otto Rohwedder",
+      "facet": "Household and kitchen inventions",
+      "known_at": 14
+    },
+    {
+      "name": "Tupperware",
+      "facet": "Household and kitchen inventions",
+      "known_at": 6
+    },
+    {
+      "name": "Earl Tupper",
+      "facet": "Household and kitchen inventions",
+      "known_at": 11
+    },
+    {
+      "name": "Dishwasher",
+      "facet": "Household and kitchen inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Josephine Cochrane",
+      "facet": "Household and kitchen inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Hoover vacuum cleaner",
+      "facet": "Household and kitchen inventions",
+      "known_at": 7
+    },
+    {
+      "name": "Teflon",
+      "facet": "Household and kitchen inventions",
+      "known_at": 9
+    },
+    {
+      "name": "Post-it Note",
+      "facet": "Household and kitchen inventions",
+      "known_at": 4
+    },
+    {
+      "name": "Super Glue",
+      "facet": "Household and kitchen inventions",
+      "known_at": 4
+    },
+    {
+      "name": "Safety pin",
+      "facet": "Household and kitchen inventions",
+      "known_at": 4
+    },
+    {
+      "name": "Zipper",
+      "facet": "Household and kitchen inventions",
+      "known_at": 3
+    },
+    {
+      "name": "Margaret Knight",
+      "facet": "Household and kitchen inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Flat-bottomed paper bag",
+      "facet": "Household and kitchen inventions",
+      "known_at": 7
+    },
+    {
+      "name": "Crock-Pot",
+      "facet": "Household and kitchen inventions",
+      "known_at": 8
+    },
+    {
+      "name": "Pop-up toaster",
+      "facet": "Household and kitchen inventions",
+      "known_at": 4
+    },
+    {
+      "name": "Ice cream scoop",
+      "facet": "Household and kitchen inventions",
+      "known_at": 3
+    },
+    {
+      "name": "John Pemberton",
+      "facet": "Food and drink brand founders",
+      "known_at": 11
+    },
+    {
+      "name": "Pepsi",
+      "facet": "Food and drink brand founders",
+      "known_at": 2
+    },
+    {
+      "name": "Milton Hershey",
+      "facet": "Food and drink brand founders",
+      "known_at": 8
+    },
+    {
+      "name": "Hershey's Kisses",
+      "facet": "Food and drink brand founders",
+      "known_at": 3
+    },
+    {
+      "name": "W. K. Kellogg",
+      "facet": "Food and drink brand founders",
+      "known_at": 9
+    },
+    {
+      "name": "Corn Flakes",
+      "facet": "Food and drink brand founders",
+      "known_at": 3
+    },
+    {
+      "name": "Ray Kroc",
+      "facet": "Food and drink brand founders",
+      "known_at": 11
+    },
+    {
+      "name": "Colonel Sanders",
+      "facet": "Food and drink brand founders",
+      "known_at": 5
+    },
+    {
+      "name": "Dave Thomas",
+      "facet": "Food and drink brand founders",
+      "known_at": 11
+    },
+    {
+      "name": "Henry J. Heinz",
+      "facet": "Food and drink brand founders",
+      "known_at": 10
+    },
+    {
+      "name": "Heinz ketchup",
+      "facet": "Food and drink brand founders",
+      "known_at": 3
+    },
+    {
+      "name": "Clarence Birdseye",
+      "facet": "Food and drink brand founders",
+      "known_at": 12
+    },
+    {
+      "name": "Starbucks",
+      "facet": "Food and drink brand founders",
+      "known_at": 4
+    },
+    {
+      "name": "Ben & Jerry's",
+      "facet": "Food and drink brand founders",
+      "known_at": 6
+    },
+    {
+      "name": "William Wrigley Jr.",
+      "facet": "Food and drink brand founders",
+      "known_at": 10
+    },
+    {
+      "name": "Dr Pepper",
+      "facet": "Food and drink brand founders",
+      "known_at": 5
+    },
+    {
+      "name": "Gatorade",
+      "facet": "Food and drink brand founders",
+      "known_at": 5
+    },
+    {
+      "name": "Chef Boyardee",
+      "facet": "Food and drink brand founders",
+      "known_at": 7
+    },
+    {
+      "name": "Steve Wozniak",
+      "facet": "Tech and computer company founders",
+      "known_at": 9
+    },
+    {
+      "name": "Paul Allen",
+      "facet": "Tech and computer company founders",
+      "known_at": 12
+    },
+    {
+      "name": "Mark Zuckerberg",
+      "facet": "Tech and computer company founders",
+      "known_at": 6
+    },
+    {
+      "name": "Facebook",
+      "facet": "Tech and computer company founders",
+      "known_at": 4
+    },
+    {
+      "name": "Larry Page",
+      "facet": "Tech and computer company founders",
+      "known_at": 11
+    },
+    {
+      "name": "Sergey Brin",
+      "facet": "Tech and computer company founders",
+      "known_at": 11
+    },
+    {
+      "name": "Google",
+      "facet": "Tech and computer company founders",
+      "known_at": 2
+    },
+    {
+      "name": "Hewlett-Packard",
+      "facet": "Tech and computer company founders",
+      "known_at": 9
+    },
+    {
+      "name": "Gordon Moore",
+      "facet": "Tech and computer company founders",
+      "known_at": 13
+    },
+    {
+      "name": "Moore's law",
+      "facet": "Tech and computer company founders",
+      "known_at": 12
+    },
+    {
+      "name": "Grace Hopper",
+      "facet": "Tech and computer company founders",
+      "known_at": 12
+    },
+    {
+      "name": "Elon Musk",
+      "facet": "Tech and computer company founders",
+      "known_at": 5
+    },
+    {
+      "name": "YouTube",
+      "facet": "Tech and computer company founders",
+      "known_at": 2
+    },
+    {
+      "name": "Jensen Huang",
+      "facet": "Tech and computer company founders",
+      "known_at": 12
+    },
+    {
+      "name": "Sam Walton",
+      "facet": "Retail and store founders",
+      "known_at": 10
+    },
+    {
+      "name": "Walmart",
+      "facet": "Retail and store founders",
+      "known_at": 2
+    },
+    {
+      "name": "Jeff Bezos",
+      "facet": "Retail and store founders",
+      "known_at": 6
+    },
+    {
+      "name": "Amazon",
+      "facet": "Retail and store founders",
+      "known_at": 2
+    },
+    {
+      "name": "Montgomery Ward",
+      "facet": "Retail and store founders",
+      "known_at": 13
+    },
+    {
+      "name": "F. W. Woolworth",
+      "facet": "Retail and store founders",
+      "known_at": 12
+    },
+    {
+      "name": "Five-and-dime store",
+      "facet": "Retail and store founders",
+      "known_at": 10
+    },
+    {
+      "name": "Macy's",
+      "facet": "Retail and store founders",
+      "known_at": 4
+    },
+    {
+      "name": "J. C. Penney",
+      "facet": "Retail and store founders",
+      "known_at": 9
+    },
+    {
+      "name": "Costco",
+      "facet": "Retail and store founders",
+      "known_at": 4
+    },
+    {
+      "name": "Target",
+      "facet": "Retail and store founders",
+      "known_at": 2
+    },
+    {
+      "name": "The Home Depot",
+      "facet": "Retail and store founders",
+      "known_at": 5
+    },
+    {
+      "name": "L.L.Bean",
+      "facet": "Retail and store founders",
+      "known_at": 9
+    },
+    {
+      "name": "Phil Knight",
+      "facet": "Retail and store founders",
+      "known_at": 11
+    },
+    {
+      "name": "Nike",
+      "facet": "Retail and store founders",
+      "known_at": 2
+    },
+    {
+      "name": "Piggly Wiggly",
+      "facet": "Retail and store founders",
+      "known_at": 11
+    },
+    {
+      "name": "eBay",
+      "facet": "Retail and store founders",
+      "known_at": 6
+    },
+    {
+      "name": "Ruth Handler",
+      "facet": "Toy, game and entertainment founders",
+      "known_at": 11
+    },
+    {
+      "name": "Mattel",
+      "facet": "Toy, game and entertainment founders",
+      "known_at": 7
+    },
+    {
+      "name": "Play-Doh",
+      "facet": "Toy, game and entertainment founders",
+      "known_at": 1
+    },
+    {
+      "name": "Hot Wheels",
+      "facet": "Toy, game and entertainment founders",
+      "known_at": 2
+    },
+    {
+      "name": "P. T. Barnum",
+      "facet": "Toy, game and entertainment founders",
+      "known_at": 8
+    },
+    {
+      "name": "Jim Henson",
+      "facet": "Toy, game and entertainment founders",
+      "known_at": 9
+    },
+    {
+      "name": "Nolan Bushnell",
+      "facet": "Toy, game and entertainment founders",
+      "known_at": 14
+    },
+    {
+      "name": "Pong",
+      "facet": "Toy, game and entertainment founders",
+      "known_at": 8
+    },
+    {
+      "name": "Netflix",
+      "facet": "Toy, game and entertainment founders",
+      "known_at": 3
+    },
+    {
+      "name": "Milton Bradley",
+      "facet": "Toy, game and entertainment founders",
+      "known_at": 10
+    },
+    {
+      "name": "Andrew Carnegie",
+      "facet": "Gilded Age industrialists",
+      "known_at": 10
+    },
+    {
+      "name": "Carnegie Hall",
+      "facet": "Gilded Age industrialists",
+      "known_at": 9
+    },
+    {
+      "name": "John D. Rockefeller",
+      "facet": "Gilded Age industrialists",
+      "known_at": 9
+    },
+    {
+      "name": "Standard Oil",
+      "facet": "Gilded Age industrialists",
+      "known_at": 11
+    },
+    {
+      "name": "Cornelius Vanderbilt",
+      "facet": "Gilded Age industrialists",
+      "known_at": 11
+    },
+    {
+      "name": "J. P. Morgan",
+      "facet": "Gilded Age industrialists",
+      "known_at": 10
+    },
+    {
+      "name": "Robber barons",
+      "facet": "Gilded Age industrialists",
+      "known_at": 11
+    },
+    {
+      "name": "Sherman Antitrust Act",
+      "facet": "Gilded Age industrialists",
+      "known_at": 12
+    },
+    {
+      "name": "The Breakers",
+      "facet": "Gilded Age industrialists",
+      "known_at": 14
+    },
+    {
+      "name": "Jay Gould",
+      "facet": "Gilded Age industrialists",
+      "known_at": 14
+    },
+    {
+      "name": "Henry Clay Frick",
+      "facet": "Gilded Age industrialists",
+      "known_at": 14
+    },
+    {
+      "name": "George Pullman",
+      "facet": "Gilded Age industrialists",
+      "known_at": 13
+    },
+    {
+      "name": "Pullman sleeping car",
+      "facet": "Gilded Age industrialists",
+      "known_at": 13
+    },
+    {
+      "name": "Gilded Age",
+      "facet": "Gilded Age industrialists",
+      "known_at": 10
+    },
+    {
+      "name": "Carnegie libraries",
+      "facet": "Gilded Age industrialists",
+      "known_at": 12
+    },
+    {
+      "name": "Jonas Salk",
+      "facet": "Medicine and health innovators",
+      "known_at": 10
+    },
+    {
+      "name": "Polio vaccine",
+      "facet": "Medicine and health innovators",
+      "known_at": 8
+    },
+    {
+      "name": "Albert Sabin",
+      "facet": "Medicine and health innovators",
+      "known_at": 13
+    },
+    {
+      "name": "Charles Drew",
+      "facet": "Medicine and health innovators",
+      "known_at": 10
+    },
+    {
+      "name": "Blood bank",
+      "facet": "Medicine and health innovators",
+      "known_at": 8
+    },
+    {
+      "name": "Band-Aid",
+      "facet": "Medicine and health innovators",
+      "known_at": 2
+    },
+    {
+      "name": "Earle Dickson",
+      "facet": "Medicine and health innovators",
+      "known_at": 14
+    },
+    {
+      "name": "Johnson & Johnson",
+      "facet": "Medicine and health innovators",
+      "known_at": 7
+    },
+    {
+      "name": "Ether anesthesia",
+      "facet": "Medicine and health innovators",
+      "known_at": 12
+    },
+    {
+      "name": "Elizabeth Blackwell",
+      "facet": "Medicine and health innovators",
+      "known_at": 10
+    },
+    {
+      "name": "Mayo Clinic",
+      "facet": "Medicine and health innovators",
+      "known_at": 9
+    },
+    {
+      "name": "Pacemaker",
+      "facet": "Medicine and health innovators",
+      "known_at": 8
+    },
+    {
+      "name": "Daniel Hale Williams",
+      "facet": "Medicine and health innovators",
+      "known_at": 12
+    },
+    {
+      "name": "Q-tips",
+      "facet": "Medicine and health innovators",
+      "known_at": 3
+    },
+    {
+      "name": "Apgar score",
+      "facet": "Medicine and health innovators",
+      "known_at": 13
+    },
+    {
+      "name": "Bifocals",
+      "facet": "Medicine and health innovators",
+      "known_at": 8
+    },
+    {
+      "name": "Henrietta Lacks",
+      "facet": "Medicine and health innovators",
+      "known_at": 12
+    },
+    {
+      "name": "Cyrus McCormick",
+      "facet": "Farm and factory machines",
+      "known_at": 10
+    },
+    {
+      "name": "Mechanical reaper",
+      "facet": "Farm and factory machines",
+      "known_at": 9
+    },
+    {
+      "name": "Interchangeable parts",
+      "facet": "Farm and factory machines",
+      "known_at": 11
+    },
+    {
+      "name": "John Deere",
+      "facet": "Farm and factory machines",
+      "known_at": 5
+    },
+    {
+      "name": "Steel plow",
+      "facet": "Farm and factory machines",
+      "known_at": 9
+    },
+    {
+      "name": "Safety elevator",
+      "facet": "Farm and factory machines",
+      "known_at": 8
+    },
+    {
+      "name": "Barbed wire",
+      "facet": "Farm and factory machines",
+      "known_at": 7
+    },
+    {
+      "name": "Peanut butter",
+      "facet": "Farm and factory machines",
+      "known_at": 2
+    },
+    {
+      "name": "Isaac Singer",
+      "facet": "Farm and factory machines",
+      "known_at": 11
+    },
+    {
+      "name": "Sewing machine",
+      "facet": "Farm and factory machines",
+      "known_at": 4
+    },
+    {
+      "name": "Elias Howe",
+      "facet": "Farm and factory machines",
+      "known_at": 13
+    },
+    {
+      "name": "Frederick Winslow Taylor",
+      "facet": "Farm and factory machines",
+      "known_at": 14
+    },
+    {
+      "name": "Lowell mills",
+      "facet": "Farm and factory machines",
+      "known_at": 12
+    },
+    {
+      "name": "Robert Fulton",
+      "facet": "Farm and factory machines",
+      "known_at": 10
+    },
+    {
+      "name": "Steamboat",
+      "facet": "Farm and factory machines",
+      "known_at": 5
+    },
+    {
+      "name": "Charles Goodyear",
+      "facet": "Farm and factory machines",
+      "known_at": 10
+    },
+    {
+      "name": "Vulcanized rubber",
+      "facet": "Farm and factory machines",
+      "known_at": 12
+    }
+  ]
+}

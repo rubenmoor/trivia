@@ -1,0 +1,937 @@
+{
+  "subcategory": "civics",
+  "facets": [
+    "The Constitution and its articles",
+    "Bill of Rights and amendments",
+    "Congress and how laws are made",
+    "The presidency and the White House",
+    "The Supreme Court and landmark cases",
+    "Elections and voting",
+    "Political parties and campaigns",
+    "Founding documents and Founding Fathers",
+    "National symbols and patriotic traditions",
+    "State and local government",
+    "Civil rights and citizenship",
+    "Government buildings and Washington, D.C."
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 5,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Preamble",
+      "facet": "The Constitution and its articles",
+      "known_at": 6
+    },
+    {
+      "name": "Three branches of government",
+      "facet": "The Constitution and its articles",
+      "known_at": 5
+    },
+    {
+      "name": "Federalism",
+      "facet": "The Constitution and its articles",
+      "known_at": 11
+    },
+    {
+      "name": "Article I",
+      "facet": "The Constitution and its articles",
+      "known_at": 11
+    },
+    {
+      "name": "Article II",
+      "facet": "The Constitution and its articles",
+      "known_at": 12
+    },
+    {
+      "name": "Article III",
+      "facet": "The Constitution and its articles",
+      "known_at": 12
+    },
+    {
+      "name": "Article V",
+      "facet": "The Constitution and its articles",
+      "known_at": 13
+    },
+    {
+      "name": "Supremacy Clause",
+      "facet": "The Constitution and its articles",
+      "known_at": 13
+    },
+    {
+      "name": "Necessary and Proper Clause",
+      "facet": "The Constitution and its articles",
+      "known_at": 13
+    },
+    {
+      "name": "Commerce Clause",
+      "facet": "The Constitution and its articles",
+      "known_at": 14
+    },
+    {
+      "name": "Full Faith and Credit Clause",
+      "facet": "The Constitution and its articles",
+      "known_at": 14
+    },
+    {
+      "name": "Enumerated powers",
+      "facet": "The Constitution and its articles",
+      "known_at": 13
+    },
+    {
+      "name": "Third Amendment",
+      "facet": "Bill of Rights and amendments",
+      "known_at": 14
+    },
+    {
+      "name": "Fourth Amendment",
+      "facet": "Bill of Rights and amendments",
+      "known_at": 11
+    },
+    {
+      "name": "Eighth Amendment",
+      "facet": "Bill of Rights and amendments",
+      "known_at": 12
+    },
+    {
+      "name": "Thirteenth Amendment",
+      "facet": "Bill of Rights and amendments",
+      "known_at": 10
+    },
+    {
+      "name": "Fourteenth Amendment",
+      "facet": "Bill of Rights and amendments",
+      "known_at": 11
+    },
+    {
+      "name": "Fifteenth Amendment",
+      "facet": "Bill of Rights and amendments",
+      "known_at": 12
+    },
+    {
+      "name": "Sixteenth Amendment",
+      "facet": "Bill of Rights and amendments",
+      "known_at": 13
+    },
+    {
+      "name": "Seventeenth Amendment",
+      "facet": "Bill of Rights and amendments",
+      "known_at": 14
+    },
+    {
+      "name": "Eighteenth Amendment",
+      "facet": "Bill of Rights and amendments",
+      "known_at": 11
+    },
+    {
+      "name": "Nineteenth Amendment",
+      "facet": "Bill of Rights and amendments",
+      "known_at": 10
+    },
+    {
+      "name": "Twenty-first Amendment",
+      "facet": "Bill of Rights and amendments",
+      "known_at": 12
+    },
+    {
+      "name": "Twenty-second Amendment",
+      "facet": "Bill of Rights and amendments",
+      "known_at": 12
+    },
+    {
+      "name": "Twenty-fifth Amendment",
+      "facet": "Bill of Rights and amendments",
+      "known_at": 13
+    },
+    {
+      "name": "Twenty-sixth Amendment",
+      "facet": "Bill of Rights and amendments",
+      "known_at": 12
+    },
+    {
+      "name": "Twenty-seventh Amendment",
+      "facet": "Bill of Rights and amendments",
+      "known_at": 15
+    },
+    {
+      "name": "Equal Rights Amendment",
+      "facet": "Bill of Rights and amendments",
+      "known_at": 13
+    },
+    {
+      "name": "Congress",
+      "facet": "Congress and how laws are made",
+      "known_at": 5
+    },
+    {
+      "name": "Senate",
+      "facet": "Congress and how laws are made",
+      "known_at": 6
+    },
+    {
+      "name": "House of Representatives",
+      "facet": "Congress and how laws are made",
+      "known_at": 6
+    },
+    {
+      "name": "Bill",
+      "facet": "Congress and how laws are made",
+      "known_at": 7
+    },
+    {
+      "name": "I'm Just a Bill",
+      "facet": "Congress and how laws are made",
+      "known_at": 9
+    },
+    {
+      "name": "Veto",
+      "facet": "Congress and how laws are made",
+      "known_at": 7
+    },
+    {
+      "name": "Veto override",
+      "facet": "Congress and how laws are made",
+      "known_at": 11
+    },
+    {
+      "name": "Pocket veto",
+      "facet": "Congress and how laws are made",
+      "known_at": 14
+    },
+    {
+      "name": "Filibuster",
+      "facet": "Congress and how laws are made",
+      "known_at": 12
+    },
+    {
+      "name": "Speaker of the House",
+      "facet": "Congress and how laws are made",
+      "known_at": 9
+    },
+    {
+      "name": "Senate majority leader",
+      "facet": "Congress and how laws are made",
+      "known_at": 13
+    },
+    {
+      "name": "President pro tempore",
+      "facet": "Congress and how laws are made",
+      "known_at": 14
+    },
+    {
+      "name": "Whip",
+      "facet": "Congress and how laws are made",
+      "known_at": 13
+    },
+    {
+      "name": "Impeachment",
+      "facet": "Congress and how laws are made",
+      "known_at": 8
+    },
+    {
+      "name": "Congressional committee",
+      "facet": "Congress and how laws are made",
+      "known_at": 12
+    },
+    {
+      "name": "Quorum",
+      "facet": "Congress and how laws are made",
+      "known_at": 13
+    },
+    {
+      "name": "Lobbying",
+      "facet": "Congress and how laws are made",
+      "known_at": 12
+    },
+    {
+      "name": "Earmark",
+      "facet": "Congress and how laws are made",
+      "known_at": 14
+    },
+    {
+      "name": "Government shutdown",
+      "facet": "Congress and how laws are made",
+      "known_at": 11
+    },
+    {
+      "name": "Joint session of Congress",
+      "facet": "Congress and how laws are made",
+      "known_at": 12
+    },
+    {
+      "name": "President of the United States",
+      "facet": "The presidency and the White House",
+      "known_at": 3
+    },
+    {
+      "name": "West Wing",
+      "facet": "The presidency and the White House",
+      "known_at": 9
+    },
+    {
+      "name": "Rose Garden",
+      "facet": "The presidency and the White House",
+      "known_at": 11
+    },
+    {
+      "name": "Situation Room",
+      "facet": "The presidency and the White House",
+      "known_at": 11
+    },
+    {
+      "name": "Lincoln Bedroom",
+      "facet": "The presidency and the White House",
+      "known_at": 12
+    },
+    {
+      "name": "Resolute Desk",
+      "facet": "The presidency and the White House",
+      "known_at": 12
+    },
+    {
+      "name": "Marine One",
+      "facet": "The presidency and the White House",
+      "known_at": 11
+    },
+    {
+      "name": "Vice President",
+      "facet": "The presidency and the White House",
+      "known_at": 5
+    },
+    {
+      "name": "First Lady",
+      "facet": "The presidency and the White House",
+      "known_at": 5
+    },
+    {
+      "name": "Cabinet",
+      "facet": "The presidency and the White House",
+      "known_at": 10
+    },
+    {
+      "name": "Secret Service",
+      "facet": "The presidency and the White House",
+      "known_at": 7
+    },
+    {
+      "name": "Commander in chief",
+      "facet": "The presidency and the White House",
+      "known_at": 9
+    },
+    {
+      "name": "Executive order",
+      "facet": "The presidency and the White House",
+      "known_at": 11
+    },
+    {
+      "name": "State of the Union",
+      "facet": "The presidency and the White House",
+      "known_at": 10
+    },
+    {
+      "name": "Inauguration Day",
+      "facet": "The presidency and the White House",
+      "known_at": 8
+    },
+    {
+      "name": "Presidential oath of office",
+      "facet": "The presidency and the White House",
+      "known_at": 9
+    },
+    {
+      "name": "Presidential pardon",
+      "facet": "The presidency and the White House",
+      "known_at": 11
+    },
+    {
+      "name": "Turkey pardon",
+      "facet": "The presidency and the White House",
+      "known_at": 6
+    },
+    {
+      "name": "White House Easter Egg Roll",
+      "facet": "The presidency and the White House",
+      "known_at": 8
+    },
+    {
+      "name": "Presidential line of succession",
+      "facet": "The presidency and the White House",
+      "known_at": 12
+    },
+    {
+      "name": "Seal of the President",
+      "facet": "The presidency and the White House",
+      "known_at": 11
+    },
+    {
+      "name": "Supreme Court justice",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 9
+    },
+    {
+      "name": "Chief Justice",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 9
+    },
+    {
+      "name": "Judicial review",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 13
+    },
+    {
+      "name": "Marbury v. Madison",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 13
+    },
+    {
+      "name": "Dred Scott v. Sandford",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 12
+    },
+    {
+      "name": "Plessy v. Ferguson",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 12
+    },
+    {
+      "name": "Korematsu v. United States",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 14
+    },
+    {
+      "name": "Gideon v. Wainwright",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 14
+    },
+    {
+      "name": "Miranda v. Arizona",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 11
+    },
+    {
+      "name": "Loving v. Virginia",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 13
+    },
+    {
+      "name": "Tinker v. Des Moines",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 13
+    },
+    {
+      "name": "New York Times v. Sullivan",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 15
+    },
+    {
+      "name": "Roe v. Wade",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 11
+    },
+    {
+      "name": "Dobbs v. Jackson",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 13
+    },
+    {
+      "name": "Bush v. Gore",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 13
+    },
+    {
+      "name": "Citizens United v. FEC",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 14
+    },
+    {
+      "name": "Obergefell v. Hodges",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 13
+    },
+    {
+      "name": "John Marshall",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 13
+    },
+    {
+      "name": "Ruth Bader Ginsburg",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 10
+    },
+    {
+      "name": "Sandra Day O'Connor",
+      "facet": "The Supreme Court and landmark cases",
+      "known_at": 12
+    },
+    {
+      "name": "Election Day",
+      "facet": "Elections and voting",
+      "known_at": 7
+    },
+    {
+      "name": "Ballot",
+      "facet": "Elections and voting",
+      "known_at": 6
+    },
+    {
+      "name": "Polling place",
+      "facet": "Elections and voting",
+      "known_at": 8
+    },
+    {
+      "name": "I Voted sticker",
+      "facet": "Elections and voting",
+      "known_at": 6
+    },
+    {
+      "name": "Popular vote",
+      "facet": "Elections and voting",
+      "known_at": 10
+    },
+    {
+      "name": "Faithless elector",
+      "facet": "Elections and voting",
+      "known_at": 14
+    },
+    {
+      "name": "Primary election",
+      "facet": "Elections and voting",
+      "known_at": 10
+    },
+    {
+      "name": "Iowa caucuses",
+      "facet": "Elections and voting",
+      "known_at": 12
+    },
+    {
+      "name": "Super Tuesday",
+      "facet": "Elections and voting",
+      "known_at": 12
+    },
+    {
+      "name": "Swing state",
+      "facet": "Elections and voting",
+      "known_at": 11
+    },
+    {
+      "name": "Red states and blue states",
+      "facet": "Elections and voting",
+      "known_at": 8
+    },
+    {
+      "name": "Midterm election",
+      "facet": "Elections and voting",
+      "known_at": 11
+    },
+    {
+      "name": "Absentee ballot",
+      "facet": "Elections and voting",
+      "known_at": 11
+    },
+    {
+      "name": "Voter registration",
+      "facet": "Elections and voting",
+      "known_at": 10
+    },
+    {
+      "name": "Exit poll",
+      "facet": "Elections and voting",
+      "known_at": 12
+    },
+    {
+      "name": "Landslide",
+      "facet": "Elections and voting",
+      "known_at": 11
+    },
+    {
+      "name": "Incumbent",
+      "facet": "Elections and voting",
+      "known_at": 12
+    },
+    {
+      "name": "Gerrymandering",
+      "facet": "Elections and voting",
+      "known_at": 12
+    },
+    {
+      "name": "Census",
+      "facet": "Elections and voting",
+      "known_at": 9
+    },
+    {
+      "name": "Hanging chad",
+      "facet": "Elections and voting",
+      "known_at": 13
+    },
+    {
+      "name": "Democratic Party",
+      "facet": "Political parties and campaigns",
+      "known_at": 7
+    },
+    {
+      "name": "Grand Old Party",
+      "facet": "Political parties and campaigns",
+      "known_at": 11
+    },
+    {
+      "name": "Two-party system",
+      "facet": "Political parties and campaigns",
+      "known_at": 10
+    },
+    {
+      "name": "Third party",
+      "facet": "Political parties and campaigns",
+      "known_at": 11
+    },
+    {
+      "name": "Federalist Party",
+      "facet": "Political parties and campaigns",
+      "known_at": 13
+    },
+    {
+      "name": "Democratic-Republican Party",
+      "facet": "Political parties and campaigns",
+      "known_at": 13
+    },
+    {
+      "name": "Whig Party",
+      "facet": "Political parties and campaigns",
+      "known_at": 12
+    },
+    {
+      "name": "Know-Nothing Party",
+      "facet": "Political parties and campaigns",
+      "known_at": 14
+    },
+    {
+      "name": "Thomas Nast",
+      "facet": "Political parties and campaigns",
+      "known_at": 14
+    },
+    {
+      "name": "National convention",
+      "facet": "Political parties and campaigns",
+      "known_at": 11
+    },
+    {
+      "name": "Running mate",
+      "facet": "Political parties and campaigns",
+      "known_at": 11
+    },
+    {
+      "name": "Presidential debate",
+      "facet": "Political parties and campaigns",
+      "known_at": 9
+    },
+    {
+      "name": "Lincoln-Douglas debates",
+      "facet": "Political parties and campaigns",
+      "known_at": 13
+    },
+    {
+      "name": "Kennedy-Nixon debate",
+      "facet": "Political parties and campaigns",
+      "known_at": 12
+    },
+    {
+      "name": "Campaign button",
+      "facet": "Political parties and campaigns",
+      "known_at": 6
+    },
+    {
+      "name": "Yard sign",
+      "facet": "Political parties and campaigns",
+      "known_at": 7
+    },
+    {
+      "name": "I Like Ike",
+      "facet": "Political parties and campaigns",
+      "known_at": 13
+    },
+    {
+      "name": "Stump speech",
+      "facet": "Political parties and campaigns",
+      "known_at": 13
+    },
+    {
+      "name": "Super PAC",
+      "facet": "Political parties and campaigns",
+      "known_at": 14
+    },
+    {
+      "name": "The Federalist Papers",
+      "facet": "Founding documents and Founding Fathers",
+      "known_at": 12
+    },
+    {
+      "name": "Continental Congress",
+      "facet": "Founding documents and Founding Fathers",
+      "known_at": 10
+    },
+    {
+      "name": "American flag",
+      "facet": "National symbols and patriotic traditions",
+      "known_at": 1
+    },
+    {
+      "name": "Betsy Ross",
+      "facet": "National symbols and patriotic traditions",
+      "known_at": 8
+    },
+    {
+      "name": "The Star-Spangled Banner",
+      "facet": "National symbols and patriotic traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Francis Scott Key",
+      "facet": "National symbols and patriotic traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Pledge of Allegiance",
+      "facet": "National symbols and patriotic traditions",
+      "known_at": 6
+    },
+    {
+      "name": "In God We Trust",
+      "facet": "National symbols and patriotic traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Columbia",
+      "facet": "National symbols and patriotic traditions",
+      "known_at": 14
+    },
+    {
+      "name": "Fourth of July",
+      "facet": "National symbols and patriotic traditions",
+      "known_at": 3
+    },
+    {
+      "name": "Veterans Day",
+      "facet": "National symbols and patriotic traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Presidents' Day",
+      "facet": "National symbols and patriotic traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Flag Day",
+      "facet": "National symbols and patriotic traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Fifty states",
+      "facet": "State and local government",
+      "known_at": 3
+    },
+    {
+      "name": "State capital",
+      "facet": "State and local government",
+      "known_at": 5
+    },
+    {
+      "name": "Governor",
+      "facet": "State and local government",
+      "known_at": 6
+    },
+    {
+      "name": "Lieutenant governor",
+      "facet": "State and local government",
+      "known_at": 12
+    },
+    {
+      "name": "State legislature",
+      "facet": "State and local government",
+      "known_at": 10
+    },
+    {
+      "name": "Nebraska Unicameral",
+      "facet": "State and local government",
+      "known_at": 14
+    },
+    {
+      "name": "State constitution",
+      "facet": "State and local government",
+      "known_at": 12
+    },
+    {
+      "name": "Mayor",
+      "facet": "State and local government",
+      "known_at": 4
+    },
+    {
+      "name": "City council",
+      "facet": "State and local government",
+      "known_at": 8
+    },
+    {
+      "name": "Town hall meeting",
+      "facet": "State and local government",
+      "known_at": 10
+    },
+    {
+      "name": "County",
+      "facet": "State and local government",
+      "known_at": 9
+    },
+    {
+      "name": "Parish",
+      "facet": "State and local government",
+      "known_at": 12
+    },
+    {
+      "name": "Borough",
+      "facet": "State and local government",
+      "known_at": 14
+    },
+    {
+      "name": "Township",
+      "facet": "State and local government",
+      "known_at": 13
+    },
+    {
+      "name": "School board",
+      "facet": "State and local government",
+      "known_at": 9
+    },
+    {
+      "name": "DMV",
+      "facet": "State and local government",
+      "known_at": 9
+    },
+    {
+      "name": "Recall election",
+      "facet": "State and local government",
+      "known_at": 13
+    },
+    {
+      "name": "Ballot initiative",
+      "facet": "State and local government",
+      "known_at": 13
+    },
+    {
+      "name": "Sales tax",
+      "facet": "State and local government",
+      "known_at": 10
+    },
+    {
+      "name": "Property tax",
+      "facet": "State and local government",
+      "known_at": 12
+    },
+    {
+      "name": "Zoning",
+      "facet": "State and local government",
+      "known_at": 13
+    },
+    {
+      "name": "Americans with Disabilities Act",
+      "facet": "Civil rights and citizenship",
+      "known_at": 12
+    },
+    {
+      "name": "Women's suffrage",
+      "facet": "Civil rights and citizenship",
+      "known_at": 10
+    },
+    {
+      "name": "Susan B. Anthony",
+      "facet": "Civil rights and citizenship",
+      "known_at": 10
+    },
+    {
+      "name": "Elizabeth Cady Stanton",
+      "facet": "Civil rights and citizenship",
+      "known_at": 12
+    },
+    {
+      "name": "Seneca Falls Convention",
+      "facet": "Civil rights and citizenship",
+      "known_at": 13
+    },
+    {
+      "name": "Naturalization",
+      "facet": "Civil rights and citizenship",
+      "known_at": 11
+    },
+    {
+      "name": "Citizenship test",
+      "facet": "Civil rights and citizenship",
+      "known_at": 11
+    },
+    {
+      "name": "Green card",
+      "facet": "Civil rights and citizenship",
+      "known_at": 9
+    },
+    {
+      "name": "Jury duty",
+      "facet": "Civil rights and citizenship",
+      "known_at": 9
+    },
+    {
+      "name": "Social Security number",
+      "facet": "Civil rights and citizenship",
+      "known_at": 9
+    },
+    {
+      "name": "Capitol Rotunda",
+      "facet": "Government buildings and Washington, D.C.",
+      "known_at": 12
+    },
+    {
+      "name": "Library of Congress",
+      "facet": "Government buildings and Washington, D.C.",
+      "known_at": 10
+    },
+    {
+      "name": "Blair House",
+      "facet": "Government buildings and Washington, D.C.",
+      "known_at": 14
+    }
+  ]
+}

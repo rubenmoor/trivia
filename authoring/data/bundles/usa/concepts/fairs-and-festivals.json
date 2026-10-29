@@ -1,0 +1,897 @@
+{
+  "subcategory": "fairs-and-festivals",
+  "facets": [
+    "State and county fairs",
+    "Fair food and treats",
+    "Livestock, 4-H and fair contests",
+    "Midway rides and carnival games",
+    "Parades and their floats",
+    "Mardi Gras and Carnival",
+    "Music festivals",
+    "Film, comic and arts festivals",
+    "Food and harvest festivals",
+    "Rodeos and Western frontier days",
+    "World's fairs in America",
+    "Heritage, cultural and quirky festivals"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "State Fair of Texas",
+      "facet": "State and county fairs",
+      "known_at": 7
+    },
+    {
+      "name": "Big Tex",
+      "facet": "State and county fairs",
+      "known_at": 8
+    },
+    {
+      "name": "Minnesota State Fair",
+      "facet": "State and county fairs",
+      "known_at": 9
+    },
+    {
+      "name": "Iowa State Fair",
+      "facet": "State and county fairs",
+      "known_at": 9
+    },
+    {
+      "name": "The Big E",
+      "facet": "State and county fairs",
+      "known_at": 12
+    },
+    {
+      "name": "New York State Fair",
+      "facet": "State and county fairs",
+      "known_at": 11
+    },
+    {
+      "name": "Wisconsin State Fair",
+      "facet": "State and county fairs",
+      "known_at": 11
+    },
+    {
+      "name": "Ohio State Fair",
+      "facet": "State and county fairs",
+      "known_at": 11
+    },
+    {
+      "name": "California State Fair",
+      "facet": "State and county fairs",
+      "known_at": 10
+    },
+    {
+      "name": "Los Angeles County Fair",
+      "facet": "State and county fairs",
+      "known_at": 12
+    },
+    {
+      "name": "Fairgrounds",
+      "facet": "State and county fairs",
+      "known_at": 4
+    },
+    {
+      "name": "Grandstand",
+      "facet": "State and county fairs",
+      "known_at": 8
+    },
+    {
+      "name": "Charlotte's Web",
+      "facet": "State and county fairs",
+      "known_at": 4
+    },
+    {
+      "name": "State Fair (musical)",
+      "facet": "State and county fairs",
+      "known_at": 13
+    },
+    {
+      "name": "Agricultural exhibition hall",
+      "facet": "State and county fairs",
+      "known_at": 8
+    },
+    {
+      "name": "Lemonade shake-up",
+      "facet": "Fair food and treats",
+      "known_at": 8
+    },
+    {
+      "name": "Fletcher's Corny Dog",
+      "facet": "Fair food and treats",
+      "known_at": 12
+    },
+    {
+      "name": "Pork chop on a stick",
+      "facet": "Fair food and treats",
+      "known_at": 11
+    },
+    {
+      "name": "Deep-fried Twinkie",
+      "facet": "Fair food and treats",
+      "known_at": 8
+    },
+    {
+      "name": "Walking taco",
+      "facet": "Fair food and treats",
+      "known_at": 8
+    },
+    {
+      "name": "4-H",
+      "facet": "Livestock, 4-H and fair contests",
+      "known_at": 7
+    },
+    {
+      "name": "FFA",
+      "facet": "Livestock, 4-H and fair contests",
+      "known_at": 10
+    },
+    {
+      "name": "Blue ribbon",
+      "facet": "Livestock, 4-H and fair contests",
+      "known_at": 4
+    },
+    {
+      "name": "Grand champion",
+      "facet": "Livestock, 4-H and fair contests",
+      "known_at": 8
+    },
+    {
+      "name": "Steer show",
+      "facet": "Livestock, 4-H and fair contests",
+      "known_at": 9
+    },
+    {
+      "name": "Pig race",
+      "facet": "Livestock, 4-H and fair contests",
+      "known_at": 4
+    },
+    {
+      "name": "Giant pumpkin contest",
+      "facet": "Livestock, 4-H and fair contests",
+      "known_at": 4
+    },
+    {
+      "name": "Quilt competition",
+      "facet": "Livestock, 4-H and fair contests",
+      "known_at": 8
+    },
+    {
+      "name": "Home canning contest",
+      "facet": "Livestock, 4-H and fair contests",
+      "known_at": 10
+    },
+    {
+      "name": "Sheep shearing",
+      "facet": "Livestock, 4-H and fair contests",
+      "known_at": 6
+    },
+    {
+      "name": "Hog calling contest",
+      "facet": "Livestock, 4-H and fair contests",
+      "known_at": 9
+    },
+    {
+      "name": "Livestock auction",
+      "facet": "Livestock, 4-H and fair contests",
+      "known_at": 9
+    },
+    {
+      "name": "Rabbit show",
+      "facet": "Livestock, 4-H and fair contests",
+      "known_at": 6
+    },
+    {
+      "name": "Big Boar",
+      "facet": "Livestock, 4-H and fair contests",
+      "known_at": 11
+    },
+    {
+      "name": "Dairy goat show",
+      "facet": "Livestock, 4-H and fair contests",
+      "known_at": 8
+    },
+    {
+      "name": "Ferris wheel",
+      "facet": "Midway rides and carnival games",
+      "known_at": 1
+    },
+    {
+      "name": "Carousel",
+      "facet": "Midway rides and carnival games",
+      "known_at": 1
+    },
+    {
+      "name": "Tilt-A-Whirl",
+      "facet": "Midway rides and carnival games",
+      "known_at": 7
+    },
+    {
+      "name": "Scrambler",
+      "facet": "Midway rides and carnival games",
+      "known_at": 9
+    },
+    {
+      "name": "Bumper cars",
+      "facet": "Midway rides and carnival games",
+      "known_at": 1
+    },
+    {
+      "name": "Funhouse",
+      "facet": "Midway rides and carnival games",
+      "known_at": 4
+    },
+    {
+      "name": "Ring toss",
+      "facet": "Midway rides and carnival games",
+      "known_at": 3
+    },
+    {
+      "name": "Duck pond game",
+      "facet": "Midway rides and carnival games",
+      "known_at": 2
+    },
+    {
+      "name": "Whac-A-Mole",
+      "facet": "Midway rides and carnival games",
+      "known_at": 3
+    },
+    {
+      "name": "High striker",
+      "facet": "Midway rides and carnival games",
+      "known_at": 6
+    },
+    {
+      "name": "Milk bottle toss",
+      "facet": "Midway rides and carnival games",
+      "known_at": 5
+    },
+    {
+      "name": "Skee-Ball",
+      "facet": "Midway rides and carnival games",
+      "known_at": 5
+    },
+    {
+      "name": "Giant slide",
+      "facet": "Midway rides and carnival games",
+      "known_at": 4
+    },
+    {
+      "name": "Gravitron",
+      "facet": "Midway rides and carnival games",
+      "known_at": 9
+    },
+    {
+      "name": "Carny",
+      "facet": "Midway rides and carnival games",
+      "known_at": 10
+    },
+    {
+      "name": "Water gun race",
+      "facet": "Midway rides and carnival games",
+      "known_at": 4
+    },
+    {
+      "name": "Parade float",
+      "facet": "Parades and their floats",
+      "known_at": 3
+    },
+    {
+      "name": "Marching band",
+      "facet": "Parades and their floats",
+      "known_at": 3
+    },
+    {
+      "name": "Drum major",
+      "facet": "Parades and their floats",
+      "known_at": 8
+    },
+    {
+      "name": "Baton twirling",
+      "facet": "Parades and their floats",
+      "known_at": 6
+    },
+    {
+      "name": "Ticker-tape parade",
+      "facet": "Parades and their floats",
+      "known_at": 10
+    },
+    {
+      "name": "New York City St. Patrick's Day Parade",
+      "facet": "Parades and their floats",
+      "known_at": 8
+    },
+    {
+      "name": "Fourth of July parade",
+      "facet": "Parades and their floats",
+      "known_at": 3
+    },
+    {
+      "name": "Grand marshal",
+      "facet": "Parades and their floats",
+      "known_at": 9
+    },
+    {
+      "name": "Shriners",
+      "facet": "Parades and their floats",
+      "known_at": 11
+    },
+    {
+      "name": "Budweiser Clydesdales",
+      "facet": "Parades and their floats",
+      "known_at": 8
+    },
+    {
+      "name": "Coney Island Mermaid Parade",
+      "facet": "Parades and their floats",
+      "known_at": 12
+    },
+    {
+      "name": "Mardi Gras",
+      "facet": "Mardi Gras and Carnival",
+      "known_at": 5
+    },
+    {
+      "name": "King cake baby",
+      "facet": "Mardi Gras and Carnival",
+      "known_at": 9
+    },
+    {
+      "name": "Zulu coconut",
+      "facet": "Mardi Gras and Carnival",
+      "known_at": 13
+    },
+    {
+      "name": "Purple, green and gold",
+      "facet": "Mardi Gras and Carnival",
+      "known_at": 8
+    },
+    {
+      "name": "Ash Wednesday",
+      "facet": "Mardi Gras and Carnival",
+      "known_at": 9
+    },
+    {
+      "name": "Lent",
+      "facet": "Mardi Gras and Carnival",
+      "known_at": 9
+    },
+    {
+      "name": "Mobile, Alabama",
+      "facet": "Mardi Gras and Carnival",
+      "known_at": 13
+    },
+    {
+      "name": "Mardi Gras Indians",
+      "facet": "Mardi Gras and Carnival",
+      "known_at": 13
+    },
+    {
+      "name": "Rex, King of Carnival",
+      "facet": "Mardi Gras and Carnival",
+      "known_at": 13
+    },
+    {
+      "name": "Doubloons",
+      "facet": "Mardi Gras and Carnival",
+      "known_at": 11
+    },
+    {
+      "name": "Lundi Gras",
+      "facet": "Mardi Gras and Carnival",
+      "known_at": 13
+    },
+    {
+      "name": "Courir de Mardi Gras",
+      "facet": "Mardi Gras and Carnival",
+      "known_at": 14
+    },
+    {
+      "name": "Coachella",
+      "facet": "Music festivals",
+      "known_at": 7
+    },
+    {
+      "name": "Lollapalooza",
+      "facet": "Music festivals",
+      "known_at": 9
+    },
+    {
+      "name": "New Orleans Jazz & Heritage Festival",
+      "facet": "Music festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Newport Jazz Festival",
+      "facet": "Music festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Newport Folk Festival",
+      "facet": "Music festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Monterey Pop Festival",
+      "facet": "Music festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Bonnaroo",
+      "facet": "Music festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Austin City Limits Music Festival",
+      "facet": "Music festivals",
+      "known_at": 11
+    },
+    {
+      "name": "CMA Fest",
+      "facet": "Music festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Farm Aid",
+      "facet": "Music festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Summerfest",
+      "facet": "Music festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Telluride Bluegrass Festival",
+      "facet": "Music festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Warped Tour",
+      "facet": "Music festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Lilith Fair",
+      "facet": "Music festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Max Yasgur",
+      "facet": "Music festivals",
+      "known_at": 14
+    },
+    {
+      "name": "Jimi Hendrix",
+      "facet": "Music festivals",
+      "known_at": 10
+    },
+    {
+      "name": "Sundance Film Festival",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 9
+    },
+    {
+      "name": "Robert Redford",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Park City, Utah",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Tribeca Festival",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Robert De Niro",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 10
+    },
+    {
+      "name": "San Diego Comic-Con",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 7
+    },
+    {
+      "name": "Hall H",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Cosplay",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 6
+    },
+    {
+      "name": "New York Comic Con",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 9
+    },
+    {
+      "name": "Telluride Film Festival",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 13
+    },
+    {
+      "name": "South by Southwest",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 10
+    },
+    {
+      "name": "Art Basel Miami Beach",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Burning Man",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 9
+    },
+    {
+      "name": "Black Rock City",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Spoleto Festival USA",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 14
+    },
+    {
+      "name": "Shakespeare in the Park",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 10
+    },
+    {
+      "name": "Oregon Shakespeare Festival",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Jacob's Pillow",
+      "facet": "Film, comic and arts festivals",
+      "known_at": 14
+    },
+    {
+      "name": "Taste of Chicago",
+      "facet": "Food and harvest festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Apple cider",
+      "facet": "Food and harvest festivals",
+      "known_at": 4
+    },
+    {
+      "name": "Circleville Pumpkin Show",
+      "facet": "Food and harvest festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Vidalia Onion Festival",
+      "facet": "Food and harvest festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Breaux Bridge Crawfish Festival",
+      "facet": "Food and harvest festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Memphis in May barbecue contest",
+      "facet": "Food and harvest festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Terlingua chili cook-off",
+      "facet": "Food and harvest festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Hatch Chile Festival",
+      "facet": "Food and harvest festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Florida Strawberry Festival",
+      "facet": "Food and harvest festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Cranberry harvest",
+      "facet": "Food and harvest festivals",
+      "known_at": 8
+    },
+    {
+      "name": "Watermelon seed spitting",
+      "facet": "Food and harvest festivals",
+      "known_at": 5
+    },
+    {
+      "name": "National Peanut Festival",
+      "facet": "Food and harvest festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Bull riding",
+      "facet": "Rodeos and Western frontier days",
+      "known_at": 4
+    },
+    {
+      "name": "Barrel racing",
+      "facet": "Rodeos and Western frontier days",
+      "known_at": 7
+    },
+    {
+      "name": "Tie-down roping",
+      "facet": "Rodeos and Western frontier days",
+      "known_at": 9
+    },
+    {
+      "name": "Bronc riding",
+      "facet": "Rodeos and Western frontier days",
+      "known_at": 8
+    },
+    {
+      "name": "Rodeo clown",
+      "facet": "Rodeos and Western frontier days",
+      "known_at": 5
+    },
+    {
+      "name": "Steer wrestling",
+      "facet": "Rodeos and Western frontier days",
+      "known_at": 9
+    },
+    {
+      "name": "Mutton busting",
+      "facet": "Rodeos and Western frontier days",
+      "known_at": 9
+    },
+    {
+      "name": "Cheyenne Frontier Days",
+      "facet": "Rodeos and Western frontier days",
+      "known_at": 12
+    },
+    {
+      "name": "Houston Livestock Show and Rodeo",
+      "facet": "Rodeos and Western frontier days",
+      "known_at": 11
+    },
+    {
+      "name": "Pendleton Round-Up",
+      "facet": "Rodeos and Western frontier days",
+      "known_at": 14
+    },
+    {
+      "name": "National Finals Rodeo",
+      "facet": "Rodeos and Western frontier days",
+      "known_at": 12
+    },
+    {
+      "name": "Buffalo Bill's Wild West",
+      "facet": "Rodeos and Western frontier days",
+      "known_at": 10
+    },
+    {
+      "name": "Bill Pickett",
+      "facet": "Rodeos and Western frontier days",
+      "known_at": 14
+    },
+    {
+      "name": "Eight-second ride",
+      "facet": "Rodeos and Western frontier days",
+      "known_at": 9
+    },
+    {
+      "name": "Stetson",
+      "facet": "Rodeos and Western frontier days",
+      "known_at": 8
+    },
+    {
+      "name": "Prescott Frontier Days",
+      "facet": "Rodeos and Western frontier days",
+      "known_at": 14
+    },
+    {
+      "name": "Rodeo queen",
+      "facet": "Rodeos and Western frontier days",
+      "known_at": 9
+    },
+    {
+      "name": "World's Columbian Exposition",
+      "facet": "World's fairs in America",
+      "known_at": 12
+    },
+    {
+      "name": "George Washington Gale Ferris Jr.",
+      "facet": "World's fairs in America",
+      "known_at": 11
+    },
+    {
+      "name": "Daniel Burnham",
+      "facet": "World's fairs in America",
+      "known_at": 14
+    },
+    {
+      "name": "Louisiana Purchase Exposition",
+      "facet": "World's fairs in America",
+      "known_at": 12
+    },
+    {
+      "name": "Centennial Exposition",
+      "facet": "World's fairs in America",
+      "known_at": 13
+    },
+    {
+      "name": "Statue of Liberty torch",
+      "facet": "World's fairs in America",
+      "known_at": 11
+    },
+    {
+      "name": "1939 New York World's Fair",
+      "facet": "World's fairs in America",
+      "known_at": 12
+    },
+    {
+      "name": "Trylon and Perisphere",
+      "facet": "World's fairs in America",
+      "known_at": 14
+    },
+    {
+      "name": "Futurama exhibit",
+      "facet": "World's fairs in America",
+      "known_at": 14
+    },
+    {
+      "name": "1964 New York World's Fair",
+      "facet": "World's fairs in America",
+      "known_at": 12
+    },
+    {
+      "name": "Unisphere",
+      "facet": "World's fairs in America",
+      "known_at": 11
+    },
+    {
+      "name": "It's a Small World",
+      "facet": "World's fairs in America",
+      "known_at": 6
+    },
+    {
+      "name": "Century 21 Exposition",
+      "facet": "World's fairs in America",
+      "known_at": 13
+    },
+    {
+      "name": "Tower of the Americas",
+      "facet": "World's fairs in America",
+      "known_at": 13
+    },
+    {
+      "name": "Panama-Pacific International Exposition",
+      "facet": "World's fairs in America",
+      "known_at": 13
+    },
+    {
+      "name": "Palace of Fine Arts",
+      "facet": "World's fairs in America",
+      "known_at": 13
+    },
+    {
+      "name": "Sunsphere",
+      "facet": "World's fairs in America",
+      "known_at": 13
+    },
+    {
+      "name": "Albuquerque International Balloon Fiesta",
+      "facet": "Heritage, cultural and quirky festivals",
+      "known_at": 10
+    },
+    {
+      "name": "Renaissance faire",
+      "facet": "Heritage, cultural and quirky festivals",
+      "known_at": 8
+    },
+    {
+      "name": "Gathering of Nations",
+      "facet": "Heritage, cultural and quirky festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Merrie Monarch Festival",
+      "facet": "Heritage, cultural and quirky festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Roswell UFO Festival",
+      "facet": "Heritage, cultural and quirky festivals",
+      "known_at": 10
+    },
+    {
+      "name": "Cow Chip Throw",
+      "facet": "Heritage, cultural and quirky festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Woolly Worm Festival",
+      "facet": "Heritage, cultural and quirky festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Tulip Time Festival",
+      "facet": "Heritage, cultural and quirky festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Zozobra",
+      "facet": "Heritage, cultural and quirky festivals",
+      "known_at": 14
+    },
+    {
+      "name": "Sturgis Motorcycle Rally",
+      "facet": "Heritage, cultural and quirky festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Elvis Week",
+      "facet": "Heritage, cultural and quirky festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Kutztown Folk Festival",
+      "facet": "Heritage, cultural and quirky festivals",
+      "known_at": 14
+    },
+    {
+      "name": "Oktoberfest Zinzinnati",
+      "facet": "Heritage, cultural and quirky festivals",
+      "known_at": 13
+    }
+  ]
+}

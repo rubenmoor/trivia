@@ -1,0 +1,947 @@
+{
+  "subcategory": "candy-and-snacks",
+  "facets": [
+    "Classic candy bars",
+    "Gummies, chewy and hard candy",
+    "Chocolate makers and brands",
+    "Sodas and soft drinks",
+    "Chips, pretzels and salty snacks",
+    "Cookies, snack cakes and pastries",
+    "Breakfast cereals and their mascots",
+    "Holiday and Halloween candy",
+    "Candy and snack inventors",
+    "Ballpark, fair and movie snacks",
+    "Snack ads, slogans and mascots"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 3,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Milky Way",
+      "facet": "Classic candy bars",
+      "known_at": 4
+    },
+    {
+      "name": "Almond Joy",
+      "facet": "Classic candy bars",
+      "known_at": 6
+    },
+    {
+      "name": "Mounds",
+      "facet": "Classic candy bars",
+      "known_at": 9
+    },
+    {
+      "name": "PayDay",
+      "facet": "Classic candy bars",
+      "known_at": 9
+    },
+    {
+      "name": "Heath bar",
+      "facet": "Classic candy bars",
+      "known_at": 10
+    },
+    {
+      "name": "Oh Henry!",
+      "facet": "Classic candy bars",
+      "known_at": 13
+    },
+    {
+      "name": "Charleston Chew",
+      "facet": "Classic candy bars",
+      "known_at": 11
+    },
+    {
+      "name": "100 Grand",
+      "facet": "Classic candy bars",
+      "known_at": 9
+    },
+    {
+      "name": "Mr. Goodbar",
+      "facet": "Classic candy bars",
+      "known_at": 11
+    },
+    {
+      "name": "Zero bar",
+      "facet": "Classic candy bars",
+      "known_at": 13
+    },
+    {
+      "name": "Whatchamacallit",
+      "facet": "Classic candy bars",
+      "known_at": 10
+    },
+    {
+      "name": "Goo Goo Cluster",
+      "facet": "Classic candy bars",
+      "known_at": 13
+    },
+    {
+      "name": "Nestlé Crunch",
+      "facet": "Classic candy bars",
+      "known_at": 5
+    },
+    {
+      "name": "Jolly Rancher",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 4
+    },
+    {
+      "name": "Red Vines",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 9
+    },
+    {
+      "name": "Tootsie Pop",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 3
+    },
+    {
+      "name": "Laffy Taffy",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 5
+    },
+    {
+      "name": "Starburst",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 3
+    },
+    {
+      "name": "Swedish Fish",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 5
+    },
+    {
+      "name": "Sour Patch Kids",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 4
+    },
+    {
+      "name": "Airheads",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 5
+    },
+    {
+      "name": "Life Savers",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 5
+    },
+    {
+      "name": "Salt water taffy",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 8
+    },
+    {
+      "name": "Pop Rocks",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 5
+    },
+    {
+      "name": "Nerds",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 4
+    },
+    {
+      "name": "Dum Dums",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 4
+    },
+    {
+      "name": "Atomic Fireball",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 10
+    },
+    {
+      "name": "Mike and Ike",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 6
+    },
+    {
+      "name": "Hot Tamales",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 7
+    },
+    {
+      "name": "Warheads",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 6
+    },
+    {
+      "name": "Ring Pop",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 3
+    },
+    {
+      "name": "Fun Dip",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 6
+    },
+    {
+      "name": "Pixy Stix",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 6
+    },
+    {
+      "name": "Blow Pop",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 5
+    },
+    {
+      "name": "Bazooka bubble gum",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 8
+    },
+    {
+      "name": "Bit-O-Honey",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 12
+    },
+    {
+      "name": "Necco Wafers",
+      "facet": "Gummies, chewy and hard candy",
+      "known_at": 11
+    },
+    {
+      "name": "Hershey Company",
+      "facet": "Chocolate makers and brands",
+      "known_at": 4
+    },
+    {
+      "name": "Hersheypark",
+      "facet": "Chocolate makers and brands",
+      "known_at": 7
+    },
+    {
+      "name": "Hershey's Chocolate World",
+      "facet": "Chocolate makers and brands",
+      "known_at": 10
+    },
+    {
+      "name": "Hershey's Syrup",
+      "facet": "Chocolate makers and brands",
+      "known_at": 6
+    },
+    {
+      "name": "Hershey's Special Dark",
+      "facet": "Chocolate makers and brands",
+      "known_at": 10
+    },
+    {
+      "name": "Mars Inc.",
+      "facet": "Chocolate makers and brands",
+      "known_at": 7
+    },
+    {
+      "name": "Ghirardelli",
+      "facet": "Chocolate makers and brands",
+      "known_at": 8
+    },
+    {
+      "name": "Ghirardelli Square",
+      "facet": "Chocolate makers and brands",
+      "known_at": 12
+    },
+    {
+      "name": "See's Candies",
+      "facet": "Chocolate makers and brands",
+      "known_at": 11
+    },
+    {
+      "name": "Russell Stover",
+      "facet": "Chocolate makers and brands",
+      "known_at": 11
+    },
+    {
+      "name": "Whitman's Sampler",
+      "facet": "Chocolate makers and brands",
+      "known_at": 12
+    },
+    {
+      "name": "Dove chocolate",
+      "facet": "Chocolate makers and brands",
+      "known_at": 8
+    },
+    {
+      "name": "Whoppers",
+      "facet": "Chocolate makers and brands",
+      "known_at": 6
+    },
+    {
+      "name": "Brach's",
+      "facet": "Chocolate makers and brands",
+      "known_at": 11
+    },
+    {
+      "name": "Fannie May",
+      "facet": "Chocolate makers and brands",
+      "known_at": 13
+    },
+    {
+      "name": "Scharffen Berger",
+      "facet": "Chocolate makers and brands",
+      "known_at": 15
+    },
+    {
+      "name": "Mountain Dew",
+      "facet": "Sodas and soft drinks",
+      "known_at": 5
+    },
+    {
+      "name": "A&W",
+      "facet": "Sodas and soft drinks",
+      "known_at": 8
+    },
+    {
+      "name": "Sprite",
+      "facet": "Sodas and soft drinks",
+      "known_at": 2
+    },
+    {
+      "name": "7 Up",
+      "facet": "Sodas and soft drinks",
+      "known_at": 5
+    },
+    {
+      "name": "Cream soda",
+      "facet": "Sodas and soft drinks",
+      "known_at": 8
+    },
+    {
+      "name": "Big Red",
+      "facet": "Sodas and soft drinks",
+      "known_at": 13
+    },
+    {
+      "name": "Cheerwine",
+      "facet": "Sodas and soft drinks",
+      "known_at": 13
+    },
+    {
+      "name": "Moxie",
+      "facet": "Sodas and soft drinks",
+      "known_at": 14
+    },
+    {
+      "name": "Vernors",
+      "facet": "Sodas and soft drinks",
+      "known_at": 14
+    },
+    {
+      "name": "Barq's",
+      "facet": "Sodas and soft drinks",
+      "known_at": 10
+    },
+    {
+      "name": "Faygo",
+      "facet": "Sodas and soft drinks",
+      "known_at": 12
+    },
+    {
+      "name": "RC Cola",
+      "facet": "Sodas and soft drinks",
+      "known_at": 12
+    },
+    {
+      "name": "Arnold Palmer",
+      "facet": "Sodas and soft drinks",
+      "known_at": 10
+    },
+    {
+      "name": "Pop",
+      "facet": "Sodas and soft drinks",
+      "known_at": 8
+    },
+    {
+      "name": "New Coke",
+      "facet": "Sodas and soft drinks",
+      "known_at": 11
+    },
+    {
+      "name": "Doritos",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 3
+    },
+    {
+      "name": "Cheetos",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 2
+    },
+    {
+      "name": "Flamin' Hot Cheetos",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 5
+    },
+    {
+      "name": "Fritos",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 6
+    },
+    {
+      "name": "Lay's",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 3
+    },
+    {
+      "name": "Pringles",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 2
+    },
+    {
+      "name": "Ruffles",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 6
+    },
+    {
+      "name": "Funyuns",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 8
+    },
+    {
+      "name": "Goldfish crackers",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 3
+    },
+    {
+      "name": "Cheez-It",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 5
+    },
+    {
+      "name": "Combos",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 8
+    },
+    {
+      "name": "Slim Jim",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 6
+    },
+    {
+      "name": "Beef jerky",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 5
+    },
+    {
+      "name": "Pork rinds",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 9
+    },
+    {
+      "name": "Utz",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 12
+    },
+    {
+      "name": "Snyder's of Hanover",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 13
+    },
+    {
+      "name": "Corn Nuts",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 10
+    },
+    {
+      "name": "Bugles",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 8
+    },
+    {
+      "name": "SunChips",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 8
+    },
+    {
+      "name": "Tostitos",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 6
+    },
+    {
+      "name": "Saratoga chips",
+      "facet": "Chips, pretzels and salty snacks",
+      "known_at": 13
+    },
+    {
+      "name": "Toll House cookie",
+      "facet": "Cookies, snack cakes and pastries",
+      "known_at": 8
+    },
+    {
+      "name": "Ho Hos",
+      "facet": "Cookies, snack cakes and pastries",
+      "known_at": 9
+    },
+    {
+      "name": "Oatmeal Creme Pie",
+      "facet": "Cookies, snack cakes and pastries",
+      "known_at": 8
+    },
+    {
+      "name": "Zebra Cakes",
+      "facet": "Cookies, snack cakes and pastries",
+      "known_at": 8
+    },
+    {
+      "name": "Fig Newtons",
+      "facet": "Cookies, snack cakes and pastries",
+      "known_at": 7
+    },
+    {
+      "name": "Nilla Wafers",
+      "facet": "Cookies, snack cakes and pastries",
+      "known_at": 7
+    },
+    {
+      "name": "Samoas",
+      "facet": "Cookies, snack cakes and pastries",
+      "known_at": 9
+    },
+    {
+      "name": "Snoball",
+      "facet": "Cookies, snack cakes and pastries",
+      "known_at": 10
+    },
+    {
+      "name": "Barnum's Animal Crackers",
+      "facet": "Cookies, snack cakes and pastries",
+      "known_at": 4
+    },
+    {
+      "name": "Tastykake",
+      "facet": "Cookies, snack cakes and pastries",
+      "known_at": 13
+    },
+    {
+      "name": "Tony the Tiger",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 3,
+      "retired": "used_up: Riddle and corn questions already cover the easy facts; the remaining options are forced or too hard for difficulty 2."
+    },
+    {
+      "name": "Frosted Flakes",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 3
+    },
+    {
+      "name": "Lucky Charms",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 3
+    },
+    {
+      "name": "Lucky the Leprechaun",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 4
+    },
+    {
+      "name": "Trix",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 5
+    },
+    {
+      "name": "Trix Rabbit",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 5
+    },
+    {
+      "name": "Toucan Sam",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 4
+    },
+    {
+      "name": "Froot Loops",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 3
+    },
+    {
+      "name": "Cap'n Crunch",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 4
+    },
+    {
+      "name": "Snap, Crackle and Pop",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 7
+    },
+    {
+      "name": "Rice Krispies",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 4
+    },
+    {
+      "name": "Cheerios",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 2
+    },
+    {
+      "name": "Buzz the Bee",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 8
+    },
+    {
+      "name": "Cocoa Puffs",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 6
+    },
+    {
+      "name": "Sonny the Cuckoo Bird",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 9
+    },
+    {
+      "name": "Count Chocula",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 8
+    },
+    {
+      "name": "Franken Berry",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 10
+    },
+    {
+      "name": "Cinnamon Toast Crunch",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 5
+    },
+    {
+      "name": "Fruity Pebbles",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 6
+    },
+    {
+      "name": "Wheaties",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 9
+    },
+    {
+      "name": "Raisin Bran",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 7
+    },
+    {
+      "name": "Sweethearts",
+      "facet": "Holiday and Halloween candy",
+      "known_at": 6
+    },
+    {
+      "name": "Jelly Belly",
+      "facet": "Holiday and Halloween candy",
+      "known_at": 7
+    },
+    {
+      "name": "Fun-size candy bar",
+      "facet": "Holiday and Halloween candy",
+      "known_at": 6
+    },
+    {
+      "name": "Candy apple",
+      "facet": "Holiday and Halloween candy",
+      "known_at": 7
+    },
+    {
+      "name": "Ribbon candy",
+      "facet": "Holiday and Halloween candy",
+      "known_at": 13
+    },
+    {
+      "name": "Mary Jane",
+      "facet": "Holiday and Halloween candy",
+      "known_at": 12
+    },
+    {
+      "name": "Circus peanuts",
+      "facet": "Holiday and Halloween candy",
+      "known_at": 11
+    },
+    {
+      "name": "Easter basket",
+      "facet": "Holiday and Halloween candy",
+      "known_at": 3
+    },
+    {
+      "name": "Heart-shaped box of chocolates",
+      "facet": "Holiday and Halloween candy",
+      "known_at": 7
+    },
+    {
+      "name": "Candy buttons",
+      "facet": "Holiday and Halloween candy",
+      "known_at": 11
+    },
+    {
+      "name": "Wax lips",
+      "facet": "Holiday and Halloween candy",
+      "known_at": 12
+    },
+    {
+      "name": "Reese's Peanut Butter Egg",
+      "facet": "Holiday and Halloween candy",
+      "known_at": 7
+    },
+    {
+      "name": "Frank Mars",
+      "facet": "Candy and snack inventors",
+      "known_at": 12
+    },
+    {
+      "name": "Forrest Mars",
+      "facet": "Candy and snack inventors",
+      "known_at": 13
+    },
+    {
+      "name": "H.B. Reese",
+      "facet": "Candy and snack inventors",
+      "known_at": 12
+    },
+    {
+      "name": "George Crum",
+      "facet": "Candy and snack inventors",
+      "known_at": 13
+    },
+    {
+      "name": "John Harvey Kellogg",
+      "facet": "Candy and snack inventors",
+      "known_at": 10
+    },
+    {
+      "name": "C.W. Post",
+      "facet": "Candy and snack inventors",
+      "known_at": 12
+    },
+    {
+      "name": "Caleb Bradham",
+      "facet": "Candy and snack inventors",
+      "known_at": 13
+    },
+    {
+      "name": "Asa Candler",
+      "facet": "Candy and snack inventors",
+      "known_at": 14
+    },
+    {
+      "name": "Wally Amos",
+      "facet": "Candy and snack inventors",
+      "known_at": 12
+    },
+    {
+      "name": "Orville Redenbacher",
+      "facet": "Candy and snack inventors",
+      "known_at": 8
+    },
+    {
+      "name": "Richard Montañez",
+      "facet": "Candy and snack inventors",
+      "known_at": 12
+    },
+    {
+      "name": "James Dewar",
+      "facet": "Candy and snack inventors",
+      "known_at": 14
+    },
+    {
+      "name": "Clarence Crane",
+      "facet": "Candy and snack inventors",
+      "known_at": 14
+    },
+    {
+      "name": "Walter Diemer",
+      "facet": "Candy and snack inventors",
+      "known_at": 14
+    },
+    {
+      "name": "William Morrison",
+      "facet": "Candy and snack inventors",
+      "known_at": 13
+    },
+    {
+      "name": "Leo Hirshfield",
+      "facet": "Candy and snack inventors",
+      "known_at": 15
+    },
+    {
+      "name": "Ballpark peanuts",
+      "facet": "Ballpark, fair and movie snacks",
+      "known_at": 5
+    },
+    {
+      "name": "Movie theater popcorn",
+      "facet": "Ballpark, fair and movie snacks",
+      "known_at": 1
+    },
+    {
+      "name": "Turkey leg",
+      "facet": "Ballpark, fair and movie snacks",
+      "known_at": 8
+    },
+    {
+      "name": "Milk Duds",
+      "facet": "Ballpark, fair and movie snacks",
+      "known_at": 7
+    },
+    {
+      "name": "Junior Mints",
+      "facet": "Ballpark, fair and movie snacks",
+      "known_at": 8
+    },
+    {
+      "name": "Raisinets",
+      "facet": "Ballpark, fair and movie snacks",
+      "known_at": 9
+    },
+    {
+      "name": "Dodger Dog",
+      "facet": "Ballpark, fair and movie snacks",
+      "known_at": 11
+    },
+    {
+      "name": "Fenway Frank",
+      "facet": "Ballpark, fair and movie snacks",
+      "known_at": 13
+    },
+    {
+      "name": "Mr. Peanut",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 6
+    },
+    {
+      "name": "Chester Cheetah",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 6
+    },
+    {
+      "name": "M&M's spokescandies",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 4
+    },
+    {
+      "name": "Kool-Aid Man",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 4
+    },
+    {
+      "name": "Silly rabbit, Trix are for kids",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 7
+    },
+    {
+      "name": "Gimme a Break",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 9
+    },
+    {
+      "name": "Taste the Rainbow",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 5
+    },
+    {
+      "name": "Melts in your mouth, not in your hand",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 9
+    },
+    {
+      "name": "Got Milk?",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 9
+    },
+    {
+      "name": "Coca-Cola polar bears",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 6
+    },
+    {
+      "name": "Hilltop ad",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 12
+    },
+    {
+      "name": "Betcha can't eat just one",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 11
+    },
+    {
+      "name": "You're not you when you're hungry",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 9
+    },
+    {
+      "name": "Reese's Pieces in E.T.",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 10
+    },
+    {
+      "name": "Mikey from Life cereal",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 12
+    },
+    {
+      "name": "Pepsi Challenge",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 11
+    },
+    {
+      "name": "Punchy",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 13
+    },
+    {
+      "name": "California Raisins",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 12
+    },
+    {
+      "name": "Super Bowl commercials",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 6
+    },
+    {
+      "name": "Elsie the Cow",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 12
+    },
+    {
+      "name": "Twinkie the Kid",
+      "facet": "Snack ads, slogans and mascots",
+      "known_at": 13
+    }
+  ]
+}

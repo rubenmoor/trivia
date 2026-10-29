@@ -1,0 +1,597 @@
+{
+  "subcategory": "trailblazers",
+  "facets": [
+    "Inventors and engineers",
+    "Aviation and space pioneers",
+    "Civil rights trailblazers",
+    "Women's rights and suffrage",
+    "Sports barrier breakers",
+    "Explorers and frontier figures",
+    "Science and medicine firsts",
+    "Business and industry pioneers",
+    "Music and entertainment firsts",
+    "Political and legal firsts",
+    "Writers and journalists who broke ground",
+    "Native American and immigrant pioneers"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 3,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "George Ferris",
+      "facet": "Inventors and engineers",
+      "known_at": 11
+    },
+    {
+      "name": "Lonnie Johnson",
+      "facet": "Inventors and engineers",
+      "known_at": 12
+    },
+    {
+      "name": "Hedy Lamarr",
+      "facet": "Inventors and engineers",
+      "known_at": 13
+    },
+    {
+      "name": "Willis Carrier",
+      "facet": "Inventors and engineers",
+      "known_at": 13
+    },
+    {
+      "name": "Mae Jemison",
+      "facet": "Aviation and space pioneers",
+      "known_at": 9
+    },
+    {
+      "name": "Christa McAuliffe",
+      "facet": "Aviation and space pioneers",
+      "known_at": 11
+    },
+    {
+      "name": "Eileen Collins",
+      "facet": "Aviation and space pioneers",
+      "known_at": 12
+    },
+    {
+      "name": "Ellen Ochoa",
+      "facet": "Aviation and space pioneers",
+      "known_at": 12
+    },
+    {
+      "name": "Guion Bluford",
+      "facet": "Aviation and space pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Jackie Cochran",
+      "facet": "Aviation and space pioneers",
+      "known_at": 14
+    },
+    {
+      "name": "Booker T. Washington",
+      "facet": "Civil rights trailblazers",
+      "known_at": 10
+    },
+    {
+      "name": "W.E.B. Du Bois",
+      "facet": "Civil rights trailblazers",
+      "known_at": 12
+    },
+    {
+      "name": "Claudette Colvin",
+      "facet": "Civil rights trailblazers",
+      "known_at": 12
+    },
+    {
+      "name": "Medgar Evers",
+      "facet": "Civil rights trailblazers",
+      "known_at": 13
+    },
+    {
+      "name": "Fannie Lou Hamer",
+      "facet": "Civil rights trailblazers",
+      "known_at": 13
+    },
+    {
+      "name": "Bayard Rustin",
+      "facet": "Civil rights trailblazers",
+      "known_at": 13
+    },
+    {
+      "name": "Gloria Steinem",
+      "facet": "Women's rights and suffrage",
+      "known_at": 11
+    },
+    {
+      "name": "Alice Paul",
+      "facet": "Women's rights and suffrage",
+      "known_at": 12
+    },
+    {
+      "name": "Wyoming Territory",
+      "facet": "Women's rights and suffrage",
+      "known_at": 12
+    },
+    {
+      "name": "Lucretia Mott",
+      "facet": "Women's rights and suffrage",
+      "known_at": 13
+    },
+    {
+      "name": "Betty Friedan",
+      "facet": "Women's rights and suffrage",
+      "known_at": 13
+    },
+    {
+      "name": "Carrie Chapman Catt",
+      "facet": "Women's rights and suffrage",
+      "known_at": 14
+    },
+    {
+      "name": "Victoria Woodhull",
+      "facet": "Women's rights and suffrage",
+      "known_at": 14
+    },
+    {
+      "name": "Amelia Bloomer",
+      "facet": "Women's rights and suffrage",
+      "known_at": 14
+    },
+    {
+      "name": "Lucy Stone",
+      "facet": "Women's rights and suffrage",
+      "known_at": 14
+    },
+    {
+      "name": "Simone Biles",
+      "facet": "Sports barrier breakers",
+      "known_at": 4
+    },
+    {
+      "name": "Serena Williams",
+      "facet": "Sports barrier breakers",
+      "known_at": 4
+    },
+    {
+      "name": "Tiger Woods",
+      "facet": "Sports barrier breakers",
+      "known_at": 5
+    },
+    {
+      "name": "Venus Williams",
+      "facet": "Sports barrier breakers",
+      "known_at": 6
+    },
+    {
+      "name": "Danica Patrick",
+      "facet": "Sports barrier breakers",
+      "known_at": 9
+    },
+    {
+      "name": "Wilma Rudolph",
+      "facet": "Sports barrier breakers",
+      "known_at": 10
+    },
+    {
+      "name": "Arthur Ashe",
+      "facet": "Sports barrier breakers",
+      "known_at": 10
+    },
+    {
+      "name": "Althea Gibson",
+      "facet": "Sports barrier breakers",
+      "known_at": 12
+    },
+    {
+      "name": "Jackie Joyner-Kersee",
+      "facet": "Sports barrier breakers",
+      "known_at": 12
+    },
+    {
+      "name": "Kathrine Switzer",
+      "facet": "Sports barrier breakers",
+      "known_at": 13
+    },
+    {
+      "name": "Larry Doby",
+      "facet": "Sports barrier breakers",
+      "known_at": 13
+    },
+    {
+      "name": "Gertrude Ederle",
+      "facet": "Sports barrier breakers",
+      "known_at": 13
+    },
+    {
+      "name": "Lewis and Clark",
+      "facet": "Explorers and frontier figures",
+      "known_at": 7
+    },
+    {
+      "name": "Kit Carson",
+      "facet": "Explorers and frontier figures",
+      "known_at": 11
+    },
+    {
+      "name": "Robert Peary",
+      "facet": "Explorers and frontier figures",
+      "known_at": 12
+    },
+    {
+      "name": "Matthew Henson",
+      "facet": "Explorers and frontier figures",
+      "known_at": 13
+    },
+    {
+      "name": "Richard Byrd",
+      "facet": "Explorers and frontier figures",
+      "known_at": 13
+    },
+    {
+      "name": "Jim Bridger",
+      "facet": "Explorers and frontier figures",
+      "known_at": 14
+    },
+    {
+      "name": "Robert Oppenheimer",
+      "facet": "Science and medicine firsts",
+      "known_at": 9
+    },
+    {
+      "name": "Edwin Hubble",
+      "facet": "Science and medicine firsts",
+      "known_at": 10
+    },
+    {
+      "name": "Carl Sagan",
+      "facet": "Science and medicine firsts",
+      "known_at": 10
+    },
+    {
+      "name": "Margaret Hamilton",
+      "facet": "Science and medicine firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Dian Fossey",
+      "facet": "Science and medicine firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Virginia Apgar",
+      "facet": "Science and medicine firsts",
+      "known_at": 13
+    },
+    {
+      "name": "Linus Pauling",
+      "facet": "Science and medicine firsts",
+      "known_at": 13
+    },
+    {
+      "name": "Walter Reed",
+      "facet": "Science and medicine firsts",
+      "known_at": 13
+    },
+    {
+      "name": "Barbara McClintock",
+      "facet": "Science and medicine firsts",
+      "known_at": 14
+    },
+    {
+      "name": "Patricia Bath",
+      "facet": "Science and medicine firsts",
+      "known_at": 14
+    },
+    {
+      "name": "Annie Jump Cannon",
+      "facet": "Science and medicine firsts",
+      "known_at": 14
+    },
+    {
+      "name": "Rebecca Lee Crumpler",
+      "facet": "Science and medicine firsts",
+      "known_at": 15
+    },
+    {
+      "name": "Madam C.J. Walker",
+      "facet": "Business and industry pioneers",
+      "known_at": 10
+    },
+    {
+      "name": "Mary Kay Ash",
+      "facet": "Business and industry pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Estée Lauder",
+      "facet": "Business and industry pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Oprah Winfrey",
+      "facet": "Music and entertainment firsts",
+      "known_at": 5
+    },
+    {
+      "name": "Fred Rogers",
+      "facet": "Music and entertainment firsts",
+      "known_at": 5
+    },
+    {
+      "name": "Ray Charles",
+      "facet": "Music and entertainment firsts",
+      "known_at": 7
+    },
+    {
+      "name": "Duke Ellington",
+      "facet": "Music and entertainment firsts",
+      "known_at": 9
+    },
+    {
+      "name": "Lucille Ball",
+      "facet": "Music and entertainment firsts",
+      "known_at": 9
+    },
+    {
+      "name": "Chuck Berry",
+      "facet": "Music and entertainment firsts",
+      "known_at": 9
+    },
+    {
+      "name": "Halle Berry",
+      "facet": "Music and entertainment firsts",
+      "known_at": 9
+    },
+    {
+      "name": "Scott Joplin",
+      "facet": "Music and entertainment firsts",
+      "known_at": 10
+    },
+    {
+      "name": "Sidney Poitier",
+      "facet": "Music and entertainment firsts",
+      "known_at": 11
+    },
+    {
+      "name": "Josephine Baker",
+      "facet": "Music and entertainment firsts",
+      "known_at": 11
+    },
+    {
+      "name": "Marian Anderson",
+      "facet": "Music and entertainment firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Hattie McDaniel",
+      "facet": "Music and entertainment firsts",
+      "known_at": 13
+    },
+    {
+      "name": "Bessie Smith",
+      "facet": "Music and entertainment firsts",
+      "known_at": 13
+    },
+    {
+      "name": "Barack Obama",
+      "facet": "Political and legal firsts",
+      "known_at": 3
+    },
+    {
+      "name": "Kamala Harris",
+      "facet": "Political and legal firsts",
+      "known_at": 6
+    },
+    {
+      "name": "Hillary Clinton",
+      "facet": "Political and legal firsts",
+      "known_at": 7
+    },
+    {
+      "name": "Nancy Pelosi",
+      "facet": "Political and legal firsts",
+      "known_at": 9
+    },
+    {
+      "name": "Colin Powell",
+      "facet": "Political and legal firsts",
+      "known_at": 10
+    },
+    {
+      "name": "Shirley Chisholm",
+      "facet": "Political and legal firsts",
+      "known_at": 11
+    },
+    {
+      "name": "Sonia Sotomayor",
+      "facet": "Political and legal firsts",
+      "known_at": 11
+    },
+    {
+      "name": "Condoleezza Rice",
+      "facet": "Political and legal firsts",
+      "known_at": 11
+    },
+    {
+      "name": "Jeannette Rankin",
+      "facet": "Political and legal firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Madeleine Albright",
+      "facet": "Political and legal firsts",
+      "known_at": 12
+    },
+    {
+      "name": "Frances Perkins",
+      "facet": "Political and legal firsts",
+      "known_at": 13
+    },
+    {
+      "name": "Geraldine Ferraro",
+      "facet": "Political and legal firsts",
+      "known_at": 13
+    },
+    {
+      "name": "Belva Lockwood",
+      "facet": "Political and legal firsts",
+      "known_at": 14
+    },
+    {
+      "name": "Daniel Inouye",
+      "facet": "Political and legal firsts",
+      "known_at": 14
+    },
+    {
+      "name": "Dr. Seuss",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 2
+    },
+    {
+      "name": "Maya Angelou",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 7
+    },
+    {
+      "name": "Edgar Allan Poe",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 7
+    },
+    {
+      "name": "Louisa May Alcott",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 8
+    },
+    {
+      "name": "Ernest Hemingway",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 9
+    },
+    {
+      "name": "Emily Dickinson",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 9
+    },
+    {
+      "name": "Amanda Gorman",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 9
+    },
+    {
+      "name": "Ida B. Wells",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 10
+    },
+    {
+      "name": "Nellie Bly",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 10
+    },
+    {
+      "name": "Toni Morrison",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 11
+    },
+    {
+      "name": "Zora Neale Hurston",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 11
+    },
+    {
+      "name": "Upton Sinclair",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 12
+    },
+    {
+      "name": "Walter Cronkite",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 12
+    },
+    {
+      "name": "James Baldwin",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 12
+    },
+    {
+      "name": "Pearl S. Buck",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 13
+    },
+    {
+      "name": "Edward R. Murrow",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 13
+    },
+    {
+      "name": "Gwendolyn Brooks",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 13
+    },
+    {
+      "name": "Ralph Ellison",
+      "facet": "Writers and journalists who broke ground",
+      "known_at": 13
+    },
+    {
+      "name": "Albert Einstein",
+      "facet": "Native American and immigrant pioneers",
+      "known_at": 3
+    },
+    {
+      "name": "Joseph Pulitzer",
+      "facet": "Native American and immigrant pioneers",
+      "known_at": 12
+    },
+    {
+      "name": "I. M. Pei",
+      "facet": "Native American and immigrant pioneers",
+      "known_at": 13
+    },
+    {
+      "name": "Fred Korematsu",
+      "facet": "Native American and immigrant pioneers",
+      "known_at": 14
+    }
+  ]
+}

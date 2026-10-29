@@ -1,0 +1,1183 @@
+{
+  "subcategory": "rivers-lakes-and-mountains",
+  "facets": [
+    "The Mississippi and its tributaries",
+    "Rivers of the West",
+    "Rivers of the East and South",
+    "The Great Lakes",
+    "Lakes, reservoirs and dams",
+    "The Rocky Mountains",
+    "Appalachian Mountains and eastern ranges",
+    "Sierra Nevada and Pacific ranges",
+    "Famous peaks and summits",
+    "Canyons, gorges and waterfalls",
+    "Volcanoes of Alaska and Hawaii",
+    "Rivers and mountains in history and legend"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 5,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Arkansas River",
+      "facet": "The Mississippi and its tributaries",
+      "known_at": 8
+    },
+    {
+      "name": "Tennessee River",
+      "facet": "The Mississippi and its tributaries",
+      "known_at": 8
+    },
+    {
+      "name": "Red River",
+      "facet": "The Mississippi and its tributaries",
+      "known_at": 10
+    },
+    {
+      "name": "Platte River",
+      "facet": "The Mississippi and its tributaries",
+      "known_at": 11
+    },
+    {
+      "name": "Illinois River",
+      "facet": "The Mississippi and its tributaries",
+      "known_at": 10
+    },
+    {
+      "name": "Lake Itasca",
+      "facet": "The Mississippi and its tributaries",
+      "known_at": 12
+    },
+    {
+      "name": "Mississippi River Delta",
+      "facet": "The Mississippi and its tributaries",
+      "known_at": 9
+    },
+    {
+      "name": "Yellowstone River",
+      "facet": "The Mississippi and its tributaries",
+      "known_at": 9
+    },
+    {
+      "name": "Levee",
+      "facet": "The Mississippi and its tributaries",
+      "known_at": 8
+    },
+    {
+      "name": "Cumberland River",
+      "facet": "The Mississippi and its tributaries",
+      "known_at": 11
+    },
+    {
+      "name": "Wabash River",
+      "facet": "The Mississippi and its tributaries",
+      "known_at": 11
+    },
+    {
+      "name": "Minnesota River",
+      "facet": "The Mississippi and its tributaries",
+      "known_at": 12
+    },
+    {
+      "name": "Atchafalaya River",
+      "facet": "The Mississippi and its tributaries",
+      "known_at": 13
+    },
+    {
+      "name": "Great Mississippi Flood of 1927",
+      "facet": "The Mississippi and its tributaries",
+      "known_at": 12
+    },
+    {
+      "name": "Kansas River",
+      "facet": "The Mississippi and its tributaries",
+      "known_at": 11
+    },
+    {
+      "name": "Des Moines River",
+      "facet": "The Mississippi and its tributaries",
+      "known_at": 12
+    },
+    {
+      "name": "Colorado River",
+      "facet": "Rivers of the West",
+      "known_at": 4
+    },
+    {
+      "name": "Columbia River",
+      "facet": "Rivers of the West",
+      "known_at": 7
+    },
+    {
+      "name": "Snake River",
+      "facet": "Rivers of the West",
+      "known_at": 9
+    },
+    {
+      "name": "Sacramento River",
+      "facet": "Rivers of the West",
+      "known_at": 9
+    },
+    {
+      "name": "San Joaquin River",
+      "facet": "Rivers of the West",
+      "known_at": 11
+    },
+    {
+      "name": "Yukon River",
+      "facet": "Rivers of the West",
+      "known_at": 9
+    },
+    {
+      "name": "Gila River",
+      "facet": "Rivers of the West",
+      "known_at": 11
+    },
+    {
+      "name": "Green River",
+      "facet": "Rivers of the West",
+      "known_at": 11
+    },
+    {
+      "name": "Salmon River",
+      "facet": "Rivers of the West",
+      "known_at": 11
+    },
+    {
+      "name": "Willamette River",
+      "facet": "Rivers of the West",
+      "known_at": 11
+    },
+    {
+      "name": "Los Angeles River",
+      "facet": "Rivers of the West",
+      "known_at": 9
+    },
+    {
+      "name": "Klamath River",
+      "facet": "Rivers of the West",
+      "known_at": 12
+    },
+    {
+      "name": "Truckee River",
+      "facet": "Rivers of the West",
+      "known_at": 12
+    },
+    {
+      "name": "Humboldt River",
+      "facet": "Rivers of the West",
+      "known_at": 13
+    },
+    {
+      "name": "Copper River",
+      "facet": "Rivers of the West",
+      "known_at": 12
+    },
+    {
+      "name": "Pecos River",
+      "facet": "Rivers of the West",
+      "known_at": 11
+    },
+    {
+      "name": "Kenai River",
+      "facet": "Rivers of the West",
+      "known_at": 13
+    },
+    {
+      "name": "Hudson River",
+      "facet": "Rivers of the East and South",
+      "known_at": 4
+    },
+    {
+      "name": "Delaware River",
+      "facet": "Rivers of the East and South",
+      "known_at": 7
+    },
+    {
+      "name": "Connecticut River",
+      "facet": "Rivers of the East and South",
+      "known_at": 9
+    },
+    {
+      "name": "Susquehanna River",
+      "facet": "Rivers of the East and South",
+      "known_at": 10
+    },
+    {
+      "name": "Chattahoochee River",
+      "facet": "Rivers of the East and South",
+      "known_at": 10
+    },
+    {
+      "name": "St. Johns River",
+      "facet": "Rivers of the East and South",
+      "known_at": 11
+    },
+    {
+      "name": "Savannah River",
+      "facet": "Rivers of the East and South",
+      "known_at": 10
+    },
+    {
+      "name": "James River",
+      "facet": "Rivers of the East and South",
+      "known_at": 10
+    },
+    {
+      "name": "Shenandoah River",
+      "facet": "Rivers of the East and South",
+      "known_at": 9
+    },
+    {
+      "name": "Charles River",
+      "facet": "Rivers of the East and South",
+      "known_at": 9
+    },
+    {
+      "name": "East River",
+      "facet": "Rivers of the East and South",
+      "known_at": 8
+    },
+    {
+      "name": "Brazos River",
+      "facet": "Rivers of the East and South",
+      "known_at": 10
+    },
+    {
+      "name": "Suwannee River",
+      "facet": "Rivers of the East and South",
+      "known_at": 10
+    },
+    {
+      "name": "Merrimack River",
+      "facet": "Rivers of the East and South",
+      "known_at": 11
+    },
+    {
+      "name": "Kennebec River",
+      "facet": "Rivers of the East and South",
+      "known_at": 12
+    },
+    {
+      "name": "Penobscot River",
+      "facet": "Rivers of the East and South",
+      "known_at": 12
+    },
+    {
+      "name": "Schuylkill River",
+      "facet": "Rivers of the East and South",
+      "known_at": 12
+    },
+    {
+      "name": "St. Lawrence River",
+      "facet": "Rivers of the East and South",
+      "known_at": 9
+    },
+    {
+      "name": "Lake Huron",
+      "facet": "The Great Lakes",
+      "known_at": 5
+    },
+    {
+      "name": "Lake Erie",
+      "facet": "The Great Lakes",
+      "known_at": 5
+    },
+    {
+      "name": "Lake Ontario",
+      "facet": "The Great Lakes",
+      "known_at": 5
+    },
+    {
+      "name": "HOMES",
+      "facet": "The Great Lakes",
+      "known_at": 5
+    },
+    {
+      "name": "Niagara River",
+      "facet": "The Great Lakes",
+      "known_at": 9
+    },
+    {
+      "name": "Mackinac Bridge",
+      "facet": "The Great Lakes",
+      "known_at": 8
+    },
+    {
+      "name": "Mackinac Island",
+      "facet": "The Great Lakes",
+      "known_at": 9
+    },
+    {
+      "name": "SS Edmund Fitzgerald",
+      "facet": "The Great Lakes",
+      "known_at": 10
+    },
+    {
+      "name": "Soo Locks",
+      "facet": "The Great Lakes",
+      "known_at": 11
+    },
+    {
+      "name": "Lake St. Clair",
+      "facet": "The Great Lakes",
+      "known_at": 11
+    },
+    {
+      "name": "Isle Royale",
+      "facet": "The Great Lakes",
+      "known_at": 11
+    },
+    {
+      "name": "Apostle Islands",
+      "facet": "The Great Lakes",
+      "known_at": 12
+    },
+    {
+      "name": "Sleeping Bear Dunes",
+      "facet": "The Great Lakes",
+      "known_at": 10
+    },
+    {
+      "name": "Detroit River",
+      "facet": "The Great Lakes",
+      "known_at": 10
+    },
+    {
+      "name": "Pictured Rocks",
+      "facet": "The Great Lakes",
+      "known_at": 11
+    },
+    {
+      "name": "Lake-effect snow",
+      "facet": "The Great Lakes",
+      "known_at": 8
+    },
+    {
+      "name": "Saint Lawrence Seaway",
+      "facet": "The Great Lakes",
+      "known_at": 11
+    },
+    {
+      "name": "Chicago River",
+      "facet": "The Great Lakes",
+      "known_at": 7
+    },
+    {
+      "name": "Lake Mead",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 8
+    },
+    {
+      "name": "Lake Powell",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 9
+    },
+    {
+      "name": "Glen Canyon Dam",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 11
+    },
+    {
+      "name": "Grand Coulee Dam",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 10
+    },
+    {
+      "name": "Lake Okeechobee",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 9
+    },
+    {
+      "name": "Lake Champlain",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 9
+    },
+    {
+      "name": "Yellowstone Lake",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 9
+    },
+    {
+      "name": "Tennessee Valley Authority",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 11
+    },
+    {
+      "name": "Lake of the Ozarks",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 9
+    },
+    {
+      "name": "Lake Pontchartrain",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 9
+    },
+    {
+      "name": "Mono Lake",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 11
+    },
+    {
+      "name": "Lake Winnipesaukee",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 10
+    },
+    {
+      "name": "Walden Pond",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 10
+    },
+    {
+      "name": "Lake Placid",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 9
+    },
+    {
+      "name": "Lake Minnetonka",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 11
+    },
+    {
+      "name": "Salton Sea",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 11
+    },
+    {
+      "name": "Oroville Dam",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 12
+    },
+    {
+      "name": "Bonneville Dam",
+      "facet": "Lakes, reservoirs and dams",
+      "known_at": 12
+    },
+    {
+      "name": "Rocky Mountains",
+      "facet": "The Rocky Mountains",
+      "known_at": 2
+    },
+    {
+      "name": "Continental Divide",
+      "facet": "The Rocky Mountains",
+      "known_at": 7
+    },
+    {
+      "name": "Rocky Mountain National Park",
+      "facet": "The Rocky Mountains",
+      "known_at": 6
+    },
+    {
+      "name": "Grand Teton National Park",
+      "facet": "The Rocky Mountains",
+      "known_at": 7
+    },
+    {
+      "name": "Glacier National Park",
+      "facet": "The Rocky Mountains",
+      "known_at": 7
+    },
+    {
+      "name": "Old Faithful",
+      "facet": "The Rocky Mountains",
+      "known_at": 4
+    },
+    {
+      "name": "Bighorn sheep",
+      "facet": "The Rocky Mountains",
+      "known_at": 5
+    },
+    {
+      "name": "Aspen, Colorado",
+      "facet": "The Rocky Mountains",
+      "known_at": 7
+    },
+    {
+      "name": "Vail",
+      "facet": "The Rocky Mountains",
+      "known_at": 9
+    },
+    {
+      "name": "Sawatch Range",
+      "facet": "The Rocky Mountains",
+      "known_at": 13
+    },
+    {
+      "name": "Front Range",
+      "facet": "The Rocky Mountains",
+      "known_at": 11
+    },
+    {
+      "name": "Fourteener",
+      "facet": "The Rocky Mountains",
+      "known_at": 9
+    },
+    {
+      "name": "Elk",
+      "facet": "The Rocky Mountains",
+      "known_at": 3
+    },
+    {
+      "name": "Grizzly bear",
+      "facet": "The Rocky Mountains",
+      "known_at": 3
+    },
+    {
+      "name": "Going-to-the-Sun Road",
+      "facet": "The Rocky Mountains",
+      "known_at": 11
+    },
+    {
+      "name": "Trail Ridge Road",
+      "facet": "The Rocky Mountains",
+      "known_at": 12
+    },
+    {
+      "name": "Jackson Hole",
+      "facet": "The Rocky Mountains",
+      "known_at": 9
+    },
+    {
+      "name": "Wind River Range",
+      "facet": "The Rocky Mountains",
+      "known_at": 12
+    },
+    {
+      "name": "Bitterroot Range",
+      "facet": "The Rocky Mountains",
+      "known_at": 12
+    },
+    {
+      "name": "Chinook wind",
+      "facet": "The Rocky Mountains",
+      "known_at": 11,
+      "retired": "used_up: The earlier question already names the Chinook wind and its link to a Native people; every option either repeats its effect (warming, melting snow) or is answered by that earlier question."
+    },
+    {
+      "name": "Appalachian Mountains",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 4
+    },
+    {
+      "name": "Appalachian Trail",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 6
+    },
+    {
+      "name": "Great Smoky Mountains",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 5
+    },
+    {
+      "name": "Blue Ridge Mountains",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 6
+    },
+    {
+      "name": "Blue Ridge Parkway",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 9
+    },
+    {
+      "name": "Shenandoah National Park",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 9
+    },
+    {
+      "name": "Catskill Mountains",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 8
+    },
+    {
+      "name": "Adirondack Mountains",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 8
+    },
+    {
+      "name": "White Mountains",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 9
+    },
+    {
+      "name": "Green Mountains",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 10
+    },
+    {
+      "name": "Berkshires",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 10
+    },
+    {
+      "name": "Pocono Mountains",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 9
+    },
+    {
+      "name": "Ozark Mountains",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 7
+    },
+    {
+      "name": "Allegheny Mountains",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 11
+    },
+    {
+      "name": "Cumberland Gap",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 11
+    },
+    {
+      "name": "Springer Mountain",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 13
+    },
+    {
+      "name": "Old Man of the Mountain",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 11
+    },
+    {
+      "name": "Cades Cove",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 12
+    },
+    {
+      "name": "Clingmans Dome",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 12
+    },
+    {
+      "name": "Ouachita Mountains",
+      "facet": "Appalachian Mountains and eastern ranges",
+      "known_at": 13
+    },
+    {
+      "name": "Sierra Nevada",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 6
+    },
+    {
+      "name": "Half Dome",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 6
+    },
+    {
+      "name": "El Capitan",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 7
+    },
+    {
+      "name": "Cascade Range",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 8
+    },
+    {
+      "name": "Mount St. Helens",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 5
+    },
+    {
+      "name": "Pacific Coast Ranges",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 12
+    },
+    {
+      "name": "Brooks Range",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 12
+    },
+    {
+      "name": "Alaska Range",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 11
+    },
+    {
+      "name": "Olympic Mountains",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 11
+    },
+    {
+      "name": "Sequoia National Park",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 6
+    },
+    {
+      "name": "Donner Pass",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 10
+    },
+    {
+      "name": "San Andreas Fault",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 7
+    },
+    {
+      "name": "Big Sur",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 8
+    },
+    {
+      "name": "Santa Monica Mountains",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 9
+    },
+    {
+      "name": "San Gabriel Mountains",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 11
+    },
+    {
+      "name": "Mount Tamalpais",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 12
+    },
+    {
+      "name": "Hollywood Hills",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 7
+    },
+    {
+      "name": "Glacier Point",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 11
+    },
+    {
+      "name": "Kings Canyon National Park",
+      "facet": "Sierra Nevada and Pacific ranges",
+      "known_at": 10
+    },
+    {
+      "name": "Mount Rainier",
+      "facet": "Famous peaks and summits",
+      "known_at": 7
+    },
+    {
+      "name": "Pikes Peak",
+      "facet": "Famous peaks and summits",
+      "known_at": 7
+    },
+    {
+      "name": "Mount Elbert",
+      "facet": "Famous peaks and summits",
+      "known_at": 10
+    },
+    {
+      "name": "Mount Mitchell",
+      "facet": "Famous peaks and summits",
+      "known_at": 11
+    },
+    {
+      "name": "Mount Hood",
+      "facet": "Famous peaks and summits",
+      "known_at": 8
+    },
+    {
+      "name": "Stone Mountain",
+      "facet": "Famous peaks and summits",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Katahdin",
+      "facet": "Famous peaks and summits",
+      "known_at": 11
+    },
+    {
+      "name": "Longs Peak",
+      "facet": "Famous peaks and summits",
+      "known_at": 12
+    },
+    {
+      "name": "Mount Shasta",
+      "facet": "Famous peaks and summits",
+      "known_at": 9
+    },
+    {
+      "name": "Crazy Horse Memorial",
+      "facet": "Famous peaks and summits",
+      "known_at": 8
+    },
+    {
+      "name": "Mount Marcy",
+      "facet": "Famous peaks and summits",
+      "known_at": 12
+    },
+    {
+      "name": "Mount Saint Elias",
+      "facet": "Famous peaks and summits",
+      "known_at": 13
+    },
+    {
+      "name": "Camelback Mountain",
+      "facet": "Famous peaks and summits",
+      "known_at": 11
+    },
+    {
+      "name": "Mount Baker",
+      "facet": "Famous peaks and summits",
+      "known_at": 11
+    },
+    {
+      "name": "Mount Olympus (Washington)",
+      "facet": "Famous peaks and summits",
+      "known_at": 12
+    },
+    {
+      "name": "Yosemite Falls",
+      "facet": "Canyons, gorges and waterfalls",
+      "known_at": 7
+    },
+    {
+      "name": "Bryce Canyon",
+      "facet": "Canyons, gorges and waterfalls",
+      "known_at": 7
+    },
+    {
+      "name": "Zion National Park",
+      "facet": "Canyons, gorges and waterfalls",
+      "known_at": 7
+    },
+    {
+      "name": "Antelope Canyon",
+      "facet": "Canyons, gorges and waterfalls",
+      "known_at": 8
+    },
+    {
+      "name": "Horseshoe Bend",
+      "facet": "Canyons, gorges and waterfalls",
+      "known_at": 8
+    },
+    {
+      "name": "Royal Gorge",
+      "facet": "Canyons, gorges and waterfalls",
+      "known_at": 11
+    },
+    {
+      "name": "Hells Canyon",
+      "facet": "Canyons, gorges and waterfalls",
+      "known_at": 12
+    },
+    {
+      "name": "Black Canyon of the Gunnison",
+      "facet": "Canyons, gorges and waterfalls",
+      "known_at": 12
+    },
+    {
+      "name": "Multnomah Falls",
+      "facet": "Canyons, gorges and waterfalls",
+      "known_at": 9
+    },
+    {
+      "name": "Shoshone Falls",
+      "facet": "Canyons, gorges and waterfalls",
+      "known_at": 12
+    },
+    {
+      "name": "Canyon de Chelly",
+      "facet": "Canyons, gorges and waterfalls",
+      "known_at": 12
+    },
+    {
+      "name": "Palo Duro Canyon",
+      "facet": "Canyons, gorges and waterfalls",
+      "known_at": 11
+    },
+    {
+      "name": "Watkins Glen",
+      "facet": "Canyons, gorges and waterfalls",
+      "known_at": 11
+    },
+    {
+      "name": "Bridalveil Fall",
+      "facet": "Canyons, gorges and waterfalls",
+      "known_at": 11
+    },
+    {
+      "name": "Columbia River Gorge",
+      "facet": "Canyons, gorges and waterfalls",
+      "known_at": 10
+    },
+    {
+      "name": "Havasu Falls",
+      "facet": "Canyons, gorges and waterfalls",
+      "known_at": 9
+    },
+    {
+      "name": "Ruby Falls",
+      "facet": "Canyons, gorges and waterfalls",
+      "known_at": 10
+    },
+    {
+      "name": "Kilauea",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 5
+    },
+    {
+      "name": "Mauna Loa",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 6
+    },
+    {
+      "name": "Diamond Head",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 7
+    },
+    {
+      "name": "Haleakala",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 8
+    },
+    {
+      "name": "Hawaii Volcanoes National Park",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 6
+    },
+    {
+      "name": "Pele",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 7
+    },
+    {
+      "name": "Lava",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 1
+    },
+    {
+      "name": "Pahoehoe",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 11
+    },
+    {
+      "name": "A'a lava",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 11
+    },
+    {
+      "name": "Kamaʻehuakanaloa Seamount",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 13
+    },
+    {
+      "name": "Mount Katmai",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 12
+    },
+    {
+      "name": "Novarupta",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 14
+    },
+    {
+      "name": "Valley of Ten Thousand Smokes",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 13
+    },
+    {
+      "name": "Mount Redoubt",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 13
+    },
+    {
+      "name": "Augustine Volcano",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 14
+    },
+    {
+      "name": "Aleutian Islands",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 10
+    },
+    {
+      "name": "Ring of Fire",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 7
+    },
+    {
+      "name": "Hawaii hotspot",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 10
+    },
+    {
+      "name": "Halemaʻumaʻu Crater",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 12
+    },
+    {
+      "name": "Punchbowl Crater",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 12
+    },
+    {
+      "name": "Punaluʻu Black Sand Beach",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 11
+    },
+    {
+      "name": "Thurston Lava Tube",
+      "facet": "Volcanoes of Alaska and Hawaii",
+      "known_at": 11
+    },
+    {
+      "name": "Lewis and Clark Expedition",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 5
+    },
+    {
+      "name": "Sacagawea",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 5
+    },
+    {
+      "name": "Paul Bunyan",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 4
+    },
+    {
+      "name": "Babe the Blue Ox",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 6
+    },
+    {
+      "name": "Tom Sawyer",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 6
+    },
+    {
+      "name": "Huckleberry Finn",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 6
+    },
+    {
+      "name": "Mark Twain",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 5
+    },
+    {
+      "name": "Washington Crossing the Delaware",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 6
+    },
+    {
+      "name": "Erie Canal",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 8
+    },
+    {
+      "name": "Donner Party",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 10
+    },
+    {
+      "name": "Rip Van Winkle",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 7
+    },
+    {
+      "name": "Hudson River School",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 13
+    },
+    {
+      "name": "Sutter's Mill",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 9
+    },
+    {
+      "name": "Pecos Bill",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 8
+    },
+    {
+      "name": "Mike Fink",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 13
+    },
+    {
+      "name": "Bigfoot",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 3
+    },
+    {
+      "name": "Miracle on the Hudson",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 9
+    },
+    {
+      "name": "Zebulon Pike",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 11
+    },
+    {
+      "name": "America the Beautiful",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 9
+    },
+    {
+      "name": "Ol' Man River",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 11
+    },
+    {
+      "name": "Mississippi steamboat",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 6
+    },
+    {
+      "name": "Champ (Lake Champlain monster)",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 11
+    },
+    {
+      "name": "John Wesley Powell",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 12
+    },
+    {
+      "name": "Take Me Home, Country Roads",
+      "facet": "Rivers and mountains in history and legend",
+      "known_at": 6
+    }
+  ]
+}
