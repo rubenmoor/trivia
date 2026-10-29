@@ -2411,16 +2411,24 @@
       "description": "A sweet so sticky it keeps your teeth glued together until the next day.",
       "fun_fact": "In Cartagena, the palenqueras, women street sellers in colorful dresses, sell cocadas in many flavors, like guava, pineapple and even milk.",
       "difficulty": 8,
-      "status": "approved",
+      "status": "rejected",
       "batch": "tr-en-2",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "rejected",
+        "feedback": "no viaja",
+        "reviewed_on": "2026-10-28",
+        "reviewed_at": "2026-10-28T22:52:07",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "a9f4995c13f3"
     },
