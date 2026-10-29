@@ -40363,7 +40363,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-0527",
@@ -60757,7 +60758,8 @@
         }
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-0790",
@@ -61137,7 +61139,8 @@
           "question": "Tu tía sale de la librería feliz con el libro más famoso de Héctor Abad Faciolince. Completa: García Márquez es a 'Cien años de soledad' como Abad Faciolince es a…"
         },
         "revised_on": "2026-10-10"
-      }
+      },
+      "translatable": false
     },
     {
       "id": "q-0795",
@@ -71822,7 +71825,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-0935",
@@ -75017,7 +75021,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-0977",
@@ -96077,7 +96082,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-1252",
@@ -139087,7 +139093,8 @@
           ]
         },
         "revised_on": "2026-10-15"
-      }
+      },
+      "translatable": false
     },
     {
       "id": "q-1807",
@@ -153282,7 +153289,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-1994",
@@ -158477,7 +158485,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-2063",
@@ -166997,7 +167006,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-2176",
@@ -168681,7 +168691,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-2198",
