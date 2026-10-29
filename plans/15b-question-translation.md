@@ -84,6 +84,7 @@ Done (pm plan 67, RV-24..RV-26). The developer and native speakers review `quest
   - QT-6 progress `es-ES`: `tr-es-ES-10` (2026-10-25) 300 translated, 298 approved, 2 needs_work; 2723 in the `es-ES` pool, target not met; next `tr-es-ES-11`.
   - QT-6 progress `es-ES`: `tr-es-ES-11` (2026-10-25) 300 translated, 297 approved, 3 needs_work; 3020 in the `es-ES` pool, target not met; next `tr-es-ES-12`.
   - QT-6 progress `es-ES`: `tr-es-ES-12` (2026-10-25) 300 translated, 295 approved, 5 needs_work; 3315 in the `es-ES` pool, target not met; next `tr-es-ES-13`.
+  - QT-6 progress `es-ES`: `tr-es-ES-13` (2026-10-28) 299 translated, 296 approved, 3 needs_work, 1 not travelling; 3313 in the `es-ES` pool, target not met; next `tr-es-ES-14`.
   - QT-6 progress `es`: `tr-es-2` (2026-10-23) 300 translated, 296 approved; 2351 in the `es` pool (incl. es-sourced), target not met; next `tr-es-3`.
   - QT-6 progress `es`: `tr-es-3` (2026-10-24) 300 translated, 298 approved; 2649 in the `es` pool (incl. es-sourced), target not met; next `tr-es-4`.
   - QT-6 progress `es`: `tr-es-4` (2026-10-24) 300 translated, 298 approved, 2 needs_work; 2947 in the `es` pool (incl. es-sourced), target not met; next `tr-es-5`.

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "86f477bd",
+  "hash": "397a42cc",
   "questions": [
     {
       "id": "q-0007",
@@ -13802,40 +13802,6 @@
       "background": null
     },
     {
-      "id": "q-0788",
-      "status": "approved",
-      "difficulty": 9,
-      "subcategory": "childrens-books",
-      "bundle": "base",
-      "description": "Una palabra con una tilde escondida en medio, como la sorpresa de un huevo de chocolate.",
-      "question": "Soy la palabra «retahíla». ¿Qué significo?",
-      "answer": "Una serie larga de cosas dichas una tras otra",
-      "wrong_answers": [
-        "Una canción suave para dormir a un bebé",
-        "Una frase difícil de pronunciar rápido",
-        "Una palabra que se lee igual al revés"
-      ],
-      "hints": [
-        "Los niños a veces la usan para elegir a quién se la queda.",
-        "Suena larguísima y encadenada.",
-        "«Me soltó una ... de quejas»: una tras otra, sin parar."
-      ],
-      "fun_fact": "Muchas retahílas infantiles sirven para echar a suertes quién se la queda en un juego.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Speelplaats_van_een_Rooms-Katholieke_school_-_Schoolyard_of_a_Roman_Catholic_school_%283915530371%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASpeelplaats_van_een_Rooms-Katholieke_school_-_Schoolyard_of_a_Roman_Catholic_school_%283915530371%29.jpg",
-        "credit": "Wiel van der Randen · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Wiel van der Randen",
-        "author_url": "https://www.wikidata.org/wiki/Q18065666"
-      },
-      "background": null
-    },
-    {
       "id": "q-0789",
       "status": "approved",
       "difficulty": 12,
@@ -23080,40 +23046,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "HaJunkiyada",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:HaJunkiyada&action=edit&redlink=1"
-      },
-      "background": null
-    },
-    {
-      "id": "q-1201",
-      "status": "approved",
-      "difficulty": 6,
-      "subcategory": "vegetables",
-      "bundle": "base",
-      "description": "Un tubérculo con más nombres que un agente secreto.",
-      "question": "Es un tubérculo dulce y anaranjado por dentro; en México le dicen «camote» y en España «boniato». ¿Qué es?",
-      "answer": "La batata",
-      "wrong_answers": [
-        "La yuca",
-        "El ñame",
-        "La arracacha"
-      ],
-      "hints": [
-        "Algunos la llaman «patata dulce».",
-        "Se puede comer frita o al horno, como las patatas.",
-        "Su nombre se parece a «patata»."
-      ],
-      "fun_fact": "La palabra «patata» nació de mezclar «batata», voz taína, con «papa», voz quechua.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Root_vegetables_at_the_U.S._Department_of_Agriculture_%28USDA%29_farmers_market_20170602-AMS-PJK-0020_1_%2835054879395%29.jpg/3840px-Root_vegetables_at_the_U.S._Department_of_Agriculture_%28USDA%29_farmers_market_20170602-AMS-PJK-0020_1_%2835054879395%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ARoot_vegetables_at_the_U.S._Department_of_Agriculture_%28USDA%29_farmers_market_20170602-AMS-PJK-0020_1_%2835054879395%29.jpg",
-        "credit": "U.S. Department of Agriculture · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "U.S. Department of Agriculture\n\nPreston Keres/Office of Communications-Photography Services Center",
-        "author_url": "https://www.flickr.com/people/41284017@N08"
       },
       "background": null
     },
