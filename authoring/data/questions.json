@@ -32834,7 +32834,8 @@
         "answer_kind": "word",
         "lens": "language"
       },
-      "concept": "Proverb"
+      "concept": "Proverb",
+      "translatable": false
     },
     {
       "id": "q-0429",
@@ -45561,7 +45562,8 @@
           "question": "Soy profesor en una academia de Madrid; en mi canal «Unicoos» subo clases gratis de matemáticas, física y química, y en 2017 quedé entre los 10 finalistas del llamado «Nobel de los profesores». ¿Quién soy?"
         },
         "revised_on": "2026-10-10"
-      }
+      },
+      "translatable": false
     },
     {
       "id": "q-0593",
@@ -96003,7 +96005,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-1251",
@@ -96379,7 +96382,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-1256",
@@ -160307,7 +160311,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-2088",
@@ -314803,7 +314808,8 @@
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-4083",
