@@ -682317,7 +682317,7 @@
     },
     {
       "id": "q-8833",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "An alien's first snack review: five stars, would follow the trail again.",
       "question": "In the film E.T., Elliott lays a trail of candy to lure the alien into the house. What's inside those crunchy candies?",
@@ -682335,11 +682335,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "California suburb at night",
+        "query": "suburban house at night",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStonybrook_Shines_2021%2C_Lancaster%2C_New_York_-_20211223.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Stonybrook_Shines_2021%2C_Lancaster%2C_New_York_-_20211223.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Andre Carrotflower · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Andre Carrotflower",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Andre_Carrotflower",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The candy in the trail was Reese's Pieces, and their sales shot up after E.T. came out in 1982.",
       "subcategory": "candy-and-snacks",
@@ -682368,19 +682375,43 @@
       "needs_media": false,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates fits the question. They are a watermelon seed-catalog print, a \"Breeder and Sportsman\" masthead and a 1943 newspaper front page about a glider crash. No new search is allowed, so this slot needs a new image, for example a suburban house at night or a forest at night. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits the question. They are a watermelon seed-catalog print, a \"Breeder and Sportsman\" masthead and a 1943 newspaper front page about a glider crash. No new search is allowed, so this slot needs a new image, for example a suburban house at night or a forest at night. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No candidate image fit, so I changed the illustrative query to a suburban house at night, which matches the film's setting without showing the candy.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "California suburb at night",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-8834",
@@ -682932,20 +682963,20 @@
     },
     {
       "id": "q-8841",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "A whole town moved out without saying goodbye and left only a one-word note.",
       "question": "If you visit Roanoke Island, you can watch a play about colonists who vanished, leaving only the word “CROATOAN” carved on a post. When did they arrive?",
       "answer": "1580s",
       "wrong_answers": [
+        "1550s",
         "1620s",
-        "1690s",
-        "1730s"
+        "1690s"
       ],
       "hints": [
-        "It was before Jamestown.",
-        "Queen Elizabeth I ruled England then.",
-        "It was in the 16th century."
+        "Sir Walter Raleigh sponsored the voyage.",
+        "It was before Jamestown, the first lasting English colony.",
+        "Queen Elizabeth I had already ruled England for more than 20 years."
       ],
       "media": {
         "type": "image",
@@ -682990,24 +683021,41 @@
       "needs_media": false,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (“It was before Jamestown”) gives the answer away. Jamestown (1607) is standard US school knowledge, and all three wrong answers (1620s, 1690s, 1730s) come after it. Hint 2 (Elizabeth I, who ruled until 1603) does the same. Make hints 1 and 2 vaguer, or add a wrong answer from the 16th century (for example 1550s) so these hints don't settle the question.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (“It was before Jamestown”) gives the answer away. Jamestown (1607) is standard US school knowledge, and all three wrong answers (1620s, 1690s, 1730s) come after it. Hint 2 (Elizabeth I, who ruled until 1603) does the same. Make hints 1 and 2 vaguer, or add a wrong answer from the 16th century (for example 1550s) so these hints don't settle the question.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer hints at how old the event is.",
+        "reason": "Swapped 1730s for 1550s and reordered the hints so the first two no longer rule out every wrong answer.",
         "previous": {
-          "description": "The oldest unsolved mystery in America."
+          "wrong_answers": [
+            "1620s",
+            "1690s",
+            "1730s"
+          ],
+          "hints": [
+            "It was before Jamestown.",
+            "Queen Elizabeth I ruled England then.",
+            "It was in the 16th century."
+          ]
         },
         "revised_on": "2026-10-29"
       }
@@ -683624,7 +683672,7 @@
     },
     {
       "id": "q-8850",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "A group of strangers stuck in a room until they agree on something. No, not a family vacation.",
       "question": "How many jurors decide the verdict in a US federal criminal trial?",
@@ -683636,7 +683684,7 @@
       ],
       "hints": [
         "It's an even number.",
-        "Some state courts use smaller juries for minor cases, but federal criminal trials use the full traditional size.",
+        "The Sixth Amendment guarantees the right to a trial by jury.",
         "A famous old film calls them “Angry Men”."
       ],
       "media": {
@@ -683644,18 +683692,16 @@
         "role": "illustrative",
         "query": "empty courtroom jury box",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AWest_courtroom%2C_Jury_box%2C_Howard_M._Metzenbaum_U.S._Courthouse%2C_Cleveland%2C_Ohio_LCCN2010719507.tif",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/West_courtroom%2C_Jury_box%2C_Howard_M._Metzenbaum_U.S._Courthouse%2C_Cleveland%2C_Ohio_LCCN2010719507.tif/lossy-page1-3840px-West_courtroom%2C_Jury_box%2C_Howard_M._Metzenbaum_U.S._Courthouse%2C_Cleveland%2C_Ohio_LCCN2010719507.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Carol M. Highsmith · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJury_box_in_the_courtroom_of_the_Van_Buren_County_Courthouse_in_Clinton%2C_Arkansas.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Jury_box_in_the_courtroom_of_the_Van_Buren_County_Courthouse_in_Clinton%2C_Arkansas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Brandonrush · CC0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Carol M. Highsmith",
-        "author_url": "https://en.wikipedia.org/wiki/en:Carol_M._Highsmith",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Brandonrush",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Brandonrush",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-Highsmith"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "In federal criminal trials, all the jurors must agree for a verdict.",
       "subcategory": "civics",
@@ -683684,26 +683730,34 @@
       "needs_media": false,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: hint 1 (\"even number\") leaves only 6 and 12, and hint 2 then says federal trials use the \"full traditional size\" as opposed to smaller juries, which rules out 6. Hint 2 should hint at something else (for example the Sixth Amendment's right to a jury trial) without pointing to the bigger number.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: hint 1 (\"even number\") leaves only 6 and 12, and hint 2 then says federal trials use the \"full traditional size\" as opposed to smaller juries, which rules out 6. Hint 2 should hint at something else (for example the Sixth Amendment's right to a jury trial) without pointing to the bigger number.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which identified 12 directly, with a nudge that doesn't name a number.",
+        "reason": "Rewrote hint 2 so it no longer points to the bigger jury size.",
         "previous": {
           "hints": [
             "It's an even number.",
-            "It's the same as the number of months in a year.",
+            "Some state courts use smaller juries for minor cases, but federal criminal trials use the full traditional size.",
             "A famous old film calls them “Angry Men”."
           ]
         },
@@ -683796,9 +683850,9 @@
     },
     {
       "id": "q-8852",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
-      "description": "Nine judges in black robes made a call that still annoys everyone holding a TV remote in election season.",
+      "description": "Nine judges in black robes stepped into an argument about a movie and came out with a landmark case.",
       "question": "In 2010, the Supreme Court decided Citizens United v. FEC, a case that began over a film criticizing Hillary Clinton. What did the ruling allow?",
       "answer": "Unlimited corporate spending on independent political ads",
       "wrong_answers": [
@@ -683854,24 +683908,32 @@
       "needs_media": false,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description gives away the answer's defining effect. \"Annoys everyone holding a TV remote in election season\" points straight at a flood of TV political ads. Read with only the four options, that matches the answer and rules out \"A ban on political ads in the final month\" and probably \"Companies to run their own candidates\". Rewrite it to play on the Supreme Court or legal theme without hinting at more ads or more spending. The facts are correct (2010, 5–4, “Hillary: The Movie”, independent expenditures), and media pick 1 is fine.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description gives away the answer's defining effect. \"Annoys everyone holding a TV remote in election season\" points straight at a flood of TV political ads. Read with only the four options, that matches the answer and rules out \"A ban on political ads in the final month\" and probably \"Companies to run their own candidates\". Rewrite it to play on the Supreme Court or legal theme without hinting at more ads or more spending. The facts are correct (2010, 5–4, “Hillary: The Movie”, independent expenditures), and media pick 1 is fine.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer says the ruling led to more spending or ads.",
+        "reason": "Rewrote the description so it no longer hints at a flood of TV political ads.",
         "previous": {
-          "description": "A court case that turned every election season into a much more expensive TV season."
+          "description": "Nine judges in black robes made a call that still annoys everyone holding a TV remote in election season."
         },
         "revised_on": "2026-10-29"
       }
@@ -684564,7 +684626,7 @@
     },
     {
       "id": "q-8862",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "The pancake's rugged, corn-fed great-great-grandparent.",
       "question": "Johnnycakes, like these, are cornmeal flatbreads that colonists learned to make from Native Americans. Which US region are they a classic of?",
@@ -684576,7 +684638,7 @@
       ],
       "hints": [
         "Corn was a Native American crop long before the colonists arrived.",
-        "This region is in the far northeast of the country, by the Atlantic.",
+        "The same region is famous for clam chowder and lobster rolls.",
         "Rhode Island loves them so much it has a society to protect the recipe."
       ],
       "media": {
@@ -684622,26 +684684,34 @@
       "needs_media": true,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“in the far northeast of the country, by the Atlantic”) is simply the definition of New England, and no wrong option is in the northeast. It solves the question at the second hint. Hint 2 needs to be vaguer, for example about the colonial era or the cold, rocky farmland, without saying where the region is. The media is fine: candidate 2 is a clear photo of New England-style jonnycakes with no label.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“in the far northeast of the country, by the Atlantic”) is simply the definition of New England, and no wrong option is in the northeast. It solves the question at the second hint. Hint 2 needs to be vaguer, for example about the colonial era or the cold, rocky farmland, without saying where the region is. The media is fine: candidate 2 is a clear photo of New England-style jonnycakes with no label.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which gave the answer away, with a vaguer hint and a moderate one.",
+        "reason": "Replaced hint 2, which simply defined New England, with a clue from the region's food.",
         "previous": {
           "hints": [
-            "The Pilgrims landed in this region.",
-            "It's also famous for clam chowder and lobster rolls.",
+            "Corn was a Native American crop long before the colonists arrived.",
+            "This region is in the far northeast of the country, by the Atlantic.",
             "Rhode Island loves them so much it has a society to protect the recipe."
           ]
         },
@@ -684794,7 +684864,7 @@
     },
     {
       "id": "q-8865",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "The most patriotic garage band in history, frozen mid-march.",
       "question": "In which decade was “The Spirit of '76,” with its two drummers and a fifer marching under the flag, painted?",
@@ -684812,11 +684882,21 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "fife and drum corps",
+        "query": "Spirit of '76 Willard painting",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Spirit-of-1776_Abbot_Hall.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/The_Spirit-of-1776_Abbot_Hall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Archibald Willard · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Archibald Willard",
+        "author_url": "https://en.wikipedia.org/wiki/en:Archibald_Willard",
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-Art",
+          "PD-old-100-expired"
+        ]
       },
       "fun_fact": "Willard first planned a funny painting called “Yankee Doodle” before turning it into a serious patriotic scene.",
       "subcategory": "colonies-and-founding",
@@ -684845,24 +684925,40 @@
       "needs_media": false,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question names a specific artwork, “The Spirit of '76,” but every candidate is a modern fife-and-drum corps (the Old Guard in red coats, Civil War reenactors), not the painting. A new search can't be run, so the slot needs the painting itself (e.g. \"Spirit of '76 Willard\"). The painting shows a 1776 scene with no date on it, so it wouldn't give away the decade. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question names a specific artwork, “The Spirit of '76,” but every candidate is a modern fife-and-drum corps (the Old Guard in red coats, Civil War reenactors), not the painting. A new search can't be run, so the slot needs the painting itself (e.g. \"Spirit of '76 Willard\"). The painting shows a 1776 scene with no date on it, so it wouldn't give away the decade. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the invented museum setting and asked the question directly.",
+        "reason": "The question names the painting, so the media query now searches for the painting itself, which shows no date.",
         "previous": {
-          "question": "You're in a museum looking at “The Spirit of '76,” with its two drummers and a fifer marching under the flag. In which decade was it painted?"
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "fife and drum corps",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-29"
       }
@@ -685419,7 +685515,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "blue prize ribbon fair",
+        "query": "blue rosette ribbon",
         "note": "A blue prize ribbon rosette, like those given at fairs; no text such as “1st” or “First Place” visible.",
         "source_url": null,
         "file_url": null,
@@ -685453,19 +685549,45 @@
       "batch": "batch-27",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates works as the essential image. #2 is the only blue ribbon, but its printed text (\"FIRST PREMIUM … DELAWARE STATE FAIR\") gives the answer away. #1 is a Japanese train award plate, #3 is a train, and #4–#6 are old book scans of horses and buildings. A new search isn't allowed, so the slot needs a blue rosette or ribbon with no text, for example a search for \"blue rosette ribbon\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
-          "giveaway",
           "media"
         ],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates works as the essential image. #2 is the only blue ribbon, but its printed text (\"FIRST PREMIUM … DELAWARE STATE FAIR\") gives the answer away. #1 is a Japanese train award plate, #3 is a train, and #4–#6 are old book scans of horses and buildings. A new search isn't allowed, so the slot needs a blue rosette or ribbon with no text, for example a search for \"blue rosette ribbon\". No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The only blue ribbon found had text giving the answer away, so the query now asks for a plain blue rosette with no text.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "blue prize ribbon fair",
+            "note": "A blue prize ribbon rosette, like those given at fairs; no text such as “1st” or “First Place” visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-8874",
@@ -685837,10 +685959,10 @@
     },
     {
       "id": "q-8879",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Chicago had a rival to beat, and it wasn't planning to lose quietly.",
-      "question": "The very first Ferris wheel, shown here, was built for the 1893 World's Fair in Chicago. Which famous structure was it meant to outdo?",
+      "question": "The very first Ferris wheel was built for the 1893 World's Fair in Chicago. Which famous structure was it meant to outdo?",
       "answer": "The Eiffel Tower",
       "wrong_answers": [
         "Big Ben",
@@ -685854,21 +685976,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Ferris wheel 1893 Chicago",
-        "note": "Historic photo of the original 1893 Ferris wheel at the World's Columbian Exposition in Chicago; no other landmark visible.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AFerris-wheel.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Ferris-wheel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+        "role": "illustrative",
+        "query": "Ferris wheel at night",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFerris_wheel_at_night_at_the_2007_state_fair%2C_NM.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Ferris_wheel_at_night_at_the_2007_state_fair%2C_NM.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "frank drewett · CC BY 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Unknown authorUnknown author",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "frank drewett",
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "The original Ferris wheel was about 264 ft (80 m) tall, and each of its 36 cars could hold about 60 people.",
       "subcategory": "fairs-and-festivals",
@@ -685894,28 +686014,54 @@
         "notes": "Hint 3 repeats the fact in q-3133 (the 1889 Paris fair). The Ferris wheel photo is really illustrative, not essential. Easy to reason towards, so a bit lower than the stated 11."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it doesn't say where the rival is, and put imperial units first in the fun fact to fit the usa voice.",
+        "reason": "Historic photos of the 1893 wheel are only public domain in the US, so I removed “shown here” and switched to an illustrative modern Ferris wheel.",
         "previous": {
-          "description": "Chicago looked across the ocean and said, “Hold my popcorn.”",
-          "fun_fact": "The original Ferris wheel was about 80 m (264 ft) tall, and each of its 36 cars could hold about 60 people."
+          "question": "The very first Ferris wheel, shown here, was built for the 1893 World's Fair in Chicago. Which famous structure was it meant to outdo?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Ferris wheel 1893 Chicago",
+            "note": "Historic photo of the original 1893 Ferris wheel at the World's Columbian Exposition in Chicago; no other landmark visible.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AFerris-wheel.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Ferris-wheel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Unknown authorUnknown author",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          },
+          "needs_media": true
         },
         "revised_on": "2026-10-29"
       }
@@ -686853,7 +686999,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "kids lunch box open",
+        "query": "school lunch box sandwich",
         "note": "An open kids' lunch box with food visible inside (sandwich, fruit).",
         "source_url": null,
         "file_url": null,
@@ -686887,23 +687033,41 @@
       "batch": "batch-27",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows a lunch box, and this question can't work without one because the image is essential. A new search isn't allowed, so the slot needs a real photo of an open kids' lunch box with food inside (for example, search \"lunchbox sandwich apple\" or \"school lunch box\"). No suitable picture found for this question.",
+        "feedback": "No candidate works for this essential image. 1 and 2 are good open lunch boxes, but both carry an “anotherlunch.com” watermark, and that text names the answer. 3 is a printed page titled “School Lunches”, 4 is a dim black-and-white photo of lunch pails, and 5 is an empty hall. A new search should find an open kids' lunch box with food and no text on it. No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows a lunch box, and this question can't work without one because the image is essential. A new search isn't allowed, so the slot needs a real photo of an open kids' lunch box with food inside (for example, search \"lunchbox sandwich apple\" or \"school lunch box\"). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer hints at food.",
+        "reason": "No candidate showed a lunch box, so the essential image gets a more concrete search query.",
         "previous": {
-          "description": "The box that goes to school every day and comes back with crumbs."
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "kids lunch box open",
+            "note": "An open kids' lunch box with food visible inside (sandwich, fruit).",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-29"
       }
@@ -687284,10 +687448,10 @@
     },
     {
       "id": "q-8898",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "A newspaperman whose biggest scoop came from a rabbit.",
-      "question": "This Georgia newspaperman collected Br'er Rabbit tales into a best-selling book in 1880. Who is he?",
+      "question": "Which Georgia newspaperman collected Br'er Rabbit tales into a best-selling book in 1880?",
       "answer": "Joel Chandler Harris",
       "wrong_answers": [
         "Thomas Nelson Page",
@@ -687301,22 +687465,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Joel Chandler Harris portrait",
-        "note": "A historic portrait photo of Joel Chandler Harris, with no name or caption visible.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AJoel_Chandler_Harris_cph.3a03853.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Joel_Chandler_Harris_cph.3a03853.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Worlds Work · Public domain · Wikimedia Commons",
+        "role": "illustrative",
+        "query": "wild rabbit in brambles",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWarming_in_the_winter_sun._-_Flickr_-_Charos_Pix.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Warming_in_the_winter_sun._-_Flickr_-_Charos_Pix.jpg/3840px-Warming_in_the_winter_sun._-_Flickr_-_Charos_Pix.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Charos Pix · CC BY 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Worlds Work",
-        "author_url": null,
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Charos Pix",
+        "author_url": "https://www.flickr.com/people/98609459@N08",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US-1923",
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "His home in Atlanta, the Wren's Nest, is now a museum where storytellers still tell the Br'er Rabbit tales.",
       "subcategory": "folk-heroes-and-tall-tales",
@@ -687342,22 +687503,58 @@
         "notes": "The portrait is marked essential but adds nothing: almost nobody knows his face, so it works only as an illustration. Henry Grady also worked at the Atlanta Constitution, so hint 1 doesn't separate him. Uncle Remus is fairly well known, so it is closer to 13."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-1923, PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-1923, PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Portraits of Harris are only public domain in the US, so the question no longer depends on a photo and uses an illustrative image of a wild rabbit.",
+        "previous": {
+          "question": "This Georgia newspaperman collected Br'er Rabbit tales into a best-selling book in 1880. Who is he?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Joel Chandler Harris portrait",
+            "note": "A historic portrait photo of Joel Chandler Harris, with no name or caption visible.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AJoel_Chandler_Harris_cph.3a03853.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Joel_Chandler_Harris_cph.3a03853.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Worlds Work · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Worlds Work",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-1923",
+              "PD-US-expired"
+            ]
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-8899",
@@ -688212,7 +688409,7 @@
     },
     {
       "id": "q-8910",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "A loaf of bread that went to the butcher instead of the bakery.",
       "question": "Before an American meatloaf goes into the oven, what is often spread on top as a shiny glaze?",
@@ -688223,7 +688420,7 @@
         "Ranch dressing"
       ],
       "hints": [
-        "It's red.",
+        "You'll find it on almost every diner table.",
         "It usually comes in a squeeze bottle.",
         "Fries love to be dipped in it."
       ],
@@ -688232,19 +688429,16 @@
         "role": "decorative",
         "query": "family dinner table",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASchwerin_and_Freudenberg_family_at_the_dinner_table_circa_1920.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Schwerin_and_Freudenberg_family_at_the_dinner_table_circa_1920.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Hans Bernhard Schwerin · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADinner_table_arrangement_with_food_of_a_middle_class_Bangladeshi_family_01.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Dinner_table_arrangement_with_food_of_a_middle_class_Bangladeshi_family_01.jpg/3840px-Dinner_table_arrangement_with_food_of_a_middle_class_Bangladeshi_family_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Afifa Afrin · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Hans Bernhard Schwerin",
-        "author_url": "https://www.wikidata.org/wiki/Q59164080",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Afifa Afrin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Afifa_Afrin",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US-unpublished",
-          "PD-old"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Meatloaf became popular in the US during the Great Depression, because bread crumbs helped a little meat feed a whole family.",
       "subcategory": "home-cooking",
@@ -688273,28 +688467,35 @@
       "needs_media": false,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (\"It's red.\") gives the answer away: mustard, mayonnaise and ranch are none of them red, so the first and vaguest hint rules out all three wrong answers. Replace it with a vague hint that doesn't single out ketchup by color, for example one about it being a sauce found on most diner tables, or one that is made from a fruit.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"It's red.\") gives the answer away: mustard, mayonnaise and ranch are none of them red, so the first and vaguest hint rules out all three wrong answers. Replace it with a vague hint that doesn't single out ketchup by color, for example one about it being a sauce found on most diner tables, or one that is made from a fruit.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed “sweet” from the question and replaced Maple syrup with Mayonnaise, which nobody uses as a meatloaf glaze.",
+        "reason": "Replaced hint 1, which gave the answer away by color, with a vague diner-table hint.",
         "previous": {
-          "question": "Before an American meatloaf goes into the oven, what is often spread on top as a sweet, shiny glaze?",
-          "wrong_answers": [
-            "Mustard",
-            "Maple syrup",
-            "Ranch dressing"
+          "hints": [
+            "It's red.",
+            "It usually comes in a squeeze bottle.",
+            "Fries love to be dipped in it."
           ]
         },
         "revised_on": "2026-10-29"
@@ -689140,7 +689341,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Tesla coil sparks",
+        "query": "Tesla coil lightning discharge",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3ANikola_Tesla%2C_with_his_equipment_EDIT.jpg",
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Nikola_Tesla%2C_with_his_equipment_EDIT.jpg/3840px-Nikola_Tesla%2C_with_his_equipment_EDIT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -689190,21 +689391,43 @@
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which ruled out all wrong answers, and shortened the answer to match the length of the other options.",
+        "reason": "The picture's license is unsuitable, so the query is changed slightly to find a new Tesla coil image.",
         "previous": {
-          "answer": "Sending power through the air without wires",
-          "hints": [
-            "He was thinking about how to get electricity to every home.",
-            "Later he built a tall tower on Long Island for the same dream.",
-            "It's a bit like charging a phone on a pad without a cable."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Tesla coil sparks",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ANikola_Tesla%2C_with_his_equipment_EDIT.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Nikola_Tesla%2C_with_his_equipment_EDIT.jpg/3840px-Nikola_Tesla%2C_with_his_equipment_EDIT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Photographer: Dickenson V. Alley · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Photographer: Dickenson V. Alley\n\nRestored by Lošmi",
+            "author_url": "https://commons.wikimedia.org/wiki/User:Lo%C5%A1mi",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-expired"
+            ]
+          }
         },
         "revised_on": "2026-10-29"
       }
@@ -691366,20 +691589,11 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "yucca plant flowering desert",
+        "query": "yucca plant flowers",
         "note": "Clear photo of a yucca plant (spiky leaves, white flower stalk), not a Joshua tree; no text.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMojave_Yucca_plant_and_cactus._-_DPLA_-_efc1a7e2d7aebaa5f8647fa903ea50a2.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Mojave_Yucca_plant_and_cactus._-_DPLA_-_efc1a7e2d7aebaa5f8647fa903ea50a2.jpg/3840px-Mojave_Yucca_plant_and_cactus._-_DPLA_-_efc1a7e2d7aebaa5f8647fa903ea50a2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Department of the Interior. U.S. Fish and Wildlife Service. National Conservation Training Center. 10/1997-8888",
-        "author_url": null,
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "Yucca plants can only be pollinated by yucca moths, and the moths can only raise their babies in yucca flowers.",
       "subcategory": "plants-and-trees",
@@ -691409,28 +691623,50 @@
       "batch": "batch-27",
       "review": {
         "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description and hints 1 and 2 so they no longer point to washing.",
+        "reason": "The picture's license is unsuitable, so the query is changed slightly to find a new yucca photo.",
         "previous": {
-          "description": "A desert plant that was also the bathroom cabinet.",
-          "hints": [
-            "It gets foamy when you rub it.",
-            "People used it to wash their hair and clothes.",
-            "The plant's root is still sold today in natural shampoos."
-          ]
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "yucca plant flowering desert",
+            "note": "Clear photo of a yucca plant (spiky leaves, white flower stalk), not a Joshua tree; no text.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AMojave_Yucca_plant_and_cactus._-_DPLA_-_efc1a7e2d7aebaa5f8647fa903ea50a2.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Mojave_Yucca_plant_and_cactus._-_DPLA_-_efc1a7e2d7aebaa5f8647fa903ea50a2.jpg/3840px-Mojave_Yucca_plant_and_cactus._-_DPLA_-_efc1a7e2d7aebaa5f8647fa903ea50a2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Department of the Interior. U.S. Fish and Wildlife Service. National Conservation Training Center. 10/1997-8888",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-10-29"
       }
@@ -691581,7 +691817,7 @@
     },
     {
       "id": "q-8954",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Hikers have a rhyme for it, and it's not a love song.",
       "question": "Hikers in the US warn each other about poison ivy with a rhyme. How many leaflets does each poison ivy leaf have?",
@@ -691599,16 +691835,16 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "forest hiking trail",
+        "query": "woodland hiking path",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGfp-minnesota-superior-national-forest-hiking-trail-to-eagle-mountain.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Gfp-minnesota-superior-national-forest-hiking-trail-to-eagle-mountain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Yinan Chen · Public Domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWoodland_path_-_Flickr_-_Frank_Shepherd.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Woodland_path_-_Flickr_-_Frank_Shepherd.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Frank Shepherd · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public Domain",
-        "license_url": "https://web.archive.org/web/20230926203737/https://creativecommons.org/licenses/publicdomain/",
-        "author": "Yinan Chen",
-        "author_url": "http://www.goodfreephotos.com",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Frank Shepherd",
+        "author_url": "https://www.flickr.com/people/142252831@N04",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -691639,28 +691875,47 @@
       "needs_media": false,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-no-reason: public domain without a template).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-no-reason: public domain without a template).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 2 now gives a vaguer clue and the rhyme clue moved to hint 3; hint 1 also changed because “middle” and “two side ones” already gave away 3.",
+        "reason": "The picture's license is unsuitable, so the query is changed to find a new decorative trail image (still no poison ivy leaf, which would show the answer).",
         "previous": {
-          "hints": [
-            "The middle leaflet has a longer stem than the two side ones.",
-            "The rhyme ends with “let it be.”",
-            "The number rhymes with “be.”"
-          ]
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "forest hiking trail",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AGfp-minnesota-superior-national-forest-hiking-trail-to-eagle-mountain.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Gfp-minnesota-superior-national-forest-hiking-trail-to-eagle-mountain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Yinan Chen · Public Domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public Domain",
+            "license_url": "https://web.archive.org/web/20230926203737/https://creativecommons.org/licenses/publicdomain/",
+            "author": "Yinan Chen",
+            "author_url": "http://www.goodfreephotos.com",
+            "restrictions": [],
+            "pd_reasons": []
+          }
         },
         "revised_on": "2026-10-29"
       }
@@ -692123,7 +692378,7 @@
     },
     {
       "id": "q-8961",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "In Philadelphia, ordering lunch comes with its own secret vocabulary.",
       "question": "In Philadelphia, what do you get if you order a hoagie?",
@@ -692135,7 +692390,7 @@
       ],
       "hints": [
         "You eat it with your hands.",
-        "Delis and corner shops all over the city sell it at lunchtime.",
+        "Delis and corner stores all over the city sell it at lunchtime.",
         "Other cities call it a sub or a hero."
       ],
       "media": {
@@ -692143,14 +692398,14 @@
         "role": "illustrative",
         "query": "Philadelphia city hall",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APhiladelphia_City_Hall_-_3.JPG",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Philadelphia_City_Hall_-_3.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Max Binder · CC BY-SA 3.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACity_Hall%2C_Philadelphia_PA.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/City_Hall%2C_Philadelphia_PA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "John Phelan · CC BY-SA 3.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Max Binder",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:NominalFees&action=edit&redlink=1",
+        "author": "John Phelan",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Faolin42",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -692181,27 +692436,34 @@
       "needs_media": false,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 says \"corner shops\", which is British usage. This is a usa-bundle question, and Americans (Philadelphians especially) say \"corner stores\". Change it to \"Delis and corner stores all over the city sell it at lunchtime.\" Everything else checks out, and candidate 4 is a good illustrative image.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 says \"corner shops\", which is British usage. This is a usa-bundle question, and Americans (Philadelphians especially) say \"corner stores\". Change it to \"Delis and corner stores all over the city sell it at lunchtime.\" Everything else checks out, and candidate 4 is a good illustrative image.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description and hint 2 so they no longer describe a filled sandwich.",
+        "reason": "Changed British “corner shops” to American “corner stores” in hint 2.",
         "previous": {
-          "description": "Philadelphia's answer to the question “How much can fit in one bread?”",
           "hints": [
             "You eat it with your hands.",
-            "It's stuffed with meats, cheese, lettuce and tomato.",
+            "Delis and corner shops all over the city sell it at lunchtime.",
             "Other cities call it a sub or a hero."
           ]
         },
@@ -694638,9 +694900,9 @@
     },
     {
       "id": "q-8994",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
-      "description": "A broom finally gets its big moment, and it has nothing to do with the kitchen floor.",
+      "description": "A broom finally steps out of the closet and into the spotlight.",
       "question": "The American phrase “jumping the broom” comes from a custom that enslaved African Americans kept alive. What does it mean?",
       "answer": "Getting married",
       "wrong_answers": [
@@ -694696,24 +694958,32 @@
       "needs_media": false,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description says the broom's big moment has \"nothing to do with the kitchen floor\", which rules out the wrong answer \"Cleaning up before a holiday\" before any hint. Rewrite it to play on brooms or big days without hinting that the custom isn't about sweeping.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description says the broom's big moment has \"nothing to do with the kitchen floor\", which rules out the wrong answer \"Cleaning up before a holiday\" before any hint. Rewrite it to play on brooms or big days without hinting that the custom isn't about sweeping.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Cut a clause to shorten the question.",
+        "reason": "Rewrote the description so it no longer rules out the cleaning option.",
         "previous": {
-          "question": "The American phrase “jumping the broom” comes from a custom that enslaved African Americans kept alive, and it's still part of many ceremonies today. What does it mean?"
+          "description": "A broom finally gets its big moment, and it has nothing to do with the kitchen floor."
         },
         "revised_on": "2026-10-29"
       }
@@ -696968,7 +697238,7 @@
     },
     {
       "id": "q-9024",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Sandy, brown and sweet: a beach you could sprinkle on your oatmeal.",
       "question": "What sweet, tan crystals were a main sweetener of Native Americans in the Northeast long before stores sold white sugar?",
@@ -696986,20 +697256,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "snowy hardwood forest",
+        "query": "snowy deciduous forest",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASnow_at_Little_River_-_DPLA_-_79d51c1c720af5c788680a59c2a418d4.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Snow_at_Little_River_-_DPLA_-_79d51c1c720af5c788680a59c2a418d4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASnowy_forest_at_Black_River_Falls_Rest_Area_54.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Snowy_forest_at_Black_River_Falls_Rest_Area_54.jpg/3840px-Snowy_forest_at_Black_River_Falls_Rest_Area_54.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "PinchyCC · CC BY 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Department of the Interior. U.S. Fish and Wildlife Service. National Conservation Training Center. 10/1997-8888",
-        "author_url": null,
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "PinchyCC",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PinchyCC",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Vermont makes more maple syrup and sugar than any other US state.",
       "subcategory": "plants-and-trees",
@@ -697028,24 +697296,49 @@
       "needs_media": false,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the question as one direct question without “these”, since no picture of the crystals is shown.",
+        "reason": "The picture's license is unsuitable, so the query is changed slightly to find a new decorative forest image.",
         "previous": {
-          "question": "These sweet, tan crystals were a main sweetener of Native Americans in the Northeast long before stores sold white sugar. What were they?"
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "snowy hardwood forest",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ASnow_at_Little_River_-_DPLA_-_79d51c1c720af5c788680a59c2a418d4.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Snow_at_Little_River_-_DPLA_-_79d51c1c720af5c788680a59c2a418d4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Department of the Interior. U.S. Fish and Wildlife Service. National Conservation Training Center. 10/1997-8888",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-10-29"
       }
@@ -697664,7 +697957,7 @@
     },
     {
       "id": "q-9033",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "A fast-food face you'd recognize faster than your own neighbor's.",
       "question": "I'm a fast-food mascot with a big frozen smile, and my restaurants grill their burgers over flames. Who am I?",
@@ -697675,23 +697968,23 @@
         "Wendy"
       ],
       "hints": [
-        "My restaurants sell the Whopper.",
-        "I wear a golden crown.",
-        "My title is in the name of my chain."
+        "My chain grew up in Miami, Florida, in the 1950s.",
+        "In many of my TV ads, I just show up and never say a word.",
+        "I wear a golden crown, and my restaurants sell the Whopper."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
         "query": "flame grilled burger",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ADouble_Truffle_King.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Double_Truffle_King.jpg/3840px-Double_Truffle_King.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "JIP · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADairy_Queen_FlameThrower_GrillBurger_2017_Edmonton.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Dairy_Queen_FlameThrower_GrillBurger_2017_Edmonton.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Rowanswiki · CC0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "JIP",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:JIP&action=edit&redlink=1",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Rowanswiki",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Rowanswiki&action=edit&redlink=1",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -697722,24 +698015,36 @@
       "needs_media": false,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hints 1 and 2 give the answer away: “My restaurants sell the Whopper” names Burger King's signature burger, and “I wear a golden crown” points straight to a “King” among the four options. Hint 1 should be vague, for example about the chain starting in Miami in the 1950s. Hint 2 should be a medium clue that doesn't name the Whopper or the crown. The crown or the Whopper can move to hint 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hints 1 and 2 give the answer away: “My restaurants sell the Whopper” names Burger King's signature burger, and “I wear a golden crown” points straight to a “King” among the four options. Hint 1 should be vague, for example about the chain starting in Miami in the 1950s. Hint 2 should be a medium clue that doesn't name the Whopper or the crown. The crown or the Whopper can move to hint 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it fits all four mascots and no longer mentions the silent commercials.",
+        "reason": "Hints 1 and 2 gave the answer away, so they are replaced with vaguer clues and the crown and Whopper move to hint 3.",
         "previous": {
-          "description": "A mascot who never says a word in his commercials and still gets his way."
+          "hints": [
+            "My restaurants sell the Whopper.",
+            "I wear a golden crown.",
+            "My title is in the name of my chain."
+          ]
         },
         "revised_on": "2026-10-29"
       }
@@ -698270,9 +698575,9 @@
     },
     {
       "id": "q-9041",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
-      "description": "The volcano that did the work while its neighbor took the credit.",
+      "description": "Alaska once threw a party so wild that the ash kept falling for days.",
       "question": "In 1912, an Alaskan volcano produced the largest eruption of the 20th century. Which volcano?",
       "answer": "Novarupta",
       "wrong_answers": [
@@ -698281,7 +698586,7 @@
         "Mount Spurr"
       ],
       "hints": [
-        "For years, scientists blamed its bigger neighbor for the eruption.",
+        "Its ash turned day into night on Kodiak Island for about two days.",
         "It sits beside the Valley of Ten Thousand Smokes.",
         "Its name is Latin for “newly erupted.”"
       ],
@@ -698328,27 +698633,36 @@
       "needs_media": false,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description (“did the work while its neighbor took the credit”) gives away the answer's defining trait, the misattribution to Katmai, before any hint. Anyone who links Katmai with 1912 is told to rule it out, and that leaves Novarupta. Hint 1 says the same thing again. Rewrite the description so it plays on Alaska or volcanoes without the credit twist.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description (“did the work while its neighbor took the credit”) gives away the answer's defining trait, the misattribution to Katmai, before any hint. Anyone who links Katmai with 1912 is told to rule it out, and that leaves Novarupta. Hint 1 says the same thing again. Rewrite the description so it plays on Alaska or volcanoes without the credit twist.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Swapped hints 2 and 3 so the name translation, which gives the answer away, comes last.",
+        "reason": "Rewrote the description and hint 1 so they no longer give away the mix-up with Katmai.",
         "previous": {
+          "description": "The volcano that did the work while its neighbor took the credit.",
           "hints": [
             "For years, scientists blamed its bigger neighbor for the eruption.",
-            "Its name is Latin for “newly erupted.”",
-            "It sits beside the Valley of Ten Thousand Smokes."
+            "It sits beside the Valley of Ten Thousand Smokes.",
+            "Its name is Latin for “newly erupted.”"
           ]
         },
         "revised_on": "2026-10-29"
@@ -698500,10 +698814,10 @@
     },
     {
       "id": "q-9044",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "A state named by people who clearly had strong opinions about rivers.",
-      "question": "This state takes its name from the river on its southern border, from a Seneca word meaning “good river.” Which state is shown?",
+      "question": "Which US state takes its name from the river on its southern border, from a Seneca word meaning “good river”?",
       "answer": "Ohio",
       "wrong_answers": [
         "Indiana",
@@ -698517,12 +698831,22 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Ohio state outline map",
-        "note": "Plain outline of the state of Ohio, with no labels, names or city markers.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "Midwest farmland river",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFlickr_-_USDAgov_-_20130501-NRCS-LSC-0605.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Flickr_-_USDAgov_-_20130501-NRCS-LSC-0605.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "U.S. Department of Agriculture · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Department of Agriculture",
+        "author_url": "https://www.flickr.com/people/41284017@N08",
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USDA",
+          "PD-USGov-USDA"
+        ]
       },
       "fun_fact": "Ohio's state flag is the only US state flag that isn't a rectangle: it's shaped like a swallowtail pennant.",
       "subcategory": "states-and-capitals",
@@ -698548,22 +698872,48 @@
         "notes": "Sources give the Seneca meaning variously as “good river” or “great river”. Many Americans know the Ohio River names Ohio, so the text gives away a lot, and difficulty sits nearer 8. The seven-presidents and flag facts are correct."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the three candidates works as the essential map. Candidate 1 is an outline of Ohio, but it labels Lake Erie, Cleveland, Cincinnati, Dayton, Kentucky and Pennsylvania, and its caption reads \"Outline map of Ohio\", so it gives the answer away. Candidates 2 and 3 are township plats from a county atlas, not the state's shape. We can't search again, so an unlabeled Ohio outline (e.g. \"Ohio blank map\" or \"Ohio locator map blank\") has to be found by hand. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the three candidates works as the essential map. Candidate 1 is an outline of Ohio, but it labels Lake Erie, Cleveland, Cincinnati, Dayton, Kentucky and Pennsylvania, and its caption reads \"Outline map of Ohio\", so it gives the answer away. Candidates 2 and 3 are township plats from a county atlas, not the state's shape. We can't search again, so an unlabeled Ohio outline (e.g. \"Ohio blank map\" or \"Ohio locator map blank\") has to be found by hand. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No unlabeled Ohio outline exists in the sources, so the map is dropped: the question now stands on the name origin alone, with a decorative image.",
+        "previous": {
+          "question": "This state takes its name from the river on its southern border, from a Seneca word meaning “good river.” Which state is shown?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Ohio state outline map",
+            "note": "Plain outline of the state of Ohio, with no labels, names or city markers.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9045",
@@ -700378,8 +700728,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Arizona state outline",
-        "note": "Plain outline of the state of Arizona, with no labels, names or city markers.",
+        "query": "Arizona blank outline map",
+        "note": "Plain outline or blank US locator map with Arizona highlighted, with no labels, names or city markers.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -700412,18 +700762,44 @@
       "batch": "batch-27",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate is a plain, unlabeled outline of Arizona. #1, #2 and #6 print \"Arizona\" (and #1 also prints \"Phoenix\") right on the map. #3 is a faded map of several western states, and #4 and #5 are Moon photos. No new search is allowed, so the essential map needs a clean Arizona silhouette from somewhere else, for example a blank US-states locator map. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate is a plain, unlabeled outline of Arizona. #1, #2 and #6 print \"Arizona\" (and #1 also prints \"Phoenix\") right on the map. #3 is a faded map of several western states, and #4 and #5 are Moon photos. No new search is allowed, so the essential map needs a clean Arizona silhouette from somewhere else, for example a blank US-states locator map. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable image was found, so the search now looks for a blank, unlabeled Arizona outline or locator map.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Arizona state outline",
+            "note": "Plain outline of the state of Arizona, with no labels, names or city markers.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9069",
@@ -700517,8 +700893,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Idaho in United States",
-        "note": "Plain outline of the state of Idaho, with no labels, names or city markers.",
+        "query": "Idaho blank outline map",
+        "note": "Plain outline or blank US locator map with Idaho highlighted, with no labels, names, legends or city markers.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -700551,23 +700927,41 @@
       "batch": "batch-27",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows a plain, unlabeled outline of Idaho. #3 (2020 population density map) has the right shape, but its legend says “Idaho Population Density”, which names the state, and its red cluster marks where Boise is. #4 is full of mine and town labels under an “Idaho Silver Mines” title. The text itself is fine. The slot needs a blank Idaho outline map, for example from a search like “Idaho blank outline map” or “Idaho locator map blank”. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a plain, unlabeled outline of Idaho. #3 (2020 population density map) has the right shape, but its legend says “Idaho Population Density”, which names the state, and its red cluster marks where Boise is. #4 is full of mine and town labels under an “Idaho Silver Mines” title. The text itself is fine. The slot needs a blank Idaho outline map, for example from a search like “Idaho blank outline map” or “Idaho locator map blank”. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description, which identified Idaho by its potatoes.",
+        "reason": "No usable image was found, so the search now looks for a blank, unlabeled Idaho outline or locator map.",
         "previous": {
-          "description": "A state so famous for potatoes, people forget it has a capital."
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Idaho in United States",
+            "note": "Plain outline of the state of Idaho, with no labels, names or city markers.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-29"
       }
@@ -701886,10 +702280,10 @@
     },
     {
       "id": "q-9088",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Finally, a teacher whose lesson plan went way beyond the chalkboard.",
-      "question": "In 1985, NASA picked this New Hampshire social studies teacher as the first “Teacher in Space.” Who is she?",
+      "question": "In 1985, NASA picked a New Hampshire social studies teacher as the first “Teacher in Space.” Who was she?",
       "answer": "Christa McAuliffe",
       "wrong_answers": [
         "Sally Ride",
@@ -701903,12 +702297,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "New Hampshire classroom chalkboard",
-        "note": "Official NASA portrait photo of Christa McAuliffe, with no name caption visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "classroom chalkboard desks",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%E6%95%99%E5%AE%A4_%E5%90%91%E3%81%8B%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B_%285581788977%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/%E6%95%99%E5%AE%A4_%E5%90%91%E3%81%8B%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B_%285581788977%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Tomo · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Tomo",
+        "author_url": "https://www.flickr.com/people/71552575@N00",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "More than 11,000 teachers applied to be NASA's first Teacher in Space.",
       "subcategory": "trailblazers",
@@ -701937,29 +702338,41 @@
       "needs_media": true,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot is set up wrongly. Its role is essential and the note asks for a NASA portrait of Christa McAuliffe, which would show the answer. But the search was \"New Hampshire classroom chalkboard\", so no candidate shows her. The text is fine. Switch the slot to illustrative and pick a plain classroom photo such as candidate 1 or 4 (no readable text). Or use a space shuttle or launch pad image, but not one showing the Challenger by name. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot is set up wrongly. Its role is essential and the note asks for a NASA portrait of Christa McAuliffe, which would show the answer. But the search was \"New Hampshire classroom chalkboard\", so no candidate shows her. The text is fine. Switch the slot to illustrative and pick a plain classroom photo such as candidate 1 or 4 (no readable text). Or use a space shuttle or launch pad image, but not one showing the Challenger by name. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Fixed the incorrect hint 3 and rewrote the description so it no longer jokes about the Challenger flight.",
+        "reason": "The media slot is now an illustrative classroom photo instead of an essential portrait that would show the answer, and the wording no longer points to a photo of her.",
         "previous": {
-          "description": "The ultimate field trip, planned by the teacher for once.",
-          "hints": [
-            "She taught at Concord High School.",
-            "She was set to fly on the space shuttle Challenger.",
-            "Her first name sounds a lot like “Christmas” without the “mas.”"
-          ]
+          "question": "In 1985, NASA picked this New Hampshire social studies teacher as the first “Teacher in Space.” Who is she?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "New Hampshire classroom chalkboard",
+            "note": "Official NASA portrait photo of Christa McAuliffe, with no name caption visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-10-29"
       }
@@ -703124,20 +703537,11 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "palm trees windy Los Angeles",
+        "query": "Southern California palm trees wind",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AView_of_Lafayette_Park_%28formerly_Sunset_Park%29%2C_from_the_Bryson_Apartments%2C_Los_Angeles%2C_ca._January_1913_%28CHS-5769%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/View_of_Lafayette_Park_%28formerly_Sunset_Park%29%2C_from_the_Bryson_Apartments%2C_Los_Angeles%2C_ca._January_1913_%28CHS-5769%29.jpg/3840px-View_of_Lafayette_Park_%28formerly_Sunset_Park%29%2C_from_the_Bryson_Apartments%2C_Los_Angeles%2C_ca._January_1913_%28CHS-5769%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "C. C. Pierce · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "C. C. Pierce",
-        "author_url": "https://www.wikidata.org/wiki/Q61995887",
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "As the air sinks from the high deserts toward the coast, it gets squeezed and warms up, which makes it even hotter.",
       "subcategory": "weather-and-seasons",
@@ -703167,18 +703571,53 @@
       "batch": "batch-27",
       "review": {
         "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picked picture had an unsuitable license, so the media query is new to get a different image that still doesn't show the answer.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "palm trees windy Los Angeles",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AView_of_Lafayette_Park_%28formerly_Sunset_Park%29%2C_from_the_Bryson_Apartments%2C_Los_Angeles%2C_ca._January_1913_%28CHS-5769%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/View_of_Lafayette_Park_%28formerly_Sunset_Park%29%2C_from_the_Bryson_Apartments%2C_Los_Angeles%2C_ca._January_1913_%28CHS-5769%29.jpg/3840px-View_of_Lafayette_Park_%28formerly_Sunset_Park%29%2C_from_the_Bryson_Apartments%2C_Los_Angeles%2C_ca._January_1913_%28CHS-5769%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "C. C. Pierce · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "C. C. Pierce",
+            "author_url": "https://www.wikidata.org/wiki/Q61995887",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-10-29"
+      }
     },
     {
       "id": "q-9105",
@@ -703803,7 +704242,7 @@
     },
     {
       "id": "q-9113",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Yellowstone's traffic jams have horns, and not the car kind.",
       "question": "A huge, shaggy bison blocks a road in Yellowstone. Which group does it NOT belong to?",
@@ -703815,26 +704254,24 @@
       ],
       "hints": [
         "Bison are the heaviest land animals in North America.",
-        "Bison grow a thick, shaggy coat and keep grazing all year round.",
+        "A bison's thick, shaggy coat works like a big winter jacket.",
         "Bison never take a long winter sleep."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Yellowstone road traffic",
+        "query": "bison Yellowstone road",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ATraffic_on_road_at_Midway_Geyser_Basin_5871_%2814610255487%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Traffic_on_road_at_Midway_Geyser_Basin_5871_%2814610255487%29.jpg/3840px-Traffic_on_road_at_Midway_Geyser_Basin_5871_%2814610255487%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Yellowstone National Park from Yellowstone NP, USA · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2003-08-18_Yellowstone_bison_hogging_the_road.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/2003-08-18_Yellowstone_bison_hogging_the_road.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Ildar Sagdejev (Specious) · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Yellowstone National Park from Yellowstone NP, USA",
-        "author_url": "https://www.flickr.com/people/80223459@N05",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ildar Sagdejev (Specious)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Specious",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-USGov-NPS"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "In winter, bison swing their huge heads like snowplows to sweep snow off the grass.",
       "subcategory": "wildlife",
@@ -703863,27 +704300,34 @@
       "needs_media": false,
       "batch": "batch-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. \"Keep grazing all year round\" says outright that bison don't hibernate, so hint 3 adds nothing. Replace hint 2 with something that points toward the answer without stating it, for example their size or their herds, and leave the year-round activity to hint 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-29",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. \"Keep grazing all year round\" says outright that bison don't hibernate, so hint 3 adds nothing. Replace hint 2 with something that points toward the answer without stating it, for example their size or their herds, and leave the year-round activity to hint 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-29",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made hint 1 vaguer, replaced the giveaway bear hint 2 with one about the coat and year-round grazing, and dropped the “You're in” frame.",
+        "reason": "Hint 2 now points to the warm coat instead of saying outright that bison stay active all year, so it no longer gives the answer away.",
         "previous": {
-          "question": "You're in Yellowstone and a huge, shaggy bison blocks the road. Which group does it NOT belong to?",
           "hints": [
-            "Bison stay outside even in the coldest months.",
-            "Think about what bears do in winter that bison don't.",
+            "Bison are the heaviest land animals in North America.",
+            "Bison grow a thick, shaggy coat and keep grazing all year round.",
             "Bison never take a long winter sleep."
           ]
         },
