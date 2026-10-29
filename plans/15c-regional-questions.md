@@ -36,3 +36,4 @@ Sub-plan of [15](15-i18n.md). The pool was written for two Colombian kids (D-6),
   - information only: no budget or pace decision; next: `colombia` en (`qgen batch --translate en --bundle colombia`)
 - `colombia` en progress: `tr-en-4` (2026-10-29) 298 translated, 292 approved, 6 needs_work, 2 not travelling; 292 of 2000 approved en; $0.08 per approved; audit 97 %, health pass; next `task 1799`.
 - `colombia` en progress: `tr-en-6` (2026-10-29) 300 translated, 295 approved, 5 needs_work, 0 not travelling; 587 of 2000 approved en; $0.08 per approved; audit 98 %, health pass; next `task 1809` (see `pm show 1799`).
+- `colombia` en progress: `tr-en-8` (2026-10-29) 297 translated, 288 approved, 9 needs_work, 0 rejected, 3 not travelling; 875 of 2000 approved en; $0.09 per approved; audit 98 %, health pass; next run added after `task 1809`.
