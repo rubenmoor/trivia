@@ -12347,16 +12347,24 @@
       "description": "Una palabra con una tilde escondida en medio, como la sorpresa de un huevo de chocolate.",
       "fun_fact": "Muchas retahílas infantiles sirven para echar a suertes quién se la queda en un juego.",
       "difficulty": 9,
-      "status": "approved",
+      "status": "rejected",
       "batch": "tr-es-ES-9",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-24",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "rejected",
+        "feedback": "no viaja",
+        "reviewed_on": "2026-10-28",
+        "reviewed_at": "2026-10-28T23:34:21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "068922bb535f"
     },
@@ -20567,16 +20575,24 @@
       "description": "Un tubérculo con más nombres que un agente secreto.",
       "fun_fact": "La palabra «patata» nació de mezclar «batata», voz taína, con «papa», voz quechua.",
       "difficulty": 6,
-      "status": "approved",
+      "status": "rejected",
       "batch": "tr-es-ES-3",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-24",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "rejected",
+        "feedback": "no viaja",
+        "reviewed_on": "2026-10-28",
+        "reviewed_at": "2026-10-28T23:34:21",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "c4937dd9e636"
     },
