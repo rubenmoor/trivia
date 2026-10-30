@@ -534576,7 +534576,8 @@
         "previous": null
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-6915",
