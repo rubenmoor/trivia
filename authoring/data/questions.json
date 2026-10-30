@@ -157507,7 +157507,8 @@
         "previous": null
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-2050",
