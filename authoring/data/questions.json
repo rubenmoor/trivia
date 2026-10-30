@@ -29210,7 +29210,8 @@
         "clue": "scenario",
         "answer_kind": "word",
         "lens": "language"
-      }
+      },
+      "translatable": false
     },
     {
       "id": "q-0382",

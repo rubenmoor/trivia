@@ -8829,16 +8829,24 @@
       "description": "En Alemania hay palabras larguísimas, pero esta es tan cortita que cabe en un chicle.",
       "fun_fact": "«Danke» en alemán y «thank» en inglés se parecen porque los dos idiomas son primos: vienen de la misma lengua antigua.",
       "difficulty": 4,
-      "status": "approved",
+      "status": "rejected",
       "batch": "tr-es-ES-5",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-24",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "rejected",
+        "feedback": "no viaja",
+        "reviewed_on": "2026-10-30",
+        "reviewed_at": "2026-10-30T09:12:40",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "cb628d7db7a0"
     },

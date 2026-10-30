@@ -9043,16 +9043,24 @@
       "description": "Germany has some super long words, but this one is so tiny it fits on a stick of gum.",
       "fun_fact": "“Danke” in German and “thank” in English sound alike because the two languages are cousins that grew from the same old language.",
       "difficulty": 3,
-      "status": "approved",
+      "status": "rejected",
       "batch": "tr-en-2",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-21",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "rejected",
+        "feedback": "no viaja",
+        "reviewed_on": "2026-10-30",
+        "reviewed_at": "2026-10-30T09:12:40",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-21",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "cb628d7db7a0"
     },

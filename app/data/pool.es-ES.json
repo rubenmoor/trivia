@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "c8927116",
+  "hash": "2f529a20",
   "questions": [
     {
       "id": "q-0001",
@@ -9838,40 +9838,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "AnBuKu",
         "author_url": "https://commons.wikimedia.org/wiki/User:AnBuKu"
-      },
-      "background": null
-    },
-    {
-      "id": "q-0381",
-      "status": "approved",
-      "difficulty": 4,
-      "subcategory": "languages-of-the-world",
-      "bundle": "base",
-      "description": "En Alemania hay palabras larguísimas, pero esta es tan cortita que cabe en un chicle.",
-      "question": "Si en Alemania alguien te dice «Danke», ¿qué te está diciendo?",
-      "answer": "Gracias",
-      "wrong_answers": [
-        "Hola",
-        "Adiós",
-        "Por favor"
-      ],
-      "hints": [
-        "Es una palabra que tus padres te enseñaron a decir desde pequeño.",
-        "Es una de las «palabras mágicas» de la buena educación.",
-        "En inglés se dice «thank you»."
-      ],
-      "fun_fact": "«Danke» en alemán y «thank» en inglés se parecen porque los dos idiomas son primos: vienen de la misma lengua antigua.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Berlin%2C_Brandenburger_Tor_--_2008_--_0153.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABerlin%2C_Brandenburger_Tor_--_2008_--_0153.jpg",
-        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Dietmar Rabich",
-        "author_url": "https://www.wikidata.org/wiki/Q34788025"
       },
       "background": null
     },

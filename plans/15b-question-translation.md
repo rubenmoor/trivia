@@ -83,6 +83,7 @@ Done (pm plan 67, RV-24..RV-26). The developer and native speakers review `quest
   - QT-6 progress `de`: `tr-de-8` (2026-10-30) 300 selected, 300 translated, 297 approved, 3 needs_work, 0 not travelling; 2109 in the `de` pool, target not met; $0.10 per approved; audit 98 %, health pass; next `tr-de-9`.
   - QT-6 progress `de`: `tr-de-9` (2026-10-30) 300 selected, 300 translated, 292 approved, 8 needs_work, 0 not travelling; 2401 in the `de` pool, target not met; $0.13 per approved; audit 60/60 sampled, health pass; next `tr-de-10`.
   - QT-6 progress `de`: `tr-de-10` (2026-10-30) 300 selected, 300 translated, 295 approved, 5 needs_work, 0 not travelling; 2401 in the `de` pool, target not met; $0.13 per approved; audit 98 %, health pass; next `tr-de-11`.
+  - QT-6 progress `de`: `tr-de-11` (2026-10-30) 300 selected, 299 translated, 293 approved, 6 needs_work, 1 not travelling; target not met (many deficits, untranslated sources remain); $0.03 per approved ($8.86 / 293, with audit); audit 60/60 (100 %), health pass; next `tr-de-12`.
   - QT-6 progress `es-ES`: `tr-es-ES-2` (2026-10-23) 300 translated, 297 approved; 345 in the `es-ES` pool, target not met; next `tr-es-ES-3`.
   - QT-6 progress `es-ES`: `tr-es-ES-3` (2026-10-24) 300 translated, 296 approved; 641 in the `es-ES` pool, target not met; next `tr-es-ES-4`.
   - QT-6 progress `es-ES`: `tr-es-ES-4` (2026-10-24) 299 translated, 295 approved, 4 needs_work, 1 not travelling; 936 in the `es-ES` pool, target not met; next `tr-es-ES-5`.
