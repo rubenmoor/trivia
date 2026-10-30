@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "9eac0d09",
+  "hash": "659ad82f",
   "questions": [
     {
       "id": "q-0001",
@@ -47147,40 +47147,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Donald Trung Quoc Don (Chữ Hán: 徵國單) - Wikimedia Commons - © CC BY-SA 4.0 International.(Want to use this image?)Original publication 📤: --Donald Trung 『徵國單』 (No Fake News 💬) (WikiProject Numismatics 💴) (Articles 📚) 23:01, 16 December 2021 (UTC)",
         "author_url": "https://commons.wikimedia.org/wiki/User:Donald_Trung"
-      },
-      "background": null
-    },
-    {
-      "id": "q-2049",
-      "status": "approved",
-      "difficulty": 4,
-      "subcategory": "proverbs-of-the-world",
-      "bundle": "base",
-      "description": "The official motto of every grandma at lunchtime.",
-      "question": "A saying in Spanish goes: when your belly is full, which part of your body is happy?",
-      "answer": "The heart",
-      "wrong_answers": [
-        "The head",
-        "The hands",
-        "The feet"
-      ],
-      "hints": [
-        "Grandmas in Spain and Latin America love to say it at the lunch table.",
-        "It's an organ that works all day and never takes a break.",
-        "In emojis it's usually red and means love."
-      ],
-      "fun_fact": "Your stomach takes about 20 minutes to tell your brain that it's full.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Bandeja_paisa_%285082434401%29.jpg/3840px-Bandeja_paisa_%285082434401%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABandeja_paisa_%285082434401%29.jpg",
-        "credit": "Jorge Láscar from Australia · CC BY 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "Jorge Láscar from Australia",
-        "author_url": "https://www.flickr.com/people/8721758@N06"
       },
       "background": null
     },
