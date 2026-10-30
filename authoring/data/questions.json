@@ -536503,7 +536503,8 @@
         "previous": null
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-6940",
@@ -635721,7 +635722,8 @@
         "previous": null
       },
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-8228",
