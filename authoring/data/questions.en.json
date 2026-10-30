@@ -62709,7 +62709,7 @@
     },
     {
       "id": "q-7019",
-      "question": "On January 5 in Pasto, people paint your face black. According to tradition, who asked for that day off in colonial times?",
+      "question": "On January 5 in Pasto, your face gets painted black. According to tradition, who asked for that day off in colonial times?",
       "answer": "Enslaved Africans",
       "wrong_answers": [
         "Spanish soldiers",
@@ -62719,25 +62719,23 @@
       "hints": [
         "It was in the 17th century.",
         "They had no day of rest at all.",
-        "They were brought from Africa by force."
+        "They were brought by force from Africa."
       ],
-      "description": "A day when nobody in Pasto steps outside with a clean face.",
+      "description": "A day when nobody in Pasto goes out with a clean face.",
       "fun_fact": "According to tradition, the Spanish Crown granted that day off after a revolt in 1607.",
-      "difficulty": 5,
-      "status": "needs_work",
-      "batch": "tr-en-13",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-en-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. The core is right: Jan 5 is Día de los Negros, and enslaved people are said to have been given a day off. But the 1607 revolt and the Spanish Crown granting it appear in only some popular sources (Radio Nacional, Sitio Andino). Academic and local sources don't back it up, and El Tiempo gives 1854. The hint 'It was in the 17th century' and the fun fact depend on that shaky date. Some accounts also place the origin in Popayán.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-30",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "Fact check: uncertain. The answer (enslaved Africans) is consistent across sources. The fun fact is shaky: sources disagree on the origin. One says a 1607 uprising in Remedios, Antioquia, led to the day off. Others say the enslaved people asked for it in Popayán. Others date it to 1854. The question says 'colonial times', but 1854 is after independence. 'Spanish Crown granted it after an uprising in 1607 (in Pasto)' is not well supported. The hint 'It happened in the 17th century' is also not firmly established.",
+          "feedback": "Fact check: uncertain. The core is right: Jan 5 is Día de los Negros, and enslaved people are said to have been given a day off. But the 1607 revolt and the Spanish Crown granting it appear in only some popular sources (Radio Nacional, Sitio Andino). Academic and local sources don't back it up, and El Tiempo gives 1854. The hint 'It was in the 17th century' and the fun fact depend on that shaky date. Some accounts also place the origin in Popayán.",
           "problems": [
             "fact"
           ],
@@ -62746,14 +62744,24 @@
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "Fact check: uncertain. Answer (enslaved Africans) and the Jan 5 'Día de los Negros' tradition are correct. The 1607 date is documented only in Wikipedia, which says the revolt was in Remedios, Antioquia, not Pasto, and flags the history as needing citations. Other sources call the carnival's origins '17th century' without a specific revolt. The hint 'They didn't have a single day of rest' is awkward but acceptable.",
+            "feedback": "Fact check: uncertain. The answer (enslaved Africans) is consistent across sources. The fun fact is shaky: sources disagree on the origin. One says a 1607 uprising in Remedios, Antioquia, led to the day off. Others say the enslaved people asked for it in Popayán. Others date it to 1854. The question says 'colonial times', but 1854 is after independence. 'Spanish Crown granted it after an uprising in 1607 (in Pasto)' is not well supported. The hint 'It happened in the 17th century' is also not firmly established.",
             "problems": [
               "fact"
             ],
-            "reviewed_on": "2026-10-29",
+            "reviewed_on": "2026-10-30",
             "reviewer": "llm",
             "model": "claude-opus-5-5",
-            "previous": null
+            "previous": {
+              "decision": "needs_work",
+              "feedback": "Fact check: uncertain. Answer (enslaved Africans) and the Jan 5 'Día de los Negros' tradition are correct. The 1607 date is documented only in Wikipedia, which says the revolt was in Remedios, Antioquia, not Pasto, and flags the history as needing citations. Other sources call the carnival's origins '17th century' without a specific revolt. The hint 'They didn't have a single day of rest' is awkward but acceptable.",
+              "problems": [
+                "fact"
+              ],
+              "reviewed_on": "2026-10-29",
+              "reviewer": "llm",
+              "model": "claude-opus-5-5",
+              "previous": null
+            }
           }
         }
       },
@@ -63571,7 +63579,7 @@
     },
     {
       "id": "q-7049",
-      "question": "According to popular tradition, if you sprinkle holy water in the corners of your house, who runs away?",
+      "question": "According to folk tradition, if you sprinkle holy water in the corners of your house, who runs away?",
       "answer": "Witches",
       "wrong_answers": [
         "Thieves",
@@ -63579,25 +63587,35 @@
         "Debt collectors"
       ],
       "hints": [
-        "They're not coming to borrow money.",
+        "They aren't coming to borrow money.",
         "In the stories, they fly at night.",
-        "They get around on broomsticks."
+        "They get around on a broomstick."
       ],
-      "description": "A house cleaning that needs neither mop nor soap.",
+      "description": "A house cleaning that takes neither a mop nor soap.",
       "fun_fact": "Holy water is kept in fonts at church entrances, and many people take a little bottle of it home.",
       "difficulty": 3,
       "status": "needs_work",
-      "batch": "tr-en-13",
+      "batch": "tr-en-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "Fact check: uncertain. In Colombian and Latin American tradition, holy water in the corners of a house usually drives away evil spirits, the devil or bad energies. Witches are not the standard answer. I did not verify this by search, so the claim that witches flee is shaky. The hints about broomsticks and night flight are generic witch lore, not Colombian tradition.",
+        "feedback": "Fact check: uncertain. I found no source for the Colombia-specific belief that holy water in the house corners makes witches run away. The common folk and Catholic accounts say it drives off the devil, evil spirits or bad energy. Witches are plausible, since the question's hints (broomstick, flying at night) point to them. The hints themselves are fine, and the wrong answers (thieves, neighbors, debt collectors) are clearly wrong. The fun fact is plausible but I didn't verify it. Hint 1 is vague. 'Evil spirits' or 'the devil' would be the better-documented answer.",
         "problems": [
           "fact"
         ],
         "reviewed_on": "2026-10-30",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. In Colombian and Latin American tradition, holy water in the corners of a house usually drives away evil spirits, the devil or bad energies. Witches are not the standard answer. I did not verify this by search, so the claim that witches flee is shaky. The hints about broomsticks and night flight are generic witch lore, not Colombian tradition.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-30",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "5cbb0f775eba"
     },
@@ -67373,7 +67391,7 @@
     },
     {
       "id": "q-7180",
-      "question": "In “Pasión de gavilanes,” Norma, Jimena and Sara live at Hacienda Elizondo until the Reyes brothers arrive. What fictional town is it in?",
+      "question": "In “Pasión de gavilanes”, Norma, Jimena and Sara live at Hacienda Elizondo until the Reyes brothers arrive. In which fictional town is it?",
       "answer": "San Marcos",
       "wrong_answers": [
         "Macondo",
@@ -67381,25 +67399,33 @@
         "Santa Rosa"
       ],
       "hints": [
-        "It is not García Márquez's town.",
-        "It is named after a saint.",
-        "The saint is one of the four evangelists."
+        "It's not García Márquez's town.",
+        "It's named after a saint.",
+        "The saint is one of the four Gospel writers."
       ],
       "description": "Three sisters, three brothers and a hacienda with more drama than horses.",
-      "fun_fact": "Although many people think it is Mexican, “Pasión de gavilanes” was filmed in Colombia, coproduced by Telemundo and Caracol.",
-      "difficulty": 11,
-      "status": "needs_work",
-      "batch": "tr-en-13",
+      "fun_fact": "Although many people think it's Mexican, “Pasión de gavilanes” was filmed in Colombia, co-produced by Telemundo and Caracol.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-en-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "source: the fun fact says “Pasión de gavilanes” was coproduced by Telemundo and Caracol. As far as I know, the producers were Telemundo and RTI Colombia, and Caracol was only the Colombian broadcaster. The translator flagged the same doubt, and the fact check covered only the town. Correct the source fun fact (e.g. “coproduced by Telemundo and RTI”) or drop the coproducer clause, then re-sync the translation.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-30",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "source: the fun fact says “Pasión de gavilanes” was coproduced by Telemundo and Caracol. As far as I know, the producers were Telemundo and RTI Colombia, and Caracol was only the Colombian broadcaster. The translator flagged the same doubt, and the fact check covered only the town. Correct the source fun fact (e.g. “coproduced by Telemundo and RTI”) or drop the coproducer clause, then re-sync the translation.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-30",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "09f742cde2f0"
     },
@@ -72785,7 +72811,7 @@
     },
     {
       "id": "q-7363",
-      "question": "In Colombia, what short, affectionate word do you use for the man who runs the corner store?",
+      "question": "In Colombia, what short, affectionate word do you call the man who runs the corner store?",
       "answer": "Veci",
       "wrong_answers": [
         "Parce",
@@ -72794,24 +72820,32 @@
       ],
       "hints": [
         "You hear it in the barrio.",
-        "It is a little piece of a longer word.",
-        "It comes from the Spanish word for “neighbor”."
+        "It is a small piece of a longer word.",
+        "It comes from the Spanish word for someone who lives next door."
       ],
       "description": "The magic word that gets you bread on credit until Friday.",
-      "fun_fact": "“Veci” is short for “vecino” (neighbor), and in Colombia it is used both for the neighbors in the barrio and for the shopkeeper on the corner.",
-      "difficulty": 5,
-      "status": "needs_work",
-      "batch": "tr-en-13",
+      "fun_fact": "“Veci” is short for “vecino” (neighbor), and in Colombia it is used both for the neighbors on your block and for the corner storekeeper.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-en-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. 'Veci' as a Colombian term for the corner-store owner is plausible, but I found no source for it. 'Tendero' or 'don' are the standard terms.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-30",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. 'Veci' as a Colombian term for the corner-store owner is plausible, but I found no source for it. 'Tendero' or 'don' are the standard terms.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-30",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "6f7f591e8f28"
     },
@@ -72847,7 +72881,7 @@
     },
     {
       "id": "q-7365",
-      "question": "It falls from the clouds on stormy afternoons, pounds on zinc roofs and can turn the streets white. What falls in a hailstorm?",
+      "question": "It falls from the clouds on rainy afternoons, pounds on zinc roofs and can turn the streets white. What falls in a hailstorm?",
       "answer": "Balls of ice",
       "wrong_answers": [
         "Flakes of snow",
@@ -72855,18 +72889,18 @@
         "Grains of sand"
       ],
       "hints": [
-        "You can pick it up with your hand, but it melts fast.",
-        "It's hard and can bounce off the ground.",
-        "It's frozen water in the shape of tiny pellets."
+        "You can pick it up in your hand, but it melts fast.",
+        "They are hard and can bounce off the ground.",
+        "It is frozen water, shaped like tiny marbles."
       ],
-      "description": "When the Bogotá sky starts playing the drums without asking anyone's permission.",
-      "fun_fact": "On November 3, 2007, a hailstorm hit Bogotá so hard that the ice piled up to almost a meter (3 ft) on some streets.",
+      "description": "When the sky over Bogotá starts playing the drums without asking anyone.",
+      "fun_fact": "On November 3, 2007, a hailstorm in Bogotá was so strong that ice piled up nearly 1 meter (about 3 ft) deep on some streets.",
       "difficulty": 2,
       "status": "needs_work",
-      "batch": "tr-en-13",
+      "batch": "tr-en-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "source: the fun fact's claim that ice piled up to \"almost a meter\" in the November 3, 2007 Bogotá hailstorm is unconfirmed. The fact check found the storm but no source for the depth, and I can't confirm it either. The translation renders the source faithfully, so the source needs softening first, for example: \"a hailstorm hit Bogotá so hard that ice buried streets and dozens of cars.\" Fact check: uncertain. The Nov 3, 2007 Bogotá hailstorm is real, but I found no source for 'almost a meter (3 ft)' of ice. Sources only say streets were buried and dozens of cars were covered. The answer and wrong answers are fine.",
+        "feedback": "source: the fun fact's claim that ice piled up nearly 1 meter deep in Bogotá on November 3, 2007 is unconfirmed. The fact check found no source for it and one summary suggested about 20 cm, and I can't confirm it either. Correct the Spanish source first, for example to \"strongest hailstorm in almost 40 years; it covered streets in ice and buried dozens of cars\", then carry the change over to the translation. Fact check: uncertain. The answer (balls of ice) is correct and the wrong answers (snow, ash, sand) are wrong. The hints are fine. The fun fact's date (Nov 3, 2007) and its status as Bogotá's strongest hailstorm in about 40 years are confirmed. I found no source for 'nearly 1 meter (3 ft) deep'. Reports only say streets turned white and dozens of cars were buried. One search summary gave about 20 cm, but I couldn't tell whether that figure belongs to the 2007 storm. The question's stem also says it 'falls from the clouds ... pounds on zinc roofs', which is a loose description and not a factual error.",
         "problems": [
           "fact"
         ],
@@ -72875,7 +72909,7 @@
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "Fact check: uncertain. The Nov 3, 2007 Bogotá hailstorm is real (strongest in ~40 years). I found no source for the \"almost 1 meter (3 ft) high\" depth. Sources say only that cars were buried and streets flooded.",
+          "feedback": "source: the fun fact's claim that ice piled up to \"almost a meter\" in the November 3, 2007 Bogotá hailstorm is unconfirmed. The fact check found the storm but no source for the depth, and I can't confirm it either. The translation renders the source faithfully, so the source needs softening first, for example: \"a hailstorm hit Bogotá so hard that ice buried streets and dozens of cars.\" Fact check: uncertain. The Nov 3, 2007 Bogotá hailstorm is real, but I found no source for 'almost a meter (3 ft)' of ice. Sources only say streets were buried and dozens of cars were covered. The answer and wrong answers are fine.",
           "problems": [
             "fact"
           ],
@@ -72884,16 +72918,16 @@
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "Fact check: uncertain. The answer and wrong answers are fine, since hail is balls of ice. The Nov 3, 2007 Bogotá hailstorm is well documented, but I found no source for the \"almost 1 m (3 ft) deep\" figure. One Blu Radio piece mentions up to 1 m, but it seems to be about a different storm. Pulzo gives no depth.",
+            "feedback": "Fact check: uncertain. The Nov 3, 2007 Bogotá hailstorm is real (strongest in ~40 years). I found no source for the \"almost 1 meter (3 ft) high\" depth. Sources say only that cars were buried and streets flooded.",
             "problems": [
               "fact"
             ],
-            "reviewed_on": "2026-10-29",
+            "reviewed_on": "2026-10-30",
             "reviewer": "llm",
             "model": "claude-opus-5-5",
             "previous": {
               "decision": "needs_work",
-              "feedback": "Fact check: uncertain. The fun fact says hail piled up almost 1 m high on some streets on Nov 3, 2007. The storm and date are real, and it was the strongest in about 40 years. I found no source for the 1 m depth. A 50 cm figure I saw was for a different storm.",
+              "feedback": "Fact check: uncertain. The answer and wrong answers are fine, since hail is balls of ice. The Nov 3, 2007 Bogotá hailstorm is well documented, but I found no source for the \"almost 1 m (3 ft) deep\" figure. One Blu Radio piece mentions up to 1 m, but it seems to be about a different storm. Pulzo gives no depth.",
               "problems": [
                 "fact"
               ],
@@ -72902,7 +72936,7 @@
               "model": "claude-opus-5-5",
               "previous": {
                 "decision": "needs_work",
-                "feedback": "Fact check: uncertain. The answer (balls of ice) is correct and the 3 Nov 2007 Bogotá hailstorm is real. But the 'almost 1 m of ice on some streets' figure is only loosely supported. A BBC report cited 1.5 m of water and ice at one intersection, and I found no primary source for ice piled up on streets in general.",
+                "feedback": "Fact check: uncertain. The fun fact says hail piled up almost 1 m high on some streets on Nov 3, 2007. The storm and date are real, and it was the strongest in about 40 years. I found no source for the 1 m depth. A 50 cm figure I saw was for a different storm.",
                 "problems": [
                   "fact"
                 ],
@@ -72911,14 +72945,24 @@
                 "model": "claude-opus-5-5",
                 "previous": {
                   "decision": "needs_work",
-                  "feedback": "Source: the fun fact says the ice piled up \"almost a meter\" deep on some Bogotá streets on November 3, 2007. The fact check could not confirm that figure (the only source found says 1.5 m of water and ice at one intersection), and I can't confirm it either. Fix the source's fun fact first, for example: \"On November 3, 2007, Bogotá's heaviest hailstorm in decades left ice piled up on some streets and trapped dozens of cars.\" Then carry the change into this translation. The translation itself is faithful and reads naturally. Fact check: uncertain. The 3 Nov 2007 Bogotá hailstorm is real. But the ice depth in the fun fact (almost 1 m on some streets) isn't confirmed. The only figure I found is 1.5 m (59 in) of water and ice at one intersection, from a forum quoting the BBC. Reports of how many cars were trapped also differ (30 vs 70).",
+                  "feedback": "Fact check: uncertain. The answer (balls of ice) is correct and the 3 Nov 2007 Bogotá hailstorm is real. But the 'almost 1 m of ice on some streets' figure is only loosely supported. A BBC report cited 1.5 m of water and ice at one intersection, and I found no primary source for ice piled up on streets in general.",
                   "problems": [
                     "fact"
                   ],
                   "reviewed_on": "2026-10-29",
                   "reviewer": "llm",
                   "model": "claude-opus-5-5",
-                  "previous": null
+                  "previous": {
+                    "decision": "needs_work",
+                    "feedback": "Source: the fun fact says the ice piled up \"almost a meter\" deep on some Bogotá streets on November 3, 2007. The fact check could not confirm that figure (the only source found says 1.5 m of water and ice at one intersection), and I can't confirm it either. Fix the source's fun fact first, for example: \"On November 3, 2007, Bogotá's heaviest hailstorm in decades left ice piled up on some streets and trapped dozens of cars.\" Then carry the change into this translation. The translation itself is faithful and reads naturally. Fact check: uncertain. The 3 Nov 2007 Bogotá hailstorm is real. But the ice depth in the fun fact (almost 1 m on some streets) isn't confirmed. The only figure I found is 1.5 m (59 in) of water and ice at one intersection, from a forum quoting the BBC. Reports of how many cars were trapped also differ (30 vs 70).",
+                    "problems": [
+                      "fact"
+                    ],
+                    "reviewed_on": "2026-10-29",
+                    "reviewer": "llm",
+                    "model": "claude-opus-5-5",
+                    "previous": null
+                  }
                 }
               }
             }
@@ -74379,33 +74423,43 @@
     },
     {
       "id": "q-7416",
-      "question": "The 20,000-peso bill shows Julio Garavito and a drawing of the Moon, and a lunar crater bears his name. Why?",
+      "question": "The 20,000-peso banknote shows Julio Garavito and a drawing of the Moon, and a lunar crater bears his name. Why?",
       "answer": "Because he studied the Moon's motion",
       "wrong_answers": [
         "Because he was the first Colombian in space",
         "Because he invented the Muisca calendar",
-        "Because he found water on the Moon"
+        "Because he discovered water on the Moon"
       ],
       "hints": [
         "He was a Bogotá scholar of the late 19th and early 20th centuries.",
-        "He directed the Observatorio Astronómico Nacional.",
+        "He directed the National Astronomical Observatory.",
         "He did his astronomy calculations with pencil and paper."
       ],
-      "description": "A bill with its head in the clouds… and a little higher.",
+      "description": "A banknote with its head in the clouds… and a little bit higher.",
       "fun_fact": "The Garavito crater is on the far side of the Moon, the side we never see from Earth.",
-      "difficulty": 6,
+      "difficulty": 7,
       "status": "needs_work",
-      "batch": "tr-en-13",
+      "batch": "tr-en-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "source: the present tense is out of date in the source as well as the translation. The current 20,000-peso bill (2016 family) shows Alfonso López Michelsen, and Garavito was on the earlier design. The source should say \"the old 20,000-peso bill showed\" or similar, and the translation should then follow. The translation is otherwise faithful.",
+        "feedback": "source: \"shows\" (Spanish \"lleva\") is out of date. Since the 2016 series, the 20,000-peso note has shown Alfonso López Michelsen, and Garavito and the Moon appear only on the earlier series. The fact check missed this, and the rater flagged it. The source should change to the past tense (\"showed\" / \"llevaba\", or \"the old 20,000-peso banknote\"), and the translation should then follow it.",
         "problems": [
           "fact"
         ],
         "reviewed_on": "2026-10-30",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "source: the present tense is out of date in the source as well as the translation. The current 20,000-peso bill (2016 family) shows Alfonso López Michelsen, and Garavito was on the earlier design. The source should say \"the old 20,000-peso bill showed\" or similar, and the translation should then follow. The translation is otherwise faithful.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-30",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "ec834589e524"
     },
@@ -86231,7 +86285,7 @@
     },
     {
       "id": "q-7821",
-      "question": "It stays at the bottom of the rice pot, comes out toasted and crunchy, and families fight over it. What is it called in Colombia?",
+      "question": "It stays at the bottom of the rice pot, comes out toasted and crunchy, and families fight over it. What do Colombians call it?",
       "answer": "Pegao",
       "wrong_answers": [
         "Cuncho",
@@ -86239,27 +86293,28 @@
         "Calentado"
       ],
       "hints": [
-        "Its name tells you where it stays.",
+        "Its name tells you where it ends up.",
         "You can't serve it with a ladle: you have to scrape it off.",
         "It stays stuck to the pot."
       ],
-      "description": "The kitchen's hidden treasure isn't in a chest, but in a pot.",
+      "description": "The kitchen's greatest hidden treasure isn't in a chest, it's in a pot.",
       "fun_fact": "Electric rice cookers leave almost no pegao, which is why many people still prefer to cook rice in a regular pot.",
-      "difficulty": 4,
+      "difficulty": 3,
       "status": "needs_work",
-      "batch": "tr-en-13",
+      "batch": "tr-en-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "source: the fun fact is unverified. Neither the fact check nor I can confirm that electric rice cookers leave almost no pegao, or that this is why many people still cook rice in a regular pot. The source should soften or replace it, for example with a fact about the regional names pega and cucayo. The answer itself is fine: pegao is a widely used Colombian word, and the regional variants pega and cucayo are not among the options. Fact check: wrong. The main weakness is that Colombia has several regional names for this, so the question has more than one defensible answer. Cucayo (Caribbean coast) and pega (Andean region) are the most common; pegao is also used on the coast. The wrong answers are fine: chicharrón and calentado are different foods, and I found no source that lists 'cuncho' in Colombia (it looks like a variant of the Panamanian 'concho' or of 'concón'). Hint 1 ('Its name tells you where it stays') is inaccurate, because 'pegao' means 'stuck', not 'at the bottom'. Hint 3 ('stuck to the pot') gives the answer away. I couldn't verify the fun fact about electric rice cookers.",
+        "feedback": "Source: the translation is faithful, but the fact check is uncertain on points I can't confirm either. \"Cuncho\" is Colombian for residue or dregs at the bottom of a pot, so it may be a defensible name for the same thing, and the claim that rice cookers leave almost no pegao, \"which is why\" people prefer pots, is unverified. The source needs a clearly wrong replacement for \"Cuncho\" and a softer or sourced fun fact; \"pegao\" itself is fine as a Colombian word, though \"pega\" and \"cucayo\" are also regional names. Fact check: uncertain. \"Pegao\" is used in Colombia, but sources mostly give cucayo/cucallo (Caribbean coast) and pega (Andean region) as the Colombian names. Pegao is the usual name in Puerto Rico. The wrong answer \"Cuncho\" could not be ruled out: the Spanish dictionary may list it in Colombia for the rice stuck to the pot, but I found no source for that. The fun fact about rice cookers was not verified. One source mentions a rice cooker designed to make pegao.",
         "problems": [
-          "fact"
+          "fact",
+          "ambiguity"
         ],
         "reviewed_on": "2026-10-30",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "Fact check: uncertain. 'Pegao' (or 'pega') is a valid Colombian name for the rice crust, mainly in Antioquia, Bogotá and the Andean region. The Caribbean coast says 'cucayo', so the answer is region-dependent. 'Cuncho' is listed as a wrong answer, but it is a documented Latin American word for dregs or residue at the bottom of a pot. My searches did not confirm or rule out its use for rice crust in Colombia, so it may be a valid alternative. The question also says 'What do Colombians call it?', which implies a single name. The 'Cuncho' distractor is risky, and 'Calentado' (reheated leftovers) is fine.",
+          "feedback": "source: the fun fact is unverified. Neither the fact check nor I can confirm that electric rice cookers leave almost no pegao, or that this is why many people still cook rice in a regular pot. The source should soften or replace it, for example with a fact about the regional names pega and cucayo. The answer itself is fine: pegao is a widely used Colombian word, and the regional variants pega and cucayo are not among the options. Fact check: wrong. The main weakness is that Colombia has several regional names for this, so the question has more than one defensible answer. Cucayo (Caribbean coast) and pega (Andean region) are the most common; pegao is also used on the coast. The wrong answers are fine: chicharrón and calentado are different foods, and I found no source that lists 'cuncho' in Colombia (it looks like a variant of the Panamanian 'concho' or of 'concón'). Hint 1 ('Its name tells you where it stays') is inaccurate, because 'pegao' means 'stuck', not 'at the bottom'. Hint 3 ('stuck to the pot') gives the answer away. I couldn't verify the fun fact about electric rice cookers.",
           "problems": [
             "fact"
           ],
@@ -86268,14 +86323,24 @@
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "Fact check: uncertain. Pegao is the standard Colombian term. But \"cuncho\" is also reported as a regional word for the rice crust or dregs in Colombia, Ecuador and Peru, so it may not be clearly wrong. My search did not confirm or rule this out. Other regional names are cucayo (Caribbean coast) and pega.",
+            "feedback": "Fact check: uncertain. 'Pegao' (or 'pega') is a valid Colombian name for the rice crust, mainly in Antioquia, Bogotá and the Andean region. The Caribbean coast says 'cucayo', so the answer is region-dependent. 'Cuncho' is listed as a wrong answer, but it is a documented Latin American word for dregs or residue at the bottom of a pot. My searches did not confirm or rule out its use for rice crust in Colombia, so it may be a valid alternative. The question also says 'What do Colombians call it?', which implies a single name. The 'Cuncho' distractor is risky, and 'Calentado' (reheated leftovers) is fine.",
             "problems": [
               "fact"
             ],
-            "reviewed_on": "2026-10-29",
+            "reviewed_on": "2026-10-30",
             "reviewer": "llm",
             "model": "claude-opus-5-5",
-            "previous": null
+            "previous": {
+              "decision": "needs_work",
+              "feedback": "Fact check: uncertain. Pegao is the standard Colombian term. But \"cuncho\" is also reported as a regional word for the rice crust or dregs in Colombia, Ecuador and Peru, so it may not be clearly wrong. My search did not confirm or rule this out. Other regional names are cucayo (Caribbean coast) and pega.",
+              "problems": [
+                "fact"
+              ],
+              "reviewed_on": "2026-10-29",
+              "reviewer": "llm",
+              "model": "claude-opus-5-5",
+              "previous": null
+            }
           }
         }
       },
@@ -87693,7 +87758,7 @@
     },
     {
       "id": "q-7870",
-      "question": "Torre Colpatria in downtown Bogotá has 50 floors, stands 196 m (643 ft) tall and glows with colored lights at night. What is it mainly used for?",
+      "question": "The Torre Colpatria in downtown Bogotá has 50 floors, stands 196 m (643 ft) tall and glows with colored lights at night. What is it mainly used for?",
       "answer": "Offices",
       "wrong_answers": [
         "Hotel rooms",
@@ -87703,32 +87768,40 @@
       "hints": [
         "It was built by a financial group that gave it its name.",
         "Thousands of people go there from Monday to Friday.",
-        "It's full of desks, computers and meeting rooms."
+        "Inside you'll find desks, computers and meeting rooms."
       ],
-      "description": "The tallest Christmas tree in Bogotá, lit up all year round.",
+      "description": "Bogotá's tallest Christmas tree, switched on all year round.",
       "fun_fact": "Every year there is a race to run up its nearly 1,000 steps.",
       "difficulty": 5,
-      "status": "needs_work",
-      "batch": "tr-en-13",
+      "status": "approved",
+      "batch": "tr-en-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: wrong. The fun fact is off. The Torre Colpatria stair race is usually quoted as 980 steps over 48 floors, so 'nearly 1,000' is about right for that source. The race is also not clearly 'every year', and one source gives 943 steps for 50 floors. The step count is inconsistent across sources. Height (196 m), 50 floors and office use are right.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-30",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "source: the description calls Colpatria \"Bogotá's tallest\" (Christmas tree), but Torre BD Bacatá (about 216 m, finished 2016) is now taller than Colpatria (196 m), so the claim is out of date. Fix the source description first (e.g. \"One of Bogotá's tallest Christmas trees, lit up all year round\") and then translate it again. The rest of the translation is faithful and reads naturally. Fact check: wrong. The fun fact says 'almost one thousand steps'. That is fine, since sources give about 980 steps and an annual climb race. But the description calls it 'Bogotá's tallest' tower. Torre BD Bacatá (216 m, completed 2016) is taller than Colpatria (196 m), so that claim is outdated.",
+          "feedback": "Fact check: wrong. The fun fact is off. The Torre Colpatria stair race is usually quoted as 980 steps over 48 floors, so 'nearly 1,000' is about right for that source. The race is also not clearly 'every year', and one source gives 943 steps for 50 floors. The step count is inconsistent across sources. Height (196 m), 50 floors and office use are right.",
           "problems": [
             "fact"
           ],
           "reviewed_on": "2026-10-30",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
-          "previous": null
+          "previous": {
+            "decision": "needs_work",
+            "feedback": "source: the description calls Colpatria \"Bogotá's tallest\" (Christmas tree), but Torre BD Bacatá (about 216 m, finished 2016) is now taller than Colpatria (196 m), so the claim is out of date. Fix the source description first (e.g. \"One of Bogotá's tallest Christmas trees, lit up all year round\") and then translate it again. The rest of the translation is faithful and reads naturally. Fact check: wrong. The fun fact says 'almost one thousand steps'. That is fine, since sources give about 980 steps and an annual climb race. But the description calls it 'Bogotá's tallest' tower. Torre BD Bacatá (216 m, completed 2016) is taller than Colpatria (196 m), so that claim is outdated.",
+            "problems": [
+              "fact"
+            ],
+            "reviewed_on": "2026-10-30",
+            "reviewer": "llm",
+            "model": "claude-opus-5-5",
+            "previous": null
+          }
         }
       },
       "source_hash": "2e99f88f8a4a"
@@ -94453,25 +94526,33 @@
         "Armando y Betty"
       ],
       "hints": [
-        "Its title does not include the name of any character.",
-        "It has the same name as a very important place in the original telenovela.",
-        "It is the name of the fashion company where Betty worked."
+        "Its title doesn't include any character's name.",
+        "It has the same name as a very important place in the original show.",
+        "It's the name of the fashion company where Betty worked."
       ],
-      "description": "When a happy ending isn't enough, it's time to open another season at the office.",
+      "description": "When a happy ending isn't enough, it's time for another season at the office.",
       "fun_fact": "Terramoda, one of the wrong options, was the front company Betty used to protect the firm's assets.",
-      "difficulty": 6,
-      "status": "needs_work",
-      "batch": "tr-en-13",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-en-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "source: the fun fact is inaccurate, and the translation repeats it faithfully. Terramoda was a shell company set up by the Ecomoda executives (Armando and Mario) to absorb Ecomoda and keep it from the banks, with Betty only its figurehead manager; she did not use it herself to protect assets. Suggested text for the source: “Terramoda, one of the wrong options, was the shell company created to absorb Ecomoda and shield it from the banks, with Betty named as its general manager.” Fact check: uncertain. The answer (Ecomoda) is right. The fun fact is inaccurate: Terramoda was a shell company set up by the Ecomoda executives to absorb Ecomoda and stop the banks seizing it. Betty was only its figurehead general manager, and she did not use it to protect assets.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-30",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "source: the fun fact is inaccurate, and the translation repeats it faithfully. Terramoda was a shell company set up by the Ecomoda executives (Armando and Mario) to absorb Ecomoda and keep it from the banks, with Betty only its figurehead manager; she did not use it herself to protect assets. Suggested text for the source: “Terramoda, one of the wrong options, was the shell company created to absorb Ecomoda and shield it from the banks, with Betty named as its general manager.” Fact check: uncertain. The answer (Ecomoda) is right. The fun fact is inaccurate: Terramoda was a shell company set up by the Ecomoda executives to absorb Ecomoda and stop the banks seizing it. Betty was only its figurehead general manager, and she did not use it to protect assets.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-30",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "00c6e83cfef5"
     },
@@ -98047,7 +98128,7 @@
     },
     {
       "id": "q-8225",
-      "question": "I'm a pasillo paisa heard at every wedding, graduation and birthday, and I make parents cry. What song am I?",
+      "question": "I’m a pasillo paisa heard at every wedding, graduation and birthday, and I make parents cry. What song am I?",
       "answer": "“El camino de la vida”",
       "wrong_answers": [
         "“Pueblito viejo”",
@@ -98055,18 +98136,18 @@
         "“Espumas”"
       ],
       "hints": [
-        "I'm sung above all as a tribute to parents.",
-        "My author is Héctor Ochoa.",
+        "I’m sung above all as a tribute to parents.",
+        "My composer is Héctor Ochoa.",
         "My lyrics travel through childhood, youth, love, children and old age."
       ],
-      "description": "A song that sends every mom and dad in the room looking for a handkerchief.",
+      "description": "A song that leaves parents with watery eyes and a handkerchief at the ready.",
       "fun_fact": "“El camino de la vida” was chosen as the Colombian song of the 20th century.",
-      "difficulty": 10,
+      "difficulty": 9,
       "status": "needs_work",
-      "batch": "tr-en-13",
+      "batch": "tr-en-14",
       "review": {
         "decision": "needs_work",
-        "feedback": "source: the fact check says “El camino de la vida” is a bambuco, not a “pasillo paisa”, and I can't confirm the genre from my own knowledge. The error comes from the Spanish source, which the translation follows faithfully. Correct the source by dropping the genre (“canción paisa”), or use “bambuco” if verified, then retranslate. Fact check: wrong. The question calls the song a 'pasillo paisa', but sources describe 'El camino de la vida' as a bambuco, not a pasillo. The answer, author (Héctor Ochoa) and 'song of the 20th century' (1999 Academia Colombiana de Música poll) are correct. Wrong answers are other songs.",
+        "feedback": "source: the error is in the Spanish source and the translation copies it faithfully. It calls “El camino de la vida” a pasillo, but the fact check found sources calling it a bambuco (El Comercio) or a vals (Portafolio). The source should drop the genre (“a paisa song”), then the translation can follow. Fact check: wrong. The song is not a pasillo. Sources call \"El camino de la vida\" a bambuco (El Comercio); Portafolio calls it a vals. The composer (Héctor Ochoa), the theme and the \"Colombian Song of the 20th century\" title (1999 poll) check out. The wrong answers are fine: Pueblito viejo, Los guaduales and Espumas are different songs.",
         "problems": [
           "fact"
         ],
@@ -98075,14 +98156,24 @@
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "source: the riddle calls “El camino de la vida” a pasillo, but the fact check says sources describe it as a vals (waltz) or bambuco, and I can't confirm it is a pasillo. The source should say something like “I'm a song from Antioquia” instead. The fun fact could also add that the vote was in 1999. Once the source is fixed, the translation needs the same change. Fact check: wrong. The answer song and composer are right (Héctor Ochoa; 1999 chosen as Colombian song of the 20th century). But the riddle calls it a \"pasillo\", and no source supports that. Radio Nacional describes it as a nostalgic vals (waltz), and other sources say bambuco or vals.",
+          "feedback": "source: the fact check says “El camino de la vida” is a bambuco, not a “pasillo paisa”, and I can't confirm the genre from my own knowledge. The error comes from the Spanish source, which the translation follows faithfully. Correct the source by dropping the genre (“canción paisa”), or use “bambuco” if verified, then retranslate. Fact check: wrong. The question calls the song a 'pasillo paisa', but sources describe 'El camino de la vida' as a bambuco, not a pasillo. The answer, author (Héctor Ochoa) and 'song of the 20th century' (1999 Academia Colombiana de Música poll) are correct. Wrong answers are other songs.",
           "problems": [
             "fact"
           ],
           "reviewed_on": "2026-10-30",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
-          "previous": null
+          "previous": {
+            "decision": "needs_work",
+            "feedback": "source: the riddle calls “El camino de la vida” a pasillo, but the fact check says sources describe it as a vals (waltz) or bambuco, and I can't confirm it is a pasillo. The source should say something like “I'm a song from Antioquia” instead. The fun fact could also add that the vote was in 1999. Once the source is fixed, the translation needs the same change. Fact check: wrong. The answer song and composer are right (Héctor Ochoa; 1999 chosen as Colombian song of the 20th century). But the riddle calls it a \"pasillo\", and no source supports that. Radio Nacional describes it as a nostalgic vals (waltz), and other sources say bambuco or vals.",
+            "problems": [
+              "fact"
+            ],
+            "reviewed_on": "2026-10-30",
+            "reviewer": "llm",
+            "model": "claude-opus-5-5",
+            "previous": null
+          }
         }
       },
       "source_hash": "f1424b4bc0f2"
@@ -100277,35 +100368,43 @@
         "Boredom"
       ],
       "hints": [
-        "It has nothing to do with the bird of the same name.",
-        "You say it when something goes wrong and it's nobody's fault.",
-        "It's the opposite of a stroke of good fortune."
+        "It has nothing to do with the bird that shares its name.",
+        "People say it when something goes wrong and it is nobody's fault.",
+        "It is the opposite of a stroke of good fortune."
       ],
-      "description": "A coastal word that nobody wants landing on them.",
-      "fun_fact": "On the coast, someone who brings bad luck is called “pavoso”, and people say that person “echa la pava”.",
+      "description": "A word from the Colombian coast that nobody wants landing on them.",
+      "fun_fact": "On the Caribbean coast, a person who brings bad luck is called a “pavoso”, and people say that person “echa la pava”.",
       "difficulty": 5,
-      "status": "needs_work",
-      "batch": "tr-en-13",
+      "status": "approved",
+      "batch": "tr-en-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "source: the fact check is uncertain and I can't settle it. “Pava” as bad luck is solid, but Caribbean-coast “qué/cule pava” is reported to also mean something boring or annoying, so the wrong answer “Boredom” may be defensible. The fun fact's “echa la pava” (to bring bad luck) is also unconfirmed for the coast. The source needs checking with a Barranquilla speaker, then a replacement for “Boredom” (e.g. a concrete complaint such as noise) and a fun fact without “echa la pava” if unsupported; the English translation then follows. Fact check: uncertain. Sources say Colombian 'pava' = bad luck (tener pava, pavoso), but on the Caribbean coast 'pava' (e.g. 'cule pava') is also used for something boring or annoying, so the 'Boredom' distractor may be arguably right. The fun fact 'echa la pava' for bringing bad luck is unsupported; one dictionary gives 'echar la pava' as 'to vomit'.",
-        "problems": [
-          "fact",
-          "ambiguity"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-30",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "Fact check: uncertain. I couldn't find a source for 'pava' meaning bad luck in Barranquilla. I also couldn't verify 'pavoso' or 'echar la pava'. My recollection is that this sense exists on the Colombian coast, but 'echar pava' may carry another meaning.",
+          "feedback": "source: the fact check is uncertain and I can't settle it. “Pava” as bad luck is solid, but Caribbean-coast “qué/cule pava” is reported to also mean something boring or annoying, so the wrong answer “Boredom” may be defensible. The fun fact's “echa la pava” (to bring bad luck) is also unconfirmed for the coast. The source needs checking with a Barranquilla speaker, then a replacement for “Boredom” (e.g. a concrete complaint such as noise) and a fun fact without “echa la pava” if unsupported; the English translation then follows. Fact check: uncertain. Sources say Colombian 'pava' = bad luck (tener pava, pavoso), but on the Caribbean coast 'pava' (e.g. 'cule pava') is also used for something boring or annoying, so the 'Boredom' distractor may be arguably right. The fun fact 'echa la pava' for bringing bad luck is unsupported; one dictionary gives 'echar la pava' as 'to vomit'.",
           "problems": [
-            "fact"
+            "fact",
+            "ambiguity"
           ],
-          "reviewed_on": "2026-10-29",
+          "reviewed_on": "2026-10-30",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
-          "previous": null
+          "previous": {
+            "decision": "needs_work",
+            "feedback": "Fact check: uncertain. I couldn't find a source for 'pava' meaning bad luck in Barranquilla. I also couldn't verify 'pavoso' or 'echar la pava'. My recollection is that this sense exists on the Colombian coast, but 'echar pava' may carry another meaning.",
+            "problems": [
+              "fact"
+            ],
+            "reviewed_on": "2026-10-29",
+            "reviewer": "llm",
+            "model": "claude-opus-5-5",
+            "previous": null
+          }
         }
       },
       "source_hash": "480a68b0548f"
@@ -103012,33 +103111,41 @@
     },
     {
       "id": "q-8394",
-      "question": "In the outfit of the paisa arriero (muleteer), what is the poncho?",
+      "question": "In the traditional outfit of the paisa arriero (muleteer), what is the poncho?",
       "answer": "A cloth worn over the shoulder",
       "wrong_answers": [
         "A leather bag with many pockets",
         "A white hat made of straw",
-        "A pair of alpargatas woven from fique"
+        "A pair of sandals woven from fique"
       ],
       "hints": [
-        "It isn't pulled over the head as in other countries.",
-        "It's almost always white or checked.",
-        "The arriero used it to wipe off his sweat."
+        "It doesn't go over your head the way it does in other countries.",
+        "It is made of cotton, almost always white or in small checks.",
+        "The arriero used it to wipe away his sweat."
       ],
-      "description": "Same name, different garment: paisas always add their own touch.",
-      "fun_fact": "The arriero used his poncho for everything: wiping off sweat, blocking the sun, shooing flies and even as a pillow.",
-      "difficulty": 4,
-      "status": "needs_work",
-      "batch": "tr-en-13",
+      "description": "Same name, different story: paisas just have to do things their own way.",
+      "fun_fact": "The arriero used his poncho for everything: wiping away sweat, keeping off the sun, shooing flies and even as a pillow.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-en-14",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. Sources agree that the poncho is worn on the shoulders. One says it is called a ruana in Antioquia. They do not clearly say it is a cloth. The wrong answers (carriel, hat, alpargatas) are correct as wrong answers.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-30",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. Sources agree that the poncho is worn on the shoulders. One says it is called a ruana in Antioquia. They do not clearly say it is a cloth. The wrong answers (carriel, hat, alpargatas) are correct as wrong answers.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-30",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "96d9c6512a5e"
     },

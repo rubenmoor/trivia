@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "10795f26",
+  "hash": "3e314ca9",
   "questions": [
     {
       "id": "q-0002",
@@ -19256,6 +19256,40 @@
       "background": null
     },
     {
+      "id": "q-7019",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "carnivals-and-fairs",
+      "bundle": "colombia",
+      "description": "A day when nobody in Pasto goes out with a clean face.",
+      "question": "On January 5 in Pasto, your face gets painted black. According to tradition, who asked for that day off in colonial times?",
+      "answer": "Enslaved Africans",
+      "wrong_answers": [
+        "Spanish soldiers",
+        "School students",
+        "Port merchants"
+      ],
+      "hints": [
+        "It was in the 17th century.",
+        "They had no day of rest at all.",
+        "They were brought by force from Africa."
+      ],
+      "fun_fact": "According to tradition, the Spanish Crown granted that day off after a revolt in 1607.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Comparsa_del_desfile_del_carnaval_de_Pasto_6_de_enero_03.jpg/3840px-Comparsa_del_desfile_del_carnaval_de_Pasto_6_de_enero_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AComparsa_del_desfile_del_carnaval_de_Pasto_6_de_enero_03.jpg",
+        "credit": "Hanksol · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Hanksol",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Hanksol&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-7020",
       "status": "approved",
       "difficulty": 2,
@@ -24438,6 +24472,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Thomas Wolf, www.foto-tw.de",
         "author_url": "https://commons.wikimedia.org/wiki/User:Der_Wolf_im_Wald"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7180",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "telenovelas",
+      "bundle": "colombia",
+      "description": "Three sisters, three brothers and a hacienda with more drama than horses.",
+      "question": "In “Pasión de gavilanes”, Norma, Jimena and Sara live at Hacienda Elizondo until the Reyes brothers arrive. In which fictional town is it?",
+      "answer": "San Marcos",
+      "wrong_answers": [
+        "Macondo",
+        "San Vicente",
+        "Santa Rosa"
+      ],
+      "hints": [
+        "It's not García Márquez's town.",
+        "It's named after a saint.",
+        "The saint is one of the four Gospel writers."
+      ],
+      "fun_fact": "Although many people think it's Mexican, “Pasión de gavilanes” was filmed in Colombia, co-produced by Telemundo and Caracol.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Horses_in_Cocora_Valley%2C_Colombia.jpg/3840px-Horses_in_Cocora_Valley%2C_Colombia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHorses_in_Cocora_Valley%2C_Colombia.jpg",
+        "credit": "Bernard Gagnon · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bernard Gagnon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bgag"
       },
       "background": null
     },
@@ -30499,6 +30567,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Taggen",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Taggen&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-7363",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "languages",
+      "bundle": "colombia",
+      "description": "The magic word that gets you bread on credit until Friday.",
+      "question": "In Colombia, what short, affectionate word do you call the man who runs the corner store?",
+      "answer": "Veci",
+      "wrong_answers": [
+        "Parce",
+        "Mano",
+        "Tío"
+      ],
+      "hints": [
+        "You hear it in the barrio.",
+        "It is a small piece of a longer word.",
+        "It comes from the Spanish word for someone who lives next door."
+      ],
+      "fun_fact": "“Veci” is short for “vecino” (neighbor), and in Colombia it is used both for the neighbors on your block and for the corner storekeeper.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Michi_de_la_comuna_14.jpg/1920px-Michi_de_la_comuna_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMichi_de_la_comuna_14.jpg",
+        "credit": "Compota de mora · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Compota de mora",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Compota_de_mora"
       },
       "background": null
     },
@@ -47036,6 +47138,40 @@
       "background": null
     },
     {
+      "id": "q-7870",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "places-and-monuments",
+      "bundle": "colombia",
+      "description": "Bogotá's tallest Christmas tree, switched on all year round.",
+      "question": "The Torre Colpatria in downtown Bogotá has 50 floors, stands 196 m (643 ft) tall and glows with colored lights at night. What is it mainly used for?",
+      "answer": "Offices",
+      "wrong_answers": [
+        "Hotel rooms",
+        "Apartments",
+        "Hospital wards"
+      ],
+      "hints": [
+        "It was built by a financial group that gave it its name.",
+        "Thousands of people go there from Monday to Friday.",
+        "Inside you'll find desks, computers and meeting rooms."
+      ],
+      "fun_fact": "Every year there is a race to run up its nearly 1,000 steps.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Bogota_cityscape_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABogota_cityscape_3.jpg",
+        "credit": "Lorna Phillips · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Lorna Phillips",
+        "author_url": "https://www.flickr.com/people/15185049@N02"
+      },
+      "background": null
+    },
+    {
       "id": "q-7871",
       "status": "approved",
       "difficulty": 8,
@@ -54584,6 +54720,40 @@
       "background": null
     },
     {
+      "id": "q-8104",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "telenovelas",
+      "bundle": "colombia",
+      "description": "When a happy ending isn't enough, it's time for another season at the office.",
+      "question": "In 2001, which telenovela continued the story of Betty and Armando after the ending of “Yo soy Betty, la fea”?",
+      "answer": "Ecomoda",
+      "wrong_answers": [
+        "Terramoda",
+        "Betty, la bella",
+        "Armando y Betty"
+      ],
+      "hints": [
+        "Its title doesn't include any character's name.",
+        "It has the same name as a very important place in the original show.",
+        "It's the name of the fashion company where Betty worked."
+      ],
+      "fun_fact": "Terramoda, one of the wrong options, was the front company Betty used to protect the firm's assets.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/A_Young_South_Sudanese_Woman_Tailoring_%E2%80%94_Traditional_Craft_and_Livelihood%2C_South_Sudan_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_Young_South_Sudanese_Woman_Tailoring_%E2%80%94_Traditional_Craft_and_Livelihood%2C_South_Sudan_2026.jpg",
+        "credit": "Oliversamson1 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Oliversamson1",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Oliversamson1"
+      },
+      "background": null
+    },
+    {
       "id": "q-8105",
       "status": "approved",
       "difficulty": 12,
@@ -61044,6 +61214,40 @@
       "background": null
     },
     {
+      "id": "q-8302",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "regional-speech",
+      "bundle": "colombia",
+      "description": "A word from the Colombian coast that nobody wants landing on them.",
+      "question": "In Barranquilla, if someone says “¡qué pava!”, what are they complaining about?",
+      "answer": "Bad luck",
+      "wrong_answers": [
+        "The heat",
+        "Hunger",
+        "Boredom"
+      ],
+      "hints": [
+        "It has nothing to do with the bird that shares its name.",
+        "People say it when something goes wrong and it is nobody's fault.",
+        "It is the opposite of a stroke of good fortune."
+      ],
+      "fun_fact": "On the Caribbean coast, a person who brings bad luck is called a “pavoso”, and people say that person “echa la pava”.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Barranquilla%2C_Colombia_street_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABarranquilla%2C_Colombia_street_view.jpg",
+        "credit": "--F3rn4nd0 06:31, 27 March 2007 (UTC) · CC BY 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "author": "--F3rn4nd0 06:31, 27 March 2007 (UTC)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:F3rn4nd0"
+      },
+      "background": null
+    },
+    {
       "id": "q-8303",
       "status": "approved",
       "difficulty": 8,
@@ -64100,6 +64304,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Wladimir Labeikovsky",
         "author_url": "https://www.flickr.com/people/39786858@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-8394",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "crafts-and-traditional-dress",
+      "bundle": "colombia",
+      "description": "Same name, different story: paisas just have to do things their own way.",
+      "question": "In the traditional outfit of the paisa arriero (muleteer), what is the poncho?",
+      "answer": "A cloth worn over the shoulder",
+      "wrong_answers": [
+        "A leather bag with many pockets",
+        "A white hat made of straw",
+        "A pair of sandals woven from fique"
+      ],
+      "hints": [
+        "It doesn't go over your head the way it does in other countries.",
+        "It is made of cotton, almost always white or in small checks.",
+        "The arriero used it to wipe away his sweat."
+      ],
+      "fun_fact": "The arriero used his poncho for everything: wiping away sweat, keeping off the sun, shooing flies and even as a pillow.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Panorama_San_Rafael_Antioquia_%28255394055%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APanorama_San_Rafael_Antioquia_%28255394055%29.jpeg",
+        "credit": "Jacques Di Saint · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Jacques Di Saint",
+        "author_url": "https://500px.com/jacquesdisaint"
       },
       "background": null
     },
