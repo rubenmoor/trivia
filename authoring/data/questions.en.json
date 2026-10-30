@@ -63587,7 +63587,7 @@
     },
     {
       "id": "q-7049",
-      "question": "According to popular tradition, if you sprinkle holy water in the corners of the house, who runs away?",
+      "question": "According to folk tradition, if you sprinkle holy water in the corners of your house, who runs away?",
       "answer": "Witches",
       "wrong_answers": [
         "Thieves",
@@ -63595,18 +63595,18 @@
         "Debt collectors"
       ],
       "hints": [
-        "They haven't come to borrow money.",
+        "They aren't coming to borrow money.",
         "In the stories, they fly at night.",
-        "They get around on broomsticks."
+        "They get around on a broom."
       ],
-      "description": "A house cleaning that needs no mop and no soap.",
+      "description": "A house cleaning that takes neither a mop nor soap.",
       "fun_fact": "Holy water is kept in fonts at church entrances, and many people take a small bottle of it home.",
       "difficulty": 3,
       "status": "needs_work",
-      "batch": "tr-en-15",
+      "batch": "tr-en-16",
       "review": {
         "decision": "needs_work",
-        "feedback": "Fact check: uncertain. I found no source for the specific Colombian tradition that sprinkling holy water in house corners makes witches flee. Sources only show the Catholic and esoteric practice of sprinkling holy water in corners for protection against evil. Witches as the answer is plausible. The wrong answers (thieves, neighbors, debt collectors) are clearly not the folk-belief answer. The hints (flying at night, broomsticks) are generic folklore. The fun fact about fonts at church entrances and people taking holy water home is generally true. The first hint ('haven't come to borrow money') is odd and unhelpful.",
+        "feedback": "Fact check: uncertain. The answer 'witches' fits folk belief (holy water repels witches, evil spirits, the devil), and the wrong answers (thieves, neighbors, debt collectors) are clearly wrong. But I found no source that documents this specific belief for Colombia, only the general practice of sprinkling holy water in corners, doors and windows for protection. Another answer such as 'evil spirits' or 'the devil' is at least as common in the tradition. The hint 'they get around on a broom' is generic witch lore. The fun fact is generally true.",
         "problems": [
           "fact"
         ],
@@ -63615,7 +63615,7 @@
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "Fact check: uncertain. I found no source for the Colombia-specific belief that holy water in the house corners makes witches run away. The common folk and Catholic accounts say it drives off the devil, evil spirits or bad energy. Witches are plausible, since the question's hints (broomstick, flying at night) point to them. The hints themselves are fine, and the wrong answers (thieves, neighbors, debt collectors) are clearly wrong. The fun fact is plausible but I didn't verify it. Hint 1 is vague. 'Evil spirits' or 'the devil' would be the better-documented answer.",
+          "feedback": "Fact check: uncertain. I found no source for the specific Colombian tradition that sprinkling holy water in house corners makes witches flee. Sources only show the Catholic and esoteric practice of sprinkling holy water in corners for protection against evil. Witches as the answer is plausible. The wrong answers (thieves, neighbors, debt collectors) are clearly not the folk-belief answer. The hints (flying at night, broomsticks) are generic folklore. The fun fact about fonts at church entrances and people taking holy water home is generally true. The first hint ('haven't come to borrow money') is odd and unhelpful.",
           "problems": [
             "fact"
           ],
@@ -63624,14 +63624,24 @@
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "Fact check: uncertain. In Colombian and Latin American tradition, holy water in the corners of a house usually drives away evil spirits, the devil or bad energies. Witches are not the standard answer. I did not verify this by search, so the claim that witches flee is shaky. The hints about broomsticks and night flight are generic witch lore, not Colombian tradition.",
+            "feedback": "Fact check: uncertain. I found no source for the Colombia-specific belief that holy water in the house corners makes witches run away. The common folk and Catholic accounts say it drives off the devil, evil spirits or bad energy. Witches are plausible, since the question's hints (broomstick, flying at night) point to them. The hints themselves are fine, and the wrong answers (thieves, neighbors, debt collectors) are clearly wrong. The fun fact is plausible but I didn't verify it. Hint 1 is vague. 'Evil spirits' or 'the devil' would be the better-documented answer.",
             "problems": [
               "fact"
             ],
             "reviewed_on": "2026-10-30",
             "reviewer": "llm",
             "model": "claude-opus-5-5",
-            "previous": null
+            "previous": {
+              "decision": "needs_work",
+              "feedback": "Fact check: uncertain. In Colombian and Latin American tradition, holy water in the corners of a house usually drives away evil spirits, the devil or bad energies. Witches are not the standard answer. I did not verify this by search, so the claim that witches flee is shaky. The hints about broomsticks and night flight are generic witch lore, not Colombian tradition.",
+              "problems": [
+                "fact"
+              ],
+              "reviewed_on": "2026-10-30",
+              "reviewer": "llm",
+              "model": "claude-opus-5-5",
+              "previous": null
+            }
           }
         }
       },
@@ -72899,26 +72909,26 @@
     },
     {
       "id": "q-7365",
-      "question": "It falls from the clouds on stormy afternoons, pounds on tin roofs and can turn the streets white. What falls in a hailstorm?",
-      "answer": "Little balls of ice",
+      "question": "It falls from the clouds on stormy afternoons, sounds very loud on tin roofs and can turn streets white. What falls in a hailstorm?",
+      "answer": "Balls of ice",
       "wrong_answers": [
         "Flakes of snow",
-        "Volcanic ash",
+        "Bits of volcanic ash",
         "Grains of sand"
       ],
       "hints": [
-        "You can pick it up in your hand, but it melts fast.",
-        "They are hard and can bounce off the ground.",
-        "It's frozen water shaped like tiny marbles."
+        "You can pick them up in your hand, but they melt fast.",
+        "They are hard and can bounce on the ground.",
+        "It's frozen water in small, round lumps."
       ],
-      "description": "When the Bogotá sky starts playing the drums without asking permission.",
-      "fun_fact": "On November 3, 2007, such a heavy hailstorm hit Bogotá that in some streets the ice piled up almost 1 meter (3 ft) deep.",
-      "difficulty": 3,
+      "description": "When the Bogotá sky starts playing the drums without asking anyone's permission.",
+      "fun_fact": "On November 3, 2007, a hailstorm in Bogotá was so strong that the ice piled up to almost 1 m (3 ft) on some streets.",
+      "difficulty": 2,
       "status": "needs_work",
-      "batch": "tr-en-15",
+      "batch": "tr-en-16",
       "review": {
         "decision": "needs_work",
-        "feedback": "source: the fun fact's depth claim, repeated faithfully from the Spanish, is unconfirmed. The fact check found no source for \"almost 1 meter\" of ice in the November 3, 2007 Bogotá hailstorm, and I can't confirm it either. The source needs correcting, for example by dropping the depth: \"On November 3, 2007, the strongest hailstorm in almost 40 years hit Bogotá, flooding streets and burying cars under ice.\" Fact check: uncertain. The answer (little balls of ice) is right, and the wrong answers (snow, ash, sand) are wrong. The hints are fine. The storm date is real: a record hailstorm hit Bogotá on Nov 3, 2007. I found no source for the 'almost 1 meter (3 ft) deep' figure. The only depth I found was 24 inches (~60 cm), and that was for a March 2015 storm in southern Bogotá, not 2007. The fun fact's depth is probably exaggerated or invented.",
+        "feedback": "source: the fun fact's claim that ice piled up to almost 1 m on some Bogotá streets is unconfirmed. The fact check verifies the November 3, 2007 hailstorm but found no source for the depth, and I can't confirm it from my own knowledge. The translation renders the source faithfully, so the source's fun fact needs correcting first, for example: \"On November 3, 2007, a hailstorm in Bogotá, the strongest in almost 40 years, covered streets in ice and interrupted the Rock al Parque festival.\" Fact check: uncertain. The answer (balls of ice), the wrong answers and the hints are fine. The fun fact is only partly verified. A major Bogotá hailstorm on 3 Nov 2007 is well documented. It is described as the strongest in almost 40 years, and it interrupted Rock al Parque. I found no source saying the ice piled up to almost 1 m in some streets. Sources mention only streets covered in ice and flooded.",
         "problems": [
           "fact"
         ],
@@ -72927,7 +72937,7 @@
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "source: the fun fact's claim that ice piled up nearly 1 meter deep in Bogotá on November 3, 2007 is unconfirmed. The fact check found no source for it and one summary suggested about 20 cm, and I can't confirm it either. Correct the Spanish source first, for example to \"strongest hailstorm in almost 40 years; it covered streets in ice and buried dozens of cars\", then carry the change over to the translation. Fact check: uncertain. The answer (balls of ice) is correct and the wrong answers (snow, ash, sand) are wrong. The hints are fine. The fun fact's date (Nov 3, 2007) and its status as Bogotá's strongest hailstorm in about 40 years are confirmed. I found no source for 'nearly 1 meter (3 ft) deep'. Reports only say streets turned white and dozens of cars were buried. One search summary gave about 20 cm, but I couldn't tell whether that figure belongs to the 2007 storm. The question's stem also says it 'falls from the clouds ... pounds on zinc roofs', which is a loose description and not a factual error.",
+          "feedback": "source: the fun fact's depth claim, repeated faithfully from the Spanish, is unconfirmed. The fact check found no source for \"almost 1 meter\" of ice in the November 3, 2007 Bogotá hailstorm, and I can't confirm it either. The source needs correcting, for example by dropping the depth: \"On November 3, 2007, the strongest hailstorm in almost 40 years hit Bogotá, flooding streets and burying cars under ice.\" Fact check: uncertain. The answer (little balls of ice) is right, and the wrong answers (snow, ash, sand) are wrong. The hints are fine. The storm date is real: a record hailstorm hit Bogotá on Nov 3, 2007. I found no source for the 'almost 1 meter (3 ft) deep' figure. The only depth I found was 24 inches (~60 cm), and that was for a March 2015 storm in southern Bogotá, not 2007. The fun fact's depth is probably exaggerated or invented.",
           "problems": [
             "fact"
           ],
@@ -72936,7 +72946,7 @@
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "source: the fun fact's claim that ice piled up to \"almost a meter\" in the November 3, 2007 Bogotá hailstorm is unconfirmed. The fact check found the storm but no source for the depth, and I can't confirm it either. The translation renders the source faithfully, so the source needs softening first, for example: \"a hailstorm hit Bogotá so hard that ice buried streets and dozens of cars.\" Fact check: uncertain. The Nov 3, 2007 Bogotá hailstorm is real, but I found no source for 'almost a meter (3 ft)' of ice. Sources only say streets were buried and dozens of cars were covered. The answer and wrong answers are fine.",
+            "feedback": "source: the fun fact's claim that ice piled up nearly 1 meter deep in Bogotá on November 3, 2007 is unconfirmed. The fact check found no source for it and one summary suggested about 20 cm, and I can't confirm it either. Correct the Spanish source first, for example to \"strongest hailstorm in almost 40 years; it covered streets in ice and buried dozens of cars\", then carry the change over to the translation. Fact check: uncertain. The answer (balls of ice) is correct and the wrong answers (snow, ash, sand) are wrong. The hints are fine. The fun fact's date (Nov 3, 2007) and its status as Bogotá's strongest hailstorm in about 40 years are confirmed. I found no source for 'nearly 1 meter (3 ft) deep'. Reports only say streets turned white and dozens of cars were buried. One search summary gave about 20 cm, but I couldn't tell whether that figure belongs to the 2007 storm. The question's stem also says it 'falls from the clouds ... pounds on zinc roofs', which is a loose description and not a factual error.",
             "problems": [
               "fact"
             ],
@@ -72945,7 +72955,7 @@
             "model": "claude-opus-5-5",
             "previous": {
               "decision": "needs_work",
-              "feedback": "Fact check: uncertain. The Nov 3, 2007 Bogotá hailstorm is real (strongest in ~40 years). I found no source for the \"almost 1 meter (3 ft) high\" depth. Sources say only that cars were buried and streets flooded.",
+              "feedback": "source: the fun fact's claim that ice piled up to \"almost a meter\" in the November 3, 2007 Bogotá hailstorm is unconfirmed. The fact check found the storm but no source for the depth, and I can't confirm it either. The translation renders the source faithfully, so the source needs softening first, for example: \"a hailstorm hit Bogotá so hard that ice buried streets and dozens of cars.\" Fact check: uncertain. The Nov 3, 2007 Bogotá hailstorm is real, but I found no source for 'almost a meter (3 ft)' of ice. Sources only say streets were buried and dozens of cars were covered. The answer and wrong answers are fine.",
               "problems": [
                 "fact"
               ],
@@ -72954,16 +72964,16 @@
               "model": "claude-opus-5-5",
               "previous": {
                 "decision": "needs_work",
-                "feedback": "Fact check: uncertain. The answer and wrong answers are fine, since hail is balls of ice. The Nov 3, 2007 Bogotá hailstorm is well documented, but I found no source for the \"almost 1 m (3 ft) deep\" figure. One Blu Radio piece mentions up to 1 m, but it seems to be about a different storm. Pulzo gives no depth.",
+                "feedback": "Fact check: uncertain. The Nov 3, 2007 Bogotá hailstorm is real (strongest in ~40 years). I found no source for the \"almost 1 meter (3 ft) high\" depth. Sources say only that cars were buried and streets flooded.",
                 "problems": [
                   "fact"
                 ],
-                "reviewed_on": "2026-10-29",
+                "reviewed_on": "2026-10-30",
                 "reviewer": "llm",
                 "model": "claude-opus-5-5",
                 "previous": {
                   "decision": "needs_work",
-                  "feedback": "Fact check: uncertain. The fun fact says hail piled up almost 1 m high on some streets on Nov 3, 2007. The storm and date are real, and it was the strongest in about 40 years. I found no source for the 1 m depth. A 50 cm figure I saw was for a different storm.",
+                  "feedback": "Fact check: uncertain. The answer and wrong answers are fine, since hail is balls of ice. The Nov 3, 2007 Bogotá hailstorm is well documented, but I found no source for the \"almost 1 m (3 ft) deep\" figure. One Blu Radio piece mentions up to 1 m, but it seems to be about a different storm. Pulzo gives no depth.",
                   "problems": [
                     "fact"
                   ],
@@ -72972,7 +72982,7 @@
                   "model": "claude-opus-5-5",
                   "previous": {
                     "decision": "needs_work",
-                    "feedback": "Fact check: uncertain. The answer (balls of ice) is correct and the 3 Nov 2007 Bogotá hailstorm is real. But the 'almost 1 m of ice on some streets' figure is only loosely supported. A BBC report cited 1.5 m of water and ice at one intersection, and I found no primary source for ice piled up on streets in general.",
+                    "feedback": "Fact check: uncertain. The fun fact says hail piled up almost 1 m high on some streets on Nov 3, 2007. The storm and date are real, and it was the strongest in about 40 years. I found no source for the 1 m depth. A 50 cm figure I saw was for a different storm.",
                     "problems": [
                       "fact"
                     ],
@@ -72981,14 +72991,24 @@
                     "model": "claude-opus-5-5",
                     "previous": {
                       "decision": "needs_work",
-                      "feedback": "Source: the fun fact says the ice piled up \"almost a meter\" deep on some Bogotá streets on November 3, 2007. The fact check could not confirm that figure (the only source found says 1.5 m of water and ice at one intersection), and I can't confirm it either. Fix the source's fun fact first, for example: \"On November 3, 2007, Bogotá's heaviest hailstorm in decades left ice piled up on some streets and trapped dozens of cars.\" Then carry the change into this translation. The translation itself is faithful and reads naturally. Fact check: uncertain. The 3 Nov 2007 Bogotá hailstorm is real. But the ice depth in the fun fact (almost 1 m on some streets) isn't confirmed. The only figure I found is 1.5 m (59 in) of water and ice at one intersection, from a forum quoting the BBC. Reports of how many cars were trapped also differ (30 vs 70).",
+                      "feedback": "Fact check: uncertain. The answer (balls of ice) is correct and the 3 Nov 2007 Bogotá hailstorm is real. But the 'almost 1 m of ice on some streets' figure is only loosely supported. A BBC report cited 1.5 m of water and ice at one intersection, and I found no primary source for ice piled up on streets in general.",
                       "problems": [
                         "fact"
                       ],
                       "reviewed_on": "2026-10-29",
                       "reviewer": "llm",
                       "model": "claude-opus-5-5",
-                      "previous": null
+                      "previous": {
+                        "decision": "needs_work",
+                        "feedback": "Source: the fun fact says the ice piled up \"almost a meter\" deep on some Bogotá streets on November 3, 2007. The fact check could not confirm that figure (the only source found says 1.5 m of water and ice at one intersection), and I can't confirm it either. Fix the source's fun fact first, for example: \"On November 3, 2007, Bogotá's heaviest hailstorm in decades left ice piled up on some streets and trapped dozens of cars.\" Then carry the change into this translation. The translation itself is faithful and reads naturally. Fact check: uncertain. The 3 Nov 2007 Bogotá hailstorm is real. But the ice depth in the fun fact (almost 1 m on some streets) isn't confirmed. The only figure I found is 1.5 m (59 in) of water and ice at one intersection, from a forum quoting the BBC. Reports of how many cars were trapped also differ (30 vs 70).",
+                        "problems": [
+                          "fact"
+                        ],
+                        "reviewed_on": "2026-10-29",
+                        "reviewer": "llm",
+                        "model": "claude-opus-5-5",
+                        "previous": null
+                      }
                     }
                   }
                 }
@@ -74451,7 +74471,7 @@
     },
     {
       "id": "q-7416",
-      "question": "The 20,000-peso banknote shows Julio Garavito and a drawing of the Moon, and a lunar crater bears his name. Why?",
+      "question": "The 20,000-peso bill shows Julio Garavito's face and a drawing of the Moon, and a lunar crater bears his name. Why?",
       "answer": "Because he studied the Moon's motion",
       "wrong_answers": [
         "Because he was the first Colombian in space",
@@ -74459,18 +74479,18 @@
         "Because he discovered water on the Moon"
       ],
       "hints": [
-        "He was a scholar from Bogotá in the late 19th and early 20th centuries.",
+        "He was a Bogotá scholar of the late 19th and early 20th centuries.",
         "He directed the National Astronomical Observatory.",
-        "He did his astronomy calculations with pencil and paper."
+        "He worked out astronomy calculations with pencil and paper."
       ],
       "description": "A banknote with its head in the clouds… and a little bit higher.",
       "fun_fact": "The Garavito crater is on the far side of the Moon, the side we never see from Earth.",
-      "difficulty": 7,
+      "difficulty": 5,
       "status": "needs_work",
-      "batch": "tr-en-15",
+      "batch": "tr-en-16",
       "review": {
         "decision": "needs_work",
-        "feedback": "source: the present tense “shows” is out of date. Since the 2016 series, the 20,000-peso note has shown Alfonso López Michelsen, and Garavito was on the previous series. The Spanish source (“lleva”) has the same error and should be corrected there, for example “The old 20,000-peso banknote showed…”. The translation is otherwise faithful.",
+        "feedback": "source: the question says the 20,000-peso bill shows Julio Garavito in the present tense (“lleva”), but the current series, issued since 2016, has Alfonso López Michelsen on the 20,000. Garavito was on the earlier design, so both the source and this faithful translation are out of date and need rewording, e.g. “The old 20,000-peso bill showed…”.",
         "problems": [
           "fact"
         ],
@@ -74479,7 +74499,7 @@
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "source: \"shows\" (Spanish \"lleva\") is out of date. Since the 2016 series, the 20,000-peso note has shown Alfonso López Michelsen, and Garavito and the Moon appear only on the earlier series. The fact check missed this, and the rater flagged it. The source should change to the past tense (\"showed\" / \"llevaba\", or \"the old 20,000-peso banknote\"), and the translation should then follow it.",
+          "feedback": "source: the present tense “shows” is out of date. Since the 2016 series, the 20,000-peso note has shown Alfonso López Michelsen, and Garavito was on the previous series. The Spanish source (“lleva”) has the same error and should be corrected there, for example “The old 20,000-peso banknote showed…”. The translation is otherwise faithful.",
           "problems": [
             "fact"
           ],
@@ -74488,14 +74508,24 @@
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "source: the present tense is out of date in the source as well as the translation. The current 20,000-peso bill (2016 family) shows Alfonso López Michelsen, and Garavito was on the earlier design. The source should say \"the old 20,000-peso bill showed\" or similar, and the translation should then follow. The translation is otherwise faithful.",
+            "feedback": "source: \"shows\" (Spanish \"lleva\") is out of date. Since the 2016 series, the 20,000-peso note has shown Alfonso López Michelsen, and Garavito and the Moon appear only on the earlier series. The fact check missed this, and the rater flagged it. The source should change to the past tense (\"showed\" / \"llevaba\", or \"the old 20,000-peso banknote\"), and the translation should then follow it.",
             "problems": [
               "fact"
             ],
             "reviewed_on": "2026-10-30",
             "reviewer": "llm",
             "model": "claude-opus-5-5",
-            "previous": null
+            "previous": {
+              "decision": "needs_work",
+              "feedback": "source: the present tense is out of date in the source as well as the translation. The current 20,000-peso bill (2016 family) shows Alfonso López Michelsen, and Garavito was on the earlier design. The source should say \"the old 20,000-peso bill showed\" or similar, and the translation should then follow. The translation is otherwise faithful.",
+              "problems": [
+                "fact"
+              ],
+              "reviewed_on": "2026-10-30",
+              "reviewer": "llm",
+              "model": "claude-opus-5-5",
+              "previous": null
+            }
           }
         }
       },
@@ -86323,7 +86353,7 @@
     },
     {
       "id": "q-7821",
-      "question": "It stays at the bottom of the rice pot, comes out toasted and crispy, and many families fight over it. What is it called in Colombia?",
+      "question": "It stays at the bottom of the rice pot, comes out toasted and crunchy, and families fight over it. What do Colombians call it?",
       "answer": "Pegao",
       "wrong_answers": [
         "Cuncho",
@@ -86331,18 +86361,18 @@
         "Calentado"
       ],
       "hints": [
-        "Its Spanish name says where it stays.",
+        "In Spanish, its name tells you where it stays.",
         "You can't serve it with a ladle: you have to scrape it off.",
         "It stays stuck to the pot."
       ],
-      "description": "The kitchen's hidden treasure isn't in a chest, it's in a pot.",
+      "description": "The kitchen's hidden treasure isn't in a chest, but in a pot.",
       "fun_fact": "Electric rice cookers leave almost no pegao, which is why many people still prefer to cook rice in a regular pot.",
       "difficulty": 4,
       "status": "needs_work",
-      "batch": "tr-en-15",
+      "batch": "tr-en-16",
       "review": {
         "decision": "needs_work",
-        "feedback": "Fact check: uncertain. \"Pegao\" (pega/pegao) is a real Colombian name for the crispy rice crust, so the answer is plausible. However, the Caribbean coast's most common name is \"cucayo\", and \"pegao\" is mainly Andean/Antillean, so \"Colombia\" is somewhat ambiguous. I found no source showing \"cuncho\" means this in Colombia. Some dictionaries list \"cuncho\" as a Colombian word for dregs or residue, and I couldn't rule out regional use for rice. Hint 1 (\"its Spanish name says where it stays\") is vague. The rice-cooker fun fact is plausible but I couldn't verify it.",
+        "feedback": "Fact check: uncertain. The crispy rice at the bottom of the pot is usually called 'pega' (Andean region) or 'cucayo/cucallo' (Caribbean coast); 'pegao' is used informally and is the common name in the Caribbean/Puerto Rico, but it is not clearly THE Colombian term. 'Chicharras' is also a regional name. 'Cuncho' (which in Colombia often means dregs or sediment) was not confirmed as a name for this rice, but I can't fully rule it out as a regional variant. The hint 'stays stuck to the pot' gives it away. The fun fact about rice cookers is unverified.",
         "problems": [
           "fact"
         ],
@@ -86351,26 +86381,26 @@
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "Source: the translation is faithful, but the fact check is uncertain on points I can't confirm either. \"Cuncho\" is Colombian for residue or dregs at the bottom of a pot, so it may be a defensible name for the same thing, and the claim that rice cookers leave almost no pegao, \"which is why\" people prefer pots, is unverified. The source needs a clearly wrong replacement for \"Cuncho\" and a softer or sourced fun fact; \"pegao\" itself is fine as a Colombian word, though \"pega\" and \"cucayo\" are also regional names. Fact check: uncertain. \"Pegao\" is used in Colombia, but sources mostly give cucayo/cucallo (Caribbean coast) and pega (Andean region) as the Colombian names. Pegao is the usual name in Puerto Rico. The wrong answer \"Cuncho\" could not be ruled out: the Spanish dictionary may list it in Colombia for the rice stuck to the pot, but I found no source for that. The fun fact about rice cookers was not verified. One source mentions a rice cooker designed to make pegao.",
+          "feedback": "Fact check: uncertain. \"Pegao\" (pega/pegao) is a real Colombian name for the crispy rice crust, so the answer is plausible. However, the Caribbean coast's most common name is \"cucayo\", and \"pegao\" is mainly Andean/Antillean, so \"Colombia\" is somewhat ambiguous. I found no source showing \"cuncho\" means this in Colombia. Some dictionaries list \"cuncho\" as a Colombian word for dregs or residue, and I couldn't rule out regional use for rice. Hint 1 (\"its Spanish name says where it stays\") is vague. The rice-cooker fun fact is plausible but I couldn't verify it.",
           "problems": [
-            "fact",
-            "ambiguity"
+            "fact"
           ],
           "reviewed_on": "2026-10-30",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "source: the fun fact is unverified. Neither the fact check nor I can confirm that electric rice cookers leave almost no pegao, or that this is why many people still cook rice in a regular pot. The source should soften or replace it, for example with a fact about the regional names pega and cucayo. The answer itself is fine: pegao is a widely used Colombian word, and the regional variants pega and cucayo are not among the options. Fact check: wrong. The main weakness is that Colombia has several regional names for this, so the question has more than one defensible answer. Cucayo (Caribbean coast) and pega (Andean region) are the most common; pegao is also used on the coast. The wrong answers are fine: chicharrón and calentado are different foods, and I found no source that lists 'cuncho' in Colombia (it looks like a variant of the Panamanian 'concho' or of 'concón'). Hint 1 ('Its name tells you where it stays') is inaccurate, because 'pegao' means 'stuck', not 'at the bottom'. Hint 3 ('stuck to the pot') gives the answer away. I couldn't verify the fun fact about electric rice cookers.",
+            "feedback": "Source: the translation is faithful, but the fact check is uncertain on points I can't confirm either. \"Cuncho\" is Colombian for residue or dregs at the bottom of a pot, so it may be a defensible name for the same thing, and the claim that rice cookers leave almost no pegao, \"which is why\" people prefer pots, is unverified. The source needs a clearly wrong replacement for \"Cuncho\" and a softer or sourced fun fact; \"pegao\" itself is fine as a Colombian word, though \"pega\" and \"cucayo\" are also regional names. Fact check: uncertain. \"Pegao\" is used in Colombia, but sources mostly give cucayo/cucallo (Caribbean coast) and pega (Andean region) as the Colombian names. Pegao is the usual name in Puerto Rico. The wrong answer \"Cuncho\" could not be ruled out: the Spanish dictionary may list it in Colombia for the rice stuck to the pot, but I found no source for that. The fun fact about rice cookers was not verified. One source mentions a rice cooker designed to make pegao.",
             "problems": [
-              "fact"
+              "fact",
+              "ambiguity"
             ],
             "reviewed_on": "2026-10-30",
             "reviewer": "llm",
             "model": "claude-opus-5-5",
             "previous": {
               "decision": "needs_work",
-              "feedback": "Fact check: uncertain. 'Pegao' (or 'pega') is a valid Colombian name for the rice crust, mainly in Antioquia, Bogotá and the Andean region. The Caribbean coast says 'cucayo', so the answer is region-dependent. 'Cuncho' is listed as a wrong answer, but it is a documented Latin American word for dregs or residue at the bottom of a pot. My searches did not confirm or rule out its use for rice crust in Colombia, so it may be a valid alternative. The question also says 'What do Colombians call it?', which implies a single name. The 'Cuncho' distractor is risky, and 'Calentado' (reheated leftovers) is fine.",
+              "feedback": "source: the fun fact is unverified. Neither the fact check nor I can confirm that electric rice cookers leave almost no pegao, or that this is why many people still cook rice in a regular pot. The source should soften or replace it, for example with a fact about the regional names pega and cucayo. The answer itself is fine: pegao is a widely used Colombian word, and the regional variants pega and cucayo are not among the options. Fact check: wrong. The main weakness is that Colombia has several regional names for this, so the question has more than one defensible answer. Cucayo (Caribbean coast) and pega (Andean region) are the most common; pegao is also used on the coast. The wrong answers are fine: chicharrón and calentado are different foods, and I found no source that lists 'cuncho' in Colombia (it looks like a variant of the Panamanian 'concho' or of 'concón'). Hint 1 ('Its name tells you where it stays') is inaccurate, because 'pegao' means 'stuck', not 'at the bottom'. Hint 3 ('stuck to the pot') gives the answer away. I couldn't verify the fun fact about electric rice cookers.",
               "problems": [
                 "fact"
               ],
@@ -86379,14 +86409,24 @@
               "model": "claude-opus-5-5",
               "previous": {
                 "decision": "needs_work",
-                "feedback": "Fact check: uncertain. Pegao is the standard Colombian term. But \"cuncho\" is also reported as a regional word for the rice crust or dregs in Colombia, Ecuador and Peru, so it may not be clearly wrong. My search did not confirm or rule this out. Other regional names are cucayo (Caribbean coast) and pega.",
+                "feedback": "Fact check: uncertain. 'Pegao' (or 'pega') is a valid Colombian name for the rice crust, mainly in Antioquia, Bogotá and the Andean region. The Caribbean coast says 'cucayo', so the answer is region-dependent. 'Cuncho' is listed as a wrong answer, but it is a documented Latin American word for dregs or residue at the bottom of a pot. My searches did not confirm or rule out its use for rice crust in Colombia, so it may be a valid alternative. The question also says 'What do Colombians call it?', which implies a single name. The 'Cuncho' distractor is risky, and 'Calentado' (reheated leftovers) is fine.",
                 "problems": [
                   "fact"
                 ],
-                "reviewed_on": "2026-10-29",
+                "reviewed_on": "2026-10-30",
                 "reviewer": "llm",
                 "model": "claude-opus-5-5",
-                "previous": null
+                "previous": {
+                  "decision": "needs_work",
+                  "feedback": "Fact check: uncertain. Pegao is the standard Colombian term. But \"cuncho\" is also reported as a regional word for the rice crust or dregs in Colombia, Ecuador and Peru, so it may not be clearly wrong. My search did not confirm or rule this out. Other regional names are cucayo (Caribbean coast) and pega.",
+                  "problems": [
+                    "fact"
+                  ],
+                  "reviewed_on": "2026-10-29",
+                  "reviewer": "llm",
+                  "model": "claude-opus-5-5",
+                  "previous": null
+                }
               }
             }
           }
@@ -98184,18 +98224,18 @@
         "“Espumas”"
       ],
       "hints": [
-        "I'm sung above all to honor parents.",
-        "My songwriter is Héctor Ochoa.",
-        "My lyrics pass through childhood, youth, love, children and old age."
+        "I am sung above all as a tribute to parents.",
+        "I was written by Héctor Ochoa.",
+        "My lyrics travel through childhood, youth, love, having children and old age."
       ],
-      "description": "A song that leaves parents with teary eyes and a handkerchief at the ready.",
+      "description": "A song that sends parents reaching for a handkerchief before anyone has cut the cake.",
       "fun_fact": "“El camino de la vida” was chosen as the Colombian song of the 20th century.",
       "difficulty": 10,
       "status": "needs_work",
-      "batch": "tr-en-15",
+      "batch": "tr-en-16",
       "review": {
         "decision": "needs_work",
-        "feedback": "source: the Spanish question calls “El camino de la vida” a “pasillo paisa”, and the translation repeats this. The fact check says sources classify it as a bambuco, and I can't confirm “pasillo” from my own knowledge. Correct the source first, using “bambuco paisa” or a genre-free “canción paisa”, then carry that into the English. Fact check: wrong. The question calls the song a 'paisa pasillo', but sources classify \"El camino de la vida\" as a bambuco, not a pasillo. The answer, the composer (Héctor Ochoa), the wrong answers, the lyric themes and the fun fact (chosen Colombian song of the 20th century, by a 1999 poll and the Academia Colombiana de Música) all check out.",
+        "feedback": "source: the fact check is 'wrong'. It says sources classify “El camino de la vida” as a bambuco, not a pasillo, and I can't confirm “pasillo” from my own knowledge. The source's “pasillo paisa” carries the same claim, so the source needs correcting first, for example to “paisa song” or “paisa bambuco”; then the translation can follow it. The translation itself is faithful. Fact check: wrong. The question calls the song a \"paisa pasillo\", but sources classify \"El camino de la vida\" as a bambuco, not a pasillo. The rest holds up: the author is Héctor Ochoa, the lyrics follow the stages of life, and in 1999 the Academia Colombiana de Música chose it as Colombian Song of the 20th century. The other options (Pueblito viejo, Los guaduales, Espumas) are different songs. I did not check whether they fit the \"wrong answer\" role beyond that. One source says the song is not clearly tied to pasillo, and I found none that calls it one.",
         "problems": [
           "fact"
         ],
@@ -98204,7 +98244,7 @@
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "source: the error is in the Spanish source and the translation copies it faithfully. It calls “El camino de la vida” a pasillo, but the fact check found sources calling it a bambuco (El Comercio) or a vals (Portafolio). The source should drop the genre (“a paisa song”), then the translation can follow. Fact check: wrong. The song is not a pasillo. Sources call \"El camino de la vida\" a bambuco (El Comercio); Portafolio calls it a vals. The composer (Héctor Ochoa), the theme and the \"Colombian Song of the 20th century\" title (1999 poll) check out. The wrong answers are fine: Pueblito viejo, Los guaduales and Espumas are different songs.",
+          "feedback": "source: the Spanish question calls “El camino de la vida” a “pasillo paisa”, and the translation repeats this. The fact check says sources classify it as a bambuco, and I can't confirm “pasillo” from my own knowledge. Correct the source first, using “bambuco paisa” or a genre-free “canción paisa”, then carry that into the English. Fact check: wrong. The question calls the song a 'paisa pasillo', but sources classify \"El camino de la vida\" as a bambuco, not a pasillo. The answer, the composer (Héctor Ochoa), the wrong answers, the lyric themes and the fun fact (chosen Colombian song of the 20th century, by a 1999 poll and the Academia Colombiana de Música) all check out.",
           "problems": [
             "fact"
           ],
@@ -98213,7 +98253,7 @@
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "source: the fact check says “El camino de la vida” is a bambuco, not a “pasillo paisa”, and I can't confirm the genre from my own knowledge. The error comes from the Spanish source, which the translation follows faithfully. Correct the source by dropping the genre (“canción paisa”), or use “bambuco” if verified, then retranslate. Fact check: wrong. The question calls the song a 'pasillo paisa', but sources describe 'El camino de la vida' as a bambuco, not a pasillo. The answer, author (Héctor Ochoa) and 'song of the 20th century' (1999 Academia Colombiana de Música poll) are correct. Wrong answers are other songs.",
+            "feedback": "source: the error is in the Spanish source and the translation copies it faithfully. It calls “El camino de la vida” a pasillo, but the fact check found sources calling it a bambuco (El Comercio) or a vals (Portafolio). The source should drop the genre (“a paisa song”), then the translation can follow. Fact check: wrong. The song is not a pasillo. Sources call \"El camino de la vida\" a bambuco (El Comercio); Portafolio calls it a vals. The composer (Héctor Ochoa), the theme and the \"Colombian Song of the 20th century\" title (1999 poll) check out. The wrong answers are fine: Pueblito viejo, Los guaduales and Espumas are different songs.",
             "problems": [
               "fact"
             ],
@@ -98222,14 +98262,24 @@
             "model": "claude-opus-5-5",
             "previous": {
               "decision": "needs_work",
-              "feedback": "source: the riddle calls “El camino de la vida” a pasillo, but the fact check says sources describe it as a vals (waltz) or bambuco, and I can't confirm it is a pasillo. The source should say something like “I'm a song from Antioquia” instead. The fun fact could also add that the vote was in 1999. Once the source is fixed, the translation needs the same change. Fact check: wrong. The answer song and composer are right (Héctor Ochoa; 1999 chosen as Colombian song of the 20th century). But the riddle calls it a \"pasillo\", and no source supports that. Radio Nacional describes it as a nostalgic vals (waltz), and other sources say bambuco or vals.",
+              "feedback": "source: the fact check says “El camino de la vida” is a bambuco, not a “pasillo paisa”, and I can't confirm the genre from my own knowledge. The error comes from the Spanish source, which the translation follows faithfully. Correct the source by dropping the genre (“canción paisa”), or use “bambuco” if verified, then retranslate. Fact check: wrong. The question calls the song a 'pasillo paisa', but sources describe 'El camino de la vida' as a bambuco, not a pasillo. The answer, author (Héctor Ochoa) and 'song of the 20th century' (1999 Academia Colombiana de Música poll) are correct. Wrong answers are other songs.",
               "problems": [
                 "fact"
               ],
               "reviewed_on": "2026-10-30",
               "reviewer": "llm",
               "model": "claude-opus-5-5",
-              "previous": null
+              "previous": {
+                "decision": "needs_work",
+                "feedback": "source: the riddle calls “El camino de la vida” a pasillo, but the fact check says sources describe it as a vals (waltz) or bambuco, and I can't confirm it is a pasillo. The source should say something like “I'm a song from Antioquia” instead. The fun fact could also add that the vote was in 1999. Once the source is fixed, the translation needs the same change. Fact check: wrong. The answer song and composer are right (Héctor Ochoa; 1999 chosen as Colombian song of the 20th century). But the riddle calls it a \"pasillo\", and no source supports that. Radio Nacional describes it as a nostalgic vals (waltz), and other sources say bambuco or vals.",
+                "problems": [
+                  "fact"
+                ],
+                "reviewed_on": "2026-10-30",
+                "reviewer": "llm",
+                "model": "claude-opus-5-5",
+                "previous": null
+              }
             }
           }
         }
