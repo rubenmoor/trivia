@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "659ad82f",
+  "hash": "e26d3b65",
   "questions": [
     {
       "id": "q-0001",
@@ -8111,40 +8111,6 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Guilhem Vellut from Paris, France",
         "author_url": "https://www.flickr.com/people/22539273@N00"
-      },
-      "background": null
-    },
-    {
-      "id": "q-0381",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "languages-of-the-world",
-      "bundle": "base",
-      "description": "Germany has some super long words, but this one is so tiny it fits on a stick of gum.",
-      "question": "If someone in Germany says “Danke” to you, what are they saying?",
-      "answer": "Thank you",
-      "wrong_answers": [
-        "Hello",
-        "Goodbye",
-        "Please"
-      ],
-      "hints": [
-        "Your parents taught you to say it when you were little.",
-        "It's one of the “magic words” of good manners.",
-        "It sounds a lot like its English meaning."
-      ],
-      "fun_fact": "“Danke” in German and “thank” in English sound alike because the two languages are cousins that grew from the same old language.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Berlin%2C_Brandenburger_Tor_--_2008_--_0153.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABerlin%2C_Brandenburger_Tor_--_2008_--_0153.jpg",
-        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Dietmar Rabich",
-        "author_url": "https://www.wikidata.org/wiki/Q34788025"
       },
       "background": null
     },
