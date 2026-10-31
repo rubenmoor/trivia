@@ -504303,7 +504303,8 @@
       },
       "bundle": "base",
       "locale": "en",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-6524",

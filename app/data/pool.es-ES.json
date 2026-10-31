@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "f0a64ef8",
+  "hash": "dc9c9fb7",
   "questions": [
     {
       "id": "q-0001",
@@ -200077,40 +200077,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Kskhh",
         "author_url": "https://commons.wikimedia.org/wiki/User:Kskhh"
-      },
-      "background": null
-    },
-    {
-      "id": "q-6523",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "amphibians",
-      "bundle": "base",
-      "description": "Una palabra tan elegante que hace que las ranas parezcan agentes secretos.",
-      "question": "Muchas ranas son «nocturnas». ¿Qué significa eso?",
-      "answer": "Que están activas de noche",
-      "wrong_answers": [
-        "Que viven solo en los árboles",
-        "Que comen solo plantas",
-        "Que duermen todo el invierno"
-      ],
-      "hints": [
-        "Tiene que ver con el momento del día.",
-        "Los búhos y los murciélagos también lo son.",
-        "Cuando tú te vas a la cama, ellas se despiertan."
-      ],
-      "fun_fact": "Muchas ranas tienen unos ojos enormes que les ayudan a ver bien en la oscuridad.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Pond_and_reeds_-_geograph.org.uk_-_6684281.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APond_and_reeds_-_geograph.org.uk_-_6684281.jpg",
-        "credit": "Alan Hughes · CC BY-SA 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "Alan Hughes",
-        "author_url": "https://www.geograph.org.uk/profile/121420"
       },
       "background": null
     },
