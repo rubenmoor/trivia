@@ -135,6 +135,13 @@ def cmd_translate(args):
     return parallel(work, todo, args.jobs, "translate", "calls")
 
 
+def unmerged(d):
+    """Ids of the run's travelling translations when none has an entry in the locale file (merge's output lost), else []."""
+    have = {t["id"] for t in translations.load(run_locale(d))["questions"] if t.get("batch") == d.name}
+    ids = sorted(q["tmp_id"] for _, qs in translated_drafts(d) for q in qs)
+    return [] if have & set(ids) else ids
+
+
 def merge_translations(d):
     """Rated and checked translations into questions.<locale>.json as drafts (difficulty from the rating);
     a stale entry's review is kept as `previous`. Not travelling → not-travelling.json, no entry."""
@@ -152,8 +159,8 @@ def merge_translations(d):
         for f in sorted((d / "translations").glob("*.json")):
             for t in load_json(f)["items"]:
                 i = t["id"]
-                if i in merged:
-                    continue
+                if i in merged and (t["travels"] == "no" or by_id.get(i, {}).get("batch") == run):
+                    continue  # a merged id whose entry is gone (file not kept) is merged again
                 if t["travels"] == "no":
                     away.append({"id": i, "reason": t["reason"], "notes": t["notes"],
                                  "question": src[i]["question"], "answer": src[i]["answer"]})
@@ -381,6 +388,9 @@ def cmd_translate_batch(args):
     ], again, run)
     cfg = load_json(d / "run.json")
     save_json(d / "run.json", {**cfg, "done": cfg.get("done") or datetime.date.today().isoformat()})
+    if lost := unmerged(d):
+        sys.exit(f"{run}: {len(lost)} translation(s) have no {locale} entry ({', '.join(lost[:5])}…); "
+                 f"rerun `{again}`, if it stays so stop and report.")
     out = write_translate_report(run)
     print(f"  report: {out.relative_to(ROOT)}")
     h = health.translation_health(run)

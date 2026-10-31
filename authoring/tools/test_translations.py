@@ -35,5 +35,22 @@ class CommitFiles(unittest.TestCase):
         self.assertEqual(len(files), len(set(files)))
 
 
+class LostMerge(unittest.TestCase):
+    def test_unmerged_when_no_entry(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp) / "tr-de-1"
+            paths = {l: Path(tmp) / f"{l}.json" for l in translations.LOCALES}
+            drafts = [("a", [{"tmp_id": "q-1"}, {"tmp_id": "q-2"}])]
+            with mock.patch.object(translations.layout, "translations", paths.get), \
+                    mock.patch.object(translate, "run_locale", return_value="de"), \
+                    mock.patch.object(translate, "translated_drafts", return_value=drafts):
+                self.assertEqual(translate.unmerged(d), ["q-1", "q-2"])
+                translations.save("de", {"questions": [{"id": "q-1", "batch": "tr-de-1"}]})
+                self.assertEqual(translate.unmerged(d), [])
+
+    def test_limit_words(self):
+        self.assertTrue(any(w in "you've hit your weekly limit" for w in qgen.LIMIT_WORDS))
+
+
 if __name__ == "__main__":
     unittest.main()
