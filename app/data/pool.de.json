@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "83a39b41",
+  "hash": "19550cb0",
   "questions": [
     {
       "id": "q-0001",
@@ -186545,40 +186545,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Infrogmation of New Orleans",
         "author_url": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-6706",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "supermarket-products",
-      "bundle": "base",
-      "description": "Eine Kuh, so gut gelaunt, dass es fast schon verdächtig ist.",
-      "question": "In einer runden Schachtel stecken Dreiecke in Alufolie, und auf dem Deckel lacht eine rote Kuh. Welches Lebensmittel ist darin?",
-      "answer": "Käse",
-      "wrong_answers": [
-        "Butter",
-        "Schokolade",
-        "Speiseeis"
-      ],
-      "hints": [
-        "Passt prima aufs Brot oder auf Cracker.",
-        "Die wichtigste Zutat ist Milch.",
-        "Mäuse in Zeichentrickfilmen sind ganz verrückt danach."
-      ],
-      "fun_fact": "„Die lachende Kuh“ wurde 1921 in Frankreich erfunden, und die Ohrringe der Kuh sind winzige Schachteln genau dieses Käses.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Cows_on_meadow_near_Siedlung_Platte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ACows_on_meadow_near_Siedlung_Platte.jpg",
-        "credit": "Gerda Arendt · CC0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "author": "Gerda Arendt",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Gerda_Arendt"
       },
       "background": null
     },

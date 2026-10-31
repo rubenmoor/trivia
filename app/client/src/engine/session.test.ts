@@ -126,6 +126,14 @@ test("rr-competitive: the first to the last level wins, the others lose", () => 
 });
 
 test("rr-competitive: the supply check counts every seat's levels", () => {
+  // thin pool (30 per difficulty), so the test doesn't depend on the real pool's size
+  const kept = new Map<number, number>();
+  const thin = realPool().filter((q) => {
+    const n = (kept.get(q.difficulty) ?? 0) + 1;
+    kept.set(q.difficulty, n);
+    return n <= 30;
+  });
+  const data: EngineData = engineData(thin, realCategories(), realBundles(), realAgeGroups());
   const players = Array.from({ length: 40 }, (_, i) => `P${i}`);
   const r = gameAction(emptySave(), data, io(3), "new", { players, mode: "rr-competitive", bundles: ["base"] });
   assert.equal(r.status, 409);

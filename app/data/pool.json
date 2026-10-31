@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "91e7a824",
+  "hash": "be0ba5f0",
   "questions": [
     {
       "id": "q-0001",
@@ -169228,40 +169228,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Infrogmation of New Orleans",
         "author_url": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-6706",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "supermarket-products",
-      "bundle": "base",
-      "description": "Una vaca tan contenta que casi da sospecha.",
-      "question": "Viene en una caja redonda, cada triángulo está envuelto en papel aluminio y en la tapa sonríe una vaca roja. ¿Qué alimento hay adentro?",
-      "answer": "Queso untable",
-      "wrong_answers": [
-        "Mantequilla",
-        "Chocolate",
-        "Helado"
-      ],
-      "hints": [
-        "Puedes untarlo en pan o en galletas saladas.",
-        "Se hace con leche.",
-        "A los ratones de los dibujos animados les encanta esta comida."
-      ],
-      "fun_fact": "La Vaca que ríe se creó en Francia en 1921, y los aretes de la vaca son pequeñas cajas del mismo queso.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Cows_on_meadow_near_Siedlung_Platte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ACows_on_meadow_near_Siedlung_Platte.jpg",
-        "credit": "Gerda Arendt · CC0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "author": "Gerda Arendt",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Gerda_Arendt"
       },
       "background": null
     },

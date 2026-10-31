@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "b04c3762",
+  "hash": "b2508268",
   "questions": [
     {
       "id": "q-0002",
@@ -20412,40 +20412,6 @@
       "background": null
     },
     {
-      "id": "q-7049",
-      "status": "approved",
-      "difficulty": 4,
-      "subcategory": "ghosts-and-creatures",
-      "bundle": "colombia",
-      "description": "Una limpieza de la casa que no necesita ni trapero ni jabón.",
-      "question": "Según la tradición popular, si rocías agua bendita en los rincones de la casa, ¿quiénes salen corriendo?",
-      "answer": "Las brujas",
-      "wrong_answers": [
-        "Los ladrones",
-        "Los vecinos",
-        "Los cobradores"
-      ],
-      "hints": [
-        "No vienen a pedir plata prestada.",
-        "Según los cuentos, vuelan de noche.",
-        "Andan montadas en escoba."
-      ],
-      "fun_fact": "El agua bendita se guarda en pilas a la entrada de las iglesias, y mucha gente se lleva un frasquito para la casa.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Holy_water_font_at_Ballyhale_Church.jpg/3840px-Holy_water_font_at_Ballyhale_Church.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHoly_water_font_at_Ballyhale_Church.jpg",
-        "credit": "A.-K. D. · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "A.-K. D.",
-        "author_url": "https://commons.wikimedia.org/wiki/User:A.-K._D."
-      },
-      "background": null
-    },
-    {
       "id": "q-7050",
       "status": "approved",
       "difficulty": 6,
@@ -30877,40 +30843,6 @@
       "background": null
     },
     {
-      "id": "q-7365",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "mountains-and-landscapes",
-      "bundle": "colombia",
-      "description": "Cuando el cielo de Bogotá se pone a tocar batería sin pedir permiso.",
-      "question": "Cae de las nubes en tardes de aguacero, suena durísimo en los techos de zinc y puede dejar las calles blancas. ¿Qué cae en una granizada?",
-      "answer": "Bolitas de hielo",
-      "wrong_answers": [
-        "Copos de nieve",
-        "Ceniza de volcán",
-        "Granos de arena"
-      ],
-      "hints": [
-        "Se puede recoger con la mano, pero se derrite rápido.",
-        "Son duras y pueden rebotar en el piso.",
-        "Es agua congelada en forma de pelotitas."
-      ],
-      "fun_fact": "El 3 de noviembre de 2007 cayó en Bogotá una granizada tan fuerte que en algunas calles el hielo se acumuló hasta casi un metro.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Panorama_bogot%C3%A1.jpg/3840px-Panorama_bogot%C3%A1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APanorama_bogot%C3%A1.jpg",
-        "credit": "HaHa Calabacita · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "HaHa Calabacita",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:HaHa_Calabacita&action=edit&redlink=1"
-      },
-      "background": null
-    },
-    {
       "id": "q-7366",
       "status": "approved",
       "difficulty": 8,
@@ -32573,40 +32505,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Daveborge",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Daveborge&action=edit&redlink=1"
-      },
-      "background": null
-    },
-    {
-      "id": "q-7416",
-      "status": "approved",
-      "difficulty": 6,
-      "subcategory": "scientists-and-inventors",
-      "bundle": "colombia",
-      "description": "Un billete con la cabeza en las nubes… y un poquito más arriba.",
-      "question": "El billete de 20 000 pesos lleva la cara de Julio Garavito y un dibujo de la Luna, y un cráter lunar tiene su nombre. ¿Por qué?",
-      "answer": "Porque estudió el movimiento de la Luna",
-      "wrong_answers": [
-        "Porque fue el primer colombiano en el espacio",
-        "Porque inventó el calendario muisca",
-        "Porque descubrió el agua en la Luna"
-      ],
-      "hints": [
-        "Fue un sabio bogotano de finales del siglo XIX y comienzos del XX.",
-        "Dirigió el Observatorio Astronómico Nacional.",
-        "Hacía cálculos de astronomía con lápiz y papel."
-      ],
-      "fun_fact": "El cráter Garavito está en la cara oculta de la Luna, la que nunca vemos desde la Tierra.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AFullMoon2010.jpg",
-        "credit": "Gregory H. Revera · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Gregory H. Revera",
-        "author_url": null
       },
       "background": null
     },
@@ -45948,40 +45846,6 @@
       "background": null
     },
     {
-      "id": "q-7821",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "home-school-and-paperwork",
-      "bundle": "colombia",
-      "description": "El tesoro escondido de la cocina no está en un cofre, sino en una olla.",
-      "question": "Queda en el fondo de la olla del arroz, sale tostadito y crocante, y en muchas casas se pelean por él. ¿Cómo le dicen en Colombia?",
-      "answer": "El pegao",
-      "wrong_answers": [
-        "El cuncho",
-        "El chicharrón",
-        "El calentado"
-      ],
-      "hints": [
-        "Su nombre dice dónde se queda.",
-        "No se sirve con cucharón: hay que rasparlo.",
-        "Se queda adherido a la olla."
-      ],
-      "fun_fact": "Las ollas arroceras eléctricas casi no dejan pegao, por eso muchos todavía prefieren cocinar el arroz en olla normal.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/A_father%E2%80%99s_effort%2C_a_child%E2%80%99s_smile%E2%80%94this_is_real_life.jpg/3840px-A_father%E2%80%99s_effort%2C_a_child%E2%80%99s_smile%E2%80%94this_is_real_life.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_father%E2%80%99s_effort%2C_a_child%E2%80%99s_smile%E2%80%94this_is_real_life.jpg",
-        "credit": "Topumym · CC BY 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 4.0",
-        "license_url": "https://creativecommons.org/licenses/by/4.0",
-        "author": "Topumym",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Topumym"
-      },
-      "background": null
-    },
-    {
       "id": "q-7822",
       "status": "approved",
       "difficulty": 4,
@@ -59204,40 +59068,6 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Julio Enriquez from Denver,CO, USA",
         "author_url": "https://www.flickr.com/people/7806965@N07"
-      },
-      "background": null
-    },
-    {
-      "id": "q-8225",
-      "status": "approved",
-      "difficulty": 10,
-      "subcategory": "popular-and-andean-music",
-      "bundle": "colombia",
-      "description": "Una canción que deja a los papás con los ojos aguados y el pañuelo en la mano.",
-      "question": "Soy un pasillo paisa que no falta en bodas, grados y cumpleaños, y hago llorar a los papás. ¿Qué canción soy?",
-      "answer": "«El camino de la vida»",
-      "wrong_answers": [
-        "«Pueblito viejo»",
-        "«Los guaduales»",
-        "«Espumas»"
-      ],
-      "hints": [
-        "Me cantan sobre todo para rendir homenaje a los padres.",
-        "Mi autor es Héctor Ochoa.",
-        "Mi letra recorre la niñez, la juventud, el amor, los hijos y la vejez."
-      ],
-      "fun_fact": "«El camino de la vida» fue elegida como la canción colombiana del siglo XX.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Landscape_coffee_farm.jpg/3840px-Landscape_coffee_farm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALandscape_coffee_farm.jpg",
-        "credit": "Richard grivas · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Richard grivas",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Richard_grivas&action=edit&redlink=1"
       },
       "background": null
     },
