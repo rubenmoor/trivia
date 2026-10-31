@@ -85918,16 +85918,24 @@
       "description": "Una palabra elegante que hace que las ranas suenen a agentes secretos.",
       "fun_fact": "Muchas ranas tienen ojos enormes que las ayudan a ver bien en la oscuridad.",
       "difficulty": 3,
-      "status": "approved",
+      "status": "rejected",
       "batch": "tr-es-5",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-24",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "rejected",
+        "feedback": "no viaja",
+        "reviewed_on": "2026-10-30",
+        "reviewed_at": "2026-10-30T21:06:19",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "17daafe66081"
     },
