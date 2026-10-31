@@ -125,3 +125,4 @@ Done (pm plan 67, RV-24..RV-26). The developer and native speakers review `quest
   - QT-6 progress `es`: `tr-es-9` (2026-10-25) 300 translated, 295 approved, 5 needs_work; 4425 in the `es` pool (incl. es-sourced), target not met; next `tr-es-10`.
   - QT-6 progress `es`: `tr-es-10` (2026-10-25) 300 translated, 292 approved, 8 needs_work; 4717 in the `es` pool (incl. es-sourced), target not met; next `tr-es-11`.
   - QT-6 progress `es`: `tr-es-11` (2026-10-25) 300 translated, 292 approved, 8 needs_work; 5009 in the `es` pool (incl. es-sourced), target not met; next `tr-es-12`.
+  - QT-6 progress `es`: `tr-es-14` (2026-10-30, run by task 1779; `tr-es-12` and `tr-es-13` were done by other tasks) 300 translated, 296 approved, 4 needs_work; $0.12 per approved; 5303 in the `es` pool (incl. es-sourced), target not met (deficits at levels 7, 8, 11, 15); next `tr-es-15`.
