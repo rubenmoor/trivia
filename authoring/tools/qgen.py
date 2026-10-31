@@ -307,7 +307,7 @@ class UsageLimit(RuntimeError):
     """Claude reported a usage or session limit: wait for the reset, then rerun."""
 
 
-LIMIT_WORDS = ("usage limit", "session limit", "rate limit", "hit your limit")
+LIMIT_WORDS = ("usage limit", "session limit", "rate limit", "weekly limit", "hit your limit")
 # "resets 11pm (America/Bogota)", "resets 11:30pm", "resets Oct 9, 3am (Europe/Berlin)"
 RESET_RE = re.compile(r"resets\s+(?:(?P<mon>[a-z]{3})[a-z]*\.?\s+(?P<day>\d{1,2}),?\s+(?:at\s+)?)?"
                       r"(?P<h>\d{1,2})(?::(?P<m>\d{2}))?\s*(?P<ap>[ap]\.?m\.?)?(?:\s*\((?P<tz>[^)]+)\))?", re.I)
