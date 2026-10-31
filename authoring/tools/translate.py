@@ -387,14 +387,21 @@ def cmd_translate_batch(args):
     print(f"\nDone: {run}: {h['translated']} translated, {h['approved']} approved, {h['needs_work']} need work, "
           f"{h['not travelling']} not travelling ({h['not travelling confirmed']} confirmed) "
           f"(took {progress.duration(time.monotonic() - t0)}).")
-    files = [translations.path(locale), layout.POOL_FILE(locale, bundle), layout.BUNDLE_DATA, layout.DEMO_DATA, out]
-    if h["not travelling confirmed"]:
-        files.insert(1, POOL)
+    files = commit_files(locale, bundle, out, h["not travelling confirmed"])
     print("Commit exactly this:\n  git add " + " ".join(f.relative_to(ROOT).as_posix() for f in files) + "\n"
           f"  git commit -m \"{run}: {h['translated']} {'' if bundle == 'base' else bundle + ' '}questions into "
           f"{LANGUAGES[locale]}, {h['approved']} approved "
           f"(qgen batch --translate)\"")
     return []
+
+
+def commit_files(locale, bundle, out, confirmed):
+    """Files a translate run changed; a confirmed not-travelling source rejects its translations in every locale."""
+    files = [translations.path(locale), layout.POOL_FILE(locale, bundle), layout.BUNDLE_DATA, layout.DEMO_DATA, out]
+    if confirmed:
+        others = [l for l in translations.LOCALES if l != locale]
+        files[1:1] = [POOL] + [f for l in others for f in (translations.path(l), layout.POOL_FILE(l, bundle))]
+    return files
 
 
 def write_translate_report(run):

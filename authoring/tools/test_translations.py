@@ -4,7 +4,8 @@ from pathlib import Path
 from unittest import mock
 
 sys.path.insert(0, str(Path(__file__).parent))
-import translations  # noqa: E402
+import qgen  # noqa: E402,F401  (import order: the command modules import each other)
+import translate, translations  # noqa: E402
 
 
 class RejectForSources(unittest.TestCase):
@@ -20,6 +21,18 @@ class RejectForSources(unittest.TestCase):
                 self.assertEqual([t["status"] for t in es], ["rejected", "approved"])
                 self.assertEqual(es[0]["review"]["reviewer"], "human")
                 self.assertEqual([t["status"] for t in de], ["approved", "approved"])
+
+
+class CommitFiles(unittest.TestCase):
+    def test_confirmed_adds_other_locales(self):
+        out = Path("out.md")
+        plain = translate.commit_files("de", "base", out, 0)
+        self.assertNotIn(translations.path("es"), plain)
+        files = translate.commit_files("de", "base", out, 1)
+        for l in translations.LOCALES:
+            self.assertIn(translations.path(l), files)
+            self.assertIn(translate.layout.POOL_FILE(l, "base"), files)
+        self.assertEqual(len(files), len(set(files)))
 
 
 if __name__ == "__main__":
