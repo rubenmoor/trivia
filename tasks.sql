@@ -44212,7 +44212,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `qgen report --locale de` meets `targets.json` `base` → no next run; if all four locales are done: QT-6 `[x]` and record the four reports in `plans/16-content-target.md`. Fewer than 300 selected → add `run tr-de-22` starting only after a plan 17 batch QC done since. Else add `run tr-de-22`.
 - Health ✗: `pm decision list --grep "tr-de-21: health"`, none → `pm decision add "tr-de-21: health ✗, look at it?"`, no task link; never `qgen health ack`.
 - D-36: no prompt, pool, media or `qgen.py` changes; stage the printed `git add` paths (plus `app/data/demo/`), don''t commit. Also stage `authoring/data/questions.es*.json`, `app/data/pool*.json` when a confirmed not-travelling source rejected translations there. Exit 75 / other non-zero / exit 1 three times → `pm decision add "Continue <run> …?"` with the last 30 lines, `pm task-pending-decision`, stop. A Bash timeout isn''t a failure: rerun (resumes).', '2026-10-31T03:14:49Z', NULL, 1842, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1847, 84, 'merge the trunk and work tree questions', 'merge', 'open', -108, NULL, 'The trunk and work tree questions (this checkout, branch `pm/wt/questions`) conflict: merging one into the other fails. The
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1847, 84, 'merge the trunk and work tree questions', 'merge', 'done', -108, '2026-10-30, app/data/pool.de.json: only the hash line conflicted (generated export); re-ran qgen export on the merged sources (new hash 19550cb0), qgen validate OK', 'The trunk and work tree questions (this checkout, branch `pm/wt/questions`) conflict: merging one into the other fails. The
 work tree holds the work of `task 1842: run tr-de-20`.
 * `git merge --no-commit main` (the trunk''s HEAD), then resolve every conflict so both sides'' intent survives;
   read the tasks involved (`pm show <id>`) and the commits (`git log -p HEAD...main`) where it isn''t obvious
@@ -44221,7 +44221,17 @@ work tree holds the work of `task 1842: run tr-de-20`.
   `git merge --abort`
 Your note on `pm task done`: what conflicted and how you resolved it.
 
-Conflicting files: app/data/pool.de.json', '2026-10-31T03:14:57Z', NULL, NULL, 0, NULL, 'questions');
+Conflicting files: app/data/pool.de.json', '2026-10-31T03:14:57Z', '2026-10-31T03:15:36Z', NULL, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1848, 84, 'merge the trunk and work tree questions', 'merge', 'open', -106, NULL, 'The trunk and work tree questions (this checkout, branch `pm/wt/questions`) conflict: merging one into the other fails. The
+work tree holds the work of `task 1842: run tr-de-20`.
+* `git merge --no-commit main` (the trunk''s HEAD), then resolve every conflict so both sides'' intent survives;
+  read the tasks involved (`pm show <id>`) and the commits (`git log -p HEAD...main`) where it isn''t obvious
+* run the checks the project has for the files involved
+* stage the result (`git add`); pm commits the merge and merges this work tree into the trunk. Don''t
+  `git merge --abort`
+Your note on `pm task done`: what conflicted and how you resolved it.
+
+Conflicting files: app/data/pool.de.json', '2026-10-31T03:15:40Z', NULL, NULL, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -52669,6 +52679,7 @@ log: /home/ruben/code/trivia/.git/pm-logs/task-1841-run-1997.log', 1, '5c49763a5
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1998, 1841, '2026-10-31T01:47:22Z', '2026-10-31T02:15:30Z', 'done', NULL, 0, '5c49763a53dfd72a14a0b98cb83b6cbcc1def123', 'questions', 'claude-opus-5-5', 'a58c36f1-f828-4739-b7ce-9b137bf7a184', NULL, 20, 32, 10040, 1023493, 82029, 1.0618586, 82035, 60, 1756346);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1999, 1844, '2026-10-31T02:15:24Z', '2026-10-31T02:18:14Z', 'done', NULL, 0, '5c49763a53dfd72a14a0b98cb83b6cbcc1def123', 'app', 'claude-sonnet-5-5', '03c4f5d8-6b6d-4d9d-a080-2c140e651420', NULL, 9, 18, 2000, 406626, 52934, 0.2724346, 53173, 60, 1756346);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2000, 1842, '2026-10-31T02:15:40Z', '2026-10-31T03:14:57Z', 'done', NULL, 0, 'f3ddc637165122ad83b97af15917d020e9f6b473', 'questions', 'claude-sonnet-5-5', 'a133df61-9d5c-47e2-afd6-ba67df84d39e', NULL, 9, 18, 3087, 460969, 47719, 0.2678789, 62559, 60, 1756346);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2001, 1847, '2026-10-31T03:14:58Z', '2026-10-31T03:15:40Z', 'done', NULL, 0, '139e5c20646365ea0830b7c3d0fa56a011fd971f', 'questions', 'claude-sonnet-5-5', '97058451-db42-42df-94d4-1e545afe350c', NULL, 7, 14, 1128, 305933, 35447, 0.18368929999999997, 50032, 60, 1756346);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
