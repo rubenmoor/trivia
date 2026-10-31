@@ -544960,7 +544960,7 @@
     },
     {
       "id": "q-7049",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 4,
       "description": "Una limpieza de la casa que no necesita ni trapero ni jabón.",
       "question": "Según la tradición popular, si rocías agua bendita en los rincones de la casa, ¿quiénes salen corriendo?",
@@ -545018,13 +545018,20 @@
       "needs_media": false,
       "batch": "batch-17",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-23",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "needs_work",
+        "feedback": "Reporte de jugador (v0.1.0, 2026-10-30): Not a player report: flagged from translation runs tr-en-15/16. Fact check uncertain: no source for this specific belief that holy water in the house corners drives away witches. · Vista: «»",
+        "reviewed_on": "2026-10-30",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null
@@ -569314,7 +569321,7 @@
     },
     {
       "id": "q-7365",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 3,
       "description": "Cuando el cielo de Bogotá se pone a tocar batería sin pedir permiso.",
       "question": "Cae de las nubes en tardes de aguacero, suena durísimo en los techos de zinc y puede dejar las calles blancas. ¿Qué cae en una granizada?",
@@ -569372,13 +569379,20 @@
       "needs_media": false,
       "batch": "batch-18",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-23",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "needs_work",
+        "feedback": "Reporte de jugador (v0.1.0, 2026-10-30): Not a player report: flagged from translation runs tr-en-15/16. Fun fact: the 2007 Bogotá hailstorm is verified, but ice piled almost 1 m deep is unconfirmed. · Vista: «»",
+        "reviewed_on": "2026-10-30",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null
@@ -573232,7 +573246,7 @@
     },
     {
       "id": "q-7416",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 6,
       "description": "Un billete con la cabeza en las nubes… y un poquito más arriba.",
       "question": "El billete de 20 000 pesos lleva la cara de Julio Garavito y un dibujo de la Luna, y un cráter lunar tiene su nombre. ¿Por qué?",
@@ -573290,22 +573304,29 @@
       "needs_media": false,
       "batch": "batch-18",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-23",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
+        "decision": "needs_work",
+        "feedback": "Reporte de jugador (v0.1.0, 2026-10-30): Not a player report: flagged from translation runs tr-en-15/16. Present tense is out of date: since the 2016 banknote series the 20,000-peso note no longer shows Garavito as claimed; check. · Vista: «»",
+        "reviewed_on": "2026-10-30",
+        "reviewer": "human",
+        "model": null,
         "previous": {
-          "decision": "needs_work",
-          "feedback": "All four media candidates show the Chilean 20 000 peso banknote (Andrés Bello portrait and the reverse with a landscape), not the Colombian note with Julio Garavito and the Moon. A new search isn't allowed, so the slot needs media from somewhere else, e.g. a Commons file of the Colombian 20 000 COP note (2016 series) or a generic Moon photo as the illustrative image. No se encontró una imagen adecuada para esta pregunta.",
-          "problems": [
-            "media"
-          ],
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
           "reviewed_on": "2026-10-23",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
-          "previous": null
+          "previous": {
+            "decision": "needs_work",
+            "feedback": "All four media candidates show the Chilean 20 000 peso banknote (Andrés Bello portrait and the reverse with a landscape), not the Colombian note with Julio Garavito and the Moon. A new search isn't allowed, so the slot needs media from somewhere else, e.g. a Commons file of the Colombian 20 000 COP note (2016 series) or a generic Moon photo as the illustrative image. No se encontró una imagen adecuada para esta pregunta.",
+            "problems": [
+              "media"
+            ],
+            "reviewed_on": "2026-10-23",
+            "reviewer": "llm",
+            "model": "claude-opus-5-5",
+            "previous": null
+          }
         }
       },
       "bundle": "colombia",
@@ -604426,7 +604447,7 @@
     },
     {
       "id": "q-7821",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 3,
       "description": "El tesoro escondido de la cocina no está en un cofre, sino en una olla.",
       "question": "Queda en el fondo de la olla del arroz, sale tostadito y crocante, y en muchas casas se pelean por él. ¿Cómo le dicen en Colombia?",
@@ -604484,13 +604505,20 @@
       "needs_media": false,
       "batch": "batch-21",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-23",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "needs_work",
+        "feedback": "Reporte de jugador (v0.1.0, 2026-10-30): Not a player report: flagged from translation runs tr-en-15/16. Fact check uncertain: 'pega' (Andes) or 'cucayo' (Caribbean) are the usual names; 'pegao' may be informal or regional. · Vista: «»",
+        "reviewed_on": "2026-10-30",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null
@@ -635508,7 +635536,7 @@
     },
     {
       "id": "q-8225",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 10,
       "description": "Una canción que deja a los papás con los ojos aguados y el pañuelo en la mano.",
       "question": "Soy un pasillo paisa que no falta en bodas, grados y cumpleaños, y hago llorar a los papás. ¿Qué canción soy?",
@@ -635566,13 +635594,20 @@
       "needs_media": false,
       "batch": "batch-23",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-24",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "needs_work",
+        "feedback": "Reporte de jugador (v0.1.0, 2026-10-30): Not a player report: flagged from translation runs tr-en-15/16. Fact check says sources class «El camino de la vida» as a bambuco, not a pasillo; check. · Vista: «»",
+        "reviewed_on": "2026-10-30",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-24",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null
