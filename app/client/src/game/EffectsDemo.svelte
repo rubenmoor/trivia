@@ -1,15 +1,15 @@
 <script lang="ts">
   // /?efectos: every effect, recorded and synthesized, to compare on the TV (dev aid, UI-10).
   import Splash from "./question/Splash.svelte";
-  import { SPLASH_EXITS, type SplashExit } from "./question/splash.ts";
+  import { SPLASH_ENTRANCES, SPLASH_EXITS, type SplashEntrance, type SplashExit } from "./question/splash.ts";
   import { effects, music, sfx, setSoundtrack, sound, SOUNDTRACKS, soundtrackIds, unlock, type Cue, type SoundtrackId, type Track } from "./sound.svelte.ts";
 
   const list = effects();
   /** The splash on show: a sample category over a sample subcategory (the names fall back to the keys). */
-  let splash = $state<{ exit: SplashExit; n: number } | null>(null);
-  function playSplash(exit: SplashExit) {
+  let splash = $state<{ exit?: SplashExit; entrance?: SplashEntrance; n: number } | null>(null);
+  function playSplash(exit?: SplashExit, entrance?: SplashEntrance) {
     unlock();
-    splash = { exit, n: (splash?.n ?? 0) + 1 };
+    splash = { exit, entrance, n: (splash?.n ?? 0) + 1 };
   }
   const FILE_NAME: Record<Track, string> = { normal: "normal", question: "pregunta", submitted: "enviada", timed: "timed", roll: "roll", victory: "victory" };
   const loops: Track[] = ["normal", "question", "submitted", "timed"];
@@ -45,6 +45,13 @@
       <tr>
         <td colspan="6"><button onclick={() => loop(null)}>parar</button></td>
       </tr>
+      {#each SPLASH_ENTRANCES as entrance (entrance.id)}
+        <tr>
+          <td>splash in {entrance.id}</td>
+          <td><button onclick={() => playSplash(SPLASH_EXITS.find((e) => e.id === "fade"), entrance)}>jugar</button></td>
+          <td>silent</td>
+        </tr>
+      {/each}
       {#each SPLASH_EXITS as exit (exit.id)}
         <tr>
           <td>splash {exit.id}</td>
@@ -65,7 +72,7 @@
 
 {#if splash}
   {#key splash.n}
-    <div class="splash-stage"><Splash category="Geografía" subcategory="Capitales del mundo" start exit={splash.exit} /></div>
+    <div class="splash-stage"><Splash category="Geografía" subcategory="Capitales del mundo" start exit={splash.exit} entrance={splash.entrance} /></div>
   {/key}
 {/if}
 

@@ -1,13 +1,13 @@
 <script lang="ts">
-  // The category splash (plan 181): subcategory big and centred (the category alone without one), category small below; after a hold both leave with
-  // one of the exits in splash.ts and its sound. Over the whole screen, never in the way of play.
+  // The category splash (plans 181, 191): subcategory big and centred (the category alone without one), category small below; both come in with one of the
+  // silent entrances in splash.ts, hold, then leave with one of the exits and its sound. Over the whole screen, never in the way of play.
   import { untrack } from "svelte";
   import { displayName, questionLocale } from "../../lib/names.svelte.ts";
   import BundleMark_ from "../BundleMark.svelte";
   import type { BundleMark } from "../BundleMark.svelte";
   import { sfx } from "../sound.svelte.ts";
-  import { SPLASH_EXIT_MS, SPLASH_HOLD_MS, SPLASH_SUB_MAX_MS, reducedMotion } from "../timing.ts";
-  import { galleryHold, pickExit, type SplashExit } from "./splash.ts";
+  import { REDUCED_FADE_MS, SPLASH_EXIT_MS, SPLASH_HOLD_MS, SPLASH_IN_MS, SPLASH_SUB_MAX_MS, reducedMotion } from "../timing.ts";
+  import { galleryHold, pickEntrance, pickExit, type SplashEntrance, type SplashExit } from "./splash.ts";
 
   let {
     category: ownCategory,
@@ -16,50 +16,59 @@
     start,
     delay = 0,
     exit: forced,
+    entrance: forcedIn,
   }: {
     category: string;
     subcategory: string | null;
     /** A non-base question's bundle: its mark shows above the name. */
     bundle?: BundleMark | null;
-    /** The question has faded in (or flipped in): the hold begins. */
+    /** The question has faded in (or flipped in): the entrance begins. */
     start: boolean;
     /** Extra wait after `start` (ms). */
     delay?: number;
     /** A given exit (the effects demo); else a random one. */
     exit?: SplashExit;
+    /** A given entrance (the effects demo); else a random one. */
+    entrance?: SplashEntrance;
   } = $props();
 
   const hook = galleryHold();
   const category = hook?.topic?.category ?? untrack(() => ownCategory);
   const subcategory = hook?.topic ? hook.topic.subcategory : untrack(() => ownSub);
   const picked = untrack(() => forced ?? pickExit());
+  const entering = untrack(() => forcedIn ?? pickEntrance());
   const reduced = reducedMotion();
-  let phase = $state<"wait" | "hold" | "exit" | "gone">("wait");
+  /** The small line and the bundle mark come in this much after the big line. */
+  const LAG_MS = 100;
+  let phase = $state<"wait" | "in" | "hold" | "exit" | "gone">("wait");
   const catName = $derived(displayName("category", category));
   const subName = $derived(subcategory ? displayName("subcategory", subcategory) : null);
   /** The subcategory is the big line; the category sits small below it (decision 353), alone when there is no subcategory. */
   const bigName = $derived(subName ?? catName);
   const smallName = $derived(subName ? catName : null);
   const long = $derived(bigName.length > 24);
-  /** Per-letter vectors for the exits that split the name (the words stay whole, so wrapping works). */
+  /** Per-letter vectors for the entrance and exit that split the name (the words stay whole, so wrapping works). */
   const words = $derived.by(() => {
     const spec = reduced ? undefined : picked.letters;
-    if (!spec) return null;
+    const inSpec = reduced ? undefined : entering.letters;
+    if (!spec && !inSpec) return null;
     const parts = bigName.split(" ");
     const total = parts.join("").length;
     let i = 0;
     return parts.map((w) =>
       [...w].map((ch) => {
         const at = i++;
-        const stagger = (spec.order ? (spec.reverse ? total - 1 - at : at) / Math.max(1, total - 1) : Math.random()) * spec.spread * SPLASH_EXIT_MS;
+        const stagger = spec ? (spec.order ? (spec.reverse ? total - 1 - at : at) / Math.max(1, total - 1) : Math.random()) * spec.spread * SPLASH_EXIT_MS : 0;
+        const inStagger = inSpec ? (at / Math.max(1, total - 1)) * inSpec.spread * SPLASH_IN_MS : 0;
         return {
           ch,
-          vars: `--ld:${stagger}ms;--lx:${Math.round(Math.random() * 100 - 50)}vw;--ly:${Math.round(Math.random() * 100 - 50)}vh;--lr:${Math.round(Math.random() * 720 - 360)}deg`,
+          vars: `--li:${inStagger}ms;--ld:${stagger}ms;--lx:${Math.round(Math.random() * 100 - 50)}vw;--ly:${Math.round(Math.random() * 100 - 50)}vh;--lr:${Math.round(Math.random() * 720 - 360)}deg`,
         };
       }),
     );
   });
   const letterMs = picked.letters ? SPLASH_EXIT_MS * (1 - picked.letters.spread) : SPLASH_EXIT_MS;
+  const letterInMs = entering.letters ? SPLASH_IN_MS * (1 - entering.letters.spread) : SPLASH_IN_MS;
   const subShift = $derived(picked.subOffsetMs);
 
   $effect(() => {
@@ -67,14 +76,19 @@
     const timers: ReturnType<typeof setTimeout>[] = [];
     timers.push(
       setTimeout(() => {
-        phase = "hold";
+        phase = "in";
         timers.push(
           setTimeout(() => {
-            if (galleryHold()) return;
-            phase = "exit";
-            sfx(picked.cue);
-            timers.push(setTimeout(() => (phase = "gone"), SPLASH_EXIT_MS + SPLASH_SUB_MAX_MS));
-          }, SPLASH_HOLD_MS),
+            phase = "hold";
+            timers.push(
+              setTimeout(() => {
+                if (galleryHold()) return;
+                phase = "exit";
+                sfx(picked.cue);
+                timers.push(setTimeout(() => (phase = "gone"), SPLASH_EXIT_MS + SPLASH_SUB_MAX_MS));
+              }, SPLASH_HOLD_MS),
+            );
+          }, reduced ? REDUCED_FADE_MS : SPLASH_IN_MS),
         );
       }, delay),
     );
@@ -82,19 +96,19 @@
   });
 </script>
 
-{#if phase === "hold" || phase === "exit"}
-  <div class="splash" aria-hidden="true" style:--exit="{SPLASH_EXIT_MS}ms">
+{#if phase === "in" || phase === "hold" || phase === "exit"}
+  <div class="splash" aria-hidden="true" style:--exit="{SPLASH_EXIT_MS}ms" style:--in="{SPLASH_IN_MS}ms" style:--lag="{LAG_MS}ms" style:--fade="{REDUCED_FADE_MS}ms">
     <div class="box" class:long>
-      {#if bundle}<span class="mark fade" class:go={phase === "exit"} style:--delay="0ms"><BundleMark_ {bundle} /></span>{/if}
+      {#if bundle}<span class="mark {phase === "in" ? (reduced ? "in-fade" : "in-rise") : "fade"}" class:go={phase === "exit"} style:--delay="0ms"><BundleMark_ {bundle} /></span>{/if}
       <p
-        class="category {reduced ? 'fade' : picked.category}"
+        class="category {phase === 'in' ? (reduced ? 'in-fade' : entering.category) : reduced ? 'fade' : picked.category}"
         class:go={phase === "exit"}
         style:--delay="{Math.max(0, -subShift)}ms"
         lang={questionLocale()}
       >
         {#if words}
           {#each words as word, w (w)}
-            <span class="w" style:--lms="{letterMs}ms">{#each word as { ch, vars }, k (k)}<span class="l" style={vars}>{ch}</span>{/each}</span>{" "}
+            <span class="w" style:--lms="{phase === 'in' ? letterInMs : letterMs}ms">{#each word as { ch, vars }, k (k)}<span class="l" style={vars}>{ch}</span>{/each}</span>{" "}
           {/each}
         {:else}
           {bigName}
@@ -102,7 +116,7 @@
       </p>
       {#if smallName}
         <p
-          class="sub {reduced ? 'fade' : `sub-${picked.sub}`}"
+          class="sub {phase === 'in' ? (reduced ? 'in-fade' : entering.sub) : reduced ? 'fade' : `sub-${picked.sub}`}"
           class:go={phase === "exit"}
           style:--delay="{Math.max(0, subShift)}ms"
           lang={questionLocale()}
@@ -178,6 +192,88 @@
     font-size: calc(2.6 * var(--u));
     font-weight: 500;
     -webkit-text-stroke-width: calc(0.3 * var(--u));
+  }
+
+  /* Entrances (plan 191): run at once and end on the resting look, so the hold shows the same frame whichever ran */
+  .in-slam,
+  .in-pop,
+  .in-slide,
+  .in-drop,
+  .in-rise,
+  .in-fade,
+  .in-letters .l {
+    animation-duration: var(--in);
+    animation-delay: 0ms;
+    animation-fill-mode: both;
+    animation-play-state: running;
+  }
+  .in-slam {
+    animation-name: in-slam;
+    animation-timing-function: cubic-bezier(0.2, 0.7, 0.3, 1);
+  }
+  .in-pop {
+    animation-name: in-pop;
+    animation-timing-function: ease-out;
+  }
+  .in-slide {
+    animation-name: in-slide;
+    animation-timing-function: ease-out;
+  }
+  .in-drop {
+    animation-name: in-drop;
+  }
+  .in-fade {
+    animation-name: in-fade;
+    animation-duration: var(--fade);
+  }
+  .in-rise {
+    animation-name: in-rise;
+    animation-duration: calc(var(--in) - var(--lag));
+    animation-delay: var(--lag);
+    animation-timing-function: ease-out;
+  }
+  .in-letters .l {
+    animation-name: in-letter;
+    animation-duration: var(--lms);
+    animation-delay: var(--li);
+    animation-timing-function: cubic-bezier(0.2, 0.8, 0.3, 1.2);
+  }
+  @keyframes in-slam {
+    from { transform: scale(5); opacity: 0; }
+    55% { transform: scale(0.92); opacity: 1; }
+    80% { transform: scale(1.03); }
+    to { transform: none; opacity: 1; }
+  }
+  @keyframes in-pop {
+    from { transform: scale(0); opacity: 0; }
+    60% { transform: scale(1.18); opacity: 1; }
+    80% { transform: scale(0.96); }
+    to { transform: none; opacity: 1; }
+  }
+  @keyframes in-slide {
+    from { transform: translateX(-90vw) skewX(25deg); opacity: 0; }
+    10% { opacity: 1; }
+    65% { transform: translateX(3vw) skewX(-8deg); }
+    85% { transform: translateX(-1vw) skewX(3deg); }
+    to { transform: none; opacity: 1; }
+  }
+  @keyframes in-drop {
+    from { transform: translateY(-90vh); opacity: 1; animation-timing-function: cubic-bezier(0.5, 0, 0.9, 0.6); }
+    60% { transform: none; animation-timing-function: ease-out; }
+    78% { transform: translateY(-3vh); animation-timing-function: ease-in; }
+    to { transform: none; opacity: 1; }
+  }
+  @keyframes in-letter {
+    from { transform: translateY(5vh) scale(0.6); opacity: 0; }
+    to { transform: none; opacity: 1; }
+  }
+  @keyframes in-rise {
+    from { transform: translateY(2vh); opacity: 0; }
+    to { transform: none; opacity: 1; }
+  }
+  @keyframes in-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
   /* Category exits; each runs paused until `.go`, so the hold shows its first frame */
