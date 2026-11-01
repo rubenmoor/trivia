@@ -17,6 +17,7 @@
     delay = 0,
     exit: forced,
     entrance: forcedIn,
+    leave = false,
   }: {
     category: string;
     subcategory: string | null;
@@ -30,6 +31,8 @@
     exit?: SplashExit;
     /** A given entrance (the effects demo); else a random one. */
     entrance?: SplashEntrance;
+    /** The question was decided (Timed): leave at once, the exit's sound kept (decision 508). */
+    leave?: boolean;
   } = $props();
 
   const hook = galleryHold();
@@ -71,28 +74,39 @@
   const letterInMs = entering.letters ? SPLASH_IN_MS * (1 - entering.letters.spread) : SPLASH_IN_MS;
   const subShift = $derived(picked.subOffsetMs);
 
+  let timers: ReturnType<typeof setTimeout>[] = [];
+  let left = false;
+  function exitNow() {
+    if (galleryHold()) return;
+    timers.forEach(clearTimeout);
+    phase = "exit";
+    sfx(picked.cue);
+    timers = [setTimeout(() => (phase = "gone"), SPLASH_EXIT_MS + SPLASH_SUB_MAX_MS)];
+  }
+
   $effect(() => {
     if (!start) return;
-    const timers: ReturnType<typeof setTimeout>[] = [];
-    timers.push(
+    timers = [
       setTimeout(() => {
+        if (left) return;
         phase = "in";
         timers.push(
           setTimeout(() => {
             phase = "hold";
-            timers.push(
-              setTimeout(() => {
-                if (galleryHold()) return;
-                phase = "exit";
-                sfx(picked.cue);
-                timers.push(setTimeout(() => (phase = "gone"), SPLASH_EXIT_MS + SPLASH_SUB_MAX_MS));
-              }, SPLASH_HOLD_MS),
-            );
+            timers.push(setTimeout(exitNow, SPLASH_HOLD_MS));
           }, reduced ? REDUCED_FADE_MS : SPLASH_IN_MS),
         );
       }, delay),
-    );
+    ];
     return () => timers.forEach(clearTimeout);
+  });
+
+  // `leave`: out at once from `in` or `hold`; still waiting: never shown
+  $effect(() => {
+    if (!leave) return;
+    left = true;
+    const p = untrack(() => phase);
+    if (p === "in" || p === "hold") exitNow();
   });
 </script>
 
