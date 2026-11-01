@@ -44492,8 +44492,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-01T01:24:05Z', '2026-11-01T01:24:35Z', 1860, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1862, 32, 'create tasks for plan 32: Recorded sound effects (UI-10)', 'split', 'done', 1000, '2026-10-31, tasks 1864, 1865; task 150 requires 146, 1865', 'Split plan 32 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-01T01:25:50Z', '2026-11-01T01:26:52Z', 1857, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1863, 191, 'create tasks for plan 191: Category splash entrances and longer hold', 'split', 'open', 1000, NULL, 'Split plan 191 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-01T01:26:49Z', NULL, 1859, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1863, 191, 'create tasks for plan 191: Category splash entrances and longer hold', 'split', 'done', 1000, '2026-10-31, tasks 1867, 1868, 1869, 1870', 'Split plan 191 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-01T01:26:49Z', '2026-11-01T01:28:56Z', 1859, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1864, 32, 'Recorded fanfare variants: random, no repeats, listed on /?efectos', 'work', 'open', NULL, NULL, 'Part of `plan 32: Recorded sound effects (UI-10)`, section "Correct-answer sound variants" (masterplan part 9: the fanfare gets repetitive within a game).
 
 1. Source 4–5 short, triumphant jingles, about the length of `fanfarria.m4a` (4.5 s): the plan''s sources in its order (Kenney CC0 first, then Freesound and OpenGameArt CC0, then a public-domain band recording on Commons); D-45 allowlist only, licence checked on each source page. No pack zip committed.
@@ -44519,6 +44519,47 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: the developer approved the fanfare variants; audio folder within budget; `CREDITS.md` complete; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-01T01:26:50Z', NULL, 1862, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1866, 33, 'create tasks for plan 33: Recorded music loops (UI-10)', 'split', 'done', 1000, '2026-10-31, tasks 150 (body aligned: plan 182 done, default soundtrack settled by decision 361, gate replaced by its requires); no new tasks or decisions', 'Split plan 33 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-01T01:27:23Z', '2026-11-01T01:27:55Z', 1858, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1867, 191, 'Category splash: five silent entrances, longer hold, separate pick memories', 'work', 'open', NULL, NULL, 'Implement the "Entrances" section of `plan 191: Category splash entrances and longer hold`, and its timing, in `app/client/src/game/question/Splash.svelte`, `question/splash.ts`, `game/timing.ts`, `game/EffectsDemo.svelte`. Read the plan first: it fixes the details below.
+
+- `game/timing.ts`: `SPLASH_IN_MS` ≈ 450, `SPLASH_HOLD_MS` 1000 → 2000, counted after the entrance ends
+- `question/splash.ts`: table `SPLASH_ENTRANCES` (slam, pop, slide, drop, letters), `{ id, category, sub, letters?: stagger }`; one shared pick function with a separate memory per table: exits keep the last 5, entrances the last 2; `recent` today is one array capped by the table''s length, so it must not be shared
+- `Splash.svelte`: phases `wait` → `in` → `hold` → `exit` → `gone`; the entrance class replaces the exit class during `in`, the exit''s paused first frame takes over at `hold`; all five end on the resting look; small line and bundle mark: a light rise and fade, slightly after the big line; no new sound cues; keyframes here, as for the exits
+- Letter spans: built when the entrance or the exit needs them, each with its own stagger variable; a letter entrance followed by a whole-name exit works, the exit then runs on the line; check this pairing and letter entrance + letter exit
+- Both picks once per splash, at mount
+- `reducedMotion()`: plain fade in (`REDUCED_FADE_MS`), no letter spans, the same hold; plain fade out, sound kept
+- `galleryHold()` must keep freezing at the hold, after the entrance
+- `/?efectos`: one row per entrance, an `entrance` prop on `Splash.svelte` like `exit`, a plain exit after it
+- Unit test (`question/splash.test.ts`, node test like the `engine/` ones; `splash.ts` must stay importable without a DOM): no recent repeat for either table; the exits'' memory is unaffected by entrance picks
+- `plans/04-ui-tv-display.md` "Category splash": entrances, hold, picks (Timed''s early exit comes with the next task); old wording `rg`ed over comments (`timing.ts`, `Splash.svelte`, `splash.ts`: "holds once the question has faded in", "last 5")
+
+Done when: all five play on `/?efectos` with no jump into the hold frame; the unit test passes; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-01T01:28:55Z', NULL, 1863, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1868, 191, 'Category splash: Timed reveal sends it into its exit at once', 'work', 'open', NULL, NULL, 'A claim and pick in Timed can reach the reveal (`TIMED_REVEAL_MS`) in ≈ 2 s, before the longer splash is over. Per `decision 508: Timed mode: the longer category splash runs over the question clock` the splash never covers the reveal.
+
+- `question/Splash.svelte`: a new `leave` prop: when true, go into the exit at once, from `in` or `hold`; the exit''s sound stays; in `wait` the splash doesn''t appear at all; `exit` and `gone` unchanged; timers cleared so the exit runs once
+- `screens/Timed.svelte` (line ≈ 361): `leave` set from `held`; check that an expired question also sets `held` (decision 508: "claimed and answered, or expired"); if not, cover it too
+- Question passes nothing: its reveal comes later (wait ≥ 3 s, padlock)
+- `galleryHold()` freeze: `leave` must not break the `timed-splash` shot
+- The clock stays independent of the splash (`decision 296: Timed mode: a round screen with a countdown before each round, and the question clock starts when the question is on screen`): no change to it
+- `plans/04-ui-tv-display.md` "Category splash": Timed''s early exit, the ≈ 3.3 s over the clock
+
+Done when: in a browser check of a Timed game a quick claim and pick shows the splash leaving with its sound as the reveal starts, once only; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-01T01:28:55Z', NULL, 1863, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1869, 191, 'Category splash: gallery shots frozen midway through each entrance', 'work', 'open', NULL, NULL, 'Stills of the entrances for the review, per the "Done when" of `plan 191: Category splash entrances and longer hold`.
+
+- `question/splash.ts`: a new `entrance` field on `window.__gallerySplash` (`galleryHold()`''s type): forces that entrance and freezes it midway (e.g. paused animations at half of `SPLASH_IN_MS`, including the letter stagger); without the field the hook freezes at the hold as today
+- `Splash.svelte`: honour it; the fade-in under `reducedMotion()` needs nothing
+- `authoring/tools/gallery.py`, `splash()` and its row in the shot table: new shots `question-splash-in-<id>`, one per entrance id (slam, pop, slide, drop, letters), on the `question` save
+- Existing shots `question-splash`, `question-splash-long`, `timed-splash`, `splash-topic` must still show the hold after the entrance: check `r.settle(0.8)` and the `splash-topic` step still land there
+- Stills only: the movement is judged on `/?efectos`
+
+Done when: `trivia-gallery --set task-<this id> --locale es --only <the five new shots plus question-splash>` gives five mid-entrance frames and one hold frame, and `manifest.json` lists no unexpected unmatched text; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-01T01:28:55Z', NULL, 1863, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1870, 191, 'Category splash entrances: review set and the developer''s approval', 'work', 'open', NULL, NULL, 'Iterative feedback: the developer approves the entrances and the hold, per `plan 191: Category splash entrances and longer hold`.
+
+- Review set per `decision 352: Gallery reviews: a review set of the touched shots, linked as /gallery?set=<name>`: `trivia-gallery --set task-<this id> --only question-splash-in-slam,question-splash-in-pop,question-splash-in-slide,question-splash-in-drop,question-splash-in-letters,question-splash,question-splash-long,timed-splash,splash-topic --size 1920x1080,1280x800`, every UI language (es, es-ES, en, de)
+- `pm decision add` with an intro for an outsider, options «approve» (recommended) / «changes: …»; the body links `/gallery?set=task-<this id>` and `/?efectos` (the movement is judged there), says to play a real game on the TV for the longer hold, and states what `decision 508: Timed mode: the longer category splash runs over the question clock` costs Timed: up to ≈ 3.3 s of the 30 s for all seats alike, and less clear reading time of the first 6 s after a fast claim
+- `pm task-pending-decision <this task> <decision>`, stage, stop
+- Once answered: apply the feedback here if it is a small change (table, keyframes, timing), reshoot the same set; a further round means another review decision. Larger changes: follow-up tasks in this plan. `pm decision consequences` when done.
+
+Done when: the decision is answered «approve», or its changes are made and approved.', '2026-11-01T01:28:56Z', NULL, 1863, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -52989,6 +53030,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2019, 1858, '2026-11-01T01:26:56Z', '2026-11-01T01:27:28Z', 'done', NULL, 0, '76d085b9eb440ebb9fcbbbc92b9b8764acf94eb5', NULL, 'claude-opus-5-5', '9fa85397-5748-47a8-ac43-4fb034a5f2cc', NULL, 4, 8, 3087, 156421, 39411, 0.4083442, 54177, 60, 54726);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2020, 1864, '2026-11-01T01:27:00Z', NULL, 'running', NULL, NULL, '76d085b9eb440ebb9fcbbbc92b9b8764acf94eb5', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 54726);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2021, 1866, '2026-11-01T01:27:28Z', '2026-11-01T01:27:58Z', 'done', NULL, 0, '3578cb2c396e2b44571d0b6b85cacba1d5727123', NULL, 'claude-opus-5-5', 'f5ac40e7-f1b7-477c-b8e0-bdc01a92b07f', NULL, 5, 10, 2517, 173494, 31370, 0.33603879999999997, 46076, 60, 54726);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2022, 1863, '2026-11-01T01:27:59Z', '2026-11-01T01:29:12Z', 'done', NULL, 0, 'ee548d5207782f3001209e26441b63e330b9360a', NULL, 'claude-opus-5-5', '357c0680-e219-453b-a100-4f9e7c24a287', NULL, 11, 16, 7114, 394057, 49739, 0.6190674, 64537, 60, 54726);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -53804,6 +53846,10 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1849, 177
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1850, 1846);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1854, 1849);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1865, 1864);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1868, 1867);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1869, 1867);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1870, 1868);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1870, 1869);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
