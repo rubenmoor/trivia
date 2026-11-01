@@ -11,5 +11,6 @@ Rules:
 - Fix wrong facts using the fact-check's correction. Don't add new facts you aren't sure of.
 - Set `difficulty` to what the question really is for these players after your changes.
 - Change only what's needed to fix the listed issues; unchanged fields must be returned exactly as they were. If the only issue is difficulty, change only `difficulty`. Don't polish hints, descriptions or fun facts that have no listed issue.
+- `cause`: only for an issue that starts with «Reporte de jugador» or «Marcada en el juego» (a player flagged the question): why the player flagged it, one of the schema's values; `not_a_defect` when you keep it unchanged because it was fine. Leave it out otherwise.
 - `reason`: one short English sentence on what you changed and why (or why you keep or drop it).
 - For "keep" and "drop", return the question fields unchanged.

@@ -7,6 +7,7 @@ from layout import REPO as ROOT, SOURCE_POOL as POOL, WORK
 import concepts  # authoring/tools/concepts.py: concept lists and question axes (D-37)
 import categories  # authoring/tools/categories.py: every bundle's categories (D-19, D-43)
 import engine  # authoring/tools/engine.py: the TS engine under Node (D-60), e.g. the supply check (GF-5)
+import flag_loop  # authoring/tools/flag_loop.py
 import save_file  # authoring/tools/save_file.py: the game's save, read-only (D-59)
 import targets  # authoring/tools/targets.py: pool targets (D-53)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
@@ -906,9 +907,13 @@ def cmd_report(args):
         print("\n".join(health.table(runs)))
         return print(health.deficit_line())
     pool = load_json(POOL)["questions"]
+    if args.flags:
+        print("\n".join([*flag_loop.open_lines(), *flag_loop.lesson_lines()]))
+        return
     broad = categories.broad_of()
     cat = lambda q: (c := broad.get(categories.key(q))) and categories.sub_key(c["bundle"], c["slug"])
     print(f"pool: {len(pool)} questions")
+    print(flag_loop.open_lines()[0])
     for title, key in [("status", lambda q: q["status"]), ("difficulty", lambda q: q["difficulty"]),
                        ("category", cat), ("style", lambda q: q.get("style")),
                        *[(f"axes.{a}", lambda q, a=a: (q.get("axes") or {}).get(a)) for a in concepts.AXES],

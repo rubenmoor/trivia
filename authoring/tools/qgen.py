@@ -32,6 +32,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen export                     # app/data/pool.json (+ packs' bundles/<id>/pool.json) from authoring/data/questions.json
     qgen report [--run <run>] [--bundle <id>] [--locale <locale>] [--subcategories] [--calibration [<batch>…]]
                 [--overlaps] [--batches [<batch>…]] [--exit-check]
+    qgen report --flags             # open player flags with their age, causes of reworked flags, repeated causes
     qgen report --qc [<batch> [--changes "<task ids>"]]   # spot check vs. LLM review and audit (plan 16)
     qgen report --simulate [--locale …] [--mode …|all] [--json]   # games per new player; exit 1 below D-75's target (plan 62)
     qgen report --cost [--json]     # $ per approved by run kind, projection per launch language and regional and theme bundle (plan 70)
@@ -68,6 +69,7 @@ import download  # authoring/tools/download.py: fills the media cache
 import media as media_tool  # authoring/tools/media.py: candidates, sheets, picks (`media` is the cache)
 import targets  # authoring/tools/targets.py: pool targets (D-53)
 import pool_export  # authoring/tools/pool_export.py (D-35)
+import flag_loop  # authoring/tools/flag_loop.py: open player flags, causes
 import patch_notes  # authoring/tools/patch_notes.py: `qgen patch-notes` (plan 96)
 import rekey  # authoring/tools/rekey.py: `qgen rekey` (plan 149)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
@@ -529,7 +531,8 @@ REVISED_SCHEMA = {"type": "object",
 REVISE_SCHEMA = {"type": "object", "required": ["results"], "properties": {"results": {
     "type": "array", "items": {"type": "object", "required": ["id", "action", "reason", "question"],
         "properties": {"id": STR, "action": {"type": "string", "enum": ["keep", "revise", "drop"]},
-                       "reason": STR, "question": REVISED_SCHEMA}}}}}
+                       "reason": STR, "question": REVISED_SCHEMA,
+                       "cause": {"type": "string", "enum": list(flag_loop.CAUSES)}}}}}}  # cause: player-flag issues only
 
 FACT_SCHEMA = {"type": "object", "required": ["checks"], "properties": {"checks": {
     "type": "array", "items": {"type": "object", "required": ["id", "verdict", "problem", "correction", "sources"],
@@ -2032,6 +2035,8 @@ def main():
                     help="drafted/rated/final difficulty per target level (plan 13); default: the last two batches")
     rp.add_argument("--batches", nargs="*", metavar="BATCH",
                     help="batch health side by side (plan 15); default: batch-4 onward")
+    rp.add_argument("--flags", action="store_true",
+                    help="open player flags with their age; causes of reworked flags and repeated ones (authoring/QC.md)")
     rp.add_argument("--overlaps", action="store_true",
                     help="approved questions that may ask the same fact (plan 15); listing only")
     rp.add_argument("--exit-check", action="store_true",
