@@ -15,9 +15,9 @@
   const loops: Track[] = ["normal", "question", "submitted", "timed"];
   let shown = $state<SoundtrackId>(soundtrackIds[0]);
 
-  function play(cue: Cue, synthesized: boolean) {
+  function play(cue: Cue, synthesized: boolean, file?: string) {
     unlock();
-    sfx(cue, 5, { synth: synthesized });
+    sfx(cue, 5, { synth: synthesized, file });
   }
 
   /** The loops keep looping, so the seam can be heard. */
@@ -52,11 +52,11 @@
           <td>{exit.cue}</td>
         </tr>
       {/each}
-      {#each list as { cue, file } (cue)}
+      {#each list as { cue, file, variant } (variant ? file : cue)}
         <tr>
-          <td>{cue}</td>
-          <td><button onclick={() => play(cue, false)} disabled={!file} title={file}>grabado</button></td>
-          <td><button onclick={() => play(cue, true)}>sintetizado</button></td>
+          <td>{variant ? `· ${file}` : cue}</td>
+          <td><button onclick={() => play(cue, false, variant ? file : undefined)} disabled={!file} title={file}>grabado</button></td>
+          <td>{#if !variant}<button onclick={() => play(cue, true)}>sintetizado</button>{/if}</td>
         </tr>
       {/each}
     </tbody>
