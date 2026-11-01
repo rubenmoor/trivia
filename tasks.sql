@@ -2812,11 +2812,13 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - Missing file (`/media` 404): fade in after at most 2 s, the «medio no disponible» notice shows.
 - Text questions and screens without media fade in as fast as today.
 - No new dependencies.', '', '2026-10-12T00:33:12Z', 134);
-INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (32, 6, 'Recorded sound effects (UI-10)', 200, 'Replaces the effects that are still synthesized with CC0 (or D-45 allowlisted) recordings, mainly from Kenney.nl, and gives Soplo''s paper rustle and the token pop-back a sound. Then (masterplan part 7, `decision 81: Recorded sound effects: approve on the TV?`) three jokers get a sound that says what the joker does. Owner plan file: `plans/04-ui-tv-display.md` ("Sound assets", UI-10); joker sounds: `plans/09-jokers.md` ("Sound assets", JK-9). Music loops: `plan 33: Recorded music loops (UI-10)`, which reuses this plan''s pipeline and audition aid.
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (32, 6, 'Recorded sound effects (UI-10)', 200, 'Replaces the effects that are still synthesized with CC0 (or D-45 allowlisted) recordings, mainly from Kenney.nl, and gives Soplo''s paper rustle and the token pop-back a sound. Then (masterplan part 7, `decision 81: Recorded sound effects: approve on the TV?`) three jokers get a sound that says what the joker does, and (masterplan part 9, developer, 2026-10-31) the right-answer fanfare gets recorded variants. Owner plan file: `plans/04-ui-tv-display.md` ("Sound assets", UI-10); joker sounds: `plans/09-jokers.md` ("Sound assets", JK-9). Music loops: `plan 33: Recorded music loops (UI-10)`, which reuses this plan''s pipeline and audition aid.
 
 ## Status
 - Built (tasks 142–145): every listed effect recorded, none kept synthesized; recipes stay as the fallback.
 - TV check answered (`decision 81: Recorded sound effects: approve on the TV?`): all approved except three jokers (below).
+- Joker sounds built (`task 1599: Joker sounds that say what the joker does: broom, microwave bing, fairy wand`); their TV check is pending (`decision 360: Joker sounds on the TV: approve Paso y fuera, Soplo and Hada madrina?`).
+- Open: fanfare variants (below).
 
 ## Scope (done)
 - Effects formerly synthesized (`app/client/src/game/sound.svelte.ts`, `RECIPES`):
@@ -2836,6 +2838,17 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - Soplo: the bing on play, the rustle stays when the note lands (drop it only if the two clash)
 - No new joker sounds in `timed` (no jokers there)
 
+## Correct-answer sound variants (developer, 2026-10-31, masterplan part 9)
+- Why: the fanfare is great but gets repetitive within a game
+- Today''s `fanfarria.m4a` stays, plus 4–5 more recorded variants, all the same kind of short, triumphant jingle, about its length (4.5 s; loudness as `fanfarria`)
+- One cue, `fanfare`: both call sites (`Question.svelte` reveal, `Timed.svelte` round end) stay as they are, so the change is in `sound.svelte.ts` only
+- Random, never the same one twice in a row (last pick kept in the module, Question and Timed share it)
+- `SAMPLE_FOR` holds one file per cue: the cue gets a list of files (all other cues unchanged); a variant that failed to load is skipped; the synthesized `fanfare` recipe stays the fallback when none loaded
+- `/?efectos` lists every variant, each one playable on its own (`effects()`, `EffectsDemo.svelte`), so the developer can compare them
+- Unchanged: Answers off stays silent (D-105; neutral reveal, no fanfare), `sad-trombone`, `whistle-down`, `AFTER_REVEAL_MS`, `TIMED_RESULT_MS`
+- Files: `fanfarria-2.m4a` … (ASCII, flat); `fanfarria.m4a` not renamed
+- Sources: as below; a public-domain band recording like `fanfarria` (Commons, in D-45''s allowlist) is fine after the CC0 packs, Kenney''s jingles often run short of 4.5 s
+
 ## Sources and licences
 - Kenney.nl CC0 first (Interface Sounds, UI Audio, Impact Sounds, Casino Audio, Sci-fi Sounds), then Freesound CC0, OpenGameArt CC0; D-45 allowlist only (CC0 preferred; CC BY ok with credit; no NC/ND/unknown); licence checked on each source page.
 - Download once by hand (a downloaded pack zip is not committed); keep only the converted files.
@@ -2845,7 +2858,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - Trim silence, short fade-out, loudness-normalize (`loudnorm`, ~-16 LUFS, -1.5 dBTP, as the existing files), mono AAC 80k `.m4a` unless stereo matters.
 - Files: `app/client/public/audio/<spanish-name>.m4a` (flat), committed.
 - `app/client/public/audio/CREDITS.md`: one row per file (source URL, pack, author, licence); the Credits screen and the release check''s credits step read it.
-- Budget: ≤ 40 kB per effect file; the three new files ≤ 100 kB together; within `app/desktop/media-budget.json` (shipped WebP/Opus via `stage-media.mjs`).
+- Budget: ≤ 40 kB per effect file; the three new joker files ≤ 100 kB together; fanfare variants ≤ 80 kB each (`fanfarria.m4a` is 65 kB), ≤ 400 kB together; within `app/desktop/media-budget.json` (`audio` 7 MB, shipped WebP/Opus via `stage-media.mjs`; the folder is about 5.4 MB, so no raise needed).
 
 ## Wiring
 - `SAMPLE_NAMES` + `SAMPLE_FOR` entries per file; `rate` callback where pitch should vary.
@@ -2856,14 +2869,19 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 
 ## Tasks
 1. Done: 142 audition aid, 143 whooshes/pops/menu/desbloqueado/hola, 144 joker sounds + rustle + pop-back, 145 fireworks.
-2. Joker sounds that say what the joker does: broom (Paso y fuera), microwave bing (Soplo), fairy wand (Hada madrina): source, convert, wire to the joker call sites only, credit; JK-9 note and "Sound assets" in `plans/09-jokers.md`.
-3. `task 146: Gamemaster check of the recorded effects on the TV`, after 2: decision 81 is answered (the other effects approved); a new developer decision for the three swapped joker sounds (`/?efectos` and a real game on the TV: Paso, Soplo, Hada madrina; options «approve» / «changes: …»); apply the answer; update UI-10''s note in 04 (effects part). UI-10 closes in `task 150: Close UI-10 in the plans` after the soundtracks (masterplan part 6).
+2. Done: `task 1599: Joker sounds that say what the joker does: broom, microwave bing, fairy wand`.
+3. `task 146: Developer check of the three new joker sounds on the TV`: waits for `decision 360: Joker sounds on the TV: approve Paso y fuera, Soplo and Hada madrina?`; apply the answer; update UI-10''s note in 04 (effects part).
+4. Fanfare variants (`--web`, work tree `app`): source 4–5 jingles, convert, credit, `fanfare` picks at random without repeats, `/?efectos` lists each. Picked by ear-proxies (envelope, spectrum): say so in the done note.
+5. Developer check of the fanfare variants on the TV, after 4: a developer decision (`/?efectos` and a real game, launch with `TRIVIA_SOUND=1`; body: each file, source, licence; options «approve» / «changes: …»); apply the answer; 04 "Sound assets" and UI-10''s note (fanfare variants).
+- `task 150: Close UI-10 in the plans` requires 3 and 5: UI-10 closes after the soundtracks, the joker sounds and the fanfare variants (masterplan parts 6, 7, 9).
 
 ## Done when
 - Every listed effect is a recording or deliberately kept synthesized (noted in UI-10).
 - Paso y fuera sweeps like a broom, Soplo bings, Hada madrina sprinkles fairy dust; the splash and Timed keep their sounds.
+- `fanfare` plays 5–6 recordings at random, never the same twice in a row, on Question and Timed; Answers off stays silent; `/?efectos` lists each.
 - `CREDITS.md` has a row per file; within budget; `npm run check` and `npm run build` pass.
-- The developer approved the three joker sounds on the TV.', 'The game''s sound effects started out as tones generated by code; this work replaced them with real, freely licensed recordings so the game sounds lively on a living-room TV. After listening, the developer asked for three of the joker power-ups to get sounds that say what they do: a broom sweeping, a microwave bell, and a fairy''s magic wand. Those three are swapped in and checked on the TV again.', '2026-10-12T00:34:28Z', 135);
+- The developer approved the three joker sounds on the TV.
+- The developer approved the fanfare variants on the TV.', 'The game plays little sounds for almost everything that happens on screen, and those used to be generated by the computer. This work replaces them with real, freely licensed recordings, gives three jokers sounds that say what they do, and adds several triumphant jingles for a right answer, so the same one doesn''t get tiresome during a game.', '2026-10-12T00:34:28Z', 135);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (33, 6, 'Recorded music loops (UI-10)', 190, 'Replaces the three generated music loops (`normal`, `question`, `submitted`) with CC0 (or D-45 allowlisted) recordings, as one matched set: one theme at three intensities, same key and tempo family, gapless. Owner plan file: `plans/04-ui-tv-display.md` ("Music", "Sound assets", UI-10). Runs after plan 32 "Recorded sound effects (UI-10)", whose pipeline, budget conventions and `/?efectos` audition aid it reuses; Part 3 of `plan 6: masterplan`.
 
 ## Outcome of the TV check (2026-10-17)
@@ -44285,7 +44303,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-11-01T01:21:44Z', '2026-11-01T01:22:51Z', NULL, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1856, 6, 'create tasks for plan 6: masterplan', 'split', 'done', 1000, '2026-10-31, no changes: every part is done or already has its open tasks: 1859 (Part 8, extends plan 181), 146 and 150 (Parts 2, 3, 7), revisions 1857, 1858; no new decisions', 'Split plan 6 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-01T01:22:32Z', '2026-11-01T01:23:20Z', 1855, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1857, 32, 'revise plan 32: Recorded sound effects (UI-10)', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 32: Recorded sound effects (UI-10)`, changed; it is quoted below. Bring `plan 32: Recorded sound effects (UI-10)` in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1857, 32, 'revise plan 32: Recorded sound effects (UI-10)', 'revise', 'done', 1000, '2026-10-31, plan 32 body: fanfare variants (masterplan part 9), joker status; split queued as task 1862', '`plan 6: masterplan`, the plan above `plan 32: Recorded sound effects (UI-10)`, changed; it is quoted below. Bring `plan 32: Recorded sound effects (UI-10)` in line with it
 (`pm plan edit 32 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -44359,7 +44377,7 @@ Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (
 
 ## Order and constraints
 - Parts are independent, except: 2 → 3 shared conventions (done); 3 → 6 (plan 33''s set and pipeline); 6, 7 and 9 before `task 150: Close UI-10 in the plans`.
-- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-11-01T01:22:32Z', NULL, 1855, 0, NULL, NULL);
+- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-11-01T01:22:32Z', '2026-11-01T01:26:01Z', 1855, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1858, 33, 'revise plan 33: Recorded music loops (UI-10)', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 33: Recorded music loops (UI-10)`, changed; it is quoted below. Bring `plan 33: Recorded music loops (UI-10)` in line with it
 (`pm plan edit 33 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -44444,6 +44462,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-11-01T01:23:13Z', '2026-11-01T01:24:09Z', NULL, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1861, 6, 'create tasks for plan 6: masterplan', 'split', 'done', 1000, '2026-10-31, tasks unchanged: the only part still needing plan work is covered by open task 1859 (Part 8, extend plan 181); Part 9 goes to plan 32 via open revision task 1857; plan 33''s revision task 1858 can align task 150, whose gate already holds it behind plan 32''s tasks; no new decisions', 'Split plan 6 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-01T01:24:05Z', '2026-11-01T01:24:35Z', 1860, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1862, 32, 'create tasks for plan 32: Recorded sound effects (UI-10)', 'split', 'open', 1000, NULL, 'Split plan 32 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-01T01:25:50Z', NULL, 1857, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -52908,6 +52928,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2014, 1860, '2026-11-01T01:23:26Z', '2026-11-01T01:24:14Z', 'done', NULL, 0, '0cae4f58670c8f5006332e283ca816c0772122fc', NULL, 'claude-opus-5-5', 'afd944c9-d9da-4026-a9ea-e6f61e4e5de2', NULL, 9, 14, 4656, 283410, 38494, 0.45781, 52912, 60, 54726);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2015, 1861, '2026-11-01T01:24:15Z', '2026-11-01T01:24:39Z', 'done', NULL, 0, '98201a26cb20228eb91807cd5cfd8c07b02ed058', NULL, 'claude-opus-5-5', '88628cc6-b009-449b-84a8-ff5c6f1f1cb3', NULL, 6, 10, 1841, 204661, 43650, 0.42699220000000004, 58515, 60, 54726);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2016, 1859, '2026-11-01T01:24:36Z', NULL, 'running', NULL, NULL, '98201a26cb20228eb91807cd5cfd8c07b02ed058', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 54726);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2017, 1857, '2026-11-01T01:24:40Z', '2026-11-01T01:26:09Z', 'done', NULL, 0, '150f94ac5943d0989ddcd6570c987c2f03406cac', NULL, 'claude-opus-5-5', 'f47d0c93-8c1c-4831-883c-0a5090155aa1', NULL, 11, 18, 9317, 457869, 55287, 0.72028180000000008, 70466, 60, 54726);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
