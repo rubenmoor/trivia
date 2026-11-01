@@ -328,6 +328,10 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
   - Soplo (Hint): a microwave bell «bing»
   - Hada madrina (Fairy): a fairy''s magic wand, sprinkling fairy dust (replaces the swanee whistle)
   - Doña Exigente (Ms Picky), Tiro mágico (Trick Shot): keep as they are
+- Category splash entrances (developer, 2026-10-31): the splash just appears, and without movement it doesn''t draw the eye to the category and subcategory
+  - 4–5 entrance animations, picked at random like the exits (`question/splash.ts`, none of the recent ones again), on Question and Timed; silent, the exits keep their sounds
+  - `SPLASH_HOLD_MS` doubled, 1000 → 2000 ms, counted after the entrance ends
+  - `reducedMotion()`: plain fade; all entrances play on `/?efectos`
 
 ## Constraints
 - CC0 or otherwise allowlisted licenses only (D-45); assets stay offline.
@@ -338,6 +342,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - Every button before a game session has its icon; every language shows its flags; the developer approves them in the screen gallery.
 - Start shows the horizon; its images are credited; the developer approved it in the screen gallery.
 - The developer picked the default soundtrack on the TV.
+- The developer approved the splash entrances and hold in a screen-gallery review set.
 
 Plan files: `plans/04-ui-tv-display.md`.', '2026-10-11T21:54:56Z', NULL, 0);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (7, 'Steam S2: product definition', 'implemented', 'The first phase of the Steam track (D-34) is decisions, not code: what the product is before anything Steam-specific gets built. It can run alongside the other milestones.
@@ -44254,6 +44259,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `qgen report --locale es` meets `targets.json` `base` -> no next run; else add the next run (fewer than 300 selected: it starts only after a plan 17 batch QC done since).
 - Health ✗: `pm decision list --grep "<run>: health"`, none -> `pm decision add`, no task link; never `qgen health ack`.
 - D-36: no prompt/pool/media/qgen.py changes; stage printed `git add` paths, don''t commit; exit 75/other non-zero -> decision + `pm task-pending-decision`, stage nothing.', '2026-11-01T00:45:55Z', NULL, 1849, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1855, 6, 'revise the masterplan of milestone 6: Screen polish leftovers', 'revise', 'open', 1000, NULL, '`milestone 6: Screen polish leftovers` changed. Bring `plan 6: masterplan`, the masterplan, in line with it (`pm plan edit 6 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-11-01T01:21:44Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -52712,6 +52719,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2008, 1851, '2026-11-01T00:04:11Z', '2026-11-01T00:04:39Z', 'done', NULL, 0, '4c6940ff49e0ccb8274f329e6ad8fce4c49bba19', 'app', 'claude-sonnet-5-5', '122abf12-2fe7-46b9-945e-fb6ca265e2a3', NULL, 12, 18, 2383, 339914, 29388, 0.17540940000000002, 44055, 60, 54726);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2009, 1852, '2026-11-01T00:04:40Z', '2026-11-01T00:05:05Z', 'done', NULL, 0, '5f976abdf36d128e320e9f59e52f5a40d336393c', 'app', 'claude-sonnet-5-5', '122abf12-2fe7-46b9-945e-fb6ca265e2a3', 2008, 5, 12, 2740, 258393, 13211, 0.2815167, 57358, 60, 54726);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2010, 1853, '2026-11-01T00:05:06Z', '2026-11-01T00:06:27Z', 'done', NULL, 0, '031203d5428901f067e9c8578de54434de45d449', 'app', 'claude-sonnet-5-5', '122abf12-2fe7-46b9-945e-fb6ca265e2a3', 2009, 13, 28, 9139, 1054423, 42149, 0.64700099999999994, 99053, 60, 54726);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2011, 1850, '2026-11-01T00:46:02Z', NULL, 'running', NULL, NULL, 'dbf58594d8d4eaa6252b6544d615bd6db7a628de', 'questions', NULL, NULL, 2007, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 54726);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
