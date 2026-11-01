@@ -3,6 +3,7 @@ import argparse, datetime, json, sys, time
 
 import layout  # paths (D-35)
 from layout import REPO as ROOT, SOURCE_POOL as POOL, WORK
+import flag_loop  # authoring/tools/flag_loop.py
 import progress  # authoring/tools/progress.py: the plain log (QG-18, task 1131)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
 
@@ -36,7 +37,9 @@ def cmd_rework(args):
                and (q.get("review") or {}).get("feedback") and (not args.batch or q.get("batch") == args.batch)]
         if not ids:
             sys.exit("No needs_work questions with feedback.")
-        save_json(WORK / run / "run.json", {"mode": "rework", "ids": ids, "batch": args.batch,
+        flagged = [q["id"] for q in load_json(POOL)["questions"] if q["id"] in ids
+                   and flag_loop.is_player_feedback(q["review"]["feedback"])]
+        save_json(WORK / run / "run.json", {"mode": "rework", "ids": ids, "flagged": flagged, "batch": args.batch,
                                             "model": args.model or "opus",
                                             "started": datetime.date.today().isoformat()})
         print(f"Starting {run}: {len(ids)} needs_work question(s).", flush=True)
@@ -59,9 +62,23 @@ def cmd_rework(args):
     print(f"\nDone: {run}: {n_ok} of {len(qs)} approved, {len(qs) - n_ok} still need work "
           f"(took {progress.duration(time.monotonic() - t0)}).")
     by_id = {q["id"]: q for q in load_json(POOL)["questions"]}
-    files = ["authoring/data/questions.json", "app/data/pool.json", "app/data/bundles/", "app/data/demo/", *stale_lines(set(cfg["ids"]), by_id)]
+    record_flag_causes(run, cfg.get("flagged", []))
+    files = ["authoring/data/questions.json", "authoring/data/flag-causes.json", "app/data/pool.json", "app/data/bundles/", "app/data/demo/", *stale_lines(set(cfg["ids"]), by_id)]
     print(f"Commit exactly this:\n  git add {' '.join(files)}\n"
           f"  git commit -m \"{run}: {n_ok} of {len(qs)} needs_work questions fixed and approved (qgen rework)\"")
+
+
+def record_flag_causes(run, flagged):
+    """The reviser's cause for each reworked player flag → authoring/data/flag-causes.json (git add it); repeated causes print a proposal."""
+    rows = []
+    for i in flagged:
+        fix = (load_json(WORK / run / "reviews" / f"{i}.json", {})).get("fix") or {}
+        rows.append({"id": i, "cause": fix.get("cause", "other"), "action": fix.get("action"), "reason": fix.get("reason")})
+    if flagged and not any(r["run"] == run for r in flag_loop.causes()):  # a resumed run records once
+        flag_loop.record_causes(run, rows)
+        print(f"Flag causes: {len(rows)} recorded in authoring/data/flag-causes.json (git add it).")
+    for line in flag_loop.lesson_lines()[1:]:
+        print(line)
 
 
 SCAN_SCHEMA = {"type": "object", "required": ["flagged"], "properties": {"flagged": {"type": "array", "items": {

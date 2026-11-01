@@ -201,6 +201,8 @@ def cmd_patch_notes(args):
     for ref in [frm, args.to_ref]:
         if ref and git("rev-parse", "--verify", "--quiet", f"{ref}^{{commit}}").returncode:
             sys.exit(f"qgen patch-notes: unknown ref {ref}")
+    import flag_loop  # authoring/tools/flag_loop.py
+    print("\n".join(flag_loop.open_lines()), file=sys.stderr)  # ids stay out of the notes (decision 97)
     d = notes(frm, args.to_ref)
     md = markdown(d)
     print(json.dumps(d, ensure_ascii=False, indent=1) if args.json else md)

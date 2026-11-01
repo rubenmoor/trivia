@@ -303,7 +303,7 @@ def cmd_fix(args):
         for q, path, r, _ in group:
             if (rev := got.get(q["id"])) is None:
                 continue
-            fix = {"action": rev["action"], "reason": rev["reason"]}
+            fix = {"action": rev["action"], "reason": rev["reason"], **({"cause": rev["cause"]} if rev.get("cause") else {})}
             if rev["action"] == "revise" and (bad := check_question_shape(rev["question"])):
                 fix["action"], fix["reason"] = "malformed", "; ".join(bad)
             answered.append((q, path, r, rev, fix))

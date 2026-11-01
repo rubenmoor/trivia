@@ -60,6 +60,10 @@ Players report questions from the game (plan 93); each report becomes a human `n
 
 - Pasted report text (copied from «Preguntas marcadas»): `qgen flag [--dry-run] < reports.txt`; feedback «Reporte de jugador (…)» in `/review?status=needs_work`, older feedback after «Antes:»; a report in the source's locale → source, else that locale's translation (decision 235); unknown ids skipped, a repeated report adds nothing.
 - Sent reports (report server, plan 103): `qgen flag --pull [--url URL] [--dry-run]`; same feedback, then acked; token `TRIVIA_REPORT_TOKEN` or `state/report-token`; ledger `state/reports-pulled.json`; mod and unknown ids skipped and acked.
+- Flag loop (open flags → rework → causes → lessons):
+  - Open flags: `qgen report --flags` lists the `needs_work` questions with player feedback and their age in days; `qgen report` and `qgen patch-notes` print the count (patch-notes also the list, on stderr; ids never enter the notes, decision 97). Read it before every patch.
+  - Rework (only when the developer asks): the reviser names a `cause` for each flagged question (`flag_loop.CAUSES`: wrong_fact, ambiguous, second_correct_option, difficulty, language, media, tone, not_a_defect, other); `qgen rework` appends it to `authoring/data/flag-causes.json` (commit it) and prints the lessons.
+  - Lessons: a cause seen 3 times (`flag_loop.REPEATED`; not_a_defect and other excluded) prints a proposal. Raise a decision for the developer (`pm decision add`) with the cause, its question ids and the prompt (`draft.md`, `review.md`, `house-style.md`) or QC rule change; apply it only in a change task after the answer ("Never" below).
 - Played outliers (opt-in telemetry, plan 109, decision 122): `qgen telemetry --pull`, then `qgen report --played`; candidates in `/review?played=outliers[&locale=…]`; the developer changes the difficulty or sets `needs_work` by hand, nothing automatic.
 
 ## Never
