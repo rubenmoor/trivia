@@ -10935,6 +10935,37 @@ Part 1 first; 2 and 3 need its answers; 4, 5 and 6 need 3; 7 last.
 
 ## Done when
 A player earns a logically named badge from ordinary play, sees it celebrated on the badge page, gets the Steam achievement, can turn the career off, and buying a DLC changes no badge.', 'This is the overall plan for giving each player a long-term career in the game: school-style subjects, grades that rise with harder questions, and badges celebrated on their own page. It matters because a game night today leaves nothing behind, and a sense of progress gives people a reason to come back. The work is divided into parts, and each part gets its own detailed plan before anything is built.', '2026-11-01T01:38:28Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (193, 20, 'Career design: subjects, grades and badge list', 950, 'Part 1 of `plan 192: masterplan`. Produces the figures, the proposals and, after the developer''s two approvals, the design that parts 2 to 7 build on. No game code here.
+
+## Steam''s limit (checked 2026-10-31)
+- Valve, "Step by Step: Achievements", Limits (https://partner.steamgames.com/doc/features/achievements/ach_guide): achievements per app 5,000, "100 for apps that have not yet been vetted"; sets per app 40, including the base game set; "Archived achievements count toward the achievement limit."
+- Valve, "Stats and Achievements" (https://partner.steamgames.com/doc/features/achievements): "By default, games are limited to 100 achievements at first. Once your app reaches the threshold for Profile Features, you will be able to add more achievements."
+- Valve, "Profile Features" (https://partner.steamgames.com/doc/marketing/profile): enabled automatically on sales and engagement metrics, threshold not published; games without them "do not count towards Game Collector or Achievement Collector totals".
+- Achievement Sets are in beta (ach_guide): "Steam will not unlock an achievement in a DLC set for a player who can''t play that DLC". Career badges stay in the base game set, also because every badge must be reachable with base alone.
+
+## Budget
+- Design for 100: passing the threshold is outside our control and its date unknown, so the list must never depend on it.
+- Today: 28 in `ACHIEVEMENTS` (`app/client/src/engine/achievements.ts`) + 6 regional + 5 topic `BUNDLE_*` (`app/data/bundles.json`) = 39.
+- **Career: at most 40 badges.** Total 79, 21 left for future bundles and modes. A deleted achievement stays counted if archived, so entered badges are for good: no trial badges.
+- Example fit: 8 subjects × 4 grades + 4 age groups = 36, 4 spare. Fewer than 8 subjects, or a thin grade dropped per subject, is fine; more needs fewer badges per subject.
+
+## Facts the proposals must face
+- Reach: age-group windows decide who can see a grade band (`app/data/age-groups.json` `levels`): adults start at difficulty 5, young_adults see 4 only on level 1, so a grown-up on their own age group gets nothing from 1–4 as an exact band. Kids stop at 6; 13–15 appears only on the top levels of adults and young_adults, reached in few games and with the lowest hit rate.
+  - So the badge proposal settles whether a grade means «this band» or «this band or harder» (an adult''s answers also count for lower grades), and says which grades each age group can reach.
+- Counting: every correct answer, or distinct questions per player. Questions repeat once supply runs out and the seen list is per save; the ids are stable across languages. The badge proposal picks one, with the figures.
+- Regular play: thresholds in games, not only answers: a badge nobody reaches in a year of family evenings is as wrong as one earned in a night. Per-band thresholds may differ, 100 is only the milestone''s example.
+- No overlap with the funny achievements that stay: `SPECIALIST`, `QUESTIONS_1000`, `WIN_ADULTS`, `WIN_ALL_AGES`, `GAME_NIGHTS`.
+- Grade names are school systems, not words: es, es-ES, en and de need natural equivalents; «college» and «university» are nearly one thing outside the US.
+- Rules already binding: "Binding constraints" in `plan 192: masterplan`. Shared `rr-coop` answers are part 3''s, the simulation counts solo play.
+
+## Tasks
+1. Supply tool and per-category figures.
+2. Subject proposal, decision.
+3. Badge list proposal, decision.
+4. Record the approved design in `plans/`.
+
+## Done when
+Both decisions are answered and `plans/24-career.md` holds the subjects, grades, badges and counting rules, so parts 2 to 7 need no other source.', 'The game is getting a career: each player earns school-style badges for answering questions in broad subjects at rising difficulty. Before anything is built, the subjects, the grades and the exact list of badges have to be chosen, and the targets must be reachable with the questions the game really has, even when brothers and sisters share them. Every badge is also a Steam achievement and Steam caps how many a new game may have, so the list has a fixed size. This work measures the supply, proposes the design for approval and writes it down for everything that follows.', '2026-11-01T03:50:35Z', 1877);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -44664,6 +44695,44 @@ Read part 5''s plan first: the progress bars live on its badge page. The milesto
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1883, 192, 'write plan: Career close-out: demo, mods and family playtest', 'plan', 'open', 1000, NULL, 'Write the plan for part 7 of `plan 192: masterplan` (Demo, mods and close-out).
 
 The demo question is settled by the decision that part 3''s plan task waited for: `pm decision list --all --grep demo`. Covers the milestone''s "Done when" end to end, including the check that buying a DLC changes no badge.', '2026-11-01T03:47:45Z', NULL, 1876, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1884, 193, 'create tasks for plan 193: Career design: subjects, grades and badge list', 'split', 'open', 1000, NULL, 'Split plan 193 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-01T03:50:35Z', NULL, 1877, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1885, 193, 'Career supply figures per locale, category and grade band', 'work', 'open', NULL, NULL, 'For `plan 192: masterplan` part 1. A repeatable figure tool the next two tasks run; no game code.
+
+- Add `qgen report --career [--subjects <file>]` beside `--simulate` (`authoring/tools/report.py`, `authoring/tools/sim/simulate.ts`, through `engine.py`: never re-implement a selection rule). `--subjects`: JSON category slug → candidate subject; without it each category is its own row. Base bundle only (DLC never decides a threshold).
+- Bands: 1–4, 5–8, 9–12, 13–15, one constant, easy to change.
+- Figures per locale (`es`, `es-ES`, `en`, `de`):
+  - Static: approved questions per row × band.
+  - Simulated: per age group, strong and typical player, solo, 1, 2 and 4 players taking turns on one save (shared seen list, as `plans/02-question-pool.md` and the engine do it; add the shared save to the simulator if it lacks it): correct answers per game per row × band; distinct questions a player can get right before repeats start; games until 25, 50, 100, 200 correct, both counted as every correct answer and as distinct questions, both as «this band» and «this band or harder».
+- `--json` and a table, as the other report options. Write the output of a run per category to `work/career/supply-categories.md`.
+
+Done when: the run covers all four locales, `work/career/supply-categories.md` exists, and `plans/16-content-target.md` or the report''s docs name the option; the usual checks pass.', '2026-11-01T03:50:36Z', NULL, 1877, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1886, 193, 'Propose the career subjects and raise the decision', 'work', 'open', NULL, NULL, 'For `plan 192: masterplan` part 1; read the plan of this task for budget and facts.
+
+- Draft a school-style subject list: at most 8 subjects (see Budget), every one of the 28 base categories (`app/data/categories.json`) in exactly one; broad enough for the thin 13–15 band (human-body, holidays, transport are near empty there). Check the topic and regional bundle categories (`app/data/bundles/*/categories.json`) fit without a new subject: DLC adds none. Names in es and en.
+- Save as `work/career/subjects.json`, run `qgen report --career --subjects work/career/subjects.json`, adjust until no subject × band fails after siblings share the save.
+- Raise the decision (`pm decision add`, with `--intro`): the list with every category assigned, recommended first, one real alternative if there is one (e.g. fewer subjects), and the figures: per subject × band, smallest locale, 1 and 4 players on a save; the thin spots named. Link this task with `pm task-pending-decision`; iterative feedback: stop until answered, change and re-ask if the answer asks for it.
+
+Done when: answered, the approved mapping is in the decision''s answer or consequences (`pm decision consequences`), `work/career/subjects.json` matches it. The next task and the recording task read it from there.', '2026-11-01T03:50:36Z', NULL, 1877, 0, 'opus', 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1887, 193, 'Propose the badge list with names and thresholds and raise the decision', 'work', 'open', NULL, NULL, 'For `plan 192: masterplan` part 1; read the plan of this task for budget and facts. Subjects: the answered decision from the previous task.
+
+- Rerun `qgen report --career` with the approved subjects. Propose:
+  - Grades: elementary, high school, college, university or fewer: band per grade, name per locale (es, es-ES, en, de; read `locales/style/<locale>.md`), serious tone, not the funny one of the achievements.
+  - Rules: exact band or «this band or harder», every correct answer or distinct questions (see Facts), each with its figures.
+  - Badges: subject × grade badges, plus a badge per age group for playing it often enough, so the lowest difficulty earns one (qualifying games; say played or won). Any other, within the budget.
+  - Per badge: name, one-line description, trigger, threshold, and games to reach it for strong and typical player, 1 and 4 players on a save, in the smallest locale. A table per age group of what is reachable.
+  - Total count against the budget of the plan: at most 40, full sum with existing achievements. No overlap with existing ones.
+- Thresholds must hold in all four locales. A badge that fails with 4 players goes or gets a lower threshold.
+- Raise the decision (`pm decision add`, with `--intro`), say the list can''t be changed freely once in Steamworks (archived achievements still count). Link this task; iterative feedback: stop until answered, change and re-ask if the answer asks for it.
+
+Done when: answered and the final list is in the decision''s answer or consequences.', '2026-11-01T03:50:37Z', NULL, 1877, 0, 'opus', 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1888, 193, 'Record the approved career design in plans/', 'work', 'open', NULL, NULL, 'For `plan 192: masterplan` part 1. Parts 2 to 7 read this, not the decisions.
+
+- New `plans/24-career.md`, in the style of `plans/`: subjects with every base category; grades and bands; counting rules; badge list (API name, names per locale, trigger, threshold); age-group reach; Steam budget and sources from the plan of this task; the supply command; what is binding from `plan 192: masterplan`. Links to the two decisions by id and subject.
+- Add it to the index in `plans/README.md`. In `plans/18-steam-integration.md` "Achievements in Steamworks": the budget (79 of 100, 21 spare) and a link; the badge rows themselves come from part 4.
+- `pm decision consequences` on both decisions if `pm show` says this task is the last that waited.
+
+Done when: `plans/24-career.md` is complete enough to plan parts 2 to 7 from it; checks pass.', '2026-11-01T03:50:37Z', NULL, 1877, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -54026,6 +54095,9 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1883, 187
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1883, 1880);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1883, 1881);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1883, 1882);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1886, 1885);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1887, 1886);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1888, 1887);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
