@@ -7,6 +7,7 @@ from layout import REPO as ROOT
 import atomic  # authoring/tools/atomic.py: .tmp + replace writes, cross-process locks
 import paths  # authoring/tools/paths.py: state/ (TRIVIA_STATE)
 import reviews  # authoring/tools/reviews.py: review writes, player reports (plan 93)
+from download import USER_AGENT  # Cloudflare 403s Python's default User-Agent (error 1010)
 import played  # authoring/tools/played.py: opt-in telemetry → state/played/ (plan 109)
 
 from qgen import load_json  # authoring/tools/qgen.py
@@ -41,7 +42,7 @@ def report_api(url, token, path, body=None):
     import urllib.request, urllib.error
     req = urllib.request.Request(url + path, method="POST" if body is not None else "GET",
                                  data=json.dumps(body).encode() if body is not None else None,
-                                 headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"})
+                                 headers={"User-Agent": USER_AGENT, "Authorization": f"Bearer {token}", "Content-Type": "application/json"})
     try:
         with urllib.request.urlopen(req, timeout=30) as res:
             return json.load(res)
