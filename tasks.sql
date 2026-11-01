@@ -1044,7 +1044,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - New bundles, regional packs (`plans/15c-regional-questions.md`); `chinese-base` (milestone 12).
 - Batches per age group (AG-8), targets from the windows (D-53).
 - Mixed-age sessions; log in `plans/open-questions.md` if it comes up.', '', '2026-10-11T21:54:56Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (6, 6, 'masterplan', 1000, 'Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10), and adds playful visuals to the screens before a game session: icons on their buttons, national flags for the languages (developer, 2026-10-14), and a colourful horizon of Commons cut-outs along the bottom of Start (developer, 2026-10-16). After the TV checks of the recordings (developer, 2026-10-17), it adds selectable soundtracks and three joker sounds that say what the joker does. Owner plan files: `plans/04-ui-tv-display.md` ("Transitions", "Music", "Sound assets", UI-7, UI-10), `plans/09-jokers.md` ("Sound assets", JK-9), `plans/10-visual-design.md` (VD-8 icon set, palettes).
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (6, 6, 'masterplan', 1000, 'Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10), and adds playful visuals to the screens before a game session: icons on their buttons, national flags for the languages (developer, 2026-10-14), and a colourful horizon of Commons cut-outs along the bottom of Start (developer, 2026-10-16). After the TV checks of the recordings (developer, 2026-10-17), it adds selectable soundtracks and three joker sounds that say what the joker does; the category splash gets entrance animations and a longer hold (developer, 2026-10-31). Owner plan files: `plans/04-ui-tv-display.md` ("Transitions", "Music", "Sound assets", UI-7, UI-10), `plans/09-jokers.md` ("Sound assets", JK-9), `plans/10-visual-design.md` (VD-8 icon set, palettes).
 
 **This masterplan''s tasks are not implementation work: each of them writes the plan for one part below** (`pm plan add 6 …`), with that part''s tasks.
 
@@ -1053,11 +1053,11 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 
 ## Part 2: Recorded sound effects (UI-10), priority 200
 - Planned and built: `plan 32: Recorded sound effects (UI-10)`; the TV check is answered: `decision 81: Recorded sound effects: approve on the TV?` (changes for three jokers, Part 7; the other effects approved).
-- Open: `task 146: Gamemaster check of the recorded effects on the TV` applies the answer; Part 7 is that work.
+- Part 7 is the rest of that work.
 
 ## Part 3: Recorded music loops (UI-10), priority 190
 - Planned and built: `plan 33: Recorded music loops (UI-10)`; the TV check is answered: `decision 83: Recorded music loops: approve on the TV?` (the recordings sound better, the vibe is wrong: keep them as one soundtrack, add more, make it selectable; Part 6).
-- Open: `task 149: Gamemaster check of the music loops on the TV` (nothing to change in plan 33''s set itself: it stays as it is, as one soundtrack), `task 150: Close UI-10 in the plans` (after Parts 6 and 7: UI-10 closes with soundtracks and the new joker sounds).
+- Open: `task 150: Close UI-10 in the plans` (after Parts 6 and 7: UI-10 closes with soundtracks and the new joker sounds).
 
 ## Part 4: Playful icons and language flags before a game session, priority 400
 - Done: `plan 135: Playful icons and language flags before a game session` (tasks 1081, 1082, 1083, 1103); flags per `decision 186: Language flags instead of the globe`.
@@ -1066,7 +1066,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - Done: `plan 150: Start screen horizon` (tasks 1327–1331, 1362): picks approved, assets and credits, gallery review and fixes.
 
 ## Part 6: Soundtracks, priority 180
-- New plan (`pm plan add 6 … --priority 180`), after plan 33 (reuses its pipeline, loop points, budget conventions and `/?efectos`).
+- Done: `plan 182: Soundtracks` (tasks 1602–1605), default picked. As specified, after plan 33 (reuses its pipeline, loop points, budget conventions and `/?efectos`).
 - What (developer, 2026-10-17, decision 83): the music becomes a choice of soundtracks; each soundtrack is one matched set of three loops: menu (`normal`), question, question submitted; tension clearly rises at each step, the menu loop calm and relaxing (the synthesized loops are the model: chill, with a clear rise on submit).
 - Soundtracks:
   - the synthesized loops (`startTrack()` scheduler in `app/client/src/game/sound.svelte.ts`) as one soundtrack
@@ -1081,7 +1081,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - Docs: `plans/04-ui-tv-display.md` ("Music", "Sound assets", UI-10 note).
 
 ## Part 7: Joker sounds that say what the joker does, priority 200
-- Not a new plan: `plan 32: Recorded sound effects (UI-10)` takes it (its revision adds the tasks; `task 146: Gamemaster check of the recorded effects on the TV` applies decision 81 or hands over to them).
+- Not a new plan: `plan 32: Recorded sound effects (UI-10)` took it: `task 1599: Joker sounds that say what the joker does: broom, microwave bing, fairy wand` done; open: `task 146: Developer check of the three new joker sounds on the TV`.
 - What (developer, 2026-10-17, `decision 81: Recorded sound effects: approve on the TV?`):
   - Paso y fuera (Pass & Purge): a broom sweeping (today''s `escoba` doesn''t read as a broom)
   - Soplo (Hint): a microwave bell «bing»
@@ -1091,11 +1091,19 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - Check: a developer decision after the swap (`/?efectos` and a real game on the TV).
 
 ## Part 8: Category splash on the question screen, priority 300
-- Done: `plan 181: Category splash on the question screen` (tasks 1586–1590); sizes swapped per `decision 353: Category splash on the question screen: approve the exits and sounds?`.
+- Done: `plan 181: Category splash on the question screen` (tasks 1586–1590); sizes swapped per `decision 353: Category splash on the question screen: approve the exits and sounds?`; those exits, sounds and sizes stay.
+- Open, entrances (developer, 2026-10-31): the splash just appears, and without movement it doesn''t draw the eye to the category and subcategory.
+- Not a new plan: `plan 181: Category splash on the question screen` takes it; its tasks are all done, so no revision was queued: a `--kind plan` task of this masterplan (`extend plan 181: splash entrances and longer hold`) edits it:
+  - 4–5 entrance animations, picked at random like the exits (`question/splash.ts`, none of the recent ones again), on Question and Timed
+  - silent: no new cues; the exits keep their sounds
+  - `SPLASH_HOLD_MS` doubled, 1000 → 2000 ms, counted after the entrance ends (`game/timing.ts`)
+  - `reducedMotion()`: plain fade
+  - all entrances play on `/?efectos`
+- Check: a screen-gallery review set of the entrances and hold (`trivia-gallery --set task-<id> --only <shots>`), developer decision; `plans/04-ui-tv-display.md` "Category splash" updated.
 
 ## Order and constraints
 - Parts are independent, except: 2 → 3 shared conventions (done); 3 → 6 (plan 33''s set and pipeline); 6 and 7 before `task 150: Close UI-10 in the plans`.
-- D-45 licences only; everything offline; no new npm or Python dependencies.', 'This part of the work finishes the look and sound of the family trivia game on the TV. Most of it is done: screens load their pictures before they appear, the buttons before a game have playful icons, languages show flags, and the start screen has a colourful skyline of pictures from around the world. What remains is the music and three joker sounds: the family will be able to choose between several soundtracks that grow more tense as a question goes on, and three jokers get sounds that say what they do — a broom, a microwave bell and a fairy''s magic wand.', '2026-10-11T21:54:56Z', NULL);
+- D-45 licences only; everything offline; no new npm or Python dependencies.', 'This part of the work finishes the look and sound of the family trivia game on the TV. Most of it is done: screens load their pictures before they appear, the buttons before a game have playful icons, languages show flags, the start screen has a colourful skyline of pictures from around the world, and the family can choose between several soundtracks. What remains is a last check of three joker sounds and a livelier topic announcement: the topic that flashes up on each new question will now arrive with a moving entrance and stay a little longer, so the eye goes to it.', '2026-10-11T21:54:56Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (7, 7, 'masterplan', 1000, 'Milestone 7 is S2 of the Steam track (D-34, `plans/11-steam.md`): it settles what the product is before anything Steam-specific gets built. Most of it is decisions, not code. Workers research each question, write the options with a recommendation as a pm decision, and record the gamemaster''s answer in `plans/decisions.md` (next free D-number). Then they resolve the question in `plans/open-questions.md` and update the owning plan file. The few S2 tasks that are code or files (MD-6, MD-7, the gamemaster mode''s configure screen, menu and «select answer» setting, PUB-4''s `LICENSE`) follow once their decision is in.
 
 **The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 7 …`, priority as suggested), and that plan''s tasks do the work. Parts 1–11 have their plans already (plans 34–43, 59); part 12 needs its plan; a revision edits a part''s plan (`pm plan edit`) only where its body contradicts this masterplan.
@@ -44259,8 +44267,147 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `qgen report --locale es` meets `targets.json` `base` -> no next run; else add the next run (fewer than 300 selected: it starts only after a plan 17 batch QC done since).
 - Health ✗: `pm decision list --grep "<run>: health"`, none -> `pm decision add`, no task link; never `qgen health ack`.
 - D-36: no prompt/pool/media/qgen.py changes; stage printed `git add` paths, don''t commit; exit 75/other non-zero -> decision + `pm task-pending-decision`, stage nothing.', '2026-11-01T00:45:55Z', NULL, 1849, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1855, 6, 'revise the masterplan of milestone 6: Screen polish leftovers', 'revise', 'open', 1000, NULL, '`milestone 6: Screen polish leftovers` changed. Bring `plan 6: masterplan`, the masterplan, in line with it (`pm plan edit 6 --body -`), or
-leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-11-01T01:21:44Z', NULL, NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1855, 6, 'revise the masterplan of milestone 6: Screen polish leftovers', 'revise', 'done', 1000, '2026-10-31, plan 6 body and intro (Part 8 entrances, stale part statuses)', '`milestone 6: Screen polish leftovers` changed. Bring `plan 6: masterplan`, the masterplan, in line with it (`pm plan edit 6 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-11-01T01:21:44Z', '2026-11-01T01:22:51Z', NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1856, 6, 'create tasks for plan 6: masterplan', 'split', 'open', 1000, NULL, 'Split plan 6 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-01T01:22:32Z', NULL, 1855, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1857, 32, 'revise plan 32: Recorded sound effects (UI-10)', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 32: Recorded sound effects (UI-10)`, changed; it is quoted below. Bring `plan 32: Recorded sound effects (UI-10)` in line with it
+(`pm plan edit 32 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 6: masterplan
+
+Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10), and adds playful visuals to the screens before a game session: icons on their buttons, national flags for the languages (developer, 2026-10-14), and a colourful horizon of Commons cut-outs along the bottom of Start (developer, 2026-10-16). After the TV checks of the recordings (developer, 2026-10-17), it adds selectable soundtracks and three joker sounds that say what the joker does; the category splash gets entrance animations and a longer hold (developer, 2026-10-31). Owner plan files: `plans/04-ui-tv-display.md` ("Transitions", "Music", "Sound assets", UI-7, UI-10), `plans/09-jokers.md` ("Sound assets", JK-9), `plans/10-visual-design.md` (VD-8 icon set, palettes).
+
+**This masterplan''s tasks are not implementation work: each of them writes the plan for one part below** (`pm plan add 6 …`), with that part''s tasks.
+
+## Part 1: Preload the next screen''s media (UI-7), priority 500
+- Done: `plan 31: Preload the next screen''s media (UI-7)` (tasks 140, 141); `Placeholder.svelte` is gone.
+
+## Part 2: Recorded sound effects (UI-10), priority 200
+- Planned and built: `plan 32: Recorded sound effects (UI-10)`; the TV check is answered: `decision 81: Recorded sound effects: approve on the TV?` (changes for three jokers, Part 7; the other effects approved).
+- Part 7 is the rest of that work.
+
+## Part 3: Recorded music loops (UI-10), priority 190
+- Planned and built: `plan 33: Recorded music loops (UI-10)`; the TV check is answered: `decision 83: Recorded music loops: approve on the TV?` (the recordings sound better, the vibe is wrong: keep them as one soundtrack, add more, make it selectable; Part 6).
+- Open: `task 150: Close UI-10 in the plans` (after Parts 6 and 7: UI-10 closes with soundtracks and the new joker sounds).
+
+## Part 4: Playful icons and language flags before a game session, priority 400
+- Done: `plan 135: Playful icons and language flags before a game session` (tasks 1081, 1082, 1083, 1103); flags per `decision 186: Language flags instead of the globe`.
+
+## Part 5: Start screen horizon, priority 300
+- Done: `plan 150: Start screen horizon` (tasks 1327–1331, 1362): picks approved, assets and credits, gallery review and fixes.
+
+## Part 6: Soundtracks, priority 180
+- Done: `plan 182: Soundtracks` (tasks 1602–1605), default picked. As specified, after plan 33 (reuses its pipeline, loop points, budget conventions and `/?efectos`).
+- What (developer, 2026-10-17, decision 83): the music becomes a choice of soundtracks; each soundtrack is one matched set of three loops: menu (`normal`), question, question submitted; tension clearly rises at each step, the menu loop calm and relaxing (the synthesized loops are the model: chill, with a clear rise on submit).
+- Soundtracks:
+  - the synthesized loops (`startTrack()` scheduler in `app/client/src/game/sound.svelte.ts`) as one soundtrack
+  - plan 33''s recorded set (`musica-normal.m4a`, `musica-pregunta.m4a`, `musica-enviada.m4a`) as one soundtrack, unchanged
+  - 3–4 more recorded ones: sourced like plan 33 (Kenney.nl, OpenGameArt, Freesound; D-45 allowlist, CC0 preferred), matched sets (one piece at three intensities, or stems; same key and tempo family so the ~80 ms cuts `question` ↔ `submitted` don''t clash); credited in `app/client/public/audio/CREDITS.md` (Credits screen and the release check''s credits step read it); within `app/desktop/media-budget.json` (the plan sets the audio budget for the extra loops; raise it only with the size stated)
+- File layout: the plan decides (e.g. `musica-<soundtrack>-<track>.m4a`, flat like today, or a subfolder; then `credits.ts`, `credits_check.mjs`, `stage-media.mjs` follow); names ASCII.
+- Picker: the Esc menu''s «Sonido» section gets «Banda sonora» (the soundtracks by name, all four catalogs; `locales/style/<locale>.md` read first); saved like the volumes; switches live (the playing track crossfades to the same track of the new soundtrack), so the developer can compare on the TV; pad, keyboard and mouse like the volume rows.
+- `timed` (Competitive mode, `plan 164: Timed game screens, drama and sound`): a recorded soundtrack uses its question loop; the synthesized one keeps its own timed track; the plan checks plan 164''s sound wiring and fits into it.
+- Unchanged: `roll`, `victory`, effects, fades, cuts, ducking (04 "Music").
+- Audition: `/?efectos` lists every soundtrack''s three loops and the cut; the picker itself is the TV comparison.
+- Default: synthesized until the developer picks; last task: a developer decision (listen on the TV, pick the default; options per soundtrack), then set it and update 04 "Music".
+- Docs: `plans/04-ui-tv-display.md` ("Music", "Sound assets", UI-10 note).
+
+## Part 7: Joker sounds that say what the joker does, priority 200
+- Not a new plan: `plan 32: Recorded sound effects (UI-10)` took it: `task 1599: Joker sounds that say what the joker does: broom, microwave bing, fairy wand` done; open: `task 146: Developer check of the three new joker sounds on the TV`.
+- What (developer, 2026-10-17, `decision 81: Recorded sound effects: approve on the TV?`):
+  - Paso y fuera (Pass & Purge): a broom sweeping (today''s `escoba` doesn''t read as a broom)
+  - Soplo (Hint): a microwave bell «bing»
+  - Hada madrina (Fairy): a fairy''s magic wand sprinkling fairy dust (replaces the swanee whistle `silbato`)
+  - Doña Exigente (Ms Picky), Tiro mágico (Trick Shot): unchanged
+- Sourced, converted, credited and budgeted as plan 32 (D-45, `CREDITS.md`, synth recipe as the fallback); `plans/09-jokers.md` "Sound assets" updated.
+- Check: a developer decision after the swap (`/?efectos` and a real game on the TV).
+
+## Part 8: Category splash on the question screen, priority 300
+- Done: `plan 181: Category splash on the question screen` (tasks 1586–1590); sizes swapped per `decision 353: Category splash on the question screen: approve the exits and sounds?`; those exits, sounds and sizes stay.
+- Open, entrances (developer, 2026-10-31): the splash just appears, and without movement it doesn''t draw the eye to the category and subcategory.
+- Not a new plan: `plan 181: Category splash on the question screen` takes it; its tasks are all done, so no revision was queued: a `--kind plan` task of this masterplan (`extend plan 181: splash entrances and longer hold`) edits it:
+  - 4–5 entrance animations, picked at random like the exits (`question/splash.ts`, none of the recent ones again), on Question and Timed
+  - silent: no new cues; the exits keep their sounds
+  - `SPLASH_HOLD_MS` doubled, 1000 → 2000 ms, counted after the entrance ends (`game/timing.ts`)
+  - `reducedMotion()`: plain fade
+  - all entrances play on `/?efectos`
+- Check: a screen-gallery review set of the entrances and hold (`trivia-gallery --set task-<id> --only <shots>`), developer decision; `plans/04-ui-tv-display.md` "Category splash" updated.
+
+## Order and constraints
+- Parts are independent, except: 2 → 3 shared conventions (done); 3 → 6 (plan 33''s set and pipeline); 6 and 7 before `task 150: Close UI-10 in the plans`.
+- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-11-01T01:22:32Z', NULL, 1855, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1858, 33, 'revise plan 33: Recorded music loops (UI-10)', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 33: Recorded music loops (UI-10)`, changed; it is quoted below. Bring `plan 33: Recorded music loops (UI-10)` in line with it
+(`pm plan edit 33 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 6: masterplan
+
+Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10), and adds playful visuals to the screens before a game session: icons on their buttons, national flags for the languages (developer, 2026-10-14), and a colourful horizon of Commons cut-outs along the bottom of Start (developer, 2026-10-16). After the TV checks of the recordings (developer, 2026-10-17), it adds selectable soundtracks and three joker sounds that say what the joker does; the category splash gets entrance animations and a longer hold (developer, 2026-10-31). Owner plan files: `plans/04-ui-tv-display.md` ("Transitions", "Music", "Sound assets", UI-7, UI-10), `plans/09-jokers.md` ("Sound assets", JK-9), `plans/10-visual-design.md` (VD-8 icon set, palettes).
+
+**This masterplan''s tasks are not implementation work: each of them writes the plan for one part below** (`pm plan add 6 …`), with that part''s tasks.
+
+## Part 1: Preload the next screen''s media (UI-7), priority 500
+- Done: `plan 31: Preload the next screen''s media (UI-7)` (tasks 140, 141); `Placeholder.svelte` is gone.
+
+## Part 2: Recorded sound effects (UI-10), priority 200
+- Planned and built: `plan 32: Recorded sound effects (UI-10)`; the TV check is answered: `decision 81: Recorded sound effects: approve on the TV?` (changes for three jokers, Part 7; the other effects approved).
+- Part 7 is the rest of that work.
+
+## Part 3: Recorded music loops (UI-10), priority 190
+- Planned and built: `plan 33: Recorded music loops (UI-10)`; the TV check is answered: `decision 83: Recorded music loops: approve on the TV?` (the recordings sound better, the vibe is wrong: keep them as one soundtrack, add more, make it selectable; Part 6).
+- Open: `task 150: Close UI-10 in the plans` (after Parts 6 and 7: UI-10 closes with soundtracks and the new joker sounds).
+
+## Part 4: Playful icons and language flags before a game session, priority 400
+- Done: `plan 135: Playful icons and language flags before a game session` (tasks 1081, 1082, 1083, 1103); flags per `decision 186: Language flags instead of the globe`.
+
+## Part 5: Start screen horizon, priority 300
+- Done: `plan 150: Start screen horizon` (tasks 1327–1331, 1362): picks approved, assets and credits, gallery review and fixes.
+
+## Part 6: Soundtracks, priority 180
+- Done: `plan 182: Soundtracks` (tasks 1602–1605), default picked. As specified, after plan 33 (reuses its pipeline, loop points, budget conventions and `/?efectos`).
+- What (developer, 2026-10-17, decision 83): the music becomes a choice of soundtracks; each soundtrack is one matched set of three loops: menu (`normal`), question, question submitted; tension clearly rises at each step, the menu loop calm and relaxing (the synthesized loops are the model: chill, with a clear rise on submit).
+- Soundtracks:
+  - the synthesized loops (`startTrack()` scheduler in `app/client/src/game/sound.svelte.ts`) as one soundtrack
+  - plan 33''s recorded set (`musica-normal.m4a`, `musica-pregunta.m4a`, `musica-enviada.m4a`) as one soundtrack, unchanged
+  - 3–4 more recorded ones: sourced like plan 33 (Kenney.nl, OpenGameArt, Freesound; D-45 allowlist, CC0 preferred), matched sets (one piece at three intensities, or stems; same key and tempo family so the ~80 ms cuts `question` ↔ `submitted` don''t clash); credited in `app/client/public/audio/CREDITS.md` (Credits screen and the release check''s credits step read it); within `app/desktop/media-budget.json` (the plan sets the audio budget for the extra loops; raise it only with the size stated)
+- File layout: the plan decides (e.g. `musica-<soundtrack>-<track>.m4a`, flat like today, or a subfolder; then `credits.ts`, `credits_check.mjs`, `stage-media.mjs` follow); names ASCII.
+- Picker: the Esc menu''s «Sonido» section gets «Banda sonora» (the soundtracks by name, all four catalogs; `locales/style/<locale>.md` read first); saved like the volumes; switches live (the playing track crossfades to the same track of the new soundtrack), so the developer can compare on the TV; pad, keyboard and mouse like the volume rows.
+- `timed` (Competitive mode, `plan 164: Timed game screens, drama and sound`): a recorded soundtrack uses its question loop; the synthesized one keeps its own timed track; the plan checks plan 164''s sound wiring and fits into it.
+- Unchanged: `roll`, `victory`, effects, fades, cuts, ducking (04 "Music").
+- Audition: `/?efectos` lists every soundtrack''s three loops and the cut; the picker itself is the TV comparison.
+- Default: synthesized until the developer picks; last task: a developer decision (listen on the TV, pick the default; options per soundtrack), then set it and update 04 "Music".
+- Docs: `plans/04-ui-tv-display.md` ("Music", "Sound assets", UI-10 note).
+
+## Part 7: Joker sounds that say what the joker does, priority 200
+- Not a new plan: `plan 32: Recorded sound effects (UI-10)` took it: `task 1599: Joker sounds that say what the joker does: broom, microwave bing, fairy wand` done; open: `task 146: Developer check of the three new joker sounds on the TV`.
+- What (developer, 2026-10-17, `decision 81: Recorded sound effects: approve on the TV?`):
+  - Paso y fuera (Pass & Purge): a broom sweeping (today''s `escoba` doesn''t read as a broom)
+  - Soplo (Hint): a microwave bell «bing»
+  - Hada madrina (Fairy): a fairy''s magic wand sprinkling fairy dust (replaces the swanee whistle `silbato`)
+  - Doña Exigente (Ms Picky), Tiro mágico (Trick Shot): unchanged
+- Sourced, converted, credited and budgeted as plan 32 (D-45, `CREDITS.md`, synth recipe as the fallback); `plans/09-jokers.md` "Sound assets" updated.
+- Check: a developer decision after the swap (`/?efectos` and a real game on the TV).
+
+## Part 8: Category splash on the question screen, priority 300
+- Done: `plan 181: Category splash on the question screen` (tasks 1586–1590); sizes swapped per `decision 353: Category splash on the question screen: approve the exits and sounds?`; those exits, sounds and sizes stay.
+- Open, entrances (developer, 2026-10-31): the splash just appears, and without movement it doesn''t draw the eye to the category and subcategory.
+- Not a new plan: `plan 181: Category splash on the question screen` takes it; its tasks are all done, so no revision was queued: a `--kind plan` task of this masterplan (`extend plan 181: splash entrances and longer hold`) edits it:
+  - 4–5 entrance animations, picked at random like the exits (`question/splash.ts`, none of the recent ones again), on Question and Timed
+  - silent: no new cues; the exits keep their sounds
+  - `SPLASH_HOLD_MS` doubled, 1000 → 2000 ms, counted after the entrance ends (`game/timing.ts`)
+  - `reducedMotion()`: plain fade
+  - all entrances play on `/?efectos`
+- Check: a screen-gallery review set of the entrances and hold (`trivia-gallery --set task-<id> --only <shots>`), developer decision; `plans/04-ui-tv-display.md` "Category splash" updated.
+
+## Order and constraints
+- Parts are independent, except: 2 → 3 shared conventions (done); 3 → 6 (plan 33''s set and pipeline); 6 and 7 before `task 150: Close UI-10 in the plans`.
+- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-11-01T01:22:32Z', NULL, 1855, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1859, 6, 'extend plan 181: splash entrances and longer hold', 'plan', 'open', 1000, NULL, 'Part 8 of `plan 6: masterplan`: `plan 181: Category splash on the question screen` has all tasks done, so no revision was queued for it. Bring it in line with Part 8 and milestone 6 "Category splash entrances": `pm plan edit 181 --body -` (keeps "Look", exits, sounds; decision 353''s sizes hold), which queues its split into tasks.
+
+Cover: 4–5 silent entrances in `question/splash.ts` + `Splash.svelte`, random with no recent repeat (`pickExit`''s recent list is one shared array, and "last 5" can''t hold with 4–5 entries); `SPLASH_HOLD_MS` 1000 → 2000 ms after the entrance ends (`game/timing.ts`, entrance length constant); Question and Timed (a longer splash over the running clock: check against decision 296); `reducedMotion()` plain fade; `/?efectos` plays them; `galleryHold()`; `plans/04-ui-tv-display.md` "Category splash"; a gallery review set and a developer decision.
+
+Done when: plan 181 lists this work and its split is queued.', '2026-11-01T01:22:50Z', NULL, 1855, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -52720,6 +52867,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2009, 1852, '2026-11-01T00:04:40Z', '2026-11-01T00:05:05Z', 'done', NULL, 0, '5f976abdf36d128e320e9f59e52f5a40d336393c', 'app', 'claude-sonnet-5-5', '122abf12-2fe7-46b9-945e-fb6ca265e2a3', 2008, 5, 12, 2740, 258393, 13211, 0.2815167, 57358, 60, 54726);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2010, 1853, '2026-11-01T00:05:06Z', '2026-11-01T00:06:27Z', 'done', NULL, 0, '031203d5428901f067e9c8578de54434de45d449', 'app', 'claude-sonnet-5-5', '122abf12-2fe7-46b9-945e-fb6ca265e2a3', 2009, 13, 28, 9139, 1054423, 42149, 0.64700099999999994, 99053, 60, 54726);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2011, 1850, '2026-11-01T00:46:02Z', NULL, 'running', NULL, NULL, 'dbf58594d8d4eaa6252b6544d615bd6db7a628de', 'questions', NULL, NULL, 2007, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 54726);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2012, 1855, '2026-11-01T01:21:47Z', '2026-11-01T01:22:57Z', 'done', NULL, 0, '3d8a0588ec954e0cef926655e756f99c16998836', NULL, 'claude-opus-5-5', 'fc3794f9-a42a-4184-91dc-1f18725628b3', NULL, 8, 14, 7246, 307671, 59727, 0.68432620000000011, 60272, 60, 54726);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
