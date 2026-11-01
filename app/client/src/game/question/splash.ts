@@ -1,4 +1,4 @@
-// Category splash exits (plan 181): a table of category exit, subcategory exit and sound cue; the keyframes are in Splash.svelte.
+// Category splash entrances and exits (plans 181, 191): tables of class names, offsets and sound cues; the keyframes are in Splash.svelte.
 import type { Cue } from "../sound.svelte.ts";
 
 /** A light move of the small line (the category since decision 353), with its offset against the category's (ms, negative = earlier). */
@@ -38,16 +38,36 @@ export const SPLASH_EXITS: SplashExit[] = [
   { id: "pop", category: "pop", sub: "shrink", subOffsetMs: -100, cue: "splash-pop" },
 ];
 
-const recent: string[] = [];
+/** A silent entrance: the classes of the big and small line's keyframes in Splash.svelte; `letters`: the big line rises in letter by letter, `spread` the share of the entrance spent staggering. */
+export type SplashEntrance = { id: string; category: string; sub: string; letters?: { spread: number } };
 
-/** A random exit not among the last 5 picked (fewer while the table is short). */
-export function pickExit(table: SplashExit[] = SPLASH_EXITS): SplashExit {
+export const SPLASH_ENTRANCES: SplashEntrance[] = [
+  { id: "slam", category: "in-slam", sub: "in-rise" },
+  { id: "pop", category: "in-pop", sub: "in-rise" },
+  { id: "slide", category: "in-slide", sub: "in-rise" },
+  { id: "drop", category: "in-drop", sub: "in-rise" },
+  { id: "letters", category: "in-letters", sub: "in-rise", letters: { spread: 0.5 } },
+];
+
+/** What each table remembers: exits the last 5, entrances the last 2 (fewer while a table is short). */
+const EXITS_KEEP = 5;
+const ENTRANCES_KEEP = 2;
+const recentExits: string[] = [];
+const recentEntrances: string[] = [];
+
+function pick<T extends { id: string }>(table: T[], recent: string[], keep: number): T {
   const free = table.filter((e) => !recent.includes(e.id));
-  const exit = free[Math.floor(Math.random() * free.length)];
-  recent.push(exit.id);
-  while (recent.length > Math.min(5, table.length - 1)) recent.shift();
-  return exit;
+  const item = free[Math.floor(Math.random() * free.length)];
+  recent.push(item.id);
+  while (recent.length > Math.min(keep, table.length - 1)) recent.shift();
+  return item;
 }
+
+/** A random exit not among the last 5 picked. */
+export const pickExit = (table: SplashExit[] = SPLASH_EXITS): SplashExit => pick(table, recentExits, EXITS_KEEP);
+
+/** A random entrance not among the last 2 picked. */
+export const pickEntrance = (table: SplashEntrance[] = SPLASH_ENTRANCES): SplashEntrance => pick(table, recentEntrances, ENTRANCES_KEEP);
 
 /** Gallery hook (trivia-gallery): `window.__gallerySplash` freezes the splash at its hold, optionally on another topic. */
 export function galleryHold(): { topic?: { category: string; subcategory: string | null } } | undefined {
