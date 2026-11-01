@@ -7,7 +7,7 @@
   import type { BundleMark } from "../BundleMark.svelte";
   import { sfx } from "../sound.svelte.ts";
   import { REDUCED_FADE_MS, SPLASH_EXIT_MS, SPLASH_HOLD_MS, SPLASH_IN_MS, SPLASH_SUB_MAX_MS, reducedMotion } from "../timing.ts";
-  import { galleryHold, pickEntrance, pickExit, type SplashEntrance, type SplashExit } from "./splash.ts";
+  import { SPLASH_ENTRANCES, galleryHold, pickEntrance, pickExit, type SplashEntrance, type SplashExit } from "./splash.ts";
 
   let {
     category: ownCategory,
@@ -39,7 +39,7 @@
   const category = hook?.topic?.category ?? untrack(() => ownCategory);
   const subcategory = hook?.topic ? hook.topic.subcategory : untrack(() => ownSub);
   const picked = untrack(() => forced ?? pickExit());
-  const entering = untrack(() => forcedIn ?? pickEntrance());
+  const entering = untrack(() => forcedIn ?? SPLASH_ENTRANCES.find((e) => e.id === hook?.entrance) ?? pickEntrance());
   const reduced = reducedMotion();
   /** The small line and the bundle mark come in this much after the big line. */
   const LAG_MS = 100;
@@ -74,6 +74,16 @@
   const letterInMs = entering.letters ? SPLASH_IN_MS * (1 - entering.letters.spread) : SPLASH_IN_MS;
   const subShift = $derived(picked.subOffsetMs);
 
+  let box = $state<HTMLElement>();
+  // Gallery: the forced entrance stops midway
+  $effect(() => {
+    if (phase !== "in" || !hook?.entrance || !box) return;
+    for (const a of box.getAnimations({ subtree: true })) {
+      a.pause();
+      a.currentTime = (reduced ? REDUCED_FADE_MS : SPLASH_IN_MS) / 2;
+    }
+  });
+
   let timers: ReturnType<typeof setTimeout>[] = [];
   let left = false;
   function exitNow() {
@@ -92,6 +102,7 @@
         phase = "in";
         timers.push(
           setTimeout(() => {
+            if (hook?.entrance) return;
             phase = "hold";
             timers.push(setTimeout(exitNow, SPLASH_HOLD_MS));
           }, reduced ? REDUCED_FADE_MS : SPLASH_IN_MS),
@@ -111,7 +122,7 @@
 </script>
 
 {#if phase === "in" || phase === "hold" || phase === "exit"}
-  <div class="splash" aria-hidden="true" style:--exit="{SPLASH_EXIT_MS}ms" style:--in="{SPLASH_IN_MS}ms" style:--lag="{LAG_MS}ms" style:--fade="{REDUCED_FADE_MS}ms">
+  <div class="splash" bind:this={box} aria-hidden="true" style:--exit="{SPLASH_EXIT_MS}ms" style:--in="{SPLASH_IN_MS}ms" style:--lag="{LAG_MS}ms" style:--fade="{REDUCED_FADE_MS}ms">
     <div class="box" class:long>
       {#if bundle}<span class="mark {phase === "in" ? (reduced ? "in-fade" : "in-rise") : "fade"}" class:go={phase === "exit"} style:--delay="0ms"><BundleMark_ {bundle} /></span>{/if}
       <p
