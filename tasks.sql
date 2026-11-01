@@ -332,6 +332,10 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
   - 4–5 entrance animations, picked at random like the exits (`question/splash.ts`, none of the recent ones again), on Question and Timed; silent, the exits keep their sounds
   - `SPLASH_HOLD_MS` doubled, 1000 → 2000 ms, counted after the entrance ends
   - `reducedMotion()`: plain fade; all entrances play on `/?efectos`
+- Correct-answer sounds (developer, 2026-10-31): the fanfare is great but gets repetitive within a game
+  - today''s fanfare stays, with 4–5 more recorded variants in `fanfare` (`sound.svelte.ts`), all the same kind of short, triumphant jingle and about the same length
+  - picked at random, never the same one twice in a row; on Question and Timed
+  - licences as in D-45 (CC0 first), credited, within the media budget
 
 ## Constraints
 - CC0 or otherwise allowlisted licenses only (D-45); assets stay offline.
@@ -343,6 +347,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - Start shows the horizon; its images are credited; the developer approved it in the screen gallery.
 - The developer picked the default soundtrack on the TV.
 - The developer approved the splash entrances and hold in a screen-gallery review set.
+- The developer approved the correct-answer sounds on the TV.
 
 Plan files: `plans/04-ui-tv-display.md`.', '2026-10-11T21:54:56Z', NULL, 0);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (7, 'Steam S2: product definition', 'implemented', 'The first phase of the Steam track (D-34) is decisions, not code: what the product is before anything Steam-specific gets built. It can run alongside the other milestones.
@@ -44269,8 +44274,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - D-36: no prompt/pool/media/qgen.py changes; stage printed `git add` paths, don''t commit; exit 75/other non-zero -> decision + `pm task-pending-decision`, stage nothing.', '2026-11-01T00:45:55Z', NULL, 1849, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1855, 6, 'revise the masterplan of milestone 6: Screen polish leftovers', 'revise', 'done', 1000, '2026-10-31, plan 6 body and intro (Part 8 entrances, stale part statuses)', '`milestone 6: Screen polish leftovers` changed. Bring `plan 6: masterplan`, the masterplan, in line with it (`pm plan edit 6 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-11-01T01:21:44Z', '2026-11-01T01:22:51Z', NULL, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1856, 6, 'create tasks for plan 6: masterplan', 'split', 'open', 1000, NULL, 'Split plan 6 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-01T01:22:32Z', NULL, 1855, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1856, 6, 'create tasks for plan 6: masterplan', 'split', 'done', 1000, '2026-10-31, no changes: every part is done or already has its open tasks: 1859 (Part 8, extends plan 181), 146 and 150 (Parts 2, 3, 7), revisions 1857, 1858; no new decisions', 'Split plan 6 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-01T01:22:32Z', '2026-11-01T01:23:20Z', 1855, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1857, 32, 'revise plan 32: Recorded sound effects (UI-10)', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 32: Recorded sound effects (UI-10)`, changed; it is quoted below. Bring `plan 32: Recorded sound effects (UI-10)` in line with it
 (`pm plan edit 32 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -44408,6 +44413,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Cover: 4–5 silent entrances in `question/splash.ts` + `Splash.svelte`, random with no recent repeat (`pickExit`''s recent list is one shared array, and "last 5" can''t hold with 4–5 entries); `SPLASH_HOLD_MS` 1000 → 2000 ms after the entrance ends (`game/timing.ts`, entrance length constant); Question and Timed (a longer splash over the running clock: check against decision 296); `reducedMotion()` plain fade; `/?efectos` plays them; `galleryHold()`; `plans/04-ui-tv-display.md` "Category splash"; a gallery review set and a developer decision.
 
 Done when: plan 181 lists this work and its split is queued.', '2026-11-01T01:22:50Z', NULL, 1855, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1860, 6, 'revise the masterplan of milestone 6: Screen polish leftovers', 'revise', 'open', 1000, NULL, '`milestone 6: Screen polish leftovers` changed. Bring `plan 6: masterplan`, the masterplan, in line with it (`pm plan edit 6 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-11-01T01:23:13Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -52868,6 +52875,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2010, 1853, '2026-11-01T00:05:06Z', '2026-11-01T00:06:27Z', 'done', NULL, 0, '031203d5428901f067e9c8578de54434de45d449', 'app', 'claude-sonnet-5-5', '122abf12-2fe7-46b9-945e-fb6ca265e2a3', 2009, 13, 28, 9139, 1054423, 42149, 0.64700099999999994, 99053, 60, 54726);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2011, 1850, '2026-11-01T00:46:02Z', NULL, 'running', NULL, NULL, 'dbf58594d8d4eaa6252b6544d615bd6db7a628de', 'questions', NULL, NULL, 2007, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 54726);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2012, 1855, '2026-11-01T01:21:47Z', '2026-11-01T01:22:57Z', 'done', NULL, 0, '3d8a0588ec954e0cef926655e756f99c16998836', NULL, 'claude-opus-5-5', 'fc3794f9-a42a-4184-91dc-1f18725628b3', NULL, 8, 14, 7246, 307671, 59727, 0.68432620000000011, 60272, 60, 54726);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2013, 1856, '2026-11-01T01:22:57Z', '2026-11-01T01:23:26Z', 'done', NULL, 0, 'a2c35adb49ebbb1aab420abc229555a185ca84b9', NULL, 'claude-opus-5-5', '8dc454f7-a66e-4f52-815a-60a0d8a8f662', NULL, 5, 10, 2090, 180998, 32413, 0.3373436, 47431, 60, 54726);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
