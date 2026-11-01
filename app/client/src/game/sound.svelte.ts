@@ -5,6 +5,7 @@
 // loops (SOUNDTRACKS) and the generated one, `sintetizada`, which is also the fallback for a missing
 // file. Still synthesized: the effect cues without a recording (recipes below) and the generated loops.
 
+import { pickVariant } from "../engine/variant.ts";
 import { desktop } from "../lib/desktop.ts";
 
 /** normal: Start/Level/Select; question: a question on screen; submitted: an answer locked in;
@@ -122,6 +123,7 @@ const EFFECT_NAMES = [
   "trituradora", "latido", "rebobinar", "mira-tic", "corcho", "rasgado", "susurro-papel", "ficha", "cohete",
   "canon-confeti", "bengalas", "estrellas", "disolver", "derretir", "agujero-negro", "pajaros", "gelatina",
   "maquina-escribir", "barrido", "microondas", "varita",
+  "fanfarria-2", "fanfarria-3", "fanfarria-4", "fanfarria-5",
 ] as const;
 type Sample = (typeof EFFECT_NAMES)[number];
 const SAMPLE_NAMES: string[] = [
@@ -131,11 +133,11 @@ const SAMPLE_NAMES: string[] = [
 const samples: Partial<Record<string, AudioBuffer>> = {};
 let samplesLoaded: Promise<void> = Promise.resolve();
 let samplesReady = false;
-/** Effects played from a recording; `rate` changes the pitch. */
-const SAMPLE_FOR: Partial<Record<Cue, [Sample, ((level: number) => number)?]>> = {
+/** Effects played from a recording; `rate` changes the pitch; a list of files plays one at random, never the last twice. */
+const SAMPLE_FOR: Partial<Record<Cue, [Sample | readonly Sample[], ((level: number) => number)?]>> = {
   "applause-big": ["aplausos-gran"],
   applause: ["aplausos"],
-  fanfare: ["fanfarria"],
+  fanfare: [["fanfarria", "fanfarria-2", "fanfarria-3", "fanfarria-4", "fanfarria-5"]],
   "sad-trombone": ["trombon-triste"],
   "padlock-close": ["candado-cierra"],
   "padlock-open": ["candado-abre"],
@@ -571,10 +573,19 @@ export type Cue =
   | "splash-dissolve" | "splash-explode" | "splash-rocket" | "splash-drop" | "splash-wind" | "splash-blind" | "splash-drain" | "splash-pop"
   | "splash-zoom" | "splash-shatter" | "splash-melt" | "splash-blackhole" | "splash-birds" | "splash-typewriter" | "splash-plane" | "splash-jelly";
 
+const lastPick: Partial<Record<Cue, string>> = {};
+/** One of the files that decoded, not the one played last for this cue. */
+function pickLoaded(cue: Cue, files: readonly string[]) {
+  const key = pickVariant(files.filter((f) => samples[f]), lastPick[cue]);
+  lastPick[cue] = key;
+  return key;
+}
+
 /** Play a short effect; `level` sets the pitch of "block" (the tower's height); `synth` skips the recording. */
-export function sfx(cue: Cue, level = 1, opts: { synth?: boolean } = {}) {
+export function sfx(cue: Cue, level = 1, opts: { synth?: boolean; file?: string } = {}) {
   if (!ctx || ctx.state !== "running") return;
-  const [key, rate] = SAMPLE_FOR[cue] ?? [];
+  const [files, rate] = SAMPLE_FOR[cue] ?? [];
+  const key = opts.file ?? (typeof files === "string" ? files : files && pickLoaded(cue, files));
   const buffer = key && !opts.synth && samples[key];
   if (buffer) {
     const src = ctx.createBufferSource();
@@ -587,9 +598,13 @@ export function sfx(cue: Cue, level = 1, opts: { synth?: boolean } = {}) {
   RECIPES[cue](ctx, fxBus, ctx.currentTime + 0.01, level);
 }
 
-/** Every effect with its recording's file name, if any (the `/?efectos` audition list, UI-10). */
-export function effects(): { cue: Cue; file?: string }[] {
-  return (Object.keys(RECIPES) as Cue[]).map((cue) => ({ cue, file: SAMPLE_FOR[cue]?.[0] }));
+/** Every effect with its recording's file name, if any, and a row per variant (the `/?efectos` audition list, UI-10). */
+export function effects(): { cue: Cue; file?: string; variant?: boolean }[] {
+  return (Object.keys(RECIPES) as Cue[]).flatMap((cue) => {
+    const files = SAMPLE_FOR[cue]?.[0];
+    if (typeof files === "string" || !files) return [{ cue, file: files }];
+    return [{ cue, file: files[0] }, ...files.map((file) => ({ cue, file, variant: true }))];
+  });
 }
 
 type Recipe = (c: AudioContext, out: AudioNode, t: number, level: number) => void;
