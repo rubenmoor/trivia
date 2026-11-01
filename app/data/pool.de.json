@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "9bf6c334",
+  "hash": "63ab2fee",
   "questions": [
     {
       "id": "q-0001",
@@ -3634,6 +3634,40 @@
       "background": null
     },
     {
+      "id": "q-0141",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "greek-gods",
+      "bundle": "base",
+      "description": "Der grummeligste Onkel der berühmtesten Familie der Mythologie.",
+      "question": "Ich bin ein Bruder von Zeus und meine Waffe hat drei Spitzen. Wer bin ich?",
+      "answer": "Poseidon",
+      "wrong_answers": [
+        "Hades",
+        "Ares",
+        "Hermes"
+      ],
+      "hints": [
+        "Er ist einer der drei Brüder, die die Welt unter sich aufteilten.",
+        "Sein Reich ist das Meer, und er wohnt in einem Palast unter Wasser.",
+        "Die Römer nannten ihn Neptun, wie den blauen Planeten."
+      ],
+      "fun_fact": "Die Griechen glaubten, dass die Erde bebte, wenn Poseidon mit seinem Dreizack auf den Boden schlug – darum war er auch der Gott der Erdbeben.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Ancient_Greek_Pottery_Amphora_%2828186792630%29.jpg/3840px-Ancient_Greek_Pottery_Amphora_%2828186792630%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAncient_Greek_Pottery_Amphora_%2828186792630%29.jpg",
+        "credit": "Gary Todd from Xinzheng, China · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Gary Todd from Xinzheng, China",
+        "author_url": "https://www.flickr.com/people/101561334@N08"
+      },
+      "background": null
+    },
+    {
       "id": "q-0142",
       "status": "approved",
       "difficulty": 6,
@@ -5892,6 +5926,40 @@
         "license_url": null,
         "author": "NASA/Nichole Ayers",
         "author_url": "https://en.wikipedia.org/wiki/NASA"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0228",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "deserts",
+      "bundle": "base",
+      "description": "Ein Katzenklo, so riesig, dass es nicht einmal alle Katzen der Welt vollbekämen.",
+      "question": "Was ist die größte heiße Wüste der Welt?",
+      "answer": "Wüste Sahara",
+      "wrong_answers": [
+        "Arabische Wüste",
+        "Wüste Kalahari",
+        "Wüste Atacama"
+      ],
+      "hints": [
+        "Sie liegt in Afrika.",
+        "Sie bedeckt einen großen Teil des Nordens dieses Kontinents.",
+        "Ihr Name kommt von einem arabischen Wort, das schlicht „Wüste“ bedeutet."
+      ],
+      "fun_fact": "Die Sahara ist fast so groß wie die gesamten USA, doch zählt man die kalten Wüsten mit, ist die Antarktis die größte Wüste überhaupt.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Namib-Naukluft_Sand_Dunes_%282011%29.jpg/3840px-Namib-Naukluft_Sand_Dunes_%282011%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANamib-Naukluft_Sand_Dunes_%282011%29.jpg",
+        "credit": "Yathin S Krishnappa · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Yathin S Krishnappa",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Yathin_sk"
       },
       "background": null
     },
@@ -14396,6 +14464,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Ввласенко",
         "author_url": "https://commons.wikimedia.org/wiki/User:%D0%92%D0%B2%D0%BB%D0%B0%D1%81%D0%B5%D0%BD%D0%BA%D0%BE"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0548",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Steinerne Herren, die seit Jahrhunderten auf den Horizont starren, ohne ein einziges Mal zu blinzeln.",
+      "question": "Wie heißen diese riesigen Steinstatuen auf der Osterinsel?",
+      "answer": "Moai",
+      "wrong_answers": [
+        "Totems",
+        "Menhire",
+        "Sphinxe"
+      ],
+      "hints": [
+        "Sie stehen auf einer abgelegenen Insel mitten im Pazifik, die zu Chile gehört.",
+        "Fast alle sind riesige Köpfe mit langen Nasen und ernsten Augenbrauen.",
+        "Im Film „Nachts im Museum“ verlangt eine von ihnen von Ben Stillers Figur ständig Kaugummi."
+      ],
+      "fun_fact": "Auf der Osterinsel gibt es rund 900 Moai, und bei vielen steckt unter dem Kopf ein im Boden vergrabener Körper.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Amanecer_en_tongakiri%2C_isla_de_pascua_%282%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmanecer_en_tongakiri%2C_isla_de_pascua_%282%29.JPG",
+        "credit": "Claire Provost · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Claire Provost",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Clfa12&action=edit&redlink=1"
       },
       "background": null
     },
@@ -41006,6 +41108,40 @@
       "background": null
     },
     {
+      "id": "q-1413",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "architectural-styles",
+      "bundle": "base",
+      "description": "Der Hut, den sich Säulen aufsetzen, wenn sie schick aussehen wollen.",
+      "question": "Welches Bauteil sitzt oben auf einer Säule, verbindet sie mit der Last darüber und war bei den Griechen mit Spiralen oder Blättern verziert?",
+      "answer": "Kapitell",
+      "wrong_answers": [
+        "Schaft",
+        "Basis",
+        "Gesims"
+      ],
+      "hints": [
+        "Gesucht ist weder das lange Mittelstück noch der untere Teil.",
+        "Der Name stammt vom lateinischen „caput“, das „Kopf“ bedeutet.",
+        "Das Wort ist verwandt mit „Kapitän“, dem „Kopf“ einer Mannschaft."
+      ],
+      "fun_fact": "Die drei klassischen griechischen Säulenordnungen – dorisch, ionisch und korinthisch – unterscheidet man vor allem an diesem Teil der Säule.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Evening_columns_Zeus_temple_Athens.jpg/3840px-Evening_columns_Zeus_temple_Athens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEvening_columns_Zeus_temple_Athens.jpg",
+        "credit": "Jebulon · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Jebulon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jebulon"
+      },
+      "background": null
+    },
+    {
       "id": "q-1414",
       "status": "approved",
       "difficulty": 8,
@@ -52167,6 +52303,74 @@
       "background": null
     },
     {
+      "id": "q-1751",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "nobel-prizes",
+      "bundle": "base",
+      "description": "So gut in Physik, dass im Regal Platz für eine weitere Medaille her musste.",
+      "question": "Wer hat als einziger Mensch zweimal den Nobelpreis für Physik gewonnen?",
+      "answer": "John Bardeen",
+      "wrong_answers": [
+        "Albert Einstein",
+        "Marie Curie",
+        "Niels Bohr"
+      ],
+      "hints": [
+        "Er war ein US-amerikanischer Physiker.",
+        "Einen seiner Preise bekam er für die Erfindung des Transistors.",
+        "Den anderen bekam er 1972 für seine Arbeit zur Supraleitung."
+      ],
+      "fun_fact": "Auch Marie Curie gewann zwei Nobelpreise, aber einen für Physik und den anderen für Chemie.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Vintage_Carlton_Model_ST-7_Transistor_Radio%2C_Transistor_Radio%2C_Transistor_Radio_Collection%2C_Transistor_Radio_Collector%2C_Vintage_Japanese_Transistor_Radio_%2834116898301%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVintage_Carlton_Model_ST-7_Transistor_Radio%2C_Transistor_Radio%2C_Transistor_Radio_Collection%2C_Transistor_Radio_Collector%2C_Vintage_Japanese_Transistor_Radio_%2834116898301%29.jpg",
+        "credit": "Joe Haupt from USA · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Joe Haupt from USA",
+        "author_url": "https://www.flickr.com/people/51764518@N02"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1752",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "nobel-prizes",
+      "bundle": "base",
+      "description": "Ein Schriftsteller, der nach dem Sinn des Lebens fragte und nebenbei auch noch im Tor stand.",
+      "question": "Welches dieser Bücher stammt NICHT von Albert Camus, dem Literaturnobelpreisträger von 1957?",
+      "answer": "Die Verwandlung",
+      "wrong_answers": [
+        "Der Fremde",
+        "Die Pest",
+        "Der Mythos des Sisyphos"
+      ],
+      "hints": [
+        "Das Buch, das nicht dazugehört, schrieb ein Autor aus Prag.",
+        "In diesem Buch wacht ein Mann als Insekt auf.",
+        "Sein Autor war Franz Kafka."
+      ],
+      "fun_fact": "Camus war in seiner Jugend in Algier Fußballtorwart und sagte, der Fußball habe ihn Moral gelehrt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/View_of_the_Casbah_%28Old_City_of_Algiers%29.jpg/3840px-View_of_the_Casbah_%28Old_City_of_Algiers%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AView_of_the_Casbah_%28Old_City_of_Algiers%29.jpg",
+        "credit": "Dreams · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dreams",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dreamin35&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-1753",
       "status": "approved",
       "difficulty": 12,
@@ -58772,6 +58976,40 @@
       "background": null
     },
     {
+      "id": "q-1952",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "winter-olympics",
+      "bundle": "base",
+      "description": "Sportler, die den Berg schneller hinunterkommen als du die Treppe.",
+      "question": "Wann finden die Winter-Paralympics im Vergleich zu den Olympischen Winterspielen statt?",
+      "answer": "Kurz danach am selben Ort",
+      "wrong_answers": [
+        "Ein Jahr davor in anderer Stadt",
+        "Gleichzeitig auf denselben Pisten",
+        "Zwei Jahre danach in anderem Land"
+      ],
+      "hints": [
+        "Die paralympischen Sportler teilen sich die Pisten nicht zur selben Zeit mit den olympischen.",
+        "Sie finden nie vor den Olympischen Spielen statt.",
+        "Dieselben Anlagen werden im selben Winter zweimal genutzt."
+      ],
+      "fun_fact": "Die ersten Winter-Paralympics fanden 1976 im schwedischen Örnsköldsvik statt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Team_U_S_competes_in_advanced_alpine_skiing%2C_snowboarding_slalom_run_%288868884%29.jpg/3840px-Team_U_S_competes_in_advanced_alpine_skiing%2C_snowboarding_slalom_run_%288868884%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATeam_U_S_competes_in_advanced_alpine_skiing%2C_snowboarding_slalom_run_%288868884%29.jpg",
+        "credit": "U.S. Army photo by Michel Sauret · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Army photo by Michel Sauret",
+        "author_url": "https://www.dvidshub.net/portfolio/1029381"
+      },
+      "background": null
+    },
+    {
       "id": "q-1953",
       "status": "approved",
       "difficulty": 6,
@@ -60923,6 +61161,40 @@
       "background": null
     },
     {
+      "id": "q-2021",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "famous-scientists",
+      "bundle": "base",
+      "description": "Zeichnungen, so hübsch, dass niemand vermuten würde, dass sie das Innere eines Kopfes zeigen.",
+      "question": "Du siehst die berühmtesten Zeichnungen von Nervenzellen der Geschichte, von Hand gefertigt von einem Medizin-Nobelpreisträger. Wer hat sie gezeichnet?",
+      "answer": "Santiago Ramón y Cajal",
+      "wrong_answers": [
+        "Severo Ochoa",
+        "Alexander Fleming",
+        "Iwan Pawlow"
+      ],
+      "hints": [
+        "Als junger Mann wollte er Maler werden.",
+        "Er war Spanier und bekam 1906 den Nobelpreis für Medizin.",
+        "Er gilt als Vater der modernen Neurowissenschaft."
+      ],
+      "fun_fact": "Ramón y Cajal teilte sich den Nobelpreis mit Camillo Golgi, obwohl die beiden gegensätzliche Ansichten über das Gehirn vertraten.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Simple_Myelinated_Neuron_of_the_PNS.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASimple_Myelinated_Neuron_of_the_PNS.jpg",
+        "credit": "Biology with Risa (Risa Ramirez-Wright) · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Biology with Risa (Risa Ramirez-Wright)",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Biology_with_Risa&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-2022",
       "status": "approved",
       "difficulty": 12,
@@ -62381,6 +62653,40 @@
         "license_url": "http://artlibre.org/licence/lal/en",
         "author": "J.-N. L.",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-2070",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "world-war-ii",
+      "bundle": "base",
+      "description": "Ein Wort aus dem Geschichtsunterricht, bei dem selbst die letzte Reihe kurz aufwacht.",
+      "question": "Was war die Wehrmacht während des Zweiten Weltkriegs?",
+      "answer": "Deutschlands Streitkräfte",
+      "wrong_answers": [
+        "Deutschlands Geheimpolizei",
+        "Deutschlands Staatsrundfunk",
+        "Deutschlands Staatsbahn"
+      ],
+      "hints": [
+        "Sie bestand von 1935 bis 1945.",
+        "In ihrem Namen steckt das alte Wort „Wehr“, das für Verteidigung steht.",
+        "Sie marschierte 1939 in Polen ein."
+      ],
+      "fun_fact": "Die Luftwaffe, also die deutschen Luftstreitkräfte, war ein Teil der Wehrmacht.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Brandenburger_Tor_morgens.jpg/3840px-Brandenburger_Tor_morgens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABrandenburger_Tor_morgens.jpg",
+        "credit": "Thomas Wolf, www.foto-tw.de · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Thomas Wolf, www.foto-tw.de",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Der_Wolf_im_Wald"
       },
       "background": null
     },
@@ -76232,6 +76538,40 @@
       "background": null
     },
     {
+      "id": "q-2502",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "french-revolution",
+      "bundle": "base",
+      "description": "Eine Revolutionärin, die selbst im Parlament aussah, als hätte sie ihr Pferd nur kurz draußen angebunden.",
+      "question": "Ich wurde im heutigen Belgien geboren, trug im revolutionären Paris ein Reitkostüm und forderte 1792 Waffen für Frauen. Wer bin ich?",
+      "answer": "Théroigne de Méricourt",
+      "wrong_answers": [
+        "Olympe de Gouges",
+        "Charlotte Corday",
+        "Madame Roland"
+      ],
+      "hints": [
+        "Vor der Revolution war ich Sängerin.",
+        "Mein Spitzname lautete „Amazone der Freiheit“.",
+        "Mein gewählter Name geht auf mein Heimatdorf Marcourt zurück."
+      ],
+      "fun_fact": "Eigentlich hieß Théroigne de Méricourt Anne-Josèphe Terwagne; der Name, unter dem man sie kennt, wurde erst in Paris erfunden.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Symbol_and_satire_in_the_French_Revolution_%281912%29_%2814596409260%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASymbol_and_satire_in_the_French_Revolution_%281912%29_%2814596409260%29.jpg",
+        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Internet Archive Book Images",
+        "author_url": "https://www.flickr.com/people/126377022@N07"
+      },
+      "background": null
+    },
+    {
       "id": "q-2503",
       "status": "approved",
       "difficulty": 9,
@@ -83259,6 +83599,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Gary Todd from Xinzheng, China",
         "author_url": "https://www.flickr.com/people/101561334@N08"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2716",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "famous-philosophers",
+      "bundle": "base",
+      "description": "Chinas Vizemeister der Weisheit, und auch noch stolz darauf.",
+      "question": "Ich heiße in China „der zweite Weise“ nach Konfuzius und lehrte, dass Menschen von Natur aus gut sind. Wer bin ich?",
+      "answer": "Menzius",
+      "wrong_answers": [
+        "Laozi",
+        "Mozi",
+        "Zhuangzi"
+      ],
+      "hints": [
+        "Ich lebte im 4. Jahrhundert v. Chr.",
+        "Mein Gegenspieler Xunzi sagte, die menschliche Natur sei schlecht.",
+        "Mein chinesischer Name ist Mengzi."
+      ],
+      "fun_fact": "Einer berühmten chinesischen Geschichte zufolge zog die Mutter von Menzius dreimal um, damit er in der besten Nachbarschaft aufwuchs.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Ancient_Chinese_Scholar_Tree_courtyard_of_Daixian_Confucian_Temple_%2820250713100519%29.jpg/3840px-Ancient_Chinese_Scholar_Tree_courtyard_of_Daixian_Confucian_Temple_%2820250713100519%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAncient_Chinese_Scholar_Tree_courtyard_of_Daixian_Confucian_Temple_%2820250713100519%29.jpg",
+        "credit": "N509FZ · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "N509FZ",
+        "author_url": "https://commons.wikimedia.org/wiki/User:N509FZ"
       },
       "background": null
     },
@@ -97099,6 +97473,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Docrgd",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Docrgd&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3136",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "wonders-of-the-world",
+      "bundle": "base",
+      "description": "Eine Statue mit der besten Aussicht der Stadt und weit ausgebreiteten Armen, um sie zu genießen.",
+      "question": "Die Christusstatue von Rio de Janeiro steht auf dem Berg Corcovado. Ungefähr wie hoch ist dieser Berg?",
+      "answer": "Etwa 700 m",
+      "wrong_answers": [
+        "Etwa 70 m",
+        "Etwa 2000 m",
+        "Etwa 7000 m"
+      ],
+      "hints": [
+        "Er ist niedriger als ein Kilometer.",
+        "Er ist ungefähr doppelt so hoch wie der Eiffelturm.",
+        "Er ist höher als 500 m."
+      ],
+      "fun_fact": "Die Statue auf dem Gipfel ist 30 m hoch, und ihre Arme messen von Hand zu Hand 28 m.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Rio_de_Janeiro_skyline_and_Sugarloaf_Mountain_at_sunset%2C_Brazil_3.jpg/3840px-Rio_de_Janeiro_skyline_and_Sugarloaf_Mountain_at_sunset%2C_Brazil_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARio_de_Janeiro_skyline_and_Sugarloaf_Mountain_at_sunset%2C_Brazil_3.jpg",
+        "credit": "Wilfredor · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Wilfredor",
+        "author_url": "https://www.wikidata.org/wiki/Q115464159"
       },
       "background": null
     },
@@ -115574,6 +115982,40 @@
       "background": null
     },
     {
+      "id": "q-3697",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "greek-gods",
+      "bundle": "base",
+      "description": "Sie zielte so gut, dass sogar der Mond sich Notizen machte.",
+      "question": "Wen beschützte die griechische Göttin, die einen silbernen Bogen trug?",
+      "answer": "Wilde Tiere",
+      "wrong_answers": [
+        "Seeleute",
+        "Schmiede",
+        "Kaufleute"
+      ],
+      "hints": [
+        "Ihr Zwillingsbruder war der Gott Apollon.",
+        "Sie liebte Wälder und Berge.",
+        "Ihr Lieblingstier war der Hirsch."
+      ],
+      "fun_fact": "Die Römer nannten diese Göttin Diana.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/2015-06-15_Maasai_guide_shoots_a_traditional_hunting_bow_and_arrow_during_a_walking_safari%2C_Ol_Kinyei_Conservancy_in_the_Maasai_Mara%2C_Kenya_0042.jpg/3840px-2015-06-15_Maasai_guide_shoots_a_traditional_hunting_bow_and_arrow_during_a_walking_safari%2C_Ol_Kinyei_Conservancy_in_the_Maasai_Mara%2C_Kenya_0042.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2015-06-15_Maasai_guide_shoots_a_traditional_hunting_bow_and_arrow_during_a_walking_safari%2C_Ol_Kinyei_Conservancy_in_the_Maasai_Mara%2C_Kenya_0042.jpg",
+        "credit": "Make it Kenya · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Make it Kenya",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-3698",
       "status": "approved",
       "difficulty": 11,
@@ -120504,6 +120946,40 @@
       "background": null
     },
     {
+      "id": "q-3852",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "world-war-ii",
+      "bundle": "base",
+      "description": "Vier Buchstaben, Dutzende Länder und jede Menge sehr ernste Sitzungen.",
+      "question": "Die NATO wurde 1949 in Washington, D.C., gegründet und hat heute mehr als 30 Mitgliedsländer. Was ist sie?",
+      "answer": "Militärbündnis",
+      "wrong_answers": [
+        "Welthandelsabkommen",
+        "Kriegsverbrechertribunal",
+        "UN-Hilfswerk"
+      ],
+      "hints": [
+        "Die Mitglieder liegen auf beiden Seiten eines Ozeans.",
+        "Sie entstand zu Beginn des Kalten Krieges.",
+        "Die Mitglieder versprechen: Ein Angriff auf eines von ihnen ist ein Angriff auf alle."
+      ],
+      "fun_fact": "Das Hauptquartier der NATO steht in Brüssel, Belgien.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/View_of_the_rows_of_flags_hoisted_for_Trooping_of_the_Colour_on_Horse_Guards_Parade_-_geograph.org.uk_-_3502395.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AView_of_the_rows_of_flags_hoisted_for_Trooping_of_the_Colour_on_Horse_Guards_Parade_-_geograph.org.uk_-_3502395.jpg",
+        "credit": "Robert Lamb · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Robert Lamb",
+        "author_url": "https://www.geograph.org.uk/profile/26519"
+      },
+      "background": null
+    },
+    {
       "id": "q-3853",
       "status": "approved",
       "difficulty": 9,
@@ -123084,6 +123560,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Osama Shukir Muhammed Amin FRCP(Glasg)",
         "author_url": "https://commons.wikimedia.org/wiki/User:Neuroforever"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3930",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "science-fiction",
+      "bundle": "base",
+      "description": "Ein Bösewicht, auf dessen Einkaufszettel nur eine einzige Sache steht – und die hängt hoch oben am Nachthimmel.",
+      "question": "In „Ich – Einfach unverbesserlich“ stiehlt Gru den Mond. Welches Gerät benutzt er dafür?",
+      "answer": "Schrumpfstrahler",
+      "wrong_answers": [
+        "Gefrierstrahler",
+        "Traktorstrahler",
+        "Furzpistole"
+      ],
+      "hints": [
+        "Gru klaut es seinem Rivalen Vector.",
+        "Vector hatte es vorher aus einem Geheimlabor gestohlen.",
+        "Am Ende ist Grus Ziel so klein, dass es in eine Hand passt."
+      ],
+      "fun_fact": "Im Film wächst der Mond langsam wieder auf seine volle Größe, weil das Schrumpfen nur eine Weile anhält.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Full_moon_in_night_sky_-_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFull_moon_in_night_sky_-_India.jpg",
+        "credit": "Ksheera Piraati · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Ksheera Piraati",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ksheera_Piraati&action=edit&redlink=1"
       },
       "background": null
     },
@@ -135688,6 +136198,40 @@
       "background": null
     },
     {
+      "id": "q-4317",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "famous-philosophers",
+      "bundle": "base",
+      "description": "Ein berühmter Satz, der viel öfter zitiert als im Ganzen gelesen wird.",
+      "question": "Karl Marx schrieb 1844, Religion sei „das Opium des Volks“. Opium war damals ein gängiges Schmerzmittel. Was meinte er damit?",
+      "answer": "Sie lindert Leid, beseitigt aber nicht seine Ursachen",
+      "wrong_answers": [
+        "Sie macht Menschen wütend und gewalttätig",
+        "Sie sollte per Gesetz verboten werden",
+        "Sie kostet die Menschen zu viel Geld"
+      ],
+      "hints": [
+        "Überleg, was ein Schmerzmittel bewirkt und was nicht.",
+        "Marx setzte sich für arme Arbeiter und ihr hartes Leben ein.",
+        "Ein Schmerzmittel lässt dich besser fühlen, heilt aber nicht die Wunde."
+      ],
+      "fun_fact": "Derselbe Text nennt Religion auch „das Gemüt einer herzlosen Welt“, ein Teil, der nur selten zitiert wird.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Beaumont_Knitting_Mill_workers_-_Glen_Williams%2C_Ontario_-_1893.jpg/3840px-Beaumont_Knitting_Mill_workers_-_Glen_Williams%2C_Ontario_-_1893.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeaumont_Knitting_Mill_workers_-_Glen_Williams%2C_Ontario_-_1893.jpg",
+        "credit": "A.G. Smith, Toronto, Photographer · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "A.G. Smith, Toronto, Photographer",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-4318",
       "status": "approved",
       "difficulty": 13,
@@ -144524,6 +145068,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Amusiige",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Amusiige&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4593",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "famous-philosophers",
+      "bundle": "base",
+      "description": "Dicke Lektüre über Geld von einem Mann, der selbst ständig knapp bei Kasse war.",
+      "question": "Karl Marx schrieb ein riesiges Buch über Geld, Arbeiter und Fabrikbesitzer, vieles davon im Lesesaal des British Museum. Wie heißt es?",
+      "answer": "Das Kapital",
+      "wrong_answers": [
+        "Der Wohlstand der Nationen",
+        "Leviathan",
+        "Vom Gesellschaftsvertrag"
+      ],
+      "hints": [
+        "Der Titel besteht nur aus einem Artikel und einem Hauptwort.",
+        "Der erste Band erschien 1867.",
+        "Der Titel nennt das Vermögen, das Fabrikbesitzer in ihre Betriebe stecken."
+      ],
+      "fun_fact": "Marx stellte nur den ersten Band von „Das Kapital“ fertig; sein Freund Friedrich Engels setzte die nächsten zwei aus seinen Notizen zusammen.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/British_Museum_Reading_Room_%281%29_2024-12-20.jpg/3840px-British_Museum_Reading_Room_%281%29_2024-12-20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABritish_Museum_Reading_Room_%281%29_2024-12-20.jpg",
+        "credit": "Andy Li · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Andy Li",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Onthewings"
       },
       "background": null
     },
@@ -166138,6 +166716,40 @@
       "background": null
     },
     {
+      "id": "q-5515",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "greek-gods",
+      "bundle": "base",
+      "description": "Ein Spazierstock für einen Partygott, der nie geradeaus läuft.",
+      "question": "Dionysos und sein Gefolge trugen einen Stab, mit Efeu umwunden und mit einem Pinienzapfen an der Spitze. Wie heißt dieser Stab?",
+      "answer": "Thyrsos",
+      "wrong_answers": [
+        "Kerykeion",
+        "Aigis",
+        "Labrys"
+      ],
+      "hints": [
+        "Er taucht auf vielen antiken Vasenbildern von wilden Tanzfesten auf.",
+        "Es ist nicht der Stab des Hermes mit den zwei Schlangen.",
+        "Sein Name beginnt mit „Thyr…“."
+      ],
+      "fun_fact": "Der Zapfen an der Spitze steht vielleicht für das Pinienharz, das die Griechen ihrem Wein zusetzten.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Kylix_Dionysus_on_a_ship_between_dolphins_1.jpg/3840px-Kylix_Dionysus_on_a_ship_between_dolphins_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKylix_Dionysus_on_a_ship_between_dolphins_1.jpg",
+        "credit": "Burkhard Mücke · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Burkhard Mücke",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pimpinellus"
+      },
+      "background": null
+    },
+    {
       "id": "q-5516",
       "status": "approved",
       "difficulty": 13,
@@ -169926,6 +170538,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "nasir khan from Dhaka, Bangladesh",
         "author_url": "https://www.flickr.com/people/48383507@N06"
+      },
+      "background": null
+    },
+    {
+      "id": "q-5631",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "nobel-prizes",
+      "bundle": "base",
+      "description": "Sie ließ das feine Festessen sausen und bekam trotzdem den besten Platz in den Geschichtsbüchern.",
+      "question": "Ich trug einen weißen Sari mit blauen Streifen, pflegte die Ärmsten in Kalkutta in Indien und erhielt 1979 den Friedensnobelpreis. Wer bin ich?",
+      "answer": "Mutter Teresa",
+      "wrong_answers": [
+        "Malala Yousafzai",
+        "Indira Gandhi",
+        "Florence Nightingale"
+      ],
+      "hints": [
+        "Ich war katholische Nonne.",
+        "Ich wurde in Europa geboren, lebte aber die meiste Zeit meines Lebens in Indien.",
+        "Mein Titel klingt, als wäre ich die Mama von allen."
+      ],
+      "fun_fact": "Mutter Teresa bat darum, das Nobelpreis-Bankett abzusagen und das Geld den Armen zu geben.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Howrah_Bridge_Kolkata_Photography_by_Argha_Mallick_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHowrah_Bridge_Kolkata_Photography_by_Argha_Mallick_01.jpg",
+        "credit": "Arghamallick5151 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Arghamallick5151",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Arghamallick5151"
       },
       "background": null
     },
@@ -185044,6 +185690,40 @@
       "background": null
     },
     {
+      "id": "q-6093",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "world-war-ii",
+      "bundle": "base",
+      "description": "Manche Politiker werden mit einem großen Namen geboren, andere suchen sich einfach einen aus.",
+      "question": "„Stalin“ war ein erfundener Name und bedeutet „Mann aus Stahl“. Welcher dieser Politiker trug KEINEN erfundenen Namen?",
+      "answer": "Winston Churchill",
+      "wrong_answers": [
+        "Wladimir Lenin",
+        "Leo Trotzki",
+        "Josip Broz Tito"
+      ],
+      "hints": [
+        "Viele Politiker des 20. Jahrhunderts wurden unter einem selbst gewählten Namen berühmt.",
+        "Der Gesuchte war auch Schriftsteller und erhielt den Literaturnobelpreis.",
+        "Sein Vorfahr war der erste Herzog von Marlborough, und sein Land war das Vereinigte Königreich."
+      ],
+      "fun_fact": "Stalin wurde als Iosseb Dschughaschwili in Georgien geboren, und Russisch war nicht seine Muttersprache.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Vista_general_del_Kremlin%2C_Mosc%C3%BA%2C_Rusia%2C_2016-10-03%2C_DD_18-19_HDR.jpg/3840px-Vista_general_del_Kremlin%2C_Mosc%C3%BA%2C_Rusia%2C_2016-10-03%2C_DD_18-19_HDR.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVista_general_del_Kremlin%2C_Mosc%C3%BA%2C_Rusia%2C_2016-10-03%2C_DD_18-19_HDR.jpg",
+        "credit": "Diego Delso · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Diego Delso",
+        "author_url": "https://www.wikidata.org/wiki/Q28147777"
+      },
+      "background": null
+    },
+    {
       "id": "q-6094",
       "status": "approved",
       "difficulty": 12,
@@ -185214,6 +185894,40 @@
       "background": null
     },
     {
+      "id": "q-6100",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "world-war-ii",
+      "bundle": "base",
+      "description": "Aus zwei Ländern wurde eins, und gefragt wurde vorher niemand ernsthaft.",
+      "question": "Im März 1938 marschierten deutsche Truppen kampflos in Österreich ein, und Hitler machte es zu einem Teil Deutschlands. Wie nennt man das?",
+      "answer": "Anschluss",
+      "wrong_answers": [
+        "Blitzkrieg",
+        "Lebensraum",
+        "Kristallnacht"
+      ],
+      "hints": [
+        "Das Wort kommt harmlos daher und wird auch heute noch im Alltag benutzt.",
+        "Schon 1919 wollten viele Österreicher diesen Schritt, doch die Siegermächte des Ersten Weltkriegs verboten ihn.",
+        "Es beginnt mit „An“."
+      ],
+      "fun_fact": "Nach dem Krieg machten die Alliierten Österreich wieder zu einem eigenständigen Staat.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Wien_-_Neue_Hofburg.JPG/3840px-Wien_-_Neue_Hofburg.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWien_-_Neue_Hofburg.JPG",
+        "credit": "C.Stadler/Bwag · CC BY-SA 3.0 at · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 at",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+        "author": "C.Stadler/Bwag",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bwag"
+      },
+      "background": null
+    },
+    {
       "id": "q-6101",
       "status": "approved",
       "difficulty": 12,
@@ -185346,6 +186060,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Roy Egloff",
         "author_url": "https://commons.wikimedia.org/wiki/User:Roy_Egloff"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6105",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "world-war-ii",
+      "bundle": "base",
+      "description": "Ein Soldat, der nie einen Schuss abgab und trotzdem zur Legende wurde.",
+      "question": "In „Hacksaw Ridge – Die Entscheidung“ seilt Sanitäter Desmond Doss auf Okinawa Verwundete einzeln eine Klippe hinab. Wie viele rettete der echte Doss etwa?",
+      "answer": "Etwa 75",
+      "wrong_answers": [
+        "Etwa 10",
+        "Etwa 300",
+        "Etwa 1000"
+      ],
+      "hints": [
+        "Er schaffte es allein, mit einem Seil, in einer langen Nacht und an einem langen Tag.",
+        "Es sind mehr als ein paar Dutzend.",
+        "Die Zahl liegt nah an der Angabe in seiner Urkunde zur Medal of Honor: weniger als 100."
+      ],
+      "fun_fact": "Doss weigerte sich, ein Gewehr zu tragen, und erhielt trotzdem die Medal of Honor, die höchste militärische Auszeichnung der USA.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Onna_Okinawa_Japan_Cape-Manzamo-01.jpg/3840px-Onna_Okinawa_Japan_Cape-Manzamo-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOnna_Okinawa_Japan_Cape-Manzamo-01.jpg",
+        "credit": "CEphoto, Uwe Aranas · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "CEphoto, Uwe Aranas",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Cccefalon"
       },
       "background": null
     },
@@ -191708,6 +192456,40 @@
       "background": null
     },
     {
+      "id": "q-6300",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "greek-gods",
+      "bundle": "base",
+      "description": "Manche Leute umarmen Bäume. Diese Damen sind gleich eingezogen.",
+      "question": "In der griechischen Sage lebten diese Nymphen in Bäumen, oft in Eichen, und ihr Name stammt vom griechischen Wort für Eiche. Wie hießen sie?",
+      "answer": "Dryaden",
+      "wrong_answers": [
+        "Nereiden",
+        "Oreaden",
+        "Plejaden"
+      ],
+      "hints": [
+        "Sie waren Naturgeister des Waldes und oft in Begleitung der Jagdgöttin Artemis.",
+        "In Fantasy-Büchern und -Spielen wie Narnia tauchen sie oft als Baumgeister auf.",
+        "Der Name beginnt mit „Dry…“."
+      ],
+      "fun_fact": "Manche von ihnen, die Hamadryaden, waren der Sage nach so eng mit ihrem Baum verbunden, dass sie starben, wenn er gefällt wurde.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Quercus_frainetto_%28Hungarian_Oak%29_in_Pholoe_oak_forest%2C_April_2017.jpg/3840px-Quercus_frainetto_%28Hungarian_Oak%29_in_Pholoe_oak_forest%2C_April_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AQuercus_frainetto_%28Hungarian_Oak%29_in_Pholoe_oak_forest%2C_April_2017.jpg",
+        "credit": "Rostislav Nikulin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rostislav Nikulin",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Rostislav_Nikulin&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-6301",
       "status": "approved",
       "difficulty": 4,
@@ -193884,6 +194666,40 @@
       "background": null
     },
     {
+      "id": "q-6366",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "nobel-prizes",
+      "bundle": "base",
+      "description": "Die meisten würden sie einrahmen, ein Mann sagte nur höflich: „Nein, danke.“",
+      "question": "Zu sehen ist die Medaille des Friedensnobelpreises. Wer lehnte diesen Preis 1973 als bisher einziger Mensch ab?",
+      "answer": "Le Duc Tho",
+      "wrong_answers": [
+        "Henry Kissinger",
+        "Zhou Enlai",
+        "Vo Nguyen Giap"
+      ],
+      "hints": [
+        "Er war Unterhändler, kein General.",
+        "Er handelte das Pariser Friedensabkommen von 1973 mit aus.",
+        "Er stammte aus Vietnam und sagte, in seinem Land herrsche noch kein wirklicher Frieden."
+      ],
+      "fun_fact": "Eigentlich sollte er sich den Preis mit Henry Kissinger teilen, der ihn annahm, aber nicht zur Feier nach Oslo reiste.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Nobel_Peace_Prize_of_Jimmy_Carter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANobel_Peace_Prize_of_Jimmy_Carter.jpg",
+        "credit": "ArtemisiaGentileschiFan · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "ArtemisiaGentileschiFan",
+        "author_url": "https://commons.wikimedia.org/wiki/User:ArtemisiaGentileschiFan"
+      },
+      "background": null
+    },
+    {
       "id": "q-6368",
       "status": "approved",
       "difficulty": 13,
@@ -194050,6 +194866,40 @@
         "license_url": null,
         "author": "Gustave Courbet",
         "author_url": "https://en.wikipedia.org/wiki/en:Gustave_Courbet"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6373",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "norse-mythology",
+      "bundle": "base",
+      "description": "Auch Götter wollen irgendwann nach Hause und die Füße hochlegen.",
+      "question": "Der Meeresgott Njörd kam nach einem Krieg als Geisel zu Odins Göttern. Wohin kehrt er beim Weltende Ragnarök heim?",
+      "answer": "Vanaheim",
+      "wrong_answers": [
+        "Jötunheim",
+        "Alfheim",
+        "Niflheim"
+      ],
+      "hints": [
+        "Er wurde nicht als einer der Asen geboren, Odins Götterfamilie.",
+        "Seine Kinder sind Freyr und Freyja.",
+        "Seine Heimatwelt ist nach seiner Götterfamilie benannt, den Wanen."
+      ],
+      "fun_fact": "Njörd heiratete die Riesin Skadi, doch sie hasste die Möwen an seinem Meer und er das Wolfsgeheul in ihren Bergen, also trennten sie sich.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/The_Norwegian_fjord_boat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Norwegian_fjord_boat.jpg",
+        "credit": "Jarle Kvam · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jarle Kvam",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jarle_Kvam&action=edit&redlink=1"
       },
       "background": null
     },
@@ -197998,6 +198848,40 @@
       "background": null
     },
     {
+      "id": "q-6494",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "norse-mythology",
+      "bundle": "base",
+      "description": "Auch im Jenseits gilt eine strenge Sitzordnung.",
+      "question": "In den nordischen Mythen holt die Göttin Freyja im Kampf gefallene Krieger auf ihr Feld Fólkvangr. Wie viele von ihnen bekommt sie?",
+      "answer": "Jeden Zweiten",
+      "wrong_answers": [
+        "Jeden Dritten",
+        "Jeden Vierten",
+        "Jeden Zehnten"
+      ],
+      "hints": [
+        "Die übrigen kommen in Odins Halle.",
+        "In manchen Erzählungen darf Freyja sogar zuerst wählen.",
+        "Stell dir einen Kuchen vor, der genau durch die Mitte geschnitten wird."
+      ],
+      "fun_fact": "Freyjas Halle in Fólkvangr heißt Sessrúmnir, das bedeutet „Raum der Sitze“.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Heimdal_%C3%B6verl%C3%A4mnar_Brisingasmycket_till_Freja_%28Nils_Andersson%29_-_Nationalmuseum_-_154196.tif/lossy-page1-1920px-Heimdal_%C3%B6verl%C3%A4mnar_Brisingasmycket_till_Freja_%28Nils_Andersson%29_-_Nationalmuseum_-_154196.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHeimdal_%C3%B6verl%C3%A4mnar_Brisingasmycket_till_Freja_%28Nils_Andersson%29_-_Nationalmuseum_-_154196.tif",
+        "credit": "Nils Andersson · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Nils Andersson",
+        "author_url": "https://en.wikipedia.org/wiki/en:Nils_Andersson_(painter)"
+      },
+      "background": null
+    },
+    {
       "id": "q-6495",
       "status": "approved",
       "difficulty": 9,
@@ -201917,6 +202801,40 @@
       "background": null
     },
     {
+      "id": "q-6618",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "cold-war",
+      "bundle": "base",
+      "description": "Ein General, dessen Glück pünktlich zum Jahreswechsel aufgebraucht war.",
+      "question": "Eine US-Invasion stürzte im Dezember 1989 Manuel Noriega in dem hier gezeigten Land. Welches Land ist es?",
+      "answer": "Panama",
+      "wrong_answers": [
+        "Nicaragua",
+        "Costa Rica",
+        "Honduras"
+      ],
+      "hints": [
+        "Es liegt in Mittelamerika.",
+        "Es grenzt an Kolumbien.",
+        "Ein berühmter Kanal verbindet hier zwei Ozeane."
+      ],
+      "fun_fact": "Als sich Noriega in die Botschaft des Vatikans flüchtete, beschallten US-Soldaten sie mit lauter Rockmusik, bis er aufgab.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Map_of_Panama%28outline%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMap_of_Panama%28outline%29.png",
+        "credit": "jeffrey1017 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "jeffrey1017",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jeffrey1017&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-6619",
       "status": "approved",
       "difficulty": 13,
@@ -202729,6 +203647,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Rodhullandemu",
         "author_url": "https://commons.wikimedia.org/wiki/User:Rodhullandemu"
+      },
+      "background": null
+    },
+    {
+      "id": "q-6644",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "famous-quotes",
+      "bundle": "base",
+      "description": "Für dieses Motto saß ein ganzer Kontinent in Sitzungen, bis der Kaffee alle war.",
+      "question": "Welches dieser Länder gehört NICHT zu der Staatengemeinschaft, deren Motto „In Vielfalt geeint“ lautet?",
+      "answer": "Norwegen",
+      "wrong_answers": [
+        "Österreich",
+        "Portugal",
+        "Finnland"
+      ],
+      "hints": [
+        "Die Flagge der Gemeinschaft zeigt einen Kreis aus zwölf goldenen Sternen auf Blau.",
+        "Die meisten Mitglieder bezahlen mit dem Euro.",
+        "Gesucht ist ein reiches nordisches Öl- und Fischereiland, das draußen geblieben ist."
+      ],
+      "fun_fact": "Die Menschen in Norwegen stimmten zweimal gegen den Beitritt zur Europäischen Union: 1972 und 1994.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Water_PET_bottles_on_the_table_%282442924762%29.jpg/3840px-Water_PET_bottles_on_the_table_%282442924762%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWater_PET_bottles_on_the_table_%282442924762%29.jpg",
+        "credit": "Max Braun · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Max Braun",
+        "author_url": "https://www.flickr.com/people/72645106@N00"
       },
       "background": null
     },
