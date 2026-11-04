@@ -35,6 +35,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen report --flags             # open player flags with their age, causes of reworked flags, repeated causes
     qgen report --qc [<batch> [--changes "<task ids>"]]   # spot check vs. LLM review and audit (plan 16)
     qgen report --simulate [--locale …] [--mode …|all] [--json]   # games per new player; exit 1 below D-75's target (plan 62)
+    qgen report --career [--subjects FILE] [--locale …] [--json]   # career supply figures per category × difficulty band (plan 193)
     qgen report --cost [--json]     # $ per approved by run kind, projection per launch language and regional and theme bundle (plan 70)
     qgen report --review-time [--bundle <id>] [--run <run>] [--json]   # review minutes per 100 verdicts (plan 98)
     qgen report --played [--locale es|en|de|all] [--age-group …] [--mode …] [--since YYYY-MM-DD] [--all] [--json]
@@ -2013,8 +2014,13 @@ def main():
     rp.add_argument("--age-group", help="with --simulate: comma-separated (default: all four)")
     rp.add_argument("--mode", help="with --simulate: solo|rr-coop|rr-competitive|timed|all (default solo); "
                     "with --played: one mode (default every mode)")
-    rp.add_argument("--players", type=int, help="with --simulate: players in rr-coop, rr-competitive and timed (default 4)")
-    rp.add_argument("--seeds", type=int, default=40, help="with --simulate: runs per cell")
+    rp.add_argument("--players", type=int, help="with --simulate: players in rr-coop, rr-competitive and timed (default 4); with --career: one count (default 1, 2 and 4)")
+    rp.add_argument("--seeds", type=int, help="with --simulate or --career: runs per cell (default 40; career 3)")
+    rp.add_argument("--career", action="store_true",
+                    help="career supply figures per locale, age group, player model and player count, per category × difficulty band "
+                    "(milestone 20, plan 193); --locale, --age-group, --player, --players (default 1, 2, 4), --seeds, --json")
+    rp.add_argument("--games", type=int, help="with --career: games per seed (default 100)")
+    rp.add_argument("--subjects", metavar="FILE", help="with --career: JSON category slug → subject (default: each category its own row)")
     rp.add_argument("--cost", action="store_true",
                     help="$ per run and per approved by run kind, projection per launch language and per regional and theme bundle "
                     "(plan 70, CT-3; plan 98)")

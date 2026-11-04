@@ -24,7 +24,7 @@ const MULTI = ["rr-coop", "rr-competitive", "timed"]; // = report.SIM_MULTI
 /** Runs stop here if no repeat came yet (`capped`). */
 const MAX_GAMES = 500;
 
-interface Cell {
+export interface Cell {
   locale: string;
   bundles?: string[];
   age_group?: string;
@@ -45,7 +45,7 @@ interface Bottleneck {
 }
 
 /** Model randomness (mulberry32), apart from the engine's Rng. */
-function uniform(seed: number): () => number {
+export function uniform(seed: number): () => number {
   let a = seed >>> 0;
   return () => {
     a = (a + 0x6d2b79f5) >>> 0;
@@ -73,13 +73,13 @@ function dryAt(level: number, lo: number, hi: number, seen: Set<string>, data: E
   return { level, lo, hi, dry: [...had].filter((s): s is string => s !== null && !still.has(s)) };
 }
 
-type Rand = { rand: () => number; randInt: (n: number) => number };
+export type Rand = { rand: () => number; randInt: (n: number) => number };
 /** `games`: until the first repeat (Cambiazo's cards too); `draw`: until the first in a level draw, with its bottleneck. */
 type Run = { games: number; cambiazo: boolean; draw: number; capped: boolean; bottleneck: Bottleneck };
 const NONE: Bottleneck = { level: 0, lo: 0, hi: 0, dry: [] };
 
 /** Ids with a seen row. */
-const seenIds = (save: SaveData) => new Set(save.seen.map((s) => s.question_id));
+export const seenIds = (save: SaveData) => new Set(save.seen.map((s) => s.question_id));
 
 /** One seed on one save: sessions until the first that offers a seen card (count ≥ 1), and until the first
  * whose level draw does; at most MAX_GAMES. */
@@ -138,7 +138,7 @@ function act(s: Sim, fn: (save: SaveData) => { save: SaveData }): void {
 
 /** One engine session from `new` to its end (solo: one game), with its repeats of `seen`; `new`'s GameError passes
  * through. */
-function playSession(
+export function playSession(
   save: SaveData, data: EngineData, io: Io, r: Rand, names: string[], args: ChoiceArgs, cell: Cell, seen: Set<string>,
 ): { save: SaveData } & Repeats {
   const reps: Repeats = { any: null, draw: null };
@@ -276,10 +276,13 @@ function simulate(cell: Cell, loaded: Loaded) {
   };
 }
 
-const input = JSON.parse(readFileSync(0, "utf8")) as Cell | Cell[];
-const cache = new Map<string, Loaded>();
-const one = (c: Cell) => {
-  if (!cache.has(c.locale)) cache.set(c.locale, loadData(c.locale));
-  return simulate(c, cache.get(c.locale)!);
-};
-process.stdout.write(JSON.stringify(Array.isArray(input) ? input.map(one) : one(input)) + "\n");
+// Importable (career.ts): runs only as the entry point.
+if (import.meta.filename === process.argv[1]) {
+  const input = JSON.parse(readFileSync(0, "utf8")) as Cell | Cell[];
+  const cache = new Map<string, Loaded>();
+  const one = (c: Cell) => {
+    if (!cache.has(c.locale)) cache.set(c.locale, loadData(c.locale));
+    return simulate(c, cache.get(c.locale)!);
+  };
+  process.stdout.write(JSON.stringify(Array.isArray(input) ? input.map(one) : one(input)) + "\n");
+}

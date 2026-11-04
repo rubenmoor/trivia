@@ -4,6 +4,7 @@ import json, shutil, subprocess
 from layout import AUTHORING
 
 SIM = AUTHORING / "tools" / "sim" / "simulate.ts"
+CAREER = AUTHORING / "tools" / "sim" / "career.ts"
 SUPPLY = AUTHORING / "tools" / "supply.ts"
 
 
@@ -24,6 +25,11 @@ def node(script, payload):
 def simulate(cells):
     """Games per new player for each cell (plan 62); one node process per call."""
     return node(SIM, cells)
+
+
+def career(cell):
+    """Career supply figures of one cell (milestone 20, plan 193): sim/career.ts."""
+    return node(CAREER, cell)
 
 
 def supply(questions, blocked, **opts):

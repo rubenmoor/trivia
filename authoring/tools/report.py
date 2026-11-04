@@ -1,5 +1,6 @@
 """`qgen report`: progress, saturation, calibration, QC, simulate, cost, review time, played. Never ships (D-35)."""
 import concurrent.futures, datetime, json, os, re, sys, time
+from pathlib import Path
 from collections import Counter
 
 import layout  # paths (D-35)
@@ -491,7 +492,7 @@ def report_simulate(args):
     models = ["strong", "typical"] if player == "both" else [player]
     cells = [{"locale": l, "bundles": args.bundles.split(",") if args.bundles else default[l],
               "mode": m, "players": (args.players or 4) if m in SIM_MULTI else 1, "age_group": g, "player": p,
-              "seeds": args.seeds}
+              "seeds": args.seeds or 40}
              for l in locales for m in modes for g in groups for p in models]
     t0 = time.monotonic()
     have = [c for c in cells if locale_pool(c["locale"]).exists()]
@@ -507,7 +508,7 @@ def report_simulate(args):
         sys.exit(0 if ok else 1)
     lo, hi = engine_model(results) or (None, None)
     cap = next((r["max_games"] for r in results if r.get("result") == "ok"), None)
-    print(f"games per new player until the first repeat (plan 62, plan 65, information only, D-75); {args.seeds} seeds "
+    print(f"games per new player until the first repeat (plan 62, plan 65, information only, D-75); {args.seeds or 40} seeds "
           f"per cell, each stops at the first game that offers a seen card or after {cap} games; {time.monotonic() - t0:.0f} s")
     print(f"  models: strong = always right; typical = p(right) {lo} at level 1 → {hi} at level 12; "
           "standard jokers once each at a random level (rr-coop: the team's set; rr-competitive: per player); "
@@ -544,6 +545,61 @@ def report_simulate(args):
         print(f"  {'✓' if c['ok'] else '✗'} {c['locale']}: {c['approved']}/{c['total']} approved"
               + (f"; short at difficulty {short}" if short else ""))
     sys.exit(0 if ok else 1)
+
+
+CAREER_PLAYERS = [1, 2, 4]  # players taking turns at solo games on one save (shared seen list)
+
+
+def report_career(args):
+    """Supply figures for the career (milestone 20, plan 193): per locale, age group, player model and player count,
+    correct answers per game, distinct questions before the first repeat and games to 25/50/100/200 correct per
+    category (or subject, `--subjects`) × difficulty band; information only. Bands: sim/career.ts BANDS."""
+    locales = args.locale.split(",") if args.locale else translations.LOCALES
+    groups = args.age_group.split(",") if args.age_group else [g["id"] for g in load_age_groups()["groups"]]
+    models = ["strong", "typical"] if (args.player or "both") == "both" else [args.player]
+    counts = [args.players] if args.players else CAREER_PLAYERS
+    subjects = load_json(Path(args.subjects)) if args.subjects else None
+    cells = [{"locale": l, "bundles": args.bundles.split(",") if args.bundles else ["base"], "age_group": g, "player": p,
+              "players": n, "seeds": args.seeds or 3, "games": args.games or 100, "subjects": subjects}
+             for l in locales for g in groups for p in models for n in counts]
+    t0 = time.monotonic()
+    have = [c for c in cells if locale_pool(c["locale"]).exists()]
+    with concurrent.futures.ThreadPoolExecutor(min(os.cpu_count() or 4, 8)) as ex:
+        done = dict(zip(map(id, have), ex.map(engine.career, have)))
+    results = [done.get(id(c)) or {**c, "result": "no_pool"} for c in cells]
+    if args.json:
+        print(json.dumps({"seconds": round(time.monotonic() - t0, 1), "cells": results}, ensure_ascii=False))
+        return
+    ok = next((r for r in results if r["result"] == "ok"), None)
+    bands = ok["bands"] if ok else []
+    label = [f"{lo}–{hi}" for lo, hi in bands]
+    ms = ok["milestones"] if ok else []
+    print("career supply figures (milestone 20, plan 193; information only), base bundle; "
+          f"{args.seeds or 3} seeds per cell, {ok['max_games'] if ok else '?'} games per seed; {time.monotonic() - t0:.0f} s")
+    print("  bands: " + ", ".join(label) + "; exact = this band, harder = this band or harder; every = every correct answer, "
+          "distinct = distinct questions; players take turns at solo games on one save, figures and games per player")
+    print("  static = approved questions; c/g = correct answers per game; dist = distinct questions right before the first "
+          f"repeat; to {'/'.join(map(str, ms))} = games until that many correct, every/distinct, – = not within the cap")
+    for r in results:
+        if r["result"] != "ok":
+            print(f"\n{r['locale']}: no pool")
+            continue
+        print(f"\n== {r['locale']}, {r['age_group']}, {r['player']}, {r['players']} player(s); first repeat after game "
+              f"{r['repeat_game'] if r['repeat_game'] is not None else '–'} ==")
+        rows = [("row", "band", "static", "c/g", "dist", f"to {'/'.join(map(str, ms))} (every)", "(distinct)")]
+        fig = {(f["row"], f["band"], f["incl"]): f for f in r["figures"]}
+        names = sorted({k[0] for k in fig}, key=lambda n: (n != "(all)", n))
+        fmt = lambda f, kind: "/".join("–" if (v := f["games_to"][str(m)][kind]) is None else f"{v:g}" for m in ms)
+        for n in names:
+            for b in range(len(bands)):
+                for incl in ("exact", "harder"):
+                    f = fig.get((n, b, incl))
+                    if f:
+                        rows.append((n, f"{label[b]}{'+' if incl == 'harder' else ''}", str(f["static"]), f"{f['per_game']:.2f}",
+                                     f"{f['distinct_before_repeat']:g}", fmt(f, "every"), fmt(f, "distinct")))
+        w = [max(len(row[i]) for row in rows) for i in range(len(rows[0]))]
+        for row in rows:
+            print("  " + "  ".join(c.ljust(x) for c, x in zip(row, w)).rstrip())
 
 
 RUN_KINDS = [("batch", r"batch-\d+"), ("translation", r"tr-[A-Za-z-]+-\d+"), ("rework", r"rework-\d+"),
@@ -888,6 +944,8 @@ def cmd_report(args):
         return report_cost(args)
     if args.review_time:
         return report_review_time(args)
+    if args.career:
+        return report_career(args)
     if args.simulate:
         return report_simulate(args)
     if args.exit_check:
