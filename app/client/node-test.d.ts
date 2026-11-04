@@ -19,6 +19,7 @@ declare module "node:fs" {
 }
 interface ImportMeta {
   readonly dirname: string;
+  readonly filename: string;
 }
 interface NodeProcess {
   stdout: { write(text: string): boolean };

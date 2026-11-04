@@ -17,6 +17,7 @@ declare module "node:path" {
 }
 interface NodeProcess {
   env: Record<string, string | undefined>;
+  argv: string[];
 }
 declare const process: NodeProcess;
 declare const Buffer: { concat(chunks: Uint8Array[]): { toString(encoding: "utf8"): string } };

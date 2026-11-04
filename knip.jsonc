@@ -17,7 +17,7 @@
         "authoring/tools/{gallery_saves,demo_saves}.mjs!",
         "authoring/tools/supply.ts!",
         "authoring/tools/demo.ts!",
-        "authoring/tools/sim/simulate.ts!",
+        "authoring/tools/sim/{simulate,career}.ts!",
         "modding/examples/*/main.js!",
         "report-server/src/index.ts!",
         "report-server/seed-telemetry.mjs!"
