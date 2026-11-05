@@ -51386,7 +51386,7 @@ add badges for reaching certain score milestones: 10 points, 50 points, 100 poin
 
 also introduce a player rank as a sliding average of the most difficult question a player answered in the last games. i.e. always answering all 15 questions gives a rank of 15. the sliding average makes sure that the last 10 games factor in (but the more recent games have higher weight in the rank)
 
-the rank is only updated when a game is finished: 15 questions answered correctly or a wrong answer. we need a corresponding animation and every rank needs a name.', NULL, '2026-11-05T03:00:16Z', '2026-11-05T03:11:08Z', 1887, NULL, 'rule', NULL, '');
+the rank is only updated when a game is finished: 15 questions answered correctly or a wrong answer. we need a corresponding animation and every rank needs a name.', NULL, '2026-11-05T03:00:16Z', '2026-11-05T03:11:08Z', 1887, NULL, 'rule', NULL, '2026-11-05, task 1887: revised proposal raised as decision 521: no order between grades (Universidad no longer needs the high-school diploma); added a career score (difficulty² per right answer, −1 per wrong, animated after every answer when the career is on), 10 score badges (29 → 39 badges, total 78 of 100), and a player rank (weighted average of the hardest right answer over the last 10 finished games, a win counting as the age group''s top) with 15 names; the score milestones are open in decision 521. A game has 12 questions, not 15: the rank uses the 1–15 difficulty scale.');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (520, 'Topic bundles below 2000 approved: ship or hold?', 'pending', '["Hold: a bundle ships in a language only from 2000 approved there; below it, its pool stays out of the build and it comes in a content patch", "Ship from a floor you name (e.g. 500 approved), tile shows the real rounded count below 2000", "Ship whatever exists, tile keeps «2000+»"]', 'Facts at 2026-11-05 (no `v*` tag exists yet; `qgen report --bundle <id>` counts and the exported pool files; `task 1657: Topic DLCs entered in Steamworks? (checklist decision)` and `decision 400: Topic bundle pools ready for the Steam DLC entry?` not answered, so no DLC entered).
 
 | bundle | `languages` in its row | es | es-ES | en | de |
@@ -51405,6 +51405,126 @@ What a player sees:
 - Option 3: stem (about 300 per locale) is offered with «2000+», which is untrue; repeats show early.
 
 Regional bundles follow the same answer unless you say otherwise (colombia, usa, germany, uk, spain, mexico: counts to check at the time). Option 1 needs the build or `stage` to leave out a pool file below the bar (not `qgen export`); a follow-up task in `plan 89: Builds, depots and upload (SW-10, SW-6)` if no switch exists.', 'The game will offer five optional topic question packs (science, sports, history, movies and series, geography) as free add-ons. Their tiles promise at least 2000 questions, but the biggest pack has only about 300 per language so far and the others have none. We have to choose whether a pack waits until it really has 2000 questions in a language, ships earlier with its honest count, or ships with the promise unchanged.', NULL, NULL, '2026-11-05T03:02:03Z', NULL, 1889, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (521, 'Career badge list, revised: 39 badges, score and rank: which score milestones?', 'answered', '["39 badges as listed, score milestones 100, 250, 500, 1000, 2500, 5000, 10000, 25000, 50000, 100000; score, rank (with the win rule) and rank names as listed", "39 badges as listed, score milestones as asked: 10, 50, 100, 200, 500, 750, 1000, 2000, 5000, 10000; score, rank and rank names as listed"]', 'Revised proposal of `task 1887: Propose the badge list with names and thresholds and raise the decision` after the answer to `decision 519: Career badge list: grades, rules, 29 badges with names and thresholds?`; subjects of `decision 517: Career subjects: which school subjects, and which categories in each?`. **Once entered in Steamworks the list is for good**: an archived achievement still counts toward Steam''s limit of 100, so a badge can''t be swapped or dropped later without losing a slot; thresholds and texts can still change, names and the count can''t really.
+
+## What changed since decision 519
+- No order: every badge on its own; Universidad no longer needs the high-school diploma
+- New: career score (difficulty² per right answer, −1 per wrong), 10 score badges, player rank with 15 names
+- 29 → 39 badges
+- Your answer says «all 15 questions»: a game has **12** questions (12 levels); the rank uses the 1–15 difficulty scale instead, see Rank
+
+## Grades (unchanged)
+- Bands on the 1–15 scale; a grade counts its band **or harder**
+
+| grade | band | es | es-ES | en | de |
+|---|---|---|---|---|---|
+| 1 | 1–4 | Primaria | Primaria | Elementary School | Grundschule |
+| 2 | 5–8 | Secundaria | ESO | Middle School | Mittelstufe |
+| 3 | 9–12 | Bachillerato | Bachillerato | High School | Oberstufe |
+| 4 | 13–15 | Universidad | Universidad | College | Universität |
+
+- de subject names: Geschichte und Geisteswissenschaften, Geografie und Gesellschaft, Naturkunde, Naturwissenschaft und Technik, Literatur und Kunst, Medienkunde, Sport und Spiele
+
+## Rules
+- **This band or harder**, **every correct answer** (figures in decision 519: exact bands lock adults out of Primaria; distinct questions cost at most 7 games)
+- **No order** (your answer): any badge as soon as its own count is reached; diplomas still need all 7 subjects of their grade
+- Counted per player (`PlayerRow`) from qualifying games (binding constraints of `plan 192: masterplan`); add-on categories count for their subject; every badge reachable with the base bundle alone; demo games not counted (`decision 516: Do games played in the demo count toward the career after buying the full game?`); career off: counted, hidden (`decision 515: Career turned off: what happens to a player''s progress and badges?`): score and rank too
+
+## Score
+- Per player, for good: right answer +difficulty² (1 → 1, 5 → 25, 10 → 100, 15 → 225), wrong answer −1; can go below 0
+- Career on: shown after every answer, counting up (or down by 1) to the new total, animated
+- Same games as the badges (qualifying, not the demo); a score badge stays once earned, even if the score drops below it later
+- Points per game, slowest locale: kids typical 42 · strong 183; young teens 99 · 466; young adults 258 · 948; adults 335 · 1217
+- d² makes hard questions dominate: a typical adult scores 8 × a typical kid per game
+
+## Rank
+- Per finished game (12 right, or ended by a wrong answer; games left unfinished don''t count) one value: the difficulty of the hardest question answered right, 0 if the first was wrong
+  - **A win counts as the top of the age group''s window** (adults 15, young adults 13, young teens 10, kids 6): without it the last level (13–15 for adults) is a random draw and even a player who always wins sits at ≈ 14; with it «always winning on adults» gives 15, as your answer asks
+- Rank = weighted average over the last 10 finished games, weights 10 (newest) down to 1 (newest ≈ 18 %, oldest ≈ 2 %); fewer than 10 games: the same weights over those
+- Shown rounded (half up), at least 1, with its name; none before the first finished game; updated only when a game ends, animated (bar moving to the new value, name changing when it crosses a whole number)
+- Kids top out at rank 6, young teens at 10, young adults at 13: growing up an age group raises the ceiling
+- Names: person titles only where they work for everyone (de: no gendered masculine, style guide)
+
+| rank | es, es-ES | en | de |
+|---|---|---|---|
+| 1 | Principiante | Beginner | Neuling |
+| 2 | Aprendiz | Apprentice | Lehrling |
+| 3 | Estudiante | Student | Schulkind |
+| 4 | Aspirante | Contender | Prüfling |
+| 5 | Promesa | Up-and-Comer | Nachwuchstalent |
+| 6 | Talento | Talent | Talent |
+| 7 | Prodigio | Prodigy | Wunderkind |
+| 8 | Referente | Role Model | Vorbild |
+| 9 | Lumbrera | Bright Mind | Kapazität |
+| 10 | Autoridad | Authority | Autorität |
+| 11 | Eminencia | Luminary | Koryphäe |
+| 12 | Genio | Genius | Genie |
+| 13 | Fenómeno | Phenomenon | Phänomen |
+| 14 | Leyenda | Legend | Legende |
+| 15 | Enciclopedia viviente | Walking Encyclopedia | Lebendes Lexikon |
+
+- Where players settle (mean per-game value, all locales; with the win rule strong players sit at the window top): kids typical 3 Estudiante, strong 6 Talento; young teens 5 Promesa, 10 Autoridad; young adults 8 Referente, 13 Fenómeno; adults 9 Lumbrera, 15 Enciclopedia viviente
+- Labels: «Rango» / «Rank» / «Rang»
+
+## Badges: 39
+- 21 subject badges, 7 subjects × 3 grades: Primaria 15 right at 1+, Secundaria 25 right at 5+, Bachillerato 15 right at 9+
+- 3 diplomas: a grade in all 7 subjects
+- 1 Universidad: 15 right at 13+, any subjects
+- 4 school years: 20 qualifying games played to the end (won or lost) in one age group; Kids (the lowest difficulty) earns one
+- 10 score badges
+
+| badge | es (es-ES where it differs) | en | de | trigger, threshold |
+|---|---|---|---|---|
+| subject × grade (21) | «Primaria: Historia y humanidades»; «Acertar 15 preguntas de historia y humanidades de nivel primaria o superior.» | «Elementary School: History and Humanities»; «Answer 15 History and Humanities questions right, elementary level or harder.» | «Grundschule: Geschichte und Geisteswissenschaften»; «15 Fragen aus Geschichte und Geisteswissenschaften richtig beantworten, Grundschulniveau oder schwerer.» | as above; other grades the same pattern |
+| diploma 1 | «Primaria completa»; «Aprobar primaria en las 7 asignaturas.» | «Elementary School Graduate»; «Pass Elementary School in all 7 subjects.» | «Grundschulabschluss»; «Die Grundschule in allen 7 Fächern bestehen.» | all 7 Primaria |
+| diploma 2 | «Secundaria completa» (es-ES «Graduado en ESO»); «Aprobar secundaria (ESO) en las 7 asignaturas.» | «Middle School Graduate»; «Pass Middle School in all 7 subjects.» | «Mittlere Reife»; «Die Mittelstufe in allen 7 Fächern bestehen.» | all 7 Secundaria |
+| diploma 3 | «Título de bachiller»; «Aprobar bachillerato en las 7 asignaturas.» | «High School Diploma»; «Pass High School in all 7 subjects.» | «Abitur»; «Die Oberstufe in allen 7 Fächern bestehen.» | all 7 Bachillerato |
+| Universidad | «Universidad»; «Acertar 15 preguntas de nivel universitario.» | «College»; «Answer 15 college-level questions right.» | «Universität»; «15 Fragen auf Universitätsniveau richtig beantworten.» | 15 right at 13+, any subject |
+| school year × 4 | «Año escolar: Niños» (es-ES «Curso escolar: Niños»); «Jugar 20 partidas completas en el grupo de edad Niños.» | «School Year: Kids»; «Finish 20 games in the Kids age group.» | «Schuljahr: Kinder»; «20 Spiele in der Altersgruppe Kinder zu Ende spielen.» | 20 qualifying finished games, that age group |
+| score × 10 | «1000 puntos»; «Llegar a 1000 puntos.» | «1,000 Points»; «Reach 1,000 points.» | «1000 Punkte»; «1000 Punkte erreichen.» | score ≥ the milestone once |
+
+- No overlap with the achievements that stay: `SPECIALIST` 50 right in one category, `QUESTIONS_1000` distinct questions seen, `WIN_ADULTS` / `WIN_ALL_AGES` wins, `GAME_NIGHTS` days played; no existing achievement counts points or ranks
+
+## Score milestones
+- **Your list: 10, 50, 100, 200, 500, 750, 1000, 2000, 5000, 10000.** Games to each (slowest locale; typical 1/4 players · strong 1/4; ≈ = beyond the 60 simulated games, from points per game):
+
+| milestone | kids | young teens | young adults | adults |
+|---|---|---|---|---|
+| 10 | 1.5/1 · 1/1 | 1.5/1 · 1/1 | 1.5/1 · 1/1 | 1/1 · 1/1 |
+| 50 | 3/2.5 · 1/1 | 2/1.5 · 1/1 | 1.5/1 · 1/1 | 1/1 · 1/1 |
+| 100 | 4.5/3.5 · 1/1 | 3/2.5 · 1/1 | 1.5/1 · 1/1 | 1.5/1 · 1/1 |
+| 200 | 7.5/5.5 · 2/2 | 4/3 · 1/1 | 2/2 · 1/1 | 1.5/1 · 1/1 |
+| 500 | 13.5/11.5 · 3/3 | 9.5/6.5 · 2/2 | 3.5/3 · 1/1 | 3/3 · 1/1 |
+| 750 | 20/19 · 5/5 | 10.5/8 · 2/2 | 4.5/4.5 · 1/1 | 3.5/3 · 1/1 |
+| 1000 | 24/26.5 · 6/6 | 13/10.5 · 3/3 | 5.5/5.5 · 2/2 | 4.5/4.5 · 1/1 |
+| 2000 | 47/48.5 · 12/11.5 | 24/21.5 · 5/5 | 10/9 · 3/3 | 8.5/6.5 · 2/2 |
+| 5000 | ≈120/≈115 · 28/28 | 49.5/53 · 11/11 | 23/19.5 · 6/6 | 18/16.5 · 5/5 |
+| 10000 | ≈240/≈229 · 55/53.5 | ≈98/≈102 · 22/22 | 41.5/38 · 11/11 | 30/31.5 · 9/9 |
+
+- With d², adults take 7 of the 10 in their first evening and all 10 within ~30 games (a strong adult: 9); a kid needs ~2 years for 10000
+- **Proposed instead: 100, 250, 500, 1000, 2500, 5000, 10000, 25000, 50000, 100000** (≈ games from points per game, slowest locale, typical · strong, 1 player; 4 players score within 5 % per game):
+  - kids: 3, 6, 12, 24, 60, 120, 240, 600, –, – · 1, 2, 3, 6, 14, 28, 55, 137, 273, 546
+  - young teens: 1, 3, 5, 10, 25, 50, 98, 245, 489, – · 1, 1, 2, 3, 6, 11, 22, 54, 107, 213
+  - young adults: 1, 1, 2, 4, 10, 20, 39, 97, 194, 388 · 1, 1, 1, 2, 3, 6, 11, 27, 53, 106
+  - adults: 1, 1, 2, 3, 8, 15, 30, 75, 150, 299 · 1, 1, 1, 1, 3, 5, 9, 21, 42, 83
+  - A typical adult earns the first ones in an evening and the top one in about two years of weekly play (≈ 100–150 games a year); a family whose children move up the age groups keeps earning; the top two are long goals, no badge is out of reach for a player who sticks with it
+- Same count either way: 10 badges
+
+## Budget
+- 39 career badges of at most 40 (`plan 193: Career design: subjects, grades and badge list`), 1 spare
+- Total 28 achievements + 11 bundle ones + 39 = **78 of 100**, 22 left
+
+## Figures
+- Subject, diploma and school-year figures as in decision 519 (no order changes them only for strong players, who now get a higher grade without the lower one first)
+- Universidad without the diploma, games to 15 right at 13+, slowest locale, 1 player: strong adults ≈ 7, strong young adults ≈ 19, typical adults ≈ 120–165, typical young adults out of reach (13 is the top of their window)
+- Score and rank: `qgen report --career`''s engine sessions with a scratch score counter, base bundle, 2 seeds × 60 games per cell, all four locales, 1 player or 4 taking turns on one save
+
+| age group | typical 1/4 players | strong 1/4 players |
+|---|---|---|
+| kids (1–6) | Primaria 16–31 / 16–29; diploma 1 31/29; school year 20; score (proposed) to 5000 in ≈120; rank ≈3 | Primaria 7–15; Secundaria 37–74 / 33–61; score to 10000 in 55; rank 6 |
+| young teens (1–10) | Primaria 19–33; Secundaria 65–109 / 65–121; diplomas 1, 2; score to 10000 in ≈98; rank ≈5 | up to Bachillerato 36–68; score to 100000 in 213; rank 10 |
+| young adults (4–13) | up to Bachillerato 68–154 / 71–129; all 3 diplomas; score to 100000 in ≈388; rank ≈8 | everything incl. Universidad ≈19; rank 13 |
+| adults (5–15) | everything; Bachillerato 44–84 / 37–91; Universidad ≈120–165; score to 100000 in ≈299; rank ≈9 | everything within ~20 games, score 100000 in ≈83; rank 15 |', 'The game is getting a career: each player earns badges for answering questions right in seven school subjects at rising difficulty, collects a lifelong score where harder questions are worth much more, and carries a rank with a name that follows how far they got in their last ten games. This revised list adds the score, its badges and the rank names the developer asked for, and drops the rule that badges must come in order. Every badge also becomes a Steam achievement and Steam never frees a slot once one is entered, so the list can''t be changed freely afterwards. The open choice is the ladder of score badges: the one asked for, which adults finish within a few weeks, or a wider one that lasts years.', '39 badges as listed, score milestones 100, 250, 500, 1000, 2500, 5000, 10000, 25000, 50000, 100000; score, rank (with the win rule) and rank names as listed', NULL, '2026-11-05T04:19:21Z', '2026-11-05T04:22:43Z', 1887, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, NULL, NULL, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, NULL, NULL, 73367);
@@ -53525,11 +53645,12 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2048, 1666, '2026-11-05T03:00:35Z', '2026-11-05T03:01:05Z', 'blocked', NULL, 0, 'e8bae9f5a2104a4512e487e4888123fe0ea58f95', 'app', 'claude-sonnet-5-5', 'afba64bd-d9dd-4db2-9eb7-be08ad8cc363', NULL, 9, 20, 2382, 380506, 34708, 0.2007426, 49124, 60, 352740);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2049, 1667, '2026-11-05T03:01:05Z', '2026-11-05T03:01:27Z', 'blocked', NULL, 0, 'e8bae9f5a2104a4512e487e4888123fe0ea58f95', 'app', 'claude-sonnet-5-5', 'df1a144f-9090-4442-81e2-5a49379240de', NULL, 6, 14, 848, 232014, 32598, 0.16210140000000003, 47077, 60, 352740);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2050, 1889, '2026-11-05T03:01:27Z', '2026-11-05T03:02:10Z', 'blocked', NULL, 0, 'e8bae9f5a2104a4512e487e4888123fe0ea58f95', 'app', 'claude-sonnet-5-5', 'b122204d-8f2b-44f9-8b23-999e476c2128', NULL, 10, 18, 3182, 360770, 35813, 0.21118499999999998, 50690, 60, 352740);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2051, 1887, '2026-11-05T03:11:11Z', NULL, 'running', NULL, NULL, '69c6b31205e07f918ebb19524ff0b8116d2ad076', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 352740);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2051, 1887, '2026-11-05T03:11:11Z', '2026-11-05T04:19:36Z', 'blocked', NULL, 0, '69c6b31205e07f918ebb19524ff0b8116d2ad076', 'app', 'claude-opus-5-5', '20221b58-b82c-4689-98b9-361cc6604436', NULL, 23, 46, 24118, 1394548, 77083, 1.3781176, 91389, 60, 352740);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2052, 1890, '2026-11-05T03:57:12Z', '2026-11-05T03:58:00Z', 'done', NULL, 0, '2af898f70e0a51bd2aee41268f71857dd4c84fd8', NULL, 'claude-sonnet-5-5', '81e436a3-b9b9-4218-93f1-372550edde3d', NULL, 13, 26, 4292, 619285, 45717, 0.28776850000000004, 60680, 60, 352740);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2053, 1892, '2026-11-05T03:58:01Z', '2026-11-05T03:59:06Z', 'done', NULL, 0, 'afb7bbb7937a20da1306461e8846249fcf4d7999', NULL, 'claude-opus-5-5', 'd47eddd5-1c92-465a-bcd7-5c50255966c2', NULL, 7, 14, 3762, 263156, 34597, 0.4047032, 49550, 60, 352740);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2054, 1893, '2026-11-05T03:59:06Z', '2026-11-05T03:59:50Z', 'done', NULL, 0, '54747fc39d11ec5b4cbc99b3b9182f934e8bff27', NULL, 'claude-opus-5-5', '9f113aff-e5b0-4c5f-ac58-3980377503e9', NULL, 6, 12, 2638, 242811, 34965, 0.3810902, 49670, 60, 352740);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2055, 1891, '2026-11-05T03:59:50Z', '2026-11-05T04:01:21Z', 'done', NULL, 0, '9706938057d753065c6400eb761e890a55514d1f', NULL, 'claude-opus-5-5', 'a6bc4c03-cdcb-46a4-89e8-9c3a5ff02d0b', NULL, 13, 26, 5547, 568510, 42550, 0.56514599999999993, 57401, 60, 352740);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2056, 1791, '2026-11-05T04:11:16Z', NULL, 'running', NULL, NULL, '90a5a38af39fc4b643a0742196aeb7c651f15cfa', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 352740);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -54230,6 +54351,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1879, 515);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1879, 516);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1886, 517);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1887, 519);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1887, 521);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1889, 520);
 
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 146);
