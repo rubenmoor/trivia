@@ -50952,7 +50952,7 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
      M authoring/data/questions.en.json
 
 Look: `git show pm/task-1731-run-1939-left`. Keep: `git merge pm/task-1731-run-1939-left`. Then `git branch -D pm/task-1731-run-1939-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', 'discard: already on main (no-viaja rejections and q-2049 pool removal; cause fixed by task 1843)', NULL, '2026-10-29T03:49:48Z', '2026-11-05T03:56:53Z', NULL, NULL, 'once', NULL, '');
-INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (469, 'Task 1759 left unstaged changes after `pm task done`: investigate', 'pending', '[]', 'Run 1941 of task 1759 closed the task but left 6 files unstaged. pm committed them on the branch `pm/task-1759-run-1941-left` and cleaned the tree.
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (469, 'Task 1759 left unstaged changes after `pm task done`: investigate', 'answered', '[]', 'Run 1941 of task 1759 closed the task but left 6 files unstaged. pm committed them on the branch `pm/task-1759-run-1941-left` and cleaned the tree.
 
      M app/data/demo/pool.en.json
      M app/data/pool.en.json
@@ -50961,7 +50961,7 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
      M authoring/data/questions.es-ES.json
      M authoring/data/questions.json
 
-Look: `git show pm/task-1759-run-1941-left`. Keep: `git merge pm/task-1759-run-1941-left`. Then `git branch -D pm/task-1759-run-1941-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', NULL, NULL, '2026-10-29T03:51:48Z', NULL, NULL, NULL, 'once', NULL, '');
+Look: `git show pm/task-1759-run-1941-left`. Keep: `git merge pm/task-1759-run-1941-left`. Then `git branch -D pm/task-1759-run-1941-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', 'discard: already on main (no-viaja rejections and q-2049 pool removal; cause fixed by task 1843)', NULL, '2026-10-29T03:51:48Z', '2026-11-05T03:56:54Z', NULL, NULL, 'once', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (470, 'batch-27: health ✗, look at it?', 'pending', '["Looked at it, carry on", "Change something before the next batch"]', '| drop rate | ≤ 20.0 % | 40.8 % ✗ | 20.6 % ✗ | 14.8 % ✓ |
 | needs_work: overlap | ≤ 1.0 % | 2.5 % ✗ | 0.3 % ✓ | 0.3 % ✓ |
 | overlap rate | ≤ 20.0 % | 35.4 % ✗ | 16.3 % ✓ | 9.5 % ✓ |
