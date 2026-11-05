@@ -44821,6 +44821,15 @@ Part 1 first; 2 and 3 need its answers; 4, 5 and 6 need 3; 7 last.
 
 ## Done when
 A player earns a logically named badge from ordinary play, sees it celebrated on the badge page, gets the Steam achievement, can turn the career off, and buying a DLC changes no badge.', '2026-11-05T03:57:43Z', '2026-11-05T03:59:44Z', 1890, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1894, NULL, 'Media: a failing image service leaves the question needs_work, not a stopped batch', 'exec', 'open', NULL, NULL, '`qgen batch --bundle spain` (`task 1791: run batch-<n> (spain)`, decision 477) stopped three times at `media` over one slot: q-9958 ("fruit crates market"). Commons found 0 images, and Openverse timed out (60 s) or returned HTTP 500. `find_candidates` (`authoring/tools/media.py`) raises the provider''s error when nothing was found, so the whole run stops for one picture. Openverse runs anonymously: there is no API key for now.
+
+- A provider''s server error (5xx) or timeout no longer stops the run: the slot is stored without media and the batch goes on.
+- That question becomes `needs_work`, with a `review.problems` entry saying the picture is missing (provider + error). It shows in the review tool and goes through `qgen rework` like any other.
+- Rate limits (`RateLimited`) keep today''s behaviour: the rerun waits and retries.
+- `http_get` (`authoring/tools/download.py`): one retry on 5xx or timeout before the provider counts as failed.
+- The step''s summary counts the slots left without media.
+- Check: a test with a fake provider that raises 500/timeout → the run finishes, the question is `needs_work` with the problem, and the other slots are untouched; then `qgen batch --bundle spain` gets past `media`.
+- Update `authoring/RUNBOOK.md` / plan 23 wherever they say a media failure stops the run.', '2026-11-05T04:25:09Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
