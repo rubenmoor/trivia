@@ -1,0 +1,362 @@
+{
+  "subcategory": "indigenous-words",
+  "facets": [
+    "Nahuatlismos de la cocina",
+    "Nahuatlismos de animales y plantas",
+    "Nahuatlismos de la vida diaria",
+    "Topónimos en náhuatl",
+    "Lenguas indígenas vivas de México",
+    "Pueblos originarios y sus regiones",
+    "Escrituras y códices prehispánicos",
+    "Dioses y mitos con nombre náhuatl",
+    "Personajes y voces del náhuatl",
+    "Palabras indígenas en el mundo",
+    "Lenguas indígenas en medios y cultura pop",
+    "Partes y sonidos de las palabras náhuatl"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Huacal",
+      "facet": "Nahuatlismos de la vida diaria",
+      "known_at": 9
+    },
+    {
+      "name": "Tepalcate",
+      "facet": "Nahuatlismos de la vida diaria",
+      "known_at": 10
+    },
+    {
+      "name": "Jacal",
+      "facet": "Nahuatlismos de la vida diaria",
+      "known_at": 10
+    },
+    {
+      "name": "Tatemar",
+      "facet": "Nahuatlismos de la vida diaria",
+      "known_at": 9
+    },
+    {
+      "name": "México",
+      "facet": "Topónimos en náhuatl",
+      "known_at": 1
+    },
+    {
+      "name": "Guatemala",
+      "facet": "Topónimos en náhuatl",
+      "known_at": 5
+    },
+    {
+      "name": "Iztapalapa",
+      "facet": "Topónimos en náhuatl",
+      "known_at": 7
+    },
+    {
+      "name": "Ch'ol",
+      "facet": "Lenguas indígenas vivas de México",
+      "known_at": 12
+    },
+    {
+      "name": "Mixe",
+      "facet": "Lenguas indígenas vivas de México",
+      "known_at": 11
+    },
+    {
+      "name": "Chinanteco",
+      "facet": "Lenguas indígenas vivas de México",
+      "known_at": 12
+    },
+    {
+      "name": "Tlapaneco",
+      "facet": "Lenguas indígenas vivas de México",
+      "known_at": 12
+    },
+    {
+      "name": "Mazahua",
+      "facet": "Lenguas indígenas vivas de México",
+      "known_at": 9
+    },
+    {
+      "name": "Popoluca",
+      "facet": "Lenguas indígenas vivas de México",
+      "known_at": 13
+    },
+    {
+      "name": "Tének",
+      "facet": "Lenguas indígenas vivas de México",
+      "known_at": 11
+    },
+    {
+      "name": "Wixaritari (huicholes)",
+      "facet": "Pueblos originarios y sus regiones",
+      "known_at": 7
+    },
+    {
+      "name": "Coras",
+      "facet": "Pueblos originarios y sus regiones",
+      "known_at": 12
+    },
+    {
+      "name": "Teotihuacanos",
+      "facet": "Pueblos originarios y sus regiones",
+      "known_at": 7
+    },
+    {
+      "name": "Tepehuanos",
+      "facet": "Pueblos originarios y sus regiones",
+      "known_at": 13
+    },
+    {
+      "name": "Glifo",
+      "facet": "Escrituras y códices prehispánicos",
+      "known_at": 8
+    },
+    {
+      "name": "Pictograma",
+      "facet": "Escrituras y códices prehispánicos",
+      "known_at": 6
+    },
+    {
+      "name": "Escritura maya",
+      "facet": "Escrituras y códices prehispánicos",
+      "known_at": 8
+    },
+    {
+      "name": "Malintzin",
+      "facet": "Personajes y voces del náhuatl",
+      "known_at": 7
+    },
+    {
+      "name": "Juan Diego Cuauhtlatoatzin",
+      "facet": "Personajes y voces del náhuatl",
+      "known_at": 6
+    },
+    {
+      "name": "Tecuichpo",
+      "facet": "Personajes y voces del náhuatl",
+      "known_at": 14
+    },
+    {
+      "name": "Nican Mopohua",
+      "facet": "Personajes y voces del náhuatl",
+      "known_at": 13
+    },
+    {
+      "name": "Macehual",
+      "facet": "Personajes y voces del náhuatl",
+      "known_at": 12
+    },
+    {
+      "name": "Canoa",
+      "facet": "Palabras indígenas en el mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Barbacoa",
+      "facet": "Palabras indígenas en el mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Tabaco",
+      "facet": "Palabras indígenas en el mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Papa",
+      "facet": "Palabras indígenas en el mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Cóndor",
+      "facet": "Palabras indígenas en el mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Llama",
+      "facet": "Palabras indígenas en el mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Piraña",
+      "facet": "Palabras indígenas en el mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Kayak",
+      "facet": "Palabras indígenas en el mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Iglú",
+      "facet": "Palabras indígenas en el mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Cacique",
+      "facet": "Palabras indígenas en el mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Quinoa",
+      "facet": "Palabras indígenas en el mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Tapioca",
+      "facet": "Palabras indígenas en el mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Mocasín",
+      "facet": "Palabras indígenas en el mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Pantera Negra: Wakanda por siempre",
+      "facet": "Lenguas indígenas en medios y cultura pop",
+      "known_at": 6
+    },
+    {
+      "name": "Talokan",
+      "facet": "Lenguas indígenas en medios y cultura pop",
+      "known_at": 8
+    },
+    {
+      "name": "Ajolote de Minecraft",
+      "facet": "Lenguas indígenas en medios y cultura pop",
+      "known_at": 3
+    },
+    {
+      "name": "Wikipedia en náhuatl",
+      "facet": "Lenguas indígenas en medios y cultura pop",
+      "known_at": 11
+    },
+    {
+      "name": "Aztecas en Age of Empires",
+      "facet": "Lenguas indígenas en medios y cultura pop",
+      "known_at": 9
+    },
+    {
+      "name": "La Llorona (canción)",
+      "facet": "Lenguas indígenas en medios y cultura pop",
+      "known_at": 8
+    },
+    {
+      "name": "Sufijo -tl",
+      "facet": "Partes y sonidos de las palabras náhuatl",
+      "known_at": 8
+    },
+    {
+      "name": "Sufijo -tlan",
+      "facet": "Partes y sonidos de las palabras náhuatl",
+      "known_at": 10
+    },
+    {
+      "name": "Sufijo -co",
+      "facet": "Partes y sonidos de las palabras náhuatl",
+      "known_at": 11
+    },
+    {
+      "name": "Sufijo -pan",
+      "facet": "Partes y sonidos de las palabras náhuatl",
+      "known_at": 12
+    },
+    {
+      "name": "Sufijo -tepec",
+      "facet": "Partes y sonidos de las palabras náhuatl",
+      "known_at": 10
+    },
+    {
+      "name": "Sufijo -tzin",
+      "facet": "Partes y sonidos de las palabras náhuatl",
+      "known_at": 11
+    },
+    {
+      "name": "Atl",
+      "facet": "Partes y sonidos de las palabras náhuatl",
+      "known_at": 9
+    },
+    {
+      "name": "Calli",
+      "facet": "Partes y sonidos de las palabras náhuatl",
+      "known_at": 11
+    },
+    {
+      "name": "Cóatl",
+      "facet": "Partes y sonidos de las palabras náhuatl",
+      "known_at": 9
+    },
+    {
+      "name": "Cuauhtli",
+      "facet": "Partes y sonidos de las palabras náhuatl",
+      "known_at": 12
+    },
+    {
+      "name": "Tochtli",
+      "facet": "Partes y sonidos de las palabras náhuatl",
+      "known_at": 13
+    },
+    {
+      "name": "Tetl",
+      "facet": "Partes y sonidos de las palabras náhuatl",
+      "known_at": 12
+    },
+    {
+      "name": "Letra x de México",
+      "facet": "Partes y sonidos de las palabras náhuatl",
+      "known_at": 8
+    },
+    {
+      "name": "Sonido tl",
+      "facet": "Partes y sonidos de las palabras náhuatl",
+      "known_at": 7
+    },
+    {
+      "name": "Itzcuintli",
+      "facet": "Partes y sonidos de las palabras náhuatl",
+      "known_at": 11
+    }
+  ]
+}

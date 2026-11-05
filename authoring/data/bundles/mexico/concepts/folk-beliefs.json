@@ -1,0 +1,735 @@
+{
+  "subcategory": "folk-beliefs",
+  "facets": [
+    "Remedios caseros de la abuela",
+    "Herbolaria y plantas medicinales",
+    "Limpias, curanderos y temazcal",
+    "Males tradicionales: empacho, susto y mal de ojo",
+    "Amuletos y objetos de protección",
+    "Supersticiones del hogar y la vida diaria",
+    "Creencias sobre embarazo y bebés",
+    "Animales de mal agüero y presagios",
+    "Rituales de Año Nuevo y fechas especiales",
+    "Nahuales y creencias prehispánicas",
+    "Santos, mandas y milagritos",
+    "Cabañuelas, luna y señales del clima"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 1,
+      "record": 1,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 5,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 3,
+      "body_senses": 4,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Caldo de pollo",
+      "facet": "Remedios caseros de la abuela",
+      "known_at": 2
+    },
+    {
+      "name": "Vick VapoRub",
+      "facet": "Remedios caseros de la abuela",
+      "known_at": 3
+    },
+    {
+      "name": "Miel con limón",
+      "facet": "Remedios caseros de la abuela",
+      "known_at": 3
+    },
+    {
+      "name": "Susto para el hipo",
+      "facet": "Remedios caseros de la abuela",
+      "known_at": 4
+    },
+    {
+      "name": "Gárgaras de agua con sal",
+      "facet": "Remedios caseros de la abuela",
+      "known_at": 5
+    },
+    {
+      "name": "Bicarbonato con limón",
+      "facet": "Remedios caseros de la abuela",
+      "known_at": 6
+    },
+    {
+      "name": "Suero casero",
+      "facet": "Remedios caseros de la abuela",
+      "known_at": 7
+    },
+    {
+      "name": "Agua de arroz",
+      "facet": "Remedios caseros de la abuela",
+      "known_at": 8
+    },
+    {
+      "name": "Té de zacate limón",
+      "facet": "Remedios caseros de la abuela",
+      "known_at": 8
+    },
+    {
+      "name": "Pomada de la Campana",
+      "facet": "Remedios caseros de la abuela",
+      "known_at": 9
+    },
+    {
+      "name": "Jarabe de cebolla morada",
+      "facet": "Remedios caseros de la abuela",
+      "known_at": 9
+    },
+    {
+      "name": "Té de hojas de guayaba",
+      "facet": "Remedios caseros de la abuela",
+      "known_at": 9
+    },
+    {
+      "name": "Aceite tibio en el oído",
+      "facet": "Remedios caseros de la abuela",
+      "known_at": 9
+    },
+    {
+      "name": "Ventosas",
+      "facet": "Remedios caseros de la abuela",
+      "known_at": 11
+    },
+    {
+      "name": "Cataplasma",
+      "facet": "Remedios caseros de la abuela",
+      "known_at": 11
+    },
+    {
+      "name": "Chiqueadores",
+      "facet": "Remedios caseros de la abuela",
+      "known_at": 12
+    },
+    {
+      "name": "Romero",
+      "facet": "Herbolaria y plantas medicinales",
+      "known_at": 6
+    },
+    {
+      "name": "Eucalipto",
+      "facet": "Herbolaria y plantas medicinales",
+      "known_at": 6
+    },
+    {
+      "name": "Árnica",
+      "facet": "Herbolaria y plantas medicinales",
+      "known_at": 7
+    },
+    {
+      "name": "Bugambilia",
+      "facet": "Herbolaria y plantas medicinales",
+      "known_at": 8
+    },
+    {
+      "name": "Valeriana",
+      "facet": "Herbolaria y plantas medicinales",
+      "known_at": 10
+    },
+    {
+      "name": "Pirul",
+      "facet": "Herbolaria y plantas medicinales",
+      "known_at": 10
+    },
+    {
+      "name": "Ajenjo",
+      "facet": "Herbolaria y plantas medicinales",
+      "known_at": 11
+    },
+    {
+      "name": "Tepezcohuite",
+      "facet": "Herbolaria y plantas medicinales",
+      "known_at": 12
+    },
+    {
+      "name": "Chamán",
+      "facet": "Limpias, curanderos y temazcal",
+      "known_at": 6
+    },
+    {
+      "name": "Hierbero",
+      "facet": "Limpias, curanderos y temazcal",
+      "known_at": 9
+    },
+    {
+      "name": "Baño de flores",
+      "facet": "Limpias, curanderos y temazcal",
+      "known_at": 9
+    },
+    {
+      "name": "Huesero",
+      "facet": "Limpias, curanderos y temazcal",
+      "known_at": 10
+    },
+    {
+      "name": "Agua florida",
+      "facet": "Limpias, curanderos y temazcal",
+      "known_at": 11
+    },
+    {
+      "name": "Loción de Siete Machos",
+      "facet": "Limpias, curanderos y temazcal",
+      "known_at": 12
+    },
+    {
+      "name": "Niño Fidencio",
+      "facet": "Limpias, curanderos y temazcal",
+      "known_at": 13
+    },
+    {
+      "name": "Huautla de Jiménez",
+      "facet": "Limpias, curanderos y temazcal",
+      "known_at": 14
+    },
+    {
+      "name": "Empacho",
+      "facet": "Males tradicionales: empacho, susto y mal de ojo",
+      "known_at": 6
+    },
+    {
+      "name": "Bilis",
+      "facet": "Males tradicionales: empacho, susto y mal de ojo",
+      "known_at": 9
+    },
+    {
+      "name": "Caída de mollera",
+      "facet": "Males tradicionales: empacho, susto y mal de ojo",
+      "known_at": 10
+    },
+    {
+      "name": "Chípil",
+      "facet": "Males tradicionales: empacho, susto y mal de ojo",
+      "known_at": 10
+    },
+    {
+      "name": "Jalar el cuerito",
+      "facet": "Males tradicionales: empacho, susto y mal de ojo",
+      "known_at": 11
+    },
+    {
+      "name": "Mal puesto",
+      "facet": "Males tradicionales: empacho, susto y mal de ojo",
+      "known_at": 11
+    },
+    {
+      "name": "Pujo",
+      "facet": "Males tradicionales: empacho, susto y mal de ojo",
+      "known_at": 12
+    },
+    {
+      "name": "Alimentos fríos y calientes",
+      "facet": "Males tradicionales: empacho, susto y mal de ojo",
+      "known_at": 12
+    },
+    {
+      "name": "Latido",
+      "facet": "Males tradicionales: empacho, susto y mal de ojo",
+      "known_at": 13
+    },
+    {
+      "name": "Pasmo",
+      "facet": "Males tradicionales: empacho, susto y mal de ojo",
+      "known_at": 13
+    },
+    {
+      "name": "Tirisia",
+      "facet": "Males tradicionales: empacho, susto y mal de ojo",
+      "known_at": 14
+    },
+    {
+      "name": "Alferecía",
+      "facet": "Males tradicionales: empacho, susto y mal de ojo",
+      "known_at": 14
+    },
+    {
+      "name": "Herradura",
+      "facet": "Amuletos y objetos de protección",
+      "known_at": 5
+    },
+    {
+      "name": "Agua bendita",
+      "facet": "Amuletos y objetos de protección",
+      "known_at": 5
+    },
+    {
+      "name": "Pulsera roja",
+      "facet": "Amuletos y objetos de protección",
+      "known_at": 6
+    },
+    {
+      "name": "Pata de conejo",
+      "facet": "Amuletos y objetos de protección",
+      "known_at": 6
+    },
+    {
+      "name": "Ristra de ajos",
+      "facet": "Amuletos y objetos de protección",
+      "known_at": 7
+    },
+    {
+      "name": "Escapulario",
+      "facet": "Amuletos y objetos de protección",
+      "known_at": 9,
+      "retired": "used_up: La pregunta anterior ya dice qué es y de dónde viene la palabra; la creencia que queda tiene que ver con la muerte y no es para un juego familiar."
+    },
+    {
+      "name": "Elefante de la buena suerte",
+      "facet": "Amuletos y objetos de protección",
+      "known_at": 9
+    },
+    {
+      "name": "Cruz de palma bendita",
+      "facet": "Amuletos y objetos de protección",
+      "known_at": 9
+    },
+    {
+      "name": "Medalla de San Benito",
+      "facet": "Amuletos y objetos de protección",
+      "known_at": 11
+    },
+    {
+      "name": "Azabache",
+      "facet": "Amuletos y objetos de protección",
+      "known_at": 11
+    },
+    {
+      "name": "Mano Poderosa",
+      "facet": "Amuletos y objetos de protección",
+      "known_at": 11
+    },
+    {
+      "name": "Cuerno de la abundancia",
+      "facet": "Amuletos y objetos de protección",
+      "known_at": 11
+    },
+    {
+      "name": "Piedra imán",
+      "facet": "Amuletos y objetos de protección",
+      "known_at": 12
+    },
+    {
+      "name": "Cruz de Caravaca",
+      "facet": "Amuletos y objetos de protección",
+      "known_at": 13
+    },
+    {
+      "name": "Cruzar los dedos",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 4
+    },
+    {
+      "name": "Pasar debajo de una escalera",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 5
+    },
+    {
+      "name": "Romper un espejo",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 5
+    },
+    {
+      "name": "Tocar madera",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 5,
+      "retired": "used_up: La pregunta anterior ya cubre el gesto y la frase «toco madera»; no es una costumbre propia de México y ninguna de las opciones da una pregunta nueva."
+    },
+    {
+      "name": "Levantarse con el pie izquierdo",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 5
+    },
+    {
+      "name": "Bañarse después de comer",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 5
+    },
+    {
+      "name": "Martes 13",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 6
+    },
+    {
+      "name": "Abrir un paraguas dentro de la casa",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 6
+    },
+    {
+      "name": "Derramar la sal",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 7
+    },
+    {
+      "name": "Barrer los pies",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 8
+    },
+    {
+      "name": "Comezón en la mano",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 8
+    },
+    {
+      "name": "Zumbido de oídos",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 8
+    },
+    {
+      "name": "Escoba detrás de la puerta",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 9
+    },
+    {
+      "name": "Bolsa en el suelo",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 9
+    },
+    {
+      "name": "Ropa al revés",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 9
+    },
+    {
+      "name": "Sentarse en la esquina de la mesa",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 9
+    },
+    {
+      "name": "Planchar y mojarse las manos",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 10
+    },
+    {
+      "name": "Tijeras abiertas",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 11
+    },
+    {
+      "name": "Silbar de noche",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 11
+    },
+    {
+      "name": "Comer de la olla",
+      "facet": "Supersticiones del hogar y la vida diaria",
+      "known_at": 12
+    },
+    {
+      "name": "Ratón Pérez",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 3
+    },
+    {
+      "name": "Antojos",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 5
+    },
+    {
+      "name": "Hilo rojo en la frente",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 7
+    },
+    {
+      "name": "Forma de la panza",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 8
+    },
+    {
+      "name": "Partera",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 8
+    },
+    {
+      "name": "Eclipse durante el embarazo",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 9
+    },
+    {
+      "name": "Cuarentena",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 9
+    },
+    {
+      "name": "Chulear al bebé",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 9
+    },
+    {
+      "name": "Prueba del anillo",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 10
+    },
+    {
+      "name": "Faja del recién nacido",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 10
+    },
+    {
+      "name": "Calendario chino del embarazo",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 10
+    },
+    {
+      "name": "Ombliguero",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 11
+    },
+    {
+      "name": "Mostrar el bebé al espejo",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 11
+    },
+    {
+      "name": "Cortarle las uñas al bebé",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 11
+    },
+    {
+      "name": "Atole para la lactancia",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 11
+    },
+    {
+      "name": "Manteada con rebozo",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 12
+    },
+    {
+      "name": "Cortarle el pelo al bebé antes del año",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 12
+    },
+    {
+      "name": "Cordón umbilical enterrado",
+      "facet": "Creencias sobre embarazo y bebés",
+      "known_at": 13
+    },
+    {
+      "name": "Murciélago",
+      "facet": "Animales de mal agüero y presagios",
+      "known_at": 6
+    },
+    {
+      "name": "Perro aullando",
+      "facet": "Animales de mal agüero y presagios",
+      "known_at": 7
+    },
+    {
+      "name": "Mariposa negra",
+      "facet": "Animales de mal agüero y presagios",
+      "known_at": 9
+    },
+    {
+      "name": "Grillo en la casa",
+      "facet": "Animales de mal agüero y presagios",
+      "known_at": 9
+    },
+    {
+      "name": "Gallina que canta como gallo",
+      "facet": "Animales de mal agüero y presagios",
+      "known_at": 13
+    },
+    {
+      "name": "Calaveritas de azúcar",
+      "facet": "Rituales de Año Nuevo y fechas especiales",
+      "known_at": 4
+    },
+    {
+      "name": "Calzones rojos y amarillos",
+      "facet": "Rituales de Año Nuevo y fechas especiales",
+      "known_at": 7
+    },
+    {
+      "name": "Maletas alrededor de la cuadra",
+      "facet": "Rituales de Año Nuevo y fechas especiales",
+      "known_at": 8
+    },
+    {
+      "name": "Equinoccio en Teotihuacán",
+      "facet": "Rituales de Año Nuevo y fechas especiales",
+      "known_at": 9
+    },
+    {
+      "name": "Dinero en el zapato",
+      "facet": "Rituales de Año Nuevo y fechas especiales",
+      "known_at": 9
+    },
+    {
+      "name": "Arrullar al Niño Dios",
+      "facet": "Rituales de Año Nuevo y fechas especiales",
+      "known_at": 9
+    },
+    {
+      "name": "Barrer hacia afuera",
+      "facet": "Rituales de Año Nuevo y fechas especiales",
+      "known_at": 11
+    },
+    {
+      "name": "Leyenda de los Soles",
+      "facet": "Nahuales y creencias prehispánicas",
+      "known_at": 12
+    },
+    {
+      "name": "Tonalli",
+      "facet": "Nahuales y creencias prehispánicas",
+      "known_at": 13
+    },
+    {
+      "name": "Veladora",
+      "facet": "Santos, mandas y milagritos",
+      "known_at": 5
+    },
+    {
+      "name": "Peregrinación",
+      "facet": "Santos, mandas y milagritos",
+      "known_at": 6
+    },
+    {
+      "name": "Ir de rodillas",
+      "facet": "Santos, mandas y milagritos",
+      "known_at": 8
+    },
+    {
+      "name": "Manda",
+      "facet": "Santos, mandas y milagritos",
+      "known_at": 9
+    },
+    {
+      "name": "San Antonio de cabeza",
+      "facet": "Santos, mandas y milagritos",
+      "known_at": 9
+    },
+    {
+      "name": "Tilma",
+      "facet": "Santos, mandas y milagritos",
+      "known_at": 9
+    },
+    {
+      "name": "San Juan de los Lagos",
+      "facet": "Santos, mandas y milagritos",
+      "known_at": 11
+    },
+    {
+      "name": "San Isidro Labrador",
+      "facet": "Santos, mandas y milagritos",
+      "known_at": 11
+    },
+    {
+      "name": "Virgen de Zapopan",
+      "facet": "Santos, mandas y milagritos",
+      "known_at": 12
+    },
+    {
+      "name": "San Pascual Bailón",
+      "facet": "Santos, mandas y milagritos",
+      "known_at": 12
+    },
+    {
+      "name": "San Martín Caballero",
+      "facet": "Santos, mandas y milagritos",
+      "known_at": 13
+    },
+    {
+      "name": "Luna llena",
+      "facet": "Cabañuelas, luna y señales del clima",
+      "known_at": 2
+    },
+    {
+      "name": "Sapos cantando",
+      "facet": "Cabañuelas, luna y señales del clima",
+      "known_at": 7
+    },
+    {
+      "name": "Arcoíris",
+      "facet": "Cabañuelas, luna y señales del clima",
+      "known_at": 8
+    },
+    {
+      "name": "Cortarse el pelo en luna creciente",
+      "facet": "Cabañuelas, luna y señales del clima",
+      "known_at": 9
+    },
+    {
+      "name": "Golondrinas",
+      "facet": "Cabañuelas, luna y señales del clima",
+      "known_at": 9
+    },
+    {
+      "name": "Sembrar según la luna",
+      "facet": "Cabañuelas, luna y señales del clima",
+      "known_at": 10
+    },
+    {
+      "name": "Halo lunar",
+      "facet": "Cabañuelas, luna y señales del clima",
+      "known_at": 11
+    },
+    {
+      "name": "Día de San Juan",
+      "facet": "Cabañuelas, luna y señales del clima",
+      "known_at": 11
+    },
+    {
+      "name": "Nortes",
+      "facet": "Cabañuelas, luna y señales del clima",
+      "known_at": 11,
+      "retired": "used_up: La pregunta anterior ya explica qué es un norte; las opciones que quedan repiten ese dato o lo regalan con el nombre."
+    },
+    {
+      "name": "Chicatanas",
+      "facet": "Cabañuelas, luna y señales del clima",
+      "known_at": 12
+    },
+    {
+      "name": "Cruz de ceniza contra el granizo",
+      "facet": "Cabañuelas, luna y señales del clima",
+      "known_at": 13
+    },
+    {
+      "name": "Cordonazo de San Francisco",
+      "facet": "Cabañuelas, luna y señales del clima",
+      "known_at": 14
+    },
+    {
+      "name": "Calendario de Galván",
+      "facet": "Cabañuelas, luna y señales del clima",
+      "known_at": 14
+    }
+  ]
+}

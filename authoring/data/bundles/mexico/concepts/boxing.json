@@ -1,0 +1,1042 @@
+{
+  "subcategory": "boxing",
+  "facets": [
+    "Leyendas del boxeo mexicano",
+    "Campeones mundiales recientes",
+    "Grandes rivalidades México–Puerto Rico",
+    "Peleas y noches históricas",
+    "Medallas olímpicas en boxeo",
+    "Boxeo femenil mexicano",
+    "Apodos y frases del ring",
+    "Divisiones de peso y reglas",
+    "Técnica y estilo mexicano",
+    "Organismos, cinturones y cronistas",
+    "Gimnasios, entrenadores y escuelas",
+    "Arenas, sedes y fechas patrias"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 4,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Julio César Chávez",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 5
+    },
+    {
+      "name": "Salvador Sánchez",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 11
+    },
+    {
+      "name": "Rubén \"Púas\" Olivares",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos Zárate",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 13
+    },
+    {
+      "name": "Vicente Saldívar",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "José \"Mantequilla\" Nápoles",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 12
+    },
+    {
+      "name": "Ricardo \"Finito\" López",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 11
+    },
+    {
+      "name": "Marco Antonio Barrera",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 10
+    },
+    {
+      "name": "Érik \"El Terrible\" Morales",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 10
+    },
+    {
+      "name": "Juan Manuel Márquez",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 8
+    },
+    {
+      "name": "Humberto \"Chiquita\" González",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 13
+    },
+    {
+      "name": "Miguel Canto",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Raúl \"Ratón\" Macías",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 12
+    },
+    {
+      "name": "José Becerra",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 15
+    },
+    {
+      "name": "José \"Pipino\" Cuevas",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 13
+    },
+    {
+      "name": "Lupe Pintor",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Daniel Zaragoza",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Jorge \"Travieso\" Arce",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 9
+    },
+    {
+      "name": "Israel Vázquez",
+      "facet": "Leyendas del boxeo mexicano",
+      "known_at": 13
+    },
+    {
+      "name": "Saúl \"Canelo\" Álvarez",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 4
+    },
+    {
+      "name": "Juan Francisco \"Gallo\" Estrada",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 11
+    },
+    {
+      "name": "Jaime Munguía",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 10
+    },
+    {
+      "name": "Andy Ruiz Jr.",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 8
+    },
+    {
+      "name": "Emanuel Navarrete",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 12
+    },
+    {
+      "name": "Julio César Chávez Jr.",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 7
+    },
+    {
+      "name": "David Benavidez",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 12
+    },
+    {
+      "name": "Óscar Valdez",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 11
+    },
+    {
+      "name": "Luis \"Pantera\" Nery",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 12
+    },
+    {
+      "name": "Gilberto \"Zurdo\" Ramírez",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 12
+    },
+    {
+      "name": "Rey Vargas",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 13
+    },
+    {
+      "name": "Isaac \"Pitbull\" Cruz",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 11
+    },
+    {
+      "name": "Leo Santa Cruz",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 12
+    },
+    {
+      "name": "Abner Mares",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Cuadras",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 13
+    },
+    {
+      "name": "Mauricio Lara",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 13
+    },
+    {
+      "name": "Rafael Espinoza",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 14
+    },
+    {
+      "name": "Jesse \"Bam\" Rodríguez",
+      "facet": "Campeones mundiales recientes",
+      "known_at": 13
+    },
+    {
+      "name": "Wilfredo Gómez",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 13
+    },
+    {
+      "name": "Héctor \"Macho\" Camacho",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 11
+    },
+    {
+      "name": "Edwin \"Chapo\" Rosario",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 14
+    },
+    {
+      "name": "Miguel Cotto",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 10
+    },
+    {
+      "name": "Félix \"Tito\" Trinidad",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 11
+    },
+    {
+      "name": "Juan Manuel \"Juanma\" López",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 14
+    },
+    {
+      "name": "Wilfredo Benítez",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 14
+    },
+    {
+      "name": "Amanda Serrano",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 12
+    },
+    {
+      "name": "Edgar Berlanga",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 13
+    },
+    {
+      "name": "Salvador Sánchez vs. Wilfredo Gómez",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 14
+    },
+    {
+      "name": "Julio César Chávez vs. Héctor Camacho",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 12
+    },
+    {
+      "name": "Julio César Chávez vs. Edwin Rosario",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 14
+    },
+    {
+      "name": "Canelo vs. Miguel Cotto",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 11
+    },
+    {
+      "name": "Antonio Margarito vs. Miguel Cotto",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 13
+    },
+    {
+      "name": "Erika Cruz vs. Amanda Serrano",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 13
+    },
+    {
+      "name": "Rafael Márquez vs. Juanma López",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 15
+    },
+    {
+      "name": "Canelo vs. Edgar Berlanga",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 12
+    },
+    {
+      "name": "Rivalidad boxística México–Puerto Rico",
+      "facet": "Grandes rivalidades México–Puerto Rico",
+      "known_at": 9
+    },
+    {
+      "name": "Julio César Chávez vs. Greg Haugen",
+      "facet": "Peleas y noches históricas",
+      "known_at": 12
+    },
+    {
+      "name": "Julio César Chávez vs. Meldrick Taylor",
+      "facet": "Peleas y noches históricas",
+      "known_at": 13
+    },
+    {
+      "name": "Julio César Chávez vs. Pernell Whitaker",
+      "facet": "Peleas y noches históricas",
+      "known_at": 13
+    },
+    {
+      "name": "Julio César Chávez vs. Óscar de la Hoya",
+      "facet": "Peleas y noches históricas",
+      "known_at": 11
+    },
+    {
+      "name": "Barrera vs. Morales",
+      "facet": "Peleas y noches históricas",
+      "known_at": 12
+    },
+    {
+      "name": "Israel Vázquez vs. Rafael Márquez",
+      "facet": "Peleas y noches históricas",
+      "known_at": 14
+    },
+    {
+      "name": "Juan Manuel Márquez vs. Manny Pacquiao",
+      "facet": "Peleas y noches históricas",
+      "known_at": 9
+    },
+    {
+      "name": "Canelo vs. Gennady Golovkin",
+      "facet": "Peleas y noches históricas",
+      "known_at": 9
+    },
+    {
+      "name": "Canelo vs. Floyd Mayweather",
+      "facet": "Peleas y noches históricas",
+      "known_at": 9
+    },
+    {
+      "name": "Andy Ruiz vs. Anthony Joshua",
+      "facet": "Peleas y noches históricas",
+      "known_at": 9
+    },
+    {
+      "name": "Salvador Sánchez vs. Azumah Nelson",
+      "facet": "Peleas y noches históricas",
+      "known_at": 15
+    },
+    {
+      "name": "Canelo vs. Terence Crawford",
+      "facet": "Peleas y noches históricas",
+      "known_at": 10
+    },
+    {
+      "name": "Canelo vs. Dmitry Bivol",
+      "facet": "Peleas y noches históricas",
+      "known_at": 11
+    },
+    {
+      "name": "Rubén Olivares vs. Chucho Castillo",
+      "facet": "Peleas y noches históricas",
+      "known_at": 15
+    },
+    {
+      "name": "Carlos Zárate vs. Alfonso Zamora",
+      "facet": "Peleas y noches históricas",
+      "known_at": 15
+    },
+    {
+      "name": "Pipino Cuevas vs. Thomas Hearns",
+      "facet": "Peleas y noches históricas",
+      "known_at": 14
+    },
+    {
+      "name": "Érik Morales vs. Manny Pacquiao",
+      "facet": "Peleas y noches históricas",
+      "known_at": 12
+    },
+    {
+      "name": "Marco Antonio Barrera vs. Naseem Hamed",
+      "facet": "Peleas y noches históricas",
+      "known_at": 13
+    },
+    {
+      "name": "Ricardo Delgado",
+      "facet": "Medallas olímpicas en boxeo",
+      "known_at": 13
+    },
+    {
+      "name": "Antonio Roldán",
+      "facet": "Medallas olímpicas en boxeo",
+      "known_at": 13
+    },
+    {
+      "name": "Joaquín Rocha",
+      "facet": "Medallas olímpicas en boxeo",
+      "known_at": 15
+    },
+    {
+      "name": "Agustín Zaragoza",
+      "facet": "Medallas olímpicas en boxeo",
+      "known_at": 15
+    },
+    {
+      "name": "Alfonso Zamora",
+      "facet": "Medallas olímpicas en boxeo",
+      "known_at": 13
+    },
+    {
+      "name": "Héctor López",
+      "facet": "Medallas olímpicas en boxeo",
+      "known_at": 14
+    },
+    {
+      "name": "Mario González",
+      "facet": "Medallas olímpicas en boxeo",
+      "known_at": 15
+    },
+    {
+      "name": "Misael Rodríguez",
+      "facet": "Medallas olímpicas en boxeo",
+      "known_at": 12
+    },
+    {
+      "name": "Marco Verde",
+      "facet": "Medallas olímpicas en boxeo",
+      "known_at": 10
+    },
+    {
+      "name": "Francisco Cabañas",
+      "facet": "Medallas olímpicas en boxeo",
+      "known_at": 15
+    },
+    {
+      "name": "Fidel Ortiz",
+      "facet": "Medallas olímpicas en boxeo",
+      "known_at": 15
+    },
+    {
+      "name": "Juegos Olímpicos de Múnich 1972",
+      "facet": "Medallas olímpicas en boxeo",
+      "known_at": 13
+    },
+    {
+      "name": "Juegos Olímpicos de Los Ángeles 1984",
+      "facet": "Medallas olímpicas en boxeo",
+      "known_at": 12
+    },
+    {
+      "name": "Juegos Olímpicos de París 2024",
+      "facet": "Medallas olímpicas en boxeo",
+      "known_at": 6
+    },
+    {
+      "name": "Laura Serrano",
+      "facet": "Boxeo femenil mexicano",
+      "known_at": 13
+    },
+    {
+      "name": "Mariana \"Barby\" Juárez",
+      "facet": "Boxeo femenil mexicano",
+      "known_at": 10
+    },
+    {
+      "name": "Ana María \"Guerrera\" Torres",
+      "facet": "Boxeo femenil mexicano",
+      "known_at": 12
+    },
+    {
+      "name": "Jackie Nava",
+      "facet": "Boxeo femenil mexicano",
+      "known_at": 11
+    },
+    {
+      "name": "Jessica \"Kika\" Chávez",
+      "facet": "Boxeo femenil mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Irma \"Torbellino\" García",
+      "facet": "Boxeo femenil mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Erika \"Dinamita\" Cruz",
+      "facet": "Boxeo femenil mexicano",
+      "known_at": 12
+    },
+    {
+      "name": "Yulihan \"Cobra\" Luna",
+      "facet": "Boxeo femenil mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Zulina \"Loba\" Muñoz",
+      "facet": "Boxeo femenil mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Ibeth \"Roca\" Zamora",
+      "facet": "Boxeo femenil mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Kenia Enríquez",
+      "facet": "Boxeo femenil mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Esmeralda Falcón",
+      "facet": "Boxeo femenil mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Brianda Tamara Cruz",
+      "facet": "Boxeo femenil mexicano",
+      "known_at": 13
+    },
+    {
+      "name": "Arely Muciño",
+      "facet": "Boxeo femenil mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Alejandra \"Ronnie\" Jiménez",
+      "facet": "Boxeo femenil mexicano",
+      "known_at": 15
+    },
+    {
+      "name": "El Gran Campeón Mexicano",
+      "facet": "Apodos y frases del ring",
+      "known_at": 9
+    },
+    {
+      "name": "Canelo",
+      "facet": "Apodos y frases del ring",
+      "known_at": 4
+    },
+    {
+      "name": "Finito",
+      "facet": "Apodos y frases del ring",
+      "known_at": 11
+    },
+    {
+      "name": "El Terrible",
+      "facet": "Apodos y frases del ring",
+      "known_at": 11
+    },
+    {
+      "name": "El Asesino con Cara de Niño",
+      "facet": "Apodos y frases del ring",
+      "known_at": 12
+    },
+    {
+      "name": "Dinamita",
+      "facet": "Apodos y frases del ring",
+      "known_at": 10
+    },
+    {
+      "name": "Púas",
+      "facet": "Apodos y frases del ring",
+      "known_at": 13
+    },
+    {
+      "name": "Travieso",
+      "facet": "Apodos y frases del ring",
+      "known_at": 9
+    },
+    {
+      "name": "Chiquita",
+      "facet": "Apodos y frases del ring",
+      "known_at": 13
+    },
+    {
+      "name": "Pitbull",
+      "facet": "Apodos y frases del ring",
+      "known_at": 11
+    },
+    {
+      "name": "Zurdo",
+      "facet": "Apodos y frases del ring",
+      "known_at": 12
+    },
+    {
+      "name": "Tirar la toalla",
+      "facet": "Apodos y frases del ring",
+      "known_at": 6
+    },
+    {
+      "name": "Salvado por la campana",
+      "facet": "Apodos y frases del ring",
+      "known_at": 6
+    },
+    {
+      "name": "Esquina roja y esquina azul",
+      "facet": "Apodos y frases del ring",
+      "known_at": 5
+    },
+    {
+      "name": "Besar la lona",
+      "facet": "Apodos y frases del ring",
+      "known_at": 8
+    },
+    {
+      "name": "Peso paja",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 11
+    },
+    {
+      "name": "Peso minimosca",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 11
+    },
+    {
+      "name": "Peso mosca",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 7
+    },
+    {
+      "name": "Peso gallo",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 7
+    },
+    {
+      "name": "Peso supergallo",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 11
+    },
+    {
+      "name": "Peso ligero",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 8
+    },
+    {
+      "name": "Peso wélter",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 10
+    },
+    {
+      "name": "Peso medio",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 8
+    },
+    {
+      "name": "Peso supermedio",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 10
+    },
+    {
+      "name": "Peso semicompleto",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 11
+    },
+    {
+      "name": "Peso completo",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 5
+    },
+    {
+      "name": "Nocaut",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 4
+    },
+    {
+      "name": "Nocaut técnico",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 8
+    },
+    {
+      "name": "Decisión dividida",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 10
+    },
+    {
+      "name": "Cuenta de protección",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 10
+    },
+    {
+      "name": "Round",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 4
+    },
+    {
+      "name": "Pesaje",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 8
+    },
+    {
+      "name": "Campeón indiscutido",
+      "facet": "Divisiones de peso y reglas",
+      "known_at": 10
+    },
+    {
+      "name": "Gancho al hígado",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 9
+    },
+    {
+      "name": "Jab",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 8
+    },
+    {
+      "name": "Uppercut",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 7
+    },
+    {
+      "name": "Recto",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 7
+    },
+    {
+      "name": "Guardia",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 6
+    },
+    {
+      "name": "Esquiva",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 7
+    },
+    {
+      "name": "Fajador",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 11
+    },
+    {
+      "name": "Estilista",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 11
+    },
+    {
+      "name": "Contragolpe",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 8
+    },
+    {
+      "name": "Trabajo al cuerpo",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 10
+    },
+    {
+      "name": "Pegada",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 9
+    },
+    {
+      "name": "Clinch",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 11
+    },
+    {
+      "name": "Guardia zurda",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 10
+    },
+    {
+      "name": "Juego de piernas",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 8
+    },
+    {
+      "name": "Combinación",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 9
+    },
+    {
+      "name": "Costal",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 5
+    },
+    {
+      "name": "Sombra",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 9
+    },
+    {
+      "name": "Vendaje de manos",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 7
+    },
+    {
+      "name": "Guantes de box",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 2
+    },
+    {
+      "name": "Protector bucal",
+      "facet": "Técnica y estilo mexicano",
+      "known_at": 6
+    },
+    {
+      "name": "Consejo Mundial de Boxeo",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 8
+    },
+    {
+      "name": "José Sulaimán",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 12
+    },
+    {
+      "name": "Mauricio Sulaimán",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 13
+    },
+    {
+      "name": "Cinturón verde y oro del CMB",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 8
+    },
+    {
+      "name": "Cinturón Huichol",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 14
+    },
+    {
+      "name": "Cinturón Maya",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 14
+    },
+    {
+      "name": "Cinturón de diamante del CMB",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 13
+    },
+    {
+      "name": "Asociación Mundial de Boxeo",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 11
+    },
+    {
+      "name": "Federación Internacional de Boxeo",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 11
+    },
+    {
+      "name": "Organización Mundial de Boxeo",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 11
+    },
+    {
+      "name": "Salón de la Fama del Boxeo Internacional",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 12
+    },
+    {
+      "name": "Revista The Ring",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 13
+    },
+    {
+      "name": "Ranking libra por libra",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 11
+    },
+    {
+      "name": "Box Azteca",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 10
+    },
+    {
+      "name": "Golden Boy Promotions",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 13
+    },
+    {
+      "name": "Zanfer Promotions",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 14
+    },
+    {
+      "name": "Don King",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 12
+    },
+    {
+      "name": "Top Rank",
+      "facet": "Organismos, cinturones y cronistas",
+      "known_at": 13
+    },
+    {
+      "name": "Eddy Reynoso",
+      "facet": "Gimnasios, entrenadores y escuelas",
+      "known_at": 10
+    },
+    {
+      "name": "José \"Chepo\" Reynoso",
+      "facet": "Gimnasios, entrenadores y escuelas",
+      "known_at": 13
+    },
+    {
+      "name": "Ignacio \"Nacho\" Beristáin",
+      "facet": "Gimnasios, entrenadores y escuelas",
+      "known_at": 12
+    },
+    {
+      "name": "Gimnasio Romanza",
+      "facet": "Gimnasios, entrenadores y escuelas",
+      "known_at": 14
+    },
+    {
+      "name": "Gimnasio Nuevo Jordán",
+      "facet": "Gimnasios, entrenadores y escuelas",
+      "known_at": 14
+    },
+    {
+      "name": "Deportivo Pancho Rosales",
+      "facet": "Gimnasios, entrenadores y escuelas",
+      "known_at": 14
+    },
+    {
+      "name": "Arturo \"Cuyo\" Hernández",
+      "facet": "Gimnasios, entrenadores y escuelas",
+      "known_at": 14
+    },
+    {
+      "name": "Cristóbal Rosas",
+      "facet": "Gimnasios, entrenadores y escuelas",
+      "known_at": 15
+    },
+    {
+      "name": "Rudy Pérez",
+      "facet": "Gimnasios, entrenadores y escuelas",
+      "known_at": 15
+    },
+    {
+      "name": "Abel Sánchez",
+      "facet": "Gimnasios, entrenadores y escuelas",
+      "known_at": 14
+    },
+    {
+      "name": "Freddie Roach",
+      "facet": "Gimnasios, entrenadores y escuelas",
+      "known_at": 12
+    },
+    {
+      "name": "Robert García",
+      "facet": "Gimnasios, entrenadores y escuelas",
+      "known_at": 14
+    },
+    {
+      "name": "Barrio de Tepito",
+      "facet": "Gimnasios, entrenadores y escuelas",
+      "known_at": 9
+    },
+    {
+      "name": "Guantes de Oro",
+      "facet": "Gimnasios, entrenadores y escuelas",
+      "known_at": 12
+    },
+    {
+      "name": "Gimnasio Juan de la Barrera",
+      "facet": "Arenas, sedes y fechas patrias",
+      "known_at": 14
+    },
+    {
+      "name": "Las Vegas",
+      "facet": "Arenas, sedes y fechas patrias",
+      "known_at": 5
+    },
+    {
+      "name": "MGM Grand Garden Arena",
+      "facet": "Arenas, sedes y fechas patrias",
+      "known_at": 12
+    },
+    {
+      "name": "T-Mobile Arena",
+      "facet": "Arenas, sedes y fechas patrias",
+      "known_at": 13
+    },
+    {
+      "name": "Caesars Palace",
+      "facet": "Arenas, sedes y fechas patrias",
+      "known_at": 13
+    },
+    {
+      "name": "Allegiant Stadium",
+      "facet": "Arenas, sedes y fechas patrias",
+      "known_at": 13
+    },
+    {
+      "name": "Madison Square Garden",
+      "facet": "Arenas, sedes y fechas patrias",
+      "known_at": 11
+    },
+    {
+      "name": "Fin de semana de la Independencia",
+      "facet": "Arenas, sedes y fechas patrias",
+      "known_at": 9
+    },
+    {
+      "name": "Cinco de Mayo",
+      "facet": "Arenas, sedes y fechas patrias",
+      "known_at": 6
+    }
+  ]
+}

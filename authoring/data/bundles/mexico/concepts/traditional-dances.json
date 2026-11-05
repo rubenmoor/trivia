@@ -1,0 +1,473 @@
+{
+  "subcategory": "traditional-dances",
+  "facets": [
+    "Danzas prehispánicas y concheros",
+    "Jarabes y sones regionales",
+    "Danzas de la Guelaguetza oaxaqueña",
+    "Danzas de Michoacán y Viejitos",
+    "Voladores y danzas rituales",
+    "Danzas de Conquista y de moros",
+    "Danzas norteñas y polkas",
+    "Danzas del Golfo y la Huasteca",
+    "Trajes y vestuario de baile",
+    "Máscaras, accesorios e instrumentos",
+    "Fiestas y carnavales con danza",
+    "Bailes populares y de salón"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 1,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Danza azteca",
+      "facet": "Danzas prehispánicas y concheros",
+      "known_at": 4
+    },
+    {
+      "name": "Danzantes del Zócalo",
+      "facet": "Danzas prehispánicas y concheros",
+      "known_at": 6
+    },
+    {
+      "name": "Danza del Tigre",
+      "facet": "Danzas prehispánicas y concheros",
+      "known_at": 11
+    },
+    {
+      "name": "Danza de los Matachines",
+      "facet": "Danzas prehispánicas y concheros",
+      "known_at": 10
+    },
+    {
+      "name": "Xochipitzahuatl",
+      "facet": "Danzas prehispánicas y concheros",
+      "known_at": 12
+    },
+    {
+      "name": "Los cuatro rumbos",
+      "facet": "Danzas prehispánicas y concheros",
+      "known_at": 11
+    },
+    {
+      "name": "Danza de los Huehues",
+      "facet": "Danzas prehispánicas y concheros",
+      "known_at": 13
+    },
+    {
+      "name": "Jarabe de la botella",
+      "facet": "Jarabes y sones regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Chilena guerrerense",
+      "facet": "Jarabes y sones regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Son de artesa",
+      "facet": "Jarabes y sones regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Son calentano",
+      "facet": "Jarabes y sones regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Baile de los machetes",
+      "facet": "Jarabes y sones regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Jarabe michoacano",
+      "facet": "Jarabes y sones regionales",
+      "known_at": 12
+    },
+    {
+      "name": "El Gavilancillo",
+      "facet": "Jarabes y sones regionales",
+      "known_at": 14
+    },
+    {
+      "name": "Chinas oaxaqueñas",
+      "facet": "Danzas de la Guelaguetza oaxaqueña",
+      "known_at": 11
+    },
+    {
+      "name": "La Llorona (son istmeño)",
+      "facet": "Danzas de la Guelaguetza oaxaqueña",
+      "known_at": 9
+    },
+    {
+      "name": "Marmota (globo de calenda)",
+      "facet": "Danzas de la Guelaguetza oaxaqueña",
+      "known_at": 12,
+      "retired": "used_up: The earlier question already says the marmota is a cloth balloon from Oaxaca shown before the fiesta, so its material, its timing and where it comes from are all given away."
+    },
+    {
+      "name": "Tuxtepec",
+      "facet": "Danzas de la Guelaguetza oaxaqueña",
+      "known_at": 11
+    },
+    {
+      "name": "Auditorio Guelaguetza",
+      "facet": "Danzas de la Guelaguetza oaxaqueña",
+      "known_at": 10
+    },
+    {
+      "name": "Sones mazatecos",
+      "facet": "Danzas de la Guelaguetza oaxaqueña",
+      "known_at": 13
+    },
+    {
+      "name": "Danza de los Diablos de Juxtlahuaca",
+      "facet": "Danzas de la Guelaguetza oaxaqueña",
+      "known_at": 13
+    },
+    {
+      "name": "Ciudad de Oaxaca",
+      "facet": "Danzas de la Guelaguetza oaxaqueña",
+      "known_at": 5
+    },
+    {
+      "name": "Jarácuaro",
+      "facet": "Danzas de Michoacán y Viejitos",
+      "known_at": 13
+    },
+    {
+      "name": "Danza de los Kúrpites",
+      "facet": "Danzas de Michoacán y Viejitos",
+      "known_at": 13
+    },
+    {
+      "name": "Danza del Pescado",
+      "facet": "Danzas de Michoacán y Viejitos",
+      "known_at": 12
+    },
+    {
+      "name": "Danza de las Canacuas",
+      "facet": "Danzas de Michoacán y Viejitos",
+      "known_at": 13
+    },
+    {
+      "name": "Año Nuevo Purépecha",
+      "facet": "Danzas de Michoacán y Viejitos",
+      "known_at": 13
+    },
+    {
+      "name": "Palo volador",
+      "facet": "Voladores y danzas rituales",
+      "known_at": 7
+    },
+    {
+      "name": "Caporal (volador)",
+      "facet": "Voladores y danzas rituales",
+      "known_at": 12
+    },
+    {
+      "name": "Pascola",
+      "facet": "Voladores y danzas rituales",
+      "known_at": 12
+    },
+    {
+      "name": "Mayos",
+      "facet": "Voladores y danzas rituales",
+      "known_at": 13
+    },
+    {
+      "name": "Danza de los Diablos de la Costa Chica",
+      "facet": "Voladores y danzas rituales",
+      "known_at": 12
+    },
+    {
+      "name": "Yúmari",
+      "facet": "Voladores y danzas rituales",
+      "known_at": 13
+    },
+    {
+      "name": "Judea cora",
+      "facet": "Voladores y danzas rituales",
+      "known_at": 13
+    },
+    {
+      "name": "Patrimonio Cultural Inmaterial de la UNESCO",
+      "facet": "Voladores y danzas rituales",
+      "known_at": 10
+    },
+    {
+      "name": "Danza de los Huahuas",
+      "facet": "Voladores y danzas rituales",
+      "known_at": 13
+    },
+    {
+      "name": "Santiago Apóstol",
+      "facet": "Danzas de Conquista y de moros",
+      "known_at": 10
+    },
+    {
+      "name": "Danza de los Tastoanes",
+      "facet": "Danzas de Conquista y de moros",
+      "known_at": 12
+    },
+    {
+      "name": "Danza de la Conquista",
+      "facet": "Danzas de Conquista y de moros",
+      "known_at": 10
+    },
+    {
+      "name": "Danza de los Santiagueros",
+      "facet": "Danzas de Conquista y de moros",
+      "known_at": 13
+    },
+    {
+      "name": "Danza de los Doce Pares de Francia",
+      "facet": "Danzas de Conquista y de moros",
+      "known_at": 14
+    },
+    {
+      "name": "Carlomagno",
+      "facet": "Danzas de Conquista y de moros",
+      "known_at": 12
+    },
+    {
+      "name": "Danza de los Sonajeros",
+      "facet": "Danzas de Conquista y de moros",
+      "known_at": 12
+    },
+    {
+      "name": "Danza de los Chareos",
+      "facet": "Danzas de Conquista y de moros",
+      "known_at": 14
+    },
+    {
+      "name": "Evangelización franciscana",
+      "facet": "Danzas de Conquista y de moros",
+      "known_at": 11
+    },
+    {
+      "name": "Danza de los Apaches",
+      "facet": "Danzas de Conquista y de moros",
+      "known_at": 13
+    },
+    {
+      "name": "Mazurca",
+      "facet": "Danzas norteñas y polkas",
+      "known_at": 12
+    },
+    {
+      "name": "Vals norteño",
+      "facet": "Danzas norteñas y polkas",
+      "known_at": 10
+    },
+    {
+      "name": "Calabaceado",
+      "facet": "Danzas norteñas y polkas",
+      "known_at": 11
+    },
+    {
+      "name": "El Taconazo",
+      "facet": "Danzas norteñas y polkas",
+      "known_at": 12
+    },
+    {
+      "name": "El Circo (polka)",
+      "facet": "Danzas norteñas y polkas",
+      "known_at": 13
+    },
+    {
+      "name": "Conjunto norteño",
+      "facet": "Danzas norteñas y polkas",
+      "known_at": 9
+    },
+    {
+      "name": "Sonora",
+      "facet": "Danzas norteñas y polkas",
+      "known_at": 7
+    },
+    {
+      "name": "Inmigrantes alemanes",
+      "facet": "Danzas norteñas y polkas",
+      "known_at": 12
+    },
+    {
+      "name": "Fandango jarocho",
+      "facet": "Danzas del Golfo y la Huasteca",
+      "known_at": 11
+    },
+    {
+      "name": "El Colás",
+      "facet": "Danzas del Golfo y la Huasteca",
+      "known_at": 13
+    },
+    {
+      "name": "Malagueña salerosa",
+      "facet": "Danzas del Golfo y la Huasteca",
+      "known_at": 7
+    },
+    {
+      "name": "Baile de la cabeza de cochino",
+      "facet": "Danzas del Golfo y la Huasteca",
+      "known_at": 12
+    },
+    {
+      "name": "Zapateo tabasqueño",
+      "facet": "Danzas del Golfo y la Huasteca",
+      "known_at": 12
+    },
+    {
+      "name": "Danza de los Mecos",
+      "facet": "Danzas del Golfo y la Huasteca",
+      "known_at": 13
+    },
+    {
+      "name": "Penacho",
+      "facet": "Trajes y vestuario de baile",
+      "known_at": 7
+    },
+    {
+      "name": "Botas vaqueras",
+      "facet": "Trajes y vestuario de baile",
+      "known_at": 5
+    },
+    {
+      "name": "Enagua",
+      "facet": "Trajes y vestuario de baile",
+      "known_at": 11
+    },
+    {
+      "name": "Máscara de madera",
+      "facet": "Máscaras, accesorios e instrumentos",
+      "known_at": 7
+    },
+    {
+      "name": "Máscara de diablo",
+      "facet": "Máscaras, accesorios e instrumentos",
+      "known_at": 7
+    },
+    {
+      "name": "Máscara de jaguar",
+      "facet": "Máscaras, accesorios e instrumentos",
+      "known_at": 9
+    },
+    {
+      "name": "Atecocolli",
+      "facet": "Máscaras, accesorios e instrumentos",
+      "known_at": 12
+    },
+    {
+      "name": "Mandolina de concha de armadillo",
+      "facet": "Máscaras, accesorios e instrumentos",
+      "known_at": 12
+    },
+    {
+      "name": "Tenabaris",
+      "facet": "Máscaras, accesorios e instrumentos",
+      "known_at": 13
+    },
+    {
+      "name": "Pañuelo",
+      "facet": "Máscaras, accesorios e instrumentos",
+      "known_at": 3
+    },
+    {
+      "name": "Fiesta Grande de Chiapa de Corzo",
+      "facet": "Fiestas y carnavales con danza",
+      "known_at": 12
+    },
+    {
+      "name": "Encuentro Internacional del Mariachi",
+      "facet": "Fiestas y carnavales con danza",
+      "known_at": 11
+    },
+    {
+      "name": "Danzón",
+      "facet": "Bailes populares y de salón",
+      "known_at": 9
+    },
+    {
+      "name": "Danzón n.º 2",
+      "facet": "Bailes populares y de salón",
+      "known_at": 11
+    },
+    {
+      "name": "Cha-cha-chá",
+      "facet": "Bailes populares y de salón",
+      "known_at": 7
+    },
+    {
+      "name": "Mambo",
+      "facet": "Bailes populares y de salón",
+      "known_at": 7
+    },
+    {
+      "name": "Pérez Prado",
+      "facet": "Bailes populares y de salón",
+      "known_at": 11
+    },
+    {
+      "name": "Cumbia",
+      "facet": "Bailes populares y de salón",
+      "known_at": 4
+    },
+    {
+      "name": "Salón Los Ángeles",
+      "facet": "Bailes populares y de salón",
+      "known_at": 13
+    },
+    {
+      "name": "Vals de quince años",
+      "facet": "Bailes populares y de salón",
+      "known_at": 4
+    },
+    {
+      "name": "Chambelanes",
+      "facet": "Bailes populares y de salón",
+      "known_at": 6
+    },
+    {
+      "name": "Pachucos",
+      "facet": "Bailes populares y de salón",
+      "known_at": 11
+    }
+  ]
+}

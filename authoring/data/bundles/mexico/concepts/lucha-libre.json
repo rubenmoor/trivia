@@ -1,0 +1,907 @@
+{
+  "subcategory": "lucha-libre",
+  "facets": [
+    "Luchadores legendarios",
+    "Máscaras y apuestas",
+    "Técnicas y llaves",
+    "Reglas y tipos de lucha",
+    "Rudos y técnicos",
+    "Arenas y empresas",
+    "Historia de la lucha libre",
+    "Lucha libre en el cine",
+    "Jerga del cuadrilátero",
+    "Dinastías y familias luchadoras",
+    "Minis, exóticos y luchadoras",
+    "Fiesta y afición en la arena"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Rey Mysterio",
+      "facet": "Luchadores legendarios",
+      "known_at": 3
+    },
+    {
+      "name": "Místico",
+      "facet": "Luchadores legendarios",
+      "known_at": 6
+    },
+    {
+      "name": "Atlantis",
+      "facet": "Luchadores legendarios",
+      "known_at": 8
+    },
+    {
+      "name": "Último Guerrero",
+      "facet": "Luchadores legendarios",
+      "known_at": 10
+    },
+    {
+      "name": "Perro Aguayo",
+      "facet": "Luchadores legendarios",
+      "known_at": 9
+    },
+    {
+      "name": "Canek",
+      "facet": "Luchadores legendarios",
+      "known_at": 10
+    },
+    {
+      "name": "Dos Caras",
+      "facet": "Luchadores legendarios",
+      "known_at": 11
+    },
+    {
+      "name": "Octagón",
+      "facet": "Luchadores legendarios",
+      "known_at": 7
+    },
+    {
+      "name": "La Parka",
+      "facet": "Luchadores legendarios",
+      "known_at": 5
+    },
+    {
+      "name": "Rayo de Jalisco",
+      "facet": "Luchadores legendarios",
+      "known_at": 11
+    },
+    {
+      "name": "El Solitario",
+      "facet": "Luchadores legendarios",
+      "known_at": 12
+    },
+    {
+      "name": "Dr. Wagner",
+      "facet": "Luchadores legendarios",
+      "known_at": 10
+    },
+    {
+      "name": "Cien Caras",
+      "facet": "Luchadores legendarios",
+      "known_at": 11
+    },
+    {
+      "name": "Psycho Clown",
+      "facet": "Luchadores legendarios",
+      "known_at": 7
+    },
+    {
+      "name": "Lucha de apuestas",
+      "facet": "Máscaras y apuestas",
+      "known_at": 8
+    },
+    {
+      "name": "Máscara contra máscara",
+      "facet": "Máscaras y apuestas",
+      "known_at": 5
+    },
+    {
+      "name": "Cabellera contra cabellera",
+      "facet": "Máscaras y apuestas",
+      "known_at": 8
+    },
+    {
+      "name": "Rapada",
+      "facet": "Máscaras y apuestas",
+      "known_at": 7
+    },
+    {
+      "name": "Desenmascaramiento",
+      "facet": "Máscaras y apuestas",
+      "known_at": 6
+    },
+    {
+      "name": "Mascarero",
+      "facet": "Máscaras y apuestas",
+      "known_at": 10
+    },
+    {
+      "name": "Antonio Martínez",
+      "facet": "Máscaras y apuestas",
+      "known_at": 14
+    },
+    {
+      "name": "Máscara plateada",
+      "facet": "Máscaras y apuestas",
+      "known_at": 3
+    },
+    {
+      "name": "Máscara de calavera",
+      "facet": "Máscaras y apuestas",
+      "known_at": 6
+    },
+    {
+      "name": "Cordones de la máscara",
+      "facet": "Máscaras y apuestas",
+      "known_at": 7
+    },
+    {
+      "name": "Licra",
+      "facet": "Máscaras y apuestas",
+      "known_at": 9
+    },
+    {
+      "name": "Identidad secreta",
+      "facet": "Máscaras y apuestas",
+      "known_at": 4
+    },
+    {
+      "name": "La Maravilla Enmascarada",
+      "facet": "Máscaras y apuestas",
+      "known_at": 14
+    },
+    {
+      "name": "Retiro de El Santo",
+      "facet": "Máscaras y apuestas",
+      "known_at": 11
+    },
+    {
+      "name": "Máscara de Blue Demon",
+      "facet": "Máscaras y apuestas",
+      "known_at": 5
+    },
+    {
+      "name": "La de a caballo",
+      "facet": "Técnicas y llaves",
+      "known_at": 6
+    },
+    {
+      "name": "La Tapatía",
+      "facet": "Técnicas y llaves",
+      "known_at": 10
+    },
+    {
+      "name": "La Mística",
+      "facet": "Técnicas y llaves",
+      "known_at": 10
+    },
+    {
+      "name": "Huracarrana",
+      "facet": "Técnicas y llaves",
+      "known_at": 8
+    },
+    {
+      "name": "Plancha",
+      "facet": "Técnicas y llaves",
+      "known_at": 5
+    },
+    {
+      "name": "Tope suicida",
+      "facet": "Técnicas y llaves",
+      "known_at": 8
+    },
+    {
+      "name": "Martinete",
+      "facet": "Técnicas y llaves",
+      "known_at": 10
+    },
+    {
+      "name": "Quebradora",
+      "facet": "Técnicas y llaves",
+      "known_at": 10
+    },
+    {
+      "name": "La Casita",
+      "facet": "Técnicas y llaves",
+      "known_at": 11
+    },
+    {
+      "name": "La Rana",
+      "facet": "Técnicas y llaves",
+      "known_at": 12
+    },
+    {
+      "name": "La Cerrajera",
+      "facet": "Técnicas y llaves",
+      "known_at": 12
+    },
+    {
+      "name": "Patada voladora",
+      "facet": "Técnicas y llaves",
+      "known_at": 3
+    },
+    {
+      "name": "Tijeras",
+      "facet": "Técnicas y llaves",
+      "known_at": 6
+    },
+    {
+      "name": "Suplex",
+      "facet": "Técnicas y llaves",
+      "known_at": 9
+    },
+    {
+      "name": "Senton",
+      "facet": "Técnicas y llaves",
+      "known_at": 11
+    },
+    {
+      "name": "La Campana",
+      "facet": "Técnicas y llaves",
+      "known_at": 12
+    },
+    {
+      "name": "Desnucadora",
+      "facet": "Técnicas y llaves",
+      "known_at": 11
+    },
+    {
+      "name": "Dos de tres caídas",
+      "facet": "Reglas y tipos de lucha",
+      "known_at": 6
+    },
+    {
+      "name": "Relevos australianos",
+      "facet": "Reglas y tipos de lucha",
+      "known_at": 9
+    },
+    {
+      "name": "Lucha de parejas",
+      "facet": "Reglas y tipos de lucha",
+      "known_at": 5
+    },
+    {
+      "name": "Mano a mano",
+      "facet": "Reglas y tipos de lucha",
+      "known_at": 5
+    },
+    {
+      "name": "Relevos atómicos",
+      "facet": "Reglas y tipos de lucha",
+      "known_at": 10
+    },
+    {
+      "name": "Lucha en jaula",
+      "facet": "Reglas y tipos de lucha",
+      "known_at": 6
+    },
+    {
+      "name": "Cuenta de tres",
+      "facet": "Reglas y tipos de lucha",
+      "known_at": 3
+    },
+    {
+      "name": "Rendición",
+      "facet": "Reglas y tipos de lucha",
+      "known_at": 5
+    },
+    {
+      "name": "Descalificación",
+      "facet": "Reglas y tipos de lucha",
+      "known_at": 7
+    },
+    {
+      "name": "Torneo cibernético",
+      "facet": "Reglas y tipos de lucha",
+      "known_at": 11
+    },
+    {
+      "name": "Cuenta fuera del ring",
+      "facet": "Reglas y tipos de lucha",
+      "known_at": 9
+    },
+    {
+      "name": "Lucha extrema",
+      "facet": "Reglas y tipos de lucha",
+      "known_at": 8
+    },
+    {
+      "name": "Lucha de escaleras",
+      "facet": "Reglas y tipos de lucha",
+      "known_at": 7
+    },
+    {
+      "name": "Batalla campal",
+      "facet": "Reglas y tipos de lucha",
+      "known_at": 7
+    },
+    {
+      "name": "Golpe bajo",
+      "facet": "Reglas y tipos de lucha",
+      "known_at": 6
+    },
+    {
+      "name": "Comisión de Box y Lucha Libre",
+      "facet": "Reglas y tipos de lucha",
+      "known_at": 12
+    },
+    {
+      "name": "Rudo",
+      "facet": "Rudos y técnicos",
+      "known_at": 3
+    },
+    {
+      "name": "Técnico",
+      "facet": "Rudos y técnicos",
+      "known_at": 4
+    },
+    {
+      "name": "Cambio de bando",
+      "facet": "Rudos y técnicos",
+      "known_at": 8
+    },
+    {
+      "name": "Rudo consentido",
+      "facet": "Rudos y técnicos",
+      "known_at": 11
+    },
+    {
+      "name": "Karloff Lagarde",
+      "facet": "Rudos y técnicos",
+      "known_at": 14
+    },
+    {
+      "name": "Los Misioneros de la Muerte",
+      "facet": "Rudos y técnicos",
+      "known_at": 12
+    },
+    {
+      "name": "Los Infernales",
+      "facet": "Rudos y técnicos",
+      "known_at": 12
+    },
+    {
+      "name": "Los Perros del Mal",
+      "facet": "Rudos y técnicos",
+      "known_at": 10
+    },
+    {
+      "name": "Los Ingobernables",
+      "facet": "Rudos y técnicos",
+      "known_at": 10
+    },
+    {
+      "name": "Los Guerreros de la Atlántida",
+      "facet": "Rudos y técnicos",
+      "known_at": 12
+    },
+    {
+      "name": "La Peste Negra",
+      "facet": "Rudos y técnicos",
+      "known_at": 12
+    },
+    {
+      "name": "Los Capos",
+      "facet": "Rudos y técnicos",
+      "known_at": 13
+    },
+    {
+      "name": "Los Psycho Circus",
+      "facet": "Rudos y técnicos",
+      "known_at": 9
+    },
+    {
+      "name": "Pareja Atómica",
+      "facet": "Rudos y técnicos",
+      "known_at": 13
+    },
+    {
+      "name": "AAA",
+      "facet": "Arenas y empresas",
+      "known_at": 7
+    },
+    {
+      "name": "Empresa Mexicana de Lucha Libre",
+      "facet": "Arenas y empresas",
+      "known_at": 12
+    },
+    {
+      "name": "Antonio Peña",
+      "facet": "Arenas y empresas",
+      "known_at": 12
+    },
+    {
+      "name": "Arena Naucalpan",
+      "facet": "Arenas y empresas",
+      "known_at": 12
+    },
+    {
+      "name": "Arena Coliseo de Guadalajara",
+      "facet": "Arenas y empresas",
+      "known_at": 11
+    },
+    {
+      "name": "Arena Puebla",
+      "facet": "Arenas y empresas",
+      "known_at": 11
+    },
+    {
+      "name": "Arena Monterrey",
+      "facet": "Arenas y empresas",
+      "known_at": 10
+    },
+    {
+      "name": "Toreo de Cuatro Caminos",
+      "facet": "Arenas y empresas",
+      "known_at": 11
+    },
+    {
+      "name": "Triplemanía",
+      "facet": "Arenas y empresas",
+      "known_at": 8
+    },
+    {
+      "name": "Aniversario del CMLL",
+      "facet": "Arenas y empresas",
+      "known_at": 11
+    },
+    {
+      "name": "IWRG",
+      "facet": "Arenas y empresas",
+      "known_at": 13
+    },
+    {
+      "name": "Lucha Underground",
+      "facet": "Arenas y empresas",
+      "known_at": 12
+    },
+    {
+      "name": "Auditorio Municipal de Tijuana",
+      "facet": "Arenas y empresas",
+      "known_at": 13
+    },
+    {
+      "name": "Salvador Lutteroth",
+      "facet": "Historia de la lucha libre",
+      "known_at": 12
+    },
+    {
+      "name": "21 de septiembre de 1933",
+      "facet": "Historia de la lucha libre",
+      "known_at": 13
+    },
+    {
+      "name": "Día Nacional de la Lucha Libre",
+      "facet": "Historia de la lucha libre",
+      "known_at": 11
+    },
+    {
+      "name": "Enrique Ugartechea",
+      "facet": "Historia de la lucha libre",
+      "known_at": 15
+    },
+    {
+      "name": "Lucha grecorromana",
+      "facet": "Historia de la lucha libre",
+      "known_at": 10
+    },
+    {
+      "name": "Arena Modelo",
+      "facet": "Historia de la lucha libre",
+      "known_at": 14
+    },
+    {
+      "name": "Época de oro de la lucha libre",
+      "facet": "Historia de la lucha libre",
+      "known_at": 10
+    },
+    {
+      "name": "Prohibición de la lucha libre en televisión",
+      "facet": "Historia de la lucha libre",
+      "known_at": 13
+    },
+    {
+      "name": "Patrimonio cultural inmaterial de la Ciudad de México",
+      "facet": "Historia de la lucha libre",
+      "known_at": 12
+    },
+    {
+      "name": "Historieta de Santo",
+      "facet": "Historia de la lucha libre",
+      "known_at": 12
+    },
+    {
+      "name": "Revista Box y Lucha",
+      "facet": "Historia de la lucha libre",
+      "known_at": 13
+    },
+    {
+      "name": "Fray Tormenta",
+      "facet": "Historia de la lucha libre",
+      "known_at": 11
+    },
+    {
+      "name": "Rodolfo Guzmán Huerta",
+      "facet": "Historia de la lucha libre",
+      "known_at": 11
+    },
+    {
+      "name": "Santo contra las mujeres vampiro",
+      "facet": "Lucha libre en el cine",
+      "known_at": 10
+    },
+    {
+      "name": "Santo en el museo de cera",
+      "facet": "Lucha libre en el cine",
+      "known_at": 11
+    },
+    {
+      "name": "Santo contra los zombies",
+      "facet": "Lucha libre en el cine",
+      "known_at": 11
+    },
+    {
+      "name": "Las momias de Guanajuato",
+      "facet": "Lucha libre en el cine",
+      "known_at": 9
+    },
+    {
+      "name": "Las luchadoras contra el médico asesino",
+      "facet": "Lucha libre en el cine",
+      "known_at": 13
+    },
+    {
+      "name": "Cassandro (película)",
+      "facet": "Lucha libre en el cine",
+      "known_at": 11
+    },
+    {
+      "name": "¡Mucha Lucha!",
+      "facet": "Lucha libre en el cine",
+      "known_at": 6
+    },
+    {
+      "name": "Guacamelee!",
+      "facet": "Lucha libre en el cine",
+      "known_at": 9
+    },
+    {
+      "name": "René Cardona",
+      "facet": "Lucha libre en el cine",
+      "known_at": 14
+    },
+    {
+      "name": "Los Campeones Justicieros",
+      "facet": "Lucha libre en el cine",
+      "known_at": 13
+    },
+    {
+      "name": "Encordado",
+      "facet": "Jerga del cuadrilátero",
+      "known_at": 9
+    },
+    {
+      "name": "Tensores",
+      "facet": "Jerga del cuadrilátero",
+      "known_at": 11
+    },
+    {
+      "name": "Lona",
+      "facet": "Jerga del cuadrilátero",
+      "known_at": 6
+    },
+    {
+      "name": "Esquina",
+      "facet": "Jerga del cuadrilátero",
+      "known_at": 3
+    },
+    {
+      "name": "Réferi",
+      "facet": "Jerga del cuadrilátero",
+      "known_at": 4
+    },
+    {
+      "name": "Gladiador",
+      "facet": "Jerga del cuadrilátero",
+      "known_at": 8
+    },
+    {
+      "name": "Pancracio",
+      "facet": "Jerga del cuadrilátero",
+      "known_at": 13
+    },
+    {
+      "name": "Volador",
+      "facet": "Jerga del cuadrilátero",
+      "known_at": 7
+    },
+    {
+      "name": "Maromero",
+      "facet": "Jerga del cuadrilátero",
+      "known_at": 12
+    },
+    {
+      "name": "Tercia",
+      "facet": "Jerga del cuadrilátero",
+      "known_at": 9
+    },
+    {
+      "name": "Caída",
+      "facet": "Jerga del cuadrilátero",
+      "known_at": 6
+    },
+    {
+      "name": "Enmascarado",
+      "facet": "Jerga del cuadrilátero",
+      "known_at": 4
+    },
+    {
+      "name": "Segundo",
+      "facet": "Jerga del cuadrilátero",
+      "known_at": 12
+    },
+    {
+      "name": "Blue Demon Jr.",
+      "facet": "Dinastías y familias luchadoras",
+      "known_at": 7
+    },
+    {
+      "name": "Familia Guerrero",
+      "facet": "Dinastías y familias luchadoras",
+      "known_at": 11
+    },
+    {
+      "name": "Eddie Guerrero",
+      "facet": "Dinastías y familias luchadoras",
+      "known_at": 8
+    },
+    {
+      "name": "Gory Guerrero",
+      "facet": "Dinastías y familias luchadoras",
+      "known_at": 13
+    },
+    {
+      "name": "Los Villanos",
+      "facet": "Dinastías y familias luchadoras",
+      "known_at": 11
+    },
+    {
+      "name": "Hermanos Dinamita",
+      "facet": "Dinastías y familias luchadoras",
+      "known_at": 11
+    },
+    {
+      "name": "Dinastía Alvarado",
+      "facet": "Dinastías y familias luchadoras",
+      "known_at": 12
+    },
+    {
+      "name": "Negro Casas",
+      "facet": "Dinastías y familias luchadoras",
+      "known_at": 12
+    },
+    {
+      "name": "Dr. Wagner Jr.",
+      "facet": "Dinastías y familias luchadoras",
+      "known_at": 9
+    },
+    {
+      "name": "Hijo del Perro Aguayo",
+      "facet": "Dinastías y familias luchadoras",
+      "known_at": 10
+    },
+    {
+      "name": "Los Hermanos Brazo",
+      "facet": "Dinastías y familias luchadoras",
+      "known_at": 12
+    },
+    {
+      "name": "Rey Misterio Sr.",
+      "facet": "Dinastías y familias luchadoras",
+      "known_at": 12
+    },
+    {
+      "name": "Dominik Mysterio",
+      "facet": "Dinastías y familias luchadoras",
+      "known_at": 8
+    },
+    {
+      "name": "Alberto del Río",
+      "facet": "Dinastías y familias luchadoras",
+      "known_at": 9
+    },
+    {
+      "name": "Ray Mendoza",
+      "facet": "Dinastías y familias luchadoras",
+      "known_at": 13
+    },
+    {
+      "name": "Minis Estrellas",
+      "facet": "Minis, exóticos y luchadoras",
+      "known_at": 8
+    },
+    {
+      "name": "Mascarita Sagrada",
+      "facet": "Minis, exóticos y luchadoras",
+      "known_at": 6
+    },
+    {
+      "name": "Octagoncito",
+      "facet": "Minis, exóticos y luchadoras",
+      "known_at": 8
+    },
+    {
+      "name": "Microman",
+      "facet": "Minis, exóticos y luchadoras",
+      "known_at": 10
+    },
+    {
+      "name": "Luchador exótico",
+      "facet": "Minis, exóticos y luchadoras",
+      "known_at": 10
+    },
+    {
+      "name": "Cassandro",
+      "facet": "Minis, exóticos y luchadoras",
+      "known_at": 10
+    },
+    {
+      "name": "Pimpinela Escarlata",
+      "facet": "Minis, exóticos y luchadoras",
+      "known_at": 12
+    },
+    {
+      "name": "Irma González",
+      "facet": "Minis, exóticos y luchadoras",
+      "known_at": 13
+    },
+    {
+      "name": "Lady Apache",
+      "facet": "Minis, exóticos y luchadoras",
+      "known_at": 11
+    },
+    {
+      "name": "Faby Apache",
+      "facet": "Minis, exóticos y luchadoras",
+      "known_at": 10
+    },
+    {
+      "name": "Sexy Star",
+      "facet": "Minis, exóticos y luchadoras",
+      "known_at": 10
+    },
+    {
+      "name": "Princesa Sugehit",
+      "facet": "Minis, exóticos y luchadoras",
+      "known_at": 12
+    },
+    {
+      "name": "Lola González",
+      "facet": "Minis, exóticos y luchadoras",
+      "known_at": 14
+    },
+    {
+      "name": "Dark Angel",
+      "facet": "Minis, exóticos y luchadoras",
+      "known_at": 12
+    },
+    {
+      "name": "Prohibición de las luchadoras en el Distrito Federal",
+      "facet": "Minis, exóticos y luchadoras",
+      "known_at": 14
+    },
+    {
+      "name": "Gayola",
+      "facet": "Fiesta y afición en la arena",
+      "known_at": 10
+    },
+    {
+      "name": "Ring side",
+      "facet": "Fiesta y afición en la arena",
+      "known_at": 8
+    },
+    {
+      "name": "Viernes Espectaculares",
+      "facet": "Fiesta y afición en la arena",
+      "known_at": 11
+    },
+    {
+      "name": "Domingos familiares de la Arena México",
+      "facet": "Fiesta y afición en la arena",
+      "known_at": 11
+    },
+    {
+      "name": "Puestos de máscaras",
+      "facet": "Fiesta y afición en la arena",
+      "known_at": 5
+    },
+    {
+      "name": "Máscara de recuerdo",
+      "facet": "Fiesta y afición en la arena",
+      "known_at": 3
+    },
+    {
+      "name": "Disfraz de luchador",
+      "facet": "Fiesta y afición en la arena",
+      "known_at": 2
+    },
+    {
+      "name": "Réferi vendido",
+      "facet": "Fiesta y afición en la arena",
+      "known_at": 8
+    },
+    {
+      "name": "Entrada del luchador",
+      "facet": "Fiesta y afición en la arena",
+      "known_at": 6
+    },
+    {
+      "name": "Autógrafos",
+      "facet": "Fiesta y afición en la arena",
+      "known_at": 4
+    },
+    {
+      "name": "Mercado de Tepito",
+      "facet": "Fiesta y afición en la arena",
+      "known_at": 10
+    },
+    {
+      "name": "Lucha libre en la feria",
+      "facet": "Fiesta y afición en la arena",
+      "known_at": 7
+    },
+    {
+      "name": "Lucha libre de barrio",
+      "facet": "Fiesta y afición en la arena",
+      "known_at": 8
+    },
+    {
+      "name": "Piñata de luchador",
+      "facet": "Fiesta y afición en la arena",
+      "known_at": 3
+    }
+  ]
+}

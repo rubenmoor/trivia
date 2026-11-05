@@ -1,0 +1,765 @@
+{
+  "subcategory": "other-sports",
+  "facets": [
+    "Clavados y sus medallistas",
+    "Marcha y atletismo mexicano",
+    "Boxeo mexicano y sus campeones",
+    "Lucha libre y sus luchadores",
+    "Taekwondo, tiro con arco y pesas",
+    "Juegos Olímpicos México 1968",
+    "Béisbol y Liga Mexicana",
+    "Automovilismo y pilotos mexicanos",
+    "Charrería y juegos de pelota tradicionales",
+    "Corredores rarámuri y maratones",
+    "Golf, tenis y otras figuras",
+    "Básquetbol, voleibol y frontón"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 4,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Joaquín Capilla",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 12
+    },
+    {
+      "name": "Paola Espinosa",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 8
+    },
+    {
+      "name": "Rommel Pacheco",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 9
+    },
+    {
+      "name": "Fernando Platas",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 12
+    },
+    {
+      "name": "Iván García",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 11
+    },
+    {
+      "name": "Germán Sánchez",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 11
+    },
+    {
+      "name": "Alejandra Orozco",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 10
+    },
+    {
+      "name": "Osmar Olvera",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 10
+    },
+    {
+      "name": "Juan Celaya",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 12
+    },
+    {
+      "name": "Gabriela Agúndez",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 11
+    },
+    {
+      "name": "Alejandra Estudillo",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 13
+    },
+    {
+      "name": "Kevin Berlín",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 13
+    },
+    {
+      "name": "Jahir Ocampo",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Girón",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 14
+    },
+    {
+      "name": "Juan Botella",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 15,
+      "retired": "unaskable: Too obscure. A photo of him is unlikely to exist, and I'm not sure about his biography."
+    },
+    {
+      "name": "Clavadistas de La Quebrada",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 5
+    },
+    {
+      "name": "Plataforma de 10 metros",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 6
+    },
+    {
+      "name": "Trampolín de 3 metros",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 6
+    },
+    {
+      "name": "Clavados sincronizados",
+      "facet": "Clavados y sus medallistas",
+      "known_at": 7
+    },
+    {
+      "name": "Ernesto Canto",
+      "facet": "Marcha y atletismo mexicano",
+      "known_at": 12
+    },
+    {
+      "name": "Raúl González",
+      "facet": "Marcha y atletismo mexicano",
+      "known_at": 12
+    },
+    {
+      "name": "Daniel Bautista",
+      "facet": "Marcha y atletismo mexicano",
+      "known_at": 13
+    },
+    {
+      "name": "José Pedraza",
+      "facet": "Marcha y atletismo mexicano",
+      "known_at": 13
+    },
+    {
+      "name": "Ana Gabriela Guevara",
+      "facet": "Marcha y atletismo mexicano",
+      "known_at": 9
+    },
+    {
+      "name": "Bernardo Segura",
+      "facet": "Marcha y atletismo mexicano",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Mercenario",
+      "facet": "Marcha y atletismo mexicano",
+      "known_at": 13
+    },
+    {
+      "name": "Noé Hernández",
+      "facet": "Marcha y atletismo mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "María Guadalupe González",
+      "facet": "Marcha y atletismo mexicano",
+      "known_at": 12
+    },
+    {
+      "name": "Arturo Barrios",
+      "facet": "Marcha y atletismo mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Alegna González",
+      "facet": "Marcha y atletismo mexicano",
+      "known_at": 13
+    },
+    {
+      "name": "Jerzy Hausleber",
+      "facet": "Marcha y atletismo mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Marcha atlética",
+      "facet": "Marcha y atletismo mexicano",
+      "known_at": 7
+    },
+    {
+      "name": "400 metros planos",
+      "facet": "Marcha y atletismo mexicano",
+      "known_at": 6
+    },
+    {
+      "name": "Descalificación por tarjetas rojas en la marcha",
+      "facet": "Marcha y atletismo mexicano",
+      "known_at": 11
+    },
+    {
+      "name": "Érik Morales",
+      "facet": "Boxeo mexicano y sus campeones",
+      "known_at": 11
+    },
+    {
+      "name": "Rubén Olivares",
+      "facet": "Boxeo mexicano y sus campeones",
+      "known_at": 13
+    },
+    {
+      "name": "Mariana \"Barbie\" Juárez",
+      "facet": "Boxeo mexicano y sus campeones",
+      "known_at": 11
+    },
+    {
+      "name": "Consejo Mundial de Lucha Libre",
+      "facet": "Lucha libre y sus luchadores",
+      "known_at": 10
+    },
+    {
+      "name": "Lucha Libre AAA",
+      "facet": "Lucha libre y sus luchadores",
+      "known_at": 10
+    },
+    {
+      "name": "Técnicos y rudos",
+      "facet": "Lucha libre y sus luchadores",
+      "known_at": 5
+    },
+    {
+      "name": "María del Rosario Espinoza",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 10
+    },
+    {
+      "name": "Guillermo Pérez",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 13
+    },
+    {
+      "name": "Iridia Salazar",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 13
+    },
+    {
+      "name": "Óscar Salazar",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 14
+    },
+    {
+      "name": "Víctor Estrada",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 14
+    },
+    {
+      "name": "Briseida Acosta",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Sansores",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 14
+    },
+    {
+      "name": "Soraya Jiménez",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 11
+    },
+    {
+      "name": "Aremi Fuentes",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 13
+    },
+    {
+      "name": "Aída Román",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 11
+    },
+    {
+      "name": "Mariana Avitia",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 12
+    },
+    {
+      "name": "Alejandra Valencia",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 11
+    },
+    {
+      "name": "Luis Álvarez",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 13
+    },
+    {
+      "name": "Ángela Ruiz",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 13
+    },
+    {
+      "name": "Ana Paula Vázquez",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 13
+    },
+    {
+      "name": "Taekwondo",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 4
+    },
+    {
+      "name": "Tiro con arco",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 3
+    },
+    {
+      "name": "Halterofilia",
+      "facet": "Taekwondo, tiro con arco y pesas",
+      "known_at": 7
+    },
+    {
+      "name": "Saludo del puño en alto",
+      "facet": "Juegos Olímpicos México 1968",
+      "known_at": 11
+    },
+    {
+      "name": "Věra Čáslavská",
+      "facet": "Juegos Olímpicos México 1968",
+      "known_at": 14
+    },
+    {
+      "name": "Alberca Olímpica Francisco Márquez",
+      "facet": "Juegos Olímpicos México 1968",
+      "known_at": 11
+    },
+    {
+      "name": "Altitud de la Ciudad de México",
+      "facet": "Juegos Olímpicos México 1968",
+      "known_at": 9
+    },
+    {
+      "name": "Antorcha olímpica de México 68",
+      "facet": "Juegos Olímpicos México 1968",
+      "known_at": 9
+    },
+    {
+      "name": "Fernando Valenzuela",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 7
+    },
+    {
+      "name": "Fernandomanía",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 11
+    },
+    {
+      "name": "Liga Mexicana de Béisbol",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 7
+    },
+    {
+      "name": "Liga Mexicana del Pacífico",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 10
+    },
+    {
+      "name": "Serie del Caribe",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 10
+    },
+    {
+      "name": "Diablos Rojos del México",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 7
+    },
+    {
+      "name": "Sultanes de Monterrey",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 8
+    },
+    {
+      "name": "Tomateros de Culiacán",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 9
+    },
+    {
+      "name": "Naranjeros de Hermosillo",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 9
+    },
+    {
+      "name": "Charros de Jalisco",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 10
+    },
+    {
+      "name": "Estadio Alfredo Harp Helú",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 11
+    },
+    {
+      "name": "Julio Urías",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 10,
+      "retired": "unaskable: His career is overshadowed by a domestic-violence suspension; better avoided for a family game."
+    },
+    {
+      "name": "Adrián González",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 12
+    },
+    {
+      "name": "Héctor Espino",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 13
+    },
+    {
+      "name": "Teodoro Higuera",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 14
+    },
+    {
+      "name": "Vinny Castilla",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 13
+    },
+    {
+      "name": "Randy Arozarena",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 11
+    },
+    {
+      "name": "Pequeños gigantes de Monterrey",
+      "facet": "Béisbol y Liga Mexicana",
+      "known_at": 12
+    },
+    {
+      "name": "Sergio \"Checo\" Pérez",
+      "facet": "Automovilismo y pilotos mexicanos",
+      "known_at": 3
+    },
+    {
+      "name": "Pedro Rodríguez",
+      "facet": "Automovilismo y pilotos mexicanos",
+      "known_at": 11
+    },
+    {
+      "name": "Ricardo Rodríguez",
+      "facet": "Automovilismo y pilotos mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Gran Premio de la Ciudad de México",
+      "facet": "Automovilismo y pilotos mexicanos",
+      "known_at": 6
+    },
+    {
+      "name": "Esteban Gutiérrez",
+      "facet": "Automovilismo y pilotos mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Héctor Rebaque",
+      "facet": "Automovilismo y pilotos mexicanos",
+      "known_at": 14
+    },
+    {
+      "name": "Adrián Fernández",
+      "facet": "Automovilismo y pilotos mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Patricio O'Ward",
+      "facet": "Automovilismo y pilotos mexicanos",
+      "known_at": 11
+    },
+    {
+      "name": "Michel Jourdain Jr.",
+      "facet": "Automovilismo y pilotos mexicanos",
+      "known_at": 14
+    },
+    {
+      "name": "Memo Rojas",
+      "facet": "Automovilismo y pilotos mexicanos",
+      "known_at": 14
+    },
+    {
+      "name": "Daniel Suárez",
+      "facet": "Automovilismo y pilotos mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Benito Guerra",
+      "facet": "Automovilismo y pilotos mexicanos",
+      "known_at": 14
+    },
+    {
+      "name": "Carrera Panamericana",
+      "facet": "Automovilismo y pilotos mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Rally México",
+      "facet": "Automovilismo y pilotos mexicanos",
+      "known_at": 11
+    },
+    {
+      "name": "Foro Sol del autódromo",
+      "facet": "Automovilismo y pilotos mexicanos",
+      "known_at": 9
+    },
+    {
+      "name": "Piales en el lienzo",
+      "facet": "Charrería y juegos de pelota tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Aro de piedra del juego de pelota",
+      "facet": "Charrería y juegos de pelota tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Rarámuri",
+      "facet": "Corredores rarámuri y maratones",
+      "known_at": 7
+    },
+    {
+      "name": "Rarajípari",
+      "facet": "Corredores rarámuri y maratones",
+      "known_at": 13
+    },
+    {
+      "name": "Ariweta",
+      "facet": "Corredores rarámuri y maratones",
+      "known_at": 14
+    },
+    {
+      "name": "Huaraches de llanta",
+      "facet": "Corredores rarámuri y maratones",
+      "known_at": 9
+    },
+    {
+      "name": "Ultramaratón Caballo Blanco",
+      "facet": "Corredores rarámuri y maratones",
+      "known_at": 13
+    },
+    {
+      "name": "Nacidos para correr",
+      "facet": "Corredores rarámuri y maratones",
+      "known_at": 13
+    },
+    {
+      "name": "Maratón de la Ciudad de México",
+      "facet": "Corredores rarámuri y maratones",
+      "known_at": 7
+    },
+    {
+      "name": "Germán Silva",
+      "facet": "Corredores rarámuri y maratones",
+      "known_at": 12
+    },
+    {
+      "name": "Andrés Espinosa",
+      "facet": "Corredores rarámuri y maratones",
+      "known_at": 14
+    },
+    {
+      "name": "Dionicio Cerón",
+      "facet": "Corredores rarámuri y maratones",
+      "known_at": 13
+    },
+    {
+      "name": "Maratón de Nueva York",
+      "facet": "Corredores rarámuri y maratones",
+      "known_at": 9
+    },
+    {
+      "name": "Ultramaratón",
+      "facet": "Corredores rarámuri y maratones",
+      "known_at": 8
+    },
+    {
+      "name": "Lorena Ochoa",
+      "facet": "Golf, tenis y otras figuras",
+      "known_at": 8
+    },
+    {
+      "name": "Abraham Ancer",
+      "facet": "Golf, tenis y otras figuras",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Ortiz",
+      "facet": "Golf, tenis y otras figuras",
+      "known_at": 14
+    },
+    {
+      "name": "Gaby López",
+      "facet": "Golf, tenis y otras figuras",
+      "known_at": 13
+    },
+    {
+      "name": "Torneo de golf de Mayakoba",
+      "facet": "Golf, tenis y otras figuras",
+      "known_at": 13
+    },
+    {
+      "name": "Rafael Osuna",
+      "facet": "Golf, tenis y otras figuras",
+      "known_at": 13
+    },
+    {
+      "name": "Raúl Ramírez",
+      "facet": "Golf, tenis y otras figuras",
+      "known_at": 13
+    },
+    {
+      "name": "Yola Ramírez",
+      "facet": "Golf, tenis y otras figuras",
+      "known_at": 14
+    },
+    {
+      "name": "Renata Zarazúa",
+      "facet": "Golf, tenis y otras figuras",
+      "known_at": 12
+    },
+    {
+      "name": "Santiago González",
+      "facet": "Golf, tenis y otras figuras",
+      "known_at": 13
+    },
+    {
+      "name": "Abierto Mexicano de Tenis",
+      "facet": "Golf, tenis y otras figuras",
+      "known_at": 9
+    },
+    {
+      "name": "Paola Longoria",
+      "facet": "Golf, tenis y otras figuras",
+      "known_at": 10
+    },
+    {
+      "name": "Alexa Moreno",
+      "facet": "Golf, tenis y otras figuras",
+      "known_at": 9
+    },
+    {
+      "name": "Humberto Mariles",
+      "facet": "Golf, tenis y otras figuras",
+      "known_at": 14
+    },
+    {
+      "name": "Ráquetbol",
+      "facet": "Golf, tenis y otras figuras",
+      "known_at": 8
+    },
+    {
+      "name": "Selección mexicana de básquetbol de Berlín 1936",
+      "facet": "Básquetbol, voleibol y frontón",
+      "known_at": 13
+    },
+    {
+      "name": "Gustavo Ayón",
+      "facet": "Básquetbol, voleibol y frontón",
+      "known_at": 12
+    },
+    {
+      "name": "Eduardo Nájera",
+      "facet": "Básquetbol, voleibol y frontón",
+      "known_at": 12
+    },
+    {
+      "name": "Horacio Llamas",
+      "facet": "Básquetbol, voleibol y frontón",
+      "known_at": 13
+    },
+    {
+      "name": "Jorge Gutiérrez",
+      "facet": "Básquetbol, voleibol y frontón",
+      "known_at": 14
+    },
+    {
+      "name": "Juan Toscano-Anderson",
+      "facet": "Básquetbol, voleibol y frontón",
+      "known_at": 13
+    },
+    {
+      "name": "Capitanes de la Ciudad de México",
+      "facet": "Básquetbol, voleibol y frontón",
+      "known_at": 10
+    },
+    {
+      "name": "Liga Nacional de Baloncesto Profesional",
+      "facet": "Básquetbol, voleibol y frontón",
+      "known_at": 12,
+      "retired": "unaskable: There aren't enough well-known, verifiable facts about the LNBP for a fair question."
+    },
+    {
+      "name": "Juegos de la NBA en la Ciudad de México",
+      "facet": "Básquetbol, voleibol y frontón",
+      "known_at": 10
+    },
+    {
+      "name": "Frontón México",
+      "facet": "Básquetbol, voleibol y frontón",
+      "known_at": 12
+    },
+    {
+      "name": "Frontenis",
+      "facet": "Básquetbol, voleibol y frontón",
+      "known_at": 9
+    },
+    {
+      "name": "Jai alai",
+      "facet": "Básquetbol, voleibol y frontón",
+      "known_at": 11
+    },
+    {
+      "name": "Pelota a mano",
+      "facet": "Básquetbol, voleibol y frontón",
+      "known_at": 10
+    },
+    {
+      "name": "Voleibol de playa",
+      "facet": "Básquetbol, voleibol y frontón",
+      "known_at": 5
+    },
+    {
+      "name": "Juan Virgen y Lombardo Ortega",
+      "facet": "Básquetbol, voleibol y frontón",
+      "known_at": 14
+    }
+  ]
+}

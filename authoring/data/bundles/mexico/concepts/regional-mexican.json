@@ -1,0 +1,757 @@
+{
+  "subcategory": "regional-mexican",
+  "facets": [
+    "Instrumentos de banda y norteño",
+    "Instrumentos de sones y huapangos",
+    "Bandas sinaloenses famosas",
+    "Grupos y figuras del norteño",
+    "Corridos y su historia",
+    "Son jarocho y fandango",
+    "Huapango y son huasteco",
+    "Sones de Michoacán y Guerrero",
+    "Chilenas, son istmeño y Oaxaca",
+    "Bailes regionales y zapateado",
+    "Quebradita, tamborazo y estilos bailables",
+    "Palabras y fiestas de la música regional"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 3,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Bajo sexto",
+      "facet": "Instrumentos de banda y norteño",
+      "known_at": 9
+    },
+    {
+      "name": "Tambora",
+      "facet": "Instrumentos de banda y norteño",
+      "known_at": 6
+    },
+    {
+      "name": "Clarinete",
+      "facet": "Instrumentos de banda y norteño",
+      "known_at": 5
+    },
+    {
+      "name": "Trombón",
+      "facet": "Instrumentos de banda y norteño",
+      "known_at": 5
+    },
+    {
+      "name": "Saxofón",
+      "facet": "Instrumentos de banda y norteño",
+      "known_at": 4
+    },
+    {
+      "name": "Tarola",
+      "facet": "Instrumentos de banda y norteño",
+      "known_at": 8
+    },
+    {
+      "name": "Platillos",
+      "facet": "Instrumentos de banda y norteño",
+      "known_at": 4
+    },
+    {
+      "name": "Charcheta",
+      "facet": "Instrumentos de banda y norteño",
+      "known_at": 11
+    },
+    {
+      "name": "Bajo quinto",
+      "facet": "Instrumentos de banda y norteño",
+      "known_at": 12
+    },
+    {
+      "name": "Helicón",
+      "facet": "Instrumentos de banda y norteño",
+      "known_at": 12
+    },
+    {
+      "name": "Sousafón",
+      "facet": "Instrumentos de banda y norteño",
+      "known_at": 10
+    },
+    {
+      "name": "Tololoche",
+      "facet": "Instrumentos de banda y norteño",
+      "known_at": 9
+    },
+    {
+      "name": "Batería",
+      "facet": "Instrumentos de banda y norteño",
+      "known_at": 4
+    },
+    {
+      "name": "Requinto jarocho",
+      "facet": "Instrumentos de sones y huapangos",
+      "known_at": 11
+    },
+    {
+      "name": "Arpa jarocha",
+      "facet": "Instrumentos de sones y huapangos",
+      "known_at": 8
+    },
+    {
+      "name": "Quijada de burro",
+      "facet": "Instrumentos de sones y huapangos",
+      "known_at": 9
+    },
+    {
+      "name": "Huapanguera",
+      "facet": "Instrumentos de sones y huapangos",
+      "known_at": 11
+    },
+    {
+      "name": "Leona",
+      "facet": "Instrumentos de sones y huapangos",
+      "known_at": 13
+    },
+    {
+      "name": "Marimbol",
+      "facet": "Instrumentos de sones y huapangos",
+      "known_at": 13
+    },
+    {
+      "name": "Tarima",
+      "facet": "Instrumentos de sones y huapangos",
+      "known_at": 10
+    },
+    {
+      "name": "Artesa",
+      "facet": "Instrumentos de sones y huapangos",
+      "known_at": 13
+    },
+    {
+      "name": "Arpa grande",
+      "facet": "Instrumentos de sones y huapangos",
+      "known_at": 12
+    },
+    {
+      "name": "Banda El Recodo",
+      "facet": "Bandas sinaloenses famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Banda MS",
+      "facet": "Bandas sinaloenses famosas",
+      "known_at": 7
+    },
+    {
+      "name": "La Arrolladora Banda El Limón",
+      "facet": "Bandas sinaloenses famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Banda El Limón",
+      "facet": "Bandas sinaloenses famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Banda Los Recoditos",
+      "facet": "Bandas sinaloenses famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Cruz Lizárraga",
+      "facet": "Bandas sinaloenses famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Banda La Costeña",
+      "facet": "Bandas sinaloenses famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Banda Los Sebastianes",
+      "facet": "Bandas sinaloenses famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Julio Preciado",
+      "facet": "Bandas sinaloenses famosas",
+      "known_at": 11
+    },
+    {
+      "name": "El Coyote y su Banda Tierra Santa",
+      "facet": "Bandas sinaloenses famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Banda Carnaval",
+      "facet": "Bandas sinaloenses famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Germán Lizárraga",
+      "facet": "Bandas sinaloenses famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Luis Antonio López \"El Mimoso\"",
+      "facet": "Bandas sinaloenses famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Jenni Rivera",
+      "facet": "Bandas sinaloenses famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Lupillo Rivera",
+      "facet": "Bandas sinaloenses famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Espinoza Paz",
+      "facet": "Bandas sinaloenses famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Ramón Ayala",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 8
+    },
+    {
+      "name": "Los Tucanes de Tijuana",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 7
+    },
+    {
+      "name": "Intocable",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 7
+    },
+    {
+      "name": "Grupo Pesado",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 12
+    },
+    {
+      "name": "Los Cadetes de Linares",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 12
+    },
+    {
+      "name": "Lalo Mora",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 11
+    },
+    {
+      "name": "Eulalio González \"Piporro\"",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 11
+    },
+    {
+      "name": "Los Alegres de Terán",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 12
+    },
+    {
+      "name": "Cornelio Reyna",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 12
+    },
+    {
+      "name": "Los Invasores de Nuevo León",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 10
+    },
+    {
+      "name": "Calibre 50",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 6
+    },
+    {
+      "name": "Grupo Firme",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 5
+    },
+    {
+      "name": "Los Huracanes del Norte",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 11
+    },
+    {
+      "name": "Narciso Martínez",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 14
+    },
+    {
+      "name": "Grupo Frontera",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 6
+    },
+    {
+      "name": "Duelo",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 11
+    },
+    {
+      "name": "Los Rieleros del Norte",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 12
+    },
+    {
+      "name": "Los Relámpagos del Norte",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 13
+    },
+    {
+      "name": "Flaco Jiménez",
+      "facet": "Grupos y figuras del norteño",
+      "known_at": 14
+    },
+    {
+      "name": "\"Gabino Barrera\"",
+      "facet": "Corridos y su historia",
+      "known_at": 12
+    },
+    {
+      "name": "\"Juan Charrasqueado\"",
+      "facet": "Corridos y su historia",
+      "known_at": 12
+    },
+    {
+      "name": "\"Rosita Alvírez\"",
+      "facet": "Corridos y su historia",
+      "known_at": 13
+    },
+    {
+      "name": "Corridos tumbados",
+      "facet": "Corridos y su historia",
+      "known_at": 6
+    },
+    {
+      "name": "Peso Pluma",
+      "facet": "Corridos y su historia",
+      "known_at": 4
+    },
+    {
+      "name": "Natanael Cano",
+      "facet": "Corridos y su historia",
+      "known_at": 8
+    },
+    {
+      "name": "Chalino Sánchez",
+      "facet": "Corridos y su historia",
+      "known_at": 11
+    },
+    {
+      "name": "\"Camelia la Texana\"",
+      "facet": "Corridos y su historia",
+      "known_at": 12
+    },
+    {
+      "name": "Romance español",
+      "facet": "Corridos y su historia",
+      "known_at": 13
+    },
+    {
+      "name": "Junior H",
+      "facet": "Corridos y su historia",
+      "known_at": 10
+    },
+    {
+      "name": "Fuerza Regida",
+      "facet": "Corridos y su historia",
+      "known_at": 9
+    },
+    {
+      "name": "\"Corrido de Gregorio Cortez\"",
+      "facet": "Corridos y su historia",
+      "known_at": 14
+    },
+    {
+      "name": "Ritchie Valens",
+      "facet": "Son jarocho y fandango",
+      "known_at": 9
+    },
+    {
+      "name": "\"La bruja\"",
+      "facet": "Son jarocho y fandango",
+      "known_at": 11
+    },
+    {
+      "name": "\"El cascabel\"",
+      "facet": "Son jarocho y fandango",
+      "known_at": 11
+    },
+    {
+      "name": "\"El siquisirí\"",
+      "facet": "Son jarocho y fandango",
+      "known_at": 13
+    },
+    {
+      "name": "\"La guacamaya\"",
+      "facet": "Son jarocho y fandango",
+      "known_at": 12
+    },
+    {
+      "name": "Décima",
+      "facet": "Son jarocho y fandango",
+      "known_at": 12
+    },
+    {
+      "name": "Grupo Mono Blanco",
+      "facet": "Son jarocho y fandango",
+      "known_at": 14
+    },
+    {
+      "name": "Son de Madera",
+      "facet": "Son jarocho y fandango",
+      "known_at": 14
+    },
+    {
+      "name": "Los Cojolites",
+      "facet": "Son jarocho y fandango",
+      "known_at": 14
+    },
+    {
+      "name": "Encuentro de Jaraneros",
+      "facet": "Son jarocho y fandango",
+      "known_at": 13
+    },
+    {
+      "name": "Andrés Huesca",
+      "facet": "Son jarocho y fandango",
+      "known_at": 14
+    },
+    {
+      "name": "Sotavento",
+      "facet": "Son jarocho y fandango",
+      "known_at": 12
+    },
+    {
+      "name": "\"El balajú\"",
+      "facet": "Son jarocho y fandango",
+      "known_at": 14
+    },
+    {
+      "name": "\"El tilingo lingo\"",
+      "facet": "Son jarocho y fandango",
+      "known_at": 12
+    },
+    {
+      "name": "\"El chuchumbé\"",
+      "facet": "Son jarocho y fandango",
+      "known_at": 14
+    },
+    {
+      "name": "Trío huasteco",
+      "facet": "Huapango y son huasteco",
+      "known_at": 10
+    },
+    {
+      "name": "\"El querreque\"",
+      "facet": "Huapango y son huasteco",
+      "known_at": 12
+    },
+    {
+      "name": "\"La petenera\"",
+      "facet": "Huapango y son huasteco",
+      "known_at": 13
+    },
+    {
+      "name": "Los Camperos de Valles",
+      "facet": "Huapango y son huasteco",
+      "known_at": 14
+    },
+    {
+      "name": "Huapango arribeño",
+      "facet": "Huapango y son huasteco",
+      "known_at": 14
+    },
+    {
+      "name": "\"Serenata huasteca\"",
+      "facet": "Huapango y son huasteco",
+      "known_at": 11
+    },
+    {
+      "name": "\"La huasanga\"",
+      "facet": "Huapango y son huasteco",
+      "known_at": 13
+    },
+    {
+      "name": "Huapango tamaulipeco",
+      "facet": "Huapango y son huasteco",
+      "known_at": 13
+    },
+    {
+      "name": "Son abajeño",
+      "facet": "Sones de Michoacán y Guerrero",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Reynoso",
+      "facet": "Sones de Michoacán y Guerrero",
+      "known_at": 14
+    },
+    {
+      "name": "\"El gusto\"",
+      "facet": "Sones de Michoacán y Guerrero",
+      "known_at": 13
+    },
+    {
+      "name": "Beto y sus Canarios",
+      "facet": "Sones de Michoacán y Guerrero",
+      "known_at": 12
+    },
+    {
+      "name": "Tierra Cali",
+      "facet": "Sones de Michoacán y Guerrero",
+      "known_at": 12
+    },
+    {
+      "name": "Triny y La Leyenda",
+      "facet": "Sones de Michoacán y Guerrero",
+      "known_at": 11
+    },
+    {
+      "name": "Tehuana",
+      "facet": "Chilenas, son istmeño y Oaxaca",
+      "known_at": 10
+    },
+    {
+      "name": "Vela istmeña",
+      "facet": "Chilenas, son istmeño y Oaxaca",
+      "known_at": 13
+    },
+    {
+      "name": "\"Canción mixteca\"",
+      "facet": "Chilenas, son istmeño y Oaxaca",
+      "known_at": 10
+    },
+    {
+      "name": "Susana Harp",
+      "facet": "Chilenas, son istmeño y Oaxaca",
+      "known_at": 13
+    },
+    {
+      "name": "Pinotepa Nacional",
+      "facet": "Chilenas, son istmeño y Oaxaca",
+      "known_at": 13
+    },
+    {
+      "name": "\"Dios nunca muere\"",
+      "facet": "Chilenas, son istmeño y Oaxaca",
+      "known_at": 12
+    },
+    {
+      "name": "Macedonio Alcalá",
+      "facet": "Chilenas, son istmeño y Oaxaca",
+      "known_at": 14
+    },
+    {
+      "name": "\"La martiniana\"",
+      "facet": "Chilenas, son istmeño y Oaxaca",
+      "known_at": 13
+    },
+    {
+      "name": "Son istmeño",
+      "facet": "Chilenas, son istmeño y Oaxaca",
+      "known_at": 12
+    },
+    {
+      "name": "Jarabe mixteco",
+      "facet": "Chilenas, son istmeño y Oaxaca",
+      "known_at": 12
+    },
+    {
+      "name": "Traje de china poblana",
+      "facet": "Bailes regionales y zapateado",
+      "known_at": 7
+    },
+    {
+      "name": "Polka norteña",
+      "facet": "Bailes regionales y zapateado",
+      "known_at": 9
+    },
+    {
+      "name": "Ballet Folklórico de México",
+      "facet": "Bailes regionales y zapateado",
+      "known_at": 8
+    },
+    {
+      "name": "Amalia Hernández",
+      "facet": "Bailes regionales y zapateado",
+      "known_at": 12
+    },
+    {
+      "name": "Redova",
+      "facet": "Bailes regionales y zapateado",
+      "known_at": 13
+    },
+    {
+      "name": "Chotís",
+      "facet": "Bailes regionales y zapateado",
+      "known_at": 12
+    },
+    {
+      "name": "Quebradita",
+      "facet": "Quebradita, tamborazo y estilos bailables",
+      "known_at": 7
+    },
+    {
+      "name": "Tecnobanda",
+      "facet": "Quebradita, tamborazo y estilos bailables",
+      "known_at": 10
+    },
+    {
+      "name": "Banda Machos",
+      "facet": "Quebradita, tamborazo y estilos bailables",
+      "known_at": 9
+    },
+    {
+      "name": "Banda Maguey",
+      "facet": "Quebradita, tamborazo y estilos bailables",
+      "known_at": 12
+    },
+    {
+      "name": "\"La culebra\"",
+      "facet": "Quebradita, tamborazo y estilos bailables",
+      "known_at": 11
+    },
+    {
+      "name": "Pasito duranguense",
+      "facet": "Quebradita, tamborazo y estilos bailables",
+      "known_at": 8
+    },
+    {
+      "name": "Grupo Montéz de Durango",
+      "facet": "Quebradita, tamborazo y estilos bailables",
+      "known_at": 10
+    },
+    {
+      "name": "K-Paz de la Sierra",
+      "facet": "Quebradita, tamborazo y estilos bailables",
+      "known_at": 9
+    },
+    {
+      "name": "Patrulla 81",
+      "facet": "Quebradita, tamborazo y estilos bailables",
+      "known_at": 12
+    },
+    {
+      "name": "\"Payaso de rodeo\"",
+      "facet": "Quebradita, tamborazo y estilos bailables",
+      "known_at": 7
+    },
+    {
+      "name": "Botas picudas",
+      "facet": "Quebradita, tamborazo y estilos bailables",
+      "known_at": 8
+    },
+    {
+      "name": "Tribal guarachero",
+      "facet": "Quebradita, tamborazo y estilos bailables",
+      "known_at": 12
+    },
+    {
+      "name": "Jerez de García Salinas",
+      "facet": "Quebradita, tamborazo y estilos bailables",
+      "known_at": 13
+    },
+    {
+      "name": "Banda Jerez",
+      "facet": "Quebradita, tamborazo y estilos bailables",
+      "known_at": 12
+    },
+    {
+      "name": "Banda El Mexicano",
+      "facet": "Quebradita, tamborazo y estilos bailables",
+      "known_at": 11
+    },
+    {
+      "name": "Banda Cuisillos",
+      "facet": "Quebradita, tamborazo y estilos bailables",
+      "known_at": 11
+    },
+    {
+      "name": "\"Ya con esta me despido\"",
+      "facet": "Palabras y fiestas de la música regional",
+      "known_at": 13
+    },
+    {
+      "name": "Bailongo",
+      "facet": "Palabras y fiestas de la música regional",
+      "known_at": 10
+    },
+    {
+      "name": "Pachanga",
+      "facet": "Palabras y fiestas de la música regional",
+      "known_at": 8
+    },
+    {
+      "name": "Grupero",
+      "facet": "Palabras y fiestas de la música regional",
+      "known_at": 9
+    },
+    {
+      "name": "Música regional mexicana",
+      "facet": "Palabras y fiestas de la música regional",
+      "known_at": 6
+    },
+    {
+      "name": "Plebe",
+      "facet": "Palabras y fiestas de la música regional",
+      "known_at": 9
+    },
+    {
+      "name": "Morra",
+      "facet": "Palabras y fiestas de la música regional",
+      "known_at": 8
+    },
+    {
+      "name": "Compa",
+      "facet": "Palabras y fiestas de la música regional",
+      "known_at": 7
+    },
+    {
+      "name": "Fiesta patronal",
+      "facet": "Palabras y fiestas de la música regional",
+      "known_at": 9
+    }
+  ]
+}

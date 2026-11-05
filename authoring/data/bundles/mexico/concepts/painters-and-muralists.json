@@ -1,0 +1,868 @@
+{
+  "subcategory": "painters-and-muralists",
+  "facets": [
+    "Los tres grandes del muralismo",
+    "Frida Kahlo y su mundo",
+    "Murales famosos y dónde verlos",
+    "Pintores del siglo XIX y paisajistas",
+    "Arte virreinal y pintura colonial",
+    "Pintoras mexicanas",
+    "Ruptura y arte abstracto",
+    "Grabado, gráfica y caricatura",
+    "Arte prehispánico: murales y códices",
+    "Técnicas y materiales de la pintura",
+    "Museos y casas de artistas",
+    "Arte popular y pintura contemporánea"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Los tres grandes",
+      "facet": "Los tres grandes del muralismo",
+      "known_at": 9
+    },
+    {
+      "name": "Escuela Nacional Preparatoria",
+      "facet": "Los tres grandes del muralismo",
+      "known_at": 11
+    },
+    {
+      "name": "Sindicato de Obreros Técnicos, Pintores y Escultores",
+      "facet": "Los tres grandes del muralismo",
+      "known_at": 14
+    },
+    {
+      "name": "Ejercicio Plástico",
+      "facet": "Los tres grandes del muralismo",
+      "known_at": 15
+    },
+    {
+      "name": "Roberto Montenegro",
+      "facet": "Los tres grandes del muralismo",
+      "known_at": 13
+    },
+    {
+      "name": "Jean Charlot",
+      "facet": "Los tres grandes del muralismo",
+      "known_at": 14
+    },
+    {
+      "name": "Fermín Revueltas",
+      "facet": "Los tres grandes del muralismo",
+      "known_at": 14
+    },
+    {
+      "name": "Xavier Guerrero",
+      "facet": "Los tres grandes del muralismo",
+      "known_at": 14
+    },
+    {
+      "name": "Partido Comunista Mexicano",
+      "facet": "Los tres grandes del muralismo",
+      "known_at": 13
+    },
+    {
+      "name": "No hay más ruta que la nuestra",
+      "facet": "Los tres grandes del muralismo",
+      "known_at": 14
+    },
+    {
+      "name": "Lupe Marín",
+      "facet": "Los tres grandes del muralismo",
+      "known_at": 13
+    },
+    {
+      "name": "Ángel Zárraga",
+      "facet": "Los tres grandes del muralismo",
+      "known_at": 14
+    },
+    {
+      "name": "Las dos Fridas",
+      "facet": "Frida Kahlo y su mundo",
+      "known_at": 9
+    },
+    {
+      "name": "La columna rota",
+      "facet": "Frida Kahlo y su mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Autorretrato con collar de espinas y colibrí",
+      "facet": "Frida Kahlo y su mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Viva la vida",
+      "facet": "Frida Kahlo y su mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Accidente de Frida Kahlo",
+      "facet": "Frida Kahlo y su mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Uniceja",
+      "facet": "Frida Kahlo y su mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Frida (película)",
+      "facet": "Frida Kahlo y su mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Salma Hayek",
+      "facet": "Frida Kahlo y su mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Guillermo Kahlo",
+      "facet": "Frida Kahlo y su mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Fulang Chang",
+      "facet": "Frida Kahlo y su mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Diego y yo",
+      "facet": "Frida Kahlo y su mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Unos cuantos piquetitos",
+      "facet": "Frida Kahlo y su mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Diario de Frida Kahlo",
+      "facet": "Frida Kahlo y su mundo",
+      "known_at": 13
+    },
+    {
+      "name": "León Trotsky",
+      "facet": "Frida Kahlo y su mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Pies para qué los quiero",
+      "facet": "Frida Kahlo y su mundo",
+      "known_at": 9
+    },
+    {
+      "name": "El marco",
+      "facet": "Frida Kahlo y su mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Epopeya del pueblo mexicano",
+      "facet": "Murales famosos y dónde verlos",
+      "known_at": 11
+    },
+    {
+      "name": "Museo Mural Diego Rivera",
+      "facet": "Murales famosos y dónde verlos",
+      "known_at": 12
+    },
+    {
+      "name": "El hombre controlador del universo",
+      "facet": "Murales famosos y dónde verlos",
+      "known_at": 13
+    },
+    {
+      "name": "El hombre en la encrucijada",
+      "facet": "Murales famosos y dónde verlos",
+      "known_at": 13
+    },
+    {
+      "name": "Hombre de fuego",
+      "facet": "Murales famosos y dónde verlos",
+      "known_at": 12
+    },
+    {
+      "name": "Polyforum Cultural Siqueiros",
+      "facet": "Murales famosos y dónde verlos",
+      "known_at": 11
+    },
+    {
+      "name": "La marcha de la humanidad",
+      "facet": "Murales famosos y dónde verlos",
+      "known_at": 14
+    },
+    {
+      "name": "Rectoría de la UNAM",
+      "facet": "Murales famosos y dónde verlos",
+      "known_at": 13
+    },
+    {
+      "name": "Murales de Detroit",
+      "facet": "Murales famosos y dónde verlos",
+      "known_at": 12
+    },
+    {
+      "name": "Antiguo Colegio de San Ildefonso",
+      "facet": "Murales famosos y dónde verlos",
+      "known_at": 11
+    },
+    {
+      "name": "Murales de la Secretaría de Educación Pública",
+      "facet": "Murales famosos y dónde verlos",
+      "known_at": 12
+    },
+    {
+      "name": "Capilla Riveriana de Chapingo",
+      "facet": "Murales famosos y dónde verlos",
+      "known_at": 13
+    },
+    {
+      "name": "Palacio de Gobierno de Tlaxcala",
+      "facet": "Murales famosos y dónde verlos",
+      "known_at": 14
+    },
+    {
+      "name": "La epopeya de la civilización americana",
+      "facet": "Murales famosos y dónde verlos",
+      "known_at": 14
+    },
+    {
+      "name": "Valle de México desde el cerro de Santa Isabel",
+      "facet": "Pintores del siglo XIX y paisajistas",
+      "known_at": 12
+    },
+    {
+      "name": "Academia de San Carlos",
+      "facet": "Pintores del siglo XIX y paisajistas",
+      "known_at": 11
+    },
+    {
+      "name": "Hermenegildo Bustos",
+      "facet": "Pintores del siglo XIX y paisajistas",
+      "known_at": 13
+    },
+    {
+      "name": "Atl-color",
+      "facet": "Pintores del siglo XIX y paisajistas",
+      "known_at": 14
+    },
+    {
+      "name": "Eugenio Landesio",
+      "facet": "Pintores del siglo XIX y paisajistas",
+      "known_at": 14
+    },
+    {
+      "name": "Saturnino Herrán",
+      "facet": "Pintores del siglo XIX y paisajistas",
+      "known_at": 12
+    },
+    {
+      "name": "La ofrenda (Saturnino Herrán)",
+      "facet": "Pintores del siglo XIX y paisajistas",
+      "known_at": 13
+    },
+    {
+      "name": "Julio Ruelas",
+      "facet": "Pintores del siglo XIX y paisajistas",
+      "known_at": 14
+    },
+    {
+      "name": "Juan Cordero",
+      "facet": "Pintores del siglo XIX y paisajistas",
+      "known_at": 14
+    },
+    {
+      "name": "Santiago Rebull",
+      "facet": "Pintores del siglo XIX y paisajistas",
+      "known_at": 14
+    },
+    {
+      "name": "Félix Parra",
+      "facet": "Pintores del siglo XIX y paisajistas",
+      "known_at": 14
+    },
+    {
+      "name": "José Agustín Arrieta",
+      "facet": "Pintores del siglo XIX y paisajistas",
+      "known_at": 13
+    },
+    {
+      "name": "Pelegrín Clavé",
+      "facet": "Pintores del siglo XIX y paisajistas",
+      "known_at": 14
+    },
+    {
+      "name": "Johann Moritz Rugendas",
+      "facet": "Pintores del siglo XIX y paisajistas",
+      "known_at": 14
+    },
+    {
+      "name": "Casimiro Castro",
+      "facet": "Pintores del siglo XIX y paisajistas",
+      "known_at": 14
+    },
+    {
+      "name": "Joaquín Clausell",
+      "facet": "Pintores del siglo XIX y paisajistas",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Correa",
+      "facet": "Arte virreinal y pintura colonial",
+      "known_at": 13
+    },
+    {
+      "name": "Retrato de Sor Juana Inés de la Cruz",
+      "facet": "Arte virreinal y pintura colonial",
+      "known_at": 11
+    },
+    {
+      "name": "Altar de los Reyes",
+      "facet": "Arte virreinal y pintura colonial",
+      "known_at": 13
+    },
+    {
+      "name": "Baltasar de Echave Orio",
+      "facet": "Arte virreinal y pintura colonial",
+      "known_at": 15
+    },
+    {
+      "name": "José de Ibarra",
+      "facet": "Arte virreinal y pintura colonial",
+      "known_at": 15
+    },
+    {
+      "name": "Enconchado",
+      "facet": "Arte virreinal y pintura colonial",
+      "known_at": 14
+    },
+    {
+      "name": "Museo Nacional del Virreinato",
+      "facet": "Arte virreinal y pintura colonial",
+      "known_at": 12
+    },
+    {
+      "name": "Simón Pereyns",
+      "facet": "Arte virreinal y pintura colonial",
+      "known_at": 15
+    },
+    {
+      "name": "Maravilla americana",
+      "facet": "Arte virreinal y pintura colonial",
+      "known_at": 15
+    },
+    {
+      "name": "Olga Costa",
+      "facet": "Pintoras mexicanas",
+      "known_at": 12
+    },
+    {
+      "name": "La vendedora de frutas",
+      "facet": "Pintoras mexicanas",
+      "known_at": 12
+    },
+    {
+      "name": "Aurora Reyes",
+      "facet": "Pintoras mexicanas",
+      "known_at": 13
+    },
+    {
+      "name": "Nahui Olin",
+      "facet": "Pintoras mexicanas",
+      "known_at": 12
+    },
+    {
+      "name": "Lilia Carrillo",
+      "facet": "Pintoras mexicanas",
+      "known_at": 14
+    },
+    {
+      "name": "Fanny Rabel",
+      "facet": "Pintoras mexicanas",
+      "known_at": 14
+    },
+    {
+      "name": "Rina Lazo",
+      "facet": "Pintoras mexicanas",
+      "known_at": 14
+    },
+    {
+      "name": "Lola Cueto",
+      "facet": "Pintoras mexicanas",
+      "known_at": 14
+    },
+    {
+      "name": "Cordelia Urueta",
+      "facet": "Pintoras mexicanas",
+      "known_at": 14
+    },
+    {
+      "name": "Angelina Beloff",
+      "facet": "Pintoras mexicanas",
+      "known_at": 14
+    },
+    {
+      "name": "Rosa Rolanda",
+      "facet": "Pintoras mexicanas",
+      "known_at": 14
+    },
+    {
+      "name": "Elena Huerta",
+      "facet": "Pintoras mexicanas",
+      "known_at": 14
+    },
+    {
+      "name": "El cocodrilo de Leonora Carrington",
+      "facet": "Pintoras mexicanas",
+      "known_at": 12
+    },
+    {
+      "name": "Bordando el manto terrestre",
+      "facet": "Pintoras mexicanas",
+      "known_at": 13
+    },
+    {
+      "name": "Surrealismo en México",
+      "facet": "Pintoras mexicanas",
+      "known_at": 11
+    },
+    {
+      "name": "Generación de la Ruptura",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 12
+    },
+    {
+      "name": "Sandías (Rufino Tamayo)",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 12
+    },
+    {
+      "name": "José Luis Cuevas",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 11
+    },
+    {
+      "name": "La cortina de nopal",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 13
+    },
+    {
+      "name": "Manuel Felguérez",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 12
+    },
+    {
+      "name": "Vicente Rojo",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 12
+    },
+    {
+      "name": "Pedro Coronel",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 13
+    },
+    {
+      "name": "Gunther Gerzso",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 13
+    },
+    {
+      "name": "Fernando García Ponce",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 14
+    },
+    {
+      "name": "Juan Soriano",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 12
+    },
+    {
+      "name": "Alberto Gironella",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 14
+    },
+    {
+      "name": "Mathias Goeritz",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 12
+    },
+    {
+      "name": "Espacio Escultórico de la UNAM",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 12
+    },
+    {
+      "name": "Museo Experimental El Eco",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 14
+    },
+    {
+      "name": "Galería Prisse",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 15
+    },
+    {
+      "name": "Arnaldo Coen",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 14
+    },
+    {
+      "name": "Kazuya Sakai",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 15
+    },
+    {
+      "name": "Salón Independiente",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 15
+    },
+    {
+      "name": "Carlos Mérida",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 13
+    },
+    {
+      "name": "Wolfgang Paalen",
+      "facet": "Ruptura y arte abstracto",
+      "known_at": 14
+    },
+    {
+      "name": "Leopoldo Méndez",
+      "facet": "Grabado, gráfica y caricatura",
+      "known_at": 13
+    },
+    {
+      "name": "Grabado en linóleo",
+      "facet": "Grabado, gráfica y caricatura",
+      "known_at": 10
+    },
+    {
+      "name": "Gabriel Vicente Gahona",
+      "facet": "Grabado, gráfica y caricatura",
+      "known_at": 15
+    },
+    {
+      "name": "Manuel Manilla",
+      "facet": "Grabado, gráfica y caricatura",
+      "known_at": 15
+    },
+    {
+      "name": "Pablo O'Higgins",
+      "facet": "Grabado, gráfica y caricatura",
+      "known_at": 13
+    },
+    {
+      "name": "Elizabeth Catlett",
+      "facet": "Grabado, gráfica y caricatura",
+      "known_at": 14
+    },
+    {
+      "name": "Rius",
+      "facet": "Grabado, gráfica y caricatura",
+      "known_at": 10
+    },
+    {
+      "name": "Los Supermachos",
+      "facet": "Grabado, gráfica y caricatura",
+      "known_at": 12
+    },
+    {
+      "name": "La familia Burrón",
+      "facet": "Grabado, gráfica y caricatura",
+      "known_at": 9
+    },
+    {
+      "name": "Gabriel Vargas",
+      "facet": "Grabado, gráfica y caricatura",
+      "known_at": 11
+    },
+    {
+      "name": "Abel Quezada",
+      "facet": "Grabado, gráfica y caricatura",
+      "known_at": 12
+    },
+    {
+      "name": "Ernesto García Cabral",
+      "facet": "Grabado, gráfica y caricatura",
+      "known_at": 14
+    },
+    {
+      "name": "El Ahuizote",
+      "facet": "Grabado, gráfica y caricatura",
+      "known_at": 14
+    },
+    {
+      "name": "Logotipo de México 68",
+      "facet": "Grabado, gráfica y caricatura",
+      "known_at": 11
+    },
+    {
+      "name": "Tlalocan de Tepantitla",
+      "facet": "Arte prehispánico: murales y códices",
+      "known_at": 13
+    },
+    {
+      "name": "Códice Zouche-Nuttall",
+      "facet": "Arte prehispánico: murales y códices",
+      "known_at": 14
+    },
+    {
+      "name": "Dinteles de Yaxchilán",
+      "facet": "Arte prehispánico: murales y códices",
+      "known_at": 14,
+      "retired": "unaskable: Los dinteles más famosos muestran rituales de sangre; preguntar por el gobernante (Escudo Jaguar) sería demasiado oscuro y las imágenes no son aptas para familias."
+    },
+    {
+      "name": "Fresco",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 8
+    },
+    {
+      "name": "Óleo",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 5
+    },
+    {
+      "name": "Acrílico",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 7
+    },
+    {
+      "name": "Encáustica",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 13
+    },
+    {
+      "name": "Temple",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 12
+    },
+    {
+      "name": "Piroxilina",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 14
+    },
+    {
+      "name": "Mosaico de piedra",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 9
+    },
+    {
+      "name": "Escuelas de Pintura al Aire Libre",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 13
+    },
+    {
+      "name": "Xilografía",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 10
+    },
+    {
+      "name": "Aerógrafo",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 10
+    },
+    {
+      "name": "Aplanado de cal",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 13
+    },
+    {
+      "name": "Pigmento",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 7
+    },
+    {
+      "name": "Caballete",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 6
+    },
+    {
+      "name": "Lienzo",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 5
+    },
+    {
+      "name": "Autorretrato",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 4
+    },
+    {
+      "name": "Bodegón",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 7
+    },
+    {
+      "name": "Perspectiva poliangular",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 15
+    },
+    {
+      "name": "Esgrafiado",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 14
+    },
+    {
+      "name": "Escorzo",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 13
+    },
+    {
+      "name": "Paleta de pintor",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 3
+    },
+    {
+      "name": "Pincel",
+      "facet": "Técnicas y materiales de la pintura",
+      "known_at": 1
+    },
+    {
+      "name": "Museo Casa Estudio Diego Rivera y Frida Kahlo",
+      "facet": "Museos y casas de artistas",
+      "known_at": 12
+    },
+    {
+      "name": "Dolores Olmedo",
+      "facet": "Museos y casas de artistas",
+      "known_at": 12
+    },
+    {
+      "name": "Museo Tamayo",
+      "facet": "Museos y casas de artistas",
+      "known_at": 11
+    },
+    {
+      "name": "Museo de Arte Moderno",
+      "facet": "Museos y casas de artistas",
+      "known_at": 10
+    },
+    {
+      "name": "Museo José Luis Cuevas",
+      "facet": "Museos y casas de artistas",
+      "known_at": 13
+    },
+    {
+      "name": "Sala de Arte Público Siqueiros",
+      "facet": "Museos y casas de artistas",
+      "known_at": 13
+    },
+    {
+      "name": "Museo Casa Diego Rivera de Guanajuato",
+      "facet": "Museos y casas de artistas",
+      "known_at": 12
+    },
+    {
+      "name": "Museo Taller José Clemente Orozco",
+      "facet": "Museos y casas de artistas",
+      "known_at": 14
+    },
+    {
+      "name": "Museo de Arte Carrillo Gil",
+      "facet": "Museos y casas de artistas",
+      "known_at": 13
+    },
+    {
+      "name": "Museo Nacional de la Estampa",
+      "facet": "Museos y casas de artistas",
+      "known_at": 13
+    },
+    {
+      "name": "Museo Leonora Carrington",
+      "facet": "Museos y casas de artistas",
+      "known_at": 13
+    },
+    {
+      "name": "Las Pozas de Xilitla",
+      "facet": "Museos y casas de artistas",
+      "known_at": 11
+    },
+    {
+      "name": "Museo Iconográfico del Quijote",
+      "facet": "Museos y casas de artistas",
+      "known_at": 13
+    },
+    {
+      "name": "Arte huichol",
+      "facet": "Arte popular y pintura contemporánea",
+      "known_at": 9
+    },
+    {
+      "name": "Barro negro de Oaxaca",
+      "facet": "Arte popular y pintura contemporánea",
+      "known_at": 9
+    },
+    {
+      "name": "Rodolfo Morales",
+      "facet": "Arte popular y pintura contemporánea",
+      "known_at": 13
+    },
+    {
+      "name": "Gabriel Orozco",
+      "facet": "Arte popular y pintura contemporánea",
+      "known_at": 12
+    },
+    {
+      "name": "Damián Ortega",
+      "facet": "Arte popular y pintura contemporánea",
+      "known_at": 14
+    },
+    {
+      "name": "Sergio Hernández",
+      "facet": "Arte popular y pintura contemporánea",
+      "known_at": 14
+    },
+    {
+      "name": "Sebastián (escultor)",
+      "facet": "Arte popular y pintura contemporánea",
+      "known_at": 11
+    },
+    {
+      "name": "Dr. Lakra",
+      "facet": "Arte popular y pintura contemporánea",
+      "known_at": 14
+    }
+  ]
+}

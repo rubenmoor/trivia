@@ -1,0 +1,964 @@
+{
+  "subcategory": "telenovelas",
+  "facets": [
+    "Clásicos de los 70 y 80",
+    "Éxitos de los 90",
+    "Telenovelas del 2000 en adelante",
+    "Telenovelas infantiles y juveniles",
+    "Villanas y villanos legendarios",
+    "Protagonistas, galanes y actrices",
+    "Frases y escenas memorables",
+    "Temas musicales y cantantes",
+    "Televisoras, productores y escritores",
+    "Fórmulas y clichés del melodrama",
+    "Telenovelas de época e históricas",
+    "Remakes, adaptaciones y éxito mundial"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Los ricos también lloran",
+      "facet": "Clásicos de los 70 y 80",
+      "known_at": 9
+    },
+    {
+      "name": "Rosa salvaje",
+      "facet": "Clásicos de los 70 y 80",
+      "known_at": 8
+    },
+    {
+      "name": "Cuna de lobos",
+      "facet": "Clásicos de los 70 y 80",
+      "known_at": 9
+    },
+    {
+      "name": "El derecho de nacer",
+      "facet": "Clásicos de los 70 y 80",
+      "known_at": 11
+    },
+    {
+      "name": "Simplemente María",
+      "facet": "Clásicos de los 70 y 80",
+      "known_at": 10
+    },
+    {
+      "name": "Colorina",
+      "facet": "Clásicos de los 70 y 80",
+      "known_at": 10
+    },
+    {
+      "name": "Rina",
+      "facet": "Clásicos de los 70 y 80",
+      "known_at": 12
+    },
+    {
+      "name": "Viviana",
+      "facet": "Clásicos de los 70 y 80",
+      "known_at": 12
+    },
+    {
+      "name": "El maleficio",
+      "facet": "Clásicos de los 70 y 80",
+      "known_at": 11
+    },
+    {
+      "name": "Mi segunda madre",
+      "facet": "Clásicos de los 70 y 80",
+      "known_at": 11
+    },
+    {
+      "name": "Tú o nadie",
+      "facet": "Clásicos de los 70 y 80",
+      "known_at": 12
+    },
+    {
+      "name": "Bianca Vidal",
+      "facet": "Clásicos de los 70 y 80",
+      "known_at": 13
+    },
+    {
+      "name": "La fiera",
+      "facet": "Clásicos de los 70 y 80",
+      "known_at": 13
+    },
+    {
+      "name": "Pobre señorita Limantour",
+      "facet": "Clásicos de los 70 y 80",
+      "known_at": 13
+    },
+    {
+      "name": "Marimar",
+      "facet": "Éxitos de los 90",
+      "known_at": 7
+    },
+    {
+      "name": "María Mercedes",
+      "facet": "Éxitos de los 90",
+      "known_at": 8
+    },
+    {
+      "name": "Corazón salvaje",
+      "facet": "Éxitos de los 90",
+      "known_at": 9
+    },
+    {
+      "name": "La usurpadora",
+      "facet": "Éxitos de los 90",
+      "known_at": 8
+    },
+    {
+      "name": "Rosalinda",
+      "facet": "Éxitos de los 90",
+      "known_at": 9
+    },
+    {
+      "name": "Esmeralda",
+      "facet": "Éxitos de los 90",
+      "known_at": 9
+    },
+    {
+      "name": "Dos mujeres, un camino",
+      "facet": "Éxitos de los 90",
+      "known_at": 10
+    },
+    {
+      "name": "El privilegio de amar",
+      "facet": "Éxitos de los 90",
+      "known_at": 10
+    },
+    {
+      "name": "Mirada de mujer",
+      "facet": "Éxitos de los 90",
+      "known_at": 11
+    },
+    {
+      "name": "Cadenas de amargura",
+      "facet": "Éxitos de los 90",
+      "known_at": 12
+    },
+    {
+      "name": "Lazos de amor",
+      "facet": "Éxitos de los 90",
+      "known_at": 12
+    },
+    {
+      "name": "La dueña",
+      "facet": "Éxitos de los 90",
+      "known_at": 12
+    },
+    {
+      "name": "Marisol",
+      "facet": "Éxitos de los 90",
+      "known_at": 12
+    },
+    {
+      "name": "Cañaveral de pasiones",
+      "facet": "Éxitos de los 90",
+      "known_at": 13
+    },
+    {
+      "name": "Nada personal",
+      "facet": "Éxitos de los 90",
+      "known_at": 13
+    },
+    {
+      "name": "Amada enemiga",
+      "facet": "Éxitos de los 90",
+      "known_at": 13
+    },
+    {
+      "name": "Tres mujeres",
+      "facet": "Éxitos de los 90",
+      "known_at": 13
+    },
+    {
+      "name": "La fea más bella",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 7
+    },
+    {
+      "name": "Rubí",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 8
+    },
+    {
+      "name": "Teresa",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 9
+    },
+    {
+      "name": "Mañana es para siempre",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 10
+    },
+    {
+      "name": "Destilando amor",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 10
+    },
+    {
+      "name": "Fuego en la sangre",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 10
+    },
+    {
+      "name": "Soy tu dueña",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 10
+    },
+    {
+      "name": "Abismo de pasión",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 12
+    },
+    {
+      "name": "Lo que la vida me robó",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 11
+    },
+    {
+      "name": "La que no podía amar",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 12
+    },
+    {
+      "name": "Corona de lágrimas",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 12
+    },
+    {
+      "name": "Amores verdaderos",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 12
+    },
+    {
+      "name": "Mi corazón es tuyo",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 11
+    },
+    {
+      "name": "Antes muerta que Lichita",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 11
+    },
+    {
+      "name": "Mi marido tiene más familia",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 11
+    },
+    {
+      "name": "Hasta que el dinero nos separe",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 11
+    },
+    {
+      "name": "Una familia con suerte",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 11
+    },
+    {
+      "name": "Por ella soy Eva",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 11
+    },
+    {
+      "name": "Qué pobres tan ricos",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 11
+    },
+    {
+      "name": "Pasión y poder",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 12
+    },
+    {
+      "name": "Amarte es mi pecado",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 13
+    },
+    {
+      "name": "Vencer el miedo",
+      "facet": "Telenovelas del 2000 en adelante",
+      "known_at": 12
+    },
+    {
+      "name": "Mundo de juguete",
+      "facet": "Telenovelas infantiles y juveniles",
+      "known_at": 13
+    },
+    {
+      "name": "María Belén",
+      "facet": "Telenovelas infantiles y juveniles",
+      "known_at": 11
+    },
+    {
+      "name": "Gotita de amor",
+      "facet": "Telenovelas infantiles y juveniles",
+      "known_at": 10
+    },
+    {
+      "name": "Luz Clarita",
+      "facet": "Telenovelas infantiles y juveniles",
+      "known_at": 10
+    },
+    {
+      "name": "Misión S.O.S.",
+      "facet": "Telenovelas infantiles y juveniles",
+      "known_at": 10
+    },
+    {
+      "name": "Alegrijes y rebujos",
+      "facet": "Telenovelas infantiles y juveniles",
+      "known_at": 8
+    },
+    {
+      "name": "Miss XV",
+      "facet": "Telenovelas infantiles y juveniles",
+      "known_at": 9
+    },
+    {
+      "name": "Primer amor... a mil por hora",
+      "facet": "Telenovelas infantiles y juveniles",
+      "known_at": 11
+    },
+    {
+      "name": "Soñadoras",
+      "facet": "Telenovelas infantiles y juveniles",
+      "known_at": 11
+    },
+    {
+      "name": "Agujetas de color de rosa",
+      "facet": "Telenovelas infantiles y juveniles",
+      "known_at": 11
+    },
+    {
+      "name": "Mi pequeña traviesa",
+      "facet": "Telenovelas infantiles y juveniles",
+      "known_at": 11
+    },
+    {
+      "name": "Amy, la niña de la mochila azul",
+      "facet": "Telenovelas infantiles y juveniles",
+      "known_at": 9
+    },
+    {
+      "name": "El abuelo y yo",
+      "facet": "Telenovelas infantiles y juveniles",
+      "known_at": 11
+    },
+    {
+      "name": "Lola, érase una vez",
+      "facet": "Telenovelas infantiles y juveniles",
+      "known_at": 9
+    },
+    {
+      "name": "Soraya Montenegro",
+      "facet": "Villanas y villanos legendarios",
+      "known_at": 6
+    },
+    {
+      "name": "Catalina Creel",
+      "facet": "Villanas y villanos legendarios",
+      "known_at": 9
+    },
+    {
+      "name": "Paola Bracho",
+      "facet": "Villanas y villanos legendarios",
+      "known_at": 9
+    },
+    {
+      "name": "Artemio Bravo",
+      "facet": "Villanas y villanos legendarios",
+      "known_at": 12
+    },
+    {
+      "name": "Bárbara Greco",
+      "facet": "Villanas y villanos legendarios",
+      "known_at": 12
+    },
+    {
+      "name": "Laura Zapata",
+      "facet": "Villanas y villanos legendarios",
+      "known_at": 11
+    },
+    {
+      "name": "Chantal Andere",
+      "facet": "Villanas y villanos legendarios",
+      "known_at": 12
+    },
+    {
+      "name": "Cynthia Klitbo",
+      "facet": "Villanas y villanos legendarios",
+      "known_at": 12
+    },
+    {
+      "name": "Enrique Rocha",
+      "facet": "Villanas y villanos legendarios",
+      "known_at": 12
+    },
+    {
+      "name": "Sergio Goyri",
+      "facet": "Villanas y villanos legendarios",
+      "known_at": 12
+    },
+    {
+      "name": "César Évora",
+      "facet": "Villanas y villanos legendarios",
+      "known_at": 13
+    },
+    {
+      "name": "Sergio Sendel",
+      "facet": "Villanas y villanos legendarios",
+      "known_at": 12
+    },
+    {
+      "name": "Azela Robinson",
+      "facet": "Villanas y villanos legendarios",
+      "known_at": 13
+    },
+    {
+      "name": "Nailea Norvind",
+      "facet": "Villanas y villanos legendarios",
+      "known_at": 13
+    },
+    {
+      "name": "Itatí Cantoral",
+      "facet": "Villanas y villanos legendarios",
+      "known_at": 10
+    },
+    {
+      "name": "Angélica Rivera",
+      "facet": "Protagonistas, galanes y actrices",
+      "known_at": 11
+    },
+    {
+      "name": "Fernando Colunga",
+      "facet": "Protagonistas, galanes y actrices",
+      "known_at": 9
+    },
+    {
+      "name": "Eduardo Yáñez",
+      "facet": "Protagonistas, galanes y actrices",
+      "known_at": 10
+    },
+    {
+      "name": "Victoria Ruffo",
+      "facet": "Protagonistas, galanes y actrices",
+      "known_at": 9
+    },
+    {
+      "name": "Lucía Méndez",
+      "facet": "Protagonistas, galanes y actrices",
+      "known_at": 10
+    },
+    {
+      "name": "Adela Noriega",
+      "facet": "Protagonistas, galanes y actrices",
+      "known_at": 10
+    },
+    {
+      "name": "Gabriela Spanic",
+      "facet": "Protagonistas, galanes y actrices",
+      "known_at": 10
+    },
+    {
+      "name": "William Levy",
+      "facet": "Protagonistas, galanes y actrices",
+      "known_at": 9
+    },
+    {
+      "name": "Sebastián Rulli",
+      "facet": "Protagonistas, galanes y actrices",
+      "known_at": 10
+    },
+    {
+      "name": "Angelique Boyer",
+      "facet": "Protagonistas, galanes y actrices",
+      "known_at": 9
+    },
+    {
+      "name": "Silvia Navarro",
+      "facet": "Protagonistas, galanes y actrices",
+      "known_at": 11
+    },
+    {
+      "name": "Jaime Camil",
+      "facet": "Protagonistas, galanes y actrices",
+      "known_at": 9
+    },
+    {
+      "name": "Edith González",
+      "facet": "Protagonistas, galanes y actrices",
+      "known_at": 10
+    },
+    {
+      "name": "Eduardo Palomo",
+      "facet": "Protagonistas, galanes y actrices",
+      "known_at": 12
+    },
+    {
+      "name": "Arturo Peniche",
+      "facet": "Protagonistas, galanes y actrices",
+      "known_at": 12
+    },
+    {
+      "name": "Aracely Arámbula",
+      "facet": "Protagonistas, galanes y actrices",
+      "known_at": 10
+    },
+    {
+      "name": "Lety Padilla",
+      "facet": "Protagonistas, galanes y actrices",
+      "known_at": 7
+    },
+    {
+      "name": "¡Maldita lisiada!",
+      "facet": "Frases y escenas memorables",
+      "known_at": 6
+    },
+    {
+      "name": "Parche de Catalina Creel",
+      "facet": "Frases y escenas memorables",
+      "known_at": 10
+    },
+    {
+      "name": "Pulgoso",
+      "facet": "Frases y escenas memorables",
+      "known_at": 9
+    },
+    {
+      "name": "Rosa blanca",
+      "facet": "Frases y escenas memorables",
+      "known_at": 5
+    },
+    {
+      "name": "Vientito de La rosa de Guadalupe",
+      "facet": "Frases y escenas memorables",
+      "known_at": 6
+    },
+    {
+      "name": "Lentes y frenos de Lety",
+      "facet": "Frases y escenas memorables",
+      "known_at": 8
+    },
+    {
+      "name": "Billetes de lotería de María Mercedes",
+      "facet": "Frases y escenas memorables",
+      "known_at": 11
+    },
+    {
+      "name": "Final de Cuna de lobos",
+      "facet": "Frases y escenas memorables",
+      "known_at": 12
+    },
+    {
+      "name": "Meme de Soraya Montenegro",
+      "facet": "Frases y escenas memorables",
+      "known_at": 7
+    },
+    {
+      "name": "Carlota",
+      "facet": "Frases y escenas memorables",
+      "known_at": 11
+    },
+    {
+      "name": "Paulina Martínez",
+      "facet": "Frases y escenas memorables",
+      "known_at": 10
+    },
+    {
+      "name": "Uniforme de Rebelde",
+      "facet": "Frases y escenas memorables",
+      "known_at": 7
+    },
+    {
+      "name": "Elite Way School",
+      "facet": "Frases y escenas memorables",
+      "known_at": 9
+    },
+    {
+      "name": "Escuela Mundo de Juguete",
+      "facet": "Frases y escenas memorables",
+      "known_at": 13
+    },
+    {
+      "name": "Maestra Jimena",
+      "facet": "Frases y escenas memorables",
+      "known_at": 10
+    },
+    {
+      "name": "Solo quédate en silencio",
+      "facet": "Temas musicales y cantantes",
+      "known_at": 9
+    },
+    {
+      "name": "Abrázame muy fuerte",
+      "facet": "Temas musicales y cantantes",
+      "known_at": 11
+    },
+    {
+      "name": "Te sigo amando",
+      "facet": "Temas musicales y cantantes",
+      "known_at": 11
+    },
+    {
+      "name": "Ricky Martin",
+      "facet": "Temas musicales y cantantes",
+      "known_at": 12
+    },
+    {
+      "name": "Tema de entrada",
+      "facet": "Temas musicales y cantantes",
+      "known_at": 6
+    },
+    {
+      "name": "Telemundo",
+      "facet": "Televisoras, productores y escritores",
+      "known_at": 8
+    },
+    {
+      "name": "Univision",
+      "facet": "Televisoras, productores y escritores",
+      "known_at": 9
+    },
+    {
+      "name": "Argos",
+      "facet": "Televisoras, productores y escritores",
+      "known_at": 14
+    },
+    {
+      "name": "Emilio Azcárraga",
+      "facet": "Televisoras, productores y escritores",
+      "known_at": 12
+    },
+    {
+      "name": "Valentín Pimstein",
+      "facet": "Televisoras, productores y escritores",
+      "known_at": 14
+    },
+    {
+      "name": "Carla Estrada",
+      "facet": "Televisoras, productores y escritores",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Osorio",
+      "facet": "Televisoras, productores y escritores",
+      "known_at": 12
+    },
+    {
+      "name": "José Alberto Castro",
+      "facet": "Televisoras, productores y escritores",
+      "known_at": 12
+    },
+    {
+      "name": "Salvador Mejía",
+      "facet": "Televisoras, productores y escritores",
+      "known_at": 13
+    },
+    {
+      "name": "Rosy Ocampo",
+      "facet": "Televisoras, productores y escritores",
+      "known_at": 13
+    },
+    {
+      "name": "Pedro Damián",
+      "facet": "Televisoras, productores y escritores",
+      "known_at": 12
+    },
+    {
+      "name": "Delia Fiallo",
+      "facet": "Televisoras, productores y escritores",
+      "known_at": 14
+    },
+    {
+      "name": "Inés Rodena",
+      "facet": "Televisoras, productores y escritores",
+      "known_at": 14
+    },
+    {
+      "name": "Caridad Bravo Adams",
+      "facet": "Televisoras, productores y escritores",
+      "known_at": 14
+    },
+    {
+      "name": "Félix B. Caignet",
+      "facet": "Televisoras, productores y escritores",
+      "known_at": 15
+    },
+    {
+      "name": "Amnesia",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 6
+    },
+    {
+      "name": "Gemelas idénticas",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 6
+    },
+    {
+      "name": "Cachetada",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 5
+    },
+    {
+      "name": "Boda final",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 4
+    },
+    {
+      "name": "Cenicienta",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 3
+    },
+    {
+      "name": "Bebé cambiado al nacer",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 8
+    },
+    {
+      "name": "Ceguera",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 8
+    },
+    {
+      "name": "Silla de ruedas",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 7
+    },
+    {
+      "name": "Herencia",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 7
+    },
+    {
+      "name": "Testamento",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 8
+    },
+    {
+      "name": "Capítulo final",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 4
+    },
+    {
+      "name": "Continuará",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 5
+    },
+    {
+      "name": "Sirvienta",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 6
+    },
+    {
+      "name": "Prueba de ADN",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 8,
+      "retired": "used_up: The decade DNA tests were invented has already been asked. The 'record/place' options lead to Leicester and Alec Jeffreys, which needs no connection to Mexico."
+    },
+    {
+      "name": "Lunar",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 10
+    },
+    {
+      "name": "Culebrón",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 11
+    },
+    {
+      "name": "Radionovela",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 12
+    },
+    {
+      "name": "Folletín",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 14
+    },
+    {
+      "name": "Horario estelar",
+      "facet": "Fórmulas y clichés del melodrama",
+      "known_at": 11
+    },
+    {
+      "name": "Amor real",
+      "facet": "Telenovelas de época e históricas",
+      "known_at": 10
+    },
+    {
+      "name": "Alborada",
+      "facet": "Telenovelas de época e históricas",
+      "known_at": 12
+    },
+    {
+      "name": "El vuelo del águila",
+      "facet": "Telenovelas de época e históricas",
+      "known_at": 13
+    },
+    {
+      "name": "La antorcha encendida",
+      "facet": "Telenovelas de época e históricas",
+      "known_at": 13
+    },
+    {
+      "name": "Senda de gloria",
+      "facet": "Telenovelas de época e históricas",
+      "known_at": 13
+    },
+    {
+      "name": "El carruaje",
+      "facet": "Telenovelas de época e históricas",
+      "known_at": 14
+    },
+    {
+      "name": "La tormenta",
+      "facet": "Telenovelas de época e históricas",
+      "known_at": 15,
+      "retired": "unaskable: 'La tormenta' was a Telemundo production starring mostly non-Mexican actors, so it doesn't fit the mexico bundle, and I'm not sure enough of the details."
+    },
+    {
+      "name": "Alondra",
+      "facet": "Telenovelas de época e históricas",
+      "known_at": 13
+    },
+    {
+      "name": "Bodas de odio",
+      "facet": "Telenovelas de época e históricas",
+      "known_at": 13
+    },
+    {
+      "name": "El Hotel de los Secretos",
+      "facet": "Telenovelas de época e históricas",
+      "known_at": 12
+    },
+    {
+      "name": "La esposa virgen",
+      "facet": "Telenovelas de época e históricas",
+      "known_at": 13
+    },
+    {
+      "name": "Ramona",
+      "facet": "Telenovelas de época e históricas",
+      "known_at": 13
+    },
+    {
+      "name": "Yo compro esa mujer",
+      "facet": "Telenovelas de época e históricas",
+      "known_at": 12
+    },
+    {
+      "name": "Pasión",
+      "facet": "Telenovelas de época e históricas",
+      "known_at": 13
+    },
+    {
+      "name": "Yo soy Betty, la fea",
+      "facet": "Remakes, adaptaciones y éxito mundial",
+      "known_at": 7
+    },
+    {
+      "name": "Ugly Betty",
+      "facet": "Remakes, adaptaciones y éxito mundial",
+      "known_at": 9
+    },
+    {
+      "name": "Rebelde Way",
+      "facet": "Remakes, adaptaciones y éxito mundial",
+      "known_at": 11
+    },
+    {
+      "name": "Café con aroma de mujer",
+      "facet": "Remakes, adaptaciones y éxito mundial",
+      "known_at": 11
+    },
+    {
+      "name": "Rusia",
+      "facet": "Remakes, adaptaciones y éxito mundial",
+      "known_at": 11
+    },
+    {
+      "name": "Brasil",
+      "facet": "Remakes, adaptaciones y éxito mundial",
+      "known_at": 11
+    },
+    {
+      "name": "Remake",
+      "facet": "Remakes, adaptaciones y éxito mundial",
+      "known_at": 7
+    },
+    {
+      "name": "La madrastra",
+      "facet": "Remakes, adaptaciones y éxito mundial",
+      "known_at": 13
+    },
+    {
+      "name": "Ana y los siete",
+      "facet": "Remakes, adaptaciones y éxito mundial",
+      "known_at": 14
+    },
+    {
+      "name": "En los tacones de Eva",
+      "facet": "Remakes, adaptaciones y éxito mundial",
+      "known_at": 14
+    },
+    {
+      "name": "Pobres Rico",
+      "facet": "Remakes, adaptaciones y éxito mundial",
+      "known_at": 14
+    },
+    {
+      "name": "Amor en custodia",
+      "facet": "Remakes, adaptaciones y éxito mundial",
+      "known_at": 14
+    },
+    {
+      "name": "Hasta que la plata nos separe",
+      "facet": "Remakes, adaptaciones y éxito mundial",
+      "known_at": 13
+    }
+  ]
+}

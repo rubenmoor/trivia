@@ -1,0 +1,643 @@
+{
+  "subcategory": "national-symbols",
+  "facets": [
+    "Colores de la bandera",
+    "El águila, el nopal y la serpiente",
+    "Leyenda de la fundación de Tenochtitlan",
+    "Historia de las banderas de México",
+    "Bandera Trigarante e Independencia",
+    "Día de la Bandera y honores",
+    "Escoltas, juramento y ceremonias escolares",
+    "Letra y estrofas del himno",
+    "Autores y origen del himno",
+    "Escudo en monedas, billetes y sellos",
+    "Ley sobre los símbolos patrios",
+    "Banderas monumentales y usos cotidianos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Verde de la bandera",
+      "facet": "Colores de la bandera",
+      "known_at": 2
+    },
+    {
+      "name": "Blanco de la bandera",
+      "facet": "Colores de la bandera",
+      "known_at": 2
+    },
+    {
+      "name": "Rojo de la bandera",
+      "facet": "Colores de la bandera",
+      "known_at": 2
+    },
+    {
+      "name": "Tricolor",
+      "facet": "Colores de la bandera",
+      "known_at": 4
+    },
+    {
+      "name": "Franjas verticales",
+      "facet": "Colores de la bandera",
+      "known_at": 4
+    },
+    {
+      "name": "Escudo en la franja blanca",
+      "facet": "Colores de la bandera",
+      "known_at": 3
+    },
+    {
+      "name": "Franja verde junto al asta",
+      "facet": "Colores de la bandera",
+      "known_at": 8
+    },
+    {
+      "name": "Esperanza (significado del verde)",
+      "facet": "Colores de la bandera",
+      "known_at": 8
+    },
+    {
+      "name": "Unidad (significado del blanco)",
+      "facet": "Colores de la bandera",
+      "known_at": 9
+    },
+    {
+      "name": "Sangre de los héroes (significado del rojo)",
+      "facet": "Colores de la bandera",
+      "known_at": 8
+    },
+    {
+      "name": "Religión, independencia y unión",
+      "facet": "Colores de la bandera",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera de Italia",
+      "facet": "Colores de la bandera",
+      "known_at": 5
+    },
+    {
+      "name": "Bandera de Irlanda",
+      "facet": "Colores de la bandera",
+      "known_at": 9
+    },
+    {
+      "name": "Bandera de Irán",
+      "facet": "Colores de la bandera",
+      "known_at": 11
+    },
+    {
+      "name": "Proporción 4 a 7",
+      "facet": "Colores de la bandera",
+      "known_at": 13
+    },
+    {
+      "name": "Tonos Pantone oficiales",
+      "facet": "Colores de la bandera",
+      "known_at": 14
+    },
+    {
+      "name": "Tunas",
+      "facet": "El águila, el nopal y la serpiente",
+      "known_at": 5
+    },
+    {
+      "name": "Islote en el lago",
+      "facet": "El águila, el nopal y la serpiente",
+      "known_at": 8
+    },
+    {
+      "name": "Glifo de piedra",
+      "facet": "El águila, el nopal y la serpiente",
+      "known_at": 12
+    },
+    {
+      "name": "Rama de encino",
+      "facet": "El águila, el nopal y la serpiente",
+      "known_at": 9
+    },
+    {
+      "name": "Rama de laurel",
+      "facet": "El águila, el nopal y la serpiente",
+      "known_at": 9
+    },
+    {
+      "name": "Listón tricolor del escudo",
+      "facet": "El águila, el nopal y la serpiente",
+      "known_at": 8
+    },
+    {
+      "name": "Perfil izquierdo del águila",
+      "facet": "El águila, el nopal y la serpiente",
+      "known_at": 11
+    },
+    {
+      "name": "Atl-tlachinolli",
+      "facet": "El águila, el nopal y la serpiente",
+      "known_at": 14
+    },
+    {
+      "name": "Corazones de los guerreros (tunas)",
+      "facet": "El águila, el nopal y la serpiente",
+      "known_at": 13
+    },
+    {
+      "name": "Francisco Eppens Helguera",
+      "facet": "El águila, el nopal y la serpiente",
+      "known_at": 14
+    },
+    {
+      "name": "Caracara quebrantahuesos",
+      "facet": "El águila, el nopal y la serpiente",
+      "known_at": 14,
+      "retired": "unaskable: The caracara hypothesis is debated; I couldn't write a cause/when/who question with a certain answer."
+    },
+    {
+      "name": "1325",
+      "facet": "Leyenda de la fundación de Tenochtitlan",
+      "known_at": 10
+    },
+    {
+      "name": "Ombligo de la luna",
+      "facet": "Leyenda de la fundación de Tenochtitlan",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera de José María Morelos",
+      "facet": "Historia de las banderas de México",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera del Primer Imperio",
+      "facet": "Historia de las banderas de México",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera del Segundo Imperio",
+      "facet": "Historia de las banderas de México",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera de la República Restaurada",
+      "facet": "Historia de las banderas de México",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera del Porfiriato",
+      "facet": "Historia de las banderas de México",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera de 1968",
+      "facet": "Historia de las banderas de México",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera del Batallón de San Patricio",
+      "facet": "Historia de las banderas de México",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera de la República de Yucatán",
+      "facet": "Historia de las banderas de México",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera de la República del Río Grande",
+      "facet": "Historia de las banderas de México",
+      "known_at": 15
+    },
+    {
+      "name": "Iguala",
+      "facet": "Bandera Trigarante e Independencia",
+      "known_at": 10
+    },
+    {
+      "name": "José Magdaleno Ocampo",
+      "facet": "Bandera Trigarante e Independencia",
+      "known_at": 14
+    },
+    {
+      "name": "Estrellas de la Bandera Trigarante",
+      "facet": "Bandera Trigarante e Independencia",
+      "known_at": 14
+    },
+    {
+      "name": "Franjas diagonales",
+      "facet": "Bandera Trigarante e Independencia",
+      "known_at": 13
+    },
+    {
+      "name": "24 de febrero",
+      "facet": "Día de la Bandera y honores",
+      "known_at": 5
+    },
+    {
+      "name": "Saludo civil a la bandera",
+      "facet": "Día de la Bandera y honores",
+      "known_at": 3
+    },
+    {
+      "name": "Media asta",
+      "facet": "Día de la Bandera y honores",
+      "known_at": 8
+    },
+    {
+      "name": "Izamiento de bandera",
+      "facet": "Día de la Bandera y honores",
+      "known_at": 5
+    },
+    {
+      "name": "Arriado de bandera",
+      "facet": "Día de la Bandera y honores",
+      "known_at": 6
+    },
+    {
+      "name": "Lunes cívico",
+      "facet": "Día de la Bandera y honores",
+      "known_at": 3
+    },
+    {
+      "name": "Benito Ramírez Fernández",
+      "facet": "Día de la Bandera y honores",
+      "known_at": 15
+    },
+    {
+      "name": "Calendario cívico",
+      "facet": "Día de la Bandera y honores",
+      "known_at": 11
+    },
+    {
+      "name": "Guardia de honor",
+      "facet": "Día de la Bandera y honores",
+      "known_at": 9
+    },
+    {
+      "name": "Doblado de la bandera",
+      "facet": "Día de la Bandera y honores",
+      "known_at": 11
+    },
+    {
+      "name": "Campo Marte",
+      "facet": "Día de la Bandera y honores",
+      "known_at": 13
+    },
+    {
+      "name": "Sí, lo prometo",
+      "facet": "Escoltas, juramento y ceremonias escolares",
+      "known_at": 5
+    },
+    {
+      "name": "Seis integrantes de la escolta",
+      "facet": "Escoltas, juramento y ceremonias escolares",
+      "known_at": 6
+    },
+    {
+      "name": "Comandante de escolta",
+      "facet": "Escoltas, juramento y ceremonias escolares",
+      "known_at": 8
+    },
+    {
+      "name": "Paso de marcha",
+      "facet": "Escoltas, juramento y ceremonias escolares",
+      "known_at": 8
+    },
+    {
+      "name": "Posición de firmes",
+      "facet": "Escoltas, juramento y ceremonias escolares",
+      "known_at": 5
+    },
+    {
+      "name": "Cambio de escolta",
+      "facet": "Escoltas, juramento y ceremonias escolares",
+      "known_at": 6
+    },
+    {
+      "name": "Banda de guerra escolar",
+      "facet": "Escoltas, juramento y ceremonias escolares",
+      "known_at": 5
+    },
+    {
+      "name": "Tahalí",
+      "facet": "Escoltas, juramento y ceremonias escolares",
+      "known_at": 12
+    },
+    {
+      "name": "Corbata de la bandera",
+      "facet": "Escoltas, juramento y ceremonias escolares",
+      "known_at": 13
+    },
+    {
+      "name": "Moharra",
+      "facet": "Escoltas, juramento y ceremonias escolares",
+      "known_at": 13
+    },
+    {
+      "name": "Asta",
+      "facet": "Escoltas, juramento y ceremonias escolares",
+      "known_at": 6
+    },
+    {
+      "name": "Ceremonia cívica",
+      "facet": "Escoltas, juramento y ceremonias escolares",
+      "known_at": 3
+    },
+    {
+      "name": "Abanderamiento",
+      "facet": "Escoltas, juramento y ceremonias escolares",
+      "known_at": 11
+    },
+    {
+      "name": "Mejores promedios",
+      "facet": "Escoltas, juramento y ceremonias escolares",
+      "known_at": 6
+    },
+    {
+      "name": "Coro del himno",
+      "facet": "Letra y estrofas del himno",
+      "known_at": 4
+    },
+    {
+      "name": "Diez estrofas",
+      "facet": "Letra y estrofas del himno",
+      "known_at": 10
+    },
+    {
+      "name": "Cuatro estrofas oficiales",
+      "facet": "Letra y estrofas del himno",
+      "known_at": 8
+    },
+    {
+      "name": "Masiosare",
+      "facet": "Letra y estrofas del himno",
+      "known_at": 9
+    },
+    {
+      "name": "Ciña ¡oh Patria! tus sienes de oliva",
+      "facet": "Letra y estrofas del himno",
+      "known_at": 8
+    },
+    {
+      "name": "El acero aprestad y el bridón",
+      "facet": "Letra y estrofas del himno",
+      "known_at": 8
+    },
+    {
+      "name": "Bridón",
+      "facet": "Letra y estrofas del himno",
+      "known_at": 12
+    },
+    {
+      "name": "Un soldado en cada hijo te dio",
+      "facet": "Letra y estrofas del himno",
+      "known_at": 6
+    },
+    {
+      "name": "Retiemble en sus centros la tierra",
+      "facet": "Letra y estrofas del himno",
+      "known_at": 6
+    },
+    {
+      "name": "Al sonoro rugir del cañón",
+      "facet": "Letra y estrofas del himno",
+      "known_at": 6
+    },
+    {
+      "name": "Arcángel divino",
+      "facet": "Letra y estrofas del himno",
+      "known_at": 7
+    },
+    {
+      "name": "Guerra, guerra sin tregua",
+      "facet": "Letra y estrofas del himno",
+      "known_at": 9
+    },
+    {
+      "name": "Patria, patria, tus hijos te juran",
+      "facet": "Letra y estrofas del himno",
+      "known_at": 7
+    },
+    {
+      "name": "Clarín",
+      "facet": "Letra y estrofas del himno",
+      "known_at": 10
+    },
+    {
+      "name": "Estrofa dedicada a Santa Anna",
+      "facet": "Letra y estrofas del himno",
+      "known_at": 13
+    },
+    {
+      "name": "Guadalupe González del Pino",
+      "facet": "Autores y origen del himno",
+      "known_at": 13
+    },
+    {
+      "name": "Concurso de 1853",
+      "facet": "Autores y origen del himno",
+      "known_at": 12
+    },
+    {
+      "name": "Cuarto encerrado de Bocanegra",
+      "facet": "Autores y origen del himno",
+      "known_at": 11
+    },
+    {
+      "name": "Estreno del 15 de septiembre de 1854",
+      "facet": "Autores y origen del himno",
+      "known_at": 12
+    },
+    {
+      "name": "Gran Teatro de Santa Anna",
+      "facet": "Autores y origen del himno",
+      "known_at": 14
+    },
+    {
+      "name": "Claudina Fiorentini",
+      "facet": "Autores y origen del himno",
+      "known_at": 15
+    },
+    {
+      "name": "Cataluña",
+      "facet": "Autores y origen del himno",
+      "known_at": 14
+    },
+    {
+      "name": "Henri Herz",
+      "facet": "Autores y origen del himno",
+      "known_at": 15
+    },
+    {
+      "name": "Volado",
+      "facet": "Escudo en monedas, billetes y sellos",
+      "known_at": 4
+    },
+    {
+      "name": "Monedas bimetálicas",
+      "facet": "Escudo en monedas, billetes y sellos",
+      "known_at": 9
+    },
+    {
+      "name": "Billetes de polímero",
+      "facet": "Escudo en monedas, billetes y sellos",
+      "known_at": 10
+    },
+    {
+      "name": "Sello de la Nación",
+      "facet": "Escudo en monedas, billetes y sellos",
+      "known_at": 13
+    },
+    {
+      "name": "Estampilla postal",
+      "facet": "Escudo en monedas, billetes y sellos",
+      "known_at": 9
+    },
+    {
+      "name": "Matrícula consular",
+      "facet": "Escudo en monedas, billetes y sellos",
+      "known_at": 13
+    },
+    {
+      "name": "Símbolos patrios",
+      "facet": "Ley sobre los símbolos patrios",
+      "known_at": 3
+    },
+    {
+      "name": "1984",
+      "facet": "Ley sobre los símbolos patrios",
+      "known_at": 14
+    },
+    {
+      "name": "Diario Oficial de la Federación",
+      "facet": "Ley sobre los símbolos patrios",
+      "known_at": 12
+    },
+    {
+      "name": "Secretaría de Gobernación",
+      "facet": "Ley sobre los símbolos patrios",
+      "known_at": 11
+    },
+    {
+      "name": "Archivo General de la Nación",
+      "facet": "Ley sobre los símbolos patrios",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera modelo",
+      "facet": "Ley sobre los símbolos patrios",
+      "known_at": 14
+    },
+    {
+      "name": "Incineración de banderas",
+      "facet": "Ley sobre los símbolos patrios",
+      "known_at": 11
+    },
+    {
+      "name": "Prohibición de alterar la letra del himno",
+      "facet": "Ley sobre los símbolos patrios",
+      "known_at": 11
+    },
+    {
+      "name": "Himno en lenguas indígenas",
+      "facet": "Ley sobre los símbolos patrios",
+      "known_at": 11
+    },
+    {
+      "name": "Ultraje a las insignias nacionales",
+      "facet": "Ley sobre los símbolos patrios",
+      "known_at": 13
+    },
+    {
+      "name": "Uso comercial del escudo",
+      "facet": "Ley sobre los símbolos patrios",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera en edificios públicos",
+      "facet": "Ley sobre los símbolos patrios",
+      "known_at": 8
+    },
+    {
+      "name": "Bandera monumental de Piedras Negras",
+      "facet": "Banderas monumentales y usos cotidianos",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera del Cerro del Obispado",
+      "facet": "Banderas monumentales y usos cotidianos",
+      "known_at": 12
+    },
+    {
+      "name": "Noche del Grito",
+      "facet": "Banderas monumentales y usos cotidianos",
+      "known_at": 4
+    },
+    {
+      "name": "Selección Mexicana de futbol",
+      "facet": "Banderas monumentales y usos cotidianos",
+      "known_at": 3
+    },
+    {
+      "name": "Banda presidencial",
+      "facet": "Banderas monumentales y usos cotidianos",
+      "known_at": 7
+    },
+    {
+      "name": "Papel picado tricolor",
+      "facet": "Banderas monumentales y usos cotidianos",
+      "known_at": 5
+    },
+    {
+      "name": "Banderitas de mano",
+      "facet": "Banderas monumentales y usos cotidianos",
+      "known_at": 3
+    },
+    {
+      "name": "Abanderado olímpico",
+      "facet": "Banderas monumentales y usos cotidianos",
+      "known_at": 9
+    }
+  ]
+}

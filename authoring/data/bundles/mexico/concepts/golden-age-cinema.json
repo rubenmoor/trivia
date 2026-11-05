@@ -1,0 +1,737 @@
+{
+  "subcategory": "golden-age-cinema",
+  "facets": [
+    "Estrellas de la pantalla",
+    "Cómicos y personajes populares",
+    "Películas clásicas",
+    "Directores y fotógrafos",
+    "Comedia ranchera y charros",
+    "Cine de rumberas y cabaret",
+    "Melodramas familiares y urbanos",
+    "Canciones e ídolos del cine",
+    "Estudios, premios y la industria",
+    "Frases, apodos y dichos del cine",
+    "Cine de la Revolución y lo indígena",
+    "Época de Oro en el mundo"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Pedro Armendáriz",
+      "facet": "Estrellas de la pantalla",
+      "known_at": 11
+    },
+    {
+      "name": "Arturo de Córdova",
+      "facet": "Estrellas de la pantalla",
+      "known_at": 12
+    },
+    {
+      "name": "Libertad Lamarque",
+      "facet": "Estrellas de la pantalla",
+      "known_at": 12
+    },
+    {
+      "name": "Marga López",
+      "facet": "Estrellas de la pantalla",
+      "known_at": 13
+    },
+    {
+      "name": "Columba Domínguez",
+      "facet": "Estrellas de la pantalla",
+      "known_at": 13
+    },
+    {
+      "name": "Elsa Aguirre",
+      "facet": "Estrellas de la pantalla",
+      "known_at": 12
+    },
+    {
+      "name": "Miroslava",
+      "facet": "Estrellas de la pantalla",
+      "known_at": 13
+    },
+    {
+      "name": "Ernesto Alonso",
+      "facet": "Estrellas de la pantalla",
+      "known_at": 11
+    },
+    {
+      "name": "Fernando Soler",
+      "facet": "Estrellas de la pantalla",
+      "known_at": 12
+    },
+    {
+      "name": "Andrés Soler",
+      "facet": "Estrellas de la pantalla",
+      "known_at": 13
+    },
+    {
+      "name": "Andrea Palma",
+      "facet": "Estrellas de la pantalla",
+      "known_at": 14
+    },
+    {
+      "name": "Gloria Marín",
+      "facet": "Estrellas de la pantalla",
+      "known_at": 13
+    },
+    {
+      "name": "Lilia Prado",
+      "facet": "Estrellas de la pantalla",
+      "known_at": 13
+    },
+    {
+      "name": "Rosita Quintana",
+      "facet": "Estrellas de la pantalla",
+      "known_at": 13
+    },
+    {
+      "name": "Clavillazo",
+      "facet": "Cómicos y personajes populares",
+      "known_at": 12
+    },
+    {
+      "name": "Resortes",
+      "facet": "Cómicos y personajes populares",
+      "known_at": 11
+    },
+    {
+      "name": "Joaquín Pardavé",
+      "facet": "Cómicos y personajes populares",
+      "known_at": 11
+    },
+    {
+      "name": "Marcelo Chávez",
+      "facet": "Cómicos y personajes populares",
+      "known_at": 12
+    },
+    {
+      "name": "Mantequilla",
+      "facet": "Cómicos y personajes populares",
+      "known_at": 13
+    },
+    {
+      "name": "Óscar Pulido",
+      "facet": "Cómicos y personajes populares",
+      "known_at": 14
+    },
+    {
+      "name": "Delia Magaña",
+      "facet": "Cómicos y personajes populares",
+      "known_at": 14
+    },
+    {
+      "name": "Manuel Medel",
+      "facet": "Cómicos y personajes populares",
+      "known_at": 14
+    },
+    {
+      "name": "Vitola",
+      "facet": "Cómicos y personajes populares",
+      "known_at": 13
+    },
+    {
+      "name": "Chicote",
+      "facet": "Cómicos y personajes populares",
+      "known_at": 14
+    },
+    {
+      "name": "Piporro",
+      "facet": "Cómicos y personajes populares",
+      "known_at": 9
+    },
+    {
+      "name": "Viruta y Capulina",
+      "facet": "Cómicos y personajes populares",
+      "known_at": 10
+    },
+    {
+      "name": "Chachita",
+      "facet": "Cómicos y personajes populares",
+      "known_at": 11
+    },
+    {
+      "name": "Ustedes los ricos",
+      "facet": "Películas clásicas",
+      "known_at": 8
+    },
+    {
+      "name": "Doña Bárbara",
+      "facet": "Películas clásicas",
+      "known_at": 11
+    },
+    {
+      "name": "El rey del barrio",
+      "facet": "Películas clásicas",
+      "known_at": 10
+    },
+    {
+      "name": "Calabacitas tiernas",
+      "facet": "Películas clásicas",
+      "known_at": 13
+    },
+    {
+      "name": "Escuela de vagabundos",
+      "facet": "Películas clásicas",
+      "known_at": 12
+    },
+    {
+      "name": "¿Qué te ha dado esa mujer?",
+      "facet": "Películas clásicas",
+      "known_at": 13
+    },
+    {
+      "name": "El gendarme desconocido",
+      "facet": "Películas clásicas",
+      "known_at": 13
+    },
+    {
+      "name": "Ensayo de un crimen",
+      "facet": "Películas clásicas",
+      "known_at": 14
+    },
+    {
+      "name": "Subida al cielo",
+      "facet": "Películas clásicas",
+      "known_at": 14
+    },
+    {
+      "name": "La mujer del puerto",
+      "facet": "Películas clásicas",
+      "known_at": 14
+    },
+    {
+      "name": "El ceniciento",
+      "facet": "Películas clásicas",
+      "known_at": 14
+    },
+    {
+      "name": "Emilio Fernández",
+      "facet": "Directores y fotógrafos",
+      "known_at": 9
+    },
+    {
+      "name": "Luis Buñuel",
+      "facet": "Directores y fotógrafos",
+      "known_at": 11
+    },
+    {
+      "name": "Alejandro Galindo",
+      "facet": "Directores y fotógrafos",
+      "known_at": 13
+    },
+    {
+      "name": "Julio Bracho",
+      "facet": "Directores y fotógrafos",
+      "known_at": 13
+    },
+    {
+      "name": "Roberto Gavaldón",
+      "facet": "Directores y fotógrafos",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Bustillo Oro",
+      "facet": "Directores y fotógrafos",
+      "known_at": 14
+    },
+    {
+      "name": "Alberto Gout",
+      "facet": "Directores y fotógrafos",
+      "known_at": 14
+    },
+    {
+      "name": "Gilberto Martínez Solares",
+      "facet": "Directores y fotógrafos",
+      "known_at": 14
+    },
+    {
+      "name": "Miguel Zacarías",
+      "facet": "Directores y fotógrafos",
+      "known_at": 14
+    },
+    {
+      "name": "Chano Urueta",
+      "facet": "Directores y fotógrafos",
+      "known_at": 14
+    },
+    {
+      "name": "Juan Orol",
+      "facet": "Directores y fotógrafos",
+      "known_at": 13
+    },
+    {
+      "name": "Matilde Landeta",
+      "facet": "Directores y fotógrafos",
+      "known_at": 13
+    },
+    {
+      "name": "Raúl de Anda",
+      "facet": "Directores y fotógrafos",
+      "known_at": 14
+    },
+    {
+      "name": "Alex Phillips",
+      "facet": "Directores y fotógrafos",
+      "known_at": 15
+    },
+    {
+      "name": "¡Así se quiere en Jalisco!",
+      "facet": "Comedia ranchera y charros",
+      "known_at": 13
+    },
+    {
+      "name": "El peñón de las ánimas",
+      "facet": "Comedia ranchera y charros",
+      "known_at": 13
+    },
+    {
+      "name": "Pelea de gallos",
+      "facet": "Comedia ranchera y charros",
+      "known_at": 8
+    },
+    {
+      "name": "Ninón Sevilla",
+      "facet": "Cine de rumberas y cabaret",
+      "known_at": 11
+    },
+    {
+      "name": "María Antonieta Pons",
+      "facet": "Cine de rumberas y cabaret",
+      "known_at": 12
+    },
+    {
+      "name": "Meche Barba",
+      "facet": "Cine de rumberas y cabaret",
+      "known_at": 13
+    },
+    {
+      "name": "Amalia Aguilar",
+      "facet": "Cine de rumberas y cabaret",
+      "known_at": 13
+    },
+    {
+      "name": "Rosa Carmina",
+      "facet": "Cine de rumberas y cabaret",
+      "known_at": 13
+    },
+    {
+      "name": "Tongolele",
+      "facet": "Cine de rumberas y cabaret",
+      "known_at": 9
+    },
+    {
+      "name": "Aventurera",
+      "facet": "Cine de rumberas y cabaret",
+      "known_at": 12
+    },
+    {
+      "name": "Salón México",
+      "facet": "Cine de rumberas y cabaret",
+      "known_at": 12
+    },
+    {
+      "name": "Víctima del pecado",
+      "facet": "Cine de rumberas y cabaret",
+      "known_at": 13
+    },
+    {
+      "name": "Sensualidad",
+      "facet": "Cine de rumberas y cabaret",
+      "known_at": 14
+    },
+    {
+      "name": "Rumba",
+      "facet": "Cine de rumberas y cabaret",
+      "known_at": 8
+    },
+    {
+      "name": "Cabaretera",
+      "facet": "Cine de rumberas y cabaret",
+      "known_at": 11
+    },
+    {
+      "name": "Bongó",
+      "facet": "Cine de rumberas y cabaret",
+      "known_at": 6
+    },
+    {
+      "name": "Rita Montaner",
+      "facet": "Cine de rumberas y cabaret",
+      "known_at": 14
+    },
+    {
+      "name": "Teatro Blanquita",
+      "facet": "Cine de rumberas y cabaret",
+      "known_at": 12
+    },
+    {
+      "name": "Melodrama",
+      "facet": "Melodramas familiares y urbanos",
+      "known_at": 7
+    },
+    {
+      "name": "Vecindad",
+      "facet": "Melodramas familiares y urbanos",
+      "known_at": 5
+    },
+    {
+      "name": "La Chorreada",
+      "facet": "Melodramas familiares y urbanos",
+      "known_at": 12
+    },
+    {
+      "name": "El Tuerto",
+      "facet": "Melodramas familiares y urbanos",
+      "known_at": 14
+    },
+    {
+      "name": "Cuando los hijos se van",
+      "facet": "Melodramas familiares y urbanos",
+      "known_at": 12
+    },
+    {
+      "name": "Una familia de tantas",
+      "facet": "Melodramas familiares y urbanos",
+      "known_at": 12
+    },
+    {
+      "name": "La oveja negra",
+      "facet": "Melodramas familiares y urbanos",
+      "known_at": 13
+    },
+    {
+      "name": "No desearás la mujer de tu hijo",
+      "facet": "Melodramas familiares y urbanos",
+      "known_at": 14
+    },
+    {
+      "name": "Champion sin corona",
+      "facet": "Melodramas familiares y urbanos",
+      "known_at": 14
+    },
+    {
+      "name": "Esquina bajan",
+      "facet": "Melodramas familiares y urbanos",
+      "known_at": 14
+    },
+    {
+      "name": "Del brazo y por la calle",
+      "facet": "Melodramas familiares y urbanos",
+      "known_at": 14
+    },
+    {
+      "name": "Madre querida",
+      "facet": "Melodramas familiares y urbanos",
+      "known_at": 14
+    },
+    {
+      "name": "Arrabal",
+      "facet": "Melodramas familiares y urbanos",
+      "known_at": 12
+    },
+    {
+      "name": "Amorcito corazón",
+      "facet": "Canciones e ídolos del cine",
+      "known_at": 7
+    },
+    {
+      "name": "Academia Mexicana de Artes y Ciencias Cinematográficas",
+      "facet": "Estudios, premios y la industria",
+      "known_at": 12
+    },
+    {
+      "name": "Santa",
+      "facet": "Estudios, premios y la industria",
+      "known_at": 12
+    },
+    {
+      "name": "Cine sonoro",
+      "facet": "Estudios, premios y la industria",
+      "known_at": 7
+    },
+    {
+      "name": "Cine en blanco y negro",
+      "facet": "Estudios, premios y la industria",
+      "known_at": 2
+    },
+    {
+      "name": "Cartel de cine",
+      "facet": "Estudios, premios y la industria",
+      "known_at": 3
+    },
+    {
+      "name": "Taquilla",
+      "facet": "Estudios, premios y la industria",
+      "known_at": 6
+    },
+    {
+      "name": "Matiné",
+      "facet": "Estudios, premios y la industria",
+      "known_at": 10
+    },
+    {
+      "name": "Cineteca Nacional",
+      "facet": "Estudios, premios y la industria",
+      "known_at": 10
+    },
+    {
+      "name": "Filmoteca de la UNAM",
+      "facet": "Estudios, premios y la industria",
+      "known_at": 12
+    },
+    {
+      "name": "Banco Nacional Cinematográfico",
+      "facet": "Estudios, premios y la industria",
+      "known_at": 14
+    },
+    {
+      "name": "Estudios CLASA",
+      "facet": "Estudios, premios y la industria",
+      "known_at": 14
+    },
+    {
+      "name": "Cine Ópera",
+      "facet": "Estudios, premios y la industria",
+      "known_at": 13
+    },
+    {
+      "name": "Diosa de Plata",
+      "facet": "Estudios, premios y la industria",
+      "known_at": 13
+    },
+    {
+      "name": "Sindicato de Trabajadores de la Producción Cinematográfica",
+      "facet": "Estudios, premios y la industria",
+      "known_at": 14
+    },
+    {
+      "name": "Peladito",
+      "facet": "Frases, apodos y dichos del cine",
+      "known_at": 12
+    },
+    {
+      "name": "¡Ay, Chihuahua!",
+      "facet": "Frases, apodos y dichos del cine",
+      "known_at": 7
+    },
+    {
+      "name": "Jalisco nunca pierde",
+      "facet": "Frases, apodos y dichos del cine",
+      "known_at": 9
+    },
+    {
+      "name": "No te rajes",
+      "facet": "Frases, apodos y dichos del cine",
+      "known_at": 8
+    },
+    {
+      "name": "Carnal",
+      "facet": "Frases, apodos y dichos del cine",
+      "known_at": 8
+    },
+    {
+      "name": "Valedor",
+      "facet": "Frases, apodos y dichos del cine",
+      "known_at": 12
+    },
+    {
+      "name": "Órale",
+      "facet": "Frases, apodos y dichos del cine",
+      "known_at": 4
+    },
+    {
+      "name": "Ahí nos vidrios",
+      "facet": "Frases, apodos y dichos del cine",
+      "known_at": 9
+    },
+    {
+      "name": "¿Qué te pasa, calabaza?",
+      "facet": "Frases, apodos y dichos del cine",
+      "known_at": 5
+    },
+    {
+      "name": "Chaparrita",
+      "facet": "Frases, apodos y dichos del cine",
+      "known_at": 6
+    },
+    {
+      "name": "No hay que confundir la gimnasia con la magnesia",
+      "facet": "Frases, apodos y dichos del cine",
+      "known_at": 11
+    },
+    {
+      "name": "Río Escondido",
+      "facet": "Cine de la Revolución y lo indígena",
+      "known_at": 12
+    },
+    {
+      "name": "Ánimas Trujano",
+      "facet": "Cine de la Revolución y lo indígena",
+      "known_at": 12
+    },
+    {
+      "name": "La perla",
+      "facet": "Cine de la Revolución y lo indígena",
+      "known_at": 11
+    },
+    {
+      "name": "Pueblerina",
+      "facet": "Cine de la Revolución y lo indígena",
+      "known_at": 13
+    },
+    {
+      "name": "Redes",
+      "facet": "Cine de la Revolución y lo indígena",
+      "known_at": 14
+    },
+    {
+      "name": "Soldadera",
+      "facet": "Cine de la Revolución y lo indígena",
+      "known_at": 10
+    },
+    {
+      "name": "Hollywood",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 3
+    },
+    {
+      "name": "Premio Óscar",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 3
+    },
+    {
+      "name": "Festival de Cannes",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Festival de Venecia",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Globo de Oro",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Segunda Guerra Mundial",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Serguéi Eisenstein",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "¡Que viva México!",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Marlon Brando",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 8
+    },
+    {
+      "name": "John Steinbeck",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "El tesoro de la Sierra Madre",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Humphrey Bogart",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Anthony Quinn",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Ricardo Montalbán",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Lupe Vélez",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Ramón Novarro",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Walt Disney",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 3
+    },
+    {
+      "name": "Panchito Pistolas",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Toshiro Mifune",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Cine argentino",
+      "facet": "Época de Oro en el mundo",
+      "known_at": 12
+    }
+  ]
+}

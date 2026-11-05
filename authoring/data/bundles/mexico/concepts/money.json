@@ -1,0 +1,757 @@
+{
+  "subcategory": "money",
+  "facets": [
+    "Billetes mexicanos y sus personajes",
+    "Monedas mexicanas en circulación",
+    "Dinero prehispánico y virreinal",
+    "Historia del peso mexicano",
+    "Banco de México y Casa de Moneda",
+    "Seguridad y diseño de billetes",
+    "Jerga del dinero: lana, varo y feria",
+    "Refranes y dichos sobre dinero",
+    "Tandas, aguinaldo y costumbres de pago",
+    "Pagar en tienditas, tianguis y OXXO",
+    "Monedas de oro y plata de colección",
+    "Bancos, cajeros y pagos digitales"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 4,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Miguel Hidalgo",
+      "facet": "Billetes mexicanos y sus personajes",
+      "known_at": 3
+    },
+    {
+      "name": "José María Morelos",
+      "facet": "Billetes mexicanos y sus personajes",
+      "known_at": 5
+    },
+    {
+      "name": "Entrada del Ejército Trigarante",
+      "facet": "Billetes mexicanos y sus personajes",
+      "known_at": 10
+    },
+    {
+      "name": "Moneda de 10 pesos",
+      "facet": "Monedas mexicanas en circulación",
+      "known_at": 2
+    },
+    {
+      "name": "Moneda de 20 pesos",
+      "facet": "Monedas mexicanas en circulación",
+      "known_at": 4
+    },
+    {
+      "name": "Moneda de 5 pesos",
+      "facet": "Monedas mexicanas en circulación",
+      "known_at": 2
+    },
+    {
+      "name": "Moneda de 2 pesos",
+      "facet": "Monedas mexicanas en circulación",
+      "known_at": 2
+    },
+    {
+      "name": "Moneda de 1 peso",
+      "facet": "Monedas mexicanas en circulación",
+      "known_at": 1
+    },
+    {
+      "name": "Moneda de 50 centavos",
+      "facet": "Monedas mexicanas en circulación",
+      "known_at": 3
+    },
+    {
+      "name": "Moneda de 10 centavos",
+      "facet": "Monedas mexicanas en circulación",
+      "known_at": 6
+    },
+    {
+      "name": "Moneda de 20 centavos",
+      "facet": "Monedas mexicanas en circulación",
+      "known_at": 6
+    },
+    {
+      "name": "Centavo",
+      "facet": "Monedas mexicanas en circulación",
+      "known_at": 3
+    },
+    {
+      "name": "Moneda bimetálica",
+      "facet": "Monedas mexicanas en circulación",
+      "known_at": 9
+    },
+    {
+      "name": "Moneda conmemorativa de 20 pesos",
+      "facet": "Monedas mexicanas en circulación",
+      "known_at": 7
+    },
+    {
+      "name": "Moneda de 5 pesos del Bicentenario",
+      "facet": "Monedas mexicanas en circulación",
+      "known_at": 9
+    },
+    {
+      "name": "Canto de la moneda",
+      "facet": "Monedas mexicanas en circulación",
+      "known_at": 8
+    },
+    {
+      "name": "Semillas de cacao",
+      "facet": "Dinero prehispánico y virreinal",
+      "known_at": 6
+    },
+    {
+      "name": "Mantas de algodón",
+      "facet": "Dinero prehispánico y virreinal",
+      "known_at": 11
+    },
+    {
+      "name": "Tianguis de Tlatelolco",
+      "facet": "Dinero prehispánico y virreinal",
+      "known_at": 9
+    },
+    {
+      "name": "Macuquina",
+      "facet": "Dinero prehispánico y virreinal",
+      "known_at": 14
+    },
+    {
+      "name": "Moneda columnaria",
+      "facet": "Dinero prehispánico y virreinal",
+      "known_at": 14
+    },
+    {
+      "name": "Tlaco",
+      "facet": "Dinero prehispánico y virreinal",
+      "known_at": 13
+    },
+    {
+      "name": "Plata de Zacatecas",
+      "facet": "Dinero prehispánico y virreinal",
+      "known_at": 9
+    },
+    {
+      "name": "Nuevo peso",
+      "facet": "Historia del peso mexicano",
+      "known_at": 10
+    },
+    {
+      "name": "Quitarle tres ceros al peso",
+      "facet": "Historia del peso mexicano",
+      "known_at": 11
+    },
+    {
+      "name": "Devaluación de 1982",
+      "facet": "Historia del peso mexicano",
+      "known_at": 12
+    },
+    {
+      "name": "Bilimbique",
+      "facet": "Historia del peso mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Peso de caballito",
+      "facet": "Historia del peso mexicano",
+      "known_at": 13
+    },
+    {
+      "name": "Signo de pesos",
+      "facet": "Historia del peso mexicano",
+      "known_at": 4
+    },
+    {
+      "name": "Dólar estadounidense",
+      "facet": "Historia del peso mexicano",
+      "known_at": 4
+    },
+    {
+      "name": "Peso mexicano en China",
+      "facet": "Historia del peso mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Devaluación",
+      "facet": "Historia del peso mexicano",
+      "known_at": 10
+    },
+    {
+      "name": "Billetes de la Revolución",
+      "facet": "Historia del peso mexicano",
+      "known_at": 11
+    },
+    {
+      "name": "Tipo de cambio",
+      "facet": "Historia del peso mexicano",
+      "known_at": 8
+    },
+    {
+      "name": "Secretaría de Hacienda",
+      "facet": "Historia del peso mexicano",
+      "known_at": 9
+    },
+    {
+      "name": "Banco de México",
+      "facet": "Banco de México y Casa de Moneda",
+      "known_at": 6
+    },
+    {
+      "name": "Museo Interactivo de Economía",
+      "facet": "Banco de México y Casa de Moneda",
+      "known_at": 9
+    },
+    {
+      "name": "Museo Nacional de las Culturas del Mundo",
+      "facet": "Banco de México y Casa de Moneda",
+      "known_at": 13
+    },
+    {
+      "name": "Gobernador del Banco de México",
+      "facet": "Banco de México y Casa de Moneda",
+      "known_at": 11
+    },
+    {
+      "name": "Autonomía del Banco de México",
+      "facet": "Banco de México y Casa de Moneda",
+      "known_at": 13
+    },
+    {
+      "name": "Inflación",
+      "facet": "Banco de México y Casa de Moneda",
+      "known_at": 8
+    },
+    {
+      "name": "Tasa de interés",
+      "facet": "Banco de México y Casa de Moneda",
+      "known_at": 10
+    },
+    {
+      "name": "Reservas internacionales",
+      "facet": "Banco de México y Casa de Moneda",
+      "known_at": 13
+    },
+    {
+      "name": "Fábrica de Billetes del Banco de México",
+      "facet": "Banco de México y Casa de Moneda",
+      "known_at": 12
+    },
+    {
+      "name": "Planta de San Luis Potosí de la Casa de Moneda",
+      "facet": "Banco de México y Casa de Moneda",
+      "known_at": 14
+    },
+    {
+      "name": "Edificio del Banco de México",
+      "facet": "Banco de México y Casa de Moneda",
+      "known_at": 12
+    },
+    {
+      "name": "Condusef",
+      "facet": "Banco de México y Casa de Moneda",
+      "known_at": 11
+    },
+    {
+      "name": "Comisión Nacional Bancaria y de Valores",
+      "facet": "Banco de México y Casa de Moneda",
+      "known_at": 13
+    },
+    {
+      "name": "Billete de polímero",
+      "facet": "Seguridad y diseño de billetes",
+      "known_at": 8
+    },
+    {
+      "name": "Marca de agua",
+      "facet": "Seguridad y diseño de billetes",
+      "known_at": 7
+    },
+    {
+      "name": "Hilo de seguridad",
+      "facet": "Seguridad y diseño de billetes",
+      "known_at": 8
+    },
+    {
+      "name": "Tinta que cambia de color",
+      "facet": "Seguridad y diseño de billetes",
+      "known_at": 7
+    },
+    {
+      "name": "Ventana transparente",
+      "facet": "Seguridad y diseño de billetes",
+      "known_at": 6
+    },
+    {
+      "name": "Relieve sensible al tacto",
+      "facet": "Seguridad y diseño de billetes",
+      "known_at": 8
+    },
+    {
+      "name": "Microimpresión",
+      "facet": "Seguridad y diseño de billetes",
+      "known_at": 10
+    },
+    {
+      "name": "Marcas táctiles para personas ciegas",
+      "facet": "Seguridad y diseño de billetes",
+      "known_at": 9
+    },
+    {
+      "name": "Fibras fluorescentes",
+      "facet": "Seguridad y diseño de billetes",
+      "known_at": 11
+    },
+    {
+      "name": "Luz ultravioleta",
+      "facet": "Seguridad y diseño de billetes",
+      "known_at": 7
+    },
+    {
+      "name": "Billete falso",
+      "facet": "Seguridad y diseño de billetes",
+      "known_at": 4
+    },
+    {
+      "name": "Número de serie",
+      "facet": "Seguridad y diseño de billetes",
+      "known_at": 7
+    },
+    {
+      "name": "Familia G de billetes",
+      "facet": "Seguridad y diseño de billetes",
+      "known_at": 12
+    },
+    {
+      "name": "Papel de algodón",
+      "facet": "Seguridad y diseño de billetes",
+      "known_at": 10
+    },
+    {
+      "name": "Firma en los billetes",
+      "facet": "Seguridad y diseño de billetes",
+      "known_at": 10
+    },
+    {
+      "name": "Plumón detector de billetes falsos",
+      "facet": "Seguridad y diseño de billetes",
+      "known_at": 9
+    },
+    {
+      "name": "Ecosistemas en los billetes",
+      "facet": "Seguridad y diseño de billetes",
+      "known_at": 9
+    },
+    {
+      "name": "Morralla",
+      "facet": "Jerga del dinero: lana, varo y feria",
+      "known_at": 8
+    },
+    {
+      "name": "Billullo",
+      "facet": "Jerga del dinero: lana, varo y feria",
+      "known_at": 9
+    },
+    {
+      "name": "Quinto",
+      "facet": "Jerga del dinero: lana, varo y feria",
+      "known_at": 9
+    },
+    {
+      "name": "Melón",
+      "facet": "Jerga del dinero: lana, varo y feria",
+      "known_at": 11
+    },
+    {
+      "name": "Codo",
+      "facet": "Jerga del dinero: lana, varo y feria",
+      "known_at": 6
+    },
+    {
+      "name": "Gorrón",
+      "facet": "Jerga del dinero: lana, varo y feria",
+      "known_at": 8
+    },
+    {
+      "name": "Disparar",
+      "facet": "Jerga del dinero: lana, varo y feria",
+      "known_at": 7
+    },
+    {
+      "name": "Chivo",
+      "facet": "Jerga del dinero: lana, varo y feria",
+      "known_at": 12
+    },
+    {
+      "name": "Marmaja",
+      "facet": "Jerga del dinero: lana, varo y feria",
+      "known_at": 14
+    },
+    {
+      "name": "El que paga manda",
+      "facet": "Refranes y dichos sobre dinero",
+      "known_at": 7
+    },
+    {
+      "name": "Lo barato sale caro",
+      "facet": "Refranes y dichos sobre dinero",
+      "known_at": 5
+    },
+    {
+      "name": "Poderoso caballero es don Dinero",
+      "facet": "Refranes y dichos sobre dinero",
+      "known_at": 13
+    },
+    {
+      "name": "El dinero no compra la felicidad",
+      "facet": "Refranes y dichos sobre dinero",
+      "known_at": 4
+    },
+    {
+      "name": "No hay que gastar pólvora en infiernitos",
+      "facet": "Refranes y dichos sobre dinero",
+      "known_at": 11
+    },
+    {
+      "name": "Tanto tienes, tanto vales",
+      "facet": "Refranes y dichos sobre dinero",
+      "known_at": 11
+    },
+    {
+      "name": "El que parte y comparte se queda con la mayor parte",
+      "facet": "Refranes y dichos sobre dinero",
+      "known_at": 8
+    },
+    {
+      "name": "Pobre pero honrado",
+      "facet": "Refranes y dichos sobre dinero",
+      "known_at": 9
+    },
+    {
+      "name": "Cochinito",
+      "facet": "Tandas, aguinaldo y costumbres de pago",
+      "known_at": 1
+    },
+    {
+      "name": "Domingo",
+      "facet": "Tandas, aguinaldo y costumbres de pago",
+      "known_at": 3
+    },
+    {
+      "name": "Reparto de utilidades",
+      "facet": "Tandas, aguinaldo y costumbres de pago",
+      "known_at": 11
+    },
+    {
+      "name": "Prima vacacional",
+      "facet": "Tandas, aguinaldo y costumbres de pago",
+      "known_at": 12
+    },
+    {
+      "name": "Buen Fin",
+      "facet": "Tandas, aguinaldo y costumbres de pago",
+      "known_at": 7
+    },
+    {
+      "name": "Nacional Monte de Piedad",
+      "facet": "Tandas, aguinaldo y costumbres de pago",
+      "known_at": 10
+    },
+    {
+      "name": "Empeño",
+      "facet": "Tandas, aguinaldo y costumbres de pago",
+      "known_at": 9
+    },
+    {
+      "name": "Pagar en abonos",
+      "facet": "Tandas, aguinaldo y costumbres de pago",
+      "known_at": 7
+    },
+    {
+      "name": "Propina",
+      "facet": "Tandas, aguinaldo y costumbres de pago",
+      "known_at": 4
+    },
+    {
+      "name": "Arras matrimoniales",
+      "facet": "Tandas, aguinaldo y costumbres de pago",
+      "known_at": 10
+    },
+    {
+      "name": "Remesas",
+      "facet": "Tandas, aguinaldo y costumbres de pago",
+      "known_at": 10
+    },
+    {
+      "name": "Caja de ahorro",
+      "facet": "Tandas, aguinaldo y costumbres de pago",
+      "known_at": 9
+    },
+    {
+      "name": "Vales de despensa",
+      "facet": "Tandas, aguinaldo y costumbres de pago",
+      "known_at": 10
+    },
+    {
+      "name": "Tiendita de la esquina",
+      "facet": "Pagar en tienditas, tianguis y OXXO",
+      "known_at": 2
+    },
+    {
+      "name": "Cambio",
+      "facet": "Pagar en tienditas, tianguis y OXXO",
+      "known_at": 1
+    },
+    {
+      "name": "Redondeo",
+      "facet": "Pagar en tienditas, tianguis y OXXO",
+      "known_at": 6
+    },
+    {
+      "name": "Recarga de saldo",
+      "facet": "Pagar en tienditas, tianguis y OXXO",
+      "known_at": 5
+    },
+    {
+      "name": "Abarrotes",
+      "facet": "Pagar en tienditas, tianguis y OXXO",
+      "known_at": 7
+    },
+    {
+      "name": "Mercado sobre ruedas",
+      "facet": "Pagar en tienditas, tianguis y OXXO",
+      "known_at": 8
+    },
+    {
+      "name": "IVA",
+      "facet": "Pagar en tienditas, tianguis y OXXO",
+      "known_at": 9
+    },
+    {
+      "name": "Profeco",
+      "facet": "Pagar en tienditas, tianguis y OXXO",
+      "known_at": 9
+    },
+    {
+      "name": "Báscula",
+      "facet": "Pagar en tienditas, tianguis y OXXO",
+      "known_at": 4
+    },
+    {
+      "name": "Bodega Aurrerá",
+      "facet": "Pagar en tienditas, tianguis y OXXO",
+      "known_at": 5
+    },
+    {
+      "name": "Centenario",
+      "facet": "Monedas de oro y plata de colección",
+      "known_at": 10
+    },
+    {
+      "name": "Onza Libertad",
+      "facet": "Monedas de oro y plata de colección",
+      "known_at": 11
+    },
+    {
+      "name": "Victoria alada",
+      "facet": "Monedas de oro y plata de colección",
+      "known_at": 11
+    },
+    {
+      "name": "Moneda de oro Hidalgo",
+      "facet": "Monedas de oro y plata de colección",
+      "known_at": 14
+    },
+    {
+      "name": "Moneda de oro Azteca",
+      "facet": "Monedas de oro y plata de colección",
+      "known_at": 14
+    },
+    {
+      "name": "Numismática",
+      "facet": "Monedas de oro y plata de colección",
+      "known_at": 10
+    },
+    {
+      "name": "Moneda de los Juegos Olímpicos de 1968",
+      "facet": "Monedas de oro y plata de colección",
+      "known_at": 13
+    },
+    {
+      "name": "Monedas del Mundial de 1986",
+      "facet": "Monedas de oro y plata de colección",
+      "known_at": 13
+    },
+    {
+      "name": "Quilate",
+      "facet": "Monedas de oro y plata de colección",
+      "known_at": 9
+    },
+    {
+      "name": "Onza troy",
+      "facet": "Monedas de oro y plata de colección",
+      "known_at": 12
+    },
+    {
+      "name": "Plata pura",
+      "facet": "Monedas de oro y plata de colección",
+      "known_at": 6
+    },
+    {
+      "name": "Acabado espejo",
+      "facet": "Monedas de oro y plata de colección",
+      "known_at": 13
+    },
+    {
+      "name": "Moneda conmemorativa del Bicentenario",
+      "facet": "Monedas de oro y plata de colección",
+      "known_at": 10
+    },
+    {
+      "name": "Cajero automático",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 3
+    },
+    {
+      "name": "CoDi",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 11
+    },
+    {
+      "name": "SPEI",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 10
+    },
+    {
+      "name": "Transferencia bancaria",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 6
+    },
+    {
+      "name": "CLABE interbancaria",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 10
+    },
+    {
+      "name": "Tarjeta de débito",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 5
+    },
+    {
+      "name": "Tarjeta de crédito",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 5
+    },
+    {
+      "name": "Meses sin intereses",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 8
+    },
+    {
+      "name": "NIP",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 6
+    },
+    {
+      "name": "Banca móvil",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 7
+    },
+    {
+      "name": "Mercado Pago",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 7
+    },
+    {
+      "name": "Bancomer",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 7
+    },
+    {
+      "name": "Banamex",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 7
+    },
+    {
+      "name": "Banco Azteca",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 7
+    },
+    {
+      "name": "Banco del Bienestar",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 9
+    },
+    {
+      "name": "Spin by OXXO",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 8
+    },
+    {
+      "name": "Terminal punto de venta",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 7
+    },
+    {
+      "name": "Cheque",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 7
+    },
+    {
+      "name": "Buró de Crédito",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 11
+    },
+    {
+      "name": "Afore",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 12
+    },
+    {
+      "name": "Pago sin contacto",
+      "facet": "Bancos, cajeros y pagos digitales",
+      "known_at": 7
+    }
+  ]
+}

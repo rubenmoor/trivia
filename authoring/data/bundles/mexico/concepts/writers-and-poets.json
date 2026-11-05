@@ -1,0 +1,847 @@
+{
+  "subcategory": "writers-and-poets",
+  "facets": [
+    "Literatura prehispánica y Nezahualcóyotl",
+    "Sor Juana y la Nueva España",
+    "Novela de la Revolución",
+    "Octavio Paz y el Nobel",
+    "Juan Rulfo y Pedro Páramo",
+    "Carlos Fuentes y el Boom",
+    "Poetas modernos y Contemporáneos",
+    "Escritoras mexicanas del siglo XX",
+    "Cuentos y literatura infantil",
+    "Crónica, periodismo y ensayo",
+    "Personajes y obras famosas",
+    "Lugares, premios y ferias literarias"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 1,
+      "estimate": 1,
+      "record": 2,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Amo el canto del cenzontle",
+      "facet": "Literatura prehispánica y Nezahualcóyotl",
+      "known_at": 8
+    },
+    {
+      "name": "Cantares mexicanos",
+      "facet": "Literatura prehispánica y Nezahualcóyotl",
+      "known_at": 13
+    },
+    {
+      "name": "Miguel León-Portilla",
+      "facet": "Literatura prehispánica y Nezahualcóyotl",
+      "known_at": 12
+    },
+    {
+      "name": "Bernardo de Balbuena",
+      "facet": "Sor Juana y la Nueva España",
+      "known_at": 14
+    },
+    {
+      "name": "Mariano Azuela",
+      "facet": "Novela de la Revolución",
+      "known_at": 10
+    },
+    {
+      "name": "Demetrio Macías",
+      "facet": "Novela de la Revolución",
+      "known_at": 12
+    },
+    {
+      "name": "Martín Luis Guzmán",
+      "facet": "Novela de la Revolución",
+      "known_at": 12
+    },
+    {
+      "name": "La sombra del caudillo",
+      "facet": "Novela de la Revolución",
+      "known_at": 12
+    },
+    {
+      "name": "Cartucho",
+      "facet": "Novela de la Revolución",
+      "known_at": 13
+    },
+    {
+      "name": "Rafael F. Muñoz",
+      "facet": "Novela de la Revolución",
+      "known_at": 14
+    },
+    {
+      "name": "Gregorio López y Fuentes",
+      "facet": "Novela de la Revolución",
+      "known_at": 14
+    },
+    {
+      "name": "Ulises criollo",
+      "facet": "Novela de la Revolución",
+      "known_at": 13
+    },
+    {
+      "name": "Agustín Yáñez",
+      "facet": "Novela de la Revolución",
+      "known_at": 13
+    },
+    {
+      "name": "Al filo del agua",
+      "facet": "Novela de la Revolución",
+      "known_at": 13
+    },
+    {
+      "name": "Francisco L. Urquizo",
+      "facet": "Novela de la Revolución",
+      "known_at": 14
+    },
+    {
+      "name": "La vida inútil de Pito Pérez",
+      "facet": "Novela de la Revolución",
+      "known_at": 12
+    },
+    {
+      "name": "José Rubén Romero",
+      "facet": "Novela de la Revolución",
+      "known_at": 13
+    },
+    {
+      "name": "Premio Nobel de Literatura 1990",
+      "facet": "Octavio Paz y el Nobel",
+      "known_at": 9
+    },
+    {
+      "name": "Sor Juana Inés de la Cruz o las trampas de la fe",
+      "facet": "Octavio Paz y el Nobel",
+      "known_at": 13
+    },
+    {
+      "name": "Revista Vuelta",
+      "facet": "Octavio Paz y el Nobel",
+      "known_at": 13
+    },
+    {
+      "name": "Revista Plural",
+      "facet": "Octavio Paz y el Nobel",
+      "known_at": 14
+    },
+    {
+      "name": "Revista Taller",
+      "facet": "Octavio Paz y el Nobel",
+      "known_at": 14
+    },
+    {
+      "name": "Mixcoac",
+      "facet": "Octavio Paz y el Nobel",
+      "known_at": 12
+    },
+    {
+      "name": "Libertad bajo palabra",
+      "facet": "Octavio Paz y el Nobel",
+      "known_at": 13
+    },
+    {
+      "name": "El arco y la lira",
+      "facet": "Octavio Paz y el Nobel",
+      "known_at": 13
+    },
+    {
+      "name": "Marie-José Tramini",
+      "facet": "Octavio Paz y el Nobel",
+      "known_at": 14
+    },
+    {
+      "name": "Embajada de México en la India",
+      "facet": "Octavio Paz y el Nobel",
+      "known_at": 12
+    },
+    {
+      "name": "Ladera este",
+      "facet": "Octavio Paz y el Nobel",
+      "known_at": 14
+    },
+    {
+      "name": "Todos santos, día de muertos",
+      "facet": "Octavio Paz y el Nobel",
+      "known_at": 12
+    },
+    {
+      "name": "Árbol adentro",
+      "facet": "Octavio Paz y el Nobel",
+      "known_at": 14
+    },
+    {
+      "name": "Pasado en claro",
+      "facet": "Octavio Paz y el Nobel",
+      "known_at": 14
+    },
+    {
+      "name": "Juan Rulfo",
+      "facet": "Juan Rulfo y Pedro Páramo",
+      "known_at": 9
+    },
+    {
+      "name": "Juan Preciado",
+      "facet": "Juan Rulfo y Pedro Páramo",
+      "known_at": 11
+    },
+    {
+      "name": "Susana San Juan",
+      "facet": "Juan Rulfo y Pedro Páramo",
+      "known_at": 13
+    },
+    {
+      "name": "Dolores Preciado",
+      "facet": "Juan Rulfo y Pedro Páramo",
+      "known_at": 13
+    },
+    {
+      "name": "Abundio",
+      "facet": "Juan Rulfo y Pedro Páramo",
+      "known_at": 14
+    },
+    {
+      "name": "La Media Luna",
+      "facet": "Juan Rulfo y Pedro Páramo",
+      "known_at": 13
+    },
+    {
+      "name": "El llano en llamas",
+      "facet": "Juan Rulfo y Pedro Páramo",
+      "known_at": 10
+    },
+    {
+      "name": "¡Diles que no me maten!",
+      "facet": "Juan Rulfo y Pedro Páramo",
+      "known_at": 11
+    },
+    {
+      "name": "No oyes ladrar los perros",
+      "facet": "Juan Rulfo y Pedro Páramo",
+      "known_at": 11
+    },
+    {
+      "name": "Luvina",
+      "facet": "Juan Rulfo y Pedro Páramo",
+      "known_at": 12
+    },
+    {
+      "name": "Es que somos muy pobres",
+      "facet": "Juan Rulfo y Pedro Páramo",
+      "known_at": 11
+    },
+    {
+      "name": "El gallo de oro",
+      "facet": "Juan Rulfo y Pedro Páramo",
+      "known_at": 13
+    },
+    {
+      "name": "Fotografía de Juan Rulfo",
+      "facet": "Juan Rulfo y Pedro Páramo",
+      "known_at": 13
+    },
+    {
+      "name": "Sayula",
+      "facet": "Juan Rulfo y Pedro Páramo",
+      "known_at": 13
+    },
+    {
+      "name": "Pedro Páramo (película de 2024)",
+      "facet": "Juan Rulfo y Pedro Páramo",
+      "known_at": 10
+    },
+    {
+      "name": "Carlos Fuentes",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 9
+    },
+    {
+      "name": "La región más transparente",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 12
+    },
+    {
+      "name": "Aura",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 11
+    },
+    {
+      "name": "Gringo viejo",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 12
+    },
+    {
+      "name": "Terra Nostra",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 14
+    },
+    {
+      "name": "Los años con Laura Díaz",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 14
+    },
+    {
+      "name": "Boom latinoamericano",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 10
+    },
+    {
+      "name": "Gabriel García Márquez en México",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 11
+    },
+    {
+      "name": "Fernando del Paso",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 12
+    },
+    {
+      "name": "Noticias del Imperio",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 13
+    },
+    {
+      "name": "Palinuro de México",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 14
+    },
+    {
+      "name": "Sergio Pitol",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 13
+    },
+    {
+      "name": "Salvador Elizondo",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 14
+    },
+    {
+      "name": "Vicente Leñero",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 13
+    },
+    {
+      "name": "José Agustín",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 12
+    },
+    {
+      "name": "Literatura de la Onda",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 13
+    },
+    {
+      "name": "Jorge Ibargüengoitia",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 12
+    },
+    {
+      "name": "Los relámpagos de agosto",
+      "facet": "Carlos Fuentes y el Boom",
+      "known_at": 13
+    },
+    {
+      "name": "Amado Nervo",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 9
+    },
+    {
+      "name": "En paz",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 10
+    },
+    {
+      "name": "Ramón López Velarde",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 10
+    },
+    {
+      "name": "La suave Patria",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 10
+    },
+    {
+      "name": "Manuel Gutiérrez Nájera",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 12
+    },
+    {
+      "name": "Modernismo",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 11
+    },
+    {
+      "name": "Salvador Díaz Mirón",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "Nocturno a Rosario",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 11
+    },
+    {
+      "name": "Grupo de los Contemporáneos",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "Xavier Villaurrutia",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "José Gorostiza",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "Muerte sin fin",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 14
+    },
+    {
+      "name": "Jaime Torres Bodet",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos Pellicer",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "Salvador Novo",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "Estridentismo",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 14
+    },
+    {
+      "name": "Manuel Maples Arce",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 14
+    },
+    {
+      "name": "Efraín Huerta",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "Jaime Sabines",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 10
+    },
+    {
+      "name": "Los amorosos",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 11
+    },
+    {
+      "name": "Juan José Tablada",
+      "facet": "Poetas modernos y Contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "Rosario Castellanos",
+      "facet": "Escritoras mexicanas del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "Balún Canán",
+      "facet": "Escritoras mexicanas del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Oficio de tinieblas",
+      "facet": "Escritoras mexicanas del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Hasta no verte Jesús mío",
+      "facet": "Escritoras mexicanas del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Elena Garro",
+      "facet": "Escritoras mexicanas del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Los recuerdos del porvenir",
+      "facet": "Escritoras mexicanas del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Laura Esquivel",
+      "facet": "Escritoras mexicanas del siglo XX",
+      "known_at": 9
+    },
+    {
+      "name": "Ángeles Mastretta",
+      "facet": "Escritoras mexicanas del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Arráncame la vida",
+      "facet": "Escritoras mexicanas del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Pita Amor",
+      "facet": "Escritoras mexicanas del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Inés Arredondo",
+      "facet": "Escritoras mexicanas del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Amparo Dávila",
+      "facet": "Escritoras mexicanas del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Margo Glantz",
+      "facet": "Escritoras mexicanas del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Carmen Boullosa",
+      "facet": "Escritoras mexicanas del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Cristina Rivera Garza",
+      "facet": "Escritoras mexicanas del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Antonieta Rivas Mercado",
+      "facet": "Escritoras mexicanas del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Valeria Luiselli",
+      "facet": "Escritoras mexicanas del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Juan José Arreola",
+      "facet": "Cuentos y literatura infantil",
+      "known_at": 11
+    },
+    {
+      "name": "Confabulario",
+      "facet": "Cuentos y literatura infantil",
+      "known_at": 12
+    },
+    {
+      "name": "El guardagujas",
+      "facet": "Cuentos y literatura infantil",
+      "known_at": 12
+    },
+    {
+      "name": "Augusto Monterroso",
+      "facet": "Cuentos y literatura infantil",
+      "known_at": 11
+    },
+    {
+      "name": "El dinosaurio (microrrelato)",
+      "facet": "Cuentos y literatura infantil",
+      "known_at": 9
+    },
+    {
+      "name": "Microrrelato",
+      "facet": "Cuentos y literatura infantil",
+      "known_at": 10
+    },
+    {
+      "name": "Francisco Hinojosa",
+      "facet": "Cuentos y literatura infantil",
+      "known_at": 10
+    },
+    {
+      "name": "La peor señora del mundo",
+      "facet": "Cuentos y literatura infantil",
+      "known_at": 6
+    },
+    {
+      "name": "A la orilla del viento",
+      "facet": "Cuentos y literatura infantil",
+      "known_at": 9
+    },
+    {
+      "name": "El libro salvaje",
+      "facet": "Cuentos y literatura infantil",
+      "known_at": 9
+    },
+    {
+      "name": "Edmundo Valadés",
+      "facet": "Cuentos y literatura infantil",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Monsiváis",
+      "facet": "Crónica, periodismo y ensayo",
+      "known_at": 11
+    },
+    {
+      "name": "Días de guardar",
+      "facet": "Crónica, periodismo y ensayo",
+      "known_at": 13
+    },
+    {
+      "name": "Los rituales del caos",
+      "facet": "Crónica, periodismo y ensayo",
+      "known_at": 14
+    },
+    {
+      "name": "Alfonso Reyes",
+      "facet": "Crónica, periodismo y ensayo",
+      "known_at": 11
+    },
+    {
+      "name": "Visión de Anáhuac",
+      "facet": "Crónica, periodismo y ensayo",
+      "known_at": 13
+    },
+    {
+      "name": "Capilla Alfonsina",
+      "facet": "Crónica, periodismo y ensayo",
+      "known_at": 13
+    },
+    {
+      "name": "La raza cósmica",
+      "facet": "Crónica, periodismo y ensayo",
+      "known_at": 12
+    },
+    {
+      "name": "Samuel Ramos",
+      "facet": "Crónica, periodismo y ensayo",
+      "known_at": 14
+    },
+    {
+      "name": "Julio Scherer García",
+      "facet": "Crónica, periodismo y ensayo",
+      "known_at": 13
+    },
+    {
+      "name": "Revista Proceso",
+      "facet": "Crónica, periodismo y ensayo",
+      "known_at": 11
+    },
+    {
+      "name": "Regeneración (periódico)",
+      "facet": "Crónica, periodismo y ensayo",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Villoro",
+      "facet": "Crónica, periodismo y ensayo",
+      "known_at": 11
+    },
+    {
+      "name": "El vértigo horizontal",
+      "facet": "Crónica, periodismo y ensayo",
+      "known_at": 14
+    },
+    {
+      "name": "Fernando Benítez",
+      "facet": "Crónica, periodismo y ensayo",
+      "known_at": 14
+    },
+    {
+      "name": "Ricardo Garibay",
+      "facet": "Crónica, periodismo y ensayo",
+      "known_at": 14
+    },
+    {
+      "name": "Tita de la Garza",
+      "facet": "Personajes y obras famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Pedro Muzquiz",
+      "facet": "Personajes y obras famosas",
+      "known_at": 12
+    },
+    {
+      "name": "José Emilio Pacheco",
+      "facet": "Personajes y obras famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Las batallas en el desierto",
+      "facet": "Personajes y obras famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Carlitos y Mariana",
+      "facet": "Personajes y obras famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Manuel Payno",
+      "facet": "Personajes y obras famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Los bandidos de Río Frío",
+      "facet": "Personajes y obras famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Federico Gamboa",
+      "facet": "Personajes y obras famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Santa (novela)",
+      "facet": "Personajes y obras famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Rafael Bernal",
+      "facet": "Personajes y obras famosas",
+      "known_at": 13
+    },
+    {
+      "name": "El complot mongol",
+      "facet": "Personajes y obras famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Filiberto García",
+      "facet": "Personajes y obras famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Paco Ignacio Taibo II",
+      "facet": "Personajes y obras famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Héctor Belascoarán Shayne",
+      "facet": "Personajes y obras famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Xavier Velasco",
+      "facet": "Personajes y obras famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Diablo guardián",
+      "facet": "Personajes y obras famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Jorge Volpi",
+      "facet": "Personajes y obras famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Pablo Villalobos",
+      "facet": "Personajes y obras famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Feria Internacional del Libro del Palacio de Minería",
+      "facet": "Lugares, premios y ferias literarias",
+      "known_at": 12
+    },
+    {
+      "name": "Premio Cervantes",
+      "facet": "Lugares, premios y ferias literarias",
+      "known_at": 11
+    },
+    {
+      "name": "Premio Nacional de Ciencias y Artes",
+      "facet": "Lugares, premios y ferias literarias",
+      "known_at": 13
+    },
+    {
+      "name": "Premio Xavier Villaurrutia",
+      "facet": "Lugares, premios y ferias literarias",
+      "known_at": 14
+    },
+    {
+      "name": "Premio Rómulo Gallegos",
+      "facet": "Lugares, premios y ferias literarias",
+      "known_at": 13
+    },
+    {
+      "name": "Premio FIL de Literatura en Lenguas Romances",
+      "facet": "Lugares, premios y ferias literarias",
+      "known_at": 14
+    },
+    {
+      "name": "Biblioteca Palafoxiana",
+      "facet": "Lugares, premios y ferias literarias",
+      "known_at": 12
+    },
+    {
+      "name": "El Colegio de México",
+      "facet": "Lugares, premios y ferias literarias",
+      "known_at": 12
+    },
+    {
+      "name": "Academia Mexicana de la Lengua",
+      "facet": "Lugares, premios y ferias literarias",
+      "known_at": 12
+    },
+    {
+      "name": "Fondo de Cultura Económica",
+      "facet": "Lugares, premios y ferias literarias",
+      "known_at": 11
+    },
+    {
+      "name": "Librería Gandhi",
+      "facet": "Lugares, premios y ferias literarias",
+      "known_at": 8
+    }
+  ]
+}

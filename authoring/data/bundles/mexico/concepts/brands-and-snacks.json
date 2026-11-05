@@ -1,0 +1,656 @@
+{
+  "subcategory": "brands-and-snacks",
+  "facets": [
+    "Papitas y frituras de bolsa",
+    "Dulces enchilados y de tamarindo",
+    "Pan dulce y pastelitos de marca",
+    "Galletas de marca mexicana",
+    "Refrescos y bebidas mexicanas",
+    "Botanas de puesto y antojitos callejeros",
+    "Salsas, chiles en polvo y chamoy",
+    "Chocolates, lácteos y despensa",
+    "Tiendas, cadenas y la tiendita",
+    "Mascotas, logotipos y comerciales",
+    "Historia y fundadores de las marcas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Ruffles",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 2
+    },
+    {
+      "name": "Doritos Nacho",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 1
+    },
+    {
+      "name": "Doritos Incógnita",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 6
+    },
+    {
+      "name": "Cheetos Flamin' Hot",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 3
+    },
+    {
+      "name": "Cheetos Torciditos",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 3
+    },
+    {
+      "name": "Takis Fuego",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 2
+    },
+    {
+      "name": "Churrumais",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 3
+    },
+    {
+      "name": "Tostitos",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 3
+    },
+    {
+      "name": "Fritos Chile y Limón",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 4
+    },
+    {
+      "name": "Rancheritos",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 4
+    },
+    {
+      "name": "Crujitos",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 5
+    },
+    {
+      "name": "Runners",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 6
+    },
+    {
+      "name": "Hot Nuts",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 5
+    },
+    {
+      "name": "Paketaxo",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 6
+    },
+    {
+      "name": "Sabritones",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 5
+    },
+    {
+      "name": "Chips Barcel",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 4
+    },
+    {
+      "name": "Totis",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 6
+    },
+    {
+      "name": "Papas Adobadas",
+      "facet": "Papitas y frituras de bolsa",
+      "known_at": 6
+    },
+    {
+      "name": "Rockaleta",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 3
+    },
+    {
+      "name": "Vero Mango",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 2
+    },
+    {
+      "name": "Lucas Gusano",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 3
+    },
+    {
+      "name": "Tama-Roca",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 7
+    },
+    {
+      "name": "Chaca Chaca",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 7
+    },
+    {
+      "name": "Rellerindos",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 7
+    },
+    {
+      "name": "Paleta de sandía enchilada",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 4
+    },
+    {
+      "name": "Gansito",
+      "facet": "Pan dulce y pastelitos de marca",
+      "known_at": 1
+    },
+    {
+      "name": "Pingüinos",
+      "facet": "Pan dulce y pastelitos de marca",
+      "known_at": 1
+    },
+    {
+      "name": "Submarinos",
+      "facet": "Pan dulce y pastelitos de marca",
+      "known_at": 3
+    },
+    {
+      "name": "Choco Roles",
+      "facet": "Pan dulce y pastelitos de marca",
+      "known_at": 3
+    },
+    {
+      "name": "Mantecadas Bimbo",
+      "facet": "Pan dulce y pastelitos de marca",
+      "known_at": 3
+    },
+    {
+      "name": "Donitas Bimbo",
+      "facet": "Pan dulce y pastelitos de marca",
+      "known_at": 3
+    },
+    {
+      "name": "Negrito Bimbo",
+      "facet": "Pan dulce y pastelitos de marca",
+      "known_at": 4
+    },
+    {
+      "name": "Nito",
+      "facet": "Pan dulce y pastelitos de marca",
+      "known_at": 4
+    },
+    {
+      "name": "Rol de canela Bimbo",
+      "facet": "Pan dulce y pastelitos de marca",
+      "known_at": 5
+    },
+    {
+      "name": "Panqué Bimbo",
+      "facet": "Pan dulce y pastelitos de marca",
+      "known_at": 5
+    },
+    {
+      "name": "Pan Blanco Bimbo",
+      "facet": "Pan dulce y pastelitos de marca",
+      "known_at": 1
+    },
+    {
+      "name": "Medias Noches",
+      "facet": "Pan dulce y pastelitos de marca",
+      "known_at": 6
+    },
+    {
+      "name": "Tía Rosa",
+      "facet": "Pan dulce y pastelitos de marca",
+      "known_at": 7
+    },
+    {
+      "name": "Emperador",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 2
+    },
+    {
+      "name": "Príncipe",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 2
+    },
+    {
+      "name": "Marías",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 2
+    },
+    {
+      "name": "Chokis",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 2
+    },
+    {
+      "name": "Florentinas",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 5
+    },
+    {
+      "name": "Sponch",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 3
+    },
+    {
+      "name": "Mamut",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 2
+    },
+    {
+      "name": "Triki-Trakes",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 5
+    },
+    {
+      "name": "Canelitas",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 4
+    },
+    {
+      "name": "Saladitas",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 3
+    },
+    {
+      "name": "Habaneras",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 7
+    },
+    {
+      "name": "Ricanelas",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 7
+    },
+    {
+      "name": "Barritas Marinela",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 3
+    },
+    {
+      "name": "Animalitos",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 2
+    },
+    {
+      "name": "Crackets",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 7
+    },
+    {
+      "name": "Suavicremas",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 6
+    },
+    {
+      "name": "Lors",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 8
+    },
+    {
+      "name": "Piruetas",
+      "facet": "Galletas de marca mexicana",
+      "known_at": 8
+    },
+    {
+      "name": "Chaparritas",
+      "facet": "Refrescos y bebidas mexicanas",
+      "known_at": 5
+    },
+    {
+      "name": "Jumex",
+      "facet": "Refrescos y bebidas mexicanas",
+      "known_at": 3
+    },
+    {
+      "name": "Garrafón de agua",
+      "facet": "Refrescos y bebidas mexicanas",
+      "known_at": 2
+    },
+    {
+      "name": "Elote preparado",
+      "facet": "Botanas de puesto y antojitos callejeros",
+      "known_at": 1
+    },
+    {
+      "name": "Fruta con chile",
+      "facet": "Botanas de puesto y antojitos callejeros",
+      "known_at": 2
+    },
+    {
+      "name": "Trolelote",
+      "facet": "Botanas de puesto y antojitos callejeros",
+      "known_at": 8
+    },
+    {
+      "name": "Maruchan preparada",
+      "facet": "Botanas de puesto y antojitos callejeros",
+      "known_at": 5
+    },
+    {
+      "name": "Camote del carrito",
+      "facet": "Botanas de puesto y antojitos callejeros",
+      "known_at": 6
+    },
+    {
+      "name": "Salsa Búfalo",
+      "facet": "Salsas, chiles en polvo y chamoy",
+      "known_at": 5
+    },
+    {
+      "name": "Salsa Huichol",
+      "facet": "Salsas, chiles en polvo y chamoy",
+      "known_at": 7
+    },
+    {
+      "name": "Salsa Maggi",
+      "facet": "Salsas, chiles en polvo y chamoy",
+      "known_at": 5
+    },
+    {
+      "name": "Salsa Lucas",
+      "facet": "Salsas, chiles en polvo y chamoy",
+      "known_at": 4
+    },
+    {
+      "name": "La Costeña",
+      "facet": "Salsas, chiles en polvo y chamoy",
+      "known_at": 4
+    },
+    {
+      "name": "Herdez",
+      "facet": "Salsas, chiles en polvo y chamoy",
+      "known_at": 5
+    },
+    {
+      "name": "Chiles en vinagre",
+      "facet": "Salsas, chiles en polvo y chamoy",
+      "known_at": 4
+    },
+    {
+      "name": "Choco Milk",
+      "facet": "Chocolates, lácteos y despensa",
+      "known_at": 3
+    },
+    {
+      "name": "Lala",
+      "facet": "Chocolates, lácteos y despensa",
+      "known_at": 2
+    },
+    {
+      "name": "Alpura",
+      "facet": "Chocolates, lácteos y despensa",
+      "known_at": 4
+    },
+    {
+      "name": "Danonino",
+      "facet": "Chocolates, lácteos y despensa",
+      "known_at": 2
+    },
+    {
+      "name": "La Lechera",
+      "facet": "Chocolates, lácteos y despensa",
+      "known_at": 3
+    },
+    {
+      "name": "Maizena",
+      "facet": "Chocolates, lácteos y despensa",
+      "known_at": 4
+    },
+    {
+      "name": "Knorr Suiza",
+      "facet": "Chocolates, lácteos y despensa",
+      "known_at": 5
+    },
+    {
+      "name": "Maruchan",
+      "facet": "Chocolates, lácteos y despensa",
+      "known_at": 2
+    },
+    {
+      "name": "Zucaritas",
+      "facet": "Chocolates, lácteos y despensa",
+      "known_at": 1
+    },
+    {
+      "name": "Chicles Canel's",
+      "facet": "Chocolates, lácteos y despensa",
+      "known_at": 4
+    },
+    {
+      "name": "Nescafé Clásico",
+      "facet": "Chocolates, lácteos y despensa",
+      "known_at": 4
+    },
+    {
+      "name": "Soriana",
+      "facet": "Tiendas, cadenas y la tiendita",
+      "known_at": 4
+    },
+    {
+      "name": "Chedraui",
+      "facet": "Tiendas, cadenas y la tiendita",
+      "known_at": 5
+    },
+    {
+      "name": "La Comer",
+      "facet": "Tiendas, cadenas y la tiendita",
+      "known_at": 7
+    },
+    {
+      "name": "Liverpool",
+      "facet": "Tiendas, cadenas y la tiendita",
+      "known_at": 4
+    },
+    {
+      "name": "El Palacio de Hierro",
+      "facet": "Tiendas, cadenas y la tiendita",
+      "known_at": 6
+    },
+    {
+      "name": "Coppel",
+      "facet": "Tiendas, cadenas y la tiendita",
+      "known_at": 4
+    },
+    {
+      "name": "Elektra",
+      "facet": "Tiendas, cadenas y la tiendita",
+      "known_at": 5
+    },
+    {
+      "name": "Farmacias Similares",
+      "facet": "Tiendas, cadenas y la tiendita",
+      "known_at": 3
+    },
+    {
+      "name": "7-Eleven",
+      "facet": "Tiendas, cadenas y la tiendita",
+      "known_at": 3
+    },
+    {
+      "name": "Osito Bimbo",
+      "facet": "Mascotas, logotipos y comerciales",
+      "known_at": 1
+    },
+    {
+      "name": "Tigre Toño",
+      "facet": "Mascotas, logotipos y comerciales",
+      "known_at": 1
+    },
+    {
+      "name": "Gallo Cornelio",
+      "facet": "Mascotas, logotipos y comerciales",
+      "known_at": 4
+    },
+    {
+      "name": "Pancho Pantera",
+      "facet": "Mascotas, logotipos y comerciales",
+      "known_at": 7
+    },
+    {
+      "name": "Chester Cheetos",
+      "facet": "Mascotas, logotipos y comerciales",
+      "known_at": 3
+    },
+    {
+      "name": "Pingüino de Marinela",
+      "facet": "Mascotas, logotipos y comerciales",
+      "known_at": 4
+    },
+    {
+      "name": "Sonrisa de Sabritas",
+      "facet": "Mascotas, logotipos y comerciales",
+      "known_at": 4
+    },
+    {
+      "name": "Eslogan «Recuérdame» del Gansito",
+      "facet": "Mascotas, logotipos y comerciales",
+      "known_at": 5
+    },
+    {
+      "name": "Eslogan «A que no puedes comer solo una»",
+      "facet": "Mascotas, logotipos y comerciales",
+      "known_at": 7
+    },
+    {
+      "name": "Logotipo de OXXO",
+      "facet": "Mascotas, logotipos y comerciales",
+      "known_at": 3
+    },
+    {
+      "name": "Corona de Carlos V",
+      "facet": "Mascotas, logotipos y comerciales",
+      "known_at": 6
+    },
+    {
+      "name": "Botella de Jarritos",
+      "facet": "Mascotas, logotipos y comerciales",
+      "known_at": 6
+    },
+    {
+      "name": "Changuito de Pelón Pelo Rico",
+      "facet": "Mascotas, logotipos y comerciales",
+      "known_at": 5
+    },
+    {
+      "name": "Cara de Pulparindo",
+      "facet": "Mascotas, logotipos y comerciales",
+      "known_at": 8
+    },
+    {
+      "name": "Mujer de Tajín",
+      "facet": "Mascotas, logotipos y comerciales",
+      "known_at": 8
+    },
+    {
+      "name": "Grupo Bimbo",
+      "facet": "Historia y fundadores de las marcas",
+      "known_at": 3
+    },
+    {
+      "name": "Pedro Marcos Noriega",
+      "facet": "Historia y fundadores de las marcas",
+      "known_at": 14
+    },
+    {
+      "name": "Barcel",
+      "facet": "Historia y fundadores de las marcas",
+      "known_at": 4
+    },
+    {
+      "name": "Cooperativa Pascual",
+      "facet": "Historia y fundadores de las marcas",
+      "known_at": 10
+    },
+    {
+      "name": "Arturo Mundet",
+      "facet": "Historia y fundadores de las marcas",
+      "known_at": 13
+    },
+    {
+      "name": "Francisco Hill",
+      "facet": "Historia y fundadores de las marcas",
+      "known_at": 14
+    },
+    {
+      "name": "FEMSA",
+      "facet": "Historia y fundadores de las marcas",
+      "known_at": 10
+    },
+    {
+      "name": "Víctor González Torres",
+      "facet": "Historia y fundadores de las marcas",
+      "known_at": 11
+    },
+    {
+      "name": "Dulces Vero",
+      "facet": "Historia y fundadores de las marcas",
+      "known_at": 5
+    },
+    {
+      "name": "Horacio Fernández",
+      "facet": "Historia y fundadores de las marcas",
+      "known_at": 14
+    },
+    {
+      "name": "Salsa Tamazula",
+      "facet": "Historia y fundadores de las marcas",
+      "known_at": 12
+    },
+    {
+      "name": "Linares",
+      "facet": "Historia y fundadores de las marcas",
+      "known_at": 11
+    },
+    {
+      "name": "Grupo Lala",
+      "facet": "Historia y fundadores de las marcas",
+      "known_at": 8
+    }
+  ]
+}
