@@ -1,0 +1,843 @@
+{
+  "subcategory": "regional-speech",
+  "facets": [
+    "Acento andaluz: seseo y ceceo",
+    "Habla canaria",
+    "Palabras de Aragón y Navarra",
+    "Murcia y su «acho»",
+    "Habla castiza de Madrid",
+    "Asturias, León y Cantabria",
+    "Galicia y su castellano",
+    "Castellano del País Vasco",
+    "Castellano de Cataluña, Valencia y Baleares",
+    "Extremadura y las dos Castillas",
+    "Diminutivos según la región",
+    "Una cosa, muchos nombres",
+    "Acentos en la tele y el cine"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 1,
+      "estimate": 1,
+      "record": 1,
+      "origin": 5,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 1,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 1
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Seseo",
+      "facet": "Acento andaluz: seseo y ceceo",
+      "known_at": 8
+    },
+    {
+      "name": "Ceceo",
+      "facet": "Acento andaluz: seseo y ceceo",
+      "known_at": 8
+    },
+    {
+      "name": "Aspiración de la s",
+      "facet": "Acento andaluz: seseo y ceceo",
+      "known_at": 11
+    },
+    {
+      "name": "Yeísmo",
+      "facet": "Acento andaluz: seseo y ceceo",
+      "known_at": 12
+    },
+    {
+      "name": "Miarma",
+      "facet": "Acento andaluz: seseo y ceceo",
+      "known_at": 8
+    },
+    {
+      "name": "Ozú",
+      "facet": "Acento andaluz: seseo y ceceo",
+      "known_at": 6
+    },
+    {
+      "name": "Malaje",
+      "facet": "Acento andaluz: seseo y ceceo",
+      "known_at": 10
+    },
+    {
+      "name": "Esaborío",
+      "facet": "Acento andaluz: seseo y ceceo",
+      "known_at": 9
+    },
+    {
+      "name": "Pechá",
+      "facet": "Acento andaluz: seseo y ceceo",
+      "known_at": 9
+    },
+    {
+      "name": "Jartible",
+      "facet": "Acento andaluz: seseo y ceceo",
+      "known_at": 11
+    },
+    {
+      "name": "Bulla",
+      "facet": "Acento andaluz: seseo y ceceo",
+      "known_at": 10
+    },
+    {
+      "name": "Mijita",
+      "facet": "Acento andaluz: seseo y ceceo",
+      "known_at": 10
+    },
+    {
+      "name": "Papa",
+      "facet": "Habla canaria",
+      "known_at": 5
+    },
+    {
+      "name": "Millo",
+      "facet": "Habla canaria",
+      "known_at": 10
+    },
+    {
+      "name": "Ustedes en lugar de vosotros",
+      "facet": "Habla canaria",
+      "known_at": 9
+    },
+    {
+      "name": "Cholas",
+      "facet": "Habla canaria",
+      "known_at": 11
+    },
+    {
+      "name": "Fos",
+      "facet": "Habla canaria",
+      "known_at": 12
+    },
+    {
+      "name": "Ños",
+      "facet": "Habla canaria",
+      "known_at": 11
+    },
+    {
+      "name": "Baifo",
+      "facet": "Habla canaria",
+      "known_at": 12
+    },
+    {
+      "name": "Enyesque",
+      "facet": "Habla canaria",
+      "known_at": 13
+    },
+    {
+      "name": "Fleje",
+      "facet": "Habla canaria",
+      "known_at": 12
+    },
+    {
+      "name": "Queque",
+      "facet": "Habla canaria",
+      "known_at": 12
+    },
+    {
+      "name": "Perenquén",
+      "facet": "Habla canaria",
+      "known_at": 12
+    },
+    {
+      "name": "Godo",
+      "facet": "Habla canaria",
+      "known_at": 12
+    },
+    {
+      "name": "Magua",
+      "facet": "Habla canaria",
+      "known_at": 13
+    },
+    {
+      "name": "Zagal",
+      "facet": "Palabras de Aragón y Navarra",
+      "known_at": 8
+    },
+    {
+      "name": "Pozal",
+      "facet": "Palabras de Aragón y Navarra",
+      "known_at": 12
+    },
+    {
+      "name": "Rasmia",
+      "facet": "Palabras de Aragón y Navarra",
+      "known_at": 13
+    },
+    {
+      "name": "Ababol",
+      "facet": "Palabras de Aragón y Navarra",
+      "known_at": 11
+    },
+    {
+      "name": "Charrar",
+      "facet": "Palabras de Aragón y Navarra",
+      "known_at": 12
+    },
+    {
+      "name": "Laminero",
+      "facet": "Palabras de Aragón y Navarra",
+      "known_at": 12
+    },
+    {
+      "name": "Chandrío",
+      "facet": "Palabras de Aragón y Navarra",
+      "known_at": 13
+    },
+    {
+      "name": "Esbarizar",
+      "facet": "Palabras de Aragón y Navarra",
+      "known_at": 13
+    },
+    {
+      "name": "Cocote",
+      "facet": "Palabras de Aragón y Navarra",
+      "known_at": 13
+    },
+    {
+      "name": "Ascape",
+      "facet": "Palabras de Aragón y Navarra",
+      "known_at": 13
+    },
+    {
+      "name": "Pilarica",
+      "facet": "Palabras de Aragón y Navarra",
+      "known_at": 9
+    },
+    {
+      "name": "Panocho",
+      "facet": "Murcia y su «acho»",
+      "known_at": 12
+    },
+    {
+      "name": "Bajoca",
+      "facet": "Murcia y su «acho»",
+      "known_at": 12
+    },
+    {
+      "name": "Pésoles",
+      "facet": "Murcia y su «acho»",
+      "known_at": 12
+    },
+    {
+      "name": "Leja",
+      "facet": "Murcia y su «acho»",
+      "known_at": 12
+    },
+    {
+      "name": "Esclafar",
+      "facet": "Murcia y su «acho»",
+      "known_at": 13
+    },
+    {
+      "name": "Picoesquina",
+      "facet": "Murcia y su «acho»",
+      "known_at": 13
+    },
+    {
+      "name": "Embolicar",
+      "facet": "Murcia y su «acho»",
+      "known_at": 13
+    },
+    {
+      "name": "Paparajote",
+      "facet": "Murcia y su «acho»",
+      "known_at": 12
+    },
+    {
+      "name": "Esmorecerse",
+      "facet": "Murcia y su «acho»",
+      "known_at": 14
+    },
+    {
+      "name": "Tete",
+      "facet": "Murcia y su «acho»",
+      "known_at": 10
+    },
+    {
+      "name": "Bonica",
+      "facet": "Murcia y su «acho»",
+      "known_at": 8
+    },
+    {
+      "name": "Huertano",
+      "facet": "Murcia y su «acho»",
+      "known_at": 12
+    },
+    {
+      "name": "Mardito",
+      "facet": "Murcia y su «acho»",
+      "known_at": 13
+    },
+    {
+      "name": "Isidro",
+      "facet": "Habla castiza de Madrid",
+      "known_at": 12
+    },
+    {
+      "name": "Gachó",
+      "facet": "Habla castiza de Madrid",
+      "known_at": 11
+    },
+    {
+      "name": "Menda",
+      "facet": "Habla castiza de Madrid",
+      "known_at": 11
+    },
+    {
+      "name": "Pinrel",
+      "facet": "Habla castiza de Madrid",
+      "known_at": 11
+    },
+    {
+      "name": "Barquillero",
+      "facet": "Habla castiza de Madrid",
+      "known_at": 11
+    },
+    {
+      "name": "Manola",
+      "facet": "Habla castiza de Madrid",
+      "known_at": 12
+    },
+    {
+      "name": "Los Madriles",
+      "facet": "Habla castiza de Madrid",
+      "known_at": 10
+    },
+    {
+      "name": "Bable",
+      "facet": "Asturias, León y Cantabria",
+      "known_at": 10
+    },
+    {
+      "name": "Prestar",
+      "facet": "Asturias, León y Cantabria",
+      "known_at": 11
+    },
+    {
+      "name": "Nenu",
+      "facet": "Asturias, León y Cantabria",
+      "known_at": 11
+    },
+    {
+      "name": "Ho",
+      "facet": "Asturias, León y Cantabria",
+      "known_at": 12
+    },
+    {
+      "name": "Cachaba",
+      "facet": "Asturias, León y Cantabria",
+      "known_at": 13
+    },
+    {
+      "name": "Pitu",
+      "facet": "Asturias, León y Cantabria",
+      "known_at": 12
+    },
+    {
+      "name": "Fabes",
+      "facet": "Asturias, León y Cantabria",
+      "known_at": 8
+    },
+    {
+      "name": "Pindio",
+      "facet": "Asturias, León y Cantabria",
+      "known_at": 13
+    },
+    {
+      "name": "Tolanco",
+      "facet": "Asturias, León y Cantabria",
+      "known_at": 14
+    },
+    {
+      "name": "Montañés",
+      "facet": "Asturias, León y Cantabria",
+      "known_at": 12
+    },
+    {
+      "name": "Pasiego",
+      "facet": "Asturias, León y Cantabria",
+      "known_at": 12
+    },
+    {
+      "name": "Folixa",
+      "facet": "Asturias, León y Cantabria",
+      "known_at": 13
+    },
+    {
+      "name": "Retranca",
+      "facet": "Galicia y su castellano",
+      "known_at": 11
+    },
+    {
+      "name": "Gheada",
+      "facet": "Galicia y su castellano",
+      "known_at": 13
+    },
+    {
+      "name": "Rapaz",
+      "facet": "Galicia y su castellano",
+      "known_at": 11
+    },
+    {
+      "name": "Orballo",
+      "facet": "Galicia y su castellano",
+      "known_at": 12
+    },
+    {
+      "name": "Lambón",
+      "facet": "Galicia y su castellano",
+      "known_at": 12
+    },
+    {
+      "name": "Cachelos",
+      "facet": "Galicia y su castellano",
+      "known_at": 11
+    },
+    {
+      "name": "Lareira",
+      "facet": "Galicia y su castellano",
+      "known_at": 13
+    },
+    {
+      "name": "Cativo",
+      "facet": "Galicia y su castellano",
+      "known_at": 13
+    },
+    {
+      "name": "Fochicar",
+      "facet": "Galicia y su castellano",
+      "known_at": 13
+    },
+    {
+      "name": "Pretérito simple gallego",
+      "facet": "Galicia y su castellano",
+      "known_at": 13
+    },
+    {
+      "name": "Home",
+      "facet": "Galicia y su castellano",
+      "known_at": 10
+    },
+    {
+      "name": "Tolo",
+      "facet": "Galicia y su castellano",
+      "known_at": 12
+    },
+    {
+      "name": "Chafallada",
+      "facet": "Galicia y su castellano",
+      "known_at": 14
+    },
+    {
+      "name": "Depende",
+      "facet": "Galicia y su castellano",
+      "known_at": 9
+    },
+    {
+      "name": "Aita",
+      "facet": "Castellano del País Vasco",
+      "known_at": 8
+    },
+    {
+      "name": "Ama",
+      "facet": "Castellano del País Vasco",
+      "known_at": 9
+    },
+    {
+      "name": "Kaixo",
+      "facet": "Castellano del País Vasco",
+      "known_at": 8
+    },
+    {
+      "name": "Potear",
+      "facet": "Castellano del País Vasco",
+      "known_at": 12
+    },
+    {
+      "name": "Pintxo",
+      "facet": "Castellano del País Vasco",
+      "known_at": 7
+    },
+    {
+      "name": "Sinsorgo",
+      "facet": "Castellano del País Vasco",
+      "known_at": 12
+    },
+    {
+      "name": "Chimbo",
+      "facet": "Castellano del País Vasco",
+      "known_at": 13
+    },
+    {
+      "name": "Zorionak",
+      "facet": "Castellano del País Vasco",
+      "known_at": 10
+    },
+    {
+      "name": "Ahivá",
+      "facet": "Castellano del País Vasco",
+      "known_at": 11
+    },
+    {
+      "name": "Bilbainada",
+      "facet": "Castellano del País Vasco",
+      "known_at": 11
+    },
+    {
+      "name": "Neska",
+      "facet": "Castellano del País Vasco",
+      "known_at": 11
+    },
+    {
+      "name": "Plegar",
+      "facet": "Castellano de Cataluña, Valencia y Baleares",
+      "known_at": 11
+    },
+    {
+      "name": "Iaia",
+      "facet": "Castellano de Cataluña, Valencia y Baleares",
+      "known_at": 9
+    },
+    {
+      "name": "Avi",
+      "facet": "Castellano de Cataluña, Valencia y Baleares",
+      "known_at": 10
+    },
+    {
+      "name": "Tieta",
+      "facet": "Castellano de Cataluña, Valencia y Baleares",
+      "known_at": 10
+    },
+    {
+      "name": "Xe",
+      "facet": "Castellano de Cataluña, Valencia y Baleares",
+      "known_at": 9
+    },
+    {
+      "name": "Nano",
+      "facet": "Castellano de Cataluña, Valencia y Baleares",
+      "known_at": 11
+    },
+    {
+      "name": "Esmorzaret",
+      "facet": "Castellano de Cataluña, Valencia y Baleares",
+      "known_at": 12
+    },
+    {
+      "name": "Al·lot",
+      "facet": "Castellano de Cataluña, Valencia y Baleares",
+      "known_at": 13
+    },
+    {
+      "name": "Foraster",
+      "facet": "Castellano de Cataluña, Valencia y Baleares",
+      "known_at": 13
+    },
+    {
+      "name": "Artículo salado",
+      "facet": "Castellano de Cataluña, Valencia y Baleares",
+      "known_at": 14
+    },
+    {
+      "name": "Bon profit",
+      "facet": "Castellano de Cataluña, Valencia y Baleares",
+      "known_at": 11
+    },
+    {
+      "name": "Pixapins",
+      "facet": "Castellano de Cataluña, Valencia y Baleares",
+      "known_at": 12
+    },
+    {
+      "name": "Ela geminada",
+      "facet": "Castellano de Cataluña, Valencia y Baleares",
+      "known_at": 11
+    },
+    {
+      "name": "Castúo",
+      "facet": "Extremadura y las dos Castillas",
+      "known_at": 12
+    },
+    {
+      "name": "Laísmo",
+      "facet": "Extremadura y las dos Castillas",
+      "known_at": 10
+    },
+    {
+      "name": "Leísmo",
+      "facet": "Extremadura y las dos Castillas",
+      "known_at": 10
+    },
+    {
+      "name": "Loísmo",
+      "facet": "Extremadura y las dos Castillas",
+      "known_at": 11
+    },
+    {
+      "name": "Asina",
+      "facet": "Extremadura y las dos Castillas",
+      "known_at": 11
+    },
+    {
+      "name": "Arrecido",
+      "facet": "Extremadura y las dos Castillas",
+      "known_at": 11
+    },
+    {
+      "name": "Gañán",
+      "facet": "Extremadura y las dos Castillas",
+      "known_at": 10
+    },
+    {
+      "name": "Chiquinino",
+      "facet": "Extremadura y las dos Castillas",
+      "known_at": 13
+    },
+    {
+      "name": "Esmirriado",
+      "facet": "Extremadura y las dos Castillas",
+      "known_at": 10
+    },
+    {
+      "name": "Atascaburras",
+      "facet": "Extremadura y las dos Castillas",
+      "known_at": 13
+    },
+    {
+      "name": "Gachas",
+      "facet": "Extremadura y las dos Castillas",
+      "known_at": 10
+    },
+    {
+      "name": "Bujero",
+      "facet": "Extremadura y las dos Castillas",
+      "known_at": 11
+    },
+    {
+      "name": "Habla manchega",
+      "facet": "Extremadura y las dos Castillas",
+      "known_at": 11
+    },
+    {
+      "name": "Hacer la pascua",
+      "facet": "Extremadura y las dos Castillas",
+      "known_at": 11
+    },
+    {
+      "name": "Castellano de Valladolid",
+      "facet": "Extremadura y las dos Castillas",
+      "known_at": 11
+    },
+    {
+      "name": "Diminutivo -ito",
+      "facet": "Diminutivos según la región",
+      "known_at": 4
+    },
+    {
+      "name": "Diminutivo -illo",
+      "facet": "Diminutivos según la región",
+      "known_at": 6
+    },
+    {
+      "name": "Diminutivo -ico",
+      "facet": "Diminutivos según la región",
+      "known_at": 8
+    },
+    {
+      "name": "Diminutivo -ín",
+      "facet": "Diminutivos según la región",
+      "known_at": 8
+    },
+    {
+      "name": "Diminutivo -iño",
+      "facet": "Diminutivos según la región",
+      "known_at": 9
+    },
+    {
+      "name": "Diminutivo -uco",
+      "facet": "Diminutivos según la región",
+      "known_at": 11
+    },
+    {
+      "name": "Diminutivo -ete",
+      "facet": "Diminutivos según la región",
+      "known_at": 10
+    },
+    {
+      "name": "Diminutivo -ejo",
+      "facet": "Diminutivos según la región",
+      "known_at": 11
+    },
+    {
+      "name": "Diminutivo -ucho",
+      "facet": "Diminutivos según la región",
+      "known_at": 11
+    },
+    {
+      "name": "Chiquitito",
+      "facet": "Diminutivos según la región",
+      "known_at": 4
+    },
+    {
+      "name": "Momentico",
+      "facet": "Diminutivos según la región",
+      "known_at": 8
+    },
+    {
+      "name": "Guapín",
+      "facet": "Diminutivos según la región",
+      "known_at": 8
+    },
+    {
+      "name": "Riquiño",
+      "facet": "Diminutivos según la región",
+      "known_at": 10
+    },
+    {
+      "name": "Mozuco",
+      "facet": "Diminutivos según la región",
+      "known_at": 12
+    },
+    {
+      "name": "Pequeñín",
+      "facet": "Diminutivos según la región",
+      "known_at": 5
+    },
+    {
+      "name": "Palomitas",
+      "facet": "Una cosa, muchos nombres",
+      "known_at": 4
+    },
+    {
+      "name": "Zapatillas de deporte",
+      "facet": "Una cosa, muchos nombres",
+      "known_at": 5
+    },
+    {
+      "name": "Tirachinas",
+      "facet": "Una cosa, muchos nombres",
+      "known_at": 6
+    },
+    {
+      "name": "Pinza de la ropa",
+      "facet": "Una cosa, muchos nombres",
+      "known_at": 7
+    },
+    {
+      "name": "Judía",
+      "facet": "Una cosa, muchos nombres",
+      "known_at": 7
+    },
+    {
+      "name": "Pajita",
+      "facet": "Una cosa, muchos nombres",
+      "known_at": 5
+    },
+    {
+      "name": "Bicho bola",
+      "facet": "Una cosa, muchos nombres",
+      "known_at": 5
+    },
+    {
+      "name": "Tobogán",
+      "facet": "Una cosa, muchos nombres",
+      "known_at": 4
+    },
+    {
+      "name": "Chichón",
+      "facet": "Una cosa, muchos nombres",
+      "known_at": 5
+    },
+    {
+      "name": "Goma del pelo",
+      "facet": "Una cosa, muchos nombres",
+      "known_at": 6
+    },
+    {
+      "name": "Renacuajo",
+      "facet": "Una cosa, muchos nombres",
+      "known_at": 6
+    },
+    {
+      "name": "Calabacín",
+      "facet": "Una cosa, muchos nombres",
+      "known_at": 7
+    },
+    {
+      "name": "Chubasquero",
+      "facet": "Una cosa, muchos nombres",
+      "known_at": 7
+    },
+    {
+      "name": "Coscorrón",
+      "facet": "Una cosa, muchos nombres",
+      "known_at": 7
+    },
+    {
+      "name": "Los Morancos",
+      "facet": "Acentos en la tele y el cine",
+      "known_at": 9
+    },
+    {
+      "name": "Joaquín Reyes",
+      "facet": "Acentos en la tele y el cine",
+      "known_at": 11
+    },
+    {
+      "name": "Ignatius Farray",
+      "facet": "Acentos en la tele y el cine",
+      "known_at": 12
+    },
+    {
+      "name": "Vaya semanita",
+      "facet": "Acentos en la tele y el cine",
+      "known_at": 12
+    },
+    {
+      "name": "El mundo es nuestro",
+      "facet": "Acentos en la tele y el cine",
+      "known_at": 13
+    },
+    {
+      "name": "Leo Harlem",
+      "facet": "Acentos en la tele y el cine",
+      "known_at": 10
+    }
+  ]
+}

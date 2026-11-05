@@ -1,0 +1,647 @@
+{
+  "subcategory": "tv-shows-and-presenters",
+  "facets": [
+    "Concursos y juegos de televisión",
+    "Programas infantiles y dibujos",
+    "Presentadores y presentadoras míticos",
+    "Talent shows y realities",
+    "Late night y humor televisivo",
+    "Informativos y periodistas",
+    "Magacines y programas del corazón",
+    "Programas de cocina",
+    "Galas de Nochevieja y Eurovisión",
+    "Cadenas y historia de la tele",
+    "Frases, sintonías y mascotas",
+    "Divulgación y documentales españoles"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "La ruleta de la suerte",
+      "facet": "Concursos y juegos de televisión",
+      "known_at": 5
+    },
+    {
+      "name": "¡Boom!",
+      "facet": "Concursos y juegos de televisión",
+      "known_at": 8
+    },
+    {
+      "name": "Ahora caigo",
+      "facet": "Concursos y juegos de televisión",
+      "known_at": 9
+    },
+    {
+      "name": "El precio justo",
+      "facet": "Concursos y juegos de televisión",
+      "known_at": 10
+    },
+    {
+      "name": "Cifras y letras",
+      "facet": "Concursos y juegos de televisión",
+      "known_at": 11
+    },
+    {
+      "name": "¿Quién quiere ser millonario?",
+      "facet": "Concursos y juegos de televisión",
+      "known_at": 7
+    },
+    {
+      "name": "Atrapa un millón",
+      "facet": "Concursos y juegos de televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Humor amarillo",
+      "facet": "Concursos y juegos de televisión",
+      "known_at": 9
+    },
+    {
+      "name": "Password",
+      "facet": "Concursos y juegos de televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Allá tú",
+      "facet": "Concursos y juegos de televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Alta tensión",
+      "facet": "Concursos y juegos de televisión",
+      "known_at": 10
+    },
+    {
+      "name": "El tiempo es oro",
+      "facet": "Concursos y juegos de televisión",
+      "known_at": 13
+    },
+    {
+      "name": "El cazador",
+      "facet": "Concursos y juegos de televisión",
+      "known_at": 9
+    },
+    {
+      "name": "Reacción en cadena",
+      "facet": "Concursos y juegos de televisión",
+      "known_at": 8
+    },
+    {
+      "name": "Furor",
+      "facet": "Concursos y juegos de televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Bely y Bill",
+      "facet": "Programas infantiles y dibujos",
+      "known_at": 8
+    },
+    {
+      "name": "Mayra Gómez Kemp",
+      "facet": "Presentadores y presentadoras míticos",
+      "known_at": 13
+    },
+    {
+      "name": "Jesús Hermida",
+      "facet": "Presentadores y presentadoras míticos",
+      "known_at": 14
+    },
+    {
+      "name": "Joaquín Prat",
+      "facet": "Presentadores y presentadoras míticos",
+      "known_at": 13
+    },
+    {
+      "name": "Juanra Bonet",
+      "facet": "Presentadores y presentadoras míticos",
+      "known_at": 10
+    },
+    {
+      "name": "Paz Padilla",
+      "facet": "Presentadores y presentadoras míticos",
+      "known_at": 8
+    },
+    {
+      "name": "Laura Valenzuela",
+      "facet": "Presentadores y presentadoras míticos",
+      "known_at": 14
+    },
+    {
+      "name": "Pepe Navarro",
+      "facet": "Presentadores y presentadoras míticos",
+      "known_at": 13
+    },
+    {
+      "name": "Supervivientes",
+      "facet": "Talent shows y realities",
+      "known_at": 8
+    },
+    {
+      "name": "Mira quién baila",
+      "facet": "Talent shows y realities",
+      "known_at": 10
+    },
+    {
+      "name": "First Dates",
+      "facet": "Talent shows y realities",
+      "known_at": 11
+    },
+    {
+      "name": "El desafío",
+      "facet": "Talent shows y realities",
+      "known_at": 9
+    },
+    {
+      "name": "Pekín Express",
+      "facet": "Talent shows y realities",
+      "known_at": 11
+    },
+    {
+      "name": "El conquistador del fin del mundo",
+      "facet": "Talent shows y realities",
+      "known_at": 12
+    },
+    {
+      "name": "Mask Singer: adivina quién canta",
+      "facet": "Talent shows y realities",
+      "known_at": 7
+    },
+    {
+      "name": "Risto Mejide",
+      "facet": "Talent shows y realities",
+      "known_at": 10
+    },
+    {
+      "name": "La Revuelta",
+      "facet": "Late night y humor televisivo",
+      "known_at": 9
+    },
+    {
+      "name": "Late Motiv",
+      "facet": "Late night y humor televisivo",
+      "known_at": 12
+    },
+    {
+      "name": "Crónicas marcianas",
+      "facet": "Late night y humor televisivo",
+      "known_at": 13
+    },
+    {
+      "name": "Javier Sardà",
+      "facet": "Late night y humor televisivo",
+      "known_at": 14
+    },
+    {
+      "name": "Cruz y Raya",
+      "facet": "Late night y humor televisivo",
+      "known_at": 12
+    },
+    {
+      "name": "Muchachada Nui",
+      "facet": "Late night y humor televisivo",
+      "known_at": 14
+    },
+    {
+      "name": "Caiga quien caiga",
+      "facet": "Late night y humor televisivo",
+      "known_at": 12
+    },
+    {
+      "name": "El intermedio",
+      "facet": "Late night y humor televisivo",
+      "known_at": 11
+    },
+    {
+      "name": "José Mota",
+      "facet": "Late night y humor televisivo",
+      "known_at": 8
+    },
+    {
+      "name": "Homo Zapping",
+      "facet": "Late night y humor televisivo",
+      "known_at": 13
+    },
+    {
+      "name": "Chiquito de la Calzada",
+      "facet": "Late night y humor televisivo",
+      "known_at": 9
+    },
+    {
+      "name": "Telediario",
+      "facet": "Informativos y periodistas",
+      "known_at": 6
+    },
+    {
+      "name": "Ana Blanco",
+      "facet": "Informativos y periodistas",
+      "known_at": 12
+    },
+    {
+      "name": "Jordi Évole",
+      "facet": "Informativos y periodistas",
+      "known_at": 11
+    },
+    {
+      "name": "Salvados",
+      "facet": "Informativos y periodistas",
+      "known_at": 11
+    },
+    {
+      "name": "Lorenzo Milá",
+      "facet": "Informativos y periodistas",
+      "known_at": 13
+    },
+    {
+      "name": "Pedro Piqueras",
+      "facet": "Informativos y periodistas",
+      "known_at": 12
+    },
+    {
+      "name": "Vicente Vallés",
+      "facet": "Informativos y periodistas",
+      "known_at": 12
+    },
+    {
+      "name": "Roberto Brasero",
+      "facet": "Informativos y periodistas",
+      "known_at": 9
+    },
+    {
+      "name": "Mario Picazo",
+      "facet": "Informativos y periodistas",
+      "known_at": 11
+    },
+    {
+      "name": "Mariano Medina",
+      "facet": "Informativos y periodistas",
+      "known_at": 14
+    },
+    {
+      "name": "José Antonio Maldonado",
+      "facet": "Informativos y periodistas",
+      "known_at": 13
+    },
+    {
+      "name": "Informe Semanal",
+      "facet": "Informativos y periodistas",
+      "known_at": 12
+    },
+    {
+      "name": "Pepa Bueno",
+      "facet": "Informativos y periodistas",
+      "known_at": 13
+    },
+    {
+      "name": "Ana Pastor",
+      "facet": "Informativos y periodistas",
+      "known_at": 12
+    },
+    {
+      "name": "Hilario Pino",
+      "facet": "Informativos y periodistas",
+      "known_at": 13
+    },
+    {
+      "name": "Los desayunos de TVE",
+      "facet": "Informativos y periodistas",
+      "known_at": 13
+    },
+    {
+      "name": "Callejeros",
+      "facet": "Informativos y periodistas",
+      "known_at": 11
+    },
+    {
+      "name": "El programa de Ana Rosa",
+      "facet": "Magacines y programas del corazón",
+      "known_at": 11
+    },
+    {
+      "name": "Corazón, corazón",
+      "facet": "Magacines y programas del corazón",
+      "known_at": 12
+    },
+    {
+      "name": "Aquí hay tomate",
+      "facet": "Magacines y programas del corazón",
+      "known_at": 13
+    },
+    {
+      "name": "Mariló Montero",
+      "facet": "Magacines y programas del corazón",
+      "known_at": 13
+    },
+    {
+      "name": "Día a día",
+      "facet": "Magacines y programas del corazón",
+      "known_at": 14
+    },
+    {
+      "name": "Espejo público",
+      "facet": "Magacines y programas del corazón",
+      "known_at": 12
+    },
+    {
+      "name": "Susanna Griso",
+      "facet": "Magacines y programas del corazón",
+      "known_at": 12
+    },
+    {
+      "name": "Mañaneros",
+      "facet": "Magacines y programas del corazón",
+      "known_at": 13
+    },
+    {
+      "name": "Lydia Lozano",
+      "facet": "Magacines y programas del corazón",
+      "known_at": 12
+    },
+    {
+      "name": "Kiko Matamoros",
+      "facet": "Magacines y programas del corazón",
+      "known_at": 13
+    },
+    {
+      "name": "Mi casa es la tuya",
+      "facet": "Magacines y programas del corazón",
+      "known_at": 12
+    },
+    {
+      "name": "MasterChef Celebrity",
+      "facet": "Programas de cocina",
+      "known_at": 7
+    },
+    {
+      "name": "Jordi Cruz (chef)",
+      "facet": "Programas de cocina",
+      "known_at": 8
+    },
+    {
+      "name": "Robin Food",
+      "facet": "Programas de cocina",
+      "known_at": 13
+    },
+    {
+      "name": "Torres en la cocina",
+      "facet": "Programas de cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Bake Off España",
+      "facet": "Programas de cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Un país para comérselo",
+      "facet": "Programas de cocina",
+      "known_at": 13
+    },
+    {
+      "name": "Campanadas de Fin de Año",
+      "facet": "Galas de Nochevieja y Eurovisión",
+      "known_at": 3
+    },
+    {
+      "name": "Reloj de la Puerta del Sol",
+      "facet": "Galas de Nochevieja y Eurovisión",
+      "known_at": 4
+    },
+    {
+      "name": "Cachitos de hierro y cromo",
+      "facet": "Galas de Nochevieja y Eurovisión",
+      "known_at": 13
+    },
+    {
+      "name": "Eurovisión",
+      "facet": "Galas de Nochevieja y Eurovisión",
+      "known_at": 3
+    },
+    {
+      "name": "José Luis Uribarri",
+      "facet": "Galas de Nochevieja y Eurovisión",
+      "known_at": 14
+    },
+    {
+      "name": "TVE",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 4
+    },
+    {
+      "name": "Antena 3",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 5
+    },
+    {
+      "name": "Telecinco",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 5
+    },
+    {
+      "name": "Cuatro",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 7
+    },
+    {
+      "name": "laSexta",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 8
+    },
+    {
+      "name": "Canal+",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 12
+    },
+    {
+      "name": "Movistar Plus+",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 8
+    },
+    {
+      "name": "Teledeporte",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 9
+    },
+    {
+      "name": "TV3",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 9
+    },
+    {
+      "name": "Canal Sur",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 9
+    },
+    {
+      "name": "Prado del Rey",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 13
+    },
+    {
+      "name": "Torrespaña",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 12
+    },
+    {
+      "name": "Los dos rombos",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 13
+    },
+    {
+      "name": "TDT",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 10
+    },
+    {
+      "name": "Mediaset España",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 11
+    },
+    {
+      "name": "Atresmedia",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 11
+    },
+    {
+      "name": "Primera emisión de TVE",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 13
+    },
+    {
+      "name": "Estudio 1",
+      "facet": "Cadenas y historia de la tele",
+      "known_at": 14
+    },
+    {
+      "name": "Las Tacañonas",
+      "facet": "Frases, sintonías y mascotas",
+      "known_at": 11
+    },
+    {
+      "name": "Don Cicuta",
+      "facet": "Frases, sintonías y mascotas",
+      "known_at": 13
+    },
+    {
+      "name": "«Hasta aquí puedo leer»",
+      "facet": "Frases, sintonías y mascotas",
+      "known_at": 11
+    },
+    {
+      "name": "«Pecador de la pradera»",
+      "facet": "Frases, sintonías y mascotas",
+      "known_at": 11
+    },
+    {
+      "name": "«¡Fistro!»",
+      "facet": "Frases, sintonías y mascotas",
+      "known_at": 10
+    },
+    {
+      "name": "«Rico, rico y con fundamento»",
+      "facet": "Frases, sintonías y mascotas",
+      "known_at": 8
+    },
+    {
+      "name": "«Vuelve a casa por Navidad»",
+      "facet": "Frases, sintonías y mascotas",
+      "known_at": 6
+    },
+    {
+      "name": "«¿A qué huelen las nubes?»",
+      "facet": "Frases, sintonías y mascotas",
+      "known_at": 12
+    },
+    {
+      "name": "«Busque, compare y si encuentra algo mejor, cómprelo»",
+      "facet": "Frases, sintonías y mascotas",
+      "known_at": 13
+    },
+    {
+      "name": "«Ya es Navidad en El Corte Inglés»",
+      "facet": "Frases, sintonías y mascotas",
+      "known_at": 9
+    },
+    {
+      "name": "Comando Actualidad",
+      "facet": "Divulgación y documentales españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Españoles en el mundo",
+      "facet": "Divulgación y documentales españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Órbita Laika",
+      "facet": "Divulgación y documentales españoles",
+      "known_at": 14
+    },
+    {
+      "name": "Saber vivir",
+      "facet": "Divulgación y documentales españoles",
+      "known_at": 12
+    },
+    {
+      "name": "La aventura del saber",
+      "facet": "Divulgación y documentales españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Imprescindibles",
+      "facet": "Divulgación y documentales españoles",
+      "known_at": 14
+    },
+    {
+      "name": "El escarabajo verde",
+      "facet": "Divulgación y documentales españoles",
+      "known_at": 14
+    },
+    {
+      "name": "Grandes documentales",
+      "facet": "Divulgación y documentales españoles",
+      "known_at": 11
+    }
+  ]
+}

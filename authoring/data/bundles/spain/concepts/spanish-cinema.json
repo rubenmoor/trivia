@@ -1,0 +1,1051 @@
+{
+  "subcategory": "spanish-cinema",
+  "facets": [
+    "Directores españoles",
+    "Actores y actrices españoles",
+    "Clásicos del cine español",
+    "Comedias y taquillazos",
+    "Premios Goya",
+    "Festivales de cine en España",
+    "Cine de animación español",
+    "Terror y fantasía española",
+    "Personajes y frases míticas",
+    "España como plató de rodaje",
+    "Historia del cine en España"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Alejandro Amenábar",
+      "facet": "Directores españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Carlos Saura",
+      "facet": "Directores españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Luis García Berlanga",
+      "facet": "Directores españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Fernando Trueba",
+      "facet": "Directores españoles",
+      "known_at": 12
+    },
+    {
+      "name": "J. A. Bayona",
+      "facet": "Directores españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Álex de la Iglesia",
+      "facet": "Directores españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Isabel Coixet",
+      "facet": "Directores españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Icíar Bollaín",
+      "facet": "Directores españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Fernando León de Aranoa",
+      "facet": "Directores españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Víctor Erice",
+      "facet": "Directores españoles",
+      "known_at": 14
+    },
+    {
+      "name": "Juan Antonio Bardem",
+      "facet": "Directores españoles",
+      "known_at": 14
+    },
+    {
+      "name": "José Luis Garci",
+      "facet": "Directores españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Rodrigo Sorogoyen",
+      "facet": "Directores españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Carla Simón",
+      "facet": "Directores españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Pilar Miró",
+      "facet": "Directores españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Julio Medem",
+      "facet": "Directores españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Bigas Luna",
+      "facet": "Directores españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Pablo Berger",
+      "facet": "Directores españoles",
+      "known_at": 14
+    },
+    {
+      "name": "Paco Plaza",
+      "facet": "Directores españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Antonio Banderas",
+      "facet": "Actores y actrices españoles",
+      "known_at": 6
+    },
+    {
+      "name": "Penélope Cruz",
+      "facet": "Actores y actrices españoles",
+      "known_at": 7
+    },
+    {
+      "name": "Javier Bardem",
+      "facet": "Actores y actrices españoles",
+      "known_at": 8
+    },
+    {
+      "name": "Santiago Segura",
+      "facet": "Actores y actrices españoles",
+      "known_at": 7
+    },
+    {
+      "name": "Úrsula Corberó",
+      "facet": "Actores y actrices españoles",
+      "known_at": 8
+    },
+    {
+      "name": "Mario Casas",
+      "facet": "Actores y actrices españoles",
+      "known_at": 8
+    },
+    {
+      "name": "Paco León",
+      "facet": "Actores y actrices españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Belén Rueda",
+      "facet": "Actores y actrices españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Luis Tosar",
+      "facet": "Actores y actrices españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Javier Cámara",
+      "facet": "Actores y actrices españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Carmen Machi",
+      "facet": "Actores y actrices españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Antonio Resines",
+      "facet": "Actores y actrices españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Carmen Maura",
+      "facet": "Actores y actrices españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Rossy de Palma",
+      "facet": "Actores y actrices españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Karra Elejalde",
+      "facet": "Actores y actrices españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Maribel Verdú",
+      "facet": "Actores y actrices españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Fernando Fernán Gómez",
+      "facet": "Actores y actrices españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Alfredo Landa",
+      "facet": "Actores y actrices españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Paco Martínez Soria",
+      "facet": "Actores y actrices españoles",
+      "known_at": 12
+    },
+    {
+      "name": "José Sacristán",
+      "facet": "Actores y actrices españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Victoria Abril",
+      "facet": "Actores y actrices españoles",
+      "known_at": 12
+    },
+    {
+      "name": "El verdugo",
+      "facet": "Clásicos del cine español",
+      "known_at": 13
+    },
+    {
+      "name": "Plácido",
+      "facet": "Clásicos del cine español",
+      "known_at": 13
+    },
+    {
+      "name": "Viridiana",
+      "facet": "Clásicos del cine español",
+      "known_at": 13
+    },
+    {
+      "name": "El espíritu de la colmena",
+      "facet": "Clásicos del cine español",
+      "known_at": 13
+    },
+    {
+      "name": "Muerte de un ciclista",
+      "facet": "Clásicos del cine español",
+      "known_at": 14
+    },
+    {
+      "name": "Cría cuervos",
+      "facet": "Clásicos del cine español",
+      "known_at": 13
+    },
+    {
+      "name": "¿Qué he hecho yo para merecer esto!!",
+      "facet": "Clásicos del cine español",
+      "known_at": 13
+    },
+    {
+      "name": "Jamón, jamón",
+      "facet": "Clásicos del cine español",
+      "known_at": 12
+    },
+    {
+      "name": "Belle Époque",
+      "facet": "Clásicos del cine español",
+      "known_at": 12
+    },
+    {
+      "name": "Todo sobre mi madre",
+      "facet": "Clásicos del cine español",
+      "known_at": 11
+    },
+    {
+      "name": "Volver",
+      "facet": "Clásicos del cine español",
+      "known_at": 10
+    },
+    {
+      "name": "Mar adentro",
+      "facet": "Clásicos del cine español",
+      "known_at": 11
+    },
+    {
+      "name": "Los lunes al sol",
+      "facet": "Clásicos del cine español",
+      "known_at": 11
+    },
+    {
+      "name": "Abre los ojos",
+      "facet": "Clásicos del cine español",
+      "known_at": 12
+    },
+    {
+      "name": "Tesis",
+      "facet": "Clásicos del cine español",
+      "known_at": 12
+    },
+    {
+      "name": "La vaquilla",
+      "facet": "Clásicos del cine español",
+      "known_at": 12
+    },
+    {
+      "name": "Amanece, que no es poco",
+      "facet": "Clásicos del cine español",
+      "known_at": 13
+    },
+    {
+      "name": "Ocho apellidos vascos",
+      "facet": "Comedias y taquillazos",
+      "known_at": 7
+    },
+    {
+      "name": "Ocho apellidos catalanes",
+      "facet": "Comedias y taquillazos",
+      "known_at": 8
+    },
+    {
+      "name": "Campeones",
+      "facet": "Comedias y taquillazos",
+      "known_at": 7
+    },
+    {
+      "name": "Padre no hay más que uno",
+      "facet": "Comedias y taquillazos",
+      "known_at": 7
+    },
+    {
+      "name": "Lo imposible",
+      "facet": "Comedias y taquillazos",
+      "known_at": 8
+    },
+    {
+      "name": "Tres metros sobre el cielo",
+      "facet": "Comedias y taquillazos",
+      "known_at": 8
+    },
+    {
+      "name": "Tengo ganas de ti",
+      "facet": "Comedias y taquillazos",
+      "known_at": 9
+    },
+    {
+      "name": "Fuga de cerebros",
+      "facet": "Comedias y taquillazos",
+      "known_at": 9
+    },
+    {
+      "name": "Toc Toc",
+      "facet": "Comedias y taquillazos",
+      "known_at": 9
+    },
+    {
+      "name": "Spanish Movie",
+      "facet": "Comedias y taquillazos",
+      "known_at": 10
+    },
+    {
+      "name": "El otro lado de la cama",
+      "facet": "Comedias y taquillazos",
+      "known_at": 11
+    },
+    {
+      "name": "Perdiendo el norte",
+      "facet": "Comedias y taquillazos",
+      "known_at": 11
+    },
+    {
+      "name": "Kiki, el amor se hace",
+      "facet": "Comedias y taquillazos",
+      "known_at": 11
+    },
+    {
+      "name": "Señor, dame paciencia",
+      "facet": "Comedias y taquillazos",
+      "known_at": 11
+    },
+    {
+      "name": "Lo dejo cuando quiera",
+      "facet": "Comedias y taquillazos",
+      "known_at": 11
+    },
+    {
+      "name": "Isi & Disi",
+      "facet": "Comedias y taquillazos",
+      "known_at": 11
+    },
+    {
+      "name": "Airbag",
+      "facet": "Comedias y taquillazos",
+      "known_at": 12
+    },
+    {
+      "name": "Villaviciosa de al lado",
+      "facet": "Comedias y taquillazos",
+      "known_at": 12
+    },
+    {
+      "name": "La ciudad no es para mí",
+      "facet": "Comedias y taquillazos",
+      "known_at": 12
+    },
+    {
+      "name": "Que se mueran los feos",
+      "facet": "Comedias y taquillazos",
+      "known_at": 12
+    },
+    {
+      "name": "Tres bodas de más",
+      "facet": "Comedias y taquillazos",
+      "known_at": 12
+    },
+    {
+      "name": "Estatuilla del Goya",
+      "facet": "Premios Goya",
+      "known_at": 9
+    },
+    {
+      "name": "Gala de los Premios Goya",
+      "facet": "Premios Goya",
+      "known_at": 9
+    },
+    {
+      "name": "Academia de las Artes y las Ciencias Cinematográficas de España",
+      "facet": "Premios Goya",
+      "known_at": 12
+    },
+    {
+      "name": "Goya de Honor",
+      "facet": "Premios Goya",
+      "known_at": 12
+    },
+    {
+      "name": "Goya a la mejor película",
+      "facet": "Premios Goya",
+      "known_at": 10
+    },
+    {
+      "name": "Goya a la mejor actriz protagonista",
+      "facet": "Premios Goya",
+      "known_at": 11
+    },
+    {
+      "name": "Goya al mejor actor protagonista",
+      "facet": "Premios Goya",
+      "known_at": 11
+    },
+    {
+      "name": "Goya al mejor actor de reparto",
+      "facet": "Premios Goya",
+      "known_at": 12
+    },
+    {
+      "name": "Goya al mejor actor revelación",
+      "facet": "Premios Goya",
+      "known_at": 12
+    },
+    {
+      "name": "Goya a la mejor dirección novel",
+      "facet": "Premios Goya",
+      "known_at": 13
+    },
+    {
+      "name": "Goya a la mejor película iberoamericana",
+      "facet": "Premios Goya",
+      "known_at": 13
+    },
+    {
+      "name": "Goya a la mejor película europea",
+      "facet": "Premios Goya",
+      "known_at": 13
+    },
+    {
+      "name": "Goya a la mejor canción original",
+      "facet": "Premios Goya",
+      "known_at": 12
+    },
+    {
+      "name": "Goya a los mejores efectos especiales",
+      "facet": "Premios Goya",
+      "known_at": 12
+    },
+    {
+      "name": "Goya a la mejor película de animación",
+      "facet": "Premios Goya",
+      "known_at": 12
+    },
+    {
+      "name": "Goya al mejor guion original",
+      "facet": "Premios Goya",
+      "known_at": 12
+    },
+    {
+      "name": "Goya al mejor maquillaje y peluquería",
+      "facet": "Premios Goya",
+      "known_at": 13
+    },
+    {
+      "name": "Goya a la mejor película documental",
+      "facet": "Premios Goya",
+      "known_at": 13
+    },
+    {
+      "name": "Goya Internacional",
+      "facet": "Premios Goya",
+      "known_at": 13
+    },
+    {
+      "name": "Óscar a la mejor película internacional",
+      "facet": "Premios Goya",
+      "known_at": 10
+    },
+    {
+      "name": "Premios Feroz",
+      "facet": "Premios Goya",
+      "known_at": 13
+    },
+    {
+      "name": "Premios Platino",
+      "facet": "Premios Goya",
+      "known_at": 13
+    },
+    {
+      "name": "Premios Forqué",
+      "facet": "Premios Goya",
+      "known_at": 14
+    },
+    {
+      "name": "Festival de San Sebastián",
+      "facet": "Festivales de cine en España",
+      "known_at": 10
+    },
+    {
+      "name": "Concha de Oro",
+      "facet": "Festivales de cine en España",
+      "known_at": 12
+    },
+    {
+      "name": "Concha de Plata",
+      "facet": "Festivales de cine en España",
+      "known_at": 13
+    },
+    {
+      "name": "Premio Donostia",
+      "facet": "Festivales de cine en España",
+      "known_at": 13
+    },
+    {
+      "name": "Teatro Victoria Eugenia",
+      "facet": "Festivales de cine en España",
+      "known_at": 14
+    },
+    {
+      "name": "Festival de Málaga",
+      "facet": "Festivales de cine en España",
+      "known_at": 11
+    },
+    {
+      "name": "Biznaga de Oro",
+      "facet": "Festivales de cine en España",
+      "known_at": 13
+    },
+    {
+      "name": "Seminci de Valladolid",
+      "facet": "Festivales de cine en España",
+      "known_at": 13
+    },
+    {
+      "name": "Espiga de Oro",
+      "facet": "Festivales de cine en España",
+      "known_at": 14
+    },
+    {
+      "name": "Festival de Sitges",
+      "facet": "Festivales de cine en España",
+      "known_at": 12
+    },
+    {
+      "name": "Festival de Cine Europeo de Sevilla",
+      "facet": "Festivales de cine en España",
+      "known_at": 13
+    },
+    {
+      "name": "Festival Internacional de Cine de Gijón",
+      "facet": "Festivales de cine en España",
+      "known_at": 14
+    },
+    {
+      "name": "Festival de Cine Iberoamericano de Huelva",
+      "facet": "Festivales de cine en España",
+      "known_at": 14
+    },
+    {
+      "name": "Colón de Oro",
+      "facet": "Festivales de cine en España",
+      "known_at": 15
+    },
+    {
+      "name": "Festival de Cine de Huesca",
+      "facet": "Festivales de cine en España",
+      "known_at": 14
+    },
+    {
+      "name": "Cinema Jove de Valencia",
+      "facet": "Festivales de cine en España",
+      "known_at": 14
+    },
+    {
+      "name": "Alcine",
+      "facet": "Festivales de cine en España",
+      "known_at": 15
+    },
+    {
+      "name": "Festival de Cine de Las Palmas de Gran Canaria",
+      "facet": "Festivales de cine en España",
+      "known_at": 14
+    },
+    {
+      "name": "Alfombra roja",
+      "facet": "Festivales de cine en España",
+      "known_at": 6
+    },
+    {
+      "name": "Atrapa la bandera",
+      "facet": "Cine de animación español",
+      "known_at": 9
+    },
+    {
+      "name": "Planet 51",
+      "facet": "Cine de animación español",
+      "known_at": 9
+    },
+    {
+      "name": "Klaus",
+      "facet": "Cine de animación español",
+      "known_at": 8
+    },
+    {
+      "name": "Momias",
+      "facet": "Cine de animación español",
+      "known_at": 11
+    },
+    {
+      "name": "Robot Dreams",
+      "facet": "Cine de animación español",
+      "known_at": 12
+    },
+    {
+      "name": "Chico y Rita",
+      "facet": "Cine de animación español",
+      "known_at": 13
+    },
+    {
+      "name": "El Cid: La leyenda",
+      "facet": "Cine de animación español",
+      "known_at": 13
+    },
+    {
+      "name": "Donkey Xote",
+      "facet": "Cine de animación español",
+      "known_at": 13
+    },
+    {
+      "name": "Buñuel en el laberinto de las tortugas",
+      "facet": "Cine de animación español",
+      "known_at": 14
+    },
+    {
+      "name": "Sergio Pablos",
+      "facet": "Cine de animación español",
+      "known_at": 14
+    },
+    {
+      "name": "Unicorn Wars",
+      "facet": "Cine de animación español",
+      "known_at": 14
+    },
+    {
+      "name": "El laberinto del fauno",
+      "facet": "Terror y fantasía española",
+      "known_at": 9
+    },
+    {
+      "name": "REC",
+      "facet": "Terror y fantasía española",
+      "known_at": 10
+    },
+    {
+      "name": "El orfanato",
+      "facet": "Terror y fantasía española",
+      "known_at": 10
+    },
+    {
+      "name": "Los otros",
+      "facet": "Terror y fantasía española",
+      "known_at": 10
+    },
+    {
+      "name": "El hoyo",
+      "facet": "Terror y fantasía española",
+      "known_at": 10
+    },
+    {
+      "name": "Un monstruo viene a verme",
+      "facet": "Terror y fantasía española",
+      "known_at": 10
+    },
+    {
+      "name": "El día de la bestia",
+      "facet": "Terror y fantasía española",
+      "known_at": 11
+    },
+    {
+      "name": "Verónica",
+      "facet": "Terror y fantasía española",
+      "known_at": 11
+    },
+    {
+      "name": "Malasaña 32",
+      "facet": "Terror y fantasía española",
+      "known_at": 12
+    },
+    {
+      "name": "Los ojos de Julia",
+      "facet": "Terror y fantasía española",
+      "known_at": 12
+    },
+    {
+      "name": "El cuerpo",
+      "facet": "Terror y fantasía española",
+      "known_at": 12
+    },
+    {
+      "name": "El espinazo del diablo",
+      "facet": "Terror y fantasía española",
+      "known_at": 13
+    },
+    {
+      "name": "Mientras duermes",
+      "facet": "Terror y fantasía española",
+      "known_at": 13
+    },
+    {
+      "name": "Acción mutante",
+      "facet": "Terror y fantasía española",
+      "known_at": 13
+    },
+    {
+      "name": "Los cronocrímenes",
+      "facet": "Terror y fantasía española",
+      "known_at": 13
+    },
+    {
+      "name": "La cabina",
+      "facet": "Terror y fantasía española",
+      "known_at": 13
+    },
+    {
+      "name": "Historias para no dormir",
+      "facet": "Terror y fantasía española",
+      "known_at": 13
+    },
+    {
+      "name": "Narciso Ibáñez Serrador",
+      "facet": "Terror y fantasía española",
+      "known_at": 13
+    },
+    {
+      "name": "¿Quién puede matar a un niño?",
+      "facet": "Terror y fantasía española",
+      "known_at": 14
+    },
+    {
+      "name": "La residencia",
+      "facet": "Terror y fantasía española",
+      "known_at": 14
+    },
+    {
+      "name": "Paul Naschy",
+      "facet": "Terror y fantasía española",
+      "known_at": 14
+    },
+    {
+      "name": "La noche del terror ciego",
+      "facet": "Terror y fantasía española",
+      "known_at": 14
+    },
+    {
+      "name": "Torrente",
+      "facet": "Personajes y frases míticas",
+      "known_at": 8
+    },
+    {
+      "name": "Los Amigos",
+      "facet": "Personajes y frases míticas",
+      "known_at": 10
+    },
+    {
+      "name": "Koldo",
+      "facet": "Personajes y frases míticas",
+      "known_at": 11
+    },
+    {
+      "name": "«¡Milana bonita!»",
+      "facet": "Personajes y frases míticas",
+      "known_at": 11
+    },
+    {
+      "name": "«Americanos, os recibimos con alegría»",
+      "facet": "Personajes y frases míticas",
+      "known_at": 12
+    },
+    {
+      "name": "Ramón Sampedro",
+      "facet": "Personajes y frases míticas",
+      "known_at": 12
+    },
+    {
+      "name": "Gazpacho con somníferos",
+      "facet": "Personajes y frases míticas",
+      "known_at": 12
+    },
+    {
+      "name": "Azarías",
+      "facet": "Personajes y frases míticas",
+      "known_at": 13
+    },
+    {
+      "name": "El Lute",
+      "facet": "Personajes y frases míticas",
+      "known_at": 13
+    },
+    {
+      "name": "Pepi, Luci, Bom",
+      "facet": "Personajes y frases míticas",
+      "known_at": 13
+    },
+    {
+      "name": "Padre Ángel Berriartúa",
+      "facet": "Personajes y frases míticas",
+      "known_at": 14
+    },
+    {
+      "name": "Oasys Mini Hollywood",
+      "facet": "España como plató de rodaje",
+      "known_at": 12
+    },
+    {
+      "name": "Spaghetti western",
+      "facet": "España como plató de rodaje",
+      "known_at": 12
+    },
+    {
+      "name": "Sergio Leone",
+      "facet": "España como plató de rodaje",
+      "known_at": 13
+    },
+    {
+      "name": "El bueno, el feo y el malo",
+      "facet": "España como plató de rodaje",
+      "known_at": 12
+    },
+    {
+      "name": "Por un puñado de dólares",
+      "facet": "España como plató de rodaje",
+      "known_at": 12
+    },
+    {
+      "name": "Lawrence de Arabia",
+      "facet": "España como plató de rodaje",
+      "known_at": 13
+    },
+    {
+      "name": "Indiana Jones y la última cruzada",
+      "facet": "España como plató de rodaje",
+      "known_at": 13
+    },
+    {
+      "name": "Doctor Zhivago",
+      "facet": "España como plató de rodaje",
+      "known_at": 14
+    },
+    {
+      "name": "El Cid (1961)",
+      "facet": "España como plató de rodaje",
+      "known_at": 13
+    },
+    {
+      "name": "Samuel Bronston",
+      "facet": "España como plató de rodaje",
+      "known_at": 15
+    },
+    {
+      "name": "Star Wars: Episodio II",
+      "facet": "España como plató de rodaje",
+      "known_at": 12
+    },
+    {
+      "name": "Juego de tronos",
+      "facet": "España como plató de rodaje",
+      "known_at": 10
+    },
+    {
+      "name": "Castillo de Zafra",
+      "facet": "España como plató de rodaje",
+      "known_at": 14
+    },
+    {
+      "name": "Vicky Cristina Barcelona",
+      "facet": "España como plató de rodaje",
+      "known_at": 12
+    },
+    {
+      "name": "Ciudad de la Luz",
+      "facet": "España como plató de rodaje",
+      "known_at": 14
+    },
+    {
+      "name": "Conan el Bárbaro",
+      "facet": "España como plató de rodaje",
+      "known_at": 14
+    },
+    {
+      "name": "Segundo de Chomón",
+      "facet": "Historia del cine en España",
+      "known_at": 14
+    },
+    {
+      "name": "Salida de la misa de doce del Pilar de Zaragoza",
+      "facet": "Historia del cine en España",
+      "known_at": 15
+    },
+    {
+      "name": "Florián Rey",
+      "facet": "Historia del cine en España",
+      "known_at": 14
+    },
+    {
+      "name": "Cifesa",
+      "facet": "Historia del cine en España",
+      "known_at": 14
+    },
+    {
+      "name": "Doblaje en España",
+      "facet": "Historia del cine en España",
+      "known_at": 10
+    },
+    {
+      "name": "Españolada",
+      "facet": "Historia del cine en España",
+      "known_at": 13
+    },
+    {
+      "name": "Landismo",
+      "facet": "Historia del cine en España",
+      "known_at": 13
+    },
+    {
+      "name": "Destape",
+      "facet": "Historia del cine en España",
+      "known_at": 13
+    },
+    {
+      "name": "Clasificación S",
+      "facet": "Historia del cine en España",
+      "known_at": 14
+    },
+    {
+      "name": "Cine quinqui",
+      "facet": "Historia del cine en España",
+      "known_at": 13
+    },
+    {
+      "name": "Nuevo cine español",
+      "facet": "Historia del cine en España",
+      "known_at": 14
+    },
+    {
+      "name": "Escuela de Barcelona",
+      "facet": "Historia del cine en España",
+      "known_at": 15
+    },
+    {
+      "name": "Conversaciones de Salamanca",
+      "facet": "Historia del cine en España",
+      "known_at": 15
+    },
+    {
+      "name": "Ley Miró",
+      "facet": "Historia del cine en España",
+      "known_at": 15
+    },
+    {
+      "name": "Filmoteca Española",
+      "facet": "Historia del cine en España",
+      "known_at": 13
+    },
+    {
+      "name": "Cine Doré",
+      "facet": "Historia del cine en España",
+      "known_at": 14
+    },
+    {
+      "name": "Cine Callao",
+      "facet": "Historia del cine en España",
+      "known_at": 12
+    },
+    {
+      "name": "Cine de barrio",
+      "facet": "Historia del cine en España",
+      "known_at": 11
+    }
+  ]
+}

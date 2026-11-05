@@ -1,0 +1,927 @@
+{
+  "subcategory": "painting-and-architecture",
+  "facets": [
+    "Pintores del Siglo de Oro",
+    "Goya y su época",
+    "Pintores del siglo XIX",
+    "Picasso, Dalí y Miró",
+    "Vanguardias y arte del siglo XX",
+    "Arte contemporáneo español",
+    "Escultura e imaginería religiosa",
+    "Gaudí y el modernismo",
+    "Arquitectura medieval y renacentista",
+    "Arquitectura moderna y actual",
+    "Museos y colecciones de España",
+    "Obras famosas y sus anécdotas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Juan Sánchez Cotán",
+      "facet": "Pintores del Siglo de Oro",
+      "known_at": 14
+    },
+    {
+      "name": "Claudio Coello",
+      "facet": "Pintores del Siglo de Oro",
+      "known_at": 14
+    },
+    {
+      "name": "Juan de Valdés Leal",
+      "facet": "Pintores del Siglo de Oro",
+      "known_at": 14
+    },
+    {
+      "name": "Francisco Pacheco",
+      "facet": "Pintores del Siglo de Oro",
+      "known_at": 14
+    },
+    {
+      "name": "Juan Bautista Maíno",
+      "facet": "Pintores del Siglo de Oro",
+      "known_at": 15
+    },
+    {
+      "name": "Tenebrismo",
+      "facet": "Pintores del Siglo de Oro",
+      "known_at": 13
+    },
+    {
+      "name": "Escuela sevillana de pintura",
+      "facet": "Pintores del Siglo de Oro",
+      "known_at": 14
+    },
+    {
+      "name": "Retrato del papa Inocencio X",
+      "facet": "Pintores del Siglo de Oro",
+      "known_at": 13
+    },
+    {
+      "name": "El aguador de Sevilla",
+      "facet": "Pintores del Siglo de Oro",
+      "known_at": 13
+    },
+    {
+      "name": "Cristo crucificado de Velázquez",
+      "facet": "Pintores del Siglo de Oro",
+      "known_at": 12
+    },
+    {
+      "name": "Niños comiendo uvas y melón",
+      "facet": "Pintores del Siglo de Oro",
+      "known_at": 13
+    },
+    {
+      "name": "Fuendetodos",
+      "facet": "Goya y su época",
+      "known_at": 11
+    },
+    {
+      "name": "El 3 de mayo de 1808 en Madrid",
+      "facet": "Goya y su época",
+      "known_at": 10
+    },
+    {
+      "name": "La carga de los mamelucos",
+      "facet": "Goya y su época",
+      "known_at": 12
+    },
+    {
+      "name": "El sueño de la razón produce monstruos",
+      "facet": "Goya y su época",
+      "known_at": 12
+    },
+    {
+      "name": "Los desastres de la guerra",
+      "facet": "Goya y su época",
+      "known_at": 12
+    },
+    {
+      "name": "Cartones para tapices",
+      "facet": "Goya y su época",
+      "known_at": 13
+    },
+    {
+      "name": "El quitasol",
+      "facet": "Goya y su época",
+      "known_at": 13
+    },
+    {
+      "name": "La gallina ciega",
+      "facet": "Goya y su época",
+      "known_at": 14
+    },
+    {
+      "name": "La Quinta del Sordo",
+      "facet": "Goya y su época",
+      "known_at": 13
+    },
+    {
+      "name": "Burdeos",
+      "facet": "Goya y su época",
+      "known_at": 13
+    },
+    {
+      "name": "El perro semihundido",
+      "facet": "Goya y su época",
+      "known_at": 13
+    },
+    {
+      "name": "Duelo a garrotazos",
+      "facet": "Goya y su época",
+      "known_at": 13
+    },
+    {
+      "name": "Francisco Bayeu",
+      "facet": "Goya y su época",
+      "known_at": 14
+    },
+    {
+      "name": "Anton Raphael Mengs",
+      "facet": "Goya y su época",
+      "known_at": 15
+    },
+    {
+      "name": "Joaquín Sorolla",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 8
+    },
+    {
+      "name": "Paseo a orillas del mar",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Visión de España",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Luminismo",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Mariano Fortuny",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Federico de Madrazo",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Eduardo Rosales",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio Gisbert",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Fusilamiento de Torrijos",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Francisco Pradilla",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Doña Juana la Loca",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Pintura de historia",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Ramon Casas",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Santiago Rusiñol",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Julio Romero de Torres",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 11
+    },
+    {
+      "name": "La Fuensanta",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Ignacio Zuloaga",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Darío de Regoyos",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Vicente López Portaña",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Carlos de Haes",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 15
+    },
+    {
+      "name": "Aureliano de Beruete",
+      "facet": "Pintores del siglo XIX",
+      "known_at": 15
+    },
+    {
+      "name": "La persistencia de la memoria",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 8
+    },
+    {
+      "name": "Las señoritas de Avignon",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 11
+    },
+    {
+      "name": "Periodo azul",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 11
+    },
+    {
+      "name": "Periodo rosa",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 12
+    },
+    {
+      "name": "El viejo guitarrista ciego",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 12
+    },
+    {
+      "name": "Ciencia y caridad",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 14
+    },
+    {
+      "name": "Paloma de la paz",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 10
+    },
+    {
+      "name": "Dora Maar",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 13
+    },
+    {
+      "name": "Casa natal de Picasso",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 12
+    },
+    {
+      "name": "Bigote de Dalí",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 5
+    },
+    {
+      "name": "Gala Dalí",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 12
+    },
+    {
+      "name": "Figueres",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 11
+    },
+    {
+      "name": "Portlligat",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 13
+    },
+    {
+      "name": "Castillo de Púbol",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 14
+    },
+    {
+      "name": "Logotipo de Chupa Chups",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 9
+    },
+    {
+      "name": "Teléfono langosta",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 12
+    },
+    {
+      "name": "Sofá labios de Mae West",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 13
+    },
+    {
+      "name": "Elefantes de Dalí",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 13
+    },
+    {
+      "name": "Un perro andaluz",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 12
+    },
+    {
+      "name": "La masía",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 13
+    },
+    {
+      "name": "Mosaico de Miró en La Rambla",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 12
+    },
+    {
+      "name": "Cartel del Mundial 82",
+      "facet": "Picasso, Dalí y Miró",
+      "known_at": 13
+    },
+    {
+      "name": "Cubismo",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 9
+    },
+    {
+      "name": "Surrealismo",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 9
+    },
+    {
+      "name": "Juan Gris",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "María Blanchard",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Remedios Varo",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Óscar Domínguez",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Julio González",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Pablo Gargallo",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "José Gutiérrez Solana",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Escuela de Vallecas",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 15
+    },
+    {
+      "name": "Pabellón de la República de 1937",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Grupo El Paso",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio Saura",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Manolo Millares",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Antoni Tàpies",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Dau al Set",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 15
+    },
+    {
+      "name": "Informalismo",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Eduardo Chillida",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "El Peine del Viento",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Jorge Oteiza",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Equipo Crónica",
+      "facet": "Vanguardias y arte del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio López",
+      "facet": "Arte contemporáneo español",
+      "known_at": 11
+    },
+    {
+      "name": "Miquel Barceló",
+      "facet": "Arte contemporáneo español",
+      "known_at": 12
+    },
+    {
+      "name": "Jaume Plensa",
+      "facet": "Arte contemporáneo español",
+      "known_at": 12
+    },
+    {
+      "name": "Julia de la plaza de Colón",
+      "facet": "Arte contemporáneo español",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Muñoz",
+      "facet": "Arte contemporáneo español",
+      "known_at": 14
+    },
+    {
+      "name": "Cristina Iglesias",
+      "facet": "Arte contemporáneo español",
+      "known_at": 14
+    },
+    {
+      "name": "Manolo Valdés",
+      "facet": "Arte contemporáneo español",
+      "known_at": 13
+    },
+    {
+      "name": "Eduardo Arroyo",
+      "facet": "Arte contemporáneo español",
+      "known_at": 14
+    },
+    {
+      "name": "Luis Gordillo",
+      "facet": "Arte contemporáneo español",
+      "known_at": 15
+    },
+    {
+      "name": "Esther Ferrer",
+      "facet": "Arte contemporáneo español",
+      "known_at": 15
+    },
+    {
+      "name": "Santiago Sierra",
+      "facet": "Arte contemporáneo español",
+      "known_at": 14
+    },
+    {
+      "name": "Okuda San Miguel",
+      "facet": "Arte contemporáneo español",
+      "known_at": 12
+    },
+    {
+      "name": "Javier Mariscal",
+      "facet": "Arte contemporáneo español",
+      "known_at": 11
+    },
+    {
+      "name": "Juan Genovés",
+      "facet": "Arte contemporáneo español",
+      "known_at": 13
+    },
+    {
+      "name": "El abrazo",
+      "facet": "Arte contemporáneo español",
+      "known_at": 13
+    },
+    {
+      "name": "Chema Madoz",
+      "facet": "Arte contemporáneo español",
+      "known_at": 13
+    },
+    {
+      "name": "Cristina García Rodero",
+      "facet": "Arte contemporáneo español",
+      "known_at": 14
+    },
+    {
+      "name": "ARCO",
+      "facet": "Arte contemporáneo español",
+      "known_at": 11
+    },
+    {
+      "name": "Premio Velázquez de Artes Plásticas",
+      "facet": "Arte contemporáneo español",
+      "known_at": 14
+    },
+    {
+      "name": "Pasos de Semana Santa",
+      "facet": "Escultura e imaginería religiosa",
+      "known_at": 6
+    },
+    {
+      "name": "Imaginero",
+      "facet": "Escultura e imaginería religiosa",
+      "known_at": 11
+    },
+    {
+      "name": "Policromía",
+      "facet": "Escultura e imaginería religiosa",
+      "known_at": 12
+    },
+    {
+      "name": "Estofado",
+      "facet": "Escultura e imaginería religiosa",
+      "known_at": 15
+    },
+    {
+      "name": "Retablo",
+      "facet": "Escultura e imaginería religiosa",
+      "known_at": 9
+    },
+    {
+      "name": "Alonso Berruguete",
+      "facet": "Escultura e imaginería religiosa",
+      "known_at": 14
+    },
+    {
+      "name": "Juan de Juni",
+      "facet": "Escultura e imaginería religiosa",
+      "known_at": 14
+    },
+    {
+      "name": "Pedro de Mena",
+      "facet": "Escultura e imaginería religiosa",
+      "known_at": 14
+    },
+    {
+      "name": "Luisa Roldán",
+      "facet": "Escultura e imaginería religiosa",
+      "known_at": 14
+    },
+    {
+      "name": "Cristo de Medinaceli",
+      "facet": "Escultura e imaginería religiosa",
+      "known_at": 12
+    },
+    {
+      "name": "Mariano Benlliure",
+      "facet": "Escultura e imaginería religiosa",
+      "known_at": 13
+    },
+    {
+      "name": "El Ángel Caído del Retiro",
+      "facet": "Escultura e imaginería religiosa",
+      "known_at": 11
+    },
+    {
+      "name": "Fachada del Nacimiento",
+      "facet": "Gaudí y el modernismo",
+      "known_at": 12
+    },
+    {
+      "name": "Colonia Güell",
+      "facet": "Gaudí y el modernismo",
+      "known_at": 14
+    },
+    {
+      "name": "Arco catenario",
+      "facet": "Gaudí y el modernismo",
+      "known_at": 14
+    },
+    {
+      "name": "Eusebi Güell",
+      "facet": "Gaudí y el modernismo",
+      "known_at": 13
+    },
+    {
+      "name": "Modernismo catalán",
+      "facet": "Gaudí y el modernismo",
+      "known_at": 10
+    },
+    {
+      "name": "Josep Maria Jujol",
+      "facet": "Gaudí y el modernismo",
+      "known_at": 15
+    },
+    {
+      "name": "Plateresco",
+      "facet": "Arquitectura medieval y renacentista",
+      "known_at": 13
+    },
+    {
+      "name": "Rana de la Universidad de Salamanca",
+      "facet": "Arquitectura medieval y renacentista",
+      "known_at": 9
+    },
+    {
+      "name": "Románico",
+      "facet": "Arquitectura medieval y renacentista",
+      "known_at": 10
+    },
+    {
+      "name": "Gótico",
+      "facet": "Arquitectura medieval y renacentista",
+      "known_at": 9
+    },
+    {
+      "name": "Prerrománico asturiano",
+      "facet": "Arquitectura medieval y renacentista",
+      "known_at": 13
+    },
+    {
+      "name": "Puppy",
+      "facet": "Arquitectura moderna y actual",
+      "known_at": 10
+    },
+    {
+      "name": "Frank Gehry",
+      "facet": "Arquitectura moderna y actual",
+      "known_at": 11
+    },
+    {
+      "name": "Kursaal de San Sebastián",
+      "facet": "Arquitectura moderna y actual",
+      "known_at": 13
+    },
+    {
+      "name": "Palacio de Cristal del Retiro",
+      "facet": "Arquitectura moderna y actual",
+      "known_at": 9
+    },
+    {
+      "name": "Terminal 4 de Barajas",
+      "facet": "Arquitectura moderna y actual",
+      "known_at": 11
+    },
+    {
+      "name": "La Muralla Roja",
+      "facet": "Arquitectura moderna y actual",
+      "known_at": 13
+    },
+    {
+      "name": "Centro Niemeyer de Avilés",
+      "facet": "Arquitectura moderna y actual",
+      "known_at": 13
+    },
+    {
+      "name": "Premio Pritzker",
+      "facet": "Arquitectura moderna y actual",
+      "known_at": 13
+    },
+    {
+      "name": "RCR Arquitectes",
+      "facet": "Arquitectura moderna y actual",
+      "known_at": 15
+    },
+    {
+      "name": "Miguel Fisac",
+      "facet": "Arquitectura moderna y actual",
+      "known_at": 15
+    },
+    {
+      "name": "Museo Reina Sofía",
+      "facet": "Museos y colecciones de España",
+      "known_at": 9
+    },
+    {
+      "name": "Museo Thyssen-Bornemisza",
+      "facet": "Museos y colecciones de España",
+      "known_at": 10
+    },
+    {
+      "name": "Carmen Thyssen",
+      "facet": "Museos y colecciones de España",
+      "known_at": 12
+    },
+    {
+      "name": "Paseo del Arte",
+      "facet": "Museos y colecciones de España",
+      "known_at": 12
+    },
+    {
+      "name": "Museo Picasso Málaga",
+      "facet": "Museos y colecciones de España",
+      "known_at": 10
+    },
+    {
+      "name": "Museo Picasso de Barcelona",
+      "facet": "Museos y colecciones de España",
+      "known_at": 11
+    },
+    {
+      "name": "Fundació Joan Miró",
+      "facet": "Museos y colecciones de España",
+      "known_at": 12
+    },
+    {
+      "name": "Museo Sorolla",
+      "facet": "Museos y colecciones de España",
+      "known_at": 12
+    },
+    {
+      "name": "MACBA",
+      "facet": "Museos y colecciones de España",
+      "known_at": 13
+    },
+    {
+      "name": "IVAM",
+      "facet": "Museos y colecciones de España",
+      "known_at": 14
+    },
+    {
+      "name": "Museo Nacional de Arte de Cataluña",
+      "facet": "Museos y colecciones de España",
+      "known_at": 12
+    },
+    {
+      "name": "Museo de Bellas Artes de Bilbao",
+      "facet": "Museos y colecciones de España",
+      "known_at": 14
+    },
+    {
+      "name": "Museo Nacional de Escultura",
+      "facet": "Museos y colecciones de España",
+      "known_at": 14
+    },
+    {
+      "name": "Museo de Arte Abstracto Español",
+      "facet": "Museos y colecciones de España",
+      "known_at": 14
+    },
+    {
+      "name": "Galería de las Colecciones Reales",
+      "facet": "Museos y colecciones de España",
+      "known_at": 13
+    },
+    {
+      "name": "Centre Pompidou Málaga",
+      "facet": "Museos y colecciones de España",
+      "known_at": 13
+    },
+    {
+      "name": "Museo Lázaro Galdiano",
+      "facet": "Museos y colecciones de España",
+      "known_at": 15
+    },
+    {
+      "name": "Museo del Romanticismo",
+      "facet": "Museos y colecciones de España",
+      "known_at": 15
+    },
+    {
+      "name": "Las Meninas de Picasso",
+      "facet": "Obras famosas y sus anécdotas",
+      "known_at": 13
+    },
+    {
+      "name": "Ecce Homo de Borja",
+      "facet": "Obras famosas y sus anécdotas",
+      "known_at": 9
+    },
+    {
+      "name": "Bisontes de Altamira",
+      "facet": "Obras famosas y sus anécdotas",
+      "known_at": 7
+    },
+    {
+      "name": "El carro de heno",
+      "facet": "Obras famosas y sus anécdotas",
+      "known_at": 14
+    },
+    {
+      "name": "El caballero de la mano en el pecho",
+      "facet": "Obras famosas y sus anécdotas",
+      "known_at": 12
+    },
+    {
+      "name": "La fragua de Vulcano",
+      "facet": "Obras famosas y sus anécdotas",
+      "known_at": 13
+    },
+    {
+      "name": "Los borrachos",
+      "facet": "Obras famosas y sus anécdotas",
+      "known_at": 12
+    },
+    {
+      "name": "La Gioconda del Prado",
+      "facet": "Obras famosas y sus anécdotas",
+      "known_at": 13
+    },
+    {
+      "name": "El Descendimiento de Van der Weyden",
+      "facet": "Obras famosas y sus anécdotas",
+      "known_at": 13
+    },
+    {
+      "name": "La Anunciación de Fra Angelico",
+      "facet": "Obras famosas y sus anécdotas",
+      "known_at": 14
+    },
+    {
+      "name": "El triunfo de la muerte",
+      "facet": "Obras famosas y sus anécdotas",
+      "known_at": 14
+    },
+    {
+      "name": "El Coloso",
+      "facet": "Obras famosas y sus anécdotas",
+      "known_at": 14
+    },
+    {
+      "name": "La lechera de Burdeos",
+      "facet": "Obras famosas y sus anécdotas",
+      "known_at": 14
+    },
+    {
+      "name": "El sueño del caballero",
+      "facet": "Obras famosas y sus anécdotas",
+      "known_at": 15
+    }
+  ]
+}

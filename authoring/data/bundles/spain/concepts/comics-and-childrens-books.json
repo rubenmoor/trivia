@@ -1,0 +1,948 @@
+{
+  "subcategory": "comics-and-childrens-books",
+  "facets": [
+    "Mortadelo, Filemón e Ibáñez",
+    "Personajes de la escuela Bruguera",
+    "Tebeos de aventuras clásicos",
+    "Primeros tebeos y el TBO",
+    "Superlópez y el humor moderno",
+    "Clásicos infantiles de Calleja a Celia",
+    "Gloria Fuertes y la poesía infantil",
+    "Literatura juvenil contemporánea",
+    "Ratoncito Pérez y cuentos populares",
+    "Novela gráfica y autores actuales",
+    "Del papel a la pantalla",
+    "Editoriales, colecciones y salones del cómic"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mortadelo",
+      "facet": "Mortadelo, Filemón e Ibáñez",
+      "known_at": 2
+    },
+    {
+      "name": "Filemón",
+      "facet": "Mortadelo, Filemón e Ibáñez",
+      "known_at": 3
+    },
+    {
+      "name": "T.I.A.",
+      "facet": "Mortadelo, Filemón e Ibáñez",
+      "known_at": 6
+    },
+    {
+      "name": "Profesor Bacterio",
+      "facet": "Mortadelo, Filemón e Ibáñez",
+      "known_at": 5
+    },
+    {
+      "name": "Ofelia",
+      "facet": "Mortadelo, Filemón e Ibáñez",
+      "known_at": 6
+    },
+    {
+      "name": "Irma",
+      "facet": "Mortadelo, Filemón e Ibáñez",
+      "known_at": 10
+    },
+    {
+      "name": "Rompetechos",
+      "facet": "Mortadelo, Filemón e Ibáñez",
+      "known_at": 7
+    },
+    {
+      "name": "El botones Sacarino",
+      "facet": "Mortadelo, Filemón e Ibáñez",
+      "known_at": 8
+    },
+    {
+      "name": "13, Rue del Percebe",
+      "facet": "Mortadelo, Filemón e Ibáñez",
+      "known_at": 8
+    },
+    {
+      "name": "Pepe Gotera y Otilio",
+      "facet": "Mortadelo, Filemón e Ibáñez",
+      "known_at": 8
+    },
+    {
+      "name": "El sulfato atómico",
+      "facet": "Mortadelo, Filemón e Ibáñez",
+      "known_at": 9
+    },
+    {
+      "name": "Chicha, Tato y Clodoveo",
+      "facet": "Mortadelo, Filemón e Ibáñez",
+      "known_at": 12
+    },
+    {
+      "name": "Tete Cohete",
+      "facet": "Mortadelo, Filemón e Ibáñez",
+      "known_at": 11
+    },
+    {
+      "name": "La familia Trapisonda",
+      "facet": "Mortadelo, Filemón e Ibáñez",
+      "known_at": 11
+    },
+    {
+      "name": "Mundial 78",
+      "facet": "Mortadelo, Filemón e Ibáñez",
+      "known_at": 11
+    },
+    {
+      "name": "Zipi y Zape",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 4
+    },
+    {
+      "name": "Don Pantuflo Zapatilla",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 10
+    },
+    {
+      "name": "Josep Escobar",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 10
+    },
+    {
+      "name": "Carpanta",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 10
+    },
+    {
+      "name": "Anacleto, agente secreto",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 9
+    },
+    {
+      "name": "Las hermanas Gilda",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 11
+    },
+    {
+      "name": "Manuel Vázquez",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 12
+    },
+    {
+      "name": "Doña Urraca",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 11
+    },
+    {
+      "name": "Rigoberto Picaporte",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 11
+    },
+    {
+      "name": "La familia Cebolleta",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 12
+    },
+    {
+      "name": "Sir Tim O'Theo",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 12
+    },
+    {
+      "name": "El repórter Tribulete",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 12
+    },
+    {
+      "name": "Petra, criada para todo",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 12
+    },
+    {
+      "name": "Doña Tula, suegra",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 12
+    },
+    {
+      "name": "El Doctor Cataplasma",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 12
+    },
+    {
+      "name": "Pafman",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 12
+    },
+    {
+      "name": "Gordito Relleno",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 12
+    },
+    {
+      "name": "Peñarroya",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 13
+    },
+    {
+      "name": "Agamenón",
+      "facet": "Personajes de la escuela Bruguera",
+      "known_at": 13
+    },
+    {
+      "name": "El Capitán Trueno",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 7
+    },
+    {
+      "name": "El Jabato",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 10
+    },
+    {
+      "name": "El Guerrero del Antifaz",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 10
+    },
+    {
+      "name": "Roberto Alcázar y Pedrín",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 11
+    },
+    {
+      "name": "Sigrid",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 11
+    },
+    {
+      "name": "Goliath",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 11
+    },
+    {
+      "name": "Crispín",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 11
+    },
+    {
+      "name": "Taurus",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 14,
+      "retired": "unaskable: No tengo datos fiables sobre Taurus como tebeo de aventuras, así que no puedo escribir una pregunta segura."
+    },
+    {
+      "name": "Víctor Mora",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 13
+    },
+    {
+      "name": "Ambrós",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 13
+    },
+    {
+      "name": "Manuel Gago",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 13
+    },
+    {
+      "name": "Diego Valor",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 13
+    },
+    {
+      "name": "El Corsario de Hierro",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 13
+    },
+    {
+      "name": "Hazañas Bélicas",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 13
+    },
+    {
+      "name": "El Coyote",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 12
+    },
+    {
+      "name": "José Mallorquí",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 13
+    },
+    {
+      "name": "Purk, el hombre de piedra",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 14
+    },
+    {
+      "name": "El Inspector Dan",
+      "facet": "Tebeos de aventuras clásicos",
+      "known_at": 14
+    },
+    {
+      "name": "TBO",
+      "facet": "Primeros tebeos y el TBO",
+      "known_at": 8
+    },
+    {
+      "name": "Los grandes inventos del TBO",
+      "facet": "Primeros tebeos y el TBO",
+      "known_at": 10
+    },
+    {
+      "name": "Profesor Franz de Copenhague",
+      "facet": "Primeros tebeos y el TBO",
+      "known_at": 11
+    },
+    {
+      "name": "La familia Ulises",
+      "facet": "Primeros tebeos y el TBO",
+      "known_at": 11
+    },
+    {
+      "name": "Marino Benejam",
+      "facet": "Primeros tebeos y el TBO",
+      "known_at": 13
+    },
+    {
+      "name": "Josep Coll",
+      "facet": "Primeros tebeos y el TBO",
+      "known_at": 13
+    },
+    {
+      "name": "Joaquim Buigas",
+      "facet": "Primeros tebeos y el TBO",
+      "known_at": 14
+    },
+    {
+      "name": "Opisso",
+      "facet": "Primeros tebeos y el TBO",
+      "known_at": 14
+    },
+    {
+      "name": "Pulgarcito (revista)",
+      "facet": "Primeros tebeos y el TBO",
+      "known_at": 11
+    },
+    {
+      "name": "En Patufet",
+      "facet": "Primeros tebeos y el TBO",
+      "known_at": 13
+    },
+    {
+      "name": "Chicos (revista)",
+      "facet": "Primeros tebeos y el TBO",
+      "known_at": 13
+    },
+    {
+      "name": "Cuto",
+      "facet": "Primeros tebeos y el TBO",
+      "known_at": 13
+    },
+    {
+      "name": "Flechas y Pelayos",
+      "facet": "Primeros tebeos y el TBO",
+      "known_at": 14
+    },
+    {
+      "name": "Florita",
+      "facet": "Primeros tebeos y el TBO",
+      "known_at": 14
+    },
+    {
+      "name": "Hipo, Monito y Fifí",
+      "facet": "Primeros tebeos y el TBO",
+      "known_at": 14
+    },
+    {
+      "name": "Aleluyas",
+      "facet": "Primeros tebeos y el TBO",
+      "known_at": 14
+    },
+    {
+      "name": "Superlópez",
+      "facet": "Superlópez y el humor moderno",
+      "known_at": 6
+    },
+    {
+      "name": "Jan",
+      "facet": "Superlópez y el humor moderno",
+      "known_at": 11
+    },
+    {
+      "name": "Luisa Lanas",
+      "facet": "Superlópez y el humor moderno",
+      "known_at": 12
+    },
+    {
+      "name": "Jaime González",
+      "facet": "Superlópez y el humor moderno",
+      "known_at": 12
+    },
+    {
+      "name": "El Supergrupo",
+      "facet": "Superlópez y el humor moderno",
+      "known_at": 12
+    },
+    {
+      "name": "El Señor de los Chupetes",
+      "facet": "Superlópez y el humor moderno",
+      "known_at": 13
+    },
+    {
+      "name": "El Jueves",
+      "facet": "Superlópez y el humor moderno",
+      "known_at": 11
+    },
+    {
+      "name": "Makinavaja",
+      "facet": "Superlópez y el humor moderno",
+      "known_at": 12
+    },
+    {
+      "name": "Ivà",
+      "facet": "Superlópez y el humor moderno",
+      "known_at": 13
+    },
+    {
+      "name": "Martínez el Facha",
+      "facet": "Superlópez y el humor moderno",
+      "known_at": 12
+    },
+    {
+      "name": "Forges",
+      "facet": "Superlópez y el humor moderno",
+      "known_at": 11
+    },
+    {
+      "name": "Albert Monteys",
+      "facet": "Superlópez y el humor moderno",
+      "known_at": 13
+    },
+    {
+      "name": "Mauro Entrialgo",
+      "facet": "Superlópez y el humor moderno",
+      "known_at": 13
+    },
+    {
+      "name": "Herminio Bolaextra",
+      "facet": "Superlópez y el humor moderno",
+      "known_at": 14
+    },
+    {
+      "name": "Kim",
+      "facet": "Superlópez y el humor moderno",
+      "known_at": 13
+    },
+    {
+      "name": "Tienes más cuento que Calleja",
+      "facet": "Clásicos infantiles de Calleja a Celia",
+      "known_at": 11
+    },
+    {
+      "name": "Cuchifritín",
+      "facet": "Clásicos infantiles de Calleja a Celia",
+      "known_at": 13
+    },
+    {
+      "name": "Antoniorrobles",
+      "facet": "Clásicos infantiles de Calleja a Celia",
+      "known_at": 14
+    },
+    {
+      "name": "Salvador Bartolozzi",
+      "facet": "Clásicos infantiles de Calleja a Celia",
+      "known_at": 14
+    },
+    {
+      "name": "Pinocho y Chapete",
+      "facet": "Clásicos infantiles de Calleja a Celia",
+      "known_at": 14
+    },
+    {
+      "name": "José María Sánchez-Silva",
+      "facet": "Clásicos infantiles de Calleja a Celia",
+      "known_at": 13
+    },
+    {
+      "name": "El polizón del Ulises",
+      "facet": "Clásicos infantiles de Calleja a Celia",
+      "known_at": 14
+    },
+    {
+      "name": "Caperucita en Manhattan",
+      "facet": "Clásicos infantiles de Calleja a Celia",
+      "known_at": 12
+    },
+    {
+      "name": "Alfanhuí",
+      "facet": "Clásicos infantiles de Calleja a Celia",
+      "known_at": 14
+    },
+    {
+      "name": "La oca loca",
+      "facet": "Gloria Fuertes y la poesía infantil",
+      "known_at": 10
+    },
+    {
+      "name": "Doña Pito Piturra",
+      "facet": "Gloria Fuertes y la poesía infantil",
+      "known_at": 10
+    },
+    {
+      "name": "El dragón tragón",
+      "facet": "Gloria Fuertes y la poesía infantil",
+      "known_at": 11
+    },
+    {
+      "name": "Cangura para todo",
+      "facet": "Gloria Fuertes y la poesía infantil",
+      "known_at": 13
+    },
+    {
+      "name": "La pata mete la pata",
+      "facet": "Gloria Fuertes y la poesía infantil",
+      "known_at": 11
+    },
+    {
+      "name": "Las tres reinas magas",
+      "facet": "Gloria Fuertes y la poesía infantil",
+      "known_at": 13
+    },
+    {
+      "name": "Canción tonta",
+      "facet": "Gloria Fuertes y la poesía infantil",
+      "known_at": 12
+    },
+    {
+      "name": "Carmen Gil",
+      "facet": "Gloria Fuertes y la poesía infantil",
+      "known_at": 13
+    },
+    {
+      "name": "Carmen Conde",
+      "facet": "Gloria Fuertes y la poesía infantil",
+      "known_at": 14
+    },
+    {
+      "name": "Adivinanzas",
+      "facet": "Gloria Fuertes y la poesía infantil",
+      "known_at": 3
+    },
+    {
+      "name": "Nanas",
+      "facet": "Gloria Fuertes y la poesía infantil",
+      "known_at": 6
+    },
+    {
+      "name": "Retahílas",
+      "facet": "Gloria Fuertes y la poesía infantil",
+      "known_at": 11
+    },
+    {
+      "name": "Romancero",
+      "facet": "Gloria Fuertes y la poesía infantil",
+      "known_at": 12
+    },
+    {
+      "name": "Crónicas de la Torre",
+      "facet": "Literatura juvenil contemporánea",
+      "known_at": 13
+    },
+    {
+      "name": "Kika Superbruja",
+      "facet": "Literatura juvenil contemporánea",
+      "known_at": 8
+    },
+    {
+      "name": "Roser Capdevila",
+      "facet": "Literatura juvenil contemporánea",
+      "known_at": 12
+    },
+    {
+      "name": "Marina",
+      "facet": "Literatura juvenil contemporánea",
+      "known_at": 12
+    },
+    {
+      "name": "Roberto Santiago",
+      "facet": "Literatura juvenil contemporánea",
+      "known_at": 12
+    },
+    {
+      "name": "Blue Jeans",
+      "facet": "Literatura juvenil contemporánea",
+      "known_at": 11
+    },
+    {
+      "name": "Canciones para Paula",
+      "facet": "Literatura juvenil contemporánea",
+      "known_at": 13
+    },
+    {
+      "name": "Las lágrimas de Shiva",
+      "facet": "Literatura juvenil contemporánea",
+      "known_at": 13
+    },
+    {
+      "name": "La leyenda del Rey Errante",
+      "facet": "Literatura juvenil contemporánea",
+      "known_at": 13
+    },
+    {
+      "name": "Fernando Lalana",
+      "facet": "Literatura juvenil contemporánea",
+      "known_at": 13
+    },
+    {
+      "name": "Casa Museo del Ratoncito Pérez",
+      "facet": "Ratoncito Pérez y cuentos populares",
+      "known_at": 12
+    },
+    {
+      "name": "Juan sin Miedo",
+      "facet": "Ratoncito Pérez y cuentos populares",
+      "known_at": 8
+    },
+    {
+      "name": "La Tía Miseria",
+      "facet": "Ratoncito Pérez y cuentos populares",
+      "known_at": 14
+    },
+    {
+      "name": "Martinico",
+      "facet": "Ratoncito Pérez y cuentos populares",
+      "known_at": 14
+    },
+    {
+      "name": "Xanas",
+      "facet": "Ratoncito Pérez y cuentos populares",
+      "known_at": 13
+    },
+    {
+      "name": "Trasgo",
+      "facet": "Ratoncito Pérez y cuentos populares",
+      "known_at": 13
+    },
+    {
+      "name": "Ojáncano",
+      "facet": "Ratoncito Pérez y cuentos populares",
+      "known_at": 13
+    },
+    {
+      "name": "Antonio Rodríguez Almodóvar",
+      "facet": "Ratoncito Pérez y cuentos populares",
+      "known_at": 14
+    },
+    {
+      "name": "Paco Roca",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 11
+    },
+    {
+      "name": "Arrugas",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 11
+    },
+    {
+      "name": "La casa",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 13
+    },
+    {
+      "name": "Los surcos del azar",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 13
+    },
+    {
+      "name": "Blacksad",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 11
+    },
+    {
+      "name": "Juan Díaz Canales",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 13
+    },
+    {
+      "name": "Juanjo Guarnido",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 13
+    },
+    {
+      "name": "María Hesse",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 12
+    },
+    {
+      "name": "Ana Penyas",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 13
+    },
+    {
+      "name": "Estamos todas bien",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 14
+    },
+    {
+      "name": "María y yo",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 12
+    },
+    {
+      "name": "Miguel Gallardo",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 13
+    },
+    {
+      "name": "El arte de volar",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 13
+    },
+    {
+      "name": "Antonio Altarriba",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 14
+    },
+    {
+      "name": "Las Meninas (cómic)",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 14
+    },
+    {
+      "name": "Paracuellos",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos Giménez",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 12
+    },
+    {
+      "name": "Max",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 13
+    },
+    {
+      "name": "Miguelanxo Prado",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 13
+    },
+    {
+      "name": "Emma Ríos",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 14
+    },
+    {
+      "name": "David Rubín",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 14
+    },
+    {
+      "name": "Premio Nacional del Cómic",
+      "facet": "Novela gráfica y autores actuales",
+      "known_at": 13
+    },
+    {
+      "name": "La gran aventura de Mortadelo y Filemón",
+      "facet": "Del papel a la pantalla",
+      "known_at": 8
+    },
+    {
+      "name": "Javier Fesser",
+      "facet": "Del papel a la pantalla",
+      "known_at": 11
+    },
+    {
+      "name": "Mortadelo y Filemón contra Jimmy el Cachondo",
+      "facet": "Del papel a la pantalla",
+      "known_at": 11
+    },
+    {
+      "name": "Mortadelo y Filemón: Misión: salvar la Tierra",
+      "facet": "Del papel a la pantalla",
+      "known_at": 12
+    },
+    {
+      "name": "Superlópez (película)",
+      "facet": "Del papel a la pantalla",
+      "known_at": 9
+    },
+    {
+      "name": "Dani Rovira",
+      "facet": "Del papel a la pantalla",
+      "known_at": 9
+    },
+    {
+      "name": "Zipi y Zape y el club de la canica",
+      "facet": "Del papel a la pantalla",
+      "known_at": 10
+    },
+    {
+      "name": "Zipi y Zape y la isla del capitán",
+      "facet": "Del papel a la pantalla",
+      "known_at": 11
+    },
+    {
+      "name": "Manolito Gafotas (película)",
+      "facet": "Del papel a la pantalla",
+      "known_at": 11
+    },
+    {
+      "name": "Los Futbolísimos (película)",
+      "facet": "Del papel a la pantalla",
+      "known_at": 11
+    },
+    {
+      "name": "El Capitán Trueno y el Santo Grial",
+      "facet": "Del papel a la pantalla",
+      "known_at": 13
+    },
+    {
+      "name": "Don Quijote de la Mancha (serie de dibujos)",
+      "facet": "Del papel a la pantalla",
+      "known_at": 12
+    },
+    {
+      "name": "Editorial Bruguera",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 10
+    },
+    {
+      "name": "Ediciones B",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 12
+    },
+    {
+      "name": "Colección Olé",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 11
+    },
+    {
+      "name": "Súper Humor",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 12
+    },
+    {
+      "name": "Editorial Valenciana",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 13
+    },
+    {
+      "name": "Toray",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 14
+    },
+    {
+      "name": "Norma Editorial",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 12
+    },
+    {
+      "name": "Planeta DeAgostini",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 12
+    },
+    {
+      "name": "Ediciones La Cúpula",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 14
+    },
+    {
+      "name": "Astiberri",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 14
+    },
+    {
+      "name": "Gran Angular",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 12
+    },
+    {
+      "name": "Ediciones SM",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 11
+    },
+    {
+      "name": "Anaya",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 9
+    },
+    {
+      "name": "Alfaguara Infantil",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 11
+    },
+    {
+      "name": "Edebé",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 13
+    },
+    {
+      "name": "Premio Lazarillo",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 13
+    },
+    {
+      "name": "Premio Cervantes Chico",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 14
+    },
+    {
+      "name": "Salón del Cómic de Barcelona",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 11
+    },
+    {
+      "name": "Expocómic",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 13
+    },
+    {
+      "name": "Salón del Manga de Barcelona",
+      "facet": "Editoriales, colecciones y salones del cómic",
+      "known_at": 11
+    }
+  ]
+}

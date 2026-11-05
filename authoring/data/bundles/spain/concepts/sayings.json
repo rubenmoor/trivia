@@ -251,7 +251,8 @@
     {
       "name": "«Ser pan comido»",
       "facet": "Frases hechas de comida",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Ya se preguntó qué significa la expresión, y preguntar por el alimento sería la misma pregunta; ninguna de las opciones de origen da una pregunta nueva"
     },
     {
       "name": "«Contigo, pan y cebolla»",
@@ -351,7 +352,8 @@
     {
       "name": "«Costar un ojo de la cara»",
       "facet": "Expresiones con partes del cuerpo",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Ya se preguntó qué parte del cuerpo completa la frase; las opciones de odd_one_out con personas o de contar en la naturaleza quedan forzadas"
     },
     {
       "name": "«Tomar el pelo»",
@@ -431,7 +433,8 @@
     {
       "name": "«Estar con el agua al cuello»",
       "facet": "Expresiones con partes del cuerpo",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: Ya se preguntó el significado; contar, una fecha o un lugar no dan una pregunta natural sobre esta expresión"
     },
     {
       "name": "«Ponerse los pelos de punta»",
@@ -491,7 +494,8 @@
     {
       "name": "«Fuerte como un roble»",
       "facet": "Comparaciones y exageraciones populares",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Ya se preguntó el roble como árbol fuerte; un origen con personas o una fecha no encajan"
     },
     {
       "name": "«Más claro que el agua»",

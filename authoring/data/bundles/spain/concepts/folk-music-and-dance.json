@@ -96,7 +96,8 @@
     {
       "name": "Jota riojana",
       "facet": "La jota y sus variantes",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: No hay ningún dato claro sobre lo que lleva o de qué está hecha la jota riojana a nivel 13, y por el sonido no se distingue de otras jotas."
     },
     {
       "name": "Jota murciana",
@@ -781,7 +782,8 @@
     {
       "name": "El patio de mi casa",
       "facet": "Canciones populares, nanas y villancicos",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Ya se preguntó lo de que el patio se moja, agacharse y la lista del abecedario; lo que queda es forzado o se solapa."
     },
     {
       "name": "Cinco lobitos",

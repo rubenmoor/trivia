@@ -1,0 +1,918 @@
+{
+  "subcategory": "radio-and-internet",
+  "facets": [
+    "Historia de la radio en España",
+    "Emisoras y cadenas de radio",
+    "Locutores y presentadores de radio",
+    "Programas y secciones míticas de radio",
+    "Radio deportiva y carruseles",
+    "Youtubers de entretenimiento y humor",
+    "Streamers y Twitch en España",
+    "Eventos y fenómenos de internet",
+    "Divulgadores y youtubers educativos",
+    "Podcasts y formatos de audio actuales",
+    "Jerga de youtubers y streamers",
+    "Gaming y creadores de videojuegos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Radio Barcelona",
+      "facet": "Historia de la radio en España",
+      "known_at": 12
+    },
+    {
+      "name": "Unión Radio",
+      "facet": "Historia de la radio en España",
+      "known_at": 14
+    },
+    {
+      "name": "El parte",
+      "facet": "Historia de la radio en España",
+      "known_at": 12
+    },
+    {
+      "name": "Radio de galena",
+      "facet": "Historia de la radio en España",
+      "known_at": 14
+    },
+    {
+      "name": "Transistor",
+      "facet": "Historia de la radio en España",
+      "known_at": 8
+    },
+    {
+      "name": "Radionovela",
+      "facet": "Historia de la radio en España",
+      "known_at": 10
+    },
+    {
+      "name": "Ama Rosa",
+      "facet": "Historia de la radio en España",
+      "known_at": 14
+    },
+    {
+      "name": "Matilde, Perico y Periquín",
+      "facet": "Historia de la radio en España",
+      "known_at": 14
+    },
+    {
+      "name": "Radio Pirenaica",
+      "facet": "Historia de la radio en España",
+      "known_at": 15
+    },
+    {
+      "name": "Ricardo Urgoiti",
+      "facet": "Historia de la radio en España",
+      "known_at": 15
+    },
+    {
+      "name": "Bobby Deglané",
+      "facet": "Historia de la radio en España",
+      "known_at": 15
+    },
+    {
+      "name": "Onda media",
+      "facet": "Historia de la radio en España",
+      "known_at": 10
+    },
+    {
+      "name": "Frecuencia modulada",
+      "facet": "Historia de la radio en España",
+      "known_at": 7
+    },
+    {
+      "name": "Cabalgata fin de semana",
+      "facet": "Historia de la radio en España",
+      "known_at": 15
+    },
+    {
+      "name": "Guillermo Sautier Casaseca",
+      "facet": "Historia de la radio en España",
+      "known_at": 15
+    },
+    {
+      "name": "Monopolio informativo de RNE",
+      "facet": "Historia de la radio en España",
+      "known_at": 14
+    },
+    {
+      "name": "COPE",
+      "facet": "Emisoras y cadenas de radio",
+      "known_at": 8
+    },
+    {
+      "name": "Onda Cero",
+      "facet": "Emisoras y cadenas de radio",
+      "known_at": 8
+    },
+    {
+      "name": "Radio Clásica",
+      "facet": "Emisoras y cadenas de radio",
+      "known_at": 11
+    },
+    {
+      "name": "Los 40",
+      "facet": "Emisoras y cadenas de radio",
+      "known_at": 5
+    },
+    {
+      "name": "Cadena 100",
+      "facet": "Emisoras y cadenas de radio",
+      "known_at": 7
+    },
+    {
+      "name": "Europa FM",
+      "facet": "Emisoras y cadenas de radio",
+      "known_at": 7
+    },
+    {
+      "name": "Rock FM",
+      "facet": "Emisoras y cadenas de radio",
+      "known_at": 9
+    },
+    {
+      "name": "Kiss FM",
+      "facet": "Emisoras y cadenas de radio",
+      "known_at": 9
+    },
+    {
+      "name": "Catalunya Ràdio",
+      "facet": "Emisoras y cadenas de radio",
+      "known_at": 11
+    },
+    {
+      "name": "RAC1",
+      "facet": "Emisoras y cadenas de radio",
+      "known_at": 12
+    },
+    {
+      "name": "Canal Sur Radio",
+      "facet": "Emisoras y cadenas de radio",
+      "known_at": 11
+    },
+    {
+      "name": "Radio Marca",
+      "facet": "Emisoras y cadenas de radio",
+      "known_at": 9
+    },
+    {
+      "name": "esRadio",
+      "facet": "Emisoras y cadenas de radio",
+      "known_at": 12
+    },
+    {
+      "name": "Radio Euskadi",
+      "facet": "Emisoras y cadenas de radio",
+      "known_at": 12
+    },
+    {
+      "name": "Radio 5",
+      "facet": "Emisoras y cadenas de radio",
+      "known_at": 12
+    },
+    {
+      "name": "Flaixbac",
+      "facet": "Emisoras y cadenas de radio",
+      "known_at": 12
+    },
+    {
+      "name": "Luis del Olmo",
+      "facet": "Locutores y presentadores de radio",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos Herrera",
+      "facet": "Locutores y presentadores de radio",
+      "known_at": 11
+    },
+    {
+      "name": "Pepa Fernández",
+      "facet": "Locutores y presentadores de radio",
+      "known_at": 13
+    },
+    {
+      "name": "Àngels Barceló",
+      "facet": "Locutores y presentadores de radio",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos Alsina",
+      "facet": "Locutores y presentadores de radio",
+      "known_at": 12
+    },
+    {
+      "name": "Federico Jiménez Losantos",
+      "facet": "Locutores y presentadores de radio",
+      "known_at": 12
+    },
+    {
+      "name": "Julia Otero",
+      "facet": "Locutores y presentadores de radio",
+      "known_at": 12
+    },
+    {
+      "name": "Gemma Nierga",
+      "facet": "Locutores y presentadores de radio",
+      "known_at": 13
+    },
+    {
+      "name": "Jesús Quintero",
+      "facet": "Locutores y presentadores de radio",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Ramón Lucas",
+      "facet": "Locutores y presentadores de radio",
+      "known_at": 13
+    },
+    {
+      "name": "Encarna Sánchez",
+      "facet": "Locutores y presentadores de radio",
+      "known_at": 14
+    },
+    {
+      "name": "Jordi Basté",
+      "facet": "Locutores y presentadores de radio",
+      "known_at": 14
+    },
+    {
+      "name": "Toni Garrido",
+      "facet": "Locutores y presentadores de radio",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Carlos Ortega",
+      "facet": "Locutores y presentadores de radio",
+      "known_at": 14
+    },
+    {
+      "name": "Tony Aguilar",
+      "facet": "Locutores y presentadores de radio",
+      "known_at": 10
+    },
+    {
+      "name": "Frank Blanco",
+      "facet": "Locutores y presentadores de radio",
+      "known_at": 10
+    },
+    {
+      "name": "Javier Cárdenas",
+      "facet": "Locutores y presentadores de radio",
+      "known_at": 10
+    },
+    {
+      "name": "Hoy por hoy",
+      "facet": "Programas y secciones míticas de radio",
+      "known_at": 12
+    },
+    {
+      "name": "La ventana",
+      "facet": "Programas y secciones míticas de radio",
+      "known_at": 13
+    },
+    {
+      "name": "Herrera en COPE",
+      "facet": "Programas y secciones míticas de radio",
+      "known_at": 12
+    },
+    {
+      "name": "Protagonistas",
+      "facet": "Programas y secciones míticas de radio",
+      "known_at": 13
+    },
+    {
+      "name": "Hablar por hablar",
+      "facet": "Programas y secciones míticas de radio",
+      "known_at": 12
+    },
+    {
+      "name": "Milenio 3",
+      "facet": "Programas y secciones míticas de radio",
+      "known_at": 12
+    },
+    {
+      "name": "La rosa de los vientos",
+      "facet": "Programas y secciones míticas de radio",
+      "known_at": 13
+    },
+    {
+      "name": "No es un día cualquiera",
+      "facet": "Programas y secciones míticas de radio",
+      "known_at": 14
+    },
+    {
+      "name": "Anda ya",
+      "facet": "Programas y secciones míticas de radio",
+      "known_at": 9
+    },
+    {
+      "name": "Gomaespuma",
+      "facet": "Programas y secciones míticas de radio",
+      "known_at": 12
+    },
+    {
+      "name": "La Vida Moderna",
+      "facet": "Programas y secciones míticas de radio",
+      "known_at": 10
+    },
+    {
+      "name": "Nadie sabe nada",
+      "facet": "Programas y secciones míticas de radio",
+      "known_at": 11
+    },
+    {
+      "name": "Hora 25",
+      "facet": "Programas y secciones míticas de radio",
+      "known_at": 13
+    },
+    {
+      "name": "Si amanece nos vamos",
+      "facet": "Programas y secciones míticas de radio",
+      "known_at": 14
+    },
+    {
+      "name": "Julia en la onda",
+      "facet": "Programas y secciones míticas de radio",
+      "known_at": 13
+    },
+    {
+      "name": "Las mañanas de RNE",
+      "facet": "Programas y secciones míticas de radio",
+      "known_at": 13
+    },
+    {
+      "name": "Asuntos propios",
+      "facet": "Programas y secciones míticas de radio",
+      "known_at": 14
+    },
+    {
+      "name": "Carrusel Deportivo",
+      "facet": "Radio deportiva y carruseles",
+      "known_at": 10
+    },
+    {
+      "name": "Tiempo de Juego",
+      "facet": "Radio deportiva y carruseles",
+      "known_at": 11
+    },
+    {
+      "name": "El Larguero",
+      "facet": "Radio deportiva y carruseles",
+      "known_at": 11
+    },
+    {
+      "name": "El Partidazo de COPE",
+      "facet": "Radio deportiva y carruseles",
+      "known_at": 12
+    },
+    {
+      "name": "Radioestadio",
+      "facet": "Radio deportiva y carruseles",
+      "known_at": 13
+    },
+    {
+      "name": "Tablero deportivo",
+      "facet": "Radio deportiva y carruseles",
+      "known_at": 14
+    },
+    {
+      "name": "José María García",
+      "facet": "Radio deportiva y carruseles",
+      "known_at": 12
+    },
+    {
+      "name": "José Ramón de la Morena",
+      "facet": "Radio deportiva y carruseles",
+      "known_at": 12
+    },
+    {
+      "name": "Juanma Castaño",
+      "facet": "Radio deportiva y carruseles",
+      "known_at": 12
+    },
+    {
+      "name": "Manolo Lama",
+      "facet": "Radio deportiva y carruseles",
+      "known_at": 11
+    },
+    {
+      "name": "Paco González",
+      "facet": "Radio deportiva y carruseles",
+      "known_at": 12
+    },
+    {
+      "name": "Pepe Domingo Castaño",
+      "facet": "Radio deportiva y carruseles",
+      "known_at": 12
+    },
+    {
+      "name": "Manu Carreño",
+      "facet": "Radio deportiva y carruseles",
+      "known_at": 12
+    },
+    {
+      "name": "Tomás Roncero",
+      "facet": "Radio deportiva y carruseles",
+      "known_at": 10
+    },
+    {
+      "name": "Siro López",
+      "facet": "Radio deportiva y carruseles",
+      "known_at": 12
+    },
+    {
+      "name": "Wismichu",
+      "facet": "Youtubers de entretenimiento y humor",
+      "known_at": 9
+    },
+    {
+      "name": "Dalas Review",
+      "facet": "Youtubers de entretenimiento y humor",
+      "known_at": 9
+    },
+    {
+      "name": "JPelirrojo",
+      "facet": "Youtubers de entretenimiento y humor",
+      "known_at": 11
+    },
+    {
+      "name": "Loulogio",
+      "facet": "Youtubers de entretenimiento y humor",
+      "known_at": 12
+    },
+    {
+      "name": "Yellow Mellow",
+      "facet": "Youtubers de entretenimiento y humor",
+      "known_at": 9
+    },
+    {
+      "name": "Jorge Cremades",
+      "facet": "Youtubers de entretenimiento y humor",
+      "known_at": 9
+    },
+    {
+      "name": "Las Ratitas",
+      "facet": "Youtubers de entretenimiento y humor",
+      "known_at": 2
+    },
+    {
+      "name": "Mangel",
+      "facet": "Youtubers de entretenimiento y humor",
+      "known_at": 6
+    },
+    {
+      "name": "Lyna",
+      "facet": "Youtubers de entretenimiento y humor",
+      "known_at": 5
+    },
+    {
+      "name": "Andrea Compton",
+      "facet": "Youtubers de entretenimiento y humor",
+      "known_at": 10
+    },
+    {
+      "name": "Nil Ojeda",
+      "facet": "Youtubers de entretenimiento y humor",
+      "known_at": 8
+    },
+    {
+      "name": "Spursito",
+      "facet": "Youtubers de entretenimiento y humor",
+      "known_at": 8
+    },
+    {
+      "name": "Outconsumer",
+      "facet": "Youtubers de entretenimiento y humor",
+      "known_at": 10
+    },
+    {
+      "name": "Knekro",
+      "facet": "Streamers y Twitch en España",
+      "known_at": 10
+    },
+    {
+      "name": "Cristinini",
+      "facet": "Streamers y Twitch en España",
+      "known_at": 8
+    },
+    {
+      "name": "Perxitaa",
+      "facet": "Streamers y Twitch en España",
+      "known_at": 7
+    },
+    {
+      "name": "Biyin",
+      "facet": "Streamers y Twitch en España",
+      "known_at": 10
+    },
+    {
+      "name": "Werlyb",
+      "facet": "Streamers y Twitch en España",
+      "known_at": 10
+    },
+    {
+      "name": "Reven",
+      "facet": "Streamers y Twitch en España",
+      "known_at": 10,
+      "retired": "unaskable: I'm not confident about who Reven is or what he is known for."
+    },
+    {
+      "name": "Zeling",
+      "facet": "Streamers y Twitch en España",
+      "known_at": 10
+    },
+    {
+      "name": "Carola",
+      "facet": "Streamers y Twitch en España",
+      "known_at": 9
+    },
+    {
+      "name": "Nexxuz",
+      "facet": "Streamers y Twitch en España",
+      "known_at": 9
+    },
+    {
+      "name": "Twitch",
+      "facet": "Streamers y Twitch en España",
+      "known_at": 4
+    },
+    {
+      "name": "Kick",
+      "facet": "Streamers y Twitch en España",
+      "known_at": 8
+    },
+    {
+      "name": "Queens League",
+      "facet": "Eventos y fenómenos de internet",
+      "known_at": 7
+    },
+    {
+      "name": "Campanadas de Ibai",
+      "facet": "Eventos y fenómenos de internet",
+      "known_at": 8
+    },
+    {
+      "name": "Youtubers en Andorra",
+      "facet": "Eventos y fenómenos de internet",
+      "known_at": 9
+    },
+    {
+      "name": "Skin de TheGrefg en Fortnite",
+      "facet": "Eventos y fenómenos de internet",
+      "known_at": 6
+    },
+    {
+      "name": "Mundial de Globos",
+      "facet": "Eventos y fenómenos de internet",
+      "known_at": 6
+    },
+    {
+      "name": "Amo a Laura",
+      "facet": "Eventos y fenómenos de internet",
+      "known_at": 12
+    },
+    {
+      "name": "Gamergy",
+      "facet": "Eventos y fenómenos de internet",
+      "known_at": 10
+    },
+    {
+      "name": "Madrid Games Week",
+      "facet": "Eventos y fenómenos de internet",
+      "known_at": 10
+    },
+    {
+      "name": "Premios Esland",
+      "facet": "Eventos y fenómenos de internet",
+      "known_at": 10
+    },
+    {
+      "name": "Récord de espectadores en Twitch",
+      "facet": "Eventos y fenómenos de internet",
+      "known_at": 8
+    },
+    {
+      "name": "Gerard Piqué",
+      "facet": "Eventos y fenómenos de internet",
+      "known_at": 5
+    },
+    {
+      "name": "QuantumFracture",
+      "facet": "Divulgadores y youtubers educativos",
+      "known_at": 10
+    },
+    {
+      "name": "CdeCiencia",
+      "facet": "Divulgadores y youtubers educativos",
+      "known_at": 11
+    },
+    {
+      "name": "Academia Play",
+      "facet": "Divulgadores y youtubers educativos",
+      "known_at": 9
+    },
+    {
+      "name": "Pero eso es otra historia",
+      "facet": "Divulgadores y youtubers educativos",
+      "known_at": 12
+    },
+    {
+      "name": "Antroporama",
+      "facet": "Divulgadores y youtubers educativos",
+      "known_at": 12
+    },
+    {
+      "name": "La Gata de Schrödinger",
+      "facet": "Divulgadores y youtubers educativos",
+      "known_at": 12
+    },
+    {
+      "name": "Unicoos",
+      "facet": "Divulgadores y youtubers educativos",
+      "known_at": 9
+    },
+    {
+      "name": "Eduardo Sáenz de Cabezón",
+      "facet": "Divulgadores y youtubers educativos",
+      "known_at": 12
+    },
+    {
+      "name": "Memorias de Pez",
+      "facet": "Divulgadores y youtubers educativos",
+      "known_at": 12
+    },
+    {
+      "name": "VisualPolitik",
+      "facet": "Divulgadores y youtubers educativos",
+      "known_at": 12
+    },
+    {
+      "name": "Ac2ality",
+      "facet": "Divulgadores y youtubers educativos",
+      "known_at": 10
+    },
+    {
+      "name": "Dot CSV",
+      "facet": "Divulgadores y youtubers educativos",
+      "known_at": 12
+    },
+    {
+      "name": "La Hiperactina",
+      "facet": "Divulgadores y youtubers educativos",
+      "known_at": 12
+    },
+    {
+      "name": "La Pija y la Quinqui",
+      "facet": "Podcasts y formatos de audio actuales",
+      "known_at": 10
+    },
+    {
+      "name": "Estirando el chicle",
+      "facet": "Podcasts y formatos de audio actuales",
+      "known_at": 11
+    },
+    {
+      "name": "The Wild Project",
+      "facet": "Podcasts y formatos de audio actuales",
+      "known_at": 9
+    },
+    {
+      "name": "La Ruina",
+      "facet": "Podcasts y formatos de audio actuales",
+      "known_at": 12
+    },
+    {
+      "name": "Crims",
+      "facet": "Podcasts y formatos de audio actuales",
+      "known_at": 12
+    },
+    {
+      "name": "Todopoderosos",
+      "facet": "Podcasts y formatos de audio actuales",
+      "known_at": 13
+    },
+    {
+      "name": "Poco se habla",
+      "facet": "Podcasts y formatos de audio actuales",
+      "known_at": 11
+    },
+    {
+      "name": "Entiende tu mente",
+      "facet": "Podcasts y formatos de audio actuales",
+      "known_at": 12
+    },
+    {
+      "name": "Podium Podcast",
+      "facet": "Podcasts y formatos de audio actuales",
+      "known_at": 13
+    },
+    {
+      "name": "iVoox",
+      "facet": "Podcasts y formatos de audio actuales",
+      "known_at": 12
+    },
+    {
+      "name": "Audiolibro",
+      "facet": "Podcasts y formatos de audio actuales",
+      "known_at": 6
+    },
+    {
+      "name": "Videopódcast",
+      "facet": "Podcasts y formatos de audio actuales",
+      "known_at": 9
+    },
+    {
+      "name": "Ficción sonora",
+      "facet": "Podcasts y formatos de audio actuales",
+      "known_at": 12
+    },
+    {
+      "name": "Pódcast de true crime",
+      "facet": "Podcasts y formatos de audio actuales",
+      "known_at": 10
+    },
+    {
+      "name": "Directo",
+      "facet": "Jerga de youtubers y streamers",
+      "known_at": 3
+    },
+    {
+      "name": "Suscriptor",
+      "facet": "Jerga de youtubers y streamers",
+      "known_at": 3
+    },
+    {
+      "name": "Clip",
+      "facet": "Jerga de youtubers y streamers",
+      "known_at": 6
+    },
+    {
+      "name": "Raid",
+      "facet": "Jerga de youtubers y streamers",
+      "known_at": 9
+    },
+    {
+      "name": "Donación",
+      "facet": "Jerga de youtubers y streamers",
+      "known_at": 6
+    },
+    {
+      "name": "Emote",
+      "facet": "Jerga de youtubers y streamers",
+      "known_at": 7
+    },
+    {
+      "name": "Baneo",
+      "facet": "Jerga de youtubers y streamers",
+      "known_at": 6
+    },
+    {
+      "name": "Clickbait",
+      "facet": "Jerga de youtubers y streamers",
+      "known_at": 7
+    },
+    {
+      "name": "Colaboración",
+      "facet": "Jerga de youtubers y streamers",
+      "known_at": 6
+    },
+    {
+      "name": "Unboxing",
+      "facet": "Jerga de youtubers y streamers",
+      "known_at": 5
+    },
+    {
+      "name": "Gameplay",
+      "facet": "Jerga de youtubers y streamers",
+      "known_at": 5
+    },
+    {
+      "name": "Vlog",
+      "facet": "Jerga de youtubers y streamers",
+      "known_at": 6
+    },
+    {
+      "name": "Algoritmo",
+      "facet": "Jerga de youtubers y streamers",
+      "known_at": 9
+    },
+    {
+      "name": "Hype",
+      "facet": "Jerga de youtubers y streamers",
+      "known_at": 7
+    },
+    {
+      "name": "Moderador",
+      "facet": "Jerga de youtubers y streamers",
+      "known_at": 6
+    },
+    {
+      "name": "Zasca",
+      "facet": "Jerga de youtubers y streamers",
+      "known_at": 8
+    },
+    {
+      "name": "GG",
+      "facet": "Jerga de youtubers y streamers",
+      "known_at": 6
+    },
+    {
+      "name": "sTaXx",
+      "facet": "Gaming y creadores de videojuegos",
+      "known_at": 7
+    },
+    {
+      "name": "Alexby11",
+      "facet": "Gaming y creadores de videojuegos",
+      "known_at": 8
+    },
+    {
+      "name": "ElRichMC",
+      "facet": "Gaming y creadores de videojuegos",
+      "known_at": 8
+    },
+    {
+      "name": "Karmaland",
+      "facet": "Gaming y creadores de videojuegos",
+      "known_at": 6
+    },
+    {
+      "name": "KOI",
+      "facet": "Gaming y creadores de videojuegos",
+      "known_at": 8
+    },
+    {
+      "name": "Commandos",
+      "facet": "Gaming y creadores de videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Blasphemous",
+      "facet": "Gaming y creadores de videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "La Abadía del Crimen",
+      "facet": "Gaming y creadores de videojuegos",
+      "known_at": 14
+    },
+    {
+      "name": "Dinamic Software",
+      "facet": "Gaming y creadores de videojuegos",
+      "known_at": 14
+    },
+    {
+      "name": "Gris",
+      "facet": "Gaming y creadores de videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "MercurySteam",
+      "facet": "Gaming y creadores de videojuegos",
+      "known_at": 13
+    }
+  ]
+}

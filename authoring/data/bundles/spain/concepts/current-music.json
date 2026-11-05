@@ -1,0 +1,897 @@
+{
+  "subcategory": "current-music",
+  "facets": [
+    "Grandes éxitos del pop español",
+    "Música urbana y reguetón español",
+    "Nuevo flamenco y fusión",
+    "Indie y pop alternativo",
+    "Rock y bandas en activo",
+    "Artistas veteranos que siguen arrasando",
+    "Festivales de música en España",
+    "Eurovisión y Benidorm Fest",
+    "Operación Triunfo y concursos musicales",
+    "Canciones del verano y fiesta",
+    "Premios, listas y récords",
+    "Electrónica, DJs y productores españoles"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 2,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Pablo Alborán",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 7
+    },
+    {
+      "name": "Aitana",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 5
+    },
+    {
+      "name": "Vanesa Martín",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 11
+    },
+    {
+      "name": "Melendi",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 9
+    },
+    {
+      "name": "Antonio Orozco",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 9
+    },
+    {
+      "name": "Manuel Carrasco",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 10
+    },
+    {
+      "name": "Pablo López",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 10
+    },
+    {
+      "name": "Dani Martín",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 9
+    },
+    {
+      "name": "Rozalén",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 11
+    },
+    {
+      "name": "India Martínez",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 11
+    },
+    {
+      "name": "Beret",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 10
+    },
+    {
+      "name": "Nil Moliner",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 11
+    },
+    {
+      "name": "Ana Mena",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 8
+    },
+    {
+      "name": "Álvaro Soler",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 8
+    },
+    {
+      "name": "Funambulista",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 12
+    },
+    {
+      "name": "Efecto Pasillo",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 10
+    },
+    {
+      "name": "Bebe",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 11
+    },
+    {
+      "name": "Ana Guerra",
+      "facet": "Grandes éxitos del pop español",
+      "known_at": 9
+    },
+    {
+      "name": "Quevedo",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 7
+    },
+    {
+      "name": "«Quédate»",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 7
+    },
+    {
+      "name": "«Columbia»",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 9
+    },
+    {
+      "name": "«Motomami»",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 9
+    },
+    {
+      "name": "Bad Gyal",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 11
+    },
+    {
+      "name": "Lola Índigo",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 7
+    },
+    {
+      "name": "Saiko",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 11
+    },
+    {
+      "name": "Morad",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 11
+    },
+    {
+      "name": "Rels B",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 11
+    },
+    {
+      "name": "Cruz Cafuné",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 12
+    },
+    {
+      "name": "Natos y Waor",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 12
+    },
+    {
+      "name": "Recycled J",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 13
+    },
+    {
+      "name": "Yung Beef",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 13
+    },
+    {
+      "name": "Kase.O",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 12
+    },
+    {
+      "name": "Violadores del Verso",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 13
+    },
+    {
+      "name": "SFDK",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 13
+    },
+    {
+      "name": "Mala Rodríguez",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 12
+    },
+    {
+      "name": "Omar Montes",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 8
+    },
+    {
+      "name": "Abraham Mateo",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 8
+    },
+    {
+      "name": "Red Bull Batalla",
+      "facet": "Música urbana y reguetón español",
+      "known_at": 11
+    },
+    {
+      "name": "«Malamente»",
+      "facet": "Nuevo flamenco y fusión",
+      "known_at": 10
+    },
+    {
+      "name": "Israel Fernández",
+      "facet": "Nuevo flamenco y fusión",
+      "known_at": 13
+    },
+    {
+      "name": "Rocío Márquez",
+      "facet": "Nuevo flamenco y fusión",
+      "known_at": 14
+    },
+    {
+      "name": "Califato ¾",
+      "facet": "Nuevo flamenco y fusión",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio Carmona",
+      "facet": "Nuevo flamenco y fusión",
+      "known_at": 12
+    },
+    {
+      "name": "Pitingo",
+      "facet": "Nuevo flamenco y fusión",
+      "known_at": 12
+    },
+    {
+      "name": "Las Migas",
+      "facet": "Nuevo flamenco y fusión",
+      "known_at": 14
+    },
+    {
+      "name": "Juanito Makandé",
+      "facet": "Nuevo flamenco y fusión",
+      "known_at": 14
+    },
+    {
+      "name": "Muchachito Bombo Infierno",
+      "facet": "Nuevo flamenco y fusión",
+      "known_at": 14
+    },
+    {
+      "name": "María José Llergo",
+      "facet": "Nuevo flamenco y fusión",
+      "known_at": 14
+    },
+    {
+      "name": "Vetusta Morla",
+      "facet": "Indie y pop alternativo",
+      "known_at": 11
+    },
+    {
+      "name": "Love of Lesbian",
+      "facet": "Indie y pop alternativo",
+      "known_at": 11
+    },
+    {
+      "name": "Izal",
+      "facet": "Indie y pop alternativo",
+      "known_at": 11
+    },
+    {
+      "name": "Lori Meyers",
+      "facet": "Indie y pop alternativo",
+      "known_at": 12
+    },
+    {
+      "name": "Supersubmarina",
+      "facet": "Indie y pop alternativo",
+      "known_at": 13
+    },
+    {
+      "name": "Sidonie",
+      "facet": "Indie y pop alternativo",
+      "known_at": 13
+    },
+    {
+      "name": "Carolina Durante",
+      "facet": "Indie y pop alternativo",
+      "known_at": 12
+    },
+    {
+      "name": "Rigoberta Bandini",
+      "facet": "Indie y pop alternativo",
+      "known_at": 9
+    },
+    {
+      "name": "La Casa Azul",
+      "facet": "Indie y pop alternativo",
+      "known_at": 13
+    },
+    {
+      "name": "Viva Suecia",
+      "facet": "Indie y pop alternativo",
+      "known_at": 13
+    },
+    {
+      "name": "Dorian",
+      "facet": "Indie y pop alternativo",
+      "known_at": 13
+    },
+    {
+      "name": "Zahara",
+      "facet": "Indie y pop alternativo",
+      "known_at": 13
+    },
+    {
+      "name": "Alcalá Norte",
+      "facet": "Indie y pop alternativo",
+      "known_at": 13
+    },
+    {
+      "name": "Sen Senra",
+      "facet": "Indie y pop alternativo",
+      "known_at": 13
+    },
+    {
+      "name": "Ginebras",
+      "facet": "Indie y pop alternativo",
+      "known_at": 13
+    },
+    {
+      "name": "Nacho Vegas",
+      "facet": "Indie y pop alternativo",
+      "known_at": 14
+    },
+    {
+      "name": "Russian Red",
+      "facet": "Indie y pop alternativo",
+      "known_at": 13
+    },
+    {
+      "name": "Delaporte",
+      "facet": "Indie y pop alternativo",
+      "known_at": 13
+    },
+    {
+      "name": "Shinova",
+      "facet": "Indie y pop alternativo",
+      "known_at": 13
+    },
+    {
+      "name": "Guitarricadelafuente",
+      "facet": "Indie y pop alternativo",
+      "known_at": 12
+    },
+    {
+      "name": "Valeria Castro",
+      "facet": "Indie y pop alternativo",
+      "known_at": 12
+    },
+    {
+      "name": "Robe",
+      "facet": "Rock y bandas en activo",
+      "known_at": 12
+    },
+    {
+      "name": "Leiva",
+      "facet": "Rock y bandas en activo",
+      "known_at": 11
+    },
+    {
+      "name": "Arde Bogotá",
+      "facet": "Rock y bandas en activo",
+      "known_at": 11
+    },
+    {
+      "name": "Rosendo",
+      "facet": "Rock y bandas en activo",
+      "known_at": 12
+    },
+    {
+      "name": "Ska-P",
+      "facet": "Rock y bandas en activo",
+      "known_at": 12
+    },
+    {
+      "name": "La M.O.D.A.",
+      "facet": "Rock y bandas en activo",
+      "known_at": 13
+    },
+    {
+      "name": "Pereza",
+      "facet": "Rock y bandas en activo",
+      "known_at": 12
+    },
+    {
+      "name": "Los Zigarros",
+      "facet": "Rock y bandas en activo",
+      "known_at": 14
+    },
+    {
+      "name": "Rulo y la Contrabanda",
+      "facet": "Rock y bandas en activo",
+      "known_at": 13
+    },
+    {
+      "name": "Primavera Sound",
+      "facet": "Festivales de música en España",
+      "known_at": 11
+    },
+    {
+      "name": "Mad Cool",
+      "facet": "Festivales de música en España",
+      "known_at": 11
+    },
+    {
+      "name": "Sónar",
+      "facet": "Festivales de música en España",
+      "known_at": 12
+    },
+    {
+      "name": "Bilbao BBK Live",
+      "facet": "Festivales de música en España",
+      "known_at": 12
+    },
+    {
+      "name": "Viña Rock",
+      "facet": "Festivales de música en España",
+      "known_at": 12
+    },
+    {
+      "name": "Arenal Sound",
+      "facet": "Festivales de música en España",
+      "known_at": 10
+    },
+    {
+      "name": "Resurrection Fest",
+      "facet": "Festivales de música en España",
+      "known_at": 13
+    },
+    {
+      "name": "Medusa Festival",
+      "facet": "Festivales de música en España",
+      "known_at": 11
+    },
+    {
+      "name": "Low Festival",
+      "facet": "Festivales de música en España",
+      "known_at": 13
+    },
+    {
+      "name": "Cruïlla",
+      "facet": "Festivales de música en España",
+      "known_at": 13
+    },
+    {
+      "name": "Sonorama Ribera",
+      "facet": "Festivales de música en España",
+      "known_at": 12
+    },
+    {
+      "name": "Rototom Sunsplash",
+      "facet": "Festivales de música en España",
+      "known_at": 13
+    },
+    {
+      "name": "Starlite Marbella",
+      "facet": "Festivales de música en España",
+      "known_at": 12
+    },
+    {
+      "name": "Dreambeach",
+      "facet": "Festivales de música en España",
+      "known_at": 12
+    },
+    {
+      "name": "Cala Mijas",
+      "facet": "Festivales de música en España",
+      "known_at": 14
+    },
+    {
+      "name": "O Son do Camiño",
+      "facet": "Festivales de música en España",
+      "known_at": 13
+    },
+    {
+      "name": "Jazzaldia",
+      "facet": "Festivales de música en España",
+      "known_at": 14
+    },
+    {
+      "name": "Noches del Botánico",
+      "facet": "Festivales de música en España",
+      "known_at": 14
+    },
+    {
+      "name": "Chanel",
+      "facet": "Eurovisión y Benidorm Fest",
+      "known_at": 8
+    },
+    {
+      "name": "«SloMo»",
+      "facet": "Eurovisión y Benidorm Fest",
+      "known_at": 8
+    },
+    {
+      "name": "Rodolfo Chikilicuatre",
+      "facet": "Eurovisión y Benidorm Fest",
+      "known_at": 10
+    },
+    {
+      "name": "Ruth Lorenzo",
+      "facet": "Eurovisión y Benidorm Fest",
+      "known_at": 12
+    },
+    {
+      "name": "Edurne",
+      "facet": "Eurovisión y Benidorm Fest",
+      "known_at": 11
+    },
+    {
+      "name": "Barei",
+      "facet": "Eurovisión y Benidorm Fest",
+      "known_at": 13
+    },
+    {
+      "name": "«Tu canción»",
+      "facet": "Eurovisión y Benidorm Fest",
+      "known_at": 10
+    },
+    {
+      "name": "Blanca Paloma",
+      "facet": "Eurovisión y Benidorm Fest",
+      "known_at": 11
+    },
+    {
+      "name": "Nebulossa",
+      "facet": "Eurovisión y Benidorm Fest",
+      "known_at": 10
+    },
+    {
+      "name": "Melody",
+      "facet": "Eurovisión y Benidorm Fest",
+      "known_at": 9
+    },
+    {
+      "name": "Benidorm Fest",
+      "facet": "Eurovisión y Benidorm Fest",
+      "known_at": 9
+    },
+    {
+      "name": "Tanxugueiras",
+      "facet": "Eurovisión y Benidorm Fest",
+      "known_at": 12
+    },
+    {
+      "name": "Big Five",
+      "facet": "Eurovisión y Benidorm Fest",
+      "known_at": 12
+    },
+    {
+      "name": "Academia de OT",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 9
+    },
+    {
+      "name": "Noemí Galera",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 12
+    },
+    {
+      "name": "Rosa López",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 11
+    },
+    {
+      "name": "David Bisbal",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 7
+    },
+    {
+      "name": "David Bustamante",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 10
+    },
+    {
+      "name": "Chenoa",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 10
+    },
+    {
+      "name": "Manu Tenorio",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 13
+    },
+    {
+      "name": "Gisela",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 12
+    },
+    {
+      "name": "«Mi música es tu voz»",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 12
+    },
+    {
+      "name": "Amaia",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 10
+    },
+    {
+      "name": "Alfred García",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 12
+    },
+    {
+      "name": "Miriam Rodríguez",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 13
+    },
+    {
+      "name": "Natalia Lacunza",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 12
+    },
+    {
+      "name": "Naiara",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 12
+    },
+    {
+      "name": "La Voz",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 7
+    },
+    {
+      "name": "Tu cara me suena",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 7
+    },
+    {
+      "name": "Factor X",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 11
+    },
+    {
+      "name": "Got Talent España",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 7
+    },
+    {
+      "name": "Fama, ¡a bailar!",
+      "facet": "Operación Triunfo y concursos musicales",
+      "known_at": 13
+    },
+    {
+      "name": "«Aserejé»",
+      "facet": "Canciones del verano y fiesta",
+      "known_at": 4
+    },
+    {
+      "name": "Las Ketchup",
+      "facet": "Canciones del verano y fiesta",
+      "known_at": 9
+    },
+    {
+      "name": "«Despechá»",
+      "facet": "Canciones del verano y fiesta",
+      "known_at": 7
+    },
+    {
+      "name": "«Lo malo»",
+      "facet": "Canciones del verano y fiesta",
+      "known_at": 8
+    },
+    {
+      "name": "«Saturday Night»",
+      "facet": "Canciones del verano y fiesta",
+      "known_at": 11
+    },
+    {
+      "name": "«Corazón contento»",
+      "facet": "Canciones del verano y fiesta",
+      "known_at": 12
+    },
+    {
+      "name": "Grammy Latino",
+      "facet": "Premios, listas y récords",
+      "known_at": 9
+    },
+    {
+      "name": "Premios Grammy",
+      "facet": "Premios, listas y récords",
+      "known_at": 8
+    },
+    {
+      "name": "Premios Ondas",
+      "facet": "Premios, listas y récords",
+      "known_at": 12
+    },
+    {
+      "name": "LOS40 Music Awards",
+      "facet": "Premios, listas y récords",
+      "known_at": 10
+    },
+    {
+      "name": "LOS40",
+      "facet": "Premios, listas y récords",
+      "known_at": 8
+    },
+    {
+      "name": "Premio Goya a la mejor canción original",
+      "facet": "Premios, listas y récords",
+      "known_at": 12
+    },
+    {
+      "name": "Disco de platino",
+      "facet": "Premios, listas y récords",
+      "known_at": 9
+    },
+    {
+      "name": "Promusicae",
+      "facet": "Premios, listas y récords",
+      "known_at": 13
+    },
+    {
+      "name": "Spotify",
+      "facet": "Premios, listas y récords",
+      "known_at": 5
+    },
+    {
+      "name": "Premios Odeón",
+      "facet": "Premios, listas y récords",
+      "known_at": 14
+    },
+    {
+      "name": "Premios MIN",
+      "facet": "Premios, listas y récords",
+      "known_at": 14
+    },
+    {
+      "name": "Premio Nacional de las Músicas Actuales",
+      "facet": "Premios, listas y récords",
+      "known_at": 14
+    },
+    {
+      "name": "Medalla de Oro al Mérito en las Bellas Artes",
+      "facet": "Premios, listas y récords",
+      "known_at": 14
+    },
+    {
+      "name": "Récord Guinness",
+      "facet": "Premios, listas y récords",
+      "known_at": 6
+    },
+    {
+      "name": "«Del 40 al 1»",
+      "facet": "Premios, listas y récords",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Magán",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Carlos Jean",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Brian Cross",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Chimo Bayo",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Mákina",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Máquina Total",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Pacha Ibiza",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Amnesia Ibiza",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Ushuaïa Ibiza",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Café del Mar",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 12
+    },
+    {
+      "name": "DJ Nano",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Wally López",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 14
+    },
+    {
+      "name": "Paco Osuna",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 14
+    },
+    {
+      "name": "John Talabot",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 15
+    },
+    {
+      "name": "Óscar Mulero",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 15
+    },
+    {
+      "name": "El Guincho",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Alizzz",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Pional",
+      "facet": "Electrónica, DJs y productores españoles",
+      "known_at": 15
+    }
+  ]
+}

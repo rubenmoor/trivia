@@ -1,0 +1,967 @@
+{
+  "subcategory": "transport",
+  "facets": [
+    "Trenes y alta velocidad",
+    "Metro y cercanías",
+    "Autobuses y transporte urbano",
+    "Carreteras y autovías",
+    "Coches y marcas españolas",
+    "Normas y señales de tráfico",
+    "Aeropuertos y aviación",
+    "Barcos, ferris y puertos",
+    "Bicicletas, patinetes y movilidad urbana",
+    "Historia del transporte en España",
+    "Billetes, tarjetas y viajeros",
+    "Rutas y trenes turísticos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Alvia",
+      "facet": "Trenes y alta velocidad",
+      "known_at": 10
+    },
+    {
+      "name": "Ouigo",
+      "facet": "Trenes y alta velocidad",
+      "known_at": 8
+    },
+    {
+      "name": "Euromed",
+      "facet": "Trenes y alta velocidad",
+      "known_at": 12
+    },
+    {
+      "name": "Línea de alta velocidad Madrid-Sevilla",
+      "facet": "Trenes y alta velocidad",
+      "known_at": 8
+    },
+    {
+      "name": "Línea de alta velocidad Madrid-Barcelona",
+      "facet": "Trenes y alta velocidad",
+      "known_at": 7
+    },
+    {
+      "name": "Estación de Atocha",
+      "facet": "Trenes y alta velocidad",
+      "known_at": 6
+    },
+    {
+      "name": "Estación de Chamartín",
+      "facet": "Trenes y alta velocidad",
+      "known_at": 8
+    },
+    {
+      "name": "Estación de Sants",
+      "facet": "Trenes y alta velocidad",
+      "known_at": 8
+    },
+    {
+      "name": "Estación de Málaga-María Zambrano",
+      "facet": "Trenes y alta velocidad",
+      "known_at": 12
+    },
+    {
+      "name": "Estación de Santa Justa",
+      "facet": "Trenes y alta velocidad",
+      "known_at": 11
+    },
+    {
+      "name": "Ancho ibérico",
+      "facet": "Trenes y alta velocidad",
+      "known_at": 11
+    },
+    {
+      "name": "Adif",
+      "facet": "Trenes y alta velocidad",
+      "known_at": 11
+    },
+    {
+      "name": "Serie 102 «Pato»",
+      "facet": "Trenes y alta velocidad",
+      "known_at": 10
+    },
+    {
+      "name": "Cambiador de ancho",
+      "facet": "Trenes y alta velocidad",
+      "known_at": 13
+    },
+    {
+      "name": "Trenhotel",
+      "facet": "Trenes y alta velocidad",
+      "known_at": 12
+    },
+    {
+      "name": "Corredor Mediterráneo",
+      "facet": "Trenes y alta velocidad",
+      "known_at": 12
+    },
+    {
+      "name": "Metro de Barcelona",
+      "facet": "Metro y cercanías",
+      "known_at": 4
+    },
+    {
+      "name": "Metro de Bilbao",
+      "facet": "Metro y cercanías",
+      "known_at": 7
+    },
+    {
+      "name": "Fosterito",
+      "facet": "Metro y cercanías",
+      "known_at": 11
+    },
+    {
+      "name": "Metro de Valencia",
+      "facet": "Metro y cercanías",
+      "known_at": 8
+    },
+    {
+      "name": "Metro de Sevilla",
+      "facet": "Metro y cercanías",
+      "known_at": 8
+    },
+    {
+      "name": "Metro de Málaga",
+      "facet": "Metro y cercanías",
+      "known_at": 10
+    },
+    {
+      "name": "Metro de Palma",
+      "facet": "Metro y cercanías",
+      "known_at": 12
+    },
+    {
+      "name": "Metro de Granada",
+      "facet": "Metro y cercanías",
+      "known_at": 11
+    },
+    {
+      "name": "Rodalies",
+      "facet": "Metro y cercanías",
+      "known_at": 9
+    },
+    {
+      "name": "Ferrocarrils de la Generalitat de Catalunya",
+      "facet": "Metro y cercanías",
+      "known_at": 11
+    },
+    {
+      "name": "Euskotren",
+      "facet": "Metro y cercanías",
+      "known_at": 11
+    },
+    {
+      "name": "Estación fantasma de Chamberí",
+      "facet": "Metro y cercanías",
+      "known_at": 11
+    },
+    {
+      "name": "Línea 1 del Metro de Madrid",
+      "facet": "Metro y cercanías",
+      "known_at": 8
+    },
+    {
+      "name": "Línea 6 circular",
+      "facet": "Metro y cercanías",
+      "known_at": 9
+    },
+    {
+      "name": "Línea 9 del Metro de Barcelona",
+      "facet": "Metro y cercanías",
+      "known_at": 11
+    },
+    {
+      "name": "Estación de Sol",
+      "facet": "Metro y cercanías",
+      "known_at": 6
+    },
+    {
+      "name": "Nuevos Ministerios",
+      "facet": "Metro y cercanías",
+      "known_at": 9
+    },
+    {
+      "name": "Metro Ligero",
+      "facet": "Metro y cercanías",
+      "known_at": 10
+    },
+    {
+      "name": "Rombo del Metro de Madrid",
+      "facet": "Metro y cercanías",
+      "known_at": 7
+    },
+    {
+      "name": "EMT de Madrid",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 6
+    },
+    {
+      "name": "TMB",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 9
+    },
+    {
+      "name": "Búho",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 9
+    },
+    {
+      "name": "Nitbus",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 11
+    },
+    {
+      "name": "Avanza",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 10
+    },
+    {
+      "name": "Monbus",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 12
+    },
+    {
+      "name": "Tussam",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 12
+    },
+    {
+      "name": "Bilbobus",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 11
+    },
+    {
+      "name": "Dbus",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 12
+    },
+    {
+      "name": "Bus turístico",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 4
+    },
+    {
+      "name": "Tranvía de Zaragoza",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 10
+    },
+    {
+      "name": "Tranvía de Tenerife",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 11
+    },
+    {
+      "name": "Tranvía de Barcelona",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 10
+    },
+    {
+      "name": "Estación Sur de Autobuses",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 10
+    },
+    {
+      "name": "Intercambiador de Moncloa",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 10
+    },
+    {
+      "name": "Taxi",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 2
+    },
+    {
+      "name": "Carril bus",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 5
+    },
+    {
+      "name": "Exprés Aeropuerto",
+      "facet": "Autobuses y transporte urbano",
+      "known_at": 11
+    },
+    {
+      "name": "Autovía del Nordeste (A-2)",
+      "facet": "Carreteras y autovías",
+      "known_at": 11
+    },
+    {
+      "name": "Autovía del Sur (A-4)",
+      "facet": "Carreteras y autovías",
+      "known_at": 11
+    },
+    {
+      "name": "Autovía del Noroeste (A-6)",
+      "facet": "Carreteras y autovías",
+      "known_at": 11
+    },
+    {
+      "name": "Carreteras radiales",
+      "facet": "Carreteras y autovías",
+      "known_at": 10
+    },
+    {
+      "name": "AP-7",
+      "facet": "Carreteras y autovías",
+      "known_at": 11
+    },
+    {
+      "name": "Autopista de peaje",
+      "facet": "Carreteras y autovías",
+      "known_at": 6
+    },
+    {
+      "name": "M-30",
+      "facet": "Carreteras y autovías",
+      "known_at": 8
+    },
+    {
+      "name": "M-40",
+      "facet": "Carreteras y autovías",
+      "known_at": 10
+    },
+    {
+      "name": "Ronda de Dalt",
+      "facet": "Carreteras y autovías",
+      "known_at": 12
+    },
+    {
+      "name": "N-340",
+      "facet": "Carreteras y autovías",
+      "known_at": 12
+    },
+    {
+      "name": "Autovía de la Plata",
+      "facet": "Carreteras y autovías",
+      "known_at": 11
+    },
+    {
+      "name": "Túnel de Guadarrama",
+      "facet": "Carreteras y autovías",
+      "known_at": 12
+    },
+    {
+      "name": "Desfiladero de Pancorbo",
+      "facet": "Carreteras y autovías",
+      "known_at": 13
+    },
+    {
+      "name": "Puerto de Somosierra",
+      "facet": "Carreteras y autovías",
+      "known_at": 12
+    },
+    {
+      "name": "Túnel del Cadí",
+      "facet": "Carreteras y autovías",
+      "known_at": 13
+    },
+    {
+      "name": "Área de servicio",
+      "facet": "Carreteras y autovías",
+      "known_at": 5
+    },
+    {
+      "name": "SEAT León",
+      "facet": "Coches y marcas españolas",
+      "known_at": 8
+    },
+    {
+      "name": "SEAT 127",
+      "facet": "Coches y marcas españolas",
+      "known_at": 12
+    },
+    {
+      "name": "Fábrica de Martorell",
+      "facet": "Coches y marcas españolas",
+      "known_at": 11
+    },
+    {
+      "name": "Biscúter",
+      "facet": "Coches y marcas españolas",
+      "known_at": 13
+    },
+    {
+      "name": "FASA-Renault",
+      "facet": "Coches y marcas españolas",
+      "known_at": 13
+    },
+    {
+      "name": "Renault 5",
+      "facet": "Coches y marcas españolas",
+      "known_at": 11
+    },
+    {
+      "name": "Citroën 2CV",
+      "facet": "Coches y marcas españolas",
+      "known_at": 10
+    },
+    {
+      "name": "Irizar",
+      "facet": "Coches y marcas españolas",
+      "known_at": 13
+    },
+    {
+      "name": "DGT",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 6
+    },
+    {
+      "name": "Carné por puntos",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 8
+    },
+    {
+      "name": "ITV",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 7
+    },
+    {
+      "name": "Etiqueta ambiental de la DGT",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 9
+    },
+    {
+      "name": "Señal de stop",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 2
+    },
+    {
+      "name": "Ceda el paso",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 4
+    },
+    {
+      "name": "Triángulo de emergencia",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 6
+    },
+    {
+      "name": "Baliza V-16",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 9
+    },
+    {
+      "name": "Chaleco reflectante",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 5
+    },
+    {
+      "name": "Paso de cebra",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 1
+    },
+    {
+      "name": "Rotonda",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 3
+    },
+    {
+      "name": "Placa L",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 8
+    },
+    {
+      "name": "Límite de 120 km/h",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 8
+    },
+    {
+      "name": "Control de alcoholemia",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 8
+    },
+    {
+      "name": "Radar de velocidad",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 6
+    },
+    {
+      "name": "Zona de bajas emisiones",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 9
+    },
+    {
+      "name": "Agrupación de Tráfico de la Guardia Civil",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 9
+    },
+    {
+      "name": "Autoescuela",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 5
+    },
+    {
+      "name": "Carné B",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 9
+    },
+    {
+      "name": "Zona 30",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 9
+    },
+    {
+      "name": "Sistema de retención infantil",
+      "facet": "Normas y señales de tráfico",
+      "known_at": 6
+    },
+    {
+      "name": "Aeropuerto Adolfo Suárez Madrid-Barajas",
+      "facet": "Aeropuertos y aviación",
+      "known_at": 5
+    },
+    {
+      "name": "Aeropuerto Josep Tarradellas Barcelona-El Prat",
+      "facet": "Aeropuertos y aviación",
+      "known_at": 7
+    },
+    {
+      "name": "Aeropuerto de Palma de Mallorca",
+      "facet": "Aeropuertos y aviación",
+      "known_at": 9
+    },
+    {
+      "name": "Aeropuerto de Málaga-Costa del Sol",
+      "facet": "Aeropuertos y aviación",
+      "known_at": 9
+    },
+    {
+      "name": "Aeropuerto de Tenerife Norte",
+      "facet": "Aeropuertos y aviación",
+      "known_at": 11
+    },
+    {
+      "name": "Aeropuerto de Gran Canaria",
+      "facet": "Aeropuertos y aviación",
+      "known_at": 11
+    },
+    {
+      "name": "Aeropuerto de Bilbao",
+      "facet": "Aeropuertos y aviación",
+      "known_at": 11
+    },
+    {
+      "name": "Aeropuerto de Castellón",
+      "facet": "Aeropuertos y aviación",
+      "known_at": 12
+    },
+    {
+      "name": "Aeropuerto de Ciudad Real",
+      "facet": "Aeropuertos y aviación",
+      "known_at": 13
+    },
+    {
+      "name": "Aena",
+      "facet": "Aeropuertos y aviación",
+      "known_at": 10
+    },
+    {
+      "name": "Volotea",
+      "facet": "Aeropuertos y aviación",
+      "known_at": 10
+    },
+    {
+      "name": "Puente aéreo Madrid-Barcelona",
+      "facet": "Aeropuertos y aviación",
+      "known_at": 10
+    },
+    {
+      "name": "Trasmediterránea",
+      "facet": "Barcos, ferris y puertos",
+      "known_at": 11
+    },
+    {
+      "name": "Baleària",
+      "facet": "Barcos, ferris y puertos",
+      "known_at": 10
+    },
+    {
+      "name": "Fred. Olsen Express",
+      "facet": "Barcos, ferris y puertos",
+      "known_at": 12
+    },
+    {
+      "name": "Naviera Armas",
+      "facet": "Barcos, ferris y puertos",
+      "known_at": 12
+    },
+    {
+      "name": "Puerto de La Luz",
+      "facet": "Barcos, ferris y puertos",
+      "known_at": 12
+    },
+    {
+      "name": "Ferri Tarifa-Tánger",
+      "facet": "Barcos, ferris y puertos",
+      "known_at": 11
+    },
+    {
+      "name": "Operación Paso del Estrecho",
+      "facet": "Barcos, ferris y puertos",
+      "known_at": 11
+    },
+    {
+      "name": "Golondrinas de Barcelona",
+      "facet": "Barcos, ferris y puertos",
+      "known_at": 12
+    },
+    {
+      "name": "Salvamento Marítimo",
+      "facet": "Barcos, ferris y puertos",
+      "known_at": 8
+    },
+    {
+      "name": "Catamarán",
+      "facet": "Barcos, ferris y puertos",
+      "known_at": 6
+    },
+    {
+      "name": "Crucero",
+      "facet": "Barcos, ferris y puertos",
+      "known_at": 4
+    },
+    {
+      "name": "BiciMAD",
+      "facet": "Bicicletas, patinetes y movilidad urbana",
+      "known_at": 8
+    },
+    {
+      "name": "Bicing",
+      "facet": "Bicicletas, patinetes y movilidad urbana",
+      "known_at": 8
+    },
+    {
+      "name": "Sevici",
+      "facet": "Bicicletas, patinetes y movilidad urbana",
+      "known_at": 11
+    },
+    {
+      "name": "Valenbisi",
+      "facet": "Bicicletas, patinetes y movilidad urbana",
+      "known_at": 11
+    },
+    {
+      "name": "Carril bici",
+      "facet": "Bicicletas, patinetes y movilidad urbana",
+      "known_at": 3
+    },
+    {
+      "name": "Patinete eléctrico",
+      "facet": "Bicicletas, patinetes y movilidad urbana",
+      "known_at": 3
+    },
+    {
+      "name": "Bicicleta eléctrica",
+      "facet": "Bicicletas, patinetes y movilidad urbana",
+      "known_at": 4
+    },
+    {
+      "name": "Casco de bicicleta",
+      "facet": "Bicicletas, patinetes y movilidad urbana",
+      "known_at": 2
+    },
+    {
+      "name": "Anillo Verde Ciclista",
+      "facet": "Bicicletas, patinetes y movilidad urbana",
+      "known_at": 12
+    },
+    {
+      "name": "Vía verde",
+      "facet": "Bicicletas, patinetes y movilidad urbana",
+      "known_at": 9
+    },
+    {
+      "name": "Orbea",
+      "facet": "Bicicletas, patinetes y movilidad urbana",
+      "known_at": 11
+    },
+    {
+      "name": "BH",
+      "facet": "Bicicletas, patinetes y movilidad urbana",
+      "known_at": 12
+    },
+    {
+      "name": "Ciclocarril",
+      "facet": "Bicicletas, patinetes y movilidad urbana",
+      "known_at": 11
+    },
+    {
+      "name": "Supermanzana",
+      "facet": "Bicicletas, patinetes y movilidad urbana",
+      "known_at": 12
+    },
+    {
+      "name": "Calle peatonal",
+      "facet": "Bicicletas, patinetes y movilidad urbana",
+      "known_at": 4
+    },
+    {
+      "name": "Modelo Pontevedra",
+      "facet": "Bicicletas, patinetes y movilidad urbana",
+      "known_at": 13
+    },
+    {
+      "name": "Vehículo de movilidad personal",
+      "facet": "Bicicletas, patinetes y movilidad urbana",
+      "known_at": 11
+    },
+    {
+      "name": "Ferrocarril Madrid-Aranjuez",
+      "facet": "Historia del transporte en España",
+      "known_at": 12
+    },
+    {
+      "name": "Ferrocarril La Habana-Güines",
+      "facet": "Historia del transporte en España",
+      "known_at": 14
+    },
+    {
+      "name": "Inauguración del Metro de Madrid",
+      "facet": "Historia del transporte en España",
+      "known_at": 11
+    },
+    {
+      "name": "Diligencia",
+      "facet": "Historia del transporte en España",
+      "known_at": 8
+    },
+    {
+      "name": "Expo 92",
+      "facet": "Historia del transporte en España",
+      "known_at": 9
+    },
+    {
+      "name": "Creación de Renfe en 1941",
+      "facet": "Historia del transporte en España",
+      "known_at": 13
+    },
+    {
+      "name": "Fundación de Iberia",
+      "facet": "Historia del transporte en España",
+      "known_at": 13
+    },
+    {
+      "name": "Trolebús",
+      "facet": "Historia del transporte en España",
+      "known_at": 11
+    },
+    {
+      "name": "Locomotora de vapor",
+      "facet": "Historia del transporte en España",
+      "known_at": 4
+    },
+    {
+      "name": "Red radial de Carlos III",
+      "facet": "Historia del transporte en España",
+      "known_at": 14
+    },
+    {
+      "name": "Tarjeta Transporte Público de Madrid",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 8
+    },
+    {
+      "name": "Abono Joven",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 8
+    },
+    {
+      "name": "T-usual",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 11
+    },
+    {
+      "name": "T-casual",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 11
+    },
+    {
+      "name": "Tarjeta Dorada",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 10
+    },
+    {
+      "name": "Carné Joven",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 8
+    },
+    {
+      "name": "Interrail",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 8
+    },
+    {
+      "name": "Bonobús",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 6
+    },
+    {
+      "name": "Billete de ida y vuelta",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 3
+    },
+    {
+      "name": "Abono gratuito de Cercanías",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 10
+    },
+    {
+      "name": "Tarjeta Barik",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 12
+    },
+    {
+      "name": "Torno de acceso",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 5
+    },
+    {
+      "name": "Revisor",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 4
+    },
+    {
+      "name": "Andén",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 3
+    },
+    {
+      "name": "Coche cafetería",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 6
+    },
+    {
+      "name": "Clase Turista",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 7
+    },
+    {
+      "name": "Descuento de residente",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 11
+    },
+    {
+      "name": "Tarjeta Familia Numerosa",
+      "facet": "Billetes, tarjetas y viajeros",
+      "known_at": 10
+    },
+    {
+      "name": "Transcantábrico",
+      "facet": "Rutas y trenes turísticos",
+      "known_at": 11
+    },
+    {
+      "name": "Costa Verde Express",
+      "facet": "Rutas y trenes turísticos",
+      "known_at": 13
+    },
+    {
+      "name": "Expreso de La Robla",
+      "facet": "Rutas y trenes turísticos",
+      "known_at": 13
+    },
+    {
+      "name": "Tren de Sóller",
+      "facet": "Rutas y trenes turísticos",
+      "known_at": 11
+    },
+    {
+      "name": "Tren de Felipe II",
+      "facet": "Rutas y trenes turísticos",
+      "known_at": 13
+    },
+    {
+      "name": "Tren de Cervantes",
+      "facet": "Rutas y trenes turísticos",
+      "known_at": 13
+    },
+    {
+      "name": "Tren Medieval de Sigüenza",
+      "facet": "Rutas y trenes turísticos",
+      "known_at": 13
+    },
+    {
+      "name": "Cremallera de Montserrat",
+      "facet": "Rutas y trenes turísticos",
+      "known_at": 11
+    },
+    {
+      "name": "Cremallera de Núria",
+      "facet": "Rutas y trenes turísticos",
+      "known_at": 12
+    },
+    {
+      "name": "Tren dels Llacs",
+      "facet": "Rutas y trenes turísticos",
+      "known_at": 13
+    },
+    {
+      "name": "Teleférico del Teide",
+      "facet": "Rutas y trenes turísticos",
+      "known_at": 9
+    },
+    {
+      "name": "Teleférico de Madrid",
+      "facet": "Rutas y trenes turísticos",
+      "known_at": 9
+    },
+    {
+      "name": "Funicular de Bulnes",
+      "facet": "Rutas y trenes turísticos",
+      "known_at": 13
+    },
+    {
+      "name": "Funicular del Tibidabo",
+      "facet": "Rutas y trenes turísticos",
+      "known_at": 11
+    },
+    {
+      "name": "Funicular de Artxanda",
+      "facet": "Rutas y trenes turísticos",
+      "known_at": 12
+    }
+  ]
+}

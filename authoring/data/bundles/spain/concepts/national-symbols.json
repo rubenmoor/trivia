@@ -1,0 +1,448 @@
+{
+  "subcategory": "national-symbols",
+  "facets": [
+    "La bandera rojigualda",
+    "El escudo y sus piezas",
+    "La Marcha Real",
+    "La Corona y la familia real",
+    "La Constitución de 1978",
+    "Fiestas y días nacionales",
+    "Banderas e himnos autonómicos",
+    "Monedas, sellos y documentos",
+    "Iconos populares no oficiales",
+    "Instituciones y edificios del Estado",
+    "Símbolos de la selección española",
+    "Símbolos de épocas pasadas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Color rojo de la bandera",
+      "facet": "La bandera rojigualda",
+      "known_at": 1
+    },
+    {
+      "name": "Color gualda",
+      "facet": "La bandera rojigualda",
+      "known_at": 8
+    },
+    {
+      "name": "Franja amarilla central",
+      "facet": "La bandera rojigualda",
+      "known_at": 4
+    },
+    {
+      "name": "Real Decreto de 1785",
+      "facet": "La bandera rojigualda",
+      "known_at": 13
+    },
+    {
+      "name": "Pabellón de la Marina de Guerra",
+      "facet": "La bandera rojigualda",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera de la plaza de Colón",
+      "facet": "La bandera rojigualda",
+      "known_at": 10
+    },
+    {
+      "name": "Bandera a media asta",
+      "facet": "La bandera rojigualda",
+      "known_at": 7
+    },
+    {
+      "name": "Jura de bandera",
+      "facet": "La bandera rojigualda",
+      "known_at": 10
+    },
+    {
+      "name": "Ley de la bandera de 1981",
+      "facet": "La bandera rojigualda",
+      "known_at": 13
+    },
+    {
+      "name": "Izado solemne de la bandera",
+      "facet": "La bandera rojigualda",
+      "known_at": 9
+    },
+    {
+      "name": "Bandera civil sin escudo",
+      "facet": "La bandera rojigualda",
+      "known_at": 9
+    },
+    {
+      "name": "Mástil",
+      "facet": "La bandera rojigualda",
+      "known_at": 4
+    },
+    {
+      "name": "Pulsera con la bandera de España",
+      "facet": "La bandera rojigualda",
+      "known_at": 6,
+      "retired": "unaskable: La pulsera con la bandera no da para una pregunta real: contar las franjas es trivial y las otras opciones no encajan."
+    },
+    {
+      "name": "Castillo de Castilla",
+      "facet": "El escudo y sus piezas",
+      "known_at": 6
+    },
+    {
+      "name": "León de León",
+      "facet": "El escudo y sus piezas",
+      "known_at": 6
+    },
+    {
+      "name": "Barras de Aragón",
+      "facet": "El escudo y sus piezas",
+      "known_at": 8
+    },
+    {
+      "name": "Granada del escudo",
+      "facet": "El escudo y sus piezas",
+      "known_at": 9
+    },
+    {
+      "name": "Corona real del escudo",
+      "facet": "El escudo y sus piezas",
+      "known_at": 5
+    },
+    {
+      "name": "Flores de lis de los Borbones",
+      "facet": "El escudo y sus piezas",
+      "known_at": 12
+    },
+    {
+      "name": "Escusón",
+      "facet": "El escudo y sus piezas",
+      "known_at": 14
+    },
+    {
+      "name": "Cuarteles del escudo",
+      "facet": "El escudo y sus piezas",
+      "known_at": 12
+    },
+    {
+      "name": "Toisón de Oro",
+      "facet": "El escudo y sus piezas",
+      "known_at": 13
+    },
+    {
+      "name": "Heráldica",
+      "facet": "El escudo y sus piezas",
+      "known_at": 11
+    },
+    {
+      "name": "Ley del escudo de 1981",
+      "facet": "El escudo y sus piezas",
+      "known_at": 13
+    },
+    {
+      "name": "Marcha Granadera",
+      "facet": "La Marcha Real",
+      "known_at": 11
+    },
+    {
+      "name": "Himno sin letra",
+      "facet": "La Marcha Real",
+      "known_at": 6
+    },
+    {
+      "name": "Manuel de Espinosa",
+      "facet": "La Marcha Real",
+      "known_at": 14
+    },
+    {
+      "name": "Bartolomé Pérez Casas",
+      "facet": "La Marcha Real",
+      "known_at": 15
+    },
+    {
+      "name": "Francisco Grau",
+      "facet": "La Marcha Real",
+      "known_at": 15
+    },
+    {
+      "name": "Letra de Eduardo Marquina",
+      "facet": "La Marcha Real",
+      "known_at": 14
+    },
+    {
+      "name": "Letra de José María Pemán",
+      "facet": "La Marcha Real",
+      "known_at": 13
+    },
+    {
+      "name": "Versión de Marta Sánchez",
+      "facet": "La Marcha Real",
+      "known_at": 10
+    },
+    {
+      "name": "Concurso de letra de 2007",
+      "facet": "La Marcha Real",
+      "known_at": 13
+    },
+    {
+      "name": "Real Decreto del himno de 1997",
+      "facet": "La Marcha Real",
+      "known_at": 14
+    },
+    {
+      "name": "Versión completa del himno",
+      "facet": "La Marcha Real",
+      "known_at": 11
+    },
+    {
+      "name": "Versión breve del himno",
+      "facet": "La Marcha Real",
+      "known_at": 11
+    },
+    {
+      "name": "Tarareo «lo, lo, lo»",
+      "facet": "La Marcha Real",
+      "known_at": 4
+    },
+    {
+      "name": "Honores militares",
+      "facet": "La Marcha Real",
+      "known_at": 11
+    },
+    {
+      "name": "Leonor de Borbón",
+      "facet": "La Corona y la familia real",
+      "known_at": 5
+    },
+    {
+      "name": "Abdicación de 2014",
+      "facet": "La Corona y la familia real",
+      "known_at": 11
+    },
+    {
+      "name": "Jura de la Constitución de Leonor",
+      "facet": "La Corona y la familia real",
+      "known_at": 10
+    },
+    {
+      "name": "Panteón de Reyes de El Escorial",
+      "facet": "La Corona y la familia real",
+      "known_at": 12
+    },
+    {
+      "name": "Artículo 3 de la Constitución",
+      "facet": "La Constitución de 1978",
+      "known_at": 13
+    },
+    {
+      "name": "Mayoría de edad a los 18 años",
+      "facet": "La Constitución de 1978",
+      "known_at": 7
+    },
+    {
+      "name": "Transición española",
+      "facet": "La Constitución de 1978",
+      "known_at": 10
+    },
+    {
+      "name": "Desfile de las Fuerzas Armadas",
+      "facet": "Fiestas y días nacionales",
+      "known_at": 7
+    },
+    {
+      "name": "Día de Reyes",
+      "facet": "Fiestas y días nacionales",
+      "known_at": 1
+    },
+    {
+      "name": "Día de las Fuerzas Armadas",
+      "facet": "Fiestas y días nacionales",
+      "known_at": 12
+    },
+    {
+      "name": "Paracaidista con la bandera",
+      "facet": "Fiestas y días nacionales",
+      "known_at": 9
+    },
+    {
+      "name": "Sorteo de Navidad",
+      "facet": "Fiestas y días nacionales",
+      "known_at": 4
+    },
+    {
+      "name": "Eusko Abendaren Ereserkia",
+      "facet": "Banderas e himnos autonómicos",
+      "known_at": 15
+    },
+    {
+      "name": "Blas Infante",
+      "facet": "Banderas e himnos autonómicos",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera de la Comunidad Valenciana",
+      "facet": "Banderas e himnos autonómicos",
+      "known_at": 9
+    },
+    {
+      "name": "Bandera de Castilla y León",
+      "facet": "Banderas e himnos autonómicos",
+      "known_at": 9
+    },
+    {
+      "name": "Bandera de Navarra",
+      "facet": "Banderas e himnos autonómicos",
+      "known_at": 10
+    },
+    {
+      "name": "Bandera de Aragón",
+      "facet": "Banderas e himnos autonómicos",
+      "known_at": 9
+    },
+    {
+      "name": "Euro español",
+      "facet": "Monedas, sellos y documentos",
+      "known_at": 3
+    },
+    {
+      "name": "Moneda de 1 euro con el Rey",
+      "facet": "Monedas, sellos y documentos",
+      "known_at": 5
+    },
+    {
+      "name": "Cervantes en los céntimos",
+      "facet": "Monedas, sellos y documentos",
+      "known_at": 8
+    },
+    {
+      "name": "Catedral de Santiago en los céntimos",
+      "facet": "Monedas, sellos y documentos",
+      "known_at": 10
+    },
+    {
+      "name": "Pasaporte español",
+      "facet": "Monedas, sellos y documentos",
+      "known_at": 6
+    },
+    {
+      "name": "Sello de Correos",
+      "facet": "Monedas, sellos y documentos",
+      "known_at": 5
+    },
+    {
+      "name": "Matrícula española",
+      "facet": "Monedas, sellos y documentos",
+      "known_at": 7
+    },
+    {
+      "name": "Sol de Miró",
+      "facet": "Iconos populares no oficiales",
+      "known_at": 12
+    },
+    {
+      "name": "Policía Nacional",
+      "facet": "Instituciones y edificios del Estado",
+      "known_at": 4
+    },
+    {
+      "name": "Buque escuela Juan Sebastián de Elcano",
+      "facet": "Instituciones y edificios del Estado",
+      "known_at": 11
+    },
+    {
+      "name": "Camiseta roja de la selección",
+      "facet": "Símbolos de la selección española",
+      "known_at": 2
+    },
+    {
+      "name": "Estrella de campeón del mundo",
+      "facet": "Símbolos de la selección española",
+      "known_at": 6
+    },
+    {
+      "name": "Mundial de 2010",
+      "facet": "Símbolos de la selección española",
+      "known_at": 5
+    },
+    {
+      "name": "Gol de Iniesta",
+      "facet": "Símbolos de la selección española",
+      "known_at": 6
+    },
+    {
+      "name": "Escudo de la RFEF",
+      "facet": "Símbolos de la selección española",
+      "known_at": 8
+    },
+    {
+      "name": "Águila de San Juan",
+      "facet": "Símbolos de épocas pasadas",
+      "known_at": 12
+    },
+    {
+      "name": "Cruz de Borgoña",
+      "facet": "Símbolos de épocas pasadas",
+      "known_at": 13
+    },
+    {
+      "name": "Primera República",
+      "facet": "Símbolos de épocas pasadas",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera blanca borbónica",
+      "facet": "Símbolos de épocas pasadas",
+      "known_at": 14
+    },
+    {
+      "name": "Pendón de Castilla",
+      "facet": "Símbolos de épocas pasadas",
+      "known_at": 14
+    },
+    {
+      "name": "Cruz de Santiago",
+      "facet": "Símbolos de épocas pasadas",
+      "known_at": 11
+    }
+  ]
+}

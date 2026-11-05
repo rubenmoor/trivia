@@ -1,0 +1,768 @@
+{
+  "subcategory": "sportspeople",
+  "facets": [
+    "Futbolistas de la selección",
+    "Fútbol femenino español",
+    "Tenistas españoles",
+    "Pilotos de motor",
+    "Ciclistas españoles",
+    "Baloncestistas españoles",
+    "Atletismo y medallistas olímpicos",
+    "Natación, piragüismo y vela",
+    "Golf, pádel y bádminton",
+    "Montaña, nieve y aventura",
+    "Leyendas del siglo XX",
+    "Entrenadores y seleccionadores"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 4,
+      "estimate": 2,
+      "record": 4,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 4,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Laia Codina",
+      "facet": "Fútbol femenino español",
+      "known_at": 12
+    },
+    {
+      "name": "Vicky López",
+      "facet": "Fútbol femenino español",
+      "known_at": 11
+    },
+    {
+      "name": "Ona Batlle",
+      "facet": "Fútbol femenino español",
+      "known_at": 12
+    },
+    {
+      "name": "Athenea del Castillo",
+      "facet": "Fútbol femenino español",
+      "known_at": 12
+    },
+    {
+      "name": "Rafa Nadal",
+      "facet": "Tenistas españoles",
+      "known_at": 2
+    },
+    {
+      "name": "Carlos Alcaraz",
+      "facet": "Tenistas españoles",
+      "known_at": 3
+    },
+    {
+      "name": "Garbiñe Muguruza",
+      "facet": "Tenistas españoles",
+      "known_at": 9
+    },
+    {
+      "name": "Carlos Moyá",
+      "facet": "Tenistas españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Juan Carlos Ferrero",
+      "facet": "Tenistas españoles",
+      "known_at": 9
+    },
+    {
+      "name": "David Ferrer",
+      "facet": "Tenistas españoles",
+      "known_at": 9
+    },
+    {
+      "name": "Feliciano López",
+      "facet": "Tenistas españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Paula Badosa",
+      "facet": "Tenistas españoles",
+      "known_at": 9
+    },
+    {
+      "name": "Àlex Corretja",
+      "facet": "Tenistas españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Sergi Bruguera",
+      "facet": "Tenistas españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Albert Costa",
+      "facet": "Tenistas españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Fernando Verdasco",
+      "facet": "Tenistas españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Roberto Bautista",
+      "facet": "Tenistas españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Pablo Carreño",
+      "facet": "Tenistas españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Tommy Robredo",
+      "facet": "Tenistas españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Fernando Alonso",
+      "facet": "Pilotos de motor",
+      "known_at": 3
+    },
+    {
+      "name": "Carlos Sainz Jr.",
+      "facet": "Pilotos de motor",
+      "known_at": 6
+    },
+    {
+      "name": "Marc Márquez",
+      "facet": "Pilotos de motor",
+      "known_at": 4
+    },
+    {
+      "name": "Àlex Márquez",
+      "facet": "Pilotos de motor",
+      "known_at": 8
+    },
+    {
+      "name": "Jorge Lorenzo",
+      "facet": "Pilotos de motor",
+      "known_at": 8
+    },
+    {
+      "name": "Dani Pedrosa",
+      "facet": "Pilotos de motor",
+      "known_at": 9
+    },
+    {
+      "name": "Jorge Martín",
+      "facet": "Pilotos de motor",
+      "known_at": 9
+    },
+    {
+      "name": "Pedro Acosta",
+      "facet": "Pilotos de motor",
+      "known_at": 10
+    },
+    {
+      "name": "Álex Crivillé",
+      "facet": "Pilotos de motor",
+      "known_at": 12
+    },
+    {
+      "name": "Maverick Viñales",
+      "facet": "Pilotos de motor",
+      "known_at": 10
+    },
+    {
+      "name": "Aleix Espargaró",
+      "facet": "Pilotos de motor",
+      "known_at": 11
+    },
+    {
+      "name": "Nani Roma",
+      "facet": "Pilotos de motor",
+      "known_at": 12
+    },
+    {
+      "name": "Laia Sanz",
+      "facet": "Pilotos de motor",
+      "known_at": 11
+    },
+    {
+      "name": "Marc Coma",
+      "facet": "Pilotos de motor",
+      "known_at": 12
+    },
+    {
+      "name": "Pedro de la Rosa",
+      "facet": "Pilotos de motor",
+      "known_at": 11
+    },
+    {
+      "name": "Toni Bou",
+      "facet": "Pilotos de motor",
+      "known_at": 13
+    },
+    {
+      "name": "Isidre Esteve",
+      "facet": "Pilotos de motor",
+      "known_at": 13
+    },
+    {
+      "name": "Alberto Contador",
+      "facet": "Ciclistas españoles",
+      "known_at": 8
+    },
+    {
+      "name": "Alejandro Valverde",
+      "facet": "Ciclistas españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Óscar Freire",
+      "facet": "Ciclistas españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos Sastre",
+      "facet": "Ciclistas españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Federico Bahamontes",
+      "facet": "Ciclistas españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Luis Ocaña",
+      "facet": "Ciclistas españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Joaquim Rodríguez",
+      "facet": "Ciclistas españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Óscar Pereiro",
+      "facet": "Ciclistas españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Ayuso",
+      "facet": "Ciclistas españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Mikel Landa",
+      "facet": "Ciclistas españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Enric Mas",
+      "facet": "Ciclistas españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Samuel Sánchez",
+      "facet": "Ciclistas españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Joseba Beloki",
+      "facet": "Ciclistas españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Abraham Olano",
+      "facet": "Ciclistas españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Joan Llaneras",
+      "facet": "Ciclistas españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Mavi García",
+      "facet": "Ciclistas españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Pau Gasol",
+      "facet": "Baloncestistas españoles",
+      "known_at": 5
+    },
+    {
+      "name": "Marc Gasol",
+      "facet": "Baloncestistas españoles",
+      "known_at": 7
+    },
+    {
+      "name": "Juan Carlos Navarro",
+      "facet": "Baloncestistas españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Ricky Rubio",
+      "facet": "Baloncestistas españoles",
+      "known_at": 8
+    },
+    {
+      "name": "Rudy Fernández",
+      "facet": "Baloncestistas españoles",
+      "known_at": 9
+    },
+    {
+      "name": "Sergio Llull",
+      "facet": "Baloncestistas españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Felipe Reyes",
+      "facet": "Baloncestistas españoles",
+      "known_at": 11
+    },
+    {
+      "name": "José Manuel Calderón",
+      "facet": "Baloncestistas españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Sergio Rodríguez",
+      "facet": "Baloncestistas españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Serge Ibaka",
+      "facet": "Baloncestistas españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Willy Hernangómez",
+      "facet": "Baloncestistas españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Juancho Hernangómez",
+      "facet": "Baloncestistas españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Santi Aldama",
+      "facet": "Baloncestistas españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Jorge Garbajosa",
+      "facet": "Baloncestistas españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Alba Torrens",
+      "facet": "Baloncestistas españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Amaya Valdemoro",
+      "facet": "Baloncestistas españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Laia Palau",
+      "facet": "Baloncestistas españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Astou Ndour",
+      "facet": "Baloncestistas españoles",
+      "known_at": 13
+    },
+    {
+      "name": "Ruth Beitia",
+      "facet": "Atletismo y medallistas olímpicos",
+      "known_at": 10
+    },
+    {
+      "name": "Martín Fiz",
+      "facet": "Atletismo y medallistas olímpicos",
+      "known_at": 12
+    },
+    {
+      "name": "Abel Antón",
+      "facet": "Atletismo y medallistas olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Orlando Ortega",
+      "facet": "Atletismo y medallistas olímpicos",
+      "known_at": 12
+    },
+    {
+      "name": "Ana Peleteiro",
+      "facet": "Atletismo y medallistas olímpicos",
+      "known_at": 10
+    },
+    {
+      "name": "María Pérez",
+      "facet": "Atletismo y medallistas olímpicos",
+      "known_at": 11
+    },
+    {
+      "name": "Álvaro Martín",
+      "facet": "Atletismo y medallistas olímpicos",
+      "known_at": 12
+    },
+    {
+      "name": "Jesús Ángel García Bragado",
+      "facet": "Atletismo y medallistas olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Niurka Montalvo",
+      "facet": "Atletismo y medallistas olímpicos",
+      "known_at": 14,
+      "retired": "unaskable: Too obscure for a fair question with these options: only an exact jump distance or a photo would be left."
+    },
+    {
+      "name": "Daniel Plaza",
+      "facet": "Atletismo y medallistas olímpicos",
+      "known_at": 14
+    },
+    {
+      "name": "Joel González",
+      "facet": "Atletismo y medallistas olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Lydia Valentín",
+      "facet": "Atletismo y medallistas olímpicos",
+      "known_at": 11
+    },
+    {
+      "name": "Ray Zapata",
+      "facet": "Atletismo y medallistas olímpicos",
+      "known_at": 12
+    },
+    {
+      "name": "Almudena Cid",
+      "facet": "Atletismo y medallistas olímpicos",
+      "known_at": 11
+    },
+    {
+      "name": "Gervasio Deferr",
+      "facet": "Atletismo y medallistas olímpicos",
+      "known_at": 12
+    },
+    {
+      "name": "Las Niñas de Oro",
+      "facet": "Atletismo y medallistas olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Sandra Sánchez",
+      "facet": "Atletismo y medallistas olímpicos",
+      "known_at": 12
+    },
+    {
+      "name": "Mireia Belmonte",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 8
+    },
+    {
+      "name": "Gemma Mengual",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 11
+    },
+    {
+      "name": "Ona Carbonell",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 11
+    },
+    {
+      "name": "Teresa Perales",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 10
+    },
+    {
+      "name": "Martín López-Zubero",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 13
+    },
+    {
+      "name": "Nina Zhivanevskaya",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 14
+    },
+    {
+      "name": "Hugo González",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 12
+    },
+    {
+      "name": "David Meca",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 12
+    },
+    {
+      "name": "Saúl Craviotto",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 10
+    },
+    {
+      "name": "David Cal",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 12
+    },
+    {
+      "name": "Marcus Cooper Walz",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 13
+    },
+    {
+      "name": "Teresa Portela",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 13
+    },
+    {
+      "name": "Maialen Chourraut",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 12
+    },
+    {
+      "name": "Theresa Zabell",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 12
+    },
+    {
+      "name": "José Luis Doreste",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 14
+    },
+    {
+      "name": "Támara Echegoyen",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 13
+    },
+    {
+      "name": "Jordi Xammar",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 14
+    },
+    {
+      "name": "Fernando Echávarri",
+      "facet": "Natación, piragüismo y vela",
+      "known_at": 14
+    },
+    {
+      "name": "Seve Ballesteros",
+      "facet": "Golf, pádel y bádminton",
+      "known_at": 10
+    },
+    {
+      "name": "José María Olazábal",
+      "facet": "Golf, pádel y bádminton",
+      "known_at": 12
+    },
+    {
+      "name": "Sergio García",
+      "facet": "Golf, pádel y bádminton",
+      "known_at": 11
+    },
+    {
+      "name": "Jon Rahm",
+      "facet": "Golf, pádel y bádminton",
+      "known_at": 10
+    },
+    {
+      "name": "Miguel Ángel Jiménez",
+      "facet": "Golf, pádel y bádminton",
+      "known_at": 13
+    },
+    {
+      "name": "Carlota Ciganda",
+      "facet": "Golf, pádel y bádminton",
+      "known_at": 13
+    },
+    {
+      "name": "Azahara Muñoz",
+      "facet": "Golf, pádel y bádminton",
+      "known_at": 14
+    },
+    {
+      "name": "Alejandro Galán",
+      "facet": "Golf, pádel y bádminton",
+      "known_at": 10
+    },
+    {
+      "name": "Arturo Coello",
+      "facet": "Golf, pádel y bádminton",
+      "known_at": 11
+    },
+    {
+      "name": "Juan Lebrón",
+      "facet": "Golf, pádel y bádminton",
+      "known_at": 11
+    },
+    {
+      "name": "Ale Salazar",
+      "facet": "Golf, pádel y bádminton",
+      "known_at": 12
+    },
+    {
+      "name": "Paula Josemaría",
+      "facet": "Golf, pádel y bádminton",
+      "known_at": 12
+    },
+    {
+      "name": "Ari Sánchez",
+      "facet": "Golf, pádel y bádminton",
+      "known_at": 12
+    },
+    {
+      "name": "Gemma Triay",
+      "facet": "Golf, pádel y bádminton",
+      "known_at": 12
+    },
+    {
+      "name": "Bea González",
+      "facet": "Golf, pádel y bádminton",
+      "known_at": 12
+    },
+    {
+      "name": "Carolina Marín",
+      "facet": "Golf, pádel y bádminton",
+      "known_at": 8
+    },
+    {
+      "name": "Pablo Abián",
+      "facet": "Golf, pádel y bádminton",
+      "known_at": 14
+    },
+    {
+      "name": "Blanca Fernández Ochoa",
+      "facet": "Montaña, nieve y aventura",
+      "known_at": 11
+    },
+    {
+      "name": "Javier Fernández",
+      "facet": "Montaña, nieve y aventura",
+      "known_at": 9
+    },
+    {
+      "name": "Lucas Eguibar",
+      "facet": "Montaña, nieve y aventura",
+      "known_at": 13
+    },
+    {
+      "name": "Queralt Castellet",
+      "facet": "Montaña, nieve y aventura",
+      "known_at": 12
+    },
+    {
+      "name": "Regino Hernández",
+      "facet": "Montaña, nieve y aventura",
+      "known_at": 13
+    },
+    {
+      "name": "Alberto Ginés",
+      "facet": "Montaña, nieve y aventura",
+      "known_at": 12
+    },
+    {
+      "name": "Ander Mirambell",
+      "facet": "Montaña, nieve y aventura",
+      "known_at": 14
+    },
+    {
+      "name": "Juan Antonio San Epifanio",
+      "facet": "Leyendas del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Paquito Fernández Ochoa",
+      "facet": "Leyendas del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Lili Álvarez",
+      "facet": "Leyendas del siglo XX",
+      "known_at": 15
+    },
+    {
+      "name": "Mariano Haro",
+      "facet": "Leyendas del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Joaquín Blume",
+      "facet": "Leyendas del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Santillana",
+      "facet": "Leyendas del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Rafael Benítez",
+      "facet": "Entrenadores y seleccionadores",
+      "known_at": 11
+    },
+    {
+      "name": "Sergio Scariolo",
+      "facet": "Entrenadores y seleccionadores",
+      "known_at": 12
+    },
+    {
+      "name": "Pepu Hernández",
+      "facet": "Entrenadores y seleccionadores",
+      "known_at": 13
+    },
+    {
+      "name": "Aíto García Reneses",
+      "facet": "Entrenadores y seleccionadores",
+      "known_at": 14
+    },
+    {
+      "name": "Pablo Laso",
+      "facet": "Entrenadores y seleccionadores",
+      "known_at": 13
+    },
+    {
+      "name": "Toni Nadal",
+      "facet": "Entrenadores y seleccionadores",
+      "known_at": 9
+    }
+  ]
+}

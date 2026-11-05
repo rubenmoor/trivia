@@ -1,0 +1,612 @@
+{
+  "subcategory": "co-official-languages",
+  "facets": [
+    "Palabras en catalán y valenciano",
+    "Palabras en gallego",
+    "Palabras en euskera",
+    "Lenguas cooficiales y su mapa",
+    "Dialectos y hablas del castellano",
+    "Asturiano, aragonés y otras lenguas minoritarias",
+    "Nombres de lugares en cada lengua",
+    "Saludos y expresiones cotidianas",
+    "Escritores y canciones en lenguas de España",
+    "Historia y origen de las lenguas",
+    "Comidas y fiestas con nombre propio",
+    "Lenguas en medios, escuela y política"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 5,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Ajuntament",
+      "facet": "Palabras en catalán y valenciano",
+      "known_at": 6
+    },
+    {
+      "name": "Carrer",
+      "facet": "Palabras en catalán y valenciano",
+      "known_at": 5
+    },
+    {
+      "name": "Platja",
+      "facet": "Palabras en catalán y valenciano",
+      "known_at": 5
+    },
+    {
+      "name": "Plaça",
+      "facet": "Palabras en catalán y valenciano",
+      "known_at": 4
+    },
+    {
+      "name": "Seny",
+      "facet": "Palabras en catalán y valenciano",
+      "known_at": 12
+    },
+    {
+      "name": "Rauxa",
+      "facet": "Palabras en catalán y valenciano",
+      "known_at": 14
+    },
+    {
+      "name": "Esmorzar",
+      "facet": "Palabras en catalán y valenciano",
+      "known_at": 9
+    },
+    {
+      "name": "Formatge",
+      "facet": "Palabras en catalán y valenciano",
+      "known_at": 8
+    },
+    {
+      "name": "Gos",
+      "facet": "Palabras en catalán y valenciano",
+      "known_at": 8
+    },
+    {
+      "name": "Diumenge",
+      "facet": "Palabras en catalán y valenciano",
+      "known_at": 9
+    },
+    {
+      "name": "Dissabte",
+      "facet": "Palabras en catalán y valenciano",
+      "known_at": 10
+    },
+    {
+      "name": "Sortida",
+      "facet": "Palabras en catalán y valenciano",
+      "known_at": 6
+    },
+    {
+      "name": "Tancat",
+      "facet": "Palabras en catalán y valenciano",
+      "known_at": 8
+    },
+    {
+      "name": "Poble",
+      "facet": "Palabras en catalán y valenciano",
+      "known_at": 7
+    },
+    {
+      "name": "Muntanya",
+      "facet": "Palabras en catalán y valenciano",
+      "known_at": 5
+    },
+    {
+      "name": "Rúa",
+      "facet": "Palabras en gallego",
+      "known_at": 7
+    },
+    {
+      "name": "Concello",
+      "facet": "Palabras en gallego",
+      "known_at": 9
+    },
+    {
+      "name": "Praia",
+      "facet": "Palabras en gallego",
+      "known_at": 5
+    },
+    {
+      "name": "Bico",
+      "facet": "Palabras en gallego",
+      "known_at": 10
+    },
+    {
+      "name": "Choiva",
+      "facet": "Palabras en gallego",
+      "known_at": 10
+    },
+    {
+      "name": "Corredoira",
+      "facet": "Palabras en gallego",
+      "known_at": 13
+    },
+    {
+      "name": "Lume",
+      "facet": "Palabras en gallego",
+      "known_at": 11
+    },
+    {
+      "name": "Feira",
+      "facet": "Palabras en gallego",
+      "known_at": 6
+    },
+    {
+      "name": "Avoa",
+      "facet": "Palabras en gallego",
+      "known_at": 9
+    },
+    {
+      "name": "Xantar",
+      "facet": "Palabras en gallego",
+      "known_at": 12
+    },
+    {
+      "name": "Etxe",
+      "facet": "Palabras en euskera",
+      "known_at": 8
+    },
+    {
+      "name": "Mendi",
+      "facet": "Palabras en euskera",
+      "known_at": 10
+    },
+    {
+      "name": "Txiki",
+      "facet": "Palabras en euskera",
+      "known_at": 7
+    },
+    {
+      "name": "Lagun",
+      "facet": "Palabras en euskera",
+      "known_at": 11
+    },
+    {
+      "name": "Mutil",
+      "facet": "Palabras en euskera",
+      "known_at": 12
+    },
+    {
+      "name": "Txakur",
+      "facet": "Palabras en euskera",
+      "known_at": 11
+    },
+    {
+      "name": "Ur",
+      "facet": "Palabras en euskera",
+      "known_at": 12
+    },
+    {
+      "name": "Hondartza",
+      "facet": "Palabras en euskera",
+      "known_at": 12
+    },
+    {
+      "name": "Kalea",
+      "facet": "Palabras en euskera",
+      "known_at": 9
+    },
+    {
+      "name": "Udaletxea",
+      "facet": "Palabras en euskera",
+      "known_at": 11
+    },
+    {
+      "name": "Bai",
+      "facet": "Palabras en euskera",
+      "known_at": 8
+    },
+    {
+      "name": "Itsasoa",
+      "facet": "Palabras en euskera",
+      "known_at": 12
+    },
+    {
+      "name": "Herria",
+      "facet": "Palabras en euskera",
+      "known_at": 12
+    },
+    {
+      "name": "Castellano",
+      "facet": "Lenguas cooficiales y su mapa",
+      "known_at": 1
+    },
+    {
+      "name": "Lengua cooficial",
+      "facet": "Lenguas cooficiales y su mapa",
+      "known_at": 7
+    },
+    {
+      "name": "Franja de Aragón",
+      "facet": "Lenguas cooficiales y su mapa",
+      "known_at": 13
+    },
+    {
+      "name": "Andorra",
+      "facet": "Lenguas cooficiales y su mapa",
+      "known_at": 7
+    },
+    {
+      "name": "Alguer",
+      "facet": "Lenguas cooficiales y su mapa",
+      "known_at": 14
+    },
+    {
+      "name": "Rosellón",
+      "facet": "Lenguas cooficiales y su mapa",
+      "known_at": 13
+    },
+    {
+      "name": "Iparralde",
+      "facet": "Lenguas cooficiales y su mapa",
+      "known_at": 13
+    },
+    {
+      "name": "Andaluz",
+      "facet": "Dialectos y hablas del castellano",
+      "known_at": 3
+    },
+    {
+      "name": "Canario",
+      "facet": "Dialectos y hablas del castellano",
+      "known_at": 5
+    },
+    {
+      "name": "Llanito",
+      "facet": "Dialectos y hablas del castellano",
+      "known_at": 12
+    },
+    {
+      "name": "Aspiración de la ese",
+      "facet": "Dialectos y hablas del castellano",
+      "known_at": 10
+    },
+    {
+      "name": "Cheso",
+      "facet": "Asturiano, aragonés y otras lenguas minoritarias",
+      "known_at": 14
+    },
+    {
+      "name": "Benasqués",
+      "facet": "Asturiano, aragonés y otras lenguas minoritarias",
+      "known_at": 14
+    },
+    {
+      "name": "Fala",
+      "facet": "Asturiano, aragonés y otras lenguas minoritarias",
+      "known_at": 14
+    },
+    {
+      "name": "Mirandés",
+      "facet": "Asturiano, aragonés y otras lenguas minoritarias",
+      "known_at": 14
+    },
+    {
+      "name": "Gallego-asturiano",
+      "facet": "Asturiano, aragonés y otras lenguas minoritarias",
+      "known_at": 13
+    },
+    {
+      "name": "Tamazight",
+      "facet": "Asturiano, aragonés y otras lenguas minoritarias",
+      "known_at": 13
+    },
+    {
+      "name": "Darija",
+      "facet": "Asturiano, aragonés y otras lenguas minoritarias",
+      "known_at": 13
+    },
+    {
+      "name": "Academia de la Llingua Asturiana",
+      "facet": "Asturiano, aragonés y otras lenguas minoritarias",
+      "known_at": 13
+    },
+    {
+      "name": "Donostia",
+      "facet": "Nombres de lugares en cada lengua",
+      "known_at": 7
+    },
+    {
+      "name": "Gasteiz",
+      "facet": "Nombres de lugares en cada lengua",
+      "known_at": 9
+    },
+    {
+      "name": "Iruña",
+      "facet": "Nombres de lugares en cada lengua",
+      "known_at": 10
+    },
+    {
+      "name": "Bilbo",
+      "facet": "Nombres de lugares en cada lengua",
+      "known_at": 11
+    },
+    {
+      "name": "Eivissa",
+      "facet": "Nombres de lugares en cada lengua",
+      "known_at": 8
+    },
+    {
+      "name": "Maó",
+      "facet": "Nombres de lugares en cada lengua",
+      "known_at": 11
+    },
+    {
+      "name": "Xàbia",
+      "facet": "Nombres de lugares en cada lengua",
+      "known_at": 11
+    },
+    {
+      "name": "Euskadi",
+      "facet": "Nombres de lugares en cada lengua",
+      "known_at": 5
+    },
+    {
+      "name": "Catalunya",
+      "facet": "Nombres de lugares en cada lengua",
+      "known_at": 3
+    },
+    {
+      "name": "Castelló",
+      "facet": "Nombres de lugares en cada lengua",
+      "known_at": 8
+    },
+    {
+      "name": "Alacant",
+      "facet": "Nombres de lugares en cada lengua",
+      "known_at": 9
+    },
+    {
+      "name": "Uviéu",
+      "facet": "Nombres de lugares en cada lengua",
+      "known_at": 13
+    },
+    {
+      "name": "Xixón",
+      "facet": "Nombres de lugares en cada lengua",
+      "known_at": 11
+    },
+    {
+      "name": "Bon dia",
+      "facet": "Saludos y expresiones cotidianas",
+      "known_at": 3
+    },
+    {
+      "name": "Bona nit",
+      "facet": "Saludos y expresiones cotidianas",
+      "known_at": 5
+    },
+    {
+      "name": "Gràcies",
+      "facet": "Saludos y expresiones cotidianas",
+      "known_at": 4
+    },
+    {
+      "name": "Adéu",
+      "facet": "Saludos y expresiones cotidianas",
+      "known_at": 4
+    },
+    {
+      "name": "Si us plau",
+      "facet": "Saludos y expresiones cotidianas",
+      "known_at": 8
+    },
+    {
+      "name": "Bos días",
+      "facet": "Saludos y expresiones cotidianas",
+      "known_at": 5
+    },
+    {
+      "name": "Grazas",
+      "facet": "Saludos y expresiones cotidianas",
+      "known_at": 6
+    },
+    {
+      "name": "Ata logo",
+      "facet": "Saludos y expresiones cotidianas",
+      "known_at": 9
+    },
+    {
+      "name": "Eskerrik asko",
+      "facet": "Saludos y expresiones cotidianas",
+      "known_at": 7
+    },
+    {
+      "name": "Egun on",
+      "facet": "Saludos y expresiones cotidianas",
+      "known_at": 9
+    },
+    {
+      "name": "Ongi etorri",
+      "facet": "Saludos y expresiones cotidianas",
+      "known_at": 9
+    },
+    {
+      "name": "Gora",
+      "facet": "Saludos y expresiones cotidianas",
+      "known_at": 10
+    },
+    {
+      "name": "Ausiàs March",
+      "facet": "Escritores y canciones en lenguas de España",
+      "known_at": 14
+    },
+    {
+      "name": "Tirant lo Blanc",
+      "facet": "Escritores y canciones en lenguas de España",
+      "known_at": 13
+    },
+    {
+      "name": "L'Estaca",
+      "facet": "Escritores y canciones en lenguas de España",
+      "known_at": 12
+    },
+    {
+      "name": "Mikel Laboa",
+      "facet": "Escritores y canciones en lenguas de España",
+      "known_at": 13
+    },
+    {
+      "name": "Glosas Emilianenses",
+      "facet": "Historia y origen de las lenguas",
+      "known_at": 11
+    },
+    {
+      "name": "Arabismos",
+      "facet": "Historia y origen de las lenguas",
+      "known_at": 9
+    },
+    {
+      "name": "Mozárabe",
+      "facet": "Historia y origen de las lenguas",
+      "known_at": 12
+    },
+    {
+      "name": "Galaico-portugués",
+      "facet": "Historia y origen de las lenguas",
+      "known_at": 12
+    },
+    {
+      "name": "Lengua prerromana",
+      "facet": "Historia y origen de las lenguas",
+      "known_at": 12
+    },
+    {
+      "name": "Euskera batua",
+      "facet": "Historia y origen de las lenguas",
+      "known_at": 12
+    },
+    {
+      "name": "Allioli",
+      "facet": "Comidas y fiestas con nombre propio",
+      "known_at": 5
+    },
+    {
+      "name": "Sobrassada",
+      "facet": "Comidas y fiestas con nombre propio",
+      "known_at": 8
+    },
+    {
+      "name": "Grelos",
+      "facet": "Comidas y fiestas con nombre propio",
+      "known_at": 11
+    },
+    {
+      "name": "Falles",
+      "facet": "Comidas y fiestas con nombre propio",
+      "known_at": 4
+    },
+    {
+      "name": "Caga tió",
+      "facet": "Comidas y fiestas con nombre propio",
+      "known_at": 9
+    },
+    {
+      "name": "Tamborrada",
+      "facet": "Comidas y fiestas con nombre propio",
+      "known_at": 11
+    },
+    {
+      "name": "TVG",
+      "facet": "Lenguas en medios, escuela y política",
+      "known_at": 9
+    },
+    {
+      "name": "EITB",
+      "facet": "Lenguas en medios, escuela y política",
+      "known_at": 10
+    },
+    {
+      "name": "À Punt",
+      "facet": "Lenguas en medios, escuela y política",
+      "known_at": 11
+    },
+    {
+      "name": "Club Super3",
+      "facet": "Lenguas en medios, escuela y política",
+      "known_at": 9
+    },
+    {
+      "name": "Ikastola",
+      "facet": "Lenguas en medios, escuela y política",
+      "known_at": 9
+    },
+    {
+      "name": "Inmersión lingüística",
+      "facet": "Lenguas en medios, escuela y política",
+      "known_at": 11
+    },
+    {
+      "name": "Modelo D",
+      "facet": "Lenguas en medios, escuela y política",
+      "known_at": 13
+    },
+    {
+      "name": "Acadèmia Valenciana de la Llengua",
+      "facet": "Lenguas en medios, escuela y política",
+      "known_at": 13
+    },
+    {
+      "name": "Normalización lingüística",
+      "facet": "Lenguas en medios, escuela y política",
+      "known_at": 12
+    },
+    {
+      "name": "Carta Europea de las Lenguas Regionales o Minoritarias",
+      "facet": "Lenguas en medios, escuela y política",
+      "known_at": 14
+    },
+    {
+      "name": "Uso de lenguas cooficiales en el Congreso",
+      "facet": "Lenguas en medios, escuela y política",
+      "known_at": 12
+    },
+    {
+      "name": "Polònia",
+      "facet": "Lenguas en medios, escuela y política",
+      "known_at": 12
+    }
+  ]
+}
