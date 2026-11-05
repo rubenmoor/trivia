@@ -1,0 +1,977 @@
+{
+  "subcategory": "transport",
+  "facets": [
+    "Metro de la Ciudad de México",
+    "Iconos y estaciones del Metro",
+    "Metrobús, trolebús y Tren Ligero",
+    "Camiones, peseras y combis",
+    "Taxis, vochos y apps de viaje",
+    "Trenes de México de ayer y hoy",
+    "Aeropuertos y aviación en México",
+    "Carreteras, casetas y autobuses foráneos",
+    "Bicis, scooters y movilidad urbana",
+    "Tráfico, Hoy No Circula y placas",
+    "Transporte en otras ciudades mexicanas",
+    "Trajineras, ferris y transporte por agua"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sistema de Transporte Colectivo Metro",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 3
+    },
+    {
+      "name": "Inauguración del Metro en 1969",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 10
+    },
+    {
+      "name": "Línea 1 del Metro",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 5
+    },
+    {
+      "name": "Línea 2 del Metro",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 6
+    },
+    {
+      "name": "Línea 3 del Metro",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 7
+    },
+    {
+      "name": "Línea 12 del Metro",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 8
+    },
+    {
+      "name": "Línea A del Metro",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 9
+    },
+    {
+      "name": "Línea B del Metro",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 8
+    },
+    {
+      "name": "Línea 7 del Metro",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 11
+    },
+    {
+      "name": "Boleto del Metro",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 2
+    },
+    {
+      "name": "Tarjeta de Movilidad Integrada",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 6
+    },
+    {
+      "name": "Torniquete",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 4
+    },
+    {
+      "name": "Vagón exclusivo para mujeres",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 6
+    },
+    {
+      "name": "Vagoneros",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 6
+    },
+    {
+      "name": "Ruedas neumáticas del Metro",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 11
+    },
+    {
+      "name": "Tren naranja del Metro",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 3
+    },
+    {
+      "name": "Correspondencia",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 5
+    },
+    {
+      "name": "Andén",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 4
+    },
+    {
+      "name": "Metro de París",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 12
+    },
+    {
+      "name": "Empresas ICA",
+      "facet": "Metro de la Ciudad de México",
+      "known_at": 14
+    },
+    {
+      "name": "Pictogramas del Metro",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 4
+    },
+    {
+      "name": "Adoratorio de Ehécatl",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 11
+    },
+    {
+      "name": "Estación Pino Suárez",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 8
+    },
+    {
+      "name": "Estación Zócalo",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 4
+    },
+    {
+      "name": "Estación Insurgentes",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 7
+    },
+    {
+      "name": "Estación Bellas Artes",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 6
+    },
+    {
+      "name": "Estación Pantitlán",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 6
+    },
+    {
+      "name": "Estación Indios Verdes",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 7
+    },
+    {
+      "name": "Estación Cuatro Caminos",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 8
+    },
+    {
+      "name": "Estación Observatorio",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 8
+    },
+    {
+      "name": "Estación Tacubaya",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 8
+    },
+    {
+      "name": "Estación Universidad",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 7
+    },
+    {
+      "name": "Estación Chabacano",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 6
+    },
+    {
+      "name": "Estación Chapultepec",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 4
+    },
+    {
+      "name": "Estación Tasqueña",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 8
+    },
+    {
+      "name": "Estación Garibaldi",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 8
+    },
+    {
+      "name": "Estación Hidalgo",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 8
+    },
+    {
+      "name": "Túnel de la Ciencia",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 10
+    },
+    {
+      "name": "Metro Balderas",
+      "facet": "Iconos y estaciones del Metro",
+      "known_at": 11
+    },
+    {
+      "name": "Metrobús",
+      "facet": "Metrobús, trolebús y Tren Ligero",
+      "known_at": 3
+    },
+    {
+      "name": "Línea 1 del Metrobús",
+      "facet": "Metrobús, trolebús y Tren Ligero",
+      "known_at": 7
+    },
+    {
+      "name": "Carril confinado",
+      "facet": "Metrobús, trolebús y Tren Ligero",
+      "known_at": 8
+    },
+    {
+      "name": "Metrobús de doble piso",
+      "facet": "Metrobús, trolebús y Tren Ligero",
+      "known_at": 7
+    },
+    {
+      "name": "Metrobús al Aeropuerto",
+      "facet": "Metrobús, trolebús y Tren Ligero",
+      "known_at": 9
+    },
+    {
+      "name": "Trolebús",
+      "facet": "Metrobús, trolebús y Tren Ligero",
+      "known_at": 4
+    },
+    {
+      "name": "Trolebús Elevado",
+      "facet": "Metrobús, trolebús y Tren Ligero",
+      "known_at": 9
+    },
+    {
+      "name": "Trolebús del Eje Central",
+      "facet": "Metrobús, trolebús y Tren Ligero",
+      "known_at": 9
+    },
+    {
+      "name": "Pantógrafo",
+      "facet": "Metrobús, trolebús y Tren Ligero",
+      "known_at": 12
+    },
+    {
+      "name": "Tren Ligero",
+      "facet": "Metrobús, trolebús y Tren Ligero",
+      "known_at": 6
+    },
+    {
+      "name": "Estación Estadio Azteca del Tren Ligero",
+      "facet": "Metrobús, trolebús y Tren Ligero",
+      "known_at": 8
+    },
+    {
+      "name": "Cablebús",
+      "facet": "Metrobús, trolebús y Tren Ligero",
+      "known_at": 5
+    },
+    {
+      "name": "Mexicable",
+      "facet": "Metrobús, trolebús y Tren Ligero",
+      "known_at": 9
+    },
+    {
+      "name": "Mexibús",
+      "facet": "Metrobús, trolebús y Tren Ligero",
+      "known_at": 8
+    },
+    {
+      "name": "Tranvía eléctrico",
+      "facet": "Metrobús, trolebús y Tren Ligero",
+      "known_at": 7
+    },
+    {
+      "name": "Autobús de tránsito rápido (BRT)",
+      "facet": "Metrobús, trolebús y Tren Ligero",
+      "known_at": 13
+    },
+    {
+      "name": "Pesera",
+      "facet": "Camiones, peseras y combis",
+      "known_at": 3
+    },
+    {
+      "name": "Combi",
+      "facet": "Camiones, peseras y combis",
+      "known_at": 3
+    },
+    {
+      "name": "Microbús",
+      "facet": "Camiones, peseras y combis",
+      "known_at": 3
+    },
+    {
+      "name": "Camión",
+      "facet": "Camiones, peseras y combis",
+      "known_at": 1
+    },
+    {
+      "name": "Ruta 100",
+      "facet": "Camiones, peseras y combis",
+      "known_at": 12
+    },
+    {
+      "name": "RTP",
+      "facet": "Camiones, peseras y combis",
+      "known_at": 8
+    },
+    {
+      "name": "¡Bajan!",
+      "facet": "Camiones, peseras y combis",
+      "known_at": 3
+    },
+    {
+      "name": "Timbre del camión",
+      "facet": "Camiones, peseras y combis",
+      "known_at": 2
+    },
+    {
+      "name": "Chafirete",
+      "facet": "Camiones, peseras y combis",
+      "known_at": 10
+    },
+    {
+      "name": "Checador",
+      "facet": "Camiones, peseras y combis",
+      "known_at": 10
+    },
+    {
+      "name": "Paradero",
+      "facet": "Camiones, peseras y combis",
+      "known_at": 4
+    },
+    {
+      "name": "CETRAM",
+      "facet": "Camiones, peseras y combis",
+      "known_at": 11
+    },
+    {
+      "name": "Pasaje",
+      "facet": "Camiones, peseras y combis",
+      "known_at": 4
+    },
+    {
+      "name": "Letrero de ruta en el parabrisas",
+      "facet": "Camiones, peseras y combis",
+      "known_at": 5
+    },
+    {
+      "name": "Volkswagen Combi",
+      "facet": "Camiones, peseras y combis",
+      "known_at": 6
+    },
+    {
+      "name": "Colectivo",
+      "facet": "Camiones, peseras y combis",
+      "known_at": 7
+    },
+    {
+      "name": "Urbano",
+      "facet": "Camiones, peseras y combis",
+      "known_at": 8
+    },
+    {
+      "name": "Volkswagen Sedán",
+      "facet": "Taxis, vochos y apps de viaje",
+      "known_at": 7
+    },
+    {
+      "name": "Taxi vocho verde",
+      "facet": "Taxis, vochos y apps de viaje",
+      "known_at": 8
+    },
+    {
+      "name": "Taxi rosa y blanco",
+      "facet": "Taxis, vochos y apps de viaje",
+      "known_at": 4
+    },
+    {
+      "name": "Taxímetro",
+      "facet": "Taxis, vochos y apps de viaje",
+      "known_at": 5
+    },
+    {
+      "name": "Taxi de sitio",
+      "facet": "Taxis, vochos y apps de viaje",
+      "known_at": 7
+    },
+    {
+      "name": "Taxi libre",
+      "facet": "Taxis, vochos y apps de viaje",
+      "known_at": 8
+    },
+    {
+      "name": "Taxi autorizado del aeropuerto",
+      "facet": "Taxis, vochos y apps de viaje",
+      "known_at": 10
+    },
+    {
+      "name": "Uber",
+      "facet": "Taxis, vochos y apps de viaje",
+      "known_at": 4
+    },
+    {
+      "name": "DiDi",
+      "facet": "Taxis, vochos y apps de viaje",
+      "known_at": 5
+    },
+    {
+      "name": "Cabify",
+      "facet": "Taxis, vochos y apps de viaje",
+      "known_at": 9
+    },
+    {
+      "name": "Mototaxi",
+      "facet": "Taxis, vochos y apps de viaje",
+      "known_at": 5
+    },
+    {
+      "name": "Planta de Volkswagen en Puebla",
+      "facet": "Taxis, vochos y apps de viaje",
+      "known_at": 9
+    },
+    {
+      "name": "Último vocho de 2003",
+      "facet": "Taxis, vochos y apps de viaje",
+      "known_at": 11
+    },
+    {
+      "name": "Nissan Tsuru",
+      "facet": "Taxis, vochos y apps de viaje",
+      "known_at": 7
+    },
+    {
+      "name": "Ruletero",
+      "facet": "Taxis, vochos y apps de viaje",
+      "known_at": 12
+    },
+    {
+      "name": "Aventón",
+      "facet": "Taxis, vochos y apps de viaje",
+      "known_at": 5
+    },
+    {
+      "name": "Taxi colectivo",
+      "facet": "Taxis, vochos y apps de viaje",
+      "known_at": 8
+    },
+    {
+      "name": "Ferrocarriles Nacionales de México",
+      "facet": "Trenes de México de ayer y hoy",
+      "known_at": 10
+    },
+    {
+      "name": "Tren Interurbano México–Toluca",
+      "facet": "Trenes de México de ayer y hoy",
+      "known_at": 8
+    },
+    {
+      "name": "Tren Suburbano",
+      "facet": "Trenes de México de ayer y hoy",
+      "known_at": 7
+    },
+    {
+      "name": "Ferrocarril Mexicano de Veracruz",
+      "facet": "Trenes de México de ayer y hoy",
+      "known_at": 12
+    },
+    {
+      "name": "Jesús García, el Héroe de Nacozari",
+      "facet": "Trenes de México de ayer y hoy",
+      "known_at": 12
+    },
+    {
+      "name": "Máquina 501",
+      "facet": "Trenes de México de ayer y hoy",
+      "known_at": 13
+    },
+    {
+      "name": "Estación Buenavista",
+      "facet": "Trenes de México de ayer y hoy",
+      "known_at": 9
+    },
+    {
+      "name": "José Cuervo Express",
+      "facet": "Trenes de México de ayer y hoy",
+      "known_at": 11
+    },
+    {
+      "name": "Museo Nacional de los Ferrocarriles Mexicanos",
+      "facet": "Trenes de México de ayer y hoy",
+      "known_at": 12
+    },
+    {
+      "name": "Corredor Interoceánico del Istmo de Tehuantepec",
+      "facet": "Trenes de México de ayer y hoy",
+      "known_at": 12
+    },
+    {
+      "name": "Aeropuerto Internacional de la Ciudad de México",
+      "facet": "Aeropuertos y aviación en México",
+      "known_at": 4
+    },
+    {
+      "name": "Aeropuerto Internacional Felipe Ángeles",
+      "facet": "Aeropuertos y aviación en México",
+      "known_at": 6
+    },
+    {
+      "name": "Terminal 2 del AICM",
+      "facet": "Aeropuertos y aviación en México",
+      "known_at": 8
+    },
+    {
+      "name": "Aeropuerto de Texcoco",
+      "facet": "Aeropuertos y aviación en México",
+      "known_at": 10
+    },
+    {
+      "name": "Mamuts de Santa Lucía",
+      "facet": "Aeropuertos y aviación en México",
+      "known_at": 10
+    },
+    {
+      "name": "Aeroméxico",
+      "facet": "Aeropuertos y aviación en México",
+      "known_at": 4
+    },
+    {
+      "name": "Caballero águila de Aeroméxico",
+      "facet": "Aeropuertos y aviación en México",
+      "known_at": 9
+    },
+    {
+      "name": "Mexicana de Aviación",
+      "facet": "Aeropuertos y aviación en México",
+      "known_at": 9
+    },
+    {
+      "name": "Volaris",
+      "facet": "Aeropuertos y aviación en México",
+      "known_at": 5
+    },
+    {
+      "name": "Viva Aerobus",
+      "facet": "Aeropuertos y aviación en México",
+      "known_at": 6
+    },
+    {
+      "name": "Aeropuerto de Cancún",
+      "facet": "Aeropuertos y aviación en México",
+      "known_at": 6
+    },
+    {
+      "name": "Aeropuerto de Guadalajara",
+      "facet": "Aeropuertos y aviación en México",
+      "known_at": 9
+    },
+    {
+      "name": "Aeropuerto de Toluca",
+      "facet": "Aeropuertos y aviación en México",
+      "known_at": 10
+    },
+    {
+      "name": "Cross Border Xpress",
+      "facet": "Aeropuertos y aviación en México",
+      "known_at": 12
+    },
+    {
+      "name": "Emilio Carranza",
+      "facet": "Aeropuertos y aviación en México",
+      "known_at": 13
+    },
+    {
+      "name": "Alberto Braniff",
+      "facet": "Aeropuertos y aviación en México",
+      "known_at": 14
+    },
+    {
+      "name": "Hélice Anáhuac",
+      "facet": "Aeropuertos y aviación en México",
+      "known_at": 15
+    },
+    {
+      "name": "Caseta de cobro",
+      "facet": "Carreteras, casetas y autobuses foráneos",
+      "known_at": 4
+    },
+    {
+      "name": "Carretera libre",
+      "facet": "Carreteras, casetas y autobuses foráneos",
+      "known_at": 6
+    },
+    {
+      "name": "TAG de telepeaje",
+      "facet": "Carreteras, casetas y autobuses foráneos",
+      "known_at": 8
+    },
+    {
+      "name": "Autopista del Sol",
+      "facet": "Carreteras, casetas y autobuses foráneos",
+      "known_at": 9
+    },
+    {
+      "name": "Carretera Panamericana",
+      "facet": "Carreteras, casetas y autobuses foráneos",
+      "known_at": 10
+    },
+    {
+      "name": "Carretera Transpeninsular",
+      "facet": "Carreteras, casetas y autobuses foráneos",
+      "known_at": 12
+    },
+    {
+      "name": "Ángeles Verdes",
+      "facet": "Carreteras, casetas y autobuses foráneos",
+      "known_at": 9
+    },
+    {
+      "name": "Tope",
+      "facet": "Carreteras, casetas y autobuses foráneos",
+      "known_at": 2
+    },
+    {
+      "name": "TAPO",
+      "facet": "Carreteras, casetas y autobuses foráneos",
+      "known_at": 8
+    },
+    {
+      "name": "Central del Norte",
+      "facet": "Carreteras, casetas y autobuses foráneos",
+      "known_at": 7
+    },
+    {
+      "name": "Central del Sur",
+      "facet": "Carreteras, casetas y autobuses foráneos",
+      "known_at": 8
+    },
+    {
+      "name": "Terminal Poniente de Observatorio",
+      "facet": "Carreteras, casetas y autobuses foráneos",
+      "known_at": 9
+    },
+    {
+      "name": "ADO",
+      "facet": "Carreteras, casetas y autobuses foráneos",
+      "known_at": 5
+    },
+    {
+      "name": "ETN",
+      "facet": "Carreteras, casetas y autobuses foráneos",
+      "known_at": 8
+    },
+    {
+      "name": "Primera Plus",
+      "facet": "Carreteras, casetas y autobuses foráneos",
+      "known_at": 8
+    },
+    {
+      "name": "Estrella Blanca",
+      "facet": "Carreteras, casetas y autobuses foráneos",
+      "known_at": 9
+    },
+    {
+      "name": "Ecobici",
+      "facet": "Bicis, scooters y movilidad urbana",
+      "known_at": 5
+    },
+    {
+      "name": "Muévete en Bici",
+      "facet": "Bicis, scooters y movilidad urbana",
+      "known_at": 8
+    },
+    {
+      "name": "Ciclovía",
+      "facet": "Bicis, scooters y movilidad urbana",
+      "known_at": 3
+    },
+    {
+      "name": "Carril bus-bici",
+      "facet": "Bicis, scooters y movilidad urbana",
+      "known_at": 8
+    },
+    {
+      "name": "Biciestacionamiento",
+      "facet": "Bicis, scooters y movilidad urbana",
+      "known_at": 6
+    },
+    {
+      "name": "Bicitaxi",
+      "facet": "Bicis, scooters y movilidad urbana",
+      "known_at": 4
+    },
+    {
+      "name": "Scooter eléctrico",
+      "facet": "Bicis, scooters y movilidad urbana",
+      "known_at": 3
+    },
+    {
+      "name": "Triciclo de carga",
+      "facet": "Bicis, scooters y movilidad urbana",
+      "known_at": 4
+    },
+    {
+      "name": "Panadero en bicicleta",
+      "facet": "Bicis, scooters y movilidad urbana",
+      "known_at": 5
+    },
+    {
+      "name": "Repartidor en bicicleta",
+      "facet": "Bicis, scooters y movilidad urbana",
+      "known_at": 3
+    },
+    {
+      "name": "MiBici",
+      "facet": "Bicis, scooters y movilidad urbana",
+      "known_at": 10
+    },
+    {
+      "name": "Rodada",
+      "facet": "Bicis, scooters y movilidad urbana",
+      "known_at": 8
+    },
+    {
+      "name": "Puente peatonal",
+      "facet": "Bicis, scooters y movilidad urbana",
+      "known_at": 3
+    },
+    {
+      "name": "Hoy No Circula",
+      "facet": "Tráfico, Hoy No Circula y placas",
+      "known_at": 5
+    },
+    {
+      "name": "Holograma doble cero",
+      "facet": "Tráfico, Hoy No Circula y placas",
+      "known_at": 9
+    },
+    {
+      "name": "Verificación vehicular",
+      "facet": "Tráfico, Hoy No Circula y placas",
+      "known_at": 7
+    },
+    {
+      "name": "Engomado",
+      "facet": "Tráfico, Hoy No Circula y placas",
+      "known_at": 8
+    },
+    {
+      "name": "Contingencia ambiental",
+      "facet": "Tráfico, Hoy No Circula y placas",
+      "known_at": 7
+    },
+    {
+      "name": "Segundo piso del Periférico",
+      "facet": "Tráfico, Hoy No Circula y placas",
+      "known_at": 8
+    },
+    {
+      "name": "Viaducto",
+      "facet": "Tráfico, Hoy No Circula y placas",
+      "known_at": 7
+    },
+    {
+      "name": "Circuito Interior",
+      "facet": "Tráfico, Hoy No Circula y placas",
+      "known_at": 8
+    },
+    {
+      "name": "Ejes viales",
+      "facet": "Tráfico, Hoy No Circula y placas",
+      "known_at": 8
+    },
+    {
+      "name": "Placas de la Ciudad de México",
+      "facet": "Tráfico, Hoy No Circula y placas",
+      "known_at": 7
+    },
+    {
+      "name": "Placas del Estado de México",
+      "facet": "Tráfico, Hoy No Circula y placas",
+      "known_at": 8
+    },
+    {
+      "name": "Tenencia vehicular",
+      "facet": "Tráfico, Hoy No Circula y placas",
+      "known_at": 11
+    },
+    {
+      "name": "Fotomulta",
+      "facet": "Tráfico, Hoy No Circula y placas",
+      "known_at": 8
+    },
+    {
+      "name": "Corralón",
+      "facet": "Tráfico, Hoy No Circula y placas",
+      "known_at": 8
+    },
+    {
+      "name": "Agente de tránsito",
+      "facet": "Tráfico, Hoy No Circula y placas",
+      "known_at": 4
+    },
+    {
+      "name": "Autos chocolate",
+      "facet": "Tráfico, Hoy No Circula y placas",
+      "known_at": 12
+    },
+    {
+      "name": "Metrorrey",
+      "facet": "Transporte en otras ciudades mexicanas",
+      "known_at": 8
+    },
+    {
+      "name": "Tren Ligero de Guadalajara",
+      "facet": "Transporte en otras ciudades mexicanas",
+      "known_at": 8
+    },
+    {
+      "name": "Macrobús",
+      "facet": "Transporte en otras ciudades mexicanas",
+      "known_at": 10
+    },
+    {
+      "name": "Optibús",
+      "facet": "Transporte en otras ciudades mexicanas",
+      "known_at": 13
+    },
+    {
+      "name": "Ecovía",
+      "facet": "Transporte en otras ciudades mexicanas",
+      "known_at": 13
+    },
+    {
+      "name": "Pulmonía",
+      "facet": "Transporte en otras ciudades mexicanas",
+      "known_at": 11
+    },
+    {
+      "name": "Calafia",
+      "facet": "Transporte en otras ciudades mexicanas",
+      "known_at": 13
+    },
+    {
+      "name": "Funicular de Guanajuato",
+      "facet": "Transporte en otras ciudades mexicanas",
+      "known_at": 11
+    },
+    {
+      "name": "Túneles de Guanajuato",
+      "facet": "Transporte en otras ciudades mexicanas",
+      "known_at": 9
+    },
+    {
+      "name": "Teleférico de Orizaba",
+      "facet": "Transporte en otras ciudades mexicanas",
+      "known_at": 11
+    },
+    {
+      "name": "Va y Ven",
+      "facet": "Transporte en otras ciudades mexicanas",
+      "known_at": 13
+    },
+    {
+      "name": "Tuxtla Gutiérrez Conejobús",
+      "facet": "Transporte en otras ciudades mexicanas",
+      "known_at": 14
+    },
+    {
+      "name": "Nombres pintados de las trajineras",
+      "facet": "Trajineras, ferris y transporte por agua",
+      "known_at": 6
+    },
+    {
+      "name": "Canoas de Tenochtitlan",
+      "facet": "Trajineras, ferris y transporte por agua",
+      "known_at": 8
+    },
+    {
+      "name": "Lanchas del Lago de Chapultepec",
+      "facet": "Trajineras, ferris y transporte por agua",
+      "known_at": 5
+    },
+    {
+      "name": "Ferry a Isla Mujeres",
+      "facet": "Trajineras, ferris y transporte por agua",
+      "known_at": 8
+    },
+    {
+      "name": "Ferry a Cozumel",
+      "facet": "Trajineras, ferris y transporte por agua",
+      "known_at": 8
+    },
+    {
+      "name": "Ferry La Paz–Topolobampo",
+      "facet": "Trajineras, ferris y transporte por agua",
+      "known_at": 12
+    },
+    {
+      "name": "Panga",
+      "facet": "Trajineras, ferris y transporte por agua",
+      "known_at": 10
+    },
+    {
+      "name": "Mexcaltitán",
+      "facet": "Trajineras, ferris y transporte por agua",
+      "known_at": 13
+    },
+    {
+      "name": "Puerto de Manzanillo",
+      "facet": "Trajineras, ferris y transporte por agua",
+      "known_at": 11
+    },
+    {
+      "name": "Catamarán",
+      "facet": "Trajineras, ferris y transporte por agua",
+      "known_at": 7
+    }
+  ]
+}

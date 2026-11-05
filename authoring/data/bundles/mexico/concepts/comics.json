@@ -1,0 +1,883 @@
+{
+  "subcategory": "comics",
+  "facets": [
+    "Historietas clásicas mexicanas",
+    "Personajes de los cómics mexicanos",
+    "Caricatura política y moneros de periódico",
+    "Posada y la caricatura del siglo XIX",
+    "Rius y la historieta de divulgación",
+    "Revistas, pepines y editoriales",
+    "Héroes enmascarados y luchadores de papel",
+    "Moneros contemporáneos y humor gráfico",
+    "Mexicanos en el cómic internacional",
+    "Historietas en el cine y la televisión",
+    "Palabras y oficio del monero"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Memín Pinguín",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 8
+    },
+    {
+      "name": "Yolanda Vargas Dulché",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 12
+    },
+    {
+      "name": "Lágrimas, risas y amor",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 11
+    },
+    {
+      "name": "Chanoc",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 11
+    },
+    {
+      "name": "Fantomas, la amenaza elegante",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 11
+    },
+    {
+      "name": "El Libro Vaquero",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 9
+    },
+    {
+      "name": "El Libro Semanal",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 12
+    },
+    {
+      "name": "Rarotonga",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 13
+    },
+    {
+      "name": "Hermelinda Linda",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 12
+    },
+    {
+      "name": "Aníbal 5",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 14
+    },
+    {
+      "name": "Alma Grande",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 13
+    },
+    {
+      "name": "Tradiciones y leyendas de la Colonia",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 13
+    },
+    {
+      "name": "Don Catarino",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 15
+    },
+    {
+      "name": "Mamerto y sus conocencias",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 15
+    },
+    {
+      "name": "Los Superlocos",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 14
+    },
+    {
+      "name": "El Payo",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 13
+    },
+    {
+      "name": "El Pantera",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 14
+    },
+    {
+      "name": "Karmatron y los Transformables",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 13
+    },
+    {
+      "name": "Rolando el Rabioso",
+      "facet": "Historietas clásicas mexicanas",
+      "known_at": 14
+    },
+    {
+      "name": "Borola Tacuche",
+      "facet": "Personajes de los cómics mexicanos",
+      "known_at": 10
+    },
+    {
+      "name": "Regino Burrón",
+      "facet": "Personajes de los cómics mexicanos",
+      "known_at": 11
+    },
+    {
+      "name": "Macuca Burrón",
+      "facet": "Personajes de los cómics mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Foforito Cantarranas",
+      "facet": "Personajes de los cómics mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Cristeta Tacuche",
+      "facet": "Personajes de los cómics mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Ruperto Tacuche",
+      "facet": "Personajes de los cómics mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Avelino Pilongano",
+      "facet": "Personajes de los cómics mexicanos",
+      "known_at": 14
+    },
+    {
+      "name": "Don Susanito Peñafiel y Somellera",
+      "facet": "Personajes de los cómics mexicanos",
+      "known_at": 15,
+      "retired": "unaskable: No tengo datos seguros sobre este personaje de La familia Burrón, y las opciones de escenario quedarían forzadas."
+    },
+    {
+      "name": "Ma'Linda",
+      "facet": "Personajes de los cómics mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Carlangas",
+      "facet": "Personajes de los cómics mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Ernestillo",
+      "facet": "Personajes de los cómics mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Solín",
+      "facet": "Personajes de los cómics mexicanos",
+      "known_at": 10
+    },
+    {
+      "name": "Juan Calzonzin",
+      "facet": "Personajes de los cómics mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Don Perpetuo del Rosal",
+      "facet": "Personajes de los cómics mexicanos",
+      "known_at": 14
+    },
+    {
+      "name": "Tsekub Baloyán",
+      "facet": "Personajes de los cómics mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Gastón Billetes",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 14,
+      "retired": "unaskable: No estoy seguro de en qué historieta sale Gastón Billetes ni de sus datos; demasiado oscuro."
+    },
+    {
+      "name": "El charro Matías",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 14
+    },
+    {
+      "name": "Andrés Audiffred",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio Arias Bernal",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 14
+    },
+    {
+      "name": "Rogelio Naranjo",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 13
+    },
+    {
+      "name": "Antonio Helguera",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 12
+    },
+    {
+      "name": "El Fisgón",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 12
+    },
+    {
+      "name": "Magú",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 13
+    },
+    {
+      "name": "Hernández (monero)",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 13
+    },
+    {
+      "name": "Rapé",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 14
+    },
+    {
+      "name": "Paco Calderón",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 13
+    },
+    {
+      "name": "Helioflores",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 14
+    },
+    {
+      "name": "Rocha (monero)",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 15
+    },
+    {
+      "name": "Ángel Boligán",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 14
+    },
+    {
+      "name": "La Jornada",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 10
+    },
+    {
+      "name": "El Chamuco y los hijos del averno",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 12
+    },
+    {
+      "name": "Museo del Estanquillo",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 13
+    },
+    {
+      "name": "Museo de la Caricatura",
+      "facet": "Caricatura política y moneros de periódico",
+      "known_at": 14
+    },
+    {
+      "name": "El Hijo del Ahuizote",
+      "facet": "Posada y la caricatura del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Constantino Escalante",
+      "facet": "Posada y la caricatura del siglo XIX",
+      "known_at": 15
+    },
+    {
+      "name": "Santiago Hernández",
+      "facet": "Posada y la caricatura del siglo XIX",
+      "known_at": 15
+    },
+    {
+      "name": "Daniel Cabrera",
+      "facet": "Posada y la caricatura del siglo XIX",
+      "known_at": 15
+    },
+    {
+      "name": "La Orquesta",
+      "facet": "Posada y la caricatura del siglo XIX",
+      "known_at": 15
+    },
+    {
+      "name": "El Padre Cobos",
+      "facet": "Posada y la caricatura del siglo XIX",
+      "known_at": 15
+    },
+    {
+      "name": "Festival de las Calaveras",
+      "facet": "Posada y la caricatura del siglo XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Los Agachados",
+      "facet": "Rius y la historieta de divulgación",
+      "known_at": 12
+    },
+    {
+      "name": "Marx para principiantes",
+      "facet": "Rius y la historieta de divulgación",
+      "known_at": 12
+    },
+    {
+      "name": "Cuba para principiantes",
+      "facet": "Rius y la historieta de divulgación",
+      "known_at": 13
+    },
+    {
+      "name": "La panza es primero",
+      "facet": "Rius y la historieta de divulgación",
+      "known_at": 13
+    },
+    {
+      "name": "El mito guadalupano",
+      "facet": "Rius y la historieta de divulgación",
+      "known_at": 14
+    },
+    {
+      "name": "Hitler para masoquistas",
+      "facet": "Rius y la historieta de divulgación",
+      "known_at": 14
+    },
+    {
+      "name": "La trukulenta historia del kapitalismo",
+      "facet": "Rius y la historieta de divulgación",
+      "known_at": 14
+    },
+    {
+      "name": "La revolucioncita mexicana",
+      "facet": "Rius y la historieta de divulgación",
+      "known_at": 14
+    },
+    {
+      "name": "Mis confusiones",
+      "facet": "Rius y la historieta de divulgación",
+      "known_at": 15
+    },
+    {
+      "name": "Zamora, Michoacán",
+      "facet": "Rius y la historieta de divulgación",
+      "known_at": 13
+    },
+    {
+      "name": "Editorial Grijalbo",
+      "facet": "Rius y la historieta de divulgación",
+      "known_at": 13
+    },
+    {
+      "name": "Historieta de divulgación",
+      "facet": "Rius y la historieta de divulgación",
+      "known_at": 12
+    },
+    {
+      "name": "México, historia de un pueblo",
+      "facet": "Rius y la historieta de divulgación",
+      "known_at": 14
+    },
+    {
+      "name": "Pepín",
+      "facet": "Revistas, pepines y editoriales",
+      "known_at": 13
+    },
+    {
+      "name": "Paquito",
+      "facet": "Revistas, pepines y editoriales",
+      "known_at": 14
+    },
+    {
+      "name": "Chamaco",
+      "facet": "Revistas, pepines y editoriales",
+      "known_at": 14
+    },
+    {
+      "name": "Paquín",
+      "facet": "Revistas, pepines y editoriales",
+      "known_at": 14
+    },
+    {
+      "name": "Editorial Novaro",
+      "facet": "Revistas, pepines y editoriales",
+      "known_at": 12
+    },
+    {
+      "name": "Editorial Vid",
+      "facet": "Revistas, pepines y editoriales",
+      "known_at": 13
+    },
+    {
+      "name": "Editorial Televisa",
+      "facet": "Revistas, pepines y editoriales",
+      "known_at": 12
+    },
+    {
+      "name": "Novedades Editores",
+      "facet": "Revistas, pepines y editoriales",
+      "known_at": 14
+    },
+    {
+      "name": "Panini México",
+      "facet": "Revistas, pepines y editoriales",
+      "known_at": 11
+    },
+    {
+      "name": "La Mole Comic Con",
+      "facet": "Revistas, pepines y editoriales",
+      "known_at": 12
+    },
+    {
+      "name": "Mercado de La Lagunilla",
+      "facet": "Revistas, pepines y editoriales",
+      "known_at": 11
+    },
+    {
+      "name": "Puesto de periódicos",
+      "facet": "Revistas, pepines y editoriales",
+      "known_at": 5
+    },
+    {
+      "name": "Fotonovela",
+      "facet": "Revistas, pepines y editoriales",
+      "known_at": 11
+    },
+    {
+      "name": "La Garrapata",
+      "facet": "Revistas, pepines y editoriales",
+      "known_at": 14
+    },
+    {
+      "name": "Vidas Ejemplares",
+      "facet": "Revistas, pepines y editoriales",
+      "known_at": 13
+    },
+    {
+      "name": "Blue Demon",
+      "facet": "Héroes enmascarados y luchadores de papel",
+      "known_at": 8
+    },
+    {
+      "name": "Mil Máscaras",
+      "facet": "Héroes enmascarados y luchadores de papel",
+      "known_at": 11
+    },
+    {
+      "name": "Huracán Ramírez",
+      "facet": "Héroes enmascarados y luchadores de papel",
+      "known_at": 12
+    },
+    {
+      "name": "Tinieblas",
+      "facet": "Héroes enmascarados y luchadores de papel",
+      "known_at": 12
+    },
+    {
+      "name": "Alushe",
+      "facet": "Héroes enmascarados y luchadores de papel",
+      "known_at": 13
+    },
+    {
+      "name": "Black Shadow",
+      "facet": "Héroes enmascarados y luchadores de papel",
+      "known_at": 14
+    },
+    {
+      "name": "El Hijo del Santo",
+      "facet": "Héroes enmascarados y luchadores de papel",
+      "known_at": 10
+    },
+    {
+      "name": "José G. Cruz",
+      "facet": "Héroes enmascarados y luchadores de papel",
+      "known_at": 14
+    },
+    {
+      "name": "Lucha libre",
+      "facet": "Héroes enmascarados y luchadores de papel",
+      "known_at": 2
+    },
+    {
+      "name": "Arena Coliseo",
+      "facet": "Héroes enmascarados y luchadores de papel",
+      "known_at": 13
+    },
+    {
+      "name": "Rudos y técnicos",
+      "facet": "Héroes enmascarados y luchadores de papel",
+      "known_at": 8
+    },
+    {
+      "name": "Máscara contra cabellera",
+      "facet": "Héroes enmascarados y luchadores de papel",
+      "known_at": 10
+    },
+    {
+      "name": "Cuadrilátero",
+      "facet": "Héroes enmascarados y luchadores de papel",
+      "known_at": 7
+    },
+    {
+      "name": "CMLL",
+      "facet": "Héroes enmascarados y luchadores de papel",
+      "known_at": 12
+    },
+    {
+      "name": "Jis y Trino",
+      "facet": "Moneros contemporáneos y humor gráfico",
+      "known_at": 11
+    },
+    {
+      "name": "El Santos",
+      "facet": "Moneros contemporáneos y humor gráfico",
+      "known_at": 11
+    },
+    {
+      "name": "La Chora Interminable",
+      "facet": "Moneros contemporáneos y humor gráfico",
+      "known_at": 14
+    },
+    {
+      "name": "Fábulas de policías y ladrones",
+      "facet": "Moneros contemporáneos y humor gráfico",
+      "known_at": 14
+    },
+    {
+      "name": "Bef",
+      "facet": "Moneros contemporáneos y humor gráfico",
+      "known_at": 14
+    },
+    {
+      "name": "Edgar Clement",
+      "facet": "Moneros contemporáneos y humor gráfico",
+      "known_at": 14
+    },
+    {
+      "name": "Operación Bolívar",
+      "facet": "Moneros contemporáneos y humor gráfico",
+      "known_at": 15
+    },
+    {
+      "name": "Ricardo Peláez",
+      "facet": "Moneros contemporáneos y humor gráfico",
+      "known_at": 15
+    },
+    {
+      "name": "Patricio Betteo",
+      "facet": "Moneros contemporáneos y humor gráfico",
+      "known_at": 15
+    },
+    {
+      "name": "Cerdotado",
+      "facet": "Moneros contemporáneos y humor gráfico",
+      "known_at": 12
+    },
+    {
+      "name": "Ricardo Cucamonga",
+      "facet": "Moneros contemporáneos y humor gráfico",
+      "known_at": 14
+    },
+    {
+      "name": "Cintia Bolio",
+      "facet": "Moneros contemporáneos y humor gráfico",
+      "known_at": 14
+    },
+    {
+      "name": "Puras Evas",
+      "facet": "Moneros contemporáneos y humor gráfico",
+      "known_at": 15
+    },
+    {
+      "name": "Webcómic",
+      "facet": "Moneros contemporáneos y humor gráfico",
+      "known_at": 9
+    },
+    {
+      "name": "Sergio Aragonés",
+      "facet": "Mexicanos en el cómic internacional",
+      "known_at": 11
+    },
+    {
+      "name": "Groo el Errante",
+      "facet": "Mexicanos en el cómic internacional",
+      "known_at": 13
+    },
+    {
+      "name": "Revista MAD",
+      "facet": "Mexicanos en el cómic internacional",
+      "known_at": 9
+    },
+    {
+      "name": "Dibujos marginales de MAD",
+      "facet": "Mexicanos en el cómic internacional",
+      "known_at": 13
+    },
+    {
+      "name": "Humberto Ramos",
+      "facet": "Mexicanos en el cómic internacional",
+      "known_at": 13
+    },
+    {
+      "name": "Crimson",
+      "facet": "Mexicanos en el cómic internacional",
+      "known_at": 15
+    },
+    {
+      "name": "Oscar González Loyo",
+      "facet": "Mexicanos en el cómic internacional",
+      "known_at": 14
+    },
+    {
+      "name": "Tony Sandoval",
+      "facet": "Mexicanos en el cómic internacional",
+      "known_at": 15
+    },
+    {
+      "name": "Speedy Gonzales",
+      "facet": "Mexicanos en el cómic internacional",
+      "known_at": 3
+    },
+    {
+      "name": "Panchito Pistoles",
+      "facet": "Mexicanos en el cómic internacional",
+      "known_at": 9
+    },
+    {
+      "name": "Los Tres Caballeros",
+      "facet": "Mexicanos en el cómic internacional",
+      "known_at": 10
+    },
+    {
+      "name": "Blue Beetle (Jaime Reyes)",
+      "facet": "Mexicanos en el cómic internacional",
+      "known_at": 10
+    },
+    {
+      "name": "Ghost Rider (Robbie Reyes)",
+      "facet": "Mexicanos en el cómic internacional",
+      "known_at": 14
+    },
+    {
+      "name": "Love and Rockets",
+      "facet": "Mexicanos en el cómic internacional",
+      "known_at": 15
+    },
+    {
+      "name": "Premio Eisner",
+      "facet": "Mexicanos en el cómic internacional",
+      "known_at": 13
+    },
+    {
+      "name": "Kalimán (radionovela)",
+      "facet": "Historietas en el cine y la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Kalimán, el hombre increíble (película)",
+      "facet": "Historietas en el cine y la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Santo contra las momias de Guanajuato",
+      "facet": "Historietas en el cine y la televisión",
+      "known_at": 10
+    },
+    {
+      "name": "Santo y Blue Demon contra los monstruos",
+      "facet": "Historietas en el cine y la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Cine de luchadores",
+      "facet": "Historietas en el cine y la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Calzonzin Inspector",
+      "facet": "Historietas en el cine y la televisión",
+      "known_at": 14
+    },
+    {
+      "name": "María Isabel (telenovela)",
+      "facet": "Historietas en el cine y la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Yesenia",
+      "facet": "Historietas en el cine y la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Rubí (telenovela)",
+      "facet": "Historietas en el cine y la televisión",
+      "known_at": 10
+    },
+    {
+      "name": "El pecado de Oyuki",
+      "facet": "Historietas en el cine y la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Cantinflas Show",
+      "facet": "Historietas en el cine y la televisión",
+      "known_at": 10
+    },
+    {
+      "name": "Capulina",
+      "facet": "Historietas en el cine y la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Hellboy",
+      "facet": "Historietas en el cine y la televisión",
+      "known_at": 9
+    },
+    {
+      "name": "El Tigre: las aventuras de Manny Rivera",
+      "facet": "Historietas en el cine y la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Huevocartoon",
+      "facet": "Historietas en el cine y la televisión",
+      "known_at": 6
+    },
+    {
+      "name": "Una película de huevos",
+      "facet": "Historietas en el cine y la televisión",
+      "known_at": 6
+    },
+    {
+      "name": "Monero",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 10
+    },
+    {
+      "name": "Monitos",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 9
+    },
+    {
+      "name": "Historieta",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 5
+    },
+    {
+      "name": "Caricatura",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 4
+    },
+    {
+      "name": "Cartón político",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 11
+    },
+    {
+      "name": "Tira cómica",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 6
+    },
+    {
+      "name": "Viñeta",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 9
+    },
+    {
+      "name": "Globo de diálogo",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 5
+    },
+    {
+      "name": "Onomatopeya",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 7
+    },
+    {
+      "name": "Guionista",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 9
+    },
+    {
+      "name": "Entintador",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 12
+    },
+    {
+      "name": "Rotulista",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 13
+    },
+    {
+      "name": "Plumilla",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 12
+    },
+    {
+      "name": "Tinta china",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 8
+    },
+    {
+      "name": "Fanzine",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 13
+    },
+    {
+      "name": "Novela gráfica",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 11
+    },
+    {
+      "name": "Humor gráfico",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 10
+    },
+    {
+      "name": "Sátira",
+      "facet": "Palabras y oficio del monero",
+      "known_at": 10
+    }
+  ]
+}

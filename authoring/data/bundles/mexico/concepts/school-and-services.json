@@ -1,0 +1,818 @@
+{
+  "subcategory": "school-and-services",
+  "facets": [
+    "Niveles y tipos de escuela",
+    "Ceremonias y honores a la bandera",
+    "Libros de texto y útiles escolares",
+    "Vida diaria en el salón y el recreo",
+    "Calendario escolar y fechas cívicas",
+    "UNAM, IPN y universidades públicas",
+    "Salud pública: IMSS, ISSSTE y vacunación",
+    "Trámites e identificación: CURP, INE y actas",
+    "Transporte público: Metro, metrobús y camiones",
+    "Luz, agua y basura: CFE y servicios municipales",
+    "Protección civil, simulacros y alerta sísmica",
+    "Correos, bomberos y otros servicios"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 5,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Kínder",
+      "facet": "Niveles y tipos de escuela",
+      "known_at": 2
+    },
+    {
+      "name": "Primaria",
+      "facet": "Niveles y tipos de escuela",
+      "known_at": 1
+    },
+    {
+      "name": "Secundaria",
+      "facet": "Niveles y tipos de escuela",
+      "known_at": 3
+    },
+    {
+      "name": "Preparatoria",
+      "facet": "Niveles y tipos de escuela",
+      "known_at": 5
+    },
+    {
+      "name": "CCH",
+      "facet": "Niveles y tipos de escuela",
+      "known_at": 10
+    },
+    {
+      "name": "Colegio de Bachilleres",
+      "facet": "Niveles y tipos de escuela",
+      "known_at": 10
+    },
+    {
+      "name": "CONALEP",
+      "facet": "Niveles y tipos de escuela",
+      "known_at": 9
+    },
+    {
+      "name": "CBTIS",
+      "facet": "Niveles y tipos de escuela",
+      "known_at": 10
+    },
+    {
+      "name": "Escuela Normal",
+      "facet": "Niveles y tipos de escuela",
+      "known_at": 10
+    },
+    {
+      "name": "Normal rural",
+      "facet": "Niveles y tipos de escuela",
+      "known_at": 13
+    },
+    {
+      "name": "SEP",
+      "facet": "Niveles y tipos de escuela",
+      "known_at": 5
+    },
+    {
+      "name": "Examen COMIPEMS",
+      "facet": "Niveles y tipos de escuela",
+      "known_at": 10
+    },
+    {
+      "name": "Turno vespertino",
+      "facet": "Niveles y tipos de escuela",
+      "known_at": 6
+    },
+    {
+      "name": "Escuela de tiempo completo",
+      "facet": "Niveles y tipos de escuela",
+      "known_at": 11
+    },
+    {
+      "name": "Guardería",
+      "facet": "Niveles y tipos de escuela",
+      "known_at": 3
+    },
+    {
+      "name": "INEA",
+      "facet": "Niveles y tipos de escuela",
+      "known_at": 11
+    },
+    {
+      "name": "CONAFE",
+      "facet": "Niveles y tipos de escuela",
+      "known_at": 13
+    },
+    {
+      "name": "Escolta",
+      "facet": "Ceremonias y honores a la bandera",
+      "known_at": 4
+    },
+    {
+      "name": "Corneta",
+      "facet": "Ceremonias y honores a la bandera",
+      "known_at": 5
+    },
+    {
+      "name": "Lábaro patrio",
+      "facet": "Ceremonias y honores a la bandera",
+      "known_at": 9
+    },
+    {
+      "name": "Asta bandera",
+      "facet": "Ceremonias y honores a la bandera",
+      "known_at": 6
+    },
+    {
+      "name": "Incineración de la bandera",
+      "facet": "Ceremonias y honores a la bandera",
+      "known_at": 12
+    },
+    {
+      "name": "Concurso de escoltas",
+      "facet": "Ceremonias y honores a la bandera",
+      "known_at": 8
+    },
+    {
+      "name": "CONALITEG",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 13
+    },
+    {
+      "name": "La Patria (portada de Jorge González Camarena)",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 12
+    },
+    {
+      "name": "Cuaderno de cuadrícula",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 4
+    },
+    {
+      "name": "Cuaderno profesional",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 6
+    },
+    {
+      "name": "Resistol",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 4
+    },
+    {
+      "name": "Diamantina",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 4
+    },
+    {
+      "name": "Papel crepé",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 6
+    },
+    {
+      "name": "Monografías",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 8
+    },
+    {
+      "name": "Cartulina",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 3
+    },
+    {
+      "name": "Forro de cuadernos",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 5
+    },
+    {
+      "name": "Lápiz bicolor",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 8
+    },
+    {
+      "name": "Juego de geometría",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 6
+    },
+    {
+      "name": "Lista de útiles",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 4
+    },
+    {
+      "name": "Plastilina",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 1,
+      "retired": "used_up: The pool already describes plastilina, and the options available (count or who with a photo) don't lead to a good question tied to Mexico."
+    },
+    {
+      "name": "Sacapuntas",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 1
+    },
+    {
+      "name": "Lonchera",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 2
+    },
+    {
+      "name": "Uniforme escolar",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 2
+    },
+    {
+      "name": "Papelería",
+      "facet": "Libros de texto y útiles escolares",
+      "known_at": 3
+    },
+    {
+      "name": "Recreo",
+      "facet": "Vida diaria en el salón y el recreo",
+      "known_at": 1
+    },
+    {
+      "name": "Pase de lista",
+      "facet": "Vida diaria en el salón y el recreo",
+      "known_at": 3
+    },
+    {
+      "name": "Tiendita escolar",
+      "facet": "Vida diaria en el salón y el recreo",
+      "known_at": 4
+    },
+    {
+      "name": "Jefe de grupo",
+      "facet": "Vida diaria en el salón y el recreo",
+      "known_at": 5
+    },
+    {
+      "name": "Prefecto",
+      "facet": "Vida diaria en el salón y el recreo",
+      "known_at": 8
+    },
+    {
+      "name": "Boleta de calificaciones",
+      "facet": "Vida diaria en el salón y el recreo",
+      "known_at": 5
+    },
+    {
+      "name": "Escala del 5 al 10",
+      "facet": "Vida diaria en el salón y el recreo",
+      "known_at": 6
+    },
+    {
+      "name": "Citatorio",
+      "facet": "Vida diaria en el salón y el recreo",
+      "known_at": 8
+    },
+    {
+      "name": "Cuadro de honor",
+      "facet": "Vida diaria en el salón y el recreo",
+      "known_at": 6
+    },
+    {
+      "name": "Avioncito",
+      "facet": "Vida diaria en el salón y el recreo",
+      "known_at": 4
+    },
+    {
+      "name": "Bailable",
+      "facet": "Vida diaria en el salón y el recreo",
+      "known_at": 5
+    },
+    {
+      "name": "Desayunos escolares",
+      "facet": "Vida diaria en el salón y el recreo",
+      "known_at": 9
+    },
+    {
+      "name": "Cuota de la sociedad de padres",
+      "facet": "Vida diaria en el salón y el recreo",
+      "known_at": 10
+    },
+    {
+      "name": "Calendario escolar de la SEP",
+      "facet": "Calendario escolar y fechas cívicas",
+      "known_at": 8
+    },
+    {
+      "name": "Consejo Técnico Escolar",
+      "facet": "Calendario escolar y fechas cívicas",
+      "known_at": 9
+    },
+    {
+      "name": "Regreso a clases",
+      "facet": "Calendario escolar y fechas cívicas",
+      "known_at": 2
+    },
+    {
+      "name": "Grito de Independencia",
+      "facet": "Calendario escolar y fechas cívicas",
+      "known_at": 3
+    },
+    {
+      "name": "Día de la Independencia",
+      "facet": "Calendario escolar y fechas cívicas",
+      "known_at": 2
+    },
+    {
+      "name": "Día de la Revolución",
+      "facet": "Calendario escolar y fechas cívicas",
+      "known_at": 4
+    },
+    {
+      "name": "Desfile del 20 de noviembre",
+      "facet": "Calendario escolar y fechas cívicas",
+      "known_at": 6
+    },
+    {
+      "name": "Desfile de primavera",
+      "facet": "Calendario escolar y fechas cívicas",
+      "known_at": 4
+    },
+    {
+      "name": "Posada escolar",
+      "facet": "Calendario escolar y fechas cívicas",
+      "known_at": 5
+    },
+    {
+      "name": "Día de la Raza",
+      "facet": "Calendario escolar y fechas cívicas",
+      "known_at": 8
+    },
+    {
+      "name": "Ceremonia de graduación",
+      "facet": "Calendario escolar y fechas cívicas",
+      "known_at": 4
+    },
+    {
+      "name": "Pumas",
+      "facet": "UNAM, IPN y universidades públicas",
+      "known_at": 4
+    },
+    {
+      "name": "IPN",
+      "facet": "UNAM, IPN y universidades públicas",
+      "known_at": 6
+    },
+    {
+      "name": "Huélum",
+      "facet": "UNAM, IPN y universidades públicas",
+      "known_at": 10
+    },
+    {
+      "name": "Burro blanco del Politécnico",
+      "facet": "UNAM, IPN y universidades públicas",
+      "known_at": 10
+    },
+    {
+      "name": "Zacatenco",
+      "facet": "UNAM, IPN y universidades públicas",
+      "known_at": 11
+    },
+    {
+      "name": "UAM",
+      "facet": "UNAM, IPN y universidades públicas",
+      "known_at": 9
+    },
+    {
+      "name": "Universidad Autónoma de Nuevo León",
+      "facet": "UNAM, IPN y universidades públicas",
+      "known_at": 8
+    },
+    {
+      "name": "Universidad Autónoma Chapingo",
+      "facet": "UNAM, IPN y universidades públicas",
+      "known_at": 12
+    },
+    {
+      "name": "Autonomía universitaria",
+      "facet": "UNAM, IPN y universidades públicas",
+      "known_at": 13
+    },
+    {
+      "name": "Examen de admisión",
+      "facet": "UNAM, IPN y universidades públicas",
+      "known_at": 7
+    },
+    {
+      "name": "ISSSTE",
+      "facet": "Salud pública: IMSS, ISSSTE y vacunación",
+      "known_at": 7
+    },
+    {
+      "name": "IMSS-Bienestar",
+      "facet": "Salud pública: IMSS, ISSSTE y vacunación",
+      "known_at": 11
+    },
+    {
+      "name": "Seguro Popular",
+      "facet": "Salud pública: IMSS, ISSSTE y vacunación",
+      "known_at": 10
+    },
+    {
+      "name": "Semana Nacional de Salud",
+      "facet": "Salud pública: IMSS, ISSSTE y vacunación",
+      "known_at": 9
+    },
+    {
+      "name": "Vacuna Sabin",
+      "facet": "Salud pública: IMSS, ISSSTE y vacunación",
+      "known_at": 7
+    },
+    {
+      "name": "Vacuna BCG",
+      "facet": "Salud pública: IMSS, ISSSTE y vacunación",
+      "known_at": 11
+    },
+    {
+      "name": "Vacuna triple viral",
+      "facet": "Salud pública: IMSS, ISSSTE y vacunación",
+      "known_at": 11
+    },
+    {
+      "name": "Centro de salud",
+      "facet": "Salud pública: IMSS, ISSSTE y vacunación",
+      "known_at": 4
+    },
+    {
+      "name": "Unidad de Medicina Familiar",
+      "facet": "Salud pública: IMSS, ISSSTE y vacunación",
+      "known_at": 8
+    },
+    {
+      "name": "Número de Seguridad Social",
+      "facet": "Salud pública: IMSS, ISSSTE y vacunación",
+      "known_at": 9
+    },
+    {
+      "name": "Incapacidad",
+      "facet": "Salud pública: IMSS, ISSSTE y vacunación",
+      "known_at": 10
+    },
+    {
+      "name": "Susana Distancia",
+      "facet": "Salud pública: IMSS, ISSSTE y vacunación",
+      "known_at": 7
+    },
+    {
+      "name": "Chécate, mídete, muévete",
+      "facet": "Salud pública: IMSS, ISSSTE y vacunación",
+      "known_at": 11
+    },
+    {
+      "name": "Servicio social de medicina",
+      "facet": "Salud pública: IMSS, ISSSTE y vacunación",
+      "known_at": 11
+    },
+    {
+      "name": "Influenza H1N1 de 2009",
+      "facet": "Salud pública: IMSS, ISSSTE y vacunación",
+      "known_at": 9
+    },
+    {
+      "name": "Descacharrización",
+      "facet": "Salud pública: IMSS, ISSSTE y vacunación",
+      "known_at": 12
+    },
+    {
+      "name": "CURP",
+      "facet": "Trámites e identificación: CURP, INE y actas",
+      "known_at": 6
+    },
+    {
+      "name": "Credencial del INE",
+      "facet": "Trámites e identificación: CURP, INE y actas",
+      "known_at": 5
+    },
+    {
+      "name": "Clave de elector",
+      "facet": "Trámites e identificación: CURP, INE y actas",
+      "known_at": 11
+    },
+    {
+      "name": "Acta de nacimiento",
+      "facet": "Trámites e identificación: CURP, INE y actas",
+      "known_at": 4
+    },
+    {
+      "name": "Acta de matrimonio",
+      "facet": "Trámites e identificación: CURP, INE y actas",
+      "known_at": 6
+    },
+    {
+      "name": "RFC",
+      "facet": "Trámites e identificación: CURP, INE y actas",
+      "known_at": 10
+    },
+    {
+      "name": "SAT",
+      "facet": "Trámites e identificación: CURP, INE y actas",
+      "known_at": 9
+    },
+    {
+      "name": "Constancia de situación fiscal",
+      "facet": "Trámites e identificación: CURP, INE y actas",
+      "known_at": 12
+    },
+    {
+      "name": "e.firma",
+      "facet": "Trámites e identificación: CURP, INE y actas",
+      "known_at": 13
+    },
+    {
+      "name": "Pasaporte mexicano",
+      "facet": "Trámites e identificación: CURP, INE y actas",
+      "known_at": 5
+    },
+    {
+      "name": "Comprobante de domicilio",
+      "facet": "Trámites e identificación: CURP, INE y actas",
+      "known_at": 8
+    },
+    {
+      "name": "Cartilla del Servicio Militar Nacional",
+      "facet": "Trámites e identificación: CURP, INE y actas",
+      "known_at": 10
+    },
+    {
+      "name": "Licencia de manejo",
+      "facet": "Trámites e identificación: CURP, INE y actas",
+      "known_at": 6
+    },
+    {
+      "name": "Tenencia",
+      "facet": "Trámites e identificación: CURP, INE y actas",
+      "known_at": 10
+    },
+    {
+      "name": "Credencial del INAPAM",
+      "facet": "Trámites e identificación: CURP, INE y actas",
+      "known_at": 9
+    },
+    {
+      "name": "Certificado de estudios",
+      "facet": "Trámites e identificación: CURP, INE y actas",
+      "known_at": 7
+    },
+    {
+      "name": "Notario público",
+      "facet": "Trámites e identificación: CURP, INE y actas",
+      "known_at": 11
+    },
+    {
+      "name": "Iconografía del Metro",
+      "facet": "Transporte público: Metro, metrobús y camiones",
+      "known_at": 9
+    },
+    {
+      "name": "Pirámide de la estación Pino Suárez",
+      "facet": "Transporte público: Metro, metrobús y camiones",
+      "known_at": 12
+    },
+    {
+      "name": "Pesero",
+      "facet": "Transporte público: Metro, metrobús y camiones",
+      "known_at": 5
+    },
+    {
+      "name": "Tren Interurbano El Insurgente",
+      "facet": "Transporte público: Metro, metrobús y camiones",
+      "known_at": 11
+    },
+    {
+      "name": "CFE",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 5
+    },
+    {
+      "name": "Recibo de luz",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 5
+    },
+    {
+      "name": "Luz y Fuerza del Centro",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 12
+    },
+    {
+      "name": "Medidor de luz",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 5
+    },
+    {
+      "name": "Diablitos",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 9
+    },
+    {
+      "name": "Apagón",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 3
+    },
+    {
+      "name": "Cisterna",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 6
+    },
+    {
+      "name": "Pipa de agua",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 5
+    },
+    {
+      "name": "Tandeo",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 11
+    },
+    {
+      "name": "CONAGUA",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 10
+    },
+    {
+      "name": "Camión de la basura",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 2
+    },
+    {
+      "name": "Campanita de la basura",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 4
+    },
+    {
+      "name": "Basura orgánica e inorgánica",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 5
+    },
+    {
+      "name": "Barrendero",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 3
+    },
+    {
+      "name": "Pepenadores",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 10
+    },
+    {
+      "name": "Predial",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 10
+    },
+    {
+      "name": "Cilindro de gas",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 4
+    },
+    {
+      "name": "Alumbrado público",
+      "facet": "Luz, agua y basura: CFE y servicios municipales",
+      "known_at": 5
+    },
+    {
+      "name": "SASMEX",
+      "facet": "Protección civil, simulacros y alerta sísmica",
+      "known_at": 11
+    },
+    {
+      "name": "Altavoces del C5",
+      "facet": "Protección civil, simulacros y alerta sísmica",
+      "known_at": 9
+    },
+    {
+      "name": "Simulacro escolar",
+      "facet": "Protección civil, simulacros y alerta sísmica",
+      "known_at": 3
+    },
+    {
+      "name": "Botiquín de primeros auxilios",
+      "facet": "Protección civil, simulacros y alerta sísmica",
+      "known_at": 3
+    },
+    {
+      "name": "Topos Tlatelolco",
+      "facet": "Protección civil, simulacros y alerta sísmica",
+      "known_at": 8
+    },
+    {
+      "name": "Frida (perrita rescatista)",
+      "facet": "Protección civil, simulacros y alerta sísmica",
+      "known_at": 5
+    },
+    {
+      "name": "Sistema Nacional de Protección Civil",
+      "facet": "Protección civil, simulacros y alerta sísmica",
+      "known_at": 10
+    },
+    {
+      "name": "Correos de México",
+      "facet": "Correos, bomberos y otros servicios",
+      "known_at": 6
+    },
+    {
+      "name": "Cartero",
+      "facet": "Correos, bomberos y otros servicios",
+      "known_at": 2
+    },
+    {
+      "name": "Día del Cartero",
+      "facet": "Correos, bomberos y otros servicios",
+      "known_at": 10
+    },
+    {
+      "name": "Mexpost",
+      "facet": "Correos, bomberos y otros servicios",
+      "known_at": 11
+    },
+    {
+      "name": "Telégrafos",
+      "facet": "Correos, bomberos y otros servicios",
+      "known_at": 9
+    },
+    {
+      "name": "Código postal",
+      "facet": "Correos, bomberos y otros servicios",
+      "known_at": 5
+    },
+    {
+      "name": "Bomberos",
+      "facet": "Correos, bomberos y otros servicios",
+      "known_at": 1
+    },
+    {
+      "name": "Heroico Cuerpo de Bomberos",
+      "facet": "Correos, bomberos y otros servicios",
+      "known_at": 10
+    },
+    {
+      "name": "Cruz Roja Mexicana",
+      "facet": "Correos, bomberos y otros servicios",
+      "known_at": 3
+    },
+    {
+      "name": "Colecta de la Cruz Roja",
+      "facet": "Correos, bomberos y otros servicios",
+      "known_at": 7
+    },
+    {
+      "name": "Locatel",
+      "facet": "Correos, bomberos y otros servicios",
+      "known_at": 10
+    },
+    {
+      "name": "Sistema DIF",
+      "facet": "Correos, bomberos y otros servicios",
+      "known_at": 9
+    },
+    {
+      "name": "Liconsa",
+      "facet": "Correos, bomberos y otros servicios",
+      "known_at": 8
+    },
+    {
+      "name": "Diconsa",
+      "facet": "Correos, bomberos y otros servicios",
+      "known_at": 11
+    }
+  ]
+}

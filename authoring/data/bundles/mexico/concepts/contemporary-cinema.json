@@ -1,0 +1,842 @@
+{
+  "subcategory": "contemporary-cinema",
+  "facets": [
+    "Directores mexicanos reconocidos",
+    "Actores mexicanos en Hollywood",
+    "Comedias taquilleras mexicanas",
+    "Películas mexicanas en el Óscar",
+    "Nuevo cine mexicano noventero",
+    "Animación hecha en México",
+    "Terror y fantasía mexicanos",
+    "Cinefotógrafos y oficios del cine",
+    "Premios y festivales de cine",
+    "Salas, estudios e industria",
+    "México en películas extranjeras",
+    "Drama social y documental"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 2,
+      "made_of": 1,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 2,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Alfonso Cuarón",
+      "facet": "Directores mexicanos reconocidos",
+      "known_at": 9
+    },
+    {
+      "name": "Alejandro González Iñárritu",
+      "facet": "Directores mexicanos reconocidos",
+      "known_at": 10
+    },
+    {
+      "name": "Carlos Reygadas",
+      "facet": "Directores mexicanos reconocidos",
+      "known_at": 13
+    },
+    {
+      "name": "Amat Escalante",
+      "facet": "Directores mexicanos reconocidos",
+      "known_at": 14
+    },
+    {
+      "name": "Michel Franco",
+      "facet": "Directores mexicanos reconocidos",
+      "known_at": 13
+    },
+    {
+      "name": "Fernando Eimbcke",
+      "facet": "Directores mexicanos reconocidos",
+      "known_at": 14
+    },
+    {
+      "name": "Manolo Caro",
+      "facet": "Directores mexicanos reconocidos",
+      "known_at": 11
+    },
+    {
+      "name": "Issa López",
+      "facet": "Directores mexicanos reconocidos",
+      "known_at": 13
+    },
+    {
+      "name": "Tatiana Huezo",
+      "facet": "Directores mexicanos reconocidos",
+      "known_at": 13
+    },
+    {
+      "name": "Alonso Ruizpalacios",
+      "facet": "Directores mexicanos reconocidos",
+      "known_at": 13
+    },
+    {
+      "name": "Gary Alazraki",
+      "facet": "Directores mexicanos reconocidos",
+      "known_at": 12
+    },
+    {
+      "name": "Lila Avilés",
+      "facet": "Directores mexicanos reconocidos",
+      "known_at": 14
+    },
+    {
+      "name": "Fernanda Valadez",
+      "facet": "Directores mexicanos reconocidos",
+      "known_at": 14
+    },
+    {
+      "name": "Carlos Carrera",
+      "facet": "Directores mexicanos reconocidos",
+      "known_at": 12
+    },
+    {
+      "name": "Rodrigo Plá",
+      "facet": "Directores mexicanos reconocidos",
+      "known_at": 14
+    },
+    {
+      "name": "Diego Luna",
+      "facet": "Actores mexicanos en Hollywood",
+      "known_at": 8
+    },
+    {
+      "name": "Demián Bichir",
+      "facet": "Actores mexicanos en Hollywood",
+      "known_at": 11
+    },
+    {
+      "name": "Kate del Castillo",
+      "facet": "Actores mexicanos en Hollywood",
+      "known_at": 9
+    },
+    {
+      "name": "Eiza González",
+      "facet": "Actores mexicanos en Hollywood",
+      "known_at": 9
+    },
+    {
+      "name": "Tenoch Huerta",
+      "facet": "Actores mexicanos en Hollywood",
+      "known_at": 9
+    },
+    {
+      "name": "Lupita Nyong'o",
+      "facet": "Actores mexicanos en Hollywood",
+      "known_at": 10
+    },
+    {
+      "name": "Adriana Barraza",
+      "facet": "Actores mexicanos en Hollywood",
+      "known_at": 12
+    },
+    {
+      "name": "Melissa Barrera",
+      "facet": "Actores mexicanos en Hollywood",
+      "known_at": 10
+    },
+    {
+      "name": "Diego Boneta",
+      "facet": "Actores mexicanos en Hollywood",
+      "known_at": 9
+    },
+    {
+      "name": "Joaquín Cosío",
+      "facet": "Actores mexicanos en Hollywood",
+      "known_at": 11
+    },
+    {
+      "name": "Ana de la Reguera",
+      "facet": "Actores mexicanos en Hollywood",
+      "known_at": 11
+    },
+    {
+      "name": "No se aceptan devoluciones",
+      "facet": "Comedias taquilleras mexicanas",
+      "known_at": 5
+    },
+    {
+      "name": "Nosotros los Nobles",
+      "facet": "Comedias taquilleras mexicanas",
+      "known_at": 7
+    },
+    {
+      "name": "¿Qué culpa tiene el niño?",
+      "facet": "Comedias taquilleras mexicanas",
+      "known_at": 9
+    },
+    {
+      "name": "Mirreyes contra Godínez",
+      "facet": "Comedias taquilleras mexicanas",
+      "known_at": 9
+    },
+    {
+      "name": "Hazlo como hombre",
+      "facet": "Comedias taquilleras mexicanas",
+      "known_at": 10
+    },
+    {
+      "name": "La dictadura perfecta",
+      "facet": "Comedias taquilleras mexicanas",
+      "known_at": 11
+    },
+    {
+      "name": "El infierno",
+      "facet": "Comedias taquilleras mexicanas",
+      "known_at": 12
+    },
+    {
+      "name": "Treintona, soltera y fantástica",
+      "facet": "Comedias taquilleras mexicanas",
+      "known_at": 11
+    },
+    {
+      "name": "Ya veremos",
+      "facet": "Comedias taquilleras mexicanas",
+      "known_at": 9
+    },
+    {
+      "name": "Cindy la Regia",
+      "facet": "Comedias taquilleras mexicanas",
+      "known_at": 9
+    },
+    {
+      "name": "No manches Frida",
+      "facet": "Comedias taquilleras mexicanas",
+      "known_at": 6
+    },
+    {
+      "name": "Tod@s caen",
+      "facet": "Comedias taquilleras mexicanas",
+      "known_at": 10
+    },
+    {
+      "name": "La boda de Valentina",
+      "facet": "Comedias taquilleras mexicanas",
+      "known_at": 10
+    },
+    {
+      "name": "Si yo fuera rico",
+      "facet": "Comedias taquilleras mexicanas",
+      "known_at": 11
+    },
+    {
+      "name": "Una mujer sin filtro",
+      "facet": "Comedias taquilleras mexicanas",
+      "known_at": 10
+    },
+    {
+      "name": "Ladies' Night",
+      "facet": "Comedias taquilleras mexicanas",
+      "known_at": 12
+    },
+    {
+      "name": "Amores perros",
+      "facet": "Películas mexicanas en el Óscar",
+      "known_at": 11
+    },
+    {
+      "name": "El laberinto del fauno",
+      "facet": "Películas mexicanas en el Óscar",
+      "known_at": 8
+    },
+    {
+      "name": "Y tu mamá también",
+      "facet": "Películas mexicanas en el Óscar",
+      "known_at": 10
+    },
+    {
+      "name": "Birdman",
+      "facet": "Películas mexicanas en el Óscar",
+      "known_at": 11
+    },
+    {
+      "name": "Gravedad",
+      "facet": "Películas mexicanas en el Óscar",
+      "known_at": 9
+    },
+    {
+      "name": "El renacido",
+      "facet": "Películas mexicanas en el Óscar",
+      "known_at": 9
+    },
+    {
+      "name": "La forma del agua",
+      "facet": "Películas mexicanas en el Óscar",
+      "known_at": 10
+    },
+    {
+      "name": "Pinocho de Guillermo del Toro",
+      "facet": "Películas mexicanas en el Óscar",
+      "known_at": 9
+    },
+    {
+      "name": "Babel",
+      "facet": "Películas mexicanas en el Óscar",
+      "known_at": 12
+    },
+    {
+      "name": "El crimen del padre Amaro",
+      "facet": "Películas mexicanas en el Óscar",
+      "known_at": 11
+    },
+    {
+      "name": "Bardo",
+      "facet": "Películas mexicanas en el Óscar",
+      "known_at": 13
+    },
+    {
+      "name": "Hijos de los hombres",
+      "facet": "Películas mexicanas en el Óscar",
+      "known_at": 12
+    },
+    {
+      "name": "Biutiful",
+      "facet": "Películas mexicanas en el Óscar",
+      "known_at": 13
+    },
+    {
+      "name": "Actas de Marusia",
+      "facet": "Películas mexicanas en el Óscar",
+      "known_at": 15
+    },
+    {
+      "name": "Sólo con tu pareja",
+      "facet": "Nuevo cine mexicano noventero",
+      "known_at": 12
+    },
+    {
+      "name": "El callejón de los milagros",
+      "facet": "Nuevo cine mexicano noventero",
+      "known_at": 12
+    },
+    {
+      "name": "Profundo carmesí",
+      "facet": "Nuevo cine mexicano noventero",
+      "known_at": 14
+    },
+    {
+      "name": "La reina de la noche",
+      "facet": "Nuevo cine mexicano noventero",
+      "known_at": 14
+    },
+    {
+      "name": "Principio y fin",
+      "facet": "Nuevo cine mexicano noventero",
+      "known_at": 14
+    },
+    {
+      "name": "Santitos",
+      "facet": "Nuevo cine mexicano noventero",
+      "known_at": 13
+    },
+    {
+      "name": "Sexo, pudor y lágrimas",
+      "facet": "Nuevo cine mexicano noventero",
+      "known_at": 11
+    },
+    {
+      "name": "La ley de Herodes",
+      "facet": "Nuevo cine mexicano noventero",
+      "known_at": 11
+    },
+    {
+      "name": "Cilantro y perejil",
+      "facet": "Nuevo cine mexicano noventero",
+      "known_at": 13
+    },
+    {
+      "name": "Todo el poder",
+      "facet": "Nuevo cine mexicano noventero",
+      "known_at": 13
+    },
+    {
+      "name": "Arturo Ripstein",
+      "facet": "Nuevo cine mexicano noventero",
+      "known_at": 13
+    },
+    {
+      "name": "María Novaro",
+      "facet": "Nuevo cine mexicano noventero",
+      "known_at": 13
+    },
+    {
+      "name": "Jorge Fons",
+      "facet": "Nuevo cine mexicano noventero",
+      "known_at": 13
+    },
+    {
+      "name": "Alfonso Arau",
+      "facet": "Nuevo cine mexicano noventero",
+      "known_at": 12
+    },
+    {
+      "name": "Otra película de huevos y un pollo",
+      "facet": "Animación hecha en México",
+      "known_at": 5
+    },
+    {
+      "name": "Un gallo con muchos huevos",
+      "facet": "Animación hecha en México",
+      "known_at": 5
+    },
+    {
+      "name": "La leyenda de la Llorona",
+      "facet": "Animación hecha en México",
+      "known_at": 7
+    },
+    {
+      "name": "Ánima Estudios",
+      "facet": "Animación hecha en México",
+      "known_at": 12
+    },
+    {
+      "name": "Don Gato y su pandilla",
+      "facet": "Animación hecha en México",
+      "known_at": 8
+    },
+    {
+      "name": "AAA, la película: Sangre de leyenda",
+      "facet": "Animación hecha en México",
+      "known_at": 12
+    },
+    {
+      "name": "Ana y Bruno",
+      "facet": "Animación hecha en México",
+      "known_at": 12
+    },
+    {
+      "name": "Selección Canina",
+      "facet": "Animación hecha en México",
+      "known_at": 11
+    },
+    {
+      "name": "Un disfraz para Nicolás",
+      "facet": "Animación hecha en México",
+      "known_at": 14
+    },
+    {
+      "name": "El espinazo del diablo",
+      "facet": "Terror y fantasía mexicanos",
+      "known_at": 11
+    },
+    {
+      "name": "Vuelven",
+      "facet": "Terror y fantasía mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Somos lo que hay",
+      "facet": "Terror y fantasía mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Kilómetro 31",
+      "facet": "Terror y fantasía mexicanos",
+      "known_at": 9
+    },
+    {
+      "name": "Más negro que la noche",
+      "facet": "Terror y fantasía mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Alucarda",
+      "facet": "Terror y fantasía mexicanos",
+      "known_at": 15
+    },
+    {
+      "name": "El Santo, el Enmascarado de Plata",
+      "facet": "Terror y fantasía mexicanos",
+      "known_at": 8
+    },
+    {
+      "name": "La región salvaje",
+      "facet": "Terror y fantasía mexicanos",
+      "known_at": 14
+    },
+    {
+      "name": "Belzebuth",
+      "facet": "Terror y fantasía mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Ahí va el diablo",
+      "facet": "Terror y fantasía mexicanos",
+      "known_at": 14
+    },
+    {
+      "name": "Veneno para las hadas",
+      "facet": "Terror y fantasía mexicanos",
+      "known_at": 14
+    },
+    {
+      "name": "Mimic",
+      "facet": "Terror y fantasía mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "La cumbre escarlata",
+      "facet": "Terror y fantasía mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "El callejón de las almas perdidas",
+      "facet": "Terror y fantasía mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Emmanuel Lubezki",
+      "facet": "Cinefotógrafos y oficios del cine",
+      "known_at": 11
+    },
+    {
+      "name": "Rodrigo Prieto",
+      "facet": "Cinefotógrafos y oficios del cine",
+      "known_at": 13
+    },
+    {
+      "name": "Guillermo Navarro",
+      "facet": "Cinefotógrafos y oficios del cine",
+      "known_at": 14
+    },
+    {
+      "name": "Eugenio Caballero",
+      "facet": "Cinefotógrafos y oficios del cine",
+      "known_at": 14
+    },
+    {
+      "name": "Brigitte Broch",
+      "facet": "Cinefotógrafos y oficios del cine",
+      "known_at": 15
+    },
+    {
+      "name": "Martín Hernández",
+      "facet": "Cinefotógrafos y oficios del cine",
+      "known_at": 15
+    },
+    {
+      "name": "Doblaje",
+      "facet": "Cinefotógrafos y oficios del cine",
+      "known_at": 5
+    },
+    {
+      "name": "Mario Castañeda",
+      "facet": "Cinefotógrafos y oficios del cine",
+      "known_at": 7
+    },
+    {
+      "name": "Humberto Vélez",
+      "facet": "Cinefotógrafos y oficios del cine",
+      "known_at": 8
+    },
+    {
+      "name": "Plano secuencia",
+      "facet": "Cinefotógrafos y oficios del cine",
+      "known_at": 11
+    },
+    {
+      "name": "Claqueta",
+      "facet": "Cinefotógrafos y oficios del cine",
+      "known_at": 7
+    },
+    {
+      "name": "Guillermo Arriaga",
+      "facet": "Cinefotógrafos y oficios del cine",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Cuarón",
+      "facet": "Cinefotógrafos y oficios del cine",
+      "known_at": 13
+    },
+    {
+      "name": "Festival Internacional de Cine de Los Cabos",
+      "facet": "Premios y festivales de cine",
+      "known_at": 13
+    },
+    {
+      "name": "Festival Internacional de Cine de Monterrey",
+      "facet": "Premios y festivales de cine",
+      "known_at": 13
+    },
+    {
+      "name": "Ficunam",
+      "facet": "Premios y festivales de cine",
+      "known_at": 14
+    },
+    {
+      "name": "Diosas de Plata",
+      "facet": "Premios y festivales de cine",
+      "known_at": 13
+    },
+    {
+      "name": "León de Oro",
+      "facet": "Premios y festivales de cine",
+      "known_at": 11
+    },
+    {
+      "name": "Palma de Oro",
+      "facet": "Premios y festivales de cine",
+      "known_at": 12
+    },
+    {
+      "name": "Premio Mayahuel",
+      "facet": "Premios y festivales de cine",
+      "known_at": 14
+    },
+    {
+      "name": "Premios Platino",
+      "facet": "Premios y festivales de cine",
+      "known_at": 12
+    },
+    {
+      "name": "Festival Internacional de Cine de Guanajuato",
+      "facet": "Premios y festivales de cine",
+      "known_at": 13
+    },
+    {
+      "name": "Kids' Choice Awards México",
+      "facet": "Premios y festivales de cine",
+      "known_at": 7
+    },
+    {
+      "name": "Ambulante",
+      "facet": "Premios y festivales de cine",
+      "known_at": 13
+    },
+    {
+      "name": "Cinemex",
+      "facet": "Salas, estudios e industria",
+      "known_at": 3
+    },
+    {
+      "name": "IMCINE",
+      "facet": "Salas, estudios e industria",
+      "known_at": 12
+    },
+    {
+      "name": "Videocine",
+      "facet": "Salas, estudios e industria",
+      "known_at": 12
+    },
+    {
+      "name": "Lemon Studios",
+      "facet": "Salas, estudios e industria",
+      "known_at": 14
+    },
+    {
+      "name": "Sala 4DX",
+      "facet": "Salas, estudios e industria",
+      "known_at": 6
+    },
+    {
+      "name": "Autocinema",
+      "facet": "Salas, estudios e industria",
+      "known_at": 7
+    },
+    {
+      "name": "Estudios Baja",
+      "facet": "Salas, estudios e industria",
+      "known_at": 11
+    },
+    {
+      "name": "EFICINE",
+      "facet": "Salas, estudios e industria",
+      "known_at": 14
+    },
+    {
+      "name": "Cine de ficheras",
+      "facet": "Salas, estudios e industria",
+      "known_at": 13
+    },
+    {
+      "name": "Clasificación AA",
+      "facet": "Salas, estudios e industria",
+      "known_at": 8
+    },
+    {
+      "name": "Cinépolis VIP",
+      "facet": "Salas, estudios e industria",
+      "known_at": 6
+    },
+    {
+      "name": "Desperado",
+      "facet": "México en películas extranjeras",
+      "known_at": 11
+    },
+    {
+      "name": "Érase una vez en México",
+      "facet": "México en películas extranjeras",
+      "known_at": 12
+    },
+    {
+      "name": "Nacho Libre",
+      "facet": "México en películas extranjeras",
+      "known_at": 9
+    },
+    {
+      "name": "Sicario",
+      "facet": "México en películas extranjeras",
+      "known_at": 12
+    },
+    {
+      "name": "Hombre en llamas",
+      "facet": "México en películas extranjeras",
+      "known_at": 12
+    },
+    {
+      "name": "Apocalypto",
+      "facet": "México en películas extranjeras",
+      "known_at": 10
+    },
+    {
+      "name": "Romeo + Julieta",
+      "facet": "México en películas extranjeras",
+      "known_at": 13
+    },
+    {
+      "name": "El vengador del futuro",
+      "facet": "México en películas extranjeras",
+      "known_at": 14
+    },
+    {
+      "name": "La máscara del Zorro",
+      "facet": "México en películas extranjeras",
+      "known_at": 8
+    },
+    {
+      "name": "Emilia Pérez",
+      "facet": "México en películas extranjeras",
+      "known_at": 11
+    },
+    {
+      "name": "Titanic",
+      "facet": "México en películas extranjeras",
+      "known_at": 5
+    },
+    {
+      "name": "Presunto culpable",
+      "facet": "Drama social y documental",
+      "known_at": 11
+    },
+    {
+      "name": "Heli",
+      "facet": "Drama social y documental",
+      "known_at": 13
+    },
+    {
+      "name": "La jaula de oro",
+      "facet": "Drama social y documental",
+      "known_at": 12
+    },
+    {
+      "name": "Sin nombre",
+      "facet": "Drama social y documental",
+      "known_at": 12
+    },
+    {
+      "name": "Noche de fuego",
+      "facet": "Drama social y documental",
+      "known_at": 13
+    },
+    {
+      "name": "Nuevo orden",
+      "facet": "Drama social y documental",
+      "known_at": 13
+    },
+    {
+      "name": "Ya no estoy aquí",
+      "facet": "Drama social y documental",
+      "known_at": 12
+    },
+    {
+      "name": "Güeros",
+      "facet": "Drama social y documental",
+      "known_at": 12
+    },
+    {
+      "name": "Temporada de patos",
+      "facet": "Drama social y documental",
+      "known_at": 11
+    },
+    {
+      "name": "Batalla en el cielo",
+      "facet": "Drama social y documental",
+      "known_at": 14
+    },
+    {
+      "name": "Tempestad",
+      "facet": "Drama social y documental",
+      "known_at": 14
+    },
+    {
+      "name": "Las tres muertes de Marisela Escobedo",
+      "facet": "Drama social y documental",
+      "known_at": 13
+    },
+    {
+      "name": "Una película de policías",
+      "facet": "Drama social y documental",
+      "known_at": 13
+    },
+    {
+      "name": "Bajo la misma luna",
+      "facet": "Drama social y documental",
+      "known_at": 10
+    },
+    {
+      "name": "Abel",
+      "facet": "Drama social y documental",
+      "known_at": 13
+    },
+    {
+      "name": "Tótem",
+      "facet": "Drama social y documental",
+      "known_at": 14
+    },
+    {
+      "name": "Desierto",
+      "facet": "Drama social y documental",
+      "known_at": 12
+    }
+  ]
+}

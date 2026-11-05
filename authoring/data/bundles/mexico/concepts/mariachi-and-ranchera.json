@@ -1,0 +1,683 @@
+{
+  "subcategory": "mariachi-and-ranchera",
+  "facets": [
+    "Instrumentos del mariachi",
+    "Traje de charro y vestimenta",
+    "Cantantes de ranchera",
+    "Grandes boleristas y tríos",
+    "Compositores y canciones clásicas",
+    "Mariachis famosos y su historia",
+    "Origen regional: Jalisco y Cocula",
+    "Mariachi en fiestas y tradiciones",
+    "Cine de oro y charros cantores",
+    "Grito, versos y palabras del género",
+    "Plaza Garibaldi y lugares del mariachi",
+    "Mariachi hoy: Coco y nuevas voces"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 3,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Trompeta",
+      "facet": "Instrumentos del mariachi",
+      "known_at": 1,
+      "retired": "used_up: La pregunta de reconocer la trompeta por su sonido ya existe, y las otras opciones salen forzadas"
+    },
+    {
+      "name": "Violín",
+      "facet": "Instrumentos del mariachi",
+      "known_at": 2
+    },
+    {
+      "name": "Arpa de mariachi",
+      "facet": "Instrumentos del mariachi",
+      "known_at": 6
+    },
+    {
+      "name": "Guitarra de golpe",
+      "facet": "Instrumentos del mariachi",
+      "known_at": 12
+    },
+    {
+      "name": "Tambora de mariachi",
+      "facet": "Instrumentos del mariachi",
+      "known_at": 12
+    },
+    {
+      "name": "Requinto",
+      "facet": "Instrumentos del mariachi",
+      "known_at": 10
+    },
+    {
+      "name": "Arco del violín",
+      "facet": "Instrumentos del mariachi",
+      "known_at": 4
+    },
+    {
+      "name": "Sordina",
+      "facet": "Instrumentos del mariachi",
+      "known_at": 11
+    },
+    {
+      "name": "Rasgueo",
+      "facet": "Instrumentos del mariachi",
+      "known_at": 9
+    },
+    {
+      "name": "Caja de resonancia",
+      "facet": "Instrumentos del mariachi",
+      "known_at": 9
+    },
+    {
+      "name": "Laudería",
+      "facet": "Instrumentos del mariachi",
+      "known_at": 12
+    },
+    {
+      "name": "Chaquetilla",
+      "facet": "Traje de charro y vestimenta",
+      "known_at": 9
+    },
+    {
+      "name": "Pantalón de charro",
+      "facet": "Traje de charro y vestimenta",
+      "known_at": 6
+    },
+    {
+      "name": "Botines",
+      "facet": "Traje de charro y vestimenta",
+      "known_at": 7
+    },
+    {
+      "name": "Cinturón piteado",
+      "facet": "Traje de charro y vestimenta",
+      "known_at": 12
+    },
+    {
+      "name": "Bordado de pita",
+      "facet": "Traje de charro y vestimenta",
+      "known_at": 13
+    },
+    {
+      "name": "Escaramuza charra",
+      "facet": "Traje de charro y vestimenta",
+      "known_at": 9
+    },
+    {
+      "name": "Traje de gala charro",
+      "facet": "Traje de charro y vestimenta",
+      "known_at": 8
+    },
+    {
+      "name": "Chaparreras",
+      "facet": "Traje de charro y vestimenta",
+      "known_at": 11
+    },
+    {
+      "name": "Vestido de Adelita",
+      "facet": "Traje de charro y vestimenta",
+      "known_at": 7
+    },
+    {
+      "name": "Lucha Villa",
+      "facet": "Cantantes de ranchera",
+      "known_at": 10
+    },
+    {
+      "name": "Flor Silvestre",
+      "facet": "Cantantes de ranchera",
+      "known_at": 11
+    },
+    {
+      "name": "Amalia Mendoza",
+      "facet": "Cantantes de ranchera",
+      "known_at": 12
+    },
+    {
+      "name": "Alejandro Fernández",
+      "facet": "Cantantes de ranchera",
+      "known_at": 4
+    },
+    {
+      "name": "Pepe Aguilar",
+      "facet": "Cantantes de ranchera",
+      "known_at": 5
+    },
+    {
+      "name": "Ana Gabriel",
+      "facet": "Cantantes de ranchera",
+      "known_at": 7
+    },
+    {
+      "name": "Rocío Dúrcal",
+      "facet": "Cantantes de ranchera",
+      "known_at": 6
+    },
+    {
+      "name": "Aida Cuevas",
+      "facet": "Cantantes de ranchera",
+      "known_at": 8
+    },
+    {
+      "name": "Lucha Reyes",
+      "facet": "Cantantes de ranchera",
+      "known_at": 12
+    },
+    {
+      "name": "Cuco Sánchez",
+      "facet": "Cantantes de ranchera",
+      "known_at": 12
+    },
+    {
+      "name": "Miguel Aceves Mejía",
+      "facet": "Cantantes de ranchera",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro Fernández",
+      "facet": "Cantantes de ranchera",
+      "known_at": 6
+    },
+    {
+      "name": "Los Tres Ases",
+      "facet": "Grandes boleristas y tríos",
+      "known_at": 12
+    },
+    {
+      "name": "Trío Los Dandys",
+      "facet": "Grandes boleristas y tríos",
+      "known_at": 12
+    },
+    {
+      "name": "Los Tres Diamantes",
+      "facet": "Grandes boleristas y tríos",
+      "known_at": 13
+    },
+    {
+      "name": "Marco Antonio Muñiz",
+      "facet": "Grandes boleristas y tríos",
+      "known_at": 10
+    },
+    {
+      "name": "Toña la Negra",
+      "facet": "Grandes boleristas y tríos",
+      "known_at": 12
+    },
+    {
+      "name": "José José",
+      "facet": "Grandes boleristas y tríos",
+      "known_at": 5
+    },
+    {
+      "name": "Alfredo Gil",
+      "facet": "Grandes boleristas y tríos",
+      "known_at": 14
+    },
+    {
+      "name": "María Grever",
+      "facet": "Grandes boleristas y tríos",
+      "known_at": 12
+    },
+    {
+      "name": "Álvaro Carrillo",
+      "facet": "Grandes boleristas y tríos",
+      "known_at": 12
+    },
+    {
+      "name": "Eydie Gormé",
+      "facet": "Grandes boleristas y tríos",
+      "known_at": 13
+    },
+    {
+      "name": "Tania Libertad",
+      "facet": "Grandes boleristas y tríos",
+      "known_at": 11
+    },
+    {
+      "name": "La Bikina",
+      "facet": "Compositores y canciones clásicas",
+      "known_at": 8
+    },
+    {
+      "name": "Volver, volver",
+      "facet": "Compositores y canciones clásicas",
+      "known_at": 3
+    },
+    {
+      "name": "Guadalajara (canción)",
+      "facet": "Compositores y canciones clásicas",
+      "known_at": 5
+    },
+    {
+      "name": "Si nos dejan",
+      "facet": "Compositores y canciones clásicas",
+      "known_at": 7
+    },
+    {
+      "name": "Amor eterno",
+      "facet": "Compositores y canciones clásicas",
+      "known_at": 5
+    },
+    {
+      "name": "Cucurrucucú paloma",
+      "facet": "Compositores y canciones clásicas",
+      "known_at": 8
+    },
+    {
+      "name": "Tomás Méndez",
+      "facet": "Compositores y canciones clásicas",
+      "known_at": 13
+    },
+    {
+      "name": "Rubén Fuentes",
+      "facet": "Compositores y canciones clásicas",
+      "known_at": 12
+    },
+    {
+      "name": "Paloma negra",
+      "facet": "Compositores y canciones clásicas",
+      "known_at": 9
+    },
+    {
+      "name": "La Malagueña",
+      "facet": "Compositores y canciones clásicas",
+      "known_at": 8
+    },
+    {
+      "name": "Solamente una vez",
+      "facet": "Compositores y canciones clásicas",
+      "known_at": 10
+    },
+    {
+      "name": "Contigo aprendí",
+      "facet": "Compositores y canciones clásicas",
+      "known_at": 9
+    },
+    {
+      "name": "Ella (José Alfredo Jiménez)",
+      "facet": "Compositores y canciones clásicas",
+      "known_at": 9
+    },
+    {
+      "name": "Silvestre Vargas",
+      "facet": "Mariachis famosos y su historia",
+      "known_at": 12
+    },
+    {
+      "name": "Gaspar Vargas",
+      "facet": "Mariachis famosos y su historia",
+      "known_at": 14
+    },
+    {
+      "name": "Mariachi Coculense de Cirilo Marmolejo",
+      "facet": "Mariachis famosos y su historia",
+      "known_at": 14
+    },
+    {
+      "name": "Mariachi Los Camperos",
+      "facet": "Mariachis famosos y su historia",
+      "known_at": 12
+    },
+    {
+      "name": "Natividad Cano",
+      "facet": "Mariachis famosos y su historia",
+      "known_at": 14
+    },
+    {
+      "name": "Mariachi Nuevo Tecalitlán",
+      "facet": "Mariachis famosos y su historia",
+      "known_at": 11
+    },
+    {
+      "name": "Mariachi Sol de México",
+      "facet": "Mariachis famosos y su historia",
+      "known_at": 10
+    },
+    {
+      "name": "José Hernández (mariachi)",
+      "facet": "Mariachis famosos y su historia",
+      "known_at": 13
+    },
+    {
+      "name": "Mariachi Femenil Flor de Toloache",
+      "facet": "Mariachis famosos y su historia",
+      "known_at": 12
+    },
+    {
+      "name": "Mariachi Reyna de Los Ángeles",
+      "facet": "Mariachis famosos y su historia",
+      "known_at": 13
+    },
+    {
+      "name": "Mariachi Divas",
+      "facet": "Mariachis famosos y su historia",
+      "known_at": 13
+    },
+    {
+      "name": "Mariachi Cobre",
+      "facet": "Mariachis famosos y su historia",
+      "known_at": 13
+    },
+    {
+      "name": "Mariachi Gama Mil",
+      "facet": "Mariachis famosos y su historia",
+      "known_at": 13
+    },
+    {
+      "name": "Mariachi tradicional",
+      "facet": "Mariachis famosos y su historia",
+      "known_at": 11
+    },
+    {
+      "name": "Cocula",
+      "facet": "Origen regional: Jalisco y Cocula",
+      "known_at": 9
+    },
+    {
+      "name": "Tecalitlán",
+      "facet": "Origen regional: Jalisco y Cocula",
+      "known_at": 10
+    },
+    {
+      "name": "Son jalisciense",
+      "facet": "Origen regional: Jalisco y Cocula",
+      "known_at": 10
+    },
+    {
+      "name": "Zapopan",
+      "facet": "Origen regional: Jalisco y Cocula",
+      "known_at": 8
+    },
+    {
+      "name": "Occidente de México",
+      "facet": "Origen regional: Jalisco y Cocula",
+      "known_at": 10
+    },
+    {
+      "name": "Serenata",
+      "facet": "Mariachi en fiestas y tradiciones",
+      "known_at": 4
+    },
+    {
+      "name": "Quinceañera",
+      "facet": "Mariachi en fiestas y tradiciones",
+      "known_at": 3
+    },
+    {
+      "name": "Boda",
+      "facet": "Mariachi en fiestas y tradiciones",
+      "known_at": 2
+    },
+    {
+      "name": "Fiestas Patrias",
+      "facet": "Mariachi en fiestas y tradiciones",
+      "known_at": 2
+    },
+    {
+      "name": "Misa panamericana",
+      "facet": "Mariachi en fiestas y tradiciones",
+      "known_at": 12
+    },
+    {
+      "name": "Feria de San Marcos",
+      "facet": "Mariachi en fiestas y tradiciones",
+      "known_at": 9
+    },
+    {
+      "name": "Dos tipos de cuidado",
+      "facet": "Cine de oro y charros cantores",
+      "known_at": 11
+    },
+    {
+      "name": "Los tres García",
+      "facet": "Cine de oro y charros cantores",
+      "known_at": 11
+    },
+    {
+      "name": "¡Ay, Jalisco, no te rajes!",
+      "facet": "Cine de oro y charros cantores",
+      "known_at": 10
+    },
+    {
+      "name": "A toda máquina",
+      "facet": "Cine de oro y charros cantores",
+      "known_at": 12
+    },
+    {
+      "name": "Tito Guízar",
+      "facet": "Cine de oro y charros cantores",
+      "known_at": 13
+    },
+    {
+      "name": "Charro cantor",
+      "facet": "Cine de oro y charros cantores",
+      "known_at": 9
+    },
+    {
+      "name": "Comedia ranchera",
+      "facet": "Cine de oro y charros cantores",
+      "known_at": 10
+    },
+    {
+      "name": "Ismael Rodríguez",
+      "facet": "Cine de oro y charros cantores",
+      "known_at": 13
+    },
+    {
+      "name": "Fernando de Fuentes",
+      "facet": "Cine de oro y charros cantores",
+      "known_at": 14
+    },
+    {
+      "name": "Luis Aguilar",
+      "facet": "Cine de oro y charros cantores",
+      "known_at": 12
+    },
+    {
+      "name": "¡Ajúa!",
+      "facet": "Grito, versos y palabras del género",
+      "known_at": 6
+    },
+    {
+      "name": "Son",
+      "facet": "Grito, versos y palabras del género",
+      "known_at": 9
+    },
+    {
+      "name": "Canción ranchera",
+      "facet": "Grito, versos y palabras del género",
+      "known_at": 4
+    },
+    {
+      "name": "Bolero",
+      "facet": "Grito, versos y palabras del género",
+      "known_at": 6
+    },
+    {
+      "name": "Mariachi (palabra)",
+      "facet": "Grito, versos y palabras del género",
+      "known_at": 12
+    },
+    {
+      "name": "Falsete",
+      "facet": "Grito, versos y palabras del género",
+      "known_at": 10
+    },
+    {
+      "name": "Copla",
+      "facet": "Grito, versos y palabras del género",
+      "known_at": 10
+    },
+    {
+      "name": "Rajarse",
+      "facet": "Grito, versos y palabras del género",
+      "known_at": 9
+    },
+    {
+      "name": "Despecho",
+      "facet": "Grito, versos y palabras del género",
+      "known_at": 9
+    },
+    {
+      "name": "Llevar gallo",
+      "facet": "Grito, versos y palabras del género",
+      "known_at": 12
+    },
+    {
+      "name": "Canción bravía",
+      "facet": "Grito, versos y palabras del género",
+      "known_at": 13
+    },
+    {
+      "name": "Abajeño",
+      "facet": "Grito, versos y palabras del género",
+      "known_at": 14
+    },
+    {
+      "name": "Estribillo",
+      "facet": "Grito, versos y palabras del género",
+      "known_at": 8
+    },
+    {
+      "name": "Museo del Tequila y el Mezcal",
+      "facet": "Plaza Garibaldi y lugares del mariachi",
+      "known_at": 12
+    },
+    {
+      "name": "Salón Tenampa",
+      "facet": "Plaza Garibaldi y lugares del mariachi",
+      "known_at": 12
+    },
+    {
+      "name": "Plaza de los Mariachis de Guadalajara",
+      "facet": "Plaza Garibaldi y lugares del mariachi",
+      "known_at": 10
+    },
+    {
+      "name": "Teatro Degollado",
+      "facet": "Plaza Garibaldi y lugares del mariachi",
+      "known_at": 12
+    },
+    {
+      "name": "Arena VFG",
+      "facet": "Plaza Garibaldi y lugares del mariachi",
+      "known_at": 11
+    },
+    {
+      "name": "Rancho Los Tres Potrillos",
+      "facet": "Plaza Garibaldi y lugares del mariachi",
+      "known_at": 12
+    },
+    {
+      "name": "El Parián de Tlaquepaque",
+      "facet": "Plaza Garibaldi y lugares del mariachi",
+      "known_at": 11
+    },
+    {
+      "name": "Panteón Jardín",
+      "facet": "Plaza Garibaldi y lugares del mariachi",
+      "known_at": 13
+    },
+    {
+      "name": "Estación Garibaldi/Lagunilla",
+      "facet": "Plaza Garibaldi y lugares del mariachi",
+      "known_at": 11
+    },
+    {
+      "name": "Coco (película)",
+      "facet": "Mariachi hoy: Coco y nuevas voces",
+      "known_at": 1
+    },
+    {
+      "name": "Héctor (Coco)",
+      "facet": "Mariachi hoy: Coco y nuevas voces",
+      "known_at": 4
+    },
+    {
+      "name": "Imelda (Coco)",
+      "facet": "Mariachi hoy: Coco y nuevas voces",
+      "known_at": 5
+    },
+    {
+      "name": "Un poco loco",
+      "facet": "Mariachi hoy: Coco y nuevas voces",
+      "known_at": 6
+    },
+    {
+      "name": "Christian Nodal",
+      "facet": "Mariachi hoy: Coco y nuevas voces",
+      "known_at": 5
+    },
+    {
+      "name": "Ángela Aguilar",
+      "facet": "Mariachi hoy: Coco y nuevas voces",
+      "known_at": 5
+    },
+    {
+      "name": "Natalia Lafourcade",
+      "facet": "Mariachi hoy: Coco y nuevas voces",
+      "known_at": 8
+    },
+    {
+      "name": "Majo Aguilar",
+      "facet": "Mariachi hoy: Coco y nuevas voces",
+      "known_at": 10
+    },
+    {
+      "name": "Leonardo Aguilar",
+      "facet": "Mariachi hoy: Coco y nuevas voces",
+      "known_at": 11
+    },
+    {
+      "name": "Mariachi Herencia de México",
+      "facet": "Mariachi hoy: Coco y nuevas voces",
+      "known_at": 13
+    },
+    {
+      "name": "Canciones de mi padre",
+      "facet": "Mariachi hoy: Coco y nuevas voces",
+      "known_at": 13
+    }
+  ]
+}

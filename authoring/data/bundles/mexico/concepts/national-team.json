@@ -1,0 +1,854 @@
+{
+  "subcategory": "national-team",
+  "facets": [
+    "Mundiales con México como sede",
+    "Grandes jugadores históricos",
+    "Porteros legendarios del Tri",
+    "Entrenadores de la Selección",
+    "Partidos y goles memorables",
+    "Copa Oro y torneos de Concacaf",
+    "Rivalidades y clásicos del Tri",
+    "Estadios y sedes del Tri",
+    "Uniforme, escudo y mascotas",
+    "Afición, porras y cultura futbolera",
+    "Selecciones juveniles y olímpicas",
+    "Selección Femenil de México"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 5,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mundial de México 1970",
+      "facet": "Mundiales con México como sede",
+      "known_at": 7
+    },
+    {
+      "name": "Mundial de México 1986",
+      "facet": "Mundiales con México como sede",
+      "known_at": 7
+    },
+    {
+      "name": "Mundial de 2026",
+      "facet": "Mundiales con México como sede",
+      "known_at": 3
+    },
+    {
+      "name": "Inauguración del Mundial 2026",
+      "facet": "Mundiales con México como sede",
+      "known_at": 5
+    },
+    {
+      "name": "Copa Jules Rimet",
+      "facet": "Mundiales con México como sede",
+      "known_at": 11
+    },
+    {
+      "name": "Gol del Siglo",
+      "facet": "Mundiales con México como sede",
+      "known_at": 9,
+      "retired": "used_up: The pool already asks who scored the Gol del Siglo, and that question gives the year and the opponent. The remaining options (who, when) would repeat it or point to obscure facts."
+    },
+    {
+      "name": "Diego Armando Maradona",
+      "facet": "Mundiales con México como sede",
+      "known_at": 5
+    },
+    {
+      "name": "Brasil tricampeón en 1970",
+      "facet": "Mundiales con México como sede",
+      "known_at": 10
+    },
+    {
+      "name": "Argentina campeona en 1986",
+      "facet": "Mundiales con México como sede",
+      "known_at": 9
+    },
+    {
+      "name": "Gerd Müller",
+      "facet": "Mundiales con México como sede",
+      "known_at": 13
+    },
+    {
+      "name": "Gary Lineker",
+      "facet": "Mundiales con México como sede",
+      "known_at": 13
+    },
+    {
+      "name": "Balón Telstar",
+      "facet": "Mundiales con México como sede",
+      "known_at": 13
+    },
+    {
+      "name": "Balón Azteca",
+      "facet": "Mundiales con México como sede",
+      "known_at": 12
+    },
+    {
+      "name": "Tarjetas amarilla y roja",
+      "facet": "Mundiales con México como sede",
+      "known_at": 11
+    },
+    {
+      "name": "Cuartos de final de 1970 y 1986",
+      "facet": "Mundiales con México como sede",
+      "known_at": 11
+    },
+    {
+      "name": "Sede compartida con Estados Unidos y Canadá",
+      "facet": "Mundiales con México como sede",
+      "known_at": 5
+    },
+    {
+      "name": "Cuauhtemiña",
+      "facet": "Grandes jugadores históricos",
+      "known_at": 8
+    },
+    {
+      "name": "Andrés Guardado",
+      "facet": "Grandes jugadores históricos",
+      "known_at": 6
+    },
+    {
+      "name": "Hirving \"Chucky\" Lozano",
+      "facet": "Grandes jugadores históricos",
+      "known_at": 4
+    },
+    {
+      "name": "Raúl Jiménez",
+      "facet": "Grandes jugadores históricos",
+      "known_at": 5
+    },
+    {
+      "name": "Carlos Vela",
+      "facet": "Grandes jugadores históricos",
+      "known_at": 7
+    },
+    {
+      "name": "Giovani dos Santos",
+      "facet": "Grandes jugadores históricos",
+      "known_at": 8
+    },
+    {
+      "name": "Manuel Negrete",
+      "facet": "Grandes jugadores históricos",
+      "known_at": 10
+    },
+    {
+      "name": "Claudio Suárez",
+      "facet": "Grandes jugadores históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Héctor Herrera",
+      "facet": "Grandes jugadores históricos",
+      "known_at": 8
+    },
+    {
+      "name": "Santiago Giménez",
+      "facet": "Grandes jugadores históricos",
+      "known_at": 4
+    },
+    {
+      "name": "Edson Álvarez",
+      "facet": "Grandes jugadores históricos",
+      "known_at": 5
+    },
+    {
+      "name": "Hugolina",
+      "facet": "Grandes jugadores históricos",
+      "known_at": 10
+    },
+    {
+      "name": "Antonio \"La Tota\" Carbajal",
+      "facet": "Porteros legendarios del Tri",
+      "known_at": 11
+    },
+    {
+      "name": "Pablo Larios",
+      "facet": "Porteros legendarios del Tri",
+      "known_at": 12
+    },
+    {
+      "name": "Adolfo Ríos",
+      "facet": "Porteros legendarios del Tri",
+      "known_at": 12
+    },
+    {
+      "name": "Ignacio Calderón",
+      "facet": "Porteros legendarios del Tri",
+      "known_at": 14
+    },
+    {
+      "name": "Óscar \"Conejo\" Pérez",
+      "facet": "Porteros legendarios del Tri",
+      "known_at": 10
+    },
+    {
+      "name": "José de Jesús Corona",
+      "facet": "Porteros legendarios del Tri",
+      "known_at": 8
+    },
+    {
+      "name": "Alfredo Talavera",
+      "facet": "Porteros legendarios del Tri",
+      "known_at": 10
+    },
+    {
+      "name": "Luis Malagón",
+      "facet": "Porteros legendarios del Tri",
+      "known_at": 8
+    },
+    {
+      "name": "Raúl Gudiño",
+      "facet": "Porteros legendarios del Tri",
+      "known_at": 12
+    },
+    {
+      "name": "Rodolfo Cota",
+      "facet": "Porteros legendarios del Tri",
+      "known_at": 12
+    },
+    {
+      "name": "Moisés Muñoz",
+      "facet": "Porteros legendarios del Tri",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Carlos Osorio",
+      "facet": "Entrenadores de la Selección",
+      "known_at": 8
+    },
+    {
+      "name": "Gerardo \"Tata\" Martino",
+      "facet": "Entrenadores de la Selección",
+      "known_at": 7
+    },
+    {
+      "name": "Jaime Lozano",
+      "facet": "Entrenadores de la Selección",
+      "known_at": 8
+    },
+    {
+      "name": "Sven-Göran Eriksson",
+      "facet": "Entrenadores de la Selección",
+      "known_at": 13
+    },
+    {
+      "name": "José Manuel \"Chepo\" de la Torre",
+      "facet": "Entrenadores de la Selección",
+      "known_at": 11
+    },
+    {
+      "name": "Ignacio Trelles",
+      "facet": "Entrenadores de la Selección",
+      "known_at": 13
+    },
+    {
+      "name": "Raúl Cárdenas",
+      "facet": "Entrenadores de la Selección",
+      "known_at": 14
+    },
+    {
+      "name": "César Luis Menotti",
+      "facet": "Entrenadores de la Selección",
+      "known_at": 13
+    },
+    {
+      "name": "Diego Cocca",
+      "facet": "Entrenadores de la Selección",
+      "known_at": 10
+    },
+    {
+      "name": "Rotaciones de Osorio",
+      "facet": "Entrenadores de la Selección",
+      "known_at": 10
+    },
+    {
+      "name": "Tijera de Negrete contra Bulgaria",
+      "facet": "Partidos y goles memorables",
+      "known_at": 10
+    },
+    {
+      "name": "México 1-0 Alemania en Rusia 2018",
+      "facet": "Partidos y goles memorables",
+      "known_at": 5
+    },
+    {
+      "name": "Atajadas de Ochoa contra Brasil en 2014",
+      "facet": "Partidos y goles memorables",
+      "known_at": 6
+    },
+    {
+      "name": "\"No era penal\"",
+      "facet": "Partidos y goles memorables",
+      "known_at": 6
+    },
+    {
+      "name": "Arjen Robben",
+      "facet": "Partidos y goles memorables",
+      "known_at": 8
+    },
+    {
+      "name": "Gol de Maxi Rodríguez en 2006",
+      "facet": "Partidos y goles memorables",
+      "known_at": 11
+    },
+    {
+      "name": "Cabezazo de Borgetti contra Italia",
+      "facet": "Partidos y goles memorables",
+      "known_at": 12
+    },
+    {
+      "name": "Gol de Chicharito a Francia en 2010",
+      "facet": "Partidos y goles memorables",
+      "known_at": 9
+    },
+    {
+      "name": "El 7-0 ante Chile",
+      "facet": "Partidos y goles memorables",
+      "known_at": 9
+    },
+    {
+      "name": "Primer partido mundialista contra Francia en 1930",
+      "facet": "Partidos y goles memorables",
+      "known_at": 13
+    },
+    {
+      "name": "Primera victoria mundialista de 1962",
+      "facet": "Partidos y goles memorables",
+      "known_at": 14
+    },
+    {
+      "name": "Final de la Copa América 1993",
+      "facet": "Partidos y goles memorables",
+      "known_at": 13
+    },
+    {
+      "name": "Final de la Copa América 2001",
+      "facet": "Partidos y goles memorables",
+      "known_at": 13
+    },
+    {
+      "name": "Gol de Rafael Márquez a Croacia en 2014",
+      "facet": "Partidos y goles memorables",
+      "known_at": 10
+    },
+    {
+      "name": "Gol de Luis Hernández a Holanda en 1998",
+      "facet": "Partidos y goles memorables",
+      "known_at": 12
+    },
+    {
+      "name": "Chilena de Raúl Jiménez contra Panamá",
+      "facet": "Partidos y goles memorables",
+      "known_at": 10
+    },
+    {
+      "name": "Copa Oro",
+      "facet": "Copa Oro y torneos de Concacaf",
+      "known_at": 5
+    },
+    {
+      "name": "Concacaf",
+      "facet": "Copa Oro y torneos de Concacaf",
+      "known_at": 6
+    },
+    {
+      "name": "Final de la Copa Oro 2011",
+      "facet": "Copa Oro y torneos de Concacaf",
+      "known_at": 10
+    },
+    {
+      "name": "Gol de Giovani dos Santos en la final de 2011",
+      "facet": "Copa Oro y torneos de Concacaf",
+      "known_at": 11
+    },
+    {
+      "name": "Copa Oro 2019",
+      "facet": "Copa Oro y torneos de Concacaf",
+      "known_at": 9
+    },
+    {
+      "name": "Copa Oro 2023",
+      "facet": "Copa Oro y torneos de Concacaf",
+      "known_at": 8
+    },
+    {
+      "name": "Copa Oro 2025",
+      "facet": "Copa Oro y torneos de Concacaf",
+      "known_at": 6
+    },
+    {
+      "name": "Liga de Naciones de Concacaf",
+      "facet": "Copa Oro y torneos de Concacaf",
+      "known_at": 7
+    },
+    {
+      "name": "Hexagonal final",
+      "facet": "Copa Oro y torneos de Concacaf",
+      "known_at": 9
+    },
+    {
+      "name": "Eliminatorias mundialistas",
+      "facet": "Copa Oro y torneos de Concacaf",
+      "known_at": 6
+    },
+    {
+      "name": "Repechaje contra Nueva Zelanda",
+      "facet": "Copa Oro y torneos de Concacaf",
+      "known_at": 11
+    },
+    {
+      "name": "Copa Confederaciones 1999",
+      "facet": "Copa Oro y torneos de Concacaf",
+      "known_at": 11
+    },
+    {
+      "name": "Copa Confederaciones 2017",
+      "facet": "Copa Oro y torneos de Concacaf",
+      "known_at": 11
+    },
+    {
+      "name": "Copa Oro 2003",
+      "facet": "Copa Oro y torneos de Concacaf",
+      "known_at": 13
+    },
+    {
+      "name": "Penal contra Panamá en la Copa Oro 2015",
+      "facet": "Copa Oro y torneos de Concacaf",
+      "known_at": 11
+    },
+    {
+      "name": "Copa América",
+      "facet": "Copa Oro y torneos de Concacaf",
+      "known_at": 6
+    },
+    {
+      "name": "Campeonato de Concacaf 1977",
+      "facet": "Copa Oro y torneos de Concacaf",
+      "known_at": 14
+    },
+    {
+      "name": "Selección de Estados Unidos",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 4
+    },
+    {
+      "name": "\"Dos a cero\"",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 10
+    },
+    {
+      "name": "Columbus, Ohio",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 12
+    },
+    {
+      "name": "Selección de Argentina",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 4
+    },
+    {
+      "name": "Selección de Costa Rica",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 6
+    },
+    {
+      "name": "Aztecazo",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 11
+    },
+    {
+      "name": "Selección de Honduras",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 7
+    },
+    {
+      "name": "Selección de Brasil",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 3
+    },
+    {
+      "name": "Selección de Holanda",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 7
+    },
+    {
+      "name": "Selección de Alemania",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 5
+    },
+    {
+      "name": "Selección de Panamá",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 7
+    },
+    {
+      "name": "Selección de Jamaica",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 8
+    },
+    {
+      "name": "Selección de Canadá",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 7
+    },
+    {
+      "name": "Estadio Ricardo Saprissa",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 12
+    },
+    {
+      "name": "Estadio Olímpico Metropolitano de San Pedro Sula",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 13
+    },
+    {
+      "name": "Landon Donovan",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 10
+    },
+    {
+      "name": "Christian Pulisic",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 9
+    },
+    {
+      "name": "Lionel Messi",
+      "facet": "Rivalidades y clásicos del Tri",
+      "known_at": 2
+    },
+    {
+      "name": "Estadio Banorte",
+      "facet": "Estadios y sedes del Tri",
+      "known_at": 6
+    },
+    {
+      "name": "Estadio Tecnológico",
+      "facet": "Estadios y sedes del Tri",
+      "known_at": 12
+    },
+    {
+      "name": "Santa Úrsula",
+      "facet": "Estadios y sedes del Tri",
+      "known_at": 10
+    },
+    {
+      "name": "Rose Bowl",
+      "facet": "Estadios y sedes del Tri",
+      "known_at": 12
+    },
+    {
+      "name": "AT&T Stadium",
+      "facet": "Estadios y sedes del Tri",
+      "known_at": 13
+    },
+    {
+      "name": "Zayu",
+      "facet": "Uniforme, escudo y mascotas",
+      "known_at": 5
+    },
+    {
+      "name": "Maple",
+      "facet": "Uniforme, escudo y mascotas",
+      "known_at": 8
+    },
+    {
+      "name": "Clutch",
+      "facet": "Uniforme, escudo y mascotas",
+      "known_at": 8
+    },
+    {
+      "name": "Jersey verde",
+      "facet": "Uniforme, escudo y mascotas",
+      "known_at": 1
+    },
+    {
+      "name": "Short blanco",
+      "facet": "Uniforme, escudo y mascotas",
+      "known_at": 4
+    },
+    {
+      "name": "Medias rojas",
+      "facet": "Uniforme, escudo y mascotas",
+      "known_at": 5
+    },
+    {
+      "name": "Escudo de la Federación Mexicana de Futbol",
+      "facet": "Uniforme, escudo y mascotas",
+      "known_at": 6
+    },
+    {
+      "name": "Jersey con el calendario azteca de 1998",
+      "facet": "Uniforme, escudo y mascotas",
+      "known_at": 9
+    },
+    {
+      "name": "Uniformes fosforescentes de Jorge Campos",
+      "facet": "Uniforme, escudo y mascotas",
+      "known_at": 8
+    },
+    {
+      "name": "Adidas",
+      "facet": "Uniforme, escudo y mascotas",
+      "known_at": 5
+    },
+    {
+      "name": "ABA Sport",
+      "facet": "Uniforme, escudo y mascotas",
+      "known_at": 12
+    },
+    {
+      "name": "Jersey negro",
+      "facet": "Uniforme, escudo y mascotas",
+      "known_at": 7
+    },
+    {
+      "name": "Jersey blanco de visitante",
+      "facet": "Uniforme, escudo y mascotas",
+      "known_at": 6
+    },
+    {
+      "name": "\"Sí se puede\"",
+      "facet": "Afición, porras y cultura futbolera",
+      "known_at": 3
+    },
+    {
+      "name": "Maldición del quinto partido",
+      "facet": "Afición, porras y cultura futbolera",
+      "known_at": 7
+    },
+    {
+      "name": "\"Jugamos como nunca, perdimos como siempre\"",
+      "facet": "Afición, porras y cultura futbolera",
+      "known_at": 10,
+      "retired": "unaskable: Nobody can pin the phrase to one author (it's a popular saying with disputed attributions), so 'who said it' would be ambiguous."
+    },
+    {
+      "name": "\"Ya merito\"",
+      "facet": "Afición, porras y cultura futbolera",
+      "known_at": 6
+    },
+    {
+      "name": "Pambol",
+      "facet": "Afición, porras y cultura futbolera",
+      "known_at": 8
+    },
+    {
+      "name": "FIFA Fan Festival en el Zócalo",
+      "facet": "Afición, porras y cultura futbolera",
+      "known_at": 7
+    },
+    {
+      "name": "Álbum Panini del Mundial",
+      "facet": "Afición, porras y cultura futbolera",
+      "known_at": 3
+    },
+    {
+      "name": "\"¿Y si jugamos como nunca?\"",
+      "facet": "Afición, porras y cultura futbolera",
+      "known_at": 12
+    },
+    {
+      "name": "Pancho Villa's Army",
+      "facet": "Afición, porras y cultura futbolera",
+      "known_at": 13
+    },
+    {
+      "name": "Medalla de oro en Londres 2012",
+      "facet": "Selecciones juveniles y olímpicas",
+      "known_at": 7
+    },
+    {
+      "name": "Oribe Peralta",
+      "facet": "Selecciones juveniles y olímpicas",
+      "known_at": 8
+    },
+    {
+      "name": "Estadio de Wembley",
+      "facet": "Selecciones juveniles y olímpicas",
+      "known_at": 10
+    },
+    {
+      "name": "Luis Fernando Tena",
+      "facet": "Selecciones juveniles y olímpicas",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial Sub-17 de Perú 2005",
+      "facet": "Selecciones juveniles y olímpicas",
+      "known_at": 10
+    },
+    {
+      "name": "Mundial Sub-17 de México 2011",
+      "facet": "Selecciones juveniles y olímpicas",
+      "known_at": 9
+    },
+    {
+      "name": "Jesús Ramírez",
+      "facet": "Selecciones juveniles y olímpicas",
+      "known_at": 13
+    },
+    {
+      "name": "Julio Gómez",
+      "facet": "Selecciones juveniles y olímpicas",
+      "known_at": 12
+    },
+    {
+      "name": "Medalla de bronce en Tokio 2020",
+      "facet": "Selecciones juveniles y olímpicas",
+      "known_at": 9
+    },
+    {
+      "name": "Mundial Sub-20 de 2011",
+      "facet": "Selecciones juveniles y olímpicas",
+      "known_at": 13
+    },
+    {
+      "name": "Juegos Panamericanos",
+      "facet": "Selecciones juveniles y olímpicas",
+      "known_at": 7
+    },
+    {
+      "name": "Torneo Esperanzas de Toulon",
+      "facet": "Selecciones juveniles y olímpicas",
+      "known_at": 14
+    },
+    {
+      "name": "Marco Fabián",
+      "facet": "Selecciones juveniles y olímpicas",
+      "known_at": 10
+    },
+    {
+      "name": "Jesús \"Tecatito\" Corona",
+      "facet": "Selecciones juveniles y olímpicas",
+      "known_at": 8
+    },
+    {
+      "name": "Héctor Moreno",
+      "facet": "Selecciones juveniles y olímpicas",
+      "known_at": 10
+    },
+    {
+      "name": "Mundial Sub-17 de 2019",
+      "facet": "Selecciones juveniles y olímpicas",
+      "known_at": 12
+    },
+    {
+      "name": "Maribel Domínguez",
+      "facet": "Selección Femenil de México",
+      "known_at": 10
+    },
+    {
+      "name": "Kenti Robles",
+      "facet": "Selección Femenil de México",
+      "known_at": 10
+    },
+    {
+      "name": "Mónica Ocampo",
+      "facet": "Selección Femenil de México",
+      "known_at": 12
+    },
+    {
+      "name": "Cecilia Santiago",
+      "facet": "Selección Femenil de México",
+      "known_at": 12
+    },
+    {
+      "name": "Alicia Vargas \"La Pelé\"",
+      "facet": "Selección Femenil de México",
+      "known_at": 13
+    },
+    {
+      "name": "Mundial Femenil de 1971",
+      "facet": "Selección Femenil de México",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial Femenil de 1999",
+      "facet": "Selección Femenil de México",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial Femenil de 2011",
+      "facet": "Selección Femenil de México",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial Femenil de 2015",
+      "facet": "Selección Femenil de México",
+      "known_at": 12
+    },
+    {
+      "name": "Leonardo Cuéllar",
+      "facet": "Selección Femenil de México",
+      "known_at": 13
+    },
+    {
+      "name": "Pedro López",
+      "facet": "Selección Femenil de México",
+      "known_at": 13
+    },
+    {
+      "name": "Victoria ante Estados Unidos en la Copa Oro W 2024",
+      "facet": "Selección Femenil de México",
+      "known_at": 10
+    },
+    {
+      "name": "Subcampeonato del Mundial Femenil Sub-17 de 2018",
+      "facet": "Selección Femenil de México",
+      "known_at": 12
+    },
+    {
+      "name": "Juegos Olímpicos de Atenas 2004",
+      "facet": "Selección Femenil de México",
+      "known_at": 13
+    },
+    {
+      "name": "Scarlett Camberos",
+      "facet": "Selección Femenil de México",
+      "known_at": 11
+    }
+  ]
+}

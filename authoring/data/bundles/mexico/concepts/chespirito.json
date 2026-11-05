@@ -1,0 +1,752 @@
+{
+  "subcategory": "chespirito",
+  "facets": [
+    "Personajes de la vecindad",
+    "Frases y muletillas célebres",
+    "El Chapulín Colorado y sus armas",
+    "Vida y obra de Roberto Gómez Bolaños",
+    "Actores y actrices del elenco",
+    "Otros programas y personajes de Chespirito",
+    "Episodios y capítulos famosos",
+    "Objetos, lugares y comida de las series",
+    "Canciones y temas musicales",
+    "Apodos, nombres y su origen",
+    "Animación, remakes y legado en el mundo"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 1,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "El Chavo",
+      "facet": "Personajes de la vecindad",
+      "known_at": 1
+    },
+    {
+      "name": "Profesor Jirafales",
+      "facet": "Personajes de la vecindad",
+      "known_at": 2
+    },
+    {
+      "name": "Señor Barriga",
+      "facet": "Personajes de la vecindad",
+      "known_at": 2
+    },
+    {
+      "name": "Ñoño",
+      "facet": "Personajes de la vecindad",
+      "known_at": 3
+    },
+    {
+      "name": "Doña Clotilde",
+      "facet": "Personajes de la vecindad",
+      "known_at": 3
+    },
+    {
+      "name": "Patty",
+      "facet": "Personajes de la vecindad",
+      "known_at": 6
+    },
+    {
+      "name": "Godínez",
+      "facet": "Personajes de la vecindad",
+      "known_at": 5
+    },
+    {
+      "name": "Jaimito el cartero",
+      "facet": "Personajes de la vecindad",
+      "known_at": 4
+    },
+    {
+      "name": "La Popis",
+      "facet": "Personajes de la vecindad",
+      "known_at": 5
+    },
+    {
+      "name": "Gloria",
+      "facet": "Personajes de la vecindad",
+      "known_at": 9
+    },
+    {
+      "name": "Doña Nieves",
+      "facet": "Personajes de la vecindad",
+      "known_at": 8
+    },
+    {
+      "name": "Malicha",
+      "facet": "Personajes de la vecindad",
+      "known_at": 11
+    },
+    {
+      "name": "Todos mis movimientos están fríamente calculados",
+      "facet": "Frases y muletillas célebres",
+      "known_at": 6
+    },
+    {
+      "name": "Ta ta ta ta",
+      "facet": "Frases y muletillas célebres",
+      "known_at": 4
+    },
+    {
+      "name": "¿No gusta pasar a tomar una tacita de café?",
+      "facet": "Frases y muletillas célebres",
+      "known_at": 6
+    },
+    {
+      "name": "Bueno, pero no se enoje",
+      "facet": "Frases y muletillas célebres",
+      "known_at": 6
+    },
+    {
+      "name": "Pi pi pi pi",
+      "facet": "Frases y muletillas célebres",
+      "known_at": 3
+    },
+    {
+      "name": "Chipote chillón",
+      "facet": "El Chapulín Colorado y sus armas",
+      "known_at": 3
+    },
+    {
+      "name": "Chicharra paralizadora",
+      "facet": "El Chapulín Colorado y sus armas",
+      "known_at": 5
+    },
+    {
+      "name": "Pastillas de chiquitolina",
+      "facet": "El Chapulín Colorado y sus armas",
+      "known_at": 5
+    },
+    {
+      "name": "Antenitas de vinil",
+      "facet": "El Chapulín Colorado y sus armas",
+      "known_at": 4
+    },
+    {
+      "name": "Emblema del corazón con CH",
+      "facet": "El Chapulín Colorado y sus armas",
+      "known_at": 3
+    },
+    {
+      "name": "Chapulín (insecto)",
+      "facet": "El Chapulín Colorado y sus armas",
+      "known_at": 4
+    },
+    {
+      "name": "Super Sam",
+      "facet": "El Chapulín Colorado y sus armas",
+      "known_at": 8
+    },
+    {
+      "name": "Bolsa de dinero de Super Sam",
+      "facet": "El Chapulín Colorado y sus armas",
+      "known_at": 11
+    },
+    {
+      "name": "Tripaseca",
+      "facet": "El Chapulín Colorado y sus armas",
+      "known_at": 9
+    },
+    {
+      "name": "Racatán",
+      "facet": "El Chapulín Colorado y sus armas",
+      "known_at": 10
+    },
+    {
+      "name": "El Cuajináis",
+      "facet": "El Chapulín Colorado y sus armas",
+      "known_at": 11
+    },
+    {
+      "name": "Matonsísimo Kid",
+      "facet": "El Chapulín Colorado y sus armas",
+      "known_at": 11
+    },
+    {
+      "name": "Alma Negra",
+      "facet": "El Chapulín Colorado y sus armas",
+      "known_at": 11
+    },
+    {
+      "name": "Roberto Gómez Bolaños",
+      "facet": "Vida y obra de Roberto Gómez Bolaños",
+      "known_at": 5
+    },
+    {
+      "name": "Graciela Fernández",
+      "facet": "Vida y obra de Roberto Gómez Bolaños",
+      "known_at": 13
+    },
+    {
+      "name": "Roberto Gómez Fernández",
+      "facet": "Vida y obra de Roberto Gómez Bolaños",
+      "known_at": 13
+    },
+    {
+      "name": "Televisión Independiente de México",
+      "facet": "Vida y obra de Roberto Gómez Bolaños",
+      "known_at": 13
+    },
+    {
+      "name": "Estudios de ingeniería",
+      "facet": "Vida y obra de Roberto Gómez Bolaños",
+      "known_at": 12
+    },
+    {
+      "name": "Agencia de publicidad",
+      "facet": "Vida y obra de Roberto Gómez Bolaños",
+      "known_at": 13
+    },
+    {
+      "name": "El Chanfle",
+      "facet": "Vida y obra de Roberto Gómez Bolaños",
+      "known_at": 9
+    },
+    {
+      "name": "Charrito",
+      "facet": "Vida y obra de Roberto Gómez Bolaños",
+      "known_at": 13
+    },
+    {
+      "name": "Sin querer queriendo (autobiografía)",
+      "facet": "Vida y obra de Roberto Gómez Bolaños",
+      "known_at": 11
+    },
+    {
+      "name": "El diario del Chavo del Ocho",
+      "facet": "Vida y obra de Roberto Gómez Bolaños",
+      "known_at": 12
+    },
+    {
+      "name": "11 y 12 (obra de teatro)",
+      "facet": "Vida y obra de Roberto Gómez Bolaños",
+      "known_at": 14
+    },
+    {
+      "name": "Homenaje en el Estadio Azteca",
+      "facet": "Vida y obra de Roberto Gómez Bolaños",
+      "known_at": 10
+    },
+    {
+      "name": "Florinda Meza",
+      "facet": "Actores y actrices del elenco",
+      "known_at": 6
+    },
+    {
+      "name": "Carlos Villagrán",
+      "facet": "Actores y actrices del elenco",
+      "known_at": 7
+    },
+    {
+      "name": "Ramón Valdés",
+      "facet": "Actores y actrices del elenco",
+      "known_at": 6
+    },
+    {
+      "name": "María Antonieta de las Nieves",
+      "facet": "Actores y actrices del elenco",
+      "known_at": 7
+    },
+    {
+      "name": "Rubén Aguirre",
+      "facet": "Actores y actrices del elenco",
+      "known_at": 8
+    },
+    {
+      "name": "Édgar Vivar",
+      "facet": "Actores y actrices del elenco",
+      "known_at": 8
+    },
+    {
+      "name": "Angelines Fernández",
+      "facet": "Actores y actrices del elenco",
+      "known_at": 9
+    },
+    {
+      "name": "Horacio Gómez Bolaños",
+      "facet": "Actores y actrices del elenco",
+      "known_at": 11
+    },
+    {
+      "name": "Raúl \"Chato\" Padilla",
+      "facet": "Actores y actrices del elenco",
+      "known_at": 11
+    },
+    {
+      "name": "Ana Lilian de la Macorra",
+      "facet": "Actores y actrices del elenco",
+      "known_at": 13
+    },
+    {
+      "name": "María Luisa Alcalá",
+      "facet": "Actores y actrices del elenco",
+      "known_at": 13
+    },
+    {
+      "name": "Germán Valdés \"Tin Tan\"",
+      "facet": "Actores y actrices del elenco",
+      "known_at": 9
+    },
+    {
+      "name": "Manuel \"El Loco\" Valdés",
+      "facet": "Actores y actrices del elenco",
+      "known_at": 10
+    },
+    {
+      "name": "Ricardo de Pascual",
+      "facet": "Actores y actrices del elenco",
+      "known_at": 14
+    },
+    {
+      "name": "Chespirito (programa)",
+      "facet": "Otros programas y personajes de Chespirito",
+      "known_at": 5
+    },
+    {
+      "name": "Doctor Chapatín",
+      "facet": "Otros programas y personajes de Chespirito",
+      "known_at": 5
+    },
+    {
+      "name": "Chómpiras",
+      "facet": "Otros programas y personajes de Chespirito",
+      "known_at": 5
+    },
+    {
+      "name": "La Chimoltrufia",
+      "facet": "Otros programas y personajes de Chespirito",
+      "known_at": 5
+    },
+    {
+      "name": "El Botija",
+      "facet": "Otros programas y personajes de Chespirito",
+      "known_at": 6
+    },
+    {
+      "name": "Los Caquitos",
+      "facet": "Otros programas y personajes de Chespirito",
+      "known_at": 7
+    },
+    {
+      "name": "Los Chifladitos",
+      "facet": "Otros programas y personajes de Chespirito",
+      "known_at": 11
+    },
+    {
+      "name": "Chaparrón Bonaparte",
+      "facet": "Otros programas y personajes de Chespirito",
+      "known_at": 10
+    },
+    {
+      "name": "Lucas Tañeda",
+      "facet": "Otros programas y personajes de Chespirito",
+      "known_at": 11
+    },
+    {
+      "name": "Los Supergenios de la Mesa Cuadrada",
+      "facet": "Otros programas y personajes de Chespirito",
+      "known_at": 12
+    },
+    {
+      "name": "El Peterete",
+      "facet": "Otros programas y personajes de Chespirito",
+      "known_at": 12
+    },
+    {
+      "name": "Vicente Chambón",
+      "facet": "Otros programas y personajes de Chespirito",
+      "known_at": 12
+    },
+    {
+      "name": "Sargento Refugio",
+      "facet": "Otros programas y personajes de Chespirito",
+      "known_at": 11
+    },
+    {
+      "name": "El Ciudadano Gómez",
+      "facet": "Otros programas y personajes de Chespirito",
+      "known_at": 13
+    },
+    {
+      "name": "Licenciado Morales",
+      "facet": "Otros programas y personajes de Chespirito",
+      "known_at": 14
+    },
+    {
+      "name": "Vacaciones en Acapulco",
+      "facet": "Episodios y capítulos famosos",
+      "known_at": 4
+    },
+    {
+      "name": "Navidad en la vecindad",
+      "facet": "Episodios y capítulos famosos",
+      "known_at": 5
+    },
+    {
+      "name": "La fiesta de la buena vecindad",
+      "facet": "Episodios y capítulos famosos",
+      "known_at": 6
+    },
+    {
+      "name": "La peluquería de Don Ramón",
+      "facet": "Episodios y capítulos famosos",
+      "known_at": 7
+    },
+    {
+      "name": "El restaurante de Doña Florinda",
+      "facet": "Episodios y capítulos famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Los yeseros",
+      "facet": "Episodios y capítulos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "La fiesta de disfraces",
+      "facet": "Episodios y capítulos famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Clases de box",
+      "facet": "Episodios y capítulos famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Los globos de Don Ramón",
+      "facet": "Episodios y capítulos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Romeo y Julieta del Chapulín",
+      "facet": "Episodios y capítulos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Salida de Quico de la vecindad",
+      "facet": "Episodios y capítulos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Salida de Don Ramón de la vecindad",
+      "facet": "Episodios y capítulos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Último episodio de El Chavo del 8",
+      "facet": "Episodios y capítulos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Barril del Chavo",
+      "facet": "Objetos, lugares y comida de las series",
+      "known_at": 1
+    },
+    {
+      "name": "Departamento 71",
+      "facet": "Objetos, lugares y comida de las series",
+      "known_at": 4
+    },
+    {
+      "name": "Churros de Doña Florinda",
+      "facet": "Objetos, lugares y comida de las series",
+      "known_at": 5
+    },
+    {
+      "name": "Pelota de Quico",
+      "facet": "Objetos, lugares y comida de las series",
+      "known_at": 3
+    },
+    {
+      "name": "Gorro de orejeras del Chavo",
+      "facet": "Objetos, lugares y comida de las series",
+      "known_at": 3
+    },
+    {
+      "name": "Tirantes del Chavo",
+      "facet": "Objetos, lugares y comida de las series",
+      "known_at": 4
+    },
+    {
+      "name": "Ramo de flores del Profesor Jirafales",
+      "facet": "Objetos, lugares y comida de las series",
+      "known_at": 4
+    },
+    {
+      "name": "Fonda de Doña Florinda",
+      "facet": "Objetos, lugares y comida de las series",
+      "known_at": 6
+    },
+    {
+      "name": "Tubos de Doña Florinda",
+      "facet": "Objetos, lugares y comida de las series",
+      "known_at": 4
+    },
+    {
+      "name": "Bolsa de papel del Doctor Chapatín",
+      "facet": "Objetos, lugares y comida de las series",
+      "known_at": 7
+    },
+    {
+      "name": "14 meses de renta",
+      "facet": "Objetos, lugares y comida de las series",
+      "known_at": 5
+    },
+    {
+      "name": "Escuela del Profesor Jirafales",
+      "facet": "Objetos, lugares y comida de las series",
+      "known_at": 4
+    },
+    {
+      "name": "Lentes de Doña Clotilde",
+      "facet": "Objetos, lugares y comida de las series",
+      "known_at": 8,
+      "retired": "unaskable: Not confident Doña Clotilde wears glasses as a recognisable trait; risk of a false fact."
+    },
+    {
+      "name": "The Elephant Never Forgets",
+      "facet": "Canciones y temas musicales",
+      "known_at": 12
+    },
+    {
+      "name": "Marcha turca de Beethoven",
+      "facet": "Canciones y temas musicales",
+      "known_at": 11
+    },
+    {
+      "name": "Las ruinas de Atenas",
+      "facet": "Canciones y temas musicales",
+      "known_at": 14
+    },
+    {
+      "name": "Ludwig van Beethoven",
+      "facet": "Canciones y temas musicales",
+      "known_at": 7
+    },
+    {
+      "name": "Jean-Jacques Perrey",
+      "facet": "Canciones y temas musicales",
+      "known_at": 15
+    },
+    {
+      "name": "Sintetizador Moog",
+      "facet": "Canciones y temas musicales",
+      "known_at": 13
+    },
+    {
+      "name": "¡Qué bonita vecindad!",
+      "facet": "Canciones y temas musicales",
+      "known_at": 4
+    },
+    {
+      "name": "Tema de El Chapulín Colorado",
+      "facet": "Canciones y temas musicales",
+      "known_at": 4
+    },
+    {
+      "name": "Tema de El Chavo del 8",
+      "facet": "Canciones y temas musicales",
+      "known_at": 2
+    },
+    {
+      "name": "Tema de El Chavo Animado",
+      "facet": "Canciones y temas musicales",
+      "known_at": 3
+    },
+    {
+      "name": "Tema de Chespirito (programa)",
+      "facet": "Canciones y temas musicales",
+      "known_at": 9
+    },
+    {
+      "name": "Disco de El Chavo del 8",
+      "facet": "Canciones y temas musicales",
+      "known_at": 12
+    },
+    {
+      "name": "Villancicos de la vecindad",
+      "facet": "Canciones y temas musicales",
+      "known_at": 9
+    },
+    {
+      "name": "William Shakespeare",
+      "facet": "Apodos, nombres y su origen",
+      "known_at": 6
+    },
+    {
+      "name": "Agustín P. Delgado",
+      "facet": "Apodos, nombres y su origen",
+      "known_at": 14
+    },
+    {
+      "name": "Chavo (palabra)",
+      "facet": "Apodos, nombres y su origen",
+      "known_at": 4
+    },
+    {
+      "name": "Godínez (palabra)",
+      "facet": "Apodos, nombres y su origen",
+      "known_at": 8
+    },
+    {
+      "name": "Inocencio Jirafales",
+      "facet": "Apodos, nombres y su origen",
+      "known_at": 8
+    },
+    {
+      "name": "Zenón Barriga y Pesado",
+      "facet": "Apodos, nombres y su origen",
+      "known_at": 10
+    },
+    {
+      "name": "Florinda Corcuera",
+      "facet": "Apodos, nombres y su origen",
+      "known_at": 10
+    },
+    {
+      "name": "Maestro Longaniza",
+      "facet": "Apodos, nombres y su origen",
+      "known_at": 4
+    },
+    {
+      "name": "Tesoro",
+      "facet": "Apodos, nombres y su origen",
+      "known_at": 4
+    },
+    {
+      "name": "Departamento 8",
+      "facet": "Apodos, nombres y su origen",
+      "known_at": 3
+    },
+    {
+      "name": "Chipote (palabra)",
+      "facet": "Apodos, nombres y su origen",
+      "known_at": 6
+    },
+    {
+      "name": "Chicharra (insecto)",
+      "facet": "Apodos, nombres y su origen",
+      "known_at": 6
+    },
+    {
+      "name": "Cachetón",
+      "facet": "Apodos, nombres y su origen",
+      "known_at": 4
+    },
+    {
+      "name": "Chaparrón (palabra)",
+      "facet": "Apodos, nombres y su origen",
+      "known_at": 8
+    },
+    {
+      "name": "El Chavo Animado",
+      "facet": "Animación, remakes y legado en el mundo",
+      "known_at": 2
+    },
+    {
+      "name": "El Chapulín Colorado Animado",
+      "facet": "Animación, remakes y legado en el mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Chaves",
+      "facet": "Animación, remakes y legado en el mundo",
+      "known_at": 10
+    },
+    {
+      "name": "SBT",
+      "facet": "Animación, remakes y legado en el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Bumblebee Man",
+      "facet": "Animación, remakes y legado en el mundo",
+      "known_at": 8
+    },
+    {
+      "name": "El Chavo Kart",
+      "facet": "Animación, remakes y legado en el mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Chespirito: Sin querer queriendo (serie)",
+      "facet": "Animación, remakes y legado en el mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Pablo Cruz Guerrero",
+      "facet": "Animación, remakes y legado en el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "¡Ah qué Kiko!",
+      "facet": "Animación, remakes y legado en el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Aquí está la Chilindrina",
+      "facet": "Animación, remakes y legado en el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Estadio Nacional de Chile",
+      "facet": "Animación, remakes y legado en el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "América celebra a Chespirito",
+      "facet": "Animación, remakes y legado en el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Salida del aire en 2020",
+      "facet": "Animación, remakes y legado en el mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Grupo Chespirito",
+      "facet": "Animación, remakes y legado en el mundo",
+      "known_at": 14
+    }
+  ]
+}

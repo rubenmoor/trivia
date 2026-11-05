@@ -1,0 +1,508 @@
+{
+  "subcategory": "home-and-street",
+  "facets": [
+    "Pregones y vendedores ambulantes",
+    "Tianguis, mercados y tienditas",
+    "Puestos y antojitos callejeros",
+    "Transporte: camión, metro y pesero",
+    "La casa: azotea, tinaco y patio",
+    "Utensilios de la cocina mexicana",
+    "Juegos y juguetes de barrio",
+    "Expresiones y frases de todos los días",
+    "Trámites, servicios y documentos",
+    "Costumbres de familia y visitas",
+    "Remedios caseros y supersticiones",
+    "Vecindades, colonias y barrios"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Paletero",
+      "facet": "Pregones y vendedores ambulantes",
+      "known_at": 1
+    },
+    {
+      "name": "Gasero",
+      "facet": "Pregones y vendedores ambulantes",
+      "known_at": 3
+    },
+    {
+      "name": "Globero",
+      "facet": "Pregones y vendedores ambulantes",
+      "known_at": 3
+    },
+    {
+      "name": "Algodonero",
+      "facet": "Pregones y vendedores ambulantes",
+      "known_at": 3
+    },
+    {
+      "name": "Se compran colchones, tambores, refrigeradores",
+      "facet": "Pregones y vendedores ambulantes",
+      "known_at": 4
+    },
+    {
+      "name": "Afilador",
+      "facet": "Pregones y vendedores ambulantes",
+      "known_at": 6
+    },
+    {
+      "name": "Organillero",
+      "facet": "Pregones y vendedores ambulantes",
+      "known_at": 6
+    },
+    {
+      "name": "Vagonero",
+      "facet": "Pregones y vendedores ambulantes",
+      "known_at": 6
+    },
+    {
+      "name": "Voceador",
+      "facet": "Pregones y vendedores ambulantes",
+      "known_at": 8
+    },
+    {
+      "name": "Merolico",
+      "facet": "Pregones y vendedores ambulantes",
+      "known_at": 10
+    },
+    {
+      "name": "Bolsa del mandado",
+      "facet": "Tianguis, mercados y tienditas",
+      "known_at": 5
+    },
+    {
+      "name": "Miscelánea",
+      "facet": "Tianguis, mercados y tienditas",
+      "known_at": 7
+    },
+    {
+      "name": "Recaudería",
+      "facet": "Tianguis, mercados y tienditas",
+      "known_at": 9
+    },
+    {
+      "name": "Tianguis del Chopo",
+      "facet": "Tianguis, mercados y tienditas",
+      "known_at": 12
+    },
+    {
+      "name": "Chicharrones preparados",
+      "facet": "Puestos y antojitos callejeros",
+      "known_at": 7
+    },
+    {
+      "name": "Topes",
+      "facet": "Transporte: camión, metro y pesero",
+      "known_at": 4
+    },
+    {
+      "name": "Iconos de las estaciones del metro",
+      "facet": "Transporte: camión, metro y pesero",
+      "known_at": 8
+    },
+    {
+      "name": "Autobús ADO",
+      "facet": "Transporte: camión, metro y pesero",
+      "known_at": 9
+    },
+    {
+      "name": "Taxi vocho",
+      "facet": "Transporte: camión, metro y pesero",
+      "known_at": 10
+    },
+    {
+      "name": "Patio",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 2
+    },
+    {
+      "name": "Cubeta",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 3
+    },
+    {
+      "name": "Garrafón",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 3
+    },
+    {
+      "name": "Azotea",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 4
+    },
+    {
+      "name": "Tendedero",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 4
+    },
+    {
+      "name": "Tanque de gas",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 4
+    },
+    {
+      "name": "Lavadero",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 5
+    },
+    {
+      "name": "Portón",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 5
+    },
+    {
+      "name": "Boiler",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 6
+    },
+    {
+      "name": "Perro de azotea",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 6
+    },
+    {
+      "name": "Barda",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 6
+    },
+    {
+      "name": "Teja",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 6
+    },
+    {
+      "name": "Impermeabilizante",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 8
+    },
+    {
+      "name": "Zaguán",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 9
+    },
+    {
+      "name": "Varillas en la azotea",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 9
+    },
+    {
+      "name": "Calentador solar",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 9
+    },
+    {
+      "name": "Cuarto de servicio",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 9
+    },
+    {
+      "name": "Piso de mosaico",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 9
+    },
+    {
+      "name": "Protecciones de herrería",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 9
+    },
+    {
+      "name": "Bóveda catalana",
+      "facet": "La casa: azotea, tinaco y patio",
+      "known_at": 13
+    },
+    {
+      "name": "Cucharón",
+      "facet": "Utensilios de la cocina mexicana",
+      "known_at": 3,
+      "retired": "used_up: Ya se preguntó qué es un cucharón (adivinanza del ladle); ninguna opción da un hecho nuevo con conexión mexicana."
+    },
+    {
+      "name": "Exprimidor de limones",
+      "facet": "Utensilios de la cocina mexicana",
+      "known_at": 4
+    },
+    {
+      "name": "Olla exprés",
+      "facet": "Utensilios de la cocina mexicana",
+      "known_at": 6
+    },
+    {
+      "name": "Servilleta tortillera bordada",
+      "facet": "Utensilios de la cocina mexicana",
+      "known_at": 7
+    },
+    {
+      "name": "Peltre",
+      "facet": "Utensilios de la cocina mexicana",
+      "known_at": 9
+    },
+    {
+      "name": "Tejolote",
+      "facet": "Utensilios de la cocina mexicana",
+      "known_at": 11
+    },
+    {
+      "name": "Metlapil",
+      "facet": "Utensilios de la cocina mexicana",
+      "known_at": 13
+    },
+    {
+      "name": "Escondidillas",
+      "facet": "Juegos y juguetes de barrio",
+      "known_at": 2
+    },
+    {
+      "name": "Trompo de madera",
+      "facet": "Juegos y juguetes de barrio",
+      "known_at": 3
+    },
+    {
+      "name": "La víbora de la mar",
+      "facet": "Juegos y juguetes de barrio",
+      "known_at": 4
+    },
+    {
+      "name": "A la rueda de San Miguel",
+      "facet": "Juegos y juguetes de barrio",
+      "known_at": 6
+    },
+    {
+      "name": "Changoleón",
+      "facet": "Juegos y juguetes de barrio",
+      "known_at": 10
+    },
+    {
+      "name": "Provecho",
+      "facet": "Expresiones y frases de todos los días",
+      "known_at": 4
+    },
+    {
+      "name": "Está cañón",
+      "facet": "Expresiones y frases de todos los días",
+      "known_at": 8
+    },
+    {
+      "name": "Cartilla de vacunación",
+      "facet": "Trámites, servicios y documentos",
+      "known_at": 6
+    },
+    {
+      "name": "Telmex",
+      "facet": "Trámites, servicios y documentos",
+      "known_at": 8
+    },
+    {
+      "name": "Sacar ficha",
+      "facet": "Trámites, servicios y documentos",
+      "known_at": 9
+    },
+    {
+      "name": "Cartilla del Servicio Militar",
+      "facet": "Trámites, servicios y documentos",
+      "known_at": 11
+    },
+    {
+      "name": "Infonavit",
+      "facet": "Trámites, servicios y documentos",
+      "known_at": 11
+    },
+    {
+      "name": "Altar de muertos",
+      "facet": "Costumbres de familia y visitas",
+      "known_at": 2
+    },
+    {
+      "name": "¡Que lo muerda!",
+      "facet": "Costumbres de familia y visitas",
+      "known_at": 3
+    },
+    {
+      "name": "XV años",
+      "facet": "Costumbres de familia y visitas",
+      "known_at": 4
+    },
+    {
+      "name": "Comida del domingo",
+      "facet": "Costumbres de familia y visitas",
+      "known_at": 4
+    },
+    {
+      "name": "10 de mayo",
+      "facet": "Costumbres de familia y visitas",
+      "known_at": 4
+    },
+    {
+      "name": "Bautizo",
+      "facet": "Costumbres de familia y visitas",
+      "known_at": 5
+    },
+    {
+      "name": "Padrinos",
+      "facet": "Costumbres de familia y visitas",
+      "known_at": 5
+    },
+    {
+      "name": "Sobremesa",
+      "facet": "Costumbres de familia y visitas",
+      "known_at": 7
+    },
+    {
+      "name": "Compadres",
+      "facet": "Costumbres de familia y visitas",
+      "known_at": 7
+    },
+    {
+      "name": "Pedida de mano",
+      "facet": "Costumbres de familia y visitas",
+      "known_at": 10
+    },
+    {
+      "name": "Vaporub",
+      "facet": "Remedios caseros y supersticiones",
+      "known_at": 3
+    },
+    {
+      "name": "Uvas de Año Nuevo",
+      "facet": "Remedios caseros y supersticiones",
+      "known_at": 4
+    },
+    {
+      "name": "Maletas en Año Nuevo",
+      "facet": "Remedios caseros y supersticiones",
+      "known_at": 7
+    },
+    {
+      "name": "Calzones de colores en Año Nuevo",
+      "facet": "Remedios caseros y supersticiones",
+      "known_at": 7
+    },
+    {
+      "name": "Sobada",
+      "facet": "Remedios caseros y supersticiones",
+      "known_at": 9
+    },
+    {
+      "name": "Aire",
+      "facet": "Remedios caseros y supersticiones",
+      "known_at": 9
+    },
+    {
+      "name": "Hilo rojo para el hipo",
+      "facet": "Remedios caseros y supersticiones",
+      "known_at": 9
+    },
+    {
+      "name": "Mollera caída",
+      "facet": "Remedios caseros y supersticiones",
+      "known_at": 11
+    },
+    {
+      "name": "Colonia",
+      "facet": "Vecindades, colonias y barrios",
+      "known_at": 4
+    },
+    {
+      "name": "Kiosco de la plaza",
+      "facet": "Vecindades, colonias y barrios",
+      "known_at": 6
+    },
+    {
+      "name": "Unidad habitacional",
+      "facet": "Vecindades, colonias y barrios",
+      "known_at": 8
+    },
+    {
+      "name": "Fraccionamiento",
+      "facet": "Vecindades, colonias y barrios",
+      "known_at": 8
+    },
+    {
+      "name": "Polanco",
+      "facet": "Vecindades, colonias y barrios",
+      "known_at": 8
+    },
+    {
+      "name": "Junta de vecinos",
+      "facet": "Vecindades, colonias y barrios",
+      "known_at": 8
+    },
+    {
+      "name": "La Condesa",
+      "facet": "Vecindades, colonias y barrios",
+      "known_at": 9
+    },
+    {
+      "name": "Cerrada",
+      "facet": "Vecindades, colonias y barrios",
+      "known_at": 9
+    },
+    {
+      "name": "Ciudad Nezahualcóyotl",
+      "facet": "Vecindades, colonias y barrios",
+      "known_at": 10
+    },
+    {
+      "name": "Andador",
+      "facet": "Vecindades, colonias y barrios",
+      "known_at": 10
+    },
+    {
+      "name": "Barrio Antiguo de Monterrey",
+      "facet": "Vecindades, colonias y barrios",
+      "known_at": 11
+    },
+    {
+      "name": "Jefe de manzana",
+      "facet": "Vecindades, colonias y barrios",
+      "known_at": 11
+    },
+    {
+      "name": "Santa María la Ribera",
+      "facet": "Vecindades, colonias y barrios",
+      "known_at": 12
+    }
+  ]
+}

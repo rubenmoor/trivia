@@ -1,0 +1,535 @@
+{
+  "subcategory": "state-symbols",
+  "facets": [
+    "Gentilicios de los estados",
+    "Gentilicios de ciudades y capitales",
+    "Apodos populares de los habitantes",
+    "Sobrenombres de ciudades mexicanas",
+    "Lemas y frases de identidad estatal",
+    "Figuras y símbolos de los escudos",
+    "Historia y origen de los escudos",
+    "Origen de los nombres de los estados",
+    "Apodos de equipos y deporte regional",
+    "Orgullo regional en canciones y cine"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 1,
+      "record": 2,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 4,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Jalisciense",
+      "facet": "Gentilicios de los estados",
+      "known_at": 5
+    },
+    {
+      "name": "Veracruzano",
+      "facet": "Gentilicios de los estados",
+      "known_at": 4
+    },
+    {
+      "name": "Sonorense",
+      "facet": "Gentilicios de los estados",
+      "known_at": 6
+    },
+    {
+      "name": "Chihuahuense",
+      "facet": "Gentilicios de los estados",
+      "known_at": 6
+    },
+    {
+      "name": "Duranguense",
+      "facet": "Gentilicios de los estados",
+      "known_at": 7
+    },
+    {
+      "name": "Zacatecano",
+      "facet": "Gentilicios de los estados",
+      "known_at": 6
+    },
+    {
+      "name": "Hidalguense",
+      "facet": "Gentilicios de los estados",
+      "known_at": 8
+    },
+    {
+      "name": "Guerrerense",
+      "facet": "Gentilicios de los estados",
+      "known_at": 7
+    },
+    {
+      "name": "Quintanarroense",
+      "facet": "Gentilicios de los estados",
+      "known_at": 10
+    },
+    {
+      "name": "Morelense",
+      "facet": "Gentilicios de los estados",
+      "known_at": 9
+    },
+    {
+      "name": "Coahuilense",
+      "facet": "Gentilicios de los estados",
+      "known_at": 9
+    },
+    {
+      "name": "Tamaulipeco",
+      "facet": "Gentilicios de los estados",
+      "known_at": 7
+    },
+    {
+      "name": "Nayarita",
+      "facet": "Gentilicios de los estados",
+      "known_at": 8
+    },
+    {
+      "name": "Capitalino",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 5
+    },
+    {
+      "name": "Toluqueño",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 8
+    },
+    {
+      "name": "Hermosillense",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 10
+    },
+    {
+      "name": "Culiacanense",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 11
+    },
+    {
+      "name": "Meridano",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 10
+    },
+    {
+      "name": "Xalapeño",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 8
+    },
+    {
+      "name": "Porteño",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 8
+    },
+    {
+      "name": "Tijuanense",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 7
+    },
+    {
+      "name": "Acapulqueño",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 7
+    },
+    {
+      "name": "Leonés",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 8
+    },
+    {
+      "name": "Pachuqueño",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 9
+    },
+    {
+      "name": "Cuernavaquense",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 10
+    },
+    {
+      "name": "Mazatleco",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 9
+    },
+    {
+      "name": "Juarense",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 9
+    },
+    {
+      "name": "Tepiqueño",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 11
+    },
+    {
+      "name": "Tuxtleco",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 11
+    },
+    {
+      "name": "Villahermosino",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 11
+    },
+    {
+      "name": "Mexicalense",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 11
+    },
+    {
+      "name": "Chetumaleño",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 12
+    },
+    {
+      "name": "Celayense",
+      "facet": "Gentilicios de ciudades y capitales",
+      "known_at": 11
+    },
+    {
+      "name": "Lagunero",
+      "facet": "Apodos populares de los habitantes",
+      "known_at": 9
+    },
+    {
+      "name": "Cachanilla",
+      "facet": "Apodos populares de los habitantes",
+      "known_at": 11
+    },
+    {
+      "name": "Pata salada",
+      "facet": "Apodos populares de los habitantes",
+      "known_at": 11
+    },
+    {
+      "name": "Panza verde",
+      "facet": "Apodos populares de los habitantes",
+      "known_at": 11
+    },
+    {
+      "name": "Choco",
+      "facet": "Apodos populares de los habitantes",
+      "known_at": 12
+    },
+    {
+      "name": "Jaibo",
+      "facet": "Apodos populares de los habitantes",
+      "known_at": 11
+    },
+    {
+      "name": "Fuereño",
+      "facet": "Apodos populares de los habitantes",
+      "known_at": 7
+    },
+    {
+      "name": "Norteño",
+      "facet": "Apodos populares de los habitantes",
+      "known_at": 4
+    },
+    {
+      "name": "Costeño",
+      "facet": "Apodos populares de los habitantes",
+      "known_at": 6
+    },
+    {
+      "name": "Defeño",
+      "facet": "Apodos populares de los habitantes",
+      "known_at": 7
+    },
+    {
+      "name": "Sureño",
+      "facet": "Apodos populares de los habitantes",
+      "known_at": 6
+    },
+    {
+      "name": "Capital Mundial del Calzado",
+      "facet": "Sobrenombres de ciudades mexicanas",
+      "known_at": 8
+    },
+    {
+      "name": "Cuatro Veces Heroica",
+      "facet": "Sobrenombres de ciudades mexicanas",
+      "known_at": 11
+    },
+    {
+      "name": "Capital Mundial de la Fresa",
+      "facet": "Sobrenombres de ciudades mexicanas",
+      "known_at": 10
+    },
+    {
+      "name": "Semper ascendens",
+      "facet": "Lemas y frases de identidad estatal",
+      "known_at": 12
+    },
+    {
+      "name": "Labor omnia vincit",
+      "facet": "Lemas y frases de identidad estatal",
+      "known_at": 14
+    },
+    {
+      "name": "Amor, Orden y Progreso",
+      "facet": "Lemas y frases de identidad estatal",
+      "known_at": 13
+    },
+    {
+      "name": "Trabajo y Justicia Social",
+      "facet": "Lemas y frases de identidad estatal",
+      "known_at": 13
+    },
+    {
+      "name": "Heredamos libertad, legaremos justicia social",
+      "facet": "Lemas y frases de identidad estatal",
+      "known_at": 13
+    },
+    {
+      "name": "Valentía, Lealtad, Hospitalidad",
+      "facet": "Lemas y frases de identidad estatal",
+      "known_at": 13
+    },
+    {
+      "name": "Buena tierra, agua clara, claro cielo, buena gente",
+      "facet": "Lemas y frases de identidad estatal",
+      "known_at": 13
+    },
+    {
+      "name": "La tierra volverá a quienes la trabajan con sus manos",
+      "facet": "Lemas y frases de identidad estatal",
+      "known_at": 11
+    },
+    {
+      "name": "Patria, Libertad, Trabajo y Cultura",
+      "facet": "Lemas y frases de identidad estatal",
+      "known_at": 13
+    },
+    {
+      "name": "Jalisco es México",
+      "facet": "Lemas y frases de identidad estatal",
+      "known_at": 8
+    },
+    {
+      "name": "Cuna de la Independencia",
+      "facet": "Lemas y frases de identidad estatal",
+      "known_at": 7
+    },
+    {
+      "name": "Cuna de la Revolución",
+      "facet": "Lemas y frases de identidad estatal",
+      "known_at": 9
+    },
+    {
+      "name": "Cuna del mariachi",
+      "facet": "Lemas y frases de identidad estatal",
+      "known_at": 8
+    },
+    {
+      "name": "Como México no hay dos",
+      "facet": "Lemas y frases de identidad estatal",
+      "known_at": 5
+    },
+    {
+      "name": "Caballero jaguar",
+      "facet": "Figuras y símbolos de los escudos",
+      "known_at": 8
+    },
+    {
+      "name": "Barco de vela",
+      "facet": "Figuras y símbolos de los escudos",
+      "known_at": 3
+    },
+    {
+      "name": "Mazorca de maíz",
+      "facet": "Figuras y símbolos de los escudos",
+      "known_at": 2
+    },
+    {
+      "name": "Pirámide",
+      "facet": "Figuras y símbolos de los escudos",
+      "known_at": 2
+    },
+    {
+      "name": "Danzante del venado",
+      "facet": "Figuras y símbolos de los escudos",
+      "known_at": 9
+    },
+    {
+      "name": "Leones del escudo de Chiapas",
+      "facet": "Figuras y símbolos de los escudos",
+      "known_at": 12
+    },
+    {
+      "name": "Sol",
+      "facet": "Figuras y símbolos de los escudos",
+      "known_at": 1
+    },
+    {
+      "name": "Laureles y encino",
+      "facet": "Figuras y símbolos de los escudos",
+      "known_at": 8
+    },
+    {
+      "name": "Torre de vigía",
+      "facet": "Figuras y símbolos de los escudos",
+      "known_at": 8
+    },
+    {
+      "name": "Escudo de armas",
+      "facet": "Historia y origen de los escudos",
+      "known_at": 6
+    },
+    {
+      "name": "Heráldica",
+      "facet": "Historia y origen de los escudos",
+      "known_at": 12
+    },
+    {
+      "name": "Blasón",
+      "facet": "Historia y origen de los escudos",
+      "known_at": 12
+    },
+    {
+      "name": "Felipe II",
+      "facet": "Historia y origen de los escudos",
+      "known_at": 11
+    },
+    {
+      "name": "Cédula real",
+      "facet": "Historia y origen de los escudos",
+      "known_at": 13
+    },
+    {
+      "name": "Leyenda del águila y la serpiente",
+      "facet": "Historia y origen de los escudos",
+      "known_at": 4
+    },
+    {
+      "name": "Virreinato de la Nueva España",
+      "facet": "Historia y origen de los escudos",
+      "known_at": 7
+    },
+    {
+      "name": "Francisco Eppens",
+      "facet": "Historia y origen de los escudos",
+      "known_at": 14
+    },
+    {
+      "name": "Baja California",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 6
+    },
+    {
+      "name": "Chivas",
+      "facet": "Apodos de equipos y deporte regional",
+      "known_at": 3
+    },
+    {
+      "name": "Rayados",
+      "facet": "Apodos de equipos y deporte regional",
+      "known_at": 5
+    },
+    {
+      "name": "Tigres",
+      "facet": "Apodos de equipos y deporte regional",
+      "known_at": 4
+    },
+    {
+      "name": "Diablos Rojos del Toluca",
+      "facet": "Apodos de equipos y deporte regional",
+      "known_at": 6
+    },
+    {
+      "name": "Guerreros de Santos Laguna",
+      "facet": "Apodos de equipos y deporte regional",
+      "known_at": 8
+    },
+    {
+      "name": "Xolos",
+      "facet": "Apodos de equipos y deporte regional",
+      "known_at": 6
+    },
+    {
+      "name": "Zorros del Atlas",
+      "facet": "Apodos de equipos y deporte regional",
+      "known_at": 7
+    },
+    {
+      "name": "Tiburones Rojos",
+      "facet": "Apodos de equipos y deporte regional",
+      "known_at": 8
+    },
+    {
+      "name": "Águilas del América",
+      "facet": "Apodos de equipos y deporte regional",
+      "known_at": 3
+    },
+    {
+      "name": "Rayos del Necaxa",
+      "facet": "Apodos de equipos y deporte regional",
+      "known_at": 8
+    },
+    {
+      "name": "Venados de Mazatlán",
+      "facet": "Apodos de equipos y deporte regional",
+      "known_at": 10
+    },
+    {
+      "name": "Pericos de Puebla",
+      "facet": "Apodos de equipos y deporte regional",
+      "known_at": 11
+    },
+    {
+      "name": "Veracruz (canción de Agustín Lara)",
+      "facet": "Orgullo regional en canciones y cine",
+      "known_at": 11
+    },
+    {
+      "name": "Caminos de Michoacán",
+      "facet": "Orgullo regional en canciones y cine",
+      "known_at": 11
+    },
+    {
+      "name": "Camino de Guanajuato",
+      "facet": "Orgullo regional en canciones y cine",
+      "known_at": 11
+    },
+    {
+      "name": "Peregrina",
+      "facet": "Orgullo regional en canciones y cine",
+      "known_at": 13
+    }
+  ]
+}

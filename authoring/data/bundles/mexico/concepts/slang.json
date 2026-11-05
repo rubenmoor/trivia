@@ -1,0 +1,757 @@
+{
+  "subcategory": "slang",
+  "facets": [
+    "Saludos y expresiones de ánimo",
+    "Palabras de cariño y apodos",
+    "Groserías suavizadas y exclamaciones",
+    "Dichos y refranes mexicanos",
+    "Albures y doble sentido familiar",
+    "Palabras de origen náhuatl",
+    "Comida y antojitos en el habla",
+    "Dinero, trabajo y chamba",
+    "Jerga juvenil y chilanga",
+    "Palabras regionales del norte, sur y Yucatán",
+    "Frases de la tele, el cine y los memes",
+    "Diminutivos y el famoso «ahorita»"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 2,
+      "name_concept": 3,
+      "word_meaning": 5,
+      "count": 1,
+      "estimate": 1,
+      "record": 1,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "¿Quiubo?",
+      "facet": "Saludos y expresiones de ánimo",
+      "known_at": 4
+    },
+    {
+      "name": "¿Qué tranza?",
+      "facet": "Saludos y expresiones de ánimo",
+      "known_at": 6
+    },
+    {
+      "name": "¿Qué hongo?",
+      "facet": "Saludos y expresiones de ánimo",
+      "known_at": 6
+    },
+    {
+      "name": "¿Qué rollo?",
+      "facet": "Saludos y expresiones de ánimo",
+      "known_at": 5
+    },
+    {
+      "name": "¡Ándale!",
+      "facet": "Saludos y expresiones de ánimo",
+      "known_at": 2
+    },
+    {
+      "name": "¡Échale ganas!",
+      "facet": "Saludos y expresiones de ánimo",
+      "known_at": 3
+    },
+    {
+      "name": "¡Sale!",
+      "facet": "Saludos y expresiones de ánimo",
+      "known_at": 4
+    },
+    {
+      "name": "¡Va!",
+      "facet": "Saludos y expresiones de ánimo",
+      "known_at": 4
+    },
+    {
+      "name": "Que te vaya bonito",
+      "facet": "Saludos y expresiones de ánimo",
+      "known_at": 6
+    },
+    {
+      "name": "¿Cómo amaneciste?",
+      "facet": "Saludos y expresiones de ánimo",
+      "known_at": 3
+    },
+    {
+      "name": "¡Vientos!",
+      "facet": "Saludos y expresiones de ánimo",
+      "known_at": 9
+    },
+    {
+      "name": "¡Arre!",
+      "facet": "Saludos y expresiones de ánimo",
+      "known_at": 5
+    },
+    {
+      "name": "¿Qué cuentas?",
+      "facet": "Saludos y expresiones de ánimo",
+      "known_at": 5
+    },
+    {
+      "name": "Mijo",
+      "facet": "Palabras de cariño y apodos",
+      "known_at": 2
+    },
+    {
+      "name": "Mija",
+      "facet": "Palabras de cariño y apodos",
+      "known_at": 2
+    },
+    {
+      "name": "Chaparro",
+      "facet": "Palabras de cariño y apodos",
+      "known_at": 3
+    },
+    {
+      "name": "Güero",
+      "facet": "Palabras de cariño y apodos",
+      "known_at": 3
+    },
+    {
+      "name": "Flaco",
+      "facet": "Palabras de cariño y apodos",
+      "known_at": 2
+    },
+    {
+      "name": "Mano",
+      "facet": "Palabras de cariño y apodos",
+      "known_at": 5
+    },
+    {
+      "name": "Mi rey",
+      "facet": "Palabras de cariño y apodos",
+      "known_at": 4
+    },
+    {
+      "name": "Chula",
+      "facet": "Palabras de cariño y apodos",
+      "known_at": 4
+    },
+    {
+      "name": "Pelón",
+      "facet": "Palabras de cariño y apodos",
+      "known_at": 2
+    },
+    {
+      "name": "Jefa",
+      "facet": "Palabras de cariño y apodos",
+      "known_at": 6
+    },
+    {
+      "name": "Jefe",
+      "facet": "Palabras de cariño y apodos",
+      "known_at": 6
+    },
+    {
+      "name": "Comadre",
+      "facet": "Palabras de cariño y apodos",
+      "known_at": 5
+    },
+    {
+      "name": "Gordis",
+      "facet": "Palabras de cariño y apodos",
+      "known_at": 5
+    },
+    {
+      "name": "Chato",
+      "facet": "Palabras de cariño y apodos",
+      "known_at": 6
+    },
+    {
+      "name": "Chilpayate",
+      "facet": "Palabras de cariño y apodos",
+      "known_at": 10
+    },
+    {
+      "name": "Viejo",
+      "facet": "Palabras de cariño y apodos",
+      "known_at": 6
+    },
+    {
+      "name": "¡Híjole!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 2
+    },
+    {
+      "name": "¡Chin!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 3
+    },
+    {
+      "name": "¡Chispas!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 3
+    },
+    {
+      "name": "¡Ay, nanita!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 7
+    },
+    {
+      "name": "¡Uta!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 6
+    },
+    {
+      "name": "¡Chale!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 4
+    },
+    {
+      "name": "¡Újule!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 6
+    },
+    {
+      "name": "¡Ah, jijo!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 8
+    },
+    {
+      "name": "¡Fuchi!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 1
+    },
+    {
+      "name": "¡Guácala!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 1
+    },
+    {
+      "name": "¡Ay, caray!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 3
+    },
+    {
+      "name": "¡Recórcholis!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 8
+    },
+    {
+      "name": "¡Changos!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 7
+    },
+    {
+      "name": "¡Pácatelas!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 6
+    },
+    {
+      "name": "¡Ya ni la amuelas!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 7
+    },
+    {
+      "name": "¡A poco!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 3
+    },
+    {
+      "name": "¡No inventes!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 3
+    },
+    {
+      "name": "¡Ni maíz!",
+      "facet": "Groserías suavizadas y exclamaciones",
+      "known_at": 7
+    },
+    {
+      "name": "El que es perico donde quiera es verde",
+      "facet": "Dichos y refranes mexicanos",
+      "known_at": 9
+    },
+    {
+      "name": "Hasta no ver no creer",
+      "facet": "Dichos y refranes mexicanos",
+      "known_at": 5
+    },
+    {
+      "name": "Músico pagado toca mal son",
+      "facet": "Dichos y refranes mexicanos",
+      "known_at": 11
+    },
+    {
+      "name": "El que nace para tamal del cielo le caen las hojas",
+      "facet": "Dichos y refranes mexicanos",
+      "known_at": 10
+    },
+    {
+      "name": "Como el perro de las dos tortas",
+      "facet": "Dichos y refranes mexicanos",
+      "known_at": 9
+    },
+    {
+      "name": "Árbol que nace torcido jamás su tronco endereza",
+      "facet": "Dichos y refranes mexicanos",
+      "known_at": 8
+    },
+    {
+      "name": "Te conozco, mosco",
+      "facet": "Dichos y refranes mexicanos",
+      "known_at": 7
+    },
+    {
+      "name": "Nadie sabe lo que hay en la olla más que el que la menea",
+      "facet": "Dichos y refranes mexicanos",
+      "known_at": 11
+    },
+    {
+      "name": "Más vale malo por conocido que bueno por conocer",
+      "facet": "Dichos y refranes mexicanos",
+      "known_at": 9
+    },
+    {
+      "name": "Albur",
+      "facet": "Albures y doble sentido familiar",
+      "known_at": 8
+    },
+    {
+      "name": "Doble sentido",
+      "facet": "Albures y doble sentido familiar",
+      "known_at": 6
+    },
+    {
+      "name": "Alburero",
+      "facet": "Albures y doble sentido familiar",
+      "known_at": 10
+    },
+    {
+      "name": "Picardía mexicana",
+      "facet": "Albures y doble sentido familiar",
+      "known_at": 13
+    },
+    {
+      "name": "Piropo",
+      "facet": "Albures y doble sentido familiar",
+      "known_at": 8
+    },
+    {
+      "name": "Carrilla",
+      "facet": "Albures y doble sentido familiar",
+      "known_at": 6
+    },
+    {
+      "name": "Choteo",
+      "facet": "Albures y doble sentido familiar",
+      "known_at": 9
+    },
+    {
+      "name": "Vacilada",
+      "facet": "Albures y doble sentido familiar",
+      "known_at": 7
+    },
+    {
+      "name": "Cábula",
+      "facet": "Albures y doble sentido familiar",
+      "known_at": 11
+    },
+    {
+      "name": "Chiste de Pepito",
+      "facet": "Albures y doble sentido familiar",
+      "known_at": 3
+    },
+    {
+      "name": "Gritos de lotería",
+      "facet": "Albures y doble sentido familiar",
+      "known_at": 7
+    },
+    {
+      "name": "Agarrar de bajada",
+      "facet": "Albures y doble sentido familiar",
+      "known_at": 8
+    },
+    {
+      "name": "Cotorreo",
+      "facet": "Albures y doble sentido familiar",
+      "known_at": 6
+    },
+    {
+      "name": "Chascarrillo",
+      "facet": "Albures y doble sentido familiar",
+      "known_at": 9
+    },
+    {
+      "name": "Chipote",
+      "facet": "Palabras de origen náhuatl",
+      "known_at": 5
+    },
+    {
+      "name": "Antojito",
+      "facet": "Comida y antojitos en el habla",
+      "known_at": 4
+    },
+    {
+      "name": "Torta",
+      "facet": "Comida y antojitos en el habla",
+      "known_at": 2
+    },
+    {
+      "name": "Taco de ojo",
+      "facet": "Comida y antojitos en el habla",
+      "known_at": 9
+    },
+    {
+      "name": "Varo",
+      "facet": "Dinero, trabajo y chamba",
+      "known_at": 6
+    },
+    {
+      "name": "Feria",
+      "facet": "Dinero, trabajo y chamba",
+      "known_at": 6
+    },
+    {
+      "name": "Mordida",
+      "facet": "Dinero, trabajo y chamba",
+      "known_at": 9
+    },
+    {
+      "name": "Tanda",
+      "facet": "Dinero, trabajo y chamba",
+      "known_at": 9
+    },
+    {
+      "name": "Godín",
+      "facet": "Dinero, trabajo y chamba",
+      "known_at": 9
+    },
+    {
+      "name": "Talacha",
+      "facet": "Dinero, trabajo y chamba",
+      "known_at": 10
+    },
+    {
+      "name": "Changarro",
+      "facet": "Dinero, trabajo y chamba",
+      "known_at": 8
+    },
+    {
+      "name": "Fayuca",
+      "facet": "Dinero, trabajo y chamba",
+      "known_at": 11
+    },
+    {
+      "name": "Coperacha",
+      "facet": "Dinero, trabajo y chamba",
+      "known_at": 6
+    },
+    {
+      "name": "Bisne",
+      "facet": "Dinero, trabajo y chamba",
+      "known_at": 9
+    },
+    {
+      "name": "Viene viene",
+      "facet": "Dinero, trabajo y chamba",
+      "known_at": 8
+    },
+    {
+      "name": "Fiado",
+      "facet": "Dinero, trabajo y chamba",
+      "known_at": 7
+    },
+    {
+      "name": "Pachocha",
+      "facet": "Dinero, trabajo y chamba",
+      "known_at": 11
+    },
+    {
+      "name": "Chalán",
+      "facet": "Dinero, trabajo y chamba",
+      "known_at": 9
+    },
+    {
+      "name": "San Lunes",
+      "facet": "Dinero, trabajo y chamba",
+      "known_at": 11
+    },
+    {
+      "name": "Güey",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 4
+    },
+    {
+      "name": "Neta",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 4
+    },
+    {
+      "name": "Padre",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 3
+    },
+    {
+      "name": "Chafa",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 5
+    },
+    {
+      "name": "Cámara",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 7
+    },
+    {
+      "name": "Simón",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 5
+    },
+    {
+      "name": "Nel",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 5
+    },
+    {
+      "name": "Qué oso",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 5
+    },
+    {
+      "name": "Fodongo",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 8
+    },
+    {
+      "name": "Gacho",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 5
+    },
+    {
+      "name": "Banda",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 7
+    },
+    {
+      "name": "Ya chole",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 6
+    },
+    {
+      "name": "Hacer un pancho",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 6
+    },
+    {
+      "name": "Equis",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 6
+    },
+    {
+      "name": "Ñero",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 9
+    },
+    {
+      "name": "Cañón",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 6
+    },
+    {
+      "name": "Reventón",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 7
+    },
+    {
+      "name": "Me vale",
+      "facet": "Jerga juvenil y chilanga",
+      "known_at": 5
+    },
+    {
+      "name": "Huerco",
+      "facet": "Palabras regionales del norte, sur y Yucatán",
+      "known_at": 9
+    },
+    {
+      "name": "Buqui",
+      "facet": "Palabras regionales del norte, sur y Yucatán",
+      "known_at": 12
+    },
+    {
+      "name": "Bichi",
+      "facet": "Palabras regionales del norte, sur y Yucatán",
+      "known_at": 12
+    },
+    {
+      "name": "Wacha",
+      "facet": "Palabras regionales del norte, sur y Yucatán",
+      "known_at": 10
+    },
+    {
+      "name": "Troca",
+      "facet": "Palabras regionales del norte, sur y Yucatán",
+      "known_at": 8
+    },
+    {
+      "name": "Raite",
+      "facet": "Palabras regionales del norte, sur y Yucatán",
+      "known_at": 9
+    },
+    {
+      "name": "Lonche",
+      "facet": "Palabras regionales del norte, sur y Yucatán",
+      "known_at": 7
+    },
+    {
+      "name": "Xix",
+      "facet": "Palabras regionales del norte, sur y Yucatán",
+      "known_at": 13
+    },
+    {
+      "name": "Chel",
+      "facet": "Palabras regionales del norte, sur y Yucatán",
+      "known_at": 13
+    },
+    {
+      "name": "¡Uay!",
+      "facet": "Palabras regionales del norte, sur y Yucatán",
+      "known_at": 11
+    },
+    {
+      "name": "¡Mare!",
+      "facet": "Palabras regionales del norte, sur y Yucatán",
+      "known_at": 11
+    },
+    {
+      "name": "Regio",
+      "facet": "Palabras regionales del norte, sur y Yucatán",
+      "known_at": 7
+    },
+    {
+      "name": "¡Ta' bueno, pues!",
+      "facet": "Frases de la tele, el cine y los memes",
+      "known_at": 5
+    },
+    {
+      "name": "Ola k ase",
+      "facet": "Frases de la tele, el cine y los memes",
+      "known_at": 7
+    },
+    {
+      "name": "¡Pipipipi!",
+      "facet": "Frases de la tele, el cine y los memes",
+      "known_at": 4
+    },
+    {
+      "name": "Ahoritita",
+      "facet": "Diminutivos y el famoso «ahorita»",
+      "known_at": 4
+    },
+    {
+      "name": "Al ratito",
+      "facet": "Diminutivos y el famoso «ahorita»",
+      "known_at": 2
+    },
+    {
+      "name": "Tantito",
+      "facet": "Diminutivos y el famoso «ahorita»",
+      "known_at": 3
+    },
+    {
+      "name": "Poquito",
+      "facet": "Diminutivos y el famoso «ahorita»",
+      "known_at": 1
+    },
+    {
+      "name": "Cerquita",
+      "facet": "Diminutivos y el famoso «ahorita»",
+      "known_at": 2
+    },
+    {
+      "name": "Lueguito",
+      "facet": "Diminutivos y el famoso «ahorita»",
+      "known_at": 4
+    },
+    {
+      "name": "Cafecito",
+      "facet": "Diminutivos y el famoso «ahorita»",
+      "known_at": 3
+    },
+    {
+      "name": "Un momentito",
+      "facet": "Diminutivos y el famoso «ahorita»",
+      "known_at": 2
+    },
+    {
+      "name": "Nomás",
+      "facet": "Diminutivos y el famoso «ahorita»",
+      "known_at": 4
+    },
+    {
+      "name": "Despacito",
+      "facet": "Diminutivos y el famoso «ahorita»",
+      "known_at": 2
+    },
+    {
+      "name": "Chiquitito",
+      "facet": "Diminutivos y el famoso «ahorita»",
+      "known_at": 1
+    },
+    {
+      "name": "Adiosito",
+      "facet": "Diminutivos y el famoso «ahorita»",
+      "known_at": 4
+    },
+    {
+      "name": "Rapidito",
+      "facet": "Diminutivos y el famoso «ahorita»",
+      "known_at": 2
+    },
+    {
+      "name": "Taquito",
+      "facet": "Diminutivos y el famoso «ahorita»",
+      "known_at": 2
+    },
+    {
+      "name": "Calientito",
+      "facet": "Diminutivos y el famoso «ahorita»",
+      "known_at": 3
+    },
+    {
+      "name": "Igualito",
+      "facet": "Diminutivos y el famoso «ahorita»",
+      "known_at": 3
+    },
+    {
+      "name": "Ahorita no, joven",
+      "facet": "Diminutivos y el famoso «ahorita»",
+      "known_at": 8
+    }
+  ]
+}

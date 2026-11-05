@@ -361,7 +361,8 @@
     {
       "name": "Quincena",
       "facet": "Dichos de dinero y trabajo",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: Cualquier pregunta sobre la quincena depende del pago dos veces al mes, que ya se preguntó."
     },
     {
       "name": "Costar un ojo de la cara",
@@ -516,7 +517,8 @@
     {
       "name": "Al mal tiempo, buena cara",
       "facet": "Dichos del clima y el campo",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: El significado ya se preguntó; la opción de lo que NO pertenece repetiría el mismo dato."
     },
     {
       "name": "Nunca llueve a gusto de todos",

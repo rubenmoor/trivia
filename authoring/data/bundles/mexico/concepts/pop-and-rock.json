@@ -1,0 +1,973 @@
+{
+  "subcategory": "pop-and-rock",
+  "facets": [
+    "Rock en tu idioma de los ochenta",
+    "Bandas de rock mexicano clásico",
+    "Solistas y divas del pop",
+    "Grupos juveniles y pop de los noventa",
+    "Pop y rock de telenovela",
+    "Rock alternativo y fusión",
+    "Canciones y álbumes emblemáticos",
+    "Festivales y foros en vivo",
+    "Letras, frases y apodos famosos",
+    "Hitos e historia del rock mexicano",
+    "Pop actual y nuevas bandas",
+    "Sonido y mezcla con lo tradicional"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Neón",
+      "facet": "Rock en tu idioma de los ochenta",
+      "known_at": 13
+    },
+    {
+      "name": "Los Amantes de Lola",
+      "facet": "Rock en tu idioma de los ochenta",
+      "known_at": 13
+    },
+    {
+      "name": "Kenny y los Eléctricos",
+      "facet": "Rock en tu idioma de los ochenta",
+      "known_at": 14
+    },
+    {
+      "name": "Ritmo Peligroso",
+      "facet": "Rock en tu idioma de los ochenta",
+      "known_at": 14
+    },
+    {
+      "name": "Bon y los Enemigos del Silencio",
+      "facet": "Rock en tu idioma de los ochenta",
+      "known_at": 13,
+      "retired": "unaskable: No estoy seguro de datos de la banda (integrantes, año de formación) como para una pregunta justa."
+    },
+    {
+      "name": "Las Insólitas Imágenes de Aurora",
+      "facet": "Rock en tu idioma de los ochenta",
+      "known_at": 14
+    },
+    {
+      "name": "Rostros Ocultos",
+      "facet": "Rock en tu idioma de los ochenta",
+      "known_at": 13
+    },
+    {
+      "name": "Fobia",
+      "facet": "Rock en tu idioma de los ochenta",
+      "known_at": 11
+    },
+    {
+      "name": "Cecilia Toussaint",
+      "facet": "Rock en tu idioma de los ochenta",
+      "known_at": 14
+    },
+    {
+      "name": "Rockdrigo González",
+      "facet": "Rock en tu idioma de los ochenta",
+      "known_at": 13
+    },
+    {
+      "name": "Tex Tex",
+      "facet": "Rock en tu idioma de los ochenta",
+      "known_at": 13
+    },
+    {
+      "name": "Size",
+      "facet": "Rock en tu idioma de los ochenta",
+      "known_at": 15
+    },
+    {
+      "name": "Kerigma",
+      "facet": "Rock en tu idioma de los ochenta",
+      "known_at": 15
+    },
+    {
+      "name": "El Tri",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 8
+    },
+    {
+      "name": "Three Souls in My Mind",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 13
+    },
+    {
+      "name": "Caifanes",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 9
+    },
+    {
+      "name": "Jaguares",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 11
+    },
+    {
+      "name": "Los Teen Tops",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 12
+    },
+    {
+      "name": "Los Locos del Ritmo",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 13
+    },
+    {
+      "name": "Los Hooligans",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 14
+    },
+    {
+      "name": "Los Rebeldes del Rock",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 14
+    },
+    {
+      "name": "Los Dug Dug's",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 15
+    },
+    {
+      "name": "La Revolución de Emiliano Zapata",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 15
+    },
+    {
+      "name": "Peace and Love",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 15
+    },
+    {
+      "name": "Javier Bátiz",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 14
+    },
+    {
+      "name": "Carlos Santana",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 9
+    },
+    {
+      "name": "Alex Lora",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 9
+    },
+    {
+      "name": "Saúl Hernández",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 11
+    },
+    {
+      "name": "Fher Olvera",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 9
+    },
+    {
+      "name": "El Haragán y Compañía",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 13
+    },
+    {
+      "name": "Liran' Roll",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 14
+    },
+    {
+      "name": "Banda Bostik",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 14
+    },
+    {
+      "name": "Heavy Nopal",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 15
+    },
+    {
+      "name": "Transmetal",
+      "facet": "Bandas de rock mexicano clásico",
+      "known_at": 15
+    },
+    {
+      "name": "Thalía",
+      "facet": "Solistas y divas del pop",
+      "known_at": 4
+    },
+    {
+      "name": "Paulina Rubio",
+      "facet": "Solistas y divas del pop",
+      "known_at": 5
+    },
+    {
+      "name": "Gloria Trevi",
+      "facet": "Solistas y divas del pop",
+      "known_at": 6
+    },
+    {
+      "name": "Alejandra Guzmán",
+      "facet": "Solistas y divas del pop",
+      "known_at": 7
+    },
+    {
+      "name": "Yuri",
+      "facet": "Solistas y divas del pop",
+      "known_at": 8
+    },
+    {
+      "name": "Lucero",
+      "facet": "Solistas y divas del pop",
+      "known_at": 5
+    },
+    {
+      "name": "Daniela Romo",
+      "facet": "Solistas y divas del pop",
+      "known_at": 11
+    },
+    {
+      "name": "Cristian Castro",
+      "facet": "Solistas y divas del pop",
+      "known_at": 8
+    },
+    {
+      "name": "Edith Márquez",
+      "facet": "Solistas y divas del pop",
+      "known_at": 11
+    },
+    {
+      "name": "Lupita D'Alessio",
+      "facet": "Solistas y divas del pop",
+      "known_at": 12
+    },
+    {
+      "name": "Emmanuel",
+      "facet": "Solistas y divas del pop",
+      "known_at": 11
+    },
+    {
+      "name": "Mijares",
+      "facet": "Solistas y divas del pop",
+      "known_at": 11
+    },
+    {
+      "name": "Fey",
+      "facet": "Solistas y divas del pop",
+      "known_at": 10
+    },
+    {
+      "name": "Marisela",
+      "facet": "Solistas y divas del pop",
+      "known_at": 12
+    },
+    {
+      "name": "Flans",
+      "facet": "Grupos juveniles y pop de los noventa",
+      "known_at": 11
+    },
+    {
+      "name": "Pandora",
+      "facet": "Grupos juveniles y pop de los noventa",
+      "known_at": 11
+    },
+    {
+      "name": "Magneto",
+      "facet": "Grupos juveniles y pop de los noventa",
+      "known_at": 12
+    },
+    {
+      "name": "Mercurio",
+      "facet": "Grupos juveniles y pop de los noventa",
+      "known_at": 12
+    },
+    {
+      "name": "OV7",
+      "facet": "Grupos juveniles y pop de los noventa",
+      "known_at": 10
+    },
+    {
+      "name": "Jeans",
+      "facet": "Grupos juveniles y pop de los noventa",
+      "known_at": 12
+    },
+    {
+      "name": "Sentidos Opuestos",
+      "facet": "Grupos juveniles y pop de los noventa",
+      "known_at": 13
+    },
+    {
+      "name": "Moenia",
+      "facet": "Grupos juveniles y pop de los noventa",
+      "known_at": 12
+    },
+    {
+      "name": "Sasha Sokol",
+      "facet": "Grupos juveniles y pop de los noventa",
+      "known_at": 11
+    },
+    {
+      "name": "Benny Ibarra",
+      "facet": "Grupos juveniles y pop de los noventa",
+      "known_at": 12
+    },
+    {
+      "name": "Erik Rubín",
+      "facet": "Grupos juveniles y pop de los noventa",
+      "known_at": 12
+    },
+    {
+      "name": "Aleks Syntek",
+      "facet": "Grupos juveniles y pop de los noventa",
+      "known_at": 10
+    },
+    {
+      "name": "Lynda",
+      "facet": "Grupos juveniles y pop de los noventa",
+      "known_at": 13
+    },
+    {
+      "name": "RBD",
+      "facet": "Pop y rock de telenovela",
+      "known_at": 5
+    },
+    {
+      "name": "Rebelde",
+      "facet": "Pop y rock de telenovela",
+      "known_at": 6
+    },
+    {
+      "name": "Anahí",
+      "facet": "Pop y rock de telenovela",
+      "known_at": 7
+    },
+    {
+      "name": "Dulce María",
+      "facet": "Pop y rock de telenovela",
+      "known_at": 7
+    },
+    {
+      "name": "Maite Perroni",
+      "facet": "Pop y rock de telenovela",
+      "known_at": 8
+    },
+    {
+      "name": "Christopher von Uckermann",
+      "facet": "Pop y rock de telenovela",
+      "known_at": 10
+    },
+    {
+      "name": "Alfonso Herrera",
+      "facet": "Pop y rock de telenovela",
+      "known_at": 10
+    },
+    {
+      "name": "Christian Chávez",
+      "facet": "Pop y rock de telenovela",
+      "known_at": 11
+    },
+    {
+      "name": "Alcanzar una estrella",
+      "facet": "Pop y rock de telenovela",
+      "known_at": 13
+    },
+    {
+      "name": "Muñecos de Papel",
+      "facet": "Pop y rock de telenovela",
+      "known_at": 14
+    },
+    {
+      "name": "Belinda",
+      "facet": "Pop y rock de telenovela",
+      "known_at": 5
+    },
+    {
+      "name": "Atrévete a soñar",
+      "facet": "Pop y rock de telenovela",
+      "known_at": 9
+    },
+    {
+      "name": "Danna Paola",
+      "facet": "Pop y rock de telenovela",
+      "known_at": 5
+    },
+    {
+      "name": "María la del Barrio",
+      "facet": "Pop y rock de telenovela",
+      "known_at": 8
+    },
+    {
+      "name": "Clase 406",
+      "facet": "Pop y rock de telenovela",
+      "known_at": 12
+    },
+    {
+      "name": "Baila conmigo",
+      "facet": "Pop y rock de telenovela",
+      "known_at": 14
+    },
+    {
+      "name": "Maldita Vecindad y los Hijos del Quinto Patio",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 11
+    },
+    {
+      "name": "Molotov",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 9
+    },
+    {
+      "name": "Control Machete",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 12
+    },
+    {
+      "name": "Plastilina Mosh",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 13
+    },
+    {
+      "name": "Zoé",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 9
+    },
+    {
+      "name": "El Gran Silencio",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 12
+    },
+    {
+      "name": "Panteón Rococó",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 11
+    },
+    {
+      "name": "Kinky",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 13
+    },
+    {
+      "name": "Titán",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 15
+    },
+    {
+      "name": "La Gusana Ciega",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 13
+    },
+    {
+      "name": "Santa Sabina",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 14
+    },
+    {
+      "name": "La Lupita",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 13
+    },
+    {
+      "name": "Tijuana No!",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 14
+    },
+    {
+      "name": "Porter",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 13
+    },
+    {
+      "name": "Hello Seahorse!",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 14
+    },
+    {
+      "name": "Austin TV",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 14
+    },
+    {
+      "name": "Inspector",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 13
+    },
+    {
+      "name": "Rubén Albarrán",
+      "facet": "Rock alternativo y fusión",
+      "known_at": 11
+    },
+    {
+      "name": "La negra Tomasa",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 9
+    },
+    {
+      "name": "Afuera",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "La célula que explota",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "El Silencio",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 14
+    },
+    {
+      "name": "Re",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 13
+    },
+    {
+      "name": "Eres",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 9
+    },
+    {
+      "name": "Las flores",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Chilanga banda",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Pachuco",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Kumbala",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "¿Dónde jugarán las niñas?",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 13
+    },
+    {
+      "name": "Gimme tha Power",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Frijolero",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 10
+    },
+    {
+      "name": "Rayando el sol",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 8
+    },
+    {
+      "name": "Clavado en un bar",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 9
+    },
+    {
+      "name": "En el muelle de San Blas",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 9
+    },
+    {
+      "name": "Triste canción",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Las piedras rodantes",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Amor a la mexicana",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 10
+    },
+    {
+      "name": "Pelo suelto",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 9
+    },
+    {
+      "name": "La incondicional",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 10
+    },
+    {
+      "name": "Sálvame",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 7
+    },
+    {
+      "name": "Hasta la raíz",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 10
+    },
+    {
+      "name": "Soñé",
+      "facet": "Canciones y álbumes emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Pa'l Norte",
+      "facet": "Festivales y foros en vivo",
+      "known_at": 11
+    },
+    {
+      "name": "Festival Ceremonia",
+      "facet": "Festivales y foros en vivo",
+      "known_at": 13
+    },
+    {
+      "name": "Arena Ciudad de México",
+      "facet": "Festivales y foros en vivo",
+      "known_at": 11
+    },
+    {
+      "name": "Teatro Metropólitan",
+      "facet": "Festivales y foros en vivo",
+      "known_at": 12
+    },
+    {
+      "name": "Tianguis Cultural del Chopo",
+      "facet": "Festivales y foros en vivo",
+      "known_at": 12
+    },
+    {
+      "name": "Hoyo funky",
+      "facet": "Festivales y foros en vivo",
+      "known_at": 14
+    },
+    {
+      "name": "Rockotitlán",
+      "facet": "Festivales y foros en vivo",
+      "known_at": 14
+    },
+    {
+      "name": "Multiforo Alicia",
+      "facet": "Festivales y foros en vivo",
+      "known_at": 14
+    },
+    {
+      "name": "Plaza de Toros México",
+      "facet": "Festivales y foros en vivo",
+      "known_at": 9
+    },
+    {
+      "name": "Foro Indie Rocks!",
+      "facet": "Festivales y foros en vivo",
+      "known_at": 14
+    },
+    {
+      "name": "El Sol de México",
+      "facet": "Letras, frases y apodos famosos",
+      "known_at": 6
+    },
+    {
+      "name": "La Chica Dorada",
+      "facet": "Letras, frases y apodos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "La Reina del Rock",
+      "facet": "Letras, frases y apodos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "El Príncipe de la Canción",
+      "facet": "Letras, frases y apodos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "El Divo de Juárez",
+      "facet": "Letras, frases y apodos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "La Novia de América",
+      "facet": "Letras, frases y apodos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Lucerito",
+      "facet": "Letras, frases y apodos famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Rola",
+      "facet": "Letras, frases y apodos famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Tocada",
+      "facet": "Letras, frases y apodos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Fresa",
+      "facet": "Letras, frases y apodos famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Naco",
+      "facet": "Letras, frases y apodos famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Chavo banda",
+      "facet": "Letras, frases y apodos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Rocanrolero",
+      "facet": "Letras, frases y apodos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "¡Que viva el rock and roll!",
+      "facet": "Letras, frases y apodos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Refrito",
+      "facet": "Hitos e historia del rock mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Enrique Guzmán",
+      "facet": "Hitos e historia del rock mexicano",
+      "known_at": 11
+    },
+    {
+      "name": "César Costa",
+      "facet": "Hitos e historia del rock mexicano",
+      "known_at": 12
+    },
+    {
+      "name": "Angélica María",
+      "facet": "Hitos e historia del rock mexicano",
+      "known_at": 12
+    },
+    {
+      "name": "Johnny Laboriel",
+      "facet": "Hitos e historia del rock mexicano",
+      "known_at": 13
+    },
+    {
+      "name": "Rock 101",
+      "facet": "Hitos e historia del rock mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Movimiento rupestre",
+      "facet": "Hitos e historia del rock mexicano",
+      "known_at": 15
+    },
+    {
+      "name": "Queen en Puebla",
+      "facet": "Hitos e historia del rock mexicano",
+      "known_at": 14
+    },
+    {
+      "name": "Bill Haley",
+      "facet": "Hitos e historia del rock mexicano",
+      "known_at": 13
+    },
+    {
+      "name": "Discos Orfeón",
+      "facet": "Hitos e historia del rock mexicano",
+      "known_at": 15
+    },
+    {
+      "name": "La plaga",
+      "facet": "Hitos e historia del rock mexicano",
+      "known_at": 12
+    },
+    {
+      "name": "MTV Unplugged de Maná",
+      "facet": "Hitos e historia del rock mexicano",
+      "known_at": 12
+    },
+    {
+      "name": "Julieta Venegas",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 8
+    },
+    {
+      "name": "Carla Morrison",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 11
+    },
+    {
+      "name": "Sin Bandera",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 9
+    },
+    {
+      "name": "Reik",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 8
+    },
+    {
+      "name": "Camila",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 9
+    },
+    {
+      "name": "Jesse & Joy",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 8
+    },
+    {
+      "name": "Ha*Ash",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 8
+    },
+    {
+      "name": "Río Roma",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 11
+    },
+    {
+      "name": "Matisse",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 11
+    },
+    {
+      "name": "Sofía Reyes",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 10
+    },
+    {
+      "name": "Kenia Os",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 6
+    },
+    {
+      "name": "Siddhartha",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 12
+    },
+    {
+      "name": "Little Jesus",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 13
+    },
+    {
+      "name": "Enjambre",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 12
+    },
+    {
+      "name": "Caloncho",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 12
+    },
+    {
+      "name": "Ximena Sariñana",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 11
+    },
+    {
+      "name": "Belanova",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 10
+    },
+    {
+      "name": "Paty Cantú",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 10
+    },
+    {
+      "name": "Kevin Kaarl",
+      "facet": "Pop actual y nuevas bandas",
+      "known_at": 11
+    },
+    {
+      "name": "Guacarrock",
+      "facet": "Sonido y mezcla con lo tradicional",
+      "known_at": 13
+    },
+    {
+      "name": "Botellita de Jerez",
+      "facet": "Sonido y mezcla con lo tradicional",
+      "known_at": 13
+    },
+    {
+      "name": "Nortec Collective",
+      "facet": "Sonido y mezcla con lo tradicional",
+      "known_at": 13
+    },
+    {
+      "name": "Instituto Mexicano del Sonido",
+      "facet": "Sonido y mezcla con lo tradicional",
+      "known_at": 14
+    },
+    {
+      "name": "Ingrata",
+      "facet": "Sonido y mezcla con lo tradicional",
+      "known_at": 10
+    },
+    {
+      "name": "Cumbia sonidera",
+      "facet": "Sonido y mezcla con lo tradicional",
+      "known_at": 10
+    },
+    {
+      "name": "Los Ángeles Azules",
+      "facet": "Sonido y mezcla con lo tradicional",
+      "known_at": 7
+    },
+    {
+      "name": "Corazón espinado",
+      "facet": "Sonido y mezcla con lo tradicional",
+      "known_at": 10
+    }
+  ]
+}
