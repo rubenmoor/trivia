@@ -1,0 +1,742 @@
+{
+  "subcategory": "modern-literature",
+  "facets": [
+    "Romanticismo español",
+    "Realismo y naturalismo",
+    "Generación del 98 y modernismo",
+    "Generación del 27 y Las Sinsombrero",
+    "Teatro español del siglo XX",
+    "Novela de posguerra",
+    "Poesía de posguerra y actual",
+    "Narrativa contemporánea y superventas",
+    "Literatura infantil y juvenil española",
+    "Literatura en catalán, gallego y euskera",
+    "Premios, ferias y vida literaria",
+    "Obras llevadas al cine y la tele"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Carolina Coronado",
+      "facet": "Romanticismo español",
+      "known_at": 14
+    },
+    {
+      "name": "Gertrudis Gómez de Avellaneda",
+      "facet": "Romanticismo español",
+      "known_at": 14
+    },
+    {
+      "name": "Monasterio de Veruela",
+      "facet": "Romanticismo español",
+      "known_at": 14
+    },
+    {
+      "name": "Cañas y barro",
+      "facet": "Realismo y naturalismo",
+      "known_at": 12
+    },
+    {
+      "name": "Sonatas de Valle-Inclán",
+      "facet": "Generación del 98 y modernismo",
+      "known_at": 14
+    },
+    {
+      "name": "Rubén Darío",
+      "facet": "Generación del 98 y modernismo",
+      "known_at": 11
+    },
+    {
+      "name": "Ramón Gómez de la Serna",
+      "facet": "Generación del 98 y modernismo",
+      "known_at": 12
+    },
+    {
+      "name": "Maruja Mallo",
+      "facet": "Generación del 27 y Las Sinsombrero",
+      "known_at": 12
+    },
+    {
+      "name": "Concha Méndez",
+      "facet": "Generación del 27 y Las Sinsombrero",
+      "known_at": 13
+    },
+    {
+      "name": "Rosa Chacel",
+      "facet": "Generación del 27 y Las Sinsombrero",
+      "known_at": 13
+    },
+    {
+      "name": "María Zambrano",
+      "facet": "Generación del 27 y Las Sinsombrero",
+      "known_at": 13
+    },
+    {
+      "name": "Alejandro Casona",
+      "facet": "Teatro español del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "La dama del alba",
+      "facet": "Teatro español del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Enrique Jardiel Poncela",
+      "facet": "Teatro español del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Eloísa está debajo de un almendro",
+      "facet": "Teatro español del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Hermanos Álvarez Quintero",
+      "facet": "Teatro español del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Arniches",
+      "facet": "Teatro español del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Fernando Arrabal",
+      "facet": "Teatro español del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Las bicicletas son para el verano",
+      "facet": "Teatro español del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "José Sanchis Sinisterra",
+      "facet": "Teatro español del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "¡Ay, Carmela!",
+      "facet": "Teatro español del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Antonio Gala",
+      "facet": "Teatro español del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Viaje a la Alcarria",
+      "facet": "Novela de posguerra",
+      "known_at": 12
+    },
+    {
+      "name": "El hereje",
+      "facet": "Novela de posguerra",
+      "known_at": 12
+    },
+    {
+      "name": "Entre visillos",
+      "facet": "Novela de posguerra",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Marsé",
+      "facet": "Novela de posguerra",
+      "known_at": 12
+    },
+    {
+      "name": "Últimas tardes con Teresa",
+      "facet": "Novela de posguerra",
+      "known_at": 13
+    },
+    {
+      "name": "Gonzalo Torrente Ballester",
+      "facet": "Novela de posguerra",
+      "known_at": 12
+    },
+    {
+      "name": "Los gozos y las sombras",
+      "facet": "Novela de posguerra",
+      "known_at": 13
+    },
+    {
+      "name": "Ramón J. Sender",
+      "facet": "Novela de posguerra",
+      "known_at": 12
+    },
+    {
+      "name": "Réquiem por un campesino español",
+      "facet": "Novela de posguerra",
+      "known_at": 12
+    },
+    {
+      "name": "Blas de Otero",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 12
+    },
+    {
+      "name": "Gabriel Celaya",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 12
+    },
+    {
+      "name": "La poesía es un arma cargada de futuro",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 12
+    },
+    {
+      "name": "José Hierro",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 12
+    },
+    {
+      "name": "Ángel González",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 13
+    },
+    {
+      "name": "Jaime Gil de Biedma",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 13
+    },
+    {
+      "name": "José Agustín Goytisolo",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 13
+    },
+    {
+      "name": "Palabras para Julia",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 11
+    },
+    {
+      "name": "Claudio Rodríguez",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 14
+    },
+    {
+      "name": "Novísimos",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 13
+    },
+    {
+      "name": "Poesía de la experiencia",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 14
+    },
+    {
+      "name": "Luis García Montero",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 12
+    },
+    {
+      "name": "Antonio Gamoneda",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 14
+    },
+    {
+      "name": "Luis Alberto de Cuenca",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 13
+    },
+    {
+      "name": "Joan Margarit",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 13
+    },
+    {
+      "name": "Elvira Sastre",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 10
+    },
+    {
+      "name": "Marwan",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 11
+    },
+    {
+      "name": "Benjamín Prado",
+      "facet": "Poesía de posguerra y actual",
+      "known_at": 13
+    },
+    {
+      "name": "Arturo Pérez-Reverte",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 9
+    },
+    {
+      "name": "Carlos Ruiz Zafón",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 10
+    },
+    {
+      "name": "La sombra del viento",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 10
+    },
+    {
+      "name": "Cementerio de los Libros Olvidados",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 11
+    },
+    {
+      "name": "Javier Marías",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 12
+    },
+    {
+      "name": "Corazón tan blanco",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 13
+    },
+    {
+      "name": "Almudena Grandes",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 11
+    },
+    {
+      "name": "Eduardo Mendoza",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 11
+    },
+    {
+      "name": "Sin noticias de Gurb",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 10
+    },
+    {
+      "name": "La verdad sobre el caso Savolta",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 12
+    },
+    {
+      "name": "Antonio Muñoz Molina",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 12
+    },
+    {
+      "name": "Javier Cercas",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 12
+    },
+    {
+      "name": "Soldados de Salamina",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 12
+    },
+    {
+      "name": "María Dueñas",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 11
+    },
+    {
+      "name": "Dolores Redondo",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 11
+    },
+    {
+      "name": "Trilogía del Baztán",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 11
+    },
+    {
+      "name": "Ildefonso Falcones",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 12
+    },
+    {
+      "name": "La catedral del mar",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 11
+    },
+    {
+      "name": "Julia Navarro",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 12
+    },
+    {
+      "name": "Rosa Montero",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 12
+    },
+    {
+      "name": "Manuel Vázquez Montalbán",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 12
+    },
+    {
+      "name": "Pepe Carvalho",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 12
+    },
+    {
+      "name": "Fernando Aramburu",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 11
+    },
+    {
+      "name": "Juan José Millás",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 12
+    },
+    {
+      "name": "Carmen Mola",
+      "facet": "Narrativa contemporánea y superventas",
+      "known_at": 11
+    },
+    {
+      "name": "Manolito Gafotas",
+      "facet": "Literatura infantil y juvenil española",
+      "known_at": 5
+    },
+    {
+      "name": "Elvira Lindo",
+      "facet": "Literatura infantil y juvenil española",
+      "known_at": 8
+    },
+    {
+      "name": "Fray Perico y su borrico",
+      "facet": "Literatura infantil y juvenil española",
+      "known_at": 6
+    },
+    {
+      "name": "El pirata Garrapata",
+      "facet": "Literatura infantil y juvenil española",
+      "known_at": 6
+    },
+    {
+      "name": "Juan Muñoz Martín",
+      "facet": "Literatura infantil y juvenil española",
+      "known_at": 11
+    },
+    {
+      "name": "El Barco de Vapor",
+      "facet": "Literatura infantil y juvenil española",
+      "known_at": 6
+    },
+    {
+      "name": "Laura Gallego",
+      "facet": "Literatura infantil y juvenil española",
+      "known_at": 8
+    },
+    {
+      "name": "Memorias de Idhún",
+      "facet": "Literatura infantil y juvenil española",
+      "known_at": 8
+    },
+    {
+      "name": "Jordi Sierra i Fabra",
+      "facet": "Literatura infantil y juvenil española",
+      "known_at": 9
+    },
+    {
+      "name": "Los Futbolísimos",
+      "facet": "Literatura infantil y juvenil española",
+      "known_at": 5
+    },
+    {
+      "name": "El príncipe de la niebla",
+      "facet": "Literatura infantil y juvenil española",
+      "known_at": 10
+    },
+    {
+      "name": "Celia",
+      "facet": "Literatura infantil y juvenil española",
+      "known_at": 11
+    },
+    {
+      "name": "Elena Fortún",
+      "facet": "Literatura infantil y juvenil española",
+      "known_at": 12
+    },
+    {
+      "name": "Cuentos al amor de la lumbre",
+      "facet": "Literatura infantil y juvenil española",
+      "known_at": 11
+    },
+    {
+      "name": "Antoñita la fantástica",
+      "facet": "Literatura infantil y juvenil española",
+      "known_at": 13
+    },
+    {
+      "name": "Pupi",
+      "facet": "Literatura infantil y juvenil española",
+      "known_at": 4
+    },
+    {
+      "name": "El clan de la loba",
+      "facet": "Literatura infantil y juvenil española",
+      "known_at": 10
+    },
+    {
+      "name": "Día de las Letras Gallegas",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 11
+    },
+    {
+      "name": "Rexurdimento",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 12
+    },
+    {
+      "name": "Castelao",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 12
+    },
+    {
+      "name": "Manuel Rivas",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 12
+    },
+    {
+      "name": "Álvaro Cunqueiro",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 13
+    },
+    {
+      "name": "Celso Emilio Ferreiro",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 14
+    },
+    {
+      "name": "Renaixença",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 12
+    },
+    {
+      "name": "Jacint Verdaguer",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 13
+    },
+    {
+      "name": "Joan Maragall",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 13
+    },
+    {
+      "name": "Mercè Rodoreda",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 12
+    },
+    {
+      "name": "La plaza del Diamante",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 12
+    },
+    {
+      "name": "Josep Pla",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 13
+    },
+    {
+      "name": "Salvador Espriu",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 14
+    },
+    {
+      "name": "Quim Monzó",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 13
+    },
+    {
+      "name": "Jaume Cabré",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 13
+    },
+    {
+      "name": "Albert Sánchez Piñol",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 14
+    },
+    {
+      "name": "Bernardo Atxaga",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 12
+    },
+    {
+      "name": "Obabakoak",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 13
+    },
+    {
+      "name": "Kirmen Uribe",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 14
+    },
+    {
+      "name": "Gabriel Aresti",
+      "facet": "Literatura en catalán, gallego y euskera",
+      "known_at": 14
+    },
+    {
+      "name": "Premio Nacional de las Letras Españolas",
+      "facet": "Premios, ferias y vida literaria",
+      "known_at": 13
+    },
+    {
+      "name": "Premio Biblioteca Breve",
+      "facet": "Premios, ferias y vida literaria",
+      "known_at": 14
+    },
+    {
+      "name": "Premio Alfaguara de Novela",
+      "facet": "Premios, ferias y vida literaria",
+      "known_at": 13
+    },
+    {
+      "name": "Premio Reina Sofía de Poesía Iberoamericana",
+      "facet": "Premios, ferias y vida literaria",
+      "known_at": 14
+    },
+    {
+      "name": "Cuesta de Moyano",
+      "facet": "Premios, ferias y vida literaria",
+      "known_at": 12
+    },
+    {
+      "name": "Tertulia literaria",
+      "facet": "Premios, ferias y vida literaria",
+      "known_at": 10
+    },
+    {
+      "name": "Carmen Balcells",
+      "facet": "Premios, ferias y vida literaria",
+      "known_at": 13
+    },
+    {
+      "name": "Semana Negra de Gijón",
+      "facet": "Premios, ferias y vida literaria",
+      "known_at": 14
+    },
+    {
+      "name": "La lengua de las mariposas",
+      "facet": "Obras llevadas al cine y la tele",
+      "known_at": 10
+    },
+    {
+      "name": "El tiempo entre costuras",
+      "facet": "Obras llevadas al cine y la tele",
+      "known_at": 10
+    },
+    {
+      "name": "Patria",
+      "facet": "Obras llevadas al cine y la tele",
+      "known_at": 11
+    },
+    {
+      "name": "Alatriste",
+      "facet": "Obras llevadas al cine y la tele",
+      "known_at": 10
+    },
+    {
+      "name": "Marcelino pan y vino",
+      "facet": "Obras llevadas al cine y la tele",
+      "known_at": 10
+    },
+    {
+      "name": "Tristana",
+      "facet": "Obras llevadas al cine y la tele",
+      "known_at": 13
+    },
+    {
+      "name": "El abuelo",
+      "facet": "Obras llevadas al cine y la tele",
+      "known_at": 13
+    },
+    {
+      "name": "Los girasoles ciegos",
+      "facet": "Obras llevadas al cine y la tele",
+      "known_at": 13
+    },
+    {
+      "name": "Fariña",
+      "facet": "Obras llevadas al cine y la tele",
+      "known_at": 11
+    },
+    {
+      "name": "Historias del Kronen",
+      "facet": "Obras llevadas al cine y la tele",
+      "known_at": 13
+    },
+    {
+      "name": "El sur",
+      "facet": "Obras llevadas al cine y la tele",
+      "known_at": 14
+    },
+    {
+      "name": "Lo que escondían sus ojos",
+      "facet": "Obras llevadas al cine y la tele",
+      "known_at": 12
+    },
+    {
+      "name": "Los renglones torcidos de Dios",
+      "facet": "Obras llevadas al cine y la tele",
+      "known_at": 12
+    },
+    {
+      "name": "Mario Camus",
+      "facet": "Obras llevadas al cine y la tele",
+      "known_at": 13
+    },
+    {
+      "name": "La ciudad de los prodigios",
+      "facet": "Obras llevadas al cine y la tele",
+      "known_at": 13
+    },
+    {
+      "name": "Plenilunio",
+      "facet": "Obras llevadas al cine y la tele",
+      "known_at": 14
+    },
+    {
+      "name": "Los pazos de Ulloa (serie)",
+      "facet": "Obras llevadas al cine y la tele",
+      "known_at": 14
+    }
+  ]
+}

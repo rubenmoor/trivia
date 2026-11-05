@@ -1,0 +1,784 @@
+{
+  "subcategory": "tv-series",
+  "facets": [
+    "Series familiares y de toda la vida",
+    "Comedias de situación y humor",
+    "Series juveniles y de instituto",
+    "Thrillers y series policiacas",
+    "Series históricas y de época",
+    "Series de animación españolas",
+    "Series infantiles y programas para niños",
+    "Personajes y actores míticos",
+    "Frases y momentos célebres",
+    "Escenarios y lugares de rodaje",
+    "Éxitos internacionales en plataformas",
+    "Telenovelas y series diarias"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 2,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Cuéntame cómo pasó",
+      "facet": "Series familiares y de toda la vida",
+      "known_at": 8
+    },
+    {
+      "name": "Farmacia de guardia",
+      "facet": "Series familiares y de toda la vida",
+      "known_at": 12
+    },
+    {
+      "name": "Hospital Central",
+      "facet": "Series familiares y de toda la vida",
+      "known_at": 11
+    },
+    {
+      "name": "Periodistas",
+      "facet": "Series familiares y de toda la vida",
+      "known_at": 13
+    },
+    {
+      "name": "Querido maestro",
+      "facet": "Series familiares y de toda la vida",
+      "known_at": 14
+    },
+    {
+      "name": "Doctor Mateo",
+      "facet": "Series familiares y de toda la vida",
+      "known_at": 12
+    },
+    {
+      "name": "Abuela de verano",
+      "facet": "Series familiares y de toda la vida",
+      "known_at": 14
+    },
+    {
+      "name": "Menudo es mi padre",
+      "facet": "Series familiares y de toda la vida",
+      "known_at": 14
+    },
+    {
+      "name": "Mis adorables vecinos",
+      "facet": "Series familiares y de toda la vida",
+      "known_at": 13
+    },
+    {
+      "name": "Aquí no hay quien viva",
+      "facet": "Comedias de situación y humor",
+      "known_at": 7
+    },
+    {
+      "name": "La que se avecina",
+      "facet": "Comedias de situación y humor",
+      "known_at": 7
+    },
+    {
+      "name": "7 vidas",
+      "facet": "Comedias de situación y humor",
+      "known_at": 11
+    },
+    {
+      "name": "Aída",
+      "facet": "Comedias de situación y humor",
+      "known_at": 10
+    },
+    {
+      "name": "Camera Café",
+      "facet": "Comedias de situación y humor",
+      "known_at": 11
+    },
+    {
+      "name": "Los ladrones van a la oficina",
+      "facet": "Comedias de situación y humor",
+      "known_at": 13
+    },
+    {
+      "name": "Manos a la obra",
+      "facet": "Comedias de situación y humor",
+      "known_at": 13
+    },
+    {
+      "name": "Allí abajo",
+      "facet": "Comedias de situación y humor",
+      "known_at": 11
+    },
+    {
+      "name": "Paquita Salas",
+      "facet": "Comedias de situación y humor",
+      "known_at": 11
+    },
+    {
+      "name": "Vergüenza",
+      "facet": "Comedias de situación y humor",
+      "known_at": 13
+    },
+    {
+      "name": "El pueblo",
+      "facet": "Comedias de situación y humor",
+      "known_at": 11
+    },
+    {
+      "name": "Señoras del (h)AMPA",
+      "facet": "Comedias de situación y humor",
+      "known_at": 13
+    },
+    {
+      "name": "Los Hombres de Paco",
+      "facet": "Comedias de situación y humor",
+      "known_at": 10
+    },
+    {
+      "name": "Chiringuito de Pepe",
+      "facet": "Comedias de situación y humor",
+      "known_at": 12
+    },
+    {
+      "name": "Escenas de matrimonio",
+      "facet": "Comedias de situación y humor",
+      "known_at": 11
+    },
+    {
+      "name": "Machos alfa",
+      "facet": "Comedias de situación y humor",
+      "known_at": 12
+    },
+    {
+      "name": "Gym Tony",
+      "facet": "Comedias de situación y humor",
+      "known_at": 12
+    },
+    {
+      "name": "Plutón BRB Nero",
+      "facet": "Comedias de situación y humor",
+      "known_at": 14
+    },
+    {
+      "name": "Mira lo que has hecho",
+      "facet": "Comedias de situación y humor",
+      "known_at": 14
+    },
+    {
+      "name": "Pulseras rojas",
+      "facet": "Series juveniles y de instituto",
+      "known_at": 12
+    },
+    {
+      "name": "HIT",
+      "facet": "Series juveniles y de instituto",
+      "known_at": 13
+    },
+    {
+      "name": "Yo quisiera",
+      "facet": "Series juveniles y de instituto",
+      "known_at": 14
+    },
+    {
+      "name": "Upa Dance",
+      "facet": "Series juveniles y de instituto",
+      "known_at": 13
+    },
+    {
+      "name": "El barco",
+      "facet": "Series juveniles y de instituto",
+      "known_at": 11
+    },
+    {
+      "name": "Bienvenidos a Edén",
+      "facet": "Series juveniles y de instituto",
+      "known_at": 11
+    },
+    {
+      "name": "Paraíso",
+      "facet": "Series juveniles y de instituto",
+      "known_at": 13
+    },
+    {
+      "name": "El comisario",
+      "facet": "Thrillers y series policiacas",
+      "known_at": 12
+    },
+    {
+      "name": "Policías, en el corazón de la calle",
+      "facet": "Thrillers y series policiacas",
+      "known_at": 13
+    },
+    {
+      "name": "Los misterios de Laura",
+      "facet": "Thrillers y series policiacas",
+      "known_at": 11
+    },
+    {
+      "name": "El príncipe",
+      "facet": "Thrillers y series policiacas",
+      "known_at": 11
+    },
+    {
+      "name": "Vis a vis",
+      "facet": "Thrillers y series policiacas",
+      "known_at": 11
+    },
+    {
+      "name": "Desaparecida",
+      "facet": "Thrillers y series policiacas",
+      "known_at": 14
+    },
+    {
+      "name": "Sin identidad",
+      "facet": "Thrillers y series policiacas",
+      "known_at": 13
+    },
+    {
+      "name": "El caso. Crónica de sucesos",
+      "facet": "Thrillers y series policiacas",
+      "known_at": 13
+    },
+    {
+      "name": "Antidisturbios",
+      "facet": "Thrillers y series policiacas",
+      "known_at": 13
+    },
+    {
+      "name": "La Unidad",
+      "facet": "Thrillers y series policiacas",
+      "known_at": 13
+    },
+    {
+      "name": "Mar de plástico",
+      "facet": "Thrillers y series policiacas",
+      "known_at": 13
+    },
+    {
+      "name": "Brigada Costa del Sol",
+      "facet": "Thrillers y series policiacas",
+      "known_at": 14,
+      "retired": "unaskable: Es una serie de Telecinco poco conocida, sobre una brigada antidroga: demasiado rebuscada y con un tema poco familiar."
+    },
+    {
+      "name": "Néboa",
+      "facet": "Thrillers y series policiacas",
+      "known_at": 14
+    },
+    {
+      "name": "La caza. Monteperdido",
+      "facet": "Thrillers y series policiacas",
+      "known_at": 13
+    },
+    {
+      "name": "Entrevías",
+      "facet": "Thrillers y series policiacas",
+      "known_at": 12
+    },
+    {
+      "name": "Petra Delicado",
+      "facet": "Thrillers y series policiacas",
+      "known_at": 14
+    },
+    {
+      "name": "Isabel",
+      "facet": "Series históricas y de época",
+      "known_at": 11
+    },
+    {
+      "name": "Águila Roja",
+      "facet": "Series históricas y de época",
+      "known_at": 9
+    },
+    {
+      "name": "El Ministerio del Tiempo",
+      "facet": "Series históricas y de época",
+      "known_at": 10
+    },
+    {
+      "name": "Velvet",
+      "facet": "Series históricas y de época",
+      "known_at": 11
+    },
+    {
+      "name": "Gran Hotel",
+      "facet": "Series históricas y de época",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos, rey emperador",
+      "facet": "Series históricas y de época",
+      "known_at": 13
+    },
+    {
+      "name": "La Señora",
+      "facet": "Series históricas y de época",
+      "known_at": 14
+    },
+    {
+      "name": "Curro Jiménez",
+      "facet": "Series históricas y de época",
+      "known_at": 13
+    },
+    {
+      "name": "Tierra de lobos",
+      "facet": "Series históricas y de época",
+      "known_at": 13
+    },
+    {
+      "name": "Hispania, la leyenda",
+      "facet": "Series históricas y de época",
+      "known_at": 13
+    },
+    {
+      "name": "Teresa de Jesús",
+      "facet": "Series históricas y de época",
+      "known_at": 15
+    },
+    {
+      "name": "Víctor Ros",
+      "facet": "Series históricas y de época",
+      "known_at": 14
+    },
+    {
+      "name": "Las aventuras del capitán Alatriste",
+      "facet": "Series históricas y de época",
+      "known_at": 14
+    },
+    {
+      "name": "La peste",
+      "facet": "Series históricas y de época",
+      "known_at": 13
+    },
+    {
+      "name": "Mortadelo y Filemón (serie de animación)",
+      "facet": "Series de animación españolas",
+      "known_at": 6
+    },
+    {
+      "name": "Don Quijote de la Mancha (serie de animación)",
+      "facet": "Series de animación españolas",
+      "known_at": 11
+    },
+    {
+      "name": "Jelly Jamm",
+      "facet": "Series de animación españolas",
+      "known_at": 6
+    },
+    {
+      "name": "Lucky Fred",
+      "facet": "Series de animación españolas",
+      "known_at": 9
+    },
+    {
+      "name": "Sandra, detective de cuentos",
+      "facet": "Series de animación españolas",
+      "known_at": 9
+    },
+    {
+      "name": "El gran circo de TVE",
+      "facet": "Series infantiles y programas para niños",
+      "known_at": 12
+    },
+    {
+      "name": "El club de Pizzicato",
+      "facet": "Series infantiles y programas para niños",
+      "known_at": 14
+    },
+    {
+      "name": "El Gran Prix del verano",
+      "facet": "Series infantiles y programas para niños",
+      "known_at": 7
+    },
+    {
+      "name": "Clan TVE",
+      "facet": "Series infantiles y programas para niños",
+      "known_at": 2
+    },
+    {
+      "name": "Piraña",
+      "facet": "Personajes y actores míticos",
+      "known_at": 12
+    },
+    {
+      "name": "Antonio Alcántara",
+      "facet": "Personajes y actores míticos",
+      "known_at": 11
+    },
+    {
+      "name": "Mauricio Colmenero",
+      "facet": "Personajes y actores míticos",
+      "known_at": 10
+    },
+    {
+      "name": "Machupichu",
+      "facet": "Personajes y actores míticos",
+      "known_at": 11
+    },
+    {
+      "name": "Amador Rivas",
+      "facet": "Personajes y actores míticos",
+      "known_at": 9
+    },
+    {
+      "name": "Antonio Recio",
+      "facet": "Personajes y actores míticos",
+      "known_at": 8
+    },
+    {
+      "name": "Emilio Delgado",
+      "facet": "Personajes y actores míticos",
+      "known_at": 10
+    },
+    {
+      "name": "Juan Cuesta",
+      "facet": "Personajes y actores míticos",
+      "known_at": 10
+    },
+    {
+      "name": "Imanol Arias",
+      "facet": "Personajes y actores míticos",
+      "known_at": 11
+    },
+    {
+      "name": "Ana Duato",
+      "facet": "Personajes y actores míticos",
+      "known_at": 12
+    },
+    {
+      "name": "Emilio Aragón",
+      "facet": "Personajes y actores míticos",
+      "known_at": 11
+    },
+    {
+      "name": "Lina Morgan",
+      "facet": "Personajes y actores míticos",
+      "known_at": 13
+    },
+    {
+      "name": "Concha Velasco",
+      "facet": "Personajes y actores míticos",
+      "known_at": 12
+    },
+    {
+      "name": "José Luis Gil",
+      "facet": "Personajes y actores míticos",
+      "known_at": 11
+    },
+    {
+      "name": "Pepe Viyuela",
+      "facet": "Personajes y actores míticos",
+      "known_at": 12
+    },
+    {
+      "name": "No nos moverán",
+      "facet": "Frases y momentos célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Cuéntame (canción de Fórmula V)",
+      "facet": "Frases y momentos célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Soy mayorista, no limpio pescado",
+      "facet": "Frases y momentos célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Váyase, señor Cuesta",
+      "facet": "Frases y momentos célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Uno más uno, siete",
+      "facet": "Frases y momentos célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Los Lunnis y los niños nos vamos a la cama",
+      "facet": "Frases y momentos célebres",
+      "known_at": 5
+    },
+    {
+      "name": "El tiempo es el que es",
+      "facet": "Frases y momentos célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Bella ciao",
+      "facet": "Frases y momentos célebres",
+      "known_at": 7
+    },
+    {
+      "name": "Final de Los Serrano",
+      "facet": "Frases y momentos célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Máscara de Dalí",
+      "facet": "Frases y momentos célebres",
+      "known_at": 7
+    },
+    {
+      "name": "Esperanza Sur",
+      "facet": "Escenarios y lugares de rodaje",
+      "known_at": 12
+    },
+    {
+      "name": "Barrio de San Genaro",
+      "facet": "Escenarios y lugares de rodaje",
+      "known_at": 12
+    },
+    {
+      "name": "Sagrillas",
+      "facet": "Escenarios y lugares de rodaje",
+      "known_at": 13
+    },
+    {
+      "name": "Lastres",
+      "facet": "Escenarios y lugares de rodaje",
+      "known_at": 14
+    },
+    {
+      "name": "Instituto Zurbarán",
+      "facet": "Escenarios y lugares de rodaje",
+      "known_at": 11
+    },
+    {
+      "name": "Las Encinas",
+      "facet": "Escenarios y lugares de rodaje",
+      "known_at": 9
+    },
+    {
+      "name": "Fábrica Nacional de Moneda y Timbre",
+      "facet": "Escenarios y lugares de rodaje",
+      "known_at": 8
+    },
+    {
+      "name": "Cruz del Sur",
+      "facet": "Escenarios y lugares de rodaje",
+      "known_at": 13
+    },
+    {
+      "name": "Peñafría",
+      "facet": "Escenarios y lugares de rodaje",
+      "known_at": 13
+    },
+    {
+      "name": "La casa de papel",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 6
+    },
+    {
+      "name": "Las chicas del cable",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 10
+    },
+    {
+      "name": "Valeria",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 11
+    },
+    {
+      "name": "Berlín",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 10
+    },
+    {
+      "name": "Sky Rojo",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 12
+    },
+    {
+      "name": "El caso Asunta",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 12
+    },
+    {
+      "name": "Alta mar",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 12
+    },
+    {
+      "name": "El inocente",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 13
+    },
+    {
+      "name": "Toy Boy",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 12
+    },
+    {
+      "name": "Los favoritos de Midas",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 14
+    },
+    {
+      "name": "El desorden que dejas",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 13
+    },
+    {
+      "name": "El vecino",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 12
+    },
+    {
+      "name": "Hache",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 14
+    },
+    {
+      "name": "Feria: la luz más oscura",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 14
+    },
+    {
+      "name": "Las de la última fila",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 14
+    },
+    {
+      "name": "Smiley",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 13
+    },
+    {
+      "name": "El tiempo que te doy",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 14
+    },
+    {
+      "name": "Clanes",
+      "facet": "Éxitos internacionales en plataformas",
+      "known_at": 14,
+      "retired": "unaskable: Es una serie reciente sobre el narcotráfico gallego: el tema no es para toda la familia y los datos de la época son poco seguros para una pregunta de dificultad 14."
+    },
+    {
+      "name": "Amar en tiempos revueltos",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 12
+    },
+    {
+      "name": "Amar es para siempre",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 12
+    },
+    {
+      "name": "El secreto de Puente Viejo",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 11
+    },
+    {
+      "name": "Acacias 38",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 12
+    },
+    {
+      "name": "Servir y proteger",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 13
+    },
+    {
+      "name": "La Promesa",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 12
+    },
+    {
+      "name": "Sueños de libertad",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 12
+    },
+    {
+      "name": "Bandolera",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 13
+    },
+    {
+      "name": "Seis hermanas",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 14
+    },
+    {
+      "name": "Mercado central",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 14
+    },
+    {
+      "name": "Ciega a citas",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 14
+    },
+    {
+      "name": "Yo soy Bea",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 12
+    },
+    {
+      "name": "Calle nueva",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 15
+    },
+    {
+      "name": "Arrayán",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 15
+    },
+    {
+      "name": "Goenkale",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 15
+    },
+    {
+      "name": "Valle salvaje",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 13
+    },
+    {
+      "name": "La Moderna",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 14
+    },
+    {
+      "name": "Dos vidas",
+      "facet": "Telenovelas y series diarias",
+      "known_at": 14
+    }
+  ]
+}

@@ -1,0 +1,924 @@
+{
+  "subcategory": "brands-and-shops",
+  "facets": [
+    "Moda y textil",
+    "Supermercados y grandes almacenes",
+    "Dulces, golosinas y chocolates",
+    "Bebidas, cervezas y cavas",
+    "Despensa y marcas de alimentación",
+    "Coches, trenes y aerolíneas",
+    "Bancos, energía y telecomunicaciones",
+    "Juguetes, muñecas y juegos",
+    "Calzado, lujo y diseño",
+    "Fundadores e historia de marcas",
+    "Logos, mascotas y anuncios famosos",
+    "Comercio de barrio y rebajas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Oysho",
+      "facet": "Moda y textil",
+      "known_at": 10
+    },
+    {
+      "name": "Zara Home",
+      "facet": "Moda y textil",
+      "known_at": 9
+    },
+    {
+      "name": "Lefties",
+      "facet": "Moda y textil",
+      "known_at": 8
+    },
+    {
+      "name": "Springfield",
+      "facet": "Moda y textil",
+      "known_at": 8
+    },
+    {
+      "name": "Cortefiel",
+      "facet": "Moda y textil",
+      "known_at": 11
+    },
+    {
+      "name": "Women'secret",
+      "facet": "Moda y textil",
+      "known_at": 9
+    },
+    {
+      "name": "El Ganso",
+      "facet": "Moda y textil",
+      "known_at": 11
+    },
+    {
+      "name": "Bimba y Lola",
+      "facet": "Moda y textil",
+      "known_at": 11
+    },
+    {
+      "name": "Custo Barcelona",
+      "facet": "Moda y textil",
+      "known_at": 13
+    },
+    {
+      "name": "Sfera",
+      "facet": "Moda y textil",
+      "known_at": 11
+    },
+    {
+      "name": "Dia",
+      "facet": "Supermercados y grandes almacenes",
+      "known_at": 5
+    },
+    {
+      "name": "Eroski",
+      "facet": "Supermercados y grandes almacenes",
+      "known_at": 7
+    },
+    {
+      "name": "Consum",
+      "facet": "Supermercados y grandes almacenes",
+      "known_at": 8
+    },
+    {
+      "name": "Hipercor",
+      "facet": "Supermercados y grandes almacenes",
+      "known_at": 9
+    },
+    {
+      "name": "Supercor",
+      "facet": "Supermercados y grandes almacenes",
+      "known_at": 11
+    },
+    {
+      "name": "Caprabo",
+      "facet": "Supermercados y grandes almacenes",
+      "known_at": 11
+    },
+    {
+      "name": "Ahorramás",
+      "facet": "Supermercados y grandes almacenes",
+      "known_at": 10
+    },
+    {
+      "name": "Gadis",
+      "facet": "Supermercados y grandes almacenes",
+      "known_at": 11
+    },
+    {
+      "name": "bonÀrea",
+      "facet": "Supermercados y grandes almacenes",
+      "known_at": 12
+    },
+    {
+      "name": "Alimerka",
+      "facet": "Supermercados y grandes almacenes",
+      "known_at": 12
+    },
+    {
+      "name": "Condis",
+      "facet": "Supermercados y grandes almacenes",
+      "known_at": 12
+    },
+    {
+      "name": "Deliplus",
+      "facet": "Supermercados y grandes almacenes",
+      "known_at": 8
+    },
+    {
+      "name": "Pryca",
+      "facet": "Supermercados y grandes almacenes",
+      "known_at": 13
+    },
+    {
+      "name": "Casa del Libro",
+      "facet": "Supermercados y grandes almacenes",
+      "known_at": 10
+    },
+    {
+      "name": "Primor",
+      "facet": "Supermercados y grandes almacenes",
+      "known_at": 10,
+      "retired": "unaskable: No tengo datos fiables sobre la historia y los fundadores de Primor."
+    },
+    {
+      "name": "Druni",
+      "facet": "Supermercados y grandes almacenes",
+      "known_at": 11
+    },
+    {
+      "name": "Bollycao",
+      "facet": "Dulces, golosinas y chocolates",
+      "known_at": 4
+    },
+    {
+      "name": "Donuts",
+      "facet": "Dulces, golosinas y chocolates",
+      "known_at": 2
+    },
+    {
+      "name": "Filipinos",
+      "facet": "Dulces, golosinas y chocolates",
+      "known_at": 5
+    },
+    {
+      "name": "Turrón El Almendro",
+      "facet": "Dulces, golosinas y chocolates",
+      "known_at": 6
+    },
+    {
+      "name": "Turrones 1880",
+      "facet": "Dulces, golosinas y chocolates",
+      "known_at": 9
+    },
+    {
+      "name": "Delaviuda",
+      "facet": "Dulces, golosinas y chocolates",
+      "known_at": 10
+    },
+    {
+      "name": "Fini",
+      "facet": "Dulces, golosinas y chocolates",
+      "known_at": 6
+    },
+    {
+      "name": "Lacasa",
+      "facet": "Dulces, golosinas y chocolates",
+      "known_at": 8
+    },
+    {
+      "name": "Dinosaurus",
+      "facet": "Dulces, golosinas y chocolates",
+      "known_at": 4
+    },
+    {
+      "name": "San Miguel",
+      "facet": "Bebidas, cervezas y cavas",
+      "known_at": 9
+    },
+    {
+      "name": "Mirinda",
+      "facet": "Bebidas, cervezas y cavas",
+      "known_at": 11
+    },
+    {
+      "name": "Don Simón",
+      "facet": "Bebidas, cervezas y cavas",
+      "known_at": 6
+    },
+    {
+      "name": "Marqués de Riscal",
+      "facet": "Bebidas, cervezas y cavas",
+      "known_at": 13
+    },
+    {
+      "name": "Vega Sicilia",
+      "facet": "Bebidas, cervezas y cavas",
+      "known_at": 14
+    },
+    {
+      "name": "Avecrem",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 8
+    },
+    {
+      "name": "Calvo",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 5
+    },
+    {
+      "name": "Cuétara",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 6
+    },
+    {
+      "name": "Gullón",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 8
+    },
+    {
+      "name": "Fontaneda",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 10
+    },
+    {
+      "name": "Campofrío",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 6
+    },
+    {
+      "name": "ElPozo",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 6
+    },
+    {
+      "name": "Casa Tarradellas",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 8
+    },
+    {
+      "name": "Pescanova",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 6
+    },
+    {
+      "name": "La Piara",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 8
+    },
+    {
+      "name": "Arroz SOS",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 9
+    },
+    {
+      "name": "Pastas Gallo",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 9
+    },
+    {
+      "name": "Carbonell",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 10
+    },
+    {
+      "name": "Matutano",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 9
+    },
+    {
+      "name": "Pipas Facundo",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 7
+    },
+    {
+      "name": "Danone",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 3
+    },
+    {
+      "name": "Leche Pascual",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 6
+    },
+    {
+      "name": "Central Lechera Asturiana",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 8
+    },
+    {
+      "name": "Puleva",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 8
+    },
+    {
+      "name": "Litoral",
+      "facet": "Despensa y marcas de alimentación",
+      "known_at": 10
+    },
+    {
+      "name": "Cupra",
+      "facet": "Coches, trenes y aerolíneas",
+      "known_at": 9
+    },
+    {
+      "name": "SEAT Ibiza",
+      "facet": "Coches, trenes y aerolíneas",
+      "known_at": 8
+    },
+    {
+      "name": "SEAT Panda",
+      "facet": "Coches, trenes y aerolíneas",
+      "known_at": 12
+    },
+    {
+      "name": "Hispano-Suiza",
+      "facet": "Coches, trenes y aerolíneas",
+      "known_at": 14
+    },
+    {
+      "name": "Santana",
+      "facet": "Coches, trenes y aerolíneas",
+      "known_at": 14
+    },
+    {
+      "name": "Cercanías",
+      "facet": "Coches, trenes y aerolíneas",
+      "known_at": 7
+    },
+    {
+      "name": "Iryo",
+      "facet": "Coches, trenes y aerolíneas",
+      "known_at": 11
+    },
+    {
+      "name": "Avlo",
+      "facet": "Coches, trenes y aerolíneas",
+      "known_at": 11
+    },
+    {
+      "name": "Air Europa",
+      "facet": "Coches, trenes y aerolíneas",
+      "known_at": 8
+    },
+    {
+      "name": "Vueling",
+      "facet": "Coches, trenes y aerolíneas",
+      "known_at": 7
+    },
+    {
+      "name": "Binter",
+      "facet": "Coches, trenes y aerolíneas",
+      "known_at": 11
+    },
+    {
+      "name": "Air Nostrum",
+      "facet": "Coches, trenes y aerolíneas",
+      "known_at": 12
+    },
+    {
+      "name": "Alsa",
+      "facet": "Coches, trenes y aerolíneas",
+      "known_at": 8
+    },
+    {
+      "name": "Montesa",
+      "facet": "Coches, trenes y aerolíneas",
+      "known_at": 13
+    },
+    {
+      "name": "Derbi",
+      "facet": "Coches, trenes y aerolíneas",
+      "known_at": 12
+    },
+    {
+      "name": "Bultaco",
+      "facet": "Coches, trenes y aerolíneas",
+      "known_at": 14
+    },
+    {
+      "name": "BBVA",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 6
+    },
+    {
+      "name": "CaixaBank",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 7
+    },
+    {
+      "name": "Banco Sabadell",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Bankinter",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Bankia",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Banco Popular",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Ibercaja",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Movistar",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 4
+    },
+    {
+      "name": "MásMóvil",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Jazztel",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Yoigo",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Pepephone",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Iberdrola",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Endesa",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Naturgy",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Cepsa",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Campsa",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Bombona de butano",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 7
+    },
+    {
+      "name": "Correos",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 4
+    },
+    {
+      "name": "ONCE",
+      "facet": "Bancos, energía y telecomunicaciones",
+      "known_at": 6
+    },
+    {
+      "name": "Famosa",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Nancy",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Nenuco",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Barriguitas",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Pinypon",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Chabel",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Lesly",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 12,
+      "retired": "unaskable: Marca de muñecas demasiado oscura y no estoy seguro de los datos."
+    },
+    {
+      "name": "Paola Reina",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Muñecas Arias",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Feber",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Scalextric",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "Cinexín",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Exin Castillos",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Tente",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Geyperman",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Educa Borrás",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Magia Borrás",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Cefa Toys",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Imaginarium",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "Juguettos",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Toy Planet",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Ibi",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Payá",
+      "facet": "Juguetes, muñecas y juegos",
+      "known_at": 14
+    },
+    {
+      "name": "Pikolinos",
+      "facet": "Calzado, lujo y diseño",
+      "known_at": 11
+    },
+    {
+      "name": "Panama Jack",
+      "facet": "Calzado, lujo y diseño",
+      "known_at": 10
+    },
+    {
+      "name": "Gioseppo",
+      "facet": "Calzado, lujo y diseño",
+      "known_at": 11
+    },
+    {
+      "name": "Mascaró",
+      "facet": "Calzado, lujo y diseño",
+      "known_at": 13
+    },
+    {
+      "name": "Castañer",
+      "facet": "Calzado, lujo y diseño",
+      "known_at": 13
+    },
+    {
+      "name": "Munich",
+      "facet": "Calzado, lujo y diseño",
+      "known_at": 11
+    },
+    {
+      "name": "Joma",
+      "facet": "Calzado, lujo y diseño",
+      "known_at": 8
+    },
+    {
+      "name": "Kelme",
+      "facet": "Calzado, lujo y diseño",
+      "known_at": 10
+    },
+    {
+      "name": "John Smith",
+      "facet": "Calzado, lujo y diseño",
+      "known_at": 11
+    },
+    {
+      "name": "Majorica",
+      "facet": "Calzado, lujo y diseño",
+      "known_at": 12
+    },
+    {
+      "name": "Purificación García",
+      "facet": "Calzado, lujo y diseño",
+      "known_at": 12
+    },
+    {
+      "name": "Pertegaz",
+      "facet": "Calzado, lujo y diseño",
+      "known_at": 14
+    },
+    {
+      "name": "Isaac Carasso",
+      "facet": "Fundadores e historia de marcas",
+      "known_at": 14
+    },
+    {
+      "name": "José María Ruiz-Mateos",
+      "facet": "Fundadores e historia de marcas",
+      "known_at": 12
+    },
+    {
+      "name": "Rumasa",
+      "facet": "Fundadores e historia de marcas",
+      "known_at": 13
+    },
+    {
+      "name": "Leopoldo Fernández Pujals",
+      "facet": "Fundadores e historia de marcas",
+      "known_at": 14
+    },
+    {
+      "name": "Telepizza",
+      "facet": "Fundadores e historia de marcas",
+      "known_at": 4
+    },
+    {
+      "name": "Tomás Pascual",
+      "facet": "Fundadores e historia de marcas",
+      "known_at": 14
+    },
+    {
+      "name": "Enrique Loewe",
+      "facet": "Fundadores e historia de marcas",
+      "known_at": 14
+    },
+    {
+      "name": "Pepín Fernández",
+      "facet": "Fundadores e historia de marcas",
+      "known_at": 15
+    },
+    {
+      "name": "Gabriel Escarrer",
+      "facet": "Fundadores e historia de marcas",
+      "known_at": 14
+    },
+    {
+      "name": "Meliá",
+      "facet": "Fundadores e historia de marcas",
+      "known_at": 10
+    },
+    {
+      "name": "Cartel de Tío Pepe",
+      "facet": "Logos, mascotas y anuncios famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Letrero de Schweppes de la Gran Vía",
+      "facet": "Logos, mascotas y anuncios famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Anuncio de El Almendro",
+      "facet": "Logos, mascotas y anuncios famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Anuncio de Campofrío",
+      "facet": "Logos, mascotas y anuncios famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Anuncio de Freixenet",
+      "facet": "Logos, mascotas y anuncios famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Anuncio de Famosa",
+      "facet": "Logos, mascotas y anuncios famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Anuncio de Estrella Damm",
+      "facet": "Logos, mascotas y anuncios famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Anuncio de Loterías de Navidad",
+      "facet": "Logos, mascotas y anuncios famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Osito de Mimosín",
+      "facet": "Logos, mascotas y anuncios famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Don Limpio",
+      "facet": "Logos, mascotas y anuncios famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Pato WC",
+      "facet": "Logos, mascotas y anuncios famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Mono de Anís del Mono",
+      "facet": "Logos, mascotas y anuncios famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Bolsa de El Corte Inglés",
+      "facet": "Logos, mascotas y anuncios famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Logotipo de Iberia",
+      "facet": "Logos, mascotas y anuncios famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Corneta de Correos",
+      "facet": "Logos, mascotas y anuncios famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Logotipo de Repsol",
+      "facet": "Logos, mascotas y anuncios famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Rebajas de enero",
+      "facet": "Comercio de barrio y rebajas",
+      "known_at": 4
+    },
+    {
+      "name": "Rebajas de verano",
+      "facet": "Comercio de barrio y rebajas",
+      "known_at": 6
+    },
+    {
+      "name": "Mercado de abastos",
+      "facet": "Comercio de barrio y rebajas",
+      "known_at": 6
+    },
+    {
+      "name": "Els Encants",
+      "facet": "Comercio de barrio y rebajas",
+      "known_at": 13
+    },
+    {
+      "name": "Estanco",
+      "facet": "Comercio de barrio y rebajas",
+      "known_at": 8
+    },
+    {
+      "name": "Quiosco",
+      "facet": "Comercio de barrio y rebajas",
+      "known_at": 4
+    },
+    {
+      "name": "Mercería",
+      "facet": "Comercio de barrio y rebajas",
+      "known_at": 9
+    },
+    {
+      "name": "Droguería",
+      "facet": "Comercio de barrio y rebajas",
+      "known_at": 10
+    },
+    {
+      "name": "Ferretería",
+      "facet": "Comercio de barrio y rebajas",
+      "known_at": 6
+    },
+    {
+      "name": "Tienda de chuches",
+      "facet": "Comercio de barrio y rebajas",
+      "known_at": 2
+    },
+    {
+      "name": "Papelería",
+      "facet": "Comercio de barrio y rebajas",
+      "known_at": 3
+    },
+    {
+      "name": "Herboristería",
+      "facet": "Comercio de barrio y rebajas",
+      "known_at": 11
+    },
+    {
+      "name": "Administración de lotería",
+      "facet": "Comercio de barrio y rebajas",
+      "known_at": 9
+    },
+    {
+      "name": "Todo a cien",
+      "facet": "Comercio de barrio y rebajas",
+      "known_at": 11
+    },
+    {
+      "name": "Bazar",
+      "facet": "Comercio de barrio y rebajas",
+      "known_at": 5
+    }
+  ]
+}

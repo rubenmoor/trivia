@@ -1,0 +1,1032 @@
+{
+  "subcategory": "money-and-services",
+  "facets": [
+    "Pesetas, euros y monedas",
+    "Bancos, tarjetas y pagos",
+    "Hacienda e impuestos",
+    "DNI y documentos personales",
+    "Ayuntamiento y administración pública",
+    "Seguridad Social y sanidad pública",
+    "Trabajo, nómina y paro",
+    "Vivienda, alquiler y comunidad",
+    "Luz, agua, gas y teléfono",
+    "Correos, transporte y abonos",
+    "Tráfico, coche y carné",
+    "Lotería, ONCE y quinielas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 2,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Euro",
+      "facet": "Pesetas, euros y monedas",
+      "known_at": 1
+    },
+    {
+      "name": "Céntimo",
+      "facet": "Pesetas, euros y monedas",
+      "known_at": 3
+    },
+    {
+      "name": "Perra gorda",
+      "facet": "Pesetas, euros y monedas",
+      "known_at": 11
+    },
+    {
+      "name": "Perra chica",
+      "facet": "Pesetas, euros y monedas",
+      "known_at": 12
+    },
+    {
+      "name": "Talego",
+      "facet": "Pesetas, euros y monedas",
+      "known_at": 12
+    },
+    {
+      "name": "Moneda de 2 euros",
+      "facet": "Pesetas, euros y monedas",
+      "known_at": 2
+    },
+    {
+      "name": "Moneda de 100 pesetas",
+      "facet": "Pesetas, euros y monedas",
+      "known_at": 10
+    },
+    {
+      "name": "Billete de 500 euros",
+      "facet": "Pesetas, euros y monedas",
+      "known_at": 7
+    },
+    {
+      "name": "Billete de 1000 pesetas",
+      "facet": "Pesetas, euros y monedas",
+      "known_at": 11
+    },
+    {
+      "name": "Billete de 5000 pesetas",
+      "facet": "Pesetas, euros y monedas",
+      "known_at": 12
+    },
+    {
+      "name": "Cambio de la peseta al euro",
+      "facet": "Pesetas, euros y monedas",
+      "known_at": 9
+    },
+    {
+      "name": "Calculadora euro-peseta",
+      "facet": "Pesetas, euros y monedas",
+      "known_at": 12
+    },
+    {
+      "name": "Banco de España",
+      "facet": "Pesetas, euros y monedas",
+      "known_at": 8
+    },
+    {
+      "name": "Cervantes en las monedas de céntimo",
+      "facet": "Pesetas, euros y monedas",
+      "known_at": 10
+    },
+    {
+      "name": "Catedral de Santiago en las monedas de céntimo",
+      "facet": "Pesetas, euros y monedas",
+      "known_at": 12
+    },
+    {
+      "name": "Efigie del Rey en las monedas",
+      "facet": "Pesetas, euros y monedas",
+      "known_at": 8
+    },
+    {
+      "name": "Moneda conmemorativa de 2 euros",
+      "facet": "Pesetas, euros y monedas",
+      "known_at": 11
+    },
+    {
+      "name": "Cajero automático",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 2
+    },
+    {
+      "name": "Tarjeta de crédito",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 4
+    },
+    {
+      "name": "Tarjeta de débito",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 8
+    },
+    {
+      "name": "PIN de la tarjeta",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 5
+    },
+    {
+      "name": "Pago sin contacto",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 5
+    },
+    {
+      "name": "Datáfono",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 9
+    },
+    {
+      "name": "IBAN",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 10
+    },
+    {
+      "name": "Cuenta corriente",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 8
+    },
+    {
+      "name": "Libreta de ahorros",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 8
+    },
+    {
+      "name": "Transferencia bancaria",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 7
+    },
+    {
+      "name": "Domiciliación bancaria",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 11
+    },
+    {
+      "name": "Recibo",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 7
+    },
+    {
+      "name": "Caja de ahorros",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 11
+    },
+    {
+      "name": "Euríbor",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 12
+    },
+    {
+      "name": "Cheque",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 8
+    },
+    {
+      "name": "Pagaré",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 13
+    },
+    {
+      "name": "Comisión bancaria",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 10
+    },
+    {
+      "name": "Préstamo",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 6
+    },
+    {
+      "name": "Fondo de Garantía de Depósitos",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 14
+    },
+    {
+      "name": "Hucha",
+      "facet": "Bancos, tarjetas y pagos",
+      "known_at": 1
+    },
+    {
+      "name": "Hacienda",
+      "facet": "Hacienda e impuestos",
+      "known_at": 7
+    },
+    {
+      "name": "Agencia Tributaria",
+      "facet": "Hacienda e impuestos",
+      "known_at": 10
+    },
+    {
+      "name": "Declaración de la renta",
+      "facet": "Hacienda e impuestos",
+      "known_at": 9
+    },
+    {
+      "name": "Campaña de la renta",
+      "facet": "Hacienda e impuestos",
+      "known_at": 10
+    },
+    {
+      "name": "Borrador de la renta",
+      "facet": "Hacienda e impuestos",
+      "known_at": 12
+    },
+    {
+      "name": "Renta Web",
+      "facet": "Hacienda e impuestos",
+      "known_at": 13
+    },
+    {
+      "name": "IRPF",
+      "facet": "Hacienda e impuestos",
+      "known_at": 11
+    },
+    {
+      "name": "IVA superreducido",
+      "facet": "Hacienda e impuestos",
+      "known_at": 13
+    },
+    {
+      "name": "Impuesto de sucesiones",
+      "facet": "Hacienda e impuestos",
+      "known_at": 13
+    },
+    {
+      "name": "Impuesto de circulación",
+      "facet": "Hacienda e impuestos",
+      "known_at": 12
+    },
+    {
+      "name": "Tasa de basuras",
+      "facet": "Hacienda e impuestos",
+      "known_at": 11
+    },
+    {
+      "name": "NIF",
+      "facet": "Hacienda e impuestos",
+      "known_at": 11
+    },
+    {
+      "name": "Modelo 100",
+      "facet": "Hacienda e impuestos",
+      "known_at": 14
+    },
+    {
+      "name": "Factura",
+      "facet": "Hacienda e impuestos",
+      "known_at": 5
+    },
+    {
+      "name": "Devolución de Hacienda",
+      "facet": "Hacienda e impuestos",
+      "known_at": 10
+    },
+    {
+      "name": "«Hacienda somos todos»",
+      "facet": "Hacienda e impuestos",
+      "known_at": 11
+    },
+    {
+      "name": "Casilla de la Iglesia",
+      "facet": "Hacienda e impuestos",
+      "known_at": 12
+    },
+    {
+      "name": "Casilla de fines sociales",
+      "facet": "Hacienda e impuestos",
+      "known_at": 13
+    },
+    {
+      "name": "Paraíso fiscal",
+      "facet": "Hacienda e impuestos",
+      "known_at": 11
+    },
+    {
+      "name": "DNI electrónico",
+      "facet": "DNI y documentos personales",
+      "known_at": 10
+    },
+    {
+      "name": "Letra del DNI",
+      "facet": "DNI y documentos personales",
+      "known_at": 10
+    },
+    {
+      "name": "Pasaporte",
+      "facet": "DNI y documentos personales",
+      "known_at": 4
+    },
+    {
+      "name": "NIE",
+      "facet": "DNI y documentos personales",
+      "known_at": 11
+    },
+    {
+      "name": "Libro de familia",
+      "facet": "DNI y documentos personales",
+      "known_at": 10
+    },
+    {
+      "name": "Registro Civil",
+      "facet": "DNI y documentos personales",
+      "known_at": 11
+    },
+    {
+      "name": "Partida de nacimiento",
+      "facet": "DNI y documentos personales",
+      "known_at": 11
+    },
+    {
+      "name": "Certificado digital",
+      "facet": "DNI y documentos personales",
+      "known_at": 12
+    },
+    {
+      "name": "Cl@ve",
+      "facet": "DNI y documentos personales",
+      "known_at": 12
+    },
+    {
+      "name": "Certificado de antecedentes penales",
+      "facet": "DNI y documentos personales",
+      "known_at": 13
+    },
+    {
+      "name": "Tarjeta de residencia",
+      "facet": "DNI y documentos personales",
+      "known_at": 12
+    },
+    {
+      "name": "Foto de carné",
+      "facet": "DNI y documentos personales",
+      "known_at": 6
+    },
+    {
+      "name": "Huella dactilar",
+      "facet": "DNI y documentos personales",
+      "known_at": 5
+    },
+    {
+      "name": "Firma",
+      "facet": "DNI y documentos personales",
+      "known_at": 3
+    },
+    {
+      "name": "Dos apellidos",
+      "facet": "DNI y documentos personales",
+      "known_at": 5
+    },
+    {
+      "name": "Cita previa",
+      "facet": "DNI y documentos personales",
+      "known_at": 9
+    },
+    {
+      "name": "Fotocopia compulsada",
+      "facet": "DNI y documentos personales",
+      "known_at": 13
+    },
+    {
+      "name": "Fe de vida",
+      "facet": "DNI y documentos personales",
+      "known_at": 14
+    },
+    {
+      "name": "Ayuntamiento",
+      "facet": "Ayuntamiento y administración pública",
+      "known_at": 3
+    },
+    {
+      "name": "Concejal",
+      "facet": "Ayuntamiento y administración pública",
+      "known_at": 9
+    },
+    {
+      "name": "Pleno municipal",
+      "facet": "Ayuntamiento y administración pública",
+      "known_at": 11
+    },
+    {
+      "name": "Bando municipal",
+      "facet": "Ayuntamiento y administración pública",
+      "known_at": 11
+    },
+    {
+      "name": "Vara de mando",
+      "facet": "Ayuntamiento y administración pública",
+      "known_at": 12
+    },
+    {
+      "name": "Padrón municipal",
+      "facet": "Ayuntamiento y administración pública",
+      "known_at": 11
+    },
+    {
+      "name": "Pedanía",
+      "facet": "Ayuntamiento y administración pública",
+      "known_at": 13
+    },
+    {
+      "name": "Mancomunidad",
+      "facet": "Ayuntamiento y administración pública",
+      "known_at": 14
+    },
+    {
+      "name": "Funcionario",
+      "facet": "Ayuntamiento y administración pública",
+      "known_at": 7
+    },
+    {
+      "name": "Oposiciones",
+      "facet": "Ayuntamiento y administración pública",
+      "known_at": 9
+    },
+    {
+      "name": "Sede electrónica",
+      "facet": "Ayuntamiento y administración pública",
+      "known_at": 12
+    },
+    {
+      "name": "Ventanilla",
+      "facet": "Ayuntamiento y administración pública",
+      "known_at": 6
+    },
+    {
+      "name": "Delegación del Gobierno",
+      "facet": "Ayuntamiento y administración pública",
+      "known_at": 13
+    },
+    {
+      "name": "Papeleo",
+      "facet": "Ayuntamiento y administración pública",
+      "known_at": 7
+    },
+    {
+      "name": "Tarjeta sanitaria",
+      "facet": "Seguridad Social y sanidad pública",
+      "known_at": 6
+    },
+    {
+      "name": "Tarjeta Sanitaria Europea",
+      "facet": "Seguridad Social y sanidad pública",
+      "known_at": 12
+    },
+    {
+      "name": "Número de la Seguridad Social",
+      "facet": "Seguridad Social y sanidad pública",
+      "known_at": 11
+    },
+    {
+      "name": "Ambulatorio",
+      "facet": "Seguridad Social y sanidad pública",
+      "known_at": 8
+    },
+    {
+      "name": "Pediatra",
+      "facet": "Seguridad Social y sanidad pública",
+      "known_at": 2
+    },
+    {
+      "name": "Urgencias",
+      "facet": "Seguridad Social y sanidad pública",
+      "known_at": 3
+    },
+    {
+      "name": "Receta médica",
+      "facet": "Seguridad Social y sanidad pública",
+      "known_at": 5
+    },
+    {
+      "name": "Receta electrónica",
+      "facet": "Seguridad Social y sanidad pública",
+      "known_at": 11
+    },
+    {
+      "name": "Copago farmacéutico",
+      "facet": "Seguridad Social y sanidad pública",
+      "known_at": 13
+    },
+    {
+      "name": "Baja médica",
+      "facet": "Seguridad Social y sanidad pública",
+      "known_at": 8
+    },
+    {
+      "name": "Lista de espera",
+      "facet": "Seguridad Social y sanidad pública",
+      "known_at": 10
+    },
+    {
+      "name": "Pensión de jubilación",
+      "facet": "Seguridad Social y sanidad pública",
+      "known_at": 8
+    },
+    {
+      "name": "Vida laboral",
+      "facet": "Seguridad Social y sanidad pública",
+      "known_at": 11
+    },
+    {
+      "name": "Mutua",
+      "facet": "Seguridad Social y sanidad pública",
+      "known_at": 12
+    },
+    {
+      "name": "MUFACE",
+      "facet": "Seguridad Social y sanidad pública",
+      "known_at": 14
+    },
+    {
+      "name": "Nómina",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 8
+    },
+    {
+      "name": "Paga extra",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 9
+    },
+    {
+      "name": "Paro",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 7
+    },
+    {
+      "name": "SEPE",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 11
+    },
+    {
+      "name": "INEM",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 12
+    },
+    {
+      "name": "Salario mínimo interprofesional",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 10
+    },
+    {
+      "name": "Contrato indefinido",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 10
+    },
+    {
+      "name": "Contrato temporal",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 10
+    },
+    {
+      "name": "Finiquito",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 11
+    },
+    {
+      "name": "Despido",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 8
+    },
+    {
+      "name": "ERTE",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 11
+    },
+    {
+      "name": "ERE",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 12
+    },
+    {
+      "name": "Convenio colectivo",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 12
+    },
+    {
+      "name": "Sindicato",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 10
+    },
+    {
+      "name": "Huelga general",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 10
+    },
+    {
+      "name": "Primero de Mayo",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 6
+    },
+    {
+      "name": "Autónomo",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 8
+    },
+    {
+      "name": "Cuota de autónomos",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 12
+    },
+    {
+      "name": "Cotización",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 11
+    },
+    {
+      "name": "Fichar",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 9
+    },
+    {
+      "name": "Becario",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 9
+    },
+    {
+      "name": "Trienio",
+      "facet": "Trabajo, nómina y paro",
+      "known_at": 13
+    },
+    {
+      "name": "Piso",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 2
+    },
+    {
+      "name": "Bajo",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 7
+    },
+    {
+      "name": "Entresuelo",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 11
+    },
+    {
+      "name": "Telefonillo",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 5
+    },
+    {
+      "name": "Portero",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 5
+    },
+    {
+      "name": "Junta de vecinos",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 9
+    },
+    {
+      "name": "Cuota de comunidad",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 10
+    },
+    {
+      "name": "Derrama",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 12
+    },
+    {
+      "name": "Administrador de fincas",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 12
+    },
+    {
+      "name": "Alquiler",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 5
+    },
+    {
+      "name": "Casero",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 7
+    },
+    {
+      "name": "Inquilino",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 8
+    },
+    {
+      "name": "Fianza",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 9
+    },
+    {
+      "name": "Piso compartido",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 10
+    },
+    {
+      "name": "Escritura",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 11
+    },
+    {
+      "name": "Notario",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 10
+    },
+    {
+      "name": "Registro de la Propiedad",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 12
+    },
+    {
+      "name": "Vivienda de protección oficial",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 12
+    },
+    {
+      "name": "Certificado energético",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 13
+    },
+    {
+      "name": "Cédula de habitabilidad",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 14
+    },
+    {
+      "name": "Burbuja inmobiliaria",
+      "facet": "Vivienda, alquiler y comunidad",
+      "known_at": 11
+    },
+    {
+      "name": "Factura de la luz",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 6
+    },
+    {
+      "name": "Contador de la luz",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 6
+    },
+    {
+      "name": "Kilovatio hora",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 10
+    },
+    {
+      "name": "Potencia contratada",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 12
+    },
+    {
+      "name": "Horas valle",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 12
+    },
+    {
+      "name": "PVPC",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 14
+    },
+    {
+      "name": "Bono social",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 13
+    },
+    {
+      "name": "Red Eléctrica",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 13
+    },
+    {
+      "name": "Apagón del 28 de abril de 2025",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 8
+    },
+    {
+      "name": "Placas solares",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 5
+    },
+    {
+      "name": "Butanero",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 8
+    },
+    {
+      "name": "Gas natural",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 7
+    },
+    {
+      "name": "Caldera",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 7
+    },
+    {
+      "name": "Prefijo telefónico",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 9
+    },
+    {
+      "name": "Fibra óptica",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 8
+    },
+    {
+      "name": "Tarifa plana",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 9
+    },
+    {
+      "name": "Portabilidad",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 11
+    },
+    {
+      "name": "Servicio de información 1003",
+      "facet": "Luz, agua, gas y teléfono",
+      "known_at": 13
+    },
+    {
+      "name": "Cartero",
+      "facet": "Correos, transporte y abonos",
+      "known_at": 2
+    },
+    {
+      "name": "Sello",
+      "facet": "Correos, transporte y abonos",
+      "known_at": 3
+    },
+    {
+      "name": "Código postal",
+      "facet": "Correos, transporte y abonos",
+      "known_at": 7
+    },
+    {
+      "name": "Carta certificada",
+      "facet": "Correos, transporte y abonos",
+      "known_at": 10
+    },
+    {
+      "name": "Aviso de llegada de Correos",
+      "facet": "Correos, transporte y abonos",
+      "known_at": 11
+    },
+    {
+      "name": "Apartado de correos",
+      "facet": "Correos, transporte y abonos",
+      "known_at": 12
+    },
+    {
+      "name": "Burofax",
+      "facet": "Correos, transporte y abonos",
+      "known_at": 12
+    },
+    {
+      "name": "EMT",
+      "facet": "Correos, transporte y abonos",
+      "known_at": 9
+    },
+    {
+      "name": "Abono transporte",
+      "facet": "Correos, transporte y abonos",
+      "known_at": 8
+    },
+    {
+      "name": "Metrobús",
+      "facet": "Correos, transporte y abonos",
+      "known_at": 12
+    },
+    {
+      "name": "Luz verde del taxi",
+      "facet": "Correos, transporte y abonos",
+      "known_at": 8
+    },
+    {
+      "name": "Carné de conducir",
+      "facet": "Tráfico, coche y carné",
+      "known_at": 5
+    },
+    {
+      "name": "Examen teórico",
+      "facet": "Tráfico, coche y carné",
+      "known_at": 8
+    },
+    {
+      "name": "Matrícula",
+      "facet": "Tráfico, coche y carné",
+      "known_at": 5
+    },
+    {
+      "name": "Triángulos de emergencia",
+      "facet": "Tráfico, coche y carné",
+      "known_at": 8
+    },
+    {
+      "name": "Multa",
+      "facet": "Tráfico, coche y carné",
+      "known_at": 4
+    },
+    {
+      "name": "Radar",
+      "facet": "Tráfico, coche y carné",
+      "known_at": 6
+    },
+    {
+      "name": "Guardia Civil de Tráfico",
+      "facet": "Tráfico, coche y carné",
+      "known_at": 7
+    },
+    {
+      "name": "Seguro obligatorio del coche",
+      "facet": "Tráfico, coche y carné",
+      "known_at": 9
+    },
+    {
+      "name": "Parte amistoso",
+      "facet": "Tráfico, coche y carné",
+      "known_at": 12
+    },
+    {
+      "name": "Zona azul",
+      "facet": "Tráfico, coche y carné",
+      "known_at": 9
+    },
+    {
+      "name": "Grúa municipal",
+      "facet": "Tráfico, coche y carné",
+      "known_at": 8
+    },
+    {
+      "name": "Lotería del Niño",
+      "facet": "Lotería, ONCE y quinielas",
+      "known_at": 8
+    },
+    {
+      "name": "Anuncio de la Lotería de Navidad",
+      "facet": "Lotería, ONCE y quinielas",
+      "known_at": 8
+    },
+    {
+      "name": "Rasca",
+      "facet": "Lotería, ONCE y quinielas",
+      "known_at": 7
+    },
+    {
+      "name": "1X2",
+      "facet": "Lotería, ONCE y quinielas",
+      "known_at": 9
+    },
+    {
+      "name": "Pleno al 15",
+      "facet": "Lotería, ONCE y quinielas",
+      "known_at": 11
+    },
+    {
+      "name": "Primitiva",
+      "facet": "Lotería, ONCE y quinielas",
+      "known_at": 8
+    },
+    {
+      "name": "Bonoloto",
+      "facet": "Lotería, ONCE y quinielas",
+      "known_at": 10
+    },
+    {
+      "name": "Euromillones",
+      "facet": "Lotería, ONCE y quinielas",
+      "known_at": 6
+    }
+  ]
+}

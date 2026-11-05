@@ -1,0 +1,812 @@
+{
+  "subcategory": "footballers-and-national-team",
+  "facets": [
+    "Leyendas del fútbol español",
+    "Estrellas actuales de la Selección",
+    "Mundial de Sudáfrica 2010",
+    "Eurocopas ganadas por España",
+    "La Roja: historia y apodos",
+    "Seleccionadores y entrenadores",
+    "Selección femenina y sus estrellas",
+    "Porteros míticos",
+    "Goles y momentos históricos",
+    "Récords y cifras de jugadores",
+    "Apodos, celebraciones y anécdotas",
+    "Españoles triunfando en el extranjero"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sergio Busquets",
+      "facet": "Leyendas del fútbol español",
+      "known_at": 8
+    },
+    {
+      "name": "Fernando Morientes",
+      "facet": "Leyendas del fútbol español",
+      "known_at": 11
+    },
+    {
+      "name": "Julen Guerrero",
+      "facet": "Leyendas del fútbol español",
+      "known_at": 12
+    },
+    {
+      "name": "Rodri",
+      "facet": "Estrellas actuales de la Selección",
+      "known_at": 6
+    },
+    {
+      "name": "Pedri",
+      "facet": "Estrellas actuales de la Selección",
+      "known_at": 4
+    },
+    {
+      "name": "Dani Olmo",
+      "facet": "Estrellas actuales de la Selección",
+      "known_at": 6
+    },
+    {
+      "name": "Álvaro Morata",
+      "facet": "Estrellas actuales de la Selección",
+      "known_at": 5
+    },
+    {
+      "name": "Fabián Ruiz",
+      "facet": "Estrellas actuales de la Selección",
+      "known_at": 8
+    },
+    {
+      "name": "Dani Carvajal",
+      "facet": "Estrellas actuales de la Selección",
+      "known_at": 6
+    },
+    {
+      "name": "Aymeric Laporte",
+      "facet": "Estrellas actuales de la Selección",
+      "known_at": 9
+    },
+    {
+      "name": "Marc Cucurella",
+      "facet": "Estrellas actuales de la Selección",
+      "known_at": 6
+    },
+    {
+      "name": "Mikel Merino",
+      "facet": "Estrellas actuales de la Selección",
+      "known_at": 8
+    },
+    {
+      "name": "Robin Le Normand",
+      "facet": "Estrellas actuales de la Selección",
+      "known_at": 10
+    },
+    {
+      "name": "Pau Cubarsí",
+      "facet": "Estrellas actuales de la Selección",
+      "known_at": 6
+    },
+    {
+      "name": "Ferran Torres",
+      "facet": "Estrellas actuales de la Selección",
+      "known_at": 7
+    },
+    {
+      "name": "Álex Baena",
+      "facet": "Estrellas actuales de la Selección",
+      "known_at": 9
+    },
+    {
+      "name": "Dean Huijsen",
+      "facet": "Estrellas actuales de la Selección",
+      "known_at": 8
+    },
+    {
+      "name": "Final de Johannesburgo",
+      "facet": "Mundial de Sudáfrica 2010",
+      "known_at": 8
+    },
+    {
+      "name": "Estadio Soccer City",
+      "facet": "Mundial de Sudáfrica 2010",
+      "known_at": 12
+    },
+    {
+      "name": "Selección de Países Bajos",
+      "facet": "Mundial de Sudáfrica 2010",
+      "known_at": 7
+    },
+    {
+      "name": "Pulpo Paul",
+      "facet": "Mundial de Sudáfrica 2010",
+      "known_at": 8
+    },
+    {
+      "name": "Vuvuzela",
+      "facet": "Mundial de Sudáfrica 2010",
+      "known_at": 7
+    },
+    {
+      "name": "Jabulani",
+      "facet": "Mundial de Sudáfrica 2010",
+      "known_at": 12
+    },
+    {
+      "name": "Derrota ante Suiza",
+      "facet": "Mundial de Sudáfrica 2010",
+      "known_at": 11
+    },
+    {
+      "name": "Semifinal contra Alemania",
+      "facet": "Mundial de Sudáfrica 2010",
+      "known_at": 10
+    },
+    {
+      "name": "Cuartos de final contra Paraguay",
+      "facet": "Mundial de Sudáfrica 2010",
+      "known_at": 12
+    },
+    {
+      "name": "Arjen Robben",
+      "facet": "Mundial de Sudáfrica 2010",
+      "known_at": 10
+    },
+    {
+      "name": "Nigel de Jong",
+      "facet": "Mundial de Sudáfrica 2010",
+      "known_at": 13
+    },
+    {
+      "name": "Howard Webb",
+      "facet": "Mundial de Sudáfrica 2010",
+      "known_at": 14
+    },
+    {
+      "name": "Beso de Casillas a Sara Carbonero",
+      "facet": "Mundial de Sudáfrica 2010",
+      "known_at": 9
+    },
+    {
+      "name": "Estrella en la camiseta",
+      "facet": "Mundial de Sudáfrica 2010",
+      "known_at": 6
+    },
+    {
+      "name": "Rúa de los campeones del mundo en Madrid",
+      "facet": "Mundial de Sudáfrica 2010",
+      "known_at": 10
+    },
+    {
+      "name": "Waka Waka",
+      "facet": "Mundial de Sudáfrica 2010",
+      "known_at": 5
+    },
+    {
+      "name": "Copa del Mundo",
+      "facet": "Mundial de Sudáfrica 2010",
+      "known_at": 3
+    },
+    {
+      "name": "Eurocopa 1964",
+      "facet": "Eurocopas ganadas por España",
+      "known_at": 11
+    },
+    {
+      "name": "Eurocopa 2008",
+      "facet": "Eurocopas ganadas por España",
+      "known_at": 8
+    },
+    {
+      "name": "Eurocopa 2012",
+      "facet": "Eurocopas ganadas por España",
+      "known_at": 9
+    },
+    {
+      "name": "Eurocopa 2024",
+      "facet": "Eurocopas ganadas por España",
+      "known_at": 4
+    },
+    {
+      "name": "Final de Viena",
+      "facet": "Eurocopas ganadas por España",
+      "known_at": 10
+    },
+    {
+      "name": "Final de Kiev",
+      "facet": "Eurocopas ganadas por España",
+      "known_at": 11
+    },
+    {
+      "name": "Final de Berlín",
+      "facet": "Eurocopas ganadas por España",
+      "known_at": 6
+    },
+    {
+      "name": "Tanda de penaltis contra Italia en 2008",
+      "facet": "Eurocopas ganadas por España",
+      "known_at": 10
+    },
+    {
+      "name": "Estadio Ernst Happel",
+      "facet": "Eurocopas ganadas por España",
+      "known_at": 14
+    },
+    {
+      "name": "Estadio Olímpico de Berlín",
+      "facet": "Eurocopas ganadas por España",
+      "known_at": 9
+    },
+    {
+      "name": "Copa Henri Delaunay",
+      "facet": "Eurocopas ganadas por España",
+      "known_at": 13
+    },
+    {
+      "name": "Selección de la Unión Soviética",
+      "facet": "Eurocopas ganadas por España",
+      "known_at": 12
+    },
+    {
+      "name": "Final de la Eurocopa 1984",
+      "facet": "Eurocopas ganadas por España",
+      "known_at": 13
+    },
+    {
+      "name": "Selección de Inglaterra",
+      "facet": "Eurocopas ganadas por España",
+      "known_at": 5
+    },
+    {
+      "name": "Selección de Alemania",
+      "facet": "Eurocopas ganadas por España",
+      "known_at": 5
+    },
+    {
+      "name": "La Roja",
+      "facet": "La Roja: historia y apodos",
+      "known_at": 2
+    },
+    {
+      "name": "La Furia Española",
+      "facet": "La Roja: historia y apodos",
+      "known_at": 10
+    },
+    {
+      "name": "Juegos Olímpicos de Amberes 1920",
+      "facet": "La Roja: historia y apodos",
+      "known_at": 14
+    },
+    {
+      "name": "Oro olímpico de Barcelona 1992",
+      "facet": "La Roja: historia y apodos",
+      "known_at": 11
+    },
+    {
+      "name": "Real Federación Española de Fútbol",
+      "facet": "La Roja: historia y apodos",
+      "known_at": 7
+    },
+    {
+      "name": "Camiseta roja",
+      "facet": "La Roja: historia y apodos",
+      "known_at": 1
+    },
+    {
+      "name": "Ciudad del Fútbol de Las Rozas",
+      "facet": "La Roja: historia y apodos",
+      "known_at": 11
+    },
+    {
+      "name": "Mundial de Italia 1934",
+      "facet": "La Roja: historia y apodos",
+      "known_at": 14
+    },
+    {
+      "name": "Mundial de Corea y Japón 2002",
+      "facet": "La Roja: historia y apodos",
+      "known_at": 10
+    },
+    {
+      "name": "Mundial 2030",
+      "facet": "La Roja: historia y apodos",
+      "known_at": 6
+    },
+    {
+      "name": "Escudo de la Selección",
+      "facet": "La Roja: historia y apodos",
+      "known_at": 4
+    },
+    {
+      "name": "Luis de la Fuente",
+      "facet": "Seleccionadores y entrenadores",
+      "known_at": 6
+    },
+    {
+      "name": "José Antonio Camacho",
+      "facet": "Seleccionadores y entrenadores",
+      "known_at": 11
+    },
+    {
+      "name": "Julen Lopetegui",
+      "facet": "Seleccionadores y entrenadores",
+      "known_at": 10
+    },
+    {
+      "name": "Iñaki Sáez",
+      "facet": "Seleccionadores y entrenadores",
+      "known_at": 14
+    },
+    {
+      "name": "Mikel Arteta",
+      "facet": "Seleccionadores y entrenadores",
+      "known_at": 9
+    },
+    {
+      "name": "Montse Tomé",
+      "facet": "Seleccionadores y entrenadores",
+      "known_at": 11
+    },
+    {
+      "name": "Jorge Vilda",
+      "facet": "Seleccionadores y entrenadores",
+      "known_at": 11
+    },
+    {
+      "name": "José Villalonga",
+      "facet": "Seleccionadores y entrenadores",
+      "known_at": 15
+    },
+    {
+      "name": "Andoni Iraola",
+      "facet": "Seleccionadores y entrenadores",
+      "known_at": 12
+    },
+    {
+      "name": "Jennifer Hermoso",
+      "facet": "Selección femenina y sus estrellas",
+      "known_at": 8
+    },
+    {
+      "name": "Cata Coll",
+      "facet": "Selección femenina y sus estrellas",
+      "known_at": 11
+    },
+    {
+      "name": "Mundial femenino de 2023",
+      "facet": "Selección femenina y sus estrellas",
+      "known_at": 7
+    },
+    {
+      "name": "Final de Sídney",
+      "facet": "Selección femenina y sus estrellas",
+      "known_at": 10
+    },
+    {
+      "name": "Mariona Caldentey",
+      "facet": "Selección femenina y sus estrellas",
+      "known_at": 11
+    },
+    {
+      "name": "Liga de Naciones femenina 2024",
+      "facet": "Selección femenina y sus estrellas",
+      "known_at": 12
+    },
+    {
+      "name": "Claudia Pina",
+      "facet": "Selección femenina y sus estrellas",
+      "known_at": 11
+    },
+    {
+      "name": "Teresa Abelleira",
+      "facet": "Selección femenina y sus estrellas",
+      "known_at": 12
+    },
+    {
+      "name": "Alba Redondo",
+      "facet": "Selección femenina y sus estrellas",
+      "known_at": 13
+    },
+    {
+      "name": "Selección de Inglaterra femenina",
+      "facet": "Selección femenina y sus estrellas",
+      "known_at": 9
+    },
+    {
+      "name": "Andoni Zubizarreta",
+      "facet": "Porteros míticos",
+      "known_at": 11
+    },
+    {
+      "name": "Ricardo Zamora",
+      "facet": "Porteros míticos",
+      "known_at": 12
+    },
+    {
+      "name": "Luis Arconada",
+      "facet": "Porteros míticos",
+      "known_at": 13
+    },
+    {
+      "name": "Santiago Cañizares",
+      "facet": "Porteros míticos",
+      "known_at": 11
+    },
+    {
+      "name": "Víctor Valdés",
+      "facet": "Porteros míticos",
+      "known_at": 9
+    },
+    {
+      "name": "David de Gea",
+      "facet": "Porteros míticos",
+      "known_at": 7
+    },
+    {
+      "name": "Pepe Reina",
+      "facet": "Porteros míticos",
+      "known_at": 9
+    },
+    {
+      "name": "Unai Simón",
+      "facet": "Porteros míticos",
+      "known_at": 5
+    },
+    {
+      "name": "Kepa Arrizabalaga",
+      "facet": "Porteros míticos",
+      "known_at": 9
+    },
+    {
+      "name": "Paco Buyo",
+      "facet": "Porteros míticos",
+      "known_at": 13
+    },
+    {
+      "name": "Antonio Ramallets",
+      "facet": "Porteros míticos",
+      "known_at": 15
+    },
+    {
+      "name": "David Raya",
+      "facet": "Porteros míticos",
+      "known_at": 9
+    },
+    {
+      "name": "Abel Resino",
+      "facet": "Porteros míticos",
+      "known_at": 14
+    },
+    {
+      "name": "José Francisco Molina",
+      "facet": "Porteros míticos",
+      "known_at": 14
+    },
+    {
+      "name": "Guantes de portero",
+      "facet": "Porteros míticos",
+      "known_at": 2
+    },
+    {
+      "name": "Gol de Iniesta en la final del Mundial",
+      "facet": "Goles y momentos históricos",
+      "known_at": 5
+    },
+    {
+      "name": "Gol de Zarra en Maracaná",
+      "facet": "Goles y momentos históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Gol de Torres en la final de Viena",
+      "facet": "Goles y momentos históricos",
+      "known_at": 10
+    },
+    {
+      "name": "Gol de Marcelino a la Unión Soviética",
+      "facet": "Goles y momentos históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Gol de Oyarzabal en la final de Berlín",
+      "facet": "Goles y momentos históricos",
+      "known_at": 7
+    },
+    {
+      "name": "España 12-1 Malta",
+      "facet": "Goles y momentos históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Gol de Señor",
+      "facet": "Goles y momentos históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Gol de Lamine Yamal a Francia",
+      "facet": "Goles y momentos históricos",
+      "known_at": 6
+    },
+    {
+      "name": "Gol de cabeza de Puyol a Alemania",
+      "facet": "Goles y momentos históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Penalti a lo Panenka de Sergio Ramos",
+      "facet": "Goles y momentos históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Fallo de Cardeñosa",
+      "facet": "Goles y momentos históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Codazo de Tassotti a Luis Enrique",
+      "facet": "Goles y momentos históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Parada de Casillas a Robben",
+      "facet": "Goles y momentos históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Gol de Kiko en Barcelona 1992",
+      "facet": "Goles y momentos históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Gol de Sergio Ramos en el minuto 92:48",
+      "facet": "Goles y momentos históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Iniestazo de Stamford Bridge",
+      "facet": "Goles y momentos históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Penalti de Cesc a Italia",
+      "facet": "Goles y momentos históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Gol de Olga Carmona en la final del Mundial",
+      "facet": "Goles y momentos históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Trofeo Pichichi",
+      "facet": "Récords y cifras de jugadores",
+      "known_at": 8
+    },
+    {
+      "name": "Balón de Oro",
+      "facet": "Récords y cifras de jugadores",
+      "known_at": 4
+    },
+    {
+      "name": "Hat-trick",
+      "facet": "Récords y cifras de jugadores",
+      "known_at": 5
+    },
+    {
+      "name": "Internacionalidad",
+      "facet": "Récords y cifras de jugadores",
+      "known_at": 10
+    },
+    {
+      "name": "Iago Aspas",
+      "facet": "Récords y cifras de jugadores",
+      "known_at": 9
+    },
+    {
+      "name": "Quini",
+      "facet": "Récords y cifras de jugadores",
+      "known_at": 13
+    },
+    {
+      "name": "Isidro Lángara",
+      "facet": "Récords y cifras de jugadores",
+      "known_at": 15
+    },
+    {
+      "name": "Racha de partidos invicta de la Selección",
+      "facet": "Récords y cifras de jugadores",
+      "known_at": 12
+    },
+    {
+      "name": "Premio Golden Boy",
+      "facet": "Récords y cifras de jugadores",
+      "known_at": 10
+    },
+    {
+      "name": "Dorsal 10",
+      "facet": "Récords y cifras de jugadores",
+      "known_at": 3
+    },
+    {
+      "name": "El Niño",
+      "facet": "Apodos, celebraciones y anécdotas",
+      "known_at": 7
+    },
+    {
+      "name": "El Buitre",
+      "facet": "Apodos, celebraciones y anécdotas",
+      "known_at": 11
+    },
+    {
+      "name": "El Sabio de Hortaleza",
+      "facet": "Apodos, celebraciones y anécdotas",
+      "known_at": 12
+    },
+    {
+      "name": "San Iker",
+      "facet": "Apodos, celebraciones y anécdotas",
+      "known_at": 9
+    },
+    {
+      "name": "La Saeta Rubia",
+      "facet": "Apodos, celebraciones y anécdotas",
+      "known_at": 12
+    },
+    {
+      "name": "El Divino",
+      "facet": "Apodos, celebraciones y anécdotas",
+      "known_at": 14
+    },
+    {
+      "name": "El Txopo",
+      "facet": "Apodos, celebraciones y anécdotas",
+      "known_at": 14
+    },
+    {
+      "name": "El Mago",
+      "facet": "Apodos, celebraciones y anécdotas",
+      "known_at": 11
+    },
+    {
+      "name": "Ganar, ganar y volver a ganar",
+      "facet": "Apodos, celebraciones y anécdotas",
+      "known_at": 11
+    },
+    {
+      "name": "Gesto del 304",
+      "facet": "Apodos, celebraciones y anécdotas",
+      "known_at": 7
+    },
+    {
+      "name": "Manolo el del Bombo",
+      "facet": "Apodos, celebraciones y anécdotas",
+      "known_at": 9
+    },
+    {
+      "name": "Iniesta de mi vida",
+      "facet": "Apodos, celebraciones y anécdotas",
+      "known_at": 11
+    },
+    {
+      "name": "David Silva",
+      "facet": "Españoles triunfando en el extranjero",
+      "known_at": 8
+    },
+    {
+      "name": "Juan Mata",
+      "facet": "Españoles triunfando en el extranjero",
+      "known_at": 10
+    },
+    {
+      "name": "Santi Cazorla",
+      "facet": "Españoles triunfando en el extranjero",
+      "known_at": 10
+    },
+    {
+      "name": "Michu",
+      "facet": "Españoles triunfando en el extranjero",
+      "known_at": 14
+    },
+    {
+      "name": "Diego Costa",
+      "facet": "Españoles triunfando en el extranjero",
+      "known_at": 10
+    },
+    {
+      "name": "Fernando Llorente",
+      "facet": "Españoles triunfando en el extranjero",
+      "known_at": 11
+    },
+    {
+      "name": "César Azpilicueta",
+      "facet": "Españoles triunfando en el extranjero",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro Rodríguez",
+      "facet": "Españoles triunfando en el extranjero",
+      "known_at": 10
+    },
+    {
+      "name": "Jordi Alba",
+      "facet": "Españoles triunfando en el extranjero",
+      "known_at": 8
+    },
+    {
+      "name": "Vissel Kobe",
+      "facet": "Españoles triunfando en el extranjero",
+      "known_at": 12
+    },
+    {
+      "name": "Inter Miami",
+      "facet": "Españoles triunfando en el extranjero",
+      "known_at": 6
+    },
+    {
+      "name": "Schalke 04",
+      "facet": "Españoles triunfando en el extranjero",
+      "known_at": 12
+    },
+    {
+      "name": "Milagro de Estambul",
+      "facet": "Españoles triunfando en el extranjero",
+      "known_at": 13
+    },
+    {
+      "name": "Bayer Leverkusen",
+      "facet": "Españoles triunfando en el extranjero",
+      "known_at": 9
+    },
+    {
+      "name": "Premier League",
+      "facet": "Españoles triunfando en el extranjero",
+      "known_at": 5
+    },
+    {
+      "name": "Manchester City",
+      "facet": "Españoles triunfando en el extranjero",
+      "known_at": 4
+    }
+  ]
+}

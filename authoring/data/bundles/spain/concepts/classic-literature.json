@@ -1,0 +1,1037 @@
+{
+  "subcategory": "classic-literature",
+  "facets": [
+    "Cantares de gesta y poesía medieval",
+    "Romancero y poesía popular",
+    "La Celestina y la novela picaresca",
+    "Cervantes y el Quijote a fondo",
+    "Poesía del Siglo de Oro",
+    "Teatro del Siglo de Oro",
+    "Romanticismo español",
+    "Realismo y naturalismo del XIX",
+    "Generación del 98 y modernismo",
+    "Generación del 27",
+    "Novela y teatro de posguerra",
+    "Palabras y huellas literarias"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 1,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "El Cid Campeador",
+      "facet": "Cantares de gesta y poesía medieval",
+      "known_at": 5
+    },
+    {
+      "name": "Per Abbat",
+      "facet": "Cantares de gesta y poesía medieval",
+      "known_at": 14
+    },
+    {
+      "name": "Mester de juglaría",
+      "facet": "Cantares de gesta y poesía medieval",
+      "known_at": 11
+    },
+    {
+      "name": "Mester de clerecía",
+      "facet": "Cantares de gesta y poesía medieval",
+      "known_at": 11
+    },
+    {
+      "name": "Cuaderna vía",
+      "facet": "Cantares de gesta y poesía medieval",
+      "known_at": 12
+    },
+    {
+      "name": "Gonzalo de Berceo",
+      "facet": "Cantares de gesta y poesía medieval",
+      "known_at": 11
+    },
+    {
+      "name": "Milagros de Nuestra Señora",
+      "facet": "Cantares de gesta y poesía medieval",
+      "known_at": 12
+    },
+    {
+      "name": "Arcipreste de Hita",
+      "facet": "Cantares de gesta y poesía medieval",
+      "known_at": 11
+    },
+    {
+      "name": "Libro de buen amor",
+      "facet": "Cantares de gesta y poesía medieval",
+      "known_at": 11
+    },
+    {
+      "name": "Don Juan Manuel",
+      "facet": "Cantares de gesta y poesía medieval",
+      "known_at": 11
+    },
+    {
+      "name": "El conde Lucanor",
+      "facet": "Cantares de gesta y poesía medieval",
+      "known_at": 10
+    },
+    {
+      "name": "Jorge Manrique",
+      "facet": "Cantares de gesta y poesía medieval",
+      "known_at": 11
+    },
+    {
+      "name": "Coplas por la muerte de su padre",
+      "facet": "Cantares de gesta y poesía medieval",
+      "known_at": 11
+    },
+    {
+      "name": "Cantigas de Santa María",
+      "facet": "Cantares de gesta y poesía medieval",
+      "known_at": 12
+    },
+    {
+      "name": "Marqués de Santillana",
+      "facet": "Cantares de gesta y poesía medieval",
+      "known_at": 12
+    },
+    {
+      "name": "Romancero viejo",
+      "facet": "Romancero y poesía popular",
+      "known_at": 11
+    },
+    {
+      "name": "Romance",
+      "facet": "Romancero y poesía popular",
+      "known_at": 10
+    },
+    {
+      "name": "Octosílabo",
+      "facet": "Romancero y poesía popular",
+      "known_at": 10
+    },
+    {
+      "name": "Rima asonante",
+      "facet": "Romancero y poesía popular",
+      "known_at": 9
+    },
+    {
+      "name": "Romance del conde Arnaldos",
+      "facet": "Romancero y poesía popular",
+      "known_at": 13
+    },
+    {
+      "name": "Romance del prisionero",
+      "facet": "Romancero y poesía popular",
+      "known_at": 13
+    },
+    {
+      "name": "Romance de Abenámar",
+      "facet": "Romancero y poesía popular",
+      "known_at": 13
+    },
+    {
+      "name": "Romance de la pérdida de Alhama",
+      "facet": "Romancero y poesía popular",
+      "known_at": 14
+    },
+    {
+      "name": "Villancico",
+      "facet": "Romancero y poesía popular",
+      "known_at": 5
+    },
+    {
+      "name": "Seguidilla",
+      "facet": "Romancero y poesía popular",
+      "known_at": 12
+    },
+    {
+      "name": "Nana",
+      "facet": "Romancero y poesía popular",
+      "known_at": 6
+    },
+    {
+      "name": "Refranero",
+      "facet": "Romancero y poesía popular",
+      "known_at": 9
+    },
+    {
+      "name": "Trabalenguas",
+      "facet": "Romancero y poesía popular",
+      "known_at": 5
+    },
+    {
+      "name": "Adivinanza",
+      "facet": "Romancero y poesía popular",
+      "known_at": 3
+    },
+    {
+      "name": "Retahíla",
+      "facet": "Romancero y poesía popular",
+      "known_at": 9
+    },
+    {
+      "name": "Canción de corro",
+      "facet": "Romancero y poesía popular",
+      "known_at": 5
+    },
+    {
+      "name": "Cancionero de Palacio",
+      "facet": "Romancero y poesía popular",
+      "known_at": 14
+    },
+    {
+      "name": "Juan del Encina",
+      "facet": "Romancero y poesía popular",
+      "known_at": 13
+    },
+    {
+      "name": "Pliego de cordel",
+      "facet": "Romancero y poesía popular",
+      "known_at": 14
+    },
+    {
+      "name": "Coplas de ciego",
+      "facet": "Romancero y poesía popular",
+      "known_at": 14
+    },
+    {
+      "name": "Fernando de Rojas",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 11
+    },
+    {
+      "name": "Calisto",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 11
+    },
+    {
+      "name": "Melibea",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 11
+    },
+    {
+      "name": "Pármeno",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 14
+    },
+    {
+      "name": "Sempronio",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 14
+    },
+    {
+      "name": "Tragicomedia",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 11
+    },
+    {
+      "name": "Ciego del Lazarillo",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 9
+    },
+    {
+      "name": "Escudero del Lazarillo",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 11
+    },
+    {
+      "name": "Clérigo de Maqueda",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 13
+    },
+    {
+      "name": "Episodio del racimo de uvas",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 11
+    },
+    {
+      "name": "Río Tormes",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 9
+    },
+    {
+      "name": "Guzmán de Alfarache",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 12
+    },
+    {
+      "name": "Mateo Alemán",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 13
+    },
+    {
+      "name": "El Buscón",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 11
+    },
+    {
+      "name": "Pablos",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 13
+    },
+    {
+      "name": "Dómine Cabra",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 13
+    },
+    {
+      "name": "Rinconete y Cortadillo",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 12
+    },
+    {
+      "name": "La pícara Justina",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 15
+    },
+    {
+      "name": "Estebanillo González",
+      "facet": "La Celestina y la novela picaresca",
+      "known_at": 15
+    },
+    {
+      "name": "Rucio",
+      "facet": "Cervantes y el Quijote a fondo",
+      "known_at": 10
+    },
+    {
+      "name": "Aldonza Lorenzo",
+      "facet": "Cervantes y el Quijote a fondo",
+      "known_at": 12
+    },
+    {
+      "name": "Alonso Quijano",
+      "facet": "Cervantes y el Quijote a fondo",
+      "known_at": 10
+    },
+    {
+      "name": "Sansón Carrasco",
+      "facet": "Cervantes y el Quijote a fondo",
+      "known_at": 13
+    },
+    {
+      "name": "Caballero de la Blanca Luna",
+      "facet": "Cervantes y el Quijote a fondo",
+      "known_at": 13
+    },
+    {
+      "name": "Cide Hamete Benengeli",
+      "facet": "Cervantes y el Quijote a fondo",
+      "known_at": 13
+    },
+    {
+      "name": "Quijote de Avellaneda",
+      "facet": "Cervantes y el Quijote a fondo",
+      "known_at": 14
+    },
+    {
+      "name": "Yelmo de Mambrino",
+      "facet": "Cervantes y el Quijote a fondo",
+      "known_at": 13
+    },
+    {
+      "name": "Clavileño",
+      "facet": "Cervantes y el Quijote a fondo",
+      "known_at": 14
+    },
+    {
+      "name": "Escrutinio de la biblioteca",
+      "facet": "Cervantes y el Quijote a fondo",
+      "known_at": 13
+    },
+    {
+      "name": "Libros de caballerías",
+      "facet": "Cervantes y el Quijote a fondo",
+      "known_at": 10
+    },
+    {
+      "name": "Amadís de Gaula",
+      "facet": "Cervantes y el Quijote a fondo",
+      "known_at": 12
+    },
+    {
+      "name": "El cerco de Numancia",
+      "facet": "Cervantes y el Quijote a fondo",
+      "known_at": 14
+    },
+    {
+      "name": "Los trabajos de Persiles y Sigismunda",
+      "facet": "Cervantes y el Quijote a fondo",
+      "known_at": 14
+    },
+    {
+      "name": "Juan Boscán",
+      "facet": "Poesía del Siglo de Oro",
+      "known_at": 13
+    },
+    {
+      "name": "Fray Luis de León",
+      "facet": "Poesía del Siglo de Oro",
+      "known_at": 11
+    },
+    {
+      "name": "Oda a la vida retirada",
+      "facet": "Poesía del Siglo de Oro",
+      "known_at": 13
+    },
+    {
+      "name": "Noche oscura del alma",
+      "facet": "Poesía del Siglo de Oro",
+      "known_at": 12
+    },
+    {
+      "name": "Fábula de Polifemo y Galatea",
+      "facet": "Poesía del Siglo de Oro",
+      "known_at": 14
+    },
+    {
+      "name": "Soledades",
+      "facet": "Poesía del Siglo de Oro",
+      "known_at": 14
+    },
+    {
+      "name": "«Érase un hombre a una nariz pegado»",
+      "facet": "Poesía del Siglo de Oro",
+      "known_at": 9
+    },
+    {
+      "name": "«Un soneto me manda hacer Violante»",
+      "facet": "Poesía del Siglo de Oro",
+      "known_at": 11
+    },
+    {
+      "name": "Soneto",
+      "facet": "Poesía del Siglo de Oro",
+      "known_at": 9
+    },
+    {
+      "name": "Endecasílabo",
+      "facet": "Poesía del Siglo de Oro",
+      "known_at": 11
+    },
+    {
+      "name": "Lira",
+      "facet": "Poesía del Siglo de Oro",
+      "known_at": 12
+    },
+    {
+      "name": "Égloga",
+      "facet": "Poesía del Siglo de Oro",
+      "known_at": 13
+    },
+    {
+      "name": "Carpe diem",
+      "facet": "Poesía del Siglo de Oro",
+      "known_at": 11
+    },
+    {
+      "name": "Locus amoenus",
+      "facet": "Poesía del Siglo de Oro",
+      "known_at": 13
+    },
+    {
+      "name": "Petrarquismo",
+      "facet": "Poesía del Siglo de Oro",
+      "known_at": 14
+    },
+    {
+      "name": "Fernando de Herrera",
+      "facet": "Poesía del Siglo de Oro",
+      "known_at": 14
+    },
+    {
+      "name": "Fénix de los ingenios",
+      "facet": "Teatro del Siglo de Oro",
+      "known_at": 12
+    },
+    {
+      "name": "El perro del hortelano",
+      "facet": "Teatro del Siglo de Oro",
+      "known_at": 10
+    },
+    {
+      "name": "El caballero de Olmedo",
+      "facet": "Teatro del Siglo de Oro",
+      "known_at": 12
+    },
+    {
+      "name": "Peribáñez y el comendador de Ocaña",
+      "facet": "Teatro del Siglo de Oro",
+      "known_at": 14
+    },
+    {
+      "name": "Arte nuevo de hacer comedias",
+      "facet": "Teatro del Siglo de Oro",
+      "known_at": 13
+    },
+    {
+      "name": "El alcalde de Zalamea",
+      "facet": "Teatro del Siglo de Oro",
+      "known_at": 12
+    },
+    {
+      "name": "El gran teatro del mundo",
+      "facet": "Teatro del Siglo de Oro",
+      "known_at": 13
+    },
+    {
+      "name": "Don Juan",
+      "facet": "Teatro del Siglo de Oro",
+      "known_at": 8
+    },
+    {
+      "name": "Mosqueteros",
+      "facet": "Teatro del Siglo de Oro",
+      "known_at": 13
+    },
+    {
+      "name": "Cazuela",
+      "facet": "Teatro del Siglo de Oro",
+      "known_at": 14
+    },
+    {
+      "name": "Gracioso",
+      "facet": "Teatro del Siglo de Oro",
+      "known_at": 12
+    },
+    {
+      "name": "Entremés",
+      "facet": "Teatro del Siglo de Oro",
+      "known_at": 11
+    },
+    {
+      "name": "Auto sacramental",
+      "facet": "Teatro del Siglo de Oro",
+      "known_at": 12
+    },
+    {
+      "name": "Rimas",
+      "facet": "Romanticismo español",
+      "known_at": 9
+    },
+    {
+      "name": "«¿Qué es poesía? Poesía eres tú»",
+      "facet": "Romanticismo español",
+      "known_at": 8
+    },
+    {
+      "name": "Leyendas de Bécquer",
+      "facet": "Romanticismo español",
+      "known_at": 11
+    },
+    {
+      "name": "José de Espronceda",
+      "facet": "Romanticismo español",
+      "known_at": 10
+    },
+    {
+      "name": "Canción del pirata",
+      "facet": "Romanticismo español",
+      "known_at": 9
+    },
+    {
+      "name": "El estudiante de Salamanca",
+      "facet": "Romanticismo español",
+      "known_at": 13
+    },
+    {
+      "name": "Doña Inés",
+      "facet": "Romanticismo español",
+      "known_at": 11
+    },
+    {
+      "name": "«Vuelva usted mañana»",
+      "facet": "Romanticismo español",
+      "known_at": 11
+    },
+    {
+      "name": "Cantares gallegos",
+      "facet": "Romanticismo español",
+      "known_at": 12
+    },
+    {
+      "name": "Duque de Rivas",
+      "facet": "Romanticismo español",
+      "known_at": 12
+    },
+    {
+      "name": "Don Álvaro o la fuerza del sino",
+      "facet": "Romanticismo español",
+      "known_at": 13
+    },
+    {
+      "name": "Costumbrismo",
+      "facet": "Romanticismo español",
+      "known_at": 12
+    },
+    {
+      "name": "Fernán Caballero",
+      "facet": "Romanticismo español",
+      "known_at": 14
+    },
+    {
+      "name": "Trafalgar",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Fortunata y Jacinta",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 11
+    },
+    {
+      "name": "Marianela",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 11
+    },
+    {
+      "name": "Misericordia",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Doña Perfecta",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Leopoldo Alas «Clarín»",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 11
+    },
+    {
+      "name": "La Regenta",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 11
+    },
+    {
+      "name": "Ana Ozores",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 13
+    },
+    {
+      "name": "¡Adiós, Cordera!",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Los pazos de Ulloa",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 13
+    },
+    {
+      "name": "La cuestión palpitante",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 15
+    },
+    {
+      "name": "Naturalismo",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Valera",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Pepita Jiménez",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Pedro Antonio de Alarcón",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 12
+    },
+    {
+      "name": "El sombrero de tres picos",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 11
+    },
+    {
+      "name": "Vicente Blasco Ibáñez",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 11
+    },
+    {
+      "name": "José María de Pereda",
+      "facet": "Realismo y naturalismo del XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Nivola",
+      "facet": "Generación del 98 y modernismo",
+      "known_at": 12
+    },
+    {
+      "name": "San Manuel Bueno, mártir",
+      "facet": "Generación del 98 y modernismo",
+      "known_at": 12
+    },
+    {
+      "name": "«Venceréis, pero no convenceréis»",
+      "facet": "Generación del 98 y modernismo",
+      "known_at": 11
+    },
+    {
+      "name": "«Caminante, no hay camino»",
+      "facet": "Generación del 98 y modernismo",
+      "known_at": 6
+    },
+    {
+      "name": "Leonor Izquierdo",
+      "facet": "Generación del 98 y modernismo",
+      "known_at": 13
+    },
+    {
+      "name": "Manuel Machado",
+      "facet": "Generación del 98 y modernismo",
+      "known_at": 12
+    },
+    {
+      "name": "El árbol de la ciencia",
+      "facet": "Generación del 98 y modernismo",
+      "known_at": 11
+    },
+    {
+      "name": "Luces de bohemia",
+      "facet": "Generación del 98 y modernismo",
+      "known_at": 11
+    },
+    {
+      "name": "Max Estrella",
+      "facet": "Generación del 98 y modernismo",
+      "known_at": 12
+    },
+    {
+      "name": "Callejón del Gato",
+      "facet": "Generación del 98 y modernismo",
+      "known_at": 13
+    },
+    {
+      "name": "Marqués de Bradomín",
+      "facet": "Generación del 98 y modernismo",
+      "known_at": 13
+    },
+    {
+      "name": "Los intereses creados",
+      "facet": "Generación del 98 y modernismo",
+      "known_at": 13
+    },
+    {
+      "name": "Romancero gitano",
+      "facet": "Generación del 27",
+      "known_at": 10
+    },
+    {
+      "name": "Bodas de sangre",
+      "facet": "Generación del 27",
+      "known_at": 10
+    },
+    {
+      "name": "Yerma",
+      "facet": "Generación del 27",
+      "known_at": 11
+    },
+    {
+      "name": "La casa de Bernarda Alba",
+      "facet": "Generación del 27",
+      "known_at": 10
+    },
+    {
+      "name": "Poeta en Nueva York",
+      "facet": "Generación del 27",
+      "known_at": 11
+    },
+    {
+      "name": "Huerta de San Vicente",
+      "facet": "Generación del 27",
+      "known_at": 13
+    },
+    {
+      "name": "Marinero en tierra",
+      "facet": "Generación del 27",
+      "known_at": 11
+    },
+    {
+      "name": "Nanas de la cebolla",
+      "facet": "Generación del 27",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro Salinas",
+      "facet": "Generación del 27",
+      "known_at": 12
+    },
+    {
+      "name": "Jorge Guillén",
+      "facet": "Generación del 27",
+      "known_at": 13
+    },
+    {
+      "name": "Gerardo Diego",
+      "facet": "Generación del 27",
+      "known_at": 12
+    },
+    {
+      "name": "Dámaso Alonso",
+      "facet": "Generación del 27",
+      "known_at": 12
+    },
+    {
+      "name": "Luis Cernuda",
+      "facet": "Generación del 27",
+      "known_at": 12
+    },
+    {
+      "name": "Residencia de Estudiantes",
+      "facet": "Generación del 27",
+      "known_at": 11
+    },
+    {
+      "name": "Homenaje a Góngora de 1927",
+      "facet": "Generación del 27",
+      "known_at": 13
+    },
+    {
+      "name": "Las Sinsombrero",
+      "facet": "Generación del 27",
+      "known_at": 12
+    },
+    {
+      "name": "María Teresa León",
+      "facet": "Generación del 27",
+      "known_at": 13
+    },
+    {
+      "name": "Ernestina de Champourcín",
+      "facet": "Generación del 27",
+      "known_at": 14
+    },
+    {
+      "name": "La familia de Pascual Duarte",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 11
+    },
+    {
+      "name": "La colmena",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 11
+    },
+    {
+      "name": "Tremendismo",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 13
+    },
+    {
+      "name": "Carmen Laforet",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 11
+    },
+    {
+      "name": "Nada",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 11
+    },
+    {
+      "name": "Premio Nadal",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 11
+    },
+    {
+      "name": "El camino",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 11
+    },
+    {
+      "name": "Los santos inocentes",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 11
+    },
+    {
+      "name": "Cinco horas con Mario",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 12
+    },
+    {
+      "name": "Carmen Martín Gaite",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 12
+    },
+    {
+      "name": "Rafael Sánchez Ferlosio",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 13
+    },
+    {
+      "name": "Luis Martín-Santos",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 14
+    },
+    {
+      "name": "Tiempo de silencio",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Goytisolo",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 13
+    },
+    {
+      "name": "Ignacio Aldecoa",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio Buero Vallejo",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 11
+    },
+    {
+      "name": "Historia de una escalera",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 12
+    },
+    {
+      "name": "Miguel Mihura",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 12
+    },
+    {
+      "name": "Tres sombreros de copa",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 13
+    },
+    {
+      "name": "Alfonso Sastre",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 14
+    },
+    {
+      "name": "Gloria Fuertes",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 6
+    },
+    {
+      "name": "Hijos de la ira",
+      "facet": "Novela y teatro de posguerra",
+      "known_at": 13
+    },
+    {
+      "name": "Quijotesco",
+      "facet": "Palabras y huellas literarias",
+      "known_at": 8
+    },
+    {
+      "name": "«Limpia, fija y da esplendor»",
+      "facet": "Palabras y huellas literarias",
+      "known_at": 12
+    },
+    {
+      "name": "Diccionario de la lengua española",
+      "facet": "Palabras y huellas literarias",
+      "known_at": 7
+    },
+    {
+      "name": "Eñe",
+      "facet": "Palabras y huellas literarias",
+      "known_at": 3
+    },
+    {
+      "name": "La lengua de Cervantes",
+      "facet": "Palabras y huellas literarias",
+      "known_at": 8
+    },
+    {
+      "name": "Instituto Cervantes",
+      "facet": "Palabras y huellas literarias",
+      "known_at": 9
+    },
+    {
+      "name": "Premio Cervantes",
+      "facet": "Palabras y huellas literarias",
+      "known_at": 9
+    },
+    {
+      "name": "Premio Princesa de Asturias de las Letras",
+      "facet": "Palabras y huellas literarias",
+      "known_at": 11
+    },
+    {
+      "name": "Premio Planeta",
+      "facet": "Palabras y huellas literarias",
+      "known_at": 10
+    },
+    {
+      "name": "Día del Libro",
+      "facet": "Palabras y huellas literarias",
+      "known_at": 6
+    },
+    {
+      "name": "Feria del Libro de Madrid",
+      "facet": "Palabras y huellas literarias",
+      "known_at": 9
+    },
+    {
+      "name": "Barrio de las Letras",
+      "facet": "Palabras y huellas literarias",
+      "known_at": 11
+    },
+    {
+      "name": "Casa Museo de Lope de Vega",
+      "facet": "Palabras y huellas literarias",
+      "known_at": 13
+    },
+    {
+      "name": "Seudónimo",
+      "facet": "Palabras y huellas literarias",
+      "known_at": 9
+    },
+    {
+      "name": "«Decíamos ayer»",
+      "facet": "Palabras y huellas literarias",
+      "known_at": 12
+    }
+  ]
+}

@@ -1,0 +1,987 @@
+{
+  "subcategory": "pop-and-rock",
+  "facets": [
+    "La Movida madrileña",
+    "Grupos de pop de los 80",
+    "Rock urbano y rock duro",
+    "Cantautores y solistas",
+    "Voces femeninas del pop",
+    "Canciones del verano y éxitos bailables",
+    "Pop rock de los 90",
+    "Rock y pop con raíces regionales",
+    "España en Eurovisión",
+    "Programas, radio y discográficas",
+    "Letras, títulos y estribillos famosos",
+    "Instrumentos, estilos y conciertos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Alaska y los Pegamoides",
+      "facet": "La Movida madrileña",
+      "known_at": 12
+    },
+    {
+      "name": "Alaska y Dinarama",
+      "facet": "La Movida madrileña",
+      "known_at": 11
+    },
+    {
+      "name": "Tino Casal",
+      "facet": "La Movida madrileña",
+      "known_at": 12
+    },
+    {
+      "name": "Almodóvar y McNamara",
+      "facet": "La Movida madrileña",
+      "known_at": 14
+    },
+    {
+      "name": "Concierto homenaje a Canito",
+      "facet": "La Movida madrileña",
+      "known_at": 15
+    },
+    {
+      "name": "Glutamato Ye-Yé",
+      "facet": "La Movida madrileña",
+      "known_at": 14
+    },
+    {
+      "name": "Parálisis Permanente",
+      "facet": "La Movida madrileña",
+      "known_at": 14
+    },
+    {
+      "name": "Ana Curra",
+      "facet": "La Movida madrileña",
+      "known_at": 14
+    },
+    {
+      "name": "Los Zombies",
+      "facet": "La Movida madrileña",
+      "known_at": 15
+    },
+    {
+      "name": "Duncan Dhu",
+      "facet": "Grupos de pop de los 80",
+      "known_at": 12
+    },
+    {
+      "name": "Los Pecos",
+      "facet": "Grupos de pop de los 80",
+      "known_at": 13
+    },
+    {
+      "name": "Tequila",
+      "facet": "Grupos de pop de los 80",
+      "known_at": 12
+    },
+    {
+      "name": "Orquesta Mondragón",
+      "facet": "Grupos de pop de los 80",
+      "known_at": 12
+    },
+    {
+      "name": "Golpes Bajos",
+      "facet": "Grupos de pop de los 80",
+      "known_at": 14
+    },
+    {
+      "name": "Danza Invisible",
+      "facet": "Grupos de pop de los 80",
+      "known_at": 13
+    },
+    {
+      "name": "El Último de la Fila",
+      "facet": "Grupos de pop de los 80",
+      "known_at": 11
+    },
+    {
+      "name": "Olé Olé",
+      "facet": "Grupos de pop de los 80",
+      "known_at": 12
+    },
+    {
+      "name": "Los Toreros Muertos",
+      "facet": "Grupos de pop de los 80",
+      "known_at": 13
+    },
+    {
+      "name": "Presuntos Implicados",
+      "facet": "Grupos de pop de los 80",
+      "known_at": 13
+    },
+    {
+      "name": "Modestia Aparte",
+      "facet": "Grupos de pop de los 80",
+      "known_at": 13
+    },
+    {
+      "name": "La Guardia",
+      "facet": "Grupos de pop de los 80",
+      "known_at": 13
+    },
+    {
+      "name": "Los Rebeldes",
+      "facet": "Grupos de pop de los 80",
+      "known_at": 13
+    },
+    {
+      "name": "Objetivo Birmania",
+      "facet": "Grupos de pop de los 80",
+      "known_at": 14
+    },
+    {
+      "name": "Barón Rojo",
+      "facet": "Rock urbano y rock duro",
+      "known_at": 11
+    },
+    {
+      "name": "Obús",
+      "facet": "Rock urbano y rock duro",
+      "known_at": 12
+    },
+    {
+      "name": "Leño",
+      "facet": "Rock urbano y rock duro",
+      "known_at": 12
+    },
+    {
+      "name": "Rosendo Mercado",
+      "facet": "Rock urbano y rock duro",
+      "known_at": 12
+    },
+    {
+      "name": "Asfalto",
+      "facet": "Rock urbano y rock duro",
+      "known_at": 14
+    },
+    {
+      "name": "Burning",
+      "facet": "Rock urbano y rock duro",
+      "known_at": 13
+    },
+    {
+      "name": "Extremoduro",
+      "facet": "Rock urbano y rock duro",
+      "known_at": 11
+    },
+    {
+      "name": "Robe Iniesta",
+      "facet": "Rock urbano y rock duro",
+      "known_at": 12
+    },
+    {
+      "name": "Platero y Tú",
+      "facet": "Rock urbano y rock duro",
+      "known_at": 12
+    },
+    {
+      "name": "Los Suaves",
+      "facet": "Rock urbano y rock duro",
+      "known_at": 12
+    },
+    {
+      "name": "Barricada",
+      "facet": "Rock urbano y rock duro",
+      "known_at": 13
+    },
+    {
+      "name": "Mägo de Oz",
+      "facet": "Rock urbano y rock duro",
+      "known_at": 11
+    },
+    {
+      "name": "Marea",
+      "facet": "Rock urbano y rock duro",
+      "known_at": 13
+    },
+    {
+      "name": "Ñu",
+      "facet": "Rock urbano y rock duro",
+      "known_at": 14
+    },
+    {
+      "name": "Saratoga",
+      "facet": "Rock urbano y rock duro",
+      "known_at": 14
+    },
+    {
+      "name": "Ángeles del Infierno",
+      "facet": "Rock urbano y rock duro",
+      "known_at": 14
+    },
+    {
+      "name": "Topo",
+      "facet": "Rock urbano y rock duro",
+      "known_at": 15
+    },
+    {
+      "name": "Joan Manuel Serrat",
+      "facet": "Cantautores y solistas",
+      "known_at": 9
+    },
+    {
+      "name": "Joaquín Sabina",
+      "facet": "Cantautores y solistas",
+      "known_at": 9
+    },
+    {
+      "name": "Enrique Iglesias",
+      "facet": "Cantautores y solistas",
+      "known_at": 6
+    },
+    {
+      "name": "Camilo Sesto",
+      "facet": "Cantautores y solistas",
+      "known_at": 9
+    },
+    {
+      "name": "Miguel Bosé",
+      "facet": "Cantautores y solistas",
+      "known_at": 8
+    },
+    {
+      "name": "Alejandro Sanz",
+      "facet": "Cantautores y solistas",
+      "known_at": 7
+    },
+    {
+      "name": "Luis Eduardo Aute",
+      "facet": "Cantautores y solistas",
+      "known_at": 13
+    },
+    {
+      "name": "Víctor Manuel",
+      "facet": "Cantautores y solistas",
+      "known_at": 12
+    },
+    {
+      "name": "José Luis Perales",
+      "facet": "Cantautores y solistas",
+      "known_at": 11
+    },
+    {
+      "name": "Miguel Ríos",
+      "facet": "Cantautores y solistas",
+      "known_at": 11
+    },
+    {
+      "name": "Antonio Vega",
+      "facet": "Cantautores y solistas",
+      "known_at": 13
+    },
+    {
+      "name": "Sergio Dalma",
+      "facet": "Cantautores y solistas",
+      "known_at": 11
+    },
+    {
+      "name": "Manolo García",
+      "facet": "Cantautores y solistas",
+      "known_at": 11
+    },
+    {
+      "name": "Ramoncín",
+      "facet": "Cantautores y solistas",
+      "known_at": 12
+    },
+    {
+      "name": "Antonio Flores",
+      "facet": "Cantautores y solistas",
+      "known_at": 12
+    },
+    {
+      "name": "Manolo Tena",
+      "facet": "Cantautores y solistas",
+      "known_at": 13
+    },
+    {
+      "name": "Javier Krahe",
+      "facet": "Cantautores y solistas",
+      "known_at": 15
+    },
+    {
+      "name": "Mónica Naranjo",
+      "facet": "Voces femeninas del pop",
+      "known_at": 9
+    },
+    {
+      "name": "Marta Sánchez",
+      "facet": "Voces femeninas del pop",
+      "known_at": 9
+    },
+    {
+      "name": "Ana Belén",
+      "facet": "Voces femeninas del pop",
+      "known_at": 10
+    },
+    {
+      "name": "Jeanette",
+      "facet": "Voces femeninas del pop",
+      "known_at": 13
+    },
+    {
+      "name": "Ana Torroja",
+      "facet": "Voces femeninas del pop",
+      "known_at": 11
+    },
+    {
+      "name": "Luz Casal",
+      "facet": "Voces femeninas del pop",
+      "known_at": 11
+    },
+    {
+      "name": "Paloma San Basilio",
+      "facet": "Voces femeninas del pop",
+      "known_at": 12
+    },
+    {
+      "name": "Mari Trini",
+      "facet": "Voces femeninas del pop",
+      "known_at": 13
+    },
+    {
+      "name": "Cecilia",
+      "facet": "Voces femeninas del pop",
+      "known_at": 13
+    },
+    {
+      "name": "Rosana",
+      "facet": "Voces femeninas del pop",
+      "known_at": 10
+    },
+    {
+      "name": "Malú",
+      "facet": "Voces femeninas del pop",
+      "known_at": 7
+    },
+    {
+      "name": "Marisol",
+      "facet": "Voces femeninas del pop",
+      "known_at": 10
+    },
+    {
+      "name": "Christina Rosenvinge",
+      "facet": "Voces femeninas del pop",
+      "known_at": 13
+    },
+    {
+      "name": "Vicky Larraz",
+      "facet": "Voces femeninas del pop",
+      "known_at": 14
+    },
+    {
+      "name": "Ella Baila Sola",
+      "facet": "Voces femeninas del pop",
+      "known_at": 12
+    },
+    {
+      "name": "Salomé",
+      "facet": "España en Eurovisión",
+      "known_at": 13
+    },
+    {
+      "name": "Karina",
+      "facet": "España en Eurovisión",
+      "known_at": 12
+    },
+    {
+      "name": "Betty Missiego",
+      "facet": "España en Eurovisión",
+      "known_at": 14
+    },
+    {
+      "name": "Anabel Conde",
+      "facet": "España en Eurovisión",
+      "known_at": 14
+    },
+    {
+      "name": "Bravo",
+      "facet": "España en Eurovisión",
+      "known_at": 14
+    },
+    {
+      "name": "Lydia",
+      "facet": "España en Eurovisión",
+      "known_at": 13
+    },
+    {
+      "name": "Marcos Llunas",
+      "facet": "España en Eurovisión",
+      "known_at": 14
+    },
+    {
+      "name": "«Eres tú»",
+      "facet": "España en Eurovisión",
+      "known_at": 10
+    },
+    {
+      "name": "«Vivo cantando»",
+      "facet": "España en Eurovisión",
+      "known_at": 13
+    },
+    {
+      "name": "«En un mundo nuevo»",
+      "facet": "España en Eurovisión",
+      "known_at": 13
+    },
+    {
+      "name": "«Gwendolyne»",
+      "facet": "España en Eurovisión",
+      "known_at": 13
+    },
+    {
+      "name": "«Yo soy aquél»",
+      "facet": "España en Eurovisión",
+      "known_at": 12
+    },
+    {
+      "name": "Festival de Eurovisión de 1969",
+      "facet": "España en Eurovisión",
+      "known_at": 12
+    },
+    {
+      "name": "«Macarena»",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 2
+    },
+    {
+      "name": "Georgie Dann",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 11
+    },
+    {
+      "name": "«La barbacoa»",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 11
+    },
+    {
+      "name": "«Un rayo de sol»",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 13
+    },
+    {
+      "name": "«El venao»",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 10
+    },
+    {
+      "name": "«Black is black»",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 12
+    },
+    {
+      "name": "Los Bravos",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 13
+    },
+    {
+      "name": "Fórmula V",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 12
+    },
+    {
+      "name": "«Eva María»",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 11
+    },
+    {
+      "name": "«Hawaii-Bombay»",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 11
+    },
+    {
+      "name": "«Chiquilla»",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 11
+    },
+    {
+      "name": "«El tractor amarillo»",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 9
+    },
+    {
+      "name": "«El baile de los pajaritos»",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 6
+    },
+    {
+      "name": "María Jesús y su acordeón",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 13
+    },
+    {
+      "name": "«Bailar pegados»",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 10
+    },
+    {
+      "name": "Azúcar Moreno",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 11
+    },
+    {
+      "name": "«Y viva España»",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 8
+    },
+    {
+      "name": "«Bailando»",
+      "facet": "Canciones del verano y éxitos bailables",
+      "known_at": 11
+    },
+    {
+      "name": "Héroes del Silencio",
+      "facet": "Pop rock de los 90",
+      "known_at": 10
+    },
+    {
+      "name": "Enrique Bunbury",
+      "facet": "Pop rock de los 90",
+      "known_at": 10
+    },
+    {
+      "name": "Jarabe de Palo",
+      "facet": "Pop rock de los 90",
+      "known_at": 9
+    },
+    {
+      "name": "Pau Donés",
+      "facet": "Pop rock de los 90",
+      "known_at": 11
+    },
+    {
+      "name": "La Oreja de Van Gogh",
+      "facet": "Pop rock de los 90",
+      "known_at": 7
+    },
+    {
+      "name": "Amaral",
+      "facet": "Pop rock de los 90",
+      "known_at": 9
+    },
+    {
+      "name": "Los Rodríguez",
+      "facet": "Pop rock de los 90",
+      "known_at": 13
+    },
+    {
+      "name": "Dover",
+      "facet": "Pop rock de los 90",
+      "known_at": 11
+    },
+    {
+      "name": "Los Planetas",
+      "facet": "Pop rock de los 90",
+      "known_at": 13
+    },
+    {
+      "name": "Café Quijano",
+      "facet": "Pop rock de los 90",
+      "known_at": 11
+    },
+    {
+      "name": "M-Clan",
+      "facet": "Pop rock de los 90",
+      "known_at": 11
+    },
+    {
+      "name": "Revólver",
+      "facet": "Pop rock de los 90",
+      "known_at": 13
+    },
+    {
+      "name": "Tam Tam Go!",
+      "facet": "Pop rock de los 90",
+      "known_at": 13
+    },
+    {
+      "name": "El Canto del Loco",
+      "facet": "Pop rock de los 90",
+      "known_at": 7
+    },
+    {
+      "name": "Fangoria",
+      "facet": "Pop rock de los 90",
+      "known_at": 11
+    },
+    {
+      "name": "Fito y Fitipaldis",
+      "facet": "Pop rock de los 90",
+      "known_at": 9
+    },
+    {
+      "name": "Mojinos Escozíos",
+      "facet": "Pop rock de los 90",
+      "known_at": 12
+    },
+    {
+      "name": "Los Piratas",
+      "facet": "Pop rock de los 90",
+      "known_at": 14
+    },
+    {
+      "name": "La Cabra Mecánica",
+      "facet": "Pop rock de los 90",
+      "known_at": 14
+    },
+    {
+      "name": "Los Chichos",
+      "facet": "Rock y pop con raíces regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Siniestro Total",
+      "facet": "Rock y pop con raíces regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Celtas Cortos",
+      "facet": "Rock y pop con raíces regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Kortatu",
+      "facet": "Rock y pop con raíces regionales",
+      "known_at": 14
+    },
+    {
+      "name": "Lluís Llach",
+      "facet": "Rock y pop con raíces regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Raimon",
+      "facet": "Rock y pop con raíces regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Sau",
+      "facet": "Rock y pop con raíces regionales",
+      "known_at": 14
+    },
+    {
+      "name": "Els Pets",
+      "facet": "Rock y pop con raíces regionales",
+      "known_at": 14
+    },
+    {
+      "name": "Sopa de Cabra",
+      "facet": "Rock y pop con raíces regionales",
+      "known_at": 14
+    },
+    {
+      "name": "Los 40 Principales",
+      "facet": "Programas, radio y discográficas",
+      "known_at": 9
+    },
+    {
+      "name": "Cadena SER",
+      "facet": "Programas, radio y discográficas",
+      "known_at": 11
+    },
+    {
+      "name": "Radio 3",
+      "facet": "Programas, radio y discográficas",
+      "known_at": 12
+    },
+    {
+      "name": "Cadena Dial",
+      "facet": "Programas, radio y discográficas",
+      "known_at": 10
+    },
+    {
+      "name": "Radiolé",
+      "facet": "Programas, radio y discográficas",
+      "known_at": 13
+    },
+    {
+      "name": "Aplauso",
+      "facet": "Programas, radio y discográficas",
+      "known_at": 13
+    },
+    {
+      "name": "Tocata",
+      "facet": "Programas, radio y discográficas",
+      "known_at": 14
+    },
+    {
+      "name": "Rockopop",
+      "facet": "Programas, radio y discográficas",
+      "known_at": 14
+    },
+    {
+      "name": "Música sí",
+      "facet": "Programas, radio y discográficas",
+      "known_at": 13
+    },
+    {
+      "name": "Festival de Benidorm",
+      "facet": "Programas, radio y discográficas",
+      "known_at": 12
+    },
+    {
+      "name": "Hispavox",
+      "facet": "Programas, radio y discográficas",
+      "known_at": 14
+    },
+    {
+      "name": "DRO",
+      "facet": "Programas, radio y discográficas",
+      "known_at": 15
+    },
+    {
+      "name": "El Gran Musical",
+      "facet": "Programas, radio y discográficas",
+      "known_at": 14
+    },
+    {
+      "name": "José María Íñigo",
+      "facet": "Programas, radio y discográficas",
+      "known_at": 12
+    },
+    {
+      "name": "Joaquín Luqui",
+      "facet": "Programas, radio y discográficas",
+      "known_at": 14
+    },
+    {
+      "name": "Superpop",
+      "facet": "Programas, radio y discográficas",
+      "known_at": 12
+    },
+    {
+      "name": "«Mi gran noche»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 8
+    },
+    {
+      "name": "«Resistiré»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 6
+    },
+    {
+      "name": "«Cuéntame»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "«Libre»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "«Un beso y una flor»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "«Hijo de la Luna»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "«Cruz de navajas»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "«Me colé en una fiesta»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "«Devuélveme a mi chica»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "«Entre dos tierras»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "«Lobo hombre en París»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "«Ni tú ni nadie»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "«Hoy no me puedo levantar»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 7
+    },
+    {
+      "name": "«Cadillac solitario»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "«Mediterráneo»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "«19 días y 500 noches»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "«Vivir así es morir de amor»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "«La flaca»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "«Corazón partío»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 7
+    },
+    {
+      "name": "«A quién le importa»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 7
+    },
+    {
+      "name": "«20 de abril»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "«Maldito duende»",
+      "facet": "Letras, títulos y estribillos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Nova Cançó",
+      "facet": "Instrumentos, estilos y conciertos",
+      "known_at": 12
+    },
+    {
+      "name": "Rock radical vasco",
+      "facet": "Instrumentos, estilos y conciertos",
+      "known_at": 13
+    },
+    {
+      "name": "Ruta del Bakalao",
+      "facet": "Instrumentos, estilos y conciertos",
+      "known_at": 11
+    },
+    {
+      "name": "Movida viguesa",
+      "facet": "Instrumentos, estilos y conciertos",
+      "known_at": 14
+    },
+    {
+      "name": "Tecnopop",
+      "facet": "Instrumentos, estilos y conciertos",
+      "known_at": 13
+    },
+    {
+      "name": "Ye-yé",
+      "facet": "Instrumentos, estilos y conciertos",
+      "known_at": 11
+    },
+    {
+      "name": "Canción protesta",
+      "facet": "Instrumentos, estilos y conciertos",
+      "known_at": 12
+    },
+    {
+      "name": "Canción del verano",
+      "facet": "Instrumentos, estilos y conciertos",
+      "known_at": 6
+    },
+    {
+      "name": "Sintetizador",
+      "facet": "Instrumentos, estilos y conciertos",
+      "known_at": 8
+    },
+    {
+      "name": "Rock & Ríos",
+      "facet": "Instrumentos, estilos y conciertos",
+      "known_at": 13
+    },
+    {
+      "name": "Concierto de los Beatles en Las Ventas",
+      "facet": "Instrumentos, estilos y conciertos",
+      "known_at": 13
+    },
+    {
+      "name": "Festival Internacional de Benicàssim",
+      "facet": "Instrumentos, estilos y conciertos",
+      "known_at": 11
+    },
+    {
+      "name": "Palau Sant Jordi",
+      "facet": "Instrumentos, estilos y conciertos",
+      "known_at": 12
+    },
+    {
+      "name": "Disco de oro",
+      "facet": "Instrumentos, estilos y conciertos",
+      "known_at": 9
+    },
+    {
+      "name": "Casete",
+      "facet": "Instrumentos, estilos y conciertos",
+      "known_at": 8
+    },
+    {
+      "name": "Maqueta",
+      "facet": "Instrumentos, estilos y conciertos",
+      "known_at": 12
+    }
+  ]
+}

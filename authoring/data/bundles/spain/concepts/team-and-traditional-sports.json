@@ -1,0 +1,727 @@
+{
+  "subcategory": "team-and-traditional-sports",
+  "facets": [
+    "Selección española de baloncesto",
+    "Liga ACB y clubes",
+    "Españoles en la NBA",
+    "Baloncesto femenino español",
+    "Tenis y pádel españoles",
+    "Ciclismo y la Vuelta",
+    "Motor: Fórmula 1 y motos",
+    "Balonmano, waterpolo y fútbol sala",
+    "Atletismo, natación y deportes olímpicos",
+    "Barcelona 92 y grandes eventos",
+    "Pelota vasca y deporte rural vasco",
+    "Juegos y luchas tradicionales regionales"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 4,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Lorenzo Brown",
+      "facet": "Selección española de baloncesto",
+      "known_at": 11
+    },
+    {
+      "name": "Fernando Romay",
+      "facet": "Selección española de baloncesto",
+      "known_at": 11
+    },
+    {
+      "name": "Juan Antonio Corbalán",
+      "facet": "Selección española de baloncesto",
+      "known_at": 13
+    },
+    {
+      "name": "Antonio Díaz-Miguel",
+      "facet": "Selección española de baloncesto",
+      "known_at": 13
+    },
+    {
+      "name": "Juniors de Oro",
+      "facet": "Selección española de baloncesto",
+      "known_at": 12
+    },
+    {
+      "name": "La ÑBA",
+      "facet": "Selección española de baloncesto",
+      "known_at": 11
+    },
+    {
+      "name": "Plata olímpica de Los Ángeles 1984",
+      "facet": "Selección española de baloncesto",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de Japón 2006",
+      "facet": "Selección española de baloncesto",
+      "known_at": 10
+    },
+    {
+      "name": "Final olímpica de Pekín 2008",
+      "facet": "Selección española de baloncesto",
+      "known_at": 11
+    },
+    {
+      "name": "Eurobasket 2009",
+      "facet": "Selección española de baloncesto",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de China 2019",
+      "facet": "Selección española de baloncesto",
+      "known_at": 9
+    },
+    {
+      "name": "Eurobasket 2022",
+      "facet": "Selección española de baloncesto",
+      "known_at": 10
+    },
+    {
+      "name": "Real Madrid de baloncesto",
+      "facet": "Liga ACB y clubes",
+      "known_at": 5
+    },
+    {
+      "name": "FC Barcelona de baloncesto",
+      "facet": "Liga ACB y clubes",
+      "known_at": 5
+    },
+    {
+      "name": "Baskonia",
+      "facet": "Liga ACB y clubes",
+      "known_at": 9
+    },
+    {
+      "name": "Valencia Basket",
+      "facet": "Liga ACB y clubes",
+      "known_at": 9
+    },
+    {
+      "name": "Unicaja",
+      "facet": "Liga ACB y clubes",
+      "known_at": 9
+    },
+    {
+      "name": "Joventut de Badalona",
+      "facet": "Liga ACB y clubes",
+      "known_at": 11
+    },
+    {
+      "name": "Estudiantes",
+      "facet": "Liga ACB y clubes",
+      "known_at": 11
+    },
+    {
+      "name": "Liga Endesa",
+      "facet": "Liga ACB y clubes",
+      "known_at": 8
+    },
+    {
+      "name": "Copa del Rey de baloncesto",
+      "facet": "Liga ACB y clubes",
+      "known_at": 8
+    },
+    {
+      "name": "Euroliga",
+      "facet": "Liga ACB y clubes",
+      "known_at": 8
+    },
+    {
+      "name": "Final Four",
+      "facet": "Liga ACB y clubes",
+      "known_at": 11
+    },
+    {
+      "name": "Facundo Campazzo",
+      "facet": "Liga ACB y clubes",
+      "known_at": 10
+    },
+    {
+      "name": "Dražen Petrović",
+      "facet": "Liga ACB y clubes",
+      "known_at": 13
+    },
+    {
+      "name": "WiZink Center",
+      "facet": "Liga ACB y clubes",
+      "known_at": 9
+    },
+    {
+      "name": "Palau Blaugrana",
+      "facet": "Liga ACB y clubes",
+      "known_at": 10
+    },
+    {
+      "name": "Andrés Montes",
+      "facet": "Liga ACB y clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Raül López",
+      "facet": "Españoles en la NBA",
+      "known_at": 13
+    },
+    {
+      "name": "Nikola Mirotić",
+      "facet": "Españoles en la NBA",
+      "known_at": 11
+    },
+    {
+      "name": "Álex Abrines",
+      "facet": "Españoles en la NBA",
+      "known_at": 12
+    },
+    {
+      "name": "Víctor Claver",
+      "facet": "Españoles en la NBA",
+      "known_at": 13
+    },
+    {
+      "name": "Usman Garuba",
+      "facet": "Españoles en la NBA",
+      "known_at": 12
+    },
+    {
+      "name": "Los Angeles Lakers",
+      "facet": "Españoles en la NBA",
+      "known_at": 4
+    },
+    {
+      "name": "Memphis Grizzlies",
+      "facet": "Españoles en la NBA",
+      "known_at": 9
+    },
+    {
+      "name": "Toronto Raptors",
+      "facet": "Españoles en la NBA",
+      "known_at": 9
+    },
+    {
+      "name": "Anillo de la NBA",
+      "facet": "Españoles en la NBA",
+      "known_at": 7
+    },
+    {
+      "name": "Draft de la NBA",
+      "facet": "Españoles en la NBA",
+      "known_at": 9
+    },
+    {
+      "name": "Sancho Lyttle",
+      "facet": "Baloncesto femenino español",
+      "known_at": 12
+    },
+    {
+      "name": "Marta Fernández",
+      "facet": "Baloncesto femenino español",
+      "known_at": 13
+    },
+    {
+      "name": "Anna Cruz",
+      "facet": "Baloncesto femenino español",
+      "known_at": 13
+    },
+    {
+      "name": "Elisa Aguilar",
+      "facet": "Baloncesto femenino español",
+      "known_at": 14
+    },
+    {
+      "name": "Cristina Ouviña",
+      "facet": "Baloncesto femenino español",
+      "known_at": 13
+    },
+    {
+      "name": "Queralt Casas",
+      "facet": "Baloncesto femenino español",
+      "known_at": 13
+    },
+    {
+      "name": "Raquel Carrera",
+      "facet": "Baloncesto femenino español",
+      "known_at": 13
+    },
+    {
+      "name": "Awa Fam",
+      "facet": "Baloncesto femenino español",
+      "known_at": 13
+    },
+    {
+      "name": "Lucas Mondelo",
+      "facet": "Baloncesto femenino español",
+      "known_at": 13
+    },
+    {
+      "name": "Miguel Méndez",
+      "facet": "Baloncesto femenino español",
+      "known_at": 14
+    },
+    {
+      "name": "Plata olímpica de Río 2016",
+      "facet": "Baloncesto femenino español",
+      "known_at": 11
+    },
+    {
+      "name": "Plata del Mundial femenino de 2014",
+      "facet": "Baloncesto femenino español",
+      "known_at": 13
+    },
+    {
+      "name": "Eurobasket femenino 2013",
+      "facet": "Baloncesto femenino español",
+      "known_at": 13
+    },
+    {
+      "name": "Eurobasket femenino 2019",
+      "facet": "Baloncesto femenino español",
+      "known_at": 12
+    },
+    {
+      "name": "Perfumerías Avenida",
+      "facet": "Baloncesto femenino español",
+      "known_at": 12
+    },
+    {
+      "name": "Ros Casares Valencia",
+      "facet": "Baloncesto femenino español",
+      "known_at": 14
+    },
+    {
+      "name": "Liga Femenina Endesa",
+      "facet": "Baloncesto femenino español",
+      "known_at": 12
+    },
+    {
+      "name": "Roland Garros",
+      "facet": "Tenis y pádel españoles",
+      "known_at": 5
+    },
+    {
+      "name": "Copa Davis",
+      "facet": "Tenis y pádel españoles",
+      "known_at": 7
+    },
+    {
+      "name": "Mutua Madrid Open",
+      "facet": "Tenis y pádel españoles",
+      "known_at": 10
+    },
+    {
+      "name": "Trofeo Conde de Godó",
+      "facet": "Tenis y pádel españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Pádel",
+      "facet": "Tenis y pádel españoles",
+      "known_at": 3
+    },
+    {
+      "name": "Pala de pádel",
+      "facet": "Tenis y pádel españoles",
+      "known_at": 4
+    },
+    {
+      "name": "Premier Padel",
+      "facet": "Tenis y pádel españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Paquito Navarro",
+      "facet": "Tenis y pádel españoles",
+      "known_at": 11
+    },
+    {
+      "name": "Alejandra Salazar",
+      "facet": "Tenis y pádel españoles",
+      "known_at": 12
+    },
+    {
+      "name": "Vuelta a España",
+      "facet": "Ciclismo y la Vuelta",
+      "known_at": 5
+    },
+    {
+      "name": "Tour de Francia",
+      "facet": "Ciclismo y la Vuelta",
+      "known_at": 4
+    },
+    {
+      "name": "Giro de Italia",
+      "facet": "Ciclismo y la Vuelta",
+      "known_at": 8
+    },
+    {
+      "name": "Maillot rojo",
+      "facet": "Ciclismo y la Vuelta",
+      "known_at": 8
+    },
+    {
+      "name": "Maillot amarillo",
+      "facet": "Ciclismo y la Vuelta",
+      "known_at": 6
+    },
+    {
+      "name": "Angliru",
+      "facet": "Ciclismo y la Vuelta",
+      "known_at": 10
+    },
+    {
+      "name": "Movistar Team",
+      "facet": "Ciclismo y la Vuelta",
+      "known_at": 10
+    },
+    {
+      "name": "Carlos Sainz (rally)",
+      "facet": "Motor: Fórmula 1 y motos",
+      "known_at": 9
+    },
+    {
+      "name": "Joan Mir",
+      "facet": "Motor: Fórmula 1 y motos",
+      "known_at": 10
+    },
+    {
+      "name": "12+1",
+      "facet": "Motor: Fórmula 1 y motos",
+      "known_at": 11
+    },
+    {
+      "name": "Rally Dakar",
+      "facet": "Motor: Fórmula 1 y motos",
+      "known_at": 8
+    },
+    {
+      "name": "MotoGP",
+      "facet": "Motor: Fórmula 1 y motos",
+      "known_at": 5
+    },
+    {
+      "name": "Circuito de Barcelona-Cataluña",
+      "facet": "Motor: Fórmula 1 y motos",
+      "known_at": 9
+    },
+    {
+      "name": "Circuito de Jerez",
+      "facet": "Motor: Fórmula 1 y motos",
+      "known_at": 10
+    },
+    {
+      "name": "MotorLand Aragón",
+      "facet": "Motor: Fórmula 1 y motos",
+      "known_at": 12
+    },
+    {
+      "name": "Circuito Ricardo Tormo",
+      "facet": "Motor: Fórmula 1 y motos",
+      "known_at": 12
+    },
+    {
+      "name": "Gran Premio de Madrid",
+      "facet": "Motor: Fórmula 1 y motos",
+      "known_at": 11
+    },
+    {
+      "name": "Los Hispanos",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 10
+    },
+    {
+      "name": "Las Guerreras",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 11
+    },
+    {
+      "name": "FC Barcelona de balonmano",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 10
+    },
+    {
+      "name": "Mundial de balonmano de 2013",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 12
+    },
+    {
+      "name": "Raúl Entrerríos",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 12
+    },
+    {
+      "name": "Iker Romero",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 12
+    },
+    {
+      "name": "David Barrufet",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 13
+    },
+    {
+      "name": "Talant Dujshebaev",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 12
+    },
+    {
+      "name": "Álex Dujshebaev",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 13
+    },
+    {
+      "name": "Gonzalo Pérez de Vargas",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 13
+    },
+    {
+      "name": "Jordi Ribera",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 14
+    },
+    {
+      "name": "Manel Estiarte",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 12
+    },
+    {
+      "name": "Jesús Rollán",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 13
+    },
+    {
+      "name": "Oro olímpico de waterpolo en Atlanta 1996",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 12
+    },
+    {
+      "name": "Selección española femenina de waterpolo",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 12
+    },
+    {
+      "name": "Laura Ester",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 14
+    },
+    {
+      "name": "Fútbol sala",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 3
+    },
+    {
+      "name": "Selección española de fútbol sala",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 9
+    },
+    {
+      "name": "Movistar Inter",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 12
+    },
+    {
+      "name": "ElPozo Murcia",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 12
+    },
+    {
+      "name": "Kike Boned",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 14
+    },
+    {
+      "name": "Javier Lozano",
+      "facet": "Balonmano, waterpolo y fútbol sala",
+      "known_at": 14
+    },
+    {
+      "name": "Natación artística",
+      "facet": "Atletismo, natación y deportes olímpicos",
+      "known_at": 7
+    },
+    {
+      "name": "Marcha atlética",
+      "facet": "Atletismo, natación y deportes olímpicos",
+      "known_at": 8
+    },
+    {
+      "name": "Petra",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio Rebollo",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 12
+    },
+    {
+      "name": "Pebetero olímpico de Barcelona",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 10
+    },
+    {
+      "name": "Estadio Olímpico de Montjuïc",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 10
+    },
+    {
+      "name": "Villa Olímpica de Barcelona",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 11
+    },
+    {
+      "name": "Dream Team",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 9
+    },
+    {
+      "name": "Juan Antonio Samaranch",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 12
+    },
+    {
+      "name": "«Barcelona» de Freddie Mercury y Montserrat Caballé",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 10
+    },
+    {
+      "name": "«Amigos para siempre»",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 11
+    },
+    {
+      "name": "Oro olímpico de fútbol en Barcelona 92",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 12
+    },
+    {
+      "name": "Juegos Paralímpicos de Barcelona 1992",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de atletismo de Sevilla 1999",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 13
+    },
+    {
+      "name": "Mundial de natación de Barcelona 2003",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 13
+    },
+    {
+      "name": "Mundial de baloncesto de 2014",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 12
+    },
+    {
+      "name": "Copa América de vela en Valencia",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 12
+    },
+    {
+      "name": "Copa América de vela en Barcelona 2024",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 11
+    },
+    {
+      "name": "Juegos Mediterráneos de Tarragona 2018",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 13
+    },
+    {
+      "name": "Salida del Tour de Francia en Barcelona 2026",
+      "facet": "Barcelona 92 y grandes eventos",
+      "known_at": 11
+    },
+    {
+      "name": "Aimar Olaizola",
+      "facet": "Pelota vasca y deporte rural vasco",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Martínez de Irujo",
+      "facet": "Pelota vasca y deporte rural vasco",
+      "known_at": 12
+    },
+    {
+      "name": "Julián Retegui",
+      "facet": "Pelota vasca y deporte rural vasco",
+      "known_at": 14
+    },
+    {
+      "name": "Iñaki Perurena",
+      "facet": "Pelota vasca y deporte rural vasco",
+      "known_at": 12
+    },
+    {
+      "name": "Segalari",
+      "facet": "Pelota vasca y deporte rural vasco",
+      "known_at": 14
+    },
+    {
+      "name": "Idi probak",
+      "facet": "Pelota vasca y deporte rural vasco",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera de La Concha",
+      "facet": "Pelota vasca y deporte rural vasco",
+      "known_at": 12
+    },
+    {
+      "name": "Bola canaria",
+      "facet": "Juegos y luchas tradicionales regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Chito",
+      "facet": "Juegos y luchas tradicionales regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Carreras de caballos de Sanlúcar",
+      "facet": "Juegos y luchas tradicionales regionales",
+      "known_at": 11
+    }
+  ]
+}

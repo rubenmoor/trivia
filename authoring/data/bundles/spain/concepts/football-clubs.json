@@ -1,0 +1,1192 @@
+{
+  "subcategory": "football-clubs",
+  "facets": [
+    "Escudos, colores y camisetas",
+    "Apodos y mascotas de los clubes",
+    "Estadios y sus ciudades",
+    "Grandes rivalidades y derbis",
+    "Títulos y competiciones ganadas",
+    "Leyendas y jugadores históricos",
+    "Entrenadores y presidentes míticos",
+    "Himnos, cánticos y aficiones",
+    "Historia y fundación de los clubes",
+    "Fútbol femenino de clubes",
+    "Canteras y escuelas de fútbol",
+    "Clubes en la cultura popular y videojuegos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Camiseta blanca del Real Madrid",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 2
+    },
+    {
+      "name": "Franjas azulgranas",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 3
+    },
+    {
+      "name": "Rayas rojiblancas",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 3
+    },
+    {
+      "name": "Escudo del Real Madrid",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 3
+    },
+    {
+      "name": "Corona del escudo del Real Madrid",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 7
+    },
+    {
+      "name": "Oso y madroño del escudo del Atlético",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 6
+    },
+    {
+      "name": "Cruz de San Jorge del escudo del Barcelona",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 10
+    },
+    {
+      "name": "Camiseta amarilla del Villarreal",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 5
+    },
+    {
+      "name": "Camiseta verdiblanca del Betis",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 5
+    },
+    {
+      "name": "Camiseta blanquiazul del Espanyol",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 7
+    },
+    {
+      "name": "Camiseta celeste del Celta",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 8
+    },
+    {
+      "name": "Camiseta violeta del Real Valladolid",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 10
+    },
+    {
+      "name": "Pantalón azul del Atlético de Madrid",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 9
+    },
+    {
+      "name": "Logotipo de Unicef en la camiseta del Barcelona",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 10
+    },
+    {
+      "name": "Iglesia de San Antón del escudo del Athletic",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo del Sevilla con San Fernando",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 13
+    },
+    {
+      "name": "Camiseta del Southampton",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 14
+    },
+    {
+      "name": "Brazalete de capitán",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 4
+    },
+    {
+      "name": "Dorsal número 7 del Real Madrid",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 7
+    },
+    {
+      "name": "Merengues",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 4
+    },
+    {
+      "name": "Colchoneros",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 6
+    },
+    {
+      "name": "Culés",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 6
+    },
+    {
+      "name": "Leones",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 6
+    },
+    {
+      "name": "Submarino Amarillo",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 6
+    },
+    {
+      "name": "Vikingos",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 8
+    },
+    {
+      "name": "Galácticos",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 8
+    },
+    {
+      "name": "Periquitos",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 8
+    },
+    {
+      "name": "Txuri-urdin",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 10
+    },
+    {
+      "name": "Rojillos",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 10
+    },
+    {
+      "name": "Boquerones",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 10
+    },
+    {
+      "name": "Granotas",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 11
+    },
+    {
+      "name": "Pucelanos",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 11
+    },
+    {
+      "name": "Nervionenses",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Bermellones",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Babazorros",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 13
+    },
+    {
+      "name": "Chicharreros",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 13
+    },
+    {
+      "name": "Indi",
+      "facet": "Apodos y mascotas de los clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Estadio Metropolitano",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 6
+    },
+    {
+      "name": "Vicente Calderón",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "San Mamés",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 7
+    },
+    {
+      "name": "Mestalla",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 7
+    },
+    {
+      "name": "Ramón Sánchez-Pizjuán",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "Benito Villamarín",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Anoeta",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Estadio de la Cerámica",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Balaídos",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Riazor",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "El Sadar",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Montjuïc",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Estadio de Vallecas",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "La Rosaleda",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "El Molinón",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Estadio de Gran Canaria",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Mendizorroza",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos Tartiere",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Son Moix",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Coliseum Alfonso Pérez",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "El Clásico",
+      "facet": "Grandes rivalidades y derbis",
+      "known_at": 2
+    },
+    {
+      "name": "Derbi madrileño",
+      "facet": "Grandes rivalidades y derbis",
+      "known_at": 6
+    },
+    {
+      "name": "Derbi sevillano",
+      "facet": "Grandes rivalidades y derbis",
+      "known_at": 8
+    },
+    {
+      "name": "Derbi barcelonés",
+      "facet": "Grandes rivalidades y derbis",
+      "known_at": 9
+    },
+    {
+      "name": "Derbi vasco",
+      "facet": "Grandes rivalidades y derbis",
+      "known_at": 10
+    },
+    {
+      "name": "Derbi gallego",
+      "facet": "Grandes rivalidades y derbis",
+      "known_at": 11
+    },
+    {
+      "name": "Derbi asturiano",
+      "facet": "Grandes rivalidades y derbis",
+      "known_at": 12
+    },
+    {
+      "name": "Derbi valenciano",
+      "facet": "Grandes rivalidades y derbis",
+      "known_at": 12
+    },
+    {
+      "name": "Derbi canario",
+      "facet": "Grandes rivalidades y derbis",
+      "known_at": 12
+    },
+    {
+      "name": "Derbi del sur de Madrid",
+      "facet": "Grandes rivalidades y derbis",
+      "known_at": 14
+    },
+    {
+      "name": "Manita",
+      "facet": "Grandes rivalidades y derbis",
+      "known_at": 8
+    },
+    {
+      "name": "El 2-6 del Bernabéu",
+      "facet": "Grandes rivalidades y derbis",
+      "known_at": 11
+    },
+    {
+      "name": "Pasillo de campeones",
+      "facet": "Grandes rivalidades y derbis",
+      "known_at": 10
+    },
+    {
+      "name": "Alcorconazo",
+      "facet": "Grandes rivalidades y derbis",
+      "known_at": 13
+    },
+    {
+      "name": "Final de Lisboa de 2014",
+      "facet": "Grandes rivalidades y derbis",
+      "known_at": 10
+    },
+    {
+      "name": "LaLiga",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 3
+    },
+    {
+      "name": "Copa del Rey",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 5
+    },
+    {
+      "name": "Supercopa de España",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 7
+    },
+    {
+      "name": "Liga de Campeones",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 4
+    },
+    {
+      "name": "La Décima",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 8
+    },
+    {
+      "name": "Liga Europa",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 6
+    },
+    {
+      "name": "Mundial de Clubes",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 7
+    },
+    {
+      "name": "Supercopa de Europa",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 8
+    },
+    {
+      "name": "Sextete",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 9
+    },
+    {
+      "name": "Triplete",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 8
+    },
+    {
+      "name": "Doblete",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 8
+    },
+    {
+      "name": "Pichichi",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 8
+    },
+    {
+      "name": "Trofeo Zamora",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 10
+    },
+    {
+      "name": "Bota de Oro",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 8
+    },
+    {
+      "name": "Copa Intercontinental",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 12
+    },
+    {
+      "name": "Recopa de Europa",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 13
+    },
+    {
+      "name": "Copa de Ferias",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 14
+    },
+    {
+      "name": "Cinco Copas de Europa seguidas",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 11
+    },
+    {
+      "name": "Final de Wembley de 1992",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 12
+    },
+    {
+      "name": "Liga del Superdepor",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 12
+    },
+    {
+      "name": "Centenariazo",
+      "facet": "Títulos y competiciones ganadas",
+      "known_at": 13
+    },
+    {
+      "name": "Lionel Messi",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 1
+    },
+    {
+      "name": "Cristiano Ronaldo",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 2
+    },
+    {
+      "name": "Sergio Ramos",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 5
+    },
+    {
+      "name": "Zinedine Zidane",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 5
+    },
+    {
+      "name": "Andrés Iniesta",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 6
+    },
+    {
+      "name": "Iker Casillas",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 6
+    },
+    {
+      "name": "Ronaldinho",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 6
+    },
+    {
+      "name": "Antoine Griezmann",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 6
+    },
+    {
+      "name": "Xavi Hernández",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 7
+    },
+    {
+      "name": "Fernando Torres",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 7
+    },
+    {
+      "name": "Raúl González",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 8
+    },
+    {
+      "name": "Carles Puyol",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 8
+    },
+    {
+      "name": "David Villa",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 8
+    },
+    {
+      "name": "Joaquín Sánchez",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Jesús Navas",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Johan Cruyff",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Fernando Hierro",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 10
+    },
+    {
+      "name": "Emilio Butragueño",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Hugo Sánchez",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Ferenc Puskás",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Paco Gento",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Aritz Aduriz",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 12
+    },
+    {
+      "name": "José Ángel Iribar",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Telmo Zarra",
+      "facet": "Leyendas y jugadores históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Pep Guardiola",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 5
+    },
+    {
+      "name": "Diego Simeone",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 6
+    },
+    {
+      "name": "José Mourinho",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 6
+    },
+    {
+      "name": "Carlo Ancelotti",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 7
+    },
+    {
+      "name": "Luis Enrique",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 8
+    },
+    {
+      "name": "Xabi Alonso",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 9
+    },
+    {
+      "name": "Hansi Flick",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 9
+    },
+    {
+      "name": "Vicente del Bosque",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 9
+    },
+    {
+      "name": "Joan Laporta",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 10
+    },
+    {
+      "name": "Santiago Bernabéu",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 10
+    },
+    {
+      "name": "Luis Aragonés",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 11
+    },
+    {
+      "name": "Rafa Benítez",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 11
+    },
+    {
+      "name": "Ernesto Valverde",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 11
+    },
+    {
+      "name": "Unai Emery",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 12
+    },
+    {
+      "name": "Jesús Gil",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 12
+    },
+    {
+      "name": "Javier Clemente",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 13
+    },
+    {
+      "name": "Manuel Pellegrini",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 13
+    },
+    {
+      "name": "José Luis Mendilibar",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 13
+    },
+    {
+      "name": "Miguel Muñoz",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 14
+    },
+    {
+      "name": "Josep Lluís Núñez",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 14
+    },
+    {
+      "name": "Helenio Herrera",
+      "facet": "Entrenadores y presidentes míticos",
+      "known_at": 15
+    },
+    {
+      "name": "Bufanda",
+      "facet": "Himnos, cánticos y aficiones",
+      "known_at": 3
+    },
+    {
+      "name": "Visca el Barça",
+      "facet": "Himnos, cánticos y aficiones",
+      "known_at": 7
+    },
+    {
+      "name": "Hala Madrid y nada más",
+      "facet": "Himnos, cánticos y aficiones",
+      "known_at": 8
+    },
+    {
+      "name": "Cant del Barça",
+      "facet": "Himnos, cánticos y aficiones",
+      "known_at": 8
+    },
+    {
+      "name": "Més que un club",
+      "facet": "Himnos, cánticos y aficiones",
+      "known_at": 8
+    },
+    {
+      "name": "Socios",
+      "facet": "Himnos, cánticos y aficiones",
+      "known_at": 8
+    },
+    {
+      "name": "Peñas",
+      "facet": "Himnos, cánticos y aficiones",
+      "known_at": 9
+    },
+    {
+      "name": "Pañolada",
+      "facet": "Himnos, cánticos y aficiones",
+      "known_at": 9
+    },
+    {
+      "name": "Amunt Valencia",
+      "facet": "Himnos, cánticos y aficiones",
+      "known_at": 10
+    },
+    {
+      "name": "Aupa Athletic",
+      "facet": "Himnos, cánticos y aficiones",
+      "known_at": 10
+    },
+    {
+      "name": "Himno del Centenario del Atlético",
+      "facet": "Himnos, cánticos y aficiones",
+      "known_at": 11
+    },
+    {
+      "name": "Gabarra del Athletic",
+      "facet": "Himnos, cánticos y aficiones",
+      "known_at": 11
+    },
+    {
+      "name": "Grada de animación",
+      "facet": "Himnos, cánticos y aficiones",
+      "known_at": 11
+    },
+    {
+      "name": "Himno del Sevilla de El Arrebato",
+      "facet": "Himnos, cánticos y aficiones",
+      "known_at": 12
+    },
+    {
+      "name": "Manquepierda",
+      "facet": "Himnos, cánticos y aficiones",
+      "known_at": 12
+    },
+    {
+      "name": "Almohadillas",
+      "facet": "Himnos, cánticos y aficiones",
+      "known_at": 12
+    },
+    {
+      "name": "Joan Gamper",
+      "facet": "Historia y fundación de los clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Mineros británicos de Riotinto",
+      "facet": "Historia y fundación de los clubes",
+      "known_at": 13
+    },
+    {
+      "name": "Madrid Football Club",
+      "facet": "Historia y fundación de los clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Athletic Club de Madrid",
+      "facet": "Historia y fundación de los clubes",
+      "known_at": 13
+    },
+    {
+      "name": "Sociedad Española de Football",
+      "facet": "Historia y fundación de los clubes",
+      "known_at": 14
+    },
+    {
+      "name": "Primera Liga de 1929",
+      "facet": "Historia y fundación de los clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Clubes fundadores de LaLiga",
+      "facet": "Historia y fundación de los clubes",
+      "known_at": 13
+    },
+    {
+      "name": "Arenas de Getxo",
+      "facet": "Historia y fundación de los clubes",
+      "known_at": 14
+    },
+    {
+      "name": "Real Unión de Irún",
+      "facet": "Historia y fundación de los clubes",
+      "known_at": 14
+    },
+    {
+      "name": "Centenario del Real Madrid",
+      "facet": "Historia y fundación de los clubes",
+      "known_at": 10
+    },
+    {
+      "name": "Estadio de Chamartín",
+      "facet": "Historia y fundación de los clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Les Corts",
+      "facet": "Historia y fundación de los clubes",
+      "known_at": 13
+    },
+    {
+      "name": "Ciudad Deportiva de la Castellana",
+      "facet": "Historia y fundación de los clubes",
+      "known_at": 14
+    },
+    {
+      "name": "Sociedades anónimas deportivas",
+      "facet": "Historia y fundación de los clubes",
+      "known_at": 13
+    },
+    {
+      "name": "Ley Bosman",
+      "facet": "Historia y fundación de los clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Sevilla Football Club de 1890",
+      "facet": "Historia y fundación de los clubes",
+      "known_at": 14
+    },
+    {
+      "name": "Alexia Putellas",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 6
+    },
+    {
+      "name": "Aitana Bonmatí",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 6
+    },
+    {
+      "name": "Barça Femení",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 7
+    },
+    {
+      "name": "Jenni Hermoso",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 8
+    },
+    {
+      "name": "Real Madrid Femenino",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 8
+    },
+    {
+      "name": "Liga de Campeones femenina",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 8
+    },
+    {
+      "name": "Liga F",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 9
+    },
+    {
+      "name": "Atlético de Madrid Femenino",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 9
+    },
+    {
+      "name": "Salma Paralluelo",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 9
+    },
+    {
+      "name": "Olga Carmona",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 9
+    },
+    {
+      "name": "Clásico femenino",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 9
+    },
+    {
+      "name": "Irene Paredes",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 10
+    },
+    {
+      "name": "Copa de la Reina",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 10
+    },
+    {
+      "name": "Récord de público del fútbol femenino",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 10
+    },
+    {
+      "name": "Primera Iberdrola",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 11
+    },
+    {
+      "name": "Patri Guijarro",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Mapi León",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Misa Rodríguez",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Esther González",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Vero Boquete",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Athletic Club Femenino",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Levante UD Femenino",
+      "facet": "Fútbol femenino de clubes",
+      "known_at": 13
+    },
+    {
+      "name": "Lamine Yamal",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 3
+    },
+    {
+      "name": "Nico Williams",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 5
+    },
+    {
+      "name": "Gavi",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 6
+    },
+    {
+      "name": "Ansu Fati",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 8
+    },
+    {
+      "name": "Iñaki Williams",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 8
+    },
+    {
+      "name": "Cesc Fàbregas",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 8
+    },
+    {
+      "name": "Real Madrid Castilla",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 9
+    },
+    {
+      "name": "Filosofía del Athletic",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 9
+    },
+    {
+      "name": "Mikel Oyarzabal",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 9
+    },
+    {
+      "name": "La Fábrica",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 10
+    },
+    {
+      "name": "Valdebebas",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 10
+    },
+    {
+      "name": "Barça Atlètic",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 10
+    },
+    {
+      "name": "Koke",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 10
+    },
+    {
+      "name": "Lezama",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 11
+    },
+    {
+      "name": "Quinta del Buitre",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 11
+    },
+    {
+      "name": "Zubieta",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 12
+    },
+    {
+      "name": "Martín Zubimendi",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 12
+    },
+    {
+      "name": "División de Honor Juvenil",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 12
+    },
+    {
+      "name": "UEFA Youth League",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 12
+    },
+    {
+      "name": "Ciudad Deportiva Joan Gamper",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 13
+    },
+    {
+      "name": "Paterna",
+      "facet": "Canteras y escuelas de fútbol",
+      "known_at": 13
+    },
+    {
+      "name": "EA Sports FC",
+      "facet": "Clubes en la cultura popular y videojuegos",
+      "known_at": 3
+    },
+    {
+      "name": "Álbum de cromos de la Liga",
+      "facet": "Clubes en la cultura popular y videojuegos",
+      "known_at": 5
+    },
+    {
+      "name": "Campeones: Oliver y Benji",
+      "facet": "Clubes en la cultura popular y videojuegos",
+      "known_at": 6
+    },
+    {
+      "name": "Pro Evolution Soccer",
+      "facet": "Clubes en la cultura popular y videojuegos",
+      "known_at": 8
+    },
+    {
+      "name": "Tiki-taka",
+      "facet": "Clubes en la cultura popular y videojuegos",
+      "known_at": 8
+    },
+    {
+      "name": "El Chiringuito de Jugones",
+      "facet": "Clubes en la cultura popular y videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "Quiniela",
+      "facet": "Clubes en la cultura popular y videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "Partido a partido",
+      "facet": "Clubes en la cultura popular y videojuegos",
+      "known_at": 10
+    },
+    {
+      "name": "PC Fútbol",
+      "facet": "Clubes en la cultura popular y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Estudio Estadio",
+      "facet": "Clubes en la cultura popular y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Goal! La película",
+      "facet": "Clubes en la cultura popular y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Football Manager",
+      "facet": "Clubes en la cultura popular y videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "Bota de Oro de Telmo Zarra en el Athletic",
+      "facet": "Clubes en la cultura popular y videojuegos",
+      "known_at": 15
+    }
+  ]
+}

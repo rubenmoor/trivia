@@ -1,0 +1,716 @@
+{
+  "subcategory": "regional-symbols",
+  "facets": [
+    "Banderas de las comunidades autónomas",
+    "Escudos autonómicos y sus figuras",
+    "Himnos regionales",
+    "Banderas y escudos de ciudades",
+    "Banderas insulares y comarcales",
+    "Heráldica: colores y términos",
+    "Antiguos reinos y sus emblemas",
+    "Leyendas y orígenes de los símbolos",
+    "Días oficiales de las comunidades",
+    "Animales y plantas emblemáticos",
+    "Creadores y momentos de los símbolos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 5,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 5,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Arbonaida",
+      "facet": "Banderas de las comunidades autónomas",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera de Asturias",
+      "facet": "Banderas de las comunidades autónomas",
+      "known_at": 7
+    },
+    {
+      "name": "Bandera de Cantabria",
+      "facet": "Banderas de las comunidades autónomas",
+      "known_at": 10
+    },
+    {
+      "name": "Bandera de la Región de Murcia",
+      "facet": "Banderas de las comunidades autónomas",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera de La Rioja",
+      "facet": "Banderas de las comunidades autónomas",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera de las Islas Baleares",
+      "facet": "Banderas de las comunidades autónomas",
+      "known_at": 11
+    },
+    {
+      "name": "Real Senyera",
+      "facet": "Banderas de las comunidades autónomas",
+      "known_at": 10
+    },
+    {
+      "name": "Bandera de Ceuta",
+      "facet": "Banderas de las comunidades autónomas",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera de Melilla",
+      "facet": "Banderas de las comunidades autónomas",
+      "known_at": 13
+    },
+    {
+      "name": "Cáliz de Galicia",
+      "facet": "Escudos autonómicos y sus figuras",
+      "known_at": 11
+    },
+    {
+      "name": "Cuatro cabezas de moro",
+      "facet": "Escudos autonómicos y sus figuras",
+      "known_at": 12
+    },
+    {
+      "name": "Cruz de Íñigo Arista",
+      "facet": "Escudos autonómicos y sus figuras",
+      "known_at": 14
+    },
+    {
+      "name": "Árbol de Sobrarbe",
+      "facet": "Escudos autonómicos y sus figuras",
+      "known_at": 14
+    },
+    {
+      "name": "Laurak bat",
+      "facet": "Escudos autonómicos y sus figuras",
+      "known_at": 14
+    },
+    {
+      "name": "Siete coronas de Murcia",
+      "facet": "Escudos autonómicos y sus figuras",
+      "known_at": 13
+    },
+    {
+      "name": "Perros del escudo de Canarias",
+      "facet": "Escudos autonómicos y sus figuras",
+      "known_at": 10
+    },
+    {
+      "name": "León rampante de León",
+      "facet": "Escudos autonómicos y sus figuras",
+      "known_at": 7
+    },
+    {
+      "name": "Corona real",
+      "facet": "Escudos autonómicos y sus figuras",
+      "known_at": 4
+    },
+    {
+      "name": "Escudo de Andalucía",
+      "facet": "Escudos autonómicos y sus figuras",
+      "known_at": 10
+    },
+    {
+      "name": "Escudo de Cantabria",
+      "facet": "Escudos autonómicos y sus figuras",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de Extremadura",
+      "facet": "Escudos autonómicos y sus figuras",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de Castilla-La Mancha",
+      "facet": "Escudos autonómicos y sus figuras",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de La Rioja",
+      "facet": "Escudos autonómicos y sus figuras",
+      "known_at": 14
+    },
+    {
+      "name": "Gora ta gora",
+      "facet": "Himnos regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Himno de la Comunidad Valenciana",
+      "facet": "Himnos regionales",
+      "known_at": 11
+    },
+    {
+      "name": "La Balanguera",
+      "facet": "Himnos regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Himno de Navarra",
+      "facet": "Himnos regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Himno de Canarias",
+      "facet": "Himnos regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Himno de Aragón",
+      "facet": "Himnos regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Himno a la Montaña",
+      "facet": "Himnos regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Himno de Extremadura",
+      "facet": "Himnos regionales",
+      "known_at": 14
+    },
+    {
+      "name": "Himno de la Comunidad de Madrid",
+      "facet": "Himnos regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Himno de La Rioja",
+      "facet": "Himnos regionales",
+      "known_at": 14
+    },
+    {
+      "name": "Himno de Ceuta",
+      "facet": "Himnos regionales",
+      "known_at": 15
+    },
+    {
+      "name": "NO8DO",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Rat penat",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Escudo de Barcelona",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Bandera de Bilbao",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Escudo de Bilbao",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de Toledo",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de Zaragoza",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Escudo de Granada",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "Escudo de Segovia",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Escudo de Santiago de Compostela",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Escudo de Córdoba",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de Málaga",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera de San Sebastián",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Escudo de Burgos",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de Salamanca",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de Pamplona",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de Oviedo",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de Valladolid",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 14
+    },
+    {
+      "name": "Escudo de Palma",
+      "facet": "Banderas y escudos de ciudades",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera de Tenerife",
+      "facet": "Banderas insulares y comarcales",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera de Gran Canaria",
+      "facet": "Banderas insulares y comarcales",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera de Lanzarote",
+      "facet": "Banderas insulares y comarcales",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera de Fuerteventura",
+      "facet": "Banderas insulares y comarcales",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera de La Palma",
+      "facet": "Banderas insulares y comarcales",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera de La Gomera",
+      "facet": "Banderas insulares y comarcales",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera de El Hierro",
+      "facet": "Banderas insulares y comarcales",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera de Mallorca",
+      "facet": "Banderas insulares y comarcales",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera de Menorca",
+      "facet": "Banderas insulares y comarcales",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera de Ibiza",
+      "facet": "Banderas insulares y comarcales",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera de Formentera",
+      "facet": "Banderas insulares y comarcales",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera del Bierzo",
+      "facet": "Banderas insulares y comarcales",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera del Valle de Arán",
+      "facet": "Banderas insulares y comarcales",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera de Álava",
+      "facet": "Banderas insulares y comarcales",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera de Vizcaya",
+      "facet": "Banderas insulares y comarcales",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera de Guipúzcoa",
+      "facet": "Banderas insulares y comarcales",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera de León",
+      "facet": "Banderas insulares y comarcales",
+      "known_at": 11
+    },
+    {
+      "name": "Gules",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 13
+    },
+    {
+      "name": "Azur",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 12
+    },
+    {
+      "name": "Sinople",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 14
+    },
+    {
+      "name": "Sable",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 13
+    },
+    {
+      "name": "Púrpura heráldica",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 13
+    },
+    {
+      "name": "Metales heráldicos",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 13
+    },
+    {
+      "name": "Blasón",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 10
+    },
+    {
+      "name": "Campo",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 12
+    },
+    {
+      "name": "Cuartel",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 12
+    },
+    {
+      "name": "Cuartelado",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 13
+    },
+    {
+      "name": "Partido",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 14
+    },
+    {
+      "name": "Timbre",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 14
+    },
+    {
+      "name": "Lambrequín",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 15
+    },
+    {
+      "name": "Tenante",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 15
+    },
+    {
+      "name": "Bordura",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 14
+    },
+    {
+      "name": "Palo",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 13
+    },
+    {
+      "name": "Banda",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 13
+    },
+    {
+      "name": "Corona mural",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 14
+    },
+    {
+      "name": "Vexilología",
+      "facet": "Heráldica: colores y términos",
+      "known_at": 13
+    },
+    {
+      "name": "Reino de Granada",
+      "facet": "Antiguos reinos y sus emblemas",
+      "known_at": 9
+    },
+    {
+      "name": "Reino de Murcia",
+      "facet": "Antiguos reinos y sus emblemas",
+      "known_at": 13
+    },
+    {
+      "name": "Reino de Toledo",
+      "facet": "Antiguos reinos y sus emblemas",
+      "known_at": 14
+    },
+    {
+      "name": "Granada del escudo de España",
+      "facet": "Antiguos reinos y sus emblemas",
+      "known_at": 10
+    },
+    {
+      "name": "Pendón morado",
+      "facet": "Antiguos reinos y sus emblemas",
+      "known_at": 13
+    },
+    {
+      "name": "Señal real de Aragón",
+      "facet": "Antiguos reinos y sus emblemas",
+      "known_at": 13
+    },
+    {
+      "name": "Sancho VII el Fuerte",
+      "facet": "Leyendas y orígenes de los símbolos",
+      "known_at": 13
+    },
+    {
+      "name": "Santo Cáliz de Valencia",
+      "facet": "Leyendas y orígenes de los símbolos",
+      "known_at": 12
+    },
+    {
+      "name": "Íñigo Arista",
+      "facet": "Leyendas y orígenes de los símbolos",
+      "known_at": 14
+    },
+    {
+      "name": "Carlos V",
+      "facet": "Leyendas y orígenes de los símbolos",
+      "known_at": 9
+    },
+    {
+      "name": "Cruz de los Ángeles",
+      "facet": "Leyendas y orígenes de los símbolos",
+      "known_at": 14
+    },
+    {
+      "name": "Diada Nacional de Cataluña",
+      "facet": "Días oficiales de las comunidades",
+      "known_at": 8
+    },
+    {
+      "name": "Día Nacional de Galicia",
+      "facet": "Días oficiales de las comunidades",
+      "known_at": 9
+    },
+    {
+      "name": "Día de la Comunidad de Madrid",
+      "facet": "Días oficiales de las comunidades",
+      "known_at": 9
+    },
+    {
+      "name": "Día de La Rioja",
+      "facet": "Días oficiales de las comunidades",
+      "known_at": 13
+    },
+    {
+      "name": "Día de las Islas Baleares",
+      "facet": "Días oficiales de las comunidades",
+      "known_at": 12
+    },
+    {
+      "name": "Día de la Comunidad Valenciana",
+      "facet": "Días oficiales de las comunidades",
+      "known_at": 10
+    },
+    {
+      "name": "Día de Cantabria",
+      "facet": "Días oficiales de las comunidades",
+      "known_at": 13
+    },
+    {
+      "name": "Día del País Vasco",
+      "facet": "Días oficiales de las comunidades",
+      "known_at": 13
+    },
+    {
+      "name": "Día de Ceuta",
+      "facet": "Días oficiales de las comunidades",
+      "known_at": 15
+    },
+    {
+      "name": "Día de Melilla",
+      "facet": "Días oficiales de las comunidades",
+      "known_at": 15
+    },
+    {
+      "name": "Perro de presa canario",
+      "facet": "Animales y plantas emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Palmera canaria",
+      "facet": "Animales y plantas emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Árbol de Guernica",
+      "facet": "Animales y plantas emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Granada (fruta)",
+      "facet": "Animales y plantas emblemáticos",
+      "known_at": 4
+    },
+    {
+      "name": "Sabino Arana",
+      "facet": "Creadores y momentos de los símbolos",
+      "known_at": 12
+    },
+    {
+      "name": "Luis Arana",
+      "facet": "Creadores y momentos de los símbolos",
+      "known_at": 15
+    },
+    {
+      "name": "Asamblea de Ronda",
+      "facet": "Creadores y momentos de los símbolos",
+      "known_at": 14
+    },
+    {
+      "name": "Estatuto de Guernica",
+      "facet": "Creadores y momentos de los símbolos",
+      "known_at": 13
+    },
+    {
+      "name": "Eduardo Pondal",
+      "facet": "Creadores y momentos de los símbolos",
+      "known_at": 13
+    },
+    {
+      "name": "Pascual Veiga",
+      "facet": "Creadores y momentos de los símbolos",
+      "known_at": 15
+    },
+    {
+      "name": "Joan Alcover",
+      "facet": "Creadores y momentos de los símbolos",
+      "known_at": 15
+    },
+    {
+      "name": "Amadeu Vives",
+      "facet": "Creadores y momentos de los símbolos",
+      "known_at": 14
+    },
+    {
+      "name": "Emili Guanyavents",
+      "facet": "Creadores y momentos de los símbolos",
+      "known_at": 15
+    },
+    {
+      "name": "Francesc Alió",
+      "facet": "Creadores y momentos de los símbolos",
+      "known_at": 15
+    },
+    {
+      "name": "José del Castillo Díaz",
+      "facet": "Creadores y momentos de los símbolos",
+      "known_at": 15
+    },
+    {
+      "name": "Agustín García Calvo",
+      "facet": "Creadores y momentos de los símbolos",
+      "known_at": 14
+    },
+    {
+      "name": "Pablo Sorozábal",
+      "facet": "Creadores y momentos de los símbolos",
+      "known_at": 15
+    },
+    {
+      "name": "Antón García Abril",
+      "facet": "Creadores y momentos de los símbolos",
+      "known_at": 14
+    },
+    {
+      "name": "Teobaldo Power",
+      "facet": "Creadores y momentos de los símbolos",
+      "known_at": 15
+    },
+    {
+      "name": "Manuel Prieto",
+      "facet": "Creadores y momentos de los símbolos",
+      "known_at": 15
+    },
+    {
+      "name": "Josep Serrano",
+      "facet": "Creadores y momentos de los símbolos",
+      "known_at": 15
+    }
+  ]
+}

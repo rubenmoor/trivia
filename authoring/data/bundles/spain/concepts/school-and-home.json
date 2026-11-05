@@ -1,0 +1,722 @@
+{
+  "subcategory": "school-and-home",
+  "facets": [
+    "Etapas y sistema educativo",
+    "Vida diaria en el cole",
+    "Juegos de patio y recreo",
+    "Horarios y ritmo del día",
+    "La casa y el piso",
+    "Costumbres en la mesa y el bar",
+    "Fiestas familiares y tradiciones",
+    "Saludos y trato social",
+    "Tiendas, calle y servicios",
+    "Supersticiones y creencias populares",
+    "Verano, vacaciones y el pueblo",
+    "Costumbres de antes"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Educación Infantil",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 3
+    },
+    {
+      "name": "Educación Primaria",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 3
+    },
+    {
+      "name": "ESO",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 5
+    },
+    {
+      "name": "Bachillerato",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 6
+    },
+    {
+      "name": "Formación Profesional",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 8
+    },
+    {
+      "name": "Nota de corte",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 10
+    },
+    {
+      "name": "Matrícula de honor",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 9
+    },
+    {
+      "name": "Boletín de notas",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 4
+    },
+    {
+      "name": "Repetir curso",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 4
+    },
+    {
+      "name": "Exámenes de recuperación",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 6
+    },
+    {
+      "name": "Colegio concertado",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 9
+    },
+    {
+      "name": "Instituto",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 4
+    },
+    {
+      "name": "Guardería",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 2
+    },
+    {
+      "name": "EGB",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 10
+    },
+    {
+      "name": "BUP",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 12
+    },
+    {
+      "name": "COU",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 12
+    },
+    {
+      "name": "Erasmus",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 9
+    },
+    {
+      "name": "AMPA",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 10
+    },
+    {
+      "name": "Jefe de estudios",
+      "facet": "Etapas y sistema educativo",
+      "known_at": 6
+    },
+    {
+      "name": "Estuche",
+      "facet": "Vida diaria en el cole",
+      "known_at": 1
+    },
+    {
+      "name": "Mochila con ruedas",
+      "facet": "Vida diaria en el cole",
+      "known_at": 2
+    },
+    {
+      "name": "Agenda escolar",
+      "facet": "Vida diaria en el cole",
+      "known_at": 4
+    },
+    {
+      "name": "Comedor escolar",
+      "facet": "Vida diaria en el cole",
+      "known_at": 2
+    },
+    {
+      "name": "Monitor de comedor",
+      "facet": "Vida diaria en el cole",
+      "known_at": 4
+    },
+    {
+      "name": "Babi",
+      "facet": "Vida diaria en el cole",
+      "known_at": 3
+    },
+    {
+      "name": "Chándal del cole",
+      "facet": "Vida diaria en el cole",
+      "known_at": 3
+    },
+    {
+      "name": "Uniforme escolar",
+      "facet": "Vida diaria en el cole",
+      "known_at": 3
+    },
+    {
+      "name": "Libro de texto",
+      "facet": "Vida diaria en el cole",
+      "known_at": 2
+    },
+    {
+      "name": "Cuadernos Rubio",
+      "facet": "Vida diaria en el cole",
+      "known_at": 7
+    },
+    {
+      "name": "Deberes",
+      "facet": "Vida diaria en el cole",
+      "known_at": 1
+    },
+    {
+      "name": "Excursión",
+      "facet": "Vida diaria en el cole",
+      "known_at": 2
+    },
+    {
+      "name": "Fiesta de fin de curso",
+      "facet": "Vida diaria en el cole",
+      "known_at": 3
+    },
+    {
+      "name": "Bocadillo del recreo",
+      "facet": "Vida diaria en el cole",
+      "known_at": 2
+    },
+    {
+      "name": "Educación Física",
+      "facet": "Vida diaria en el cole",
+      "known_at": 2
+    },
+    {
+      "name": "Plástica",
+      "facet": "Vida diaria en el cole",
+      "known_at": 3
+    },
+    {
+      "name": "Conocimiento del Medio",
+      "facet": "Vida diaria en el cole",
+      "known_at": 5
+    },
+    {
+      "name": "Actividades extraescolares",
+      "facet": "Vida diaria en el cole",
+      "known_at": 4
+    },
+    {
+      "name": "Autobús escolar",
+      "facet": "Vida diaria en el cole",
+      "known_at": 2
+    },
+    {
+      "name": "Orla de graduación",
+      "facet": "Vida diaria en el cole",
+      "known_at": 9
+    },
+    {
+      "name": "El pañuelo",
+      "facet": "Juegos de patio y recreo",
+      "known_at": 4
+    },
+    {
+      "name": "La goma",
+      "facet": "Juegos de patio y recreo",
+      "known_at": 6
+    },
+    {
+      "name": "Piedra, papel o tijera",
+      "facet": "Juegos de patio y recreo",
+      "known_at": 1
+    },
+    {
+      "name": "Tazos",
+      "facet": "Juegos de patio y recreo",
+      "known_at": 10
+    },
+    {
+      "name": "Pase misí, pase misá",
+      "facet": "Juegos de patio y recreo",
+      "known_at": 8
+    },
+    {
+      "name": "Yoyó",
+      "facet": "Juegos de patio y recreo",
+      "known_at": 2
+    },
+    {
+      "name": "Siesta",
+      "facet": "Horarios y ritmo del día",
+      "known_at": 1
+    },
+    {
+      "name": "Almuerzo de media mañana",
+      "facet": "Horarios y ritmo del día",
+      "known_at": 5
+    },
+    {
+      "name": "Comida a las dos",
+      "facet": "Horarios y ritmo del día",
+      "known_at": 4
+    },
+    {
+      "name": "Cena a las diez",
+      "facet": "Horarios y ritmo del día",
+      "known_at": 5
+    },
+    {
+      "name": "Huso horario de Europa Central",
+      "facet": "Horarios y ritmo del día",
+      "known_at": 12
+    },
+    {
+      "name": "Cambio de hora",
+      "facet": "Horarios y ritmo del día",
+      "known_at": 5
+    },
+    {
+      "name": "Jornada intensiva",
+      "facet": "Horarios y ritmo del día",
+      "known_at": 9
+    },
+    {
+      "name": "Jornada partida",
+      "facet": "Horarios y ritmo del día",
+      "known_at": 10
+    },
+    {
+      "name": "Prime time",
+      "facet": "Horarios y ritmo del día",
+      "known_at": 10
+    },
+    {
+      "name": "Horario comercial",
+      "facet": "Horarios y ritmo del día",
+      "known_at": 8
+    },
+    {
+      "name": "Hora punta",
+      "facet": "Horarios y ritmo del día",
+      "known_at": 7
+    },
+    {
+      "name": "Madrugón",
+      "facet": "Horarios y ritmo del día",
+      "known_at": 5
+    },
+    {
+      "name": "Persiana",
+      "facet": "La casa y el piso",
+      "known_at": 2
+    },
+    {
+      "name": "Patio de luces",
+      "facet": "La casa y el piso",
+      "known_at": 9
+    },
+    {
+      "name": "Portero automático",
+      "facet": "La casa y el piso",
+      "known_at": 4
+    },
+    {
+      "name": "Comunidad de vecinos",
+      "facet": "La casa y el piso",
+      "known_at": 7
+    },
+    {
+      "name": "Reunión de vecinos",
+      "facet": "La casa y el piso",
+      "known_at": 7
+    },
+    {
+      "name": "Presidente de la comunidad",
+      "facet": "La casa y el piso",
+      "known_at": 9
+    },
+    {
+      "name": "Portería",
+      "facet": "La casa y el piso",
+      "known_at": 6
+    },
+    {
+      "name": "Tendedero",
+      "facet": "La casa y el piso",
+      "known_at": 4
+    },
+    {
+      "name": "Mesa camilla",
+      "facet": "La casa y el piso",
+      "known_at": 10
+    },
+    {
+      "name": "Gotelé",
+      "facet": "La casa y el piso",
+      "known_at": 10
+    },
+    {
+      "name": "Ático",
+      "facet": "La casa y el piso",
+      "known_at": 6
+    },
+    {
+      "name": "Trastero",
+      "facet": "La casa y el piso",
+      "known_at": 6
+    },
+    {
+      "name": "Bidé",
+      "facet": "La casa y el piso",
+      "known_at": 6
+    },
+    {
+      "name": "Vitrocerámica",
+      "facet": "La casa y el piso",
+      "known_at": 7
+    },
+    {
+      "name": "Hipoteca",
+      "facet": "La casa y el piso",
+      "known_at": 10
+    },
+    {
+      "name": "Piso de alquiler",
+      "facet": "La casa y el piso",
+      "known_at": 7
+    },
+    {
+      "name": "Balcón",
+      "facet": "La casa y el piso",
+      "known_at": 2
+    },
+    {
+      "name": "Menú del día",
+      "facet": "Costumbres en la mesa y el bar",
+      "known_at": 7
+    },
+    {
+      "name": "Invitar a una ronda",
+      "facet": "Costumbres en la mesa y el bar",
+      "known_at": 10
+    },
+    {
+      "name": "Barra del bar",
+      "facet": "Costumbres en la mesa y el bar",
+      "known_at": 5
+    },
+    {
+      "name": "Pan en la mesa",
+      "facet": "Costumbres en la mesa y el bar",
+      "known_at": 3
+    },
+    {
+      "name": "Mojar pan",
+      "facet": "Costumbres en la mesa y el bar",
+      "known_at": 3
+    },
+    {
+      "name": "Nochevieja",
+      "facet": "Fiestas familiares y tradiciones",
+      "known_at": 2
+    },
+    {
+      "name": "Carta a los Reyes",
+      "facet": "Fiestas familiares y tradiciones",
+      "known_at": 1
+    },
+    {
+      "name": "Lotería de Navidad",
+      "facet": "Fiestas familiares y tradiciones",
+      "known_at": 5
+    },
+    {
+      "name": "Turrón",
+      "facet": "Fiestas familiares y tradiciones",
+      "known_at": 2
+    },
+    {
+      "name": "Primera comunión",
+      "facet": "Fiestas familiares y tradiciones",
+      "known_at": 4
+    },
+    {
+      "name": "Santo",
+      "facet": "Fiestas familiares y tradiciones",
+      "known_at": 7
+    },
+    {
+      "name": "Tirones de orejas",
+      "facet": "Fiestas familiares y tradiciones",
+      "known_at": 3
+    },
+    {
+      "name": "Día de la Madre",
+      "facet": "Fiestas familiares y tradiciones",
+      "known_at": 3
+    },
+    {
+      "name": "Dos besos",
+      "facet": "Saludos y trato social",
+      "known_at": 3
+    },
+    {
+      "name": "Tutear",
+      "facet": "Saludos y trato social",
+      "known_at": 8
+    },
+    {
+      "name": "Usted",
+      "facet": "Saludos y trato social",
+      "known_at": 5
+    },
+    {
+      "name": "«¡Jesús!»",
+      "facet": "Saludos y trato social",
+      "known_at": 2
+    },
+    {
+      "name": "«¡Que aproveche!»",
+      "facet": "Saludos y trato social",
+      "known_at": 3
+    },
+    {
+      "name": "«Vale»",
+      "facet": "Saludos y trato social",
+      "known_at": 2
+    },
+    {
+      "name": "Quedar",
+      "facet": "Saludos y trato social",
+      "known_at": 6
+    },
+    {
+      "name": "Don y doña",
+      "facet": "Saludos y trato social",
+      "known_at": 7
+    },
+    {
+      "name": "Apretón de manos",
+      "facet": "Saludos y trato social",
+      "known_at": 3
+    },
+    {
+      "name": "Piropo",
+      "facet": "Saludos y trato social",
+      "known_at": 10
+    },
+    {
+      "name": "Tío como apelativo",
+      "facet": "Saludos y trato social",
+      "known_at": 6
+    },
+    {
+      "name": "«¡Salud!»",
+      "facet": "Saludos y trato social",
+      "known_at": 4
+    },
+    {
+      "name": "Cruz verde de las farmacias",
+      "facet": "Tiendas, calle y servicios",
+      "known_at": 4
+    },
+    {
+      "name": "Buzón amarillo",
+      "facet": "Tiendas, calle y servicios",
+      "known_at": 5
+    },
+    {
+      "name": "Empadronamiento",
+      "facet": "Tiendas, calle y servicios",
+      "known_at": 12
+    },
+    {
+      "name": "Centro de salud",
+      "facet": "Tiendas, calle y servicios",
+      "known_at": 4
+    },
+    {
+      "name": "Médico de cabecera",
+      "facet": "Tiendas, calle y servicios",
+      "known_at": 7
+    },
+    {
+      "name": "Pedir la vez",
+      "facet": "Tiendas, calle y servicios",
+      "known_at": 7
+    },
+    {
+      "name": "112",
+      "facet": "Tiendas, calle y servicios",
+      "known_at": 4
+    },
+    {
+      "name": "Pasar por debajo de una escalera",
+      "facet": "Supersticiones y creencias populares",
+      "known_at": 4
+    },
+    {
+      "name": "Ropa interior roja en Nochevieja",
+      "facet": "Supersticiones y creencias populares",
+      "known_at": 9
+    },
+    {
+      "name": "Abrir un paraguas dentro de casa",
+      "facet": "Supersticiones y creencias populares",
+      "known_at": 6
+    },
+    {
+      "name": "Saltar la hoguera de San Juan",
+      "facet": "Supersticiones y creencias populares",
+      "known_at": 7
+    },
+    {
+      "name": "Meigas",
+      "facet": "Supersticiones y creencias populares",
+      "known_at": 9
+    },
+    {
+      "name": "Fiestas del pueblo",
+      "facet": "Verano, vacaciones y el pueblo",
+      "known_at": 4
+    },
+    {
+      "name": "Sombrilla",
+      "facet": "Verano, vacaciones y el pueblo",
+      "known_at": 2
+    },
+    {
+      "name": "Cuaderno de vacaciones",
+      "facet": "Verano, vacaciones y el pueblo",
+      "known_at": 4
+    },
+    {
+      "name": "Campamento de verano",
+      "facet": "Verano, vacaciones y el pueblo",
+      "known_at": 3
+    },
+    {
+      "name": "Piscina municipal",
+      "facet": "Verano, vacaciones y el pueblo",
+      "known_at": 2
+    },
+    {
+      "name": "Tomar el fresco",
+      "facet": "Verano, vacaciones y el pueblo",
+      "known_at": 8
+    },
+    {
+      "name": "Polo Flash",
+      "facet": "Verano, vacaciones y el pueblo",
+      "known_at": 6
+    },
+    {
+      "name": "Chanclas",
+      "facet": "Verano, vacaciones y el pueblo",
+      "known_at": 1
+    },
+    {
+      "name": "Camping",
+      "facet": "Verano, vacaciones y el pueblo",
+      "known_at": 3
+    },
+    {
+      "name": "Agosto",
+      "facet": "Verano, vacaciones y el pueblo",
+      "known_at": 3
+    },
+    {
+      "name": "Romería",
+      "facet": "Verano, vacaciones y el pueblo",
+      "known_at": 9
+    },
+    {
+      "name": "Sandía",
+      "facet": "Verano, vacaciones y el pueblo",
+      "known_at": 1
+    },
+    {
+      "name": "Brasero",
+      "facet": "Costumbres de antes",
+      "known_at": 10
+    },
+    {
+      "name": "Lavadero público",
+      "facet": "Costumbres de antes",
+      "known_at": 11
+    },
+    {
+      "name": "Cabina de teléfono",
+      "facet": "Costumbres de antes",
+      "known_at": 5
+    },
+    {
+      "name": "Enciclopedia Álvarez",
+      "facet": "Costumbres de antes",
+      "known_at": 14
+    },
+    {
+      "name": "Pan con chocolate",
+      "facet": "Costumbres de antes",
+      "known_at": 6
+    },
+    {
+      "name": "Videoclub",
+      "facet": "Costumbres de antes",
+      "known_at": 8
+    },
+    {
+      "name": "Teléfono de rueda",
+      "facet": "Costumbres de antes",
+      "known_at": 7
+    },
+    {
+      "name": "Telegrama",
+      "facet": "Costumbres de antes",
+      "known_at": 10
+    },
+    {
+      "name": "Mantilla y peineta",
+      "facet": "Costumbres de antes",
+      "known_at": 10
+    }
+  ]
+}
