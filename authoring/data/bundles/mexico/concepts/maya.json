@@ -1,0 +1,818 @@
+{
+  "subcategory": "maya",
+  "facets": [
+    "Ciudades y zonas arqueológicas",
+    "Pirámides, templos y construcciones",
+    "Dioses, mitos y Popol Vuh",
+    "Escritura, números y calendario",
+    "Astronomía y conocimientos",
+    "Gobernantes y personajes",
+    "Comida, milpa y vida cotidiana",
+    "Juego de pelota y ceremonias",
+    "Arte, jade y pintura mural",
+    "Conquista y Guerra de Castas",
+    "Lengua maya y pueblos mayas hoy",
+    "Selva, cenotes y animales sagrados"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mayapán",
+      "facet": "Ciudades y zonas arqueológicas",
+      "known_at": 12
+    },
+    {
+      "name": "Dzibilchaltún",
+      "facet": "Ciudades y zonas arqueológicas",
+      "known_at": 12
+    },
+    {
+      "name": "Toniná",
+      "facet": "Ciudades y zonas arqueológicas",
+      "known_at": 13
+    },
+    {
+      "name": "Comalcalco",
+      "facet": "Ciudades y zonas arqueológicas",
+      "known_at": 13
+    },
+    {
+      "name": "Kabah",
+      "facet": "Ciudades y zonas arqueológicas",
+      "known_at": 13
+    },
+    {
+      "name": "Becán",
+      "facet": "Ciudades y zonas arqueológicas",
+      "known_at": 14
+    },
+    {
+      "name": "Tikal",
+      "facet": "Ciudades y zonas arqueológicas",
+      "known_at": 10
+    },
+    {
+      "name": "Pirámide de Kukulcán",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 3
+    },
+    {
+      "name": "El Castillo de Tulum",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 8
+    },
+    {
+      "name": "Pirámide del Adivino",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 9
+    },
+    {
+      "name": "Templo de las Inscripciones",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 10
+    },
+    {
+      "name": "El Caracol",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 10
+    },
+    {
+      "name": "Templo de los Guerreros",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 10
+    },
+    {
+      "name": "Estela maya",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 9
+    },
+    {
+      "name": "Grupo de las Mil Columnas",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 11
+    },
+    {
+      "name": "El Palacio de Palenque",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 11
+    },
+    {
+      "name": "Nohoch Mul",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 11
+    },
+    {
+      "name": "Sacbé",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 11
+    },
+    {
+      "name": "Arco maya",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 12
+    },
+    {
+      "name": "Templo del Dios Descendente",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 12
+    },
+    {
+      "name": "Cuadrángulo de las Monjas",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 13
+    },
+    {
+      "name": "Templo de las Siete Muñecas",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 13
+    },
+    {
+      "name": "Arco de Labná",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 13
+    },
+    {
+      "name": "Estilo Puuc",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 13
+    },
+    {
+      "name": "Chultún",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 14
+    },
+    {
+      "name": "Estilo Río Bec",
+      "facet": "Pirámides, templos y construcciones",
+      "known_at": 14
+    },
+    {
+      "name": "Kukulcán",
+      "facet": "Dioses, mitos y Popol Vuh",
+      "known_at": 5
+    },
+    {
+      "name": "Aluxes",
+      "facet": "Dioses, mitos y Popol Vuh",
+      "known_at": 9
+    },
+    {
+      "name": "Ixchel",
+      "facet": "Dioses, mitos y Popol Vuh",
+      "known_at": 10
+    },
+    {
+      "name": "Itzamná",
+      "facet": "Dioses, mitos y Popol Vuh",
+      "known_at": 11
+    },
+    {
+      "name": "Hunahpú e Ixbalanqué",
+      "facet": "Dioses, mitos y Popol Vuh",
+      "known_at": 11
+    },
+    {
+      "name": "Ah Puch",
+      "facet": "Dioses, mitos y Popol Vuh",
+      "known_at": 11
+    },
+    {
+      "name": "Xtabay",
+      "facet": "Dioses, mitos y Popol Vuh",
+      "known_at": 11
+    },
+    {
+      "name": "Hombres de madera",
+      "facet": "Dioses, mitos y Popol Vuh",
+      "known_at": 12
+    },
+    {
+      "name": "Huracán",
+      "facet": "Dioses, mitos y Popol Vuh",
+      "known_at": 12
+    },
+    {
+      "name": "Chilam Balam",
+      "facet": "Dioses, mitos y Popol Vuh",
+      "known_at": 12
+    },
+    {
+      "name": "Camazotz",
+      "facet": "Dioses, mitos y Popol Vuh",
+      "known_at": 12
+    },
+    {
+      "name": "Yum Kaax",
+      "facet": "Dioses, mitos y Popol Vuh",
+      "known_at": 12
+    },
+    {
+      "name": "Gucumatz",
+      "facet": "Dioses, mitos y Popol Vuh",
+      "known_at": 13
+    },
+    {
+      "name": "Bacabes",
+      "facet": "Dioses, mitos y Popol Vuh",
+      "known_at": 13
+    },
+    {
+      "name": "Hun Hunahpú",
+      "facet": "Dioses, mitos y Popol Vuh",
+      "known_at": 13
+    },
+    {
+      "name": "Ixquic",
+      "facet": "Dioses, mitos y Popol Vuh",
+      "known_at": 14
+    },
+    {
+      "name": "Punto y raya",
+      "facet": "Escritura, números y calendario",
+      "known_at": 6
+    },
+    {
+      "name": "21 de diciembre de 2012",
+      "facet": "Escritura, números y calendario",
+      "known_at": 6
+    },
+    {
+      "name": "Cero maya",
+      "facet": "Escritura, números y calendario",
+      "known_at": 7
+    },
+    {
+      "name": "Glifos mayas",
+      "facet": "Escritura, números y calendario",
+      "known_at": 8
+    },
+    {
+      "name": "Sistema vigesimal",
+      "facet": "Escritura, números y calendario",
+      "known_at": 8
+    },
+    {
+      "name": "Códice de Dresde",
+      "facet": "Escritura, números y calendario",
+      "known_at": 11
+    },
+    {
+      "name": "Tzolkin",
+      "facet": "Escritura, números y calendario",
+      "known_at": 11
+    },
+    {
+      "name": "Haab",
+      "facet": "Escritura, números y calendario",
+      "known_at": 11
+    },
+    {
+      "name": "Baktún",
+      "facet": "Escritura, números y calendario",
+      "known_at": 11
+    },
+    {
+      "name": "Cuenta larga",
+      "facet": "Escritura, números y calendario",
+      "known_at": 12
+    },
+    {
+      "name": "Rueda calendárica",
+      "facet": "Escritura, números y calendario",
+      "known_at": 12
+    },
+    {
+      "name": "Katún",
+      "facet": "Escritura, números y calendario",
+      "known_at": 13
+    },
+    {
+      "name": "Uayeb",
+      "facet": "Escritura, números y calendario",
+      "known_at": 13
+    },
+    {
+      "name": "Códice de Madrid",
+      "facet": "Escritura, números y calendario",
+      "known_at": 13
+    },
+    {
+      "name": "Relación de las cosas de Yucatán",
+      "facet": "Escritura, números y calendario",
+      "known_at": 13
+    },
+    {
+      "name": "Códice de París",
+      "facet": "Escritura, números y calendario",
+      "known_at": 14
+    },
+    {
+      "name": "Códice Maya de México",
+      "facet": "Escritura, números y calendario",
+      "known_at": 14
+    },
+    {
+      "name": "Yuri Knórozov",
+      "facet": "Escritura, números y calendario",
+      "known_at": 14
+    },
+    {
+      "name": "Equinoccio de primavera",
+      "facet": "Astronomía y conocimientos",
+      "known_at": 5
+    },
+    {
+      "name": "Luna",
+      "facet": "Astronomía y conocimientos",
+      "known_at": 3
+    },
+    {
+      "name": "Eclipse solar",
+      "facet": "Astronomía y conocimientos",
+      "known_at": 7
+    },
+    {
+      "name": "Venus",
+      "facet": "Astronomía y conocimientos",
+      "known_at": 8
+    },
+    {
+      "name": "Solsticio de verano",
+      "facet": "Astronomía y conocimientos",
+      "known_at": 8
+    },
+    {
+      "name": "Año solar",
+      "facet": "Astronomía y conocimientos",
+      "known_at": 9
+    },
+    {
+      "name": "Vía Láctea",
+      "facet": "Astronomía y conocimientos",
+      "known_at": 9
+    },
+    {
+      "name": "Herbolaria maya",
+      "facet": "Astronomía y conocimientos",
+      "known_at": 10
+    },
+    {
+      "name": "Calendario agrícola",
+      "facet": "Astronomía y conocimientos",
+      "known_at": 11
+    },
+    {
+      "name": "Pléyades",
+      "facet": "Astronomía y conocimientos",
+      "known_at": 12
+    },
+    {
+      "name": "Hule",
+      "facet": "Astronomía y conocimientos",
+      "known_at": 12
+    },
+    {
+      "name": "Tablas de Venus",
+      "facet": "Astronomía y conocimientos",
+      "known_at": 13
+    },
+    {
+      "name": "Paso cenital del Sol",
+      "facet": "Astronomía y conocimientos",
+      "known_at": 14
+    },
+    {
+      "name": "Orión",
+      "facet": "Astronomía y conocimientos",
+      "known_at": 14
+    },
+    {
+      "name": "Pakal el Grande",
+      "facet": "Gobernantes y personajes",
+      "known_at": 9
+    },
+    {
+      "name": "Reina Roja",
+      "facet": "Gobernantes y personajes",
+      "known_at": 11
+    },
+    {
+      "name": "Alberto Ruz Lhuillier",
+      "facet": "Gobernantes y personajes",
+      "known_at": 12
+    },
+    {
+      "name": "Jacinto Canek",
+      "facet": "Gobernantes y personajes",
+      "known_at": 12
+    },
+    {
+      "name": "Halach Uinic",
+      "facet": "Gobernantes y personajes",
+      "known_at": 12
+    },
+    {
+      "name": "Kan Bahlam",
+      "facet": "Gobernantes y personajes",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo Jaguar",
+      "facet": "Gobernantes y personajes",
+      "known_at": 13
+    },
+    {
+      "name": "Cecilio Chi",
+      "facet": "Gobernantes y personajes",
+      "known_at": 13
+    },
+    {
+      "name": "Jacinto Pat",
+      "facet": "Gobernantes y personajes",
+      "known_at": 13
+    },
+    {
+      "name": "Yuknoom el Grande",
+      "facet": "Gobernantes y personajes",
+      "known_at": 14
+    },
+    {
+      "name": "Pájaro Jaguar IV",
+      "facet": "Gobernantes y personajes",
+      "known_at": 14
+    },
+    {
+      "name": "Señora Xoc",
+      "facet": "Gobernantes y personajes",
+      "known_at": 14
+    },
+    {
+      "name": "Nachi Cocom",
+      "facet": "Gobernantes y personajes",
+      "known_at": 14
+    },
+    {
+      "name": "Tutul Xiu",
+      "facet": "Gobernantes y personajes",
+      "known_at": 14
+    },
+    {
+      "name": "Hunac Ceel",
+      "facet": "Gobernantes y personajes",
+      "known_at": 14
+    },
+    {
+      "name": "Casa maya de palma",
+      "facet": "Comida, milpa y vida cotidiana",
+      "known_at": 9
+    },
+    {
+      "name": "Pib",
+      "facet": "Comida, milpa y vida cotidiana",
+      "known_at": 10
+    },
+    {
+      "name": "Pozol",
+      "facet": "Comida, milpa y vida cotidiana",
+      "known_at": 10
+    },
+    {
+      "name": "Sopa de lima",
+      "facet": "Comida, milpa y vida cotidiana",
+      "known_at": 11
+    },
+    {
+      "name": "Relleno negro",
+      "facet": "Comida, milpa y vida cotidiana",
+      "known_at": 12
+    },
+    {
+      "name": "Sikil pak",
+      "facet": "Comida, milpa y vida cotidiana",
+      "known_at": 13
+    },
+    {
+      "name": "Balché",
+      "facet": "Comida, milpa y vida cotidiana",
+      "known_at": 13
+    },
+    {
+      "name": "Aro de piedra",
+      "facet": "Juego de pelota y ceremonias",
+      "known_at": 6
+    },
+    {
+      "name": "Ofrenda",
+      "facet": "Juego de pelota y ceremonias",
+      "known_at": 6
+    },
+    {
+      "name": "Pelota de hule",
+      "facet": "Juego de pelota y ceremonias",
+      "known_at": 7
+    },
+    {
+      "name": "Gran Juego de Pelota de Chichén Itzá",
+      "facet": "Juego de pelota y ceremonias",
+      "known_at": 8
+    },
+    {
+      "name": "Pok ta pok",
+      "facet": "Juego de pelota y ceremonias",
+      "known_at": 9
+    },
+    {
+      "name": "Jarana yucateca",
+      "facet": "Juego de pelota y ceremonias",
+      "known_at": 9
+    },
+    {
+      "name": "Vaquería yucateca",
+      "facet": "Juego de pelota y ceremonias",
+      "known_at": 11
+    },
+    {
+      "name": "Caracol marino",
+      "facet": "Juego de pelota y ceremonias",
+      "known_at": 11
+    },
+    {
+      "name": "Protector de cadera",
+      "facet": "Juego de pelota y ceremonias",
+      "known_at": 12
+    },
+    {
+      "name": "Ulama",
+      "facet": "Juego de pelota y ceremonias",
+      "known_at": 12
+    },
+    {
+      "name": "Cha'a Chaak",
+      "facet": "Juego de pelota y ceremonias",
+      "known_at": 12
+    },
+    {
+      "name": "H-men",
+      "facet": "Juego de pelota y ceremonias",
+      "known_at": 12
+    },
+    {
+      "name": "Ah Kin",
+      "facet": "Juego de pelota y ceremonias",
+      "known_at": 13
+    },
+    {
+      "name": "Tunkul",
+      "facet": "Juego de pelota y ceremonias",
+      "known_at": 13
+    },
+    {
+      "name": "Danza de la Cabeza de Cochino",
+      "facet": "Juego de pelota y ceremonias",
+      "known_at": 14
+    },
+    {
+      "name": "Cerámica maya",
+      "facet": "Arte, jade y pintura mural",
+      "known_at": 8
+    },
+    {
+      "name": "Máscara de jade de Pakal",
+      "facet": "Arte, jade y pintura mural",
+      "known_at": 9
+    },
+    {
+      "name": "Tocado de plumas de quetzal",
+      "facet": "Arte, jade y pintura mural",
+      "known_at": 9
+    },
+    {
+      "name": "Sala Maya del Museo Nacional de Antropología",
+      "facet": "Arte, jade y pintura mural",
+      "known_at": 9
+    },
+    {
+      "name": "Murales de Bonampak",
+      "facet": "Arte, jade y pintura mural",
+      "known_at": 10
+    },
+    {
+      "name": "Lápida de Pakal",
+      "facet": "Arte, jade y pintura mural",
+      "known_at": 11
+    },
+    {
+      "name": "Astronauta de Palenque",
+      "facet": "Arte, jade y pintura mural",
+      "known_at": 11
+    },
+    {
+      "name": "Azul maya",
+      "facet": "Arte, jade y pintura mural",
+      "known_at": 12
+    },
+    {
+      "name": "Estuco",
+      "facet": "Arte, jade y pintura mural",
+      "known_at": 12
+    },
+    {
+      "name": "Vasija policromada",
+      "facet": "Arte, jade y pintura mural",
+      "known_at": 12
+    },
+    {
+      "name": "Mascarones de Chaac",
+      "facet": "Arte, jade y pintura mural",
+      "known_at": 12
+    },
+    {
+      "name": "Figurillas de Jaina",
+      "facet": "Arte, jade y pintura mural",
+      "known_at": 13
+    },
+    {
+      "name": "Dintel 24 de Yaxchilán",
+      "facet": "Arte, jade y pintura mural",
+      "known_at": 14,
+      "retired": "unaskable: The lintel shows a tongue-piercing bloodletting rite, which is not family-friendly, and the person in it is too obscure to identify."
+    },
+    {
+      "name": "Concha Spondylus",
+      "facet": "Arte, jade y pintura mural",
+      "known_at": 14
+    },
+    {
+      "name": "Guerra de Castas",
+      "facet": "Conquista y Guerra de Castas",
+      "known_at": 11
+    },
+    {
+      "name": "Diego de Landa",
+      "facet": "Conquista y Guerra de Castas",
+      "known_at": 12
+    },
+    {
+      "name": "Fundación de Mérida",
+      "facet": "Conquista y Guerra de Castas",
+      "known_at": 12
+    },
+    {
+      "name": "Auto de fe de Maní",
+      "facet": "Conquista y Guerra de Castas",
+      "known_at": 13
+    },
+    {
+      "name": "Cruz Parlante",
+      "facet": "Conquista y Guerra de Castas",
+      "known_at": 13
+    },
+    {
+      "name": "Chan Santa Cruz",
+      "facet": "Conquista y Guerra de Castas",
+      "known_at": 13
+    },
+    {
+      "name": "Tihó",
+      "facet": "Conquista y Guerra de Castas",
+      "known_at": 13
+    },
+    {
+      "name": "Naufragio de 1511",
+      "facet": "Conquista y Guerra de Castas",
+      "known_at": 13
+    },
+    {
+      "name": "Tepich",
+      "facet": "Conquista y Guerra de Castas",
+      "known_at": 14
+    },
+    {
+      "name": "Tayasal",
+      "facet": "Conquista y Guerra de Castas",
+      "known_at": 14
+    },
+    {
+      "name": "Maya yucateco",
+      "facet": "Lengua maya y pueblos mayas hoy",
+      "known_at": 8
+    },
+    {
+      "name": "Lacandones",
+      "facet": "Lengua maya y pueblos mayas hoy",
+      "known_at": 9
+    },
+    {
+      "name": "Palabra cenote",
+      "facet": "Lengua maya y pueblos mayas hoy",
+      "known_at": 9
+    },
+    {
+      "name": "Tsotsil",
+      "facet": "Lengua maya y pueblos mayas hoy",
+      "known_at": 11
+    },
+    {
+      "name": "Tseltal",
+      "facet": "Lengua maya y pueblos mayas hoy",
+      "known_at": 11
+    },
+    {
+      "name": "San Juan Chamula",
+      "facet": "Lengua maya y pueblos mayas hoy",
+      "known_at": 11
+    },
+    {
+      "name": "Chol",
+      "facet": "Lengua maya y pueblos mayas hoy",
+      "known_at": 12
+    },
+    {
+      "name": "Bix a beel",
+      "facet": "Lengua maya y pueblos mayas hoy",
+      "known_at": 12
+    },
+    {
+      "name": "Huach",
+      "facet": "Lengua maya y pueblos mayas hoy",
+      "known_at": 12
+    },
+    {
+      "name": "Tuch",
+      "facet": "Lengua maya y pueblos mayas hoy",
+      "known_at": 12
+    },
+    {
+      "name": "Zinacantán",
+      "facet": "Lengua maya y pueblos mayas hoy",
+      "known_at": 13
+    },
+    {
+      "name": "Tojolabal",
+      "facet": "Lengua maya y pueblos mayas hoy",
+      "known_at": 13
+    },
+    {
+      "name": "Hach winik",
+      "facet": "Lengua maya y pueblos mayas hoy",
+      "known_at": 14
+    },
+    {
+      "name": "Cocodrilo",
+      "facet": "Selva, cenotes y animales sagrados",
+      "known_at": 2
+    },
+    {
+      "name": "Tortuga marina",
+      "facet": "Selva, cenotes y animales sagrados",
+      "known_at": 3
+    },
+    {
+      "name": "Tapir",
+      "facet": "Selva, cenotes y animales sagrados",
+      "known_at": 7
+    }
+  ]
+}

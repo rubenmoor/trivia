@@ -1,0 +1,667 @@
+{
+  "subcategory": "crafts-and-dress",
+  "facets": [
+    "Alfarería y barro",
+    "Textiles y telar de cintura",
+    "Vestimenta tradicional femenina",
+    "Vestimenta tradicional masculina y charrería",
+    "Alebrijes y tallado en madera",
+    "Juguetes tradicionales mexicanos",
+    "Papel picado, papel amate y cartonería",
+    "Platería, metales y joyería",
+    "Arte huichol y chaquira",
+    "Cestería, palma y fibras vegetales",
+    "Lacas, vidrio soplado y talavera",
+    "Mercados, pueblos artesanos y maestros"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Doña Rosa Real",
+      "facet": "Alfarería y barro",
+      "known_at": 13
+    },
+    {
+      "name": "Sirena de barro de Metepec",
+      "facet": "Alfarería y barro",
+      "known_at": 11
+    },
+    {
+      "name": "Cazuela de barro",
+      "facet": "Alfarería y barro",
+      "known_at": 3
+    },
+    {
+      "name": "Jarro de café de olla",
+      "facet": "Alfarería y barro",
+      "known_at": 6
+    },
+    {
+      "name": "Cántaro",
+      "facet": "Alfarería y barro",
+      "known_at": 5
+    },
+    {
+      "name": "Torno de alfarero",
+      "facet": "Alfarería y barro",
+      "known_at": 6
+    },
+    {
+      "name": "Tonalá",
+      "facet": "Alfarería y barro",
+      "known_at": 9
+    },
+    {
+      "name": "Barro bruñido",
+      "facet": "Alfarería y barro",
+      "known_at": 11
+    },
+    {
+      "name": "Catrinas de barro de Capula",
+      "facet": "Alfarería y barro",
+      "known_at": 11
+    },
+    {
+      "name": "Alfarería de Amatenango del Valle",
+      "facet": "Alfarería y barro",
+      "known_at": 13
+    },
+    {
+      "name": "Telar de pedal",
+      "facet": "Textiles y telar de cintura",
+      "known_at": 11
+    },
+    {
+      "name": "Malacate",
+      "facet": "Textiles y telar de cintura",
+      "known_at": 13
+    },
+    {
+      "name": "Rebozo de bolita",
+      "facet": "Textiles y telar de cintura",
+      "known_at": 12
+    },
+    {
+      "name": "Añil",
+      "facet": "Textiles y telar de cintura",
+      "known_at": 11
+    },
+    {
+      "name": "Algodón coyuchi",
+      "facet": "Textiles y telar de cintura",
+      "known_at": 14
+    },
+    {
+      "name": "Bordado de Zinacantán",
+      "facet": "Textiles y telar de cintura",
+      "known_at": 12
+    },
+    {
+      "name": "Tapete de lana de Teotitlán del Valle",
+      "facet": "Textiles y telar de cintura",
+      "known_at": 11
+    },
+    {
+      "name": "Deshilado de Aguascalientes",
+      "facet": "Textiles y telar de cintura",
+      "known_at": 13
+    },
+    {
+      "name": "Punto de cruz",
+      "facet": "Textiles y telar de cintura",
+      "known_at": 6
+    },
+    {
+      "name": "Tela de manta",
+      "facet": "Textiles y telar de cintura",
+      "known_at": 7
+    },
+    {
+      "name": "Seda de San Pedro Cajonos",
+      "facet": "Textiles y telar de cintura",
+      "known_at": 14
+    },
+    {
+      "name": "Morral",
+      "facet": "Textiles y telar de cintura",
+      "known_at": 7
+    },
+    {
+      "name": "Resplandor",
+      "facet": "Vestimenta tradicional femenina",
+      "known_at": 13
+    },
+    {
+      "name": "Traje de Flor de Piña",
+      "facet": "Vestimenta tradicional femenina",
+      "known_at": 12
+    },
+    {
+      "name": "Traje de chiapaneca",
+      "facet": "Vestimenta tradicional femenina",
+      "known_at": 11
+    },
+    {
+      "name": "Vestido de escaramuza",
+      "facet": "Vestimenta tradicional femenina",
+      "known_at": 9
+    },
+    {
+      "name": "Vestido de Jalisco",
+      "facet": "Vestimenta tradicional femenina",
+      "known_at": 7
+    },
+    {
+      "name": "Trenzas con listones",
+      "facet": "Vestimenta tradicional femenina",
+      "known_at": 5
+    },
+    {
+      "name": "Blusa de manta bordada",
+      "facet": "Vestimenta tradicional femenina",
+      "known_at": 6
+    },
+    {
+      "name": "Faja",
+      "facet": "Vestimenta tradicional femenina",
+      "known_at": 8
+    },
+    {
+      "name": "Botonadura de plata",
+      "facet": "Vestimenta tradicional masculina y charrería",
+      "known_at": 11
+    },
+    {
+      "name": "Moño de charro",
+      "facet": "Vestimenta tradicional masculina y charrería",
+      "known_at": 9
+    },
+    {
+      "name": "Silla de montar charra",
+      "facet": "Vestimenta tradicional masculina y charrería",
+      "known_at": 9
+    },
+    {
+      "name": "Botines charros",
+      "facet": "Vestimenta tradicional masculina y charrería",
+      "known_at": 9
+    },
+    {
+      "name": "Sombrero jarano",
+      "facet": "Vestimenta tradicional masculina y charrería",
+      "known_at": 12
+    },
+    {
+      "name": "Paliacate",
+      "facet": "Vestimenta tradicional masculina y charrería",
+      "known_at": 5
+    },
+    {
+      "name": "Gabán",
+      "facet": "Vestimenta tradicional masculina y charrería",
+      "known_at": 13
+    },
+    {
+      "name": "Cuera tamaulipeca",
+      "facet": "Vestimenta tradicional masculina y charrería",
+      "known_at": 12
+    },
+    {
+      "name": "Traje de Parachico",
+      "facet": "Vestimenta tradicional masculina y charrería",
+      "known_at": 10
+    },
+    {
+      "name": "San Martín Tilcajete",
+      "facet": "Alebrijes y tallado en madera",
+      "known_at": 12
+    },
+    {
+      "name": "San Antonio Arrazola",
+      "facet": "Alebrijes y tallado en madera",
+      "known_at": 13
+    },
+    {
+      "name": "Manuel Jiménez",
+      "facet": "Alebrijes y tallado en madera",
+      "known_at": 14
+    },
+    {
+      "name": "Jacobo y María Ángeles",
+      "facet": "Alebrijes y tallado en madera",
+      "known_at": 14
+    },
+    {
+      "name": "Madera de copal",
+      "facet": "Alebrijes y tallado en madera",
+      "known_at": 11
+    },
+    {
+      "name": "Pepita (Coco)",
+      "facet": "Alebrijes y tallado en madera",
+      "known_at": 4
+    },
+    {
+      "name": "Dante (Coco)",
+      "facet": "Alebrijes y tallado en madera",
+      "known_at": 3
+    },
+    {
+      "name": "Máscara de tigre de Guerrero",
+      "facet": "Alebrijes y tallado en madera",
+      "known_at": 12
+    },
+    {
+      "name": "Máscara de Parachico",
+      "facet": "Alebrijes y tallado en madera",
+      "known_at": 10
+    },
+    {
+      "name": "Máscara de la Danza de los Viejitos",
+      "facet": "Alebrijes y tallado en madera",
+      "known_at": 9
+    },
+    {
+      "name": "Cuchara de madera tallada",
+      "facet": "Alebrijes y tallado en madera",
+      "known_at": 4
+    },
+    {
+      "name": "Santos estofados",
+      "facet": "Alebrijes y tallado en madera",
+      "known_at": 13
+    },
+    {
+      "name": "Matatena",
+      "facet": "Juguetes tradicionales mexicanos",
+      "known_at": 6
+    },
+    {
+      "name": "Canicas",
+      "facet": "Juguetes tradicionales mexicanos",
+      "known_at": 3
+    },
+    {
+      "name": "Pirinola",
+      "facet": "Juguetes tradicionales mexicanos",
+      "known_at": 5
+    },
+    {
+      "name": "Caballito de palo",
+      "facet": "Juguetes tradicionales mexicanos",
+      "known_at": 5
+    },
+    {
+      "name": "Máscara de luchador",
+      "facet": "Juguetes tradicionales mexicanos",
+      "known_at": 4
+    },
+    {
+      "name": "Alcancía de cochinito",
+      "facet": "Juguetes tradicionales mexicanos",
+      "known_at": 6
+    },
+    {
+      "name": "Títere de madera",
+      "facet": "Juguetes tradicionales mexicanos",
+      "known_at": 5
+    },
+    {
+      "name": "Carrito de madera",
+      "facet": "Juguetes tradicionales mexicanos",
+      "known_at": 5
+    },
+    {
+      "name": "San Pablito Pahuatlán",
+      "facet": "Papel picado, papel amate y cartonería",
+      "known_at": 14
+    },
+    {
+      "name": "Pintura en amate de Guerrero",
+      "facet": "Papel picado, papel amate y cartonería",
+      "known_at": 13
+    },
+    {
+      "name": "Códice",
+      "facet": "Papel picado, papel amate y cartonería",
+      "known_at": 10
+    },
+    {
+      "name": "Judas de cartón",
+      "facet": "Papel picado, papel amate y cartonería",
+      "known_at": 11
+    },
+    {
+      "name": "Mojiganga",
+      "facet": "Papel picado, papel amate y cartonería",
+      "known_at": 12
+    },
+    {
+      "name": "Torito de pirotecnia",
+      "facet": "Papel picado, papel amate y cartonería",
+      "known_at": 11
+    },
+    {
+      "name": "Cartonería de Celaya",
+      "facet": "Papel picado, papel amate y cartonería",
+      "known_at": 13
+    },
+    {
+      "name": "William Spratling",
+      "facet": "Platería, metales y joyería",
+      "known_at": 13
+    },
+    {
+      "name": "Plata mexicana",
+      "facet": "Platería, metales y joyería",
+      "known_at": 6
+    },
+    {
+      "name": "Plata .925",
+      "facet": "Platería, metales y joyería",
+      "known_at": 10
+    },
+    {
+      "name": "Santa Clara del Cobre",
+      "facet": "Platería, metales y joyería",
+      "known_at": 11
+    },
+    {
+      "name": "Hojalata",
+      "facet": "Platería, metales y joyería",
+      "known_at": 11
+    },
+    {
+      "name": "Filigrana de plata",
+      "facet": "Platería, metales y joyería",
+      "known_at": 12
+    },
+    {
+      "name": "Arracadas",
+      "facet": "Platería, metales y joyería",
+      "known_at": 8
+    },
+    {
+      "name": "Collar de monedas de tehuana",
+      "facet": "Platería, metales y joyería",
+      "known_at": 12
+    },
+    {
+      "name": "Tesoro de la Tumba 7 de Monte Albán",
+      "facet": "Platería, metales y joyería",
+      "known_at": 13
+    },
+    {
+      "name": "Milagritos",
+      "facet": "Platería, metales y joyería",
+      "known_at": 11
+    },
+    {
+      "name": "Ópalo de fuego",
+      "facet": "Platería, metales y joyería",
+      "known_at": 13
+    },
+    {
+      "name": "Machete grabado de Oaxaca",
+      "facet": "Platería, metales y joyería",
+      "known_at": 12
+    },
+    {
+      "name": "Espuelas de Amozoc",
+      "facet": "Platería, metales y joyería",
+      "known_at": 14
+    },
+    {
+      "name": "Wixárika",
+      "facet": "Arte huichol y chaquira",
+      "known_at": 10
+    },
+    {
+      "name": "Chaquira",
+      "facet": "Arte huichol y chaquira",
+      "known_at": 8
+    },
+    {
+      "name": "Nierika",
+      "facet": "Arte huichol y chaquira",
+      "known_at": 12
+    },
+    {
+      "name": "Venado azul",
+      "facet": "Arte huichol y chaquira",
+      "known_at": 13
+    },
+    {
+      "name": "Jícara huichola",
+      "facet": "Arte huichol y chaquira",
+      "known_at": 12
+    },
+    {
+      "name": "Máscara de jaguar huichola",
+      "facet": "Arte huichol y chaquira",
+      "known_at": 10
+    },
+    {
+      "name": "Cráneo de chaquira",
+      "facet": "Arte huichol y chaquira",
+      "known_at": 8
+    },
+    {
+      "name": "Cera de Campeche",
+      "facet": "Arte huichol y chaquira",
+      "known_at": 14
+    },
+    {
+      "name": "Vochol",
+      "facet": "Arte huichol y chaquira",
+      "known_at": 11
+    },
+    {
+      "name": "Morral huichol",
+      "facet": "Arte huichol y chaquira",
+      "known_at": 11
+    },
+    {
+      "name": "Pulsera de chaquira",
+      "facet": "Arte huichol y chaquira",
+      "known_at": 5
+    },
+    {
+      "name": "Sombrero huichol",
+      "facet": "Arte huichol y chaquira",
+      "known_at": 12
+    },
+    {
+      "name": "Mara'akame",
+      "facet": "Arte huichol y chaquira",
+      "known_at": 14
+    },
+    {
+      "name": "Sombrero de palma",
+      "facet": "Cestería, palma y fibras vegetales",
+      "known_at": 4
+    },
+    {
+      "name": "Becal",
+      "facet": "Cestería, palma y fibras vegetales",
+      "known_at": 14
+    },
+    {
+      "name": "Cestería de Ihuatzio",
+      "facet": "Cestería, palma y fibras vegetales",
+      "known_at": 14
+    },
+    {
+      "name": "Canasta de carrizo",
+      "facet": "Cestería, palma y fibras vegetales",
+      "known_at": 6
+    },
+    {
+      "name": "Mimbre",
+      "facet": "Cestería, palma y fibras vegetales",
+      "known_at": 7
+    },
+    {
+      "name": "Ayate",
+      "facet": "Cestería, palma y fibras vegetales",
+      "known_at": 12
+    },
+    {
+      "name": "Muñeca de hoja de maíz",
+      "facet": "Cestería, palma y fibras vegetales",
+      "known_at": 9
+    },
+    {
+      "name": "Tenate",
+      "facet": "Cestería, palma y fibras vegetales",
+      "known_at": 12
+    },
+    {
+      "name": "Azulejo",
+      "facet": "Lacas, vidrio soplado y talavera",
+      "known_at": 6
+    },
+    {
+      "name": "Azul cobalto",
+      "facet": "Lacas, vidrio soplado y talavera",
+      "known_at": 9
+    },
+    {
+      "name": "Mayólica",
+      "facet": "Lacas, vidrio soplado y talavera",
+      "known_at": 13
+    },
+    {
+      "name": "Talavera Uriarte",
+      "facet": "Lacas, vidrio soplado y talavera",
+      "known_at": 13
+    },
+    {
+      "name": "Olinalá",
+      "facet": "Lacas, vidrio soplado y talavera",
+      "known_at": 11
+    },
+    {
+      "name": "Linaloe",
+      "facet": "Lacas, vidrio soplado y talavera",
+      "known_at": 13
+    },
+    {
+      "name": "Laca maque",
+      "facet": "Lacas, vidrio soplado y talavera",
+      "known_at": 13
+    },
+    {
+      "name": "Laca de Chiapa de Corzo",
+      "facet": "Lacas, vidrio soplado y talavera",
+      "known_at": 13
+    },
+    {
+      "name": "Batea de Uruapan",
+      "facet": "Lacas, vidrio soplado y talavera",
+      "known_at": 13
+    },
+    {
+      "name": "Aje",
+      "facet": "Lacas, vidrio soplado y talavera",
+      "known_at": 14
+    },
+    {
+      "name": "Esferas de Chignahuapan",
+      "facet": "Lacas, vidrio soplado y talavera",
+      "known_at": 10
+    },
+    {
+      "name": "Vidrio pepita",
+      "facet": "Lacas, vidrio soplado y talavera",
+      "known_at": 14
+    },
+    {
+      "name": "Mercado de La Ciudadela",
+      "facet": "Mercados, pueblos artesanos y maestros",
+      "known_at": 11
+    },
+    {
+      "name": "Bazar Sábado de San Ángel",
+      "facet": "Mercados, pueblos artesanos y maestros",
+      "known_at": 13
+    },
+    {
+      "name": "Mercado Benito Juárez de Oaxaca",
+      "facet": "Mercados, pueblos artesanos y maestros",
+      "known_at": 11
+    },
+    {
+      "name": "Mercado Libertad de Guadalajara",
+      "facet": "Mercados, pueblos artesanos y maestros",
+      "known_at": 11
+    },
+    {
+      "name": "Tianguis de Domingo de Ramos de Uruapan",
+      "facet": "Mercados, pueblos artesanos y maestros",
+      "known_at": 13
+    },
+    {
+      "name": "Paracho",
+      "facet": "Mercados, pueblos artesanos y maestros",
+      "known_at": 11
+    },
+    {
+      "name": "Fonart",
+      "facet": "Mercados, pueblos artesanos y maestros",
+      "known_at": 13
+    },
+    {
+      "name": "Hermanas Aguilar de Ocotlán",
+      "facet": "Mercados, pueblos artesanos y maestros",
+      "known_at": 14
+    },
+    {
+      "name": "Teodora Blanco",
+      "facet": "Mercados, pueblos artesanos y maestros",
+      "known_at": 14
+    }
+  ]
+}

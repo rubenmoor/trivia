@@ -1,0 +1,722 @@
+{
+  "subcategory": "regional-dishes",
+  "facets": [
+    "Moles y pipianes",
+    "Antojitos de maíz regionales",
+    "Tamales de las regiones",
+    "Caldos, pozoles y sopas",
+    "Carnes y barbacoas tradicionales",
+    "Platillos del mar y la costa",
+    "Cocina yucateca y del sureste",
+    "Cocina norteña y de carne asada",
+    "Platillos de fiesta y temporada",
+    "Ingredientes y técnicas ancestrales",
+    "Insectos y manjares prehispánicos",
+    "Platillos con historia y leyenda"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mole negro oaxaqueño",
+      "facet": "Moles y pipianes",
+      "known_at": 7
+    },
+    {
+      "name": "Mole coloradito",
+      "facet": "Moles y pipianes",
+      "known_at": 10
+    },
+    {
+      "name": "Mole amarillo",
+      "facet": "Moles y pipianes",
+      "known_at": 11
+    },
+    {
+      "name": "Mole verde",
+      "facet": "Moles y pipianes",
+      "known_at": 8
+    },
+    {
+      "name": "Chichilo",
+      "facet": "Moles y pipianes",
+      "known_at": 14
+    },
+    {
+      "name": "Manchamanteles",
+      "facet": "Moles y pipianes",
+      "known_at": 11
+    },
+    {
+      "name": "Pipián verde",
+      "facet": "Moles y pipianes",
+      "known_at": 8
+    },
+    {
+      "name": "Pipián rojo",
+      "facet": "Moles y pipianes",
+      "known_at": 10
+    },
+    {
+      "name": "Mole de olla",
+      "facet": "Moles y pipianes",
+      "known_at": 6
+    },
+    {
+      "name": "Mole rosa de Taxco",
+      "facet": "Moles y pipianes",
+      "known_at": 12
+    },
+    {
+      "name": "Mole almendrado",
+      "facet": "Moles y pipianes",
+      "known_at": 11
+    },
+    {
+      "name": "Mole de Xico",
+      "facet": "Moles y pipianes",
+      "known_at": 13
+    },
+    {
+      "name": "Chile mulato",
+      "facet": "Moles y pipianes",
+      "known_at": 11
+    },
+    {
+      "name": "Chile chilhuacle",
+      "facet": "Moles y pipianes",
+      "known_at": 14
+    },
+    {
+      "name": "Enmoladas",
+      "facet": "Moles y pipianes",
+      "known_at": 6
+    },
+    {
+      "name": "San Pedro Atocpan",
+      "facet": "Moles y pipianes",
+      "known_at": 12
+    },
+    {
+      "name": "Pepita de calabaza",
+      "facet": "Moles y pipianes",
+      "known_at": 5
+    },
+    {
+      "name": "Chalupa poblana",
+      "facet": "Antojitos de maíz regionales",
+      "known_at": 7
+    },
+    {
+      "name": "Pellizcada",
+      "facet": "Antojitos de maíz regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Totopo istmeño",
+      "facet": "Antojitos de maíz regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Bocol",
+      "facet": "Antojitos de maíz regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Picadita",
+      "facet": "Antojitos de maíz regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Tamal colado",
+      "facet": "Tamales de las regiones",
+      "known_at": 12
+    },
+    {
+      "name": "Tamal norteño",
+      "facet": "Tamales de las regiones",
+      "known_at": 9
+    },
+    {
+      "name": "Tamal de elote",
+      "facet": "Tamales de las regiones",
+      "known_at": 5
+    },
+    {
+      "name": "Tamal de bola",
+      "facet": "Tamales de las regiones",
+      "known_at": 13
+    },
+    {
+      "name": "Vaporcito",
+      "facet": "Tamales de las regiones",
+      "known_at": 13
+    },
+    {
+      "name": "Tamal de frijol",
+      "facet": "Tamales de las regiones",
+      "known_at": 8
+    },
+    {
+      "name": "Tamalera",
+      "facet": "Tamales de las regiones",
+      "known_at": 5
+    },
+    {
+      "name": "Pozole rojo",
+      "facet": "Caldos, pozoles y sopas",
+      "known_at": 3
+    },
+    {
+      "name": "Pozole verde",
+      "facet": "Caldos, pozoles y sopas",
+      "known_at": 7
+    },
+    {
+      "name": "Pozole blanco",
+      "facet": "Caldos, pozoles y sopas",
+      "known_at": 6
+    },
+    {
+      "name": "Caldo tlalpeño",
+      "facet": "Caldos, pozoles y sopas",
+      "known_at": 8
+    },
+    {
+      "name": "Sopa tarasca",
+      "facet": "Caldos, pozoles y sopas",
+      "known_at": 11
+    },
+    {
+      "name": "Sopa de tortilla",
+      "facet": "Caldos, pozoles y sopas",
+      "known_at": 3
+    },
+    {
+      "name": "Caldo de res",
+      "facet": "Caldos, pozoles y sopas",
+      "known_at": 2
+    },
+    {
+      "name": "Caldo xóchitl",
+      "facet": "Caldos, pozoles y sopas",
+      "known_at": 11
+    },
+    {
+      "name": "Consomé de barbacoa",
+      "facet": "Caldos, pozoles y sopas",
+      "known_at": 5
+    },
+    {
+      "name": "Sopa de fideo",
+      "facet": "Caldos, pozoles y sopas",
+      "known_at": 1
+    },
+    {
+      "name": "Caldo de gallina",
+      "facet": "Caldos, pozoles y sopas",
+      "known_at": 3
+    },
+    {
+      "name": "Sopa de médula",
+      "facet": "Caldos, pozoles y sopas",
+      "known_at": 10
+    },
+    {
+      "name": "Jueves pozolero",
+      "facet": "Caldos, pozoles y sopas",
+      "known_at": 10
+    },
+    {
+      "name": "Sopa de guías",
+      "facet": "Caldos, pozoles y sopas",
+      "known_at": 13
+    },
+    {
+      "name": "Maíz cacahuazintle",
+      "facet": "Caldos, pozoles y sopas",
+      "known_at": 9
+    },
+    {
+      "name": "Sopa de flor de calabaza",
+      "facet": "Caldos, pozoles y sopas",
+      "known_at": 7
+    },
+    {
+      "name": "Barbacoa de borrego",
+      "facet": "Carnes y barbacoas tradicionales",
+      "known_at": 4
+    },
+    {
+      "name": "Tasajo",
+      "facet": "Carnes y barbacoas tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Chicharrón",
+      "facet": "Carnes y barbacoas tradicionales",
+      "known_at": 2
+    },
+    {
+      "name": "Suadero",
+      "facet": "Carnes y barbacoas tradicionales",
+      "known_at": 5
+    },
+    {
+      "name": "Moronga",
+      "facet": "Carnes y barbacoas tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Chorizo de Toluca",
+      "facet": "Carnes y barbacoas tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Tinga poblana",
+      "facet": "Carnes y barbacoas tradicionales",
+      "known_at": 5
+    },
+    {
+      "name": "Carnitas de Quiroga",
+      "facet": "Carnes y barbacoas tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Chamorro",
+      "facet": "Carnes y barbacoas tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Cazo de cobre",
+      "facet": "Carnes y barbacoas tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Ceviche",
+      "facet": "Platillos del mar y la costa",
+      "known_at": 4
+    },
+    {
+      "name": "Camarones a la diabla",
+      "facet": "Platillos del mar y la costa",
+      "known_at": 6
+    },
+    {
+      "name": "Coctel de camarón",
+      "facet": "Platillos del mar y la costa",
+      "known_at": 3
+    },
+    {
+      "name": "Tacos de pescado estilo Ensenada",
+      "facet": "Platillos del mar y la costa",
+      "known_at": 8
+    },
+    {
+      "name": "Pulpo en su tinta",
+      "facet": "Platillos del mar y la costa",
+      "known_at": 10
+    },
+    {
+      "name": "Langosta de Puerto Nuevo",
+      "facet": "Platillos del mar y la costa",
+      "known_at": 12
+    },
+    {
+      "name": "Callo de hacha",
+      "facet": "Platillos del mar y la costa",
+      "known_at": 11
+    },
+    {
+      "name": "Caldo de siete mares",
+      "facet": "Platillos del mar y la costa",
+      "known_at": 7
+    },
+    {
+      "name": "Chilpachole",
+      "facet": "Platillos del mar y la costa",
+      "known_at": 12
+    },
+    {
+      "name": "Vuelve a la vida",
+      "facet": "Platillos del mar y la costa",
+      "known_at": 9
+    },
+    {
+      "name": "Marlin ahumado",
+      "facet": "Platillos del mar y la costa",
+      "known_at": 11
+    },
+    {
+      "name": "Tiritas de pescado",
+      "facet": "Platillos del mar y la costa",
+      "known_at": 12
+    },
+    {
+      "name": "Empanadas de camarón",
+      "facet": "Platillos del mar y la costa",
+      "known_at": 7
+    },
+    {
+      "name": "Mojarra frita",
+      "facet": "Platillos del mar y la costa",
+      "known_at": 5
+    },
+    {
+      "name": "Panucho",
+      "facet": "Cocina yucateca y del sureste",
+      "known_at": 8
+    },
+    {
+      "name": "Salbut",
+      "facet": "Cocina yucateca y del sureste",
+      "known_at": 10
+    },
+    {
+      "name": "Poc chuc",
+      "facet": "Cocina yucateca y del sureste",
+      "known_at": 10
+    },
+    {
+      "name": "Queso relleno",
+      "facet": "Cocina yucateca y del sureste",
+      "known_at": 12
+    },
+    {
+      "name": "Recado rojo",
+      "facet": "Cocina yucateca y del sureste",
+      "known_at": 11
+    },
+    {
+      "name": "Xnipec",
+      "facet": "Cocina yucateca y del sureste",
+      "known_at": 11
+    },
+    {
+      "name": "Codzito",
+      "facet": "Cocina yucateca y del sureste",
+      "known_at": 13
+    },
+    {
+      "name": "Marquesita",
+      "facet": "Cocina yucateca y del sureste",
+      "known_at": 7
+    },
+    {
+      "name": "Brazo de reina",
+      "facet": "Cocina yucateca y del sureste",
+      "known_at": 13
+    },
+    {
+      "name": "Frijol con puerco",
+      "facet": "Cocina yucateca y del sureste",
+      "known_at": 10
+    },
+    {
+      "name": "Lomitos de Valladolid",
+      "facet": "Cocina yucateca y del sureste",
+      "known_at": 13
+    },
+    {
+      "name": "Carne asada",
+      "facet": "Cocina norteña y de carne asada",
+      "known_at": 1
+    },
+    {
+      "name": "Arrachera",
+      "facet": "Cocina norteña y de carne asada",
+      "known_at": 5
+    },
+    {
+      "name": "Discada",
+      "facet": "Cocina norteña y de carne asada",
+      "known_at": 9
+    },
+    {
+      "name": "Tortilla de harina",
+      "facet": "Cocina norteña y de carne asada",
+      "known_at": 2
+    },
+    {
+      "name": "Frijoles charros",
+      "facet": "Cocina norteña y de carne asada",
+      "known_at": 5
+    },
+    {
+      "name": "Cortadillo",
+      "facet": "Cocina norteña y de carne asada",
+      "known_at": 11
+    },
+    {
+      "name": "Sobaquera",
+      "facet": "Cocina norteña y de carne asada",
+      "known_at": 13
+    },
+    {
+      "name": "Coyota",
+      "facet": "Cocina norteña y de carne asada",
+      "known_at": 11
+    },
+    {
+      "name": "Cahuamanta",
+      "facet": "Cocina norteña y de carne asada",
+      "known_at": 12
+    },
+    {
+      "name": "Hot dog sonorense",
+      "facet": "Cocina norteña y de carne asada",
+      "known_at": 9
+    },
+    {
+      "name": "Queso asadero",
+      "facet": "Cocina norteña y de carne asada",
+      "known_at": 9
+    },
+    {
+      "name": "Asado de bodas",
+      "facet": "Cocina norteña y de carne asada",
+      "known_at": 12
+    },
+    {
+      "name": "Glorias de Linares",
+      "facet": "Cocina norteña y de carne asada",
+      "known_at": 10
+    },
+    {
+      "name": "Carne seca",
+      "facet": "Cocina norteña y de carne asada",
+      "known_at": 8
+    },
+    {
+      "name": "Bacalao a la vizcaína",
+      "facet": "Platillos de fiesta y temporada",
+      "known_at": 7
+    },
+    {
+      "name": "Romeritos",
+      "facet": "Platillos de fiesta y temporada",
+      "known_at": 6
+    },
+    {
+      "name": "Ponche navideño",
+      "facet": "Platillos de fiesta y temporada",
+      "known_at": 3
+    },
+    {
+      "name": "Mole de caderas",
+      "facet": "Platillos de fiesta y temporada",
+      "known_at": 13
+    },
+    {
+      "name": "Capirotada",
+      "facet": "Platillos de fiesta y temporada",
+      "known_at": 6
+    },
+    {
+      "name": "Tortitas de camarón",
+      "facet": "Platillos de fiesta y temporada",
+      "known_at": 8
+    },
+    {
+      "name": "Calaverita de azúcar",
+      "facet": "Platillos de fiesta y temporada",
+      "known_at": 2
+    },
+    {
+      "name": "Calabaza en tacha",
+      "facet": "Platillos de fiesta y temporada",
+      "known_at": 7
+    },
+    {
+      "name": "Ensalada de Nochebuena",
+      "facet": "Platillos de fiesta y temporada",
+      "known_at": 9
+    },
+    {
+      "name": "Mucbipollo",
+      "facet": "Platillos de fiesta y temporada",
+      "known_at": 12
+    },
+    {
+      "name": "Torrejas",
+      "facet": "Platillos de fiesta y temporada",
+      "known_at": 9
+    },
+    {
+      "name": "Pavo navideño",
+      "facet": "Platillos de fiesta y temporada",
+      "known_at": 3
+    },
+    {
+      "name": "Horno de tierra",
+      "facet": "Ingredientes y técnicas ancestrales",
+      "known_at": 7
+    },
+    {
+      "name": "Cal",
+      "facet": "Ingredientes y técnicas ancestrales",
+      "known_at": 10
+    },
+    {
+      "name": "Penca de maguey",
+      "facet": "Ingredientes y técnicas ancestrales",
+      "known_at": 8
+    },
+    {
+      "name": "Papaloquelite",
+      "facet": "Ingredientes y técnicas ancestrales",
+      "known_at": 11
+    },
+    {
+      "name": "Gusanos de maguey",
+      "facet": "Insectos y manjares prehispánicos",
+      "known_at": 7
+    },
+    {
+      "name": "Jumiles",
+      "facet": "Insectos y manjares prehispánicos",
+      "known_at": 12
+    },
+    {
+      "name": "Chinicuiles",
+      "facet": "Insectos y manjares prehispánicos",
+      "known_at": 12
+    },
+    {
+      "name": "Hormigas chicatanas",
+      "facet": "Insectos y manjares prehispánicos",
+      "known_at": 11
+    },
+    {
+      "name": "Acociles",
+      "facet": "Insectos y manjares prehispánicos",
+      "known_at": 12
+    },
+    {
+      "name": "Sal de gusano",
+      "facet": "Insectos y manjares prehispánicos",
+      "known_at": 10
+    },
+    {
+      "name": "Cuetlas",
+      "facet": "Insectos y manjares prehispánicos",
+      "known_at": 14
+    },
+    {
+      "name": "Xamues",
+      "facet": "Insectos y manjares prehispánicos",
+      "known_at": 14
+    },
+    {
+      "name": "Hormiga mielera",
+      "facet": "Insectos y manjares prehispánicos",
+      "known_at": 12
+    },
+    {
+      "name": "Alegría de amaranto",
+      "facet": "Insectos y manjares prehispánicos",
+      "known_at": 4
+    },
+    {
+      "name": "Xocolatl",
+      "facet": "Insectos y manjares prehispánicos",
+      "known_at": 9
+    },
+    {
+      "name": "Iguana",
+      "facet": "Insectos y manjares prehispánicos",
+      "known_at": 10
+    },
+    {
+      "name": "Tlaxcalli",
+      "facet": "Insectos y manjares prehispánicos",
+      "known_at": 13
+    },
+    {
+      "name": "Sor Andrea de la Asunción",
+      "facet": "Platillos con historia y leyenda",
+      "known_at": 13
+    },
+    {
+      "name": "Tortas ahogadas",
+      "facet": "Platillos con historia y leyenda",
+      "known_at": 6
+    },
+    {
+      "name": "Huevos motuleños",
+      "facet": "Platillos con historia y leyenda",
+      "known_at": 11
+    },
+    {
+      "name": "Enchiladas suizas",
+      "facet": "Platillos con historia y leyenda",
+      "known_at": 6
+    },
+    {
+      "name": "Pastes de Real del Monte",
+      "facet": "Platillos con historia y leyenda",
+      "known_at": 10
+    },
+    {
+      "name": "Huevos rancheros",
+      "facet": "Platillos con historia y leyenda",
+      "known_at": 3
+    },
+    {
+      "name": "Camotes de Puebla",
+      "facet": "Platillos con historia y leyenda",
+      "known_at": 9
+    },
+    {
+      "name": "Moctezuma",
+      "facet": "Platillos con historia y leyenda",
+      "known_at": 6
+    },
+    {
+      "name": "Convento de Santa Rosa",
+      "facet": "Platillos con historia y leyenda",
+      "known_at": 13
+    }
+  ]
+}

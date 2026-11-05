@@ -1,0 +1,837 @@
+{
+  "subcategory": "regional-fiestas",
+  "facets": [
+    "Grandes ferias estatales",
+    "Carnavales de México",
+    "Guelaguetza y fiestas oaxaqueñas",
+    "Danzas y personajes de fiesta",
+    "Fiestas patronales y peregrinaciones",
+    "Ferias de comida y productos",
+    "Pirotecnia, castillos y toritos",
+    "Juegos y antojitos de feria",
+    "Charrería, jaripeo y palenque",
+    "Festivales culturales y artísticos",
+    "Música y trajes de fiesta regional"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Feria de León",
+      "facet": "Grandes ferias estatales",
+      "known_at": 8
+    },
+    {
+      "name": "Feria de Puebla",
+      "facet": "Grandes ferias estatales",
+      "known_at": 9
+    },
+    {
+      "name": "Feria Nacional Potosina",
+      "facet": "Grandes ferias estatales",
+      "known_at": 10
+    },
+    {
+      "name": "Feria de Tlaxcala",
+      "facet": "Grandes ferias estatales",
+      "known_at": 11
+    },
+    {
+      "name": "Fiestas de Octubre de Guadalajara",
+      "facet": "Grandes ferias estatales",
+      "known_at": 10
+    },
+    {
+      "name": "Feria Nacional de Zacatecas",
+      "facet": "Grandes ferias estatales",
+      "known_at": 11
+    },
+    {
+      "name": "Feria Tabasco",
+      "facet": "Grandes ferias estatales",
+      "known_at": 10
+    },
+    {
+      "name": "Feria de Querétaro",
+      "facet": "Grandes ferias estatales",
+      "known_at": 11
+    },
+    {
+      "name": "Feria Nacional de Durango",
+      "facet": "Grandes ferias estatales",
+      "known_at": 12
+    },
+    {
+      "name": "Fiestas del Sol de Mexicali",
+      "facet": "Grandes ferias estatales",
+      "known_at": 12
+    },
+    {
+      "name": "Feria de Xmatkuil",
+      "facet": "Grandes ferias estatales",
+      "known_at": 12
+    },
+    {
+      "name": "Feria de Todos los Santos de Colima",
+      "facet": "Grandes ferias estatales",
+      "known_at": 12
+    },
+    {
+      "name": "Feria de Santa Rita",
+      "facet": "Grandes ferias estatales",
+      "known_at": 12
+    },
+    {
+      "name": "Feria de Saltillo",
+      "facet": "Grandes ferias estatales",
+      "known_at": 12
+    },
+    {
+      "name": "Feria de Pachuca",
+      "facet": "Grandes ferias estatales",
+      "known_at": 11
+    },
+    {
+      "name": "Feria Ganadera de Culiacán",
+      "facet": "Grandes ferias estatales",
+      "known_at": 13
+    },
+    {
+      "name": "Carnaval de Tlaxcala",
+      "facet": "Carnavales de México",
+      "known_at": 11
+    },
+    {
+      "name": "Carnaval de Campeche",
+      "facet": "Carnavales de México",
+      "known_at": 10
+    },
+    {
+      "name": "Carnaval de Mérida",
+      "facet": "Carnavales de México",
+      "known_at": 9
+    },
+    {
+      "name": "Carnaval de Ensenada",
+      "facet": "Carnavales de México",
+      "known_at": 11
+    },
+    {
+      "name": "Carnaval de La Paz",
+      "facet": "Carnavales de México",
+      "known_at": 10
+    },
+    {
+      "name": "Carnaval de Cozumel",
+      "facet": "Carnavales de México",
+      "known_at": 10
+    },
+    {
+      "name": "Carnaval de Autlán",
+      "facet": "Carnavales de México",
+      "known_at": 13
+    },
+    {
+      "name": "Carnaval de Tepoztlán",
+      "facet": "Carnavales de México",
+      "known_at": 11
+    },
+    {
+      "name": "Carnaval de San Juan Chamula",
+      "facet": "Carnavales de México",
+      "known_at": 13
+    },
+    {
+      "name": "Quema del mal humor",
+      "facet": "Carnavales de México",
+      "known_at": 9
+    },
+    {
+      "name": "Rey Feo",
+      "facet": "Carnavales de México",
+      "known_at": 10
+    },
+    {
+      "name": "Reina del carnaval",
+      "facet": "Carnavales de México",
+      "known_at": 4,
+      "retired": "used_up: El dato fácil (la reina coronada que saluda desde la carroza) ya está en el pool; los datos mexicanos que quedan (por ejemplo, el Rey de la Alegría de Mazatlán) quedan muy por encima de la dificultad 3."
+    },
+    {
+      "name": "Comparsa",
+      "facet": "Carnavales de México",
+      "known_at": 7
+    },
+    {
+      "name": "Carro alegórico",
+      "facet": "Carnavales de México",
+      "known_at": 6
+    },
+    {
+      "name": "Juegos Florales de Mazatlán",
+      "facet": "Carnavales de México",
+      "known_at": 13
+    },
+    {
+      "name": "Miércoles de Ceniza",
+      "facet": "Carnavales de México",
+      "known_at": 6
+    },
+    {
+      "name": "Flor de Piña",
+      "facet": "Guelaguetza y fiestas oaxaqueñas",
+      "known_at": 9
+    },
+    {
+      "name": "Cerro del Fortín",
+      "facet": "Guelaguetza y fiestas oaxaqueñas",
+      "known_at": 10
+    },
+    {
+      "name": "Calenda",
+      "facet": "Guelaguetza y fiestas oaxaqueñas",
+      "known_at": 9
+    },
+    {
+      "name": "Monos de calenda",
+      "facet": "Guelaguetza y fiestas oaxaqueñas",
+      "known_at": 11
+    },
+    {
+      "name": "Princesa Donají",
+      "facet": "Guelaguetza y fiestas oaxaqueñas",
+      "known_at": 11
+    },
+    {
+      "name": "Vela tehuana",
+      "facet": "Guelaguetza y fiestas oaxaqueñas",
+      "known_at": 12
+    },
+    {
+      "name": "Diosa Centéotl",
+      "facet": "Guelaguetza y fiestas oaxaqueñas",
+      "known_at": 12
+    },
+    {
+      "name": "Ocho regiones de Oaxaca",
+      "facet": "Guelaguetza y fiestas oaxaqueñas",
+      "known_at": 9
+    },
+    {
+      "name": "Chilena",
+      "facet": "Guelaguetza y fiestas oaxaqueñas",
+      "known_at": 12
+    },
+    {
+      "name": "La Sandunga",
+      "facet": "Guelaguetza y fiestas oaxaqueñas",
+      "known_at": 11
+    },
+    {
+      "name": "Jarabe del Valle",
+      "facet": "Guelaguetza y fiestas oaxaqueñas",
+      "known_at": 12
+    },
+    {
+      "name": "Virgen de la Soledad",
+      "facet": "Guelaguetza y fiestas oaxaqueñas",
+      "known_at": 11
+    },
+    {
+      "name": "Chinelos",
+      "facet": "Danzas y personajes de fiesta",
+      "known_at": 9
+    },
+    {
+      "name": "Danza de los Diablos",
+      "facet": "Danzas y personajes de fiesta",
+      "known_at": 11
+    },
+    {
+      "name": "Matachines",
+      "facet": "Danzas y personajes de fiesta",
+      "known_at": 10
+    },
+    {
+      "name": "Huehues",
+      "facet": "Danzas y personajes de fiesta",
+      "known_at": 11
+    },
+    {
+      "name": "Tastoanes",
+      "facet": "Danzas y personajes de fiesta",
+      "known_at": 12
+    },
+    {
+      "name": "Jarabe tapatío",
+      "facet": "Danzas y personajes de fiesta",
+      "known_at": 4
+    },
+    {
+      "name": "Danza de Moros y Cristianos",
+      "facet": "Danzas y personajes de fiesta",
+      "known_at": 10
+    },
+    {
+      "name": "Danza de las Cintas",
+      "facet": "Danzas y personajes de fiesta",
+      "known_at": 12
+    },
+    {
+      "name": "Peregrinación a la Basílica",
+      "facet": "Fiestas patronales y peregrinaciones",
+      "known_at": 5
+    },
+    {
+      "name": "Mañanitas a la Virgen",
+      "facet": "Fiestas patronales y peregrinaciones",
+      "known_at": 5
+    },
+    {
+      "name": "Virgen de San Juan de los Lagos",
+      "facet": "Fiestas patronales y peregrinaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Romería de Zapopan",
+      "facet": "Fiestas patronales y peregrinaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Virgen de Talpa",
+      "facet": "Fiestas patronales y peregrinaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Señor de Chalma",
+      "facet": "Fiestas patronales y peregrinaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Santo Niño de Atocha",
+      "facet": "Fiestas patronales y peregrinaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Virgen de Juquila",
+      "facet": "Fiestas patronales y peregrinaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Bendición de animales de San Antonio Abad",
+      "facet": "Fiestas patronales y peregrinaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Día de la Santa Cruz",
+      "facet": "Fiestas patronales y peregrinaciones",
+      "known_at": 7
+    },
+    {
+      "name": "San Judas Tadeo",
+      "facet": "Fiestas patronales y peregrinaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Mayordomía",
+      "facet": "Fiestas patronales y peregrinaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Fiesta de Santiago Apóstol",
+      "facet": "Fiestas patronales y peregrinaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Virgen de Izamal",
+      "facet": "Fiestas patronales y peregrinaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Pasión de Iztapalapa",
+      "facet": "Fiestas patronales y peregrinaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Feria Nacional del Mole",
+      "facet": "Ferias de comida y productos",
+      "known_at": 10
+    },
+    {
+      "name": "Feria Nacional del Queso y el Vino",
+      "facet": "Ferias de comida y productos",
+      "known_at": 11
+    },
+    {
+      "name": "Feria del Nopal de Milpa Alta",
+      "facet": "Ferias de comida y productos",
+      "known_at": 11
+    },
+    {
+      "name": "Feria del Elote de Jala",
+      "facet": "Ferias de comida y productos",
+      "known_at": 12
+    },
+    {
+      "name": "Feria del Tamal",
+      "facet": "Ferias de comida y productos",
+      "known_at": 10
+    },
+    {
+      "name": "Fiestas de la Vendimia",
+      "facet": "Ferias de comida y productos",
+      "known_at": 11
+    },
+    {
+      "name": "Feria Internacional del Mezcal",
+      "facet": "Ferias de comida y productos",
+      "known_at": 11
+    },
+    {
+      "name": "Feria del Café de Coatepec",
+      "facet": "Ferias de comida y productos",
+      "known_at": 12
+    },
+    {
+      "name": "Feria de la Fresa de Irapuato",
+      "facet": "Ferias de comida y productos",
+      "known_at": 10
+    },
+    {
+      "name": "Feria del Pulque",
+      "facet": "Ferias de comida y productos",
+      "known_at": 11
+    },
+    {
+      "name": "Feria Nacional de la Plata de Taxco",
+      "facet": "Ferias de comida y productos",
+      "known_at": 10
+    },
+    {
+      "name": "Feria del Aguacate de Uruapan",
+      "facet": "Ferias de comida y productos",
+      "known_at": 11
+    },
+    {
+      "name": "Feria del Chocolate de Tabasco",
+      "facet": "Ferias de comida y productos",
+      "known_at": 12
+    },
+    {
+      "name": "Feria de la Barbacoa de Actopan",
+      "facet": "Ferias de comida y productos",
+      "known_at": 12
+    },
+    {
+      "name": "Feria Nacional del Tequila",
+      "facet": "Ferias de comida y productos",
+      "known_at": 11
+    },
+    {
+      "name": "Feria de la Guayaba de Calvillo",
+      "facet": "Ferias de comida y productos",
+      "known_at": 13
+    },
+    {
+      "name": "Feria de la Manzana de Zacatlán",
+      "facet": "Ferias de comida y productos",
+      "known_at": 12
+    },
+    {
+      "name": "Castillo de fuegos artificiales",
+      "facet": "Pirotecnia, castillos y toritos",
+      "known_at": 6
+    },
+    {
+      "name": "Torito de fuegos",
+      "facet": "Pirotecnia, castillos y toritos",
+      "known_at": 7
+    },
+    {
+      "name": "Cohetes",
+      "facet": "Pirotecnia, castillos y toritos",
+      "known_at": 3
+    },
+    {
+      "name": "Buscapiés",
+      "facet": "Pirotecnia, castillos y toritos",
+      "known_at": 9
+    },
+    {
+      "name": "Palomas",
+      "facet": "Pirotecnia, castillos y toritos",
+      "known_at": 8
+    },
+    {
+      "name": "Brujitas",
+      "facet": "Pirotecnia, castillos y toritos",
+      "known_at": 9
+    },
+    {
+      "name": "Tultepec",
+      "facet": "Pirotecnia, castillos y toritos",
+      "known_at": 8
+    },
+    {
+      "name": "Feria Internacional de la Pirotecnia",
+      "facet": "Pirotecnia, castillos y toritos",
+      "known_at": 10
+    },
+    {
+      "name": "Mercado de San Pablito",
+      "facet": "Pirotecnia, castillos y toritos",
+      "known_at": 12
+    },
+    {
+      "name": "Cohetón",
+      "facet": "Pirotecnia, castillos y toritos",
+      "known_at": 9
+    },
+    {
+      "name": "Quema de Judas",
+      "facet": "Pirotecnia, castillos y toritos",
+      "known_at": 9
+    },
+    {
+      "name": "Cohetero",
+      "facet": "Pirotecnia, castillos y toritos",
+      "known_at": 9
+    },
+    {
+      "name": "Pólvora",
+      "facet": "Pirotecnia, castillos y toritos",
+      "known_at": 6
+    },
+    {
+      "name": "Chifladores",
+      "facet": "Pirotecnia, castillos y toritos",
+      "known_at": 11
+    },
+    {
+      "name": "Volcancito",
+      "facet": "Pirotecnia, castillos y toritos",
+      "known_at": 8
+    },
+    {
+      "name": "Cebollitas",
+      "facet": "Pirotecnia, castillos y toritos",
+      "known_at": 8
+    },
+    {
+      "name": "San Juan de Dios",
+      "facet": "Pirotecnia, castillos y toritos",
+      "known_at": 13
+    },
+    {
+      "name": "Rueda de la fortuna",
+      "facet": "Juegos y antojitos de feria",
+      "known_at": 2
+    },
+    {
+      "name": "Lotería",
+      "facet": "Juegos y antojitos de feria",
+      "known_at": 4
+    },
+    {
+      "name": "Tiro al blanco",
+      "facet": "Juegos y antojitos de feria",
+      "known_at": 4
+    },
+    {
+      "name": "Pesca de patitos",
+      "facet": "Juegos y antojitos de feria",
+      "known_at": 3
+    },
+    {
+      "name": "Manzana con caramelo",
+      "facet": "Juegos y antojitos de feria",
+      "known_at": 3
+    },
+    {
+      "name": "Gorditas de nata",
+      "facet": "Juegos y antojitos de feria",
+      "known_at": 7
+    },
+    {
+      "name": "Aguas frescas",
+      "facet": "Juegos y antojitos de feria",
+      "known_at": 3
+    },
+    {
+      "name": "Chicharrones de harina",
+      "facet": "Juegos y antojitos de feria",
+      "known_at": 4
+    },
+    {
+      "name": "Casa del terror",
+      "facet": "Juegos y antojitos de feria",
+      "known_at": 5
+    },
+    {
+      "name": "Lanzamiento de aros",
+      "facet": "Juegos y antojitos de feria",
+      "known_at": 4
+    },
+    {
+      "name": "Carritos chocones",
+      "facet": "Juegos y antojitos de feria",
+      "known_at": 3
+    },
+    {
+      "name": "Merengues",
+      "facet": "Juegos y antojitos de feria",
+      "known_at": 6
+    },
+    {
+      "name": "Cocadas",
+      "facet": "Juegos y antojitos de feria",
+      "known_at": 6
+    },
+    {
+      "name": "Raspados",
+      "facet": "Juegos y antojitos de feria",
+      "known_at": 3
+    },
+    {
+      "name": "Charrería",
+      "facet": "Charrería, jaripeo y palenque",
+      "known_at": 6
+    },
+    {
+      "name": "Escaramuza",
+      "facet": "Charrería, jaripeo y palenque",
+      "known_at": 8
+    },
+    {
+      "name": "Lienzo charro",
+      "facet": "Charrería, jaripeo y palenque",
+      "known_at": 9
+    },
+    {
+      "name": "Coleadero",
+      "facet": "Charrería, jaripeo y palenque",
+      "known_at": 10
+    },
+    {
+      "name": "Manganas",
+      "facet": "Charrería, jaripeo y palenque",
+      "known_at": 11
+    },
+    {
+      "name": "Paso de la muerte",
+      "facet": "Charrería, jaripeo y palenque",
+      "known_at": 10
+    },
+    {
+      "name": "Floreo de reata",
+      "facet": "Charrería, jaripeo y palenque",
+      "known_at": 9
+    },
+    {
+      "name": "Cala de caballo",
+      "facet": "Charrería, jaripeo y palenque",
+      "known_at": 11
+    },
+    {
+      "name": "Piales",
+      "facet": "Charrería, jaripeo y palenque",
+      "known_at": 12
+    },
+    {
+      "name": "Terna en el ruedo",
+      "facet": "Charrería, jaripeo y palenque",
+      "known_at": 13
+    },
+    {
+      "name": "Jineteo de toro",
+      "facet": "Charrería, jaripeo y palenque",
+      "known_at": 9
+    },
+    {
+      "name": "Reata",
+      "facet": "Charrería, jaripeo y palenque",
+      "known_at": 7
+    },
+    {
+      "name": "Día del Charro",
+      "facet": "Charrería, jaripeo y palenque",
+      "known_at": 11
+    },
+    {
+      "name": "Silla charra",
+      "facet": "Charrería, jaripeo y palenque",
+      "known_at": 9
+    },
+    {
+      "name": "Espuelas",
+      "facet": "Charrería, jaripeo y palenque",
+      "known_at": 7
+    },
+    {
+      "name": "Callejoneada",
+      "facet": "Festivales culturales y artísticos",
+      "known_at": 10
+    },
+    {
+      "name": "Feria Internacional del Libro de Guadalajara",
+      "facet": "Festivales culturales y artísticos",
+      "known_at": 9
+    },
+    {
+      "name": "Festival Internacional de Cine de Morelia",
+      "facet": "Festivales culturales y artísticos",
+      "known_at": 12
+    },
+    {
+      "name": "Festival Internacional de Cine de Guadalajara",
+      "facet": "Festivales culturales y artísticos",
+      "known_at": 12
+    },
+    {
+      "name": "Vive Latino",
+      "facet": "Festivales culturales y artísticos",
+      "known_at": 10
+    },
+    {
+      "name": "Corona Capital",
+      "facet": "Festivales culturales y artísticos",
+      "known_at": 10
+    },
+    {
+      "name": "Festival de las Almas",
+      "facet": "Festivales culturales y artísticos",
+      "known_at": 13
+    },
+    {
+      "name": "Festival del Centro Histórico de la Ciudad de México",
+      "facet": "Festivales culturales y artísticos",
+      "known_at": 12
+    },
+    {
+      "name": "Festival Internacional de Santa Lucía",
+      "facet": "Festivales culturales y artísticos",
+      "known_at": 12
+    },
+    {
+      "name": "Encuentro Internacional del Mariachi y la Charrería",
+      "facet": "Festivales culturales y artísticos",
+      "known_at": 10
+    },
+    {
+      "name": "Noche de Museos",
+      "facet": "Festivales culturales y artísticos",
+      "known_at": 12
+    },
+    {
+      "name": "Festival Internacional Chihuahua",
+      "facet": "Festivales culturales y artísticos",
+      "known_at": 13
+    },
+    {
+      "name": "Banda sinaloense",
+      "facet": "Música y trajes de fiesta regional",
+      "known_at": 7
+    },
+    {
+      "name": "Jarana",
+      "facet": "Música y trajes de fiesta regional",
+      "known_at": 10
+    },
+    {
+      "name": "La Bamba",
+      "facet": "Música y trajes de fiesta regional",
+      "known_at": 4
+    },
+    {
+      "name": "Son huasteco",
+      "facet": "Música y trajes de fiesta regional",
+      "known_at": 10
+    },
+    {
+      "name": "Música norteña",
+      "facet": "Música y trajes de fiesta regional",
+      "known_at": 6
+    },
+    {
+      "name": "Fandango",
+      "facet": "Música y trajes de fiesta regional",
+      "known_at": 10
+    },
+    {
+      "name": "Guayabera",
+      "facet": "Música y trajes de fiesta regional",
+      "known_at": 8
+    },
+    {
+      "name": "Traje de jarocha",
+      "facet": "Música y trajes de fiesta regional",
+      "known_at": 9
+    },
+    {
+      "name": "Zapateado",
+      "facet": "Música y trajes de fiesta regional",
+      "known_at": 7
+    },
+    {
+      "name": "Tamborazo zacatecano",
+      "facet": "Música y trajes de fiesta regional",
+      "known_at": 11
+    },
+    {
+      "name": "Trova yucateca",
+      "facet": "Música y trajes de fiesta regional",
+      "known_at": 11
+    },
+    {
+      "name": "Vihuela",
+      "facet": "Música y trajes de fiesta regional",
+      "known_at": 10
+    },
+    {
+      "name": "Guitarrón",
+      "facet": "Música y trajes de fiesta regional",
+      "known_at": 9
+    }
+  ]
+}

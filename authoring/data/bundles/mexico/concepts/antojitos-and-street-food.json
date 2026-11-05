@@ -1,0 +1,857 @@
+{
+  "subcategory": "antojitos-and-street-food",
+  "facets": [
+    "Tacos y sus variedades",
+    "Antojitos de masa de maíz",
+    "Tamales y atoles",
+    "Tortas y panes callejeros",
+    "Salsas, chiles y aderezos",
+    "Snacks, frituras y botanas",
+    "Frutas, elotes y esquites",
+    "Dulces y postres callejeros",
+    "Bebidas de puesto y aguas frescas",
+    "Antojitos regionales de México",
+    "Puestos, mercados y vendedores",
+    "Palabras y dichos de la calle"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 3,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Tacos de canasta",
+      "facet": "Tacos y sus variedades",
+      "known_at": 3
+    },
+    {
+      "name": "Tacos de suadero",
+      "facet": "Tacos y sus variedades",
+      "known_at": 4
+    },
+    {
+      "name": "Tacos de carnitas",
+      "facet": "Tacos y sus variedades",
+      "known_at": 3
+    },
+    {
+      "name": "Tacos de barbacoa",
+      "facet": "Tacos y sus variedades",
+      "known_at": 3
+    },
+    {
+      "name": "Tacos dorados",
+      "facet": "Tacos y sus variedades",
+      "known_at": 2
+    },
+    {
+      "name": "Tacos de cabeza",
+      "facet": "Tacos y sus variedades",
+      "known_at": 6
+    },
+    {
+      "name": "Tacos de lengua",
+      "facet": "Tacos y sus variedades",
+      "known_at": 5
+    },
+    {
+      "name": "Tacos de tripa",
+      "facet": "Tacos y sus variedades",
+      "known_at": 6
+    },
+    {
+      "name": "Tacos árabes",
+      "facet": "Tacos y sus variedades",
+      "known_at": 10
+    },
+    {
+      "name": "Tacos de pescado",
+      "facet": "Tacos y sus variedades",
+      "known_at": 5
+    },
+    {
+      "name": "Tacos gobernador",
+      "facet": "Tacos y sus variedades",
+      "known_at": 11
+    },
+    {
+      "name": "Tacos de bistec",
+      "facet": "Tacos y sus variedades",
+      "known_at": 3
+    },
+    {
+      "name": "Taco campechano",
+      "facet": "Tacos y sus variedades",
+      "known_at": 7
+    },
+    {
+      "name": "Tacos de guisado",
+      "facet": "Tacos y sus variedades",
+      "known_at": 5
+    },
+    {
+      "name": "Taco placero",
+      "facet": "Tacos y sus variedades",
+      "known_at": 10
+    },
+    {
+      "name": "Gringa",
+      "facet": "Tacos y sus variedades",
+      "known_at": 6
+    },
+    {
+      "name": "Volcán",
+      "facet": "Tacos y sus variedades",
+      "known_at": 8
+    },
+    {
+      "name": "Quesadilla",
+      "facet": "Antojitos de masa de maíz",
+      "known_at": 1
+    },
+    {
+      "name": "Sope",
+      "facet": "Antojitos de masa de maíz",
+      "known_at": 3
+    },
+    {
+      "name": "Gordita",
+      "facet": "Antojitos de masa de maíz",
+      "known_at": 3
+    },
+    {
+      "name": "Tlacoyo",
+      "facet": "Antojitos de masa de maíz",
+      "known_at": 6
+    },
+    {
+      "name": "Tostada",
+      "facet": "Antojitos de masa de maíz",
+      "known_at": 2
+    },
+    {
+      "name": "Enchiladas",
+      "facet": "Antojitos de masa de maíz",
+      "known_at": 2
+    },
+    {
+      "name": "Chilaquiles",
+      "facet": "Antojitos de masa de maíz",
+      "known_at": 3
+    },
+    {
+      "name": "Flautas",
+      "facet": "Antojitos de masa de maíz",
+      "known_at": 4
+    },
+    {
+      "name": "Garnacha",
+      "facet": "Antojitos de masa de maíz",
+      "known_at": 7
+    },
+    {
+      "name": "Memela",
+      "facet": "Antojitos de masa de maíz",
+      "known_at": 9
+    },
+    {
+      "name": "Molote",
+      "facet": "Antojitos de masa de maíz",
+      "known_at": 10
+    },
+    {
+      "name": "Chalupas poblanas",
+      "facet": "Antojitos de masa de maíz",
+      "known_at": 8
+    },
+    {
+      "name": "Tetela",
+      "facet": "Antojitos de masa de maíz",
+      "known_at": 12
+    },
+    {
+      "name": "Nixtamal",
+      "facet": "Antojitos de masa de maíz",
+      "known_at": 9
+    },
+    {
+      "name": "Enfrijoladas",
+      "facet": "Antojitos de masa de maíz",
+      "known_at": 6
+    },
+    {
+      "name": "Tortilla de maíz",
+      "facet": "Antojitos de masa de maíz",
+      "known_at": 1
+    },
+    {
+      "name": "Tamal verde",
+      "facet": "Tamales y atoles",
+      "known_at": 2
+    },
+    {
+      "name": "Tamal de rajas",
+      "facet": "Tamales y atoles",
+      "known_at": 4
+    },
+    {
+      "name": "Tamal de dulce",
+      "facet": "Tamales y atoles",
+      "known_at": 3
+    },
+    {
+      "name": "Tamal oaxaqueño",
+      "facet": "Tamales y atoles",
+      "known_at": 5
+    },
+    {
+      "name": "Guajolota",
+      "facet": "Tamales y atoles",
+      "known_at": 5
+    },
+    {
+      "name": "Hoja de maíz",
+      "facet": "Tamales y atoles",
+      "known_at": 3
+    },
+    {
+      "name": "Hoja de plátano",
+      "facet": "Tamales y atoles",
+      "known_at": 5
+    },
+    {
+      "name": "Corunda",
+      "facet": "Tamales y atoles",
+      "known_at": 11
+    },
+    {
+      "name": "Uchepo",
+      "facet": "Tamales y atoles",
+      "known_at": 11
+    },
+    {
+      "name": "Zacahuil",
+      "facet": "Tamales y atoles",
+      "known_at": 12
+    },
+    {
+      "name": "Tamal de chipilín",
+      "facet": "Tamales y atoles",
+      "known_at": 12
+    },
+    {
+      "name": "Día de la Candelaria",
+      "facet": "Tamales y atoles",
+      "known_at": 4
+    },
+    {
+      "name": "Vaporera",
+      "facet": "Tamales y atoles",
+      "known_at": 6
+    },
+    {
+      "name": "Chileatole",
+      "facet": "Tamales y atoles",
+      "known_at": 11
+    },
+    {
+      "name": "Masa de maíz",
+      "facet": "Tamales y atoles",
+      "known_at": 3
+    },
+    {
+      "name": "Torta cubana",
+      "facet": "Tortas y panes callejeros",
+      "known_at": 6
+    },
+    {
+      "name": "Pambazo",
+      "facet": "Tortas y panes callejeros",
+      "known_at": 5
+    },
+    {
+      "name": "Bolillo",
+      "facet": "Tortas y panes callejeros",
+      "known_at": 2
+    },
+    {
+      "name": "Telera",
+      "facet": "Tortas y panes callejeros",
+      "known_at": 5
+    },
+    {
+      "name": "Cemita poblana",
+      "facet": "Tortas y panes callejeros",
+      "known_at": 9
+    },
+    {
+      "name": "Chanclas",
+      "facet": "Tortas y panes callejeros",
+      "known_at": 12
+    },
+    {
+      "name": "Mollete",
+      "facet": "Tortas y panes callejeros",
+      "known_at": 4
+    },
+    {
+      "name": "Torta de chilaquiles",
+      "facet": "Tortas y panes callejeros",
+      "known_at": 6
+    },
+    {
+      "name": "Birote salado",
+      "facet": "Tortas y panes callejeros",
+      "known_at": 10
+    },
+    {
+      "name": "Torta de jamón",
+      "facet": "Tortas y panes callejeros",
+      "known_at": 2
+    },
+    {
+      "name": "Torta de milanesa",
+      "facet": "Tortas y panes callejeros",
+      "known_at": 3
+    },
+    {
+      "name": "Concha",
+      "facet": "Tortas y panes callejeros",
+      "known_at": 1
+    },
+    {
+      "name": "Cuerno",
+      "facet": "Tortas y panes callejeros",
+      "known_at": 4
+    },
+    {
+      "name": "Tortería",
+      "facet": "Tortas y panes callejeros",
+      "known_at": 4
+    },
+    {
+      "name": "Salsa verde",
+      "facet": "Salsas, chiles y aderezos",
+      "known_at": 2
+    },
+    {
+      "name": "Salsa roja",
+      "facet": "Salsas, chiles y aderezos",
+      "known_at": 2
+    },
+    {
+      "name": "Pico de gallo",
+      "facet": "Salsas, chiles y aderezos",
+      "known_at": 4
+    },
+    {
+      "name": "Chile piquín",
+      "facet": "Salsas, chiles y aderezos",
+      "known_at": 8
+    },
+    {
+      "name": "Chiles toreados",
+      "facet": "Salsas, chiles y aderezos",
+      "known_at": 7
+    },
+    {
+      "name": "Salsa Valentina",
+      "facet": "Salsas, chiles y aderezos",
+      "known_at": 4
+    },
+    {
+      "name": "Salsa macha",
+      "facet": "Salsas, chiles y aderezos",
+      "known_at": 10
+    },
+    {
+      "name": "Cebolla morada encurtida",
+      "facet": "Salsas, chiles y aderezos",
+      "known_at": 8
+    },
+    {
+      "name": "Duritos",
+      "facet": "Snacks, frituras y botanas",
+      "known_at": 2
+    },
+    {
+      "name": "Chicharrón preparado",
+      "facet": "Snacks, frituras y botanas",
+      "known_at": 5
+    },
+    {
+      "name": "Tostilocos",
+      "facet": "Snacks, frituras y botanas",
+      "known_at": 5
+    },
+    {
+      "name": "Dorilocos",
+      "facet": "Snacks, frituras y botanas",
+      "known_at": 5
+    },
+    {
+      "name": "Churritos",
+      "facet": "Snacks, frituras y botanas",
+      "known_at": 3
+    },
+    {
+      "name": "Pepitas",
+      "facet": "Snacks, frituras y botanas",
+      "known_at": 4
+    },
+    {
+      "name": "Habas enchiladas",
+      "facet": "Snacks, frituras y botanas",
+      "known_at": 8
+    },
+    {
+      "name": "Cueritos",
+      "facet": "Snacks, frituras y botanas",
+      "known_at": 8
+    },
+    {
+      "name": "Totopos",
+      "facet": "Snacks, frituras y botanas",
+      "known_at": 3
+    },
+    {
+      "name": "Papas a la francesa",
+      "facet": "Snacks, frituras y botanas",
+      "known_at": 1
+    },
+    {
+      "name": "Cacahuates enchilados",
+      "facet": "Snacks, frituras y botanas",
+      "known_at": 4
+    },
+    {
+      "name": "Gomitas enchiladas",
+      "facet": "Snacks, frituras y botanas",
+      "known_at": 3
+    },
+    {
+      "name": "Sabritas",
+      "facet": "Snacks, frituras y botanas",
+      "known_at": 2
+    },
+    {
+      "name": "Chicharrón de cerdo",
+      "facet": "Snacks, frituras y botanas",
+      "known_at": 4
+    },
+    {
+      "name": "Palomitas",
+      "facet": "Snacks, frituras y botanas",
+      "known_at": 1
+    },
+    {
+      "name": "Banderillas",
+      "facet": "Snacks, frituras y botanas",
+      "known_at": 5
+    },
+    {
+      "name": "Esquites",
+      "facet": "Frutas, elotes y esquites",
+      "known_at": 2
+    },
+    {
+      "name": "Elote asado",
+      "facet": "Frutas, elotes y esquites",
+      "known_at": 3
+    },
+    {
+      "name": "Mango con chile",
+      "facet": "Frutas, elotes y esquites",
+      "known_at": 2
+    },
+    {
+      "name": "Pepino con chile",
+      "facet": "Frutas, elotes y esquites",
+      "known_at": 3
+    },
+    {
+      "name": "Coco con chile",
+      "facet": "Frutas, elotes y esquites",
+      "known_at": 5
+    },
+    {
+      "name": "Vaso de fruta",
+      "facet": "Frutas, elotes y esquites",
+      "known_at": 2
+    },
+    {
+      "name": "Queso cotija",
+      "facet": "Frutas, elotes y esquites",
+      "known_at": 7
+    },
+    {
+      "name": "Mayonesa",
+      "facet": "Frutas, elotes y esquites",
+      "known_at": 2
+    },
+    {
+      "name": "Churros",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 1
+    },
+    {
+      "name": "Alegría",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 5
+    },
+    {
+      "name": "Obleas",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 4
+    },
+    {
+      "name": "Cocada",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 5
+    },
+    {
+      "name": "Jamoncillo",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 9
+    },
+    {
+      "name": "Palanqueta",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 6
+    },
+    {
+      "name": "Glorias",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 8
+    },
+    {
+      "name": "Cajeta",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 4
+    },
+    {
+      "name": "Merengue",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 3
+    },
+    {
+      "name": "Algodón de azúcar",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 1
+    },
+    {
+      "name": "Buñuelos",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 4
+    },
+    {
+      "name": "Paleta de hielo",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 1
+    },
+    {
+      "name": "Nieve de garrafa",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 7
+    },
+    {
+      "name": "Raspado",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 3
+    },
+    {
+      "name": "Muéganos",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 7
+    },
+    {
+      "name": "Ate",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 6
+    },
+    {
+      "name": "Mazapán de cacahuate",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 2
+    },
+    {
+      "name": "Gelatina de mosaico",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 4
+    },
+    {
+      "name": "Coyotas",
+      "facet": "Dulces y postres callejeros",
+      "known_at": 11
+    },
+    {
+      "name": "Agua de horchata",
+      "facet": "Bebidas de puesto y aguas frescas",
+      "known_at": 2
+    },
+    {
+      "name": "Agua de jamaica",
+      "facet": "Bebidas de puesto y aguas frescas",
+      "known_at": 2
+    },
+    {
+      "name": "Agua de tamarindo",
+      "facet": "Bebidas de puesto y aguas frescas",
+      "known_at": 3
+    },
+    {
+      "name": "Agua de limón con chía",
+      "facet": "Bebidas de puesto y aguas frescas",
+      "known_at": 4
+    },
+    {
+      "name": "Agua de pepino",
+      "facet": "Bebidas de puesto y aguas frescas",
+      "known_at": 5
+    },
+    {
+      "name": "Tepache",
+      "facet": "Bebidas de puesto y aguas frescas",
+      "known_at": 7
+    },
+    {
+      "name": "Licuado",
+      "facet": "Bebidas de puesto y aguas frescas",
+      "known_at": 2
+    },
+    {
+      "name": "Jugo de naranja",
+      "facet": "Bebidas de puesto y aguas frescas",
+      "known_at": 1
+    },
+    {
+      "name": "Vampiro",
+      "facet": "Bebidas de puesto y aguas frescas",
+      "known_at": 7
+    },
+    {
+      "name": "Café de olla",
+      "facet": "Bebidas de puesto y aguas frescas",
+      "known_at": 5
+    },
+    {
+      "name": "Bolis",
+      "facet": "Bebidas de puesto y aguas frescas",
+      "known_at": 3
+    },
+    {
+      "name": "Tuba",
+      "facet": "Bebidas de puesto y aguas frescas",
+      "known_at": 12
+    },
+    {
+      "name": "Chocolate caliente",
+      "facet": "Bebidas de puesto y aguas frescas",
+      "known_at": 1
+    },
+    {
+      "name": "Menudo",
+      "facet": "Antojitos regionales de México",
+      "known_at": 5
+    },
+    {
+      "name": "Pescado zarandeado",
+      "facet": "Antojitos regionales de México",
+      "known_at": 11
+    },
+    {
+      "name": "Salbutes",
+      "facet": "Antojitos regionales de México",
+      "known_at": 10
+    },
+    {
+      "name": "Burrito",
+      "facet": "Antojitos regionales de México",
+      "known_at": 2
+    },
+    {
+      "name": "Caldo de piedra",
+      "facet": "Antojitos regionales de México",
+      "known_at": 13
+    },
+    {
+      "name": "Kibi",
+      "facet": "Antojitos regionales de México",
+      "known_at": 12
+    },
+    {
+      "name": "Taquería",
+      "facet": "Puestos, mercados y vendedores",
+      "known_at": 2
+    },
+    {
+      "name": "Taquero",
+      "facet": "Puestos, mercados y vendedores",
+      "known_at": 2
+    },
+    {
+      "name": "Tamalero",
+      "facet": "Puestos, mercados y vendedores",
+      "known_at": 3
+    },
+    {
+      "name": "Camotero",
+      "facet": "Puestos, mercados y vendedores",
+      "known_at": 6
+    },
+    {
+      "name": "Elotero",
+      "facet": "Puestos, mercados y vendedores",
+      "known_at": 3
+    },
+    {
+      "name": "Merenguero",
+      "facet": "Puestos, mercados y vendedores",
+      "known_at": 6
+    },
+    {
+      "name": "Triciclo de reparto",
+      "facet": "Puestos, mercados y vendedores",
+      "known_at": 4
+    },
+    {
+      "name": "Fonda",
+      "facet": "Puestos, mercados y vendedores",
+      "known_at": 5
+    },
+    {
+      "name": "Cocina económica",
+      "facet": "Puestos, mercados y vendedores",
+      "known_at": 7
+    },
+    {
+      "name": "Tortillería",
+      "facet": "Puestos, mercados y vendedores",
+      "known_at": 2
+    },
+    {
+      "name": "Vitrolero",
+      "facet": "Puestos, mercados y vendedores",
+      "known_at": 8
+    },
+    {
+      "name": "Kermés",
+      "facet": "Puestos, mercados y vendedores",
+      "known_at": 4
+    },
+    {
+      "name": "Lonchería",
+      "facet": "Puestos, mercados y vendedores",
+      "known_at": 7
+    },
+    {
+      "name": "Marchante",
+      "facet": "Palabras y dichos de la calle",
+      "known_at": 7
+    },
+    {
+      "name": "Pilón",
+      "facet": "Palabras y dichos de la calle",
+      "known_at": 6
+    },
+    {
+      "name": "¿Con todo?",
+      "facet": "Palabras y dichos de la calle",
+      "known_at": 3
+    },
+    {
+      "name": "Con copia",
+      "facet": "Palabras y dichos de la calle",
+      "known_at": 9
+    },
+    {
+      "name": "Antojo",
+      "facet": "Palabras y dichos de la calle",
+      "known_at": 3
+    },
+    {
+      "name": "Botana",
+      "facet": "Palabras y dichos de la calle",
+      "known_at": 4
+    },
+    {
+      "name": "Chesco",
+      "facet": "Palabras y dichos de la calle",
+      "known_at": 6
+    },
+    {
+      "name": "Echarse un taco",
+      "facet": "Palabras y dichos de la calle",
+      "known_at": 5
+    },
+    {
+      "name": "Hacerse taco",
+      "facet": "Palabras y dichos de la calle",
+      "known_at": 7
+    },
+    {
+      "name": "Dar atole con el dedo",
+      "facet": "Palabras y dichos de la calle",
+      "known_at": 7
+    },
+    {
+      "name": "El que nace pa' tamal, del cielo le caen las hojas",
+      "facet": "Palabras y dichos de la calle",
+      "known_at": 10
+    },
+    {
+      "name": "Al nopal sólo se le arriman cuando tiene tunas",
+      "facet": "Palabras y dichos de la calle",
+      "known_at": 11
+    },
+    {
+      "name": "Güerito",
+      "facet": "Palabras y dichos de la calle",
+      "known_at": 5
+    },
+    {
+      "name": "Al tiro",
+      "facet": "Palabras y dichos de la calle",
+      "known_at": 12
+    }
+  ]
+}

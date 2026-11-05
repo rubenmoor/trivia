@@ -1,0 +1,812 @@
+{
+  "subcategory": "cities-and-towns",
+  "facets": [
+    "Pueblos Mágicos y su programa",
+    "Ciudades coloniales Patrimonio",
+    "Capitales de los estados",
+    "Apodos y sobrenombres de ciudades",
+    "Plazas, templos y monumentos urbanos",
+    "Pueblos mineros y de plata",
+    "Pueblos de playa y costa",
+    "Pueblos de montaña y bosque",
+    "Artesanías típicas de cada pueblo",
+    "Platillos y dulces de cada ciudad",
+    "Fiestas y tradiciones locales",
+    "Ciudades en el cine y la historia"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Pueblo Mágico",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 4
+    },
+    {
+      "name": "Secretaría de Turismo",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 10
+    },
+    {
+      "name": "Huasca de Ocampo",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 12
+    },
+    {
+      "name": "Tepoztlán",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 7
+    },
+    {
+      "name": "Peña de Bernal",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 8
+    },
+    {
+      "name": "Cuetzalan",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 10
+    },
+    {
+      "name": "Izamal",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 10
+    },
+    {
+      "name": "Comala",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 10
+    },
+    {
+      "name": "Cholula",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 7
+    },
+    {
+      "name": "Atlixco",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 11
+    },
+    {
+      "name": "Tlaquepaque",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 8
+    },
+    {
+      "name": "Chiapa de Corzo",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 10
+    },
+    {
+      "name": "Malinalco",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 11
+    },
+    {
+      "name": "Cuatro Ciénegas",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 12
+    },
+    {
+      "name": "Dolores Hidalgo",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 6
+    },
+    {
+      "name": "Parras de la Fuente",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 12
+    },
+    {
+      "name": "Huamantla",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 11
+    },
+    {
+      "name": "Metepec",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 10
+    },
+    {
+      "name": "Pátzcuaro",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 7
+    },
+    {
+      "name": "San Cristóbal de las Casas",
+      "facet": "Pueblos Mágicos y su programa",
+      "known_at": 7
+    },
+    {
+      "name": "Patrimonio de la Humanidad",
+      "facet": "Ciudades coloniales Patrimonio",
+      "known_at": 6
+    },
+    {
+      "name": "UNESCO",
+      "facet": "Ciudades coloniales Patrimonio",
+      "known_at": 8
+    },
+    {
+      "name": "San Miguel de Allende",
+      "facet": "Ciudades coloniales Patrimonio",
+      "known_at": 7
+    },
+    {
+      "name": "Puebla",
+      "facet": "Ciudades coloniales Patrimonio",
+      "known_at": 3
+    },
+    {
+      "name": "Oaxaca de Juárez",
+      "facet": "Ciudades coloniales Patrimonio",
+      "known_at": 5
+    },
+    {
+      "name": "Campeche",
+      "facet": "Ciudades coloniales Patrimonio",
+      "known_at": 6
+    },
+    {
+      "name": "Tlacotalpan",
+      "facet": "Ciudades coloniales Patrimonio",
+      "known_at": 11
+    },
+    {
+      "name": "Xochimilco",
+      "facet": "Ciudades coloniales Patrimonio",
+      "known_at": 3
+    },
+    {
+      "name": "Centro Histórico de la Ciudad de México",
+      "facet": "Ciudades coloniales Patrimonio",
+      "known_at": 5
+    },
+    {
+      "name": "Ciudad Universitaria",
+      "facet": "Ciudades coloniales Patrimonio",
+      "known_at": 8
+    },
+    {
+      "name": "Camino Real de Tierra Adentro",
+      "facet": "Ciudades coloniales Patrimonio",
+      "known_at": 13
+    },
+    {
+      "name": "Misiones franciscanas de la Sierra Gorda",
+      "facet": "Ciudades coloniales Patrimonio",
+      "known_at": 13
+    },
+    {
+      "name": "San Luis Potosí",
+      "facet": "Capitales de los estados",
+      "known_at": 6
+    },
+    {
+      "name": "Colima",
+      "facet": "Capitales de los estados",
+      "known_at": 7
+    },
+    {
+      "name": "La Perla Tapatía",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "La Atenas de Veracruz",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "La Ciudad de los Palacios",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Angelópolis",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "La Perla del Pacífico",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Antequera",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Valladolid (Morelia)",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "La Esquina de Latinoamérica",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Tenochtitlan",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 6
+    },
+    {
+      "name": "Cuauhnáhuac",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Zócalo",
+      "facet": "Plazas, templos y monumentos urbanos",
+      "known_at": 3
+    },
+    {
+      "name": "Ángel de la Independencia",
+      "facet": "Plazas, templos y monumentos urbanos",
+      "known_at": 3
+    },
+    {
+      "name": "Catedral Metropolitana",
+      "facet": "Plazas, templos y monumentos urbanos",
+      "known_at": 5
+    },
+    {
+      "name": "Palacio de Bellas Artes",
+      "facet": "Plazas, templos y monumentos urbanos",
+      "known_at": 5
+    },
+    {
+      "name": "Basílica de Guadalupe",
+      "facet": "Plazas, templos y monumentos urbanos",
+      "known_at": 3
+    },
+    {
+      "name": "Parroquia de San Miguel Arcángel",
+      "facet": "Plazas, templos y monumentos urbanos",
+      "known_at": 9
+    },
+    {
+      "name": "Castillo de Chapultepec",
+      "facet": "Plazas, templos y monumentos urbanos",
+      "known_at": 4
+    },
+    {
+      "name": "Monumento al Pípila",
+      "facet": "Plazas, templos y monumentos urbanos",
+      "known_at": 7
+    },
+    {
+      "name": "Templo de Santa Prisca",
+      "facet": "Plazas, templos y monumentos urbanos",
+      "known_at": 11
+    },
+    {
+      "name": "Santuario de Atotonilco",
+      "facet": "Plazas, templos y monumentos urbanos",
+      "known_at": 12
+    },
+    {
+      "name": "Palacio Nacional",
+      "facet": "Plazas, templos y monumentos urbanos",
+      "known_at": 4
+    },
+    {
+      "name": "Taxco",
+      "facet": "Pueblos mineros y de plata",
+      "known_at": 6
+    },
+    {
+      "name": "Real de Catorce",
+      "facet": "Pueblos mineros y de plata",
+      "known_at": 9
+    },
+    {
+      "name": "Real del Monte",
+      "facet": "Pueblos mineros y de plata",
+      "known_at": 10
+    },
+    {
+      "name": "Mineral de Pozos",
+      "facet": "Pueblos mineros y de plata",
+      "known_at": 12
+    },
+    {
+      "name": "El Oro",
+      "facet": "Pueblos mineros y de plata",
+      "known_at": 12
+    },
+    {
+      "name": "Tlalpujahua",
+      "facet": "Pueblos mineros y de plata",
+      "known_at": 11
+    },
+    {
+      "name": "Álamos",
+      "facet": "Pueblos mineros y de plata",
+      "known_at": 12
+    },
+    {
+      "name": "Batopilas",
+      "facet": "Pueblos mineros y de plata",
+      "known_at": 13
+    },
+    {
+      "name": "Mina La Valenciana",
+      "facet": "Pueblos mineros y de plata",
+      "known_at": 11
+    },
+    {
+      "name": "Mina El Edén",
+      "facet": "Pueblos mineros y de plata",
+      "known_at": 11
+    },
+    {
+      "name": "Plata",
+      "facet": "Pueblos mineros y de plata",
+      "known_at": 3
+    },
+    {
+      "name": "Mineros de Cornualles",
+      "facet": "Pueblos mineros y de plata",
+      "known_at": 13
+    },
+    {
+      "name": "Túnel de Ogarrio",
+      "facet": "Pueblos mineros y de plata",
+      "known_at": 13
+    },
+    {
+      "name": "Hidalgo del Parral",
+      "facet": "Pueblos mineros y de plata",
+      "known_at": 11
+    },
+    {
+      "name": "Sombrerete",
+      "facet": "Pueblos mineros y de plata",
+      "known_at": 13
+    },
+    {
+      "name": "Mineral del Chico",
+      "facet": "Pueblos mineros y de plata",
+      "known_at": 12
+    },
+    {
+      "name": "Bacalar",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 7
+    },
+    {
+      "name": "Mazunte",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 10
+    },
+    {
+      "name": "Puerto Escondido",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 8
+    },
+    {
+      "name": "Sayulita",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 10
+    },
+    {
+      "name": "Tulum",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 6
+    },
+    {
+      "name": "Holbox",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 9
+    },
+    {
+      "name": "Todos Santos",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 12
+    },
+    {
+      "name": "Loreto",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 11
+    },
+    {
+      "name": "San Blas",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 12
+    },
+    {
+      "name": "Zihuatanejo",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 8
+    },
+    {
+      "name": "Acapulco",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 3
+    },
+    {
+      "name": "Puerto Vallarta",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 5
+    },
+    {
+      "name": "Mazatlán",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 5
+    },
+    {
+      "name": "Cabo San Lucas",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 6
+    },
+    {
+      "name": "Huatulco",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 8
+    },
+    {
+      "name": "Progreso",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 10
+    },
+    {
+      "name": "Ensenada",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 8
+    },
+    {
+      "name": "La Quebrada",
+      "facet": "Pueblos de playa y costa",
+      "known_at": 8
+    },
+    {
+      "name": "Valle de Bravo",
+      "facet": "Pueblos de montaña y bosque",
+      "known_at": 7
+    },
+    {
+      "name": "Creel",
+      "facet": "Pueblos de montaña y bosque",
+      "known_at": 11
+    },
+    {
+      "name": "Zacatlán de las Manzanas",
+      "facet": "Pueblos de montaña y bosque",
+      "known_at": 10
+    },
+    {
+      "name": "Xilitla",
+      "facet": "Pueblos de montaña y bosque",
+      "known_at": 11
+    },
+    {
+      "name": "Las Pozas de Edward James",
+      "facet": "Pueblos de montaña y bosque",
+      "known_at": 13
+    },
+    {
+      "name": "Tapalpa",
+      "facet": "Pueblos de montaña y bosque",
+      "known_at": 11
+    },
+    {
+      "name": "Mazamitla",
+      "facet": "Pueblos de montaña y bosque",
+      "known_at": 10
+    },
+    {
+      "name": "Angangueo",
+      "facet": "Pueblos de montaña y bosque",
+      "known_at": 12
+    },
+    {
+      "name": "Santuario de la Mariposa Monarca",
+      "facet": "Pueblos de montaña y bosque",
+      "known_at": 5
+    },
+    {
+      "name": "Chignahuapan",
+      "facet": "Pueblos de montaña y bosque",
+      "known_at": 11
+    },
+    {
+      "name": "Jalpan de Serra",
+      "facet": "Pueblos de montaña y bosque",
+      "known_at": 13
+    },
+    {
+      "name": "Arteaga",
+      "facet": "Pueblos de montaña y bosque",
+      "known_at": 13
+    },
+    {
+      "name": "Santiago y la Cascada Cola de Caballo",
+      "facet": "Pueblos de montaña y bosque",
+      "known_at": 11
+    },
+    {
+      "name": "Pinal de Amoles",
+      "facet": "Pueblos de montaña y bosque",
+      "known_at": 13
+    },
+    {
+      "name": "Tapijulapa",
+      "facet": "Pueblos de montaña y bosque",
+      "known_at": 14
+    },
+    {
+      "name": "El Chepe",
+      "facet": "Pueblos de montaña y bosque",
+      "known_at": 10
+    },
+    {
+      "name": "Huasteca Potosina",
+      "facet": "Pueblos de montaña y bosque",
+      "known_at": 9
+    },
+    {
+      "name": "Talavera",
+      "facet": "Artesanías típicas de cada pueblo",
+      "known_at": 6
+    },
+    {
+      "name": "Alebrije",
+      "facet": "Artesanías típicas de cada pueblo",
+      "known_at": 3
+    },
+    {
+      "name": "Árbol de la vida",
+      "facet": "Artesanías típicas de cada pueblo",
+      "known_at": 9
+    },
+    {
+      "name": "Huipil",
+      "facet": "Artesanías típicas de cada pueblo",
+      "known_at": 7
+    },
+    {
+      "name": "Vidrio soplado",
+      "facet": "Artesanías típicas de cada pueblo",
+      "known_at": 8
+    },
+    {
+      "name": "Sombrero de jipijapa",
+      "facet": "Artesanías típicas de cada pueblo",
+      "known_at": 12
+    },
+    {
+      "name": "Muñeca Lele",
+      "facet": "Artesanías típicas de cada pueblo",
+      "known_at": 7
+    },
+    {
+      "name": "Catrina de barro",
+      "facet": "Artesanías típicas de cada pueblo",
+      "known_at": 6
+    },
+    {
+      "name": "Papel picado",
+      "facet": "Artesanías típicas de cada pueblo",
+      "known_at": 3
+    },
+    {
+      "name": "Huaraches",
+      "facet": "Artesanías típicas de cada pueblo",
+      "known_at": 4
+    },
+    {
+      "name": "Platería de Taxco",
+      "facet": "Artesanías típicas de cada pueblo",
+      "known_at": 9
+    },
+    {
+      "name": "Camote poblano",
+      "facet": "Platillos y dulces de cada ciudad",
+      "known_at": 8
+    },
+    {
+      "name": "Marquesitas",
+      "facet": "Platillos y dulces de cada ciudad",
+      "known_at": 8
+    },
+    {
+      "name": "Enchiladas mineras",
+      "facet": "Platillos y dulces de cada ciudad",
+      "known_at": 10
+    },
+    {
+      "name": "Chongos zamoranos",
+      "facet": "Platillos y dulces de cada ciudad",
+      "known_at": 9
+    },
+    {
+      "name": "Carne en su jugo",
+      "facet": "Platillos y dulces de cada ciudad",
+      "known_at": 10
+    },
+    {
+      "name": "Ate de Morelia",
+      "facet": "Platillos y dulces de cada ciudad",
+      "known_at": 9
+    },
+    {
+      "name": "Queso Oaxaca",
+      "facet": "Platillos y dulces de cada ciudad",
+      "known_at": 3
+    },
+    {
+      "name": "Pescado a la talla",
+      "facet": "Platillos y dulces de cada ciudad",
+      "known_at": 10
+    },
+    {
+      "name": "Panuchos",
+      "facet": "Platillos y dulces de cada ciudad",
+      "known_at": 9
+    },
+    {
+      "name": "Jericalla",
+      "facet": "Platillos y dulces de cada ciudad",
+      "known_at": 11
+    },
+    {
+      "name": "Huamantlada",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 12
+    },
+    {
+      "name": "Feria Nacional de la Plata",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 12
+    },
+    {
+      "name": "Cumbre Tajín",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 11
+    },
+    {
+      "name": "Fiesta de la Candelaria",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 9
+    },
+    {
+      "name": "Fiesta de los Locos",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 12
+    },
+    {
+      "name": "Feria del Caballo de Texcoco",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 10
+    },
+    {
+      "name": "Desfile de Día de Muertos",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 6
+    },
+    {
+      "name": "Fiesta de la Vendimia",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 11
+    },
+    {
+      "name": "Batalla de Puebla",
+      "facet": "Ciudades en el cine y la historia",
+      "known_at": 4
+    },
+    {
+      "name": "Tratados de Córdoba",
+      "facet": "Ciudades en el cine y la historia",
+      "known_at": 10
+    },
+    {
+      "name": "Constitución de 1917",
+      "facet": "Ciudades en el cine y la historia",
+      "known_at": 7
+    },
+    {
+      "name": "Teatro de la República",
+      "facet": "Ciudades en el cine y la historia",
+      "known_at": 12
+    },
+    {
+      "name": "Casa Azul",
+      "facet": "Ciudades en el cine y la historia",
+      "known_at": 7
+    },
+    {
+      "name": "Coyoacán",
+      "facet": "Ciudades en el cine y la historia",
+      "known_at": 6
+    },
+    {
+      "name": "Pedro Páramo",
+      "facet": "Ciudades en el cine y la historia",
+      "known_at": 10
+    },
+    {
+      "name": "Spectre",
+      "facet": "Ciudades en el cine y la historia",
+      "known_at": 11
+    },
+    {
+      "name": "La noche de la iguana",
+      "facet": "Ciudades en el cine y la historia",
+      "known_at": 14
+    },
+    {
+      "name": "Como agua para chocolate",
+      "facet": "Ciudades en el cine y la historia",
+      "known_at": 10
+    },
+    {
+      "name": "San Juan de Ulúa",
+      "facet": "Ciudades en el cine y la historia",
+      "known_at": 10
+    },
+    {
+      "name": "Sitio de Querétaro",
+      "facet": "Ciudades en el cine y la historia",
+      "known_at": 12
+    },
+    {
+      "name": "Convención de Aguascalientes",
+      "facet": "Ciudades en el cine y la historia",
+      "known_at": 12
+    },
+    {
+      "name": "Fundación de la Villa Rica de la Vera Cruz",
+      "facet": "Ciudades en el cine y la historia",
+      "known_at": 11
+    },
+    {
+      "name": "Roma",
+      "facet": "Ciudades en el cine y la historia",
+      "known_at": 10
+    }
+  ]
+}

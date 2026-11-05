@@ -1,0 +1,997 @@
+{
+  "subcategory": "revolution",
+  "facets": [
+    "Caudillos y líderes revolucionarios",
+    "Porfiriato y sus causas",
+    "Planes y documentos políticos",
+    "Batallas y tomas de ciudades",
+    "Presidentes y gobiernos revolucionarios",
+    "Adelitas y mujeres revolucionarias",
+    "Corridos y música revolucionaria",
+    "Ejércitos, armas y trenes",
+    "Constitución de 1917 y reformas",
+    "Lugares y monumentos revolucionarios",
+    "Cine, arte y muralismo revolucionario",
+    "Frases, apodos y vocabulario revolucionario"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 1,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Pancho Villa",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 3
+    },
+    {
+      "name": "Emiliano Zapata",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 3
+    },
+    {
+      "name": "Venustiano Carranza",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 6
+    },
+    {
+      "name": "Álvaro Obregón",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 7
+    },
+    {
+      "name": "Plutarco Elías Calles",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 9
+    },
+    {
+      "name": "Aquiles Serdán",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 8
+    },
+    {
+      "name": "Pascual Orozco",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 10
+    },
+    {
+      "name": "Ricardo Flores Magón",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 10
+    },
+    {
+      "name": "Felipe Ángeles",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 11
+    },
+    {
+      "name": "Felipe Carrillo Puerto",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 12
+    },
+    {
+      "name": "Pablo González",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 13
+    },
+    {
+      "name": "Abraham González",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 13
+    },
+    {
+      "name": "Lucio Blanco",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 14
+    },
+    {
+      "name": "Genovevo de la O",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 14
+    },
+    {
+      "name": "Toribio Ortega",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 14
+    },
+    {
+      "name": "Saturnino Cedillo",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 14
+    },
+    {
+      "name": "Rodolfo Fierro",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 14
+    },
+    {
+      "name": "Tomás Urbina",
+      "facet": "Caudillos y líderes revolucionarios",
+      "known_at": 14
+    },
+    {
+      "name": "Porfiriato",
+      "facet": "Porfiriato y sus causas",
+      "known_at": 6
+    },
+    {
+      "name": "Hacienda porfiriana",
+      "facet": "Porfiriato y sus causas",
+      "known_at": 6
+    },
+    {
+      "name": "Peones acasillados",
+      "facet": "Porfiriato y sus causas",
+      "known_at": 11
+    },
+    {
+      "name": "Reelección",
+      "facet": "Porfiriato y sus causas",
+      "known_at": 7
+    },
+    {
+      "name": "Guardia Rural",
+      "facet": "Porfiriato y sus causas",
+      "known_at": 12
+    },
+    {
+      "name": "Partido Liberal Mexicano",
+      "facet": "Porfiriato y sus causas",
+      "known_at": 11
+    },
+    {
+      "name": "Bernardo Reyes",
+      "facet": "Porfiriato y sus causas",
+      "known_at": 13
+    },
+    {
+      "name": "Compañías deslindadoras",
+      "facet": "Porfiriato y sus causas",
+      "known_at": 13
+    },
+    {
+      "name": "Inversión extranjera en el Porfiriato",
+      "facet": "Porfiriato y sus causas",
+      "known_at": 10
+    },
+    {
+      "name": "Valle Nacional",
+      "facet": "Porfiriato y sus causas",
+      "known_at": 14
+    },
+    {
+      "name": "Plan de San Luis",
+      "facet": "Planes y documentos políticos",
+      "known_at": 6
+    },
+    {
+      "name": "Plan de Ayala",
+      "facet": "Planes y documentos políticos",
+      "known_at": 7
+    },
+    {
+      "name": "Plan de Guadalupe",
+      "facet": "Planes y documentos políticos",
+      "known_at": 9
+    },
+    {
+      "name": "Plan de Agua Prieta",
+      "facet": "Planes y documentos políticos",
+      "known_at": 11
+    },
+    {
+      "name": "Plan de la Empacadora",
+      "facet": "Planes y documentos políticos",
+      "known_at": 13
+    },
+    {
+      "name": "Pacto de la Embajada",
+      "facet": "Planes y documentos políticos",
+      "known_at": 11
+    },
+    {
+      "name": "Tratados de Ciudad Juárez",
+      "facet": "Planes y documentos políticos",
+      "known_at": 10
+    },
+    {
+      "name": "Tratados de Teoloyucan",
+      "facet": "Planes y documentos políticos",
+      "known_at": 12
+    },
+    {
+      "name": "Tratados de Bucareli",
+      "facet": "Planes y documentos políticos",
+      "known_at": 12
+    },
+    {
+      "name": "Ley Agraria del 6 de enero de 1915",
+      "facet": "Planes y documentos políticos",
+      "known_at": 12
+    },
+    {
+      "name": "Programa del Partido Liberal Mexicano de 1906",
+      "facet": "Planes y documentos políticos",
+      "known_at": 13
+    },
+    {
+      "name": "Periódico Regeneración",
+      "facet": "Planes y documentos políticos",
+      "known_at": 11
+    },
+    {
+      "name": "La sucesión presidencial en 1910",
+      "facet": "Planes y documentos políticos",
+      "known_at": 11
+    },
+    {
+      "name": "Pacto de Torreón",
+      "facet": "Planes y documentos políticos",
+      "known_at": 14
+    },
+    {
+      "name": "Plan de San Diego",
+      "facet": "Planes y documentos políticos",
+      "known_at": 14
+    },
+    {
+      "name": "Toma de Zacatecas",
+      "facet": "Batallas y tomas de ciudades",
+      "known_at": 6
+    },
+    {
+      "name": "Toma de Ciudad Juárez",
+      "facet": "Batallas y tomas de ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Batalla de Celaya",
+      "facet": "Batallas y tomas de ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "Toma de Torreón",
+      "facet": "Batallas y tomas de ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Decena Trágica",
+      "facet": "Batallas y tomas de ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "Ataque a Columbus",
+      "facet": "Batallas y tomas de ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Expedición punitiva",
+      "facet": "Batallas y tomas de ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Ocupación estadounidense de Veracruz de 1914",
+      "facet": "Batallas y tomas de ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "Batalla de Tierra Blanca",
+      "facet": "Batallas y tomas de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Batalla de Ojinaga",
+      "facet": "Batallas y tomas de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Batalla de Paredón",
+      "facet": "Batallas y tomas de ciudades",
+      "known_at": 14
+    },
+    {
+      "name": "Batalla de Trinidad",
+      "facet": "Batallas y tomas de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Toma de Chihuahua",
+      "facet": "Batallas y tomas de ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Batalla de Rellano",
+      "facet": "Batallas y tomas de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Batalla de Agua Prieta",
+      "facet": "Batallas y tomas de ciudades",
+      "known_at": 14
+    },
+    {
+      "name": "Victoriano Huerta",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 6
+    },
+    {
+      "name": "Francisco León de la Barra",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 12
+    },
+    {
+      "name": "Pedro Lascuráin",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 9
+    },
+    {
+      "name": "Adolfo de la Huerta",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 12
+    },
+    {
+      "name": "Eulalio Gutiérrez",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 13
+    },
+    {
+      "name": "Roque González Garza",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 14
+    },
+    {
+      "name": "Francisco Lagos Cházaro",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 15
+    },
+    {
+      "name": "Lázaro Cárdenas",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 5
+    },
+    {
+      "name": "Expropiación petrolera",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 5
+    },
+    {
+      "name": "Maximato",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 11
+    },
+    {
+      "name": "Partido Nacional Revolucionario",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 10
+    },
+    {
+      "name": "Emilio Portes Gil",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 13
+    },
+    {
+      "name": "Pascual Ortiz Rubio",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 13
+    },
+    {
+      "name": "Abelardo L. Rodríguez",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 13
+    },
+    {
+      "name": "Guerra Cristera",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 8
+    },
+    {
+      "name": "José Vasconcelos",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 9
+    },
+    {
+      "name": "Secretaría de Educación Pública",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 9
+    },
+    {
+      "name": "Rebelión delahuertista",
+      "facet": "Presidentes y gobiernos revolucionarios",
+      "known_at": 13
+    },
+    {
+      "name": "Adelitas",
+      "facet": "Adelitas y mujeres revolucionarias",
+      "known_at": 4
+    },
+    {
+      "name": "Soldaderas",
+      "facet": "Adelitas y mujeres revolucionarias",
+      "known_at": 6
+    },
+    {
+      "name": "Valentina Ramírez",
+      "facet": "Adelitas y mujeres revolucionarias",
+      "known_at": 11
+    },
+    {
+      "name": "Carmen Serdán",
+      "facet": "Adelitas y mujeres revolucionarias",
+      "known_at": 8
+    },
+    {
+      "name": "Hermila Galindo",
+      "facet": "Adelitas y mujeres revolucionarias",
+      "known_at": 12
+    },
+    {
+      "name": "Juana Belén Gutiérrez de Mendoza",
+      "facet": "Adelitas y mujeres revolucionarias",
+      "known_at": 14
+    },
+    {
+      "name": "Dolores Jiménez y Muro",
+      "facet": "Adelitas y mujeres revolucionarias",
+      "known_at": 14
+    },
+    {
+      "name": "Elisa Griensen",
+      "facet": "Adelitas y mujeres revolucionarias",
+      "known_at": 13
+    },
+    {
+      "name": "Petra Herrera",
+      "facet": "Adelitas y mujeres revolucionarias",
+      "known_at": 13
+    },
+    {
+      "name": "Amelia Robles",
+      "facet": "Adelitas y mujeres revolucionarias",
+      "known_at": 13
+    },
+    {
+      "name": "Leonor Villegas de Magnón",
+      "facet": "Adelitas y mujeres revolucionarias",
+      "known_at": 14
+    },
+    {
+      "name": "Sara Pérez de Madero",
+      "facet": "Adelitas y mujeres revolucionarias",
+      "known_at": 12
+    },
+    {
+      "name": "Juana Gallo",
+      "facet": "Adelitas y mujeres revolucionarias",
+      "known_at": 9
+    },
+    {
+      "name": "Primer Congreso Feminista de Yucatán",
+      "facet": "Adelitas y mujeres revolucionarias",
+      "known_at": 13
+    },
+    {
+      "name": "Elvia Carrillo Puerto",
+      "facet": "Adelitas y mujeres revolucionarias",
+      "known_at": 13
+    },
+    {
+      "name": "María Arias Bernal",
+      "facet": "Adelitas y mujeres revolucionarias",
+      "known_at": 14
+    },
+    {
+      "name": "Coronela",
+      "facet": "Adelitas y mujeres revolucionarias",
+      "known_at": 11
+    },
+    {
+      "name": "La Adelita (corrido)",
+      "facet": "Corridos y música revolucionaria",
+      "known_at": 5
+    },
+    {
+      "name": "La Rielera",
+      "facet": "Corridos y música revolucionaria",
+      "known_at": 10
+    },
+    {
+      "name": "Marieta",
+      "facet": "Corridos y música revolucionaria",
+      "known_at": 11
+    },
+    {
+      "name": "Siete Leguas",
+      "facet": "Corridos y música revolucionaria",
+      "known_at": 10
+    },
+    {
+      "name": "La Valentina",
+      "facet": "Corridos y música revolucionaria",
+      "known_at": 9
+    },
+    {
+      "name": "Jesusita en Chihuahua",
+      "facet": "Corridos y música revolucionaria",
+      "known_at": 10
+    },
+    {
+      "name": "Genaro Codina",
+      "facet": "Corridos y música revolucionaria",
+      "known_at": 13
+    },
+    {
+      "name": "Carabina 30-30 (corrido)",
+      "facet": "Corridos y música revolucionaria",
+      "known_at": 10
+    },
+    {
+      "name": "Corrido de Cananea",
+      "facet": "Corridos y música revolucionaria",
+      "known_at": 12
+    },
+    {
+      "name": "La persecución de Villa",
+      "facet": "Corridos y música revolucionaria",
+      "known_at": 14
+    },
+    {
+      "name": "Valentín de la Sierra",
+      "facet": "Corridos y música revolucionaria",
+      "known_at": 12
+    },
+    {
+      "name": "Corrido de Heraclio Bernal",
+      "facet": "Corridos y música revolucionaria",
+      "known_at": 14
+    },
+    {
+      "name": "División del Norte",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 6
+    },
+    {
+      "name": "Ejército Libertador del Sur",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 9
+    },
+    {
+      "name": "Ejército Constitucionalista",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 9
+    },
+    {
+      "name": "Los Dorados",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 10
+    },
+    {
+      "name": "Ejército Federal",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 8
+    },
+    {
+      "name": "Carabina Winchester 30-30",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 8
+    },
+    {
+      "name": "Cananas",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 8
+    },
+    {
+      "name": "Trenes de la Revolución",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 7
+    },
+    {
+      "name": "Locomotora de vapor",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 5
+    },
+    {
+      "name": "Fusil Mauser",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 11
+    },
+    {
+      "name": "Ametralladora",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 7
+    },
+    {
+      "name": "Caballería villista",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 8
+    },
+    {
+      "name": "Colorados orozquistas",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 12
+    },
+    {
+      "name": "Yaquis en el ejército de Obregón",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 13
+    },
+    {
+      "name": "Cañón El Niño",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 14
+    },
+    {
+      "name": "Batallones Rojos",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 13
+    },
+    {
+      "name": "Ejército del Noreste",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 14
+    },
+    {
+      "name": "Sombrero de ala ancha",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 3
+    },
+    {
+      "name": "Aviación constitucionalista",
+      "facet": "Ejércitos, armas y trenes",
+      "known_at": 14
+    },
+    {
+      "name": "Día de la Constitución",
+      "facet": "Constitución de 1917 y reformas",
+      "known_at": 6
+    },
+    {
+      "name": "Artículo 27",
+      "facet": "Constitución de 1917 y reformas",
+      "known_at": 10
+    },
+    {
+      "name": "Artículo 123",
+      "facet": "Constitución de 1917 y reformas",
+      "known_at": 10
+    },
+    {
+      "name": "Artículo 3",
+      "facet": "Constitución de 1917 y reformas",
+      "known_at": 10
+    },
+    {
+      "name": "Artículo 130",
+      "facet": "Constitución de 1917 y reformas",
+      "known_at": 13
+    },
+    {
+      "name": "Congreso Constituyente de Querétaro",
+      "facet": "Constitución de 1917 y reformas",
+      "known_at": 10
+    },
+    {
+      "name": "Ejido",
+      "facet": "Constitución de 1917 y reformas",
+      "known_at": 9
+    },
+    {
+      "name": "Jornada de ocho horas",
+      "facet": "Constitución de 1917 y reformas",
+      "known_at": 9
+    },
+    {
+      "name": "Educación laica",
+      "facet": "Constitución de 1917 y reformas",
+      "known_at": 9
+    },
+    {
+      "name": "Reforma agraria",
+      "facet": "Constitución de 1917 y reformas",
+      "known_at": 8
+    },
+    {
+      "name": "Francisco J. Múgica",
+      "facet": "Constitución de 1917 y reformas",
+      "known_at": 13
+    },
+    {
+      "name": "Ley Calles",
+      "facet": "Constitución de 1917 y reformas",
+      "known_at": 12
+    },
+    {
+      "name": "Municipio libre",
+      "facet": "Constitución de 1917 y reformas",
+      "known_at": 13
+    },
+    {
+      "name": "Derecho de huelga",
+      "facet": "Constitución de 1917 y reformas",
+      "known_at": 11
+    },
+    {
+      "name": "Salario mínimo",
+      "facet": "Constitución de 1917 y reformas",
+      "known_at": 8
+    },
+    {
+      "name": "Museo Nacional de la Revolución",
+      "facet": "Lugares y monumentos revolucionarios",
+      "known_at": 10
+    },
+    {
+      "name": "Casa de los Hermanos Serdán",
+      "facet": "Lugares y monumentos revolucionarios",
+      "known_at": 10
+    },
+    {
+      "name": "Anenecuilco",
+      "facet": "Lugares y monumentos revolucionarios",
+      "known_at": 12
+    },
+    {
+      "name": "Hacienda de Chinameca",
+      "facet": "Lugares y monumentos revolucionarios",
+      "known_at": 12
+    },
+    {
+      "name": "Hacienda de Canutillo",
+      "facet": "Lugares y monumentos revolucionarios",
+      "known_at": 13
+    },
+    {
+      "name": "Quinta Luz",
+      "facet": "Lugares y monumentos revolucionarios",
+      "known_at": 13
+    },
+    {
+      "name": "Teatro Morelos",
+      "facet": "Lugares y monumentos revolucionarios",
+      "known_at": 13
+    },
+    {
+      "name": "Tlaltizapán",
+      "facet": "Lugares y monumentos revolucionarios",
+      "known_at": 14
+    },
+    {
+      "name": "Torreón",
+      "facet": "Lugares y monumentos revolucionarios",
+      "known_at": 8
+    },
+    {
+      "name": "Diego Rivera",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 5
+    },
+    {
+      "name": "José Clemente Orozco",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 9
+    },
+    {
+      "name": "David Alfaro Siqueiros",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 9
+    },
+    {
+      "name": "Muralismo mexicano",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 8
+    },
+    {
+      "name": "Murales de Palacio Nacional",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 9
+    },
+    {
+      "name": "Del Porfirismo a la Revolución",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 13
+    },
+    {
+      "name": "Frida Kahlo",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 4
+    },
+    {
+      "name": "Gerardo Murillo, Dr. Atl",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 12
+    },
+    {
+      "name": "Archivo Casasola",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 12
+    },
+    {
+      "name": "Taller de Gráfica Popular",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 13
+    },
+    {
+      "name": "Los de abajo",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 10
+    },
+    {
+      "name": "Novela de la Revolución",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 11
+    },
+    {
+      "name": "El águila y la serpiente",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 13
+    },
+    {
+      "name": "La muerte de Artemio Cruz",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 12
+    },
+    {
+      "name": "Nellie Campobello",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 14
+    },
+    {
+      "name": "Vámonos con Pancho Villa",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 13
+    },
+    {
+      "name": "El compadre Mendoza",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 14
+    },
+    {
+      "name": "Enamorada",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 12
+    },
+    {
+      "name": "¡Viva Zapata!",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 12
+    },
+    {
+      "name": "Emilio \"El Indio\" Fernández",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 11
+    },
+    {
+      "name": "Antonio Aguilar",
+      "facet": "Cine, arte y muralismo revolucionario",
+      "known_at": 11
+    },
+    {
+      "name": "Mejor morir de pie que vivir de rodillas",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 11
+    },
+    {
+      "name": "El Centauro del Norte",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 8
+    },
+    {
+      "name": "El Caudillo del Sur",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 8
+    },
+    {
+      "name": "El Apóstol de la Democracia",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 10
+    },
+    {
+      "name": "El Primer Jefe",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 11
+    },
+    {
+      "name": "El Manco de Celaya",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 11
+    },
+    {
+      "name": "El Jefe Máximo",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 11
+    },
+    {
+      "name": "El Chacal",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 12
+    },
+    {
+      "name": "Leva",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 11
+    },
+    {
+      "name": "La bola",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 12
+    },
+    {
+      "name": "Bilimbiques",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 13
+    },
+    {
+      "name": "Carrancear",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 13
+    },
+    {
+      "name": "Pelones",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 14
+    },
+    {
+      "name": "Caudillo",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 10
+    },
+    {
+      "name": "Hacendado",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 8
+    },
+    {
+      "name": "Peón",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 7
+    },
+    {
+      "name": "Zapatistas",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 5
+    },
+    {
+      "name": "Villistas",
+      "facet": "Frases, apodos y vocabulario revolucionario",
+      "known_at": 7
+    }
+  ]
+}

@@ -1,0 +1,987 @@
+{
+  "subcategory": "20th-century",
+  "facets": [
+    "Revolución Mexicana y sus caudillos",
+    "Presidentes y gobiernos del siglo XX",
+    "Cristiada y conflictos religiosos",
+    "Expropiación petrolera y era cardenista",
+    "Milagro mexicano y modernización",
+    "Movimiento estudiantil de 1968",
+    "Juegos Olímpicos y Mundiales en México",
+    "Muralismo y artistas del siglo XX",
+    "Cine de oro y estrellas mexicanas",
+    "Música popular y radio del siglo XX",
+    "Terremoto de 1985 y sociedad civil",
+    "Crisis, TLCAN y fin de siglo"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "20 de noviembre",
+      "facet": "Revolución Mexicana y sus caudillos",
+      "known_at": 3
+    },
+    {
+      "name": "Hermanos Flores Magón",
+      "facet": "Revolución Mexicana y sus caudillos",
+      "known_at": 11
+    },
+    {
+      "name": "Belisario Domínguez",
+      "facet": "Revolución Mexicana y sus caudillos",
+      "known_at": 11
+    },
+    {
+      "name": "PRI",
+      "facet": "Presidentes y gobiernos del siglo XX",
+      "known_at": 6
+    },
+    {
+      "name": "PAN",
+      "facet": "Presidentes y gobiernos del siglo XX",
+      "known_at": 7
+    },
+    {
+      "name": "Manuel Ávila Camacho",
+      "facet": "Presidentes y gobiernos del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Miguel Alemán Valdés",
+      "facet": "Presidentes y gobiernos del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "Adolfo Ruiz Cortines",
+      "facet": "Presidentes y gobiernos del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Adolfo López Mateos",
+      "facet": "Presidentes y gobiernos del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Gustavo Díaz Ordaz",
+      "facet": "Presidentes y gobiernos del siglo XX",
+      "known_at": 9
+    },
+    {
+      "name": "Luis Echeverría",
+      "facet": "Presidentes y gobiernos del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "José López Portillo",
+      "facet": "Presidentes y gobiernos del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Miguel de la Madrid",
+      "facet": "Presidentes y gobiernos del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Carlos Salinas de Gortari",
+      "facet": "Presidentes y gobiernos del siglo XX",
+      "known_at": 9
+    },
+    {
+      "name": "Ernesto Zedillo",
+      "facet": "Presidentes y gobiernos del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "Vicente Fox",
+      "facet": "Presidentes y gobiernos del siglo XX",
+      "known_at": 7
+    },
+    {
+      "name": "Elecciones del 2000",
+      "facet": "Presidentes y gobiernos del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "Voto de la mujer en 1953",
+      "facet": "Presidentes y gobiernos del siglo XX",
+      "known_at": 9
+    },
+    {
+      "name": "Libros de texto gratuitos",
+      "facet": "Presidentes y gobiernos del siglo XX",
+      "known_at": 6
+    },
+    {
+      "name": "IMSS",
+      "facet": "Presidentes y gobiernos del siglo XX",
+      "known_at": 7
+    },
+    {
+      "name": "¡Viva Cristo Rey!",
+      "facet": "Cristiada y conflictos religiosos",
+      "known_at": 9
+    },
+    {
+      "name": "Suspensión de cultos de 1926",
+      "facet": "Cristiada y conflictos religiosos",
+      "known_at": 11
+    },
+    {
+      "name": "Arreglos de 1929",
+      "facet": "Cristiada y conflictos religiosos",
+      "known_at": 12
+    },
+    {
+      "name": "Padre Miguel Agustín Pro",
+      "facet": "Cristiada y conflictos religiosos",
+      "known_at": 12
+    },
+    {
+      "name": "José de León Toral",
+      "facet": "Cristiada y conflictos religiosos",
+      "known_at": 13
+    },
+    {
+      "name": "Enrique Gorostieta",
+      "facet": "Cristiada y conflictos religiosos",
+      "known_at": 13
+    },
+    {
+      "name": "Anacleto González Flores",
+      "facet": "Cristiada y conflictos religiosos",
+      "known_at": 14
+    },
+    {
+      "name": "Cristo Rey del Cerro del Cubilete",
+      "facet": "Cristiada y conflictos religiosos",
+      "known_at": 9
+    },
+    {
+      "name": "Brigadas Femeninas Santa Juana de Arco",
+      "facet": "Cristiada y conflictos religiosos",
+      "known_at": 14
+    },
+    {
+      "name": "Liga Nacional Defensora de la Libertad Religiosa",
+      "facet": "Cristiada y conflictos religiosos",
+      "known_at": 14
+    },
+    {
+      "name": "Tomás Garrido Canabal",
+      "facet": "Cristiada y conflictos religiosos",
+      "known_at": 14
+    },
+    {
+      "name": "Camisas Rojas",
+      "facet": "Cristiada y conflictos religiosos",
+      "known_at": 14
+    },
+    {
+      "name": "Santo Toribio Romo",
+      "facet": "Cristiada y conflictos religiosos",
+      "known_at": 12
+    },
+    {
+      "name": "Cristiada (película)",
+      "facet": "Cristiada y conflictos religiosos",
+      "known_at": 11
+    },
+    {
+      "name": "Visita de Juan Pablo II en 1979",
+      "facet": "Cristiada y conflictos religiosos",
+      "known_at": 9
+    },
+    {
+      "name": "Relaciones con el Vaticano de 1992",
+      "facet": "Cristiada y conflictos religiosos",
+      "known_at": 13
+    },
+    {
+      "name": "Nueva Basílica de Guadalupe",
+      "facet": "Cristiada y conflictos religiosos",
+      "known_at": 6
+    },
+    {
+      "name": "18 de marzo de 1938",
+      "facet": "Expropiación petrolera y era cardenista",
+      "known_at": 9
+    },
+    {
+      "name": "Pemex",
+      "facet": "Expropiación petrolera y era cardenista",
+      "known_at": 4
+    },
+    {
+      "name": "Reparto agrario",
+      "facet": "Expropiación petrolera y era cardenista",
+      "known_at": 9
+    },
+    {
+      "name": "Instituto Politécnico Nacional",
+      "facet": "Expropiación petrolera y era cardenista",
+      "known_at": 7
+    },
+    {
+      "name": "Exilio español",
+      "facet": "Expropiación petrolera y era cardenista",
+      "known_at": 10
+    },
+    {
+      "name": "Niños de Morelia",
+      "facet": "Expropiación petrolera y era cardenista",
+      "known_at": 12
+    },
+    {
+      "name": "León Trotski",
+      "facet": "Expropiación petrolera y era cardenista",
+      "known_at": 11
+    },
+    {
+      "name": "Colecta para pagar la deuda petrolera",
+      "facet": "Expropiación petrolera y era cardenista",
+      "known_at": 10
+    },
+    {
+      "name": "Compañía El Águila",
+      "facet": "Expropiación petrolera y era cardenista",
+      "known_at": 13
+    },
+    {
+      "name": "Nacionalización de los ferrocarriles",
+      "facet": "Expropiación petrolera y era cardenista",
+      "known_at": 12
+    },
+    {
+      "name": "CTM",
+      "facet": "Expropiación petrolera y era cardenista",
+      "known_at": 12
+    },
+    {
+      "name": "Vicente Lombardo Toledano",
+      "facet": "Expropiación petrolera y era cardenista",
+      "known_at": 13
+    },
+    {
+      "name": "Partido de la Revolución Mexicana",
+      "facet": "Expropiación petrolera y era cardenista",
+      "known_at": 12
+    },
+    {
+      "name": "Educación socialista",
+      "facet": "Expropiación petrolera y era cardenista",
+      "known_at": 12
+    },
+    {
+      "name": "Comisión Federal de Electricidad",
+      "facet": "Expropiación petrolera y era cardenista",
+      "known_at": 6
+    },
+    {
+      "name": "Expulsión de Calles",
+      "facet": "Expropiación petrolera y era cardenista",
+      "known_at": 12
+    },
+    {
+      "name": "Milagro mexicano",
+      "facet": "Milagro mexicano y modernización",
+      "known_at": 10
+    },
+    {
+      "name": "Desarrollo estabilizador",
+      "facet": "Milagro mexicano y modernización",
+      "known_at": 12
+    },
+    {
+      "name": "Programa Bracero",
+      "facet": "Milagro mexicano y modernización",
+      "known_at": 10
+    },
+    {
+      "name": "Escuadrón 201",
+      "facet": "Milagro mexicano y modernización",
+      "known_at": 10
+    },
+    {
+      "name": "Metro de la Ciudad de México",
+      "facet": "Milagro mexicano y modernización",
+      "known_at": 3
+    },
+    {
+      "name": "Periférico",
+      "facet": "Milagro mexicano y modernización",
+      "known_at": 7
+    },
+    {
+      "name": "Televisión a color",
+      "facet": "Milagro mexicano y modernización",
+      "known_at": 6
+    },
+    {
+      "name": "Nacionalización de la industria eléctrica",
+      "facet": "Milagro mexicano y modernización",
+      "known_at": 12
+    },
+    {
+      "name": "Sustitución de importaciones",
+      "facet": "Milagro mexicano y modernización",
+      "known_at": 13
+    },
+    {
+      "name": "Vocho",
+      "facet": "Milagro mexicano y modernización",
+      "known_at": 3
+    },
+    {
+      "name": "Luis Barragán",
+      "facet": "Milagro mexicano y modernización",
+      "known_at": 12
+    },
+    {
+      "name": "Pedro Ramírez Vázquez",
+      "facet": "Milagro mexicano y modernización",
+      "known_at": 13
+    },
+    {
+      "name": "Multifamiliar Miguel Alemán",
+      "facet": "Milagro mexicano y modernización",
+      "known_at": 13
+    },
+    {
+      "name": "Satélite Morelos",
+      "facet": "Milagro mexicano y modernización",
+      "known_at": 12
+    },
+    {
+      "name": "2 de octubre de 1968",
+      "facet": "Movimiento estudiantil de 1968",
+      "known_at": 7
+    },
+    {
+      "name": "2 de octubre no se olvida",
+      "facet": "Movimiento estudiantil de 1968",
+      "known_at": 7
+    },
+    {
+      "name": "Consejo Nacional de Huelga",
+      "facet": "Movimiento estudiantil de 1968",
+      "known_at": 12
+    },
+    {
+      "name": "Pliego petitorio",
+      "facet": "Movimiento estudiantil de 1968",
+      "known_at": 12
+    },
+    {
+      "name": "Marcha del Silencio",
+      "facet": "Movimiento estudiantil de 1968",
+      "known_at": 11
+    },
+    {
+      "name": "Javier Barros Sierra",
+      "facet": "Movimiento estudiantil de 1968",
+      "known_at": 12
+    },
+    {
+      "name": "Bazucazo de San Ildefonso",
+      "facet": "Movimiento estudiantil de 1968",
+      "known_at": 13
+    },
+    {
+      "name": "Batallón Olimpia",
+      "facet": "Movimiento estudiantil de 1968",
+      "known_at": 13
+    },
+    {
+      "name": "Granaderos",
+      "facet": "Movimiento estudiantil de 1968",
+      "known_at": 10
+    },
+    {
+      "name": "Ocupación de Ciudad Universitaria",
+      "facet": "Movimiento estudiantil de 1968",
+      "known_at": 12
+    },
+    {
+      "name": "La noche de Tlatelolco",
+      "facet": "Movimiento estudiantil de 1968",
+      "known_at": 11
+    },
+    {
+      "name": "Elena Poniatowska",
+      "facet": "Movimiento estudiantil de 1968",
+      "known_at": 11
+    },
+    {
+      "name": "Renuncia de Octavio Paz a la embajada en la India",
+      "facet": "Movimiento estudiantil de 1968",
+      "known_at": 13
+    },
+    {
+      "name": "Rojo amanecer",
+      "facet": "Movimiento estudiantil de 1968",
+      "known_at": 11
+    },
+    {
+      "name": "Roma (película)",
+      "facet": "Movimiento estudiantil de 1968",
+      "known_at": 9
+    },
+    {
+      "name": "Halconazo",
+      "facet": "Movimiento estudiantil de 1968",
+      "known_at": 12
+    },
+    {
+      "name": "Juegos Olímpicos de México 1968",
+      "facet": "Juegos Olímpicos y Mundiales en México",
+      "known_at": 6
+    },
+    {
+      "name": "Mundial de 1970",
+      "facet": "Juegos Olímpicos y Mundiales en México",
+      "known_at": 7
+    },
+    {
+      "name": "Mundial de 1986",
+      "facet": "Juegos Olímpicos y Mundiales en México",
+      "known_at": 6
+    },
+    {
+      "name": "Pique",
+      "facet": "Juegos Olímpicos y Mundiales en México",
+      "known_at": 8
+    },
+    {
+      "name": "Enriqueta Basilio",
+      "facet": "Juegos Olímpicos y Mundiales en México",
+      "known_at": 11
+    },
+    {
+      "name": "Felipe \"el Tibio\" Muñoz",
+      "facet": "Juegos Olímpicos y Mundiales en México",
+      "known_at": 11
+    },
+    {
+      "name": "Partido del Siglo",
+      "facet": "Juegos Olímpicos y Mundiales en México",
+      "known_at": 11
+    },
+    {
+      "name": "Pelé",
+      "facet": "Juegos Olímpicos y Mundiales en México",
+      "known_at": 4
+    },
+    {
+      "name": "La Mano de Dios",
+      "facet": "Juegos Olímpicos y Mundiales en México",
+      "known_at": 8
+    },
+    {
+      "name": "La ola",
+      "facet": "Juegos Olímpicos y Mundiales en México",
+      "known_at": 5
+    },
+    {
+      "name": "Hugo Sánchez",
+      "facet": "Juegos Olímpicos y Mundiales en México",
+      "known_at": 6
+    },
+    {
+      "name": "Bob Beamon",
+      "facet": "Juegos Olímpicos y Mundiales en México",
+      "known_at": 12
+    },
+    {
+      "name": "Dick Fosbury",
+      "facet": "Juegos Olímpicos y Mundiales en México",
+      "known_at": 12
+    },
+    {
+      "name": "Saludo del Poder Negro",
+      "facet": "Juegos Olímpicos y Mundiales en México",
+      "known_at": 12
+    },
+    {
+      "name": "Ruta de la Amistad",
+      "facet": "Juegos Olímpicos y Mundiales en México",
+      "known_at": 12
+    },
+    {
+      "name": "Lance Wyman",
+      "facet": "Juegos Olímpicos y Mundiales en México",
+      "known_at": 14
+    },
+    {
+      "name": "Rufino Tamayo",
+      "facet": "Muralismo y artistas del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "Sueño de una tarde dominical en la Alameda Central",
+      "facet": "Muralismo y artistas del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Biblioteca Central de la UNAM",
+      "facet": "Muralismo y artistas del siglo XX",
+      "known_at": 7
+    },
+    {
+      "name": "Juan O'Gorman",
+      "facet": "Muralismo y artistas del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Leonora Carrington",
+      "facet": "Muralismo y artistas del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Remedios Varo",
+      "facet": "Muralismo y artistas del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "María Izquierdo",
+      "facet": "Muralismo y artistas del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Francisco Toledo",
+      "facet": "Muralismo y artistas del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Octavio Paz",
+      "facet": "Muralismo y artistas del siglo XX",
+      "known_at": 9
+    },
+    {
+      "name": "El hombre en el cruce de caminos",
+      "facet": "Muralismo y artistas del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Época de Oro del cine mexicano",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 7
+    },
+    {
+      "name": "Pedro Infante",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 5
+    },
+    {
+      "name": "Jorge Negrete",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 7
+    },
+    {
+      "name": "María Félix",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 7
+    },
+    {
+      "name": "Cantinflas",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 4
+    },
+    {
+      "name": "Dolores del Río",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 10
+    },
+    {
+      "name": "Tin Tan",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 8
+    },
+    {
+      "name": "Gabriel Figueroa",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 13
+    },
+    {
+      "name": "Nosotros los pobres",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 8
+    },
+    {
+      "name": "Pepe el Toro",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 9
+    },
+    {
+      "name": "Allá en el Rancho Grande",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 11
+    },
+    {
+      "name": "Los olvidados",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 12
+    },
+    {
+      "name": "María Candelaria",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 12
+    },
+    {
+      "name": "Macario",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 11
+    },
+    {
+      "name": "El Santo",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 5
+    },
+    {
+      "name": "Sara García",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 9
+    },
+    {
+      "name": "Silvia Pinal",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 10
+    },
+    {
+      "name": "Katy Jurado",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 13
+    },
+    {
+      "name": "Premio Ariel",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 10
+    },
+    {
+      "name": "La vuelta al mundo en 80 días",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 11
+    },
+    {
+      "name": "Chespirito",
+      "facet": "Cine de oro y estrellas mexicanas",
+      "known_at": 3
+    },
+    {
+      "name": "Agustín Lara",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 9
+    },
+    {
+      "name": "José Alfredo Jiménez",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 8
+    },
+    {
+      "name": "Bésame mucho",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 8
+    },
+    {
+      "name": "Consuelo Velázquez",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Trío Los Panchos",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "Mariachi Vargas de Tecalitlán",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 9
+    },
+    {
+      "name": "Pedro Vargas",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Lola Beltrán",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Javier Solís",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Chavela Vargas",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "Juan Gabriel",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 5
+    },
+    {
+      "name": "Armando Manzanero",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "Dámaso Pérez Prado",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Corrido revolucionario",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 9
+    },
+    {
+      "name": "Festival de Avándaro",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Rock en tu idioma",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Los Tigres del Norte",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 7
+    },
+    {
+      "name": "Luis Miguel",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 6
+    },
+    {
+      "name": "Maná",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 7
+    },
+    {
+      "name": "Café Tacvba",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "Sonora Santanera",
+      "facet": "Música popular y radio del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "Terremoto de 1985",
+      "facet": "Terremoto de 1985 y sociedad civil",
+      "known_at": 6
+    },
+    {
+      "name": "19 de septiembre",
+      "facet": "Terremoto de 1985 y sociedad civil",
+      "known_at": 7
+    },
+    {
+      "name": "Hotel Regis",
+      "facet": "Terremoto de 1985 y sociedad civil",
+      "known_at": 12
+    },
+    {
+      "name": "Edificio Nuevo León",
+      "facet": "Terremoto de 1985 y sociedad civil",
+      "known_at": 12
+    },
+    {
+      "name": "Multifamiliar Juárez",
+      "facet": "Terremoto de 1985 y sociedad civil",
+      "known_at": 13
+    },
+    {
+      "name": "Bebés milagro del Hospital Juárez",
+      "facet": "Terremoto de 1985 y sociedad civil",
+      "known_at": 11
+    },
+    {
+      "name": "Centro Médico Nacional",
+      "facet": "Terremoto de 1985 y sociedad civil",
+      "known_at": 11
+    },
+    {
+      "name": "Plácido Domingo",
+      "facet": "Terremoto de 1985 y sociedad civil",
+      "known_at": 11
+    },
+    {
+      "name": "Simulacro",
+      "facet": "Terremoto de 1985 y sociedad civil",
+      "known_at": 3
+    },
+    {
+      "name": "Protección Civil",
+      "facet": "Terremoto de 1985 y sociedad civil",
+      "known_at": 5
+    },
+    {
+      "name": "Damnificados",
+      "facet": "Terremoto de 1985 y sociedad civil",
+      "known_at": 8
+    },
+    {
+      "name": "Costureras de San Antonio Abad",
+      "facet": "Terremoto de 1985 y sociedad civil",
+      "known_at": 13
+    },
+    {
+      "name": "Escala de Richter",
+      "facet": "Terremoto de 1985 y sociedad civil",
+      "known_at": 7
+    },
+    {
+      "name": "Superbarrio Gómez",
+      "facet": "Terremoto de 1985 y sociedad civil",
+      "known_at": 13
+    },
+    {
+      "name": "Sismo del 19 de septiembre de 2017",
+      "facet": "Terremoto de 1985 y sociedad civil",
+      "known_at": 6
+    },
+    {
+      "name": "TLCAN",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 8
+    },
+    {
+      "name": "1 de enero de 1994",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 11
+    },
+    {
+      "name": "EZLN",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 8
+    },
+    {
+      "name": "Subcomandante Marcos",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 8
+    },
+    {
+      "name": "Acuerdos de San Andrés",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 13
+    },
+    {
+      "name": "Luis Donaldo Colosio",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 9
+    },
+    {
+      "name": "Error de diciembre",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 11
+    },
+    {
+      "name": "Efecto Tequila",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 11
+    },
+    {
+      "name": "Fobaproa",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 12
+    },
+    {
+      "name": "Nuevos pesos",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 10
+    },
+    {
+      "name": "Nacionalización de la banca",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 12
+    },
+    {
+      "name": "Caída del sistema",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 11
+    },
+    {
+      "name": "Cuauhtémoc Cárdenas",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 9
+    },
+    {
+      "name": "IFE",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 7
+    },
+    {
+      "name": "Programa Solidaridad",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 12
+    },
+    {
+      "name": "Privatización de Telmex",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 12
+    },
+    {
+      "name": "Boom petrolero",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 12
+    },
+    {
+      "name": "Yacimiento Cantarell",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 13
+    },
+    {
+      "name": "Jefatura de Gobierno del Distrito Federal de 1997",
+      "facet": "Crisis, TLCAN y fin de siglo",
+      "known_at": 13
+    }
+  ]
+}

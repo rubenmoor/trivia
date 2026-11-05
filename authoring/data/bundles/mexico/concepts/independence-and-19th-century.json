@@ -1,0 +1,987 @@
+{
+  "subcategory": "independence-and-19th-century",
+  "facets": [
+    "Héroes y heroínas de la Independencia",
+    "El Grito y las fiestas patrias",
+    "Batallas y campañas insurgentes",
+    "Consumación e Imperio de Iturbide",
+    "Primera República y Santa Anna",
+    "Texas y la guerra con Estados Unidos",
+    "Juárez y la Reforma",
+    "Intervención francesa y Segundo Imperio",
+    "El Porfiriato",
+    "Símbolos patrios y monumentos",
+    "Vida cotidiana y cultura del siglo XIX",
+    "Billetes, calles y nombres que recuerdan"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Miguel Hidalgo y Costilla",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 3
+    },
+    {
+      "name": "José María Morelos y Pavón",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 4
+    },
+    {
+      "name": "Josefa Ortiz de Domínguez",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 4
+    },
+    {
+      "name": "Ignacio Allende",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 5
+    },
+    {
+      "name": "Juan Aldama",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 7
+    },
+    {
+      "name": "Vicente Guerrero",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 5
+    },
+    {
+      "name": "Leona Vicario",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 6
+    },
+    {
+      "name": "El Pípila",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 4
+    },
+    {
+      "name": "Mariano Matamoros",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 9
+    },
+    {
+      "name": "Guadalupe Victoria",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 6
+    },
+    {
+      "name": "Nicolás Bravo",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 8
+    },
+    {
+      "name": "Francisco Javier Mina",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 10
+    },
+    {
+      "name": "Gertrudis Bocanegra",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 11
+    },
+    {
+      "name": "Hermenegildo Galeana",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 11
+    },
+    {
+      "name": "Ignacio López Rayón",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 10
+    },
+    {
+      "name": "Andrés Quintana Roo",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 9
+    },
+    {
+      "name": "Mariano Abasolo",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 11
+    },
+    {
+      "name": "Mariano Jiménez",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro Moreno",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 12
+    },
+    {
+      "name": "Fray Servando Teresa de Mier",
+      "facet": "Héroes y heroínas de la Independencia",
+      "known_at": 13
+    },
+    {
+      "name": "Campana de Dolores",
+      "facet": "El Grito y las fiestas patrias",
+      "known_at": 6
+    },
+    {
+      "name": "16 de septiembre",
+      "facet": "El Grito y las fiestas patrias",
+      "known_at": 2
+    },
+    {
+      "name": "Noche del 15 de septiembre",
+      "facet": "El Grito y las fiestas patrias",
+      "known_at": 3
+    },
+    {
+      "name": "Desfile militar del 16 de septiembre",
+      "facet": "El Grito y las fiestas patrias",
+      "known_at": 4
+    },
+    {
+      "name": "Balcón central de Palacio Nacional",
+      "facet": "El Grito y las fiestas patrias",
+      "known_at": 6
+    },
+    {
+      "name": "Zócalo de la Ciudad de México",
+      "facet": "El Grito y las fiestas patrias",
+      "known_at": 3
+    },
+    {
+      "name": "Estandarte de la Virgen de Guadalupe",
+      "facet": "El Grito y las fiestas patrias",
+      "known_at": 8
+    },
+    {
+      "name": "Conspiración de Querétaro",
+      "facet": "El Grito y las fiestas patrias",
+      "known_at": 7
+    },
+    {
+      "name": "Mes patrio",
+      "facet": "El Grito y las fiestas patrias",
+      "known_at": 4
+    },
+    {
+      "name": "Matraca",
+      "facet": "El Grito y las fiestas patrias",
+      "known_at": 5
+    },
+    {
+      "name": "Fuegos artificiales",
+      "facet": "El Grito y las fiestas patrias",
+      "known_at": 3
+    },
+    {
+      "name": "Sombrero de charro",
+      "facet": "El Grito y las fiestas patrias",
+      "known_at": 3
+    },
+    {
+      "name": "Bicentenario de la Independencia",
+      "facet": "El Grito y las fiestas patrias",
+      "known_at": 9
+    },
+    {
+      "name": "Ruta de la Independencia",
+      "facet": "El Grito y las fiestas patrias",
+      "known_at": 11
+    },
+    {
+      "name": "Toma de la Alhóndiga de Granaditas",
+      "facet": "Batallas y campañas insurgentes",
+      "known_at": 6
+    },
+    {
+      "name": "Batalla del Monte de las Cruces",
+      "facet": "Batallas y campañas insurgentes",
+      "known_at": 9
+    },
+    {
+      "name": "Batalla de Puente de Calderón",
+      "facet": "Batallas y campañas insurgentes",
+      "known_at": 10
+    },
+    {
+      "name": "Batalla de Aculco",
+      "facet": "Batallas y campañas insurgentes",
+      "known_at": 12
+    },
+    {
+      "name": "Acatita de Baján",
+      "facet": "Batallas y campañas insurgentes",
+      "known_at": 12
+    },
+    {
+      "name": "Sitio de Cuautla",
+      "facet": "Batallas y campañas insurgentes",
+      "known_at": 10
+    },
+    {
+      "name": "Toma de Acapulco",
+      "facet": "Batallas y campañas insurgentes",
+      "known_at": 12
+    },
+    {
+      "name": "Campañas de Morelos en el sur",
+      "facet": "Batallas y campañas insurgentes",
+      "known_at": 11
+    },
+    {
+      "name": "Congreso de Chilpancingo",
+      "facet": "Batallas y campañas insurgentes",
+      "known_at": 10
+    },
+    {
+      "name": "Sentimientos de la Nación",
+      "facet": "Batallas y campañas insurgentes",
+      "known_at": 9
+    },
+    {
+      "name": "Constitución de Apatzingán",
+      "facet": "Batallas y campañas insurgentes",
+      "known_at": 10
+    },
+    {
+      "name": "Fuerte del Sombrero",
+      "facet": "Batallas y campañas insurgentes",
+      "known_at": 13
+    },
+    {
+      "name": "Junta de Zitácuaro",
+      "facet": "Batallas y campañas insurgentes",
+      "known_at": 13
+    },
+    {
+      "name": "Félix María Calleja",
+      "facet": "Batallas y campañas insurgentes",
+      "known_at": 10
+    },
+    {
+      "name": "Ejército realista",
+      "facet": "Batallas y campañas insurgentes",
+      "known_at": 7
+    },
+    {
+      "name": "Francisco Xavier Venegas",
+      "facet": "Batallas y campañas insurgentes",
+      "known_at": 13
+    },
+    {
+      "name": "Agustín de Iturbide",
+      "facet": "Consumación e Imperio de Iturbide",
+      "known_at": 5
+    },
+    {
+      "name": "Plan de Iguala",
+      "facet": "Consumación e Imperio de Iturbide",
+      "known_at": 7
+    },
+    {
+      "name": "Abrazo de Acatempan",
+      "facet": "Consumación e Imperio de Iturbide",
+      "known_at": 9
+    },
+    {
+      "name": "Ejército Trigarante",
+      "facet": "Consumación e Imperio de Iturbide",
+      "known_at": 7
+    },
+    {
+      "name": "Las Tres Garantías",
+      "facet": "Consumación e Imperio de Iturbide",
+      "known_at": 9
+    },
+    {
+      "name": "Bandera Trigarante",
+      "facet": "Consumación e Imperio de Iturbide",
+      "known_at": 10
+    },
+    {
+      "name": "27 de septiembre de 1821",
+      "facet": "Consumación e Imperio de Iturbide",
+      "known_at": 8
+    },
+    {
+      "name": "Juan O'Donojú",
+      "facet": "Consumación e Imperio de Iturbide",
+      "known_at": 12
+    },
+    {
+      "name": "Acta de Independencia del Imperio Mexicano",
+      "facet": "Consumación e Imperio de Iturbide",
+      "known_at": 11
+    },
+    {
+      "name": "Primer Imperio Mexicano",
+      "facet": "Consumación e Imperio de Iturbide",
+      "known_at": 8
+    },
+    {
+      "name": "Coronación de Agustín I",
+      "facet": "Consumación e Imperio de Iturbide",
+      "known_at": 11
+    },
+    {
+      "name": "Plan de Casa Mata",
+      "facet": "Consumación e Imperio de Iturbide",
+      "known_at": 12
+    },
+    {
+      "name": "Anexión de Centroamérica",
+      "facet": "Consumación e Imperio de Iturbide",
+      "known_at": 13
+    },
+    {
+      "name": "Junta Provisional Gubernativa",
+      "facet": "Consumación e Imperio de Iturbide",
+      "known_at": 14
+    },
+    {
+      "name": "Ana María Huarte",
+      "facet": "Consumación e Imperio de Iturbide",
+      "known_at": 14
+    },
+    {
+      "name": "Padilla, Tamaulipas",
+      "facet": "Consumación e Imperio de Iturbide",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio López de Santa Anna",
+      "facet": "Primera República y Santa Anna",
+      "known_at": 6
+    },
+    {
+      "name": "República federal",
+      "facet": "Primera República y Santa Anna",
+      "known_at": 9
+    },
+    {
+      "name": "Pierna de Santa Anna",
+      "facet": "Primera República y Santa Anna",
+      "known_at": 9
+    },
+    {
+      "name": "Guerra de los Pasteles",
+      "facet": "Primera República y Santa Anna",
+      "known_at": 8
+    },
+    {
+      "name": "Su Alteza Serenísima",
+      "facet": "Primera República y Santa Anna",
+      "known_at": 11
+    },
+    {
+      "name": "Gallos de pelea de Santa Anna",
+      "facet": "Primera República y Santa Anna",
+      "known_at": 11
+    },
+    {
+      "name": "Expulsión de los españoles",
+      "facet": "Primera República y Santa Anna",
+      "known_at": 12
+    },
+    {
+      "name": "Batalla de Tampico de 1829",
+      "facet": "Primera República y Santa Anna",
+      "known_at": 12
+    },
+    {
+      "name": "Isidro Barradas",
+      "facet": "Primera República y Santa Anna",
+      "known_at": 14
+    },
+    {
+      "name": "Valentín Gómez Farías",
+      "facet": "Primera República y Santa Anna",
+      "known_at": 12
+    },
+    {
+      "name": "Las Siete Leyes",
+      "facet": "Primera República y Santa Anna",
+      "known_at": 13
+    },
+    {
+      "name": "Anastasio Bustamante",
+      "facet": "Primera República y Santa Anna",
+      "known_at": 13
+    },
+    {
+      "name": "Lucas Alamán",
+      "facet": "Primera República y Santa Anna",
+      "known_at": 13
+    },
+    {
+      "name": "Plan de Ayutla",
+      "facet": "Primera República y Santa Anna",
+      "known_at": 11
+    },
+    {
+      "name": "Manga de Clavo",
+      "facet": "Primera República y Santa Anna",
+      "known_at": 14
+    },
+    {
+      "name": "El Álamo",
+      "facet": "Texas y la guerra con Estados Unidos",
+      "known_at": 7
+    },
+    {
+      "name": "Batalla de San Jacinto",
+      "facet": "Texas y la guerra con Estados Unidos",
+      "known_at": 11
+    },
+    {
+      "name": "Sam Houston",
+      "facet": "Texas y la guerra con Estados Unidos",
+      "known_at": 11
+    },
+    {
+      "name": "Davy Crockett",
+      "facet": "Texas y la guerra con Estados Unidos",
+      "known_at": 9
+    },
+    {
+      "name": "Stephen F. Austin",
+      "facet": "Texas y la guerra con Estados Unidos",
+      "known_at": 13
+    },
+    {
+      "name": "Tratados de Velasco",
+      "facet": "Texas y la guerra con Estados Unidos",
+      "known_at": 14
+    },
+    {
+      "name": "Niños Héroes",
+      "facet": "Texas y la guerra con Estados Unidos",
+      "known_at": 3
+    },
+    {
+      "name": "Juan Escutia",
+      "facet": "Texas y la guerra con Estados Unidos",
+      "known_at": 5
+    },
+    {
+      "name": "13 de septiembre de 1847",
+      "facet": "Texas y la guerra con Estados Unidos",
+      "known_at": 7
+    },
+    {
+      "name": "Batallón de San Patricio",
+      "facet": "Texas y la guerra con Estados Unidos",
+      "known_at": 10
+    },
+    {
+      "name": "Batalla de Churubusco",
+      "facet": "Texas y la guerra con Estados Unidos",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro María Anaya",
+      "facet": "Texas y la guerra con Estados Unidos",
+      "known_at": 12
+    },
+    {
+      "name": "Batalla de la Angostura",
+      "facet": "Texas y la guerra con Estados Unidos",
+      "known_at": 12
+    },
+    {
+      "name": "Pérdida de la mitad del territorio",
+      "facet": "Texas y la guerra con Estados Unidos",
+      "known_at": 8
+    },
+    {
+      "name": "Destino Manifiesto",
+      "facet": "Texas y la guerra con Estados Unidos",
+      "known_at": 11
+    },
+    {
+      "name": "Winfield Scott",
+      "facet": "Texas y la guerra con Estados Unidos",
+      "known_at": 13
+    },
+    {
+      "name": "Zachary Taylor",
+      "facet": "Texas y la guerra con Estados Unidos",
+      "known_at": 13
+    },
+    {
+      "name": "Benito Juárez",
+      "facet": "Juárez y la Reforma",
+      "known_at": 2
+    },
+    {
+      "name": "Guelatao",
+      "facet": "Juárez y la Reforma",
+      "known_at": 7
+    },
+    {
+      "name": "Margarita Maza",
+      "facet": "Juárez y la Reforma",
+      "known_at": 9
+    },
+    {
+      "name": "Leyes de Reforma",
+      "facet": "Juárez y la Reforma",
+      "known_at": 8
+    },
+    {
+      "name": "Guerra de Reforma",
+      "facet": "Juárez y la Reforma",
+      "known_at": 10
+    },
+    {
+      "name": "Liberales y conservadores",
+      "facet": "Juárez y la Reforma",
+      "known_at": 9
+    },
+    {
+      "name": "Separación de la Iglesia y el Estado",
+      "facet": "Juárez y la Reforma",
+      "known_at": 10
+    },
+    {
+      "name": "Registro Civil",
+      "facet": "Juárez y la Reforma",
+      "known_at": 10
+    },
+    {
+      "name": "Ley Juárez",
+      "facet": "Juárez y la Reforma",
+      "known_at": 12
+    },
+    {
+      "name": "Ley Lerdo",
+      "facet": "Juárez y la Reforma",
+      "known_at": 12
+    },
+    {
+      "name": "Melchor Ocampo",
+      "facet": "Juárez y la Reforma",
+      "known_at": 11
+    },
+    {
+      "name": "Epístola de Melchor Ocampo",
+      "facet": "Juárez y la Reforma",
+      "known_at": 12
+    },
+    {
+      "name": "Sebastián Lerdo de Tejada",
+      "facet": "Juárez y la Reforma",
+      "known_at": 12
+    },
+    {
+      "name": "Miguel Lerdo de Tejada",
+      "facet": "Juárez y la Reforma",
+      "known_at": 13
+    },
+    {
+      "name": "Ignacio Comonfort",
+      "facet": "Juárez y la Reforma",
+      "known_at": 12
+    },
+    {
+      "name": "Ignacio Ramírez, El Nigromante",
+      "facet": "Juárez y la Reforma",
+      "known_at": 13
+    },
+    {
+      "name": "Guillermo Prieto",
+      "facet": "Juárez y la Reforma",
+      "known_at": 13
+    },
+    {
+      "name": "Félix Zuloaga",
+      "facet": "Juárez y la Reforma",
+      "known_at": 14
+    },
+    {
+      "name": "5 de mayo",
+      "facet": "Intervención francesa y Segundo Imperio",
+      "known_at": 2
+    },
+    {
+      "name": "Ignacio Zaragoza",
+      "facet": "Intervención francesa y Segundo Imperio",
+      "known_at": 5
+    },
+    {
+      "name": "Fuertes de Loreto y Guadalupe",
+      "facet": "Intervención francesa y Segundo Imperio",
+      "known_at": 8
+    },
+    {
+      "name": "Zacapoaxtlas",
+      "facet": "Intervención francesa y Segundo Imperio",
+      "known_at": 8
+    },
+    {
+      "name": "Cinco de Mayo en Estados Unidos",
+      "facet": "Intervención francesa y Segundo Imperio",
+      "known_at": 9
+    },
+    {
+      "name": "Suspensión del pago de la deuda externa",
+      "facet": "Intervención francesa y Segundo Imperio",
+      "known_at": 11
+    },
+    {
+      "name": "Convención de Londres",
+      "facet": "Intervención francesa y Segundo Imperio",
+      "known_at": 14
+    },
+    {
+      "name": "Tratados de La Soledad",
+      "facet": "Intervención francesa y Segundo Imperio",
+      "known_at": 13
+    },
+    {
+      "name": "Napoleón III",
+      "facet": "Intervención francesa y Segundo Imperio",
+      "known_at": 10
+    },
+    {
+      "name": "Maximiliano de Habsburgo",
+      "facet": "Intervención francesa y Segundo Imperio",
+      "known_at": 7
+    },
+    {
+      "name": "Carlota de Bélgica",
+      "facet": "Intervención francesa y Segundo Imperio",
+      "known_at": 9
+    },
+    {
+      "name": "Castillo de Miramar",
+      "facet": "Intervención francesa y Segundo Imperio",
+      "known_at": 13
+    },
+    {
+      "name": "Mamá Carlota",
+      "facet": "Intervención francesa y Segundo Imperio",
+      "known_at": 13
+    },
+    {
+      "name": "Gobierno itinerante de Juárez",
+      "facet": "Intervención francesa y Segundo Imperio",
+      "known_at": 12
+    },
+    {
+      "name": "Mariano Escobedo",
+      "facet": "Intervención francesa y Segundo Imperio",
+      "known_at": 12
+    },
+    {
+      "name": "Miguel Miramón",
+      "facet": "Intervención francesa y Segundo Imperio",
+      "known_at": 13
+    },
+    {
+      "name": "Tomás Mejía",
+      "facet": "Intervención francesa y Segundo Imperio",
+      "known_at": 13
+    },
+    {
+      "name": "Porfirio Díaz",
+      "facet": "El Porfiriato",
+      "known_at": 5
+    },
+    {
+      "name": "Ferrocarril en el Porfiriato",
+      "facet": "El Porfiriato",
+      "known_at": 8
+    },
+    {
+      "name": "Orden y progreso",
+      "facet": "El Porfiriato",
+      "known_at": 11
+    },
+    {
+      "name": "Los científicos",
+      "facet": "El Porfiriato",
+      "known_at": 12
+    },
+    {
+      "name": "José Yves Limantour",
+      "facet": "El Porfiriato",
+      "known_at": 13
+    },
+    {
+      "name": "Plan de Tuxtepec",
+      "facet": "El Porfiriato",
+      "known_at": 13
+    },
+    {
+      "name": "Haciendas y peones",
+      "facet": "El Porfiriato",
+      "known_at": 9
+    },
+    {
+      "name": "Tienda de raya",
+      "facet": "El Porfiriato",
+      "known_at": 11
+    },
+    {
+      "name": "Los rurales",
+      "facet": "El Porfiriato",
+      "known_at": 12
+    },
+    {
+      "name": "Huelga de Cananea",
+      "facet": "El Porfiriato",
+      "known_at": 11
+    },
+    {
+      "name": "Huelga de Río Blanco",
+      "facet": "El Porfiriato",
+      "known_at": 12
+    },
+    {
+      "name": "Entrevista Díaz-Creelman",
+      "facet": "El Porfiriato",
+      "known_at": 13
+    },
+    {
+      "name": "Fiestas del Centenario de 1910",
+      "facet": "El Porfiriato",
+      "known_at": 11
+    },
+    {
+      "name": "Afrancesamiento",
+      "facet": "El Porfiriato",
+      "known_at": 11
+    },
+    {
+      "name": "Carmen Romero Rubio",
+      "facet": "El Porfiriato",
+      "known_at": 13
+    },
+    {
+      "name": "Barco Ypiranga",
+      "facet": "El Porfiriato",
+      "known_at": 14
+    },
+    {
+      "name": "Francisco I. Madero",
+      "facet": "El Porfiriato",
+      "known_at": 7
+    },
+    {
+      "name": "Bandera de México",
+      "facet": "Símbolos patrios y monumentos",
+      "known_at": 1
+    },
+    {
+      "name": "Escudo Nacional",
+      "facet": "Símbolos patrios y monumentos",
+      "known_at": 2
+    },
+    {
+      "name": "Francisco González Bocanegra",
+      "facet": "Símbolos patrios y monumentos",
+      "known_at": 8
+    },
+    {
+      "name": "Jaime Nunó",
+      "facet": "Símbolos patrios y monumentos",
+      "known_at": 10
+    },
+    {
+      "name": "Día de la Bandera",
+      "facet": "Símbolos patrios y monumentos",
+      "known_at": 5
+    },
+    {
+      "name": "Honores a la bandera",
+      "facet": "Símbolos patrios y monumentos",
+      "known_at": 3
+    },
+    {
+      "name": "Juramento a la Bandera",
+      "facet": "Símbolos patrios y monumentos",
+      "known_at": 4
+    },
+    {
+      "name": "El Caballito de Carlos IV",
+      "facet": "Símbolos patrios y monumentos",
+      "known_at": 10
+    },
+    {
+      "name": "Monumento a Morelos en Janitzio",
+      "facet": "Símbolos patrios y monumentos",
+      "known_at": 9
+    },
+    {
+      "name": "Diligencia",
+      "facet": "Vida cotidiana y cultura del siglo XIX",
+      "known_at": 8
+    },
+    {
+      "name": "Tranvía de mulitas",
+      "facet": "Vida cotidiana y cultura del siglo XIX",
+      "known_at": 11
+    },
+    {
+      "name": "Aguadores",
+      "facet": "Vida cotidiana y cultura del siglo XIX",
+      "known_at": 10
+    },
+    {
+      "name": "Serenos",
+      "facet": "Vida cotidiana y cultura del siglo XIX",
+      "known_at": 11
+    },
+    {
+      "name": "José Guadalupe Posada",
+      "facet": "Vida cotidiana y cultura del siglo XIX",
+      "known_at": 9
+    },
+    {
+      "name": "La Catrina",
+      "facet": "Vida cotidiana y cultura del siglo XIX",
+      "known_at": 3
+    },
+    {
+      "name": "José Joaquín Fernández de Lizardi",
+      "facet": "Vida cotidiana y cultura del siglo XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Ignacio Manuel Altamirano",
+      "facet": "Vida cotidiana y cultura del siglo XIX",
+      "known_at": 12
+    },
+    {
+      "name": "El Zarco",
+      "facet": "Vida cotidiana y cultura del siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Manuel Acuña",
+      "facet": "Vida cotidiana y cultura del siglo XIX",
+      "known_at": 12
+    },
+    {
+      "name": "José María Velasco",
+      "facet": "Vida cotidiana y cultura del siglo XIX",
+      "known_at": 11
+    },
+    {
+      "name": "Juventino Rosas",
+      "facet": "Vida cotidiana y cultura del siglo XIX",
+      "known_at": 11
+    },
+    {
+      "name": "Fanny Calderón de la Barca",
+      "facet": "Vida cotidiana y cultura del siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Avenida Juárez",
+      "facet": "Billetes, calles y nombres que recuerdan",
+      "known_at": 7
+    },
+    {
+      "name": "Calle 5 de Mayo",
+      "facet": "Billetes, calles y nombres que recuerdan",
+      "known_at": 6
+    },
+    {
+      "name": "Avenida 16 de Septiembre",
+      "facet": "Billetes, calles y nombres que recuerdan",
+      "known_at": 6
+    },
+    {
+      "name": "Aeropuerto Internacional Benito Juárez",
+      "facet": "Billetes, calles y nombres que recuerdan",
+      "known_at": 7
+    },
+    {
+      "name": "Ciudad Juárez",
+      "facet": "Billetes, calles y nombres que recuerdan",
+      "known_at": 4
+    },
+    {
+      "name": "Estado de Morelos",
+      "facet": "Billetes, calles y nombres que recuerdan",
+      "known_at": 6
+    },
+    {
+      "name": "Estado de Hidalgo",
+      "facet": "Billetes, calles y nombres que recuerdan",
+      "known_at": 6
+    },
+    {
+      "name": "Estado de Guerrero",
+      "facet": "Billetes, calles y nombres que recuerdan",
+      "known_at": 6
+    },
+    {
+      "name": "Estado de Quintana Roo",
+      "facet": "Billetes, calles y nombres que recuerdan",
+      "known_at": 8
+    },
+    {
+      "name": "Puebla de Zaragoza",
+      "facet": "Billetes, calles y nombres que recuerdan",
+      "known_at": 9
+    },
+    {
+      "name": "Coahuila de Zaragoza",
+      "facet": "Billetes, calles y nombres que recuerdan",
+      "known_at": 12
+    },
+    {
+      "name": "Michoacán de Ocampo",
+      "facet": "Billetes, calles y nombres que recuerdan",
+      "known_at": 12
+    },
+    {
+      "name": "Ciudad Lerdo",
+      "facet": "Billetes, calles y nombres que recuerdan",
+      "known_at": 13
+    }
+  ]
+}

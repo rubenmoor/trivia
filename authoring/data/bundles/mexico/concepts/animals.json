@@ -1,0 +1,1007 @@
+{
+  "subcategory": "animals",
+  "facets": [
+    "Animales endémicos de México",
+    "Especies en peligro y conservación",
+    "Mamíferos de selvas y bosques",
+    "Aves de México",
+    "Reptiles y anfibios mexicanos",
+    "Vida marina de los mares mexicanos",
+    "Animales del desierto y del norte",
+    "Insectos, arañas y migraciones",
+    "Animales en mitos y culturas prehispánicas",
+    "Animales en símbolos, escudos y billetes",
+    "Nombres de animales de origen náhuatl",
+    "Animales en dichos, fiestas y cultura popular"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Teporingo",
+      "facet": "Animales endémicos de México",
+      "known_at": 11
+    },
+    {
+      "name": "Perrito de las praderas mexicano",
+      "facet": "Animales endémicos de México",
+      "known_at": 12
+    },
+    {
+      "name": "Achoque de Pátzcuaro",
+      "facet": "Animales endémicos de México",
+      "known_at": 13
+    },
+    {
+      "name": "Pez blanco de Pátzcuaro",
+      "facet": "Animales endémicos de México",
+      "known_at": 10
+    },
+    {
+      "name": "Mapache de Cozumel",
+      "facet": "Animales endémicos de México",
+      "known_at": 12
+    },
+    {
+      "name": "Coatí de Cozumel",
+      "facet": "Animales endémicos de México",
+      "known_at": 13
+    },
+    {
+      "name": "Chivirín de Cozumel",
+      "facet": "Animales endémicos de México",
+      "known_at": 14
+    },
+    {
+      "name": "Tortuga del bolsón",
+      "facet": "Animales endémicos de México",
+      "known_at": 13
+    },
+    {
+      "name": "Tortuga de Cuatro Ciénegas",
+      "facet": "Animales endémicos de México",
+      "known_at": 13
+    },
+    {
+      "name": "Cachorrito de Cuatro Ciénegas",
+      "facet": "Animales endémicos de México",
+      "known_at": 14
+    },
+    {
+      "name": "Paloma de Socorro",
+      "facet": "Animales endémicos de México",
+      "known_at": 14
+    },
+    {
+      "name": "Murciélago pescador",
+      "facet": "Animales endémicos de México",
+      "known_at": 13
+    },
+    {
+      "name": "Cotorra serrana occidental",
+      "facet": "Animales endémicos de México",
+      "known_at": 13
+    },
+    {
+      "name": "Lobo mexicano",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 8
+    },
+    {
+      "name": "Cóndor de California",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 10
+    },
+    {
+      "name": "Berrendo",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 10
+    },
+    {
+      "name": "Bisonte americano",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 9
+    },
+    {
+      "name": "Guacamaya roja",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 7
+    },
+    {
+      "name": "Guacamaya verde",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 9
+    },
+    {
+      "name": "Águila arpía",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 10
+    },
+    {
+      "name": "Profepa",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 9
+    },
+    {
+      "name": "Semarnat",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 10
+    },
+    {
+      "name": "Conanp",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 13
+    },
+    {
+      "name": "Reserva de la Biosfera de Calakmul",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 11
+    },
+    {
+      "name": "Reserva de la Biosfera Sian Ka'an",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 10
+    },
+    {
+      "name": "Santuario El Rosario",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 9
+    },
+    {
+      "name": "Campamento tortuguero",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 8
+    },
+    {
+      "name": "Veda",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 9
+    },
+    {
+      "name": "Red de enmalle",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 12
+    },
+    {
+      "name": "NOM-059",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 14
+    },
+    {
+      "name": "Jaguar",
+      "facet": "Mamíferos de selvas y bosques",
+      "known_at": 3
+    },
+    {
+      "name": "Tapir centroamericano",
+      "facet": "Mamíferos de selvas y bosques",
+      "known_at": 7
+    },
+    {
+      "name": "Mono aullador",
+      "facet": "Mamíferos de selvas y bosques",
+      "known_at": 6
+    },
+    {
+      "name": "Mono araña",
+      "facet": "Mamíferos de selvas y bosques",
+      "known_at": 6
+    },
+    {
+      "name": "Armadillo",
+      "facet": "Mamíferos de selvas y bosques",
+      "known_at": 3
+    },
+    {
+      "name": "Cacomixtle",
+      "facet": "Mamíferos de selvas y bosques",
+      "known_at": 11
+    },
+    {
+      "name": "Coatí",
+      "facet": "Mamíferos de selvas y bosques",
+      "known_at": 7
+    },
+    {
+      "name": "Puma",
+      "facet": "Mamíferos de selvas y bosques",
+      "known_at": 4
+    },
+    {
+      "name": "Jaguarundi",
+      "facet": "Mamíferos de selvas y bosques",
+      "known_at": 11
+    },
+    {
+      "name": "Tigrillo",
+      "facet": "Mamíferos de selvas y bosques",
+      "known_at": 10
+    },
+    {
+      "name": "Pecarí de collar",
+      "facet": "Mamíferos de selvas y bosques",
+      "known_at": 9
+    },
+    {
+      "name": "Venado cola blanca",
+      "facet": "Mamíferos de selvas y bosques",
+      "known_at": 5
+    },
+    {
+      "name": "Oso hormiguero",
+      "facet": "Mamíferos de selvas y bosques",
+      "known_at": 5
+    },
+    {
+      "name": "Martucha",
+      "facet": "Mamíferos de selvas y bosques",
+      "known_at": 12
+    },
+    {
+      "name": "Tepezcuintle",
+      "facet": "Mamíferos de selvas y bosques",
+      "known_at": 11
+    },
+    {
+      "name": "Murciélago vampiro",
+      "facet": "Mamíferos de selvas y bosques",
+      "known_at": 6
+    },
+    {
+      "name": "Zorra gris",
+      "facet": "Mamíferos de selvas y bosques",
+      "known_at": 8
+    },
+    {
+      "name": "Colibrí",
+      "facet": "Aves de México",
+      "known_at": 2
+    },
+    {
+      "name": "Tucán",
+      "facet": "Aves de México",
+      "known_at": 3
+    },
+    {
+      "name": "Pavo ocelado",
+      "facet": "Aves de México",
+      "known_at": 10
+    },
+    {
+      "name": "Pájaro bobo de patas azules",
+      "facet": "Aves de México",
+      "known_at": 6
+    },
+    {
+      "name": "Flamenco del Caribe",
+      "facet": "Aves de México",
+      "known_at": 6
+    },
+    {
+      "name": "Fragata",
+      "facet": "Aves de México",
+      "known_at": 9
+    },
+    {
+      "name": "Calandria",
+      "facet": "Aves de México",
+      "known_at": 10
+    },
+    {
+      "name": "Pájaro carpintero",
+      "facet": "Aves de México",
+      "known_at": 3
+    },
+    {
+      "name": "Loro cabeza amarilla",
+      "facet": "Aves de México",
+      "known_at": 9
+    },
+    {
+      "name": "Garza blanca",
+      "facet": "Aves de México",
+      "known_at": 5
+    },
+    {
+      "name": "Golondrina",
+      "facet": "Aves de México",
+      "known_at": 4
+    },
+    {
+      "name": "Halcón peregrino",
+      "facet": "Aves de México",
+      "known_at": 7
+    },
+    {
+      "name": "Tórtola",
+      "facet": "Aves de México",
+      "known_at": 5
+    },
+    {
+      "name": "Momoto",
+      "facet": "Aves de México",
+      "known_at": 12
+    },
+    {
+      "name": "Cardenal",
+      "facet": "Aves de México",
+      "known_at": 6
+    },
+    {
+      "name": "Charrán elegante",
+      "facet": "Aves de México",
+      "known_at": 14
+    },
+    {
+      "name": "Monstruo de Gila",
+      "facet": "Reptiles y anfibios mexicanos",
+      "known_at": 8
+    },
+    {
+      "name": "Lagarto enchaquirado",
+      "facet": "Reptiles y anfibios mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Iguana verde",
+      "facet": "Reptiles y anfibios mexicanos",
+      "known_at": 4
+    },
+    {
+      "name": "Iguana negra",
+      "facet": "Reptiles y anfibios mexicanos",
+      "known_at": 9
+    },
+    {
+      "name": "Cocodrilo americano",
+      "facet": "Reptiles y anfibios mexicanos",
+      "known_at": 8
+    },
+    {
+      "name": "Víbora de cascabel",
+      "facet": "Reptiles y anfibios mexicanos",
+      "known_at": 4
+    },
+    {
+      "name": "Coralillo",
+      "facet": "Reptiles y anfibios mexicanos",
+      "known_at": 6
+    },
+    {
+      "name": "Nauyaca",
+      "facet": "Reptiles y anfibios mexicanos",
+      "known_at": 10
+    },
+    {
+      "name": "Camaleón cornudo",
+      "facet": "Reptiles y anfibios mexicanos",
+      "known_at": 9
+    },
+    {
+      "name": "Boa",
+      "facet": "Reptiles y anfibios mexicanos",
+      "known_at": 5
+    },
+    {
+      "name": "Lagartija",
+      "facet": "Reptiles y anfibios mexicanos",
+      "known_at": 2
+    },
+    {
+      "name": "Sapo gigante",
+      "facet": "Reptiles y anfibios mexicanos",
+      "known_at": 6
+    },
+    {
+      "name": "Rana de ojos rojos",
+      "facet": "Reptiles y anfibios mexicanos",
+      "known_at": 7
+    },
+    {
+      "name": "Tortuga lora",
+      "facet": "Reptiles y anfibios mexicanos",
+      "known_at": 11
+    },
+    {
+      "name": "Cuija",
+      "facet": "Reptiles y anfibios mexicanos",
+      "known_at": 11
+    },
+    {
+      "name": "Chirrionera",
+      "facet": "Reptiles y anfibios mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Lobo fino de Guadalupe",
+      "facet": "Vida marina de los mares mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Manta gigante",
+      "facet": "Vida marina de los mares mexicanos",
+      "known_at": 7
+    },
+    {
+      "name": "Delfín nariz de botella",
+      "facet": "Vida marina de los mares mexicanos",
+      "known_at": 3
+    },
+    {
+      "name": "Orca",
+      "facet": "Vida marina de los mares mexicanos",
+      "known_at": 3
+    },
+    {
+      "name": "Marlín",
+      "facet": "Vida marina de los mares mexicanos",
+      "known_at": 8
+    },
+    {
+      "name": "Caballito de mar",
+      "facet": "Vida marina de los mares mexicanos",
+      "known_at": 2
+    },
+    {
+      "name": "Coral cuerno de alce",
+      "facet": "Vida marina de los mares mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Langosta del Caribe",
+      "facet": "Vida marina de los mares mexicanos",
+      "known_at": 7
+    },
+    {
+      "name": "Pez loro",
+      "facet": "Vida marina de los mares mexicanos",
+      "known_at": 6
+    },
+    {
+      "name": "Pez león",
+      "facet": "Vida marina de los mares mexicanos",
+      "known_at": 9
+    },
+    {
+      "name": "Tortuga carey",
+      "facet": "Vida marina de los mares mexicanos",
+      "known_at": 9
+    },
+    {
+      "name": "Correcaminos",
+      "facet": "Animales del desierto y del norte",
+      "known_at": 3
+    },
+    {
+      "name": "Borrego cimarrón",
+      "facet": "Animales del desierto y del norte",
+      "known_at": 9
+    },
+    {
+      "name": "Oso negro",
+      "facet": "Animales del desierto y del norte",
+      "known_at": 4
+    },
+    {
+      "name": "Lince rojo",
+      "facet": "Animales del desierto y del norte",
+      "known_at": 8
+    },
+    {
+      "name": "Zorrita del desierto",
+      "facet": "Animales del desierto y del norte",
+      "known_at": 10
+    },
+    {
+      "name": "Liebre de cola negra",
+      "facet": "Animales del desierto y del norte",
+      "known_at": 7
+    },
+    {
+      "name": "Rata canguro",
+      "facet": "Animales del desierto y del norte",
+      "known_at": 10
+    },
+    {
+      "name": "Tortuga del desierto",
+      "facet": "Animales del desierto y del norte",
+      "known_at": 10
+    },
+    {
+      "name": "Codorniz de Moctezuma",
+      "facet": "Animales del desierto y del norte",
+      "known_at": 12
+    },
+    {
+      "name": "Murciélago magueyero",
+      "facet": "Animales del desierto y del norte",
+      "known_at": 11
+    },
+    {
+      "name": "Aguililla cola roja",
+      "facet": "Animales del desierto y del norte",
+      "known_at": 11
+    },
+    {
+      "name": "Tecolote llanero",
+      "facet": "Animales del desierto y del norte",
+      "known_at": 12
+    },
+    {
+      "name": "Ardillón",
+      "facet": "Animales del desierto y del norte",
+      "known_at": 8
+    },
+    {
+      "name": "Zorrillo",
+      "facet": "Animales del desierto y del norte",
+      "known_at": 4
+    },
+    {
+      "name": "Tejón americano",
+      "facet": "Animales del desierto y del norte",
+      "known_at": 12
+    },
+    {
+      "name": "Cuervo",
+      "facet": "Animales del desierto y del norte",
+      "known_at": 5
+    },
+    {
+      "name": "Venado bura",
+      "facet": "Animales del desierto y del norte",
+      "known_at": 10
+    },
+    {
+      "name": "Mariposa monarca",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 3
+    },
+    {
+      "name": "Escamol",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 9
+    },
+    {
+      "name": "Jumil",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 11
+    },
+    {
+      "name": "Gusano de maguey",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 7
+    },
+    {
+      "name": "Grana cochinilla",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 10
+    },
+    {
+      "name": "Abeja melipona",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 11
+    },
+    {
+      "name": "Luciérnaga",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 3
+    },
+    {
+      "name": "Tarántula",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 3
+    },
+    {
+      "name": "Viuda negra",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 6
+    },
+    {
+      "name": "Alacrán",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 3
+    },
+    {
+      "name": "Hormiga chicatana",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 11
+    },
+    {
+      "name": "Chicharra",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 5
+    },
+    {
+      "name": "Hormiga arriera",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 9
+    },
+    {
+      "name": "Ahuautle",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 13
+    },
+    {
+      "name": "Río de rapaces de Veracruz",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 13
+    },
+    {
+      "name": "Catarina",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 3
+    },
+    {
+      "name": "Chinche besucona",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 12
+    },
+    {
+      "name": "Abeja africanizada",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 10
+    },
+    {
+      "name": "Araña violinista",
+      "facet": "Insectos, arañas y migraciones",
+      "known_at": 9
+    },
+    {
+      "name": "Quetzalcóatl",
+      "facet": "Animales en mitos y culturas prehispánicas",
+      "known_at": 6
+    },
+    {
+      "name": "Quetzal",
+      "facet": "Animales en mitos y culturas prehispánicas",
+      "known_at": 6
+    },
+    {
+      "name": "Xólotl",
+      "facet": "Animales en mitos y culturas prehispánicas",
+      "known_at": 11
+    },
+    {
+      "name": "Xoloitzcuintle",
+      "facet": "Animales en mitos y culturas prehispánicas",
+      "known_at": 6
+    },
+    {
+      "name": "Nahual",
+      "facet": "Animales en mitos y culturas prehispánicas",
+      "known_at": 9
+    },
+    {
+      "name": "Guerrero jaguar",
+      "facet": "Animales en mitos y culturas prehispánicas",
+      "known_at": 10
+    },
+    {
+      "name": "Guerrero águila",
+      "facet": "Animales en mitos y culturas prehispánicas",
+      "known_at": 10
+    },
+    {
+      "name": "Tezcatlipoca",
+      "facet": "Animales en mitos y culturas prehispánicas",
+      "known_at": 12
+    },
+    {
+      "name": "Kukulkán",
+      "facet": "Animales en mitos y culturas prehispánicas",
+      "known_at": 9
+    },
+    {
+      "name": "Huitzilopochtli",
+      "facet": "Animales en mitos y culturas prehispánicas",
+      "known_at": 11
+    },
+    {
+      "name": "Cipactli",
+      "facet": "Animales en mitos y culturas prehispánicas",
+      "known_at": 14
+    },
+    {
+      "name": "Conejo en la Luna",
+      "facet": "Animales en mitos y culturas prehispánicas",
+      "known_at": 9
+    },
+    {
+      "name": "Itzpapálotl",
+      "facet": "Animales en mitos y culturas prehispánicas",
+      "known_at": 14
+    },
+    {
+      "name": "Balam",
+      "facet": "Animales en mitos y culturas prehispánicas",
+      "known_at": 12
+    },
+    {
+      "name": "Kauyumari",
+      "facet": "Animales en mitos y culturas prehispánicas",
+      "known_at": 13
+    },
+    {
+      "name": "Xunan kab",
+      "facet": "Animales en mitos y culturas prehispánicas",
+      "known_at": 14
+    },
+    {
+      "name": "Águila real",
+      "facet": "Animales en símbolos, escudos y billetes",
+      "known_at": 4
+    },
+    {
+      "name": "Escudo nacional de México",
+      "facet": "Animales en símbolos, escudos y billetes",
+      "known_at": 3
+    },
+    {
+      "name": "Billete de 20 pesos",
+      "facet": "Animales en símbolos, escudos y billetes",
+      "known_at": 9
+    },
+    {
+      "name": "Billete de 50 pesos",
+      "facet": "Animales en símbolos, escudos y billetes",
+      "known_at": 6
+    },
+    {
+      "name": "Billete de 100 pesos",
+      "facet": "Animales en símbolos, escudos y billetes",
+      "known_at": 7
+    },
+    {
+      "name": "Billete de 200 pesos",
+      "facet": "Animales en símbolos, escudos y billetes",
+      "known_at": 8
+    },
+    {
+      "name": "Billete de 500 pesos",
+      "facet": "Animales en símbolos, escudos y billetes",
+      "known_at": 8
+    },
+    {
+      "name": "Billete de 1000 pesos",
+      "facet": "Animales en símbolos, escudos y billetes",
+      "known_at": 10
+    },
+    {
+      "name": "Juanito",
+      "facet": "Animales en símbolos, escudos y billetes",
+      "known_at": 11
+    },
+    {
+      "name": "Paloma de la paz de México 68",
+      "facet": "Animales en símbolos, escudos y billetes",
+      "known_at": 13
+    },
+    {
+      "name": "Club América",
+      "facet": "Animales en símbolos, escudos y billetes",
+      "known_at": 5
+    },
+    {
+      "name": "Pumas de la UNAM",
+      "facet": "Animales en símbolos, escudos y billetes",
+      "known_at": 5
+    },
+    {
+      "name": "Tigres de la UANL",
+      "facet": "Animales en símbolos, escudos y billetes",
+      "known_at": 6
+    },
+    {
+      "name": "Tuzos del Pachuca",
+      "facet": "Animales en símbolos, escudos y billetes",
+      "known_at": 9
+    },
+    {
+      "name": "Gallos Blancos de Querétaro",
+      "facet": "Animales en símbolos, escudos y billetes",
+      "known_at": 9
+    },
+    {
+      "name": "Xolos de Tijuana",
+      "facet": "Animales en símbolos, escudos y billetes",
+      "known_at": 8
+    },
+    {
+      "name": "Escudo de la UNAM",
+      "facet": "Animales en símbolos, escudos y billetes",
+      "known_at": 10
+    },
+    {
+      "name": "Guajolote",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 5
+    },
+    {
+      "name": "Tecolote",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 5
+    },
+    {
+      "name": "Coyote",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 3
+    },
+    {
+      "name": "Tlacuache",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 4
+    },
+    {
+      "name": "Chapulín",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 5
+    },
+    {
+      "name": "Zopilote",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 4
+    },
+    {
+      "name": "Zanate",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 8
+    },
+    {
+      "name": "Cenzontle",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 7
+    },
+    {
+      "name": "Mapache",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 3
+    },
+    {
+      "name": "Ocelote",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 8
+    },
+    {
+      "name": "Escuincle",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 8
+    },
+    {
+      "name": "Tuza",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 8
+    },
+    {
+      "name": "Mayate",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 9
+    },
+    {
+      "name": "Chachalaca",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 9
+    },
+    {
+      "name": "Huilota",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 12
+    },
+    {
+      "name": "Chichicuilote",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 12
+    },
+    {
+      "name": "Acocil",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 9
+    },
+    {
+      "name": "Tlaconete",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 12
+    },
+    {
+      "name": "Ahuízotl",
+      "facet": "Nombres de animales de origen náhuatl",
+      "known_at": 11
+    },
+    {
+      "name": "Speedy González",
+      "facet": "Animales en dichos, fiestas y cultura popular",
+      "known_at": 5
+    },
+    {
+      "name": "Dante",
+      "facet": "Animales en dichos, fiestas y cultura popular",
+      "known_at": 3
+    },
+    {
+      "name": "Torito de petate",
+      "facet": "Animales en dichos, fiestas y cultura popular",
+      "known_at": 11
+    },
+    {
+      "name": "Danza de los Tecuanes",
+      "facet": "Animales en dichos, fiestas y cultura popular",
+      "known_at": 13
+    },
+    {
+      "name": "Charreada",
+      "facet": "Animales en dichos, fiestas y cultura popular",
+      "known_at": 8
+    },
+    {
+      "name": "Jaripeo",
+      "facet": "Animales en dichos, fiestas y cultura popular",
+      "known_at": 9
+    },
+    {
+      "name": "Piñata de burro",
+      "facet": "Animales en dichos, fiestas y cultura popular",
+      "known_at": 6
+    },
+    {
+      "name": "Chupacabras",
+      "facet": "Animales en dichos, fiestas y cultura popular",
+      "known_at": 6
+    },
+    {
+      "name": "Pelar gallo",
+      "facet": "Animales en dichos, fiestas y cultura popular",
+      "known_at": 9
+    },
+    {
+      "name": "Chango viejo no aprende maroma nueva",
+      "facet": "Animales en dichos, fiestas y cultura popular",
+      "known_at": 9
+    },
+    {
+      "name": "Cotorrear",
+      "facet": "Animales en dichos, fiestas y cultura popular",
+      "known_at": 6
+    }
+  ]
+}

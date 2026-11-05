@@ -1,0 +1,667 @@
+{
+  "subcategory": "drinks",
+  "facets": [
+    "Aguas frescas",
+    "Bebidas de maíz",
+    "Chocolate y cacao",
+    "Café de olla y bebidas calientes",
+    "Ponche y bebidas de temporada",
+    "Pulque, tequila y mezcal",
+    "Refrescos y marcas mexicanas",
+    "Bebidas regionales y fermentadas",
+    "Licuados y jugos de mercado",
+    "Utensilios y lugares para beber",
+    "Plantas y frutas de las bebidas",
+    "Historia y nombres de origen náhuatl"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 1,
+      "estimate": 2,
+      "record": 1,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Agua de sandía",
+      "facet": "Aguas frescas",
+      "known_at": 1
+    },
+    {
+      "name": "Agua de melón",
+      "facet": "Aguas frescas",
+      "known_at": 2
+    },
+    {
+      "name": "Agua de piña",
+      "facet": "Aguas frescas",
+      "known_at": 2
+    },
+    {
+      "name": "Agua de guayaba",
+      "facet": "Aguas frescas",
+      "known_at": 3
+    },
+    {
+      "name": "Agua de mango",
+      "facet": "Aguas frescas",
+      "known_at": 2
+    },
+    {
+      "name": "Agua de fresa",
+      "facet": "Aguas frescas",
+      "known_at": 2
+    },
+    {
+      "name": "Agua de alfalfa",
+      "facet": "Aguas frescas",
+      "known_at": 8
+    },
+    {
+      "name": "Agua de pitaya",
+      "facet": "Aguas frescas",
+      "known_at": 8
+    },
+    {
+      "name": "Agua de tuna",
+      "facet": "Aguas frescas",
+      "known_at": 6
+    },
+    {
+      "name": "Agua de chilacayote",
+      "facet": "Aguas frescas",
+      "known_at": 11
+    },
+    {
+      "name": "Agua de guanábana",
+      "facet": "Aguas frescas",
+      "known_at": 6
+    },
+    {
+      "name": "Agua de papaya",
+      "facet": "Aguas frescas",
+      "known_at": 4
+    },
+    {
+      "name": "Agua de zarzamora",
+      "facet": "Aguas frescas",
+      "known_at": 6
+    },
+    {
+      "name": "Atole de elote",
+      "facet": "Bebidas de maíz",
+      "known_at": 4
+    },
+    {
+      "name": "Tesgüino",
+      "facet": "Bebidas de maíz",
+      "known_at": 12
+    },
+    {
+      "name": "Atole agrio",
+      "facet": "Bebidas de maíz",
+      "known_at": 12
+    },
+    {
+      "name": "Atole de guayaba",
+      "facet": "Bebidas de maíz",
+      "known_at": 5
+    },
+    {
+      "name": "Atole de fresa",
+      "facet": "Bebidas de maíz",
+      "known_at": 3
+    },
+    {
+      "name": "Maicena",
+      "facet": "Bebidas de maíz",
+      "known_at": 4
+    },
+    {
+      "name": "Atole de cajeta",
+      "facet": "Bebidas de maíz",
+      "known_at": 6
+    },
+    {
+      "name": "Chocolate de metate",
+      "facet": "Chocolate y cacao",
+      "known_at": 8
+    },
+    {
+      "name": "Chocolate Mayordomo",
+      "facet": "Chocolate y cacao",
+      "known_at": 9
+    },
+    {
+      "name": "Popo",
+      "facet": "Chocolate y cacao",
+      "known_at": 13
+    },
+    {
+      "name": "Chocolate de agua",
+      "facet": "Chocolate y cacao",
+      "known_at": 7
+    },
+    {
+      "name": "Espuma de chocolate",
+      "facet": "Chocolate y cacao",
+      "known_at": 6
+    },
+    {
+      "name": "Mazorca de cacao",
+      "facet": "Chocolate y cacao",
+      "known_at": 8
+    },
+    {
+      "name": "Theobroma cacao",
+      "facet": "Chocolate y cacao",
+      "known_at": 13
+    },
+    {
+      "name": "Tabasco",
+      "facet": "Chocolate y cacao",
+      "known_at": 8
+    },
+    {
+      "name": "Cacao criollo",
+      "facet": "Chocolate y cacao",
+      "known_at": 13
+    },
+    {
+      "name": "Canela",
+      "facet": "Café de olla y bebidas calientes",
+      "known_at": 2
+    },
+    {
+      "name": "Clavo de olor",
+      "facet": "Café de olla y bebidas calientes",
+      "known_at": 7
+    },
+    {
+      "name": "Anís estrellado",
+      "facet": "Café de olla y bebidas calientes",
+      "known_at": 9
+    },
+    {
+      "name": "Té de canela",
+      "facet": "Café de olla y bebidas calientes",
+      "known_at": 4
+    },
+    {
+      "name": "Té de manzanilla",
+      "facet": "Café de olla y bebidas calientes",
+      "known_at": 3
+    },
+    {
+      "name": "Té de hierbabuena",
+      "facet": "Café de olla y bebidas calientes",
+      "known_at": 4
+    },
+    {
+      "name": "Té de hojas de naranjo",
+      "facet": "Café de olla y bebidas calientes",
+      "known_at": 8
+    },
+    {
+      "name": "Té de toronjil",
+      "facet": "Café de olla y bebidas calientes",
+      "known_at": 10
+    },
+    {
+      "name": "Café de Veracruz",
+      "facet": "Café de olla y bebidas calientes",
+      "known_at": 9
+    },
+    {
+      "name": "Café de Coatepec",
+      "facet": "Café de olla y bebidas calientes",
+      "known_at": 12
+    },
+    {
+      "name": "Café lechero",
+      "facet": "Café de olla y bebidas calientes",
+      "known_at": 10
+    },
+    {
+      "name": "Café Legal",
+      "facet": "Café de olla y bebidas calientes",
+      "known_at": 10
+    },
+    {
+      "name": "Café con piquete",
+      "facet": "Café de olla y bebidas calientes",
+      "known_at": 10
+    },
+    {
+      "name": "Ponche con piquete",
+      "facet": "Ponche y bebidas de temporada",
+      "known_at": 10
+    },
+    {
+      "name": "Rompope de Santa Clara",
+      "facet": "Ponche y bebidas de temporada",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera (bebida)",
+      "facet": "Ponche y bebidas de temporada",
+      "known_at": 12
+    },
+    {
+      "name": "Sidra",
+      "facet": "Ponche y bebidas de temporada",
+      "known_at": 8
+    },
+    {
+      "name": "Ciruela pasa",
+      "facet": "Ponche y bebidas de temporada",
+      "known_at": 7
+    },
+    {
+      "name": "Tlachiquero",
+      "facet": "Pulque, tequila y mezcal",
+      "known_at": 13
+    },
+    {
+      "name": "Pulque curado",
+      "facet": "Pulque, tequila y mezcal",
+      "known_at": 12
+    },
+    {
+      "name": "Tequila (Jalisco)",
+      "facet": "Pulque, tequila y mezcal",
+      "known_at": 8
+    },
+    {
+      "name": "Denominación de origen",
+      "facet": "Pulque, tequila y mezcal",
+      "known_at": 12
+    },
+    {
+      "name": "Tequila reposado",
+      "facet": "Pulque, tequila y mezcal",
+      "known_at": 12
+    },
+    {
+      "name": "Tequila añejo",
+      "facet": "Pulque, tequila y mezcal",
+      "known_at": 12
+    },
+    {
+      "name": "José Cuervo",
+      "facet": "Pulque, tequila y mezcal",
+      "known_at": 11
+    },
+    {
+      "name": "Sangrita",
+      "facet": "Pulque, tequila y mezcal",
+      "known_at": 12
+    },
+    {
+      "name": "Margarita",
+      "facet": "Pulque, tequila y mezcal",
+      "known_at": 11
+    },
+    {
+      "name": "Paloma",
+      "facet": "Pulque, tequila y mezcal",
+      "known_at": 12
+    },
+    {
+      "name": "Mezcal espadín",
+      "facet": "Pulque, tequila y mezcal",
+      "known_at": 14
+    },
+    {
+      "name": "Boing",
+      "facet": "Refrescos y marcas mexicanas",
+      "known_at": 2
+    },
+    {
+      "name": "Peñafiel",
+      "facet": "Refrescos y marcas mexicanas",
+      "known_at": 6
+    },
+    {
+      "name": "Topo Chico",
+      "facet": "Refrescos y marcas mexicanas",
+      "known_at": 8
+    },
+    {
+      "name": "Sangría Señorial",
+      "facet": "Refrescos y marcas mexicanas",
+      "known_at": 8
+    },
+    {
+      "name": "Manzanita Sol",
+      "facet": "Refrescos y marcas mexicanas",
+      "known_at": 5
+    },
+    {
+      "name": "Squirt",
+      "facet": "Refrescos y marcas mexicanas",
+      "known_at": 6
+    },
+    {
+      "name": "Lulú",
+      "facet": "Refrescos y marcas mexicanas",
+      "known_at": 10
+    },
+    {
+      "name": "Joya",
+      "facet": "Refrescos y marcas mexicanas",
+      "known_at": 11
+    },
+    {
+      "name": "Yoli",
+      "facet": "Refrescos y marcas mexicanas",
+      "known_at": 12
+    },
+    {
+      "name": "Chaparritas El Naranjo",
+      "facet": "Refrescos y marcas mexicanas",
+      "known_at": 7
+    },
+    {
+      "name": "Barrilitos",
+      "facet": "Refrescos y marcas mexicanas",
+      "known_at": 9
+    },
+    {
+      "name": "Electrolit",
+      "facet": "Refrescos y marcas mexicanas",
+      "known_at": 6
+    },
+    {
+      "name": "Tehuacán",
+      "facet": "Refrescos y marcas mexicanas",
+      "known_at": 10
+    },
+    {
+      "name": "Coca-Cola mexicana",
+      "facet": "Refrescos y marcas mexicanas",
+      "known_at": 9
+    },
+    {
+      "name": "Delaware Punch",
+      "facet": "Refrescos y marcas mexicanas",
+      "known_at": 11
+    },
+    {
+      "name": "Envase retornable",
+      "facet": "Refrescos y marcas mexicanas",
+      "known_at": 7
+    },
+    {
+      "name": "Bonafont",
+      "facet": "Refrescos y marcas mexicanas",
+      "known_at": 5
+    },
+    {
+      "name": "Charanda",
+      "facet": "Bebidas regionales y fermentadas",
+      "known_at": 13
+    },
+    {
+      "name": "Xtabentún",
+      "facet": "Bebidas regionales y fermentadas",
+      "known_at": 13
+    },
+    {
+      "name": "Colonche",
+      "facet": "Bebidas regionales y fermentadas",
+      "known_at": 14
+    },
+    {
+      "name": "Michelada",
+      "facet": "Bebidas regionales y fermentadas",
+      "known_at": 10
+    },
+    {
+      "name": "Torito",
+      "facet": "Bebidas regionales y fermentadas",
+      "known_at": 13
+    },
+    {
+      "name": "Pox",
+      "facet": "Bebidas regionales y fermentadas",
+      "known_at": 14
+    },
+    {
+      "name": "Comiteco",
+      "facet": "Bebidas regionales y fermentadas",
+      "known_at": 14
+    },
+    {
+      "name": "Chilate",
+      "facet": "Bebidas regionales y fermentadas",
+      "known_at": 13
+    },
+    {
+      "name": "Bate",
+      "facet": "Bebidas regionales y fermentadas",
+      "known_at": 15
+    },
+    {
+      "name": "Licor de nanche",
+      "facet": "Bebidas regionales y fermentadas",
+      "known_at": 13
+    },
+    {
+      "name": "Mosco",
+      "facet": "Bebidas regionales y fermentadas",
+      "known_at": 15
+    },
+    {
+      "name": "Licuado de plátano",
+      "facet": "Licuados y jugos de mercado",
+      "known_at": 1
+    },
+    {
+      "name": "Licuado de fresa",
+      "facet": "Licuados y jugos de mercado",
+      "known_at": 1
+    },
+    {
+      "name": "Licuado de mamey",
+      "facet": "Licuados y jugos de mercado",
+      "known_at": 6
+    },
+    {
+      "name": "Licuado de avena",
+      "facet": "Licuados y jugos de mercado",
+      "known_at": 4
+    },
+    {
+      "name": "Licuado de papaya",
+      "facet": "Licuados y jugos de mercado",
+      "known_at": 4
+    },
+    {
+      "name": "Jugo verde",
+      "facet": "Licuados y jugos de mercado",
+      "known_at": 5
+    },
+    {
+      "name": "Jugo de zanahoria",
+      "facet": "Licuados y jugos de mercado",
+      "known_at": 3
+    },
+    {
+      "name": "Jugo de toronja",
+      "facet": "Licuados y jugos de mercado",
+      "known_at": 5
+    },
+    {
+      "name": "Jugo de caña",
+      "facet": "Licuados y jugos de mercado",
+      "known_at": 7
+    },
+    {
+      "name": "Agua de coco",
+      "facet": "Licuados y jugos de mercado",
+      "known_at": 3
+    },
+    {
+      "name": "Chocomilk",
+      "facet": "Licuados y jugos de mercado",
+      "known_at": 3
+    },
+    {
+      "name": "Mangonada",
+      "facet": "Licuados y jugos de mercado",
+      "known_at": 5
+    },
+    {
+      "name": "Jarro de barro",
+      "facet": "Utensilios y lugares para beber",
+      "known_at": 5
+    },
+    {
+      "name": "Caballito",
+      "facet": "Utensilios y lugares para beber",
+      "known_at": 10
+    },
+    {
+      "name": "Bolsa con popote",
+      "facet": "Utensilios y lugares para beber",
+      "known_at": 4
+    },
+    {
+      "name": "Juguería",
+      "facet": "Utensilios y lugares para beber",
+      "known_at": 6
+    },
+    {
+      "name": "Cantina",
+      "facet": "Utensilios y lugares para beber",
+      "known_at": 9
+    },
+    {
+      "name": "La Parroquia de Veracruz",
+      "facet": "Utensilios y lugares para beber",
+      "known_at": 12
+    },
+    {
+      "name": "Café de Tacuba",
+      "facet": "Utensilios y lugares para beber",
+      "known_at": 12
+    },
+    {
+      "name": "Taza de peltre",
+      "facet": "Utensilios y lugares para beber",
+      "known_at": 8
+    },
+    {
+      "name": "Cantarito",
+      "facet": "Utensilios y lugares para beber",
+      "known_at": 11
+    },
+    {
+      "name": "Tecomate",
+      "facet": "Utensilios y lugares para beber",
+      "known_at": 13
+    },
+    {
+      "name": "Escarchado",
+      "facet": "Utensilios y lugares para beber",
+      "known_at": 9
+    },
+    {
+      "name": "Flor de jamaica",
+      "facet": "Plantas y frutas de las bebidas",
+      "known_at": 5
+    },
+    {
+      "name": "Mango Ataúlfo",
+      "facet": "Plantas y frutas de las bebidas",
+      "known_at": 7
+    },
+    {
+      "name": "Limón mexicano",
+      "facet": "Plantas y frutas de las bebidas",
+      "known_at": 3
+    },
+    {
+      "name": "Rosita de cacao",
+      "facet": "Plantas y frutas de las bebidas",
+      "known_at": 14
+    },
+    {
+      "name": "Pixtle",
+      "facet": "Plantas y frutas de las bebidas",
+      "known_at": 14
+    },
+    {
+      "name": "Arroz",
+      "facet": "Plantas y frutas de las bebidas",
+      "known_at": 2
+    },
+    {
+      "name": "Octli",
+      "facet": "Historia y nombres de origen náhuatl",
+      "known_at": 14
+    },
+    {
+      "name": "Atolli",
+      "facet": "Historia y nombres de origen náhuatl",
+      "known_at": 12
+    },
+    {
+      "name": "Cacahuatl",
+      "facet": "Historia y nombres de origen náhuatl",
+      "known_at": 12
+    },
+    {
+      "name": "Centzon Totochtin",
+      "facet": "Historia y nombres de origen náhuatl",
+      "known_at": 15
+    },
+    {
+      "name": "Galeón de Manila",
+      "facet": "Historia y nombres de origen náhuatl",
+      "known_at": 12
+    },
+    {
+      "name": "Cenobio Sauza",
+      "facet": "Historia y nombres de origen náhuatl",
+      "known_at": 14
+    }
+  ]
+}

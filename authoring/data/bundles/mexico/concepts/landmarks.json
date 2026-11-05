@@ -1,0 +1,872 @@
+{
+  "subcategory": "landmarks",
+  "facets": [
+    "Zonas arqueológicas prehispánicas",
+    "Monumentos de la Ciudad de México",
+    "Catedrales, templos y conventos",
+    "Haciendas, acueductos y obra virreinal",
+    "Ciudades coloniales y Pueblos Mágicos",
+    "Maravillas naturales emblemáticas",
+    "Plazas, mercados y calles famosas",
+    "Museos y palacios emblemáticos",
+    "Estatuas, ángeles y memoriales históricos",
+    "Estadios, puentes y arquitectura moderna",
+    "Patrimonio de la Humanidad en México",
+    "Lugares de leyendas y del cine"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 4,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Teotihuacán",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 2
+    },
+    {
+      "name": "Pirámide del Sol",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 3
+    },
+    {
+      "name": "Pirámide de la Luna",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 4
+    },
+    {
+      "name": "Chichén Itzá",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 2
+    },
+    {
+      "name": "El Castillo de Kukulcán",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 4
+    },
+    {
+      "name": "Palenque",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 5
+    },
+    {
+      "name": "Monte Albán",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 6
+    },
+    {
+      "name": "Uxmal",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 7
+    },
+    {
+      "name": "Calakmul",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 9
+    },
+    {
+      "name": "El Tajín",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 7
+    },
+    {
+      "name": "Templo Mayor",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 4
+    },
+    {
+      "name": "Gran Pirámide de Cholula",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 6
+    },
+    {
+      "name": "Xochicalco",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 10
+    },
+    {
+      "name": "Atlantes de Tula",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 6
+    },
+    {
+      "name": "Mitla",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 10
+    },
+    {
+      "name": "Cobá",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 8
+    },
+    {
+      "name": "Bonampak",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 10
+    },
+    {
+      "name": "Yaxchilán",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 11
+    },
+    {
+      "name": "Paquimé",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 11
+    },
+    {
+      "name": "Cacaxtla",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 11
+    },
+    {
+      "name": "Tzintzuntzan",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 12
+    },
+    {
+      "name": "Ek Balam",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 11
+    },
+    {
+      "name": "Edzná",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 12
+    },
+    {
+      "name": "Cabezas olmecas",
+      "facet": "Zonas arqueológicas prehispánicas",
+      "known_at": 5
+    },
+    {
+      "name": "Torre Latinoamericana",
+      "facet": "Monumentos de la Ciudad de México",
+      "known_at": 5
+    },
+    {
+      "name": "Bosque de Chapultepec",
+      "facet": "Monumentos de la Ciudad de México",
+      "known_at": 3
+    },
+    {
+      "name": "Torre Mayor",
+      "facet": "Monumentos de la Ciudad de México",
+      "known_at": 9
+    },
+    {
+      "name": "Casa de los Azulejos",
+      "facet": "Monumentos de la Ciudad de México",
+      "known_at": 9
+    },
+    {
+      "name": "Palacio Postal",
+      "facet": "Monumentos de la Ciudad de México",
+      "known_at": 10
+    },
+    {
+      "name": "Monumento a la Raza",
+      "facet": "Monumentos de la Ciudad de México",
+      "known_at": 9
+    },
+    {
+      "name": "Biblioteca Vasconcelos",
+      "facet": "Monumentos de la Ciudad de México",
+      "known_at": 11
+    },
+    {
+      "name": "Torre Reforma",
+      "facet": "Monumentos de la Ciudad de México",
+      "known_at": 11
+    },
+    {
+      "name": "San Ángel",
+      "facet": "Monumentos de la Ciudad de México",
+      "known_at": 10
+    },
+    {
+      "name": "Los Pinos",
+      "facet": "Monumentos de la Ciudad de México",
+      "known_at": 7
+    },
+    {
+      "name": "Polyforum Siqueiros",
+      "facet": "Monumentos de la Ciudad de México",
+      "known_at": 11
+    },
+    {
+      "name": "Santuario de los Remedios de Cholula",
+      "facet": "Catedrales, templos y conventos",
+      "known_at": 7
+    },
+    {
+      "name": "Catedral de Puebla",
+      "facet": "Catedrales, templos y conventos",
+      "known_at": 8
+    },
+    {
+      "name": "Templo de Santo Domingo de Oaxaca",
+      "facet": "Catedrales, templos y conventos",
+      "known_at": 8
+    },
+    {
+      "name": "Catedral de Zacatecas",
+      "facet": "Catedrales, templos y conventos",
+      "known_at": 10
+    },
+    {
+      "name": "Catedral de Morelia",
+      "facet": "Catedrales, templos y conventos",
+      "known_at": 9
+    },
+    {
+      "name": "Ex Convento de Acolman",
+      "facet": "Catedrales, templos y conventos",
+      "known_at": 12
+    },
+    {
+      "name": "Templo de San Juan Parangaricutiro",
+      "facet": "Catedrales, templos y conventos",
+      "known_at": 9
+    },
+    {
+      "name": "Basílica de Zapopan",
+      "facet": "Catedrales, templos y conventos",
+      "known_at": 9
+    },
+    {
+      "name": "Templo Expiatorio de Guadalajara",
+      "facet": "Catedrales, templos y conventos",
+      "known_at": 10
+    },
+    {
+      "name": "Convento de San Bernardino de Siena",
+      "facet": "Catedrales, templos y conventos",
+      "known_at": 12
+    },
+    {
+      "name": "Ex Convento de Tepoztlán",
+      "facet": "Catedrales, templos y conventos",
+      "known_at": 12
+    },
+    {
+      "name": "Catedral de Mérida",
+      "facet": "Catedrales, templos y conventos",
+      "known_at": 9
+    },
+    {
+      "name": "Basílica de San Juan de los Lagos",
+      "facet": "Catedrales, templos y conventos",
+      "known_at": 8
+    },
+    {
+      "name": "Santa María Tonantzintla",
+      "facet": "Catedrales, templos y conventos",
+      "known_at": 11
+    },
+    {
+      "name": "Capilla del Pocito",
+      "facet": "Catedrales, templos y conventos",
+      "known_at": 11
+    },
+    {
+      "name": "Basílica de Ocotlán",
+      "facet": "Catedrales, templos y conventos",
+      "known_at": 12
+    },
+    {
+      "name": "Acueducto del Padre Tembleque",
+      "facet": "Haciendas, acueductos y obra virreinal",
+      "known_at": 11
+    },
+    {
+      "name": "Arcos del Sitio",
+      "facet": "Haciendas, acueductos y obra virreinal",
+      "known_at": 13
+    },
+    {
+      "name": "Fuerte de San Diego",
+      "facet": "Haciendas, acueductos y obra virreinal",
+      "known_at": 9
+    },
+    {
+      "name": "Puerta de Tierra",
+      "facet": "Haciendas, acueductos y obra virreinal",
+      "known_at": 11
+    },
+    {
+      "name": "Fuerte de Loreto",
+      "facet": "Haciendas, acueductos y obra virreinal",
+      "known_at": 6
+    },
+    {
+      "name": "Haciendas henequeneras",
+      "facet": "Haciendas, acueductos y obra virreinal",
+      "known_at": 11
+    },
+    {
+      "name": "Hacienda de San Gabriel de Barrera",
+      "facet": "Haciendas, acueductos y obra virreinal",
+      "known_at": 12
+    },
+    {
+      "name": "Hacienda Panoaya",
+      "facet": "Haciendas, acueductos y obra virreinal",
+      "known_at": 13
+    },
+    {
+      "name": "Jardín Borda",
+      "facet": "Haciendas, acueductos y obra virreinal",
+      "known_at": 12
+    },
+    {
+      "name": "Casa del Alfeñique",
+      "facet": "Haciendas, acueductos y obra virreinal",
+      "known_at": 12
+    },
+    {
+      "name": "Hacienda Yaxcopoil",
+      "facet": "Haciendas, acueductos y obra virreinal",
+      "known_at": 13
+    },
+    {
+      "name": "Valladolid",
+      "facet": "Ciudades coloniales y Pueblos Mágicos",
+      "known_at": 10
+    },
+    {
+      "name": "Prismas Basálticos",
+      "facet": "Maravillas naturales emblemáticas",
+      "known_at": 10
+    },
+    {
+      "name": "Dunas de Samalayuca",
+      "facet": "Maravillas naturales emblemáticas",
+      "known_at": 12
+    },
+    {
+      "name": "Plaza de las Tres Culturas",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Paseo de la Reforma",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 5
+    },
+    {
+      "name": "Calle Madero",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Alameda Central",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Plaza Garibaldi",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 5
+    },
+    {
+      "name": "Mercado de Sonora",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Mercado de La Merced",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 7
+    },
+    {
+      "name": "Mercado de Jamaica",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Mercado Libertad",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Mercado 20 de Noviembre",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Paseo Santa Lucía",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Avenida Revolución de Tijuana",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Callejón de los Sapos",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Mercado de Coyoacán",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Avenida Insurgentes",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Mercado de San Juan",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Malecón de Veracruz",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Plaza Tapatía",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 10
+    },
+    {
+      "name": "La Ciudadela",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Tepito",
+      "facet": "Plazas, mercados y calles famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Museo Nacional de Antropología",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 4
+    },
+    {
+      "name": "Museo Soumaya",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 6
+    },
+    {
+      "name": "Museo de las Momias de Guanajuato",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 6
+    },
+    {
+      "name": "Museo Casa de León Trotsky",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Museo Anahuacalli",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Museo Jumex",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Papalote Museo del Niño",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 3
+    },
+    {
+      "name": "Museo Dolores Olmedo",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 10
+    },
+    {
+      "name": "Palacio de Iturbide",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Palacio de Minería",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Museo de Arte Popular",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 10
+    },
+    {
+      "name": "MUAC",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Gran Museo del Mundo Maya",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Museo Casa Diego Rivera",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Palacio de Gobierno de Jalisco",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Museo Nacional de Arte",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 10
+    },
+    {
+      "name": "Museo Franz Mayer",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Horno3",
+      "facet": "Museos y palacios emblemáticos",
+      "known_at": 10
+    },
+    {
+      "name": "Hemiciclo a Juárez",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 8
+    },
+    {
+      "name": "Monumento a los Niños Héroes",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 6
+    },
+    {
+      "name": "Monumento a Cuauhtémoc",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Estatua ecuestre de Carlos IV",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Cristo Rey del Cubilete",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 7
+    },
+    {
+      "name": "Monumento a Morelos de Janitzio",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 7
+    },
+    {
+      "name": "Monumento a la Madre",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Monumento a Álvaro Obregón",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Indios Verdes",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Fuente de Tláloc",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Monumento a Colón",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Diana Cazadora",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 6
+    },
+    {
+      "name": "Monumento a la Patria de Mérida",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Cabeza de Juárez",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 10
+    },
+    {
+      "name": "Monumento a la Bandera de Iguala",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Piedra del Sol",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 4
+    },
+    {
+      "name": "Monolito de Tláloc",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 10
+    },
+    {
+      "name": "Coatlicue",
+      "facet": "Estatuas, ángeles y memoriales históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Estadio Azteca",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 3
+    },
+    {
+      "name": "Estadio Olímpico Universitario",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 8
+    },
+    {
+      "name": "Estadio Akron",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 9
+    },
+    {
+      "name": "Estadio BBVA",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 8
+    },
+    {
+      "name": "Estadio Jalisco",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 9
+    },
+    {
+      "name": "Estadio Cuauhtémoc",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 9
+    },
+    {
+      "name": "Estadio Universitario de Nuevo León",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 10
+    },
+    {
+      "name": "Puente Baluarte",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 9
+    },
+    {
+      "name": "Puente Tampico",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 11
+    },
+    {
+      "name": "Puente Chiapas",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 12
+    },
+    {
+      "name": "Puente de Ojuela",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 11
+    },
+    {
+      "name": "Torres de Satélite",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 9
+    },
+    {
+      "name": "Plaza México",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 9
+    },
+    {
+      "name": "Arena México",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 6
+    },
+    {
+      "name": "Autódromo Hermanos Rodríguez",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 8
+    },
+    {
+      "name": "Foro Sol",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 7
+    },
+    {
+      "name": "Auditorio Nacional",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 6
+    },
+    {
+      "name": "Palacio de los Deportes",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 8
+    },
+    {
+      "name": "Teleférico de Zacatecas",
+      "facet": "Estadios, puentes y arquitectura moderna",
+      "known_at": 10
+    },
+    {
+      "name": "Casa-Taller Luis Barragán",
+      "facet": "Patrimonio de la Humanidad en México",
+      "known_at": 12
+    },
+    {
+      "name": "Paisaje agavero",
+      "facet": "Patrimonio de la Humanidad en México",
+      "known_at": 9
+    },
+    {
+      "name": "El Vizcaíno",
+      "facet": "Patrimonio de la Humanidad en México",
+      "known_at": 12
+    },
+    {
+      "name": "Islas y áreas protegidas del Golfo de California",
+      "facet": "Patrimonio de la Humanidad en México",
+      "known_at": 12
+    },
+    {
+      "name": "Monasterios en las faldas del Popocatépetl",
+      "facet": "Patrimonio de la Humanidad en México",
+      "known_at": 13
+    },
+    {
+      "name": "El Pinacate",
+      "facet": "Patrimonio de la Humanidad en México",
+      "known_at": 12
+    },
+    {
+      "name": "Valle de Tehuacán-Cuicatlán",
+      "facet": "Patrimonio de la Humanidad en México",
+      "known_at": 13
+    },
+    {
+      "name": "Pinturas rupestres de la Sierra de San Francisco",
+      "facet": "Patrimonio de la Humanidad en México",
+      "known_at": 12
+    },
+    {
+      "name": "Cuevas prehistóricas de Yagul",
+      "facet": "Patrimonio de la Humanidad en México",
+      "known_at": 14
+    },
+    {
+      "name": "Santa Cecilia",
+      "facet": "Lugares de leyendas y del cine",
+      "known_at": 3
+    },
+    {
+      "name": "Mixquic",
+      "facet": "Lugares de leyendas y del cine",
+      "known_at": 8
+    },
+    {
+      "name": "Janitzio",
+      "facet": "Lugares de leyendas y del cine",
+      "known_at": 7
+    },
+    {
+      "name": "Durango, tierra del cine",
+      "facet": "Lugares de leyendas y del cine",
+      "known_at": 10
+    },
+    {
+      "name": "Estudios Churubusco",
+      "facet": "Lugares de leyendas y del cine",
+      "known_at": 11
+    },
+    {
+      "name": "Mismaloya",
+      "facet": "Lugares de leyendas y del cine",
+      "known_at": 12
+    },
+    {
+      "name": "Colonia Roma",
+      "facet": "Lugares de leyendas y del cine",
+      "known_at": 9
+    },
+    {
+      "name": "Cerro de las Campanas",
+      "facet": "Lugares de leyendas y del cine",
+      "known_at": 10
+    },
+    {
+      "name": "Callejón del Aguacate",
+      "facet": "Lugares de leyendas y del cine",
+      "known_at": 12
+    },
+    {
+      "name": "Catemaco",
+      "facet": "Lugares de leyendas y del cine",
+      "known_at": 8
+    },
+    {
+      "name": "Zona del Silencio",
+      "facet": "Lugares de leyendas y del cine",
+      "known_at": 9
+    },
+    {
+      "name": "Cerro del Tepeyac",
+      "facet": "Lugares de leyendas y del cine",
+      "known_at": 6
+    },
+    {
+      "name": "Calle de Don Juan Manuel",
+      "facet": "Lugares de leyendas y del cine",
+      "known_at": 13
+    }
+  ]
+}
