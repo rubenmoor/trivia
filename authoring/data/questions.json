@@ -836212,7 +836212,7 @@
     },
     {
       "id": "q-10813",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Drei von vier ist super – außer man ist Tennisprofi und will alles.",
       "question": "Angelique Kerber gewann drei verschiedene Grand-Slam-Turniere. Welches fehlt ihr?",
@@ -836230,20 +836230,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "tennis racket ball court",
+        "query": "tennis racket and balls",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AYoung_tennis_player_-_DPLA_-_94b67fb8726019dfb9e3bced2eb256b8.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Young_tennis_player_-_DPLA_-_94b67fb8726019dfb9e3bced2eb256b8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "David E. Lucas · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATennis_Racket_and_Balls.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Tennis_Racket_and_Balls.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Vladsinger at English Wikipedia · CC BY-SA 3.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "David E. Lucas",
-        "author_url": null,
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Vladsinger at English Wikipedia",
+        "author_url": "https://en.wikipedia.org/wiki/User:Vladsinger",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "2016 wurde Kerber als erste Deutsche seit Steffi Graf die Nummer eins der Tennis-Weltrangliste.",
       "subcategory": "athletes-and-other-sports",
@@ -836272,19 +836270,52 @@
       "needs_media": false,
       "batch": "batch-33",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picked image has a PD-US-only licence, so I changed the query to get a new image that shows neither clay nor grass.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "tennis racket ball court",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AYoung_tennis_player_-_DPLA_-_94b67fb8726019dfb9e3bced2eb256b8.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Young_tennis_player_-_DPLA_-_94b67fb8726019dfb9e3bced2eb256b8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "David E. Lucas · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "David E. Lucas",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10814",
@@ -838394,7 +838425,7 @@
     },
     {
       "id": "q-10842",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Der fleißigste Briefeschreiber der Welt hat zwei lange Ohren und keine Briefmarkensammlung.",
       "question": "Ich bin ein kleiner Stoffhase. Meine Freundin Sophie hat mich verloren, und nun schicke ich ihr Briefe aus aller Welt. Wer bin ich?",
@@ -838412,19 +838443,19 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "vintage envelopes stamps",
+        "query": "airmail envelopes postcards",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALetter_signed_Sara%2C_London%2C_to_%28Ernst_Filsinger%29%2C_Moscow%2C_August_26%2C_1923_-_DPLA_-_8d222ceb30309a83445a577557d13aba_%28page_7%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Letter_signed_Sara%2C_London%2C_to_%28Ernst_Filsinger%29%2C_Moscow%2C_August_26%2C_1923_-_DPLA_-_8d222ceb30309a83445a577557d13aba_%28page_7%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Teasdale, Sara, 1884-1933 · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUSSR_1932-09-15_registered_postal_cover_Leningrad-Berlin.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/USSR_1932-09-15_registered_postal_cover_Leningrad-Berlin.jpg/3840px-USSR_1932-09-15_registered_postal_cover_Leningrad-Berlin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Ministry of Communications of the USSR · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "Teasdale, Sara, 1884-1933",
+        "author": "Ministry of Communications of the USSR",
         "author_url": null,
         "restrictions": [],
         "pd_reasons": [
-          "PD-US"
+          "PD-RU-exempt"
         ]
       },
       "fun_fact": "In den Felix-Büchern kleben echte Umschläge, aus denen man die Briefe des Hasen herausziehen kann.",
@@ -838450,23 +838481,56 @@
         "difficulty_estimate": 5,
         "notes": "Correct (Briefe von Felix). The invented wrong names are plausible. Mümmelmann is a known literary hare, but that does no harm."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-33",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picked image has a PD-US-only licence, so I changed the query to get a new image.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "vintage envelopes stamps",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ALetter_signed_Sara%2C_London%2C_to_%28Ernst_Filsinger%29%2C_Moscow%2C_August_26%2C_1923_-_DPLA_-_8d222ceb30309a83445a577557d13aba_%28page_7%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Letter_signed_Sara%2C_London%2C_to_%28Ernst_Filsinger%29%2C_Moscow%2C_August_26%2C_1923_-_DPLA_-_8d222ceb30309a83445a577557d13aba_%28page_7%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Teasdale, Sara, 1884-1933 · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Teasdale, Sara, 1884-1933",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10843",
@@ -841630,15 +841694,15 @@
     },
     {
       "id": "q-10884",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Ein Gesetzbuch, das man am besten mit einem Kölsch in der Hand liest.",
       "question": "Was ist das „Rheinische Grundgesetz“?",
-      "answer": "Humorvolle kölsche Lebensweisheiten",
+      "answer": "Sammlung kölscher Lebensweisheiten",
       "wrong_answers": [
-        "Die Landesverfassung von NRW",
+        "Landesverfassung von Nordrhein-Westfalen",
         "Verkehrsregeln für Rheinschiffe",
-        "Die Satzung des Kölner Karnevals"
+        "Satzung des Kölner Karnevals"
       ],
       "hints": [
         "Kein Gericht der Welt hat es je beschlossen.",
@@ -841688,19 +841752,40 @@
       "needs_media": false,
       "batch": "batch-33",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Overlaps q-10994: its question text says \"Dieser Spruch steht im „Kölschen Grundgesetz“\" and then asks about \"Et kütt wie et kütt\". Anyone who has seen it knows the Grundgesetz is a collection of Kölsch sayings, so this question is solved. Keep only one of them, or reword q-10994 so it doesn't name the Grundgesetz. Minor point: \"Humorvolle\" in the answer makes it stand out as the joke option.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Overlaps q-10994: its question text says \"Dieser Spruch steht im „Kölschen Grundgesetz“\" and then asks about \"Et kütt wie et kütt\". Anyone who has seen it knows the Grundgesetz is a collection of Kölsch sayings, so this question is solved. Keep only one of them, or reword q-10994 so it doesn't name the Grundgesetz. Minor point: \"Humorvolle\" in the answer makes it stand out as the joke option.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "I removed 'Humorvolle' so the answer no longer stands out and made the options more even; the overlap is best fixed by rewording q-10994 so it doesn't name the Grundgesetz.",
+        "previous": {
+          "answer": "Humorvolle kölsche Lebensweisheiten",
+          "wrong_answers": [
+            "Die Landesverfassung von NRW",
+            "Verkehrsregeln für Rheinschiffe",
+            "Die Satzung des Kölner Karnevals"
+          ]
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10885",
@@ -842524,7 +842609,7 @@
     },
     {
       "id": "q-10896",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Klirrende Taschen durchs ganze Viertel schleppen – und am Ende klimpert das Taschengeld.",
       "question": "„Ich nahm Altpapier, Flaschen und Gläser an, Pioniere brachten mir ganze Handwagen voll, und dafür gab es Pfennige.“ Wer bin ich?",
@@ -842536,7 +842621,7 @@
       ],
       "hints": [
         "Meine Stellen gab es in fast jeder Stadt und jedem Wohnviertel der DDR.",
-        "Mein Name ist eine Abkürzung.",
+        "Schulklassen wetteiferten bei Sammelaktionen, wer mir am meisten brachte.",
         "Ausgeschrieben heiße ich Sekundärrohstofferfassung."
       ],
       "media": {
@@ -842582,26 +842667,33 @@
       "needs_media": false,
       "batch": "batch-33",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Mein Name ist eine Abkürzung\") gives the answer away. Of the four options, only SERO, written in capitals, looks like an abbreviation; Intershop, Konsum and Exquisit read as ordinary words. Replace hint 2 with a vague hint that doesn't rule out options, e.g. one about the people who brought the material (school classes, Pioneer collection drives).",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Mein Name ist eine Abkürzung\") gives the answer away. Of the four options, only SERO, written in capitals, looks like an abbreviation; Intershop, Konsum and Exquisit read as ordinary words. Replace hint 2 with a vague hint that doesn't rule out options, e.g. one about the people who brought the material (school classes, Pioneer collection drives).",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1 and the description, which both separated SERO from the shop options.",
+        "reason": "I replaced hint 2, which gave the answer away because only SERO looks like an abbreviation, with a vague hint about school collection drives.",
         "previous": {
-          "description": "Recycling, bevor es cool war – und mit Taschengeld als Belohnung.",
           "hints": [
-            "Ich war kein Laden, in dem man etwas kaufte.",
+            "Meine Stellen gab es in fast jeder Stadt und jedem Wohnviertel der DDR.",
             "Mein Name ist eine Abkürzung.",
             "Ausgeschrieben heiße ich Sekundärrohstofferfassung."
           ]
@@ -843336,7 +843428,7 @@
     },
     {
       "id": "q-10906",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Ein Streik auf der Baustelle, der ganz anders endete als mit einer Lohnerhöhung.",
       "question": "Bauarbeiter an der Ost-Berliner Stalinallee streikten, bald protestierten Hunderttausende in der ganzen DDR. Was geschah dann?",
@@ -843347,7 +843439,7 @@
         "Die Berliner Mauer wurde gebaut"
       ],
       "hints": [
-        "Es geschah im Sommer 1953, wenige Monate nach Stalins Tod.",
+        "Die Bauarbeiter protestierten zuerst gegen höhere Arbeitsnormen.",
         "Die DDR-Führung blieb an der Macht, und die Proteste wurden mit Gewalt beendet.",
         "Schweres Militärgerät aus Moskaus Armee fuhr durch die Straßen."
       ],
@@ -843394,26 +843486,34 @@
       "needs_media": false,
       "batch": "batch-33",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This overlaps q-10904, which asks for the year of the same uprising (17 June 1953). Hint 1 here says \"Sommer 1953\", which is q-10904's answer, and q-10904's wording about a popular uprising and a state of emergency points towards this question's answer. Keep one of the two, or make sure they never appear in the same game.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This overlaps q-10904, which asks for the year of the same uprising (17 June 1953). Hint 1 here says \"Sommer 1953\", which is q-10904's answer, and q-10904's wording about a popular uprising and a state of emergency points towards this question's answer. Keep one of the two, or make sure they never appear in the same game.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hints 1 and 2 so they no longer point to outside help or the occupying power; hint 3 is unchanged.",
+        "reason": "I replaced hint 1 so it no longer states 1953, the answer of q-10904; the two questions should still not appear in the same game.",
         "previous": {
           "hints": [
-            "Die DDR-Führung kam allein nicht mehr gegen die Proteste an.",
-            "Hilfe kam von der Besatzungsmacht.",
+            "Es geschah im Sommer 1953, wenige Monate nach Stalins Tod.",
+            "Die DDR-Führung blieb an der Macht, und die Proteste wurden mit Gewalt beendet.",
             "Schweres Militärgerät aus Moskaus Armee fuhr durch die Straßen."
           ]
         },
@@ -844932,14 +845032,24 @@
       "batch": "batch-33",
       "review": {
         "decision": "needs_work",
-        "feedback": "Related draft q-10935 says outright that the German national team's jersey shows \"einem Adler\", which gives away this question's answer (the Wappentier is the eagle). Either reword q-10935 so it doesn't name the eagle (e.g. \"mit dem Bundeswappen und vier Sternen\"), or drop one of the two. Otherwise this question is fine, and candidate 1 works as the image.",
+        "feedback": "This overlaps q-10935 (approved, same subcategory). That question's text says the German national team plays \"mit einem Adler … auf dem Trikot\", which tells players the German symbol is an eagle and so gives this question's answer away. Separately, the question text's \"Krallen\" and \"Schnabel\" already rule out Löwe and Bär. Consider swapping those two for birds (e.g. Rabe, Geier), or dropping one of the two questions.",
         "problems": [
           "overlap"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Related draft q-10935 says outright that the German national team's jersey shows \"einem Adler\", which gives away this question's answer (the Wappentier is the eagle). Either reword q-10935 so it doesn't name the eagle (e.g. \"mit dem Bundeswappen und vier Sternen\"), or drop one of the two. Otherwise this question is fine, and candidate 1 works as the image.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
@@ -845267,8 +845377,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Germany 20 euro cent obverse",
-        "note": "Nahaufnahme der deutschen Seite einer 10-, 20- oder 50-Cent-Münze mit dem Brandenburger Tor.",
+        "query": "German 50 cent coin Brandenburg Gate",
+        "note": "Nahaufnahme der deutschen nationalen Seite einer 10-, 20- oder 50-Cent-Münze mit dem Brandenburger Tor, nicht die europäische Seite mit der Landkarte.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -845301,18 +845411,44 @@
       "batch": "batch-33",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows the German national side with the Brandenburger Tor. Candidates 1–5 all show the common European side (map of Europe with the value), and 6 is a 1-cent coin with a micro-origami boat. The essential image can't be filled, and no new search is allowed. A search like \"German 50 cent coin Brandenburg Gate\" or \"Euro coin Germany national side\" should find the right side. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows the German national side with the Brandenburger Tor. Candidates 1–5 all show the common European side (map of Europe with the value), and 6 is a 1-cent coin with a micro-origami boat. The essential image can't be filled, and no new search is allowed. A search like \"German 50 cent coin Brandenburg Gate\" or \"Euro coin Germany national side\" should find the right side. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No candidate showed the German national side, so I changed the query to the reviewer's suggestion so it finds the Brandenburger Tor side.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Germany 20 euro cent obverse",
+            "note": "Nahaufnahme der deutschen Seite einer 10-, 20- oder 50-Cent-Münze mit dem Brandenburger Tor.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10932",
@@ -848163,10 +848299,10 @@
     },
     {
       "id": "q-10970",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Ein Tier in Ritterrüstung, gezeichnet nach Hörensagen.",
-      "question": "Der Künstler hatte nie ein Nashorn gesehen, als er dieses 1515 nach einer Beschreibung als Holzschnitt schuf. Wer war es?",
+      "question": "Welcher Künstler schuf 1515 einen berühmten Nashorn-Holzschnitt, ohne je ein Nashorn gesehen zu haben?",
       "answer": "Albrecht Dürer",
       "wrong_answers": [
         "Lucas Cranach der Ältere",
@@ -848180,12 +848316,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Durer rhinoceros detail",
-        "note": "Ausschnitt aus dem Holzschnitt „Rhinocerus“ (1515): Kopf und gepanzerter Körper des Nashorns, OHNE die Inschrift oben und OHNE das Monogramm „AD“.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Indian rhinoceros",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIndian_rhinoceros_%28Rhinoceros_unicornis%29_4.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Indian_rhinoceros_%28Rhinoceros_unicornis%29_4.jpg/3840px-Indian_rhinoceros_%28Rhinoceros_unicornis%29_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Charles J. Sharp · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Charles J. Sharp",
+        "author_url": "https://www.wikidata.org/wiki/Q54800218",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Das echte Nashorn war als Geschenk für den Papst unterwegs, doch Anfang 1516 sank sein Schiff vor der italienischen Küste.",
       "subcategory": "art-architecture-and-museums",
@@ -848211,22 +848354,48 @@
         "notes": "Cropping out the 'AD' monogram and the inscription is necessary but harder to do reliably. Even cropped, the image is world-famous, so the photo itself makes it easier for many adults. Hint 1 (Nürnberg) is already strong. It shares Dürer with art-10 but asks a different fact."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-33",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate works for the essential image. Candidates 1 and 2 are Dürer's woodcut but show the 'AD' monogram and the '1515 RHINOCERVS' inscription, which give the answer away. Candidate 6 is Enea Vico's mirrored engraving copy with 'E.V.' initials, not the woodcut the question means. 3 and 4 are AI images and 5 is a bronze door in Pisa. The fix is a cropped version of 1 or 2 that leaves out the monogram and the top text. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate works for the essential image. Candidates 1 and 2 are Dürer's woodcut but show the 'AD' monogram and the '1515 RHINOCERVS' inscription, which give the answer away. Candidate 6 is Enea Vico's mirrored engraving copy with 'E.V.' initials, not the woodcut the question means. 3 and 4 are AI images and 5 is a bronze door in Pisa. The fix is a cropped version of 1 or 2 that leaves out the monogram and the top text. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Every available woodcut shows the AD monogram, so I reworded the question to work without seeing the woodcut and switched to an illustrative photo of a real Indian rhino.",
+        "previous": {
+          "question": "Der Künstler hatte nie ein Nashorn gesehen, als er dieses 1515 nach einer Beschreibung als Holzschnitt schuf. Wer war es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Durer rhinoceros detail",
+            "note": "Ausschnitt aus dem Holzschnitt „Rhinocerus“ (1515): Kopf und gepanzerter Körper des Nashorns, OHNE die Inschrift oben und OHNE das Monogramm „AD“.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10971",
@@ -848518,7 +848687,7 @@
     },
     {
       "id": "q-10975",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Ein Klassiker aus dem Werkzeugkasten, gleich neben dem verschollenen Inbusschlüssel.",
       "question": "Pattex gibt es seit Jahrzehnten, es gehört zu Henkel und liegt als Tube in vielen Werkzeugkästen. Wofür benutzt man es?",
@@ -848536,20 +848705,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "open metal toolbox tools",
+        "query": "toolbox with hand tools",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AEdward_Schettler%27s_Handmade_Toolbox_-_DPLA_-_2f51b63b235839b045153369e8026b8d_%28page_1%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Edward_Schettler%27s_Handmade_Toolbox_-_DPLA_-_2f51b63b235839b045153369e8026b8d_%28page_1%29.jpg/3840px-Edward_Schettler%27s_Handmade_Toolbox_-_DPLA_-_2f51b63b235839b045153369e8026b8d_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMinnesota_State_Capitol_Woodworkers_Toolbox_Historical_Society.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Minnesota_State_Capitol_Woodworkers_Toolbox_Historical_Society.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Minnesota Historical Society · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": null,
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Minnesota Historical Society",
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Auch der Pritt-Stift und das Waschmittel Persil gehören zu Henkel.",
       "subcategory": "brands-and-products",
@@ -848578,19 +848745,52 @@
       "needs_media": false,
       "batch": "batch-33",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The image had a PD-US-only licence, so I changed the media query to get a new picture; nothing else changed.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "open metal toolbox tools",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AEdward_Schettler%27s_Handmade_Toolbox_-_DPLA_-_2f51b63b235839b045153369e8026b8d_%28page_1%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Edward_Schettler%27s_Handmade_Toolbox_-_DPLA_-_2f51b63b235839b045153369e8026b8d_%28page_1%29.jpg/3840px-Edward_Schettler%27s_Handmade_Toolbox_-_DPLA_-_2f51b63b235839b045153369e8026b8d_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": null,
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10976",
@@ -848900,7 +849100,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Zeichen 215 StVO",
+        "query": "Zeichen 215 - Kreisverkehr, StVO 2000",
         "note": "Das runde blaue deutsche Verkehrszeichen 215 mit drei weißen Pfeilen im Kreis, ohne Zusatztext.",
         "source_url": null,
         "file_url": null,
@@ -848934,27 +849134,41 @@
       "batch": "batch-33",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates fit. All five are pictures of St. Augustine (Botticelli's fresco, a feather mosaic, two Confessiones manuscript pages, Seghers' painting), not German traffic sign Zeichen 215. A new search isn't allowed, so the essential image has to be supplied by hand, e.g. Commons \"File:Zeichen 215 - Kreisverkehr, StVO 2000.svg\" or a photo of that sign. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fit. All five are pictures of St. Augustine (Botticelli's fresco, a feather mosaic, two Confessiones manuscript pages, Seghers' painting), not German traffic sign Zeichen 215. A new search isn't allowed, so the essential image has to be supplied by hand, e.g. Commons \"File:Zeichen 215 - Kreisverkehr, StVO 2000.svg\" or a photo of that sign. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which only fits a roundabout, with a vaguer hint about the sign prescribing the direction.",
+        "reason": "No usable image was found, so I pointed the media query at the exact Commons file for Zeichen 215.",
         "previous": {
-          "hints": [
-            "Hier fährst du nicht einfach geradeaus.",
-            "In Deutschland blinkt man erst beim Rausfahren.",
-            "Man fährt rund um eine Insel herum."
-          ]
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Zeichen 215 StVO",
+            "note": "Das runde blaue deutsche Verkehrszeichen 215 mit drei weißen Pfeilen im Kreis, ohne Zusatztext.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -849181,7 +849395,7 @@
     },
     {
       "id": "q-10984",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Ein Weltmeister, der beruflich ständig im Blickpunkt von 22 Leuten steht.",
       "question": "Manuel Neuer wurde 2014 Weltmeister und gilt als einer der Besten auf seiner Position. Auf welcher Position wurde er berühmt?",
@@ -849193,7 +849407,7 @@
       ],
       "hints": [
         "Er steht meistens weit hinten.",
-        "Er trägt ein Trikot in einer anderen Farbe als seine Mitspieler.",
+        "Er ist sehr groß, fast 1,93 Meter.",
         "Sein Platz ist direkt vor dem Netz."
       ],
       "media": {
@@ -849201,14 +849415,14 @@
         "role": "decorative",
         "query": "football stadium crowd",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AStadium_of_Football_Club_FC_Barcelona_-_Camp_Nou.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Stadium_of_Football_Club_FC_Barcelona_-_Camp_Nou.jpg/3840px-Stadium_of_Football_Club_FC_Barcelona_-_Camp_Nou.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "ticketsluxury · CC0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMbombela_Stadium_crowd_leaving.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Mbombela_Stadium_crowd_leaving.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Tadpolefarm · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "author": "ticketsluxury",
-        "author_url": "https://pixabay.com/users/ticketsluxury-1455902/",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Tadpolefarm",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tadpolefarm",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -849239,26 +849453,34 @@
       "needs_media": false,
       "batch": "batch-33",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Er trägt ein Trikot in einer anderen Farbe als seine Mitspieler\") gives the answer away: only the goalkeeper wears a different-coloured shirt from his team, so it rules out all three wrong answers at once. Hint 2 needs a vaguer clue that doesn't point to only one position, for example something about his height or his gloves being part of the kit without saying why.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Er trägt ein Trikot in einer anderen Farbe als seine Mitspieler\") gives the answer away: only the goalkeeper wears a different-coloured shirt from his team, so it rules out all three wrong answers at once. Hint 2 needs a vaguer clue that doesn't point to only one position, for example something about his height or his gloves being part of the kit without saying why.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which named the goalkeeper's unique right, with the different-coloured-shirt hint.",
+        "reason": "Hint 2 about the different shirt colour gave the answer away, so I replaced it with a vaguer hint about his height.",
         "previous": {
           "hints": [
             "Er steht meistens weit hinten.",
-            "Er darf den Ball im Strafraum fangen.",
+            "Er trägt ein Trikot in einer anderen Farbe als seine Mitspieler.",
             "Sein Platz ist direkt vor dem Netz."
           ]
         },
@@ -849954,9 +850176,9 @@
     },
     {
       "id": "q-10994",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
-      "description": "Für alle, die ihren Terminkalender gern dem Schicksal überlassen.",
+      "description": "Ein Spruch aus der Stadt, in der sogar der Dom im Karneval heimlich mitschunkelt.",
       "question": "Was bedeutet der kölsche Spruch „Et kütt wie et kütt“?",
       "answer": "Es kommt, wie es kommt",
       "wrong_answers": [
@@ -849966,7 +850188,7 @@
       ],
       "hints": [
         "Der Spruch ist eine Lebenseinstellung: gelassen bleiben.",
-        "„Kütt“ ist kölsch für ein ganz alltägliches Verb der Bewegung.",
+        "Er steht im sogenannten „Kölschen Grundgesetz“.",
         "Gemeint ist: Was passiert, passiert eben."
       ],
       "media": {
@@ -850012,24 +850234,37 @@
       "needs_media": false,
       "batch": "batch-33",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: \"kommen\" is the only verb of movement among the four options (kühlen, klappen, kochen are not). The description (\"Terminkalender dem Schicksal überlassen\") also states the saying's actual meaning (fatalism), which rules out \"kühlt\" and \"kocht\" before any hint. Hint 2 needs to be vaguer, e.g. about the sound shift from Standard German. The description should joke about Cologne or the carnival without saying what the saying means.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: \"kommen\" is the only verb of movement among the four options (kühlen, klappen, kochen are not). The description (\"Terminkalender dem Schicksal überlassen\") also states the saying's actual meaning (fatalism), which rules out \"kühlt\" and \"kocht\" before any hint. Hint 2 needs to be vaguer, e.g. about the sound shift from Standard German. The description should joke about Cologne or the carnival without saying what the saying means.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the mention of the „Kölsches Grundgesetz“ so it doesn't give away a related question.",
+        "reason": "Hint 2 (verb of movement) and the description (fatalism) gave the answer away, so I replaced both with Cologne-themed lines that don't reveal the meaning.",
         "previous": {
-          "question": "Dieser Spruch steht im „Kölschen Grundgesetz“. Was bedeutet „Et kütt wie et kütt“?"
+          "description": "Für alle, die ihren Terminkalender gern dem Schicksal überlassen.",
+          "hints": [
+            "Der Spruch ist eine Lebenseinstellung: gelassen bleiben.",
+            "„Kütt“ ist kölsch für ein ganz alltägliches Verb der Bewegung.",
+            "Gemeint ist: Was passiert, passiert eben."
+          ]
         },
         "revised_on": "2026-11-05"
       }
@@ -850211,7 +850446,7 @@
         "Baden-Württemberg und Rheinland-Pfalz"
       ],
       "hints": [
-        "Die beiden Bundesländer liegen im Osten Deutschlands.",
+        "Die beiden Bundesländer grenzen direkt aneinander.",
         "Eines der beiden Länder grenzt an Tschechien.",
         "Die Landeshauptstädte heißen Dresden und Erfurt."
       ],
@@ -850254,38 +850489,41 @@
         "difficulty_estimate": 11,
         "notes": "'Ditschen' is also used in Thuringia and Saxony-Anhalt, so 'in welchem Bundesland' suggests it's unique to Saxony. Among these options it is unambiguous. A photo of dunking should be easy to find."
       },
-      "fact_checked": true,
+      "fact_checked": false,
       "needs_media": true,
       "batch": "batch-33",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 1 (\"Die beiden Bundesländer liegen im Osten Deutschlands\") gives the answer away: Sachsen und Thüringen is the only eastern pair among the options. Replace it with a vague hint that doesn't single out one option, for example one about the dialect region or something cultural.",
+        "feedback": "Fact check: uncertain. 'Ditschen' is described as East Central German (ostmitteldeutsch; Duden), and Thuringia is supported. But I found no regional map. 'Ditschen' also occurs in other regions (e.g. Saxony-Anhalt, parts of Hesse/Franconia), so 'Sachsen und Thüringen' may not be the only correct pair. Wrong answers look wrong.",
         "problems": [
-          "giveaway"
+          "fact"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"Die beiden Bundesländer liegen im Osten Deutschlands\") gives the answer away: Sachsen und Thüringen is the only eastern pair among the options. Replace it with a vague hint that doesn't single out one option, for example one about the dialect region or something cultural.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Turned the options into pairs of neighbouring states (answer Sachsen und Thüringen) because the clue also fits Thuringia, dropped Bayern and updated the question and hints.",
+        "reason": "Hint 1 picked out the only eastern pair, so I replaced it with one that fits all four options: in every pair, the two states border each other.",
         "previous": {
-          "question": "So isst man gern Keks oder Brötchen. In welchem Bundesland nennt man das „ditschen“?",
-          "answer": "Sachsen",
-          "wrong_answers": [
-            "Bayern",
-            "Schleswig-Holstein",
-            "Bremen"
-          ],
           "hints": [
-            "Das Bundesland liegt im Osten Deutschlands.",
-            "Das Bundesland grenzt an Tschechien.",
-            "Die Landeshauptstadt ist Dresden."
+            "Die beiden Bundesländer liegen im Osten Deutschlands.",
+            "Eines der beiden Länder grenzt an Tschechien.",
+            "Die Landeshauptstädte heißen Dresden und Erfurt."
           ]
         },
         "revised_on": "2026-11-05"
@@ -850727,7 +850965,7 @@
     },
     {
       "id": "q-11004",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Ein Star, der die Mauer von der falschen Seite aus überquerte – zumindest aus Sicht der meisten.",
       "question": "Der Sänger und Schauspieler Dean Reed lebte ab den 1970er-Jahren in der DDR. Was stimmt über ihn NICHT?",
@@ -850745,19 +850983,19 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "acoustic guitar western hat",
+        "query": "acoustic guitar cowboy hat",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGuitar%2C_banjo%2C_fiddle_and_bass_players_-_DPLA_-_ce0075fb51b5c743a84f0523404f7110.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Guitar%2C_banjo%2C_fiddle_and_bass_players_-_DPLA_-_ce0075fb51b5c743a84f0523404f7110.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "David E. Lucas · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADisplay_of_guitars_and_clothing_related_to_Alabama%2C_a_Grammy_Award-winning_country_music_and_southern_rock_band_that_originated_in_Fort_Payne%2C_Alabama_LCCN2010639498.tif",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Display_of_guitars_and_clothing_related_to_Alabama%2C_a_Grammy_Award-winning_country_music_and_southern_rock_band_that_originated_in_Fort_Payne%2C_Alabama_LCCN2010639498.tif/lossy-page1-3840px-thumbnail.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Carol M. Highsmith · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "David E. Lucas",
-        "author_url": null,
+        "author": "Carol M. Highsmith",
+        "author_url": "https://en.wikipedia.org/wiki/en:Carol_M._Highsmith",
         "restrictions": [],
         "pd_reasons": [
-          "PD-US"
+          "PD-Highsmith"
         ]
       },
       "fun_fact": "Dean Reed wurde in Denver geboren und war in der Sowjetunion so berühmt, dass er dort vor riesigen Stadien auftrat.",
@@ -850787,24 +851025,49 @@
       "needs_media": false,
       "batch": "batch-33",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer hints at his American origin or his Western roles.",
+        "reason": "The image had a PD-US-only licence, so I changed the media query to get a new picture.",
         "previous": {
-          "description": "Ein Cowboy, der ostwärts ritt, während alle anderen nach Westen wollten."
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "acoustic guitar western hat",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AGuitar%2C_banjo%2C_fiddle_and_bass_players_-_DPLA_-_ce0075fb51b5c743a84f0523404f7110.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Guitar%2C_banjo%2C_fiddle_and_bass_players_-_DPLA_-_ce0075fb51b5c743a84f0523404f7110.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "David E. Lucas · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "David E. Lucas",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -850967,7 +851230,7 @@
     },
     {
       "id": "q-11007",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Ein Polizist, der dein Treppenhaus besser kannte als der Hausmeister.",
       "question": "In der DDR war für jedes Wohnviertel ein bestimmter Volkspolizist zuständig, der seine Leute genau kannte. Welchen Titel trug er?",
@@ -850998,7 +851261,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Der ABV kontrollierte auch die Hausbücher, in die sich jeder Übernachtungsgast eintragen musste.",
+      "fun_fact": "Der ABV kontrollierte auch die Hausbücher, in die sich Gäste eintragen mussten, die länger als drei Tage blieben.",
       "subcategory": "gdr-history",
       "style": null,
       "concept": "Abschnittsbevollmächtigter",
@@ -851025,28 +851288,32 @@
       "needs_media": false,
       "batch": "batch-33",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact overstates the Hausbuch rule. As far as I know, DDR citizens visiting a flat only had to be entered once they stayed longer than three days; visitors from abroad or West Germany had to be entered for any stay. \"Jeder Übernachtungsgast\" isn't accurate. The fun fact should say \"Gäste, die länger als drei Tage blieben\" or something equally careful. Everything else holds up.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact overstates the Hausbuch rule. As far as I know, DDR citizens visiting a flat only had to be entered once they stayed longer than three days; visitors from abroad or West Germany had to be entered for any stay. \"Jeder Übernachtungsgast\" isn't accurate. The fun fact should say \"Gäste, die länger als drei Tage blieben\" or something equally careful. Everything else holds up.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 2 is now a vague hint about his duties, the ABV abbreviation moved to hint 3, and the old hint 3 containing „Abschnitt“ is gone.",
+        "reason": "The fun fact overstated the Hausbuch rule, so I narrowed it to guests who stayed longer than three days, as the reviewer suggested.",
         "previous": {
-          "hints": [
-            "Sein Titel war so lang, dass fast alle nur drei Buchstaben sagten.",
-            "Kurz nannte man ihn „ABV“.",
-            "Er war für einen Teil, also einen „Abschnitt“, der Stadt zuständig."
-          ]
+          "fun_fact": "Der ABV kontrollierte auch die Hausbücher, in die sich jeder Übernachtungsgast eintragen musste."
         },
         "revised_on": "2026-11-05"
       }
@@ -851143,7 +851410,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "queue ticket dispenser",
+        "query": "government office waiting room",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -851177,18 +851444,44 @@
       "batch": "batch-33",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates fits. They show ferry ticket payment devices, Japanese railway ticket machines and Japanese shrine ticket booths, not a German job centre or the waiting-number dispenser of a government office. No new search is allowed, so the slot needs a different image, e.g. \"Agentur für Arbeit building\" or \"office waiting number dispenser\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits. They show ferry ticket payment devices, Japanese railway ticket machines and Japanese shrine ticket booths, not a German job centre or the waiting-number dispenser of a government office. No new search is allowed, so the slot needs a different image, e.g. \"Agentur für Arbeit building\" or \"office waiting number dispenser\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "None of the found images fit, so I changed the media query to a government office waiting room.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "queue ticket dispenser",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11010",
@@ -852652,7 +852945,7 @@
     },
     {
       "id": "q-11029",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "Ein kleiner Mann mit Spitzbart, der seit Jahrzehnten pünktlicher ist als jeder Zug.",
       "question": "Das Sandmännchen kommt jeden Abend im Fernsehen. Was ist danach für viele Kinder dran?",
@@ -852670,11 +852963,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Sandmännchen figure statue",
+        "query": "vintage television set",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVintage_television_%28Unsplash%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Vintage_television_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Sven Scheuermeier sveninho · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Sven Scheuermeier sveninho",
+        "author_url": "https://unsplash.com/@sveninho",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "„Unser Sandmännchen“ startete 1959 im DDR-Fernsehen und läuft bis heute.",
       "subcategory": "series-and-crime",
@@ -852703,19 +853003,43 @@
       "needs_media": false,
       "batch": "batch-33",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates shows anything related to the Sandmännchen or bedtime. They are an equestrian statue, a bishop statue, a pietà, a saint with a cross, Elisabeth of Hungary and a kneeling noblewoman. No new search is allowed. The slot needs a new image, for example the Sandmännchen figure (if there is a freely licensed photo) or a decorative bedtime scene such as \"child bedroom night lamp\". The question text itself is fine. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates shows anything related to the Sandmännchen or bedtime. They are an equestrian statue, a bishop statue, a pietà, a saint with a cross, Elisabeth of Hungary and a kneeling noblewoman. No new search is allowed. The slot needs a new image, for example the Sandmännchen figure (if there is a freely licensed photo) or a decorative bedtime scene such as \"child bedroom night lamp\". The question text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "None of the found images fit, so I changed the media query to an old TV set, which matches the question and doesn't show the answer.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Sandmännchen figure statue",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11030",
@@ -853690,7 +854014,7 @@
     },
     {
       "id": "q-11043",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Ein Ingenieur, der einem Fluss das Schlängeln abgewöhnen wollte.",
       "question": "Der badische Ingenieur Johann Gottfried Tulla ließ im 19. Jahrhundert den Oberrhein begradigen. Was war eine Folge?",
@@ -853702,7 +854026,7 @@
       ],
       "hints": [
         "Viele Seitenarme und Inseln der alten Flusslandschaft verschwanden.",
-        "Den Menschen in den Dörfern am Fluss ging es danach gesundheitlich besser.",
+        "Aus feuchten Auen und Sümpfen wurde trockenes Ackerland.",
         "Mücken fanden kaum noch Brutplätze, und eine Krankheit, die man heute aus den Tropen kennt, ging zurück."
       ],
       "media": {
@@ -853748,27 +854072,35 @@
       "needs_media": false,
       "batch": "batch-33",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 („Den Menschen in den Dörfern am Fluss ging es danach gesundheitlich besser“) gives the answer away: only one of the four options is about health, so hint 2 already settles it. Hint 2 should point somewhere less direct, for example the drained wetlands or the new farmland, and leave the health angle to hint 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 („Den Menschen in den Dörfern am Fluss ging es danach gesundheitlich besser“) gives the answer away: only one of the four options is about health, so hint 2 already settles it. Hint 2 should point somewhere less direct, for example the drained wetlands or the new farmland, and leave the health angle to hint 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the hints so hint 1 avoids „Sumpf“, hint 2 is about the villagers' health and the mosquito clue moves into hint 3.",
+        "reason": "Hint 2 gave the health answer away, so I replaced it with a hint about the drained wetlands turning into farmland.",
         "previous": {
           "hints": [
-            "Viele feuchte Altarme und Sümpfe trockneten aus.",
-            "Mücken fanden danach kaum noch Brutplätze.",
-            "Es geht um eine Krankheit, die man heute eher aus den Tropen kennt."
+            "Viele Seitenarme und Inseln der alten Flusslandschaft verschwanden.",
+            "Den Menschen in den Dörfern am Fluss ging es danach gesundheitlich besser.",
+            "Mücken fanden kaum noch Brutplätze, und eine Krankheit, die man heute aus den Tropen kennt, ging zurück."
           ]
         },
         "revised_on": "2026-11-05"
@@ -855042,10 +855374,10 @@
     },
     {
       "id": "q-11061",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Der Brei ist heiß, die Geduld kurz, und keiner traut sich ran.",
-      "question": "Wer nicht zur Sache kommt, schleicht laut Redewendung „wie die … um den heißen Brei“. Welches Tier?",
+      "question": "Wer nicht zur Sache kommt, schleicht laut Redewendung wie welches Tier um den heißen Brei?",
       "answer": "Katze",
       "wrong_answers": [
         "Fuchs",
@@ -855100,28 +855432,32 @@
       "needs_media": false,
       "batch": "batch-33",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The article \"die\" in the question („wie die … um den heißen Brei“) fits only the feminine options Katze and Maus, so Fuchs and Hund are ruled out by grammar alone. Either replace the two masculine distractors with feminine animals (e.g. Ziege, Ente) or rephrase so the article doesn't show, e.g. „Wer nicht zur Sache kommt, schleicht laut Redewendung wie welches Tier um den heißen Brei?“",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The article \"die\" in the question („wie die … um den heißen Brei“) fits only the feminine options Katze and Maus, so Fuchs and Hund are ruled out by grammar alone. Either replace the two masculine distractors with feminine animals (e.g. Ziege, Ente) or rephrase so the article doesn't show, e.g. „Wer nicht zur Sache kommt, schleicht laut Redewendung wie welches Tier um den heißen Brei?“",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the „Samtpfoten“ hint, which gave the answer away, with a vaguer grooming hint.",
+        "reason": "Reworded so no article shows, since „die“ ruled out the masculine distractors.",
         "previous": {
-          "hints": [
-            "Das Tier lebt oft bei Menschen im Haus.",
-            "Es schleicht leise auf Samtpfoten.",
-            "Es schnurrt."
-          ]
+          "question": "Wer nicht zur Sache kommt, schleicht laut Redewendung „wie die … um den heißen Brei“. Welches Tier?"
         },
         "revised_on": "2026-11-05"
       }
@@ -856026,7 +856362,7 @@
     },
     {
       "id": "q-11074",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Liebe, Intrigen und Hochzeiten in einem Hotel, in dem nie jemand einfach nur Urlaub macht.",
       "question": "„Sturm der Liebe“ läuft seit 2005 fast jeden Werktag in der ARD. Wie viele Folgen gibt es inzwischen ungefähr?",
@@ -856044,21 +856380,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Bavarian hotel Alps",
+        "query": "television studio camera",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHotel_Rigi_Kulm_and_the_Alps%2C_Rigi%2C_Switzerland-LCCN2001703160.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Hotel_Rigi_Kulm_and_the_Alps%2C_Rigi%2C_Switzerland-LCCN2001703160.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Photochrom Print Collection · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AQTQ9_Sony_studio_camera_with_Canon_lense_20110815.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/QTQ9_Sony_studio_camera_with_Canon_lense_20110815.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "NJM2010 · CC BY-SA 3.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Photochrom Print Collection",
-        "author_url": null,
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "NJM2010",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:NJM2010&action=edit&redlink=1",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-1923",
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Gedreht wird „Sturm der Liebe“ in den Bavaria Studios bei München, die Außenaufnahmen des Hotels Fürstenhof entstehen an einem echten Schloss in Bayern.",
       "subcategory": "series-and-crime",
@@ -856087,19 +856420,53 @@
       "needs_media": false,
       "batch": "batch-33",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-1923, PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-1923, PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New image query, because the picked picture had a US-only public domain licence.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Bavarian hotel Alps",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AHotel_Rigi_Kulm_and_the_Alps%2C_Rigi%2C_Switzerland-LCCN2001703160.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Hotel_Rigi_Kulm_and_the_Alps%2C_Rigi%2C_Switzerland-LCCN2001703160.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Photochrom Print Collection · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Photochrom Print Collection",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-1923",
+              "PD-US-expired"
+            ]
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11075",
@@ -856271,7 +856638,7 @@
     },
     {
       "id": "q-11077",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Eine Serie, die beweist, dass man im Krankenhaus mehr lachen kann als gedacht.",
       "question": "„Club der roten Bänder“ lief ab 2015 bei VOX und zeigt Jugendliche auf einer Kinderstation. Was war ihr Vorbild?",
@@ -856289,20 +856656,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "hospital room window",
+        "query": "modern hospital bed",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHospital_Room_at_Shriners_Hospital_-_DPLA_-_39410747f69ec94aa7e3a3dcc574c5dc.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Hospital_Room_at_Shriners_Hospital_-_DPLA_-_39410747f69ec94aa7e3a3dcc574c5dc.jpg/3840px-Hospital_Room_at_Shriners_Hospital_-_DPLA_-_39410747f69ec94aa7e3a3dcc574c5dc.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Norton and Peel · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_Modern_Hospital_Bed_in_Pok_Oi_Hospital.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/A_Modern_Hospital_Bed_in_Pok_Oi_Hospital.jpg/3840px-A_Modern_Hospital_Bed_in_Pok_Oi_Hospital.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Peachyeung316 · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Norton and Peel",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Peachyeung316",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Peachyeung316",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Albert Espinosa verarbeitete in der Vorlage seine eigene Krebserkrankung, die er als Jugendlicher überstand.",
       "subcategory": "series-and-crime",
@@ -856331,28 +856696,49 @@
       "needs_media": false,
       "batch": "batch-33",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the Catalan-TV hint, which gave away Spain, with a hint about remakes such as „Red Band Society“.",
+        "reason": "New image query, because the picked picture had a US-only public domain licence.",
         "previous": {
-          "hints": [
-            "Die Vorlage beruht auf den echten Erlebnissen ihres Autors.",
-            "Das Original lief zuerst im katalanischen Fernsehen.",
-            "Der Autor stammt aus Barcelona."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "hospital room window",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AHospital_Room_at_Shriners_Hospital_-_DPLA_-_39410747f69ec94aa7e3a3dcc574c5dc.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Hospital_Room_at_Shriners_Hospital_-_DPLA_-_39410747f69ec94aa7e3a3dcc574c5dc.jpg/3840px-Hospital_Room_at_Shriners_Hospital_-_DPLA_-_39410747f69ec94aa7e3a3dcc574c5dc.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Norton and Peel · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Norton and Peel",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -857229,7 +857615,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Bruce Darnell kam als US-Soldat nach Deutschland und wurde später Model.",
+      "fun_fact": "Bruce Darnell diente als Fallschirmjäger in der US-Armee, bevor er in Deutschland als Model arbeitete.",
       "subcategory": "shows-and-presenters",
       "style": null,
       "concept": "Bruce Darnell",
@@ -857257,27 +857643,33 @@
       "batch": "batch-33",
       "review": {
         "decision": "needs_work",
-        "feedback": "The fun fact (\"kam als US-Soldat nach Deutschland\") is probably wrong: the fact check says he served as a US paratrooper and moved to Germany only after his service, where his stepfather was stationed. Change the fun fact to something safe, e.g. \"Bruce Darnell diente als Fallschirmjäger in der US-Armee, bevor er in Deutschland als Model arbeitete.\" Fact check: uncertain. The saying \"Drama, Baby!\" is right. The fun fact is shaky. English Wikipedia says he served as a US paratrooper, then moved to Germany after his service, where his stepfather was stationed. So he did not clearly come to Germany as a soldier.",
+        "feedback": "Fact check: uncertain. \"Drama, Baby!\" is correct. I could only partly verify the paratrooper claim: a vienna.at article mentions him wanting to be a US Army paratrooper and lists a paratrooper badge. I found no detailed biography.",
         "problems": [
           "fact"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact (\"kam als US-Soldat nach Deutschland\") is probably wrong: the fact check says he served as a US paratrooper and moved to Germany only after his service, where his stepfather was stationed. Change the fun fact to something safe, e.g. \"Bruce Darnell diente als Fallschirmjäger in der US-Armee, bevor er in Deutschland als Model arbeitete.\" Fact check: uncertain. The saying \"Drama, Baby!\" is right. The fun fact is shaky. English Wikipedia says he served as a US paratrooper, then moved to Germany after his service, where his stepfather was stationed. So he did not clearly come to Germany as a soldier.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the defining hint 2 with a vaguer one, moved the small-children clue to hint 3 and dropped the four-letter hint, which also fits „Lady“.",
+        "reason": "Replaced the shaky fun fact with the safe version the reviewer suggested.",
         "previous": {
-          "hints": [
-            "Das Wort ist englisch.",
-            "Man sagt es eigentlich zu ganz kleinen Kindern.",
-            "Es hat vier Buchstaben."
-          ]
+          "fun_fact": "Bruce Darnell kam als US-Soldat nach Deutschland und wurde später Model."
         },
         "revised_on": "2026-11-05"
       }
@@ -858827,8 +859219,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Zeichen 224 StVO",
-        "note": "Nahaufnahme des runden gelben Schilds mit grünem „H“ (deutsches Zeichen 224), ohne Haltestellennamen oder das Wort „Bus“.",
+        "query": "Zeichen 224 Haltestelle StVO svg",
+        "note": "Nur die Grafik des runden gelben Schilds mit grünem „H“ (Zeichen 224, StVO-SVG auf Commons), ohne Zusatzschild, Haltestellennamen, Linien oder das Wort „Bus“.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -858861,23 +859253,41 @@
       "batch": "batch-33",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate works for the essential image. Candidate 1 is the right sign (Zeichen 224), but the panel above it says „Doppelhaltestelle“ and it lists bus lines, so it gives the answer away. Candidates 2–6 show the Parthian Empire (maps, reliefs, a necklace). A new search isn't possible, so the slot needs a clean Commons file of Zeichen 224 on its own, such as the StVO SVG. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate works for the essential image. Candidate 1 is the right sign (Zeichen 224), but the panel above it says „Doppelhaltestelle“ and it lists bus lines, so it gives the answer away. Candidates 2–6 show the Parthian Empire (maps, reliefs, a necklace). A new search isn't possible, so the slot needs a clean Commons file of Zeichen 224 on its own, such as the StVO SVG. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer mentions waiting, which gave the answer away.",
+        "reason": "Pointed the essential image query at the clean StVO SVG of Zeichen 224, since the earlier candidates either gave the answer away or didn't fit.",
         "previous": {
-          "description": "Ein einziger Buchstabe, und trotzdem warten alle gespannt darunter."
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Zeichen 224 StVO",
+            "note": "Nahaufnahme des runden gelben Schilds mit grünem „H“ (deutsches Zeichen 224), ohne Haltestellennamen oder das Wort „Bus“.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -859172,10 +859582,10 @@
     },
     {
       "id": "q-11115",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Wer im Winter rutschen will, braucht keine Ausrede, nur einen Hügel und das richtige Gerät.",
-      "question": "Welches dieser Geräte für den Schneehang hat KEINE Kufen?",
+      "question": "Wie heißt die kleine, flache Plastikscheibe, auf die man sich setzt, um einen Schneehang hinunterzurutschen?",
       "answer": "Poporutscher",
       "wrong_answers": [
         "Holzschlitten",
@@ -859183,23 +859593,23 @@
         "Hörnerschlitten"
       ],
       "hints": [
-        "Kufen sind die langen, schmalen Schienen unten an einem Schlitten.",
-        "Das gesuchte Ding ist aus Plastik und ganz flach.",
-        "Man sitzt mit dem Hintern direkt auf einer kleinen Plastikscheibe."
+        "Es ist viel leichter als jeder Schlitten.",
+        "Unten hat es keine Kufen.",
+        "Der Name verrät, mit welchem Körperteil du darauf sitzt."
       ],
       "media": {
         "type": "image",
         "role": "decorative",
         "query": "snowy hill winter",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASnowy_wooded_hill_%28Unsplash%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Snowy_wooded_hill_%28Unsplash%29.jpg/3840px-Snowy_wooded_hill_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Edewaa Foster edewaaf · CC0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARichmond_Hill_Public_Library_Winter_2025.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Richmond_Hill_Public_Library_Winter_2025.jpg/3840px-Richmond_Hill_Public_Library_Winter_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "TBJ10RH · CC0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "author": "Edewaa Foster edewaaf",
-        "author_url": "https://unsplash.com/@edewaaf",
+        "author": "TBJ10RH",
+        "author_url": "https://commons.wikimedia.org/wiki/User:TBJ10RH",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -859230,32 +859640,36 @@
       "needs_media": false,
       "batch": "batch-33",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question only works among the four options: \"Which of these has NO runners?\" also fits lots of real snow gear outside the set (skis, snowboard, snow tube, a plastic bag). That breaks the rule that the clue must point to the answer in the real world. Rework it so the clue belongs only to the Poporutscher, e.g. \"What is the small, flat plastic disc you sit on to slide down a snowy hill called?\" Then change hints 2 and 3 so they don't repeat the clue.",
-        "problems": [
-          "ambiguity"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question only works among the four options: \"Which of these has NO runners?\" also fits lots of real snow gear outside the set (skis, snowboard, snow tube, a plastic bag). That breaks the rule that the clue must point to the answer in the real world. Rework it so the clue belongs only to the Poporutscher, e.g. \"What is the small, flat plastic disc you sit on to slide down a snowy hill called?\" Then change hints 2 and 3 so they don't repeat the clue.",
+          "problems": [
+            "ambiguity"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the wrong answer „Bob“, which could mean a plastic kids' bob without runners, with „Hörnerschlitten“, and removed „runde“ from hint 3 as the reviewer asked.",
+        "reason": "Rewrote it as a real-world clue (the flat plastic disc you sit on) and changed the hints so they don't repeat the clue.",
         "previous": {
-          "wrong_answers": [
-            "Holzschlitten",
-            "Rennrodel",
-            "Bob"
-          ],
+          "question": "Welches dieser Geräte für den Schneehang hat KEINE Kufen?",
           "hints": [
             "Kufen sind die langen, schmalen Schienen unten an einem Schlitten.",
             "Das gesuchte Ding ist aus Plastik und ganz flach.",
-            "Man sitzt mit dem Hintern direkt auf einer runden Plastikscheibe."
+            "Man sitzt mit dem Hintern direkt auf einer kleinen Plastikscheibe."
           ]
         },
         "revised_on": "2026-11-05"
