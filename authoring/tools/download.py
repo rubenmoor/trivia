@@ -39,7 +39,7 @@ class Throttle:
 
 
 def http_get(url, params=None, headers=None, wait=None):
-    """GET with retries on rate limits. File downloads aren't throttled; the authoring tools'
+    """GET with retries on rate limits and one on a 5xx or timeout. File downloads aren't throttled; the authoring tools'
     providers throttle their API calls themselves and pass wait=False to skip a limited one."""
     if params:
         url += "?" + urllib.parse.urlencode(params)
@@ -48,12 +48,20 @@ def http_get(url, params=None, headers=None, wait=None):
         headers["Authorization"] = f"Bearer {TOKEN}"
     wait = WAIT_ON_RATE_LIMIT if wait is None else wait
     req = urllib.request.Request(url, headers=headers)
+    retried = False
     for attempt in range(5):
         try:
             with urllib.request.urlopen(req, timeout=60) as res:
                 return res.read()
-        except urllib.error.HTTPError as e:
-            if e.code != 429:
+        except (urllib.error.HTTPError, TimeoutError) as e:
+            code = getattr(e, "code", None)
+            if code is None or code >= 500:  # a server error or timeout: one retry
+                if retried:
+                    raise
+                retried = True
+                time.sleep(2)
+                continue
+            if code != 429:
                 raise
             retry = e.headers.get("Retry-After") or ""
             seconds = (int(retry) if retry.isdigit() else 0) or 15 * (attempt + 1)  # may be an HTTP date

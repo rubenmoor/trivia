@@ -83,7 +83,7 @@ def sheet_path(d, qid, slot):
 
 def cmd_media(args):
     """Fetch media candidates for every slot of the run's merged questions, except a scan run's kept slots."""
-    errors = []
+    errors, unserved = [], 0
     slots = [(q, slot) for q in batch_questions(args.run) for slot in slots_of(q) if slot not in kept_slots(args.run, q)]
     todo = [(q, slot) for q, slot in slots if media_tool.load_candidates(q["id"], slot) is None]
     progress.resumed("media", len(slots) - len(todo), len(todo), "slots")
@@ -91,13 +91,16 @@ def cmd_media(args):
         for q, slot in todo:
             try:
                 with progress.item("media", f"{q['id']} {slot}"):
-                    data = media_tool.fetch_for(q, slot)
+                    data = media_tool.fetch_for(q, slot, tolerate=True)
+                unserved += bool(data.get("errors"))
                 progress.detail(f"  media: {q['id']} {slot}: {len(data['candidates'])} candidate(s)")
                 bar.finished()
             except Exception as e:  # noqa: BLE001 — rerun retries the rest
                 errors.append(e)
                 progress.fail(f"  FAILED media {q['id']} {slot}: {e}")
                 bar.finished(ok=False)
+    if unserved:
+        progress.say(f"  media: {unserved} slot(s) left without media (image service failed); they become needs_work")
     return errors
 
 
@@ -426,7 +429,7 @@ def cmd_research(args):
             try:
                 q["media"]["query"] = query
                 with progress.item("research", q["id"]):
-                    media_tool.fetch_for(q, "media")
+                    media_tool.fetch_for(q, "media", tolerate=True)
             except Exception as e:  # noqa: BLE001
                 errors.append(e)
                 progress.fail(f"  FAILED research {q['id']}: {e}")
@@ -450,10 +453,12 @@ RECORD_TEXT = {  # record's own feedback: Spanish for es-sourced questions, else
            "no background": "No se encontró una imagen de fondo adecuada.",
            "media pick": "La imagen elegida", "background pick": "La imagen de fondo elegida",
            "broken": " está dañada en la fuente ({}).", "licence": " tiene una licencia no adecuada ({}).",
-           "fact": "Verificación de datos"},
+           "fact": "Verificación de datos",
+           "service": "Falló el servicio de imágenes ({})."},
     "en": {"no media": "No suitable picture found for this question.", "no background": "No suitable background picture found.",
            "media pick": "The picked picture", "background pick": "The picked background picture",
-           "broken": " is broken at the source ({}).", "licence": " has an unsuitable licence ({}).", "fact": "Fact check"},
+           "broken": " is broken at the source ({}).", "licence": " has an unsuitable licence ({}).", "fact": "Fact check",
+           "service": "Image service failed ({})."},
 }
 
 
@@ -468,7 +473,7 @@ def cmd_record(args):
     tmp_of = tmp_ids(d)
     _, checks = collect(d)
     today = datetime.date.today().isoformat()
-    changes, missing, reviewed, picks = {}, [], [], {}
+    changes, missing, reviewed, picks, outage = {}, [], [], {}, {}
     snapshot = load_json(d / "recorded.json", {})
     for q in batch_questions(args.run):
         full = load_json(d / "reviews" / f"{q['id']}.json", {})
@@ -483,6 +488,8 @@ def cmd_record(args):
                 continue
             found = (media_tool.load_candidates(q["id"], slot) or {"candidates": []})["candidates"]
             n = r[key]
+            if n is None:
+                outage[q["id"], slot] = (media_tool.load_candidates(q["id"], slot) or {}).get("errors")
             picks[q["id"], slot] = media_tool.pick_fields(found[n - 1], slot) if n is not None and 1 <= n <= len(found) else None
     check_picks(picks, args.jobs)
     for q, full, r in reviewed:
@@ -496,6 +503,8 @@ def cmd_record(args):
                 decision = "needs_work"
                 kinds.add("media")
                 problems.append(say[f"no {slot}"])
+                if outage.get((q["id"], slot)):
+                    problems.append(say["service"].format("; ".join(outage[q["id"], slot])))
                 continue
             fields[slot] = picks[q["id"], slot]
             verdict, reasons = providers.licence_verdict(fields[slot])

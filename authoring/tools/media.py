@@ -66,15 +66,17 @@ def query_variants(query):
     return out
 
 
-def find_candidates(media, category=None, every=False):
+def find_candidates(media, category=None, every=False, failures=None):
     """Up to MAX_CANDIDATES for a question's media, from the providers in order (D-45): each one
     with ever shorter queries until there are ENOUGH; the next provider is only asked while there
     are fewer. `every` (a licence replacement, plans/53): every provider is asked as if it were
     the first, and the candidates alternate between them. Videos are topped up with images.
-    A rate-limited or failing provider is skipped; if that leaves nothing, its error is raised so a
-    rerun retries instead of storing an empty result. `category` is the broad category's slug."""
+    A rate-limited or failing provider is skipped; if that leaves nothing, a rate limit is raised so a
+    rerun retries instead of storing an empty result. Other failures (5xx, timeout) are added as
+    messages to `failures` when given (else raised): the slot is then stored without candidates.
+    `category` is the broad category's slug."""
     kinds = [media["type"]] + (["image"] if media["type"] == "video" else [])
-    found, seen, per_author, errors = [], set(), {}, []
+    found, seen, per_author, errors, failed = [], set(), {}, [], []
 
     def add(c):
         author = c["author"] or c["title"]
@@ -96,8 +98,10 @@ def find_candidates(media, category=None, every=False):
                     errors.append(e)
                     break
                 except OSError as e:  # HTTP error, timeout, offline: the next provider may fill in
-                    print(f"  {providers.PROVIDERS[provider].NAME} search failed: {e}", file=sys.stderr)
+                    name = providers.PROVIDERS[provider].NAME
+                    print(f"  {name} search failed: {e}", file=sys.stderr)
                     errors.append(e)
+                    failed.append(f"{name}: {e}")
                     break
                 for c in results:
                     if acceptable(c, media["role"]):
@@ -111,7 +115,10 @@ def find_candidates(media, category=None, every=False):
                 if len(found) - base >= ENOUGH:
                     break  # good results from this variant; looser ones would add noise
     if not found and errors:
-        raise errors[0]
+        limited = [e for e in errors if isinstance(e, RateLimited)]
+        if limited or failures is None:
+            raise (limited or errors)[0]
+        failures.extend(failed)
     if every:
         found = alternate(found)
     return found[:MAX_CANDIDATES]
@@ -149,11 +156,16 @@ def category_of(q):
     return c["slug"] if c else None
 
 
-def fetch_for(q, slot="media", every=False):
+def fetch_for(q, slot="media", every=False, tolerate=False):
+    """Store the slot's candidates. `tolerate` (batch steps): a provider's 5xx or timeout stores
+    none, with the messages under `errors`; `record` then makes the question needs_work."""
     spec = slot_media(q, slot)
-    found = find_candidates(spec, category_of(q), every)
+    failures = [] if tolerate else None
+    found = find_candidates(spec, category_of(q), every, failures)
     CANDIDATES.mkdir(parents=True, exist_ok=True)
     data = {"query": spec["query"], "type": spec["type"], "candidates": found}
+    if failures:
+        data["errors"] = failures
     path = candidates_path(q["id"], slot)
     atomic.write_json(path, data)  # a torn file would count as fetched
     return data
