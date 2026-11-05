@@ -1,0 +1,897 @@
+{
+  "subcategory": "sayings-and-idioms",
+  "facets": [
+    "Baseball sayings in daily talk",
+    "Football and other sports idioms",
+    "Wild West and frontier sayings",
+    "Food and kitchen idioms",
+    "Farm and animal sayings",
+    "Money and business expressions",
+    "Car, road and railroad idioms",
+    "Sayings from American history",
+    "Southern sayings and expressions",
+    "Famous lines from presidents and leaders",
+    "Sayings from movies, TV and ads",
+    "Proverbs from Franklin and folk wisdom"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 2,
+      "name_concept": 3,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 1,
+      "record": 1,
+      "origin": 5,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Cover all the bases",
+      "facet": "Baseball sayings in daily talk",
+      "known_at": 8
+    },
+    {
+      "name": "Batting a thousand",
+      "facet": "Baseball sayings in daily talk",
+      "known_at": 10
+    },
+    {
+      "name": "Pinch hitter",
+      "facet": "Baseball sayings in daily talk",
+      "known_at": 10
+    },
+    {
+      "name": "Right off the bat",
+      "facet": "Baseball sayings in daily talk",
+      "known_at": 7
+    },
+    {
+      "name": "Whole new ballgame",
+      "facet": "Baseball sayings in daily talk",
+      "known_at": 8
+    },
+    {
+      "name": "Drop the ball",
+      "facet": "Football and other sports idioms",
+      "known_at": 5
+    },
+    {
+      "name": "Run interference",
+      "facet": "Football and other sports idioms",
+      "known_at": 11
+    },
+    {
+      "name": "End run",
+      "facet": "Football and other sports idioms",
+      "known_at": 12
+    },
+    {
+      "name": "Game plan",
+      "facet": "Football and other sports idioms",
+      "known_at": 6
+    },
+    {
+      "name": "Air ball",
+      "facet": "Football and other sports idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Mulligan",
+      "facet": "Football and other sports idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Moving the goalposts",
+      "facet": "Football and other sports idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Bite the bullet",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Hold your horses",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 4
+    },
+    {
+      "name": "Get out of Dodge",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Ride shotgun",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 5
+    },
+    {
+      "name": "Shoot from the hip",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Circle the wagons",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Hightail it",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Bury the hatchet",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Head them off at the pass",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 11
+    },
+    {
+      "name": "This town ain't big enough for the both of us",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Ace in the hole",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Lock, stock and barrel",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Greenhorn",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Showdown",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Stake a claim",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Pan out",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Hit pay dirt",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Saddle up",
+      "facet": "Wild West and frontier sayings",
+      "known_at": 4
+    },
+    {
+      "name": "Big cheese",
+      "facet": "Food and kitchen idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Cut the mustard",
+      "facet": "Food and kitchen idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Top banana",
+      "facet": "Food and kitchen idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Gravy train",
+      "facet": "Food and kitchen idioms",
+      "known_at": 12
+    },
+    {
+      "name": "Cherry-pick",
+      "facet": "Food and kitchen idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Sell like hotcakes",
+      "facet": "Food and kitchen idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Greatest thing since sliced bread",
+      "facet": "Food and kitchen idioms",
+      "known_at": 6
+    },
+    {
+      "name": "The whole enchilada",
+      "facet": "Food and kitchen idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Egghead",
+      "facet": "Food and kitchen idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Nutty as a fruitcake",
+      "facet": "Food and kitchen idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Cash cow",
+      "facet": "Farm and animal sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Till the cows come home",
+      "facet": "Farm and animal sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Barking up the wrong tree",
+      "facet": "Farm and animal sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Happy as a clam",
+      "facet": "Farm and animal sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Don't count your chickens before they hatch",
+      "facet": "Farm and animal sayings",
+      "known_at": 5
+    },
+    {
+      "name": "Wild goose chase",
+      "facet": "Farm and animal sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Lipstick on a pig",
+      "facet": "Farm and animal sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Ants in your pants",
+      "facet": "Farm and animal sayings",
+      "known_at": 2
+    },
+    {
+      "name": "Busy as a beaver",
+      "facet": "Farm and animal sayings",
+      "known_at": 3
+    },
+    {
+      "name": "Eager beaver",
+      "facet": "Farm and animal sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Play possum",
+      "facet": "Farm and animal sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Get your goat",
+      "facet": "Farm and animal sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Go whole hog",
+      "facet": "Farm and animal sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Pecking order",
+      "facet": "Farm and animal sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Running around like a chicken with its head cut off",
+      "facet": "Farm and animal sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Straight from the horse's mouth",
+      "facet": "Farm and animal sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Bet the farm",
+      "facet": "Farm and animal sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Bee's knees",
+      "facet": "Farm and animal sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Snug as a bug in a rug",
+      "facet": "Farm and animal sayings",
+      "known_at": 3
+    },
+    {
+      "name": "Hay is for horses",
+      "facet": "Farm and animal sayings",
+      "known_at": 5
+    },
+    {
+      "name": "Bang for your buck",
+      "facet": "Money and business expressions",
+      "known_at": 9
+    },
+    {
+      "name": "Make a quick buck",
+      "facet": "Money and business expressions",
+      "known_at": 8
+    },
+    {
+      "name": "Nickel and dime",
+      "facet": "Money and business expressions",
+      "known_at": 10
+    },
+    {
+      "name": "Two cents' worth",
+      "facet": "Money and business expressions",
+      "known_at": 7
+    },
+    {
+      "name": "Penny pincher",
+      "facet": "Money and business expressions",
+      "known_at": 7
+    },
+    {
+      "name": "Not worth a red cent",
+      "facet": "Money and business expressions",
+      "known_at": 11
+    },
+    {
+      "name": "Phony as a three-dollar bill",
+      "facet": "Money and business expressions",
+      "known_at": 10
+    },
+    {
+      "name": "Bottom line",
+      "facet": "Money and business expressions",
+      "known_at": 10
+    },
+    {
+      "name": "Break the bank",
+      "facet": "Money and business expressions",
+      "known_at": 7
+    },
+    {
+      "name": "Cost an arm and a leg",
+      "facet": "Money and business expressions",
+      "known_at": 5
+    },
+    {
+      "name": "Money doesn't grow on trees",
+      "facet": "Money and business expressions",
+      "known_at": 3
+    },
+    {
+      "name": "Bean counter",
+      "facet": "Money and business expressions",
+      "known_at": 11
+    },
+    {
+      "name": "Bull market",
+      "facet": "Money and business expressions",
+      "known_at": 12
+    },
+    {
+      "name": "Main Street",
+      "facet": "Money and business expressions",
+      "known_at": 11
+    },
+    {
+      "name": "Mom-and-pop store",
+      "facet": "Money and business expressions",
+      "known_at": 9
+    },
+    {
+      "name": "Dime a dozen",
+      "facet": "Money and business expressions",
+      "known_at": 8
+    },
+    {
+      "name": "Stop on a dime",
+      "facet": "Money and business expressions",
+      "known_at": 10
+    },
+    {
+      "name": "Rainy day fund",
+      "facet": "Money and business expressions",
+      "known_at": 8
+    },
+    {
+      "name": "Back-seat driver",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 5
+    },
+    {
+      "name": "Hit the road",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 4
+    },
+    {
+      "name": "Pedal to the metal",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Kick the tires",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Spinning your wheels",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 9
+    },
+    {
+      "name": "In the driver's seat",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Highway robbery",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Get on board",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 5
+    },
+    {
+      "name": "Go off the rails",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 8
+    },
+    {
+      "name": "End of the line",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Wrong side of the tracks",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Whistle-stop tour",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 12
+    },
+    {
+      "name": "Full steam ahead",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 6
+    },
+    {
+      "name": "Fast lane",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Middle of the road",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Gas guzzler",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Lemon",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Road hog",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Running on fumes",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Sidetracked",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Tailgate",
+      "facet": "Car, road and railroad idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Remember the Alamo",
+      "facet": "Sayings from American history",
+      "known_at": 9
+    },
+    {
+      "name": "Remember Pearl Harbor",
+      "facet": "Sayings from American history",
+      "known_at": 10
+    },
+    {
+      "name": "Go West, young man",
+      "facet": "Sayings from American history",
+      "known_at": 10
+    },
+    {
+      "name": "Lame duck",
+      "facet": "Sayings from American history",
+      "known_at": 11
+    },
+    {
+      "name": "Gerrymander",
+      "facet": "Sayings from American history",
+      "known_at": 12
+    },
+    {
+      "name": "We Can Do It!",
+      "facet": "Sayings from American history",
+      "known_at": 8
+    },
+    {
+      "name": "One small step for man",
+      "facet": "Sayings from American history",
+      "known_at": 5
+    },
+    {
+      "name": "Tippecanoe and Tyler Too",
+      "facet": "Sayings from American history",
+      "known_at": 13
+    },
+    {
+      "name": "All y'all",
+      "facet": "Southern sayings and expressions",
+      "known_at": 7
+    },
+    {
+      "name": "Might could",
+      "facet": "Southern sayings and expressions",
+      "known_at": 11
+    },
+    {
+      "name": "Over yonder",
+      "facet": "Southern sayings and expressions",
+      "known_at": 7
+    },
+    {
+      "name": "Hissy fit",
+      "facet": "Southern sayings and expressions",
+      "known_at": 8
+    },
+    {
+      "name": "Madder than a wet hen",
+      "facet": "Southern sayings and expressions",
+      "known_at": 10
+    },
+    {
+      "name": "Butter my butt and call me a biscuit",
+      "facet": "Southern sayings and expressions",
+      "known_at": 10
+    },
+    {
+      "name": "Cattywampus",
+      "facet": "Southern sayings and expressions",
+      "known_at": 12
+    },
+    {
+      "name": "Kitty-corner",
+      "facet": "Southern sayings and expressions",
+      "known_at": 10
+    },
+    {
+      "name": "Coke",
+      "facet": "Southern sayings and expressions",
+      "known_at": 9
+    },
+    {
+      "name": "Reckon",
+      "facet": "Southern sayings and expressions",
+      "known_at": 6
+    },
+    {
+      "name": "Gussied up",
+      "facet": "Southern sayings and expressions",
+      "known_at": 11
+    },
+    {
+      "name": "Knee-high to a grasshopper",
+      "facet": "Southern sayings and expressions",
+      "known_at": 7
+    },
+    {
+      "name": "Heavens to Betsy",
+      "facet": "Southern sayings and expressions",
+      "known_at": 11
+    },
+    {
+      "name": "Lord willing and the creek don't rise",
+      "facet": "Southern sayings and expressions",
+      "known_at": 11
+    },
+    {
+      "name": "Full as a tick",
+      "facet": "Southern sayings and expressions",
+      "known_at": 11
+    },
+    {
+      "name": "Raised in a barn",
+      "facet": "Southern sayings and expressions",
+      "known_at": 6
+    },
+    {
+      "name": "Down the road a piece",
+      "facet": "Southern sayings and expressions",
+      "known_at": 10
+    },
+    {
+      "name": "Mash the button",
+      "facet": "Southern sayings and expressions",
+      "known_at": 11
+    },
+    {
+      "name": "Ask not what your country can do for you",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 9
+    },
+    {
+      "name": "Four score and seven years ago",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 8
+    },
+    {
+      "name": "The only thing we have to fear is fear itself",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 10
+    },
+    {
+      "name": "Speak softly and carry a big stick",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 10
+    },
+    {
+      "name": "Read my lips: no new taxes",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 12
+    },
+    {
+      "name": "I cannot tell a lie",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 5
+    },
+    {
+      "name": "A house divided against itself cannot stand",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 11
+    },
+    {
+      "name": "Yes we can",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 8
+    },
+    {
+      "name": "I am not a crook",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 11
+    },
+    {
+      "name": "A date which will live in infamy",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 10
+    },
+    {
+      "name": "Government of the people, by the people, for the people",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 9
+    },
+    {
+      "name": "Ich bin ein Berliner",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 12
+    },
+    {
+      "name": "Military-industrial complex",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 13
+    },
+    {
+      "name": "We hold these truths to be self-evident",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 9
+    },
+    {
+      "name": "With malice toward none",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 13
+    },
+    {
+      "name": "Bully pulpit",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 13
+    },
+    {
+      "name": "When they go low, we go high",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 9
+    },
+    {
+      "name": "I shall return",
+      "facet": "Famous lines from presidents and leaders",
+      "known_at": 12
+    },
+    {
+      "name": "Just do it",
+      "facet": "Sayings from movies, TV and ads",
+      "known_at": 4
+    },
+    {
+      "name": "Snap! Crackle! Pop!",
+      "facet": "Sayings from movies, TV and ads",
+      "known_at": 6
+    },
+    {
+      "name": "They're Gr-r-reat!",
+      "facet": "Sayings from movies, TV and ads",
+      "known_at": 5
+    },
+    {
+      "name": "Can you hear me now?",
+      "facet": "Sayings from movies, TV and ads",
+      "known_at": 11
+    },
+    {
+      "name": "Plop, plop, fizz, fizz",
+      "facet": "Sayings from movies, TV and ads",
+      "known_at": 12
+    },
+    {
+      "name": "Like a good neighbor, State Farm is there",
+      "facet": "Sayings from movies, TV and ads",
+      "known_at": 8
+    },
+    {
+      "name": "Melts in your mouth, not in your hands",
+      "facet": "Sayings from movies, TV and ads",
+      "known_at": 9
+    },
+    {
+      "name": "Help, I've fallen and I can't get up!",
+      "facet": "Sayings from movies, TV and ads",
+      "known_at": 11
+    },
+    {
+      "name": "Time is money",
+      "facet": "Proverbs from Franklin and folk wisdom",
+      "known_at": 6
+    },
+    {
+      "name": "An ounce of prevention is worth a pound of cure",
+      "facet": "Proverbs from Franklin and folk wisdom",
+      "known_at": 10
+    },
+    {
+      "name": "Fish and visitors stink after three days",
+      "facet": "Proverbs from Franklin and folk wisdom",
+      "known_at": 12
+    },
+    {
+      "name": "Nothing is certain except death and taxes",
+      "facet": "Proverbs from Franklin and folk wisdom",
+      "known_at": 11
+    },
+    {
+      "name": "Lost time is never found again",
+      "facet": "Proverbs from Franklin and folk wisdom",
+      "known_at": 11
+    },
+    {
+      "name": "Well done is better than well said",
+      "facet": "Proverbs from Franklin and folk wisdom",
+      "known_at": 11
+    },
+    {
+      "name": "Haste makes waste",
+      "facet": "Proverbs from Franklin and folk wisdom",
+      "known_at": 8
+    },
+    {
+      "name": "Never leave that till tomorrow which you can do today",
+      "facet": "Proverbs from Franklin and folk wisdom",
+      "known_at": 8
+    },
+    {
+      "name": "Little strokes fell great oaks",
+      "facet": "Proverbs from Franklin and folk wisdom",
+      "known_at": 13
+    },
+    {
+      "name": "If it ain't broke, don't fix it",
+      "facet": "Proverbs from Franklin and folk wisdom",
+      "known_at": 6
+    },
+    {
+      "name": "The squeaky wheel gets the grease",
+      "facet": "Proverbs from Franklin and folk wisdom",
+      "known_at": 8
+    },
+    {
+      "name": "Good fences make good neighbors",
+      "facet": "Proverbs from Franklin and folk wisdom",
+      "known_at": 10
+    },
+    {
+      "name": "There's no such thing as a free lunch",
+      "facet": "Proverbs from Franklin and folk wisdom",
+      "known_at": 9
+    },
+    {
+      "name": "Hindsight is 20/20",
+      "facet": "Proverbs from Franklin and folk wisdom",
+      "known_at": 9
+    },
+    {
+      "name": "Murphy's law",
+      "facet": "Proverbs from Franklin and folk wisdom",
+      "known_at": 9
+    },
+    {
+      "name": "Eat to live, not live to eat",
+      "facet": "Proverbs from Franklin and folk wisdom",
+      "known_at": 10
+    }
+  ]
+}

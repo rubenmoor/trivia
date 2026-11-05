@@ -1,0 +1,902 @@
+{
+  "subcategory": "traditional-songs",
+  "facets": [
+    "The national anthem",
+    "Patriotic hymns and anthems",
+    "Civil War songs",
+    "Revolutionary War era songs",
+    "Folk songs and ballads",
+    "Spirituals and gospel songs",
+    "Work and railroad songs",
+    "Cowboy and Western songs",
+    "Children's songs and nursery tunes",
+    "Holiday and celebration songs",
+    "Songwriters and composers",
+    "Military service songs and marches"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Fort McHenry",
+      "facet": "The national anthem",
+      "known_at": 9
+    },
+    {
+      "name": "War of 1812",
+      "facet": "The national anthem",
+      "known_at": 9
+    },
+    {
+      "name": "To Anacreon in Heaven",
+      "facet": "The national anthem",
+      "known_at": 13
+    },
+    {
+      "name": "Battle of Baltimore",
+      "facet": "The national anthem",
+      "known_at": 11
+    },
+    {
+      "name": "Mary Pickersgill",
+      "facet": "The national anthem",
+      "known_at": 14
+    },
+    {
+      "name": "Star-Spangled Banner (flag)",
+      "facet": "The national anthem",
+      "known_at": 10
+    },
+    {
+      "name": "John Stafford Smith",
+      "facet": "The national anthem",
+      "known_at": 14
+    },
+    {
+      "name": "Defence of Fort M'Henry",
+      "facet": "The national anthem",
+      "known_at": 13
+    },
+    {
+      "name": "Congreve rocket",
+      "facet": "The national anthem",
+      "known_at": 14
+    },
+    {
+      "name": "Ramparts",
+      "facet": "The national anthem",
+      "known_at": 8
+    },
+    {
+      "name": "O say can you see",
+      "facet": "The national anthem",
+      "known_at": 3
+    },
+    {
+      "name": "Super Bowl",
+      "facet": "The national anthem",
+      "known_at": 4
+    },
+    {
+      "name": "National Museum of American History",
+      "facet": "The national anthem",
+      "known_at": 10
+    },
+    {
+      "name": "Katharine Lee Bates",
+      "facet": "Patriotic hymns and anthems",
+      "known_at": 11
+    },
+    {
+      "name": "God Bless America",
+      "facet": "Patriotic hymns and anthems",
+      "known_at": 4
+    },
+    {
+      "name": "Kate Smith",
+      "facet": "Patriotic hymns and anthems",
+      "known_at": 12
+    },
+    {
+      "name": "My Country, 'Tis of Thee",
+      "facet": "Patriotic hymns and anthems",
+      "known_at": 4
+    },
+    {
+      "name": "Samuel Francis Smith",
+      "facet": "Patriotic hymns and anthems",
+      "known_at": 13
+    },
+    {
+      "name": "Lift Every Voice and Sing",
+      "facet": "Patriotic hymns and anthems",
+      "known_at": 9
+    },
+    {
+      "name": "James Weldon Johnson",
+      "facet": "Patriotic hymns and anthems",
+      "known_at": 12
+    },
+    {
+      "name": "God Bless the U.S.A.",
+      "facet": "Patriotic hymns and anthems",
+      "known_at": 7
+    },
+    {
+      "name": "Lee Greenwood",
+      "facet": "Patriotic hymns and anthems",
+      "known_at": 10
+    },
+    {
+      "name": "You're a Grand Old Flag",
+      "facet": "Patriotic hymns and anthems",
+      "known_at": 7
+    },
+    {
+      "name": "Columbia, the Gem of the Ocean",
+      "facet": "Patriotic hymns and anthems",
+      "known_at": 13
+    },
+    {
+      "name": "Hail, Columbia",
+      "facet": "Patriotic hymns and anthems",
+      "known_at": 13
+    },
+    {
+      "name": "Hail to the Chief",
+      "facet": "Patriotic hymns and anthems",
+      "known_at": 8
+    },
+    {
+      "name": "Amber waves of grain",
+      "facet": "Patriotic hymns and anthems",
+      "known_at": 6
+    },
+    {
+      "name": "Samuel A. Ward",
+      "facet": "Patriotic hymns and anthems",
+      "known_at": 14
+    },
+    {
+      "name": "Seventh-inning stretch",
+      "facet": "Patriotic hymns and anthems",
+      "known_at": 6
+    },
+    {
+      "name": "Ragged Old Flag",
+      "facet": "Patriotic hymns and anthems",
+      "known_at": 13
+    },
+    {
+      "name": "Julia Ward Howe",
+      "facet": "Civil War songs",
+      "known_at": 11
+    },
+    {
+      "name": "John Brown's Body",
+      "facet": "Civil War songs",
+      "known_at": 11
+    },
+    {
+      "name": "Daniel Decatur Emmett",
+      "facet": "Civil War songs",
+      "known_at": 14
+    },
+    {
+      "name": "Patrick Gilmore",
+      "facet": "Civil War songs",
+      "known_at": 14
+    },
+    {
+      "name": "Battle Cry of Freedom",
+      "facet": "Civil War songs",
+      "known_at": 12
+    },
+    {
+      "name": "George F. Root",
+      "facet": "Civil War songs",
+      "known_at": 14
+    },
+    {
+      "name": "Tenting on the Old Camp Ground",
+      "facet": "Civil War songs",
+      "known_at": 14
+    },
+    {
+      "name": "The Bonnie Blue Flag",
+      "facet": "Civil War songs",
+      "known_at": 13
+    },
+    {
+      "name": "Marching Through Georgia",
+      "facet": "Civil War songs",
+      "known_at": 13
+    },
+    {
+      "name": "Tramp! Tramp! Tramp!",
+      "facet": "Civil War songs",
+      "known_at": 14
+    },
+    {
+      "name": "Goober Peas",
+      "facet": "Civil War songs",
+      "known_at": 12
+    },
+    {
+      "name": "Lorena",
+      "facet": "Civil War songs",
+      "known_at": 14
+    },
+    {
+      "name": "Aura Lee",
+      "facet": "Civil War songs",
+      "known_at": 12
+    },
+    {
+      "name": "Maryland, My Maryland",
+      "facet": "Civil War songs",
+      "known_at": 13
+    },
+    {
+      "name": "Macaroni (fashion)",
+      "facet": "Revolutionary War era songs",
+      "known_at": 10
+    },
+    {
+      "name": "Chester (hymn)",
+      "facet": "Revolutionary War era songs",
+      "known_at": 14
+    },
+    {
+      "name": "William Billings",
+      "facet": "Revolutionary War era songs",
+      "known_at": 14
+    },
+    {
+      "name": "The World Turned Upside Down",
+      "facet": "Revolutionary War era songs",
+      "known_at": 11
+    },
+    {
+      "name": "Fife",
+      "facet": "Revolutionary War era songs",
+      "known_at": 6
+    },
+    {
+      "name": "The Liberty Song",
+      "facet": "Revolutionary War era songs",
+      "known_at": 13
+    },
+    {
+      "name": "John Dickinson",
+      "facet": "Revolutionary War era songs",
+      "known_at": 14
+    },
+    {
+      "name": "Johnny Has Gone for a Soldier",
+      "facet": "Revolutionary War era songs",
+      "known_at": 14
+    },
+    {
+      "name": "The Spirit of '76",
+      "facet": "Revolutionary War era songs",
+      "known_at": 10
+    },
+    {
+      "name": "The British Grenadiers",
+      "facet": "Revolutionary War era songs",
+      "known_at": 13
+    },
+    {
+      "name": "Francis Hopkinson",
+      "facet": "Revolutionary War era songs",
+      "known_at": 14
+    },
+    {
+      "name": "Hasty pudding",
+      "facet": "Revolutionary War era songs",
+      "known_at": 11
+    },
+    {
+      "name": "Hamilton (musical)",
+      "facet": "Revolutionary War era songs",
+      "known_at": 7
+    },
+    {
+      "name": "Oh My Darling, Clementine",
+      "facet": "Folk songs and ballads",
+      "known_at": 6
+    },
+    {
+      "name": "On Top of Old Smoky",
+      "facet": "Folk songs and ballads",
+      "known_at": 8
+    },
+    {
+      "name": "Cotton-Eyed Joe",
+      "facet": "Folk songs and ballads",
+      "known_at": 7
+    },
+    {
+      "name": "Turkey in the Straw",
+      "facet": "Folk songs and ballads",
+      "known_at": 7
+    },
+    {
+      "name": "Arkansas Traveler",
+      "facet": "Folk songs and ballads",
+      "known_at": 12
+    },
+    {
+      "name": "Goodnight, Irene",
+      "facet": "Folk songs and ballads",
+      "known_at": 13
+    },
+    {
+      "name": "Camptown Races",
+      "facet": "Folk songs and ballads",
+      "known_at": 8
+    },
+    {
+      "name": "Polly Wolly Doodle",
+      "facet": "Folk songs and ballads",
+      "known_at": 10
+    },
+    {
+      "name": "Old Dan Tucker",
+      "facet": "Folk songs and ballads",
+      "known_at": 13
+    },
+    {
+      "name": "Simple Gifts",
+      "facet": "Folk songs and ballads",
+      "known_at": 11
+    },
+    {
+      "name": "Old Folks at Home",
+      "facet": "Folk songs and ballads",
+      "known_at": 9
+    },
+    {
+      "name": "Swing Low, Sweet Chariot",
+      "facet": "Spirituals and gospel songs",
+      "known_at": 6
+    },
+    {
+      "name": "Go Down Moses",
+      "facet": "Spirituals and gospel songs",
+      "known_at": 9
+    },
+    {
+      "name": "Wade in the Water",
+      "facet": "Spirituals and gospel songs",
+      "known_at": 10
+    },
+    {
+      "name": "Amazing Grace",
+      "facet": "Spirituals and gospel songs",
+      "known_at": 5
+    },
+    {
+      "name": "Michael, Row the Boat Ashore",
+      "facet": "Spirituals and gospel songs",
+      "known_at": 8
+    },
+    {
+      "name": "He's Got the Whole World in His Hands",
+      "facet": "Spirituals and gospel songs",
+      "known_at": 4
+    },
+    {
+      "name": "Kumbaya",
+      "facet": "Spirituals and gospel songs",
+      "known_at": 4
+    },
+    {
+      "name": "This Little Light of Mine",
+      "facet": "Spirituals and gospel songs",
+      "known_at": 4
+    },
+    {
+      "name": "Joshua Fit the Battle of Jericho",
+      "facet": "Spirituals and gospel songs",
+      "known_at": 9
+    },
+    {
+      "name": "Nobody Knows the Trouble I've Seen",
+      "facet": "Spirituals and gospel songs",
+      "known_at": 11
+    },
+    {
+      "name": "Deep River",
+      "facet": "Spirituals and gospel songs",
+      "known_at": 13
+    },
+    {
+      "name": "Fisk Jubilee Singers",
+      "facet": "Spirituals and gospel songs",
+      "known_at": 12
+    },
+    {
+      "name": "Oh Happy Day",
+      "facet": "Spirituals and gospel songs",
+      "known_at": 9
+    },
+    {
+      "name": "Down by the Riverside",
+      "facet": "Spirituals and gospel songs",
+      "known_at": 10
+    },
+    {
+      "name": "Steal Away",
+      "facet": "Spirituals and gospel songs",
+      "known_at": 13
+    },
+    {
+      "name": "Paul Robeson",
+      "facet": "Spirituals and gospel songs",
+      "known_at": 13
+    },
+    {
+      "name": "I've Been Working on the Railroad",
+      "facet": "Work and railroad songs",
+      "known_at": 3
+    },
+    {
+      "name": "Wabash Cannonball",
+      "facet": "Work and railroad songs",
+      "known_at": 12
+    },
+    {
+      "name": "The Erie Canal (song)",
+      "facet": "Work and railroad songs",
+      "known_at": 10
+    },
+    {
+      "name": "City of New Orleans",
+      "facet": "Work and railroad songs",
+      "known_at": 12
+    },
+    {
+      "name": "Rock Island Line",
+      "facet": "Work and railroad songs",
+      "known_at": 12
+    },
+    {
+      "name": "Midnight Special",
+      "facet": "Work and railroad songs",
+      "known_at": 13
+    },
+    {
+      "name": "Tennessee Ernie Ford",
+      "facet": "Work and railroad songs",
+      "known_at": 13
+    },
+    {
+      "name": "Pick a Bale of Cotton",
+      "facet": "Work and railroad songs",
+      "known_at": 12
+    },
+    {
+      "name": "Union Maid",
+      "facet": "Work and railroad songs",
+      "known_at": 14
+    },
+    {
+      "name": "Which Side Are You On?",
+      "facet": "Work and railroad songs",
+      "known_at": 13
+    },
+    {
+      "name": "Solidarity Forever",
+      "facet": "Work and railroad songs",
+      "known_at": 13
+    },
+    {
+      "name": "Joe Hill",
+      "facet": "Work and railroad songs",
+      "known_at": 13
+    },
+    {
+      "name": "Freight Train (song)",
+      "facet": "Work and railroad songs",
+      "known_at": 13
+    },
+    {
+      "name": "Chattanooga Choo Choo",
+      "facet": "Work and railroad songs",
+      "known_at": 9
+    },
+    {
+      "name": "Git Along, Little Dogies",
+      "facet": "Cowboy and Western songs",
+      "known_at": 10
+    },
+    {
+      "name": "Dale Evans",
+      "facet": "Cowboy and Western songs",
+      "known_at": 12
+    },
+    {
+      "name": "The Old Chisholm Trail",
+      "facet": "Cowboy and Western songs",
+      "known_at": 12
+    },
+    {
+      "name": "The Yellow Rose of Texas",
+      "facet": "Cowboy and Western songs",
+      "known_at": 9
+    },
+    {
+      "name": "Deep in the Heart of Texas",
+      "facet": "Cowboy and Western songs",
+      "known_at": 7
+    },
+    {
+      "name": "Cool Water",
+      "facet": "Cowboy and Western songs",
+      "known_at": 13
+    },
+    {
+      "name": "Mary Had a Little Lamb",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 1
+    },
+    {
+      "name": "Old MacDonald Had a Farm",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 1
+    },
+    {
+      "name": "The Itsy Bitsy Spider",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 1
+    },
+    {
+      "name": "The Wheels on the Bus",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 1
+    },
+    {
+      "name": "If You're Happy and You Know It",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 1
+    },
+    {
+      "name": "Skip to My Lou",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 5
+    },
+    {
+      "name": "The Farmer in the Dell",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 4
+    },
+    {
+      "name": "Row, Row, Row Your Boat",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 1
+    },
+    {
+      "name": "Do Your Ears Hang Low?",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 3
+    },
+    {
+      "name": "The Ants Go Marching",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 2
+    },
+    {
+      "name": "Found a Peanut",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 4
+    },
+    {
+      "name": "Hokey Pokey",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 2
+    },
+    {
+      "name": "Bingo",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 1
+    },
+    {
+      "name": "Hush, Little Baby",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 3
+    },
+    {
+      "name": "Shoo Fly, Don't Bother Me",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 6
+    },
+    {
+      "name": "Schoolhouse Rock!",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 8
+    },
+    {
+      "name": "Fifty Nifty United States",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 6
+    },
+    {
+      "name": "John Jacob Jingleheimer Schmidt",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 3
+    },
+    {
+      "name": "Take Me Out to the Ball Game",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 3
+    },
+    {
+      "name": "The Bear Went Over the Mountain",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 4
+    },
+    {
+      "name": "Miss Mary Mack",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 4
+    },
+    {
+      "name": "Oh Where, Oh Where Has My Little Dog Gone?",
+      "facet": "Children's songs and nursery tunes",
+      "known_at": 5
+    },
+    {
+      "name": "Over the River and Through the Wood",
+      "facet": "Holiday and celebration songs",
+      "known_at": 6
+    },
+    {
+      "name": "Here Comes Santa Claus",
+      "facet": "Holiday and celebration songs",
+      "known_at": 6
+    },
+    {
+      "name": "Up on the Housetop",
+      "facet": "Holiday and celebration songs",
+      "known_at": 6
+    },
+    {
+      "name": "O Little Town of Bethlehem",
+      "facet": "Holiday and celebration songs",
+      "known_at": 8
+    },
+    {
+      "name": "We Three Kings",
+      "facet": "Holiday and celebration songs",
+      "known_at": 7
+    },
+    {
+      "name": "I'll Be Home for Christmas",
+      "facet": "Holiday and celebration songs",
+      "known_at": 10
+    },
+    {
+      "name": "Easter Parade",
+      "facet": "Holiday and celebration songs",
+      "known_at": 13
+    },
+    {
+      "name": "Here Comes Peter Cottontail",
+      "facet": "Holiday and celebration songs",
+      "known_at": 6
+    },
+    {
+      "name": "Sleigh Ride",
+      "facet": "Holiday and celebration songs",
+      "known_at": 6
+    },
+    {
+      "name": "Stephen Foster",
+      "facet": "Songwriters and composers",
+      "known_at": 9
+    },
+    {
+      "name": "George M. Cohan",
+      "facet": "Songwriters and composers",
+      "known_at": 12
+    },
+    {
+      "name": "John Philip Sousa",
+      "facet": "Songwriters and composers",
+      "known_at": 9
+    },
+    {
+      "name": "Aaron Copland",
+      "facet": "Songwriters and composers",
+      "known_at": 12
+    },
+    {
+      "name": "Charles Ives",
+      "facet": "Songwriters and composers",
+      "known_at": 14
+    },
+    {
+      "name": "Johnny Marks",
+      "facet": "Songwriters and composers",
+      "known_at": 14
+    },
+    {
+      "name": "Henry Clay Work",
+      "facet": "Songwriters and composers",
+      "known_at": 14
+    },
+    {
+      "name": "Lowell Mason",
+      "facet": "Songwriters and composers",
+      "known_at": 14
+    },
+    {
+      "name": "Fanny Crosby",
+      "facet": "Songwriters and composers",
+      "known_at": 14
+    },
+    {
+      "name": "James Lord Pierpont",
+      "facet": "Songwriters and composers",
+      "known_at": 13
+    },
+    {
+      "name": "Jack Norworth",
+      "facet": "Songwriters and composers",
+      "known_at": 14
+    },
+    {
+      "name": "Cole Porter",
+      "facet": "Songwriters and composers",
+      "known_at": 12
+    },
+    {
+      "name": "Leroy Anderson",
+      "facet": "Songwriters and composers",
+      "known_at": 13
+    },
+    {
+      "name": "Mildred and Patty Hill",
+      "facet": "Songwriters and composers",
+      "known_at": 13
+    },
+    {
+      "name": "Semper Fidelis (march)",
+      "facet": "Military service songs and marches",
+      "known_at": 11
+    },
+    {
+      "name": "The Washington Post March",
+      "facet": "Military service songs and marches",
+      "known_at": 13
+    },
+    {
+      "name": "The Marines' Hymn",
+      "facet": "Military service songs and marches",
+      "known_at": 9
+    },
+    {
+      "name": "Anchors Aweigh",
+      "facet": "Military service songs and marches",
+      "known_at": 9
+    },
+    {
+      "name": "The Army Goes Rolling Along",
+      "facet": "Military service songs and marches",
+      "known_at": 11
+    },
+    {
+      "name": "The U.S. Air Force (song)",
+      "facet": "Military service songs and marches",
+      "known_at": 11
+    },
+    {
+      "name": "Semper Paratus",
+      "facet": "Military service songs and marches",
+      "known_at": 13
+    },
+    {
+      "name": "Reveille",
+      "facet": "Military service songs and marches",
+      "known_at": 6
+    },
+    {
+      "name": "United States Marine Band",
+      "facet": "Military service songs and marches",
+      "known_at": 11
+    },
+    {
+      "name": "Sousaphone",
+      "facet": "Military service songs and marches",
+      "known_at": 8
+    },
+    {
+      "name": "Over There",
+      "facet": "Military service songs and marches",
+      "known_at": 11
+    },
+    {
+      "name": "Boogie Woogie Bugle Boy",
+      "facet": "Military service songs and marches",
+      "known_at": 10
+    },
+    {
+      "name": "Military cadence",
+      "facet": "Military service songs and marches",
+      "known_at": 8
+    },
+    {
+      "name": "Old Guard Fife and Drum Corps",
+      "facet": "Military service songs and marches",
+      "known_at": 14
+    },
+    {
+      "name": "The Liberty Bell (march)",
+      "facet": "Military service songs and marches",
+      "known_at": 13
+    },
+    {
+      "name": "El Capitan (march)",
+      "facet": "Military service songs and marches",
+      "known_at": 14
+    },
+    {
+      "name": "The Ballad of the Green Berets",
+      "facet": "Military service songs and marches",
+      "known_at": 13
+    },
+    {
+      "name": "Daniel Butterfield",
+      "facet": "Military service songs and marches",
+      "known_at": 14
+    },
+    {
+      "name": "Armed Forces Medley",
+      "facet": "Military service songs and marches",
+      "known_at": 12
+    }
+  ]
+}

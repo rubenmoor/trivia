@@ -1,0 +1,792 @@
+{
+  "subcategory": "movie-favorites",
+  "facets": [
+    "Classic Hollywood golden age",
+    "Westerns and frontier films",
+    "Holiday and Thanksgiving movies",
+    "Famous American movie quotes",
+    "Sports movies and real athletes",
+    "American history on screen",
+    "High school and coming-of-age films",
+    "Movie settings and US landmarks",
+    "Animated family favorites",
+    "Blockbusters and franchise heroes",
+    "Oscars and Hollywood traditions",
+    "Moviegoing customs and drive-ins"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 4,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Casablanca",
+      "facet": "Classic Hollywood golden age",
+      "known_at": 11
+    },
+    {
+      "name": "Citizen Kane",
+      "facet": "Classic Hollywood golden age",
+      "known_at": 13
+    },
+    {
+      "name": "Humphrey Bogart",
+      "facet": "Classic Hollywood golden age",
+      "known_at": 12
+    },
+    {
+      "name": "Audrey Hepburn",
+      "facet": "Classic Hollywood golden age",
+      "known_at": 11
+    },
+    {
+      "name": "Breakfast at Tiffany's",
+      "facet": "Classic Hollywood golden age",
+      "known_at": 12
+    },
+    {
+      "name": "Fred Astaire",
+      "facet": "Classic Hollywood golden age",
+      "known_at": 13
+    },
+    {
+      "name": "Clark Gable",
+      "facet": "Classic Hollywood golden age",
+      "known_at": 13
+    },
+    {
+      "name": "Alfred Hitchcock",
+      "facet": "Classic Hollywood golden age",
+      "known_at": 11
+    },
+    {
+      "name": "James Stewart",
+      "facet": "Classic Hollywood golden age",
+      "known_at": 13
+    },
+    {
+      "name": "Katharine Hepburn",
+      "facet": "Classic Hollywood golden age",
+      "known_at": 13
+    },
+    {
+      "name": "Technicolor",
+      "facet": "Classic Hollywood golden age",
+      "known_at": 12
+    },
+    {
+      "name": "Some Like It Hot",
+      "facet": "Classic Hollywood golden age",
+      "known_at": 14
+    },
+    {
+      "name": "Grace Kelly",
+      "facet": "Classic Hollywood golden age",
+      "known_at": 13
+    },
+    {
+      "name": "MGM lion",
+      "facet": "Classic Hollywood golden age",
+      "known_at": 9
+    },
+    {
+      "name": "Clint Eastwood",
+      "facet": "Westerns and frontier films",
+      "known_at": 11
+    },
+    {
+      "name": "High Noon",
+      "facet": "Westerns and frontier films",
+      "known_at": 13
+    },
+    {
+      "name": "The Searchers",
+      "facet": "Westerns and frontier films",
+      "known_at": 14
+    },
+    {
+      "name": "True Grit",
+      "facet": "Westerns and frontier films",
+      "known_at": 13
+    },
+    {
+      "name": "Shane",
+      "facet": "Westerns and frontier films",
+      "known_at": 14
+    },
+    {
+      "name": "Blazing Saddles",
+      "facet": "Westerns and frontier films",
+      "known_at": 13
+    },
+    {
+      "name": "Unforgiven",
+      "facet": "Westerns and frontier films",
+      "known_at": 14
+    },
+    {
+      "name": "The Magnificent Seven",
+      "facet": "Westerns and frontier films",
+      "known_at": 13
+    },
+    {
+      "name": "Gary Cooper",
+      "facet": "Westerns and frontier films",
+      "known_at": 14
+    },
+    {
+      "name": "Spaghetti Western",
+      "facet": "Westerns and frontier films",
+      "known_at": 13
+    },
+    {
+      "name": "“Here's looking at you, kid”",
+      "facet": "Famous American movie quotes",
+      "known_at": 13
+    },
+    {
+      "name": "“May the Force be with you”",
+      "facet": "Famous American movie quotes",
+      "known_at": 4
+    },
+    {
+      "name": "“I'll be back”",
+      "facet": "Famous American movie quotes",
+      "known_at": 9
+    },
+    {
+      "name": "“You're gonna need a bigger boat”",
+      "facet": "Famous American movie quotes",
+      "known_at": 12
+    },
+    {
+      "name": "“Houston, we have a problem”",
+      "facet": "Famous American movie quotes",
+      "known_at": 9
+    },
+    {
+      "name": "“Show me the money!”",
+      "facet": "Famous American movie quotes",
+      "known_at": 11
+    },
+    {
+      "name": "“Life is like a box of chocolates”",
+      "facet": "Famous American movie quotes",
+      "known_at": 8
+    },
+    {
+      "name": "“E.T. phone home”",
+      "facet": "Famous American movie quotes",
+      "known_at": 6
+    },
+    {
+      "name": "“To infinity and beyond!”",
+      "facet": "Famous American movie quotes",
+      "known_at": 2
+    },
+    {
+      "name": "“I'm the king of the world!”",
+      "facet": "Famous American movie quotes",
+      "known_at": 10
+    },
+    {
+      "name": "“Go ahead, make my day”",
+      "facet": "Famous American movie quotes",
+      "known_at": 12
+    },
+    {
+      "name": "“If you build it, he will come”",
+      "facet": "Famous American movie quotes",
+      "known_at": 12
+    },
+    {
+      "name": "“You can't handle the truth!”",
+      "facet": "Famous American movie quotes",
+      "known_at": 12
+    },
+    {
+      "name": "“There's no crying in baseball!”",
+      "facet": "Famous American movie quotes",
+      "known_at": 12
+    },
+    {
+      "name": "“Nobody puts Baby in a corner”",
+      "facet": "Famous American movie quotes",
+      "known_at": 13
+    },
+    {
+      "name": "“Why so serious?”",
+      "facet": "Famous American movie quotes",
+      "known_at": 9
+    },
+    {
+      "name": "“Wax on, wax off”",
+      "facet": "Famous American movie quotes",
+      "known_at": 9
+    },
+    {
+      "name": "“Keep the change, ya filthy animal”",
+      "facet": "Famous American movie quotes",
+      "known_at": 10
+    },
+    {
+      "name": "“Rosebud”",
+      "facet": "Famous American movie quotes",
+      "known_at": 14
+    },
+    {
+      "name": "“I feel the need for speed”",
+      "facet": "Famous American movie quotes",
+      "known_at": 11
+    },
+    {
+      "name": "Rocky",
+      "facet": "Sports movies and real athletes",
+      "known_at": 6
+    },
+    {
+      "name": "Space Jam",
+      "facet": "Sports movies and real athletes",
+      "known_at": 4
+    },
+    {
+      "name": "The Sandlot",
+      "facet": "Sports movies and real athletes",
+      "known_at": 8
+    },
+    {
+      "name": "A League of Their Own",
+      "facet": "Sports movies and real athletes",
+      "known_at": 12
+    },
+    {
+      "name": "Remember the Titans",
+      "facet": "Sports movies and real athletes",
+      "known_at": 10
+    },
+    {
+      "name": "The Blind Side",
+      "facet": "Sports movies and real athletes",
+      "known_at": 11
+    },
+    {
+      "name": "Hoosiers",
+      "facet": "Sports movies and real athletes",
+      "known_at": 13
+    },
+    {
+      "name": "Rudy",
+      "facet": "Sports movies and real athletes",
+      "known_at": 13
+    },
+    {
+      "name": "Moneyball",
+      "facet": "Sports movies and real athletes",
+      "known_at": 13
+    },
+    {
+      "name": "The Mighty Ducks",
+      "facet": "Sports movies and real athletes",
+      "known_at": 7
+    },
+    {
+      "name": "Seabiscuit",
+      "facet": "Sports movies and real athletes",
+      "known_at": 13
+    },
+    {
+      "name": "The Karate Kid",
+      "facet": "Sports movies and real athletes",
+      "known_at": 7
+    },
+    {
+      "name": "King Richard",
+      "facet": "Sports movies and real athletes",
+      "known_at": 12
+    },
+    {
+      "name": "Lincoln",
+      "facet": "American history on screen",
+      "known_at": 10
+    },
+    {
+      "name": "Selma",
+      "facet": "American history on screen",
+      "known_at": 11
+    },
+    {
+      "name": "Hidden Figures",
+      "facet": "American history on screen",
+      "known_at": 9
+    },
+    {
+      "name": "Glory",
+      "facet": "American history on screen",
+      "known_at": 14
+    },
+    {
+      "name": "Saving Private Ryan",
+      "facet": "American history on screen",
+      "known_at": 12
+    },
+    {
+      "name": "Forrest Gump",
+      "facet": "American history on screen",
+      "known_at": 8
+    },
+    {
+      "name": "1776",
+      "facet": "American history on screen",
+      "known_at": 14
+    },
+    {
+      "name": "All the President's Men",
+      "facet": "American history on screen",
+      "known_at": 13
+    },
+    {
+      "name": "Bonnie and Clyde",
+      "facet": "American history on screen",
+      "known_at": 11
+    },
+    {
+      "name": "The Right Stuff",
+      "facet": "American history on screen",
+      "known_at": 14
+    },
+    {
+      "name": "Oppenheimer",
+      "facet": "American history on screen",
+      "known_at": 10
+    },
+    {
+      "name": "First Man",
+      "facet": "American history on screen",
+      "known_at": 12
+    },
+    {
+      "name": "National Treasure",
+      "facet": "American history on screen",
+      "known_at": 8
+    },
+    {
+      "name": "Harriet",
+      "facet": "American history on screen",
+      "known_at": 11
+    },
+    {
+      "name": "Patton",
+      "facet": "American history on screen",
+      "known_at": 14
+    },
+    {
+      "name": "Night at the Museum",
+      "facet": "American history on screen",
+      "known_at": 5
+    },
+    {
+      "name": "The Breakfast Club",
+      "facet": "High school and coming-of-age films",
+      "known_at": 11
+    },
+    {
+      "name": "Ferris Bueller's Day Off",
+      "facet": "High school and coming-of-age films",
+      "known_at": 11
+    },
+    {
+      "name": "Grease",
+      "facet": "High school and coming-of-age films",
+      "known_at": 8
+    },
+    {
+      "name": "Mean Girls",
+      "facet": "High school and coming-of-age films",
+      "known_at": 9
+    },
+    {
+      "name": "Clueless",
+      "facet": "High school and coming-of-age films",
+      "known_at": 11
+    },
+    {
+      "name": "Back to the Future",
+      "facet": "High school and coming-of-age films",
+      "known_at": 7
+    },
+    {
+      "name": "Stand by Me",
+      "facet": "High school and coming-of-age films",
+      "known_at": 12
+    },
+    {
+      "name": "Napoleon Dynamite",
+      "facet": "High school and coming-of-age films",
+      "known_at": 11
+    },
+    {
+      "name": "Sixteen Candles",
+      "facet": "High school and coming-of-age films",
+      "known_at": 13
+    },
+    {
+      "name": "Footloose",
+      "facet": "High school and coming-of-age films",
+      "known_at": 11
+    },
+    {
+      "name": "Dead Poets Society",
+      "facet": "High school and coming-of-age films",
+      "known_at": 12
+    },
+    {
+      "name": "The Goonies",
+      "facet": "High school and coming-of-age films",
+      "known_at": 9
+    },
+    {
+      "name": "John Hughes",
+      "facet": "High school and coming-of-age films",
+      "known_at": 13
+    },
+    {
+      "name": "10 Things I Hate About You",
+      "facet": "High school and coming-of-age films",
+      "known_at": 12
+    },
+    {
+      "name": "Legally Blonde",
+      "facet": "High school and coming-of-age films",
+      "known_at": 10
+    },
+    {
+      "name": "American Graffiti",
+      "facet": "High school and coming-of-age films",
+      "known_at": 14
+    },
+    {
+      "name": "Rebel Without a Cause",
+      "facet": "High school and coming-of-age films",
+      "known_at": 13
+    },
+    {
+      "name": "Lady Bird",
+      "facet": "High school and coming-of-age films",
+      "known_at": 13
+    },
+    {
+      "name": "Toy Story",
+      "facet": "Animated family favorites",
+      "known_at": 1
+    },
+    {
+      "name": "Pixar",
+      "facet": "Animated family favorites",
+      "known_at": 4
+    },
+    {
+      "name": "Cars",
+      "facet": "Animated family favorites",
+      "known_at": 1
+    },
+    {
+      "name": "Lilo & Stitch",
+      "facet": "Animated family favorites",
+      "known_at": 2
+    },
+    {
+      "name": "Frozen",
+      "facet": "Animated family favorites",
+      "known_at": 1
+    },
+    {
+      "name": "The Lion King",
+      "facet": "Animated family favorites",
+      "known_at": 1
+    },
+    {
+      "name": "Finding Nemo",
+      "facet": "Animated family favorites",
+      "known_at": 1
+    },
+    {
+      "name": "Up",
+      "facet": "Animated family favorites",
+      "known_at": 3
+    },
+    {
+      "name": "Zootopia",
+      "facet": "Animated family favorites",
+      "known_at": 3
+    },
+    {
+      "name": "The Incredibles",
+      "facet": "Animated family favorites",
+      "known_at": 3
+    },
+    {
+      "name": "An American Tail",
+      "facet": "Animated family favorites",
+      "known_at": 13
+    },
+    {
+      "name": "Minions",
+      "facet": "Animated family favorites",
+      "known_at": 1
+    },
+    {
+      "name": "Moana",
+      "facet": "Animated family favorites",
+      "known_at": 2
+    },
+    {
+      "name": "Darth Vader",
+      "facet": "Blockbusters and franchise heroes",
+      "known_at": 3
+    },
+    {
+      "name": "Indiana Jones",
+      "facet": "Blockbusters and franchise heroes",
+      "known_at": 7
+    },
+    {
+      "name": "Jaws",
+      "facet": "Blockbusters and franchise heroes",
+      "known_at": 7
+    },
+    {
+      "name": "The Avengers",
+      "facet": "Blockbusters and franchise heroes",
+      "known_at": 3
+    },
+    {
+      "name": "Steven Spielberg",
+      "facet": "Blockbusters and franchise heroes",
+      "known_at": 9
+    },
+    {
+      "name": "George Lucas",
+      "facet": "Blockbusters and franchise heroes",
+      "known_at": 11
+    },
+    {
+      "name": "The Terminator",
+      "facet": "Blockbusters and franchise heroes",
+      "known_at": 10
+    },
+    {
+      "name": "Top Gun",
+      "facet": "Blockbusters and franchise heroes",
+      "known_at": 10
+    },
+    {
+      "name": "Fast & Furious",
+      "facet": "Blockbusters and franchise heroes",
+      "known_at": 8
+    },
+    {
+      "name": "Pirates of the Caribbean",
+      "facet": "Blockbusters and franchise heroes",
+      "known_at": 5
+    },
+    {
+      "name": "Avatar",
+      "facet": "Blockbusters and franchise heroes",
+      "known_at": 6
+    },
+    {
+      "name": "Titanic",
+      "facet": "Blockbusters and franchise heroes",
+      "known_at": 6
+    },
+    {
+      "name": "King Kong",
+      "facet": "Blockbusters and franchise heroes",
+      "known_at": 5
+    },
+    {
+      "name": "Oscar statuette",
+      "facet": "Oscars and Hollywood traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Red carpet",
+      "facet": "Oscars and Hollywood traditions",
+      "known_at": 5
+    },
+    {
+      "name": "Best Picture",
+      "facet": "Oscars and Hollywood traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Golden Globe Awards",
+      "facet": "Oscars and Hollywood traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Dolby Theatre",
+      "facet": "Oscars and Hollywood traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Best Picture envelope mix-up",
+      "facet": "Oscars and Hollywood traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Ben-Hur",
+      "facet": "Oscars and Hollywood traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Meryl Streep",
+      "facet": "Oscars and Hollywood traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Golden Raspberry Awards",
+      "facet": "Oscars and Hollywood traditions",
+      "known_at": 12
+    },
+    {
+      "name": "EGOT",
+      "facet": "Oscars and Hollywood traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Bob Hope",
+      "facet": "Oscars and Hollywood traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Warner Bros.",
+      "facet": "Oscars and Hollywood traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Acceptance speech",
+      "facet": "Oscars and Hollywood traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Concession stand",
+      "facet": "Moviegoing customs and drive-ins",
+      "known_at": 8
+    },
+    {
+      "name": "Movie trailer",
+      "facet": "Moviegoing customs and drive-ins",
+      "known_at": 5
+    },
+    {
+      "name": "Matinee",
+      "facet": "Moviegoing customs and drive-ins",
+      "known_at": 11
+    },
+    {
+      "name": "Double feature",
+      "facet": "Moviegoing customs and drive-ins",
+      "known_at": 11
+    },
+    {
+      "name": "Box office",
+      "facet": "Moviegoing customs and drive-ins",
+      "known_at": 8
+    },
+    {
+      "name": "Opening weekend",
+      "facet": "Moviegoing customs and drive-ins",
+      "known_at": 10
+    },
+    {
+      "name": "Midnight premiere",
+      "facet": "Moviegoing customs and drive-ins",
+      "known_at": 9
+    },
+    {
+      "name": "IMAX",
+      "facet": "Moviegoing customs and drive-ins",
+      "known_at": 7
+    },
+    {
+      "name": "3D glasses",
+      "facet": "Moviegoing customs and drive-ins",
+      "known_at": 3
+    },
+    {
+      "name": "Nickelodeon theater",
+      "facet": "Moviegoing customs and drive-ins",
+      "known_at": 14
+    },
+    {
+      "name": "Movie palace",
+      "facet": "Moviegoing customs and drive-ins",
+      "known_at": 13
+    },
+    {
+      "name": "Theater marquee",
+      "facet": "Moviegoing customs and drive-ins",
+      "known_at": 11
+    },
+    {
+      "name": "PG-13 rating",
+      "facet": "Moviegoing customs and drive-ins",
+      "known_at": 7
+    },
+    {
+      "name": "Blockbuster Video",
+      "facet": "Moviegoing customs and drive-ins",
+      "known_at": 11
+    },
+    {
+      "name": "Summer blockbuster season",
+      "facet": "Moviegoing customs and drive-ins",
+      "known_at": 10
+    },
+    {
+      "name": "Movie ticket stub",
+      "facet": "Moviegoing customs and drive-ins",
+      "known_at": 6
+    }
+  ]
+}

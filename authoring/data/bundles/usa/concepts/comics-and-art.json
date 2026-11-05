@@ -1,0 +1,1037 @@
+{
+  "subcategory": "comics-and-art",
+  "facets": [
+    "Superhero comics and publishers",
+    "Newspaper comic strips",
+    "Political cartoons and caricature",
+    "Graphic novels and underground comix",
+    "Comic book culture and terms",
+    "Early American and landscape painting",
+    "Modern American painters",
+    "Pop art and abstract expressionism",
+    "Illustration and magazine covers",
+    "American photography",
+    "Folk, quilt and Native American art",
+    "Museums, monuments and public art"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Superman",
+      "facet": "Superhero comics and publishers",
+      "known_at": 1
+    },
+    {
+      "name": "Batman",
+      "facet": "Superhero comics and publishers",
+      "known_at": 1
+    },
+    {
+      "name": "Spider-Man",
+      "facet": "Superhero comics and publishers",
+      "known_at": 1
+    },
+    {
+      "name": "Wonder Woman",
+      "facet": "Superhero comics and publishers",
+      "known_at": 2
+    },
+    {
+      "name": "Captain America",
+      "facet": "Superhero comics and publishers",
+      "known_at": 3
+    },
+    {
+      "name": "The Hulk",
+      "facet": "Superhero comics and publishers",
+      "known_at": 2
+    },
+    {
+      "name": "Iron Man",
+      "facet": "Superhero comics and publishers",
+      "known_at": 3
+    },
+    {
+      "name": "The Joker",
+      "facet": "Superhero comics and publishers",
+      "known_at": 3
+    },
+    {
+      "name": "Black Panther",
+      "facet": "Superhero comics and publishers",
+      "known_at": 4
+    },
+    {
+      "name": "The Flash",
+      "facet": "Superhero comics and publishers",
+      "known_at": 4
+    },
+    {
+      "name": "Green Lantern",
+      "facet": "Superhero comics and publishers",
+      "known_at": 7
+    },
+    {
+      "name": "X-Men",
+      "facet": "Superhero comics and publishers",
+      "known_at": 6
+    },
+    {
+      "name": "Fantastic Four",
+      "facet": "Superhero comics and publishers",
+      "known_at": 7
+    },
+    {
+      "name": "Marvel Comics",
+      "facet": "Superhero comics and publishers",
+      "known_at": 4
+    },
+    {
+      "name": "DC Comics",
+      "facet": "Superhero comics and publishers",
+      "known_at": 6
+    },
+    {
+      "name": "Stan Lee",
+      "facet": "Superhero comics and publishers",
+      "known_at": 6
+    },
+    {
+      "name": "Jack Kirby",
+      "facet": "Superhero comics and publishers",
+      "known_at": 12
+    },
+    {
+      "name": "Steve Ditko",
+      "facet": "Superhero comics and publishers",
+      "known_at": 14
+    },
+    {
+      "name": "Jerry Siegel and Joe Shuster",
+      "facet": "Superhero comics and publishers",
+      "known_at": 14
+    },
+    {
+      "name": "Bob Kane",
+      "facet": "Superhero comics and publishers",
+      "known_at": 13
+    },
+    {
+      "name": "Action Comics #1",
+      "facet": "Superhero comics and publishers",
+      "known_at": 11
+    },
+    {
+      "name": "Image Comics",
+      "facet": "Superhero comics and publishers",
+      "known_at": 14
+    },
+    {
+      "name": "Peanuts",
+      "facet": "Newspaper comic strips",
+      "known_at": 4
+    },
+    {
+      "name": "Snoopy",
+      "facet": "Newspaper comic strips",
+      "known_at": 2
+    },
+    {
+      "name": "Charlie Brown",
+      "facet": "Newspaper comic strips",
+      "known_at": 3
+    },
+    {
+      "name": "Charles M. Schulz",
+      "facet": "Newspaper comic strips",
+      "known_at": 10
+    },
+    {
+      "name": "Garfield",
+      "facet": "Newspaper comic strips",
+      "known_at": 2
+    },
+    {
+      "name": "Jim Davis",
+      "facet": "Newspaper comic strips",
+      "known_at": 12
+    },
+    {
+      "name": "Calvin and Hobbes",
+      "facet": "Newspaper comic strips",
+      "known_at": 8
+    },
+    {
+      "name": "Bill Watterson",
+      "facet": "Newspaper comic strips",
+      "known_at": 13
+    },
+    {
+      "name": "The Far Side",
+      "facet": "Newspaper comic strips",
+      "known_at": 11
+    },
+    {
+      "name": "Gary Larson",
+      "facet": "Newspaper comic strips",
+      "known_at": 13
+    },
+    {
+      "name": "Popeye",
+      "facet": "Newspaper comic strips",
+      "known_at": 4
+    },
+    {
+      "name": "Beetle Bailey",
+      "facet": "Newspaper comic strips",
+      "known_at": 11
+    },
+    {
+      "name": "Dick Tracy",
+      "facet": "Newspaper comic strips",
+      "known_at": 11
+    },
+    {
+      "name": "The Family Circus",
+      "facet": "Newspaper comic strips",
+      "known_at": 11
+    },
+    {
+      "name": "Doonesbury",
+      "facet": "Newspaper comic strips",
+      "known_at": 13
+    },
+    {
+      "name": "The Yellow Kid",
+      "facet": "Newspaper comic strips",
+      "known_at": 14
+    },
+    {
+      "name": "Little Nemo in Slumberland",
+      "facet": "Newspaper comic strips",
+      "known_at": 14
+    },
+    {
+      "name": "Krazy Kat",
+      "facet": "Newspaper comic strips",
+      "known_at": 14
+    },
+    {
+      "name": "Prince Valiant",
+      "facet": "Newspaper comic strips",
+      "known_at": 13
+    },
+    {
+      "name": "Hagar the Horrible",
+      "facet": "Newspaper comic strips",
+      "known_at": 11
+    },
+    {
+      "name": "Sunday funnies",
+      "facet": "Newspaper comic strips",
+      "known_at": 9
+    },
+    {
+      "name": "Join, or Die",
+      "facet": "Political cartoons and caricature",
+      "known_at": 11
+    },
+    {
+      "name": "Boss Tweed",
+      "facet": "Political cartoons and caricature",
+      "known_at": 14
+    },
+    {
+      "name": "Herblock",
+      "facet": "Political cartoons and caricature",
+      "known_at": 14
+    },
+    {
+      "name": "Puck magazine",
+      "facet": "Political cartoons and caricature",
+      "known_at": 14
+    },
+    {
+      "name": "Mad magazine",
+      "facet": "Political cartoons and caricature",
+      "known_at": 9
+    },
+    {
+      "name": "Alfred E. Neuman",
+      "facet": "Political cartoons and caricature",
+      "known_at": 12
+    },
+    {
+      "name": "Al Hirschfeld",
+      "facet": "Political cartoons and caricature",
+      "known_at": 14
+    },
+    {
+      "name": "Rube Goldberg machine",
+      "facet": "Political cartoons and caricature",
+      "known_at": 8
+    },
+    {
+      "name": "Bill Mauldin",
+      "facet": "Political cartoons and caricature",
+      "known_at": 15
+    },
+    {
+      "name": "The New Yorker cartoon",
+      "facet": "Political cartoons and caricature",
+      "known_at": 12
+    },
+    {
+      "name": "Pulitzer Prize for Editorial Cartooning",
+      "facet": "Political cartoons and caricature",
+      "known_at": 13
+    },
+    {
+      "name": "Maus",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 11
+    },
+    {
+      "name": "Art Spiegelman",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 13
+    },
+    {
+      "name": "Watchmen",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 11
+    },
+    {
+      "name": "The Dark Knight Returns",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 12
+    },
+    {
+      "name": "Frank Miller",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 13
+    },
+    {
+      "name": "Robert Crumb",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 14
+    },
+    {
+      "name": "Zap Comix",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 15
+    },
+    {
+      "name": "Keep On Truckin'",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 14
+    },
+    {
+      "name": "Will Eisner",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 13
+    },
+    {
+      "name": "A Contract with God",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 14
+    },
+    {
+      "name": "Fun Home",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 13
+    },
+    {
+      "name": "Alison Bechdel",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 13
+    },
+    {
+      "name": "Bone",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 9
+    },
+    {
+      "name": "March",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 12
+    },
+    {
+      "name": "American Born Chinese",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 10
+    },
+    {
+      "name": "Smile",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 6
+    },
+    {
+      "name": "Raina Telgemeier",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 8
+    },
+    {
+      "name": "Hellboy",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 10
+    },
+    {
+      "name": "Jimmy Corrigan, the Smartest Kid on Earth",
+      "facet": "Graphic novels and underground comix",
+      "known_at": 15
+    },
+    {
+      "name": "Comics Code Authority",
+      "facet": "Comic book culture and terms",
+      "known_at": 13
+    },
+    {
+      "name": "Seduction of the Innocent",
+      "facet": "Comic book culture and terms",
+      "known_at": 15
+    },
+    {
+      "name": "Golden Age of Comic Books",
+      "facet": "Comic book culture and terms",
+      "known_at": 11
+    },
+    {
+      "name": "Silver Age of Comic Books",
+      "facet": "Comic book culture and terms",
+      "known_at": 13
+    },
+    {
+      "name": "Speech balloon",
+      "facet": "Comic book culture and terms",
+      "known_at": 4
+    },
+    {
+      "name": "Sidekick",
+      "facet": "Comic book culture and terms",
+      "known_at": 4
+    },
+    {
+      "name": "Secret identity",
+      "facet": "Comic book culture and terms",
+      "known_at": 3
+    },
+    {
+      "name": "Origin story",
+      "facet": "Comic book culture and terms",
+      "known_at": 7
+    },
+    {
+      "name": "Crossover",
+      "facet": "Comic book culture and terms",
+      "known_at": 8
+    },
+    {
+      "name": "Retcon",
+      "facet": "Comic book culture and terms",
+      "known_at": 13
+    },
+    {
+      "name": "Variant cover",
+      "facet": "Comic book culture and terms",
+      "known_at": 11
+    },
+    {
+      "name": "Multiverse",
+      "facet": "Comic book culture and terms",
+      "known_at": 6
+    },
+    {
+      "name": "Free Comic Book Day",
+      "facet": "Comic book culture and terms",
+      "known_at": 10
+    },
+    {
+      "name": "Eisner Award",
+      "facet": "Comic book culture and terms",
+      "known_at": 14
+    },
+    {
+      "name": "Kryptonite",
+      "facet": "Comic book culture and terms",
+      "known_at": 3
+    },
+    {
+      "name": "Batmobile",
+      "facet": "Comic book culture and terms",
+      "known_at": 2
+    },
+    {
+      "name": "Utility belt",
+      "facet": "Comic book culture and terms",
+      "known_at": 5
+    },
+    {
+      "name": "With great power comes great responsibility",
+      "facet": "Comic book culture and terms",
+      "known_at": 6
+    },
+    {
+      "name": "Thomas Cole",
+      "facet": "Early American and landscape painting",
+      "known_at": 14
+    },
+    {
+      "name": "Albert Bierstadt",
+      "facet": "Early American and landscape painting",
+      "known_at": 14
+    },
+    {
+      "name": "Frederic Edwin Church",
+      "facet": "Early American and landscape painting",
+      "known_at": 15
+    },
+    {
+      "name": "Gilbert Stuart",
+      "facet": "Early American and landscape painting",
+      "known_at": 13
+    },
+    {
+      "name": "John Trumbull's Declaration of Independence",
+      "facet": "Early American and landscape painting",
+      "known_at": 12
+    },
+    {
+      "name": "John Singleton Copley",
+      "facet": "Early American and landscape painting",
+      "known_at": 14
+    },
+    {
+      "name": "Charles Willson Peale",
+      "facet": "Early American and landscape painting",
+      "known_at": 14
+    },
+    {
+      "name": "John James Audubon",
+      "facet": "Early American and landscape painting",
+      "known_at": 12
+    },
+    {
+      "name": "The Birds of America",
+      "facet": "Early American and landscape painting",
+      "known_at": 13
+    },
+    {
+      "name": "Whistler's Mother",
+      "facet": "Early American and landscape painting",
+      "known_at": 11
+    },
+    {
+      "name": "John Singer Sargent",
+      "facet": "Early American and landscape painting",
+      "known_at": 13
+    },
+    {
+      "name": "Winslow Homer",
+      "facet": "Early American and landscape painting",
+      "known_at": 13
+    },
+    {
+      "name": "Thomas Eakins",
+      "facet": "Early American and landscape painting",
+      "known_at": 14
+    },
+    {
+      "name": "Mary Cassatt",
+      "facet": "Early American and landscape painting",
+      "known_at": 13
+    },
+    {
+      "name": "George Catlin",
+      "facet": "Early American and landscape painting",
+      "known_at": 15
+    },
+    {
+      "name": "Frederic Remington",
+      "facet": "Early American and landscape painting",
+      "known_at": 14
+    },
+    {
+      "name": "Edward Hopper",
+      "facet": "Modern American painters",
+      "known_at": 12
+    },
+    {
+      "name": "Nighthawks",
+      "facet": "Modern American painters",
+      "known_at": 11
+    },
+    {
+      "name": "Grant Wood",
+      "facet": "Modern American painters",
+      "known_at": 12
+    },
+    {
+      "name": "American Gothic",
+      "facet": "Modern American painters",
+      "known_at": 9
+    },
+    {
+      "name": "Georgia O'Keeffe",
+      "facet": "Modern American painters",
+      "known_at": 11
+    },
+    {
+      "name": "Andrew Wyeth",
+      "facet": "Modern American painters",
+      "known_at": 13
+    },
+    {
+      "name": "Christina's World",
+      "facet": "Modern American painters",
+      "known_at": 13
+    },
+    {
+      "name": "Jacob Lawrence",
+      "facet": "Modern American painters",
+      "known_at": 13
+    },
+    {
+      "name": "The Migration Series",
+      "facet": "Modern American painters",
+      "known_at": 14
+    },
+    {
+      "name": "Thomas Hart Benton",
+      "facet": "Modern American painters",
+      "known_at": 15
+    },
+    {
+      "name": "Jean-Michel Basquiat",
+      "facet": "Modern American painters",
+      "known_at": 12
+    },
+    {
+      "name": "Keith Haring",
+      "facet": "Modern American painters",
+      "known_at": 11
+    },
+    {
+      "name": "Bob Ross",
+      "facet": "Modern American painters",
+      "known_at": 7
+    },
+    {
+      "name": "The Joy of Painting",
+      "facet": "Modern American painters",
+      "known_at": 10
+    },
+    {
+      "name": "Kehinde Wiley",
+      "facet": "Modern American painters",
+      "known_at": 13
+    },
+    {
+      "name": "Romare Bearden",
+      "facet": "Modern American painters",
+      "known_at": 15
+    },
+    {
+      "name": "Grandma Moses",
+      "facet": "Modern American painters",
+      "known_at": 13
+    },
+    {
+      "name": "Edward Hicks",
+      "facet": "Modern American painters",
+      "known_at": 15
+    },
+    {
+      "name": "Andy Warhol",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 9
+    },
+    {
+      "name": "Campbell's Soup Cans",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 9
+    },
+    {
+      "name": "Marilyn Diptych",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 11
+    },
+    {
+      "name": "The Factory",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 13
+    },
+    {
+      "name": "Fifteen minutes of fame",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 11
+    },
+    {
+      "name": "Roy Lichtenstein",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 12
+    },
+    {
+      "name": "Ben-Day dots",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 13
+    },
+    {
+      "name": "Jackson Pollock",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 11
+    },
+    {
+      "name": "Drip painting",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 10
+    },
+    {
+      "name": "Action painting",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 13
+    },
+    {
+      "name": "Mark Rothko",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 13
+    },
+    {
+      "name": "Rothko Chapel",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 15
+    },
+    {
+      "name": "Color field painting",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 14
+    },
+    {
+      "name": "Willem de Kooning",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 14
+    },
+    {
+      "name": "Lee Krasner",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 15
+    },
+    {
+      "name": "Helen Frankenthaler",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 15
+    },
+    {
+      "name": "Jasper Johns",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 14
+    },
+    {
+      "name": "Robert Rauschenberg",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 14
+    },
+    {
+      "name": "Claes Oldenburg",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 14
+    },
+    {
+      "name": "Balloon Dog",
+      "facet": "Pop art and abstract expressionism",
+      "known_at": 11
+    },
+    {
+      "name": "Norman Rockwell",
+      "facet": "Illustration and magazine covers",
+      "known_at": 11
+    },
+    {
+      "name": "The Saturday Evening Post",
+      "facet": "Illustration and magazine covers",
+      "known_at": 12
+    },
+    {
+      "name": "Four Freedoms",
+      "facet": "Illustration and magazine covers",
+      "known_at": 14
+    },
+    {
+      "name": "The Problem We All Live With",
+      "facet": "Illustration and magazine covers",
+      "known_at": 13
+    },
+    {
+      "name": "I Want You poster",
+      "facet": "Illustration and magazine covers",
+      "known_at": 9
+    },
+    {
+      "name": "Gibson Girl",
+      "facet": "Illustration and magazine covers",
+      "known_at": 14
+    },
+    {
+      "name": "J. C. Leyendecker",
+      "facet": "Illustration and magazine covers",
+      "known_at": 15
+    },
+    {
+      "name": "Maxfield Parrish",
+      "facet": "Illustration and magazine covers",
+      "known_at": 15
+    },
+    {
+      "name": "N. C. Wyeth",
+      "facet": "Illustration and magazine covers",
+      "known_at": 15
+    },
+    {
+      "name": "Hope poster",
+      "facet": "Illustration and magazine covers",
+      "known_at": 11
+    },
+    {
+      "name": "Time Person of the Year",
+      "facet": "Illustration and magazine covers",
+      "known_at": 10
+    },
+    {
+      "name": "Eustace Tilley",
+      "facet": "Illustration and magazine covers",
+      "known_at": 15
+    },
+    {
+      "name": "View of the World from 9th Avenue",
+      "facet": "Illustration and magazine covers",
+      "known_at": 15
+    },
+    {
+      "name": "Raising the Flag on Iwo Jima",
+      "facet": "American photography",
+      "known_at": 10
+    },
+    {
+      "name": "Earthrise",
+      "facet": "American photography",
+      "known_at": 10
+    },
+    {
+      "name": "The Blue Marble",
+      "facet": "American photography",
+      "known_at": 9
+    },
+    {
+      "name": "V-J Day in Times Square",
+      "facet": "American photography",
+      "known_at": 11
+    },
+    {
+      "name": "Alfred Stieglitz",
+      "facet": "American photography",
+      "known_at": 14
+    },
+    {
+      "name": "Annie Leibovitz",
+      "facet": "American photography",
+      "known_at": 13
+    },
+    {
+      "name": "Eadweard Muybridge",
+      "facet": "American photography",
+      "known_at": 13
+    },
+    {
+      "name": "The Horse in Motion",
+      "facet": "American photography",
+      "known_at": 12
+    },
+    {
+      "name": "Polaroid",
+      "facet": "American photography",
+      "known_at": 6
+    },
+    {
+      "name": "Kodak",
+      "facet": "American photography",
+      "known_at": 8
+    },
+    {
+      "name": "Brownie camera",
+      "facet": "American photography",
+      "known_at": 14
+    },
+    {
+      "name": "Life magazine",
+      "facet": "American photography",
+      "known_at": 11
+    },
+    {
+      "name": "Gordon Parks",
+      "facet": "American photography",
+      "known_at": 14
+    },
+    {
+      "name": "Diane Arbus",
+      "facet": "American photography",
+      "known_at": 15
+    },
+    {
+      "name": "Walker Evans",
+      "facet": "American photography",
+      "known_at": 15
+    },
+    {
+      "name": "Quilt",
+      "facet": "Folk, quilt and Native American art",
+      "known_at": 3
+    },
+    {
+      "name": "Log cabin quilt",
+      "facet": "Folk, quilt and Native American art",
+      "known_at": 12
+    },
+    {
+      "name": "Amish quilt",
+      "facet": "Folk, quilt and Native American art",
+      "known_at": 12
+    },
+    {
+      "name": "Gee's Bend quilts",
+      "facet": "Folk, quilt and Native American art",
+      "known_at": 15
+    },
+    {
+      "name": "AIDS Memorial Quilt",
+      "facet": "Folk, quilt and Native American art",
+      "known_at": 13
+    },
+    {
+      "name": "Sand painting",
+      "facet": "Folk, quilt and Native American art",
+      "known_at": 12
+    },
+    {
+      "name": "Pueblo pottery",
+      "facet": "Folk, quilt and Native American art",
+      "known_at": 13
+    },
+    {
+      "name": "Maria Martinez",
+      "facet": "Folk, quilt and Native American art",
+      "known_at": 15
+    },
+    {
+      "name": "Ledger art",
+      "facet": "Folk, quilt and Native American art",
+      "known_at": 15
+    },
+    {
+      "name": "Shaker furniture",
+      "facet": "Folk, quilt and Native American art",
+      "known_at": 13
+    },
+    {
+      "name": "Scrimshaw",
+      "facet": "Folk, quilt and Native American art",
+      "known_at": 14
+    },
+    {
+      "name": "Duck decoy",
+      "facet": "Folk, quilt and Native American art",
+      "known_at": 10
+    },
+    {
+      "name": "Weather vane",
+      "facet": "Folk, quilt and Native American art",
+      "known_at": 6
+    },
+    {
+      "name": "Charging Bull",
+      "facet": "Museums, monuments and public art",
+      "known_at": 9
+    },
+    {
+      "name": "LOVE sculpture",
+      "facet": "Museums, monuments and public art",
+      "known_at": 11
+    },
+    {
+      "name": "Spoonbridge and Cherry",
+      "facet": "Museums, monuments and public art",
+      "known_at": 13
+    },
+    {
+      "name": "Spiral Jetty",
+      "facet": "Museums, monuments and public art",
+      "known_at": 15
+    },
+    {
+      "name": "Metropolitan Museum of Art",
+      "facet": "Museums, monuments and public art",
+      "known_at": 9
+    },
+    {
+      "name": "Museum of Modern Art",
+      "facet": "Museums, monuments and public art",
+      "known_at": 11
+    },
+    {
+      "name": "Art Institute of Chicago",
+      "facet": "Museums, monuments and public art",
+      "known_at": 13
+    },
+    {
+      "name": "National Gallery of Art",
+      "facet": "Museums, monuments and public art",
+      "known_at": 12
+    },
+    {
+      "name": "Getty Center",
+      "facet": "Museums, monuments and public art",
+      "known_at": 13
+    }
+  ]
+}

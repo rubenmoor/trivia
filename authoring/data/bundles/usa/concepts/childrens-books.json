@@ -1,0 +1,962 @@
+{
+  "subcategory": "childrens-books",
+  "facets": [
+    "Dr. Seuss books and characters",
+    "Classic picture books",
+    "Early readers and easy chapter books",
+    "Middle-grade novel classics",
+    "19th and early 20th century classics",
+    "Pioneer and historical fiction",
+    "Popular kids' book series",
+    "Fantasy and adventure for young readers",
+    "Newbery and Caldecott awards",
+    "Authors and illustrators",
+    "Books turned into movies and TV",
+    "Reading culture and book events"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Horton Hears a Who!",
+      "facet": "Dr. Seuss books and characters",
+      "known_at": 3
+    },
+    {
+      "name": "One Fish Two Fish Red Fish Blue Fish",
+      "facet": "Dr. Seuss books and characters",
+      "known_at": 3
+    },
+    {
+      "name": "Fox in Socks",
+      "facet": "Dr. Seuss books and characters",
+      "known_at": 5
+    },
+    {
+      "name": "Hop on Pop",
+      "facet": "Dr. Seuss books and characters",
+      "known_at": 5
+    },
+    {
+      "name": "Cindy Lou Who",
+      "facet": "Dr. Seuss books and characters",
+      "known_at": 5
+    },
+    {
+      "name": "Max the dog",
+      "facet": "Dr. Seuss books and characters",
+      "known_at": 5
+    },
+    {
+      "name": "Yertle the Turtle",
+      "facet": "Dr. Seuss books and characters",
+      "known_at": 8
+    },
+    {
+      "name": "The Sneetches",
+      "facet": "Dr. Seuss books and characters",
+      "known_at": 8
+    },
+    {
+      "name": "Horton Hatches the Egg",
+      "facet": "Dr. Seuss books and characters",
+      "known_at": 8
+    },
+    {
+      "name": "Bartholomew and the Oobleck",
+      "facet": "Dr. Seuss books and characters",
+      "known_at": 10
+    },
+    {
+      "name": "And to Think That I Saw It on Mulberry Street",
+      "facet": "Dr. Seuss books and characters",
+      "known_at": 12
+    },
+    {
+      "name": "The Butter Battle Book",
+      "facet": "Dr. Seuss books and characters",
+      "known_at": 12
+    },
+    {
+      "name": "Truffula Trees",
+      "facet": "Dr. Seuss books and characters",
+      "known_at": 5
+    },
+    {
+      "name": "Theodor Geisel",
+      "facet": "Dr. Seuss books and characters",
+      "known_at": 9
+    },
+    {
+      "name": "Brown Bear, Brown Bear, What Do You See?",
+      "facet": "Classic picture books",
+      "known_at": 2
+    },
+    {
+      "name": "The Snowy Day",
+      "facet": "Classic picture books",
+      "known_at": 7
+    },
+    {
+      "name": "Harold and the Purple Crayon",
+      "facet": "Classic picture books",
+      "known_at": 5
+    },
+    {
+      "name": "Chicka Chicka Boom Boom",
+      "facet": "Classic picture books",
+      "known_at": 4
+    },
+    {
+      "name": "Caps for Sale",
+      "facet": "Classic picture books",
+      "known_at": 7
+    },
+    {
+      "name": "Mike Mulligan and His Steam Shovel",
+      "facet": "Classic picture books",
+      "known_at": 9
+    },
+    {
+      "name": "The Little Engine That Could",
+      "facet": "Classic picture books",
+      "known_at": 3
+    },
+    {
+      "name": "Strega Nona",
+      "facet": "Classic picture books",
+      "known_at": 9
+    },
+    {
+      "name": "The Story of Ferdinand",
+      "facet": "Classic picture books",
+      "known_at": 8
+    },
+    {
+      "name": "Millions of Cats",
+      "facet": "Classic picture books",
+      "known_at": 13
+    },
+    {
+      "name": "Llama Llama Red Pajama",
+      "facet": "Classic picture books",
+      "known_at": 4
+    },
+    {
+      "name": "Don't Let the Pigeon Drive the Bus!",
+      "facet": "Classic picture books",
+      "known_at": 4
+    },
+    {
+      "name": "Blueberries for Sal",
+      "facet": "Classic picture books",
+      "known_at": 10
+    },
+    {
+      "name": "Pat the Bunny",
+      "facet": "Classic picture books",
+      "known_at": 10
+    },
+    {
+      "name": "Amelia Bedelia",
+      "facet": "Early readers and easy chapter books",
+      "known_at": 4
+    },
+    {
+      "name": "Little Bear",
+      "facet": "Early readers and easy chapter books",
+      "known_at": 6
+    },
+    {
+      "name": "Henry and Mudge",
+      "facet": "Early readers and easy chapter books",
+      "known_at": 7
+    },
+    {
+      "name": "Junie B. Jones",
+      "facet": "Early readers and easy chapter books",
+      "known_at": 4
+    },
+    {
+      "name": "Nate the Great",
+      "facet": "Early readers and easy chapter books",
+      "known_at": 7
+    },
+    {
+      "name": "Cam Jansen",
+      "facet": "Early readers and easy chapter books",
+      "known_at": 8
+    },
+    {
+      "name": "Elephant and Piggie",
+      "facet": "Early readers and easy chapter books",
+      "known_at": 4
+    },
+    {
+      "name": "Biscuit",
+      "facet": "Early readers and easy chapter books",
+      "known_at": 5
+    },
+    {
+      "name": "Danny and the Dinosaur",
+      "facet": "Early readers and easy chapter books",
+      "known_at": 7
+    },
+    {
+      "name": "Flat Stanley",
+      "facet": "Early readers and easy chapter books",
+      "known_at": 5
+    },
+    {
+      "name": "Mercy Watson",
+      "facet": "Early readers and easy chapter books",
+      "known_at": 7
+    },
+    {
+      "name": "Fly Guy",
+      "facet": "Early readers and easy chapter books",
+      "known_at": 5
+    },
+    {
+      "name": "Judy Moody",
+      "facet": "Early readers and easy chapter books",
+      "known_at": 5
+    },
+    {
+      "name": "Ivy and Bean",
+      "facet": "Early readers and easy chapter books",
+      "known_at": 6
+    },
+    {
+      "name": "Mr. Putter and Tabby",
+      "facet": "Early readers and easy chapter books",
+      "known_at": 9
+    },
+    {
+      "name": "Dick and Jane",
+      "facet": "Early readers and easy chapter books",
+      "known_at": 11
+    },
+    {
+      "name": "From the Mixed-Up Files of Mrs. Basil E. Frankweiler",
+      "facet": "Middle-grade novel classics",
+      "known_at": 10
+    },
+    {
+      "name": "Tales of a Fourth Grade Nothing",
+      "facet": "Middle-grade novel classics",
+      "known_at": 7
+    },
+    {
+      "name": "Old Yeller",
+      "facet": "Middle-grade novel classics",
+      "known_at": 9
+    },
+    {
+      "name": "Ramona Quimby",
+      "facet": "Middle-grade novel classics",
+      "known_at": 5
+    },
+    {
+      "name": "Harriet the Spy",
+      "facet": "Middle-grade novel classics",
+      "known_at": 9
+    },
+    {
+      "name": "My Side of the Mountain",
+      "facet": "Middle-grade novel classics",
+      "known_at": 10
+    },
+    {
+      "name": "Julie of the Wolves",
+      "facet": "Middle-grade novel classics",
+      "known_at": 11
+    },
+    {
+      "name": "The Westing Game",
+      "facet": "Middle-grade novel classics",
+      "known_at": 10
+    },
+    {
+      "name": "Frindle",
+      "facet": "Middle-grade novel classics",
+      "known_at": 8
+    },
+    {
+      "name": "Misty of Chincoteague",
+      "facet": "Middle-grade novel classics",
+      "known_at": 11
+    },
+    {
+      "name": "Adventures of Huckleberry Finn",
+      "facet": "19th and early 20th century classics",
+      "known_at": 8
+    },
+    {
+      "name": "Little Men",
+      "facet": "19th and early 20th century classics",
+      "known_at": 13
+    },
+    {
+      "name": "Pollyanna",
+      "facet": "19th and early 20th century classics",
+      "known_at": 10
+    },
+    {
+      "name": "Rebecca of Sunnybrook Farm",
+      "facet": "19th and early 20th century classics",
+      "known_at": 13
+    },
+    {
+      "name": "White Fang",
+      "facet": "19th and early 20th century classics",
+      "known_at": 9
+    },
+    {
+      "name": "Hans Brinker, or the Silver Skates",
+      "facet": "19th and early 20th century classics",
+      "known_at": 13
+    },
+    {
+      "name": "Raggedy Ann",
+      "facet": "19th and early 20th century classics",
+      "known_at": 8
+    },
+    {
+      "name": "The Bobbsey Twins",
+      "facet": "19th and early 20th century classics",
+      "known_at": 13
+    },
+    {
+      "name": "Tom Swift",
+      "facet": "19th and early 20th century classics",
+      "known_at": 14
+    },
+    {
+      "name": "The Prince and the Pauper",
+      "facet": "19th and early 20th century classics",
+      "known_at": 9
+    },
+    {
+      "name": "The Merry Adventures of Robin Hood",
+      "facet": "19th and early 20th century classics",
+      "known_at": 14
+    },
+    {
+      "name": "The Five Little Peppers and How They Grew",
+      "facet": "19th and early 20th century classics",
+      "known_at": 14
+    },
+    {
+      "name": "Little House in the Big Woods",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 9
+    },
+    {
+      "name": "Farmer Boy",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 11
+    },
+    {
+      "name": "Caddie Woodlawn",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 13
+    },
+    {
+      "name": "Sarah, Plain and Tall",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 9
+    },
+    {
+      "name": "Johnny Tremain",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 11
+    },
+    {
+      "name": "The Witch of Blackbird Pond",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 11
+    },
+    {
+      "name": "Roll of Thunder, Hear My Cry",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 10
+    },
+    {
+      "name": "Bud, Not Buddy",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 9
+    },
+    {
+      "name": "The Watsons Go to Birmingham",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 10
+    },
+    {
+      "name": "The Birchbark House",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 13
+    },
+    {
+      "name": "Dear America",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 10
+    },
+    {
+      "name": "American Girl",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 5
+    },
+    {
+      "name": "The Sign of the Beaver",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 11
+    },
+    {
+      "name": "Out of the Dust",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 12
+    },
+    {
+      "name": "My Brother Sam Is Dead",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 12
+    },
+    {
+      "name": "Across Five Aprils",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 13
+    },
+    {
+      "name": "Ben and Me",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 13
+    },
+    {
+      "name": "I Survived",
+      "facet": "Pioneer and historical fiction",
+      "known_at": 6
+    },
+    {
+      "name": "The Baby-Sitters Club",
+      "facet": "Popular kids' book series",
+      "known_at": 8
+    },
+    {
+      "name": "The Boxcar Children",
+      "facet": "Popular kids' book series",
+      "known_at": 7
+    },
+    {
+      "name": "Encyclopedia Brown",
+      "facet": "Popular kids' book series",
+      "known_at": 10
+    },
+    {
+      "name": "A Series of Unfortunate Events",
+      "facet": "Popular kids' book series",
+      "known_at": 7
+    },
+    {
+      "name": "The Berenstain Bears",
+      "facet": "Popular kids' book series",
+      "known_at": 4
+    },
+    {
+      "name": "Arthur",
+      "facet": "Popular kids' book series",
+      "known_at": 3
+    },
+    {
+      "name": "Pete the Cat",
+      "facet": "Popular kids' book series",
+      "known_at": 3
+    },
+    {
+      "name": "Fancy Nancy",
+      "facet": "Popular kids' book series",
+      "known_at": 5
+    },
+    {
+      "name": "The Magic School Bus",
+      "facet": "Popular kids' book series",
+      "known_at": 3
+    },
+    {
+      "name": "Wayside School",
+      "facet": "Popular kids' book series",
+      "known_at": 8
+    },
+    {
+      "name": "Choose Your Own Adventure",
+      "facet": "Popular kids' book series",
+      "known_at": 9
+    },
+    {
+      "name": "Big Nate",
+      "facet": "Popular kids' book series",
+      "known_at": 6
+    },
+    {
+      "name": "The Phantom Tollbooth",
+      "facet": "Fantasy and adventure for young readers",
+      "known_at": 9
+    },
+    {
+      "name": "Wings of Fire",
+      "facet": "Fantasy and adventure for young readers",
+      "known_at": 5
+    },
+    {
+      "name": "Ella Enchanted",
+      "facet": "Fantasy and adventure for young readers",
+      "known_at": 9
+    },
+    {
+      "name": "The Tale of Despereaux",
+      "facet": "Fantasy and adventure for young readers",
+      "known_at": 7
+    },
+    {
+      "name": "The Spiderwick Chronicles",
+      "facet": "Fantasy and adventure for young readers",
+      "known_at": 8
+    },
+    {
+      "name": "Fablehaven",
+      "facet": "Fantasy and adventure for young readers",
+      "known_at": 11
+    },
+    {
+      "name": "The Chronicles of Prydain",
+      "facet": "Fantasy and adventure for young readers",
+      "known_at": 13
+    },
+    {
+      "name": "Mrs. Frisby and the Rats of NIMH",
+      "facet": "Fantasy and adventure for young readers",
+      "known_at": 11
+    },
+    {
+      "name": "Bunnicula",
+      "facet": "Fantasy and adventure for young readers",
+      "known_at": 9
+    },
+    {
+      "name": "The City of Ember",
+      "facet": "Fantasy and adventure for young readers",
+      "known_at": 10
+    },
+    {
+      "name": "Eragon",
+      "facet": "Fantasy and adventure for young readers",
+      "known_at": 8
+    },
+    {
+      "name": "Gregor the Overlander",
+      "facet": "Fantasy and adventure for young readers",
+      "known_at": 11
+    },
+    {
+      "name": "The Girl Who Drank the Moon",
+      "facet": "Fantasy and adventure for young readers",
+      "known_at": 12
+    },
+    {
+      "name": "The Mysterious Benedict Society",
+      "facet": "Fantasy and adventure for young readers",
+      "known_at": 10
+    },
+    {
+      "name": "Keeper of the Lost Cities",
+      "facet": "Fantasy and adventure for young readers",
+      "known_at": 9
+    },
+    {
+      "name": "Newbery Medal",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 9
+    },
+    {
+      "name": "Caldecott Medal",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 10
+    },
+    {
+      "name": "John Newbery",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 13
+    },
+    {
+      "name": "Randolph Caldecott",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 14
+    },
+    {
+      "name": "Coretta Scott King Award",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 12
+    },
+    {
+      "name": "Newbery Honor",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 11
+    },
+    {
+      "name": "American Library Association",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 11
+    },
+    {
+      "name": "Theodor Seuss Geisel Award",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 13
+    },
+    {
+      "name": "Michael L. Printz Award",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 14
+    },
+    {
+      "name": "Pura Belpré Award",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 14
+    },
+    {
+      "name": "National Book Award for Young People's Literature",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 13
+    },
+    {
+      "name": "The Story of Mankind",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 15
+    },
+    {
+      "name": "The Invention of Hugo Cabret",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 10
+    },
+    {
+      "name": "The One and Only Ivan",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 8
+    },
+    {
+      "name": "Last Stop on Market Street",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 12
+    },
+    {
+      "name": "The Crossover",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 10
+    },
+    {
+      "name": "Officer Buckle and Gloria",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 11
+    },
+    {
+      "name": "Lon Po Po",
+      "facet": "Newbery and Caldecott awards",
+      "known_at": 13
+    },
+    {
+      "name": "Maurice Sendak",
+      "facet": "Authors and illustrators",
+      "known_at": 9
+    },
+    {
+      "name": "E. B. White",
+      "facet": "Authors and illustrators",
+      "known_at": 9
+    },
+    {
+      "name": "Eric Carle",
+      "facet": "Authors and illustrators",
+      "known_at": 6
+    },
+    {
+      "name": "L. Frank Baum",
+      "facet": "Authors and illustrators",
+      "known_at": 11
+    },
+    {
+      "name": "Rick Riordan",
+      "facet": "Authors and illustrators",
+      "known_at": 7
+    },
+    {
+      "name": "Jeff Kinney",
+      "facet": "Authors and illustrators",
+      "known_at": 7
+    },
+    {
+      "name": "Dav Pilkey",
+      "facet": "Authors and illustrators",
+      "known_at": 6
+    },
+    {
+      "name": "Kate DiCamillo",
+      "facet": "Authors and illustrators",
+      "known_at": 10
+    },
+    {
+      "name": "Lois Lowry",
+      "facet": "Authors and illustrators",
+      "known_at": 11
+    },
+    {
+      "name": "Mo Willems",
+      "facet": "Authors and illustrators",
+      "known_at": 8
+    },
+    {
+      "name": "Chris Van Allsburg",
+      "facet": "Authors and illustrators",
+      "known_at": 11
+    },
+    {
+      "name": "Ezra Jack Keats",
+      "facet": "Authors and illustrators",
+      "known_at": 12
+    },
+    {
+      "name": "Arnold Lobel",
+      "facet": "Authors and illustrators",
+      "known_at": 12
+    },
+    {
+      "name": "Madeleine L'Engle",
+      "facet": "Authors and illustrators",
+      "known_at": 11
+    },
+    {
+      "name": "Gary Paulsen",
+      "facet": "Authors and illustrators",
+      "known_at": 10
+    },
+    {
+      "name": "Louis Sachar",
+      "facet": "Authors and illustrators",
+      "known_at": 10
+    },
+    {
+      "name": "Margaret Wise Brown",
+      "facet": "Authors and illustrators",
+      "known_at": 12
+    },
+    {
+      "name": "Robert McCloskey",
+      "facet": "Authors and illustrators",
+      "known_at": 13
+    },
+    {
+      "name": "Jerry Pinkney",
+      "facet": "Authors and illustrators",
+      "known_at": 14
+    },
+    {
+      "name": "Jumanji",
+      "facet": "Books turned into movies and TV",
+      "known_at": 4
+    },
+    {
+      "name": "Zathura",
+      "facet": "Books turned into movies and TV",
+      "known_at": 9
+    },
+    {
+      "name": "Shrek!",
+      "facet": "Books turned into movies and TV",
+      "known_at": 9
+    },
+    {
+      "name": "The Wild Robot",
+      "facet": "Books turned into movies and TV",
+      "known_at": 4
+    },
+    {
+      "name": "Mr. Popper's Penguins",
+      "facet": "Books turned into movies and TV",
+      "known_at": 8
+    },
+    {
+      "name": "Freaky Friday",
+      "facet": "Books turned into movies and TV",
+      "known_at": 10
+    },
+    {
+      "name": "The Boss Baby",
+      "facet": "Books turned into movies and TV",
+      "known_at": 8
+    },
+    {
+      "name": "Meet the Robinsons",
+      "facet": "Books turned into movies and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Rise of the Guardians",
+      "facet": "Books turned into movies and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Hoot",
+      "facet": "Books turned into movies and TV",
+      "known_at": 11
+    },
+    {
+      "name": "The Princess and the Frog",
+      "facet": "Books turned into movies and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Tarzan",
+      "facet": "Books turned into movies and TV",
+      "known_at": 8
+    },
+    {
+      "name": "The Fox and the Hound",
+      "facet": "Books turned into movies and TV",
+      "known_at": 12
+    },
+    {
+      "name": "The Black Stallion",
+      "facet": "Books turned into movies and TV",
+      "known_at": 11
+    },
+    {
+      "name": "The Mouse and the Motorcycle",
+      "facet": "Books turned into movies and TV",
+      "known_at": 10
+    },
+    {
+      "name": "Read Across America",
+      "facet": "Reading culture and book events",
+      "known_at": 7
+    },
+    {
+      "name": "Reading Rainbow",
+      "facet": "Reading culture and book events",
+      "known_at": 9
+    },
+    {
+      "name": "LeVar Burton",
+      "facet": "Reading culture and book events",
+      "known_at": 11
+    },
+    {
+      "name": "Library card",
+      "facet": "Reading culture and book events",
+      "known_at": 2
+    },
+    {
+      "name": "Bookmobile",
+      "facet": "Reading culture and book events",
+      "known_at": 7
+    },
+    {
+      "name": "Summer reading program",
+      "facet": "Reading culture and book events",
+      "known_at": 4
+    },
+    {
+      "name": "Book It!",
+      "facet": "Reading culture and book events",
+      "known_at": 10
+    },
+    {
+      "name": "National Ambassador for Young People's Literature",
+      "facet": "Reading culture and book events",
+      "known_at": 14
+    },
+    {
+      "name": "Book report",
+      "facet": "Reading culture and book events",
+      "known_at": 5
+    },
+    {
+      "name": "Accelerated Reader",
+      "facet": "Reading culture and book events",
+      "known_at": 9
+    },
+    {
+      "name": "Weekly Reader",
+      "facet": "Reading culture and book events",
+      "known_at": 12
+    },
+    {
+      "name": "Scholastic Book Clubs",
+      "facet": "Reading culture and book events",
+      "known_at": 8
+    },
+    {
+      "name": "Dolly Parton's Imagination Library",
+      "facet": "Reading culture and book events",
+      "known_at": 11
+    },
+    {
+      "name": "Little Free Library",
+      "facet": "Reading culture and book events",
+      "known_at": 8
+    },
+    {
+      "name": "Children's Book Week",
+      "facet": "Reading culture and book events",
+      "known_at": 12
+    },
+    {
+      "name": "Patience and Fortitude",
+      "facet": "Reading culture and book events",
+      "known_at": 13
+    },
+    {
+      "name": "Highlights for Children",
+      "facet": "Reading culture and book events",
+      "known_at": 7
+    }
+  ]
+}

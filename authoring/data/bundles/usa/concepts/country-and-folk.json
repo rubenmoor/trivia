@@ -1,0 +1,1177 @@
+{
+  "subcategory": "country-and-folk",
+  "facets": [
+    "Country music legends",
+    "Modern country stars",
+    "Folk singers and protest songs",
+    "Bluegrass and old-time music",
+    "Instruments of country and folk",
+    "Nashville and country landmarks",
+    "Famous country and folk songs",
+    "Square dance and line dance",
+    "Cowboy songs and Western swing",
+    "Appalachian traditions and ballads",
+    "Country fashion and slang",
+    "Folk revival and festivals"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Dolly Parton",
+      "facet": "Country music legends",
+      "known_at": 4
+    },
+    {
+      "name": "Willie Nelson",
+      "facet": "Country music legends",
+      "known_at": 8
+    },
+    {
+      "name": "Hank Williams",
+      "facet": "Country music legends",
+      "known_at": 12
+    },
+    {
+      "name": "Patsy Cline",
+      "facet": "Country music legends",
+      "known_at": 11
+    },
+    {
+      "name": "Loretta Lynn",
+      "facet": "Country music legends",
+      "known_at": 12
+    },
+    {
+      "name": "Merle Haggard",
+      "facet": "Country music legends",
+      "known_at": 13
+    },
+    {
+      "name": "George Jones",
+      "facet": "Country music legends",
+      "known_at": 13
+    },
+    {
+      "name": "Tammy Wynette",
+      "facet": "Country music legends",
+      "known_at": 13
+    },
+    {
+      "name": "Waylon Jennings",
+      "facet": "Country music legends",
+      "known_at": 13
+    },
+    {
+      "name": "Kenny Rogers",
+      "facet": "Country music legends",
+      "known_at": 10
+    },
+    {
+      "name": "Reba McEntire",
+      "facet": "Country music legends",
+      "known_at": 9
+    },
+    {
+      "name": "Garth Brooks",
+      "facet": "Country music legends",
+      "known_at": 9
+    },
+    {
+      "name": "George Strait",
+      "facet": "Country music legends",
+      "known_at": 11
+    },
+    {
+      "name": "Glen Campbell",
+      "facet": "Country music legends",
+      "known_at": 12
+    },
+    {
+      "name": "Jimmie Rodgers",
+      "facet": "Country music legends",
+      "known_at": 14
+    },
+    {
+      "name": "The Carter Family",
+      "facet": "Country music legends",
+      "known_at": 13
+    },
+    {
+      "name": "Charley Pride",
+      "facet": "Country music legends",
+      "known_at": 13
+    },
+    {
+      "name": "Emmylou Harris",
+      "facet": "Country music legends",
+      "known_at": 13
+    },
+    {
+      "name": "Randy Travis",
+      "facet": "Country music legends",
+      "known_at": 13
+    },
+    {
+      "name": "Buck Owens",
+      "facet": "Country music legends",
+      "known_at": 13
+    },
+    {
+      "name": "Billy Ray Cyrus",
+      "facet": "Country music legends",
+      "known_at": 8
+    },
+    {
+      "name": "Taylor Swift",
+      "facet": "Modern country stars",
+      "known_at": 2
+    },
+    {
+      "name": "Carrie Underwood",
+      "facet": "Modern country stars",
+      "known_at": 8
+    },
+    {
+      "name": "Blake Shelton",
+      "facet": "Modern country stars",
+      "known_at": 8
+    },
+    {
+      "name": "Shania Twain",
+      "facet": "Modern country stars",
+      "known_at": 8
+    },
+    {
+      "name": "Morgan Wallen",
+      "facet": "Modern country stars",
+      "known_at": 9
+    },
+    {
+      "name": "Luke Bryan",
+      "facet": "Modern country stars",
+      "known_at": 10
+    },
+    {
+      "name": "Luke Combs",
+      "facet": "Modern country stars",
+      "known_at": 10
+    },
+    {
+      "name": "Keith Urban",
+      "facet": "Modern country stars",
+      "known_at": 10
+    },
+    {
+      "name": "Tim McGraw",
+      "facet": "Modern country stars",
+      "known_at": 10
+    },
+    {
+      "name": "Faith Hill",
+      "facet": "Modern country stars",
+      "known_at": 11
+    },
+    {
+      "name": "Kacey Musgraves",
+      "facet": "Modern country stars",
+      "known_at": 11
+    },
+    {
+      "name": "Chris Stapleton",
+      "facet": "Modern country stars",
+      "known_at": 11
+    },
+    {
+      "name": "Miranda Lambert",
+      "facet": "Modern country stars",
+      "known_at": 11
+    },
+    {
+      "name": "Kane Brown",
+      "facet": "Modern country stars",
+      "known_at": 11
+    },
+    {
+      "name": "Lainey Wilson",
+      "facet": "Modern country stars",
+      "known_at": 11
+    },
+    {
+      "name": "Zach Bryan",
+      "facet": "Modern country stars",
+      "known_at": 11
+    },
+    {
+      "name": "Brad Paisley",
+      "facet": "Modern country stars",
+      "known_at": 11
+    },
+    {
+      "name": "Kenny Chesney",
+      "facet": "Modern country stars",
+      "known_at": 11
+    },
+    {
+      "name": "The Chicks",
+      "facet": "Modern country stars",
+      "known_at": 11
+    },
+    {
+      "name": "Zac Brown Band",
+      "facet": "Modern country stars",
+      "known_at": 12
+    },
+    {
+      "name": "Cowboy Carter",
+      "facet": "Modern country stars",
+      "known_at": 8
+    },
+    {
+      "name": "Pete Seeger",
+      "facet": "Folk singers and protest songs",
+      "known_at": 12
+    },
+    {
+      "name": "Joan Baez",
+      "facet": "Folk singers and protest songs",
+      "known_at": 12
+    },
+    {
+      "name": "Joni Mitchell",
+      "facet": "Folk singers and protest songs",
+      "known_at": 11
+    },
+    {
+      "name": "Simon & Garfunkel",
+      "facet": "Folk singers and protest songs",
+      "known_at": 10
+    },
+    {
+      "name": "Peter, Paul and Mary",
+      "facet": "Folk singers and protest songs",
+      "known_at": 12
+    },
+    {
+      "name": "Lead Belly",
+      "facet": "Folk singers and protest songs",
+      "known_at": 13
+    },
+    {
+      "name": "Odetta",
+      "facet": "Folk singers and protest songs",
+      "known_at": 14
+    },
+    {
+      "name": "Phil Ochs",
+      "facet": "Folk singers and protest songs",
+      "known_at": 15
+    },
+    {
+      "name": "Arlo Guthrie",
+      "facet": "Folk singers and protest songs",
+      "known_at": 14
+    },
+    {
+      "name": "Tracy Chapman",
+      "facet": "Folk singers and protest songs",
+      "known_at": 11
+    },
+    {
+      "name": "Judy Collins",
+      "facet": "Folk singers and protest songs",
+      "known_at": 14
+    },
+    {
+      "name": "Buffy Sainte-Marie",
+      "facet": "Folk singers and protest songs",
+      "known_at": 14
+    },
+    {
+      "name": "Blowin' in the Wind",
+      "facet": "Folk singers and protest songs",
+      "known_at": 11
+    },
+    {
+      "name": "We Shall Overcome",
+      "facet": "Folk singers and protest songs",
+      "known_at": 10
+    },
+    {
+      "name": "The Times They Are a-Changin'",
+      "facet": "Folk singers and protest songs",
+      "known_at": 12
+    },
+    {
+      "name": "If I Had a Hammer",
+      "facet": "Folk singers and protest songs",
+      "known_at": 12
+    },
+    {
+      "name": "Where Have All the Flowers Gone?",
+      "facet": "Folk singers and protest songs",
+      "known_at": 13
+    },
+    {
+      "name": "Turn! Turn! Turn!",
+      "facet": "Folk singers and protest songs",
+      "known_at": 12
+    },
+    {
+      "name": "Alice's Restaurant",
+      "facet": "Folk singers and protest songs",
+      "known_at": 14
+    },
+    {
+      "name": "Bluegrass",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 8
+    },
+    {
+      "name": "Bill Monroe",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 13
+    },
+    {
+      "name": "Earl Scruggs",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 14
+    },
+    {
+      "name": "Flatt & Scruggs",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 14
+    },
+    {
+      "name": "Foggy Mountain Breakdown",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 14
+    },
+    {
+      "name": "The Ballad of Jed Clampett",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 13
+    },
+    {
+      "name": "Dueling Banjos",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 10
+    },
+    {
+      "name": "Alison Krauss",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 12
+    },
+    {
+      "name": "Ralph Stanley",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 14
+    },
+    {
+      "name": "Ricky Skaggs",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 14
+    },
+    {
+      "name": "Doc Watson",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 14
+    },
+    {
+      "name": "Billy Strings",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 14
+    },
+    {
+      "name": "Nickel Creek",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 14
+    },
+    {
+      "name": "O Brother, Where Art Thou?",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 11
+    },
+    {
+      "name": "Man of Constant Sorrow",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 12
+    },
+    {
+      "name": "Rocky Top",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 12
+    },
+    {
+      "name": "Orange Blossom Special",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 13
+    },
+    {
+      "name": "Jug band",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 10
+    },
+    {
+      "name": "String band",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 10
+    },
+    {
+      "name": "Clawhammer",
+      "facet": "Bluegrass and old-time music",
+      "known_at": 13
+    },
+    {
+      "name": "Banjo",
+      "facet": "Instruments of country and folk",
+      "known_at": 3
+    },
+    {
+      "name": "Fiddle",
+      "facet": "Instruments of country and folk",
+      "known_at": 4
+    },
+    {
+      "name": "Acoustic guitar",
+      "facet": "Instruments of country and folk",
+      "known_at": 2
+    },
+    {
+      "name": "Harmonica",
+      "facet": "Instruments of country and folk",
+      "known_at": 3
+    },
+    {
+      "name": "Mandolin",
+      "facet": "Instruments of country and folk",
+      "known_at": 7
+    },
+    {
+      "name": "Pedal steel guitar",
+      "facet": "Instruments of country and folk",
+      "known_at": 11
+    },
+    {
+      "name": "Dobro",
+      "facet": "Instruments of country and folk",
+      "known_at": 12
+    },
+    {
+      "name": "Upright bass",
+      "facet": "Instruments of country and folk",
+      "known_at": 6
+    },
+    {
+      "name": "Washboard",
+      "facet": "Instruments of country and folk",
+      "known_at": 5
+    },
+    {
+      "name": "Jug",
+      "facet": "Instruments of country and folk",
+      "known_at": 6
+    },
+    {
+      "name": "Spoons",
+      "facet": "Instruments of country and folk",
+      "known_at": 5
+    },
+    {
+      "name": "Autoharp",
+      "facet": "Instruments of country and folk",
+      "known_at": 12
+    },
+    {
+      "name": "Appalachian dulcimer",
+      "facet": "Instruments of country and folk",
+      "known_at": 12
+    },
+    {
+      "name": "Hammered dulcimer",
+      "facet": "Instruments of country and folk",
+      "known_at": 13
+    },
+    {
+      "name": "Fender Telecaster",
+      "facet": "Instruments of country and folk",
+      "known_at": 12
+    },
+    {
+      "name": "Washtub bass",
+      "facet": "Instruments of country and folk",
+      "known_at": 11
+    },
+    {
+      "name": "Jaw harp",
+      "facet": "Instruments of country and folk",
+      "known_at": 10
+    },
+    {
+      "name": "Accordion",
+      "facet": "Instruments of country and folk",
+      "known_at": 5
+    },
+    {
+      "name": "Capo",
+      "facet": "Instruments of country and folk",
+      "known_at": 10
+    },
+    {
+      "name": "Twelve-string guitar",
+      "facet": "Instruments of country and folk",
+      "known_at": 10
+    },
+    {
+      "name": "Ryman Auditorium",
+      "facet": "Nashville and country landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Country Music Hall of Fame",
+      "facet": "Nashville and country landmarks",
+      "known_at": 10
+    },
+    {
+      "name": "Music Row",
+      "facet": "Nashville and country landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Lower Broadway",
+      "facet": "Nashville and country landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Dollywood",
+      "facet": "Nashville and country landmarks",
+      "known_at": 8
+    },
+    {
+      "name": "Bristol, Tennessee",
+      "facet": "Nashville and country landmarks",
+      "known_at": 14
+    },
+    {
+      "name": "Branson, Missouri",
+      "facet": "Nashville and country landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Bakersfield",
+      "facet": "Nashville and country landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Tootsie's Orchid Lounge",
+      "facet": "Nashville and country landmarks",
+      "known_at": 14
+    },
+    {
+      "name": "Bluebird Cafe",
+      "facet": "Nashville and country landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "RCA Studio B",
+      "facet": "Nashville and country landmarks",
+      "known_at": 14
+    },
+    {
+      "name": "Johnny Cash Museum",
+      "facet": "Nashville and country landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Gaylord Opryland",
+      "facet": "Nashville and country landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "CMA Awards",
+      "facet": "Nashville and country landmarks",
+      "known_at": 10
+    },
+    {
+      "name": "Parthenon (Nashville)",
+      "facet": "Nashville and country landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Luckenbach, Texas",
+      "facet": "Nashville and country landmarks",
+      "known_at": 14
+    },
+    {
+      "name": "Jolene",
+      "facet": "Famous country and folk songs",
+      "known_at": 7
+    },
+    {
+      "name": "Friends in Low Places",
+      "facet": "Famous country and folk songs",
+      "known_at": 11
+    },
+    {
+      "name": "Before He Cheats",
+      "facet": "Famous country and folk songs",
+      "known_at": 11
+    },
+    {
+      "name": "Old Town Road",
+      "facet": "Famous country and folk songs",
+      "known_at": 4
+    },
+    {
+      "name": "Achy Breaky Heart",
+      "facet": "Famous country and folk songs",
+      "known_at": 8
+    },
+    {
+      "name": "Crazy",
+      "facet": "Famous country and folk songs",
+      "known_at": 12
+    },
+    {
+      "name": "Stand by Your Man",
+      "facet": "Famous country and folk songs",
+      "known_at": 12
+    },
+    {
+      "name": "9 to 5",
+      "facet": "Famous country and folk songs",
+      "known_at": 8
+    },
+    {
+      "name": "On the Road Again",
+      "facet": "Famous country and folk songs",
+      "known_at": 9
+    },
+    {
+      "name": "I Walk the Line",
+      "facet": "Famous country and folk songs",
+      "known_at": 10
+    },
+    {
+      "name": "The Gambler",
+      "facet": "Famous country and folk songs",
+      "known_at": 10
+    },
+    {
+      "name": "Man! I Feel Like a Woman!",
+      "facet": "Famous country and folk songs",
+      "known_at": 8
+    },
+    {
+      "name": "Folsom Prison Blues",
+      "facet": "Famous country and folk songs",
+      "known_at": 11
+    },
+    {
+      "name": "Your Cheatin' Heart",
+      "facet": "Famous country and folk songs",
+      "known_at": 13
+    },
+    {
+      "name": "He Stopped Loving Her Today",
+      "facet": "Famous country and folk songs",
+      "known_at": 14
+    },
+    {
+      "name": "Coal Miner's Daughter",
+      "facet": "Famous country and folk songs",
+      "known_at": 12
+    },
+    {
+      "name": "Islands in the Stream",
+      "facet": "Famous country and folk songs",
+      "known_at": 11
+    },
+    {
+      "name": "This Land Is Your Land",
+      "facet": "Famous country and folk songs",
+      "known_at": 8
+    },
+    {
+      "name": "I Will Always Love You",
+      "facet": "Famous country and folk songs",
+      "known_at": 5
+    },
+    {
+      "name": "You Are My Sunshine",
+      "facet": "Famous country and folk songs",
+      "known_at": 2
+    },
+    {
+      "name": "Wagon Wheel",
+      "facet": "Famous country and folk songs",
+      "known_at": 11
+    },
+    {
+      "name": "Square dance",
+      "facet": "Square dance and line dance",
+      "known_at": 5
+    },
+    {
+      "name": "Do-si-do",
+      "facet": "Square dance and line dance",
+      "known_at": 6
+    },
+    {
+      "name": "Allemande",
+      "facet": "Square dance and line dance",
+      "known_at": 13
+    },
+    {
+      "name": "Promenade",
+      "facet": "Square dance and line dance",
+      "known_at": 10
+    },
+    {
+      "name": "Square dance caller",
+      "facet": "Square dance and line dance",
+      "known_at": 9
+    },
+    {
+      "name": "Swing your partner",
+      "facet": "Square dance and line dance",
+      "known_at": 8
+    },
+    {
+      "name": "Line dance",
+      "facet": "Square dance and line dance",
+      "known_at": 5
+    },
+    {
+      "name": "Boot Scootin' Boogie",
+      "facet": "Square dance and line dance",
+      "known_at": 11
+    },
+    {
+      "name": "Electric Slide",
+      "facet": "Square dance and line dance",
+      "known_at": 10
+    },
+    {
+      "name": "Cha Cha Slide",
+      "facet": "Square dance and line dance",
+      "known_at": 6
+    },
+    {
+      "name": "Cotton-Eye Joe",
+      "facet": "Square dance and line dance",
+      "known_at": 7
+    },
+    {
+      "name": "Copperhead Road",
+      "facet": "Square dance and line dance",
+      "known_at": 12
+    },
+    {
+      "name": "Texas two-step",
+      "facet": "Square dance and line dance",
+      "known_at": 10
+    },
+    {
+      "name": "Clogging",
+      "facet": "Square dance and line dance",
+      "known_at": 11
+    },
+    {
+      "name": "Contra dance",
+      "facet": "Square dance and line dance",
+      "known_at": 13
+    },
+    {
+      "name": "Barn dance",
+      "facet": "Square dance and line dance",
+      "known_at": 7
+    },
+    {
+      "name": "Hoedown",
+      "facet": "Square dance and line dance",
+      "known_at": 8
+    },
+    {
+      "name": "Virginia reel",
+      "facet": "Square dance and line dance",
+      "known_at": 12
+    },
+    {
+      "name": "Grapevine",
+      "facet": "Square dance and line dance",
+      "known_at": 11
+    },
+    {
+      "name": "Tush Push",
+      "facet": "Square dance and line dance",
+      "known_at": 14
+    },
+    {
+      "name": "Happy Trails",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 12
+    },
+    {
+      "name": "Roy Rogers",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 12
+    },
+    {
+      "name": "Bob Wills",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 14
+    },
+    {
+      "name": "Western swing",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 12
+    },
+    {
+      "name": "San Antonio Rose",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 14
+    },
+    {
+      "name": "Don't Fence Me In",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 13
+    },
+    {
+      "name": "Back in the Saddle Again",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 13
+    },
+    {
+      "name": "The Streets of Laredo",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 13
+    },
+    {
+      "name": "Red River Valley",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 11
+    },
+    {
+      "name": "Singing cowboy",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 11
+    },
+    {
+      "name": "Marty Robbins",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 13
+    },
+    {
+      "name": "El Paso",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 13
+    },
+    {
+      "name": "Rawhide",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 11
+    },
+    {
+      "name": "Mamas Don't Let Your Babies Grow Up to Be Cowboys",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 13
+    },
+    {
+      "name": "Sons of the Pioneers",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 14
+    },
+    {
+      "name": "Tumbling Tumbleweeds",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 13
+    },
+    {
+      "name": "Rhinestone Cowboy",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 11
+    },
+    {
+      "name": "Yodeling",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 6
+    },
+    {
+      "name": "Asleep at the Wheel",
+      "facet": "Cowboy songs and Western swing",
+      "known_at": 14
+    },
+    {
+      "name": "She'll Be Coming 'Round the Mountain",
+      "facet": "Appalachian traditions and ballads",
+      "known_at": 3
+    },
+    {
+      "name": "Barbara Allen",
+      "facet": "Appalachian traditions and ballads",
+      "known_at": 14
+    },
+    {
+      "name": "Shady Grove",
+      "facet": "Appalachian traditions and ballads",
+      "known_at": 14
+    },
+    {
+      "name": "Old Joe Clark",
+      "facet": "Appalachian traditions and ballads",
+      "known_at": 14
+    },
+    {
+      "name": "Wildwood Flower",
+      "facet": "Appalachian traditions and ballads",
+      "known_at": 14
+    },
+    {
+      "name": "Keep On the Sunny Side",
+      "facet": "Appalachian traditions and ballads",
+      "known_at": 14
+    },
+    {
+      "name": "Will the Circle Be Unbroken",
+      "facet": "Appalachian traditions and ballads",
+      "known_at": 12
+    },
+    {
+      "name": "Down in the Valley",
+      "facet": "Appalachian traditions and ballads",
+      "known_at": 12
+    },
+    {
+      "name": "Sixteen Tons",
+      "facet": "Appalachian traditions and ballads",
+      "known_at": 12
+    },
+    {
+      "name": "Shenandoah",
+      "facet": "Appalachian traditions and ballads",
+      "known_at": 11
+    },
+    {
+      "name": "Shape-note singing",
+      "facet": "Appalachian traditions and ballads",
+      "known_at": 14
+    },
+    {
+      "name": "Sacred Harp",
+      "facet": "Appalachian traditions and ballads",
+      "known_at": 14
+    },
+    {
+      "name": "Quilting bee",
+      "facet": "Appalachian traditions and ballads",
+      "known_at": 9
+    },
+    {
+      "name": "Jack tales",
+      "facet": "Appalachian traditions and ballads",
+      "known_at": 14
+    },
+    {
+      "name": "Child ballads",
+      "facet": "Appalachian traditions and ballads",
+      "known_at": 15
+    },
+    {
+      "name": "Front porch picking",
+      "facet": "Appalachian traditions and ballads",
+      "known_at": 10
+    },
+    {
+      "name": "Cowboy boots",
+      "facet": "Country fashion and slang",
+      "known_at": 2
+    },
+    {
+      "name": "Bolo tie",
+      "facet": "Country fashion and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Rhinestones",
+      "facet": "Country fashion and slang",
+      "known_at": 9
+    },
+    {
+      "name": "Nudie suit",
+      "facet": "Country fashion and slang",
+      "known_at": 14
+    },
+    {
+      "name": "Belt buckle",
+      "facet": "Country fashion and slang",
+      "known_at": 6
+    },
+    {
+      "name": "Pearl-snap shirt",
+      "facet": "Country fashion and slang",
+      "known_at": 13
+    },
+    {
+      "name": "Fringe jacket",
+      "facet": "Country fashion and slang",
+      "known_at": 8
+    },
+    {
+      "name": "Y'all",
+      "facet": "Country fashion and slang",
+      "known_at": 5
+    },
+    {
+      "name": "Howdy",
+      "facet": "Country fashion and slang",
+      "known_at": 4
+    },
+    {
+      "name": "Yeehaw",
+      "facet": "Country fashion and slang",
+      "known_at": 3
+    },
+    {
+      "name": "Honky-tonk",
+      "facet": "Country fashion and slang",
+      "known_at": 10
+    },
+    {
+      "name": "Fixin' to",
+      "facet": "Country fashion and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Bless your heart",
+      "facet": "Country fashion and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Twang",
+      "facet": "Country fashion and slang",
+      "known_at": 10
+    },
+    {
+      "name": "Hillbilly",
+      "facet": "Country fashion and slang",
+      "known_at": 10
+    },
+    {
+      "name": "Hootenanny",
+      "facet": "Folk revival and festivals",
+      "known_at": 12
+    },
+    {
+      "name": "The Kingston Trio",
+      "facet": "Folk revival and festivals",
+      "known_at": 14
+    },
+    {
+      "name": "The Weavers",
+      "facet": "Folk revival and festivals",
+      "known_at": 14
+    },
+    {
+      "name": "Tom Dooley",
+      "facet": "Folk revival and festivals",
+      "known_at": 14
+    },
+    {
+      "name": "Dylan goes electric",
+      "facet": "Folk revival and festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Alan Lomax",
+      "facet": "Folk revival and festivals",
+      "known_at": 14
+    },
+    {
+      "name": "Smithsonian Folkways",
+      "facet": "Folk revival and festivals",
+      "known_at": 14
+    },
+    {
+      "name": "Anthology of American Folk Music",
+      "facet": "Folk revival and festivals",
+      "known_at": 15
+    },
+    {
+      "name": "MerleFest",
+      "facet": "Folk revival and festivals",
+      "known_at": 14
+    },
+    {
+      "name": "Hardly Strictly Bluegrass",
+      "facet": "Folk revival and festivals",
+      "known_at": 15
+    },
+    {
+      "name": "Stagecoach Festival",
+      "facet": "Folk revival and festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Inside Llewyn Davis",
+      "facet": "Folk revival and festivals",
+      "known_at": 14
+    },
+    {
+      "name": "A Mighty Wind",
+      "facet": "Folk revival and festivals",
+      "known_at": 14
+    },
+    {
+      "name": "The Lumineers",
+      "facet": "Folk revival and festivals",
+      "known_at": 11
+    },
+    {
+      "name": "The Avett Brothers",
+      "facet": "Folk revival and festivals",
+      "known_at": 13
+    }
+  ]
+}

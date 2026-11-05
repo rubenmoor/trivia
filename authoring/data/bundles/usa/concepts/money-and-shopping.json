@@ -1,0 +1,837 @@
+{
+  "subcategory": "money-and-shopping",
+  "facets": [
+    "Coins and their faces",
+    "Dollar bills and portraits",
+    "Money slang and sayings",
+    "Tipping and sales tax",
+    "Big-box stores and malls",
+    "Shopping holidays and sales",
+    "Supermarkets and grocery habits",
+    "Credit, banks and checks",
+    "Coupons, deals and rewards",
+    "Famous retailers and their history",
+    "Prices and costs through history",
+    "Garage sales and secondhand shopping"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 4,
+      "estimate": 4,
+      "record": 3,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 4,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Half dollar",
+      "facet": "Coins and their faces",
+      "known_at": 7
+    },
+    {
+      "name": "Sacagawea dollar",
+      "facet": "Coins and their faces",
+      "known_at": 10
+    },
+    {
+      "name": "Susan B. Anthony dollar",
+      "facet": "Coins and their faces",
+      "known_at": 12
+    },
+    {
+      "name": "50 State Quarters",
+      "facet": "Coins and their faces",
+      "known_at": 7
+    },
+    {
+      "name": "American Women quarters",
+      "facet": "Coins and their faces",
+      "known_at": 11
+    },
+    {
+      "name": "United States Mint",
+      "facet": "Coins and their faces",
+      "known_at": 8
+    },
+    {
+      "name": "Mint mark",
+      "facet": "Coins and their faces",
+      "known_at": 12
+    },
+    {
+      "name": "End of penny production",
+      "facet": "Coins and their faces",
+      "known_at": 10
+    },
+    {
+      "name": "American Gold Eagle",
+      "facet": "Coins and their faces",
+      "known_at": 13
+    },
+    {
+      "name": "One-dollar bill",
+      "facet": "Dollar bills and portraits",
+      "known_at": 3
+    },
+    {
+      "name": "Eye of Providence",
+      "facet": "Dollar bills and portraits",
+      "known_at": 9
+    },
+    {
+      "name": "Bureau of Engraving and Printing",
+      "facet": "Dollar bills and portraits",
+      "known_at": 12
+    },
+    {
+      "name": "Treasury Building",
+      "facet": "Dollar bills and portraits",
+      "known_at": 13
+    },
+    {
+      "name": "Federal Reserve note",
+      "facet": "Dollar bills and portraits",
+      "known_at": 12
+    },
+    {
+      "name": "Hundred-dollar bill",
+      "facet": "Dollar bills and portraits",
+      "known_at": 5
+    },
+    {
+      "name": "Benjamins",
+      "facet": "Money slang and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Dough",
+      "facet": "Money slang and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Bet your bottom dollar",
+      "facet": "Money slang and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Brother, Can You Spare a Dime?",
+      "facet": "Money slang and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Sawbuck",
+      "facet": "Money slang and sayings",
+      "known_at": 14
+    },
+    {
+      "name": "Cheddar",
+      "facet": "Money slang and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Tip jar",
+      "facet": "Tipping and sales tax",
+      "known_at": 5
+    },
+    {
+      "name": "Gratuity",
+      "facet": "Tipping and sales tax",
+      "known_at": 10
+    },
+    {
+      "name": "15 to 20 percent tip",
+      "facet": "Tipping and sales tax",
+      "known_at": 8
+    },
+    {
+      "name": "Automatic gratuity",
+      "facet": "Tipping and sales tax",
+      "known_at": 11
+    },
+    {
+      "name": "Tipped minimum wage",
+      "facet": "Tipping and sales tax",
+      "known_at": 12
+    },
+    {
+      "name": "Tip screen",
+      "facet": "Tipping and sales tax",
+      "known_at": 9
+    },
+    {
+      "name": "Keep the change",
+      "facet": "Tipping and sales tax",
+      "known_at": 6
+    },
+    {
+      "name": "Pizza delivery tip",
+      "facet": "Tipping and sales tax",
+      "known_at": 7
+    },
+    {
+      "name": "Valet parking",
+      "facet": "Tipping and sales tax",
+      "known_at": 9
+    },
+    {
+      "name": "Bellhop",
+      "facet": "Tipping and sales tax",
+      "known_at": 10
+    },
+    {
+      "name": "Hotel housekeeping tip",
+      "facet": "Tipping and sales tax",
+      "known_at": 11
+    },
+    {
+      "name": "Tip pooling",
+      "facet": "Tipping and sales tax",
+      "known_at": 13
+    },
+    {
+      "name": "Pre-tax price tag",
+      "facet": "Tipping and sales tax",
+      "known_at": 8
+    },
+    {
+      "name": "New Hampshire",
+      "facet": "Tipping and sales tax",
+      "known_at": 12
+    },
+    {
+      "name": "Use tax",
+      "facet": "Tipping and sales tax",
+      "known_at": 14
+    },
+    {
+      "name": "Costco hot dog combo",
+      "facet": "Big-box stores and malls",
+      "known_at": 9
+    },
+    {
+      "name": "Sam's Club",
+      "facet": "Big-box stores and malls",
+      "known_at": 8
+    },
+    {
+      "name": "Lowe's",
+      "facet": "Big-box stores and malls",
+      "known_at": 8
+    },
+    {
+      "name": "Best Buy",
+      "facet": "Big-box stores and malls",
+      "known_at": 6
+    },
+    {
+      "name": "Walmart greeter",
+      "facet": "Big-box stores and malls",
+      "known_at": 8
+    },
+    {
+      "name": "Supercenter",
+      "facet": "Big-box stores and malls",
+      "known_at": 10
+    },
+    {
+      "name": "Mall of America",
+      "facet": "Big-box stores and malls",
+      "known_at": 9
+    },
+    {
+      "name": "Anchor store",
+      "facet": "Big-box stores and malls",
+      "known_at": 12
+    },
+    {
+      "name": "Outlet mall",
+      "facet": "Big-box stores and malls",
+      "known_at": 8
+    },
+    {
+      "name": "Dead mall",
+      "facet": "Big-box stores and malls",
+      "known_at": 12
+    },
+    {
+      "name": "Southdale Center",
+      "facet": "Big-box stores and malls",
+      "known_at": 14
+    },
+    {
+      "name": "Mall rat",
+      "facet": "Big-box stores and malls",
+      "known_at": 10
+    },
+    {
+      "name": "Mall walking",
+      "facet": "Big-box stores and malls",
+      "known_at": 11
+    },
+    {
+      "name": "Presidents' Day sale",
+      "facet": "Shopping holidays and sales",
+      "known_at": 10
+    },
+    {
+      "name": "Memorial Day sale",
+      "facet": "Shopping holidays and sales",
+      "known_at": 10
+    },
+    {
+      "name": "Labor Day sale",
+      "facet": "Shopping holidays and sales",
+      "known_at": 10
+    },
+    {
+      "name": "Fourth of July sale",
+      "facet": "Shopping holidays and sales",
+      "known_at": 8
+    },
+    {
+      "name": "Thanksgiving store openings",
+      "facet": "Shopping holidays and sales",
+      "known_at": 11
+    },
+    {
+      "name": "Christmas creep",
+      "facet": "Shopping holidays and sales",
+      "known_at": 12
+    },
+    {
+      "name": "Day-after-Christmas returns",
+      "facet": "Shopping holidays and sales",
+      "known_at": 8
+    },
+    {
+      "name": "Mattress sale",
+      "facet": "Shopping holidays and sales",
+      "known_at": 11
+    },
+    {
+      "name": "Clarence Saunders",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 15
+    },
+    {
+      "name": "Shopping cart",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 2
+    },
+    {
+      "name": "Sylvan Goldman",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 15
+    },
+    {
+      "name": "Paper or plastic",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 7
+    },
+    {
+      "name": "Bagger",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 8
+    },
+    {
+      "name": "Self-checkout",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 4
+    },
+    {
+      "name": "Express lane",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 6
+    },
+    {
+      "name": "Universal Product Code",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 9
+    },
+    {
+      "name": "Store brand",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 9
+    },
+    {
+      "name": "Trader Joe's",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 8
+    },
+    {
+      "name": "Whole Foods Market",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 9
+    },
+    {
+      "name": "Kroger",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 9
+    },
+    {
+      "name": "Publix",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 10
+    },
+    {
+      "name": "H-E-B",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 11
+    },
+    {
+      "name": "Wegmans",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 12
+    },
+    {
+      "name": "Gallon of milk",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 4
+    },
+    {
+      "name": "Rotisserie chicken",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 7
+    },
+    {
+      "name": "Free samples",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 3
+    },
+    {
+      "name": "Deli counter",
+      "facet": "Supermarkets and grocery habits",
+      "known_at": 6
+    },
+    {
+      "name": "Credit card",
+      "facet": "Credit, banks and checks",
+      "known_at": 4
+    },
+    {
+      "name": "Credit score",
+      "facet": "Credit, banks and checks",
+      "known_at": 10
+    },
+    {
+      "name": "FICO score",
+      "facet": "Credit, banks and checks",
+      "known_at": 12
+    },
+    {
+      "name": "Diners Club",
+      "facet": "Credit, banks and checks",
+      "known_at": 13
+    },
+    {
+      "name": "American Express",
+      "facet": "Credit, banks and checks",
+      "known_at": 9
+    },
+    {
+      "name": "BankAmericard",
+      "facet": "Credit, banks and checks",
+      "known_at": 14
+    },
+    {
+      "name": "Personal check",
+      "facet": "Credit, banks and checks",
+      "known_at": 7
+    },
+    {
+      "name": "Routing number",
+      "facet": "Credit, banks and checks",
+      "known_at": 12
+    },
+    {
+      "name": "Bounced check",
+      "facet": "Credit, banks and checks",
+      "known_at": 10
+    },
+    {
+      "name": "Checkbook register",
+      "facet": "Credit, banks and checks",
+      "known_at": 11
+    },
+    {
+      "name": "Cashier's check",
+      "facet": "Credit, banks and checks",
+      "known_at": 12
+    },
+    {
+      "name": "Direct deposit",
+      "facet": "Credit, banks and checks",
+      "known_at": 10
+    },
+    {
+      "name": "Venmo",
+      "facet": "Credit, banks and checks",
+      "known_at": 8
+    },
+    {
+      "name": "Zelle",
+      "facet": "Credit, banks and checks",
+      "known_at": 10
+    },
+    {
+      "name": "ATM",
+      "facet": "Credit, banks and checks",
+      "known_at": 4
+    },
+    {
+      "name": "Federal Reserve",
+      "facet": "Credit, banks and checks",
+      "known_at": 10
+    },
+    {
+      "name": "Credit union",
+      "facet": "Credit, banks and checks",
+      "known_at": 11
+    },
+    {
+      "name": "401(k)",
+      "facet": "Credit, banks and checks",
+      "known_at": 12
+    },
+    {
+      "name": "Savings bond",
+      "facet": "Credit, banks and checks",
+      "known_at": 11
+    },
+    {
+      "name": "Coca-Cola coupon",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 13
+    },
+    {
+      "name": "Sunday newspaper coupons",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 9
+    },
+    {
+      "name": "Extreme Couponing",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 11
+    },
+    {
+      "name": "Buy one, get one free",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 5
+    },
+    {
+      "name": "Mail-in rebate",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 11
+    },
+    {
+      "name": "Loyalty card",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 7
+    },
+    {
+      "name": "Costco membership",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 8
+    },
+    {
+      "name": "Amazon Prime",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 5
+    },
+    {
+      "name": "S&H Green Stamps",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 14
+    },
+    {
+      "name": "Groupon",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 10
+    },
+    {
+      "name": "Price matching",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 10
+    },
+    {
+      "name": "Double coupons",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 12
+    },
+    {
+      "name": "Cash back",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 9
+    },
+    {
+      "name": "Frequent flyer miles",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 10
+    },
+    {
+      "name": "Punch card",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 6
+    },
+    {
+      "name": "Clearance rack",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 7
+    },
+    {
+      "name": "Happy hour",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 10
+    },
+    {
+      "name": "Kids eat free",
+      "facet": "Coupons, deals and rewards",
+      "known_at": 4
+    },
+    {
+      "name": "Sears",
+      "facet": "Famous retailers and their history",
+      "known_at": 9
+    },
+    {
+      "name": "Woolworth's",
+      "facet": "Famous retailers and their history",
+      "known_at": 12
+    },
+    {
+      "name": "Toys \"R\" Us",
+      "facet": "Famous retailers and their history",
+      "known_at": 7
+    },
+    {
+      "name": "Geoffrey the Giraffe",
+      "facet": "Famous retailers and their history",
+      "known_at": 10
+    },
+    {
+      "name": "Blockbuster",
+      "facet": "Famous retailers and their history",
+      "known_at": 9
+    },
+    {
+      "name": "RadioShack",
+      "facet": "Famous retailers and their history",
+      "known_at": 11
+    },
+    {
+      "name": "JCPenney",
+      "facet": "Famous retailers and their history",
+      "known_at": 10
+    },
+    {
+      "name": "Bloomingdale's",
+      "facet": "Famous retailers and their history",
+      "known_at": 11
+    },
+    {
+      "name": "Tiffany & Co.",
+      "facet": "Famous retailers and their history",
+      "known_at": 10
+    },
+    {
+      "name": "FAO Schwarz",
+      "facet": "Famous retailers and their history",
+      "known_at": 12
+    },
+    {
+      "name": "Dollar Tree",
+      "facet": "Famous retailers and their history",
+      "known_at": 7
+    },
+    {
+      "name": "Nordstrom",
+      "facet": "Famous retailers and their history",
+      "known_at": 11
+    },
+    {
+      "name": "Nickel Coca-Cola",
+      "facet": "Prices and costs through history",
+      "known_at": 12
+    },
+    {
+      "name": "Penny candy",
+      "facet": "Prices and costs through history",
+      "known_at": 9
+    },
+    {
+      "name": "Gas prices",
+      "facet": "Prices and costs through history",
+      "known_at": 8
+    },
+    {
+      "name": "Forever stamp",
+      "facet": "Prices and costs through history",
+      "known_at": 10
+    },
+    {
+      "name": "Federal minimum wage",
+      "facet": "Prices and costs through history",
+      "known_at": 10
+    },
+    {
+      "name": "Inflation",
+      "facet": "Prices and costs through history",
+      "known_at": 9
+    },
+    {
+      "name": "Consumer Price Index",
+      "facet": "Prices and costs through history",
+      "known_at": 13
+    },
+    {
+      "name": "Great Depression",
+      "facet": "Prices and costs through history",
+      "known_at": 9
+    },
+    {
+      "name": "Gold standard",
+      "facet": "Prices and costs through history",
+      "known_at": 12
+    },
+    {
+      "name": "World War II ration book",
+      "facet": "Prices and costs through history",
+      "known_at": 12
+    },
+    {
+      "name": "Stagflation",
+      "facet": "Prices and costs through history",
+      "known_at": 14
+    },
+    {
+      "name": "Estate sale",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 11
+    },
+    {
+      "name": "Rummage sale",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 10
+    },
+    {
+      "name": "Flea market",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 7
+    },
+    {
+      "name": "Swap meet",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 11
+    },
+    {
+      "name": "Thrift store",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 6
+    },
+    {
+      "name": "Goodwill",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 8
+    },
+    {
+      "name": "Salvation Army thrift store",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 10
+    },
+    {
+      "name": "Consignment shop",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 12
+    },
+    {
+      "name": "Pawn shop",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 9
+    },
+    {
+      "name": "Pawn Stars",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 9
+    },
+    {
+      "name": "Antiques Roadshow",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 11
+    },
+    {
+      "name": "Storage Wars",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 10
+    },
+    {
+      "name": "Thrift Shop",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 9
+    },
+    {
+      "name": "Craigslist",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 10
+    },
+    {
+      "name": "Facebook Marketplace",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 9
+    },
+    {
+      "name": "Rose Bowl Flea Market",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 13
+    },
+    {
+      "name": "Brimfield Antique Flea Market",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 15
+    },
+    {
+      "name": "Haggling",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 8
+    },
+    {
+      "name": "Vintage clothing",
+      "facet": "Garage sales and secondhand shopping",
+      "known_at": 8
+    }
+  ]
+}

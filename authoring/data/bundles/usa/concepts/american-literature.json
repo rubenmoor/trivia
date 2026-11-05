@@ -1,0 +1,1107 @@
+{
+  "subcategory": "american-literature",
+  "facets": [
+    "Classic American novels",
+    "Children's and picture books",
+    "Young adult and school-reading novels",
+    "Famous American authors' lives",
+    "American poets and poems",
+    "Memorable characters and creatures",
+    "Settings and real places",
+    "Literary movements and eras",
+    "Famous opening and quoted lines",
+    "Plays and playwrights",
+    "Genre fiction: horror, mystery, sci-fi",
+    "Folk tales and tall tales"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 2,
+      "made_of": 1,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "The Adventures of Huckleberry Finn",
+      "facet": "Classic American novels",
+      "known_at": 8
+    },
+    {
+      "name": "The Adventures of Tom Sawyer",
+      "facet": "Classic American novels",
+      "known_at": 6
+    },
+    {
+      "name": "The Scarlet Letter",
+      "facet": "Classic American novels",
+      "known_at": 10
+    },
+    {
+      "name": "Little Women",
+      "facet": "Classic American novels",
+      "known_at": 7
+    },
+    {
+      "name": "Invisible Man",
+      "facet": "Classic American novels",
+      "known_at": 13
+    },
+    {
+      "name": "Beloved",
+      "facet": "Classic American novels",
+      "known_at": 13
+    },
+    {
+      "name": "The Sun Also Rises",
+      "facet": "Classic American novels",
+      "known_at": 12
+    },
+    {
+      "name": "The Old Man and the Sea",
+      "facet": "Classic American novels",
+      "known_at": 10
+    },
+    {
+      "name": "East of Eden",
+      "facet": "Classic American novels",
+      "known_at": 12
+    },
+    {
+      "name": "Catch-22",
+      "facet": "Classic American novels",
+      "known_at": 12
+    },
+    {
+      "name": "Slaughterhouse-Five",
+      "facet": "Classic American novels",
+      "known_at": 12
+    },
+    {
+      "name": "The Call of the Wild",
+      "facet": "Classic American novels",
+      "known_at": 8
+    },
+    {
+      "name": "The Age of Innocence",
+      "facet": "Classic American novels",
+      "known_at": 14
+    },
+    {
+      "name": "The Sound and the Fury",
+      "facet": "Classic American novels",
+      "known_at": 14
+    },
+    {
+      "name": "The Color Purple",
+      "facet": "Classic American novels",
+      "known_at": 11
+    },
+    {
+      "name": "Their Eyes Were Watching God",
+      "facet": "Classic American novels",
+      "known_at": 13
+    },
+    {
+      "name": "The Cat in the Hat",
+      "facet": "Children's and picture books",
+      "known_at": 1
+    },
+    {
+      "name": "Green Eggs and Ham",
+      "facet": "Children's and picture books",
+      "known_at": 1
+    },
+    {
+      "name": "Where the Wild Things Are",
+      "facet": "Children's and picture books",
+      "known_at": 2
+    },
+    {
+      "name": "Goodnight Moon",
+      "facet": "Children's and picture books",
+      "known_at": 2
+    },
+    {
+      "name": "The Very Hungry Caterpillar",
+      "facet": "Children's and picture books",
+      "known_at": 1
+    },
+    {
+      "name": "The Wonderful Wizard of Oz",
+      "facet": "Children's and picture books",
+      "known_at": 3
+    },
+    {
+      "name": "Curious George",
+      "facet": "Children's and picture books",
+      "known_at": 2
+    },
+    {
+      "name": "Clifford the Big Red Dog",
+      "facet": "Children's and picture books",
+      "known_at": 1
+    },
+    {
+      "name": "Make Way for Ducklings",
+      "facet": "Children's and picture books",
+      "known_at": 6
+    },
+    {
+      "name": "Corduroy",
+      "facet": "Children's and picture books",
+      "known_at": 4
+    },
+    {
+      "name": "If You Give a Mouse a Cookie",
+      "facet": "Children's and picture books",
+      "known_at": 3
+    },
+    {
+      "name": "Diary of a Wimpy Kid",
+      "facet": "Children's and picture books",
+      "known_at": 3
+    },
+    {
+      "name": "Captain Underpants",
+      "facet": "Children's and picture books",
+      "known_at": 3
+    },
+    {
+      "name": "Dog Man",
+      "facet": "Children's and picture books",
+      "known_at": 3
+    },
+    {
+      "name": "Stuart Little",
+      "facet": "Children's and picture books",
+      "known_at": 4
+    },
+    {
+      "name": "Where the Sidewalk Ends",
+      "facet": "Children's and picture books",
+      "known_at": 5
+    },
+    {
+      "name": "Magic Tree House",
+      "facet": "Children's and picture books",
+      "known_at": 4
+    },
+    {
+      "name": "Frog and Toad",
+      "facet": "Children's and picture books",
+      "known_at": 4
+    },
+    {
+      "name": "Oh, the Places You'll Go!",
+      "facet": "Children's and picture books",
+      "known_at": 4
+    },
+    {
+      "name": "To Kill a Mockingbird",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 9
+    },
+    {
+      "name": "The Catcher in the Rye",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 11
+    },
+    {
+      "name": "The Outsiders",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 9
+    },
+    {
+      "name": "The Giver",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 8
+    },
+    {
+      "name": "Holes",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 6
+    },
+    {
+      "name": "Bridge to Terabithia",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 7
+    },
+    {
+      "name": "Hatchet",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 7
+    },
+    {
+      "name": "Where the Red Fern Grows",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 8
+    },
+    {
+      "name": "The Hunger Games",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 5
+    },
+    {
+      "name": "Of Mice and Men",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 10
+    },
+    {
+      "name": "Percy Jackson and the Olympians",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 5
+    },
+    {
+      "name": "Wonder",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 5
+    },
+    {
+      "name": "Number the Stars",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 8
+    },
+    {
+      "name": "Island of the Blue Dolphins",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 8
+    },
+    {
+      "name": "A Wrinkle in Time",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 7
+    },
+    {
+      "name": "Twilight",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 6
+    },
+    {
+      "name": "The Fault in Our Stars",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 8
+    },
+    {
+      "name": "Tuck Everlasting",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 8
+    },
+    {
+      "name": "Because of Winn-Dixie",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 6
+    },
+    {
+      "name": "The House on Mango Street",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 11
+    },
+    {
+      "name": "A Separate Peace",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 12
+    },
+    {
+      "name": "Maniac Magee",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 9
+    },
+    {
+      "name": "The Hate U Give",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 10
+    },
+    {
+      "name": "Esperanza Rising",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 9
+    },
+    {
+      "name": "Divergent",
+      "facet": "Young adult and school-reading novels",
+      "known_at": 7
+    },
+    {
+      "name": "F. Scott Fitzgerald",
+      "facet": "Famous American authors' lives",
+      "known_at": 11
+    },
+    {
+      "name": "Harper Lee",
+      "facet": "Famous American authors' lives",
+      "known_at": 10
+    },
+    {
+      "name": "John Steinbeck",
+      "facet": "Famous American authors' lives",
+      "known_at": 10
+    },
+    {
+      "name": "Herman Melville",
+      "facet": "Famous American authors' lives",
+      "known_at": 11
+    },
+    {
+      "name": "Nathaniel Hawthorne",
+      "facet": "Famous American authors' lives",
+      "known_at": 12
+    },
+    {
+      "name": "Jack London",
+      "facet": "Famous American authors' lives",
+      "known_at": 10
+    },
+    {
+      "name": "J. D. Salinger",
+      "facet": "Famous American authors' lives",
+      "known_at": 12
+    },
+    {
+      "name": "Kurt Vonnegut",
+      "facet": "Famous American authors' lives",
+      "known_at": 12
+    },
+    {
+      "name": "William Faulkner",
+      "facet": "Famous American authors' lives",
+      "known_at": 12
+    },
+    {
+      "name": "Henry David Thoreau",
+      "facet": "Famous American authors' lives",
+      "known_at": 11
+    },
+    {
+      "name": "Beverly Cleary",
+      "facet": "Famous American authors' lives",
+      "known_at": 7
+    },
+    {
+      "name": "Judy Blume",
+      "facet": "Famous American authors' lives",
+      "known_at": 9
+    },
+    {
+      "name": "Shel Silverstein",
+      "facet": "Famous American authors' lives",
+      "known_at": 5
+    },
+    {
+      "name": "Stephen King",
+      "facet": "Famous American authors' lives",
+      "known_at": 6
+    },
+    {
+      "name": "Robert Frost",
+      "facet": "American poets and poems",
+      "known_at": 9
+    },
+    {
+      "name": "The Road Not Taken",
+      "facet": "American poets and poems",
+      "known_at": 9
+    },
+    {
+      "name": "Leaves of Grass",
+      "facet": "American poets and poems",
+      "known_at": 11
+    },
+    {
+      "name": "O Captain! My Captain!",
+      "facet": "American poets and poems",
+      "known_at": 10
+    },
+    {
+      "name": "Stopping by Woods on a Snowy Evening",
+      "facet": "American poets and poems",
+      "known_at": 11
+    },
+    {
+      "name": "Paul Revere's Ride",
+      "facet": "American poets and poems",
+      "known_at": 9
+    },
+    {
+      "name": "Henry Wadsworth Longfellow",
+      "facet": "American poets and poems",
+      "known_at": 11
+    },
+    {
+      "name": "The Raven",
+      "facet": "American poets and poems",
+      "known_at": 7
+    },
+    {
+      "name": "I Know Why the Caged Bird Sings",
+      "facet": "American poets and poems",
+      "known_at": 10
+    },
+    {
+      "name": "Still I Rise",
+      "facet": "American poets and poems",
+      "known_at": 11
+    },
+    {
+      "name": "Sylvia Plath",
+      "facet": "American poets and poems",
+      "known_at": 12
+    },
+    {
+      "name": "Howl",
+      "facet": "American poets and poems",
+      "known_at": 13
+    },
+    {
+      "name": "The New Colossus",
+      "facet": "American poets and poems",
+      "known_at": 11
+    },
+    {
+      "name": "Casey at the Bat",
+      "facet": "American poets and poems",
+      "known_at": 10
+    },
+    {
+      "name": "E. E. Cummings",
+      "facet": "American poets and poems",
+      "known_at": 12
+    },
+    {
+      "name": "Harlem (A Dream Deferred)",
+      "facet": "American poets and poems",
+      "known_at": 13
+    },
+    {
+      "name": "Hope is the thing with feathers",
+      "facet": "American poets and poems",
+      "known_at": 12
+    },
+    {
+      "name": "Annabel Lee",
+      "facet": "American poets and poems",
+      "known_at": 12
+    },
+    {
+      "name": "Jay Gatsby",
+      "facet": "Memorable characters and creatures",
+      "known_at": 10
+    },
+    {
+      "name": "Atticus Finch",
+      "facet": "Memorable characters and creatures",
+      "known_at": 10
+    },
+    {
+      "name": "Scout Finch",
+      "facet": "Memorable characters and creatures",
+      "known_at": 10
+    },
+    {
+      "name": "Boo Radley",
+      "facet": "Memorable characters and creatures",
+      "known_at": 10
+    },
+    {
+      "name": "Holden Caulfield",
+      "facet": "Memorable characters and creatures",
+      "known_at": 11
+    },
+    {
+      "name": "Hester Prynne",
+      "facet": "Memorable characters and creatures",
+      "known_at": 12
+    },
+    {
+      "name": "Jo March",
+      "facet": "Memorable characters and creatures",
+      "known_at": 8
+    },
+    {
+      "name": "Wilbur the pig",
+      "facet": "Memorable characters and creatures",
+      "known_at": 3
+    },
+    {
+      "name": "Tin Man",
+      "facet": "Memorable characters and creatures",
+      "known_at": 3
+    },
+    {
+      "name": "Thing One and Thing Two",
+      "facet": "Memorable characters and creatures",
+      "known_at": 2
+    },
+    {
+      "name": "Sam-I-Am",
+      "facet": "Memorable characters and creatures",
+      "known_at": 2
+    },
+    {
+      "name": "Katniss Everdeen",
+      "facet": "Memorable characters and creatures",
+      "known_at": 5
+    },
+    {
+      "name": "Percy Jackson",
+      "facet": "Memorable characters and creatures",
+      "known_at": 5
+    },
+    {
+      "name": "Greg Heffley",
+      "facet": "Memorable characters and creatures",
+      "known_at": 3
+    },
+    {
+      "name": "Lennie Small",
+      "facet": "Memorable characters and creatures",
+      "known_at": 11
+    },
+    {
+      "name": "Scarlett O'Hara",
+      "facet": "Memorable characters and creatures",
+      "known_at": 9
+    },
+    {
+      "name": "Buck",
+      "facet": "Memorable characters and creatures",
+      "known_at": 9
+    },
+    {
+      "name": "Daisy Buchanan",
+      "facet": "Memorable characters and creatures",
+      "known_at": 11
+    },
+    {
+      "name": "Tom Joad",
+      "facet": "Memorable characters and creatures",
+      "known_at": 13
+    },
+    {
+      "name": "Maycomb",
+      "facet": "Settings and real places",
+      "known_at": 11
+    },
+    {
+      "name": "West Egg",
+      "facet": "Settings and real places",
+      "known_at": 12
+    },
+    {
+      "name": "Yoknapatawpha County",
+      "facet": "Settings and real places",
+      "known_at": 15
+    },
+    {
+      "name": "Pequod",
+      "facet": "Settings and real places",
+      "known_at": 12
+    },
+    {
+      "name": "Hannibal, Missouri",
+      "facet": "Settings and real places",
+      "known_at": 11
+    },
+    {
+      "name": "Emerald City",
+      "facet": "Settings and real places",
+      "known_at": 3
+    },
+    {
+      "name": "Whoville",
+      "facet": "Settings and real places",
+      "known_at": 2
+    },
+    {
+      "name": "Concord, Massachusetts",
+      "facet": "Settings and real places",
+      "known_at": 13
+    },
+    {
+      "name": "Cannery Row",
+      "facet": "Settings and real places",
+      "known_at": 13
+    },
+    {
+      "name": "Panem",
+      "facet": "Settings and real places",
+      "known_at": 6
+    },
+    {
+      "name": "Camp Half-Blood",
+      "facet": "Settings and real places",
+      "known_at": 6
+    },
+    {
+      "name": "Tara",
+      "facet": "Settings and real places",
+      "known_at": 11
+    },
+    {
+      "name": "Valley of Ashes",
+      "facet": "Settings and real places",
+      "known_at": 13
+    },
+    {
+      "name": "Salinas Valley",
+      "facet": "Settings and real places",
+      "known_at": 13
+    },
+    {
+      "name": "Derry, Maine",
+      "facet": "Settings and real places",
+      "known_at": 10
+    },
+    {
+      "name": "Transcendentalism",
+      "facet": "Literary movements and eras",
+      "known_at": 12
+    },
+    {
+      "name": "Beat Generation",
+      "facet": "Literary movements and eras",
+      "known_at": 12
+    },
+    {
+      "name": "Lost Generation",
+      "facet": "Literary movements and eras",
+      "known_at": 12
+    },
+    {
+      "name": "Southern Gothic",
+      "facet": "Literary movements and eras",
+      "known_at": 13
+    },
+    {
+      "name": "American Romanticism",
+      "facet": "Literary movements and eras",
+      "known_at": 13
+    },
+    {
+      "name": "Great American Novel",
+      "facet": "Literary movements and eras",
+      "known_at": 11
+    },
+    {
+      "name": "Slave narrative",
+      "facet": "Literary movements and eras",
+      "known_at": 11
+    },
+    {
+      "name": "American literary realism",
+      "facet": "Literary movements and eras",
+      "known_at": 13
+    },
+    {
+      "name": "Literary naturalism",
+      "facet": "Literary movements and eras",
+      "known_at": 14
+    },
+    {
+      "name": "Dime novel",
+      "facet": "Literary movements and eras",
+      "known_at": 12
+    },
+    {
+      "name": "Pulitzer Prize",
+      "facet": "Literary movements and eras",
+      "known_at": 10
+    },
+    {
+      "name": "National Book Award",
+      "facet": "Literary movements and eras",
+      "known_at": 12
+    },
+    {
+      "name": "Modernism",
+      "facet": "Literary movements and eras",
+      "known_at": 13
+    },
+    {
+      "name": "Confessional poetry",
+      "facet": "Literary movements and eras",
+      "known_at": 14
+    },
+    {
+      "name": "Muckrakers",
+      "facet": "Literary movements and eras",
+      "known_at": 13
+    },
+    {
+      "name": "Gonzo journalism",
+      "facet": "Literary movements and eras",
+      "known_at": 14
+    },
+    {
+      "name": "Algonquin Round Table",
+      "facet": "Literary movements and eras",
+      "known_at": 14
+    },
+    {
+      "name": "Banned Books Week",
+      "facet": "Literary movements and eras",
+      "known_at": 11
+    },
+    {
+      "name": "Call me Ishmael",
+      "facet": "Famous opening and quoted lines",
+      "known_at": 10
+    },
+    {
+      "name": "Tomorrow is another day",
+      "facet": "Famous opening and quoted lines",
+      "known_at": 10
+    },
+    {
+      "name": "It was a pleasure to burn",
+      "facet": "Famous opening and quoted lines",
+      "known_at": 13
+    },
+    {
+      "name": "Where's Papa going with that ax?",
+      "facet": "Famous opening and quoted lines",
+      "known_at": 13
+    },
+    {
+      "name": "I would prefer not to",
+      "facet": "Famous opening and quoted lines",
+      "known_at": 14
+    },
+    {
+      "name": "Because I could not stop for Death",
+      "facet": "Famous opening and quoted lines",
+      "known_at": 12
+    },
+    {
+      "name": "I, too, sing America",
+      "facet": "Famous opening and quoted lines",
+      "known_at": 13
+    },
+    {
+      "name": "I celebrate myself, and sing myself",
+      "facet": "Famous opening and quoted lines",
+      "known_at": 13
+    },
+    {
+      "name": "You never really understand a person until you consider things from his point of view",
+      "facet": "Famous opening and quoted lines",
+      "known_at": 12
+    },
+    {
+      "name": "Stay gold, Ponyboy",
+      "facet": "Famous opening and quoted lines",
+      "known_at": 9
+    },
+    {
+      "name": "May the odds be ever in your favor",
+      "facet": "Famous opening and quoted lines",
+      "known_at": 6
+    },
+    {
+      "name": "Some pig",
+      "facet": "Famous opening and quoted lines",
+      "known_at": 6
+    },
+    {
+      "name": "There's no place like home",
+      "facet": "Famous opening and quoted lines",
+      "known_at": 3
+    },
+    {
+      "name": "So it goes",
+      "facet": "Famous opening and quoted lines",
+      "known_at": 13
+    },
+    {
+      "name": "A rose is a rose is a rose",
+      "facet": "Famous opening and quoted lines",
+      "known_at": 13
+    },
+    {
+      "name": "The reports of my death are greatly exaggerated",
+      "facet": "Famous opening and quoted lines",
+      "known_at": 10
+    },
+    {
+      "name": "So we beat on, boats against the current",
+      "facet": "Famous opening and quoted lines",
+      "known_at": 12
+    },
+    {
+      "name": "Death of a Salesman",
+      "facet": "Plays and playwrights",
+      "known_at": 12
+    },
+    {
+      "name": "A Streetcar Named Desire",
+      "facet": "Plays and playwrights",
+      "known_at": 12
+    },
+    {
+      "name": "Our Town",
+      "facet": "Plays and playwrights",
+      "known_at": 12
+    },
+    {
+      "name": "Tennessee Williams",
+      "facet": "Plays and playwrights",
+      "known_at": 12
+    },
+    {
+      "name": "Eugene O'Neill",
+      "facet": "Plays and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "Lorraine Hansberry",
+      "facet": "Plays and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "A Raisin in the Sun",
+      "facet": "Plays and playwrights",
+      "known_at": 12
+    },
+    {
+      "name": "August Wilson",
+      "facet": "Plays and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "Fences",
+      "facet": "Plays and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "The Glass Menagerie",
+      "facet": "Plays and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "Hamilton",
+      "facet": "Plays and playwrights",
+      "known_at": 6
+    },
+    {
+      "name": "Lin-Manuel Miranda",
+      "facet": "Plays and playwrights",
+      "known_at": 8
+    },
+    {
+      "name": "Angels in America",
+      "facet": "Plays and playwrights",
+      "known_at": 14
+    },
+    {
+      "name": "Who's Afraid of Virginia Woolf?",
+      "facet": "Plays and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "Long Day's Journey into Night",
+      "facet": "Plays and playwrights",
+      "known_at": 14
+    },
+    {
+      "name": "Cat on a Hot Tin Roof",
+      "facet": "Plays and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "Tony Awards",
+      "facet": "Plays and playwrights",
+      "known_at": 10
+    },
+    {
+      "name": "Willy Loman",
+      "facet": "Plays and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "Stanley Kowalski",
+      "facet": "Plays and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "Thornton Wilder",
+      "facet": "Plays and playwrights",
+      "known_at": 14
+    },
+    {
+      "name": "Neil Simon",
+      "facet": "Plays and playwrights",
+      "known_at": 14
+    },
+    {
+      "name": "Wicked",
+      "facet": "Plays and playwrights",
+      "known_at": 6
+    },
+    {
+      "name": "The Tell-Tale Heart",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 9
+    },
+    {
+      "name": "The Fall of the House of Usher",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 12
+    },
+    {
+      "name": "The Murders in the Rue Morgue",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 13
+    },
+    {
+      "name": "Carrie",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 11
+    },
+    {
+      "name": "Fahrenheit 451",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 9
+    },
+    {
+      "name": "Ray Bradbury",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 10
+    },
+    {
+      "name": "Isaac Asimov",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 10
+    },
+    {
+      "name": "Three Laws of Robotics",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 11
+    },
+    {
+      "name": "Dune",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 9
+    },
+    {
+      "name": "Ender's Game",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 9
+    },
+    {
+      "name": "The Maltese Falcon",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 12
+    },
+    {
+      "name": "Sam Spade",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 13
+    },
+    {
+      "name": "Philip Marlowe",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 13
+    },
+    {
+      "name": "Raymond Chandler",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 13
+    },
+    {
+      "name": "H. P. Lovecraft",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 11
+    },
+    {
+      "name": "Cthulhu",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 10
+    },
+    {
+      "name": "Goosebumps",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 4
+    },
+    {
+      "name": "R. L. Stine",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 6
+    },
+    {
+      "name": "Nancy Drew",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 6
+    },
+    {
+      "name": "The Hardy Boys",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 7
+    },
+    {
+      "name": "Jurassic Park",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 5
+    },
+    {
+      "name": "Michael Crichton",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 9
+    },
+    {
+      "name": "Do Androids Dream of Electric Sheep?",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 12
+    },
+    {
+      "name": "The Martian",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 8
+    },
+    {
+      "name": "Ursula K. Le Guin",
+      "facet": "Genre fiction: horror, mystery, sci-fi",
+      "known_at": 12
+    },
+    {
+      "name": "Coyote the trickster",
+      "facet": "Folk tales and tall tales",
+      "known_at": 11
+    }
+  ]
+}

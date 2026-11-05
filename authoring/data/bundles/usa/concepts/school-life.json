@@ -1,0 +1,964 @@
+{
+  "subcategory": "school-life",
+  "facets": [
+    "Grade levels and school types",
+    "Grades, tests and report cards",
+    "School day routines",
+    "School lunch and cafeteria food",
+    "School buses and getting to school",
+    "Sports, cheerleading and pep rallies",
+    "Clubs, bands and activities",
+    "Dances, prom and graduation",
+    "School supplies and classroom objects",
+    "Yearbook, slang and school words",
+    "College admissions and campus life",
+    "Landmark moments in school history",
+    "Schools in films, TV and books"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Pre-K",
+      "facet": "Grade levels and school types",
+      "known_at": 5
+    },
+    {
+      "name": "First grade",
+      "facet": "Grade levels and school types",
+      "known_at": 2
+    },
+    {
+      "name": "Elementary school",
+      "facet": "Grade levels and school types",
+      "known_at": 3
+    },
+    {
+      "name": "Middle school",
+      "facet": "Grade levels and school types",
+      "known_at": 4
+    },
+    {
+      "name": "Junior high",
+      "facet": "Grade levels and school types",
+      "known_at": 7
+    },
+    {
+      "name": "High school",
+      "facet": "Grade levels and school types",
+      "known_at": 2
+    },
+    {
+      "name": "Twelfth grade",
+      "facet": "Grade levels and school types",
+      "known_at": 5
+    },
+    {
+      "name": "Junior year",
+      "facet": "Grade levels and school types",
+      "known_at": 8
+    },
+    {
+      "name": "Senior year",
+      "facet": "Grade levels and school types",
+      "known_at": 6
+    },
+    {
+      "name": "K-12",
+      "facet": "Grade levels and school types",
+      "known_at": 9
+    },
+    {
+      "name": "Public school",
+      "facet": "Grade levels and school types",
+      "known_at": 4
+    },
+    {
+      "name": "Private school",
+      "facet": "Grade levels and school types",
+      "known_at": 5
+    },
+    {
+      "name": "Charter school",
+      "facet": "Grade levels and school types",
+      "known_at": 11
+    },
+    {
+      "name": "Magnet school",
+      "facet": "Grade levels and school types",
+      "known_at": 12
+    },
+    {
+      "name": "Parochial school",
+      "facet": "Grade levels and school types",
+      "known_at": 13
+    },
+    {
+      "name": "Boarding school",
+      "facet": "Grade levels and school types",
+      "known_at": 7
+    },
+    {
+      "name": "Homeschooling",
+      "facet": "Grade levels and school types",
+      "known_at": 6
+    },
+    {
+      "name": "School district",
+      "facet": "Grade levels and school types",
+      "known_at": 9
+    },
+    {
+      "name": "Letter grades",
+      "facet": "Grades, tests and report cards",
+      "known_at": 5
+    },
+    {
+      "name": "Straight A's",
+      "facet": "Grades, tests and report cards",
+      "known_at": 6
+    },
+    {
+      "name": "Honor roll",
+      "facet": "Grades, tests and report cards",
+      "known_at": 8
+    },
+    {
+      "name": "ACT",
+      "facet": "Grades, tests and report cards",
+      "known_at": 11
+    },
+    {
+      "name": "PSAT",
+      "facet": "Grades, tests and report cards",
+      "known_at": 12
+    },
+    {
+      "name": "AP classes",
+      "facet": "Grades, tests and report cards",
+      "known_at": 10
+    },
+    {
+      "name": "Final exam",
+      "facet": "Grades, tests and report cards",
+      "known_at": 6
+    },
+    {
+      "name": "Midterm",
+      "facet": "Grades, tests and report cards",
+      "known_at": 8
+    },
+    {
+      "name": "Parent-teacher conference",
+      "facet": "Grades, tests and report cards",
+      "known_at": 7
+    },
+    {
+      "name": "Gold star sticker",
+      "facet": "Grades, tests and report cards",
+      "known_at": 2
+    },
+    {
+      "name": "Summer school",
+      "facet": "Grades, tests and report cards",
+      "known_at": 7
+    },
+    {
+      "name": "Standardized test",
+      "facet": "Grades, tests and report cards",
+      "known_at": 9
+    },
+    {
+      "name": "Extra credit",
+      "facet": "Grades, tests and report cards",
+      "known_at": 6
+    },
+    {
+      "name": "Grading on a curve",
+      "facet": "Grades, tests and report cards",
+      "known_at": 10
+    },
+    {
+      "name": "Scantron",
+      "facet": "Grades, tests and report cards",
+      "known_at": 10
+    },
+    {
+      "name": "Dean's list",
+      "facet": "Grades, tests and report cards",
+      "known_at": 11
+    },
+    {
+      "name": "Class rank",
+      "facet": "Grades, tests and report cards",
+      "known_at": 11
+    },
+    {
+      "name": "School bell",
+      "facet": "School day routines",
+      "known_at": 2
+    },
+    {
+      "name": "Principal's office",
+      "facet": "School day routines",
+      "known_at": 5
+    },
+    {
+      "name": "Study hall",
+      "facet": "School day routines",
+      "known_at": 9
+    },
+    {
+      "name": "Passing period",
+      "facet": "School day routines",
+      "known_at": 10
+    },
+    {
+      "name": "Substitute teacher",
+      "facet": "School day routines",
+      "known_at": 5
+    },
+    {
+      "name": "Roll call",
+      "facet": "School day routines",
+      "known_at": 6
+    },
+    {
+      "name": "Moment of silence",
+      "facet": "School day routines",
+      "known_at": 11
+    },
+    {
+      "name": "Tardy slip",
+      "facet": "School day routines",
+      "known_at": 9
+    },
+    {
+      "name": "Back-to-school night",
+      "facet": "School day routines",
+      "known_at": 10
+    },
+    {
+      "name": "Summer vacation",
+      "facet": "School day routines",
+      "known_at": 2
+    },
+    {
+      "name": "Cafeteria",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 3
+    },
+    {
+      "name": "Tater tots",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 6
+    },
+    {
+      "name": "Chocolate milk",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 2
+    },
+    {
+      "name": "Rectangle pizza",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 9
+    },
+    {
+      "name": "Chicken nuggets",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 2
+    },
+    {
+      "name": "Lunch tray",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 4
+    },
+    {
+      "name": "Lunchbox",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 2
+    },
+    {
+      "name": "PB&J sandwich",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 3
+    },
+    {
+      "name": "Mystery meat",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 9
+    },
+    {
+      "name": "Fish sticks",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 4
+    },
+    {
+      "name": "Milk carton",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 3
+    },
+    {
+      "name": "Food fight",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 5
+    },
+    {
+      "name": "Spork",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 6
+    },
+    {
+      "name": "Lunch money",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 6
+    },
+    {
+      "name": "Taco Tuesday",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 7
+    },
+    {
+      "name": "Salisbury steak",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 11
+    },
+    {
+      "name": "Uncrustables",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 10
+    },
+    {
+      "name": "National School Lunch Program",
+      "facet": "School lunch and cafeteria food",
+      "known_at": 12
+    },
+    {
+      "name": "School bus driver",
+      "facet": "School buses and getting to school",
+      "known_at": 3
+    },
+    {
+      "name": "Crossing guard",
+      "facet": "School buses and getting to school",
+      "known_at": 5
+    },
+    {
+      "name": "School bus stop arm",
+      "facet": "School buses and getting to school",
+      "known_at": 7
+    },
+    {
+      "name": "Bus stop",
+      "facet": "School buses and getting to school",
+      "known_at": 3
+    },
+    {
+      "name": "Back of the bus",
+      "facet": "School buses and getting to school",
+      "known_at": 5
+    },
+    {
+      "name": "Carpool line",
+      "facet": "School buses and getting to school",
+      "known_at": 8
+    },
+    {
+      "name": "Walking school bus",
+      "facet": "School buses and getting to school",
+      "known_at": 13
+    },
+    {
+      "name": "Bike rack",
+      "facet": "School buses and getting to school",
+      "known_at": 5
+    },
+    {
+      "name": "National School Bus Glossy Yellow",
+      "facet": "School buses and getting to school",
+      "known_at": 13
+    },
+    {
+      "name": "School zone",
+      "facet": "School buses and getting to school",
+      "known_at": 9
+    },
+    {
+      "name": "Flashing red lights",
+      "facet": "School buses and getting to school",
+      "known_at": 9
+    },
+    {
+      "name": "Student parking lot",
+      "facet": "School buses and getting to school",
+      "known_at": 10
+    },
+    {
+      "name": "Busing",
+      "facet": "School buses and getting to school",
+      "known_at": 13
+    },
+    {
+      "name": "School Safety Patrol",
+      "facet": "School buses and getting to school",
+      "known_at": 13
+    },
+    {
+      "name": "Late bus",
+      "facet": "School buses and getting to school",
+      "known_at": 11
+    },
+    {
+      "name": "Pom-poms",
+      "facet": "Sports, cheerleading and pep rallies",
+      "known_at": 3
+    },
+    {
+      "name": "Team captain",
+      "facet": "Sports, cheerleading and pep rallies",
+      "known_at": 5
+    },
+    {
+      "name": "Tryouts",
+      "facet": "Sports, cheerleading and pep rallies",
+      "known_at": 6
+    },
+    {
+      "name": "Basket toss",
+      "facet": "Sports, cheerleading and pep rallies",
+      "known_at": 12
+    },
+    {
+      "name": "Color guard",
+      "facet": "Clubs, bands and activities",
+      "known_at": 11
+    },
+    {
+      "name": "Glee club",
+      "facet": "Clubs, bands and activities",
+      "known_at": 9
+    },
+    {
+      "name": "Show choir",
+      "facet": "Clubs, bands and activities",
+      "known_at": 12
+    },
+    {
+      "name": "Debate team",
+      "facet": "Clubs, bands and activities",
+      "known_at": 9
+    },
+    {
+      "name": "Chess club",
+      "facet": "Clubs, bands and activities",
+      "known_at": 6
+    },
+    {
+      "name": "School play",
+      "facet": "Clubs, bands and activities",
+      "known_at": 5
+    },
+    {
+      "name": "School musical",
+      "facet": "Clubs, bands and activities",
+      "known_at": 7
+    },
+    {
+      "name": "FFA (Future Farmers of America)",
+      "facet": "Clubs, bands and activities",
+      "known_at": 13
+    },
+    {
+      "name": "Robotics club",
+      "facet": "Clubs, bands and activities",
+      "known_at": 8
+    },
+    {
+      "name": "Mathletes",
+      "facet": "Clubs, bands and activities",
+      "known_at": 10
+    },
+    {
+      "name": "Scripps National Spelling Bee",
+      "facet": "Clubs, bands and activities",
+      "known_at": 9
+    },
+    {
+      "name": "School newspaper",
+      "facet": "Clubs, bands and activities",
+      "known_at": 7
+    },
+    {
+      "name": "National Honor Society",
+      "facet": "Clubs, bands and activities",
+      "known_at": 10
+    },
+    {
+      "name": "Talent show",
+      "facet": "Clubs, bands and activities",
+      "known_at": 4
+    },
+    {
+      "name": "Academic Decathlon",
+      "facet": "Clubs, bands and activities",
+      "known_at": 13
+    },
+    {
+      "name": "After-school program",
+      "facet": "Clubs, bands and activities",
+      "known_at": 5
+    },
+    {
+      "name": "Prom limo",
+      "facet": "Dances, prom and graduation",
+      "known_at": 9
+    },
+    {
+      "name": "Homecoming dance",
+      "facet": "Dances, prom and graduation",
+      "known_at": 8
+    },
+    {
+      "name": "Graduation tassel",
+      "facet": "Dances, prom and graduation",
+      "known_at": 9
+    },
+    {
+      "name": "Backpack",
+      "facet": "School supplies and classroom objects",
+      "known_at": 1
+    },
+    {
+      "name": "No. 2 pencil",
+      "facet": "School supplies and classroom objects",
+      "known_at": 8
+    },
+    {
+      "name": "Composition notebook",
+      "facet": "School supplies and classroom objects",
+      "known_at": 7
+    },
+    {
+      "name": "Spiral notebook",
+      "facet": "School supplies and classroom objects",
+      "known_at": 4
+    },
+    {
+      "name": "Trapper Keeper",
+      "facet": "School supplies and classroom objects",
+      "known_at": 12
+    },
+    {
+      "name": "Elmer's glue",
+      "facet": "School supplies and classroom objects",
+      "known_at": 5
+    },
+    {
+      "name": "Three-ring binder",
+      "facet": "School supplies and classroom objects",
+      "known_at": 6
+    },
+    {
+      "name": "Chalkboard",
+      "facet": "School supplies and classroom objects",
+      "known_at": 2
+    },
+    {
+      "name": "Whiteboard",
+      "facet": "School supplies and classroom objects",
+      "known_at": 3
+    },
+    {
+      "name": "Overhead projector",
+      "facet": "School supplies and classroom objects",
+      "known_at": 11
+    },
+    {
+      "name": "Smartboard",
+      "facet": "School supplies and classroom objects",
+      "known_at": 9
+    },
+    {
+      "name": "Locker",
+      "facet": "School supplies and classroom objects",
+      "known_at": 4
+    },
+    {
+      "name": "Combination lock",
+      "facet": "School supplies and classroom objects",
+      "known_at": 7
+    },
+    {
+      "name": "School supply list",
+      "facet": "School supplies and classroom objects",
+      "known_at": 6
+    },
+    {
+      "name": "Pink Pearl eraser",
+      "facet": "School supplies and classroom objects",
+      "known_at": 11
+    },
+    {
+      "name": "Pencil sharpener",
+      "facet": "School supplies and classroom objects",
+      "known_at": 3,
+      "retired": "used_up: The options give only a forced place question or more photo identification, and a close-up photo question already exists."
+    },
+    {
+      "name": "12-inch ruler",
+      "facet": "School supplies and classroom objects",
+      "known_at": 5
+    },
+    {
+      "name": "Apple for the teacher",
+      "facet": "School supplies and classroom objects",
+      "known_at": 6
+    },
+    {
+      "name": "TI-84 graphing calculator",
+      "facet": "School supplies and classroom objects",
+      "known_at": 11
+    },
+    {
+      "name": "Highlighter",
+      "facet": "School supplies and classroom objects",
+      "known_at": 5
+    },
+    {
+      "name": "Construction paper",
+      "facet": "School supplies and classroom objects",
+      "known_at": 5
+    },
+    {
+      "name": "Safety scissors",
+      "facet": "School supplies and classroom objects",
+      "known_at": 4
+    },
+    {
+      "name": "Chromebook",
+      "facet": "School supplies and classroom objects",
+      "known_at": 10
+    },
+    {
+      "name": "Cubbies",
+      "facet": "School supplies and classroom objects",
+      "known_at": 5
+    },
+    {
+      "name": "HAGS (Have a great summer)",
+      "facet": "Yearbook, slang and school words",
+      "known_at": 12
+    },
+    {
+      "name": "Class clown",
+      "facet": "Yearbook, slang and school words",
+      "known_at": 6
+    },
+    {
+      "name": "Teacher's pet",
+      "facet": "Yearbook, slang and school words",
+      "known_at": 5
+    },
+    {
+      "name": "Jock",
+      "facet": "Yearbook, slang and school words",
+      "known_at": 8
+    },
+    {
+      "name": "Clique",
+      "facet": "Yearbook, slang and school words",
+      "known_at": 9
+    },
+    {
+      "name": "Freshman fifteen",
+      "facet": "Yearbook, slang and school words",
+      "known_at": 11
+    },
+    {
+      "name": "Senioritis",
+      "facet": "Yearbook, slang and school words",
+      "known_at": 10
+    },
+    {
+      "name": "Playing hooky",
+      "facet": "Yearbook, slang and school words",
+      "known_at": 10
+    },
+    {
+      "name": "Brown-noser",
+      "facet": "Yearbook, slang and school words",
+      "known_at": 11
+    },
+    {
+      "name": "Tattletale",
+      "facet": "Yearbook, slang and school words",
+      "known_at": 4
+    },
+    {
+      "name": "The dog ate my homework",
+      "facet": "Yearbook, slang and school words",
+      "known_at": 7
+    },
+    {
+      "name": "Bookworm",
+      "facet": "Yearbook, slang and school words",
+      "known_at": 5
+    },
+    {
+      "name": "Spitball",
+      "facet": "Yearbook, slang and school words",
+      "known_at": 8
+    },
+    {
+      "name": "Upperclassman",
+      "facet": "Yearbook, slang and school words",
+      "known_at": 9
+    },
+    {
+      "name": "Cramming",
+      "facet": "Yearbook, slang and school words",
+      "known_at": 8
+    },
+    {
+      "name": "All-nighter",
+      "facet": "Yearbook, slang and school words",
+      "known_at": 10
+    },
+    {
+      "name": "MIT",
+      "facet": "College admissions and campus life",
+      "known_at": 8
+    },
+    {
+      "name": "Common App",
+      "facet": "College admissions and campus life",
+      "known_at": 12
+    },
+    {
+      "name": "Early decision",
+      "facet": "College admissions and campus life",
+      "known_at": 13
+    },
+    {
+      "name": "Acceptance letter",
+      "facet": "College admissions and campus life",
+      "known_at": 8
+    },
+    {
+      "name": "Waitlist",
+      "facet": "College admissions and campus life",
+      "known_at": 10
+    },
+    {
+      "name": "Safety school",
+      "facet": "College admissions and campus life",
+      "known_at": 12
+    },
+    {
+      "name": "College essay",
+      "facet": "College admissions and campus life",
+      "known_at": 10
+    },
+    {
+      "name": "Legacy admission",
+      "facet": "College admissions and campus life",
+      "known_at": 13
+    },
+    {
+      "name": "Campus tour",
+      "facet": "College admissions and campus life",
+      "known_at": 8
+    },
+    {
+      "name": "Scholarship",
+      "facet": "College admissions and campus life",
+      "known_at": 7
+    },
+    {
+      "name": "Student loans",
+      "facet": "College admissions and campus life",
+      "known_at": 10
+    },
+    {
+      "name": "FAFSA",
+      "facet": "College admissions and campus life",
+      "known_at": 12
+    },
+    {
+      "name": "Roommate",
+      "facet": "College admissions and campus life",
+      "known_at": 6
+    },
+    {
+      "name": "Resident assistant (RA)",
+      "facet": "College admissions and campus life",
+      "known_at": 12
+    },
+    {
+      "name": "Greek life",
+      "facet": "College admissions and campus life",
+      "known_at": 11
+    },
+    {
+      "name": "College major",
+      "facet": "College admissions and campus life",
+      "known_at": 8
+    },
+    {
+      "name": "Undeclared major",
+      "facet": "College admissions and campus life",
+      "known_at": 12
+    },
+    {
+      "name": "HBCU",
+      "facet": "College admissions and campus life",
+      "known_at": 12
+    },
+    {
+      "name": "Dining hall",
+      "facet": "College admissions and campus life",
+      "known_at": 8
+    },
+    {
+      "name": "James Meredith",
+      "facet": "Landmark moments in school history",
+      "known_at": 13
+    },
+    {
+      "name": "Mendez v. Westminster",
+      "facet": "Landmark moments in school history",
+      "known_at": 14
+    },
+    {
+      "name": "McGuffey Readers",
+      "facet": "Landmark moments in school history",
+      "known_at": 14
+    },
+    {
+      "name": "Noah Webster",
+      "facet": "Landmark moments in school history",
+      "known_at": 11
+    },
+    {
+      "name": "Horace Mann",
+      "facet": "Landmark moments in school history",
+      "known_at": 14
+    },
+    {
+      "name": "Boston Latin School",
+      "facet": "Landmark moments in school history",
+      "known_at": 13
+    },
+    {
+      "name": "Tuskegee Institute",
+      "facet": "Landmark moments in school history",
+      "known_at": 12
+    },
+    {
+      "name": "Helen Keller",
+      "facet": "Landmark moments in school history",
+      "known_at": 6
+    },
+    {
+      "name": "Gallaudet University",
+      "facet": "Landmark moments in school history",
+      "known_at": 13
+    },
+    {
+      "name": "Morrill Land-Grant Act",
+      "facet": "Landmark moments in school history",
+      "known_at": 14
+    },
+    {
+      "name": "GI Bill",
+      "facet": "Landmark moments in school history",
+      "known_at": 12
+    },
+    {
+      "name": "Francis Bellamy",
+      "facet": "Landmark moments in school history",
+      "known_at": 14
+    },
+    {
+      "name": "Head Start",
+      "facet": "Landmark moments in school history",
+      "known_at": 12
+    },
+    {
+      "name": "No Child Left Behind",
+      "facet": "Landmark moments in school history",
+      "known_at": 11
+    },
+    {
+      "name": "Common Core",
+      "facet": "Landmark moments in school history",
+      "known_at": 11
+    },
+    {
+      "name": "Ms. Frizzle",
+      "facet": "Schools in films, TV and books",
+      "known_at": 6
+    },
+    {
+      "name": "Springfield Elementary",
+      "facet": "Schools in films, TV and books",
+      "known_at": 7
+    },
+    {
+      "name": "Recess (TV series)",
+      "facet": "Schools in films, TV and books",
+      "known_at": 9
+    },
+    {
+      "name": "School of Rock",
+      "facet": "Schools in films, TV and books",
+      "known_at": 8
+    },
+    {
+      "name": "Abbott Elementary",
+      "facet": "Schools in films, TV and books",
+      "known_at": 11
+    }
+  ]
+}

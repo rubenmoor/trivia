@@ -1,0 +1,1202 @@
+{
+  "subcategory": "tv-shows",
+  "facets": [
+    "Classic sitcom families",
+    "Workplace and friends sitcoms",
+    "Westerns and frontier shows",
+    "Sci-fi and fantasy series",
+    "Detective and crime dramas",
+    "Animated TV classics",
+    "Kids' and puppet shows",
+    "Late-night and variety shows",
+    "Game shows and hosts",
+    "Catchphrases and theme songs",
+    "TV settings and hometowns",
+    "Landmark episodes and TV history"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "The Brady Bunch",
+      "facet": "Classic sitcom families",
+      "known_at": 8
+    },
+    {
+      "name": "Leave It to Beaver",
+      "facet": "Classic sitcom families",
+      "known_at": 11
+    },
+    {
+      "name": "The Andy Griffith Show",
+      "facet": "Classic sitcom families",
+      "known_at": 11
+    },
+    {
+      "name": "The Honeymooners",
+      "facet": "Classic sitcom families",
+      "known_at": 13
+    },
+    {
+      "name": "All in the Family",
+      "facet": "Classic sitcom families",
+      "known_at": 12
+    },
+    {
+      "name": "Archie Bunker",
+      "facet": "Classic sitcom families",
+      "known_at": 12
+    },
+    {
+      "name": "Happy Days",
+      "facet": "Classic sitcom families",
+      "known_at": 10
+    },
+    {
+      "name": "Family Ties",
+      "facet": "Classic sitcom families",
+      "known_at": 12
+    },
+    {
+      "name": "Full House",
+      "facet": "Classic sitcom families",
+      "known_at": 7
+    },
+    {
+      "name": "Family Matters",
+      "facet": "Classic sitcom families",
+      "known_at": 10
+    },
+    {
+      "name": "Steve Urkel",
+      "facet": "Classic sitcom families",
+      "known_at": 10
+    },
+    {
+      "name": "The Fresh Prince of Bel-Air",
+      "facet": "Classic sitcom families",
+      "known_at": 7
+    },
+    {
+      "name": "The Addams Family",
+      "facet": "Classic sitcom families",
+      "known_at": 6
+    },
+    {
+      "name": "The Munsters",
+      "facet": "Classic sitcom families",
+      "known_at": 11
+    },
+    {
+      "name": "The Partridge Family",
+      "facet": "Classic sitcom families",
+      "known_at": 13
+    },
+    {
+      "name": "Home Improvement",
+      "facet": "Classic sitcom families",
+      "known_at": 11
+    },
+    {
+      "name": "Everybody Loves Raymond",
+      "facet": "Classic sitcom families",
+      "known_at": 11
+    },
+    {
+      "name": "The Wonder Years",
+      "facet": "Classic sitcom families",
+      "known_at": 11
+    },
+    {
+      "name": "Malcolm in the Middle",
+      "facet": "Classic sitcom families",
+      "known_at": 10
+    },
+    {
+      "name": "Modern Family",
+      "facet": "Classic sitcom families",
+      "known_at": 8
+    },
+    {
+      "name": "The Jeffersons",
+      "facet": "Classic sitcom families",
+      "known_at": 12
+    },
+    {
+      "name": "Father Knows Best",
+      "facet": "Classic sitcom families",
+      "known_at": 13
+    },
+    {
+      "name": "Friends",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 5
+    },
+    {
+      "name": "Seinfeld",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 9
+    },
+    {
+      "name": "Cosmo Kramer",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 11
+    },
+    {
+      "name": "Cheers",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 11
+    },
+    {
+      "name": "M*A*S*H",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 11
+    },
+    {
+      "name": "The Office",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 7
+    },
+    {
+      "name": "Michael Scott",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 8
+    },
+    {
+      "name": "Taxi",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 13
+    },
+    {
+      "name": "Frasier",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 11
+    },
+    {
+      "name": "The Mary Tyler Moore Show",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 13
+    },
+    {
+      "name": "WKRP in Cincinnati",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 14
+    },
+    {
+      "name": "Night Court",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 13
+    },
+    {
+      "name": "Parks and Recreation",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 9
+    },
+    {
+      "name": "Gilligan's Island",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 10
+    },
+    {
+      "name": "Laverne & Shirley",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 13
+    },
+    {
+      "name": "Saved by the Bell",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 10
+    },
+    {
+      "name": "Will & Grace",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 12
+    },
+    {
+      "name": "Scrubs",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 11
+    },
+    {
+      "name": "30 Rock",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 12
+    },
+    {
+      "name": "How I Met Your Mother",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 9
+    },
+    {
+      "name": "The Big Bang Theory",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 6
+    },
+    {
+      "name": "Living Single",
+      "facet": "Workplace and friends sitcoms",
+      "known_at": 13
+    },
+    {
+      "name": "Laura Ingalls",
+      "facet": "Westerns and frontier shows",
+      "known_at": 10
+    },
+    {
+      "name": "The Rifleman",
+      "facet": "Westerns and frontier shows",
+      "known_at": 13
+    },
+    {
+      "name": "Have Gun – Will Travel",
+      "facet": "Westerns and frontier shows",
+      "known_at": 15
+    },
+    {
+      "name": "Dr. Quinn, Medicine Woman",
+      "facet": "Westerns and frontier shows",
+      "known_at": 13
+    },
+    {
+      "name": "Lonesome Dove",
+      "facet": "Westerns and frontier shows",
+      "known_at": 13
+    },
+    {
+      "name": "Zorro",
+      "facet": "Westerns and frontier shows",
+      "known_at": 7
+    },
+    {
+      "name": "The Big Valley",
+      "facet": "Westerns and frontier shows",
+      "known_at": 14
+    },
+    {
+      "name": "Maverick",
+      "facet": "Westerns and frontier shows",
+      "known_at": 13
+    },
+    {
+      "name": "The Wild Wild West",
+      "facet": "Westerns and frontier shows",
+      "known_at": 13
+    },
+    {
+      "name": "Hopalong Cassidy",
+      "facet": "Westerns and frontier shows",
+      "known_at": 14
+    },
+    {
+      "name": "Star Trek",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 6
+    },
+    {
+      "name": "Mr. Spock",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 8
+    },
+    {
+      "name": "Captain Kirk",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 9
+    },
+    {
+      "name": "Star Trek: The Next Generation",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 11
+    },
+    {
+      "name": "The Twilight Zone",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 9
+    },
+    {
+      "name": "Rod Serling",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 13
+    },
+    {
+      "name": "Bewitched",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 11
+    },
+    {
+      "name": "I Dream of Jeannie",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 12
+    },
+    {
+      "name": "Lost in Space",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 12
+    },
+    {
+      "name": "The Outer Limits",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 14
+    },
+    {
+      "name": "Buffy the Vampire Slayer",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 11
+    },
+    {
+      "name": "The Six Million Dollar Man",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 12
+    },
+    {
+      "name": "Batman (1966 TV series)",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 9
+    },
+    {
+      "name": "Knight Rider",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 11
+    },
+    {
+      "name": "Quantum Leap",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 13
+    },
+    {
+      "name": "The Incredible Hulk",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 8
+    },
+    {
+      "name": "Lost",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 11
+    },
+    {
+      "name": "Stranger Things",
+      "facet": "Sci-fi and fantasy series",
+      "known_at": 6
+    },
+    {
+      "name": "Columbo",
+      "facet": "Detective and crime dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Dragnet",
+      "facet": "Detective and crime dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Perry Mason",
+      "facet": "Detective and crime dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Murder, She Wrote",
+      "facet": "Detective and crime dramas",
+      "known_at": 11
+    },
+    {
+      "name": "Jessica Fletcher",
+      "facet": "Detective and crime dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Magnum, P.I.",
+      "facet": "Detective and crime dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Miami Vice",
+      "facet": "Detective and crime dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Law & Order",
+      "facet": "Detective and crime dramas",
+      "known_at": 10
+    },
+    {
+      "name": "CSI: Crime Scene Investigation",
+      "facet": "Detective and crime dramas",
+      "known_at": 10
+    },
+    {
+      "name": "Hill Street Blues",
+      "facet": "Detective and crime dramas",
+      "known_at": 14
+    },
+    {
+      "name": "The Rockford Files",
+      "facet": "Detective and crime dramas",
+      "known_at": 14
+    },
+    {
+      "name": "Kojak",
+      "facet": "Detective and crime dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Hawaii Five-O",
+      "facet": "Detective and crime dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Charlie's Angels",
+      "facet": "Detective and crime dramas",
+      "known_at": 10
+    },
+    {
+      "name": "Starsky & Hutch",
+      "facet": "Detective and crime dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Matlock",
+      "facet": "Detective and crime dramas",
+      "known_at": 13
+    },
+    {
+      "name": "The Untouchables",
+      "facet": "Detective and crime dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Cagney & Lacey",
+      "facet": "Detective and crime dramas",
+      "known_at": 14
+    },
+    {
+      "name": "Monk",
+      "facet": "Detective and crime dramas",
+      "known_at": 12
+    },
+    {
+      "name": "The Fugitive",
+      "facet": "Detective and crime dramas",
+      "known_at": 12
+    },
+    {
+      "name": "The Simpsons",
+      "facet": "Animated TV classics",
+      "known_at": 3
+    },
+    {
+      "name": "Homer Simpson",
+      "facet": "Animated TV classics",
+      "known_at": 3
+    },
+    {
+      "name": "Bart Simpson",
+      "facet": "Animated TV classics",
+      "known_at": 4
+    },
+    {
+      "name": "The Flintstones",
+      "facet": "Animated TV classics",
+      "known_at": 5
+    },
+    {
+      "name": "The Jetsons",
+      "facet": "Animated TV classics",
+      "known_at": 8
+    },
+    {
+      "name": "Looney Tunes",
+      "facet": "Animated TV classics",
+      "known_at": 4
+    },
+    {
+      "name": "Tom and Jerry",
+      "facet": "Animated TV classics",
+      "known_at": 2
+    },
+    {
+      "name": "SpongeBob SquarePants",
+      "facet": "Animated TV classics",
+      "known_at": 1
+    },
+    {
+      "name": "Rugrats",
+      "facet": "Animated TV classics",
+      "known_at": 8
+    },
+    {
+      "name": "The Rocky and Bullwinkle Show",
+      "facet": "Animated TV classics",
+      "known_at": 12
+    },
+    {
+      "name": "Hey Arnold!",
+      "facet": "Animated TV classics",
+      "known_at": 10
+    },
+    {
+      "name": "Animaniacs",
+      "facet": "Animated TV classics",
+      "known_at": 10
+    },
+    {
+      "name": "Batman: The Animated Series",
+      "facet": "Animated TV classics",
+      "known_at": 11
+    },
+    {
+      "name": "Teenage Mutant Ninja Turtles",
+      "facet": "Animated TV classics",
+      "known_at": 4
+    },
+    {
+      "name": "King of the Hill",
+      "facet": "Animated TV classics",
+      "known_at": 12
+    },
+    {
+      "name": "Futurama",
+      "facet": "Animated TV classics",
+      "known_at": 10
+    },
+    {
+      "name": "DuckTales",
+      "facet": "Animated TV classics",
+      "known_at": 8
+    },
+    {
+      "name": "The Powerpuff Girls",
+      "facet": "Animated TV classics",
+      "known_at": 6
+    },
+    {
+      "name": "Dexter's Laboratory",
+      "facet": "Animated TV classics",
+      "known_at": 9
+    },
+    {
+      "name": "Sesame Street",
+      "facet": "Kids' and puppet shows",
+      "known_at": 1
+    },
+    {
+      "name": "Big Bird",
+      "facet": "Kids' and puppet shows",
+      "known_at": 1
+    },
+    {
+      "name": "Elmo",
+      "facet": "Kids' and puppet shows",
+      "known_at": 1
+    },
+    {
+      "name": "Oscar the Grouch",
+      "facet": "Kids' and puppet shows",
+      "known_at": 2
+    },
+    {
+      "name": "Kermit the Frog",
+      "facet": "Kids' and puppet shows",
+      "known_at": 2
+    },
+    {
+      "name": "The Muppet Show",
+      "facet": "Kids' and puppet shows",
+      "known_at": 6
+    },
+    {
+      "name": "Mister Rogers' Neighborhood",
+      "facet": "Kids' and puppet shows",
+      "known_at": 7
+    },
+    {
+      "name": "Captain Kangaroo",
+      "facet": "Kids' and puppet shows",
+      "known_at": 13
+    },
+    {
+      "name": "Howdy Doody",
+      "facet": "Kids' and puppet shows",
+      "known_at": 13
+    },
+    {
+      "name": "Barney & Friends",
+      "facet": "Kids' and puppet shows",
+      "known_at": 4
+    },
+    {
+      "name": "Blue's Clues",
+      "facet": "Kids' and puppet shows",
+      "known_at": 3
+    },
+    {
+      "name": "Dora the Explorer",
+      "facet": "Kids' and puppet shows",
+      "known_at": 2
+    },
+    {
+      "name": "Bill Nye the Science Guy",
+      "facet": "Kids' and puppet shows",
+      "known_at": 8
+    },
+    {
+      "name": "Pee-wee's Playhouse",
+      "facet": "Kids' and puppet shows",
+      "known_at": 12
+    },
+    {
+      "name": "Lamb Chop",
+      "facet": "Kids' and puppet shows",
+      "known_at": 13
+    },
+    {
+      "name": "Fraggle Rock",
+      "facet": "Kids' and puppet shows",
+      "known_at": 11
+    },
+    {
+      "name": "The Electric Company",
+      "facet": "Kids' and puppet shows",
+      "known_at": 14
+    },
+    {
+      "name": "Kukla, Fran and Ollie",
+      "facet": "Kids' and puppet shows",
+      "known_at": 15
+    },
+    {
+      "name": "Lassie",
+      "facet": "Kids' and puppet shows",
+      "known_at": 6
+    },
+    {
+      "name": "The Tonight Show",
+      "facet": "Late-night and variety shows",
+      "known_at": 9
+    },
+    {
+      "name": "Johnny Carson",
+      "facet": "Late-night and variety shows",
+      "known_at": 11
+    },
+    {
+      "name": "Ed McMahon",
+      "facet": "Late-night and variety shows",
+      "known_at": 13
+    },
+    {
+      "name": "Jay Leno",
+      "facet": "Late-night and variety shows",
+      "known_at": 10
+    },
+    {
+      "name": "Jimmy Fallon",
+      "facet": "Late-night and variety shows",
+      "known_at": 7
+    },
+    {
+      "name": "Conan O'Brien",
+      "facet": "Late-night and variety shows",
+      "known_at": 10
+    },
+    {
+      "name": "David Letterman",
+      "facet": "Late-night and variety shows",
+      "known_at": 11
+    },
+    {
+      "name": "Top Ten List",
+      "facet": "Late-night and variety shows",
+      "known_at": 12
+    },
+    {
+      "name": "Jimmy Kimmel",
+      "facet": "Late-night and variety shows",
+      "known_at": 9
+    },
+    {
+      "name": "Saturday Night Live",
+      "facet": "Late-night and variety shows",
+      "known_at": 8
+    },
+    {
+      "name": "Weekend Update",
+      "facet": "Late-night and variety shows",
+      "known_at": 12
+    },
+    {
+      "name": "The Carol Burnett Show",
+      "facet": "Late-night and variety shows",
+      "known_at": 12
+    },
+    {
+      "name": "Rowan & Martin's Laugh-In",
+      "facet": "Late-night and variety shows",
+      "known_at": 14
+    },
+    {
+      "name": "The Smothers Brothers Comedy Hour",
+      "facet": "Late-night and variety shows",
+      "known_at": 15
+    },
+    {
+      "name": "Hee Haw",
+      "facet": "Late-night and variety shows",
+      "known_at": 13
+    },
+    {
+      "name": "The Sonny & Cher Comedy Hour",
+      "facet": "Late-night and variety shows",
+      "known_at": 13
+    },
+    {
+      "name": "Steve Allen",
+      "facet": "Late-night and variety shows",
+      "known_at": 15
+    },
+    {
+      "name": "The Daily Show",
+      "facet": "Late-night and variety shows",
+      "known_at": 11
+    },
+    {
+      "name": "The Arsenio Hall Show",
+      "facet": "Late-night and variety shows",
+      "known_at": 14
+    },
+    {
+      "name": "American Bandstand",
+      "facet": "Late-night and variety shows",
+      "known_at": 13
+    },
+    {
+      "name": "Jeopardy!",
+      "facet": "Game shows and hosts",
+      "known_at": 6
+    },
+    {
+      "name": "Alex Trebek",
+      "facet": "Game shows and hosts",
+      "known_at": 9
+    },
+    {
+      "name": "Ken Jennings",
+      "facet": "Game shows and hosts",
+      "known_at": 10
+    },
+    {
+      "name": "Wheel of Fortune",
+      "facet": "Game shows and hosts",
+      "known_at": 5
+    },
+    {
+      "name": "Pat Sajak",
+      "facet": "Game shows and hosts",
+      "known_at": 10
+    },
+    {
+      "name": "Vanna White",
+      "facet": "Game shows and hosts",
+      "known_at": 10
+    },
+    {
+      "name": "The Price Is Right",
+      "facet": "Game shows and hosts",
+      "known_at": 6
+    },
+    {
+      "name": "Bob Barker",
+      "facet": "Game shows and hosts",
+      "known_at": 10
+    },
+    {
+      "name": "Drew Carey",
+      "facet": "Game shows and hosts",
+      "known_at": 11
+    },
+    {
+      "name": "Family Feud",
+      "facet": "Game shows and hosts",
+      "known_at": 7
+    },
+    {
+      "name": "Steve Harvey",
+      "facet": "Game shows and hosts",
+      "known_at": 8
+    },
+    {
+      "name": "Richard Dawson",
+      "facet": "Game shows and hosts",
+      "known_at": 14
+    },
+    {
+      "name": "Let's Make a Deal",
+      "facet": "Game shows and hosts",
+      "known_at": 11
+    },
+    {
+      "name": "Monty Hall",
+      "facet": "Game shows and hosts",
+      "known_at": 12
+    },
+    {
+      "name": "Who Wants to Be a Millionaire",
+      "facet": "Game shows and hosts",
+      "known_at": 7
+    },
+    {
+      "name": "Regis Philbin",
+      "facet": "Game shows and hosts",
+      "known_at": 12
+    },
+    {
+      "name": "The Newlywed Game",
+      "facet": "Game shows and hosts",
+      "known_at": 13
+    },
+    {
+      "name": "Hollywood Squares",
+      "facet": "Game shows and hosts",
+      "known_at": 13
+    },
+    {
+      "name": "Match Game",
+      "facet": "Game shows and hosts",
+      "known_at": 14
+    },
+    {
+      "name": "Double Dare",
+      "facet": "Game shows and hosts",
+      "known_at": 11
+    },
+    {
+      "name": "Password",
+      "facet": "Game shows and hosts",
+      "known_at": 14
+    },
+    {
+      "name": "D'oh!",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 3
+    },
+    {
+      "name": "Yabba Dabba Doo!",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 6
+    },
+    {
+      "name": "Lucy, you got some 'splainin' to do!",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 13
+    },
+    {
+      "name": "Here's Johnny!",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 11
+    },
+    {
+      "name": "Live long and prosper",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 8
+    },
+    {
+      "name": "Beam me up, Scotty",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 9
+    },
+    {
+      "name": "Did I do that?",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 10
+    },
+    {
+      "name": "Come on down!",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 9
+    },
+    {
+      "name": "How you doin'?",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 9
+    },
+    {
+      "name": "Dy-no-mite!",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 14
+    },
+    {
+      "name": "Eat my shorts",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 9
+    },
+    {
+      "name": "Cowabunga",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 7
+    },
+    {
+      "name": "Just one more thing",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 13
+    },
+    {
+      "name": "Bazinga!",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 7
+    },
+    {
+      "name": "No soup for you!",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 11
+    },
+    {
+      "name": "Yada yada yada",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 11
+    },
+    {
+      "name": "Ayyy",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 11
+    },
+    {
+      "name": "Live from New York, it's Saturday Night!",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 11
+    },
+    {
+      "name": "I'll Be There for You",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 8
+    },
+    {
+      "name": "Where Everybody Knows Your Name",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 12
+    },
+    {
+      "name": "Thank You for Being a Friend",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 12
+    },
+    {
+      "name": "Won't You Be My Neighbor?",
+      "facet": "Catchphrases and theme songs",
+      "known_at": 8
+    },
+    {
+      "name": "Moe's Tavern",
+      "facet": "TV settings and hometowns",
+      "known_at": 8
+    },
+    {
+      "name": "Kwik-E-Mart",
+      "facet": "TV settings and hometowns",
+      "known_at": 9
+    },
+    {
+      "name": "Orbit City",
+      "facet": "TV settings and hometowns",
+      "known_at": 14
+    },
+    {
+      "name": "Central Perk",
+      "facet": "TV settings and hometowns",
+      "known_at": 8
+    },
+    {
+      "name": "Monk's Café",
+      "facet": "TV settings and hometowns",
+      "known_at": 13
+    },
+    {
+      "name": "Arnold's Drive-In",
+      "facet": "TV settings and hometowns",
+      "known_at": 13
+    },
+    {
+      "name": "Dunder Mifflin",
+      "facet": "TV settings and hometowns",
+      "known_at": 8
+    },
+    {
+      "name": "Cabot Cove",
+      "facet": "TV settings and hometowns",
+      "known_at": 13
+    },
+    {
+      "name": "Walnut Grove",
+      "facet": "TV settings and hometowns",
+      "known_at": 13
+    },
+    {
+      "name": "The Ponderosa",
+      "facet": "TV settings and hometowns",
+      "known_at": 13
+    },
+    {
+      "name": "Bikini Bottom",
+      "facet": "TV settings and hometowns",
+      "known_at": 2
+    },
+    {
+      "name": "Arlen",
+      "facet": "TV settings and hometowns",
+      "known_at": 14
+    },
+    {
+      "name": "USS Enterprise",
+      "facet": "TV settings and hometowns",
+      "known_at": 8
+    },
+    {
+      "name": "Sunnydale",
+      "facet": "TV settings and hometowns",
+      "known_at": 13
+    },
+    {
+      "name": "The Beatles on The Ed Sullivan Show",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 10
+    },
+    {
+      "name": "Elvis Presley on The Ed Sullivan Show",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 12
+    },
+    {
+      "name": "Goodbye, Farewell and Amen",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 13
+    },
+    {
+      "name": "Who Shot J.R.?",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 12
+    },
+    {
+      "name": "Lucy Goes to the Hospital",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 14
+    },
+    {
+      "name": "Apollo 11 moon landing broadcast",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 8
+    },
+    {
+      "name": "Kennedy–Nixon debates",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 12
+    },
+    {
+      "name": "Roots",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 12
+    },
+    {
+      "name": "Jumping the shark",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 11
+    },
+    {
+      "name": "Emmy Award",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 8
+    },
+    {
+      "name": "Nielsen ratings",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 12
+    },
+    {
+      "name": "NBC peacock",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 10
+    },
+    {
+      "name": "MTV",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 9
+    },
+    {
+      "name": "CNN",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 9
+    },
+    {
+      "name": "PBS",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 8
+    },
+    {
+      "name": "Laugh track",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 9
+    },
+    {
+      "name": "Sweeps week",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 14
+    },
+    {
+      "name": "Saturday morning cartoons",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 7
+    },
+    {
+      "name": "TV Guide",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 11
+    },
+    {
+      "name": "Friends finale",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 11
+    },
+    {
+      "name": "Seinfeld finale",
+      "facet": "Landmark episodes and TV history",
+      "known_at": 13
+    }
+  ]
+}

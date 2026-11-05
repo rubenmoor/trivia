@@ -1,0 +1,757 @@
+{
+  "subcategory": "household-brands",
+  "facets": [
+    "Classic toys and dolls",
+    "Board games and card games",
+    "Building and craft toys",
+    "Kitchen and pantry brands",
+    "Breakfast cereals and their mascots",
+    "Snacks, candy and soda brands",
+    "Cleaning and laundry products",
+    "Health, bathroom and personal care",
+    "Toy and brand inventors",
+    "Brand mascots and slogans",
+    "Brand names that became words",
+    "Toy fads and holiday crazes"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "G.I. Joe",
+      "facet": "Classic toys and dolls",
+      "known_at": 6
+    },
+    {
+      "name": "Radio Flyer wagon",
+      "facet": "Classic toys and dolls",
+      "known_at": 6
+    },
+    {
+      "name": "View-Master",
+      "facet": "Classic toys and dolls",
+      "known_at": 9
+    },
+    {
+      "name": "American Girl dolls",
+      "facet": "Classic toys and dolls",
+      "known_at": 6
+    },
+    {
+      "name": "Super Soaker",
+      "facet": "Classic toys and dolls",
+      "known_at": 5
+    },
+    {
+      "name": "Nerf",
+      "facet": "Classic toys and dolls",
+      "known_at": 3
+    },
+    {
+      "name": "Yo-yo",
+      "facet": "Classic toys and dolls",
+      "known_at": 2
+    },
+    {
+      "name": "Tonka trucks",
+      "facet": "Classic toys and dolls",
+      "known_at": 6
+    },
+    {
+      "name": "Wiffle ball",
+      "facet": "Classic toys and dolls",
+      "known_at": 8
+    },
+    {
+      "name": "Chatty Cathy",
+      "facet": "Classic toys and dolls",
+      "known_at": 14
+    },
+    {
+      "name": "Lionel trains",
+      "facet": "Classic toys and dolls",
+      "known_at": 11
+    },
+    {
+      "name": "Scrabble",
+      "facet": "Board games and card games",
+      "known_at": 5
+    },
+    {
+      "name": "Candy Land",
+      "facet": "Board games and card games",
+      "known_at": 1
+    },
+    {
+      "name": "Chutes and Ladders",
+      "facet": "Board games and card games",
+      "known_at": 2
+    },
+    {
+      "name": "The Game of Life",
+      "facet": "Board games and card games",
+      "known_at": 5
+    },
+    {
+      "name": "Clue",
+      "facet": "Board games and card games",
+      "known_at": 6
+    },
+    {
+      "name": "Trouble",
+      "facet": "Board games and card games",
+      "known_at": 6
+    },
+    {
+      "name": "Sorry!",
+      "facet": "Board games and card games",
+      "known_at": 5
+    },
+    {
+      "name": "Operation",
+      "facet": "Board games and card games",
+      "known_at": 4
+    },
+    {
+      "name": "Battleship",
+      "facet": "Board games and card games",
+      "known_at": 4
+    },
+    {
+      "name": "Twister",
+      "facet": "Board games and card games",
+      "known_at": 3
+    },
+    {
+      "name": "Uno",
+      "facet": "Board games and card games",
+      "known_at": 1
+    },
+    {
+      "name": "Yahtzee",
+      "facet": "Board games and card games",
+      "known_at": 6
+    },
+    {
+      "name": "Hungry Hungry Hippos",
+      "facet": "Board games and card games",
+      "known_at": 3
+    },
+    {
+      "name": "Mouse Trap",
+      "facet": "Board games and card games",
+      "known_at": 7
+    },
+    {
+      "name": "Connect Four",
+      "facet": "Board games and card games",
+      "known_at": 3
+    },
+    {
+      "name": "Pictionary",
+      "facet": "Board games and card games",
+      "known_at": 6
+    },
+    {
+      "name": "Apples to Apples",
+      "facet": "Board games and card games",
+      "known_at": 9
+    },
+    {
+      "name": "Old Maid",
+      "facet": "Board games and card games",
+      "known_at": 7
+    },
+    {
+      "name": "Pay Day",
+      "facet": "Board games and card games",
+      "known_at": 12
+    },
+    {
+      "name": "Tinkertoy",
+      "facet": "Building and craft toys",
+      "known_at": 9
+    },
+    {
+      "name": "Erector Set",
+      "facet": "Building and craft toys",
+      "known_at": 11
+    },
+    {
+      "name": "K'Nex",
+      "facet": "Building and craft toys",
+      "known_at": 7
+    },
+    {
+      "name": "Crayola",
+      "facet": "Building and craft toys",
+      "known_at": 1
+    },
+    {
+      "name": "Lite-Brite",
+      "facet": "Building and craft toys",
+      "known_at": 8
+    },
+    {
+      "name": "Shrinky Dinks",
+      "facet": "Building and craft toys",
+      "known_at": 9
+    },
+    {
+      "name": "Colorforms",
+      "facet": "Building and craft toys",
+      "known_at": 13
+    },
+    {
+      "name": "Rainbow Loom",
+      "facet": "Building and craft toys",
+      "known_at": 6
+    },
+    {
+      "name": "Perler beads",
+      "facet": "Building and craft toys",
+      "known_at": 8
+    },
+    {
+      "name": "Magna-Tiles",
+      "facet": "Building and craft toys",
+      "known_at": 6
+    },
+    {
+      "name": "Sculpey",
+      "facet": "Building and craft toys",
+      "known_at": 11
+    },
+    {
+      "name": "Mod Podge",
+      "facet": "Building and craft toys",
+      "known_at": 11
+    },
+    {
+      "name": "Sharpie",
+      "facet": "Building and craft toys",
+      "known_at": 4
+    },
+    {
+      "name": "Ziploc",
+      "facet": "Kitchen and pantry brands",
+      "known_at": 5
+    },
+    {
+      "name": "Reynolds Wrap",
+      "facet": "Kitchen and pantry brands",
+      "known_at": 11
+    },
+    {
+      "name": "Tabasco",
+      "facet": "Kitchen and pantry brands",
+      "known_at": 9
+    },
+    {
+      "name": "Morton Salt",
+      "facet": "Kitchen and pantry brands",
+      "known_at": 10
+    },
+    {
+      "name": "Jif peanut butter",
+      "facet": "Kitchen and pantry brands",
+      "known_at": 6
+    },
+    {
+      "name": "Apple Jacks",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 6
+    },
+    {
+      "name": "Grape-Nuts",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 12
+    },
+    {
+      "name": "Golden Grahams",
+      "facet": "Breakfast cereals and their mascots",
+      "known_at": 9
+    },
+    {
+      "name": "A&W Root Beer",
+      "facet": "Snacks, candy and soda brands",
+      "known_at": 7
+    },
+    {
+      "name": "Twinkies",
+      "facet": "Snacks, candy and soda brands",
+      "known_at": 5
+    },
+    {
+      "name": "Moon Pie",
+      "facet": "Snacks, candy and soda brands",
+      "known_at": 11
+    },
+    {
+      "name": "Slurpee",
+      "facet": "Snacks, candy and soda brands",
+      "known_at": 7
+    },
+    {
+      "name": "Windex",
+      "facet": "Cleaning and laundry products",
+      "known_at": 6
+    },
+    {
+      "name": "Clorox",
+      "facet": "Cleaning and laundry products",
+      "known_at": 7
+    },
+    {
+      "name": "Tide",
+      "facet": "Cleaning and laundry products",
+      "known_at": 6
+    },
+    {
+      "name": "Mr. Clean",
+      "facet": "Cleaning and laundry products",
+      "known_at": 5
+    },
+    {
+      "name": "Lysol",
+      "facet": "Cleaning and laundry products",
+      "known_at": 7
+    },
+    {
+      "name": "Pine-Sol",
+      "facet": "Cleaning and laundry products",
+      "known_at": 10
+    },
+    {
+      "name": "Swiffer",
+      "facet": "Cleaning and laundry products",
+      "known_at": 7
+    },
+    {
+      "name": "Brillo pads",
+      "facet": "Cleaning and laundry products",
+      "known_at": 11
+    },
+    {
+      "name": "Formula 409",
+      "facet": "Cleaning and laundry products",
+      "known_at": 12
+    },
+    {
+      "name": "Febreze",
+      "facet": "Cleaning and laundry products",
+      "known_at": 8
+    },
+    {
+      "name": "Bounty paper towels",
+      "facet": "Cleaning and laundry products",
+      "known_at": 8
+    },
+    {
+      "name": "Downy",
+      "facet": "Cleaning and laundry products",
+      "known_at": 9
+    },
+    {
+      "name": "OxiClean",
+      "facet": "Cleaning and laundry products",
+      "known_at": 9
+    },
+    {
+      "name": "Magic Eraser",
+      "facet": "Cleaning and laundry products",
+      "known_at": 8
+    },
+    {
+      "name": "Dawn dish soap",
+      "facet": "Cleaning and laundry products",
+      "known_at": 8
+    },
+    {
+      "name": "Roomba",
+      "facet": "Cleaning and laundry products",
+      "known_at": 5
+    },
+    {
+      "name": "Hoover",
+      "facet": "Cleaning and laundry products",
+      "known_at": 10
+    },
+    {
+      "name": "WD-40",
+      "facet": "Cleaning and laundry products",
+      "known_at": 10
+    },
+    {
+      "name": "Vaseline",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 6
+    },
+    {
+      "name": "Listerine",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 9
+    },
+    {
+      "name": "Crest",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 6
+    },
+    {
+      "name": "Colgate",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 4
+    },
+    {
+      "name": "Johnson's Baby Shampoo",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 8
+    },
+    {
+      "name": "Neosporin",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 9
+    },
+    {
+      "name": "Tylenol",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 8
+    },
+    {
+      "name": "Pepto-Bismol",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 8
+    },
+    {
+      "name": "Vicks VapoRub",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 9
+    },
+    {
+      "name": "Gillette",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 8
+    },
+    {
+      "name": "Old Spice",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 8
+    },
+    {
+      "name": "Ivory soap",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 12
+    },
+    {
+      "name": "Charmin",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 8
+    },
+    {
+      "name": "Coppertone",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 10
+    },
+    {
+      "name": "Flintstones vitamins",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 7
+    },
+    {
+      "name": "Purell",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 7
+    },
+    {
+      "name": "Alka-Seltzer",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 12
+    },
+    {
+      "name": "NyQuil",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 10
+    },
+    {
+      "name": "Gold Bond",
+      "facet": "Health, bathroom and personal care",
+      "known_at": 12
+    },
+    {
+      "name": "Charles Darrow",
+      "facet": "Toy and brand inventors",
+      "known_at": 13
+    },
+    {
+      "name": "Elizabeth Magie",
+      "facet": "Toy and brand inventors",
+      "known_at": 14
+    },
+    {
+      "name": "Richard James",
+      "facet": "Toy and brand inventors",
+      "known_at": 14
+    },
+    {
+      "name": "John Lloyd Wright",
+      "facet": "Toy and brand inventors",
+      "known_at": 14
+    },
+    {
+      "name": "A. C. Gilbert",
+      "facet": "Toy and brand inventors",
+      "known_at": 15
+    },
+    {
+      "name": "Walter Frederick Morrison",
+      "facet": "Toy and brand inventors",
+      "known_at": 15
+    },
+    {
+      "name": "Xavier Roberts",
+      "facet": "Toy and brand inventors",
+      "known_at": 14
+    },
+    {
+      "name": "King C. Gillette",
+      "facet": "Toy and brand inventors",
+      "known_at": 13
+    },
+    {
+      "name": "Joseph McVicker",
+      "facet": "Toy and brand inventors",
+      "known_at": 15
+    },
+    {
+      "name": "Jolly Green Giant",
+      "facet": "Brand mascots and slogans",
+      "known_at": 9
+    },
+    {
+      "name": "Energizer Bunny",
+      "facet": "Brand mascots and slogans",
+      "known_at": 6
+    },
+    {
+      "name": "Geico Gecko",
+      "facet": "Brand mascots and slogans",
+      "known_at": 7
+    },
+    {
+      "name": "Aflac Duck",
+      "facet": "Brand mascots and slogans",
+      "known_at": 10
+    },
+    {
+      "name": "Charlie the Tuna",
+      "facet": "Brand mascots and slogans",
+      "known_at": 13
+    },
+    {
+      "name": "Morton Salt Girl",
+      "facet": "Brand mascots and slogans",
+      "known_at": 12
+    },
+    {
+      "name": "Flo from Progressive",
+      "facet": "Brand mascots and slogans",
+      "known_at": 9
+    },
+    {
+      "name": "Gerber Baby",
+      "facet": "Brand mascots and slogans",
+      "known_at": 10
+    },
+    {
+      "name": "Maytag Repairman",
+      "facet": "Brand mascots and slogans",
+      "known_at": 14
+    },
+    {
+      "name": "Kleenex",
+      "facet": "Brand names that became words",
+      "known_at": 3
+    },
+    {
+      "name": "Q-tip",
+      "facet": "Brand names that became words",
+      "known_at": 4
+    },
+    {
+      "name": "Xerox",
+      "facet": "Brand names that became words",
+      "known_at": 11
+    },
+    {
+      "name": "Jacuzzi",
+      "facet": "Brand names that became words",
+      "known_at": 9
+    },
+    {
+      "name": "ChapStick",
+      "facet": "Brand names that became words",
+      "known_at": 5
+    },
+    {
+      "name": "Post-it",
+      "facet": "Brand names that became words",
+      "known_at": 6
+    },
+    {
+      "name": "Escalator",
+      "facet": "Brand names that became words",
+      "known_at": 12
+    },
+    {
+      "name": "Dumpster",
+      "facet": "Brand names that became words",
+      "known_at": 10
+    },
+    {
+      "name": "Taser",
+      "facet": "Brand names that became words",
+      "known_at": 11
+    },
+    {
+      "name": "Rollerblade",
+      "facet": "Brand names that became words",
+      "known_at": 8
+    },
+    {
+      "name": "Bubble Wrap",
+      "facet": "Brand names that became words",
+      "known_at": 7
+    },
+    {
+      "name": "Styrofoam",
+      "facet": "Brand names that became words",
+      "known_at": 10
+    },
+    {
+      "name": "Ping-Pong",
+      "facet": "Brand names that became words",
+      "known_at": 11
+    },
+    {
+      "name": "Trampoline",
+      "facet": "Brand names that became words",
+      "known_at": 13
+    },
+    {
+      "name": "Onesie",
+      "facet": "Brand names that became words",
+      "known_at": 11
+    },
+    {
+      "name": "Beanie Babies",
+      "facet": "Toy fads and holiday crazes",
+      "known_at": 7
+    },
+    {
+      "name": "Pogs",
+      "facet": "Toy fads and holiday crazes",
+      "known_at": 11
+    },
+    {
+      "name": "Silly Bandz",
+      "facet": "Toy fads and holiday crazes",
+      "known_at": 9
+    },
+    {
+      "name": "Zhu Zhu Pets",
+      "facet": "Toy fads and holiday crazes",
+      "known_at": 11
+    },
+    {
+      "name": "Bratz",
+      "facet": "Toy fads and holiday crazes",
+      "known_at": 7
+    },
+    {
+      "name": "Teddy Ruxpin",
+      "facet": "Toy fads and holiday crazes",
+      "known_at": 13
+    },
+    {
+      "name": "Chia Pet",
+      "facet": "Toy fads and holiday crazes",
+      "known_at": 10
+    },
+    {
+      "name": "Rock 'Em Sock 'Em Robots",
+      "facet": "Toy fads and holiday crazes",
+      "known_at": 10
+    },
+    {
+      "name": "Stretch Armstrong",
+      "facet": "Toy fads and holiday crazes",
+      "known_at": 12
+    },
+    {
+      "name": "Sea-Monkeys",
+      "facet": "Toy fads and holiday crazes",
+      "known_at": 11
+    },
+    {
+      "name": "Koosh ball",
+      "facet": "Toy fads and holiday crazes",
+      "known_at": 10
+    },
+    {
+      "name": "Slap bracelet",
+      "facet": "Toy fads and holiday crazes",
+      "known_at": 11
+    },
+    {
+      "name": "Squishmallows",
+      "facet": "Toy fads and holiday crazes",
+      "known_at": 4
+    },
+    {
+      "name": "Big Mouth Billy Bass",
+      "facet": "Toy fads and holiday crazes",
+      "known_at": 12
+    }
+  ]
+}

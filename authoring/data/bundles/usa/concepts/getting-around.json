@@ -1,0 +1,927 @@
+{
+  "subcategory": "getting-around",
+  "facets": [
+    "Driving rules and licenses",
+    "Road signs and traffic",
+    "Interstates and famous highways",
+    "City subways and transit",
+    "Long-distance trains and buses",
+    "Airports and air travel",
+    "Taxis, carpools and rideshare",
+    "School buses and school commute",
+    "Mail and the Postal Service",
+    "Emergency services and 911",
+    "Libraries, parks and public offices",
+    "Trash, recycling and utilities"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 3,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Driver's license",
+      "facet": "Driving rules and licenses",
+      "known_at": 2
+    },
+    {
+      "name": "Road test",
+      "facet": "Driving rules and licenses",
+      "known_at": 7
+    },
+    {
+      "name": "Right turn on red",
+      "facet": "Driving rules and licenses",
+      "known_at": 7
+    },
+    {
+      "name": "Four-way stop",
+      "facet": "Driving rules and licenses",
+      "known_at": 6
+    },
+    {
+      "name": "Seat belt law",
+      "facet": "Driving rules and licenses",
+      "known_at": 3
+    },
+    {
+      "name": "Speed limit",
+      "facet": "Driving rules and licenses",
+      "known_at": 2
+    },
+    {
+      "name": "Parallel parking",
+      "facet": "Driving rules and licenses",
+      "known_at": 7
+    },
+    {
+      "name": "DUI",
+      "facet": "Driving rules and licenses",
+      "known_at": 10
+    },
+    {
+      "name": "Graduated driver licensing",
+      "facet": "Driving rules and licenses",
+      "known_at": 12
+    },
+    {
+      "name": "REAL ID",
+      "facet": "Driving rules and licenses",
+      "known_at": 11
+    },
+    {
+      "name": "Move Over law",
+      "facet": "Driving rules and licenses",
+      "known_at": 12
+    },
+    {
+      "name": "License plate",
+      "facet": "Driving rules and licenses",
+      "known_at": 2
+    },
+    {
+      "name": "Vanity plate",
+      "facet": "Driving rules and licenses",
+      "known_at": 8
+    },
+    {
+      "name": "Car registration",
+      "facet": "Driving rules and licenses",
+      "known_at": 10
+    },
+    {
+      "name": "Smog check",
+      "facet": "Driving rules and licenses",
+      "known_at": 11
+    },
+    {
+      "name": "Car insurance",
+      "facet": "Driving rules and licenses",
+      "known_at": 8
+    },
+    {
+      "name": "Stop sign",
+      "facet": "Road signs and traffic",
+      "known_at": 1
+    },
+    {
+      "name": "Yield sign",
+      "facet": "Road signs and traffic",
+      "known_at": 5
+    },
+    {
+      "name": "Traffic light",
+      "facet": "Road signs and traffic",
+      "known_at": 1
+    },
+    {
+      "name": "Walk signal",
+      "facet": "Road signs and traffic",
+      "known_at": 3
+    },
+    {
+      "name": "Deer crossing sign",
+      "facet": "Road signs and traffic",
+      "known_at": 4
+    },
+    {
+      "name": "Railroad crossbuck",
+      "facet": "Road signs and traffic",
+      "known_at": 8
+    },
+    {
+      "name": "Yellow diamond sign",
+      "facet": "Road signs and traffic",
+      "known_at": 8
+    },
+    {
+      "name": "Brown recreation sign",
+      "facet": "Road signs and traffic",
+      "known_at": 11
+    },
+    {
+      "name": "Exit number",
+      "facet": "Road signs and traffic",
+      "known_at": 8
+    },
+    {
+      "name": "Traffic cone",
+      "facet": "Road signs and traffic",
+      "known_at": 1
+    },
+    {
+      "name": "Work zone",
+      "facet": "Road signs and traffic",
+      "known_at": 6
+    },
+    {
+      "name": "Rumble strip",
+      "facet": "Road signs and traffic",
+      "known_at": 9
+    },
+    {
+      "name": "Roundabout",
+      "facet": "Road signs and traffic",
+      "known_at": 6
+    },
+    {
+      "name": "Gridlock",
+      "facet": "Road signs and traffic",
+      "known_at": 9
+    },
+    {
+      "name": "MUTCD",
+      "facet": "Road signs and traffic",
+      "known_at": 15
+    },
+    {
+      "name": "E-ZPass",
+      "facet": "Interstates and famous highways",
+      "known_at": 9
+    },
+    {
+      "name": "New York City Subway",
+      "facet": "City subways and transit",
+      "known_at": 4
+    },
+    {
+      "name": "MetroCard",
+      "facet": "City subways and transit",
+      "known_at": 9
+    },
+    {
+      "name": "OMNY",
+      "facet": "City subways and transit",
+      "known_at": 13
+    },
+    {
+      "name": "Grand Central Terminal",
+      "facet": "City subways and transit",
+      "known_at": 7
+    },
+    {
+      "name": "Penn Station",
+      "facet": "City subways and transit",
+      "known_at": 10
+    },
+    {
+      "name": "Chicago L",
+      "facet": "City subways and transit",
+      "known_at": 10
+    },
+    {
+      "name": "MBTA",
+      "facet": "City subways and transit",
+      "known_at": 11
+    },
+    {
+      "name": "Tremont Street Subway",
+      "facet": "City subways and transit",
+      "known_at": 14
+    },
+    {
+      "name": "BART",
+      "facet": "City subways and transit",
+      "known_at": 11
+    },
+    {
+      "name": "San Francisco cable car",
+      "facet": "City subways and transit",
+      "known_at": 5
+    },
+    {
+      "name": "Washington Metro",
+      "facet": "City subways and transit",
+      "known_at": 10
+    },
+    {
+      "name": "Los Angeles Metro",
+      "facet": "City subways and transit",
+      "known_at": 11
+    },
+    {
+      "name": "MARTA",
+      "facet": "City subways and transit",
+      "known_at": 13
+    },
+    {
+      "name": "PATH train",
+      "facet": "City subways and transit",
+      "known_at": 13
+    },
+    {
+      "name": "Staten Island Ferry",
+      "facet": "City subways and transit",
+      "known_at": 9
+    },
+    {
+      "name": "Roosevelt Island Tramway",
+      "facet": "City subways and transit",
+      "known_at": 13
+    },
+    {
+      "name": "Seattle Center Monorail",
+      "facet": "City subways and transit",
+      "known_at": 11
+    },
+    {
+      "name": "Streetcar",
+      "facet": "City subways and transit",
+      "known_at": 7
+    },
+    {
+      "name": "Light rail",
+      "facet": "City subways and transit",
+      "known_at": 9
+    },
+    {
+      "name": "Third rail",
+      "facet": "City subways and transit",
+      "known_at": 10
+    },
+    {
+      "name": "Commuter rail",
+      "facet": "City subways and transit",
+      "known_at": 10
+    },
+    {
+      "name": "Park and ride",
+      "facet": "City subways and transit",
+      "known_at": 10
+    },
+    {
+      "name": "Amtrak",
+      "facet": "Long-distance trains and buses",
+      "known_at": 7
+    },
+    {
+      "name": "Greyhound",
+      "facet": "Long-distance trains and buses",
+      "known_at": 6
+    },
+    {
+      "name": "Acela",
+      "facet": "Long-distance trains and buses",
+      "known_at": 11
+    },
+    {
+      "name": "California Zephyr",
+      "facet": "Long-distance trains and buses",
+      "known_at": 13
+    },
+    {
+      "name": "Empire Builder",
+      "facet": "Long-distance trains and buses",
+      "known_at": 14
+    },
+    {
+      "name": "Coast Starlight",
+      "facet": "Long-distance trains and buses",
+      "known_at": 14
+    },
+    {
+      "name": "Southwest Chief",
+      "facet": "Long-distance trains and buses",
+      "known_at": 14
+    },
+    {
+      "name": "Auto Train",
+      "facet": "Long-distance trains and buses",
+      "known_at": 13
+    },
+    {
+      "name": "Northeast Corridor",
+      "facet": "Long-distance trains and buses",
+      "known_at": 12
+    },
+    {
+      "name": "Union Station",
+      "facet": "Long-distance trains and buses",
+      "known_at": 10
+    },
+    {
+      "name": "Union Pacific",
+      "facet": "Long-distance trains and buses",
+      "known_at": 11
+    },
+    {
+      "name": "Sleeper car",
+      "facet": "Long-distance trains and buses",
+      "known_at": 7
+    },
+    {
+      "name": "Dining car",
+      "facet": "Long-distance trains and buses",
+      "known_at": 7
+    },
+    {
+      "name": "Megabus",
+      "facet": "Long-distance trains and buses",
+      "known_at": 12
+    },
+    {
+      "name": "Brightline",
+      "facet": "Long-distance trains and buses",
+      "known_at": 13
+    },
+    {
+      "name": "Freight train",
+      "facet": "Long-distance trains and buses",
+      "known_at": 4
+    },
+    {
+      "name": "TSA",
+      "facet": "Airports and air travel",
+      "known_at": 7
+    },
+    {
+      "name": "TSA PreCheck",
+      "facet": "Airports and air travel",
+      "known_at": 11
+    },
+    {
+      "name": "3-1-1 rule",
+      "facet": "Airports and air travel",
+      "known_at": 12
+    },
+    {
+      "name": "Hartsfield-Jackson Atlanta International Airport",
+      "facet": "Airports and air travel",
+      "known_at": 11
+    },
+    {
+      "name": "JFK Airport",
+      "facet": "Airports and air travel",
+      "known_at": 7
+    },
+    {
+      "name": "LAX",
+      "facet": "Airports and air travel",
+      "known_at": 7
+    },
+    {
+      "name": "O'Hare International Airport",
+      "facet": "Airports and air travel",
+      "known_at": 9
+    },
+    {
+      "name": "Denver International Airport",
+      "facet": "Airports and air travel",
+      "known_at": 12
+    },
+    {
+      "name": "Airport code",
+      "facet": "Airports and air travel",
+      "known_at": 9
+    },
+    {
+      "name": "FAA",
+      "facet": "Airports and air travel",
+      "known_at": 12
+    },
+    {
+      "name": "Red-eye flight",
+      "facet": "Airports and air travel",
+      "known_at": 9
+    },
+    {
+      "name": "Layover",
+      "facet": "Airports and air travel",
+      "known_at": 8
+    },
+    {
+      "name": "Baggage claim",
+      "facet": "Airports and air travel",
+      "known_at": 5
+    },
+    {
+      "name": "Pan Am",
+      "facet": "Airports and air travel",
+      "known_at": 12
+    },
+    {
+      "name": "Southwest Airlines",
+      "facet": "Airports and air travel",
+      "known_at": 9
+    },
+    {
+      "name": "Yellow cab",
+      "facet": "Taxis, carpools and rideshare",
+      "known_at": 3
+    },
+    {
+      "name": "Checker Marathon",
+      "facet": "Taxis, carpools and rideshare",
+      "known_at": 14
+    },
+    {
+      "name": "Taxi medallion",
+      "facet": "Taxis, carpools and rideshare",
+      "known_at": 13
+    },
+    {
+      "name": "Taxi meter",
+      "facet": "Taxis, carpools and rideshare",
+      "known_at": 6
+    },
+    {
+      "name": "Hailing a cab",
+      "facet": "Taxis, carpools and rideshare",
+      "known_at": 5
+    },
+    {
+      "name": "Uber",
+      "facet": "Taxis, carpools and rideshare",
+      "known_at": 5
+    },
+    {
+      "name": "Lyft",
+      "facet": "Taxis, carpools and rideshare",
+      "known_at": 8
+    },
+    {
+      "name": "Surge pricing",
+      "facet": "Taxis, carpools and rideshare",
+      "known_at": 11
+    },
+    {
+      "name": "Waymo",
+      "facet": "Taxis, carpools and rideshare",
+      "known_at": 11
+    },
+    {
+      "name": "Vanpool",
+      "facet": "Taxis, carpools and rideshare",
+      "known_at": 12
+    },
+    {
+      "name": "Slugging",
+      "facet": "Taxis, carpools and rideshare",
+      "known_at": 15
+    },
+    {
+      "name": "Designated driver",
+      "facet": "Taxis, carpools and rideshare",
+      "known_at": 9
+    },
+    {
+      "name": "Hitchhiking",
+      "facet": "Taxis, carpools and rideshare",
+      "known_at": 7
+    },
+    {
+      "name": "Pedicab",
+      "facet": "Taxis, carpools and rideshare",
+      "known_at": 10
+    },
+    {
+      "name": "Zipcar",
+      "facet": "Taxis, carpools and rideshare",
+      "known_at": 12
+    },
+    {
+      "name": "Taxi (TV series)",
+      "facet": "Taxis, carpools and rideshare",
+      "known_at": 13
+    },
+    {
+      "name": "Tipping the driver",
+      "facet": "Taxis, carpools and rideshare",
+      "known_at": 8
+    },
+    {
+      "name": "Safety patrol",
+      "facet": "School buses and school commute",
+      "known_at": 7
+    },
+    {
+      "name": "Otto Mann",
+      "facet": "School buses and school commute",
+      "known_at": 10
+    },
+    {
+      "name": "School busing",
+      "facet": "School buses and school commute",
+      "known_at": 13
+    },
+    {
+      "name": "School bus railroad stop",
+      "facet": "School buses and school commute",
+      "known_at": 9
+    },
+    {
+      "name": "USPS",
+      "facet": "Mail and the Postal Service",
+      "known_at": 6
+    },
+    {
+      "name": "ZIP code",
+      "facet": "Mail and the Postal Service",
+      "known_at": 6
+    },
+    {
+      "name": "Postage stamp",
+      "facet": "Mail and the Postal Service",
+      "known_at": 2
+    },
+    {
+      "name": "Blue collection box",
+      "facet": "Mail and the Postal Service",
+      "known_at": 4
+    },
+    {
+      "name": "Mailbox flag",
+      "facet": "Mail and the Postal Service",
+      "known_at": 5
+    },
+    {
+      "name": "Mail carrier",
+      "facet": "Mail and the Postal Service",
+      "known_at": 2
+    },
+    {
+      "name": "Mail truck",
+      "facet": "Mail and the Postal Service",
+      "known_at": 3
+    },
+    {
+      "name": "Postmaster General",
+      "facet": "Mail and the Postal Service",
+      "known_at": 12
+    },
+    {
+      "name": "Rural Free Delivery",
+      "facet": "Mail and the Postal Service",
+      "known_at": 14
+    },
+    {
+      "name": "PO Box",
+      "facet": "Mail and the Postal Service",
+      "known_at": 8
+    },
+    {
+      "name": "Priority Mail",
+      "facet": "Mail and the Postal Service",
+      "known_at": 10
+    },
+    {
+      "name": "Certified mail",
+      "facet": "Mail and the Postal Service",
+      "known_at": 12
+    },
+    {
+      "name": "Return address",
+      "facet": "Mail and the Postal Service",
+      "known_at": 6
+    },
+    {
+      "name": "State abbreviations",
+      "facet": "Mail and the Postal Service",
+      "known_at": 7
+    },
+    {
+      "name": "Neither snow nor rain",
+      "facet": "Mail and the Postal Service",
+      "known_at": 11
+    },
+    {
+      "name": "Inverted Jenny",
+      "facet": "Mail and the Postal Service",
+      "known_at": 14
+    },
+    {
+      "name": "Elvis stamp",
+      "facet": "Mail and the Postal Service",
+      "known_at": 13
+    },
+    {
+      "name": "Owney",
+      "facet": "Mail and the Postal Service",
+      "known_at": 15
+    },
+    {
+      "name": "Dead Letter Office",
+      "facet": "Mail and the Postal Service",
+      "known_at": 13
+    },
+    {
+      "name": "Junk mail",
+      "facet": "Mail and the Postal Service",
+      "known_at": 7
+    },
+    {
+      "name": "911",
+      "facet": "Emergency services and 911",
+      "known_at": 1
+    },
+    {
+      "name": "911 dispatcher",
+      "facet": "Emergency services and 911",
+      "known_at": 6
+    },
+    {
+      "name": "Fire truck",
+      "facet": "Emergency services and 911",
+      "known_at": 1
+    },
+    {
+      "name": "Dalmatian",
+      "facet": "Emergency services and 911",
+      "known_at": 3
+    },
+    {
+      "name": "Fire station",
+      "facet": "Emergency services and 911",
+      "known_at": 1
+    },
+    {
+      "name": "Fire hydrant",
+      "facet": "Emergency services and 911",
+      "known_at": 2
+    },
+    {
+      "name": "Ambulance",
+      "facet": "Emergency services and 911",
+      "known_at": 1
+    },
+    {
+      "name": "Paramedic",
+      "facet": "Emergency services and 911",
+      "known_at": 6
+    },
+    {
+      "name": "EMT",
+      "facet": "Emergency services and 911",
+      "known_at": 9
+    },
+    {
+      "name": "State trooper",
+      "facet": "Emergency services and 911",
+      "known_at": 9
+    },
+    {
+      "name": "Volunteer firefighter",
+      "facet": "Emergency services and 911",
+      "known_at": 8
+    },
+    {
+      "name": "Stop, drop and roll",
+      "facet": "Emergency services and 911",
+      "known_at": 2
+    },
+    {
+      "name": "McGruff the Crime Dog",
+      "facet": "Emergency services and 911",
+      "known_at": 10
+    },
+    {
+      "name": "Amber Alert",
+      "facet": "Emergency services and 911",
+      "known_at": 9
+    },
+    {
+      "name": "Poison Control",
+      "facet": "Emergency services and 911",
+      "known_at": 9
+    },
+    {
+      "name": "988",
+      "facet": "Emergency services and 911",
+      "known_at": 12
+    },
+    {
+      "name": "FEMA",
+      "facet": "Emergency services and 911",
+      "known_at": 11
+    },
+    {
+      "name": "Coast Guard",
+      "facet": "Emergency services and 911",
+      "known_at": 7
+    },
+    {
+      "name": "National Guard",
+      "facet": "Emergency services and 911",
+      "known_at": 9
+    },
+    {
+      "name": "Public library",
+      "facet": "Libraries, parks and public offices",
+      "known_at": 1
+    },
+    {
+      "name": "Dewey Decimal System",
+      "facet": "Libraries, parks and public offices",
+      "known_at": 7
+    },
+    {
+      "name": "New York Public Library lions",
+      "facet": "Libraries, parks and public offices",
+      "known_at": 12
+    },
+    {
+      "name": "Junior Ranger",
+      "facet": "Libraries, parks and public offices",
+      "known_at": 7
+    },
+    {
+      "name": "Public swimming pool",
+      "facet": "Libraries, parks and public offices",
+      "known_at": 2
+    },
+    {
+      "name": "City hall",
+      "facet": "Libraries, parks and public offices",
+      "known_at": 5
+    },
+    {
+      "name": "Courthouse",
+      "facet": "Libraries, parks and public offices",
+      "known_at": 6
+    },
+    {
+      "name": "Social Security card",
+      "facet": "Libraries, parks and public offices",
+      "known_at": 10
+    },
+    {
+      "name": "Passport",
+      "facet": "Libraries, parks and public offices",
+      "known_at": 5
+    },
+    {
+      "name": "Tax Day",
+      "facet": "Libraries, parks and public offices",
+      "known_at": 10
+    },
+    {
+      "name": "IRS",
+      "facet": "Libraries, parks and public offices",
+      "known_at": 10
+    },
+    {
+      "name": "Garbage truck",
+      "facet": "Trash, recycling and utilities",
+      "known_at": 1
+    },
+    {
+      "name": "Trash day",
+      "facet": "Trash, recycling and utilities",
+      "known_at": 3
+    },
+    {
+      "name": "Curbside recycling",
+      "facet": "Trash, recycling and utilities",
+      "known_at": 5
+    },
+    {
+      "name": "Recycling symbol",
+      "facet": "Trash, recycling and utilities",
+      "known_at": 3
+    },
+    {
+      "name": "Bottle deposit",
+      "facet": "Trash, recycling and utilities",
+      "known_at": 8
+    },
+    {
+      "name": "Compost",
+      "facet": "Trash, recycling and utilities",
+      "known_at": 5
+    },
+    {
+      "name": "Landfill",
+      "facet": "Trash, recycling and utilities",
+      "known_at": 6
+    },
+    {
+      "name": "Fresh Kills Landfill",
+      "facet": "Trash, recycling and utilities",
+      "known_at": 14
+    },
+    {
+      "name": "Garbage disposal",
+      "facet": "Trash, recycling and utilities",
+      "known_at": 6
+    },
+    {
+      "name": "Litterbug",
+      "facet": "Trash, recycling and utilities",
+      "known_at": 7
+    },
+    {
+      "name": "Water tower",
+      "facet": "Trash, recycling and utilities",
+      "known_at": 5
+    },
+    {
+      "name": "Tap water",
+      "facet": "Trash, recycling and utilities",
+      "known_at": 2
+    },
+    {
+      "name": "Water fluoridation",
+      "facet": "Trash, recycling and utilities",
+      "known_at": 12
+    },
+    {
+      "name": "Sewer",
+      "facet": "Trash, recycling and utilities",
+      "known_at": 5
+    },
+    {
+      "name": "Electric meter",
+      "facet": "Trash, recycling and utilities",
+      "known_at": 8
+    },
+    {
+      "name": "Power outage",
+      "facet": "Trash, recycling and utilities",
+      "known_at": 3
+    },
+    {
+      "name": "Utility pole",
+      "facet": "Trash, recycling and utilities",
+      "known_at": 4
+    }
+  ]
+}

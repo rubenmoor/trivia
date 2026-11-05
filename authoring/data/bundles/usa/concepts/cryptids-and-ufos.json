@@ -1,0 +1,1002 @@
+{
+  "subcategory": "cryptids-and-ufos",
+  "facets": [
+    "Bigfoot and Sasquatch",
+    "Regional monsters and creatures",
+    "Lake and sea monsters",
+    "Roswell and Area 51",
+    "Famous UFO sightings",
+    "Alien abduction stories",
+    "Cryptid festivals and roadside attractions",
+    "Hoaxes, photos and famous footage",
+    "UFO and cryptid words",
+    "Cryptids and aliens on screen",
+    "Government UFO investigations",
+    "Folklore creatures of early America"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sasquatch",
+      "facet": "Bigfoot and Sasquatch",
+      "known_at": 6
+    },
+    {
+      "name": "Bluff Creek",
+      "facet": "Bigfoot and Sasquatch",
+      "known_at": 13
+    },
+    {
+      "name": "Bigfoot footprint cast",
+      "facet": "Bigfoot and Sasquatch",
+      "known_at": 7
+    },
+    {
+      "name": "Ape Canyon",
+      "facet": "Bigfoot and Sasquatch",
+      "known_at": 14
+    },
+    {
+      "name": "Grover Krantz",
+      "facet": "Bigfoot and Sasquatch",
+      "known_at": 15
+    },
+    {
+      "name": "Jerry Crew",
+      "facet": "Bigfoot and Sasquatch",
+      "known_at": 15
+    },
+    {
+      "name": "Gigantopithecus",
+      "facet": "Bigfoot and Sasquatch",
+      "known_at": 13
+    },
+    {
+      "name": "Bigfoot Field Researchers Organization",
+      "facet": "Bigfoot and Sasquatch",
+      "known_at": 14
+    },
+    {
+      "name": "Messin' with Sasquatch",
+      "facet": "Bigfoot and Sasquatch",
+      "known_at": 11
+    },
+    {
+      "name": "Bigfoot Trap",
+      "facet": "Bigfoot and Sasquatch",
+      "known_at": 14
+    },
+    {
+      "name": "Bigfoot crossing sign",
+      "facet": "Bigfoot and Sasquatch",
+      "known_at": 6
+    },
+    {
+      "name": "Skamania County",
+      "facet": "Bigfoot and Sasquatch",
+      "known_at": 14
+    },
+    {
+      "name": "Wood knocking",
+      "facet": "Bigfoot and Sasquatch",
+      "known_at": 13
+    },
+    {
+      "name": "Dover Demon",
+      "facet": "Regional monsters and creatures",
+      "known_at": 13
+    },
+    {
+      "name": "Beast of Bray Road",
+      "facet": "Regional monsters and creatures",
+      "known_at": 13
+    },
+    {
+      "name": "Flatwoods Monster",
+      "facet": "Regional monsters and creatures",
+      "known_at": 12
+    },
+    {
+      "name": "Lizard Man of Scape Ore Swamp",
+      "facet": "Regional monsters and creatures",
+      "known_at": 13
+    },
+    {
+      "name": "Fouke Monster",
+      "facet": "Regional monsters and creatures",
+      "known_at": 13
+    },
+    {
+      "name": "Momo",
+      "facet": "Regional monsters and creatures",
+      "known_at": 14
+    },
+    {
+      "name": "Goatman",
+      "facet": "Regional monsters and creatures",
+      "known_at": 12
+    },
+    {
+      "name": "Pope Lick Monster",
+      "facet": "Regional monsters and creatures",
+      "known_at": 14
+    },
+    {
+      "name": "Mogollon Monster",
+      "facet": "Regional monsters and creatures",
+      "known_at": 14
+    },
+    {
+      "name": "Michigan Dogman",
+      "facet": "Regional monsters and creatures",
+      "known_at": 13
+    },
+    {
+      "name": "Bunnyman",
+      "facet": "Regional monsters and creatures",
+      "known_at": 13
+    },
+    {
+      "name": "Honey Island Swamp Monster",
+      "facet": "Regional monsters and creatures",
+      "known_at": 14
+    },
+    {
+      "name": "Loveland Frogman",
+      "facet": "Regional monsters and creatures",
+      "known_at": 13
+    },
+    {
+      "name": "Grafton Monster",
+      "facet": "Regional monsters and creatures",
+      "known_at": 15
+    },
+    {
+      "name": "Bessie",
+      "facet": "Lake and sea monsters",
+      "known_at": 14
+    },
+    {
+      "name": "Chessie",
+      "facet": "Lake and sea monsters",
+      "known_at": 13
+    },
+    {
+      "name": "Flathead Lake Monster",
+      "facet": "Lake and sea monsters",
+      "known_at": 14
+    },
+    {
+      "name": "Bear Lake Monster",
+      "facet": "Lake and sea monsters",
+      "known_at": 14
+    },
+    {
+      "name": "Tahoe Tessie",
+      "facet": "Lake and sea monsters",
+      "known_at": 12
+    },
+    {
+      "name": "Gloucester sea serpent",
+      "facet": "Lake and sea monsters",
+      "known_at": 14
+    },
+    {
+      "name": "Altamaha-ha",
+      "facet": "Lake and sea monsters",
+      "known_at": 15
+    },
+    {
+      "name": "White River Monster",
+      "facet": "Lake and sea monsters",
+      "known_at": 14
+    },
+    {
+      "name": "Beast of Busco",
+      "facet": "Lake and sea monsters",
+      "known_at": 15
+    },
+    {
+      "name": "Pepie",
+      "facet": "Lake and sea monsters",
+      "known_at": 15
+    },
+    {
+      "name": "Roswell incident",
+      "facet": "Roswell and Area 51",
+      "known_at": 8
+    },
+    {
+      "name": "Roswell Army Air Field",
+      "facet": "Roswell and Area 51",
+      "known_at": 13
+    },
+    {
+      "name": "Mac Brazel",
+      "facet": "Roswell and Area 51",
+      "known_at": 14
+    },
+    {
+      "name": "Project Mogul",
+      "facet": "Roswell and Area 51",
+      "known_at": 13
+    },
+    {
+      "name": "Roswell Daily Record",
+      "facet": "Roswell and Area 51",
+      "known_at": 13
+    },
+    {
+      "name": "Groom Lake",
+      "facet": "Roswell and Area 51",
+      "known_at": 13
+    },
+    {
+      "name": "Extraterrestrial Highway",
+      "facet": "Roswell and Area 51",
+      "known_at": 11
+    },
+    {
+      "name": "Storm Area 51",
+      "facet": "Roswell and Area 51",
+      "known_at": 8
+    },
+    {
+      "name": "Bob Lazar",
+      "facet": "Roswell and Area 51",
+      "known_at": 13
+    },
+    {
+      "name": "U-2 spy plane",
+      "facet": "Roswell and Area 51",
+      "known_at": 11
+    },
+    {
+      "name": "A-12 Oxcart",
+      "facet": "Roswell and Area 51",
+      "known_at": 14
+    },
+    {
+      "name": "Janet Airlines",
+      "facet": "Roswell and Area 51",
+      "known_at": 14
+    },
+    {
+      "name": "Hangar 18",
+      "facet": "Roswell and Area 51",
+      "known_at": 13
+    },
+    {
+      "name": "Dreamland",
+      "facet": "Roswell and Area 51",
+      "known_at": 14
+    },
+    {
+      "name": "Kenneth Arnold sighting",
+      "facet": "Famous UFO sightings",
+      "known_at": 12
+    },
+    {
+      "name": "Phoenix Lights",
+      "facet": "Famous UFO sightings",
+      "known_at": 11
+    },
+    {
+      "name": "Washington, D.C. UFO incident",
+      "facet": "Famous UFO sightings",
+      "known_at": 13
+    },
+    {
+      "name": "Lubbock Lights",
+      "facet": "Famous UFO sightings",
+      "known_at": 14
+    },
+    {
+      "name": "O'Hare UFO sighting",
+      "facet": "Famous UFO sightings",
+      "known_at": 13
+    },
+    {
+      "name": "Mantell incident",
+      "facet": "Famous UFO sightings",
+      "known_at": 14
+    },
+    {
+      "name": "USS Nimitz Tic Tac UFO",
+      "facet": "Famous UFO sightings",
+      "known_at": 11
+    },
+    {
+      "name": "Battle of Los Angeles",
+      "facet": "Famous UFO sightings",
+      "known_at": 13
+    },
+    {
+      "name": "Foo fighters",
+      "facet": "Famous UFO sightings",
+      "known_at": 12
+    },
+    {
+      "name": "Kecksburg UFO incident",
+      "facet": "Famous UFO sightings",
+      "known_at": 13
+    },
+    {
+      "name": "Lonnie Zamora",
+      "facet": "Famous UFO sightings",
+      "known_at": 14
+    },
+    {
+      "name": "Hudson Valley UFO sightings",
+      "facet": "Famous UFO sightings",
+      "known_at": 14
+    },
+    {
+      "name": "Stephenville UFO sighting",
+      "facet": "Famous UFO sightings",
+      "known_at": 14
+    },
+    {
+      "name": "Exeter incident",
+      "facet": "Famous UFO sightings",
+      "known_at": 14
+    },
+    {
+      "name": "Marfa lights",
+      "facet": "Famous UFO sightings",
+      "known_at": 12
+    },
+    {
+      "name": "Jimmy Carter UFO sighting",
+      "facet": "Famous UFO sightings",
+      "known_at": 12
+    },
+    {
+      "name": "Levelland UFO case",
+      "facet": "Famous UFO sightings",
+      "known_at": 15
+    },
+    {
+      "name": "Betty and Barney Hill",
+      "facet": "Alien abduction stories",
+      "known_at": 12
+    },
+    {
+      "name": "Travis Walton",
+      "facet": "Alien abduction stories",
+      "known_at": 12
+    },
+    {
+      "name": "Pascagoula abduction",
+      "facet": "Alien abduction stories",
+      "known_at": 13
+    },
+    {
+      "name": "Whitley Strieber",
+      "facet": "Alien abduction stories",
+      "known_at": 13
+    },
+    {
+      "name": "Gray alien",
+      "facet": "Alien abduction stories",
+      "known_at": 6
+    },
+    {
+      "name": "Zeta Reticuli",
+      "facet": "Alien abduction stories",
+      "known_at": 14
+    },
+    {
+      "name": "Missing time",
+      "facet": "Alien abduction stories",
+      "known_at": 12
+    },
+    {
+      "name": "Hypnotic regression",
+      "facet": "Alien abduction stories",
+      "known_at": 13
+    },
+    {
+      "name": "John Mack",
+      "facet": "Alien abduction stories",
+      "known_at": 15
+    },
+    {
+      "name": "Budd Hopkins",
+      "facet": "Alien abduction stories",
+      "known_at": 15
+    },
+    {
+      "name": "Close encounter of the fourth kind",
+      "facet": "Alien abduction stories",
+      "known_at": 13
+    },
+    {
+      "name": "Allagash abductions",
+      "facet": "Alien abduction stories",
+      "known_at": 15
+    },
+    {
+      "name": "Alien implant",
+      "facet": "Alien abduction stories",
+      "known_at": 11
+    },
+    {
+      "name": "Hill star map",
+      "facet": "Alien abduction stories",
+      "known_at": 14
+    },
+    {
+      "name": "Kelly–Hopkinsville encounter",
+      "facet": "Alien abduction stories",
+      "known_at": 13
+    },
+    {
+      "name": "Tractor beam",
+      "facet": "Alien abduction stories",
+      "known_at": 6
+    },
+    {
+      "name": "Mothman Festival",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 11
+    },
+    {
+      "name": "Mothman statue",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 11
+    },
+    {
+      "name": "Mothman Museum",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 12
+    },
+    {
+      "name": "International UFO Museum and Research Center",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 11
+    },
+    {
+      "name": "Willow Creek",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 13
+    },
+    {
+      "name": "McMinnville UFO Festival",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 14
+    },
+    {
+      "name": "Little A'Le'Inn",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 13
+    },
+    {
+      "name": "Alien Fresh Jerky",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 13
+    },
+    {
+      "name": "UFO Watchtower",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 14
+    },
+    {
+      "name": "Area 51 Alien Center",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 13
+    },
+    {
+      "name": "Flatwoods Monster Museum",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 14
+    },
+    {
+      "name": "Kecksburg UFO Festival",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 15
+    },
+    {
+      "name": "Hodag statue",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 14
+    },
+    {
+      "name": "Douglas, Wyoming",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 14
+    },
+    {
+      "name": "Champ Day",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 15
+    },
+    {
+      "name": "Bigfoot Discovery Museum",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 14
+    },
+    {
+      "name": "Ohio Bigfoot Conference",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 15
+    },
+    {
+      "name": "Roswell alien streetlights",
+      "facet": "Cryptid festivals and roadside attractions",
+      "known_at": 12
+    },
+    {
+      "name": "Patterson–Gimlin film",
+      "facet": "Hoaxes, photos and famous footage",
+      "known_at": 10
+    },
+    {
+      "name": "Ray Wallace",
+      "facet": "Hoaxes, photos and famous footage",
+      "known_at": 14
+    },
+    {
+      "name": "Alien autopsy film",
+      "facet": "Hoaxes, photos and famous footage",
+      "known_at": 12
+    },
+    {
+      "name": "McMinnville UFO photographs",
+      "facet": "Hoaxes, photos and famous footage",
+      "known_at": 14
+    },
+    {
+      "name": "Mansi photograph",
+      "facet": "Hoaxes, photos and famous footage",
+      "known_at": 14
+    },
+    {
+      "name": "Georgia Bigfoot hoax",
+      "facet": "Hoaxes, photos and famous footage",
+      "known_at": 13
+    },
+    {
+      "name": "Cardiff Giant",
+      "facet": "Hoaxes, photos and famous footage",
+      "known_at": 13
+    },
+    {
+      "name": "Fiji mermaid",
+      "facet": "Hoaxes, photos and famous footage",
+      "known_at": 12
+    },
+    {
+      "name": "Majestic 12",
+      "facet": "Hoaxes, photos and famous footage",
+      "known_at": 13
+    },
+    {
+      "name": "The War of the Worlds radio broadcast",
+      "facet": "Hoaxes, photos and famous footage",
+      "known_at": 11
+    },
+    {
+      "name": "Orson Welles",
+      "facet": "Hoaxes, photos and famous footage",
+      "known_at": 12
+    },
+    {
+      "name": "Herrick brothers",
+      "facet": "Hoaxes, photos and famous footage",
+      "known_at": 15
+    },
+    {
+      "name": "Minnesota Iceman",
+      "facet": "Hoaxes, photos and famous footage",
+      "known_at": 14
+    },
+    {
+      "name": "George Adamski",
+      "facet": "Hoaxes, photos and famous footage",
+      "known_at": 14
+    },
+    {
+      "name": "Gimbal video",
+      "facet": "Hoaxes, photos and famous footage",
+      "known_at": 13
+    },
+    {
+      "name": "Heflin UFO photographs",
+      "facet": "Hoaxes, photos and famous footage",
+      "known_at": 15
+    },
+    {
+      "name": "UFO",
+      "facet": "UFO and cryptid words",
+      "known_at": 3
+    },
+    {
+      "name": "UAP",
+      "facet": "UFO and cryptid words",
+      "known_at": 11
+    },
+    {
+      "name": "Flying saucer",
+      "facet": "UFO and cryptid words",
+      "known_at": 3
+    },
+    {
+      "name": "Cryptid",
+      "facet": "UFO and cryptid words",
+      "known_at": 9
+    },
+    {
+      "name": "Cryptozoology",
+      "facet": "UFO and cryptid words",
+      "known_at": 11
+    },
+    {
+      "name": "Little green men",
+      "facet": "UFO and cryptid words",
+      "known_at": 5
+    },
+    {
+      "name": "Close encounter",
+      "facet": "UFO and cryptid words",
+      "known_at": 9
+    },
+    {
+      "name": "Ufology",
+      "facet": "UFO and cryptid words",
+      "known_at": 11
+    },
+    {
+      "name": "Squatch",
+      "facet": "UFO and cryptid words",
+      "known_at": 10
+    },
+    {
+      "name": "Abductee",
+      "facet": "UFO and cryptid words",
+      "known_at": 10
+    },
+    {
+      "name": "Contactee",
+      "facet": "UFO and cryptid words",
+      "known_at": 14
+    },
+    {
+      "name": "Tinfoil hat",
+      "facet": "UFO and cryptid words",
+      "known_at": 9
+    },
+    {
+      "name": "Mothership",
+      "facet": "UFO and cryptid words",
+      "known_at": 6
+    },
+    {
+      "name": "Extraterrestrial",
+      "facet": "UFO and cryptid words",
+      "known_at": 6
+    },
+    {
+      "name": "Take me to your leader",
+      "facet": "UFO and cryptid words",
+      "known_at": 6
+    },
+    {
+      "name": "Earthling",
+      "facet": "UFO and cryptid words",
+      "known_at": 4
+    },
+    {
+      "name": "Swamp gas",
+      "facet": "UFO and cryptid words",
+      "known_at": 13
+    },
+    {
+      "name": "Blobsquatch",
+      "facet": "UFO and cryptid words",
+      "known_at": 14
+    },
+    {
+      "name": "The truth is out there",
+      "facet": "UFO and cryptid words",
+      "known_at": 11
+    },
+    {
+      "name": "E.T. the Extra-Terrestrial",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 3
+    },
+    {
+      "name": "The X-Files",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 10
+    },
+    {
+      "name": "Fox Mulder",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 12
+    },
+    {
+      "name": "Dana Scully",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 12
+    },
+    {
+      "name": "Harry and the Hendersons",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 11
+    },
+    {
+      "name": "Men in Black",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 6
+    },
+    {
+      "name": "Mars Attacks!",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 12
+    },
+    {
+      "name": "The Mothman Prophecies",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 13
+    },
+    {
+      "name": "Finding Bigfoot",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 11
+    },
+    {
+      "name": "Ancient Aliens",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 10
+    },
+    {
+      "name": "Stitch",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 2
+    },
+    {
+      "name": "Toy Story aliens",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 2
+    },
+    {
+      "name": "Gravity Falls",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 6
+    },
+    {
+      "name": "Signs",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 12
+    },
+    {
+      "name": "Nope",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 12
+    },
+    {
+      "name": "ALF",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 12
+    },
+    {
+      "name": "Mork & Mindy",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 13
+    },
+    {
+      "name": "Coneheads",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 13
+    },
+    {
+      "name": "3rd Rock from the Sun",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 13
+    },
+    {
+      "name": "The Legend of Boggy Creek",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 14
+    },
+    {
+      "name": "Roswell (TV series)",
+      "facet": "Cryptids and aliens on screen",
+      "known_at": 13
+    },
+    {
+      "name": "Project Blue Book",
+      "facet": "Government UFO investigations",
+      "known_at": 11
+    },
+    {
+      "name": "Project Sign",
+      "facet": "Government UFO investigations",
+      "known_at": 14
+    },
+    {
+      "name": "Project Grudge",
+      "facet": "Government UFO investigations",
+      "known_at": 14
+    },
+    {
+      "name": "J. Allen Hynek",
+      "facet": "Government UFO investigations",
+      "known_at": 13
+    },
+    {
+      "name": "Condon Report",
+      "facet": "Government UFO investigations",
+      "known_at": 14
+    },
+    {
+      "name": "Robertson Panel",
+      "facet": "Government UFO investigations",
+      "known_at": 15
+    },
+    {
+      "name": "AATIP",
+      "facet": "Government UFO investigations",
+      "known_at": 14
+    },
+    {
+      "name": "AARO",
+      "facet": "Government UFO investigations",
+      "known_at": 14
+    },
+    {
+      "name": "Luis Elizondo",
+      "facet": "Government UFO investigations",
+      "known_at": 14
+    },
+    {
+      "name": "David Fravor",
+      "facet": "Government UFO investigations",
+      "known_at": 14
+    },
+    {
+      "name": "David Grusch",
+      "facet": "Government UFO investigations",
+      "known_at": 13
+    },
+    {
+      "name": "2023 congressional UFO hearing",
+      "facet": "Government UFO investigations",
+      "known_at": 12
+    },
+    {
+      "name": "Pentagon UAP report",
+      "facet": "Government UFO investigations",
+      "known_at": 12
+    },
+    {
+      "name": "Edward Ruppelt",
+      "facet": "Government UFO investigations",
+      "known_at": 15
+    },
+    {
+      "name": "NASA UAP study",
+      "facet": "Government UFO investigations",
+      "known_at": 13
+    },
+    {
+      "name": "Harry Reid",
+      "facet": "Government UFO investigations",
+      "known_at": 14
+    },
+    {
+      "name": "Hynek classification",
+      "facet": "Government UFO investigations",
+      "known_at": 14
+    },
+    {
+      "name": "Wendigo",
+      "facet": "Folklore creatures of early America",
+      "known_at": 10
+    },
+    {
+      "name": "Thunderbird",
+      "facet": "Folklore creatures of early America",
+      "known_at": 9
+    },
+    {
+      "name": "Pukwudgie",
+      "facet": "Folklore creatures of early America",
+      "known_at": 14
+    },
+    {
+      "name": "Bell Witch",
+      "facet": "Folklore creatures of early America",
+      "known_at": 13
+    },
+    {
+      "name": "Piasa Bird",
+      "facet": "Folklore creatures of early America",
+      "known_at": 14
+    },
+    {
+      "name": "Rougarou",
+      "facet": "Folklore creatures of early America",
+      "known_at": 13
+    },
+    {
+      "name": "Fearsome critters",
+      "facet": "Folklore creatures of early America",
+      "known_at": 14
+    },
+    {
+      "name": "Uktena",
+      "facet": "Folklore creatures of early America",
+      "known_at": 15
+    },
+    {
+      "name": "Mishipeshu",
+      "facet": "Folklore creatures of early America",
+      "known_at": 15
+    },
+    {
+      "name": "Tommyknocker",
+      "facet": "Folklore creatures of early America",
+      "known_at": 13
+    },
+    {
+      "name": "Coyote trickster",
+      "facet": "Folklore creatures of early America",
+      "known_at": 10
+    },
+    {
+      "name": "Snallygaster",
+      "facet": "Folklore creatures of early America",
+      "known_at": 14
+    },
+    {
+      "name": "Sleepy Hollow",
+      "facet": "Folklore creatures of early America",
+      "known_at": 8
+    }
+  ]
+}

@@ -1,0 +1,1157 @@
+{
+  "subcategory": "more-sports",
+  "facets": [
+    "NHL teams and the Stanley Cup",
+    "Hockey legends, rules and lingo",
+    "NASCAR and stock car racing",
+    "Indy 500 and open-wheel racing",
+    "Kentucky Derby and Triple Crown",
+    "Golf and tennis majors in the US",
+    "Boxing and pro wrestling",
+    "Rodeo and Western sports",
+    "US soccer, MLS and USWNT",
+    "American Olympic heroes",
+    "X Games and extreme sports",
+    "Lacrosse, marathons and niche sports"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 4,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Stanley Cup",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 6
+    },
+    {
+      "name": "Chicago Blackhawks",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 9
+    },
+    {
+      "name": "Boston Bruins",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 9
+    },
+    {
+      "name": "New York Rangers",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 9
+    },
+    {
+      "name": "Pittsburgh Penguins",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 8
+    },
+    {
+      "name": "Anaheim Ducks",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 8
+    },
+    {
+      "name": "Vegas Golden Knights",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 10
+    },
+    {
+      "name": "Tampa Bay Lightning",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 10
+    },
+    {
+      "name": "Colorado Avalanche",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 10
+    },
+    {
+      "name": "Los Angeles Kings",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 10
+    },
+    {
+      "name": "Philadelphia Flyers",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 10
+    },
+    {
+      "name": "Seattle Kraken",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 9
+    },
+    {
+      "name": "Florida Panthers",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 11
+    },
+    {
+      "name": "Minnesota Wild",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 11
+    },
+    {
+      "name": "Hartford Whalers",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 13
+    },
+    {
+      "name": "Original Six",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 12
+    },
+    {
+      "name": "Octopus throw",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 13
+    },
+    {
+      "name": "NHL Winter Classic",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 12
+    },
+    {
+      "name": "Conn Smythe Trophy",
+      "facet": "NHL teams and the Stanley Cup",
+      "known_at": 13
+    },
+    {
+      "name": "Wayne Gretzky",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 8
+    },
+    {
+      "name": "Mario Lemieux",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 12
+    },
+    {
+      "name": "Gordie Howe",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 12
+    },
+    {
+      "name": "Bobby Orr",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 12
+    },
+    {
+      "name": "Sidney Crosby",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 10
+    },
+    {
+      "name": "Alex Ovechkin",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 10
+    },
+    {
+      "name": "Connor McDavid",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 11
+    },
+    {
+      "name": "Auston Matthews",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 12
+    },
+    {
+      "name": "Patrick Kane",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 12
+    },
+    {
+      "name": "Zamboni",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 6
+    },
+    {
+      "name": "Puck",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 3
+    },
+    {
+      "name": "Hat trick",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 7
+    },
+    {
+      "name": "Gordie Howe hat trick",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 14
+    },
+    {
+      "name": "Icing",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 11
+    },
+    {
+      "name": "Power play",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 10
+    },
+    {
+      "name": "Penalty box",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 7
+    },
+    {
+      "name": "Slap shot",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 8
+    },
+    {
+      "name": "Five-hole",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 14
+    },
+    {
+      "name": "Goalie mask",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 6
+    },
+    {
+      "name": "Enforcer",
+      "facet": "Hockey legends, rules and lingo",
+      "known_at": 12
+    },
+    {
+      "name": "Daytona 500",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 8
+    },
+    {
+      "name": "Dale Earnhardt",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 10
+    },
+    {
+      "name": "Dale Earnhardt Jr.",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 11
+    },
+    {
+      "name": "Richard Petty",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 11
+    },
+    {
+      "name": "Jeff Gordon",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 10
+    },
+    {
+      "name": "Jimmie Johnson",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 12
+    },
+    {
+      "name": "Kyle Busch",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 13
+    },
+    {
+      "name": "Chase Elliott",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 12
+    },
+    {
+      "name": "Bubba Wallace",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 11
+    },
+    {
+      "name": "Wendell Scott",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 14
+    },
+    {
+      "name": "Bill France Sr.",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 14
+    },
+    {
+      "name": "Talladega Superspeedway",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 11
+    },
+    {
+      "name": "Bristol Motor Speedway",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 13
+    },
+    {
+      "name": "Moonshine running",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 13
+    },
+    {
+      "name": "Lightning McQueen",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 2
+    },
+    {
+      "name": "Talladega Nights",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 12
+    },
+    {
+      "name": "Pit stop",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 5
+    },
+    {
+      "name": "Checkered flag",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 4
+    },
+    {
+      "name": "Yellow flag",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 6
+    },
+    {
+      "name": "Victory Lane",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 10
+    },
+    {
+      "name": "Drafting",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 12
+    },
+    {
+      "name": "Restrictor plate",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 14
+    },
+    {
+      "name": "Martinsville grandfather clock trophy",
+      "facet": "NASCAR and stock car racing",
+      "known_at": 15
+    },
+    {
+      "name": "Indianapolis 500",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 8
+    },
+    {
+      "name": "Indianapolis Motor Speedway",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 10
+    },
+    {
+      "name": "Yard of Bricks",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 13
+    },
+    {
+      "name": "Indy 500 victory milk",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 11
+    },
+    {
+      "name": "Borg-Warner Trophy",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 13
+    },
+    {
+      "name": "Gentlemen, start your engines",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 10
+    },
+    {
+      "name": "Pace car",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 8
+    },
+    {
+      "name": "Memorial Day weekend",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 10
+    },
+    {
+      "name": "IndyCar Series",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 11
+    },
+    {
+      "name": "A. J. Foyt",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 12
+    },
+    {
+      "name": "Mario Andretti",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 11
+    },
+    {
+      "name": "Al Unser",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 13
+    },
+    {
+      "name": "Rick Mears",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 14
+    },
+    {
+      "name": "Hélio Castroneves",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 12
+    },
+    {
+      "name": "Janet Guthrie",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 14
+    },
+    {
+      "name": "Ray Harroun",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 15
+    },
+    {
+      "name": "Josef Newgarden",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 14
+    },
+    {
+      "name": "Long Beach Grand Prix",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 14
+    },
+    {
+      "name": "Las Vegas Grand Prix",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 12
+    },
+    {
+      "name": "Circuit of the Americas",
+      "facet": "Indy 500 and open-wheel racing",
+      "known_at": 13
+    },
+    {
+      "name": "Kentucky Derby",
+      "facet": "Kentucky Derby and Triple Crown",
+      "known_at": 8
+    },
+    {
+      "name": "Churchill Downs",
+      "facet": "Kentucky Derby and Triple Crown",
+      "known_at": 11
+    },
+    {
+      "name": "Preakness Stakes",
+      "facet": "Kentucky Derby and Triple Crown",
+      "known_at": 12
+    },
+    {
+      "name": "Belmont Stakes",
+      "facet": "Kentucky Derby and Triple Crown",
+      "known_at": 12
+    },
+    {
+      "name": "American Pharoah",
+      "facet": "Kentucky Derby and Triple Crown",
+      "known_at": 12
+    },
+    {
+      "name": "Justify",
+      "facet": "Kentucky Derby and Triple Crown",
+      "known_at": 14
+    },
+    {
+      "name": "Seattle Slew",
+      "facet": "Kentucky Derby and Triple Crown",
+      "known_at": 14
+    },
+    {
+      "name": "Affirmed",
+      "facet": "Kentucky Derby and Triple Crown",
+      "known_at": 14
+    },
+    {
+      "name": "War Admiral",
+      "facet": "Kentucky Derby and Triple Crown",
+      "known_at": 14
+    },
+    {
+      "name": "Man o' War",
+      "facet": "Kentucky Derby and Triple Crown",
+      "known_at": 13
+    },
+    {
+      "name": "Mint julep",
+      "facet": "Kentucky Derby and Triple Crown",
+      "known_at": 12
+    },
+    {
+      "name": "Derby hat",
+      "facet": "Kentucky Derby and Triple Crown",
+      "known_at": 9
+    },
+    {
+      "name": "Garland of roses",
+      "facet": "Kentucky Derby and Triple Crown",
+      "known_at": 11
+    },
+    {
+      "name": "My Old Kentucky Home",
+      "facet": "Kentucky Derby and Triple Crown",
+      "known_at": 13
+    },
+    {
+      "name": "Jockey",
+      "facet": "Kentucky Derby and Triple Crown",
+      "known_at": 5
+    },
+    {
+      "name": "Masters Tournament",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 10
+    },
+    {
+      "name": "Augusta National Golf Club",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 12
+    },
+    {
+      "name": "Green jacket",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 11
+    },
+    {
+      "name": "Amen Corner",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 14
+    },
+    {
+      "name": "Pimento cheese sandwich",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 15
+    },
+    {
+      "name": "US Open (golf)",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 11
+    },
+    {
+      "name": "Pebble Beach",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 13
+    },
+    {
+      "name": "Ryder Cup",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 12
+    },
+    {
+      "name": "Caddie",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 8
+    },
+    {
+      "name": "Jack Nicklaus",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 12
+    },
+    {
+      "name": "Scottie Scheffler",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 13
+    },
+    {
+      "name": "US Open (tennis)",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 10
+    },
+    {
+      "name": "Arthur Ashe Stadium",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 12
+    },
+    {
+      "name": "Flushing Meadows",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 13
+    },
+    {
+      "name": "Andre Agassi",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 12
+    },
+    {
+      "name": "Pete Sampras",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 12
+    },
+    {
+      "name": "John McEnroe",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 12
+    },
+    {
+      "name": "Chris Evert",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 13
+    },
+    {
+      "name": "Coco Gauff",
+      "facet": "Golf and tennis majors in the US",
+      "known_at": 10
+    },
+    {
+      "name": "Float like a butterfly, sting like a bee",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 9
+    },
+    {
+      "name": "Mike Tyson",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 8
+    },
+    {
+      "name": "Joe Frazier",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 12
+    },
+    {
+      "name": "George Foreman",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 10
+    },
+    {
+      "name": "Sugar Ray Leonard",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 13
+    },
+    {
+      "name": "Evander Holyfield",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 12
+    },
+    {
+      "name": "Floyd Mayweather",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 10
+    },
+    {
+      "name": "Laila Ali",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 13
+    },
+    {
+      "name": "Rumble in the Jungle",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 12
+    },
+    {
+      "name": "Thrilla in Manila",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 13
+    },
+    {
+      "name": "Golden Gloves",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 14
+    },
+    {
+      "name": "Rocky Balboa",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 6
+    },
+    {
+      "name": "Madison Square Garden",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 10
+    },
+    {
+      "name": "WWE",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 6
+    },
+    {
+      "name": "WrestleMania",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 8
+    },
+    {
+      "name": "Hulk Hogan",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 7
+    },
+    {
+      "name": "The Rock",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 5
+    },
+    {
+      "name": "John Cena",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 5
+    },
+    {
+      "name": "Stone Cold Steve Austin",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 10
+    },
+    {
+      "name": "The Undertaker",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 9
+    },
+    {
+      "name": "André the Giant",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 10
+    },
+    {
+      "name": "Championship belt",
+      "facet": "Boxing and pro wrestling",
+      "known_at": 5
+    },
+    {
+      "name": "Saddle bronc riding",
+      "facet": "Rodeo and Western sports",
+      "known_at": 12
+    },
+    {
+      "name": "Team roping",
+      "facet": "Rodeo and Western sports",
+      "known_at": 12
+    },
+    {
+      "name": "Chaps",
+      "facet": "Rodeo and Western sports",
+      "known_at": 9
+    },
+    {
+      "name": "Belt buckle trophy",
+      "facet": "Rodeo and Western sports",
+      "known_at": 11
+    },
+    {
+      "name": "Quarter Horse",
+      "facet": "Rodeo and Western sports",
+      "known_at": 12
+    },
+    {
+      "name": "Cutting horse",
+      "facet": "Rodeo and Western sports",
+      "known_at": 14
+    },
+    {
+      "name": "Professional Bull Riders",
+      "facet": "Rodeo and Western sports",
+      "known_at": 12
+    },
+    {
+      "name": "Lane Frost",
+      "facet": "Rodeo and Western sports",
+      "known_at": 15
+    },
+    {
+      "name": "Major League Soccer",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 10
+    },
+    {
+      "name": "MLS Cup",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 12
+    },
+    {
+      "name": "Inter Miami",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 8
+    },
+    {
+      "name": "LA Galaxy",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 11
+    },
+    {
+      "name": "Seattle Sounders",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 12
+    },
+    {
+      "name": "New York Cosmos",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 13
+    },
+    {
+      "name": "NWSL",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 13
+    },
+    {
+      "name": "USWNT",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 10
+    },
+    {
+      "name": "Mia Hamm",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 11
+    },
+    {
+      "name": "Megan Rapinoe",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 10
+    },
+    {
+      "name": "Alex Morgan",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 10
+    },
+    {
+      "name": "Abby Wambach",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 12
+    },
+    {
+      "name": "Carli Lloyd",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 12
+    },
+    {
+      "name": "Brandi Chastain",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 13
+    },
+    {
+      "name": "1999 FIFA Women's World Cup",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 13
+    },
+    {
+      "name": "1994 FIFA World Cup",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 12
+    },
+    {
+      "name": "2026 FIFA World Cup",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 8
+    },
+    {
+      "name": "Landon Donovan",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 12
+    },
+    {
+      "name": "Clint Dempsey",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 13
+    },
+    {
+      "name": "Tim Howard",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 13
+    },
+    {
+      "name": "Christian Pulisic",
+      "facet": "US soccer, MLS and USWNT",
+      "known_at": 11
+    },
+    {
+      "name": "Michael Phelps",
+      "facet": "American Olympic heroes",
+      "known_at": 5
+    },
+    {
+      "name": "Carl Lewis",
+      "facet": "American Olympic heroes",
+      "known_at": 12
+    },
+    {
+      "name": "Florence Griffith Joyner",
+      "facet": "American Olympic heroes",
+      "known_at": 13
+    },
+    {
+      "name": "Michael Johnson",
+      "facet": "American Olympic heroes",
+      "known_at": 13
+    },
+    {
+      "name": "Allyson Felix",
+      "facet": "American Olympic heroes",
+      "known_at": 13
+    },
+    {
+      "name": "Sha'Carri Richardson",
+      "facet": "American Olympic heroes",
+      "known_at": 12
+    },
+    {
+      "name": "Bob Beamon",
+      "facet": "American Olympic heroes",
+      "known_at": 14
+    },
+    {
+      "name": "Dick Fosbury",
+      "facet": "American Olympic heroes",
+      "known_at": 14
+    },
+    {
+      "name": "Greg Louganis",
+      "facet": "American Olympic heroes",
+      "known_at": 14
+    },
+    {
+      "name": "Mary Lou Retton",
+      "facet": "American Olympic heroes",
+      "known_at": 13
+    },
+    {
+      "name": "Kerri Strug",
+      "facet": "American Olympic heroes",
+      "known_at": 14
+    },
+    {
+      "name": "Shaun White",
+      "facet": "American Olympic heroes",
+      "known_at": 10
+    },
+    {
+      "name": "Apolo Ohno",
+      "facet": "American Olympic heroes",
+      "known_at": 12
+    },
+    {
+      "name": "Herb Brooks",
+      "facet": "American Olympic heroes",
+      "known_at": 13
+    },
+    {
+      "name": "1984 Los Angeles Olympics",
+      "facet": "American Olympic heroes",
+      "known_at": 12
+    },
+    {
+      "name": "X Games",
+      "facet": "X Games and extreme sports",
+      "known_at": 9
+    },
+    {
+      "name": "Tony Hawk",
+      "facet": "X Games and extreme sports",
+      "known_at": 7
+    },
+    {
+      "name": "Tony Hawk's Pro Skater",
+      "facet": "X Games and extreme sports",
+      "known_at": 8
+    },
+    {
+      "name": "The 900",
+      "facet": "X Games and extreme sports",
+      "known_at": 11
+    },
+    {
+      "name": "Ollie",
+      "facet": "X Games and extreme sports",
+      "known_at": 8
+    },
+    {
+      "name": "Kickflip",
+      "facet": "X Games and extreme sports",
+      "known_at": 9
+    },
+    {
+      "name": "Halfpipe",
+      "facet": "X Games and extreme sports",
+      "known_at": 7
+    },
+    {
+      "name": "Skatepark",
+      "facet": "X Games and extreme sports",
+      "known_at": 4
+    },
+    {
+      "name": "Z-Boys",
+      "facet": "X Games and extreme sports",
+      "known_at": 13
+    },
+    {
+      "name": "Nyjah Huston",
+      "facet": "X Games and extreme sports",
+      "known_at": 13
+    },
+    {
+      "name": "BMX",
+      "facet": "X Games and extreme sports",
+      "known_at": 7
+    },
+    {
+      "name": "Mat Hoffman",
+      "facet": "X Games and extreme sports",
+      "known_at": 14
+    },
+    {
+      "name": "Travis Pastrana",
+      "facet": "X Games and extreme sports",
+      "known_at": 12
+    },
+    {
+      "name": "Freestyle motocross",
+      "facet": "X Games and extreme sports",
+      "known_at": 12
+    },
+    {
+      "name": "Supercross",
+      "facet": "X Games and extreme sports",
+      "known_at": 12
+    },
+    {
+      "name": "Big Air",
+      "facet": "X Games and extreme sports",
+      "known_at": 11
+    },
+    {
+      "name": "Chloe Kim",
+      "facet": "X Games and extreme sports",
+      "known_at": 12
+    },
+    {
+      "name": "Banzai Pipeline",
+      "facet": "X Games and extreme sports",
+      "known_at": 12
+    },
+    {
+      "name": "Mavericks",
+      "facet": "X Games and extreme sports",
+      "known_at": 14
+    },
+    {
+      "name": "Duke Kahanamoku",
+      "facet": "X Games and extreme sports",
+      "known_at": 13
+    },
+    {
+      "name": "Kelly Slater",
+      "facet": "X Games and extreme sports",
+      "known_at": 12
+    },
+    {
+      "name": "Bethany Hamilton",
+      "facet": "X Games and extreme sports",
+      "known_at": 12
+    },
+    {
+      "name": "Haudenosaunee",
+      "facet": "Lacrosse, marathons and niche sports",
+      "known_at": 13
+    },
+    {
+      "name": "Boston Marathon",
+      "facet": "Lacrosse, marathons and niche sports",
+      "known_at": 10
+    },
+    {
+      "name": "Heartbreak Hill",
+      "facet": "Lacrosse, marathons and niche sports",
+      "known_at": 14
+    },
+    {
+      "name": "New York City Marathon",
+      "facet": "Lacrosse, marathons and niche sports",
+      "known_at": 11
+    },
+    {
+      "name": "Pickleball",
+      "facet": "Lacrosse, marathons and niche sports",
+      "known_at": 8
+    },
+    {
+      "name": "Cornhole",
+      "facet": "Lacrosse, marathons and niche sports",
+      "known_at": 8
+    },
+    {
+      "name": "Disc golf",
+      "facet": "Lacrosse, marathons and niche sports",
+      "known_at": 11
+    },
+    {
+      "name": "Spikeball",
+      "facet": "Lacrosse, marathons and niche sports",
+      "known_at": 11
+    },
+    {
+      "name": "Horseshoes",
+      "facet": "Lacrosse, marathons and niche sports",
+      "known_at": 8
+    },
+    {
+      "name": "Volleyball",
+      "facet": "Lacrosse, marathons and niche sports",
+      "known_at": 11
+    },
+    {
+      "name": "Roller derby",
+      "facet": "Lacrosse, marathons and niche sports",
+      "known_at": 11
+    },
+    {
+      "name": "Iditarod",
+      "facet": "Lacrosse, marathons and niche sports",
+      "known_at": 11
+    },
+    {
+      "name": "Westminster Dog Show",
+      "facet": "Lacrosse, marathons and niche sports",
+      "known_at": 10
+    },
+    {
+      "name": "Lumberjack sports",
+      "facet": "Lacrosse, marathons and niche sports",
+      "known_at": 12
+    },
+    {
+      "name": "America's Cup",
+      "facet": "Lacrosse, marathons and niche sports",
+      "known_at": 13
+    }
+  ]
+}
