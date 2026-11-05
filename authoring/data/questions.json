@@ -861859,7 +861859,7 @@
     },
     {
       "id": "q-11145",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Una lengua con dos nombres, como quien tiene nombre y apodo.",
       "question": "La lengua oficial en toda España tiene dos nombres: «español» y… ¿cuál más?",
@@ -861870,8 +861870,8 @@
         "Euskera"
       ],
       "hints": [
-        "Es la lengua de esta pregunta.",
-        "Es la lengua en la que Cervantes escribió el Quijote.",
+        "Es un nombre muy antiguo, de hace más de mil años.",
+        "El nombre viene de un antiguo reino del centro de la península.",
         "Nació en el antiguo reino de Castilla."
       ],
       "media": {
@@ -861917,26 +861917,34 @@
       "needs_media": false,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hints 1 and 2 give the answer away. Hint 1 («Es la lengua de esta pregunta») tells players the answer is the language they're reading, and that rules out Catalán, Gallego and Euskera at once. Hint 2 (the language of the Quijote) does the same. Hint 1 should be vague (for example, that most people in Latin America speak it too, or how old the name is), and hint 2 should not point straight to Spanish.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hints 1 and 2 give the answer away. Hint 1 («Es la lengua de esta pregunta») tells players the answer is the language they're reading, and that rules out Catalán, Gallego and Euskera at once. Hint 2 (the language of the Quijote) does the same. Hint 1 should be vague (for example, that most people in Latin America speak it too, or how old the name is), and hint 2 should not point straight to Spanish.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, whose «castillos» echoed the answer, with the Cervantes hint.",
+        "reason": "Replaced hints 1 and 2, which pointed straight to Spanish, with vaguer hints about the name's age and origin.",
         "previous": {
           "hints": [
             "Es la lengua de esta pregunta.",
-            "Su nombre viene de una región con muchos castillos.",
+            "Es la lengua en la que Cervantes escribió el Quijote.",
             "Nació en el antiguo reino de Castilla."
           ]
         },
@@ -862030,7 +862038,7 @@
     },
     {
       "id": "q-11147",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Una ciudad con dos carnés de identidad, uno para cada idioma.",
       "question": "Completa el nombre oficial en valenciano de esta capital de provincia: «Castelló de la …».",
@@ -862042,7 +862050,7 @@
       ],
       "hints": [
         "En castellano también lleva esa coletilla.",
-        "La palabra describe un terreno sin montañas.",
+        "La misma palabra da nombre a dos comarcas de la provincia, una «Alta» y otra «Baixa».",
         "Su nombre completo en castellano es «Castellón de la …», con una palabra parecida a «llanura»."
       ],
       "media": {
@@ -862088,34 +862096,46 @@
       "needs_media": false,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"La palabra describe un terreno sin montañas\") gives the answer away: any Spanish speaker hearing it picks «Plana» straight away and rules out «Serra». It should be a vaguer hint, such as one about the Magdalena festival or the province's location on the coast, and the flat-land clue should only come in hint 3. The facts are fine (Castelló de la Plana, the move down from the hill in 1251, the Magdalena festival).",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"La palabra describe un terreno sin montañas\") gives the answer away: any Spanish speaker hearing it picks «Plana» straight away and rules out «Serra». It should be a vaguer hint, such as one about the Magdalena festival or the province's location on the coast, and the flat-land clue should only come in hint 3. The facts are fine (Castelló de la Plana, the move down from the hill in 1251, the Magdalena festival).",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer hints at flat land.",
+        "reason": "Replaced hint 2, which gave away the flat-land meaning, with a vaguer hint about the comarcas; the llanura clue stays only in hint 3.",
         "previous": {
-          "description": "Una ciudad que bajó del monte para estar más cómoda."
+          "hints": [
+            "En castellano también lleva esa coletilla.",
+            "La palabra describe un terreno sin montañas.",
+            "Su nombre completo en castellano es «Castellón de la …», con una palabra parecida a «llanura»."
+          ]
         },
         "revised_on": "2026-11-05"
       }
     },
     {
       "id": "q-11148",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Una tierra donde llueve tanto que hasta los paraguas dan las gracias.",
-      "question": "En la comunidad de este mapa, para dar las gracias se dice «grazas». ¿Cuál es?",
+      "question": "En esta comunidad autónoma, para dar las gracias se dice «grazas». ¿Cuál es?",
       "answer": "Galicia",
       "wrong_answers": [
         "Asturias",
@@ -862129,12 +862149,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Galicia in Spain map",
-        "note": "Mapa de España sin nombres con la comunidad autónoma de Galicia resaltada.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "rainy green countryside",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGreen_karst_peaks_seen_from_the_top_of_Mount_Nam_Xay_a_rainy_afternoon_during_the_monsoon_Vang_Vieng_Laos.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Green_karst_peaks_seen_from_the_top_of_Mount_Nam_Xay_a_rainy_afternoon_during_the_monsoon_Vang_Vieng_Laos.jpg/3840px-Green_karst_peaks_seen_from_the_top_of_Mount_Nam_Xay_a_rainy_afternoon_during_the_monsoon_Vang_Vieng_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Basile Morin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Basile Morin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Basile_Morin",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El gallego y el portugués nacieron de una misma lengua medieval, el galaicoportugués.",
       "subcategory": "co-official-languages",
@@ -862159,23 +862186,49 @@
         "difficulty_estimate": 5,
         "notes": "Hint 1 (north-west corner) repeats what the essential map already shows. Wikimedia locator maps exist, so the media is fine. The Galicia topic is shared with other candidates, but the fact is different."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The essential slot needs a map of Spain with Galicia highlighted, but none of the candidates is a map: they are a dragonfly, a Braille sign, a playground, the Torre de Hércules, the Miño river and a street tree in Santiago. A new search isn't allowed, so the slot needs a locator map (e.g. \"Galicia in Spain locator map\" on Commons) chosen by hand, or the question should drop «de este mapa» and use an illustrative image. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential slot needs a map of Spain with Galicia highlighted, but none of the candidates is a map: they are a dragonfly, a Braille sign, a playground, the Torre de Hércules, the Miño river and a street tree in Santiago. A new search isn't allowed, so the slot needs a locator map (e.g. \"Galicia in Spain locator map\" on Commons) chosen by hand, or the question should drop «de este mapa» and use an illustrative image. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No map was available, so I removed «de este mapa» and switched to a decorative image that doesn't give the answer away.",
+        "previous": {
+          "question": "En la comunidad de este mapa, para dar las gracias se dice «grazas». ¿Cuál es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Galicia in Spain map",
+            "note": "Mapa de España sin nombres con la comunidad autónoma de Galicia resaltada.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11149",
@@ -862708,7 +862761,7 @@
     },
     {
       "id": "q-11156",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Unos espías tan secretos que se enteran hasta las cabras.",
       "question": "Soy una agencia de espías llena de desastres. Mi jefe es el Súper y mis agentes más famosos son Mortadelo y Filemón. ¿Quién soy?",
@@ -862719,7 +862772,7 @@
         "El M.I.6"
       ],
       "hints": [
-        "Salgo en tebeos desde finales de los años 60.",
+        "Salgo en los tebeos de Francisco Ibáñez.",
         "Mi nombre se escribe con puntos entre las letras.",
         "Me llamo igual que la hermana de tu madre."
       ],
@@ -862764,30 +862817,37 @@
         "difficulty_estimate": 5,
         "notes": "Hint 1 ('no soy una agencia de verdad') already leaves only one option, so it is far too strong for a first hint. The articles differ between options (la/el), but they still read fine."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: wrong. Hint 1 is false: Mortadelo y Filemón (and the T.I.A.) first appeared in 1958 in Pulgarcito, not in the late 1960s.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: wrong. Hint 1 is false: Mortadelo y Filemón (and the T.I.A.) first appeared in 1958 in Pulgarcito, not in the late 1960s.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed «española» from the question and replaced hint 1, both of which separated the fictional agency from the real ones.",
+        "reason": "Replaced the disputed date in hint 1 with an undisputed fact (created by Francisco Ibáñez).",
         "previous": {
-          "question": "Soy una agencia de espías española llena de desastres. Mi jefe es el Súper y mis agentes más famosos son Mortadelo y Filemón. ¿Quién soy?",
           "hints": [
-            "No soy una agencia de verdad.",
+            "Salgo en tebeos desde finales de los años 60.",
             "Mi nombre se escribe con puntos entre las letras.",
             "Me llamo igual que la hermana de tu madre."
           ]
@@ -863947,10 +864007,10 @@
     },
     {
       "id": "q-11172",
-      "status": "needs_work",
-      "difficulty": 3,
+      "status": "approved",
+      "difficulty": 2,
       "description": "Un jardín entero no cabe en la cabeza, pero con una flor basta.",
-      "question": "Mira este detalle. ¿Quién suele llevar esto?",
+      "question": "¿Quién lleva tradicionalmente una flor grande en el pelo y un vestido de lunares con volantes?",
       "answer": "Una bailaora de flamenco",
       "wrong_answers": [
         "Una bailarina de ballet",
@@ -863958,18 +864018,25 @@
         "Una astronauta"
       ],
       "hints": [
-        "Se lleva en el pelo, a menudo junto a un moño.",
-        "Suele combinarse con un vestido de volantes.",
-        "Se ve mucho en la Feria de Abril y en los tablaos."
+        "Se ve mucho en la Feria de Abril de Sevilla.",
+        "Baila al ritmo de palmas y guitarra.",
+        "Zapatea con fuerza sobre el suelo de un tablao."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "flamenca dress hair flower",
-        "note": "Primer plano de una flor roja grande en el pelo recogido, a ser posible con un poco de vestido de lunares o volantes.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "Andalusian patio flowers",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFlower-Laden_Patio_-_Cordoba%2C_Spain.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Flower-Laden_Patio_-_Cordoba%2C_Spain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Adam Jones · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Adam Jones",
+        "author_url": "https://www.flickr.com/people/41000732@N04",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "La flor se coloca de forma distinta según la moda de cada año: arriba, al lado o en la nuca.",
       "subcategory": "flamenco-and-copla",
@@ -863994,23 +864061,56 @@
         "difficulty_estimate": 2,
         "notes": "The ballet dancer is the only plausible distractor; the footballer and astronaut are joke options. A flower in the hair also fits other traditions, but the photo note narrows it down. The fun-fact claim about yearly fashion is plausible but unverified."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates is the close-up of a big flower in pinned-up hair that this essential slot needs. Candidates 1, 2, 5 and 6 are old drawings or paintings of hairstyles, 3 is a girl in a white communion or wedding dress with a flower crown, and 4 is a full-body dancer in a red dress with no flower visible. A new search is not allowed here. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates is the close-up of a big flower in pinned-up hair that this essential slot needs. Candidates 1, 2, 5 and 6 are old drawings or paintings of hairstyles, 3 is a girl in a white communion or wedding dress with a flower crown, and 4 is a full-body dancer in a red dress with no flower visible. A new search is not allowed here. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "difficulty_original": 3,
+      "revision": {
+        "action": "revise",
+        "reason": "No close-up photo was available, so I turned it into a text question with a decorative image, lowered the difficulty and rewrote the hints so they don't repeat the question.",
+        "previous": {
+          "difficulty": 3,
+          "question": "Mira este detalle. ¿Quién suele llevar esto?",
+          "hints": [
+            "Se lleva en el pelo, a menudo junto a un moño.",
+            "Suele combinarse con un vestido de volantes.",
+            "Se ve mucho en la Feria de Abril y en los tablaos."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "flamenca dress hair flower",
+            "note": "Primer plano de una flor roja grande en el pelo recogido, a ser posible con un poco de vestido de lunares o volantes.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11173",
@@ -864104,11 +864204,18 @@
       "media": {
         "type": "audio",
         "role": "essential",
-        "query": "flamenco dancer footwork",
+        "query": "zapateado flamenco",
         "note": "Grabación de un zapateado flamenco solo, sin guitarra ni voz.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AZapateado_y_pajaritos.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Zapateado_y_pajaritos.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "EridaniAcosta13 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "EridaniAcosta13",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:EridaniAcosta13&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Las bailaoras más rápidas pueden dar más de diez golpes de pie por segundo.",
       "subcategory": "flamenco-and-copla",
@@ -864133,19 +864240,29 @@
         "difficulty_estimate": 7,
         "notes": "A clean zapateado-only recording on Freesound is likely but not certain. The 'more than ten taps per second' fact is plausible, not verified."
       },
-      "fact_checked": true,
+      "fact_checked": false,
       "needs_media": true,
       "batch": "batch-34",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the audio candidates is a solo zapateado recording. #1 and #3 are pronunciation clips ('footwork', 'Flamenco'), #2 is a guitar piece, #4 is palmas (one of the wrong answers), and #5 and #6 are MIDI files of the flamenco mode. No new search is allowed, so this essential audio slot needs a real zapateado recording (for example from Freesound, 'zapateado flamenco'). No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "Verificación de datos: uncertain. Fun fact 'more than ten strikes per second' is not backed by a firm source. One study cites an average of about 4 per second, up to 12 per second (2009 source), so the claim is shaky.",
         "problems": [
-          "media"
+          "fact"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the audio candidates is a solo zapateado recording. #1 and #3 are pronunciation clips ('footwork', 'Flamenco'), #2 is a guitar piece, #4 is palmas (one of the wrong answers), and #5 and #6 are MIDI files of the flamenco mode. No new search is allowed, so this essential audio slot needs a real zapateado recording (for example from Freesound, 'zapateado flamenco'). No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
@@ -864164,14 +864281,17 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description and hint 1, which ruled out the hand-played options, and replaced hint 3, which overlapped another question's answer.",
+        "reason": "Changed the audio query to «zapateado flamenco», which Freesound is likely to have, so a solo footwork recording can be found.",
         "previous": {
-          "description": "Ruido de pasos, pero de alguien que tiene muchísima prisa y mucho arte.",
-          "hints": [
-            "No se hace con las manos.",
-            "Se hace sobre un suelo de madera.",
-            "Suena con los clavos de los zapatos."
-          ]
+          "media": {
+            "type": "audio",
+            "role": "essential",
+            "query": "flamenco dancer footwork",
+            "note": "Grabación de un zapateado flamenco solo, sin guitarra ni voz.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -864190,22 +864310,22 @@
       ],
       "hints": [
         "En la canción lo hacen «por ver a Dios nacido».",
-        "Es algo que haces cuando tienes sed.",
+        "En el estribillo, esa palabra se repite tres veces seguidas.",
         "Se hace con agua, zumo o leche."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "fish swimming in stream",
+        "query": "clear mountain river",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGrunt_Fish_swimming_%287157470017%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Grunt_Fish_swimming_%287157470017%29.jpg/3840px-Grunt_Fish_swimming_%287157470017%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "amanderson2 · CC BY 2.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMountain%2C_river%2C_trail%2C_highway.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Mountain%2C_river%2C_trail%2C_highway.JPG/3840px-Mountain%2C_river%2C_trail%2C_highway.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Jeffrey Beall · CC BY 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "amanderson2",
-        "author_url": "https://www.flickr.com/people/49399018@N00",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Jeffrey Beall",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jeffrey_Beall",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -864232,30 +864352,40 @@
         "difficulty_estimate": 2,
         "notes": "q-7340 is about the same carol but asks what kind of song it is, which is a different fact."
       },
-      "fact_checked": true,
+      "fact_checked": false,
       "needs_media": false,
       "batch": "batch-34",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 2 («Es algo que haces cuando tienes sed») gives the answer away: of the four options, only «Beben» is what you do when you're thirsty. It's also stronger than hint 3, so the hints don't go from vague to strong. Hint 2 should be vaguer, for example about the carol's tune or chorus, and hint 3 can stay as it is.",
+        "feedback": "Verificación de datos: uncertain. Answer 'Beben' is right and the wrong answers are wrong. Hint 2 is imprecise: the refrain is 'beben y beben y vuelven a beber', so the word is repeated with 'y' between, not three times in a row. Checked from memory, not searched.",
         "problems": [
-          "giveaway"
+          "fact"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 («Es algo que haces cuando tienes sed») gives the answer away: of the four options, only «Beben» is what you do when you're thirsty. It's also stronger than hint 3, so the hints don't go from vague to strong. Hint 2 should be vaguer, for example about the carol's tune or chorus, and hint 3 can stay as it is.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which gave the answer away, with a vaguer line from the carol and moved the thirst hint to position 2.",
+        "reason": "Replaced hint 2, which gave the answer away, with a vaguer hint about the chorus.",
         "previous": {
           "hints": [
+            "En la canción lo hacen «por ver a Dios nacido».",
             "Es algo que haces cuando tienes sed.",
-            "Lo hacen «y vuelven a…» hacerlo otra vez.",
             "Se hace con agua, zumo o leche."
           ]
         },
@@ -865179,10 +865309,10 @@
     },
     {
       "id": "q-11188",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Cuando el estadio rival se pone en pie para aplaudirte, es que has hecho algo muy gordo.",
-      "question": "En 2005, el Bernabéu entero aplaudió a este brasileño del Barça tras marcar dos golazos. ¿Quién es?",
+      "question": "En 2005, el Bernabéu entero aplaudió a un brasileño del Barça tras marcar dos golazos. ¿Quién es?",
       "answer": "Ronaldinho",
       "wrong_answers": [
         "Ronaldo Nazário",
@@ -865196,12 +865326,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
+        "role": "illustrative",
         "query": "Santiago Bernabeu stadium",
-        "note": "Foto clara de Ronaldinho, la cara bien visible, sin su nombre escrito en la imagen.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASantiagobernabeupanoramav45.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Santiagobernabeupanoramav45.JPG/3840px-Santiagobernabeupanoramav45.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "لا روسا · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "لا روسا",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:%D9%84%D8%A7_%D8%B1%D9%88%D8%B3%D8%A7&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Antes que él, Maradona también recibió una ovación del Bernabéu con la camiseta del Barça, en 1983.",
       "subcategory": "football-clubs",
@@ -865227,27 +865364,45 @@
         "notes": "The description points to his famous smile, which is his defining trait and also hint 2. The photo isn't strictly needed, since the text alone can identify him."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot is 'essential' and its note asks for a clear photo of Ronaldinho's face, but every candidate is a photo of the Bernabéu stadium, and no new search is allowed. The question doesn't need his photo. Changing the role to 'illustrative' would fix it, and candidate 1 (empty Bernabéu, no names on show) would then be a good pick. The text, facts and options are fine. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot is 'essential' and its note asks for a clear photo of Ronaldinho's face, but every candidate is a photo of the Bernabéu stadium, and no new search is allowed. The question doesn't need his photo. Changing the role to 'illustrative' would fix it, and candidate 1 (empty Bernabéu, no names on show) would then be a good pick. The text, facts and options are fine. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer points to his famous smile.",
+        "reason": "Changed the media to an illustrative Bernabéu photo and the wording from «este» to «un», since no photo of the player is needed.",
         "previous": {
-          "description": "Una sonrisa tan grande que hasta el rival acabó contagiado."
+          "question": "En 2005, el Bernabéu entero aplaudió a este brasileño del Barça tras marcar dos golazos. ¿Quién es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Santiago Bernabeu stadium",
+            "note": "Foto clara de Ronaldinho, la cara bien visible, sin su nombre escrito en la imagen.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-05"
       }
@@ -866477,7 +866632,7 @@
     },
     {
       "id": "q-11205",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un equipo de fútbol infantil que resuelve más misterios que goles mete.",
       "question": "¿Cómo se llama el niño que narra «Los Futbolísimos» y juega en el Soto Alto?",
@@ -866489,7 +866644,7 @@
       ],
       "hints": [
         "Cuenta en primera persona las aventuras del equipo, aunque no es su estrella.",
-        "Su apodo suena a algo que trae el cartero.",
+        "Muchas veces le toca empezar los partidos en el banquillo.",
         "Es lo que te llega cuando compras algo por internet, pero con k."
       ],
       "media": {
@@ -866537,25 +866692,33 @@
       "needs_media": false,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Su apodo suena a algo que trae el cartero\") gives the answer away. Against Manolito, Teo and Pepito, only Pakete sounds like «paquete», so hint 2 already solves the question and hint 3 just repeats it. Hint 2 should give a vaguer clue, for example his role in the team (he usually sits on the bench and isn't the star) or his real name Francisco, and leave the parcel wordplay to hint 3 only.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Su apodo suena a algo que trae el cartero\") gives the answer away. Against Manolito, Teo and Pepito, only Pakete sounds like «paquete», so hint 2 already solves the question and hint 3 just repeats it. Hint 2 should give a vaguer clue, for example his role in the team (he usually sits on the bench and isn't the star) or his real name Francisco, and leave the parcel wordplay to hint 3 only.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which ruled out wrong options, with a vague hint about the narrator.",
+        "reason": "Replaced hint 2, which gave away the parcel wordplay, with a vaguer hint about his role on the bench.",
         "previous": {
           "hints": [
-            "No es el personaje de ningún otro libro famoso.",
+            "Cuenta en primera persona las aventuras del equipo, aunque no es su estrella.",
             "Su apodo suena a algo que trae el cartero.",
             "Es lo que te llega cuando compras algo por internet, pero con k."
           ]
@@ -866853,7 +867016,7 @@
     },
     {
       "id": "q-11210",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "La abuela literaria de muchas abuelas españolas.",
       "question": "¿En qué década empezó Elena Fortún a publicar en la revista «Gente Menuda» las historias de su famosa niña protagonista?",
@@ -866871,21 +867034,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "vintage magazine pages",
+        "query": "old printing press",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHarmsworth_Magazine_Bulldog.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Harmsworth_Magazine_Bulldog.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Sue Clark · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_printing_press_-_panoramio.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Old_printing_press_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Roman Savulyak · CC BY-SA 3.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Sue Clark",
-        "author_url": "https://www.flickr.com/people/14277117@N03",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Roman Savulyak",
+        "author_url": "https://web.archive.org/web/20161012174516/http://www.panoramio.com/user/2350947?with_photo_id=17786465",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-1923",
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Elena Fortún era el seudónimo de Encarnación Aragoneses.",
       "subcategory": "modern-literature",
@@ -866914,19 +867074,53 @@
       "needs_media": false,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-1923, PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-1923, PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the decorative image query so the image with an unsuitable PD-US-only licence gets replaced.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "vintage magazine pages",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AHarmsworth_Magazine_Bulldog.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Harmsworth_Magazine_Bulldog.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Sue Clark · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Sue Clark",
+            "author_url": "https://www.flickr.com/people/14277117@N03",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-1923",
+              "PD-US-expired"
+            ]
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11211",
@@ -867593,18 +867787,18 @@
     },
     {
       "id": "q-11220",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
-      "description": "Una estrella dorada que vive sola en la camiseta y lleva años esperando a una hermanita.",
-      "question": "Es dorada, va encima del escudo en la camiseta de la selección masculina de fútbol y solo hay una. ¿Qué recuerda?",
-      "answer": "El Mundial de Sudáfrica 2010",
+      "description": "Una estrella dorada cosida en la camiseta que no se descose ni en la lavadora.",
+      "question": "La primera estrella dorada sobre el escudo de la selección masculina de fútbol recuerda un Mundial. ¿Dónde se jugó?",
+      "answer": "En Sudáfrica",
       "wrong_answers": [
-        "La Eurocopa de 2008",
-        "El oro de Barcelona 92",
-        "El primer partido oficial"
+        "En Alemania",
+        "En Brasil",
+        "En Corea del Sur y Japón"
       ],
       "hints": [
-        "España ha ganado varias Eurocopas, pero la estrella es una sola.",
+        "Fue el primer Mundial que ganó España.",
         "Iniesta marcó el gol de la final.",
         "Fue la primera vez que ese gran torneo se jugó en África."
       ],
@@ -867647,29 +867841,48 @@
         "difficulty_estimate": 6,
         "notes": "Sound. The answer has no year while two distractors do, a slight mismatch in form."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fact check is 'wrong': it reports that Spain won the 2026 World Cup, so the shirt now has, or will soon have, a second star. That makes 'solo hay una' and the description's 'vive sola' outdated. I can't confirm the result myself (it is after my knowledge cutoff), and either way the premise depends on a fact that changes. Rewrite it so it doesn't depend on how many stars there are (for example, ask where the 2010 World Cup that the first star recalls was played), or drop it. Verificación de datos: wrong. Outdated. Spain won the 2026 World Cup (1-0 over Argentina after extra time, 19 July 2026). The shirt now has or will have a second star, so 'solo hay una' and the premise are no longer true.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fact check is 'wrong': it reports that Spain won the 2026 World Cup, so the shirt now has, or will soon have, a second star. That makes 'solo hay una' and the description's 'vive sola' outdated. I can't confirm the result myself (it is after my knowledge cutoff), and either way the premise depends on a fact that changes. Rewrite it so it doesn't depend on how many stars there are (for example, ask where the 2010 World Cup that the first star recalls was played), or drop it. Verificación de datos: wrong. Outdated. Spain won the 2026 World Cup (1-0 over Argentina after extra time, 19 July 2026). The shirt now has or will have a second star, so 'solo hay una' and the premise are no longer true.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description without 'pegatina' or the extra-time clue, and added the year to the answer so it matches the other options.",
+        "reason": "Rewrote it to ask where the World Cup behind the first star was played, so it no longer depends on how many stars the shirt has; the description changed for the same reason.",
         "previous": {
-          "description": "Una pegatina dorada que costó noventa minutos, una prórroga y muchos nervios.",
-          "answer": "El Mundial de Sudáfrica"
+          "description": "Una estrella dorada que vive sola en la camiseta y lleva años esperando a una hermanita.",
+          "question": "Es dorada, va encima del escudo en la camiseta de la selección masculina de fútbol y solo hay una. ¿Qué recuerda?",
+          "answer": "El Mundial de Sudáfrica 2010",
+          "wrong_answers": [
+            "La Eurocopa de 2008",
+            "El oro de Barcelona 92",
+            "El primer partido oficial"
+          ],
+          "hints": [
+            "España ha ganado varias Eurocopas, pero la estrella es una sola.",
+            "Iniesta marcó el gol de la final.",
+            "Fue la primera vez que ese gran torneo se jugó en África."
+          ]
         },
         "revised_on": "2026-11-05"
       }
@@ -867694,7 +867907,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Flag of Spain svg",
+        "query": "File:Flag of Spain.svg",
         "note": "La bandera oficial de España, plana y completa, de frente, para que se vean bien las proporciones de las franjas.",
         "source_url": null,
         "file_url": null,
@@ -867728,18 +867941,44 @@
       "batch": "batch-34",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows the current flag of Spain, flat and from the front, so the essential image can't be filled. A new search isn't allowed this round. The slot needs a file like \"File:Flag of Spain.svg\" from Commons. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows the current flag of Spain, flat and from the front, so the essential image can't be filled. A new search isn't allowed this round. The slot needs a file like \"File:Flag of Spain.svg\" from Commons. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Set the query to the exact Commons file name so the essential flag image can be found; the text is fine.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Flag of Spain svg",
+            "note": "La bandera oficial de España, plana y completa, de frente, para que se vean bien las proporciones de las franjas.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11222",
@@ -867831,7 +868070,7 @@
       "status": "needs_work",
       "difficulty": 2,
       "description": "Dinero que, si lo miras con atención, también sirve para ver las estrellas.",
-      "question": "Mira esta moneda española de 1 euro. ¿Cuántas estrellas rodean la cara del rey?",
+      "question": "Mira esta moneda española de 2 euros. ¿Cuántas estrellas rodean la cara del rey?",
       "answer": "12",
       "wrong_answers": [
         "10",
@@ -867846,8 +868085,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Spain 1 euro coin",
-        "note": "La cara española de la moneda de 1 euro con el retrato de Felipe VI, nítida y de frente, con las 12 estrellas bien visibles.",
+        "query": "Spain 2 euro coin Juan Carlos",
+        "note": "La cara española de la moneda de 2 euros con el retrato del rey Juan Carlos I, nítida y de frente, con las 12 estrellas bien visibles.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -867880,18 +868119,45 @@
       "batch": "batch-34",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows the Spanish 1-euro coin with the king's portrait, and no new search is possible. The question says «Mira esta moneda española de 1 euro», so the essential image has to be that exact coin. The text itself is fine. Options: find a Commons photo of the Spanish 1-euro coin (for example the Felipe VI or Juan Carlos I national side) and attach it by hand, or reword the question to fit candidate 3, a Spanish 2-euro coin from 1999 with Juan Carlos I. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No candidate shows the king's face on a Spanish 2-euro coin. 1 and 2 are commemorative coins (UEM 2009, Treaty of Rome 2007) with no portrait, and 3–6 are photos of Juan Carlos I with no coin in them. The search needs to run again. No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows the Spanish 1-euro coin with the king's portrait, and no new search is possible. The question says «Mira esta moneda española de 1 euro», so the essential image has to be that exact coin. The text itself is fine. Options: find a Commons photo of the Spanish 1-euro coin (for example the Felipe VI or Juan Carlos I national side) and attach it by hand, or reword the question to fit candidate 3, a Spanish 2-euro coin from 1999 with Juan Carlos I. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Reworded it to a Spanish 2-euro coin with the king's portrait, which matches an available candidate and also has 12 stars.",
+        "previous": {
+          "question": "Mira esta moneda española de 1 euro. ¿Cuántas estrellas rodean la cara del rey?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Spain 1 euro coin",
+            "note": "La cara española de la moneda de 1 euro con el retrato de Felipe VI, nítida y de frente, con las 12 estrellas bien visibles.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11224",
@@ -868279,7 +868545,7 @@
       ],
       "hints": [
         "En la procesión unos van con capirote, otros cargan el paso y otro da las órdenes.",
-        "El intruso trabaja en un espectáculo muy distinto, con capotes y trajes de luces cerca.",
+        "El intruso nunca ha cargado un paso ni ha llevado capirote: trabaja en otro tipo de espectáculo.",
         "Su sitio es la plaza de toros."
       ],
       "media": {
@@ -868326,25 +868592,35 @@
       "batch": "batch-34",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 2 (\"con capotes y trajes de luces cerca\") points straight at bullfighting, and the picador is the only bullfighting option, so the answer is given away at hint 2. Replace it with a vaguer hint, for example one saying the odd one out belongs to a different kind of show, without naming bullfighting gear. Also, an odd-one-out about Semana Santa roles doesn't fit the subcategory \"Pintores, escultores y arquitectos\".",
+        "feedback": "Hint 1 gives the answer away by elimination. It says who wears the capirote (nazareno), who carries the paso (costalero) and who gives the orders (capataz), which accounts for all three wrong answers and leaves only «El picador». Hint 2 then says outright that the odd one out works in a different kind of show, which nearly names the bullring. Hint 1 should stay vague (for example, about the procession's music or route) and not explain any of the options. Hint 2 should not give away the picador's world.",
         "problems": [
           "giveaway"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"con capotes y trajes de luces cerca\") points straight at bullfighting, and the picador is the only bullfighting option, so the answer is given away at hint 2. Replace it with a vaguer hint, for example one saying the odd one out belongs to a different kind of show, without naming bullfighting gear. Also, an odd-one-out about Semana Santa roles doesn't fit the subcategory \"Pintores, escultores y arquitectos\".",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave the answer away, with a vaguer bullfighting clue, and made hint 1 describe the other three roles.",
+        "reason": "Replaced hint 2, which pointed straight at bullfighting, with a vaguer one.",
         "previous": {
           "hints": [
-            "Tres de ellos se ven en las procesiones de Sevilla.",
-            "El intruso suele ir a caballo y con una lanza.",
+            "En la procesión unos van con capirote, otros cargan el paso y otro da las órdenes.",
+            "El intruso trabaja en un espectáculo muy distinto, con capotes y trajes de luces cerca.",
             "Su sitio es la plaza de toros."
           ]
         },
@@ -868647,7 +868923,7 @@
     },
     {
       "id": "q-11234",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Un techo que parece una cueva de colores: ideal para no aburrirse en las reuniones largas.",
       "question": "Este techo con estalactitas de colores cubre la Sala de los Derechos Humanos de la ONU en Ginebra. ¿Qué artista español lo creó?",
@@ -868665,11 +868941,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Palais des Nations Room XX ceiling",
+        "query": "Human Rights Room Geneva ceiling",
         "note": "El techo de la Sala de los Derechos Humanos y de la Alianza de Civilizaciones del Palacio de las Naciones de Ginebra, con sus estalactitas de colores.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACeiling_art_in_the_UN.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Ceiling_art_in_the_UN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Ypsilon from Finland · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Ypsilon from Finland",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ypsilon_from_Finland",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Para ese techo se usaron unos 35 000 kilos de pintura.",
       "subcategory": "painting-and-architecture",
@@ -868698,15 +868981,23 @@
       "needs_media": true,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate clearly shows Barceló's stalactite ceiling in Room XX, and this essential slot needs it. Candidate 1 is Room XX, but the photo is mostly seats, with only a thin strip of the ceiling at the top. Candidates 4 and 5 show the metal-panel ceiling of Room XIX, a different room. A new search isn't allowed, so the media needs a manual pick, for example a Commons photo looking up at the Room XX ceiling. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate clearly shows Barceló's stalactite ceiling in Room XX, and this essential slot needs it. Candidate 1 is Room XX, but the photo is mostly seats, with only a thin strip of the ceiling at the top. Candidates 4 and 5 show the metal-panel ceiling of Room XIX, a different room. A new search isn't allowed, so the media needs a manual pick, for example a Commons photo looking up at the Room XX ceiling. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
@@ -871653,7 +871944,7 @@
     },
     {
       "id": "q-11274",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "En euskera, hasta lo más educado suena a trabalenguas de campeonato.",
       "question": "En una tienda de Bilbao oyes «eskerrik asko». ¿Qué significa en castellano?",
@@ -871665,7 +871956,7 @@
       ],
       "hints": [
         "Es de las primeras palabras de cortesía que aprenden los turistas.",
-        "«Asko» significa «mucho».",
+        "Te la dicen en la tienda justo después de que pagues.",
         "Es lo que contestas cuando alguien te hace un favor."
       ],
       "media": {
@@ -871711,26 +872002,34 @@
       "needs_media": false,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 («Asko» significa «mucho») gives the answer away: of the four options, only «gracias» goes with «mucho» («muchas gracias»), so the hint solves the question before hint 3. The rater flagged this too. Hint 2 needs a vaguer clue, for example that it's the word you say after paying or receiving something, without the «mucho» link.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 («Asko» significa «mucho») gives the answer away: of the four options, only «gracias» goes with «mucho» («muchas gracias»), so the hint solves the question before hint 3. The rater flagged this too. Hint 2 needs a vaguer clue, for example that it's the word you say after paying or receiving something, without the «mucho» link.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1 (redundant) and hint 2 (giveaway) with a vague tourist hint and the meaning of «asko», ordered from vague to strong.",
+        "reason": "Replaced hint 2, whose «asko» = «mucho» link gave the answer away.",
         "previous": {
           "hints": [
-            "La frase está en euskera.",
-            "Se dice al recibir el cambio o la bolsa.",
+            "Es de las primeras palabras de cortesía que aprenden los turistas.",
+            "«Asko» significa «mucho».",
             "Es lo que contestas cuando alguien te hace un favor."
           ]
         },
@@ -872887,10 +873186,10 @@
     },
     {
       "id": "q-11290",
-      "status": "needs_work",
-      "difficulty": 8,
+      "status": "approved",
+      "difficulty": 5,
       "description": "Cruzó el océano sin pasaporte y llegó a Andalucía sin perder el compás.",
-      "question": "Escucha: este instrumento de percusión llegó de Perú y Paco de Lucía lo metió en el flamenco. ¿Cuál es?",
+      "question": "Mira: este instrumento de percusión llegó de Perú y Paco de Lucía lo metió en el flamenco. ¿Cuál es?",
       "answer": "El cajón",
       "wrong_answers": [
         "El bombo",
@@ -872903,13 +873202,20 @@
         "Es una caja de madera con un agujero detrás."
       ],
       "media": {
-        "type": "audio",
+        "type": "image",
         "role": "essential",
-        "query": "cajon drum groove",
-        "note": "Grabación de un cajón (cajón peruano/flamenco) tocado con las manos, solo, sin otros instrumentos.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "query": "cajon percussion instrument",
+        "note": "Foto clara de un cajón (cajón peruano/flamenco) de madera, solo o con alguien sentado tocándolo.",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHomemade_caj%C3%B3n.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Homemade_caj%C3%B3n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Luislema · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Luislema",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Luislema&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Paco de Lucía recibió su primer cajón en Lima en 1977, y en pocos años se volvió imprescindible en el flamenco.",
       "subcategory": "folk-music-and-dance",
@@ -872938,32 +873244,60 @@
       "needs_media": true,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the audio candidates is a cajón recording. They are drum-kit MIDI grooves and a Kevin MacLeod song, which the rules forbid. No new search is allowed, so the essential audio can't be filled. A solo cajón recording has to come from Freesound (e.g. \"cajon solo\"), or the question should switch to an essential photo of a cajón. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the audio candidates is a cajón recording. They are drum-kit MIDI grooves and a Kevin MacLeod song, which the rules forbid. No new search is allowed, so the essential audio can't be filled. A solo cajón recording has to come from Freesound (e.g. \"cajon solo\"), or the question should switch to an essential photo of a cajón. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": {
-        "query": "flamenco stage",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMadrid_-_San_Isidro_2026_-_Demarco_Flamenco_-_260510_214441.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Madrid_-_San_Isidro_2026_-_Demarco_Flamenco_-_260510_214441.jpg/3840px-Madrid_-_San_Isidro_2026_-_Demarco_Flamenco_-_260510_214441.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Barcex · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Barcex",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Barcex",
-        "restrictions": [
-          "personality"
-        ],
-        "pd_reasons": []
+      "background": null,
+      "difficulty_original": 8,
+      "revision": {
+        "action": "revise",
+        "reason": "Switched from essential audio (no solo cajón recording found) to an essential photo of a cajón; lowered the difficulty because the photo makes it easier.",
+        "previous": {
+          "difficulty": 8,
+          "question": "Escucha: este instrumento de percusión llegó de Perú y Paco de Lucía lo metió en el flamenco. ¿Cuál es?",
+          "media": {
+            "type": "audio",
+            "role": "essential",
+            "query": "cajon drum groove",
+            "note": "Grabación de un cajón (cajón peruano/flamenco) tocado con las manos, solo, sin otros instrumentos.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "background": {
+            "query": "flamenco stage",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AMadrid_-_San_Isidro_2026_-_Demarco_Flamenco_-_260510_214441.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Madrid_-_San_Isidro_2026_-_Demarco_Flamenco_-_260510_214441.jpg/3840px-Madrid_-_San_Isidro_2026_-_Demarco_Flamenco_-_260510_214441.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Barcex · CC BY-SA 4.0 · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "author": "Barcex",
+            "author_url": "https://commons.wikimedia.org/wiki/User:Barcex",
+            "restrictions": [
+              "personality"
+            ],
+            "pd_reasons": []
+          }
+        },
+        "revised_on": "2026-11-05"
       }
     },
     {
@@ -873048,7 +873382,7 @@
     },
     {
       "id": "q-11292",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Hay apodos que se ganan marcando goles y otros que vienen de casa, con acento incluido.",
       "question": "David Villa nació en un pueblo minero y le llaman «el Guaje», que significa «chaval». ¿De qué lengua viene su apodo?",
@@ -873066,11 +873400,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "football boots on grass",
+        "query": "soccer ball on pitch",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAdidas_soccer_ball_on_a_grass_pitch_%28Unsplash%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Adidas_soccer_ball_on_a_grass_pitch_%28Unsplash%29.jpg/3840px-Adidas_soccer_ball_on_a_grass_pitch_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Peter Glaser baraida · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Peter Glaser baraida",
+        "author_url": "https://unsplash.com/@baraida",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "David Villa es el máximo goleador de la historia de la selección española, con 59 goles.",
       "subcategory": "football-clubs",
@@ -873099,19 +873440,43 @@
       "needs_media": false,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates fits the question: they show work or hiking boots, a chainsaw scene, grass-ski boots, an Icelandic mountain and a Puss in Boots print. There are no football boots and nothing connected to Villa or football, and no new search is allowed. The slot needs a new search, e.g. \"football boots close-up\" or \"soccer ball on pitch\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits the question: they show work or hiking boots, a chainsaw scene, grass-ski boots, an Icelandic mountain and a Puss in Boots print. There are no football boots and nothing connected to Villa or football, and no new search is allowed. The slot needs a new search, e.g. \"football boots close-up\" or \"soccer ball on pitch\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query to a football image that the sources are likely to have.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "football boots on grass",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11293",
@@ -874899,7 +875264,7 @@
     },
     {
       "id": "q-11317",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Dos amigos de Barcelona con más éxito que un bocadillo en una excursión.",
       "question": "¿Qué dúo barcelonés de Quimi Portet cantó «Insurrección» y se separó en 1998?",
@@ -874917,11 +875282,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "donkey tied rope",
+        "query": "rock concert stage lights",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALive_rock_concert_featuring_musicians_playing_electric_guitars_on_stage_at_night_with_vibrant_lights_and_an_enthusiastic_crowd_present.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Live_rock_concert_featuring_musicians_playing_electric_guitars_on_stage_at_night_with_vibrant_lights_and_an_enthusiastic_crowd_present.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En 1998 se despidieron, pero en 2026 El Último de la Fila volvió a reunirse para una gira con conciertos en estadios.",
       "subcategory": "pop-and-rock",
@@ -874950,28 +875322,40 @@
       "needs_media": false,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate fits. 1 and 2 are early-1900s US political cartoons (the Democratic Party donkey with English captions), 3 is an 1856 satirical map of Europe and 4 is a Bible engraving of a coastal town. None of them relates to a Spanish pop-rock duo, and no new search is allowed. A better slot would be an illustrative image such as a concert stage or an electric guitar, or a clear photo of a tethered donkey. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate fits. 1 and 2 are early-1900s US political cartoons (the Democratic Party donkey with English captions), 3 is an 1856 satirical map of Europe and 4 is a Bible engraving of a coastal town. None of them relates to a Spanish pop-rock duo, and no new search is allowed. A better slot would be an illustrative image such as a concert stage or an electric guitar, or a clear photo of a tethered donkey. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Fixed hint 1: the members' earlier band was Los Rápidos, not Los Burros (a later side project).",
+        "reason": "Changed the media query to a concert stage, since the donkey search returned unrelated cartoons.",
         "previous": {
-          "hints": [
-            "Sus dos miembros venían antes de un grupo llamado Los Burros.",
-            "También cantaron «Como un burro amarrado en la puerta del baile».",
-            "El otro miembro del dúo era Manolo García."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "donkey tied rope",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -875225,7 +875609,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Spanish village fiesta night",
+        "query": "verbena pueblo orquesta",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -875259,18 +875643,44 @@
       "batch": "batch-34",
       "review": {
         "decision": "needs_work",
-        "feedback": "The text is fine: the song, the 1992 summer hit and the chorus «es lo que se lleva ahora» are all correct, and nothing gives the answer away. The problem is the picture. Candidate 1 is a 1902 book photo of a peasant woman from the Don region of Russia. Candidates 2–6 are night shots of a modern education centre in Kirchdorf in Tirol, Austria. None of them shows a Spanish village fiesta, and no new search is allowed. A search like \"verbena pueblo orquesta\" or \"Spanish village festival stage\" should find something that fits. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine: the song, the 1992 summer hit and the chorus «es lo que se lleva ahora» are all correct, and nothing gives the answer away. The problem is the picture. Candidate 1 is a 1902 book photo of a peasant woman from the Don region of Russia. Candidates 2–6 are night shots of a modern education centre in Kirchdorf in Tirol, Austria. None of them shows a Spanish village fiesta, and no new search is allowed. A search like \"verbena pueblo orquesta\" or \"Spanish village festival stage\" should find something that fits. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query to find a real Spanish village festival stage; the text is fine.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Spanish village fiesta night",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11322",
@@ -876030,7 +876440,7 @@
     },
     {
       "id": "q-11332",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un diminutivo con un poquete de chispa y mucha marcha.",
       "question": "En el castellano de una comunidad mediterránea con tres provincias y lengua propia se oye mucho «poquete» y «chiquete». ¿Cuál es?",
@@ -876042,7 +876452,7 @@
       ],
       "hints": [
         "En la otra lengua de esa región, el diminutivo termina en «-et».",
-        "Allí se celebran las Fallas.",
+        "Su capital es la tercera ciudad más poblada de España.",
         "Su capital es famosa por la paella."
       ],
       "media": {
@@ -876088,30 +876498,36 @@
       "needs_media": false,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 («Allí se celebran las Fallas») gives the answer away: the Fallas are known all over Spain as Valencian, so a second hint that names them ends the question. Hint 2 should point towards the answer less directly, for example the bilingual sound of the region's Spanish, without naming Valencia's signature festival. Everything else checks out: the clue (Mediterranean, three provinces, its own language) fits only the Comunidad Valenciana, and the fun fact is correct.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 («Allí se celebran las Fallas») gives the answer away: the Fallas are known all over Spain as Valencian, so a second hint that names them ends the question. Hint 2 should point towards the answer less directly, for example the bilingual sound of the region's Spanish, without naming Valencia's signature festival. Everything else checks out: the clue (Mediterranean, three provinces, its own language) fits only the Comunidad Valenciana, and the fun fact is correct.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Added a clue only Valencia fits (Mediterranean, three provinces, own language), swapped «amiguete» for «chiquete», made the wrong answers regions the clue rules out, and replaced the unverifiable fun fact.",
+        "reason": "Replaced hint 2, which named the Fallas and gave the answer away, with a mid-strength clue about the capital's size.",
         "previous": {
-          "question": "Es un diminutivo que se oye en «poquete» y «amiguete» y se usa muchísimo en el castellano de una región española. ¿En cuál?",
-          "wrong_answers": [
-            "Galicia",
-            "Asturias",
-            "Andalucía"
-          ],
-          "fun_fact": "En valenciano, «xiquet» significa «niño», y de ahí lo de los «xiquets» de muchas canciones."
+          "hints": [
+            "En la otra lengua de esa región, el diminutivo termina en «-et».",
+            "Allí se celebran las Fallas.",
+            "Su capital es famosa por la paella."
+          ]
         },
         "revised_on": "2026-11-05"
       }
@@ -879649,7 +880065,7 @@
     },
     {
       "id": "q-11379",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "En Augusta el verde no solo está en el césped: también se lleva puesto.",
       "question": "Si sumas las chaquetas verdes que ganó José María Olazábal como campeón del Masters de Augusta, ¿cuántas te salen?",
@@ -879667,20 +880083,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "golf green flag",
+        "query": "golf flagstick putting green",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGolf_Links%2C_Norway_Country_Club%2C_9th_Green%2C_Norway%2C_Maine_%2865577%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Golf_Links%2C_Norway_Country_Club%2C_9th_Green%2C_Norway%2C_Maine_%2865577%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Tichnor Brothers, Publisher · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APutting_green_at_the_Royal_Canberra_Golf_Club_4.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Putting_green_at_the_Royal_Canberra_Golf_Club_4.JPG/3840px-Putting_green_at_the_Royal_Canberra_Golf_Club_4.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Neuroxic · CC BY 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Tichnor Brothers, Publisher",
-        "author_url": null,
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Neuroxic",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Neuroxic",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US-no notice"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Olazábal fue el capitán europeo en la Ryder Cup de 2012, la remontada conocida como «el Milagro de Medinah».",
       "subcategory": "sportspeople",
@@ -879709,19 +880123,52 @@
       "needs_media": false,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US-no notice).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US-no notice).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query so a new image with a suitable licence is found.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "golf green flag",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AGolf_Links%2C_Norway_Country_Club%2C_9th_Green%2C_Norway%2C_Maine_%2865577%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Golf_Links%2C_Norway_Country_Club%2C_9th_Green%2C_Norway%2C_Maine_%2865577%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Tichnor Brothers, Publisher · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Tichnor Brothers, Publisher",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-no notice"
+            ]
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11380",
@@ -881864,10 +882311,10 @@
     },
     {
       "id": "q-11408",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Un dueño de chiringuito mediterráneo con más mala leche que sombrillas en agosto.",
-      "question": "Este actor fue Pepe, el dueño del chiringuito de Peñíscola en «Chiringuito de Pepe». ¿Quién es?",
+      "question": "¿Qué actor fue Pepe, el dueño del chiringuito de Peñíscola en «Chiringuito de Pepe»?",
       "answer": "Jesús Bonilla",
       "wrong_answers": [
         "Antonio Resines",
@@ -881881,12 +882328,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Jesús Bonilla",
-        "note": "Retrato claro del actor español Jesús Bonilla, sin texto con su nombre.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Peñíscola beach castle",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACastillo_de_Pe%C3%B1%C3%ADscola_01.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Castillo_de_Pe%C3%B1%C3%ADscola_01.jpg/3840px-Castillo_de_Pe%C3%B1%C3%ADscola_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Simon Burchell · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Simon Burchell",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Simon_Burchell",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En la serie, Santi Millán era Sergi, un chef de alta cocina que acaba trabajando en el chiringuito de su padre.",
       "subcategory": "tv-series",
@@ -881912,32 +882366,45 @@
         "notes": "Espetos are from Málaga, not Peñíscola, so the description doesn't fit. Hint 3's 'small oily fish' pun on Bonilla is weak. Hint 2 nearly gives it to anyone who knows Los Serrano. A Commons portrait is likely to exist."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows the actor Jesús Bonilla. #1 is a different man with the same name (a meditation teacher, «Tanumanasi»), and the rest are religious images and Spanish politicians. No new search is allowed, so the essential portrait slot can't be filled. Either find a proper Commons portrait of the actor (e.g. \"Jesús Bonilla actor\") or change the role to illustrative/decorative with a Peñíscola beach-bar image. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the actor Jesús Bonilla. #1 is a different man with the same name (a meditation teacher, «Tanumanasi»), and the rest are religious images and Spanish politicians. No new search is allowed, so the essential portrait slot can't be filled. Either find a proper Commons portrait of the actor (e.g. \"Jesús Bonilla actor\") or change the role to illustrative/decorative with a Peñíscola beach-bar image. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the inaccurate fish pun in hint 3 with «El oro de Moscú» and took the Málaga-specific espetos out of the description.",
+        "reason": "No portrait of the actor exists in the sources, so the question is now text-only with an illustrative Peñíscola image.",
         "previous": {
-          "description": "Un hombre que sirve espetos con más carácter que sal.",
-          "hints": [
-            "Antes de tener chiringuito, fue el hermano del protagonista en una serie familiar muy famosa.",
-            "En «Los Serrano» era Santi, el hermano de Diego.",
-            "Su apellido suena a pescado azul pequeño."
-          ]
+          "question": "Este actor fue Pepe, el dueño del chiringuito de Peñíscola en «Chiringuito de Pepe». ¿Quién es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Jesús Bonilla",
+            "note": "Retrato claro del actor español Jesús Bonilla, sin texto con su nombre.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-05"
       }
@@ -882842,7 +883309,7 @@
     },
     {
       "id": "q-11421",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un humorista de La Mancha con más personajes que molinos tiene Campo de Criptana.",
       "question": "TVE emite cada año el especial de humor de José Mota. ¿Qué noche suele ser?",
@@ -882854,26 +883321,24 @@
       ],
       "hints": [
         "Es una noche de fiesta de invierno.",
-        "Después del especial, toca prepararse para algo con uvas.",
+        "Poco después del especial, media España sigue en La 1 una emisión en directo muy esperada.",
         "Es la última noche del año."
       ],
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "family living room television",
+        "query": "old television set",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALiving_Room_Television_-_DPLA_-_0840c8679a6d787b9dd67b6cadfd4903.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Living_Room_Television_-_DPLA_-_0840c8679a6d787b9dd67b6cadfd4903.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_television_set_at_the_Finnish_Architecture_Museum.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Old_television_set_at_the_Finnish_Architecture_Museum.jpg/3840px-Old_television_set_at_the_Finnish_Architecture_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "JIP · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": null,
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "JIP",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:JIP&action=edit&redlink=1",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Antes de ir por libre, José Mota formó el dúo Cruz y Raya con Juan Muñoz.",
       "subcategory": "tv-shows-and-presenters",
@@ -882902,26 +883367,55 @@
       "needs_media": false,
       "batch": "batch-34",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 («toca prepararse para algo con uvas») gives the answer away: in Spain, grapes mean the twelve chimes on Nochevieja and nothing else, so it is no weaker than hint 3. Rewrite hint 2 as a middle-strength clue, for example that the special airs shortly before a big live broadcast on La 1 that the whole country watches, without mentioning the grapes, the chimes or the end of the year. La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 («toca prepararse para algo con uvas») gives the answer away: in Spain, grapes mean the twelve chimes on Nochevieja and nothing else, so it is no weaker than hint 3. Rewrite hint 2 as a middle-strength clue, for example that the special airs shortly before a big live broadcast on La 1 that the whole country watches, without mentioning the grapes, the chimes or the end of the year. La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Cut the scenario opening and rewrote the description so it no longer hints at the grapes.",
+        "reason": "Rewrote hint 2 so it no longer gives away the grapes, and changed the media query to replace the image with an unsuitable licence.",
         "previous": {
-          "description": "Un manchego que lleva años poniendo a España a reír con la boca llena.",
-          "question": "Estás en casa con la familia y TVE emite, como cada año, el especial de humor de José Mota. ¿Qué noche suele ser?"
+          "hints": [
+            "Es una noche de fiesta de invierno.",
+            "Después del especial, toca prepararse para algo con uvas.",
+            "Es la última noche del año."
+          ],
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "family living room television",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ALiving_Room_Television_-_DPLA_-_0840c8679a6d787b9dd67b6cadfd4903.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Living_Room_Television_-_DPLA_-_0840c8679a6d787b9dd67b6cadfd4903.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": null,
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-11-05"
       }
