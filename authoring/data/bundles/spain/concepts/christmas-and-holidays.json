@@ -1,0 +1,782 @@
+{
+  "subcategory": "christmas-and-holidays",
+  "facets": [
+    "Dulces navideños",
+    "Cena de Nochebuena y Navidad",
+    "Nochevieja y campanadas",
+    "Reyes Magos y cabalgatas",
+    "Lotería de Navidad",
+    "Belenes y villancicos",
+    "Personajes navideños regionales",
+    "Procesiones y pasos de Semana Santa",
+    "Cofradías, nazarenos y saetas",
+    "Dulces de Cuaresma y Pascua",
+    "Todos los Santos e Inocentes",
+    "Festivos nacionales y autonómicos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Peladilla",
+      "facet": "Dulces navideños",
+      "known_at": 7
+    },
+    {
+      "name": "Hojaldrina",
+      "facet": "Dulces navideños",
+      "known_at": 9
+    },
+    {
+      "name": "Rosco de vino",
+      "facet": "Dulces navideños",
+      "known_at": 9
+    },
+    {
+      "name": "Misa del Gallo",
+      "facet": "Cena de Nochebuena y Navidad",
+      "known_at": 6
+    },
+    {
+      "name": "Nochebuena",
+      "facet": "Cena de Nochebuena y Navidad",
+      "known_at": 2
+    },
+    {
+      "name": "Mensaje de Navidad del Rey",
+      "facet": "Cena de Nochebuena y Navidad",
+      "known_at": 7
+    },
+    {
+      "name": "Cordero asado",
+      "facet": "Cena de Nochebuena y Navidad",
+      "known_at": 4
+    },
+    {
+      "name": "Langostinos",
+      "facet": "Cena de Nochebuena y Navidad",
+      "known_at": 3
+    },
+    {
+      "name": "Besugo al horno",
+      "facet": "Cena de Nochebuena y Navidad",
+      "known_at": 10
+    },
+    {
+      "name": "Sopa de galets",
+      "facet": "Cena de Nochebuena y Navidad",
+      "known_at": 10
+    },
+    {
+      "name": "Canelones de San Esteban",
+      "facet": "Cena de Nochebuena y Navidad",
+      "known_at": 11
+    },
+    {
+      "name": "Día de San Esteban",
+      "facet": "Cena de Nochebuena y Navidad",
+      "known_at": 10
+    },
+    {
+      "name": "Pavo trufado",
+      "facet": "Cena de Nochebuena y Navidad",
+      "known_at": 10
+    },
+    {
+      "name": "Lombarda",
+      "facet": "Cena de Nochebuena y Navidad",
+      "known_at": 9
+    },
+    {
+      "name": "Bacalao con coliflor",
+      "facet": "Cena de Nochebuena y Navidad",
+      "known_at": 12
+    },
+    {
+      "name": "Doce uvas de la suerte",
+      "facet": "Nochevieja y campanadas",
+      "known_at": 2
+    },
+    {
+      "name": "Reloj de la Real Casa de Correos",
+      "facet": "Nochevieja y campanadas",
+      "known_at": 7
+    },
+    {
+      "name": "Campanadas",
+      "facet": "Nochevieja y campanadas",
+      "known_at": 3
+    },
+    {
+      "name": "Cuartos",
+      "facet": "Nochevieja y campanadas",
+      "known_at": 5
+    },
+    {
+      "name": "Bola del reloj",
+      "facet": "Nochevieja y campanadas",
+      "known_at": 8
+    },
+    {
+      "name": "Preuvas",
+      "facet": "Nochevieja y campanadas",
+      "known_at": 9
+    },
+    {
+      "name": "Ropa interior roja",
+      "facet": "Nochevieja y campanadas",
+      "known_at": 7
+    },
+    {
+      "name": "Anillo de oro en la copa",
+      "facet": "Nochevieja y campanadas",
+      "known_at": 11
+    },
+    {
+      "name": "Cotillón",
+      "facet": "Nochevieja y campanadas",
+      "known_at": 7
+    },
+    {
+      "name": "San Silvestre Vallecana",
+      "facet": "Nochevieja y campanadas",
+      "known_at": 8
+    },
+    {
+      "name": "Especial de Nochevieja de José Mota",
+      "facet": "Nochevieja y campanadas",
+      "known_at": 8
+    },
+    {
+      "name": "Martes y Trece",
+      "facet": "Nochevieja y campanadas",
+      "known_at": 12
+    },
+    {
+      "name": "Excedente de uvas de 1909",
+      "facet": "Nochevieja y campanadas",
+      "known_at": 12
+    },
+    {
+      "name": "Año Nuevo",
+      "facet": "Nochevieja y campanadas",
+      "known_at": 1
+    },
+    {
+      "name": "Melchor",
+      "facet": "Reyes Magos y cabalgatas",
+      "known_at": 2
+    },
+    {
+      "name": "Gaspar",
+      "facet": "Reyes Magos y cabalgatas",
+      "known_at": 2
+    },
+    {
+      "name": "Baltasar",
+      "facet": "Reyes Magos y cabalgatas",
+      "known_at": 2
+    },
+    {
+      "name": "Cabalgata de Reyes",
+      "facet": "Reyes Magos y cabalgatas",
+      "known_at": 1
+    },
+    {
+      "name": "Carta a los Reyes Magos",
+      "facet": "Reyes Magos y cabalgatas",
+      "known_at": 1
+    },
+    {
+      "name": "Pajes reales",
+      "facet": "Reyes Magos y cabalgatas",
+      "known_at": 4
+    },
+    {
+      "name": "Cartero real",
+      "facet": "Reyes Magos y cabalgatas",
+      "known_at": 6
+    },
+    {
+      "name": "Heraldo real",
+      "facet": "Reyes Magos y cabalgatas",
+      "known_at": 10
+    },
+    {
+      "name": "Oro, incienso y mirra",
+      "facet": "Reyes Magos y cabalgatas",
+      "known_at": 5
+    },
+    {
+      "name": "Camellos de los Reyes",
+      "facet": "Reyes Magos y cabalgatas",
+      "known_at": 2
+    },
+    {
+      "name": "Zapatos en la ventana",
+      "facet": "Reyes Magos y cabalgatas",
+      "known_at": 3
+    },
+    {
+      "name": "Noche de Reyes",
+      "facet": "Reyes Magos y cabalgatas",
+      "known_at": 2
+    },
+    {
+      "name": "Epifanía",
+      "facet": "Reyes Magos y cabalgatas",
+      "known_at": 9
+    },
+    {
+      "name": "Cabalgata de Alcoy",
+      "facet": "Reyes Magos y cabalgatas",
+      "known_at": 13
+    },
+    {
+      "name": "Caramelos de la cabalgata",
+      "facet": "Reyes Magos y cabalgatas",
+      "known_at": 1
+    },
+    {
+      "name": "Estrella de Oriente",
+      "facet": "Reyes Magos y cabalgatas",
+      "known_at": 4
+    },
+    {
+      "name": "El Gordo",
+      "facet": "Lotería de Navidad",
+      "known_at": 4
+    },
+    {
+      "name": "Niños de San Ildefonso",
+      "facet": "Lotería de Navidad",
+      "known_at": 6
+    },
+    {
+      "name": "Bombos de la Lotería",
+      "facet": "Lotería de Navidad",
+      "known_at": 7
+    },
+    {
+      "name": "Décimo",
+      "facet": "Lotería de Navidad",
+      "known_at": 6
+    },
+    {
+      "name": "Participación de lotería",
+      "facet": "Lotería de Navidad",
+      "known_at": 9
+    },
+    {
+      "name": "Pedrea",
+      "facet": "Lotería de Navidad",
+      "known_at": 9
+    },
+    {
+      "name": "Reintegro",
+      "facet": "Lotería de Navidad",
+      "known_at": 8
+    },
+    {
+      "name": "Doña Manolita",
+      "facet": "Lotería de Navidad",
+      "known_at": 10
+    },
+    {
+      "name": "La Bruja de Oro",
+      "facet": "Lotería de Navidad",
+      "known_at": 12
+    },
+    {
+      "name": "Sort",
+      "facet": "Lotería de Navidad",
+      "known_at": 13
+    },
+    {
+      "name": "22 de diciembre",
+      "facet": "Lotería de Navidad",
+      "known_at": 7
+    },
+    {
+      "name": "Calvo de la Lotería",
+      "facet": "Lotería de Navidad",
+      "known_at": 11
+    },
+    {
+      "name": "Justino",
+      "facet": "Lotería de Navidad",
+      "known_at": 11
+    },
+    {
+      "name": "Sorteo del Niño",
+      "facet": "Lotería de Navidad",
+      "known_at": 8
+    },
+    {
+      "name": "Primer sorteo de Cádiz de 1812",
+      "facet": "Lotería de Navidad",
+      "known_at": 14
+    },
+    {
+      "name": "Loterías y Apuestas del Estado",
+      "facet": "Lotería de Navidad",
+      "known_at": 11
+    },
+    {
+      "name": "Belén",
+      "facet": "Belenes y villancicos",
+      "known_at": 1
+    },
+    {
+      "name": "Belén viviente",
+      "facet": "Belenes y villancicos",
+      "known_at": 5
+    },
+    {
+      "name": "Musgo del belén",
+      "facet": "Belenes y villancicos",
+      "known_at": 5
+    },
+    {
+      "name": "Mula y buey",
+      "facet": "Belenes y villancicos",
+      "known_at": 3
+    },
+    {
+      "name": "Pastorcillos",
+      "facet": "Belenes y villancicos",
+      "known_at": 3
+    },
+    {
+      "name": "Niño Jesús",
+      "facet": "Belenes y villancicos",
+      "known_at": 1
+    },
+    {
+      "name": "Estrella de Belén",
+      "facet": "Belenes y villancicos",
+      "known_at": 2
+    },
+    {
+      "name": "Belén de Salzillo",
+      "facet": "Belenes y villancicos",
+      "known_at": 13
+    },
+    {
+      "name": "Belén del Príncipe",
+      "facet": "Belenes y villancicos",
+      "known_at": 14
+    },
+    {
+      "name": "Zambombá de Jerez",
+      "facet": "Belenes y villancicos",
+      "known_at": 13
+    },
+    {
+      "name": "Fum, fum, fum",
+      "facet": "Belenes y villancicos",
+      "known_at": 11
+    },
+    {
+      "name": "Riu, riu, chiu",
+      "facet": "Belenes y villancicos",
+      "known_at": 13
+    },
+    {
+      "name": "Olentzero",
+      "facet": "Personajes navideños regionales",
+      "known_at": 7
+    },
+    {
+      "name": "Mari Domingi",
+      "facet": "Personajes navideños regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Tió de Nadal",
+      "facet": "Personajes navideños regionales",
+      "known_at": 8
+    },
+    {
+      "name": "Caganer",
+      "facet": "Personajes navideños regionales",
+      "known_at": 7
+    },
+    {
+      "name": "Home dels Nassos",
+      "facet": "Personajes navideños regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Apalpador",
+      "facet": "Personajes navideños regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Esteru",
+      "facet": "Personajes navideños regionales",
+      "known_at": 14
+    },
+    {
+      "name": "Tronca de Nadal",
+      "facet": "Personajes navideños regionales",
+      "known_at": 14
+    },
+    {
+      "name": "Els Pastorets",
+      "facet": "Personajes navideños regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Canto de la Sibila",
+      "facet": "Personajes navideños regionales",
+      "known_at": 14
+    },
+    {
+      "name": "Papá Noel",
+      "facet": "Personajes navideños regionales",
+      "known_at": 1
+    },
+    {
+      "name": "Rabadán",
+      "facet": "Personajes navideños regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Cuadrillas de animeros",
+      "facet": "Personajes navideños regionales",
+      "known_at": 15
+    },
+    {
+      "name": "Aguinaldo",
+      "facet": "Personajes navideños regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Carbonero del Olentzero",
+      "facet": "Personajes navideños regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Semana Santa de Málaga",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 8
+    },
+    {
+      "name": "Semana Santa de Valladolid",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 11
+    },
+    {
+      "name": "Semana Santa de Zamora",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 11
+    },
+    {
+      "name": "Semana Santa de Cuenca",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 13
+    },
+    {
+      "name": "Semana Santa de Lorca",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 13
+    },
+    {
+      "name": "Semana Santa de Cartagena",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 13
+    },
+    {
+      "name": "Esperanza Macarena",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 9
+    },
+    {
+      "name": "El Cachorro",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 13
+    },
+    {
+      "name": "Cristo de Mena",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 12
+    },
+    {
+      "name": "La Legión",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 9
+    },
+    {
+      "name": "Trono",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 10
+    },
+    {
+      "name": "Paso de palio",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 11
+    },
+    {
+      "name": "Domingo de Ramos",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 4
+    },
+    {
+      "name": "La Borriquita",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 7
+    },
+    {
+      "name": "Jueves Santo",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 5
+    },
+    {
+      "name": "Viernes Santo",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 4
+    },
+    {
+      "name": "Juan Martínez Montañés",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 14
+    },
+    {
+      "name": "Francisco Salzillo",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 13
+    },
+    {
+      "name": "Carrera oficial",
+      "facet": "Procesiones y pasos de Semana Santa",
+      "known_at": 13
+    },
+    {
+      "name": "Capirote",
+      "facet": "Cofradías, nazarenos y saetas",
+      "known_at": 6
+    },
+    {
+      "name": "Cofradía",
+      "facet": "Cofradías, nazarenos y saetas",
+      "known_at": 7
+    },
+    {
+      "name": "Hermano mayor",
+      "facet": "Cofradías, nazarenos y saetas",
+      "known_at": 12
+    },
+    {
+      "name": "Capataz",
+      "facet": "Cofradías, nazarenos y saetas",
+      "known_at": 11
+    },
+    {
+      "name": "Levantá",
+      "facet": "Cofradías, nazarenos y saetas",
+      "known_at": 12
+    },
+    {
+      "name": "Llamador",
+      "facet": "Cofradías, nazarenos y saetas",
+      "known_at": 13
+    },
+    {
+      "name": "Costal",
+      "facet": "Cofradías, nazarenos y saetas",
+      "known_at": 12
+    },
+    {
+      "name": "La saeta de Serrat",
+      "facet": "Cofradías, nazarenos y saetas",
+      "known_at": 12
+    },
+    {
+      "name": "Cirio",
+      "facet": "Cofradías, nazarenos y saetas",
+      "known_at": 5
+    },
+    {
+      "name": "Estación de penitencia",
+      "facet": "Cofradías, nazarenos y saetas",
+      "known_at": 12
+    },
+    {
+      "name": "Cruz de guía",
+      "facet": "Cofradías, nazarenos y saetas",
+      "known_at": 13
+    },
+    {
+      "name": "Amarguras",
+      "facet": "Cofradías, nazarenos y saetas",
+      "known_at": 14
+    },
+    {
+      "name": "Picaos de San Vicente de la Sonsierra",
+      "facet": "Cofradías, nazarenos y saetas",
+      "known_at": 14
+    },
+    {
+      "name": "Empalaos de Valverde de la Vera",
+      "facet": "Cofradías, nazarenos y saetas",
+      "known_at": 14
+    },
+    {
+      "name": "Incienso",
+      "facet": "Cofradías, nazarenos y saetas",
+      "known_at": 5
+    },
+    {
+      "name": "Flores fritas",
+      "facet": "Dulces de Cuaresma y Pascua",
+      "known_at": 11
+    },
+    {
+      "name": "Hornazo",
+      "facet": "Dulces de Cuaresma y Pascua",
+      "known_at": 11
+    },
+    {
+      "name": "Lunes de Aguas",
+      "facet": "Dulces de Cuaresma y Pascua",
+      "known_at": 13
+    },
+    {
+      "name": "Huevo de Pascua",
+      "facet": "Dulces de Cuaresma y Pascua",
+      "known_at": 2
+    },
+    {
+      "name": "Panquemado",
+      "facet": "Dulces de Cuaresma y Pascua",
+      "known_at": 12
+    },
+    {
+      "name": "Piñonate",
+      "facet": "Dulces de Cuaresma y Pascua",
+      "known_at": 13
+    },
+    {
+      "name": "Lunes de Pascua",
+      "facet": "Dulces de Cuaresma y Pascua",
+      "known_at": 9
+    },
+    {
+      "name": "José Zorrilla",
+      "facet": "Todos los Santos e Inocentes",
+      "known_at": 11
+    },
+    {
+      "name": "Día de Todos los Santos",
+      "facet": "Todos los Santos e Inocentes",
+      "known_at": 4
+    },
+    {
+      "name": "Día de Difuntos",
+      "facet": "Todos los Santos e Inocentes",
+      "known_at": 7
+    },
+    {
+      "name": "Crisantemo",
+      "facet": "Todos los Santos e Inocentes",
+      "known_at": 10
+    },
+    {
+      "name": "Gachas de Todos los Santos",
+      "facet": "Todos los Santos e Inocentes",
+      "known_at": 12
+    },
+    {
+      "name": "Boniato asado",
+      "facet": "Todos los Santos e Inocentes",
+      "known_at": 9
+    },
+    {
+      "name": "Inocentada",
+      "facet": "Todos los Santos e Inocentes",
+      "known_at": 4
+    },
+    {
+      "name": "Monigote de papel",
+      "facet": "Todos los Santos e Inocentes",
+      "known_at": 3
+    },
+    {
+      "name": "Rey Herodes",
+      "facet": "Todos los Santos e Inocentes",
+      "known_at": 8
+    },
+    {
+      "name": "Desfile del 12 de octubre",
+      "facet": "Festivos nacionales y autonómicos",
+      "known_at": 9
+    },
+    {
+      "name": "Inmaculada Concepción",
+      "facet": "Festivos nacionales y autonómicos",
+      "known_at": 8
+    },
+    {
+      "name": "Puente",
+      "facet": "Festivos nacionales y autonómicos",
+      "known_at": 5
+    },
+    {
+      "name": "Día del Trabajo",
+      "facet": "Festivos nacionales y autonómicos",
+      "known_at": 5
+    },
+    {
+      "name": "Asunción de la Virgen",
+      "facet": "Festivos nacionales y autonómicos",
+      "known_at": 10
+    },
+    {
+      "name": "San José",
+      "facet": "Festivos nacionales y autonómicos",
+      "known_at": 7
+    }
+  ]
+}

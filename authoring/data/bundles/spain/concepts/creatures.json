@@ -1,0 +1,777 @@
+{
+  "subcategory": "creatures",
+  "facets": [
+    "Asustaniños y cocos",
+    "Duendes y espíritus de la casa",
+    "Gigantes, ogros y cíclopes",
+    "Hadas y damas del agua",
+    "Dragones y serpientes legendarias",
+    "Ánimas y procesiones de difuntos",
+    "Brujas, meigas y aquelarres",
+    "Hombres bestia y seres marinos",
+    "Figuras de fiestas y Navidad",
+    "Seres guanches de Canarias",
+    "Ratoncito Pérez y seres de cuento"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 1,
+      "record": 1,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "El Hombre del Saco",
+      "facet": "Asustaniños y cocos",
+      "known_at": 3
+    },
+    {
+      "name": "El Sacamantecas",
+      "facet": "Asustaniños y cocos",
+      "known_at": 9
+    },
+    {
+      "name": "Juan Díaz de Garayo",
+      "facet": "Asustaniños y cocos",
+      "known_at": 14
+    },
+    {
+      "name": "El Tío Camuñas",
+      "facet": "Asustaniños y cocos",
+      "known_at": 13
+    },
+    {
+      "name": "El Bu",
+      "facet": "Asustaniños y cocos",
+      "known_at": 10
+    },
+    {
+      "name": "La Marimanta",
+      "facet": "Asustaniños y cocos",
+      "known_at": 13
+    },
+    {
+      "name": "El Tío Sebo",
+      "facet": "Asustaniños y cocos",
+      "known_at": 12
+    },
+    {
+      "name": "El Papón",
+      "facet": "Asustaniños y cocos",
+      "known_at": 14
+    },
+    {
+      "name": "El Mamu",
+      "facet": "Asustaniños y cocos",
+      "known_at": 14,
+      "retired": "unaskable: No estoy seguro de dónde viene el Mamu ni de cómo es exactamente, y es demasiado oscuro para escribir una pregunta justa."
+    },
+    {
+      "name": "La Pesanta",
+      "facet": "Asustaniños y cocos",
+      "known_at": 13
+    },
+    {
+      "name": "Inguma",
+      "facet": "Asustaniños y cocos",
+      "known_at": 15
+    },
+    {
+      "name": "El Tardo",
+      "facet": "Asustaniños y cocos",
+      "known_at": 14
+    },
+    {
+      "name": "La Guaxa",
+      "facet": "Asustaniños y cocos",
+      "known_at": 14
+    },
+    {
+      "name": "El Tragaldabas",
+      "facet": "Asustaniños y cocos",
+      "known_at": 13
+    },
+    {
+      "name": "El Duende",
+      "facet": "Duendes y espíritus de la casa",
+      "known_at": 3
+    },
+    {
+      "name": "El Trasgu",
+      "facet": "Duendes y espíritus de la casa",
+      "known_at": 10
+    },
+    {
+      "name": "El Trasno",
+      "facet": "Duendes y espíritus de la casa",
+      "known_at": 12
+    },
+    {
+      "name": "El Follet",
+      "facet": "Duendes y espíritus de la casa",
+      "known_at": 13
+    },
+    {
+      "name": "Los Martinicos",
+      "facet": "Duendes y espíritus de la casa",
+      "known_at": 14
+    },
+    {
+      "name": "El Frailecillo",
+      "facet": "Duendes y espíritus de la casa",
+      "known_at": 14
+    },
+    {
+      "name": "Los Galtxagorriak",
+      "facet": "Duendes y espíritus de la casa",
+      "known_at": 14
+    },
+    {
+      "name": "Los Iratxoak",
+      "facet": "Duendes y espíritus de la casa",
+      "known_at": 15
+    },
+    {
+      "name": "Los Minairons",
+      "facet": "Duendes y espíritus de la casa",
+      "known_at": 14
+    },
+    {
+      "name": "Los Donyets",
+      "facet": "Duendes y espíritus de la casa",
+      "known_at": 14
+    },
+    {
+      "name": "El Diañu Burllón",
+      "facet": "Duendes y espíritus de la casa",
+      "known_at": 14
+    },
+    {
+      "name": "El Trastolillo",
+      "facet": "Duendes y espíritus de la casa",
+      "known_at": 14
+    },
+    {
+      "name": "El Tentirujo",
+      "facet": "Duendes y espíritus de la casa",
+      "known_at": 14
+    },
+    {
+      "name": "Los Ventolines",
+      "facet": "Duendes y espíritus de la casa",
+      "known_at": 14
+    },
+    {
+      "name": "Los Trentis",
+      "facet": "Duendes y espíritus de la casa",
+      "known_at": 15
+    },
+    {
+      "name": "El Nuberu",
+      "facet": "Duendes y espíritus de la casa",
+      "known_at": 12
+    },
+    {
+      "name": "Los Enemiguillos",
+      "facet": "Duendes y espíritus de la casa",
+      "known_at": 15
+    },
+    {
+      "name": "La Ojáncana",
+      "facet": "Gigantes, ogros y cíclopes",
+      "known_at": 13
+    },
+    {
+      "name": "Tartalo",
+      "facet": "Gigantes, ogros y cíclopes",
+      "known_at": 13
+    },
+    {
+      "name": "Los Jentilak",
+      "facet": "Gigantes, ogros y cíclopes",
+      "known_at": 13
+    },
+    {
+      "name": "Basajaun",
+      "facet": "Gigantes, ogros y cíclopes",
+      "known_at": 12
+    },
+    {
+      "name": "Los Mouros",
+      "facet": "Gigantes, ogros y cíclopes",
+      "known_at": 13
+    },
+    {
+      "name": "Gerión",
+      "facet": "Gigantes, ogros y cíclopes",
+      "known_at": 13
+    },
+    {
+      "name": "Pirene",
+      "facet": "Gigantes, ogros y cíclopes",
+      "known_at": 13
+    },
+    {
+      "name": "Molinos de viento",
+      "facet": "Gigantes, ogros y cíclopes",
+      "known_at": 5
+    },
+    {
+      "name": "Caraculiambro",
+      "facet": "Gigantes, ogros y cíclopes",
+      "known_at": 14
+    },
+    {
+      "name": "Pandafilando de la Fosca Vista",
+      "facet": "Gigantes, ogros y cíclopes",
+      "known_at": 15
+    },
+    {
+      "name": "Brecha de Rolando",
+      "facet": "Gigantes, ogros y cíclopes",
+      "known_at": 13
+    },
+    {
+      "name": "La Anjana",
+      "facet": "Hadas y damas del agua",
+      "known_at": 11
+    },
+    {
+      "name": "Mari",
+      "facet": "Hadas y damas del agua",
+      "known_at": 12
+    },
+    {
+      "name": "Las Lamias",
+      "facet": "Hadas y damas del agua",
+      "known_at": 12
+    },
+    {
+      "name": "La Moura",
+      "facet": "Hadas y damas del agua",
+      "known_at": 13
+    },
+    {
+      "name": "La Encantada",
+      "facet": "Hadas y damas del agua",
+      "known_at": 11
+    },
+    {
+      "name": "La Dona d'aigua",
+      "facet": "Hadas y damas del agua",
+      "known_at": 13
+    },
+    {
+      "name": "Las Goges",
+      "facet": "Hadas y damas del agua",
+      "known_at": 14
+    },
+    {
+      "name": "La Lavandera nocturna",
+      "facet": "Hadas y damas del agua",
+      "known_at": 13
+    },
+    {
+      "name": "Peine de oro",
+      "facet": "Hadas y damas del agua",
+      "known_at": 11
+    },
+    {
+      "name": "La Ondina",
+      "facet": "Hadas y damas del agua",
+      "known_at": 12
+    },
+    {
+      "name": "Lago de Carucedo",
+      "facet": "Hadas y damas del agua",
+      "known_at": 14
+    },
+    {
+      "name": "El Cuélebre",
+      "facet": "Dragones y serpientes legendarias",
+      "known_at": 10
+    },
+    {
+      "name": "Herensuge",
+      "facet": "Dragones y serpientes legendarias",
+      "known_at": 14
+    },
+    {
+      "name": "Sugaar",
+      "facet": "Dragones y serpientes legendarias",
+      "known_at": 14
+    },
+    {
+      "name": "La Coca de Redondela",
+      "facet": "Dragones y serpientes legendarias",
+      "known_at": 13
+    },
+    {
+      "name": "La Cuca Fera",
+      "facet": "Dragones y serpientes legendarias",
+      "known_at": 13
+    },
+    {
+      "name": "La Víbria",
+      "facet": "Dragones y serpientes legendarias",
+      "known_at": 13
+    },
+    {
+      "name": "Montblanc",
+      "facet": "Dragones y serpientes legendarias",
+      "known_at": 13
+    },
+    {
+      "name": "Drac de Banyoles",
+      "facet": "Dragones y serpientes legendarias",
+      "known_at": 14
+    },
+    {
+      "name": "El Basilisco",
+      "facet": "Dragones y serpientes legendarias",
+      "known_at": 9
+    },
+    {
+      "name": "La Tragantía",
+      "facet": "Dragones y serpientes legendarias",
+      "known_at": 14
+    },
+    {
+      "name": "Lagarto de la Malena",
+      "facet": "Dragones y serpientes legendarias",
+      "known_at": 12
+    },
+    {
+      "name": "Dragón del Patriarca",
+      "facet": "Dragones y serpientes legendarias",
+      "known_at": 13
+    },
+    {
+      "name": "La Güestia",
+      "facet": "Ánimas y procesiones de difuntos",
+      "known_at": 13
+    },
+    {
+      "name": "La Estadea",
+      "facet": "Ánimas y procesiones de difuntos",
+      "known_at": 14
+    },
+    {
+      "name": "La Estantigua",
+      "facet": "Ánimas y procesiones de difuntos",
+      "known_at": 14
+    },
+    {
+      "name": "Ánima en pena",
+      "facet": "Ánimas y procesiones de difuntos",
+      "known_at": 9
+    },
+    {
+      "name": "Fuego fatuo",
+      "facet": "Ánimas y procesiones de difuntos",
+      "known_at": 10
+    },
+    {
+      "name": "Santa Marta de Ribarteme",
+      "facet": "Ánimas y procesiones de difuntos",
+      "known_at": 14
+    },
+    {
+      "name": "Casa de las Siete Chimeneas",
+      "facet": "Ánimas y procesiones de difuntos",
+      "known_at": 13
+    },
+    {
+      "name": "Caras de Bélmez",
+      "facet": "Ánimas y procesiones de difuntos",
+      "known_at": 12
+    },
+    {
+      "name": "La Meiga",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 7
+    },
+    {
+      "name": "La Meiga chuchona",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 13
+    },
+    {
+      "name": "La Bruja",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 1
+    },
+    {
+      "name": "Las Sorginak",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 13
+    },
+    {
+      "name": "El Aquelarre",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 9
+    },
+    {
+      "name": "Akerbeltz",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 14
+    },
+    {
+      "name": "Zugarramurdi",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 11
+    },
+    {
+      "name": "Trasmoz",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 14
+    },
+    {
+      "name": "Auto de fe de Logroño",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 14
+    },
+    {
+      "name": "El Conxuro da queimada",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 12
+    },
+    {
+      "name": "«Haberlas, haylas»",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 9
+    },
+    {
+      "name": "El Eguzkilore",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 13
+    },
+    {
+      "name": "El Azabache",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 12
+    },
+    {
+      "name": "El Mal de ojo",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 7
+    },
+    {
+      "name": "Las brujas de Zugarramurdi",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 11
+    },
+    {
+      "name": "El Lobishome",
+      "facet": "Hombres bestia y seres marinos",
+      "known_at": 11
+    },
+    {
+      "name": "Manuel Blanco Romasanta",
+      "facet": "Hombres bestia y seres marinos",
+      "known_at": 12
+    },
+    {
+      "name": "El Hombre pez de Liérganes",
+      "facet": "Hombres bestia y seres marinos",
+      "known_at": 11
+    },
+    {
+      "name": "El Peix Nicolau",
+      "facet": "Hombres bestia y seres marinos",
+      "known_at": 14
+    },
+    {
+      "name": "La Sirena",
+      "facet": "Hombres bestia y seres marinos",
+      "known_at": 2
+    },
+    {
+      "name": "Los Mariñaos",
+      "facet": "Hombres bestia y seres marinos",
+      "known_at": 14
+    },
+    {
+      "name": "Juan del Oso",
+      "facet": "Hombres bestia y seres marinos",
+      "known_at": 12
+    },
+    {
+      "name": "Zezengorri",
+      "facet": "Hombres bestia y seres marinos",
+      "known_at": 15
+    },
+    {
+      "name": "El Cuegle",
+      "facet": "Hombres bestia y seres marinos",
+      "known_at": 13
+    },
+    {
+      "name": "El Ramidreju",
+      "facet": "Hombres bestia y seres marinos",
+      "known_at": 14
+    },
+    {
+      "name": "Los Caballucos del diablu",
+      "facet": "Hombres bestia y seres marinos",
+      "known_at": 14
+    },
+    {
+      "name": "El Busgosu",
+      "facet": "Hombres bestia y seres marinos",
+      "known_at": 13
+    },
+    {
+      "name": "Basandere",
+      "facet": "Hombres bestia y seres marinos",
+      "known_at": 14
+    },
+    {
+      "name": "Gaueko",
+      "facet": "Hombres bestia y seres marinos",
+      "known_at": 15
+    },
+    {
+      "name": "Reyes Magos",
+      "facet": "Figuras de fiestas y Navidad",
+      "known_at": 1
+    },
+    {
+      "name": "El Anguleru",
+      "facet": "Figuras de fiestas y Navidad",
+      "known_at": 14
+    },
+    {
+      "name": "Los Kilikis",
+      "facet": "Figuras de fiestas y Navidad",
+      "known_at": 11
+    },
+    {
+      "name": "Los Momotxorros",
+      "facet": "Figuras de fiestas y Navidad",
+      "known_at": 14
+    },
+    {
+      "name": "El Peliqueiro",
+      "facet": "Figuras de fiestas y Navidad",
+      "known_at": 13
+    },
+    {
+      "name": "El Cigarrón",
+      "facet": "Figuras de fiestas y Navidad",
+      "known_at": 13
+    },
+    {
+      "name": "Los Diablos de Luzón",
+      "facet": "Figuras de fiestas y Navidad",
+      "known_at": 14
+    },
+    {
+      "name": "Los Hombres de musgo",
+      "facet": "Figuras de fiestas y Navidad",
+      "known_at": 13
+    },
+    {
+      "name": "La Vijanera",
+      "facet": "Figuras de fiestas y Navidad",
+      "known_at": 14
+    },
+    {
+      "name": "Los Tibicenas",
+      "facet": "Seres guanches de Canarias",
+      "known_at": 13
+    },
+    {
+      "name": "Achamán",
+      "facet": "Seres guanches de Canarias",
+      "known_at": 13
+    },
+    {
+      "name": "Magec",
+      "facet": "Seres guanches de Canarias",
+      "known_at": 13
+    },
+    {
+      "name": "Chaxiraxi",
+      "facet": "Seres guanches de Canarias",
+      "known_at": 14
+    },
+    {
+      "name": "Abora",
+      "facet": "Seres guanches de Canarias",
+      "known_at": 15
+    },
+    {
+      "name": "Hirguan",
+      "facet": "Seres guanches de Canarias",
+      "known_at": 15
+    },
+    {
+      "name": "Gara y Jonay",
+      "facet": "Seres guanches de Canarias",
+      "known_at": 12
+    },
+    {
+      "name": "Isla de San Borondón",
+      "facet": "Seres guanches de Canarias",
+      "known_at": 12
+    },
+    {
+      "name": "El Garoé",
+      "facet": "Seres guanches de Canarias",
+      "known_at": 13
+    },
+    {
+      "name": "Islas Afortunadas",
+      "facet": "Seres guanches de Canarias",
+      "known_at": 11
+    },
+    {
+      "name": "Jardín de las Hespérides",
+      "facet": "Seres guanches de Canarias",
+      "known_at": 13
+    },
+    {
+      "name": "El Mencey",
+      "facet": "Seres guanches de Canarias",
+      "known_at": 11
+    },
+    {
+      "name": "Bencomo",
+      "facet": "Seres guanches de Canarias",
+      "known_at": 12
+    },
+    {
+      "name": "Tanausú",
+      "facet": "Seres guanches de Canarias",
+      "known_at": 13
+    },
+    {
+      "name": "Doramas",
+      "facet": "Seres guanches de Canarias",
+      "known_at": 13
+    },
+    {
+      "name": "Momias guanches",
+      "facet": "Seres guanches de Canarias",
+      "known_at": 11
+    },
+    {
+      "name": "Virgen de la Candelaria",
+      "facet": "Seres guanches de Canarias",
+      "known_at": 11
+    },
+    {
+      "name": "Ratoncito Pérez",
+      "facet": "Ratoncito Pérez y seres de cuento",
+      "known_at": 1
+    },
+    {
+      "name": "Luis Coloma",
+      "facet": "Ratoncito Pérez y seres de cuento",
+      "known_at": 13
+    },
+    {
+      "name": "Rey Buby",
+      "facet": "Ratoncito Pérez y seres de cuento",
+      "known_at": 12
+    },
+    {
+      "name": "Casita del Ratón Pérez",
+      "facet": "Ratoncito Pérez y seres de cuento",
+      "known_at": 11
+    },
+    {
+      "name": "Garbancito",
+      "facet": "Ratoncito Pérez y seres de cuento",
+      "known_at": 6
+    },
+    {
+      "name": "La Ratita Presumida",
+      "facet": "Ratoncito Pérez y seres de cuento",
+      "known_at": 3
+    },
+    {
+      "name": "Medio Pollito",
+      "facet": "Ratoncito Pérez y seres de cuento",
+      "known_at": 9
+    },
+    {
+      "name": "Don Gato",
+      "facet": "Ratoncito Pérez y seres de cuento",
+      "known_at": 6
+    },
+    {
+      "name": "Saturnino Calleja",
+      "facet": "Ratoncito Pérez y seres de cuento",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Soldado",
+      "facet": "Ratoncito Pérez y seres de cuento",
+      "known_at": 13
+    },
+    {
+      "name": "Pedro Urdemalas",
+      "facet": "Ratoncito Pérez y seres de cuento",
+      "known_at": 13
+    },
+    {
+      "name": "El cuento de la buena pipa",
+      "facet": "Ratoncito Pérez y seres de cuento",
+      "known_at": 8
+    },
+    {
+      "name": "Colorín colorado",
+      "facet": "Ratoncito Pérez y seres de cuento",
+      "known_at": 2
+    },
+    {
+      "name": "Maricastaña",
+      "facet": "Ratoncito Pérez y seres de cuento",
+      "known_at": 11
+    },
+    {
+      "name": "Perico el de los palotes",
+      "facet": "Ratoncito Pérez y seres de cuento",
+      "known_at": 11
+    }
+  ]
+}

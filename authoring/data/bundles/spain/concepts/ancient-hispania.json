@@ -1,0 +1,1002 @@
+{
+  "subcategory": "ancient-hispania",
+  "facets": [
+    "Atapuerca y primeros humanos",
+    "Arte rupestre y cuevas",
+    "Megalitos y Edad de los Metales",
+    "Culturas prerromanas de la península",
+    "Fenicios, griegos y Tartessos",
+    "Cartago y las guerras púnicas",
+    "Conquista romana y resistencia",
+    "Ciudades y obras romanas",
+    "Vida cotidiana en Hispania",
+    "Hispanos célebres de Roma",
+    "Visigodos y fin de Hispania",
+    "Yacimientos, museos y legado"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 4,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sima de los Huesos",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 11
+    },
+    {
+      "name": "Gran Dolina",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 12
+    },
+    {
+      "name": "Sima del Elefante",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 13
+    },
+    {
+      "name": "Homo antecessor",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 10
+    },
+    {
+      "name": "Neandertal",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 5
+    },
+    {
+      "name": "Homo sapiens",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 5
+    },
+    {
+      "name": "Hombre de Orce",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Luis Arsuaga",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 10
+    },
+    {
+      "name": "Eudald Carbonell",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 12
+    },
+    {
+      "name": "José María Bermúdez de Castro",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 13
+    },
+    {
+      "name": "Miguelón",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 12
+    },
+    {
+      "name": "Excalibur",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 13
+    },
+    {
+      "name": "Elvis",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 14
+    },
+    {
+      "name": "Bifaz",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 9
+    },
+    {
+      "name": "Cueva de El Sidrón",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 13
+    },
+    {
+      "name": "Cráneo de Gibraltar",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 13
+    },
+    {
+      "name": "Paleolítico",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 6
+    },
+    {
+      "name": "Cazadores-recolectores",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 6
+    },
+    {
+      "name": "Fuego",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 3
+    },
+    {
+      "name": "Mamut lanudo",
+      "facet": "Atapuerca y primeros humanos",
+      "known_at": 3
+    },
+    {
+      "name": "Marcelino Sanz de Sautuola",
+      "facet": "Arte rupestre y cuevas",
+      "known_at": 11
+    },
+    {
+      "name": "María Sanz de Sautuola",
+      "facet": "Arte rupestre y cuevas",
+      "known_at": 11
+    },
+    {
+      "name": "Capilla Sixtina del arte cuaternario",
+      "facet": "Arte rupestre y cuevas",
+      "known_at": 11
+    },
+    {
+      "name": "Neocueva de Altamira",
+      "facet": "Arte rupestre y cuevas",
+      "known_at": 10
+    },
+    {
+      "name": "Valle del Côa",
+      "facet": "Arte rupestre y cuevas",
+      "known_at": 13
+    },
+    {
+      "name": "Arte levantino",
+      "facet": "Arte rupestre y cuevas",
+      "known_at": 12
+    },
+    {
+      "name": "Cueva de la Araña",
+      "facet": "Arte rupestre y cuevas",
+      "known_at": 13
+    },
+    {
+      "name": "Cova dels Cavalls",
+      "facet": "Arte rupestre y cuevas",
+      "known_at": 14
+    },
+    {
+      "name": "Cueva de la Pileta",
+      "facet": "Arte rupestre y cuevas",
+      "known_at": 13
+    },
+    {
+      "name": "Cueva de Ardales",
+      "facet": "Arte rupestre y cuevas",
+      "known_at": 14
+    },
+    {
+      "name": "Cueva de los Casares",
+      "facet": "Arte rupestre y cuevas",
+      "known_at": 14
+    },
+    {
+      "name": "Pinturas rupestres",
+      "facet": "Arte rupestre y cuevas",
+      "known_at": 3
+    },
+    {
+      "name": "Manos en negativo",
+      "facet": "Arte rupestre y cuevas",
+      "known_at": 8
+    },
+    {
+      "name": "Ocre",
+      "facet": "Arte rupestre y cuevas",
+      "known_at": 9
+    },
+    {
+      "name": "Dolmen",
+      "facet": "Megalitos y Edad de los Metales",
+      "known_at": 6
+    },
+    {
+      "name": "Menhir",
+      "facet": "Megalitos y Edad de los Metales",
+      "known_at": 4
+    },
+    {
+      "name": "Cromlech",
+      "facet": "Megalitos y Edad de los Metales",
+      "known_at": 11
+    },
+    {
+      "name": "Dolmen de Menga",
+      "facet": "Megalitos y Edad de los Metales",
+      "known_at": 10
+    },
+    {
+      "name": "Tholos de El Romeral",
+      "facet": "Megalitos y Edad de los Metales",
+      "known_at": 13
+    },
+    {
+      "name": "Antequera",
+      "facet": "Megalitos y Edad de los Metales",
+      "known_at": 8
+    },
+    {
+      "name": "Talayot",
+      "facet": "Megalitos y Edad de los Metales",
+      "known_at": 11
+    },
+    {
+      "name": "El Argar",
+      "facet": "Megalitos y Edad de los Metales",
+      "known_at": 12
+    },
+    {
+      "name": "Vaso campaniforme",
+      "facet": "Megalitos y Edad de los Metales",
+      "known_at": 12
+    },
+    {
+      "name": "Cerámica cardial",
+      "facet": "Megalitos y Edad de los Metales",
+      "known_at": 13
+    },
+    {
+      "name": "La Draga",
+      "facet": "Megalitos y Edad de los Metales",
+      "known_at": 14
+    },
+    {
+      "name": "Cueva de los Murciélagos de Albuñol",
+      "facet": "Megalitos y Edad de los Metales",
+      "known_at": 14
+    },
+    {
+      "name": "Tesoro de Villena",
+      "facet": "Megalitos y Edad de los Metales",
+      "known_at": 12
+    },
+    {
+      "name": "Neolítico",
+      "facet": "Megalitos y Edad de los Metales",
+      "known_at": 6
+    },
+    {
+      "name": "Edad del Cobre",
+      "facet": "Megalitos y Edad de los Metales",
+      "known_at": 8
+    },
+    {
+      "name": "Edad del Bronce",
+      "facet": "Megalitos y Edad de los Metales",
+      "known_at": 6
+    },
+    {
+      "name": "Edad del Hierro",
+      "facet": "Megalitos y Edad de los Metales",
+      "known_at": 7
+    },
+    {
+      "name": "Íberos",
+      "facet": "Culturas prerromanas de la península",
+      "known_at": 6
+    },
+    {
+      "name": "Celtas",
+      "facet": "Culturas prerromanas de la península",
+      "known_at": 6
+    },
+    {
+      "name": "Celtíberos",
+      "facet": "Culturas prerromanas de la península",
+      "known_at": 8
+    },
+    {
+      "name": "Castros",
+      "facet": "Culturas prerromanas de la península",
+      "known_at": 8
+    },
+    {
+      "name": "Pallozas",
+      "facet": "Culturas prerromanas de la península",
+      "known_at": 10
+    },
+    {
+      "name": "Vettones",
+      "facet": "Culturas prerromanas de la península",
+      "known_at": 12
+    },
+    {
+      "name": "Lusitanos",
+      "facet": "Culturas prerromanas de la península",
+      "known_at": 9
+    },
+    {
+      "name": "Vascones",
+      "facet": "Culturas prerromanas de la península",
+      "known_at": 10
+    },
+    {
+      "name": "Astures",
+      "facet": "Culturas prerromanas de la península",
+      "known_at": 10
+    },
+    {
+      "name": "Cántabros",
+      "facet": "Culturas prerromanas de la península",
+      "known_at": 9
+    },
+    {
+      "name": "Falcata",
+      "facet": "Culturas prerromanas de la península",
+      "known_at": 11
+    },
+    {
+      "name": "Bicha de Balazote",
+      "facet": "Culturas prerromanas de la península",
+      "known_at": 13
+    },
+    {
+      "name": "Ullastret",
+      "facet": "Culturas prerromanas de la península",
+      "known_at": 13
+    },
+    {
+      "name": "Escritura ibérica",
+      "facet": "Culturas prerromanas de la península",
+      "known_at": 11
+    },
+    {
+      "name": "Bronces de Botorrita",
+      "facet": "Culturas prerromanas de la península",
+      "known_at": 14
+    },
+    {
+      "name": "Griegos",
+      "facet": "Fenicios, griegos y Tartessos",
+      "known_at": 5
+    },
+    {
+      "name": "Malaka",
+      "facet": "Fenicios, griegos y Tartessos",
+      "known_at": 10
+    },
+    {
+      "name": "Argantonio",
+      "facet": "Fenicios, griegos y Tartessos",
+      "known_at": 11
+    },
+    {
+      "name": "Cancho Roano",
+      "facet": "Fenicios, griegos y Tartessos",
+      "known_at": 13
+    },
+    {
+      "name": "Rhode",
+      "facet": "Fenicios, griegos y Tartessos",
+      "known_at": 13
+    },
+    {
+      "name": "Mainake",
+      "facet": "Fenicios, griegos y Tartessos",
+      "known_at": 14
+    },
+    {
+      "name": "Asclepio de Ampurias",
+      "facet": "Fenicios, griegos y Tartessos",
+      "known_at": 13
+    },
+    {
+      "name": "Hércules",
+      "facet": "Fenicios, griegos y Tartessos",
+      "known_at": 4
+    },
+    {
+      "name": "Templo de Melkart",
+      "facet": "Fenicios, griegos y Tartessos",
+      "known_at": 13
+    },
+    {
+      "name": "Sarcófagos fenicios de Cádiz",
+      "facet": "Fenicios, griegos y Tartessos",
+      "known_at": 12
+    },
+    {
+      "name": "Alfabeto fenicio",
+      "facet": "Fenicios, griegos y Tartessos",
+      "known_at": 8
+    },
+    {
+      "name": "Púrpura",
+      "facet": "Fenicios, griegos y Tartessos",
+      "known_at": 12
+    },
+    {
+      "name": "Cartago",
+      "facet": "Cartago y las guerras púnicas",
+      "known_at": 7
+    },
+    {
+      "name": "Guerras púnicas",
+      "facet": "Cartago y las guerras púnicas",
+      "known_at": 8
+    },
+    {
+      "name": "Aníbal",
+      "facet": "Cartago y las guerras púnicas",
+      "known_at": 6
+    },
+    {
+      "name": "Amílcar Barca",
+      "facet": "Cartago y las guerras púnicas",
+      "known_at": 11
+    },
+    {
+      "name": "Asdrúbal",
+      "facet": "Cartago y las guerras púnicas",
+      "known_at": 11
+    },
+    {
+      "name": "Himilce",
+      "facet": "Cartago y las guerras púnicas",
+      "known_at": 13
+    },
+    {
+      "name": "Elefantes de guerra",
+      "facet": "Cartago y las guerras púnicas",
+      "known_at": 5
+    },
+    {
+      "name": "Cruce de los Alpes",
+      "facet": "Cartago y las guerras púnicas",
+      "known_at": 8
+    },
+    {
+      "name": "Batalla de Cannas",
+      "facet": "Cartago y las guerras púnicas",
+      "known_at": 12
+    },
+    {
+      "name": "Batalla de Zama",
+      "facet": "Cartago y las guerras púnicas",
+      "known_at": 12
+    },
+    {
+      "name": "Batalla de Baécula",
+      "facet": "Cartago y las guerras púnicas",
+      "known_at": 14
+    },
+    {
+      "name": "Batalla de Ilipa",
+      "facet": "Cartago y las guerras púnicas",
+      "known_at": 14
+    },
+    {
+      "name": "Escipión el Africano",
+      "facet": "Cartago y las guerras púnicas",
+      "known_at": 11
+    },
+    {
+      "name": "Barcino",
+      "facet": "Cartago y las guerras púnicas",
+      "known_at": 10
+    },
+    {
+      "name": "Carthago delenda est",
+      "facet": "Cartago y las guerras púnicas",
+      "known_at": 12
+    },
+    {
+      "name": "Fiestas de Cartagineses y Romanos",
+      "facet": "Cartago y las guerras púnicas",
+      "known_at": 9
+    },
+    {
+      "name": "Hispania",
+      "facet": "Conquista romana y resistencia",
+      "known_at": 5
+    },
+    {
+      "name": "Romanización",
+      "facet": "Conquista romana y resistencia",
+      "known_at": 8
+    },
+    {
+      "name": "Escipión Emiliano",
+      "facet": "Conquista romana y resistencia",
+      "known_at": 13
+    },
+    {
+      "name": "Retógenes",
+      "facet": "Conquista romana y resistencia",
+      "known_at": 14
+    },
+    {
+      "name": "Roma no paga a traidores",
+      "facet": "Conquista romana y resistencia",
+      "known_at": 9
+    },
+    {
+      "name": "Sertorio",
+      "facet": "Conquista romana y resistencia",
+      "known_at": 12
+    },
+    {
+      "name": "Cierva de Sertorio",
+      "facet": "Conquista romana y resistencia",
+      "known_at": 15
+    },
+    {
+      "name": "Pompeyo",
+      "facet": "Conquista romana y resistencia",
+      "known_at": 10
+    },
+    {
+      "name": "Julio César",
+      "facet": "Conquista romana y resistencia",
+      "known_at": 5
+    },
+    {
+      "name": "Batalla de Munda",
+      "facet": "Conquista romana y resistencia",
+      "known_at": 13
+    },
+    {
+      "name": "Augusto",
+      "facet": "Conquista romana y resistencia",
+      "known_at": 8
+    },
+    {
+      "name": "Guerras cántabras",
+      "facet": "Conquista romana y resistencia",
+      "known_at": 11
+    },
+    {
+      "name": "Monte Medulio",
+      "facet": "Conquista romana y resistencia",
+      "known_at": 14
+    },
+    {
+      "name": "Legio VII Gemina",
+      "facet": "Conquista romana y resistencia",
+      "known_at": 12
+    },
+    {
+      "name": "Hispania Citerior",
+      "facet": "Conquista romana y resistencia",
+      "known_at": 12
+    },
+    {
+      "name": "Bética",
+      "facet": "Conquista romana y resistencia",
+      "known_at": 9
+    },
+    {
+      "name": "Lusitania",
+      "facet": "Conquista romana y resistencia",
+      "known_at": 9
+    },
+    {
+      "name": "Festival de Teatro Clásico de Mérida",
+      "facet": "Ciudades y obras romanas",
+      "known_at": 10
+    },
+    {
+      "name": "Emerita Augusta",
+      "facet": "Ciudades y obras romanas",
+      "known_at": 9
+    },
+    {
+      "name": "Acueducto de los Milagros",
+      "facet": "Ciudades y obras romanas",
+      "known_at": 12
+    },
+    {
+      "name": "Tarraco",
+      "facet": "Ciudades y obras romanas",
+      "known_at": 9
+    },
+    {
+      "name": "Caesaraugusta",
+      "facet": "Ciudades y obras romanas",
+      "known_at": 9
+    },
+    {
+      "name": "Lucentum",
+      "facet": "Ciudades y obras romanas",
+      "known_at": 12
+    },
+    {
+      "name": "Calzada romana",
+      "facet": "Ciudades y obras romanas",
+      "known_at": 6
+    },
+    {
+      "name": "Latín",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 5
+    },
+    {
+      "name": "Latín vulgar",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 11
+    },
+    {
+      "name": "Garum",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 10
+    },
+    {
+      "name": "Aceite de oliva",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 8
+    },
+    {
+      "name": "Ánfora",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 7
+    },
+    {
+      "name": "Monte Testaccio",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 12
+    },
+    {
+      "name": "Termas",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 7
+    },
+    {
+      "name": "Hipocausto",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 13
+    },
+    {
+      "name": "Anfiteatro",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 6
+    },
+    {
+      "name": "Circo romano",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 6
+    },
+    {
+      "name": "Gladiadores",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 4
+    },
+    {
+      "name": "Mosaico",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 6
+    },
+    {
+      "name": "Toga",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 5
+    },
+    {
+      "name": "Domus",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 9
+    },
+    {
+      "name": "Atrio",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 11
+    },
+    {
+      "name": "Foro",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 8
+    },
+    {
+      "name": "Denario",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 10
+    },
+    {
+      "name": "Lares",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 12
+    },
+    {
+      "name": "Minas de Río Tinto",
+      "facet": "Vida cotidiana en Hispania",
+      "known_at": 11
+    },
+    {
+      "name": "Trajano",
+      "facet": "Hispanos célebres de Roma",
+      "known_at": 8
+    },
+    {
+      "name": "Adriano",
+      "facet": "Hispanos célebres de Roma",
+      "known_at": 9
+    },
+    {
+      "name": "Teodosio el Grande",
+      "facet": "Hispanos célebres de Roma",
+      "known_at": 12
+    },
+    {
+      "name": "Marco Aurelio",
+      "facet": "Hispanos célebres de Roma",
+      "known_at": 12
+    },
+    {
+      "name": "Séneca",
+      "facet": "Hispanos célebres de Roma",
+      "known_at": 9
+    },
+    {
+      "name": "Lucano",
+      "facet": "Hispanos célebres de Roma",
+      "known_at": 13
+    },
+    {
+      "name": "Marcial",
+      "facet": "Hispanos célebres de Roma",
+      "known_at": 12
+    },
+    {
+      "name": "Quintiliano",
+      "facet": "Hispanos célebres de Roma",
+      "known_at": 13
+    },
+    {
+      "name": "Columela",
+      "facet": "Hispanos célebres de Roma",
+      "known_at": 13
+    },
+    {
+      "name": "Pomponio Mela",
+      "facet": "Hispanos célebres de Roma",
+      "known_at": 14
+    },
+    {
+      "name": "Prudencio",
+      "facet": "Hispanos célebres de Roma",
+      "known_at": 14
+    },
+    {
+      "name": "Osio de Córdoba",
+      "facet": "Hispanos célebres de Roma",
+      "known_at": 14
+    },
+    {
+      "name": "Balbo el Mayor",
+      "facet": "Hispanos célebres de Roma",
+      "known_at": 14
+    },
+    {
+      "name": "Egeria",
+      "facet": "Hispanos célebres de Roma",
+      "known_at": 14
+    },
+    {
+      "name": "Orosio",
+      "facet": "Hispanos célebres de Roma",
+      "known_at": 14
+    },
+    {
+      "name": "Visigodos",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 6
+    },
+    {
+      "name": "Suevos",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 10
+    },
+    {
+      "name": "Vándalos",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 8
+    },
+    {
+      "name": "Alanos",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 12
+    },
+    {
+      "name": "Lista de los reyes godos",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 8
+    },
+    {
+      "name": "Ataúlfo",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 11
+    },
+    {
+      "name": "Leovigildo",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 11
+    },
+    {
+      "name": "Recaredo",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 10
+    },
+    {
+      "name": "Wamba",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 11
+    },
+    {
+      "name": "Don Rodrigo",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 10
+    },
+    {
+      "name": "Don Julián",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 13
+    },
+    {
+      "name": "Batalla de Guadalete",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 10
+    },
+    {
+      "name": "Toledo visigodo",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 8
+    },
+    {
+      "name": "Concilios de Toledo",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 11
+    },
+    {
+      "name": "Liber Iudiciorum",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 13
+    },
+    {
+      "name": "San Isidoro de Sevilla",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 10
+    },
+    {
+      "name": "Etimologías",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 13
+    },
+    {
+      "name": "Tesoro de Guarrazar",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 12
+    },
+    {
+      "name": "Corona votiva de Recesvinto",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 13
+    },
+    {
+      "name": "Fíbulas aquiliformes",
+      "facet": "Visigodos y fin de Hispania",
+      "known_at": 13
+    },
+    {
+      "name": "Museo Arqueológico Nacional",
+      "facet": "Yacimientos, museos y legado",
+      "known_at": 8
+    },
+    {
+      "name": "Museo de la Evolución Humana",
+      "facet": "Yacimientos, museos y legado",
+      "known_at": 9
+    },
+    {
+      "name": "Museo Nacional de Arte Romano",
+      "facet": "Yacimientos, museos y legado",
+      "known_at": 11
+    },
+    {
+      "name": "Museo de Altamira",
+      "facet": "Yacimientos, museos y legado",
+      "known_at": 9
+    },
+    {
+      "name": "Museo de Prehistoria y Arqueología de Cantabria",
+      "facet": "Yacimientos, museos y legado",
+      "known_at": 13
+    },
+    {
+      "name": "Museo Nacional de Arqueología Subacuática",
+      "facet": "Yacimientos, museos y legado",
+      "known_at": 11
+    },
+    {
+      "name": "Pecio de Mazarrón",
+      "facet": "Yacimientos, museos y legado",
+      "known_at": 14
+    },
+    {
+      "name": "Arqueólogo",
+      "facet": "Yacimientos, museos y legado",
+      "known_at": 4
+    },
+    {
+      "name": "Excavación",
+      "facet": "Yacimientos, museos y legado",
+      "known_at": 4
+    },
+    {
+      "name": "Yacimiento arqueológico",
+      "facet": "Yacimientos, museos y legado",
+      "known_at": 6
+    },
+    {
+      "name": "Estratigrafía",
+      "facet": "Yacimientos, museos y legado",
+      "known_at": 12
+    },
+    {
+      "name": "Carbono 14",
+      "facet": "Yacimientos, museos y legado",
+      "known_at": 10
+    },
+    {
+      "name": "Arqueología experimental",
+      "facet": "Yacimientos, museos y legado",
+      "known_at": 12
+    },
+    {
+      "name": "Lenguas romances",
+      "facet": "Yacimientos, museos y legado",
+      "known_at": 10
+    },
+    {
+      "name": "Conejo",
+      "facet": "Yacimientos, museos y legado",
+      "known_at": 2
+    },
+    {
+      "name": "Tarraco Viva",
+      "facet": "Yacimientos, museos y legado",
+      "known_at": 12
+    }
+  ]
+}

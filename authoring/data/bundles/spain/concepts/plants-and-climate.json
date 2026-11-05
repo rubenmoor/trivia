@@ -1,0 +1,697 @@
+{
+  "subcategory": "plants-and-climate",
+  "facets": [
+    "Árboles y bosques de España",
+    "Plantas, flores y matorral",
+    "Cultivos y paisajes agrarios",
+    "Montañas y cordilleras",
+    "Ríos, lagos y humedales",
+    "Costas, playas y acantilados",
+    "Islas y paisajes volcánicos",
+    "Desiertos, estepas y paisajes singulares",
+    "Parques nacionales y espacios protegidos",
+    "Climas y regiones climáticas",
+    "Vientos, lluvias y fenómenos del tiempo",
+    "Refranes y palabras del tiempo y el campo"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 5,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 1,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 5,
+      "history": 2,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Encina",
+      "facet": "Árboles y bosques de España",
+      "known_at": 3
+    },
+    {
+      "name": "Alcornoque",
+      "facet": "Árboles y bosques de España",
+      "known_at": 6
+    },
+    {
+      "name": "Pino piñonero",
+      "facet": "Árboles y bosques de España",
+      "known_at": 6
+    },
+    {
+      "name": "Haya",
+      "facet": "Árboles y bosques de España",
+      "known_at": 6
+    },
+    {
+      "name": "Roble",
+      "facet": "Árboles y bosques de España",
+      "known_at": 3
+    },
+    {
+      "name": "Castaño",
+      "facet": "Árboles y bosques de España",
+      "known_at": 4
+    },
+    {
+      "name": "Drago",
+      "facet": "Árboles y bosques de España",
+      "known_at": 8
+    },
+    {
+      "name": "Pinsapo",
+      "facet": "Árboles y bosques de España",
+      "known_at": 11
+    },
+    {
+      "name": "Abeto",
+      "facet": "Árboles y bosques de España",
+      "known_at": 4
+    },
+    {
+      "name": "Selva de Irati",
+      "facet": "Árboles y bosques de España",
+      "known_at": 11
+    },
+    {
+      "name": "Hayedo de Montejo",
+      "facet": "Árboles y bosques de España",
+      "known_at": 12
+    },
+    {
+      "name": "Sabina albar",
+      "facet": "Árboles y bosques de España",
+      "known_at": 12
+    },
+    {
+      "name": "Tejo",
+      "facet": "Árboles y bosques de España",
+      "known_at": 11
+    },
+    {
+      "name": "Fragas do Eume",
+      "facet": "Árboles y bosques de España",
+      "known_at": 13
+    },
+    {
+      "name": "Chopo",
+      "facet": "Árboles y bosques de España",
+      "known_at": 6
+    },
+    {
+      "name": "Eucalipto",
+      "facet": "Árboles y bosques de España",
+      "known_at": 5
+    },
+    {
+      "name": "Pino canario",
+      "facet": "Árboles y bosques de España",
+      "known_at": 10
+    },
+    {
+      "name": "Bosque de Muniellos",
+      "facet": "Árboles y bosques de España",
+      "known_at": 13
+    },
+    {
+      "name": "Acebuche",
+      "facet": "Árboles y bosques de España",
+      "known_at": 12
+    },
+    {
+      "name": "Fresno",
+      "facet": "Árboles y bosques de España",
+      "known_at": 9
+    },
+    {
+      "name": "Romero",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 3
+    },
+    {
+      "name": "Tomillo",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 4
+    },
+    {
+      "name": "Lavanda",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 4
+    },
+    {
+      "name": "Jara",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 8
+    },
+    {
+      "name": "Retama",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 9
+    },
+    {
+      "name": "Brezo",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 9
+    },
+    {
+      "name": "Esparto",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 9
+    },
+    {
+      "name": "Amapola",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 2
+    },
+    {
+      "name": "Edelweiss",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 11
+    },
+    {
+      "name": "Violeta del Teide",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 12
+    },
+    {
+      "name": "Chumbera",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 6
+    },
+    {
+      "name": "Pita",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 9
+    },
+    {
+      "name": "Lirio",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 6
+    },
+    {
+      "name": "Helecho",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 4
+    },
+    {
+      "name": "Garriga",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 12
+    },
+    {
+      "name": "Cardo",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 4
+    },
+    {
+      "name": "Ortiga",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 3
+    },
+    {
+      "name": "Biznaga",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 13
+    },
+    {
+      "name": "Azahar",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 7
+    },
+    {
+      "name": "Buganvilla",
+      "facet": "Plantas, flores y matorral",
+      "known_at": 6
+    },
+    {
+      "name": "Olivar",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 4
+    },
+    {
+      "name": "Viñedo",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 4
+    },
+    {
+      "name": "Arrozal",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 6
+    },
+    {
+      "name": "Naranjo",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 3
+    },
+    {
+      "name": "Almendro",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 4
+    },
+    {
+      "name": "Girasol",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 2
+    },
+    {
+      "name": "Trigo",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 2
+    },
+    {
+      "name": "Azafrán",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 8
+    },
+    {
+      "name": "Mar de plástico de Almería",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 9
+    },
+    {
+      "name": "Bancales",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 9
+    },
+    {
+      "name": "Huerta de Valencia",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 9
+    },
+    {
+      "name": "Pimentón de la Vera",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 10
+    },
+    {
+      "name": "Cerezos del Valle del Jerte",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 8
+    },
+    {
+      "name": "Tierra de Campos",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 12
+    },
+    {
+      "name": "Hórreo",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 7
+    },
+    {
+      "name": "Molinos de viento de La Mancha",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 4
+    },
+    {
+      "name": "Regadío",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 9
+    },
+    {
+      "name": "Secano",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 9
+    },
+    {
+      "name": "Chufa",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 8
+    },
+    {
+      "name": "Dehesa",
+      "facet": "Cultivos y paisajes agrarios",
+      "known_at": 7
+    },
+    {
+      "name": "Cordillera Bética",
+      "facet": "Montañas y cordilleras",
+      "known_at": 10
+    },
+    {
+      "name": "Estany de Banyoles",
+      "facet": "Ríos, lagos y humedales",
+      "known_at": 12
+    },
+    {
+      "name": "Peñón de Ifach",
+      "facet": "Costas, playas y acantilados",
+      "known_at": 10
+    },
+    {
+      "name": "Acantilados de Barbate",
+      "facet": "Costas, playas y acantilados",
+      "known_at": 13
+    },
+    {
+      "name": "Flysch de Zumaia",
+      "facet": "Costas, playas y acantilados",
+      "known_at": 11
+    },
+    {
+      "name": "Roques de García",
+      "facet": "Islas y paisajes volcánicos",
+      "known_at": 12
+    },
+    {
+      "name": "Cueva del Viento",
+      "facet": "Islas y paisajes volcánicos",
+      "known_at": 13
+    },
+    {
+      "name": "Ciudad Encantada de Cuenca",
+      "facet": "Desiertos, estepas y paisajes singulares",
+      "known_at": 9
+    },
+    {
+      "name": "Monegros",
+      "facet": "Desiertos, estepas y paisajes singulares",
+      "known_at": 9
+    },
+    {
+      "name": "Casas cueva de Guadix",
+      "facet": "Desiertos, estepas y paisajes singulares",
+      "known_at": 10
+    },
+    {
+      "name": "Mallos de Riglos",
+      "facet": "Desiertos, estepas y paisajes singulares",
+      "known_at": 12
+    },
+    {
+      "name": "Barrancas de Burujón",
+      "facet": "Desiertos, estepas y paisajes singulares",
+      "known_at": 13
+    },
+    {
+      "name": "Salinas de Torrevieja",
+      "facet": "Desiertos, estepas y paisajes singulares",
+      "known_at": 10
+    },
+    {
+      "name": "Dunas de Corralejo",
+      "facet": "Desiertos, estepas y paisajes singulares",
+      "known_at": 11
+    },
+    {
+      "name": "Hoces del Duratón",
+      "facet": "Desiertos, estepas y paisajes singulares",
+      "known_at": 12
+    },
+    {
+      "name": "Desierto de Gorafe",
+      "facet": "Desiertos, estepas y paisajes singulares",
+      "known_at": 13
+    },
+    {
+      "name": "Sierra de las Nieves",
+      "facet": "Parques nacionales y espacios protegidos",
+      "known_at": 13
+    },
+    {
+      "name": "Cabo de Gata-Níjar",
+      "facet": "Parques nacionales y espacios protegidos",
+      "known_at": 8
+    },
+    {
+      "name": "Urdaibai",
+      "facet": "Parques nacionales y espacios protegidos",
+      "known_at": 11
+    },
+    {
+      "name": "Sierra de Grazalema",
+      "facet": "Parques nacionales y espacios protegidos",
+      "known_at": 11
+    },
+    {
+      "name": "Clima mediterráneo",
+      "facet": "Climas y regiones climáticas",
+      "known_at": 6
+    },
+    {
+      "name": "Clima oceánico",
+      "facet": "Climas y regiones climáticas",
+      "known_at": 9
+    },
+    {
+      "name": "Clima continental",
+      "facet": "Climas y regiones climáticas",
+      "known_at": 9
+    },
+    {
+      "name": "Clima de montaña",
+      "facet": "Climas y regiones climáticas",
+      "known_at": 8
+    },
+    {
+      "name": "Clima subtropical",
+      "facet": "Climas y regiones climáticas",
+      "known_at": 10
+    },
+    {
+      "name": "Clima semiárido",
+      "facet": "Climas y regiones climáticas",
+      "known_at": 11
+    },
+    {
+      "name": "España verde",
+      "facet": "Climas y regiones climáticas",
+      "known_at": 8
+    },
+    {
+      "name": "España seca",
+      "facet": "Climas y regiones climáticas",
+      "known_at": 10
+    },
+    {
+      "name": "Polo de frío",
+      "facet": "Climas y regiones climáticas",
+      "known_at": 12
+    },
+    {
+      "name": "Sartén de Andalucía",
+      "facet": "Climas y regiones climáticas",
+      "known_at": 12
+    },
+    {
+      "name": "Ola de calor",
+      "facet": "Climas y regiones climáticas",
+      "known_at": 5
+    },
+    {
+      "name": "Sequía",
+      "facet": "Climas y regiones climáticas",
+      "known_at": 5
+    },
+    {
+      "name": "Desertificación",
+      "facet": "Climas y regiones climáticas",
+      "known_at": 10
+    },
+    {
+      "name": "Eterna primavera",
+      "facet": "Climas y regiones climáticas",
+      "known_at": 9
+    },
+    {
+      "name": "Microclima",
+      "facet": "Climas y regiones climáticas",
+      "known_at": 9
+    },
+    {
+      "name": "Anticiclón de las Azores",
+      "facet": "Climas y regiones climáticas",
+      "known_at": 9
+    },
+    {
+      "name": "AEMET",
+      "facet": "Climas y regiones climáticas",
+      "known_at": 8
+    },
+    {
+      "name": "Cierzo",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 9
+    },
+    {
+      "name": "Tramontana",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 9
+    },
+    {
+      "name": "Levante",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 8
+    },
+    {
+      "name": "Poniente",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 9
+    },
+    {
+      "name": "Terral",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 11
+    },
+    {
+      "name": "Galerna",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 11
+    },
+    {
+      "name": "Ábrego",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 13
+    },
+    {
+      "name": "Calima",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 7
+    },
+    {
+      "name": "DANA",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 7
+    },
+    {
+      "name": "Borrasca",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 7
+    },
+    {
+      "name": "Ciclogénesis explosiva",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 11
+    },
+    {
+      "name": "Filomena",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 6
+    },
+    {
+      "name": "Sirimiri",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 9
+    },
+    {
+      "name": "Granizo",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 3
+    },
+    {
+      "name": "Niebla",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 2
+    },
+    {
+      "name": "Escarcha",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 6
+    },
+    {
+      "name": "Cencellada",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 13
+    },
+    {
+      "name": "Helada",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 4
+    },
+    {
+      "name": "Mar de nubes",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 10
+    },
+    {
+      "name": "Lluvia de barro",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 8
+    },
+    {
+      "name": "Arcoíris",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 1
+    },
+    {
+      "name": "Aguanieve",
+      "facet": "Vientos, lluvias y fenómenos del tiempo",
+      "known_at": 6
+    },
+    {
+      "name": "Agua de borrajas",
+      "facet": "Refranes y palabras del tiempo y el campo",
+      "known_at": 10
+    },
+    {
+      "name": "Llover sobre mojado",
+      "facet": "Refranes y palabras del tiempo y el campo",
+      "known_at": 9
+    },
+    {
+      "name": "San Isidro Labrador",
+      "facet": "Refranes y palabras del tiempo y el campo",
+      "known_at": 9
+    },
+    {
+      "name": "Canícula",
+      "facet": "Refranes y palabras del tiempo y el campo",
+      "known_at": 10
+    },
+    {
+      "name": "Quien a buen árbol se arrima, buena sombra le cobija",
+      "facet": "Refranes y palabras del tiempo y el campo",
+      "known_at": 7
+    },
+    {
+      "name": "Agua de mayo",
+      "facet": "Refranes y palabras del tiempo y el campo",
+      "known_at": 8
+    },
+    {
+      "name": "Barbecho",
+      "facet": "Refranes y palabras del tiempo y el campo",
+      "known_at": 11
+    },
+    {
+      "name": "Estío",
+      "facet": "Refranes y palabras del tiempo y el campo",
+      "known_at": 9
+    }
+  ]
+}

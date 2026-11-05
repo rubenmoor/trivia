@@ -1,0 +1,939 @@
+{
+  "subcategory": "dress-crafts-and-games",
+  "facets": [
+    "Trajes regionales de España",
+    "Prendas y complementos tradicionales",
+    "Trajes de fiesta y danza",
+    "Cerámica y alfarería",
+    "Artesanía textil y bordados",
+    "Oficios artesanos tradicionales",
+    "Objetos y recuerdos típicos",
+    "Juegos de calle e infantiles",
+    "Juegos de mesa y de cartas",
+    "Deportes rurales y de fuerza",
+    "Juegos de pelota tradicionales",
+    "Canciones y retahílas de juego"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Traje de chulapo",
+      "facet": "Trajes regionales de España",
+      "known_at": 5
+    },
+    {
+      "name": "Traje de baturro",
+      "facet": "Trajes regionales de España",
+      "known_at": 8
+    },
+    {
+      "name": "Traje de huertana murciana",
+      "facet": "Trajes regionales de España",
+      "known_at": 11
+    },
+    {
+      "name": "Traje de charro salmantino",
+      "facet": "Trajes regionales de España",
+      "known_at": 11
+    },
+    {
+      "name": "Traje ansotano",
+      "facet": "Trajes regionales de España",
+      "known_at": 14
+    },
+    {
+      "name": "Traje de pasiega",
+      "facet": "Trajes regionales de España",
+      "known_at": 13
+    },
+    {
+      "name": "Traje de mago canario",
+      "facet": "Trajes regionales de España",
+      "known_at": 12
+    },
+    {
+      "name": "Traje de payés ibicenco",
+      "facet": "Trajes regionales de España",
+      "known_at": 13
+    },
+    {
+      "name": "Traje de aldeana gallega",
+      "facet": "Trajes regionales de España",
+      "known_at": 10
+    },
+    {
+      "name": "Traje de baserritarra",
+      "facet": "Trajes regionales de España",
+      "known_at": 11
+    },
+    {
+      "name": "Traje de payés catalán",
+      "facet": "Trajes regionales de España",
+      "known_at": 11
+    },
+    {
+      "name": "Traje de valenciana",
+      "facet": "Trajes regionales de España",
+      "known_at": 7
+    },
+    {
+      "name": "Traje de montehermoseña",
+      "facet": "Trajes regionales de España",
+      "known_at": 14
+    },
+    {
+      "name": "Traje de serrana",
+      "facet": "Trajes regionales de España",
+      "known_at": 13
+    },
+    {
+      "name": "Traje de vaqueiro de alzada",
+      "facet": "Trajes regionales de España",
+      "known_at": 14
+    },
+    {
+      "name": "Boina",
+      "facet": "Prendas y complementos tradicionales",
+      "known_at": 3,
+      "retired": "used_up: La pregunta anterior ya dice que es de lana y de los vascos; las opciones restantes quedan forzadas."
+    },
+    {
+      "name": "Barretina",
+      "facet": "Prendas y complementos tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Capa española",
+      "facet": "Prendas y complementos tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Montera",
+      "facet": "Prendas y complementos tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Madreñas",
+      "facet": "Prendas y complementos tradicionales",
+      "known_at": 11
+    },
+    {
+      "name": "Refajo",
+      "facet": "Prendas y complementos tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Calañés",
+      "facet": "Prendas y complementos tradicionales",
+      "known_at": 14
+    },
+    {
+      "name": "Albarcas",
+      "facet": "Prendas y complementos tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Pañuelo rojo de San Fermín",
+      "facet": "Prendas y complementos tradicionales",
+      "known_at": 5
+    },
+    {
+      "name": "Gorra de chulapo",
+      "facet": "Prendas y complementos tradicionales",
+      "known_at": 7
+    },
+    {
+      "name": "Mandil",
+      "facet": "Prendas y complementos tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Traje de luces",
+      "facet": "Trajes de fiesta y danza",
+      "known_at": 6
+    },
+    {
+      "name": "Traje de nazareno",
+      "facet": "Trajes de fiesta y danza",
+      "known_at": 6
+    },
+    {
+      "name": "Traje de moros y cristianos",
+      "facet": "Trajes de fiesta y danza",
+      "known_at": 8
+    },
+    {
+      "name": "Traje de jotero",
+      "facet": "Trajes de fiesta y danza",
+      "known_at": 9
+    },
+    {
+      "name": "Traje de dantzari",
+      "facet": "Trajes de fiesta y danza",
+      "known_at": 12
+    },
+    {
+      "name": "Traje de casteller",
+      "facet": "Trajes de fiesta y danza",
+      "known_at": 8
+    },
+    {
+      "name": "Traje goyesco",
+      "facet": "Trajes de fiesta y danza",
+      "known_at": 11
+    },
+    {
+      "name": "Traje corto andaluz",
+      "facet": "Trajes de fiesta y danza",
+      "known_at": 10
+    },
+    {
+      "name": "Traje de verdiales",
+      "facet": "Trajes de fiesta y danza",
+      "known_at": 13
+    },
+    {
+      "name": "Botarga",
+      "facet": "Trajes de fiesta y danza",
+      "known_at": 13
+    },
+    {
+      "name": "Cigarrones de Verín",
+      "facet": "Trajes de fiesta y danza",
+      "known_at": 13
+    },
+    {
+      "name": "Traje de sanferminero",
+      "facet": "Trajes de fiesta y danza",
+      "known_at": 4
+    },
+    {
+      "name": "Cerámica de Talavera",
+      "facet": "Cerámica y alfarería",
+      "known_at": 10
+    },
+    {
+      "name": "Cerámica de Manises",
+      "facet": "Cerámica y alfarería",
+      "known_at": 12
+    },
+    {
+      "name": "Lladró",
+      "facet": "Cerámica y alfarería",
+      "known_at": 11
+    },
+    {
+      "name": "Sargadelos",
+      "facet": "Cerámica y alfarería",
+      "known_at": 12
+    },
+    {
+      "name": "Cerámica de Triana",
+      "facet": "Cerámica y alfarería",
+      "known_at": 12
+    },
+    {
+      "name": "Alfarería de Buño",
+      "facet": "Cerámica y alfarería",
+      "known_at": 14
+    },
+    {
+      "name": "Cerámica de Muel",
+      "facet": "Cerámica y alfarería",
+      "known_at": 14
+    },
+    {
+      "name": "Cerámica de Teruel",
+      "facet": "Cerámica y alfarería",
+      "known_at": 13
+    },
+    {
+      "name": "Cántaro",
+      "facet": "Cerámica y alfarería",
+      "known_at": 5
+    },
+    {
+      "name": "Torno de alfarero",
+      "facet": "Cerámica y alfarería",
+      "known_at": 6
+    },
+    {
+      "name": "Loza dorada",
+      "facet": "Cerámica y alfarería",
+      "known_at": 14
+    },
+    {
+      "name": "Siurell",
+      "facet": "Cerámica y alfarería",
+      "known_at": 12
+    },
+    {
+      "name": "Cazuela de barro",
+      "facet": "Cerámica y alfarería",
+      "known_at": 3
+    },
+    {
+      "name": "Tinaja",
+      "facet": "Cerámica y alfarería",
+      "known_at": 7
+    },
+    {
+      "name": "Alfarería de Agost",
+      "facet": "Cerámica y alfarería",
+      "known_at": 14
+    },
+    {
+      "name": "Cerámica de La Bisbal",
+      "facet": "Cerámica y alfarería",
+      "known_at": 14
+    },
+    {
+      "name": "Encaje de bolillos",
+      "facet": "Artesanía textil y bordados",
+      "known_at": 7
+    },
+    {
+      "name": "Bordado de Lagartera",
+      "facet": "Artesanía textil y bordados",
+      "known_at": 13
+    },
+    {
+      "name": "Jarapa",
+      "facet": "Artesanía textil y bordados",
+      "known_at": 11
+    },
+    {
+      "name": "Manta de Grazalema",
+      "facet": "Artesanía textil y bordados",
+      "known_at": 14
+    },
+    {
+      "name": "Calado canario",
+      "facet": "Artesanía textil y bordados",
+      "known_at": 13
+    },
+    {
+      "name": "Encaje de Camariñas",
+      "facet": "Artesanía textil y bordados",
+      "known_at": 12
+    },
+    {
+      "name": "Encaje de Almagro",
+      "facet": "Artesanía textil y bordados",
+      "known_at": 13
+    },
+    {
+      "name": "Blonda",
+      "facet": "Artesanía textil y bordados",
+      "known_at": 13
+    },
+    {
+      "name": "Bordado en oro",
+      "facet": "Artesanía textil y bordados",
+      "known_at": 10
+    },
+    {
+      "name": "Tela de lenguas",
+      "facet": "Artesanía textil y bordados",
+      "known_at": 14
+    },
+    {
+      "name": "Telar",
+      "facet": "Artesanía textil y bordados",
+      "known_at": 5
+    },
+    {
+      "name": "Rueca",
+      "facet": "Artesanía textil y bordados",
+      "known_at": 6
+    },
+    {
+      "name": "Lonja de la Seda",
+      "facet": "Artesanía textil y bordados",
+      "known_at": 11
+    },
+    {
+      "name": "Ganchillo",
+      "facet": "Artesanía textil y bordados",
+      "known_at": 4
+    },
+    {
+      "name": "Punto de cruz",
+      "facet": "Artesanía textil y bordados",
+      "known_at": 6
+    },
+    {
+      "name": "Herrero",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 3
+    },
+    {
+      "name": "Alfarero",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 5
+    },
+    {
+      "name": "Guarnicionero",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Tonelero",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Cestero",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 6
+    },
+    {
+      "name": "Afilador",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 6
+    },
+    {
+      "name": "Zapatero",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 2
+    },
+    {
+      "name": "Damasquinado",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Guitarrero",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Carpintero de ribera",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Botero",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 11
+    },
+    {
+      "name": "Cantero",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Hojalatero",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 11
+    },
+    {
+      "name": "Abaniquero",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Real Fábrica de Cristales de La Granja",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Filigrana cordobesa",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Ebanista",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Cuchillero de Albacete",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 11
+    },
+    {
+      "name": "Pirotécnico",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Herrador",
+      "facet": "Oficios artesanos tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Espada toledana",
+      "facet": "Objetos y recuerdos típicos",
+      "known_at": 9
+    },
+    {
+      "name": "Muñeca flamenca",
+      "facet": "Objetos y recuerdos típicos",
+      "known_at": 4
+    },
+    {
+      "name": "Muñecas de Marín",
+      "facet": "Objetos y recuerdos típicos",
+      "known_at": 13
+    },
+    {
+      "name": "Perlas de Manacor",
+      "facet": "Objetos y recuerdos típicos",
+      "known_at": 11
+    },
+    {
+      "name": "Azabache de Santiago",
+      "facet": "Objetos y recuerdos típicos",
+      "known_at": 12
+    },
+    {
+      "name": "Figa",
+      "facet": "Objetos y recuerdos típicos",
+      "known_at": 13
+    },
+    {
+      "name": "Figuras de belén",
+      "facet": "Objetos y recuerdos típicos",
+      "known_at": 4
+    },
+    {
+      "name": "Mariquita Pérez",
+      "facet": "Objetos y recuerdos típicos",
+      "known_at": 13
+    },
+    {
+      "name": "Rayuela",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "Comba",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 2
+    },
+    {
+      "name": "Escondite",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 1
+    },
+    {
+      "name": "Pilla-pilla",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 1
+    },
+    {
+      "name": "Churro, media manga, mangotero",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 9
+    },
+    {
+      "name": "Peonza",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "Canicas",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 2
+    },
+    {
+      "name": "Chapas",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 5
+    },
+    {
+      "name": "Gomas",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 5
+    },
+    {
+      "name": "Tabas",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 11
+    },
+    {
+      "name": "Pídola",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 8
+    },
+    {
+      "name": "Escondite inglés",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "Polis y cacos",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "Balón prisionero",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 4
+    },
+    {
+      "name": "Gallinita ciega",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "Tres en raya",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 2
+    },
+    {
+      "name": "Juego del pañuelo",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 4
+    },
+    {
+      "name": "Teléfono escacharrado",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "Cromos",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "Aro",
+      "facet": "Juegos de calle e infantiles",
+      "known_at": 8
+    },
+    {
+      "name": "Baraja española",
+      "facet": "Juegos de mesa y de cartas",
+      "known_at": 5
+    },
+    {
+      "name": "Mus",
+      "facet": "Juegos de mesa y de cartas",
+      "known_at": 9
+    },
+    {
+      "name": "Tute",
+      "facet": "Juegos de mesa y de cartas",
+      "known_at": 10
+    },
+    {
+      "name": "Brisca",
+      "facet": "Juegos de mesa y de cartas",
+      "known_at": 9
+    },
+    {
+      "name": "Cinquillo",
+      "facet": "Juegos de mesa y de cartas",
+      "known_at": 8
+    },
+    {
+      "name": "Guiñote",
+      "facet": "Juegos de mesa y de cartas",
+      "known_at": 12
+    },
+    {
+      "name": "Juego de la oca",
+      "facet": "Juegos de mesa y de cartas",
+      "known_at": 3
+    },
+    {
+      "name": "Dominó",
+      "facet": "Juegos de mesa y de cartas",
+      "known_at": 3
+    },
+    {
+      "name": "Siete y medio",
+      "facet": "Juegos de mesa y de cartas",
+      "known_at": 9
+    },
+    {
+      "name": "Escoba",
+      "facet": "Juegos de mesa y de cartas",
+      "known_at": 10
+    },
+    {
+      "name": "Julepe",
+      "facet": "Juegos de mesa y de cartas",
+      "known_at": 13
+    },
+    {
+      "name": "Pocha",
+      "facet": "Juegos de mesa y de cartas",
+      "known_at": 12
+    },
+    {
+      "name": "La mona",
+      "facet": "Juegos de mesa y de cartas",
+      "known_at": 5
+    },
+    {
+      "name": "Hundir la flota",
+      "facet": "Juegos de mesa y de cartas",
+      "known_at": 4
+    },
+    {
+      "name": "Truque",
+      "facet": "Juegos de mesa y de cartas",
+      "known_at": 14
+    },
+    {
+      "name": "Traineras",
+      "facet": "Deportes rurales y de fuerza",
+      "known_at": 11
+    },
+    {
+      "name": "Barra aragonesa",
+      "facet": "Deportes rurales y de fuerza",
+      "known_at": 13
+    },
+    {
+      "name": "Bolos leoneses",
+      "facet": "Deportes rurales y de fuerza",
+      "known_at": 12
+    },
+    {
+      "name": "Bolo palma",
+      "facet": "Deportes rurales y de fuerza",
+      "known_at": 13
+    },
+    {
+      "name": "Salto del pastor canario",
+      "facet": "Deportes rurales y de fuerza",
+      "known_at": 13
+    },
+    {
+      "name": "Arrastre de piedra con bueyes",
+      "facet": "Deportes rurales y de fuerza",
+      "known_at": 12
+    },
+    {
+      "name": "Segalaris",
+      "facet": "Deportes rurales y de fuerza",
+      "known_at": 14
+    },
+    {
+      "name": "Lucha leonesa",
+      "facet": "Deportes rurales y de fuerza",
+      "known_at": 14
+    },
+    {
+      "name": "Juego del palo canario",
+      "facet": "Deportes rurales y de fuerza",
+      "known_at": 14
+    },
+    {
+      "name": "Juego de la rana",
+      "facet": "Deportes rurales y de fuerza",
+      "known_at": 9
+    },
+    {
+      "name": "Txingas",
+      "facet": "Deportes rurales y de fuerza",
+      "known_at": 14
+    },
+    {
+      "name": "Calva",
+      "facet": "Deportes rurales y de fuerza",
+      "known_at": 14
+    },
+    {
+      "name": "Carrera de sacos",
+      "facet": "Deportes rurales y de fuerza",
+      "known_at": 3
+    },
+    {
+      "name": "Pelota vasca",
+      "facet": "Juegos de pelota tradicionales",
+      "known_at": 7
+    },
+    {
+      "name": "Frontón",
+      "facet": "Juegos de pelota tradicionales",
+      "known_at": 6
+    },
+    {
+      "name": "Cesta punta",
+      "facet": "Juegos de pelota tradicionales",
+      "known_at": 11
+    },
+    {
+      "name": "Pala",
+      "facet": "Juegos de pelota tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Remonte",
+      "facet": "Juegos de pelota tradicionales",
+      "known_at": 14
+    },
+    {
+      "name": "Pelota a mano",
+      "facet": "Juegos de pelota tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Frontenis",
+      "facet": "Juegos de pelota tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Pelota valenciana",
+      "facet": "Juegos de pelota tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Escala i corda",
+      "facet": "Juegos de pelota tradicionales",
+      "known_at": 14
+    },
+    {
+      "name": "Llargues",
+      "facet": "Juegos de pelota tradicionales",
+      "known_at": 14
+    },
+    {
+      "name": "Galotxa",
+      "facet": "Juegos de pelota tradicionales",
+      "known_at": 14
+    },
+    {
+      "name": "Xare",
+      "facet": "Juegos de pelota tradicionales",
+      "known_at": 14
+    },
+    {
+      "name": "Chistera",
+      "facet": "Juegos de pelota tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Trinquete",
+      "facet": "Juegos de pelota tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Pelotari",
+      "facet": "Juegos de pelota tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Paleta argentina",
+      "facet": "Juegos de pelota tradicionales",
+      "known_at": 14
+    },
+    {
+      "name": "Herramienta de pelota de cuero",
+      "facet": "Juegos de pelota tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Pito, pito, gorgorito",
+      "facet": "Canciones y retahílas de juego",
+      "known_at": 3
+    },
+    {
+      "name": "Al pasar la barca",
+      "facet": "Canciones y retahílas de juego",
+      "known_at": 6
+    },
+    {
+      "name": "Ratón que te pilla el gato",
+      "facet": "Canciones y retahílas de juego",
+      "known_at": 5
+    },
+    {
+      "name": "Donde están las llaves",
+      "facet": "Canciones y retahílas de juego",
+      "known_at": 7
+    },
+    {
+      "name": "Cucú cantaba la rana",
+      "facet": "Canciones y retahílas de juego",
+      "known_at": 4
+    },
+    {
+      "name": "Un elefante se balanceaba",
+      "facet": "Canciones y retahílas de juego",
+      "known_at": 3,
+      "retired": "used_up: La pregunta anterior ya cubre la tela de araña y la llamada al otro elefante; un conteo quedaría forzado."
+    },
+    {
+      "name": "Chocolate, molinillo",
+      "facet": "Canciones y retahílas de juego",
+      "known_at": 6
+    },
+    {
+      "name": "Jugaremos en el bosque",
+      "facet": "Canciones y retahílas de juego",
+      "known_at": 5
+    },
+    {
+      "name": "Yo tenía diez perritos",
+      "facet": "Canciones y retahílas de juego",
+      "known_at": 5
+    },
+    {
+      "name": "A la zapatilla por detrás",
+      "facet": "Canciones y retahílas de juego",
+      "known_at": 4
+    },
+    {
+      "name": "Una, dola, tela, catola",
+      "facet": "Canciones y retahílas de juego",
+      "known_at": 9
+    },
+    {
+      "name": "En la calle veinticuatro",
+      "facet": "Canciones y retahílas de juego",
+      "known_at": 8
+    },
+    {
+      "name": "Soy la reina de los mares",
+      "facet": "Canciones y retahílas de juego",
+      "known_at": 7
+    }
+  ]
+}

@@ -1,0 +1,1042 @@
+{
+  "subcategory": "coasts-and-islands",
+  "facets": [
+    "Islas Baleares",
+    "Islas Canarias",
+    "Costas con nombre propio",
+    "Cabos, golfos y bahías",
+    "Playas y calas famosas",
+    "Faros y puertos",
+    "Pueblos marineros y ciudades costeras",
+    "Islas pequeñas e islotes",
+    "Volcanes y paisajes insulares",
+    "Fauna y flora del litoral",
+    "Pesca, mariscos y tradiciones marineras",
+    "Historia en las costas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 5,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 4,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Catedral de Palma",
+      "facet": "Islas Baleares",
+      "known_at": 8
+    },
+    {
+      "name": "Serra de Tramuntana",
+      "facet": "Islas Baleares",
+      "known_at": 10
+    },
+    {
+      "name": "Sóller",
+      "facet": "Islas Baleares",
+      "known_at": 11
+    },
+    {
+      "name": "Talayots",
+      "facet": "Islas Baleares",
+      "known_at": 12
+    },
+    {
+      "name": "Ciutadella",
+      "facet": "Islas Baleares",
+      "known_at": 10
+    },
+    {
+      "name": "Dalt Vila",
+      "facet": "Islas Baleares",
+      "known_at": 11
+    },
+    {
+      "name": "Es Vedrà",
+      "facet": "Islas Baleares",
+      "known_at": 11
+    },
+    {
+      "name": "Islas Pitiusas",
+      "facet": "Islas Baleares",
+      "known_at": 11
+    },
+    {
+      "name": "Islas Gimnesias",
+      "facet": "Islas Baleares",
+      "known_at": 13
+    },
+    {
+      "name": "Naveta des Tudons",
+      "facet": "Islas Baleares",
+      "known_at": 14
+    },
+    {
+      "name": "Fiestas de Sant Joan de Ciutadella",
+      "facet": "Islas Baleares",
+      "known_at": 13
+    },
+    {
+      "name": "Papas arrugadas",
+      "facet": "Islas Canarias",
+      "known_at": 6
+    },
+    {
+      "name": "Mojo picón",
+      "facet": "Islas Canarias",
+      "known_at": 8
+    },
+    {
+      "name": "Dunas de Maspalomas",
+      "facet": "Islas Canarias",
+      "known_at": 9
+    },
+    {
+      "name": "Plátano de Canarias",
+      "facet": "Islas Canarias",
+      "known_at": 3
+    },
+    {
+      "name": "Parque nacional de Garajonay",
+      "facet": "Islas Canarias",
+      "known_at": 11
+    },
+    {
+      "name": "Drago milenario",
+      "facet": "Islas Canarias",
+      "known_at": 11
+    },
+    {
+      "name": "Lucha canaria",
+      "facet": "Islas Canarias",
+      "known_at": 11
+    },
+    {
+      "name": "Costa Brava",
+      "facet": "Costas con nombre propio",
+      "known_at": 5
+    },
+    {
+      "name": "Costa del Sol",
+      "facet": "Costas con nombre propio",
+      "known_at": 4
+    },
+    {
+      "name": "Costa Blanca",
+      "facet": "Costas con nombre propio",
+      "known_at": 6
+    },
+    {
+      "name": "Costa Dorada",
+      "facet": "Costas con nombre propio",
+      "known_at": 8
+    },
+    {
+      "name": "Costa Cálida",
+      "facet": "Costas con nombre propio",
+      "known_at": 10
+    },
+    {
+      "name": "Costa de la Luz",
+      "facet": "Costas con nombre propio",
+      "known_at": 8
+    },
+    {
+      "name": "Costa Verde",
+      "facet": "Costas con nombre propio",
+      "known_at": 10
+    },
+    {
+      "name": "Costa da Morte",
+      "facet": "Costas con nombre propio",
+      "known_at": 9
+    },
+    {
+      "name": "Costa Tropical",
+      "facet": "Costas con nombre propio",
+      "known_at": 11
+    },
+    {
+      "name": "Costa del Azahar",
+      "facet": "Costas con nombre propio",
+      "known_at": 11
+    },
+    {
+      "name": "Costa de Almería",
+      "facet": "Costas con nombre propio",
+      "known_at": 12
+    },
+    {
+      "name": "Costa Vasca",
+      "facet": "Costas con nombre propio",
+      "known_at": 9
+    },
+    {
+      "name": "Costa del Garraf",
+      "facet": "Costas con nombre propio",
+      "known_at": 13
+    },
+    {
+      "name": "Costa del Maresme",
+      "facet": "Costas con nombre propio",
+      "known_at": 12
+    },
+    {
+      "name": "Rías Baixas",
+      "facet": "Costas con nombre propio",
+      "known_at": 8
+    },
+    {
+      "name": "Rías Altas",
+      "facet": "Costas con nombre propio",
+      "known_at": 11
+    },
+    {
+      "name": "Mar Cantábrico",
+      "facet": "Costas con nombre propio",
+      "known_at": 5
+    },
+    {
+      "name": "Mar Mediterráneo",
+      "facet": "Costas con nombre propio",
+      "known_at": 2
+    },
+    {
+      "name": "Océano Atlántico",
+      "facet": "Costas con nombre propio",
+      "known_at": 2
+    },
+    {
+      "name": "Mar de Alborán",
+      "facet": "Costas con nombre propio",
+      "known_at": 11
+    },
+    {
+      "name": "Cabo de Finisterre",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 7
+    },
+    {
+      "name": "Cabo de Creus",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 9
+    },
+    {
+      "name": "Cabo de Peñas",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 12
+    },
+    {
+      "name": "Cabo Ortegal",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 13
+    },
+    {
+      "name": "Cabo de la Nao",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 13
+    },
+    {
+      "name": "Cabo de Palos",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 11
+    },
+    {
+      "name": "Cabo de Trafalgar",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 10
+    },
+    {
+      "name": "Cabo de Formentor",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 10
+    },
+    {
+      "name": "Estrecho de Gibraltar",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 5
+    },
+    {
+      "name": "Golfo de Vizcaya",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 8
+    },
+    {
+      "name": "Golfo de Cádiz",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 9
+    },
+    {
+      "name": "Golfo de Valencia",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 11
+    },
+    {
+      "name": "Golfo de Rosas",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 12
+    },
+    {
+      "name": "Bahía de la Concha",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 7
+    },
+    {
+      "name": "Bahía de Cádiz",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 9
+    },
+    {
+      "name": "Bahía de Santander",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 9
+    },
+    {
+      "name": "Bahía de Palma",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 11
+    },
+    {
+      "name": "Ría de Vigo",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 9
+    },
+    {
+      "name": "Ría de Arousa",
+      "facet": "Cabos, golfos y bahías",
+      "known_at": 11
+    },
+    {
+      "name": "Playa de la Concha",
+      "facet": "Playas y calas famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Playa de Rodas",
+      "facet": "Playas y calas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Playa de la Malvarrosa",
+      "facet": "Playas y calas famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Playa de la Barceloneta",
+      "facet": "Playas y calas famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Playa de Riazor",
+      "facet": "Playas y calas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Playa del Sardinero",
+      "facet": "Playas y calas famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Playa de Bolonia",
+      "facet": "Playas y calas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Playa de Ses Illetes",
+      "facet": "Playas y calas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Cala Macarella",
+      "facet": "Playas y calas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Cala Turqueta",
+      "facet": "Playas y calas famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Cala Comte",
+      "facet": "Playas y calas famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Playa de Papagayo",
+      "facet": "Playas y calas famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Playa del Silencio",
+      "facet": "Playas y calas famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Playa de Gulpiyuri",
+      "facet": "Playas y calas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Playa de San Lorenzo",
+      "facet": "Playas y calas famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Playa de la Victoria",
+      "facet": "Playas y calas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Playa de Las Canteras",
+      "facet": "Playas y calas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Playa de Zarautz",
+      "facet": "Playas y calas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Playa de Valdevaqueros",
+      "facet": "Playas y calas famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Playa de Es Trenc",
+      "facet": "Playas y calas famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Playa de Las Teresitas",
+      "facet": "Playas y calas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera Azul",
+      "facet": "Playas y calas famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Faro de Finisterre",
+      "facet": "Faros y puertos",
+      "known_at": 9
+    },
+    {
+      "name": "Faro de Formentor",
+      "facet": "Faros y puertos",
+      "known_at": 11
+    },
+    {
+      "name": "Faro de Chipiona",
+      "facet": "Faros y puertos",
+      "known_at": 12
+    },
+    {
+      "name": "Faro de Cabo Mayor",
+      "facet": "Faros y puertos",
+      "known_at": 12
+    },
+    {
+      "name": "Faro del Caballo",
+      "facet": "Faros y puertos",
+      "known_at": 13
+    },
+    {
+      "name": "Faro de Maspalomas",
+      "facet": "Faros y puertos",
+      "known_at": 12
+    },
+    {
+      "name": "Faro de Orchilla",
+      "facet": "Faros y puertos",
+      "known_at": 14
+    },
+    {
+      "name": "Faro de Cabo de Palos",
+      "facet": "Faros y puertos",
+      "known_at": 12
+    },
+    {
+      "name": "Faro de Punta Nariga",
+      "facet": "Faros y puertos",
+      "known_at": 14
+    },
+    {
+      "name": "Faro de Tarifa",
+      "facet": "Faros y puertos",
+      "known_at": 12
+    },
+    {
+      "name": "Puerto de Algeciras",
+      "facet": "Faros y puertos",
+      "known_at": 10
+    },
+    {
+      "name": "Puerto de Valencia",
+      "facet": "Faros y puertos",
+      "known_at": 8
+    },
+    {
+      "name": "Puerto de Barcelona",
+      "facet": "Faros y puertos",
+      "known_at": 7
+    },
+    {
+      "name": "Port Vell",
+      "facet": "Faros y puertos",
+      "known_at": 10
+    },
+    {
+      "name": "Puerto de Palos",
+      "facet": "Faros y puertos",
+      "known_at": 9
+    },
+    {
+      "name": "Puerto de Vigo",
+      "facet": "Faros y puertos",
+      "known_at": 10
+    },
+    {
+      "name": "Puerto Banús",
+      "facet": "Faros y puertos",
+      "known_at": 9
+    },
+    {
+      "name": "Puerto de Bilbao",
+      "facet": "Faros y puertos",
+      "known_at": 9
+    },
+    {
+      "name": "Puerto de Cádiz",
+      "facet": "Faros y puertos",
+      "known_at": 10
+    },
+    {
+      "name": "Llanes",
+      "facet": "Pueblos marineros y ciudades costeras",
+      "known_at": 11
+    },
+    {
+      "name": "Comillas",
+      "facet": "Pueblos marineros y ciudades costeras",
+      "known_at": 11
+    },
+    {
+      "name": "Tossa de Mar",
+      "facet": "Pueblos marineros y ciudades costeras",
+      "known_at": 11
+    },
+    {
+      "name": "Getaria",
+      "facet": "Pueblos marineros y ciudades costeras",
+      "known_at": 12
+    },
+    {
+      "name": "Bermeo",
+      "facet": "Pueblos marineros y ciudades costeras",
+      "known_at": 12
+    },
+    {
+      "name": "Castro Urdiales",
+      "facet": "Pueblos marineros y ciudades costeras",
+      "known_at": 12
+    },
+    {
+      "name": "Isla de Ons",
+      "facet": "Islas pequeñas e islotes",
+      "known_at": 12
+    },
+    {
+      "name": "Islas Columbretes",
+      "facet": "Islas pequeñas e islotes",
+      "known_at": 13
+    },
+    {
+      "name": "Islas Medas",
+      "facet": "Islas pequeñas e islotes",
+      "known_at": 11
+    },
+    {
+      "name": "Isla de Santa Clara",
+      "facet": "Islas pequeñas e islotes",
+      "known_at": 9
+    },
+    {
+      "name": "San Juan de Gaztelugatxe",
+      "facet": "Islas pequeñas e islotes",
+      "known_at": 7
+    },
+    {
+      "name": "Isla de Arousa",
+      "facet": "Islas pequeñas e islotes",
+      "known_at": 12
+    },
+    {
+      "name": "Isla de La Toja",
+      "facet": "Islas pequeñas e islotes",
+      "known_at": 11
+    },
+    {
+      "name": "Isla de Sálvora",
+      "facet": "Islas pequeñas e islotes",
+      "known_at": 14
+    },
+    {
+      "name": "Isla de Mouro",
+      "facet": "Islas pequeñas e islotes",
+      "known_at": 13
+    },
+    {
+      "name": "Isla de Lobos",
+      "facet": "Islas pequeñas e islotes",
+      "known_at": 11
+    },
+    {
+      "name": "Alegranza",
+      "facet": "Islas pequeñas e islotes",
+      "known_at": 13
+    },
+    {
+      "name": "Isla Dragonera",
+      "facet": "Islas pequeñas e islotes",
+      "known_at": 12
+    },
+    {
+      "name": "Isla de Tagomago",
+      "facet": "Islas pequeñas e islotes",
+      "known_at": 14
+    },
+    {
+      "name": "Isla de Alborán",
+      "facet": "Islas pequeñas e islotes",
+      "known_at": 13
+    },
+    {
+      "name": "Peñón de Gibraltar",
+      "facet": "Islas pequeñas e islotes",
+      "known_at": 6
+    },
+    {
+      "name": "Acantilados de Los Gigantes",
+      "facet": "Volcanes y paisajes insulares",
+      "known_at": 11
+    },
+    {
+      "name": "Cueva de los Verdes",
+      "facet": "Volcanes y paisajes insulares",
+      "known_at": 12
+    },
+    {
+      "name": "César Manrique",
+      "facet": "Volcanes y paisajes insulares",
+      "known_at": 10
+    },
+    {
+      "name": "Lava",
+      "facet": "Volcanes y paisajes insulares",
+      "known_at": 3
+    },
+    {
+      "name": "La Geria",
+      "facet": "Volcanes y paisajes insulares",
+      "known_at": 12
+    },
+    {
+      "name": "Los Hervideros",
+      "facet": "Volcanes y paisajes insulares",
+      "known_at": 13
+    },
+    {
+      "name": "Charco de los Clicos",
+      "facet": "Volcanes y paisajes insulares",
+      "known_at": 13
+    },
+    {
+      "name": "Barranco del Infierno",
+      "facet": "Volcanes y paisajes insulares",
+      "known_at": 12
+    },
+    {
+      "name": "Picón",
+      "facet": "Volcanes y paisajes insulares",
+      "known_at": 13
+    },
+    {
+      "name": "Mirador del Río",
+      "facet": "Volcanes y paisajes insulares",
+      "known_at": 12
+    },
+    {
+      "name": "Laurisilva",
+      "facet": "Volcanes y paisajes insulares",
+      "known_at": 11
+    },
+    {
+      "name": "Posidonia oceánica",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 10
+    },
+    {
+      "name": "Gaviota patiamarilla",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 8
+    },
+    {
+      "name": "Pardela cenicienta",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 12
+    },
+    {
+      "name": "Foca monje",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 11
+    },
+    {
+      "name": "Tortuga boba",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 9
+    },
+    {
+      "name": "Delfín mular",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 6
+    },
+    {
+      "name": "Orcas del Estrecho",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 8
+    },
+    {
+      "name": "Calderón",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 11
+    },
+    {
+      "name": "Medusa",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 2
+    },
+    {
+      "name": "Erizo de mar",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 3
+    },
+    {
+      "name": "Caballito de mar",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 3
+    },
+    {
+      "name": "Pez luna",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 9
+    },
+    {
+      "name": "Rorcual común",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 11
+    },
+    {
+      "name": "Lagarto gigante de El Hierro",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 12
+    },
+    {
+      "name": "Camaleón común",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 12
+    },
+    {
+      "name": "Halcón de Eleonora",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 14
+    },
+    {
+      "name": "Águila pescadora",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 11
+    },
+    {
+      "name": "Cormorán moñudo",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 12
+    },
+    {
+      "name": "Pino carrasco",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 12
+    },
+    {
+      "name": "Palmito",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 11
+    },
+    {
+      "name": "Cardón",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 13
+    },
+    {
+      "name": "Sabina",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 13
+    },
+    {
+      "name": "Tajinaste rojo",
+      "facet": "Fauna y flora del litoral",
+      "known_at": 13
+    },
+    {
+      "name": "Percebe",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 7
+    },
+    {
+      "name": "Espeto de sardinas",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 8
+    },
+    {
+      "name": "Pescaíto frito",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 7
+    },
+    {
+      "name": "Arroz a banda",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 10
+    },
+    {
+      "name": "Suquet de peix",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 13
+    },
+    {
+      "name": "Anchoas de Santoña",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 10
+    },
+    {
+      "name": "Almadraba",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 11
+    },
+    {
+      "name": "Atún rojo",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 9
+    },
+    {
+      "name": "Kokotxas",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 12
+    },
+    {
+      "name": "Batea",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 10
+    },
+    {
+      "name": "Virgen del Carmen",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 7
+    },
+    {
+      "name": "Regatas de traineras",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 10
+    },
+    {
+      "name": "Rederas",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 13
+    },
+    {
+      "name": "Cofradía de pescadores",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 11
+    },
+    {
+      "name": "Lonja",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 9
+    },
+    {
+      "name": "Zarzuela de pescado",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 10
+    },
+    {
+      "name": "Navajas",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 8
+    },
+    {
+      "name": "Gambas de Huelva",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 10
+    },
+    {
+      "name": "Gamba roja de Palamós",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 12
+    },
+    {
+      "name": "Caldereta de langosta",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 12
+    },
+    {
+      "name": "Langostinos de Sanlúcar",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 11
+    },
+    {
+      "name": "Boquerones en vinagre",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 6
+    },
+    {
+      "name": "Mariscadoras",
+      "facet": "Pesca, mariscos y tradiciones marineras",
+      "known_at": 13
+    },
+    {
+      "name": "Batalla de Trafalgar",
+      "facet": "Historia en las costas",
+      "known_at": 8
+    },
+    {
+      "name": "La Pepa",
+      "facet": "Historia en las costas",
+      "known_at": 9
+    },
+    {
+      "name": "Fenicios",
+      "facet": "Historia en las costas",
+      "known_at": 8
+    },
+    {
+      "name": "Gadir",
+      "facet": "Historia en las costas",
+      "known_at": 11
+    },
+    {
+      "name": "Ampurias",
+      "facet": "Historia en las costas",
+      "known_at": 11
+    },
+    {
+      "name": "Cartago Nova",
+      "facet": "Historia en las costas",
+      "known_at": 10
+    },
+    {
+      "name": "Teatro romano de Cartagena",
+      "facet": "Historia en las costas",
+      "known_at": 11
+    },
+    {
+      "name": "Baelo Claudia",
+      "facet": "Historia en las costas",
+      "known_at": 12
+    },
+    {
+      "name": "Armada Invencible",
+      "facet": "Historia en las costas",
+      "known_at": 9
+    },
+    {
+      "name": "Francis Drake",
+      "facet": "Historia en las costas",
+      "known_at": 10
+    },
+    {
+      "name": "María Pita",
+      "facet": "Historia en las costas",
+      "known_at": 11
+    },
+    {
+      "name": "Piratas berberiscos",
+      "facet": "Historia en las costas",
+      "known_at": 10
+    },
+    {
+      "name": "Barbarroja",
+      "facet": "Historia en las costas",
+      "known_at": 12
+    },
+    {
+      "name": "Torres vigía",
+      "facet": "Historia en las costas",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Sebastián Elcano",
+      "facet": "Historia en las costas",
+      "known_at": 8
+    },
+    {
+      "name": "Primera vuelta al mundo",
+      "facet": "Historia en las costas",
+      "known_at": 8
+    },
+    {
+      "name": "Tratado de Utrecht",
+      "facet": "Historia en las costas",
+      "known_at": 11
+    },
+    {
+      "name": "Prestige",
+      "facet": "Historia en las costas",
+      "known_at": 10
+    },
+    {
+      "name": "Castillo de San Antón",
+      "facet": "Historia en las costas",
+      "known_at": 13
+    },
+    {
+      "name": "Desembarco de Alhucemas",
+      "facet": "Historia en las costas",
+      "known_at": 13
+    }
+  ]
+}

@@ -1,0 +1,1167 @@
+{
+  "subcategory": "20th-century",
+  "facets": [
+    "Alfonso XIII y la Restauración",
+    "Desastre del 98 y Marruecos",
+    "Segunda República",
+    "Guerra Civil española",
+    "Franquismo y posguerra",
+    "Transición democrática",
+    "España democrática y Europa",
+    "Vida cotidiana y consumo",
+    "Arte, letras y cine",
+    "Música, radio y televisión",
+    "Deporte del siglo XX",
+    "Ciencia, inventos y obras"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Antonio Maura",
+      "facet": "Alfonso XIII y la Restauración",
+      "known_at": 13
+    },
+    {
+      "name": "Semana Trágica de Barcelona",
+      "facet": "Alfonso XIII y la Restauración",
+      "known_at": 12
+    },
+    {
+      "name": "Dictadura de Primo de Rivera",
+      "facet": "Alfonso XIII y la Restauración",
+      "known_at": 10
+    },
+    {
+      "name": "Miguel Primo de Rivera",
+      "facet": "Alfonso XIII y la Restauración",
+      "known_at": 10
+    },
+    {
+      "name": "Eduardo Dato",
+      "facet": "Alfonso XIII y la Restauración",
+      "known_at": 14
+    },
+    {
+      "name": "José Canalejas",
+      "facet": "Alfonso XIII y la Restauración",
+      "known_at": 14
+    },
+    {
+      "name": "Crisis de 1917",
+      "facet": "Alfonso XIII y la Restauración",
+      "known_at": 14
+    },
+    {
+      "name": "Pistolerismo",
+      "facet": "Alfonso XIII y la Restauración",
+      "known_at": 14
+    },
+    {
+      "name": "Exposición Iberoamericana de Sevilla de 1929",
+      "facet": "Alfonso XIII y la Restauración",
+      "known_at": 12
+    },
+    {
+      "name": "Exposición Internacional de Barcelona de 1929",
+      "facet": "Alfonso XIII y la Restauración",
+      "known_at": 12
+    },
+    {
+      "name": "Mancomunidad de Cataluña",
+      "facet": "Alfonso XIII y la Restauración",
+      "known_at": 13
+    },
+    {
+      "name": "Victoria Eugenia de Battenberg",
+      "facet": "Alfonso XIII y la Restauración",
+      "known_at": 12
+    },
+    {
+      "name": "Gripe de 1918",
+      "facet": "Alfonso XIII y la Restauración",
+      "known_at": 11
+    },
+    {
+      "name": "Neutralidad española en la Primera Guerra Mundial",
+      "facet": "Alfonso XIII y la Restauración",
+      "known_at": 11
+    },
+    {
+      "name": "CNT",
+      "facet": "Alfonso XIII y la Restauración",
+      "known_at": 12
+    },
+    {
+      "name": "Hundimiento del Maine",
+      "facet": "Desastre del 98 y Marruecos",
+      "known_at": 12
+    },
+    {
+      "name": "Independencia de Cuba",
+      "facet": "Desastre del 98 y Marruecos",
+      "known_at": 9
+    },
+    {
+      "name": "Desastre de Annual",
+      "facet": "Desastre del 98 y Marruecos",
+      "known_at": 12
+    },
+    {
+      "name": "Abd el-Krim",
+      "facet": "Desastre del 98 y Marruecos",
+      "known_at": 13
+    },
+    {
+      "name": "Guerra del Rif",
+      "facet": "Desastre del 98 y Marruecos",
+      "known_at": 12
+    },
+    {
+      "name": "Protectorado español de Marruecos",
+      "facet": "Desastre del 98 y Marruecos",
+      "known_at": 12
+    },
+    {
+      "name": "Legión Española",
+      "facet": "Desastre del 98 y Marruecos",
+      "known_at": 10
+    },
+    {
+      "name": "Venta de las islas Carolinas",
+      "facet": "Desastre del 98 y Marruecos",
+      "known_at": 14
+    },
+    {
+      "name": "Segunda República",
+      "facet": "Segunda República",
+      "known_at": 8
+    },
+    {
+      "name": "14 de abril de 1931",
+      "facet": "Segunda República",
+      "known_at": 10
+    },
+    {
+      "name": "Manuel Azaña",
+      "facet": "Segunda República",
+      "known_at": 11
+    },
+    {
+      "name": "Niceto Alcalá-Zamora",
+      "facet": "Segunda República",
+      "known_at": 12
+    },
+    {
+      "name": "Constitución de 1931",
+      "facet": "Segunda República",
+      "known_at": 12
+    },
+    {
+      "name": "Voto femenino",
+      "facet": "Segunda República",
+      "known_at": 10
+    },
+    {
+      "name": "Clara Campoamor",
+      "facet": "Segunda República",
+      "known_at": 10
+    },
+    {
+      "name": "Victoria Kent",
+      "facet": "Segunda República",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera tricolor republicana",
+      "facet": "Segunda República",
+      "known_at": 9
+    },
+    {
+      "name": "Reforma agraria",
+      "facet": "Segunda República",
+      "known_at": 12
+    },
+    {
+      "name": "Misiones Pedagógicas",
+      "facet": "Segunda República",
+      "known_at": 13
+    },
+    {
+      "name": "La Barraca",
+      "facet": "Segunda República",
+      "known_at": 13
+    },
+    {
+      "name": "Bienio negro",
+      "facet": "Segunda República",
+      "known_at": 13
+    },
+    {
+      "name": "Revolución de Asturias de 1934",
+      "facet": "Segunda República",
+      "known_at": 13
+    },
+    {
+      "name": "Frente Popular",
+      "facet": "Segunda República",
+      "known_at": 12
+    },
+    {
+      "name": "Estatuto de Autonomía de Cataluña de 1932",
+      "facet": "Segunda República",
+      "known_at": 13
+    },
+    {
+      "name": "Francesc Macià",
+      "facet": "Segunda República",
+      "known_at": 13
+    },
+    {
+      "name": "Elecciones municipales de 1931",
+      "facet": "Segunda República",
+      "known_at": 12
+    },
+    {
+      "name": "José María Gil-Robles",
+      "facet": "Segunda República",
+      "known_at": 14
+    },
+    {
+      "name": "Lluís Companys",
+      "facet": "Segunda República",
+      "known_at": 12
+    },
+    {
+      "name": "Guerra Civil española",
+      "facet": "Guerra Civil española",
+      "known_at": 6
+    },
+    {
+      "name": "18 de julio de 1936",
+      "facet": "Guerra Civil española",
+      "known_at": 10
+    },
+    {
+      "name": "Bombardeo de Guernica",
+      "facet": "Guerra Civil española",
+      "known_at": 9
+    },
+    {
+      "name": "Batalla de Madrid",
+      "facet": "Guerra Civil española",
+      "known_at": 12
+    },
+    {
+      "name": "«No pasarán»",
+      "facet": "Guerra Civil española",
+      "known_at": 10
+    },
+    {
+      "name": "Brigadas Internacionales",
+      "facet": "Guerra Civil española",
+      "known_at": 11
+    },
+    {
+      "name": "Asedio del Alcázar de Toledo",
+      "facet": "Guerra Civil española",
+      "known_at": 12
+    },
+    {
+      "name": "Batalla de Teruel",
+      "facet": "Guerra Civil española",
+      "known_at": 13
+    },
+    {
+      "name": "Batalla de Brunete",
+      "facet": "Guerra Civil española",
+      "known_at": 14
+    },
+    {
+      "name": "Bando sublevado",
+      "facet": "Guerra Civil española",
+      "known_at": 9
+    },
+    {
+      "name": "Bando republicano",
+      "facet": "Guerra Civil española",
+      "known_at": 9
+    },
+    {
+      "name": "Niños de la guerra",
+      "facet": "Guerra Civil española",
+      "known_at": 13
+    },
+    {
+      "name": "Exilio republicano",
+      "facet": "Guerra Civil española",
+      "known_at": 11
+    },
+    {
+      "name": "Homenaje a Cataluña",
+      "facet": "Guerra Civil española",
+      "known_at": 13
+    },
+    {
+      "name": "Dolores Ibárruri",
+      "facet": "Guerra Civil española",
+      "known_at": 11
+    },
+    {
+      "name": "Emilio Mola",
+      "facet": "Guerra Civil española",
+      "known_at": 14
+    },
+    {
+      "name": "Francisco Largo Caballero",
+      "facet": "Guerra Civil española",
+      "known_at": 14
+    },
+    {
+      "name": "Juan Negrín",
+      "facet": "Guerra Civil española",
+      "known_at": 14
+    },
+    {
+      "name": "1 de abril de 1939",
+      "facet": "Guerra Civil española",
+      "known_at": 12
+    },
+    {
+      "name": "Oro de Moscú",
+      "facet": "Guerra Civil española",
+      "known_at": 13
+    },
+    {
+      "name": "Legión Cóndor",
+      "facet": "Guerra Civil española",
+      "known_at": 13
+    },
+    {
+      "name": "Robert Capa",
+      "facet": "Guerra Civil española",
+      "known_at": 12
+    },
+    {
+      "name": "Francisco Franco",
+      "facet": "Franquismo y posguerra",
+      "known_at": 7
+    },
+    {
+      "name": "Franquismo",
+      "facet": "Franquismo y posguerra",
+      "known_at": 9
+    },
+    {
+      "name": "Cartilla de racionamiento",
+      "facet": "Franquismo y posguerra",
+      "known_at": 11
+    },
+    {
+      "name": "Años del hambre",
+      "facet": "Franquismo y posguerra",
+      "known_at": 12
+    },
+    {
+      "name": "Estraperlo",
+      "facet": "Franquismo y posguerra",
+      "known_at": 12
+    },
+    {
+      "name": "Valle de Cuelgamuros",
+      "facet": "Franquismo y posguerra",
+      "known_at": 11
+    },
+    {
+      "name": "Pactos de Madrid de 1953",
+      "facet": "Franquismo y posguerra",
+      "known_at": 14
+    },
+    {
+      "name": "Visita de Eisenhower a España",
+      "facet": "Franquismo y posguerra",
+      "known_at": 13
+    },
+    {
+      "name": "Plan de Estabilización de 1959",
+      "facet": "Franquismo y posguerra",
+      "known_at": 13
+    },
+    {
+      "name": "Desarrollismo",
+      "facet": "Franquismo y posguerra",
+      "known_at": 13
+    },
+    {
+      "name": "NO-DO",
+      "facet": "Franquismo y posguerra",
+      "known_at": 11
+    },
+    {
+      "name": "Censura franquista",
+      "facet": "Franquismo y posguerra",
+      "known_at": 11
+    },
+    {
+      "name": "Sección Femenina",
+      "facet": "Franquismo y posguerra",
+      "known_at": 12
+    },
+    {
+      "name": "Maquis",
+      "facet": "Franquismo y posguerra",
+      "known_at": 13
+    },
+    {
+      "name": "Entrevista de Hendaya",
+      "facet": "Franquismo y posguerra",
+      "known_at": 13
+    },
+    {
+      "name": "División Azul",
+      "facet": "Franquismo y posguerra",
+      "known_at": 12
+    },
+    {
+      "name": "Luis Carrero Blanco",
+      "facet": "Franquismo y posguerra",
+      "known_at": 12
+    },
+    {
+      "name": "Emigración española a Europa",
+      "facet": "Franquismo y posguerra",
+      "known_at": 11
+    },
+    {
+      "name": "Proceso de Burgos",
+      "facet": "Franquismo y posguerra",
+      "known_at": 14
+    },
+    {
+      "name": "20 de noviembre de 1975",
+      "facet": "Franquismo y posguerra",
+      "known_at": 10
+    },
+    {
+      "name": "Marcha Verde",
+      "facet": "Franquismo y posguerra",
+      "known_at": 13
+    },
+    {
+      "name": "«Spain is different»",
+      "facet": "Franquismo y posguerra",
+      "known_at": 12
+    },
+    {
+      "name": "Ingreso de España en la ONU",
+      "facet": "Franquismo y posguerra",
+      "known_at": 14
+    },
+    {
+      "name": "Transición democrática",
+      "facet": "Transición democrática",
+      "known_at": 8
+    },
+    {
+      "name": "Juan Carlos I",
+      "facet": "Transición democrática",
+      "known_at": 6
+    },
+    {
+      "name": "Adolfo Suárez",
+      "facet": "Transición democrática",
+      "known_at": 9
+    },
+    {
+      "name": "Constitución de 1978",
+      "facet": "Transición democrática",
+      "known_at": 7
+    },
+    {
+      "name": "Día de la Constitución",
+      "facet": "Transición democrática",
+      "known_at": 8
+    },
+    {
+      "name": "23-F",
+      "facet": "Transición democrática",
+      "known_at": 9
+    },
+    {
+      "name": "Antonio Tejero",
+      "facet": "Transición democrática",
+      "known_at": 10
+    },
+    {
+      "name": "Ley para la Reforma Política",
+      "facet": "Transición democrática",
+      "known_at": 13
+    },
+    {
+      "name": "Elecciones generales de 1977",
+      "facet": "Transición democrática",
+      "known_at": 12
+    },
+    {
+      "name": "Legalización del PCE",
+      "facet": "Transición democrática",
+      "known_at": 12
+    },
+    {
+      "name": "Santiago Carrillo",
+      "facet": "Transición democrática",
+      "known_at": 12
+    },
+    {
+      "name": "Pactos de la Moncloa",
+      "facet": "Transición democrática",
+      "known_at": 12
+    },
+    {
+      "name": "Padres de la Constitución",
+      "facet": "Transición democrática",
+      "known_at": 12
+    },
+    {
+      "name": "Ley de Amnistía de 1977",
+      "facet": "Transición democrática",
+      "known_at": 14
+    },
+    {
+      "name": "Josep Tarradellas",
+      "facet": "Transición democrática",
+      "known_at": 13
+    },
+    {
+      "name": "UCD",
+      "facet": "Transición democrática",
+      "known_at": 12
+    },
+    {
+      "name": "Manuel Fraga",
+      "facet": "Transición democrática",
+      "known_at": 11
+    },
+    {
+      "name": "Torcuato Fernández-Miranda",
+      "facet": "Transición democrática",
+      "known_at": 14
+    },
+    {
+      "name": "Manuel Gutiérrez Mellado",
+      "facet": "Transición democrática",
+      "known_at": 13
+    },
+    {
+      "name": "Ley del divorcio de 1981",
+      "facet": "Transición democrática",
+      "known_at": 12
+    },
+    {
+      "name": "Entrada de España en la CEE",
+      "facet": "España democrática y Europa",
+      "known_at": 10
+    },
+    {
+      "name": "Felipe González",
+      "facet": "España democrática y Europa",
+      "known_at": 9
+    },
+    {
+      "name": "Referéndum de la OTAN de 1986",
+      "facet": "España democrática y Europa",
+      "known_at": 12
+    },
+    {
+      "name": "Expo de Sevilla 1992",
+      "facet": "España democrática y Europa",
+      "known_at": 9
+    },
+    {
+      "name": "Quinto Centenario",
+      "facet": "España democrática y Europa",
+      "known_at": 12
+    },
+    {
+      "name": "José María Aznar",
+      "facet": "España democrática y Europa",
+      "known_at": 9
+    },
+    {
+      "name": "Llegada del euro",
+      "facet": "España democrática y Europa",
+      "known_at": 8
+    },
+    {
+      "name": "Tratado de Maastricht",
+      "facet": "España democrática y Europa",
+      "known_at": 13
+    },
+    {
+      "name": "Leopoldo Calvo-Sotelo",
+      "facet": "España democrática y Europa",
+      "known_at": 13
+    },
+    {
+      "name": "Victoria del PSOE en 1982",
+      "facet": "España democrática y Europa",
+      "known_at": 11
+    },
+    {
+      "name": "Huelga general del 14-D",
+      "facet": "España democrática y Europa",
+      "known_at": 14
+    },
+    {
+      "name": "Madrid, Capital Europea de la Cultura 1992",
+      "facet": "España democrática y Europa",
+      "known_at": 14
+    },
+    {
+      "name": "Javier Solana",
+      "facet": "España democrática y Europa",
+      "known_at": 13
+    },
+    {
+      "name": "Conferencia de Paz de Madrid de 1991",
+      "facet": "España democrática y Europa",
+      "known_at": 14
+    },
+    {
+      "name": "Tratado de adhesión de 1985",
+      "facet": "España democrática y Europa",
+      "known_at": 13
+    },
+    {
+      "name": "Ley General de Sanidad",
+      "facet": "España democrática y Europa",
+      "known_at": 14
+    },
+    {
+      "name": "Comunidades autónomas",
+      "facet": "España democrática y Europa",
+      "known_at": 8
+    },
+    {
+      "name": "SEAT 600",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 8
+    },
+    {
+      "name": "Mili",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 10
+    },
+    {
+      "name": "Vespino",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 12
+    },
+    {
+      "name": "Chupa Chups",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 5
+    },
+    {
+      "name": "Cola Cao",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 5
+    },
+    {
+      "name": "La Casera",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 8
+    },
+    {
+      "name": "Cine de verano",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 9
+    },
+    {
+      "name": "Cabina telefónica",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 6
+    },
+    {
+      "name": "Telefónica",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 8
+    },
+    {
+      "name": "Seguridad Social",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 10
+    },
+    {
+      "name": "Cupón de la ONCE",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 8
+    },
+    {
+      "name": "Anuncio del calvo de la Lotería",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 11
+    },
+    {
+      "name": "Galerías Preciados",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 12
+    },
+    {
+      "name": "El Corte Inglés",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 6
+    },
+    {
+      "name": "Renfe",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 7
+    },
+    {
+      "name": "Pegaso",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 12
+    },
+    {
+      "name": "Tebeo",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 8
+    },
+    {
+      "name": "Operación salida",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 10
+    },
+    {
+      "name": "Éxodo rural",
+      "facet": "Vida cotidiana y consumo",
+      "known_at": 11
+    },
+    {
+      "name": "Pablo Picasso",
+      "facet": "Arte, letras y cine",
+      "known_at": 5
+    },
+    {
+      "name": "Guernica",
+      "facet": "Arte, letras y cine",
+      "known_at": 8
+    },
+    {
+      "name": "Salvador Dalí",
+      "facet": "Arte, letras y cine",
+      "known_at": 6
+    },
+    {
+      "name": "Joan Miró",
+      "facet": "Arte, letras y cine",
+      "known_at": 9
+    },
+    {
+      "name": "Federico García Lorca",
+      "facet": "Arte, letras y cine",
+      "known_at": 8
+    },
+    {
+      "name": "Generación del 27",
+      "facet": "Arte, letras y cine",
+      "known_at": 10
+    },
+    {
+      "name": "Platero y yo",
+      "facet": "Arte, letras y cine",
+      "known_at": 7
+    },
+    {
+      "name": "Camilo José Cela",
+      "facet": "Arte, letras y cine",
+      "known_at": 11
+    },
+    {
+      "name": "Luis Buñuel",
+      "facet": "Arte, letras y cine",
+      "known_at": 11
+    },
+    {
+      "name": "Bienvenido, Mister Marshall",
+      "facet": "Arte, letras y cine",
+      "known_at": 12
+    },
+    {
+      "name": "Pedro Almodóvar",
+      "facet": "Arte, letras y cine",
+      "known_at": 9
+    },
+    {
+      "name": "Greguería",
+      "facet": "Arte, letras y cine",
+      "known_at": 13
+    },
+    {
+      "name": "Vicente Aleixandre",
+      "facet": "Arte, letras y cine",
+      "known_at": 13
+    },
+    {
+      "name": "Nada (novela)",
+      "facet": "Arte, letras y cine",
+      "known_at": 13
+    },
+    {
+      "name": "Miguel Delibes",
+      "facet": "Arte, letras y cine",
+      "known_at": 11
+    },
+    {
+      "name": "Francisco Ibáñez",
+      "facet": "Arte, letras y cine",
+      "known_at": 8
+    },
+    {
+      "name": "Rafael Alberti",
+      "facet": "Arte, letras y cine",
+      "known_at": 11
+    },
+    {
+      "name": "Volver a empezar",
+      "facet": "Arte, letras y cine",
+      "known_at": 13
+    },
+    {
+      "name": "Esperpento",
+      "facet": "Arte, letras y cine",
+      "known_at": 12
+    },
+    {
+      "name": "Ana María Matute",
+      "facet": "Arte, letras y cine",
+      "known_at": 12
+    },
+    {
+      "name": "Miguel Hernández",
+      "facet": "Arte, letras y cine",
+      "known_at": 11
+    },
+    {
+      "name": "Televisión Española",
+      "facet": "Música, radio y televisión",
+      "known_at": 7
+    },
+    {
+      "name": "Chicho Ibáñez Serrador",
+      "facet": "Música, radio y televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Massiel",
+      "facet": "Música, radio y televisión",
+      "known_at": 10
+    },
+    {
+      "name": "Raphael",
+      "facet": "Música, radio y televisión",
+      "known_at": 9
+    },
+    {
+      "name": "Julio Iglesias",
+      "facet": "Música, radio y televisión",
+      "known_at": 7
+    },
+    {
+      "name": "Mecano",
+      "facet": "Música, radio y televisión",
+      "known_at": 8
+    },
+    {
+      "name": "Los Payasos de la Tele",
+      "facet": "Música, radio y televisión",
+      "known_at": 6
+    },
+    {
+      "name": "Radio Nacional de España",
+      "facet": "Música, radio y televisión",
+      "known_at": 10
+    },
+    {
+      "name": "Carta de ajuste",
+      "facet": "Música, radio y televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Rocío Jurado",
+      "facet": "Música, radio y televisión",
+      "known_at": 9
+    },
+    {
+      "name": "Nino Bravo",
+      "facet": "Música, radio y televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Dúo Dinámico",
+      "facet": "Música, radio y televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Consultorio de Elena Francis",
+      "facet": "Música, radio y televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Copas de Europa del Real Madrid",
+      "facet": "Deporte del siglo XX",
+      "known_at": 6
+    },
+    {
+      "name": "Alfredo Di Stéfano",
+      "facet": "Deporte del siglo XX",
+      "known_at": 9
+    },
+    {
+      "name": "Severiano Ballesteros",
+      "facet": "Deporte del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "Manolo Santana",
+      "facet": "Deporte del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Ángel Nieto",
+      "facet": "Deporte del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Miguel Induráin",
+      "facet": "Deporte del siglo XX",
+      "known_at": 8
+    },
+    {
+      "name": "Federico Martín Bahamontes",
+      "facet": "Deporte del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Juegos Olímpicos de Barcelona 1992",
+      "facet": "Deporte del siglo XX",
+      "known_at": 6
+    },
+    {
+      "name": "Cobi",
+      "facet": "Deporte del siglo XX",
+      "known_at": 8
+    },
+    {
+      "name": "Mundial de España 1982",
+      "facet": "Deporte del siglo XX",
+      "known_at": 9
+    },
+    {
+      "name": "Naranjito",
+      "facet": "Deporte del siglo XX",
+      "known_at": 8
+    },
+    {
+      "name": "Gol de Marcelino",
+      "facet": "Deporte del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Gol de Zarra",
+      "facet": "Deporte del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Fermín Cacho",
+      "facet": "Deporte del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Arantxa Sánchez Vicario",
+      "facet": "Deporte del siglo XX",
+      "known_at": 10
+    },
+    {
+      "name": "Pedro Delgado",
+      "facet": "Deporte del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Francisco Fernández Ochoa",
+      "facet": "Deporte del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Conchita Martínez",
+      "facet": "Deporte del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Ladislao Kubala",
+      "facet": "Deporte del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Fernando Martín",
+      "facet": "Deporte del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Plata olímpica de baloncesto de 1984",
+      "facet": "Deporte del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Luis Suárez Miramontes",
+      "facet": "Deporte del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Sainz",
+      "facet": "Deporte del siglo XX",
+      "known_at": 8
+    },
+    {
+      "name": "Dream Team de Cruyff",
+      "facet": "Deporte del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Severo Ochoa",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 11
+    },
+    {
+      "name": "Autogiro",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 11
+    },
+    {
+      "name": "Juan de la Cierva",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 12
+    },
+    {
+      "name": "Fregona",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 6
+    },
+    {
+      "name": "Futbolín",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 8
+    },
+    {
+      "name": "Talgo",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 11
+    },
+    {
+      "name": "Leonardo Torres Quevedo",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 12
+    },
+    {
+      "name": "Spanish Aerocar del Niágara",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 14
+    },
+    {
+      "name": "Telekino",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 14
+    },
+    {
+      "name": "AVE Madrid-Sevilla",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 9
+    },
+    {
+      "name": "Metro de Madrid",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 9
+    },
+    {
+      "name": "Gran Vía de Madrid",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 7
+    },
+    {
+      "name": "Embalses del franquismo",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 11
+    },
+    {
+      "name": "Escafandra estratonáutica",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 14
+    },
+    {
+      "name": "Margarita Salas",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 12
+    },
+    {
+      "name": "Vuelo del Plus Ultra",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 13
+    },
+    {
+      "name": "Gregorio Marañón",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 12
+    },
+    {
+      "name": "Ciudad Universitaria de Madrid",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 13
+    },
+    {
+      "name": "Hispasat",
+      "facet": "Ciencia, inventos y obras",
+      "known_at": 13
+    }
+  ]
+}

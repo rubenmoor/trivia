@@ -1,0 +1,1112 @@
+{
+  "subcategory": "flamenco-and-copla",
+  "facets": [
+    "Palos del flamenco",
+    "Cantaores y cantaoras",
+    "Guitarristas flamencos",
+    "Bailaores y bailaoras",
+    "Instrumentos y acompañamiento",
+    "Vestuario y complementos",
+    "Copla y tonadilleras",
+    "Coplas y canciones famosas",
+    "Lugares y cunas del flamenco",
+    "Tablaos, festivales y ferias",
+    "Vocabulario y jaleos flamencos",
+    "Historia y fusiones del flamenco"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Farruca",
+      "facet": "Palos del flamenco",
+      "known_at": 12
+    },
+    {
+      "name": "Guajira",
+      "facet": "Palos del flamenco",
+      "known_at": 12
+    },
+    {
+      "name": "Martinete",
+      "facet": "Palos del flamenco",
+      "known_at": 12
+    },
+    {
+      "name": "Tientos",
+      "facet": "Palos del flamenco",
+      "known_at": 13
+    },
+    {
+      "name": "Granaína",
+      "facet": "Palos del flamenco",
+      "known_at": 13
+    },
+    {
+      "name": "Taranta",
+      "facet": "Palos del flamenco",
+      "known_at": 13
+    },
+    {
+      "name": "Garrotín",
+      "facet": "Palos del flamenco",
+      "known_at": 13
+    },
+    {
+      "name": "Petenera",
+      "facet": "Palos del flamenco",
+      "known_at": 13
+    },
+    {
+      "name": "Zambra",
+      "facet": "Palos del flamenco",
+      "known_at": 13
+    },
+    {
+      "name": "Cantiñas",
+      "facet": "Palos del flamenco",
+      "known_at": 14
+    },
+    {
+      "name": "Minera",
+      "facet": "Palos del flamenco",
+      "known_at": 14
+    },
+    {
+      "name": "Toná",
+      "facet": "Palos del flamenco",
+      "known_at": 14
+    },
+    {
+      "name": "Niña Pastori",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 8
+    },
+    {
+      "name": "Estrella Morente",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 9
+    },
+    {
+      "name": "Miguel Poveda",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 9
+    },
+    {
+      "name": "Diego El Cigala",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 9
+    },
+    {
+      "name": "José Mercé",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 10
+    },
+    {
+      "name": "Remedios Amaya",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 10
+    },
+    {
+      "name": "Enrique Morente",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 11
+    },
+    {
+      "name": "La Niña de los Peines",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 12
+    },
+    {
+      "name": "Manolo Caracol",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 12
+    },
+    {
+      "name": "Carmen Linares",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 12
+    },
+    {
+      "name": "Antonio Mairena",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 13
+    },
+    {
+      "name": "Pepe Marchena",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 13
+    },
+    {
+      "name": "La Paquera de Jerez",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 13
+    },
+    {
+      "name": "El Lebrijano",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 13
+    },
+    {
+      "name": "Arcángel",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 13
+    },
+    {
+      "name": "Duquende",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 13
+    },
+    {
+      "name": "Fosforito",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 14
+    },
+    {
+      "name": "Terremoto de Jerez",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 14
+    },
+    {
+      "name": "Don Antonio Chacón",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 14
+    },
+    {
+      "name": "Fernanda y Bernarda de Utrera",
+      "facet": "Cantaores y cantaoras",
+      "known_at": 14
+    },
+    {
+      "name": "Tomatito",
+      "facet": "Guitarristas flamencos",
+      "known_at": 9
+    },
+    {
+      "name": "Vicente Amigo",
+      "facet": "Guitarristas flamencos",
+      "known_at": 10
+    },
+    {
+      "name": "Raimundo Amador",
+      "facet": "Guitarristas flamencos",
+      "known_at": 11
+    },
+    {
+      "name": "Manolo Sanlúcar",
+      "facet": "Guitarristas flamencos",
+      "known_at": 12
+    },
+    {
+      "name": "Sabicas",
+      "facet": "Guitarristas flamencos",
+      "known_at": 13
+    },
+    {
+      "name": "Pepe Habichuela",
+      "facet": "Guitarristas flamencos",
+      "known_at": 13
+    },
+    {
+      "name": "Niño Josele",
+      "facet": "Guitarristas flamencos",
+      "known_at": 13
+    },
+    {
+      "name": "Niño Ricardo",
+      "facet": "Guitarristas flamencos",
+      "known_at": 14
+    },
+    {
+      "name": "Ramón Montoya",
+      "facet": "Guitarristas flamencos",
+      "known_at": 14
+    },
+    {
+      "name": "Paco Peña",
+      "facet": "Guitarristas flamencos",
+      "known_at": 14
+    },
+    {
+      "name": "Gerardo Núñez",
+      "facet": "Guitarristas flamencos",
+      "known_at": 14
+    },
+    {
+      "name": "Moraíto Chico",
+      "facet": "Guitarristas flamencos",
+      "known_at": 14
+    },
+    {
+      "name": "Juan Habichuela",
+      "facet": "Guitarristas flamencos",
+      "known_at": 14
+    },
+    {
+      "name": "Rafael Riqueni",
+      "facet": "Guitarristas flamencos",
+      "known_at": 14
+    },
+    {
+      "name": "Paco Cepero",
+      "facet": "Guitarristas flamencos",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio Rey",
+      "facet": "Guitarristas flamencos",
+      "known_at": 14
+    },
+    {
+      "name": "Diego del Gastor",
+      "facet": "Guitarristas flamencos",
+      "known_at": 15
+    },
+    {
+      "name": "Melchor de Marchena",
+      "facet": "Guitarristas flamencos",
+      "known_at": 15
+    },
+    {
+      "name": "Joaquín Cortés",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 7
+    },
+    {
+      "name": "Sara Baras",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 7
+    },
+    {
+      "name": "Farruquito",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 9
+    },
+    {
+      "name": "Antonio Gades",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 10
+    },
+    {
+      "name": "Antonio Canales",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 10
+    },
+    {
+      "name": "Rafael Amargo",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 10
+    },
+    {
+      "name": "Carmen Amaya",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 11
+    },
+    {
+      "name": "Cristina Hoyos",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 11
+    },
+    {
+      "name": "Israel Galván",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 12
+    },
+    {
+      "name": "Rocío Molina",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 12
+    },
+    {
+      "name": "Eva Yerbabuena",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 12
+    },
+    {
+      "name": "El Farruco",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 13
+    },
+    {
+      "name": "Manuela Carrasco",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 13
+    },
+    {
+      "name": "Antonio el Bailarín",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 13
+    },
+    {
+      "name": "La Chunga",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 13
+    },
+    {
+      "name": "La Argentina",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 14
+    },
+    {
+      "name": "Pastora Imperio",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 14
+    },
+    {
+      "name": "Mario Maya",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 14
+    },
+    {
+      "name": "Matilde Coral",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 14
+    },
+    {
+      "name": "Merche Esmeralda",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 14
+    },
+    {
+      "name": "Belén Maya",
+      "facet": "Bailaores y bailaoras",
+      "known_at": 14
+    },
+    {
+      "name": "Guitarra flamenca",
+      "facet": "Instrumentos y acompañamiento",
+      "known_at": 2
+    },
+    {
+      "name": "Zapateado",
+      "facet": "Instrumentos y acompañamiento",
+      "known_at": 6
+    },
+    {
+      "name": "Pitos",
+      "facet": "Instrumentos y acompañamiento",
+      "known_at": 9
+    },
+    {
+      "name": "Compás",
+      "facet": "Instrumentos y acompañamiento",
+      "known_at": 9
+    },
+    {
+      "name": "Bastón flamenco",
+      "facet": "Instrumentos y acompañamiento",
+      "known_at": 9
+    },
+    {
+      "name": "Toque",
+      "facet": "Instrumentos y acompañamiento",
+      "known_at": 10
+    },
+    {
+      "name": "Palmas sordas",
+      "facet": "Instrumentos y acompañamiento",
+      "known_at": 11
+    },
+    {
+      "name": "Rasgueado",
+      "facet": "Instrumentos y acompañamiento",
+      "known_at": 11
+    },
+    {
+      "name": "Cejilla",
+      "facet": "Instrumentos y acompañamiento",
+      "known_at": 12
+    },
+    {
+      "name": "Contratiempo",
+      "facet": "Instrumentos y acompañamiento",
+      "known_at": 12
+    },
+    {
+      "name": "Golpeador",
+      "facet": "Instrumentos y acompañamiento",
+      "known_at": 13
+    },
+    {
+      "name": "Picado",
+      "facet": "Instrumentos y acompañamiento",
+      "known_at": 13
+    },
+    {
+      "name": "Trémolo",
+      "facet": "Instrumentos y acompañamiento",
+      "known_at": 13
+    },
+    {
+      "name": "Yunque",
+      "facet": "Instrumentos y acompañamiento",
+      "known_at": 13
+    },
+    {
+      "name": "Alzapúa",
+      "facet": "Instrumentos y acompañamiento",
+      "known_at": 14
+    },
+    {
+      "name": "Guitarra de ciprés",
+      "facet": "Instrumentos y acompañamiento",
+      "known_at": 14
+    },
+    {
+      "name": "Flor en el pelo",
+      "facet": "Vestuario y complementos",
+      "known_at": 3
+    },
+    {
+      "name": "Lunares",
+      "facet": "Vestuario y complementos",
+      "known_at": 3
+    },
+    {
+      "name": "Moño",
+      "facet": "Vestuario y complementos",
+      "known_at": 5
+    },
+    {
+      "name": "Zapatos de flamenco",
+      "facet": "Vestuario y complementos",
+      "known_at": 6
+    },
+    {
+      "name": "Clavos del zapato",
+      "facet": "Vestuario y complementos",
+      "known_at": 9
+    },
+    {
+      "name": "Mantoncillo",
+      "facet": "Vestuario y complementos",
+      "known_at": 10
+    },
+    {
+      "name": "Zarcillos",
+      "facet": "Vestuario y complementos",
+      "known_at": 11
+    },
+    {
+      "name": "Chaquetilla",
+      "facet": "Vestuario y complementos",
+      "known_at": 11
+    },
+    {
+      "name": "Botas camperas",
+      "facet": "Vestuario y complementos",
+      "known_at": 11
+    },
+    {
+      "name": "Caireles",
+      "facet": "Vestuario y complementos",
+      "known_at": 13
+    },
+    {
+      "name": "Rosario Flores",
+      "facet": "Copla y tonadilleras",
+      "known_at": 6
+    },
+    {
+      "name": "Manolo Escobar",
+      "facet": "Copla y tonadilleras",
+      "known_at": 7
+    },
+    {
+      "name": "Copla",
+      "facet": "Copla y tonadilleras",
+      "known_at": 7
+    },
+    {
+      "name": "Lolita Flores",
+      "facet": "Copla y tonadilleras",
+      "known_at": 8
+    },
+    {
+      "name": "Tonadillera",
+      "facet": "Copla y tonadilleras",
+      "known_at": 9
+    },
+    {
+      "name": "Pastora Soler",
+      "facet": "Copla y tonadilleras",
+      "known_at": 9
+    },
+    {
+      "name": "Rocío Dúrcal",
+      "facet": "Copla y tonadilleras",
+      "known_at": 9
+    },
+    {
+      "name": "Sara Montiel",
+      "facet": "Copla y tonadilleras",
+      "known_at": 10
+    },
+    {
+      "name": "Concha Piquer",
+      "facet": "Copla y tonadilleras",
+      "known_at": 11
+    },
+    {
+      "name": "Antonio Molina",
+      "facet": "Copla y tonadilleras",
+      "known_at": 11
+    },
+    {
+      "name": "Imperio Argentina",
+      "facet": "Copla y tonadilleras",
+      "known_at": 12
+    },
+    {
+      "name": "Juanito Valderrama",
+      "facet": "Copla y tonadilleras",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos Cano",
+      "facet": "Copla y tonadilleras",
+      "known_at": 12
+    },
+    {
+      "name": "Martirio",
+      "facet": "Copla y tonadilleras",
+      "known_at": 12
+    },
+    {
+      "name": "Juanita Reina",
+      "facet": "Copla y tonadilleras",
+      "known_at": 13
+    },
+    {
+      "name": "Marifé de Triana",
+      "facet": "Copla y tonadilleras",
+      "known_at": 13
+    },
+    {
+      "name": "Paquita Rico",
+      "facet": "Copla y tonadilleras",
+      "known_at": 13
+    },
+    {
+      "name": "Miguel de Molina",
+      "facet": "Copla y tonadilleras",
+      "known_at": 13
+    },
+    {
+      "name": "Bambino",
+      "facet": "Copla y tonadilleras",
+      "known_at": 13
+    },
+    {
+      "name": "Rafael de León",
+      "facet": "Copla y tonadilleras",
+      "known_at": 13
+    },
+    {
+      "name": "Quintero, León y Quiroga",
+      "facet": "Copla y tonadilleras",
+      "known_at": 14
+    },
+    {
+      "name": "Estrellita Castro",
+      "facet": "Copla y tonadilleras",
+      "known_at": 14
+    },
+    {
+      "name": "«Sevilla tiene un color especial»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 6
+    },
+    {
+      "name": "«Volando voy»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 7
+    },
+    {
+      "name": "«Como una ola»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 9
+    },
+    {
+      "name": "«Se nos rompió el amor»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 9
+    },
+    {
+      "name": "«Mi carro»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 9
+    },
+    {
+      "name": "«El porompompero»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 9
+    },
+    {
+      "name": "«Entre dos aguas»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 9
+    },
+    {
+      "name": "«Échale guindas al pavo»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 9
+    },
+    {
+      "name": "«Ay, pena, penita, pena»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 9
+    },
+    {
+      "name": "«Marinero de luces»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 9
+    },
+    {
+      "name": "«Limón, limonero»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 9
+    },
+    {
+      "name": "«A tu vera»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 10
+    },
+    {
+      "name": "«Te estoy amando locamente»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 10
+    },
+    {
+      "name": "«El día que nací yo»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 10
+    },
+    {
+      "name": "«La bien pagá»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 11
+    },
+    {
+      "name": "«Tatuaje»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 11
+    },
+    {
+      "name": "«Y sin embargo te quiero»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 11
+    },
+    {
+      "name": "«Campanera»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 11
+    },
+    {
+      "name": "«Suspiros de España»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 11
+    },
+    {
+      "name": "«Como el agua»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 11
+    },
+    {
+      "name": "«La leyenda del tiempo»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 12
+    },
+    {
+      "name": "«Francisco Alegre»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 12
+    },
+    {
+      "name": "«Soy minero»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 12
+    },
+    {
+      "name": "«La Zarzamora»",
+      "facet": "Coplas y canciones famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Jerez de la Frontera",
+      "facet": "Lugares y cunas del flamenco",
+      "known_at": 7
+    },
+    {
+      "name": "San Fernando",
+      "facet": "Lugares y cunas del flamenco",
+      "known_at": 10
+    },
+    {
+      "name": "La Unión",
+      "facet": "Lugares y cunas del flamenco",
+      "known_at": 12
+    },
+    {
+      "name": "Utrera",
+      "facet": "Lugares y cunas del flamenco",
+      "known_at": 13
+    },
+    {
+      "name": "Lebrija",
+      "facet": "Lugares y cunas del flamenco",
+      "known_at": 13
+    },
+    {
+      "name": "Barrio de Santiago",
+      "facet": "Lugares y cunas del flamenco",
+      "known_at": 13
+    },
+    {
+      "name": "Morón de la Frontera",
+      "facet": "Lugares y cunas del flamenco",
+      "known_at": 14
+    },
+    {
+      "name": "Mairena del Alcor",
+      "facet": "Lugares y cunas del flamenco",
+      "known_at": 14
+    },
+    {
+      "name": "Barrio de Santa María",
+      "facet": "Lugares y cunas del flamenco",
+      "known_at": 14
+    },
+    {
+      "name": "El Rocío",
+      "facet": "Tablaos, festivales y ferias",
+      "known_at": 7
+    },
+    {
+      "name": "Caseta de feria",
+      "facet": "Tablaos, festivales y ferias",
+      "known_at": 7
+    },
+    {
+      "name": "Tablao flamenco",
+      "facet": "Tablaos, festivales y ferias",
+      "known_at": 7
+    },
+    {
+      "name": "Bienal de Flamenco de Sevilla",
+      "facet": "Tablaos, festivales y ferias",
+      "known_at": 11
+    },
+    {
+      "name": "Peña flamenca",
+      "facet": "Tablaos, festivales y ferias",
+      "known_at": 11
+    },
+    {
+      "name": "Festival del Cante de las Minas",
+      "facet": "Tablaos, festivales y ferias",
+      "known_at": 12
+    },
+    {
+      "name": "Festival de Jerez",
+      "facet": "Tablaos, festivales y ferias",
+      "known_at": 12
+    },
+    {
+      "name": "Corral de la Morería",
+      "facet": "Tablaos, festivales y ferias",
+      "known_at": 12
+    },
+    {
+      "name": "Café de Chinitas",
+      "facet": "Tablaos, festivales y ferias",
+      "known_at": 12
+    },
+    {
+      "name": "Festival de la Guitarra de Córdoba",
+      "facet": "Tablaos, festivales y ferias",
+      "known_at": 13
+    },
+    {
+      "name": "Potaje Gitano de Utrera",
+      "facet": "Tablaos, festivales y ferias",
+      "known_at": 14
+    },
+    {
+      "name": "Festival del Gazpacho de Morón",
+      "facet": "Tablaos, festivales y ferias",
+      "known_at": 14
+    },
+    {
+      "name": "Lámpara Minera",
+      "facet": "Tablaos, festivales y ferias",
+      "known_at": 14
+    },
+    {
+      "name": "Suma Flamenca",
+      "facet": "Tablaos, festivales y ferias",
+      "known_at": 14
+    },
+    {
+      "name": "Villa Rosa",
+      "facet": "Tablaos, festivales y ferias",
+      "known_at": 14
+    },
+    {
+      "name": "Cantaor",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 8
+    },
+    {
+      "name": "Bailaor",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 8
+    },
+    {
+      "name": "Jaleo",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 9
+    },
+    {
+      "name": "Juerga",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 9
+    },
+    {
+      "name": "Payo",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 9
+    },
+    {
+      "name": "Tocaor",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 11
+    },
+    {
+      "name": "«¡Toma que toma!»",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 11
+    },
+    {
+      "name": "Quejío",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 12
+    },
+    {
+      "name": "Pataíta",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 12
+    },
+    {
+      "name": "Caló",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 12
+    },
+    {
+      "name": "Soniquete",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 12
+    },
+    {
+      "name": "«¡Arsa!»",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 13
+    },
+    {
+      "name": "Pellizco",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 13
+    },
+    {
+      "name": "Falseta",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 13
+    },
+    {
+      "name": "Llamada",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 13
+    },
+    {
+      "name": "Remate",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 13
+    },
+    {
+      "name": "Escobilla",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 14
+    },
+    {
+      "name": "Desplante",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 14
+    },
+    {
+      "name": "«¡Agua!»",
+      "facet": "Vocabulario y jaleos flamencos",
+      "known_at": 14
+    },
+    {
+      "name": "Rosalía",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 5
+    },
+    {
+      "name": "Pueblo gitano",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 7
+    },
+    {
+      "name": "Estopa",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 7
+    },
+    {
+      "name": "C. Tangana",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 7
+    },
+    {
+      "name": "«El mal querer»",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 9
+    },
+    {
+      "name": "Peret",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 9
+    },
+    {
+      "name": "Patrimonio Cultural Inmaterial de la Humanidad",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 10
+    },
+    {
+      "name": "Rumba catalana",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 10
+    },
+    {
+      "name": "Chambao",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 10
+    },
+    {
+      "name": "Los Chunguitos",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 10
+    },
+    {
+      "name": "Manuel de Falla",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 11
+    },
+    {
+      "name": "Nuevo flamenco",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 11
+    },
+    {
+      "name": "Ketama",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 11
+    },
+    {
+      "name": "Las Grecas",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 12
+    },
+    {
+      "name": "Rock andaluz",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 12
+    },
+    {
+      "name": "Kiko Veneno",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 12
+    },
+    {
+      "name": "Los Delinqüentes",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 12
+    },
+    {
+      "name": "Concurso de Cante Jondo de 1922",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 13
+    },
+    {
+      "name": "Café cantante",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 13
+    },
+    {
+      "name": "Lole y Manuel",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 13
+    },
+    {
+      "name": "Ojos de Brujo",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 13
+    },
+    {
+      "name": "Ópera flamenca",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 14
+    },
+    {
+      "name": "Jorge Pardo",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 14
+    },
+    {
+      "name": "Demófilo",
+      "facet": "Historia y fusiones del flamenco",
+      "known_at": 15
+    }
+  ]
+}

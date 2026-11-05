@@ -1,0 +1,1142 @@
+{
+  "subcategory": "bourbons-and-19th-century",
+  "facets": [
+    "Felipe V y la Guerra de Sucesión",
+    "Carlos III y la Ilustración",
+    "Monumentos y símbolos borbónicos",
+    "Carlos IV, Godoy y Goya",
+    "Guerra de la Independencia",
+    "Cortes de Cádiz y la Pepa",
+    "Fernando VII y las guerras carlistas",
+    "Isabel II y los espadones",
+    "Sexenio Democrático y Primera República",
+    "Restauración y turnismo",
+    "El Desastre del 98",
+    "Inventos y vida cotidiana del XIX"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 5,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Archiduque Carlos de Austria",
+      "facet": "Felipe V y la Guerra de Sucesión",
+      "known_at": 12
+    },
+    {
+      "name": "Gibraltar",
+      "facet": "Felipe V y la Guerra de Sucesión",
+      "known_at": 5
+    },
+    {
+      "name": "Menorca británica",
+      "facet": "Felipe V y la Guerra de Sucesión",
+      "known_at": 12
+    },
+    {
+      "name": "Diada del 11 de septiembre",
+      "facet": "Felipe V y la Guerra de Sucesión",
+      "known_at": 9
+    },
+    {
+      "name": "Sitio de Barcelona de 1714",
+      "facet": "Felipe V y la Guerra de Sucesión",
+      "known_at": 11
+    },
+    {
+      "name": "Rafael Casanova",
+      "facet": "Felipe V y la Guerra de Sucesión",
+      "known_at": 12
+    },
+    {
+      "name": "Batalla de Almansa",
+      "facet": "Felipe V y la Guerra de Sucesión",
+      "known_at": 12
+    },
+    {
+      "name": "Isabel de Farnesio",
+      "facet": "Felipe V y la Guerra de Sucesión",
+      "known_at": 13
+    },
+    {
+      "name": "Real Academia Española",
+      "facet": "Felipe V y la Guerra de Sucesión",
+      "known_at": 8
+    },
+    {
+      "name": "Biblioteca Nacional de España",
+      "facet": "Felipe V y la Guerra de Sucesión",
+      "known_at": 10
+    },
+    {
+      "name": "Luis I",
+      "facet": "Felipe V y la Guerra de Sucesión",
+      "known_at": 13
+    },
+    {
+      "name": "Ley Sálica",
+      "facet": "Felipe V y la Guerra de Sucesión",
+      "known_at": 12
+    },
+    {
+      "name": "Pactos de Familia",
+      "facet": "Felipe V y la Guerra de Sucesión",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos III",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 7
+    },
+    {
+      "name": "El mejor alcalde de Madrid",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 9
+    },
+    {
+      "name": "Motín de Esquilache",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 11
+    },
+    {
+      "name": "Marqués de Esquilache",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 12
+    },
+    {
+      "name": "Expulsión de los jesuitas",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 12
+    },
+    {
+      "name": "Ilustración",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 9
+    },
+    {
+      "name": "Despotismo ilustrado",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 10
+    },
+    {
+      "name": "Gaspar Melchor de Jovellanos",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 12
+    },
+    {
+      "name": "Campomanes",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 13
+    },
+    {
+      "name": "Conde de Aranda",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 13
+    },
+    {
+      "name": "Nuevas Poblaciones de Sierra Morena",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 14
+    },
+    {
+      "name": "Pablo de Olavide",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 14
+    },
+    {
+      "name": "Real Jardín Botánico de Madrid",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 11
+    },
+    {
+      "name": "Lotería Nacional",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 8
+    },
+    {
+      "name": "Real Fábrica de Tapices",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera rojigualda",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 8
+    },
+    {
+      "name": "Marcha Real",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 7
+    },
+    {
+      "name": "Benito Jerónimo Feijoo",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 14
+    },
+    {
+      "name": "José Cadalso",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 14
+    },
+    {
+      "name": "Leandro Fernández de Moratín",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 13
+    },
+    {
+      "name": "Expedición Malaspina",
+      "facet": "Carlos III y la Ilustración",
+      "known_at": 14
+    },
+    {
+      "name": "Palacio Real de La Granja de San Ildefonso",
+      "facet": "Monumentos y símbolos borbónicos",
+      "known_at": 10
+    },
+    {
+      "name": "Real Casa de Correos",
+      "facet": "Monumentos y símbolos borbónicos",
+      "known_at": 11
+    },
+    {
+      "name": "Paseo del Prado",
+      "facet": "Monumentos y símbolos borbónicos",
+      "known_at": 8
+    },
+    {
+      "name": "Flor de lis",
+      "facet": "Monumentos y símbolos borbónicos",
+      "known_at": 9
+    },
+    {
+      "name": "Escudo de España",
+      "facet": "Monumentos y símbolos borbónicos",
+      "known_at": 8
+    },
+    {
+      "name": "Real Observatorio de Madrid",
+      "facet": "Monumentos y símbolos borbónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Palacio Real de Riofrío",
+      "facet": "Monumentos y símbolos borbónicos",
+      "known_at": 14
+    },
+    {
+      "name": "Palacio Real de El Pardo",
+      "facet": "Monumentos y símbolos borbónicos",
+      "known_at": 11
+    },
+    {
+      "name": "Real Fábrica de Tabacos de Sevilla",
+      "facet": "Monumentos y símbolos borbónicos",
+      "known_at": 12
+    },
+    {
+      "name": "Real Academia de Bellas Artes de San Fernando",
+      "facet": "Monumentos y símbolos borbónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Teatro Real",
+      "facet": "Monumentos y símbolos borbónicos",
+      "known_at": 8
+    },
+    {
+      "name": "Monasterio de las Salesas Reales",
+      "facet": "Monumentos y símbolos borbónicos",
+      "known_at": 14
+    },
+    {
+      "name": "Carlos IV",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 9
+    },
+    {
+      "name": "María Luisa de Parma",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 12
+    },
+    {
+      "name": "Manuel Godoy",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 11
+    },
+    {
+      "name": "Francisco de Goya",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 5
+    },
+    {
+      "name": "La familia de Carlos IV",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 11
+    },
+    {
+      "name": "La maja desnuda",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 9
+    },
+    {
+      "name": "La maja vestida",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 10
+    },
+    {
+      "name": "El 3 de mayo en Madrid",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 8
+    },
+    {
+      "name": "Pinturas negras",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 10
+    },
+    {
+      "name": "Saturno devorando a su hijo",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 10
+    },
+    {
+      "name": "Los Caprichos",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 12
+    },
+    {
+      "name": "Motín de Aranjuez",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 12
+    },
+    {
+      "name": "Almirante Nelson",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 11
+    },
+    {
+      "name": "Cosme Damián Churruca",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 14
+    },
+    {
+      "name": "Tratado de Fontainebleau",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 13
+    },
+    {
+      "name": "Ermita de San Antonio de la Florida",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 13
+    },
+    {
+      "name": "Expedición Balmis",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 12
+    },
+    {
+      "name": "Guerra de las Naranjas",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 13
+    },
+    {
+      "name": "Olivenza",
+      "facet": "Carlos IV, Godoy y Goya",
+      "known_at": 13
+    },
+    {
+      "name": "Dos de mayo de 1808",
+      "facet": "Guerra de la Independencia",
+      "known_at": 6
+    },
+    {
+      "name": "Napoleón Bonaparte",
+      "facet": "Guerra de la Independencia",
+      "known_at": 4
+    },
+    {
+      "name": "José I Bonaparte",
+      "facet": "Guerra de la Independencia",
+      "known_at": 9
+    },
+    {
+      "name": "Daoíz y Velarde",
+      "facet": "Guerra de la Independencia",
+      "known_at": 11
+    },
+    {
+      "name": "Manuela Malasaña",
+      "facet": "Guerra de la Independencia",
+      "known_at": 11
+    },
+    {
+      "name": "Agustina de Aragón",
+      "facet": "Guerra de la Independencia",
+      "known_at": 10
+    },
+    {
+      "name": "Batalla de Bailén",
+      "facet": "Guerra de la Independencia",
+      "known_at": 10
+    },
+    {
+      "name": "Sitios de Zaragoza",
+      "facet": "Guerra de la Independencia",
+      "known_at": 11
+    },
+    {
+      "name": "Sitio de Gerona",
+      "facet": "Guerra de la Independencia",
+      "known_at": 13
+    },
+    {
+      "name": "Guerrilla",
+      "facet": "Guerra de la Independencia",
+      "known_at": 9
+    },
+    {
+      "name": "El Empecinado",
+      "facet": "Guerra de la Independencia",
+      "known_at": 13
+    },
+    {
+      "name": "Duque de Wellington",
+      "facet": "Guerra de la Independencia",
+      "known_at": 11
+    },
+    {
+      "name": "Batalla de los Arapiles",
+      "facet": "Guerra de la Independencia",
+      "known_at": 13
+    },
+    {
+      "name": "Batalla de Vitoria",
+      "facet": "Guerra de la Independencia",
+      "known_at": 13
+    },
+    {
+      "name": "Abdicaciones de Bayona",
+      "facet": "Guerra de la Independencia",
+      "known_at": 12
+    },
+    {
+      "name": "Alcalde de Móstoles",
+      "facet": "Guerra de la Independencia",
+      "known_at": 12
+    },
+    {
+      "name": "Afrancesados",
+      "facet": "Guerra de la Independencia",
+      "known_at": 12
+    },
+    {
+      "name": "Tambor del Bruc",
+      "facet": "Guerra de la Independencia",
+      "known_at": 12
+    },
+    {
+      "name": "Junta Suprema Central",
+      "facet": "Guerra de la Independencia",
+      "known_at": 13
+    },
+    {
+      "name": "Constitución de 1812",
+      "facet": "Cortes de Cádiz y la Pepa",
+      "known_at": 8
+    },
+    {
+      "name": "¡Viva la Pepa!",
+      "facet": "Cortes de Cádiz y la Pepa",
+      "known_at": 7
+    },
+    {
+      "name": "Cortes de Cádiz",
+      "facet": "Cortes de Cádiz y la Pepa",
+      "known_at": 9
+    },
+    {
+      "name": "Día de San José",
+      "facet": "Cortes de Cádiz y la Pepa",
+      "known_at": 8
+    },
+    {
+      "name": "Liberales",
+      "facet": "Cortes de Cádiz y la Pepa",
+      "known_at": 9
+    },
+    {
+      "name": "Serviles",
+      "facet": "Cortes de Cádiz y la Pepa",
+      "known_at": 13
+    },
+    {
+      "name": "Soberanía nacional",
+      "facet": "Cortes de Cádiz y la Pepa",
+      "known_at": 11
+    },
+    {
+      "name": "Abolición de la Inquisición",
+      "facet": "Cortes de Cádiz y la Pepa",
+      "known_at": 11
+    },
+    {
+      "name": "Oratorio de San Felipe Neri",
+      "facet": "Cortes de Cádiz y la Pepa",
+      "known_at": 13
+    },
+    {
+      "name": "San Fernando (Isla de León)",
+      "facet": "Cortes de Cádiz y la Pepa",
+      "known_at": 12
+    },
+    {
+      "name": "Diputados americanos",
+      "facet": "Cortes de Cádiz y la Pepa",
+      "known_at": 13
+    },
+    {
+      "name": "Agustín de Argüelles",
+      "facet": "Cortes de Cádiz y la Pepa",
+      "known_at": 14
+    },
+    {
+      "name": "Libertad de imprenta",
+      "facet": "Cortes de Cádiz y la Pepa",
+      "known_at": 11
+    },
+    {
+      "name": "División de poderes",
+      "facet": "Cortes de Cádiz y la Pepa",
+      "known_at": 10
+    },
+    {
+      "name": "Sufragio universal masculino indirecto",
+      "facet": "Cortes de Cádiz y la Pepa",
+      "known_at": 13
+    },
+    {
+      "name": "Monumento a las Cortes de Cádiz",
+      "facet": "Cortes de Cádiz y la Pepa",
+      "known_at": 14
+    },
+    {
+      "name": "Fernando VII",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 9
+    },
+    {
+      "name": "El Deseado",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 11
+    },
+    {
+      "name": "Trienio Liberal",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 12
+    },
+    {
+      "name": "Rafael del Riego",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 12
+    },
+    {
+      "name": "Himno de Riego",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 13
+    },
+    {
+      "name": "Cien Mil Hijos de San Luis",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 12
+    },
+    {
+      "name": "Década Ominosa",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 13
+    },
+    {
+      "name": "Pragmática Sanción",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos María Isidro",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 13
+    },
+    {
+      "name": "Carlismo",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 11
+    },
+    {
+      "name": "Primera guerra carlista",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 12
+    },
+    {
+      "name": "Tomás de Zumalacárregui",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 14
+    },
+    {
+      "name": "Abrazo de Vergara",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 13
+    },
+    {
+      "name": "Baldomero Espartero",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 12
+    },
+    {
+      "name": "Mariana Pineda",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 12
+    },
+    {
+      "name": "Boina roja carlista",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 12
+    },
+    {
+      "name": "Batalla de Ayacucho",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 13
+    },
+    {
+      "name": "Simón Bolívar",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 8
+    },
+    {
+      "name": "María Cristina de Borbón-Dos Sicilias",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 13
+    },
+    {
+      "name": "José María de Torrijos",
+      "facet": "Fernando VII y las guerras carlistas",
+      "known_at": 14
+    },
+    {
+      "name": "Isabel II",
+      "facet": "Isabel II y los espadones",
+      "known_at": 9
+    },
+    {
+      "name": "Espadones",
+      "facet": "Isabel II y los espadones",
+      "known_at": 13
+    },
+    {
+      "name": "Ramón María Narváez",
+      "facet": "Isabel II y los espadones",
+      "known_at": 13
+    },
+    {
+      "name": "Leopoldo O'Donnell",
+      "facet": "Isabel II y los espadones",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Prim",
+      "facet": "Isabel II y los espadones",
+      "known_at": 11
+    },
+    {
+      "name": "Desamortización de Mendizábal",
+      "facet": "Isabel II y los espadones",
+      "known_at": 11
+    },
+    {
+      "name": "Desamortización de Madoz",
+      "facet": "Isabel II y los espadones",
+      "known_at": 13
+    },
+    {
+      "name": "Guardia Civil",
+      "facet": "Isabel II y los espadones",
+      "known_at": 6
+    },
+    {
+      "name": "Duque de Ahumada",
+      "facet": "Isabel II y los espadones",
+      "known_at": 14
+    },
+    {
+      "name": "Vicalvarada",
+      "facet": "Isabel II y los espadones",
+      "known_at": 14
+    },
+    {
+      "name": "Bienio Progresista",
+      "facet": "Isabel II y los espadones",
+      "known_at": 13
+    },
+    {
+      "name": "Unión Liberal",
+      "facet": "Isabel II y los espadones",
+      "known_at": 14
+    },
+    {
+      "name": "Guerra de África",
+      "facet": "Isabel II y los espadones",
+      "known_at": 13
+    },
+    {
+      "name": "Batalla de Castillejos",
+      "facet": "Isabel II y los espadones",
+      "known_at": 14
+    },
+    {
+      "name": "Moderados y progresistas",
+      "facet": "Isabel II y los espadones",
+      "known_at": 11
+    },
+    {
+      "name": "Pronunciamiento",
+      "facet": "Isabel II y los espadones",
+      "known_at": 11
+    },
+    {
+      "name": "Década Moderada",
+      "facet": "Isabel II y los espadones",
+      "known_at": 13
+    },
+    {
+      "name": "La Gloriosa",
+      "facet": "Sexenio Democrático y Primera República",
+      "known_at": 11
+    },
+    {
+      "name": "Constitución de 1869",
+      "facet": "Sexenio Democrático y Primera República",
+      "known_at": 13
+    },
+    {
+      "name": "Amadeo I de Saboya",
+      "facet": "Sexenio Democrático y Primera República",
+      "known_at": 11
+    },
+    {
+      "name": "Primera República Española",
+      "facet": "Sexenio Democrático y Primera República",
+      "known_at": 9
+    },
+    {
+      "name": "Estanislao Figueras",
+      "facet": "Sexenio Democrático y Primera República",
+      "known_at": 14
+    },
+    {
+      "name": "Francesc Pi i Margall",
+      "facet": "Sexenio Democrático y Primera República",
+      "known_at": 13
+    },
+    {
+      "name": "Nicolás Salmerón",
+      "facet": "Sexenio Democrático y Primera República",
+      "known_at": 14
+    },
+    {
+      "name": "Emilio Castelar",
+      "facet": "Sexenio Democrático y Primera República",
+      "known_at": 13
+    },
+    {
+      "name": "Cantonalismo",
+      "facet": "Sexenio Democrático y Primera República",
+      "known_at": 13
+    },
+    {
+      "name": "Cantón de Cartagena",
+      "facet": "Sexenio Democrático y Primera República",
+      "known_at": 12
+    },
+    {
+      "name": "Golpe de Pavía",
+      "facet": "Sexenio Democrático y Primera República",
+      "known_at": 13
+    },
+    {
+      "name": "Peseta",
+      "facet": "Sexenio Democrático y Primera República",
+      "known_at": 6
+    },
+    {
+      "name": "Tercera guerra carlista",
+      "facet": "Sexenio Democrático y Primera República",
+      "known_at": 13
+    },
+    {
+      "name": "Guerra de los Diez Años",
+      "facet": "Sexenio Democrático y Primera República",
+      "known_at": 14
+    },
+    {
+      "name": "Federalismo",
+      "facet": "Sexenio Democrático y Primera República",
+      "known_at": 11
+    },
+    {
+      "name": "Sufragio universal masculino",
+      "facet": "Sexenio Democrático y Primera República",
+      "known_at": 11
+    },
+    {
+      "name": "Francisco Serrano",
+      "facet": "Sexenio Democrático y Primera República",
+      "known_at": 14
+    },
+    {
+      "name": "Alfonso XII",
+      "facet": "Restauración y turnismo",
+      "known_at": 9
+    },
+    {
+      "name": "¿Dónde vas, Alfonso XII?",
+      "facet": "Restauración y turnismo",
+      "known_at": 10
+    },
+    {
+      "name": "María de las Mercedes de Orleans",
+      "facet": "Restauración y turnismo",
+      "known_at": 11
+    },
+    {
+      "name": "Antonio Cánovas del Castillo",
+      "facet": "Restauración y turnismo",
+      "known_at": 11
+    },
+    {
+      "name": "Práxedes Mateo Sagasta",
+      "facet": "Restauración y turnismo",
+      "known_at": 12
+    },
+    {
+      "name": "Turnismo",
+      "facet": "Restauración y turnismo",
+      "known_at": 11
+    },
+    {
+      "name": "Caciquismo",
+      "facet": "Restauración y turnismo",
+      "known_at": 11
+    },
+    {
+      "name": "Pucherazo",
+      "facet": "Restauración y turnismo",
+      "known_at": 11
+    },
+    {
+      "name": "Constitución de 1876",
+      "facet": "Restauración y turnismo",
+      "known_at": 13
+    },
+    {
+      "name": "Partido Conservador",
+      "facet": "Restauración y turnismo",
+      "known_at": 11
+    },
+    {
+      "name": "Partido Liberal Fusionista",
+      "facet": "Restauración y turnismo",
+      "known_at": 13
+    },
+    {
+      "name": "Arsenio Martínez Campos",
+      "facet": "Restauración y turnismo",
+      "known_at": 13
+    },
+    {
+      "name": "Pronunciamiento de Sagunto",
+      "facet": "Restauración y turnismo",
+      "known_at": 13
+    },
+    {
+      "name": "María Cristina de Habsburgo",
+      "facet": "Restauración y turnismo",
+      "known_at": 12
+    },
+    {
+      "name": "PSOE",
+      "facet": "Restauración y turnismo",
+      "known_at": 8
+    },
+    {
+      "name": "Pablo Iglesias Posse",
+      "facet": "Restauración y turnismo",
+      "known_at": 11
+    },
+    {
+      "name": "UGT",
+      "facet": "Restauración y turnismo",
+      "known_at": 11
+    },
+    {
+      "name": "Joaquín Costa",
+      "facet": "Restauración y turnismo",
+      "known_at": 13
+    },
+    {
+      "name": "Regeneracionismo",
+      "facet": "Restauración y turnismo",
+      "known_at": 12
+    },
+    {
+      "name": "Bases de Manresa",
+      "facet": "Restauración y turnismo",
+      "known_at": 14
+    },
+    {
+      "name": "Guerra hispano-estadounidense",
+      "facet": "El Desastre del 98",
+      "known_at": 10
+    },
+    {
+      "name": "Desastre del 98",
+      "facet": "El Desastre del 98",
+      "known_at": 9
+    },
+    {
+      "name": "Cuba",
+      "facet": "El Desastre del 98",
+      "known_at": 5
+    },
+    {
+      "name": "Puerto Rico",
+      "facet": "El Desastre del 98",
+      "known_at": 7
+    },
+    {
+      "name": "Filipinas",
+      "facet": "El Desastre del 98",
+      "known_at": 7
+    },
+    {
+      "name": "Guam",
+      "facet": "El Desastre del 98",
+      "known_at": 12
+    },
+    {
+      "name": "Acorazado Maine",
+      "facet": "El Desastre del 98",
+      "known_at": 11
+    },
+    {
+      "name": "Batalla naval de Santiago de Cuba",
+      "facet": "El Desastre del 98",
+      "known_at": 13
+    },
+    {
+      "name": "Batalla de Cavite",
+      "facet": "El Desastre del 98",
+      "known_at": 14
+    },
+    {
+      "name": "Almirante Cervera",
+      "facet": "El Desastre del 98",
+      "known_at": 13
+    },
+    {
+      "name": "Tratado de París de 1898",
+      "facet": "El Desastre del 98",
+      "known_at": 12
+    },
+    {
+      "name": "Los últimos de Filipinas",
+      "facet": "El Desastre del 98",
+      "known_at": 11
+    },
+    {
+      "name": "Sitio de Baler",
+      "facet": "El Desastre del 98",
+      "known_at": 13
+    },
+    {
+      "name": "José Martí",
+      "facet": "El Desastre del 98",
+      "known_at": 12
+    },
+    {
+      "name": "Generación del 98",
+      "facet": "El Desastre del 98",
+      "known_at": 10
+    },
+    {
+      "name": "Miguel de Unamuno",
+      "facet": "El Desastre del 98",
+      "known_at": 10
+    },
+    {
+      "name": "Antonio Machado",
+      "facet": "El Desastre del 98",
+      "known_at": 8
+    },
+    {
+      "name": "Pío Baroja",
+      "facet": "El Desastre del 98",
+      "known_at": 12
+    },
+    {
+      "name": "Ramón María del Valle-Inclán",
+      "facet": "El Desastre del 98",
+      "known_at": 12
+    },
+    {
+      "name": "Azorín",
+      "facet": "El Desastre del 98",
+      "known_at": 13
+    },
+    {
+      "name": "Islas Carolinas",
+      "facet": "El Desastre del 98",
+      "known_at": 14
+    },
+    {
+      "name": "Valeriano Weyler",
+      "facet": "El Desastre del 98",
+      "known_at": 14
+    },
+    {
+      "name": "Ferrocarril Barcelona-Mataró",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 11
+    },
+    {
+      "name": "Tren de la Fresa",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 11
+    },
+    {
+      "name": "Isaac Peral",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 10
+    },
+    {
+      "name": "Narcís Monturiol",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Santiago Ramón y Cajal",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 9
+    },
+    {
+      "name": "Gustavo Adolfo Bécquer",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 9
+    },
+    {
+      "name": "Benito Pérez Galdós",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 10
+    },
+    {
+      "name": "Episodios Nacionales",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Rosalía de Castro",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 10
+    },
+    {
+      "name": "Emilia Pardo Bazán",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 11
+    },
+    {
+      "name": "Don Juan Tenorio",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 9
+    },
+    {
+      "name": "Mariano José de Larra",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Café Gijón",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Daguerrotipo",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Telégrafo óptico",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Ensanche de Barcelona",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 11
+    },
+    {
+      "name": "Tranvía de mulas",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Exposición Universal de Barcelona de 1888",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Recreativo de Huelva",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 11
+    },
+    {
+      "name": "Alumbrado de gas",
+      "facet": "Inventos y vida cotidiana del XIX",
+      "known_at": 11
+    }
+  ]
+}

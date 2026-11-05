@@ -1,0 +1,842 @@
+{
+  "subcategory": "fiestas",
+  "facets": [
+    "Sanfermines y encierros",
+    "Fallas, hogueras y fiestas del fuego",
+    "Ferias andaluzas y de abril",
+    "Carnavales de España",
+    "Batallas y fiestas curiosas",
+    "Gigantes, cabezudos y castells",
+    "Romerías y peregrinaciones",
+    "Moros y cristianos y fiestas históricas",
+    "Fiestas patronales y verbenas de pueblo",
+    "Fiestas del norte y del mundo rural",
+    "Bailes, música y trajes de fiesta",
+    "Comida y bebida de fiesta"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sanfermines",
+      "facet": "Sanfermines y encierros",
+      "known_at": 3
+    },
+    {
+      "name": "Encierro",
+      "facet": "Sanfermines y encierros",
+      "known_at": 4
+    },
+    {
+      "name": "Chupinazo",
+      "facet": "Sanfermines y encierros",
+      "known_at": 7
+    },
+    {
+      "name": "Pañuelo rojo",
+      "facet": "Sanfermines y encierros",
+      "known_at": 4
+    },
+    {
+      "name": "Calle Estafeta",
+      "facet": "Sanfermines y encierros",
+      "known_at": 9
+    },
+    {
+      "name": "Curva de Mercaderes",
+      "facet": "Sanfermines y encierros",
+      "known_at": 12
+    },
+    {
+      "name": "Corrales de Santo Domingo",
+      "facet": "Sanfermines y encierros",
+      "known_at": 13
+    },
+    {
+      "name": "Plaza de toros de Pamplona",
+      "facet": "Sanfermines y encierros",
+      "known_at": 9
+    },
+    {
+      "name": "Plaza del Ayuntamiento de Pamplona",
+      "facet": "Sanfermines y encierros",
+      "known_at": 9
+    },
+    {
+      "name": "Cántico a San Fermín",
+      "facet": "Sanfermines y encierros",
+      "known_at": 11
+    },
+    {
+      "name": "Mozo",
+      "facet": "Sanfermines y encierros",
+      "known_at": 7
+    },
+    {
+      "name": "Pastor del encierro",
+      "facet": "Sanfermines y encierros",
+      "known_at": 12
+    },
+    {
+      "name": "Cabestro",
+      "facet": "Sanfermines y encierros",
+      "known_at": 11
+    },
+    {
+      "name": "Peñas de Pamplona",
+      "facet": "Sanfermines y encierros",
+      "known_at": 10
+    },
+    {
+      "name": "Ernest Hemingway",
+      "facet": "Sanfermines y encierros",
+      "known_at": 11
+    },
+    {
+      "name": "Fiesta (novela)",
+      "facet": "Sanfermines y encierros",
+      "known_at": 13
+    },
+    {
+      "name": "Encierros de Cuéllar",
+      "facet": "Sanfermines y encierros",
+      "known_at": 13
+    },
+    {
+      "name": "Fallas de Valencia",
+      "facet": "Fallas, hogueras y fiestas del fuego",
+      "known_at": 4
+    },
+    {
+      "name": "Ninot",
+      "facet": "Fallas, hogueras y fiestas del fuego",
+      "known_at": 8
+    },
+    {
+      "name": "Ninot indultat",
+      "facet": "Fallas, hogueras y fiestas del fuego",
+      "known_at": 11
+    },
+    {
+      "name": "Cremà",
+      "facet": "Fallas, hogueras y fiestas del fuego",
+      "known_at": 8
+    },
+    {
+      "name": "Mascletà",
+      "facet": "Fallas, hogueras y fiestas del fuego",
+      "known_at": 8
+    },
+    {
+      "name": "Plantà",
+      "facet": "Fallas, hogueras y fiestas del fuego",
+      "known_at": 11
+    },
+    {
+      "name": "Nit del Foc",
+      "facet": "Fallas, hogueras y fiestas del fuego",
+      "known_at": 12
+    },
+    {
+      "name": "Ofrenda de flores a la Virgen de los Desamparados",
+      "facet": "Fallas, hogueras y fiestas del fuego",
+      "known_at": 11
+    },
+    {
+      "name": "Fallera mayor",
+      "facet": "Fallas, hogueras y fiestas del fuego",
+      "known_at": 9
+    },
+    {
+      "name": "Casal fallero",
+      "facet": "Fallas, hogueras y fiestas del fuego",
+      "known_at": 12
+    },
+    {
+      "name": "Plaza del Ayuntamiento de Valencia",
+      "facet": "Fallas, hogueras y fiestas del fuego",
+      "known_at": 10
+    },
+    {
+      "name": "Traca",
+      "facet": "Fallas, hogueras y fiestas del fuego",
+      "known_at": 9
+    },
+    {
+      "name": "Noche de San Juan",
+      "facet": "Fallas, hogueras y fiestas del fuego",
+      "known_at": 4
+    },
+    {
+      "name": "Paso del fuego de San Pedro Manrique",
+      "facet": "Fallas, hogueras y fiestas del fuego",
+      "known_at": 14
+    },
+    {
+      "name": "Luminarias de San Bartolomé de Pinares",
+      "facet": "Fallas, hogueras y fiestas del fuego",
+      "known_at": 14
+    },
+    {
+      "name": "Fallas del Pirineo",
+      "facet": "Fallas, hogueras y fiestas del fuego",
+      "known_at": 14
+    },
+    {
+      "name": "Feria de Abril de Sevilla",
+      "facet": "Ferias andaluzas y de abril",
+      "known_at": 5
+    },
+    {
+      "name": "Real de la Feria",
+      "facet": "Ferias andaluzas y de abril",
+      "known_at": 11
+    },
+    {
+      "name": "Portada de la Feria",
+      "facet": "Ferias andaluzas y de abril",
+      "known_at": 10
+    },
+    {
+      "name": "Caseta",
+      "facet": "Ferias andaluzas y de abril",
+      "known_at": 7
+    },
+    {
+      "name": "Alumbrado de la Feria",
+      "facet": "Ferias andaluzas y de abril",
+      "known_at": 11
+    },
+    {
+      "name": "Calle del Infierno",
+      "facet": "Ferias andaluzas y de abril",
+      "known_at": 12
+    },
+    {
+      "name": "Noche del pescaíto",
+      "facet": "Ferias andaluzas y de abril",
+      "known_at": 12
+    },
+    {
+      "name": "Farolillo de feria",
+      "facet": "Ferias andaluzas y de abril",
+      "known_at": 6
+    },
+    {
+      "name": "Coche de caballos",
+      "facet": "Ferias andaluzas y de abril",
+      "known_at": 5
+    },
+    {
+      "name": "Paseo de caballos",
+      "facet": "Ferias andaluzas y de abril",
+      "known_at": 9
+    },
+    {
+      "name": "Feria de Málaga",
+      "facet": "Ferias andaluzas y de abril",
+      "known_at": 9
+    },
+    {
+      "name": "Feria del Caballo de Jerez",
+      "facet": "Ferias andaluzas y de abril",
+      "known_at": 12
+    },
+    {
+      "name": "Cruces de Mayo",
+      "facet": "Ferias andaluzas y de abril",
+      "known_at": 11
+    },
+    {
+      "name": "Fiesta de los Patios de Córdoba",
+      "facet": "Ferias andaluzas y de abril",
+      "known_at": 11
+    },
+    {
+      "name": "Carnaval de Las Palmas de Gran Canaria",
+      "facet": "Carnavales de España",
+      "known_at": 9
+    },
+    {
+      "name": "Chirigota",
+      "facet": "Carnavales de España",
+      "known_at": 9
+    },
+    {
+      "name": "Comparsa",
+      "facet": "Carnavales de España",
+      "known_at": 9
+    },
+    {
+      "name": "Murga",
+      "facet": "Carnavales de España",
+      "known_at": 11
+    },
+    {
+      "name": "Gran Teatro Falla",
+      "facet": "Carnavales de España",
+      "known_at": 12
+    },
+    {
+      "name": "COAC",
+      "facet": "Carnavales de España",
+      "known_at": 13
+    },
+    {
+      "name": "Reina del Carnaval",
+      "facet": "Carnavales de España",
+      "known_at": 7
+    },
+    {
+      "name": "Gala Drag Queen de Las Palmas",
+      "facet": "Carnavales de España",
+      "known_at": 12
+    },
+    {
+      "name": "Celia Cruz",
+      "facet": "Carnavales de España",
+      "known_at": 11
+    },
+    {
+      "name": "Miércoles de Ceniza",
+      "facet": "Carnavales de España",
+      "known_at": 9
+    },
+    {
+      "name": "Jueves Lardero",
+      "facet": "Carnavales de España",
+      "known_at": 13
+    },
+    {
+      "name": "Carnaval de Badajoz",
+      "facet": "Carnavales de España",
+      "known_at": 13
+    },
+    {
+      "name": "Carnaval de Sitges",
+      "facet": "Carnavales de España",
+      "known_at": 12
+    },
+    {
+      "name": "Entroido",
+      "facet": "Carnavales de España",
+      "known_at": 13
+    },
+    {
+      "name": "Peliqueiros de Laza",
+      "facet": "Carnavales de España",
+      "known_at": 14
+    },
+    {
+      "name": "Jarramplas",
+      "facet": "Carnavales de España",
+      "known_at": 14
+    },
+    {
+      "name": "Los Indianos de La Palma",
+      "facet": "Carnavales de España",
+      "known_at": 13
+    },
+    {
+      "name": "Disfraz",
+      "facet": "Carnavales de España",
+      "known_at": 1
+    },
+    {
+      "name": "Buñol",
+      "facet": "Batallas y fiestas curiosas",
+      "known_at": 8
+    },
+    {
+      "name": "Día de los Santos Inocentes",
+      "facet": "Batallas y fiestas curiosas",
+      "known_at": 5
+    },
+    {
+      "name": "Cascamorras",
+      "facet": "Batallas y fiestas curiosas",
+      "known_at": 13
+    },
+    {
+      "name": "Cipotegato",
+      "facet": "Batallas y fiestas curiosas",
+      "known_at": 13
+    },
+    {
+      "name": "Batalla de Flores de Valencia",
+      "facet": "Batallas y fiestas curiosas",
+      "known_at": 12
+    },
+    {
+      "name": "Batalla de Flores de Laredo",
+      "facet": "Batallas y fiestas curiosas",
+      "known_at": 13
+    },
+    {
+      "name": "Batalla Naval de Vallecas",
+      "facet": "Batallas y fiestas curiosas",
+      "known_at": 13
+    },
+    {
+      "name": "Carreras de caballos de Sanlúcar de Barrameda",
+      "facet": "Batallas y fiestas curiosas",
+      "known_at": 12
+    },
+    {
+      "name": "Caballos del Vino de Caravaca",
+      "facet": "Batallas y fiestas curiosas",
+      "known_at": 13
+    },
+    {
+      "name": "La Endiablada de Almonacid del Marquesado",
+      "facet": "Batallas y fiestas curiosas",
+      "known_at": 14
+    },
+    {
+      "name": "Fiesta de la Trashumancia de Madrid",
+      "facet": "Batallas y fiestas curiosas",
+      "known_at": 12
+    },
+    {
+      "name": "Kiliki",
+      "facet": "Gigantes, cabezudos y castells",
+      "known_at": 11
+    },
+    {
+      "name": "Comparsa de Gigantes de Pamplona",
+      "facet": "Gigantes, cabezudos y castells",
+      "known_at": 11
+    },
+    {
+      "name": "Gegant",
+      "facet": "Gigantes, cabezudos y castells",
+      "known_at": 10
+    },
+    {
+      "name": "Enxaneta",
+      "facet": "Gigantes, cabezudos y castells",
+      "known_at": 11
+    },
+    {
+      "name": "Pinya",
+      "facet": "Gigantes, cabezudos y castells",
+      "known_at": 11
+    },
+    {
+      "name": "Faixa",
+      "facet": "Gigantes, cabezudos y castells",
+      "known_at": 12
+    },
+    {
+      "name": "Pilar (castell)",
+      "facet": "Gigantes, cabezudos y castells",
+      "known_at": 13
+    },
+    {
+      "name": "Concurso de Castells de Tarragona",
+      "facet": "Gigantes, cabezudos y castells",
+      "known_at": 12
+    },
+    {
+      "name": "Castellers de Vilafranca",
+      "facet": "Gigantes, cabezudos y castells",
+      "known_at": 12
+    },
+    {
+      "name": "Valls",
+      "facet": "Gigantes, cabezudos y castells",
+      "known_at": 13
+    },
+    {
+      "name": "Muixeranga de Algemesí",
+      "facet": "Gigantes, cabezudos y castells",
+      "known_at": 14
+    },
+    {
+      "name": "Drac",
+      "facet": "Gigantes, cabezudos y castells",
+      "known_at": 12
+    },
+    {
+      "name": "Virgen del Rocío",
+      "facet": "Romerías y peregrinaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Aldea de El Rocío",
+      "facet": "Romerías y peregrinaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Salto de la reja",
+      "facet": "Romerías y peregrinaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Simpecado",
+      "facet": "Romerías y peregrinaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Hermandad",
+      "facet": "Romerías y peregrinaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Virgen de Montserrat",
+      "facet": "Romerías y peregrinaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Nazareno",
+      "facet": "Romerías y peregrinaciones",
+      "known_at": 7
+    },
+    {
+      "name": "Costalero",
+      "facet": "Romerías y peregrinaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Paso de Semana Santa",
+      "facet": "Romerías y peregrinaciones",
+      "known_at": 6
+    },
+    {
+      "name": "La Madrugá",
+      "facet": "Romerías y peregrinaciones",
+      "known_at": 12
+    },
+    {
+      "name": "San Jorge",
+      "facet": "Moros y cristianos y fiestas históricas",
+      "known_at": 7
+    },
+    {
+      "name": "Embajada",
+      "facet": "Moros y cristianos y fiestas históricas",
+      "known_at": 12
+    },
+    {
+      "name": "Filà",
+      "facet": "Moros y cristianos y fiestas históricas",
+      "known_at": 12
+    },
+    {
+      "name": "Entrada mora",
+      "facet": "Moros y cristianos y fiestas históricas",
+      "known_at": 11
+    },
+    {
+      "name": "Alardo",
+      "facet": "Moros y cristianos y fiestas históricas",
+      "known_at": 13
+    },
+    {
+      "name": "Moros y Cristianos de Villena",
+      "facet": "Moros y cristianos y fiestas históricas",
+      "known_at": 13
+    },
+    {
+      "name": "Cartagineses y Romanos",
+      "facet": "Moros y cristianos y fiestas históricas",
+      "known_at": 11
+    },
+    {
+      "name": "Bodas de Isabel de Segura",
+      "facet": "Moros y cristianos y fiestas históricas",
+      "known_at": 12
+    },
+    {
+      "name": "Amantes de Teruel",
+      "facet": "Moros y cristianos y fiestas históricas",
+      "known_at": 9
+    },
+    {
+      "name": "Arde Lucus",
+      "facet": "Moros y cristianos y fiestas históricas",
+      "known_at": 13
+    },
+    {
+      "name": "Romería Vikinga de Catoira",
+      "facet": "Moros y cristianos y fiestas históricas",
+      "known_at": 12
+    },
+    {
+      "name": "Alarde de Hondarribia",
+      "facet": "Moros y cristianos y fiestas históricas",
+      "known_at": 14
+    },
+    {
+      "name": "Fiesta del Dos de Mayo",
+      "facet": "Moros y cristianos y fiestas históricas",
+      "known_at": 10
+    },
+    {
+      "name": "Día de la Toma de Granada",
+      "facet": "Moros y cristianos y fiestas históricas",
+      "known_at": 12
+    },
+    {
+      "name": "Mercado medieval",
+      "facet": "Moros y cristianos y fiestas históricas",
+      "known_at": 5
+    },
+    {
+      "name": "Ofrenda de Flores del Pilar",
+      "facet": "Fiestas patronales y verbenas de pueblo",
+      "known_at": 11
+    },
+    {
+      "name": "Aste Nagusia de Bilbao",
+      "facet": "Fiestas patronales y verbenas de pueblo",
+      "known_at": 11
+    },
+    {
+      "name": "Marijaia",
+      "facet": "Fiestas patronales y verbenas de pueblo",
+      "known_at": 12
+    },
+    {
+      "name": "Semana Grande de San Sebastián",
+      "facet": "Fiestas patronales y verbenas de pueblo",
+      "known_at": 11
+    },
+    {
+      "name": "Fiestas de la Virgen Blanca",
+      "facet": "Fiestas patronales y verbenas de pueblo",
+      "known_at": 12
+    },
+    {
+      "name": "Celedón",
+      "facet": "Fiestas patronales y verbenas de pueblo",
+      "known_at": 12
+    },
+    {
+      "name": "Fiestas de San Mateo de Logroño",
+      "facet": "Fiestas patronales y verbenas de pueblo",
+      "known_at": 12
+    },
+    {
+      "name": "Fiestas de la Mercè",
+      "facet": "Fiestas patronales y verbenas de pueblo",
+      "known_at": 10
+    },
+    {
+      "name": "Fiesta Mayor de Gràcia",
+      "facet": "Fiestas patronales y verbenas de pueblo",
+      "known_at": 12
+    },
+    {
+      "name": "Verbena",
+      "facet": "Fiestas patronales y verbenas de pueblo",
+      "known_at": 7
+    },
+    {
+      "name": "Orquesta de verbena",
+      "facet": "Fiestas patronales y verbenas de pueblo",
+      "known_at": 8
+    },
+    {
+      "name": "Peña de fiestas",
+      "facet": "Fiestas patronales y verbenas de pueblo",
+      "known_at": 8
+    },
+    {
+      "name": "Pregón de fiestas",
+      "facet": "Fiestas patronales y verbenas de pueblo",
+      "known_at": 8
+    },
+    {
+      "name": "Reina de las fiestas",
+      "facet": "Fiestas patronales y verbenas de pueblo",
+      "known_at": 6
+    },
+    {
+      "name": "Tómbola",
+      "facet": "Fiestas patronales y verbenas de pueblo",
+      "known_at": 5
+    },
+    {
+      "name": "Fuegos artificiales",
+      "facet": "Fiestas patronales y verbenas de pueblo",
+      "known_at": 1
+    },
+    {
+      "name": "Procesión del patrón",
+      "facet": "Fiestas patronales y verbenas de pueblo",
+      "known_at": 6
+    },
+    {
+      "name": "Magosto",
+      "facet": "Fiestas del norte y del mundo rural",
+      "known_at": 11
+    },
+    {
+      "name": "Samaín",
+      "facet": "Fiestas del norte y del mundo rural",
+      "known_at": 12
+    },
+    {
+      "name": "Fiesta de los Vaqueiros de Alzada",
+      "facet": "Fiestas del norte y del mundo rural",
+      "known_at": 14
+    },
+    {
+      "name": "Hombres de Musgo de Béjar",
+      "facet": "Fiestas del norte y del mundo rural",
+      "known_at": 14
+    },
+    {
+      "name": "Herri kirolak",
+      "facet": "Fiestas del norte y del mundo rural",
+      "known_at": 12
+    },
+    {
+      "name": "Aizkolari",
+      "facet": "Fiestas del norte y del mundo rural",
+      "known_at": 11
+    },
+    {
+      "name": "Harrijasotzaile",
+      "facet": "Fiestas del norte y del mundo rural",
+      "known_at": 13
+    },
+    {
+      "name": "Sokatira",
+      "facet": "Fiestas del norte y del mundo rural",
+      "known_at": 12
+    },
+    {
+      "name": "Fiesta de la Sidra de Nava",
+      "facet": "Fiestas del norte y del mundo rural",
+      "known_at": 13
+    },
+    {
+      "name": "Fiesta del Albariño",
+      "facet": "Fiestas del norte y del mundo rural",
+      "known_at": 13
+    },
+    {
+      "name": "Árbol de mayo",
+      "facet": "Fiestas del norte y del mundo rural",
+      "known_at": 12
+    },
+    {
+      "name": "Santa Águeda de Zamarramala",
+      "facet": "Fiestas del norte y del mundo rural",
+      "known_at": 14
+    },
+    {
+      "name": "Filandón",
+      "facet": "Fiestas del norte y del mundo rural",
+      "known_at": 13
+    },
+    {
+      "name": "Esfoyaza",
+      "facet": "Fiestas del norte y del mundo rural",
+      "known_at": 14
+    },
+    {
+      "name": "Fiesta de la Vendimia",
+      "facet": "Fiestas del norte y del mundo rural",
+      "known_at": 9
+    },
+    {
+      "name": "Castañada",
+      "facet": "Fiestas del norte y del mundo rural",
+      "known_at": 9
+    },
+    {
+      "name": "Muiñeira",
+      "facet": "Bailes, música y trajes de fiesta",
+      "known_at": 10
+    },
+    {
+      "name": "Fandango",
+      "facet": "Bailes, música y trajes de fiesta",
+      "known_at": 11
+    },
+    {
+      "name": "Tambores de Calanda",
+      "facet": "Bailes, música y trajes de fiesta",
+      "known_at": 12
+    },
+    {
+      "name": "Churros con chocolate",
+      "facet": "Comida y bebida de fiesta",
+      "known_at": 2
+    },
+    {
+      "name": "Rosquillas de San Isidro",
+      "facet": "Comida y bebida de fiesta",
+      "known_at": 10
+    },
+    {
+      "name": "Barquillo",
+      "facet": "Comida y bebida de fiesta",
+      "known_at": 7
+    },
+    {
+      "name": "Calçotada",
+      "facet": "Comida y bebida de fiesta",
+      "known_at": 10
+    },
+    {
+      "name": "Escanciado de sidra",
+      "facet": "Comida y bebida de fiesta",
+      "known_at": 10
+    },
+    {
+      "name": "Kalimotxo",
+      "facet": "Comida y bebida de fiesta",
+      "known_at": 11
+    },
+    {
+      "name": "Sardinas asadas",
+      "facet": "Comida y bebida de fiesta",
+      "known_at": 6
+    }
+  ]
+}

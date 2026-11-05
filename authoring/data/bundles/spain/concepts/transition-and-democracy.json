@@ -1,0 +1,888 @@
+{
+  "subcategory": "transition-and-democracy",
+  "facets": [
+    "Muerte de Franco y fin del franquismo",
+    "Rey Juan Carlos y la Corona",
+    "Protagonistas políticos de la Transición",
+    "Constitución de 1978",
+    "Elecciones y partidos políticos",
+    "Golpe del 23-F",
+    "Estado de las autonomías",
+    "Movida madrileña y cultura del cambio",
+    "Nuevos derechos y libertades",
+    "España en Europa y el mundo",
+    "Grandes acontecimientos democráticos",
+    "Símbolos e instituciones democráticas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "body_senses": 1,
+      "colombia": 1,
+      "educational_media": 4,
+      "everyday": 2,
+      "history": 5,
+      "language": 2,
+      "nature": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "school": 5,
+      "science_news": 1,
+      "university": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "«Españoles, Franco ha muerto»",
+      "facet": "Muerte de Franco y fin del franquismo",
+      "known_at": 11
+    },
+    {
+      "name": "Carlos Arias Navarro",
+      "facet": "Muerte de Franco y fin del franquismo",
+      "known_at": 12
+    },
+    {
+      "name": "Exhumación de Franco",
+      "facet": "Muerte de Franco y fin del franquismo",
+      "known_at": 10
+    },
+    {
+      "name": "Referéndum de 1976",
+      "facet": "Muerte de Franco y fin del franquismo",
+      "known_at": 13
+    },
+    {
+      "name": "Cortes franquistas",
+      "facet": "Muerte de Franco y fin del franquismo",
+      "known_at": 13
+    },
+    {
+      "name": "Hospital La Paz",
+      "facet": "Muerte de Franco y fin del franquismo",
+      "known_at": 14,
+      "retired": "unaskable: The hospital only matters as the place where Franco died after a long illness. Every option would ask about a death or about suffering, which goes against the tone rules, or would need a forced scenario."
+    },
+    {
+      "name": "Movimiento Nacional",
+      "facet": "Muerte de Franco y fin del franquismo",
+      "known_at": 12
+    },
+    {
+      "name": "Ley de Memoria Histórica",
+      "facet": "Muerte de Franco y fin del franquismo",
+      "known_at": 11
+    },
+    {
+      "name": "Haraquiri de las Cortes franquistas",
+      "facet": "Muerte de Franco y fin del franquismo",
+      "known_at": 14
+    },
+    {
+      "name": "Capilla ardiente de Franco",
+      "facet": "Muerte de Franco y fin del franquismo",
+      "known_at": 13
+    },
+    {
+      "name": "Felipe VI",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 3
+    },
+    {
+      "name": "Reina Sofía",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 5
+    },
+    {
+      "name": "Reina Letizia",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 4
+    },
+    {
+      "name": "Princesa Leonor",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 3
+    },
+    {
+      "name": "Infanta Sofía",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 5
+    },
+    {
+      "name": "Juan de Borbón",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 12
+    },
+    {
+      "name": "Abdicación de Juan Carlos I",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 9
+    },
+    {
+      "name": "Proclamación de Felipe VI",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 9
+    },
+    {
+      "name": "Discurso de Nochebuena del rey",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 5
+    },
+    {
+      "name": "Princesa de Asturias",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 6
+    },
+    {
+      "name": "Premios Princesa de Asturias",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 9
+    },
+    {
+      "name": "Academia General Militar de Zaragoza",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 11
+    },
+    {
+      "name": "Juan Sebastián de Elcano (buque escuela)",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 9
+    },
+    {
+      "name": "Infanta Elena",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 9
+    },
+    {
+      "name": "Infanta Cristina",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 9
+    },
+    {
+      "name": "Casa de Borbón",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 9
+    },
+    {
+      "name": "Jura de la Constitución de la princesa Leonor",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 10
+    },
+    {
+      "name": "Boda de Felipe y Letizia",
+      "facet": "Rey Juan Carlos y la Corona",
+      "known_at": 9
+    },
+    {
+      "name": "Dolores Ibárruri «la Pasionaria»",
+      "facet": "Protagonistas políticos de la Transición",
+      "known_at": 11
+    },
+    {
+      "name": "Enrique Tierno Galván",
+      "facet": "Protagonistas políticos de la Transición",
+      "known_at": 11
+    },
+    {
+      "name": "Alfonso Guerra",
+      "facet": "Protagonistas políticos de la Transición",
+      "known_at": 11
+    },
+    {
+      "name": "Gregorio Peces-Barba",
+      "facet": "Protagonistas políticos de la Transición",
+      "known_at": 13
+    },
+    {
+      "name": "Miquel Roca",
+      "facet": "Protagonistas políticos de la Transición",
+      "known_at": 14
+    },
+    {
+      "name": "Jordi Pujol",
+      "facet": "Protagonistas políticos de la Transición",
+      "known_at": 10
+    },
+    {
+      "name": "Marcelino Camacho",
+      "facet": "Protagonistas políticos de la Transición",
+      "known_at": 13
+    },
+    {
+      "name": "Xabier Arzalluz",
+      "facet": "Protagonistas políticos de la Transición",
+      "known_at": 13
+    },
+    {
+      "name": "Constitución española de 1978",
+      "facet": "Constitución de 1978",
+      "known_at": 4
+    },
+    {
+      "name": "Referéndum constitucional de 1978",
+      "facet": "Constitución de 1978",
+      "known_at": 9
+    },
+    {
+      "name": "Monarquía parlamentaria",
+      "facet": "Constitución de 1978",
+      "known_at": 8
+    },
+    {
+      "name": "Artículo 155",
+      "facet": "Constitución de 1978",
+      "known_at": 9
+    },
+    {
+      "name": "Preámbulo de la Constitución",
+      "facet": "Constitución de 1978",
+      "known_at": 12
+    },
+    {
+      "name": "Derechos fundamentales",
+      "facet": "Constitución de 1978",
+      "known_at": 9
+    },
+    {
+      "name": "Reforma del artículo 135",
+      "facet": "Constitución de 1978",
+      "known_at": 13
+    },
+    {
+      "name": "Reforma constitucional de 1992",
+      "facet": "Constitución de 1978",
+      "known_at": 14
+    },
+    {
+      "name": "Artículo 14",
+      "facet": "Constitución de 1978",
+      "known_at": 11
+    },
+    {
+      "name": "Puente de diciembre",
+      "facet": "Constitución de 1978",
+      "known_at": 6
+    },
+    {
+      "name": "Separación de poderes",
+      "facet": "Constitución de 1978",
+      "known_at": 10
+    },
+    {
+      "name": "Estado social y democrático de derecho",
+      "facet": "Constitución de 1978",
+      "known_at": 11
+    },
+    {
+      "name": "Artículo 3",
+      "facet": "Constitución de 1978",
+      "known_at": 10
+    },
+    {
+      "name": "Sufragio universal",
+      "facet": "Constitución de 1978",
+      "known_at": 10
+    },
+    {
+      "name": "Reforma del artículo 49",
+      "facet": "Constitución de 1978",
+      "known_at": 13
+    },
+    {
+      "name": "Título preliminar",
+      "facet": "Constitución de 1978",
+      "known_at": 13
+    },
+    {
+      "name": "Recurso de amparo",
+      "facet": "Constitución de 1978",
+      "known_at": 14
+    },
+    {
+      "name": "Partido Popular",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 7
+    },
+    {
+      "name": "Alianza Popular",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 11
+    },
+    {
+      "name": "PCE",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 10
+    },
+    {
+      "name": "Ley D'Hondt",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 12
+    },
+    {
+      "name": "Bipartidismo",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 10
+    },
+    {
+      "name": "Podemos",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 9
+    },
+    {
+      "name": "Ciudadanos",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 9
+    },
+    {
+      "name": "Vox",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 9
+    },
+    {
+      "name": "Izquierda Unida",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 10
+    },
+    {
+      "name": "Convergència i Unió",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 12
+    },
+    {
+      "name": "PNV",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 10
+    },
+    {
+      "name": "Moción de censura de 2018",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 10
+    },
+    {
+      "name": "Mayoría absoluta",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 9
+    },
+    {
+      "name": "Jornada de reflexión",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 9
+    },
+    {
+      "name": "Investidura",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 9
+    },
+    {
+      "name": "José Luis Rodríguez Zapatero",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 9
+    },
+    {
+      "name": "Mariano Rajoy",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 8
+    },
+    {
+      "name": "Pedro Sánchez",
+      "facet": "Elecciones y partidos políticos",
+      "known_at": 7
+    },
+    {
+      "name": "Jaime Milans del Bosch",
+      "facet": "Golpe del 23-F",
+      "known_at": 13
+    },
+    {
+      "name": "Alfonso Armada",
+      "facet": "Golpe del 23-F",
+      "known_at": 13
+    },
+    {
+      "name": "«¡Quieto todo el mundo!»",
+      "facet": "Golpe del 23-F",
+      "known_at": 10
+    },
+    {
+      "name": "Mensaje televisado del rey en el 23-F",
+      "facet": "Golpe del 23-F",
+      "known_at": 10
+    },
+    {
+      "name": "Tanques en las calles de Valencia",
+      "facet": "Golpe del 23-F",
+      "known_at": 12
+    },
+    {
+      "name": "Tricornio",
+      "facet": "Golpe del 23-F",
+      "known_at": 8
+    },
+    {
+      "name": "Investidura de Calvo-Sotelo",
+      "facet": "Golpe del 23-F",
+      "known_at": 13
+    },
+    {
+      "name": "«Se sienten»",
+      "facet": "Golpe del 23-F",
+      "known_at": 11
+    },
+    {
+      "name": "Anatomía de un instante",
+      "facet": "Golpe del 23-F",
+      "known_at": 13
+    },
+    {
+      "name": "Noche de los transistores",
+      "facet": "Golpe del 23-F",
+      "known_at": 13
+    },
+    {
+      "name": "Operación Galaxia",
+      "facet": "Golpe del 23-F",
+      "known_at": 14
+    },
+    {
+      "name": "Manifestación del 27 de febrero de 1981",
+      "facet": "Golpe del 23-F",
+      "known_at": 13
+    },
+    {
+      "name": "Agujeros de bala en el techo del Congreso",
+      "facet": "Golpe del 23-F",
+      "known_at": 11
+    },
+    {
+      "name": "Juicio de Campamento",
+      "facet": "Golpe del 23-F",
+      "known_at": 14
+    },
+    {
+      "name": "Comunidad autónoma",
+      "facet": "Estado de las autonomías",
+      "known_at": 6
+    },
+    {
+      "name": "Diecisiete comunidades autónomas",
+      "facet": "Estado de las autonomías",
+      "known_at": 7
+    },
+    {
+      "name": "Ceuta y Melilla",
+      "facet": "Estado de las autonomías",
+      "known_at": 7
+    },
+    {
+      "name": "Concierto económico vasco",
+      "facet": "Estado de las autonomías",
+      "known_at": 13
+    },
+    {
+      "name": "Comunidad Foral de Navarra",
+      "facet": "Estado de las autonomías",
+      "known_at": 11
+    },
+    {
+      "name": "Café para todos",
+      "facet": "Estado de las autonomías",
+      "known_at": 13
+    },
+    {
+      "name": "Artículo 151",
+      "facet": "Estado de las autonomías",
+      "known_at": 14
+    },
+    {
+      "name": "LOAPA",
+      "facet": "Estado de las autonomías",
+      "known_at": 14
+    },
+    {
+      "name": "Lenguas cooficiales",
+      "facet": "Estado de las autonomías",
+      "known_at": 9
+    },
+    {
+      "name": "Referéndum del 1 de octubre de 2017",
+      "facet": "Estado de las autonomías",
+      "known_at": 10
+    },
+    {
+      "name": "Cabildos insulares",
+      "facet": "Estado de las autonomías",
+      "known_at": 12
+    },
+    {
+      "name": "«Ja sóc aquí»",
+      "facet": "Estado de las autonomías",
+      "known_at": 12
+    },
+    {
+      "name": "Radio Futura",
+      "facet": "Movida madrileña y cultura del cambio",
+      "known_at": 11
+    },
+    {
+      "name": "Nacha Pop",
+      "facet": "Movida madrileña y cultura del cambio",
+      "known_at": 12
+    },
+    {
+      "name": "Hombres G",
+      "facet": "Movida madrileña y cultura del cambio",
+      "known_at": 8
+    },
+    {
+      "name": "Loquillo",
+      "facet": "Movida madrileña y cultura del cambio",
+      "known_at": 10
+    },
+    {
+      "name": "Ouka Leele",
+      "facet": "Movida madrileña y cultura del cambio",
+      "known_at": 13
+    },
+    {
+      "name": "Rock-Ola",
+      "facet": "Movida madrileña y cultura del cambio",
+      "known_at": 13
+    },
+    {
+      "name": "Pepi, Luci, Bom y otras chicas del montón",
+      "facet": "Movida madrileña y cultura del cambio",
+      "known_at": 13
+    },
+    {
+      "name": "Fabio McNamara",
+      "facet": "Movida madrileña y cultura del cambio",
+      "known_at": 13
+    },
+    {
+      "name": "La edad de oro",
+      "facet": "Movida madrileña y cultura del cambio",
+      "known_at": 13
+    },
+    {
+      "name": "Paloma Chamorro",
+      "facet": "Movida madrileña y cultura del cambio",
+      "known_at": 14
+    },
+    {
+      "name": "Kaka de Luxe",
+      "facet": "Movida madrileña y cultura del cambio",
+      "known_at": 13
+    },
+    {
+      "name": "Gabinete Caligari",
+      "facet": "Movida madrileña y cultura del cambio",
+      "known_at": 12
+    },
+    {
+      "name": "La chica de ayer",
+      "facet": "Movida madrileña y cultura del cambio",
+      "known_at": 10
+    },
+    {
+      "name": "Los Secretos",
+      "facet": "Movida madrileña y cultura del cambio",
+      "known_at": 11
+    },
+    {
+      "name": "Mujeres al borde de un ataque de nervios",
+      "facet": "Movida madrileña y cultura del cambio",
+      "known_at": 10
+    },
+    {
+      "name": "Libertad de prensa",
+      "facet": "Nuevos derechos y libertades",
+      "known_at": 9
+    },
+    {
+      "name": "Libertad de expresión",
+      "facet": "Nuevos derechos y libertades",
+      "known_at": 8
+    },
+    {
+      "name": "Voto a los 18 años",
+      "facet": "Nuevos derechos y libertades",
+      "known_at": 7
+    },
+    {
+      "name": "Matrimonio entre personas del mismo sexo",
+      "facet": "Nuevos derechos y libertades",
+      "known_at": 9
+    },
+    {
+      "name": "Ley de Dependencia",
+      "facet": "Nuevos derechos y libertades",
+      "known_at": 12
+    },
+    {
+      "name": "Ley de Igualdad",
+      "facet": "Nuevos derechos y libertades",
+      "known_at": 11
+    },
+    {
+      "name": "Objeción de conciencia",
+      "facet": "Nuevos derechos y libertades",
+      "known_at": 13
+    },
+    {
+      "name": "Servicio militar obligatorio",
+      "facet": "Nuevos derechos y libertades",
+      "known_at": 9
+    },
+    {
+      "name": "LOGSE",
+      "facet": "Nuevos derechos y libertades",
+      "known_at": 11
+    },
+    {
+      "name": "Estado aconfesional",
+      "facet": "Nuevos derechos y libertades",
+      "known_at": 11
+    },
+    {
+      "name": "Permiso de paternidad",
+      "facet": "Nuevos derechos y libertades",
+      "known_at": 10
+    },
+    {
+      "name": "Abolición de la pena de muerte",
+      "facet": "Nuevos derechos y libertades",
+      "known_at": 11
+    },
+    {
+      "name": "Derecho de reunión",
+      "facet": "Nuevos derechos y libertades",
+      "known_at": 12
+    },
+    {
+      "name": "Ley Integral contra la Violencia de Género",
+      "facet": "Nuevos derechos y libertades",
+      "known_at": 11
+    },
+    {
+      "name": "Educación pública gratuita",
+      "facet": "Nuevos derechos y libertades",
+      "known_at": 8
+    },
+    {
+      "name": "V Centenario del Descubrimiento",
+      "facet": "España en Europa y el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de fútbol de 1982",
+      "facet": "España en Europa y el mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Espacio Schengen",
+      "facet": "España en Europa y el mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Programa Erasmus",
+      "facet": "España en Europa y el mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Alianza de Civilizaciones",
+      "facet": "España en Europa y el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Primera sesión de las Cortes democráticas",
+      "facet": "Grandes acontecimientos democráticos",
+      "known_at": 13
+    },
+    {
+      "name": "Espíritu de Ermua",
+      "facet": "Grandes acontecimientos democráticos",
+      "known_at": 12
+    },
+    {
+      "name": "Disolución de ETA",
+      "facet": "Grandes acontecimientos democráticos",
+      "known_at": 11
+    },
+    {
+      "name": "15-M",
+      "facet": "Grandes acontecimientos democráticos",
+      "known_at": 9
+    },
+    {
+      "name": "Nunca Máis",
+      "facet": "Grandes acontecimientos democráticos",
+      "known_at": 11
+    },
+    {
+      "name": "Manifestaciones contra la guerra de Irak",
+      "facet": "Grandes acontecimientos democráticos",
+      "known_at": 11
+    },
+    {
+      "name": "Pacto de Toledo",
+      "facet": "Grandes acontecimientos democráticos",
+      "known_at": 14
+    },
+    {
+      "name": "Juicio del procés",
+      "facet": "Grandes acontecimientos democráticos",
+      "known_at": 12
+    },
+    {
+      "name": "Estado de alarma de 2020",
+      "facet": "Grandes acontecimientos democráticos",
+      "known_at": 7
+    },
+    {
+      "name": "Huelga de controladores aéreos de 2010",
+      "facet": "Grandes acontecimientos democráticos",
+      "known_at": 13
+    },
+    {
+      "name": "Rescate bancario de 2012",
+      "facet": "Grandes acontecimientos democráticos",
+      "known_at": 13
+    },
+    {
+      "name": "Primer debate electoral televisado",
+      "facet": "Grandes acontecimientos democráticos",
+      "known_at": 13
+    },
+    {
+      "name": "Debate del estado de la nación",
+      "facet": "Grandes acontecimientos democráticos",
+      "known_at": 11
+    },
+    {
+      "name": "Primer Gobierno de coalición",
+      "facet": "Grandes acontecimientos democráticos",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera de España",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 2
+    },
+    {
+      "name": "Congreso de los Diputados",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 6
+    },
+    {
+      "name": "Senado",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 7
+    },
+    {
+      "name": "Leones del Congreso",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 10
+    },
+    {
+      "name": "Palacio de la Moncloa",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 8
+    },
+    {
+      "name": "Presidente del Gobierno",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 6
+    },
+    {
+      "name": "Cortes Generales",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 10
+    },
+    {
+      "name": "Consejo de Ministros",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 9
+    },
+    {
+      "name": "Tribunal Supremo",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 10
+    },
+    {
+      "name": "Tribunal Constitucional",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 9
+    },
+    {
+      "name": "Consejo General del Poder Judicial",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 13
+    },
+    {
+      "name": "Defensor del Pueblo",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 9
+    },
+    {
+      "name": "Boletín Oficial del Estado",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 9
+    },
+    {
+      "name": "DNI",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 5
+    },
+    {
+      "name": "Fiesta Nacional del 12 de octubre",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 6
+    },
+    {
+      "name": "Hemiciclo",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 9
+    },
+    {
+      "name": "Escaño",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 9
+    },
+    {
+      "name": "Tribunal de Cuentas",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 14
+    },
+    {
+      "name": "Consejo de Estado",
+      "facet": "Símbolos e instituciones democráticas",
+      "known_at": 14
+    }
+  ]
+}

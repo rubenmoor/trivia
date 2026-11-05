@@ -1,0 +1,903 @@
+{
+  "subcategory": "cities-and-towns",
+  "facets": [
+    "Capitales de provincia",
+    "Ciudades Patrimonio de la Humanidad",
+    "Monumentos emblemáticos de ciudades",
+    "Pueblos con encanto",
+    "Gentilicios",
+    "Apodos y sobrenombres de ciudades",
+    "Fiestas y tradiciones locales",
+    "Especialidades gastronómicas locales",
+    "Ciudades en la historia de España",
+    "Ciudades costeras y puertos",
+    "Ciudades en cine, series y literatura",
+    "Barrios, calles y plazas famosas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Madrid",
+      "facet": "Capitales de provincia",
+      "known_at": 1
+    },
+    {
+      "name": "Barcelona",
+      "facet": "Capitales de provincia",
+      "known_at": 2
+    },
+    {
+      "name": "Valencia",
+      "facet": "Capitales de provincia",
+      "known_at": 3
+    },
+    {
+      "name": "Bilbao",
+      "facet": "Capitales de provincia",
+      "known_at": 4
+    },
+    {
+      "name": "Málaga",
+      "facet": "Capitales de provincia",
+      "known_at": 4
+    },
+    {
+      "name": "Zaragoza",
+      "facet": "Capitales de provincia",
+      "known_at": 5
+    },
+    {
+      "name": "Pamplona",
+      "facet": "Capitales de provincia",
+      "known_at": 5
+    },
+    {
+      "name": "Santa Cruz de Tenerife",
+      "facet": "Capitales de provincia",
+      "known_at": 7
+    },
+    {
+      "name": "Castellón de la Plana",
+      "facet": "Capitales de provincia",
+      "known_at": 9
+    },
+    {
+      "name": "Segovia",
+      "facet": "Ciudades Patrimonio de la Humanidad",
+      "known_at": 5
+    },
+    {
+      "name": "Córdoba",
+      "facet": "Ciudades Patrimonio de la Humanidad",
+      "known_at": 5
+    },
+    {
+      "name": "Ávila",
+      "facet": "Ciudades Patrimonio de la Humanidad",
+      "known_at": 6
+    },
+    {
+      "name": "Alcalá de Henares",
+      "facet": "Ciudades Patrimonio de la Humanidad",
+      "known_at": 9
+    },
+    {
+      "name": "Úbeda",
+      "facet": "Ciudades Patrimonio de la Humanidad",
+      "known_at": 11
+    },
+    {
+      "name": "Baeza",
+      "facet": "Ciudades Patrimonio de la Humanidad",
+      "known_at": 11
+    },
+    {
+      "name": "San Cristóbal de La Laguna",
+      "facet": "Ciudades Patrimonio de la Humanidad",
+      "known_at": 11
+    },
+    {
+      "name": "Aranjuez",
+      "facet": "Ciudades Patrimonio de la Humanidad",
+      "known_at": 9
+    },
+    {
+      "name": "Puerta de Alcalá",
+      "facet": "Monumentos emblemáticos de ciudades",
+      "known_at": 5
+    },
+    {
+      "name": "Palacio Real de Madrid",
+      "facet": "Monumentos emblemáticos de ciudades",
+      "known_at": 5
+    },
+    {
+      "name": "Park Güell",
+      "facet": "Monumentos emblemáticos de ciudades",
+      "known_at": 6
+    },
+    {
+      "name": "Casa Batlló",
+      "facet": "Monumentos emblemáticos de ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "Torre del Oro",
+      "facet": "Monumentos emblemáticos de ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "Catedral de León",
+      "facet": "Monumentos emblemáticos de ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Muralla de Lugo",
+      "facet": "Monumentos emblemáticos de ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Alcázar de Segovia",
+      "facet": "Monumentos emblemáticos de ciudades",
+      "known_at": 7
+    },
+    {
+      "name": "Templo de Debod",
+      "facet": "Monumentos emblemáticos de ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Teatro-Museo Dalí",
+      "facet": "Monumentos emblemáticos de ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Albarracín",
+      "facet": "Pueblos con encanto",
+      "known_at": 10
+    },
+    {
+      "name": "Cudillero",
+      "facet": "Pueblos con encanto",
+      "known_at": 10
+    },
+    {
+      "name": "Frigiliana",
+      "facet": "Pueblos con encanto",
+      "known_at": 12
+    },
+    {
+      "name": "Santillana del Mar",
+      "facet": "Pueblos con encanto",
+      "known_at": 10
+    },
+    {
+      "name": "Cadaqués",
+      "facet": "Pueblos con encanto",
+      "known_at": 11
+    },
+    {
+      "name": "Setenil de las Bodegas",
+      "facet": "Pueblos con encanto",
+      "known_at": 11
+    },
+    {
+      "name": "Peñíscola",
+      "facet": "Pueblos con encanto",
+      "known_at": 8
+    },
+    {
+      "name": "Mojácar",
+      "facet": "Pueblos con encanto",
+      "known_at": 11
+    },
+    {
+      "name": "Besalú",
+      "facet": "Pueblos con encanto",
+      "known_at": 13
+    },
+    {
+      "name": "Combarro",
+      "facet": "Pueblos con encanto",
+      "known_at": 13
+    },
+    {
+      "name": "Potes",
+      "facet": "Pueblos con encanto",
+      "known_at": 12
+    },
+    {
+      "name": "Pedraza",
+      "facet": "Pueblos con encanto",
+      "known_at": 12
+    },
+    {
+      "name": "Alquézar",
+      "facet": "Pueblos con encanto",
+      "known_at": 13
+    },
+    {
+      "name": "Consuegra",
+      "facet": "Pueblos con encanto",
+      "known_at": 10
+    },
+    {
+      "name": "Chinchón",
+      "facet": "Pueblos con encanto",
+      "known_at": 10
+    },
+    {
+      "name": "Valldemossa",
+      "facet": "Pueblos con encanto",
+      "known_at": 12
+    },
+    {
+      "name": "Sos del Rey Católico",
+      "facet": "Pueblos con encanto",
+      "known_at": 12
+    },
+    {
+      "name": "Hondarribia",
+      "facet": "Pueblos con encanto",
+      "known_at": 12
+    },
+    {
+      "name": "Júzcar",
+      "facet": "Pueblos con encanto",
+      "known_at": 9
+    },
+    {
+      "name": "Altea",
+      "facet": "Pueblos con encanto",
+      "known_at": 11
+    },
+    {
+      "name": "Aínsa",
+      "facet": "Pueblos con encanto",
+      "known_at": 13
+    },
+    {
+      "name": "Madrileño",
+      "facet": "Gentilicios",
+      "known_at": 2
+    },
+    {
+      "name": "Zaragozano",
+      "facet": "Gentilicios",
+      "known_at": 5
+    },
+    {
+      "name": "Bilbaíno",
+      "facet": "Gentilicios",
+      "known_at": 6
+    },
+    {
+      "name": "Cacereño",
+      "facet": "Gentilicios",
+      "known_at": 9
+    },
+    {
+      "name": "Tinerfeño",
+      "facet": "Gentilicios",
+      "known_at": 9
+    },
+    {
+      "name": "Logroñés",
+      "facet": "Gentilicios",
+      "known_at": 9
+    },
+    {
+      "name": "Ovetense",
+      "facet": "Gentilicios",
+      "known_at": 12
+    },
+    {
+      "name": "Complutense",
+      "facet": "Gentilicios",
+      "known_at": 12
+    },
+    {
+      "name": "Malacitano",
+      "facet": "Gentilicios",
+      "known_at": 12
+    },
+    {
+      "name": "Hispalense",
+      "facet": "Gentilicios",
+      "known_at": 13
+    },
+    {
+      "name": "Egabrense",
+      "facet": "Gentilicios",
+      "known_at": 15
+    },
+    {
+      "name": "Gato",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "Ciudad Condal",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "Tacita de Plata",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Ciudad Imperial",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Pucela",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Botxo",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Villa y Corte",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Ciudad Dorada",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Bella Easo",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Ciudad de los Califas",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Ciudad del Paraíso",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 14
+    },
+    {
+      "name": "Manhattan del Mediterráneo",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Cap i Casal",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 14
+    },
+    {
+      "name": "Ciudad de las Tres Culturas",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Tierra de cantos y de santos",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Millor terreta del món",
+      "facet": "Apodos y sobrenombres de ciudades",
+      "known_at": 14
+    },
+    {
+      "name": "Carnaval de Cádiz",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 7
+    },
+    {
+      "name": "Carnaval de Santa Cruz de Tenerife",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 7
+    },
+    {
+      "name": "Semana Santa de Sevilla",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 6
+    },
+    {
+      "name": "Castells",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 6
+    },
+    {
+      "name": "Moros y Cristianos de Alcoy",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 10
+    },
+    {
+      "name": "Batalla del Vino de Haro",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 11
+    },
+    {
+      "name": "Patios de Córdoba",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 10
+    },
+    {
+      "name": "La Mercè",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 10
+    },
+    {
+      "name": "Aste Nagusia",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 13
+    },
+    {
+      "name": "Rapa das Bestas",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 12
+    },
+    {
+      "name": "San Isidro",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 7
+    },
+    {
+      "name": "Els Enfarinats",
+      "facet": "Fiestas y tradiciones locales",
+      "known_at": 12
+    },
+    {
+      "name": "Pulpo a la gallega",
+      "facet": "Especialidades gastronómicas locales",
+      "known_at": 5
+    },
+    {
+      "name": "Bocadillo de calamares",
+      "facet": "Especialidades gastronómicas locales",
+      "known_at": 7
+    },
+    {
+      "name": "Mazapán de Toledo",
+      "facet": "Especialidades gastronómicas locales",
+      "known_at": 8
+    },
+    {
+      "name": "Yemas de Santa Teresa",
+      "facet": "Especialidades gastronómicas locales",
+      "known_at": 11
+    },
+    {
+      "name": "Horchata de Alboraya",
+      "facet": "Especialidades gastronómicas locales",
+      "known_at": 11
+    },
+    {
+      "name": "Polvorones de Estepa",
+      "facet": "Especialidades gastronómicas locales",
+      "known_at": 10
+    },
+    {
+      "name": "Granada",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 5
+    },
+    {
+      "name": "Numancia",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 9
+    },
+    {
+      "name": "Covadonga",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 9
+    },
+    {
+      "name": "Gernika",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 9
+    },
+    {
+      "name": "Sagunto",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 11
+    },
+    {
+      "name": "Palos de la Frontera",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 9
+    },
+    {
+      "name": "Tordesillas",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 10
+    },
+    {
+      "name": "Itálica",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 12
+    },
+    {
+      "name": "Bailén",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 11
+    },
+    {
+      "name": "Atapuerca",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 8
+    },
+    {
+      "name": "Las Navas de Tolosa",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 11
+    },
+    {
+      "name": "Roncesvalles",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 11
+    },
+    {
+      "name": "Belchite",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 12
+    },
+    {
+      "name": "Villalar",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 13
+    },
+    {
+      "name": "Yuste",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 12
+    },
+    {
+      "name": "Empúries",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 13
+    },
+    {
+      "name": "Santa Fe",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 13
+    },
+    {
+      "name": "Vivar del Cid",
+      "facet": "Ciudades en la historia de España",
+      "known_at": 11
+    },
+    {
+      "name": "Cádiz",
+      "facet": "Ciudades costeras y puertos",
+      "known_at": 5
+    },
+    {
+      "name": "Vigo",
+      "facet": "Ciudades costeras y puertos",
+      "known_at": 6
+    },
+    {
+      "name": "Gijón",
+      "facet": "Ciudades costeras y puertos",
+      "known_at": 7
+    },
+    {
+      "name": "Santander",
+      "facet": "Ciudades costeras y puertos",
+      "known_at": 6
+    },
+    {
+      "name": "San Sebastián",
+      "facet": "Ciudades costeras y puertos",
+      "known_at": 5
+    },
+    {
+      "name": "Algeciras",
+      "facet": "Ciudades costeras y puertos",
+      "known_at": 9
+    },
+    {
+      "name": "Cartagena",
+      "facet": "Ciudades costeras y puertos",
+      "known_at": 8
+    },
+    {
+      "name": "Benidorm",
+      "facet": "Ciudades costeras y puertos",
+      "known_at": 5
+    },
+    {
+      "name": "Marbella",
+      "facet": "Ciudades costeras y puertos",
+      "known_at": 7
+    },
+    {
+      "name": "Sitges",
+      "facet": "Ciudades costeras y puertos",
+      "known_at": 10
+    },
+    {
+      "name": "Alicante",
+      "facet": "Ciudades costeras y puertos",
+      "known_at": 5
+    },
+    {
+      "name": "Tarifa",
+      "facet": "Ciudades costeras y puertos",
+      "known_at": 8
+    },
+    {
+      "name": "Las Palmas de Gran Canaria",
+      "facet": "Ciudades costeras y puertos",
+      "known_at": 7
+    },
+    {
+      "name": "Mahón",
+      "facet": "Ciudades costeras y puertos",
+      "known_at": 11
+    },
+    {
+      "name": "Ferrol",
+      "facet": "Ciudades costeras y puertos",
+      "known_at": 11
+    },
+    {
+      "name": "Torremolinos",
+      "facet": "Ciudades costeras y puertos",
+      "known_at": 9
+    },
+    {
+      "name": "Vetusta",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 12
+    },
+    {
+      "name": "El Toboso",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 10
+    },
+    {
+      "name": "Fuenteovejuna",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 9
+    },
+    {
+      "name": "Zalamea de la Serena",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 12
+    },
+    {
+      "name": "Moguer",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 11
+    },
+    {
+      "name": "Nerja",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 10
+    },
+    {
+      "name": "Desierto de Tabernas",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 11
+    },
+    {
+      "name": "Osuna",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 11
+    },
+    {
+      "name": "Villar del Río",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 13
+    },
+    {
+      "name": "Argoitia",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 12
+    },
+    {
+      "name": "Desengaño 21",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 7
+    },
+    {
+      "name": "Mirador de Montepinar",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 7
+    },
+    {
+      "name": "San Genaro",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 10,
+      "retired": "unaskable: No tengo claro a qué obra de ficción española corresponde San Genaro; no puedo asegurar el dato."
+    },
+    {
+      "name": "Santa Justa",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 10
+    },
+    {
+      "name": "Vilagarcía de Arousa",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 12
+    },
+    {
+      "name": "Puerto Lápice",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 13
+    },
+    {
+      "name": "Mágina",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 14
+    },
+    {
+      "name": "Orbajosa",
+      "facet": "Ciudades en cine, series y literatura",
+      "known_at": 15
+    },
+    {
+      "name": "Puerta del Sol",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 4
+    },
+    {
+      "name": "Gran Vía",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 5
+    },
+    {
+      "name": "Plaza Mayor de Madrid",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Las Ramblas",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 5
+    },
+    {
+      "name": "Barrio Gótico",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Plaza de España de Sevilla",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 7
+    },
+    {
+      "name": "Barrio de Santa Cruz",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Albaicín",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Sacromonte",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Triana",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Lavapiés",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Malasaña",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Paseo de Gracia",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Plaza Mayor de Salamanca",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Plaza del Obradoiro",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Calle Larios",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Barrio del Carmen",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Casco Viejo de Bilbao",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Plaza del Castillo",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Barceloneta",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 8
+    },
+    {
+      "name": "El Rastro",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Calle Laurel",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Plaza de Cibeles",
+      "facet": "Barrios, calles y plazas famosas",
+      "known_at": 6
+    }
+  ]
+}

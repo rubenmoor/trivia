@@ -1,0 +1,1013 @@
+{
+  "subcategory": "scientists-and-explorers",
+  "facets": [
+    "Navegantes y descubridores",
+    "Exploradores y aventureros modernos",
+    "Inventos de la vida cotidiana",
+    "Ingenieros y pioneros técnicos",
+    "Pioneros de la aviación y el espacio",
+    "Premios Nobel y neurociencia",
+    "Médicos y pioneros de la salud",
+    "Científicas españolas",
+    "Ciencia en Al-Ándalus y la Edad Media",
+    "Expediciones y naturalistas ilustrados",
+    "Químicos y elementos descubiertos",
+    "Hallazgos y grandes instalaciones científicas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 1,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 4,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 3,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Nao Victoria",
+      "facet": "Navegantes y descubridores",
+      "known_at": 9
+    },
+    {
+      "name": "Martín Alonso Pinzón",
+      "facet": "Navegantes y descubridores",
+      "known_at": 10
+    },
+    {
+      "name": "Vicente Yáñez Pinzón",
+      "facet": "Navegantes y descubridores",
+      "known_at": 13
+    },
+    {
+      "name": "Juan de la Cosa",
+      "facet": "Navegantes y descubridores",
+      "known_at": 12
+    },
+    {
+      "name": "Francisco de Orellana",
+      "facet": "Navegantes y descubridores",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Ponce de León",
+      "facet": "Navegantes y descubridores",
+      "known_at": 12
+    },
+    {
+      "name": "Álvar Núñez Cabeza de Vaca",
+      "facet": "Navegantes y descubridores",
+      "known_at": 13
+    },
+    {
+      "name": "Hernando de Soto",
+      "facet": "Navegantes y descubridores",
+      "known_at": 13
+    },
+    {
+      "name": "Andrés de Urdaneta",
+      "facet": "Navegantes y descubridores",
+      "known_at": 13
+    },
+    {
+      "name": "Tornaviaje",
+      "facet": "Navegantes y descubridores",
+      "known_at": 14
+    },
+    {
+      "name": "Miguel López de Legazpi",
+      "facet": "Navegantes y descubridores",
+      "known_at": 13
+    },
+    {
+      "name": "Álvaro de Mendaña",
+      "facet": "Navegantes y descubridores",
+      "known_at": 15
+    },
+    {
+      "name": "Luis Váez de Torres",
+      "facet": "Navegantes y descubridores",
+      "known_at": 15
+    },
+    {
+      "name": "Casa de Contratación de Sevilla",
+      "facet": "Navegantes y descubridores",
+      "known_at": 12
+    },
+    {
+      "name": "Jesús Calleja",
+      "facet": "Exploradores y aventureros modernos",
+      "known_at": 6
+    },
+    {
+      "name": "Desafío Extremo",
+      "facet": "Exploradores y aventureros modernos",
+      "known_at": 11
+    },
+    {
+      "name": "Alberto Iñurrategi",
+      "facet": "Exploradores y aventureros modernos",
+      "known_at": 14
+    },
+    {
+      "name": "Martín Zabaleta",
+      "facet": "Exploradores y aventureros modernos",
+      "known_at": 14
+    },
+    {
+      "name": "Chus Lago",
+      "facet": "Exploradores y aventureros modernos",
+      "known_at": 14
+    },
+    {
+      "name": "Álex Txikon",
+      "facet": "Exploradores y aventureros modernos",
+      "known_at": 13
+    },
+    {
+      "name": "Catorce ochomiles",
+      "facet": "Exploradores y aventureros modernos",
+      "known_at": 12
+    },
+    {
+      "name": "Al filo de lo imposible",
+      "facet": "Exploradores y aventureros modernos",
+      "known_at": 12
+    },
+    {
+      "name": "Sebastián Álvaro",
+      "facet": "Exploradores y aventureros modernos",
+      "known_at": 14
+    },
+    {
+      "name": "Hermanos Pou",
+      "facet": "Exploradores y aventureros modernos",
+      "known_at": 13
+    },
+    {
+      "name": "Josune Bereziartu",
+      "facet": "Exploradores y aventureros modernos",
+      "known_at": 15
+    },
+    {
+      "name": "Miguel de la Quadra-Salcedo",
+      "facet": "Exploradores y aventureros modernos",
+      "known_at": 12
+    },
+    {
+      "name": "Ruta Quetzal",
+      "facet": "Exploradores y aventureros modernos",
+      "known_at": 13
+    },
+    {
+      "name": "El hombre y la Tierra",
+      "facet": "Exploradores y aventureros modernos",
+      "known_at": 11
+    },
+    {
+      "name": "Ramón Larramendi",
+      "facet": "Exploradores y aventureros modernos",
+      "known_at": 14
+    },
+    {
+      "name": "Alí Bey",
+      "facet": "Exploradores y aventureros modernos",
+      "known_at": 14
+    },
+    {
+      "name": "Manuel Iradier",
+      "facet": "Exploradores y aventureros modernos",
+      "known_at": 15
+    },
+    {
+      "name": "Manuel Jalón",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 10
+    },
+    {
+      "name": "Jeringuilla desechable",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 12
+    },
+    {
+      "name": "Enric Bernat",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 12
+    },
+    {
+      "name": "Alejandro Finisterre",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 12
+    },
+    {
+      "name": "Botijo",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 6
+    },
+    {
+      "name": "Porrón",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 8
+    },
+    {
+      "name": "Bota de vino",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 8
+    },
+    {
+      "name": "Navaja de Albacete",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 10
+    },
+    {
+      "name": "Antonio de Torres",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 14
+    },
+    {
+      "name": "Enciclopedia mecánica",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 12
+    },
+    {
+      "name": "Jabón de Castilla",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 12
+    },
+    {
+      "name": "El Ajedrecista",
+      "facet": "Ingenieros y pioneros técnicos",
+      "known_at": 14
+    },
+    {
+      "name": "Spanish Aerocar",
+      "facet": "Ingenieros y pioneros técnicos",
+      "known_at": 13
+    },
+    {
+      "name": "Submarino Peral",
+      "facet": "Ingenieros y pioneros técnicos",
+      "known_at": 9
+    },
+    {
+      "name": "Ictíneo",
+      "facet": "Ingenieros y pioneros técnicos",
+      "known_at": 13
+    },
+    {
+      "name": "Alejandro Goicoechea",
+      "facet": "Ingenieros y pioneros técnicos",
+      "known_at": 14
+    },
+    {
+      "name": "AVE",
+      "facet": "Ingenieros y pioneros técnicos",
+      "known_at": 5
+    },
+    {
+      "name": "Agustín de Betancourt",
+      "facet": "Ingenieros y pioneros técnicos",
+      "known_at": 14
+    },
+    {
+      "name": "Jerónimo de Ayanz",
+      "facet": "Ingenieros y pioneros técnicos",
+      "known_at": 14
+    },
+    {
+      "name": "Juanelo Turriano",
+      "facet": "Ingenieros y pioneros técnicos",
+      "known_at": 14
+    },
+    {
+      "name": "Artificio de Juanelo",
+      "facet": "Ingenieros y pioneros técnicos",
+      "known_at": 15
+    },
+    {
+      "name": "Ildefons Cerdà",
+      "facet": "Ingenieros y pioneros técnicos",
+      "known_at": 12
+    },
+    {
+      "name": "Arturo Soria",
+      "facet": "Ingenieros y pioneros técnicos",
+      "known_at": 13
+    },
+    {
+      "name": "Eduardo Torroja",
+      "facet": "Ingenieros y pioneros técnicos",
+      "known_at": 14
+    },
+    {
+      "name": "Julio Cervera",
+      "facet": "Ingenieros y pioneros técnicos",
+      "known_at": 15
+    },
+    {
+      "name": "Mónico Sánchez",
+      "facet": "Ingenieros y pioneros técnicos",
+      "known_at": 15
+    },
+    {
+      "name": "Emilio Herrera",
+      "facet": "Pioneros de la aviación y el espacio",
+      "known_at": 14
+    },
+    {
+      "name": "Ramón Franco",
+      "facet": "Pioneros de la aviación y el espacio",
+      "known_at": 13
+    },
+    {
+      "name": "Jesús del Gran Poder",
+      "facet": "Pioneros de la aviación y el espacio",
+      "known_at": 15
+    },
+    {
+      "name": "Vuelo del Cuatro Vientos",
+      "facet": "Pioneros de la aviación y el espacio",
+      "known_at": 14
+    },
+    {
+      "name": "Heraclio Alfaro",
+      "facet": "Pioneros de la aviación y el espacio",
+      "known_at": 15
+    },
+    {
+      "name": "Benito Loygorri",
+      "facet": "Pioneros de la aviación y el espacio",
+      "known_at": 15
+    },
+    {
+      "name": "Patrulla Águila",
+      "facet": "Pioneros de la aviación y el espacio",
+      "known_at": 9
+    },
+    {
+      "name": "Pedro Duque",
+      "facet": "Pioneros de la aviación y el espacio",
+      "known_at": 6
+    },
+    {
+      "name": "Sara García Alonso",
+      "facet": "Pioneros de la aviación y el espacio",
+      "known_at": 11
+    },
+    {
+      "name": "Pablo Álvarez",
+      "facet": "Pioneros de la aviación y el espacio",
+      "known_at": 11
+    },
+    {
+      "name": "Michael López-Alegría",
+      "facet": "Pioneros de la aviación y el espacio",
+      "known_at": 13
+    },
+    {
+      "name": "Complejo de Comunicaciones de Robledo de Chavela",
+      "facet": "Pioneros de la aviación y el espacio",
+      "known_at": 12
+    },
+    {
+      "name": "INTA",
+      "facet": "Pioneros de la aviación y el espacio",
+      "known_at": 11
+    },
+    {
+      "name": "El Arenosillo",
+      "facet": "Pioneros de la aviación y el espacio",
+      "known_at": 14
+    },
+    {
+      "name": "Minisat 01",
+      "facet": "Pioneros de la aviación y el espacio",
+      "known_at": 15
+    },
+    {
+      "name": "Miura 1",
+      "facet": "Pioneros de la aviación y el espacio",
+      "known_at": 12
+    },
+    {
+      "name": "Neurona",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 6
+    },
+    {
+      "name": "Sinapsis",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 9
+    },
+    {
+      "name": "Doctrina de la neurona",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 14
+    },
+    {
+      "name": "Mariposas del alma",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 14
+    },
+    {
+      "name": "Dibujos de Cajal",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 12
+    },
+    {
+      "name": "Camillo Golgi",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 14
+    },
+    {
+      "name": "Tinción de Golgi",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 15
+    },
+    {
+      "name": "Cono de crecimiento",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 15
+    },
+    {
+      "name": "Instituto Cajal",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 13
+    },
+    {
+      "name": "Pío del Río Hortega",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 14
+    },
+    {
+      "name": "Microglía",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 15
+    },
+    {
+      "name": "Rafael Lorente de Nó",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 15
+    },
+    {
+      "name": "Rafael Yuste",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 14
+    },
+    {
+      "name": "Proyecto BRAIN",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 14
+    },
+    {
+      "name": "Síntesis del ARN",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 14
+    },
+    {
+      "name": "José Echegaray",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 13
+    },
+    {
+      "name": "Jacinto Benavente",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Ramón Jiménez",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 11
+    },
+    {
+      "name": "Premio Princesa de Asturias",
+      "facet": "Premios Nobel y neurociencia",
+      "known_at": 9
+    },
+    {
+      "name": "Francisco Javier Balmis",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 12
+    },
+    {
+      "name": "Real Expedición Filantrópica de la Vacuna",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 12
+    },
+    {
+      "name": "Isabel Zendal",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 12
+    },
+    {
+      "name": "Miguel Servet",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 11
+    },
+    {
+      "name": "Circulación pulmonar",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 13
+    },
+    {
+      "name": "Manuel García",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 14
+    },
+    {
+      "name": "Laringoscopio",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 13
+    },
+    {
+      "name": "Jaime Ferrán",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 14
+    },
+    {
+      "name": "Josep Trueta",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 14
+    },
+    {
+      "name": "Carlos Jiménez Díaz",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 14
+    },
+    {
+      "name": "Joaquín Barraquer",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 14
+    },
+    {
+      "name": "Andrés Laguna",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 14
+    },
+    {
+      "name": "Francisco Grande Covián",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 14
+    },
+    {
+      "name": "Pedro Cavadas",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 11
+    },
+    {
+      "name": "Trasplante de cara",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 12
+    },
+    {
+      "name": "Organización Nacional de Trasplantes",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 11
+    },
+    {
+      "name": "Valentín Fuster",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 12
+    },
+    {
+      "name": "Pedro Alonso",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 14
+    },
+    {
+      "name": "Joan Massagué",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio de Gimbernat",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 15
+    },
+    {
+      "name": "Polimerasa phi29",
+      "facet": "Científicas españolas",
+      "known_at": 15
+    },
+    {
+      "name": "Ángela Ruiz Robles",
+      "facet": "Científicas españolas",
+      "known_at": 12
+    },
+    {
+      "name": "María Blasco",
+      "facet": "Científicas españolas",
+      "known_at": 13
+    },
+    {
+      "name": "Telómeros",
+      "facet": "Científicas españolas",
+      "known_at": 13
+    },
+    {
+      "name": "Elena García Armada",
+      "facet": "Científicas españolas",
+      "known_at": 13
+    },
+    {
+      "name": "Exoesqueleto infantil",
+      "facet": "Científicas españolas",
+      "known_at": 13
+    },
+    {
+      "name": "Josefina Castellví",
+      "facet": "Científicas españolas",
+      "known_at": 13
+    },
+    {
+      "name": "Ángeles Alvariño",
+      "facet": "Científicas españolas",
+      "known_at": 13
+    },
+    {
+      "name": "María de Maeztu",
+      "facet": "Científicas españolas",
+      "known_at": 13
+    },
+    {
+      "name": "Residencia de Señoritas",
+      "facet": "Científicas españolas",
+      "known_at": 13
+    },
+    {
+      "name": "Elena Maseras",
+      "facet": "Científicas españolas",
+      "known_at": 14
+    },
+    {
+      "name": "Pilar Careaga",
+      "facet": "Científicas españolas",
+      "known_at": 14
+    },
+    {
+      "name": "Jimena Fernández de la Vega",
+      "facet": "Científicas españolas",
+      "known_at": 15
+    },
+    {
+      "name": "Piedad de la Cierva",
+      "facet": "Científicas españolas",
+      "known_at": 15
+    },
+    {
+      "name": "Dorotea Barnés",
+      "facet": "Científicas españolas",
+      "known_at": 15
+    },
+    {
+      "name": "Felisa Martín Bravo",
+      "facet": "Científicas españolas",
+      "known_at": 15
+    },
+    {
+      "name": "María Andresa Casamayor",
+      "facet": "Científicas españolas",
+      "known_at": 15
+    },
+    {
+      "name": "María Wonenburger",
+      "facet": "Científicas españolas",
+      "known_at": 15
+    },
+    {
+      "name": "Oliva Sabuco",
+      "facet": "Científicas españolas",
+      "known_at": 15
+    },
+    {
+      "name": "Concepción Aleixandre",
+      "facet": "Científicas españolas",
+      "known_at": 15
+    },
+    {
+      "name": "Azafea",
+      "facet": "Ciencia en Al-Ándalus y la Edad Media",
+      "known_at": 15
+    },
+    {
+      "name": "Tablas toledanas",
+      "facet": "Ciencia en Al-Ándalus y la Edad Media",
+      "known_at": 15
+    },
+    {
+      "name": "Maslama al-Mayriti",
+      "facet": "Ciencia en Al-Ándalus y la Edad Media",
+      "known_at": 15
+    },
+    {
+      "name": "Ibn Tufail",
+      "facet": "Ciencia en Al-Ándalus y la Edad Media",
+      "known_at": 15
+    },
+    {
+      "name": "Ibn al-Baytar",
+      "facet": "Ciencia en Al-Ándalus y la Edad Media",
+      "known_at": 15
+    },
+    {
+      "name": "Tablas alfonsíes",
+      "facet": "Ciencia en Al-Ándalus y la Edad Media",
+      "known_at": 14
+    },
+    {
+      "name": "Códice Vigilano",
+      "facet": "Ciencia en Al-Ándalus y la Edad Media",
+      "known_at": 15
+    },
+    {
+      "name": "Ramon Llull",
+      "facet": "Ciencia en Al-Ándalus y la Edad Media",
+      "known_at": 12
+    },
+    {
+      "name": "Arnau de Vilanova",
+      "facet": "Ciencia en Al-Ándalus y la Edad Media",
+      "known_at": 14
+    },
+    {
+      "name": "Alejandro Malaspina",
+      "facet": "Expediciones y naturalistas ilustrados",
+      "known_at": 13
+    },
+    {
+      "name": "Corbetas Descubierta y Atrevida",
+      "facet": "Expediciones y naturalistas ilustrados",
+      "known_at": 15
+    },
+    {
+      "name": "José Celestino Mutis",
+      "facet": "Expediciones y naturalistas ilustrados",
+      "known_at": 12
+    },
+    {
+      "name": "Real Expedición Botánica del Nuevo Reino de Granada",
+      "facet": "Expediciones y naturalistas ilustrados",
+      "known_at": 14
+    },
+    {
+      "name": "Quina",
+      "facet": "Expediciones y naturalistas ilustrados",
+      "known_at": 13
+    },
+    {
+      "name": "Hipólito Ruiz",
+      "facet": "Expediciones y naturalistas ilustrados",
+      "known_at": 15
+    },
+    {
+      "name": "Martín Sessé",
+      "facet": "Expediciones y naturalistas ilustrados",
+      "known_at": 15,
+      "retired": "unaskable: Demasiado desconocido para una pregunta de opciones justa; el acertijo de lugar o la pregunta de época quedarían forzados."
+    },
+    {
+      "name": "Félix de Azara",
+      "facet": "Expediciones y naturalistas ilustrados",
+      "known_at": 14
+    },
+    {
+      "name": "Jorge Juan",
+      "facet": "Expediciones y naturalistas ilustrados",
+      "known_at": 13
+    },
+    {
+      "name": "Antonio de Ulloa",
+      "facet": "Expediciones y naturalistas ilustrados",
+      "known_at": 13
+    },
+    {
+      "name": "Expedición geodésica al virreinato del Perú",
+      "facet": "Expediciones y naturalistas ilustrados",
+      "known_at": 15
+    },
+    {
+      "name": "Antonio José Cavanilles",
+      "facet": "Expediciones y naturalistas ilustrados",
+      "known_at": 14
+    },
+    {
+      "name": "Dalia",
+      "facet": "Expediciones y naturalistas ilustrados",
+      "known_at": 13
+    },
+    {
+      "name": "Real Gabinete de Historia Natural",
+      "facet": "Expediciones y naturalistas ilustrados",
+      "known_at": 14
+    },
+    {
+      "name": "Museo Nacional de Ciencias Naturales",
+      "facet": "Expediciones y naturalistas ilustrados",
+      "known_at": 10
+    },
+    {
+      "name": "Megaterio",
+      "facet": "Expediciones y naturalistas ilustrados",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Francisco de la Bodega y Quadra",
+      "facet": "Expediciones y naturalistas ilustrados",
+      "known_at": 15
+    },
+    {
+      "name": "Platino",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 12
+    },
+    {
+      "name": "Wolframio",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 10
+    },
+    {
+      "name": "Hermanos Elhuyar",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 13
+    },
+    {
+      "name": "Fausto Elhuyar",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 14
+    },
+    {
+      "name": "Real Seminario de Bergara",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 14
+    },
+    {
+      "name": "Vanadio",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 13
+    },
+    {
+      "name": "Andrés Manuel del Río",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 14
+    },
+    {
+      "name": "Eritronio",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 15
+    },
+    {
+      "name": "Mercurio",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 9
+    },
+    {
+      "name": "Minas de Almadén",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 11
+    },
+    {
+      "name": "Cinabrio",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 13
+    },
+    {
+      "name": "Mateo Orfila",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 14
+    },
+    {
+      "name": "Toxicología",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 12
+    },
+    {
+      "name": "Real Laboratorio de Química de Segovia",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 15
+    },
+    {
+      "name": "Enrique Moles",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 15
+    },
+    {
+      "name": "Blas Cabrera",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 14
+    },
+    {
+      "name": "Miguel Catalán",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 15
+    },
+    {
+      "name": "José Rodríguez Carracido",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 15
+    },
+    {
+      "name": "Avelino Corma",
+      "facet": "Químicos y elementos descubiertos",
+      "known_at": 14
+    },
+    {
+      "name": "Turiasaurus",
+      "facet": "Hallazgos y grandes instalaciones científicas",
+      "known_at": 14
+    },
+    {
+      "name": "Dinópolis",
+      "facet": "Hallazgos y grandes instalaciones científicas",
+      "known_at": 11
+    },
+    {
+      "name": "Yacimiento de Las Hoyas",
+      "facet": "Hallazgos y grandes instalaciones científicas",
+      "known_at": 15
+    },
+    {
+      "name": "Gran Telescopio Canarias",
+      "facet": "Hallazgos y grandes instalaciones científicas",
+      "known_at": 11
+    },
+    {
+      "name": "Observatorio del Roque de los Muchachos",
+      "facet": "Hallazgos y grandes instalaciones científicas",
+      "known_at": 12
+    },
+    {
+      "name": "Observatorio del Teide",
+      "facet": "Hallazgos y grandes instalaciones científicas",
+      "known_at": 12
+    },
+    {
+      "name": "Instituto de Astrofísica de Canarias",
+      "facet": "Hallazgos y grandes instalaciones científicas",
+      "known_at": 12
+    },
+    {
+      "name": "Sincrotrón ALBA",
+      "facet": "Hallazgos y grandes instalaciones científicas",
+      "known_at": 14
+    },
+    {
+      "name": "MareNostrum",
+      "facet": "Hallazgos y grandes instalaciones científicas",
+      "known_at": 14
+    },
+    {
+      "name": "Laboratorio Subterráneo de Canfranc",
+      "facet": "Hallazgos y grandes instalaciones científicas",
+      "known_at": 15
+    },
+    {
+      "name": "Base Antártica Juan Carlos I",
+      "facet": "Hallazgos y grandes instalaciones científicas",
+      "known_at": 13
+    },
+    {
+      "name": "Buque Hespérides",
+      "facet": "Hallazgos y grandes instalaciones científicas",
+      "known_at": 13
+    },
+    {
+      "name": "Estación Biológica de Doñana",
+      "facet": "Hallazgos y grandes instalaciones científicas",
+      "known_at": 12
+    }
+  ]
+}
