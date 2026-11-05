@@ -1,0 +1,1189 @@
+{
+  "subcategory": "rivers-and-mountains",
+  "facets": [
+    "Grandes ríos y sus cuencas",
+    "Afluentes, nacimientos y desembocaduras",
+    "Cordilleras y sistemas montañosos",
+    "Picos y cumbres más altos",
+    "Volcanes y montañas de las islas",
+    "Lagos, lagunas, embalses y humedales",
+    "Parques nacionales de montaña y río",
+    "Cañones, gargantas, cascadas y cuevas",
+    "Ciudades y puentes junto al río",
+    "Ríos y montañas en la historia y las leyendas",
+    "Nombres, refranes y canciones de ríos y montes",
+    "Deporte y fiestas en ríos y montañas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 5,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 1,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Tajo",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 4
+    },
+    {
+      "name": "Ebro",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 4
+    },
+    {
+      "name": "Duero",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 5
+    },
+    {
+      "name": "Guadalquivir",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 5
+    },
+    {
+      "name": "Guadiana",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 6
+    },
+    {
+      "name": "Miño",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 7
+    },
+    {
+      "name": "Júcar",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 8
+    },
+    {
+      "name": "Segura",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 8
+    },
+    {
+      "name": "Turia",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 7
+    },
+    {
+      "name": "Nervión",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 9
+    },
+    {
+      "name": "Bidasoa",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 11
+    },
+    {
+      "name": "Llobregat",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 10
+    },
+    {
+      "name": "Río Tinto",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 9
+    },
+    {
+      "name": "Odiel",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 12
+    },
+    {
+      "name": "Ter",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 11
+    },
+    {
+      "name": "Nalón",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 12
+    },
+    {
+      "name": "Cuenca hidrográfica",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 8
+    },
+    {
+      "name": "Vertiente atlántica",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 9
+    },
+    {
+      "name": "Vertiente mediterránea",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 9
+    },
+    {
+      "name": "Vertiente cantábrica",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 10
+    },
+    {
+      "name": "Confederación Hidrográfica del Ebro",
+      "facet": "Grandes ríos y sus cuencas",
+      "known_at": 12
+    },
+    {
+      "name": "Fontibre",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 10
+    },
+    {
+      "name": "Delta del Ebro",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 7
+    },
+    {
+      "name": "Ojos del Guadiana",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 11
+    },
+    {
+      "name": "Pisuerga",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 7
+    },
+    {
+      "name": "Genil",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 9
+    },
+    {
+      "name": "Sil",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 9
+    },
+    {
+      "name": "Jarama",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 8
+    },
+    {
+      "name": "Manzanares",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 6
+    },
+    {
+      "name": "Henares",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 9
+    },
+    {
+      "name": "Tormes",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 8
+    },
+    {
+      "name": "Segre",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 10
+    },
+    {
+      "name": "Cinca",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 12
+    },
+    {
+      "name": "Esla",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 11
+    },
+    {
+      "name": "Alberche",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 12
+    },
+    {
+      "name": "Río Aragón",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 10
+    },
+    {
+      "name": "Jalón",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 11
+    },
+    {
+      "name": "Muela de San Juan",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 13
+    },
+    {
+      "name": "Nacimiento del río Cuervo",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 12
+    },
+    {
+      "name": "Nacimiento del río Mundo",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 12
+    },
+    {
+      "name": "Sanlúcar de Barrameda",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 10
+    },
+    {
+      "name": "Ría",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 7
+    },
+    {
+      "name": "Estuario",
+      "facet": "Afluentes, nacimientos y desembocaduras",
+      "known_at": 9
+    },
+    {
+      "name": "Cordilleras Béticas",
+      "facet": "Cordilleras y sistemas montañosos",
+      "known_at": 9
+    },
+    {
+      "name": "Sistema Penibético",
+      "facet": "Cordilleras y sistemas montañosos",
+      "known_at": 11
+    },
+    {
+      "name": "Montes de Toledo",
+      "facet": "Cordilleras y sistemas montañosos",
+      "known_at": 10
+    },
+    {
+      "name": "Sierra de Guadarrama",
+      "facet": "Cordilleras y sistemas montañosos",
+      "known_at": 6
+    },
+    {
+      "name": "Sierra de Gredos",
+      "facet": "Cordilleras y sistemas montañosos",
+      "known_at": 7
+    },
+    {
+      "name": "Sierra de Tramuntana",
+      "facet": "Cordilleras y sistemas montañosos",
+      "known_at": 9
+    },
+    {
+      "name": "Montes de León",
+      "facet": "Cordilleras y sistemas montañosos",
+      "known_at": 11
+    },
+    {
+      "name": "Sierra de la Demanda",
+      "facet": "Cordilleras y sistemas montañosos",
+      "known_at": 12
+    },
+    {
+      "name": "Serranía de Ronda",
+      "facet": "Cordilleras y sistemas montañosos",
+      "known_at": 10
+    },
+    {
+      "name": "Macizo Galaico",
+      "facet": "Cordilleras y sistemas montañosos",
+      "known_at": 11
+    },
+    {
+      "name": "Montes Vascos",
+      "facet": "Cordilleras y sistemas montañosos",
+      "known_at": 11
+    },
+    {
+      "name": "Sierra de Gata",
+      "facet": "Cordilleras y sistemas montañosos",
+      "known_at": 12
+    },
+    {
+      "name": "Sierra de Albarracín",
+      "facet": "Cordilleras y sistemas montañosos",
+      "known_at": 12
+    },
+    {
+      "name": "Aneto",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 7
+    },
+    {
+      "name": "Veleta",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 9
+    },
+    {
+      "name": "Almanzor",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 10
+    },
+    {
+      "name": "Torre de Cerredo",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 13
+    },
+    {
+      "name": "Naranjo de Bulnes",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 8
+    },
+    {
+      "name": "Moncayo",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 10
+    },
+    {
+      "name": "Monte Perdido",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 9
+    },
+    {
+      "name": "Peñalara",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 10
+    },
+    {
+      "name": "Pico de Urbión",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 11
+    },
+    {
+      "name": "Posets",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 12
+    },
+    {
+      "name": "Pica d'Estats",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 12
+    },
+    {
+      "name": "Puigmal",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 12
+    },
+    {
+      "name": "Gorbea",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 11
+    },
+    {
+      "name": "Anboto",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 12
+    },
+    {
+      "name": "Bola del Mundo",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 10
+    },
+    {
+      "name": "La Maliciosa",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 13
+    },
+    {
+      "name": "Peña Ubiña",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 14,
+      "retired": "unaskable: Peña Ubiña es demasiado local para una foto reconocible, y el significado de «peña» sería una pregunta forzada."
+    },
+    {
+      "name": "Pico Tres Mares",
+      "facet": "Picos y cumbres más altos",
+      "known_at": 13
+    },
+    {
+      "name": "Cumbre Vieja",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 5
+    },
+    {
+      "name": "Volcán de Tajogaite",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 7
+    },
+    {
+      "name": "Roque Nublo",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 8
+    },
+    {
+      "name": "Pico de las Nieves",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 11
+    },
+    {
+      "name": "Roque de los Muchachos",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 9
+    },
+    {
+      "name": "Teneguía",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 12
+    },
+    {
+      "name": "Montaña de Tindaya",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 12
+    },
+    {
+      "name": "Puig Major",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 11
+    },
+    {
+      "name": "Las Cañadas del Teide",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 9
+    },
+    {
+      "name": "Pico Viejo",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 11
+    },
+    {
+      "name": "Volcán Tagoro",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 12
+    },
+    {
+      "name": "Zona volcánica de la Garrotxa",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 10
+    },
+    {
+      "name": "Volcán Croscat",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 12
+    },
+    {
+      "name": "Campo de Calatrava",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 13
+    },
+    {
+      "name": "Cabo de Gata",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 9
+    },
+    {
+      "name": "Jameos del Agua",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 9
+    },
+    {
+      "name": "Malpaís",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 12
+    },
+    {
+      "name": "Roque Bentayga",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 12
+    },
+    {
+      "name": "Volcán de San Antonio",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 12
+    },
+    {
+      "name": "Montaña de Guajara",
+      "facet": "Volcanes y montañas de las islas",
+      "known_at": 13
+    },
+    {
+      "name": "Lago de Sanabria",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 8
+    },
+    {
+      "name": "Lagunas de Ruidera",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 8
+    },
+    {
+      "name": "Tablas de Daimiel",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 9
+    },
+    {
+      "name": "Laguna de Gallocanta",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 11
+    },
+    {
+      "name": "Lago de Enol",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 10
+    },
+    {
+      "name": "Lago de la Ercina",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 11
+    },
+    {
+      "name": "Lago de Banyoles",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 10
+    },
+    {
+      "name": "Laguna de Fuente de Piedra",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 11
+    },
+    {
+      "name": "Laguna Negra",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 11
+    },
+    {
+      "name": "Laguna de Peñalara",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 12
+    },
+    {
+      "name": "Lagunas de Villafáfila",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 13
+    },
+    {
+      "name": "Embalse de Alcántara",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 12
+    },
+    {
+      "name": "Embalse de la Serena",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 12
+    },
+    {
+      "name": "Embalse de Mequinenza",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 12
+    },
+    {
+      "name": "Embalse de Riaño",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 11
+    },
+    {
+      "name": "Pantano de Sau",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 11
+    },
+    {
+      "name": "Marismas del Odiel",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 13
+    },
+    {
+      "name": "Ibón",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 11
+    },
+    {
+      "name": "Pantano",
+      "facet": "Lagos, lagunas, embalses y humedales",
+      "known_at": 6
+    },
+    {
+      "name": "Doñana",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 5
+    },
+    {
+      "name": "Parque Nacional de Ordesa y Monte Perdido",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 8
+    },
+    {
+      "name": "Aigüestortes i Estany de Sant Maurici",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 11
+    },
+    {
+      "name": "Monfragüe",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 9
+    },
+    {
+      "name": "Cabañeros",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 11
+    },
+    {
+      "name": "Parque Nacional de la Sierra de Guadarrama",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 10
+    },
+    {
+      "name": "Garajonay",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 10
+    },
+    {
+      "name": "Caldera de Taburiente",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 9
+    },
+    {
+      "name": "Parque Nacional de la Sierra de las Nieves",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 12
+    },
+    {
+      "name": "Sierras de Cazorla, Segura y Las Villas",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 9
+    },
+    {
+      "name": "Parque Natural del Alto Tajo",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 12
+    },
+    {
+      "name": "Urbasa y Andía",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 12
+    },
+    {
+      "name": "Somiedo",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 11
+    },
+    {
+      "name": "Muniellos",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 13
+    },
+    {
+      "name": "Montseny",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 11
+    },
+    {
+      "name": "Lince ibérico",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 6
+    },
+    {
+      "name": "Oso pardo cantábrico",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 7
+    },
+    {
+      "name": "Quebrantahuesos",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 10
+    },
+    {
+      "name": "Rebeco",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 9
+    },
+    {
+      "name": "Cabra montés",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 7
+    },
+    {
+      "name": "Águila imperial ibérica",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 8
+    },
+    {
+      "name": "Buitre leonado",
+      "facet": "Parques nacionales de montaña y río",
+      "known_at": 8
+    },
+    {
+      "name": "Cañón del Río Lobos",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 11
+    },
+    {
+      "name": "Ruta del Cares",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 9
+    },
+    {
+      "name": "Despeñaperros",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 9
+    },
+    {
+      "name": "Tajo de Ronda",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 8
+    },
+    {
+      "name": "Hoces del río Duratón",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 11
+    },
+    {
+      "name": "Salto del Nervión",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 11
+    },
+    {
+      "name": "Cascada de la Cola de Caballo",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 11
+    },
+    {
+      "name": "Monasterio de Piedra",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 8
+    },
+    {
+      "name": "Cuevas de Altamira",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 5
+    },
+    {
+      "name": "Cuevas del Drach",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 8
+    },
+    {
+      "name": "Cueva de Nerja",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 7
+    },
+    {
+      "name": "Cueva de El Soplao",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 10
+    },
+    {
+      "name": "Cuevas de Valporquero",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 12
+    },
+    {
+      "name": "Gruta de las Maravillas",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 11
+    },
+    {
+      "name": "Torcal de Antequera",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 9
+    },
+    {
+      "name": "Cañones del Sil",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 10
+    },
+    {
+      "name": "Desfiladero de la Hermida",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 12
+    },
+    {
+      "name": "Congost de Mont-rebei",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 11
+    },
+    {
+      "name": "Estalactita",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 6
+    },
+    {
+      "name": "Hoces del Cabriel",
+      "facet": "Cañones, gargantas, cascadas y cuevas",
+      "known_at": 13
+    },
+    {
+      "name": "Puente romano de Alcántara",
+      "facet": "Ciudades y puentes junto al río",
+      "known_at": 11
+    },
+    {
+      "name": "Puente romano de Córdoba",
+      "facet": "Ciudades y puentes junto al río",
+      "known_at": 8
+    },
+    {
+      "name": "Puente de Triana",
+      "facet": "Ciudades y puentes junto al río",
+      "known_at": 9
+    },
+    {
+      "name": "Puente de Vizcaya",
+      "facet": "Ciudades y puentes junto al río",
+      "known_at": 9
+    },
+    {
+      "name": "Puente de Piedra de Zaragoza",
+      "facet": "Ciudades y puentes junto al río",
+      "known_at": 10
+    },
+    {
+      "name": "Puente romano de Mérida",
+      "facet": "Ciudades y puentes junto al río",
+      "known_at": 9
+    },
+    {
+      "name": "Puente romano de Salamanca",
+      "facet": "Ciudades y puentes junto al río",
+      "known_at": 10
+    },
+    {
+      "name": "Puente Nuevo de Ronda",
+      "facet": "Ciudades y puentes junto al río",
+      "known_at": 8
+    },
+    {
+      "name": "Puente de San Martín",
+      "facet": "Ciudades y puentes junto al río",
+      "known_at": 11
+    },
+    {
+      "name": "Puente del Alamillo",
+      "facet": "Ciudades y puentes junto al río",
+      "known_at": 10
+    },
+    {
+      "name": "Puente la Reina",
+      "facet": "Ciudades y puentes junto al río",
+      "known_at": 10
+    },
+    {
+      "name": "Puente medieval de Frías",
+      "facet": "Ciudades y puentes junto al río",
+      "known_at": 13
+    },
+    {
+      "name": "Puente romano de Ourense",
+      "facet": "Ciudades y puentes junto al río",
+      "known_at": 12
+    },
+    {
+      "name": "Tortosa",
+      "facet": "Ciudades y puentes junto al río",
+      "known_at": 12
+    },
+    {
+      "name": "Madrid Río",
+      "facet": "Ciudades y puentes junto al río",
+      "known_at": 9
+    },
+    {
+      "name": "Jardín del Turia",
+      "facet": "Ciudades y puentes junto al río",
+      "known_at": 7
+    },
+    {
+      "name": "Batalla del Ebro",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 10
+    },
+    {
+      "name": "Tratado del Ebro",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 13
+    },
+    {
+      "name": "Viriato",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 9
+    },
+    {
+      "name": "Batalla de Roncesvalles",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 10
+    },
+    {
+      "name": "Muley Hacén",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 12
+    },
+    {
+      "name": "Suspiro del Moro",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 11
+    },
+    {
+      "name": "Guanches",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 8
+    },
+    {
+      "name": "Guayota",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 12
+    },
+    {
+      "name": "La Moreneta",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 9
+    },
+    {
+      "name": "Canigó",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 13
+    },
+    {
+      "name": "Trasvase Tajo-Segura",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 10
+    },
+    {
+      "name": "Xana",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 10
+    },
+    {
+      "name": "Lamia",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 12
+    },
+    {
+      "name": "Ojáncanu",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 12
+    },
+    {
+      "name": "Santa Compaña",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 9
+    },
+    {
+      "name": "Cueva de Montesinos",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 12
+    },
+    {
+      "name": "Tartessos",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 11
+    },
+    {
+      "name": "Columnas de Hércules",
+      "facet": "Ríos y montañas en la historia y las leyendas",
+      "known_at": 9
+    },
+    {
+      "name": "Aprovechando que el Pisuerga pasa por Valladolid",
+      "facet": "Nombres, refranes y canciones de ríos y montes",
+      "known_at": 9
+    },
+    {
+      "name": "Prefijo Guada-",
+      "facet": "Nombres, refranes y canciones de ríos y montes",
+      "known_at": 11
+    },
+    {
+      "name": "A río revuelto, ganancia de pescadores",
+      "facet": "Nombres, refranes y canciones de ríos y montes",
+      "known_at": 8
+    },
+    {
+      "name": "Agua pasada no mueve molino",
+      "facet": "Nombres, refranes y canciones de ríos y montes",
+      "known_at": 7
+    },
+    {
+      "name": "Iberia",
+      "facet": "Nombres, refranes y canciones de ríos y montes",
+      "known_at": 12
+    },
+    {
+      "name": "Desde Santurce a Bilbao",
+      "facet": "Nombres, refranes y canciones de ríos y montes",
+      "known_at": 10
+    },
+    {
+      "name": "La Virgen del Pilar dice",
+      "facet": "Nombres, refranes y canciones de ríos y montes",
+      "known_at": 11
+    },
+    {
+      "name": "Montañas nevadas",
+      "facet": "Nombres, refranes y canciones de ríos y montes",
+      "known_at": 12,
+      "retired": "unaskable: «Montañas nevadas» remite sobre todo a un himno político; ninguna opción (personas, fotos) da una pregunta limpia y familiar."
+    },
+    {
+      "name": "Nuestras vidas son los ríos",
+      "facet": "Nombres, refranes y canciones de ríos y montes",
+      "known_at": 11
+    },
+    {
+      "name": "Campos de Castilla",
+      "facet": "Nombres, refranes y canciones de ríos y montes",
+      "known_at": 11
+    },
+    {
+      "name": "Adiós ríos, adiós fontes",
+      "facet": "Nombres, refranes y canciones de ríos y montes",
+      "known_at": 12
+    },
+    {
+      "name": "Sierra",
+      "facet": "Nombres, refranes y canciones de ríos y montes",
+      "known_at": 8
+    },
+    {
+      "name": "Puerto de montaña",
+      "facet": "Nombres, refranes y canciones de ríos y montes",
+      "known_at": 7
+    },
+    {
+      "name": "Collado",
+      "facet": "Nombres, refranes y canciones de ríos y montes",
+      "known_at": 10
+    },
+    {
+      "name": "Cuando el Moncayo tiene montera",
+      "facet": "Nombres, refranes y canciones de ríos y montes",
+      "known_at": 13
+    },
+    {
+      "name": "Asturias (Albéniz)",
+      "facet": "Nombres, refranes y canciones de ríos y montes",
+      "known_at": 12
+    },
+    {
+      "name": "Descenso Internacional del Sella",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 9
+    },
+    {
+      "name": "Baqueira Beret",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 8
+    },
+    {
+      "name": "Pradollano",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 12
+    },
+    {
+      "name": "Formigal",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 10
+    },
+    {
+      "name": "Candanchú",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 11
+    },
+    {
+      "name": "La Molina",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 11
+    },
+    {
+      "name": "Rafting",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 7
+    },
+    {
+      "name": "Barranquismo",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 9
+    },
+    {
+      "name": "Piragüismo",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 6
+    },
+    {
+      "name": "Alto del Angliru",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 9
+    },
+    {
+      "name": "Zegama-Aizkorri",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 13
+    },
+    {
+      "name": "Regata de traineras de La Concha",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 11
+    },
+    {
+      "name": "Fiesta de la Trashumancia",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 10
+    },
+    {
+      "name": "Romería de la Virgen de la Cabeza",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 11
+    },
+    {
+      "name": "Edurne Pasaban",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 11
+    },
+    {
+      "name": "Kilian Jornet",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 11
+    },
+    {
+      "name": "Juanito Oiarzabal",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Soria",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 12
+    },
+    {
+      "name": "GR 11",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 11
+    },
+    {
+      "name": "Noguera Pallaresa",
+      "facet": "Deporte y fiestas en ríos y montañas",
+      "known_at": 12
+    }
+  ]
+}

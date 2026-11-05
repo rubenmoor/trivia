@@ -1,0 +1,792 @@
+{
+  "subcategory": "tapas",
+  "facets": [
+    "Tapas clásicas de bar",
+    "Pinchos vascos y de autor",
+    "Raciones y platos para compartir",
+    "Montaditos, bocadillos y pulguitas",
+    "Embutidos, jamón y quesos de barra",
+    "Encurtidos, aceitunas y banderillas",
+    "Bebidas de bar: caña, vermú y vinos",
+    "Costumbres: ir de tapas y el tapeo",
+    "Rutas y ciudades de tapas",
+    "Vocabulario y jerga del bar",
+    "Tipos de bares y establecimientos",
+    "Historia y origen de la tapa"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Patatas alioli",
+      "facet": "Tapas clásicas de bar",
+      "known_at": 4
+    },
+    {
+      "name": "Caracoles en salsa",
+      "facet": "Tapas clásicas de bar",
+      "known_at": 6
+    },
+    {
+      "name": "Riñones al jerez",
+      "facet": "Tapas clásicas de bar",
+      "known_at": 11
+    },
+    {
+      "name": "Txistorra",
+      "facet": "Pinchos vascos y de autor",
+      "known_at": 6
+    },
+    {
+      "name": "Pimiento del piquillo relleno",
+      "facet": "Pinchos vascos y de autor",
+      "known_at": 8
+    },
+    {
+      "name": "Txipirones en su tinta",
+      "facet": "Pinchos vascos y de autor",
+      "known_at": 8
+    },
+    {
+      "name": "Pintxo de anchoa",
+      "facet": "Pinchos vascos y de autor",
+      "known_at": 7
+    },
+    {
+      "name": "Txampi",
+      "facet": "Pinchos vascos y de autor",
+      "known_at": 11
+    },
+    {
+      "name": "Foie a la plancha",
+      "facet": "Pinchos vascos y de autor",
+      "known_at": 10
+    },
+    {
+      "name": "Bacalao ajoarriero",
+      "facet": "Pinchos vascos y de autor",
+      "known_at": 11
+    },
+    {
+      "name": "Cocina en miniatura",
+      "facet": "Pinchos vascos y de autor",
+      "known_at": 10
+    },
+    {
+      "name": "Tarta de queso de La Viña",
+      "facet": "Pinchos vascos y de autor",
+      "known_at": 12
+    },
+    {
+      "name": "Pintxo caliente",
+      "facet": "Pinchos vascos y de autor",
+      "known_at": 9
+    },
+    {
+      "name": "Palillo del pintxo",
+      "facet": "Pinchos vascos y de autor",
+      "known_at": 6
+    },
+    {
+      "name": "Rabas",
+      "facet": "Raciones y platos para compartir",
+      "known_at": 8
+    },
+    {
+      "name": "Navajas a la plancha",
+      "facet": "Raciones y platos para compartir",
+      "known_at": 7
+    },
+    {
+      "name": "Mejillones al vapor",
+      "facet": "Raciones y platos para compartir",
+      "known_at": 5
+    },
+    {
+      "name": "Zamburiñas",
+      "facet": "Raciones y platos para compartir",
+      "known_at": 10
+    },
+    {
+      "name": "Berberechos",
+      "facet": "Raciones y platos para compartir",
+      "known_at": 7
+    },
+    {
+      "name": "Lacón a la gallega",
+      "facet": "Raciones y platos para compartir",
+      "known_at": 10
+    },
+    {
+      "name": "Lagrimitas de pollo",
+      "facet": "Raciones y platos para compartir",
+      "known_at": 8
+    },
+    {
+      "name": "Alitas de pollo",
+      "facet": "Raciones y platos para compartir",
+      "known_at": 2
+    },
+    {
+      "name": "Tigres",
+      "facet": "Raciones y platos para compartir",
+      "known_at": 10
+    },
+    {
+      "name": "Espetos de sardinas",
+      "facet": "Raciones y platos para compartir",
+      "known_at": 8
+    },
+    {
+      "name": "Puntillitas",
+      "facet": "Raciones y platos para compartir",
+      "known_at": 10
+    },
+    {
+      "name": "Fritura malagueña",
+      "facet": "Raciones y platos para compartir",
+      "known_at": 10
+    },
+    {
+      "name": "Revuelto de setas",
+      "facet": "Raciones y platos para compartir",
+      "known_at": 7
+    },
+    {
+      "name": "Serranito",
+      "facet": "Montaditos, bocadillos y pulguitas",
+      "known_at": 8
+    },
+    {
+      "name": "Pepito de ternera",
+      "facet": "Montaditos, bocadillos y pulguitas",
+      "known_at": 7
+    },
+    {
+      "name": "Montadito de pringá",
+      "facet": "Montaditos, bocadillos y pulguitas",
+      "known_at": 10
+    },
+    {
+      "name": "Pulguita",
+      "facet": "Montaditos, bocadillos y pulguitas",
+      "known_at": 9
+    },
+    {
+      "name": "Bikini",
+      "facet": "Montaditos, bocadillos y pulguitas",
+      "known_at": 8
+    },
+    {
+      "name": "Bocadillo de tortilla",
+      "facet": "Montaditos, bocadillos y pulguitas",
+      "known_at": 2
+    },
+    {
+      "name": "Bocadillo de jamón",
+      "facet": "Montaditos, bocadillos y pulguitas",
+      "known_at": 1
+    },
+    {
+      "name": "Brascada",
+      "facet": "Montaditos, bocadillos y pulguitas",
+      "known_at": 11
+    },
+    {
+      "name": "Mollete",
+      "facet": "Montaditos, bocadillos y pulguitas",
+      "known_at": 8
+    },
+    {
+      "name": "Campero",
+      "facet": "Montaditos, bocadillos y pulguitas",
+      "known_at": 11
+    },
+    {
+      "name": "Bocadillo de lomo con pimientos",
+      "facet": "Montaditos, bocadillos y pulguitas",
+      "known_at": 6
+    },
+    {
+      "name": "Bocadillo de chorizo",
+      "facet": "Montaditos, bocadillos y pulguitas",
+      "known_at": 2
+    },
+    {
+      "name": "Pan de Viena",
+      "facet": "Montaditos, bocadillos y pulguitas",
+      "known_at": 9
+    },
+    {
+      "name": "Barra de pan",
+      "facet": "Montaditos, bocadillos y pulguitas",
+      "known_at": 1
+    },
+    {
+      "name": "Jamón de bellota",
+      "facet": "Embutidos, jamón y quesos de barra",
+      "known_at": 7
+    },
+    {
+      "name": "Pata negra",
+      "facet": "Embutidos, jamón y quesos de barra",
+      "known_at": 7
+    },
+    {
+      "name": "Salchichón",
+      "facet": "Embutidos, jamón y quesos de barra",
+      "known_at": 2
+    },
+    {
+      "name": "Queso Idiazabal",
+      "facet": "Embutidos, jamón y quesos de barra",
+      "known_at": 11
+    },
+    {
+      "name": "Queso de Mahón",
+      "facet": "Embutidos, jamón y quesos de barra",
+      "known_at": 10
+    },
+    {
+      "name": "Cortador de jamón",
+      "facet": "Embutidos, jamón y quesos de barra",
+      "known_at": 7
+    },
+    {
+      "name": "Jamonero",
+      "facet": "Embutidos, jamón y quesos de barra",
+      "known_at": 6
+    },
+    {
+      "name": "Banderilla",
+      "facet": "Encurtidos, aceitunas y banderillas",
+      "known_at": 7
+    },
+    {
+      "name": "Aceitunas rellenas de anchoa",
+      "facet": "Encurtidos, aceitunas y banderillas",
+      "known_at": 3
+    },
+    {
+      "name": "Aceituna manzanilla",
+      "facet": "Encurtidos, aceitunas y banderillas",
+      "known_at": 8
+    },
+    {
+      "name": "Aceituna gordal",
+      "facet": "Encurtidos, aceitunas y banderillas",
+      "known_at": 10
+    },
+    {
+      "name": "Aceituna hojiblanca",
+      "facet": "Encurtidos, aceitunas y banderillas",
+      "known_at": 11
+    },
+    {
+      "name": "Aceitunas aliñadas",
+      "facet": "Encurtidos, aceitunas y banderillas",
+      "known_at": 6
+    },
+    {
+      "name": "Aceituna negra",
+      "facet": "Encurtidos, aceitunas y banderillas",
+      "known_at": 2
+    },
+    {
+      "name": "Pepinillos en vinagre",
+      "facet": "Encurtidos, aceitunas y banderillas",
+      "known_at": 2
+    },
+    {
+      "name": "Altramuces",
+      "facet": "Encurtidos, aceitunas y banderillas",
+      "known_at": 8
+    },
+    {
+      "name": "Cebolletas en vinagre",
+      "facet": "Encurtidos, aceitunas y banderillas",
+      "known_at": 5
+    },
+    {
+      "name": "Guindilla de Ibarra",
+      "facet": "Encurtidos, aceitunas y banderillas",
+      "known_at": 11
+    },
+    {
+      "name": "Alcaparrones",
+      "facet": "Encurtidos, aceitunas y banderillas",
+      "known_at": 11
+    },
+    {
+      "name": "Hueso de aceituna",
+      "facet": "Encurtidos, aceitunas y banderillas",
+      "known_at": 2
+    },
+    {
+      "name": "Tercio",
+      "facet": "Bebidas de bar: caña, vermú y vinos",
+      "known_at": 8
+    },
+    {
+      "name": "Quinto",
+      "facet": "Bebidas de bar: caña, vermú y vinos",
+      "known_at": 8
+    },
+    {
+      "name": "Sangría",
+      "facet": "Bebidas de bar: caña, vermú y vinos",
+      "known_at": 4
+    },
+    {
+      "name": "Rebujito",
+      "facet": "Bebidas de bar: caña, vermú y vinos",
+      "known_at": 10
+    },
+    {
+      "name": "Txakoli",
+      "facet": "Bebidas de bar: caña, vermú y vinos",
+      "known_at": 11
+    },
+    {
+      "name": "Vino fino",
+      "facet": "Bebidas de bar: caña, vermú y vinos",
+      "known_at": 11
+    },
+    {
+      "name": "Manzanilla de Sanlúcar",
+      "facet": "Bebidas de bar: caña, vermú y vinos",
+      "known_at": 11
+    },
+    {
+      "name": "Ribera del Duero",
+      "facet": "Bebidas de bar: caña, vermú y vinos",
+      "known_at": 9
+    },
+    {
+      "name": "Albariño",
+      "facet": "Bebidas de bar: caña, vermú y vinos",
+      "known_at": 10
+    },
+    {
+      "name": "Cava",
+      "facet": "Bebidas de bar: caña, vermú y vinos",
+      "known_at": 7
+    },
+    {
+      "name": "Mosto",
+      "facet": "Bebidas de bar: caña, vermú y vinos",
+      "known_at": 5
+    },
+    {
+      "name": "Zurito",
+      "facet": "Bebidas de bar: caña, vermú y vinos",
+      "known_at": 12
+    },
+    {
+      "name": "Calimocho",
+      "facet": "Bebidas de bar: caña, vermú y vinos",
+      "known_at": 9
+    },
+    {
+      "name": "Carajillo",
+      "facet": "Bebidas de bar: caña, vermú y vinos",
+      "known_at": 10
+    },
+    {
+      "name": "Café cortado",
+      "facet": "Bebidas de bar: caña, vermú y vinos",
+      "known_at": 6
+    },
+    {
+      "name": "Pacharán",
+      "facet": "Bebidas de bar: caña, vermú y vinos",
+      "known_at": 10
+    },
+    {
+      "name": "Sifón",
+      "facet": "Bebidas de bar: caña, vermú y vinos",
+      "known_at": 9
+    },
+    {
+      "name": "Hora del vermú",
+      "facet": "Costumbres: ir de tapas y el tapeo",
+      "known_at": 8
+    },
+    {
+      "name": "Tapa gratis con la bebida",
+      "facet": "Costumbres: ir de tapas y el tapeo",
+      "known_at": 6
+    },
+    {
+      "name": "Pintxo-pote",
+      "facet": "Costumbres: ir de tapas y el tapeo",
+      "known_at": 11
+    },
+    {
+      "name": "Txikiteo",
+      "facet": "Costumbres: ir de tapas y el tapeo",
+      "known_at": 12
+    },
+    {
+      "name": "Servilletas en el suelo",
+      "facet": "Costumbres: ir de tapas y el tapeo",
+      "known_at": 8
+    },
+    {
+      "name": "Pelearse por pagar la cuenta",
+      "facet": "Costumbres: ir de tapas y el tapeo",
+      "known_at": 5
+    },
+    {
+      "name": "Hamaiketako",
+      "facet": "Costumbres: ir de tapas y el tapeo",
+      "known_at": 13
+    },
+    {
+      "name": "Aperitivo",
+      "facet": "Costumbres: ir de tapas y el tapeo",
+      "known_at": 5
+    },
+    {
+      "name": "Tardeo",
+      "facet": "Costumbres: ir de tapas y el tapeo",
+      "known_at": 10
+    },
+    {
+      "name": "Contar los palillos para pagar",
+      "facet": "Costumbres: ir de tapas y el tapeo",
+      "known_at": 10
+    },
+    {
+      "name": "Terraceo",
+      "facet": "Costumbres: ir de tapas y el tapeo",
+      "known_at": 9
+    },
+    {
+      "name": "Almuerzo valenciano",
+      "facet": "Costumbres: ir de tapas y el tapeo",
+      "known_at": 10
+    },
+    {
+      "name": "Domingo de vermú",
+      "facet": "Costumbres: ir de tapas y el tapeo",
+      "known_at": 9
+    },
+    {
+      "name": "Barrio Húmedo",
+      "facet": "Rutas y ciudades de tapas",
+      "known_at": 11
+    },
+    {
+      "name": "Parte Vieja de San Sebastián",
+      "facet": "Rutas y ciudades de tapas",
+      "known_at": 10
+    },
+    {
+      "name": "La Latina",
+      "facet": "Rutas y ciudades de tapas",
+      "known_at": 9
+    },
+    {
+      "name": "Cava Baja",
+      "facet": "Rutas y ciudades de tapas",
+      "known_at": 12
+    },
+    {
+      "name": "El Tubo de Zaragoza",
+      "facet": "Rutas y ciudades de tapas",
+      "known_at": 12
+    },
+    {
+      "name": "Concurso Nacional de Pinchos y Tapas",
+      "facet": "Rutas y ciudades de tapas",
+      "known_at": 12
+    },
+    {
+      "name": "Mercado de San Miguel",
+      "facet": "Rutas y ciudades de tapas",
+      "known_at": 10
+    },
+    {
+      "name": "Rúa do Franco",
+      "facet": "Rutas y ciudades de tapas",
+      "known_at": 13
+    },
+    {
+      "name": "Ración",
+      "facet": "Vocabulario y jerga del bar",
+      "known_at": 4
+    },
+    {
+      "name": "Media ración",
+      "facet": "Vocabulario y jerga del bar",
+      "known_at": 6
+    },
+    {
+      "name": "Barra",
+      "facet": "Vocabulario y jerga del bar",
+      "known_at": 3
+    },
+    {
+      "name": "Marchando",
+      "facet": "Vocabulario y jerga del bar",
+      "known_at": 7
+    },
+    {
+      "name": "Invita la casa",
+      "facet": "Vocabulario y jerga del bar",
+      "known_at": 6
+    },
+    {
+      "name": "Bote",
+      "facet": "Vocabulario y jerga del bar",
+      "known_at": 7
+    },
+    {
+      "name": "Consumición",
+      "facet": "Vocabulario y jerga del bar",
+      "known_at": 8
+    },
+    {
+      "name": "Tirar una caña",
+      "facet": "Vocabulario y jerga del bar",
+      "known_at": 8
+    },
+    {
+      "name": "Chupito",
+      "facet": "Vocabulario y jerga del bar",
+      "known_at": 8
+    },
+    {
+      "name": "La cuenta",
+      "facet": "Vocabulario y jerga del bar",
+      "known_at": 2
+    },
+    {
+      "name": "Pizarra",
+      "facet": "Vocabulario y jerga del bar",
+      "known_at": 5
+    },
+    {
+      "name": "Lo de siempre",
+      "facet": "Vocabulario y jerga del bar",
+      "known_at": 7
+    },
+    {
+      "name": "Espuma",
+      "facet": "Vocabulario y jerga del bar",
+      "known_at": 5
+    },
+    {
+      "name": "Mostrador",
+      "facet": "Vocabulario y jerga del bar",
+      "known_at": 5
+    },
+    {
+      "name": "Sin alcohol",
+      "facet": "Vocabulario y jerga del bar",
+      "known_at": 4
+    },
+    {
+      "name": "Taberna",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 5
+    },
+    {
+      "name": "Mesón",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 7
+    },
+    {
+      "name": "Tasca",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 8
+    },
+    {
+      "name": "Bodega",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 7
+    },
+    {
+      "name": "Cervecería",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 5
+    },
+    {
+      "name": "Sidrería",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 8
+    },
+    {
+      "name": "Txoko",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 12
+    },
+    {
+      "name": "Marisquería",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 6
+    },
+    {
+      "name": "Freiduría",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 9
+    },
+    {
+      "name": "Churrería",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 3
+    },
+    {
+      "name": "Gastrobar",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 10
+    },
+    {
+      "name": "Venta",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 10
+    },
+    {
+      "name": "Abacería",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 13
+    },
+    {
+      "name": "Ultramarinos",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 10
+    },
+    {
+      "name": "Asador",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 8
+    },
+    {
+      "name": "Pulpería",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 9
+    },
+    {
+      "name": "Terraza",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 3
+    },
+    {
+      "name": "Bar de barrio",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 4
+    },
+    {
+      "name": "Casa de comidas",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 10
+    },
+    {
+      "name": "Cafetería",
+      "facet": "Tipos de bares y establecimientos",
+      "known_at": 3
+    },
+    {
+      "name": "Tapar el vaso",
+      "facet": "Historia y origen de la tapa",
+      "known_at": 7
+    },
+    {
+      "name": "Rita Hayworth",
+      "facet": "Historia y origen de la tapa",
+      "known_at": 12
+    },
+    {
+      "name": "Casa Vallés",
+      "facet": "Historia y origen de la tapa",
+      "known_at": 14
+    },
+    {
+      "name": "El Rinconcillo",
+      "facet": "Historia y origen de la tapa",
+      "known_at": 14
+    },
+    {
+      "name": "Casa Labra",
+      "facet": "Historia y origen de la tapa",
+      "known_at": 14
+    },
+    {
+      "name": "Lucien Olivier",
+      "facet": "Historia y origen de la tapa",
+      "known_at": 14
+    },
+    {
+      "name": "Ventas de camino",
+      "facet": "Historia y origen de la tapa",
+      "known_at": 11
+    },
+    {
+      "name": "Moscas en el vino",
+      "facet": "Historia y origen de la tapa",
+      "known_at": 8
+    },
+    {
+      "name": "Loncha de jamón sobre el vaso",
+      "facet": "Historia y origen de la tapa",
+      "known_at": 9
+    },
+    {
+      "name": "Patata llegada de América",
+      "facet": "Historia y origen de la tapa",
+      "known_at": 7
+    },
+    {
+      "name": "Bechamel",
+      "facet": "Historia y origen de la tapa",
+      "known_at": 8
+    },
+    {
+      "name": "Día Mundial de la Tapa",
+      "facet": "Historia y origen de la tapa",
+      "known_at": 11
+    }
+  ]
+}

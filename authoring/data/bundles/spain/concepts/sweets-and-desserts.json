@@ -1,0 +1,887 @@
+{
+  "subcategory": "sweets-and-desserts",
+  "facets": [
+    "Dulces de Navidad",
+    "Dulces de Semana Santa y Cuaresma",
+    "Dulces de fiestas y santos",
+    "Postres de cuchara caseros",
+    "Bollería y desayunos",
+    "Dulces de convento",
+    "Tartas y bizcochos regionales",
+    "Frutas, mieles y frutos secos",
+    "Helados, horchata y refrescos dulces",
+    "Golosinas y chucherías de siempre",
+    "Historia y herencia andalusí del dulce",
+    "Dichos y palabras dulces"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Polvorón",
+      "facet": "Dulces de Navidad",
+      "known_at": 3
+    },
+    {
+      "name": "Mantecado de Estepa",
+      "facet": "Dulces de Navidad",
+      "known_at": 9
+    },
+    {
+      "name": "Peladillas",
+      "facet": "Dulces de Navidad",
+      "known_at": 6
+    },
+    {
+      "name": "Turrón de yema tostada",
+      "facet": "Dulces de Navidad",
+      "known_at": 6
+    },
+    {
+      "name": "Figuritas de mazapán",
+      "facet": "Dulces de Navidad",
+      "known_at": 4
+    },
+    {
+      "name": "Guirlache",
+      "facet": "Dulces de Navidad",
+      "known_at": 10
+    },
+    {
+      "name": "Neula",
+      "facet": "Dulces de Navidad",
+      "known_at": 10
+    },
+    {
+      "name": "Pan de Cádiz",
+      "facet": "Dulces de Navidad",
+      "known_at": 12
+    },
+    {
+      "name": "Carbón dulce",
+      "facet": "Dulces de Navidad",
+      "known_at": 2
+    },
+    {
+      "name": "Turrón de Agramunt",
+      "facet": "Dulces de Navidad",
+      "known_at": 13
+    },
+    {
+      "name": "Sopa de almendra",
+      "facet": "Dulces de Navidad",
+      "known_at": 13
+    },
+    {
+      "name": "Turrón de chocolate crujiente",
+      "facet": "Dulces de Navidad",
+      "known_at": 2
+    },
+    {
+      "name": "Flores manchegas",
+      "facet": "Dulces de Semana Santa y Cuaresma",
+      "known_at": 11
+    },
+    {
+      "name": "Bartolillos",
+      "facet": "Dulces de Semana Santa y Cuaresma",
+      "known_at": 13
+    },
+    {
+      "name": "Panquemao",
+      "facet": "Dulces de Semana Santa y Cuaresma",
+      "known_at": 12
+    },
+    {
+      "name": "Orejas de carnaval",
+      "facet": "Dulces de Semana Santa y Cuaresma",
+      "known_at": 10
+    },
+    {
+      "name": "Hojuelas",
+      "facet": "Dulces de Semana Santa y Cuaresma",
+      "known_at": 11
+    },
+    {
+      "name": "Roscos fritos",
+      "facet": "Dulces de Semana Santa y Cuaresma",
+      "known_at": 6
+    },
+    {
+      "name": "Huevo de Pascua de chocolate",
+      "facet": "Dulces de Semana Santa y Cuaresma",
+      "known_at": 2
+    },
+    {
+      "name": "Rosquillas de anís",
+      "facet": "Dulces de Semana Santa y Cuaresma",
+      "known_at": 7
+    },
+    {
+      "name": "Gañotes",
+      "facet": "Dulces de Semana Santa y Cuaresma",
+      "known_at": 14
+    },
+    {
+      "name": "Huesillos",
+      "facet": "Dulces de Semana Santa y Cuaresma",
+      "known_at": 14
+    },
+    {
+      "name": "Rosquillas tontas y listas",
+      "facet": "Dulces de fiestas y santos",
+      "known_at": 9
+    },
+    {
+      "name": "Coca de San Juan",
+      "facet": "Dulces de fiestas y santos",
+      "known_at": 9
+    },
+    {
+      "name": "Buñuelos de calabaza",
+      "facet": "Dulces de fiestas y santos",
+      "known_at": 10
+    },
+    {
+      "name": "Puches",
+      "facet": "Dulces de fiestas y santos",
+      "known_at": 13
+    },
+    {
+      "name": "Panecillos de San Antón",
+      "facet": "Dulces de fiestas y santos",
+      "known_at": 13
+    },
+    {
+      "name": "Coca de llardons",
+      "facet": "Dulces de fiestas y santos",
+      "known_at": 13
+    },
+    {
+      "name": "Tarta de San Marcos",
+      "facet": "Dulces de fiestas y santos",
+      "known_at": 12
+    },
+    {
+      "name": "Frixuelos",
+      "facet": "Dulces de fiestas y santos",
+      "known_at": 11
+    },
+    {
+      "name": "Barquillos",
+      "facet": "Dulces de fiestas y santos",
+      "known_at": 6
+    },
+    {
+      "name": "Paparajotes",
+      "facet": "Dulces de fiestas y santos",
+      "known_at": 12
+    },
+    {
+      "name": "Algodón de azúcar",
+      "facet": "Dulces de fiestas y santos",
+      "known_at": 1
+    },
+    {
+      "name": "Castañas asadas",
+      "facet": "Dulces de fiestas y santos",
+      "known_at": 3
+    },
+    {
+      "name": "Natillas",
+      "facet": "Postres de cuchara caseros",
+      "known_at": 2
+    },
+    {
+      "name": "Flan de huevo",
+      "facet": "Postres de cuchara caseros",
+      "known_at": 1
+    },
+    {
+      "name": "Cuajada",
+      "facet": "Postres de cuchara caseros",
+      "known_at": 8
+    },
+    {
+      "name": "Mel i mató",
+      "facet": "Postres de cuchara caseros",
+      "known_at": 12
+    },
+    {
+      "name": "Intxaursaltsa",
+      "facet": "Postres de cuchara caseros",
+      "known_at": 14
+    },
+    {
+      "name": "Peras al vino",
+      "facet": "Postres de cuchara caseros",
+      "known_at": 9
+    },
+    {
+      "name": "Manzanas asadas",
+      "facet": "Postres de cuchara caseros",
+      "known_at": 5
+    },
+    {
+      "name": "Fresas con nata",
+      "facet": "Postres de cuchara caseros",
+      "known_at": 2
+    },
+    {
+      "name": "Crema pastelera",
+      "facet": "Postres de cuchara caseros",
+      "known_at": 6
+    },
+    {
+      "name": "Melocotón en almíbar",
+      "facet": "Postres de cuchara caseros",
+      "known_at": 5
+    },
+    {
+      "name": "Arnadí",
+      "facet": "Postres de cuchara caseros",
+      "known_at": 15
+    },
+    {
+      "name": "Pudin de pan",
+      "facet": "Postres de cuchara caseros",
+      "known_at": 8
+    },
+    {
+      "name": "Compota de manzana",
+      "facet": "Postres de cuchara caseros",
+      "known_at": 5
+    },
+    {
+      "name": "Porras",
+      "facet": "Bollería y desayunos",
+      "known_at": 5
+    },
+    {
+      "name": "Magdalena",
+      "facet": "Bollería y desayunos",
+      "known_at": 1
+    },
+    {
+      "name": "Sobao pasiego",
+      "facet": "Bollería y desayunos",
+      "known_at": 7
+    },
+    {
+      "name": "Napolitana de chocolate",
+      "facet": "Bollería y desayunos",
+      "known_at": 2
+    },
+    {
+      "name": "Palmera de chocolate",
+      "facet": "Bollería y desayunos",
+      "known_at": 2
+    },
+    {
+      "name": "Cruasán",
+      "facet": "Bollería y desayunos",
+      "known_at": 1
+    },
+    {
+      "name": "Suizo",
+      "facet": "Bollería y desayunos",
+      "known_at": 8
+    },
+    {
+      "name": "Caracola",
+      "facet": "Bollería y desayunos",
+      "known_at": 6
+    },
+    {
+      "name": "Chocolate a la taza",
+      "facet": "Bollería y desayunos",
+      "known_at": 3
+    },
+    {
+      "name": "Galletas María",
+      "facet": "Bollería y desayunos",
+      "known_at": 2
+    },
+    {
+      "name": "Bollicao",
+      "facet": "Bollería y desayunos",
+      "known_at": 3
+    },
+    {
+      "name": "Torta de aceite",
+      "facet": "Bollería y desayunos",
+      "known_at": 9
+    },
+    {
+      "name": "Medias noches",
+      "facet": "Bollería y desayunos",
+      "known_at": 7
+    },
+    {
+      "name": "Picatostes",
+      "facet": "Bollería y desayunos",
+      "known_at": 10
+    },
+    {
+      "name": "Mallorquina",
+      "facet": "Bollería y desayunos",
+      "known_at": 10
+    },
+    {
+      "name": "Yemas de San Leandro",
+      "facet": "Dulces de convento",
+      "known_at": 14
+    },
+    {
+      "name": "Torno de convento",
+      "facet": "Dulces de convento",
+      "known_at": 11
+    },
+    {
+      "name": "Amarguillos",
+      "facet": "Dulces de convento",
+      "known_at": 13
+    },
+    {
+      "name": "Perrunillas",
+      "facet": "Dulces de convento",
+      "known_at": 12
+    },
+    {
+      "name": "Huevos moles",
+      "facet": "Dulces de convento",
+      "known_at": 14
+    },
+    {
+      "name": "Huevos hilados",
+      "facet": "Dulces de convento",
+      "known_at": 13
+    },
+    {
+      "name": "Cortadillos",
+      "facet": "Dulces de convento",
+      "known_at": 13
+    },
+    {
+      "name": "Sequillos",
+      "facet": "Dulces de convento",
+      "known_at": 13
+    },
+    {
+      "name": "Almendrados",
+      "facet": "Dulces de convento",
+      "known_at": 11
+    },
+    {
+      "name": "Suspiros de monja",
+      "facet": "Dulces de convento",
+      "known_at": 12
+    },
+    {
+      "name": "Monjas clarisas",
+      "facet": "Dulces de convento",
+      "known_at": 11
+    },
+    {
+      "name": "Carmelitas descalzas",
+      "facet": "Dulces de convento",
+      "known_at": 12
+    },
+    {
+      "name": "Almendras garrapiñadas de Alcalá",
+      "facet": "Dulces de convento",
+      "known_at": 12
+    },
+    {
+      "name": "Brazo de gitano",
+      "facet": "Tartas y bizcochos regionales",
+      "known_at": 4
+    },
+    {
+      "name": "Bizcocho borracho",
+      "facet": "Tartas y bizcochos regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Pionono",
+      "facet": "Tartas y bizcochos regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Tarta al whisky",
+      "facet": "Tartas y bizcochos regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Pastel vasco",
+      "facet": "Tartas y bizcochos regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Flaó",
+      "facet": "Tartas y bizcochos regionales",
+      "known_at": 14
+    },
+    {
+      "name": "Gató de almendra",
+      "facet": "Tartas y bizcochos regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Tarta de la abuela",
+      "facet": "Tartas y bizcochos regionales",
+      "known_at": 4
+    },
+    {
+      "name": "Ponche segoviano",
+      "facet": "Tartas y bizcochos regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Carbayones",
+      "facet": "Tartas y bizcochos regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Pastel cordobés",
+      "facet": "Tartas y bizcochos regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Bizcocho de yogur",
+      "facet": "Tartas y bizcochos regionales",
+      "known_at": 3
+    },
+    {
+      "name": "Tortas de Alcázar",
+      "facet": "Tartas y bizcochos regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Fardelejos",
+      "facet": "Tartas y bizcochos regionales",
+      "known_at": 15
+    },
+    {
+      "name": "Dulce de membrillo",
+      "facet": "Frutas, mieles y frutos secos",
+      "known_at": 5
+    },
+    {
+      "name": "Cabello de ángel",
+      "facet": "Frutas, mieles y frutos secos",
+      "known_at": 9
+    },
+    {
+      "name": "Pan de higo",
+      "facet": "Frutas, mieles y frutos secos",
+      "known_at": 11
+    },
+    {
+      "name": "Arrope",
+      "facet": "Frutas, mieles y frutos secos",
+      "known_at": 13
+    },
+    {
+      "name": "Miel de caña",
+      "facet": "Frutas, mieles y frutos secos",
+      "known_at": 11
+    },
+    {
+      "name": "Miel de la Alcarria",
+      "facet": "Frutas, mieles y frutos secos",
+      "known_at": 12
+    },
+    {
+      "name": "Almendra marcona",
+      "facet": "Frutas, mieles y frutos secos",
+      "known_at": 13
+    },
+    {
+      "name": "Dátiles de Elche",
+      "facet": "Frutas, mieles y frutos secos",
+      "known_at": 11
+    },
+    {
+      "name": "Cerezas del Jerte",
+      "facet": "Frutas, mieles y frutos secos",
+      "known_at": 10
+    },
+    {
+      "name": "Pasas de Málaga",
+      "facet": "Frutas, mieles y frutos secos",
+      "known_at": 11
+    },
+    {
+      "name": "Chirimoya",
+      "facet": "Frutas, mieles y frutos secos",
+      "known_at": 7
+    },
+    {
+      "name": "Piñones",
+      "facet": "Frutas, mieles y frutos secos",
+      "known_at": 6
+    },
+    {
+      "name": "Uvas de la suerte",
+      "facet": "Frutas, mieles y frutos secos",
+      "known_at": 2
+    },
+    {
+      "name": "Melocotón de Calanda",
+      "facet": "Frutas, mieles y frutos secos",
+      "known_at": 13
+    },
+    {
+      "name": "Postre de músico",
+      "facet": "Frutas, mieles y frutos secos",
+      "known_at": 12
+    },
+    {
+      "name": "Higo chumbo",
+      "facet": "Frutas, mieles y frutos secos",
+      "known_at": 9
+    },
+    {
+      "name": "Avellana de Reus",
+      "facet": "Frutas, mieles y frutos secos",
+      "known_at": 14
+    },
+    {
+      "name": "Horchata de chufa",
+      "facet": "Helados, horchata y refrescos dulces",
+      "known_at": 4
+    },
+    {
+      "name": "Granizado de limón",
+      "facet": "Helados, horchata y refrescos dulces",
+      "known_at": 3
+    },
+    {
+      "name": "Leche merengada",
+      "facet": "Helados, horchata y refrescos dulces",
+      "known_at": 9
+    },
+    {
+      "name": "Helado de turrón",
+      "facet": "Helados, horchata y refrescos dulces",
+      "known_at": 6
+    },
+    {
+      "name": "Agua de cebada",
+      "facet": "Helados, horchata y refrescos dulces",
+      "known_at": 13
+    },
+    {
+      "name": "Blanco y negro",
+      "facet": "Helados, horchata y refrescos dulces",
+      "known_at": 13
+    },
+    {
+      "name": "Helado de mantecado",
+      "facet": "Helados, horchata y refrescos dulces",
+      "known_at": 8
+    },
+    {
+      "name": "Gaseosa",
+      "facet": "Helados, horchata y refrescos dulces",
+      "known_at": 4
+    },
+    {
+      "name": "Zarzaparrilla",
+      "facet": "Helados, horchata y refrescos dulces",
+      "known_at": 12
+    },
+    {
+      "name": "Corte de helado",
+      "facet": "Helados, horchata y refrescos dulces",
+      "known_at": 4
+    },
+    {
+      "name": "Cucurucho",
+      "facet": "Helados, horchata y refrescos dulces",
+      "known_at": 1
+    },
+    {
+      "name": "Polo de hielo",
+      "facet": "Helados, horchata y refrescos dulces",
+      "known_at": 1
+    },
+    {
+      "name": "Polo Drácula",
+      "facet": "Helados, horchata y refrescos dulces",
+      "known_at": 5
+    },
+    {
+      "name": "Sorbete de limón",
+      "facet": "Helados, horchata y refrescos dulces",
+      "known_at": 6
+    },
+    {
+      "name": "Café del tiempo",
+      "facet": "Helados, horchata y refrescos dulces",
+      "known_at": 13
+    },
+    {
+      "name": "Peta Zetas",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 2
+    },
+    {
+      "name": "Pantera Rosa",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 4
+    },
+    {
+      "name": "Regaliz",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 3
+    },
+    {
+      "name": "Pipas",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 2
+    },
+    {
+      "name": "Kojak",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 10
+    },
+    {
+      "name": "Conguitos",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 3
+    },
+    {
+      "name": "Huesitos",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 3
+    },
+    {
+      "name": "Chicle Cheiw",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 10
+    },
+    {
+      "name": "Sugus",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 5
+    },
+    {
+      "name": "Caramelos de violeta",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 10
+    },
+    {
+      "name": "Nubes",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 1
+    },
+    {
+      "name": "Pica pica",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 5
+    },
+    {
+      "name": "Piruleta",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 2
+    },
+    {
+      "name": "Lacasitos",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 2
+    },
+    {
+      "name": "Phoskitos",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 5
+    },
+    {
+      "name": "Tigretón",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 8
+    },
+    {
+      "name": "Juanola",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 9
+    },
+    {
+      "name": "Palotes",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 10
+    },
+    {
+      "name": "Fresquitos",
+      "facet": "Golosinas y chucherías de siempre",
+      "known_at": 5
+    },
+    {
+      "name": "Alfajor de Medina Sidonia",
+      "facet": "Historia y herencia andalusí del dulce",
+      "known_at": 12
+    },
+    {
+      "name": "Alajú",
+      "facet": "Historia y herencia andalusí del dulce",
+      "known_at": 14
+    },
+    {
+      "name": "Bienmesabe",
+      "facet": "Historia y herencia andalusí del dulce",
+      "known_at": 13
+    },
+    {
+      "name": "Almojábanas",
+      "facet": "Historia y herencia andalusí del dulce",
+      "known_at": 14
+    },
+    {
+      "name": "Alfeñique",
+      "facet": "Historia y herencia andalusí del dulce",
+      "known_at": 14
+    },
+    {
+      "name": "Azúcar de caña",
+      "facet": "Historia y herencia andalusí del dulce",
+      "known_at": 6
+    },
+    {
+      "name": "Agua de azahar",
+      "facet": "Historia y herencia andalusí del dulce",
+      "known_at": 10
+    },
+    {
+      "name": "Ajonjolí",
+      "facet": "Historia y herencia andalusí del dulce",
+      "known_at": 11
+    },
+    {
+      "name": "Canela",
+      "facet": "Historia y herencia andalusí del dulce",
+      "known_at": 3
+    },
+    {
+      "name": "Naranja amarga",
+      "facet": "Historia y herencia andalusí del dulce",
+      "known_at": 10
+    },
+    {
+      "name": "Alcorza",
+      "facet": "Historia y herencia andalusí del dulce",
+      "known_at": 15
+    },
+    {
+      "name": "Jarabe",
+      "facet": "Historia y herencia andalusí del dulce",
+      "known_at": 5
+    },
+    {
+      "name": "A nadie le amarga un dulce",
+      "facet": "Dichos y palabras dulces",
+      "known_at": 7
+    },
+    {
+      "name": "Estar como un flan",
+      "facet": "Dichos y palabras dulces",
+      "known_at": 7
+    },
+    {
+      "name": "Ser la guinda del pastel",
+      "facet": "Dichos y palabras dulces",
+      "known_at": 8
+    },
+    {
+      "name": "Descubrir el pastel",
+      "facet": "Dichos y palabras dulces",
+      "known_at": 10
+    },
+    {
+      "name": "Media naranja",
+      "facet": "Dichos y palabras dulces",
+      "known_at": 6
+    },
+    {
+      "name": "Ser una perita en dulce",
+      "facet": "Dichos y palabras dulces",
+      "known_at": 11
+    },
+    {
+      "name": "Miel sobre hojuelas",
+      "facet": "Dichos y palabras dulces",
+      "known_at": 12
+    },
+    {
+      "name": "No comerse una rosca",
+      "facet": "Dichos y palabras dulces",
+      "known_at": 10
+    },
+    {
+      "name": "Pan comido",
+      "facet": "Dichos y palabras dulces",
+      "known_at": 5
+    },
+    {
+      "name": "Goloso",
+      "facet": "Dichos y palabras dulces",
+      "known_at": 4
+    },
+    {
+      "name": "Chuches",
+      "facet": "Dichos y palabras dulces",
+      "known_at": 1
+    },
+    {
+      "name": "Merienda",
+      "facet": "Dichos y palabras dulces",
+      "known_at": 1
+    },
+    {
+      "name": "Estar de uvas a peras",
+      "facet": "Dichos y palabras dulces",
+      "known_at": 12
+    }
+  ]
+}

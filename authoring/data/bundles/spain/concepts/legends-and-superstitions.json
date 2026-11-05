@@ -1,0 +1,580 @@
+{
+  "subcategory": "legends-and-superstitions",
+  "facets": [
+    "Seres de la mitología del norte",
+    "Brujas, meigas y aquelarres",
+    "Dragones, monstruos y gigantes",
+    "Encantadas, mouras y tesoros ocultos",
+    "Supersticiones del día a día",
+    "Rituales de Nochevieja y San Juan",
+    "Amuletos, mal de ojo y curanderos",
+    "Fantasmas y leyendas urbanas",
+    "Leyendas de amor y de ciudades",
+    "Héroes y leyendas de la historia",
+    "Milagros y leyendas religiosas",
+    "Personajes para asustar o premiar a niños"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 1,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Diañu burlón",
+      "facet": "Seres de la mitología del norte",
+      "known_at": 13
+    },
+    {
+      "name": "Ventolín",
+      "facet": "Seres de la mitología del norte",
+      "known_at": 14
+    },
+    {
+      "name": "Urco",
+      "facet": "Seres de la mitología del norte",
+      "known_at": 14
+    },
+    {
+      "name": "Sumicio",
+      "facet": "Seres de la mitología del norte",
+      "known_at": 15
+    },
+    {
+      "name": "Sorgina",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 12
+    },
+    {
+      "name": "Inquisición",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 8
+    },
+    {
+      "name": "Conxuro",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 11
+    },
+    {
+      "name": "Mandrágora",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 7
+    },
+    {
+      "name": "Macho cabrío",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 8
+    },
+    {
+      "name": "El aquelarre de Goya",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 11
+    },
+    {
+      "name": "María Soliña",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 14
+    },
+    {
+      "name": "Cueva de Salamanca",
+      "facet": "Brujas, meigas y aquelarres",
+      "known_at": 13
+    },
+    {
+      "name": "Hombre lobo de Allariz",
+      "facet": "Dragones, monstruos y gigantes",
+      "known_at": 12
+    },
+    {
+      "name": "Lobisome",
+      "facet": "Dragones, monstruos y gigantes",
+      "known_at": 11
+    },
+    {
+      "name": "Lagarto de la Magdalena",
+      "facet": "Dragones, monstruos y gigantes",
+      "known_at": 12
+    },
+    {
+      "name": "Lagarto de la catedral de Sevilla",
+      "facet": "Dragones, monstruos y gigantes",
+      "known_at": 12
+    },
+    {
+      "name": "Ayalga",
+      "facet": "Encantadas, mouras y tesoros ocultos",
+      "known_at": 13
+    },
+    {
+      "name": "Castro",
+      "facet": "Encantadas, mouras y tesoros ocultos",
+      "known_at": 9
+    },
+    {
+      "name": "Mámoa",
+      "facet": "Encantadas, mouras y tesoros ocultos",
+      "known_at": 13
+    },
+    {
+      "name": "Gallina de los pollitos de oro",
+      "facet": "Encantadas, mouras y tesoros ocultos",
+      "known_at": 11
+    },
+    {
+      "name": "Libro de San Cipriano",
+      "facet": "Encantadas, mouras y tesoros ocultos",
+      "known_at": 13
+    },
+    {
+      "name": "Tesoro de los templarios",
+      "facet": "Encantadas, mouras y tesoros ocultos",
+      "known_at": 9
+    },
+    {
+      "name": "Villaverde de Lucerna",
+      "facet": "Encantadas, mouras y tesoros ocultos",
+      "known_at": 14
+    },
+    {
+      "name": "Laguna de Antela",
+      "facet": "Encantadas, mouras y tesoros ocultos",
+      "known_at": 14
+    },
+    {
+      "name": "Cueva de Covadonga",
+      "facet": "Encantadas, mouras y tesoros ocultos",
+      "known_at": 9
+    },
+    {
+      "name": "Fuente encantada",
+      "facet": "Encantadas, mouras y tesoros ocultos",
+      "known_at": 6
+    },
+    {
+      "name": "Gato negro",
+      "facet": "Supersticiones del día a día",
+      "known_at": 3
+    },
+    {
+      "name": "Romper un espejo",
+      "facet": "Supersticiones del día a día",
+      "known_at": 4
+    },
+    {
+      "name": "Pasar debajo de una escalera",
+      "facet": "Supersticiones del día a día",
+      "known_at": 4
+    },
+    {
+      "name": "Derramar la sal",
+      "facet": "Supersticiones del día a día",
+      "known_at": 6
+    },
+    {
+      "name": "Abrir un paraguas en casa",
+      "facet": "Supersticiones del día a día",
+      "known_at": 5
+    },
+    {
+      "name": "Tocar madera",
+      "facet": "Supersticiones del día a día",
+      "known_at": 4,
+      "retired": "used_up: The existing question already contains the phrase «toco madera» and what it is for, so any new question about this custom can be answered from it."
+    },
+    {
+      "name": "Cruzar los dedos",
+      "facet": "Supersticiones del día a día",
+      "known_at": 2
+    },
+    {
+      "name": "Pan boca abajo",
+      "facet": "Supersticiones del día a día",
+      "known_at": 8
+    },
+    {
+      "name": "Levantarse con el pie izquierdo",
+      "facet": "Supersticiones del día a día",
+      "known_at": 5
+    },
+    {
+      "name": "Herradura",
+      "facet": "Supersticiones del día a día",
+      "known_at": 4
+    },
+    {
+      "name": "Trébol de cuatro hojas",
+      "facet": "Supersticiones del día a día",
+      "known_at": 2,
+      "retired": "used_up: The existing question already says the four-leaf clover brings luck, and that is what every option would ask."
+    },
+    {
+      "name": "Color amarillo en el teatro",
+      "facet": "Supersticiones del día a día",
+      "known_at": 11
+    },
+    {
+      "name": "Bolso en el suelo",
+      "facet": "Supersticiones del día a día",
+      "known_at": 9
+    },
+    {
+      "name": "Brindar con agua",
+      "facet": "Supersticiones del día a día",
+      "known_at": 9
+    },
+    {
+      "name": "Pitido en el oído",
+      "facet": "Supersticiones del día a día",
+      "known_at": 8
+    },
+    {
+      "name": "Picor en la mano",
+      "facet": "Supersticiones del día a día",
+      "known_at": 9
+    },
+    {
+      "name": "Número 13",
+      "facet": "Supersticiones del día a día",
+      "known_at": 4
+    },
+    {
+      "name": "Doce uvas",
+      "facet": "Rituales de Nochevieja y San Juan",
+      "known_at": 2
+    },
+    {
+      "name": "Campanadas de la Puerta del Sol",
+      "facet": "Rituales de Nochevieja y San Juan",
+      "known_at": 3
+    },
+    {
+      "name": "Entrar en el año con el pie derecho",
+      "facet": "Rituales de Nochevieja y San Juan",
+      "known_at": 7
+    },
+    {
+      "name": "Hoguera de San Juan",
+      "facet": "Rituales de Nochevieja y San Juan",
+      "known_at": 4
+    },
+    {
+      "name": "Saltar la hoguera",
+      "facet": "Rituales de Nochevieja y San Juan",
+      "known_at": 6
+    },
+    {
+      "name": "Nueve olas",
+      "facet": "Rituales de Nochevieja y San Juan",
+      "known_at": 10
+    },
+    {
+      "name": "Hogueras de Alicante",
+      "facet": "Rituales de Nochevieja y San Juan",
+      "known_at": 10
+    },
+    {
+      "name": "Verbena de San Juan",
+      "facet": "Rituales de Nochevieja y San Juan",
+      "known_at": 6
+    },
+    {
+      "name": "Flor del agua",
+      "facet": "Rituales de Nochevieja y San Juan",
+      "known_at": 13
+    },
+    {
+      "name": "Hierbas de San Juan",
+      "facet": "Rituales de Nochevieja y San Juan",
+      "known_at": 11
+    },
+    {
+      "name": "Sardinas de San Juan",
+      "facet": "Rituales de Nochevieja y San Juan",
+      "known_at": 10
+    },
+    {
+      "name": "Quemar deseos en papel",
+      "facet": "Rituales de Nochevieja y San Juan",
+      "known_at": 7
+    },
+    {
+      "name": "Uvas de la suerte de 1909",
+      "facet": "Rituales de Nochevieja y San Juan",
+      "known_at": 12
+    },
+    {
+      "name": "Higa",
+      "facet": "Amuletos, mal de ojo y curanderos",
+      "known_at": 12
+    },
+    {
+      "name": "Cuerno de la suerte",
+      "facet": "Amuletos, mal de ojo y curanderos",
+      "known_at": 8
+    },
+    {
+      "name": "Cruz de Caravaca",
+      "facet": "Amuletos, mal de ojo y curanderos",
+      "known_at": 10
+    },
+    {
+      "name": "Ojo turco",
+      "facet": "Amuletos, mal de ojo y curanderos",
+      "known_at": 6
+    },
+    {
+      "name": "Mano de Fátima",
+      "facet": "Amuletos, mal de ojo y curanderos",
+      "known_at": 9
+    },
+    {
+      "name": "Saludador",
+      "facet": "Amuletos, mal de ojo y curanderos",
+      "known_at": 14
+    },
+    {
+      "name": "Curandero",
+      "facet": "Amuletos, mal de ojo y curanderos",
+      "known_at": 6
+    },
+    {
+      "name": "Santiguadora",
+      "facet": "Amuletos, mal de ojo y curanderos",
+      "known_at": 12
+    },
+    {
+      "name": "Ensalmo",
+      "facet": "Amuletos, mal de ojo y curanderos",
+      "known_at": 13
+    },
+    {
+      "name": "Empacho",
+      "facet": "Amuletos, mal de ojo y curanderos",
+      "known_at": 9
+    },
+    {
+      "name": "Ruda",
+      "facet": "Amuletos, mal de ojo y curanderos",
+      "known_at": 12
+    },
+    {
+      "name": "Piedra del rayo",
+      "facet": "Amuletos, mal de ojo y curanderos",
+      "known_at": 13
+    },
+    {
+      "name": "Pata de conejo",
+      "facet": "Amuletos, mal de ojo y curanderos",
+      "known_at": 5,
+      "retired": "used_up: The existing questions already say the rabbit's foot brings luck and hangs on a keyring. The remaining options would only give filler questions."
+    },
+    {
+      "name": "Cinta roja",
+      "facet": "Amuletos, mal de ojo y curanderos",
+      "known_at": 8
+    },
+    {
+      "name": "Escapulario",
+      "facet": "Amuletos, mal de ojo y curanderos",
+      "known_at": 11
+    },
+    {
+      "name": "La chica de la curva",
+      "facet": "Fantasmas y leyendas urbanas",
+      "known_at": 7
+    },
+    {
+      "name": "Expediente Vallecas",
+      "facet": "Fantasmas y leyendas urbanas",
+      "known_at": 11
+    },
+    {
+      "name": "Hospital del Tórax",
+      "facet": "Fantasmas y leyendas urbanas",
+      "known_at": 13
+    },
+    {
+      "name": "Estación de Chamberí",
+      "facet": "Fantasmas y leyendas urbanas",
+      "known_at": 11
+    },
+    {
+      "name": "Cortijo Jurado",
+      "facet": "Fantasmas y leyendas urbanas",
+      "known_at": 13
+    },
+    {
+      "name": "Cuarto Milenio",
+      "facet": "Fantasmas y leyendas urbanas",
+      "known_at": 8
+    },
+    {
+      "name": "Iker Jiménez",
+      "facet": "Fantasmas y leyendas urbanas",
+      "known_at": 8
+    },
+    {
+      "name": "Psicofonía",
+      "facet": "Fantasmas y leyendas urbanas",
+      "known_at": 9
+    },
+    {
+      "name": "Ouija",
+      "facet": "Fantasmas y leyendas urbanas",
+      "known_at": 7
+    },
+    {
+      "name": "El monte de las ánimas",
+      "facet": "Fantasmas y leyendas urbanas",
+      "known_at": 11
+    },
+    {
+      "name": "Noche de Difuntos",
+      "facet": "Fantasmas y leyendas urbanas",
+      "known_at": 6
+    },
+    {
+      "name": "Peña de los Enamorados",
+      "facet": "Leyendas de amor y de ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Sala de los Abencerrajes",
+      "facet": "Leyendas de amor y de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Los ojos verdes",
+      "facet": "Leyendas de amor y de ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Maese Pérez el organista",
+      "facet": "Leyendas de amor y de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Murciélago de Valencia",
+      "facet": "Leyendas de amor y de ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Mariblanca",
+      "facet": "Leyendas de amor y de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Leyenda de la rana de Salamanca",
+      "facet": "Leyendas de amor y de ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Florinda la Cava",
+      "facet": "Héroes y leyendas de la historia",
+      "known_at": 13
+    },
+    {
+      "name": "Luis Candelas",
+      "facet": "Héroes y leyendas de la historia",
+      "known_at": 12
+    },
+    {
+      "name": "José María el Tempranillo",
+      "facet": "Héroes y leyendas de la historia",
+      "known_at": 13
+    },
+    {
+      "name": "Virgen del Pilar",
+      "facet": "Milagros y leyendas religiosas",
+      "known_at": 7
+    },
+    {
+      "name": "Santo Grial de Valencia",
+      "facet": "Milagros y leyendas religiosas",
+      "known_at": 12
+    },
+    {
+      "name": "Gallina de Santo Domingo de la Calzada",
+      "facet": "Milagros y leyendas religiosas",
+      "known_at": 11
+    },
+    {
+      "name": "Virgen de Covadonga",
+      "facet": "Milagros y leyendas religiosas",
+      "known_at": 9
+    },
+    {
+      "name": "Virgen de Guadalupe",
+      "facet": "Milagros y leyendas religiosas",
+      "known_at": 11
+    },
+    {
+      "name": "Santo Sudario de Oviedo",
+      "facet": "Milagros y leyendas religiosas",
+      "known_at": 13
+    },
+    {
+      "name": "Cristo de la Vega",
+      "facet": "Milagros y leyendas religiosas",
+      "known_at": 13
+    },
+    {
+      "name": "Milagro de Calanda",
+      "facet": "Milagros y leyendas religiosas",
+      "known_at": 14
+    },
+    {
+      "name": "Lignum Crucis de Santo Toribio",
+      "facet": "Milagros y leyendas religiosas",
+      "known_at": 14
+    },
+    {
+      "name": "Cristo de Burgos",
+      "facet": "Milagros y leyendas religiosas",
+      "known_at": 13
+    },
+    {
+      "name": "Hada madrina",
+      "facet": "Personajes para asustar o premiar a niños",
+      "known_at": 2
+    }
+  ]
+}

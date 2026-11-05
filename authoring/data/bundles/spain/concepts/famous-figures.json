@@ -1,0 +1,1076 @@
+{
+  "subcategory": "famous-figures",
+  "facets": [
+    "Chefs de alta cocina",
+    "Cocineros de la televisión",
+    "Restaurantes y estrellas Michelin",
+    "Empresarios de la moda",
+    "Grandes empresas y sus fundadores",
+    "Inventores y emprendedores",
+    "Presentadores y estrellas de la tele",
+    "Prensa del corazón y socialités",
+    "Youtubers, streamers e influencers",
+    "Diseñadores y modelos",
+    "Aventureros y divulgadores mediáticos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Ferran Adrià",
+      "facet": "Chefs de alta cocina",
+      "known_at": 8
+    },
+    {
+      "name": "Juan Mari Arzak",
+      "facet": "Chefs de alta cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Elena Arzak",
+      "facet": "Chefs de alta cocina",
+      "known_at": 13
+    },
+    {
+      "name": "Joan Roca",
+      "facet": "Chefs de alta cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Jordi Roca",
+      "facet": "Chefs de alta cocina",
+      "known_at": 12
+    },
+    {
+      "name": "Josep Roca",
+      "facet": "Chefs de alta cocina",
+      "known_at": 14
+    },
+    {
+      "name": "Martín Berasategui",
+      "facet": "Chefs de alta cocina",
+      "known_at": 10
+    },
+    {
+      "name": "David Muñoz",
+      "facet": "Chefs de alta cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Andoni Luis Aduriz",
+      "facet": "Chefs de alta cocina",
+      "known_at": 13
+    },
+    {
+      "name": "Quique Dacosta",
+      "facet": "Chefs de alta cocina",
+      "known_at": 13
+    },
+    {
+      "name": "Ángel León",
+      "facet": "Chefs de alta cocina",
+      "known_at": 12
+    },
+    {
+      "name": "Dani García",
+      "facet": "Chefs de alta cocina",
+      "known_at": 12
+    },
+    {
+      "name": "Carme Ruscalleda",
+      "facet": "Chefs de alta cocina",
+      "known_at": 12
+    },
+    {
+      "name": "Pedro Subijana",
+      "facet": "Chefs de alta cocina",
+      "known_at": 13
+    },
+    {
+      "name": "Eneko Atxa",
+      "facet": "Chefs de alta cocina",
+      "known_at": 14
+    },
+    {
+      "name": "Albert Adrià",
+      "facet": "Chefs de alta cocina",
+      "known_at": 13
+    },
+    {
+      "name": "Paco Roncero",
+      "facet": "Chefs de alta cocina",
+      "known_at": 13
+    },
+    {
+      "name": "Sergi Arola",
+      "facet": "Chefs de alta cocina",
+      "known_at": 12
+    },
+    {
+      "name": "Santi Santamaria",
+      "facet": "Chefs de alta cocina",
+      "known_at": 14
+    },
+    {
+      "name": "Ricard Camarena",
+      "facet": "Chefs de alta cocina",
+      "known_at": 14
+    },
+    {
+      "name": "Paco Torreblanca",
+      "facet": "Chefs de alta cocina",
+      "known_at": 14
+    },
+    {
+      "name": "Karlos Arguiñano",
+      "facet": "Cocineros de la televisión",
+      "known_at": 5
+    },
+    {
+      "name": "Eva Arguiñano",
+      "facet": "Cocineros de la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Joseba Arguiñano",
+      "facet": "Cocineros de la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Pepe Rodríguez",
+      "facet": "Cocineros de la televisión",
+      "known_at": 6
+    },
+    {
+      "name": "Samantha Vallejo-Nágera",
+      "facet": "Cocineros de la televisión",
+      "known_at": 6
+    },
+    {
+      "name": "Alberto Chicote",
+      "facet": "Cocineros de la televisión",
+      "known_at": 7
+    },
+    {
+      "name": "MasterChef España",
+      "facet": "Cocineros de la televisión",
+      "known_at": 3
+    },
+    {
+      "name": "Pesadilla en la cocina",
+      "facet": "Cocineros de la televisión",
+      "known_at": 8
+    },
+    {
+      "name": "Top Chef España",
+      "facet": "Cocineros de la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Sergio Fernández",
+      "facet": "Cocineros de la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Elena Santonja",
+      "facet": "Cocineros de la televisión",
+      "known_at": 14
+    },
+    {
+      "name": "Con las manos en la masa",
+      "facet": "Cocineros de la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Simone Ortega",
+      "facet": "Cocineros de la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "José Andrés",
+      "facet": "Cocineros de la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "David de Jorge",
+      "facet": "Cocineros de la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Hermanos Torres",
+      "facet": "Cocineros de la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Bruno Oteiza",
+      "facet": "Cocineros de la televisión",
+      "known_at": 14
+    },
+    {
+      "name": "Mikel López Iturriaga",
+      "facet": "Cocineros de la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "elBulli",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 9
+    },
+    {
+      "name": "El Celler de Can Roca",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 11
+    },
+    {
+      "name": "Arzak",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 12
+    },
+    {
+      "name": "Mugaritz",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 13
+    },
+    {
+      "name": "DiverXO",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 11
+    },
+    {
+      "name": "Akelarre",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 13
+    },
+    {
+      "name": "Azurmendi",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 14
+    },
+    {
+      "name": "Aponiente",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 13
+    },
+    {
+      "name": "Disfrutar",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 14
+    },
+    {
+      "name": "Asador Etxebarri",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 15
+    },
+    {
+      "name": "Lasarte",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 14
+    },
+    {
+      "name": "Casa Botín",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 12
+    },
+    {
+      "name": "Lhardy",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 14
+    },
+    {
+      "name": "Guía Michelin",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 7
+    },
+    {
+      "name": "Estrella Michelin",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 6
+    },
+    {
+      "name": "Guía Repsol",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 10
+    },
+    {
+      "name": "Sol Repsol",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 12
+    },
+    {
+      "name": "The World's 50 Best Restaurants",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 13
+    },
+    {
+      "name": "Esferificación",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 12
+    },
+    {
+      "name": "Nueva cocina vasca",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 14
+    },
+    {
+      "name": "Cala Montjoi",
+      "facet": "Restaurantes y estrellas Michelin",
+      "known_at": 15
+    },
+    {
+      "name": "Amancio Ortega",
+      "facet": "Empresarios de la moda",
+      "known_at": 7
+    },
+    {
+      "name": "Rosalía Mera",
+      "facet": "Empresarios de la moda",
+      "known_at": 13
+    },
+    {
+      "name": "Marta Ortega",
+      "facet": "Empresarios de la moda",
+      "known_at": 12
+    },
+    {
+      "name": "Pablo Isla",
+      "facet": "Empresarios de la moda",
+      "known_at": 14
+    },
+    {
+      "name": "Inditex",
+      "facet": "Empresarios de la moda",
+      "known_at": 8
+    },
+    {
+      "name": "Zara",
+      "facet": "Empresarios de la moda",
+      "known_at": 3
+    },
+    {
+      "name": "Pull&Bear",
+      "facet": "Empresarios de la moda",
+      "known_at": 5
+    },
+    {
+      "name": "Bershka",
+      "facet": "Empresarios de la moda",
+      "known_at": 5
+    },
+    {
+      "name": "Stradivarius",
+      "facet": "Empresarios de la moda",
+      "known_at": 6
+    },
+    {
+      "name": "Massimo Dutti",
+      "facet": "Empresarios de la moda",
+      "known_at": 8
+    },
+    {
+      "name": "Mango",
+      "facet": "Empresarios de la moda",
+      "known_at": 5
+    },
+    {
+      "name": "Isak Andic",
+      "facet": "Empresarios de la moda",
+      "known_at": 13
+    },
+    {
+      "name": "Desigual",
+      "facet": "Empresarios de la moda",
+      "known_at": 8
+    },
+    {
+      "name": "Thomas Meyer",
+      "facet": "Empresarios de la moda",
+      "known_at": 15
+    },
+    {
+      "name": "Custo Dalmau",
+      "facet": "Empresarios de la moda",
+      "known_at": 13
+    },
+    {
+      "name": "Tous",
+      "facet": "Empresarios de la moda",
+      "known_at": 8
+    },
+    {
+      "name": "Rosa Tous",
+      "facet": "Empresarios de la moda",
+      "known_at": 13
+    },
+    {
+      "name": "Pronovias",
+      "facet": "Empresarios de la moda",
+      "known_at": 11
+    },
+    {
+      "name": "Loewe",
+      "facet": "Empresarios de la moda",
+      "known_at": 11
+    },
+    {
+      "name": "Camper",
+      "facet": "Empresarios de la moda",
+      "known_at": 10
+    },
+    {
+      "name": "Puig",
+      "facet": "Empresarios de la moda",
+      "known_at": 13
+    },
+    {
+      "name": "Arteixo",
+      "facet": "Empresarios de la moda",
+      "known_at": 12
+    },
+    {
+      "name": "Ramón Areces",
+      "facet": "Grandes empresas y sus fundadores",
+      "known_at": 13
+    },
+    {
+      "name": "Mercadona",
+      "facet": "Grandes empresas y sus fundadores",
+      "known_at": 3
+    },
+    {
+      "name": "Juan Roig",
+      "facet": "Grandes empresas y sus fundadores",
+      "known_at": 10
+    },
+    {
+      "name": "Hacendado",
+      "facet": "Grandes empresas y sus fundadores",
+      "known_at": 4
+    },
+    {
+      "name": "Nocilla",
+      "facet": "Grandes empresas y sus fundadores",
+      "known_at": 2
+    },
+    {
+      "name": "Freixenet",
+      "facet": "Grandes empresas y sus fundadores",
+      "known_at": 8
+    },
+    {
+      "name": "Codorníu",
+      "facet": "Grandes empresas y sus fundadores",
+      "known_at": 11
+    },
+    {
+      "name": "SEAT",
+      "facet": "Grandes empresas y sus fundadores",
+      "known_at": 5
+    },
+    {
+      "name": "Banco Santander",
+      "facet": "Grandes empresas y sus fundadores",
+      "known_at": 6
+    },
+    {
+      "name": "Emilio Botín",
+      "facet": "Grandes empresas y sus fundadores",
+      "known_at": 12
+    },
+    {
+      "name": "Ana Botín",
+      "facet": "Grandes empresas y sus fundadores",
+      "known_at": 12
+    },
+    {
+      "name": "Florentino Pérez",
+      "facet": "Grandes empresas y sus fundadores",
+      "known_at": 7
+    },
+    {
+      "name": "Repsol",
+      "facet": "Grandes empresas y sus fundadores",
+      "known_at": 7
+    },
+    {
+      "name": "Mahou",
+      "facet": "Grandes empresas y sus fundadores",
+      "known_at": 10
+    },
+    {
+      "name": "Gallina Blanca",
+      "facet": "Grandes empresas y sus fundadores",
+      "known_at": 6
+    },
+    {
+      "name": "Meliá Hotels",
+      "facet": "Grandes empresas y sus fundadores",
+      "known_at": 12
+    },
+    {
+      "name": "Narciso Monturiol",
+      "facet": "Inventores y emprendedores",
+      "known_at": 13
+    },
+    {
+      "name": "Glovo",
+      "facet": "Inventores y emprendedores",
+      "known_at": 7
+    },
+    {
+      "name": "Óscar Pierre",
+      "facet": "Inventores y emprendedores",
+      "known_at": 14
+    },
+    {
+      "name": "Wallapop",
+      "facet": "Inventores y emprendedores",
+      "known_at": 7
+    },
+    {
+      "name": "Cabify",
+      "facet": "Inventores y emprendedores",
+      "known_at": 9
+    },
+    {
+      "name": "Tuenti",
+      "facet": "Inventores y emprendedores",
+      "known_at": 11
+    },
+    {
+      "name": "Idealista",
+      "facet": "Inventores y emprendedores",
+      "known_at": 11
+    },
+    {
+      "name": "Bizum",
+      "facet": "Inventores y emprendedores",
+      "known_at": 7
+    },
+    {
+      "name": "Martín Varsavsky",
+      "facet": "Inventores y emprendedores",
+      "known_at": 14
+    },
+    {
+      "name": "El Hormiguero",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 3
+    },
+    {
+      "name": "Jordi Hurtado",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 8
+    },
+    {
+      "name": "Saber y ganar",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 7
+    },
+    {
+      "name": "Pasapalabra",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 4
+    },
+    {
+      "name": "Christian Gálvez",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 8
+    },
+    {
+      "name": "Roberto Leal",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 7
+    },
+    {
+      "name": "Ana Rosa Quintana",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 10
+    },
+    {
+      "name": "Jorge Javier Vázquez",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 10
+    },
+    {
+      "name": "Mercedes Milá",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 11
+    },
+    {
+      "name": "Gran Hermano",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 7
+    },
+    {
+      "name": "Matías Prats",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 10
+    },
+    {
+      "name": "Andreu Buenafuente",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 10
+    },
+    {
+      "name": "Ramón García",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 9
+    },
+    {
+      "name": "Anne Igartiburu",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 8
+    },
+    {
+      "name": "Cristina Pedroche",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 6
+    },
+    {
+      "name": "David Broncano",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 7
+    },
+    {
+      "name": "El Gran Wyoming",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 10
+    },
+    {
+      "name": "Arturo Valls",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 8
+    },
+    {
+      "name": "Carlos Sobera",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 9
+    },
+    {
+      "name": "Iñaki Gabilondo",
+      "facet": "Presentadores y estrellas de la tele",
+      "known_at": 13
+    },
+    {
+      "name": "Isabel Preysler",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 10
+    },
+    {
+      "name": "Tamara Falcó",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 9
+    },
+    {
+      "name": "Revista ¡Hola!",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 8
+    },
+    {
+      "name": "Revista Lecturas",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 12
+    },
+    {
+      "name": "Duquesa de Alba",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 11
+    },
+    {
+      "name": "Carmen Cervera",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 12
+    },
+    {
+      "name": "Belén Esteban",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 9
+    },
+    {
+      "name": "Isabel Pantoja",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 9
+    },
+    {
+      "name": "Paquirri",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 12
+    },
+    {
+      "name": "Kiko Rivera",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 9
+    },
+    {
+      "name": "Rocío Carrasco",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 12
+    },
+    {
+      "name": "Ana Obregón",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 9
+    },
+    {
+      "name": "Carmen Lomana",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 12
+    },
+    {
+      "name": "María Teresa Campos",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 11
+    },
+    {
+      "name": "Terelu Campos",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 11
+    },
+    {
+      "name": "Bertín Osborne",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 10
+    },
+    {
+      "name": "Jesulín de Ubrique",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 11
+    },
+    {
+      "name": "Alessandro Lequio",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 13
+    },
+    {
+      "name": "Sálvame",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 8
+    },
+    {
+      "name": "Carmen Martínez-Bordiú",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 13
+    },
+    {
+      "name": "Norma Duval",
+      "facet": "Prensa del corazón y socialités",
+      "known_at": 13
+    },
+    {
+      "name": "Ibai Llanos",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 4
+    },
+    {
+      "name": "La Velada del Año",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 5
+    },
+    {
+      "name": "Kings League",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 5
+    },
+    {
+      "name": "El Rubius",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 4
+    },
+    {
+      "name": "AuronPlay",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 5
+    },
+    {
+      "name": "TheGrefg",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 5
+    },
+    {
+      "name": "Willyrex",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 6
+    },
+    {
+      "name": "Vegetta777",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 5
+    },
+    {
+      "name": "Mikecrack",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 2
+    },
+    {
+      "name": "DjMaRiiO",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 6
+    },
+    {
+      "name": "Lolito Fernández",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 7
+    },
+    {
+      "name": "Luzu",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 8
+    },
+    {
+      "name": "ElXokas",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 7
+    },
+    {
+      "name": "Illojuan",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 7
+    },
+    {
+      "name": "Jordi Wild",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 8
+    },
+    {
+      "name": "Dulceida",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 8
+    },
+    {
+      "name": "María Pombo",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 9
+    },
+    {
+      "name": "Paula Gonu",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 9
+    },
+    {
+      "name": "Lola Lolita",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 7
+    },
+    {
+      "name": "Laura Escanes",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 10
+    },
+    {
+      "name": "Georgina Rodríguez",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 7
+    },
+    {
+      "name": "Marta Díaz",
+      "facet": "Youtubers, streamers e influencers",
+      "known_at": 9
+    },
+    {
+      "name": "Cristóbal Balenciaga",
+      "facet": "Diseñadores y modelos",
+      "known_at": 10
+    },
+    {
+      "name": "Paco Rabanne",
+      "facet": "Diseñadores y modelos",
+      "known_at": 10
+    },
+    {
+      "name": "Manolo Blahnik",
+      "facet": "Diseñadores y modelos",
+      "known_at": 12
+    },
+    {
+      "name": "Mariano Fortuny y Madrazo",
+      "facet": "Diseñadores y modelos",
+      "known_at": 14
+    },
+    {
+      "name": "Ágatha Ruiz de la Prada",
+      "facet": "Diseñadores y modelos",
+      "known_at": 9
+    },
+    {
+      "name": "Adolfo Domínguez",
+      "facet": "Diseñadores y modelos",
+      "known_at": 11
+    },
+    {
+      "name": "Manuel Pertegaz",
+      "facet": "Diseñadores y modelos",
+      "known_at": 14
+    },
+    {
+      "name": "Jesús del Pozo",
+      "facet": "Diseñadores y modelos",
+      "known_at": 14
+    },
+    {
+      "name": "Elio Berhanyer",
+      "facet": "Diseñadores y modelos",
+      "known_at": 15
+    },
+    {
+      "name": "Lorenzo Caprile",
+      "facet": "Diseñadores y modelos",
+      "known_at": 12
+    },
+    {
+      "name": "Palomo Spain",
+      "facet": "Diseñadores y modelos",
+      "known_at": 13
+    },
+    {
+      "name": "Francis Montesinos",
+      "facet": "Diseñadores y modelos",
+      "known_at": 13
+    },
+    {
+      "name": "Victorio & Lucchino",
+      "facet": "Diseñadores y modelos",
+      "known_at": 12
+    },
+    {
+      "name": "Roberto Verino",
+      "facet": "Diseñadores y modelos",
+      "known_at": 12
+    },
+    {
+      "name": "Felipe Varela",
+      "facet": "Diseñadores y modelos",
+      "known_at": 13
+    },
+    {
+      "name": "Pasarela Cibeles",
+      "facet": "Diseñadores y modelos",
+      "known_at": 10
+    },
+    {
+      "name": "Nieves Álvarez",
+      "facet": "Diseñadores y modelos",
+      "known_at": 11
+    },
+    {
+      "name": "Esther Cañadas",
+      "facet": "Diseñadores y modelos",
+      "known_at": 12
+    },
+    {
+      "name": "Judit Mascó",
+      "facet": "Diseñadores y modelos",
+      "known_at": 12
+    },
+    {
+      "name": "Inés Sastre",
+      "facet": "Diseñadores y modelos",
+      "known_at": 13
+    },
+    {
+      "name": "Jon Kortajarena",
+      "facet": "Diseñadores y modelos",
+      "known_at": 10
+    },
+    {
+      "name": "Andrés Velencoso",
+      "facet": "Diseñadores y modelos",
+      "known_at": 11
+    },
+    {
+      "name": "Eugenia Silva",
+      "facet": "Diseñadores y modelos",
+      "known_at": 13
+    },
+    {
+      "name": "Eduard Punset",
+      "facet": "Aventureros y divulgadores mediáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Redes",
+      "facet": "Aventureros y divulgadores mediáticos",
+      "known_at": 13
+    },
+    {
+      "name": "Manuel Toharia",
+      "facet": "Aventureros y divulgadores mediáticos",
+      "known_at": 14
+    },
+    {
+      "name": "Javier Santaolalla",
+      "facet": "Aventureros y divulgadores mediáticos",
+      "known_at": 9
+    },
+    {
+      "name": "Quantum Fracture",
+      "facet": "Aventureros y divulgadores mediáticos",
+      "known_at": 10
+    },
+    {
+      "name": "Jaime Altozano",
+      "facet": "Aventureros y divulgadores mediáticos",
+      "known_at": 9
+    },
+    {
+      "name": "Miquel Silvestre",
+      "facet": "Aventureros y divulgadores mediáticos",
+      "known_at": 13
+    },
+    {
+      "name": "Planeta Calleja",
+      "facet": "Aventureros y divulgadores mediáticos",
+      "known_at": 9
+    },
+    {
+      "name": "Clara Grima",
+      "facet": "Aventureros y divulgadores mediáticos",
+      "known_at": 14
+    },
+    {
+      "name": "Frank de la Jungla",
+      "facet": "Aventureros y divulgadores mediáticos",
+      "known_at": 8
+    }
+  ]
+}

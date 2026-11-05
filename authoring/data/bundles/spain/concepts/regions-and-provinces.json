@@ -1,0 +1,1437 @@
+{
+  "subcategory": "regions-and-provinces",
+  "facets": [
+    "Comunidades autónomas y sus capitales",
+    "Provincias y capitales de provincia",
+    "Mapa y fronteras interiores",
+    "Islas, Ceuta y Melilla",
+    "Banderas, escudos e himnos",
+    "Gentilicios de provincias y regiones",
+    "Lenguas cooficiales y nombres oficiales",
+    "Estatutos e instituciones autonómicas",
+    "Días y fiestas de cada comunidad",
+    "Platos y productos típicos regionales",
+    "Monumentos y paisajes de cada región",
+    "Historia de reinos y antiguas regiones"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 3,
+      "record": 4,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 4,
+      "odd_one_out": 5,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 5,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Andalucía",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 2
+    },
+    {
+      "name": "Cataluña",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 2
+    },
+    {
+      "name": "Comunidad de Madrid",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 1
+    },
+    {
+      "name": "Galicia",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 3
+    },
+    {
+      "name": "País Vasco",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 3
+    },
+    {
+      "name": "Comunidad Valenciana",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 3
+    },
+    {
+      "name": "Canarias",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 2
+    },
+    {
+      "name": "Islas Baleares",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 3
+    },
+    {
+      "name": "Asturias",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 3
+    },
+    {
+      "name": "Castilla y León",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 4
+    },
+    {
+      "name": "Castilla-La Mancha",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 4
+    },
+    {
+      "name": "Aragón",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 4
+    },
+    {
+      "name": "Extremadura",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 5
+    },
+    {
+      "name": "Cantabria",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 4
+    },
+    {
+      "name": "Navarra",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 4
+    },
+    {
+      "name": "La Rioja",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 5
+    },
+    {
+      "name": "Región de Murcia",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 4
+    },
+    {
+      "name": "Sevilla",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 3
+    },
+    {
+      "name": "Santiago de Compostela",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 6
+    },
+    {
+      "name": "Vitoria-Gasteiz",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 8
+    },
+    {
+      "name": "Mérida",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 8
+    },
+    {
+      "name": "Toledo",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 6
+    },
+    {
+      "name": "Valladolid",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 7
+    },
+    {
+      "name": "Oviedo",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 6
+    },
+    {
+      "name": "Logroño",
+      "facet": "Comunidades autónomas y sus capitales",
+      "known_at": 7
+    },
+    {
+      "name": "Jaén",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 6
+    },
+    {
+      "name": "Huelva",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 6
+    },
+    {
+      "name": "Almería",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 6
+    },
+    {
+      "name": "Teruel",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 7
+    },
+    {
+      "name": "Huesca",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 7
+    },
+    {
+      "name": "Soria",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 7
+    },
+    {
+      "name": "Cuenca",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 6
+    },
+    {
+      "name": "Albacete",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 6
+    },
+    {
+      "name": "Ciudad Real",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 7
+    },
+    {
+      "name": "Guadalajara",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 7
+    },
+    {
+      "name": "Lleida",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 7
+    },
+    {
+      "name": "Girona",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 6
+    },
+    {
+      "name": "Tarragona",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 6
+    },
+    {
+      "name": "Castellón",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 7
+    },
+    {
+      "name": "Ourense",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 7
+    },
+    {
+      "name": "Lugo",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 7
+    },
+    {
+      "name": "Pontevedra",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 7
+    },
+    {
+      "name": "Zamora",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 7
+    },
+    {
+      "name": "Palencia",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 8
+    },
+    {
+      "name": "Badajoz",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 7
+    },
+    {
+      "name": "Cáceres",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 6
+    },
+    {
+      "name": "Burgos",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 6
+    },
+    {
+      "name": "Salamanca",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 5
+    },
+    {
+      "name": "León",
+      "facet": "Provincias y capitales de provincia",
+      "known_at": 5
+    },
+    {
+      "name": "Pirineos",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 4
+    },
+    {
+      "name": "Cordillera Cantábrica",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 7
+    },
+    {
+      "name": "Sistema Central",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 8
+    },
+    {
+      "name": "Sistema Ibérico",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 9
+    },
+    {
+      "name": "Sierra Morena",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 8
+    },
+    {
+      "name": "Sierra Nevada",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 5
+    },
+    {
+      "name": "Meseta Central",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 7
+    },
+    {
+      "name": "Mulhacén",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 9
+    },
+    {
+      "name": "Río Ebro",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 5
+    },
+    {
+      "name": "Río Tajo",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 5
+    },
+    {
+      "name": "Río Duero",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 6
+    },
+    {
+      "name": "Río Guadalquivir",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 5
+    },
+    {
+      "name": "Río Miño",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 8
+    },
+    {
+      "name": "Condado de Treviño",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 13
+    },
+    {
+      "name": "Rincón de Ademuz",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 14
+    },
+    {
+      "name": "Llívia",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 13
+    },
+    {
+      "name": "Valle de Arán",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 11
+    },
+    {
+      "name": "Isla de los Faisanes",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 14
+    },
+    {
+      "name": "Comunidad uniprovincial",
+      "facet": "Mapa y fronteras interiores",
+      "known_at": 11
+    },
+    {
+      "name": "Tenerife",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 3
+    },
+    {
+      "name": "Gran Canaria",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 4
+    },
+    {
+      "name": "Lanzarote",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 5
+    },
+    {
+      "name": "Fuerteventura",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 6
+    },
+    {
+      "name": "La Palma",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 5
+    },
+    {
+      "name": "La Gomera",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 7
+    },
+    {
+      "name": "El Hierro",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 7
+    },
+    {
+      "name": "La Graciosa",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 11
+    },
+    {
+      "name": "Mallorca",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 3
+    },
+    {
+      "name": "Menorca",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 5
+    },
+    {
+      "name": "Ibiza",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 4
+    },
+    {
+      "name": "Formentera",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 7
+    },
+    {
+      "name": "Cabrera",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 11
+    },
+    {
+      "name": "Ceuta",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 5
+    },
+    {
+      "name": "Melilla",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 5
+    },
+    {
+      "name": "Islas Chafarinas",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 13
+    },
+    {
+      "name": "Peñón de Vélez de la Gomera",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 13
+    },
+    {
+      "name": "Isla de Perejil",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 11
+    },
+    {
+      "name": "Islas Cíes",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 9
+    },
+    {
+      "name": "Isla de Tabarca",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 12
+    },
+    {
+      "name": "Teide",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 4
+    },
+    {
+      "name": "Volcán de La Palma de 2021",
+      "facet": "Islas, Ceuta y Melilla",
+      "known_at": 6
+    },
+    {
+      "name": "Senyera",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 7
+    },
+    {
+      "name": "Ikurriña",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 8
+    },
+    {
+      "name": "Bandera de Andalucía",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 6
+    },
+    {
+      "name": "Bandera de Galicia",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 7
+    },
+    {
+      "name": "Bandera de Canarias",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 8
+    },
+    {
+      "name": "Bandera de Extremadura",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera de la Comunidad de Madrid",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 8
+    },
+    {
+      "name": "Bandera de Castilla-La Mancha",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 11
+    },
+    {
+      "name": "Cruz de la Victoria",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 11
+    },
+    {
+      "name": "Cadenas de Navarra",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 11
+    },
+    {
+      "name": "Castillos y leones",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 7
+    },
+    {
+      "name": "Cuatro barras",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 9
+    },
+    {
+      "name": "Oso y el madroño",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 5
+    },
+    {
+      "name": "Els Segadors",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 11
+    },
+    {
+      "name": "Gernikako Arbola",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 13
+    },
+    {
+      "name": "Himno de Andalucía",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 11
+    },
+    {
+      "name": "Os Pinos",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 13
+    },
+    {
+      "name": "Lauburu",
+      "facet": "Banderas, escudos e himnos",
+      "known_at": 13
+    },
+    {
+      "name": "Gaditano",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 7
+    },
+    {
+      "name": "Onubense",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 10
+    },
+    {
+      "name": "Jienense",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Almeriense",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 8
+    },
+    {
+      "name": "Abulense",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Oscense",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Turolense",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Conquense",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Pacense",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 12
+    },
+    {
+      "name": "Vallisoletano",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 9
+    },
+    {
+      "name": "Salmantino",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 7
+    },
+    {
+      "name": "Burgalés",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 7
+    },
+    {
+      "name": "Lucense",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Ilerdense",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 13
+    },
+    {
+      "name": "Tarraconense",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Ceutí",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 8
+    },
+    {
+      "name": "Melillense",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 7
+    },
+    {
+      "name": "Cántabro",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 6
+    },
+    {
+      "name": "Riojano",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 5
+    },
+    {
+      "name": "Murciano",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 4
+    },
+    {
+      "name": "Mallorquín",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 5
+    },
+    {
+      "name": "Alcarreño",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 12
+    },
+    {
+      "name": "Donostiarra",
+      "facet": "Gentilicios de provincias y regiones",
+      "known_at": 10
+    },
+    {
+      "name": "Catalán",
+      "facet": "Lenguas cooficiales y nombres oficiales",
+      "known_at": 3
+    },
+    {
+      "name": "Gallego",
+      "facet": "Lenguas cooficiales y nombres oficiales",
+      "known_at": 4
+    },
+    {
+      "name": "Euskera",
+      "facet": "Lenguas cooficiales y nombres oficiales",
+      "known_at": 5
+    },
+    {
+      "name": "Valenciano",
+      "facet": "Lenguas cooficiales y nombres oficiales",
+      "known_at": 5
+    },
+    {
+      "name": "Aranés",
+      "facet": "Lenguas cooficiales y nombres oficiales",
+      "known_at": 12
+    },
+    {
+      "name": "Asturiano",
+      "facet": "Lenguas cooficiales y nombres oficiales",
+      "known_at": 9
+    },
+    {
+      "name": "Aragonés",
+      "facet": "Lenguas cooficiales y nombres oficiales",
+      "known_at": 11
+    },
+    {
+      "name": "A Coruña",
+      "facet": "Lenguas cooficiales y nombres oficiales",
+      "known_at": 5
+    },
+    {
+      "name": "Donostia-San Sebastián",
+      "facet": "Lenguas cooficiales y nombres oficiales",
+      "known_at": 8
+    },
+    {
+      "name": "Gipuzkoa",
+      "facet": "Lenguas cooficiales y nombres oficiales",
+      "known_at": 9
+    },
+    {
+      "name": "Bizkaia",
+      "facet": "Lenguas cooficiales y nombres oficiales",
+      "known_at": 9
+    },
+    {
+      "name": "Araba/Álava",
+      "facet": "Lenguas cooficiales y nombres oficiales",
+      "known_at": 10
+    },
+    {
+      "name": "Illes Balears",
+      "facet": "Lenguas cooficiales y nombres oficiales",
+      "known_at": 8
+    },
+    {
+      "name": "Sanxenxo",
+      "facet": "Lenguas cooficiales y nombres oficiales",
+      "known_at": 10
+    },
+    {
+      "name": "Real Academia Galega",
+      "facet": "Lenguas cooficiales y nombres oficiales",
+      "known_at": 13
+    },
+    {
+      "name": "Euskaltzaindia",
+      "facet": "Lenguas cooficiales y nombres oficiales",
+      "known_at": 14
+    },
+    {
+      "name": "Institut d'Estudis Catalans",
+      "facet": "Lenguas cooficiales y nombres oficiales",
+      "known_at": 14
+    },
+    {
+      "name": "Estatuto de Autonomía",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 9
+    },
+    {
+      "name": "Estado de las autonomías",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 11
+    },
+    {
+      "name": "Generalitat de Catalunya",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 8
+    },
+    {
+      "name": "Xunta de Galicia",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 9
+    },
+    {
+      "name": "Junta de Andalucía",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 8
+    },
+    {
+      "name": "Lehendakari",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 10
+    },
+    {
+      "name": "Cabildo insular",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 11
+    },
+    {
+      "name": "Consell Insular",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 13
+    },
+    {
+      "name": "Diputación Foral",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 12
+    },
+    {
+      "name": "Concierto económico",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 13
+    },
+    {
+      "name": "Comunidad Foral",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 11
+    },
+    {
+      "name": "Corts Valencianes",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 13
+    },
+    {
+      "name": "Junta General del Principado",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 14
+    },
+    {
+      "name": "Justicia de Aragón",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 14
+    },
+    {
+      "name": "Asamblea de Madrid",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 10
+    },
+    {
+      "name": "Mossos d'Esquadra",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 8
+    },
+    {
+      "name": "Ertzaintza",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 9
+    },
+    {
+      "name": "Policía Foral",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 12
+    },
+    {
+      "name": "Diputación provincial",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 11
+    },
+    {
+      "name": "Síndic de Greuges",
+      "facet": "Estatutos e instituciones autonómicas",
+      "known_at": 14
+    },
+    {
+      "name": "Diada",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 8
+    },
+    {
+      "name": "Día de Andalucía",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 6
+    },
+    {
+      "name": "Día de Galicia",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 9
+    },
+    {
+      "name": "Día de Canarias",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 9
+    },
+    {
+      "name": "Día de Aragón",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 10
+    },
+    {
+      "name": "Sant Jordi",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 7
+    },
+    {
+      "name": "Día de Castilla y León",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 12
+    },
+    {
+      "name": "Dos de Mayo",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 8
+    },
+    {
+      "name": "Día de Asturias",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 11
+    },
+    {
+      "name": "9 d'Octubre",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 11
+    },
+    {
+      "name": "Día de Extremadura",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 12
+    },
+    {
+      "name": "Día de la Región de Murcia",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 13
+    },
+    {
+      "name": "Día de Navarra",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 13
+    },
+    {
+      "name": "Día de las Illes Balears",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 13
+    },
+    {
+      "name": "Día de Castilla-La Mancha",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 13
+    },
+    {
+      "name": "Aberri Eguna",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 13
+    },
+    {
+      "name": "San Fermín",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 4
+    },
+    {
+      "name": "Fallas",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 4
+    },
+    {
+      "name": "Hogueras de San Juan de Alicante",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 10
+    },
+    {
+      "name": "Tomatina",
+      "facet": "Días y fiestas de cada comunidad",
+      "known_at": 5
+    },
+    {
+      "name": "Fabada asturiana",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 4
+    },
+    {
+      "name": "Pulpo a feira",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 5
+    },
+    {
+      "name": "Paella valenciana",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 3
+    },
+    {
+      "name": "Gazpacho andaluz",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 4
+    },
+    {
+      "name": "Salmorejo cordobés",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 6
+    },
+    {
+      "name": "Cocido madrileño",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 4
+    },
+    {
+      "name": "Pisto manchego",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 7
+    },
+    {
+      "name": "Queso manchego",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 5
+    },
+    {
+      "name": "Migas extremeñas",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Torta del Casar",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Jamón de Jabugo",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Pa amb tomàquet",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 7
+    },
+    {
+      "name": "Calçots",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Crema catalana",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 5
+    },
+    {
+      "name": "Sobrasada",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 7
+    },
+    {
+      "name": "Ensaimada",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 6
+    },
+    {
+      "name": "Papas arrugadas con mojo",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 7
+    },
+    {
+      "name": "Lacón con grelos",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Pimientos de Padrón",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 6
+    },
+    {
+      "name": "Bacalao al pil-pil",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Marmitako",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Sidra asturiana",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 6
+    },
+    {
+      "name": "Queso de Cabrales",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Cochinillo de Segovia",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 8
+    },
+    {
+      "name": "Botillo del Bierzo",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Ternasco de Aragón",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Tarta de Santiago",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 6
+    },
+    {
+      "name": "Turrón de Jijona",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 6
+    },
+    {
+      "name": "Sobaos pasiegos",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Gofio",
+      "facet": "Platos y productos típicos regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Alhambra",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 4
+    },
+    {
+      "name": "Mezquita de Córdoba",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 6
+    },
+    {
+      "name": "Sagrada Familia",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 3
+    },
+    {
+      "name": "Catedral de Santiago de Compostela",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 6
+    },
+    {
+      "name": "Acueducto de Segovia",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 5
+    },
+    {
+      "name": "Museo Guggenheim Bilbao",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 6
+    },
+    {
+      "name": "Ciudad de las Artes y las Ciencias",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 6
+    },
+    {
+      "name": "Torre de Hércules",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 9
+    },
+    {
+      "name": "Teatro romano de Mérida",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 9
+    },
+    {
+      "name": "Giralda",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 6
+    },
+    {
+      "name": "Basílica del Pilar",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 7
+    },
+    {
+      "name": "Catedral de Burgos",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 9
+    },
+    {
+      "name": "Muralla de Ávila",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 8
+    },
+    {
+      "name": "Casas Colgadas de Cuenca",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 8
+    },
+    {
+      "name": "Molinos de Consuegra",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 8
+    },
+    {
+      "name": "Monasterio de El Escorial",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 8
+    },
+    {
+      "name": "Montserrat",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 8
+    },
+    {
+      "name": "Cueva de Altamira",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 7
+    },
+    {
+      "name": "Picos de Europa",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 7
+    },
+    {
+      "name": "Lagos de Covadonga",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 9
+    },
+    {
+      "name": "Parque Nacional de Doñana",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 7
+    },
+    {
+      "name": "Ordesa y Monte Perdido",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 11
+    },
+    {
+      "name": "Las Médulas",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 11
+    },
+    {
+      "name": "Playa de las Catedrales",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 10
+    },
+    {
+      "name": "Bardenas Reales",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 11
+    },
+    {
+      "name": "Timanfaya",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 10
+    },
+    {
+      "name": "Caminito del Rey",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 9
+    },
+    {
+      "name": "Mar Menor",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 8
+    },
+    {
+      "name": "Albufera de Valencia",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 9
+    },
+    {
+      "name": "Ciudad Encantada",
+      "facet": "Monumentos y paisajes de cada región",
+      "known_at": 11
+    },
+    {
+      "name": "Al-Ándalus",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 7
+    },
+    {
+      "name": "Califato de Córdoba",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 9
+    },
+    {
+      "name": "Reinos de taifas",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 10
+    },
+    {
+      "name": "Reino nazarí de Granada",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 9
+    },
+    {
+      "name": "Reino de Asturias",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 9
+    },
+    {
+      "name": "Don Pelayo",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 9
+    },
+    {
+      "name": "Batalla de Covadonga",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 9
+    },
+    {
+      "name": "Reino de León",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 10
+    },
+    {
+      "name": "Reino de Castilla",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 7
+    },
+    {
+      "name": "Corona de Aragón",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 9
+    },
+    {
+      "name": "Reino de Navarra",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 10
+    },
+    {
+      "name": "Reino de Galicia",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 12
+    },
+    {
+      "name": "Reino de Valencia",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Reino de Mallorca",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 13
+    },
+    {
+      "name": "Condado de Barcelona",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Marca Hispánica",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 12
+    },
+    {
+      "name": "Señorío de Vizcaya",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 13
+    },
+    {
+      "name": "Reyes Católicos",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 5
+    },
+    {
+      "name": "Jaime I el Conquistador",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Batalla de las Navas de Tolosa",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 10
+    },
+    {
+      "name": "Toma de Granada",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 8
+    },
+    {
+      "name": "Compromiso de Caspe",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 13
+    },
+    {
+      "name": "Comuneros de Castilla",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Decretos de Nueva Planta",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 12
+    },
+    {
+      "name": "Castilla la Vieja",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Castilla la Nueva",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 11
+    },
+    {
+      "name": "División provincial de 1833",
+      "facet": "Historia de reinos y antiguas regiones",
+      "known_at": 13
+    }
+  ]
+}

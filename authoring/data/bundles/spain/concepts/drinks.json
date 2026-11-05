@@ -1,0 +1,859 @@
+{
+  "subcategory": "drinks",
+  "facets": [
+    "Vinos y denominaciones de origen",
+    "Cava y vinos espumosos",
+    "Jerez y vinos generosos",
+    "Sidra asturiana y vasca",
+    "Cerveza y caña en el bar",
+    "Licores y aguardientes regionales",
+    "Bebidas refrescantes de verano",
+    "Horchata, granizados y bebidas sin alcohol",
+    "Café a la española",
+    "Chocolate caliente y bebidas de invierno",
+    "Aguas minerales y manantiales",
+    "Costumbres y rituales al beber"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 3,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Rueda",
+      "facet": "Vinos y denominaciones de origen",
+      "known_at": 11
+    },
+    {
+      "name": "Toro",
+      "facet": "Vinos y denominaciones de origen",
+      "known_at": 12
+    },
+    {
+      "name": "Mencía",
+      "facet": "Vinos y denominaciones de origen",
+      "known_at": 13
+    },
+    {
+      "name": "Valdepeñas",
+      "facet": "Vinos y denominaciones de origen",
+      "known_at": 11
+    },
+    {
+      "name": "La Mancha",
+      "facet": "Vinos y denominaciones de origen",
+      "known_at": 9
+    },
+    {
+      "name": "Jumilla",
+      "facet": "Vinos y denominaciones de origen",
+      "known_at": 12
+    },
+    {
+      "name": "Bierzo",
+      "facet": "Vinos y denominaciones de origen",
+      "known_at": 12
+    },
+    {
+      "name": "Somontano",
+      "facet": "Vinos y denominaciones de origen",
+      "known_at": 13
+    },
+    {
+      "name": "Malvasía de Lanzarote",
+      "facet": "Vinos y denominaciones de origen",
+      "known_at": 13
+    },
+    {
+      "name": "Penedès",
+      "facet": "Cava y vinos espumosos",
+      "known_at": 11
+    },
+    {
+      "name": "Burbujas de Freixenet",
+      "facet": "Cava y vinos espumosos",
+      "known_at": 9
+    },
+    {
+      "name": "Brut",
+      "facet": "Cava y vinos espumosos",
+      "known_at": 11
+    },
+    {
+      "name": "Brut Nature",
+      "facet": "Cava y vinos espumosos",
+      "known_at": 12
+    },
+    {
+      "name": "Semiseco",
+      "facet": "Cava y vinos espumosos",
+      "known_at": 12
+    },
+    {
+      "name": "Método tradicional",
+      "facet": "Cava y vinos espumosos",
+      "known_at": 13
+    },
+    {
+      "name": "Macabeo",
+      "facet": "Cava y vinos espumosos",
+      "known_at": 13
+    },
+    {
+      "name": "Xarel·lo",
+      "facet": "Cava y vinos espumosos",
+      "known_at": 13
+    },
+    {
+      "name": "Parellada",
+      "facet": "Cava y vinos espumosos",
+      "known_at": 13
+    },
+    {
+      "name": "Pupitre",
+      "facet": "Cava y vinos espumosos",
+      "known_at": 14
+    },
+    {
+      "name": "Degüelle",
+      "facet": "Cava y vinos espumosos",
+      "known_at": 14
+    },
+    {
+      "name": "Copa flauta",
+      "facet": "Cava y vinos espumosos",
+      "known_at": 11
+    },
+    {
+      "name": "Josep Raventós",
+      "facet": "Cava y vinos espumosos",
+      "known_at": 14
+    },
+    {
+      "name": "Corpinnat",
+      "facet": "Cava y vinos espumosos",
+      "known_at": 15
+    },
+    {
+      "name": "Manzanilla",
+      "facet": "Jerez y vinos generosos",
+      "known_at": 10
+    },
+    {
+      "name": "Amontillado",
+      "facet": "Jerez y vinos generosos",
+      "known_at": 12
+    },
+    {
+      "name": "Oloroso",
+      "facet": "Jerez y vinos generosos",
+      "known_at": 12
+    },
+    {
+      "name": "Palo cortado",
+      "facet": "Jerez y vinos generosos",
+      "known_at": 14
+    },
+    {
+      "name": "El Puerto de Santa María",
+      "facet": "Jerez y vinos generosos",
+      "known_at": 11
+    },
+    {
+      "name": "Marco de Jerez",
+      "facet": "Jerez y vinos generosos",
+      "known_at": 13
+    },
+    {
+      "name": "Criaderas y soleras",
+      "facet": "Jerez y vinos generosos",
+      "known_at": 14
+    },
+    {
+      "name": "Velo de flor",
+      "facet": "Jerez y vinos generosos",
+      "known_at": 14
+    },
+    {
+      "name": "Venencia",
+      "facet": "Jerez y vinos generosos",
+      "known_at": 13
+    },
+    {
+      "name": "Venenciador",
+      "facet": "Jerez y vinos generosos",
+      "known_at": 13
+    },
+    {
+      "name": "Tío Pepe",
+      "facet": "Jerez y vinos generosos",
+      "known_at": 10
+    },
+    {
+      "name": "Sherry",
+      "facet": "Jerez y vinos generosos",
+      "known_at": 11
+    },
+    {
+      "name": "Montilla-Moriles",
+      "facet": "Jerez y vinos generosos",
+      "known_at": 13
+    },
+    {
+      "name": "Vino de Málaga",
+      "facet": "Jerez y vinos generosos",
+      "known_at": 13
+    },
+    {
+      "name": "Catavino",
+      "facet": "Jerez y vinos generosos",
+      "known_at": 13
+    },
+    {
+      "name": "Sidra",
+      "facet": "Sidra asturiana y vasca",
+      "known_at": 4
+    },
+    {
+      "name": "Escanciador",
+      "facet": "Sidra asturiana y vasca",
+      "known_at": 9
+    },
+    {
+      "name": "Culín",
+      "facet": "Sidra asturiana y vasca",
+      "known_at": 11
+    },
+    {
+      "name": "Chigre",
+      "facet": "Sidra asturiana y vasca",
+      "known_at": 13
+    },
+    {
+      "name": "Txotx",
+      "facet": "Sidra asturiana y vasca",
+      "known_at": 12
+    },
+    {
+      "name": "Kupela",
+      "facet": "Sidra asturiana y vasca",
+      "known_at": 14
+    },
+    {
+      "name": "Manzana",
+      "facet": "Sidra asturiana y vasca",
+      "known_at": 3
+    },
+    {
+      "name": "Llagar",
+      "facet": "Sidra asturiana y vasca",
+      "known_at": 13
+    },
+    {
+      "name": "Pomarada",
+      "facet": "Sidra asturiana y vasca",
+      "known_at": 13
+    },
+    {
+      "name": "Villaviciosa",
+      "facet": "Sidra asturiana y vasca",
+      "known_at": 12
+    },
+    {
+      "name": "Astigarraga",
+      "facet": "Sidra asturiana y vasca",
+      "known_at": 13
+    },
+    {
+      "name": "Hernani",
+      "facet": "Sidra asturiana y vasca",
+      "known_at": 14
+    },
+    {
+      "name": "Fiesta de la Sidra Natural",
+      "facet": "Sidra asturiana y vasca",
+      "known_at": 12
+    },
+    {
+      "name": "Escanciador eléctrico",
+      "facet": "Sidra asturiana y vasca",
+      "known_at": 11
+    },
+    {
+      "name": "Sidra natural",
+      "facet": "Sidra asturiana y vasca",
+      "known_at": 10
+    },
+    {
+      "name": "Cultura sidrera asturiana",
+      "facet": "Sidra asturiana y vasca",
+      "known_at": 13
+    },
+    {
+      "name": "Botellín",
+      "facet": "Cerveza y caña en el bar",
+      "known_at": 9
+    },
+    {
+      "name": "Doble",
+      "facet": "Cerveza y caña en el bar",
+      "known_at": 10
+    },
+    {
+      "name": "Jarra",
+      "facet": "Cerveza y caña en el bar",
+      "known_at": 5
+    },
+    {
+      "name": "Pinta",
+      "facet": "Cerveza y caña en el bar",
+      "known_at": 8
+    },
+    {
+      "name": "Estrella Galicia",
+      "facet": "Cerveza y caña en el bar",
+      "known_at": 7
+    },
+    {
+      "name": "Estrella Damm",
+      "facet": "Cerveza y caña en el bar",
+      "known_at": 7
+    },
+    {
+      "name": "Cruzcampo",
+      "facet": "Cerveza y caña en el bar",
+      "known_at": 8
+    },
+    {
+      "name": "Ámbar",
+      "facet": "Cerveza y caña en el bar",
+      "known_at": 11
+    },
+    {
+      "name": "Keler",
+      "facet": "Cerveza y caña en el bar",
+      "known_at": 13
+    },
+    {
+      "name": "Cerveza sin alcohol",
+      "facet": "Cerveza y caña en el bar",
+      "known_at": 6
+    },
+    {
+      "name": "Cerveza artesana",
+      "facet": "Cerveza y caña en el bar",
+      "known_at": 9
+    },
+    {
+      "name": "Tirador",
+      "facet": "Cerveza y caña en el bar",
+      "known_at": 9
+    },
+    {
+      "name": "Orujo",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Crema de orujo",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Licor café",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Queimada",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Conjuro de la queimada",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Anís del Mono",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Cazalla",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Licor 43",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Ratafía",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Hierbas ibicencas",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Herbero",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 14
+    },
+    {
+      "name": "Licor de bellota",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Brandy de Jerez",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Ponche Caballero",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Mistela",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Gin tonic",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 8
+    },
+    {
+      "name": "Ginebra de Menorca",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 14
+    },
+    {
+      "name": "Ron miel",
+      "facet": "Licores y aguardientes regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Agua de Valencia",
+      "facet": "Bebidas refrescantes de verano",
+      "known_at": 12
+    },
+    {
+      "name": "Limonada de Semana Santa",
+      "facet": "Bebidas refrescantes de verano",
+      "known_at": 13
+    },
+    {
+      "name": "Zurracapote",
+      "facet": "Bebidas refrescantes de verano",
+      "known_at": 13
+    },
+    {
+      "name": "Kas",
+      "facet": "Bebidas refrescantes de verano",
+      "known_at": 8
+    },
+    {
+      "name": "Bitter Kas",
+      "facet": "Bebidas refrescantes de verano",
+      "known_at": 11
+    },
+    {
+      "name": "Vermut",
+      "facet": "Bebidas refrescantes de verano",
+      "known_at": 9
+    },
+    {
+      "name": "Clarete",
+      "facet": "Bebidas refrescantes de verano",
+      "known_at": 12
+    },
+    {
+      "name": "Cubitos de hielo",
+      "facet": "Bebidas refrescantes de verano",
+      "known_at": 2
+    },
+    {
+      "name": "Horchata",
+      "facet": "Horchata, granizados y bebidas sin alcohol",
+      "known_at": 6
+    },
+    {
+      "name": "Alboraya",
+      "facet": "Horchata, granizados y bebidas sin alcohol",
+      "known_at": 12
+    },
+    {
+      "name": "Horchatería",
+      "facet": "Horchata, granizados y bebidas sin alcohol",
+      "known_at": 9
+    },
+    {
+      "name": "Horchatería Santa Catalina",
+      "facet": "Horchata, granizados y bebidas sin alcohol",
+      "known_at": 14
+    },
+    {
+      "name": "Chufa de Valencia",
+      "facet": "Horchata, granizados y bebidas sin alcohol",
+      "known_at": 13
+    },
+    {
+      "name": "Granizado de café",
+      "facet": "Horchata, granizados y bebidas sin alcohol",
+      "known_at": 9
+    },
+    {
+      "name": "Zumo de naranja natural",
+      "facet": "Horchata, granizados y bebidas sin alcohol",
+      "known_at": 3
+    },
+    {
+      "name": "Cacaolat",
+      "facet": "Horchata, granizados y bebidas sin alcohol",
+      "known_at": 10
+    },
+    {
+      "name": "Leche de almendras",
+      "facet": "Horchata, granizados y bebidas sin alcohol",
+      "known_at": 11
+    },
+    {
+      "name": "Café con leche",
+      "facet": "Café a la española",
+      "known_at": 3
+    },
+    {
+      "name": "Café solo",
+      "facet": "Café a la española",
+      "known_at": 6
+    },
+    {
+      "name": "Cortado",
+      "facet": "Café a la española",
+      "known_at": 7
+    },
+    {
+      "name": "Leche manchada",
+      "facet": "Café a la española",
+      "known_at": 11
+    },
+    {
+      "name": "Café bombón",
+      "facet": "Café a la española",
+      "known_at": 10
+    },
+    {
+      "name": "Café con hielo",
+      "facet": "Café a la española",
+      "known_at": 8
+    },
+    {
+      "name": "Café descafeinado",
+      "facet": "Café a la española",
+      "known_at": 9
+    },
+    {
+      "name": "Café torrefacto",
+      "facet": "Café a la española",
+      "known_at": 12
+    },
+    {
+      "name": "Barraquito",
+      "facet": "Café a la española",
+      "known_at": 12
+    },
+    {
+      "name": "Café asiático",
+      "facet": "Café a la española",
+      "known_at": 13
+    },
+    {
+      "name": "Nube",
+      "facet": "Café a la española",
+      "known_at": 14
+    },
+    {
+      "name": "Café Central de Málaga",
+      "facet": "Café a la española",
+      "known_at": 14
+    },
+    {
+      "name": "Café de puchero",
+      "facet": "Café a la española",
+      "known_at": 12
+    },
+    {
+      "name": "Marcilla",
+      "facet": "Café a la española",
+      "known_at": 10
+    },
+    {
+      "name": "Els Quatre Gats",
+      "facet": "Café a la española",
+      "known_at": 14
+    },
+    {
+      "name": "Cafetera italiana",
+      "facet": "Café a la española",
+      "known_at": 6
+    },
+    {
+      "name": "Chocolate con churros",
+      "facet": "Chocolate caliente y bebidas de invierno",
+      "known_at": 3
+    },
+    {
+      "name": "Chocolatería San Ginés",
+      "facet": "Chocolate caliente y bebidas de invierno",
+      "known_at": 11
+    },
+    {
+      "name": "Chocolate a la piedra",
+      "facet": "Chocolate caliente y bebidas de invierno",
+      "known_at": 12
+    },
+    {
+      "name": "Chocolates Valor",
+      "facet": "Chocolate caliente y bebidas de invierno",
+      "known_at": 9
+    },
+    {
+      "name": "Villajoyosa",
+      "facet": "Chocolate caliente y bebidas de invierno",
+      "known_at": 13
+    },
+    {
+      "name": "Astorga",
+      "facet": "Chocolate caliente y bebidas de invierno",
+      "known_at": 13
+    },
+    {
+      "name": "Cacao",
+      "facet": "Chocolate caliente y bebidas de invierno",
+      "known_at": 4
+    },
+    {
+      "name": "Chocolatera",
+      "facet": "Chocolate caliente y bebidas de invierno",
+      "known_at": 10
+    },
+    {
+      "name": "Molinillo",
+      "facet": "Chocolate caliente y bebidas de invierno",
+      "known_at": 10
+    },
+    {
+      "name": "Caldo de cocido",
+      "facet": "Chocolate caliente y bebidas de invierno",
+      "known_at": 9
+    },
+    {
+      "name": "Leche con miel",
+      "facet": "Chocolate caliente y bebidas de invierno",
+      "known_at": 6
+    },
+    {
+      "name": "Infusión de manzanilla",
+      "facet": "Chocolate caliente y bebidas de invierno",
+      "known_at": 5,
+      "retired": "used_up: Ya se preguntó por la planta a partir de sus flores; las demás opciones dan preguntas forzadas o muy por encima de la dificultad 6."
+    },
+    {
+      "name": "Poleo menta",
+      "facet": "Chocolate caliente y bebidas de invierno",
+      "known_at": 9
+    },
+    {
+      "name": "Tila",
+      "facet": "Chocolate caliente y bebidas de invierno",
+      "known_at": 9
+    },
+    {
+      "name": "Agua del grifo",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 3
+    },
+    {
+      "name": "Agua con gas",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 4
+    },
+    {
+      "name": "Manantial",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 5
+    },
+    {
+      "name": "Fuente pública",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 3
+    },
+    {
+      "name": "Vichy Catalán",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 10
+    },
+    {
+      "name": "Font Vella",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 8
+    },
+    {
+      "name": "Lanjarón",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 8
+    },
+    {
+      "name": "Solán de Cabras",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 9
+    },
+    {
+      "name": "Bezoya",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 10
+    },
+    {
+      "name": "Cabreiroá",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 13,
+      "retired": "unaskable: Los datos sobre Cabreiroá son demasiado específicos o ambiguos (tiene agua con y sin gas) para una pregunta fiable."
+    },
+    {
+      "name": "Mondariz",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 13
+    },
+    {
+      "name": "Peñaclara",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 13
+    },
+    {
+      "name": "Balneario",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 8
+    },
+    {
+      "name": "Termas de Ourense",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 11
+    },
+    {
+      "name": "As Burgas",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 13
+    },
+    {
+      "name": "Balneario de Archena",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 14
+    },
+    {
+      "name": "Caldes de Malavella",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 14
+    },
+    {
+      "name": "Fuente de Canaletes",
+      "facet": "Aguas minerales y manantiales",
+      "known_at": 12
+    },
+    {
+      "name": "Brindis",
+      "facet": "Costumbres y rituales al beber",
+      "known_at": 5
+    },
+    {
+      "name": "Tapeo",
+      "facet": "Costumbres y rituales al beber",
+      "known_at": 7
+    },
+    {
+      "name": "Ir de cañas",
+      "facet": "Costumbres y rituales al beber",
+      "known_at": 6
+    },
+    {
+      "name": "Hora del vermut",
+      "facet": "Costumbres y rituales al beber",
+      "known_at": 10
+    },
+    {
+      "name": "Chiquiteo",
+      "facet": "Costumbres y rituales al beber",
+      "known_at": 12
+    },
+    {
+      "name": "Pisado de la uva",
+      "facet": "Costumbres y rituales al beber",
+      "known_at": 9
+    },
+    {
+      "name": "Fiesta de la Vendimia de Jerez",
+      "facet": "Costumbres y rituales al beber",
+      "known_at": 13
+    },
+    {
+      "name": "Cuadrilla",
+      "facet": "Costumbres y rituales al beber",
+      "known_at": 10
+    },
+    {
+      "name": "Tertulia",
+      "facet": "Costumbres y rituales al beber",
+      "known_at": 11
+    },
+    {
+      "name": "Peña",
+      "facet": "Costumbres y rituales al beber",
+      "known_at": 10
+    }
+  ]
+}

@@ -1,0 +1,997 @@
+{
+  "subcategory": "monuments",
+  "facets": [
+    "Arte islámico en al-Ándalus",
+    "Catedrales e iglesias",
+    "Castillos y murallas",
+    "Obras de Gaudí y el modernismo",
+    "Monumentos romanos",
+    "Palacios y residencias reales",
+    "Arquitectura moderna y contemporánea",
+    "Plazas, puertas y fuentes",
+    "Monasterios y Camino de Santiago",
+    "Prehistoria y monumentos antiguos",
+    "Monumentos de las islas",
+    "Faros, puentes y obras de ingeniería"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 2,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Medina Azahara",
+      "facet": "Arte islámico en al-Ándalus",
+      "known_at": 10
+    },
+    {
+      "name": "Generalife",
+      "facet": "Arte islámico en al-Ándalus",
+      "known_at": 9
+    },
+    {
+      "name": "Alcazaba de Málaga",
+      "facet": "Arte islámico en al-Ándalus",
+      "known_at": 9
+    },
+    {
+      "name": "Alcazaba de Almería",
+      "facet": "Arte islámico en al-Ándalus",
+      "known_at": 11
+    },
+    {
+      "name": "Aljafería",
+      "facet": "Arte islámico en al-Ándalus",
+      "known_at": 11
+    },
+    {
+      "name": "Mezquita del Cristo de la Luz",
+      "facet": "Arte islámico en al-Ándalus",
+      "known_at": 13
+    },
+    {
+      "name": "Arco de herradura",
+      "facet": "Arte islámico en al-Ándalus",
+      "known_at": 8
+    },
+    {
+      "name": "Arte mudéjar",
+      "facet": "Arte islámico en al-Ándalus",
+      "known_at": 10
+    },
+    {
+      "name": "Torres mudéjares de Teruel",
+      "facet": "Arte islámico en al-Ándalus",
+      "known_at": 11
+    },
+    {
+      "name": "Mihrab",
+      "facet": "Arte islámico en al-Ándalus",
+      "known_at": 12
+    },
+    {
+      "name": "Mocárabes",
+      "facet": "Arte islámico en al-Ándalus",
+      "known_at": 13
+    },
+    {
+      "name": "Baños árabes de Jaén",
+      "facet": "Arte islámico en al-Ándalus",
+      "known_at": 13
+    },
+    {
+      "name": "Abderramán III",
+      "facet": "Arte islámico en al-Ándalus",
+      "known_at": 11
+    },
+    {
+      "name": "Azulejo",
+      "facet": "Arte islámico en al-Ándalus",
+      "known_at": 6
+    },
+    {
+      "name": "Botafumeiro",
+      "facet": "Catedrales e iglesias",
+      "known_at": 7
+    },
+    {
+      "name": "Catedral de Sevilla",
+      "facet": "Catedrales e iglesias",
+      "known_at": 8
+    },
+    {
+      "name": "Catedral de Toledo",
+      "facet": "Catedrales e iglesias",
+      "known_at": 10
+    },
+    {
+      "name": "Catedral de la Almudena",
+      "facet": "Catedrales e iglesias",
+      "known_at": 9
+    },
+    {
+      "name": "Catedral de Salamanca",
+      "facet": "Catedrales e iglesias",
+      "known_at": 11
+    },
+    {
+      "name": "Catedral de Barcelona",
+      "facet": "Catedrales e iglesias",
+      "known_at": 10
+    },
+    {
+      "name": "Catedral de Valencia",
+      "facet": "Catedrales e iglesias",
+      "known_at": 12
+    },
+    {
+      "name": "Catedral de Cuenca",
+      "facet": "Catedrales e iglesias",
+      "known_at": 12
+    },
+    {
+      "name": "Catedral de Granada",
+      "facet": "Catedrales e iglesias",
+      "known_at": 12
+    },
+    {
+      "name": "Catedral de Oviedo",
+      "facet": "Catedrales e iglesias",
+      "known_at": 12
+    },
+    {
+      "name": "Catedral de Ávila",
+      "facet": "Catedrales e iglesias",
+      "known_at": 13
+    },
+    {
+      "name": "Basílica de Covadonga",
+      "facet": "Catedrales e iglesias",
+      "known_at": 9
+    },
+    {
+      "name": "Santa María del Mar",
+      "facet": "Catedrales e iglesias",
+      "known_at": 11
+    },
+    {
+      "name": "Pórtico de la Gloria",
+      "facet": "Catedrales e iglesias",
+      "known_at": 11
+    },
+    {
+      "name": "Santa María del Naranco",
+      "facet": "Catedrales e iglesias",
+      "known_at": 13
+    },
+    {
+      "name": "Iglesias románicas del Vall de Boí",
+      "facet": "Catedrales e iglesias",
+      "known_at": 13
+    },
+    {
+      "name": "Colegiata de Santillana del Mar",
+      "facet": "Catedrales e iglesias",
+      "known_at": 13
+    },
+    {
+      "name": "San Juan de Baños",
+      "facet": "Catedrales e iglesias",
+      "known_at": 14
+    },
+    {
+      "name": "Alcázar de Toledo",
+      "facet": "Castillos y murallas",
+      "known_at": 9
+    },
+    {
+      "name": "Castillo de Montjuïc",
+      "facet": "Castillos y murallas",
+      "known_at": 10
+    },
+    {
+      "name": "Castillo de Peñafiel",
+      "facet": "Castillos y murallas",
+      "known_at": 11
+    },
+    {
+      "name": "Castillo de la Mota",
+      "facet": "Castillos y murallas",
+      "known_at": 11
+    },
+    {
+      "name": "Castillo de Coca",
+      "facet": "Castillos y murallas",
+      "known_at": 12
+    },
+    {
+      "name": "Castillo de Loarre",
+      "facet": "Castillos y murallas",
+      "known_at": 12
+    },
+    {
+      "name": "Castillo de Belmonte",
+      "facet": "Castillos y murallas",
+      "known_at": 12
+    },
+    {
+      "name": "Castillo de Manzanares el Real",
+      "facet": "Castillos y murallas",
+      "known_at": 12
+    },
+    {
+      "name": "Palacio Real de Olite",
+      "facet": "Castillos y murallas",
+      "known_at": 11
+    },
+    {
+      "name": "Castillo de Ponferrada",
+      "facet": "Castillos y murallas",
+      "known_at": 11
+    },
+    {
+      "name": "Castillo de Javier",
+      "facet": "Castillos y murallas",
+      "known_at": 12
+    },
+    {
+      "name": "Castillo de Almodóvar del Río",
+      "facet": "Castillos y murallas",
+      "known_at": 12
+    },
+    {
+      "name": "Castillo de Santa Bárbara",
+      "facet": "Castillos y murallas",
+      "known_at": 11
+    },
+    {
+      "name": "Castillo de Butrón",
+      "facet": "Castillos y murallas",
+      "known_at": 13
+    },
+    {
+      "name": "Castillo de Sigüenza",
+      "facet": "Castillos y murallas",
+      "known_at": 13
+    },
+    {
+      "name": "Castillo de Gormaz",
+      "facet": "Castillos y murallas",
+      "known_at": 14
+    },
+    {
+      "name": "Calatrava la Nueva",
+      "facet": "Castillos y murallas",
+      "known_at": 14
+    },
+    {
+      "name": "Antoni Gaudí",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 4
+    },
+    {
+      "name": "Dragón del Park Güell",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 8
+    },
+    {
+      "name": "La Pedrera",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 7
+    },
+    {
+      "name": "Trencadís",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 11
+    },
+    {
+      "name": "Palau de la Música Catalana",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 10
+    },
+    {
+      "name": "Hospital de Sant Pau",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 11
+    },
+    {
+      "name": "Palau Güell",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 11
+    },
+    {
+      "name": "Casa Vicens",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 12
+    },
+    {
+      "name": "El Capricho de Comillas",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 12
+    },
+    {
+      "name": "Casa Botines",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 12
+    },
+    {
+      "name": "Manzana de la Discordia",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 12
+    },
+    {
+      "name": "Palacio Episcopal de Astorga",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 13
+    },
+    {
+      "name": "Cripta de la Colonia Güell",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 13
+    },
+    {
+      "name": "Casa Amatller",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 13
+    },
+    {
+      "name": "Lluís Domènech i Montaner",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 13
+    },
+    {
+      "name": "Josep Puig i Cadafalch",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 14
+    },
+    {
+      "name": "Bellesguard",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 14
+    },
+    {
+      "name": "Casa Lis",
+      "facet": "Obras de Gaudí y el modernismo",
+      "known_at": 14
+    },
+    {
+      "name": "Anfiteatro de Tarragona",
+      "facet": "Monumentos romanos",
+      "known_at": 10
+    },
+    {
+      "name": "Vía de la Plata",
+      "facet": "Monumentos romanos",
+      "known_at": 10
+    },
+    {
+      "name": "Teatro romano de Málaga",
+      "facet": "Monumentos romanos",
+      "known_at": 11
+    },
+    {
+      "name": "Puente de Alcántara",
+      "facet": "Monumentos romanos",
+      "known_at": 12
+    },
+    {
+      "name": "Templo de Diana de Mérida",
+      "facet": "Monumentos romanos",
+      "known_at": 12
+    },
+    {
+      "name": "Puente del Diablo de Tarragona",
+      "facet": "Monumentos romanos",
+      "known_at": 13
+    },
+    {
+      "name": "Arco de Bará",
+      "facet": "Monumentos romanos",
+      "known_at": 13
+    },
+    {
+      "name": "Arco de Cáparra",
+      "facet": "Monumentos romanos",
+      "known_at": 13
+    },
+    {
+      "name": "Segóbriga",
+      "facet": "Monumentos romanos",
+      "known_at": 13
+    },
+    {
+      "name": "Villa romana de La Olmeda",
+      "facet": "Monumentos romanos",
+      "known_at": 13
+    },
+    {
+      "name": "Clunia",
+      "facet": "Monumentos romanos",
+      "known_at": 14
+    },
+    {
+      "name": "Real Alcázar de Sevilla",
+      "facet": "Palacios y residencias reales",
+      "known_at": 8
+    },
+    {
+      "name": "Palacio de la Zarzuela",
+      "facet": "Palacios y residencias reales",
+      "known_at": 9
+    },
+    {
+      "name": "Palacio Real de Aranjuez",
+      "facet": "Palacios y residencias reales",
+      "known_at": 9
+    },
+    {
+      "name": "Palacio de La Granja",
+      "facet": "Palacios y residencias reales",
+      "known_at": 10
+    },
+    {
+      "name": "Palacio de El Pardo",
+      "facet": "Palacios y residencias reales",
+      "known_at": 11
+    },
+    {
+      "name": "Palacio de Carlos V",
+      "facet": "Palacios y residencias reales",
+      "known_at": 11
+    },
+    {
+      "name": "Palacio de Marivent",
+      "facet": "Palacios y residencias reales",
+      "known_at": 11
+    },
+    {
+      "name": "Palacio de la Magdalena",
+      "facet": "Palacios y residencias reales",
+      "known_at": 11
+    },
+    {
+      "name": "Palacio de Miramar",
+      "facet": "Palacios y residencias reales",
+      "known_at": 12
+    },
+    {
+      "name": "Palacio de Linares",
+      "facet": "Palacios y residencias reales",
+      "known_at": 12
+    },
+    {
+      "name": "Palacio de Liria",
+      "facet": "Palacios y residencias reales",
+      "known_at": 13
+    },
+    {
+      "name": "Palacio de las Dueñas",
+      "facet": "Palacios y residencias reales",
+      "known_at": 13
+    },
+    {
+      "name": "Palacio del Infantado",
+      "facet": "Palacios y residencias reales",
+      "known_at": 13
+    },
+    {
+      "name": "Casa de Pilatos",
+      "facet": "Palacios y residencias reales",
+      "known_at": 13
+    },
+    {
+      "name": "Palacio de Viana",
+      "facet": "Palacios y residencias reales",
+      "known_at": 13
+    },
+    {
+      "name": "Palacio Ducal de Gandía",
+      "facet": "Palacios y residencias reales",
+      "known_at": 13
+    },
+    {
+      "name": "Palacio de Riofrío",
+      "facet": "Palacios y residencias reales",
+      "known_at": 14
+    },
+    {
+      "name": "Estadio Santiago Bernabéu",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 3
+    },
+    {
+      "name": "Camp Nou",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 3
+    },
+    {
+      "name": "Torre Glòries",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 9
+    },
+    {
+      "name": "Torres KIO",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 9
+    },
+    {
+      "name": "Setas de Sevilla",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 9
+    },
+    {
+      "name": "Edificio Metrópolis",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 9
+    },
+    {
+      "name": "Hotel W Barcelona",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 10
+    },
+    {
+      "name": "Terminal T4 de Barajas",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 10
+    },
+    {
+      "name": "Cuatro Torres Business Area",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 11
+    },
+    {
+      "name": "Torre Picasso",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 11
+    },
+    {
+      "name": "Edificio Telefónica",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 11
+    },
+    {
+      "name": "Kursaal",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 11
+    },
+    {
+      "name": "Santiago Calatrava",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 11
+    },
+    {
+      "name": "Edificio España",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 12
+    },
+    {
+      "name": "Torre de Collserola",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 12
+    },
+    {
+      "name": "Ciudad de la Cultura de Galicia",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 13
+    },
+    {
+      "name": "Bodegas Marqués de Riscal",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 13
+    },
+    {
+      "name": "Rafael Moneo",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 13
+    },
+    {
+      "name": "Pabellón Alemán de Barcelona",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 14
+    },
+    {
+      "name": "Ricardo Bofill",
+      "facet": "Arquitectura moderna y contemporánea",
+      "known_at": 14
+    },
+    {
+      "name": "Fuente de Cibeles",
+      "facet": "Plazas, puertas y fuentes",
+      "known_at": 5
+    },
+    {
+      "name": "Kilómetro cero",
+      "facet": "Plazas, puertas y fuentes",
+      "known_at": 7
+    },
+    {
+      "name": "Plaza de Cataluña",
+      "facet": "Plazas, puertas y fuentes",
+      "known_at": 7
+    },
+    {
+      "name": "Fuente de Neptuno",
+      "facet": "Plazas, puertas y fuentes",
+      "known_at": 8
+    },
+    {
+      "name": "Plaza de toros de Las Ventas",
+      "facet": "Plazas, puertas y fuentes",
+      "known_at": 8
+    },
+    {
+      "name": "Fuente Mágica de Montjuïc",
+      "facet": "Plazas, puertas y fuentes",
+      "known_at": 9
+    },
+    {
+      "name": "Plaza del Pilar",
+      "facet": "Plazas, puertas y fuentes",
+      "known_at": 9
+    },
+    {
+      "name": "Arco de Triunfo de Barcelona",
+      "facet": "Plazas, puertas y fuentes",
+      "known_at": 10
+    },
+    {
+      "name": "Fuente de Canaletas",
+      "facet": "Plazas, puertas y fuentes",
+      "known_at": 11
+    },
+    {
+      "name": "Plaza de Oriente",
+      "facet": "Plazas, puertas y fuentes",
+      "known_at": 11
+    },
+    {
+      "name": "Puerta de Toledo",
+      "facet": "Plazas, puertas y fuentes",
+      "known_at": 12
+    },
+    {
+      "name": "Plaza de la Virgen de Valencia",
+      "facet": "Plazas, puertas y fuentes",
+      "known_at": 12
+    },
+    {
+      "name": "Puerta de Bisagra",
+      "facet": "Plazas, puertas y fuentes",
+      "known_at": 13
+    },
+    {
+      "name": "Plaza Mayor de Chinchón",
+      "facet": "Plazas, puertas y fuentes",
+      "known_at": 13
+    },
+    {
+      "name": "Arco de Santa María",
+      "facet": "Plazas, puertas y fuentes",
+      "known_at": 14
+    },
+    {
+      "name": "Camino de Santiago",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 4
+    },
+    {
+      "name": "Concha del peregrino",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 6
+    },
+    {
+      "name": "Monasterio de Montserrat",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 7
+    },
+    {
+      "name": "Compostela",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 10
+    },
+    {
+      "name": "Credencial del peregrino",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 11
+    },
+    {
+      "name": "Monasterio de Poblet",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 11
+    },
+    {
+      "name": "Monasterio de Guadalupe",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 11
+    },
+    {
+      "name": "Monasterio de Santo Domingo de Silos",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 11
+    },
+    {
+      "name": "Monasterio de Yuste",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 11
+    },
+    {
+      "name": "San Millán de la Cogolla",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 12
+    },
+    {
+      "name": "Monasterio de San Juan de la Peña",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 12
+    },
+    {
+      "name": "O Cebreiro",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 12
+    },
+    {
+      "name": "Monte do Gozo",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 12
+    },
+    {
+      "name": "Cruz de Ferro",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 13
+    },
+    {
+      "name": "Monasterio de Leyre",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 13
+    },
+    {
+      "name": "Monasterio de las Huelgas",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 13
+    },
+    {
+      "name": "Santo Toribio de Liébana",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 13
+    },
+    {
+      "name": "Cartuja de Miraflores",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 14
+    },
+    {
+      "name": "Monasterio de Samos",
+      "facet": "Monasterios y Camino de Santiago",
+      "known_at": 14
+    },
+    {
+      "name": "Bisonte de Altamira",
+      "facet": "Prehistoria y monumentos antiguos",
+      "known_at": 6
+    },
+    {
+      "name": "Dama de Elche",
+      "facet": "Prehistoria y monumentos antiguos",
+      "known_at": 8
+    },
+    {
+      "name": "Dólmenes de Antequera",
+      "facet": "Prehistoria y monumentos antiguos",
+      "known_at": 11
+    },
+    {
+      "name": "Toros de Guisando",
+      "facet": "Prehistoria y monumentos antiguos",
+      "known_at": 11
+    },
+    {
+      "name": "Castro de Santa Tecla",
+      "facet": "Prehistoria y monumentos antiguos",
+      "known_at": 12
+    },
+    {
+      "name": "Castro de Baroña",
+      "facet": "Prehistoria y monumentos antiguos",
+      "known_at": 12
+    },
+    {
+      "name": "Verracos",
+      "facet": "Prehistoria y monumentos antiguos",
+      "known_at": 12
+    },
+    {
+      "name": "Dama de Baza",
+      "facet": "Prehistoria y monumentos antiguos",
+      "known_at": 13
+    },
+    {
+      "name": "Tesoro del Carambolo",
+      "facet": "Prehistoria y monumentos antiguos",
+      "known_at": 13
+    },
+    {
+      "name": "Los Millares",
+      "facet": "Prehistoria y monumentos antiguos",
+      "known_at": 13
+    },
+    {
+      "name": "Arte rupestre levantino",
+      "facet": "Prehistoria y monumentos antiguos",
+      "known_at": 13
+    },
+    {
+      "name": "Cueva de Tito Bustillo",
+      "facet": "Prehistoria y monumentos antiguos",
+      "known_at": 13
+    },
+    {
+      "name": "Cueva de El Castillo",
+      "facet": "Prehistoria y monumentos antiguos",
+      "known_at": 14
+    },
+    {
+      "name": "Cueva de Ekain",
+      "facet": "Prehistoria y monumentos antiguos",
+      "known_at": 14
+    },
+    {
+      "name": "Siega Verde",
+      "facet": "Prehistoria y monumentos antiguos",
+      "known_at": 15
+    },
+    {
+      "name": "Drago milenario de Icod",
+      "facet": "Monumentos de las islas",
+      "known_at": 10
+    },
+    {
+      "name": "Auditorio de Tenerife",
+      "facet": "Monumentos de las islas",
+      "known_at": 10
+    },
+    {
+      "name": "Basílica de Candelaria",
+      "facet": "Monumentos de las islas",
+      "known_at": 11
+    },
+    {
+      "name": "Castillo de Bellver",
+      "facet": "Monumentos de las islas",
+      "known_at": 12
+    },
+    {
+      "name": "Talayots de Menorca",
+      "facet": "Monumentos de las islas",
+      "known_at": 12
+    },
+    {
+      "name": "Casa de Colón de Las Palmas",
+      "facet": "Monumentos de las islas",
+      "known_at": 12
+    },
+    {
+      "name": "Pirámides de Güímar",
+      "facet": "Monumentos de las islas",
+      "known_at": 12
+    },
+    {
+      "name": "Palacio de la Almudaina",
+      "facet": "Monumentos de las islas",
+      "known_at": 12
+    },
+    {
+      "name": "Monasterio de Lluc",
+      "facet": "Monumentos de las islas",
+      "known_at": 12
+    },
+    {
+      "name": "Cartuja de Valldemossa",
+      "facet": "Monumentos de las islas",
+      "known_at": 12
+    },
+    {
+      "name": "Taula",
+      "facet": "Monumentos de las islas",
+      "known_at": 13
+    },
+    {
+      "name": "Cueva Pintada de Gáldar",
+      "facet": "Monumentos de las islas",
+      "known_at": 13
+    },
+    {
+      "name": "Catedral de Santa Ana de Las Palmas",
+      "facet": "Monumentos de las islas",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de Rande",
+      "facet": "Faros, puentes y obras de ingeniería",
+      "known_at": 11
+    },
+    {
+      "name": "Puente de la Constitución de 1812",
+      "facet": "Faros, puentes y obras de ingeniería",
+      "known_at": 11
+    },
+    {
+      "name": "Faro de Cabo de Gata",
+      "facet": "Faros, puentes y obras de ingeniería",
+      "known_at": 12
+    },
+    {
+      "name": "Puente Zubizuri",
+      "facet": "Faros, puentes y obras de ingeniería",
+      "known_at": 12
+    },
+    {
+      "name": "Teleférico de Fuente Dé",
+      "facet": "Faros, puentes y obras de ingeniería",
+      "known_at": 12
+    },
+    {
+      "name": "Canal de Isabel II",
+      "facet": "Faros, puentes y obras de ingeniería",
+      "known_at": 12
+    },
+    {
+      "name": "Canal de Castilla",
+      "facet": "Faros, puentes y obras de ingeniería",
+      "known_at": 13
+    },
+    {
+      "name": "Presa de Aldeadávila",
+      "facet": "Faros, puentes y obras de ingeniería",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de Toledo",
+      "facet": "Faros, puentes y obras de ingeniería",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de San Pablo de Cuenca",
+      "facet": "Faros, puentes y obras de ingeniería",
+      "known_at": 13
+    }
+  ]
+}

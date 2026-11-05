@@ -1,0 +1,1087 @@
+{
+  "subcategory": "wildlife",
+  "facets": [
+    "Grandes mamíferos ibéricos",
+    "Especies endémicas y amenazadas",
+    "Aves rapaces y carroñeras",
+    "Aves de humedales y marismas",
+    "Pájaros del campo y la ciudad",
+    "Fauna marina de las costas",
+    "Peces y vida de ríos",
+    "Reptiles y anfibios ibéricos",
+    "Insectos y pequeños invertebrados",
+    "Ganado y razas autóctonas",
+    "Fauna en refranes, fiestas y escudos",
+    "Conservación y espacios protegidos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 4,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 2,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Lobo ibérico",
+      "facet": "Grandes mamíferos ibéricos",
+      "known_at": 3
+    },
+    {
+      "name": "Ciervo",
+      "facet": "Grandes mamíferos ibéricos",
+      "known_at": 2
+    },
+    {
+      "name": "Jabalí",
+      "facet": "Grandes mamíferos ibéricos",
+      "known_at": 2
+    },
+    {
+      "name": "Zorro",
+      "facet": "Grandes mamíferos ibéricos",
+      "known_at": 1
+    },
+    {
+      "name": "Corzo",
+      "facet": "Grandes mamíferos ibéricos",
+      "known_at": 6
+    },
+    {
+      "name": "Gamo",
+      "facet": "Grandes mamíferos ibéricos",
+      "known_at": 8
+    },
+    {
+      "name": "Muflón",
+      "facet": "Grandes mamíferos ibéricos",
+      "known_at": 10
+    },
+    {
+      "name": "Tejón",
+      "facet": "Grandes mamíferos ibéricos",
+      "known_at": 6
+    },
+    {
+      "name": "Nutria",
+      "facet": "Grandes mamíferos ibéricos",
+      "known_at": 5
+    },
+    {
+      "name": "Gato montés",
+      "facet": "Grandes mamíferos ibéricos",
+      "known_at": 7
+    },
+    {
+      "name": "Gineta",
+      "facet": "Grandes mamíferos ibéricos",
+      "known_at": 11
+    },
+    {
+      "name": "Meloncillo",
+      "facet": "Grandes mamíferos ibéricos",
+      "known_at": 12
+    },
+    {
+      "name": "Garduña",
+      "facet": "Grandes mamíferos ibéricos",
+      "known_at": 12
+    },
+    {
+      "name": "Macaco de Gibraltar",
+      "facet": "Grandes mamíferos ibéricos",
+      "known_at": 8
+    },
+    {
+      "name": "Berrea",
+      "facet": "Grandes mamíferos ibéricos",
+      "known_at": 9
+    },
+    {
+      "name": "Desmán ibérico",
+      "facet": "Especies endémicas y amenazadas",
+      "known_at": 12
+    },
+    {
+      "name": "Urogallo cantábrico",
+      "facet": "Especies endémicas y amenazadas",
+      "known_at": 11
+    },
+    {
+      "name": "Ferreret",
+      "facet": "Especies endémicas y amenazadas",
+      "known_at": 13
+    },
+    {
+      "name": "Foca monje del Mediterráneo",
+      "facet": "Especies endémicas y amenazadas",
+      "known_at": 10
+    },
+    {
+      "name": "Pinzón azul del Teide",
+      "facet": "Especies endémicas y amenazadas",
+      "known_at": 12
+    },
+    {
+      "name": "Bucardo",
+      "facet": "Especies endémicas y amenazadas",
+      "known_at": 11
+    },
+    {
+      "name": "Fartet",
+      "facet": "Especies endémicas y amenazadas",
+      "known_at": 14
+    },
+    {
+      "name": "Samaruc",
+      "facet": "Especies endémicas y amenazadas",
+      "known_at": 14
+    },
+    {
+      "name": "Hubara canaria",
+      "facet": "Especies endémicas y amenazadas",
+      "known_at": 14
+    },
+    {
+      "name": "Cerceta pardilla",
+      "facet": "Especies endémicas y amenazadas",
+      "known_at": 13
+    },
+    {
+      "name": "Lagartija de las Pitiusas",
+      "facet": "Especies endémicas y amenazadas",
+      "known_at": 13
+    },
+    {
+      "name": "Pardela balear",
+      "facet": "Especies endémicas y amenazadas",
+      "known_at": 13
+    },
+    {
+      "name": "Visón europeo",
+      "facet": "Especies endémicas y amenazadas",
+      "known_at": 12
+    },
+    {
+      "name": "Tortuga mora",
+      "facet": "Especies endémicas y amenazadas",
+      "known_at": 12
+    },
+    {
+      "name": "Paloma rabiche",
+      "facet": "Especies endémicas y amenazadas",
+      "known_at": 14
+    },
+    {
+      "name": "Topillo de Cabrera",
+      "facet": "Especies endémicas y amenazadas",
+      "known_at": 14
+    },
+    {
+      "name": "Águila real",
+      "facet": "Aves rapaces y carroñeras",
+      "known_at": 4
+    },
+    {
+      "name": "Buitre negro",
+      "facet": "Aves rapaces y carroñeras",
+      "known_at": 8
+    },
+    {
+      "name": "Alimoche",
+      "facet": "Aves rapaces y carroñeras",
+      "known_at": 10
+    },
+    {
+      "name": "Halcón peregrino",
+      "facet": "Aves rapaces y carroñeras",
+      "known_at": 5
+    },
+    {
+      "name": "Cernícalo",
+      "facet": "Aves rapaces y carroñeras",
+      "known_at": 7
+    },
+    {
+      "name": "Búho real",
+      "facet": "Aves rapaces y carroñeras",
+      "known_at": 5
+    },
+    {
+      "name": "Lechuza",
+      "facet": "Aves rapaces y carroñeras",
+      "known_at": 3
+    },
+    {
+      "name": "Mochuelo",
+      "facet": "Aves rapaces y carroñeras",
+      "known_at": 6
+    },
+    {
+      "name": "Cárabo",
+      "facet": "Aves rapaces y carroñeras",
+      "known_at": 11
+    },
+    {
+      "name": "Milano real",
+      "facet": "Aves rapaces y carroñeras",
+      "known_at": 9
+    },
+    {
+      "name": "Ratonero",
+      "facet": "Aves rapaces y carroñeras",
+      "known_at": 10
+    },
+    {
+      "name": "Azor",
+      "facet": "Aves rapaces y carroñeras",
+      "known_at": 10
+    },
+    {
+      "name": "Gavilán",
+      "facet": "Aves rapaces y carroñeras",
+      "known_at": 8
+    },
+    {
+      "name": "Águila perdicera",
+      "facet": "Aves rapaces y carroñeras",
+      "known_at": 12
+    },
+    {
+      "name": "Elanio azul",
+      "facet": "Aves rapaces y carroñeras",
+      "known_at": 13
+    },
+    {
+      "name": "Aguilucho cenizo",
+      "facet": "Aves rapaces y carroñeras",
+      "known_at": 12
+    },
+    {
+      "name": "Culebrera europea",
+      "facet": "Aves rapaces y carroñeras",
+      "known_at": 12
+    },
+    {
+      "name": "Garza real",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 5
+    },
+    {
+      "name": "Garcilla bueyera",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 10
+    },
+    {
+      "name": "Garceta común",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 10
+    },
+    {
+      "name": "Espátula",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 8
+    },
+    {
+      "name": "Martín pescador",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 5
+    },
+    {
+      "name": "Ánade real",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 4
+    },
+    {
+      "name": "Calamón",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 11
+    },
+    {
+      "name": "Focha común",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 10
+    },
+    {
+      "name": "Malvasía cabeciblanca",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 13
+    },
+    {
+      "name": "Morito",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 12
+    },
+    {
+      "name": "Avoceta",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 11
+    },
+    {
+      "name": "Cigüeñuela",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 11
+    },
+    {
+      "name": "Grulla común",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 7
+    },
+    {
+      "name": "Somormujo lavanco",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 12
+    },
+    {
+      "name": "Pato colorado",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 13
+    },
+    {
+      "name": "Avetoro",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 13
+    },
+    {
+      "name": "Ánsar común",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 9
+    },
+    {
+      "name": "Garcilla cangrejera",
+      "facet": "Aves de humedales y marismas",
+      "known_at": 13
+    },
+    {
+      "name": "Gorrión",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 1
+    },
+    {
+      "name": "Cigüeña blanca",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 2
+    },
+    {
+      "name": "Golondrina",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 2
+    },
+    {
+      "name": "Vencejo",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 6
+    },
+    {
+      "name": "Paloma",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 1
+    },
+    {
+      "name": "Mirlo",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 4
+    },
+    {
+      "name": "Urraca",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 5
+    },
+    {
+      "name": "Abubilla",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 6
+    },
+    {
+      "name": "Abejaruco",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 8
+    },
+    {
+      "name": "Jilguero",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 6
+    },
+    {
+      "name": "Petirrojo",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 4
+    },
+    {
+      "name": "Estornino negro",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 9
+    },
+    {
+      "name": "Cotorra argentina",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 7
+    },
+    {
+      "name": "Avutarda",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 9
+    },
+    {
+      "name": "Perdiz roja",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 6
+    },
+    {
+      "name": "Codorniz",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 6
+    },
+    {
+      "name": "Ruiseñor",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 5
+    },
+    {
+      "name": "Carbonero común",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 8
+    },
+    {
+      "name": "Herrerillo",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 9
+    },
+    {
+      "name": "Alondra",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 6
+    },
+    {
+      "name": "Cuco",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 4
+    },
+    {
+      "name": "Pito real",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 9
+    },
+    {
+      "name": "Grajilla",
+      "facet": "Pájaros del campo y la ciudad",
+      "known_at": 10
+    },
+    {
+      "name": "Cachalote",
+      "facet": "Fauna marina de las costas",
+      "known_at": 6
+    },
+    {
+      "name": "Pulpo",
+      "facet": "Fauna marina de las costas",
+      "known_at": 1
+    },
+    {
+      "name": "Sardina",
+      "facet": "Fauna marina de las costas",
+      "known_at": 3
+    },
+    {
+      "name": "Boquerón",
+      "facet": "Fauna marina de las costas",
+      "known_at": 4
+    },
+    {
+      "name": "Mero",
+      "facet": "Fauna marina de las costas",
+      "known_at": 8
+    },
+    {
+      "name": "Centolla",
+      "facet": "Fauna marina de las costas",
+      "known_at": 8
+    },
+    {
+      "name": "Nécora",
+      "facet": "Fauna marina de las costas",
+      "known_at": 9
+    },
+    {
+      "name": "Pez araña",
+      "facet": "Fauna marina de las costas",
+      "known_at": 9
+    },
+    {
+      "name": "Morena",
+      "facet": "Fauna marina de las costas",
+      "known_at": 7
+    },
+    {
+      "name": "Navaja",
+      "facet": "Fauna marina de las costas",
+      "known_at": 7
+    },
+    {
+      "name": "Trucha común",
+      "facet": "Peces y vida de ríos",
+      "known_at": 4
+    },
+    {
+      "name": "Salmón atlántico",
+      "facet": "Peces y vida de ríos",
+      "known_at": 6
+    },
+    {
+      "name": "Barbo",
+      "facet": "Peces y vida de ríos",
+      "known_at": 9
+    },
+    {
+      "name": "Anguila",
+      "facet": "Peces y vida de ríos",
+      "known_at": 5
+    },
+    {
+      "name": "Angula",
+      "facet": "Peces y vida de ríos",
+      "known_at": 7
+    },
+    {
+      "name": "Lamprea",
+      "facet": "Peces y vida de ríos",
+      "known_at": 10
+    },
+    {
+      "name": "Esturión del Guadalquivir",
+      "facet": "Peces y vida de ríos",
+      "known_at": 12
+    },
+    {
+      "name": "Lucio",
+      "facet": "Peces y vida de ríos",
+      "known_at": 10
+    },
+    {
+      "name": "Siluro",
+      "facet": "Peces y vida de ríos",
+      "known_at": 10
+    },
+    {
+      "name": "Carpa",
+      "facet": "Peces y vida de ríos",
+      "known_at": 6
+    },
+    {
+      "name": "Tenca",
+      "facet": "Peces y vida de ríos",
+      "known_at": 10
+    },
+    {
+      "name": "Boga",
+      "facet": "Peces y vida de ríos",
+      "known_at": 12
+    },
+    {
+      "name": "Black bass",
+      "facet": "Peces y vida de ríos",
+      "known_at": 11
+    },
+    {
+      "name": "Sábalo",
+      "facet": "Peces y vida de ríos",
+      "known_at": 13
+    },
+    {
+      "name": "Cangrejo de río autóctono",
+      "facet": "Peces y vida de ríos",
+      "known_at": 10
+    },
+    {
+      "name": "Cangrejo rojo americano",
+      "facet": "Peces y vida de ríos",
+      "known_at": 9
+    },
+    {
+      "name": "Mejillón cebra",
+      "facet": "Peces y vida de ríos",
+      "known_at": 10
+    },
+    {
+      "name": "Mirlo acuático",
+      "facet": "Peces y vida de ríos",
+      "known_at": 12
+    },
+    {
+      "name": "Lagarto ocelado",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 8
+    },
+    {
+      "name": "Lagartija ibérica",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 6
+    },
+    {
+      "name": "Salamanquesa",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 6
+    },
+    {
+      "name": "Culebra de escalera",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 10
+    },
+    {
+      "name": "Culebra bastarda",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 11
+    },
+    {
+      "name": "Culebra viperina",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 12
+    },
+    {
+      "name": "Víbora hocicuda",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 11
+    },
+    {
+      "name": "Culebrilla ciega",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 12
+    },
+    {
+      "name": "Eslizón",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 12
+    },
+    {
+      "name": "Galápago europeo",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 10
+    },
+    {
+      "name": "Galápago leproso",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 12
+    },
+    {
+      "name": "Tortuga mediterránea",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 7
+    },
+    {
+      "name": "Gallipato",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 11
+    },
+    {
+      "name": "Salamandra común",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 5
+    },
+    {
+      "name": "Tritón jaspeado",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 12
+    },
+    {
+      "name": "Sapo común",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 3
+    },
+    {
+      "name": "Sapo partero",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 11
+    },
+    {
+      "name": "Rana común",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 3
+    },
+    {
+      "name": "Ranita de San Antonio",
+      "facet": "Reptiles y anfibios ibéricos",
+      "known_at": 10
+    },
+    {
+      "name": "Cigarra",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 4
+    },
+    {
+      "name": "Mariquita",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 1
+    },
+    {
+      "name": "Hormiga",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 1
+    },
+    {
+      "name": "Abeja melífera",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 2
+    },
+    {
+      "name": "Mariposa isabelina",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 12
+    },
+    {
+      "name": "Mariposa macaón",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 10
+    },
+    {
+      "name": "Escarabajo pelotero",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 6
+    },
+    {
+      "name": "Ciervo volante",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 8
+    },
+    {
+      "name": "Mantis religiosa",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 5
+    },
+    {
+      "name": "Alacrán",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 7
+    },
+    {
+      "name": "Saltamontes",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 3
+    },
+    {
+      "name": "Grillo",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 2
+    },
+    {
+      "name": "Luciérnaga",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 4
+    },
+    {
+      "name": "Oruga procesionaria",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 6
+    },
+    {
+      "name": "Mosquito tigre",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 8
+    },
+    {
+      "name": "Avispa asiática",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 9
+    },
+    {
+      "name": "Picudo rojo",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 10
+    },
+    {
+      "name": "Tarántula ibérica",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 11
+    },
+    {
+      "name": "Caracol",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 2
+    },
+    {
+      "name": "Libélula",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 3
+    },
+    {
+      "name": "Tijereta",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 6
+    },
+    {
+      "name": "Cochinilla de la humedad",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 5
+    },
+    {
+      "name": "Garrapata",
+      "facet": "Insectos y pequeños invertebrados",
+      "known_at": 5
+    },
+    {
+      "name": "Toro de lidia",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 5
+    },
+    {
+      "name": "Cerdo ibérico",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 5
+    },
+    {
+      "name": "Oveja merina",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 9
+    },
+    {
+      "name": "Oveja churra",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 11
+    },
+    {
+      "name": "Oveja manchega",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 10
+    },
+    {
+      "name": "Oveja latxa",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 13
+    },
+    {
+      "name": "Vaca rubia gallega",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 11
+    },
+    {
+      "name": "Vaca tudanca",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 13
+    },
+    {
+      "name": "Vaca avileña-negra ibérica",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 13
+    },
+    {
+      "name": "Vaca pirenaica",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 13
+    },
+    {
+      "name": "Caballo de pura raza española",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 8
+    },
+    {
+      "name": "Asturcón",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 12
+    },
+    {
+      "name": "Pottoka",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 13
+    },
+    {
+      "name": "Burro zamorano-leonés",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 13
+    },
+    {
+      "name": "Cabra murciano-granadina",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 13
+    },
+    {
+      "name": "Cabra payoya",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 14
+    },
+    {
+      "name": "Cerdo celta",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 12
+    },
+    {
+      "name": "Gallina castellana negra",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 13
+    },
+    {
+      "name": "Mastín español",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 8
+    },
+    {
+      "name": "Galgo español",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 7
+    },
+    {
+      "name": "Podenco ibérico",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 10
+    },
+    {
+      "name": "Perro de agua español",
+      "facet": "Ganado y razas autóctonas",
+      "known_at": 10
+    },
+    {
+      "name": "Toro de Osborne",
+      "facet": "Fauna en refranes, fiestas y escudos",
+      "known_at": 5
+    },
+    {
+      "name": "Burro catalán",
+      "facet": "Fauna en refranes, fiestas y escudos",
+      "known_at": 11
+    },
+    {
+      "name": "Encierro de San Fermín",
+      "facet": "Fauna en refranes, fiestas y escudos",
+      "known_at": 4
+    },
+    {
+      "name": "Murciélago del escudo de Valencia",
+      "facet": "Fauna en refranes, fiestas y escudos",
+      "known_at": 10
+    },
+    {
+      "name": "Lagarto de Jaén",
+      "facet": "Fauna en refranes, fiestas y escudos",
+      "known_at": 11
+    },
+    {
+      "name": "Lagarto del Patriarca",
+      "facet": "Fauna en refranes, fiestas y escudos",
+      "known_at": 14
+    },
+    {
+      "name": "Caballos del Vino",
+      "facet": "Fauna en refranes, fiestas y escudos",
+      "known_at": 12
+    },
+    {
+      "name": "Platero",
+      "facet": "Fauna en refranes, fiestas y escudos",
+      "known_at": 8
+    },
+    {
+      "name": "Grajo que vuela bajo",
+      "facet": "Fauna en refranes, fiestas y escudos",
+      "known_at": 9
+    },
+    {
+      "name": "Gato escaldado",
+      "facet": "Fauna en refranes, fiestas y escudos",
+      "known_at": 9
+    },
+    {
+      "name": "Perro ladrador",
+      "facet": "Fauna en refranes, fiestas y escudos",
+      "known_at": 5
+    },
+    {
+      "name": "Cabra que tira al monte",
+      "facet": "Fauna en refranes, fiestas y escudos",
+      "known_at": 8
+    },
+    {
+      "name": "Pájaro en mano",
+      "facet": "Fauna en refranes, fiestas y escudos",
+      "known_at": 5
+    },
+    {
+      "name": "San Martín del cerdo",
+      "facet": "Fauna en refranes, fiestas y escudos",
+      "known_at": 9
+    },
+    {
+      "name": "Cabra de la Legión",
+      "facet": "Fauna en refranes, fiestas y escudos",
+      "known_at": 10
+    },
+    {
+      "name": "Parque Nacional del Teide",
+      "facet": "Conservación y espacios protegidos",
+      "known_at": 5
+    },
+    {
+      "name": "Aigüestortes",
+      "facet": "Conservación y espacios protegidos",
+      "known_at": 12
+    },
+    {
+      "name": "Islas Atlánticas de Galicia",
+      "facet": "Conservación y espacios protegidos",
+      "known_at": 11
+    },
+    {
+      "name": "Archipiélago de Cabrera",
+      "facet": "Conservación y espacios protegidos",
+      "known_at": 12
+    },
+    {
+      "name": "Sierra de Andújar",
+      "facet": "Conservación y espacios protegidos",
+      "known_at": 12
+    },
+    {
+      "name": "Reserva de la biosfera",
+      "facet": "Conservación y espacios protegidos",
+      "known_at": 9
+    },
+    {
+      "name": "Red Natura 2000",
+      "facet": "Conservación y espacios protegidos",
+      "known_at": 12
+    },
+    {
+      "name": "Muladar",
+      "facet": "Conservación y espacios protegidos",
+      "known_at": 12
+    },
+    {
+      "name": "Félix Rodríguez de la Fuente",
+      "facet": "Conservación y espacios protegidos",
+      "known_at": 7
+    }
+  ]
+}

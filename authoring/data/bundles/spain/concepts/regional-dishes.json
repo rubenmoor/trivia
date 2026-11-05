@@ -1,0 +1,1157 @@
+{
+  "subcategory": "regional-dishes",
+  "facets": [
+    "Arroces regionales",
+    "Cocidos, potajes y guisos",
+    "Platos de pescado y marisco",
+    "Sopas frías y calientes",
+    "Asados y platos de carne",
+    "Embutidos y chacinas",
+    "Quesos con denominación de origen",
+    "Dulces y postres regionales",
+    "Panes, migas y empanadas",
+    "Verduras y platos de la huerta",
+    "Tapas, pinchos y raciones",
+    "Salsas, mojos y aliños"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Paella de marisco",
+      "facet": "Arroces regionales",
+      "known_at": 3
+    },
+    {
+      "name": "Arroz negro",
+      "facet": "Arroces regionales",
+      "known_at": 4
+    },
+    {
+      "name": "Arroz al horno",
+      "facet": "Arroces regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Arroz con costra",
+      "facet": "Arroces regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Fideuá",
+      "facet": "Arroces regionales",
+      "known_at": 6
+    },
+    {
+      "name": "Arroz del senyoret",
+      "facet": "Arroces regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Caldero murciano",
+      "facet": "Arroces regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Arroz caldoso con bogavante",
+      "facet": "Arroces regionales",
+      "known_at": 8
+    },
+    {
+      "name": "Arroz con conejo y caracoles",
+      "facet": "Arroces regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Arroz a la zamorana",
+      "facet": "Arroces regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Arròs amb fesols i naps",
+      "facet": "Arroces regionales",
+      "known_at": 14
+    },
+    {
+      "name": "Arroz empedrado",
+      "facet": "Arroces regionales",
+      "known_at": 14
+    },
+    {
+      "name": "Arroz bomba",
+      "facet": "Arroces regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Socarrat",
+      "facet": "Arroces regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Paellera",
+      "facet": "Arroces regionales",
+      "known_at": 4
+    },
+    {
+      "name": "La Albufera",
+      "facet": "Arroces regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Arroz de Calasparra",
+      "facet": "Arroces regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Arroz a la cubana",
+      "facet": "Arroces regionales",
+      "known_at": 5
+    },
+    {
+      "name": "Cocido maragato",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 11
+    },
+    {
+      "name": "Olla podrida",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 11
+    },
+    {
+      "name": "Escudella i carn d'olla",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 11
+    },
+    {
+      "name": "Pote gallego",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 12
+    },
+    {
+      "name": "Potaje de vigilia",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 9
+    },
+    {
+      "name": "Cocido montañés",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 11
+    },
+    {
+      "name": "Callos a la madrileña",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 7
+    },
+    {
+      "name": "Fabes con almejas",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 10
+    },
+    {
+      "name": "Puchero andaluz",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 10
+    },
+    {
+      "name": "Olla gitana",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 12
+    },
+    {
+      "name": "Gazpacho manchego",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 11
+    },
+    {
+      "name": "Patatas a la riojana",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 7
+    },
+    {
+      "name": "Caldereta extremeña",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 12
+    },
+    {
+      "name": "Ropa vieja",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 9
+    },
+    {
+      "name": "Garbanzos con espinacas",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 8
+    },
+    {
+      "name": "Fricandó",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 13
+    },
+    {
+      "name": "Pringá",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 11
+    },
+    {
+      "name": "Lentejas con chorizo",
+      "facet": "Cocidos, potajes y guisos",
+      "known_at": 2
+    },
+    {
+      "name": "Bacalao a la vizcaína",
+      "facet": "Platos de pescado y marisco",
+      "known_at": 9
+    },
+    {
+      "name": "Merluza en salsa verde",
+      "facet": "Platos de pescado y marisco",
+      "known_at": 7
+    },
+    {
+      "name": "Txangurro",
+      "facet": "Platos de pescado y marisco",
+      "known_at": 12
+    },
+    {
+      "name": "Chipirones en su tinta",
+      "facet": "Platos de pescado y marisco",
+      "known_at": 7
+    },
+    {
+      "name": "Dorada a la sal",
+      "facet": "Platos de pescado y marisco",
+      "known_at": 8
+    },
+    {
+      "name": "Percebes",
+      "facet": "Platos de pescado y marisco",
+      "known_at": 8
+    },
+    {
+      "name": "Angulas",
+      "facet": "Platos de pescado y marisco",
+      "known_at": 9
+    },
+    {
+      "name": "Mejillones a la marinera",
+      "facet": "Platos de pescado y marisco",
+      "known_at": 6
+    },
+    {
+      "name": "Vieiras",
+      "facet": "Platos de pescado y marisco",
+      "known_at": 7
+    },
+    {
+      "name": "Bacalao al ajoarriero",
+      "facet": "Platos de pescado y marisco",
+      "known_at": 13
+    },
+    {
+      "name": "Truchas a la navarra",
+      "facet": "Platos de pescado y marisco",
+      "known_at": 11
+    },
+    {
+      "name": "Esqueixada",
+      "facet": "Platos de pescado y marisco",
+      "known_at": 13
+    },
+    {
+      "name": "Atún encebollado",
+      "facet": "Platos de pescado y marisco",
+      "known_at": 11
+    },
+    {
+      "name": "Gazpacho",
+      "facet": "Sopas frías y calientes",
+      "known_at": 2
+    },
+    {
+      "name": "Salmorejo",
+      "facet": "Sopas frías y calientes",
+      "known_at": 5
+    },
+    {
+      "name": "Ajoblanco",
+      "facet": "Sopas frías y calientes",
+      "known_at": 9
+    },
+    {
+      "name": "Sopa de ajo",
+      "facet": "Sopas frías y calientes",
+      "known_at": 6
+    },
+    {
+      "name": "Caldo gallego",
+      "facet": "Sopas frías y calientes",
+      "known_at": 8
+    },
+    {
+      "name": "Porra antequerana",
+      "facet": "Sopas frías y calientes",
+      "known_at": 12
+    },
+    {
+      "name": "Sopa de picadillo",
+      "facet": "Sopas frías y calientes",
+      "known_at": 10
+    },
+    {
+      "name": "Gazpachuelo",
+      "facet": "Sopas frías y calientes",
+      "known_at": 12
+    },
+    {
+      "name": "Porrusalda",
+      "facet": "Sopas frías y calientes",
+      "known_at": 11
+    },
+    {
+      "name": "Zurrukutuna",
+      "facet": "Sopas frías y calientes",
+      "known_at": 14
+    },
+    {
+      "name": "Sopas mallorquinas",
+      "facet": "Sopas frías y calientes",
+      "known_at": 13
+    },
+    {
+      "name": "Sopa de cocido",
+      "facet": "Sopas frías y calientes",
+      "known_at": 4
+    },
+    {
+      "name": "Sopa de cuarto de hora",
+      "facet": "Sopas frías y calientes",
+      "known_at": 13
+    },
+    {
+      "name": "Sopa de marisco",
+      "facet": "Sopas frías y calientes",
+      "known_at": 5
+    },
+    {
+      "name": "Sopa de tomate extremeña",
+      "facet": "Sopas frías y calientes",
+      "known_at": 13
+    },
+    {
+      "name": "Sopa de almendras",
+      "facet": "Sopas frías y calientes",
+      "known_at": 13
+    },
+    {
+      "name": "Sopa boba",
+      "facet": "Sopas frías y calientes",
+      "known_at": 12
+    },
+    {
+      "name": "Cochinillo asado",
+      "facet": "Asados y platos de carne",
+      "known_at": 5
+    },
+    {
+      "name": "Lechazo asado",
+      "facet": "Asados y platos de carne",
+      "known_at": 9
+    },
+    {
+      "name": "Cordero al chilindrón",
+      "facet": "Asados y platos de carne",
+      "known_at": 11
+    },
+    {
+      "name": "Chuletón de buey",
+      "facet": "Asados y platos de carne",
+      "known_at": 6
+    },
+    {
+      "name": "Rabo de toro",
+      "facet": "Asados y platos de carne",
+      "known_at": 8
+    },
+    {
+      "name": "Cachopo",
+      "facet": "Asados y platos de carne",
+      "known_at": 8
+    },
+    {
+      "name": "Flamenquín",
+      "facet": "Asados y platos de carne",
+      "known_at": 9
+    },
+    {
+      "name": "Secreto ibérico",
+      "facet": "Asados y platos de carne",
+      "known_at": 8
+    },
+    {
+      "name": "Presa ibérica",
+      "facet": "Asados y platos de carne",
+      "known_at": 10
+    },
+    {
+      "name": "Pluma ibérica",
+      "facet": "Asados y platos de carne",
+      "known_at": 11
+    },
+    {
+      "name": "Carrillada ibérica",
+      "facet": "Asados y platos de carne",
+      "known_at": 10
+    },
+    {
+      "name": "Torreznos",
+      "facet": "Asados y platos de carne",
+      "known_at": 8
+    },
+    {
+      "name": "Cabrito asado",
+      "facet": "Asados y platos de carne",
+      "known_at": 9
+    },
+    {
+      "name": "Pollo en pepitoria",
+      "facet": "Asados y platos de carne",
+      "known_at": 11
+    },
+    {
+      "name": "Perdiz escabechada",
+      "facet": "Asados y platos de carne",
+      "known_at": 12
+    },
+    {
+      "name": "Lomo de orza",
+      "facet": "Asados y platos de carne",
+      "known_at": 13
+    },
+    {
+      "name": "Carne mechada",
+      "facet": "Asados y platos de carne",
+      "known_at": 10
+    },
+    {
+      "name": "Albóndigas",
+      "facet": "Asados y platos de carne",
+      "known_at": 1
+    },
+    {
+      "name": "Churrasco",
+      "facet": "Asados y platos de carne",
+      "known_at": 6
+    },
+    {
+      "name": "Pollo al ajillo",
+      "facet": "Asados y platos de carne",
+      "known_at": 5
+    },
+    {
+      "name": "Jamón ibérico",
+      "facet": "Embutidos y chacinas",
+      "known_at": 3
+    },
+    {
+      "name": "Jamón serrano",
+      "facet": "Embutidos y chacinas",
+      "known_at": 2
+    },
+    {
+      "name": "Morcilla de Burgos",
+      "facet": "Embutidos y chacinas",
+      "known_at": 6
+    },
+    {
+      "name": "Fuet",
+      "facet": "Embutidos y chacinas",
+      "known_at": 4
+    },
+    {
+      "name": "Lomo embuchado",
+      "facet": "Embutidos y chacinas",
+      "known_at": 7
+    },
+    {
+      "name": "Salchichón de Vic",
+      "facet": "Embutidos y chacinas",
+      "known_at": 11
+    },
+    {
+      "name": "Butifarra",
+      "facet": "Embutidos y chacinas",
+      "known_at": 7
+    },
+    {
+      "name": "Cecina de León",
+      "facet": "Embutidos y chacinas",
+      "known_at": 10
+    },
+    {
+      "name": "Chistorra",
+      "facet": "Embutidos y chacinas",
+      "known_at": 8
+    },
+    {
+      "name": "Androlla",
+      "facet": "Embutidos y chacinas",
+      "known_at": 14
+    },
+    {
+      "name": "Morcón",
+      "facet": "Embutidos y chacinas",
+      "known_at": 12
+    },
+    {
+      "name": "Longaniza",
+      "facet": "Embutidos y chacinas",
+      "known_at": 7
+    },
+    {
+      "name": "Farinato",
+      "facet": "Embutidos y chacinas",
+      "known_at": 13
+    },
+    {
+      "name": "Jabugo",
+      "facet": "Embutidos y chacinas",
+      "known_at": 9
+    },
+    {
+      "name": "Guijuelo",
+      "facet": "Embutidos y chacinas",
+      "known_at": 11
+    },
+    {
+      "name": "Jamón de Teruel",
+      "facet": "Embutidos y chacinas",
+      "known_at": 12
+    },
+    {
+      "name": "Cerdo ibérico de bellota",
+      "facet": "Embutidos y chacinas",
+      "known_at": 7
+    },
+    {
+      "name": "Chorizo de Pamplona",
+      "facet": "Embutidos y chacinas",
+      "known_at": 8
+    },
+    {
+      "name": "Cabrales",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 8
+    },
+    {
+      "name": "Queso tetilla",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 8
+    },
+    {
+      "name": "Idiazabal",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 10
+    },
+    {
+      "name": "Mahón-Menorca",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 10
+    },
+    {
+      "name": "Queso Roncal",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 12
+    },
+    {
+      "name": "Queso majorero",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 12
+    },
+    {
+      "name": "Queso zamorano",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 11
+    },
+    {
+      "name": "San Simón da Costa",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 12
+    },
+    {
+      "name": "Afuega'l pitu",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 13
+    },
+    {
+      "name": "Picón Bejes-Tresviso",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 13
+    },
+    {
+      "name": "Queso Gamonéu",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 14
+    },
+    {
+      "name": "Torta de la Serena",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 13
+    },
+    {
+      "name": "Queso Ibores",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 14
+    },
+    {
+      "name": "Queso Cebreiro",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 13
+    },
+    {
+      "name": "Arzúa-Ulloa",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 12
+    },
+    {
+      "name": "Queso palmero",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 14
+    },
+    {
+      "name": "Queso de Murcia al vino",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 13
+    },
+    {
+      "name": "Queso de Valdeón",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 13
+    },
+    {
+      "name": "Quesucos de Liébana",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 14
+    },
+    {
+      "name": "Queso Camerano",
+      "facet": "Quesos con denominación de origen",
+      "known_at": 14
+    },
+    {
+      "name": "Turrón de Alicante",
+      "facet": "Dulces y postres regionales",
+      "known_at": 5
+    },
+    {
+      "name": "Churros",
+      "facet": "Dulces y postres regionales",
+      "known_at": 1
+    },
+    {
+      "name": "Torrijas",
+      "facet": "Dulces y postres regionales",
+      "known_at": 4
+    },
+    {
+      "name": "Panellets",
+      "facet": "Dulces y postres regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Roscón de Reyes",
+      "facet": "Dulces y postres regionales",
+      "known_at": 2
+    },
+    {
+      "name": "Filloas",
+      "facet": "Dulces y postres regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Casadielles",
+      "facet": "Dulces y postres regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Arroz con leche",
+      "facet": "Dulces y postres regionales",
+      "known_at": 2
+    },
+    {
+      "name": "Leche frita",
+      "facet": "Dulces y postres regionales",
+      "known_at": 7
+    },
+    {
+      "name": "Tocino de cielo",
+      "facet": "Dulces y postres regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Pestiños",
+      "facet": "Dulces y postres regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Quesada pasiega",
+      "facet": "Dulces y postres regionales",
+      "known_at": 11
+    },
+    {
+      "name": "Fartons",
+      "facet": "Dulces y postres regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Huesos de santo",
+      "facet": "Dulces y postres regionales",
+      "known_at": 8
+    },
+    {
+      "name": "Buñuelos de viento",
+      "facet": "Dulces y postres regionales",
+      "known_at": 7
+    },
+    {
+      "name": "Miguelitos de La Roda",
+      "facet": "Dulces y postres regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Carquiñoles",
+      "facet": "Dulces y postres regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Mona de Pascua",
+      "facet": "Dulces y postres regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Pan con tomate",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 3
+    },
+    {
+      "name": "Migas manchegas",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 9
+    },
+    {
+      "name": "Empanada gallega",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 5
+    },
+    {
+      "name": "Empanadillas",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 3
+    },
+    {
+      "name": "Coca de recapte",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 12
+    },
+    {
+      "name": "Hornazo de Salamanca",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 11
+    },
+    {
+      "name": "Pan de Cea",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 13
+    },
+    {
+      "name": "Mollete de Antequera",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 10
+    },
+    {
+      "name": "Pan candeal",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 11
+    },
+    {
+      "name": "Talo",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 12
+    },
+    {
+      "name": "Bollo preñao",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 10
+    },
+    {
+      "name": "Regañás",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 11
+    },
+    {
+      "name": "Picos",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 6
+    },
+    {
+      "name": "Tortas de aceite",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 8
+    },
+    {
+      "name": "Pan de payés",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 10
+    },
+    {
+      "name": "Llonguet",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 13
+    },
+    {
+      "name": "Ochío",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 14
+    },
+    {
+      "name": "Torta de gazpacho",
+      "facet": "Panes, migas y empanadas",
+      "known_at": 13
+    },
+    {
+      "name": "Escalivada",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 10
+    },
+    {
+      "name": "Menestra de verduras",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 6
+    },
+    {
+      "name": "Alcachofas con jamón",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 8
+    },
+    {
+      "name": "Pimientos del piquillo",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 8
+    },
+    {
+      "name": "Espárragos de Navarra",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 8
+    },
+    {
+      "name": "Berenjenas de Almagro",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 11
+    },
+    {
+      "name": "Pipirrana",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 11
+    },
+    {
+      "name": "Tumbet",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 13
+    },
+    {
+      "name": "Samfaina",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 13
+    },
+    {
+      "name": "Ensalada murciana",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 11
+    },
+    {
+      "name": "Zarangollo",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 13
+    },
+    {
+      "name": "Alubias de Tolosa",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 12
+    },
+    {
+      "name": "Pochas",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 12
+    },
+    {
+      "name": "Habas a la catalana",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 12
+    },
+    {
+      "name": "Borrajas",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 12
+    },
+    {
+      "name": "Patatas a la importancia",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 13
+    },
+    {
+      "name": "Pimientos de Gernika",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 12
+    },
+    {
+      "name": "Remojón",
+      "facet": "Verduras y platos de la huerta",
+      "known_at": 14
+    },
+    {
+      "name": "Tortilla de patatas",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 1
+    },
+    {
+      "name": "Patatas bravas",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 3
+    },
+    {
+      "name": "Croquetas",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 1
+    },
+    {
+      "name": "Calamares a la romana",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 3
+    },
+    {
+      "name": "Gambas al ajillo",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 5
+    },
+    {
+      "name": "Pincho moruno",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 6
+    },
+    {
+      "name": "Gilda",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 10
+    },
+    {
+      "name": "Ensaladilla rusa",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 3
+    },
+    {
+      "name": "Oreja a la plancha",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 9
+    },
+    {
+      "name": "Huevos rotos",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 5
+    },
+    {
+      "name": "Berenjenas con miel",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 9
+    },
+    {
+      "name": "Champiñones al ajillo",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 6
+    },
+    {
+      "name": "Montadito",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 6
+    },
+    {
+      "name": "Mejillones tigre",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 10
+    },
+    {
+      "name": "Bombas de la Barceloneta",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 12
+    },
+    {
+      "name": "Cazón en adobo",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 10
+    },
+    {
+      "name": "Matrimonio",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 12
+    },
+    {
+      "name": "Caracoles",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 5
+    },
+    {
+      "name": "Zarajos",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 13
+    },
+    {
+      "name": "Chorizo a la sidra",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 9
+    },
+    {
+      "name": "Chopitos",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 9
+    },
+    {
+      "name": "Salpicón de marisco",
+      "facet": "Tapas, pinchos y raciones",
+      "known_at": 9
+    },
+    {
+      "name": "Alioli",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 4
+    },
+    {
+      "name": "Mojo verde",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 9
+    },
+    {
+      "name": "Romesco",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 11
+    },
+    {
+      "name": "Salsa verde",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 6
+    },
+    {
+      "name": "Sofrito",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 6
+    },
+    {
+      "name": "Picada catalana",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 13
+    },
+    {
+      "name": "Salsa de xató",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 14
+    },
+    {
+      "name": "Escabeche",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 9
+    },
+    {
+      "name": "Adobo",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 8
+    },
+    {
+      "name": "Mayonesa",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 2
+    },
+    {
+      "name": "Salsa marinera",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 8
+    },
+    {
+      "name": "Ajada gallega",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 13
+    },
+    {
+      "name": "Salsa española",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 12
+    },
+    {
+      "name": "Salsa de Cabrales",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 9
+    },
+    {
+      "name": "Tomate frito",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 2
+    },
+    {
+      "name": "Aceite de oliva virgen extra",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 3
+    },
+    {
+      "name": "Azafrán de La Mancha",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 10
+    },
+    {
+      "name": "Vinagre de Jerez",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 11
+    },
+    {
+      "name": "Majado",
+      "facet": "Salsas, mojos y aliños",
+      "known_at": 12
+    }
+  ]
+}

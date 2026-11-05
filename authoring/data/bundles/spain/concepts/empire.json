@@ -1,0 +1,1172 @@
+{
+  "subcategory": "empire",
+  "facets": [
+    "Reinado de los Reyes Católicos",
+    "Colón y la conquista de América",
+    "Carlos I y el Imperio",
+    "Felipe II y su monarquía",
+    "Los Austrias menores y los validos",
+    "Tercios, batallas y guerras",
+    "Familia real, bodas y herencias",
+    "Inquisición, religión y expulsiones",
+    "Siglo de Oro: letras y teatro",
+    "Siglo de Oro: pintura y arte",
+    "Palacios, monasterios y monumentos",
+    "Vida cotidiana y sociedad"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Isabel I de Castilla",
+      "facet": "Reinado de los Reyes Católicos",
+      "known_at": 5
+    },
+    {
+      "name": "Fernando II de Aragón",
+      "facet": "Reinado de los Reyes Católicos",
+      "known_at": 7
+    },
+    {
+      "name": "Unión dinástica de Castilla y Aragón",
+      "facet": "Reinado de los Reyes Católicos",
+      "known_at": 10
+    },
+    {
+      "name": "Tanto monta",
+      "facet": "Reinado de los Reyes Católicos",
+      "known_at": 11
+    },
+    {
+      "name": "El yugo y las flechas",
+      "facet": "Reinado de los Reyes Católicos",
+      "known_at": 11
+    },
+    {
+      "name": "Santa Hermandad",
+      "facet": "Reinado de los Reyes Católicos",
+      "known_at": 13
+    },
+    {
+      "name": "Antonio de Nebrija",
+      "facet": "Reinado de los Reyes Católicos",
+      "known_at": 12
+    },
+    {
+      "name": "Gramática castellana",
+      "facet": "Reinado de los Reyes Católicos",
+      "known_at": 12
+    },
+    {
+      "name": "Cardenal Cisneros",
+      "facet": "Reinado de los Reyes Católicos",
+      "known_at": 12
+    },
+    {
+      "name": "Universidad de Alcalá",
+      "facet": "Reinado de los Reyes Católicos",
+      "known_at": 12
+    },
+    {
+      "name": "Guerra de Sucesión Castellana",
+      "facet": "Reinado de los Reyes Católicos",
+      "known_at": 14
+    },
+    {
+      "name": "Juana la Beltraneja",
+      "facet": "Reinado de los Reyes Católicos",
+      "known_at": 13
+    },
+    {
+      "name": "Capitulaciones de Santa Fe",
+      "facet": "Reinado de los Reyes Católicos",
+      "known_at": 12
+    },
+    {
+      "name": "Tratado de Tordesillas",
+      "facet": "Reinado de los Reyes Católicos",
+      "known_at": 11
+    },
+    {
+      "name": "Conquista de Navarra",
+      "facet": "Reinado de los Reyes Católicos",
+      "known_at": 13
+    },
+    {
+      "name": "Papa Alejandro VI",
+      "facet": "Reinado de los Reyes Católicos",
+      "known_at": 13
+    },
+    {
+      "name": "Cristóbal Colón",
+      "facet": "Colón y la conquista de América",
+      "known_at": 2
+    },
+    {
+      "name": "La Pinta, la Niña y la Santa María",
+      "facet": "Colón y la conquista de América",
+      "known_at": 5
+    },
+    {
+      "name": "12 de octubre de 1492",
+      "facet": "Colón y la conquista de América",
+      "known_at": 6
+    },
+    {
+      "name": "Día de la Hispanidad",
+      "facet": "Colón y la conquista de América",
+      "known_at": 5
+    },
+    {
+      "name": "Guanahaní",
+      "facet": "Colón y la conquista de América",
+      "known_at": 12
+    },
+    {
+      "name": "Rodrigo de Triana",
+      "facet": "Colón y la conquista de América",
+      "known_at": 12
+    },
+    {
+      "name": "Monasterio de La Rábida",
+      "facet": "Colón y la conquista de América",
+      "known_at": 12
+    },
+    {
+      "name": "Hernán Cortés",
+      "facet": "Colón y la conquista de América",
+      "known_at": 8
+    },
+    {
+      "name": "Moctezuma",
+      "facet": "Colón y la conquista de América",
+      "known_at": 9
+    },
+    {
+      "name": "Tenochtitlan",
+      "facet": "Colón y la conquista de América",
+      "known_at": 10
+    },
+    {
+      "name": "La Malinche",
+      "facet": "Colón y la conquista de América",
+      "known_at": 12
+    },
+    {
+      "name": "Noche Triste",
+      "facet": "Colón y la conquista de América",
+      "known_at": 13
+    },
+    {
+      "name": "Francisco Pizarro",
+      "facet": "Colón y la conquista de América",
+      "known_at": 9
+    },
+    {
+      "name": "Atahualpa",
+      "facet": "Colón y la conquista de América",
+      "known_at": 11
+    },
+    {
+      "name": "Vasco Núñez de Balboa",
+      "facet": "Colón y la conquista de América",
+      "known_at": 12
+    },
+    {
+      "name": "Fernando de Magallanes",
+      "facet": "Colón y la conquista de América",
+      "known_at": 8
+    },
+    {
+      "name": "Casa de Contratación",
+      "facet": "Colón y la conquista de América",
+      "known_at": 12
+    },
+    {
+      "name": "Bartolomé de las Casas",
+      "facet": "Colón y la conquista de América",
+      "known_at": 12
+    },
+    {
+      "name": "Leyes Nuevas",
+      "facet": "Colón y la conquista de América",
+      "known_at": 14
+    },
+    {
+      "name": "Virreinato del Perú",
+      "facet": "Colón y la conquista de América",
+      "known_at": 12
+    },
+    {
+      "name": "Galeón de Manila",
+      "facet": "Colón y la conquista de América",
+      "known_at": 13
+    },
+    {
+      "name": "El Dorado",
+      "facet": "Colón y la conquista de América",
+      "known_at": 8
+    },
+    {
+      "name": "Carlos I de España",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 6
+    },
+    {
+      "name": "Plus Ultra",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 10
+    },
+    {
+      "name": "Un imperio donde nunca se pone el sol",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 9
+    },
+    {
+      "name": "Sacro Imperio Romano Germánico",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 10
+    },
+    {
+      "name": "Gante",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 12
+    },
+    {
+      "name": "Revuelta de los Comuneros",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 11
+    },
+    {
+      "name": "Batalla de Villalar",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 12
+    },
+    {
+      "name": "Padilla, Bravo y Maldonado",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 13
+    },
+    {
+      "name": "Germanías",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 13
+    },
+    {
+      "name": "Martín Lutero",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 9
+    },
+    {
+      "name": "Dieta de Worms",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 13
+    },
+    {
+      "name": "Saco de Roma",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 13
+    },
+    {
+      "name": "Batalla de Pavía",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 12
+    },
+    {
+      "name": "Francisco I de Francia",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 12
+    },
+    {
+      "name": "Isabel de Portugal",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 12
+    },
+    {
+      "name": "Batalla de Mühlberg",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 14
+    },
+    {
+      "name": "Paz de Augsburgo",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 14
+    },
+    {
+      "name": "Abdicación de Bruselas",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 14
+    },
+    {
+      "name": "Conquista de Túnez",
+      "facet": "Carlos I y el Imperio",
+      "known_at": 14
+    },
+    {
+      "name": "Felipe II",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 6
+    },
+    {
+      "name": "El Rey Prudente",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 10
+    },
+    {
+      "name": "Capitalidad de Madrid",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 9
+    },
+    {
+      "name": "Unión Ibérica",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 12
+    },
+    {
+      "name": "Sebastián I de Portugal",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 14
+    },
+    {
+      "name": "Islas Filipinas",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 8
+    },
+    {
+      "name": "Leyenda negra",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 11
+    },
+    {
+      "name": "Antonio Pérez",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 13
+    },
+    {
+      "name": "Alteraciones de Aragón",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 14
+    },
+    {
+      "name": "Juan de Lanuza",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 14
+    },
+    {
+      "name": "Príncipe don Carlos",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 13
+    },
+    {
+      "name": "Rebelión de las Alpujarras",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 13
+    },
+    {
+      "name": "Guillermo de Orange",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 13
+    },
+    {
+      "name": "Juan de Austria",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 11
+    },
+    {
+      "name": "Bancarrotas de la Corona",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 14
+    },
+    {
+      "name": "Sistema de Consejos",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 14
+    },
+    {
+      "name": "Archivo de Simancas",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 13
+    },
+    {
+      "name": "Isabel I de Inglaterra",
+      "facet": "Felipe II y su monarquía",
+      "known_at": 9
+    },
+    {
+      "name": "Felipe III",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 9
+    },
+    {
+      "name": "Felipe IV",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 9
+    },
+    {
+      "name": "Carlos II el Hechizado",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 10
+    },
+    {
+      "name": "Valido",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 11
+    },
+    {
+      "name": "Duque de Lerma",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 11
+    },
+    {
+      "name": "Conde-duque de Olivares",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 11
+    },
+    {
+      "name": "Rodrigo Calderón",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 13
+    },
+    {
+      "name": "Traslado de la corte a Valladolid",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 12
+    },
+    {
+      "name": "Unión de Armas",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 14
+    },
+    {
+      "name": "Guerra de los Segadores",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 12
+    },
+    {
+      "name": "Independencia de Portugal de 1640",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 12
+    },
+    {
+      "name": "Paz de Westfalia",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 12
+    },
+    {
+      "name": "Paz de los Pirineos",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 13
+    },
+    {
+      "name": "Pax Hispanica",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 14
+    },
+    {
+      "name": "Mariana de Austria",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 13
+    },
+    {
+      "name": "Juan José de Austria",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 14
+    },
+    {
+      "name": "Juan Everardo Nithard",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 15
+    },
+    {
+      "name": "Testamento de Carlos II",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 13
+    },
+    {
+      "name": "Guerra de Sucesión Española",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 10
+    },
+    {
+      "name": "Felipe V",
+      "facet": "Los Austrias menores y los validos",
+      "known_at": 9
+    },
+    {
+      "name": "Tercios de Flandes",
+      "facet": "Tercios, batallas y guerras",
+      "known_at": 9
+    },
+    {
+      "name": "Batalla de Lepanto",
+      "facet": "Tercios, batallas y guerras",
+      "known_at": 9
+    },
+    {
+      "name": "Batalla de San Quintín",
+      "facet": "Tercios, batallas y guerras",
+      "known_at": 12
+    },
+    {
+      "name": "Batalla de Rocroi",
+      "facet": "Tercios, batallas y guerras",
+      "known_at": 12
+    },
+    {
+      "name": "Batalla de Ceriñola",
+      "facet": "Tercios, batallas y guerras",
+      "known_at": 13
+    },
+    {
+      "name": "Sitio de Breda",
+      "facet": "Tercios, batallas y guerras",
+      "known_at": 13
+    },
+    {
+      "name": "Duque de Alba",
+      "facet": "Tercios, batallas y guerras",
+      "known_at": 11
+    },
+    {
+      "name": "Ambrosio Spínola",
+      "facet": "Tercios, batallas y guerras",
+      "known_at": 12
+    },
+    {
+      "name": "Álvaro de Bazán",
+      "facet": "Tercios, batallas y guerras",
+      "known_at": 13
+    },
+    {
+      "name": "Camino Español",
+      "facet": "Tercios, batallas y guerras",
+      "known_at": 13
+    },
+    {
+      "name": "Saqueo de Amberes",
+      "facet": "Tercios, batallas y guerras",
+      "known_at": 14
+    },
+    {
+      "name": "Arcabuz",
+      "facet": "Tercios, batallas y guerras",
+      "known_at": 9
+    },
+    {
+      "name": "Pica",
+      "facet": "Tercios, batallas y guerras",
+      "known_at": 8
+    },
+    {
+      "name": "Mosquete",
+      "facet": "Tercios, batallas y guerras",
+      "known_at": 8
+    },
+    {
+      "name": "Galeón",
+      "facet": "Tercios, batallas y guerras",
+      "known_at": 6
+    },
+    {
+      "name": "Capitán Alatriste",
+      "facet": "Tercios, batallas y guerras",
+      "known_at": 9
+    },
+    {
+      "name": "Juana la Loca",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 6
+    },
+    {
+      "name": "Felipe el Hermoso",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 9
+    },
+    {
+      "name": "Casa de Habsburgo",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 10
+    },
+    {
+      "name": "Mandíbula de los Austrias",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 11
+    },
+    {
+      "name": "Matrimonios entre parientes",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 12
+    },
+    {
+      "name": "Política matrimonial de los Reyes Católicos",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 12
+    },
+    {
+      "name": "Príncipe Juan",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 13
+    },
+    {
+      "name": "Germana de Foix",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 14
+    },
+    {
+      "name": "Catalina de Aragón",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 11
+    },
+    {
+      "name": "Enrique VIII",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 9
+    },
+    {
+      "name": "María Tudor",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 11
+    },
+    {
+      "name": "Isabel de Valois",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 13
+    },
+    {
+      "name": "Ana de Austria",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 14
+    },
+    {
+      "name": "Isabel Clara Eugenia",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 13
+    },
+    {
+      "name": "Fernando I de Habsburgo",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 14
+    },
+    {
+      "name": "Infanta Margarita",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 10
+    },
+    {
+      "name": "Príncipe Baltasar Carlos",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 13
+    },
+    {
+      "name": "María Teresa de Austria",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 13
+    },
+    {
+      "name": "Luis XIV",
+      "facet": "Familia real, bodas y herencias",
+      "known_at": 9
+    },
+    {
+      "name": "Inquisición española",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 8
+    },
+    {
+      "name": "Tomás de Torquemada",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 11
+    },
+    {
+      "name": "Auto de fe",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 11
+    },
+    {
+      "name": "Sambenito",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 12
+    },
+    {
+      "name": "Edicto de Granada",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 14
+    },
+    {
+      "name": "Judeoespañol",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 12
+    },
+    {
+      "name": "Expulsión de los moriscos",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 11
+    },
+    {
+      "name": "Conversos",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 12
+    },
+    {
+      "name": "Limpieza de sangre",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 13
+    },
+    {
+      "name": "Cristianos viejos",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 13
+    },
+    {
+      "name": "Santa Teresa de Jesús",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 9
+    },
+    {
+      "name": "San Juan de la Cruz",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 11
+    },
+    {
+      "name": "San Ignacio de Loyola",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 10
+    },
+    {
+      "name": "Compañía de Jesús",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 10
+    },
+    {
+      "name": "San Francisco Javier",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 12
+    },
+    {
+      "name": "Concilio de Trento",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 12
+    },
+    {
+      "name": "Contrarreforma",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 11
+    },
+    {
+      "name": "Índice de libros prohibidos",
+      "facet": "Inquisición, religión y expulsiones",
+      "known_at": 13
+    },
+    {
+      "name": "Miguel de Cervantes",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 4
+    },
+    {
+      "name": "Don Quijote de la Mancha",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 3
+    },
+    {
+      "name": "Dulcinea del Toboso",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 7
+    },
+    {
+      "name": "El manco de Lepanto",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 9
+    },
+    {
+      "name": "Novelas ejemplares",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 12
+    },
+    {
+      "name": "Lope de Vega",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 9
+    },
+    {
+      "name": "Calderón de la Barca",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 10
+    },
+    {
+      "name": "Segismundo",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 12
+    },
+    {
+      "name": "Francisco de Quevedo",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 10
+    },
+    {
+      "name": "Luis de Góngora",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 11
+    },
+    {
+      "name": "Culteranismo",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 13
+    },
+    {
+      "name": "Conceptismo",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 13
+    },
+    {
+      "name": "Lazarillo de Tormes",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 9
+    },
+    {
+      "name": "Novela picaresca",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 11
+    },
+    {
+      "name": "La Celestina",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 11
+    },
+    {
+      "name": "Garcilaso de la Vega",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 12
+    },
+    {
+      "name": "Tirso de Molina",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 12
+    },
+    {
+      "name": "El burlador de Sevilla",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 12
+    },
+    {
+      "name": "Corral de comedias",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 11
+    },
+    {
+      "name": "Corral de comedias de Almagro",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 12
+    },
+    {
+      "name": "Baltasar Gracián",
+      "facet": "Siglo de Oro: letras y teatro",
+      "known_at": 14
+    },
+    {
+      "name": "Diego Velázquez",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 7
+    },
+    {
+      "name": "Las meninas",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 6
+    },
+    {
+      "name": "La rendición de Breda",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 11
+    },
+    {
+      "name": "Las hilanderas",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 12
+    },
+    {
+      "name": "La Venus del espejo",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 12
+    },
+    {
+      "name": "El Greco",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 8
+    },
+    {
+      "name": "El entierro del conde de Orgaz",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 11
+    },
+    {
+      "name": "Bartolomé Esteban Murillo",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 10
+    },
+    {
+      "name": "Francisco de Zurbarán",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 11
+    },
+    {
+      "name": "José de Ribera",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 12
+    },
+    {
+      "name": "Alonso Cano",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 14
+    },
+    {
+      "name": "Gregorio Fernández",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 14
+    },
+    {
+      "name": "El Bosco",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 10
+    },
+    {
+      "name": "El jardín de las delicias",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 10
+    },
+    {
+      "name": "Tiziano",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 11
+    },
+    {
+      "name": "Carlos V en Mühlberg",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 13
+    },
+    {
+      "name": "Museo del Prado",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 6
+    },
+    {
+      "name": "Bodegón",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 11
+    },
+    {
+      "name": "Barroco",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 9
+    },
+    {
+      "name": "Estilo plateresco",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 13
+    },
+    {
+      "name": "Estilo herreriano",
+      "facet": "Siglo de Oro: pintura y arte",
+      "known_at": 13
+    },
+    {
+      "name": "Juan de Herrera",
+      "facet": "Palacios, monasterios y monumentos",
+      "known_at": 12
+    },
+    {
+      "name": "Casa de la Panadería",
+      "facet": "Palacios, monasterios y monumentos",
+      "known_at": 12
+    },
+    {
+      "name": "Capilla Real de Granada",
+      "facet": "Palacios, monasterios y monumentos",
+      "known_at": 12
+    },
+    {
+      "name": "Real Alcázar de Madrid",
+      "facet": "Palacios, monasterios y monumentos",
+      "known_at": 12
+    },
+    {
+      "name": "Parque del Retiro",
+      "facet": "Palacios, monasterios y monumentos",
+      "known_at": 6
+    },
+    {
+      "name": "Monasterio de las Descalzas Reales",
+      "facet": "Palacios, monasterios y monumentos",
+      "known_at": 13
+    },
+    {
+      "name": "San Juan de los Reyes",
+      "facet": "Palacios, monasterios y monumentos",
+      "known_at": 12
+    },
+    {
+      "name": "Archivo General de Indias",
+      "facet": "Palacios, monasterios y monumentos",
+      "known_at": 12
+    },
+    {
+      "name": "Fachada de la Universidad de Salamanca",
+      "facet": "Palacios, monasterios y monumentos",
+      "known_at": 8
+    },
+    {
+      "name": "Real Monasterio de Guadalupe",
+      "facet": "Palacios, monasterios y monumentos",
+      "known_at": 12
+    },
+    {
+      "name": "Plaza Mayor de Valladolid",
+      "facet": "Palacios, monasterios y monumentos",
+      "known_at": 12
+    },
+    {
+      "name": "Hostal de los Reyes Católicos",
+      "facet": "Palacios, monasterios y monumentos",
+      "known_at": 12
+    },
+    {
+      "name": "Puente de Segovia",
+      "facet": "Palacios, monasterios y monumentos",
+      "known_at": 14
+    },
+    {
+      "name": "Hidalgo",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 9
+    },
+    {
+      "name": "Pícaro",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 10
+    },
+    {
+      "name": "Grandes de España",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 13
+    },
+    {
+      "name": "Mayorazgo",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 13
+    },
+    {
+      "name": "Honrado Concejo de la Mesta",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 12
+    },
+    {
+      "name": "Gremios",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 11
+    },
+    {
+      "name": "Gorguera",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 12
+    },
+    {
+      "name": "Guardainfante",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 13
+    },
+    {
+      "name": "Chocolate",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 6
+    },
+    {
+      "name": "Patata",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 3
+    },
+    {
+      "name": "Tomate",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 3
+    },
+    {
+      "name": "Tabaco",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 6
+    },
+    {
+      "name": "Sevilla, puerto de Indias",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 9
+    },
+    {
+      "name": "Maravedí",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 12
+    },
+    {
+      "name": "Real de a ocho",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 12
+    },
+    {
+      "name": "Doblón",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 10
+    },
+    {
+      "name": "Moneda de vellón",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 14
+    },
+    {
+      "name": "Universidad de Salamanca",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 9
+    },
+    {
+      "name": "Escuela de Salamanca",
+      "facet": "Vida cotidiana y sociedad",
+      "known_at": 14
+    }
+  ]
+}

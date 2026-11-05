@@ -1,0 +1,432 @@
+{
+  "subcategory": "protected-areas",
+  "facets": [
+    "Parques nacionales de la península",
+    "Parques de Canarias y Baleares",
+    "Volcanes y paisajes volcánicos",
+    "Montañas, picos y cordilleras",
+    "Humedales, marismas y lagunas",
+    "Costas, islas y fondos marinos",
+    "Bosques y árboles emblemáticos",
+    "Fauna protegida y especies amenazadas",
+    "Aves de los parques",
+    "Ríos, cascadas y cañones",
+    "Figuras de protección y gestión",
+    "Historia, leyendas y visitantes"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 2,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sierra de Cazorla, Segura y Las Villas",
+      "facet": "Parques nacionales de la península",
+      "known_at": 9
+    },
+    {
+      "name": "Arribes del Duero",
+      "facet": "Parques nacionales de la península",
+      "known_at": 11
+    },
+    {
+      "name": "Sierra de Aracena y Picos de Aroche",
+      "facet": "Parques nacionales de la península",
+      "known_at": 12
+    },
+    {
+      "name": "S'Albufera de Mallorca",
+      "facet": "Parques de Canarias y Baleares",
+      "known_at": 12
+    },
+    {
+      "name": "Ses Salines de Ibiza y Formentera",
+      "facet": "Parques de Canarias y Baleares",
+      "known_at": 11
+    },
+    {
+      "name": "Anaga",
+      "facet": "Parques de Canarias y Baleares",
+      "known_at": 11
+    },
+    {
+      "name": "Torrent de Pareis",
+      "facet": "Parques de Canarias y Baleares",
+      "known_at": 12
+    },
+    {
+      "name": "Volcán de Santa Margarida",
+      "facet": "Volcanes y paisajes volcánicos",
+      "known_at": 13
+    },
+    {
+      "name": "Tubo volcánico",
+      "facet": "Volcanes y paisajes volcánicos",
+      "known_at": 10
+    },
+    {
+      "name": "Cráter",
+      "facet": "Volcanes y paisajes volcánicos",
+      "known_at": 3
+    },
+    {
+      "name": "Caldera de Bandama",
+      "facet": "Volcanes y paisajes volcánicos",
+      "known_at": 11
+    },
+    {
+      "name": "Volcán Teneguía",
+      "facet": "Volcanes y paisajes volcánicos",
+      "known_at": 12
+    },
+    {
+      "name": "Los Órganos de La Gomera",
+      "facet": "Volcanes y paisajes volcánicos",
+      "known_at": 12
+    },
+    {
+      "name": "Roque de Agando",
+      "facet": "Volcanes y paisajes volcánicos",
+      "known_at": 13
+    },
+    {
+      "name": "Fumarola",
+      "facet": "Volcanes y paisajes volcánicos",
+      "known_at": 10
+    },
+    {
+      "name": "Volcán de Chinyero",
+      "facet": "Volcanes y paisajes volcánicos",
+      "known_at": 13
+    },
+    {
+      "name": "Pico Almanzor",
+      "facet": "Montañas, picos y cordilleras",
+      "known_at": 11
+    },
+    {
+      "name": "Pedraforca",
+      "facet": "Montañas, picos y cordilleras",
+      "known_at": 12
+    },
+    {
+      "name": "Laguna Rosa de Torrevieja",
+      "facet": "Humedales, marismas y lagunas",
+      "known_at": 9
+    },
+    {
+      "name": "Aiguamolls de l'Empordà",
+      "facet": "Humedales, marismas y lagunas",
+      "known_at": 12
+    },
+    {
+      "name": "Marismas de Santoña",
+      "facet": "Humedales, marismas y lagunas",
+      "known_at": 12
+    },
+    {
+      "name": "Laguna Negra de Urbión",
+      "facet": "Humedales, marismas y lagunas",
+      "known_at": 11
+    },
+    {
+      "name": "Humedal",
+      "facet": "Humedales, marismas y lagunas",
+      "known_at": 8
+    },
+    {
+      "name": "Islas Medes",
+      "facet": "Costas, islas y fondos marinos",
+      "known_at": 11
+    },
+    {
+      "name": "Cap de Creus",
+      "facet": "Costas, islas y fondos marinos",
+      "known_at": 10
+    },
+    {
+      "name": "Duna de Bolonia",
+      "facet": "Costas, islas y fondos marinos",
+      "known_at": 10
+    },
+    {
+      "name": "Mar de las Calmas",
+      "facet": "Costas, islas y fondos marinos",
+      "known_at": 12
+    },
+    {
+      "name": "Acantilados de Maro-Cerro Gordo",
+      "facet": "Costas, islas y fondos marinos",
+      "known_at": 13
+    },
+    {
+      "name": "Hayedo de Tejera Negra",
+      "facet": "Bosques y árboles emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Sabina de El Hierro",
+      "facet": "Bosques y árboles emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Acebo",
+      "facet": "Bosques y árboles emblemáticos",
+      "known_at": 6
+    },
+    {
+      "name": "Bosque de Oma",
+      "facet": "Bosques y árboles emblemáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Palmeral de Elche",
+      "facet": "Bosques y árboles emblemáticos",
+      "known_at": 8
+    },
+    {
+      "name": "Oso pardo",
+      "facet": "Fauna protegida y especies amenazadas",
+      "known_at": 3
+    },
+    {
+      "name": "Tritón del Montseny",
+      "facet": "Fauna protegida y especies amenazadas",
+      "known_at": 13
+    },
+    {
+      "name": "Cigüeña negra",
+      "facet": "Aves de los parques",
+      "known_at": 10
+    },
+    {
+      "name": "Urogallo",
+      "facet": "Aves de los parques",
+      "known_at": 11
+    },
+    {
+      "name": "Pinzón azul",
+      "facet": "Aves de los parques",
+      "known_at": 12
+    },
+    {
+      "name": "Cernícalo primilla",
+      "facet": "Aves de los parques",
+      "known_at": 12
+    },
+    {
+      "name": "Focha moruna",
+      "facet": "Aves de los parques",
+      "known_at": 14
+    },
+    {
+      "name": "Río Guadiana",
+      "facet": "Ríos, cascadas y cañones",
+      "known_at": 7
+    },
+    {
+      "name": "Río Segura",
+      "facet": "Ríos, cascadas y cañones",
+      "known_at": 8
+    },
+    {
+      "name": "Cañón del Sil",
+      "facet": "Ríos, cascadas y cañones",
+      "known_at": 10
+    },
+    {
+      "name": "Cascada de Ézaro",
+      "facet": "Ríos, cascadas y cañones",
+      "known_at": 11
+    },
+    {
+      "name": "Barranco de Masca",
+      "facet": "Ríos, cascadas y cañones",
+      "known_at": 10
+    },
+    {
+      "name": "Cañón de Añisclo",
+      "facet": "Ríos, cascadas y cañones",
+      "known_at": 12
+    },
+    {
+      "name": "Parque nacional",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 3
+    },
+    {
+      "name": "Parque natural",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 4
+    },
+    {
+      "name": "ZEPA",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 13
+    },
+    {
+      "name": "Convenio de Ramsar",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 13
+    },
+    {
+      "name": "Monumento natural",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 9
+    },
+    {
+      "name": "Paraje natural",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 12
+    },
+    {
+      "name": "Reserva marina",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 10
+    },
+    {
+      "name": "Patrimonio de la Humanidad",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 6
+    },
+    {
+      "name": "Geoparque",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 12
+    },
+    {
+      "name": "Agente forestal",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 6
+    },
+    {
+      "name": "Red de Parques Nacionales",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 12
+    },
+    {
+      "name": "Espacio natural protegido",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 9
+    },
+    {
+      "name": "Microrreserva",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 14
+    },
+    {
+      "name": "Sendero de gran recorrido",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 9
+    },
+    {
+      "name": "Centro de visitantes",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 6
+    },
+    {
+      "name": "Catálogo Español de Especies Amenazadas",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 13
+    },
+    {
+      "name": "Cría en cautividad",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 10
+    },
+    {
+      "name": "Reserva Starlight",
+      "facet": "Figuras de protección y gestión",
+      "known_at": 12
+    },
+    {
+      "name": "Pedro Pidal",
+      "facet": "Historia, leyendas y visitantes",
+      "known_at": 13
+    },
+    {
+      "name": "Ley de Parques Nacionales de 1916",
+      "facet": "Historia, leyendas y visitantes",
+      "known_at": 13
+    },
+    {
+      "name": "Doña Ana de Silva",
+      "facet": "Historia, leyendas y visitantes",
+      "known_at": 13
+    },
+    {
+      "name": "Leyenda de Villaverde de Lucerna",
+      "facet": "Historia, leyendas y visitantes",
+      "known_at": 13
+    },
+    {
+      "name": "Leyenda de Hércules y Pirene",
+      "facet": "Historia, leyendas y visitantes",
+      "known_at": 13
+    },
+    {
+      "name": "Bandoleros de Sierra Morena",
+      "facet": "Historia, leyendas y visitantes",
+      "known_at": 11
+    },
+    {
+      "name": "Trashumancia",
+      "facet": "Historia, leyendas y visitantes",
+      "known_at": 9
+    },
+    {
+      "name": "Cañada Real",
+      "facet": "Historia, leyendas y visitantes",
+      "known_at": 11
+    },
+    {
+      "name": "Alfonso XIII",
+      "facet": "Historia, leyendas y visitantes",
+      "known_at": 11
+    },
+    {
+      "name": "Erupciones de Timanfaya de 1730",
+      "facet": "Historia, leyendas y visitantes",
+      "known_at": 12
+    }
+  ]
+}
